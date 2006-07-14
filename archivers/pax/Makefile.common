@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/07/14 19:38:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/07/14 19:45:12 jlam Exp $
 #
 # This Makefile fragment is included by:
 #
@@ -7,7 +7,6 @@
 #
 
 DISTNAME=		pax-20060202
-CATEGORIES=		archivers pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
