@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/07/14 19:54:47 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/14 20:11:10 jlam Exp $
 #
 # This version of mtree installs into ${PKG_TOOLS_BIN}.
 #
@@ -19,6 +19,7 @@ PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 PKGMANDIR=		share/man
 .endif
 
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=	${PKG_TOOLS_PREFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/07/14 19:45:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/07/14 20:11:10 jlam Exp $
 #
 # This Makefile fragment is included by:
 #
@@ -23,12 +23,6 @@ FILESDIR=		${.CURDIR}/../../archivers/pax/files
 PKGDIR=			${.CURDIR}/../../archivers/pax
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.else
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
-.endif
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
