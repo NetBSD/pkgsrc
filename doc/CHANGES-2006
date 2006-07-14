@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.729 2006/07/14 22:11:25 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.730 2006/07/14 22:13:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added pkgtools/tnftp version 20050625 [jlam 2006-07-14]
 	Updated finance/gnucash-docs to 2.0.0nb1 [wiz 2006-07-14]
 	Updated net/freeradius to 1.1.2 [adrianp 2006-07-14]
+	Updated pkgtools/pkgmanpages to 20050911 [jlam 2006-07-14]
