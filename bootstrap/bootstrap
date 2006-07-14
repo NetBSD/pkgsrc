@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.62 2006/07/14 17:55:56 jlam Exp $
+# $NetBSD: bootstrap,v 1.63 2006/07/14 19:40:26 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -842,7 +842,7 @@ case "$need_mtree" in
 yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
 esac
 case "$need_pax" in
-yes)	run_cmd "(cd ../archivers/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
 esac
 run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)"
 
