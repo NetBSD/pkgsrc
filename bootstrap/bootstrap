@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.64 2006/07/14 21:41:42 jlam Exp $
+# $NetBSD: bootstrap,v 1.65 2006/07/14 22:17:09 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -817,10 +817,6 @@ echo_msg "Installing pkgtools"
 copy_src ../pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$mandir && $bmake && $bmake install)"
 
-# all's ready, install the man page
-echo_msg "Installing packages(7) man page"
-run_cmd "$shprog $wrkdir/install-sh -c -m 444 files/packages.cat7 $mandir/cat7/packages.0"
-
 # opsys specific fiddling
 opsys_finish
 
@@ -845,6 +841,10 @@ case "$need_pax" in
 yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
 esac
 run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)"
+
+# Install the man page.
+echo_msg "Installing packages(7) man page"
+run_cmd "(cd ../pkgtools/pkgmanpages && $bmake MAKECONF=${MKCONF_EXAMPLE} install)"
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
