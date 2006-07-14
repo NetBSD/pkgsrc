@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2006/07/14 06:29:02 joerg Exp $
+
+--- configure.orig	2006-07-14 06:15:42.000000000 +0000
++++ configure
+@@ -18891,7 +18891,7 @@ if egrep "^#define Py_ENABLE_SHARED" "${
+   PYTHON_LDFLAGS="-no-undefined"
+   save_LIBS="$LIBS"
+ 
+-  PYTHON_LIBS="-L${py_prefix}/lib/ -lpython${PYTHON_VERSION}"
++  PYTHON_LIBS="-L${py_prefix}/lib/ -lpython${PYTHON_VERSION} ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+   LIBS="$LIBS $PYTHON_LIBS"
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+@@ -18944,7 +18944,7 @@ else
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ 
+-  PYTHON_LIBS="-L${py_prefix}/lib/python${PYTHON_VERSION}/config -lpython${PYTHON_VERSION}"
++  PYTHON_LIBS="-L${py_prefix}/lib/python${PYTHON_VERSION}/config -lpython${PYTHON_VERSION} ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+   LIBS="$save_LIBS $PYTHON_LIBS";
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
