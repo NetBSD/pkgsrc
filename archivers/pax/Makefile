@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/18 07:04:16 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/14 18:48:43 jlam Exp $
 #
 
 DISTNAME=		pax-20060202
@@ -15,8 +15,6 @@ GNU_CONFIGURE=		yes
 NO_PKGTOOLS_REQD_CHECK=	yes
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
-NO_PKG_REGISTER=	yes
-NO_PACKAGE=		Deinstallation is not permitted
 PKG_PRESERVE=		yes
 
 .include "../../mk/bsd.prefs.mk"
