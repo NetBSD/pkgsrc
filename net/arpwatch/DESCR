@@ -5,4 +5,3 @@ reports certain changes via email.
 Arpsnmp has the same database features of arpwatch but relies on an
 external agent to collect the arp data. This distribution contains a
 script, arpfetch, that uses snmpwalk from the CMU SNMP package.
-package is available from:
