@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/13 10:29:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/14 07:44:21 wiz Exp $
 #
 
 DISTNAME=	hugelatex-2.0
@@ -17,7 +17,6 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
-CHECK_FILES_SKIP+=	${PREFIX}/share/texmf/web2c/texmf.cnf-before-hugelatex
 
 .include "../../print/teTeX/module.mk"
 
