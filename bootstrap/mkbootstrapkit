@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: mkbootstrapkit,v 1.2 2006/01/02 23:27:09 reed Exp $
+# $NetBSD: mkbootstrapkit,v 1.3 2006/07/14 17:58:26 jlam Exp $
 #
 # Usage: mkbootstrapkit [kitdir]
 #
@@ -23,6 +23,8 @@ for dir in \
 	archivers/pax \
 	bootstrap \
 	devel/bmake \
+	lang/nawk \
+	mk \
 	net/tnftp \
 	pkgtools/digest \
 	pkgtools/libnbcompat \
