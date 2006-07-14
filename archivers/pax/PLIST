@@ -1,2 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/23 11:45:21 grant Exp $
-@comment this PLIST intentionally left blank.
+@comment $NetBSD: PLIST,v 1.2 2006/07/14 18:48:43 jlam Exp $
+bin/cpio
+bin/pax
+bin/tar
+man/cat1/cpio.0
+man/cat1/tar.0
+man/cat1/pax.0
+man/man1/cpio.1
+man/man1/pax.1
+man/man1/tar.1
