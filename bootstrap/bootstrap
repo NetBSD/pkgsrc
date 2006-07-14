@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.65 2006/07/14 22:17:09 jlam Exp $
+# $NetBSD: bootstrap,v 1.66 2006/07/14 23:19:15 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -677,39 +677,22 @@ mkdir_p $mandir/man8 $mandir/cat8
 
 # bootstrap make and *.mk files
 mkdir_p $prefix/share/mk $prefix/lib
-copy_src bmake/mk files-mk
+copy_src ../pkgtools/bootstrap-mk-files/files mk-files
 
-(cd ${wrkdir}/files-mk;
-	if [ -f ${bootstrapdir}/mods/mk/$opsys.sys.mk ]; then
-		run_cmd "$cpprog ${bootstrapdir}/mods/mk/$opsys.sys.mk $prefix/share/mk/sys.mk"
-	else
-		run_cmd "$cpprog ${bootstrapdir}/mods/mk/generic.sys.mk $prefix/share/mk/sys.mk"
-	fi
-	run_cmd "$cpprog bsd.*.mk $prefix/share/mk")
-
-if [ -f mods/mk/$opsys.bsd.lib.mk ] ;  then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk ${wrkdir}/files-mk/bsd.lib.mk"
-	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk $prefix/share/mk/bsd.lib.mk"
+(
+cd ${wrkdir}/mk-files
+for file in bsd.* sys.mk; do
+	[ ! -f mods/$opsys.$file ] ||
+	run_cmd "$cpprog mods/$opsys.$file $file"
+done
+if [ -f mods/$opsys.own.mk.in ]; then
+	own_mk=mods/$opsys.own.mk.in
+else
+	own_mk=mods/bsd.own.mk.in
 fi
-
-if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk ${wrkdir}/files-mk/bsd.man.mk"
-	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
-fi
-
-own_mk=mods/mk/bsd.own.mk.in
-if [ -f mods/mk/$opsys.bsd.own.mk ] ; then
-	own_mk=mods/mk/$opsys.bsd.own.mk.in
-fi
-run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g;s|@ROOT_USER@|'$root_user'|g;s|@SYSCONFDIR@|'$sysconfdir'|g' $own_mk > $prefix/share/mk/bsd.own.mk"
-
-if [ -f mods/mk/$opsys.bsd.prog.mk ] ; then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.prog.mk $prefix/share/mk/bsd.prog.mk"
-fi
-
-if [ -f mods/mk/$opsys.bsd.sys.mk ]; then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.sys.mk $prefix/share/mk/bsd.sys.mk"
-fi	
+run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g;s|@ROOT_USER@|'$root_user'|g;s|@SYSCONFDIR@|'$sysconfdir'|g' $own_mk > bsd.own.mk"
+run_cmd "$cpprog bsd.* sys.mk $prefix/share/mk"
+)
 	
 if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
@@ -825,6 +808,7 @@ echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
 
 # register packages
 echo_msg "Registering installed packages"
+run_cmd "(cd ../pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)"
 case "$need_awk" in
 yes)	run_cmd "(cd ../lang/nawk && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
 esac
