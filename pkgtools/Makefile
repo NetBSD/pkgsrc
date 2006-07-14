@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/07/14 19:54:47 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2006/07/14 21:41:42 jlam Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -43,6 +43,7 @@ SUBDIR+=	rdigest
 SUBDIR+=	revbump
 SUBDIR+=	rpm2pkg
 SUBDIR+=	shlock
+#SUBDIR+=	tnftp
 SUBDIR+=	url2pkg
 SUBDIR+=	verifypc
 SUBDIR+=	x11-links
