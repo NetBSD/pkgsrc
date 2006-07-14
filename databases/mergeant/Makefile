@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/07/05 05:37:40 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/07/14 11:14:37 wiz Exp $
 #
 
 DISTNAME=		mergeant-0.62
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNOME2 GNOME-DB database front-end
 
-BROKEN_IN=		pkgsrc-2006Q1
+BROKEN=			Does not work with current libgda version. Waiting for next release.
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool perl pkg-config
