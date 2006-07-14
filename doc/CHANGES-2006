@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.724 2006/07/14 19:38:47 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.725 2006/07/14 19:54:47 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gimp24 to 2.3.10nb2 [wiz 2006-07-14]
 	Updated finance/gnucash-docs to 2.0.0 [wiz 2006-07-14]
 	Added pkgtools/pax version 20060202 [jlam 2006-07-14]
+	Added sysutils/mtree version 20040722 [jlam 2006-07-14]
