@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.56 2006/07/13 21:37:30 jlam Exp $
+# $NetBSD: bootstrap,v 1.57 2006/07/14 14:27:00 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -35,7 +35,7 @@
 #
 #set -x
 
-BOOTSTRAP_VERSION=20060713
+BOOTSTRAP_VERSION=20060714
 
 ignorecasecheck=no
 ignoreusercheck=no
@@ -309,6 +309,7 @@ Darwin)
 	need_pax=yes
 	need_mtree=no
 	need_bsd_install=no
+	need_awk=no
 	need_sed=no
 	set_opsys=no
 	check_prog mtreeprog mtree
@@ -319,6 +320,7 @@ DragonFly)
 	need_pax=yes
 	need_mtree=no
 	need_bsd_install=no
+	need_awk=no
 	need_sed=no
 	set_opsys=no
 	check_prog tarprog tar
@@ -340,6 +342,7 @@ FreeBSD)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=no
+	need_awk=no
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
@@ -349,6 +352,7 @@ HP-UX)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
+	need_awk=yes
 	need_sed=yes
 	set_opsys=no
 	;;
@@ -365,6 +369,7 @@ IRIX*)
 	need_pax=yes
 	get_abi "IRIX"
 	opsys=IRIX
+	need_awk=yes
 	need_sed=yes
 	set_opsys=yes
 	machine_arch=mipseb
@@ -387,6 +392,7 @@ Linux)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=no
+	need_awk=no
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
@@ -396,6 +402,7 @@ NetBSD)
 	need_pax=no
 	need_mtree=no
 	need_bsd_install=no
+	need_awk=no
 	need_sed=no
 	set_opsys=no
 	check_prog paxprog pax
@@ -408,6 +415,7 @@ OpenBSD)
 	need_pax=yes
 	need_mtree=no
 	need_bsd_install=no
+	need_awk=no
 	need_sed=no
 	set_opsys=no
 	check_prog mtreeprog mtree
@@ -421,6 +429,7 @@ SunOS)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=no
+	need_awk=yes
 	need_sed=yes
 	set_opsys=no
 	whoamiprog=/usr/ucb/whoami
@@ -431,6 +440,7 @@ AIX)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
+	need_awk=yes
 	need_sed=yes
 	need_fixed_strip=yes
 	set_opsys=no
@@ -452,6 +462,7 @@ Interix)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
+	need_awk=yes
 	need_sed=yes
 	set_opsys=no
 	# only used for unprivileged builds
@@ -468,6 +479,7 @@ UnixWare)
 	need_bsd_install=no
 	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
 	need_mkdir=yes
+	need_awk=yes
 	need_sed=yes
 	whoamiprog=/usr/ucb/whoami
 	set_opsys=no
@@ -478,6 +490,7 @@ OSF1)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
+	need_awk=yes
 	need_sed=yes
 	set_opsys=no
 	;;
@@ -487,6 +500,7 @@ OSF1)
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
+	need_awk=yes
 	need_sed=yes
 	set_opsys=no
 	;;
@@ -724,6 +738,28 @@ run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$
 
 bmake=$prefix/bin/bmake
 
+# bootstrap awk if necessary
+case "$need_awk" in
+yes)	echo_msg "Installing awk"
+	copy_src ../lang/nawk/files awk
+	run_cmd "(cd $wrkdir/awk && $bmake)"
+	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
+	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
+	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${MKCONF_EXAMPLE}
+	BSTRAP_ENV="AWK=\"$prefix/bin/nawk\" $BSTRAP_ENV"
+	;;
+esac
+
+# bootstrap sed if necessary
+case "$need_sed" in
+yes)	echo_msg "Installing sed"
+	copy_src ../textproc/nbsed/files sed
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake && $bmake install)"
+	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
+	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
+	;;
+esac
+
 if [ -z "$fetch_cmd" ]; then
 	# bootstrap tnftp
 	fetch_cmd="$prefix/bin/ftp"
@@ -766,16 +802,6 @@ yes)	echo_msg "Installing mtree"
 	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
 	;;
 *)	pkg_install_args="$pkg_install_args --with-mtree=$mtreeprog"
-	;;
-esac
-
-# bootstrap sed if necessary
-case "$need_sed" in
-yes)	echo_msg "Installing sed"
-	copy_src ../textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake && $bmake install)"
-	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
-	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
 	;;
 esac
 
