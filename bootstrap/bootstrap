@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.63 2006/07/14 19:40:26 jlam Exp $
+# $NetBSD: bootstrap,v 1.64 2006/07/14 21:41:42 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -836,15 +836,15 @@ case "$need_sed" in
 yes)	run_cmd "(cd ../textproc/nbsed && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
 esac
 case "$need_ftp" in
-yes)	run_cmd "(cd ../net/tnftp&& $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace PKG_OPTIONS= bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/tnftp && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
 esac
 case "$need_mtree" in
-yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
 esac
 case "$need_pax" in
-yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
 esac
-run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)"
+run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)"
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
