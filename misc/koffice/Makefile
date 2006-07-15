@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2006/06/11 13:50:19 markd Exp $
+# $NetBSD: Makefile,v 1.84 2006/07/15 21:10:12 markd Exp $
 
 DISTNAME=	koffice-1.5.1
 CATEGORIES=	misc kde
@@ -40,6 +40,10 @@ REPLACE_PERL+=		kpresenter/kprconverter.pl
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "options.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=		gawk:pkgsrc
+.endif
 
 post-install:
 	@# The global desktop template files need to be user-writeable, or
