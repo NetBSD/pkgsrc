@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.1 2006/07/06 21:07:33 jlam Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.2 2006/07/15 20:08:33 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -20,7 +20,7 @@
 #
 #    FTP_PKG_URL_DIR is the directory portion of the URL to embed in each
 #	README.html file to be served via FTP, and defaults to
-#	"/pub/NetBSD/packages".
+#	"/pub/pkgsrc/packages".
 #
 #    CDROM_PKG_URL_HOST is the host portion of the URL to embed in each
 #	README.html file to be served from a mounted CD-ROM, and defaults
@@ -200,7 +200,7 @@ readmes:	readme
 .PHONY: readme
 .if !target(readme)
 FTP_PKG_URL_HOST?=	ftp://ftp.NetBSD.org
-FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
+FTP_PKG_URL_DIR?=	/pub/pkgsrc/packages
 
 readme:
 	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
