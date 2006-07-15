@@ -1,15 +1,21 @@
-# $NetBSD: unprivileged.mk,v 1.3 2005/09/28 21:55:32 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.4 2006/07/15 20:47:43 rillig Exp $
 #
-# Ease configuration of unprivileged (non-root) builds.
+# This file collects definitions that are useful when using pkgsrc as an
+# unprivileged (non-root) user. It is included automatically by the
+# pkgsrc infrastructure.
 #
-# UNPRIVILEGED		If set to 'yes', enable unprivileged builds.
-#			Disabled by default.
+# The following variables may be set by the pkgsrc user in mk.conf:
 #
-# UNPRIVILEGED_GROUP	Specifies the group name (or gid) that will be used
-#			to install files.  Guessed if empty.
+# UNPRIVILEGED		: YesNo (default: undefined)
+#	If set to 'yes', enable unprivileged builds.
 #
-# UNPRIVILEGED_USER	Specifies the user name (or uid) that will be used
-#			to install files.  Guessed if empty.
+# UNPRIVILEGED_GROUP	: Groupname (default: the current group)
+#	Specifies the group name (or gid) that will be used to install
+#	files.
+#
+# UNPRIVILEGED_USER	: Username (default: the current user)
+#	Specifies the user name (or uid) that will be used to install
+#	files.
 
 .if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 
@@ -49,8 +55,8 @@ NO_MTREE=		yes
 PKG_CREATE_USERGROUP=	NO
 
 # Override commands that won't work as a regular user.
-CHGRP=			${TRUE}
-CHOWN=			${TRUE}
+CHGRP=			${TRUE} chgrp
+CHOWN=			${TRUE} chown
 SU_CMD=			${SH} -c
 
 # Do not attempt to modify /etc/shells as a regular user.
