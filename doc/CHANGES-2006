@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.732 2006/07/15 07:02:52 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.733 2006/07/15 11:44:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkgmanpages to 20050911 [jlam 2006-07-14]
 	Added pkgtools/bootstrap-mk-files version 20060714 [jlam 2006-07-14]
 	Updated pkgtools/pkglint to 4.67 [rillig 2006-07-15]
+	Updated devel/roundup to 1.1.2 [recht 2006-07-15]
