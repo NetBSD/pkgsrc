@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.735 2006/07/15 19:35:25 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.736 2006/07/15 21:19:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3390,3 +3390,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/roundup to 1.1.2 [recht 2006-07-15]
 	Updated mail/p5-razor-agents to 2.82 [heinz 2006-07-15]
 	Updated mail/mutt-devel to 1.5.12 [tonio 2006-07-15]
+	Updated misc/koffice to 1.5.2 [markd 2006-07-15]
+	Updated misc/koffice-l10n-de to 1.5.2 [markd 2006-07-15]
+	Updated misc/koffice-l10n-en_GB to 1.5.2 [markd 2006-07-15]
