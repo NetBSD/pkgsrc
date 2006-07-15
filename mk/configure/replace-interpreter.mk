@@ -1,4 +1,33 @@
-# $NetBSD: replace-interpreter.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: replace-interpreter.mk,v 1.2 2006/07/15 09:52:00 rillig Exp $
+
+# This file provides common templates for replacing #! interpreters
+# in script files.
+#
+# The following variables may be set by a package:
+#
+# REPLACE_AWK		: List of Pathmask (default: none)
+# REPLACE_BASH		: List of Pathmask (default: none)
+# REPLACE_PERL		: List of Pathmask (default: none)
+# REPLACE_SH		: List of Pathmask (default: none)
+#	In these files the interpreter in the first line is replaced
+#	with the one that is available in pkgsrc. If any directory names
+#	appear in the lists, they are silenty skipped, assuming that
+#	they result from shell globbing expressions.
+#
+#	Use REPLACE_SH for shell programs that don't need any
+#	special features from bash, and REPLACE_BASH for the
+#	others.
+#
+#	Note that in all the above cases, you have to add the needed
+#	tools manually to USE_TOOLS, since there is no way to detect
+#	automatically whether a tool should be a build-time or a
+#	run-time dependency.
+#
+# Packages may also add their own interpreter replacements, which should
+# just look like the examples below. For the REPLACE_INTERPRETER
+# variable, all identifiers starting with "sys-" are reserved for the
+# pkgsrc infrastructure. All others may be used freely.
+#
 
 ######################################################################
 ### replace-interpreter (PRIVATE)
@@ -8,11 +37,38 @@
 ###
 do-configure-pre-hook: replace-interpreter
 
-.if defined(REPLACE_PERL)
-REPLACE_INTERPRETER+=	perl
-REPLACE.perl.old=	.*/bin/perl
-REPLACE.perl.new=	${PERL5}
-REPLACE_FILES.perl=	${REPLACE_PERL}
+REPLACE_INTERPRETER?=	# none
+REPLACE_AWK?=	# none
+REPLACE_BASH?=	# none
+REPLACE_PERL?=	# none
+REPLACE_SH?=	# none
+
+.if !empty(REPLACE_AWK:M*)
+REPLACE_INTERPRETER+=	sys-AWK
+REPLACE.sys-AWK.old=	.*awk
+REPLACE.sys-AWK.new=	${AWK}
+REPLACE_FILES.sys-AWK=	${REPLACE_AWK}
+.endif
+
+.if !empty(REPLACE_BASH:M*)
+REPLACE_INTERPRETER+=	sys-bash
+REPLACE.sys-bash.old=	.*bash
+REPLACE.sys-bash.new=	${BASH}
+REPLACE_FILES.sys-bash=	${REPLACE_BASH}
+.endif
+
+.if !empty(REPLACE_PERL:M*)
+REPLACE_INTERPRETER+=	sys-Perl
+REPLACE.sys-Perl.old=	.*perl[^[:space:]]*
+REPLACE.sys-Perl.new=	${PERL5}
+REPLACE_FILES.sys-Perl=	${REPLACE_PERL}
+.endif
+
+.if !empty(REPLACE_SH:M*)
+REPLACE_INTERPRETER+=	sys-sh
+REPLACE.sys-sh.old=	[^[:space:]]*sh
+REPLACE.sys-sh.new=	${SH}
+REPLACE_FILES.sys-sh=	${REPLACE_SH}
 .endif
 
 # XXX After 2006Q2, all instances of _REPLACE.* and _REPLACE_FILES.* should
@@ -28,21 +84,25 @@ REPLACE_FILES.${_lang_}?=	${_REPLACE_FILES.${_lang_}}
 .PHONY: replace-interpreter
 replace-interpreter:
 .for _lang_ in ${REPLACE_INTERPRETER}
-	@${STEP_MSG} "Replacing interpreter paths in scripts"
-.  for _pattern_ in ${REPLACE_FILES.${_lang_}}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+.  if defined(REPLACE_FILES.${_lang_}) && !empty(REPLACE_FILES.${_lang_}:M*)
+	@${STEP_MSG} "Replacing ${_lang_:S/^sys-//} interpreter in "${REPLACE_FILES.${_lang_}:M*:Q}"."
+	${_PKG_SILENT}${_PKG_DEBUG} set -eu;				\
 	cd ${WRKSRC};							\
-	for file in ${_pattern_}; do					\
-		if ${TEST} ! -f "$$file"; then				\
-			${WARNING_MSG} "[replace-interpreter.mk] Skipping non-existent file \"$$file\"."; \
-			continue;					\
+	for f in ${REPLACE_FILES.${_lang_}}; do				\
+		if [ -f "$${f}" ]; then					\
+			${SED} -e '1s|^#!${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
+			< "$${f}" > "$${f}.new";			\
+			if [ -x "$${f}" ]; then				\
+				${CHMOD} a+x "$${f}.new";		\
+			fi;						\
+			${MV} -f "$${f}.new" "$${f}";			\
+		elif [ -d "$$f" ]; then					\
+			${SHCOMMENT} "Ignore it, most probably comes from shell globs"; \
+		else							\
+			${WARNING_MSG} "[replace-interpreter] Skipping non-existent file \"$$f\"."; \
 		fi;							\
-		${SED} -e '1s|^#!${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
-			$$file > $$file.new;				\
-		if ${TEST} -x $$file; then				\
-			${CHMOD} a+x $$file.new;			\
-		fi;							\
-		${MV} -f $$file.new $$file;				\
 	done
-.  endfor
+.  else
+	@${WARNING_MSG} "[replace-interpreter] Empty list of files for ${_lang_}."
+.  endif
 .endfor
