@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.646 2006/07/14 04:54:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.647 2006/07/15 06:57:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1756,7 +1756,7 @@ use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
-use constant regex_varassign	=> qr"^([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
+use constant regex_varassign	=> qr"^([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#]+)*?)(?:\s*(#.*))?$";
 use constant regex_sh_varassign	=> qr"^([A-Z_a-z][0-9A-Z_a-z]*)=";
 
 # The following "constants" are often used in contexts where
@@ -5316,7 +5316,8 @@ sub checklines_mk($) {
 	my ($allowed_targets) = ({});
 	my ($substcontext) = PkgLint::SubstContext->new();
 
-	$opt_debug_trace and log_debug((@{$lines} != 0) ? $lines->[0]->fname : NO_FILE, NO_LINES, "checklines_mk()");
+	assert(@{$lines} != 0);
+	$opt_debug_trace and log_debug($lines->[0]->fname, NO_LINES, "checklines_mk()");
 
 	# Define global variables for the Makefile context.
 	$mkctx_indentations = [0];
