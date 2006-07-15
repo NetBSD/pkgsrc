@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.5 2006/07/15 09:52:00 rillig Exp $
+# $NetBSD: configure.mk,v 1.6 2006/07/15 23:58:52 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -14,7 +14,7 @@
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ARGS?=	# empty
-BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
+_BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 
 .if defined(GNU_CONFIGURE)
 .  include "${PKGSRCDIR}/mk/configure/gnu-configure.mk"
