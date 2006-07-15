@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.7 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: metadata.mk,v 1.8 2006/07/15 23:58:52 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -26,7 +26,7 @@ _METADATA_TARGETS+=	${_BUILD_INFO_FILE}
 ${_BUILD_INFO_FILE}: plist
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-.for _def_ in ${BUILD_DEFS}
+.for _def_ in ${_BUILD_DEFS}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${_def_}=${${_def_}:Q} |	\
 		${SED} -e 's|^PATH=[^ 	]*|PATH=...|'			\
 		>> ${.TARGET}.tmp

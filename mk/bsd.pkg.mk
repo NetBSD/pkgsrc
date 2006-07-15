@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1870 2006/07/13 14:04:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1871 2006/07/15 23:58:52 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -41,39 +41,6 @@
 .include "${PKGSRCDIR}/mk/bsd.pkg.error.mk"
 
 .include "../../mk/bsd.hacks.mk"
-
-# This has to come first to avoid showing all BUILD_DEFS added by this
-# Makefile, which are usually not customizable.
-.PHONY: build-defs-message
-pre-depends-hook: build-defs-message
-.if empty(PKGSRC_SHOW_BUILD_DEFS:M[yY][eE][sS])
-build-defs-message:
-.elif !target(build-defs-message)
-build-defs-message: ${WRKDIR}
-.  if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
-.    if !exists(${WRKDIR}/.bdm_done)
-	@${ECHO} "=========================================================================="
-	@${ECHO} "The following variables will affect the build process of this package,"
-	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
-	@${ECHO} ""
-.      for var in ${BUILD_DEFS:O}
-.        if !defined(${var})
-	@${ECHO} "        * ${var} (not defined)"
-.        elif defined(${var}) && empty(${var})
-	@${ECHO} "        * ${var} (defined)"
-.        else
-	@${ECHO} "        * ${var} = ${${var}}"
-.        endif
-.      endfor
-	@${ECHO} ""
-	@${ECHO} "You may want to abort the process now with CTRL-C and change their value"
-	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after"
-	@${ECHO} "the changes."
-	@${ECHO} "=========================================================================="
-	@${TOUCH} ${WRKDIR}/.bdm_done
-.    endif
-.  endif
-.endif
 
 ############################################################################
 # Transform package Makefile variables and set defaults
@@ -240,11 +207,13 @@ ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
 ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
 
+_BUILD_DEFS=		${BUILD_DEFS}
+
 # Store the result in the +BUILD_INFO file so we can query for the build
 # options using "pkg_info -Q PKG_OPTIONS <pkg>".
 #
 .if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
-BUILD_DEFS+=            PKG_OPTIONS
+_BUILD_DEFS+=            PKG_OPTIONS
 .endif
 
 .if empty(DEPOT_SUBDIR)
@@ -416,7 +385,7 @@ PKG_SYSCONFDEPOTBASE=	# empty
 PKG_SYSCONFDIR_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 755
 
 ALL_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
+_BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 
 # These are all of the tools use by pkgsrc Makefiles.  This should
 # eventually be split up into lists of tools required by different
@@ -471,7 +440,7 @@ USE_LANGUAGES?=		# empty
 DEPENDS+=		${ABI_DEPENDS}
 BUILD_DEPENDS+=		${BUILD_ABI_DEPENDS}
 .  else
-BUILD_DEFS+=		USE_ABI_DEPENDS
+_BUILD_DEFS+=		USE_ABI_DEPENDS
 .  endif
 .endif
 
@@ -609,15 +578,15 @@ do-check-pkg-fail-reason: do-check-pkg-fail-or-skip-reason
 .endif
 
 # Add these defs to the ones dumped into +BUILD_DEFS
-BUILD_DEFS+=	PKGPATH
-BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
-BUILD_DEFS+=	CPPFLAGS CFLAGS FFLAGS LDFLAGS
-BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
-BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
-BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
+_BUILD_DEFS+=	PKGPATH
+_BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
+_BUILD_DEFS+=	CPPFLAGS CFLAGS FFLAGS LDFLAGS
+_BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
+_BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
+_BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
 
 .if defined(OSVERSION_SPECIFIC)
-BUILD_DEFS+=	OSVERSION_SPECIFIC
+_BUILD_DEFS+=	OSVERSION_SPECIFIC
 .endif # OSVERSION_SPECIFIC
 
 .PHONY: all
@@ -1042,3 +1011,5 @@ _CTYPE3=	" ["${NETBSD_LOGIN_NAME:Q}" "${_CDATE_cmd:sh:Q}"]"
 changes-entry:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} ${_CTYPE1}${_CTYPE2}${_CTYPE3} >> ${PKGSRC_CHANGES:Q}
+
+.include "${PKGSRCDIR}/mk/internal/build-defs-message.mk"

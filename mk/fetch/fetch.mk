@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.7 2006/07/13 15:23:18 jlam Exp $
+# $NetBSD: fetch.mk,v 1.8 2006/07/15 23:58:52 rillig Exp $
 
 ######################################################################
 ### fetch (PUBLIC)
@@ -40,7 +40,7 @@ _PATCHFILES?=	${PATCHFILES}
 .endif
 _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 
-BUILD_DEFS+=	_DISTFILES _PATCHFILES
+_BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
 ###
 ### _RESUME_TRANSFER:

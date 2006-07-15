@@ -1,4 +1,4 @@
-# $NetBSD: bsd.hacks.mk,v 1.2 2004/11/30 15:09:45 tv Exp $
+# $NetBSD: bsd.hacks.mk,v 1.3 2006/07/15 23:58:52 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,5 +65,5 @@ PKG_HACKS?=	# empty
 
 # Record any package hacks that we use in the installed package.
 .if !empty(PKG_HACKS)
-BUILD_DEFS+=	PKG_HACKS
+_BUILD_DEFS+=	PKG_HACKS
 .endif
