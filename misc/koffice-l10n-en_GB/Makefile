@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/05/24 12:57:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/15 21:17:06 markd Exp $
 
-DISTNAME=	koffice-l10n-en_GB-1.5.1
+DISTNAME=	koffice-l10n-en_GB-1.5.2
 CATEGORIES=	misc kde
-MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.5.1/src/koffice-l10n/}
+MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.5.2/src/koffice-l10n/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
