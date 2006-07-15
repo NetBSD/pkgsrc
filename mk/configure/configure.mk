@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.4 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: configure.mk,v 1.5 2006/07/15 09:52:00 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -28,9 +28,7 @@ BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 .if defined(PKGCONFIG_OVERRIDE)
 .  include "${PKGSRCDIR}/mk/configure/pkg-config-override.mk"
 .endif
-.if defined(REPLACE_INTERPRETER) || defined(REPLACE_PERL)
-.  include "${PKGSRCDIR}/mk/configure/replace-interpreter.mk"
-.endif
+.include "${PKGSRCDIR}/mk/configure/replace-interpreter.mk"
 .if defined(USE_PKGLOCALEDIR)
 .  include "${PKGSRCDIR}/mk/configure/replace-localedir.mk"
 .endif
