@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.13 2006/06/08 03:11:17 jlam Exp $
+# $NetBSD: plist.mk,v 1.14 2006/07/15 23:58:52 rillig Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -192,7 +192,7 @@ _PLIST_IGNORE_FILES+=	${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
 .  endif
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
-BUILD_DEFS+=		_PLIST_IGNORE_FILES
+_BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
 .if ${PLIST_TYPE} == "dynamic"
 _PLIST_IGNORE_CMD=							\
