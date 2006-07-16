@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5196 2006/07/15 15:25:23 taca Exp $
+$NetBSD: TODO,v 1.5197 2006/07/16 09:12:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -307,6 +307,7 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o PAM-0.80
+	o R-ncdf-1.6
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6.4
@@ -360,7 +361,7 @@ Suggested package updates
 	o arnold-20040104
 	o asapm-3.1
 	o aspell-danish-1.4.53
-	o aspell-faroese-0.2.25
+	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
 	o at-spi-1.7.9
@@ -384,9 +385,11 @@ Suggested package updates
 	o bitlbee-1.0.3
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o blackbox-0.70
+	o blender-2.42
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.2.6
+	o boehm-gc-6.8
 	o bogofilter-1.0.3
 	o boolean-6.8
 	o boson-0.12
@@ -561,9 +564,10 @@ Suggested package updates
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
 	o gnomeicu-0.99.10
-	o gnopernicus-1.0.5
+	o gnopernicus-1.0.6
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
+	o gnutls-1.4.1
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
@@ -580,6 +584,7 @@ Suggested package updates
 	o gri-2.12.8
 	o grig-0.7.0
 	o gsasl-0.2.12 [pkg/33638]
+	o gsasl-0.2.13
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
@@ -704,7 +709,7 @@ Suggested package updates
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o lilypond-2.8.0
-	o lincvs-1.5.0 [now called CrossVC]
+	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
 	o lmbench-2.5
 	o logsurfer-1.6b [pkg/33892]
@@ -757,14 +762,14 @@ Suggested package updates
 	o mplayer-plugin-firefox-3.25
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
-	o mrtg-2.14.4
+	o mrtg-2.14.5
 	o mserv-devel-0.41
 	o msmtp-1.4.6
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.0.5
 	o muse-0.9.1
-	o nagios-2.4
+	o nagios-2.5
 	o naim-0.11.8.2
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
@@ -992,6 +997,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.15
+	o prelude-lml-0.9.6
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
@@ -1078,13 +1084,13 @@ Suggested package updates
 	o robodoc-4.99.6
 	o root-5.04.00
 	o root-tail-1.2
-	o rosegarden-1.2.3
-	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o rosegarden4-1.2.4 [replacing audio/rosegarden|pkgsrc-wip]
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.8
 	o rpc2-1.28
 	o rpm-4.4.6
+	o rrdtool-1.2.15
 	o rsnapshot-1.2.9
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
@@ -1126,12 +1132,15 @@ Suggested package updates
 	o smartmontools-5.36 [pkg/33958]
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.59
+	o smokeping-2.0.9
 	o snd-8.2
 	o snes9x-1.50
 	o snort-2.6.0
+	o socat-1.5.0.0
 	o solfege-3.3.1
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
+	o source-highlight-2.4
 	o sox-12.18.1
 	o spamass-milter-0.3.1 [pkg/33206]
 	o spamprobe-1.4b
@@ -1212,7 +1221,7 @@ Suggested package updates
 	o vsftpd-2.0.5
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
-	o wcalc-2.2
+	o wcalc-2.2.2
 	o wdm-1.28
 	o webmin-1.290
 	o weewm-0.01
@@ -1225,6 +1234,7 @@ Suggested package updates
 	o www6to4-1.6
 	o wwwoffle-2.9
 	o x11vnc-0.8.1 [pkg/33700]
+	o x11vnc-0.8.2
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2
@@ -1285,6 +1295,7 @@ Suggested package updates
 	o xwrits-2.22
 	o xzip-182
 	o yafc-1.1
+	o yasm-0.5.0
 	o yaz-2.1.8
 	o yelp-2.14.2
 	o yencode-0.46
@@ -1294,6 +1305,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.14.2
 	o zile-2.2.15
+	o zip-2.32
 	o zircon-1.18.256
 	o zope-2.8.7
 	o zope-2.9.3
