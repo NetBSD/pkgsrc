@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2005,v 1.9 2006/07/13 10:47:34 wiz Exp $
+$NetBSD: CHANGES-2005,v 1.10 2006/07/16 08:52:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1268,7 +1268,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-Curses to 1.08b [wiz 2005-03-04]
 	Updated mail/mew to 4.2 [uebayasi 2005-03-04]
 	Updated net/wol to 0.7.1 [uebayasi 2005-03-04]
-	Updated graphics/blender to 2.63nb1 [reinoud 2005-03-04]
+	Updated graphics/blender to 2.36nb1 [reinoud 2005-03-04]
 	Added devel/p5-Class-MakeMethods version 1.010 [tv 2005-03-04]
 	Updated www/horde3 to 3.0.3 [adrianp 2005-03-04]
 	Updated math/mathomatic to 12.1d [minskim 2005-03-05]
