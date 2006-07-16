@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.737 2006/07/16 09:18:13 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.738 2006/07/16 22:27:07 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/koffice-l10n-de to 1.5.2 [markd 2006-07-15]
 	Updated misc/koffice-l10n-en_GB to 1.5.2 [markd 2006-07-15]
 	Updated games/xboard to 4.2.7 [rillig 2006-07-16]
+	Updated net/lftp to 3.5.1 [salo 2006-07-16]
