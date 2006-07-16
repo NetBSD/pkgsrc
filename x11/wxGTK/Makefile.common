@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/07/15 14:10:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/07/16 00:53:01 rillig Exp $
 #
 
 DISTNAME=		wxGTK-2.6.3
@@ -15,7 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK/distinfo
 PATCHFILES=		${DISTNAME}-libtool.diff2.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 
-USE_TOOLS+=		pkg-config msgfmt gawk:pkgsrc
+USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
@@ -39,6 +39,11 @@ PLIST_SUBST+=		BUILDTYPE=ansi
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=		gawk:pkgsrc
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
