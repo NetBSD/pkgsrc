@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5200 2006/07/16 13:38:09 wiz Exp $
+$NetBSD: TODO,v 1.5201 2006/07/16 22:27:07 salo Exp $
 
 Suggested new packages
 ======================
@@ -677,7 +677,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
-	o lftp-3.5.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46
