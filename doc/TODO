@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5198 2006/07/16 09:18:13 rillig Exp $
+$NetBSD: TODO,v 1.5199 2006/07/16 09:24:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -628,7 +628,6 @@ Suggested package updates
 	o idesk-0.7.3
 	o ifile-1.3.5
 	o ijs-0.35
-	o imp-4.1.2
 	o inform-6.31.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
@@ -667,7 +666,6 @@ Suggested package updates
 	o kmymoney2-0.8.4
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
-	o kronolith-2.1.2
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o latd-1.21
@@ -937,7 +935,6 @@ Suggested package updates
 	o p5-XML-Xerces-2.6.0.2
 	o p5-gtk2-2.14.0
 	o p5-ispman-1.2
-	o p5-razor-agents-2.82
 	o p5-sybperl-2.18
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
