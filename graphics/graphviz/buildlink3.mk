@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:10:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/07/16 15:02:43 seb Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GRAPHVIZ_BUILDLINK3_MK:=	${GRAPHVIZ_BUILDLINK3_MK}+
@@ -21,7 +21,9 @@ BUILDLINK_PKGSRCDIR.graphviz?=	../../graphics/graphviz
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
+# The configure script requires gd>=2.0.34, which was never released.
+# Uncomment the following when graphics/gd is updated to 2.0.34
+#.include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
