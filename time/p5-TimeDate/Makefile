@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:53 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/16 13:23:52 heinz Exp $
 #
 
 DISTNAME=      	TimeDate-1.16
@@ -13,6 +13,7 @@ COMMENT=	Perl5 TimeDate distribution
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=		auto/TimeDate/.packlist
 
 .include "../../lang/perl5/module.mk"
