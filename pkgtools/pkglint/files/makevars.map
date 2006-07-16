@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.130 2006/07/13 21:04:35 jlam Exp $
+# $NetBSD: makevars.map,v 1.131 2006/07/16 09:29:39 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -144,7 +144,7 @@ BINMODE			FileMode [$system]
 BINOWN			UserGroupName [$system]
 BOOTSTRAP_DEPENDS	InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 BROKEN			Message []
-BROKEN_GETTEXT_DETECTION	YesNo [m:s,c:s]
+BROKEN_GETTEXT_DETECTION	YesNo [$package]
 BROKEN_IN		List of BrokenIn [m:s]
 BUILDLINK_ABI_DEPENDS.*	InternalList of Dependency [*:a]
 BUILDLINK_API_DEPENDS.*	InternalList of Dependency [*:a]
@@ -288,7 +288,7 @@ EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 EXPORT_SYMBOLS_LDFLAGS	List of LdFlag [$system]
 EXTRACT_CMD		ShellCommand [$system]
 EXTRACT_ELEMENTS	List of Pathmask [$package_list]
-EXTRACT_ONLY		List of Pathname [m:as,c:as]
+EXTRACT_ONLY		List of Pathname [$package_list]
 EXTRACT_OPTS		List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_BIN	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_LHA	List of ShellWord [m:as,c:as]
@@ -566,10 +566,13 @@ RANLIB			ShellCommand [$system]
 RCD_SCRIPTS		List of Filename [$package_list]
 RCD_SCRIPT_SRC.*	List of Pathname [m:s]
 REPLACE.*		String [m:s]
+REPLACE_AWK		List of Pathmask [$package_list]
+REPLACE_BASH		List of Pathmask [$package_list]
 REPLACE_EMACS		List of Pathmask
 REPLACE_FILES.*		List of Pathmask [m:as,c:as]
 REPLACE_INTERPRETER	List of Identifier [m:a,c:a]
 REPLACE_PERL		List of Pathmask [$package_list]
+REPLACE_SH		List of Pathmask [$package_list]
 REQD_DIRS		List of Pathname [$package_list]
 REQD_DIRS_PERMS		List of ShellWord [$package_list]
 REQD_FILES		List of Pathname [$package_list]
