@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:38 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/16 23:03:20 seb Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS_BUILDLINK3_MK:=	${XMMS_BUILDLINK3_MK}+
@@ -23,7 +23,6 @@ PTHREAD_OPTS+=	require
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
