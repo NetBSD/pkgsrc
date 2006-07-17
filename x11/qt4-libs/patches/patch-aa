@@ -1,8 +1,27 @@
-$NetBSD: patch-aa,v 1.2 2006/02/28 18:02:47 adam Exp $
+$NetBSD: patch-aa,v 1.3 2006/07/17 15:30:16 minskim Exp $
 
---- qmake/generators/unix/unixmake2.cpp.orig	2006-02-16 11:51:34.000000000 +0100
+--- qmake/generators/unix/unixmake2.cpp.orig	2006-07-17 03:35:32.000000000 +0000
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -1282,7 +1282,7 @@ UnixMakefileGenerator::writePkgConfigFil
+@@ -199,6 +199,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+         if(!project->isEmpty("QMAKE_BUNDLE_NAME")) {
+             t << "TARGETD       = " << var("TARGET_x.y") << endl;
+             t << "TARGET0       = " << var("TARGET_") << endl;
++        } else if(project->isActiveConfig("compile_libtool")) {
++            t << "TARGETD       = " << var("TARGET_la") << endl;
+         } else if(project->isEmpty("QMAKE_HPUX_SHLIB")) {
+             t << "TARGETD       = " << var("TARGET_x.y.z") << endl;
+             t << "TARGET0       = " << var("TARGET_") << endl;
+@@ -885,6 +887,9 @@ void UnixMakefileGenerator::init2()
+         project->variables()["TARGET"].first().prepend("lib");
+         project->variables()["TARGET"].first() += ".a";
+         if(project->variables()["QMAKE_AR_CMD"].isEmpty())
++          if(project->isActiveConfig("compile_libtool"))
++            project->variables()["QMAKE_AR_CMD"].append("$(CXX) -o $(TARGET) $(OBJECTS) $(OBJMOC)");
++          else
+             project->variables()["QMAKE_AR_CMD"].append("$(AR) $(TARGET) $(OBJECTS)");
+     } else {
+         project->variables()["TARGETA"].append(project->first("DESTDIR") + "lib" + project->first("TARGET") + ".a");
+@@ -1282,7 +1287,7 @@ UnixMakefileGenerator::writePkgConfigFil
      else
          libs << "QMAKE_LIBS"; //obvious one
      libs << "QMAKE_LFLAGS_THREAD"; //not sure about this one, but what about things like -pthread?

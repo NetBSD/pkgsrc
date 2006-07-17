@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.3 2006/07/17 15:30:16 minskim Exp $
+
+--- qmake/project.cpp.orig	2006-06-19 03:49:22.000000000 -0700
++++ qmake/project.cpp
+@@ -1383,6 +1383,9 @@ QMakeProject::isActiveConfig(const QStri
+     else if(x == "false")
+         return false;
+ 
++    if(x == "compile_libtool" && (vars["TEMPLATE"].first() == "app" || vars["TEMPLATE"].first() == "lib"))
++        return true;
++
+     //mkspecs
+     if((Option::target_mode == Option::TARG_MACX_MODE || Option::target_mode == Option::TARG_QNX6_MODE ||
+         Option::target_mode == Option::TARG_UNIX_MODE) && x == "unix")
