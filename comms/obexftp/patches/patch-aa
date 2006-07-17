@@ -1,16 +1,56 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
 
---- bfb/bfb_io.c.orig	2003-04-11 12:34:10.000000000 +0200
-+++ bfb/bfb_io.c
-@@ -272,8 +272,10 @@ void bfb_io_close(fd_t fd, int force)
- 		/* Send a break to get out of OBEX-mode */
- #ifdef _WIN32
- 		if(SetCommBreak(fd) != TRUE)	{
--#else
-+#elif defined(TCSBRKP)
- 		if(ioctl(fd, TCSBRKP, 0) < 0)	{
-+#else
-+		if(tcsendbreak(fd, 0) == -1)    {
- #endif
- 			DEBUG(1, "Unable to send break!\n");
- 		}
+--- aclocal.m4.orig	2006-05-16 15:50:36.000000000 +0100
++++ aclocal.m4
+@@ -56,6 +56,9 @@ if test "$ac_bluetooth_enabled" = yes; t
+ 				#ifdef __FreeBSD__
+ 				#include <sys/types.h>
+ 				#include <bluetooth.h>
++				#elif defined(__NetBSD__)
++				#include <bluetooth.h>
++				#include <netbt/rfcomm.h>
+ 				#else /* Linux */
+ 				#include <sys/socket.h>
+ 				#include <bluetooth/bluetooth.h>
+@@ -65,6 +68,9 @@ if test "$ac_bluetooth_enabled" = yes; t
+ 				#ifdef __FreeBSD__
+ 				bdaddr_t bdaddr;
+ 				struct sockaddr_rfcomm addr;
++				#elif defined(__NetBSD__)
++				bdaddr_t bdaddr;
++				struct sockaddr_bt addr;
+ 				#else /* Linux */
+ 				bdaddr_t bdaddr;
+ 				struct sockaddr_rc addr;
+@@ -76,6 +82,7 @@ if test "$ac_bluetooth_enabled" = yes; t
+ 		AC_DEFINE([HAVE_BLUETOOTH], [1], [Define if system supports Bluetooth and it's enabled])
+ 		BLUETOOTH_CFLAGS=""
+ 		BLUETOOTH_LIBS="-lbluetooth"
++  		AC_CHECK_LIB(sdp, sdp_open, BLUETOOTH_LIBS="$BLUETOOTH_LIBS -lsdp")
+ 	fi
+ 	AC_SUBST(BLUETOOTH_CFLAGS)
+ 	AC_SUBST(BLUETOOTH_LIBS)
+@@ -92,14 +99,22 @@ AC_DEFUN([SDPLIB_CHECK],[
+ 	AC_MSG_CHECKING(for Bluetooth SDP support)
+ 
+ 	AC_TRY_COMPILE(	[
++				#ifdef __NetBSD__
++				#include <bluetooth.h>
++				#include <sdp.h>
++				#else
+ 				#include <bluetooth/sdp.h>
++				#endif
+ 			],[
++				#ifdef __NetBSD__
++				sdp_attr_t attr;
++				#else
+ 				sdp_list_t sdplist;
++				#endif
+ 			],
+ 				am_cv_sdplib_found=yes,
+ 				am_cv_sdplib_found=no
+ 			)
+-
+ 	if test $am_cv_sdplib_found = yes; then
+ 		AC_DEFINE(HAVE_SDPLIB,1,[Define if system supports Bluetooth SDP])
+ 
