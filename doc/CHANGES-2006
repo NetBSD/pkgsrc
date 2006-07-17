@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.740 2006/07/17 12:32:00 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.741 2006/07/17 14:25:07 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3397,3 +3397,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/lftp to 3.5.1 [salo 2006-07-16]
 	Updated www/geeklog to 1.4.0.5 [taca 2006-07-17]
 	Updated comms/obexftp to 0.20 [xtraeme 2006-07-17]
+	Added sysutils/install-sh version 20060714 [jlam 2006-07-17]
+	Added pkgtools/bootstrap-extras version 20060714 [jlam 2006-07-17]
