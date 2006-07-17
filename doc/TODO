@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5212 2006/07/17 18:17:41 wiz Exp $
+$NetBSD: TODO,v 1.5213 2006/07/17 18:24:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -299,7 +299,7 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o 9base-2 [pkg/32635]
+	o 9base-2
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o GMT-4.0
@@ -493,7 +493,7 @@ Suggested package updates
 	o evince-0.5.4
 	o evolution-2.6.2
 	o evolution-exchange-2.6.2
-	o ex-050325 [pkg/32043]
+	o ex-050325
 	o exim-4.62
 	o exmh-2.7.2
 	o ezxml-0.8.6
@@ -758,7 +758,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.25
-	o mpop-0.8.3 [pkg/32511]
+	o mpop-0.8.3
 	o mrproject-0.9.1
 	o mrtg-2.14.5
 	o mserv-devel-0.41
