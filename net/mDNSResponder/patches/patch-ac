@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.3 2006/07/17 20:51:06 joerg Exp $
+
+--- mDNSPosix/mDNSUNP.c.orig	2006-07-17 20:46:34.000000000 +0000
++++ mDNSPosix/mDNSUNP.c
+@@ -154,6 +154,9 @@ First checkin
+ #endif
+ 
+ #if defined(AF_INET6) && HAVE_IPV6 && !HAVE_LINUX
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++#include <net/if_var.h>
++#endif
+ #include <netinet6/in6_var.h>
+ #endif
+ 
