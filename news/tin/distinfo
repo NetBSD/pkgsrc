@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2006/02/16 18:01:05 wiz Exp $
+$NetBSD: distinfo,v 1.12 2006/07/17 15:48:47 rillig Exp $
 
-SHA1 (tin-1.8.1.tar.bz2) = 39253fe626f97295203f5ded3f6bb935e5ad6f63
-RMD160 (tin-1.8.1.tar.bz2) = 145ebf7ca4f94402f39124ec505126cb0ac22a73
-Size (tin-1.8.1.tar.bz2) = 1435271 bytes
+SHA1 (tin-1.8.2.tar.bz2) = 59f13c9eeda414c42f61c408cbac6a59efdc4134
+RMD160 (tin-1.8.2.tar.bz2) = 2af922eb2fdc10fd6b305d6a3d033fd116db25ae
+Size (tin-1.8.2.tar.bz2) = 1436706 bytes
 SHA1 (patch-aa) = a3d40ff4e38230bcf8a3814c92ec2a75f85bf44e
