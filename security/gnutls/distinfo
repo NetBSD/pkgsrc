@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2006/05/17 21:50:22 wiz Exp $
+$NetBSD: distinfo,v 1.29 2006/07/17 17:02:02 wiz Exp $
 
-SHA1 (gnutls-1.4.0.tar.bz2) = 71c2df8072796592bb20910f3554923b4178b352
-RMD160 (gnutls-1.4.0.tar.bz2) = f3af3a76a630244e82461cdb804b09218f79eff5
-Size (gnutls-1.4.0.tar.bz2) = 3281324 bytes
+SHA1 (gnutls-1.4.1.tar.bz2) = 25d183fef21abbcaab0afe6b5809893aa70b577d
+RMD160 (gnutls-1.4.1.tar.bz2) = 1bb959a118ce8d776693f602034342c31a8737aa
+Size (gnutls-1.4.1.tar.bz2) = 4046780 bytes
 SHA1 (patch-ab) = 503bf7fa154341504db7ba3b5c6602627ff27dc5
