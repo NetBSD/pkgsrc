@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.745 2006/07/17 16:58:42 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.746 2006/07/17 17:03:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3404,3 +3404,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated news/tin to 1.8.2 [rillig 2006-07-17]
 	Updated graphics/ImageMagick to 6.2.8.4 [adam 2006-07-17]
 	Removed shells/static-bash2 [wiz 2006-07-17]
+	Updated archivers/zip to 2.32 [wiz 2006-07-17]
+	Updated sysutils/smartmontools to 5.36 [wiz 2006-07-17]
+	Updated security/gnutls to 1.4.1 [wiz 2006-07-17]
+	Updated converters/wv to 1.2.1 [wiz 2006-07-17]
