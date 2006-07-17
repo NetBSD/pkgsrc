@@ -1,12 +1,23 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+$NetBSD: patch-af,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
 
---- vmo/gsm2vmo.c.orig	2003-02-17 22:55:47.000000000 +0100
-+++ vmo/gsm2vmo.c
-@@ -32,6 +32,7 @@
- #include <stdlib.h>
+--- obexftp/obexftp_io.c.orig	2006-07-09 12:40:32.000000000 +0200
++++ obexftp/obexftp_io.c	2006-07-09 12:41:36.000000000 +0200
+@@ -30,6 +30,18 @@
  #include <string.h>
- #include <unistd.h>
-+#include <limits.h>
- #include <fcntl.h>
- #include <netinet/in.h> /* ntohs */
+ #include <time.h>
  
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
++#ifdef HAVE_BLUETOOTH
++#ifdef __NetBSD__
++#include <bluetooth.h>
++#else
++#include <bluetooth/bluetooth.h>
++#endif
++#endif /* HAVE_BLUETOOTH */
++
+ #include <openobex/obex.h>
+ 
+ #include "obexftp_io.h"
