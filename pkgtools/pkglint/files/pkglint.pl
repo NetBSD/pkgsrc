@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.650 2006/07/17 10:21:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.651 2006/07/17 11:16:43 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1837,8 +1837,9 @@ my $effective_pkgname_line;	# The origin of the three effective_* values
 my $hack_php_patches;		# Ignore non-existing patches in distinfo
 my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
-my $pkgctx_vardef;		# variable name => line of definition)
+my $pkgctx_vardef;		# variable name => line of definition
 my $pkgctx_varuse;		# variable name => Boolean
+my $pkgctx_bl3;			# buildlink3.mk name => line of inclusion
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 # Context of the Makefile that is currently checked.
@@ -3228,6 +3229,13 @@ sub readmakefile($$$$) {
 					$opt_debug_include and $line->log_debug("Including \"$dirname/$includefile\".");
 					$contents .= readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include);
 				}
+			}
+
+			if ($fname !~ qr"buildlink3\.mk$" && $includefile =~ qr"^\.\./\.\./(.*)/buildlink3\.mk$") {
+				my ($bl3_file) = ($1);
+
+				$pkgctx_bl3->{$bl3_file} = $line;
+				$opt_debug_misc and $line->log_debug("Buildlink3 file in package: ${bl3_file}");
 			}
 
 		} elsif ($text =~ regex_varassign) {
@@ -5657,6 +5665,43 @@ sub checklines_mk($) {
 	$mkctx_vardef = undef;
 }
 
+sub checklines_buildlink3_inclusion($) {
+	my ($lines) = @_;
+	my ($included_files);
+
+	assert(@{$lines} != 0);
+	$opt_debug_trace and log_debug($lines->[0]->fname, NO_LINES, "checklines_buildlink3_inclusion()");
+
+	if (!defined($pkgctx_bl3)) {
+		return;
+	}
+
+	# Collect all the included buildlink3.mk files from the file.
+	$included_files = {};
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ regex_mk_include) {
+			my ($file, $comment) = ($1, $2);
+
+			if ($file =~ qr"^\.\./\.\./(.*)/buildlink3\.mk") {
+				my ($bl3) = ($1);
+
+				$included_files->{$bl3} = $line;
+				if (!exists($pkgctx_bl3->{$bl3})) {
+					$line->log_warning("${bl3}/buildlink3.mk is included by this file but not by the package.");
+				}
+			}
+		}
+	}
+
+	# Print warnings for all buildlink3.mk files that are included
+	# by the package but not by this file.
+	foreach my $package_bl3 (sort(keys(%{$pkgctx_bl3}))) {
+		if (!exists($included_files->{$package_bl3})) {
+			$pkgctx_bl3->{$package_bl3}->log_warning("${package_bl3}/buildlink3.mk is included by the package but not by this file.");
+		}
+	}
+}
+
 #
 # Procedures to check a single file.
 #
@@ -5879,6 +5924,8 @@ sub checkfile_buildlink3_mk($) {
 	if ($lineno <= $#{$lines}) {
 		$lines->[$lineno]->log_warning("The file should end here.");
 	}
+
+	checklines_buildlink3_inclusion($lines);
 }
 
 sub checkfile_DESCR($) {
@@ -7169,6 +7216,7 @@ sub checkdir_package() {
 	$seen_bsd_prefs_mk = false;
 	$pkgctx_vardef = {%{get_userdefined_variables()}};
 	$pkgctx_varuse = {};
+	$pkgctx_bl3 = {};
 	$seen_Makefile_common = false;
 
 	# we need to handle the Makefile first to get some variables
@@ -7237,6 +7285,7 @@ cleanup:
 	$seen_bsd_prefs_mk = undef;
 	$pkgctx_vardef = undef;
 	$pkgctx_varuse = undef;
+	$pkgctx_bl3 = undef;
 	$seen_Makefile_common = undef;
 }
 
