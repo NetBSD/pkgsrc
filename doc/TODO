@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5211 2006/07/17 18:12:34 wiz Exp $
+$NetBSD: TODO,v 1.5212 2006/07/17 18:17:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1219,7 +1219,6 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.13
 	o wmctrl-1.07
-	o wmii-2.5.1 [pkg/32522]
 	o wmii-2.5.2 [pkg/33285]
 	o wmweather-2.4.3
 	o www6to4-1.6
