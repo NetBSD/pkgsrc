@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.754 2006/07/17 19:21:08 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.755 2006/07/17 19:27:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3418,3 +3418,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/gtkballs to 3.1.5nb4 [wiz 2006-07-17]
 	Updated sysutils/dmidecode to 2.8 [wiz 2006-07-17]
 	Updated x11/fox to 1.4.34 [wiz 2006-07-17]
+	Updated sysutils/xfe to 0.88 [wiz 2006-07-17]
