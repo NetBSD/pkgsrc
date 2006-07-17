@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.653 2006/07/17 12:56:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.654 2006/07/17 13:36:57 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1848,6 +1848,9 @@ my $mkctx_indentations;		# Indentation depth of preprocessing directives
 my $mkctx_target;		# Current make(1) target
 my $mkctx_vardef;		# { varname => line } for all variables that
 				# are defined in the current file
+my $mkctx_build_defs;		# Set of variables that are registered in
+				# BUILD_DEFS, to assure that all user-defined
+				# variables are added to it.
 
 my @todo_items;			# The list of directory entries that still need
 				# to be checked. Mostly relevant with
@@ -2296,12 +2299,14 @@ sub get_pkg_options() {
 	return ($get_pkg_options_result = $options);
 }
 
+my $load_tool_names_system_build_defs = undef;		# XXX: misplaced, but works
 my $load_tool_names_tools = undef;
 my $load_tool_names_vartools = undef;
 my $load_tool_names_varname_to_toolname = undef;
 my $load_tool_names_predefined_vartools = undef;
 sub load_tool_names() {
 	my ($tools, $vartools, $predefined_vartools, $varname_to_toolname, @tool_files);
+	my ($system_build_defs);
 
 	#
 	# Get the list of files that define the tools from bsd.tools.mk.
@@ -2334,6 +2339,7 @@ sub load_tool_names() {
 	$vartools = {};
 	$predefined_vartools = {};
 	$varname_to_toolname = {};
+	$system_build_defs = {};
 	foreach my $basename (@tool_files) {
 		my $fname = "${cwd_pkgsrcdir}/mk/tools/${basename}";
 		my $lines = load_lines($fname, true);
@@ -2392,6 +2398,10 @@ sub load_tool_names() {
 							}
 						}
 					}
+				} elsif ($varname eq "_BUILD_DEFS") {
+					foreach my $bdvar (split(qr"\s+", $value)) {
+						$system_build_defs->{$bdvar} = true;
+					}
 				}
 
 			} elsif ($text =~ regex_mk_cond) {
@@ -2410,11 +2420,21 @@ sub load_tool_names() {
 	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
 	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Predefined vartools: " . join(" ", sort(keys(%{$predefined_vartools}))));
 	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known varnames: " . join(" ", sort(keys(%{$varname_to_toolname}))));
+	$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "System-provided BUILD_DEFS: " . join(" ", sort(keys(%{$system_build_defs}))));
+
+	# Some user-defined variables do not influence the binary
+	# package at all and therefore do not have to be added to
+	# BUILD_DEFS.
+	foreach my $bdvar (qw(DISTDIR FETCH_OUTPUT_ARGS)) {
+		$system_build_defs->{$bdvar} = true;
+	}
+	#$system_build_defs->{"PACKAGES"} = true;
 
 	$load_tool_names_tools = $tools;
 	$load_tool_names_vartools = $vartools;
 	$load_tool_names_predefined_vartools = $predefined_vartools;
 	$load_tool_names_varname_to_toolname = $varname_to_toolname;
+	$load_tool_names_system_build_defs = $system_build_defs;
 }
 
 # Returns the set of known tool names and contains for example "sed" and
@@ -2454,6 +2474,15 @@ sub get_varname_to_toolname() {
 		load_tool_names();
 	}
 	return $load_tool_names_varname_to_toolname;
+}
+
+# Returns the set of user-defined variables that are added to BUILD_DEFS
+# within the bsd.pkg.mk file.
+sub get_system_build_defs() {
+	if (!defined($load_tool_names_system_build_defs)) {
+		load_tool_names();
+	}
+	return $load_tool_names_system_build_defs;
 }
 
 sub load_doc_TODO_updates($) {
@@ -3692,6 +3721,11 @@ sub checkline_mk_varuse($$$$) {
 		if ($needs_quoting == false && $mod =~ qr":Q$") {
 			$line->log_warning("The :Q operator should not be used for \${${varname}} here.");
 		}
+	}
+
+	assert(defined($mkctx_build_defs));
+	if (exists(get_userdefined_variables()->{$varname}) && !exists(get_system_build_defs()->{$varname}) && !exists($mkctx_build_defs->{$varname})) {
+		$line->log_warning("The user-defined variable ${varname} is used but not added to BUILD_DEFS.");
 	}
 }
 
@@ -5215,6 +5249,14 @@ sub checkline_mk_varassign($$$$$) {
 			"It is this meaning that should be described.");
 	}
 
+	if ($varname eq "BUILD_DEFS") {
+		assert(defined($mkctx_build_defs));
+		foreach my $bdvar (split(qr"\s+", $value)) {
+			$mkctx_build_defs->{$bdvar} = true;
+			$opt_debug_misc and $line->log_debug("${bdvar} is added to BUILD_DEFS.");
+		}
+	}
+
 	if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
 		my ($pkgvarname) = ($1);
 		if ($varname =~ qr"^PKG_.*_REASON$") {
@@ -5444,6 +5486,7 @@ sub checklines_mk($) {
 	$mkctx_target = undef;
 	$mkctx_for_variables = {};
 	$mkctx_vardef = {};
+	$mkctx_build_defs = {};
 
 	foreach my $prefix (qw(pre do post)) {
 		foreach my $action (qw(fetch extract patch tools wrapper configure build test install package clean)) {
@@ -5663,6 +5706,7 @@ sub checklines_mk($) {
 	$mkctx_indentations = undef;
 	$mkctx_target = undef;
 	$mkctx_vardef = undef;
+	$mkctx_build_defs = undef;
 }
 
 sub checklines_buildlink3_inclusion($) {
