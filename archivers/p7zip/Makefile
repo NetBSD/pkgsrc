@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/31 23:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/17 17:43:16 joerg Exp $
 
 DISTNAME=	p7zip_4.42_src_all
 PKGNAME=	p7zip-4.42
@@ -60,9 +60,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/*.* ${PREFIX}/share/doc/p7zip
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/commands/*.* ${PREFIX}/share/doc/p7zip/commands
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/switches/*.* ${PREFIX}/share/doc/p7zip/switches
-	${INSTALL_MAN} ${WRKSRC}/man1/7z.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/man1/7za.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/man1/7zr.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man1/7z.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man1/7za.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man1/7zr.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
