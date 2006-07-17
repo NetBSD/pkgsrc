@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2006/06/11 14:22:51 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/17 18:37:45 wiz Exp $
 
 DISTNAME=	gtkballs-3.1.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/ \
-		http://gtkballs.antex.ru/dist/
+MASTER_SITES=	http://gtkballs.antex.ru/dist/
 
-MAINTAINER=	svs@ropnet.ru
+MAINTAINER=	shattered@users.sourceforge.net
 HOMEPAGE=	http://gtkballs.antex.ru/
 COMMENT=	GTK+ clone of "Color Lines"
 
@@ -18,8 +17,11 @@ USE_PKGLOCALEDIR=	yes
 
 PLIST_SUBST+=	VARBASE=${VARBASE:Q}
 
+CONF_FILES_PERMS+=	/dev/null ${PREFIX}/${GAMES_DIR}/gtkballs-scores \
+			${ROOT_USER} games 664
+
 post-install:
-	${MV} ${PREFIX}/man/man6/gtkballs.6x ${PREFIX}/man/man6/gtkballs.6
+	${MV} ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6x ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
