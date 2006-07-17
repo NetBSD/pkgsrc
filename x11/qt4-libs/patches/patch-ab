@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/17 15:30:16 minskim Exp $
 
---- src/gui/painting/painting.pri.orig	2006-01-21 00:29:52.000000000 +0100
+--- src/gui/painting/painting.pri.orig	2006-06-19 10:49:23.000000000 +0000
 +++ src/gui/painting/painting.pri
-@@ -119,7 +119,7 @@ embedded {
+@@ -119,9 +119,9 @@ embedded {
  mac {
  
  } else:sse|win32-g++ {
 -    sse_compiler.commands = $$QMAKE_CXX -c -msse $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
-+    sse_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c -msse $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
++    sse_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c -msse $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.o
      sse_compiler.dependency_type = TYPE_C
-     sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
+-    sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++    sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
      sse_compiler.input = SSE_SOURCES
+     sse_compiler.variable_out = OBJECTS
+     sse_compiler.name = compiling[sse] ${QMAKE_FILE_IN}
