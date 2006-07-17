@@ -1,0 +1,2 @@
+This package provides a script ``install-sh'' that is compatible with
+the BSD install program.
