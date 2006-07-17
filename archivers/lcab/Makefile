@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/09 18:07:57 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/17 17:34:17 joerg Exp $
 #
 
 DISTNAME=		lcab-1.0b10
@@ -13,9 +13,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC:Q}/lcab.1 ${PREFIX:Q}/man/man1/lcab.1
+	${INSTALL_MAN} ${WRKSRC}/lcab.1 ${PREFIX}/${PKGMANDIR}/man1/lcab.1
 
 .include "../../mk/bsd.pkg.mk"
