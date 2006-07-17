@@ -1,4 +1,6 @@
-# $NetBSD: options.mk,v 1.4 2006/01/03 00:06:49 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2006/07/17 15:48:47 rillig Exp $
+
+.include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=	curses icu inet6 tin-use-inn-spool
@@ -22,7 +24,8 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mtin-use-inn-spool)
-INN_DATA_DIR?=  /var/news
+BUILD_DEFS+=		INN_DATA_DIR VARBASE
+INN_DATA_DIR?=		${VARBASE}/news
 CONFIGURE_ARGS+=	--with-inews-dir=${PREFIX}/inn/bin \
 			--with-libdir=${INN_DATA_DIR}/db \
 			--with-spooldir=${INN_DATA_DIR}/spool/articles \
