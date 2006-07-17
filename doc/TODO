@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5214 2006/07/17 18:39:19 wiz Exp $
+$NetBSD: TODO,v 1.5215 2006/07/17 19:27:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1240,7 +1240,6 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.8.0
 	o xeukleides-1.0.1
-	o xfe-0.72
 	o xfmail-1.5.4
 	o xfstt-1.7
 	o xine-lib-1.1.1
