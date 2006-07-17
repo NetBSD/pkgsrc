@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.739 2006/07/17 02:04:45 taca Exp $
+$NetBSD: CHANGES-2006,v 1.740 2006/07/17 12:32:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3396,3 +3396,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/xboard to 4.2.7 [rillig 2006-07-16]
 	Updated net/lftp to 3.5.1 [salo 2006-07-16]
 	Updated www/geeklog to 1.4.0.5 [taca 2006-07-17]
+	Updated comms/obexftp to 0.20 [xtraeme 2006-07-17]
