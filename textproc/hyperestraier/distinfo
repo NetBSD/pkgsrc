@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2006/05/12 17:46:37 wiz Exp $
+$NetBSD: distinfo,v 1.11 2006/07/17 18:12:01 wiz Exp $
 
-SHA1 (hyperestraier-1.2.5.tar.gz) = d7b80db45357becdcc5840da70b46e5e239ae978
-RMD160 (hyperestraier-1.2.5.tar.gz) = e27b3e86addfba7b090c69cab33eecc91b2b692d
-Size (hyperestraier-1.2.5.tar.gz) = 799633 bytes
+SHA1 (hyperestraier-1.3.3.tar.gz) = 857dba712fd30be7e8d0fbec5ea0a150664522e6
+RMD160 (hyperestraier-1.3.3.tar.gz) = 834f401f02231a5f48c7b8354d8ab8599d82155b
+Size (hyperestraier-1.3.3.tar.gz) = 899649 bytes
 SHA1 (patch-aa) = 87dbcfd75617d7fcf6d7c66644bb09dd7abc4c72
 SHA1 (patch-ab) = 0202379ccca5f7fff4b74e745c560a204b9be3fe
