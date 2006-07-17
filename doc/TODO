@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5201 2006/07/16 22:27:07 salo Exp $
+$NetBSD: TODO,v 1.5202 2006/07/17 12:32:00 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -796,7 +796,6 @@ Suggested package updates
 	o ntp-4.2.2
 	o nulib2-210
 	o nut-11.5
-	o obexftp-0.20 [xtraeme]
 	o objc-3.2.7
 	o ocrad-0.15
 	o odbc-postgresql-8.0.7
