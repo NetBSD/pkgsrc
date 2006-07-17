@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.757 2006/07/17 22:43:46 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.758 2006/07/17 23:40:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3421,3 +3421,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/xfe to 0.88 [wiz 2006-07-17]
 	Updated emulators/raine to 0.43.3 [wiz 2006-07-17]
 	Added devel/meld version 1.1.4 [wiz 2006-07-17]
+	Added games/jools version 0.20 [wiz 2006-07-17]
