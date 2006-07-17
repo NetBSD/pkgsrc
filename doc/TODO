@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5208 2006/07/17 17:25:01 wiz Exp $
+$NetBSD: TODO,v 1.5209 2006/07/17 17:51:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -877,7 +877,6 @@ Suggested package updates
 	o p5-Heap-0.71
 	o p5-Ima-DBI-0.34
 	o p5-Image-Info-1.21
-	o p5-Jemplate-0.18 [pkg/33928]
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Lexicon-0.61
