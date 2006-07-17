@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.649 2006/07/16 10:30:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.650 2006/07/17 10:21:02 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1837,8 +1837,8 @@ my $effective_pkgname_line;	# The origin of the three effective_* values
 my $hack_php_patches;		# Ignore non-existing patches in distinfo
 my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
-my $makevar;			# Table of variables and values
-my $varuse;			# Table of used variables
+my $pkgctx_vardef;		# variable name => line of definition)
+my $pkgctx_varuse;		# variable name => Boolean
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 # Context of the Makefile that is currently checked.
@@ -2857,8 +2857,8 @@ sub determine_used_variables($) {
 		$rest = $line->text;
 		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9+.A-Z_a-z]+)[:})]//) {
 			my ($varname) = ($1);
-			$varuse->{$varname} = $line;
-			$varuse->{varname_canon($varname)} = $line;
+			$pkgctx_varuse->{$varname} = $line;
+			$pkgctx_varuse->{varname_canon($varname)} = $line;
 			$opt_debug_unused and $line->log_debug("Variable ${varname} is used.");
 		}
 	}
@@ -3235,9 +3235,9 @@ sub readmakefile($$$$) {
 
 			# Record all variables that are defined in these lines, so that they
 			# are not reported as "used but not defined".
-			if ($op ne "?=" || !exists($makevar->{$varname})) {
+			if ($op ne "?=" || !exists($pkgctx_vardef->{$varname})) {
 				$opt_debug_misc and $line->log_debug("varassign(${varname}, ${op}, ${value})");
-				$makevar->{$varname} = $line;
+				$pkgctx_vardef->{$varname} = $line;
 			}
 			$contents .= $text . "\n";
 
@@ -3587,7 +3587,7 @@ sub checkline_mk_varuse($$$$) {
 	if (defined($type) && !($type->is_guessed)) {
 		# Great.
 
-	} elsif (defined($makevar) && exists($makevar->{$varname})) {
+	} elsif (defined($pkgctx_vardef) && exists($pkgctx_vardef->{$varname})) {
 		# A variable that is defined somewhere may also be used.
 
 	} elsif (exists($mkctx_vardef->{$varname})) {
@@ -4339,8 +4339,8 @@ sub checkline_mk_vardef($$$) {
 
 	# If we are checking a whole package, add it to the package-wide
 	# list of defined variables.
-	if (defined($makevar) && !exists($makevar->{$varname})) {
-		$makevar->{$varname} = $line;
+	if (defined($pkgctx_vardef) && !exists($pkgctx_vardef->{$varname})) {
+		$pkgctx_vardef->{$varname} = $line;
 	}
 
 	# Add it to the file-wide list of defined variables.
@@ -4378,8 +4378,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 	$value_novar = $value;
 	while ($value_novar =~ s/\$\{([^{}]*)\}//g) {
-		my ($varuse) = ($1);
-		if (!$list_context && $varuse =~ qr":Q$") {
+		my ($pkgctx_varuse) = ($1);
+		if (!$list_context && $pkgctx_varuse =~ qr":Q$") {
 			$line->log_warning("The :Q operator should only be used in lists and shell commands.");
 		}
 	}
@@ -4683,7 +4683,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		));
 
 		my $license_file = "${cwd_pkgsrcdir}/licenses/${value}";
-		if (defined($makevar) && exists($makevar->{"LICENSE_FILE"}) && $makevar->{"LICENSE_FILE"}->text =~ regex_varassign) {
+		if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"}) && $pkgctx_vardef->{"LICENSE_FILE"}->text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			$license_file = "${current_dir}/" . resolve_relative_path($value, false);
@@ -5158,11 +5158,11 @@ sub checkline_mk_varassign($$$$$) {
 
 	# If the variable is not used and is untyped, it may be a
 	# spelling mistake.
-	if (defined($varuse)) {
+	if (defined($pkgctx_varuse)) {
 		my $vartypes = get_vartypes_map();
 		my $deprecated = get_deprecated_map();
 
-		if (exists($varuse->{$varname}) || exists($varuse->{$varcanon})) {
+		if (exists($pkgctx_varuse->{$varname}) || exists($pkgctx_varuse->{$varcanon})) {
 			# Ok
 		} elsif (exists($vartypes->{$varname}) || exists($vartypes->{$varcanon})) {
 			# Ok
@@ -6142,15 +6142,15 @@ sub checkfile_package_Makefile($$$) {
 
 	checkperms($fname);
 
-	if (!exists($makevar->{"PLIST_SRC"})
-	    && !exists($makevar->{"NO_PKG_REGISTER"})
+	if (!exists($pkgctx_vardef->{"PLIST_SRC"})
+	    && !exists($pkgctx_vardef->{"NO_PKG_REGISTER"})
 	    && defined($pkgdir)
 	    && !-f "${current_dir}/$pkgdir/PLIST"
 	    && !-f "${current_dir}/$pkgdir/PLIST.common") {
 		log_warning($fname, NO_LINE_NUMBER, "Neither PLIST nor PLIST.common exist, and PLIST_SRC and NO_PKG_REGISTER are unset. Are you sure PLIST handling is ok?");
 	}
 
-	if (exists($makevar->{"NO_CHECKSUM"}) && is_emptydir("${current_dir}/${patchdir}")) {
+	if (exists($pkgctx_vardef->{"NO_CHECKSUM"}) && is_emptydir("${current_dir}/${patchdir}")) {
 		if (-f "${current_dir}/${distinfo_file}") {
 			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
 		}
@@ -6164,28 +6164,28 @@ sub checkfile_package_Makefile($$$) {
 		log_warning($fname, NO_LINE_NUMBER, "Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
-	if (exists($makevar->{"MASTER_SITES"})) {
-		if (exists($makevar->{"DYNAMIC_MASTER_SITES"})) {
-			$makevar->{"MASTER_SITES"}->log_warning("MASTER_SITES and ...");
-			$makevar->{"DYNAMIC_MASTER_SITES"}->log_warning("... DYNAMIC_MASTER_SITES conflict.");
+	if (exists($pkgctx_vardef->{"MASTER_SITES"})) {
+		if (exists($pkgctx_vardef->{"DYNAMIC_MASTER_SITES"})) {
+			$pkgctx_vardef->{"MASTER_SITES"}->log_warning("MASTER_SITES and ...");
+			$pkgctx_vardef->{"DYNAMIC_MASTER_SITES"}->log_warning("... DYNAMIC_MASTER_SITES conflict.");
 		}
 	} else {
-		if (!exists($makevar->{"DYNAMIC_MASTER_SITES"})) {
+		if (!exists($pkgctx_vardef->{"DYNAMIC_MASTER_SITES"})) {
 			log_warning($fname, NO_LINE_NUMBER, "Neither MASTER_SITES nor DYNAMIC_MASTER_SITES found.");
 		}
 	}
 
-	if (exists($makevar->{"REPLACE_PERL"}) && exists($makevar->{"NO_CONFIGURE"})) {
-		$makevar->{"REPLACE_PERL"}->log_warning("REPLACE_PERL is ignored when ...");
-		$makevar->{"NO_CONFIGURE"}->log_warning("... NO_CONFIGURE is set.");
+	if (exists($pkgctx_vardef->{"REPLACE_PERL"}) && exists($pkgctx_vardef->{"NO_CONFIGURE"})) {
+		$pkgctx_vardef->{"REPLACE_PERL"}->log_warning("REPLACE_PERL is ignored when ...");
+		$pkgctx_vardef->{"NO_CONFIGURE"}->log_warning("... NO_CONFIGURE is set.");
 	}
 
-	if (exists($makevar->{"RESTRICTED"}) && !exists($makevar->{"LICENSE"})) {
-		$makevar->{"RESTRICTED"}->log_error("Restricted packages must have a LICENSE.");
+	if (exists($pkgctx_vardef->{"RESTRICTED"}) && !exists($pkgctx_vardef->{"LICENSE"})) {
+		$pkgctx_vardef->{"RESTRICTED"}->log_error("Restricted packages must have a LICENSE.");
 	}
 
-	my $distname_line = $makevar->{"DISTNAME"};
-	my $pkgname_line = $makevar->{"PKGNAME"};
+	my $distname_line = $pkgctx_vardef->{"DISTNAME"};
+	my $pkgname_line = $pkgctx_vardef->{"PKGNAME"};
 
 	my $distname = (defined($distname_line) && $distname_line->text =~ regex_varassign) ? $3 : undef;
 	my $pkgname = (defined($pkgname_line) && $pkgname_line->text =~ regex_varassign) ? $3 : undef;
@@ -6206,13 +6206,13 @@ sub checkfile_package_Makefile($$$) {
 		$opt_debug_misc and $effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
 	}
 
-	if (!exists($makevar->{"COMMENT"})) {
+	if (!exists($pkgctx_vardef->{"COMMENT"})) {
 		log_warning($fname, NO_LINE_NUMBER, "No COMMENT given.");
 	}
 
-	if (exists($makevar->{"USE_IMAKE"}) && exists($makevar->{"USE_X11"})) {
-		$makevar->{"USE_IMAKE"}->log_note("USE_IMAKE makes ...");
-		$makevar->{"USE_X11"}->log_note("... USE_X11 superfluous.");
+	if (exists($pkgctx_vardef->{"USE_IMAKE"}) && exists($pkgctx_vardef->{"USE_X11"})) {
+		$pkgctx_vardef->{"USE_IMAKE"}->log_note("USE_IMAKE makes ...");
+		$pkgctx_vardef->{"USE_X11"}->log_note("... USE_X11 superfluous.");
 	}
 
 	if (defined($effective_pkgbase)) {
@@ -6729,7 +6729,7 @@ sub checkfile_PLIST($) {
 				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
 
 			} elsif ($text =~ qr"^info/.+$") {
-				if (defined($makevar) && !exists($makevar->{"INFO_FILES"})) {
+				if (defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"INFO_FILES"})) {
 					$line->log_warning("Packages that install info files should set INFO_FILES.");
 				}
 
@@ -6746,7 +6746,7 @@ sub checkfile_PLIST($) {
 					$opt_warn_extra and $line->log_warning("Library filename does not start with \"lib\".");
 				}
 				if ($ext eq "la") {
-					if (defined($makevar) && !exists($makevar->{"USE_LIBTOOL"})) {
+					if (defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"USE_LIBTOOL"})) {
 						$line->log_warning("Packages that install libtool libraries should define USE_LIBTOOL.");
 					}
 				}
@@ -6801,7 +6801,7 @@ sub checkfile_PLIST($) {
 				$opt_debug_unchecked and $line->log_debug("Unchecked pathname \"${text}\".");
 			}
 
-			if ($text =~ /\${PKGLOCALEDIR}/ && defined($makevar) && !exists($makevar->{"USE_PKGLOCALEDIR"})) {
+			if ($text =~ /\${PKGLOCALEDIR}/ && defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"USE_PKGLOCALEDIR"})) {
 				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 			}
 
@@ -7167,8 +7167,8 @@ sub checkdir_package() {
 	$effective_pkgname_line = undef;
 	$hack_php_patches = false;
 	$seen_bsd_prefs_mk = false;
-	$makevar = {%{get_userdefined_variables()}};
-	$varuse = {};
+	$pkgctx_vardef = {%{get_userdefined_variables()}};
+	$pkgctx_varuse = {};
 	$seen_Makefile_common = false;
 
 	# we need to handle the Makefile first to get some variables
@@ -7235,8 +7235,8 @@ cleanup:
 	$effective_pkgname_line = undef;
 	$hack_php_patches = undef;
 	$seen_bsd_prefs_mk = undef;
-	$makevar = undef;
-	$varuse = undef;
+	$pkgctx_vardef = undef;
+	$pkgctx_varuse = undef;
 	$seen_Makefile_common = undef;
 }
 
