@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/17 20:21:35 wiz Exp $
 
---- source/unzip.h.orig	2004-04-05 05:50:54.000000000 +0200
-+++ source/unzip.h	2004-04-05 05:53:19.000000000 +0200
-@@ -142,9 +142,9 @@
+--- source/unzip.h.orig	2004-08-17 16:44:40.000000000 +0200
++++ source/unzip.h
+@@ -142,9 +142,9 @@ typedef struct unz_file_info_s
      tm_unz tmu_date;
  } unz_file_info;
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
  /*
     Compare two filename (fileName1,fileName2).
     If iCaseSenisivity = 1, comparision is case sensitivity (like strcmp)
-@@ -155,7 +155,7 @@
+@@ -155,7 +155,7 @@ extern int ZEXPORT unzStringFileNameComp
  */
  
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
  /*
    Open a Zip file. path contain the full pathname (by example,
       on a Windows NT computer "c:\\zlib\\zlib111.zip" or on an Unix computer
-@@ -166,24 +166,24 @@
+@@ -166,24 +166,24 @@ extern unzFile ZEXPORT unzOpen OF((const
  	   of this unzip package.
  */
  
@@ -53,7 +53,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
  /*
    Get the global comment string of the ZipFile, in the szComment buffer.
    uSizeBuf is the size of the szComment buffer.
-@@ -194,22 +194,22 @@
+@@ -194,22 +194,22 @@ extern int ZEXPORT unzGetGlobalComment O
  /***************************************************************************/
  /* Unzip package allow you browse the directory of the zipfile */
  
@@ -80,7 +80,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
  /*
    Try locate the file szFileName in the zipfile.
    For the iCaseSensitivity signification, see unzStringFileNameCompare
-@@ -220,14 +220,14 @@
+@@ -220,14 +220,14 @@ extern int ZEXPORT unzLocateFile OF((unz
  */
  
  
@@ -97,7 +97,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
  /*
    Get Info about the current file
    if pfile_info!=NULL, the *pfile_info structure will contain somes info about
-@@ -246,22 +246,22 @@
+@@ -246,22 +246,22 @@ extern int ZEXPORT unzGetCurrentFileInfo
     from it, and close it (you can close it before reading all the file)
     */
  
@@ -124,7 +124,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
  /*
    Read bytes from the current file (opened by unzOpenCurrentFile)
    buf contain buffer where data must be copied
-@@ -273,19 +273,19 @@
+@@ -273,19 +273,19 @@ extern int ZEXPORT unzReadCurrentFile OF
      (UNZ_ERRNO for IO error, or zLib error for uncompress error)
  */
  
