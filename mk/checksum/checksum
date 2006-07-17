@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.7 2006/07/14 16:17:08 jlam Exp $
+# $NetBSD: checksum,v 1.8 2006/07/17 14:32:26 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -149,14 +149,14 @@ fi
 		eval "_alg_${d_alg}=\"$tmp\""
 
 		if ${TEST} "$d_checksum" = "IGNORE"; then
-			${ECHO} 1>&2 "WARNING: Ignoring checksum for $file"
+			${ECHO} 1>&2 "$self: Ignoring checksum for $file"
 			continue
 		fi
 		checksum=`${DIGEST} $d_alg < $file`
 		if ${TEST} "$d_checksum" = "$checksum"; then
 			${ECHO} "=> Checksum $d_alg OK for $file"
 		else
-			${ECHO} 1>&2 "ERROR: Checksum $d_alg mismatch for $file"
+			${ECHO} 1>&2 "$self: Checksum $d_alg mismatch for $file"
 			exitcode=1
 		fi
 		break
@@ -170,7 +170,7 @@ fi
 	${TEST} -n "$tmp" || tmp="$files"
 	if ${TEST} "$tmp" != DONE; then
 		for file in $tmp; do
-			${ECHO} 1>&2 "ERROR: No $algorithm checksum recorded for $file"
+			${ECHO} 1>&2 "$self: No $algorithm checksum recorded for $file"
 			exitcode=1
 		done
 	fi
