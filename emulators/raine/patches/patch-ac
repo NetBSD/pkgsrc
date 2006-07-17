@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2006/07/17 20:21:35 wiz Exp $
 
---- source/unzip.c.orig	2004-04-05 05:55:28.000000000 +0200
-+++ source/unzip.c	2004-04-05 05:55:54.000000000 +0200
-@@ -493,7 +493,7 @@
+--- source/unzip.c.orig	2004-08-17 16:44:40.000000000 +0200
++++ source/unzip.c
+@@ -493,7 +493,7 @@ local void unzlocal_DosDateToTmuDate (ul
  /*
    Get Info about the current file in the zipfile, with internal only info
  */
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/04/05 05:05:29 xtraeme Exp $
                                                    unz_file_info *pfile_info,
                                                    unz_file_info_internal 
                                                    *pfile_info_internal,
-@@ -502,7 +502,7 @@
+@@ -502,7 +502,7 @@ local int unzlocal_GetCurrentFileInfoInt
                                                    void *extraField,
  												  uLong extraFieldBufferSize,
                                                    char *szComment,
