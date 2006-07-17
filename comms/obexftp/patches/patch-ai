@@ -1,0 +1,30 @@
+$NetBSD: patch-ai,v 1.1 2006/07/17 12:29:57 xtraeme Exp $
+
+--- apps/obexftpd.c.orig	2006-07-09 16:43:20.000000000 +0200
++++ apps/obexftpd.c	2006-07-09 16:45:04.000000000 +0200
+@@ -23,6 +23,10 @@
+  * Created at:    Don, 2 Okt 2003
+  */
+ 
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -45,6 +49,14 @@
+ #include <netdb.h>
+ #endif /*_WIN32*/
+ 
++#ifdef HAVE_BLUETOOTH
++#ifdef __NetBSD__
++#include <bluetooth.h>
++#else
++#include <bluetooth/bluetooth.h>
++#endif
++#endif /* HAVE_BLUETOOTH */
++
+ /* just until there is a server layer in obexftp */
+ #include <openobex/obex.h>
+ 
