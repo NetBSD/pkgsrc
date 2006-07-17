@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2006/07/17 19:27:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/07/17 19:28:52 wiz Exp $
 
 DISTNAME=	xfe-0.88
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xfe.sourceforge.net/
+HOMEPAGE=	http://roland65.free.fr/xfe/
 COMMENT=	Fast MS-Explorer like filemanager for X
 
 USE_DIRS+=		xdg-1.1
