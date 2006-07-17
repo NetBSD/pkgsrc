@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.4 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: replace.mk,v 1.5 2006/07/17 18:18:42 gdt Exp $
 
 ######################################################################
 ### replace-pkg (PRIVATE, pkgsrc/mk/install/replace.mk)
@@ -150,6 +150,7 @@ replace-fixup-required-by:
 			{ print }'					\
 			$$contents > $$newcontents;			\
 		${MV} -f $$newcontents $$contents;			\
+		${PKG_ADMIN} set unsafe_depends=YES $$pkg;		\
 	done
 
 ######################################################################
