@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1871 2006/07/15 23:58:52 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1872 2006/07/17 13:35:11 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -208,6 +208,9 @@ ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
 
 _BUILD_DEFS=		${BUILD_DEFS}
+_BUILD_DEFS+=		LOCALBASE
+_BUILD_DEFS+=		PKGINFODIR
+_BUILD_DEFS+=		PKGMANDIR
 
 # Store the result in the +BUILD_INFO file so we can query for the build
 # options using "pkg_info -Q PKG_OPTIONS <pkg>".
