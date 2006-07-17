@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2006/01/18 22:13:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2006/07/17 17:02:26 wiz Exp $
 
-SHA1 (wv-1.2.0.tar.gz) = c696685fdc1434e300fc9baad5f9f048e94971a7
-RMD160 (wv-1.2.0.tar.gz) = 9658ab78813d2f49cbee5a0909f058956406c12e
-Size (wv-1.2.0.tar.gz) = 627912 bytes
+SHA1 (wv-1.2.1.tar.gz) = 3228e1af5fc022246926c04c369601e1c1473450
+RMD160 (wv-1.2.1.tar.gz) = 92e1ee9ea7b35ad383cd904afd32516f051ef0c7
+Size (wv-1.2.1.tar.gz) = 628027 bytes
