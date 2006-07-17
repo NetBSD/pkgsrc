@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: mkbootstrapkit,v 1.6 2006/07/14 22:17:09 jlam Exp $
+# $NetBSD: mkbootstrapkit,v 1.7 2006/07/17 14:30:05 jlam Exp $
 #
 # Usage: mkbootstrapkit [kitdir]
 #
@@ -26,6 +26,8 @@ for dir in \
 	lang/nawk \
 	mk \
 	net/tnftp \
+	pkgtools/bootstrap-extras \
+	pkgtools/bootstrap-mk-files \
 	pkgtools/digest \
 	pkgtools/libnbcompat \
 	pkgtools/mtree \
@@ -33,6 +35,7 @@ for dir in \
 	pkgtools/pkg_install \
 	pkgtools/pkgmanpages \
 	pkgtools/tnftp \
+	sysutils/install-sh \
 	textproc/nbsed
 do
 	echo "Copying $dir."
