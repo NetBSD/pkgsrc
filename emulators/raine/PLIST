@@ -1,29 +1,38 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/17 20:21:35 wiz Exp $
 bin/raine
-share/raine/languages/Brasil.cfg
-share/raine/languages/CZECH.CFG
-share/raine/languages/Catala.cfg
-share/raine/languages/Dansk.cfg
-share/raine/languages/Dutch.cfg
-share/raine/languages/English.cfg
-share/raine/languages/Español.cfg
-share/raine/languages/Euskera.cfg
-share/raine/languages/Finnish.cfg
-share/raine/languages/French.cfg
-share/raine/languages/French2.cfg
-share/raine/languages/German.cfg
-share/raine/languages/German2.cfg
-share/raine/languages/Italian.cfg
-share/raine/languages/Japanese.cfg
-share/raine/languages/POLISH.CFG
-share/raine/languages/Portugal.cfg
-share/raine/languages/Spanish.cfg
-share/raine/languages/Svenska.cfg
-share/raine/languages/Template.cfg
-share/raine/languages/Turkish.cfg
+share/applications/raine.desktop
+share/pixmaps/raine.png
+share/raine/cheats.cfg
+share/raine/hiscore.dat
+share/raine/languages/brasil.cfg
+share/raine/languages/catala.cfg
+share/raine/languages/czech.cfg
+share/raine/languages/dansk.cfg
+share/raine/languages/dutch.cfg
+share/raine/languages/english.cfg
+share/raine/languages/espanol.cfg
+share/raine/languages/euskera.cfg
+share/raine/languages/finnish.cfg
+share/raine/languages/french.cfg
+share/raine/languages/french2.cfg
 share/raine/languages/galego.cfg
+share/raine/languages/german.cfg
+share/raine/languages/german2.cfg
+share/raine/languages/italian.cfg
+share/raine/languages/japanese.cfg
+share/raine/languages/polish.cfg
+share/raine/languages/portugal.cfg
+share/raine/languages/spanish.cfg
+share/raine/languages/svenska.cfg
+share/raine/languages/template.cfg
+share/raine/languages/turkish.cfg
 share/raine/raine
 share/raine/raine.dat
-@dirrm share/raine/languages
+@exec ${MKDIR} %D/share/raine/roms
 @dirrm share/raine/roms
+@dirrm share/raine/languages
+@exec ${MKDIR} %D/share/raine/emudx
+@dirrm share/raine/emudx
+@exec ${MKDIR} %D/share/raine/artwork
+@dirrm share/raine/artwork
 @dirrm share/raine
