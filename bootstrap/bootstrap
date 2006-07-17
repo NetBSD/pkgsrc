@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.66 2006/07/14 23:19:15 jlam Exp $
+# $NetBSD: bootstrap,v 1.67 2006/07/17 14:30:05 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -174,7 +174,8 @@ opsys_finish()
 		fi
 		if [ `uname -r` -lt 6 ]; then
 		        echo_msg "Installing fake ldd script"
-        		run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/fakeldd $prefix/sbin"
+        		run_cmd "$install_sh -c -o $user -g $group -m 755 ../pkgtools/bootstrap-extras/files/fakeldd $prefix/sbin"
+			need_extras=yes
 			echo "LDD=			$prefix/sbin/fakeldd" >> ${MKCONF_EXAMPLE}
 		fi
 		;;
@@ -220,7 +221,7 @@ run_cmd()
 mkdir_p()
 {
 	for dir in $@; do
-		run_cmd "$shprog $wrkdir/install-sh -d -o $user -g $group $dir"
+		run_cmd "$install_sh -d -o $user -g $group $dir"
 	done
 }
 
@@ -277,6 +278,7 @@ while [ $# -gt 0 ]; do
 done
 
 # set defaults for system locations if not already set by the user
+wrkobjdir=${wrkdir}/pkgsrc
 if [ "$ignoreusercheck" = "yes" ]; then
 	[ -z "$prefix" ] && prefix=${HOME}/pkg
 	[ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/var/db/pkg
@@ -303,6 +305,7 @@ root_user=root
 bmakexenv=
 bmakexargs=
 tnftpxenv=
+need_extras=no
 case "$opsys" in
 Darwin)
 	root_group=wheel
@@ -565,10 +568,10 @@ if [ x"$check_compiler" = x"yes" ]; then
 	fi
 fi
 
-if [ ! -x ${wrkdir}/install-sh ]; then
-	run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' files/install-sh.in > $wrkdir/install-sh"
-	run_cmd "$chmodprog +x $wrkdir/install-sh"
-fi
+# build install-sh
+run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' ../sysutils/install-sh/files/install-sh.in > $wrkdir/install-sh"
+run_cmd "$chmodprog +x $wrkdir/install-sh"
+install_sh="$shprog $wrkdir/install-sh"
 
 is_root
 if [ $? = 1 ]; then
@@ -696,28 +699,30 @@ run_cmd "$cpprog bsd.* sys.mk $prefix/share/mk"
 	
 if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
-	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/install-sh/install-sh $prefix/bin/install-sh"
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
 	echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${MKCONF_EXAMPLE}
 fi
 
 if [ "$need_fixed_strip" = "yes" ] ; then
 	echo_msg "Installing fixed strip script"
-	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/strip-sh $prefix/bin/strip"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 ../pkgtools/bootstrap-extras/files/strip-sh $prefix/bin/strip"
 	echo "TOOLS_PLATFORM.strip?=		$prefix/bin/strip" >> ${MKCONF_EXAMPLE}
+	need_extras=yes
 fi
 
 if [ "$need_mkdir" = "yes" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
-	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/mkdir-sh $prefix/sbin/mkdir-sh"
-	echo "TOOLS_PLATFORM.mkdir?=		$prefix/sbin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
+	run_cmd "$install_sh -c -o $user -g $group -m 755 ../pkgtools/bootstrap-extras/files/mkdir-sh $prefix/bin/mkdir-sh"
+	echo "TOOLS_PLATFORM.mkdir?=		$prefix/bin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
+	need_extras=yes
 fi
 
 echo_msg "Installing bmake"
 copy_src ../devel/bmake/files bmake
 run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk" $bmakexargs)"
-run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
-run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/bmake.1 $mandir/man1/bmake.1"
+run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
+run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/bmake/bmake.1 $mandir/man1/bmake.1"
 
 bmake=$prefix/bin/bmake
 
@@ -726,8 +731,8 @@ case "$need_awk" in
 yes)	echo_msg "Installing awk"
 	copy_src ../lang/nawk/files awk
 	run_cmd "(cd $wrkdir/awk && $bmake)"
-	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
-	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
+	run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
 	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${MKCONF_EXAMPLE}
 	BSTRAP_ENV="AWK=\"$prefix/bin/nawk\" $BSTRAP_ENV"
 	;;
@@ -808,27 +813,33 @@ echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
 
 # register packages
 echo_msg "Registering installed packages"
-run_cmd "(cd ../pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)"
+run_cmd "(cd ../pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
 case "$need_awk" in
-yes)	run_cmd "(cd ../lang/nawk && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
+yes)	run_cmd "(cd ../lang/nawk && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_sed" in
-yes)	run_cmd "(cd ../textproc/nbsed && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+yes)	run_cmd "(cd ../textproc/nbsed && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+esac
+case "$need_bsd_install" in
+yes)	run_cmd "(cd ../sysutils/install-sh && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+esac
+case "$need_extras" in
+yes)	run_cmd "(cd ../pkgtools/bootstrap-extras && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_ftp" in
-yes)	run_cmd "(cd ../pkgtools/tnftp && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/tnftp && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_mtree" in
-yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_pax" in
-yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
+yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
-run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)"
+run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
 
 # Install the man page.
 echo_msg "Installing packages(7) man page"
-run_cmd "(cd ../pkgtools/pkgmanpages && $bmake MAKECONF=${MKCONF_EXAMPLE} install)"
+run_cmd "(cd ../pkgtools/pkgmanpages && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir install)"
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
