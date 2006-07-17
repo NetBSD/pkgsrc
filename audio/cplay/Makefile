@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/04/13 18:23:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/17 19:04:50 ghen Exp $
 
 DISTNAME=		cplay-1.49
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		${HOMEPAGE}
 
@@ -32,7 +32,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cplay ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/cplay.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/cplay.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/cplayrc ${EGDIR}
 .for l in ${PKGLOCALES}
