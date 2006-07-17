@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5206 2006/07/17 17:08:44 wiz Exp $
+$NetBSD: TODO,v 1.5207 2006/07/17 17:15:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1201,7 +1201,6 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
-	o unrar-3.6.7
 	o unrealircd-3.2.5
 	o upx-2.01
 	o userppp-030706
