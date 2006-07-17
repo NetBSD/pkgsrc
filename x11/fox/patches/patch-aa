@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/06/26 13:12:00 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/17 19:20:45 wiz Exp $
 
---- configure.orig	2005-08-02 00:16:27.000000000 +0000
+--- configure.orig	2006-06-13 02:24:25.000000000 +0000
 +++ configure
 @@ -1845,7 +1845,6 @@ LT_AGE=`expr $FOX_INTERFACE_VERSION - $F
  
@@ -43,5 +43,5 @@ $NetBSD: patch-aa,v 1.4 2006/06/26 13:12:00 joerg Exp $
 -CXXFLAGS="${CXXFLAGS} -O2 -DNDEBUG"
 +CXXFLAGS="${CXXFLAGS} -DNDEBUG"
  if test "${GXX}" = "yes" ; then
- CXXFLAGS="${CXXFLAGS} -Wuninitialized -ffast-math -fstrict-aliasing -finline-functions -fomit-frame-pointer -fexpensive-optimizations"
+ CXXFLAGS="${CXXFLAGS} -Wuninitialized -ffast-math -fno-strict-aliasing -finline-functions -fomit-frame-pointer -fexpensive-optimizations"
  fi
