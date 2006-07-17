@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.651 2006/07/17 11:16:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.652 2006/07/17 11:20:09 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5697,7 +5697,7 @@ sub checklines_buildlink3_inclusion($) {
 	# by the package but not by this file.
 	foreach my $package_bl3 (sort(keys(%{$pkgctx_bl3}))) {
 		if (!exists($included_files->{$package_bl3})) {
-			$pkgctx_bl3->{$package_bl3}->log_warning("${package_bl3}/buildlink3.mk is included by the package but not by this file.");
+			$pkgctx_bl3->{$package_bl3}->log_warning("${package_bl3}/buildlink3.mk is included by the package but not by the buildlink3.mk file.");
 		}
 	}
 }
