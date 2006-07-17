@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5204 2006/07/17 16:59:42 wiz Exp $
+$NetBSD: TODO,v 1.5205 2006/07/17 17:03:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -568,7 +568,6 @@ Suggested package updates
 	o gnopernicus-1.0.6
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
-	o gnutls-1.4.1
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
@@ -1130,7 +1129,6 @@ Suggested package updates
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
-	o smartmontools-5.36 [pkg/33958]
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.59
 	o smokeping-2.0.9
@@ -1231,7 +1229,6 @@ Suggested package updates
 	o wmii-2.5.1 [pkg/32522]
 	o wmii-2.5.2 [pkg/33285]
 	o wmweather-2.4.3
-	o wv-1.2.1
 	o www6to4-1.6
 	o wwwoffle-2.9
 	o x11vnc-0.8.1 [pkg/33700]
@@ -1305,7 +1302,6 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.14.2
 	o zile-2.2.15
-	o zip-2.32
 	o zircon-1.18.256
 	o zope-2.8.7
 	o zope-2.9.3
