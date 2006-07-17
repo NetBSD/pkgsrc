@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5215 2006/07/17 19:27:54 wiz Exp $
+$NetBSD: TODO,v 1.5216 2006/07/17 21:36:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1057,7 +1057,6 @@ Suggested package updates
 	o qwspritefield-1.7
 	o qwt-0.4.0
 	o radiance-3.7.2
-	o raine-0.43.3
 	o randread-0.2
 	o rapidsvn-0.9.3
 	o raptor-1.4.5
