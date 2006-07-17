@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5213 2006/07/17 18:24:14 wiz Exp $
+$NetBSD: TODO,v 1.5214 2006/07/17 18:39:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ Suggested package updates
 	o dirac-0.6.0
 	o dirdiff-2.1
 	o disc-cover-1.5.5
-	o dmidecode-2.8
 	o dnsmasq-2.31
 	o dnstop-20050405
 	o dnstracer-1.8
