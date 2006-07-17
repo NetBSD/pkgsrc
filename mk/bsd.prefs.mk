@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.229 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.230 2006/07/17 18:07:06 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -405,12 +405,6 @@ X11ROOT_PREFIX?=	# empty
 X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
 .endif
 
-# Set X11PREFIX to reflect the install directory of X11 packages.
-# Set XMKMF_CMD properly if xpkgwedge is installed.
-#
-# The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
-# is to catch users of xpkgwedge<1.0.
-#
 .if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss])
 X11PREFIX=		${LOCALBASE}
 .else
