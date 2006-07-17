@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.750 2006/07/17 17:51:24 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.751 2006/07/17 17:59:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3412,3 +3412,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/unrar to 3.6.7 [wiz 2006-07-17]
 	Updated net/pchar to 1.5 [wiz 2006-07-17]
 	Updated www/p5-Jemplate to 0.18 [wiz 2006-07-17]
+	Updated sysutils/radmind to 1.6.1 [wiz 2006-07-17]
