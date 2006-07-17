@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/05/12 17:46:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/07/17 18:12:01 wiz Exp $
 bin/estcall
 bin/estcmd
 bin/estconfig
@@ -13,7 +13,7 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.10.0
+lib/libestraier.so.8.18.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estseek.cgi
 man/man1/estcall.1
@@ -26,6 +26,8 @@ man/man3/estraier.3
 share/hyperestraier/COPYING
 share/hyperestraier/ChangeLog
 share/hyperestraier/THANKS
+share/hyperestraier/doc/cguide-en.html
+share/hyperestraier/doc/cguide-ja.html
 share/hyperestraier/doc/common.css
 share/hyperestraier/doc/coreframe.png
 share/hyperestraier/doc/icon16.png
@@ -39,6 +41,7 @@ share/hyperestraier/doc/javanativeapi/constant-values.html
 share/hyperestraier/doc/javanativeapi/estraier/Cmd.html
 share/hyperestraier/doc/javanativeapi/estraier/Condition.html
 share/hyperestraier/doc/javanativeapi/estraier/Database.html
+share/hyperestraier/doc/javanativeapi/estraier/DatabaseInformer.html
 share/hyperestraier/doc/javanativeapi/estraier/Document.html
 share/hyperestraier/doc/javanativeapi/estraier/Result.html
 share/hyperestraier/doc/javanativeapi/estraier/package-frame.html
@@ -51,6 +54,7 @@ share/hyperestraier/doc/javanativeapi/overview-tree.html
 share/hyperestraier/doc/javanativeapi/package-list
 share/hyperestraier/doc/javanativeapi/packages.html
 share/hyperestraier/doc/javanativeapi/resources/inherit.gif
+share/hyperestraier/doc/javanativeapi/serialized-form.html
 share/hyperestraier/doc/javanativeapi/stylesheet.css
 share/hyperestraier/doc/javapureapi/allclasses-frame.html
 share/hyperestraier/doc/javapureapi/allclasses-noframe.html
@@ -77,19 +81,21 @@ share/hyperestraier/doc/metatree.png
 share/hyperestraier/doc/nguide-en.html
 share/hyperestraier/doc/nguide-ja.html
 share/hyperestraier/doc/nodeframe.png
+share/hyperestraier/doc/perlnativeapi/index.html
 share/hyperestraier/doc/pguide-en.html
 share/hyperestraier/doc/pguide-ja.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000031.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000032.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000033.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000034.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000035.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000036.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000037.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000038.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000039.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000040.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000041.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000042.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000043.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000044.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000045.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000001.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000002.html
@@ -114,13 +120,11 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000020.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000021.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000022.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000023.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000024.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000025.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000026.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000027.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000040.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000041.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000042.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000043.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000044.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000045.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000046.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000047.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000048.html
@@ -128,14 +132,22 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000049.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000050.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000051.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000052.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000053.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000054.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000055.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000056.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000057.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000058.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000059.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000024.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000025.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000026.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000027.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000028.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000029.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000030.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000031.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000032.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000033.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000034.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000035.html
 share/hyperestraier/doc/rubynativeapi/created.rid
 share/hyperestraier/doc/rubynativeapi/files/estraier-doc_rb.html
 share/hyperestraier/doc/rubynativeapi/fr_class_index.html
@@ -144,12 +156,6 @@ share/hyperestraier/doc/rubynativeapi/fr_method_index.html
 share/hyperestraier/doc/rubynativeapi/index.html
 share/hyperestraier/doc/rubynativeapi/rdoc-style.css
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000037.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000038.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000039.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000040.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000041.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000042.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000043.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000044.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000045.html
@@ -157,19 +163,29 @@ share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000046.h
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000047.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000048.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000049.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000050.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000051.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000052.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000053.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000054.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000055.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000056.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000057.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000058.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src/M000059.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000050.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000051.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000052.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000053.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000054.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000055.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000056.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000057.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000058.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000059.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000060.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000061.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000062.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000063.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000064.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000065.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000066.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000067.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000068.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000069.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000070.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000071.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000001.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000002.html
@@ -197,18 +213,24 @@ share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000023.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000024.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000025.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000026.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000027.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000028.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000029.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000030.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000031.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000032.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000027.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000028.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000029.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000030.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000033.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000034.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000035.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src/M000036.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000031.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000032.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000033.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000034.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000035.html
-share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000036.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000037.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000038.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000039.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000040.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000041.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src/M000042.html
 share/hyperestraier/doc/rubypureapi/created.rid
 share/hyperestraier/doc/rubypureapi/files/estraierpure_rb.html
 share/hyperestraier/doc/rubypureapi/fr_class_index.html
@@ -255,6 +277,7 @@ share/hyperestraier/locale/ja/estseek.top
 @dirrm share/hyperestraier/doc/rubynativeapi/classes/Estraier
 @dirrm share/hyperestraier/doc/rubynativeapi/classes
 @dirrm share/hyperestraier/doc/rubynativeapi
+@dirrm share/hyperestraier/doc/perlnativeapi
 @dirrm share/hyperestraier/doc/javapureapi/resources
 @dirrm share/hyperestraier/doc/javapureapi/estraier/pure
 @dirrm share/hyperestraier/doc/javapureapi/estraier

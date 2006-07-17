@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2006/05/12 17:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/17 18:12:01 wiz Exp $
 
-DISTNAME=	hyperestraier-1.2.5
+DISTNAME=	hyperestraier-1.3.3
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hyperestraier/}
 
@@ -13,7 +13,7 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	hyperestraier.pc.in
 TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.qdbm+=	qdbm>=1.8.49
+BUILDLINK_API_DEPENDS.qdbm+=	qdbm>=1.8.60
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
