@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2006/06/12 00:36:25 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/07/17 17:06:59 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src3.tar.gz
@@ -16,6 +16,9 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 USE_DIRS+=		xorg-1.1
 INSTALL_TARGET=		install install.man
 NO_XORG_TARGETS=	yes
+
+USE_TOOLS+=	perl:run
+REPLACE_PERL+=	config/util/mkhtmlindex.pl
 
 .include "../../mk/bsd.prefs.mk"
 
