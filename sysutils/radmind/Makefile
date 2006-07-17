@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/01/18 13:11:56 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/17 17:59:05 wiz Exp $
 #
 
-DISTNAME=	radmind-1.5.1
+DISTNAME=	radmind-1.6.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://rsug.itd.umich.edu/software/radmind/files/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	hf@spg.tu-darmstadt.de
 HOMEPAGE=	http://rsug.itd.umich.edu/software/radmind/
