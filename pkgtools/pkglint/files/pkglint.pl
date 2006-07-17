@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.652 2006/07/17 11:20:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.653 2006/07/17 12:56:01 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3190,16 +3190,23 @@ sub readmakefile($$$$) {
 					$line->log_note("Skipping include file \"${includefile}\". This may result in false warnings.");
 				}
 
-			} elsif (exists($seen_Makefile_include->{$includefile})) {
-				# Don't include any file twice
-
 			} else {
 				$is_include_line = true;
-				$seen_Makefile_include->{$includefile} = true;
 			}
 		}
 
 		if ($is_include_line) {
+			if ($fname !~ qr"buildlink3\.mk$" && $includefile =~ qr"^\.\./\.\./(.*)/buildlink3\.mk$") {
+				my ($bl3_file) = ($1);
+
+				$pkgctx_bl3->{$bl3_file} = $line;
+				$opt_debug_misc and $line->log_debug("Buildlink3 file in package: ${bl3_file}");
+			}
+		}
+
+		if ($is_include_line && !exists($seen_Makefile_include->{$includefile})) {
+			$seen_Makefile_include->{$includefile} = true;
+
 			if ($includefile =~ qr"^\.\./[^./][^/]*/[^/]+") {
 				$line->log_warning("Relative directories should look like \"../../category/package\", not \"../package\".");
 				$line->explain_warning(expl_relative_dirs);
@@ -3229,13 +3236,6 @@ sub readmakefile($$$$) {
 					$opt_debug_include and $line->log_debug("Including \"$dirname/$includefile\".");
 					$contents .= readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include);
 				}
-			}
-
-			if ($fname !~ qr"buildlink3\.mk$" && $includefile =~ qr"^\.\./\.\./(.*)/buildlink3\.mk$") {
-				my ($bl3_file) = ($1);
-
-				$pkgctx_bl3->{$bl3_file} = $line;
-				$opt_debug_misc and $line->log_debug("Buildlink3 file in package: ${bl3_file}");
 			}
 
 		} elsif ($text =~ regex_varassign) {
@@ -5693,11 +5693,11 @@ sub checklines_buildlink3_inclusion($) {
 		}
 	}
 
-	# Print warnings for all buildlink3.mk files that are included
-	# by the package but not by this file.
+	# Print debugging messages for all buildlink3.mk files that are
+	# included by the package but not by this buildlink3.mk file.
 	foreach my $package_bl3 (sort(keys(%{$pkgctx_bl3}))) {
 		if (!exists($included_files->{$package_bl3})) {
-			$pkgctx_bl3->{$package_bl3}->log_warning("${package_bl3}/buildlink3.mk is included by the package but not by the buildlink3.mk file.");
+			$opt_debug_misc and $pkgctx_bl3->{$package_bl3}->log_debug("${package_bl3}/buildlink3.mk is included by the package but not by the buildlink3.mk file.");
 		}
 	}
 }
