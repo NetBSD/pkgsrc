@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/06/29 10:59:23 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/17 22:16:55 rillig Exp $
 #
 
 DISTNAME=		cqual-0.991
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cqual/}
 
@@ -18,6 +18,8 @@ REPLACE_PERL+=		bin/*
 INFO_FILES=		yes
 
 INSTALLATION_DIRS=	share/doc/cqual share/examples/cqual
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
