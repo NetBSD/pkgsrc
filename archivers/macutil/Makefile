@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/01 16:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/17 17:37:35 joerg Exp $
 
 DISTNAME=		macutil2.0b3
 PKGNAME=		macutil-2.0b3
@@ -16,7 +16,7 @@ MAKE_ENV+=		CF=${CFLAGS:M*:Q}
 
 WRKSRC=			${WRKDIR}/macutil
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/macunpack/macunpack \
@@ -33,6 +33,6 @@ do-install:
 		       ${WRKSRC}/man/binhex.1 \
 		       ${WRKSRC}/man/tomac.1 \
 		       ${WRKSRC}/man/frommac.1 \
-		       ${WRKSRC}/man/macutil.1 ${PREFIX}/man/man1
+		       ${WRKSRC}/man/macutil.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
