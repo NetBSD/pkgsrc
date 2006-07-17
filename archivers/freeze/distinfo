@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 14:45:23 agc Exp $
+$NetBSD: distinfo,v 1.9 2006/07/17 17:17:43 joerg Exp $
 
 SHA1 (freeze-2.5.tar.gz) = 07b94508fcd95d35236a4090257aa402fd623812
 RMD160 (freeze-2.5.tar.gz) = bc8bdf2ed06738066fd73f7bedb8b9f2dbaa21a2
 Size (freeze-2.5.tar.gz) = 36402 bytes
-SHA1 (patch-aa) = 659c035cddef121a2e971f82593f67a9a5bc100f
+SHA1 (patch-aa) = fdf556fd4dc8047db4d2ad95e6ae5ab05f336800
 SHA1 (patch-ab) = ee451389539442c392830c7da252ac836d4a5adf
 SHA1 (patch-ac) = 17b2b3b5514f7dea67ecfe969d8f6e988b5fad40
 SHA1 (patch-ad) = 9f1c797bb45dd76935eed777bd599d6fba87774e
