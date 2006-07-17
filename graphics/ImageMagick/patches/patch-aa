@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.36 2006/05/08 11:39:07 adam Exp $
+$NetBSD: patch-aa,v 1.37 2006/07/17 16:01:36 adam Exp $
 
---- configure.orig	2006-05-07 17:10:26.000000000 +0200
+--- configure.orig	2006-07-13 04:29:32.000000000 +0200
 +++ configure
-@@ -25305,9 +25305,6 @@ fi
+@@ -25322,9 +25322,6 @@ fi
  # Enable building/use of libltdl if we are building shared libraries regardless
  # of whether modules are built or not.
  with_ltdl='no'

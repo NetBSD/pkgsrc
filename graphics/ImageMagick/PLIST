@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2006/06/12 09:13:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2006/07/17 16:01:36 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -12,6 +12,7 @@ bin/identify
 bin/import
 bin/mogrify
 bin/montage
+bin/stream
 include/Magick++.h
 include/Magick++/Blob.h
 include/Magick++/CoderInfo.h
@@ -117,6 +118,7 @@ include/wand/mogrify.h
 include/wand/montage.h
 include/wand/pixel-iterator.h
 include/wand/pixel-wand.h
+include/wand/stream.h
 include/wand/wand-config.h
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/colors.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/configure.xml
@@ -148,6 +150,7 @@ man/man1/identify.1
 man/man1/import.1
 man/man1/mogrify.1
 man/man1/montage.1
+man/man1/stream.1
 share/ImageMagick-${IM_MAJOR_VER}/ChangeLog
 share/ImageMagick-${IM_MAJOR_VER}/LICENSE
 share/ImageMagick-${IM_MAJOR_VER}/NEWS
@@ -309,6 +312,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/quantize.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/resources.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/search.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/subversion.html
 @dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/api
 @dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++
