@@ -1,0 +1,15 @@
+$NetBSD: patch-av,v 1.1 2006/07/18 21:57:30 adrianp Exp $
+
+# This is CVE-2006-3011
+
+--- ext/standard/basic_functions.c.orig	2006-04-03 14:46:11.000000000 +0100
++++ ext/standard/basic_functions.c
+@@ -2034,7 +2034,7 @@ PHPAPI int _php_error_log(int opt_err, c
+ 			break;
+ 
+ 		case 3:		/*save to a file */
+-			stream = php_stream_open_wrapper(opt, "a", IGNORE_URL | ENFORCE_SAFE_MODE | REPORT_ERRORS, NULL);
++			stream = php_stream_open_wrapper(opt, "a", IGNORE_URL_WIN | ENFORCE_SAFE_MODE | REPORT_ERRORS, NULL);
+ 			if (!stream)
+ 				return FAILURE;
+ 			php_stream_write(stream, message, strlen(message));
