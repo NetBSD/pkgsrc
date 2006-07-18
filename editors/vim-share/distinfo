@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.48 2006/07/02 17:05:15 martti Exp $
+$NetBSD: distinfo,v 1.49 2006/07/18 10:27:16 martti Exp $
 
-SHA1 (vim/vim-7.0.tar.bz2) = 38ef48cabf942d0dc804a794dcc6f002b9457fc8
-RMD160 (vim/vim-7.0.tar.bz2) = 5c0d6f2dbd0382a432781fe6cb224028cbb783de
-Size (vim/vim-7.0.tar.bz2) = 6575205 bytes
-SHA1 (vim/vim-7.0-lang.tar.gz) = 3db6b0004d213490cc00d361835e7a7c685adb52
-RMD160 (vim/vim-7.0-lang.tar.gz) = 954a098f2f513ccdda96fdfcd043a737e52a5366
-Size (vim/vim-7.0-lang.tar.gz) = 1180240 bytes
 SHA1 (vim/7.0.001) = 54143281b4d21a825b7bb02bdd55c4716e7b6f80
 RMD160 (vim/7.0.001) = 808e7e5947fccd64ae010e37acb81890e0adc7f0
 Size (vim/7.0.001) = 1627 bytes
@@ -96,6 +90,24 @@ Size (vim/7.0.034) = 2042 bytes
 SHA1 (vim/7.0.035) = e8da3cff17eed18950fe680458ba3203bfa9e395
 RMD160 (vim/7.0.035) = fb5554c12bca1d261fc8c21d4c2b85416951fc03
 Size (vim/7.0.035) = 5905 bytes
+SHA1 (vim/7.0.036) = 09e9784634f32488ea91b3f49b35229552224480
+RMD160 (vim/7.0.036) = b1ad5eef29186243a0c71d4f18630affcf672420
+Size (vim/7.0.036) = 3990 bytes
+SHA1 (vim/7.0.037) = 10a54622bab8c9abe6559334c2017c9160013e33
+RMD160 (vim/7.0.037) = 9dd4f431e479c215740c37040ae7ccd4344be193
+Size (vim/7.0.037) = 1880 bytes
+SHA1 (vim/7.0.038) = 07065c93f3b9c88687344d108b0a877d729f6027
+RMD160 (vim/7.0.038) = f742ccca69aa9dcdb43201be45f6bc8d454c9500
+Size (vim/7.0.038) = 3236 bytes
+SHA1 (vim/7.0.039) = c64379758a14ec88659c8769d59c3f8df4e67a11
+RMD160 (vim/7.0.039) = fb237226531b7cb1b08a7b100318d221e2ffd214
+Size (vim/7.0.039) = 3240 bytes
+SHA1 (vim/vim-7.0-lang.tar.gz) = 3db6b0004d213490cc00d361835e7a7c685adb52
+RMD160 (vim/vim-7.0-lang.tar.gz) = 954a098f2f513ccdda96fdfcd043a737e52a5366
+Size (vim/vim-7.0-lang.tar.gz) = 1180240 bytes
+SHA1 (vim/vim-7.0.tar.bz2) = 38ef48cabf942d0dc804a794dcc6f002b9457fc8
+RMD160 (vim/vim-7.0.tar.bz2) = 5c0d6f2dbd0382a432781fe6cb224028cbb783de
+Size (vim/vim-7.0.tar.bz2) = 6575205 bytes
 SHA1 (patch-aa) = 6490dce35e099967272a84dd96b16cc3db0b4d53
 SHA1 (patch-ab) = 1ee4f14cb6c73743704d2dd2631cb3ca48f0303e
 SHA1 (patch-ad) = 1f83cdb17f7ce367d9ae3358db7370065ab76435
