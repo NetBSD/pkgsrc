@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/17 22:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/18 08:15:46 abs Exp $
 #
 
 DISTNAME=		meld-1.1.4
@@ -17,7 +17,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 USE_DIRS+=			xdg-1.3
 USE_DIRS+=			gnome2-1.6
 USE_PKGLOCALEDIR=		YES
-USE_TOOLS+=			gmake intltool
+USE_TOOLS+=			gmake msgfmt intltool
 MAKE_FLAGS+=			prefix=${PREFIX}
 MAKE_FLAGS+=			localedir=${PREFIX}/${PKGLOCALEDIR}
 MAKE_FLAGS+=			PYTHON=${PYTHONBIN}
