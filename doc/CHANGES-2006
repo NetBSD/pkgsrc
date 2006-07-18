@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.763 2006/07/18 18:41:17 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.764 2006/07/18 21:28:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3426,6 +3426,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/m4 to 1.4.5 [wiz 2006-07-18]
 	Updated editors/vim-share to 7.0.39 [martti 2006-07-18]
 	Added games/fltk-sudoku version 1.1.7 [reinoud 2006-07-18]
-
 	Updated x11/xscreensaver to 5.00 [wiz 2006-07-18]
 	Updated x11/xscreensaver-demo to 5.00 [wiz 2006-07-18]
+	Updated www/php4 to 4.4.2nb3 [adrianp 2006-07-18]
