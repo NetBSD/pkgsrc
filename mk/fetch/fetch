@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.1 2006/07/17 15:34:22 jlam Exp $
+# $NetBSD: fetch,v 1.2 2006/07/18 22:41:06 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,49 +43,94 @@
 #	fetch -- fetch files via URLs
 #
 # SYNOPSIS
-#	fetch [-c] [-f distinfo] file site ..."
+#	fetch [-c] [-d dir] [-f distinfo] file site ..."
 #
 # DESCRIPTION
 #	fetch will attempt to fetch the file from the list of specified
 #	sites in the order given.  The complete URL to the file on each
 #	site should be the concatenation of the specified site and file.
-#	If the file cannot be fetched successfully, then try the next
+#	If the file cannot be fetched successfully, then we try the next
 #	listed site.
+#
+#	If the file already exists on the disk and is verified, then
+#	no fetch action is taken.
 #
 # OPTIONS
 #	-c	Verify the checksum for the file.  If the checksum
 #		does not match, then the fetch is determined to be
 #		not sucessful.
 #
+#	-d dir	Fetch the files into the specified directory.
+#
 #	-f distinfo
 #		The path to the distinfo file containing the checksums
 #		for the file.  The file format should match what is
 #		needed by the pkgsrc/mk/checksum/checksum script.
 #
+#	-r	Resume a previous fetch for the file.  In this case,
+#		the file is first saved to a ".pkgsrc.resume" file,
+#		and is later renamed to the final file name if the
+#		complete file has been sucessfully fetched.
+#
+# ENVIRONMENT
+#	PKGSRCDIR	This is a hint to help locate the default
+#			checksum script.
+#
+#	CHECKSUM	This is the path to the checksum script used
+#			when "-c" is specified.
+#
+#	FETCH_CMD	This is the actual command used for transferring
+#			files from the various sites.
+#
+#	The following are lists of options to pass to ${FETCH_CMD}:
+#
+#	FETCH_BEFORE_ARGS
+#			These options appear before all other options.
+#
+#	FETCH_AFTER_ARGS
+#			These options appear after all other options.
+#
+#	FETCH_RESUME_ARGS
+#			These options appear just after FETCH_BEFORE_ARGS
+#			options and cause ${FETCH_CMD} to resume a
+#			previous file transfer.
+#
+#	FETCH_OUTPUT_ARGS
+#			These options specify the name of the local file
+#			that will hold the contents of the fetched file.
+#
 ######################################################################
 
 set -e		# exit on errors
 
-: ${CHECKSUM:=checksum}
+: ${PKGSRCDIR:=/usr/pkgsrc}
+: ${CHECKSUM:=${PKGSRCDIR}/mk/checksum/checksum}
+: ${CP:=cp}
 : ${ECHO:=echo}
 : ${FETCH_CMD:=ftp}
-: ${RM:=rm}
+: ${MKDIR:=mkdir}
+: ${MV:=mv}
 : ${TEST:=test}
+: ${TOUCH:=touch}
 : ${WC:=wc}
 
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-c] [-f distinfo] file site ..."
+	${ECHO} 1>&2 "usage: $self [-c] [-f distinfo] [-r] file site ..."
 }
 
 # Process optional arguments
 checksum=
 distinfo=
+fetchdir=.
+resume=
 while ${TEST} $# -gt 0; do
 	case "$1" in
 	-c)	checksum=yes; shift ;;
+	-d)	fetchdir="$2"; shift 2 ;;
 	-f)	distinfo="$2"; shift 2 ;;
+	-r)	resume=yes; shift ;;
 	--)	shift; break ;;
 	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
 		usage
@@ -95,12 +140,19 @@ while ${TEST} $# -gt 0; do
 	esac
 done
 if ${TEST} -n "$checksum" -a -z "$distinfo"; then
-	${ECHO} 1>&2 "$self: \`\`-c'' requires \``-f distinfo''"
+	${ECHO} 1>&2 "$self: \`\`-c'' requires \`\`-f distinfo''."
 	exit 1
 fi
-if ${TEST} -n "$resume" -a ! -z "$distinfo"; then
-	${ECHO} 1>&2 "$self: \`\`-r'' requires \``-f distinfo''"
-	exit 1
+if ${TEST} -n "$resume"; then
+	if ${TEST} -z "$distinfo"; then
+		${ECHO} 1>&2 "$self: \`\`-r'' requires \`\`-f distinfo''."
+		resume=
+	elif ${TEST} "x${FETCH_RESUME_ARGS}" = "x"; then
+		${ECHO} 1>&2 "$self: \`\`-r'' requires FETCH_RESUME_ARGS to be non-empty."
+		resume=
+	fi
+	${TEST} -n "$resume" ||
+		${ECHO} 1>&2 "$self: Falling back to non-resume fetch."
 fi
 
 # Process required arguments
@@ -109,16 +161,16 @@ if ${TEST} $# -lt 2; then
 	exit 1
 fi
 file="$1"; shift
+path="$fetchdir/$file"
 
 if ${TEST} -n "$distinfo" && ${TEST} ! -f "$distinfo"; then
 	${ECHO} 1>&2 "$self: distinfo file missing: $distinfo"
 	exit 1
 fi
 
-dir="${file%/*}"
-${TEST} "$dir" != "$file" || dir=.
-if ${TEST} ! -w "$dir/."; then
-	${ECHO} 1>&2: "$self: Cannot write to $dir"
+${TEST} -d $fetchdir || ${MKDIR} -p $fetchdir 2>/dev/null
+if ${TEST} ! -w $fetchdir; then
+	${ECHO} 1>&2 "$self: Cannot write to $fetchdir"
 	exit 1
 fi
 
@@ -131,42 +183,100 @@ if ${TEST} -n "$distinfo"; then
 		Size)	;;	# only handle "Size" lines
 		*)	continue ;;
 		esac
-		${TEST} "d_file" != "($file)" || continue
+		case "$fetchdir" in
+		".")	${TEST} "$d_file" = "($file)" || continue ;;
+		*)	${TEST} "$d_file" = "($path)" || continue ;;
+		esac
 		distsize="$d_size"; distunits="$d_units"
 		break
 	done < $distinfo
 fi
 
-checksum_file() {
-	_file="$1"
-	if ${TEST} -z "$checksum" || ${CHECKSUM} $distinfo $_file; then
-		return 0;
+# verify_file $file
+#	If we can checksum the file, then see if it matches the listed
+#	checksums in the distinfo file.  If we can check the size, then
+#	check that instead.  We strip off ".pkgsrc.resume" from the
+#	filename so that we can verify the checksum for the temporary
+#	fetch file as well.
+#
+verify_file() {
+	_file="${1#./}"
+	${TEST} -f $_file || return 1
+	if ${TEST} -n "$checksum"; then
+		${CHECKSUM} -s ".pkgsrc.resume" $distinfo ${_file} || return 1
+		return 0
+	elif ${TEST} -n "$distsize"; then
+		_size=`${WC} -c < $_file`
+		${TEST} "$_size" -eq "$distsize" || return 1
+		return 0
 	fi
-	return 1
+	return 0;
 }
 
-bfile="${file##*/}"
+# If the file already exists and it verifies, then we don't need to fetch
+# it again.
+#
+if verify_file $path; then
+	exit 0
+fi
+
+# Set the name of the output file.  In the "resume" case, we initialize
+# the fetch loop by ensuring that the temporary output file already
+# exists.
+#
+outputfile="$file"
+outputpath="$fetchdir/$outputfile"
+if ${TEST} -n "$resume"; then
+	outputfile="${file}.pkgsrc.resume"
+	outputpath="$fetchdir/$outputfile"
+	if ${TEST} ! -f $outputpath; then
+		if ${TEST} -f $path; then
+			${CP} -f $path $outputpath
+		else
+			${TOUCH} $outputpath
+		fi
+	fi
+	#
+	# If the temporary file verifies, then we don't need to resume
+	# fetching it.
+	#
+	if verify_file $outputpath; then
+		${MV} -f $outputpath $path
+		exit 0
+	fi
+	size=`${WC} -c < $outputpath`
+	${ECHO} "=> Downloaded size: $size bytes"
+fi
+${TEST} -z "$distsize" || ${ECHO} "=> Total size: $distsize $distunits"
+
 while ${TEST} $# -gt 0; do
 	site="$1"; shift
-	${TEST} -z "$distsize" || ${ECHO} "=> [$distsize $distunits]"
-	fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${bfile} ${FETCH_AFTER_ARGS}"
-	if $fetch_cmd; then
-		: # successful fetch of file
-	else
-		${RM} -f $file
+
+	( cd $fetchdir
+	  if ${TEST} -n "$resume"; then
+		${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $site$file
+	  else
+		${FETCH_CMD} ${FETCH_BEFORE_ARGS} $site$file ${FETCH_AFTER_ARGS}
+	  fi )
+	if ${TEST} $? -ne 0; then
+		${ECHO} 1>&2 "$self: Unable to fetch expected file $file"
+		continue
 	fi
-	if ${TEST} -f $file; then
-		if checksum_file $file; then
-			break
-		else
-			${ECHO} 1>&2 "$self: Checksum failure for $bfile"
-			${RM} -f $file
-		fi
+	if verify_file $outputpath; then
+		${TEST} -z "$resume" || ${MV} -f $outputpath $path
+		break
 	else
-		${ECHO} 1>&2 "$self: Unable to fetch expected file $bfile"
+		${ECHO} 1>&2 "$self: Unable to verify fetched file $file"
+	fi
+	if ${TEST} -n "$resume"; then
+		if ${TEST} -f $path; then
+			${CP} -f $path $outputpath
+		else
+			${TOUCH} $outputpath
+		fi
 	fi
 done
-if ${TEST} -f "$file"; then
+if ${TEST} -f $path; then
 	exit 0
 else
 	exit 1

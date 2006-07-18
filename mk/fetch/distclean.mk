@@ -1,4 +1,4 @@
-# $NetBSD: distclean.mk,v 1.2 2006/07/12 12:34:13 rillig Exp $
+# $NetBSD: distclean.mk,v 1.3 2006/07/18 22:41:06 jlam Exp $
 
 .PHONY: pre-distclean
 .if !target(pre-distclean)
@@ -10,14 +10,11 @@ pre-distclean:
 .if !target(distclean)
 distclean: pre-distclean clean
 	@${PHASE_MSG} "Dist cleaning for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
-		cd ${_DISTDIR} &&					\
-		${TEST} -z "${DISTFILES}" || ${RM} -f ${DISTFILES};	\
-                if [ "${PKG_RESUME_TRANSFERS:M[Yy][Ee][Ss]}" ]; then    \
-                    ${TEST} -z "${DISTFILES}.temp" || ${RM} -f ${DISTFILES}.temp;    \
-                fi;                                                     \
-		${TEST} -z "${PATCHFILES}" || ${RM} -f ${PATCHFILES};	\
-	fi
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TEST} -d ${_DISTDIR} || exit 0;				\
+	cd ${_DISTDIR};							\
+	${RM} -f ${ALLFILES};						\
+	${RM} -f ${ALLFILES:S/$/.pkgsrc.resume/}
 .  if defined(DIST_SUBDIR)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} ! -d ${_DISTDIR}					\
