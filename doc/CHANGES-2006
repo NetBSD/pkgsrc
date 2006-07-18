@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.762 2006/07/18 17:42:08 reinoud Exp $
+$NetBSD: CHANGES-2006,v 1.763 2006/07/18 18:41:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3427,3 +3427,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-share to 7.0.39 [martti 2006-07-18]
 	Added games/fltk-sudoku version 1.1.7 [reinoud 2006-07-18]
 
+	Updated x11/xscreensaver to 5.00 [wiz 2006-07-18]
+	Updated x11/xscreensaver-demo to 5.00 [wiz 2006-07-18]
