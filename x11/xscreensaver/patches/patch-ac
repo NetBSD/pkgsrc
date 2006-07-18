@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
+$NetBSD: patch-ac,v 1.17 2006/07/18 18:40:36 wiz Exp $
 
---- configure.orig	2005-06-22 21:02:21.000000000 -0400
+--- configure.orig	2006-05-23 23:01:32.000000000 +0000
 +++ configure
-@@ -2856,6 +2856,9 @@ echo "${ECHO_T}Turning on SGI compiler w
+@@ -2872,6 +2872,9 @@ echo "${ECHO_T}Turning on SGI compiler w
      esac
    fi
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
  if test -n "$GCC"; then
     if test -n "$GCC"; then
     echo "$as_me:$LINENO: checking whether gcc accepts -std" >&5
-@@ -2902,6 +2905,7 @@ echo "${ECHO_T}Disabling C++ comments in
+@@ -2918,6 +2921,7 @@ echo "${ECHO_T}Disabling C++ comments in
       CC="$CC -Wp,-lang-c89"
     fi
    fi
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
  
  if test -n "$GCC"; then
     if test -n "$GCC"; then
-@@ -7307,7 +7311,7 @@ _ACEOF
+@@ -7434,7 +7438,7 @@ _ACEOF
  
  
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
  set dummy ${ac_tool_prefix}ranlib; ac_word=$2
-@@ -12972,7 +12976,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
+@@ -13073,7 +13077,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13062,7 +13066,7 @@ echo "$as_me: WARNING: Cannot find compa
+@@ -13163,7 +13167,7 @@ echo "$as_me: WARNING: Cannot find compa
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -14699,11 +14703,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
+@@ -14800,11 +14804,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
    ac_gtk_config_libs=$ac_cv_gtk_config_libs
  
    GTK_EXTRA_OBJS=""
