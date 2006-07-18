@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2006/07/10 04:20:57 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/18 22:12:30 adrianp Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
 PKGNAME=	hydra-5.3
 CATEGORIES=	security
-MASTER_SITES=	http://www.thc.org/releases/
+MASTER_SITES=	http://thc.segfault.net/releases/ \
+		http://www.thc.org/releases/
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://www.thc.org/thc-hydra/
+HOMEPAGE=	http://thc.org.segfault.net/thc-hydra/
 COMMENT=	Login password cracker
 
 .include "../../mk/bsd.prefs.mk"
@@ -17,7 +18,7 @@ GNU_CONFIGURE=	YES
 BUILD_TARGET=	all
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-LICENSE+=	hydra-license
+LICENSE=	hydra-license
 
 SUBST_CLASSES+=		build
 SUBST_STAGE.build=	post-patch
