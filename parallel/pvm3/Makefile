@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2006/05/21 13:04:10 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2006/07/18 20:57:31 rillig Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.netlib.org/pvm3/
 EXTRACT_SUFX=	.tgz
@@ -11,15 +11,19 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.epm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Parallel Virtual Machine libraries and environment
 
-.if exists(/usr/bin/ssh)
-PVM_SSH?=		/usr/bin/ssh
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=		PVM_SSH
+
+.if !defined(PVM_SSH)
+PKG_FAIL_REASON+=	PVM_SSH must be defined by the pkgsrc user.
 .else
+.  if ${PVM_SSH:M${LOCALBASE}/*} != ""
 DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
-PVM_SSH?=		${LOCALBASE}/bin/ssh
+.  endif
 .endif
 
 WRKSRC=			${WRKDIR}/pvm3
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
