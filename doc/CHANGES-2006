@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.760 2006/07/18 06:35:26 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.761 2006/07/18 10:27:41 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3424,3 +3424,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/jools version 0.20 [wiz 2006-07-17]
 	Updated www/jalbum to 6.5 [martti 2006-07-18]
 	Updated devel/m4 to 1.4.5 [wiz 2006-07-18]
+	Updated editors/vim-share to 7.0.39 [martti 2006-07-18]
