@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/18 23:27:14 jlam Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -34,17 +34,13 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-_FETCH_MESSAGE= 							\
-	${ECHO} "======================================================================"; \
-	${ECHO} ; 							\
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing"; 	\
-	${ECHO} " ${COMMENT} must be fetched"; 				\
-	${ECHO} " into:"; 						\
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
-	${ECHO} " from:"; 						\
-	${ECHO} "	${ARCHIVE}";                                    \
-	${ECHO} ; 							\
-	${ECHO} "======================================================================"
+FETCH_MESSAGE= 								\
+	"The file ${DISTNAME}${EXTRACT_SUFX} containing" 		\
+	"    ${COMMENT}"						\
+	"must be fetched into:" 					\
+	"    ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}" 			\
+	"from:" 							\
+	"    ${ARCHIVE}"
 
 .include "../../mk/bsd.prefs.mk"
 
