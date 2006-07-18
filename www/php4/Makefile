@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/07/18 21:21:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.69 2006/07/18 21:26:17 adrianp Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		3
@@ -55,6 +55,7 @@ SUBST_STAGE.pear=	pre-install
 SUBST_FILES.pear=	${WRKDIR}/pear.sh
 SUBST_SED.pear=		-e "s|@php_bin@|${PREFIX}/bin/php|g"
 SUBST_SED.pear+=	-e "s|@php_dir@|${PREFIX}/lib/php|g"
+SUBST_SED.pear+=	-e "s|@SH@|${SH}|g"
 SUBST_MESSAGE.pear=	Fixing pear installation script.
 
 post-extract:
