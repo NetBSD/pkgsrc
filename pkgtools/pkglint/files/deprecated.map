@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.41 2006/07/10 04:18:30 rillig Exp $
+# $NetBSD: deprecated.map,v 1.42 2006/07/18 23:08:30 jlam Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -112,3 +112,6 @@ _REPLACE_FILES.*	Use REPLACE_FILES.* instead.
 MESSAGE			Use MESSAGE_SRC instead.
 INSTALL_FILE		It may only be used internally by pkgsrc.
 DEINSTALL_FILE		It may only be used internally by pkgsrc.
+
+# July 2006
+USE_DIGEST		You can just remove it.
