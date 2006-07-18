@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/18 23:27:14 jlam Exp $
 
 DISTNAME=	molden4.2
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -27,14 +27,15 @@ NO_BIN_ON_CDROM=        ${RESTRICTED}
 NO_SRC_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 
-_FETCH_MESSAGE=	\
-	${ECHO} "======================================================================"; \
-	${ECHO} " Please read the WWW page below to know how to get a copy of Molden."; \
-	${ECHO} ; \
-	${ECHO} "     http://www.cmbi.kun.nl/~schaft/molden/howtoget.html"; \
-	${ECHO} ; \
-	${ECHO} " Then put the file ${DISTNAME}${EXTRACT_SUFX} into ${DISTDIR}."; \
-	${ECHO} "======================================================================"
+FETCH_MESSAGE=								\
+	"Please read the following to learn how to get a copy of Molden:" \
+	""
+	"    http://www.cmbi.kun.nl/~schaft/molden/howtoget.html"	\
+	""
+	"Then put the file:"						\
+	"    ${DISTNAME}${EXTRACT_SUFX}"				\
+	"into"								\
+	"    ${DISTDIR}"						\
 
 INSTALLATION_DIRS=	bin
 
