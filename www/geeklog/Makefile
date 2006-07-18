@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/01 00:22:38 taca Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2006/07/18 08:12:41 ghen Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -13,7 +13,7 @@ COMMENT=	PHP/MySQL based application for managing dynamic web content
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
-VER=		1.4.0sr4
+VER=		1.4.0sr5
 NO_BUILD=	YES
 
 GEEKLOG_SYS=		emailgeeklogstories language plugins readme sql system
@@ -86,6 +86,8 @@ pre-install:
 	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
 	cd ${WRKSRC}/public_html; \
 		${FIND} ${GEEKLOG_TMPL_SUB} -type f -exec ${CHMOD} -x {} \;
+	cd ${WRKSRC}/system; \
+		${FIND} pear -type f -exec ${CHMOD} 0644 {} \;
 
 do-install:
 	${INSTALL_DATA_DIR} ${GEEKLOG_DOCDIR}
