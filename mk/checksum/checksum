@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.8 2006/07/17 14:32:26 jlam Exp $
+# $NetBSD: checksum,v 1.9 2006/07/18 21:39:39 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,6 +51,8 @@
 #
 # OPTIONS
 #	-a algorithm	Only verify checksums for the specified algorithm.
+#	-s suffix	Strip the specified suffix from the file names
+#			when searching for the checksum.
 #
 ######################################################################
 
@@ -64,14 +66,16 @@ set -e		# exit on errors
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-a algorithm] distinfo [file ...]"
+	${ECHO} 1>&2 "usage: $self [-a algorithm] [-s suffix] distinfo [file ...]"
 }
 
 # Process optional arguments
 algorithm=
+suffix=
 while ${TEST} $# -gt 0; do
 	case "$1" in
 	-a)	algorithm="$2"; shift 2 ;;
+	-s)	suffix="$2"; shift 2 ;;
 	--)	shift; break ;;
 	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
 		usage
@@ -132,7 +136,8 @@ fi
 	${TEST} -n "$tmp" || eval "_alg_${d_alg}=\"$files\""
 
 	for file in $files; do
-		${TEST} "$d_file" = "($file)" || continue
+		sfile="${file%$suffix}"
+		${TEST} "$d_file" = "($sfile)" || continue
 		
 		eval "tmp=\"\$_alg_${d_alg}\""
 		case "$tmp" in
@@ -149,14 +154,18 @@ fi
 		eval "_alg_${d_alg}=\"$tmp\""
 
 		if ${TEST} "$d_checksum" = "IGNORE"; then
-			${ECHO} 1>&2 "$self: Ignoring checksum for $file"
+			${ECHO} 1>&2 "$self: Ignoring checksum for $sfile"
 			continue
+		fi
+		if ${TEST} ! -f $file; then
+			${ECHO} 1>&2 "$self: $file does not exist"
+			exit 1
 		fi
 		checksum=`${DIGEST} $d_alg < $file`
 		if ${TEST} "$d_checksum" = "$checksum"; then
-			${ECHO} "=> Checksum $d_alg OK for $file"
+			${ECHO} "=> Checksum $d_alg OK for $sfile"
 		else
-			${ECHO} 1>&2 "$self: Checksum $d_alg mismatch for $file"
+			${ECHO} 1>&2 "$self: Checksum $d_alg mismatch for $sfile"
 			exitcode=1
 		fi
 		break
