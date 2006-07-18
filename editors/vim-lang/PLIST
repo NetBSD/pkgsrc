@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/21 13:32:27 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/18 10:27:16 martti Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -325,3 +325,25 @@ share/vim/${VIM_SUBDIR}/lang/zh_TW/LC_MESSAGES/vim.mo
 @dirrm share/vim/${VIM_SUBDIR}/lang/zh_CN.UTF-8/LC_MESSAGES
 @dirrm share/vim/${VIM_SUBDIR}/lang/zh_CN.UTF-8
 @dirrm share/vim/${VIM_SUBDIR}/lang
+@unexec ${RMDIR} %D/man/fr.ISO8859-1/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/fr.ISO8859-1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/fr.UTF-8/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/fr.UTF-8 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/fr/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/fr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it.ISO8859-1/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it.ISO8859-1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it.UTF-8/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it.UTF-8 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pl.ISO8859-2/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pl.ISO8859-2 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pl.UTF-8/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pl.UTF-8 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pl/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pl 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru.KOI8-R/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru.KOI8-R 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru.UTF-8/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru.UTF-8 2>/dev/null || ${TRUE}
