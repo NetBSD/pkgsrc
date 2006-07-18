@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/07/18 06:34:41 wiz Exp $
 bin/${GNU_PROGRAM_PREFIX}m4
 ${GM4_LINK}bin/gm4
 info/m4.info
+man/man1/gm4.1
 share/examples/m4/capitalize.m4
 share/examples/m4/comments.m4
 share/examples/m4/ddivert.m4
@@ -14,6 +15,7 @@ share/examples/m4/forloop.m4
 share/examples/m4/fstab.m4
 share/examples/m4/hanoi.m4
 share/examples/m4/incl-test.m4
+share/examples/m4/incl.m4
 share/examples/m4/include.m4
 share/examples/m4/indir.m4
 share/examples/m4/misc.m4
@@ -28,4 +30,5 @@ share/examples/m4/trace.m4
 share/examples/m4/translit.m4
 share/examples/m4/undivert.m4
 share/examples/m4/wrap.m4
+share/examples/m4/wrapfifo.m4
 @dirrm share/examples/m4
