@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.131 2006/07/16 09:29:39 rillig Exp $
+# $NetBSD: makevars.map,v 1.132 2006/07/18 18:14:33 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -487,6 +487,10 @@ PKG_ADMIN		ShellCommand [$system]
 PKG_APACHE		{ apache13 apache2 } [$system]
 PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
 PKG_APACHE_DEFAULT	{ apache13 apache2 } [$user]
+PKG_CONFIG		Yes [$user]
+# ^^ No, this is not the popular command from GNOME, but the setting
+# whether the pkgsrc user wants configuration files automatically
+# installed or not.
 PKG_CREATE		ShellCommand [$system]
 PKG_DEBUG_LEVEL		Integer [$cmdline]
 PKG_DEFAULT_OPTIONS	List of Option [$user]

@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.654 2006/07/17 13:36:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.655 2006/07/18 18:14:33 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2425,7 +2425,7 @@ sub load_tool_names() {
 	# Some user-defined variables do not influence the binary
 	# package at all and therefore do not have to be added to
 	# BUILD_DEFS.
-	foreach my $bdvar (qw(DISTDIR FETCH_OUTPUT_ARGS)) {
+	foreach my $bdvar (qw(DISTDIR FETCH_CMD FETCH_OUTPUT_ARGS)) {
 		$system_build_defs->{$bdvar} = true;
 	}
 	#$system_build_defs->{"PACKAGES"} = true;
@@ -6811,7 +6811,10 @@ sub checkfile_PLIST($) {
 				$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
 
 			} elsif ($text =~ qr"^etc/") {
-				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
+				my $f = "mk/pkginstall/bsd.pkginstall.mk";
+
+				assert(-f "${cwd_pkgsrcdir}/${f}");
+				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in ${f}.");
 
 			} elsif ($text =~ qr"^include/.*\.(?:h|hpp)$") {
 				# Fine.
