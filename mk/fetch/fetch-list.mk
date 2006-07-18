@@ -1,4 +1,4 @@
-# $NetBSD: fetch-list.mk,v 1.1 2006/07/18 22:41:06 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.2 2006/07/18 23:27:14 jlam Exp $
 
 # Prints out a script to fetch all needed files (no checksumming).
 .PHONY: fetch-list
@@ -44,17 +44,7 @@ fetch-list-one-pkg:
 	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
 .    for fetchfile in ${_ALLFILES}
-.      if defined(_FETCH_MESSAGE)
-	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
-		${ECHO};						\
-		filesize=`${AWK} '					\
-			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
-			' ${DISTINFO_FILE}` || true;			\
-		${ECHO} '# Prompt user to get ${fetchfile} ('$${filesize-???}' bytes) manually:'; \
-		${ECHO} '#';						\
-		${ECHO} ${_FETCH_MESSAGE:Q};				\
-	fi)
-.      elif defined(DYNAMIC_MASTER_SITES)
+.      if defined(DYNAMIC_MASTER_SITES)
 	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
@@ -93,7 +83,7 @@ fetch-list-one-pkg:
 		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
 		${ECHO}	done;						\
 	fi)
-.      endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
+.      endif # defined(DYNAMIC_MASTER_SITES)
 .    endfor
 .  endif # !empty(_ALLFILES)
 .endif # !target(fetch-list-one-pkg)

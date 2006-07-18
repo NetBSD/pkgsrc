@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.10 2006/07/18 22:41:06 jlam Exp $
+# $NetBSD: fetch.mk,v 1.11 2006/07/18 23:27:14 jlam Exp $
 
 # If this host is behind a filtering firewall, use passive ftp(1)
 FETCH_BEFORE_ARGS+=	${PASSIVE_FETCH:D-p}
@@ -160,9 +160,6 @@ fetch-check-interactive: .USEBEFORE
 	${ERROR_MSG} "";						\
 	${ERROR_MSG} "======================================================================"; \
 	exit 1
-.elif defined(_FETCH_MESSAGE)
-	@${TEST} ! -f ${.TARGET} || exit 0;				\
-	${_FETCH_MESSAGE}
 .else
 	@${DO_NADA}
 .endif
