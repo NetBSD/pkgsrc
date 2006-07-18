@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/07/18 19:55:47 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_LIBS_BUILDLINK3_MK:=	${QT3_LIBS_BUILDLINK3_MK}+
@@ -34,7 +34,6 @@ PTHREAD_OPTS+=	require
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
