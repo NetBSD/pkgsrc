@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/06 06:05:14 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/07/18 05:31:15 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -30,6 +30,7 @@ share/jalbum/help/images/donate.gif
 share/jalbum/help/images/download.gif
 share/jalbum/help/images/dragndrop.png
 share/jalbum/help/images/earth.gif
+share/jalbum/help/images/earth_connection.gif
 share/jalbum/help/images/edit_images.gif
 share/jalbum/help/images/explorer-ui.png
 share/jalbum/help/images/file_types.gif
@@ -49,6 +50,7 @@ share/jalbum/help/images/languages.gif
 share/jalbum/help/images/last.gif
 share/jalbum/help/images/logoexample.jpg
 share/jalbum/help/images/makealbum.png
+share/jalbum/help/images/menubackground.gif
 share/jalbum/help/images/miniheart.gif
 share/jalbum/help/images/navigation1.gif
 share/jalbum/help/images/navigation2.gif
@@ -85,12 +87,14 @@ share/jalbum/help/images/ui-edit-select.png
 share/jalbum/help/images/ui-edit.png
 share/jalbum/help/images/ui-main.png
 share/jalbum/help/images/ui-publish.png
+share/jalbum/help/images/ui-share.png
 share/jalbum/help/images/ui-signupwizard-form.png
 share/jalbum/help/images/ui-signupwizard.png
 share/jalbum/help/images/ui-skin.png
 share/jalbum/help/images/ui-tabs.gif
 share/jalbum/help/images/ui-tabs.png
 share/jalbum/help/images/ui-thumbnail-symbols.png
+share/jalbum/help/images/ui-webserversettings.png
 share/jalbum/help/images/uploading.png
 share/jalbum/help/images/users1.gif
 share/jalbum/help/images/watermarkexample.jpg
@@ -107,6 +111,7 @@ share/jalbum/help/publish.html
 share/jalbum/help/publishsection.html
 share/jalbum/help/quickstart.html
 share/jalbum/help/scripting.html
+share/jalbum/help/sharesection.html
 share/jalbum/help/skincreation.html
 share/jalbum/help/skinsection.html
 share/jalbum/help/style.css
@@ -119,6 +124,20 @@ share/jalbum/includes/printing.inc
 share/jalbum/includes/shutterfly.inc
 share/jalbum/includes/test.inc
 share/jalbum/init.bsh
+share/jalbum/license/JSCH.txt
+share/jalbum/license/Jetty.txt
+share/jalbum/license/edtFTPj.txt
+share/jalbum/license/jdic.txt
+share/jalbum/license/sbbi-upnplib/jakarta-common-jxpath.txt
+share/jalbum/license/sbbi-upnplib/jakarta-common-logging.txt
+share/jalbum/license/sbbi-upnplib/mx4j.txt
+share/jalbum/license/sbbi-upnplib/other.pdf
+share/jalbum/license/sbbi-upnplib/sbbi-bootstrap.txt
+share/jalbum/license/sbbi-upnplib/upnp-lib.pdf
+share/jalbum/license/sbbi-upnplib/upnp-lib.txt
+share/jalbum/license/thirdparty-overview.html
+share/jalbum/linux/jdic_stub.jar
+share/jalbum/linux/x86/libtray.so
 share/jalbum/plugins/BlurFilter.class
 share/jalbum/plugins/BlurFilter.java
 share/jalbum/plugins/Compile.bat
@@ -316,6 +335,7 @@ share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$18.class
 share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$19.class
 share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$2.class
 share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$20.class
+share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$21.class
 share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$3.class
 share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$4.class
 share/jalbum/skins/BluPlusPlus/plugins/SkinGUI$5.class
@@ -615,20 +635,57 @@ share/jalbum/skins/Camera Geek/styles/Bright.css
 share/jalbum/skins/Camera Geek/styles/Custom.css
 share/jalbum/skins/Camera Geek/styles/Dark.css
 share/jalbum/skins/Camera Geek/styles/Sunset.css
+share/jalbum/skins/Chameleon/Readme.txt
+share/jalbum/skins/Chameleon/filetypes.xml
+share/jalbum/skins/Chameleon/help/chameleon.jpg
+share/jalbum/skins/Chameleon/help/colormap.jpg
+share/jalbum/skins/Chameleon/help/filters.gif
+share/jalbum/skins/Chameleon/help/filters.html
+share/jalbum/skins/Chameleon/help/general.gif
+share/jalbum/skins/Chameleon/help/general.html
+share/jalbum/skins/Chameleon/help/graysc.jpg
+share/jalbum/skins/Chameleon/help/grayscandcolormap.jpg
+share/jalbum/skins/Chameleon/help/help.css
 share/jalbum/skins/Chameleon/help/help.html
+share/jalbum/skins/Chameleon/help/history.html
 share/jalbum/skins/Chameleon/help/index.gif
+share/jalbum/skins/Chameleon/help/indexpage.html
 share/jalbum/skins/Chameleon/help/main.gif
 share/jalbum/skins/Chameleon/help/slide.gif
+share/jalbum/skins/Chameleon/help/slidepage.html
+share/jalbum/skins/Chameleon/help/usage.html
 share/jalbum/skins/Chameleon/hints.jap
-share/jalbum/skins/Chameleon/history.txt
+share/jalbum/skins/Chameleon/includes/foldernewcheck.inc
+share/jalbum/skins/Chameleon/includes/indexlinklist.inc
+share/jalbum/skins/Chameleon/includes/indexslideshow.inc
+share/jalbum/skins/Chameleon/includes/indextitle.inc
+share/jalbum/skins/Chameleon/includes/linklist.inc
+share/jalbum/skins/Chameleon/includes/makethumb.inc
+share/jalbum/skins/Chameleon/includes/metadata.inc
+share/jalbum/skins/Chameleon/includes/photobox.inc
+share/jalbum/skins/Chameleon/includes/slidelinklist.inc
+share/jalbum/skins/Chameleon/includes/slideshow.inc
+share/jalbum/skins/Chameleon/includes/slidetext.inc
+share/jalbum/skins/Chameleon/includes/slidetext1.inc
+share/jalbum/skins/Chameleon/includes/slidethumblist.inc
+share/jalbum/skins/Chameleon/includes/slidetitle.inc
+share/jalbum/skins/Chameleon/includes/thumbtext.inc
+share/jalbum/skins/Chameleon/includes/thumbtext1.inc
 share/jalbum/skins/Chameleon/index.htt
+share/jalbum/skins/Chameleon/init.bsh
 share/jalbum/skins/Chameleon/onload.bsh
+share/jalbum/skins/Chameleon/originalmovie.htt
 share/jalbum/skins/Chameleon/originalslide.htt
-share/jalbum/skins/Chameleon/readme.txt
+share/jalbum/skins/Chameleon/plugins/ColorMapFilter.class
+share/jalbum/skins/Chameleon/plugins/ColorMapFilter.java
+share/jalbum/skins/Chameleon/plugins/CompileCMF.bat
 share/jalbum/skins/Chameleon/res/avi.gif
 share/jalbum/skins/Chameleon/res/bg.gif
+share/jalbum/skins/Chameleon/res/current.gif
+share/jalbum/skins/Chameleon/res/danger.gif
 share/jalbum/skins/Chameleon/res/dia.gif
 share/jalbum/skins/Chameleon/res/doc.gif
+share/jalbum/skins/Chameleon/res/download.gif
 share/jalbum/skins/Chameleon/res/folder.gif
 share/jalbum/skins/Chameleon/res/folder1.gif
 share/jalbum/skins/Chameleon/res/gif.gif
@@ -638,14 +695,17 @@ share/jalbum/skins/Chameleon/res/hdr_right.gif
 share/jalbum/skins/Chameleon/res/idx.gif
 share/jalbum/skins/Chameleon/res/idx1.gif
 share/jalbum/skins/Chameleon/res/movie.gif
+share/jalbum/skins/Chameleon/res/newfile.gif
 share/jalbum/skins/Chameleon/res/next-disabled.gif
 share/jalbum/skins/Chameleon/res/next.gif
 share/jalbum/skins/Chameleon/res/next1.gif
+share/jalbum/skins/Chameleon/res/next_disabled.gif
 share/jalbum/skins/Chameleon/res/pdf.gif
 share/jalbum/skins/Chameleon/res/ppt.gif
 share/jalbum/skins/Chameleon/res/prev-disabled.gif
 share/jalbum/skins/Chameleon/res/prev.gif
 share/jalbum/skins/Chameleon/res/prev1.gif
+share/jalbum/skins/Chameleon/res/prev_disabled.gif
 share/jalbum/skins/Chameleon/res/show.gif
 share/jalbum/skins/Chameleon/res/show1.gif
 share/jalbum/skins/Chameleon/res/stop.gif
@@ -673,9 +733,11 @@ share/jalbum/skins/Chameleon/styles/3D_dark/movie.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/next.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/next1.gif
+share/jalbum/skins/Chameleon/styles/3D_dark/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/prev.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/prev1.gif
+share/jalbum/skins/Chameleon/styles/3D_dark/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/show.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/show1.gif
 share/jalbum/skins/Chameleon/styles/3D_dark/stop.gif
@@ -697,9 +759,11 @@ share/jalbum/skins/Chameleon/styles/3D_light/movie.gif
 share/jalbum/skins/Chameleon/styles/3D_light/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_light/next.gif
 share/jalbum/skins/Chameleon/styles/3D_light/next1.gif
+share/jalbum/skins/Chameleon/styles/3D_light/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_light/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_light/prev.gif
 share/jalbum/skins/Chameleon/styles/3D_light/prev1.gif
+share/jalbum/skins/Chameleon/styles/3D_light/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/3D_light/show.gif
 share/jalbum/skins/Chameleon/styles/3D_light/show1.gif
 share/jalbum/skins/Chameleon/styles/3D_light/stop.gif
@@ -721,9 +785,11 @@ share/jalbum/skins/Chameleon/styles/Aluminium/movie.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/next.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/next1.gif
+share/jalbum/skins/Chameleon/styles/Aluminium/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/prev.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/prev1.gif
+share/jalbum/skins/Chameleon/styles/Aluminium/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/show.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/show1.gif
 share/jalbum/skins/Chameleon/styles/Aluminium/stop.gif
@@ -745,9 +811,11 @@ share/jalbum/skins/Chameleon/styles/Aqua_dark/movie.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/next.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/next1.gif
+share/jalbum/skins/Chameleon/styles/Aqua_dark/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/prev.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/prev1.gif
+share/jalbum/skins/Chameleon/styles/Aqua_dark/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/show.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/show1.gif
 share/jalbum/skins/Chameleon/styles/Aqua_dark/stop.gif
@@ -769,9 +837,11 @@ share/jalbum/skins/Chameleon/styles/Aqua_light/movie.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/next.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/next1.gif
+share/jalbum/skins/Chameleon/styles/Aqua_light/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/prev.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/prev1.gif
+share/jalbum/skins/Chameleon/styles/Aqua_light/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/show.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/show1.gif
 share/jalbum/skins/Chameleon/styles/Aqua_light/stop.gif
@@ -793,9 +863,11 @@ share/jalbum/skins/Chameleon/styles/Black/movie.gif
 share/jalbum/skins/Chameleon/styles/Black/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Black/next.gif
 share/jalbum/skins/Chameleon/styles/Black/next1.gif
+share/jalbum/skins/Chameleon/styles/Black/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Black/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Black/prev.gif
 share/jalbum/skins/Chameleon/styles/Black/prev1.gif
+share/jalbum/skins/Chameleon/styles/Black/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Black/show.gif
 share/jalbum/skins/Chameleon/styles/Black/show1.gif
 share/jalbum/skins/Chameleon/styles/Black/stop.gif
@@ -817,9 +889,11 @@ share/jalbum/skins/Chameleon/styles/Carstereo/movie.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/next.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/next1.gif
+share/jalbum/skins/Chameleon/styles/Carstereo/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/prev.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/prev1.gif
+share/jalbum/skins/Chameleon/styles/Carstereo/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/show.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/show1.gif
 share/jalbum/skins/Chameleon/styles/Carstereo/stop.gif
@@ -841,9 +915,11 @@ share/jalbum/skins/Chameleon/styles/Coffee/movie.gif
 share/jalbum/skins/Chameleon/styles/Coffee/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Coffee/next.gif
 share/jalbum/skins/Chameleon/styles/Coffee/next1.gif
+share/jalbum/skins/Chameleon/styles/Coffee/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Coffee/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Coffee/prev.gif
 share/jalbum/skins/Chameleon/styles/Coffee/prev1.gif
+share/jalbum/skins/Chameleon/styles/Coffee/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Coffee/show.gif
 share/jalbum/skins/Chameleon/styles/Coffee/show1.gif
 share/jalbum/skins/Chameleon/styles/Coffee/stop.gif
@@ -865,9 +941,11 @@ share/jalbum/skins/Chameleon/styles/Device/movie.gif
 share/jalbum/skins/Chameleon/styles/Device/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Device/next.gif
 share/jalbum/skins/Chameleon/styles/Device/next1.gif
+share/jalbum/skins/Chameleon/styles/Device/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Device/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Device/prev.gif
 share/jalbum/skins/Chameleon/styles/Device/prev1.gif
+share/jalbum/skins/Chameleon/styles/Device/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Device/show.gif
 share/jalbum/skins/Chameleon/styles/Device/show1.gif
 share/jalbum/skins/Chameleon/styles/Device/stop.gif
@@ -889,9 +967,11 @@ share/jalbum/skins/Chameleon/styles/Gold/movie.gif
 share/jalbum/skins/Chameleon/styles/Gold/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Gold/next.gif
 share/jalbum/skins/Chameleon/styles/Gold/next1.gif
+share/jalbum/skins/Chameleon/styles/Gold/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Gold/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Gold/prev.gif
 share/jalbum/skins/Chameleon/styles/Gold/prev1.gif
+share/jalbum/skins/Chameleon/styles/Gold/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Gold/show.gif
 share/jalbum/skins/Chameleon/styles/Gold/show1.gif
 share/jalbum/skins/Chameleon/styles/Gold/stop.gif
@@ -913,9 +993,11 @@ share/jalbum/skins/Chameleon/styles/Grays/movie.gif
 share/jalbum/skins/Chameleon/styles/Grays/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Grays/next.gif
 share/jalbum/skins/Chameleon/styles/Grays/next1.gif
+share/jalbum/skins/Chameleon/styles/Grays/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Grays/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Grays/prev.gif
 share/jalbum/skins/Chameleon/styles/Grays/prev1.gif
+share/jalbum/skins/Chameleon/styles/Grays/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Grays/show.gif
 share/jalbum/skins/Chameleon/styles/Grays/show1.gif
 share/jalbum/skins/Chameleon/styles/Grays/stop.gif
@@ -937,9 +1019,11 @@ share/jalbum/skins/Chameleon/styles/Happy/movie.gif
 share/jalbum/skins/Chameleon/styles/Happy/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Happy/next.gif
 share/jalbum/skins/Chameleon/styles/Happy/next1.gif
+share/jalbum/skins/Chameleon/styles/Happy/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Happy/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Happy/prev.gif
 share/jalbum/skins/Chameleon/styles/Happy/prev1.gif
+share/jalbum/skins/Chameleon/styles/Happy/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Happy/show.gif
 share/jalbum/skins/Chameleon/styles/Happy/show1.gif
 share/jalbum/skins/Chameleon/styles/Happy/stop.gif
@@ -961,9 +1045,11 @@ share/jalbum/skins/Chameleon/styles/Jungle/movie.gif
 share/jalbum/skins/Chameleon/styles/Jungle/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Jungle/next.gif
 share/jalbum/skins/Chameleon/styles/Jungle/next1.gif
+share/jalbum/skins/Chameleon/styles/Jungle/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Jungle/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Jungle/prev.gif
 share/jalbum/skins/Chameleon/styles/Jungle/prev1.gif
+share/jalbum/skins/Chameleon/styles/Jungle/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Jungle/show.gif
 share/jalbum/skins/Chameleon/styles/Jungle/show1.gif
 share/jalbum/skins/Chameleon/styles/Jungle/stop.gif
@@ -985,9 +1071,11 @@ share/jalbum/skins/Chameleon/styles/Leopard/movie.gif
 share/jalbum/skins/Chameleon/styles/Leopard/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Leopard/next.gif
 share/jalbum/skins/Chameleon/styles/Leopard/next1.gif
+share/jalbum/skins/Chameleon/styles/Leopard/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Leopard/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Leopard/prev.gif
 share/jalbum/skins/Chameleon/styles/Leopard/prev1.gif
+share/jalbum/skins/Chameleon/styles/Leopard/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Leopard/show.gif
 share/jalbum/skins/Chameleon/styles/Leopard/show1.gif
 share/jalbum/skins/Chameleon/styles/Leopard/stop.gif
@@ -1009,9 +1097,11 @@ share/jalbum/skins/Chameleon/styles/OrangeBlue/movie.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/next.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/next1.gif
+share/jalbum/skins/Chameleon/styles/OrangeBlue/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/prev.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/prev1.gif
+share/jalbum/skins/Chameleon/styles/OrangeBlue/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/show.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/show1.gif
 share/jalbum/skins/Chameleon/styles/OrangeBlue/stop.gif
@@ -1033,9 +1123,11 @@ share/jalbum/skins/Chameleon/styles/OrangeGreen/movie.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/next.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/next1.gif
+share/jalbum/skins/Chameleon/styles/OrangeGreen/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/prev.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/prev1.gif
+share/jalbum/skins/Chameleon/styles/OrangeGreen/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/show.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/show1.gif
 share/jalbum/skins/Chameleon/styles/OrangeGreen/stop.gif
@@ -1057,9 +1149,11 @@ share/jalbum/skins/Chameleon/styles/Plastic/movie.gif
 share/jalbum/skins/Chameleon/styles/Plastic/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Plastic/next.gif
 share/jalbum/skins/Chameleon/styles/Plastic/next1.gif
+share/jalbum/skins/Chameleon/styles/Plastic/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Plastic/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Plastic/prev.gif
 share/jalbum/skins/Chameleon/styles/Plastic/prev1.gif
+share/jalbum/skins/Chameleon/styles/Plastic/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Plastic/show.gif
 share/jalbum/skins/Chameleon/styles/Plastic/show1.gif
 share/jalbum/skins/Chameleon/styles/Plastic/stop.gif
@@ -1081,9 +1175,11 @@ share/jalbum/skins/Chameleon/styles/Royal/movie.gif
 share/jalbum/skins/Chameleon/styles/Royal/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Royal/next.gif
 share/jalbum/skins/Chameleon/styles/Royal/next1.gif
+share/jalbum/skins/Chameleon/styles/Royal/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Royal/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Royal/prev.gif
 share/jalbum/skins/Chameleon/styles/Royal/prev1.gif
+share/jalbum/skins/Chameleon/styles/Royal/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Royal/show.gif
 share/jalbum/skins/Chameleon/styles/Royal/show1.gif
 share/jalbum/skins/Chameleon/styles/Royal/stop.gif
@@ -1105,9 +1201,11 @@ share/jalbum/skins/Chameleon/styles/Silver/movie.gif
 share/jalbum/skins/Chameleon/styles/Silver/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Silver/next.gif
 share/jalbum/skins/Chameleon/styles/Silver/next1.gif
+share/jalbum/skins/Chameleon/styles/Silver/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Silver/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Silver/prev.gif
 share/jalbum/skins/Chameleon/styles/Silver/prev1.gif
+share/jalbum/skins/Chameleon/styles/Silver/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Silver/show.gif
 share/jalbum/skins/Chameleon/styles/Silver/show1.gif
 share/jalbum/skins/Chameleon/styles/Silver/stop.gif
@@ -1129,9 +1227,11 @@ share/jalbum/skins/Chameleon/styles/Simple/movie.gif
 share/jalbum/skins/Chameleon/styles/Simple/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Simple/next.gif
 share/jalbum/skins/Chameleon/styles/Simple/next1.gif
+share/jalbum/skins/Chameleon/styles/Simple/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Simple/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Simple/prev.gif
 share/jalbum/skins/Chameleon/styles/Simple/prev1.gif
+share/jalbum/skins/Chameleon/styles/Simple/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Simple/show.gif
 share/jalbum/skins/Chameleon/styles/Simple/show1.gif
 share/jalbum/skins/Chameleon/styles/Simple/stop.gif
@@ -1153,9 +1253,11 @@ share/jalbum/skins/Chameleon/styles/Snake/movie.gif
 share/jalbum/skins/Chameleon/styles/Snake/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Snake/next.gif
 share/jalbum/skins/Chameleon/styles/Snake/next1.gif
+share/jalbum/skins/Chameleon/styles/Snake/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Snake/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Snake/prev.gif
 share/jalbum/skins/Chameleon/styles/Snake/prev1.gif
+share/jalbum/skins/Chameleon/styles/Snake/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Snake/show.gif
 share/jalbum/skins/Chameleon/styles/Snake/show1.gif
 share/jalbum/skins/Chameleon/styles/Snake/stop.gif
@@ -1177,9 +1279,11 @@ share/jalbum/skins/Chameleon/styles/Steel/movie.gif
 share/jalbum/skins/Chameleon/styles/Steel/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Steel/next.gif
 share/jalbum/skins/Chameleon/styles/Steel/next1.gif
+share/jalbum/skins/Chameleon/styles/Steel/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Steel/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Steel/prev.gif
 share/jalbum/skins/Chameleon/styles/Steel/prev1.gif
+share/jalbum/skins/Chameleon/styles/Steel/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Steel/show.gif
 share/jalbum/skins/Chameleon/styles/Steel/show1.gif
 share/jalbum/skins/Chameleon/styles/Steel/stop.gif
@@ -1201,9 +1305,11 @@ share/jalbum/skins/Chameleon/styles/Vanilla/movie.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/next.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/next1.gif
+share/jalbum/skins/Chameleon/styles/Vanilla/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/prev.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/prev1.gif
+share/jalbum/skins/Chameleon/styles/Vanilla/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/show.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/show1.gif
 share/jalbum/skins/Chameleon/styles/Vanilla/stop.gif
@@ -1225,17 +1331,19 @@ share/jalbum/skins/Chameleon/styles/World/movie.gif
 share/jalbum/skins/Chameleon/styles/World/next-disabled.gif
 share/jalbum/skins/Chameleon/styles/World/next.gif
 share/jalbum/skins/Chameleon/styles/World/next1.gif
+share/jalbum/skins/Chameleon/styles/World/next_disabled.gif
 share/jalbum/skins/Chameleon/styles/World/prev-disabled.gif
 share/jalbum/skins/Chameleon/styles/World/prev.gif
 share/jalbum/skins/Chameleon/styles/World/prev1.gif
+share/jalbum/skins/Chameleon/styles/World/prev_disabled.gif
 share/jalbum/skins/Chameleon/styles/World/show.gif
 share/jalbum/skins/Chameleon/styles/World/show1.gif
 share/jalbum/skins/Chameleon/styles/World/stop.gif
 share/jalbum/skins/Chameleon/styles/World/stop1.gif
 share/jalbum/skins/Chameleon/styles/World/up.gif
 share/jalbum/skins/Chameleon/styles/World/up1.gif
-share/jalbum/skins/Chameleon/texts/texts.bak
 share/jalbum/skins/Chameleon/texts/texts.properties
+share/jalbum/skins/Chameleon/texts/texts_cs.properties
 share/jalbum/skins/Chameleon/texts/texts_da.properties
 share/jalbum/skins/Chameleon/texts/texts_de.properties
 share/jalbum/skins/Chameleon/texts/texts_en.properties
@@ -1249,6 +1357,7 @@ share/jalbum/skins/Chameleon/texts/texts_pl.properties
 share/jalbum/skins/Chameleon/texts/texts_pt.properties
 share/jalbum/skins/Chameleon/texts/texts_ru.properties
 share/jalbum/skins/Chameleon/texts/texts_sk.properties
+share/jalbum/skins/Chameleon/texts/texts_sl.properties
 share/jalbum/skins/Chameleon/texts/texts_sr.properties
 share/jalbum/skins/Chameleon/texts/texts_sr_latin.properties
 share/jalbum/skins/Chameleon/texts/texts_sv.properties
@@ -1833,6 +1942,7 @@ share/jalbum/skins/Minimal/res/previous.gif
 share/jalbum/skins/Minimal/res/previous_disabled.gif
 share/jalbum/skins/Minimal/res/up.gif
 share/jalbum/skins/Minimal/slide.htt
+share/jalbum/skins/Minimal/styles/lineborder.css
 share/jalbum/skins/Minimal/styles/plain.css
 share/jalbum/skins/Minimal/texts.properties
 share/jalbum/skins/Old Album/frameset.htt
@@ -1959,9 +2069,7 @@ share/jalbum/skins/Simple/top.htt
 share/jalbum/skins/Slide show/index.htt
 share/jalbum/skins/Slide show/init.bsh
 share/jalbum/skins/Slide show/mp3player.swf
-share/jalbum/skins/Slide show/music/Atmos.mp3
-share/jalbum/skins/Slide show/music/Drops.mp3
-share/jalbum/skins/Slide show/music/Stroboscope.mp3
+share/jalbum/skins/Slide show/music/readme.html
 share/jalbum/skins/Slide show/onload.bsh
 share/jalbum/skins/Slide show/res/camera.gif
 share/jalbum/skins/Slide show/res/close.gif
@@ -2173,12 +2281,16 @@ share/jalbum/skins/XP/texts/texts_zh-chs.properties
 share/jalbum/skins/XP/texts/texts_zh-cht.properties
 share/jalbum/skins/XP/texts/texts_zh.properties
 share/jalbum/skins/XP/texts/texts_zh_tw.properties
+share/jalbum/sunos/jdic_stub.jar
+share/jalbum/sunos/sparc/libtray.so
+share/jalbum/sunos/x86/libtray.so
 share/jalbum/texts/texts.properties
 share/jalbum/texts/texts_bg.properties
 share/jalbum/texts/texts_cs.properties
 share/jalbum/texts/texts_da.properties
 share/jalbum/texts/texts_de.properties
 share/jalbum/texts/texts_ee.properties
+share/jalbum/texts/texts_el.properties
 share/jalbum/texts/texts_es.properties
 share/jalbum/texts/texts_fi.properties
 share/jalbum/texts/texts_fr.properties
@@ -2194,6 +2306,7 @@ share/jalbum/texts/texts_pt.properties
 share/jalbum/texts/texts_ru.properties
 share/jalbum/texts/texts_sh.properties
 share/jalbum/texts/texts_sk.properties
+share/jalbum/texts/texts_sl.properties
 share/jalbum/texts/texts_sr.properties
 share/jalbum/texts/texts_sv.properties
 share/jalbum/texts/texts_th.properties
@@ -2212,8 +2325,14 @@ share/jalbum/tools/Reset file date to camera date.bsh
 share/jalbum/tools/Sample tool.bsh
 share/jalbum/tools/Server mode.bsh
 share/jalbum/tools/Show supported file types.bsh
+share/jalbum/windows/jdic_stub.jar
+share/jalbum/windows/x86/tray.dll
 @dirrm share/jalbum/help/images
 @dirrm share/jalbum/help
+@dirrm share/jalbum/license/sbbi-upnplib
+@dirrm share/jalbum/license
+@dirrm share/jalbum/linux/x86
+@dirrm share/jalbum/linux
 @dirrm share/jalbum/plugins/InstallAnywhere/JAlbum_Build_Output/Web_Installers/InstData
 @dirrm share/jalbum/plugins/InstallAnywhere/JAlbum_Build_Output/Web_Installers
 @dirrm share/jalbum/plugins/InstallAnywhere/JAlbum_Build_Output
@@ -2273,6 +2392,8 @@ share/jalbum/tools/Show supported file types.bsh
 @dirrm share/jalbum/skins/Camera Geek/styles
 @dirrm share/jalbum/skins/Camera Geek
 @dirrm share/jalbum/skins/Chameleon/help
+@dirrm share/jalbum/skins/Chameleon/includes
+@dirrm share/jalbum/skins/Chameleon/plugins
 @dirrm share/jalbum/skins/Chameleon/res
 @dirrm share/jalbum/skins/Chameleon/styles/3D_dark
 @dirrm share/jalbum/skins/Chameleon/styles/3D_light
@@ -2409,6 +2530,11 @@ share/jalbum/tools/Show supported file types.bsh
 @dirrm share/jalbum/skins/XP/texts
 @dirrm share/jalbum/skins/XP
 @dirrm share/jalbum/skins
+@dirrm share/jalbum/sunos/sparc
+@dirrm share/jalbum/sunos/x86
+@dirrm share/jalbum/sunos
 @dirrm share/jalbum/texts
 @dirrm share/jalbum/tools
+@dirrm share/jalbum/windows/x86
+@dirrm share/jalbum/windows
 @dirrm share/jalbum
