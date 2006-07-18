@@ -1,15 +1,4 @@
-# $NetBSD: fetch.mk,v 1.9 2006/07/17 02:13:11 schmonz Exp $
-
-######################################################################
-### fetch (PUBLIC)
-######################################################################
-### fetch is a public target to fetch all of the package distribution
-### files.
-###
-.PHONY: fetch
-.if !target(fetch)
-fetch: bootstrap-depends check-vulnerable pre-fetch do-fetch post-fetch
-.endif
+# $NetBSD: fetch.mk,v 1.10 2006/07/18 22:41:06 jlam Exp $
 
 # If this host is behind a filtering firewall, use passive ftp(1)
 FETCH_BEFORE_ARGS+=	${PASSIVE_FETCH:D-p}
@@ -43,152 +32,6 @@ _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 
 _BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
-###
-### _RESUME_TRANSFER:
-###
-### Macro to resume a previous transfer, needs to have defined
-### the following options in mk.conf:
-###
-### PKG_RESUME_TRANSFERS
-### FETCH_RESUME_ARGS (if FETCH_CMD != default)
-### FETCH_OUTPUT_ARGS (if FETCH_CMD != default)
-###
-### For example if you want to use wget (pkgsrc/net/wget):
-###
-### FETCH_CMD=wget
-### FETCH_RESUME_ARGS=-c
-### FETCH_OUTPUT_ARGS=-O
-###
-### How does it work?
-###
-### FETCH_CMD downloads the file and saves it temporally into $$bfile.temp
-### if the checksum match the correct one, $$bfile.temp is renamed to
-### the original name.
-###
-
-_RESUME_TRANSFER=						\
-	ofile="${DISTDIR}/${DIST_SUBDIR}/$$bfile";		\
-	tfile="${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp";		\
-	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
-        osize=`${WC} -c < $$ofile`;				\
-								\
-	case "$$tsize" in					\
-	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})";	\
-		break;;						\
-	esac;							\
-								\
-	if [ "$$osize" -eq "$$tsize" ]; then			\
-		if [ -f "$$tfile" ]; then			\
-			${RM} $$tfile;				\
-		fi;						\
-		need_fetch=no;					\
-	elif [ "$$osize" -lt "$$tsize" -a ! -f "$$tfile" ]; then	\
-		${CP} $$ofile $$tfile;				\
-		dsize=`${WC} -c < $$tfile`;			\
-		need_fetch=yes;					\
-	elif [ -f "$$tfile" -a "$$dsize" -gt "$$ossize" ]; then	\
-		dsize=`${WC} -c < $$tfile`;			\
-		need_fetch=yes;					\
-	else							\
-		if [ -f "$$tfile" ]; then			\
-			dsize=`${WC} -c < $$tfile`;		\
-		fi;						\
-		need_fetch=yes;					\
-	fi;							\
-	if [ "$$need_fetch" = "no" ]; then			\
-		break;						\
-	elif [ -f "$$tfile" -a "$$dsize" -eq "$$tsize" ]; then	\
-		${MV} $$tfile $$ofile;				\
-		break;						\
-	elif [ -n "$$ftp_proxy" -o -n "$$http_proxy" ]; then	\
-		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
-		break;						\
-	elif [ "$$need_fetch" = "yes" -a "$$dsize" -lt "$$tsize" ]; then	\
-		if [ "${FETCH_CMD:T}" != "ftp" -a -z "${FETCH_RESUME_ARGS}" ]; then \
-			${ECHO_MSG} "=> Resume transfers are not supported, FETCH_RESUME_ARGS is empty."; \
-			break;					\
-		else						\
-			for res_site in $$sites; do		\
-				if [ -z "${FETCH_OUTPUT_ARGS}" ]; then \
-					${ECHO_MSG} "=> FETCH_OUTPUT_ARGS has to be defined."; \
-					break;			\
-				fi;				\
-				${ECHO_MSG} "=> $$bfile not completed, resuming:";  \
-				${ECHO_MSG} "=> Downloaded: $$dsize Total: $$tsize."; \
-				${ECHO_MSG};			\
-				cd ${DISTDIR};			\
-				${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} \
-					${FETCH_OUTPUT_ARGS} $${bfile}.temp $${res_site}$${bfile}; \
-				if [ $$? -eq 0 ]; then		\
-					ndsize=`${WC} -c < $$tfile`;    \
-					if [ "$$tsize" -eq "$$ndsize" ]; then \
-						${MV} $$tfile $$ofile;  \
-					fi;			\
-					break;			\
-				fi;				\
-			done;					\
-		fi;						\
-	elif [ "$$dsize" -gt "$$tsize" ]; then			\
-		${ECHO_MSG} "==> Downloaded file larger than the recorded size."; \
-		break;						\
-	fi
-
-#
-# Define the elementary fetch macros.
-#
-_FETCH_FILE=								\
-	if [ ! -f $$file -a ! -f $$bfile -a ! -h $$bfile ]; then	\
-		${ECHO_MSG} "=> $$bfile doesn't seem to exist on this system."; \
-		if [ ! -w ${_DISTDIR}/. ]; then 			\
-			${ECHO_MSG} "=> Can't download to ${_DISTDIR} (permission denied?)."; \
-			exit 1; 					\
-		fi; 							\
-		for site in $$sites; do					\
-			${ECHO_MSG} "=> Attempting to fetch $$bfile from $${site}."; \
-			if [ -f ${DISTINFO_FILE} ]; then		\
-				${AWK} 'NF == 5 && $$1 == "Size" && $$2 == "('$$bfile')" { printf("=> [%s %s]\n", $$4, $$5) }' ${DISTINFO_FILE}; \
-			fi;						\
-			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-				if [ -n ${FAILOVER_FETCH:Dyes}"" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
-					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1; exit}' ${DISTINFO_FILE}`; \
-					if [ -z "$$alg" ]; then		\
-						alg=${PATCH_DIGEST_ALGORITHM};\
-					fi;				\
-					CKSUM=`${TOOLS_DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
-					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4; exit}' <${DISTINFO_FILE}`; \
-					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-						break;			\
-					else				\
-						${ECHO_MSG} "=> Checksum failure - trying next site."; \
-					fi;				\
-				elif [ ! -f ${_DISTDIR}/$$bfile ]; then \
-					${ECHO_MSG} "=> FTP didn't fetch expected file, trying next site." ; \
-				else					\
-					break;				\
-				fi;					\
-			fi						\
-		done;							\
-		if [ ! -f ${_DISTDIR}/$$bfile ]; then			\
-			${ECHO_MSG} "=> Couldn't fetch $$bfile - please try to retrieve this";\
-			${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
-			exit 1;						\
-		fi;							\
-	fi
-
-_CHECK_DIST_PATH=							\
-	if [ "X${DIST_PATH}" != "X" ]; then				\
-		for d in "" ${DIST_PATH:S/:/ /g}; do			\
-			case $$d in "" | ${DISTDIR}) continue;; esac;	\
-			if [ -f $$d/${DIST_SUBDIR}/$$bfile ]; then	\
-				${ECHO} "Using $$d/${DIST_SUBDIR}/$$bfile"; \
-				${RM} -f $$bfile;			\
-				${LN} -s $$d/${DIST_SUBDIR}/$$bfile $$bfile; \
-				break;					\
-			fi;						\
-		done;							\
-	fi
-
-#
 # Set up ORDERED_SITES to work out the exact list of sites for every file,
 # using the dynamic sites script, or sorting according to the master site
 # list or the patterns in MASTER_SORT or MASTER_SORT_REGEX as appropriate.
@@ -233,78 +76,213 @@ SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
 .  endfor
 .endif
 
-# This code is only called in a batch case, to check for the presence of
-# the distfiles
-.PHONY: batch-check-distfiles
-batch-check-distfiles:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	gotfiles=yes;							\
-	for file in "" ${_ALLFILES}; do					\
-		case "$$file" in					\
-		"")	continue ;;					\
-		*)	if [ ! -f ${DISTDIR}/$$file ]; then		\
-				gotfiles=no;				\
-			fi ;;						\
-		esac;							\
-	done;								\
-	case "$$gotfiles" in						\
-	no)	${ECHO} "*** This package requires user intervention to download the distfiles"; \
-		${ECHO} "*** Please fetch the distfiles manually and place them in"; \
-		${ECHO} "*** ${DISTDIR}";				\
-		[ ! -z "${MASTER_SITES}" ] &&				\
-			${ECHO} "*** The distfiles are available from ${MASTER_SITES}";	\
-		[ ! -z "${HOMEPAGE}" ] && 				\
-			${ECHO} "*** See ${HOMEPAGE} for more details";	\
-		${ECHO};						\
-		${TOUCH} ${_INTERACTIVE_COOKIE};			\
-		${FALSE} ;;						\
-	esac
+######################################################################
+### fetch (PUBLIC)
+######################################################################
+### fetch is a public target to fetch all of the package distribution
+### files.
+###
+_FETCH_TARGETS+=	bootstrap-depends
+_FETCH_TARGETS+=	check-vulnerable
+_FETCH_TARGETS+=	pre-fetch
+_FETCH_TARGETS+=	do-fetch
+_FETCH_TARGETS+=	post-fetch
 
-.PHONY: do-fetch
-.if !target(do-fetch)
-do-fetch:
-.  if !empty(_ALLFILES)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
-.    if !empty(INTERACTIVE_STAGE:Mfetch) && defined(BATCH)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${MAKE} ${MAKEFLAGS} batch-check-distfiles
-.    else
-.      for fetchfile in ${_ALLFILES}
-.        if defined(FETCH_MESSAGE) && !empty(FETCH_MESSAGE)
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	${TEST} -f ${DISTDIR:Q}/${fetchfile:Q} || {			\
-		h="==============="; h="$$h$$h$$h$$h$$h";		\
-		${ECHO} "$$h"; ${ECHO} "";				\
-		for l in ${FETCH_MESSAGE}; do ${ECHO} "$$l"; done;	\
-		${ECHO} ""; ${ECHO} "$$h";				\
-		exit 1;							\
-	}
-.        elif defined(_FETCH_MESSAGE)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	file="${fetchfile}";						\
-	if [ ! -f ${DISTDIR}/$$file ]; then				\
-		${_FETCH_MESSAGE};					\
-	fi
-.        else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${_DISTDIR};							\
-	file="${fetchfile}";						\
-	bfile="${fetchfile:T}";						\
-	unsorted_sites="${SITES.${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
-	sites="${ORDERED_SITES}";					\
-	${_CHECK_DIST_PATH};						\
-	 if ${TEST} "${PKG_RESUME_TRANSFERS:M[Yy][Ee][Ss]}" ; then	\
-	 	${_FETCH_FILE}; ${_RESUME_TRANSFER};			\
-	 else								\
-	 	${_FETCH_FILE};						\
-	 fi
-.        endif # defined(_FETCH_MESSAGE)
-.      endfor
-.    endif # INTERACTIVE_STAGE == fetch
-.  endif # !empty(_ALLFILES)
+.PHONY: fetch
+.if !target(fetch)
+fetch: ${_FETCH_TARGETS}
 .endif
 
+######################################################################
+### pre-fetch, do-fetch, post-fetch (PUBLIC, override)
+######################################################################
+### {pre,do,post}-fetch are the heart of the package-customizable
+### fetch targets, and may be overridden within a package Makefile.
+###
+.PHONY: pre-fetch do-fetch post-fetch
+
+.if !target(do-fetch)
+do-fetch: ${_ALLFILES:S/^/${DISTDIR}\//}
+	@${DO_NADA}
+.endif
+
+.if !target(pre-fetch)
+pre-fetch:
+	@${DO_NADA}
+.endif
+
+.if !target(post-fetch)
+post-fetch:
+	@${DO_NADA}
+.endif
+
+.for _file_ in ${_ALLFILES}
+.  if empty(PKG_RESUME_TRANSFERS:M[yY][eE][sS]) && \
+      exists(${DISTDIR}/${_file_})
+${DISTDIR}/${_file_}:
+	@${DO_NADA}
+.  else
+${DISTDIR}/${_file_}: fetch-check-interactive do-fetch-file error-check
+.  endif
+.endfor
+
+######################################################################
+### fetch-check-interactive (PRIVATE)
+######################################################################
+### fetch-check-interactive is a macro target that is inserted at the
+### head of a target's command list, and will check whether the fetch
+### stage for this package requires user interaction to proceed.
+###
+.PHONY: fetch-check-interactive
+fetch-check-interactive: .USEBEFORE
+.if !empty(INTERACTIVE_STAGE:Mfetch) && defined(BATCH)
+	@${TEST} ! -f ${.TARGET} || exit 0;				\
+	${ERROR_MSG} "The fetch stage of this package requires user interaction to download"; \
+	${ERROR_MSG} "the distfiles.  Please fetch the distfiles manually and place them in:"; \
+	${ERROR_MSG} "    ${_DISTDIR}";					\
+	if ${TEST} -n ${MASTER_SITES:Q}""; then				\
+		${ERROR_MSG} "The distfiles are available from:";	\
+		for site in ${MASTER_SITES}; do				\
+			${ERROR_MSG} "    $$site";			\
+		done;							\
+	fi;								\
+	if ${TEST} -n ${HOMEPAGE:Q}""; then				\
+		${ERROR_MSG} "See the following URL for more details:";	\
+		${ERROR_MSG} "    "${HOMEPAGE:Q};			\
+	fi;								\
+	${TOUCH} ${_INTERACTIVE_COOKIE};				\
+	exit 1
+.elif defined(FETCH_MESSAGE) && !empty(FETCH_MESSAGE)
+	@${TEST} ! -f ${.TARGET} || exit 0;				\
+	${ERROR_MSG} "======================================================================"; \
+	${ERROR_MSG} "";						\
+	for line in ${FETCH_MESSAGE}; do ${ERROR_MSG} "$$line"; done;	\
+	${ERROR_MSG} "";						\
+	${ERROR_MSG} "======================================================================"; \
+	exit 1
+.elif defined(_FETCH_MESSAGE)
+	@${TEST} ! -f ${.TARGET} || exit 0;				\
+	${_FETCH_MESSAGE}
+.else
+	@${DO_NADA}
+.endif
+
+######################################################################
+### do-fetch-file (PRIVATE)
+######################################################################
+### do-fetch-file is a macro target that runs the "fetch" script to
+### transfer the files from the appropriate sites if needed.
+###
+#
+# FETCH_CMD is the program used to fetch files.  It must understand
+#	fetching files located via URLs, e.g. NetBSD's ftp, net/tnftp,
+#	etc.  The default value is set in pkgsrc/mk/defaults/mk.conf.
+#
+# The following variables are all lists of options to pass to he command
+# used to do the actual fetching of the file.
+#
+# FETCH_BEFORE_ARGS appear before all other options on the command line.
+#
+# FETCH_AFTER_ARGS appear after all other options on the command line.
+#
+# FETCH_RESUME_ARGS appears just after FETCH_BEFORE_ARGS and is the set
+#	of options for causing the command to resume a previous transfer.
+#
+# FETCH_OUTPUT_ARGS is a set of options for specifying the name of the
+#	local file that will hold the contents of the fetched file.
+#
+# FAILOVER_FETCH, if defined, will cause a checksum to be performed during
+#	a fetch to verify the transferred file is correct; if the checksum
+#	is incorrect, then the next site will be tried.
+#
+# PKG_RESUME_TRANSFERS is a yes/no variable that causes the fetch script
+#	to try to resume interrupted file transfers to avoid downloading
+#	the whole file.  The default is set in pkgsrc/mk/defaults/mk.conf.
+#
+#FETCH_CMD?=		ftp	# default is set by pkgsrc/mk/defaults/mk.conf
+FETCH_BEFORE_ARGS?=	${_FETCH_BEFORE_ARGS.${FETCH_CMD:T}}
+FETCH_AFTER_ARGS?=	${_FETCH_AFTER_ARGS.${FETCH_CMD:T}}
+FETCH_RESUME_ARGS?=	${_FETCH_RESUME_ARGS.${FETCH_CMD:T}}
+FETCH_OUTPUT_ARGS?=	${_FETCH_OUTPUT_ARGS.${FETCH_CMD:T}}
+
+_FETCH_BEFORE_ARGS.ftp=	# empty
+_FETCH_AFTER_ARGS.ftp=	# empty
+_FETCH_RESUME_ARGS.ftp=	-R
+_FETCH_OUTPUT_ARGS.ftp=	-o
+
+_FETCH_CMD=	${SETENV} CHECKSUM=${_CHECKSUM_CMD:Q}			\
+			CP=${TOOLS_CP:Q}				\
+			ECHO=${TOOLS_ECHO:Q}				\
+			FETCH_CMD=${FETCH_CMD:Q}			\
+			FETCH_BEFORE_ARGS=${FETCH_BEFORE_ARGS:Q}	\
+			FETCH_AFTER_ARGS=${FETCH_AFTER_ARGS:Q}		\
+			FETCH_RESUME_ARGS=${FETCH_RESUME_ARGS:Q}	\
+			FETCH_OUTPUT_ARGS=${FETCH_OUTPUT_ARGS:Q}	\
+			MKDIR=${TOOLS_MKDIR:Q} MV=${TOOLS_MV:Q}		\
+			TEST=${TOOLS_TEST:Q} TOUCH=${TOOLS_TOUCH:Q}	\
+			WC=${TOOLS_WC:Q}				\
+		${SH} ${PKGSRCDIR}/mk/fetch/fetch
+
+_FETCH_ARGS+=	${FAILOVER_FETCH:D-c}
+.if exists(${DISTINFO_FILE})
+_FETCH_ARGS+=	-f ${DISTINFO_FILE:Q}
+.endif
+.if !empty(PKG_RESUME_TRANSFERS:M[yY][eE][sS])
+_FETCH_ARGS+=	-r
+.endif
+_FETCH_ARGS+=	-d ${DIST_SUBDIR:U.}
+
+.PHONY: do-fetch-file
+do-fetch-file: .USE
+	@${STEP_MSG} "Fetching ${.TARGET:T}"
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} -n {DIST_PATH:Q}""; then				\
+		for d in "" ${DIST_PATH:S/:/ /g}; do			\
+			case $$d in					\
+			""|${DISTDIR})	continue ;;			\
+			esac;						\
+			file="$$d/${DIST_SUBDIR}/${TARGET:T}";		\
+			if ${TEST} -f $$file; then			\
+				${ECHO} "Using $$file";			\
+				${RM} -f ${TARGET};			\
+				${LN} -s $$file ${.TARGET};		\
+			fi;						\
+		done;							\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
+	cd ${.TARGET:H:S/\/${DIST_SUBDIR}$//} &&			\
+	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} ${ORDERED_SITES}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} ! -f ${.TARGET}; then				\
+		${ERROR_MSG} "Could not fetch the following file:";	\
+		${ERROR_MSG} "    ${.TARGET:T}";			\
+		${ERROR_MSG} "";					\
+		${ERROR_MSG} "Please retrieve this file manually into:"; \
+		${ERROR_MSG} "    ${.TARGET:H}";			\
+		exit 1;							\
+	fi
+
+######################################################################
+### mirror-distfiles (PUBLIC)
+######################################################################
+### mirror-distfiles is a public target that is mostly of use only to
+### sites that wish to provide distfiles that others may fetch.  It
+### only fetches distfiles that are freely re-distributable by setting
+### NO_SKIP (see bsd.fetch-vars.mk).
+###
+.PHONY: mirror-distfiles
+.if defined(NO_SRC_ON_FTP)
+mirror-distfiles:
+	@${DO_NADA}
+.else
+mirror-distfiles: fetch
+.endif
+
+# XXX
+# XXX Is this target actually used? (jlam 20060718)
+# XXX
 .PHONY: show-distfiles
 .if !target(show-distfiles)
 show-distfiles:
@@ -318,119 +296,3 @@ show-distfiles:
 	done
 .  endif
 .endif
-
-.if !target(pre-fetch)
-pre-fetch:
-	@${DO_NADA}
-.endif
-.if !target(post-fetch)
-post-fetch:
-	@${DO_NADA}
-.endif
-
-# This is for the use of sites which store distfiles which others may
-# fetch - only fetch the distfile if it is allowed to be
-# re-distributed freely
-.PHONY: mirror-distfiles
-mirror-distfiles:
-.if !defined(NO_SRC_ON_FTP)
-	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_SKIP=yes
-.endif
-
-# Prints out a script to fetch all needed files (no checksumming).
-.PHONY: fetch-list
-.if !target(fetch-list)
-
-fetch-list:
-	@${ECHO} '#!/bin/sh'
-	@${ECHO} '#'
-	@${ECHO} '# This is an auto-generated script, the result of running'
-	@${ECHO} '# `${MAKE} fetch-list'"'"' in directory "'"`${PWD_CMD}`"'"'
-	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
-	@${ECHO} '#'
-	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
-.endif # !target(fetch-list)
-
-.PHONY: fetch-list-recursive
-.if !target(fetch-list-recursive)
-
-fetch-list-recursive:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs`; do	\
-		(cd ../../$$dir &&					\
-		${MAKE} ${MAKEFLAGS} fetch-list-one-pkg			\
-		| ${AWK} '						\
-		/^[^#]/ { FoundSomething = 1 }				\
-		/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }		\
-		/^echo/ { gsub(/;[[:space:]]+/, "\n") }			\
-		{ block[line_c++] = $$0 }				\
-		END { if (FoundSomething)				\
-			for (line = 0; line < line_c; line++)		\
-				print block[line] }			\
-		')							\
-	done
-.endif # !target(fetch-list-recursive)
-
-.PHONY: fetch-list-one-pkg
-.if !target(fetch-list-one-pkg)
-
-fetch-list-one-pkg:
-.  if !empty(_ALLFILES)
-	@${ECHO}
-	@${ECHO} '#'
-	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
-		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
-.    for fetchfile in ${_ALLFILES}
-.      if defined(_FETCH_MESSAGE)
-	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
-		${ECHO};						\
-		filesize=`${AWK} '					\
-			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
-			' ${DISTINFO_FILE}` || true;			\
-		${ECHO} '# Prompt user to get ${fetchfile} ('$${filesize-???}' bytes) manually:'; \
-		${ECHO} '#';						\
-		${ECHO} ${_FETCH_MESSAGE:Q};				\
-	fi)
-.      elif defined(DYNAMIC_MASTER_SITES)
-	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
-		${ECHO};						\
-		filesize=`${AWK} '					\
-			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
-			' ${DISTINFO_FILE}` || true;			\
-		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
-		${ECHO} '#';						\
-		${ECHO} '${SH} -s ${fetchfile:T} <<"EOF" |(';		\
-		${CAT} ${FILESDIR}/getsite.sh;				\
-		${ECHO} EOF;						\
-		${ECHO} read unsorted_sites;				\
-		${ECHO} 'unsorted_sites="$${unsorted_sites} ${_MASTER_SITE_BACKUP}"'; \
-		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
-		${ECHO} "${MKDIR} ${_DISTDIR}";				\
-		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
-		${ECHO}	'for site in $$sites; do';			\
-		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
-		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
-		${ECHO}	done;						\
-		${ECHO} ')';						\
-	fi)
-.      else
-	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
-		${ECHO};						\
-		filesize=`${AWK} '					\
-			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
-			' ${DISTINFO_FILE}` || true;			\
-		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
-		${ECHO} '#';						\
-		${ECHO} 'unsorted_sites="${SITES.${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"'; \
-		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
-		${ECHO} "${MKDIR} ${_DISTDIR}";				\
-		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
-		${ECHO}	'for site in $$sites; do';			\
-		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
-		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
-		${ECHO}	done;						\
-	fi)
-.      endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
-.    endfor
-.  endif # !empty(_ALLFILES)
-.endif # !target(fetch-list-one-pkg)
