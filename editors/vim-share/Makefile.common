@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2006/07/02 17:05:14 martti Exp $
+# $NetBSD: Makefile.common,v 1.61 2006/07/18 10:27:16 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -18,7 +18,7 @@ PATCHFILES+=		7.0.001 7.0.002 7.0.003 7.0.004 7.0.007 7.0.008 7.0.009
 PATCHFILES+=		7.0.010 7.0.011 7.0.012 7.0.013 7.0.014 7.0.015 7.0.016
 PATCHFILES+=		7.0.017 7.0.018 7.0.019 7.0.020 7.0.021 7.0.022 7.0.023
 PATCHFILES+=		7.0.024 7.0.025 7.0.026 7.0.029 7.0.030 7.0.031 7.0.033
-PATCHFILES+=		7.0.034 7.0.035
+PATCHFILES+=		7.0.034 7.0.035 7.0.036 7.0.037 7.0.038 7.0.039
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
@@ -39,7 +39,7 @@ PATCH_ARGS=		-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
 				-E ${PATCH_STRIP:Q}
 PATCH_DIST_ARGS=	-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
 				-E ${PATCH_DIST_STRIP:Q}
-PATCHDIR?=		${.CURDIR}/../../editors/vim-share/patches
+PATCHDIR=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
 
 .if empty(PKGNAME:Mvim-share*)
