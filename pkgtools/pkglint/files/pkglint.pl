@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.656 2006/07/18 20:37:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.657 2006/07/18 21:13:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4273,7 +4273,7 @@ sub checkline_mk_shelltext($$) {
 			$line->log_warning("Please use \${ECHO_N} instead of \"echo -n\".");
 		}
 
-		if ($opt_warn_extra && $shellword eq "|") {
+		if ($opt_warn_extra && $state != SCST_CASE_LABEL_CONT && $shellword eq "|") {
 			$line->log_warning("The exitcode of the left-hand-side command of the pipe operator is ignored.");
 			$line->explain_warning(
 				"If you need to detect the failure of the left-hand-side command, use",
