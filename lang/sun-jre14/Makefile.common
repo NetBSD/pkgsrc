@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.30 2006/07/18 23:27:14 jlam Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -41,26 +41,26 @@ DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 _FETCH_MESSAGE= 							\
-	${ECHO} "======================================================================"; \
-	${ECHO} ; 							\
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing"; 	\
-	${ECHO} " ${COMMENT} must be fetched";				\
-	${ECHO} " into:"; 						\
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
-	${ECHO} " from:"; 						\
-	${ECHO} "	${DOWNLOAD}"; 					\
-	${ECHO} "	or ${ARCHIVE}"; 				\
-	${ECHO} ; \
-	${ECHO} " Click 'Download J2SE ${SHORT}', read and accept the"; \
-	${ECHO} " license, then choose 'Linux self-extracting file'."; 	\
-	${ECHO} -e ${END_MESSAGE};					\
-	${ECHO} "======================================================================"
+	"The file ${DISTNAME}${EXTRACT_SUFX} containing:"		\
+	"    ${COMMENT}"						\
+	"must be fetched into:" 					\
+	"    {DISTDIR}"							\
+	"from:"; 							\
+	"    ${DOWNLOAD}" 						\
+	"    or ${ARCHIVE}" 						\
+	""								\
+	"Click 'Download J2SE ${SHORT}', read and accept the"		\
+	"license, then choose 'Linux self-extracting file'."		\
+	${END_MESSAGE}
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
-END_MESSAGE="\n The file jce_policy-1_4_2.zip must be fetched into:\n"	\
-		"    ${DISTDIR}/jce_policy-1_4_2.zip\n\n"		\
-		"Under 'Other Downloads' / 'Java Cryptography Extension'\n" \
-		"click 'Download' and choose the .zip file.\n"
+END_MESSAGE=								\
+	""								\
+	"The file jce_policy-1_4_2.zip must be fetched into:"		\
+	"    ${DISTDIR}/jce_policy-1_4_2.zip"				\
+	""
+	"Under 'Other Downloads' / 'Java Cryptography Extension'"	\
+	"click 'Download' and choose the .zip file."
 .endif
 
 post-fetch:

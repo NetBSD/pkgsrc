@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:09:07 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/18 23:27:14 jlam Exp $
 #
 
 DISTNAME=	jpnfont
@@ -15,13 +15,12 @@ TAR_FILE=	${WRKSRC}/LANGJPN.TAR
 
 INTERACTIVE_STAGE=	fetch
 
-_FETCH_MESSAGE= \
-	${ECHO} "======================================================="; \
-	${ECHO} "  Be required to register with Adobe"; \
-	${ECHO} "  before downloading the Japanese font pack."; \
-	${ECHO} "  You should manual-fetch Japanese pack of \"Asian Font Packs\""; \
-	${ECHO} "  to ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} from"; \
-	${ECHO} "    http://www.adobe.com/prodindex/acrobat/readstep.html"; \
-	${ECHO} "======================================================="
+FETCH_MESSAGE=								\
+	"Registration with Adobe is required before downloading"	\
+	"the Japanese font pack.  You should manually fetch the"	\
+	"\"Asian Font Packs\" to:"					\
+	"    ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"			\
+	"from:"								\
+	"    http://www.adobe.com/prodindex/acrobat/readstep.html"
 
 .include "../../fonts/acroread-font-share/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2006/07/07 03:18:18 minskim Exp $
+# $NetBSD: Makefile.common,v 1.30 2006/07/18 23:27:14 jlam Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -38,23 +38,18 @@ DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
-_FETCH_MESSAGE= 							\
-	${ECHO} "======================================================================"; \
-	${ECHO} ; 							\
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing"; 	\
-	${ECHO} " ${COMMENT} must be fetched"; 				\
-	${ECHO} " into:"; 						\
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
-	${ECHO} " from:"; 						\
-	${ECHO} "	${DOWNLOAD}"; 					\
-	${ECHO} "	or ${ARCHIVE}";                                 \
-	${ECHO} ; 							\
-	${ECHO} " Choose 'Windows/Linux/Solaris SPARC/Solaris x86' from"; \
-	${ECHO} " the '${SHORT}' column, accept the license, then choose 'Linux ";\
-	${ECHO} " self-extracting file'.";                              \
-	${ECHO} ; 							\
-	${ECHO} "======================================================================"
-
+FETCH_MESSAGE= 								\
+	"The file ${DISTNAME}${EXTRACT_SUFX} containing:" 		\
+	"    ${COMMENT}"						\
+	"must be fetched into:"						\
+	"    ${DISTDIR}"						\
+	"from:" 							\
+	"    ${DOWNLOAD}" 						\
+	"    or ${ARCHIVE}"						\
+	""								\
+	"Choose 'Windows/Linux/Solaris SPARC/Solaris x86' from"		\
+	"the '${SHORT}' column, accept the license, then choose"	\
+	"'Linux self-extracting file'."
 
 post-fetch:
 	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\

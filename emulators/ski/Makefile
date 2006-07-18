@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.5 2006/05/22 22:22:03 jlam Exp $
+#	$NetBSD: Makefile,v 1.6 2006/07/18 23:27:14 jlam Exp $
 
 DISTNAME=		ski-0.9.81-l6-i686
 PKGNAME=		ski-0.9.81.6
@@ -29,13 +29,12 @@ NO_BUILD=		YES
 
 DOWNLOAD=		http://www.hpl.hp.com/research/linux/ski/download.php
 
-_FETCH_MESSAGE= \
-	    ${ECHO} "==============================================================="; \
-	    ${ECHO} "  Due to licensing restrictions, "; \
-	    ${ECHO} "  the HP Ski IA-64 emulator for Linux 2.x (i686) must be fetched"; \
-	    ${ECHO} "  into ${DISTDIR} from"; \
-	    ${ECHO} "  ${DOWNLOAD}"; \
-	    ${ECHO} "==============================================================="
+FETCH_MESSAGE=								\
+	"Due to licensing restrictions, the HP Ski IA-64 emulator for"	\
+	"Linux 2.x (i686) must be fetched into:"			\
+	"    ${DISTDIR}"						\
+	"from:"								\
+	"    ${DOWNLOAD}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/nue/usr/bin/*ski* ${PREFIX}/bin
