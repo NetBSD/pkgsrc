@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2006/06/13 13:57:10 jlam Exp $
+# $NetBSD: Makefile,v 1.128 2006/07/18 23:06:41 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -39,14 +39,12 @@ PKG_PRESERVE=		yes
 # newer features of pkg_install, but older NetBSD installations won't
 # support them.  In this case, we explicitly use the native GCC
 # compiler to avoid problems with depending on pkgsrc GCC for building
-# pkg_install.  We also avoid building digest as that would involve
-# using the newer pkg_install tools.
+# pkg_install.
 #
 # We also use the newly built pkg_delete since upgrading from an older
 # pkg_install might required features of the new program.
 #
 USE_NATIVE_GCC=		yes
-USE_DIGEST=		no
 PKG_DELETE=		${WRKSRC}/delete/pkg_delete
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
