@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/03/19 16:55:04 adrianp Exp $
+$NetBSD: MESSAGE,v 1.3 2006/07/18 23:26:54 ben Exp $
 
 Please refer to the file:
 
@@ -11,6 +11,11 @@ on how to setup your Turba installation. You need to at least edit
 
 to enable Turba in the horde framework.  You will also need to configure Turba
 by using the Horde administrative interface.
+
+If you use an SQL backend, you may need to create the Turba objects using
+the appropriate script under
+
+	${PREFIX}/share/horde/turba/scripts/sql/
 
 Finally you will also need to make Turba accessible through your HTTP server.
 If you are running Apache and ap-php, then you can add the following lines
