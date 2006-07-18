@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/05/14 18:55:50 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2006/07/18 18:40:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
 PKG_SUPPORTED_OPTIONS=	pam xscreensaver-webcollage
@@ -16,5 +16,5 @@ PLIST_SRC=	PLIST.webcollage PLIST
 post-install:
 	${RM} ${PREFIX}/libexec/xscreensaver/config/webcollage.xml
 	${RM} ${PREFIX}/libexec/xscreensaver/webcollage
-	${RM} ${PREFIX}/man/man1/webcollage.1
+	${RM} ${PREFIX}/man/man6/webcollage.6
 .endif
