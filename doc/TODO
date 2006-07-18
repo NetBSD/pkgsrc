@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5217 2006/07/18 06:35:26 wiz Exp $
+$NetBSD: TODO,v 1.5218 2006/07/18 18:07:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,6 +413,7 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
+	o clisp-2.39
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
@@ -466,7 +467,7 @@ Suggested package updates
 	o e2fsprogs-1.38
 	o eagle-4.15
 	o ec-fonts-mftraced-1.0.12
-	o eclipse-3.1.1
+	o eclipse-3.2.0
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
@@ -513,7 +514,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.6.6
+	o fox-1.6.8
 	o freeglut-2.4.0
 	o freesci-0.3.5
 	o fugu-1.2.3
@@ -697,7 +698,7 @@ Suggested package updates
 	o libprelude-0.9.10
 	o libpreludedb-0.9.8
 	o libshout-2.2
-	o libsigsegv-2.3
+	o libsigsegv-2.4
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
@@ -1047,6 +1048,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qdbm-1.8.61
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1085,7 +1087,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-7.7
+	o rxvt-unicode-7.8
 	o sablecc-3.2
 	o samba-3.0.23
 	o same-1.8 [don't update; same-1.3 is small and nice]
@@ -1289,7 +1291,7 @@ Suggested package updates
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.14.2
-	o zile-2.2.15
+	o zile-2.2.16
 	o zircon-1.18.256
 	o zope-2.8.7
 	o zope-2.9.3
