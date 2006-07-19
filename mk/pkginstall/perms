@@ -1,4 +1,4 @@
-# $NetBSD: perms,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: perms,v 1.2 2006/07/19 22:26:26 jlam Exp $
 #
 # Generate a +PERMS script that sets the special permissions on files
 # and directories used by the package.
@@ -35,7 +35,9 @@ SORT="@SORT@"
 TEST="@TEST@"
 
 SELF=$0
-PKG_METADATA_DIR="${1-`${PWD_CMD}`}"
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${1-${CURDIR}}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_PREFIX=@PREFIX@}
 
