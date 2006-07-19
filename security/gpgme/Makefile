@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/07/19 22:59:59 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/07/19 23:02:13 wiz Exp $
 #
 
 DISTNAME=	gpgme-1.1.0
@@ -15,7 +15,7 @@ DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	gpgme/gpgme-config.in
