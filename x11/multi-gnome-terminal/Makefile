@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/17 13:47:00 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/19 10:09:40 joerg Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
 PKGREVISION=	11
@@ -11,7 +11,7 @@ COMMENT=	Gnome tabbed terminal emulator
 
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake intltool
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
