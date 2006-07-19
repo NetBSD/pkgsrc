@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.10 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: depends.mk,v 1.11 2006/07/19 16:01:41 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -72,6 +72,7 @@ depends-install: ${_DEPENDS_FILE}
 	set -- dummy `${CAT} ${_DEPENDS_FILE}`; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		type="$$1"; pattern="$$2"; dir="$$3"; shift 3;		\
+		silent=;						\
 		${_DEPENDS_INSTALL_CMD};				\
 	done
 
@@ -89,6 +90,7 @@ bootstrap-depends:
 	set -- dummy $$args; shift;					\
 	while ${TEST} $$# -gt 0; do					\
 		pattern="$$1"; dir="$$2"; shift 2;			\
+		silent=${_BOOTSTRAP_VERBOSE:Dyes};			\
 		${_DEPENDS_INSTALL_CMD};				\
 	done
 
@@ -129,6 +131,8 @@ _DEPENDS_INSTALL_CMD=							\
 			exit 1;						\
 			;;						\
 		esac;							\
-		${STEP_MSG} "Required installed package $$pattern: $$pkg found"; \
+		if ${TEST} -z "$$silent"; then				\
+			${STEP_MSG} "Required installed package $$pattern: $$pkg found"; \
+		fi;							\
 		;;							\
 	esac
