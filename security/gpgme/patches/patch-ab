@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2004/11/06 17:40:15 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2006/07/19 22:59:59 wiz Exp $
 
---- tests/gpg/mkdemodirs.orig	2001-11-22 04:01:26.000000000 +0100
+--- tests/gpg/mkdemodirs.orig	2005-09-08 14:42:32.000000000 +0000
 +++ tests/gpg/mkdemodirs
-@@ -2,7 +2,7 @@
+@@ -19,7 +19,7 @@
  
  set -e
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.3 2004/11/06 17:40:15 jmmv Exp $
  NAMES='Alpha Bravo Charlie Delta Echo Foxtrot Golf Hotel India
         Juliet Kilo Lima Mike November Oscar Papa Quebec Romeo
         Sierra Tango Uniform Victor Whisky XRay Yankee Zulu'
-@@ -25,7 +25,9 @@ GPGDEMO="$GPG --homedir . --trustdb-name
+@@ -42,7 +42,9 @@ GPGDEMO="$GPG --homedir . --trustdb-name
  echo -n "Creating:"
  for name in $NAMES; do
      echo -n " $name"

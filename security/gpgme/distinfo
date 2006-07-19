@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.22 2006/03/01 16:22:21 drochner Exp $
+$NetBSD: distinfo,v 1.23 2006/07/19 22:59:59 wiz Exp $
 
-SHA1 (gpgme-1.0.3.tar.gz) = 632436ff5c66405d9704983411aa031f29006dce
-RMD160 (gpgme-1.0.3.tar.gz) = cc8dc465c733eea8d7f0297127f9f97dd0876a53
-Size (gpgme-1.0.3.tar.gz) = 837866 bytes
+SHA1 (gpgme-1.1.0.tar.gz) = 2b4f6a8eb4bbc3bc8ad049840c8cbe695ad379f9
+RMD160 (gpgme-1.1.0.tar.gz) = f29903597e74ae637001a73ba9ae4cfd20802bf2
+Size (gpgme-1.1.0.tar.gz) = 862122 bytes
 SHA1 (patch-aa) = 3a9d2d9de847b2c763ab23d0af32064dee9d20c5
-SHA1 (patch-ab) = c47b732622deaa2eb3269d7ae753ab553c4fa54e
-SHA1 (patch-ac) = 1f27efa0a5c109c7a8b4f4e346487a5d2f8b26f2
-SHA1 (patch-ae) = 88d215ad657730349ffa19462799b64238a30426
+SHA1 (patch-ab) = 1dced26dc46f89b601171574115b6e36a0b880fb
+SHA1 (patch-ac) = ad952491ace59bcdd522de489200cad33dddfe42
+SHA1 (patch-ae) = f2b77e5f72ecae72f869afe968f77fb0f0d84c3f
 SHA1 (patch-af) = ac1d130c31c1893a7c70e84580b8b4464eb3954a
 SHA1 (patch-ag) = b499aba9894e24470b7ebb60643a3db5d36b7fd5
-SHA1 (patch-ah) = 852e362f143c754149e0600a7b7f3a47a569f41e
-SHA1 (patch-ai) = 5b7958ef6ed51936e948451e03dd835c1b90414c
-SHA1 (patch-aj) = 372136250ffea3e0db9d86859544b5d22a9782e6
+SHA1 (patch-ah) = 90bc8b33658ce3ce03fd3d7c015cfec53d0bd1d3
+SHA1 (patch-ai) = 290f5ff4375dd0e9c4ba09747357b335784daab5
+SHA1 (patch-aj) = 4568d37ebca320ebb87da83000a98b2891ee9bec

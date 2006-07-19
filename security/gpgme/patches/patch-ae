@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2004/11/04 20:41:21 shannonjr Exp $
+$NetBSD: patch-ae,v 1.3 2006/07/19 22:59:59 wiz Exp $
 
---- gpgme/engine-gpgsm.c.orig	2004-10-22 12:29:21.000000000 -0600
+--- gpgme/engine-gpgsm.c.orig	2005-10-01 20:14:48.000000000 +0000
 +++ gpgme/engine-gpgsm.c
-@@ -27,6 +27,9 @@
+@@ -30,6 +30,9 @@
  #include <sys/types.h>
  #include <assert.h>
  #include <unistd.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-ae,v 1.2 2004/11/04 20:41:21 shannonjr Exp $
  #include <locale.h>
  #include <fcntl.h> /* FIXME */
  #include <errno.h>
-@@ -452,7 +455,8 @@ gpgsm_new (void **engine, const char *lc
+@@ -457,7 +460,8 @@ gpgsm_new (void **engine, const char *fi
  
    if (isatty (1))
      {
