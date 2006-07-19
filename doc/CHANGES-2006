@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.769 2006/07/19 16:09:27 gson Exp $
+$NetBSD: CHANGES-2006,v 1.770 2006/07/19 19:36:22 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3435,3 +3435,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/darkstat version 3.0.524 [minskim 2006-07-19]
 	Updated misc/kdeartwork3 to 3.5.3nb1 [tron 2006-07-19]
 	Updated geography/garmin-utils to 2.4 [gson 2006-07-19]
+	Updated archivers/zoo to zoo-2.10.1nb2 [adrianp 2006-07-19]
