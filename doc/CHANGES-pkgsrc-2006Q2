@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.26 2006/07/18 08:13:26 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.27 2006/07/19 12:02:19 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -59,3 +59,5 @@ Pullup ticket 1740 - requested by drochner
 dependency fix for libxslt
 Pullup ticket 1741 - requested by taca
 security update for geeklog
+Pullup ticket 1742 - requested by wiz
+security update for hyperestraier (requires qdbm update)
