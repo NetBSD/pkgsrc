@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/12 16:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/19 19:14:38 jlam Exp $
 #
 
 DISTNAME=	GUIlib-1.1.0
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		YES
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
