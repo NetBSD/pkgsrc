@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: fonts,v 1.2 2006/07/19 22:26:26 jlam Exp $
 #
 # Generate a +FONTS script that updates font databases for the package.
 #
@@ -39,7 +39,9 @@ TTMKFDIR="@TTMKFDIR@"
 TYPE1INST="@TYPE1INST@"
 
 SELF=$0
-PKG_METADATA_DIR="${1-`${PWD_CMD}`}"
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${1-${CURDIR}}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_PREFIX=@PREFIX@}
 

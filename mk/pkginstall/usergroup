@@ -1,4 +1,4 @@
-# $NetBSD: usergroup,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: usergroup,v 1.2 2006/07/19 22:26:26 jlam Exp $
 #
 # Generate a +USERGROUP script that reference-counts users and groups
 # that are required for the proper functioning of the package.
@@ -63,7 +63,9 @@ TRUE="@TRUE@"
 
 SELF=$0
 ACTION=$1
-PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
 : ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
