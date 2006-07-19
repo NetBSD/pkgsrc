@@ -1,11 +1,11 @@
-# $NetBSD: bsd.checksum.mk,v 1.2 2006/07/13 18:42:45 jlam Exp $
+# $NetBSD: bsd.checksum.mk,v 1.3 2006/07/19 14:54:56 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
 #
 # The following are the "public" targets provided by this module:
 #
-#    checksum, makesum, makepatchsum
+#    checksum, makesum, makepatchsum, distinfo
 #
 
 ######################################################################
@@ -33,13 +33,15 @@ makesum makepatchsum:
 .endif
 
 ######################################################################
-### makedistinfo (PUBLIC)
+### distinfo (PUBLIC)
 ######################################################################
-### makedistinfo is a public target to create ${DISTINFO_FILE}.
+### distinfo is a public target to create ${DISTINFO_FILE}.
 ###
-makedistinfo: makepatchsum makesum
+.PHONY: distinfo
+distinfo: makepatchsum makesum
 	@${DO_NADA}
 
-# Some short aliases for "makepatchsum" and "makedistinfo".
+# Some short aliases for "makepatchsum" and "distinfo".
+.PHONY: mps mdi makedistinfo
 mps: makepatchsum
-mdi: makedistinfo
+mdi makedistinfo: distinfo
