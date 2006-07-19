@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2004/09/23 06:43:45 cube Exp $
+$NetBSD: patch-aa,v 1.11 2006/07/19 22:41:45 wiz Exp $
 
---- params.h.orig	Sat Apr 12 16:16:01 2003
+--- params.h.orig	2006-03-05 12:44:52.000000000 +0000
 +++ params.h
 @@ -13,7 +13,7 @@
  /*
@@ -20,16 +20,16 @@ $NetBSD: patch-aa,v 1.10 2004/09/23 06:43:45 cube Exp $
  
  #if DAEMON_LIBWRAP
  /*
-@@ -99,7 +99,7 @@
-  * A pseudo-user to run as before authentication. The user and its UID
+@@ -103,7 +103,7 @@
+  * A pseudo-user to run as before authentication.  The user and its UID
   * must not be used for any other purpose.
   */
 -#define POP_USER			POP_SERVER
 +#define POP_USER			@@POPA3D_USER@@
  
  /*
-  * An empty directory to chroot to before authentication. The directory
-@@ -144,8 +144,8 @@
+  * An empty directory to chroot to before authentication.  The directory
+@@ -154,8 +154,8 @@
   *
   * Note that there's no built-in password aging support.
   */
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.10 2004/09/23 06:43:45 cube Exp $
  #define AUTH_PAM			0
  #define AUTH_PAM_USERPASS		0
  #define USE_LIBPAM_USERPASS		0
-@@ -198,8 +198,8 @@
+@@ -208,8 +208,8 @@
   *
   * *BSDs use flock(2), others typically use fcntl(2).
   */
@@ -50,4 +50,4 @@ $NetBSD: patch-aa,v 1.10 2004/09/23 06:43:45 cube Exp $
 +#define LOCK_FLOCK			1
  
  /*
-  * How do we talk to syslogd? These should be fine for most systems.
+  * How do we talk to syslogd?  These should be fine for most systems.
