@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.14 2006/07/19 14:03:59 jlam Exp $
+# $NetBSD: fetch.mk,v 1.15 2006/07/19 14:22:47 jlam Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -46,7 +46,7 @@ _MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt:S/\\/\\\\/g}"] = good["${s
 _MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 
 _SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${_MASTER_SORT_AWK}'
-_ORDERED_SITES= "${_MASTER_SITE_OVERRIDE} `${_SORT_SITES_CMD:S/\\/\\\\/g:C/"/\"/g}`"
+_ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${_SORT_SITES_CMD:S/\\/\\\\/g:C/"/\"/g}`
 .else
 _ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
@@ -219,6 +219,7 @@ _FETCH_CMD=	${SETENV} CHECKSUM=${_CHECKSUM_CMD:Q}			\
 			WC=${TOOLS_WC:Q}				\
 		${SH} ${PKGSRCDIR}/mk/fetch/fetch
 
+_FETCH_ARGS+=	-v
 _FETCH_ARGS+=	${FAILOVER_FETCH:D-c}
 .if exists(${DISTINFO_FILE})
 _FETCH_ARGS+=	-f ${DISTINFO_FILE:Q}
@@ -248,8 +249,9 @@ do-fetch-file: .USE
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
+	sites="${_ORDERED_SITES}";					\
 	cd ${.TARGET:H:S/\/${DIST_SUBDIR}$//} &&			\
-	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} ${_ORDERED_SITES}
+	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} $$sites
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -f ${.TARGET}; then				\
 		${ERROR_MSG} "Could not fetch the following file:";	\
