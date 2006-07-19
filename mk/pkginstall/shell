@@ -1,4 +1,4 @@
-# $NetBSD: shell,v 1.2 2006/07/11 13:28:32 wiz Exp $
+# $NetBSD: shell,v 1.3 2006/07/19 22:26:26 jlam Exp $
 #
 # Generate a +SHELL script that handles shell registration for the package.
 #
@@ -44,7 +44,8 @@ TOUCH="@TOUCH@"
 SELF=$0
 ACTION=$1
 
-PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
 : ${PKG_PREFIX=@PREFIX@}
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 
