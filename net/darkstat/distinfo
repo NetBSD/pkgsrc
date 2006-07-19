@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/07/19 04:41:47 minskim Exp $
+
+SHA1 (darkstat/darkstat-3.0.524.tar.bz2) = df4822961ee2320fb4d5eeaed1083f1a157478c2
+RMD160 (darkstat/darkstat-3.0.524.tar.bz2) = 42380b23902cef4cc348fd1f736542dd17296b54
+Size (darkstat/darkstat-3.0.524.tar.bz2) = 74605 bytes
+SHA1 (patch-aa) = f15405dd65381a564b920e958218a63d7bad5f2b
