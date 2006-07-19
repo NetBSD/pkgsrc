@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/19 19:14:37 jlam Exp $
 #
 
 DISTNAME=		recode-3.6
@@ -13,7 +13,6 @@ COMMENT=		Convert files between character sets and usages
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 BROKEN_GETTEXT_DETECTION=	yes
 
 INFO_FILES=     	# PLIST

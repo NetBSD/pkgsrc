@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/07/02 10:21:14 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2006/07/19 19:14:38 jlam Exp $
 #
 
 DISTNAME=	scigraphica-2.1.0
@@ -22,8 +22,6 @@ CONFIGURE_ARGS+=	--with-termcap-path=${BUILDLINK_PREFIX.readline}/lib
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../lang/python/application.mk"

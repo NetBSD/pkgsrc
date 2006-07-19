@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/05/26 13:19:38 joerg Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/07/19 19:14:39 jlam Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -26,7 +26,6 @@ BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB
 BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 USE_TOOLS+=		gzip:run gtar:run
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}

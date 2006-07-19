@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/07/19 19:14:37 jlam Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -14,7 +14,6 @@ COMMENT=	Sound server for windowmaker
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE+=	${WRKSRC:Q}/ltconfig
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}	# not really needed
 PKG_SYSCONFSUBDIR=	WindowMaker

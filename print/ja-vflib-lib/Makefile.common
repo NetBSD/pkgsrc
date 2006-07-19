@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/12/05 20:50:53 rillig Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/07/19 19:14:39 jlam Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
 CATEGORIES+=		japanese print
@@ -15,7 +15,6 @@ PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION:Q}
 PLIST_SUBST+=		VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 FT_LIB=			ttf -lintl
 FT_INCLUDEDIR=		${BUILDLINK_PREFIX.freetype}/include/freetype
