@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:59 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/19 22:45:40 wiz Exp $
 #
 
-DISTNAME=		Apache-Session-1.80
+DISTNAME=		Apache-Session-1.81
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ase
 CATEGORIES=		www perl5
@@ -13,6 +13,8 @@ COMMENT=		Perl5 module to provide persistent storage
 
 DEPENDS+=		p5-Storable>=1.0.11:../../devel/p5-Storable
 DEPENDS+=		p5-Digest-MD5>=2.16:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Test-Deep>=0.082:../../devel/p5-Test-Deep
+DEPENDS+=		p5-Test-Exception>=0.15:../../devel/p5-Test-Exception
 
 PERL5_PACKLIST=		auto/Apache/Session/.packlist
 
