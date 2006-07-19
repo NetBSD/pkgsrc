@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.770 2006/07/19 19:36:22 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.771 2006/07/19 22:48:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3436,3 +3436,26 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/kdeartwork3 to 3.5.3nb1 [tron 2006-07-19]
 	Updated geography/garmin-utils to 2.4 [gson 2006-07-19]
 	Updated archivers/zoo to zoo-2.10.1nb2 [adrianp 2006-07-19]
+	Updated databases/p5-Apache-DBI to 1.01 [wiz 2006-07-19]
+	Updated databases/p5-DBIx-SearchBuilder to 1.43 [wiz 2006-07-19]
+	Updated devel/p5-Algorithm-Dependency to 1.102 [wiz 2006-07-19]
+	Updated devel/p5-Cache-Cache to 1.05 [wiz 2006-07-19]
+	Updated devel/p5-Class-Autouse to 1.26 [wiz 2006-07-19]
+	Updated devel/p5-Class-Inspector to 1.16 [wiz 2006-07-19]
+	Updated devel/p5-Compress-Zlib to 1.42 [wiz 2006-07-19]
+	Updated devel/p5-Config-Tiny to 2.07 [wiz 2006-07-19]
+	Updated devel/p5-Devel-StackTrace to 1.13 [wiz 2006-07-19]
+	Updated devel/p5-ExtUtils-XSBuilder to 0.27 [wiz 2006-07-19]
+	Updated devel/p5-File-Find-Rule to 0.30 [wiz 2006-07-19]
+	Updated devel/p5-Params-Validate to 0.84 [wiz 2006-07-19]
+	Updated devel/p5-Sub-Uplevel to 0.12 [wiz 2006-07-19]
+	Updated devel/p5-Want to 0.10 [wiz 2006-07-19]
+	Updated graphics/p5-Image-Info to 1.21 [wiz 2006-07-19]
+	Updated mail/popa3d to 1.0.2 [wiz 2006-07-19]
+	Updated misc/p5-Locale-Maketext-Lexicon to 0.61 [wiz 2006-07-19]
+	Updated textproc/p5-Text-Balanced to 1.95 [wiz 2006-07-19]
+	Updated textproc/p5-Text-WikiFormat to 0.78 [wiz 2006-07-19]
+	Updated textproc/p5-XML-RSS to 1.10 [wiz 2006-07-19]
+	Updated www/apache to 1.3.36 [wiz 2006-07-19]
+	Updated www/p5-Apache-Session to 1.81 [wiz 2006-07-19]
+	Updated www/p5-HTML-Parser to 3.54 [wiz 2006-07-19]
