@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/10/01 17:25:32 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/19 19:48:21 jlam Exp $
 
 --- Count-config.orig	1999-01-03 15:07:58.000000000 -0800
 +++ Count-config
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/01 17:25:32 minskim Exp $
 -RgbFile="./data/rgb.txt"
 +BaseDir="${PREFIX}/etc"
 +LibDir="${PREFIX}/libdata/wwwcount"
-+ConfigDir="${PREFIX}/etc"
++ConfigDir="${PKG_SYSCONFDIR}"
 +ConfFile="wwwcount.conf"
 +DigitDir="$LibDir/digits"
 +DataDir="${VARBASE}/db/wwwcount"
