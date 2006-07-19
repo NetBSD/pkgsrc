@@ -1,6 +1,9 @@
-# $NetBSD: Makefile.common,v 1.90 2006/07/18 18:40:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.91 2006/07/19 23:42:31 wiz Exp $
 #
 
+# When updating the package, and screensavers are removed,
+# please check kdeartwork3 -- it installs some extra
+# files depending on which screensavers it finds.
 DISTNAME=		xscreensaver-5.00
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE}
