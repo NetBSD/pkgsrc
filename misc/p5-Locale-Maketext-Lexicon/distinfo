@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/01/03 18:29:21 wiz Exp $
+$NetBSD: distinfo,v 1.7 2006/07/19 22:42:18 wiz Exp $
 
-SHA1 (Locale-Maketext-Lexicon-0.53.tar.gz) = 4c607d8efabf4ca77e615c987d1ac815abb24478
-RMD160 (Locale-Maketext-Lexicon-0.53.tar.gz) = 4e5eb2a02ab4fb8ec7bdd1eee3688f47a68f8d1f
-Size (Locale-Maketext-Lexicon-0.53.tar.gz) = 65947 bytes
+SHA1 (Locale-Maketext-Lexicon-0.61.tar.gz) = 437b4c7bfe4eff540ac96fcf1165b552a6a1365e
+RMD160 (Locale-Maketext-Lexicon-0.61.tar.gz) = 307639073fd2b7a5af5c11d4754471ac230cef21
+Size (Locale-Maketext-Lexicon-0.61.tar.gz) = 83766 bytes
