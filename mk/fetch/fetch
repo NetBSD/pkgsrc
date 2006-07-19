@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.2 2006/07/18 22:41:06 jlam Exp $
+# $NetBSD: fetch,v 1.3 2006/07/19 14:16:29 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -72,6 +72,9 @@
 #		and is later renamed to the final file name if the
 #		complete file has been sucessfully fetched.
 #
+#	-v	Show the actual command line used to fetch the file
+#		from each site.
+#
 # ENVIRONMENT
 #	PKGSRCDIR	This is a hint to help locate the default
 #			checksum script.
@@ -125,12 +128,14 @@ checksum=
 distinfo=
 fetchdir=.
 resume=
+verbose=
 while ${TEST} $# -gt 0; do
 	case "$1" in
 	-c)	checksum=yes; shift ;;
 	-d)	fetchdir="$2"; shift 2 ;;
 	-f)	distinfo="$2"; shift 2 ;;
 	-r)	resume=yes; shift ;;
+	-v)	verbose=yes; shift ;;
 	--)	shift; break ;;
 	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
 		usage
@@ -254,10 +259,12 @@ while ${TEST} $# -gt 0; do
 
 	( cd $fetchdir
 	  if ${TEST} -n "$resume"; then
-		${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $site$file
+		fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $site$file"
 	  else
-		${FETCH_CMD} ${FETCH_BEFORE_ARGS} $site$file ${FETCH_AFTER_ARGS}
-	  fi )
+		fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} $site$file ${FETCH_AFTER_ARGS}"
+	  fi
+	  ${TEST} -z "$verbose" || ${ECHO} "$fetch_cmd"
+	  $fetch_cmd )
 	if ${TEST} $? -ne 0; then
 		${ECHO} 1>&2 "$self: Unable to fetch expected file $file"
 		continue
