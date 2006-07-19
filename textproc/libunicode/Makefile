@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/26 13:51:16 schwarz Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/19 19:14:39 jlam Exp $
 #
 
 DISTNAME=		libunicode-0.4
@@ -13,7 +13,5 @@ COMMENT=		Library for manipulating Unicode characters and strings
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"

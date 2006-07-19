@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/07/19 19:14:38 jlam Exp $
 #
 
 DISTNAME=		aqsis-0.6.4
@@ -14,7 +14,6 @@ BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_TOOLS+=		gmake
 
 GCC_REQD+=		2.95.3

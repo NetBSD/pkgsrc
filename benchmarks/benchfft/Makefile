@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/19 19:14:37 jlam Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=	2
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		fortran
 USE_LIBTOOL=		yes
 
-LTCONFIG_OVERRIDE=	${WRKDIR}/fftw-2.0.1/ltconfig
+LIBTOOL_OVERRIDE=	libtool ../fftw-*/libtool
 CONFIG_GUESS_OVERRIDE=	config.guess ../fftw-*/config.guess
 CONFIG_SUB_OVERRIDE=	config.sub ../fftw-*/config.sub
 CONFIG_STATUS_OVERRIDE=	config.status ../fftw-*/config.status

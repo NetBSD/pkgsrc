@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/06/08 15:26:43 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2006/07/19 19:14:38 jlam Exp $
 
 DISTNAME=		libPropList-0.10.1
 PKGNAME=		libproplist-0.10.1
@@ -12,7 +12,6 @@ COMMENT=		GNUstep/OPENSTEP property lists compatibility library
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		lex
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libproplist
