@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.4 2006/07/18 22:41:06 jlam Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.5 2006/07/19 16:01:40 jlam Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -29,8 +29,10 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 USE_TOOLS+=		${FAILOVER_FETCH:Ddigest\:bootstrap}
 
 # When mirroring distfiles which others may fetch, only fetch the
-# distfiles if it is allowed to be re-distributed freely.
+# distfiles if it is allowed to be re-distributed freely.  Also,
+# suppress some bootstrap-depends output.
 #
 .if make(mirror-distfiles)
-NO_SKIP=	# defined
+NO_SKIP=		# defined
+_BOOTSTRAP_VERBOSE=	# defined
 .endif
