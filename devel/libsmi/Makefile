@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:06 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/19 19:14:38 jlam Exp $
 #
 
 DISTNAME=	libsmi-0.1.6
@@ -13,7 +13,6 @@ COMMENT=	Library to access SMI MIB information
 MIBDIR=		${PREFIX}/share/libsmi/mibs
 
 USE_LIBTOOL=	YES
-LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-mibdir=${MIBDIR:Q}
 # this might make it easier to use scotty's and ucd-snmp's mibs,

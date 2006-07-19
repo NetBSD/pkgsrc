@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/06/21 13:50:46 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/19 19:14:39 jlam Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -19,7 +19,6 @@ CONFLICTS+=		cups-[0-9]*
 
 USE_TOOLS+=		chgrp chown gmake
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE+=	${WRKSRC:Q}/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-lpd_perms_path=${LPD_PERMS_PATH:Q}
