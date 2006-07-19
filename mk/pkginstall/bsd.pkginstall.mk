@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.13 2006/07/05 22:21:03 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.14 2006/07/19 18:05:35 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -905,6 +905,7 @@ ${_INSTALL_FILE}: ${INSTALL_SRC}
 pre-install-script:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -x ${INSTALL_FILE}; then				\
+		${STEP_MSG} "Running PRE-INSTALL script actions";	\
 		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
 			PRE-INSTALL;					\
@@ -913,6 +914,7 @@ pre-install-script:
 post-install-script:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -x ${INSTALL_FILE}; then				\
+		${STEP_MSG} "Running POST-INSTALL script actions";	\
 		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
 			POST-INSTALL;					\
