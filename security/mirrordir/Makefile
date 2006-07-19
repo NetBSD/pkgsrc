@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:35 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/19 19:14:39 jlam Exp $
 #
 
 DISTNAME=	mirrordir-0.10.49
@@ -14,7 +14,6 @@ CONFLICTS=	qmail>=1.03nb7 netqmail>=1.05
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 EGDIR=		${PREFIX}/share/examples/mirrordir
 

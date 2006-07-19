@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/07/19 19:14:39 jlam Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	11
@@ -21,7 +21,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 SGML_CATALOGS=		${PREFIX}/share/sgml/jade/catalog
 
