@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5222 2006/07/19 22:48:55 wiz Exp $
+$NetBSD: TODO,v 1.5223 2006/07/19 23:02:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -571,7 +571,6 @@ Suggested package updates
 	o gogo-3.11p1
 	o gok-1.0.10
 	o gossip-0.12
-	o gpgme-1.1.0 [pkg/32761]
 	o gpsdrive-2.09
 	o grace-5.1.20
 	o gramofile-1.6P
