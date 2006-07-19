@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.42 2006/07/18 23:08:30 jlam Exp $
+# $NetBSD: deprecated.map,v 1.43 2006/07/19 19:14:39 jlam Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -115,3 +115,4 @@ DEINSTALL_FILE		It may only be used internally by pkgsrc.
 
 # July 2006
 USE_DIGEST		You can just remove it.
+LTCONFIG_OVERRIDE	You can just remove it.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/06/24 10:54:39 hira Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/19 19:14:39 jlam Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -25,7 +25,6 @@ BUILD_DIRS=		${WRKDIR}/${DISTNAME}/texk/xdvik
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/config
 LIBTOOL_OVERRIDE=	klibtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=--enable-local-texmf=${PKG_LOCALTEXMFPREFIX} \
