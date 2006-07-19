@@ -1,7 +1,4 @@
-# $NetBSD: fetch.mk,v 1.11 2006/07/18 23:27:14 jlam Exp $
-
-# If this host is behind a filtering firewall, use passive ftp(1)
-FETCH_BEFORE_ARGS+=	${PASSIVE_FETCH:D-p}
+# $NetBSD: fetch.mk,v 1.12 2006/07/19 13:33:42 jlam Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -202,10 +199,12 @@ FETCH_AFTER_ARGS?=	${_FETCH_AFTER_ARGS.${FETCH_CMD:T}}
 FETCH_RESUME_ARGS?=	${_FETCH_RESUME_ARGS.${FETCH_CMD:T}}
 FETCH_OUTPUT_ARGS?=	${_FETCH_OUTPUT_ARGS.${FETCH_CMD:T}}
 
-_FETCH_BEFORE_ARGS.ftp=	# empty
-_FETCH_AFTER_ARGS.ftp=	# empty
-_FETCH_RESUME_ARGS.ftp=	-R
-_FETCH_OUTPUT_ARGS.ftp=	-o
+_FETCH_BEFORE_ARGS.ftp=		# empty
+# If this host is behind a filtering firewall, use passive ftp(1)
+_FETCH_BEFORE_ARGS.ftp+=	${PASSIVE_FETCH:D-p}
+_FETCH_AFTER_ARGS.ftp=		# empty
+_FETCH_RESUME_ARGS.ftp=		-R
+_FETCH_OUTPUT_ARGS.ftp=		-o
 
 _FETCH_CMD=	${SETENV} CHECKSUM=${_CHECKSUM_CMD:Q}			\
 			CP=${TOOLS_CP:Q}				\
