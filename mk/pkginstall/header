@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: header,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: header,v 1.2 2006/07/19 22:26:26 jlam Exp $
 
 SELF="$0"
 PKGNAME="$1"
@@ -48,7 +48,8 @@ TR="@TR@"
 TRUE="@TRUE@"
 XARGS="@XARGS@"
 
-: ${PKG_METADATA_DIR=`${PWD_CMD}`}
+CURDIR=`${PWD_CMD}`
+: ${PKG_METADATA_DIR=${CURDIR}}
 PKGBASE="@PKGBASE@"
 
 LOCALBASE="@LOCALBASE@"
