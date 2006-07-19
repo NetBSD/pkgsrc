@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.5 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: libtool-override.mk,v 1.6 2006/07/19 22:07:13 jlam Exp $
 
 ######################################################################
 ### {libtool,shlibtool}-override (PRIVATE)
@@ -31,7 +31,9 @@ libtool-override:
 .if defined(LIBTOOL_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
-	for file in ${LIBTOOL_OVERRIDE}; do				\
+	set -- dummy ${LIBTOOL_OVERRIDE}; shift;			\
+	while ${TEST} $$# -gt 0; do					\
+		file="$$1"; shift;					\
 		${TEST} -f "$$file" || continue;			\
 		${_SCRIPT.${.TARGET}};					\
 	done
@@ -54,7 +56,9 @@ shlibtool-override:
 .if defined(SHLIBTOOL_OVERRIDE) && !empty(SHLIBTOOL_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
-	for file in ${SHLIBTOOL_OVERRIDE}; do				\
+	set -- dummy ${SHLIBTOOL_OVERRIDE}; shift;			\
+	while ${TEST} $$# -gt 0; do					\
+		file="$$1"; shift;					\
 		${TEST} -f "$$file" || continue;			\
 		${_SCRIPT.${.TARGET}};					\
 	done
