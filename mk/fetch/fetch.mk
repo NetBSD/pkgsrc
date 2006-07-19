@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.13 2006/07/19 14:01:29 jlam Exp $
+# $NetBSD: fetch.mk,v 1.14 2006/07/19 14:03:59 jlam Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -29,26 +29,26 @@ _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 
 _BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
-# Set up ORDERED_SITES to work out the exact list of sites for every file,
+# Set up _ORDERED_SITES to work out the exact list of sites for every file,
 # using the dynamic sites script, or sorting according to the master site
 # list or the patterns in MASTER_SORT or MASTER_SORT_REGEX as appropriate.
-# No actual sorting is done until ORDERED_SITES is expanded.
+# No actual sorting is done until _ORDERED_SITES is expanded.
 #
 .if defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
 MASTER_SORT?=
 MASTER_SORT_REGEX?=
 MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
 
-MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SORT_REGEX:S/\\/\\\\/g}"; }
+_MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SORT_REGEX:S/\\/\\\\/g}"; }
 .  for srt in ${MASTER_SORT_REGEX}
-MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt:S/\\/\\\\/g}"] = good["${srt:S/\\/\\\\/g}"] " " $$0 ; next; }
+_MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt:S/\\/\\\\/g}"] = good["${srt:S/\\/\\\\/g}"] " " $$0 ; next; }
 .  endfor
-MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
+_MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 
-SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${MASTER_SORT_AWK}'
-ORDERED_SITES= "${_MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD:S/\\/\\\\/g:C/"/\"/g}`"
+_SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${_MASTER_SORT_AWK}'
+_ORDERED_SITES= "${_MASTER_SITE_OVERRIDE} `${_SORT_SITES_CMD:S/\\/\\\\/g:C/"/\"/g}`"
 .else
-ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
+_ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
 
 #
@@ -249,7 +249,7 @@ do-fetch-file: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
 	cd ${.TARGET:H:S/\/${DIST_SUBDIR}$//} &&			\
-	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} ${ORDERED_SITES}
+	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} ${_ORDERED_SITES}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -f ${.TARGET}; then				\
 		${ERROR_MSG} "Could not fetch the following file:";	\
