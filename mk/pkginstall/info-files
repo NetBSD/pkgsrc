@@ -1,4 +1,4 @@
-# $NetBSD: info-files,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: info-files,v 1.2 2006/07/19 22:26:26 jlam Exp $
 #
 # Generate an +INFO_FILES script that handles info file registration for
 # the package.
@@ -43,7 +43,8 @@ TEST="@TEST@"
 SELF=$0
 ACTION=$1
 
-PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_PREFIX=@PREFIX@}
 
