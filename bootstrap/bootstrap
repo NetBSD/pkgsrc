@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.67 2006/07/17 14:30:05 jlam Exp $
+# $NetBSD: bootstrap,v 1.68 2006/07/19 15:01:23 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -730,7 +730,7 @@ bmake=$prefix/bin/bmake
 case "$need_awk" in
 yes)	echo_msg "Installing awk"
 	copy_src ../lang/nawk/files awk
-	run_cmd "(cd $wrkdir/awk && $bmake)"
+	run_cmd "(cd $wrkdir/awk && $bmake -f Makefile)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
 	run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
 	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${MKCONF_EXAMPLE}
