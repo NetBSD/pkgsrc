@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/07/19 04:41:47 minskim Exp $
+
+--- queue.h.orig	2006-03-14 10:10:02.000000000 +0100
++++ queue.h
+@@ -51,12 +51,14 @@ struct {								\
+ 
+ #define	STAILQ_NEXT(elm, field)	((elm)->field.stqe_next)
+ 
++#undef STAILQ_INSERT_TAIL
+ #define	STAILQ_INSERT_TAIL(head, elm, field) do {			\
+ 	STAILQ_NEXT((elm), field) = NULL;				\
+ 	*(head)->stqh_last = (elm);					\
+ 	(head)->stqh_last = &STAILQ_NEXT((elm), field);			\
+ } while (0)
+ 
++#undef STAILQ_REMOVE_HEAD
+ #define	STAILQ_REMOVE_HEAD(head, field) do {				\
+ 	if ((STAILQ_FIRST((head)) =					\
+ 	     STAILQ_NEXT(STAILQ_FIRST((head)), field)) == NULL)		\
