@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/07/19 19:48:21 jlam Exp $
 bin/mkstrip
 bin/extdgts
 libdata/wwwcount/digits/A/peng.gif
@@ -83,10 +83,7 @@ share/doc/wwwcount/Count2.5/eximages/ex2_589754.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_594028.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_598302.gif
 share/examples/wwwcount.conf
-@exec if [ ! -f %D/etc/wwwcount.conf ]; then cp -p %D/share/examples/wwwcount.conf %D/etc/wwwcount.conf; fi
 man/man1/mkstrip.1
-@exec touch /var/log/wwwcount
-@exec ${CHOWN} nobody.nogroup /var/log/wwwcount
 @dirrm libdata/wwwcount/digits/A
 @dirrm libdata/wwwcount/digits/B
 @dirrm libdata/wwwcount/digits/C
