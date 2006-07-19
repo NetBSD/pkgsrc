@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2005/11/04 17:16:34 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2006/07/19 22:59:59 wiz Exp $
 
---- configure.orig	2004-10-22 12:52:27.000000000 -0600
+--- configure.orig	2005-10-01 21:13:49.000000000 +0000
 +++ configure
-@@ -19726,12 +19726,12 @@ _ACEOF
- 	  CFLAGS="$CFLAGS $PTH_CFLAGS"
+@@ -19878,12 +19878,12 @@ _ACEOF
+ 
  	fi
  	echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
 -echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
@@ -17,7 +17,7 @@ $NetBSD: patch-ac,v 1.4 2005/11/04 17:16:34 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -19839,7 +19839,7 @@ fi
+@@ -20019,7 +20019,7 @@ fi
  
  # Checks for header files.
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.4 2005/11/04 17:16:34 joerg Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -22011,7 +22011,7 @@ esac
+@@ -22190,7 +22190,7 @@ esac
  fi
  GPGSM=$ac_cv_path_GPGSM
  
