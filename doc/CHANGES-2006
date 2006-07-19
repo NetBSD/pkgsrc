@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.768 2006/07/19 10:56:51 tron Exp $
+$NetBSD: CHANGES-2006,v 1.769 2006/07/19 16:09:27 gson Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3434,3 +3434,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/unrealircd to 3.2.5 [adrianp 2006-07-18]
 	Added net/darkstat version 3.0.524 [minskim 2006-07-19]
 	Updated misc/kdeartwork3 to 3.5.3nb1 [tron 2006-07-19]
+	Updated geography/garmin-utils to 2.4 [gson 2006-07-19]
