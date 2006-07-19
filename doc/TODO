@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5220 2006/07/18 22:45:17 adrianp Exp $
+$NetBSD: TODO,v 1.5221 2006/07/19 17:55:31 darcy Exp $
 
 Suggested new packages
 ======================
@@ -805,7 +805,7 @@ Suggested package updates
 	o openh323-1.17.2
 	o openmortal-0.7.1
 	o openntpd-3.9p1
-	o openoffice-2.0.2
+	o openoffice-2.0.3
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
