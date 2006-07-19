@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2004/11/06 17:40:15 jmmv Exp $
+$NetBSD: patch-ai,v 1.2 2006/07/19 22:59:59 wiz Exp $
 
---- tests/gpg/Makefile.in.orig	2004-10-22 20:52:26.000000000 +0200
+--- tests/gpg/Makefile.in.orig	2005-10-01 21:13:46.000000000 +0000
 +++ tests/gpg/Makefile.in
-@@ -732,7 +732,7 @@ all-local: ./pubring.gpg
- 	$(GPG) --homedir . --allow-secret-key-import --import Alpha/Secret.gpg Zulu/Secret.gpg
+@@ -764,7 +764,7 @@ all-local: ./pubring.gpg ./gpg.conf
+ 		--import Alpha/Secret.gpg Zulu/Secret.gpg
  
  ./Alpha/Secret.gpg: secdemo.asc 
 -	srcdir=$(srcdir) $(srcdir)/mkdemodirs 
 +	srcdir=$(srcdir) GPG=$(GPG) $(srcdir)/mkdemodirs 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ 
+ ./gpg.conf:
+ # This is required for t-sig-notations.
