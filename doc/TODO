@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5223 2006/07/19 23:02:30 wiz Exp $
+$NetBSD: TODO,v 1.5224 2006/07/19 23:10:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,7 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amavisd-new-2.4.2
+	o amavisd-new-2.4.2 [pkg/34041]
 	o amaya-9.5
 	o amule-2.1.3
 	o anjuta-2.0.1
@@ -499,7 +499,6 @@ Suggested package updates
 	o f2c-20031025
 	o faces-1.7.7
 	o fast-user-switch-applet-2.14.2
-	o fceu-0.98.15
 	o fd-2.08a
 	o fdgw-20040609
 	o fetchmail-6.3.4
@@ -703,6 +702,7 @@ Suggested package updates
 	o libtorrent-0.9.3
 	o libwpd-0.8.5
 	o licq-core-1.3.0
+	o liferea-1.0.17
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -1124,6 +1124,8 @@ Suggested package updates
 	o strace-4.5.8
 	o stunnel-4.15
 	o subtitleripper-0.3.4
+	o sun-jdk14-2.12 [pkg/34035]
+	o sun-jre14-2.12 [pkg/34035]
 	o suse100_base-10.1
 	o svk-1.07
 	o sweep-0.9.1
@@ -1191,6 +1193,7 @@ Suggested package updates
 	o webmin-1.290
 	o weewm-0.01
 	o winbind-3.0.13
+	o wireshark-0.99.2 [was ethereal]
 	o wmctrl-1.07
 	o wmii-2.5.2 [pkg/33285]
 	o wmweather-2.4.3
@@ -1202,7 +1205,7 @@ Suggested package updates
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2
 	o xblast-2.10.4
-	o xchat-2.6.4
+	o xchat-2.6.6
 	o xcircuit-3.4.0
 	o xdaliclock-2.23
 	o xdelta-3.0e
