@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.32 2006/04/13 16:35:58 jlam Exp $
+# $NetBSD: builtin.mk,v 1.33 2006/07/20 20:02:23 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -100,15 +100,6 @@ USE_BUILTIN.gettext=	no
 .  endif  # PREFER.gettext
 .endif
 MAKEVARS+=	USE_BUILTIN.gettext
-
-# If USE_GNU_GETTEXT is defined, then force the use of a GNU gettext
-# implementation.
-#
-.if defined(USE_GNU_GETTEXT)
-.  if !empty(IS_BUILTIN.gettext:M[nN][oO])
-USE_BUILTIN.gettext=	no
-.  endif
-.endif
 
 ###
 ### The section below only applies if we are not including this file

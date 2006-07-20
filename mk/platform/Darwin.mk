@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.19 2006/04/12 21:01:15 joerg Exp $
+# $NetBSD: Darwin.mk,v 1.20 2006/07/20 20:02:23 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -72,7 +72,6 @@ _OPSYS_COMPILER_RPATH_FLAG=	-L	# compiler flag to pass rpaths to linker
 _OPSYS_SHLIB_TYPE=	dylib	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b -z	# switch to patch(1) for backup suffix
-_USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
