@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.18 2006/04/12 21:01:15 joerg Exp $
+# $NetBSD: FreeBSD.mk,v 1.19 2006/07/20 20:02:23 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -59,7 +59,6 @@ _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
-_USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
