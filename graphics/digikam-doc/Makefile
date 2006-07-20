@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/24 18:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/20 12:28:29 joerg Exp $
 
 DISTNAME=		digikam-doc-0.7.4
 PKGREVISION=		3
@@ -11,7 +11,7 @@ HOMEPAGE=		http://digikam.sourceforge.net/
 COMMENT=		Documentation for Digikam
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
