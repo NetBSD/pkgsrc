@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.775 2006/07/20 17:09:46 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.776 2006/07/20 17:25:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3463,3 +3463,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/ntfsprogs to 1.13.1 [adam 2006-07-20]
 	Updated sysutils/k3b to 0.12.16 [markd 2006-07-20]
 	Updated devel/diffutils to 2.8.1nb1 [minskim 2006-07-20]
+	Added graphics/GraphicsMagick version 1.1.7 [minskim 2006-07-20]
