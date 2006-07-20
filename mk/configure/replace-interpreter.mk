@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.2 2006/07/15 09:52:00 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.3 2006/07/20 13:54:44 jlam Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -70,16 +70,6 @@ REPLACE.sys-sh.old=	[^[:space:]]*sh
 REPLACE.sys-sh.new=	${SH}
 REPLACE_FILES.sys-sh=	${REPLACE_SH}
 .endif
-
-# XXX After 2006Q2, all instances of _REPLACE.* and _REPLACE_FILES.* should
-# XXX have been replaced with REPLACE.* and REPLACE_FILES.*. This code is
-# XXX then no longer needed.
-# XXX
-.for _lang_ in ${REPLACE_INTERPRETER}
-REPLACE.${_lang_}.old?=		${_REPLACE.${_lang_}.old}
-REPLACE.${_lang_}.new?=		${_REPLACE.${_lang_}.new}
-REPLACE_FILES.${_lang_}?=	${_REPLACE_FILES.${_lang_}}
-.endfor
 
 .PHONY: replace-interpreter
 replace-interpreter:
