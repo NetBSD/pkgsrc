@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5227 2006/07/20 19:06:15 wiz Exp $
+$NetBSD: TODO,v 1.5228 2006/07/20 19:32:28 minskim Exp $
 
 Suggested new packages
 ======================
@@ -315,7 +315,6 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-4.12.22
 	o abcmidi-20060625
 	o acpi-iasl-20040715
 	o adns-1.3
