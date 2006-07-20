@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/01/22 08:45:05 hira Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/20 05:24:07 rillig Exp $
 
 DISTNAME=	tetex-texmfsrc-2.0.2
 PKGNAME=	teTeX-sharesrc-2.0.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/2.0/distrib/}
 
@@ -15,16 +16,17 @@ DEPENDS+=	teTeX-share>=2.0.2:../../print/teTeX-share
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
-EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+INSTALLATION_DIRS=	share/texmf
+
+REPLACE_PERL+=	source/latex/t2/enc-maps/make-enc.pl
+REPLACE_PERL+=	source/latex/koma-script/genindex.pl
+# Left out because the above files are seldomly used.
+#USE_TOOLS+=	perl:run
 
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-	extract_file=${_DISTDIR:Q}/${DISTFILES:Q};			\
-	cd ${PREFIX}/share/texmf; ${EXTRACT_CMD}
+	cd ${WRKSRC} && ${PAX} -wr LICENSE.* source ${PREFIX}/share/texmf
 
 .include "../../mk/bsd.pkg.mk"
