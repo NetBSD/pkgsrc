@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/04/17 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/07/20 19:11:37 wiz Exp $
 #
 
 DISTNAME=	sirius-0.8.0
@@ -12,7 +12,7 @@ COMMENT=	Othello game for GNOME2
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
