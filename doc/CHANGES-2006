@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.779 2006/07/20 19:47:35 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.780 2006/07/20 23:16:12 perry Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3469,3 +3469,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/rt-pgsql to 2.0.15nb6 [wiz 2006-07-20]
 	Updated print/abcm2ps to 4.12.22 [minskim 2006-07-20]
 	Updated graphics/gpaint to 0.2nb9 [wiz 2006-07-20]
+	Updated devel/libsigsegv to 2.4 [perry 2006-07-20]
+	Updated lang/clisp to 2.39 [perry 2006-07-20]
