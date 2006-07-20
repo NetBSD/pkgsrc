@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.12 2006/07/14 17:37:03 jlam Exp $
+# $NetBSD: install.mk,v 1.13 2006/07/20 14:17:48 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -101,7 +101,7 @@ install-check-version: ${_COOKIE.extract}
 	"")	${WARNING_MSG} "${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
 	"$$pkgname")	;;						\
 	*)	${WARNING_MSG} "Package version $$extractname in ${WRKDIR}"; \
-		${WARNING_MSG} "Current version $$pkgname in ${PKG_PATH}"; \
+		${WARNING_MSG} "Current version $$pkgname in ${PKGPATH}"; \
 		${WARNING_MSG} "Cleaning and rebuilding $$pkgname...";	\
 		${MAKE} clean && ${MAKE} build ;;			\
 	esac
