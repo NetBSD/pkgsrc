@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/06/26 09:24:09 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2006/07/20 19:16:23 rillig Exp $
 #
 
 DISTNAME=	boolean_6_7
@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	bin
 
 # the zip archive messes up the case of these files which breaks
 # cmake.
-post-patch:
+post-extract:
 	set -e; \
 	for f in `${FIND} ${WRKSRC} -name cmakelists.txt -print`; do \
 		d=`${DIRNAME} "$$f"` ; \
