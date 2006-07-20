@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.4 2006/07/19 15:13:40 jlam Exp $
+# $NetBSD: fetch,v 1.5 2006/07/20 13:31:08 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -103,8 +103,6 @@
 #			that will hold the contents of the fetched file.
 #
 ######################################################################
-
-set -e		# exit on errors
 
 : ${PKGSRCDIR:=/usr/pkgsrc}
 : ${CHECKSUM:=${PKGSRCDIR}/mk/checksum/checksum}
