@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/20 08:22:02 adam Exp $
 
-DISTNAME=	ntfsprogs-1.13.0
+DISTNAME=	ntfsprogs-1.13.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-ntfs/}
 
