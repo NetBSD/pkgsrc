@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/20 17:09:14 minskim Exp $
 #
 
 DISTNAME=		diffutils-2.8.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
 
@@ -13,6 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		# PLIST
+
+CONFIGURE_ENV+=	gt_cv_func_gnugettext1_libintl=yes
 
 .include "../../mk/bsd.prefs.mk"
 
