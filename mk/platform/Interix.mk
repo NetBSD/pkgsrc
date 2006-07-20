@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.50 2006/04/12 21:01:15 joerg Exp $
+# $NetBSD: Interix.mk,v 1.51 2006/07/20 20:02:23 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -141,7 +141,6 @@ _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
-_USE_GNU_GETTEXT=	yes	# gettext not in base system
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # Ensure that USE_X11BASE programs get an xpkgwedge new enough to work.
