@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2006/07/20 19:05:24 wiz Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
@@ -75,7 +75,7 @@ DEPENDS+=	p5-MLDBM-[0-9]*:../../databases/p5-MLDBM
 DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
 DEPENDS+=	p5-HTML-Mason>=1.02:../../www/p5-HTML-Mason
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
-DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
+DEPENDS+=	p5-libapreq2-[0-9]*:../../www/p5-libapreq2
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-MIME-tools>=5.108:../../mail/p5-MIME-tools
