@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/07/07 16:59:14 abs Exp $
+# $NetBSD: Makefile,v 1.50 2006/07/20 22:09:02 wiz Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -73,6 +73,8 @@ do-install:
 	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
 	@${RM} -f ${PREFIX}/share/mplayer/Skin/default
 	${LN} -s Blue ${PREFIX}/share/mplayer/Skin/default
+	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/.svn
+	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
 
 .include "../../multimedia/mplayer-share/Makefile.depends"
 
