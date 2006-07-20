@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/19 04:41:47 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/20 16:32:46 minskim Exp $
 #
 
 DISTNAME=		darkstat-3.0.524
@@ -15,5 +15,6 @@ BUILD_TARGET=		darkstat
 
 GNU_CONFIGURE=		yes
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
