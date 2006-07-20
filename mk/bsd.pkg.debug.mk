@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.3 2006/07/20 17:31:20 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.4 2006/07/20 17:40:45 jlam Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -44,13 +44,12 @@ _show-dbginfo-file-versions:
 	  esac;								\
 	done
 
+# Use an ODE variable loop to output the "TOOL" name and value for each
+# unique tool listed in USE_TOOLS.
+#
 _show-dbginfo-tools:
 	@${PRINTF} "TOOLS:\\n"
-.for _t_ in ${USE_TOOLS:O}
-.  if defined(_TOOLS_VARNAME.${_t_})
-	@${PRINTF} "\\t%s=%s\\n" ${_TOOLS_VARNAME.${_t_}:Q} ${${_TOOLS_VARNAME.${_t_}}:Q}
-.  endif
-.endfor
+	@${USE_TOOLS:C/:.*//:O:u:@_t_@${_TOOLS_VARNAME.${_t_}:D${PRINTF} "\\t%s=%s\\n" ${_TOOLS_VARNAME.${_t_}} ${${_TOOLS_VARNAME.${_t_}}:Q};}@}
 
 _show-dbginfo-configure:
 	@${PRINTF} "CONFIGURE_DIRS:\\n"
