@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.70 2006/07/20 15:13:10 jlam Exp $
+# $NetBSD: bootstrap,v 1.71 2006/07/20 19:28:42 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -730,7 +730,7 @@ bmake=$prefix/bin/bmake
 case "$need_awk" in
 yes)	echo_msg "Installing awk"
 	copy_src ../lang/nawk/files awk
-	test -z "$CC" || CC=gcc	# default to gcc if no compiler is specified
+	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	run_cmd "(cd $wrkdir/awk && $bmake -f Makefile CC=\"${CC}\")"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
 	run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
