@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/20 08:53:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/07/20 11:22:25 markd Exp $
 bin/k3b
 bin/k3bsetup
 include/k3baudiocdtrackdrag.h
@@ -105,6 +105,8 @@ include/k3bwavefilewriter.h
 include/kcutlabel.h
 lib/kde3/kcm_k3bsetup2.la
 lib/kde3/libk3bartsoutputplugin.la
+lib/kde3/libk3baudiometainforenamerplugin.la
+lib/kde3/libk3baudioprojectcddbplugin.la
 lib/kde3/libk3bexternalencoder.la
 lib/kde3/libk3bflacdecoder.la
 lib/kde3/libk3blameencoder.la
@@ -115,8 +117,6 @@ lib/kde3/libk3boggvorbisencoder.la
 lib/kde3/libk3bsoxencoder.la
 lib/kde3/libk3bwavedecoder.la
 lib/libk3b.la
-lib/libk3baudiometainforenamerplugin.la
-lib/libk3baudioprojectcddbplugin.la
 lib/libk3bdevice.la
 share/applications/kde/k3b.desktop
 share/doc/kde/HTML/en/k3b/audiocd-howto.docbook
