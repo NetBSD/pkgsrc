@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/20 19:46:54 wiz Exp $
 #
 
 DISTNAME=	gpaint-0.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpaint/}
 
@@ -13,8 +13,6 @@ COMMENT=	Simple, easy-to-use paint program for GNOME
 USE_DIRS+=		xdg-1.1
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-USE_GNU_GETTEXT=	YES
-USE_X11BASE=		YES
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
