@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.5 2006/07/20 17:56:27 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.6 2006/07/20 19:00:50 jlam Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -58,7 +58,9 @@ _show-dbginfo-configure:
 	@${PRINTF} "\\t%s\\n" ${CONFIGURE_ENV:O}
 	@${PRINTF} "CONFIGURE_SCRIPT:\\n\\t%s\\n" ${CONFIGURE_SCRIPT:Q}
 	@${PRINTF} "CONFIGURE_ARGS:\\n"
+.if !empty(CONFIGURE_ARGS:M*)
 	@${CONFIGURE_ARGS:@_ca_@${PRINTF} "\\t%s\\n" ${_ca_:Q};@}
+.endif
 
 _show-dbginfo-config.status:
 .if !empty(CONFIGURE_DIRS:M*)
