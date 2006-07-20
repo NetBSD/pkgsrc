@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.52 2006/07/02 23:09:19 rillig Exp $
+# $NetBSD: compiler.mk,v 1.53 2006/07/20 16:44:01 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -70,11 +70,8 @@ BSD_COMPILER_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# Always require a C compiler for proper compiler detection.
+# Since most packages need a C compiler, this is the default value.
 USE_LANGUAGES?=	c
-.if empty(USE_LANGUAGES:Mc)
-USE_LANGUAGES:=	c ${USE_LANGUAGES}
-.endif
 
 # For environments where there is an external gcc too, but pkgsrc
 # should use the pkgsrc one for consistency.
@@ -150,9 +147,11 @@ _WRAP_EXTRA_ARGS.LD+=	${_LINKER_ABI_FLAG.${ABI}}
 # If the languages are not requested, force them not to be available
 # in the generated wrappers.
 #
+_FAIL_WRAPPER.CC=	${WRKDIR}/.compiler/bin/c-fail-wrapper
 _FAIL_WRAPPER.CXX=	${WRKDIR}/.compiler/bin/c++-fail-wrapper
 _FAIL_WRAPPER.FC=	${WRKDIR}/.compiler/bin/fortran-fail-wrapper
 
+${_FAIL_WRAPPER.CC}: fail-wrapper
 ${_FAIL_WRAPPER.CXX}: fail-wrapper
 ${_FAIL_WRAPPER.FC}: fail-wrapper
 
@@ -168,6 +167,11 @@ fail-wrapper: .USE
 	${ECHO} 'exit 1'
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 
+.if empty(USE_LANGUAGES:Mc)
+PKG_CC:=		${_FAIL_WRAPPER.CC}
+ALL_ENV+=		CPP=${CPP:Q}
+override-tools: ${_FAIL_WRAPPER.CC}
+.endif
 .if empty(USE_LANGUAGES:Mc++)
 PKG_CXX:=		${_FAIL_WRAPPER.CXX}
 ALL_ENV+=		CXXCPP=${CPP:Q} # to make some Autoconf scripts happy
