@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5225 2006/07/20 14:43:34 salo Exp $
+$NetBSD: TODO,v 1.5226 2006/07/20 18:02:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,7 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20060417 [pkg/33153]
 	o cuetools-1.3.1
-	o cups-1.2.1
+	o cups-1.2.2
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsweb-3.0.6
 	o cweb-3.64a
@@ -478,7 +478,7 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
-	o enlightenment-0.16.8.1
+	o enlightenment-0.16.8.2
 	o enscript-1.6.4
 	o epstool-3.08
 	o eric3-3.9.1
@@ -1059,6 +1059,7 @@ Suggested package updates
 	o rpm-4.4.6
 	o rrdtool-1.2.15
 	o rsnapshot-1.2.9
+	o rt3-3.6.0
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
 	o ruby-cmd-0.8.0
