@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 13:09:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/20 21:04:32 wiz Exp $
 #
 
 CATEGORIES=	math
@@ -10,6 +10,7 @@ COMMENT=	Computes the multivariate normal and t distribution
 
 R_PKGNAME=	mvtnorm
 R_PKGVER=	0.7-2
+USE_LANGUAGES+=	fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
