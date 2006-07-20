@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 10:18:32 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/20 12:31:03 joerg Exp $
 #
 
 DISTNAME=	libscigraphica-2.1.1
@@ -11,7 +11,7 @@ COMMENT=	Scientific data visualization and analysis library
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake intltool
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libscigraphica-2.0.pc.in
