@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/06/28 21:19:55 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/20 11:22:25 markd Exp $
 #
 
-DISTNAME=		k3b-0.12.15
-PKGREVISION=		1
+DISTNAME=		k3b-0.12.16
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=k3b/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,15 +14,11 @@ DEPENDS+=  		cdrdao-[0-9]*:../../sysutils/cdrdao
 DEPENDS+=  		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake autoconf perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config
 USE_LANGUAGES=          c c++
 USE_LIBTOOL=            yes
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
-
-pre-configure:
-	cd ${WRKSRC} && autoheader
-	cd ${WRKSRC} && autoconf
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../audio/flac/buildlink3.mk"

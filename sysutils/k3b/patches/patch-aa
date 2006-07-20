@@ -1,48 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2006/06/20 19:08:13 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2006/07/20 11:22:25 markd Exp $
 
---- libk3b/core/k3bglobals.cpp.orig	2005-12-16 02:09:01.000000000 +1300
+--- libk3b/core/k3bglobals.cpp.orig	2006-06-23 02:45:37.000000000 +1200
 +++ libk3b/core/k3bglobals.cpp
-@@ -38,12 +38,21 @@
- #include <cmath>
- #include <sys/utsname.h>
- #include <sys/stat.h>
-+#if defined(__NetBSD__) || defined(__DragonFly__)
-+#define stat64 stat
-+#endif
+@@ -41,16 +41,16 @@
  
--#ifdef __FreeBSD__
-+#include <config.h>
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
- #include <sys/param.h>
- #include <sys/mount.h>
- #else
--#include <sys/vfs.h>
-+#  ifdef HAVE_SYS_STATVFS_H
-+#    include <sys/statvfs.h>
-+#  endif
-+#  ifdef HAVE_SYS_STATFS_H
-+#    include <sys/vfs.h>
-+#  endif
+ #include <config.h>
+ #if defined(__FreeBSD__) || defined(__NetBSD__)
+-#include <sys/param.h>
+-#include <sys/mount.h>
+-#else
+-#  ifdef HAVE_SYS_STATVFS_H
+-#    include <sys/statvfs.h>
+-#  endif
+-#  ifdef HAVE_SYS_STATFS_H
+-#    include <sys/vfs.h>
+-#  endif
++#  include <sys/param.h>
++#  include <sys/mount.h>
  #endif
- 
- 
-@@ -235,10 +244,19 @@ QString K3b::systemName()
- 
- bool K3b::kbFreeOnFs( const QString& path, unsigned long& size, unsigned long& avail )
- {
-+#ifdef HAVE_STATVFS
-+  struct statvfs fs;
-+  if( ::statvfs( QFile::encodeName(path), &fs ) == 0 ) {
-+    unsigned long kBfak = fs.f_frsize/1024;
-+#else
-+#  ifndef HAVE_STATFS
-+#    error "No statfs, no statvfs? Help!"
-+#  endif
-   struct statfs fs;
- 
-   if( ::statfs( QFile::encodeName(path), &fs ) == 0 ) {
-     unsigned long kBfak = fs.f_bsize/1024;
++#ifdef HAVE_SYS_STATVFS_H
++#  include <sys/statvfs.h>
 +#endif
++#ifdef HAVE_SYS_STATFS_H
++#  include <sys/vfs.h>
++#endif
++
  
-     size = fs.f_blocks*kBfak;
-     avail = fs.f_bavail*kBfak;
+ 
+ 
