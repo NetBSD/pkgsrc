@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1872 2006/07/17 13:35:11 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1873 2006/07/20 17:16:43 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1016,3 +1016,6 @@ changes-entry:
 	${ECHO} ${_CTYPE1}${_CTYPE2}${_CTYPE3} >> ${PKGSRC_CHANGES:Q}
 
 .include "${PKGSRCDIR}/mk/internal/build-defs-message.mk"
+.if make(debug)
+.include "${PKGSRCDIR}/mk/bsd.pkg.debug.mk"
+.endif
