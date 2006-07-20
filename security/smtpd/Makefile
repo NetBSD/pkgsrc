@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/03/14 01:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/20 20:07:13 jlam Exp $
 #
 
 DISTNAME=	smtpd-2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail security
 MASTER_SITES=	ftp://ftp.obtuse.com/pub/smtpd/
 
@@ -26,12 +26,9 @@ CFLAGS.AIX+=	-DGETOPT_EOF -DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_LOCKF_H -DNEEDS_ST
 OPSYSVARS+=	LD_LIBS
 LD_LIBS.SunOS+=	-lnsl -lsocket -lresolv
 MAKE_ENV+=	LD_LIBS=${LD_LIBS:Q}
-DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
-INSTALL_SRC=	# empty
-
-.include "../../mk/bsd.prefs.mk"
 
 INSTALLATION_DIRS=	sbin
+OWN_DIRS=		${SPOOL}
 
 do-install:
 	${INSTALL_DATA_DIR} ${SPOOL}/etc
