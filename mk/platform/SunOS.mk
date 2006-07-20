@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.25 2006/07/20 13:19:29 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.26 2006/07/20 20:02:23 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -63,7 +63,6 @@ _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF		# shared lib type
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
-_USE_GNU_GETTEXT=	yes		# Use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
