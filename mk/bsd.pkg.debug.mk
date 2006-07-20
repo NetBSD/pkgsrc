@@ -1,9 +1,13 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.2 2006/07/20 17:14:26 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.3 2006/07/20 17:31:20 rillig Exp $
 #
 
-# This file provides the `debug' target, which outputs the values of
-# some commonly used variables and the contents of some files which are
-# useful for tracking bugs.
+# The `debug' target outputs the values of some commonly used variables
+# and the contents of some files which are useful for tracking bugs,
+# especially for packages that use the GNU autotools.
+#
+# The `build-env' target is intended to be used interactively when
+# debugging build problems. It runs a shell in exactly the same
+# environment as in the default do-build target, starting in WRKSRC.
 
 PRINTF?=	printf
 
@@ -117,3 +121,13 @@ _show-dbginfo-install:
 _show-dbginfo-plist-subst:
 	@${PRINTF} "PLIST_SUBST (sorted alphabetically):\\n"
 	@${PRINTF} "\\t%s\\n" ${PLIST_SUBST:O}
+
+#
+# The build-env target.
+#
+
+.PHONY: build-env
+build-env: configure
+	@${STEP_MSG} "Entering the build environment for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH}
