@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5228 2006/07/20 19:32:28 minskim Exp $
+$NetBSD: TODO,v 1.5229 2006/07/20 23:16:12 perry Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o clisp-2.39
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
@@ -693,7 +692,6 @@ Suggested package updates
 	o libprelude-0.9.10
 	o libpreludedb-0.9.8
 	o libshout-2.2
-	o libsigsegv-2.4
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
