@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.12 2006/03/18 21:40:45 jlam Exp $
+# $NetBSD: OSF1.mk,v 1.13 2006/07/20 20:02:23 jlam Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -63,7 +63,6 @@ _OPSYS_RPATH_NAME=	-rpath,	# name of symbol in rpath directive to linker
 _OPSYS_SHLIB_TYPE=	COFF	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z 	# switch to patch(1) for backup suffix
-_USE_GNU_GETTEXT=	yes	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.

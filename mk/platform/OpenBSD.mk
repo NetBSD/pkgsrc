@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.23 2006/04/12 21:01:15 joerg Exp $
+# $NetBSD: OpenBSD.mk,v 1.24 2006/07/20 20:02:23 jlam Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -65,7 +65,6 @@ _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
 .else
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
 .endif
-_USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
