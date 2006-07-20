@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/30 15:40:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/20 13:48:14 jlam Exp $
 #
 
 DISTNAME=	xmlscan-${VER}
@@ -13,7 +13,6 @@ COMMENT=	Pure Ruby XML parser
 VER=		0.2.3
 
 NO_BUILD=		yes
-NO_CONFIGURE=		yes
 USE_RUBY_INSTALL=	yes
 
 REPLACE_RUBY=	samples/getxmlchar.rb samples/xmlbench.rb \
