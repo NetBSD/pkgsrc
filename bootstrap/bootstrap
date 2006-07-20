@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.69 2006/07/19 15:27:37 jlam Exp $
+# $NetBSD: bootstrap,v 1.70 2006/07/20 15:13:10 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -699,7 +699,7 @@ run_cmd "$cpprog bsd.* sys.mk $prefix/share/mk"
 	
 if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/install-sh/install-sh $prefix/bin/install-sh"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
 	echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${MKCONF_EXAMPLE}
 fi
