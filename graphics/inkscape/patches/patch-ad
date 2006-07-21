@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2006/07/21 13:16:53 joerg Exp $
+
+--- src/trace/potrace/inkscape-potrace.cpp.orig	2006-07-21 13:01:29.000000000 +0000
++++ src/trace/potrace/inkscape-potrace.cpp
+@@ -29,7 +29,12 @@
+ #include "curve.h"
+ #include "bitmap.h"
+ 
+-
++#if defined(__DragonFly__)
++static double log2(double val)
++{
++    return log(val) / M_LN2;
++}
++#endif
+ 
+ static void updateGui()
+ {
