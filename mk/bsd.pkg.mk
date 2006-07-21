@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1873 2006/07/20 17:16:43 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1874 2006/07/21 14:21:28 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -12,9 +12,9 @@
 #    checksum
 #    depends
 #    tools
+#    wrapper
 #    extract
 #    patch
-#    wrapper
 #    configure
 #    build
 #

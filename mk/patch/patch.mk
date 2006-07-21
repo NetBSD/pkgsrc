@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.9 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: patch.mk,v 1.10 2006/07/21 14:21:28 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -63,8 +63,10 @@ _PATCH_TARGETS+=	release-patch-lock
 .  if exists(${_COOKIE.patch})
 patch:
 	@${DO_NADA}
-.  else
+.  elif exists(${_COOKIE.barrier})
 patch: ${_PATCH_TARGETS}
+.  else
+patch: barrier
 .  endif
 .endif
 
