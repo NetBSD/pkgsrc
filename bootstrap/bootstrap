@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.75 2006/07/21 18:46:52 jlam Exp $
+# $NetBSD: bootstrap,v 1.76 2006/07/21 18:58:03 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -58,6 +58,7 @@ usage="Usage: $0 "'
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --preserve-path ]
+    [ --full ]
     [ --help ]'
 
 # this replicates some of the logic in bsd.prefs.mk. until
@@ -250,6 +251,7 @@ pkgdbdir=
 pkgmandir=
 sysconfdir=
 varbase=
+full=
 
 while [ $# -gt 0 ]; do
 	case $1 in
@@ -270,6 +272,7 @@ while [ $# -gt 0 ]; do
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
 	--preserve-path) preserve_path=yes ;;
+	--full)		full=yes ;;
 	--help)		echo "$usage"; exit ;;
 	-h)		echo "$usage"; exit ;;
 	--*)		echo "$usage"; exit 1 ;;
@@ -506,6 +509,19 @@ OSF1)
 	need_awk=yes
 	need_sed=yes
 	set_opsys=no
+	;;
+esac
+
+# If "--full" is specified, then install all of the platform-independent
+# bootstrap software.
+#
+case "$full" in
+yes)
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=yes
+	need_awk=yes
+	need_sed=yes
 	;;
 esac
 
