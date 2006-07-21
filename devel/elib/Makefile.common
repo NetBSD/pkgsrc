@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/05/26 19:33:36 joerg Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/07/21 14:27:56 jlam Exp $
 #
 
 DISTNAME=	elib-1.0
@@ -10,8 +10,8 @@ COMMENT=	Library of utility functions for Emacs
 
 .include "../../mk/emacs.mk"
 
-BUILD_ENV+=	EMACS=${EMACS_FLAVOR:Q}
-MAKEFLAGS+=	EMACS=${EMACS_FLAVOR:Q}
+PKGSRC_MAKE_ENV+=	EMACS=${EMACS_FLAVOR:Q}
+MAKEFLAGS+=		EMACS=${EMACS_FLAVOR:Q}
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake makeinfo
