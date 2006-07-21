@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.780 2006/07/20 23:16:12 perry Exp $
+$NetBSD: CHANGES-2006,v 1.781 2006/07/21 13:20:47 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3394,6 +3394,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/koffice-l10n-de to 1.5.2 [markd 2006-07-15]
 	Updated misc/koffice-l10n-en_GB to 1.5.2 [markd 2006-07-15]
 	Updated games/xboard to 4.2.7 [rillig 2006-07-16]
+	Updated mail/p5-Mail-DKIM to 0.18 [heinz 2006-07-16]
+	Added sysutils/p5-Parse-Syslog version 1.09 [heinz 2006-07-16]
 	Updated net/lftp to 3.5.1 [salo 2006-07-16]
 	Updated www/geeklog to 1.4.0.5 [taca 2006-07-17]
 	Updated comms/obexftp to 0.20 [xtraeme 2006-07-17]
@@ -3471,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gpaint to 0.2nb9 [wiz 2006-07-20]
 	Updated devel/libsigsegv to 2.4 [perry 2006-07-20]
 	Updated lang/clisp to 2.39 [perry 2006-07-20]
+	Added misc/mirmon version 1.36 [heinz 2006-07-21]
