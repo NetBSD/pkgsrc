@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/07/07 18:02:01 adam Exp $
+# $NetBSD: Makefile,v 1.26 2006/07/21 05:30:22 rillig Exp $
 
 DISTNAME=	fftw-3.1.2
 CATEGORIES=	math
@@ -11,7 +11,7 @@ COMMENT=	Collection of fast C routines to compute DFTs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
