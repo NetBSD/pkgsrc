@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/21 17:03:24 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/21 05:17:30 rillig Exp $
 #
 
 DISTNAME=	burn-0.4.0
@@ -18,7 +18,7 @@ DEPENDS+=	gworkspace-[0-9]*:../../sysutils/gworkspace
 NO_CONFIGURE=	YES
 MAKEFILE=	GNUmakefile
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	objc
+USE_LANGUAGES=	c objc
 WRKSRC=		${WRKDIR}/${PKGBASE}
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS=-D_POSIX_SOURCE
 MAKE_ENV+=	ADDITIONAL_LDFLAGS=-lutil
