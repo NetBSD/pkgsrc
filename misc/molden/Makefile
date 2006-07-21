@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/18 23:27:14 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/21 14:04:25 jlam Exp $
 
 DISTNAME=	molden4.2
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -29,9 +29,9 @@ NO_BIN_ON_FTP=          ${RESTRICTED}
 
 FETCH_MESSAGE=								\
 	"Please read the following to learn how to get a copy of Molden:" \
-	""
+	""								\
 	"    http://www.cmbi.kun.nl/~schaft/molden/howtoget.html"	\
-	""
+	""								\
 	"Then put the file:"						\
 	"    ${DISTNAME}${EXTRACT_SUFX}"				\
 	"into"								\
