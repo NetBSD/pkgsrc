@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.76 2006/07/21 18:58:03 jlam Exp $
+# $NetBSD: bootstrap,v 1.77 2006/07/21 19:08:56 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -860,7 +860,7 @@ run_cmd "(cd ../pkgtools/pkgmanpages && $bmake PKG_VERBOSE=yes MAKECONF=${MKCONF
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
-echo "and $prefix/man to your MANPATH environment variable, if necessary."
+echo "and $mandir to your MANPATH environment variable, if necessary."
 echo ""
 echo "An example mk.conf file \"${MKCONF_EXAMPLE}\" with the settings you"
 echo "provided to \"bootstrap\" has been created for you."
