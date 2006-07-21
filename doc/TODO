@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5229 2006/07/20 23:16:12 perry Exp $
+$NetBSD: TODO,v 1.5230 2006/07/21 14:28:47 tron Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ Suggested package updates
 	o webmin-1.290
 	o weewm-0.01
 	o winbind-3.0.13
-	o wireshark-0.99.2 [salo]
 	o wmctrl-1.07
 	o wmii-2.5.2 [pkg/33285]
 	o wmweather-2.4.3
