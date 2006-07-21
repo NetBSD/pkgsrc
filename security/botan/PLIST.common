@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2006/02/05 01:25:12 rillig Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/07/21 16:22:36 wiz Exp $
 bin/botan-config
 include/botan/adler32.h
 include/botan/aes.h
@@ -147,6 +147,7 @@ include/botan/symkey.h
 include/botan/tea.h
 include/botan/tiger.h
 include/botan/timers.h
+include/botan/tm_hard.h
 include/botan/tm_unix.h
 include/botan/turing.h
 include/botan/twofish.h
