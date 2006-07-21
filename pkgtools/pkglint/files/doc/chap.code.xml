@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.code.xml,v 1.4 2006/05/20 14:26:00 rillig Exp $ -->
+<!-- $NetBSD: chap.code.xml,v 1.5 2006/07/21 05:11:34 rillig Exp $ -->
 
 <chapter id="code">
 <title>Code structure</title>
@@ -235,7 +235,7 @@
 	<para>The first example are subroutines and their parameters. In
 	most other languages, the names of the parameters are mentioned in
 	the subroutine definition. Not so in Perl. The parameters to each
-	subroutine are passed in the <literal>$@</literal> array. The usual
+	subroutine are passed in the <literal>@_</literal> array. The usual
 	way to get named parameters is to write assign the parameter array
 	to a list of local variables. This extra statement is a nuisance,
 	but it is merely syntactical.</para>
@@ -281,6 +281,14 @@
 	a regular expression against a reference. It will simply compute
 	a string representation of the reference and match the regular
 	expression against that.</para>
+
+	<para>The current Perl interpreter is very inefficient when
+	copying strings. This happens really often in pkglint, for
+	example when passing arguments to functions or saving the result
+	of a regular expression match in <quote>real</quote> variables.
+	For a great speed-up, an implementation that handles string
+	objects by reference-counting them would be better. (Lua comes
+	to mind.)</para>
 
 </sect1>
 <sect1 id="code.lang">
