@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/13 14:19:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/21 14:27:56 jlam Exp $
 #
 
 DISTNAME=		gst-ffmpeg-0.10.1
@@ -14,7 +14,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 OVERRIDE_DIRDEPTH=	3
 USE_TOOLS+=		pkg-config gmake perl
-BUILD_ENV+=		PERL=${PERL5}
+PKGSRC_MAKE_ENV+=	PERL=${PERL5}
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"

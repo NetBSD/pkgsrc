@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/07/02 10:45:30 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2006/07/21 14:27:56 jlam Exp $
 
 DISTNAME=	xephem-3.7.1
 PKGREVISION=	1
@@ -32,9 +32,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 USE_TOOLS+=	gmake perl:run
 REPLACE_PERL+=	auxil/*.pl
 
-LIBS.SunOS+=	-lnsl -lsocket
-X11_LDFLAGS+=	${LIBS}
-BUILD_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+LIBS.SunOS+=		-lnsl -lsocket
+X11_LDFLAGS+=		${LIBS}
+PKGSRC_MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 
 REPLACE_INTERPRETER+=	perl
 REPLACE.perl.old=	.*/bin/perl

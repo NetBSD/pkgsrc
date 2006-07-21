@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build-vars.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.2 2006/07/21 14:27:56 jlam Exp $
 #
 # BUILD_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -44,4 +44,4 @@ MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
 # Add these bits to the environment used when invoking the recursive make
 # processes for build-related phases.
 #
-BUILD_ENV+=	PATH=${PATH:Q}
+PKGSRC_MAKE_ENV+=	PATH=${PATH:Q}
