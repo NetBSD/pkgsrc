@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2006/07/07 15:49:33 jlam Exp $
+# $NetBSD: Makefile,v 1.133 2006/07/21 14:27:53 tron Exp $
 
 DISTNAME=		ethereal-0.99.0
 CATEGORIES=		net
@@ -20,6 +20,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		frueauf@NetBSD.org
 HOMEPAGE=		http://www.ethereal.com/
 COMMENT=		Network protocol analyzer
+
+CONFLICTS+=		wireshark-[0-9]*
 
 USE_LANGUAGES+=		c++
 USE_TOOLS+=		perl pkg-config
