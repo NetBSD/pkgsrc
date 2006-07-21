@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.43 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.44 2006/07/21 14:21:28 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,6 +62,10 @@ _COOKIE.tools=	${WRKDIR}/.tools_done
 ### tools is a public target to create a private directory of tools
 ### specified by USE_TOOLS.
 ###
+_TOOLS_TARGETS+=	check-vulnerable
+_TOOLS_TARGETS+=	checksum
+_TOOLS_TARGETS+=	makedirs
+_TOOLS_TARGETS+=	depends
 _TOOLS_TARGETS+=	acquire-tools-lock
 _TOOLS_TARGETS+=	${_COOKIE.tools}
 _TOOLS_TARGETS+=	release-tools-lock
