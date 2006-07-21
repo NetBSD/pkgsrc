@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2006/05/28 00:26:27 rh Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/21 05:06:06 rillig Exp $
 #
 .include "Makefile.common"
 PKGREVISION=		10
 
 COMMENT=		Objective-C interface to the GTK+ widget set
 
-USE_LANGUAGES=		objc
+USE_LANGUAGES=		c objc
 
 BUILD_DIRS=		${WRKSRC}/GToolKit
 
