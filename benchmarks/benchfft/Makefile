@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/07/19 19:14:37 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/21 06:36:21 rillig Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=	2
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
 
 LIBTOOL_OVERRIDE=	libtool ../fftw-*/libtool
