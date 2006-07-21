@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2006/03/04 21:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/07/21 03:02:55 reed Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/	\
 		ftp://ftp.research.telcordia.com/pub/nsb/
@@ -25,11 +25,7 @@ EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 USE_TOOLS+=	bdftopcf
 
-FONTS_DIRS.x11+=	lib/metamail/fonts
-REQD_DIRS+=		lib/metamail
-REQD_DIRS+=		lib/metamail/fonts
-
-INSTALLATION_DIRS=	bin man/man1 man/man4
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4
 
 SUBST_CLASSES+=		awk sys
 SUBST_STAGE.awk=	post-patch
