@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/07/21 16:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/21 23:21:20 abs Exp $
 #
 
-DISTNAME=	${PKGNAME:S:-server-:_:}
+DISTNAME=	${PKGNAME_NOREV:S:-server-:_:}
 PKGNAME=	munin-server-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 
@@ -27,6 +27,7 @@ MUNIN_USER?=	munin
 
 PKG_GROUPS=	${MUNIN_GROUP}
 PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}::Munin\\ user
+PKG_SYSCONFSUBDIR?=	munin
 
 STATEDIR=	${VARBASE}/munin/plugin-state
 
@@ -52,6 +53,7 @@ BUILD_TARGET=	build
 PERL5_SITELIB=	${PERL5_SUB_INSTALLVENDORLIB:Q}
 
 MAKE_ENV+=	PERL5_SITELIB=${PREFIX}/${PERL5_SITELIB}
+MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
 MAKE_ENV+=	PERL5=${PERL5:Q}
@@ -67,9 +69,9 @@ MESSAGE_SUBST+=	VARBASE=${VARBASE:Q}
 
 EGDIR=		${PREFIX}/share/examples/munin
 TMPL_EGDIR=	${EGDIR}/templates
-INST_TMPL_DIR=	${PKG_SYSCONFDIR}/munin/templates
+INST_TMPL_DIR=	${PKG_SYSCONFDIR}/templates
 
-CONF_FILES+=	${EGDIR}/munin.conf ${PKG_SYSCONFDIR}/munin/munin.conf
+CONF_FILES+=	${EGDIR}/munin.conf ${PKG_SYSCONFDIR}/munin.conf
 
 TMPL_FILES=	definitions.html logo.png munin-comparison-day.tmpl \
 		munin-comparison-month.tmpl munin-comparison-week.tmpl \
