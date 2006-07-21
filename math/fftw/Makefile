@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/07/21 05:30:22 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/07/21 07:07:17 rillig Exp $
 
 DISTNAME=	fftw-3.1.2
 CATEGORIES=	math
@@ -21,5 +21,11 @@ PKGCONFIG_OVERRIDE+=	fftw.pc.in
 INFO_FILES=		yes
 
 TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+USE_TOOLS+=		perl
+.endif
 
 .include "../../mk/bsd.pkg.mk"
