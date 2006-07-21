@@ -1,22 +1,20 @@
 # /bin/sh
 #
-# $NetBSD: shlib-type,v 1.2 2006/01/19 17:24:44 jlam Exp $
+# $NetBSD: shlib-type,v 1.3 2006/07/21 13:40:27 jlam Exp $
 #
 # This code is derived from software contributed to The NetBSD Foundation
 # by Alistair Crooks.
 #
-# This script returns the the library format for the platform.  If the
-# library format is "ELF/a.out", then a small program is compiled to
-# determine the correct object format (either ELF or a.out).
+# This script returns the the library format for the platform.  If
+# the library format is "ELF/a.out", then we inspect "pkg_info" (which
+# should exist on a pkgsrc system) to determine the correct object
+# format (either ELF or a.out).
 #
 
-: ${CC=cc}
 : ${ECHO=echo}
 : ${FILE_CMD=file}
-: ${RM=rm}
-: ${MKDIR=mkdir}
 : ${TEST=test}
-: ${TMPDIR=/tmp}
+: ${PKG_INFO_CMD=/usr/sbin/pkg_info}
 
 self="${0##*/}"
 
@@ -29,20 +27,19 @@ ${TEST} $# -gt 0 || { usage; exit 1; }
 sotype=none
 case "$1" in
 ELF/a.out)
-	tmpdir="${TMPDIR}/shlib-type.$$"
-	umask 077 && ${MKDIR} "$tmpdir"
-	if ${TEST} -d "$tmpdir"; then
-		cd $tmpdir
-		${ECHO} "int main() { return(0); }" > a.c
-		${CC} ${CFLAGS} a.c -o a.out >/dev/null 2>&1
-		if ${TEST} -f "a.out"; then
-			case `${FILE_CMD} a.out` in
-			*ELF*dynamically*)	sotype="ELF" ;;
-			*shared*library*)	sotype="a.out" ;;
-			*dynamically*)		sotype="a.out" ;;
-			esac
-		fi
-		${RM} -fr "$tmpdir"
+	case "${PKG_INFO_CMD}" in
+	/*)	;;
+	*)	PKG_INFO_CMD="/usr/sbin/pkg_info"
+	esac
+	if ${TEST} -f ${PKG_INFO_CMD}; then
+		case `${FILE_CMD} ${PKG_INFO_CMD}` in
+		*ELF*dynamically*)	sotype="ELF" ;;
+		*shared*library*)	sotype="a.out" ;;
+		*dynamically*)		sotype="a.out" ;;
+		esac
+	else
+		# "pkg_info" is missing so just guess "ELF.
+		sotype="ELF"
 	fi
 	;;
 *)
