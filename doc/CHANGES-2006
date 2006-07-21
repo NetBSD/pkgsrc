@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.781 2006/07/21 13:20:47 heinz Exp $
+$NetBSD: CHANGES-2006,v 1.782 2006/07/21 14:28:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3474,3 +3474,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libsigsegv to 2.4 [perry 2006-07-20]
 	Updated lang/clisp to 2.39 [perry 2006-07-20]
 	Added misc/mirmon version 1.36 [heinz 2006-07-21]
+	Added net/wireshark version 0.99.2 [tron 2006-07-21]
