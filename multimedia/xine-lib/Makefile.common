@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2006/04/13 18:23:36 jlam Exp $
+# $NetBSD: Makefile.common,v 1.34 2006/07/21 14:27:56 jlam Exp $
 #
 
 DISTNAME=		xine-lib-${XINE_LIB_VER}a
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
 CONFIGURE_ENV+=		have_libpng="yes"
 CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
 CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
-BUILD_ENV+=		"mkdir_p"="mkdir -p"
+PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
 
 .include "../../mk/bsd.prefs.mk"
 

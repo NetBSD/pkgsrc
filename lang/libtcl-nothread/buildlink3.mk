@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/21 14:27:56 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCLNT_BUILDLINK3_MK:=	${TCLNT_BUILDLINK3_MK}+
@@ -25,7 +25,7 @@ BUILDLINK_TRANSFORM+=	l:tcl:tcl84-nothread
 BUILDLINK_TRANSFORM+=	l:tcl8.4:tcl84-nothread
 
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig-nothread.sh
-BUILD_ENV+=		_TCL_NOTHREAD=yes
+PKGSRC_MAKE_ENV+=	_TCL_NOTHREAD=yes
 
 .endif	# TCLNT_BUILDLINK3_MK
 
