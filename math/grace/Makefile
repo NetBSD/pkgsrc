@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/04/17 13:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/07/21 05:35:39 rillig Exp $
 #
 
 DISTNAME=	grace-5.1.14
@@ -18,7 +18,7 @@ COMMENT=	GRaphing, Advanced Computation and Exploration of data
 
 USE_X11BASE=		YES
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace
 CONFIGURE_ARGS+=	--without-bundled-xbae
