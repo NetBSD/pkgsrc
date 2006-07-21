@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.74 2006/07/21 16:31:49 jlam Exp $
+# $NetBSD: bootstrap,v 1.75 2006/07/21 18:46:52 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -840,7 +840,7 @@ run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJ
 
 # Install the man page.
 echo_msg "Installing packages(7) man page"
-run_cmd "(cd ../pkgtools/pkgmanpages && $bmake PKG_VERBOSE=yes MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir install)"
+run_cmd "(cd ../pkgtools/pkgmanpages && $bmake PKG_VERBOSE=yes MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir CREATE_WRKDIR_SYMLINK=no install)"
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
