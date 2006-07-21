@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.5 2005/03/24 17:46:01 tv Exp $
+# $NetBSD: f2c.mk,v 1.6 2006/07/21 14:27:56 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -99,7 +99,7 @@ PREPEND_PATH+=	${_F2C_DIR}/bin
 .  include "../../lang/f2c/buildlink3.mk"
 
 .  if defined(F2C_DIR) && !empty(F2C_DIR)
-BUILD_ENV+=	F2C_DIR=${F2C_DIR:Q}
+PKGSRC_MAKE_ENV+=	F2C_DIR=${F2C_DIR:Q}
 .  endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
