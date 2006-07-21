@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:18 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/21 17:31:44 minskim Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -11,6 +11,8 @@ MAINTAINER=		wennmach@NetBSD.org
 COMMENT=		Earth as seen from the direction of the sun
 
 HAS_CONFIGURE=		yes
+USE_TOOLS+=		csh
+CONFIG_SHELL=		${CSH}
 
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		LDLIBS="-lm ${LDFLAGS} -lX11"
