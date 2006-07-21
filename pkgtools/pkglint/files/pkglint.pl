@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.657 2006/07/18 21:13:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.658 2006/07/21 05:02:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6273,6 +6273,19 @@ sub checkfile_package_Makefile($$$) {
 
 	if (exists($pkgctx_vardef->{"RESTRICTED"}) && !exists($pkgctx_vardef->{"LICENSE"})) {
 		$pkgctx_vardef->{"RESTRICTED"}->log_error("Restricted packages must have a LICENSE.");
+	}
+
+	if (exists($pkgctx_vardef->{"GNU_CONFIGURE"}) && exists($pkgctx_vardef->{"USE_LANGUAGES"})) {
+		my $languages_line = $pkgctx_vardef->{"USE_LANGUAGES"};
+
+		if ($languages_line->text =~ regex_varassign) {
+			my (undef, $op, $value, undef) = ($1, $2, $3, $4);
+
+			if ($value !~ qr"\bc\b") {
+				$pkgctx_vardef->{"GNU_CONFIGURE"}->log_warning("GNU_CONFIGURE almost always needs a C compiler, ...");
+				$languages_line->log_warning("... but \"c\" is not added to USE_LANGUAGES.");
+			}
+		}
 	}
 
 	my $distname_line = $pkgctx_vardef->{"DISTNAME"};
