@@ -1,17 +1,25 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/06/08 19:16:24 he Exp $
+$NetBSD: patch-ad,v 1.2 2006/07/21 16:23:42 wiz Exp $
 
---- Makefile.orig	2004-12-22 22:33:47.000000000 +0100
+--- Makefile.orig	2004-12-22 21:33:47.000000000 +0000
 +++ Makefile
-@@ -17,6 +17,7 @@ install: install-main install-node insta
+@@ -16,7 +16,7 @@ install: install-main install-node insta
+ 
  install-main: build
  	$(CHECKUSER)
- 	mkdir -p $(CONFDIR)/templates
+-	mkdir -p $(CONFDIR)/templates
 +	mkdir -p $(EGDIR)/templates
  	mkdir -p $(LIBDIR)
  	mkdir -p $(BINDIR)
  	mkdir -p $(PERLLIB)
-@@ -29,13 +30,11 @@ install-main: build
- 	$(CHOWN) $(USER) $(LOGDIR) $(STATEDIR) $(RUNDIR) $(HTMLDIR) $(DBDIR)
+@@ -24,18 +24,17 @@ install-main: build
+ 	mkdir -p $(LOGDIR)
+ 	mkdir -p $(STATEDIR)
+ 	mkdir -p $(HTMLDIR)
++	mkdir -p $(CGIDIR)
+ 	mkdir -p $(DBDIR)
+ 
+-	$(CHOWN) $(USER) $(LOGDIR) $(STATEDIR) $(RUNDIR) $(HTMLDIR) $(DBDIR)
++	$(CHOWN) $(USER) $(LOGDIR) $(STATEDIR) $(RUNDIR) $(HTMLDIR) $(DBDIR) $(CGIDIR)
  
  	for p in build/server/*.tmpl; do    		              \
 -		$(INSTALL) -m 0644 "$$p" $(CONFDIR)/templates/ ; \
