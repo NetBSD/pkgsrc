@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/19 00:45:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/07/21 03:02:55 reed Exp $
 bin/audiocompose
 bin/audiosend
 bin/extcompose
@@ -25,9 +25,6 @@ bin/sun-audio-file
 bin/sun-message.csh
 bin/sun-to-mime
 bin/sun2mime
-lib/metamail/fonts/heb6x13.pcf
-lib/metamail/fonts/heb8x13.pcf
-lib/metamail/fonts/heb8x13B.pcf
 man/man1/audiocompose.1.gz
 man/man1/audiosend.1.gz
 man/man1/extcompose.1.gz

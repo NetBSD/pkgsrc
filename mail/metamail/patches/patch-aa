@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
-
 --- Makefile.orig	1994-01-26 11:32:33.000000000 -0600
-+++ Makefile
-@@ -20,13 +20,13 @@ RM = rm
++++ Makefile	2006-07-20 21:48:56.000000000 -0500
+@@ -20,13 +20,13 @@
  # RM = rm -f
  
  # How to run Make 
@@ -18,7 +16,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  
  # You may also want to change the CFLAGS variable, which will be passed on 
  # to all subdirectories.    If you do that, the changes will only work right if you
-@@ -38,7 +38,7 @@ FOOBAR-sun4=-Bstatic
+@@ -38,7 +38,7 @@
  
  STATICFLAG=FOOBAR${HOST_ARCH}
  
@@ -27,7 +25,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  # The following is better if you want to make sure you run with SYSV defined
  # CFLAGS = -g -I.  ${$(STATICFLAG)}  -DSYSV
  # Also, for SGI Irix, compile in K&R mode
-@@ -49,9 +49,12 @@ CFLAGS = -g -I.  ${$(STATICFLAG)} 
+@@ -49,9 +49,12 @@
  # LDLIBS variable.
  #
  # For Sun and BSD systems, the following should work...
@@ -42,7 +40,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  # On SGI machines, we need -lsun for getpw...(), and -lc_s saves some space.
  # LDLIBS = -lsun -lc_s
  # ISC SysVr3.2.2 has a shared C library and requires libinet.a to resolve
-@@ -72,10 +75,10 @@ CONFIGDIR = .
+@@ -72,18 +75,18 @@
  #	install -s -c $(LOCALBINDIR) $$file
  #
  #INSTALL = cp
@@ -55,7 +53,17 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  #
  # This is where binaries should be copied
  LOCALBINDIR = ${INSTROOT}/bin
-@@ -91,23 +94,27 @@ MAN4EXT = 4
+ 
+ # This is where man pages should be copied, and their extensions
+-MAN1DIR = ${INSTROOT}/man/man1
++MAN1DIR = ${INSTROOT}/${PKGMANDIR}/man1
+ MAN1EXT = 1
+-MAN4DIR = ${INSTROOT}/man/man4
++MAN4DIR = ${INSTROOT}/${PKGMANDIR}/man4
+ MAN4EXT = 4
+ 
+ # Sets the font suffix your version of X uses - snf for X11R4, pcf for X11R5
+@@ -91,23 +94,27 @@
  FONTSUFFIX=pcf
  
  # This is where the mailcap file should be put
@@ -90,7 +98,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  	-${RM} bin/mailto
  	(cd bin; ${LN} ../metamail/mailto mailto)
  	-${RM} bin/splitmail
-@@ -117,7 +124,7 @@ basics::
+@@ -117,7 +124,7 @@
  	(cd bin; ${LN} ../richmail/richtext richtext)
  	-${RM} bin/richtoatk
  	(cd bin; ${LN} ../richmail/richtoatk richtoatk)
@@ -99,7 +107,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  	-${RM} bin/shownonascii
  	(cd bin; ${LN} ../fonts/shownonascii shownonascii)
  	-${RM} bin/mailto-hebrew
-@@ -125,30 +132,39 @@ basics::
+@@ -125,30 +132,38 @@
  
  install-all: basics 
  	@(cd bin; 				\
@@ -117,7 +125,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
 -	    ${INSTALL} $$file $$target; 	\
 +	    ${BSD_INSTALL_SCRIPT} $$file $$target; 	\
  	done)
-+	${LN} -s mmencode ${LOCALBINDIR}/mimencode
++	${RM} -f ${LOCALBINDIR}/mimencode ; ${LN} -s mmencode ${LOCALBINDIR}/mimencode
  	@(cd man;				\
  	for file in *.1;			\
  	do 					\
@@ -126,7 +134,7 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
 -	    ${CP} $$file $$target; 		\
 +	    ${BSD_INSTALL_MAN} $$file $$target; 		\
  	done)
-+	${LN} -s mmencode.1 ${MAN1DIR}/mimencode.1
++	${RM} -f ${MAN1DIR}/mimencode.1 ; ${LN} -s mmencode.1 ${MAN1DIR}/mimencode.1
  	@(cd man;				\
  	for file in *.4;			\
  	do 					\
@@ -140,7 +148,6 @@ $NetBSD: patch-aa,v 1.10 2005/09/02 19:29:56 reed Exp $
  	@echo "installing file $(MAILCAPDIR)/mailcap"
 -	${CP} mailcap $(MAILCAPDIR)
 +	${BSD_INSTALL_DATA} mailcap $(MAILCAPDIR)
-+	(cd fonts ; $(MAKE) PREFIX=${PREFIX} CONFIGDIR=../${CONFIGDIR}  CFLAGS="${CFLAGS}" CC="${CC}"   LDLIBS="${LDLIBS}" FONTSUFFIX="${FONTSUFFIX}" install)
  
  uninstall-all:
  	@(cd bin; 				\

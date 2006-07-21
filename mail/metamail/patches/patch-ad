@@ -1,27 +1,28 @@
-$NetBSD: patch-ad,v 1.5 2004/06/17 20:56:56 minskim Exp $
-
 --- fonts/Makefile.orig	1993-05-31 15:49:27.000000000 -0500
-+++ fonts/Makefile
-@@ -28,12 +28,18 @@ heb8x13B.${FONTSUFFIX}: heb8x13B.bdf
++++ fonts/Makefile	2006-07-20 21:39:41.000000000 -0500
+@@ -10,7 +10,7 @@
+ #FONTSUFFIX=fb
+ #DIRBUILDER=bldfamily
+ 
+-all: shownonascii heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} heb8x13B.${FONTSUFFIX} mailto-hebrew
++all: shownonascii mailto-hebrew
+ 
+ heb6x13.${FONTSUFFIX}: heb6x13.bdf
+ #	convertfont -o heb6x13 heb6x13.bdf
+@@ -28,12 +28,12 @@
  	-${DIRBUILDER}
  
  shownonascii: Xshownonascii
 -	sed -e s@/u/nsb/lib/fonts@`pwd`@ < Xshownonascii > shownonascii
 -	chmod +x shownonascii
-+	${SED} -e s@/u/nsb/lib/fonts@${PREFIX}/lib/metamail/fonts@ < Xshownonascii > shownonascii
++	${SED} -e s@/u/nsb/lib/fonts@${PREFIX}/share/fonts@ < Xshownonascii > shownonascii
 +	${CHMOD} +x shownonascii
  
  mailto-hebrew: Xmailto-hebrew
 -	sed -e s@/u/nsb/lib/fonts@`pwd`@ < Xmailto-hebrew > mailto-hebrew
 -	chmod +x mailto-hebrew
-+	${SED} -e s@/u/nsb/lib/fonts@${PREFIX}/lib/metamail/fonts@ < Xmailto-hebrew > mailto-hebrew
++	${SED} -e s@/u/nsb/lib/fonts@${PREFIX}/share/fonts@ < Xmailto-hebrew > mailto-hebrew
 +	${CHMOD} +x mailto-hebrew
-+
-+install:
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/lib/metamail/fonts
-+	${BSD_INSTALL_DATA} heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} \
-+		heb8x13B.${FONTSUFFIX} fonts.alias ${PREFIX}/lib/metamail/fonts
-+	mkfontdir ${PREFIX}/lib/metamail/fonts
  
  clean:
  	rm -f heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} heb8x13B.${FONTSUFFIX}  shownonascii mailto-hebrew fonts.dir
