@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/28 00:26:26 rh Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/21 06:33:48 rillig Exp $
 #
 
 DISTNAME=	ObjectiveLib-0.9
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://objectivelib.sourceforge.net/
 COMMENT=	Object containers and generic algorithms for Objective-C
 
-USE_LANGUAGES=	objc
+USE_LANGUAGES=	c objc
 
 WRKSRC=		${WRKDIR}
 
