@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/18 17:06:39 reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/21 04:56:38 rillig Exp $
 #
 
 DISTNAME=		xproto-7.0.4
@@ -14,6 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		c
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/05/28 00:26:27 rh Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/21 04:51:11 rillig Exp $
 
 DISTNAME=	gnustep-gui-0.10.3
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep AppKit Implementation
 
-USE_LANGUAGES=	objc
+USE_LANGUAGES=	c objc
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--exec-prefix=${PREFIX:Q}/libexec/GNUstep

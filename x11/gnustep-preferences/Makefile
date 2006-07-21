@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/05/28 00:26:27 rh Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/21 04:57:27 rillig Exp $
 #
 
 DISTNAME=	Preferences-1.2.0
@@ -12,7 +12,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://prefsapp.sourceforge.net/
 COMMENT=	Application for setting preferences for the GNUstep system
 
-USE_LANGUAGES=	objc
+USE_LANGUAGES=	c objc
 
 NO_CONFIGURE=	YES
 USE_TOOLS+=	gmake
