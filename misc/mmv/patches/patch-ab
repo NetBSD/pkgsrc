@@ -1,8 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2005/11/10 18:10:36 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2006/07/21 16:16:40 minskim Exp $
 
 --- mmv.c.orig	1993-10-25 10:29:39.000000000 +0000
 +++ mmv.c
-@@ -123,10 +123,14 @@ extern unsigned _stklen = 10000;
+@@ -120,13 +120,17 @@ extern unsigned _stklen = 10000;
+ #else
+ /* for various flavors of UN*X */
+ 
++#include <stdlib.h>
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <sys/file.h>
@@ -12,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2005/11/10 18:10:36 joerg Exp $
 +#if !(defined(BSD) && BSD >= 199306)
  extern char *getenv();
  extern long lseek();
- extern char *malloc();
+-extern char *malloc();
 +#endif
  
  #ifdef HAS_DIRENT
