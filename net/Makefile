@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.627 2006/07/19 04:47:09 minskim Exp $
+# $NetBSD: Makefile,v 1.628 2006/07/21 14:27:53 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -487,6 +487,7 @@ SUBDIR+=	xnap
 SUBDIR+=	xorp
 SUBDIR+=	xrmftp
 SUBDIR+=	xtraceroute
+SUBDIR+=	wireshark
 SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
 SUBDIR+=	yaz

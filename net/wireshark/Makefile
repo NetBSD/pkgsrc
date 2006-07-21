@@ -1,29 +1,18 @@
-# $NetBSD: Makefile,v 1.133 2006/07/21 14:27:53 tron Exp $
+# $NetBSD: Makefile,v 1.1 2006/07/21 14:27:53 tron Exp $
 
-DISTNAME=		ethereal-0.99.0
+DISTNAME=		wireshark-0.99.2
 CATEGORIES=		net
-MASTER_SITES=		http://www.ethereal.com/distribution/ \
-			http://ethereal.planetmirror.com/distribution/ \
-			http://www.mirrors.wiretapped.net/security/packet-capture/ethereal/ \
-			http://netmirror.org/mirror/ftp.ethereal.com/ \
-			http://ethereal.secuwiz.com/distribution/ \
-			http://ethereal.0ni0n.org/distribution/ \
-			ftp://ftp.ethereal.com/pub/ethereal/ \
-			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
-			ftp://ftp.planetmirror.com/pub/ethereal/ \
-			ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
-			http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
-			http://ethereal.netarc.jp/distribution/ \
-			ftp://ftp.ethereal.com/pub/ethereal/old-versions/
+MASTER_SITES=		http://www.wireshark.org/download/src/ \
+			${MASTER_SITE_SOURCEFORGE:=wireshark/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		frueauf@NetBSD.org
-HOMEPAGE=		http://www.ethereal.com/
+MAINTAINER=		tron@NetBSD.org
+HOMEPAGE=		http://www.wireshark.org/
 COMMENT=		Network protocol analyzer
 
-CONFLICTS+=		wireshark-[0-9]*
+CONFLICTS+=		ethereal-[0-9]*
 
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		perl pkg-config
 
 USE_LIBTOOL=		YES
@@ -57,6 +46,7 @@ pre-build:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
