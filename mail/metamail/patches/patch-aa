@@ -1,5 +1,5 @@
 --- Makefile.orig	1994-01-26 11:32:33.000000000 -0600
-+++ Makefile	2006-07-20 21:48:56.000000000 -0500
++++ Makefile	2006-07-20 22:10:32.000000000 -0500
 @@ -20,13 +20,13 @@
  # RM = rm -f
  
@@ -143,7 +143,8 @@
 -	    ${CP} $$file $$target; 		\
 +	    ${BSD_INSTALL_MAN} $$file $$target; 		\
  	done)
- 	@echo "Renaming old mailcap file to $(MAILCAPDIR)/mailcap.old
+-	@echo "Renaming old mailcap file to $(MAILCAPDIR)/mailcap.old
++	@echo "Renaming old mailcap file to $(MAILCAPDIR)/mailcap.old"
  	-mv $(MAILCAPDIR)/mailcap $(MAILCAPDIR)/mailcap.old
  	@echo "installing file $(MAILCAPDIR)/mailcap"
 -	${CP} mailcap $(MAILCAPDIR)
