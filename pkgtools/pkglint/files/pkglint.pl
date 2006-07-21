@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.658 2006/07/21 05:02:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.659 2006/07/21 19:09:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6281,7 +6281,7 @@ sub checkfile_package_Makefile($$$) {
 		if ($languages_line->text =~ regex_varassign) {
 			my (undef, $op, $value, undef) = ($1, $2, $3, $4);
 
-			if ($value !~ qr"\bc\b") {
+			if ($value !~ qr"(?:^|\s+)c(?:\s+|$)") {
 				$pkgctx_vardef->{"GNU_CONFIGURE"}->log_warning("GNU_CONFIGURE almost always needs a C compiler, ...");
 				$languages_line->log_warning("... but \"c\" is not added to USE_LANGUAGES.");
 			}
