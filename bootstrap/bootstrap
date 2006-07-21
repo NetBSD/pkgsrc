@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.71 2006/07/20 19:28:42 jlam Exp $
+# $NetBSD: bootstrap,v 1.72 2006/07/21 15:16:39 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -43,9 +43,9 @@ ignoreusercheck=no
 preserve_path=no
 
 # where the building takes place
-wrkdir=work # default: relative to pkgsrc/bootstrap
 bootstrapdir=`pwd`
 pkgsrcdir=`dirname $bootstrapdir`
+wrkdir=$bootstrapdir/work
 
 usage="Usage: $0 "'
     [ --workdir <workdir> ]
