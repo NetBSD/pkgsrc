@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: munin-node.sh,v 1.2 2006/06/27 13:05:49 he Exp $
+# $NetBSD: munin-node.sh,v 1.3 2006/07/21 23:28:37 abs Exp $
 #
 # PROVIDE: munin-node
 # REQUIRE: DAEMON
@@ -20,7 +20,7 @@ name="munin_node"
 rcvar=$name
 command=@PREFIX@/sbin/munin-node
 command_interpreter=@PERL@
-required_files=@PKG_SYSCONFDIR@/munin/munin-node.conf
+required_files=@PKG_SYSCONFDIR@/munin-node.conf
 
 if [ ! -d @STATEDIR@ ]; then
 	mkdir @STATEDIR@

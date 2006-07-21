@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/21 23:28:37 abs Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -6,7 +6,7 @@ VER=		1.3.1
 PKGNAME=	munin-node-${VER}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
@@ -27,6 +27,8 @@ MUNIN_USER?=	munin
 
 PKG_GROUPS=	${MUNIN_GROUP}
 PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}::Munin\\ user
+PKG_SYSCONFSUBDIR?=	munin
+REPLACE_PERL+=	node/node.d/*.in
 
 STATEDIR?=	${VARBASE}/munin/plugin-state
 MUNIN_RUN?=	${VARBASE}/run/munin
@@ -51,6 +53,7 @@ INSTALL_TARGET=	install-node install-node-plugins
 BUILD_TARGET=	build
 
 #MAKE_ENV+=	PERL5_SITELIB=${PERL5_SITELIB}
+MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
 MAKE_ENV+=	PERL5=${PERL5:Q}
@@ -68,7 +71,7 @@ RCD_SCRIPTS+=	munin-node
 
 EGDIR=		${PREFIX}/share/examples/munin
 
-CONF_FILES+=	${EGDIR}/munin-node.conf ${PKG_SYSCONFDIR}/munin/munin-node.conf
+CONF_FILES+=	${EGDIR}/munin-node.conf ${PKG_SYSCONFDIR}/munin-node.conf
 
 
 pre-configure:
