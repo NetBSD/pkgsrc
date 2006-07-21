@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/28 00:26:26 rh Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/21 06:32:57 rillig Exp $
 #
 
 DISTNAME=	Renaissance-0.8.0
@@ -10,7 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.it/Renaissance/
 COMMENT=	Structured GNUstep user interface development framework
 
-USE_LANGUAGES=	objc
+USE_LANGUAGES=	c objc
 
 NO_CONFIGURE=	yes
 
