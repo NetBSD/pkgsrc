@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/07/21 14:27:53 tron Exp $
+
+--- epan/dissectors/packet-radiotap.c.orig	2006-07-17 20:59:28.000000000 +0100
++++ epan/dissectors/packet-radiotap.c	2006-07-21 13:36:03.000000000 +0100
+@@ -610,7 +610,7 @@
+     /* dissect the 802.11 header next */
+     call_dissector((rflags & IEEE80211_RADIOTAP_F_DATAPAD) ?
+ 	ieee80211_datapad_handle : ieee80211_handle,
+-	tvb_new_subset(tvb, length, -1, -1), pinfo, tree);
++	tvb_new_subset(tvb, offset + length, -1, -1), pinfo, tree);
+ }
+ 
+ void
