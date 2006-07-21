@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/07/20 23:05:43 perry Exp $
+# $NetBSD: Makefile,v 1.56 2006/07/21 06:03:49 wiz Exp $
 
 DISTNAME=	clisp-2.39
 CATEGORIES=	lang
@@ -51,6 +51,7 @@ pre-build:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
