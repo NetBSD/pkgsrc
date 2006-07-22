@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:30:31 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/22 06:52:13 rillig Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -10,17 +10,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Manipulate the default papersize in certain packages
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none
 NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-build
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	getpapersize setpapersize
-
 SUBST_SED.paths=	-e 's,@SH@,${SH},'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},'
@@ -34,10 +32,8 @@ SUBST_SED.paths+=	-e 's,@TR@,${TR},'
 SUBST_SED.paths+=	-e 's,@RM@,${RM},'
 SUBST_SED.paths+=	-e 's,@CHMOD@,${CHMOD},'
 
-do-build:
-	@for f in setpapersize getpapersize; do			\
-		${CP} ${FILESDIR}/$$f ${WRKSRC}/$$f;		\
-	done
+do-extract:
+	cd ${FILESDIR} && cp setpapersize getpapersize ${WRKSRC}/.
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/setpapersize ${PREFIX}/bin/setpapersize
