@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.660 2006/07/22 05:28:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.661 2006/07/22 06:47:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2476,6 +2476,22 @@ sub get_varname_to_toolname() {
 	return $load_tool_names_varname_to_toolname;
 }
 
+# Returns the set of tool variable names that may not be converted to
+# their "direct" form, that is: ${CP} => cp.
+sub get_required_vartool_varnames() {
+	use constant required_vartool_varnames => array_to_hash(qw(ECHO ECHO_N FALSE TEST TRUE));
+
+	return required_vartool_varnames;
+}
+
+# Returns the set of tools that must be used by their variable name.
+sub get_required_vartools() {
+	use constant required_vartools => array_to_hash(qw(echo false test true));
+
+	return required_vartools;
+}
+
+
 # Returns the set of user-defined variables that are added to BUILD_DEFS
 # within the bsd.pkg.mk file.
 sub get_system_build_defs() {
@@ -4145,17 +4161,6 @@ sub checkline_mk_shelltext($$) {
 		# and the symbol on the "input tape".
 		#
 
-		if (($state == SCST_START || $state == SCST_COND) && exists($vartools->{$shellword})) {
-			my $addition = "";
-
-			if (!exists(get_predefined_vartool_names()->{$shellword})) {
-				my $toolvarname = get_vartool_names->{$shellword};
-				my $toolname = get_varname_to_toolname->{$toolvarname};
-				$addition = " and add USE_TOOLS+=${toolname} before this line";
-			}
-			$line->log_warning("Direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
-		}
-
 		if ($state == SCST_START || $state == SCST_COND) {
 			my ($type);
 
@@ -4163,9 +4168,28 @@ sub checkline_mk_shelltext($$) {
 				$line->log_error("${shellword} is forbidden and must not be used.");
 
 			} elsif (exists(get_tool_names()->{$shellword})) {
+				# TODO: Check if the tool is mentioned in USE_TOOLS.
+
+				if (exists(get_required_vartools()->{$shellword})) {
+					$line->log_warning("Please use \"\${" . get_vartool_names()->{$shellword} . "}\" instead of \"${shellword}\".");
+				}
+
 				checkline_mk_shellcmd_use($line, $shellword);
 
-			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && (exists($vartools->{$1}) || (defined($type = get_variable_type($line, $1)) && $type->basic_type eq "ShellCommand"))) {
+			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && exists(get_varname_to_toolname()->{$1})) {
+				my ($vartool) = ($1);
+				my $plain_tool = get_varname_to_toolname()->{$vartool};
+
+				# TODO: Check if the tool is mentioned in USE_TOOLS.
+
+				if (!exists(get_required_vartool_varnames()->{$vartool})) {
+					$opt_warn_extra and $line->log_note("You can write \"${plain_tool}\" instead of \"${shellword}\".");
+					$opt_warn_extra and $line->explain_note(
+						"The wrapper framework from pkgsrc takes care that a sufficiently",
+						"capable implementation of that tool will be selected.");
+				}
+
+			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && defined($type = get_variable_type($line, $1)) && $type->basic_type eq "ShellCommand") {
 				checkline_mk_shellcmd_use($line, $shellword);
 
 			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|umask|unset|while)$") {
@@ -4190,7 +4214,7 @@ sub checkline_mk_shelltext($$) {
 
 				if ($semicolon || $multiline) {
 					$line->explain_warning(
-						"When you split a shell command into multiple lines that are continues",
+						"When you split a shell command into multiple lines that are continued",
 						"with a backslash, they will nevertheless be converted to a single line",
 						"before the shell sees them. That means that even if it _looks_ like that",
 						"the comment only spans one line in the Makefile, in fact it spans until",
