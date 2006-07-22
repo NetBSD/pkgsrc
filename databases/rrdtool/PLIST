@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/24 22:22:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/07/22 07:37:07 adam Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
@@ -34,6 +34,7 @@ share/doc/rrdtool-${PKGVERSION}/html/RRDp.html
 share/doc/rrdtool-${PKGVERSION}/html/RRDs.html
 share/doc/rrdtool-${PKGVERSION}/html/bin_dec_hex.html
 share/doc/rrdtool-${PKGVERSION}/html/cdeftutorial.html
+share/doc/rrdtool-${PKGVERSION}/html/index.html
 share/doc/rrdtool-${PKGVERSION}/html/rpntutorial.html
 share/doc/rrdtool-${PKGVERSION}/html/rrd-beginners.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdbuild.html
