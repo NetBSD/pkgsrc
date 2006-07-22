@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.8 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.9 2006/07/22 16:31:35 jlam Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -40,7 +40,7 @@ _BARRIER_CMDLINE_TARGETS+=	${_target_}
 ### target invokes a new make should be listed in _BARRIER_POST_TARGETS,
 ### and should be of the form:
 ###
-###	.if !exists(${_COOKIE.barrier})
+###	.if !defined(_PKGSRC_BARRIER)
 ###	foo: barrier
 ###	.else
 ###	foo: foo's real source dependencies
@@ -52,11 +52,11 @@ _BARRIER_CMDLINE_TARGETS+=	${_target_}
 
 .PHONY: barrier
 barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
-.if !exists(${_COOKIE.barrier})
+.if !defined(_PKGSRC_BARRIER)
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} ${MAKEFLAGS} ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS}
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Leaving \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
