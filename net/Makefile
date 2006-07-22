@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.628 2006/07/21 14:27:53 tron Exp $
+# $NetBSD: Makefile,v 1.629 2006/07/22 08:12:56 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -87,7 +87,6 @@ SUBDIR+=	ed2k-gtk-gui
 SUBDIR+=	edonkey2k
 SUBDIR+=	entropy
 SUBDIR+=	etherape
-SUBDIR+=	ethereal
 SUBDIR+=	ettercap
 SUBDIR+=	ettercap-NG
 SUBDIR+=	ez-ipupdate
