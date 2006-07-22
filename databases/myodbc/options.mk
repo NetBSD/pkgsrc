@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/01/23 18:53:45 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2006/07/22 04:46:14 rillig Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.myodbc
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS=	myodbc-iodbc
 .if !empty(PKG_OPTIONS:Mmyodbc-gui)
 .  include "../../x11/qt3-tools/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gui
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 PLIST_SUBST+=		WITH_GUI=
 .else
 CONFIGURE_ARGS+=	--disable-gui

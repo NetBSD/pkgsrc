@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2006/07/05 05:37:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21 2006/07/22 04:46:17 rillig Exp $
 #
 
 DISTNAME=	totem-1.4.2
@@ -18,7 +18,7 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	totem-plparser.pc.in
 
