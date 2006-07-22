@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/03 18:12:37 abs Exp $
+$NetBSD: distinfo,v 1.2 2006/07/22 19:43:55 abs Exp $
 
-SHA1 (apache-tomcat-5.5.14.tar.gz) = 669b096e67169b66cc4a3818532f5a575d06c6b5
-RMD160 (apache-tomcat-5.5.14.tar.gz) = 6979b10d3420d66222cc826b9934e3a45d24daf7
-Size (apache-tomcat-5.5.14.tar.gz) = 5965614 bytes
+SHA1 (apache-tomcat-5.5.17.tar.gz) = 5289b2e6302bb0ed792f45d730c13b3868368a7f
+RMD160 (apache-tomcat-5.5.17.tar.gz) = cf7520bc17d851c48d49fb14458bead97eb9a44b
+Size (apache-tomcat-5.5.17.tar.gz) = 5994530 bytes

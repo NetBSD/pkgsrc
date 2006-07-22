@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/03 18:12:37 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/22 19:43:55 abs Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -57,11 +57,11 @@ tomcat/server/webapps/host-manager/WEB-INF/lib/catalina-host-manager.jar
 tomcat/server/webapps/host-manager/WEB-INF/web.xml
 tomcat/server/webapps/host-manager/host-manager.xml
 tomcat/server/webapps/host-manager/images/add.gif
+tomcat/server/webapps/host-manager/images/asf-logo.gif
 tomcat/server/webapps/host-manager/images/code.gif
 tomcat/server/webapps/host-manager/images/design.gif
 tomcat/server/webapps/host-manager/images/docs.gif
 tomcat/server/webapps/host-manager/images/fix.gif
-tomcat/server/webapps/host-manager/images/jakarta-logo.gif
 tomcat/server/webapps/host-manager/images/tomcat.gif
 tomcat/server/webapps/host-manager/images/update.gif
 tomcat/server/webapps/host-manager/images/void.gif
@@ -71,11 +71,11 @@ tomcat/server/webapps/manager/WEB-INF/lib/commons-fileupload-1.0.jar
 tomcat/server/webapps/manager/WEB-INF/web.xml
 tomcat/server/webapps/manager/html-manager-howto.html
 tomcat/server/webapps/manager/images/add.gif
+tomcat/server/webapps/manager/images/asf-logo.gif
 tomcat/server/webapps/manager/images/code.gif
 tomcat/server/webapps/manager/images/design.gif
 tomcat/server/webapps/manager/images/docs.gif
 tomcat/server/webapps/manager/images/fix.gif
-tomcat/server/webapps/manager/images/jakarta-logo.gif
 tomcat/server/webapps/manager/images/tomcat.gif
 tomcat/server/webapps/manager/images/update.gif
 tomcat/server/webapps/manager/images/void.gif
@@ -93,9 +93,9 @@ tomcat/webapps/ROOT/RELEASE-NOTES.txt
 tomcat/webapps/ROOT/WEB-INF/lib/catalina-root.jar
 tomcat/webapps/ROOT/WEB-INF/web.xml
 tomcat/webapps/ROOT/admin/index.html
+tomcat/webapps/ROOT/asf-logo-wide.gif
 tomcat/webapps/ROOT/favicon.ico
 tomcat/webapps/ROOT/index.jsp
-tomcat/webapps/ROOT/jakarta-banner.gif
 tomcat/webapps/ROOT/tomcat-power.gif
 tomcat/webapps/ROOT/tomcat.gif
 tomcat/webapps/balancer/META-INF/context.xml
@@ -540,11 +540,11 @@ tomcat/webapps/tomcat-docs/deployer-howto.html
 tomcat/webapps/tomcat-docs/developers.html
 tomcat/webapps/tomcat-docs/html-manager-howto.html
 tomcat/webapps/tomcat-docs/images/add.gif
+tomcat/webapps/tomcat-docs/images/asf-logo.gif
 tomcat/webapps/tomcat-docs/images/code.gif
 tomcat/webapps/tomcat-docs/images/design.gif
 tomcat/webapps/tomcat-docs/images/docs.gif
 tomcat/webapps/tomcat-docs/images/fix.gif
-tomcat/webapps/tomcat-docs/images/jakarta-logo.gif
 tomcat/webapps/tomcat-docs/images/printer.gif
 tomcat/webapps/tomcat-docs/images/tomcat.gif
 tomcat/webapps/tomcat-docs/images/update.gif
