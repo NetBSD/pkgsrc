@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/26 16:25:58 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/22 00:45:10 minskim Exp $
 #
 
 DISTNAME=	cuetools-1.2
@@ -12,7 +12,7 @@ COMMENT=	Set of utilities to manipulate cue and toc files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake yacc
+USE_TOOLS+=	flex gmake yacc
 
 INSTALLATION_DIRS=	bin man/man1
 
