@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:11 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/22 09:25:54 wiz Exp $
 
---- src/Makefile.in.orig	Wed Mar 15 11:03:39 2000
-+++ src/Makefile.in	Fri Mar 17 15:13:31 2000
-@@ -15,11 +15,12 @@
+--- src/Makefile.in.orig	2005-09-30 03:29:32.000000000 +0000
++++ src/Makefile.in
+@@ -15,11 +15,12 @@ VPATH=$(srcdir)
  
  INSTALL=@INSTALL@
  INSTALL_PROGRAM=@INSTALL_PROGRAM@
@@ -16,19 +16,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:11 wiz Exp $
  
  MANS=		$(srcdir)/../man/kall.1 $(srcdir)/../man/rem.1 \
  		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
-@@ -49,11 +50,12 @@
- 	@CC@ @LDFLAGS@ -o remind $(REMINDOBJS) @LIBS@
+@@ -50,9 +51,12 @@ remind: $(REMINDOBJS)
  
  install: all
+ 	-mkdir -p $(DESTDIR)$(bindir) || true
 -	for prog in $(PROGS) $(SCRIPTS) ; do \
 +	for prog in $(PROGS) ; do \
- 		$(INSTALL_PROGRAM) $$prog $(bindir) ; \
+ 		$(INSTALL_PROGRAM) $$prog $(DESTDIR)$(bindir) || exit 1; \
  	done
--	-strip $(bindir)/remind
--	-strip $(bindir)/rem2ps
 +	for prog in $(SCRIPTS) ; do \
-+		$(INSTALL_SCRIPT) $$prog $(bindir) ; \
++		$(INSTALL_SCRIPT) $$prog $(DESTDIR)$(bindir) || exit 1; \
 +	done
- 	for man in $(MANS) ; do  \
- 		$(INSTALL_DATA) $$man $(mandir)/man1 ; \
- 	done
+ 	-strip $(DESTDIR)$(bindir)/remind || true
+ 	-strip $(DESTDIR)$(bindir)/rem2ps || true
+ 	-mkdir -p $(DESTDIR)$(mandir)/man1 || true
