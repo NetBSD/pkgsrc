@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.789 2006/07/22 09:26:27 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.790 2006/07/22 10:16:46 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/rrdtool to 1.2.15 [adam 2006-07-22]
 	Removed net/ethereal [tron 2006-07-22]
 	Updated time/remind to 3.0.24 [wiz 2006-07-22]
+	Updated chat/ircII to 20060721 [mrg 2006-07-22]
