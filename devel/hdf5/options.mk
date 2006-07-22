@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/01/04 06:05:44 recht Exp $
+# $NetBSD: options.mk,v 1.3 2006/07/22 04:46:15 rillig Exp $
 
 PKG_OPTIONS_VAR=PKG_OPTIONS.hdf5
 PKG_SUPPORTED_OPTIONS=	szip cxx threads
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--with-szlib
 .endif
 
 .if !empty(PKG_OPTIONS:Mcxx)
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-cxx
 PLIST_SUBST+=		CXX=
 .else
