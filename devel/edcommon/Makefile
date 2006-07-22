@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/21 06:31:51 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/22 05:10:54 rillig Exp $
 #
 
 DISTNAME=	edcommon-32-s
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mulle-kybernetik.com/software/EDFrameworks/Downloads/
 COMMENT=	Foundation and AppKit extensions
 
-USE_LANGUAGES=	c objc
+USE_LANGUAGES=	objc
 
 WRKSRC=		${WRKDIR}/ed/EDCommon
 

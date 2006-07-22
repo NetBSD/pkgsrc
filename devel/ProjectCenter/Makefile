@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/07/21 06:33:20 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/07/22 05:10:54 rillig Exp $
 
 DISTNAME=	ProjectCenter-0.4.3
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/experience/ProjectCenter.html
 COMMENT=	GNUstep Integrated Development Environment
 
-USE_LANGUAGES=	c objc
+USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
 

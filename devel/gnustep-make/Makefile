@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/05/28 00:26:26 rh Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/22 05:10:54 rillig Exp $
 
 DISTNAME=	gnustep-make-1.12.0
 CATEGORIES=	devel gnustep
@@ -10,7 +10,7 @@ COMMENT=	GNUstep makefile package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=	c objc
+USE_LANGUAGES=	objc
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}

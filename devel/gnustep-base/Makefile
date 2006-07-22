@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/05/28 00:26:26 rh Exp $
+# $NetBSD: Makefile,v 1.34 2006/07/22 05:10:54 rillig Exp $
 
 DISTNAME=	gnustep-base-1.12.0
 CATEGORIES=	devel gnustep
@@ -8,7 +8,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep foundation classes
 
-USE_LANGUAGES=	c objc
+USE_LANGUAGES=	objc
 
 PTHREAD_LIBS=		-lpthread
 
