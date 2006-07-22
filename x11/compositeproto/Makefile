@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/18 17:31:47 reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/22 04:46:19 rillig Exp $
 #
 
 DISTNAME=		compositeproto-0.3
@@ -13,7 +13,7 @@ CONFLICTS+=		compositeext-[0-9]*
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/compositeproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		# none, not even C
 
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"

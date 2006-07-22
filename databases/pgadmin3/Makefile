@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/17 13:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/22 04:46:15 rillig Exp $
 
 DISTNAME=	pgadmin3-1.4.2
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
 COMMENT=	GUI administration tool for PostgreSQL RDBMS
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:53 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/22 04:46:16 rillig Exp $
 #
 
 DISTNAME=	bbmail-0.8.3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	Mailbox monitor (not only) for the blackbox windowmanager
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin man/man1
 

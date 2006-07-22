@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/21 13:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/22 04:46:14 rillig Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 COMMENT=		MySQL Control Center
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		automake
 GNU_CONFIGURE=		YES

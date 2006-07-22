@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2006/06/13 16:00:39 ghen Exp $
+# $NetBSD: Makefile.common,v 1.32 2006/07/22 04:46:18 rillig Exp $
 
 DISTNAME=		bacula-1.38.10
 CATEGORIES=		sysutils
@@ -8,7 +8,7 @@ MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
 COMMENT?=		The Network Backup Solution
 
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

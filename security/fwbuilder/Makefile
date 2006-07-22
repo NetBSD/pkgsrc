@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/13 17:37:34 bad Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/22 04:46:18 rillig Exp $
 
 DISTNAME=	fwbuilder-2.0.12
 CATEGORIES=	security net
@@ -11,7 +11,7 @@ COMMENT=	Firewall Builder GUI
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 UNLIMIT_RESOURCES+=	datasize
 
 QMAKE=		${QTDIR}/bin/qmake

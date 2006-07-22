@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/22 04:46:15 rillig Exp $
 #
 
 DISTNAME=	anise-beta10-20040307-linux
@@ -14,7 +14,7 @@ COMMENT=	Adventure game scripting engine
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

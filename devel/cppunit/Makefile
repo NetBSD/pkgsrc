@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/05 21:32:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/22 04:46:15 rillig Exp $
 #
 
 DISTNAME=	cppunit-1.10.2
@@ -13,7 +13,7 @@ COMMENT=	CppUnit is a C++ unit testing framework
 BUILD_DEPENDS+=	doxygen>=1.4.7:../../devel/doxygen
 
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
