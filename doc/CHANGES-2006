@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.785 2006/07/21 19:54:04 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.786 2006/07/22 00:38:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3479,3 +3479,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/botan to 1.4.11nb1 [wiz 2006-07-21]
 	Updated devel/SDL-intro-en to 1.0nb1 [minskim 2006-07-21]
 	Added devel/SDL-intro-ko version 1.0 [minskim 2006-07-21]
+	Updated lang/python15 to 1.5.2nb5 [minskim 2006-07-22]
