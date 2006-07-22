@@ -1,43 +1,12 @@
-# $NetBSD: Makefile,v 1.37 2006/06/08 12:15:12 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2006/07/22 19:41:34 abs Exp $
 
 DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
-PKGNAME=	ap13-jk-${JK_VERSION}
-JK_VERSION=	1.2.15
-CATEGORIES=	www java
-MASTER_SITES=	http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/jk-${JK_VERSION}/
+PKGNAME=	ap-jk-${JK_VERSION}
+PKGREVISION=	1
 
-MAINTAINER=	erh@NetBSD.org
-HOMEPAGE=	http://jakarta.apache.org/tomcat/connectors-doc/
-COMMENT=	Apache connector for accessing Jakarta Tomcat
+MAKE_PARAMS+=		USE_APXS=1
+MAKE_PARAMS+=		WITH_APXS=${APXS}
 
-CONFLICTS=	ap-jk-[0-9]*
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/jk/native
-APACHE_MODULE=	YES
-BUILD_DEFS+=	JK_ENABLE_JNI
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
-
-SUBST_CLASSES+=		jk-lt
-SUBST_STAGE.jk-lt=	post-configure
-SUBST_FILES.jk-lt=	Makefile common/Makefile apache-2.0/Makefile
-SUBST_SED.jk-lt=	-e "s|^\(LIBTOOL =\) [^ ]*$$|\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
-SUBST_MESSAGE.jk-lt=	Fixing libtool references.
-
-# XXX The standard --with-apxs2 when using apache2 doesn't work
-CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
-
-.if defined(JK_ENABLE_JNI)
-USE_JAVA=	yes
-CONFIGURE_ARGS+=	--enable-jni
-CONFIGURE_ARGS+=	--with-java-home=${JAVA_HOME:Q}
-SUBST_FILES.jk-lt+=	jni/Makefile
-.endif
-
-.include "../../mk/apache.mk"
-.if defined(JK_ENABLE_JNI)
-.include "../../mk/java-vm.mk"
-.endif
+.include "../../www/ap-jk/Makefile.common"
+.include "../../www/apache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
