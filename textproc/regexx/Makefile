@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/06 15:12:39 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/22 04:46:18 rillig Exp $
 #
 
 DISTNAME=		regexx-0.98.1
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bazar.conectiva.com.br/~niemeyer/projects/regexx/
 COMMENT=		C++ regular expression library
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

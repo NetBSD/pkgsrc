@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/05/07 01:47:00 chap Exp $
+# $NetBSD: Makefile,v 1.36 2006/07/22 04:46:18 rillig Exp $
 
 DISTNAME=	xpp-1.5
 CATEGORIES=	print x11
@@ -10,7 +10,7 @@ COMMENT=	X Printing Panel
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 DOCDIR=		${PREFIX}/share/doc/xpp
 
