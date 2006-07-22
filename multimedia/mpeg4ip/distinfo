@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/06/16 07:19:39 rillig Exp $
+$NetBSD: distinfo,v 1.7 2006/07/22 19:27:41 xtraeme Exp $
 
 SHA1 (mpeg4ip-1.5.tar.gz) = 32b5c1220fffa386da3efb50bde936990e0a472b
 RMD160 (mpeg4ip-1.5.tar.gz) = 98823860a4c3f2d49299f920661f1bd2b08a0673
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 9e4683fdbbfa3b85941243547773814ea50125a9
 SHA1 (patch-ad) = e5dd062d7f17230bf27ffde0fc2db72d8357fd56
 SHA1 (patch-ae) = 0418c4fa0fd966b3d5303d4f95a300d94fc48111
 SHA1 (patch-af) = a69e136fbe8db5ae844c90ae5e2f06e86bf2ed85
+SHA1 (patch-ag) = 76ec743b051ef39e4edb211a15a2accbf491d0b1
