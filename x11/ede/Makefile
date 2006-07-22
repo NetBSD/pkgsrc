@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/11 13:31:31 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/22 04:46:19 rillig Exp $
 #
 
 DISTNAME=	ede-1.0.4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://ede.sourceforge.net/
 COMMENT=	Equinox Desktop Environment
 
 WRKSRC=			${WRKDIR}/ede
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes

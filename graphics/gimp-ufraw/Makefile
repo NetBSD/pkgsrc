@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/11 00:46:50 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2006/07/22 04:46:16 rillig Exp $
 
 DISTNAME=		ufraw-0.8.1
 PKGNAME=		gimp-${DISTNAME}
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		perl:run pod2man
 USE_DIRS+=		xdg-1.1
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 # This package uses too much C99 code to be patched.
 GCC_REQD+=		3.0

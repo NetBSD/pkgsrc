@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:54 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/22 04:46:19 rillig Exp $
 #
 
 DISTNAME=	bbpager-0.3.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml
 COMMENT=	Pager for the blackbox window manager
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 .include "../../mk/x11.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/07/05 05:37:40 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/07/22 04:46:15 rillig Exp $
 
 DISTNAME=	dasher-4.0.2
 CATEGORIES=	editors gnome
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
 
 USE_DIRS+=		gnome2-1.5
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes

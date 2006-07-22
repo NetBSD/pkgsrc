@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/14 22:48:45 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/22 04:46:14 rillig Exp $
 #
 
 DISTNAME=	konversation-0.19
@@ -14,7 +14,7 @@ COMMENT=	KDE IRC Client
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake perl msgfmt
-USE_LANGUAGES+=	c++
+USE_LANGUAGES=	c c++
 LANGS=		da en es et st it nl pt sv
 
 USE_PKGLOCALEDIR=	YES

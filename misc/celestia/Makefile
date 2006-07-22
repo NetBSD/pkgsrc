@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/17 13:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/22 04:46:16 rillig Exp $
 
 DISTNAME=	celestia-1.4.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Free real-time 3D space simulator
 DISTINFO_FILE=	${.CURDIR}/../../misc/celestia/distinfo
 PATCHDIR=	${.CURDIR}/../../misc/celestia/patches
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config

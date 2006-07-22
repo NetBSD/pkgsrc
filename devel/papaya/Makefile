@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/31 05:37:09 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/22 04:46:15 rillig Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -13,7 +13,7 @@ COMMENT=	Simple scripts for software development
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none, not even C
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	gzip_command=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=	sh_command=${TOOLS_SH:Q}

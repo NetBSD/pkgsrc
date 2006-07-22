@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/05/15 19:25:47 ghen Exp $
+# $NetBSD: Makefile,v 1.37 2006/07/22 04:46:16 rillig Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -27,7 +27,7 @@ WRKSRC=                 ${WRKDIR}/plt/src
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 
 DRSCHEME_VERSION=	209
 

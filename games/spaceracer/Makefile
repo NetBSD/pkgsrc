@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/22 04:46:15 rillig Exp $
 #
 
 DISTNAME=		spaceracer-0.2.4
@@ -11,7 +11,7 @@ MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://spaceracer.sourceforge.net/
 COMMENT=		3D car racing game
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		automake autoconf

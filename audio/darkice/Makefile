@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/21 10:27:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/22 04:46:13 rillig Exp $
 #
 
 DISTNAME=	darkice-0.17.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://darkice.sourceforge.net/
 COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}

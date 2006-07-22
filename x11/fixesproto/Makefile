@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/11 12:51:34 abs Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/22 04:46:19 rillig Exp $
 #
 
 DISTNAME=		fixesproto-3.0.2
@@ -16,7 +16,7 @@ CONFLICTS+=		fixesext-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/fixesproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		# none, not even C
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/18 17:27:30 reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/22 04:46:19 rillig Exp $
 #
 
 DISTNAME=		randrproto-1.1.2
@@ -15,6 +15,6 @@ CONFLICTS+=		randrext-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/randrproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		# none, not even C
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/22 04:46:15 rillig Exp $
 #
 
 DISTNAME=	plib-1.6.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://plib.sourceforge.net/
 COMMENT=	Libraries for writing portable games/realtime interactive apps
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 CPPFLAGS+=	-Dunix=1
 
 .include "../../graphics/Mesa/buildlink3.mk"

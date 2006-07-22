@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/02 18:30:14 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/22 04:46:17 rillig Exp $
 
 DISTNAME=	colortail-0.3.0
 CATEGORIES=	misc
@@ -8,7 +8,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://morrdusk.net/projects/colortail/
 COMMENT=	Colour-able replacement for tail(1)
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share/examples/colortail

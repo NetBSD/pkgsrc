@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/09 15:24:09 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/22 04:46:14 rillig Exp $
 #
 
 DISTNAME=	sidplay-libs-2.1.1
@@ -14,7 +14,7 @@ COMMENT=	Sidplay2 Library
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX:Q}/include/libsidplay2
 

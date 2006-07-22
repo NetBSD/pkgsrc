@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/07/22 04:46:17 rillig Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
@@ -13,7 +13,7 @@ DEPENDS+=	${DISTNAME}nb2:../../multimedia/mkvtoolnix
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	src/mmg/mmg
 

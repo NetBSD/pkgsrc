@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/05 19:47:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/22 04:46:16 rillig Exp $
 #
 
 DISTNAME=	wxsvg-1.0b6
@@ -11,7 +11,7 @@ HOMEPAGE=	http://wxsvg.sourceforge.net/
 COMMENT=	C++ library to create, manipulate and render SVG files
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 

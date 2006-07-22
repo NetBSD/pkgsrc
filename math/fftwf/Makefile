@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/04 21:30:03 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/22 04:46:16 rillig Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0.1-fma
@@ -27,7 +27,7 @@ DEPENDS+=		fftw>=3.0.1:../../math/fftw
 #CONFIGURE_ARGS+=	--enable-sse
 CONFIGURE_ARGS+=	--with-our-malloc16
 .endif
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 USE_TOOLS+=		gmake
 
 TEST_TARGET=		check
