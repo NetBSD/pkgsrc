@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5234 2006/07/22 09:08:31 wiz Exp $
+$NetBSD: TODO,v 1.5235 2006/07/22 09:26:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1040,7 +1040,6 @@ Suggested package updates
 	o rc-1.7.1
 	o rdp-1.6
 	o regionset-0.2
-	o remind-3.00.24
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rhythmbox-0.9.5
