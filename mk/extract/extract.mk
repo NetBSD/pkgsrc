@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.12 2006/07/21 14:21:28 jlam Exp $
+# $NetBSD: extract.mk,v 1.13 2006/07/22 16:31:35 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -53,7 +53,7 @@ _EXTRACT_TARGETS+=	release-extract-lock
 .  if exists(${_COOKIE.extract})
 extract:
 	@${DO_NADA}
-.  elif exists(${_COOKIE.barrier})
+.  elif defined(_PKGSRC_BARRIER)
 extract: ${_EXTRACT_TARGETS}
 .  else
 extract: barrier

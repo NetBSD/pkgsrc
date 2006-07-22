@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.4 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: build.mk,v 1.5 2006/07/22 16:31:35 jlam Exp $
 #
 # BUILD_MAKE_FLAGS is the list of arguments that is passed to the make
 #	process.
@@ -26,7 +26,7 @@ _BUILD_TARGETS+=	pkginstall
 .  if exists(${_COOKIE.build})
 build:
 	@${DO_NADA}
-.  elif exists(${_COOKIE.barrier})
+.  elif defined(_PKGSRC_BARRIER)
 build: ${_BUILD_TARGETS}
 .  else
 build: barrier
