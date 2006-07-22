@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.787 2006/07/22 07:38:31 adam Exp $
+$NetBSD: CHANGES-2006,v 1.788 2006/07/22 08:14:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3481,3 +3481,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/SDL-intro-ko version 1.0 [minskim 2006-07-21]
 	Updated lang/python15 to 1.5.2nb5 [minskim 2006-07-22]
 	Updated databases/rrdtool to 1.2.15 [adam 2006-07-22]
+	Removed net/ethereal [tron 2006-07-22]
