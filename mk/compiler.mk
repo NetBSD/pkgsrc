@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.53 2006/07/20 16:44:01 rillig Exp $
+# $NetBSD: compiler.mk,v 1.54 2006/07/22 05:01:17 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -50,7 +50,7 @@
 #	Lists the languages used in the source code of the package,
 #	and is used to determine the correct compilers to install.
 #	Valid values are: c, c++, fortran, java, objc.  The default
-#	is "c" ("c" is actually _always_ implicitly in this list).
+#	is "c".
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
@@ -167,7 +167,7 @@ fail-wrapper: .USE
 	${ECHO} 'exit 1'
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 
-.if empty(USE_LANGUAGES:Mc)
+.if empty(USE_LANGUAGES:Mc) && empty(USE_LANGUAGES:Mobjc)
 PKG_CC:=		${_FAIL_WRAPPER.CC}
 ALL_ENV+=		CPP=${CPP:Q}
 override-tools: ${_FAIL_WRAPPER.CC}
