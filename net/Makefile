@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2006/06/30 16:17:27 tron Exp $
+# $NetBSD: Makefile,v 1.623.2.1 2006/07/22 16:14:33 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -85,7 +85,6 @@ SUBDIR+=	ed2k-gtk-gui
 SUBDIR+=	edonkey2k
 SUBDIR+=	entropy
 SUBDIR+=	etherape
-SUBDIR+=	ethereal
 SUBDIR+=	ettercap
 SUBDIR+=	ettercap-NG
 SUBDIR+=	ez-ipupdate
@@ -483,6 +482,7 @@ SUBDIR+=	xnap
 SUBDIR+=	xorp
 SUBDIR+=	xrmftp
 SUBDIR+=	xtraceroute
+SUBDIR+=	wireshark
 SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
 SUBDIR+=	yaz
