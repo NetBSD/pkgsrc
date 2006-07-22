@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2006/07/22 02:24:18 markd Exp $
+
+--- malsync/mal/client/unix/MAL31DBConfig.c.orig	Sat Feb  9 20:15:48 2002
++++ malsync/mal/client/unix/MAL31DBConfig.c
+@@ -20,11 +20,7 @@
+  */
+ 
+ #include <MAL31DBConfig.h>
+-#ifdef DARWIN
+ #include <stdlib.h>
+-#else
+-#include <malloc.h>
+-#endif
+ 
+ /*---------------------------------------------------------------------------*/
+ void
