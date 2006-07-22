@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.13 2006/07/20 14:17:48 jlam Exp $
+# $NetBSD: install.mk,v 1.14 2006/07/22 16:31:35 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -17,7 +17,7 @@ _INSTALL_TARGETS+=	release-install-lock
 .  if exists(${_COOKIE.install})
 install:
 	@${DO_NADA}
-.  elif exists(${_COOKIE.barrier})
+.  elif defined(_PKGSRC_BARRIER)
 install: ${_INSTALL_TARGETS}
 .  else
 install: barrier
