@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.792 2006/07/22 17:28:05 rpaulo Exp $
+$NetBSD: CHANGES-2006,v 1.793 2006/07/22 19:03:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3486,3 +3486,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/ircII to 20060721 [mrg 2006-07-22]
 	Updated x11/x11vnc to 0.8.2 [salo 2006-07-22]
 	Updated mail/wl to 2.14.0nb2 [rpaulo 2006-07-22]
+	Updated devel/monotone to 0.28 [jmmv 2006-07-22]
+	Updated devel/monotone-server to 0.28 [jmmv 2006-07-22]
