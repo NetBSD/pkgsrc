@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/05 00:08:57 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/22 12:19:47 salo Exp $
 bin/x11vnc
 man/man1/x11vnc.1
 share/x11vnc/classes/VncViewer.jar
 share/x11vnc/classes/index.vnc
+share/x11vnc/classes/ssl/README
+share/x11vnc/classes/ssl/SignedVncViewer.jar
+share/x11vnc/classes/ssl/VncViewer.jar
+share/x11vnc/classes/ssl/index.vnc
+share/x11vnc/classes/ssl/proxy.vnc
+share/x11vnc/classes/ssl/ssl_vncviewer
+@dirrm share/x11vnc/classes/ssl
 @dirrm share/x11vnc/classes
 @dirrm share/x11vnc
