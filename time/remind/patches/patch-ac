@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2004/11/24 23:04:41 kim Exp $
+$NetBSD: patch-ac,v 1.3 2006/07/22 09:25:54 wiz Exp $
 
---- src/files.c.orig	2000-02-17 22:45:54.000000000 -0500
-+++ src/files.c	2004-11-24 18:01:56.000000000 -0500
-@@ -19,6 +19,7 @@
+--- src/files.c.orig	2005-09-30 03:29:32.000000000 +0000
++++ src/files.c
+@@ -19,6 +19,7 @@ static char const RCSID[] = "$Id: files.
  
  #include <string.h>
  #include <ctype.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.2 2004/11/24 23:04:41 kim Exp $
  #include <sys/stat.h>
  
  #ifdef TM_IN_SYS_TIME
-@@ -421,16 +422,27 @@
+@@ -365,16 +366,27 @@ int DoInclude(ParsePtr p)
  {     
      DynamicBuffer buf;
      int r, e;
