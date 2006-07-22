@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/06/19 16:48:49 minskim Exp $
+$NetBSD: distinfo,v 1.5 2006/07/22 02:24:18 markd Exp $
 
 SHA1 (libmal-0.40.tar.gz) = fcce27b320215e32de70e0c4a1fc7a553d486611
 RMD160 (libmal-0.40.tar.gz) = 8d3833f64df5b631a5fb0801c4bc432a4f27bd4f
@@ -6,3 +6,4 @@ Size (libmal-0.40.tar.gz) = 329928 bytes
 SHA1 (patch-aa) = 6a5426aad935fb736044a92da6f56e21e2915824
 SHA1 (patch-ab) = 054e5062519cc982f5e9caee4904a20a8510e1e7
 SHA1 (patch-ac) = 2d2a8f940f65888b01e6885f5c482a18810c0804
+SHA1 (patch-ad) = 8b818f926662b4a2a4d3f1fc709d6595b2472562
