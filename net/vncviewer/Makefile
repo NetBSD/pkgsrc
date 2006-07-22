@@ -1,31 +1,36 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:32 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/22 19:21:11 abs Exp $
 
-DISTNAME=       	vnc-3.3.3r2_unixsrc
-PKGNAME=		vncviewer-3.3.3.2
-PKGREVISION=		3
+DISTNAME=       	vnc-4_1_2-unixsrc
+PKGNAME=		vncviewer-4.1.2
 CATEGORIES=		net x11
-MASTER_SITES=   	http://www.uk.research.att.com/archive/vnc/dist/
-EXTRACT_SUFX=		.tgz
+MASTER_SITES=   	http://www.realvnc.com/dist/
 
-PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		vnc-3.3.3r2-v6-20010421.diff.gz
-PATCH_DIST_STRIP=	-p1
-
-MAINTAINER=	 	abs@NetBSD.org
-HOMEPAGE=		http://www.uk.research.att.com/vnc/
+MAINTAINER=	 	riz@NetBSD.org
+HOMEPAGE=		http://www.realvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 
-WRKSRC=			${WRKDIR}/vnc_unixsrc
+WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
-USE_IMAKE=		yes
-BUILD_DEFS+=		USE_INET6
+USE_LANGUAGES=		c c++
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-installed-zlib
 
-INSTALLATION_DIRS=	bin
+# The distfile listed above is bogus, there is no direct link to download the
+# file, so a special command must be used.  I lifted this from FreeBSD Ports.
+DISTURL=http://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.2&filetype=tar_gz&haveDetails=1
+pre-fetch:
+	${TEST} -f ${DISTDIR}/${DISTNAME}.tar.gz || \
+	 (cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}.tar.gz ${DISTURL:Q})
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vncviewer
-	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer
+	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man \
+		${PREFIX}/man/man1/vncviewer.1
+	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
+	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
+		${PREFIX}/man/man1/vncpasswd.1
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

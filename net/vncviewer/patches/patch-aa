@@ -1,23 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2005/07/13 13:47:57 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2006/07/22 19:21:11 abs Exp $
 
---- vncviewer/Imakefile.orig	2005-07-13 15:26:57.329207000 +0200
-+++ vncviewer/Imakefile
-@@ -8,9 +8,7 @@ CDEBUGFLAGS = -O2
- XCOMM Shared memory support works OK on x86 linux, not tested elsewhere but
- XCOMM seems to cause problems on Digital Unix.
+--- tx/TXDialog.h.orig	2006-03-23 16:39:31.000000000 +0000
++++ tx/TXDialog.h
+@@ -30,6 +30,7 @@
  
--#if defined(i386Architecture) && defined(LinuxArchitecture)
- DEFINES = -DMITSHM
--#endif
+ #include "TXWindow.h"
+ #include <errno.h>
++#include <unistd.h>
  
- INCLUDES = -I../include -I.
- VNCAUTH_LIB = ../libvncauth/libvncauth.a
-@@ -36,4 +34,8 @@ SRCS = \
- 
- OBJS = $(SRCS:.c=.o)
- 
-+#if !defined(SunArchitecture)
-+ComplexProgramTargetNoMan(vncviewer)
-+#else
- ComplexProgramTarget(vncviewer)
-+#endif
+ class TXDialog : public TXWindow, public TXDeleteWindowCallback {
+ public:
