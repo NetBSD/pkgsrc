@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/17 19:28:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/22 04:46:18 rillig Exp $
 
 DISTNAME=	xfe-0.88
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ HOMEPAGE=	http://roland65.free.fr/xfe/
 COMMENT=	Fast MS-Explorer like filemanager for X
 
 USE_DIRS+=		xdg-1.1
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/26 12:38:57 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/22 04:46:19 rillig Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.riverbankcomputing.co.uk/pyqt/index.php
 COMMENT=	Python bindings for the Qt toolkit
 
 WRKSRC=			${WRKDIR}/PyQt-3.1
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes

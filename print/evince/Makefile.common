@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/07/05 05:37:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/07/22 04:46:18 rillig Exp $
 #
 
 DISTNAME=		evince-0.5.3
@@ -17,7 +17,7 @@ USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 # XXX fake for "configure" to allow build w/o a gs installed
 # (avoid hard dependency on a specific version)
