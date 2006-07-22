@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:55 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/22 00:36:19 minskim Exp $
 #
 
 DISTNAME=	py152
@@ -19,6 +19,11 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--without-thread
 
 INSTALL_TARGET=	altinstall
+
+REPLACE_INTERPRETER+=	py15
+REPLACE.py15.old=	.*python[^ ]*
+REPLACE.py15.new=	${PREFIX}/bin/python1.5
+REPLACE_FILES.py15=	Lib/cgi.py	# explicitly demanded to be patched
 
 .include "../../mk/bsd.prefs.mk"
 
