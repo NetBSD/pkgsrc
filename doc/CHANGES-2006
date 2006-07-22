@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.790 2006/07/22 10:16:46 mrg Exp $
+$NetBSD: CHANGES-2006,v 1.791 2006/07/22 12:21:57 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3484,3 +3484,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed net/ethereal [tron 2006-07-22]
 	Updated time/remind to 3.0.24 [wiz 2006-07-22]
 	Updated chat/ircII to 20060721 [mrg 2006-07-22]
+	Updated x11/x11vnc to 0.8.2 [salo 2006-07-22]
