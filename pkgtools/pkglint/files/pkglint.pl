@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.659 2006/07/21 19:09:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.660 2006/07/22 05:28:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6279,9 +6279,14 @@ sub checkfile_package_Makefile($$$) {
 		my $languages_line = $pkgctx_vardef->{"USE_LANGUAGES"};
 
 		if ($languages_line->text =~ regex_varassign) {
-			my (undef, $op, $value, undef) = ($1, $2, $3, $4);
+			my (undef, $op, $value, $comment) = ($1, $2, $3, $4);
 
-			if ($value !~ qr"(?:^|\s+)c(?:\s+|$)") {
+			if (defined($comment) && $comment =~ qr"(?:^|\s+)c(?:\s+|$)"i) {
+				# Don't emit a warning, since the comment
+				# probably contains a statement that C is
+				# really not needed.
+
+			} elsif ($value !~ qr"(?:^|\s+)(?:c|objc)(?:\s+|$)") {
 				$pkgctx_vardef->{"GNU_CONFIGURE"}->log_warning("GNU_CONFIGURE almost always needs a C compiler, ...");
 				$languages_line->log_warning("... but \"c\" is not added to USE_LANGUAGES.");
 			}
