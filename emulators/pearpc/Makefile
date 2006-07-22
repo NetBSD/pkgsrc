@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/22 04:46:15 rillig Exp $
 
 DISTNAME=		pearpc-0.4
 PKGREVISION=		1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://pearpc.sourceforge.net/
 COMMENT=		PowerPC emulator
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/ppccfg.example ${PKG_SYSCONFDIR}/ppccfg.conf

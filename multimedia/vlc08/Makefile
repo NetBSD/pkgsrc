@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/07/06 14:46:13 abs Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/22 04:46:17 rillig Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 VLC_VER=		0.8.5
 
