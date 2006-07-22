@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.791 2006/07/22 12:21:57 salo Exp $
+$NetBSD: CHANGES-2006,v 1.792 2006/07/22 17:28:05 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3485,3 +3485,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/remind to 3.0.24 [wiz 2006-07-22]
 	Updated chat/ircII to 20060721 [mrg 2006-07-22]
 	Updated x11/x11vnc to 0.8.2 [salo 2006-07-22]
+	Updated mail/wl to 2.14.0nb2 [rpaulo 2006-07-22]
