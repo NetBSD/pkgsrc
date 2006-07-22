@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:19:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/22 09:25:54 wiz Exp $
 bin/cm2rem
 bin/kall
 bin/rem
+bin/rem2html
 bin/rem2ps
 bin/remind
 bin/tkremind
