@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5233 2006/07/22 07:38:31 adam Exp $
+$NetBSD: TODO,v 1.5234 2006/07/22 09:08:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -639,6 +639,7 @@ Suggested package updates
 	o ispell-russian-0.99f8
 	o ispell-slovak-0.3.0
 	o ispman-1.2
+	o ivtools-1.2.4
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
@@ -653,7 +654,7 @@ Suggested package updates
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.8
-	o kbarcode-2.0.2
+	o kbarcode-2.0.4
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
@@ -1020,7 +1021,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
-	o qdbm-1.8.61
+	o qdbm-1.8.62
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
