@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.5 2006/05/05 17:42:07 adam Exp $
+$NetBSD: patch-aw,v 1.6 2006/07/22 07:37:07 adam Exp $
 
---- src/rrd_tool.c.orig	2006-05-04 15:26:28.000000000 +0200
+--- src/rrd_tool.c.orig	2006-07-14 14:11:26.000000000 +0200
 +++ src/rrd_tool.c
-@@ -590,7 +590,7 @@ int HandleInputLine(int argc, char **arg
+@@ -619,7 +619,7 @@ int HandleInputLine(int argc, char **arg
      else if (strcmp("resize", argv[1]) == 0)
  	rrd_resize(argc-1, &argv[1]);
      else if (strcmp("last", argv[1]) == 0)
@@ -11,7 +11,7 @@ $NetBSD: patch-aw,v 1.5 2006/05/05 17:42:07 adam Exp $
      else if (strcmp("first", argv[1]) == 0)
          printf("%ld\n",rrd_first(argc-1, &argv[1]));
      else if (strcmp("update", argv[1]) == 0)
-@@ -630,9 +630,9 @@ int HandleInputLine(int argc, char **arg
+@@ -659,9 +659,9 @@ int HandleInputLine(int argc, char **arg
  	  printf("<?xml version=\"1.0\" encoding=\"%s\"?>\n\n", XML_ENCODING);
  	  printf("<%s>\n", ROOT_TAG);
  	  printf("  <%s>\n", META_TAG);
@@ -23,7 +23,7 @@ $NetBSD: patch-aw,v 1.5 2006/05/05 17:42:07 adam Exp $
  	  printf("    <%s>%lu</%s>\n", META_ROWS_TAG, row_cnt, META_ROWS_TAG);
  	  printf("    <%s>%lu</%s>\n", META_COLS_TAG, col_cnt, META_COLS_TAG);
  	  printf("    <%s>\n", LEGEND_TAG);
-@@ -648,7 +648,7 @@ int HandleInputLine(int argc, char **arg
+@@ -677,7 +677,7 @@ int HandleInputLine(int argc, char **arg
  	  printf("  <%s>\n", DATA_TAG);
  	  for (ti = start+step; ti <= end; ti += step) {
  	    printf ("    <%s>", DATA_ROW_TAG);
