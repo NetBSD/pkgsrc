@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/07/09 21:56:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/22 05:54:52 rillig Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -12,7 +12,7 @@ COMMENT=	General purpose circuit simulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 USE_GNU_READLINE=	YES
 GNU_CONFIGURE=		YES

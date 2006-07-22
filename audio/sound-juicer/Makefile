@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/07 18:00:03 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/22 05:54:52 rillig Exp $
 #
 
 DISTNAME=		sound-juicer-2.14.4
@@ -12,7 +12,7 @@ COMMENT=		CD ripping tool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
