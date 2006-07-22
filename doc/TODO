@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5232 2006/07/22 03:56:25 taca Exp $
+$NetBSD: TODO,v 1.5233 2006/07/22 07:38:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -1054,7 +1054,6 @@ Suggested package updates
 	o rp-pppoe-3.8
 	o rpc2-1.28
 	o rpm-4.4.6
-	o rrdtool-1.2.15
 	o rsnapshot-1.2.9
 	o rt3-3.6.0
 	o rtcw-1.41.3
