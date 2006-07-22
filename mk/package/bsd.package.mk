@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.6 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: bsd.package.mk,v 1.7 2006/07/22 16:31:35 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -22,7 +22,7 @@ _COOKIE.package=	${WRKDIR}/.package_done
 .  if exists(${_COOKIE.package})
 package:
 	@${DO_NADA}
-.  elif exists(${_COOKIE.barrier})
+.  elif defined(_PKGSRC_BARRIER)
 package: install
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}

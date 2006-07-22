@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.5 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: test.mk,v 1.6 2006/07/22 16:31:35 jlam Exp $
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -30,7 +30,7 @@ _TEST_TARGETS+=	release-test-lock
 .  if exists(${_COOKIE.test})
 test:
 	@${DO_NADA}
-.  elif exists(${_COOKIE.barrier})
+.  elif defined(_PKGSRC_BARRIER)
 test: ${_TEST_TARGETS}
 .  else
 test: barrier
