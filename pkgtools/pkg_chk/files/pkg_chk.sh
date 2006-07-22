@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.37 2006/07/10 23:47:18 abs Exp $
+# $Id: pkg_chk.sh,v 1.38 2006/07/22 20:41:20 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -106,13 +106,15 @@ extract_make_vars()
     {
     MAKEFILE=$1
     shift
-    verbose "Extract $@ from $MAKEFILE"
     MAKEDATA=".PHONY: x\nx:\n";
     for var in $* ; do
 	MAKEDATA=$MAKEDATA"\t@echo $var=\${$var}\n"
     done
     eval $(printf "$MAKEDATA" | ${MAKE} -f - -f $MAKEFILE x | \
 					${SED} -e 's/[^=]*=/&"/' -e 's/$/"/')
+    for var in $* ; do
+	verbose_var $var
+    done
     }
 
 # $1 = name of variable
@@ -123,6 +125,9 @@ extract_mk_var()
 	eval $(printf "BSD_PKG_MK=1\n.PHONY: x\nx:\n\t@echo $1="'$'"{$1}\n" | ${MAKE} -f - -f $MAKECONF x)
 	if [ -z "`eval echo \\$$1`" ]; then
 	    eval "$1=$2"
+	    verbose_var $1 '(using default)'
+	else
+	    verbose_var $1
 	fi
     fi
     }
@@ -161,10 +166,6 @@ extract_variables()
     if [ ! -d $PKGSRCDIR -a -z "$opt_b" ] ; then
 	fatal "Unable to locate PKGSRCDIR ($PKGSRCDIR)"
     fi
-    extract_mk_var PKG_DBDIR /var/db/pkg
-    if [ ! -d $PKG_DBDIR ] ; then
-	fatal "Unable to locate PKG_DBDIR ($PKG_DBDIR)"
-    fi
 
     # Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
     # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
@@ -172,8 +173,8 @@ extract_variables()
 
     if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
 	cd $PKGSRCDIR/pkgtools/pkg_chk
-	extract_make_vars Makefile AWK GREP GZIP_CMD SED TSORT SORT PACKAGES \
-	                PKG_INFO PKG_ADD PKG_DELETE PKGCHK_CONF \
+	extract_make_vars Makefile AWK GREP GZIP_CMD SED SORT TSORT PACKAGES \
+	                PKG_ADD PKG_DELETE PKG_INFO PKG_DBDIR PKGCHK_CONF \
  	    		PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS
 	if [ -z "$PACKAGES" ];then
 	    PACKAGES=$PKGSRCDIR/packages
@@ -186,6 +187,10 @@ extract_variables()
 	fi
     fi
 
+    if [ ! -d $PKG_DBDIR ] ; then
+	fatal "Unable to access PKG_DBDIR ($PKG_DBDIR)"
+    fi
+
     if [ -z "$PKGCHK_CONF" ];then
 	PKGCHK_CONF=$PKGSRCDIR/pkgchk.conf
     fi
@@ -196,7 +201,7 @@ extract_variables()
 
 fatal()
     {
-    msg "*** $@"
+    msg "*** $@" >&2
     cleanup_and_exit 1
     }
 
@@ -216,7 +221,7 @@ generate_conf_from_installed()
 	mv $FILE ${FILE}.old
     fi
     echo "# Generated automatically at $(date)" > $FILE
-    echo $(pkgdirs_from_installed) | fmt -1 	>> $FILE
+    echo $(pkgdirs_from_installed) | tr ' ' '\n' >> $FILE
     }
 
 get_build_ver()
@@ -578,6 +583,15 @@ verbose()
     fi
     }
 
+verbose_var()
+    {
+    if [ -n "$opt_v" ] ; then
+	var=$1
+	shift
+	verbose Variable $var = $(eval echo \$$var) $@
+    fi
+    }
+
 args=$(getopt BC:D:L:P:U:abcfghiklNnqrsSuv $*)
 if [ $? != 0 ]; then
     opt_h=1
@@ -654,6 +668,7 @@ if [ ! -f $MAKECONF ] ; then
 	MAKECONF=/dev/null
     fi
 fi
+verbose_var MAKECONF
 
 # grabbed from GNU configure
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
@@ -756,14 +771,16 @@ if [ -n "$delete_and_recheck" ]; then
     if [ -n "$opt_u" ] ; then		 # Save current installed list
 	if [ -f $PKGCHK_UPDATE_CONF ] ; then
 	    msg "Merging in previous $PKGCHK_UPDATE_CONF"
-	    tmp=$(cat $PKGCHK_UPDATE_CONF;echo $(pkgdirs_from_installed)|fmt -1)
 	    if [ -z "$opt_n" -a -z "$opt_q" ] ; then
-		echo $tmp | fmt -1 | ${SORT} -u > $PKGCHK_UPDATE_CONF
+		tmp=$(cat $PKGCHK_UPDATE_CONF)
+		echo $tmp $(pkgdirs_from_installed) | tr ' ' '\n' | ${SORT} -u \
+							> $PKGCHK_UPDATE_CONF
+		tmp=
 	    fi
-	    tmp=
 	else
 	    if [ -z "$opt_n" -a -z "$opt_q" ] ; then
-		echo $(pkgdirs_from_installed) | fmt -1 > $PKGCHK_UPDATE_CONF
+		echo $(pkgdirs_from_installed) | tr ' ' '\n' \
+							> $PKGCHK_UPDATE_CONF
 	    fi
 	fi
     fi
