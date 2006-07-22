@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/21 06:25:07 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/22 05:10:54 rillig Exp $
 
 DISTNAME=	ImageViewer-0.6.3
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nice.ch/~phip/softcorner.html
 COMMENT=	GNUstep image display application
 
-USE_LANGUAGES=	c objc
+USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
 

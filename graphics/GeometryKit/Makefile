@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/21 06:31:26 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/22 05:10:54 rillig Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=	Objective-C class library for calculating 3D geometry
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
 
-USE_LANGUAGES=	c objc
+USE_LANGUAGES=	objc
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/3DKit/GeometryKit
 
