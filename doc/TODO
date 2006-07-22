@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5235 2006/07/22 09:26:27 wiz Exp $
+$NetBSD: TODO,v 1.5236 2006/07/22 12:21:57 salo Exp $
 
 Suggested new packages
 ======================
@@ -1196,8 +1196,6 @@ Suggested package updates
 	o wmweather-2.4.3
 	o www6to4-1.6
 	o wwwoffle-2.9
-	o x11vnc-0.8.1 [pkg/33700]
-	o x11vnc-0.8.2
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2
