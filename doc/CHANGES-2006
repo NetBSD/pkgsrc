@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.793 2006/07/22 19:03:14 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.794 2006/07/22 19:24:10 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3488,3 +3488,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/wl to 2.14.0nb2 [rpaulo 2006-07-22]
 	Updated devel/monotone to 0.28 [jmmv 2006-07-22]
 	Updated devel/monotone-server to 0.28 [jmmv 2006-07-22]
+	Removed net/vncviewer [abs 2006-07-22]
+	Renamed net/vncviewer4 to net/vncviewer [abs 2006-07-22]
+	Updated net/vncviewer to 4.1.2 [abs 2006-07-22]
