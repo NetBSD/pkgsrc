@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.29 2006/07/22 16:15:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.30 2006/07/22 16:26:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -65,3 +65,5 @@ Pullup ticket 1743 - requested by martti
 bugfix update for vim, build fix for vim-motif
 Pullup ticket 1744 - requested by tron
 replace ethereal with wireshark
+Pullup ticket 1745 - requested by bad
+security update for x11vnc
