@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/02/05 23:10:32 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2006/07/22 19:21:11 abs Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net x11
 MASTER_SITES=		ftp://ftp.uk.research.att.com/pub/vnc/dist/
 DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \
@@ -41,7 +41,6 @@ post-install:
 	${CHMOD} 2555 ${PREFIX}/bin/Xvnc
 .endif
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect ${PREFIX}/bin/vncconnect
-	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
 	${SED} -e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g' \
 		-e 's|/usr/bin/perl|${PERL5}|g' \
 		< ${WRKSRC}/vncserver \
