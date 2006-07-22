@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.184 2006/07/10 17:10:18 wiz Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.185 2006/07/22 16:31:35 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -197,7 +197,7 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 ###
 ### BEGIN: after the barrier
 ###
-.if exists(${_COOKIE.barrier})
+.if defined(_PKGSRC_BARRIER)
 
 # Generate default values for:
 #
