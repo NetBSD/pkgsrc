@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.4 2006/07/23 13:28:14 wiz Exp $
+# $NetBSD: sites.mk,v 1.5 2006/07/23 14:11:52 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -256,7 +256,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.belnet.be/pub/mirror/ftp.openoffice.org/ \
 	ftp://ftp.kulnet.kuleuven.ac.be/pub/mirror/openoffice.org/ \
 	http://ftp.sh.cvut.cz/MIRRORS/OpenOffice/ \
-	http://mirrors.sunsite.dk/openoffice/ \
 	ftp://ftp.funet.fi/pub/mirrors/openoffice.org/ \
 	ftp://openoffice.cict.fr/openoffice/ \
 	http://ftp.club-internet.fr/pub/OpenOffice/ \
