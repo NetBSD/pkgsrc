@@ -1,21 +1,23 @@
-@comment $NetBSD: PLIST,v 1.11 2006/07/23 04:07:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/07/23 05:08:49 minskim Exp $
+${CARBON}include/cairo/cairo-atsui.h
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-glitz.h
 include/cairo/cairo-pdf.h
 include/cairo/cairo-ps.h
-${QUARTZ}include/cairo/cairo-quartz.h
+${CARBON}include/cairo/cairo-quartz.h
 include/cairo/cairo-svg.h
 ${X11}include/cairo/cairo-xlib-xrender.h
 ${X11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
 lib/libcairo.la
+${CARBON}lib/pkgconfig/cairo-atsui.pc
 lib/pkgconfig/cairo-ft.pc
 lib/pkgconfig/cairo-glitz.pc
 lib/pkgconfig/cairo-pdf.pc
 lib/pkgconfig/cairo-png.pc
 lib/pkgconfig/cairo-ps.pc
-${QUARTZ}lib/pkgconfig/cairo-quartz.pc
+${CARBON}lib/pkgconfig/cairo-quartz.pc
 lib/pkgconfig/cairo-svg.pc
 ${X11}lib/pkgconfig/cairo-xlib-xrender.pc
 ${X11}lib/pkgconfig/cairo-xlib.pc
