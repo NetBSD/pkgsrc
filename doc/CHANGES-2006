@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.805 2006/07/23 17:04:40 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.806 2006/07/23 17:26:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/SDL to 1.2.11nb1 [wiz 2006-07-23]
 	Added graphics/ruby-rcairo version 1.2.0 [minskim 2006-07-23]
 	Updated math/R-ncdf to 1.6 [rillig 2006-07-23]
+	Updated www/ap-ssl to 2.8.27 [wiz 2006-07-23]
