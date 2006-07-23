@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2006/07/23 01:51:56 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2006/07/23 02:55:59 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -22,6 +22,7 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
