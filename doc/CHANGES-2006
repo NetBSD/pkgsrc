@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.802 2006/07/23 14:38:00 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.803 2006/07/23 16:27:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3502,3 +3502,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/geeklog to 1.4.0.5nb1 [taca 2006-07-23]
 	Updated devel/glib2 to 2.12.1 [wiz 2006-07-23]
 	Updated graphics/freetype2 to 2.2.1nb1 [minskim 2006-07-23]
+	Updated devel/SDL to 1.2.11nb1 [wiz 2006-07-23]
