@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/23 01:24:38 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLITZ_BUILDLINK3_MK:=	${GLITZ_BUILDLINK3_MK}+
@@ -16,7 +16,5 @@ BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.4.4
 BUILDLINK_ABI_DEPENDS.glitz+=	glitz>=0.4.4nb2
 BUILDLINK_PKGSRCDIR.glitz?=	../../graphics/glitz
 .endif	# GLITZ_BUILDLINK3_MK
-
-.include "../../graphics/MesaLib/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
