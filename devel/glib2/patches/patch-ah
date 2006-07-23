@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.6 2006/07/03 21:01:54 wiz Exp $
+$NetBSD: patch-ah,v 1.7 2006/07/23 14:15:02 wiz Exp $
 
---- glib/gutils.c.orig	2006-06-13 22:46:52.000000000 +0000
+--- glib/gutils.c.orig	2006-07-06 20:30:16.000000000 +0000
 +++ glib/gutils.c
-@@ -2472,7 +2472,7 @@ g_get_system_data_dirs (void)
+@@ -2489,7 +2489,7 @@ g_get_system_data_dirs (void)
        gchar *data_dirs = (gchar *) g_getenv ("XDG_DATA_DIRS");
  
        if (!data_dirs || !data_dirs[0])
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.6 2006/07/03 21:01:54 wiz Exp $
  
        data_dir_vector = g_strsplit (data_dirs, G_SEARCHPATH_SEPARATOR_S, 0);
  #endif
-@@ -2526,7 +2526,7 @@ g_get_system_config_dirs (void)
+@@ -2543,7 +2543,7 @@ g_get_system_config_dirs (void)
        conf_dirs = (gchar *) g_getenv ("XDG_CONFIG_DIRS");
  
        if (!conf_dirs || !conf_dirs[0])
@@ -20,7 +20,7 @@ $NetBSD: patch-ah,v 1.6 2006/07/03 21:01:54 wiz Exp $
  
        conf_dir_vector = g_strsplit (conf_dirs, G_SEARCHPATH_SEPARATOR_S, 0);
  #endif
-@@ -2607,7 +2607,7 @@ unalias_lang (char *lang)
+@@ -2624,7 +2624,7 @@ unalias_lang (char *lang)
    int i;
  
    if (!alias_table)
