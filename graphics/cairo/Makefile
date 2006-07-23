@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/07/23 01:01:28 minskim Exp $
+# $NetBSD: Makefile,v 1.39 2006/07/23 01:51:56 minskim Exp $
 
 DISTNAME=	cairo-1.2.0
 PKGREVISION=	1
@@ -28,7 +28,6 @@ PLIST_SUBST+=		QUARTZ=
 PLIST_SUBST+=		QUARTZ="@comment "
 .endif
 
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
