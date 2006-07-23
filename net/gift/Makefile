@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:21 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/23 22:14:26 tv Exp $
 #
 
 DISTNAME=	gift-0.11.8.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gift/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +11,7 @@ MAINTAINER=	alex@catbull.com
 HOMEPAGE=	http://gift.sourceforge.net/
 COMMENT=	Modular daemon that abstracts filesharing protocols
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		perl:run pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
