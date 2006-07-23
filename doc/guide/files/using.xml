@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.19 2006/04/18 12:56:53 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.20 2006/07/23 15:34:10 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -45,30 +45,22 @@
 	where to get them. You can get them on CD-ROMs, DVDs, or via FTP
 	or HTTP.</para>
 
-	<para>For NetBSD, the binary packages are made available on
-	<filename>ftp.NetBSD.org</filename> and its mirrors, in the
-	directory
-	<filename>/pub/NetBSD/packages/<replaceable>OSVERSION</replaceable>/<replaceable>ARCH</replaceable>/</filename>.
-	For <replaceable>OSVERSION</replaceable>, you should insert the
-	output of <command>uname -r</command>, and for
-	<replaceable>ARCH</replaceable> the output of <command>uname
-	-p</command>.</para>
-
-	<para>For some other platforms, binary packages can be found at
-	the following locations:</para>
+	<para>The binary packages can be found at the following
+	locations.</para>
 
 	<informaltable id="binary-packages">
 	<tgroup cols="2">
 	<thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
 	<tbody>
+	<row><entry>NetBSD</entry><entry><filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/</filename></entry></row>
 	<row><entry>Solaris 9</entry><entry><filename>ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/</filename></entry></row>
 	<row><entry>Solaris 10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/</filename></entry></row>
 	</tbody>
 	</tgroup>
 	</informaltable>
 
-	<para>Most of these directories contain the pkgsrc distribution
-	for multiple platforms. Select the appropriate subdirectories,
+	<para>Most of these directories contain binary packages for
+	multiple platforms. Select the appropriate subdirectories,
 	according to your machine architecture and operating system,
 	until you find a directory called <filename>All</filename>. This
 	directory contains all the binary packages. Further, there are
