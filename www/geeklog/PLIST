@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/09 13:29:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/07/23 13:21:09 taca Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
 ${GEEKLOG_BASE}/language/bosnian.php
 ${GEEKLOG_BASE}/language/bosnian_utf-8.php
@@ -68,7 +68,6 @@ ${GEEKLOG_BASE}/language/ukrainian.php
 ${GEEKLOG_BASE}/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/developer.README
-${GEEKLOG_BASE}/plugins/links/config.php
 ${GEEKLOG_BASE}/plugins/links/functions.inc
 ${GEEKLOG_BASE}/plugins/links/language/README
 ${GEEKLOG_BASE}/plugins/links/language/chinese_simplified_utf-8.php
@@ -97,7 +96,6 @@ ${GEEKLOG_BASE}/plugins/links/templates/links.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/pagenavigation.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/submitlink.thtml
 ${GEEKLOG_BASE}/plugins/plugin.INSTALL
-${GEEKLOG_BASE}/plugins/polls/config.php
 ${GEEKLOG_BASE}/plugins/polls/functions.inc
 ${GEEKLOG_BASE}/plugins/polls/language/README
 ${GEEKLOG_BASE}/plugins/polls/language/chinese_simplified_utf-8.php
@@ -141,7 +139,6 @@ ${GEEKLOG_BASE}/plugins/spamx/MTBlackList.Examine.class.php
 ${GEEKLOG_BASE}/plugins/spamx/MailAdmin.Action.class.php
 ${GEEKLOG_BASE}/plugins/spamx/MassDelTrackback.Admin.class.php
 ${GEEKLOG_BASE}/plugins/spamx/MassDelete.Admin.class.php
-${GEEKLOG_BASE}/plugins/spamx/config.php
 ${GEEKLOG_BASE}/plugins/spamx/functions.inc
 ${GEEKLOG_BASE}/plugins/spamx/language/english.php
 ${GEEKLOG_BASE}/plugins/spamx/language/english_utf-8.php
@@ -161,7 +158,6 @@ ${GEEKLOG_BASE}/plugins/spamx/magpierss/rss_utils.inc
 ${GEEKLOG_BASE}/plugins/spamx/rss.inc.php
 ${GEEKLOG_BASE}/plugins/spamx/templates/admin.thtml
 ${GEEKLOG_BASE}/plugins/spamx/templates/install.thtml
-${GEEKLOG_BASE}/plugins/staticpages/config.php
 ${GEEKLOG_BASE}/plugins/staticpages/functions.inc
 ${GEEKLOG_BASE}/plugins/staticpages/language/README
 ${GEEKLOG_BASE}/plugins/staticpages/language/chinese_simplified_utf-8.php
