@@ -1,0 +1,31 @@
+$NetBSD: patch-aj,v 1.1 2006/07/23 15:00:41 taca Exp $
+
+--- mxrand.c.orig	2002-01-20 23:19:43.000000000 +0900
++++ mxrand.c
+@@ -75,6 +75,8 @@
+ 
+ # include "common.h"
+ 
++static time_t curtime P((void));
++
+ /*
+ **  CURTIME -- return current time.
+ **
+@@ -88,7 +90,7 @@
+ **		none.
+ */
+ 
+-time_t
++static time_t
+ curtime()
+ {
+ 	auto time_t t;
+@@ -117,7 +119,7 @@
+ 
+ int
+ mxrand(host1, host2)
+-	register char *host1, *host2;
++	char *host1, *host2;
+ {
+ 	int hfunc;
+ 	static unsigned int seed;
