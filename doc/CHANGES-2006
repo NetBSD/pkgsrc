@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.800 2006/07/23 13:22:07 taca Exp $
+$NetBSD: CHANGES-2006,v 1.801 2006/07/23 14:16:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.12.3nb1 [minskim 2006-07-23]
 	Added audio/lmms version 0.2.0 [rillig 2006-07-23]
 	Updated www/geeklog to 1.4.0.5nb1 [taca 2006-07-23]
+	Updated devel/glib2 to 2.12.1 [wiz 2006-07-23]
