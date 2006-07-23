@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/02 13:11:58 markd Exp $
+$NetBSD: distinfo,v 1.2 2006/07/23 17:04:12 rillig Exp $
 
-SHA1 (R/ncdf_1.5.tar.gz) = 8c390bfc4385f53545bd470ae755489dd72ca85e
-RMD160 (R/ncdf_1.5.tar.gz) = 2ecf5972651cea7b22fe4b98ac5c214addbd2ddf
-Size (R/ncdf_1.5.tar.gz) = 68818 bytes
+SHA1 (R/ncdf_1.6.tar.gz) = 2bcfec26a966b4d8c37309e6eb4e7a6717b071c1
+RMD160 (R/ncdf_1.6.tar.gz) = 2775a79204dd59452a9d8cf066ba929e073dadf3
+Size (R/ncdf_1.6.tar.gz) = 72533 bytes
