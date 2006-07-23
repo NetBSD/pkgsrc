@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5238 2006/07/23 14:07:03 wiz Exp $
+$NetBSD: TODO,v 1.5239 2006/07/23 14:16:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -544,7 +544,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
-	o glib2-2.12.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.14.2
