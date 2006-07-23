@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/07/17 02:03:30 taca Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/23 13:21:09 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
+PKGREVISION=	1
 PKGNAME=	geeklog-${VER:S/sr/./}
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
@@ -15,6 +16,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
 VER=		1.4.0sr5
 NO_BUILD=	YES
+
+BUILD_DEFS+=	APACHE_GROUP
 
 GEEKLOG_SYS=		emailgeeklogstories language plugins readme sql system
 GEEKLOG_TMPL_SUB=	backend images/articles images/library \
@@ -97,7 +100,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${GEEKLOG_EXAMPLESDIR}/${f}
 	${RM} ${WRKSRC}/${f}
 .endfor
-	${INSTALL_DATA} ${WRKDIR}/createdb.php ${GEEKLOG_EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/createdb.php ${GEEKLOG_EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKDIR}/geeklog.conf ${GEEKLOG_EXAMPLESDIR}
 	cd ${WRKSRC}; ${CP} -R ${GEEKLOG_SYS} ${GEEKLOG_DIR}
 .for d in ${GEEKLOG_TMPL_SUB}
