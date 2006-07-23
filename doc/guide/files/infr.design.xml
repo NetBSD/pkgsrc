@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.2 2006/06/21 08:50:40 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.3 2006/07/23 15:48:01 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -14,6 +14,69 @@
 
 </sect1>
 -->
+
+<sect1 id="infr.vardef">
+<title>The meaning of variable definitions</title>
+
+	<para>Whenever a variable is defined in the pkgsrc
+	infrastructure, the location and the way of definition provide
+	much information about the intended use of that variable.
+	Additionally, more documentation may be found in a header
+	comment or in this pkgsrc guide.</para>
+
+	<para>A special file is
+	<filename>mk/defaults/mk.conf</filename>, which lists all
+	variables that are intended to be user-defined. They are either
+	defined using the <literal>?=</literal> operator or they are
+	left undefined because defining them to anything would
+	effectively mean <quote>yes</quote>. All these variables may be
+	overridden by the pkgsrc user in the <varname>MAKECONF</varname>
+	file.</para>
+
+	<para>Outside this file, the following conventions apply:
+	Variables that are defined using the <literal>?=</literal>
+	operator may be overridden by a package.</para>
+
+	<para>Variables that are defined using the <literal>=</literal>
+	operator may be used read-only at run-time.</para>
+
+	<para>Variables whose name starts with an underscore must not be
+	accessed outside the pkgsrc infrastructure at all. They may
+	change without further notice.</para>
+
+	<note><para>These conventions are currently not applied
+	consistently to the complete pkgsrc
+	infrastructure.</para></note>
+
+</sect1>
+
+<sect1 id="infr.vardef.problems">
+<title>Avoiding problems before they arise</title>
+
+	<para>All variables that contain lists of things should default
+	to being empty. Two examples that do not follow this rule are
+	<varname>USE_LANGUAGES</varname> and
+	<varname>DISTFILES</varname>. These variables cannot simply be
+	modified using the <literal>+=</literal> operator in package
+	<filename>Makefile</filename>s (or other files included by
+	them), since there is no guarantee whether the variable is
+	already set or not, and what its value is. In the case of
+	<varname>DISTFILES</varname>, the packages <quote>know</quote>
+	the default value and just define it as in the following
+	example.</para>
+
+<programlisting>
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+</programlisting>
+
+	<para>Because of the selection of this default value, the same
+	value appears in many package Makefiles. Similarly for
+	<varname>USE_LANGUAGES</varname>, but in this case the default
+	value (<quote><literal>c</literal></quote>) is so short that it
+	doesn't stand out. Nevertheless it is mentioned in many
+	files.</para>
+
+</sect1>
 
 <sect1 id="infr.var">
 <title>Variable evaluation</title>
