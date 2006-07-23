@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 13:04:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/23 16:59:22 rillig Exp $
 #
 
 CATEGORIES=	math
@@ -10,8 +10,12 @@ COMMENT=	Various R programming tools for data manipulation
 
 R_PKGNAME=	gdata
 R_PKGVER=	2.1.2
+PKGREVISION=	1
 
 DEPENDS+=	R-gtools>=2.2.3:../../math/R-gtools
+
+REPLACE_PERL+=	inst/bin/*.bat inst/perl/*.pl
+USE_TOOLS+=	perl:run
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
