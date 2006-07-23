@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.25 2006/05/29 17:08:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2006/07/23 04:59:34 minskim Exp $
 bin/pango-querymodules
-bin/pango-view
+${X11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
 include/pango-1.0/pango/pango-context.h
@@ -27,17 +27,17 @@ include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
 include/pango-1.0/pango/pangoft2.h
-include/pango-1.0/pango/pangox.h
-include/pango-1.0/pango/pangoxft-render.h
-include/pango-1.0/pango/pangoxft.h
+${X11}include/pango-1.0/pango/pangox.h
+${X11}include/pango-1.0/pango/pangoxft-render.h
+${X11}include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.la
 lib/libpangocairo-1.0.la
 lib/libpangoft2-1.0.la
-lib/libpangox-1.0.la
-lib/libpangoxft-1.0.la
+${X11}lib/libpangox-1.0.la
+${X11}lib/libpangoxft-1.0.la
 lib/pango/1.5.0/modules/pango-arabic-fc.la
 lib/pango/1.5.0/modules/pango-basic-fc.la
-lib/pango/1.5.0/modules/pango-basic-x.la
+${X11}lib/pango/1.5.0/modules/pango-basic-x.la
 lib/pango/1.5.0/modules/pango-hangul-fc.la
 lib/pango/1.5.0/modules/pango-hebrew-fc.la
 lib/pango/1.5.0/modules/pango-indic-fc.la
@@ -48,10 +48,10 @@ lib/pango/1.5.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
-lib/pkgconfig/pangox.pc
-lib/pkgconfig/pangoxft.pc
+${X11}lib/pkgconfig/pangox.pc
+${X11}lib/pkgconfig/pangoxft.pc
 libdata/pango/pango.modules
-libdata/pango/pangox.aliases
+${X11}libdata/pango/pangox.aliases
 man/man1/pango-querymodules.1
 share/doc/pango/PangoEngineLang.html
 share/doc/pango/PangoEngineShape.html
