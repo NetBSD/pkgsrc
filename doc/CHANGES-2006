@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.796 2006/07/22 20:42:14 abs Exp $
+$NetBSD: CHANGES-2006,v 1.797 2006/07/23 00:30:23 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3494,3 +3494,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ap2-jk version 1.2.15 [abs 2006-07-22]
 	Updated www/apache-tomcat55 to 5.5.17 [abs 2006-07-22]
 	Updated pkgtools/pkg_chk to 1.77 [abs 2006-07-22]
+	Updated editors/lyx-qt to 1.4.2 [reed 2006-07-22]
+	Updated editors/lyx-xforms to 1.4.2 [reed 2006-07-22]
