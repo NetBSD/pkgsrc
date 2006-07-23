@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2006/06/15 13:26:42 taca Exp $
+# $NetBSD: INSTALL,v 1.2 2006/07/23 13:21:09 taca Exp $
 
 APACHE_GROUP="@APACHE_GROUP@"
 GEEKLOG_PUBDIR="@GEEKLOG_PUBDIR@"
@@ -7,7 +7,7 @@ GEEKLOG_TMPL_DIR="@GEEKLOG_TMPL_DIR@"
 
 case ${STAGE} in
 POST-INSTALL)
-	cd ${GEEKLOG_TMPL_DIR}
+	(cd ${GEEKLOG_TMPL_DIR}
 	${FIND} ${GEEKLOG_TMPL_SUB} -type d -print | \
 		while read d; do
 			dir="${GEEKLOG_PUBDIR}/$d"
@@ -25,5 +25,6 @@ POST-INSTALL)
 				${CHGRP} ${APACHE_GROUP} ${file}
 				fi
 			done
+	)
 	;;
 esac
