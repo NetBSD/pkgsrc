@@ -1,13 +1,42 @@
-$NetBSD: patch-aa,v 1.1 2006/07/21 14:27:53 tron Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/23 17:31:08 drochner Exp $
 
---- epan/dissectors/packet-radiotap.c.orig	2006-07-17 20:59:28.000000000 +0100
-+++ epan/dissectors/packet-radiotap.c	2006-07-21 13:36:03.000000000 +0100
-@@ -610,7 +610,7 @@
-     /* dissect the 802.11 header next */
-     call_dissector((rflags & IEEE80211_RADIOTAP_F_DATAPAD) ?
- 	ieee80211_datapad_handle : ieee80211_handle,
--	tvb_new_subset(tvb, length, -1, -1), pinfo, tree);
-+	tvb_new_subset(tvb, offset + length, -1, -1), pinfo, tree);
- }
+--- epan/dissectors/packet-radiotap.c.orig	2006-07-17 21:59:28.000000000 +0200
++++ epan/dissectors/packet-radiotap.c
+@@ -388,6 +388,11 @@ dissect_radiotap(tvbuff_t *tvb, packet_i
+     guint8 db, rflags;
+     guint32 present, next_present;
+     int bit;
++    gint8 align;
++#define RTALIGN(size) \
++	align = ((offset + ((size) - 1)) & ~((size) - 1)) - offset; \
++	offset += align; \
++	length_remaining -= align
  
- void
+     if(check_col(pinfo->cinfo, COL_PROTOCOL))
+ 	col_set_str(pinfo->cinfo, COL_PROTOCOL, "WLAN");
+@@ -559,6 +564,7 @@ dissect_radiotap(tvbuff_t *tvb, packet_i
+ 	    length_remaining--;
+ 	    break;
+ 	case IEEE80211_RADIOTAP_CHANNEL:
++	    RTALIGN(2);
+ 	    if (length_remaining < 4)
+ 		break;
+ 	    if (tree) {
+@@ -577,6 +583,7 @@ dissect_radiotap(tvbuff_t *tvb, packet_i
+ 	case IEEE80211_RADIOTAP_LOCK_QUALITY:
+ 	case IEEE80211_RADIOTAP_TX_ATTENUATION:
+ 	case IEEE80211_RADIOTAP_DB_TX_ATTENUATION:
++	    RTALIGN(2);
+ 	    if (length_remaining < 2)
+ 		break;
+ #if 0
+@@ -586,6 +593,9 @@ dissect_radiotap(tvbuff_t *tvb, packet_i
+ 	    length_remaining-=2;
+ 	    break;
+ 	case IEEE80211_RADIOTAP_TSFT:
++#if 0 /* can't happen because always first */
++	    RTALIGN(8);
++#endif
+ 	    if (length_remaining < 8)
+ 		break;
+ 	    if (tree) {
