@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 13:11:58 markd Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/23 17:04:12 rillig Exp $
 #
 
 CATEGORIES=	math
@@ -9,7 +9,7 @@ HOMEPAGE=	${R_HOMEPAGE_BASE}/ncdf.html
 COMMENT=	High-level R interface to Unidata's netCDF data files
 
 R_PKGNAME=	ncdf
-R_PKGVER=	1.5
+R_PKGVER=	1.6
 
 CONFIGURE_ARGS+=	--with-netcdf_incdir=${BUILDLINK_PREFIX.netcdf}/include
 CONFIGURE_ARGS+=	--with-netcdf_libdir=${BUILDLINK_PREFIX.netcdf}/lib
