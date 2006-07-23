@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5237 2006/07/22 19:46:51 abs Exp $
+$NetBSD: TODO,v 1.5238 2006/07/23 14:07:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,6 +408,7 @@ Suggested package updates
 	o cgdb-0.6.3
 	o checkbot-1.77
 	o chrony-1.21
+	o cinepaint-0.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
 	o cocoon-2.1.9
@@ -543,6 +544,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
+	o glib2-2.12.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.14.2
@@ -597,6 +599,7 @@ Suggested package updates
 	o guile-gtk-0.50
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
+	o gxemul-0.4.1
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.18
@@ -646,6 +649,7 @@ Suggested package updates
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
+	o joe-3.5
 	o john-1.7.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
@@ -698,7 +702,7 @@ Suggested package updates
 	o libtorrent-0.9.3
 	o libwpd-0.8.5
 	o licq-core-1.3.0
-	o liferea-1.0.17
+	o liferea-1.0.18
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -844,6 +848,7 @@ Suggested package updates
 	o p5-File-DirSync-1.12
 	o p5-File-MimeInfo-0.12
 	o p5-FileHandle-Unget-0.16.2.1
+	o p5-Finance-Quote-1.12
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
 	o p5-HTML-FillInForm-1.05
@@ -853,6 +858,7 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
+	o p5-IO-Socket-SSL-0.993
 	o p5-Ima-DBI-0.34
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
@@ -1021,6 +1027,7 @@ Suggested package updates
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
 	o qdbm-1.8.62
+	o qemu-0.8.2
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1097,7 +1104,7 @@ Suggested package updates
 	o smlnj-110.59
 	o smokeping-2.0.9
 	o snd-8.2
-	o snes9x-1.50
+	o snes9x-1.502
 	o snort-2.6.0
 	o socat-1.5.0.0
 	o solfege-3.3.1
