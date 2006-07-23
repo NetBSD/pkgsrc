@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/07/23 01:50:11 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/07/23 01:51:56 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -16,7 +16,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
 BUILDLINK_ABI_DEPENDS.cairo?=	cairo>=1.0.4nb1
 BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .endif	# CAIRO_BUILDLINK3_MK
 
