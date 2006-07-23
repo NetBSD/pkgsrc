@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2006/07/07 15:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2006/07/23 16:21:28 wiz Exp $
 
 DISTNAME=	SDL-1.2.11
+PKGREVISION=	1
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -27,6 +28,10 @@ CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 NASMFLAGS_ELF=		-f elf
 NASMFLAGS_a.out=	-f aoutb
+.endif
+
+.if ${OPSYS:MNetBSD}
+CONFIGURE_ARGS+=	--disable-video-wscons
 .endif
 
 CONFIGURE_ARGS+=	--enable-dlopen
