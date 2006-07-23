@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.2 2006/06/18 08:34:05 taca Exp $
+# $NetBSD: DEINSTALL,v 1.3 2006/07/23 13:21:09 taca Exp $
 
 GEEKLOG_DIR="@GEEKLOG_DIR@"
 GEEKLOG_EXAMPLESDIR="@GEEKLOG_EXAMPLESDIR@"
@@ -8,7 +8,7 @@ GEEKLOG_TMPL_DIR="@GEEKLOG_TMPL_DIR@"
 
 case ${STAGE} in
 DEINSTALL)
-	cd ${GEEKLOG_TMPL_DIR}
+	(cd ${GEEKLOG_TMPL_DIR}
 	${FIND} ${GEEKLOG_TMPL_SUB} -type f -print | \
 		while read f; do
 			file="${GEEKLOG_PUBDIR}/$f"
@@ -49,19 +49,7 @@ DEINSTALL)
 		${ECHO} ""
 		${ECHO} "==========================================================================="
 	fi
-	;;
-
-POST-DEINSTALL)
-	${RMDIR} -p ${GEEKLOG_DIR} 2>/dev/null
-	if ${TEST} -d ${GEEKLOG_DIR}; then
-		${ECHO} "==========================================================================="
-		${ECHO} "The following directories are no longer being used by ${PKGNAME},"
-		${ECHO} "and they can be removed if no other packages are using them:"
-		${ECHO} ""
-		${ECHO} "	${GEEKLOG_DIR}"
-		${ECHO} ""
-		${ECHO} "==========================================================================="
-	fi
+	)
 	;;
 
 esac
