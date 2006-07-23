@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/03/23 16:52:42 joerg Exp $
-
-SHA1 (vnc-4_1_1-unixsrc.tar.gz) = a5945d54f35c6be05d56f8dad3c1978fee2b2196
-RMD160 (vnc-4_1_1-unixsrc.tar.gz) = 5050d7f6936a41debc58b4fa914e12dbbeb80641
-Size (vnc-4_1_1-unixsrc.tar.gz) = 529894 bytes
-SHA1 (patch-aa) = 2b598d63502b8abc6aaa4cb1bde736e15b455f1a
