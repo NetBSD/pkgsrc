@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/07/05 09:39:11 tron Exp $
+# $NetBSD: Makefile,v 1.38 2006/07/23 01:01:28 minskim Exp $
 
 DISTNAME=	cairo-1.2.0
 PKGREVISION=	1
@@ -21,9 +21,7 @@ CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin" && exists(/System/Library/Frameworks/Quartz.framework)
+.if exists(/System/Library/Frameworks/Carbon.framework)
 CONFIGURE_ARGS+=	--enable-quartz
 PLIST_SUBST+=		QUARTZ=
 .else
