@@ -1,0 +1,23 @@
+$NetBSD: patch-ak,v 1.1 2006/07/23 15:00:41 taca Exp $
+
+--- proctitle.c.orig	2002-01-20 23:19:43.000000000 +0900
++++ proctitle.c
+@@ -156,6 +156,8 @@
+ 
+ #endif /* SPT_TYPE != SPT_NONE && SPT_TYPE != SPT_BUILTIN */
+ 
++#if SPT_TYPE != SPT_BUILTIN
++
+ /*
+ **  Pointers for setproctitle.
+ **	This allows "ps" listings to give more useful information.
+@@ -211,9 +213,6 @@
+ 		LastArgv = argv[argc - 1] + strlen(argv[argc - 1]);
+ }
+ 
+-#if SPT_TYPE != SPT_BUILTIN
+-
+-
+ /*VARARGS1*/
+ void
+ # ifdef __STDC__
