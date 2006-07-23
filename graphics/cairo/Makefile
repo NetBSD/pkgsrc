@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2006/07/23 04:07:34 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2006/07/23 05:08:49 minskim Exp $
 
 DISTNAME=	cairo-1.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -14,7 +14,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	src/cairo.pc.in src/cairo-backend.pc.in
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-atsui
 CONFIGURE_ARGS+=	--disable-xcb
 CONFIGURE_ARGS+=	--enable-glitz
 CONFIGURE_ARGS+=	--enable-pdf
@@ -23,9 +22,10 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .if exists(/System/Library/Frameworks/Carbon.framework)
 CONFIGURE_ARGS+=	--enable-quartz
-PLIST_SUBST+=		QUARTZ=
+CONFIGURE_ARGS+=	--enable-atsui
+PLIST_SUBST+=		CARBON=
 .else
-PLIST_SUBST+=		QUARTZ="@comment "
+PLIST_SUBST+=		CARBON="@comment "
 .endif
 
 .include "options.mk"
