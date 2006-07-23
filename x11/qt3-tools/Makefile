@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/07/02 13:41:03 markd Exp $
+# $NetBSD: Makefile,v 1.48 2006/07/23 14:35:48 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
@@ -47,5 +47,6 @@ do-install:
 	cd ${WRKSRC}/mkspecs && ${PAX} -rw . ${QTPREFIX}/mkspecs
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../x11/Xfixes/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
