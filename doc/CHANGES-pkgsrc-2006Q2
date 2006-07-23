@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.36 2006/07/23 16:30:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.37 2006/07/23 23:22:24 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -79,3 +79,5 @@ Pullup ticket 1749 - requested by adrianp
 functionality fix for drupal
 Pullup ticket 1750 - requested by taca
 bugfixes for geeklog
+Pullup ticket 1752 - requested by tron
+bugfixes for wireshark
