@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.428 2006/07/20 17:25:24 minskim Exp $
+# $NetBSD: Makefile,v 1.429 2006/07/23 16:59:58 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -273,6 +273,7 @@ SUBDIR+=	ruby-gnome2-libart
 SUBDIR+=	ruby-gnuplot
 SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-opengl
+SUBDIR+=	ruby-rcairo
 SUBDIR+=	s10sh
 SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
