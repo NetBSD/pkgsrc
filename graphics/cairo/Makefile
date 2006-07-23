@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/07/23 01:51:56 minskim Exp $
+# $NetBSD: Makefile,v 1.40 2006/07/23 04:07:34 minskim Exp $
 
 DISTNAME=	cairo-1.2.0
 PKGREVISION=	1
@@ -28,8 +28,8 @@ PLIST_SUBST+=		QUARTZ=
 PLIST_SUBST+=		QUARTZ="@comment "
 .endif
 
-BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
-BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
+.include "options.mk"
+
 BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
 BUILDLINK_API_DEPENDS.libpixman+=	libpixman>=0.1.5
 
@@ -42,12 +42,9 @@ CFLAGS+=			-c99
 TEST_TARGET=			check
 
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
 .include "../../graphics/libpixman/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
