@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.797 2006/07/23 00:30:23 reed Exp $
+$NetBSD: CHANGES-2006,v 1.798 2006/07/23 05:14:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3496,3 +3496,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_chk to 1.77 [abs 2006-07-22]
 	Updated editors/lyx-qt to 1.4.2 [reed 2006-07-22]
 	Updated editors/lyx-xforms to 1.4.2 [reed 2006-07-22]
+	Updated graphics/cairo to 1.2.0nb2 [minskim 2006-07-23]
+	Updated devel/pango to 1.12.3nb1 [minskim 2006-07-23]
