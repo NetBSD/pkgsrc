@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.31 2006/07/23 00:43:37 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.32 2006/07/23 14:46:27 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -69,3 +69,5 @@ Pullup ticket 1745 - requested by bad
 security update for x11vnc
 Pullup ticket 1746 - requested by abs
 security update for vncviewer
+Pullup ticket 1747 - requested by adrianp
+security update for horde
