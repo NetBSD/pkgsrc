@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.13 2006/05/06 20:18:36 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.14 2006/07/23 00:28:12 reed Exp $
 bin/lyx
 bin/lyxclient
 bin/tex2lyx
@@ -42,13 +42,12 @@ share/lyx/bind/sv_menus.bind
 share/lyx/bind/xemacs.bind
 share/lyx/chkconfig.ltx
 share/lyx/clipart/platypus.eps
-share/lyx/configure
+share/lyx/configure.py
 share/lyx/doc/Customization.lyx
 share/lyx/doc/DocStyle.lyx
 share/lyx/doc/Extended.lyx
 share/lyx/doc/FAQ.lyx
 share/lyx/doc/Intro.lyx
-share/lyx/doc/LaTeXConfig.lyx
 share/lyx/doc/LaTeXConfig.lyx.in
 share/lyx/doc/Reference.lyx
 share/lyx/doc/TOC.lyx
@@ -560,6 +559,7 @@ share/lyx/images/math/overleftarrow.xpm
 share/lyx/images/math/overleftrightarrow.xpm
 share/lyx/images/math/overline.xpm
 share/lyx/images/math/overrightarrow.xpm
+share/lyx/images/math/overset.xpm
 share/lyx/images/math/parallel.xpm
 share/lyx/images/math/partial.xpm
 share/lyx/images/math/perp.xpm
@@ -675,6 +675,7 @@ share/lyx/images/math/underleftrightarrow.xpm
 share/lyx/images/math/underline.xpm
 share/lyx/images/math/underrightarrow.xpm
 share/lyx/images/math/underscore.xpm
+share/lyx/images/math/underset.xpm
 share/lyx/images/math/uparrow.xpm
 share/lyx/images/math/uparrow2.xpm
 share/lyx/images/math/updownarrow.xpm
@@ -862,6 +863,7 @@ share/lyx/layouts/g-brief2.layout
 share/lyx/layouts/heb-article.layout
 share/lyx/layouts/heb-letter.layout
 share/lyx/layouts/hollywood.layout
+share/lyx/layouts/ijmpc.layout
 share/lyx/layouts/ijmpd.layout
 share/lyx/layouts/jgrga.layout
 share/lyx/layouts/kluwer.layout
@@ -951,10 +953,9 @@ share/lyx/lyx2lyx/parser_tools.pyo
 share/lyx/lyx2lyx/profiling.py
 share/lyx/lyx2lyx/profiling.pyc
 share/lyx/lyx2lyx/profiling.pyo
-share/lyx/lyxrc.defaults
 share/lyx/lyxrc.example
-share/lyx/packages.lst
-share/lyx/scripts/TeXFiles.sh
+share/lyx/scripts/TeXFiles.py
+share/lyx/scripts/clean_dvi.py
 share/lyx/scripts/convertDefault.sh
 share/lyx/scripts/fen2ascii.py
 share/lyx/scripts/fig2pdftex.sh
@@ -979,6 +980,7 @@ share/lyx/templates/elsart.lyx
 share/lyx/templates/g-brief-de.lyx
 share/lyx/templates/g-brief-en.lyx
 share/lyx/templates/hollywood.lyx
+share/lyx/templates/ijmpc.lyx
 share/lyx/templates/ijmpd.lyx
 share/lyx/templates/kluwer.lyx
 share/lyx/templates/koma-letter2.lyx
@@ -988,7 +990,6 @@ share/lyx/templates/linuxdoc_article.lyx
 share/lyx/templates/revtex.lyx
 share/lyx/templates/revtex4.lyx
 share/lyx/templates/slides.lyx
-share/lyx/textclass.lst
 share/lyx/ui/classic.ui
 share/lyx/ui/default.ui
 share/lyx/ui/stdmenus.ui
