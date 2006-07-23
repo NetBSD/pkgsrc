@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/06/12 00:36:25 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/07/23 15:45:36 minskim Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -49,6 +49,13 @@ SUBST_FILES.mkstrs=	config/cf/Library.tmpl
 SUBST_SED.mkstrs=	-e 's,@MAKESTRS@,${X11ROOT}/bin/makestrs,g'
 SUBST_MESSAGE.mkstrs=	Fixing path of makestrs.
 
+SUBST_CLASSES+=		zlib
+SUBST_STAGE.zlib=	pre-configure
+SUBST_FILES.zlib=	config/cf/Imake.tmpl
+SUBST_SED.zlib=		-e 's|@ZLIBDIR@|${BUILDLINK_PREFIX.zlib}/lib|g' \
+			-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
+SUBST_MESSAGE.zlib=	Adding the zlib library path.
+
 post-install:
 	@${SED} ${XORG_PLIST_SED} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if ${OPSYS} == "Linux"
@@ -66,6 +73,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${X11BASE}/lib/pkgconfig/${f}
 .endfor
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
