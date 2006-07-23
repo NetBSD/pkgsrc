@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/07/05 09:39:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/07/23 04:07:34 minskim Exp $
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-glitz.h
@@ -6,8 +6,8 @@ include/cairo/cairo-pdf.h
 include/cairo/cairo-ps.h
 ${QUARTZ}include/cairo/cairo-quartz.h
 include/cairo/cairo-svg.h
-include/cairo/cairo-xlib-xrender.h
-include/cairo/cairo-xlib.h
+${X11}include/cairo/cairo-xlib-xrender.h
+${X11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
 lib/libcairo.la
 lib/pkgconfig/cairo-ft.pc
@@ -17,8 +17,8 @@ lib/pkgconfig/cairo-png.pc
 lib/pkgconfig/cairo-ps.pc
 ${QUARTZ}lib/pkgconfig/cairo-quartz.pc
 lib/pkgconfig/cairo-svg.pc
-lib/pkgconfig/cairo-xlib-xrender.pc
-lib/pkgconfig/cairo-xlib.pc
+${X11}lib/pkgconfig/cairo-xlib-xrender.pc
+${X11}lib/pkgconfig/cairo-xlib.pc
 lib/pkgconfig/cairo.pc
 share/doc/cairo/Drawing.html
 share/doc/cairo/Fonts.html
