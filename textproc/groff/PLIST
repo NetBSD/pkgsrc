@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/07 19:54:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/07/24 16:49:12 wiz Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -88,8 +88,6 @@ share/doc/groff/${PKGVERSION}/examples/grnexmpl.g
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.me
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.ps
 share/doc/groff/${PKGVERSION}/examples/groff.css
-share/doc/groff/${PKGVERSION}/examples/img/webpage1.png
-share/doc/groff/${PKGVERSION}/examples/img/webpage2.png
 share/doc/groff/${PKGVERSION}/examples/mom/README.txt
 share/doc/groff/${PKGVERSION}/examples/mom/elvis_syntax
 share/doc/groff/${PKGVERSION}/examples/mom/elvis_syntax.new
@@ -100,57 +98,8 @@ share/doc/groff/${PKGVERSION}/examples/mom/sample_docs.mom
 share/doc/groff/${PKGVERSION}/examples/mom/sample_docs.ps
 share/doc/groff/${PKGVERSION}/examples/mom/typesetting.mom
 share/doc/groff/${PKGVERSION}/examples/mom/typesetting.ps
-share/doc/groff/${PKGVERSION}/examples/webpage.html
 share/doc/groff/${PKGVERSION}/examples/webpage.ms
 share/doc/groff/${PKGVERSION}/examples/webpage.ps
-share/doc/groff/${PKGVERSION}/html/img/pic1.png
-share/doc/groff/${PKGVERSION}/html/img/pic10.png
-share/doc/groff/${PKGVERSION}/html/img/pic11.png
-share/doc/groff/${PKGVERSION}/html/img/pic12.png
-share/doc/groff/${PKGVERSION}/html/img/pic13.png
-share/doc/groff/${PKGVERSION}/html/img/pic14.png
-share/doc/groff/${PKGVERSION}/html/img/pic15.png
-share/doc/groff/${PKGVERSION}/html/img/pic16.png
-share/doc/groff/${PKGVERSION}/html/img/pic17.png
-share/doc/groff/${PKGVERSION}/html/img/pic18.png
-share/doc/groff/${PKGVERSION}/html/img/pic19.png
-share/doc/groff/${PKGVERSION}/html/img/pic2.png
-share/doc/groff/${PKGVERSION}/html/img/pic20.png
-share/doc/groff/${PKGVERSION}/html/img/pic21.png
-share/doc/groff/${PKGVERSION}/html/img/pic22.png
-share/doc/groff/${PKGVERSION}/html/img/pic23.png
-share/doc/groff/${PKGVERSION}/html/img/pic24.png
-share/doc/groff/${PKGVERSION}/html/img/pic25.png
-share/doc/groff/${PKGVERSION}/html/img/pic26.png
-share/doc/groff/${PKGVERSION}/html/img/pic27.png
-share/doc/groff/${PKGVERSION}/html/img/pic28.png
-share/doc/groff/${PKGVERSION}/html/img/pic29.png
-share/doc/groff/${PKGVERSION}/html/img/pic3.png
-share/doc/groff/${PKGVERSION}/html/img/pic30.png
-share/doc/groff/${PKGVERSION}/html/img/pic31.png
-share/doc/groff/${PKGVERSION}/html/img/pic32.png
-share/doc/groff/${PKGVERSION}/html/img/pic33.png
-share/doc/groff/${PKGVERSION}/html/img/pic34.png
-share/doc/groff/${PKGVERSION}/html/img/pic35.png
-share/doc/groff/${PKGVERSION}/html/img/pic36.png
-share/doc/groff/${PKGVERSION}/html/img/pic37.png
-share/doc/groff/${PKGVERSION}/html/img/pic38.png
-share/doc/groff/${PKGVERSION}/html/img/pic39.png
-share/doc/groff/${PKGVERSION}/html/img/pic4.png
-share/doc/groff/${PKGVERSION}/html/img/pic40.png
-share/doc/groff/${PKGVERSION}/html/img/pic41.png
-share/doc/groff/${PKGVERSION}/html/img/pic42.png
-share/doc/groff/${PKGVERSION}/html/img/pic43.png
-share/doc/groff/${PKGVERSION}/html/img/pic44.png
-share/doc/groff/${PKGVERSION}/html/img/pic46.png
-share/doc/groff/${PKGVERSION}/html/img/pic47.png
-share/doc/groff/${PKGVERSION}/html/img/pic48.png
-share/doc/groff/${PKGVERSION}/html/img/pic49.png
-share/doc/groff/${PKGVERSION}/html/img/pic5.png
-share/doc/groff/${PKGVERSION}/html/img/pic6.png
-share/doc/groff/${PKGVERSION}/html/img/pic7.png
-share/doc/groff/${PKGVERSION}/html/img/pic8.png
-share/doc/groff/${PKGVERSION}/html/img/pic9.png
 share/doc/groff/${PKGVERSION}/html/mom/appendices.html
 share/doc/groff/${PKGVERSION}/html/mom/color.html
 share/doc/groff/${PKGVERSION}/html/mom/cover.html
@@ -170,35 +119,10 @@ share/doc/groff/${PKGVERSION}/html/mom/toc.html
 share/doc/groff/${PKGVERSION}/html/mom/typemacdoc.html
 share/doc/groff/${PKGVERSION}/html/mom/typesetting.html
 share/doc/groff/${PKGVERSION}/html/mom/using.html
-share/doc/groff/${PKGVERSION}/html/pic-1.html
-share/doc/groff/${PKGVERSION}/html/pic-10.html
-share/doc/groff/${PKGVERSION}/html/pic-11.html
-share/doc/groff/${PKGVERSION}/html/pic-12.html
-share/doc/groff/${PKGVERSION}/html/pic-13.html
-share/doc/groff/${PKGVERSION}/html/pic-14.html
-share/doc/groff/${PKGVERSION}/html/pic-15.html
-share/doc/groff/${PKGVERSION}/html/pic-16.html
-share/doc/groff/${PKGVERSION}/html/pic-17.html
-share/doc/groff/${PKGVERSION}/html/pic-18.html
-share/doc/groff/${PKGVERSION}/html/pic-19.html
-share/doc/groff/${PKGVERSION}/html/pic-2.html
-share/doc/groff/${PKGVERSION}/html/pic-20.html
-share/doc/groff/${PKGVERSION}/html/pic-21.html
-share/doc/groff/${PKGVERSION}/html/pic-22.html
-share/doc/groff/${PKGVERSION}/html/pic-23.html
-share/doc/groff/${PKGVERSION}/html/pic-3.html
-share/doc/groff/${PKGVERSION}/html/pic-4.html
-share/doc/groff/${PKGVERSION}/html/pic-5.html
-share/doc/groff/${PKGVERSION}/html/pic-6.html
-share/doc/groff/${PKGVERSION}/html/pic-7.html
-share/doc/groff/${PKGVERSION}/html/pic-8.html
-share/doc/groff/${PKGVERSION}/html/pic-9.html
-share/doc/groff/${PKGVERSION}/html/pic.html
 share/doc/groff/${PKGVERSION}/meintro.me
 share/doc/groff/${PKGVERSION}/meintro.ps
 share/doc/groff/${PKGVERSION}/meref.me
 share/doc/groff/${PKGVERSION}/meref.ps
-share/doc/groff/${PKGVERSION}/pdf/pdfmark.pdf
 share/doc/groff/${PKGVERSION}/pic.ms
 share/doc/groff/${PKGVERSION}/pic.ps
 share/groff/${PKGVERSION}/eign
@@ -490,12 +414,9 @@ share/groff/site-tmac/mdoc.local
 @dirrm share/groff/${PKGVERSION}/font
 @dirrm share/groff/${PKGVERSION}
 @dirrm share/groff
-@dirrm share/doc/groff/${PKGVERSION}/pdf
 @dirrm share/doc/groff/${PKGVERSION}/html/mom
-@dirrm share/doc/groff/${PKGVERSION}/html/img
 @dirrm share/doc/groff/${PKGVERSION}/html
 @dirrm share/doc/groff/${PKGVERSION}/examples/mom
-@dirrm share/doc/groff/${PKGVERSION}/examples/img
 @dirrm share/doc/groff/${PKGVERSION}/examples
 @dirrm share/doc/groff/${PKGVERSION}
 @dirrm share/doc/groff
