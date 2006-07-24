@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/24 20:03:25 drochner Exp $
 bin/prboom
 bin/prboom-game-server
 man/man5/boom.cfg.5
 man/man6/prboom-game-server.6
 man/man6/prboom.6
-share/doc/prboom/AUTHORS
-share/doc/prboom/COPYING
-share/doc/prboom/MBF.txt
-share/doc/prboom/MBFFAQ.txt
-share/doc/prboom/NEWS
-share/doc/prboom/README
-share/doc/prboom/README.compat
-share/doc/prboom/README.demos
-share/doc/prboom/boom.txt
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/MBF.txt
+share/doc/${PKGNAME}/MBFFAQ.txt
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/README.compat
+share/doc/${PKGNAME}/README.demos
+share/doc/${PKGNAME}/boom.txt
 share/doom/prboom.wad
 @dirrm share/doom
-@dirrm share/doc/prboom
+@dirrm share/doc/${PKGNAME}

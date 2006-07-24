@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2006/04/11 08:29:28 drochner Exp $
+$NetBSD: distinfo,v 1.10 2006/07/24 20:03:25 drochner Exp $
 
-SHA1 (prboom-2.4.1.tar.gz) = fc2cacb3bfe256b287ecb63e247e2702978e73f1
-RMD160 (prboom-2.4.1.tar.gz) = 5ac0d1ffe3ceeb3ce69adcc495074e7ac510a130
-Size (prboom-2.4.1.tar.gz) = 879712 bytes
-SHA1 (patch-aa) = 19a4069837236a0d451bb309dc00c5c301b99a1c
-SHA1 (patch-ab) = 0f9bcb8a997f7e2f9c2f3e3fe96814899e3f00a9
-SHA1 (patch-ac) = cd334a29dd37840b7f2d80f46216b0b0487f44a4
+SHA1 (prboom-2.4.3.tar.gz) = f2d76fa8925226d7e3a623951413e6a10384f2e9
+RMD160 (prboom-2.4.3.tar.gz) = b8412e8ed1e4ed28165e4862a76923b474776893
+Size (prboom-2.4.3.tar.gz) = 947872 bytes
+SHA1 (patch-aa) = e4254ad7a29380fdf7af0d0e59063abf7b77acd2
+SHA1 (patch-ab) = 2e98b4ef7c13953ca0397499b881f437d6a245a3
+SHA1 (patch-ac) = c2f185096970313689a3e7025eb32b9c4fedf9b5
