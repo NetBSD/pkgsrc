@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2006/07/24 20:36:39 drochner Exp $
+
+--- src/callbacks.c.orig	2006-07-22 16:22:03.000000000 +0200
++++ src/callbacks.c
+@@ -139,7 +139,7 @@ void ui_init(int mainwindowState) {
+ 		g_print("DBUS disabled by user request...");
+ 	}
+ #else
+-	debug0("Compiled without DBUS support.");
++	debug0(DEBUG_GUI, "Compiled without DBUS support.");
+ #endif
+ 
+ 	/* setup one minute timer for automatic updating, and try updating now */
