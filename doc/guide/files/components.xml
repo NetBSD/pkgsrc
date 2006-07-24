@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.25 2006/06/25 10:33:33 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.26 2006/07/24 10:32:36 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -21,7 +21,10 @@
      sections that describe the package.</para>
 
     <para>In the first section there are the following variables, which
-      should appear exactly in the order given here.
+    should appear exactly in the order given here. The ordering and
+    grouping of variables is mostly historical and has no further
+    meaning.</para>
+
       <itemizedlist>
 
       <listitem><para><varname>DISTNAME</varname> is the basename of the
@@ -56,83 +59,13 @@
 </programlisting>
 	</listitem>
 
-	<listitem><para><varname>MASTER_SITES</varname> is a list of URLs where
-	    the distribution files can be downloaded. Each URL must end with a
-	    slash.</para>
-	  <para>The <varname>MASTER_SITES</varname> may make use of
-	    the following predefined sites:</para>
+	<listitem><para><varname>MASTER_SITES</varname>,
+	<varname>DYNAMIC_MASTER_SITES</varname>,
+	<varname>DIST_SUBDIR</varname>, <varname>EXTRACT_SUFX</varname>
+	and <varname>DISTFILES</varname> are discussed in detail in
+	<xref linkend="build.fetch"/>.</para></listitem>
 
-<!-- sort bsd.sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/        ${\1}/p' -->
-<programlisting>
-    ${MASTER_SITE_APACHE}
-    ${MASTER_SITE_BACKUP}
-    ${MASTER_SITE_CYGWIN}
-    ${MASTER_SITE_DEBIAN}
-    ${MASTER_SITE_FREEBSD}
-    ${MASTER_SITE_FREEBSD_LOCAL}
-    ${MASTER_SITE_GNOME}
-    ${MASTER_SITE_GNU}
-    ${MASTER_SITE_GNUSTEP}
-    ${MASTER_SITE_IFARCHIVE}
-    ${MASTER_SITE_MOZILLA}
-    ${MASTER_SITE_OPENOFFICE}
-    ${MASTER_SITE_PERL_CPAN}
-    ${MASTER_SITE_R_CRAN}
-    ${MASTER_SITE_SOURCEFORGE}
-    ${MASTER_SITE_SUNSITE}
-    ${MASTER_SITE_SUSE}
-    ${MASTER_SITE_TEX_CTAN}
-    ${MASTER_SITE_XCONTRIB}
-    ${MASTER_SITE_XEMACS}
-</programlisting>
-
-	  <para>If one of these predefined sites is chosen, you may
-	    want to specify a subdirectory of that
-	    site.  Since these macros may expand to more than one
-	    actual site, you <emphasis>must</emphasis> use the
-	    following construct to specify a subdirectory:</para>
-
-<programlisting>
-    ${MASTER_SITE_GNU:=subdirectory/name/}
-    ${MASTER_SITE_SOURCEFORGE:=project_name/}
-</programlisting>
-
-	  <para>Note the trailing slash after the subdirectory name.</para>
-
-	  <para>If the package has multiple
-	    <varname>DISTFILES</varname> or multiple
-	    <varname>PATCHFILES</varname> from different
-	    sites, set <varname>SITES.foo</varname> to a list of URIs
-	    where file <quote>foo</quote> may be
-	    found. <quote>foo</quote> includes the suffix, e.g.:</para>
-
-<programlisting>
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-    DISTFILES+=     foo-file.tar.gz
-    SITES.foo-file.tar.gz= \
-            http://www.somewhere.com/somehow/ \
-            http://www.somewhereelse.com/mirror/somehow/
-</programlisting>
-	</listitem>
-
-	<listitem><para><varname>DISTFILES</varname>: Name(s)
-	    of archive file(s) containing distribution. The default is
-	    <filename>${DISTNAME}${EXTRACT_SUFX}</filename>. Should only
-	    be set if you have more than one distfile.</para>
-	  <para>Note that the normal default setting of
-	    <varname>DISTFILES</varname> must be made explicit if you
-	    want to add to it (rather than replace it), as you usually
-	    would.</para>
-	</listitem>
-
-	<listitem><para><varname>EXTRACT_SUFX</varname>: Suffix of the
-	    distribution file, will be appended to
-	    <varname>DISTNAME</varname>. Defaults to
-	    <filename>.tar.gz</filename>.
-	  </para>
-	</listitem>
-      </itemizedlist>
-    </para>
+	</itemizedlist>
 
     <para>The second section contains information about separately
       downloaded patches, if any.
