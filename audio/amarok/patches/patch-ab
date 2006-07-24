@@ -1,13 +1,22 @@
-$NetBSD: patch-ab,v 1.1 2006/05/26 09:07:49 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/24 13:58:11 joerg Exp $
 
---- configure.orig	2006-05-26 08:09:23.000000000 +0000
+--- configure.orig	2006-07-02 20:29:34.000000000 +0000
 +++ configure
-@@ -36295,7 +36295,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
+@@ -36047,7 +36047,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-ltunepimp  $LIBS"
 +LIBS="-ltunepimp $PTHREAD_LDFLAGS $PTHREAD_LIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -36519,7 +36519,7 @@ if test "${ac_cv_lib_konqsidebarplugin__
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lkonqsidebarplugin  $LIBS"
++LIBS="-lkonqsidebarplugin ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
