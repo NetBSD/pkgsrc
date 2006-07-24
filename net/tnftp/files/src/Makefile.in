@@ -41,7 +41,7 @@ install: all
 	-mkdir -p ${bindir}
 	${INSTALL} -m 555 ${PROG} ${bindir}/`echo ${PROG}|sed '$(transform)'`
 	-mkdir -p ${mandircat1}
-	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${mandircat1}/`echo ${PROG}|sed '$(transform)'`.1
+	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${mandircat1}/`echo ${PROG}|sed '$(transform)'`.0
 
 clean:
 	rm -f core ${PROG} ${OBJS}

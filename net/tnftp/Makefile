@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/07/14 21:41:42 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/24 08:10:37 rillig Exp $
 
 .include "Makefile.common"
+PKGREVISION=	1
 
 CATEGORIES=	net
 
