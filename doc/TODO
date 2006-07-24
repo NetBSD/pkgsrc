@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5241 2006/07/23 21:04:11 wiz Exp $
+$NetBSD: TODO,v 1.5242 2006/07/24 07:51:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -646,7 +646,6 @@ Suggested package updates
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
-	o joe-3.5
 	o john-1.7.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
