@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.3 2006/07/23 15:48:01 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.4 2006/07/24 12:13:35 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -212,6 +212,98 @@
 
 	<para>An example for action files is
 	<filename>mk/subst.mk</filename>.</para>
+
+</sect2>
+</sect1>
+
+<sect1 id="infr.order">
+<title>The order in which files are loaded</title>
+
+	<para>Package <filename>Makefile</filename>s usually consist of
+	a set of variable definitions, and include the file
+	<filename>../../mk/bsd.pkg.mk</filename> in the very last line.
+	Before that, they may also include various other
+	<filename>*.mk</filename> files if they need to query the
+	availability of certain features like the type of compiler or
+	the X11 implementation. Due to the heavy use of preprocessor
+	directives like <literal>.if</literal> and
+	<literal>.for</literal>, the order in which the files are loaded
+	matters.</para>
+
+	<para>This section describes at which point the various files
+	are loaded and gives reasons for that order.</para>
+
+<sect2 id="infr.order.prefs">
+<title>The order in <filename>bsd.prefs.mk</filename></title>
+
+	<para>The very first action in <filename>bsd.pkg.mk</filename>
+	is to define some essential variables like
+	<varname>OPSYS</varname>, <varname>OS_VERSION</varname> and
+	<varname>MACHINE_ARCH</varname>.</para>
+
+	<para>Then, the user settings are loaded from the file specified
+	in <varname>MAKECONF</varname>. If the bmake command from pkgsrc
+	is used, <varname>MAKECONF</varname> defaults to
+	<filename><replaceable>${prefix}</replaceable>/etc/mk.conf</filename>.
+	With the native &man.make.1; command on NetBSD, it defaults to
+	<filename>/etc/mk.conf</filename>. After that, those variables
+	that have not been overridden by the user are loaded from
+	<filename>mk/defaults/mk.conf</filename>.</para>
+
+	<para>After the user settings, the system settings and platform
+	settings are loaded, which may override the user
+	settings.</para>
+
+	<para>Then, the tool definitions are loaded. The tool wrappers
+	are not yet in effect. This only happens when building a
+	package, so the proper variables must be used instead of the
+	direct tool names.</para>
+
+	<para>As the last steps, some essential variables from the
+	wrapper and the package system flavor are loaded, as well as the
+	variables that have been cached in earlier phases of a package
+	build.</para>
+
+</sect2>
+
+<sect2 id="infr.order.pkg">
+<title>The order in <filename>bsd.pkg.mk</filename></title>
+
+	<para>First, <filename>bsd.prefs.mk</filename> is loaded.</para>
+
+	<para>Then, the various <filename>*-vars.mk</filename> files are
+	loaded, which fill default values for those variables that have
+	not been defined by the the package. These variables may later
+	be used even in unrelated files.</para>
+
+	<para>Then, the file <filename>bsd.pkg.error.mk</filename>
+	provides the target <literal>error-check</literal> that is added
+	as a special dependency to all other targets that use
+	<varname>DELAYED_ERROR_MSG</varname> or
+	<varname>DELAYED_WARNING_MSG</varname>.</para>
+
+	<para>Then, the package-specific hacks from
+	<filename>hacks.mk</filename> are included.</para>
+
+	<!-- bsd.pkg.use.mk -->
+
+	<para>Then, various other files follow. Most of them don't have
+	any dependencies on what they need to have included before or
+	after them, though some do.</para>
+
+	<para>The code to check <varname>PKG_FAIL_REASON</varname> and
+	<varname>PKG_SKIP_REASON</varname> is then executed, which
+	restricts the use of these variables to all the files that have
+	been included before. Appearances in later files will be
+	silently ignored.</para>
+
+	<para>Then, the files for the main targets are included, in the
+	order of later execution, though the actual order should not
+	matter.</para>
+
+	<para>At last, some more files are included that don't set any
+	interesting variables but rather just define make targets to be
+	executed.</para>
 
 </sect2>
 </sect1>
