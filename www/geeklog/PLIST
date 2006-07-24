@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/23 13:21:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/24 16:13:55 taca Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
+${GEEKLOG_BASE}/language/afrikaans.php
+${GEEKLOG_BASE}/language/afrikaans_utf-8.php
 ${GEEKLOG_BASE}/language/bosnian.php
 ${GEEKLOG_BASE}/language/bosnian_utf-8.php
 ${GEEKLOG_BASE}/language/bulgarian.php
