@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.815 2006/07/24 16:38:35 tron Exp $
+$NetBSD: CHANGES-2006,v 1.816 2006/07/24 16:49:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libsigsegv to 2.4nb1 [joerg 2006-07-24]
 	Updated graphics/p5-Image-ExifTool to 6.29 [gdt 2006-07-24]
 	Updated www/geeklog to 1.4.0.5.1 [taca 2006-07-24]
+	Updated textproc/groff to 1.19.2nb4 [wiz 2006-07-24]
