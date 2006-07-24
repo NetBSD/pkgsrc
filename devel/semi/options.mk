@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/09/17 16:41:24 uebayasi Exp $
+# $NetBSD: options.mk,v 1.3 2006/07/24 17:17:18 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.semi
 PKG_SUPPORTED_OPTIONS=	semi-bbdb
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mbbdb)
+.if !empty(PKG_OPTIONS:Msemi-bbdb)
 DEPENDS+=	bbdb-[0-9]*:../../misc/bbdb
 PLIST_SUBST+=	FOR_bbdb=
 .else
