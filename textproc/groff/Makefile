@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2006/04/07 19:54:17 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/07/24 16:49:12 wiz Exp $
 #
 
 DISTNAME=	groff-1.19.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 
@@ -10,15 +10,12 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	GNU roff text processing suite
 
-DEPENDS+=	netpbm>=10.0:../../graphics/netpbm
-DEPENDS+=	psutils>=1.17:../../print/psutils
-
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
-USE_TOOLS+=		gs:run perl:run sed:run
+USE_TOOLS+=		perl:run sed:run awk:run
 
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
 REPLACE_INTERPRETER+=	sed
 REPLACE.sed.old=	.*/sed
@@ -26,6 +23,8 @@ REPLACE.sed.new=	${SED}
 REPLACE_FILES.sed+=	font/devps/generate/symbol.sed
 
 .include "options.mk"
+
+PLIST_SRC+=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +34,7 @@ PLIST_SUBST+=	GNU_PREFIX="g"
 PLIST_SUBST+=	GNU_PREFIX=""
 .endif
 
+BUILD_DEFS+=	PAPERSIZE
 .if defined(PAPERSIZE)
 CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
 .endif
