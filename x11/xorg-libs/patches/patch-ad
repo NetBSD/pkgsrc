@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.5 2006/06/12 00:36:25 joerg Exp $
+$NetBSD: patch-ad,v 1.6 2006/07/24 22:00:47 minskim Exp $
 
---- config/cf/linux.cf.in.orig	2005-12-06 11:06:50.000000000 +0100
-+++ config/cf/linux.cf.in	2005-12-06 11:09:08.000000000 +0100
-@@ -609,10 +609,10 @@
+--- config/cf/linux.cf.in.orig	2005-10-21 19:10:27.000000000 +0000
++++ config/cf/linux.cf.in
+@@ -94,6 +94,9 @@ XCOMM operating system:  OSName (OSMajor
+ XCOMM libc:	(LinuxCLibMajorVersion./**/LinuxCLibMinorVersion./**/LinuxCLibTeenyVersion)
+ XCOMM binutils:	(LinuxBinUtilsMajorVersion)
+ 
++#define ForceNormalLib		YES
++#define SharedLibFont		YES
++
+ #if LinuxDistribution == LinuxDebian
+ # if !defined(NothingOutsideProjectRoot) || !NothingOutsideProjectRoot
+ #  define SystemManDirectory	/usr/share/man
+@@ -116,7 +119,6 @@ InstallNamedTargetNoClobber(install,file
+ # define SharedLibXdmGreet	NO
+ # define LinkGLToUsrInclude	NO
+ # define LinkGLToUsrLib		NO
+-# define SharedLibFont		NO
+ # define SharedLibGlu		YES
+ # define NormalLibGlu		YES
+ # define FSUseSyslog		YES
+@@ -609,10 +611,10 @@ InstallNamedTargetNoClobber(install,file
  #  if defined (i386Architecture) && ((GccMajorVersion >3) \
     || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
  #   ifndef CcCmd
@@ -15,7 +33,7 @@ $NetBSD: patch-ad,v 1.5 2006/06/12 00:36:25 joerg Exp $
  #   endif
  #  endif
  #  if defined (Ppc64Architecture)
-@@ -624,8 +624,8 @@
+@@ -624,8 +626,8 @@ InstallNamedTargetNoClobber(install,file
  #   endif
  #  endif
  #  ifndef CcCmd
@@ -26,7 +44,7 @@ $NetBSD: patch-ad,v 1.5 2006/06/12 00:36:25 joerg Exp $
  #  endif
  #  ifndef AsCmd
  #   define AsCmd		CcCmd -c -x assembler
-@@ -779,7 +779,6 @@
+@@ -779,7 +781,6 @@ InstallNamedTargetNoClobber(install,file
  #define YaccCmd			bison -y
  #define LexCmd			flex -l
  #define HasFlex			YES
@@ -34,7 +52,7 @@ $NetBSD: patch-ad,v 1.5 2006/06/12 00:36:25 joerg Exp $
  #define PreProcessCmd		CcCmd -E
  #define PostIncDir		DefaultGccIncludeDir
  #define LdCombineFlags		-r
-@@ -853,7 +852,7 @@
+@@ -853,7 +854,7 @@ InstallNamedTargetNoClobber(install,file
  
  #ifdef i386Architecture
  # ifndef OptimizedCDebugFlags
@@ -43,7 +61,7 @@ $NetBSD: patch-ad,v 1.5 2006/06/12 00:36:25 joerg Exp $
  # endif
  # define LinuxMachineDefines	-D__i386__
  # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
-@@ -1053,9 +1052,6 @@ InstallNamedTargetNoClobber(install,file
+@@ -1053,9 +1054,6 @@ InstallNamedTargetNoClobber(install,file
  #define TtClientDepLibs $(DEPTTLIB) $(DEPXTOOLLIB) $(DEPXLIB)
  
  #if HaveLib64
