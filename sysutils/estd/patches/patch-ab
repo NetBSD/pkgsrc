@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2005/12/27 09:58:56 dillo Exp $
+$NetBSD: patch-ab,v 1.4 2006/07/24 08:11:38 adam Exp $
 
---- estd.c.orig	2005-01-30 23:15:13.000000000 +0100
+--- estd.c.orig	2006-07-24 10:04:46.000000000 +0200
 +++ estd.c
-@@ -141,7 +141,7 @@ set_freq(int freq)
- int
- freqcmp(const void *x, const void *y)
- {
--	return *((int *) x) > *((int *) y);
-+	return *((int *) x) - *((int *) y);
- }
+@@ -27,6 +27,7 @@
  
- /* clean up the pidfile on exit */
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <time.h>
+ #include <sys/param.h>
