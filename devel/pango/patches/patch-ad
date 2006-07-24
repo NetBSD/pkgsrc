@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.7 2006/07/24 18:09:43 minskim Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=322374
+
+--- pango/Makefile.in.orig	2006-07-24 09:57:03.000000000 -0700
++++ pango/Makefile.in
+@@ -524,6 +524,7 @@ libpangocairo_1_0_la_SOURCES = \
+ $(am__append_16) $(am__append_19) $(am__append_20)
+ 
+ @HAVE_CAIRO_ATSUI_TRUE@libpangocairo_1_0_la_CFLAGS = -xobjective-c
++@HAVE_CAIRO_ATSUI_TRUE@libpangocairo_1_0_la_LDFLAGS += -framework CoreFoundation -framework Carbon -framework Cocoa
+ 
+ libpangowin32_1_0_la_LDFLAGS = $(LIBRARY_LIBTOOL_OPTIONS) $(am__append_23)
+ libpangowin32_1_0_la_LIBADD = \
