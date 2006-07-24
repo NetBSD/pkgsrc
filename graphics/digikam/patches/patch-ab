@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2006/02/23 13:03:24 markd Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/24 12:35:41 markd Exp $
 
---- digikam/digikam/albumlister.cpp.orig	2006-01-17 07:10:18.000000000 +1300
+--- digikam/digikam/albumlister.cpp.orig	2006-07-24 22:51:50.000000000 +1200
 +++ digikam/digikam/albumlister.cpp
 @@ -313,7 +313,7 @@ void AlbumLister::slotData(KIO::Job*, co
      int     albumID;
      QString name;
      QString date;
--    size_t  size;
-+    off_t   size;
+-    off_t   size;
++    size_t   size;
      QSize   dims;
  
      ImageInfoList newItemsList;
