@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2006/07/19 10:56:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.25 2006/07/24 12:24:12 joerg Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -86,6 +86,7 @@ share/kde/applnk/System/ScreenSavers/bumps.desktop
 share/kde/applnk/System/ScreenSavers/cage.desktop
 share/kde/applnk/System/ScreenSavers/carousel.desktop
 share/kde/applnk/System/ScreenSavers/ccurve.desktop
+share/kde/applnk/System/ScreenSavers/celtic.desktop
 share/kde/applnk/System/ScreenSavers/circuit.desktop
 share/kde/applnk/System/ScreenSavers/cloudlife.desktop
 share/kde/applnk/System/ScreenSavers/compass.desktop
@@ -93,6 +94,7 @@ share/kde/applnk/System/ScreenSavers/coral.desktop
 share/kde/applnk/System/ScreenSavers/crackberg.desktop
 share/kde/applnk/System/ScreenSavers/critical.desktop
 share/kde/applnk/System/ScreenSavers/crystal.desktop
+share/kde/applnk/System/ScreenSavers/cube21.desktop
 share/kde/applnk/System/ScreenSavers/cubenetic.desktop
 share/kde/applnk/System/ScreenSavers/cubestorm.desktop
 share/kde/applnk/System/ScreenSavers/cynosure.desktop
@@ -131,6 +133,7 @@ share/kde/applnk/System/ScreenSavers/gflux.desktop
 share/kde/applnk/System/ScreenSavers/glblur.desktop
 share/kde/applnk/System/ScreenSavers/gleidescope.desktop
 share/kde/applnk/System/ScreenSavers/glforestfire.desktop
+share/kde/applnk/System/ScreenSavers/glhanoi.desktop
 share/kde/applnk/System/ScreenSavers/glknots.desktop
 share/kde/applnk/System/ScreenSavers/glmatrix.desktop
 share/kde/applnk/System/ScreenSavers/glplanet.desktop
@@ -155,6 +158,7 @@ share/kde/applnk/System/ScreenSavers/intermomentary.desktop
 share/kde/applnk/System/ScreenSavers/jigglypuff.desktop
 share/kde/applnk/System/ScreenSavers/jigsaw.desktop
 share/kde/applnk/System/ScreenSavers/juggle.desktop
+share/kde/applnk/System/ScreenSavers/juggler3d.desktop
 share/kde/applnk/System/ScreenSavers/julia.desktop
 share/kde/applnk/System/ScreenSavers/kaleidescope.desktop
 share/kde/applnk/System/ScreenSavers/klein.desktop
@@ -235,6 +239,7 @@ share/kde/applnk/System/ScreenSavers/swirl.desktop
 share/kde/applnk/System/ScreenSavers/t3d.desktop
 share/kde/applnk/System/ScreenSavers/tangram.desktop
 share/kde/applnk/System/ScreenSavers/thornbird.desktop
+share/kde/applnk/System/ScreenSavers/timetunnel.desktop
 share/kde/applnk/System/ScreenSavers/triangle.desktop
 share/kde/applnk/System/ScreenSavers/truchet.desktop
 share/kde/applnk/System/ScreenSavers/twang.desktop
