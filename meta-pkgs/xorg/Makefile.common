@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2006/07/04 09:20:18 rillig Exp $
+# $NetBSD: Makefile.common,v 1.42 2006/07/24 14:11:13 joerg Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will
 #   be built in.
@@ -220,6 +220,13 @@ SUBST_SED.thr=		-e 's|@@NETBSD_THREADLIB@@|-DUSE_NBSD_THREADLIB|'
 SUBST_SED.thr=		-e 's|@@NETBSD_THREADLIB@@||'
 .  endif
 .endif
+
+SUBST_CLASSES+=		zlib
+SUBST_STAGE.zlib=	pre-configure
+SUBST_FILES.zlib=	config/cf/Imake.tmpl
+SUBST_SED.zlib=		-e 's|@ZLIBDIR@|${BUILDLINK_PREFIX.zlib}/lib|g' \
+			-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
+SUBST_MESSAGE.zlib=	Adding the zlib library path.
 
 USE_LANGUAGES=		c c++
 
