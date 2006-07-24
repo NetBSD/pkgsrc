@@ -1,8 +1,17 @@
-$NetBSD: patch-ak,v 1.1 2006/07/17 12:29:57 xtraeme Exp $
+$NetBSD: patch-ak,v 1.2 2006/07/24 17:07:15 xtraeme Exp $
 
---- apps/obexftp_sdp.c.orig	2006-07-15 19:50:12.000000000 +0100
+--- apps/obexftp_sdp.c.orig	2006-03-08 00:34:15.000000000 +0100
 +++ apps/obexftp_sdp.c
-@@ -34,6 +34,53 @@
+@@ -25,6 +25,8 @@
+ #include <config.h>
+ #endif
+ 
++#ifdef HAVE_BLUETOOTH
++
+ #include <stdio.h>
+ #include <errno.h>
+ #include <unistd.h>
+@@ -34,6 +36,53 @@
  #include <sys/types.h>
  #include <sys/socket.h>
  
@@ -52,12 +61,13 @@ $NetBSD: patch-ak,v 1.1 2006/07/17 12:29:57 xtraeme Exp $
 +
 +	return 0;
 +}
-+#else
++#else /* __NetBSD__ */
  #include <bluetooth/bluetooth.h>
  #include <bluetooth/sdp.h>
  #include <bluetooth/sdp_lib.h>
-@@ -173,3 +220,4 @@ int obexftp_sdp_search(bdaddr_t *src, bd
+@@ -173,3 +222,5 @@ int obexftp_sdp_search(bdaddr_t *src, bd
  	return 0;
  }
  */
-+#endif
++#endif /* !__NetBSD__ */
++#endif /* HAVE_BLUETOOTH */
