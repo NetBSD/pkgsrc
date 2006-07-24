@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2006/07/17 12:29:57 xtraeme Exp $
+$NetBSD: patch-ai,v 1.2 2006/07/24 17:07:15 xtraeme Exp $
 
---- apps/obexftpd.c.orig	2006-07-09 16:43:20.000000000 +0200
-+++ apps/obexftpd.c	2006-07-09 16:45:04.000000000 +0200
+--- apps/obexftpd.c.orig	2006-04-13 07:57:55.000000000 +0200
++++ apps/obexftpd.c
 @@ -23,6 +23,10 @@
   * Created at:    Don, 2 Okt 2003
   */
@@ -27,4 +27,65 @@ $NetBSD: patch-ai,v 1.1 2006/07/17 12:29:57 xtraeme Exp $
 +
  /* just until there is a server layer in obexftp */
  #include <openobex/obex.h>
+ 
+@@ -934,16 +946,21 @@ static void start_server(int transport)
+ 		exit(0);
+ 	}
+ 
+-       	if (transport==OBEX_TRANS_BLUETOOTH && 0 > obexftp_sdp_register())
+-       	{
+-       		//OBEX_Cleanup(handle);
+-       		fprintf(stderr, "register to SDP Server failed.\n");
+-       		exit(0);
+-       	}
+-       	else
+-       	{
+-       		use_sdp = 1;
+-       	}
++#ifdef HAVE_BLUETOOTH
++       	if (transport==OBEX_TRANS_BLUETOOTH)
++	{
++		if (0 > obexftp_sdp_register())
++       		{
++       			//OBEX_Cleanup(handle);
++       			fprintf(stderr, "register to SDP Server failed.\n");
++       			exit(0);
++       		}
++       		else
++       		{
++       			use_sdp = 1;
++       		}
++	}
++#endif
+ 	
+ reset:
+ 	handle = OBEX_Init(transport, obex_event, 0);
+@@ -963,12 +980,14 @@ reset:
+ 	       		exit(-1);
+ 		}
+        	break;
++#ifdef HAVE_BLUETOOTH
+        	case OBEX_TRANS_BLUETOOTH:
+ 		if (0 > BtOBEX_ServerRegister(handle, bt_src, channel)) {
+        			perror("failed to register bluetooth server");
+ 	       		exit(-1);
+ 		}
+        	break;
++#endif
+        	case OBEX_TRANS_IRDA:
+ 		if (0 > IrOBEX_ServerRegister(handle, "")) {
+        			perror("failed to register IrDA server");
+@@ -1002,11 +1021,13 @@ reset:
+ 		goto reset;
+ 	}
+ 	
++#ifdef HAVE_BLUETOOTH
+ 	if (use_sdp)
+ 	{
+ 		fprintf(stderr, "sdp unregister\n");
+ 		obexftp_sdp_unregister();
+ 	}
++#endif
+ 
+ }
  
