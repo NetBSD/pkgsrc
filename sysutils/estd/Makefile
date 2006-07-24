@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/12/29 06:22:17 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/24 08:11:38 adam Exp $
 
-DISTNAME=	estd-netbsd-r4
-PKGNAME=	estd-0.4
-PKGREVISION=	1
+DISTNAME=	estd-r5
+PKGNAME=	estd-0.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.elektro-eel.org/
 
@@ -10,9 +9,7 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.elektro-eel.org/
 COMMENT=	Dynamically sets the CPU-frequency on SpeedStep-enabled CPUs
 
-ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386
-
-WRKSRC=			${WRKDIR}/estd-r4
+ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 DragonFly-*-i386
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	do-configure
