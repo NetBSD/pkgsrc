@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/07/24 12:35:41 markd Exp $
 bin/digikam
 bin/showfoto
 include/digikam/colorgradientwidget.h
@@ -27,8 +27,8 @@ lib/kde3/kio_digikamsearch.la
 lib/kde3/kio_digikamtags.la
 lib/kde3/kio_digikamthumbnail.la
 lib/libdigikam.la
+share/applications/kde/digikam.desktop
 share/applications/kde/showfoto.desktop
-share/kde/applnk/Graphics/digikam.desktop
 share/kde/apps/digikam/data/autolevels.png
 share/kde/apps/digikam/data/browntone.png
 share/kde/apps/digikam/data/bwgreen.png
@@ -313,6 +313,7 @@ share/kde/services/digikamtags.protocol
 share/kde/services/digikamthumbnail.protocol
 share/kde/servicetypes/digikamimageplugin.desktop
 share/locale/bg/LC_MESSAGES/digikam.mo
+share/locale/bn/LC_MESSAGES/digikam.mo
 share/locale/br/LC_MESSAGES/digikam.mo
 share/locale/ca/LC_MESSAGES/digikam.mo
 share/locale/cs/LC_MESSAGES/digikam.mo
@@ -323,6 +324,7 @@ share/locale/el/LC_MESSAGES/digikam.mo
 share/locale/en_GB/LC_MESSAGES/digikam.mo
 share/locale/es/LC_MESSAGES/digikam.mo
 share/locale/et/LC_MESSAGES/digikam.mo
+share/locale/eu/LC_MESSAGES/digikam.mo
 share/locale/fi/LC_MESSAGES/digikam.mo
 share/locale/fr/LC_MESSAGES/digikam.mo
 share/locale/ga/LC_MESSAGES/digikam.mo
@@ -332,8 +334,10 @@ share/locale/hu/LC_MESSAGES/digikam.mo
 share/locale/is/LC_MESSAGES/digikam.mo
 share/locale/it/LC_MESSAGES/digikam.mo
 share/locale/ja/LC_MESSAGES/digikam.mo
+share/locale/km/LC_MESSAGES/digikam.mo
 share/locale/lt/LC_MESSAGES/digikam.mo
 share/locale/mk/LC_MESSAGES/digikam.mo
+share/locale/ms/LC_MESSAGES/digikam.mo
 share/locale/mt/LC_MESSAGES/digikam.mo
 share/locale/nb/LC_MESSAGES/digikam.mo
 share/locale/nl/LC_MESSAGES/digikam.mo
@@ -351,6 +355,8 @@ share/locale/sr@Latn/LC_MESSAGES/digikam.mo
 share/locale/sv/LC_MESSAGES/digikam.mo
 share/locale/ta/LC_MESSAGES/digikam.mo
 share/locale/tr/LC_MESSAGES/digikam.mo
+share/locale/uk/LC_MESSAGES/digikam.mo
+share/locale/vi/LC_MESSAGES/digikam.mo
 share/locale/zh_CN/LC_MESSAGES/digikam.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
