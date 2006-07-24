@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/24 22:51:32 wiz Exp $
 #
 
-DISTNAME=		setuptools-0.6a10-py2.4.egg
-PKGNAME=		py24-setuptools-0.6a10
+DISTNAME=		setuptools-0.6c1-py2.4.egg
+PKGNAME=		py24-setuptools-0.6c1
 CATEGORIES=		devel
 MASTER_SITES=		http://cheeseshop.python.org/packages/2.4/s/setuptools/
 EXTRACT_SUFX=		# empty
