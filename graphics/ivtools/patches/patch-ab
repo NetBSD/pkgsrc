@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.2 2004/05/29 13:06:29 markd Exp $
+$NetBSD: patch-ab,v 1.3 2006/07/24 12:04:26 markd Exp $
 
---- configure.orig	2004-01-30 07:22:33.000000000 +1300
+--- configure.orig	2005-10-07 07:00:22.000000000 +1300
 +++ configure
-@@ -3635,7 +3635,7 @@ if test "${ac_cv_lib_stdcpp_peek__7istre
+@@ -3734,7 +3734,7 @@ if test "${ac_cv_lib_stdcpp_peek__7istre
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lstdc++  $LIBS"
 +LIBS="-lstdc++ -lm $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -3695,7 +3695,7 @@ if test "${ac_cv_lib_stdcpp__ZNSi4peekEv
+ _ACEOF
+@@ -3804,7 +3804,7 @@ if test "${ac_cv_lib_stdcpp__ZNSi4peekEv
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lstdc++  $LIBS"
 +LIBS="-lstdc++ -lm $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
+ _ACEOF
