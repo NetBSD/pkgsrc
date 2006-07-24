@@ -1,0 +1,35 @@
+$NetBSD: patch-ap,v 1.1 2006/07/24 12:43:40 markd Exp $
+
+--- korganizer/koprefs.cpp.orig	2006-01-20 05:56:37.000000000 +1300
++++ korganizer/koprefs.cpp
+@@ -41,6 +41,7 @@
+ #include <kemailsettings.h>
+ #include <kstaticdeleter.h>
+ #include <kstringhandler.h>
++#include <ktimezones.h>
+ 
+ #include "koprefs.h"
+ #include <libkpimidentities/identitymanager.h>
+@@ -145,17 +146,12 @@ void KOPrefs::fillMailDefaults()
+ void KOPrefs::setTimeZoneIdDefault()
+ {
+   QString zone;
++  KTimezones *db;
+ 
+-  char zonefilebuf[100];
+-  int len = readlink("/etc/localtime",zonefilebuf,100);
+-  if (len > 0 && len < 100) {
+-    zonefilebuf[len] = '\0';
+-    zone = zonefilebuf;
+-    zone = zone.mid(zone.find("zoneinfo/") + 9);
+-  } else {
+-    tzset();
+-    zone = tzname[0];
+-  }
++  db = new KTimezones();
++
++  zone = (db->local())->name();
++  delete db;
+ 
+   kdDebug () << "----- time zone: " << zone << endl;
+ 
