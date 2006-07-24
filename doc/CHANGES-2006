@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.818 2006/07/24 18:30:20 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.819 2006/07/24 22:52:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3527,3 +3527,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/groff to 1.19.2nb4 [wiz 2006-07-24]
 	Updated devel/pango to 1.12.3nb2 [minskim 2006-07-24]
 	Added sysutils/dirvish version 1.2.1 [wiz 2006-07-24]
+	Updated devel/py24-setuptools to 0.6c1 [wiz 2006-07-24]
