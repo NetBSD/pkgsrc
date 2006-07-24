@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2006/07/24 18:09:43 minskim Exp $
+# $NetBSD: Makefile,v 1.81 2006/07/24 23:20:50 minskim Exp $
 
 DISTNAME=		pango-1.12.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel fonts
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
@@ -39,12 +39,6 @@ CONFIGURE_ARGS+=	--with-qt=no
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
-
-.if exists(/System/Library/Frameworks/Carbon.framework)
-PLIST_SUBST+=		CARBON=
-.else
-PLIST_SUBST+=		CARBON="@comment "
-.endif
 
 .include "options.mk"
 
