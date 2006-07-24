@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.77 2006/07/21 19:08:56 jlam Exp $
+# $NetBSD: bootstrap,v 1.78 2006/07/24 07:57:45 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -43,9 +43,10 @@ ignoreusercheck=no
 preserve_path=no
 
 # where the building takes place
-bootstrapdir=`pwd`
-pkgsrcdir=`dirname $bootstrapdir`
-wrkdir=$bootstrapdir/work
+bootstrapdir=`dirname "$0"`
+bootstrapdir=`cd "${bootstrapdir}" && pwd`
+pkgsrcdir=`dirname "${bootstrapdir}"`
+wrkdir="`pwd`/work"
 
 usage="Usage: $0 "'
     [ --workdir <workdir> ]
@@ -175,7 +176,7 @@ opsys_finish()
 		fi
 		if [ `uname -r` -lt 6 ]; then
 		        echo_msg "Installing fake ldd script"
-        		run_cmd "$install_sh -c -o $user -g $group -m 755 ../pkgtools/bootstrap-extras/files/fakeldd $prefix/sbin"
+        		run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/fakeldd $prefix/sbin"
 			need_extras=yes
 			echo "LDD=			$prefix/sbin/fakeldd" >> ${MKCONF_EXAMPLE}
 		fi
@@ -585,7 +586,7 @@ if [ x"$check_compiler" = x"yes" ]; then
 fi
 
 # build install-sh
-run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' ../sysutils/install-sh/files/install-sh.in > $wrkdir/install-sh"
+run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' $pkgsrcdir/sysutils/install-sh/files/install-sh.in > $wrkdir/install-sh"
 run_cmd "$chmodprog +x $wrkdir/install-sh"
 install_sh="$shprog $wrkdir/install-sh"
 
@@ -641,7 +642,7 @@ VARBASE=$varbase; export VARBASE
 
 # build libnbcompat
 echo_msg "Building libnbcompat"
-copy_src ../pkgtools/libnbcompat/files libnbcompat
+copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
 run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && make)"
 
 if [ x"$needfnmatchh" = x"yes" ]; then
@@ -696,7 +697,7 @@ mkdir_p $mandir/man8 $mandir/cat8
 
 # bootstrap make and *.mk files
 mkdir_p $prefix/share/mk $prefix/lib
-copy_src ../pkgtools/bootstrap-mk-files/files mk-files
+copy_src $pkgsrcdir/pkgtools/bootstrap-mk-files/files mk-files
 
 (
 cd ${wrkdir}/mk-files
@@ -722,20 +723,20 @@ fi
 
 if [ "$need_fixed_strip" = "yes" ] ; then
 	echo_msg "Installing fixed strip script"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 ../pkgtools/bootstrap-extras/files/strip-sh $prefix/bin/strip"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/strip-sh $prefix/bin/strip"
 	echo "TOOLS_PLATFORM.strip?=		$prefix/bin/strip" >> ${MKCONF_EXAMPLE}
 	need_extras=yes
 fi
 
 if [ "$need_mkdir" = "yes" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
-	run_cmd "$install_sh -c -o $user -g $group -m 755 ../pkgtools/bootstrap-extras/files/mkdir-sh $prefix/bin/mkdir-sh"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/mkdir-sh $prefix/bin/mkdir-sh"
 	echo "TOOLS_PLATFORM.mkdir?=		$prefix/bin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
 	need_extras=yes
 fi
 
 echo_msg "Installing bmake"
-copy_src ../devel/bmake/files bmake
+copy_src $pkgsrcdir/devel/bmake/files bmake
 run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk" $bmakexargs)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
 run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/bmake/bmake.1 $mandir/man1/bmake.1"
@@ -745,7 +746,7 @@ bmake=$prefix/bin/bmake
 # bootstrap awk if necessary
 case "$need_awk" in
 yes)	echo_msg "Installing awk"
-	copy_src ../lang/nawk/files awk
+	copy_src $pkgsrcdir/lang/nawk/files awk
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	run_cmd "(cd $wrkdir/awk && $bmake -f Makefile CC=\"${CC}\")"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
@@ -758,7 +759,7 @@ esac
 # bootstrap sed if necessary
 case "$need_sed" in
 yes)	echo_msg "Installing sed"
-	copy_src ../textproc/nbsed/files sed
+	copy_src $pkgsrcdir/textproc/nbsed/files sed
 	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
 	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
@@ -780,7 +781,7 @@ yes)	# bootstrap tnftp
 		;;
 	esac
 	echo_msg "Installing tnftp"
-	copy_src ../net/tnftp/files tnftp
+	copy_src $pkgsrcdir/net/tnftp/files tnftp
 	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $tnftpxenv $shprog ./configure --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && (cd src && $bmake install))"
 	;;
 esac
@@ -794,7 +795,7 @@ echo "FETCH_CMD=			$fetch_cmd" >> ${MKCONF_EXAMPLE}
 # we often need NetBSD's pax as well, nowadays, to make binary packages
 case "$need_pax" in
 yes)	echo_msg "Installing pax"
-	copy_src ../archivers/pax/files pax
+	copy_src $pkgsrcdir/archivers/pax/files pax
 	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
 	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${MKCONF_EXAMPLE}
@@ -808,7 +809,7 @@ esac
 # bootstrap mtree if necessary
 case "$need_mtree" in
 yes)	echo_msg "Installing mtree"
-	copy_src ../pkgtools/mtree/files mtree
+	copy_src $pkgsrcdir/pkgtools/mtree/files mtree
 	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.mtree?=		$prefix/sbin/mtree" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
@@ -819,7 +820,7 @@ esac
 
 # bootstrap pkg_install
 echo_msg "Installing pkgtools"
-copy_src ../pkgtools/pkg_install/files pkg_install
+copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake && $bmake install)"
 
 # opsys specific fiddling
@@ -830,33 +831,33 @@ echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
 
 # register packages
 echo_msg "Registering installed packages"
-run_cmd "(cd ../pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
+run_cmd "(cd $pkgsrcdir/pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
 case "$need_awk" in
-yes)	run_cmd "(cd ../lang/nawk && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/lang/nawk && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_sed" in
-yes)	run_cmd "(cd ../textproc/nbsed && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/textproc/nbsed && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_bsd_install" in
-yes)	run_cmd "(cd ../sysutils/install-sh && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/sysutils/install-sh && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_extras" in
-yes)	run_cmd "(cd ../pkgtools/bootstrap-extras && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/pkgtools/bootstrap-extras && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_ftp" in
-yes)	run_cmd "(cd ../pkgtools/tnftp && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/pkgtools/tnftp && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_mtree" in
-yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
 case "$need_pax" in
-yes)	run_cmd "(cd ../pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
+yes)	run_cmd "(cd $pkgsrcdir/pkgtools/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)" ;;
 esac
-run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
+run_cmd "(cd $pkgsrcdir/pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
 
 # Install the man page.
 echo_msg "Installing packages(7) man page"
-run_cmd "(cd ../pkgtools/pkgmanpages && $bmake PKG_VERBOSE=yes MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir CREATE_WRKDIR_SYMLINK=no install)"
+run_cmd "(cd $pkgsrcdir/pkgtools/pkgmanpages && $bmake PKG_VERBOSE=yes MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir CREATE_WRKDIR_SYMLINK=no install)"
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
