@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2006/07/15 21:04:07 markd Exp $
+$NetBSD: distinfo,v 1.45 2006/07/24 12:43:40 markd Exp $
 
 SHA1 (kdepim-3.5.3.tar.bz2) = c957fffefaa73e8be670b2a2d639b82205fe5309
 RMD160 (kdepim-3.5.3.tar.bz2) = fdd951d6c117246f170986d944d3d61c094e9a00
@@ -12,3 +12,5 @@ SHA1 (patch-ak) = cac11150a708f2f4258b9371f9aaa72b133a821d
 SHA1 (patch-al) = 723424b7c39c5e0e0899b340a30e5a3f32c90a6a
 SHA1 (patch-am) = 29066a35ac983764a8cfa9392b9d67df581b35d3
 SHA1 (patch-an) = cb4cacc1e8ad1f3c5e4103149243829047ce94fe
+SHA1 (patch-ao) = f3760617e77fe74d80733613a18905971ee4c5f9
+SHA1 (patch-ap) = be70d56c66e3956a969f6d858947d83082ae2673
