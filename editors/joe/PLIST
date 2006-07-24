@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/07 18:22:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/24 07:50:12 adam Exp $
 bin/jmacs
 bin/joe
 bin/jpico
@@ -21,6 +21,7 @@ share/examples/joe/joerc
 share/examples/joe/jpicorc
 share/examples/joe/jstarrc
 share/examples/joe/lang/de.po
+share/examples/joe/lang/fr.po
 share/examples/joe/lang/ru.po
 share/examples/joe/rjoerc
 share/examples/joe/syntax/4gl.jsf
@@ -37,8 +38,10 @@ share/examples/joe/syntax/fortran.jsf
 share/examples/joe/syntax/haskell.jsf
 share/examples/joe/syntax/html.jsf
 share/examples/joe/syntax/java.jsf
+share/examples/joe/syntax/joerc.jsf
 share/examples/joe/syntax/lisp.jsf
 share/examples/joe/syntax/lua.jsf
+share/examples/joe/syntax/m4.jsf
 share/examples/joe/syntax/mail.jsf
 share/examples/joe/syntax/mason.jsf
 share/examples/joe/syntax/ocaml.jsf
