@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.813 2006/07/24 15:24:47 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.814 2006/07/24 16:14:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/kdepim to 3.5.3nb1 [markd 2006-07-24]
 	Updated devel/libsigsegv to 2.4nb1 [joerg 2006-07-24]
 	Updated graphics/p5-Image-ExifTool to 6.29 [gdt 2006-07-24]
+	Updated www/geeklog to 1.4.0.5.1 [taca 2006-07-24]
