@@ -102,6 +102,7 @@ gpgsm
 gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
 graphs	
+groff-docs		Install documentation images.
 gsasl	
 gssapi	
 gstreamer	
