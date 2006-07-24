@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/03/29 02:02:48 markd Exp $
+$NetBSD: distinfo,v 1.7 2006/07/24 12:35:41 markd Exp $
 
-SHA1 (digikamimageplugins-0.8.1.tar.bz2) = 0f7e1897f761da328ed3068a09c5ce7133fd44d9
-RMD160 (digikamimageplugins-0.8.1.tar.bz2) = 753ebcfa0c2bbdd581f07c279d9e86d908cb0d5e
-Size (digikamimageplugins-0.8.1.tar.bz2) = 3422876 bytes
-SHA1 (patch-aa) = fb7e33326cb44df998965a75aac4150406d85257
+SHA1 (digikamimageplugins-0.8.2.tar.bz2) = 9d76e6c0e0cdc49bbb0e9e542cf3f3aab897fbae
+RMD160 (digikamimageplugins-0.8.2.tar.bz2) = 802bad364336ed8734c5594078cfcfbbcf97a0ec
+Size (digikamimageplugins-0.8.2.tar.bz2) = 3527144 bytes
