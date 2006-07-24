@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/22 03:20:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/24 12:04:26 markd Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -563,6 +563,7 @@ include/Unidraw/unidraw.h
 include/Unidraw/upage.h
 include/Unidraw/viewer.h
 include/ivstd/fstream.h
+include/ivstd/iosfwd
 include/ivstd/iostream.h
 include/ivstd/malloc.h
 include/ivstd/math.h
