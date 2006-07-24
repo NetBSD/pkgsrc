@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.661 2006/07/22 06:47:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.662 2006/07/24 09:25:57 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4002,8 +4002,8 @@ sub checkline_mk_shellcmd_use($$) {
 		${PAX}
 	));
 	use constant discouraged_install_commands => array_to_hash(qw(
-		${SED}
-		${TR}
+		sed ${SED}
+		tr ${TR}
 	));
 
 	if (defined($mkctx_target) && $mkctx_target =~ qr"^(?:pre|do|post)-install") {
@@ -4188,6 +4188,8 @@ sub checkline_mk_shelltext($$) {
 						"The wrapper framework from pkgsrc takes care that a sufficiently",
 						"capable implementation of that tool will be selected.");
 				}
+
+				checkline_mk_shellcmd_use($line, $shellword);
 
 			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && defined($type = get_variable_type($line, $1)) && $type->basic_type eq "ShellCommand") {
 				checkline_mk_shellcmd_use($line, $shellword);
@@ -4887,6 +4889,13 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				"A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
 				"Each of these components may be a shell globbing expression.",
 				"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
+		}
+
+	} elsif ($type eq "PrefixPathname") {
+		if ($value =~ qr"^man/(.*)") {
+			my ($mansubdir) = ($1);
+
+			$line->log_warning("Please use \"\${PKGMANDIR}/${mansubdir}\" instead of \"${value}\".");
 		}
 
 	} elsif ($type eq "RelativePkgDir") {
@@ -6887,14 +6896,26 @@ sub checkfile_PLIST($) {
 					}
 				}
 
-			} elsif ($text =~ qr"^man/cat(\d)/(.*)\.\d$") {
-				my ($cat, $manpage) = ($1, $2);
-				if (!exists($all_files->{"man/man${cat}/${manpage}.${cat}"})) {
+			} elsif ($text =~ qr"^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$") {
+				my ($cat_or_man, $section, $manpage, $ext, $gz) = ($1, $2, $3, $4, $5);
+
+				if ($section !~ qr"^[\dln]$") {
+					$line->log_warning("Unknown section \"${section}\" for manual page.");
+				}
+
+				if ($cat_or_man eq "cat" && !exists($all_files->{"man/man${section}/${manpage}.${section}"})) {
 					$line->log_warning("Preformatted manual page without unformatted one.");
 				}
 
-			} elsif ($text =~ qr"^man/man(\d)/([^/]+)\.\1(\.gz)?$") {
-				my ($cat, $manpage, $gz) = ($1, $2, $3);
+				if ($cat_or_man eq "cat") {
+					if ($ext ne "0") {
+						$line->log_warning("Preformatted manual pages should end in \".0\".");
+					}
+				} else {
+					if ($section ne $ext) {
+						$line->log_warning("Mismatch between the section (${section}) and extension (${ext}) of the manual page.");
+					}
+				}
 
 				if (defined($gz)) {
 					$line->log_note("The .gz extension is unnecessary for manual pages.");
@@ -6904,6 +6925,12 @@ sub checkfile_PLIST($) {
 						"automatically, no matter if the .gz extension is mentioned in the PLIST",
 						"or not.");
 				}
+
+			} elsif ($text =~ qr"^man/cat") {
+				$line->log_warning("Invalid filename \"${text}\" for preformatted manual page.");
+
+			} elsif ($text =~ qr"^man/man") {
+				$line->log_warning("Invalid filename \"${text}\" for unformatted manual page.");
 
 			} elsif ($text =~ qr"^sbin/(.*)") {
 				my ($binname) = ($1);
