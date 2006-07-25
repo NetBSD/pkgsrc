@@ -1,18 +1,19 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.9 2006/07/22 16:31:35 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.10 2006/07/25 18:04:25 jlam Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
 # _BARRIER_PRE_TARGETS is a list of the targets that must be built before
 #	the "barrier" target invokes a new make.
 #
-_BARRIER_PRE_TARGETS=	tools
+_BARRIER_PRE_TARGETS=	checksum makedirs depends
 
 # _BARRIER_POST_TARGETS is a list of the targets that must be built after
 #	the "barrier" target invokes a new make.  This list is specially
 #	ordered so that if more than one is specified on the command-line,
 #	then pkgsrc will still do the right thing.
 #
-_BARRIER_POST_TARGETS=	wrapper
+_BARRIER_POST_TARGETS=	tools
+_BARRIER_POST_TARGETS+=	wrapper
 _BARRIER_POST_TARGETS+=	extract
 _BARRIER_POST_TARGETS+=	patch
 _BARRIER_POST_TARGETS+=	configure
