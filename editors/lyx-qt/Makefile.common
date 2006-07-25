@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2006/07/23 00:28:12 reed Exp $
+# $NetBSD: Makefile.common,v 1.41 2006/07/25 12:20:44 joerg Exp $
 #
 
 DISTNAME=		lyx-1.4.2
@@ -30,6 +30,7 @@ USE_DIRS+=		texmf-1.0
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run
+EXTRACT_USING=		gtar
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
