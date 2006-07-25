@@ -1,18 +1,27 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/30 21:10:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/25 22:12:38 minskim Exp $
 bin/hg
 bin/hgmerge
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
 ${PYSITELIB}/hgext/__init__.pyo
+${PYSITELIB}/hgext/acl.py
+${PYSITELIB}/hgext/acl.pyc
+${PYSITELIB}/hgext/acl.pyo
 ${PYSITELIB}/hgext/bugzilla.py
 ${PYSITELIB}/hgext/bugzilla.pyc
 ${PYSITELIB}/hgext/bugzilla.pyo
+${PYSITELIB}/hgext/extdiff.py
+${PYSITELIB}/hgext/extdiff.pyc
+${PYSITELIB}/hgext/extdiff.pyo
 ${PYSITELIB}/hgext/gpg.py
 ${PYSITELIB}/hgext/gpg.pyc
 ${PYSITELIB}/hgext/gpg.pyo
 ${PYSITELIB}/hgext/hbisect.py
 ${PYSITELIB}/hgext/hbisect.pyc
 ${PYSITELIB}/hgext/hbisect.pyo
+${PYSITELIB}/hgext/hgk.py
+${PYSITELIB}/hgext/hgk.pyc
+${PYSITELIB}/hgext/hgk.pyo
 ${PYSITELIB}/hgext/mq.py
 ${PYSITELIB}/hgext/mq.pyc
 ${PYSITELIB}/hgext/mq.pyo
@@ -53,6 +62,9 @@ ${PYSITELIB}/mercurial/changelog.pyo
 ${PYSITELIB}/mercurial/commands.py
 ${PYSITELIB}/mercurial/commands.pyc
 ${PYSITELIB}/mercurial/commands.pyo
+${PYSITELIB}/mercurial/context.py
+${PYSITELIB}/mercurial/context.pyc
+${PYSITELIB}/mercurial/context.pyo
 ${PYSITELIB}/mercurial/demandload.py
 ${PYSITELIB}/mercurial/demandload.pyc
 ${PYSITELIB}/mercurial/demandload.pyo
@@ -68,9 +80,27 @@ ${PYSITELIB}/mercurial/filelog.pyo
 ${PYSITELIB}/mercurial/hg.py
 ${PYSITELIB}/mercurial/hg.pyc
 ${PYSITELIB}/mercurial/hg.pyo
-${PYSITELIB}/mercurial/hgweb.py
-${PYSITELIB}/mercurial/hgweb.pyc
-${PYSITELIB}/mercurial/hgweb.pyo
+${PYSITELIB}/mercurial/hgweb/__init__.py
+${PYSITELIB}/mercurial/hgweb/__init__.pyc
+${PYSITELIB}/mercurial/hgweb/__init__.pyo
+${PYSITELIB}/mercurial/hgweb/common.py
+${PYSITELIB}/mercurial/hgweb/common.pyc
+${PYSITELIB}/mercurial/hgweb/common.pyo
+${PYSITELIB}/mercurial/hgweb/hgweb_mod.py
+${PYSITELIB}/mercurial/hgweb/hgweb_mod.pyc
+${PYSITELIB}/mercurial/hgweb/hgweb_mod.pyo
+${PYSITELIB}/mercurial/hgweb/hgwebdir_mod.py
+${PYSITELIB}/mercurial/hgweb/hgwebdir_mod.pyc
+${PYSITELIB}/mercurial/hgweb/hgwebdir_mod.pyo
+${PYSITELIB}/mercurial/hgweb/request.py
+${PYSITELIB}/mercurial/hgweb/request.pyc
+${PYSITELIB}/mercurial/hgweb/request.pyo
+${PYSITELIB}/mercurial/hgweb/server.py
+${PYSITELIB}/mercurial/hgweb/server.pyc
+${PYSITELIB}/mercurial/hgweb/server.pyo
+${PYSITELIB}/mercurial/hgweb/wsgicgi.py
+${PYSITELIB}/mercurial/hgweb/wsgicgi.pyc
+${PYSITELIB}/mercurial/hgweb/wsgicgi.pyo
 ${PYSITELIB}/mercurial/httprangereader.py
 ${PYSITELIB}/mercurial/httprangereader.pyc
 ${PYSITELIB}/mercurial/httprangereader.pyo
@@ -80,12 +110,18 @@ ${PYSITELIB}/mercurial/httprepo.pyo
 ${PYSITELIB}/mercurial/i18n.py
 ${PYSITELIB}/mercurial/i18n.pyc
 ${PYSITELIB}/mercurial/i18n.pyo
+${PYSITELIB}/mercurial/keepalive.py
+${PYSITELIB}/mercurial/keepalive.pyc
+${PYSITELIB}/mercurial/keepalive.pyo
 ${PYSITELIB}/mercurial/localrepo.py
 ${PYSITELIB}/mercurial/localrepo.pyc
 ${PYSITELIB}/mercurial/localrepo.pyo
 ${PYSITELIB}/mercurial/lock.py
 ${PYSITELIB}/mercurial/lock.pyc
 ${PYSITELIB}/mercurial/lock.pyo
+${PYSITELIB}/mercurial/lsprof.py
+${PYSITELIB}/mercurial/lsprof.pyc
+${PYSITELIB}/mercurial/lsprof.pyo
 ${PYSITELIB}/mercurial/manifest.py
 ${PYSITELIB}/mercurial/manifest.pyc
 ${PYSITELIB}/mercurial/manifest.pyo
@@ -111,9 +147,15 @@ ${PYSITELIB}/mercurial/revlog.pyo
 ${PYSITELIB}/mercurial/sshrepo.py
 ${PYSITELIB}/mercurial/sshrepo.pyc
 ${PYSITELIB}/mercurial/sshrepo.pyo
+${PYSITELIB}/mercurial/sshserver.py
+${PYSITELIB}/mercurial/sshserver.pyc
+${PYSITELIB}/mercurial/sshserver.pyo
 ${PYSITELIB}/mercurial/statichttprepo.py
 ${PYSITELIB}/mercurial/statichttprepo.pyc
 ${PYSITELIB}/mercurial/statichttprepo.pyo
+${PYSITELIB}/mercurial/streamclone.py
+${PYSITELIB}/mercurial/streamclone.pyc
+${PYSITELIB}/mercurial/streamclone.pyo
 ${PYSITELIB}/mercurial/templater.py
 ${PYSITELIB}/mercurial/templater.pyc
 ${PYSITELIB}/mercurial/templater.pyo
@@ -192,5 +234,6 @@ share/doc/mercurial/comparison.txt
 @dirrm share/doc/mercurial
 @dirrm ${PYSITELIB}/mercurial/templates/static
 @dirrm ${PYSITELIB}/mercurial/templates
+@dirrm ${PYSITELIB}/mercurial/hgweb
 @dirrm ${PYSITELIB}/mercurial
 @dirrm ${PYSITELIB}/hgext
