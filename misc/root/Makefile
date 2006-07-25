@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/21 18:10:40 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/07/25 22:20:58 rillig Exp $
 
 DISTNAME=		root_v5.10.00.source
 PKGNAME=		root-5.10
@@ -12,8 +12,7 @@ COMMENT=		OO framework for data analysis and visualisation
 
 WRKSRC=			${WRKDIR}/root
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c++
-#USE_LANGUAGES+=	fortran
+USE_LANGUAGES=		c c++
 
 BUILD_TARGET=
 
