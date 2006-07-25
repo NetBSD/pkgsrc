@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/06/21 23:30:49 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/25 13:17:28 abs Exp $
 #
 
 DISTNAME=	dvd+rw-tools-6.1
@@ -14,7 +14,7 @@ DEPENDS+=	{cdrtools-[1-9]*,cdrtools-ossdvd-[0-9]*}:../../sysutils/cdrtools
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin man/man1
 
