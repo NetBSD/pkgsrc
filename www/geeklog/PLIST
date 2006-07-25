@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3.2.2 2006/07/23 16:30:18 salo Exp $
+@comment $NetBSD: PLIST,v 1.3.2.3 2006/07/25 14:19:16 salo Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
+${GEEKLOG_BASE}/language/afrikaans.php
+${GEEKLOG_BASE}/language/afrikaans_utf-8.php
 ${GEEKLOG_BASE}/language/bosnian.php
 ${GEEKLOG_BASE}/language/bosnian_utf-8.php
 ${GEEKLOG_BASE}/language/bulgarian.php

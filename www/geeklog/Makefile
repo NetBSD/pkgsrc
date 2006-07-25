@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6.2.2 2006/07/23 16:30:18 salo Exp $
+# $NetBSD: Makefile,v 1.6.2.3 2006/07/25 14:19:16 salo Exp $
 #
 
 DISTNAME=	geeklog-${VER}
-PKGREVISION=	1
-PKGNAME=	geeklog-${VER:S/sr/./}
+PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -14,7 +13,7 @@ COMMENT=	PHP/MySQL based application for managing dynamic web content
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
-VER=		1.4.0sr5
+VER=		1.4.0sr5-1
 NO_BUILD=	YES
 
 BUILD_DEFS+=	APACHE_GROUP
