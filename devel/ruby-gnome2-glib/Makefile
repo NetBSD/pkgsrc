@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:52 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/25 16:49:05 minskim Exp $
 #
 
 PKGNAME=		ruby-gnome2-glib-${VERSION}
 COMMENT=		Ruby binding of GLib-2.x
-PKGREVISION=		1
 CATEGORIES=		devel
 
 RUBY_EXTCONF_SUBDIRS=	glib
