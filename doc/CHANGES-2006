@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.826 2006/07/25 16:32:18 salo Exp $
+$NetBSD: CHANGES-2006,v 1.827 2006/07/25 17:01:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3536,3 +3536,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/fvwm-devel to 2.5.17 [martti 2006-07-25]
 	Updated www/jalbum to 6.5.1 [martti 2006-07-25]
 	Added sysutils/hcidump version 1.5.1 [salo 2006-07-25]
+	Updated devel/ruby-gnome2-atk to 0.15.0 [minskim 2006-07-25]
+	Updated devel/ruby-gnome2-glib to 0.15.0 [minskim 2006-07-25]
+	Updated devel/ruby-gnome2-pango to 0.15.0 [minskim 2006-07-25]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 0.15.0 [minskim 2006-07-25]
+	Updated graphics/ruby-gnome2-gnomecanvas to 0.15.0 [minskim 2006-07-25]
+	Updated graphics/ruby-gnome2-libart to 0.15.0 [minskim 2006-07-25]
+	Updated x11/ruby-gnome2-gnome to 0.15.0 [minskim 2006-07-25]
+	Updated x11/ruby-gnome2-gtk to 0.15.0 [minskim 2006-07-25]
+	Updated x11/ruby-gnome2-panelapplet to 0.15.0 [minskim 2006-07-25]
+	Updated meta-pkgs/ruby-gnome2 to 0.15.0nb2 [minskim 2006-07-25]
