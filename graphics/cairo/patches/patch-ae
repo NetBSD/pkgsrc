@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1 2006/07/25 01:48:54 minskim Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=7401
+
+--- test/cairo-test.c.orig	2006-06-30 17:03:52.000000000 -0700
++++ test/cairo-test.c
+@@ -1635,7 +1635,7 @@ cairo_test_expecting (cairo_test_t *test
+ {
+     volatile int i, j, num_targets;
+     const char *tname;
+-    sighandler_t old_segfault_handler;
++    void (*old_segfault_handler)(int);
+     cairo_test_status_t status, ret;
+     cairo_test_target_t **targets_to_test;
+     cairo_test_target_t targets[] =
+@@ -1841,12 +1841,12 @@ cairo_test_expecting (cairo_test_t *test
+ 		    dev_offset);
+ 
+ 	    /* Set up a checkpoint to get back to in case of segfaults. */
+-	    old_segfault_handler = signal (SIGSEGV, (sighandler_t) segfault_handler);
++	    old_segfault_handler = signal (SIGSEGV, segfault_handler);
+ 	    if (0 == setjmp (jmpbuf))
+ 		status = cairo_test_for_target (test, draw, target, dev_offset);
+ 	    else
+ 	        status = CAIRO_TEST_CRASHED;
+-	    signal (SIGSEGV, (sighandler_t) old_segfault_handler);
++	    signal (SIGSEGV, old_segfault_handler);
+ 
+ 	    cairo_test_log ("TEST: %s TARGET: %s FORMAT: %s OFFSET: %d RESULT: ",
+ 			    test->name, target->name,
