@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.44 2006/07/21 14:21:28 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.45 2006/07/25 18:04:25 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,9 +63,6 @@ _COOKIE.tools=	${WRKDIR}/.tools_done
 ### specified by USE_TOOLS.
 ###
 _TOOLS_TARGETS+=	check-vulnerable
-_TOOLS_TARGETS+=	checksum
-_TOOLS_TARGETS+=	makedirs
-_TOOLS_TARGETS+=	depends
 _TOOLS_TARGETS+=	acquire-tools-lock
 _TOOLS_TARGETS+=	${_COOKIE.tools}
 _TOOLS_TARGETS+=	release-tools-lock
@@ -75,8 +72,10 @@ _TOOLS_TARGETS+=	release-tools-lock
 .  if exists(${_COOKIE.tools})
 tools:
 	@${DO_NADA}
-.  else
+.  elif defined(_PKGSRC_BARRIER)
 tools: ${_TOOLS_TARGETS}
+.  else
+tools: barrier
 .  endif
 .endif 
 
