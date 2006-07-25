@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5246 2006/07/25 17:01:52 minskim Exp $
+$NetBSD: TODO,v 1.5247 2006/07/25 17:47:36 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ Suggested package updates
 	o guile-gtk-0.50
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
-	o gxemul-0.4.1
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.18
