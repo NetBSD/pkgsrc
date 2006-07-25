@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.37 2006/07/23 23:22:24 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.38 2006/07/25 14:20:16 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -81,3 +81,5 @@ Pullup ticket 1750 - requested by taca
 bugfixes for geeklog
 Pullup ticket 1752 - requested by tron
 bugfixes for wireshark
+Pullup ticket 1753 - requested by taca
+bugfix update for geeklog
