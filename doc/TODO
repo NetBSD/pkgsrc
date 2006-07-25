@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5245 2006/07/25 16:56:10 wiz Exp $
+$NetBSD: TODO,v 1.5246 2006/07/25 17:01:52 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1060,7 +1060,6 @@ Suggested package updates
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
 	o ruby-cmd-0.8.0
-	o ruby-gnome2-0.15 [pkg/34064]
 	o rxvt-unicode-7.8
 	o sablecc-3.2
 	o samba-3.0.23a
