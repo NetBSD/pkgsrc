@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/02 14:01:34 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/25 15:33:38 joerg Exp $
 
 DISTNAME=	tochnog-20010429
 CATEGORIES=	math
@@ -17,7 +17,7 @@ BUILD_TARGET=	netbsd
 
 MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH:Q}
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin share/doc/tochnog share/tochnog/tools share/tochnog/test
 
