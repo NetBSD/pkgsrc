@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/25 15:12:27 jlam Exp $
 #
 
 DISTNAME=	ko-kaist-20010718
@@ -28,7 +28,9 @@ do-extract:
 		${CP} ${_DISTDIR}$$i ${WRKDIR}; ${GUNZIP_CMD} ${WRKDIR}/$$i; \
 	done
 	${CP} ${.CURDIR}/../../fonts/ko-x11fonts/files/Makefile ${WRKSRC}
-	(cd ${WRKSRC}; ${MAKE} prepare)
+
+do-configure:
+	cd ${WRKSRC}; ${MAKE} prepare
 
 pre-install:
 	[ -d ${FONTDIR} ] || ${INSTALL_DATA_DIR} ${FONTDIR}

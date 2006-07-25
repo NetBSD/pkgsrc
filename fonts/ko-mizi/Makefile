@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/25 15:12:27 jlam Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -35,7 +35,9 @@ do-extract:
 	(cd ${WRKSRC}; for i in ${MIZI_PCF}; do \
 		${GUNZIP_CMD} -c usr/lib/X11/fonts/misc/$$i.Z > $$i; \
 	done)
-	(cd ${WRKSRC}; ${MAKE} prepare)
+
+do-configure:
+	cd ${WRKSRC}; ${MAKE} prepare
 
 pre-install:
 	[ -d ${FONTDIR} ] || ${INSTALL_DATA_DIR} ${FONTDIR}
