@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.6 2006/07/20 19:00:50 jlam Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.7 2006/07/25 16:04:44 jlam Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -103,8 +103,8 @@ _show-dbginfo-config.h:
 .endif
 
 _show-dbginfo-build:
-	@${PRINTF} "BUILD_ENV (sorted alphabetically):\\n"
-	@${PRINTF} "\\t%s\\n" ${BUILD_ENV:O}
+	@${PRINTF} "PKGSRC_MAKE_ENV (sorted alphabetically):\\n"
+	@${PRINTF} "\\t%s\\n" ${PKGSRC_MAKE_ENV:O}
 	@${PRINTF} "BUILD_DIRS:\\n"
 	@${PRINTF} "\\t%s\\n" ${BUILD_DIRS}
 	@${PRINTF} "MAKE_ENV (sorted alphabetically):\\n"
