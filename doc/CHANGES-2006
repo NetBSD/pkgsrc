@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.825 2006/07/25 07:37:55 martti Exp $
+$NetBSD: CHANGES-2006,v 1.826 2006/07/25 16:32:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3535,3 +3535,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-share to 7.0.42 [martti 2006-07-25]
 	Updated wm/fvwm-devel to 2.5.17 [martti 2006-07-25]
 	Updated www/jalbum to 6.5.1 [martti 2006-07-25]
+	Added sysutils/hcidump version 1.5.1 [salo 2006-07-25]
