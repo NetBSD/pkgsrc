@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.subpackage,v 1.10 2006/04/10 05:31:01 jlam Exp $
+# $NetBSD: Makefile.subpackage,v 1.11 2006/07/25 16:01:00 jlam Exp $
 #
 # makefile fragment for p5-gtk sub-packages.  you need to
 # set SUBPACKAGE before including this.
@@ -18,7 +18,9 @@ SUBST_STAGE.3pm=	pre-configure
 SUBST_FILES.3pm=	Makefile.PL
 SUBST_SED.3pm=		-e "s,\.3pm,\.3,g"
 
-post-patch:
+.PHONY: gtk-configure
+pre-configure: gtk-configure
+gtk-configure:
 	cd ${GTKDIR} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 	cd ${GTKDIR} && ${SETENV} ${MAKE_ENV} \
 			${MAKE_PROGRAM} -f ${MAKEFILE} ${BUILD_TARGET}
