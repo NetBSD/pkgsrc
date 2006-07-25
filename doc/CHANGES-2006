@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.822 2006/07/25 05:04:36 martti Exp $
+$NetBSD: CHANGES-2006,v 1.823 2006/07/25 06:21:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3532,3 +3532,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added time/wxRemind version 0.6.18 [wiz 2006-07-24]
 	Updated devel/pango to 1.12.3nb3 [minskim 2006-07-24]
 	Updated mail/postfix to 2.3.1 [martti 2006-07-25]
+	Updated editors/vim-share to 7.0.42 [martti 2006-07-25]
