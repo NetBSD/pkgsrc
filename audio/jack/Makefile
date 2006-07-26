@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/23 15:21:57 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/26 18:25:43 rillig Exp $
 #
 
 DISTNAME=		jack-audio-connection-kit-0.100.0
@@ -13,7 +13,7 @@ COMMENT=		Low-latency audio server
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 
