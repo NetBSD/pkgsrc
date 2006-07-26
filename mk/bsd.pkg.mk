@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1874 2006/07/21 14:21:28 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1875 2006/07/26 19:29:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -746,7 +746,8 @@ makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
 # invokes a new make process with the target named "su-${.TARGET}".
 #
 _ROOT_CMD=	cd ${.CURDIR} &&					\
-		${SETENV} PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}	\
+		${SETENV} ${PKGSRC_MAKE_ENV}				\
+			PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}		\
 		${MAKE} ${MAKEFLAGS}					\
 			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\
 			su-${.TARGET} ${MAKEFLAGS.${.TARGET}}
