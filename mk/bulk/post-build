@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.63 2006/01/21 11:29:32 rillig Exp $
+# $NetBSD: post-build,v 1.64 2006/07/26 17:00:03 wiz Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -322,8 +322,20 @@ sub pkgResult ($$) {
 	my $pkg = $pinfo->{pkg};
 	my $nbrokenby = $pinfo->{nbrokenby};
 	my $nerrors = $pinfo->{nerrors};
+	my $pkgdirmissing = 0;
+	my $DIR;
 
-	my @idents = `$vars{FIND} $vars{USR_PKGSRC}/$pkg -type f -print | xargs grep \\\$NetBSD`;
+	if (not opendir($DIR, "$vars{USR_PKGSRC}/$pkg")) {
+		$pkgdirmissing=1;
+	}
+	else {
+		closedir($DIR);
+	}
+
+	my @idents = "";
+	if (not $pkgdirmissing) {
+		@idents = `$vars{FIND} $vars{USR_PKGSRC}/$pkg -type f -print | xargs grep \\\$NetBSD`;
+	}
 	my $datetime = "";
 	my $file = "";
 	my $ver = "";
@@ -336,7 +348,12 @@ sub pkgResult ($$) {
 		}
 	}
 
-	my $maintainer = `grep ^MAINTAINER $vars{USR_PKGSRC}/$pkg/Makefile`;
+	my $maintainer;
+	if (not $pkgdirmissing) {
+		$maintainer = `grep ^MAINTAINER $vars{USR_PKGSRC}/$pkg/Makefile`;
+	} else {
+		$maintainer = "directory_does_not_exist";
+	}
 	$maintainer =~ s/MAINTAINER=[ \t]*//;
 	if (! $maintainer) {
 		 $maintainer = `cd $vars{USR_PKGSRC}/$pkg ; $BMAKE show-var VARNAME=MAINTAINER`;
