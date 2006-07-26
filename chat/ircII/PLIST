@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/07/22 09:13:10 mrg Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/07/26 02:21:35 mrg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -379,7 +379,6 @@ share/irc/help/set/insert_mode${GZSUFFIX}
 share/irc/help/set/inverse_video${GZSUFFIX}
 share/irc/help/set/irc_encoding${GZSUFFIX}
 share/irc/help/set/irchost${GZSUFFIX}
-share/irc/help/set/iso2022_support${GZSUFFIX}
 share/irc/help/set/lastlog${GZSUFFIX}
 share/irc/help/set/lastlog_level${GZSUFFIX}
 share/irc/help/set/load_path${GZSUFFIX}
@@ -440,7 +439,6 @@ share/irc/help/set/suppress_server_motd${GZSUFFIX}
 share/irc/help/set/tab${GZSUFFIX}
 share/irc/help/set/tab_max${GZSUFFIX}
 share/irc/help/set/underline_video${GZSUFFIX}
-share/irc/help/set/use_old_msg${GZSUFFIX}
 share/irc/help/set/user_information${GZSUFFIX}
 share/irc/help/set/user_wallops${GZSUFFIX}
 share/irc/help/set/verbose_ctcp${GZSUFFIX}
