@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/05/31 13:31:34 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2006/07/26 12:50:26 drochner Exp $
 #
 
 DISTNAME=		GConf-1.0.9
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://advogato.org/proj/GConf/
 COMMENT=		Configuration database system used by GNOME
-
-BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		msgfmt
