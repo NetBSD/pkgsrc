@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/07/26 12:43:06 drochner Exp $
 bin/gswitchit-plugins-capplet
 include/libgswitchit/gswitchit_config.h
 include/libgswitchit/gswitchit_plugin.h
@@ -436,6 +436,8 @@ share/gnome/help/trashapplet/nl/figures/trash-applet.png
 share/gnome/help/trashapplet/nl/trashapplet.xml
 share/gnome/help/trashapplet/pa/figures/trash-applet.png
 share/gnome/help/trashapplet/pa/trashapplet.xml
+share/gnome/help/trashapplet/ru/figures/trash-applet.png
+share/gnome/help/trashapplet/ru/trashapplet.xml
 share/gnome/help/trashapplet/uk/figures/trash-applet.png
 share/gnome/help/trashapplet/uk/trashapplet.xml
 share/icons/hicolor/48x48/apps/ax-applet.png
@@ -451,12 +453,14 @@ share/locale/az/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/br/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/dz/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-applets-2.0.mo
@@ -478,6 +482,7 @@ share/locale/id/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ka/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
@@ -580,6 +585,7 @@ share/omf/trashapplet/trashapplet-fr.omf
 share/omf/trashapplet/trashapplet-it.omf
 share/omf/trashapplet/trashapplet-nl.omf
 share/omf/trashapplet/trashapplet-pa.omf
+share/omf/trashapplet/trashapplet-ru.omf
 share/omf/trashapplet/trashapplet-uk.omf
 share/pixmaps/accessx-status-applet/ax-applet.png
 share/pixmaps/accessx-status-applet/ax-bouncekeys.png
@@ -730,6 +736,8 @@ ${BATTSTAT}@dirrm share/omf/battstat
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/gnome/help/trashapplet/uk/figures
 @dirrm share/gnome/help/trashapplet/uk
+@dirrm share/gnome/help/trashapplet/ru/figures
+@dirrm share/gnome/help/trashapplet/ru
 @dirrm share/gnome/help/trashapplet/pa/figures
 @dirrm share/gnome/help/trashapplet/pa
 @dirrm share/gnome/help/trashapplet/nl/figures
