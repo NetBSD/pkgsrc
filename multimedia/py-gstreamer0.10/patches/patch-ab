@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/07/26 13:06:23 drochner Exp $
+
+--- gst/Makefile.in.orig	2006-06-29 15:52:26.000000000 +0200
++++ gst/Makefile.in
+@@ -846,7 +846,7 @@ interfaces.c: $(INTERFACES_DEFS) $(INTER
+ 
+ .defs.c: 
+ 	(cd $(srcdir) \
+-	&& python $(top_srcdir)/codegen/codegen.py \
++	&& ${PYTHON} $(top_srcdir)/codegen/codegen.py \
+ 		--load-types $(srcdir)/arg-types.py \
+ 		--register $(srcdir)/gst-types.defs \
+ 		--override $*.override \
