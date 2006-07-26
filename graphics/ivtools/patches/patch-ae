@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2006/07/26 11:53:39 markd Exp $
+
+--- config/params.def.orig	2006-07-24 14:49:53.000000000 +0200
++++ config/params.def
+@@ -1056,7 +1056,7 @@ NONSHARED_CCLDFLAGS = NonSharedCCLdFlags
+ 
+ #ifndef TiffCCLdLibs
+ #ifdef TiffLibDir
+-#define TiffCCLdLibs -L$(TIFFLIBDIR) -lTIFF
++#define TiffCCLdLibs -L$(TIFFLIBDIR) -ltiff -Wl,-R$(TIFFLIBDIR)
+ #else
+ #define TiffCCLdLibs /**/
+ #endif
