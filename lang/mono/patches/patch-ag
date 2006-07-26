@@ -1,21 +1,20 @@
-$NetBSD: patch-ag,v 1.5 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-ag,v 1.6 2006/07/26 10:57:41 drochner Exp $
 
 --- libgc/dyn_load.c.orig	2005-04-11 16:12:45.000000000 +0200
 +++ libgc/dyn_load.c
-@@ -70,6 +70,12 @@
+@@ -70,6 +70,11 @@
  #   include <dlfcn.h>
  #   include <link.h>
  #endif
 +
 +#ifdef NETBSD 
-+#include <machine/db_machdep.h>
 +#include <dlfcn.h>
 +#endif
 +
  #ifdef SUNOS4
  #   include <dlfcn.h>
  #   include <link.h>
-@@ -509,6 +515,31 @@ GC_FirstDLOpenedLinkMap()
+@@ -509,6 +514,31 @@ GC_FirstDLOpenedLinkMap()
                  break;
              }
          }

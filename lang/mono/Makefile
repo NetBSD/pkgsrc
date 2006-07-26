@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2006/07/26 10:57:41 drochner Exp $
 
 DISTNAME=	mono-1.1.12.1
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://go-mono.com/sources/mono-1.1/
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
-
-BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
