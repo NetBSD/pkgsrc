@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/26 12:49:06 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/26 17:17:31 drochner Exp $
 
 DISTNAME=	gnome-devel-2.14.0
 CATEGORIES=	meta-pkgs devel gnome
@@ -16,6 +16,7 @@ DEPENDS+=	automake14>=1.4.6:../../devel/automake14
 DEPENDS+=	gettext-m4>=0.11.5:../../devel/gettext-m4
 DEPENDS+=	gnome-common>=2.12.0:../../devel/gnome-common
 DEPENDS+=	gnome-doc-utils>=0.6.0nb1:../../textproc/gnome-doc-utils
+DEPENDS+=	gtk-doc>=1.5nb2:../../textproc/gtk-doc
 DEPENDS+=	intltool>=0.34.2:../../textproc/intltool
 DEPENDS+=	libtool>=1.5.22:../../devel/libtool
 DEPENDS+=	pkg-config>=0.20:../../devel/pkg-config
