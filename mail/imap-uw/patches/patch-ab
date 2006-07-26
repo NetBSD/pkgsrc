@@ -1,44 +1,17 @@
-$NetBSD: patch-ab,v 1.18 2006/07/07 05:45:51 minskim Exp $
+$NetBSD: patch-ab,v 1.19 2006/07/26 20:00:27 jlam Exp $
 
---- src/osdep/unix/Makefile.orig	2006-07-06 22:20:44.000000000 -0700
+--- src/osdep/unix/Makefile.orig	2005-04-30 16:51:13.000000000 -0400
 +++ src/osdep/unix/Makefile
-@@ -41,9 +41,6 @@ GCCOPTLEVEL= -O2
+@@ -124,7 +124,7 @@ DEFAULTDRIVERS=imap nntp pop3 mh mx mbx 
  
- # Extended flags needed for SSL.  You may need to modify.
+ # Normally no need to change any of these
  
--SSLDIR=/usr/local/ssl
--SSLCERTS=$(SSLDIR)/certs
--SSLKEYS=$(SSLCERTS)
- SSLINCLUDE=$(SSLDIR)/include
- SSLLIB=$(SSLDIR)/lib
- 
-@@ -60,7 +57,7 @@ SSLRSA= # -lRSAglue -lrsaref
- 
- SSLCFLAGS= -I$(SSLINCLUDE) -I$(SSLINCLUDE)/openssl\
-  -DSSL_CERT_DIRECTORY=\"$(SSLCERTS)\" -DSSL_KEY_DIRECTORY=\"$(SSLKEYS)\"
--SSLLDFLAGS= -L$(SSLLIB) -lssl $(SSLCRYPTO) $(SSLRSA)
-+SSLLDFLAGS= -lssl $(SSLCRYPTO) $(SSLRSA)
- 
- 
- # Extended flags needed for non-standard passwd types.  You may need to modify.
-@@ -104,14 +101,14 @@ LOCKPGM=/etc/mlock
- # set certain other formats (e.g. mbx and mx) as the EMPTYPROTO since these
- # formats can never be empty files.
- 
--CREATEPROTO=unixproto
-+#CREATEPROTO=unixproto
- EMPTYPROTO=unixproto
- 
- 
- # Commands possibly overriden by the individual port
- 
- ARRC=ar rc
--CC=cc
-+#CC=cc
- LN=ln -s
- RANLIB=ranlib
- 
-@@ -403,9 +400,9 @@ gso:	os_sol.h	# GCC Solaris
+-ARCHIVE=c-client.a
++ARCHIVE=libc-client.la
+ BINARIES=osdep.o mail.o misc.o newsrc.o smanager.o utf8.o siglocal.o \
+  dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
+  rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
+@@ -403,9 +403,9 @@ gso:	os_sol.h	# GCC Solaris
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
  	 ACTIVEFILE=/usr/share/news/active \
  	 RSHPATH=/usr/bin/rsh \
@@ -50,7 +23,7 @@ $NetBSD: patch-ab,v 1.18 2006/07/07 05:45:51 minskim Exp $
  
  gsu:	# GCC SUN-OS
  	$(BUILD) `$(CAT) SPECIALS` OS=sun \
-@@ -495,9 +492,9 @@ neb:	# NetBSD
+@@ -495,9 +495,9 @@ neb:	# NetBSD
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -62,7 +35,7 @@ $NetBSD: patch-ab,v 1.18 2006/07/07 05:45:51 minskim Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -549,7 +546,7 @@ osx:	# Mac OS X
+@@ -549,7 +549,7 @@ osx:	# Mac OS X
  	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
@@ -71,12 +44,30 @@ $NetBSD: patch-ab,v 1.18 2006/07/07 05:45:51 minskim Exp $
  
  ptx:	# PTX
  	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
-@@ -924,7 +921,7 @@ onceenv:
+@@ -811,7 +811,7 @@ $(ARCHIVE): $(BINARIES)
+ 	@$(SH) ARCHIVE
+ 
+ .c.o:
+-	`$(CAT) CCTYPE` -c `$(CAT) CFLAGS` $*.c
++	$(LTCOMPILE) `$(CAT) CCTYPE` -c `$(CAT) CFLAGS` $*.c
+ 
+ 
+ # Cleanup
+@@ -869,7 +869,7 @@ osdep.o:mail.h misc.h env.h fs.h ftl.h n
+ 	@echo pem.h, buffer.h, bio.h, and crypto.h, that means that OpenSSL
+ 	@echo is not installed on your system.  Either install OpenSSL first
+ 	@echo or build with command: make `$(CAT) OSTYPE` SSLTYPE=none
+-	`$(CAT) CCTYPE` -c `$(CAT) CFLAGS` `$(CAT) OSCFLAGS` -c osdep.c
++	$(LTCOMPILE) `$(CAT) CCTYPE` -c `$(CAT) CFLAGS` `$(CAT) OSCFLAGS` -c osdep.c
+ 
+ osdep.c: osdepbas.c osdepckp.c osdeplog.c osdepssl.c
+ 	$(CAT) osdepbas.c osdepckp.c osdeplog.c osdepssl.c > osdep.c
+@@ -924,7 +924,7 @@ onceenv:
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
 -	echo "$(ARRC) $(ARCHIVE) $(BINARIES);$(RANLIB) $(ARCHIVE)" > ARCHIVE
-+	echo "$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info $(CCLIENT_MAJOR):$(CCLIENT_MINOR) \`cat LDFLAGS\`" > ARCHIVE
++	echo "$(LTLINK) $(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info $(CCLIENT_MAJOR):$(CCLIENT_MINOR) `$(CAT) LDFLAGS`" > ARCHIVE
  	echo $(OS) > OSTYPE
  	./drivers $(EXTRADRIVERS) $(DEFAULTDRIVERS) dummy
  	./mkauths $(EXTRAAUTHENTICATORS) $(DEFAULTAUTHENTICATORS)

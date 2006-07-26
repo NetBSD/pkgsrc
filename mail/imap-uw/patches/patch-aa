@@ -1,26 +1,24 @@
-$NetBSD: patch-aa,v 1.16 2006/01/12 20:53:51 adam Exp $
+$NetBSD: patch-aa,v 1.17 2006/07/26 20:00:27 jlam Exp $
 
---- Makefile.orig	2005-04-30 22:50:20.000000000 +0200
+--- Makefile.orig	2005-04-30 16:50:20.000000000 -0400
 +++ Makefile
-@@ -180,7 +180,7 @@ SSLTYPE=nopwd
- # 4	(default) IPv4 support only
- # 6	IPv6 and IPv4 support
- 
--IP=4
-+#IP=4
- 
- 
- # The following extra compilation flags are defined.  None of these flags are
-@@ -474,9 +474,9 @@ sslunix sslsco:
+@@ -474,9 +474,6 @@ sslunix sslsco:
  	@echo + In order to rectify this problem, you MUST build with:
  	@echo ++ SSLTYPE=$(SSLTYPE).nopwd
  	@echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -	@echo
 -	@echo Do you want to continue this build anyway?  Type y or n please:
 -	@$(SH) -c 'read x; case "$$x" in y) exit 0;; *) exit 1;; esac'
-+#	@echo
-+#	@echo Do you want to continue this build anyway?  Type y or n please:
-+#	@$(SH) -c 'read x; case "$$x" in y) exit 0;; *) exit 1;; esac'
  
  sslnone:
  	@echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@@ -489,9 +486,6 @@ sslnone:
+ 	@echo ++ SSLTYPE=nopwd
+ 	@echo + You must also have OpenSSL or equivalent installed.
+ 	@echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-	@echo
+-	@echo Do you want to continue this build anyway?  Type y or n please:
+-	@$(SH) -c 'read x; case "$$x" in y) exit 0;; *) exit 1;; esac'
+ 
+ 
+ # C compiler types
