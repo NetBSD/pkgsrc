@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/23 11:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/26 18:26:49 rillig Exp $
 #
 
 DISTNAME=		lmms-0.2.0
@@ -22,8 +22,12 @@ BUILDLINK_TRANSFORM+=	rm:-floop-optimize2 rm:-fgcse-las
 # been fixed in SDL 1.2.11.
 BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.11
 
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/SDL_sound/buildlink3.mk"
+.include "../../audio/jack/buildlink3.mk"
+.include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/Xfixes/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
