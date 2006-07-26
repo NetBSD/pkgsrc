@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.833 2006/07/26 16:02:48 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.834 2006/07/26 16:21:45 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3556,3 +3556,23 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gettext-m4 to 0.14.6 [adam 2006-07-26]
 	Updated devel/gettext-tools to 0.14.6 [adam 2006-07-26]
 	Updated x11/xorg-libs to 6.9.0nb5 [minskim 2006-07-26]
+	Updated textproc/icu to 3.4.1 [drochner 2006-07-26]
+	Updated x11/zenity to 2.14.2 [drochner 2006-07-26]
+	Updated x11/gdm to 2.14.9 [drochner 2006-07-26]
+	Updated x11/gnome-session to 2.14.2 [drochner 2006-07-26]
+	Updated wm/metacity to 2.14.5 [drochner 2006-07-26]
+	Updated x11/gnome2-applets to 2.14.2 [drochner 2006-07-26]
+	Updated x11/gnome-screensaver to 2.14.2 [drochner 2006-07-26]
+	Updated games/gnome2-games to 2.14.2.1 [drochner 2006-07-26]
+	Updated graphics/gnome-backgrounds to 2.14.2.1 [drochner 2006-07-26]
+	Updated textproc/gnome-doc-utils to 0.6.1 [drochner 2006-07-26]
+	Updated x11/gnome2-control-center to 2.14.2 [drochner 2006-07-26]
+	Updated multimedia/gstreamer0.10 to 0.10.9 [drochner 2006-07-26]
+	Updated multimedia/gst-plugins0.10-base to 0.10.9 [drochner 2006-07-26]
+	Added multimedia/py-gstreamer0.10 version 0.10.5 [drochner 2006-07-26]
+	Added audio/gst-plugins0.10-fluendo-mp3 version 0.10.2 [drochner 2006-07-26]
+	Added audio/mkcdtoc version 1.0 [drochner 2006-07-26]
+	Updated games/prboom to 2.4.3 [drochner 2006-07-26]
+	Removed x11/gtk-thinice-engine [drochner 2006-07-26]
+	Updated audio/py-mad to 0.5.4 [drochner 2006-07-26]
+	Updated www/liferea to 1.0.18 [drochner 2006-07-26]
