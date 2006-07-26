@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/01/03 08:03:53 recht Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/07/26 10:57:41 drochner Exp $
 bin/al
 bin/caspol
 bin/cert2spc
@@ -45,10 +45,6 @@ bin/wsdl
 bin/wsdl2
 bin/xbuild
 bin/xsd
-etc/mono/1.0/DefaultWsdlHelpGenerator.aspx
-etc/mono/1.0/machine.config
-etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
-etc/mono/2.0/machine.config
 include/mono/cil/opcode.def
 include/mono/interpreter/embed.h
 include/mono/io-layer/access.h
@@ -609,7 +605,7 @@ share/libgc-mono/README.autoconf
 share/libgc-mono/README.changes
 share/libgc-mono/README.contributors
 share/libgc-mono/README.cords
-share/libgc-mono/README.${LOWER_OPSYS}
+share/libgc-mono/README.darwin
 share/libgc-mono/README.dj
 share/libgc-mono/README.environment
 share/libgc-mono/README.ews4800
@@ -824,6 +820,3 @@ share/mono/cil/cil-opcodes.xml
 @dirrm include/mono/interpreter
 @dirrm include/mono/cil
 @dirrm include/mono
-@dirrm etc/mono/2.0
-@dirrm etc/mono/1.0
-@dirrm etc/mono
