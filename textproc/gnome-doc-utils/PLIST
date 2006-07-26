@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/02 13:41:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/07/26 12:54:16 drochner Exp $
 bin/gnome-doc-prepare
 bin/xml2po
 lib/pkgconfig/gnome-doc-utils.pc
@@ -49,6 +49,8 @@ share/xml2po/empty.py
 share/xml2po/empty.pyc
 share/xml2po/gs.py
 share/xml2po/gs.pyc
+share/xml2po/ubuntu.py
+share/xml2po/ubuntu.pyc
 @dirrm share/xml2po
 @dirrm share/xml/gnome/xslt/xsldoc
 @dirrm share/xml/gnome/xslt/gettext
