@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.835 2006/07/26 20:16:32 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.836 2006/07/26 22:55:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3577,3 +3577,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/py-mad to 0.5.4 [drochner 2006-07-26]
 	Updated www/liferea to 1.0.18 [drochner 2006-07-26]
 	Added geography/py-proj version 1.7.2 [gdt 2006-07-26]
+	Added geography/proj-swig version 0.01 [gdt 2006-07-26]
