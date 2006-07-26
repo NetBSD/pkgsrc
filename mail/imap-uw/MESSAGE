@@ -1,33 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/03/06 17:03:06 thorpej Exp $
+$NetBSD: MESSAGE,v 1.4 2006/07/26 20:00:27 jlam Exp $
 
 Add the following to /etc/services (if not already there):
 
  imap		143/tcp		# Internet Message Access Protocol
  imap		143/udp
- imaps		993/tcp		# imap4 protocol over TLS/SSL
- imaps		993/udp		# imap4 protocol over TLS/SSL
- pop3s		995/tcp		# pop3 protocol over TLS/SSL (was spop3)
- pop3s		995/udp		# pop3 protocol over TLS/SSL (was spop3)
 
 Add the following to /etc/inetd.conf:
 
  imap   stream  tcp     nowait  root    ${PREFIX}/libexec/imapd    imapd
- imaps  stream  tcp     nowait  root    ${PREFIX}/libexec/imapd    imapd
  pop2   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop2d   ipop2d
  pop3   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
- pop3s  stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
 
-In order to use SSL, you will need to configure a certificate and store it
-in the ${SSLCERTS} directory, using the imapd.pem name.  Place the key for
-the certificate in the ${SSLKEYS} directory, also using the imapd.pem name.
-If you want to use an existing certificate, say from Apache, just copy the
-certificate and key files to the appropriate locations.
-
-To put the changes into effect, make inetd reload its configuration:
-On NetBSD 1.5 or later:
-	/etc/rc.d/inetd reload
-on earlier NetBSD releases:
-	kill -HUP `cat /var/run/inetd.pid`
+You will need to make inetd reload its configuration for the changes to
+take effect.
 
 ===========================================================================

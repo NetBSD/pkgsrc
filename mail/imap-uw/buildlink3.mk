@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/26 20:00:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMAP_UW_BUILDLINK3_MK:=	${IMAP_UW_BUILDLINK3_MK}+
@@ -15,11 +15,6 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}imap-uw
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004
 BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2004enb1
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
-#
-# Make "-limapuw" resolve into "-lc-client".
-#
-BUILDLINK_TRANSFORM+=		l:imapuw:c-client
-
 .endif	# IMAP_UW_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
