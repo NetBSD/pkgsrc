@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2006/07/26 06:53:02 adam Exp $
 
---- gettext-tools/src/Makefile.in.orig	2006-02-03 14:37:39.000000000 +0000
+--- gettext-tools/src/Makefile.in.orig	2006-06-21 18:53:45.000000000 +0200
 +++ gettext-tools/src/Makefile.in
-@@ -185,9 +185,7 @@ msggrep_DEPENDENCIES = $(am__DEPENDENCIE
+@@ -183,9 +183,7 @@ msggrep_DEPENDENCIES = $(am__DEPENDENCIE
  am_msginit_OBJECTS = msginit-msginit.$(OBJEXT) \
  	msginit-plural-count.$(OBJEXT) msginit-localealias.$(OBJEXT)
  msginit_OBJECTS = $(am_msginit_OBJECTS)
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
  am_msgmerge_OBJECTS = msgmerge-msgmerge.$(OBJEXT) \
  	msgmerge-plural-count.$(OBJEXT)
  msgmerge_OBJECTS = $(am_msgmerge_OBJECTS)
-@@ -592,7 +590,7 @@ urlget_SOURCES = urlget.c
+@@ -591,7 +589,7 @@ urlget_SOURCES = urlget.c
  # use iconv().
  libgettextsrc_la_LDFLAGS = \
    -release @VERSION@ \
@@ -22,7 +22,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
  
  
  # How to build libgettextpo.la.
-@@ -623,8 +621,7 @@ msgen_LDADD = libgettextsrc.la @INTL_MAC
+@@ -622,8 +620,7 @@ msgen_LDADD = libgettextsrc.la @INTL_MAC
  msgexec_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
  msgfilter_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
  msggrep_LDADD = $(LIBGREP) libgettextsrc.la @INTL_MACOSX_LIBS@
@@ -32,7 +32,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
  
  msguniq_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
  
-@@ -1349,7 +1346,7 @@ info-am:
+@@ -1348,7 +1345,7 @@ info-am:
  
  install-data-am: install-data-local install-includeHEADERS
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
  	install-libLTLIBRARIES
  
  install-info: install-info-am
-@@ -1396,14 +1393,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -1395,14 +1392,6 @@ uninstall-am: uninstall-binPROGRAMS unin
  	uninstall-info-am uninstall-libLTLIBRARIES uninstall-local
  
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
  po-lex.o po-lex.lo: po-gram-gen2.h
  po-gram-gen2.h: po-gram-gen.h
  	$(SED) -e 's/yy/po_gram_/g' -e 's/extern /extern DLL_VARIABLE /' $(srcdir)/po-gram-gen.h > $@-tmp
-@@ -1507,12 +1496,12 @@ uninstall-csharp-yes: all-csharp-yes
+@@ -1506,12 +1495,12 @@ uninstall-csharp-yes: all-csharp-yes
  	$(RM) $(DESTDIR)$(pkglibdir)/msgunfmt.net.exe
  uninstall-csharp-no:
  
