@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/07/26 16:56:53 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_GTK2_BUILDLINK3_MK:=	${PY_GTK2_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pygtk2
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.8.4
-BUILDLINK_ABI_DEPENDS.pygtk2+=	py24-gtk2>=2.8.5nb1
+BUILDLINK_ABI_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.8.5nb1
 BUILDLINK_PKGSRCDIR.pygtk2?=	../../x11/py-gtk2
 .endif	# PY_GTK2_BUILDLINK3_MK
 
