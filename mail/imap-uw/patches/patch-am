@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.4 2004/10/11 16:56:28 abs Exp $
+$NetBSD: patch-am,v 1.5 2006/07/26 20:00:27 jlam Exp $
 
---- src/osdep/unix/env_unix.c.orig	2004-08-22 19:54:29.000000000 +0100
+--- src/osdep/unix/env_unix.c.orig	2004-09-13 17:31:19.000000000 -0400
 +++ src/osdep/unix/env_unix.c
 @@ -21,6 +21,9 @@
  #include <grp.h>
@@ -29,3 +29,13 @@ $NetBSD: patch-am,v 1.4 2004/10/11 16:56:28 abs Exp $
    syslog (level|LOG_AUTH,"Login %s user=%.64s auth=%.64s host=%.80s",err,
  	  user,(authuser && *authuser) ? authuser : user,tcp_clienthost ());
    sleep (3);			/* slow down possible cracker */
+@@ -830,7 +841,8 @@ char *sysinbox ()
+ {
+   char tmp[MAILTMPLEN];
+   if (!sysInbox) {		/* initialize if first time */
+-    sprintf (tmp,"%s/%s",MAILSPOOL,myusername ());
++    /* Substitute SPOOLDIR and MAILBOX appropriately for pkgsrc. */
++    sprintf (tmp,"%s/%s",@SPOOLDIR@,@MAILBOX@);
+     sysInbox = cpystr (tmp);	/* system inbox is from mail spool */
+   }
+   return sysInbox;
