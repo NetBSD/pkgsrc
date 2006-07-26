@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.13 2006/07/22 16:31:35 jlam Exp $
+# $NetBSD: extract.mk,v 1.14 2006/07/26 18:29:46 drochner Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -99,6 +99,7 @@ extract-message:
 ### extract-check-interactive checks whether we must do an interactive
 ### extraction or not.
 ###
+.PHONY: extract-check-interactive
 extract-check-interactive:
 .if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
 	@${ERROR_MSG} "The extract stage of this package requires user interaction"
