@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.120 2006/07/03 00:00:56 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.121 2006/07/26 17:00:03 wiz Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -248,7 +248,12 @@ bulk-cache:
 	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${BULK_MSG_CONT} "along with their dependencies"
 .  for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
-	cd ${PKGSRCDIR}/${__tmp__} && ${SETENV} BMAKE=${MAKE:Q} AWK=${AWK:Q} EXPR=${EXPR:Q} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE:Q}
+	@if [ ! -d ${PKGSRCDIR}/${__tmp__} ]; then \
+		${BULK_MSG} "WARN: Skipping nonexisting directory ${__tmp__}"; \
+		${ECHO} " 0 ${__tmp__} 0" >> ${BULKFILESDIR:Q}/${BROKENFILE:Q}; \
+	else \
+		cd ${PKGSRCDIR}/${__tmp__} && ${SETENV} BMAKE=${MAKE:Q} AWK=${AWK:Q} EXPR=${EXPR:Q} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE:Q}; \
+	fi
 .  endfor
 	@${BULK_MSG} "Extracting dependency tree file"
 	${AWK} '/^(build_)?depends/ {pkgs[$$2] = 1; cat=$$2; sub(/\/.*/, "", cat); \
