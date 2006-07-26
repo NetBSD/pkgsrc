@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/02/05 22:45:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/07/26 06:53:02 adam Exp $
 bin/autopoint
 bin/gettextize
 lib/gettext/hostname
@@ -32,8 +32,8 @@ share/gettext/intl/gmo.h
 share/gettext/intl/hash-string.h
 share/gettext/intl/intl-compat.c
 share/gettext/intl/l10nflist.c
-share/gettext/intl/libgnuintl.h.in
 share/gettext/intl/langprefs.c
+share/gettext/intl/libgnuintl.h.in
 share/gettext/intl/loadinfo.h
 share/gettext/intl/loadmsgcat.c
 share/gettext/intl/localcharset.c
@@ -55,10 +55,10 @@ share/gettext/intl/printf-args.h
 share/gettext/intl/printf-parse.c
 share/gettext/intl/printf-parse.h
 share/gettext/intl/printf.c
-share/gettext/intl/relocatable.c
-share/gettext/intl/relocatable.h
 share/gettext/intl/ref-add.sin
 share/gettext/intl/ref-del.sin
+share/gettext/intl/relocatable.c
+share/gettext/intl/relocatable.h
 share/gettext/intl/textdomain.c
 share/gettext/intl/vasnprintf.c
 share/gettext/intl/vasnprintf.h
@@ -67,6 +67,15 @@ share/gettext/intl/wprintf-parse.h
 share/gettext/intl/xsize.h
 share/gettext/mkinstalldirs
 share/gettext/msgunfmt.tcl
+share/gettext/po/Makefile.in.in
+share/gettext/po/Makevars.template
+share/gettext/po/Rules-quot
+share/gettext/po/boldquot.sed
+share/gettext/po/en@boldquot.header
+share/gettext/po/en@quot.header
+share/gettext/po/insert-header.sin
+share/gettext/po/quot.sed
+share/gettext/po/remove-potcdate.sin
 share/gettext/projects/GNOME/team-address
 share/gettext/projects/GNOME/teams.html
 share/gettext/projects/GNOME/teams.url
@@ -81,15 +90,6 @@ share/gettext/projects/TP/teams.url
 share/gettext/projects/TP/trigger
 share/gettext/projects/index
 share/gettext/projects/team-address
-share/gettext/po/Makefile.in.in
-share/gettext/po/Makevars.template
-share/gettext/po/Rules-quot
-share/gettext/po/boldquot.sed
-share/gettext/po/en@boldquot.header
-share/gettext/po/en@quot.header
-share/gettext/po/insert-header.sin
-share/gettext/po/quot.sed
-share/gettext/po/remove-potcdate.sin
 @dirrm share/gettext/po
 @dirrm share/gettext/intl
 @dirrm share/gettext/projects/GNOME
