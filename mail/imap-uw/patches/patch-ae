@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.15 2002/12/11 12:21:24 tron Exp $
+$NetBSD: patch-ae,v 1.16 2006/07/26 20:00:27 jlam Exp $
 
---- src/tmail/Makefile.orig	Tue Nov 19 01:45:14 2002
-+++ src/tmail/Makefile	Wed Dec 11 12:34:26 2002
+--- src/tmail/Makefile.orig	2002-11-18 19:45:14.000000000 -0500
++++ src/tmail/Makefile
 @@ -18,7 +18,7 @@
  
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ae,v 1.15 2002/12/11 12:21:24 tron Exp $
  SHELL = /bin/sh
  
  # Get local definitions from c-client directory
+@@ -28,7 +28,7 @@ CFLAGS = -I$C `cat $C/CFLAGS`
+ LDFLAGS = $(CCLIENTLIB) `cat $C/LDFLAGS`
+ 
+ tmail: $(CCLIENTLIB) tmail.o
+-	$(CC) $(CFLAGS) -o tmail tmail.o $(LDFLAGS)
++	$(LTLINK) $(CC) $(CFLAGS) -o tmail tmail.o $(LDFLAGS)
+ 
+ tmail.o: $C/mail.h $C/misc.h $C/osdep.h
+ 
