@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/05/26 13:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2006/07/26 12:49:06 drochner Exp $
 
 DISTNAME=	gnome-2.14.0
 CATEGORIES=	meta-pkgs x11 gnome
@@ -22,7 +22,6 @@ COMMENT=	Meta-package for the GNU Network Object Model Environment
 DEPENDS+=	gnome-base>=2.14.0:../../meta-pkgs/gnome-base
 DEPENDS+=	at-spi>=1.7.6:../../devel/at-spi
 DEPENDS+=	libgail-gnome>=1.1.3:../../devel/libgail-gnome
-#DEPENDS+=	gtk-doc>=1.5:../../textproc/gtk-doc
 DEPENDS+=	gtksourceview>=1.6.0:../../x11/gtksourceview
 DEPENDS+=	zenity>=2.14.0:../../x11/zenity
 DEPENDS+=	gdm>=2.14.0nb1:../../x11/gdm
