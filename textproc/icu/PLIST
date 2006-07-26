@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/01/03 00:04:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/07/26 11:04:37 drochner Exp $
 bin/derb
 bin/genbrk
 bin/gencnval
@@ -132,25 +132,25 @@ lib/icu/Makefile.inc
 lib/icu/current
 lib/libicudata.so
 lib/libicudata.so.34
-lib/libicudata.so.34.0
+lib/libicudata.so.34.1
 lib/libicui18n.so
 lib/libicui18n.so.34
-lib/libicui18n.so.34.0
+lib/libicui18n.so.34.1
 lib/libicuio.so
 lib/libicuio.so.34
-lib/libicuio.so.34.0
+lib/libicuio.so.34.1
 lib/libicule.so
 lib/libicule.so.34
-lib/libicule.so.34.0
+lib/libicule.so.34.1
 lib/libiculx.so
 lib/libiculx.so.34
-lib/libiculx.so.34.0
+lib/libiculx.so.34.1
 lib/libicutu.so
 lib/libicutu.so.34
-lib/libicutu.so.34.0
+lib/libicutu.so.34.1
 lib/libicuuc.so
 lib/libicuuc.so.34
-lib/libicuuc.so.34.0
+lib/libicuuc.so.34.1
 lib/libsicudata.a
 lib/libsicui18n.a
 lib/libsicuio.a
