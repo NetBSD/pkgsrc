@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/07/24 12:04:26 markd Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/26 11:53:39 markd Exp $
 
 DISTNAME=	ivtools-1.2.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
 EXTRACT_SUFX=	.tgz
@@ -18,6 +19,7 @@ USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/ivtools-1.2
 GNU_CONFIGURE=	YES
+CONFIGURE_ARGS=	--with-tiff=${BUILDLINK_PREFIX.tiff}
 
 .include "../../mk/x11.buildlink3.mk"
 
@@ -26,6 +28,8 @@ post-patch:
 
 pre-install:
 	${RM} -f ${WRKSRC}/config/local.def.orig
+	${RM} -f ${WRKSRC}/config/params.def.orig
 	${RM} -f ${WRKSRC}/config/site.def.NETBSD.orig
 
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
