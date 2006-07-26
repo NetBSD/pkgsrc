@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.831 2006/07/26 02:22:34 mrg Exp $
+$NetBSD: CHANGES-2006,v 1.832 2006/07/26 06:55:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3550,3 +3550,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/glitz to 0.5.6nb1 [minskim 2006-07-25]
 	Updated devel/mercurial to 0.9.1 [minskim 2006-07-25]
 	Updated chat/ircII to 20060725 [mrg 2006-07-26]
+	Updated devel/gettext to 0.14.6 [adam 2006-07-26]
+	Updated devel/gettext-asprintf to 0.14.6 [adam 2006-07-26]
+	Updated devel/gettext-lib to 0.14.6 [adam 2006-07-26]
+	Updated devel/gettext-m4 to 0.14.6 [adam 2006-07-26]
+	Updated devel/gettext-tools to 0.14.6 [adam 2006-07-26]
