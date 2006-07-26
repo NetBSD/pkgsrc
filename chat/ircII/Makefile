@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2006/07/22 09:13:10 mrg Exp $
+# $NetBSD: Makefile,v 1.45 2006/07/26 02:21:35 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
-#PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
 			ftp://ircftp.au.eterna.com.au/pub/ircII/ \
@@ -17,7 +16,7 @@ CONFLICTS=		blackened-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-VERS=			20060721
+VERS=			20060725
 PLIST_SUBST+= 		VERS=${VERS:Q}
 
 .include "../../mk/bsd.prefs.mk"
