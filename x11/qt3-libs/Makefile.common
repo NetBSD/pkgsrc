@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2006/02/25 03:55:57 minskim Exp $
+# $NetBSD: Makefile.common,v 1.61 2006/07/26 13:30:24 joerg Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -67,6 +67,8 @@ QMAKE_RANLIB=		${RANLIB}
 LDFLAGS+=		-lresolv
 .  endif
 .endif
+
+CONFIGURE_ARGS+=	-verbose
 
 QMAKE_RANLIB?=		${TRUE}
 
