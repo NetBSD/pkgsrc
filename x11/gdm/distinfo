@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.39 2006/05/20 17:26:15 joerg Exp $
+$NetBSD: distinfo,v 1.40 2006/07/26 12:36:12 drochner Exp $
 
-SHA1 (gdm-2.14.5.tar.bz2) = 00757ebfb29f67ffb2c7d01121ab95432c7f898e
-RMD160 (gdm-2.14.5.tar.bz2) = 17aceb6eaed470efff4acb95acdd4fe702c6c3df
-Size (gdm-2.14.5.tar.bz2) = 3041754 bytes
+SHA1 (gdm-2.14.9.tar.bz2) = 264eaa09874a930c4080f903f43631dbf621e111
+RMD160 (gdm-2.14.9.tar.bz2) = f043ed11a8b174556b114e52dc50daa5432e68bb
+Size (gdm-2.14.9.tar.bz2) = 3046665 bytes
 SHA1 (patch-aa) = 2b7112cd5670f99b261765f47a6b70b73c0f42a0
-SHA1 (patch-ab) = b5dde01828ce7289e53af319c92532b1231ca593
+SHA1 (patch-ab) = b151843608e3418962dfcbfd454cf0ba8aac39e0
 SHA1 (patch-ac) = 69b3539e50af0b32207b9ffeb7cb01645c9ece3c
-SHA1 (patch-ae) = 87f26d19ec42eacef853df1b0cf680dae102d3fd
+SHA1 (patch-ae) = 9f159a277f9526ca3c2085b45b76d0449eeb2a69
 SHA1 (patch-ak) = e3eaf2dfa1e393f9808d22fe4384710a46a83afc
