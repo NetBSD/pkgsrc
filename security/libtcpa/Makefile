@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:13 tv Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/27 18:48:03 jlam Exp $
 #
 
 DISTNAME=		tpm-1.1b
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/TPM
 
-SITES_tcpa_man_20031210.tgz= http://www.citi.umich.edu/u/rwash/projects/trusted/
+SITES.tcpa_man_20031210.tgz= http://www.citi.umich.edu/u/rwash/projects/trusted/
 
 BUILD_DIRS=		${WRKSRC}/libtcpa ${WRKSRC}/examples
 INSTALLATION_DIRS=	bin lib man/man3 share/doc/${PKGBASE}

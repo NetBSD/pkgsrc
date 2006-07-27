@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/27 18:48:02 jlam Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -14,9 +14,9 @@ HOMEPAGE=		http://www.wheel.gr.jp/~dai/software/#elisau10
 COMMENT=		10x8 dots X11 bitmap font for JIS X 0208
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-SITES_elisau10${EXTRACT_SUFX}=	\
+SITES.elisau10${EXTRACT_SUFX}=	\
 			http://hp.vector.co.jp/authors/VA004814/freesoft/
-SITES_clR5x8.bdf=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
+SITES.clR5x8.bdf=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
 
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		bdftopcf gzip patch

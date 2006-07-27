@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/22 22:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/27 18:48:02 jlam Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		openoffice-linux-112-services.rdb.bz2
-SITES_openoffice-linux-112-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
+SITES.openoffice-linux-112-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}	\
 			openoffice-linux-112-services.rdb.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/17 19:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/27 18:48:02 jlam Exp $
 #
 
 DISTNAME=	arcem-1.00-src
@@ -14,7 +14,7 @@ LINUX_FILES=	\
 		HardImage1.gz
 
 .for f in ${LINUX_FILES}
-SITES_${f}+=	\
+SITES.${f}+=	\
 		ftp://ftp.arm.uk.linux.org/pub/linux/arcem/
 .endfor
 

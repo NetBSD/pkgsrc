@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/27 20:56:17 cube Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/27 18:48:03 jlam Exp $
 #
 
 DISTNAME=	CSP-0.32
@@ -15,7 +15,7 @@ DEPENDS+=	p5-IPC-Run>=0.79:../../devel/p5-IPC-Run
 DEPENDS+=	p5-Term-Prompt>=1.03:../../devel/p5-Term-Prompt
 
 CSPGUIDE=	cspguide.pdf
-SITES_${CSPGUIDE}=	http://devel.it.su.se/content/1/c4/32/90/
+SITES.${CSPGUIDE}=	http://devel.it.su.se/content/1/c4/32/90/
 EXTRACT_ONLY=	${DISTFILES:N*.pdf}
 
 PERL5_PACKLIST=	auto/CSP/.packlist
