@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.16 2006/07/19 14:25:59 jlam Exp $
+# $NetBSD: fetch.mk,v 1.17 2006/07/27 07:41:40 rillig Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -234,19 +234,17 @@ do-fetch-file: .USE
 	@${STEP_MSG} "Fetching ${.TARGET:T}"
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} -n {DIST_PATH:Q}""; then				\
-		for d in "" ${DIST_PATH:S/:/ /g}; do			\
-			case $$d in					\
-			""|${DISTDIR})	continue ;;			\
-			esac;						\
-			file="$$d/${DIST_SUBDIR}/${TARGET:T}";		\
-			if ${TEST} -f $$file; then			\
-				${ECHO} "Using $$file";			\
-				${RM} -f ${TARGET};			\
-				${LN} -s $$file ${.TARGET};		\
-			fi;						\
-		done;							\
-	fi
+	for d in "" ${DIST_PATH:S/:/ /g}; do				\
+		case $$d in						\
+		""|${DISTDIR})	continue ;;				\
+		esac;							\
+		file="$$d/${DIST_SUBDIR}/${.TARGET:T}";			\
+		if ${TEST} -f $$file; then				\
+			${ECHO} "Using $$file";				\
+			${RM} -f ${.TARGET};				\
+			${LN} -s $$file ${.TARGET};			\
+		fi;							\
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
 	sites="${_ORDERED_SITES}";					\
