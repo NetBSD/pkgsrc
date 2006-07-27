@@ -1,9 +1,23 @@
-# $NetBSD: fetch-list.mk,v 1.7 2006/07/27 17:23:16 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.8 2006/07/27 17:29:57 jlam Exp $
 
-# Prints out a script to fetch all needed files (no checksumming).
+######################################################################
+### fetch-list (PUBLIC)
+######################################################################
+### fetch-list is a public target to print out a standalone shell
+### script to fetch all distfiles needed to build the package,
+### including distfiles needed by dependencies.  This script does not
+### perform any checksumming of the distfiles and does not resume
+### interrupted file transfers.
+###
 .PHONY: fetch-list
 fetch-list: fetch-list-header fetch-list-recursive
 
+######################################################################
+### fetch-list-header (PRIVATE)
+######################################################################
+### fetch-list-header prints out the preamble comments for the
+### fetch-list shell script.
+###
 .PHONY: fetch-list-header
 fetch-list-header:
 	@${ECHO} '#!/bin/sh'
@@ -13,6 +27,14 @@ fetch-list-header:
 	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
 	@${ECHO} '#'
 
+######################################################################
+### fetch-list-recursive (PRIVATE)
+######################################################################
+### fetch-list-recursive outputs the heart of the shell script by
+### looping over all package directories for dependencies and
+### outputting the shell script to fetch the distfiles for that
+### dependency.
+###
 .PHONY: fetch-list-recursive
 fetch-list-recursive:
 	@${_DEPENDS_WALK_CMD} -r ${PKGPATH} |				\
@@ -29,6 +51,12 @@ fetch-list-recursive:
 	    );								\
 	done
 
+######################################################################
+### fetch-list-one-pkg (PRIVATE)
+######################################################################
+### fetch-list-one-pkg outputs the standalone shell script code to
+### fetch the distfiles for the package.
+###
 .PHONY: fetch-list-one-pkg
 fetch-list-one-pkg:
 .if !empty(_ALLFILES)
