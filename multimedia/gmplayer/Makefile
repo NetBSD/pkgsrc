@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/07/20 22:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/07/27 18:48:03 jlam Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -46,7 +46,7 @@ SKINS +=	AlienMind-1.2${EXTRACT_SUFX}			\
 
 .if !defined(SITES_AlienMind-1.2.tar.bz2)
 .  for skin in ${SKINS}
-SITES_${skin}= ${SKIN_SITES}
+SITES.${skin}= ${SKIN_SITES}
 .  endfor
 .endif
 

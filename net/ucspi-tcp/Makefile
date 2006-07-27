@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/08/24 04:36:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/27 18:48:03 jlam Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://cr.yp.to/ucspi-tcp.html
 COMMENT=		Command-line tools for building TCP client-server applications
 
 MANPAGES=		${DISTNAME}-man-20020317.tar.gz
-SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
+SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		YES
 
