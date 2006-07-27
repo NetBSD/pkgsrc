@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.842 2006/07/27 18:26:26 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.843 2006/07/27 22:05:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/gogui version 0.9 [rillig 2006-07-27]
 	Updated devel/ko-po-check to 0.7 [minskim 2006-07-27]
 	Updated math/mathomatic to 12.5.18 [minskim 2006-07-27]
+	Added databases/ocaml-mysql version 1.0.4 [rillig 2006-07-27]
