@@ -1,4 +1,4 @@
-# $NetBSD: fetch-list.mk,v 1.4 2006/07/27 15:16:44 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.5 2006/07/27 16:06:27 jlam Exp $
 
 # Prints out a script to fetch all needed files (no checksumming).
 .PHONY: fetch-list
@@ -44,7 +44,7 @@ fetch-list-one-pkg:
 	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
 .    for fetchfile in ${_ALLFILES}
-.      if exists(${DYNAMIC_SITE_SCRIPT})
+.      if exists(${DYNAMIC_SITES_SCRIPT})
 	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
@@ -53,7 +53,7 @@ fetch-list-one-pkg:
 		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
 		${ECHO} '#';						\
 		${ECHO} '${SH} -s ${fetchfile:T} <<"EOF" |(';		\
-		${CAT} ${DYNAMIC_SITE_SCRIPT};				\
+		${CAT} ${DYNAMIC_SITES_SCRIPT};				\
 		${ECHO} EOF;						\
 		${ECHO} read unsorted_sites;				\
 		${ECHO} 'unsorted_sites="$${unsorted_sites} ${_MASTER_SITE_BACKUP}"'; \
