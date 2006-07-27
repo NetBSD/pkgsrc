@@ -1,4 +1,4 @@
-# $NetBSD: bsd.configure.mk,v 1.8 2006/07/23 15:33:16 jlam Exp $
+# $NetBSD: bsd.configure.mk,v 1.9 2006/07/27 13:47:29 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to configuring packages for building.
@@ -27,7 +27,7 @@ _COOKIE.configure=	${WRKDIR}/.configure_done
 configure:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
-configure: patch configure-cookie
+configure: wrapper configure-cookie
 .  else
 configure: barrier
 .  endif

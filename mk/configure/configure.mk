@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.8 2006/07/22 16:31:35 jlam Exp $
+# $NetBSD: configure.mk,v 1.9 2006/07/27 13:47:29 jlam Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -39,7 +39,7 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 ### configure is a public target to configure the sources for building.
 ###
 _CONFIGURE_TARGETS+=	check-vulnerable
-_CONFIGURE_TARGETS+=	patch
+_CONFIGURE_TARGETS+=	wrapper
 _CONFIGURE_TARGETS+=	acquire-configure-lock
 _CONFIGURE_TARGETS+=	${_COOKIE.configure}
 _CONFIGURE_TARGETS+=	release-configure-lock
