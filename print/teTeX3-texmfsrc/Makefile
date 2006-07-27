@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/07 16:19:15 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/27 00:09:06 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
-MAINTAINER=	kei@NetBSD.org,hubertf@NetBSD.org
+MAINTAINER=	kei@NetBSD.org,pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Sources for machine-independent part of teTeX
 
