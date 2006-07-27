@@ -1,4 +1,4 @@
-# $NetBSD: fetch-list.mk,v 1.2 2006/07/18 23:27:14 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.3 2006/07/27 13:51:21 jlam Exp $
 
 # Prints out a script to fetch all needed files (no checksumming).
 .PHONY: fetch-list
@@ -57,7 +57,7 @@ fetch-list-one-pkg:
 		${ECHO} EOF;						\
 		${ECHO} read unsorted_sites;				\
 		${ECHO} 'unsorted_sites="$${unsorted_sites} ${_MASTER_SITE_BACKUP}"'; \
-		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
+		${ECHO} sites='"'${_ORDERED_SITES:Q}'"';		\
 		${ECHO} "${MKDIR} ${_DISTDIR}";				\
 		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
 		${ECHO}	'for site in $$sites; do';			\
@@ -75,7 +75,7 @@ fetch-list-one-pkg:
 		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
 		${ECHO} '#';						\
 		${ECHO} 'unsorted_sites="${SITES.${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"'; \
-		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
+		${ECHO} sites='"'${_ORDERED_SITES:Q}'"';		\
 		${ECHO} "${MKDIR} ${_DISTDIR}";				\
 		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
 		${ECHO}	'for site in $$sites; do';			\
