@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/06/29 21:00:25 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/27 15:16:44 jlam Exp $
 
 DISTNAME=		sawfish-themes-0.2
 PKGREVISION=		5
 CATEGORIES=		x11 wm
-DYNAMIC_MASTER_SITES=	yes
 DISTFILES=		${SAWFISH_THEMES}
 
 MAINTAINER=		jschauma@NetBSD.org
