@@ -1,22 +1,19 @@
-# $NetBSD: fetch-list.mk,v 1.6 2006/07/27 17:14:56 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.7 2006/07/27 17:23:16 jlam Exp $
 
 # Prints out a script to fetch all needed files (no checksumming).
 .PHONY: fetch-list
-.if !target(fetch-list)
+fetch-list: fetch-list-header fetch-list-recursive
 
-fetch-list:
+.PHONY: fetch-list-header
+fetch-list-header:
 	@${ECHO} '#!/bin/sh'
 	@${ECHO} '#'
 	@${ECHO} '# This is an auto-generated script, the result of running'
 	@${ECHO} '# `${MAKE} fetch-list'"'"' in directory "'"`${PWD_CMD}`"'"'
 	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
 	@${ECHO} '#'
-	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
-.endif # !target(fetch-list)
 
 .PHONY: fetch-list-recursive
-.if !target(fetch-list-recursive)
-
 fetch-list-recursive:
 	@${_DEPENDS_WALK_CMD} -r ${PKGPATH} |				\
 	while read dir; do						\
@@ -31,19 +28,16 @@ fetch-list-recursive:
 					print block[line] }'		\
 	    );								\
 	done
-.endif # !target(fetch-list-recursive)
 
 .PHONY: fetch-list-one-pkg
-.if !target(fetch-list-one-pkg)
-
 fetch-list-one-pkg:
-.  if !empty(_ALLFILES)
+.if !empty(_ALLFILES)
 	@${ECHO}
 	@${ECHO} '#'
 	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
-.    for fetchfile in ${_ALLFILES}
-.      if exists(${DYNAMIC_SITES_SCRIPT})
+.  for fetchfile in ${_ALLFILES}
+.    if exists(${DYNAMIC_SITES_SCRIPT})
 	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
@@ -65,7 +59,7 @@ fetch-list-one-pkg:
 		${ECHO}	done;						\
 		${ECHO} ')';						\
 	fi)
-.      else
+.    else
 	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
@@ -82,7 +76,6 @@ fetch-list-one-pkg:
 		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
 		${ECHO}	done;						\
 	fi)
-.      endif
-.    endfor
-.  endif # !empty(_ALLFILES)
-.endif # !target(fetch-list-one-pkg)
+.    endif
+.  endfor
+.endif
