@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.15 2006/07/27 06:38:35 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.16 2006/07/27 06:40:05 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -151,7 +151,6 @@
 	    the shell commands before their invocation, and their
 	    actual execution progress with <command>set -x</command>
 	    will be displayed.</para></listitem>
-	</listitem>
       </itemizedlist>
     </para>
   </sect1>
