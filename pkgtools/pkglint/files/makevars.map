@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.133 2006/07/21 19:09:23 rillig Exp $
+# $NetBSD: makevars.map,v 1.134 2006/07/27 15:48:45 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -331,7 +331,7 @@ INFO_DIR		Pathname
 # ^^ relative to PREFIX
 INFO_FILES		Yes [$package]
 INSTALL			ShellCommand [$system]
-INSTALLATION_DIRS	List of Pathname [$package_list]
+INSTALLATION_DIRS	List of PrefixPathname [$package_list]
 INSTALL_DATA		ShellCommand [$system]
 INSTALL_DATA_DIR	ShellCommand [$system]
 INSTALL_DIRS		List of WrksrcSubdirectory [$package_list]
@@ -349,7 +349,7 @@ INSTALL_SCRIPT		ShellCommand [$system]
 INSTALL_SCRIPTS_ENV	List of ShellWord
 INSTALL_SCRIPT_DIR	ShellCommand [$system]
 INSTALL_SRC		List of Pathname [m:s,c:ds]
-INSTALL_TARGET		List of Identifier [ruby*.mk:d, $package]
+INSTALL_TARGET		List of Identifier [$package]
 INSTALL_TEMPLATES	List of Pathname [m:as,c:ads]
 INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
 INTERACTIVE_STAGE	List of { fetch extract configure build install } [$package]
@@ -431,11 +431,12 @@ NOT_FOR_PLATFORM	List of PlatformTriple [$package_list]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
 NO_BIN_ON_FTP		Restricted [m:s,c:s]
 NO_BUILD		Yes [m:s,c:s,Makefile.*:ds]
-NO_CHECKSUM		Yes [m:s]
-NO_CONFIGURE		Yes [m:s,c:s]
+NO_CHECKSUM		Yes [$package]
+NO_CONFIGURE		Yes [$package]
 NO_EXPORT_CPP		Yes [m:s]
-NO_EXTRACT		Yes
-NO_INSTALL_MANPAGES	Yes [m:s]
+NO_EXTRACT		Yes [$package]
+NO_INSTALL_MANPAGES	Yes [$package]
+# ^^ only has an effect for Imake packages.
 NO_MTREE		Yes [$package]
 NO_PACKAGE		Message [m:s]
 NO_PKGTOOLS_REQD_CHECK	Yes [m:s]
@@ -621,6 +622,7 @@ UNLIMIT_RESOURCES	List of { datasize stacksize memorysize } [m:as,c:a]
 UNPRIVILEGED_USER	UserGroupName [$user]
 UNPRIVILEGED_GROUP	UserGroupName [$user]
 UNWRAP_FILES		List of Pathmask [$package_list]
+UPDATE_TARGET		List of Identifier [$user]
 USE_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
 USE_CROSSBASE		Yes [m:s]
 USE_DIRS		List of {					\
