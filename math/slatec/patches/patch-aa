@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/12/04 15:10:48 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/27 18:49:47 rillig Exp $
 
 --- /dev/null	2003-12-04 12:37:08.000000000 +0000
 +++ Makefile
@@ -208,7 +208,7 @@ $NetBSD: patch-aa,v 1.1 2003/12/04 15:10:48 adam Exp $
 +	${LIBTOOL} --mode=compile --tag=CC ${COMPILE.f} ${.IMPSRC}
 +       
 +lib$(LIB).a: $(OBJS)
-+	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} \
++	${LIBTOOL} --mode=link ${LINK.f} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} \
 +		-rpath ${PREFIX}/lib -version-info 4:1
 +
 +# These three files should be compiled without any optimization.
