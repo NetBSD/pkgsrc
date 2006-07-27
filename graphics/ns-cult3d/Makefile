@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/27 15:16:44 jlam Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
 PKGNAME=	ns-cult3d-5.2
 CATEGORIES=	www graphics
-DYNAMIC_MASTER_SITES= YES
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.cult3d.com/
