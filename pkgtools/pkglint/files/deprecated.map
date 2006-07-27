@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.45 2006/07/21 14:28:35 jlam Exp $
+# $NetBSD: deprecated.map,v 1.46 2006/07/27 16:13:51 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -118,3 +118,4 @@ USE_DIGEST		You can just remove it.
 LTCONFIG_OVERRIDE	You can just remove it.
 USE_GNU_GETTEXT		You can just remove it.
 BUILD_ENV		Use PKGSRC_MAKE_ENV instead.
+DYNAMIC_MASTER_SITES	You can just remove it.

@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.663 2006/07/27 13:05:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.664 2006/07/27 16:13:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5500,7 +5500,6 @@ sub checklines_package_Makefile_varorder($) {
 				[ "SVR4_PKGNAME", optional ],
 				[ "CATEGORIES", once ],
 				[ "MASTER_SITES", once ],
-				[ "DYNAMIC_MASTER_SITES", optional ],
 				[ "DIST_SUBDIR", optional ],
 				[ "EXTRACT_SUFX", optional ],
 				[ "DISTFILES", many ],
@@ -6412,17 +6411,6 @@ sub checkfile_package_Makefile($$$) {
 
 	if ($whole =~ /etc\/rc\.d/) {
 		log_warning($fname, NO_LINE_NUMBER, "Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
-	}
-
-	if (exists($pkgctx_vardef->{"MASTER_SITES"})) {
-		if (exists($pkgctx_vardef->{"DYNAMIC_MASTER_SITES"})) {
-			$pkgctx_vardef->{"MASTER_SITES"}->log_warning("MASTER_SITES and ...");
-			$pkgctx_vardef->{"DYNAMIC_MASTER_SITES"}->log_warning("... DYNAMIC_MASTER_SITES conflict.");
-		}
-	} else {
-		if (!exists($pkgctx_vardef->{"DYNAMIC_MASTER_SITES"})) {
-			log_warning($fname, NO_LINE_NUMBER, "Neither MASTER_SITES nor DYNAMIC_MASTER_SITES found.");
-		}
 	}
 
 	if (exists($pkgctx_vardef->{"REPLACE_PERL"}) && exists($pkgctx_vardef->{"NO_CONFIGURE"})) {
