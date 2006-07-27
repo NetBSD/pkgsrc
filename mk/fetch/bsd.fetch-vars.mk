@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.5 2006/07/19 16:01:40 jlam Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.6 2006/07/27 07:41:40 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -8,6 +8,10 @@
 #
 #    DISTDIR is the top-level directory into which all original
 #	distribution files are fetched.
+#
+#    DIST_PATH is a list of directories, separated by colons, in which
+#	the distribution files are looked up, additionally to DISTDIR.
+#	No files will ever be created in these directories.
 #
 # The following variables may be set in a package Makefile:
 #
