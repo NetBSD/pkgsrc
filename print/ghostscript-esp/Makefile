@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/15 20:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/27 18:48:03 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
@@ -53,7 +53,7 @@ EXTRACT_ONLY=		${GS_SRCS}
 #
 JPEG_SRCS=		jpegsrc.v6b.tar.gz
 JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
-SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
+SITES.${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
 DISTFILES+=		${JPEG_SRCS}
 EXTRACT_ONLY+=		${JPEG_SRCS}
 

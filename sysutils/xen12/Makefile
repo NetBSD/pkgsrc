@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:57 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/27 18:48:04 jlam Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -28,7 +28,7 @@ BUILD_DEFS+=		XEN12_USE_COM2
 
 .if defined(XEN12_USE_COM2) && !empty(XEN12_USE_COM2:M[Yy][Ee][Ss])
 PATCHFILES+=		xen12-com2-support-040522.diff
-SITES_xen12-com2-support-040522.diff=ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
+SITES.xen12-com2-support-040522.diff=ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
 .endif
 
 post-extract:

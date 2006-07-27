@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/07/11 16:29:49 hira Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/27 18:48:03 jlam Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -14,10 +14,10 @@ HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
 COMMENT=	Publishing TeX (pTeX)
 
 # XXX ${MAKE_VARIABLES} won't be extracted here.  strange...
-SITES_dvipsk-jpatch-p1.7a.tar.gz= \
+SITES.dvipsk-jpatch-p1.7a.tar.gz= \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/dvips/ \
 		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/dvips/
-SITES_mendexk2.6d.tar.gz= \
+SITES.mendexk2.6d.tar.gz= \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/mendex/ \
 		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/mendex/
 
