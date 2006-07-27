@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/03/20 18:15:38 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/07/27 18:48:02 jlam Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -15,7 +15,7 @@ PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
 SSP_PATCH=		protector-2.95.3-13.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
-SITES_protector-2.95.3-13.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
+SITES.protector-2.95.3-13.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
 
 PATCHDIR=		${.CURDIR}/../gcc/patches
 GCC_FILESDIR=		${.CURDIR}/../gcc/files

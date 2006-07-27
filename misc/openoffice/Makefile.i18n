@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.i18n,v 1.5 2005/12/05 20:50:40 rillig Exp $
+# $NetBSD: Makefile.i18n,v 1.6 2006/07/27 18:48:03 jlam Exp $
 
 .if ${PKG_LANG:C/_.*//} == "afrikaans"
 OPENOFFICE_ISOCODE=	af
@@ -176,7 +176,7 @@ OPENOFFICE_HELPCODE?=	${OPENOFFICE_ISOCODE}
 
 .if defined(OPENOFFICE_HAS_HELP)
 DISTFILES+=	helpcontent_${OPENOFFICE_LANGCODE}_unix.tgz
-SITES_helpcontent_${OPENOFFICE_LANGCODE}_unix.tgz=${MASTER_SITE_OPENOFFICE:=contrib/helpcontent/}
+SITES.helpcontent_${OPENOFFICE_LANGCODE}_unix.tgz=${MASTER_SITE_OPENOFFICE:=contrib/helpcontent/}
 .endif
 
 PLIST_SRC+=	PLIST.i18n.${OPENOFFICE_LANGCODE}
