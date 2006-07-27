@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.838 2006/07/27 10:34:48 tron Exp $
+$NetBSD: CHANGES-2006,v 1.839 2006/07/27 14:00:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3580,3 +3580,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added geography/proj-swig version 0.01 [gdt 2006-07-26]
 	Updated lang/inform to 6.31.1 [wiz 2006-07-27]
 	Updated www/firefox-bin to 1.5.0.5 [tron 2006-07-27]
+	Added textproc/py-cmTemplate version 0.3.2 [joerg 2006-07-27]
