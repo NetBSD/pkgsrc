@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.840 2006/07/27 14:52:38 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.841 2006/07/27 18:23:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3582,3 +3582,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-bin to 1.5.0.5 [tron 2006-07-27]
 	Added textproc/py-cmTemplate version 0.3.2 [joerg 2006-07-27]
 	Added games/gogui version 0.9 [rillig 2006-07-27]
+	Updated devel/ko-po-check to 0.7 [minskim 2006-07-27]
