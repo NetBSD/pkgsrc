@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.662 2006/07/24 09:25:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.663 2006/07/27 13:05:09 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -57,12 +57,12 @@ use constant true		=> 1;
 use constant dont_know		=> 2;
 use constant doesnt_matter	=> 3;
 
-sub assert($) {
-	my ($cond) = @_;
+sub assert($$) {
+	my ($cond, $msg) = @_;
 	my (@callers, $n);
 
 	if (!$cond) {
-		print STDERR ("FATAL: Assertion failed.\n");
+		print STDERR ("FATAL: Assertion failed: ${msg}.\n");
 
 		for ($n = 0; my @info = caller($n); $n++) {
 			push(@callers, [$info[2], $info[3]]);
@@ -70,7 +70,7 @@ sub assert($) {
 
 		for (my $i = $#callers; $i >= 0; $i--) {
 			my $info = $callers[$i];
-			printf STDERR ("  at line %4d in %s\n", $info->[0], $info->[1]);
+			printf STDERR ("  line %4d called %s\n", $info->[0], $info->[1]);
 		}
 		exit(1);
 	}
@@ -468,12 +468,16 @@ sub highlight($$) {
 # Some other methods allow modification of the physical lines, but leave
 # the logical line (the C<text>) untouched. These methods are used in the
 # --autofix mode.
+#
+# A line can have some "extra" fields that allow the results of parsing to
+# be saved under a name.
 #==========================================================================
 package PkgLint::Line;
 
 BEGIN {
 	import PkgLint::Util qw(
 		false true
+		assert
 	);
 }
 
@@ -484,10 +488,11 @@ use constant PHYSLINES	=> 3;
 use constant CHANGED	=> 4;
 use constant BEFORE	=> 5;
 use constant AFTER	=> 6;
+use constant EXTRA	=> 7;
 
 sub new($$$$) {
 	my ($class, $fname, $lines, $text, $physlines) = @_;
-	my ($self) = ([$fname, $lines, $text, $physlines, false, [], []]);
+	my ($self) = ([$fname, $lines, $text, $physlines, false, [], [], {}]);
 	bless($self, $class);
 	return $self;
 }
@@ -497,6 +502,22 @@ sub lines($)		{ return shift(@_)->[LINES]; }
 sub text($)		{ return shift(@_)->[TEXT]; }
 # Note: physlines is _not_ a usual getter method.
 sub is_changed($)	{ return shift(@_)->[CHANGED]; }
+
+# querying, getting and setting the extra values.
+sub has($$) {
+	my ($self, $name) = @_;
+	return exists($self->[EXTRA]->{$name});
+}
+sub get($$) {
+	my ($self, $name) = @_;
+	assert(exists($self->[EXTRA]->{$name}), "Field ${name} does not exist.");
+	return $self->[EXTRA]->{$name};
+}
+sub set($$$) {
+	my ($self, $name, $value) = @_;
+	assert(!exists($self->[EXTRA]->{$name}), "Field ${name} already exists.");
+	$self->[EXTRA]->{$name} = $value;
+}
 
 sub physlines($) {
 	my ($self) = @_;
@@ -1679,7 +1700,6 @@ my (%warnings) = (
 );
 
 my $opt_autofix		= false;
-my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_import		= false;
 my $opt_klickibunti	= false;	# experimental
@@ -1718,8 +1738,6 @@ my (@options) = (
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%warnings);
 	  } ],
-	[ "-d|--debug", "Print additional warnings that are mostly of use to pkglint's author",
-	  "debug|d", \$opt_debug ],
 	[ "-e|--explain", "Explain the diagnostics or give further help",
 	  "explain|e", sub {
 		PkgLint::Logging::set_explain();
@@ -1764,17 +1782,20 @@ use constant regex_dependency_wildcard
 				=> qr"^((?:\$\{[\w_]+\}|[\w_]|-[^\d\[])+)-(?:\[0-9\]|\d.*)$";
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
+use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
 use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"(?:\s*#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
-use constant regex_shellcmd	=> qr"^\t(.*)$";
+use constant regex_mk_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
 # Note: the following regular expression looks more complicated than
 # necessary to avoid a stack overflow in the Perl interpreter.
-use constant regex_varassign	=> qr"^([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!=)\s*((?:[^\\#\s]+|\s+?|(?:\\#)+|\\)*?)(?:\s*(#.*))?$";
+# The leading white-space may only consist of \040 characters, otherwise
+# the order of regex_varassign and regex_mk_shellcmd becomes important.
+use constant regex_varassign	=> qr"^ *([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!=)\s*((?:[^\\#\s]+|\s+?|(?:\\#)+|\\)*?)(?:\s*(#.*))?$";
 use constant regex_sh_varassign	=> qr"^([A-Z_a-z][0-9A-Z_a-z]*)=";
 
 # The following "constants" are often used in contexts where
@@ -1785,6 +1806,8 @@ use constant regex_sh_varassign	=> qr"^([A-Z_a-z][0-9A-Z_a-z]*)=";
 # it will catch almost all shell programs that are portable enough to be
 # used in pkgsrc.
 my $regex_shellword		=  qr"\s*(
+	\#.*				# shell comment
+	|
 	(?:	'[^']*'			# single quoted string
 	|	\"(?:\\.|[^\"\\])*\"	# double quoted string
 	|	\`[^\`]*\`		# backticks string
@@ -1793,9 +1816,10 @@ my $regex_shellword		=  qr"\s*(
 	|	\$\([^()]+\)		# make(1) variable, $(...)
 	|	\$[/\@<^]		# special make(1) variables
 	|	\$\$[0-9A-Z_a-z]+	# shell variable
+	|	\$\$[?@]		# special shell variables
 	|	\$\$\{[0-9A-Z_a-z]+\}	# shell variable in braces
 	|	\$\$\(			# POSIX-style backticks replacement
-	|	[^\(\)'\"\\\s;&\|<>\#\`\$] # non-special character
+	|	[^\(\)'\"\\\s;&\|<>\`\$] # non-special character
 	|	\$\{[^\s\"'`]+		# HACK: nested make(1) variables
 	)+ | ;;? | &&? | \|\|? | \( | \) | >& | <<? | >>? | \#.*)"sx;
 my $regex_varname		= qr"[-*+.0-9A-Z_a-z{}\[]+";
@@ -2242,7 +2266,7 @@ sub load_dist_sites() {
 			# ignore multiple inclusion guards
 
 		} else {
-			$line->log_error("Unknown line type.");
+			$line->log_fatal("Unknown line type.");
 		}
 	}
 
@@ -2329,7 +2353,7 @@ sub load_tool_names() {
 			}
 		}
 	}
-	assert(scalar(@tool_files) > 1);
+	assert(scalar(@tool_files) > 1, "Too few tool files. Maybe the files have been renamed again?");
 
 	#
 	# Scan the tool files for the actual definitions of the tools.
@@ -2814,7 +2838,7 @@ sub unescape_shellword($) {
 	my ($text) = @_;
 
 	# TODO: implement this.
-	assert(false);
+	assert(false, "unescape_shellword is not yet implemented.");
 }
 
 # Removes all uses of make variables from a string.
@@ -2840,8 +2864,6 @@ sub strings_to_lines($) {
 
 sub backtrace() {
 	my (@callers);
-
-	return unless $opt_debug;
 
 	my $n = 0;
 	while (my @info = caller($n)) {
@@ -2925,7 +2947,7 @@ sub extract_used_variables($$) {
 	}
 
 	if ($rest ne "") {
-		$opt_debug and $line->log_warning("Could not extract variables: ${rest}");
+		$opt_debug_misc and $line->log_warning("Could not extract variables: ${rest}");
 	}
 
 	return $result;
@@ -2967,8 +2989,8 @@ sub check_pkglint_version() {
 sub lines_log_warning($$$) {
 	my ($lines, $lineno, $msg) = @_;
 
-	assert(0 <= $lineno);
-	assert(@{$lines} != 0);
+	assert(0 <= $lineno, "The line number is negative (${lineno}).");
+	assert(@{$lines} != 0, "The lines may not be empty.");
 
 	if ($lineno <= $#{$lines}) {
 		$lines->[$lineno]->log_warning($msg);
@@ -3015,7 +3037,7 @@ sub get_variable_type($$) {
 	my ($line, $varname) = @_;
 	my ($type);
 
-	assert(defined($varname));
+	assert(defined($varname), "The varname parameter must be defined.");
 
 	if (exists(get_vartypes_map()->{$varname})) {
 		return get_vartypes_map()->{$varname};
@@ -3202,6 +3224,86 @@ sub variable_needs_quoting($$$) {
 }
 
 #
+# Parsing.
+#
+
+# This procedure fills in the extra fields of a line, depending on the
+# line type. These fields can later be queried without having to parse
+# them again and again.
+#
+sub parseline_mk($) {
+	my ($line) = @_;
+	my $text = $line->text;
+
+	if ($text =~ regex_varassign) {
+		my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+
+		# In variable assignments, a '#' character is preceded
+		# by a backslash. In shell commands, it is interpreted
+		# literally.
+		$value =~ s/\\\#/\#/g;
+
+		$line->set("is_varassign", true);
+		$line->set("varname", $varname);
+		$line->set("op", $op);
+		$line->set("value", $value);
+		defined($comment) and $line->set("comment", $comment);
+
+	} elsif ($text =~ regex_mk_shellcmd) {
+		my ($shellcmd) = @_;
+
+		# Shell command lines cannot have embedded comments.
+		$line->set("is_shellcmd", true);
+		$line->set("shellcmd", $shellcmd);
+
+	} elsif ($text =~ regex_mk_comment) {
+		my ($comment) = @_;
+
+		$line->set("is_comment", true);
+		$line->set("comment", $comment);
+
+	} elsif ($text eq "") {
+
+		$line->set("is_empty", true);
+
+	} elsif ($text =~ regex_mk_cond) {
+		my ($indent, $directive, $args, $comment) = ($1, $2, $3, $4);
+
+		$line->set("is_cond", true);
+		$line->set("indent", $indent);
+		$line->set("directive", $directive);
+		defined($args) and $line->set("args", $args);
+		defined($comment) and $line->set("comment", $comment);
+
+	} elsif ($text =~ regex_mk_include) {
+		my ($includefile, $comment) = ($1, $2);
+
+		$line->set("is_include", true);
+		$line->set("includefile", $includefile);
+		defined($comment) and $line->set("comment", $comment);
+
+	} elsif ($text =~ regex_mk_dependency) {
+		my ($targets, $sources, $comment) = ($1, $2, $3);
+
+		$line->set("is_dependency", true);
+		$line->set("targets", $targets);
+		$line->set("sources", $sources);
+		defined($comment) and $line->set("comment", $comment);
+
+	} else {
+		assert(false, "Unknown line format: " . $line->to_string());
+	}
+}
+
+sub parselines_mk($) {
+	my ($lines) = @_;
+
+	foreach my $line (@{$lines}) {
+		parseline_mk($line);
+	}
+}
+
+#
 # Loading package-specific data from files.
 #
 
@@ -3215,6 +3317,7 @@ sub readmakefile($$$$) {
 	if (!$lines) {
 		return false;
 	}
+	parselines_mk($lines);
 
 	$is_main_Makefile = (@{$main_lines} == 0);
 
@@ -3283,8 +3386,8 @@ sub readmakefile($$$$) {
 				}
 			}
 
-		} elsif ($text =~ regex_varassign) {
-			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+		} elsif ($line->has("is_varassign")) {
+			my ($varname, $op, $value) = ($line->get("varname"), $line->get("op"), $line->get("value"));
 
 			# Record all variables that are defined in these lines, so that they
 			# are not reported as "used but not defined".
@@ -3410,12 +3513,8 @@ sub checkline_valid_characters_in_variable($$) {
 	my ($line, $re_validchars) = @_;
 	my ($varname, $rest);
 
-	$rest = $line->text;
-	if ($rest =~ regex_varassign) {
-		($varname, undef, $rest) = ($1, $2, $3);
-	} else {
-		return;
-	}
+	$varname = $line->get("varname");
+	$rest = $line->get("value");
 
 	$rest =~ s/$re_validchars//g;
 	if ($rest ne "") {
@@ -3632,7 +3731,7 @@ sub checkline_cpp_macro_names($$) {
 sub checkline_mk_varuse($$$$) {
 	my ($line, $varname, $mod, $context) = @_;
 
-	assert(defined($varname));
+	assert(defined($varname), "The varname parameter must be defined");
 	$opt_debug_trace and $line->log_debug("checkline_mk_varuse(\"${varname}\", \"${mod}\", ".$context->to_string().")");
 
 	# Check for spelling mistakes.
@@ -3739,7 +3838,7 @@ sub checkline_mk_varuse($$$$) {
 		}
 	}
 
-	assert(defined($mkctx_build_defs));
+	assert(defined($mkctx_build_defs), "The build_defs variable must be defined here.");
 	if (exists(get_userdefined_variables()->{$varname}) && !exists(get_system_build_defs()->{$varname}) && !exists($mkctx_build_defs->{$varname})) {
 		$line->log_warning("The user-defined variable ${varname} is used but not added to BUILD_DEFS.");
 	}
@@ -3845,9 +3944,18 @@ sub checkline_mk_shellword($$$) {
 
 		# make variables have the same syntax, no matter in which
 		# state we are currently.
-		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//
-		||  $rest =~ s/^\$\((${regex_varname})(:[^\)]+)?\)//) {
+		if ($rest =~ s/^\$\{(${regex_varname}|[\@])(:[^\{]+)?\}//
+		||  $rest =~ s/^\$\((${regex_varname}|[\@])(:[^\)]+)?\)//
+		||  $rest =~ s/^\$(\@)//) {
 			my ($varname, $mod) = ($1, $2);
+
+			if ($varname eq "\@") {
+				$line->log_warning("Please use \"\${.TARGET}\" instead of \"\$\@\".");
+				$line->explain_warning(
+					"The variable \$\@ can easily be confused with the shell variable of the",
+					"same name, which has a completely different meaning.");
+				$varname = ".TARGET";
+			}
 
 			if ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
@@ -3878,24 +3986,39 @@ sub checkline_mk_shellword($$$) {
 				: VUC_SHELLWORD_UNKNOWN,
 				VUC_EXTENT_WORD_PART
 			);
-			checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", $ctx);
+			if ($varname ne "\@") {
+				checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", $ctx);
+			}
 
 		} elsif ($state == SWST_PLAIN) {
-			if ($rest =~ s/^[!\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]^_a-z{|}~]+//) {
+			if ($rest =~ s/^[!#\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]^_a-z{|}~]+//) {
 			} elsif ($rest =~ s/^\'//) {
 				$state = SWST_SQUOT;
 			} elsif ($rest =~ s/^\"//) {
 				$state = SWST_DQUOT;
 			} elsif ($rest =~ s/^\`//) {
 				$state = SWST_BACKT;
-			} elsif ($rest =~ s/^\\[ !"#'\(\)*;\\^{}]//) {
+			} elsif ($rest =~ s/^\\[ !"#'\(\)*;\\^{|}]//) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
 			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
 				my ($shvarname) = ($1);
 				if ($opt_warn_quoting && $check_quoting) {
 					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
 				}
-			} elsif ($rest =~ s/\$\$\(/(/) {
+
+			} elsif ($rest =~ s/^\$\@//) {
+				$line->log_warning("Please use \"\${.TARGET}\" instead of \"\$@\".");
+				$line->explain_warning(
+					"It is more readable and prevents confusion with the shell variable of",
+					"the same name.");
+
+			} elsif ($rest =~ s/^\$\$\@//) {
+				$line->log_warning("The \$@ shell variable should only be used in double quotes.");
+
+			} elsif ($rest =~ s/^\$\$\?//) {
+				$line->log_warning("The \$? shell variable is often not available in \"set -e\" mode.");
+
+			} elsif ($rest =~ s/^\$\$\(/(/) {
 				$line->log_warning("Invoking subshells via \$(...) is not portable enough.");
 				$line->explain_warning(
 					"The Solaris /bin/sh does not know this way to execute a command in a",
@@ -3925,7 +4048,7 @@ sub checkline_mk_shellword($$$) {
 				$opt_debug_shell and $line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${shvarname}.");
 			} elsif ($rest =~ s/^\$\$//) {
 				$line->log_warning("Unquoted \$ or strange shell variable found.");
-			} elsif ($rest =~ s/^\\([\(\)*\-.0-9n])//) {
+			} elsif ($rest =~ s/^\\(.)//) {
 				my ($char) = ($1);
 				$line->log_warning("Please use \"\\\\${char}\" instead of \"\\${char}\".");
 				$line->explain_warning(
@@ -3980,8 +4103,8 @@ sub checkline_mk_shellword($$$) {
 			last;
 		}
 	}
-	if ($rest ne "") {
-		$opt_debug_shell and $line->log_debug("Unparseable shell word in " . statename->[$state] . ": ${rest}");
+	if ($rest !~ qr"^\s*$") {
+		$line->log_error("Internal pkglint error: " . statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -4388,8 +4511,8 @@ sub checkline_mk_shelltext($$) {
 			};
 	}
 
-	if ($rest ne "") {
-		$opt_debug and $line->log_error("[checkline_mk_shelltext] " . scst_statename->[$state] . ": rest=${rest}");
+	if ($rest !~ qr"^\s*$") {
+		$line->log_error("Internal pkglint error: " . scst_statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -4533,19 +4656,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value =~ qr"^-D([0-9A-Z_a-z]+)=(.*)") {
 			my ($macname, $macval) = ($1, $2);
 
-			if ($macval =~ qr"^\\\"(?:\$\{[A-Z0-9_]+:Q\}|[^\$])*\\\"") {
-				# Everything's fine.
+			# No checks needed, since the macro definitions
+			# are usually directory names, which don't need
+			# any quoting.
 
-			} elsif ($macval =~ qr"^\"\\\"[^\$]*\$\{[A-Z0-9_]+\}.*\\\"\"") {
-				$opt_debug and $line->log_note("Not the best style for CPP macros, but accepted.");
-
-			} elsif ($macval =~ regex_unresolved && $macval =~ qr"[\"']") {
-				$line->log_warning("Unusual macro value ${macval}.");
-				$line->explain_warning(
-					"String macro definitions should start and end with an escaped quote",
-					"(\\\"). Between these quotes, there should be quoted variables in the",
-					"form \${VARNAME:Q} or arbitrary non-dollar characters.");
-			}
 		} elsif ($value =~ qr"^-[DU]([0-9A-Z_a-z]+)") {
 			my ($macname) = ($1);
 
@@ -4751,10 +4865,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		));
 
 		my $license_file = "${cwd_pkgsrcdir}/licenses/${value}";
-		if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"}) && $pkgctx_vardef->{"LICENSE_FILE"}->text =~ regex_varassign) {
-			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+		if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"})) {
+			my $license_file_line = $pkgctx_vardef->{"LICENSE_FILE"};
 
-			$license_file = "${current_dir}/" . resolve_relative_path($value, false);
+			$license_file = "${current_dir}/" . resolve_relative_path($license_file_line->get("value"), false);
 		}
 		if (!-f $license_file) {
 			$line->log_warning("License file ".normalize_pathname($license_file)." does not exist.");
@@ -4831,13 +4945,13 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		}
 
 	} elsif ($type eq "Pathmask") {
-		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/\[\]]*$") {
+		if ($value_novar !~ qr"^[#\-0-9A-Za-z._~+%*?/\[\]]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname mask.");
 		}
 		checkline_mk_absolute_pathname($line, $value);
 
 	} elsif ($type eq "Pathname") {
-		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%/]*$") {
+		if ($value_novar !~ qr"^[#\-0-9A-Za-z._~+%/]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname.");
 		}
 		checkline_mk_absolute_pathname($line, $value);
@@ -5023,7 +5137,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 
-		} elsif ($value =~ qr"^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:=?\@A-Z_a-z~]|\\#)*$") {
+		} elsif ($value =~ qr"^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:=?\@A-Z_a-z~]|#)*$") {
 			my ($proto, $host, $port, $path) = ($1, $2, $3, $4);
 			my $sites = get_dist_sites();
 
@@ -5200,7 +5314,7 @@ sub checkline_mk_vartype($$$$$) {
 		}
 
 		if ($rest !~ qr"^\s*$") {
-			$opt_debug and $line->log_warning("Invalid shell word \"${value}\" at the end.");
+			$line->log_error("Internal pkglint error: rest=${rest}");
 		}
 
 	} else {
@@ -5283,7 +5397,7 @@ sub checkline_mk_varassign($$$$$) {
 	}
 
 	if ($varname eq "BUILD_DEFS") {
-		assert(defined($mkctx_build_defs));
+		assert(defined($mkctx_build_defs), "The build_defs variable must be defined here.");
 		foreach my $bdvar (split(qr"\s+", $value)) {
 			$mkctx_build_defs->{$bdvar} = true;
 			$opt_debug_misc and $line->log_debug("${bdvar} is added to BUILD_DEFS.");
@@ -5453,8 +5567,8 @@ sub checklines_package_Makefile_varorder($) {
 		if ($text =~ qr"^#") {
 			$lineno++;
 
-		} elsif ($text =~ regex_varassign) {
-			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+		} elsif ($line->has("varname")) {
+			my $varname = $line->get("varname");
 
 			if (exists($below->{$varname})) {
 				if (defined($below->{$varname})) {
@@ -5511,7 +5625,7 @@ sub checklines_mk($) {
 	my ($allowed_targets) = ({});
 	my ($substcontext) = PkgLint::SubstContext->new();
 
-	assert(@{$lines} != 0);
+	assert(@{$lines} != 0, "checklines_mk may only be called with non-empty lines.");
 	$opt_debug_trace and log_debug($lines->[0]->fname, NO_LINES, "checklines_mk()");
 
 	# Define global variables for the Makefile context.
@@ -5537,16 +5651,18 @@ sub checklines_mk($) {
 		checkline_trailing_whitespace($line);
 		checkline_spellcheck($line);
 
-		if ($text =~ qr"^\s*$") {
+		if ($line->has("is_empty")) {
 			$substcontext->check_end($line);
 
-		} elsif ($text =~ qr"^#") {
+		} elsif ($line->has("is_comment")) {
 			# No further checks.
 
 		} elsif ($text =~ regex_varassign) {
-			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+			my ($varname, $op, undef, $comment) = ($1, $2, $3, $4);
 			my $space1 = substr($text, $+[1], $-[2] - $+[1]);
 			my $align = substr($text, $+[2], $-[3] - $+[2]);
+			my $value = $line->get("value");
+
 			if ($align !~ qr"^(\t*|[ ])$") {
 				$opt_warn_space && $line->log_note("Alignment of variable values should be done with tabs, not spaces.");
 				my $prefix = "${varname}${space1}${op}";
@@ -5559,7 +5675,7 @@ sub checklines_mk($) {
 			checkline_mk_varassign($line, $varname, $op, $value, $comment);
 			$substcontext->check_varassign($line, $varname, $op, $value);
 
-		} elsif ($text =~ regex_shellcmd) {
+		} elsif ($text =~ regex_mk_shellcmd) {
 			my ($shellcmd) = ($1);
 			checkline_mk_shellcmd($line, $shellcmd);
 
@@ -5746,7 +5862,7 @@ sub checklines_buildlink3_inclusion($) {
 	my ($lines) = @_;
 	my ($included_files);
 
-	assert(@{$lines} != 0);
+	assert(@{$lines} != 0, "The lines array must be non-empty.");
 	$opt_debug_trace and log_debug($lines->[0]->fname, NO_LINES, "checklines_buildlink3_inclusion()");
 
 	if (!defined($pkgctx_bl3)) {
@@ -5816,6 +5932,7 @@ sub checkfile_buildlink3_mk($) {
 		return;
 	}
 
+	parselines_mk($lines);
 	checklines_mk($lines);
 
 	$lineno = 0;
@@ -5952,6 +6069,14 @@ sub checkfile_buildlink3_mk($) {
 				if (!dewey_cmp($abi_version, ">=", $api_version)) {
 					$abi_line->log_warning("ABI version (${abi_version}) should be at least ...");
 					$api_line->log_warning("... API version (${api_version}).");
+				}
+			}
+
+			if ($varname =~ qr"^BUILDLINK_[\w_]+\.(.*)$") {
+				my ($varparam) = ($1);
+
+				if ($varparam ne $bl_pkgbase) {
+					$line->log_warning("Only buildlink variables for ${bl_pkgbase}, not ${varparam} may be set in this file.");
 				}
 			}
 
@@ -6255,6 +6380,7 @@ sub checkfile_mk($) {
 		return;
 	}
 
+	parselines_mk($lines);
 	checklines_mk($lines);
 	autofix($lines);
 }
@@ -6310,27 +6436,24 @@ sub checkfile_package_Makefile($$$) {
 
 	if (exists($pkgctx_vardef->{"GNU_CONFIGURE"}) && exists($pkgctx_vardef->{"USE_LANGUAGES"})) {
 		my $languages_line = $pkgctx_vardef->{"USE_LANGUAGES"};
+		my $value = $languages_line->get("value");
 
-		if ($languages_line->text =~ regex_varassign) {
-			my (undef, $op, $value, $comment) = ($1, $2, $3, $4);
+		if ($languages_line->has("comment") && $languages_line->get("comment") =~ qr"(?:^|\s+)c(?:\s+|$)"i) {
+			# Don't emit a warning, since the comment
+			# probably contains a statement that C is
+			# really not needed.
 
-			if (defined($comment) && $comment =~ qr"(?:^|\s+)c(?:\s+|$)"i) {
-				# Don't emit a warning, since the comment
-				# probably contains a statement that C is
-				# really not needed.
-
-			} elsif ($value !~ qr"(?:^|\s+)(?:c|objc)(?:\s+|$)") {
-				$pkgctx_vardef->{"GNU_CONFIGURE"}->log_warning("GNU_CONFIGURE almost always needs a C compiler, ...");
-				$languages_line->log_warning("... but \"c\" is not added to USE_LANGUAGES.");
-			}
+		} elsif ($value !~ qr"(?:^|\s+)(?:c|objc)(?:\s+|$)") {
+			$pkgctx_vardef->{"GNU_CONFIGURE"}->log_warning("GNU_CONFIGURE almost always needs a C compiler, ...");
+			$languages_line->log_warning("... but \"c\" is not added to USE_LANGUAGES.");
 		}
 	}
 
 	my $distname_line = $pkgctx_vardef->{"DISTNAME"};
 	my $pkgname_line = $pkgctx_vardef->{"PKGNAME"};
 
-	my $distname = (defined($distname_line) && $distname_line->text =~ regex_varassign) ? $3 : undef;
-	my $pkgname = (defined($pkgname_line) && $pkgname_line->text =~ regex_varassign) ? $3 : undef;
+	my $distname = defined($distname_line) ? $distname_line->get("value") : undef;
+	my $pkgname = defined($pkgname_line) ? $pkgname_line->get("value") : undef;
 
 	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		$pkgname_line->log_note("PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
@@ -6526,7 +6649,7 @@ sub checkfile_patch($) {
 			      (defined($addlines) && $addlines > 0))) {
 				if (defined($context_scanning_leading)) {
 					if ($leading_context_lines != $trailing_context_lines) {
-						$opt_debug and $line->log_warning("The hunk that ends here does not have as many leading (${leading_context_lines}) as trailing (${trailing_context_lines}) lines of context.");
+						$opt_debug_patches and $line->log_warning("The hunk that ends here does not have as many leading (${leading_context_lines}) as trailing (${trailing_context_lines}) lines of context.");
 					}
 				}
 				$nextstate = $newstate;
@@ -6864,7 +6987,7 @@ sub checkfile_PLIST($) {
 			} elsif ($text =~ qr"^etc/") {
 				my $f = "mk/pkginstall/bsd.pkginstall.mk";
 
-				assert(-f "${cwd_pkgsrcdir}/${f}");
+				assert(-f "${cwd_pkgsrcdir}/${f}", "${cwd_pkgsrcdir}/${f} is not a regular file.");
 				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in ${f}.");
 
 			} elsif ($text =~ qr"^include/.*\.(?:h|hpp)$") {
@@ -7094,6 +7217,7 @@ sub checkdir_root() {
 		return;
 	}
 
+	parselines_mk($lines);
 	if (0 <= $#{$lines}) {
 		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
 	}
@@ -7147,6 +7271,7 @@ sub checkdir_category() {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
+	parselines_mk($lines);
 
 	$lineno = 0;
 
@@ -7360,6 +7485,7 @@ sub checkdir_package() {
 	foreach my $fname (@files) {
 		if ($fname =~ qr"^((?:.*/)?Makefile\..*|.*\.mk)$"
 		&& (defined(my $lines = load_lines($fname, true)))) {
+			parselines_mk($lines);
 			determine_used_variables($lines);
 		}
 	}
