@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1877 2006/07/27 13:47:29 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1878 2006/07/27 21:46:45 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -24,11 +24,6 @@
 ############################################################################
 
 .MAIN: all
-
-# If MAKECONF is defined, then pass it down to all recursive make
-# processes invoked by pkgsrc.
-#
-PKGSRC_MAKE_ENV+=	${MAKECONF:DMAKECONF=${MAKECONF:Q}}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -825,9 +820,9 @@ su-bin-install:
 	else 				 			\
 		${SHCOMMENT} Cycle through some FTP server here ;\
 		${ECHO_MSG} "Installing from source" ;		\
-		${MAKE} ${MAKEFLAGS} package 			\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} package 		\
 			DEPENDS_TARGET=${DEPENDS_TARGET:Q} &&	\
-		${MAKE} ${MAKEFLAGS} clean ;			\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} clean ;		\
 	fi
 
 .PHONY: bin-install
