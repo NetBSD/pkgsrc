@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/01/14 07:00:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2006/07/27 18:48:03 jlam Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://cr.yp.to/daemontools.html
 COMMENT=		Service monitoring and logging utilities by djb
 
 MANPAGES=		${DISTNAME}-man-20020131.tar.gz
-SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
+SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		YES
 

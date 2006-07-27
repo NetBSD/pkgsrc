@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/21 03:01:10 dsainty Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/27 18:48:02 jlam Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -18,7 +18,7 @@ POSE_VERSION=	3.5
 DIST_SUBDIR=	${PKGBASE}
 
 # Source is under sources/ directory, skins are not...
-SITES_emulator-skins-19.tar.gz=	http://www.palmos.com/dev/tools/emulator/
+SITES.emulator-skins-19.tar.gz=	http://www.palmos.com/dev/tools/emulator/
 
 #LICENSE=       GPL
 

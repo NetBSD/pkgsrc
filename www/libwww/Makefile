@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2006/03/04 21:30:59 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2006/07/27 18:48:04 jlam Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -16,7 +16,7 @@ COMMENT=		The W3C Reference Library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-SITES_libwww-configure-5.4.0nb1.gz=	${MASTER_SITE_LOCAL}
+SITES.libwww-configure-5.4.0nb1.gz=	${MASTER_SITE_LOCAL}
 
 USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES

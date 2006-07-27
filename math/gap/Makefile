@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:10:01 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/27 18:48:02 jlam Exp $
 #
 
 DISTNAME=	gap4r3
@@ -17,7 +17,7 @@ HOMEPAGE=	http://www.gap-system.org/
 COMMENT=	Computational group theory and discrete algebra language
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-SITES_fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
+SITES.fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
 
 LICENSE=	no-commercial-use
 
