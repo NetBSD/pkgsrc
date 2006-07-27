@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/06/24 15:35:25 darcy Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/27 00:09:06 hubertf Exp $
 #
 
 DISTNAME=	jadetex-3.13
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jadetex/}
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jadetex.sourceforge.net/
 COMMENT=	Process tex files produced by the TeX backend of Jade
 

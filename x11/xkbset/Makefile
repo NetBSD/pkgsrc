@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:47 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/27 00:09:06 hubertf Exp $
 #
 
 DISTNAME=	xkbset-0.3
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.math.missouri.edu/~stephen/software/xkbset/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.math.missouri.edu/~stephen/software/#xkbset
 COMMENT=	Manages XKB features of the X window system
 
