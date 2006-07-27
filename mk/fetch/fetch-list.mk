@@ -1,4 +1,4 @@
-# $NetBSD: fetch-list.mk,v 1.8 2006/07/27 17:29:57 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.9 2006/07/27 21:46:46 jlam Exp $
 
 ######################################################################
 ### fetch-list (PUBLIC)
@@ -39,8 +39,8 @@ fetch-list-header:
 fetch-list-recursive:
 	@${_DEPENDS_WALK_CMD} -r ${PKGPATH} |				\
 	while read dir; do						\
-	    (	cd ../../$$dir && ${SETENV} ${PKGSRC_MAKE_ENV}		\
-		${MAKE} ${MAKEFLAGS} fetch-list-one-pkg |		\
+	    (	cd ../../$$dir &&					\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} fetch-list-one-pkg |	\
 		${AWK} '/^[^#]/ { FoundSomething = 1 }			\
 			/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }	\
 			/^echo/ { gsub(/;[[:space:]]+/, "\n") }		\
