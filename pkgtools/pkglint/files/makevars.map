@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.134 2006/07/27 15:48:45 rillig Exp $
+# $NetBSD: makevars.map,v 1.135 2006/07/27 16:13:51 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -261,6 +261,8 @@ DOCOWN			UserGroupName [$system]
 DOCGRP			UserGroupName [$system]
 DOWNLOADED_DISTFILE	Pathname [$system]
 DO_NADA			ShellCommand [$system]
+DYNAMIC_SITE_CMD	ShellCommand [$package]
+DYNAMIC_SITE_SCRIPT	Pathname [$package]
 ECHO			ShellCommand [$system]
 ECHO_MSG		ShellCommand [$system]
 ECHO_N			ShellCommand [$system]
