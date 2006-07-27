@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.3 2006/07/27 21:46:45 jlam Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.4 2006/07/27 22:01:28 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -84,10 +84,9 @@ run-depends-list:
 .PHONY: build-depends-list
 .if !target(build-depends-list)
 build-depends-list:
-	@for dir in `${RECURSIVE_MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`; \
-	do								\
-		(cd ../../$$dir &&					\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} package-name) \
+	@${_DEPENDS_WALK_CMD} ${PKGPATH} |				\
+	while read dir; do						\
+		( cd ../../$$dir && ${RECURSIVE_MAKE} ${MAKEFLAGS} package-name) \
 	done
 .endif
 
