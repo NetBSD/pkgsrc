@@ -1,4 +1,4 @@
-# $NetBSD: fetch-list.mk,v 1.5 2006/07/27 16:06:27 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.6 2006/07/27 17:14:56 jlam Exp $
 
 # Prints out a script to fetch all needed files (no checksumming).
 .PHONY: fetch-list
@@ -18,19 +18,18 @@ fetch-list:
 .if !target(fetch-list-recursive)
 
 fetch-list-recursive:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs`; do	\
-		(cd ../../$$dir &&					\
-		${MAKE} ${MAKEFLAGS} fetch-list-one-pkg			\
-		| ${AWK} '						\
-		/^[^#]/ { FoundSomething = 1 }				\
-		/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }		\
-		/^echo/ { gsub(/;[[:space:]]+/, "\n") }			\
-		{ block[line_c++] = $$0 }				\
-		END { if (FoundSomething)				\
-			for (line = 0; line < line_c; line++)		\
-				print block[line] }			\
-		')							\
+	@${_DEPENDS_WALK_CMD} -r ${PKGPATH} |				\
+	while read dir; do						\
+	    (	cd ../../$$dir && ${SETENV} ${PKGSRC_MAKE_ENV}		\
+		${MAKE} ${MAKEFLAGS} fetch-list-one-pkg |		\
+		${AWK} '/^[^#]/ { FoundSomething = 1 }			\
+			/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }	\
+			/^echo/ { gsub(/;[[:space:]]+/, "\n") }		\
+			{ block[line_c++] = $$0 }			\
+			END { if (FoundSomething)			\
+				for (line = 0; line < line_c; line++)	\
+					print block[line] }'		\
+	    );								\
 	done
 .endif # !target(fetch-list-recursive)
 
