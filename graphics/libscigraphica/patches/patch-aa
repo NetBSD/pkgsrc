@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/07/02 10:18:32 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/27 09:03:28 rillig Exp $
 
 Another self-written configure script that does everything wrong. This
 one does not let the user choose the directory where py-numarray is
@@ -50,6 +50,15 @@ installed.
                    if test -n $array_loc -a -d $array_loc; then
                       echo "$array_loc"
                       PY_CFLAGS="$PY_CFLAGS -I$array_loc -DWITH_NUMERIC_PYTHON"
+@@ -10374,7 +10370,7 @@
+ 
+ if eval "test x$array_loc = x"; then
+  echo "Numerical python not found!"
+- exit
++ exit 1
+ fi
+ 
+ UNAME=`uname -s -m -r -p`
 @@ -10414,12 +10410,10 @@ scigraphica_icondir="${datadir}/pixmaps/
  
  
