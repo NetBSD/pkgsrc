@@ -247,6 +247,10 @@
 <dt><span class="sect1"><a href="#build.builddirs">15.3. Directories used during the build process</a></span></dt>
 <dt><span class="sect1"><a href="#build.running">15.4. Running a phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.fetch">15.5. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#build.fetch.what">15.5.1. What to fetch and where to get it from</a></span></dt>
+<dt><span class="sect2"><a href="#build.fetch.how">15.5.2. How are the files fetched?</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#build.checksum">15.6. The <span class="emphasis"><em>checksum</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.extract">15.7. The <span class="emphasis"><em>extract</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.patch">15.8. The <span class="emphasis"><em>patch</em></span> phase</a></span></dt>
@@ -337,16 +341,23 @@
 <dd><dl>
 <dt><span class="chapter"><a href="#infr.design">21. Design of the pkgsrc infrastructure</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#infr.var">21.1. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">21.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">21.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">21.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">21.1.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">21.1.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">21.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">21.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">21.2. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">21.3. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">21.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">21.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.3.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.3.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">21.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">21.5.2. Actions taken on behalf of parameters</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="#infr.order">21.6. The order in which files are loaded</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#infr.order.prefs">21.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">21.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">22. Regression tests</a></span></dt>
@@ -1502,16 +1513,8 @@ source packages</a></span></dt>
 <p>To install binary packages, you first need to know from
 	where to get them. You can get them on CD-ROMs, DVDs, or via FTP
 	or HTTP.</p>
-<p>For NetBSD, the binary packages are made available on
-	<code class="filename">ftp.NetBSD.org</code> and its mirrors, in the
-	directory
-	<code class="filename">/pub/NetBSD/packages/<em class="replaceable"><code>OSVERSION</code></em>/<em class="replaceable"><code>ARCH</code></em>/</code>.
-	For <em class="replaceable"><code>OSVERSION</code></em>, you should insert the
-	output of <span><strong class="command">uname -r</strong></span>, and for
-	<em class="replaceable"><code>ARCH</code></em> the output of <span><strong class="command">uname
-	-p</strong></span>.</p>
-<p>For some other platforms, binary packages can be found at
-	the following locations:</p>
+<p>The binary packages can be found at the following
+	locations.</p>
 <div class="informaltable">
 <a name="binary-packages"></a><table border="1">
 <colgroup>
@@ -1524,6 +1527,10 @@ source packages</a></span></dt>
 </tr></thead>
 <tbody>
 <tr>
+<td>NetBSD</td>
+<td><code class="filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/</code></td>
+</tr>
+<tr>
 <td>Solaris 9</td>
 <td><code class="filename">ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/</code></td>
 </tr>
@@ -1534,8 +1541,8 @@ source packages</a></span></dt>
 </tbody>
 </table>
 </div>
-<p>Most of these directories contain the pkgsrc distribution
-	for multiple platforms. Select the appropriate subdirectories,
+<p>Most of these directories contain binary packages for
+	multiple platforms. Select the appropriate subdirectories,
 	according to your machine architecture and operating system,
 	until you find a directory called <code class="filename">All</code>. This
 	directory contains all the binary packages. Further, there are
@@ -1909,20 +1916,6 @@ source packages</a></span></dt>
 	    the shell commands before their invocation, and their
 	    actual execution progress with <span><strong class="command">set -x</strong></span>
 	    will be displayed.</p></li>
-<li><p><code class="varname">ALLOW_VULNERABILITIES.<em class="replaceable"><code>pkgbase</code></em></code>:
-	    A space separated list of vulnerability IDs that may be ignored when
-		performing the automated security checks.  These IDs are listed in the
-		pkg-vulnerabilities file and are displayed by
-		<span><strong class="command">audit-packages</strong></span> when
-		it finds a vulnerable package.
-	  </p></li>
-<li><p><code class="varname">SKIP_AUDIT_PACKAGES</code>:
-	    If this is set to &#8220;<span class="quote">yes</span>&#8221;, the automated security checks
-		(which use the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>
-		package) will be <span class="strong"><strong>entirely</strong></span> skipped
-		for <span class="strong"><strong>all</strong></span> packages built.  Normally
-		you'll want to use ALLOW_VULNERABILITIES instead of this.
-	  </p></li>
 </ul></div>
 <p>
     </p>
@@ -3063,6 +3056,10 @@ a security check before building any package.  See
 <dt><span class="sect1"><a href="#build.builddirs">15.3. Directories used during the build process</a></span></dt>
 <dt><span class="sect1"><a href="#build.running">15.4. Running a phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.fetch">15.5. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#build.fetch.what">15.5.1. What to fetch and where to get it from</a></span></dt>
+<dt><span class="sect2"><a href="#build.fetch.how">15.5.2. How are the files fetched?</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#build.checksum">15.6. The <span class="emphasis"><em>checksum</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.extract">15.7. The <span class="emphasis"><em>extract</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.patch">15.8. The <span class="emphasis"><em>patch</em></span> phase</a></span></dt>
@@ -3270,8 +3267,9 @@ a security check before building any package.  See
 <p>A package <code class="filename">Makefile</code> contains several
      sections that describe the package.</p>
 <p>In the first section there are the following variables, which
-      should appear exactly in the order given here.
-      </p>
+    should appear exactly in the order given here. The ordering and
+    grouping of variables is mostly historical and has no further
+    meaning.</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="varname">DISTNAME</code> is the basename of the
       distribution file to be downloaded from the package's
@@ -3301,76 +3299,12 @@ a security check before building any package.  See
     converters    games         mbone         print         x11
 </pre>
 </li>
-<li>
-<p><code class="varname">MASTER_SITES</code> is a list of URLs where
-	    the distribution files can be downloaded. Each URL must end with a
-	    slash.</p>
-<p>The <code class="varname">MASTER_SITES</code> may make use of
-	    the following predefined sites:</p>
-<pre class="programlisting">
-    ${MASTER_SITE_APACHE}
-    ${MASTER_SITE_BACKUP}
-    ${MASTER_SITE_CYGWIN}
-    ${MASTER_SITE_DEBIAN}
-    ${MASTER_SITE_FREEBSD}
-    ${MASTER_SITE_FREEBSD_LOCAL}
-    ${MASTER_SITE_GNOME}
-    ${MASTER_SITE_GNU}
-    ${MASTER_SITE_GNUSTEP}
-    ${MASTER_SITE_IFARCHIVE}
-    ${MASTER_SITE_MOZILLA}
-    ${MASTER_SITE_OPENOFFICE}
-    ${MASTER_SITE_PERL_CPAN}
-    ${MASTER_SITE_R_CRAN}
-    ${MASTER_SITE_SOURCEFORGE}
-    ${MASTER_SITE_SUNSITE}
-    ${MASTER_SITE_SUSE}
-    ${MASTER_SITE_TEX_CTAN}
-    ${MASTER_SITE_XCONTRIB}
-    ${MASTER_SITE_XEMACS}
-</pre>
-<p>If one of these predefined sites is chosen, you may
-	    want to specify a subdirectory of that
-	    site.  Since these macros may expand to more than one
-	    actual site, you <span class="emphasis"><em>must</em></span> use the
-	    following construct to specify a subdirectory:</p>
-<pre class="programlisting">
-    ${MASTER_SITE_GNU:=subdirectory/name/}
-    ${MASTER_SITE_SOURCEFORGE:=project_name/}
-</pre>
-<p>Note the trailing slash after the subdirectory name.</p>
-<p>If the package has multiple
-	    <code class="varname">DISTFILES</code> or multiple
-	    <code class="varname">PATCHFILES</code> from different
-	    sites, set <code class="varname">SITES.foo</code> to a list of URIs
-	    where file &#8220;<span class="quote">foo</span>&#8221; may be
-	    found. &#8220;<span class="quote">foo</span>&#8221; includes the suffix, e.g.:</p>
-<pre class="programlisting">
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-    DISTFILES+=     foo-file.tar.gz
-    SITES.foo-file.tar.gz= \
-            http://www.somewhere.com/somehow/ \
-            http://www.somewhereelse.com/mirror/somehow/
-</pre>
-</li>
-<li>
-<p><code class="varname">DISTFILES</code>: Name(s)
-	    of archive file(s) containing distribution. The default is
-	    <code class="filename">${DISTNAME}${EXTRACT_SUFX}</code>. Should only
-	    be set if you have more than one distfile.</p>
-<p>Note that the normal default setting of
-	    <code class="varname">DISTFILES</code> must be made explicit if you
-	    want to add to it (rather than replace it), as you usually
-	    would.</p>
-</li>
-<li><p><code class="varname">EXTRACT_SUFX</code>: Suffix of the
-	    distribution file, will be appended to
-	    <code class="varname">DISTNAME</code>. Defaults to
-	    <code class="filename">.tar.gz</code>.
-	  </p></li>
+<li><p><code class="varname">MASTER_SITES</code>,
+	<code class="varname">DYNAMIC_MASTER_SITES</code>,
+	<code class="varname">DIST_SUBDIR</code>, <code class="varname">EXTRACT_SUFX</code>
+	and <code class="varname">DISTFILES</code> are discussed in detail in
+	<a href="#build.fetch" title="15.5. The fetch phase">Section 15.5, &#8220;The <span class="emphasis"><em>fetch</em></span> phase&#8221;</a>.</p></li>
 </ul></div>
-<p>
-    </p>
 <p>The second section contains information about separately
       downloaded patches, if any.
       </p>
@@ -5245,6 +5179,10 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <dt><span class="sect1"><a href="#build.builddirs">15.3. Directories used during the build process</a></span></dt>
 <dt><span class="sect1"><a href="#build.running">15.4. Running a phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.fetch">15.5. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#build.fetch.what">15.5.1. What to fetch and where to get it from</a></span></dt>
+<dt><span class="sect2"><a href="#build.fetch.how">15.5.2. How are the files fetched?</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#build.checksum">15.6. The <span class="emphasis"><em>checksum</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.extract">15.7. The <span class="emphasis"><em>extract</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.patch">15.8. The <span class="emphasis"><em>patch</em></span> phase</a></span></dt>
@@ -5418,24 +5356,123 @@ the package will be built, but not installed.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.fetch"></a>15.5. The <span class="emphasis"><em>fetch</em></span> phase</h2></div></div></div>
-<p>This will check if the file(s) given in the variables
-	    <code class="varname">DISTFILES</code> and <code class="varname">PATCHFILES</code> (as
-	    defined in the package's Makefile) are present on the
-	    local system in <code class="filename">/usr/pkgsrc/distfiles</code>. If they
-	    are not present, an attempt will be made to fetch them using commands
-	    of the form:</p>
+<p>The first step in building a package is to fetch the
+	distribution files (distfiles) from the sites that are providing
+	them. This is the task of the <span class="emphasis"><em>fetch</em></span>
+	phase.</p>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="build.fetch.what"></a>15.5.1. What to fetch and where to get it from</h3></div></div></div>
+<p>In simple cases, <code class="varname">MASTER_SITES</code> defines
+	all URLs from where the distfile, whose name is derived from the
+	<code class="varname">DISTNAME</code> variable, is fetched. The more
+	complicated cases are described below.</p>
+<p>The variable <code class="varname">DISTFILES</code> specifies the
+	list of distfiles that have to be fetched. Its value defaults to
+	<code class="literal">${DISTNAME}${EXTRACT_SUFX}</code>, so that most
+	packages don't need to define it at all.
+	<code class="varname">EXTRACT_SUFX</code> is <code class="literal">.tar.gz</code> by
+	default, but can be changed freely. Note that if your package
+	requires additional distfiles to the default one, you cannot
+	just append the additional filenames using the
+	<code class="literal">+=</code> operator, but you have write for
+	example:</p>
+<pre class="programlisting">
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+</pre>
+<p>Each of the distfiles is fetched from a list of sites,
+	usually <code class="varname">MASTER_SITES</code>. If the package has
+	multiple <code class="varname">DISTFILES</code> or multiple
+	<code class="varname">PATCHFILES</code> from different sites, you can set
+	<code class="varname">SITES.<em class="replaceable"><code>distfile</code></em></code> to
+	the list of URLs where the file
+	<code class="filename"><em class="replaceable"><code>distfile</code></em></code>
+	(including the suffix) can be found.</p>
+<pre class="programlisting">
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+    DISTFILES+=     foo-file.tar.gz
+    SITES.foo-file.tar.gz= \
+            http://www.somewhere.com/somehow/ \
+            http://www.somewhereelse.com/mirror/somehow/
+</pre>
+<p>When actually fetching the distfiles, each item from
+	<code class="varname">MASTER_SITES</code> or <code class="varname">SITES.*</code>
+	gets the name of each distfile appended to it, without an
+	intermediate slash. Therefore, all site values have to end with
+	a slash or other separator character. This allows for example to
+	set <code class="varname">MASTER_SITES</code> to a URL of a CGI script
+	that gets the name of the distfile as a parameter. In this case,
+	the definition would look like:</p>
+<pre class="programlisting">
+    MASTER_SITES=   http://www.example.com/download.cgi?file=
+</pre>
+<p>There are some predefined values for
+	<code class="varname">MASTER_SITES</code>, which can be used in packages.
+	The names of the variables should speak for themselves.</p>
+<pre class="programlisting">
+    ${MASTER_SITE_APACHE}
+    ${MASTER_SITE_BACKUP}
+    ${MASTER_SITE_CYGWIN}
+    ${MASTER_SITE_DEBIAN}
+    ${MASTER_SITE_FREEBSD}
+    ${MASTER_SITE_FREEBSD_LOCAL}
+    ${MASTER_SITE_GNOME}
+    ${MASTER_SITE_GNU}
+    ${MASTER_SITE_GNUSTEP}
+    ${MASTER_SITE_IFARCHIVE}
+    ${MASTER_SITE_KDE}
+    ${MASTER_SITE_MOZILLA}
+    ${MASTER_SITE_MYSQL}
+    ${MASTER_SITE_OPENOFFICE}
+    ${MASTER_SITE_PERL_CPAN}
+    ${MASTER_SITE_PGSQL}
+    ${MASTER_SITE_R_CRAN}
+    ${MASTER_SITE_SOURCEFORGE}
+    ${MASTER_SITE_SOURCEFORGE_JP}
+    ${MASTER_SITE_SUNSITE}
+    ${MASTER_SITE_SUSE}
+    ${MASTER_SITE_TEX_CTAN}
+    ${MASTER_SITE_XCONTRIB}
+    ${MASTER_SITE_XEMACS}
+</pre>
+<p>If you choose one of these predefined sites, you may want
+	to specify a subdirectory of that site. Since these macros may
+	expand to more than one actual site, you
+	<span class="emphasis"><em>must</em></span> use the following construct to specify
+	a subdirectory:</p>
+<pre class="programlisting">
+    MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
+    MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+</pre>
+<p>Note the trailing slash after the subdirectory
+	name.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="build.fetch.how"></a>15.5.2. How are the files fetched?</h3></div></div></div>
+<p>The <span class="emphasis"><em>fetch</em></span> phase makes sure that all
+	the distfiles exist in a local directory
+	(<code class="varname">DISTDIR</code>), which can be set by the pkgsrc
+	user). If the files do not exist, they are fetched using
+	commands of the form
+
+</p>
 <pre class="programlisting">
     ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 </pre>
-<p>where ${site} varies through several possibilities in turn: first,
-	    <code class="varname">MASTER_SITE_OVERRIDE</code> is tried, then the sites
-	    specified in either <code class="varname">SITES.file</code> if defined, else
-	    <code class="varname">MASTER_SITES</code> or <code class="varname">PATCH_SITES</code>, as
-	    applies, then finally the value of
-	    <code class="varname">MASTER_SITE_BACKUP</code>. The order of all except the
-	    first can be optionally sorted by the user, via setting either
-	    <code class="varname">MASTER_SORT_AWK</code> or
-	    <code class="varname">MASTER_SORT_REGEX</code>.</p>
+<p>
+
+	where <code class="literal">${site}</code> varies through several
+	possibilities in turn: first,
+	<code class="varname">MASTER_SITE_OVERRIDE</code> is tried, then the sites
+	specified in either <code class="varname">SITES.file</code> if defined,
+	else <code class="varname">MASTER_SITES</code> or
+	<code class="varname">PATCH_SITES</code>, as applies, then finally the
+	value of <code class="varname">MASTER_SITE_BACKUP</code>. The order of all
+	except the first can be optionally sorted by the user, via
+	setting either <code class="varname">MASTER_SORT_AWK</code> or
+	<code class="varname">MASTER_SORT_REGEX</code>.</p>
+</div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6933,6 +6970,7 @@ Changes to the PLIST
 <pre class="programlisting">
     GCC         __GNUC__ (major version), __GNUC_MINOR__
     SunPro      __SUNPRO_C (0x570 for version 5.7)
+    SunPro C++  __SUNPRO_CC (0x580 for version 5.8)
 </pre>
 </div>
 </div>
@@ -7175,25 +7213,24 @@ Changes to the PLIST
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="manpages"></a>17.5.8. Packages installing man pages</h3></div></div></div>
-<p>Many packages install manual pages. The man pages
-	are installed under <code class="varname">${PREFIX}/${PKGMANDIR}</code>
-	which is <code class="filename">/usr/pkg/man</code> by default.
-	<code class="varname">PKGMANDIR</code> defaults to &#8220;<span class="quote">man</span>&#8221;.
-	For example, you can set <code class="varname">PKGMANDIR</code> to
-	&#8220;<span class="quote">share/man</span>&#8221; to have man pages install under
-	<code class="filename">/usr/pkg/share/man/</code> by default.
-      </p>
+<p>All packages that install manual pages should install them
+	into the same directory, so that there is one common place to
+	look for them. In pkgsrc, this place is
+	<code class="literal">${PREFIX}/${PKGMANDIR}</code>, and this expression
+	should be used in packages. The default for
+	<code class="varname">PKGMANDIR</code> is
+	&#8220;<span class="quote"><code class="filename">man</code></span>&#8221;. Another often-used
+	value is &#8220;<span class="quote"><code class="filename">share/man</code></span>&#8221;.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>The support for a custom <code class="varname">PKGMANDIR</code>
-	is not complete.
-      </p>
+<p>The support for a custom
+	<code class="varname">PKGMANDIR</code> is far from complete.</p>
 </div>
-<p>The <code class="filename">PLIST</code> files can just
-	use <code class="filename">man/</code> as the top level directory
-	for the man page file entries
-	and the pkgsrc framework will convert as needed.
-      </p>
+<p>The <code class="filename">PLIST</code> files can just use
+	<code class="filename">man/</code> as the top level directory for the man
+	page file entries, and the pkgsrc framework will convert as
+	needed. In all other places, the correct
+	<code class="varname">PKGMANDIR</code> must be used.</p>
 <p> Packages that are
 	configured with <code class="varname">GNU_CONFIGURE</code> set as
 	&#8220;<span class="quote">yes</span>&#8221;, by default will use the
@@ -7748,36 +7785,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2655006">What is the difference between
+<dt>20.1. <a href="#id2655066">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2655043">What is the difference between
+<dt>20.2. <a href="#id2655171">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2655081">What is the difference between
+<dt>20.3. <a href="#id2655209">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2655118">What is the difference between
+<dt>20.4. <a href="#id2655246">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2655137">Why does make show-var
+<dt>20.5. <a href="#id2655265">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2655164">What does
+<dt>20.6. <a href="#id2655292">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2655239">Which mailing lists are there for package
+<dt>20.7. <a href="#id2655367">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2655275">Where is the pkgsrc
+<dt>20.8. <a href="#id2655403">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -7786,7 +7823,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655006"></a><a name="id2655008"></a><b>20.1.</b>
+<a name="id2655066"></a><a name="id2655067"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -7802,7 +7839,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655043"></a><a name="id2655044"></a><b>20.2.</b>
+<a name="id2655171"></a><a name="id2655172"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -7820,7 +7857,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655081"></a><a name="id2655082"></a><b>20.3.</b>
+<a name="id2655209"></a><a name="id2655210"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -7838,7 +7875,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655118"></a><a name="id2655120"></a><b>20.4.</b>
+<a name="id2655246"></a><a name="id2655248"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -7851,7 +7888,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655137"></a><a name="id2655138"></a><b>20.5.</b>
+<a name="id2655265"></a><a name="id2655266"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -7867,7 +7904,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655164"></a><a name="id2655165"></a><b>20.6.</b>
+<a name="id2655292"></a><a name="id2655293"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -7891,7 +7928,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655239"></a><a name="id2655240"></a><b>20.7.</b>
+<a name="id2655367"></a><a name="id2655368"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -7916,7 +7953,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655275"></a><a name="id2655276"></a><b>20.8.</b>
+<a name="id2655403"></a><a name="id2655404"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -7979,16 +8016,23 @@ place.</p></li>
 <dl>
 <dt><span class="chapter"><a href="#infr.design">21. Design of the pkgsrc infrastructure</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#infr.var">21.1. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">21.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">21.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">21.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">21.1.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">21.1.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">21.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">21.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">21.2. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">21.3. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">21.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">21.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.3.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.3.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">21.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">21.5.2. Actions taken on behalf of parameters</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="#infr.order">21.6. The order in which files are loaded</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#infr.order.prefs">21.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">21.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">22. Regression tests</a></span></dt>
@@ -8015,16 +8059,23 @@ place.</p></li>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#infr.var">21.1. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">21.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">21.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">21.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">21.1.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">21.1.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">21.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">21.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">21.2. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">21.3. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">21.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">21.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.3.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.3.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">21.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">21.5.2. Actions taken on behalf of parameters</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="#infr.order">21.6. The order in which files are loaded</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#infr.order.prefs">21.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">21.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -8034,10 +8085,65 @@ place.</p></li>
 	like.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.var"></a>21.1. Variable evaluation</h2></div></div></div>
+<a name="infr.vardef"></a>21.1. The meaning of variable definitions</h2></div></div></div>
+<p>Whenever a variable is defined in the pkgsrc
+	infrastructure, the location and the way of definition provide
+	much information about the intended use of that variable.
+	Additionally, more documentation may be found in a header
+	comment or in this pkgsrc guide.</p>
+<p>A special file is
+	<code class="filename">mk/defaults/mk.conf</code>, which lists all
+	variables that are intended to be user-defined. They are either
+	defined using the <code class="literal">?=</code> operator or they are
+	left undefined because defining them to anything would
+	effectively mean &#8220;<span class="quote">yes</span>&#8221;. All these variables may be
+	overridden by the pkgsrc user in the <code class="varname">MAKECONF</code>
+	file.</p>
+<p>Outside this file, the following conventions apply:
+	Variables that are defined using the <code class="literal">?=</code>
+	operator may be overridden by a package.</p>
+<p>Variables that are defined using the <code class="literal">=</code>
+	operator may be used read-only at run-time.</p>
+<p>Variables whose name starts with an underscore must not be
+	accessed outside the pkgsrc infrastructure at all. They may
+	change without further notice.</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>These conventions are currently not applied
+	consistently to the complete pkgsrc
+	infrastructure.</p>
+</div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="infr.vardef.problems"></a>21.2. Avoiding problems before they arise</h2></div></div></div>
+<p>All variables that contain lists of things should default
+	to being empty. Two examples that do not follow this rule are
+	<code class="varname">USE_LANGUAGES</code> and
+	<code class="varname">DISTFILES</code>. These variables cannot simply be
+	modified using the <code class="literal">+=</code> operator in package
+	<code class="filename">Makefile</code>s (or other files included by
+	them), since there is no guarantee whether the variable is
+	already set or not, and what its value is. In the case of
+	<code class="varname">DISTFILES</code>, the packages &#8220;<span class="quote">know</span>&#8221;
+	the default value and just define it as in the following
+	example.</p>
+<pre class="programlisting">
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+</pre>
+<p>Because of the selection of this default value, the same
+	value appears in many package Makefiles. Similarly for
+	<code class="varname">USE_LANGUAGES</code>, but in this case the default
+	value (&#8220;<span class="quote"><code class="literal">c</code></span>&#8221;) is so short that it
+	doesn't stand out. Nevertheless it is mentioned in many
+	files.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="infr.var"></a>21.3. Variable evaluation</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.var.load"></a>21.1.1. At load time</h3></div></div></div>
+<a name="infr.var.load"></a>21.3.1. At load time</h3></div></div></div>
 <p>Variable evaluation takes place either at load time or at
 	runtime, depending on the context in which they occur. The
 	contexts where variables are evaluated at load time are:</p>
@@ -8079,7 +8185,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.var.run"></a>21.1.2. At runtime</h3></div></div></div>
+<a name="infr.var.run"></a>21.3.2. At runtime</h3></div></div></div>
 <p>After all the files have been loaded, the values of the
 	variables cannot be changed anymore. Variables that are used in
 	the shell commands are expanded at this point.</p>
@@ -8087,7 +8193,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.varspec"></a>21.2. How can variables be specified?</h2></div></div></div>
+<a name="infr.varspec"></a>21.4. How can variables be specified?</h2></div></div></div>
 <p>There are many ways in which the definition and use of a
 	variable can be restricted in order to detect bugs and
 	violations of the (mostly unwritten) policies. See the
@@ -8096,14 +8202,14 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.design.intf"></a>21.3. Designing interfaces for Makefile fragments</h2></div></div></div>
+<a name="infr.design.intf"></a>21.5. Designing interfaces for Makefile fragments</h2></div></div></div>
 <p>Most of the <code class="filename">.mk</code> files fall into one
 	of the following classes. Cases where a file falls into more
 	than one class should be avoided as it often leads to subtle
 	bugs.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.proc"></a>21.3.1. Procedures with parameters</h3></div></div></div>
+<a name="infr.design.intf.proc"></a>21.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
 	procedures. They take some input parameters and&mdash;after
@@ -8137,7 +8243,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.action"></a>21.3.2. Actions taken on behalf of parameters</h3></div></div></div>
+<a name="infr.design.intf.action"></a>21.5.2. Actions taken on behalf of parameters</h3></div></div></div>
 <p>Action files take some input parameters and may define
 	runtime variables. They shall not define loadtime variables.
 	There are action files that are included implicitly by the
@@ -8145,6 +8251,79 @@ place.</p></li>
 	explicitly.</p>
 <p>An example for action files is
 	<code class="filename">mk/subst.mk</code>.</p>
+</div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="infr.order"></a>21.6. The order in which files are loaded</h2></div></div></div>
+<p>Package <code class="filename">Makefile</code>s usually consist of
+	a set of variable definitions, and include the file
+	<code class="filename">../../mk/bsd.pkg.mk</code> in the very last line.
+	Before that, they may also include various other
+	<code class="filename">*.mk</code> files if they need to query the
+	availability of certain features like the type of compiler or
+	the X11 implementation. Due to the heavy use of preprocessor
+	directives like <code class="literal">.if</code> and
+	<code class="literal">.for</code>, the order in which the files are loaded
+	matters.</p>
+<p>This section describes at which point the various files
+	are loaded and gives reasons for that order.</p>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="infr.order.prefs"></a>21.6.1. The order in <code class="filename">bsd.prefs.mk</code></h3></div></div></div>
+<p>The very first action in <code class="filename">bsd.pkg.mk</code>
+	is to define some essential variables like
+	<code class="varname">OPSYS</code>, <code class="varname">OS_VERSION</code> and
+	<code class="varname">MACHINE_ARCH</code>.</p>
+<p>Then, the user settings are loaded from the file specified
+	in <code class="varname">MAKECONF</code>. If the bmake command from pkgsrc
+	is used, <code class="varname">MAKECONF</code> defaults to
+	<code class="filename"><em class="replaceable"><code>${prefix}</code></em>/etc/mk.conf</code>.
+	With the native <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command on NetBSD, it defaults to
+	<code class="filename">/etc/mk.conf</code>. After that, those variables
+	that have not been overridden by the user are loaded from
+	<code class="filename">mk/defaults/mk.conf</code>.</p>
+<p>After the user settings, the system settings and platform
+	settings are loaded, which may override the user
+	settings.</p>
+<p>Then, the tool definitions are loaded. The tool wrappers
+	are not yet in effect. This only happens when building a
+	package, so the proper variables must be used instead of the
+	direct tool names.</p>
+<p>As the last steps, some essential variables from the
+	wrapper and the package system flavor are loaded, as well as the
+	variables that have been cached in earlier phases of a package
+	build.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="infr.order.pkg"></a>21.6.2. The order in <code class="filename">bsd.pkg.mk</code></h3></div></div></div>
+<p>First, <code class="filename">bsd.prefs.mk</code> is loaded.</p>
+<p>Then, the various <code class="filename">*-vars.mk</code> files are
+	loaded, which fill default values for those variables that have
+	not been defined by the the package. These variables may later
+	be used even in unrelated files.</p>
+<p>Then, the file <code class="filename">bsd.pkg.error.mk</code>
+	provides the target <code class="literal">error-check</code> that is added
+	as a special dependency to all other targets that use
+	<code class="varname">DELAYED_ERROR_MSG</code> or
+	<code class="varname">DELAYED_WARNING_MSG</code>.</p>
+<p>Then, the package-specific hacks from
+	<code class="filename">hacks.mk</code> are included.</p>
+<p>Then, various other files follow. Most of them don't have
+	any dependencies on what they need to have included before or
+	after them, though some do.</p>
+<p>The code to check <code class="varname">PKG_FAIL_REASON</code> and
+	<code class="varname">PKG_SKIP_REASON</code> is then executed, which
+	restricts the use of these variables to all the files that have
+	been included before. Appearances in later files will be
+	silently ignored.</p>
+<p>Then, the files for the main targets are included, in the
+	order of later execution, though the actual order should not
+	matter.</p>
+<p>At last, some more files are included that don't set any
+	interesting variables but rather just define make targets to be
+	executed.</p>
 </div>
 </div>
 </div>
