@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/06/19 23:24:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/07/27 12:00:00 rillig Exp $
 
 .include "../../emulators/suse100_linux/vars.mk"
 .include "../../emulators/suse100_linux/arch.mk"
@@ -11,16 +11,15 @@ ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-3.99*-x86_64 \
 _SUSE_FTP_SUBDIR=	distribution/SL-${SUSE_VERSION}-OSS/inst-source/suse/${SUSE_ARCH}/
 _SUSE_FTP_SUBDIR_UPD=	suse/${SUSE_ARCH_DIR}/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/
 
-MASTER_SITE_SUSE100?=	ftp://suse.inode.at/opensuse/${_SUSE_FTP_SUBDIR} \
-			ftp://suse.inode.at/pub/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/ \
-                        ftp://ftp.gwdg.de/pub/opensuse/${_SUSE_FTP_SUBDIR} \
-                        ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-                        ftp://gd.tuwien.ac.at/linux/opensuse/${_SUSE_FTP_SUBDIR} \
-                        ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-			ftp://mirror.karneval.cz/pub/opensuse/${_SUSE_FTP_SUBDIR:S,distribution/,,} \
-
-                        ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD} \
-
+MASTER_SITE_SUSE100?= \
+	ftp://suse.inode.at/opensuse/${_SUSE_FTP_SUBDIR} \
+	ftp://suse.inode.at/pub/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/ \
+	ftp://ftp.gwdg.de/pub/opensuse/${_SUSE_FTP_SUBDIR} \
+	ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://gd.tuwien.ac.at/linux/opensuse/${_SUSE_FTP_SUBDIR} \
+	ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://mirror.karneval.cz/pub/opensuse/${_SUSE_FTP_SUBDIR:S,distribution/,,} \
+	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD}
 
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}/${SUSE_ARCH}
 
