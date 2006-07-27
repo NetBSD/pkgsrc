@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:10:25 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/27 00:09:06 hubertf Exp $
 #
 
 DISTNAME=	ipv6calc-0.50
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.deepspace6.net/projects/ipv6calc.html
 COMMENT=	Manipulates IPv6 addresses
 

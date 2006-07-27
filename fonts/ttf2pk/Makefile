@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/17 19:50:09 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/27 00:09:06 hubertf Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=		ttf2pk-${FT_VERS}
 CATEGORIES=		print
 
-MAINTAINER=		bernhard@SDG.de,hubertf@NetBSD.org
+MAINTAINER=		bernhard@SDG.de,pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freetype.org/
 COMMENT=		TrueType to TeX PK font converter
 
