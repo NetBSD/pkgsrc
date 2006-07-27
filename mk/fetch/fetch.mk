@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.17 2006/07/27 07:41:40 rillig Exp $
+# $NetBSD: fetch.mk,v 1.18 2006/07/27 15:16:44 jlam Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -54,9 +54,11 @@ _ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 #
 # Associate each file to fetch with the correct site(s).
 #
-.if defined(DYNAMIC_MASTER_SITES)
+DYNAMIC_SITE_SCRIPT?=	${FILESDIR}/getsite.sh
+DYNAMIC_SITE_CMD?=	${SETENV} PATH=${PATH:Q} ${SH} ${DYNAMIC_SITE_SCRIPT}
+.if exists(${DYNAMIC_SITE_SCRIPT})
 .  for fetchfile in ${_ALLFILES}
-SITES_${fetchfile:T:S/=/--/}?= `${SH} ${FILESDIR}/getsite.sh ${fetchfile:T}`
+SITES_${fetchfile:T:S/=/--/}?= `${DYNAMIC_SITE_CMD} ${fetchfile:T}`
 SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
 .  endfor
 .endif
