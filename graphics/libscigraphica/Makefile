@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/20 12:31:03 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/27 09:03:28 rillig Exp $
 #
 
 DISTNAME=	libscigraphica-2.1.1
@@ -15,6 +15,9 @@ USE_TOOLS+=		pkg-config gmake intltool
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libscigraphica-2.0.pc.in
+
+pre-configure:
+	ln -s ${PYTHONBIN} ${TOOLS_DIR}/bin/python
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numarray/buildlink3.mk"
