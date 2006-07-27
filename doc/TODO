@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5249 2006/07/27 06:50:58 wiz Exp $
+$NetBSD: TODO,v 1.5250 2006/07/27 06:52:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,6 @@ Suggested package updates
 	o gcpio-2.6
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
-	o gdm-2.14.9
 	o gdsreader-0.3.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -547,14 +546,10 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.14.2
-	o gnome-backgrounds-2.14.2.1
-	o gnome-doc-utils-0.6.1
 	o gnome-games-2.14.2.1
 	o gnome-mag-0.12.5
 	o gnome-media-2.14.2
 	o gnome-pilot-2.0.13
-	o gnome-screensaver-2.14.2
-	o gnome-session-2.14.2
 	o gnome-speech-0.4.1
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
@@ -581,8 +576,6 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
-	o gst-plugins0.10-base-0.10.9
-	o gstreamer0.10-0.10.9
 	o gtetrinet-0.7.9
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
@@ -697,7 +690,6 @@ Suggested package updates
 	o libtorrent-0.9.3
 	o libwpd-0.8.5
 	o licq-core-1.3.0
-	o liferea-1.0.18
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -724,7 +716,6 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
-	o metacity-2.14.5
 	o mew-5.1
 	o mftrace-1.2.4
 	o mgetty-1.1.35
@@ -962,7 +953,6 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.15
-	o prboom-2.4.3
 	o prelude-lml-0.9.6
 	o proj-4.4.9
 	o projclock-0.9
@@ -994,7 +984,6 @@ Suggested package updates
 	o py-gobject-2.11.0
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
-	o py-mad-0.5.4
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-psyco-1.5.1
@@ -1259,7 +1248,6 @@ Suggested package updates
 	o ysm-2.9.8
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.14.2
 	o zile-2.2.17
 	o zircon-1.18.256
 	o zope-2.9.4
