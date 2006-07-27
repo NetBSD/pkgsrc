@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.14 2006/07/26 18:29:46 drochner Exp $
+# $NetBSD: extract.mk,v 1.15 2006/07/27 13:47:29 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -43,7 +43,7 @@ _COOKIE.extract=	${WRKDIR}/.extract_done
 ### extract is a public target to perform extraction.
 ###
 _EXTRACT_TARGETS+=	check-vulnerable
-_EXTRACT_TARGETS+=	wrapper
+_EXTRACT_TARGETS+=	tools
 _EXTRACT_TARGETS+=	acquire-extract-lock
 _EXTRACT_TARGETS+=	${_COOKIE.extract}
 _EXTRACT_TARGETS+=	release-extract-lock
