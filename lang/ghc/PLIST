@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/14 18:47:28 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/27 23:45:08 kristerw Exp $
 bin/${PKGNAME}
 bin/ghc
 bin/ghc-pkg
@@ -587,6 +587,8 @@ lib/${PKGNAME}/imports/Distribution/Compat/RawSystem.hi
 lib/${PKGNAME}/imports/Distribution/Compat/RawSystem.p_hi
 lib/${PKGNAME}/imports/Distribution/Compat/ReadP.hi
 lib/${PKGNAME}/imports/Distribution/Compat/ReadP.p_hi
+lib/${PKGNAME}/imports/Distribution/Compiler.hi
+lib/${PKGNAME}/imports/Distribution/Compiler.p_hi
 lib/${PKGNAME}/imports/Distribution/Extension.hi
 lib/${PKGNAME}/imports/Distribution/Extension.p_hi
 lib/${PKGNAME}/imports/Distribution/GetOpt.hi
@@ -607,6 +609,8 @@ lib/${PKGNAME}/imports/Distribution/PreProcess.hi
 lib/${PKGNAME}/imports/Distribution/PreProcess.p_hi
 lib/${PKGNAME}/imports/Distribution/PreProcess/Unlit.hi
 lib/${PKGNAME}/imports/Distribution/PreProcess/Unlit.p_hi
+lib/${PKGNAME}/imports/Distribution/Program.hi
+lib/${PKGNAME}/imports/Distribution/Program.p_hi
 lib/${PKGNAME}/imports/Distribution/Setup.hi
 lib/${PKGNAME}/imports/Distribution/Setup.p_hi
 lib/${PKGNAME}/imports/Distribution/Simple.hi
@@ -733,6 +737,8 @@ lib/${PKGNAME}/imports/Int.hi
 lib/${PKGNAME}/imports/Int.p_hi
 lib/${PKGNAME}/imports/Ix.hi
 lib/${PKGNAME}/imports/Ix.p_hi
+lib/${PKGNAME}/imports/Language/Haskell/Extension.hi
+lib/${PKGNAME}/imports/Language/Haskell/Extension.p_hi
 lib/${PKGNAME}/imports/Language/Haskell/Lexer.hi
 lib/${PKGNAME}/imports/Language/Haskell/Lexer.p_hi
 lib/${PKGNAME}/imports/Language/Haskell/ParseMonad.hi
@@ -1057,6 +1063,7 @@ lib/${PKGNAME}/libHSrts.a
 lib/${PKGNAME}/libHSrts_debug.a
 lib/${PKGNAME}/libHSrts_p.a
 lib/${PKGNAME}/libHSrts_thr.a
+lib/${PKGNAME}/libHSrts_thr_debug.a
 lib/${PKGNAME}/libHSrts_thr_p.a
 lib/${PKGNAME}/libHSstm.a
 lib/${PKGNAME}/libHSstm_p.a
