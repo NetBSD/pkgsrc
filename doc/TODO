@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5248 2006/07/26 17:00:44 wiz Exp $
+$NetBSD: TODO,v 1.5249 2006/07/27 06:50:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -622,7 +622,6 @@ Suggested package updates
 	o id-utils-4.0
 	o idesk-0.7.3
 	o ifile-1.3.5
-	o inform-6.31.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-20060519
