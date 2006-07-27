@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.statemachines.xml,v 1.2 2006/04/11 18:41:50 rillig Exp $ -->
+<!-- $NetBSD: chap.statemachines.xml,v 1.3 2006/07/27 09:19:37 rillig Exp $ -->
 
 <chapter id="statemachines">
 <title>State machines</title>
@@ -25,7 +25,7 @@
 <sect1 id="statemachines.shellcommand">
 <title>The state machine for shell commands</title>
 
-	<figure id="statemachine.patch">
+	<figure id="statemachine.shellcommand">
 	<title>The state transitions for shell commands</title>
 	<mediaobject>
 	<imageobject>
