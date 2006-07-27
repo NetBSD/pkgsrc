@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.64 2006/05/29 14:26:33 joerg Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.65 2006/07/27 21:46:45 jlam Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -71,7 +71,7 @@ _SUBDIRUSE: .USE
 		if [ "$$OK" = "" ]; then \
 			cd ${.CURDIR}/$${edir}; \
 			${ECHO_MSG} "===> ${_THISDIR_}$${edir}"; \
-			${MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}$${edir}/" \
+			${RECURSIVE_MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}$${edir}/" \
 			    ${.TARGET:realinstall=install} || true; \
 		fi; \
 	done
@@ -82,7 +82,7 @@ ${SUBDIR}::
 	else \
 		cd ${.CURDIR}/${.TARGET}; \
 	fi; \
-	${MAKE} ${MAKEFLAGS} all
+	${RECURSIVE_MAKE} ${MAKEFLAGS} all
 
 .for __target in all fetch package extract configure build clean \
 		cleandir distclean depend describe reinstall tags checksum \
@@ -116,12 +116,12 @@ readmes: readme _SUBDIRUSE
 
 .if !target(readme)
 readme:
-	@${MAKE} ${MAKEFLAGS} README.html _README_TYPE_FLAG=--ftp _README_TYPE=$@
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} README.html _README_TYPE_FLAG=--ftp _README_TYPE=$@
 .endif
 
 .if !target(cdrom-readme)
 cdrom-readme:
-	@${MAKE} ${MAKEFLAGS} README.html _README_TYPE_FLAG=--cdrom README_TYPE=$@
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} README.html _README_TYPE_FLAG=--cdrom README_TYPE=$@
 .endif
 
 .if defined(PKGSRCTOP)
@@ -139,9 +139,9 @@ README.html: .PRECIOUS
 .for entry in ${SUBDIR}
 .if defined(PKGSRCTOP)
 	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`${ECHO} ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
-	@${ECHO} `cd ${entry} && ${MAKE} ${MAKEFLAGS} show-comment | ${HTMLIFY}` >> $@.tmp
+	@${ECHO} `cd ${entry} && ${RECURSIVE_MAKE} ${MAKEFLAGS} show-comment | ${HTMLIFY}` >> $@.tmp
 .else
-	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} ${MAKEFLAGS} make-readme-html-help`" >> $@.tmp
+	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${RECURSIVE_MAKE} ${MAKEFLAGS} make-readme-html-help`" >> $@.tmp
 .endif
 .endfor
 	@${SORT} -t '>' +3 -4 $@.tmp > $@.tmp2
@@ -168,7 +168,7 @@ README.html: .PRECIOUS
 	fi
 	@${RM} -f $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
 .for subdir in ${SUBDIR}
-	@cd ${subdir} && ${MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
+	@cd ${subdir} && ${RECURSIVE_MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
 .endfor
 .endif
 
@@ -193,7 +193,7 @@ show-distfiles:
 			${ECHO_MSG} "===> ${_THISDIR_}$${entry} non-existent"; \
 		fi;							\
 		if [ "$$OK" = "" ]; then				\
-			cd ${.CURDIR}/$${edir} && ${MAKE} ${MAKEFLAGS} show-distfiles; \
+			cd ${.CURDIR}/$${edir} && ${RECURSIVE_MAKE} ${MAKEFLAGS} show-distfiles; \
 		fi;							\
 	done
 .endif
@@ -220,7 +220,7 @@ fetch-list:
 	@${ECHO} '#'
 .if defined(PKGSRCTOP) && !defined(SPECIFIC_PKGS)
 #	Recursing over dependencies would be pointless, in this case.
-	@${MAKE} ${MAKEFLAGS} fetch-list-one-pkg		\
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} fetch-list-one-pkg	\
 	| ${AWK} '						\
 	function do_block () {					\
 		if (FoundSomething) {				\
@@ -238,7 +238,7 @@ fetch-list:
 	END { do_block() }					\
 	'
 .else
-	@${MAKE} ${MAKEFLAGS} fetch-list-recursive		\
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} fetch-list-recursive	\
 	| ${SED} '/^=/d'
 .endif
 .endif # !target(fetch-list)

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.230 2006/07/17 18:07:06 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.231 2006/07/27 21:46:45 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -526,5 +526,11 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 
 # Make variable definitions cache
 .include "${PKGSRCDIR}/mk/bsd.makevars.mk"
+
+# If MAKECONF is defined, then pass it down to all recursive make
+# processes invoked by pkgsrc.
+#
+PKGSRC_MAKE_ENV+=	${MAKECONF:DMAKECONF=${MAKECONF:Q}}
+RECURSIVE_MAKE=		${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE}
 
 .endif	# BSD_PKG_MK

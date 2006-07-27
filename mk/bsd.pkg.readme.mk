@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.2 2006/07/15 20:08:33 rillig Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.3 2006/07/27 21:46:45 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -73,7 +73,7 @@ run-depends-list:
 		${ECHO} "$$pkg";					\
 	else								\
 		if cd $$dir 2>/dev/null; then				\
-			${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+			${RECURSIVE_MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		else 							\
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi;							\
@@ -84,10 +84,10 @@ run-depends-list:
 .PHONY: build-depends-list
 .if !target(build-depends-list)
 build-depends-list:
-	@for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`;	\
+	@for dir in `${RECURSIVE_MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`; \
 	do								\
 		(cd ../../$$dir &&					\
-		${MAKE} ${MAKEFLAGS} package-name)			\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} package-name) \
 	done
 .endif
 
@@ -170,11 +170,11 @@ describe:
 	${ECHO_N} "|${MAINTAINER}|${CATEGORIES}|";			\
 	case "A${BUILD_DEPENDS}B${DEPENDS}C" in	\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO_N} `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`;; \
+		*) cd ${.CURDIR} && ${ECHO_N} `${RECURSIVE_MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`;; \
 	esac;								\
 	${ECHO_N} "|";							\
 	if [ "${DEPENDS}" != "" ]; then					\
-		cd ${.CURDIR} && ${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`; \
+		cd ${.CURDIR} && ${ECHO_N} `${RECURSIVE_MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`; \
 	fi;								\
 	${ECHO_N} "|";							\
 	if [ "${ONLY_FOR_PLATFORM}" = "" ]; then			\
@@ -203,7 +203,7 @@ FTP_PKG_URL_HOST?=	ftp://ftp.NetBSD.org
 FTP_PKG_URL_DIR?=	/pub/pkgsrc/packages
 
 readme:
-	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
+	@cd ${.CURDIR} && ${RECURSIVE_MAKE} ${MAKEFLAGS} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
 .endif
 
 # This target is used to generate README.html files, very like "readme"
@@ -214,7 +214,7 @@ CDROM_PKG_URL_HOST?=	file://localhost
 CDROM_PKG_URL_DIR?=	/usr/pkgsrc/packages
 
 cdrom-readme:
-	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
+	@cd ${.CURDIR} && ${RECURSIVE_MAKE} ${MAKEFLAGS} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
 .endif
 
 README_NAME=	${TEMPLATES}/README.pkg
@@ -251,7 +251,7 @@ show-vulnerabilities-html:
 # the target used to generate the README.html file.
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${SETENV} AWK=${AWK} BMAKE=${MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
+	@${RECURSIVE_MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
 	@if ${TEST} -d ${PACKAGES}; then					\
 		cd ${PACKAGES};						\
 		case `${PWD_CMD}` in					\
@@ -289,7 +289,7 @@ README.html: .PRECIOUS
 print-build-depends-list:
 .  if !empty(BUILD_DEPENDS) || !empty(DEPENDS)
 	@${ECHO_N} 'This package requires package(s) "'
-	@${ECHO_N} `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
+	@${ECHO_N} `${RECURSIVE_MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
 	@${ECHO} '" to build.'
 .  endif
 .endif
@@ -299,7 +299,7 @@ print-build-depends-list:
 print-run-depends-list:
 .  if !empty(DEPENDS)
 	@${ECHO_N} 'This package requires package(s) "'
-	@${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
+	@${ECHO_N} `${RECURSIVE_MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
 	@${ECHO} '" to run.'
 .  endif
 .endif

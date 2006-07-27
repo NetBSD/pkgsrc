@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.5 2006/06/07 10:04:03 tron Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.6 2006/07/27 21:46:45 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -42,24 +42,23 @@ update:
 	@${PHASE_MSG} "Resuming update for ${PKGNAME}"
 .  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
+		${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
 .  endif
 .else
 RESUMEUPDATE?=	NO
 CLEAR_DIRLIST?=	YES
 
 update:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${_DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} ${_DDIR}
 .  if ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
-		${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
+		${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
 		|| (${RM} ${_DDIR} && ${FALSE});			\
 	fi
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES	\
-			DEPENDS_TARGET=${DEPENDS_TARGET:Q}
+		${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES DEPENDS_TARGET=${DEPENDS_TARGET:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${_DDIR} ] || for dep in `${CAT} ${_DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
@@ -67,9 +66,9 @@ update:
 			if [ "(" "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ")" -a		\
 			     "${UPDATE_TARGET}" != "replace" ] ; then	\
-				${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES; \
+				${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES; \
 			fi &&						\
-			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
+			${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}	\
 				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
 		else							\
 			${PHASE_MSG} "Skipping removed directory $${dep}"; \
@@ -77,29 +76,28 @@ update:
 	done
 .if ${NOCLEAN} == "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
+		${RECURSIVE_MAKE} ${MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
 .endif
 
 
 .PHONY: clean-update
 clean-update:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${_DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} ${_DDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${_DDIR} ] ; then					\
 		for dep in `${CAT} ${_DDIR}` ; do			\
 			(if cd ../.. && cd "$${dep}" ; then		\
-				${MAKE} ${MAKEFLAGS} clean ;		\
+				${RECURSIVE_MAKE} ${MAKEFLAGS} clean ;	\
 			else						\
 				${PHASE_MSG} "Skipping removed directory $${dep}";\
 			fi) ;						\
 		done ;							\
 	fi
 .if ${CLEAR_DIRLIST} != "NO"
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean
+	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} clean
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} clean update-dirlist		\
-		DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
+		${RECURSIVE_MAKE} ${MAKEFLAGS} clean update-dirlist DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
 	@${WARNING_MSG} "preserved leftover directory list.  Your next"
 	@${WARNING_MSG} "\`\`${MAKE} update'' may fail.  It is advised to use"
 	@${WARNING_MSG} "\`\`${MAKE} update REINSTALL=YES'' instead!"

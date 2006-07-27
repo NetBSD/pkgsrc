@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.121 2006/07/26 17:00:03 wiz Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.122 2006/07/27 21:46:46 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -232,7 +232,7 @@ PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken by the bulk build administrato
 bulk-cache:
 	@${BULK_MSG} "Installing BULK_PREREQ packages"
 .for __prereq in ${BULK_PREREQ} lang/perl5
-	cd ${PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
+	cd ${PKGSRCDIR}/${__prereq} && ${RECURSIVE_MAKE} bulk-install
 .endfor
 	${RM} -f ${BULK_DBFILE}
 	${TOUCH} ${BULK_DBFILE}
@@ -352,7 +352,7 @@ bulk-package:
 		${ECHO} '###' ; \
 	fi \
 	) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}
-	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
+	@uptodate=`${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
 		installed=1; \
 	else \
@@ -365,7 +365,7 @@ bulk-package:
 		( if [ $$installed = 1 ]; then \
 			${BULK_MSG} "Removing outdated (installed) package ${PKGNAME} first." ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
-			${DO}       ${MAKE} deinstall ; \
+			${DO}       ${RECURSIVE_MAKE} deinstall ; \
 			if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
 				${ECHO_MSG} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
 				${DO} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
@@ -382,7 +382,7 @@ bulk-package:
 			done ;\
 		fi; \
 		${BULK_MSG} "Full rebuild in progress..." ; \
-		${DO} ${MAKE} clean;\
+		${DO} ${RECURSIVE_MAKE} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
 			${BULK_MSG} "Removing installed packages which are not needed to build ${PKGNAME}" ; \
 			for pkgname in `${PKG_INFO} -e \\*` ; \
@@ -448,7 +448,7 @@ bulk-package:
 			${DO}       ${RM} -f ${_INTERACTIVE_COOKIE} ; \
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
-		${DO}     ( ${MAKE} package 2>&1 ); \
+		${DO}     ( ${RECURSIVE_MAKE} package 2>&1 ); \
 		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q} ; \
 		if [ -f ${PKGFILE} ]; then \
 			case ${KEEP_BUILDLOGS} in			\
@@ -480,7 +480,7 @@ bulk-package:
 			${BULK_MSG} "${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${_BROKENFILE:Q} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
-			${DO}       ${MAKE} deinstall ; \
+			${DO}       ${RECURSIVE_MAKE} deinstall ; \
 			${ECHO} "</pre>" >> ${_BROKENFILE:Q}; \
 			nbrokenby=0;\
 			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
@@ -499,15 +499,15 @@ bulk-package:
 						${ECHO} "<li>$$pkgname ($$pkgdir)</li>";\
 						pkgerr='-1'; pkgignore=''; pkgskip=''; \
 						if [ "${USE_BULK_BROKEN_CHECK}" = 'yes' ]; then \
-							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
-							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
+							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
 						fi; \
 						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f "$${pkg_brokenfile}" ]; then \
 							{ ${BULK_MSG} "$$pkgname ($$pkgdir) may not be packaged because:"; \
 							  ${BULK_MSG} "$$pkgignore"; \
 							  ${BULK_MSG} "$$pkgskip"; \
 							} >> "$${pkg_brokenfile}"; \
-							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
+							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} show-var VARNAME=BROKEN)`" ]; then \
 								pkgerr="0"; \
 							else \
 								pkgerr="1"; \
@@ -535,7 +535,7 @@ bulk-package:
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${DO} ${MAKE} clean;;				\
+		*)	${DO} ${RECURSIVE_MAKE} clean;; \
 		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
@@ -566,14 +566,14 @@ bulk-package:
 # been modified and need rebuilding.
 .PHONY: bulk-install
 bulk-install:
-	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
+	@if [ `${RECURSIVE_MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ${PKG_INFO} -qe ${PKGNAME} ; then :; \
 		else \
-			${DO} ${MAKE} install-depends ; \
+			${DO} ${RECURSIVE_MAKE} install-depends ; \
 			${BULK_MSG} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \
-		${DO}       ${MAKE} bulk-package PRECLEAN=no; \
+		${DO}       ${RECURSIVE_MAKE} bulk-package PRECLEAN=no; \
 	fi
