@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2006/07/17 23:39:52 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2006/07/27 14:54:07 rillig Exp $
 #
 
 COMMENT=	Games
@@ -73,6 +73,7 @@ SUBDIR+=	fillets-ng-data-cs
 SUBDIR+=	finalbattle
 SUBDIR+=	fire
 SUBDIR+=	fkiss
+SUBDIR+=	fltk-sudoku
 SUBDIR+=	foobillard
 SUBDIR+=	fortune-strfile
 SUBDIR+=	fortunes-calvin
@@ -102,6 +103,7 @@ SUBDIR+=	gnuchess-book
 SUBDIR+=	gnuchess-book-medium
 SUBDIR+=	gnuchess4
 SUBDIR+=	gnugo
+SUBDIR+=	gogui
 SUBDIR+=	golddig
 SUBDIR+=	grhino
 SUBDIR+=	gtetrinet
