@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.10 2006/07/25 18:04:25 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.11 2006/07/27 21:46:45 jlam Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -57,7 +57,7 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS}
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Leaving \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
