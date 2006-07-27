@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.7 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.8 2006/07/27 22:01:28 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -38,17 +38,3 @@ _DEPENDS_WALK_CMD=							\
 		MAKEFLAGS=${_DEPENDS_WALK_MAKEFLAGS:Q}			\
 		PKGSRCDIR=${PKGSRCDIR:Q} TEST=${TOOLS_TEST:Q}		\
 	${AWK} -f ${.CURDIR}/../../mk/scripts/depends-depth-first.awk --
-
-# show-all-depends-dirs prints a list of every dependency, implied and
-# direct", of the current package, and includes the current package.
-#
-.PHONY: show-all-depends-dirs
-show-all-depends-dirs:
-	@${_DEPENDS_WALK_CMD} -r ${PKGPATH}
-
-# show-all-depends-dirs-excl prints a list of every dependency, implied and
-# direct", of the current package.
-#
-.PHONY: show-all-depends-dirs-excl
-show-all-depends-dirs-excl:
-	@${_DEPENDS_WALK_CMD} ${PKGPATH}
