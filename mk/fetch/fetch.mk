@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.19 2006/07/27 16:06:27 jlam Exp $
+# $NetBSD: fetch.mk,v 1.20 2006/07/27 18:48:03 jlam Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -58,20 +58,17 @@ DYNAMIC_SITES_SCRIPT?=	${FILESDIR}/getsite.sh
 DYNAMIC_SITES_CMD?=	${SETENV} PATH=${PATH:Q} ${SH} ${DYNAMIC_SITES_SCRIPT}
 .if exists(${DYNAMIC_SITES_SCRIPT})
 .  for fetchfile in ${_ALLFILES}
-SITES_${fetchfile:T:S/=/--/}?= `${DYNAMIC_SITES_CMD} ${fetchfile:T}`
-SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
+SITES.${fetchfile:T:S/=/--/}?= `${DYNAMIC_SITES_CMD} ${fetchfile:T}`
 .  endfor
 .endif
 .if !empty(_DISTFILES)
 .  for fetchfile in ${_DISTFILES}
-SITES_${fetchfile:T:S/=/--/}?= ${MASTER_SITES}
-SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
+SITES.${fetchfile:T:S/=/--/}?= ${MASTER_SITES}
 .  endfor
 .endif
 .if !empty(_PATCHFILES)
 .  for fetchfile in ${_PATCHFILES}
-SITES_${fetchfile:T:S/=/--/}?= ${PATCH_SITES}
-SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
+SITES.${fetchfile:T:S/=/--/}?= ${PATCH_SITES}
 .  endfor
 .endif
 
