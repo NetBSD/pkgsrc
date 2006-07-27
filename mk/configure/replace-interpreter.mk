@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.3 2006/07/20 13:54:44 jlam Exp $
+# $NetBSD: replace-interpreter.mk,v 1.4 2006/07/27 14:51:54 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -52,7 +52,7 @@ REPLACE_FILES.sys-AWK=	${REPLACE_AWK}
 
 .if !empty(REPLACE_BASH:M*)
 REPLACE_INTERPRETER+=	sys-bash
-REPLACE.sys-bash.old=	.*bash
+REPLACE.sys-bash.old=	.*sh
 REPLACE.sys-bash.new=	${BASH}
 REPLACE_FILES.sys-bash=	${REPLACE_BASH}
 .endif
