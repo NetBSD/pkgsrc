@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/29 08:55:31 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/27 07:06:13 rillig Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -15,7 +15,6 @@ COMMENT=		The pkgsrc guide
 
 PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
-NO_CONFIGURE=		yes
 NO_MTREE=		yes
 USE_LANGUAGES=		# empty
 
@@ -24,7 +23,7 @@ DOCDIR=			${PREFIX}/share/doc/pkgsrc
 .if exists(/usr/cvs/htdocs)
 HTDOCSDIR?=		/usr/cvs/htdocs
 .endif
-HTDOCSDIR?=		../../../htdocs
+HTDOCSDIR?=		${.CURDIR}/../../../htdocs
 
 BUILD_DEFS+=		OUTPUTS
 OUTPUTS?=		lint html html-split ascii pdf
@@ -80,23 +79,37 @@ post-install:
 # install the single-file HTML and ascii output into the pkgsrc doc/
 # directory, for distribution with pkgsrc.
 #
-# note that this uses ${CP} and not ${INSTALL_DATA} because this
-# shouldn't be done as root.
+# note that this uses ${CP} and not ${INSTALL_DATA} because the files
+# stay in the development directories and have nothing to do with
+# the permissions or ownership of installed files.
 #
 install-doc: build
-	${CP} ${WRKSRC}/pkgsrc.html ${_PKGSRCDIR}/doc
-	${CP} ${WRKSRC}/pkgsrc.txt ${_PKGSRCDIR}/doc
+	${CP} ${WRKSRC}/pkgsrc.html ${PKGSRCDIR}/doc
+	${CP} ${WRKSRC}/pkgsrc.txt ${PKGSRCDIR}/doc
 
 install-htdocs: build
-	${CP} \
-		${WRKSRC}/pkgsrc.txt \
-		${WRKSRC}/pkgsrc.pdf \
-		${WRKSRC}/pkgsrc.ps \
-		${WRKSRC}/*.html \
+	cd ${WRKSRC} && ${CP} pkgsrc.txt pkgsrc.pdf pkgsrc.ps *.html	\
 		${HTDOCSDIR}/Documentation/pkgsrc
 
+.PHONY: regenerate regenerate-doc regenerate-htdocs
+regenerate: regenerate-doc regenerate-htdocs
+
+regenerate-doc: build
+	@${STEP_MSG} "Updating the files in pkgsrc/doc"
+	cd .. && cvs update pkgsrc.*
+	${MAKE} ${MAKEFLAGS} install-doc
+	@${STEP_MSG} "Committing the files in pkgsrc/doc"
+	cd .. && cvs commit -m "re-generated." pkgsrc.*
+
+regenerate-htdocs: build
+	@${STEP_MSG} "Updating the files in htdocs"
+	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs update
+	${MAKE} ${MAKEFLAGS} install-htdocs
+	@${STEP_MSG} "Committing the files in htdocs"
+	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs commit -m "re-generated."
+
 do-lint:
-	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} lint
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} lint
 
 DETAB_PROGRAM= \
 	if (/<programlisting>/ .. /<\/programlisting>/) {		\
