@@ -228,6 +228,10 @@ II. The pkgsrc developer's guide
         15.3. Directories used during the build process
         15.4. Running a phase
         15.5. The fetch phase
+
+            15.5.1. What to fetch and where to get it from
+            15.5.2. How are the files fetched?
+
         15.6. The checksum phase
         15.7. The extract phase
         15.8. The patch phase
@@ -321,16 +325,23 @@ III. The pkgsrc infrastructure internals
 
     21. Design of the pkgsrc infrastructure
 
-        21.1. Variable evaluation
+        21.1. The meaning of variable definitions
+        21.2. Avoiding problems before they arise
+        21.3. Variable evaluation
 
-            21.1.1. At load time
-            21.1.2. At runtime
+            21.3.1. At load time
+            21.3.2. At runtime
 
-        21.2. How can variables be specified?
-        21.3. Designing interfaces for Makefile fragments
+        21.4. How can variables be specified?
+        21.5. Designing interfaces for Makefile fragments
 
-            21.3.1. Procedures with parameters
-            21.3.2. Actions taken on behalf of parameters
+            21.5.1. Procedures with parameters
+            21.5.2. Actions taken on behalf of parameters
+
+        21.6. The order in which files are loaded
+
+            21.6.1. The order in bsd.prefs.mk
+            21.6.2. The order in bsd.pkg.mk
 
     22. Regression tests
 
@@ -1350,28 +1361,25 @@ pkgsrc".
 To install binary packages, you first need to know from where to get them. You
 can get them on CD-ROMs, DVDs, or via FTP or HTTP.
 
-For NetBSD, the binary packages are made available on ftp.NetBSD.org and its
-mirrors, in the directory /pub/NetBSD/packages/OSVERSION/ARCH/. For OSVERSION,
-you should insert the output of uname -r, and for ARCH the output of uname -p.
-
-For some other platforms, binary packages can be found at the following
-locations:
+The binary packages can be found at the following locations.
 
 +-------------------------------------------------------+
 | Platform |                    URL                     |
+|----------+--------------------------------------------|
+|NetBSD    |ftp://ftp.NetBSD.org/pub/NetBSD/packages/   |
 |----------+--------------------------------------------|
 |Solaris 9 |ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/|
 |----------+--------------------------------------------|
 |Solaris 10|http://public.enst.fr/pkgsrc/packages/      |
 +-------------------------------------------------------+
 
-Most of these directories contain the pkgsrc distribution for multiple
-platforms. Select the appropriate subdirectories, according to your machine
-architecture and operating system, until you find a directory called All. This
-directory contains all the binary packages. Further, there are subdirectories
-for categories that contain symbolic links that point to the actual binary
-package in ../All. This directory layout is used for all package repositories,
-no matter if they are accessed via HTTP, FTP, NFS, CD-ROM, or the local
+Most of these directories contain binary packages for multiple platforms.
+Select the appropriate subdirectories, according to your machine architecture
+and operating system, until you find a directory called All. This directory
+contains all the binary packages. Further, there are subdirectories for
+categories that contain symbolic links that point to the actual binary package
+in ../All. This directory layout is used for all package repositories, no
+matter if they are accessed via HTTP, FTP, NFS, CD-ROM, or the local
 filesystem.
 
 4.1.2. Installing binary packages
@@ -1661,16 +1669,6 @@ XXX
     invocation, and the value 2 will display both the shell commands before
     their invocation, and their actual execution progress with set -x will be
     displayed.
-
-  * ALLOW_VULNERABILITIES.pkgbase: A space separated list of vulnerability IDs
-    that may be ignored when performing the automated security checks. These
-    IDs are listed in the pkg-vulnerabilities file and are displayed by
-    audit-packages when it finds a vulnerable package.
-
-  * SKIP_AUDIT_PACKAGES: If this is set to "yes", the automated security checks
-    (which use the security/audit-packages package) will be entirely skipped
-    for all packages built. Normally you'll want to use ALLOW_VULNERABILITIES
-    instead of this.
 
 5.5. Selecting Build Options
 
@@ -2622,6 +2620,10 @@ Table of Contents
     15.3. Directories used during the build process
     15.4. Running a phase
     15.5. The fetch phase
+
+        15.5.1. What to fetch and where to get it from
+        15.5.2. How are the files fetched?
+
     15.6. The checksum phase
     15.7. The extract phase
     15.8. The patch phase
@@ -2806,7 +2808,8 @@ for example from where to get it, how to configure, build, and install it.
 A package Makefile contains several sections that describe the package.
 
 In the first section there are the following variables, which should appear
-exactly in the order given here.
+exactly in the order given here. The ordering and grouping of variables is
+mostly historical and has no further meaning.
 
   * DISTNAME is the basename of the distribution file to be downloaded from the
     package's website.
@@ -2833,61 +2836,8 @@ exactly in the order given here.
         comms         fonts         math          pkgtools      www
         converters    games         mbone         print         x11
 
-  * MASTER_SITES is a list of URLs where the distribution files can be
-    downloaded. Each URL must end with a slash.
-
-    The MASTER_SITES may make use of the following predefined sites:
-
-        ${MASTER_SITE_APACHE}
-        ${MASTER_SITE_BACKUP}
-        ${MASTER_SITE_CYGWIN}
-        ${MASTER_SITE_DEBIAN}
-        ${MASTER_SITE_FREEBSD}
-        ${MASTER_SITE_FREEBSD_LOCAL}
-        ${MASTER_SITE_GNOME}
-        ${MASTER_SITE_GNU}
-        ${MASTER_SITE_GNUSTEP}
-        ${MASTER_SITE_IFARCHIVE}
-        ${MASTER_SITE_MOZILLA}
-        ${MASTER_SITE_OPENOFFICE}
-        ${MASTER_SITE_PERL_CPAN}
-        ${MASTER_SITE_R_CRAN}
-        ${MASTER_SITE_SOURCEFORGE}
-        ${MASTER_SITE_SUNSITE}
-        ${MASTER_SITE_SUSE}
-        ${MASTER_SITE_TEX_CTAN}
-        ${MASTER_SITE_XCONTRIB}
-        ${MASTER_SITE_XEMACS}
-
-    If one of these predefined sites is chosen, you may want to specify a
-    subdirectory of that site. Since these macros may expand to more than one
-    actual site, you must use the following construct to specify a
-    subdirectory:
-
-        ${MASTER_SITE_GNU:=subdirectory/name/}
-        ${MASTER_SITE_SOURCEFORGE:=project_name/}
-
-    Note the trailing slash after the subdirectory name.
-
-    If the package has multiple DISTFILES or multiple PATCHFILES from different
-    sites, set SITES.foo to a list of URIs where file "foo" may be found. "foo"
-    includes the suffix, e.g.:
-
-        DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-        DISTFILES+=     foo-file.tar.gz
-        SITES.foo-file.tar.gz= \
-                http://www.somewhere.com/somehow/ \
-                http://www.somewhereelse.com/mirror/somehow/
-
-  * DISTFILES: Name(s) of archive file(s) containing distribution. The default
-    is ${DISTNAME}${EXTRACT_SUFX}. Should only be set if you have more than one
-    distfile.
-
-    Note that the normal default setting of DISTFILES must be made explicit if
-    you want to add to it (rather than replace it), as you usually would.
-
-  * EXTRACT_SUFX: Suffix of the distribution file, will be appended to
-    DISTNAME. Defaults to .tar.gz.
+  * MASTER_SITES, DYNAMIC_MASTER_SITES, DIST_SUBDIR, EXTRACT_SUFX and DISTFILES
+    are discussed in detail in Section 15.5, "The fetch phase".
 
 The second section contains information about separately downloaded patches, if
 any.
@@ -4390,6 +4340,10 @@ Table of Contents
 15.3. Directories used during the build process
 15.4. Running a phase
 15.5. The fetch phase
+
+    15.5.1. What to fetch and where to get it from
+    15.5.2. How are the files fetched?
+
 15.6. The checksum phase
 15.7. The extract phase
 15.8. The patch phase
@@ -4540,10 +4494,87 @@ installed.
 
 15.5. The fetch phase
 
-This will check if the file(s) given in the variables DISTFILES and PATCHFILES
-(as defined in the package's Makefile) are present on the local system in /usr/
-pkgsrc/distfiles. If they are not present, an attempt will be made to fetch
-them using commands of the form:
+The first step in building a package is to fetch the distribution files
+(distfiles) from the sites that are providing them. This is the task of the
+fetch phase.
+
+15.5.1. What to fetch and where to get it from
+
+In simple cases, MASTER_SITES defines all URLs from where the distfile, whose
+name is derived from the DISTNAME variable, is fetched. The more complicated
+cases are described below.
+
+The variable DISTFILES specifies the list of distfiles that have to be fetched.
+Its value defaults to ${DISTNAME}${EXTRACT_SUFX}, so that most packages don't
+need to define it at all. EXTRACT_SUFX is .tar.gz by default, but can be
+changed freely. Note that if your package requires additional distfiles to the
+default one, you cannot just append the additional filenames using the +=
+operator, but you have write for example:
+
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+
+Each of the distfiles is fetched from a list of sites, usually MASTER_SITES. If
+the package has multiple DISTFILES or multiple PATCHFILES from different sites,
+you can set SITES.distfile to the list of URLs where the file distfile
+(including the suffix) can be found.
+
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+    DISTFILES+=     foo-file.tar.gz
+    SITES.foo-file.tar.gz= \
+            http://www.somewhere.com/somehow/ \
+            http://www.somewhereelse.com/mirror/somehow/
+
+When actually fetching the distfiles, each item from MASTER_SITES or SITES.*
+gets the name of each distfile appended to it, without an intermediate slash.
+Therefore, all site values have to end with a slash or other separator
+character. This allows for example to set MASTER_SITES to a URL of a CGI script
+that gets the name of the distfile as a parameter. In this case, the definition
+would look like:
+
+    MASTER_SITES=   http://www.example.com/download.cgi?file=
+
+There are some predefined values for MASTER_SITES, which can be used in
+packages. The names of the variables should speak for themselves.
+
+    ${MASTER_SITE_APACHE}
+    ${MASTER_SITE_BACKUP}
+    ${MASTER_SITE_CYGWIN}
+    ${MASTER_SITE_DEBIAN}
+    ${MASTER_SITE_FREEBSD}
+    ${MASTER_SITE_FREEBSD_LOCAL}
+    ${MASTER_SITE_GNOME}
+    ${MASTER_SITE_GNU}
+    ${MASTER_SITE_GNUSTEP}
+    ${MASTER_SITE_IFARCHIVE}
+    ${MASTER_SITE_KDE}
+    ${MASTER_SITE_MOZILLA}
+    ${MASTER_SITE_MYSQL}
+    ${MASTER_SITE_OPENOFFICE}
+    ${MASTER_SITE_PERL_CPAN}
+    ${MASTER_SITE_PGSQL}
+    ${MASTER_SITE_R_CRAN}
+    ${MASTER_SITE_SOURCEFORGE}
+    ${MASTER_SITE_SOURCEFORGE_JP}
+    ${MASTER_SITE_SUNSITE}
+    ${MASTER_SITE_SUSE}
+    ${MASTER_SITE_TEX_CTAN}
+    ${MASTER_SITE_XCONTRIB}
+    ${MASTER_SITE_XEMACS}
+
+If you choose one of these predefined sites, you may want to specify a
+subdirectory of that site. Since these macros may expand to more than one
+actual site, you must use the following construct to specify a subdirectory:
+
+    MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
+    MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+
+Note the trailing slash after the subdirectory name.
+
+15.5.2. How are the files fetched?
+
+The fetch phase makes sure that all the distfiles exist in a local directory
+(DISTDIR), which can be set by the pkgsrc user). If the files do not exist,
+they are fetched using commands of the form
 
     ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
@@ -5817,6 +5848,7 @@ macros.
 
     GCC         __GNUC__ (major version), __GNUC_MINOR__
     SunPro      __SUNPRO_C (0x570 for version 5.7)
+    SunPro C++  __SUNPRO_CC (0x580 for version 5.8)
 
 17.4.2. How to handle compiler bugs
 
@@ -5971,17 +6003,19 @@ error.
 
 17.5.8. Packages installing man pages
 
-Many packages install manual pages. The man pages are installed under ${PREFIX}
-/${PKGMANDIR} which is /usr/pkg/man by default. PKGMANDIR defaults to "man".
-For example, you can set PKGMANDIR to "share/man" to have man pages install
-under /usr/pkg/share/man/ by default.
+All packages that install manual pages should install them into the same
+directory, so that there is one common place to look for them. In pkgsrc, this
+place is ${PREFIX}/${PKGMANDIR}, and this expression should be used in
+packages. The default for PKGMANDIR is "man". Another often-used value is
+"share/man".
 
 Note
 
-The support for a custom PKGMANDIR is not complete.
+The support for a custom PKGMANDIR is far from complete.
 
 The PLIST files can just use man/ as the top level directory for the man page
-file entries and the pkgsrc framework will convert as needed.
+file entries, and the pkgsrc framework will convert as needed. In all other
+places, the correct PKGMANDIR must be used.
 
 Packages that are configured with GNU_CONFIGURE set as "yes", by default will
 use the ./configure --mandir switch to set where the man pages should be
@@ -6522,16 +6556,23 @@ Table of Contents
 
 21. Design of the pkgsrc infrastructure
 
-    21.1. Variable evaluation
+    21.1. The meaning of variable definitions
+    21.2. Avoiding problems before they arise
+    21.3. Variable evaluation
 
-        21.1.1. At load time
-        21.1.2. At runtime
+        21.3.1. At load time
+        21.3.2. At runtime
 
-    21.2. How can variables be specified?
-    21.3. Designing interfaces for Makefile fragments
+    21.4. How can variables be specified?
+    21.5. Designing interfaces for Makefile fragments
 
-        21.3.1. Procedures with parameters
-        21.3.2. Actions taken on behalf of parameters
+        21.5.1. Procedures with parameters
+        21.5.2. Actions taken on behalf of parameters
+
+    21.6. The order in which files are loaded
+
+        21.6.1. The order in bsd.prefs.mk
+        21.6.2. The order in bsd.pkg.mk
 
 22. Regression tests
 
@@ -6551,24 +6592,75 @@ Chapter 21. Design of the pkgsrc infrastructure
 
 Table of Contents
 
-21.1. Variable evaluation
+21.1. The meaning of variable definitions
+21.2. Avoiding problems before they arise
+21.3. Variable evaluation
 
-    21.1.1. At load time
-    21.1.2. At runtime
+    21.3.1. At load time
+    21.3.2. At runtime
 
-21.2. How can variables be specified?
-21.3. Designing interfaces for Makefile fragments
+21.4. How can variables be specified?
+21.5. Designing interfaces for Makefile fragments
 
-    21.3.1. Procedures with parameters
-    21.3.2. Actions taken on behalf of parameters
+    21.5.1. Procedures with parameters
+    21.5.2. Actions taken on behalf of parameters
+
+21.6. The order in which files are loaded
+
+    21.6.1. The order in bsd.prefs.mk
+    21.6.2. The order in bsd.pkg.mk
 
 The pkgsrc infrastructure consists of many small Makefile fragments. Each such
 fragment needs a properly specified interface. This chapter explains how such
 an interface looks like.
 
-21.1. Variable evaluation
+21.1. The meaning of variable definitions
 
-21.1.1. At load time
+Whenever a variable is defined in the pkgsrc infrastructure, the location and
+the way of definition provide much information about the intended use of that
+variable. Additionally, more documentation may be found in a header comment or
+in this pkgsrc guide.
+
+A special file is mk/defaults/mk.conf, which lists all variables that are
+intended to be user-defined. They are either defined using the ?= operator or
+they are left undefined because defining them to anything would effectively
+mean "yes". All these variables may be overridden by the pkgsrc user in the
+MAKECONF file.
+
+Outside this file, the following conventions apply: Variables that are defined
+using the ?= operator may be overridden by a package.
+
+Variables that are defined using the = operator may be used read-only at
+run-time.
+
+Variables whose name starts with an underscore must not be accessed outside the
+pkgsrc infrastructure at all. They may change without further notice.
+
+Note
+
+These conventions are currently not applied consistently to the complete pkgsrc
+infrastructure.
+
+21.2. Avoiding problems before they arise
+
+All variables that contain lists of things should default to being empty. Two
+examples that do not follow this rule are USE_LANGUAGES and DISTFILES. These
+variables cannot simply be modified using the += operator in package Makefiles
+(or other files included by them), since there is no guarantee whether the
+variable is already set or not, and what its value is. In the case of
+DISTFILES, the packages "know" the default value and just define it as in the
+following example.
+
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+
+Because of the selection of this default value, the same value appears in many
+package Makefiles. Similarly for USE_LANGUAGES, but in this case the default
+value ("c") is so short that it doesn't stand out. Nevertheless it is mentioned
+in many files.
+
+21.3. Variable evaluation
+
+21.3.1. At load time
 
 Variable evaluation takes place either at load time or at runtime, depending on
 the context in which they occur. The contexts where variables are evaluated at
@@ -6604,25 +6696,25 @@ paragraph, the -Wall is appended to the CFLAGS, but this addition will not
 appear in CONFIGURE_ARGS. In actual code, the three paragraphs from above
 typically occur in completely unrelated files.
 
-21.1.2. At runtime
+21.3.2. At runtime
 
 After all the files have been loaded, the values of the variables cannot be
 changed anymore. Variables that are used in the shell commands are expanded at
 this point.
 
-21.2. How can variables be specified?
+21.4. How can variables be specified?
 
 There are many ways in which the definition and use of a variable can be
 restricted in order to detect bugs and violations of the (mostly unwritten)
 policies. See the pkglint developer's documentation for further details.
 
-21.3. Designing interfaces for Makefile fragments
+21.5. Designing interfaces for Makefile fragments
 
 Most of the .mk files fall into one of the following classes. Cases where a
 file falls into more than one class should be avoided as it often leads to
 subtle bugs.
 
-21.3.1. Procedures with parameters
+21.5.1. Procedures with parameters
 
 In a traditional imperative programming language some of the .mk files could be
 described as procedures. They take some input parameters and?after inclusion?
@@ -6649,7 +6741,7 @@ Examples for procedures are mk/bsd.options.mk and mk/buildlink3/bsd.builtin.mk.
 To express that the parameters are evaluated at load time, they should be
 assigned using the := operator, which should be used only for this purpose.
 
-21.3.2. Actions taken on behalf of parameters
+21.5.2. Actions taken on behalf of parameters
 
 Action files take some input parameters and may define runtime variables. They
 shall not define loadtime variables. There are action files that are included
@@ -6657,6 +6749,67 @@ implicitly by the pkgsrc infrastructure, while other must be included
 explicitly.
 
 An example for action files is mk/subst.mk.
+
+21.6. The order in which files are loaded
+
+Package Makefiles usually consist of a set of variable definitions, and include
+the file ../../mk/bsd.pkg.mk in the very last line. Before that, they may also
+include various other *.mk files if they need to query the availability of
+certain features like the type of compiler or the X11 implementation. Due to
+the heavy use of preprocessor directives like .if and .for, the order in which
+the files are loaded matters.
+
+This section describes at which point the various files are loaded and gives
+reasons for that order.
+
+21.6.1. The order in bsd.prefs.mk
+
+The very first action in bsd.pkg.mk is to define some essential variables like
+OPSYS, OS_VERSION and MACHINE_ARCH.
+
+Then, the user settings are loaded from the file specified in MAKECONF. If the
+bmake command from pkgsrc is used, MAKECONF defaults to ${prefix}/etc/mk.conf.
+With the native make(1) command on NetBSD, it defaults to /etc/mk.conf. After
+that, those variables that have not been overridden by the user are loaded from
+mk/defaults/mk.conf.
+
+After the user settings, the system settings and platform settings are loaded,
+which may override the user settings.
+
+Then, the tool definitions are loaded. The tool wrappers are not yet in effect.
+This only happens when building a package, so the proper variables must be used
+instead of the direct tool names.
+
+As the last steps, some essential variables from the wrapper and the package
+system flavor are loaded, as well as the variables that have been cached in
+earlier phases of a package build.
+
+21.6.2. The order in bsd.pkg.mk
+
+First, bsd.prefs.mk is loaded.
+
+Then, the various *-vars.mk files are loaded, which fill default values for
+those variables that have not been defined by the the package. These variables
+may later be used even in unrelated files.
+
+Then, the file bsd.pkg.error.mk provides the target error-check that is added
+as a special dependency to all other targets that use DELAYED_ERROR_MSG or
+DELAYED_WARNING_MSG.
+
+Then, the package-specific hacks from hacks.mk are included.
+
+Then, various other files follow. Most of them don't have any dependencies on
+what they need to have included before or after them, though some do.
+
+The code to check PKG_FAIL_REASON and PKG_SKIP_REASON is then executed, which
+restricts the use of these variables to all the files that have been included
+before. Appearances in later files will be silently ignored.
+
+Then, the files for the main targets are included, in the order of later
+execution, though the actual order should not matter.
+
+At last, some more files are included that don't set any interesting variables
+but rather just define make targets to be executed.
 
 Chapter 22. Regression tests
 
