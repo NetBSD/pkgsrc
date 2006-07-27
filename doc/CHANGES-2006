@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.836 2006/07/26 22:55:33 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.837 2006/07/27 06:50:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3578,3 +3578,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/liferea to 1.0.18 [drochner 2006-07-26]
 	Added geography/py-proj version 1.7.2 [gdt 2006-07-26]
 	Added geography/proj-swig version 0.01 [gdt 2006-07-26]
+	Updated lang/inform to 6.31.1 [wiz 2006-07-27]
