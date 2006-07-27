@@ -31,12 +31,6 @@ DDEESSCCRRIIPPTTIIOONN
      --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
                          warnings, see below.
 
-     --dd|----ddeebbuugg          Enable warnings for parsing errors and other things
-                         that haven't been completed yet.  This option is sep-
-                         arated from the `-W' options because the diagnostics
-                         are too hard to understand without detailed knowledge
-                         of pkglint's source code.
-
      --ee|----eexxppllaaiinn        Print further explanations for diagnostics.  Some-
                          times the reasons for diagnostics are not obvious and
                          need further explanation.
@@ -55,16 +49,12 @@ DDEESSCCRRIIPPTTIIOONN
      --qq|----qquuiieett          Don't print the errors and warnings summary before
                          terminating.
 
-     --rr                  Check subdirectories, too.  The subdirectories are
+     --rr|----rreeccuurrssiivvee      Check subdirectories, too.  The subdirectories are
                          those that are mentioned in a `SUBDIR+=' line.
 
      --ss|----ssoouurrccee         For all diagnostics having file and line number
                          information, show the source code along with the
                          diagnostics.
-
-     --vv|----vveerrbboossee        Be verbose.  Show the progress report for items that
-                         are being checked.  If given more than once, debug-
-                         ging messages are also shown.
 
    CChheecckkss
      aallll                 Enable all checks.
@@ -72,6 +62,8 @@ DDEESSCCRRIIPPTTIIOONN
      nnoonnee                Disable all checks.
 
      [[nnoo--]]AALLTTEERRNNAATTIIVVEESS   Check the alternatives file.
+
+     [[nnoo--]]DDEESSCCRR          Check the DESCR file.
 
      [[nnoo--]]IINNSSTTAALLLL        Check the INSTALL and DEINSTALL scripts.
 
@@ -143,6 +135,9 @@ DDEESSCCRRIIPPTTIIOONN
      [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the preferred
                          order.
 
+     [[nnoo--]]ppeerrmm           Warn if a variable is used or defined outside its
+                         specified scope.
+
      [[nnoo--]]pplliisstt--ddeepprr     Warn if deprecated pathnames are used in _P_L_I_S_T files.
                          This warning is disabled by default.
 
@@ -192,9 +187,6 @@ DDIIAAGGNNOOSSTTIICCSS
      WARN: ...     Warnings generally should be fixed, but they are not as
                    critical as errors.
 
-     OK: ...       Informational messages are only written in verbose mode
-                   (--vv).  Their main use is to aid debugging.
-
 AAUUTTHHOORRSS
      Roland Illig <rillig@NetBSD.org>
 
@@ -204,4 +196,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 3.0                     February 28, 2006                    NetBSD 3.0
+NetBSD 3.0                       July 27, 2006                      NetBSD 3.0
