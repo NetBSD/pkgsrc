@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.11 2006/07/28 02:41:07 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.12 2006/07/28 18:41:53 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -215,7 +215,8 @@ process_binpkg_dir(){
 	# 
 	if test "X${need_update}" = "Xyes" ; then
 		echo "pkgcache_version ${cacheversion}" > ${tmpd}/${cachefile}
-		echo "" > ${tmpd}/${summaryfile}
+		rm -f ${tmpd}/${summaryfile}
+		touch ${tmpd}/${summaryfile}
 		for f in ${d}/*${PKG_SUFX} ; do
 			fn=`grep "^${d} " ${all_dirs} | ${AWK} '{print $2}'`"/"`basename ${f}`
 			if test "X${DEBUG}" = "Xyes" ; then
