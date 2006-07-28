@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.12 2006/07/28 18:41:53 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.13 2006/07/28 20:52:35 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -77,9 +77,10 @@ usage(){
 	echo "$prog - Generates cache files for each directory containing binary"
 	echo "        packages.  This cache file can then be used by the README.html"
 	echo "        generation code to avoid having to call pkg_info(1) over and over"
-	echo "        on the same binary package."
+	echo "        on the same binary package.  In addition, pkg_summary.gz files for"
+	echo "        use by the pkgtools/pkg_chk pacakge may be generated."
 	echo " "
-	echo "Usage:      $prog [-d|--debug] [-v|--verbose] [-p|--packages <dir>]"
+	echo "Usage:      $prog [-d|--debug] [-v|--verbose] [-s|--summary] [-p|--packages <dir>]"
 	echo " "
 	echo "            $prog -h|--help"
 	echo " "
@@ -91,12 +92,21 @@ usage(){
 	echo " "
 	echo "  -f|--database <file>  Writes the database into file specified by <file>"
 	echo " "
+	echo "  -F|--force            Forces a rebuild of the cache files even if they are"
+	echo "                        otherwise up to date."
+	echo " "
 	echo "  -h|--help             Displays this help message"
 	echo " "
 	echo "  -p|--packages <dir>   Specifies the top level directory to be searched"
 	echo "                        for binary packages."
 	echo " "
-	echo "  -v|--version          Displays the version of this script and exits."
+	echo "  -s|--summary          Enables the creation of pkg_summary.gz files in each"
+	echo "                        directory containing binary packages.  The pkg_summary.gz"
+	echo "                        file is used by the pkgtools/pkg_chk package."
+	echo " "
+	echo "  -v|--verbose          Enables verbose output from the script."
+	echo " "
+	echo "  -V|--version          Displays the version of this script and exits."
 	echo " "
 	echo "Returns 0 on success, 1 on errors, 2 if the packages"
 	echo "directory does not exist."
