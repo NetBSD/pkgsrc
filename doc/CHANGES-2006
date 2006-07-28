@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.845 2006/07/28 01:52:00 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.846 2006/07/28 04:54:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3587,3 +3587,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/ocaml-mysql version 1.0.4 [rillig 2006-07-27]
 	Updated lang/ghc to 6.4.2nb2 [kristerw 2006-07-27]
 	Updated devel/gnustep-make to 1.12.0nb1 [minskim 2006-07-28]
+	Updated x11/gnustep-gui to 0.10.3nb2 [minskim 2006-07-28]
