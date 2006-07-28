@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.10 2006/05/29 02:41:26 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.11 2006/07/28 02:41:07 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -61,6 +61,7 @@ usage(){
     echo "Usage:      $prog [-c|--cdrom] [-C|--prune] [-d|--debug] [-f|--ftp] "
     echo "                  [-p|--pkgsrc directory] "
     echo "                  [-P|--packages directory] [-r|--restart] "
+    echo "                  [-s|--summary]"
     echo "                  [-S|--save-database]"
     echo " "
     echo "            $prog -h|--help"
@@ -89,6 +90,9 @@ usage(){
     echo "  -r|--restart        Restart.  This option assumes that the database file"
     echo "                      from a previous run still exists and that the script"
     echo "                      should use that instead of recreating the database."
+    echo " "
+    echo "  -s|--summary        Generate pkg_summary.gz files for the binary packages"
+    echo "                      directories while processing them."
     echo " "
     echo "  -S|--save-database  Does not delete the database file after the run."
     echo "                      This is useful for debugging or re-running this script"
@@ -125,6 +129,8 @@ restart=no
 prune=no
 DEBUG=no
 save=no
+
+summary=""
 
 while
     test -n "$1"
@@ -178,6 +184,12 @@ do
     # Restart (ie, don't re-generate the database file)
     -r|--restart)
 	restart=yes
+	shift
+	;;
+
+    # Generate the pkg_summary.gz files
+    -s|--summary)
+	summary="--summary"
 	shift
 	;;
 
@@ -247,7 +259,7 @@ echo " "
 if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
     cd ${PKGSRCDIR}/pkgtools/prereq-readme
     eval "`${BMAKE} show-tools`"
-    for v in AWK CMP ECHO EXPR FGREP FIND GREP SED SETENV SORT 
+    for v in AWK CMP ECHO EXPR FGREP FIND GREP GZIP_CMD SED SETENV SORT 
     do
 	eval "echo '---->'  ${v}=\"\${${v}}\""
     done
@@ -397,11 +409,13 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     builddependsfile=${TMPDIR}/pkgsrc.builddepends.debug \
     debug=$debug \
     dependsfile=${TMPDIR}/pkgsrc.depends.debug \
+    summary=${summary} \
     AWK=$AWK \
     CMP=$CMP \
     DISTDIR=$DISTDIR \
     FIND=$FIND \
     GREP=$GREP \
+    GZIP_CMD="$GZIP_CMD" \
     PACKAGES=$PACKAGES \
     PKG_INFO="$PKG_INFO" \
     PKG_SUFX=$PKG_SUFX \

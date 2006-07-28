@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.22 2006/04/15 15:00:24 salo Exp $
+# $NetBSD: genreadme.awk,v 1.23 2006/07/28 02:41:07 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -201,8 +201,8 @@ END {
 	if ( builddependsfile == "" ) builddependsfile = "/dev/stdout";
 
 	printf("Making sure binary package cache file is up to date...\n");
-	cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache --packages %s",
-		SETENV, AWK, CMP, FIND, GREP, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, PACKAGES);
+	cmd = sprintf("%s AWK=%s CMP=%s FIND=%s GREP=%s GZIP_CMD=\"%s\" PKG_INFO=\"%s\" PKG_SUFX=%s SED=%s SORT=%s %s/mk/scripts/binpkg-cache %s --packages %s",
+		SETENV, AWK, CMP, FIND, GREP, GZIP_CMD, PKG_INFO, PKG_SUFX, SED, SORT, PKGSRCDIR, summary, PACKAGES);
 	if (debug) printf("\nExecute:  %s\n",cmd);
 	rc = system(cmd);
 
@@ -376,17 +376,17 @@ END {
 					 toppkg, pkgbase);
 				}
 				while(i in vulpkg) {
-					nm = vulpkg[i];
-					gsub(/&/, "\\\\\\&amp;", nm);
-					gsub(/</, "\\\\\\&lt;", nm);
-					gsub(/>/, "\\\\\\&gt;", nm);
-					url = vulref[i];
-					gsub(/&/, "\\\\\\&", url);
-					printurl = vulref[i];
-					gsub(/&/, "\\\\\\&amp;", printurl);
-					gsub(/</, "\\\\\\&lt;", printurl);
-					gsub(/>/, "\\\\\\&gt;", printurl);
 					if (vulpkg[i] ~ "^" pkgbase"[-<>=]+[0-9]") {
+						nm = vulpkg[i];
+						gsub(/&/, "\\\\\\&amp;", nm);
+						gsub(/</, "\\\\\\&lt;", nm);
+						gsub(/>/, "\\\\\\&gt;", nm);
+						url = vulref[i];
+						gsub(/&/, "\\\\\\&", url);
+						printurl = vulref[i];
+						gsub(/&/, "\\\\\\&amp;", printurl);
+						gsub(/</, "\\\\\\&lt;", printurl);
+						gsub(/>/, "\\\\\\&gt;", printurl);
 						vul =  sprintf("%s<LI><STRONG>%s has a <a href=\"%s\">%s</a> vulnerability</STRONG></LI>\n",
 							  vul, nm, url, vultype[i]);
 					}
@@ -719,10 +719,17 @@ function reg2str(reg){
 # an awk regular expression.
 #
 function glob2reg(reg){
+
+	# escape some characters which are special in regular expressions
         gsub(/\./, "\\\.", reg);
         gsub(/\+/, "\\\+", reg);
+
+	# and reformat some others
         gsub(/\*/, ".*", reg);
         gsub(/\?/, ".?", reg);
+
+	# finally, expand {a,b,c} type patterns
+
         return(reg);
 }
 
