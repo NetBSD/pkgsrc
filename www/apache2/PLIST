@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2006/05/07 12:35:27 tron Exp $
+@comment $NetBSD: PLIST,v 1.34 2006/07/28 13:35:37 tron Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -949,6 +949,7 @@ share/httpd/manual/style/css/manual-zip-100pc.css
 share/httpd/manual/style/css/manual-zip.css
 share/httpd/manual/style/css/manual.css
 share/httpd/manual/style/faq.dtd
+@exec ${MKDIR} %D/share/httpd/manual/style/lang
 share/httpd/manual/style/lang.dtd
 share/httpd/manual/style/latex/atbeginend.sty
 share/httpd/manual/style/latex/common.xsl
