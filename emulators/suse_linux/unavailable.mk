@@ -1,4 +1,4 @@
-# $NetBSD: unavailable.mk,v 1.1 2006/06/26 17:53:04 salo Exp $
+# $NetBSD: unavailable.mk,v 1.2 2006/07/28 22:57:38 kristerw Exp $
 
 .ifndef SUSE_UNAVAILABLE_MK
 SUSE_UNAVAILABLE_MK=1
@@ -7,7 +7,7 @@ SUSE_UNAVAILABLE_MK=1
 # works correctly on all machines.  This speeds up the marking of all
 # COMPAT_LINUX packages as not available.
 #
-SUSE_DIR_PREFIX=	suse
+SUSE_DIR_PREFIX=	suse100
 SUSE_VERSION=		0
 PKG_SKIP_REASON+=	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 
