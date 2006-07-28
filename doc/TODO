@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5251 2006/07/27 17:42:53 wiz Exp $
+$NetBSD: TODO,v 1.5252 2006/07/28 19:20:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -356,11 +356,11 @@ Suggested package updates
 	o argus-3.4
 	o arnold-20040104
 	o asapm-3.1
-	o aspell-danish-1.4.53
+	o aspell-danish-1.7.6
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
-	o at-spi-1.7.9
+	o at-spi-1.7.10
 	o autogen-5.8.4
 	o avcheck-0.91
 	o avl-2.0.1
@@ -444,7 +444,7 @@ Suggested package updates
 	o denemo-0.7.5
 	o deskbar-applet-2.14.2
 	o devIL-1.6.7
-	o devhelp-0.10
+	o devhelp-0.12
 	o devtodo-0.1.19
 	o diffstat-1.43
 	o dirac-0.6.0
@@ -454,7 +454,7 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dropbear-0.48
-	o drscheme-351
+	o drscheme-352
 	o dvdauthor-0.6.11
 	o dvdrip-0.97.12
 	o dvdstyler-1.5beta5
@@ -622,6 +622,7 @@ Suggested package updates
 	o ion3-devel-20060305
 	o ipa-2.0 [pkg/32398]
 	o ipa-2.0.1
+	o ipcalc-0.41
 	o ipcheck-0.219
 	o ipsec-tools-0.6.5
 	o ircservices-5.0.58
@@ -672,6 +673,7 @@ Suggested package updates
 	o libgii-1.0.1
 	o libgiigic-1.1.1
 	o libglade2-2.6.0
+	o libgtop-2.14.2
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
 	o liblive-2005.10.05
@@ -1134,6 +1136,8 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
+	o thunderbird-1.5.0.5
+	o thunderbird-gtk1-1.5.0.5
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.0.3
