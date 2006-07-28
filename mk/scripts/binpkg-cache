@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.10 2006/06/21 14:13:27 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.11 2006/07/28 02:41:07 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -47,6 +47,7 @@ AWK=${AWK:-awk}
 CMP=${CMP:-cmp}
 FIND=${FIND:-find}
 GREP=${GREP:-grep}
+GZIP_CMD=${GZIP_CMD:-gzip}
 PKG_INFO=${PKG_INFO:-pkg_info}
 PKG_SUFX=${PKG_SUFX:-.tgz}
 SED=${SED:-sed}
@@ -54,6 +55,7 @@ SORT=${SORT:-sort}
 STAT=${STAT:-stat}
 
 cachefile=.pkgcache
+summaryfile=pkg_summary
 cacheversion=20050428
 
 prompt="----> "
@@ -197,6 +199,15 @@ process_binpkg_dir(){
 		fi
 	fi
 
+	if test "${build_summary}" = "yes" -a ! -f ${d}/${summaryfile}.gz ; then 
+		echo "${tab}Summary file ${d}/${summaryfile}.gz is missing and will be created."
+		need_update=yes
+	fi
+	if test "${build_summary}" = "yes" -a ${d}/${summaryfile}.gz -ot ${d}/${cachefile} ; then
+		echo "${tab}Summary file ${d}/${summaryfile}.gz is out of date and will be regnerated."
+		need_update=yes
+	fi
+
 	# FIX_ME
 	# We should use stale_entries in a way where we only update the 
 	# cache file entries corresponding to these if we're rebuilding
@@ -204,6 +215,7 @@ process_binpkg_dir(){
 	# 
 	if test "X${need_update}" = "Xyes" ; then
 		echo "pkgcache_version ${cacheversion}" > ${tmpd}/${cachefile}
+		echo "" > ${tmpd}/${summaryfile}
 		for f in ${d}/*${PKG_SUFX} ; do
 			fn=`grep "^${d} " ${all_dirs} | ${AWK} '{print $2}'`"/"`basename ${f}`
 			if test "X${DEBUG}" = "Xyes" ; then
@@ -215,10 +227,14 @@ process_binpkg_dir(){
 			#eval $(${STAT} -s ${f} 2>/dev/null)
 			echo "pkgcache_begin ${fn}" >> ${tmpd}/${cachefile}
 			#echo "pkgcache_mtime=${st_mtime}" >> ${tmpd}/${cachefile}
-			if test "X${DEBUG}" = "Xyes" ; then
-				echo "${PKG_INFO} -q -B ${f}"
-			fi
+
+			if test "X${DEBUG}" = "Xyes" ; then echo "${PKG_INFO} -q -B ${f}" ; fi
 			${PKG_INFO} -q -B ${f} >> ${tmpd}/${cachefile}
+
+			if test "${build_summary}" = "yes" ; then
+				if test "X${DEBUG}" = "Xyes" ; then echo "${PKG_INFO} -X ${f}" ; fi
+				${PKG_INFO} -X ${f} >> ${tmpd}/${summaryfile}
+			fi
 			echo "pkgcache_end ${fn}" >> ${tmpd}/${cachefile}
 		done
 		mv -f ${tmpd}/${cachefile} ${d}/${cachefile}
@@ -230,6 +246,18 @@ process_binpkg_dir(){
 			echo "********** WARNING **********"
 			return
 		fi
+		
+		if test "${build_summary}" = "yes" ; then
+			cat ${tmpd}/${summaryfile} | ${GZIP_CMD} > ${d}/${summaryfile}.gz
+			if test $? -ne 0 ; then
+				echo "********** WARNING **********"
+				echo "${GZIP_CMD} of ${tmpd}/${summaryfile} to ${d}/${summaryfile}.gz failed!"
+				echo "Perhaps you do not have write permissions to ${d}?"
+				echo "********** WARNING **********"
+				return
+			fi
+		fi
+
 	fi
 
 	# if we got here, then this directory should have a good cache file in
@@ -280,6 +308,7 @@ process_cache_files(){
 DEBUG=no
 verbose=no
 force=no
+build_summary=no
 
 while
 	test -n "$1"
@@ -308,6 +337,12 @@ do
 		-p|--packages)
 			PACKAGES=$2
 			shift 2
+			;;
+
+		# Build the pkg_summary.gz files
+		-s|--summary)
+			build_summary=yes
+			shift
 			;;
 
 		# Version
