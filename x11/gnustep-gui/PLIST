@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/03 18:25:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/07/28 04:54:01 minskim Exp $
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/GSLPR
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/stamp.make
@@ -395,6 +395,7 @@ share/GNUstep/System/Tools/set_show_service
 @dirrm share/GNUstep/System/Library/Headers/gnustep/gui
 @comment in devel/gnustep-base: @dirrm share/GNUstep/System/Library/Headers/gnustep
 @dirrm share/GNUstep/System/Library/Headers/GNUstepGUI
+@dirrm share/GNUstep/System/Library/Headers/Cocoa
 @dirrm share/GNUstep/System/Library/Headers/AppKit
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Headers
 @dirrm share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources
