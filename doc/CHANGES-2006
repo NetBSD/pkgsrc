@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.847 2006/07/28 10:40:46 tron Exp $
+$NetBSD: CHANGES-2006,v 1.848 2006/07/28 13:05:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gnustep-gui to 0.10.3nb2 [minskim 2006-07-28]
 	Updated devel/apr to 0.9.12.2.0.59 [tron 2006-07-28]
 	Updated www/apache2 to 2.0.59 [tron 2006-07-28]
+	Updated emulators/wine to 0.9.18 [adam 2006-07-28]
