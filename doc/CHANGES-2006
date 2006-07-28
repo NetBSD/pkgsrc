@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.848 2006/07/28 13:05:24 adam Exp $
+$NetBSD: CHANGES-2006,v 1.849 2006/07/28 13:36:14 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3591,3 +3591,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/apr to 0.9.12.2.0.59 [tron 2006-07-28]
 	Updated www/apache2 to 2.0.59 [tron 2006-07-28]
 	Updated emulators/wine to 0.9.18 [adam 2006-07-28]
+	Updated www/apache2 to 2.0.59nb1 [tron 2006-07-28]
