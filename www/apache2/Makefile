@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2006/07/10 08:29:33 rillig Exp $
+# $NetBSD: Makefile,v 1.103 2006/07/28 10:38:36 tron Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,7 @@ CONFLICTS=	apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 
 BUILD_DEFS+=	USE_INET6
 
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		perl perl:run pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
@@ -159,24 +159,24 @@ SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
 # ap_mod, and _AP_CFG_ARGS.ap_mod is a whitespace separated list of
 # configure script options for ap_mod.
 #
-_AP_DEPENDS.ssl=	../../security/openssl/buildlink3.mk
-_AP_DEPENDS.deflate=	../../devel/zlib/buildlink3.mk
+AP_DEPENDS.ssl=	../../security/openssl/buildlink3.mk
+AP_DEPENDS.deflate=	../../devel/zlib/buildlink3.mk
 
-_AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
-_AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
+AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
 
-.for _ap_mod in ${APACHE_MODULES}
-.  if defined(_AP_DEPENDS.${_ap_mod}) && !empty(_AP_DEPENDS.${_ap_mod})
-.    for _ap_depend in ${_AP_DEPENDS.${_ap_mod}}
-.      if exists(${_ap_depend})
-.        include "${_ap_depend}"
+.for ap_mod in ${APACHE_MODULES}
+.  if defined(AP_DEPENDS.${ap_mod}) && !empty(AP_DEPENDS.${ap_mod})
+.    for ap_depend in ${AP_DEPENDS.${ap_mod}}
+.      if exists(${ap_depend})
+.        include "${ap_depend}"
 .      else
-DEPENDS+=		${_ap_depend}
+DEPENDS+=		${ap_depend}
 .      endif
 .    endfor
 .  endif
-.  if defined(_AP_CFG_ARGS.${_ap_mod}) && !empty(_AP_CFG_ARGS.${_ap_mod})
-CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
+.  if defined(AP_CFG_ARGS.${ap_mod}) && !empty(AP_CFG_ARGS.${ap_mod})
+CONFIGURE_ARGS+=	${AP_CFG_ARGS.${ap_mod}}
 .  endif
 .endfor
 
