@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/03/03 07:24:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/07/28 01:50:58 minskim Exp $
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -129,8 +129,8 @@ share/examples/GNUstep/GNUstep.conf
 @dirrm share/GNUstep/System/Library/Services
 @exec ${MKDIR} %D/share/GNUstep/System/Library/PostScript
 @dirrm share/GNUstep/System/Library/PostScript
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/ix86
-@dirrm share/GNUstep/System/Library/Makefiles/ix86
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/${GNUSTEP_ARCH}
+@dirrm share/GNUstep/System/Library/Makefiles/${GNUSTEP_ARCH}
 @dirrm share/GNUstep/System/Library/Makefiles/Master
 @dirrm share/GNUstep/System/Library/Makefiles/Instance/Shared
 @dirrm share/GNUstep/System/Library/Makefiles/Instance/Documentation
