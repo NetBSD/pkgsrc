@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.664 2006/07/27 16:13:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.665 2006/07/28 17:10:12 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3256,6 +3256,12 @@ sub parseline_mk($) {
 		$line->set("is_shellcmd", true);
 		$line->set("shellcmd", $shellcmd);
 
+		my ($shellwords, $rest) = match_all($shellcmd, $regex_shellword);
+		$line->set("shellwords", $shellwords);
+		if ($rest !~ qr"^\s*$") {
+			$line->set("shellwords_rest", $rest);
+		}
+
 	} elsif ($text =~ regex_mk_comment) {
 		my ($comment) = @_;
 
@@ -3623,6 +3629,9 @@ sub checkline_other_absolute_pathname($$) {
 
 		if ($before =~ qr"\@$") {
 			# Something like @PREFIX@/bin
+
+		} elsif ($before =~ qr"\}$") {
+			# Something like ${prefix}/bin
 
 		} else {
 			checkword_absolute_pathname($line, $path);
