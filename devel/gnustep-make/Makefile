@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/28 01:50:58 minskim Exp $
 
 DISTNAME=	gnustep-make-1.12.0
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -20,6 +21,13 @@ CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
 
 .include "../../mk/x11.buildlink3.mk"
 .include "gnustep.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+GNUSTEP_ARCH=	ix86
+.else
+GNUSTEP_ARCH=	${MACHINE_ARCH}
+.endif
+PLIST_SUBST+=	GNUSTEP_ARCH=${GNUSTEP_ARCH}
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
