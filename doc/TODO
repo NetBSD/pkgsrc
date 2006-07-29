@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5252 2006/07/28 19:20:55 wiz Exp $
+$NetBSD: TODO,v 1.5253 2006/07/29 01:23:15 grant Exp $
 
 Suggested new packages
 ======================
@@ -349,6 +349,9 @@ Suggested package updates
 	o ap-xslt-1.3.8
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
+	o apache-1.3.37
+	o apache-2.0.59
+	o apache-2.2.3
 	o apcupsd-3.10.16
 	o aqsis-1.0.1 [heinz]
 	o aranym-0.9.0
