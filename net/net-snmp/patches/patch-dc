@@ -1,8 +1,8 @@
-$NetBSD: patch-dc,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-dc,v 1.2 2006/07/29 16:48:27 adam Exp $
 
---- include/net-snmp/net-snmp-config.h.in.orig	2005-12-08 11:08:34.000000000 +0000
+--- include/net-snmp/net-snmp-config.h.in.orig	2006-05-26 18:36:06.000000000 +0200
 +++ include/net-snmp/net-snmp-config.h.in
-@@ -1219,6 +1219,7 @@
+@@ -1225,6 +1225,7 @@
  #define HPUX11ID 14
  #define AIXID 15
  #define MACOSXID 16
@@ -10,7 +10,7 @@ $NetBSD: patch-dc,v 1.1 2006/03/19 22:03:29 joerg Exp $
  #define UNKNOWNID 255
  
  #ifdef hpux9
-@@ -1248,6 +1249,9 @@
+@@ -1254,6 +1255,9 @@
  #if defined(__FreeBSD__)
  #define OSTYPE FREEBSDID
  #endif

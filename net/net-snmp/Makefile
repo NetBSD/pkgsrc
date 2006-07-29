@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2006/07/06 18:13:08 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/07/29 16:48:27 adam Exp $
 
-DISTNAME=	net-snmp-5.3.0.1
-PKGREVISION=	3
+DISTNAME=	net-snmp-5.3.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.net-smnp.org/pub/sourceforge/net-snmp/
@@ -12,8 +11,8 @@ COMMENT=	Extensible SNMP implementation
 
 CONFLICTS=	ucd-snmp-[0-9]*
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 MAKE_ENV+=	OPSYS=${OPSYS:Q}
 
@@ -80,9 +79,9 @@ CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
 #
 # Enable the perl modules build and installation
 #
-CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
-PERL5_CONFIGURE=	NO
+PERL5_CONFIGURE=	no
 PERL5_PACKLIST=		auto/Bundle/NetSNMP/.packlist
+CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
 CONFIGURE_ENV+=		PERLPROG=${PERL5:Q}
 
 .include "options.mk"
@@ -99,6 +98,8 @@ REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	local/mib2c-update
 
+INSTALLATION_DIRS+=	share/examples/net-snmp
+
 post-extract:
 	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/include/net-snmp/system
 
@@ -109,8 +110,7 @@ post-wrapper:
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/net-snmp
-	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf				\
+	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf	\
 		${PREFIX}/share/examples/net-snmp/EXAMPLE.conf
 
 .include "../../lang/perl5/module.mk"

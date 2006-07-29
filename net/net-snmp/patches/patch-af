@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-af,v 1.7 2006/07/29 16:48:27 adam Exp $
 
---- configure.orig	2006-01-14 01:51:51.000000000 +0000
+--- configure.orig	2006-07-29 17:35:31.000000000 +0200
 +++ configure
-@@ -13421,7 +13421,7 @@ else
+@@ -13548,7 +13548,7 @@ else
     default_mibs=IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:HOST-RESOURCES-MIB:SNMPv2-MIB:RFC1213-MIB:NOTIFICATION-LOG-MIB:DISMAN-EVENT-MIB:DISMAN-SCHEDULE-MIB
  
     case $target_os in
--      linux* | mingw32* | cygwin* | freebsd* | dynix* | solaris2* | hpux* )
-+      linux* | mingw32* | cygwin* | freebsd* | dynix* | solaris2* | hpux* | dragonfly* )
+-      linux* | freebsd* | dynix* | solaris2* | hpux* )
++      linux* | freebsd* | dynix* | solaris2* | hpux* | dragonfly* )
           new_module_list="$new_module_list host"
           ;;
        *)
-@@ -15503,6 +15503,53 @@ fi
+@@ -15630,6 +15630,53 @@ fi
  
  fi
  
@@ -65,7 +65,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  # Check for libraries that the agent needs
  # saving old libraries
  NONAGENTLIBS=$LIBS
-@@ -27716,7 +27763,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28131,7 +28178,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -75,7 +75,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -27814,7 +27863,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28229,7 +28278,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -85,7 +85,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -27912,10 +27963,14 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28327,10 +28378,14 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -101,7 +101,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <net/route.h>
  
  
-@@ -27999,7 +28054,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28414,7 +28469,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -111,7 +111,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28066,7 +28123,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28481,7 +28538,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -121,7 +121,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28204,7 +28263,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28619,7 +28678,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -131,7 +131,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28299,7 +28360,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28714,7 +28775,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -141,7 +141,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28398,7 +28461,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28813,7 +28876,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -151,7 +151,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28497,7 +28562,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28912,7 +28977,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -161,7 +161,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28596,7 +28663,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -29011,7 +29078,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -171,7 +171,7 @@ $NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -34718,6 +34787,8 @@ do
+@@ -35133,6 +35202,8 @@ do
  _ACEOF
  cat >>$CONFIG_STATUS <<\_ACEOF
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
