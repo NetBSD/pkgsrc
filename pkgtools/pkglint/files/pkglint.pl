@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.665 2006/07/28 17:10:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.666 2006/07/29 09:13:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1786,6 +1786,7 @@ use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
 use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"(?:\s*#.*)?$";
+use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>(?:\s*#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_mk_shellcmd	=> qr"^\t(.*)$";
@@ -2449,7 +2450,7 @@ sub load_tool_names() {
 	# Some user-defined variables do not influence the binary
 	# package at all and therefore do not have to be added to
 	# BUILD_DEFS.
-	foreach my $bdvar (qw(DISTDIR FETCH_CMD FETCH_OUTPUT_ARGS)) {
+	foreach my $bdvar (qw(DISTDIR FETCH_CMD FETCH_OUTPUT_ARGS GAMEOWN GAMEGRP GAMEDIRMODE)) {
 		$system_build_defs->{$bdvar} = true;
 	}
 	#$system_build_defs->{"PACKAGES"} = true;
@@ -3288,6 +3289,13 @@ sub parseline_mk($) {
 		$line->set("includefile", $includefile);
 		defined($comment) and $line->set("comment", $comment);
 
+	} elsif ($text =~ regex_mk_sysinclude) {
+		my ($includefile, $comment) = ($1, $2);
+
+		$line->set("is_sysinclude", true);
+		$line->set("includefile", $includefile);
+		defined($comment) and $line->set("comment", $comment);
+
 	} elsif ($text =~ regex_mk_dependency) {
 		my ($targets, $sources, $comment) = ($1, $2, $3);
 
@@ -3624,16 +3632,20 @@ sub checkline_other_absolute_pathname($$) {
 
 	$opt_debug_trace and $line->log_debug("checkline_other_absolute_pathname(\"${text}\")");
 
-	if ($text =~ qr"^(.*?)(/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)/[\w./\-]*)(.*)$") {
+	if ($text =~ qr"^(.*?)((?:/[\w]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$") {
 		my ($before, $path, $after) = ($1, $2, $3);
 
 		if ($before =~ qr"\@$") {
 			# Something like @PREFIX@/bin
 
-		} elsif ($before =~ qr"\}$") {
-			# Something like ${prefix}/bin
+		} elsif ($before =~ qr"[)}]$") {
+			# Something like ${prefix}/bin or $(PREFIX)/bin
+
+		} elsif ($before =~ qr"\+\s*[\"']$") {
+			# Something like foodir + '/lib'
 
 		} else {
+			$opt_debug_misc and $line->log_debug("before=${before}");
 			checkword_absolute_pathname($line, $path);
 		}
 	}
@@ -4314,11 +4326,13 @@ sub checkline_mk_shelltext($$) {
 
 				# TODO: Check if the tool is mentioned in USE_TOOLS.
 
-				if (!exists(get_required_vartool_varnames()->{$vartool})) {
-					$opt_warn_extra and $line->log_note("You can write \"${plain_tool}\" instead of \"${shellword}\".");
-					$opt_warn_extra and $line->explain_note(
-						"The wrapper framework from pkgsrc takes care that a sufficiently",
-						"capable implementation of that tool will be selected.");
+				if (defined($mkctx_target) && $mkctx_target =~ qr"^(?:pre|do|post)-") {
+					if (!exists(get_required_vartool_varnames()->{$vartool})) {
+						$opt_warn_extra and $line->log_note("You can write \"${plain_tool}\" instead of \"${shellword}\".");
+						$opt_warn_extra and $line->explain_note(
+							"The wrapper framework from pkgsrc takes care that a sufficiently",
+							"capable implementation of that tool will be selected.");
+					}
 				}
 
 				checkline_mk_shellcmd_use($line, $shellword);
@@ -5713,6 +5727,11 @@ sub checklines_mk($) {
 				my ($dir) = ($1);
 				$line->log_error("${includefile} must not be included directly. Include \"${dir}/buildlink3.mk\" instead.");
 			}
+
+		} elsif ($text =~ regex_mk_sysinclude) {
+			my ($includefile, $comment) = ($1, $2);
+
+			# No further action.
 
 		} elsif ($text =~ regex_mk_cond) {
 			my ($indent, $directive, $args, $comment) = ($1, $2, $3, $4);
