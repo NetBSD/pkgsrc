@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.14 2006/06/17 10:26:53 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.15 2006/07/29 14:14:19 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -6,20 +6,13 @@
   <sect1 id="introduction-section">
     <title>Introduction</title>
 
-    <para> There is a lot of software freely available for Unix-based
-      systems, which usually runs on NetBSD and other Unix-flavoured
-      systems, too, sometimes with some modifications.  The NetBSD
-      Packages Collection (pkgsrc) incorporates any such changes
-      necessary to make that software run, and makes the installation
-      (and de-installation) of the software package easy by means of a
-      single command. </para>
-
-    <para>Once the software
-      has been built, it is manipulated with the <command>pkg_*</command> tools
-      so that installation
-      and de-installation, printing of an inventory of all installed packages and
-      retrieval of one-line comments or more verbose descriptions are all
-      simple.</para>
+<para>There is a lot of software freely available for Unix-based
+systems, which is usually available in form of the source code. Before
+such software can be used, it needs to be configured to the local
+system, compiled and installed, and this is exactly what The NetBSD
+Packages Collection (pkgsrc) does. pkgsrc also has some basic commands
+to handle binary packages, so that not every user has to build the
+packages for himself, which is a time-costly task.</para>
 
     <para>pkgsrc currently contains several thousand packages,
       including:</para>
