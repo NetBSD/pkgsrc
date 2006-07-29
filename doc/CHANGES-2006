@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.857 2006/07/29 16:49:44 adam Exp $
+$NetBSD: CHANGES-2006,v 1.858 2006/07/29 20:42:10 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3602,3 +3602,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/lesstif to 0.95.0 [adam 2006-07-29]
 	Updated fonts/fontforge to 20060715 [adam 2006-07-29]
 	Updated net/net-snmp to 5.3.1 [adam 2006-07-29]
+	Updated emulators/gens to 2.12rc3nb9 [dillo 2006-07-29]
