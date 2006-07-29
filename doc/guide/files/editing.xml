@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.11 2006/06/30 09:25:34 rillig Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.12 2006/07/29 17:55:13 rillig Exp $ -->
 
 <appendix id="editing">
 <title>Editing guidelines for the pkgsrc guide</title>
@@ -41,7 +41,7 @@
 	<procedure>
 
 	<step><para>Make sure you have the packages needed to
-	re-generate the pkgsrc guide (and other XML-based NetBSD
+	regenerate the pkgsrc guide (and other XML-based NetBSD
 	documentation) installed. These are <filename
 	role="pkg">meta-pkgs/netbsd-doc</filename> for creating the
 	ASCII and HTML versions, and <filename
@@ -70,24 +70,14 @@
 	regenerate the output files with the proper RCS
 	Ids.</para></step>
 
-	<step><para>Run <command>(cd .. &amp;&amp; cvs update pkgsrc.*)
-	&amp;&amp; bmake install-doc</command> to put the generated
-	files into <filename>pkgsrc/doc</filename>.</para></step>
+	<step><para>Run <command>bmake regenerate</command> to
+	regenerate the files in both <filename>pkgsrc/doc</filename> and
+	<filename>htdocs</filename>.</para></step>
 
-	<step><para>Run <command>(cd .. &amp;&amp; cvs commit -m
-	"regenerated." pkgsrc.{html,txt})</command> to commit the
-	generated documentation.</para></step>
-
-	<step><para>Run <command>(cd
-	../../../htdocs/Documentation/pkgsrc &amp;&amp; cvs update)
-	&amp;&amp; bmake install-htdocs</command> to generate all the
-	files for the web server.</para></step>
-
-	<step><para>Run <command>(cd
-	../../../htdocs/Documentation/pkgsrc &amp;&amp; cvs commit -m
-	"regenerated.")</command> to update the files on the web server.
-	If you have added a chapter, don't forget to run <command>cvs
-	add *.html</command> before you commit the files.</para></step>
+	<step><para>If you have added, removed or renamed some chapters,
+	you need to synchronize them using <command>cvs add</command> or
+	<command>cvs delete</command> in the htdocs
+	directory.</para></step>
 
 	</procedure>
 
