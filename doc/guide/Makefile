@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/27 07:06:13 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/29 17:55:13 rillig Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -99,14 +99,14 @@ regenerate-doc: build
 	cd .. && cvs update pkgsrc.*
 	${MAKE} ${MAKEFLAGS} install-doc
 	@${STEP_MSG} "Committing the files in pkgsrc/doc"
-	cd .. && cvs commit -m "re-generated." pkgsrc.*
+	cd .. && cvs commit -m "regenerated." pkgsrc.*
 
 regenerate-htdocs: build
 	@${STEP_MSG} "Updating the files in htdocs"
 	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs update
 	${MAKE} ${MAKEFLAGS} install-htdocs
 	@${STEP_MSG} "Committing the files in htdocs"
-	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs commit -m "re-generated."
+	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs commit -m "regenerated."
 
 do-lint:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} lint
