@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.850 2006/07/29 00:40:02 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.851 2006/07/29 01:00:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3593,3 +3593,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.18 [adam 2006-07-28]
 	Updated www/apache2 to 2.0.59nb1 [tron 2006-07-28]
 	Added devel/p5-Proc-Simple version 1.21 [minskim 2006-07-29]
+	Updated devel/bglibs to 1.100 [schmonz 2006-07-29]
+	Updated security/cvm to 0.80 [schmonz 2006-07-29]
+	Updated mail/mailfront to 0.98.1 [schmonz 2006-07-29]
