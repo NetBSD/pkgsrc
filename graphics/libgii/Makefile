@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/04/12 16:57:04 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/07/29 06:59:37 minskim Exp $
 
 DISTNAME=	libgii-0.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ggi-project.org/pub/packages/ggi/ggi/v2.1/ \
 		http://www.ggi-project.org/ftp/ggi/v2.1/ \
