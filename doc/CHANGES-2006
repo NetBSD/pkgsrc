@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.851 2006/07/29 01:00:31 schmonz Exp $
+$NetBSD: CHANGES-2006,v 1.852 2006/07/29 02:14:31 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3596,3 +3596,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/bglibs to 1.100 [schmonz 2006-07-29]
 	Updated security/cvm to 0.80 [schmonz 2006-07-29]
 	Updated mail/mailfront to 0.98.1 [schmonz 2006-07-29]
+	Updated mail/thunderbird to 1.5.0.5 [uebayasi 2006-07-29]
