@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5253 2006/07/29 01:23:15 grant Exp $
+$NetBSD: TODO,v 1.5254 2006/07/29 02:28:19 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -1139,8 +1139,6 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
-	o thunderbird-1.5.0.5
-	o thunderbird-gtk1-1.5.0.5
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.0.3
