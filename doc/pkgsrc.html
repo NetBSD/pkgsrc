@@ -53,11 +53,15 @@
 <dt><span class="chapter"><a href="#introduction">1. What is pkgsrc?</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#introduction-section">1.1. Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#why-pkgsrc">1.1.1. Why pkgsrc?</a></span></dt>
+<dt><span class="sect2"><a href="#intro.platforms">1.1.2. Supported platforms</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#overview">1.2. Overview</a></span></dt>
 <dt><span class="sect1"><a href="#terminology">1.3. Terminology</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#term.abbrev">1.3.1. Commonly used abbreviations</a></span></dt>
-<dt><span class="sect2"><a href="#term.people">1.3.2. People involved in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#term.roles">1.3.2. Roles involved in pkgsrc</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#typography">1.4. Typography</a></span></dt>
 </dl></dd>
@@ -79,16 +83,17 @@
 </dl></dd>
 <dt><span class="chapter"><a href="#platforms">3. Using pkgsrc on systems other than NetBSD</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.1. Bootstrapping pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#platform-specific-notes">3.2. Platform-specific notes</a></span></dt>
+<dt><span class="sect1"><a href="#binarydist">3.1. Binary distribution</a></span></dt>
+<dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.2. Bootstrapping pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#platform-specific-notes">3.3. Platform-specific notes</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#darwin">3.2.1. Darwin (Mac OS X)</a></span></dt>
-<dt><span class="sect2"><a href="#freebsd">3.2.2. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.2.3. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.2.4. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.2.5. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.2.6. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.2.7. Solaris</a></span></dt>
+<dt><span class="sect2"><a href="#darwin">3.3.1. Darwin (Mac OS X)</a></span></dt>
+<dt><span class="sect2"><a href="#freebsd">3.3.2. FreeBSD</a></span></dt>
+<dt><span class="sect2"><a href="#interix">3.3.3. Interix</a></span></dt>
+<dt><span class="sect2"><a href="#irix">3.3.4. IRIX</a></span></dt>
+<dt><span class="sect2"><a href="#linux">3.3.5. Linux</a></span></dt>
+<dt><span class="sect2"><a href="#openbsd">3.3.6. OpenBSD</a></span></dt>
+<dt><span class="sect2"><a href="#solaris">3.3.7. Solaris</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#using">4. Using pkgsrc</a></span></dt>
@@ -97,7 +102,12 @@
 <dd><dl>
 <dt><span class="sect2"><a href="#finding-binary-packages">4.1.1. Finding binary packages</a></span></dt>
 <dt><span class="sect2"><a href="#installing-binary-packages">4.1.2. Installing binary packages</a></span></dt>
-<dt><span class="sect2"><a href="#a-word-of-warning">4.1.3. A word of warning</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_delete">4.1.3. Deinstalling packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_info">4.1.4. Getting information about installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#vulnerabilities">4.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#pkg_versions">4.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_admin">4.1.7. Other administrative functions</a></span></dt>
+<dt><span class="sect2"><a href="#a-word-of-warning">4.1.8. A word of warning</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">4.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -410,6 +420,15 @@ source packages</a></span></dt>
 </dl></dd>
 </dl>
 </div>
+<div class="list-of-tables">
+<p><b>List of Tables</b></p>
+<dl>
+<dt>1.1. <a href="#supported-platforms">Platforms supported by pkgsrc</a>
+</dt>
+<dt>3.1. <a href="#binary-kits">Binary kits and available packages</a>
+</dt>
+</dl>
+</div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
 <a name="introduction"></a>Chapter 1. What is pkgsrc?</h2></div></div></div>
@@ -417,11 +436,15 @@ source packages</a></span></dt>
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="sect1"><a href="#introduction-section">1.1. Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#why-pkgsrc">1.1.1. Why pkgsrc?</a></span></dt>
+<dt><span class="sect2"><a href="#intro.platforms">1.1.2. Supported platforms</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#overview">1.2. Overview</a></span></dt>
 <dt><span class="sect1"><a href="#terminology">1.3. Terminology</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#term.abbrev">1.3.1. Commonly used abbreviations</a></span></dt>
-<dt><span class="sect2"><a href="#term.people">1.3.2. People involved in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#term.roles">1.3.2. Roles involved in pkgsrc</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#typography">1.4. Typography</a></span></dt>
 </dl>
@@ -429,19 +452,13 @@ source packages</a></span></dt>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="introduction-section"></a>1.1. Introduction</h2></div></div></div>
-<p> There is a lot of software freely available for Unix-based
-      systems, which usually runs on NetBSD and other Unix-flavoured
-      systems, too, sometimes with some modifications.  The NetBSD
-      Packages Collection (pkgsrc) incorporates any such changes
-      necessary to make that software run, and makes the installation
-      (and de-installation) of the software package easy by means of a
-      single command. </p>
-<p>Once the software
-      has been built, it is manipulated with the <span><strong class="command">pkg_*</strong></span> tools
-      so that installation
-      and de-installation, printing of an inventory of all installed packages and
-      retrieval of one-line comments or more verbose descriptions are all
-      simple.</p>
+<p>There is a lot of software freely available for Unix-based
+systems, which is usually available in form of the source code. Before
+such software can be used, it needs to be configured to the local
+system, compiled and installed, and this is exactly what The NetBSD
+Packages Collection (pkgsrc) does. pkgsrc also has some basic commands
+to handle binary packages, so that not every user has to build the
+packages for himself, which is a time-costly task.</p>
 <p>pkgsrc currently contains several thousand packages,
       including:</p>
 <div class="itemizedlist"><ul type="disc">
@@ -458,24 +475,122 @@ source packages</a></span></dt>
 <p>pkgsrc has built-in support for handling varying dependencies,
       such as pthreads and X11, and extended features such as IPv6 support on
       a range of platforms.</p>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="why-pkgsrc"></a>1.1.1. Why pkgsrc?</h3></div></div></div>
+<p>
+pkgsrc provides the following key features:
+</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>Easy building of software from source as well as the creation
+  and installation of binary packages. The source and latest
+  patches are retrieved from a master or mirror download site, checksum
+  verified, then built on your system. Support for binary-only
+  distributions is available for both native platforms and NetBSD
+  emulated platforms.</p></li>
+<li><p>All packages are installed in a consistent directory tree,
+  including binaries, libraries, man pages and other
+  documentation.</p></li>
+<li><p>Package dependencies, including when performing package updates,
+  are handled automatically. The configuration files of various
+  packages are handled automatically during updates, so local changes
+  are preserved.</p></li>
+<li><p>Like NetBSD, pkgsrc is designed with portability in mind and
+  consists of highly portable code. This allows the greatest speed of
+  development when porting to new a platform. This portability also
+  ensures that pkgsrc is <span class="emphasis"><em>consistent across all
+  platforms</em></span>.</p></li>
+<li><p>The installation prefix, acceptable software licenses,
+  international encryption requirements and build-time options for a
+  large number of packages are all set in a simple, central
+  configuration file.</p></li>
+<li><p>The entire source (not including the distribution files) is
+  freely available under a BSD license, so you may extend and adapt
+  pkgsrc to your needs. Support for local packages and patches is
+  available right out of the box, so you can configure it specifically
+  for your environment.</p></li>
+</ul></div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="intro.platforms"></a>1.1.2. Supported platforms</h3></div></div></div>
+<p>pkgsrc consists of both a source distribution and a binary
+distribution for these operating systems. After retrieving the required
+source or binaries, you can be up and running with pkgsrc in just
+minutes!</p>
 <p>pkgsrc was derived from FreeBSD's ports system, and
       initially developed for NetBSD only. Since then, pkgsrc has
       grown a lot, and now supports the following platforms:</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p><a href="http://developer.apple.com/darwin/" target="_top">Darwin</a>
-	  (<a href="http://www.apple.com/macosx/" target="_top">Mac OS X</a>)</p></li>
-<li><p><a href="http://www.DragonFlyBSD.org/" target="_top">DragonFly BSD</a></p></li>
-<li><p><a href="http://www.FreeBSD.org/" target="_top">FreeBSD</a></p></li>
-<li><p>Microsoft Windows, via <a href="http://www.microsoft.com/windows/sfu/" target="_top">Interix</a></p></li>
-<li><p><a href="http://www.sgi.com/software/irix6.5/" target="_top">IRIX</a></p></li>
-<li><p><a href="http://www.linux.org/" target="_top">Linux</a></p></li>
-<li><p><a href="http://www.NetBSD.org/" target="_top">NetBSD</a> (of
-	  course)</p></li>
-<li><p><a href="http://h30097.www3.hp.com/" target="_top">Tru64</a>
-	  (Digital UNIX, OSF1)</p></li>
-<li><p><a href="http://www.openbsd.org/" target="_top">OpenBSD</a></p></li>
-<li><p><a href="http://www.sun.com/solaris/" target="_top">Solaris</a></p></li>
-</ul></div>
+<div class="table">
+<a name="supported-platforms"></a><p class="title"><b>Table 1.1. Platforms supported by pkgsrc</b></p>
+<table summary="Platforms supported by pkgsrc" border="1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Platform</th>
+<th>Date Support Added</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><a href="http://www.NetBSD.org/" target="_top">NetBSD</a></td>
+<td align="center">Aug 1997</td>
+</tr>
+<tr>
+<td><a href="http://wwws.sun.com/software/solaris/" target="_top">Solaris</a></td>
+<td align="center">Mar 1999</td>
+</tr>
+<tr>
+<td><a href="http://www.kernel.org/" target="_top">Linux</a></td>
+<td align="center">Jun 1999</td>
+</tr>
+<tr>
+<td>
+          <a href="http://developer.apple.com/darwin/" target="_top">Darwin</a>
+          (<a href="http://developer.apple.com/macosx/" target="_top">Mac OS X</a>)
+        </td>
+<td align="center">Oct 2001</td>
+</tr>
+<tr>
+<td><a href="http://www.freebsd.org/" target="_top">FreeBSD</a></td>
+<td align="center">Nov 2002</td>
+</tr>
+<tr>
+<td><a href="http://www.openbsd.org/" target="_top">OpenBSD</a></td>
+<td align="center">Nov 2002</td>
+</tr>
+<tr>
+<td><a href="http://www.sgi.com/software/irix/" target="_top">IRIX</a></td>
+<td align="center">Dec 2002</td>
+</tr>
+<tr>
+<td>BSD/OS</td>
+<td align="center">Dec 2003</td>
+</tr>
+<tr>
+<td><a href="http://www-1.ibm.com/servers/aix/" target="_top">AIX</a></td>
+<td align="center">Dec 2003</td>
+</tr>
+<tr>
+<td>
+          <a href="http://www.microsoft.com/windows/sfu/" target="_top">Interix</a>
+          (Microsoft Windows Services for Unix)
+        </td>
+<td align="center">Mar 2004</td>
+</tr>
+<tr>
+<td><a href="http://www.dragonflybsd.org/" target="_top">DragonFlyBSD</a></td>
+<td align="center">Oct 2004</td>
+</tr>
+<tr>
+<td><a href="http://www.tru64.org/" target="_top">OSF/1</a></td>
+<td align="center">Nov 2004</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -557,7 +672,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="term.people"></a>1.3.2. People involved in pkgsrc</h3></div></div></div>
+<a name="term.roles"></a>1.3.2. Roles involved in pkgsrc</h3></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term">pkgsrc users</span></dt>
 <dd>
@@ -615,16 +730,17 @@ source packages</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#platforms">3. Using pkgsrc on systems other than NetBSD</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.1. Bootstrapping pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#platform-specific-notes">3.2. Platform-specific notes</a></span></dt>
+<dt><span class="sect1"><a href="#binarydist">3.1. Binary distribution</a></span></dt>
+<dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.2. Bootstrapping pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#platform-specific-notes">3.3. Platform-specific notes</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#darwin">3.2.1. Darwin (Mac OS X)</a></span></dt>
-<dt><span class="sect2"><a href="#freebsd">3.2.2. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.2.3. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.2.4. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.2.5. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.2.6. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.2.7. Solaris</a></span></dt>
+<dt><span class="sect2"><a href="#darwin">3.3.1. Darwin (Mac OS X)</a></span></dt>
+<dt><span class="sect2"><a href="#freebsd">3.3.2. FreeBSD</a></span></dt>
+<dt><span class="sect2"><a href="#interix">3.3.3. Interix</a></span></dt>
+<dt><span class="sect2"><a href="#irix">3.3.4. IRIX</a></span></dt>
+<dt><span class="sect2"><a href="#linux">3.3.5. Linux</a></span></dt>
+<dt><span class="sect2"><a href="#openbsd">3.3.6. OpenBSD</a></span></dt>
+<dt><span class="sect2"><a href="#solaris">3.3.7. Solaris</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#using">4. Using pkgsrc</a></span></dt>
@@ -633,7 +749,12 @@ source packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#finding-binary-packages">4.1.1. Finding binary packages</a></span></dt>
 <dt><span class="sect2"><a href="#installing-binary-packages">4.1.2. Installing binary packages</a></span></dt>
-<dt><span class="sect2"><a href="#a-word-of-warning">4.1.3. A word of warning</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_delete">4.1.3. Deinstalling packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_info">4.1.4. Getting information about installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#vulnerabilities">4.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#pkg_versions">4.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_admin">4.1.7. Other administrative functions</a></span></dt>
+<dt><span class="sect2"><a href="#a-word-of-warning">4.1.8. A word of warning</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">4.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -818,6 +939,12 @@ source packages</a></span></dt>
 	the pkgsrc files will be lost after updating. Therefore updating
 	via CVS is strongly recommended.</p>
 </div>
+<p>Note that by default the distfiles and the binary packages
+	are saved in the pkgsrc tree, so don't forget to rescue them
+	before updating. You can also configure pkgsrc to use other than
+	the default directories by setting the
+	<code class="varname">DISTDIR</code> and <code class="varname">PACKAGES</code>
+	variables. See <a href="#configuring" title="Chapter 5. Configuring pkgsrc">Chapter 5, <i>Configuring pkgsrc</i></a> for the details.</p>
 <p>To update pkgsrc from a tar file, download the tar file as
 	explained above. Then, make sure that you have not made any
 	changes to the files in the pkgsrc directory. Remove the pkgsrc
@@ -861,39 +988,228 @@ source packages</a></span></dt>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.1. Bootstrapping pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#platform-specific-notes">3.2. Platform-specific notes</a></span></dt>
+<dt><span class="sect1"><a href="#binarydist">3.1. Binary distribution</a></span></dt>
+<dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.2. Bootstrapping pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#platform-specific-notes">3.3. Platform-specific notes</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#darwin">3.2.1. Darwin (Mac OS X)</a></span></dt>
-<dt><span class="sect2"><a href="#freebsd">3.2.2. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.2.3. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.2.4. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.2.5. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.2.6. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.2.7. Solaris</a></span></dt>
+<dt><span class="sect2"><a href="#darwin">3.3.1. Darwin (Mac OS X)</a></span></dt>
+<dt><span class="sect2"><a href="#freebsd">3.3.2. FreeBSD</a></span></dt>
+<dt><span class="sect2"><a href="#interix">3.3.3. Interix</a></span></dt>
+<dt><span class="sect2"><a href="#irix">3.3.4. IRIX</a></span></dt>
+<dt><span class="sect2"><a href="#linux">3.3.5. Linux</a></span></dt>
+<dt><span class="sect2"><a href="#openbsd">3.3.6. OpenBSD</a></span></dt>
+<dt><span class="sect2"><a href="#solaris">3.3.7. Solaris</a></span></dt>
 </dl></dd>
 </dl>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bootstrapping-pkgsrc"></a>3.1. Bootstrapping pkgsrc</h2></div></div></div>
-<p>For operating systems other than NetBSD, we provide a bootstrap kit to
-      build the required tools to use pkgsrc on your platform. Besides
-      support for native NetBSD, pkgsrc and the bootstrap kit have support for
-      the following operating systems:</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p>Darwin (Mac OS X)</p></li>
-<li><p>DragonFly BSD</p></li>
-<li><p>FreeBSD</p></li>
-<li><p>Interix (Windows 2000, XP, 2003)</p></li>
-<li><p>IRIX</p></li>
-<li><p>Linux</p></li>
-<li><p>OpenBSD</p></li>
-<li><p>Solaris</p></li>
-<li><p>Tru64 (Digital UNIX/OSF1)</p></li>
-</ul></div>
-<p>Support for other platforms is under development.</p>
-<p>Installing the bootstrap kit should be as simple as:</p>
+<a name="binarydist"></a>3.1. Binary distribution</h2></div></div></div>
+<p>
+We provide a bootstrap kit in both source and binary form for other
+platforms than NetBSD, consisting of the pkg administration tools and other
+tools required to use pkgsrc and build packages.
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+Older binary snapshots are available in the
+<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/archive/" target="_top">bootstrap-pkgsrc/archive</a>
+directory on ftp.NetBSD.org.</p>
+</div>
+<div class="table">
+<a name="binary-kits"></a><p class="title"><b>Table 3.1. Binary kits and available packages</b></p>
+<table summary="Binary kits and available packages" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Platform</th>
+<th>Latest snapshot</th>
+<th>Binary kit</th>
+<th>Binary packages</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="osname">Darwin 5.5/powerpc (Mac OS X 10.1.5)</td>
+<td class="date">20021209</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-5.5-powerpc-20021209.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Darwin 6.6/powerpc (Mac OS X 10.2.6)</td>
+<td class="date">20030623</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-6.6-powerpc-20030623.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Darwin 7.6/powerpc (Mac OS X 10.3.6)</td>
+<td class="date">20041219</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-7.6.0-powerpc-20041219.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Darwin-7.6/" target="_top">binary packages</a></td>
+</tr>
+<tr>
+<td class="osname">Darwin 7.8/powerpc (Mac OS X 10.3.8)</td>
+<td class="date">20050320</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-7.8.0-powerpc-20050320.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Darwin 8.1/powerpc (Mac OS X 10.4.1)</td>
+<td class="date">20050625</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-8.1.0-powerpc-20050625.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Darwin-8.1/powerpc/current/" target="_top">binary packages</a></td>
+</tr>
+<tr>
+<td class="osname">Debian GNU Linux/i386</td>
+<td class="date">20031023</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-debian-i386-20031023.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Fedora Core 2 Linux/i386</td>
+<td class="date">20050618</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.6.10-i386-fc2-20050618.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Fedora Core 4 Linux/i386</td>
+<td class="date">20060105</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.6.11-i386-fc4-20060105.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">FreeBSD 3.5/i386</td>
+<td class="date">20030411</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-3.5-STABLE-i386-20030411.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">FreeBSD 4.7/i386</td>
+<td class="date">20021211</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-4.7-RELEASE-i386-20021211.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">FreeBSD 5.0/i386</td>
+<td class="date">20030411</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.0-RELEASE-i386-20030411.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">FreeBSD 5.1/i386</td>
+<td class="date">20030630</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.1-RELEASE-i386-20030630.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">FreeBSD 5.2.1/i386</td>
+<td class="date">20040227</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.2.1-RELEASE-i386-20040227.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">FreeBSD 5.3/i386</td>
+<td class="date">20050119</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.3-RELEASE-i386-20050119.tar" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Interix 3.5</td>
+<td class="date">20051010</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Interix-3.5-i386-20051010.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Interix-3.5/i386/current/" target="_top">binary packages</a></td>
+</tr>
+<tr>
+<td class="osname">IRIX 6.5 n32-bit ABI</td>
+<td class="date">20040911</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-IRIX-6.5-mips-20040911.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/IRIX-6.5/n32/" target="_top">binary packages</a></td>
+</tr>
+<tr>
+<td class="osname">IRIX 6.5 64-bit ABI</td>
+<td class="date">20040912</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-IRIX64-6.5-mips-20040912.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/IRIX-6.5/64/" target="_top">binary packages</a></td>
+</tr>
+<tr>
+<td class="osname">OpenBSD 3.2/i386</td>
+<td class="date">20030420</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.2-i386-20030420.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">OpenBSD 3.3/i386</td>
+<td class="date">20030503</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.3-i386-20030503.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">OpenBSD 3.5/i386</td>
+<td class="date">20040507</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.5-i386-20040703.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Slackware Linux 8.1/i386</td>
+<td class="date">20030417</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.18-slackware-20030417.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Slackware Linux 9/i386</td>
+<td class="date">20031023</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-i386-slackware9-20040703.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Solaris 8/sparc</td>
+<td class="date">20050220</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.8-sparc-20050220.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Solaris 8/i386</td>
+<td class="date">20050220</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.8-i386-20050220.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+<tr>
+<td class="osname">Solaris 9/sparc</td>
+<td class="date">20041208</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-sparc-20041208.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/SunOS-5.9/sparc/" target="_top">binary packages</a></td>
+</tr>
+<tr>
+<td class="osname">Solaris 9/i386</td>
+<td class="date">20030411</td>
+<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-i386-20030411.tar.gz" target="_top">binary kit</a></td>
+<td class="binary-pkgs-url"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+Simply download the binary kit for your platform, and extract it into
+<code class="filename">/</code> e.g.
+</p>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd /</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>gzip -c -d /tmp/bootstrap-pkgsrc-SunOS-5.9-sparc-20031023.tar.gz \
+  | tar -xpf -</code></strong></pre>
+<p>
+Of course, as with any binary distributions, you should verify the
+checksum against the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/SUM" target="_top">SUM</a>
+or <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/CKSUM" target="_top">CKSUM</a>
+file and inspect the contents before extracting it.
+</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="bootstrapping-pkgsrc"></a>3.2. Bootstrapping pkgsrc</h2></div></div></div>
+<p>Installing the bootstrap kit from source should be as simple as:</p>
 <pre class="screen">
 <code class="prompt">#</code> <strong class="userinput"><code>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>cd pkgsrc/bootstrap</code></strong>
@@ -922,14 +1238,14 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="platform-specific-notes"></a>3.2. Platform-specific notes</h2></div></div></div>
+<a name="platform-specific-notes"></a>3.3. Platform-specific notes</h2></div></div></div>
 <p>Here are some platform-specific notes you should be aware of.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="darwin"></a>3.2.1. Darwin (Mac OS X)</h3></div></div></div>
+<a name="darwin"></a>3.3.1. Darwin (Mac OS X)</h3></div></div></div>
 <p>Darwin 5.x and 6.x are supported. There are two methods of using
-	pkgsrc on Mac OS X, by using a <a href="#platform.osx-image" title="3.2.1.1. Using a disk image">disk
-	  image</a>, or a <a href="#platform.osx-ufs" title="3.2.1.2. Using a UFS partition">UFS
+	pkgsrc on Mac OS X, by using a <a href="#platform.osx-image" title="3.3.1.1. Using a disk image">disk
+	  image</a>, or a <a href="#platform.osx-ufs" title="3.3.1.2. Using a UFS partition">UFS
 	  partition</a>.</p>
 <p>Before you start, you will need to download and install the Mac OS X Developer
 	Tools from Apple's Developer Connection.  See <a href="http://developer.apple.com/macosx/" target="_top">http://developer.apple.com/macosx/</a>
@@ -947,7 +1263,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.osx-image"></a>3.2.1.1. Using a disk image</h4></div></div></div>
+<a name="platform.osx-image"></a>3.3.1.1. Using a disk image</h4></div></div></div>
 <p>Create the disk image:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd pkgsrc/bootstrap</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>./ufsdiskimage create ~/Documents/NetBSD 512</code></strong> # megabytes - season to taste
@@ -957,7 +1273,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.osx-ufs"></a>3.2.1.2. Using a UFS partition</h4></div></div></div>
+<a name="platform.osx-ufs"></a>3.3.1.2. Using a UFS partition</h4></div></div></div>
 <p>By default, <code class="filename">/usr</code> will be on your root file
 	  system, normally HFS+. It is possible to use the default
 	  <span class="emphasis"><em>prefix</em></span> of <code class="filename">/usr/pkg</code>
@@ -991,7 +1307,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="freebsd"></a>3.2.2. FreeBSD</h3></div></div></div>
+<a name="freebsd"></a>3.3.2. FreeBSD</h3></div></div></div>
 <p>
 	FreeBSD 4.7 and 5.0 have been tested and are supported, other versions
 	may work.</p>
@@ -1019,7 +1335,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="interix"></a>3.2.3. Interix</h3></div></div></div>
+<a name="interix"></a>3.3.3. Interix</h3></div></div></div>
 <p>Interix is a POSIX-compatible subsystem for the Windows NT kernel,
 	providing a Unix-like environment with a tighter kernel integration than
 	available with Cygwin.  It is part of the Windows Services for Unix
@@ -1030,7 +1346,7 @@ source packages</a></span></dt>
 	in 3.0/3.1 is lack of pthreads.)</p>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-sfu-install"></a>3.2.3.1. When installing Interix/SFU</h4></div></div></div>
+<a name="platform.interix-sfu-install"></a>3.3.3.1. When installing Interix/SFU</h4></div></div></div>
 <p>At an absolute minimum, the following packages must be installed from
 	  the Windows Services for Unix 3.5 distribution in order to use pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
@@ -1061,7 +1377,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-sfu-postinstall"></a>3.2.3.2. What to do if Interix/SFU is already installed</h4></div></div></div>
+<a name="platform.interix-sfu-postinstall"></a>3.3.3.2. What to do if Interix/SFU is already installed</h4></div></div></div>
 <p>If SFU is already installed and you wish to alter these settings to work
 	  with pkgsrc, note the following things.</p>
 <div class="itemizedlist"><ul type="disc">
@@ -1084,7 +1400,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-notes"></a>3.2.3.3. Important notes for using pkgsrc</h4></div></div></div>
+<a name="platform.interix-notes"></a>3.3.3.3. Important notes for using pkgsrc</h4></div></div></div>
 <p>The package manager (either the pkgsrc "su" user, or the user
 	  running "pkg_add") must be a member of the local Administrators
 	  group.  Such a user must also be used to run the bootstrap.  This is
@@ -1107,7 +1423,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-limits"></a>3.2.3.4. Limitations of the Interix platform</h4></div></div></div>
+<a name="platform.interix-limits"></a>3.3.3.4. Limitations of the Interix platform</h4></div></div></div>
 <p>Though Interix suffices as a familiar and flexible substitute
 	  for a full Unix-like platform, it has some drawbacks that should
 	  be noted for those desiring to make the most of Interix.</p>
@@ -1169,7 +1485,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-knownissues"></a>3.2.3.5. Known issues for pkgsrc on Interix</h4></div></div></div>
+<a name="platform.interix-knownissues"></a>3.3.3.5. Known issues for pkgsrc on Interix</h4></div></div></div>
 <p>It is not necessary, in general, to have a "root" user on the
 	  Windows system; any member of the local Administrators group will
 	  suffice.  However, some packages currently assume that the user
@@ -1186,7 +1502,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="irix"></a>3.2.4. IRIX</h3></div></div></div>
+<a name="irix"></a>3.3.4. IRIX</h3></div></div></div>
 <p>You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 	compiler (cc/c89).  Please set the <code class="varname">CC</code> environment variable
 	according to your preference.  If you do not have a license for the MIPSpro
@@ -1231,7 +1547,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="linux"></a>3.2.5. Linux</h3></div></div></div>
+<a name="linux"></a>3.3.5. Linux</h3></div></div></div>
 <p>
         Some versions of Linux (for example Debian GNU/Linux) need either
         libtermcap or libcurses (libncurses).  Installing the distributions
@@ -1281,7 +1597,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="openbsd"></a>3.2.6. OpenBSD</h3></div></div></div>
+<a name="openbsd"></a>3.3.6. OpenBSD</h3></div></div></div>
 <p>OpenBSD 3.0 and 3.2 are tested and supported.</p>
 <p>Care should be taken so that the tools that this kit installs do not conflict
 	with the OpenBSD userland tools. There are several steps:</p>
@@ -1319,7 +1635,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="solaris"></a>3.2.7. Solaris</h3></div></div></div>
+<a name="solaris"></a>3.3.7. Solaris</h3></div></div></div>
 <p>Solaris 2.6 through 9 are supported on both x86 and sparc.
         You will need a working C compiler. Both gcc 2.95.3 and
         Sun WorkShop 5 have been tested.</p>
@@ -1340,7 +1656,7 @@ source packages</a></span></dt>
 	  and e.g. <code class="filename">/usr/pkg/{bin,sbin}</code>.</p>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-gcc-note"></a>3.2.7.1. If you are using gcc</h4></div></div></div>
+<a name="solaris-gcc-note"></a>3.3.7.1. If you are using gcc</h4></div></div></div>
 <p>It makes life much simpler if you only use the same gcc consistently
 	  for building all packages.</p>
 <p>It is recommended that an external gcc be used only for bootstrapping,
@@ -1351,7 +1667,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-sun-workshop-note"></a>3.2.7.2. If you are using Sun WorkShop</h4></div></div></div>
+<a name="solaris-sun-workshop-note"></a>3.3.7.2. If you are using Sun WorkShop</h4></div></div></div>
 <p>You will need at least the following packages installed (from WorkShop
 	  5.0)</p>
 <div class="itemizedlist"><ul type="disc">
@@ -1375,7 +1691,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-sunpro-64"></a>3.2.7.3. Buildling 64-bit binaries with SunPro</h4></div></div></div>
+<a name="solaris-sunpro-64"></a>3.3.7.3. Buildling 64-bit binaries with SunPro</h4></div></div></div>
 <p>Building 64-bit binaries is a little trickier. First, you
 	need to bootstrap pkgsrc in 64-bit mode. One problem here is
 	that while building one of the programs in the bootstrap kit
@@ -1428,7 +1744,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="plat.sunos.problems"></a>3.2.7.4. Common problems</h4></div></div></div>
+<a name="plat.sunos.problems"></a>3.3.7.4. Common problems</h4></div></div></div>
 <p>Sometimes, when using <span><strong class="command">libtool</strong></span>,
 	<code class="filename">/bin/ksh</code> crashes with a segmentation fault.
 	The workaround is to use another shell for the configure
@@ -1453,7 +1769,12 @@ source packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#finding-binary-packages">4.1.1. Finding binary packages</a></span></dt>
 <dt><span class="sect2"><a href="#installing-binary-packages">4.1.2. Installing binary packages</a></span></dt>
-<dt><span class="sect2"><a href="#a-word-of-warning">4.1.3. A word of warning</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_delete">4.1.3. Deinstalling packages</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_info">4.1.4. Getting information about installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#vulnerabilities">4.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
+<dt><span class="sect2"><a href="#pkg_versions">4.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
+<dt><span class="sect2"><a href="#using.pkg_admin">4.1.7. Other administrative functions</a></span></dt>
+<dt><span class="sect2"><a href="#a-word-of-warning">4.1.8. A word of warning</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">4.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -1501,12 +1822,12 @@ source packages</a></span></dt>
 </tbody>
 </table>
 </div>
-<p>These prebuilt package tools use
+<p>These pre-built package tools use
 	<code class="filename">/usr/pkg</code> for the base directory, and
 	<code class="filename">/var/db/pkg</code> for the database of installed
 	packages. If you cannot use these directories for whatever
 	reasons (maybe because you're not root), you have to build the
-	package tools yourself, which is explained in <a href="#bootstrapping-pkgsrc" title="3.1. Bootstrapping pkgsrc">Section 3.1, &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
+	package tools yourself, which is explained in <a href="#bootstrapping-pkgsrc" title="3.2. Bootstrapping pkgsrc">Section 3.2, &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="finding-binary-packages"></a>4.1.1. Finding binary packages</h3></div></div></div>
@@ -1563,7 +1884,7 @@ source packages</a></span></dt>
         packages via FTP prior to installation, you can do this
         automatically by giving <span><strong class="command">pkg_add</strong></span> an FTP URL:
         </p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package.tgz</code></strong></pre>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package</code></strong></pre>
 <p>Note that any prerequisite packages needed to run the
         package in question will be installed, too, assuming they are
         present where you install from. </p>
@@ -1591,7 +1912,94 @@ source packages</a></span></dt>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="a-word-of-warning"></a>4.1.3. A word of warning</h3></div></div></div>
+<a name="using.pkg_delete"></a>4.1.3. Deinstalling packages</h3></div></div></div>
+<p>To deinstall a package, it does not matter whether it was
+	installed from source code or from a binary package. The
+	<span><strong class="command">pkg_delete</strong></span> command does not know it anyway.
+	To delete a package, you can just run <span><strong class="command">pkg_delete
+	<em class="replaceable"><code>package-name</code></em></strong></span>. The package
+	name can be given with or without version number. Wildcards can
+	also be used to deinstall a set of packages, for example
+	<code class="literal">*emacs*</code>. Be sure to include them in quotes,
+	so that the shell does not expand them before
+	<code class="literal">pkg_delete</code> sees them.</p>
+<p>The <code class="option">-r</code> option is very powerful: it
+	removes all the packages that require the package in question
+	and then removes the package itself. For example:
+
+</p>
+<pre class="screen">
+    <code class="prompt">#</code> <strong class="userinput"><code>pkg_delete -r jpeg</code></strong>
+</pre>
+<p>
+
+	will remove jpeg and all the packages that used it; this allows
+	upgrading the jpeg package.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="using.pkg_info"></a>4.1.4. Getting information about installed packages</h3></div></div></div>
+<p>The <span><strong class="command">pkg_info</strong></span> shows information about
+	installed packages or binary package files.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="vulnerabilities"></a>4.1.5. Checking for security vulnerabilities in installed packages</h3></div></div></div>
+<p>
+The NetBSD Security-Officer and Packages Groups maintain a list of
+known security vulnerabilities to packages which are (or have been)
+included in pkgsrc.  The list is available from the NetBSD
+FTP site at <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities</a>.
+</p>
+<p>
+Through <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>, 
+this list can be downloaded
+automatically, and a security audit of all packages installed on a system
+can take place.
+</p>
+<p>
+There are two components to 
+<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.  The first
+component, &#8220;<span class="quote">download-vulnerability-list</span>&#8221;, is for downloading
+the list of vulnerabilities from the NetBSD FTP site.  The second
+component, &#8220;<span class="quote">audit-packages</span>&#8221;, checks to see if any of your
+installed packages are vulnerable.  If a package is vulnerable, you
+will see output similar to the following:
+</p>
+<pre class="screen">Package samba-2.0.9 has a local-root-shell vulnerability, see
+http://www.samba.org/samba/whatsnew/macroexploit.html</pre>
+<p>
+One can set up <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> to download the
+<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
+file daily, and include a package audit in the daily security script.
+Details on this are located in the <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top">MESSAGE</a>
+file for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.
+</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="pkg_versions"></a>4.1.6. Finding if newer versions of your installed packages are in pkgsrc</h3></div></div></div>
+<p>
+Install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a> and run 
+<span><strong class="command">lintpkgsrc</strong></span> with the &#8220;<span class="quote">-i</span>&#8221;
+argument to check if your packages are up-to-date, e.g.
+</p>
+<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>lintpkgsrc -i</code></strong>
+...
+Version mismatch: 'tcsh' 6.09.00 vs 6.10.00</pre>
+<p>You can then use <span><strong class="command">make update</strong></span> to update the
+package on your system and rebuild any dependencies.
+</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="using.pkg_admin"></a>4.1.7. Other administrative functions</h3></div></div></div>
+<p>The <span><strong class="command">pkg_admin</strong></span> executes various
+	administrative functions on the package system.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="a-word-of-warning"></a>4.1.8. A word of warning</h3></div></div></div>
 <p>Please pay very careful attention to the warnings
         expressed in the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> manual page about the
         inherent dangers of installing binary packages which you did
@@ -1608,17 +2016,32 @@ source packages</a></span></dt>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="building-packages-from-source"></a>4.2. Building packages from source</h2></div></div></div>
-<p> This assumes that the package is already in pkgsrc. If it
+<p>
+After obtaining pkgsrc, the <code class="filename">pkgsrc</code> directory
+now contains a set of packages, organized into categories. You can browse
+the online index of packages, or run <span><strong class="command">make readme</strong></span>
+from the <code class="filename">pkgsrc</code> directory to build local
+<code class="filename">README.html</code> files for all packages, viewable with any web browser such as
+<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/lynx/README.html" target="_top"><code class="filename">www/lynx</code></a> or 
+<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/mozilla/README.html" target="_top"><code class="filename">www/mozilla</code></a>.</p>
+<p>The default <span class="emphasis"><em>prefix</em></span> for installed packages is
+<code class="filename">/usr/pkg</code>. If you wish to change this, you should do
+so by setting <code class="varname">LOCALBASE</code> in
+<code class="filename">mk.conf</code>. You should not try to use multiple
+different <code class="varname">LOCALBASE</code> definitions on the same system
+(inside a chroot is an exception). </p>
+<p>The rest of this chapter assumes that the package is already in pkgsrc. If it
       is not, see <a href="#developers-guide" title="Part II. The pkgsrc developer's guide">Part II, &#8220;The pkgsrc developer's guide&#8221;</a> for instructions
       how to create your own packages.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="requirements"></a>4.2.1. Requirements</h3></div></div></div>
-<p> To build packages from source on a NetBSD system the
-        &#8220;<span class="quote">comp</span>&#8221; and the &#8220;<span class="quote">text</span>&#8221; distribution
-        sets must be installed. If you want to build X11-related
-        packages the &#8220;<span class="quote">xbase</span>&#8221; and &#8220;<span class="quote">xcomp</span>&#8221;
-        distribution sets are required, too.</p>
+<p>To build packages from source, you need a working C
+      compiler. On NetBSD, you need to install the
+      &#8220;<span class="quote">comp</span>&#8221; and the &#8220;<span class="quote">text</span>&#8221; distribution
+      sets. If you want to build X11-related packages, the
+      &#8220;<span class="quote">xbase</span>&#8221; and &#8220;<span class="quote">xcomp</span>&#8221; distribution
+      sets are required, too.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -1626,6 +2049,16 @@ source packages</a></span></dt>
 <p>The first step for building a package is downloading the
       distfiles (i.e. the unmodified source). If they have not yet been
       downloaded, pkgsrc will fetch them automatically.</p>
+<p>
+If you have all files that you need in the
+<code class="filename">distfiles</code> directory,
+you don't need to connect. If the distfiles are on CD-ROM, you can
+mount the CD-ROM on <code class="filename">/cdrom</code> and add:
+</p>
+<pre class="screen">DISTDIR=/cdrom/pkgsrc/distfiles</pre>
+<p>
+to your <code class="filename">mk.conf</code>.
+</p>
 <p>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
         <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to find some examples
@@ -1637,17 +2070,29 @@ source packages</a></span></dt>
         if you want to keep the settings, by editing the
         <code class="filename">/etc/mk.conf</code> file,
         and adding the definitions there.</p>
-<p>If you don't have a permanent Internet connection and you want to know
-        which files to download, <span><strong class="command">make fetch-list</strong></span> will tell you
-        what you'll need. Put these distfiles into
-        <code class="filename">/usr/pkgsrc/distfiles</code>.</p>
+<p>
+If a package depends on many other packages (such as
+<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a>), the build process may 
+alternate between periods of
+downloading source, and compiling. To ensure you have all the source
+downloaded initially you can run the command:
+</p>
+<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>make fetch-list | sh</code></strong></pre>
+<p>
+which will output and run a set of shell commands to fetch the
+necessary files into the <code class="filename">distfiles</code> directory.  You can
+also choose to download the files manually.
+</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="how-to-build-and-install"></a>4.2.3. How to build and install</h3></div></div></div>
-<p>Assuming that the distfile has been fetched (see previous section), become
-        root and change into the relevant directory and run
-        <span><strong class="command">make</strong></span>.</p>
+<p>
+Once the software has downloaded, any patches will be applied, then it
+will be compiled for you. This may take some time depending on your
+computer, and how many other packages the software depends on and their
+compile time.
+</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>If using bootstrap or pkgsrc on a non-NetBSD system,
@@ -1658,13 +2103,38 @@ source packages</a></span></dt>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>cd misc/figlet</code></strong>
 <code class="prompt">%</code> <strong class="userinput"><code>make</code></strong></pre>
 <p>at the shell prompt to build the various components of the
-        package, and</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make install</code></strong></pre>
-<p>to install the various components into the correct places
-        on your system. Installing the package on your system requires
-        you to be root.  However, pkgsrc has a
+        package.</p>
+<p>The next stage is to actually install the newly compiled
+	program onto your system. Do this by entering:
+
+</p>
+<pre class="screen">
+    <code class="prompt">%</code> <strong class="userinput"><code>make install</code></strong>
+</pre>
+<p>
+
+	while you are still in the directory for whatever package you
+	are installing.</p>
+<p>Installing the package on your system may require you to
+	be root.  However, pkgsrc has a
         <span class="emphasis"><em>just-in-time-su</em></span> feature, which allows you
-        to only become root for the actual installation step</p>
+        to only become root for the actual installation step.</p>
+<p>That's it, the software should now be installed and setup for use.
+You can now enter:
+
+</p>
+<pre class="screen">
+    <code class="prompt">%</code> <strong class="userinput"><code>make clean</code></strong>
+</pre>
+<p>
+
+	to remove the compiled files in the work directory, as you shouldn't need
+	them any more. If other packages were also added to your system
+	(dependencies) to allow your program to compile, you can tidy these up
+	also with the command:</p>
+<pre class="screen">
+    <code class="prompt">%</code> <strong class="userinput"><code>make clean-depends</code></strong>
+</pre>
 <p>Taking the figlet utility as an example, we can install it on our
         system by building as shown in <a href="#logs" title="Appendix B. Build logs">Appendix B, <i>Build logs</i></a>.</p>
 <p>The program is installed under the default root of the packages tree -
@@ -1794,9 +2264,11 @@ source packages</a></span></dt>
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="general-configuration"></a>5.1. General configuration</h2></div></div></div>
 <p>In this section, you can find some variables that apply to all
-      pkgsrc packages.  The preferred method of setting these variables
-      is by setting them in <code class="filename">/etc/mk.conf</code>.
-      </p>
+    pkgsrc packages.  The preferred method of setting these variables is
+    by setting them in <code class="filename">/etc/mk.conf</code>. A complete
+    list of the variables that can be configured by the user is
+    available in <code class="filename">mk/defaults/mk.conf</code>, together with
+    some comments that describe the variable's intent.</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="varname">LOCALBASE</code>: Where
 	    packages will be installed. The default is
@@ -1827,9 +2299,11 @@ source packages</a></span></dt>
 	    <code class="filename">ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/</code>.</p></li>
 <li><p><code class="varname">BINPKG_SITES</code>:
 	    List of sites carrying binary pkgs.</p></li>
+<li><p><code class="varname">ACCEPTABLE_LICENSES</code>:
+	    List of acceptable licenses. Whenever you try to build a package
+	    whose license is not in this list, you will get an error message
+	    that includes instructions on how to change this variable.</p></li>
 </ul></div>
-<p>
-    </p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -1865,6 +2339,12 @@ source packages</a></span></dt>
 	    <code class="varname">MAKECONF</code> is set to
 	    <code class="filename">/dev/null</code> to avoid picking up
 	    settings used by builds in <code class="filename">/usr/src</code>.</p></li>
+<li><p><code class="varname">DEPENDS_TARGET</code>:
+	    By default, dependencies are only installed, and no binary
+
+	    package is created for them. You can set this variable to
+	    <code class="literal">package</code> to automatically create binary
+	    packages after installing dependencies.</p></li>
 </ul></div>
 <p>
     </p>
@@ -7618,7 +8098,7 @@ Changes to the PLIST
 <p>First, check that your package is complete, compiles and
 	runs well; see <a href="#debug" title="Chapter 18. Debugging">Chapter 18, <i>Debugging</i></a> and the rest of this
 	document. Next, generate an uuencoded gzipped <a href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a>
-	archive, preferably with all files in a single directory.
+	archive that contains all files that make up the package.
 	Finally, <span><strong class="command">send-pr</strong></span> with category
 	&#8220;<span class="quote">pkg</span>&#8221;, a synopsis which includes the package name
 	and version number, a short description of your package
@@ -7785,36 +8265,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2655066">What is the difference between
+<dt>20.1. <a href="#id2656363">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2655171">What is the difference between
+<dt>20.2. <a href="#id2656400">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2655209">What is the difference between
+<dt>20.3. <a href="#id2656438">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2655246">What is the difference between
+<dt>20.4. <a href="#id2656475">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2655265">Why does make show-var
+<dt>20.5. <a href="#id2656493">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2655292">What does
+<dt>20.6. <a href="#id2656521">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2655367">Which mailing lists are there for package
+<dt>20.7. <a href="#id2656664">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2655403">Where is the pkgsrc
+<dt>20.8. <a href="#id2656837">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -7823,7 +8303,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655066"></a><a name="id2655067"></a><b>20.1.</b>
+<a name="id2656363"></a><a name="id2656364"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -7839,7 +8319,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655171"></a><a name="id2655172"></a><b>20.2.</b>
+<a name="id2656400"></a><a name="id2656401"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -7857,7 +8337,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655209"></a><a name="id2655210"></a><b>20.3.</b>
+<a name="id2656438"></a><a name="id2656439"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -7875,7 +8355,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655246"></a><a name="id2655248"></a><b>20.4.</b>
+<a name="id2656475"></a><a name="id2656476"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -7888,7 +8368,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655265"></a><a name="id2655266"></a><b>20.5.</b>
+<a name="id2656493"></a><a name="id2656494"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -7904,7 +8384,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655292"></a><a name="id2655293"></a><b>20.6.</b>
+<a name="id2656521"></a><a name="id2656522"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -7928,7 +8408,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655367"></a><a name="id2655368"></a><b>20.7.</b>
+<a name="id2656664"></a><a name="id2656802"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -7953,7 +8433,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655403"></a><a name="id2655404"></a><b>20.8.</b>
+<a name="id2656837"></a><a name="id2656838"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
