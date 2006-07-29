@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.852 2006/07/29 02:14:31 uebayasi Exp $
+$NetBSD: CHANGES-2006,v 1.853 2006/07/29 07:00:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3597,3 +3597,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/cvm to 0.80 [schmonz 2006-07-29]
 	Updated mail/mailfront to 0.98.1 [schmonz 2006-07-29]
 	Updated mail/thunderbird to 1.5.0.5 [uebayasi 2006-07-29]
+	Updated graphics/libgii to 0.9.1nb3 [minskim 2006-07-29]
