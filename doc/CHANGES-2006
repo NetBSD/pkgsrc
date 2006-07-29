@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.849 2006/07/28 13:36:14 tron Exp $
+$NetBSD: CHANGES-2006,v 1.850 2006/07/29 00:40:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3592,3 +3592,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/apache2 to 2.0.59 [tron 2006-07-28]
 	Updated emulators/wine to 0.9.18 [adam 2006-07-28]
 	Updated www/apache2 to 2.0.59nb1 [tron 2006-07-28]
+	Added devel/p5-Proc-Simple version 1.21 [minskim 2006-07-29]
