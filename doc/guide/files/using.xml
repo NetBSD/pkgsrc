@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.20 2006/07/23 15:34:10 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.21 2006/07/29 14:14:23 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -30,7 +30,7 @@
 	</tgroup>
 	</informaltable>
 
-	<para>These prebuilt package tools use
+	<para>These pre-built package tools use
 	<filename>/usr/pkg</filename> for the base directory, and
 	<filename>/var/db/pkg</filename> for the database of installed
 	packages. If you cannot use these directories for whatever
@@ -85,7 +85,7 @@
         automatically by giving <command>pkg_add</command> an FTP URL:
         </para>
 
-      <screen><prompt>#</prompt> <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package.tgz</userinput></screen>
+      <screen><prompt>#</prompt> <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package</userinput></screen>
 
       <para>Note that any prerequisite packages needed to run the
         package in question will be installed, too, assuming they are
@@ -116,6 +116,49 @@
         installed program. </para>
     </sect2>
 
+<sect2 id="using.pkg_delete">
+<title>Deinstalling packages</title>
+
+	<para>To deinstall a package, it does not matter whether it was
+	installed from source code or from a binary package. The
+	<command>pkg_delete</command> command does not know it anyway.
+	To delete a package, you can just run <command>pkg_delete
+	<replaceable>package-name</replaceable></command>. The package
+	name can be given with or without version number. Wildcards can
+	also be used to deinstall a set of packages, for example
+	<literal>*emacs*</literal>. Be sure to include them in quotes,
+	so that the shell does not expand them before
+	<literal>pkg_delete</literal> sees them.</para>
+
+	<para>The <option>-r</option> option is very powerful: it
+	removes all the packages that require the package in question
+	and then removes the package itself. For example:
+
+<screen>
+    &rprompt; <userinput>pkg_delete -r jpeg</userinput>
+</screen>
+
+	will remove jpeg and all the packages that used it; this allows
+	upgrading the jpeg package.</para>
+
+</sect2>
+
+<sect2 id="using.pkg_info">
+<title>Getting information about installed packages</title>
+
+	<para>The <command>pkg_info</command> shows information about
+	installed packages or binary package files.</para>
+
+</sect2>
+
+<sect2 id="using.pkg_admin">
+<title>Other administrative functions</title>
+
+	<para>The <command>pkg_admin</command> executes various
+	administrative functions on the package system.</para>
+
+</sect2>
+
     <sect2 id="a-word-of-warning">
       <title>A word of warning</title>
 
@@ -145,11 +188,12 @@
     <sect2 id="requirements">
       <title>Requirements</title>
 
-      <para> To build packages from source on a NetBSD system the
-        <quote>comp</quote> and the <quote>text</quote> distribution
-        sets must be installed. If you want to build X11-related
-        packages the <quote>xbase</quote> and <quote>xcomp</quote>
-        distribution sets are required, too.</para>
+      <para>To build packages from source, you need a working C
+      compiler. On NetBSD, you need to install the
+      <quote>comp</quote> and the <quote>text</quote> distribution
+      sets. If you want to build X11-related packages, the
+      <quote>xbase</quote> and <quote>xcomp</quote> distribution
+      sets are required, too.</para>
       <!-- FIXME: what about installing x11/XFree86-*? -->
     </sect2>
 

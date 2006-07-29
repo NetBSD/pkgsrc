@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.11 2006/05/19 21:08:42 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.12 2006/07/29 14:14:23 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -15,13 +15,14 @@
 	see <xref linkend="bulk-upload"/>.</para>
 
 </sect1>
+
 <sect1 id="submitting-your-package">
 <title>Submitting source packages (for non-NetBSD-developers)</title>
 
 	<para>First, check that your package is complete, compiles and
 	runs well; see <xref linkend="debug"/> and the rest of this
 	document. Next, generate an uuencoded gzipped &man.tar.1;
-	archive, preferably with all files in a single directory.
+	archive that contains all files that make up the package.
 	Finally, <command>send-pr</command> with category
 	<quote>pkg</quote>, a synopsis which includes the package name
 	and version number, a short description of your package
@@ -38,6 +39,7 @@
 	for details.</para>
 
 </sect1>
+
 <sect1 id="general-notes-for-changes">
 <title>General notes when adding, updating, or removing packages</title>
 
