@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/02 11:38:23 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/29 19:45:30 jmmv Exp $
 #
 
 DISTNAME=	libtheora-1.0alpha7
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	theora.pc.in
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
+
+CONFIGURE_ARGS+=	HAVE_DOXYGEN=false
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
