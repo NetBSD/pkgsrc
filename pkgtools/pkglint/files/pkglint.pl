@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.666 2006/07/29 09:13:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.667 2006/07/29 10:56:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3632,7 +3632,7 @@ sub checkline_other_absolute_pathname($$) {
 
 	$opt_debug_trace and $line->log_debug("checkline_other_absolute_pathname(\"${text}\")");
 
-	if ($text =~ qr"^(.*?)((?:/[\w]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$") {
+	if ($text =~ qr"^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$") {
 		my ($before, $path, $after) = ($1, $2, $3);
 
 		if ($before =~ qr"\@$") {
