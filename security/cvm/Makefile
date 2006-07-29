@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/29 00:59:23 schmonz Exp $
 #
 
-DISTNAME=		cvm-0.76
+DISTNAME=		cvm-0.80
 CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 
@@ -13,6 +13,8 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
+
+USE_LIBTOOL=		yes
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
