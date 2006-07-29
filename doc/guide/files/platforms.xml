@@ -1,31 +1,217 @@
-<!-- $NetBSD: platforms.xml,v 1.31 2006/06/23 05:00:55 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.32 2006/07/29 15:57:04 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
 
+<sect1 id="binarydist">
+<title>Binary distribution</title>
+<para>
+We provide a bootstrap kit in both source and binary form for other
+platforms than &os;, consisting of the pkg administration tools and other
+tools required to use pkgsrc and build packages.
+</para>
+
+<note><para>
+Older binary snapshots are available in the
+<ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/archive/">bootstrap-pkgsrc/archive</ulink>
+directory on ftp.NetBSD.org.</para>
+</note>
+
+<table id="binary-kits">
+  <title>Binary kits and available packages</title>
+  <tgroup cols="4">
+    <thead>
+      <row>
+	<entry>Platform</entry>
+	<entry>Latest snapshot</entry>
+	<entry>Binary kit</entry>
+	<entry>Binary packages</entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+	<entry role="osname">Darwin 5.5/powerpc (Mac OS X 10.1.5)</entry>
+	<entry role="date">20021209</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-5.5-powerpc-20021209.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Darwin 6.6/powerpc (Mac OS X 10.2.6)</entry>
+	<entry role="date">20030623</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-6.6-powerpc-20030623.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Darwin 7.6/powerpc (Mac OS X 10.3.6)</entry>
+	<entry role="date">20041219</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-7.6.0-powerpc-20041219.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Darwin-7.6/">binary packages</ulink></entry>
+      </row>
+      <row>
+	<entry role="osname">Darwin 7.8/powerpc (Mac OS X 10.3.8)</entry>
+	<entry role="date">20050320</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-7.8.0-powerpc-20050320.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+     <row>
+        <entry role="osname">Darwin 8.1/powerpc (Mac OS X 10.4.1)</entry>
+        <entry role="date">20050625</entry>
+        <entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-8.1.0-powerpc-20050625.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Darwin-8.1/powerpc/current/">binary packages</ulink></entry>
+      </row>
+      <row>
+	<entry role="osname">Debian GNU Linux/i386</entry>
+	<entry role="date">20031023</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-debian-i386-20031023.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Fedora Core 2 Linux/i386</entry>
+	<entry role="date">20050618</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.6.10-i386-fc2-20050618.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Fedora Core 4 Linux/i386</entry>
+	<entry role="date">20060105</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.6.11-i386-fc4-20060105.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">FreeBSD 3.5/i386</entry>
+	<entry role="date">20030411</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-3.5-STABLE-i386-20030411.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">FreeBSD 4.7/i386</entry>
+	<entry role="date">20021211</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-4.7-RELEASE-i386-20021211.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">FreeBSD 5.0/i386</entry>
+	<entry role="date">20030411</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.0-RELEASE-i386-20030411.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">FreeBSD 5.1/i386</entry>
+	<entry role="date">20030630</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.1-RELEASE-i386-20030630.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">FreeBSD 5.2.1/i386</entry>
+	<entry role="date">20040227</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.2.1-RELEASE-i386-20040227.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">FreeBSD 5.3/i386</entry>
+	<entry role="date">20050119</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.3-RELEASE-i386-20050119.tar">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Interix 3.5</entry>
+	<entry role="date">20051010</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Interix-3.5-i386-20051010.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Interix-3.5/i386/current/">binary packages</ulink></entry>
+      </row>
+      <row>
+	<entry role="osname">IRIX 6.5 n32-bit ABI</entry>
+	<entry role="date">20040911</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-IRIX-6.5-mips-20040911.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/IRIX-6.5/n32/">binary packages</ulink></entry>
+      </row>
+      <row>
+	<entry role="osname">IRIX 6.5 64-bit ABI</entry>
+	<entry role="date">20040912</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-IRIX64-6.5-mips-20040912.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/IRIX-6.5/64/">binary packages</ulink></entry>
+      </row>
+      <row>
+	<entry role="osname">OpenBSD 3.2/i386</entry>
+	<entry role="date">20030420</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.2-i386-20030420.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">OpenBSD 3.3/i386</entry>
+	<entry role="date">20030503</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.3-i386-20030503.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">OpenBSD 3.5/i386</entry>
+	<entry role="date">20040507</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.5-i386-20040703.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Slackware Linux 8.1/i386</entry>
+	<entry role="date">20030417</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.18-slackware-20030417.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Slackware Linux 9/i386</entry>
+	<entry role="date">20031023</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-i386-slackware9-20040703.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Solaris 8/sparc</entry>
+	<entry role="date">20050220</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.8-sparc-20050220.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Solaris 8/i386</entry>
+	<entry role="date">20050220</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.8-i386-20050220.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">Solaris 9/sparc</entry>
+	<entry role="date">20041208</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-sparc-20041208.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/SunOS-5.9/sparc/">binary packages</ulink></entry>
+      </row>
+      <row>
+	<entry role="osname">Solaris 9/i386</entry>
+	<entry role="date">20030411</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-i386-20030411.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+    </tbody>
+  </tgroup>
+</table>
+
+<para>
+Simply download the binary kit for your platform, and extract it into
+<filename>/</filename> e.g.
+</para>
+
+<screen><prompt>#</prompt> <userinput>cd /</userinput>
+<prompt>#</prompt> <userinput>gzip -c -d /tmp/bootstrap-pkgsrc-SunOS-5.9-sparc-20031023.tar.gz \
+  | tar -xpf -</userinput></screen>
+
+<para>
+Of course, as with any binary distributions, you should verify the
+checksum against the <ulink
+url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/SUM">SUM</ulink>
+or <ulink
+url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/CKSUM">CKSUM</ulink>
+file and inspect the contents before extracting it.
+</para>
+</sect1>
+
   <sect1 id="bootstrapping-pkgsrc">
     <title>Bootstrapping pkgsrc</title>
 
-    <para>For operating systems other than &os;, we provide a bootstrap kit to
-      build the required tools to use pkgsrc on your platform. Besides
-      support for native &os;, pkgsrc and the bootstrap kit have support for
-      the following operating systems:</para>
-
-    <itemizedlist>
-      <listitem><para>Darwin (Mac OS X)</para></listitem>
-      <listitem><para>DragonFly BSD</para></listitem>
-      <listitem><para>FreeBSD</para></listitem>
-      <listitem><para>Interix (Windows 2000, XP, 2003)</para></listitem>
-      <listitem><para>IRIX</para></listitem>
-      <listitem><para>Linux</para></listitem>
-      <listitem><para>OpenBSD</para></listitem>
-      <listitem><para>Solaris</para></listitem>
-      <listitem><para>Tru64 (Digital UNIX/OSF1)</para></listitem>
-    </itemizedlist>
-
-    <para>Support for other platforms is under development.</para>
-
-    <para>Installing the bootstrap kit should be as simple as:</para>
+    <para>Installing the bootstrap kit from source should be as simple as:</para>
 
     <screen>
 &rprompt; <userinput>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</userinput>

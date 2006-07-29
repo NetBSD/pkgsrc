@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.21 2006/07/29 14:14:23 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.22 2006/07/29 15:57:04 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -151,6 +151,62 @@
 
 </sect2>
 
+<sect2 id="vulnerabilities">
+<title>Checking for security vulnerabilities in installed packages</title>
+
+<para>
+The NetBSD Security-Officer and Packages Groups maintain a list of
+known security vulnerabilities to packages which are (or have been)
+included in pkgsrc.  The list is available from the NetBSD
+FTP site at <ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities"/>.
+</para>
+
+<para>
+Through <filename role="pkg">security/audit-packages</filename>, 
+this list can be downloaded
+automatically, and a security audit of all packages installed on a system
+can take place.
+</para>
+
+<para>
+There are two components to 
+<filename role="pkg">security/audit-packages</filename>.  The first
+component, <quote>download-vulnerability-list</quote>, is for downloading
+the list of vulnerabilities from the NetBSD FTP site.  The second
+component, <quote>audit-packages</quote>, checks to see if any of your
+installed packages are vulnerable.  If a package is vulnerable, you
+will see output similar to the following:
+</para>
+
+<screen>Package samba-2.0.9 has a local-root-shell vulnerability, see
+http://www.samba.org/samba/whatsnew/macroexploit.html</screen>
+
+<para>
+One can set up <filename 
+role="pkg">security/audit-packages</filename> to download the
+<ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
+file daily, and include a package audit in the daily security script.
+Details on this are located in the <ulink
+url="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup">MESSAGE</ulink>
+file for <filename role="pkg">security/audit-packages</filename>.
+</para>
+</sect2>
+
+<sect2 id="pkg_versions">
+<title>Finding if newer versions of your installed packages are in pkgsrc</title>
+<para>
+Install <filename role="pkg">pkgtools/pkglint</filename> and run 
+<command>lintpkgsrc</command> with the <quote>-i</quote>
+argument to check if your packages are up-to-date, e.g.
+</para>
+<screen><prompt>%</prompt> <userinput>lintpkgsrc -i</userinput>
+...
+Version mismatch: 'tcsh' 6.09.00 vs 6.10.00</screen>
+<para>You can then use <command>make update</command> to update the
+package on your system and rebuild any dependencies.
+</para>
+</sect2>
+
 <sect2 id="using.pkg_admin">
 <title>Other administrative functions</title>
 
@@ -181,7 +237,23 @@
   <sect1 id="building-packages-from-source">
     <title>Building packages from source</title>
 
-    <para> This assumes that the package is already in pkgsrc. If it
+<para>
+After obtaining pkgsrc, the <filename>pkgsrc</filename> directory
+now contains a set of packages, organized into categories. You can browse
+the online index of packages, or run <command>make readme</command>
+from the <filename>pkgsrc</filename> directory to build local
+<filename>README.html</filename> files for all packages, viewable with any web browser such as
+<filename role="pkg">www/lynx</filename> or 
+<filename role="pkg">www/mozilla</filename>.</para>
+
+<para>The default <emphasis>prefix</emphasis> for installed packages is
+<filename>/usr/pkg</filename>. If you wish to change this, you should do
+so by setting <varname>LOCALBASE</varname> in
+<filename>mk.conf</filename>. You should not try to use multiple
+different <varname>LOCALBASE</varname> definitions on the same system
+(inside a chroot is an exception). </para>
+
+    <para>The rest of this chapter assumes that the package is already in pkgsrc. If it
       is not, see <xref linkend="developers-guide"/> for instructions
       how to create your own packages.</para>
 
@@ -205,6 +277,15 @@
       distfiles (i.e. the unmodified source). If they have not yet been
       downloaded, pkgsrc will fetch them automatically.</para>
 
+<para>
+If you have all files that you need in the
+<filename>distfiles</filename> directory,
+you don't need to connect. If the distfiles are on CD-ROM, you can
+mount the CD-ROM on <filename>/cdrom</filename> and add:
+<screen>DISTDIR=/cdrom/pkgsrc/distfiles</screen>
+to your <filename>mk.conf</filename>.
+</para>
+
       <para>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
         <filename>pkgsrc/mk/defaults/mk.conf</filename> to find some examples
@@ -218,18 +299,29 @@
         <filename>/etc/mk.conf</filename> file,
         and adding the definitions there.</para>
 
-      <para>If you don't have a permanent Internet connection and you want to know
-        which files to download, <command>make fetch-list</command> will tell you
-        what you'll need. Put these distfiles into
-        <filename>/usr/pkgsrc/distfiles</filename>.</para>
+<para>
+If a package depends on many other packages (such as
+<filename role="pkg">meta-pkgs/kde3</filename>), the build process may 
+alternate between periods of
+downloading source, and compiling. To ensure you have all the source
+downloaded initially you can run the command:
+<screen><prompt>%</prompt> <userinput>make fetch-list | sh</userinput></screen>
+which will output and run a set of shell commands to fetch the
+necessary files into the <filename>distfiles</filename> directory.  You can
+also choose to download the files manually.
+</para>
+
     </sect2>
 
     <sect2 id="how-to-build-and-install">
       <title>How to build and install</title>
 
-      <para>Assuming that the distfile has been fetched (see previous section), become
-        root and change into the relevant directory and run
-        <command>make</command>.</para>
+<para>
+Once the software has downloaded, any patches will be applied, then it
+will be compiled for you. This may take some time depending on your
+computer, and how many other packages the software depends on and their
+compile time.
+</para>
 
       <note><para>If using bootstrap or pkgsrc on a non-NetBSD system,
         use the pkgsrc <command>bmake</command> command instead of
@@ -241,15 +333,38 @@
 &cprompt; <userinput>make</userinput></screen>
 
       <para>at the shell prompt to build the various components of the
-        package, and</para>
+        package.</para>
 
-      <screen>&rprompt; <userinput>make install</userinput></screen>
+	<para>The next stage is to actually install the newly compiled
+	program onto your system. Do this by entering:
 
-      <para>to install the various components into the correct places
-        on your system. Installing the package on your system requires
-        you to be root.  However, pkgsrc has a
+<screen>
+    <prompt>%</prompt> <userinput>make install</userinput>
+</screen>
+
+	while you are still in the directory for whatever package you
+	are installing.</para>
+
+	<para>Installing the package on your system may require you to
+	be root.  However, pkgsrc has a
         <emphasis>just-in-time-su</emphasis> feature, which allows you
-        to only become root for the actual installation step</para>
+        to only become root for the actual installation step.</para>
+
+<para>That's it, the software should now be installed and setup for use.
+You can now enter:
+
+<screen>
+    <prompt>%</prompt> <userinput>make clean</userinput>
+</screen>
+
+	to remove the compiled files in the work directory, as you shouldn't need
+	them any more. If other packages were also added to your system
+	(dependencies) to allow your program to compile, you can tidy these up
+	also with the command:</para>
+
+<screen>
+    <prompt>%</prompt> <userinput>make clean-depends</userinput>
+</screen>
 
       <para>Taking the figlet utility as an example, we can install it on our
         system by building as shown in <xref linkend="logs"/>.</para>
@@ -399,5 +514,6 @@
         </varlistentry>
       </variablelist>
     </sect2>
-  </sect1>
+
+</sect1>
 </chapter>
