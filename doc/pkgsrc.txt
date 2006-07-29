@@ -30,11 +30,15 @@ Table of Contents
 1. What is pkgsrc?
 
     1.1. Introduction
+
+        1.1.1. Why pkgsrc?
+        1.1.2. Supported platforms
+
     1.2. Overview
     1.3. Terminology
 
         1.3.1. Commonly used abbreviations
-        1.3.2. People involved in pkgsrc
+        1.3.2. Roles involved in pkgsrc
 
     1.4. Typography
 
@@ -55,16 +59,17 @@ I. The pkgsrc user's guide
 
     3. Using pkgsrc on systems other than NetBSD
 
-        3.1. Bootstrapping pkgsrc
-        3.2. Platform-specific notes
+        3.1. Binary distribution
+        3.2. Bootstrapping pkgsrc
+        3.3. Platform-specific notes
 
-            3.2.1. Darwin (Mac OS X)
-            3.2.2. FreeBSD
-            3.2.3. Interix
-            3.2.4. IRIX
-            3.2.5. Linux
-            3.2.6. OpenBSD
-            3.2.7. Solaris
+            3.3.1. Darwin (Mac OS X)
+            3.3.2. FreeBSD
+            3.3.3. Interix
+            3.3.4. IRIX
+            3.3.5. Linux
+            3.3.6. OpenBSD
+            3.3.7. Solaris
 
     4. Using pkgsrc
 
@@ -72,7 +77,13 @@ I. The pkgsrc user's guide
 
             4.1.1. Finding binary packages
             4.1.2. Installing binary packages
-            4.1.3. A word of warning
+            4.1.3. Deinstalling packages
+            4.1.4. Getting information about installed packages
+            4.1.5. Checking for security vulnerabilities in installed packages
+            4.1.6. Finding if newer versions of your installed packages are in
+                pkgsrc
+            4.1.7. Other administrative functions
+            4.1.8. A word of warning
 
         4.2. Building packages from source
 
@@ -387,32 +398,36 @@ D. Editing guidelines for the pkgsrc guide
     D.1. Make targets
     D.2. Procedure
 
+List of Tables
+
+1.1. Platforms supported by pkgsrc
+3.1. Binary kits and available packages
+
 Chapter 1. What is pkgsrc?
 
 Table of Contents
 
 1.1. Introduction
+
+    1.1.1. Why pkgsrc?
+    1.1.2. Supported platforms
+
 1.2. Overview
 1.3. Terminology
 
     1.3.1. Commonly used abbreviations
-    1.3.2. People involved in pkgsrc
+    1.3.2. Roles involved in pkgsrc
 
 1.4. Typography
 
 1.1. Introduction
 
-There is a lot of software freely available for Unix-based systems, which
-usually runs on NetBSD and other Unix-flavoured systems, too, sometimes with
-some modifications. The NetBSD Packages Collection (pkgsrc) incorporates any
-such changes necessary to make that software run, and makes the installation
-(and de-installation) of the software package easy by means of a single
-command.
-
-Once the software has been built, it is manipulated with the pkg_* tools so
-that installation and de-installation, printing of an inventory of all
-installed packages and retrieval of one-line comments or more verbose
-descriptions are all simple.
+There is a lot of software freely available for Unix-based systems, which is
+usually available in form of the source code. Before such software can be used,
+it needs to be configured to the local system, compiled and installed, and this
+is exactly what The NetBSD Packages Collection (pkgsrc) does. pkgsrc also has
+some basic commands to handle binary packages, so that not every user has to
+build the packages for himself, which is a time-costly task.
 
 pkgsrc currently contains several thousand packages, including:
 
@@ -429,29 +444,76 @@ pkgsrc currently contains several thousand packages, including:
 pkgsrc has built-in support for handling varying dependencies, such as pthreads
 and X11, and extended features such as IPv6 support on a range of platforms.
 
+1.1.1. Why pkgsrc?
+
+pkgsrc provides the following key features:
+
+  * Easy building of software from source as well as the creation and
+    installation of binary packages. The source and latest patches are
+    retrieved from a master or mirror download site, checksum verified, then
+    built on your system. Support for binary-only distributions is available
+    for both native platforms and NetBSD emulated platforms.
+
+  * All packages are installed in a consistent directory tree, including
+    binaries, libraries, man pages and other documentation.
+
+  * Package dependencies, including when performing package updates, are
+    handled automatically. The configuration files of various packages are
+    handled automatically during updates, so local changes are preserved.
+
+  * Like NetBSD, pkgsrc is designed with portability in mind and consists of
+    highly portable code. This allows the greatest speed of development when
+    porting to new a platform. This portability also ensures that pkgsrc is
+    consistent across all platforms.
+
+  * The installation prefix, acceptable software licenses, international
+    encryption requirements and build-time options for a large number of
+    packages are all set in a simple, central configuration file.
+
+  * The entire source (not including the distribution files) is freely
+    available under a BSD license, so you may extend and adapt pkgsrc to your
+    needs. Support for local packages and patches is available right out of the
+    box, so you can configure it specifically for your environment.
+
+1.1.2. Supported platforms
+
+pkgsrc consists of both a source distribution and a binary distribution for
+these operating systems. After retrieving the required source or binaries, you
+can be up and running with pkgsrc in just minutes!
+
 pkgsrc was derived from FreeBSD's ports system, and initially developed for
 NetBSD only. Since then, pkgsrc has grown a lot, and now supports the following
 platforms:
 
-  * Darwin (Mac OS X)
+Table 1.1. Platforms supported by pkgsrc
 
-  * DragonFly BSD
-
-  * FreeBSD
-
-  * Microsoft Windows, via Interix
-
-  * IRIX
-
-  * Linux
-
-  * NetBSD (of course)
-
-  * Tru64 (Digital UNIX, OSF1)
-
-  * OpenBSD
-
-  * Solaris
++----------------------------------------------------------------+
+|                  Platform                   |Date Support Added|
+|---------------------------------------------+------------------|
+|NetBSD                                       |     Aug 1997     |
+|---------------------------------------------+------------------|
+|Solaris                                      |     Mar 1999     |
+|---------------------------------------------+------------------|
+|Linux                                        |     Jun 1999     |
+|---------------------------------------------+------------------|
+|Darwin (Mac OS X)                            |     Oct 2001     |
+|---------------------------------------------+------------------|
+|FreeBSD                                      |     Nov 2002     |
+|---------------------------------------------+------------------|
+|OpenBSD                                      |     Nov 2002     |
+|---------------------------------------------+------------------|
+|IRIX                                         |     Dec 2002     |
+|---------------------------------------------+------------------|
+|BSD/OS                                       |     Dec 2003     |
+|---------------------------------------------+------------------|
+|AIX                                          |     Dec 2003     |
+|---------------------------------------------+------------------|
+|Interix (Microsoft Windows Services for Unix)|     Mar 2004     |
+|---------------------------------------------+------------------|
+|DragonFlyBSD                                 |     Oct 2004     |
+|---------------------------------------------+------------------|
+|OSF/1                                        |     Nov 2004     |
++----------------------------------------------------------------+
 
 1.2. Overview
 
@@ -519,7 +581,7 @@ ICE
 
     Internal Compiler Error
 
-1.3.2. People involved in pkgsrc
+1.3.2. Roles involved in pkgsrc
 
 pkgsrc users
 
@@ -571,16 +633,17 @@ Table of Contents
 
 3. Using pkgsrc on systems other than NetBSD
 
-    3.1. Bootstrapping pkgsrc
-    3.2. Platform-specific notes
+    3.1. Binary distribution
+    3.2. Bootstrapping pkgsrc
+    3.3. Platform-specific notes
 
-        3.2.1. Darwin (Mac OS X)
-        3.2.2. FreeBSD
-        3.2.3. Interix
-        3.2.4. IRIX
-        3.2.5. Linux
-        3.2.6. OpenBSD
-        3.2.7. Solaris
+        3.3.1. Darwin (Mac OS X)
+        3.3.2. FreeBSD
+        3.3.3. Interix
+        3.3.4. IRIX
+        3.3.5. Linux
+        3.3.6. OpenBSD
+        3.3.7. Solaris
 
 4. Using pkgsrc
 
@@ -588,7 +651,13 @@ Table of Contents
 
         4.1.1. Finding binary packages
         4.1.2. Installing binary packages
-        4.1.3. A word of warning
+        4.1.3. Deinstalling packages
+        4.1.4. Getting information about installed packages
+        4.1.5. Checking for security vulnerabilities in installed packages
+        4.1.6. Finding if newer versions of your installed packages are in
+            pkgsrc
+        4.1.7. Other administrative functions
+        4.1.8. A word of warning
 
     4.2. Building packages from source
 
@@ -744,6 +813,12 @@ inconsistencies. When removing the old files, any changes that you have done to
 the pkgsrc files will be lost after updating. Therefore updating via CVS is
 strongly recommended.
 
+Note that by default the distfiles and the binary packages are saved in the
+pkgsrc tree, so don't forget to rescue them before updating. You can also
+configure pkgsrc to use other than the default directories by setting the
+DISTDIR and PACKAGES variables. See Chapter 5, Configuring pkgsrc for the
+details.
+
 To update pkgsrc from a tar file, download the tar file as explained above.
 Then, make sure that you have not made any changes to the files in the pkgsrc
 directory. Remove the pkgsrc directory and extract the new tar file. Done.
@@ -773,45 +848,104 @@ Chapter 3. Using pkgsrc on systems other than NetBSD
 
 Table of Contents
 
-3.1. Bootstrapping pkgsrc
-3.2. Platform-specific notes
+3.1. Binary distribution
+3.2. Bootstrapping pkgsrc
+3.3. Platform-specific notes
 
-    3.2.1. Darwin (Mac OS X)
-    3.2.2. FreeBSD
-    3.2.3. Interix
-    3.2.4. IRIX
-    3.2.5. Linux
-    3.2.6. OpenBSD
-    3.2.7. Solaris
+    3.3.1. Darwin (Mac OS X)
+    3.3.2. FreeBSD
+    3.3.3. Interix
+    3.3.4. IRIX
+    3.3.5. Linux
+    3.3.6. OpenBSD
+    3.3.7. Solaris
 
-3.1. Bootstrapping pkgsrc
+3.1. Binary distribution
 
-For operating systems other than NetBSD, we provide a bootstrap kit to build
-the required tools to use pkgsrc on your platform. Besides support for native
-NetBSD, pkgsrc and the bootstrap kit have support for the following operating
-systems:
+We provide a bootstrap kit in both source and binary form for other platforms
+than NetBSD, consisting of the pkg administration tools and other tools
+required to use pkgsrc and build packages.
 
-  * Darwin (Mac OS X)
+Note
 
-  * DragonFly BSD
+Older binary snapshots are available in the bootstrap-pkgsrc/archive directory
+on ftp.NetBSD.org.
 
-  * FreeBSD
+Table 3.1. Binary kits and available packages
 
-  * Interix (Windows 2000, XP, 2003)
++------------------------------------------------------------------------------+
+|             Platform              |Latest snapshot|Binary kit|Binary packages|
+|-----------------------------------+---------------+----------+---------------|
+|Darwin 5.5/powerpc (Mac OS X       |20021209       |binary kit|               |
+|10.1.5)                            |               |          |               |
+|-----------------------------------+---------------+----------+---------------|
+|Darwin 6.6/powerpc (Mac OS X       |20030623       |binary kit|               |
+|10.2.6)                            |               |          |               |
+|-----------------------------------+---------------+----------+---------------|
+|Darwin 7.6/powerpc (Mac OS X       |20041219       |binary kit|binary packages|
+|10.3.6)                            |               |          |               |
+|-----------------------------------+---------------+----------+---------------|
+|Darwin 7.8/powerpc (Mac OS X       |20050320       |binary kit|               |
+|10.3.8)                            |               |          |               |
+|-----------------------------------+---------------+----------+---------------|
+|Darwin 8.1/powerpc (Mac OS X       |20050625       |binary kit|binary packages|
+|10.4.1)                            |               |          |               |
+|-----------------------------------+---------------+----------+---------------|
+|Debian GNU Linux/i386              |20031023       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Fedora Core 2 Linux/i386           |20050618       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Fedora Core 4 Linux/i386           |20060105       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|FreeBSD 3.5/i386                   |20030411       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|FreeBSD 4.7/i386                   |20021211       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|FreeBSD 5.0/i386                   |20030411       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|FreeBSD 5.1/i386                   |20030630       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|FreeBSD 5.2.1/i386                 |20040227       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|FreeBSD 5.3/i386                   |20050119       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Interix 3.5                        |20051010       |binary kit|binary packages|
+|-----------------------------------+---------------+----------+---------------|
+|IRIX 6.5 n32-bit ABI               |20040911       |binary kit|binary packages|
+|-----------------------------------+---------------+----------+---------------|
+|IRIX 6.5 64-bit ABI                |20040912       |binary kit|binary packages|
+|-----------------------------------+---------------+----------+---------------|
+|OpenBSD 3.2/i386                   |20030420       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|OpenBSD 3.3/i386                   |20030503       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|OpenBSD 3.5/i386                   |20040507       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Slackware Linux 8.1/i386           |20030417       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Slackware Linux 9/i386             |20031023       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Solaris 8/sparc                    |20050220       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Solaris 8/i386                     |20050220       |binary kit|               |
+|-----------------------------------+---------------+----------+---------------|
+|Solaris 9/sparc                    |20041208       |binary kit|binary packages|
+|-----------------------------------+---------------+----------+---------------|
+|Solaris 9/i386                     |20030411       |binary kit|               |
++------------------------------------------------------------------------------+
 
-  * IRIX
+Simply download the binary kit for your platform, and extract it into / e.g.
 
-  * Linux
+# cd /
+# gzip -c -d /tmp/bootstrap-pkgsrc-SunOS-5.9-sparc-20031023.tar.gz \
+  | tar -xpf -
 
-  * OpenBSD
+Of course, as with any binary distributions, you should verify the checksum
+against the SUM or CKSUM file and inspect the contents before extracting it.
 
-  * Solaris
+3.2. Bootstrapping pkgsrc
 
-  * Tru64 (Digital UNIX/OSF1)
-
-Support for other platforms is under development.
-
-Installing the bootstrap kit should be as simple as:
+Installing the bootstrap kit from source should be as simple as:
 
 # env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc
 # cd pkgsrc/bootstrap
@@ -833,11 +967,11 @@ Note
 The bootstrap installs a bmake tool. Use this bmake when building via pkgsrc.
 For examples in this guide, use bmake instead of "make".
 
-3.2. Platform-specific notes
+3.3. Platform-specific notes
 
 Here are some platform-specific notes you should be aware of.
 
-3.2.1. Darwin (Mac OS X)
+3.3.1. Darwin (Mac OS X)
 
 Darwin 5.x and 6.x are supported. There are two methods of using pkgsrc on Mac
 OS X, by using a disk image, or a UFS partition.
@@ -858,7 +992,7 @@ Note
 You cannot use a HFS+ file system for pkgsrc, because pkgsrc currently requires
 the file system to be case-sensitive, and HFS+ is not.
 
-3.2.1.1. Using a disk image
+3.3.1.1. Using a disk image
 
 Create the disk image:
 
@@ -869,7 +1003,7 @@ Create the disk image:
 
 That's it!
 
-3.2.1.2. Using a UFS partition
+3.3.1.2. Using a UFS partition
 
 By default, /usr will be on your root file system, normally HFS+. It is
 possible to use the default prefix of /usr/pkg by symlinking /usr/pkg to a
@@ -901,7 +1035,7 @@ only.
 This note is as of 10.2 (Jaguar) and applies to earlier versions. Hopefully
 Apple will fix Disk Utility in 10.3 (Panther).
 
-3.2.2. FreeBSD
+3.3.2. FreeBSD
 
 FreeBSD 4.7 and 5.0 have been tested and are supported, other versions may
 work.
@@ -925,7 +1059,7 @@ with the FreeBSD userland tools. There are several steps:
  3. An example /etc/mk.conf file will be placed in /etc/mk.conf.example file
     when you use the bootstrap script.
 
-3.2.3. Interix
+3.3.3. Interix
 
 Interix is a POSIX-compatible subsystem for the Windows NT kernel, providing a
 Unix-like environment with a tighter kernel integration than available with
@@ -937,7 +1071,7 @@ Services for Unix 3.5, current as of this writing, has been tested. 3.0 or 3.1
 may work, but are not officially supported. (The main difference in 3.0/3.1 is
 lack of pthreads.)
 
-3.2.3.1. When installing Interix/SFU
+3.3.3.1. When installing Interix/SFU
 
 At an absolute minimum, the following packages must be installed from the
 Windows Services for Unix 3.5 distribution in order to use pkgsrc:
@@ -972,7 +1106,7 @@ available from Microsoft through a support contract; however, a NetBSD
 developer has made most Interix hotfixes available for personal use from http:/
 /www.duh.org/interix/hotfixes.php.
 
-3.2.3.2. What to do if Interix/SFU is already installed
+3.3.3.2. What to do if Interix/SFU is already installed
 
 If SFU is already installed and you wish to alter these settings to work with
 pkgsrc, note the following things.
@@ -995,7 +1129,7 @@ pkgsrc, note the following things.
 
     Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.
 
-3.2.3.3. Important notes for using pkgsrc
+3.3.3.3. Important notes for using pkgsrc
 
 The package manager (either the pkgsrc "su" user, or the user running
 "pkg_add") must be a member of the local Administrators group. Such a user must
@@ -1019,7 +1153,7 @@ adequate emulation in most cases:
 
     interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 
-3.2.3.4. Limitations of the Interix platform
+3.3.3.4. Limitations of the Interix platform
 
 Though Interix suffices as a familiar and flexible substitute for a full
 Unix-like platform, it has some drawbacks that should be noted for those
@@ -1067,7 +1201,7 @@ desiring to make the most of Interix.
     make tape drive access possible by using Cygwin as a bridge (similarly to
     audio bridged via Cygwin's esound server).
 
-3.2.3.5. Known issues for pkgsrc on Interix
+3.3.3.5. Known issues for pkgsrc on Interix
 
 It is not necessary, in general, to have a "root" user on the Windows system;
 any member of the local Administrators group will suffice. However, some
@@ -1082,7 +1216,7 @@ around the issue:
 
 # chmod -R g+w $PKG_DBDIR
 
-3.2.4. IRIX
+3.3.4. IRIX
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89). Please set the CC environment variable according to your
@@ -1126,7 +1260,7 @@ to make sure that MIPRPro is used, please set your PATH to not include the
 location of gcc (often /usr/freeware/bin), and (important) pass the
 '--preserve-path' flag.
 
-3.2.5. Linux
+3.3.5. Linux
 
 Some versions of Linux (for example Debian GNU/Linux) need either libtermcap or
 libcurses (libncurses). Installing the distributions libncurses-dev package (or
@@ -1170,7 +1304,7 @@ linking a C++ shared library and records it, throwing away the -Bstatic and
 libtool-linked C++ shared libraries will have a runtime dependency on the icc
 libraries until this is fixed in libtool.
 
-3.2.6. OpenBSD
+3.3.6. OpenBSD
 
 OpenBSD 3.0 and 3.2 are tested and supported.
 
@@ -1202,7 +1336,7 @@ with the OpenBSD userland tools. There are several steps:
         .endif
 
 
-3.2.7. Solaris
+3.3.7. Solaris
 
 Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a
 working C compiler. Both gcc 2.95.3 and Sun WorkShop 5 have been tested.
@@ -1227,7 +1361,7 @@ Whichever compiler you use, please ensure the compiler tools and your $prefix
 are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
 {bin,sbin}.
 
-3.2.7.1. If you are using gcc
+3.3.7.1. If you are using gcc
 
 It makes life much simpler if you only use the same gcc consistently for
 building all packages.
@@ -1239,7 +1373,7 @@ used during bootstrapping.
 Binary packages of gcc can be found through http://www.sun.com/bigadmin/common/
 freewareSearch.html.
 
-3.2.7.2. If you are using Sun WorkShop
+3.3.7.2. If you are using Sun WorkShop
 
 You will need at least the following packages installed (from WorkShop 5.0)
 
@@ -1257,7 +1391,7 @@ You should set CC, CXX and optionally, CPP in /etc/mk.conf, e.g.:
     CXX=    CC
     CPP=    /usr/ccs/lib/cpp
 
-3.2.7.3. Buildling 64-bit binaries with SunPro
+3.3.7.3. Buildling 64-bit binaries with SunPro
 
 Building 64-bit binaries is a little trickier. First, you need to bootstrap
 pkgsrc in 64-bit mode. One problem here is that while building one of the
@@ -1300,7 +1434,7 @@ to build 32-bit binaries and fail during linking. Detecting this is useful to
 prevent bugs on other platforms where the error would not show up but pass
 silently.
 
-3.2.7.4. Common problems
+3.3.7.4. Common problems
 
 Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
 workaround is to use another shell for the configure scripts, for example by
@@ -1319,7 +1453,12 @@ Table of Contents
 
     4.1.1. Finding binary packages
     4.1.2. Installing binary packages
-    4.1.3. A word of warning
+    4.1.3. Deinstalling packages
+    4.1.4. Getting information about installed packages
+    4.1.5. Checking for security vulnerabilities in installed packages
+    4.1.6. Finding if newer versions of your installed packages are in pkgsrc
+    4.1.7. Other administrative functions
+    4.1.8. A word of warning
 
 4.2. Building packages from source
 
@@ -1350,10 +1489,10 @@ directory:
 |Solaris 10|http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/      |
 +------------------------------------------------------------------------+
 
-These prebuilt package tools use /usr/pkg for the base directory, and /var/db/
+These pre-built package tools use /usr/pkg for the base directory, and /var/db/
 pkg for the database of installed packages. If you cannot use these directories
 for whatever reasons (maybe because you're not root), you have to build the
-package tools yourself, which is explained in Section 3.1, "Bootstrapping
+package tools yourself, which is explained in Section 3.2, "Bootstrapping
 pkgsrc".
 
 4.1.1. Finding binary packages
@@ -1393,7 +1532,7 @@ If you have FTP access and you don't want to download the packages via FTP
 prior to installation, you can do this automatically by giving pkg_add an FTP
 URL:
 
-# pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/All/package.tgz
+# pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/All/package
 
 Note that any prerequisite packages needed to run the package in question will
 be installed, too, assuming they are present where you install from.
@@ -1415,7 +1554,68 @@ pub/NetBSD/packages/<OSVERSION>/<ARCH>/vulnerable Please note that semicolon
 After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
 in your PATH so you can actually start the just installed program.
 
-4.1.3. A word of warning
+4.1.3. Deinstalling packages
+
+To deinstall a package, it does not matter whether it was installed from source
+code or from a binary package. The pkg_delete command does not know it anyway.
+To delete a package, you can just run pkg_delete package-name. The package name
+can be given with or without version number. Wildcards can also be used to
+deinstall a set of packages, for example *emacs*. Be sure to include them in
+quotes, so that the shell does not expand them before pkg_delete sees them.
+
+The -r option is very powerful: it removes all the packages that require the
+package in question and then removes the package itself. For example:
+
+    # pkg_delete -r jpeg
+
+will remove jpeg and all the packages that used it; this allows upgrading the
+jpeg package.
+
+4.1.4. Getting information about installed packages
+
+The pkg_info shows information about installed packages or binary package
+files.
+
+4.1.5. Checking for security vulnerabilities in installed packages
+
+The NetBSD Security-Officer and Packages Groups maintain a list of known
+security vulnerabilities to packages which are (or have been) included in
+pkgsrc. The list is available from the NetBSD FTP site at ftp://ftp.NetBSD.org/
+pub/pkgsrc/distfiles/vulnerabilities.
+
+Through security/audit-packages, this list can be downloaded automatically, and
+a security audit of all packages installed on a system can take place.
+
+There are two components to security/audit-packages. The first component,
+"download-vulnerability-list", is for downloading the list of vulnerabilities
+from the NetBSD FTP site. The second component, "audit-packages", checks to see
+if any of your installed packages are vulnerable. If a package is vulnerable,
+you will see output similar to the following:
+
+Package samba-2.0.9 has a local-root-shell vulnerability, see
+http://www.samba.org/samba/whatsnew/macroexploit.html
+
+One can set up security/audit-packages to download the vulnerabilities file
+daily, and include a package audit in the daily security script. Details on
+this are located in the MESSAGE file for security/audit-packages.
+
+4.1.6. Finding if newer versions of your installed packages are in pkgsrc
+
+Install pkgtools/pkglint and run lintpkgsrc with the "-i" argument to check if
+your packages are up-to-date, e.g.
+
+% lintpkgsrc -i
+...
+Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
+
+You can then use make update to update the package on your system and rebuild
+any dependencies.
+
+4.1.7. Other administrative functions
+
+The pkg_admin executes various administrative functions on the package system.
+
+4.1.8. A word of warning
 
 Please pay very careful attention to the warnings expressed in the pkg_add(1)
 manual page about the inherent dangers of installing binary packages which you
@@ -1429,21 +1629,40 @@ involved.
 
 4.2. Building packages from source
 
-This assumes that the package is already in pkgsrc. If it is not, see Part II,
-"The pkgsrc developer's guide" for instructions how to create your own
-packages.
+After obtaining pkgsrc, the pkgsrc directory now contains a set of packages,
+organized into categories. You can browse the online index of packages, or run
+make readme from the pkgsrc directory to build local README.html files for all
+packages, viewable with any web browser such as www/lynx or www/mozilla.
+
+The default prefix for installed packages is /usr/pkg. If you wish to change
+this, you should do so by setting LOCALBASE in mk.conf. You should not try to
+use multiple different LOCALBASE definitions on the same system (inside a
+chroot is an exception).
+
+The rest of this chapter assumes that the package is already in pkgsrc. If it
+is not, see Part II, "The pkgsrc developer's guide" for instructions how to
+create your own packages.
 
 4.2.1. Requirements
 
-To build packages from source on a NetBSD system the "comp" and the "text"
-distribution sets must be installed. If you want to build X11-related packages
-the "xbase" and "xcomp" distribution sets are required, too.
+To build packages from source, you need a working C compiler. On NetBSD, you
+need to install the "comp" and the "text" distribution sets. If you want to
+build X11-related packages, the "xbase" and "xcomp" distribution sets are
+required, too.
 
 4.2.2. Fetching distfiles
 
 The first step for building a package is downloading the distfiles (i.e. the
 unmodified source). If they have not yet been downloaded, pkgsrc will fetch
 them automatically.
+
+If you have all files that you need in the distfiles directory, you don't need
+to connect. If the distfiles are on CD-ROM, you can mount the CD-ROM on /cdrom
+and add:
+
+DISTDIR=/cdrom/pkgsrc/distfiles
+
+to your mk.conf.
 
 You can overwrite some of the major distribution sites to fit to sites that are
 close to your own. Have a look at pkgsrc/mk/defaults/mk.conf to find some
@@ -1454,14 +1673,21 @@ You can change these settings either in your shell's environment, or, if you
 want to keep the settings, by editing the /etc/mk.conf file, and adding the
 definitions there.
 
-If you don't have a permanent Internet connection and you want to know which
-files to download, make fetch-list will tell you what you'll need. Put these
-distfiles into /usr/pkgsrc/distfiles.
+If a package depends on many other packages (such as meta-pkgs/kde3), the build
+process may alternate between periods of downloading source, and compiling. To
+ensure you have all the source downloaded initially you can run the command:
+
+% make fetch-list | sh
+
+which will output and run a set of shell commands to fetch the necessary files
+into the distfiles directory. You can also choose to download the files
+manually.
 
 4.2.3. How to build and install
 
-Assuming that the distfile has been fetched (see previous section), become root
-and change into the relevant directory and run make.
+Once the software has downloaded, any patches will be applied, then it will be
+compiled for you. This may take some time depending on your computer, and how
+many other packages the software depends on and their compile time.
 
 Note
 
@@ -1473,14 +1699,29 @@ For example, type
 % cd misc/figlet
 % make
 
-at the shell prompt to build the various components of the package, and
+at the shell prompt to build the various components of the package.
 
-# make install
+The next stage is to actually install the newly compiled program onto your
+system. Do this by entering:
 
-to install the various components into the correct places on your system.
-Installing the package on your system requires you to be root. However, pkgsrc
-has a just-in-time-su feature, which allows you to only become root for the
-actual installation step
+    % make install
+
+while you are still in the directory for whatever package you are installing.
+
+Installing the package on your system may require you to be root. However,
+pkgsrc has a just-in-time-su feature, which allows you to only become root for
+the actual installation step.
+
+That's it, the software should now be installed and setup for use. You can now
+enter:
+
+    % make clean
+
+to remove the compiled files in the work directory, as you shouldn't need them
+any more. If other packages were also added to your system (dependencies) to
+allow your program to compile, you can tidy these up also with the command:
+
+    % make clean-depends
 
 Taking the figlet utility as an example, we can install it on our system by
 building as shown in Appendix B, Build logs.
@@ -1591,7 +1832,9 @@ Table of Contents
 
 In this section, you can find some variables that apply to all pkgsrc packages.
 The preferred method of setting these variables is by setting them in /etc/
-mk.conf.
+mk.conf. A complete list of the variables that can be configured by the user is
+available in mk/defaults/mk.conf, together with some comments that describe the
+variable's intent.
 
   * LOCALBASE: Where packages will be installed. The default is /usr/pkg. Do
     not mix binary packages with different LOCALBASEs!
@@ -1616,6 +1859,10 @@ mk.conf.
 
   * BINPKG_SITES: List of sites carrying binary pkgs.
 
+  * ACCEPTABLE_LICENSES: List of acceptable licenses. Whenever you try to build
+    a package whose license is not in this list, you will get an error message
+    that includes instructions on how to change this variable.
+
 5.2. Variables affecting the build process
 
 XXX
@@ -1638,6 +1885,10 @@ XXX
   * PKGMAKECONF: Location of the mk.conf file used by a package's BSD-style
     Makefile. If this is not set, MAKECONF is set to /dev/null to avoid picking
     up settings used by builds in /usr/src.
+
+  * DEPENDS_TARGET: By default, dependencies are only installed, and no binary
+    package is created for them. You can set this variable to package to
+    automatically create binary packages after installing dependencies.
 
 5.3. Selecting and configuring the compiler
 
@@ -6317,8 +6568,8 @@ Section 6.3.8, "Uploading results of a bulk build".
 
 First, check that your package is complete, compiles and runs well; see
 Chapter 18, Debugging and the rest of this document. Next, generate an
-uuencoded gzipped tar(1) archive, preferably with all files in a single
-directory. Finally, send-pr with category "pkg", a synopsis which includes the
+uuencoded gzipped tar(1) archive that contains all files that make up the
+package. Finally, send-pr with category "pkg", a synopsis which includes the
 package name and version number, a short description of your package (contents
 of the COMMENT variable or DESCR file are OK) and attach the archive to your
 PR.
