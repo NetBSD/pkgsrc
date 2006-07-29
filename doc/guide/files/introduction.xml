@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.15 2006/07/29 14:14:19 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.16 2006/07/29 15:57:04 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -45,55 +45,126 @@ packages for himself, which is a time-costly task.</para>
       such as pthreads and X11, and extended features such as IPv6 support on
       a range of platforms.</para>
 
+<sect2 id="why-pkgsrc">
+<title>Why pkgsrc?</title>
+
+<para>
+pkgsrc provides the following key features:
+</para>
+
+<itemizedlist>
+<listitem><para>Easy building of software from source as well as the creation
+  and installation of binary packages. The source and latest
+  patches are retrieved from a master or mirror download site, checksum
+  verified, then built on your system. Support for binary-only
+  distributions is available for both native platforms and NetBSD
+  emulated platforms.</para></listitem>
+<listitem><para>All packages are installed in a consistent directory tree,
+  including binaries, libraries, man pages and other
+  documentation.</para></listitem>
+<listitem><para>Package dependencies, including when performing package updates,
+  are handled automatically. The configuration files of various
+  packages are handled automatically during updates, so local changes
+  are preserved.</para></listitem>
+<listitem><para>Like NetBSD, pkgsrc is designed with portability in mind and
+  consists of highly portable code. This allows the greatest speed of
+  development when porting to new a platform. This portability also
+  ensures that pkgsrc is <emphasis>consistent across all
+  platforms</emphasis>.</para></listitem>
+<listitem><para>The installation prefix, acceptable software licenses,
+  international encryption requirements and build-time options for a
+  large number of packages are all set in a simple, central
+  configuration file.</para></listitem>
+<listitem><para>The entire source (not including the distribution files) is
+  freely available under a BSD license, so you may extend and adapt
+  pkgsrc to your needs. Support for local packages and patches is
+  available right out of the box, so you can configure it specifically
+  for your environment.</para></listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="intro.platforms">
+<title>Supported platforms</title>
+
+<para>pkgsrc consists of both a source distribution and a binary
+distribution for these operating systems. After retrieving the required
+source or binaries, you can be up and running with pkgsrc in just
+minutes!</para>
+
     <para>pkgsrc was derived from FreeBSD's ports system, and
       initially developed for NetBSD only. Since then, pkgsrc has
       grown a lot, and now supports the following platforms:</para>
 
-    <itemizedlist>
-      <listitem>
-	<para><ulink url="http://developer.apple.com/darwin/">Darwin</ulink>
-	  (<ulink url="http://www.apple.com/macosx/">Mac OS X</ulink>)</para>
-      </listitem>
+<table id="supported-platforms">
+  <title>Platforms supported by pkgsrc</title>
+  <tgroup cols = "2">
+    <thead>
+      <row>
+        <entry>Platform</entry>
+        <entry>Date Support Added</entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+        <entry><ulink url="http://www.NetBSD.org/">NetBSD</ulink></entry>
+        <entry align="center">Aug 1997</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://wwws.sun.com/software/solaris/">Solaris</ulink></entry>
+        <entry align="center">Mar 1999</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.kernel.org/">Linux</ulink></entry>
+        <entry align="center">Jun 1999</entry>
+      </row>
+      <row>
+        <entry>
+          <ulink url="http://developer.apple.com/darwin/">Darwin</ulink>
+          (<ulink url="http://developer.apple.com/macosx/">Mac OS X</ulink>)
+        </entry>
+        <entry align="center">Oct 2001</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.freebsd.org/">FreeBSD</ulink></entry>
+        <entry align="center">Nov 2002</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.openbsd.org/">OpenBSD</ulink></entry>
+        <entry align="center">Nov 2002</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.sgi.com/software/irix/">IRIX</ulink></entry>
+        <entry align="center">Dec 2002</entry>
+      </row>
+      <row>
+        <entry>BSD/OS</entry>
+        <entry align="center">Dec 2003</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www-1.ibm.com/servers/aix/">AIX</ulink></entry>
+        <entry align="center">Dec 2003</entry>
+      </row>
+      <row>
+        <entry>
+          <ulink url="http://www.microsoft.com/windows/sfu/">Interix</ulink>
+          (Microsoft Windows Services for Unix)
+        </entry>
+        <entry align="center">Mar 2004</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.dragonflybsd.org/">DragonFlyBSD</ulink></entry>
+        <entry align="center">Oct 2004</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.tru64.org/">OSF/1</ulink></entry>
+        <entry align="center">Nov 2004</entry>
+      </row>
+    </tbody>
+  </tgroup>
+</table>
+</sect2>
 
-      <listitem>
-	<para><ulink url="http://www.DragonFlyBSD.org/">DragonFly BSD</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://www.FreeBSD.org/">FreeBSD</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para>Microsoft Windows, via <ulink url="http://www.microsoft.com/windows/sfu/">Interix</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://www.sgi.com/software/irix6.5/">IRIX</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://www.linux.org/">Linux</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://www.NetBSD.org/">NetBSD</ulink> (of
-	  course)</para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://h30097.www3.hp.com/">Tru64</ulink>
-	  (Digital UNIX, OSF1)</para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://www.openbsd.org/">OpenBSD</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="http://www.sun.com/solaris/">Solaris</ulink></para>
-      </listitem>
-    </itemizedlist>
-  </sect1>
+</sect1>
 
   <sect1 id="overview">
     <title>Overview</title>
@@ -223,8 +294,8 @@ packages for himself, which is a time-costly task.</para>
 
 </sect2>
 
-  <sect2 id="term.people">
-  <title>People involved in pkgsrc</title>
+  <sect2 id="term.roles">
+  <title>Roles involved in pkgsrc</title>
 
 	<variablelist>
 
