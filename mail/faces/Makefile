@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2006/07/29 05:35:22 minskim Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	4
@@ -21,7 +21,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 WRKSRC=			${WRKDIR}/faces
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run yacc
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=	CCOMP=${CFLAGS:M*:Q}
