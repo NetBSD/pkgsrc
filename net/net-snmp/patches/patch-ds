@@ -1,8 +1,8 @@
-$NetBSD: patch-ds,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-ds,v 1.2 2006/07/29 16:48:27 adam Exp $
 
---- agent/mibgroup/mibII/udpTable.c.orig	2006-03-19 21:28:31.000000000 +0000
+--- agent/mibgroup/mibII/udpTable.c.orig	2006-06-27 17:25:38.000000000 +0200
 +++ agent/mibgroup/mibII/udpTable.c
-@@ -599,7 +599,11 @@ udpTable_load(netsnmp_cache *cache, void
+@@ -615,7 +615,11 @@ udpTable_load(netsnmp_cache *cache, void
      size_t   len;
      int      sname[] = { CTL_NET, PF_INET, IPPROTO_UDP, UDPCTL_PCBLIST };
      char     *udpcb_buf = NULL;
@@ -14,7 +14,7 @@ $NetBSD: patch-ds,v 1.1 2006/03/19 22:03:29 joerg Exp $
      UDPTABLE_ENTRY_TYPE  *nnew;
  
      udpTable_free(NULL, NULL);
-@@ -620,10 +624,18 @@ udpTable_load(netsnmp_cache *cache, void
+@@ -636,10 +640,18 @@ udpTable_load(netsnmp_cache *cache, void
       *  Unpick this into the constituent 'xinpgen' structures, and extract
       *     the 'inpcb' elements into a linked list (built in reverse)
       */
@@ -33,7 +33,7 @@ $NetBSD: patch-ds,v 1.1 2006/03/19 22:03:29 joerg Exp $
          nnew = SNMP_MALLOC_TYPEDEF(UDPTABLE_ENTRY_TYPE);
          if (!nnew)
              break;
-@@ -636,7 +648,11 @@ udpTable_load(netsnmp_cache *cache, void
+@@ -652,7 +664,11 @@ udpTable_load(netsnmp_cache *cache, void
  #endif
  
  	udp_head   = nnew;
