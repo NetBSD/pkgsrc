@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5256 2006/07/29 22:41:53 heinz Exp $
+$NetBSD: TODO,v 1.5257 2006/07/30 14:22:01 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1169,7 +1169,6 @@ Suggested package updates
 	o vfu-4.03
 	o vifm-0.3a
 	o visual-regexp-3.1
-	o vlc-0.8.4a
 	o vmware-module-3.2.2
 	o vmware-5.5
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
