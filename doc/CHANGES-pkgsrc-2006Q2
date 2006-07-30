@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.44 2006/07/30 12:14:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.45 2006/07/30 19:32:05 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -97,3 +97,9 @@ Pullup ticket 1760 - requested by uebayasi
 security update for thunderbird
 Pullup ticket 1758 - requested by adrianp
 security fix for zoo
+Pullup ticket 1761 - requested by wiz
+security update for apache
+Pullup ticket 1762 - requested by wiz
+sync ap-ssl with apache update
+Pullup ticket 1763 - requested by wiz
+security update for apache
