@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.16 2006/07/29 15:57:04 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.17 2006/07/30 00:30:55 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -24,7 +24,7 @@ packages for himself, which is a time-costly task.</para>
       </listitem>
 
       <listitem>
-	<para><filename role="pkg">www/mozilla</filename> - The Mozilla
+	<para><filename role="pkg">www/firefox</filename> - The Firefox
 	  web browser</para>
       </listitem>
 

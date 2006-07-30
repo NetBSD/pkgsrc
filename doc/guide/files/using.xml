@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.22 2006/07/29 15:57:04 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.23 2006/07/30 00:30:55 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -244,7 +244,7 @@ the online index of packages, or run <command>make readme</command>
 from the <filename>pkgsrc</filename> directory to build local
 <filename>README.html</filename> files for all packages, viewable with any web browser such as
 <filename role="pkg">www/lynx</filename> or 
-<filename role="pkg">www/mozilla</filename>.</para>
+<filename role="pkg">www/firefox</filename>.</para>
 
 <para>The default <emphasis>prefix</emphasis> for installed packages is
 <filename>/usr/pkg</filename>. If you wish to change this, you should do
