@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.30 2006/07/24 10:32:36 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.31 2006/07/30 00:30:55 wiz Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -878,7 +878,7 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 	<listitem>
 	  <para>This target generates a <filename>README.html</filename> file, which
 	    can be viewed using a browser such as
-	    <filename role="pkg">www/mozilla</filename> or
+	    <filename role="pkg">www/firefox</filename> or
 	    <filename role="pkg">www/links</filename>.
 	    The generated files contain references to any
 	    packages which are in the <varname>PACKAGES</varname> directory on
