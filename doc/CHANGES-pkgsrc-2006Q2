@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.42 2006/07/28 12:52:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.43 2006/07/30 11:43:31 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -91,3 +91,7 @@ Pullup ticket 1756 - requested by wiz
 build fixes for python23 modules
 Pullup ticket 1757 - requested by tron
 security update for apache2
+Pullup ticket 1759 - requested by uebayasi
+security update for firefox
+Pullup ticket 1760 - requested by uebayasi
+security update for thunderbird
