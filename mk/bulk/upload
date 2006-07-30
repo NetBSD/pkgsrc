@@ -1,12 +1,25 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.30 2006/06/22 11:09:18 joerg Exp $
+# $NetBSD: upload,v 1.31 2006/07/30 14:31:10 jschauma Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
 #
 
+install_required()
+{
+	pkg=$1
+	( cd $pkg; ${BMAKE} bulk-install )
+	if [ $? -gt 0 ]; then
+		echo "Unable to install required package $pkg!"
+		echo "Bailing out -- you're on your own."
+		exit 1
+	fi
+}
+
 MD5="digest md5";
 SHA1="digest sha1";
+
+REQUIRED_PACKAGES="pkgtools/pkglint net/rsync security/audit-packages"
 
 opsys=`uname -s`
 case "$opsys" in
@@ -68,12 +81,12 @@ upload_vulnerable="$TMP"/upload_vulnerable
 pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
 distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
-gzip_cmd=`cd pkgtools/pkglint; make show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
+gzip_cmd=`cd pkgtools/pkglint; ${BMAKE} show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
 
 # Pull in some pkgs needed
-( cd pkgtools/pkglint ;        ${BMAKE} bulk-install )
-( cd net/rsync ;               ${BMAKE} bulk-install )
-( cd security/audit-packages ; ${BMAKE} bulk-install )
+for pkg in ${REQUIRED_PACKAGES}; do
+	install_required $pkg
+done
 
 echo "Making sure vulnerability-list is up-to-date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = "yes" ]
