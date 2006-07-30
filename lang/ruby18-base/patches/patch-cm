@@ -1,0 +1,32 @@
+$NetBSD: patch-cm,v 1.1 2006/07/30 23:12:50 taca Exp $
+
+--- lib/optparse.rb.orig	2005-11-22 23:53:16.000000000 +0900
++++ lib/optparse.rb
+@@ -306,15 +306,8 @@ class OptionParser
+     end
+ 
+     #
+-    # OptionParser::Switch#parse_arg(arg) {non-serious error handler}
+-    #
+-    # Parses argument and returns rest of ((|arg|)), and matched portion
+-    # to the argument pattern.
+-    #  :Parameters:
+-    #    : ((|arg|))
+-    #      option argument to be parsed.
+-    #    : (({block}))
+-    #      yields when the pattern doesn't match sub-string.
++    # Parses +arg+ and returns rest of +arg+ and matched portion to the
++    # argument pattern. Yields when the pattern doesn't match substring.
+     #
+     def parse_arg(arg)
+       pattern or return nil, arg
+@@ -815,8 +808,7 @@ class OptionParser
+     yield self if block_given?
+   end
+ 
+-  # :nodoc:
+-  def add_officious
++  def add_officious  # :nodoc:
+     list = base()
+     Officious.each_pair do |opt, block|
+       list.long[opt] ||= block.call(self)
