@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.43 2006/07/30 11:43:31 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.44 2006/07/30 12:14:35 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -95,3 +95,5 @@ Pullup ticket 1759 - requested by uebayasi
 security update for firefox
 Pullup ticket 1760 - requested by uebayasi
 security update for thunderbird
+Pullup ticket 1758 - requested by adrianp
+security fix for zoo
