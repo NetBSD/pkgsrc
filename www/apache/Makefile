@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.185 2006/04/23 00:12:42 jlam Exp $
+# $NetBSD: Makefile,v 1.185.2.1 2006/07/30 19:21:26 salo Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.34
+DISTNAME=		apache_1.3.36
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/}
@@ -16,13 +15,13 @@ HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server
 
 NETBSD_LOGO=		sitedrivenby.gif
-SITES_${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
+SITES.${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
 
-MODSSL_VERSION=		2.8.25
-MODSSL_DISTNAME=	mod_ssl-${MODSSL_VERSION}-1.3.34
+MODSSL_VERSION=		2.8.27
+MODSSL_DISTNAME=	mod_ssl-${MODSSL_VERSION}-1.3.36
 MODSSL_DIST=		${MODSSL_DISTNAME}.tar.gz
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
-SITES_${MODSSL_DIST}=	http://www.modssl.org/source/ \
+SITES.${MODSSL_DIST}=	http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
 			ftp://ftp.funet.fi/pub/crypt/cryptography/libs/modssl/source/
 
@@ -73,7 +72,7 @@ APACHE_SUEXEC_DOCROOT?=	${PREFIX}/share/httpd/htdocs
 APACHE_SUEXEC_PATH=	/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 			--suexec-caller=${APACHE_USER}			\
-			--suexec-safepath='${APACHE_SUEXEC_PATH}'	\
+			--suexec-safepath=${APACHE_SUEXEC_PATH:Q}	\
 			--suexec-docroot=${APACHE_SUEXEC_DOCROOT}
 CONFIGURE_ARGS+=	--enable-suexec 				\
 			${APACHE_SUEXEC_CONFIGURE_ARGS:M--suexec-*}
@@ -148,7 +147,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 #
 # Fix paths in the apache manpages.
 #
-SUBST_CLASSES+=		man paths
+SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	src/support/*.1 src/support/*.8
 SUBST_SED.man=		-e 's,/usr/local/apache/conf,${PKG_SYSCONFDIR},'
@@ -158,6 +157,7 @@ SUBST_SED.man+=		-e 's,/usr/local/apache/logs,${VARBASE}/log/httpd,'
 SUBST_SED.man+=		-e 's,/usr/local/apache,${PREFIX}/share/httpd/htdocs,'
 SUBST_SED.man+=		-e 's,/usr/web,${PREFIX}/share/httpd/htdocs,'
 
+SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config.layout
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
@@ -176,34 +176,34 @@ MAKE_ENV+=		FIND=${FIND:Q} CHGRP=${CHGRP:Q}
 .include "../../mk/dlopen.buildlink3.mk"
 
 post-extract:
-	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
-	@${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
-	@${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
-	@${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
-	@${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
-	@${CP} ${FILESDIR}/config.layout ${WRKSRC}
+	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
+	${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
+	${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
+	${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
+	${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
+	${CP} ${FILESDIR}/config.layout ${WRKSRC}
 
 pre-patch:
-	@cd ${WRKSRC} && ${CAT}						\
+	cd ${WRKSRC} && ${CAT}						\
 		${MODSSL_SRC}/pkg.addon/addon.patch			\
 		${MODSSL_SRC}/pkg.eapi/eapi.patch			\
 		${MODSSL_SRC}/pkg.sslcfg/sslcfg.patch			\
 		${MODSSL_SRC}/pkg.sslmod/sslmod.patch			\
 		${MODSSL_SRC}/pkg.sslsup/sslsup.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	@cd ${WRKSRC} && ${TAIL} +160					\
+	cd ${WRKSRC} && ${TAIL} +160					\
 		${MODSSL_SRC}/pkg.ssldoc/ssldoc.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
-	@cd ${WRKSRC}/src/support;					\
+	cd ${WRKSRC}/src/support;					\
 	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
 		apxs.pl > apxs.pl.sed;					\
 	${MV} apxs.pl.sed apxs.pl
 
 pre-install:
-	@${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-install:
 .if !defined(NOPIC)

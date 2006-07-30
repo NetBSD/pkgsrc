@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.10 2005/03/24 22:42:59 jlam Exp $
+# $NetBSD: module.mk,v 1.10.10.1 2006/07/30 19:21:26 salo Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install apache modules.
@@ -23,23 +23,25 @@
 .if !defined(_APACHE_MODULE_MK)
 _APACHE_MODULE_MK=	# defined
 
-APACHE_MODULE=		# defined
+APACHE_MODULE=		yes
 
 .include "../../www/apache/buildlink3.mk"
 
 APACHE_MODULE_SRCDIR?=	${WRKSRC}
 APACHE_MODULE_SRC?=	*.c
 
+.PHONY: apache-module-build
 apache-module-build:
 	${_PKG_SILENT}${_PKG_DEBUG} \
 	cd ${APACHE_MODULE_SRCDIR} && \
-		${SETENV} PATH=${PATH} \
+		${SETENV} PATH=${PATH:Q} \
 		${APXS} ${CPPFLAGS} ${LDFLAGS} \
 			-c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
 
 do-build: apache-module-build
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 
+.PHONY: apache-module-install
 apache-module-install:
 	${_PKG_SILENT}${PKG_DEBUG}					\
 	cd ${APACHE_MODULE_SRCDIR} && ${APXS} -i ${APACHE_MODULE_NAME}
