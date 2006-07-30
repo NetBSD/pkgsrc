@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.859 2006/07/30 11:20:57 jdolecek Exp $
+$NetBSD: CHANGES-2006,v 1.860 2006/07/30 23:13:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3605,3 +3605,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/gens to 2.12rc3nb9 [dillo 2006-07-29]
 	Updated www/apache to 1.3.27 [jdolecek 2006-07-30]
 	Updated www/ap-ssl to 2.8.28 [jdolecek 2006-07-30]
+	Updated lang/ruby18-base to 1.8.4nb2 [taca 2006-07-30]
