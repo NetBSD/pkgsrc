@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.52 2006/07/19 22:45:14 wiz Exp $
+$NetBSD: distinfo,v 1.53 2006/07/30 11:17:51 jdolecek Exp $
 
-SHA1 (apache_1.3.36.tar.gz) = ca91b3e347d92a65df6a3629cdec45665135fa7c
-RMD160 (apache_1.3.36.tar.gz) = b032cb2f9c0ac84116a4dd3b91752f063e146f6b
-Size (apache_1.3.36.tar.gz) = 2477854 bytes
-SHA1 (mod_ssl-2.8.27-1.3.36.tar.gz) = c6d2d7729dd98f5324cacc3711080f16053748dc
-RMD160 (mod_ssl-2.8.27-1.3.36.tar.gz) = 7acbcad5440f57f7250a68deb424360a15ad558a
-Size (mod_ssl-2.8.27-1.3.36.tar.gz) = 820432 bytes
+SHA1 (apache_1.3.37.tar.gz) = b422fac1dda10baa483e8f4378dff58faf3f85b4
+RMD160 (apache_1.3.37.tar.gz) = de84adf2fd0a745c32072ca5dc5e1374cfcf04f7
+Size (apache_1.3.37.tar.gz) = 2665370 bytes
+SHA1 (mod_ssl-2.8.28-1.3.37.tar.gz) = 9db2a7240e499da2b99d0df9c1a6fbae0580ba0b
+RMD160 (mod_ssl-2.8.28-1.3.37.tar.gz) = 6b12c0a52fe0fbb7b91221d1cb37f93fbe59bb11
+Size (mod_ssl-2.8.28-1.3.37.tar.gz) = 820417 bytes
 SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
 RMD160 (sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
 Size (sitedrivenby.gif) = 8519 bytes
