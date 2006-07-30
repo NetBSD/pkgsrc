@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.8 2006/07/29 16:48:27 adam Exp $
+$NetBSD: patch-ag,v 1.9 2006/07/30 06:38:10 adam Exp $
 
 --- agent/mibgroup/host/hr_storage.c.orig	2006-06-05 19:38:24.000000000 +0200
 +++ agent/mibgroup/host/hr_storage.c
@@ -59,3 +59,15 @@ $NetBSD: patch-ag,v 1.8 2006/07/29 16:48:27 adam Exp $
  #elif HAVE_SYS_POOL_H
                  long_return = 0;
                  for (i = 0;
+@@ -821,11 +818,6 @@ really_try_next:
+ 	    case HRS_TYPE_SWAP:
+ 		long_return = -1;
+ 		break;
+-#if defined(MBSTAT_SYMBOL)
+-           case HRS_TYPE_MBUF:
+-                long_return = mbstat.m_mbufs;
+-                break;
+-#endif
+ #elif defined(TOTAL_MEMORY_SYMBOL) || defined(USE_SYSCTL_VM)
+             case HRS_TYPE_MEM:
+                 long_return = memory_totals.t_arm;
