@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.875 2006/07/31 21:44:45 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.876 2006/07/31 22:04:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3623,3 +3623,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamassassin to 3.1.4 [heinz 2006-07-31]
 	Updated audio/bmp to 0.9.7.1 [jmmv 2006-07-31]
 	Updated audio/bmp-esound to 0.9.7.1 [jmmv 2006-07-31]
+	Updated x11/gtksourceview to 1.6.2 [wiz 2006-07-31]
