@@ -1,4 +1,4 @@
-# $NetBSD: transform-mipspro-cc,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: transform-mipspro-cc,v 1.2 2006/07/31 14:43:48 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,7 @@ case $arg in
 ######################################################################
 -O*)
 	arg=
-	msg_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -56,7 +56,7 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg="-Wl,-rpath,${arg#-Wl,-R}"
-	msg_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -72,7 +72,7 @@ case $arg in
 ######################################################################
 -W*)
 	arg=
-	msg_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
 	addtocache=yes
 	;;
 esac
