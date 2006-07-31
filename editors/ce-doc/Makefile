@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/21 23:52:45 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/31 21:13:33 rillig Exp $
 #
 
 .include "../../editors/ce/Makefile.common"
@@ -10,6 +10,7 @@ COMMENT+=		, documentation
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILD=		yes
+USE_LANGUAGES=		c
 
 INSTALL_TARGET=		doc-install
 
