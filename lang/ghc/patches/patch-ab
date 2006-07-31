@@ -1,16 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2005/05/21 20:22:21 kristerw Exp $
+$NetBSD: patch-ab,v 1.7 2006/07/31 02:07:13 kristerw Exp $
 
---- ../ghc-6.2.1/ghc/includes/PosixSource.h.orig	Sat May 22 19:36:17 2004
-+++ ../ghc-6.2.1/ghc/includes/PosixSource.h	Sat May 22 19:36:30 2004
-@@ -10,9 +10,11 @@
- #ifndef POSIXSOURCE_H
- #define POSIXSOURCE_H
+--- mk/bootstrap.mk.orig	2006-07-29 01:11:13.000000000 +0200
++++ mk/bootstrap.mk	2006-07-29 01:12:31.000000000 +0200
+@@ -149,7 +149,7 @@
+ HC_BOOT_LIBS += -lHSreadline -lHStemplate-haskell -lHSunix -lHSunix_cbits
+ endif
  
-+#if 0
- #define _POSIX_SOURCE   1
- #define _POSIX_C_SOURCE 199506L
- #define _ISOC9X_SOURCE
-+#endif
+-HC_BOOT_LIBS +=  -lHSCabal -lHShaskell98 -lHSbase -lHSbase_cbits -lHSparsec -lHSrts -lgmp -lm $(EXTRA_HC_BOOT_LIBS)
++HC_BOOT_LIBS +=  -lHSCabal -lHShaskell98 -lHSbase -lHSbase_cbits -lHSparsec -lHSrts -lgmp -Wl,-R@PREFIX@/lib -L@PREFIX@/lib -lm $(EXTRA_HC_BOOT_LIBS)
  
- /* Let's be ISO C9X too... */
- 
+ ifeq "$(GhcLibsWithReadline)" "YES"
+ HC_BOOT_LIBS += $(patsubst %, -l%, $(LibsReadline))
