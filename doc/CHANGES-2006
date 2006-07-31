@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.868 2006/07/31 09:12:48 adam Exp $
+$NetBSD: CHANGES-2006,v 1.869 2006/07/31 11:29:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3612,3 +3612,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix to 2.3.2 [martti 2006-07-31]
 	Updated chat/gg2 to 2.2.9 [adam 2006-07-31]
 	Updated chat/loudmouth to 1.0.4 [adam 2006-07-31]
+	Updated lang/ruby18-base to 1.8.4nb3 [taca 2006-07-31]
