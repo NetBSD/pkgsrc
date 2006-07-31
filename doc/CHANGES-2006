@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.865 2006/07/31 02:10:37 kristerw Exp $
+$NetBSD: CHANGES-2006,v 1.866 2006/07/31 04:58:08 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3609,3 +3609,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/udfclient to 0.5.2 [reinoud 2006-07-31]
 	Updated security/cvm to 0.81 [schmonz 2006-07-31]
 	Updated lang/ghc to 6.4.2nb3 [kristerw 2006-07-31]
+	Updated mail/postfix to 2.3.2 [martti 2006-07-31]
