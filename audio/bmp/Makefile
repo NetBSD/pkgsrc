@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/07/06 00:15:14 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/31 21:43:55 jmmv Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
 
 .include "Makefile.common"
-
-PKGREVISION=		5
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
@@ -14,6 +12,7 @@ PLIST_SUBST+=	CDAUDIO="@comment "
 .else
 PLIST_SUBST+=	CDAUDIO=""
 .endif
+PRINT_PLIST_AWK+=	/cdaudio/ { print "$${CDAUDIO}" $$0; next }
 
 # XXX Workaround a crash during shutdown that happens when dlclose(3)ing
 # any open plugin.  libstdc++ gets dynamically linked in when the id3lib
@@ -28,3 +27,10 @@ LDFLAGS.NetBSD+=	-lstdc++ -lm
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
+
+# gcc 4.x generates code that produces background noise during playback.
+# Disabling optimizations when using this compiler solves the problem.
+.if !empty(CC_VERSION:Mgcc-4*)
+CFLAGS+=		-O0
+CXXFLAGS+=		-O0
+.endif
