@@ -1,19 +1,13 @@
-$NetBSD: distinfo,v 1.14 2006/07/27 23:45:08 kristerw Exp $
+$NetBSD: distinfo,v 1.15 2006/07/31 02:07:13 kristerw Exp $
 
+SHA1 (ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz) = 29c1a17a83ec0ddec8ff231e009c740ebc61dd6c
+RMD160 (ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz) = 5ce775a19797fe257357fedd33db2354dd50d2de
+Size (ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz) = 9927295 bytes
 SHA1 (ghc-6.4.2-src.tar.bz2) = 60bcea323f851caa84d49c7731b86164d5cefa42
 RMD160 (ghc-6.4.2-src.tar.bz2) = 19943eb2673e663973e64739cdf23720b6f36d38
 Size (ghc-6.4.2-src.tar.bz2) = 6954958 bytes
-SHA1 (ghc-6.2.1-src.tar.bz2) = 84343ff06ee5645ee3f8b428635525e5ebdfcc65
-RMD160 (ghc-6.2.1-src.tar.bz2) = 9f041e207379715fcb7ee378743baa42d3be0311
-Size (ghc-6.2.1-src.tar.bz2) = 5367409 bytes
-SHA1 (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 422a0e6865517f7d5e5adbd6c13537391358020b
-RMD160 (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 9701efd3e184e97a4a68667a7551884c9dc9074f
-Size (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 7780890 bytes
-SHA1 (patch-aa) = 3765860d28975bca503468dab65cdb16e956dcdf
-SHA1 (patch-ab) = 623f5917bd1b9ffa5415a27c90f94b685fddd962
-SHA1 (patch-ac) = 76412be08baf638d526f568adf224627d09ba72b
-SHA1 (patch-ad) = 73f5593587d20ad8f6bab5b6586c043c838e83a8
-SHA1 (patch-ae) = 994e5c93c93e82c6c375f21ae172eac5a887d756
-SHA1 (patch-af) = a0c44c8b43b4ca7489a4e14a247ca959764e7bc5
-SHA1 (patch-ag) = 9d9e39fbb97c516fcd9d8775cfe4f88d0ecbdb43
+SHA1 (patch-aa) = 7d0890361fb7642ab8c2e8066e546dc543cd5d62
+SHA1 (patch-ab) = ae5fea00aad1f524fe4d26f614873c6e42a26603
+SHA1 (patch-af) = e7432183001727b5c4b56260d0404fd782ad59af
+SHA1 (patch-ag) = 2b51360567c3742e1c9f57b3e01a5cc45f04d436
 SHA1 (patch-ah) = 243b1b98ce48873ded6c45dd0ff3541e8284bf00
