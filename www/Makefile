@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2006/07/22 19:43:55 abs Exp $
+# $NetBSD: Makefile,v 1.465 2006/07/31 17:09:12 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -275,6 +275,7 @@ SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
 SUBDIR+=	py-jonpy
+SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-pcgi
 SUBDIR+=	py-zpublisher
