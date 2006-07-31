@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.872 2006/07/31 17:09:12 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.873 2006/07/31 19:53:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3618,3 +3618,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey-bin to 1.0.3 [ghen 2006-07-31]
 	Updated graphics/ImageMagick to 6.2.8.7 [adam 2006-07-31]
 	Added www/py-moin version 1.5.4 [joerg 2006-07-31]
+	Updated finance/gnucash to 2.0.1 [wiz 2006-07-31]
