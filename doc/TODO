@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5261 2006/07/31 12:38:19 ghen Exp $
+$NetBSD: TODO,v 1.5262 2006/07/31 18:10:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,7 @@ Suggested package updates
 	o cyrus-sasl-2.1.22
 	o dap-2.1.5
 	o dar-2.3.1
-	o dasher-4.1.4 [unstable]
+	o dasher-4.0.3
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -556,6 +556,7 @@ Suggested package updates
 	o gnome-themes-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.6
+	o gnucash-2.0.1
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
@@ -579,6 +580,7 @@ Suggested package updates
 	o gss-0.0.17
 	o gtetrinet-0.7.9
 	o gthumb-2.7.7
+	o gtk-doc-1.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtk2+-2.10.1 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
@@ -586,6 +588,7 @@ Suggested package updates
 	o gtkam-0.1.13
 	o gtkhtml-3.10.2
 	o gtksee-0.6.0b
+	o gtksourceview-1.6.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-1.8.0
@@ -956,6 +959,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.15
+	o prboom-2.4.4
 	o prelude-lml-0.9.6
 	o proj-4.4.9
 	o projclock-0.9
@@ -1253,6 +1257,7 @@ Suggested package updates
 	o yudit-2.8.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zenity-2.14.3
 	o zile-2.2.17
 	o zircon-1.18.256
 	o zope-2.9.4
