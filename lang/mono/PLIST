@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/07/26 10:57:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/07/31 18:10:30 wiz Exp $
 bin/al
 bin/caspol
 bin/cert2spc
@@ -45,6 +45,10 @@ bin/wsdl
 bin/wsdl2
 bin/xbuild
 bin/xsd
+etc/mono/1.0/DefaultWsdlHelpGenerator.aspx
+etc/mono/1.0/machine.config
+etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+etc/mono/2.0/machine.config
 include/mono/cil/opcode.def
 include/mono/interpreter/embed.h
 include/mono/io-layer/access.h
