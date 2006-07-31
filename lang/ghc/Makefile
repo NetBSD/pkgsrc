@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/31 02:07:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.32 2006/07/31 18:10:00 wiz Exp $
 
 DISTNAME=	ghc-6.4.2
 PKGREVISION=	3
@@ -36,12 +36,12 @@ pre-configure:
 
 # The ghc compiler does normally split the generated C files into small
 # parts before sending them to gcc, to enable the linker to eliminate
-# unused parts.  This does however not play nice with tha pkgsrc
+# unused parts.  This does however not play nice with the pkgsrc
 # framework, and the result is that the build takes more than 5 times
 # as long than when the files are not split.  See
 #    http://mail-index.netbsd.org/tech-pkg/2006/07/30/0005.html
 # for a description of the problem.
-# Disable file splitting until until pkgsrc has been improved.
+# Disable file splitting until pkgsrc has been improved.
 pre-build:
 	${ECHO} "SplitObjs=NO" > ${WRKSRC}/mk/build.mk
 
