@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/07/05 05:37:39 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/07/31 09:06:54 adam Exp $
 
-DISTNAME=	gg2-2.2.8
-PKGREVISION=	5
+DISTNAME=	gg2-2.2.9
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ggadu/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://ggadu.sourceforge.net/
