@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.874 2006/07/31 21:13:26 heinz Exp $
+$NetBSD: CHANGES-2006,v 1.875 2006/07/31 21:44:45 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3621,3 +3621,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/py-moin version 1.5.4 [joerg 2006-07-31]
 	Updated finance/gnucash to 2.0.1 [wiz 2006-07-31]
 	Updated mail/spamassassin to 3.1.4 [heinz 2006-07-31]
+	Updated audio/bmp to 0.9.7.1 [jmmv 2006-07-31]
+	Updated audio/bmp-esound to 0.9.7.1 [jmmv 2006-07-31]
