@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5263 2006/07/31 19:53:22 wiz Exp $
+$NetBSD: TODO,v 1.5264 2006/07/31 22:04:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o gtkam-0.1.13
 	o gtkhtml-3.10.2
 	o gtksee-0.6.0b
-	o gtksourceview-1.6.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-1.8.0
