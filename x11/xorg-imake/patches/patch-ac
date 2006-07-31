@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2006/04/28 21:52:19 joerg Exp $
+$NetBSD: patch-ac,v 1.8 2006/07/31 16:39:42 joerg Exp $
 
 --- config/cf/NetBSD.cf.in.orig	2005-11-30 06:20:06.000000000 +0100
 +++ config/cf/NetBSD.cf.in
@@ -38,6 +38,15 @@ $NetBSD: patch-ac,v 1.7 2006/04/28 21:52:19 joerg Exp $
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	YES
  #  endif
+@@ -231,7 +231,7 @@ XCOMM operating system:  OSName (OSMajor
+ #  define ServerExtraSysLibs	-li386
+ # endif
+ #else
+-# define OptimizedCDebugFlags 	-O2
++# define OptimizedCDebugFlags 	-O2 GccAliasingArgs
+ # if defined(SparcArchitecture)
+ #  define ServerOSDefines 	-DDDXOSINIT
+ # elif defined(AlphaArchitecture)
 @@ -284,6 +284,8 @@ XCOMM operating system:  OSName (OSMajor
  #  ifndef XFree86ConsoleDefines
  #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
@@ -67,3 +76,12 @@ $NetBSD: patch-ac,v 1.7 2006/04/28 21:52:19 joerg Exp $
  # include <xorg.cf>
  #endif
  
+@@ -651,7 +664,7 @@ sed 's/\.[0-9]*$$//'`
+  */
+ #ifdef PpcArchitecture
+ 
+-# define OptimizedCDebugFlags 	-O2
++# define OptimizedCDebugFlags 	-O2 GccAliasingArgs
+ # define XkbServerDefines	-DXKB_ALWAYS_USES_SOFT_REPEAT
+ 
+ # ifndef DoLoadableServer
