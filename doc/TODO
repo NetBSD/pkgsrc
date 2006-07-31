@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5258 2006/07/30 20:02:02 wiz Exp $
+$NetBSD: TODO,v 1.5259 2006/07/31 09:12:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -699,7 +699,6 @@ Suggested package updates
 	o linuxsms-0.77
 	o lmbench-2.5
 	o logsurfer-1.6b [pkg/33892]
-	o loudmouth-1.0.4
 	o lout-3.31
 	o lucy-1.19p
 	o lwp-2.1
