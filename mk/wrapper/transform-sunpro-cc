@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.10 2005/11/28 13:43:24 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.11 2006/07/31 14:43:48 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,7 +41,7 @@ case $arg in
 ######################################################################
 -O[12345])
 	arg="-xO${arg#-O}"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -50,7 +50,7 @@ case $arg in
 ######################################################################
 -O?*)
 	arg=
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -59,7 +59,7 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg="${arg#-Wl,}"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -67,7 +67,7 @@ case $arg in
 ######################################################################
 -Wl,-soname=*)
 	arg="-h${arg#-Wl,-soname=}"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -76,7 +76,7 @@ case $arg in
 ######################################################################
 -Wl,--export-dynamic)
 	arg=
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -91,7 +91,7 @@ case $arg in
 ######################################################################
 -W*)
 	arg=
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -99,7 +99,7 @@ case $arg in
 ######################################################################
 -static)
 	arg="-Bstatic"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -107,7 +107,7 @@ case $arg in
 ######################################################################
 --export-dynamic|-shared)
 	arg="-G"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -115,7 +115,7 @@ case $arg in
 ######################################################################
 -f[Pp][Ii][Cc])
 	arg="-Kpic"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -123,7 +123,7 @@ case $arg in
 ######################################################################
 -pthread)
 	arg="-mt -lpthread"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	split_arg=yes
 	;;
@@ -135,7 +135,7 @@ case $arg in
 ######################################################################
 -fast)
 	arg="-fast -xnolibmopt"
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	split_arg=yes
 	;;
@@ -150,7 +150,7 @@ case $arg in
 ######################################################################
 -f*)
 	arg=
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -158,7 +158,7 @@ case $arg in
 ######################################################################
 -ansi|-pedantic|-pipe|-traditional)
 	arg=
-	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
 esac
