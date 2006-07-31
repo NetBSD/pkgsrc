@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2006/03/22 23:05:39 taca Exp $
+# $NetBSD: Makefile,v 1.20.4.1 2006/07/31 22:43:12 salo Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -97,16 +97,9 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/tcltklib/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
-pre-build:
-	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
+pre-install:
+	cd ${WRKSRC}; ${FIND} . -name '*.orig' -exec ${RM} -f {} \;
 
-#
-# XXX: Ruby 1.8.3 create extra directories.
-#
-post-build:
-	@cd ${WRKSRC}/.ext; \
-		${FIND} . -depth -type d -print \
-			-exec ${RMDIR} {} \; > /dev/null 2>&1; ${TRUE}
 post-install:
 	${STRIP} ${RUBY}
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb

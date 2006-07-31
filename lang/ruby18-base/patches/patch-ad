@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2006/01/03 14:37:24 taca Exp $
+$NetBSD: patch-ad,v 1.4.4.1 2006/07/31 22:43:13 salo Exp $
+
+# now contains fix for JVN#83768862 (part of CVE-2006-3694)
 
 --- eval.c.orig	2005-12-20 22:41:47.000000000 +0900
 +++ eval.c
@@ -43,7 +45,17 @@ $NetBSD: patch-ad,v 1.4 2006/01/03 14:37:24 taca Exp $
  	}
  	cbase = cbase->nd_next;
      }
-@@ -3886,7 +3889,7 @@ rb_eval(self, n)
+@@ -2097,7 +2100,8 @@ rb_alias(klass, name, def)
+ 	}
+     }
+     st_insert(RCLASS(klass)->m_tbl, name,
+-      (st_data_t)NEW_METHOD(NEW_FBODY(body, def, origin), orig->nd_noex));
++	      (st_data_t)NEW_METHOD(NEW_FBODY(body, def, origin),
++				    NOEX_WITH_SAFE(orig->nd_noex)));
+     if (singleton) {
+ 	rb_funcall(singleton, singleton_added, 1, ID2SYM(name));
+     }
+@@ -3886,7 +3890,7 @@ rb_eval(self, n)
  	if (NIL_P(ruby_class)) {
  	    rb_raise(rb_eTypeError, "no class to undef method");
  	}
@@ -52,7 +64,7 @@ $NetBSD: patch-ad,v 1.4 2006/01/03 14:37:24 taca Exp $
  	result = Qnil;
  	break;
  
-@@ -3894,12 +3897,13 @@ rb_eval(self, n)
+@@ -3894,12 +3898,13 @@ rb_eval(self, n)
  	if (NIL_P(ruby_class)) {
  	    rb_raise(rb_eTypeError, "no class to make alias");
  	}
@@ -68,3 +80,26 @@ $NetBSD: patch-ad,v 1.4 2006/01/03 14:37:24 taca Exp $
  	result = Qnil;
  	break;
  
+@@ -5638,6 +5643,11 @@ rb_call0(klass, recv, id, oid, argc, arg
+     TMP_PROTECT;
+     volatile int safe = -1;
+ 
++    if (NOEX_SAFE(flags) > ruby_safe_level &&
++	!(flags&NOEX_TAINTED) && ruby_safe_level == 0 && NOEX_SAFE(flags) > 2) {
++	rb_raise(rb_eSecurityError, "calling insecure method: %s",
++		 rb_id2name(id));
++    }
+     switch (ruby_iter->iter) {
+       case ITER_PRE:
+       case ITER_PAS:
+@@ -5742,10 +5752,6 @@ rb_call0(klass, recv, id, oid, argc, arg
+ 	    b2 = body = body->nd_next;
+ 
+ 	    if (NOEX_SAFE(flags) > ruby_safe_level) {
+-		if (!(flags&NOEX_TAINTED) && ruby_safe_level == 0 && NOEX_SAFE(flags) > 2) {
+-		    rb_raise(rb_eSecurityError, "calling insecure method: %s",
+-			     rb_id2name(id));
+-		}
+ 		safe = ruby_safe_level;
+ 		ruby_safe_level = NOEX_SAFE(flags);
+ 	    }
