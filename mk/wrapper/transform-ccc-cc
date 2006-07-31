@@ -1,4 +1,4 @@
-# $NetBSD: transform-ccc-cc,v 1.1 2004/11/20 04:37:08 grant Exp $
+# $NetBSD: transform-ccc-cc,v 1.2 2006/07/31 14:43:48 jlam Exp $
 #
 
 case $arg in
@@ -8,7 +8,7 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg="-Wl,-rpath,${arg#-Wl,-R}"
-	msg_log $wrapperlog "   (transform-ccc-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-ccc-cc) to: $arg"
 	addtocache=yes
 	;;
 -W[LlSc],*)
@@ -16,17 +16,17 @@ case $arg in
 	;;
 -W*)
 	arg=
-	msg_log $wrapperlog "   (transform-ccc-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-ccc-cc) to: $arg"
 	addtocache=yes
 	;;
 -mieee)
 	arg="-ieee"
-	msg_log $wrapperlog "	(transform-ccc-cc) to: $arg"
+	debug_log $wrapperlog "	(transform-ccc-cc) to: $arg"
 	addtocache=yes
 	;;
 -g)
 	arg="-g3"
-	msg_log $wrapperlog "   (transform-ccc-cc) to: $arg"
+	debug_log $wrapperlog "   (transform-ccc-cc) to: $arg"
 	addtocache=yes
 	;;
 esac
