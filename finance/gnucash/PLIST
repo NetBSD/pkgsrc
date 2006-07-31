@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/07/11 12:58:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/07/31 19:48:41 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -253,6 +253,7 @@ share/gconf/schemas/apps_gnucash_dialog_common.schemas
 share/gconf/schemas/apps_gnucash_dialog_prices.schemas
 share/gconf/schemas/apps_gnucash_dialog_print_checks.schemas
 share/gconf/schemas/apps_gnucash_dialog_reconcile.schemas
+share/gconf/schemas/apps_gnucash_dialog_scheduled_transctions.schemas
 share/gconf/schemas/apps_gnucash_dialog_totd.schemas
 share/gconf/schemas/apps_gnucash_general.schemas
 share/gconf/schemas/apps_gnucash_history.schemas
