@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/30 23:12:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/07/31 11:29:01 taca Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -2895,7 +2895,6 @@ ${RUBY_SYSRIDIR}/OptionParser/Switch/summarize-i.yaml
 ${RUBY_SYSRIDIR}/OptionParser/abort-i.yaml
 ${RUBY_SYSRIDIR}/OptionParser/accept-c.yaml
 ${RUBY_SYSRIDIR}/OptionParser/accept-i.yaml
-${RUBY_SYSRIDIR}/OptionParser/add_officious-i.yaml
 ${RUBY_SYSRIDIR}/OptionParser/banner-i.yaml
 ${RUBY_SYSRIDIR}/OptionParser/base-i.yaml
 ${RUBY_SYSRIDIR}/OptionParser/cdesc-OptionParser.yaml
