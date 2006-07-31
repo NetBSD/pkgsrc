@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5262 2006/07/31 18:10:56 wiz Exp $
+$NetBSD: TODO,v 1.5263 2006/07/31 19:53:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -556,7 +556,6 @@ Suggested package updates
 	o gnome-themes-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.6
-	o gnucash-2.0.1
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
