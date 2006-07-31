@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/10 12:31:46 gdt Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2006/07/31 23:38:28 salo Exp $
 
 DISTNAME=	szip-2.0
 CATEGORIES=	archivers
@@ -12,6 +12,11 @@ COMMENT=	Extended-Rice lossless compression
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 LICENSE=		szip-license
+RESTRICTED=		No permission to redistribute
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
