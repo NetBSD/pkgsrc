@@ -1,13 +1,13 @@
-$NetBSD: patch-aq,v 1.3 2004/12/25 15:22:37 jmmv Exp $
+$NetBSD: patch-aq,v 1.4 2006/07/31 21:43:55 jmmv Exp $
 
---- Output/OSS/Makefile.in.orig	2004-12-11 21:22:35.000000000 +0100
+--- Output/OSS/Makefile.in.orig	2005-10-22 12:45:02.000000000 +0200
 +++ Output/OSS/Makefile.in
-@@ -305,7 +305,7 @@ soundcard.h
+@@ -295,7 +295,7 @@ soundcard.h
  EXTRA_DIST = $(osssources)
  lib_LTLIBRARIES = $(ossltlibs)
  libOSS_la_LDFLAGS = @PLUGIN_LDFLAGS@
 -libOSS_la_LIBADD = @GTK_LIBS@
 +libOSS_la_LIBADD = @GTK_LIBS@ $(LIBOSSAUDIO)
  libOSS_la_SOURCES = $(ossbuildsources)
- INCLUDES = @GTK_CFLAGS@ @GCONF_CFLAGS@ -I$(top_builddir)/intl -I$(top_srcdir)
+ INCLUDES = $(GTK_CFLAGS) -I$(top_builddir)/intl -I$(top_srcdir)
  all: all-am
