@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/18 19:23:47 reed Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/31 21:26:12 reed Exp $
 #
 
 DISTNAME=		libXrandr-1.0.2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X RandR extension (Library)
+
+CONFLICTS+=		libXrandr-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
