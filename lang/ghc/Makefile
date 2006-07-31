@@ -1,50 +1,47 @@
-# $NetBSD: Makefile,v 1.30 2006/07/27 23:45:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/31 02:07:13 kristerw Exp $
 
 DISTNAME=	ghc-6.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/6.4.2/
 DISTFILES=	ghc-6.4.2-src.tar.bz2 \
-		ghc-6.2.1-src.tar.bz2 \
-		ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz
+		ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz
 
 MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
-SITES.ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
-SITES.ghc-6.2.1-src.tar.bz2=http://www.haskell.org/ghc/dist/6.2.1/
+SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
 
-ONLY_FOR_PLATFORM= NetBSD-1.5*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM= NetBSD-*-i386
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/bootstrap/bin/ghc
+CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/ghc-boot/ghc/compiler/ghc-inplace
 CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 USE_GNU_READLINE=	yes	# uses the UNDO_ constants
 USE_TOOLS+=		gmake perl:run
 
-pre-configure:
-	${MV} ${WRKDIR}/ghc-6.2.1/mk/bootstrap.mk \
-		${WRKDIR}/ghc-6.2.1/mk/bootstrap.mk.tmp
-	${SED} -e 's,@PREFIX@,${PREFIX},g' \
-		< ${WRKDIR}/ghc-6.2.1/mk/bootstrap.mk.tmp \
-		> ${WRKDIR}/ghc-6.2.1/mk/bootstrap.mk
-	${MV} ${WRKDIR}/ghc-6.2.1/libraries/readline/package.conf.in \
-		${WRKDIR}/ghc-6.2.1/libraries/readline/package.conf.in.tmp
-	${SED} -e 's,@PREFIX@,${PREFIX},g' \
-		< ${WRKDIR}/ghc-6.2.1/libraries/readline/package.conf.in.tmp \
-		> ${WRKDIR}/ghc-6.2.1/libraries/readline/package.conf.in
-	${MV} ${WRKDIR}/ghc-6.2.1/ghc/rts/package.conf.in \
-		${WRKDIR}/ghc-6.2.1/ghc/rts/package.conf.in.tmp
-	${SED} -e 's,@PREFIX@,${PREFIX},g' \
-		< ${WRKDIR}/ghc-6.2.1/ghc/rts/package.conf.in.tmp \
-		> ${WRKDIR}/ghc-6.2.1/ghc/rts/package.conf.in
-	cd ${WRKDIR}/ghc-6.2.1 && \
-		./distrib/hc-build \
-			--enable-hc-boot-unregisterised \
-			--prefix=${WRKDIR}/bootstrap
-	cd ${WRKDIR}/ghc-6.2.1 && ${GMAKE} stage=1 install
+SUBST_CLASSES+=		add_paths
+SUBST_STAGE.add_paths=	post-patch
+SUBST_FILES.add_paths=	mk/bootstrap.mk
+SUBST_FILES.add_paths+=	ghc/rts/package.conf.in
+SUBST_FILES.add_paths+=	libraries/readline/package.conf.in
+SUBST_SED.add_paths=	-e 's,@PREFIX@,${PREFIX},g'
 
+pre-configure:
+	${MKDIR} ${WRKDIR}/ghc-boot \
+		&& cd ${WRKSRC} && ${PAX} -rw . ${WRKDIR}/ghc-boot
+	cd ${WRKDIR}/ghc-boot && \
+		./distrib/hc-build --enable-hc-boot-unregisterised
+
+# The ghc compiler does normally split the generated C files into small
+# parts before sending them to gcc, to enable the linker to eliminate
+# unused parts.  This does however not play nice with tha pkgsrc
+# framework, and the result is that the build takes more than 5 times
+# as long than when the files are not split.  See
+#    http://mail-index.netbsd.org/tech-pkg/2006/07/30/0005.html
+# for a description of the problem.
+# Disable file splitting until until pkgsrc has been improved.
 pre-build:
 	${ECHO} "SplitObjs=NO" > ${WRKSRC}/mk/build.mk
 

@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2005/05/21 20:22:21 kristerw Exp $
+$NetBSD: patch-aa,v 1.7 2006/07/31 02:07:13 kristerw Exp $
 
---- ../ghc-6.2.1/mk/bootstrap.mk.orig	Tue May 25 22:00:52 2004
-+++ ../ghc-6.2.1/mk/bootstrap.mk	Tue May 25 22:01:59 2004
-@@ -136,6 +136,7 @@
-    -u "$(UNDERSCORE)GHCziWeak_runFinalizzerBatch_closure" \
-    -u "$(UNDERSCORE)__stginit_Prelude"
- 
-+HC_BOOT_LD_OPTS += -Wl,-R@PREFIX@/lib
- 
- HC_BOOT_LIBS =
- 
+--- ghc/Makefile.orig	2006-07-30 14:26:56.000000000 +0200
++++ ghc/Makefile	2006-07-30 14:27:26.000000000 +0200
+@@ -22,7 +22,7 @@
+ # we descend into subdirs - to boot utils must be before driver.
+ #
+ ifeq "$(BootingFromHc)" "YES"
+-SUBDIRS = includes rts docs compiler lib utils driver
++SUBDIRS = includes rts docs lib compiler utils driver
+ else
+ ifneq "$(ILXized)" "YES"
+ SUBDIRS = includes lib utils driver docs compiler rts
