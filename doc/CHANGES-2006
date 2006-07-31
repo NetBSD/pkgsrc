@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.869 2006/07/31 11:29:42 taca Exp $
+$NetBSD: CHANGES-2006,v 1.870 2006/07/31 11:59:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3613,3 +3613,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/gg2 to 2.2.9 [adam 2006-07-31]
 	Updated chat/loudmouth to 1.0.4 [adam 2006-07-31]
 	Updated lang/ruby18-base to 1.8.4nb3 [taca 2006-07-31]
+	Updated www/seamonkey to 1.0.3 [ghen 2006-07-31]
+	Updated www/seamonkey-gtk1 to 1.0.3 [ghen 2006-07-31]
+	Updated www/seamonkey-bin to 1.0.3 [ghen 2006-07-31]
