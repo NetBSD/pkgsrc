@@ -1,7 +1,7 @@
-$NetBSD: patch-cc,v 1.2 2006/01/03 14:37:24 taca Exp $
+$NetBSD: patch-cc,v 1.2.4.1 2006/07/31 22:43:13 salo Exp $
 
---- parse.y	19 Dec 2005 14:33:05 -0000	1.307.2.25
-+++ parse.y	26 Dec 2005 13:33:14 -0000	1.307.2.26
+--- parse.y.orig	2005-12-19 23:33:05.000000000 +0900
++++ parse.y
 @@ -277,9 +277,9 @@ static void top_local_setup();
  %type <node> mrhs superclass block_call block_command
  %type <node> f_arglist f_args f_optarg f_opt f_block_arg opt_f_block_arg
