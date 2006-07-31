@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2006/06/05 23:01:01 heinz Exp $
+# $NetBSD: Makefile,v 1.73 2006/07/31 21:10:59 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.1.3
-PKGNAME=	spamassassin-3.1.3
+DISTNAME=	Mail-SpamAssassin-3.1.4
+PKGNAME=	spamassassin-3.1.4
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-HTML-Parser>=3.31:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
-DEPENDS+=	p5-IO-Zlib-[0-9]*:../../devel/p5-IO-Zlib
+DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
+DEPENDS+=	p5-IO-Zlib>=1.04:../../devel/p5-IO-Zlib
 
 .if (${OPSYS} != "NetBSD") && (${OPSYS} != "DragonFly")
 DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
