@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.51 2006/07/27 13:47:29 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.52 2006/07/31 14:53:45 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -59,10 +59,10 @@ PREPEND_PATH+=		${WRAPPER_BINDIR}
 ###
 .if exists(${_COOKIE.barrier})
 
-WRAPPER_DEBUG?=		yes
-CONFIGURE_ENV+=		WRAPPER_DEBUG=${WRAPPER_DEBUG:Q}
-MAKE_ENV+=		WRAPPER_DEBUG=${WRAPPER_DEBUG:Q}
-SCRIPTS_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
+_WRAPPER_DEBUG?=	no
+CONFIGURE_ENV+=		WRAPPER_DEBUG=${_WRAPPER_DEBUG:Q}
+MAKE_ENV+=		WRAPPER_DEBUG=${_WRAPPER_DEBUG:Q}
+SCRIPTS_ENV+=		WRAPPER_DEBUG="${_WRAPPER_DEBUG}"
 
 # The caching code, which greatly speeds up the build process, doesn't
 # work correctly on certain platforms.
@@ -368,7 +368,7 @@ _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_SKIP_TRANSFORM@|${_WRAP_SKIP_TRANSFORM.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_TRANSFORM@|${_WRAP_TRANSFORM.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_TRANSFORM_SED@|${_WRAP_TRANSFORM_SED.${_wrappee_}:Q}|g" \
-	-e "s|@WRAPPER_DEBUG@|${WRAPPER_DEBUG}|g"			\
+	-e "s|@WRAPPER_DEBUG@|${_WRAPPER_DEBUG}|g"			\
 	-e "s|@WRAPPER_UPDATE_CACHE@|${WRAPPER_UPDATE_CACHE}|g"		\
 	${_WRAP_SUBST_SED}
 
@@ -760,7 +760,7 @@ SUBST_STAGE.unwrap=	post-build
 SUBST_MESSAGE.unwrap=	Unwrapping files-to-be-installed.
 SUBST_FILES.unwrap=	${_UNWRAP_FILES}
 SUBST_SED.unwrap=	${_UNWRAP_SED}
-.if defined(WRAPPER_DEBUG) && !empty(WRAPPER_DEBUG:M[yY][eE][sS])
+.if defined(_WRAPPER_DEBUG) && !empty(_WRAPPER_DEBUG:M[yY][eE][sS])
 SUBST_POSTCMD.unwrap=	${DO_NADA}
 .endif
 
