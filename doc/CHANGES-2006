@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.866 2006/07/31 04:58:08 martti Exp $
+$NetBSD: CHANGES-2006,v 1.867 2006/07/31 09:08:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3610,3 +3610,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/cvm to 0.81 [schmonz 2006-07-31]
 	Updated lang/ghc to 6.4.2nb3 [kristerw 2006-07-31]
 	Updated mail/postfix to 2.3.2 [martti 2006-07-31]
+	Updated chat/gg2 to 2.2.9 [adam 2006-07-31]
