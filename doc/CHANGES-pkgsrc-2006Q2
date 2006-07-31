@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.46 2006/07/31 23:04:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.47 2006/07/31 23:38:50 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -105,3 +105,5 @@ Pullup ticket 1763 - requested by wiz
 security update for apache
 Pullup ticket 1764 - requested by taca
 security fix for ruby18-base
+Pullup ticket 1765 - requested by gdt
+resolve szip license issue
