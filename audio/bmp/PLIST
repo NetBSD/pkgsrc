@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/06 00:15:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/07/31 21:43:55 jmmv Exp $
 bin/beep-media-player
 include/bmp/beepctrl.h
 include/bmp/configdb.h
@@ -21,26 +21,23 @@ lib/libbeep.la
 lib/pkgconfig/bmp.pc
 man/man1/beep-media-player.1
 share/applications/bmp.desktop
-share/bmp/Skins/Default/Avs.bmp
-share/bmp/Skins/Default/Balance.bmp
-share/bmp/Skins/Default/Eq_ex.bmp
-share/bmp/Skins/Default/Eqmain.bmp
-share/bmp/Skins/Default/Main.bmp
-share/bmp/Skins/Default/Mb.bmp
-share/bmp/Skins/Default/Monoster.bmp
-share/bmp/Skins/Default/Nums_ex.bmp
-share/bmp/Skins/Default/Pledit.bmp
-share/bmp/Skins/Default/Posbar.bmp
-share/bmp/Skins/Default/Shufrep.bmp
-share/bmp/Skins/Default/Text.bmp
-share/bmp/Skins/Default/Titlebar.bmp
-share/bmp/Skins/Default/Volume.bmp
-share/bmp/Skins/Default/cButtons.bmp
-share/bmp/Skins/Default/pLaypaus.bmp
-share/bmp/Skins/Default/pLedit.txt
-share/bmp/Skins/Default/readme.txt
-share/bmp/Skins/Default/screenshot.bmp
-share/bmp/Skins/Default/vIscolor.txt
+share/bmp/Skins/Default/README
+share/bmp/Skins/Default/balance.bmp
+share/bmp/Skins/Default/cbuttons.bmp
+share/bmp/Skins/Default/eq_ex.bmp
+share/bmp/Skins/Default/eqmain.bmp
+share/bmp/Skins/Default/main.bmp
+share/bmp/Skins/Default/monoster.bmp
+share/bmp/Skins/Default/nums_ex.bmp
+share/bmp/Skins/Default/playpaus.bmp
+share/bmp/Skins/Default/pledit.bmp
+share/bmp/Skins/Default/pledit.txt
+share/bmp/Skins/Default/posbar.bmp
+share/bmp/Skins/Default/shufrep.bmp
+share/bmp/Skins/Default/text.bmp
+share/bmp/Skins/Default/titlebar.bmp
+share/bmp/Skins/Default/viscolor.txt
+share/bmp/Skins/Default/volume.bmp
 share/bmp/glade/addfiles.glade
 share/bmp/glade/prefswin.glade
 share/bmp/images/appearance.png
@@ -48,17 +45,19 @@ share/bmp/images/eq.png
 share/bmp/images/mouse.png
 share/bmp/images/playlist.png
 share/bmp/images/plugins.png
-share/icons/bmp.svg
 share/locale/br/LC_MESSAGES/bmp.mo
 share/locale/cs/LC_MESSAGES/bmp.mo
 share/locale/cy/LC_MESSAGES/bmp.mo
 share/locale/de/LC_MESSAGES/bmp.mo
 share/locale/el/LC_MESSAGES/bmp.mo
 share/locale/es/LC_MESSAGES/bmp.mo
+share/locale/fi/LC_MESSAGES/bmp.mo
 share/locale/fr/LC_MESSAGES/bmp.mo
+share/locale/hi/LC_MESSAGES/bmp.mo
 share/locale/hu/LC_MESSAGES/bmp.mo
 share/locale/it/LC_MESSAGES/bmp.mo
 share/locale/ja/LC_MESSAGES/bmp.mo
+share/locale/ka/LC_MESSAGES/bmp.mo
 share/locale/ko/LC_MESSAGES/bmp.mo
 share/locale/lt/LC_MESSAGES/bmp.mo
 share/locale/mk/LC_MESSAGES/bmp.mo
@@ -69,7 +68,11 @@ share/locale/ro/LC_MESSAGES/bmp.mo
 share/locale/ru/LC_MESSAGES/bmp.mo
 share/locale/sk/LC_MESSAGES/bmp.mo
 share/locale/sv/LC_MESSAGES/bmp.mo
+share/locale/uk/LC_MESSAGES/bmp.mo
 share/locale/zh_CN/LC_MESSAGES/bmp.mo
+share/locale/zh_TW/LC_MESSAGES/bmp.mo
+share/pixmaps/bmp.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @comment in xdg-dirs: @dirrm share/icons
 @dirrm share/bmp/images
 @dirrm share/bmp/glade
