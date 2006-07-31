@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.873 2006/07/31 19:53:22 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.874 2006/07/31 21:13:26 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3501,6 +3501,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ap2-jk version 1.2.15 [abs 2006-07-22]
 	Updated www/apache-tomcat55 to 5.5.17 [abs 2006-07-22]
 	Updated pkgtools/pkg_chk to 1.77 [abs 2006-07-22]
+	Updated games/rocksndiamonds to 3.2.0 [heinz 2006-07-22]
 	Updated editors/lyx-qt to 1.4.2 [reed 2006-07-22]
 	Updated editors/lyx-xforms to 1.4.2 [reed 2006-07-22]
 	Updated graphics/cairo to 1.2.0nb2 [minskim 2006-07-23]
@@ -3619,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.2.8.7 [adam 2006-07-31]
 	Added www/py-moin version 1.5.4 [joerg 2006-07-31]
 	Updated finance/gnucash to 2.0.1 [wiz 2006-07-31]
+	Updated mail/spamassassin to 3.1.4 [heinz 2006-07-31]
