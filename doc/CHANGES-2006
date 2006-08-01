@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.878 2006/08/01 10:27:11 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.879 2006/08/01 13:19:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3626,3 +3626,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtksourceview to 1.6.2 [wiz 2006-07-31]
 	Added audio/easyh10 version 1.4 [ghen 2006-08-01]
 	Updated www/skipstone to 0.9.6 [ghen 2006-08-01]
+	Updated multimedia/realplayer-codecs to 8.20050115nb1 [jmmv 2006-08-01]
