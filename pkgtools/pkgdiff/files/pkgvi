@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.9 2003/08/23 19:40:19 seb Exp $
+# $NetBSD: pkgvi,v 1.10 2006/08/01 17:59:17 bad Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -61,7 +61,8 @@ fi
 
 if [ -f $file.orig ]
 then
-	$editor $cmd $file
+	chmod u+w "$file"
+	$editor $cmd "$file"
 	echo "$progname: Backup already exists. For a diff type:"
         echo "pkgdiff $file"
 	exit 0
@@ -79,6 +80,7 @@ else
 fi
 
 cp "$file" "$tmp"
+chmod u+w "$tmp"
 
 if [ $? -ne 0 ]; then
 	echo "$progname: unable to create temporary file"
