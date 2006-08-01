@@ -1,63 +1,29 @@
-# $NetBSD: Makefile.common,v 1.51 2006/07/06 14:12:31 markd Exp $
+# $NetBSD: Makefile.common,v 1.52 2006/08/01 21:40:19 jlam Exp $
+#
+# This Makefile fragment is included either directly or indirectly (through
+# Makefile.lib) by all packages that are built from the Mesa sources.
+#
 
-DISTNAME=	MesaLib-${MESA_VERSION}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	${DISTNAME:S/MesaLib/MesaGLUT/}${EXTRACT_SUFX}
-DISTFILES+=	${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
-WRKSRC=		${WRKDIR}/${DISTNAME:S/Lib//}
+DISTNAME?=	MesaLib-${MESA_VERSION}
 CATEGORIES=	graphics
 MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
 
-# When changing this version, please update distinfo in graphics/glx-utils
+# When changing this version, please run "make distinfo" in the following
+# package directories:
+#
+#	graphics/MesaLib
+#	graphics/MesaDemos
+#	graphics/glx-utils
+#
 MESA_VERSION=	6.4.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
+BUILDING_MESA=	yes
+NO_CONFIGURE=	yes
+DIST_SUBDIR=	Mesa-${MESA_VERSION}
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		makedepend
-
-BUILDING_MESA=		yes
-NO_CONFIGURE=		yes
-DIST_SUBDIR=		Mesa-${MESA_VERSION}
-PATCHDIR?=		${.CURDIR}/../MesaLib/patches
-DISTINFO_FILE?=		${.CURDIR}/../MesaLib/distinfo
-
-INSTALLATION_DIRS+=	lib
-
-.include "../../mk/compiler.mk"
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/x11.buildlink3.mk"
-
-# Mesa has proper support for Solaris and SunPro, use it.
-.if ${OPSYS} == "SunOS"
-.  if ${MACHINE_ARCH} == "sparc"
-.    if !empty(PKGSRC_COMPILER:Msunpro)
-BUILD_TARGET=		sunos5
-.    else
-BUILD_TARGET=		sunos5-gcc
-.    endif
-.  else	# i386
-BUILD_TARGET=		pkgsrc
-.  endif
-.elif ${OPSYS} == "Interix"
-BUILD_TARGET=		interix3
-.else
-BUILD_TARGET=		pkgsrc
-.endif
-
-INSTLIBS?=		""
-
-pre-install:
-	@if [ -n "${INSTLIBS}" ]; then					\
-		${ECHO_MSG} "Installing libraries.";			\
-		${INSTALL_LIB_DIR} ${PREFIX}/lib;			\
-		for lib in ${INSTLIBS}; do				\
-			${LIBTOOL} --mode=install ${INSTALL_LIB}	\
-				$${lib} ${PREFIX}/lib;			\
-		done;							\
-	fi

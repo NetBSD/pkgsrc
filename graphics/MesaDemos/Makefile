@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.26 2006/02/09 12:27:42 adam Exp $
+# $NetBSD: Makefile,v 1.27 2006/08/01 21:40:19 jlam Exp $
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
 COMMENT=	OpenGL examples and Demos
 
-PATCHDIR=		${.CURDIR}/patches
-DISTINFO_FILE=		${.CURDIR}/distinfo
+# We include Makefile.lib instead of Makefile.common since we actually
+# build the Mesa libraries as part of the build process, even though we
+# don't install them.
+#
+.include "../../graphics/Mesa/Makefile.lib"
 
-.include "../../graphics/Mesa/Makefile.common"
+PATCHDIR=	${.CURDIR}/patches
+DISTINFO_FILE=	${.CURDIR}/distinfo
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
-MAKE_FLAGS+=		LIB_DEP=""
+USE_TOOLS+=	gmake
+MAKE_FLAGS+=	LIB_DEP=""
+
+.include "../../graphics/Mesa/buildlink3.mk"
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src
@@ -27,5 +32,4 @@ do-install:
 		-rw . ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
 	${CHMOD} -R a+rX ${PREFIX}/share/examples/${PKGNAME_NOREV}
 
-.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
