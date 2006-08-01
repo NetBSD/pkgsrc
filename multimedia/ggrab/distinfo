@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.2 2006/04/09 19:35:10 joerg Exp $
+$NetBSD: distinfo,v 1.3 2006/08/01 12:50:23 mjl Exp $
 
 SHA1 (ggrab-0.22a-linux.tgz) = bb73e45ad9918e70ee21baadcc0771a6ca55032d
 RMD160 (ggrab-0.22a-linux.tgz) = a272515ac6c40d3c899527e5590bd86893f694e8
 Size (ggrab-0.22a-linux.tgz) = 503296 bytes
-SHA1 (patch-aa) = f1beb04c00e1d40123eda0e058e725d9ee55da5b
+SHA1 (patch-aa) = 224a1a8e8c526c6af539f26a6c2fa75c9972e067
 SHA1 (patch-ab) = c89e69405a1091ed5e8dd8971271adb4c186e739
+SHA1 (patch-ac) = 8542c38501cdc2cfab998ded9e06c4d64011b199
+SHA1 (patch-ad) = 9104006c8bc19624fd3846c47eda2dedf77bf48b
+SHA1 (patch-ae) = 7804a7f7209733497d0f6e74b9b514a8310bb10a
