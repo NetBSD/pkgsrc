@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.9 2006/08/01 12:24:12 tron Exp $
+
+--- dialects/n+obsd/dmnt.c.orig	2005-08-08 20:53:31.000000000 +0100
++++ dialects/n+obsd/dmnt.c	2006-08-01 13:20:30.000000000 +0100
+@@ -45,6 +45,11 @@
+ #include <sys/statvfs.h>
+ #endif  /* defined(NETBSDV) && defined(HASSTATVFS) */
+ 
++#if defined(NETBSDV)
++#include <sys/types.h>
++#include <sys/mount.h>
++#endif
++
+ #include "lsof.h"
+ 
+ 
