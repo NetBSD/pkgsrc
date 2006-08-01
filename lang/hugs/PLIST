@@ -1,195 +1,504 @@
-@comment $NetBSD: PLIST,v 1.3 2002/04/09 02:59:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/01 14:33:59 jmmv Exp $
+bin/cpphs-hugs
+bin/ffihugs
+bin/hsc2hs-hugs
 bin/hugs
 bin/runhugs
+lib/hugs/Credits
+lib/hugs/License
+lib/hugs/Readme
+lib/hugs/demos/AnsiDemo.hs
+lib/hugs/demos/ArrayEx.hs
+lib/hugs/demos/Cabal/DefaultSetup.lhs
+lib/hugs/demos/Cabal/hapax.hs
+lib/hugs/demos/Calendar.hs
+lib/hugs/demos/CommaInt.lhs
+lib/hugs/demos/Demos.hs
+lib/hugs/demos/Eliza.hs
+lib/hugs/demos/EvalRed.hs
+lib/hugs/demos/Examples.hs
+lib/hugs/demos/Expr.hs
+lib/hugs/demos/FastSort.hs
+lib/hugs/demos/Gofer.hs
+lib/hugs/demos/Lattice.hs
+lib/hugs/demos/Ldfs.hs
+lib/hugs/demos/Literate.lhs
+lib/hugs/demos/Makefile.in
+lib/hugs/demos/Matrix.hs
+lib/hugs/demos/Mersenne.hs
+lib/hugs/demos/Minsrand.hs
+lib/hugs/demos/Queens.hs
+lib/hugs/demos/Say.hs
+lib/hugs/demos/Stack.hs
+lib/hugs/demos/Tree.hs
+lib/hugs/demos/prolog/AndorraEngine.hs
+lib/hugs/demos/prolog/CombParse.hs
+lib/hugs/demos/prolog/Main.hs
+lib/hugs/demos/prolog/Prolog.hs
+lib/hugs/demos/prolog/PureEngine.hs
+lib/hugs/demos/prolog/StackEngine.hs
+lib/hugs/demos/prolog/Subst.hs
+lib/hugs/demos/prolog/readme
+lib/hugs/demos/prolog/stdlib
+lib/hugs/docs/ffi-notes.txt
+lib/hugs/docs/libraries-notes.txt
+lib/hugs/docs/machugs-notes.txt
+lib/hugs/docs/server.html
+lib/hugs/docs/server.tex
+lib/hugs/docs/winhugs-notes.txt
+lib/hugs/include/HsFFI.h
+lib/hugs/oldlib/Addr.hs
+lib/hugs/oldlib/AnsiInteract.hs
+lib/hugs/oldlib/AnsiScreen.hs
+lib/hugs/oldlib/ArrayBase.hs
+lib/hugs/oldlib/Arrow.hs
+lib/hugs/oldlib/Assoc.hs
+lib/hugs/oldlib/AssocDefaults.hs
+lib/hugs/oldlib/AssocList.hs
+lib/hugs/oldlib/BSD.hs
+lib/hugs/oldlib/BankersQueue.hs
+lib/hugs/oldlib/BinaryRandList.hs
+lib/hugs/oldlib/BraunSeq.hs
+lib/hugs/oldlib/CGI.lhs
+lib/hugs/oldlib/COPYRIGHT.edison
+lib/hugs/oldlib/CVHAssert.hs
+lib/hugs/oldlib/CVar.lhs
+lib/hugs/oldlib/Chan.lhs
+lib/hugs/oldlib/Channel.lhs
+lib/hugs/oldlib/ChannelVar.lhs
+lib/hugs/oldlib/Collection.hs
+lib/hugs/oldlib/CollectionDefaults.hs
+lib/hugs/oldlib/CollectionUtils.hs
+lib/hugs/oldlib/ConcBase.hs
+lib/hugs/oldlib/Concurrent.lhs
+lib/hugs/oldlib/DiffArray.hs
+lib/hugs/oldlib/Dynamic.hs
+lib/hugs/oldlib/EdisonPrelude.hs
+lib/hugs/oldlib/Exception.hs
+lib/hugs/oldlib/FiniteMap.lhs
+lib/hugs/oldlib/ForeignObj.hs
+lib/hugs/oldlib/GenericPrint.hs
+lib/hugs/oldlib/GetOpt.lhs
+lib/hugs/oldlib/GraphicsCore.hs
+lib/hugs/oldlib/GraphicsUtils.hs
+lib/hugs/oldlib/HsLexer.hs
+lib/hugs/oldlib/HsParseMonad.hs
+lib/hugs/oldlib/HsParseUtils.hs
+lib/hugs/oldlib/HsParser.hs
+lib/hugs/oldlib/HsPretty.hs
+lib/hugs/oldlib/HsSyn.hs
+lib/hugs/oldlib/Html.lhs
+lib/hugs/oldlib/HtmlBlockTable.lhs
+lib/hugs/oldlib/HugsInternals.hs
+lib/hugs/oldlib/HugsLibs.hs
+lib/hugs/oldlib/IArray.hs
+lib/hugs/oldlib/IOExtensions.hs
+lib/hugs/oldlib/IOExts.hs
+lib/hugs/oldlib/IORef.hs
+lib/hugs/oldlib/Interact.hs
+lib/hugs/oldlib/JoinList.hs
+lib/hugs/oldlib/LazyPairingHeap.hs
+lib/hugs/oldlib/LazyST.hs
+lib/hugs/oldlib/LeftistHeap.hs
+lib/hugs/oldlib/ListSeq.hs
+lib/hugs/oldlib/ListUtils.hs
+lib/hugs/oldlib/MVar.lhs
+lib/hugs/oldlib/Memo.hs
+lib/hugs/oldlib/MinHeap.hs
+lib/hugs/oldlib/MonadCont.lhs
+lib/hugs/oldlib/MonadEither.lhs
+lib/hugs/oldlib/MonadError.lhs
+lib/hugs/oldlib/MonadFix.lhs
+lib/hugs/oldlib/MonadIdentity.lhs
+lib/hugs/oldlib/MonadList.lhs
+lib/hugs/oldlib/MonadRWS.lhs
+lib/hugs/oldlib/MonadReader.lhs
+lib/hugs/oldlib/MonadState.lhs
+lib/hugs/oldlib/MonadTrans.lhs
+lib/hugs/oldlib/MonadWriter.lhs
+lib/hugs/oldlib/Monoid.lhs
+lib/hugs/oldlib/MyersStack.hs
+lib/hugs/oldlib/NativeInfo.hs
+lib/hugs/oldlib/Number.hs
+lib/hugs/oldlib/Observe.hs
+lib/hugs/oldlib/PackedString.lhs
+lib/hugs/oldlib/Parallel.lhs
+lib/hugs/oldlib/ParseLib.hs
+lib/hugs/oldlib/Parsec.hs
+lib/hugs/oldlib/ParsecChar.hs
+lib/hugs/oldlib/ParsecCombinator.hs
+lib/hugs/oldlib/ParsecError.hs
+lib/hugs/oldlib/ParsecExpr.hs
+lib/hugs/oldlib/ParsecLanguage.hs
+lib/hugs/oldlib/ParsecPerm.hs
+lib/hugs/oldlib/ParsecPos.hs
+lib/hugs/oldlib/ParsecPrim.hs
+lib/hugs/oldlib/ParsecToken.hs
+lib/hugs/oldlib/PatriciaLoMap.hs
+lib/hugs/oldlib/PosixDB.lhs
+lib/hugs/oldlib/PosixFiles.lhs
+lib/hugs/oldlib/PosixIO.lhs
+lib/hugs/oldlib/PosixTTY.lhs
+lib/hugs/oldlib/Pretty.lhs
+lib/hugs/oldlib/QSem.lhs
+lib/hugs/oldlib/QSemN.lhs
+lib/hugs/oldlib/QuickCheck.hs
+lib/hugs/oldlib/QuickCheckPoly.hs
+lib/hugs/oldlib/QuickCheckUtils.hs
+lib/hugs/oldlib/Quote.hs
+lib/hugs/oldlib/RandList.hs
+lib/hugs/oldlib/RegexString.lhs
+lib/hugs/oldlib/RevSeq.hs
+lib/hugs/oldlib/SOEGraphics.hs
+lib/hugs/oldlib/ST.hs
+lib/hugs/oldlib/SampleVar.lhs
+lib/hugs/oldlib/Semaphore.lhs
+lib/hugs/oldlib/Sequence.hs
+lib/hugs/oldlib/SequenceDefaults.hs
+lib/hugs/oldlib/Set.lhs
+lib/hugs/oldlib/ShowFunctions.hs
+lib/hugs/oldlib/SimpleQueue.hs
+lib/hugs/oldlib/SizedSeq.hs
+lib/hugs/oldlib/SkewHeap.hs
+lib/hugs/oldlib/Socket.lhs
+lib/hugs/oldlib/SocketPrim.hs
+lib/hugs/oldlib/SplayHeap.hs
+lib/hugs/oldlib/Stable.hs
+lib/hugs/oldlib/StableName.hs
+lib/hugs/oldlib/StdLibs.hs
+lib/hugs/oldlib/StorableArray.hs
+lib/hugs/oldlib/TestOrdBag.hs
+lib/hugs/oldlib/TestOrdSet.hs
+lib/hugs/oldlib/TestSeq.hs
+lib/hugs/oldlib/Trace.hs
+lib/hugs/oldlib/Trex.hs
+lib/hugs/oldlib/URI.hs
+lib/hugs/oldlib/UnbalancedSet.hs
+lib/hugs/oldlib/Unique.lhs
+lib/hugs/oldlib/Weak.hs
+lib/hugs/packages/Cabal/Distribution/Compat/Directory.hs
+lib/hugs/packages/Cabal/Distribution/Compat/Exception.hs
+lib/hugs/packages/Cabal/Distribution/Compat/FilePath.hs
+lib/hugs/packages/Cabal/Distribution/Compat/RawSystem.hs
+lib/hugs/packages/Cabal/Distribution/Compat/ReadP.hs
+lib/hugs/packages/Cabal/Distribution/Compiler.hs
+lib/hugs/packages/Cabal/Distribution/Extension.hs
+lib/hugs/packages/Cabal/Distribution/GetOpt.hs
+lib/hugs/packages/Cabal/Distribution/InstalledPackageInfo.hs
+lib/hugs/packages/Cabal/Distribution/License.hs
+lib/hugs/packages/Cabal/Distribution/Make.hs
+lib/hugs/packages/Cabal/Distribution/Package.hs
+lib/hugs/packages/Cabal/Distribution/PackageDescription.hs
+lib/hugs/packages/Cabal/Distribution/ParseUtils.hs
+lib/hugs/packages/Cabal/Distribution/PreProcess.hs
+lib/hugs/packages/Cabal/Distribution/PreProcess/Unlit.hs
+lib/hugs/packages/Cabal/Distribution/Program.hs
+lib/hugs/packages/Cabal/Distribution/Setup.hs
+lib/hugs/packages/Cabal/Distribution/Simple.hs
+lib/hugs/packages/Cabal/Distribution/Simple/Build.hs
+lib/hugs/packages/Cabal/Distribution/Simple/Configure.hs
+lib/hugs/packages/Cabal/Distribution/Simple/GHC.hs
+lib/hugs/packages/Cabal/Distribution/Simple/GHCPackageConfig.hs
+lib/hugs/packages/Cabal/Distribution/Simple/Hugs.hs
+lib/hugs/packages/Cabal/Distribution/Simple/Install.hs
+lib/hugs/packages/Cabal/Distribution/Simple/JHC.hs
+lib/hugs/packages/Cabal/Distribution/Simple/LocalBuildInfo.hs
+lib/hugs/packages/Cabal/Distribution/Simple/NHC.hs
+lib/hugs/packages/Cabal/Distribution/Simple/Register.hs
+lib/hugs/packages/Cabal/Distribution/Simple/SrcDist.hs
+lib/hugs/packages/Cabal/Distribution/Simple/Utils.hs
+lib/hugs/packages/Cabal/Distribution/Version.hs
+lib/hugs/packages/Cabal/LICENSE
+lib/hugs/packages/Cabal/Language/Haskell/Extension.hs
+lib/hugs/packages/Cabal/Paths_Cabal.hs
+lib/hugs/packages/Cabal/copyright
+lib/hugs/packages/base/Control/Applicative.hs
+lib/hugs/packages/base/Control/Arrow.hs
+lib/hugs/packages/base/Control/Concurrent.hs
+lib/hugs/packages/base/Control/Concurrent/Chan.hs
+lib/hugs/packages/base/Control/Concurrent/MVar.hs
+lib/hugs/packages/base/Control/Concurrent/QSem.hs
+lib/hugs/packages/base/Control/Concurrent/QSemN.hs
+lib/hugs/packages/base/Control/Concurrent/SampleVar.hs
+lib/hugs/packages/base/Control/Exception.hs
+lib/hugs/packages/base/Control/Monad.hs
+lib/hugs/packages/base/Control/Monad/Fix.hs
+lib/hugs/packages/base/Control/Monad/Instances.hs
+lib/hugs/packages/base/Control/Monad/ST.hs
+lib/hugs/packages/base/Control/Monad/ST/Lazy.hs
+lib/hugs/packages/base/Control/Monad/ST/Strict.hs
+lib/hugs/packages/base/Control/Parallel.hs
+lib/hugs/packages/base/Data/Array.hs
+lib/hugs/packages/base/Data/Array/Base.hs
+lib/hugs/packages/base/Data/Array/Diff.hs
+lib/hugs/packages/base/Data/Array/IArray.hs
+lib/hugs/packages/base/Data/Array/IO.hs
+lib/hugs/packages/base/Data/Array/IO/Internals.hs
+lib/hugs/packages/base/Data/Array/MArray.hs
+lib/hugs/packages/base/Data/Array/ST.hs
+lib/hugs/packages/base/Data/Array/Storable.hs
+lib/hugs/packages/base/Data/Array/Unboxed.hs
+lib/hugs/packages/base/Data/Bits.hs
+lib/hugs/packages/base/Data/Bool.hs
+lib/hugs/packages/base/Data/ByteString.hs
+lib/hugs/packages/base/Data/ByteString.so
+lib/hugs/packages/base/Data/ByteString/Char8.hs
+lib/hugs/packages/base/Data/ByteString/Char8.so
+lib/hugs/packages/base/Data/Char.hs
+lib/hugs/packages/base/Data/Complex.hs
+lib/hugs/packages/base/Data/Dynamic.hs
+lib/hugs/packages/base/Data/Either.hs
+lib/hugs/packages/base/Data/Eq.hs
+lib/hugs/packages/base/Data/FiniteMap.hs
+lib/hugs/packages/base/Data/Fixed.hs
+lib/hugs/packages/base/Data/Foldable.hs
+lib/hugs/packages/base/Data/FunctorM.hs
+lib/hugs/packages/base/Data/Graph.hs
+lib/hugs/packages/base/Data/HashTable.hs
+lib/hugs/packages/base/Data/IORef.hs
+lib/hugs/packages/base/Data/Int.hs
+lib/hugs/packages/base/Data/IntMap.hs
+lib/hugs/packages/base/Data/IntSet.hs
+lib/hugs/packages/base/Data/Ix.hs
+lib/hugs/packages/base/Data/List.hs
+lib/hugs/packages/base/Data/Map.hs
+lib/hugs/packages/base/Data/Maybe.hs
+lib/hugs/packages/base/Data/Monoid.hs
+lib/hugs/packages/base/Data/Ord.hs
+lib/hugs/packages/base/Data/PackedString.hs
+lib/hugs/packages/base/Data/Queue.hs
+lib/hugs/packages/base/Data/Ratio.hs
+lib/hugs/packages/base/Data/STRef.hs
+lib/hugs/packages/base/Data/STRef/Lazy.hs
+lib/hugs/packages/base/Data/STRef/Strict.hs
+lib/hugs/packages/base/Data/Sequence.hs
+lib/hugs/packages/base/Data/Set.hs
+lib/hugs/packages/base/Data/Traversable.hs
+lib/hugs/packages/base/Data/Tree.hs
+lib/hugs/packages/base/Data/Tuple.hs
+lib/hugs/packages/base/Data/Typeable.hs
+lib/hugs/packages/base/Data/Unique.hs
+lib/hugs/packages/base/Data/Version.hs
+lib/hugs/packages/base/Data/Word.hs
+lib/hugs/packages/base/Debug/Trace.hs
+lib/hugs/packages/base/Foreign.hs
+lib/hugs/packages/base/Foreign/C.hs
+lib/hugs/packages/base/Foreign/C/Error.hs
+lib/hugs/packages/base/Foreign/C/Error.so
+lib/hugs/packages/base/Foreign/C/String.hs
+lib/hugs/packages/base/Foreign/C/Types.hs
+lib/hugs/packages/base/Foreign/ForeignPtr.hs
+lib/hugs/packages/base/Foreign/Marshal.hs
+lib/hugs/packages/base/Foreign/Marshal/Alloc.hs
+lib/hugs/packages/base/Foreign/Marshal/Alloc.so
+lib/hugs/packages/base/Foreign/Marshal/Array.hs
+lib/hugs/packages/base/Foreign/Marshal/Error.hs
+lib/hugs/packages/base/Foreign/Marshal/Pool.hs
+lib/hugs/packages/base/Foreign/Marshal/Utils.hs
+lib/hugs/packages/base/Foreign/Marshal/Utils.so
+lib/hugs/packages/base/Foreign/Ptr.hs
+lib/hugs/packages/base/Foreign/Ptr.so
+lib/hugs/packages/base/Foreign/StablePtr.hs
+lib/hugs/packages/base/Foreign/Storable.hs
+lib/hugs/packages/base/LICENSE
+lib/hugs/packages/base/Numeric.hs
+lib/hugs/packages/base/Paths_base.hs
+lib/hugs/packages/base/Prelude.hs
+lib/hugs/packages/base/System/CPUTime.hs
+lib/hugs/packages/base/System/Cmd.hs
+lib/hugs/packages/base/System/Console/GetOpt.hs
+lib/hugs/packages/base/System/Directory.hs
+lib/hugs/packages/base/System/Directory/Internals.hs
+lib/hugs/packages/base/System/Environment.hs
+lib/hugs/packages/base/System/Exit.hs
+lib/hugs/packages/base/System/IO.hs
+lib/hugs/packages/base/System/IO/Error.hs
+lib/hugs/packages/base/System/IO/Unsafe.hs
+lib/hugs/packages/base/System/Info.hs
+lib/hugs/packages/base/System/Locale.hs
+lib/hugs/packages/base/System/Mem.hs
+lib/hugs/packages/base/System/Mem/StableName.hs
+lib/hugs/packages/base/System/Mem/Weak.hs
+lib/hugs/packages/base/System/Posix/Internals.hs
+lib/hugs/packages/base/System/Posix/Internals.so
+lib/hugs/packages/base/System/Posix/Signals.hs
+lib/hugs/packages/base/System/Posix/Signals.so
+lib/hugs/packages/base/System/Posix/Types.hs
+lib/hugs/packages/base/System/Process/Internals.hs
+lib/hugs/packages/base/System/Process/Internals.so
+lib/hugs/packages/base/System/Random.hs
+lib/hugs/packages/base/System/Time.hs
+lib/hugs/packages/base/Text/Html.hs
+lib/hugs/packages/base/Text/Html/BlockTable.hs
+lib/hugs/packages/base/Text/ParserCombinators/ReadP.hs
+lib/hugs/packages/base/Text/ParserCombinators/ReadPrec.hs
+lib/hugs/packages/base/Text/PrettyPrint.hs
+lib/hugs/packages/base/Text/PrettyPrint/HughesPJ.hs
+lib/hugs/packages/base/Text/Printf.hs
+lib/hugs/packages/base/Text/Read.hs
+lib/hugs/packages/base/Text/Read/Lex.hs
+lib/hugs/packages/base/Text/Regex.hs
+lib/hugs/packages/base/Text/Regex/Posix.hs
+lib/hugs/packages/base/Text/Regex/Posix.so
+lib/hugs/packages/base/Text/Show.hs
+lib/hugs/packages/base/Text/Show/Functions.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/CppIfdef.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/HashDefine.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/MacroPass.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/Options.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/Position.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/ReadFirst.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/RunCpphs.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/SymTab.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs/Tokenise.hs
+lib/hugs/packages/cpphs/Language/Preprocessor/Unlit.hs
+lib/hugs/packages/cpphs/Paths_cpphs.hs
+lib/hugs/packages/cpphs/Text/ParserCombinators/HuttonMeijer.hs
+lib/hugs/packages/haskell98/Array.hs
+lib/hugs/packages/haskell98/Bits.hs
+lib/hugs/packages/haskell98/CError.hs
+lib/hugs/packages/haskell98/CForeign.hs
+lib/hugs/packages/haskell98/CPUTime.hs
+lib/hugs/packages/haskell98/CString.hs
+lib/hugs/packages/haskell98/CTypes.hs
+lib/hugs/packages/haskell98/Char.hs
+lib/hugs/packages/haskell98/Complex.hs
+lib/hugs/packages/haskell98/Directory.hs
+lib/hugs/packages/haskell98/ForeignPtr.hs
+lib/hugs/packages/haskell98/IO.hs
+lib/hugs/packages/haskell98/Int.hs
+lib/hugs/packages/haskell98/Ix.hs
+lib/hugs/packages/haskell98/LICENSE
+lib/hugs/packages/haskell98/List.hs
+lib/hugs/packages/haskell98/Locale.hs
+lib/hugs/packages/haskell98/MarshalAlloc.hs
+lib/hugs/packages/haskell98/MarshalArray.hs
+lib/hugs/packages/haskell98/MarshalError.hs
+lib/hugs/packages/haskell98/MarshalUtils.hs
+lib/hugs/packages/haskell98/Maybe.hs
+lib/hugs/packages/haskell98/Monad.hs
+lib/hugs/packages/haskell98/Paths_haskell98.hs
+lib/hugs/packages/haskell98/Ptr.hs
+lib/hugs/packages/haskell98/Random.hs
+lib/hugs/packages/haskell98/Ratio.hs
+lib/hugs/packages/haskell98/StablePtr.hs
+lib/hugs/packages/haskell98/Storable.hs
+lib/hugs/packages/haskell98/System.hs
+lib/hugs/packages/haskell98/Time.hs
+lib/hugs/packages/haskell98/Word.hs
+lib/hugs/packages/hugsbase/Hugs.hs
+lib/hugs/packages/hugsbase/Hugs/Array.hs
+lib/hugs/packages/hugsbase/Hugs/Bits.hs
+lib/hugs/packages/hugsbase/Hugs/ByteArray.hs
+lib/hugs/packages/hugsbase/Hugs/CVHAssert.hs
+lib/hugs/packages/hugsbase/Hugs/Char.hs
+lib/hugs/packages/hugsbase/Hugs/ConcBase.hs
+lib/hugs/packages/hugsbase/Hugs/Directory.hs
+lib/hugs/packages/hugsbase/Hugs/Dynamic.hs
+lib/hugs/packages/hugsbase/Hugs/Exception.hs
+lib/hugs/packages/hugsbase/Hugs/ForeignPtr.hs
+lib/hugs/packages/hugsbase/Hugs/GenericPrint.hs
+lib/hugs/packages/hugsbase/Hugs/IO.hs
+lib/hugs/packages/hugsbase/Hugs/IOArray.hs
+lib/hugs/packages/hugsbase/Hugs/IOExts.hs
+lib/hugs/packages/hugsbase/Hugs/IORef.hs
+lib/hugs/packages/hugsbase/Hugs/Int.hs
+lib/hugs/packages/hugsbase/Hugs/Internals.hs
+lib/hugs/packages/hugsbase/Hugs/LazyST.hs
+lib/hugs/packages/hugsbase/Hugs/Memo.hs
+lib/hugs/packages/hugsbase/Hugs/Numeric.hs
+lib/hugs/packages/hugsbase/Hugs/Observe.hs
+lib/hugs/packages/hugsbase/Hugs/Prelude.hs
+lib/hugs/packages/hugsbase/Hugs/Ptr.hs
+lib/hugs/packages/hugsbase/Hugs/Quote.hs
+lib/hugs/packages/hugsbase/Hugs/ST.hs
+lib/hugs/packages/hugsbase/Hugs/Stable.hs
+lib/hugs/packages/hugsbase/Hugs/StablePtr.hs
+lib/hugs/packages/hugsbase/Hugs/Storable.hs
+lib/hugs/packages/hugsbase/Hugs/Storable.so
+lib/hugs/packages/hugsbase/Hugs/System.hs
+lib/hugs/packages/hugsbase/Hugs/Time.hs
+lib/hugs/packages/hugsbase/Hugs/Trex.hs
+lib/hugs/packages/hugsbase/Hugs/Weak.hs
+lib/hugs/packages/hugsbase/Hugs/Word.hs
+lib/hugs/packages/hugsbase/Paths_hugsbase.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/CppIfdef.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/HashDefine.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/MacroPass.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/Options.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/Position.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/ReadFirst.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/RunCpphs.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/SymTab.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs/Tokenise.hs
+lib/hugs/programs/cpphs/Language/Preprocessor/Unlit.hs
+lib/hugs/programs/cpphs/Main.hs
+lib/hugs/programs/cpphs/Paths_cpphs.hs
+lib/hugs/programs/cpphs/Text/ParserCombinators/HuttonMeijer.hs
+lib/hugs/programs/hsc2hs/Main.hs
+lib/hugs/programs/hsc2hs/Paths_hsc2hs.hs
 man/man1/hugs.1
-share/hugs/Credits
-share/hugs/License
-share/hugs/Readme
-share/hugs/demos/AnsiDemo.hs
-share/hugs/demos/ArrayEx.hs
-share/hugs/demos/Calendar.hs
-share/hugs/demos/CommaInt.lhs
-share/hugs/demos/Demos.hs
-share/hugs/demos/Eliza.hs
-share/hugs/demos/EvalRed.hs
-share/hugs/demos/Examples.hs
-share/hugs/demos/Expr.hs
-share/hugs/demos/FastSort.hs
-share/hugs/demos/Gofer.hs
-share/hugs/demos/Lattice.hs
-share/hugs/demos/Ldfs.hs
-share/hugs/demos/Literate.lhs
-share/hugs/demos/Matrix.hs
-share/hugs/demos/Mersenne.hs
-share/hugs/demos/Minsrand.hs
-share/hugs/demos/Queens.hs
-share/hugs/demos/Say.hs
-share/hugs/demos/Stack.hs
-share/hugs/demos/Tree.hs
-share/hugs/demos/prolog/AndorraEngine.hs
-share/hugs/demos/prolog/CombParse.hs
-share/hugs/demos/prolog/Main.hs
-share/hugs/demos/prolog/Prolog.hs
-share/hugs/demos/prolog/PureEngine.hs
-share/hugs/demos/prolog/StackEngine.hs
-share/hugs/demos/prolog/Subst.hs
-share/hugs/demos/prolog/readme
-share/hugs/demos/prolog/stdlib
-share/hugs/docs/ffi-notes.txt
-share/hugs/docs/machugs-notes.txt
-share/hugs/docs/mdo-notes.txt
-share/hugs/docs/observe-notes.txt
-share/hugs/docs/server.html
-share/hugs/docs/server.tex
-share/hugs/docs/winhugs-notes.txt
-share/hugs/docs/zipcomp-notes.txt
-share/hugs/include/GreenCard.h
-share/hugs/lib/Array.hs
-share/hugs/lib/CPUTime.hs
-share/hugs/lib/Char.hs
-share/hugs/lib/Complex.hs
-share/hugs/lib/Directory.hs
-share/hugs/lib/IO.hs
-share/hugs/lib/Ix.hs
-share/hugs/lib/List.hs
-share/hugs/lib/Locale.hs
-share/hugs/lib/Locale.lhs
-share/hugs/lib/Maybe.hs
-share/hugs/lib/Monad.hs
-share/hugs/lib/Numeric.hs
-share/hugs/lib/Prelude.hs
-share/hugs/lib/Random.hs
-share/hugs/lib/Ratio.hs
-share/hugs/lib/System.hs
-share/hugs/lib/Time.hs
-share/hugs/lib/exts/Addr.hs
-share/hugs/lib/exts/Assoc.hs
-share/hugs/lib/exts/AssocDefaults.hs
-share/hugs/lib/exts/AssocList.hs
-share/hugs/lib/exts/BankersQueue.hs
-share/hugs/lib/exts/BinaryRandList.hs
-share/hugs/lib/exts/Bits.hs
-share/hugs/lib/exts/BraunSeq.hs
-share/hugs/lib/exts/COPYRIGHT.edison
-share/hugs/lib/exts/CVar.lhs
-share/hugs/lib/exts/Chan.lhs
-share/hugs/lib/exts/Channel.lhs
-share/hugs/lib/exts/ChannelVar.lhs
-share/hugs/lib/exts/Collection.hs
-share/hugs/lib/exts/CollectionDefaults.hs
-share/hugs/lib/exts/CollectionUtils.hs
-share/hugs/lib/exts/ConcBase.hs
-share/hugs/lib/exts/Concurrent.lhs
-share/hugs/lib/exts/Dynamic.lhs
-share/hugs/lib/exts/EdisonPrelude.hs
-share/hugs/lib/exts/Exception.hs
-share/hugs/lib/exts/FiniteMap.lhs
-share/hugs/lib/exts/Foreign.hs
-share/hugs/lib/exts/GetOpt.lhs
-share/hugs/lib/exts/Haskell2Xml.hs
-share/hugs/lib/exts/Html.lhs
-share/hugs/lib/exts/HtmlBlockTable.lhs
-share/hugs/lib/exts/IOExts.hs
-share/hugs/lib/exts/IORef.lhs
-share/hugs/lib/exts/Int.hs
-share/hugs/lib/exts/IsPrefixOf.hs
-share/hugs/lib/exts/IsSuffixOf.hs
-share/hugs/lib/exts/JoinList.hs
-share/hugs/lib/exts/LazyPairingHeap.hs
-share/hugs/lib/exts/LazyST.hs
-share/hugs/lib/exts/LeftistHeap.hs
-share/hugs/lib/exts/ListSeq.hs
-share/hugs/lib/exts/MVar.lhs
-share/hugs/lib/exts/Memo.hs
-share/hugs/lib/exts/Merge.lhs
-share/hugs/lib/exts/MinHeap.hs
-share/hugs/lib/exts/MonadCont.lhs
-share/hugs/lib/exts/MonadEither.lhs
-share/hugs/lib/exts/MonadError.lhs
-share/hugs/lib/exts/MonadFix.lhs
-share/hugs/lib/exts/MonadIdentity.lhs
-share/hugs/lib/exts/MonadList.lhs
-share/hugs/lib/exts/MonadRWS.lhs
-share/hugs/lib/exts/MonadReader.lhs
-share/hugs/lib/exts/MonadRec.hs
-share/hugs/lib/exts/MonadState.lhs
-share/hugs/lib/exts/MonadTrans.lhs
-share/hugs/lib/exts/MonadWriter.lhs
-share/hugs/lib/exts/Monoid.lhs
-share/hugs/lib/exts/MyersStack.hs
-share/hugs/lib/exts/NumExts.lhs
-share/hugs/lib/exts/Observe.lhs
-share/hugs/lib/exts/Parallel.lhs
-share/hugs/lib/exts/ParseSTLib.hs
-share/hugs/lib/exts/Parsec.hs
-share/hugs/lib/exts/ParsecChar.hs
-share/hugs/lib/exts/ParsecCombinator.hs
-share/hugs/lib/exts/ParsecError.hs
-share/hugs/lib/exts/ParsecExpr.hs
-share/hugs/lib/exts/ParsecLanguage.hs
-share/hugs/lib/exts/ParsecPerm.hs
-share/hugs/lib/exts/ParsecPos.hs
-share/hugs/lib/exts/ParsecPrim.hs
-share/hugs/lib/exts/ParsecToken.hs
-share/hugs/lib/exts/PatriciaLoMap.hs
-share/hugs/lib/exts/Pretty.lhs
-share/hugs/lib/exts/QSem.lhs
-share/hugs/lib/exts/QSemN.lhs
-share/hugs/lib/exts/QuickCheck.hs
-share/hugs/lib/exts/QuickCheckPoly.hs
-share/hugs/lib/exts/QuickCheckUtils.hs
-share/hugs/lib/exts/RandList.hs
-share/hugs/lib/exts/RevSeq.hs
-share/hugs/lib/exts/ST.hs
-share/hugs/lib/exts/SampleVar.lhs
-share/hugs/lib/exts/Semaphore.lhs
-share/hugs/lib/exts/Sequence.hs
-share/hugs/lib/exts/SequenceDefaults.hs
-share/hugs/lib/exts/Set.lhs
-share/hugs/lib/exts/ShowFunctions.lhs
-share/hugs/lib/exts/SimpleQueue.hs
-share/hugs/lib/exts/SizedSeq.hs
-share/hugs/lib/exts/SkewHeap.hs
-share/hugs/lib/exts/SplayHeap.hs
-share/hugs/lib/exts/Stable.hs
-share/hugs/lib/exts/TestOrdBag.hs
-share/hugs/lib/exts/TestOrdSet.hs
-share/hugs/lib/exts/TestSeq.hs
-share/hugs/lib/exts/UnbalancedSet.hs
-share/hugs/lib/exts/Weak.hs
-share/hugs/lib/exts/Word.hs
-share/hugs/lib/exts/Xml2Haskell.hs
-share/hugs/lib/exts/XmlCombinators.hs
-share/hugs/lib/exts/XmlHtmlGen.hs
-share/hugs/lib/exts/XmlHtmlPP.hs
-share/hugs/lib/exts/XmlHtmlParse.hs
-share/hugs/lib/exts/XmlLex.hs
-share/hugs/lib/exts/XmlLib.hs
-share/hugs/lib/exts/XmlPP.hs
-share/hugs/lib/exts/XmlParse.hs
-share/hugs/lib/exts/XmlTypes.hs
-share/hugs/lib/hugs/AnsiInteract.hs
-share/hugs/lib/hugs/AnsiScreen.hs
-share/hugs/lib/hugs/CVHAssert.hs
-share/hugs/lib/hugs/GenericPrint.hs
-share/hugs/lib/hugs/HugsDynamic.hs
-share/hugs/lib/hugs/HugsInternals.hs
-share/hugs/lib/hugs/HugsLibs.hs
-share/hugs/lib/hugs/IOExtensions.hs
-share/hugs/lib/hugs/Interact.hs
-share/hugs/lib/hugs/ListUtils.hs
-share/hugs/lib/hugs/Number.hs
-share/hugs/lib/hugs/OldWeak.hs
-share/hugs/lib/hugs/ParseLib.hs
-share/hugs/lib/hugs/Quote.hs
-share/hugs/lib/hugs/StdLibs.hs
-share/hugs/lib/hugs/Trace.hs
-share/hugs/lib/hugs/Trex.hs
-@dirrm share/hugs/lib/hugs
-@dirrm share/hugs/lib/exts
-@dirrm share/hugs/lib
-@dirrm share/hugs/include
-@dirrm share/hugs/docs
-@dirrm share/hugs/demos/prolog
-@dirrm share/hugs/demos
-@dirrm share/hugs
+share/hsc2hs-0.66/template-hsc.h
+@dirrm share/hsc2hs-0.66
+@dirrm lib/hugs/programs/hsc2hs
+@dirrm lib/hugs/programs/cpphs/Text/ParserCombinators
+@dirrm lib/hugs/programs/cpphs/Text
+@dirrm lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs
+@dirrm lib/hugs/programs/cpphs/Language/Preprocessor
+@dirrm lib/hugs/programs/cpphs/Language
+@dirrm lib/hugs/programs/cpphs
+@dirrm lib/hugs/programs
+@dirrm lib/hugs/packages/hugsbase/Hugs
+@dirrm lib/hugs/packages/hugsbase
+@dirrm lib/hugs/packages/haskell98
+@dirrm lib/hugs/packages/cpphs/Text/ParserCombinators
+@dirrm lib/hugs/packages/cpphs/Text
+@dirrm lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs
+@dirrm lib/hugs/packages/cpphs/Language/Preprocessor
+@dirrm lib/hugs/packages/cpphs/Language
+@dirrm lib/hugs/packages/cpphs
+@dirrm lib/hugs/packages/base/Text/Show
+@dirrm lib/hugs/packages/base/Text/Regex
+@dirrm lib/hugs/packages/base/Text/Read
+@dirrm lib/hugs/packages/base/Text/PrettyPrint
+@dirrm lib/hugs/packages/base/Text/ParserCombinators
+@dirrm lib/hugs/packages/base/Text/Html
+@dirrm lib/hugs/packages/base/Text
+@dirrm lib/hugs/packages/base/System/Process
+@dirrm lib/hugs/packages/base/System/Posix
+@dirrm lib/hugs/packages/base/System/Mem
+@dirrm lib/hugs/packages/base/System/IO
+@dirrm lib/hugs/packages/base/System/Directory
+@dirrm lib/hugs/packages/base/System/Console
+@dirrm lib/hugs/packages/base/System
+@dirrm lib/hugs/packages/base/Foreign/Marshal
+@dirrm lib/hugs/packages/base/Foreign/C
+@dirrm lib/hugs/packages/base/Foreign
+@dirrm lib/hugs/packages/base/Debug
+@dirrm lib/hugs/packages/base/Data/STRef
+@dirrm lib/hugs/packages/base/Data/ByteString
+@dirrm lib/hugs/packages/base/Data/Array/IO
+@dirrm lib/hugs/packages/base/Data/Array
+@dirrm lib/hugs/packages/base/Data
+@dirrm lib/hugs/packages/base/Control/Monad/ST
+@dirrm lib/hugs/packages/base/Control/Monad
+@dirrm lib/hugs/packages/base/Control/Concurrent
+@dirrm lib/hugs/packages/base/Control
+@dirrm lib/hugs/packages/base
+@dirrm lib/hugs/packages/Cabal/Language/Haskell
+@dirrm lib/hugs/packages/Cabal/Language
+@dirrm lib/hugs/packages/Cabal/Distribution/Simple
+@dirrm lib/hugs/packages/Cabal/Distribution/PreProcess
+@dirrm lib/hugs/packages/Cabal/Distribution/Compat
+@dirrm lib/hugs/packages/Cabal/Distribution
+@dirrm lib/hugs/packages/Cabal
+@dirrm lib/hugs/packages
+@dirrm lib/hugs/oldlib
+@dirrm lib/hugs/include
+@dirrm lib/hugs/docs
+@dirrm lib/hugs/demos/prolog
+@dirrm lib/hugs/demos/Cabal
+@dirrm lib/hugs/demos
+@dirrm lib/hugs
