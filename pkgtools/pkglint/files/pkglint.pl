@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.667 2006/07/29 10:56:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.668 2006/08/01 08:58:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6470,6 +6470,12 @@ sub checkfile_package_Makefile($$$) {
 
 	my $distname = defined($distname_line) ? $distname_line->get("value") : undef;
 	my $pkgname = defined($pkgname_line) ? $pkgname_line->get("value") : undef;
+
+	# Let's do some tricks to get the proper value of the package
+	# name more often.
+	if (defined($distname) && defined($pkgname)) {
+		$pkgname =~ s/\$\{DISTNAME\}/$distname/;
+	}
 
 	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		$pkgname_line->log_note("PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
