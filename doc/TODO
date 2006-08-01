@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5267 2006/08/01 22:30:10 wiz Exp $
+$NetBSD: TODO,v 1.5268 2006/08/01 23:06:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1113,7 +1113,6 @@ Suggested package updates
 	o source-highlight-2.4
 	o sox-12.18.1
 	o spamass-milter-0.3.1 [pkg/33206]
-	o spamassassin-3.1.4 [heinz]
 	o spamprobe-1.4b
 	o sparsehash-0.4 [pkg/34063]
 	o spim-7.2.1
@@ -1136,7 +1135,6 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
-	o sylpheed-2.2.7
 	o sylpheed-claws-2.4.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
