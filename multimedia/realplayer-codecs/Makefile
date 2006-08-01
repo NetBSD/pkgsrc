@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/01 13:19:27 jmmv Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}-20050115
 PKGNAME=	realplayer-codecs-8.20050115
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www4.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://ftp5.mplayerhq.hu/mplayer/releases/codecs/ \
@@ -42,7 +43,7 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/RealPlayer8-Codecs
-	${INSTALL_DATA} ${WRKSRC}/*.so.*.* ${PREFIX}/lib/RealPlayer8-Codecs
+	${INSTALL_LIB_DIR} ${PREFIX}/lib/RealPlayer8-Codecs
+	${INSTALL_LIB} ${WRKSRC}/*.so.*.* ${PREFIX}/lib/RealPlayer8-Codecs
 
 .include "../../mk/bsd.pkg.mk"
