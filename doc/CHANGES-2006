@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.880 2006/08/01 14:34:35 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.881 2006/08/01 18:01:06 bad Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3628,3 +3628,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/skipstone to 0.9.6 [ghen 2006-08-01]
 	Updated multimedia/realplayer-codecs to 8.20050115nb1 [jmmv 2006-08-01]
 	Updated lang/hugs to 200605 [jmmv 2006-08-01]
+	Updated pkgtools/pkgdiff to 0.119 [bad 2006-08-01]
