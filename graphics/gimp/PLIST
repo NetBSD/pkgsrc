@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.23.2.1 2006/08/01 15:10:50 salo Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -545,7 +545,6 @@ share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpHelpUI.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpQueryBox.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpScrolledPreview.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpStock.html
-share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpStock.html~
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpWidgets.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-cell-renderers.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-colordisplay.html
@@ -557,6 +556,7 @@ share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-hierarchy.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-utils.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-widgets.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets.devhelp
+share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets.devhelp2
 share/doc/${PKGNAME}/libgimpwidgets/right.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-anchor-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-cap-butt-16.png
