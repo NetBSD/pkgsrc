@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.32 2006/08/01 00:53:24 dmcmahill Exp $
+# $NetBSD: upload,v 1.33 2006/08/01 13:16:41 rillig Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -7,13 +7,21 @@
 
 AWK=${AWK:-/usr/bin/awk}
 
+set -eu
+
+#
+# Find out where we are
+#
+scriptdir=`dirname "$0"`
+scriptdir=`cd "${scriptdir}" && pwd`
+
 usage()
 {
 cat << EOF
 
 $prog:  Uploads binary packages.
 
-Usage:  $prog [-n|--dry-run] [-d|--debug] [-v|--verbose]
+Usage:  $prog [-n|--no-upload] [-d|--debug] [-v|--verbose]
 	$prog -h|--help
         $prog -V|--version
 
@@ -25,6 +33,9 @@ Usage:  $prog [-n|--dry-run] [-d|--debug] [-v|--verbose]
     -n|--no-upload      Does all of the work except for the actual upload.
 			This option may be used to generate the upload script
 			along with the list of packages to be excluded.
+
+    -i|--no-install	Do not install the required packages; assume instead
+			that they are already available.
 
     -v|--verbose        Enables verbose output.
 
@@ -48,13 +59,10 @@ EOF
 prog=$0
 debug=no
 do_upload=yes
+do_install=yes
 verbose=no
-while
-	test -n "$1"
-do
-	case "$1"
-	in
-
+while test $# -gt 0; do
+	case "$1" in
 	-d|--debug)
 		debug=yes
 		shift
@@ -63,6 +71,11 @@ do
 	-h|--help)
 		usage
 		exit 0
+		;;
+
+	-i|--no-install)
+		do_install=no
+		shift
 		;;
 
 	-n|--no-upload)
@@ -81,7 +94,7 @@ do
 		;;
 
 	-*)
-		echo "$prog:  Unknown option:  $1"
+		echo "$prog:  Unknown option:  $1" 1>&2
 		usage
 		exit 1
 		;;
@@ -91,24 +104,26 @@ do
 		;;
 	esac
 done
-if test -n "$1" ; then
-	echo "$prog:  Unknown argument: $1"
+if test "$#" -gt 0; then
+	echo "$prog:  Unknown argument: $1" 1>&2
 	usage
 	exit 1
 fi
 
 install_required()
 {
+
+	[ "$do_install" = "yes" ] || return 0
 	pkg=$1
 	if [ "${verbose}" = "yes" ]; then
-		echo "Installing ${pkg}"
+		echo "upload> Installing ${pkg}"
 	fi
-	( cd $pkg; ${BMAKE} bulk-install )
-	if [ $? -gt 0 ]; then
-		echo "Unable to install required package $pkg!"
-		echo "Bailing out -- you're on your own."
+	( cd "$pkg" && ${BMAKE} bulk-install) \
+	|| {
+		echo "upload> ERROR: Unable to install required package $pkg!" 1>&2
+		echo "        Bailing out -- you're on your own." 1>&2
 		exit 1
-	fi
+	}
 }
 
 MD5="digest md5";
@@ -138,17 +153,20 @@ BATCH=1
 DEPENDS_TARGET=bulk-install
 export BATCH DEPENDS_TARGET
 
-# Pull in RSYNC_DST, RSYNC_OPTS:
-if [ -f "$BULK_BUILD_CONF" ]; then
-    . $BULK_BUILD_CONF
-else
-    . `dirname $0`/build.conf
-fi
+#
+# Get the variables MAKECONF, RSYNC_DST, RSYNC_OPTS from the bulk build
+# configuration file.
+#
+: ${BULK_BUILD_CONF="${scriptdir}/build.conf"} #"
+. "${BULK_BUILD_CONF}"
+. "${scriptdir}/post-build-conf"
+check_config_vars
+export_config_vars
 
 cd $USR_PKGSRC
 
 if [ -z "$RSYNC_DST" ]; then
-	echo "You must set the variable RSYNC_DST, see build.conf-example."
+	echo "upload> ERROR: You must set the variable RSYNC_DST, see build.conf-example." 1>&2
 	exit 1
 fi
 
@@ -159,39 +177,40 @@ fi
 umask 022
 TMPDIR="${TMPDIR:-/tmp}"
 TMP="${TMPDIR}"/pkg_upload.$$
-(umask 077 && mkdir "${TMP}")
-if [ $? -ne 0 ]
-then
-        echo $0: cannot create temporary directory \""${TMP}"\" >&2
+(umask 077 && mkdir "${TMP}") \
+|| {
+        echo "upload> ERROR: cannot create temporary directory \"${TMP}\"." 1>&2
         exit 1
-fi
+}
 
-exf="$TMP"/exclude
-vf="$TMP"/vulnerable
-upload="$TMP"/upload
+vulnerable_packages="$TMP/vulnerable_packages"
+restricted_packages="$TMP/restricted_packages"
+old_packages="$TMP/old_packages"
+good_packages="$TMP/regular_packages"
+
 upload_general="$TMP"/upload_general
 upload_vulnerable="$TMP"/upload_vulnerable
 
 # May be different than $USR_PKGSRC:
-if [ "${verbose}" = "yes" ]; then
-	echo "Extracting variables"
-fi
+echo "upload> Running ${BMAKE} to get the pkgsrc variables"
 pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
 distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
 gzip_cmd=`cd pkgtools/pkglint; ${BMAKE} show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
+pkg_info=`cd pkgtools/pkglint && ${BMAKE} show-var VARNAME=PKG_INFO`
 
 # Pull in some pkgs needed
 for pkg in ${REQUIRED_PACKAGES}; do
 	install_required $pkg
 done
 
-echo "Making sure vulnerability-list is up-to-date:"
+echo "upload> Making sure vulnerability-list is up-to-date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = "yes" ]
 then
 	env PKGVULNDIR=${distdir} download-vulnerability-list
+	echo "        done."
 else
-	echo '(skipped)'
+	echo "        (skipped)"
 fi
 
 case $LINTPKGSRC_CACHE in
@@ -203,29 +222,29 @@ yes|YES)
 	;;
 esac
 
-echo "Checking for restricted and out of date packages:"
+echo "upload> Checking for out of date packages:"
 # -p  =  report old versions of packages
-# -R  =  report restricted packages
-lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -pR  | sed 's@'$packages'/@@' > "$exf"
-
-echo "Checking for vulnerable packages:"
-lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -V  | sed 's@'$packages'/@@' > "$vf"
+lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -p > "${old_packages}.tmp"
+sed 's@'$packages'/@@' < "${old_packages}.tmp" > "$old_packages"
 
 RSFLAGS="-vap --progress $RSYNC_OPTS"
 
 failed=no
 cd $packages
 
+echo "upload> Checking for restricted and vulnerable packages"
+(cd All && env PKG_INFO="${pkg_info}" OUTDIR="${TMP}" PKGVULNDIR="${distdir}" sh "${pkgsrcdir}/mk/bulk/sort-packages")
+
 if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 
-	echo "Calculating checksum files..."
+	echo "upload> Calculating checksum files..."
 
 	SUMFILES="BSDSUM CKSUM MD5 SHA1 SYSVSUM"
 
 	rm -f ${SUMFILES}
 
-	if [ x"${SIGN_AS}" != x"" ]; then
-		( cd ${pkgsrcdir}/security/gnupg; ${BMAKE} bulk-install )
+	if [ "${SIGN_AS-}" != "" ]; then
+		install_required "security/gnupg"
 		for i in ${SUMFILES}; do
 			echo > $i
 			echo "This file is signed with ${SIGN_AS}'s PGP key." >> $i
@@ -233,115 +252,92 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 		done
 	fi
 
-	( cd ${pkgsrcdir}/pkgtools/digest; ${BMAKE} bulk-install )
+	install_required "pkgtools/digest"
 
 	[ -z "${BSDSUM}" ] && BSDSUM="echo"
 	[ -z "${CKSUM}" ] && CKSUM="echo"
 	[ -z "${SYSVSUM}" ] && SYSVSUM="echo"
 
-	for i in All/*; do
-		if grep $i $exf >/dev/null; then
-			:
-		else
-			${BSDSUM} $i >> BSDSUM
-			${CKSUM} $i >> CKSUM
-			${MD5} $i >> MD5
-			${SHA1} $i >> SHA1
-			${SYSVSUM} $i >> SYSVSUM
-		fi
+	for pkg in `cat "${good_packages}" "${vulnerable_packages}"`; do
+		pkg="All/$pkg"
+		${BSDSUM}	"$pkg" >> BSDSUM
+		${CKSUM}	"$pkg" >> CKSUM
+		${MD5}		"$pkg" >> MD5
+		${SHA1}		"$pkg" >> SHA1
+		${SYSVSUM}	"$pkg" >> SYSVSUM
 	done
 
 	[ "${BSDSUM}" = "echo" ] && rm BSDSUM
 	[ "${CKSUM}" = "echo" ] && rm CKSUM
 	[ "${SYSVSUM}" = "echo" ] && rm SYSVSUM
 	
-	if [ x"${SIGN_AS}" != x"" ]; then
+	if [ "${SIGN_AS-}" != "" ]; then
 		for i in ${SUMFILES}; do
 			if [ -s $i ]; then
-				echo "Signing $i"
+				echo "upload> Signing $i"
 				gpg --clearsign $i && rm $i
 			fi
 		done
 	else
-		echo "Checksum files not PGP-signed. Please do so manually!"
-		echo "(Run 'gpg --clearsign' on all of them)"
+		echo "upload> Checksum files not PGP-signed. Please do so manually!"
+		echo "        (Run 'gpg --clearsign' on all of them)"
 	fi
 fi
 
-if [ "${MKSUMMARY}" = "yes" -o "${MKSUMMARY}" = "YES" ]; then
-	echo "Creating summary file..."
+if [ "${MKSUMMARY-}" = "yes" -o "${MKSUMMARY-}" = "YES" ]; then
+	echo "upload> Creating summary file..."
 	(cd "${packages}/All" \
 		&& ls -t | grep '\.t[gb]z$' | while read n; do pkg_info -X "$n"; done) \
 		| ${gzip_cmd} > "${packages}"/All/pkg_summary.gz
 fi
 
-cat << EOF > "$upload"
-#!/bin/sh
-
-packages=$packages
-if cd $packages; then
-	:
-else
-	echo "could not cd to $packages"
-	exit 1
-fi
-
+cat <<EOF > "$upload_general"
+#! /bin/sh
+set -e
+cd "$packages"
+rsync $RSFLAGS --include-from="${good_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/"
 EOF
+chmod +x "$upload_general"
 
-cmd="rsync $RSFLAGS --exclude-from=\"$exf\" --exclude-from=\"$vf\" . \"$RSYNC_DST\""
-cp -f "$upload" "$upload_general"
-echo "$cmd" >> "$upload_general"
-chmod 755 "$upload_general"
-echo "$cmd"
-if [ "X${do_upload}" = "Xyes" ] ; then
-	echo "Uploading non-vulnerable pkgs"
-	sh "$upload_general"
-	rc=$?
+if [ "$do_upload" = "yes" ]; then
+	echo "upload> Uploading non-vulnerable packages"
+	sh "$upload_general" \
+	|| {
+		echo "upload> ERROR: rsync failed.  To retry later, you can run $upload_general" 1>&2
+		failed=yes
+	}
 else
-	echo "Skipping upload of non-vulnerable pkgs"
-	echo "Non-vulnerable upload script = ${upload_general}"
-	rc=0
-fi
-if [ ${rc} != 0 ]; then
-	echo "--------------------------------------------------"
-	echo " "
-	echo "WARNING: rsync failed.  To retry later, you can run"
-	echo "    $upload_general"
-	echo " "
-	echo "--------------------------------------------------"
-	failed=yes
+	echo "upload> Skipping upload of non-vulnerable packages."
+	echo "        Run \"$upload_general\" to upload them later."
 fi
 
-sed -n "s@All/@@p" "$exf" > "$exf.new"
-sed -n "s@All/@@p" "$vf" > "$vf.new"
-cmd="rsync $RSFLAGS --exclude-from=\"$exf.new\" --include-from=\"$vf.new\" --exclude='*' All/ \"$RSYNC_DST/vulnerable/\""
-cp -f "$upload" "$upload_vulnerable"
-echo "$cmd" >> "$upload_vulnerable"
-chmod 755 "$upload_vulnerable"
-echo "$cmd"
-if [ "X${do_upload}" = "Xyes" ] ; then
-	echo "Uploading vulnerable pkgs"
-	sh "$upload_vulnerable"
-	rc=$?
+cat <<EOF > "$upload_vulnerable"
+#! /bin/sh
+set -e
+cd "$packages/All"
+rsync $RSFLAGS --files-from="${vulnerable_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/vulnerable/"
+EOF
+chmod +x "$upload_vulnerable"
+
+if [ "$do_upload" = "yes" ]; then
+	echo "upload> Uploading vulnerable packages"
+	sh "$upload_vulnerable" \
+	|| {
+		echo "upload> ERROR: rsync failed.  To retry later, you can run $upload_vulnerable" 1>&2
+		failed=yes
+	}
 else
-	echo "Skipping upload of vulnerable pkgs"
-	echo "Vulnerable upload script = ${upload_vulnerable}"
-	rc=0
-fi
-if [ ${rc} != 0 ]; then
-	echo "--------------------------------------------------"
-	echo " "
-	echo "WARNING: rsync failed.  To retry later, you can run"
-	echo "    $upload_vulnerable"
-	echo " "
-	echo "--------------------------------------------------"
-	failed=yes
+	echo "upload> Skipping upload of vulnerable packages."
+	echo "        Run \"$upload_vulnerable\" to upload them later."
 fi
 
 # clean up temp files
-if [ "$failed" = "no" -a "${debug}" = "no" ]; then
+if [ "$failed,$debug,$do_upload" = "no,no,yes" ]; then
 	rm -fr "$TMP"
 else
-	echo "Preserving temp directory ${TMP}"
+	echo "upload> Preserving temporary directory ${TMP}"
 fi
 
+if [ "$failed" = "yes" ]; then
+	exit 1
+fi
