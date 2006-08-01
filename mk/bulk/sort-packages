@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.1 2006/08/01 06:05:15 rillig Exp $
+# $NetBSD: sort-packages,v 1.2 2006/08/01 06:10:44 rillig Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -20,7 +20,7 @@ set -eu
 : ${OUTDIR="/tmp"}
 : ${PKG_SUFX=".tgz"}
 : ${AUDIT_PACKAGES="audit-packages"}
-: ${PKG_INFO_CMD="pkg_info"}
+: ${PKG_INFO="pkg_info"}
 
 regular_packages="${OUTDIR}/regular_packages"
 restricted_packages="${OUTDIR}/restricted_packages"
@@ -31,7 +31,7 @@ newline="
 rm -f "${regular_packages}" "${restricted_packages}" "${vulnerable_packages}"
 
 for pkg in *${PKG_SUFX}; do
-	build_info=`${pkg_info_cmd} -B "${pkg}"`
+	build_info=`${PKG_INFO} -B "${pkg}"`
 
 	# Note: this code needs to be that complicated because licensing
 	# issues are critical to pkgsrc, and we really don't want
