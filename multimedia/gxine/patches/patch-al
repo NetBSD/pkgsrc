@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2006/05/03 12:47:47 drochner Exp $
+$NetBSD: patch-al,v 1.2 2006/08/01 14:56:06 joerg Exp $
 
---- src/engine.c.orig	2006-03-16 18:16:18.000000000 +0100
+--- src/engine.c.orig	2006-06-30 14:56:00.000000000 +0000
 +++ src/engine.c
 @@ -36,7 +36,7 @@
  
@@ -11,7 +11,17 @@ $NetBSD: patch-al,v 1.1 2006/05/03 12:47:47 drochner Exp $
  
  gboolean initialised = FALSE;
  
-@@ -277,7 +277,12 @@ void engine_init (void)
+@@ -299,8 +299,7 @@ static gboolean js_queue_cb (GtkWidget *
+   while ((js = g_async_queue_try_pop (js_queue)))
+   {
+     /* spin; play_exec gets this & the GDK lock in reverse order */ 
+-    while (pthread_mutex_trylock (&widgets_update_lock))
+-      sched_yield ();
++    pthread_mutex_lock (&widgets_update_lock);
+     pthread_mutex_unlock (&widgets_update_lock); /* JS 'play()' needs it */
+     engine_exec_obj (js->cmd, js->obj, js->cb, js->cb_data, js->ecb, js->src);
+     free (js->cmd);
+@@ -412,7 +411,12 @@ void engine_init (void)
  {
    char *cfgfilename;
    GtkWidget *w;
