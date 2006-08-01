@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.879 2006/08/01 13:19:54 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.880 2006/08/01 14:34:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3627,3 +3627,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/easyh10 version 1.4 [ghen 2006-08-01]
 	Updated www/skipstone to 0.9.6 [ghen 2006-08-01]
 	Updated multimedia/realplayer-codecs to 8.20050115nb1 [jmmv 2006-08-01]
+	Updated lang/hugs to 200605 [jmmv 2006-08-01]
