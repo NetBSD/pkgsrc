@@ -1,17 +1,31 @@
-$NetBSD: patch-ab,v 1.3 2005/11/03 22:35:53 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2006/08/01 14:33:59 jmmv Exp $
 
---- src/prelude.h.orig	Thu May 27 23:29:25 1999
-+++ src/prelude.h	Sat May 20 04:06:55 2000
-@@ -566,10 +566,12 @@
-  * eval, print loop
-  */
+--- libraries/Makefile.in.orig	2006-05-15 15:55:11.000000000 +0200
++++ libraries/Makefile.in
+@@ -54,7 +54,7 @@ all: $(BUILD_DIR)/.stamp
  
-+#ifndef __NetBSD__
- #ifdef  m68k				/* global registers on an m68k	   */
- #define GLOBALfst	asm("a4")
- #define GLOBALsnd	asm("a5")
- #define GLOBALsp	asm("a3")
-+#endif
- #endif
+ $(BUILD_DIR)/.stamp: bootlib/.stamp $(INCLUDES) $(CPPHS_FILE) $(HSC2HS_FILE) $(CONVERT)
+ 	$(RM) -r $(BUILD_DIR)/oldlib
+-	cd ..; HOST='$(HOST)' libraries/$(CONVERT) fptools hugsdir
++	cd ..; HOST='$(HOST)' PREFIX='$(prefix)' libraries/$(CONVERT) fptools hugsdir
+ 	echo timestamp for libraries >$@
  
- #ifdef  sparc				/* global registers on a sparc	   */
+ $(HSC2HS): $(BUILD_DIR)/programs/hsc2hs/Main.hs
+@@ -69,7 +69,7 @@ $(HSC2HS).bat: $(BUILD_DIR)/programs/hsc
+ 	 echo '%rootdir%/src/runhugs -98 -P%rootdir%/libraries/bootlib %rootdir%/hugsdir/programs/hsc2hs/Main.hs -I%rootdir%/hugsdir/include -t%rootdir%/hsc2hs/template-hsc.h %*') >$@
+ 
+ $(BUILD_DIR)/programs/hsc2hs/Main.hs: $(HSC2HS_SRC)/Main.hs $(BOOTLIB) $(INCLUDES) $(CPPHS_FILE)
+-	cd $(HSC2HS_SRC); $(HUGS_SETUP) configure --verbose --hugs --scratchdir=$(BUILD_DIR) --with-compiler=../src/ffihugs --with-cpphs="../libraries/tools/cpphs$(BAT)"
++	cd $(HSC2HS_SRC); $(HUGS_SETUP) configure --prefix=$(prefix) --verbose --hugs --scratchdir=$(BUILD_DIR) --with-compiler=../src/ffihugs --with-cpphs="../libraries/tools/cpphs$(BAT)"
+ 	cd $(HSC2HS_SRC); $(HUGS_SETUP) build --verbose
+ 	$(RM) -r $(BUILD_DIR)/autogen
+ 
+@@ -85,7 +85,7 @@ $(CPPHS).bat: $(BUILD_DIR)/programs/cpph
+ 	 echo '%rootdir%/src/runhugs -P%rootdir%/libraries/bootlib %rootdir%/hugsdir/programs/cpphs/Main.hs %*') >$@
+ 
+ $(BUILD_DIR)/programs/cpphs/Main.hs: $(BOOTLIB) $(INCLUDES)
+-	cd $(CPPHS_SRC); $(HUGS_SETUP) configure --verbose --hugs --scratchdir=$(BUILD_DIR)/packages/cpphs --with-compiler=../src/ffihugs
++	cd $(CPPHS_SRC); $(HUGS_SETUP) configure --prefix=$(prefix) --verbose --hugs --scratchdir=$(BUILD_DIR)/packages/cpphs --with-compiler=../src/ffihugs
+ 	cd $(CPPHS_SRC); $(HUGS_SETUP) build --verbose
+ 	$(RM) -r $(BUILD_DIR)/packages/cpphs/autogen
+ 	mkdir -p $(BUILD_DIR)/programs
