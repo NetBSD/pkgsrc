@@ -1,33 +1,24 @@
-# $NetBSD: Makefile,v 1.32 2005/11/03 22:35:53 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/08/01 14:33:59 jmmv Exp $
 
-DISTNAME=	hugs98-Dec2001
-PKGNAME=	hugs98-200112
-PKGREVISION=	2
+DISTNAME=	hugs98-May2006
+PKGNAME=	hugs98-200605
 CATEGORIES=	lang
-MASTER_SITES=	http://cvs.haskell.org/Hugs/downloads/
+MASTER_SITES=	http://cvs.haskell.org/Hugs/downloads/2006-05/
 
 MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.haskell.org/hugs/
-COMMENT=	Nottingham and Yale Haskell interpreter and programming environment
+COMMENT=	Functional programming system based on Haskell 98
 
 GNU_CONFIGURE=		yes
-CONFIGURE_DIRS=		src/unix
-CONFIGURE_ARGS+=	--with-readline
-BUILD_DIRS=		src
-BUILD_TARGET=		default
+USE_TOOLS+=		gmake
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
 
-.if ${OPSYS} == "Darwin"
-# Trick it into not checking if symbols have leading underscores,
-# since the dlcompat layer expects you to not be that clever.
-CONFIGURE_ENV+=		ac_cv_header_nlist_h=no
-.endif
-
-INSTALLATION_DIRS=	man/man1
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/docs/hugs.1 ${PREFIX}/man/man1/hugs.1
-
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# The default -O2 breaks the interpreter producing strange internal errors
+# at run time.
+.if !empty(CC_VERSION:Mgcc-4*)
+CFLAGS+=    -O0
+.endif
