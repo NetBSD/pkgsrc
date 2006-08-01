@@ -20,4 +20,4 @@ apart from the command line MP3 player supplied with libmad (madplay):
 6) CTRL-C behaves like it does for mpg123.
 
 7) It can be installed setuid-root so it can adjust scheduling
-priority to reduce its susceptibility to jitter.
+   priority to reduce its susceptibility to jitter.
