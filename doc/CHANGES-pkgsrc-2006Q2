@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.48 2006/08/01 00:19:26 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.49 2006/08/01 13:45:51 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -109,3 +109,5 @@ Pullup ticket 1765 - requested by gdt
 resolve szip license issue
 Pullup ticket 1767 - requested by ghen
 bugfix update for postfix
+Pullup ticket 1766 - requested by ghen
+security update for seamonkey
