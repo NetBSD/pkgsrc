@@ -1,0 +1,40 @@
+$NetBSD: patch-ae,v 1.1 2006/08/01 12:50:23 mjl Exp $
+
+--- sserver.cpp.orig	2006-08-01 13:48:11.000000000 +0200
++++ sserver.cpp	2006-08-01 13:54:45.000000000 +0200
+@@ -52,7 +52,7 @@
+ 	char a_grabname[256];
+ 	char a_vpid[20];
+ 	char a_apid[20];
+-	char a_filename[256];
++	char a_filename[PATH_MAX];
+ 	char a_path[256]="";
+ 	char a_host[256];
+ 	int	i,n;
+@@ -169,7 +169,7 @@
+ 						sprintf(a_vpid,"0x%03x",recdata.vpid);	
+ 						sprintf(a_apid,"0x%03x",recdata.apid);
+ 
+-						strcpy (a_filename,a_path);
++						strlcpy (a_filename,a_path, sizeof(a_filename));
+ 							
+ 						if (strlen(a_filename)) {
+ 							strcat(a_filename,"/");
+@@ -185,7 +185,7 @@
+ 								}
+ 							} while (*p_act);
+ 								
+-							strcat(a_filename, recdata.channelname);
++							strlcat(a_filename, recdata.channelname, 20);
+ 							strcat(a_filename, "_");
+ 						}
+ 
+@@ -206,7 +206,7 @@
+ 								}
+ 							} while (*p_act++);
+ 							
+-							strcat(a_filename, recdata.epgtitle);
++							strlcat(a_filename, recdata.epgtitle, 80);
+ 							strcat(a_filename, "_");
+ 						}
+ 
