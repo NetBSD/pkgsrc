@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.44 2006/04/06 06:22:02 reed Exp $
+# $NetBSD: Makefile,v 1.45 2006/08/01 21:40:20 jlam Exp $
 
-PKGNAME=	${DISTNAME:S/MesaLib/glut/}
+PKGNAME=	glut-${MESA_VERSION}
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
-.include "../../graphics/Mesa/Makefile.common"
+.include "../../graphics/Mesa/Makefile.lib"
 
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
-BUILDLINK_API_DEPENDS.glu+=		glu>=${MESA_VERSION}
+BUILDLINK_API_DEPENDS.glu+=	glu>=${MESA_VERSION}
 
 INSTLIBS=	${WRKSRC}/src/glut/glx/libglut.la
 
