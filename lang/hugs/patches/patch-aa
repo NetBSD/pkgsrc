@@ -1,26 +1,24 @@
-$NetBSD: patch-aa,v 1.5 2005/11/03 22:35:53 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2006/08/01 14:33:59 jmmv Exp $
 
---- src/MkInstal.in.orig	Tue Feb 29 05:29:00 2000
-+++ src/MkInstal.in	Tue May 22 02:32:45 2001
-@@ -10,8 +10,8 @@
- # multiple files at once.
- ################################################################
+--- docs/users_guide/Makefile.in.orig	2006-04-28 14:24:16.000000000 +0200
++++ docs/users_guide/Makefile.in
+@@ -78,12 +78,13 @@ pdf: $(ROOT).pdf
+ htmlhelp: $(ROOT).chm
  
--INSTALL		= unix/install-sh
--INSTALL_DATA	= /bin/cp
-+INSTALL_PROGRAM=	${BSD_INSTALL_PROGRAM}
-+INSTALL_DATA=		${BSD_INSTALL_DATA}
+ $(HTML): $(SGML_FILES) $(DSL_FILE) $(CSS_FILE)
+-	$(RM) -r $(ROOT)
+-	mkdir $(ROOT)
+-	$(CP) $(CSS_FILE) $(ROOT)
+-	$(CP) $(IMAGE) $(ROOT)
+-	test -z '$(DOCBOOK2HTML)' || \
+-	  $(DOCBOOK2HTML) --dsl $(DSL_FILE) $(ROOT).sgml
++	if test -n '$(DOCBOOK2HTML)'; then \
++		$(RM) -r $(ROOT); \
++		mkdir $(ROOT); \
++		$(CP) $(CSS_FILE) $(ROOT); \
++		$(CP) $(IMAGE) $(ROOT); \
++		$(DOCBOOK2HTML) --dsl $(DSL_FILE) $(ROOT).sgml; \
++	fi
  
- install		:: install_bin install_lib            # the bare minimum
- install		:: install_libs                       # lotsa libraries
-@@ -22,8 +22,8 @@
- 
- install_bin	:: hugs$(EXE) runhugs$(EXE)
- 		$(INSTALL) -d $(bindir)
--		$(INSTALL) hugs$(EXE) $(bindir)
--		$(INSTALL) runhugs$(EXE) $(bindir)
-+		$(INSTALL_PROGRAM) hugs$(EXE) $(bindir)
-+		$(INSTALL_PROGRAM) runhugs$(EXE) $(bindir)
- 
- install_lib	::
- 		$(INSTALL) -d $(hugsdir)/lib
+ $(ROOT).dvi: $(SGML_FILES)
+ 	test -z '$(DOCBOOK2DVI)' || $(DOCBOOK2DVI) $(ROOT).sgml
