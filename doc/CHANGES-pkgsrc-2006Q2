@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.47 2006/07/31 23:38:50 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.48 2006/08/01 00:19:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -107,3 +107,5 @@ Pullup ticket 1764 - requested by taca
 security fix for ruby18-base
 Pullup ticket 1765 - requested by gdt
 resolve szip license issue
+Pullup ticket 1767 - requested by ghen
+bugfix update for postfix
