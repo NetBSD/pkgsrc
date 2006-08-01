@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/13 23:44:09 reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/01 21:40:20 jlam Exp $
 
+DISTNAME=	MesaDemos-${MESA_VERSION}
 PKGNAME=	glx-utils-${MESA_VERSION}
 CATEGORIES=	x11 graphics
 COMMENT=	OpenGL glxgears and glxinfo
 
-PATCHDIR=		${.CURDIR}/patches
-DISTINFO_FILE=		${.CURDIR}/distinfo
-
 .include "../../graphics/Mesa/Makefile.common"
-DISTNAME=	MesaDemos-${MESA_VERSION}
-WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
-USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	bin
+
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 
 do-build:
 	cd ${WRKSRC}/progs/xdemos && \
@@ -27,8 +25,5 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/progs/xdemos/glxgears ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/progs/xdemos/glxinfo ${PREFIX}/bin/
-
-.include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
