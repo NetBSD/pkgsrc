@@ -1,13 +1,108 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.31 2006/07/30 14:31:10 jschauma Exp $
+# $NetBSD: upload,v 1.32 2006/08/01 00:53:24 dmcmahill Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
 #
 
+AWK=${AWK:-/usr/bin/awk}
+
+usage()
+{
+cat << EOF
+
+$prog:  Uploads binary packages.
+
+Usage:  $prog [-n|--dry-run] [-d|--debug] [-v|--verbose]
+	$prog -h|--help
+        $prog -V|--version
+
+    -d|--debug          Preserves some intermediate files to help
+			debug any problems.
+
+    -h|--help           Displays this help message and exits.
+
+    -n|--no-upload      Does all of the work except for the actual upload.
+			This option may be used to generate the upload script
+			along with the list of packages to be excluded.
+
+    -v|--verbose        Enables verbose output.
+
+    -V|--version        Displays the version of this script and exits.
+
+Example:
+
+    cd /usr/pkgsrc && $prog
+
+Environment Variables:
+    
+    AWK  --  If specified, sets the awk program to be used
+
+Files:
+
+    pkgsrc/mk/bulk/build.conf
+
+EOF
+}
+
+prog=$0
+debug=no
+do_upload=yes
+verbose=no
+while
+	test -n "$1"
+do
+	case "$1"
+	in
+
+	-d|--debug)
+		debug=yes
+		shift
+		;;
+
+	-h|--help)
+		usage
+		exit 0
+		;;
+
+	-n|--no-upload)
+		do_upload=no
+		shift
+		;;
+
+	-v|--verbose)
+		verbose=yes
+		shift
+		;;
+
+	-V|--version)
+		${AWK} '/^#[ \t]*\$NetBSD/ {gsub(/,v/,"",$3);printf("%s:  Version %s, %s\n",$3,$4,$5); exit 0;}' $prog
+		exit 0
+		;;
+
+	-*)
+		echo "$prog:  Unknown option:  $1"
+		usage
+		exit 1
+		;;
+
+	*)
+		break
+		;;
+	esac
+done
+if test -n "$1" ; then
+	echo "$prog:  Unknown argument: $1"
+	usage
+	exit 1
+fi
+
 install_required()
 {
 	pkg=$1
+	if [ "${verbose}" = "yes" ]; then
+		echo "Installing ${pkg}"
+	fi
 	( cd $pkg; ${BMAKE} bulk-install )
 	if [ $? -gt 0 ]; then
 		echo "Unable to install required package $pkg!"
@@ -78,6 +173,9 @@ upload_general="$TMP"/upload_general
 upload_vulnerable="$TMP"/upload_vulnerable
 
 # May be different than $USR_PKGSRC:
+if [ "${verbose}" = "yes" ]; then
+	echo "Extracting variables"
+fi
 pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
 distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
@@ -177,23 +275,34 @@ if [ "${MKSUMMARY}" = "yes" -o "${MKSUMMARY}" = "YES" ]; then
 		| ${gzip_cmd} > "${packages}"/All/pkg_summary.gz
 fi
 
-echo "#!/bin/sh" > "$upload"
-echo "packages=$packages" >> "$upload"
-echo "if cd $packages; then" >> "$upload"
-echo "  :" >> "$upload"
-echo "else" >> "$upload"
-echo "	echo \"could not cd to $packages\"" >> "$upload"
-echo "	exit 1" >> "$upload"
-echo "fi" >> "$upload"
+cat << EOF > "$upload"
+#!/bin/sh
 
-echo "Uploading non-vulnerable pkgs"
+packages=$packages
+if cd $packages; then
+	:
+else
+	echo "could not cd to $packages"
+	exit 1
+fi
+
+EOF
+
 cmd="rsync $RSFLAGS --exclude-from=\"$exf\" --exclude-from=\"$vf\" . \"$RSYNC_DST\""
 cp -f "$upload" "$upload_general"
 echo "$cmd" >> "$upload_general"
 chmod 755 "$upload_general"
 echo "$cmd"
-sh "$upload_general"
-if [ $? != 0 ]; then
+if [ "X${do_upload}" = "Xyes" ] ; then
+	echo "Uploading non-vulnerable pkgs"
+	sh "$upload_general"
+	rc=$?
+else
+	echo "Skipping upload of non-vulnerable pkgs"
+	echo "Non-vulnerable upload script = ${upload_general}"
+	rc=0
+fi
+if [ ${rc} != 0 ]; then
 	echo "--------------------------------------------------"
 	echo " "
 	echo "WARNING: rsync failed.  To retry later, you can run"
@@ -203,7 +312,6 @@ if [ $? != 0 ]; then
 	failed=yes
 fi
 
-echo "Uploading vulnerable pkgs"
 sed -n "s@All/@@p" "$exf" > "$exf.new"
 sed -n "s@All/@@p" "$vf" > "$vf.new"
 cmd="rsync $RSFLAGS --exclude-from=\"$exf.new\" --include-from=\"$vf.new\" --exclude='*' All/ \"$RSYNC_DST/vulnerable/\""
@@ -211,8 +319,16 @@ cp -f "$upload" "$upload_vulnerable"
 echo "$cmd" >> "$upload_vulnerable"
 chmod 755 "$upload_vulnerable"
 echo "$cmd"
-sh "$upload_vulnerable"
-if [ $? != 0 ]; then
+if [ "X${do_upload}" = "Xyes" ] ; then
+	echo "Uploading vulnerable pkgs"
+	sh "$upload_vulnerable"
+	rc=$?
+else
+	echo "Skipping upload of vulnerable pkgs"
+	echo "Vulnerable upload script = ${upload_vulnerable}"
+	rc=0
+fi
+if [ ${rc} != 0 ]; then
 	echo "--------------------------------------------------"
 	echo " "
 	echo "WARNING: rsync failed.  To retry later, you can run"
@@ -223,6 +339,9 @@ if [ $? != 0 ]; then
 fi
 
 # clean up temp files
-if [ "$failed" = "no" ]; then
+if [ "$failed" = "no" -a "${debug}" = "no" ]; then
 	rm -fr "$TMP"
+else
+	echo "Preserving temp directory ${TMP}"
 fi
+
