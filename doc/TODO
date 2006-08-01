@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5266 2006/08/01 14:34:35 jmmv Exp $
+$NetBSD: TODO,v 1.5267 2006/08/01 22:30:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,8 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcmidi-20060625
+	o abcm2ps-4.12.23
+	o abcmidi-20060730
 	o acpi-iasl-20040715
 	o adns-1.3
 	o adocman-0.13
@@ -390,7 +391,7 @@ Suggested package updates
 	o boson-0.12
 	o browser-bookmarks-menu-0.4
 	o bsdiff-4.3
-	o btpd-0.10 [pkg/34068]
+	o btpd-0.11 [pkg/34068]
 	o bugzilla-2.22
 	o byacc-20050813
 	o c4-1.10 [schmonz]
@@ -413,6 +414,7 @@ Suggested package updates
 	o cjk-lyx-1.3.3
 	o cocoon-2.1.9
 	o columba-1.0RC1
+	o comix-3.4
 	o compface-1.5.2
 	o control-center-2.14.2
 	o cook-2.26
@@ -477,6 +479,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
+	o epiphany-2.14.3
 	o epstool-3.08
 	o eric3-3.9.1
 	o erlang-11
@@ -487,10 +490,11 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o evince-0.5.4
-	o evolution-2.6.2
-	o evolution-exchange-2.6.2
+	o evolution-2.6.3
+	o evolution-data-server-1.6.3
+	o evolution-exchange-2.6.3
 	o ex-050325
-	o exim-4.62
+	o exim-4.63
 	o exmh-2.7.2
 	o ezxml-0.8.6
 	o f2c-20031025
@@ -529,6 +533,7 @@ Suggested package updates
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o gedit-2.14.4
 	o gerbv-1.0.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -546,14 +551,18 @@ Suggested package updates
 	o gld-1.7
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.14.2
-	o gnome-games-2.14.2.1
+	o gnome-applets-2.14.3
+	o gnome-desktop-2.14.3
+	o gnome-games-2.14.3
 	o gnome-mag-0.12.5
 	o gnome-media-2.14.2
+	o gnome-menus-2.14.3
+	o gnome-panel-2.14.3
 	o gnome-pilot-2.0.13
+	o gnome-session-2.14.3
 	o gnome-speech-0.4.1
 	o gnome-spell-1.0.7
-	o gnome-themes-2.14.2
+	o gnome-themes-2.14.3
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.6
 	o gnus-5.10.8
@@ -562,7 +571,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o gok-1.0.10
-	o gossip-0.12
+	o gossip-0.13
 	o gpsdrive-2.09
 	o grace-5.1.20
 	o gramofile-1.6P
@@ -585,7 +594,7 @@ Suggested package updates
 	o gtk2+-2.10.1 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
 	o gtk2-engines-2.6.9
 	o gtkam-0.1.13
-	o gtkhtml-3.10.2
+	o gtkhtml-3.10.3
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -647,7 +656,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
-	o kazehakase-0.3.8
+	o kazehakase-0.3.9
 	o kbarcode-2.0.4
 	o kdrill-6.4
 	o kinput2-3.1
@@ -663,6 +672,7 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
+	o lftp-3.5.2
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46
@@ -692,8 +702,10 @@ Suggested package updates
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.3
+	o libwnck-2.14.3
 	o libwpd-0.8.5
 	o licq-core-1.3.0
+	o liferea-1.0.19
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -992,6 +1004,7 @@ Suggested package updates
 	o py-pexpect-0.99999b
 	o py-psyco-1.5.1
 	o py-psycopg-2.0.2
+	o py-psycopg2-2.0.3
 	o py-pyrex-0.9.3.1
 	o py-qt3-base-3.16
 	o py-qt3-modules-3.16
@@ -1067,6 +1080,7 @@ Suggested package updates
 	o sdig-0.40
 	o seahorse-0.9.1
 	o sendfile-20010424
+	o sharity-3.2
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0b9
@@ -1089,7 +1103,7 @@ Suggested package updates
 	o smalltalk-2.1.12
 	o smlnj-110.59 [pkgsrc-wip]
 	o smokeping-2.0.9
-	o snd-8.2
+	o snd-8.3
 	o snes9x-1.502
 	o snort-2.6.0
 	o socat-1.5.0.0
@@ -1122,7 +1136,8 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
-	o sylpheed-claws-2.3.1
+	o sylpheed-2.2.7
+	o sylpheed-claws-2.4.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
@@ -1247,6 +1262,7 @@ Suggested package updates
 	o yafc-1.1
 	o yasm-0.5.0
 	o yaz-2.1.8
+	o yelp-2.14.3
 	o yencode-0.46
 	o yodl-2.01.02
 	o ysm-2.9.8
