@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.890 2006/08/02 15:44:36 salo Exp $
+$NetBSD: CHANGES-2006,v 1.891 2006/08/02 17:49:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3728,3 +3728,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/swi-prolog-lite to 5.6.17 [kristerw 2006-08-02]
 	Updated lang/swi-prolog-packages to 5.6.17 [kristerw 2006-08-02]
 	Updated graphics/tiff to 3.8.2nb3 [salo 2006-08-02]
+	Updated mail/dovecot to 1.0rc3 [ghen 2006-08-02]
