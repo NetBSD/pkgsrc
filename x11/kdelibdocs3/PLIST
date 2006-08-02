@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2006/06/20 16:44:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.26 2006/08/02 13:48:04 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -5416,6 +5416,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1NodeList.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1Notation-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1Notation.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1Notation.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1PairImpl-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1PairImpl.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1ProcessingInstruction-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1ProcessingInstruction.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1ProcessingInstruction.png
@@ -5658,9 +5660,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DateTimeMS.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EvalMultiLineEdit-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EvalMultiLineEdit.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EvalMultiLineEdit.png
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EventConstructor-members.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EventConstructor.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EventConstructor.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EventExceptionConstructor-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EventExceptionConstructor.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EventExceptionConstructor.png
@@ -5708,9 +5707,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MutationEventConstr
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MutationEventConstructor.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1Navigator-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1Navigator.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeConstructor-members.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeConstructor.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeConstructor.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeFilterConstructor-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeFilterConstructor.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeFilterConstructor.png
