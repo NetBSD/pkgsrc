@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+$NetBSD: patch-ag,v 1.2 2006/08/02 15:15:36 kristerw Exp $
 
---- src/pl-incl.h.orig	2004-01-05 10:43:45.000000000 +0100
-+++ src/pl-incl.h
-@@ -206,7 +206,7 @@ gcc.
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+--- packages/xpce/pl/src/Makefile.bin.in.orig	2005-01-31 11:47:37.000000000 +0100
++++ packages/xpce/pl/src/Makefile.bin.in	2006-08-02 16:34:35.000000000 +0200
+@@ -59,7 +59,7 @@
+ 		@PLBASE=$(PWD); \
+ 		if [ -d xpce ]; then \
+ 		   echo $(MAKE) PL=$$PLBASE/$(BPL); \
+-                   (cd xpce/prolog/lib; $(MAKE) PL=$$PLBASE/$(BPL)); \
++                   (cd xpce/prolog/lib; $(MAKE) PL=$$PLBASE/bin/$(PLARCH)/$(XPCE)); \
+ 		fi
  
- #ifndef __unix__
--#if defined(_AIX) || defined(__APPLE__) || defined(__unix) || defined(__BEOS__)
-+#if defined(_AIX) || defined(__APPLE__) || defined(__unix) || defined(__BEOS__) || defined(__NetBSD__)
- #define __unix__ 1
- #endif
- #endif
+ install:	all
