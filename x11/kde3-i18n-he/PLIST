@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/08/02 14:24:41 markd Exp $
 share/doc/kde/HTML/he/common/fdl-translated.html
 share/doc/kde/HTML/he/common/gpl-translated.html
 share/doc/kde/HTML/he/common/kde-localised.css
@@ -434,6 +434,7 @@ share/locale/he/LC_MESSAGES/kwifimanager.mo
 share/locale/he/LC_MESSAGES/kwin.mo
 share/locale/he/LC_MESSAGES/kwin4.mo
 share/locale/he/LC_MESSAGES/kwin_art_clients.mo
+share/locale/he/LC_MESSAGES/kwin_clients.mo
 share/locale/he/LC_MESSAGES/kwin_lib.mo
 share/locale/he/LC_MESSAGES/kwireless.mo
 share/locale/he/LC_MESSAGES/kworldclock.mo

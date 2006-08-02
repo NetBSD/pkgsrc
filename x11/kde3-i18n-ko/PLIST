@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/02 14:24:42 markd Exp $
 share/doc/kde/HTML/ko/common/fdl-translated.html
 share/doc/kde/HTML/ko/common/gpl-translated.html
 share/doc/kde/HTML/ko/common/kde-localised.css
@@ -20,7 +20,6 @@ share/locale/ko/LC_MESSAGES/htmlsearch.mo
 share/locale/ko/LC_MESSAGES/juk.mo
 share/locale/ko/LC_MESSAGES/kabc_dir.mo
 share/locale/ko/LC_MESSAGES/kabc_file.mo
-share/locale/ko/LC_MESSAGES/kabc_ldap.mo
 share/locale/ko/LC_MESSAGES/kabc_ldapkio.mo
 share/locale/ko/LC_MESSAGES/kabc_net.mo
 share/locale/ko/LC_MESSAGES/kabc_sql.mo

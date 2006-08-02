@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/06/01 14:37:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/08/02 14:24:46 markd Exp $
 share/doc/kde/HTML/uk/common/kde-localised.css
 share/doc/kde/HTML/uk/common/logotp3.png
 share/doc/kde/HTML/uk/kbabel/catman.docbook
@@ -15,6 +15,9 @@ share/doc/kde/HTML/uk/kioslave/bzip2.docbook
 share/doc/kde/HTML/uk/kioslave/file.docbook
 share/doc/kde/HTML/uk/kioslave/finger.docbook
 share/doc/kde/HTML/uk/kioslave/floppy.docbook
+share/doc/kde/HTML/uk/kioslave/imaps.docbook
+share/doc/kde/HTML/uk/kioslave/smb.docbook
+share/doc/kde/HTML/uk/kioslave/tar.docbook
 share/doc/kde/HTML/uk/knotes/common
 share/doc/kde/HTML/uk/knotes/index.cache.bz2
 share/doc/kde/HTML/uk/knotes/index.docbook
@@ -203,8 +206,6 @@ share/locale/uk/LC_MESSAGES/kdessh.mo
 share/locale/uk/LC_MESSAGES/kdesu.mo
 share/locale/uk/LC_MESSAGES/kdesud.mo
 share/locale/uk/LC_MESSAGES/kdevdesigner.mo
-share/locale/uk/LC_MESSAGES/kdevelop.mo
-share/locale/uk/LC_MESSAGES/kdevtipofday.mo
 share/locale/uk/LC_MESSAGES/kdf.mo
 share/locale/uk/LC_MESSAGES/kdgantt.mo
 share/locale/uk/LC_MESSAGES/kdialog.mo
@@ -278,7 +279,6 @@ share/locale/uk/LC_MESSAGES/kfontinst.mo
 share/locale/uk/LC_MESSAGES/kfouleggs.mo
 share/locale/uk/LC_MESSAGES/kgamma.mo
 share/locale/uk/LC_MESSAGES/kgantt.mo
-share/locale/uk/LC_MESSAGES/kgeography.mo
 share/locale/uk/LC_MESSAGES/kget.mo
 share/locale/uk/LC_MESSAGES/kghostview.mo
 share/locale/uk/LC_MESSAGES/kgpg.mo
@@ -292,7 +292,6 @@ share/locale/uk/LC_MESSAGES/khtmlkttsd.mo
 share/locale/uk/LC_MESSAGES/khtmlsettingsplugin.mo
 share/locale/uk/LC_MESSAGES/kicker.mo
 share/locale/uk/LC_MESSAGES/kiconedit.mo
-share/locale/uk/LC_MESSAGES/kig.mo
 share/locale/uk/LC_MESSAGES/kimagemapeditor.mo
 share/locale/uk/LC_MESSAGES/kinetd.mo
 share/locale/uk/LC_MESSAGES/kio.mo
@@ -363,7 +362,6 @@ share/locale/uk/LC_MESSAGES/kmobile.mo
 share/locale/uk/LC_MESSAGES/kmoon.mo
 share/locale/uk/LC_MESSAGES/kmousetool.mo
 share/locale/uk/LC_MESSAGES/kmouth.mo
-share/locale/uk/LC_MESSAGES/kmplot.mo
 share/locale/uk/LC_MESSAGES/kmrml.mo
 share/locale/uk/LC_MESSAGES/knetattach.mo
 share/locale/uk/LC_MESSAGES/knetwalk.mo
@@ -448,7 +446,6 @@ share/locale/uk/LC_MESSAGES/ksokoban.mo
 share/locale/uk/LC_MESSAGES/kspaceduel.mo
 share/locale/uk/LC_MESSAGES/ksplash.mo
 share/locale/uk/LC_MESSAGES/ksplashthemes.mo
-share/locale/uk/LC_MESSAGES/kstars.mo
 share/locale/uk/LC_MESSAGES/kstart.mo
 share/locale/uk/LC_MESSAGES/kstartperf.mo
 share/locale/uk/LC_MESSAGES/kstyle_highcontrast_config.mo

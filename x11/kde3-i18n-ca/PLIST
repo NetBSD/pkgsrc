@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/06/01 14:37:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/08/02 14:24:40 markd Exp $
 share/doc/kde/HTML/ca/amor/common
 share/doc/kde/HTML/ca/amor/index.cache.bz2
 share/doc/kde/HTML/ca/amor/index.docbook
@@ -21,9 +21,12 @@ share/doc/kde/HTML/ca/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/ca/kate-plugins/xmlcheck.docbook
 share/doc/kde/HTML/ca/kate-plugins/xmltools.docbook
 share/doc/kde/HTML/ca/kate/advanced.docbook
+share/doc/kde/HTML/ca/kate/common
 share/doc/kde/HTML/ca/kate/configuring.docbook
 share/doc/kde/HTML/ca/kate/fundamentals.docbook
 share/doc/kde/HTML/ca/kate/highlighting.docbook
+share/doc/kde/HTML/ca/kate/index.cache.bz2
+share/doc/kde/HTML/ca/kate/index.docbook
 share/doc/kde/HTML/ca/kate/man-kate.1.docbook
 share/doc/kde/HTML/ca/kate/mdi.docbook
 share/doc/kde/HTML/ca/kate/menus.docbook
@@ -377,6 +380,9 @@ share/doc/kde/HTML/ca/kicker/man-kicker.1.docbook
 share/doc/kde/HTML/ca/kinfocenter/blockdevices/common
 share/doc/kde/HTML/ca/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/ca/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/ca/kinfocenter/cdinfo/common
+share/doc/kde/HTML/ca/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/ca/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/ca/kinfocenter/common
 share/doc/kde/HTML/ca/kinfocenter/devices/common
 share/doc/kde/HTML/ca/kinfocenter/devices/index.cache.bz2
@@ -707,6 +713,9 @@ share/doc/kde/HTML/ca/kteatime/index.docbook
 share/doc/kde/HTML/ca/ktimer/common
 share/doc/kde/HTML/ca/ktimer/index.cache.bz2
 share/doc/kde/HTML/ca/ktimer/index.docbook
+share/doc/kde/HTML/ca/ktnef/common
+share/doc/kde/HTML/ca/ktnef/index.cache.bz2
+share/doc/kde/HTML/ca/ktnef/index.docbook
 share/doc/kde/HTML/ca/ktouch/common
 share/doc/kde/HTML/ca/ktouch/index.cache.bz2
 share/doc/kde/HTML/ca/ktouch/index.docbook
@@ -1383,6 +1392,7 @@ share/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kturtle
 @dirrm share/doc/kde/HTML/ca/kttsd
 @dirrm share/doc/kde/HTML/ca/ktouch
+@dirrm share/doc/kde/HTML/ca/ktnef
 @dirrm share/doc/kde/HTML/ca/ktimer
 @dirrm share/doc/kde/HTML/ca/kteatime
 @dirrm share/doc/kde/HTML/ca/ksysv
@@ -1449,6 +1459,7 @@ share/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/ca/kinfocenter/dma
 @dirrm share/doc/kde/HTML/ca/kinfocenter/devices
+@dirrm share/doc/kde/HTML/ca/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/ca/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/ca/kinfocenter
 @dirrm share/doc/kde/HTML/ca/kicker-applets
@@ -1539,3 +1550,4 @@ share/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/common
 @dirrm share/doc/kde/HTML/ca/amor
 @dirrm share/doc/kde/HTML/ca
+@comment in kde: @dirrm share/doc/kde/HTML

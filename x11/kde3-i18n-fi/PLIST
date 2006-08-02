@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/06/01 14:37:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/08/02 14:24:41 markd Exp $
 share/doc/kde/HTML/fi/common/fdl-translated.html
 share/doc/kde/HTML/fi/common/gpl-translated.html
 share/doc/kde/HTML/fi/common/kde-localised.css
@@ -165,6 +165,7 @@ share/locale/fi/LC_MESSAGES/kcmlaptop.mo
 share/locale/fi/LC_MESSAGES/kcmlaunch.mo
 share/locale/fi/LC_MESSAGES/kcmlayout.mo
 share/locale/fi/LC_MESSAGES/kcmlilo.mo
+share/locale/fi/LC_MESSAGES/kcmlirc.mo
 share/locale/fi/LC_MESSAGES/kcmlocale.mo
 share/locale/fi/LC_MESSAGES/kcmmedia.mo
 share/locale/fi/LC_MESSAGES/kcmnic.mo
@@ -352,7 +353,6 @@ share/locale/fi/LC_MESSAGES/kmathapplet.mo
 share/locale/fi/LC_MESSAGES/kmcop.mo
 share/locale/fi/LC_MESSAGES/kmenuapplet.mo
 share/locale/fi/LC_MESSAGES/kmenuedit.mo
-share/locale/fi/LC_MESSAGES/kmessedwords.mo
 share/locale/fi/LC_MESSAGES/kmid.mo
 share/locale/fi/LC_MESSAGES/kmilo_delli8k.mo
 share/locale/fi/LC_MESSAGES/kmilo_generic.mo

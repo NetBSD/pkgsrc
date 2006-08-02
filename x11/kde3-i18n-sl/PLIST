@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/06/01 14:37:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/08/02 14:24:45 markd Exp $
 share/doc/kde/HTML/sl/common/fdl-translated.html
 share/doc/kde/HTML/sl/common/gpl-translated.html
 share/doc/kde/HTML/sl/common/kde-localised.css
@@ -630,7 +630,6 @@ share/locale/sl/LC_MESSAGES/kmathapplet.mo
 share/locale/sl/LC_MESSAGES/kmcop.mo
 share/locale/sl/LC_MESSAGES/kmenuapplet.mo
 share/locale/sl/LC_MESSAGES/kmenuedit.mo
-share/locale/sl/LC_MESSAGES/kmessedwords.mo
 share/locale/sl/LC_MESSAGES/kmid.mo
 share/locale/sl/LC_MESSAGES/kmilo_delli8k.mo
 share/locale/sl/LC_MESSAGES/kmilo_generic.mo
@@ -665,7 +664,9 @@ share/locale/sl/LC_MESSAGES/konnector_kcal.mo
 share/locale/sl/LC_MESSAGES/konnector_local.mo
 share/locale/sl/LC_MESSAGES/konnector_qtopia.mo
 share/locale/sl/LC_MESSAGES/konnector_remote.mo
+share/locale/sl/LC_MESSAGES/konqsidebar_delicious.mo
 share/locale/sl/LC_MESSAGES/konqsidebar_mediaplayer.mo
+share/locale/sl/LC_MESSAGES/konqsidebar_metabar.mo
 share/locale/sl/LC_MESSAGES/konqsidebar_news.mo
 share/locale/sl/LC_MESSAGES/konqueror.mo
 share/locale/sl/LC_MESSAGES/konquest.mo
@@ -825,6 +826,7 @@ share/locale/sl/LC_MESSAGES/lskat.mo
 share/locale/sl/LC_MESSAGES/lyrics.mo
 share/locale/sl/LC_MESSAGES/mediaapplet.mo
 share/locale/sl/LC_MESSAGES/mediacontrol.mo
+share/locale/sl/LC_MESSAGES/mf_konqplugin.mo
 share/locale/sl/LC_MESSAGES/minitoolsplugin.mo
 share/locale/sl/LC_MESSAGES/multisynk.mo
 share/locale/sl/LC_MESSAGES/naughtyapplet.mo

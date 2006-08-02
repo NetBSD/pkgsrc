@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/06/01 14:37:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/08/02 14:24:42 markd Exp $
 share/locale/km/LC_MESSAGES/akregator.mo
 share/locale/km/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/km/LC_MESSAGES/alsaplayerui.mo
@@ -16,6 +16,7 @@ share/locale/km/LC_MESSAGES/audiocd_encoder_vorbis.mo
 share/locale/km/LC_MESSAGES/audiorename_plugin.mo
 share/locale/km/LC_MESSAGES/autorefresh.mo
 share/locale/km/LC_MESSAGES/babelfish.mo
+share/locale/km/LC_MESSAGES/blinken.mo
 share/locale/km/LC_MESSAGES/charlatanui.mo
 share/locale/km/LC_MESSAGES/clockapplet.mo
 share/locale/km/LC_MESSAGES/crashesplugin.mo
@@ -49,6 +50,7 @@ share/locale/km/LC_MESSAGES/kaboodle.mo
 share/locale/km/LC_MESSAGES/kaccess.mo
 share/locale/km/LC_MESSAGES/kaddressbook.mo
 share/locale/km/LC_MESSAGES/kalarm.mo
+share/locale/km/LC_MESSAGES/kanagram.mo
 share/locale/km/LC_MESSAGES/kandy.mo
 share/locale/km/LC_MESSAGES/kappfinder.mo
 share/locale/km/LC_MESSAGES/kasbarextension.mo
@@ -85,6 +87,7 @@ share/locale/km/LC_MESSAGES/kbattleship.mo
 share/locale/km/LC_MESSAGES/kbinaryclock.mo
 share/locale/km/LC_MESSAGES/kblackbox.mo
 share/locale/km/LC_MESSAGES/kbounce.mo
+share/locale/km/LC_MESSAGES/kbruch.mo
 share/locale/km/LC_MESSAGES/kcalc.mo
 share/locale/km/LC_MESSAGES/kcharselect.mo
 share/locale/km/LC_MESSAGES/kcharselectapplet.mo
@@ -184,6 +187,7 @@ share/locale/km/LC_MESSAGES/kdictapplet.mo
 share/locale/km/LC_MESSAGES/kdmconfig.mo
 share/locale/km/LC_MESSAGES/kdmgreet.mo
 share/locale/km/LC_MESSAGES/kedit.mo
+share/locale/km/LC_MESSAGES/keduca.mo
 share/locale/km/LC_MESSAGES/kenolaba.mo
 share/locale/km/LC_MESSAGES/kfax.mo
 share/locale/km/LC_MESSAGES/kfaxview.mo
@@ -193,6 +197,7 @@ share/locale/km/LC_MESSAGES/kfile_avi.mo
 share/locale/km/LC_MESSAGES/kfile_bmp.mo
 share/locale/km/LC_MESSAGES/kfile_cert.mo
 share/locale/km/LC_MESSAGES/kfile_dds.mo
+share/locale/km/LC_MESSAGES/kfile_deb.mo
 share/locale/km/LC_MESSAGES/kfile_desktop.mo
 share/locale/km/LC_MESSAGES/kfile_dvi.mo
 share/locale/km/LC_MESSAGES/kfile_exr.mo
@@ -218,6 +223,7 @@ share/locale/km/LC_MESSAGES/kfile_pnm.mo
 share/locale/km/LC_MESSAGES/kfile_ps.mo
 share/locale/km/LC_MESSAGES/kfile_rfc822.mo
 share/locale/km/LC_MESSAGES/kfile_rgb.mo
+share/locale/km/LC_MESSAGES/kfile_rpm.mo
 share/locale/km/LC_MESSAGES/kfile_sid.mo
 share/locale/km/LC_MESSAGES/kfile_tga.mo
 share/locale/km/LC_MESSAGES/kfile_theora.mo
@@ -242,6 +248,7 @@ share/locale/km/LC_MESSAGES/kghostview.mo
 share/locale/km/LC_MESSAGES/kgoldrunner.mo
 share/locale/km/LC_MESSAGES/kgreet_classic.mo
 share/locale/km/LC_MESSAGES/kgreet_winbind.mo
+share/locale/km/LC_MESSAGES/khangman.mo
 share/locale/km/LC_MESSAGES/khelpcenter.mo
 share/locale/km/LC_MESSAGES/khexedit2part.mo
 share/locale/km/LC_MESSAGES/khotkeys.mo
@@ -288,6 +295,7 @@ share/locale/km/LC_MESSAGES/kjots.mo
 share/locale/km/LC_MESSAGES/kjumpingcube.mo
 share/locale/km/LC_MESSAGES/klaptopdaemon.mo
 share/locale/km/LC_MESSAGES/klegacyimport.mo
+share/locale/km/LC_MESSAGES/klettres.mo
 share/locale/km/LC_MESSAGES/klickety.mo
 share/locale/km/LC_MESSAGES/klines.mo
 share/locale/km/LC_MESSAGES/klipper.mo
@@ -344,6 +352,7 @@ share/locale/km/LC_MESSAGES/kpager.mo
 share/locale/km/LC_MESSAGES/kpartapp.mo
 share/locale/km/LC_MESSAGES/kpat.mo
 share/locale/km/LC_MESSAGES/kpdf.mo
+share/locale/km/LC_MESSAGES/kpercentage.mo
 share/locale/km/LC_MESSAGES/kpersonalizer.mo
 share/locale/km/LC_MESSAGES/kpf.mo
 share/locale/km/LC_MESSAGES/kpoker.mo
@@ -432,8 +441,8 @@ share/locale/km/LC_MESSAGES/libdmctl.mo
 share/locale/km/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/locale/km/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 share/locale/km/LC_MESSAGES/libkcal.mo
-share/locale/km/LC_MESSAGES/libkcalsystem.mo
 share/locale/km/LC_MESSAGES/libkcddb.mo
+share/locale/km/LC_MESSAGES/libkdeedu.mo
 share/locale/km/LC_MESSAGES/libkdegames.mo
 share/locale/km/LC_MESSAGES/libkdehighscores.mo
 share/locale/km/LC_MESSAGES/libkdenetwork.mo

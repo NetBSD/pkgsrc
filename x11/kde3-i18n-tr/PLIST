@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/17 07:07:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/02 14:24:46 markd Exp $
 share/doc/kde/HTML/tr/common/gpl-translated.html
 share/doc/kde/HTML/tr/common/kde-localised.css
 share/doc/kde/HTML/tr/khelpcenter/common
@@ -558,7 +558,6 @@ share/locale/tr/LC_MESSAGES/libdmctl.mo
 share/locale/tr/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/locale/tr/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 share/locale/tr/LC_MESSAGES/libkcal.mo
-share/locale/tr/LC_MESSAGES/libkcalsystem.mo
 share/locale/tr/LC_MESSAGES/libkcddb.mo
 share/locale/tr/LC_MESSAGES/libkdeedu.mo
 share/locale/tr/LC_MESSAGES/libkdegames.mo

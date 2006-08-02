@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/06/01 14:37:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/08/02 14:24:41 markd Exp $
 share/doc/kde/HTML/et/KRegExpEditor/common
 share/doc/kde/HTML/et/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/et/KRegExpEditor/index.docbook
@@ -604,6 +604,9 @@ share/doc/kde/HTML/et/kig/man-kig.1.docbook
 share/doc/kde/HTML/et/kinfocenter/blockdevices/common
 share/doc/kde/HTML/et/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/et/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/et/kinfocenter/cdinfo/common
+share/doc/kde/HTML/et/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/et/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/et/kinfocenter/common
 share/doc/kde/HTML/et/kinfocenter/devices/common
 share/doc/kde/HTML/et/kinfocenter/devices/index.cache.bz2
@@ -1334,6 +1337,20 @@ share/doc/kde/HTML/et/xsldbg/index.cache.bz2
 share/doc/kde/HTML/et/xsldbg/index.docbook
 share/doc/kde/HTML/et/xsldbg/introduction.docbook
 share/doc/kde/HTML/et/xsldbg/usage.docbook
+share/kde/apps/kanagram/data/et/arvutid.kvtml
+share/kde/apps/kanagram/data/et/elukutsed.kvtml
+share/kde/apps/kanagram/data/et/esemed.kvtml
+share/kde/apps/kanagram/data/et/inimesed.kvtml
+share/kde/apps/kanagram/data/et/juurviljad.kvtml
+share/kde/apps/kanagram/data/et/kosmos.kvtml
+share/kde/apps/kanagram/data/et/leiutused.kvtml
+share/kde/apps/kanagram/data/et/loomad.kvtml
+share/kde/apps/kanagram/data/et/pealinnad.kvtml
+share/kde/apps/kanagram/data/et/puuviljad.kvtml
+share/kde/apps/kanagram/data/et/raha.kvtml
+share/kde/apps/kanagram/data/et/riided.kvtml
+share/kde/apps/kanagram/data/et/sport.kvtml
+share/kde/apps/kanagram/data/et/transport.kvtml
 share/kde/apps/khangman/data/et/animals.kvtml
 share/kde/apps/khangman/data/et/easy.kvtml
 share/kde/apps/khangman/data/et/hard.kvtml
@@ -1904,7 +1921,10 @@ share/locale/et/charset
 share/locale/et/entry.desktop
 share/locale/et/flag.png
 @dirrm share/kde/apps/khangman/data/et
+@comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/khangman
+@dirrm share/kde/apps/kanagram/data/et
+@dirrm share/kde/apps/kanagram/data
 @dirrm share/doc/kde/HTML/et/xsldbg
 @dirrm share/doc/kde/HTML/et/umbrello
 @dirrm share/doc/kde/HTML/et/superkaramba
@@ -2045,6 +2065,7 @@ share/locale/et/flag.png
 @dirrm share/doc/kde/HTML/et/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/et/kinfocenter/dma
 @dirrm share/doc/kde/HTML/et/kinfocenter/devices
+@dirrm share/doc/kde/HTML/et/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/et/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/et/kinfocenter
 @dirrm share/doc/kde/HTML/et/kig
