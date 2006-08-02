@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/04/17 07:07:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/08/02 14:24:46 markd Exp $
 share/doc/kde/HTML/sv/KRegExpEditor/altntool.png
 share/doc/kde/HTML/sv/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/sv/KRegExpEditor/boundarytools.png
@@ -935,6 +935,9 @@ share/doc/kde/HTML/sv/kig/text_label_wizard__select_property.png
 share/doc/kde/HTML/sv/kinfocenter/blockdevices/common
 share/doc/kde/HTML/sv/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/sv/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/sv/kinfocenter/cdinfo/common
+share/doc/kde/HTML/sv/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/sv/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/sv/kinfocenter/common
 share/doc/kde/HTML/sv/kinfocenter/devices/common
 share/doc/kde/HTML/sv/kinfocenter/devices/index.cache.bz2
@@ -2900,6 +2903,7 @@ share/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/sv/kinfocenter/dma
 @dirrm share/doc/kde/HTML/sv/kinfocenter/devices
+@dirrm share/doc/kde/HTML/sv/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/sv/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/sv/kinfocenter
 @dirrm share/doc/kde/HTML/sv/kig

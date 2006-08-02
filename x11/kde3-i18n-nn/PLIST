@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/08/02 14:24:42 markd Exp $
 share/kde/apps/khangman/data/nn/animals.kvtml
 share/kde/apps/khangman/data/nn/easy.kvtml
 share/kde/apps/khangman/data/nn/hard.kvtml
@@ -284,7 +284,6 @@ share/locale/nn/LC_MESSAGES/kmathapplet.mo
 share/locale/nn/LC_MESSAGES/kmcop.mo
 share/locale/nn/LC_MESSAGES/kmenuapplet.mo
 share/locale/nn/LC_MESSAGES/kmenuedit.mo
-share/locale/nn/LC_MESSAGES/kmessedwords.mo
 share/locale/nn/LC_MESSAGES/kmid.mo
 share/locale/nn/LC_MESSAGES/kmines.mo
 share/locale/nn/LC_MESSAGES/kminipagerapplet.mo
@@ -410,7 +409,6 @@ share/locale/nn/LC_MESSAGES/kxkb.mo
 share/locale/nn/LC_MESSAGES/kxsconfig.mo
 share/locale/nn/LC_MESSAGES/libdmctl.mo
 share/locale/nn/LC_MESSAGES/libkcal.mo
-share/locale/nn/LC_MESSAGES/libkcalsystem.mo
 share/locale/nn/LC_MESSAGES/libkcddb.mo
 share/locale/nn/LC_MESSAGES/libkdegames.mo
 share/locale/nn/LC_MESSAGES/libkdepim.mo

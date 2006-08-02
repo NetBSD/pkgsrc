@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/08/02 14:24:43 markd Exp $
 share/locale/rw/LC_MESSAGES/akregator.mo
 share/locale/rw/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/rw/LC_MESSAGES/alsaplayerui.mo
@@ -333,7 +333,6 @@ share/locale/rw/LC_MESSAGES/kmathapplet.mo
 share/locale/rw/LC_MESSAGES/kmcop.mo
 share/locale/rw/LC_MESSAGES/kmenuapplet.mo
 share/locale/rw/LC_MESSAGES/kmenuedit.mo
-share/locale/rw/LC_MESSAGES/kmessedwords.mo
 share/locale/rw/LC_MESSAGES/kmid.mo
 share/locale/rw/LC_MESSAGES/kmilo_delli8k.mo
 share/locale/rw/LC_MESSAGES/kmilo_generic.mo
@@ -499,7 +498,6 @@ share/locale/rw/LC_MESSAGES/libdmctl.mo
 share/locale/rw/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/locale/rw/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 share/locale/rw/LC_MESSAGES/libkcal.mo
-share/locale/rw/LC_MESSAGES/libkcalsystem.mo
 share/locale/rw/LC_MESSAGES/libkcddb.mo
 share/locale/rw/LC_MESSAGES/libkdeedu.mo
 share/locale/rw/LC_MESSAGES/libkdegames.mo

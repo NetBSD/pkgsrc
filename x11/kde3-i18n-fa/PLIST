@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/08/02 14:24:41 markd Exp $
 share/locale/fa/COPYING
 share/locale/fa/LC_MESSAGES/appletproxy.mo
 share/locale/fa/LC_MESSAGES/clockapplet.mo
@@ -11,7 +11,6 @@ share/locale/fa/LC_MESSAGES/filetypes.mo
 share/locale/fa/LC_MESSAGES/htmlsearch.mo
 share/locale/fa/LC_MESSAGES/kabc_dir.mo
 share/locale/fa/LC_MESSAGES/kabc_file.mo
-share/locale/fa/LC_MESSAGES/kabc_ldap.mo
 share/locale/fa/LC_MESSAGES/kabc_ldapkio.mo
 share/locale/fa/LC_MESSAGES/kabc_net.mo
 share/locale/fa/LC_MESSAGES/kabc_sql.mo

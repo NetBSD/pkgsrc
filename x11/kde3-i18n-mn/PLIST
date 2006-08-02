@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/08/02 14:24:42 markd Exp $
 share/locale/mn/30x16.png
 share/locale/mn/60x40.png
 share/locale/mn/LC_MESSAGES/appletproxy.mo
@@ -12,7 +12,6 @@ share/locale/mn/LC_MESSAGES/filetypes.mo
 share/locale/mn/LC_MESSAGES/htmlsearch.mo
 share/locale/mn/LC_MESSAGES/kabc_dir.mo
 share/locale/mn/LC_MESSAGES/kabc_file.mo
-share/locale/mn/LC_MESSAGES/kabc_ldap.mo
 share/locale/mn/LC_MESSAGES/kabc_ldapkio.mo
 share/locale/mn/LC_MESSAGES/kabc_net.mo
 share/locale/mn/LC_MESSAGES/kabc_sql.mo
@@ -138,7 +137,6 @@ share/locale/mn/LC_MESSAGES/klipper.mo
 share/locale/mn/LC_MESSAGES/kmcop.mo
 share/locale/mn/LC_MESSAGES/kmenuapplet.mo
 share/locale/mn/LC_MESSAGES/kmenuedit.mo
-share/locale/mn/LC_MESSAGES/kmessedwords.mo
 share/locale/mn/LC_MESSAGES/kminipagerapplet.mo
 share/locale/mn/LC_MESSAGES/knotify.mo
 share/locale/mn/LC_MESSAGES/konqueror.mo

@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.21 2006/06/01 14:37:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/08/02 14:24:40 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
+share/doc/kde/HTML/de/akregator/common
+share/doc/kde/HTML/de/akregator/index.cache.bz2
+share/doc/kde/HTML/de/akregator/index.docbook
 share/doc/kde/HTML/de/amor/common
 share/doc/kde/HTML/de/amor/index.cache.bz2
 share/doc/kde/HTML/de/amor/index.docbook
@@ -9,6 +12,7 @@ share/doc/kde/HTML/de/amor/man-amor.6.docbook
 share/doc/kde/HTML/de/ark/common
 share/doc/kde/HTML/de/ark/index.cache.bz2
 share/doc/kde/HTML/de/ark/index.docbook
+share/doc/kde/HTML/de/ark/man-ark.1.docbook
 share/doc/kde/HTML/de/artsbuilder/apis.docbook
 share/doc/kde/HTML/de/artsbuilder/artsbuilder.docbook
 share/doc/kde/HTML/de/artsbuilder/common
@@ -32,6 +36,16 @@ share/doc/kde/HTML/de/atlantik/common
 share/doc/kde/HTML/de/atlantik/index.cache.bz2
 share/doc/kde/HTML/de/atlantik/index.docbook
 share/doc/kde/HTML/de/atlantik/man-atlantik.6.docbook
+share/doc/kde/HTML/de/blinken/blinken1.png
+share/doc/kde/HTML/de/blinken/blinken2.png
+share/doc/kde/HTML/de/blinken/blinken_accesskeys.png
+share/doc/kde/HTML/de/blinken/blinken_helpbutton.png
+share/doc/kde/HTML/de/blinken/blinken_highscorebutton.png
+share/doc/kde/HTML/de/blinken/blinken_nickprompt.png
+share/doc/kde/HTML/de/blinken/blinken_quitbutton.png
+share/doc/kde/HTML/de/blinken/common
+share/doc/kde/HTML/de/blinken/index.cache.bz2
+share/doc/kde/HTML/de/blinken/index.docbook
 share/doc/kde/HTML/de/cervisia/common
 share/doc/kde/HTML/de/cervisia/index.cache.bz2
 share/doc/kde/HTML/de/cervisia/index.docbook
@@ -424,6 +438,7 @@ share/doc/kde/HTML/de/kedit/index.docbook
 share/doc/kde/HTML/de/keduca/common
 share/doc/kde/HTML/de/keduca/index.cache.bz2
 share/doc/kde/HTML/de/keduca/index.docbook
+share/doc/kde/HTML/de/keduca/man-keduca.1.docbook
 share/doc/kde/HTML/de/keduca/screenshot.png
 share/doc/kde/HTML/de/kenolaba/common
 share/doc/kde/HTML/de/kenolaba/index.cache.bz2
@@ -614,6 +629,9 @@ share/doc/kde/HTML/de/kig/text_label_wizard__select_property.png
 share/doc/kde/HTML/de/kinfocenter/blockdevices/common
 share/doc/kde/HTML/de/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/de/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/de/kinfocenter/cdinfo/common
+share/doc/kde/HTML/de/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/de/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/de/kinfocenter/common
 share/doc/kde/HTML/de/kinfocenter/devices/common
 share/doc/kde/HTML/de/kinfocenter/devices/index.cache.bz2
@@ -1346,6 +1364,7 @@ share/doc/kde/HTML/de/kttsd/index.cache.bz2
 share/doc/kde/HTML/de/kttsd/index.docbook
 share/doc/kde/HTML/de/kttsd/interruption.png
 share/doc/kde/HTML/de/kttsd/jobs.png
+share/doc/kde/HTML/de/kttsd/selecttalker.png
 share/doc/kde/HTML/de/kttsd/stringreplacer.png
 share/doc/kde/HTML/de/kttsd/talkerchooser.png
 share/doc/kde/HTML/de/kttsd/talkers.png
@@ -1551,6 +1570,7 @@ share/doc/kde/HTML/de/quanta/q-and-a.docbook
 share/doc/kde/HTML/de/quanta/quanta-menus.docbook
 share/doc/kde/HTML/de/quanta/quanta-projects.docbook
 share/doc/kde/HTML/de/quanta/working-with-quanta.docbook
+share/doc/kde/HTML/de/scripts/man-adddebug.1.docbook
 share/doc/kde/HTML/de/superkaramba/common
 share/doc/kde/HTML/de/superkaramba/index.cache.bz2
 share/doc/kde/HTML/de/superkaramba/index.docbook
@@ -1590,6 +1610,72 @@ share/kde/apps/khangman/data/de/easy.kvtml
 share/kde/apps/khangman/data/de/hard.kvtml
 share/kde/apps/khangman/data/de/medium.kvtml
 share/kde/apps/khangman/de.txt
+share/kde/apps/klettres/de/alpha/a.ogg
+share/kde/apps/klettres/de/alpha/ae.ogg
+share/kde/apps/klettres/de/alpha/b.ogg
+share/kde/apps/klettres/de/alpha/c.ogg
+share/kde/apps/klettres/de/alpha/d.ogg
+share/kde/apps/klettres/de/alpha/e.ogg
+share/kde/apps/klettres/de/alpha/f.ogg
+share/kde/apps/klettres/de/alpha/g.ogg
+share/kde/apps/klettres/de/alpha/h.ogg
+share/kde/apps/klettres/de/alpha/i.ogg
+share/kde/apps/klettres/de/alpha/j.ogg
+share/kde/apps/klettres/de/alpha/k.ogg
+share/kde/apps/klettres/de/alpha/l.ogg
+share/kde/apps/klettres/de/alpha/m.ogg
+share/kde/apps/klettres/de/alpha/n.ogg
+share/kde/apps/klettres/de/alpha/o.ogg
+share/kde/apps/klettres/de/alpha/oe.ogg
+share/kde/apps/klettres/de/alpha/p.ogg
+share/kde/apps/klettres/de/alpha/q.ogg
+share/kde/apps/klettres/de/alpha/r.ogg
+share/kde/apps/klettres/de/alpha/s.ogg
+share/kde/apps/klettres/de/alpha/sz.ogg
+share/kde/apps/klettres/de/alpha/t.ogg
+share/kde/apps/klettres/de/alpha/u.ogg
+share/kde/apps/klettres/de/alpha/ue.ogg
+share/kde/apps/klettres/de/alpha/v.ogg
+share/kde/apps/klettres/de/alpha/w.ogg
+share/kde/apps/klettres/de/alpha/x.ogg
+share/kde/apps/klettres/de/alpha/y.ogg
+share/kde/apps/klettres/de/alpha/z.ogg
+share/kde/apps/klettres/de/sounds.xml
+share/kde/apps/klettres/de/syllab/affe.ogg
+share/kde/apps/klettres/de/syllab/auch.ogg
+share/kde/apps/klettres/de/syllab/baer.ogg
+share/kde/apps/klettres/de/syllab/bus.ogg
+share/kde/apps/klettres/de/syllab/dem.ogg
+share/kde/apps/klettres/de/syllab/die.ogg
+share/kde/apps/klettres/de/syllab/dir.ogg
+share/kde/apps/klettres/de/syllab/ein.ogg
+share/kde/apps/klettres/de/syllab/eule.ogg
+share/kde/apps/klettres/de/syllab/fisch.ogg
+share/kde/apps/klettres/de/syllab/frau.ogg
+share/kde/apps/klettres/de/syllab/fusz.ogg
+share/kde/apps/klettres/de/syllab/gut.ogg
+share/kde/apps/klettres/de/syllab/haus.ogg
+share/kde/apps/klettres/de/syllab/heu.ogg
+share/kde/apps/klettres/de/syllab/hund.ogg
+share/kde/apps/klettres/de/syllab/ist.ogg
+share/kde/apps/klettres/de/syllab/ja.ogg
+share/kde/apps/klettres/de/syllab/kind.ogg
+share/kde/apps/klettres/de/syllab/lisa.ogg
+share/kde/apps/klettres/de/syllab/mutter.ogg
+share/kde/apps/klettres/de/syllab/nase.ogg
+share/kde/apps/klettres/de/syllab/oel.ogg
+share/kde/apps/klettres/de/syllab/opa.ogg
+share/kde/apps/klettres/de/syllab/pute.ogg
+share/kde/apps/klettres/de/syllab/reh.ogg
+share/kde/apps/klettres/de/syllab/rot.ogg
+share/kde/apps/klettres/de/syllab/sein.ogg
+share/kde/apps/klettres/de/syllab/sitz.ogg
+share/kde/apps/klettres/de/syllab/tuer.ogg
+share/kde/apps/klettres/de/syllab/vor.ogg
+share/kde/apps/klettres/de/syllab/was.ogg
+share/kde/apps/klettres/de/syllab/will.ogg
+share/kde/apps/klettres/de/syllab/wo.ogg
+share/kde/apps/klettres/de/syllab/zu.ogg
 share/kde/apps/ktuberling/sounds/de/abzeichen.wav
 share/kde/apps/ktuberling/sounds/de/auge.wav
 share/kde/apps/ktuberling/sounds/de/augenbraue.wav
@@ -2181,12 +2267,17 @@ share/locale/de/flag.png
 @comment in kde: @dirrm share/kde/apps/kturtle/data
 @dirrm share/kde/apps/ktuberling/sounds/de
 @comment in kde: @dirrm share/kde/apps/ktuberling/sounds
+@dirrm share/kde/apps/klettres/de/syllab
+@dirrm share/kde/apps/klettres/de/alpha
+@dirrm share/kde/apps/klettres/de
+@comment in kde: @dirrm share/kde/apps/klettres
 @dirrm share/kde/apps/khangman/data/de
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/khangman
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
 @dirrm share/doc/kde/HTML/de/umbrello
 @dirrm share/doc/kde/HTML/de/superkaramba
+@dirrm share/doc/kde/HTML/de/scripts
 @dirrm share/doc/kde/HTML/de/quanta
 @dirrm share/doc/kde/HTML/de/noatun
 @dirrm share/doc/kde/HTML/de/lskat
@@ -2318,6 +2409,7 @@ share/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/de/kinfocenter/dma
 @dirrm share/doc/kde/HTML/de/kinfocenter/devices
+@dirrm share/doc/kde/HTML/de/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/de/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/de/kinfocenter
 @dirrm share/doc/kde/HTML/de/kig
@@ -2436,9 +2528,11 @@ share/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/juk
 @dirrm share/doc/kde/HTML/de/common
 @dirrm share/doc/kde/HTML/de/cervisia
+@dirrm share/doc/kde/HTML/de/blinken
 @dirrm share/doc/kde/HTML/de/atlantik
 @dirrm share/doc/kde/HTML/de/artsbuilder
 @dirrm share/doc/kde/HTML/de/ark
 @dirrm share/doc/kde/HTML/de/amor
+@dirrm share/doc/kde/HTML/de/akregator
 @dirrm share/doc/kde/HTML/de/KRegExpEditor
 @comment in kde: @dirrm share/doc/kde/HTML/de
