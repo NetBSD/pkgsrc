@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2006/06/01 13:39:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.36 2006/08/02 13:42:16 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -1320,7 +1320,6 @@ share/kde/apps/ksgmltools2/customization/af/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/af/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underGPL.docbook
-share/kde/apps/ksgmltools2/customization/it/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/af/lang.entities
@@ -1625,6 +1624,7 @@ share/kde/apps/ksgmltools2/customization/it/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/it/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/it/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/it/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/it/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/it/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/it/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/it/lang.entities
@@ -2901,6 +2901,7 @@ share/kde/icons/crystalsvg/128x128/filesystems/zip_overlay.png
 share/kde/icons/crystalsvg/128x128/mimetypes/applix.png
 share/kde/icons/crystalsvg/128x128/mimetypes/ascii.png
 share/kde/icons/crystalsvg/128x128/mimetypes/binary.png
+share/kde/icons/crystalsvg/128x128/mimetypes/bt.png
 share/kde/icons/crystalsvg/128x128/mimetypes/cdimage.png
 share/kde/icons/crystalsvg/128x128/mimetypes/cdr.png
 share/kde/icons/crystalsvg/128x128/mimetypes/cdtrack.png
@@ -3318,6 +3319,7 @@ share/kde/icons/crystalsvg/16x16/filesystems/zip_overlay.png
 share/kde/icons/crystalsvg/16x16/mimetypes/applix.png
 share/kde/icons/crystalsvg/16x16/mimetypes/ascii.png
 share/kde/icons/crystalsvg/16x16/mimetypes/binary.png
+share/kde/icons/crystalsvg/16x16/mimetypes/bt.png
 share/kde/icons/crystalsvg/16x16/mimetypes/cdimage.png
 share/kde/icons/crystalsvg/16x16/mimetypes/cdr.png
 share/kde/icons/crystalsvg/16x16/mimetypes/cdtrack.png
@@ -3680,6 +3682,7 @@ share/kde/icons/crystalsvg/22x22/filesystems/zip_overlay.png
 share/kde/icons/crystalsvg/22x22/mimetypes/applix.png
 share/kde/icons/crystalsvg/22x22/mimetypes/ascii.png
 share/kde/icons/crystalsvg/22x22/mimetypes/binary.png
+share/kde/icons/crystalsvg/22x22/mimetypes/bt.png
 share/kde/icons/crystalsvg/22x22/mimetypes/cdimage.png
 share/kde/icons/crystalsvg/22x22/mimetypes/cdtrack.png
 share/kde/icons/crystalsvg/22x22/mimetypes/colorscm.png
@@ -4050,6 +4053,7 @@ share/kde/icons/crystalsvg/32x32/filesystems/zip_overlay.png
 share/kde/icons/crystalsvg/32x32/mimetypes/applix.png
 share/kde/icons/crystalsvg/32x32/mimetypes/ascii.png
 share/kde/icons/crystalsvg/32x32/mimetypes/binary.png
+share/kde/icons/crystalsvg/32x32/mimetypes/bt.png
 share/kde/icons/crystalsvg/32x32/mimetypes/cdimage.png
 share/kde/icons/crystalsvg/32x32/mimetypes/cdr.png
 share/kde/icons/crystalsvg/32x32/mimetypes/cdtrack.png
@@ -4273,6 +4277,7 @@ share/kde/icons/crystalsvg/48x48/filesystems/zip_overlay.png
 share/kde/icons/crystalsvg/48x48/mimetypes/applix.png
 share/kde/icons/crystalsvg/48x48/mimetypes/ascii.png
 share/kde/icons/crystalsvg/48x48/mimetypes/binary.png
+share/kde/icons/crystalsvg/48x48/mimetypes/bt.png
 share/kde/icons/crystalsvg/48x48/mimetypes/cdimage.png
 share/kde/icons/crystalsvg/48x48/mimetypes/cdr.png
 share/kde/icons/crystalsvg/48x48/mimetypes/cdtrack.png
@@ -4455,6 +4460,7 @@ share/kde/icons/crystalsvg/64x64/filesystems/zip_overlay.png
 share/kde/icons/crystalsvg/64x64/mimetypes/applix.png
 share/kde/icons/crystalsvg/64x64/mimetypes/ascii.png
 share/kde/icons/crystalsvg/64x64/mimetypes/binary.png
+share/kde/icons/crystalsvg/64x64/mimetypes/bt.png
 share/kde/icons/crystalsvg/64x64/mimetypes/cdimage.png
 share/kde/icons/crystalsvg/64x64/mimetypes/cdr.png
 share/kde/icons/crystalsvg/64x64/mimetypes/cdtrack.png
@@ -4910,6 +4916,7 @@ share/kde/mimelnk/application/x-lyx.desktop
 share/kde/mimelnk/application/x-lzop.desktop
 share/kde/mimelnk/application/x-magicpoint.desktop
 share/kde/mimelnk/application/x-mimearchive.desktop
+share/kde/mimelnk/application/x-mplayer2.desktop
 share/kde/mimelnk/application/x-msaccess.desktop
 share/kde/mimelnk/application/x-msdos-program.desktop
 share/kde/mimelnk/application/x-msmetafile.desktop
