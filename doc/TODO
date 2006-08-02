@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5270 2006/08/02 15:20:12 kristerw Exp $
+$NetBSD: TODO,v 1.5271 2006/08/02 18:39:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,7 +436,7 @@ Suggested package updates
 	o cyrus-sasl-2.1.22
 	o dap-2.1.5
 	o dar-2.3.1
-	o dasher-4.0.3
+	o dasher-4.0.4
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -468,6 +468,7 @@ Suggested package updates
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o eel-2.14.3
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -479,6 +480,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
+	o eog-2.14.3
 	o epiphany-2.14.3
 	o epstool-3.08
 	o eric3-3.9.1
@@ -505,6 +507,7 @@ Suggested package updates
 	o fetchmail-6.3.4
 	o fhist-1.14
 	o file-4.17
+	o file-roller-2.14.4
 	o findutils-4.2.27
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
@@ -532,6 +535,7 @@ Suggested package updates
 	o gcpio-2.6
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
+	o gdm-2.14.10
 	o gdsreader-0.3.2
 	o gedit-2.14.4
 	o gerbv-1.0.2
@@ -540,6 +544,7 @@ Suggested package updates
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
+	o gimp-print-5.0 [now called gutenprint]
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
 	o gkrellm-xmms-2.1.22
@@ -559,6 +564,7 @@ Suggested package updates
 	o gnome-menus-2.14.3
 	o gnome-panel-2.14.3
 	o gnome-pilot-2.0.13
+	o gnome-screensaver-2.14.3
 	o gnome-session-2.14.3
 	o gnome-speech-0.4.1
 	o gnome-spell-1.0.7
@@ -592,7 +598,7 @@ Suggested package updates
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtk2+-2.10.1 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
-	o gtk2-engines-2.6.9
+	o gtk2-engines-2.6.10
 	o gtkam-0.1.13
 	o gtkhtml-3.10.3
 	o gtksee-0.6.0b
@@ -768,6 +774,8 @@ Suggested package updates
 	o nagios-2.5
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
+	o nautilus-2.14.3
+	o nautilus-cd-burner-2.14.3
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -1148,6 +1156,7 @@ Suggested package updates
 	o tdir-1.67
 	o tds-1.6.2
 	o ted-2.17
+	o texmaker-1.4
 	o tfmxplay-1.1.6
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
