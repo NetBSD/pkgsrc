@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.893 2006/08/02 20:03:47 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.894 2006/08/02 20:35:20 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3730,3 +3730,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/tiff to 3.8.2nb3 [salo 2006-08-02]
 	Updated mail/dovecot to 1.0rc3 [ghen 2006-08-02]
 	Updated mail/imapfilter to 1.2.2 [rillig 2006-08-02]
+	Updated mail/dovecot to 1.0rc4 [ghen 2006-08-02]
