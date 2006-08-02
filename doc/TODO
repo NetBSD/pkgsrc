@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5269 2006/08/02 11:25:18 ghen Exp $
+$NetBSD: TODO,v 1.5270 2006/08/02 15:20:12 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1134,7 +1134,6 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o swi-prolog-5.5.33
 	o sylpheed-claws-2.4.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
