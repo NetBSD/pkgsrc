@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.884 2006/08/02 07:03:26 taca Exp $
+$NetBSD: CHANGES-2006,v 1.885 2006/08/02 10:07:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3633,3 +3633,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/qmail-qfilter to 2.1nb1 [schmonz 2006-08-02]
 	Updated mail/mailfront to 0.98.1nb1 [schmonz 2006-08-02]
 	Updated lang/ruby18-base to 1.8.4nb4 [taca 2006-08-02]
+	Added textproc/py-yaml version 3.03 [joerg 2006-08-02]
