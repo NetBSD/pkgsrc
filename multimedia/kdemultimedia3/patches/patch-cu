@@ -1,4 +1,4 @@
-$NetBSD: patch-cu,v 1.7 2006/06/21 19:19:36 joerg Exp $
+$NetBSD: patch-cu,v 1.8 2006/08/02 13:57:23 markd Exp $
 
 --- kioslave/audiocd/audiocd.cpp.orig	2006-05-22 18:06:24.000000000 +0000
 +++ kioslave/audiocd/audiocd.cpp
@@ -13,18 +13,6 @@ $NetBSD: patch-cu,v 1.7 2006/06/21 19:19:36 joerg Exp $
  	void paranoiaCallback(long, int);
  
  	#include <kdemacros.h>
-@@ -213,7 +213,11 @@ struct cdrom_drive * AudioCDProtocol::in
- 		return 0;
- 
- 	// Update our knowledge of the disc
-+#if defined(Q_OS_FREEBSD)
-+	d->cd.setDevice(drive->cdda_device_name, 50, false);
-+#else
- 	d->cd.setDevice(drive->ioctl_device_name, 50, false);
-+#endif
- #if 0
- 	// FreeBSD's cdparanoia as of january 5th 2006 has rather broken
- 	// support for non-SCSI devices. Although it finds ATA cdroms just
 @@ -857,7 +861,7 @@ void AudioCDProtocol::paranoiaRead(
  		 * 2) Only increase in size unless the decrease is %5 of last estimate.
  		 * This prevents continues small changes which is just annoying.
