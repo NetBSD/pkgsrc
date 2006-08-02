@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.16 2006/03/30 02:58:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/08/02 14:06:59 markd Exp $
 bin/atlantikdesigner
-bin/exif.py
 bin/fsview
 bin/jpegorient
 bin/kio_media_realfolder
@@ -9,7 +8,6 @@ bin/lnkforward
 bin/noatunsynaescope.bin
 bin/noatuntippecanoe.bin
 bin/noatuntyler.bin
-bin/orient.py
 lib/kde3/katecppsymbolviewerplugin.la
 lib/kde3/katefiletemplates.la
 lib/kde3/katefll_plugin.la
@@ -151,6 +149,8 @@ share/kde/apps/akregator/pics/rss.png
 share/kde/apps/atlantikdesigner/atlantikdesignerui.rc
 share/kde/apps/domtreeviewer/domtreeviewerui.rc
 share/kde/apps/fsview/fsview_part.rc
+share/kde/apps/imagerotation/exif.py
+share/kde/apps/imagerotation/orient.py
 share/kde/apps/kaddressbook/geo_xxportui.rc
 share/kde/apps/kaddressbook/gmx_xxportui.rc
 share/kde/apps/kate/plugins/katecppsymbolviewer/ui.rc
@@ -431,6 +431,7 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/kde/apps/kate/plugins/katecppsymbolviewer
 @comment in kde: @dirrm share/kde/apps/kate/plugins
 @comment in kde: @dirrm share/kde/apps/kaddressbook
+@dirrm share/kde/apps/imagerotation
 @dirrm share/kde/apps/fsview
 @dirrm share/kde/apps/domtreeviewer
 @dirrm share/kde/apps/atlantikdesigner
