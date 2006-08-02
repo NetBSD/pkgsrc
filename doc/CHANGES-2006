@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.885 2006/08/02 10:07:11 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.886 2006/08/02 12:33:27 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3634,3 +3634,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mailfront to 0.98.1nb1 [schmonz 2006-08-02]
 	Updated lang/ruby18-base to 1.8.4nb4 [taca 2006-08-02]
 	Added textproc/py-yaml version 3.03 [joerg 2006-08-02]
+	Updated sysutils/ups-nut to 2.0.3nb1 [ghen 2006-08-02]
+	Updated sysutils/ups-nut-cgi to 2.0.3nb1 [ghen 2006-08-02]
