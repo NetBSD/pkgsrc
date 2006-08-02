@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.78 2006/07/24 07:57:45 rillig Exp $
+# $NetBSD: bootstrap,v 1.79 2006/08/02 23:43:47 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -59,6 +59,7 @@ usage="Usage: $0 "'
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --preserve-path ]
+    [ --compiler <compiler> ]
     [ --full ]
     [ --help ]'
 
@@ -252,7 +253,9 @@ pkgdbdir=
 pkgmandir=
 sysconfdir=
 varbase=
-full=
+
+full=no
+compiler=""
 
 while [ $# -gt 0 ]; do
 	case $1 in
@@ -270,6 +273,8 @@ while [ $# -gt 0 ]; do
 	--varbase)	varbase="$2"; shift ;;
 	--fetch-cmd=*)	fetch_cmd=`get_optarg "$1"` ;;
 	--fetch-cmd)	fetch_cmd="$a"; shift ;;
+	--compiler=*)	compiler=`get_optarg "$1"` ;;
+	--compiler)	compiler="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
 	--preserve-path) preserve_path=yes ;;
@@ -441,6 +446,7 @@ SunOS)
 	set_opsys=no
 	whoamiprog=/usr/ucb/whoami
 	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
+	check_compiler=yes
 	;;
 AIX)
 	root_group=system
@@ -568,7 +574,7 @@ else
 fi
 echo "Working directory is: ${wrkdir}"
 
-if [ x"$check_compiler" = x"yes" ]; then
+if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 	get_compiler
 	if [ $compiler_is_gnu -gt 0 ]; then
 		compiler="gcc"
@@ -580,6 +586,8 @@ if [ x"$check_compiler" = x"yes" ]; then
 			else
 				compiler="ido"
 			fi
+			;;
+		SunOS)	compiler="sunpro"
 			;;
 		esac
 	fi
@@ -670,13 +678,13 @@ fi
 if [ ! -z "$abi" ]; then
 	echo "ABI=			$abi" >> ${MKCONF_EXAMPLE}
 fi
-if [ ! -z "$compiler" ]; then
+if [ "$compiler" != "" ]; then
 	echo "PKGSRC_COMPILER=	$compiler" >> ${MKCONF_EXAMPLE}
 fi
 
 # enable unprivileged builds if not root
 if [ "$ignoreusercheck" = "yes" ]; then
-	echo "UNPRIVILEGED=	yes" >> ${MKCONF_EXAMPLE}
+	echo "UNPRIVILEGED=		yes" >> ${MKCONF_EXAMPLE}
 fi
 
 # save environment in example mk.conf
