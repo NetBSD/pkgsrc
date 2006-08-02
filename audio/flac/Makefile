@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/02/05 23:08:08 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/08/02 21:22:26 jmmv Exp $
 
 DISTNAME=	flac-1.1.2
 PKGREVISION=	1
@@ -16,7 +16,9 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+
 CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
+CONFIGURE_ENV+=		ac_cv_prog_DOXYGEN=""
 
 .include "../../mk/bsd.prefs.mk"
 
