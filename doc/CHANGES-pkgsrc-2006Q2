@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.51 2006/08/02 13:59:47 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.52 2006/08/02 14:55:39 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -115,3 +115,5 @@ Pullup ticket 1768 - requested by ghen
 security update for gimp
 Pullup ticket 1771 - requested by taca
 security fixes for ruby18-base
+Pullup ticket 1772 - requested by salo
+security update for gnupg
