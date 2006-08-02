@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.5 2006/07/23 14:11:52 wiz Exp $
+# $NetBSD: sites.mk,v 1.6 2006/08/02 07:09:52 uebayasi Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -131,7 +131,6 @@ MASTER_SITE_SOURCEFORGE+=	\
 #	http://sf.gds.tuwien.ac.at/
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
-	http://prdownloads.sourceforge.jp/ \
 	http://downloads.sourceforge.jp/ \
 	http://osdn.dl.sourceforge.jp/ \
 	http://keihanna.dl.sourceforge.jp/
