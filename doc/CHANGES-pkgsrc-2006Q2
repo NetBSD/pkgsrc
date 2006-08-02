@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.53 2006/08/02 15:19:06 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.54 2006/08/02 16:00:43 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -119,3 +119,7 @@ Pullup ticket 1772 - requested by salo
 security update for gnupg
 Pullup ticket 1773 - requested by salo
 security updates for suse100_freetype2 and suse100_libtiff
+Pullup ticket 1769 - requested by rillig
+add sort-packages program for bulk building
+Pullup ticket 1770 - requested by rillig
+improved upload script for bulk builds
