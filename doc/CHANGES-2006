@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.886 2006/08/02 12:33:27 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.887 2006/08/02 14:27:29 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3636,3 +3636,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/py-yaml version 3.03 [joerg 2006-08-02]
 	Updated sysutils/ups-nut to 2.0.3nb1 [ghen 2006-08-02]
 	Updated sysutils/ups-nut-cgi to 2.0.3nb1 [ghen 2006-08-02]
+	Updated emulators/suse100_freetype2 to 10.0nb3 [salo 2006-08-02]
+	Updated emulators/suse100_libtiff to 10.0nb3 [salo 2006-08-02]
