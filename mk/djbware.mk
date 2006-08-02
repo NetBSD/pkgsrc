@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.17 2006/04/29 14:25:37 gdt Exp $
+# $NetBSD: djbware.mk,v 1.18 2006/08/02 02:25:46 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -60,9 +60,9 @@ do-configure:
 	[ -f ${DJB_CONFIG_HOME} ] && \
 		${ECHO} ${DJB_CONFIG_PREFIX} > ${DJB_CONFIG_HOME};	\
 	[ -f conf-cc ] && \
-		${ECHO} ${CC:Q} ${CFLAGS:Q} > conf-cc;			\
+		${ECHO} ${CC:Q} ${CFLAGS:Q} ${CPPFLAGS:Q} > conf-cc;	\
 	[ -f conf-ld ] && \
-		${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > conf-ld;		\
+		${ECHO} ${CC:Q} ${_STRIPFLAG_CC} ${LDFLAGS:Q} > conf-ld;\
 	[ -f conf-bin ] && \
 		${ECHO} ${DJB_CONFIG_PREFIX}/bin > conf-bin;		\
 	[ -f conf-man ] && \
