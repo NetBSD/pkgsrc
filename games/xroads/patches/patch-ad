@@ -1,12 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2004/09/08 12:48:32 sketch Exp $
+$NetBSD: patch-ad,v 1.2 2006/08/02 19:24:55 kristerw Exp $
 
---- xroads.h.orig	1999-06-30 19:25:02.000000000 +0100
-+++ xroads.h	2004-09-08 13:39:46.000000000 +0100
-@@ -33,7 +33,7 @@
+--- xroads.h.orig	1999-06-30 20:25:02.000000000 +0200
++++ xroads.h	2006-08-02 21:12:52.000000000 +0200
+@@ -32,8 +32,8 @@
+ int xytotype( int, int );
  void killme( char * );
  void xconnect( int, char *[] );
- int trunc( float );
+-int trunc( float );
 -int round( float );
++int mytrunc( float );
 +int roundup( float );
  #ifdef SIGHANDLE
  void sigcatch( int );
