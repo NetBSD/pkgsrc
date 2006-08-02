@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/04/17 07:07:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18.2.1 2006/08/02 14:55:07 ghen Exp $
 bin/gpg
 bin/gpg-zip
 bin/gpgsplit
@@ -35,6 +35,7 @@ share/locale/hu/LC_MESSAGES/gnupg.mo
 share/locale/id/LC_MESSAGES/gnupg.mo
 share/locale/it/LC_MESSAGES/gnupg.mo
 share/locale/ja/LC_MESSAGES/gnupg.mo
+share/locale/nb/LC_MESSAGES/gnupg.mo
 share/locale/pl/LC_MESSAGES/gnupg.mo
 share/locale/pt/LC_MESSAGES/gnupg.mo
 share/locale/pt_BR/LC_MESSAGES/gnupg.mo
