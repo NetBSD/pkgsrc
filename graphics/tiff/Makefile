@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2006/06/17 20:25:23 reed Exp $
+# $NetBSD: Makefile,v 1.84 2006/08/02 15:42:25 salo Exp $
 
 DISTNAME=	tiff-3.8.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
