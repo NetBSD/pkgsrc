@@ -1,17 +1,17 @@
-$NetBSD: patch-gd,v 1.3 2005/11/08 18:25:44 joerg Exp $
+$NetBSD: patch-gd,v 1.4 2006/08/02 13:45:51 markd Exp $
 
---- kcontrol/usbview/usbdevices.cpp.orig	2005-05-24 00:13:32.000000000 +1200
+--- kcontrol/usbview/usbdevices.cpp.orig	2006-07-22 20:15:22.000000000 +1200
 +++ kcontrol/usbview/usbdevices.cpp
-@@ -24,7 +24,7 @@
- #include "usbdb.h"
- #include "usbdevices.h"
+@@ -27,7 +27,7 @@
+ 
+ #include <math.h>
  
 -#ifdef Q_OS_FREEBSD
 +#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
  #include <sys/ioctl.h>
  #include <sys/param.h>
  #endif
-@@ -134,7 +134,7 @@ QString USBDevice::dump()
+@@ -197,7 +197,7 @@ QString USBDevice::dump()
    if (!prname.isEmpty())
      pr += "<td>(" + prname +")</td>";
    r += i18n("<tr><td><i>Protocol</i></td>%1</tr>").arg(pr);
@@ -20,7 +20,7 @@ $NetBSD: patch-gd,v 1.3 2005/11/08 18:25:44 joerg Exp $
    r += i18n("<tr><td><i>USB Version</i></td><td>%1.%2</td></tr>")
      .arg(_verMajor,0,16)
      .arg(QString::number(_verMinor,16).prepend('0').right(2));
-@@ -158,7 +158,7 @@ QString USBDevice::dump()
+@@ -221,7 +221,7 @@ QString USBDevice::dump()
  
    r += i18n("<tr><td><i>Speed</i></td><td>%1 Mbit/s</td></tr>").arg(_speed);
    r += i18n("<tr><td><i>Channels</i></td><td>%1</td></tr>").arg(_channels);
@@ -29,7 +29,7 @@ $NetBSD: patch-gd,v 1.3 2005/11/08 18:25:44 joerg Exp $
  	if ( _power )
  		r += i18n("<tr><td><i>Power Consumption</i></td><td>%1 mA</td></tr>").arg(_power);
  	else
-@@ -186,7 +186,7 @@ QString USBDevice::dump()
+@@ -249,7 +249,7 @@ QString USBDevice::dump()
  }
  
  
@@ -38,7 +38,7 @@ $NetBSD: patch-gd,v 1.3 2005/11/08 18:25:44 joerg Exp $
  bool USBDevice::parse(QString fname)
  {
    _devices.clear();
-@@ -261,7 +261,7 @@ void USBDevice::collectData( int fd, int
+@@ -345,7 +345,7 @@ void USBDevice::collectData( int fd, int
  	_channels     = di.udi_nports;
  	
  	// determine the speed
@@ -47,7 +47,7 @@ $NetBSD: patch-gd,v 1.3 2005/11/08 18:25:44 joerg Exp $
  	switch (di.udi_speed) {
  		case USB_SPEED_LOW:  _speed = 1.5;   break;
  		case USB_SPEED_FULL: _speed = 12.0;  break;
-@@ -330,8 +330,10 @@ bool USBDevice::parse(QString fname)
+@@ -415,8 +415,10 @@ bool USBDevice::parse(QString fname)
  				}
  			}
  			controller.close();
