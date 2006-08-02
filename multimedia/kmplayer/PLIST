@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/06/13 12:16:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/08/02 14:34:01 markd Exp $
 bin/kmplayer
 bin/kxineplayer
 bin/kxvplayer
@@ -51,7 +51,6 @@ share/kde/icons/hicolor/48x48/apps/kmplayer.png
 share/kde/icons/hicolor/64x64/apps/kmplayer.png
 share/kde/icons/hicolor/scalable/apps/kmplayer.svgz
 share/kde/mimelnk/application/x-kmplayer.desktop
-share/kde/mimelnk/application/x-mplayer2.desktop
 share/kde/mimelnk/video/x-ms-wmp.desktop
 share/kde/services/kmplayer_part.desktop
 share/locale/ar/LC_MESSAGES/kmplayer.mo
