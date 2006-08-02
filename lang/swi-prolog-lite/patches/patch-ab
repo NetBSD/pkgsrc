@@ -1,22 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2005/09/17 19:35:51 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2006/08/02 15:15:36 kristerw Exp $
 
---- src/configure.orig	2004-01-21 02:08:17.000000000 -0800
-+++ src/configure
-@@ -1227,7 +1227,7 @@ fi
- EXTRAOBJ=""
- EXTRAHDR=""
- INSTALLTARGET=dv-install
--PL=pl
-+#PL=pl
- PLLIB=libpl.a
- RT=""
- PLVERSION=`cat ../VERSION`
-@@ -11281,7 +11281,7 @@ fi
+--- src/configure.orig	2006-08-02 02:46:02.000000000 +0200
++++ src/configure	2006-08-02 02:46:52.000000000 +0200
+@@ -14115,7 +14115,7 @@
+ 	if test "x$MKSHARED" = "x"; then
+ 	    MKSHARED=yes
  	fi
- 	;;
-   *darwin*)
 -	PL=swipl
 +	#PL=swipl
- 	SO_pic="-fPIC"
- 	cat >>confdefs.h <<\_ACEOF
- #define USE_SEM_OPEN 1
+ 	SO_EXT=dylib
+ 	SO_pic="-fno-common"
+ 	SO_PIC="-fno-common"

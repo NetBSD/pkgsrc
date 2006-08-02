@@ -1,28 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/02 15:15:36 kristerw Exp $
 
---- src/Makefile.in.orig	Tue Apr  9 20:09:31 2002
-+++ src/Makefile.in	Wed May  1 19:41:34 2002
-@@ -63,6 +63,7 @@
- ARCH=@ARCH@
- INSTALL=@INSTALL@
- INSTALL_PROGRAM=@INSTALL_PROGRAM@
-+INSTALL_SCRIPT=@INSTALL_SCRIPT@
- INSTALL_DATA=@INSTALL_DATA@
- MKDIR=@MKDIR@
- REL_LN=$(srcdir)/rel-ln
-@@ -71,8 +72,9 @@
+--- src/Makefile.in.orig	2006-08-02 02:41:45.000000000 +0200
++++ src/Makefile.in	2006-08-02 02:45:03.000000000 +0200
+@@ -69,8 +69,9 @@
  CWFLAGS=@CWFLAGS@
  CIFLAGS=@CIFLAGS@
  CMFLAGS=@CMFLAGS@
 -CFLAGS=	$(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS)
-+CFLAGS+= $(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS)
++CFLAGS+=	$(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS)
  LDFLAGS=@LDFLAGS@
 +CPPFLAGS=@CPPFLAGS@
  
  PLFOREIGN=@PLFOREIGN@
  
-@@ -135,7 +137,7 @@
- 	plld
+@@ -153,7 +154,7 @@
+ 	headers rc-lib tai-lib $(MKLIBS) system startup index plld
  
  .c.o:
 -	$(CC) -c -I. -I$(srcdir) -I$(srcdir)/rc $(CFLAGS) $< @COUTOPT@
@@ -30,21 +22,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
  
  system:		$(PL)
  startup:	$(STARTUPPATH)
-@@ -242,7 +244,7 @@
+@@ -288,7 +289,7 @@
  		ar x `$(CC) -print-libgcc-file-name` $@
  
- plld:		$(srcdir)/plld.c
+ plld:		$(srcdir)/plld.c parms.h
 -		$(CC) -I. -I$(srcdir) $(CFLAGS) -o $@ $(srcdir)/plld.c
 +		$(CC) -I. -I$(srcdir) $(CPPFLAGS) $(CFLAGS) -o $@ $(srcdir)/plld.c
  
  tags:		$(srcdir)/TAGS
  
-@@ -322,7 +324,7 @@
- 		$(INSTALL_DATA) ../dotfiles/dotplrc $(PLBASE)/dotfiles
- 		$(INSTALL_DATA) ../dotfiles/dotxpcerc $(PLBASE)/dotfiles
- 		$(INSTALL_DATA) ../dotfiles/README $(PLBASE)/dotfiles
--		$(INSTALL_PROGRAM) ../dotfiles/edit $(PLBASE)/dotfiles
-+		$(INSTALL_SCRIPT) ../dotfiles/edit $(PLBASE)/dotfiles
- 
- iinclude::
- 		cd ../include; \
