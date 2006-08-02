@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/06/01 14:19:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.29 2006/08/02 14:11:12 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1005,7 +1005,6 @@ share/kde/apps/kview/kpartplugins/kviewscanner.desktop
 share/kde/apps/kview/kpartplugins/kviewscanner.rc
 share/kde/apps/kview/kview.setdlg
 share/kde/apps/kview/kviewui.rc
-share/kde/apps/kview/photobookui.rc
 share/kde/apps/kviewerpart/icons/hicolor/16x16/actions/movetool.png
 share/kde/apps/kviewerpart/icons/hicolor/16x16/actions/selectiontool.png
 share/kde/apps/kviewerpart/icons/hicolor/22x22/actions/movetool.png
@@ -1019,6 +1018,7 @@ share/kde/apps/kviewviewer/kpartplugins/kviewbrowser.rc
 share/kde/apps/kviewviewer/kviewpopup.rc
 share/kde/apps/kviewviewer/kviewviewer.rc
 share/kde/apps/kviewviewer/kviewviewer_ro.rc
+share/kde/apps/photobook/photobookui.rc
 share/kde/config.kcfg/djvumultipage.kcfg
 share/kde/config.kcfg/kdvi.kcfg
 share/kde/config.kcfg/kghostview.kcfg
@@ -1188,6 +1188,7 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment in kde: @dirrm share/kde/config/magic
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
+@dirrm share/kde/apps/photobook
 @dirrm share/kde/apps/kviewviewer/kpartplugins
 @dirrm share/kde/apps/kviewviewer
 @dirrm share/kde/apps/kviewshell
@@ -1273,13 +1274,6 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kcoloredit
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Graphics
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kviewshell/html
-@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kviewshell/html
-@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kviewshell
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kfaxview/html
-@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kfaxview/html
-@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kfaxview
-@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kuickshow
 @dirrm share/doc/kde/HTML/en/ksnapshot
@@ -1292,6 +1286,13 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/doc/kde/HTML/en/kghostview
 @dirrm share/doc/kde/HTML/en/kgamma
 @dirrm share/doc/kde/HTML/en/kdvi
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdegraphics-apidocs/kviewshell/html
+@dirrm share/doc/kde/HTML/en/kdegraphics-apidocs/kviewshell/html
+@dirrm share/doc/kde/HTML/en/kdegraphics-apidocs/kviewshell
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdegraphics-apidocs/kfaxview/html
+@dirrm share/doc/kde/HTML/en/kdegraphics-apidocs/kfaxview/html
+@dirrm share/doc/kde/HTML/en/kdegraphics-apidocs/kfaxview
+@dirrm share/doc/kde/HTML/en/kdegraphics-apidocs
 @dirrm share/doc/kde/HTML/en/kcoloredit
 @dirrm share/doc/kde/HTML/en/kamera
 @comment in kde: @dirrm share/doc/kde/HTML/en
