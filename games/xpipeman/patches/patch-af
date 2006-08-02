@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2005/06/14 18:32:48 jmmv Exp $
+$NetBSD: patch-af,v 1.4 2006/08/02 19:58:54 kristerw Exp $
 
 --- score.c.orig	1991-09-13 22:32:12.000000000 +0200
-+++ score.c
-@@ -70,7 +70,7 @@ void 	show_scores(), 
++++ score.c	2006-08-02 21:55:55.000000000 +0200
+@@ -70,7 +70,7 @@
  	write_out_scores();
  
  static FILE *scorefile = 0;
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.3 2005/06/14 18:32:48 jmmv Exp $
  
  /*----------------------------------------------------------------------*/
  
-@@ -87,7 +87,7 @@ check_score(current_score,level)
+@@ -87,7 +87,7 @@
    }
    if(scorefile) {
  #ifndef SYSV
@@ -20,7 +20,13 @@ $NetBSD: patch-af,v 1.3 2005/06/14 18:32:48 jmmv Exp $
  #endif
      fclose(scorefile);
      show_scores();
-@@ -100,12 +100,12 @@ load_scores()
+@@ -95,17 +95,17 @@
+ }
+ 
+ 
+-static void
++void
+ load_scores()
  {
    int i = 0;
  
@@ -36,7 +42,25 @@ $NetBSD: patch-af,v 1.3 2005/06/14 18:32:48 jmmv Exp $
  #endif
    while( fgets(scores[i].score,6,scorefile) 	/* get score */
        && fgets(scores[i].name,26,scorefile) 	/* get name */
-@@ -281,7 +281,7 @@ show_scores_callback()
+@@ -118,7 +118,7 @@
+ }
+ 
+ 
+-static void
++void
+ new_high_score(current_score,level)
+   int current_score,level;
+ {
+@@ -151,7 +151,7 @@
+ }
+ 
+ 
+-static void
++void
+ write_out_scores()
+ {
+   int i;
+@@ -281,7 +281,7 @@
  
    if(scorefile) {
  #ifndef SYSV
