@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 2006/08/02 21:16:43 ghen Exp $
+
+From dovecot CVS.  Fixes the problem discussed in this thread: 
+http://www.dovecot.org/list/dovecot/2006-August/015116.html
+
+--- src/lib-index/mail-index-transaction-view.c.orig	2006-08-02 21:38:07.000000000 +0200
++++ src/lib-index/mail-index-transaction-view.c	2006-08-02 23:04:00.000000000 +0200
+@@ -53,10 +53,10 @@
+ 			i_assert(recs[count-1].uid >= hdr->next_uid);
+ 			tview->hdr = *hdr;
+ 			tview->hdr.next_uid = recs[count-1].uid + 1;
+-			hdr = &view->hdr;
++			hdr = &tview->hdr;
+ 		}
+ 	}
+-	return &tview->hdr;
++	return hdr;
+ }
+ 
+ static int _tview_lookup_full(struct mail_index_view *view, uint32_t seq,
