@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/08/02 14:24:40 markd Exp $
 share/locale/ar/LC_MESSAGES/alsaplayerui.mo
 share/locale/ar/LC_MESSAGES/amor.mo
 share/locale/ar/LC_MESSAGES/appletproxy.mo
@@ -33,7 +33,6 @@ share/locale/ar/LC_MESSAGES/irkick.mo
 share/locale/ar/LC_MESSAGES/kabc2mutt.mo
 share/locale/ar/LC_MESSAGES/kabc_dir.mo
 share/locale/ar/LC_MESSAGES/kabc_file.mo
-share/locale/ar/LC_MESSAGES/kabc_ldap.mo
 share/locale/ar/LC_MESSAGES/kabc_ldapkio.mo
 share/locale/ar/LC_MESSAGES/kabc_net.mo
 share/locale/ar/LC_MESSAGES/kabc_sql.mo
@@ -253,7 +252,6 @@ share/locale/ar/LC_MESSAGES/kmail.mo
 share/locale/ar/LC_MESSAGES/kmcop.mo
 share/locale/ar/LC_MESSAGES/kmenuapplet.mo
 share/locale/ar/LC_MESSAGES/kmenuedit.mo
-share/locale/ar/LC_MESSAGES/kmessedwords.mo
 share/locale/ar/LC_MESSAGES/kmid.mo
 share/locale/ar/LC_MESSAGES/kmines.mo
 share/locale/ar/LC_MESSAGES/kminipagerapplet.mo
@@ -367,7 +365,6 @@ share/locale/ar/LC_MESSAGES/kxkb.mo
 share/locale/ar/LC_MESSAGES/kxsconfig.mo
 share/locale/ar/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/locale/ar/LC_MESSAGES/libkcal.mo
-share/locale/ar/LC_MESSAGES/libkcalsystem.mo
 share/locale/ar/LC_MESSAGES/libkdegames.mo
 share/locale/ar/LC_MESSAGES/libkdepim.mo
 share/locale/ar/LC_MESSAGES/libkicker.mo
