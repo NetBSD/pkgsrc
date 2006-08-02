@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.help.mk,v 1.2 2006/08/02 10:29:47 rillig Exp $
+# $NetBSD: bsd.pkg.help.mk,v 1.3 2006/08/02 10:50:00 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -22,15 +22,22 @@ _HELP_AWK= \
 		hline = hline hline hline hline hline;			\
 		found = no; var = no; comment = no; n = 0;		\
 		rcsid = "";						\
+		last_line_was_rcsid = no;				\
+		last_line_was_empty = yes;				\
 	}								\
 	/./ {								\
-		lines[n++] = $$0;					\
-	}								\
-	/^\\#.*\$$.*\$$$$/ {						\
-		rcsid = $$0;						\
+		if ($$0 ~ /^\\#.*\$$.*\$$$$/) {				\
+			rcsid = $$0;					\
+			last_line_was_rcsid = yes;			\
+		} else {						\
+			if (!(last_line_was_rcsid && $$0 == "\#")) {	\
+				lines[n++] = $$0;			\
+			}						\
+			last_line_was_rcsid = no;			\
+		}							\
 	}								\
 	($$1 == VARNAME"?=") || ($$1 == "\#"VARNAME"=") 		\
-	|| ($$1 == "\#" && $$2 == VARNAME) {				\
+	|| ($$1 == "\#" && $$2 == VARNAME && last_line_was_empty) {	\
 		var = 1;						\
 	}								\
 	/^\#/ {								\
@@ -44,6 +51,12 @@ _HELP_AWK= \
 			for (i = 0; i < n; i++) { print lines[i]; }	\
 		}							\
 		var = no; comment = no; n = 0;				\
+	}								\
+	/./ {								\
+		last_line_was_empty = no;				\
+	}								\
+	/^\\#$$/ || /^$$/ {						\
+		last_line_was_empty = yes;				\
 	}								\
 	END {								\
 		if (found) {						\
