@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/08/02 14:24:42 markd Exp $
 share/kde/apps/khangman/data/nb/animals.kvtml
 share/kde/apps/khangman/data/nb/easy.kvtml
 share/kde/apps/khangman/data/nb/hard.kvtml
@@ -58,6 +58,7 @@ share/locale/nb/LC_MESSAGES/kaccess.mo
 share/locale/nb/LC_MESSAGES/kaddressbook.mo
 share/locale/nb/LC_MESSAGES/kalarm.mo
 share/locale/nb/LC_MESSAGES/kalzium.mo
+share/locale/nb/LC_MESSAGES/kanagram.mo
 share/locale/nb/LC_MESSAGES/kandy.mo
 share/locale/nb/LC_MESSAGES/kappfinder.mo
 share/locale/nb/LC_MESSAGES/karm.mo
@@ -335,7 +336,6 @@ share/locale/nb/LC_MESSAGES/kmathapplet.mo
 share/locale/nb/LC_MESSAGES/kmcop.mo
 share/locale/nb/LC_MESSAGES/kmenuapplet.mo
 share/locale/nb/LC_MESSAGES/kmenuedit.mo
-share/locale/nb/LC_MESSAGES/kmessedwords.mo
 share/locale/nb/LC_MESSAGES/kmid.mo
 share/locale/nb/LC_MESSAGES/kmilo_delli8k.mo
 share/locale/nb/LC_MESSAGES/kmilo_generic.mo
@@ -353,6 +353,7 @@ share/locale/nb/LC_MESSAGES/kmouth.mo
 share/locale/nb/LC_MESSAGES/kmplot.mo
 share/locale/nb/LC_MESSAGES/kmrml.mo
 share/locale/nb/LC_MESSAGES/knetattach.mo
+share/locale/nb/LC_MESSAGES/knetwalk.mo
 share/locale/nb/LC_MESSAGES/knetworkconf.mo
 share/locale/nb/LC_MESSAGES/knewsticker.mo
 share/locale/nb/LC_MESSAGES/knode.mo
@@ -371,6 +372,7 @@ share/locale/nb/LC_MESSAGES/konnector_qtopia.mo
 share/locale/nb/LC_MESSAGES/konnector_remote.mo
 share/locale/nb/LC_MESSAGES/konqsidebar_delicious.mo
 share/locale/nb/LC_MESSAGES/konqsidebar_mediaplayer.mo
+share/locale/nb/LC_MESSAGES/konqsidebar_metabar.mo
 share/locale/nb/LC_MESSAGES/konqsidebar_news.mo
 share/locale/nb/LC_MESSAGES/konqueror.mo
 share/locale/nb/LC_MESSAGES/konquest.mo
@@ -498,7 +500,6 @@ share/locale/nb/LC_MESSAGES/libdmctl.mo
 share/locale/nb/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/locale/nb/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 share/locale/nb/LC_MESSAGES/libkcal.mo
-share/locale/nb/LC_MESSAGES/libkcalsystem.mo
 share/locale/nb/LC_MESSAGES/libkcddb.mo
 share/locale/nb/LC_MESSAGES/libkdeedu.mo
 share/locale/nb/LC_MESSAGES/libkdegames.mo
