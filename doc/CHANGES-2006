@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.891 2006/08/02 17:49:23 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.892 2006/08/02 17:50:07 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2918,7 +2918,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.64 [rillig 2006-06-06]
 	Added devel/p5-Test-File-Contents version 0.03 [seb 2006-06-06]
 	Added devel/p5-Module-Install-Substitute version 0.02 [seb 2006-06-06]
-	Updated mail/gld to 1.6nb1 [geert 2006-06-06]
+	Updated mail/gld to 1.6nb1 [ghen 2006-06-06]
 	Updated chat/ircservices to 5.0.57 [adrianp 2006-06-06]
 	Updated chat/ircd-hybrid to 7.2.1 [adrianp 2006-06-06]
 	Updated mail/gld to 1.6nb2 [ghen 2006-06-06]
@@ -3125,7 +3125,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/netpbm to 10.33nb4 [minskim 2006-06-18]
 	Updated databases/mysql4-client to 4.1.20 [seb 2006-06-19]
 	Updated databases/mysql4-server to 4.1.20 [seb 2006-06-19]
-	Updated mail/dovecot to 1.0beta9nb2 [geert 2006-06-19]
+	Updated mail/dovecot to 1.0beta9nb2 [ghen 2006-06-19]
 	Updated lang/python24 to 2.4.3nb3 [minskim 2006-06-19]
 	Updated mail/mutt to 1.4.2.1nb7 [tron 2006-06-20]
 	Updated mail/mutt-devel to 1.5.11nb5 [tonio 2006-06-20]
