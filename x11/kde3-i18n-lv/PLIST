@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/08/02 14:24:42 markd Exp $
 share/locale/lv/LC_MESSAGES/appletproxy.mo
 share/locale/lv/LC_MESSAGES/ark.mo
 share/locale/lv/LC_MESSAGES/artsbuilder.mo
@@ -16,6 +16,7 @@ share/locale/lv/LC_MESSAGES/extensionproxy.mo
 share/locale/lv/LC_MESSAGES/filetypes.mo
 share/locale/lv/LC_MESSAGES/htmlsearch.mo
 share/locale/lv/LC_MESSAGES/imgalleryplugin.mo
+share/locale/lv/LC_MESSAGES/kabc_file.mo
 share/locale/lv/LC_MESSAGES/kaboodle.mo
 share/locale/lv/LC_MESSAGES/kaccess.mo
 share/locale/lv/LC_MESSAGES/kaddressbook.mo
@@ -96,6 +97,7 @@ share/locale/lv/LC_MESSAGES/kdat.mo
 share/locale/lv/LC_MESSAGES/kdcop.mo
 share/locale/lv/LC_MESSAGES/kdebugdialog.mo
 share/locale/lv/LC_MESSAGES/kdelibs.mo
+share/locale/lv/LC_MESSAGES/kdelibs_colors.mo
 share/locale/lv/LC_MESSAGES/kdepasswd.mo
 share/locale/lv/LC_MESSAGES/kdeprint.mo
 share/locale/lv/LC_MESSAGES/kdeprintfax.mo
@@ -140,6 +142,7 @@ share/locale/lv/LC_MESSAGES/kio_audiocd.mo
 share/locale/lv/LC_MESSAGES/kio_finger.mo
 share/locale/lv/LC_MESSAGES/kio_floppy.mo
 share/locale/lv/LC_MESSAGES/kio_help.mo
+share/locale/lv/LC_MESSAGES/kio_home.mo
 share/locale/lv/LC_MESSAGES/kio_imap4.mo
 share/locale/lv/LC_MESSAGES/kio_lan.mo
 share/locale/lv/LC_MESSAGES/kio_man.mo
@@ -169,7 +172,6 @@ share/locale/lv/LC_MESSAGES/kmail.mo
 share/locale/lv/LC_MESSAGES/kmailcvt.mo
 share/locale/lv/LC_MESSAGES/kmcop.mo
 share/locale/lv/LC_MESSAGES/kmenuedit.mo
-share/locale/lv/LC_MESSAGES/kmessedwords.mo
 share/locale/lv/LC_MESSAGES/kmid.mo
 share/locale/lv/LC_MESSAGES/kmines.mo
 share/locale/lv/LC_MESSAGES/kminipagerapplet.mo
@@ -210,6 +212,7 @@ share/locale/lv/LC_MESSAGES/kruler.mo
 share/locale/lv/LC_MESSAGES/krunapplet.mo
 share/locale/lv/LC_MESSAGES/ksame.mo
 share/locale/lv/LC_MESSAGES/kscd.mo
+share/locale/lv/LC_MESSAGES/kscreensaver.mo
 share/locale/lv/LC_MESSAGES/kshisen.mo
 share/locale/lv/LC_MESSAGES/ksirc.mo
 share/locale/lv/LC_MESSAGES/ksirtet.mo
@@ -270,6 +273,7 @@ share/locale/lv/LC_MESSAGES/quanta.mo
 share/locale/lv/LC_MESSAGES/quicklauncher.mo
 share/locale/lv/LC_MESSAGES/secpolicy.mo
 share/locale/lv/LC_MESSAGES/spy.mo
+share/locale/lv/LC_MESSAGES/timezones.mo
 share/locale/lv/LC_MESSAGES/trashapplet.mo
 share/locale/lv/LC_MESSAGES/uachangerplugin.mo
 share/locale/lv/LC_MESSAGES/validatorsplugin.mo
