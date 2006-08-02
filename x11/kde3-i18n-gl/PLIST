@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/08/02 14:24:41 markd Exp $
 share/locale/gl/LC_MESSAGES/alsaplayerui.mo
 share/locale/gl/LC_MESSAGES/amor.mo
 share/locale/gl/LC_MESSAGES/appletproxy.mo
@@ -225,7 +225,6 @@ share/locale/gl/LC_MESSAGES/kmail.mo
 share/locale/gl/LC_MESSAGES/kmcop.mo
 share/locale/gl/LC_MESSAGES/kmenuapplet.mo
 share/locale/gl/LC_MESSAGES/kmenuedit.mo
-share/locale/gl/LC_MESSAGES/kmessedwords.mo
 share/locale/gl/LC_MESSAGES/kmid.mo
 share/locale/gl/LC_MESSAGES/kmines.mo
 share/locale/gl/LC_MESSAGES/kminipagerapplet.mo

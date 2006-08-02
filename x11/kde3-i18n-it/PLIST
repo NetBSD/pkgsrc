@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/06/01 14:37:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/08/02 14:24:42 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -540,6 +540,7 @@ share/doc/kde/HTML/it/khelpcenter/userguide/getting-started.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/glossary.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/history.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/installation.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/internet-shortcuts.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/intro.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kde-edutainment.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeadmin-apps.docbook
@@ -554,6 +555,7 @@ share/doc/kde/HTML/it/khelpcenter/userguide/kdetoys-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeutils-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/koffice-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/konsole-intro.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/messaging-intro.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/migrator-dictionary.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/more-help.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/net-connection-setup.docbook
@@ -568,6 +570,7 @@ share/doc/kde/HTML/it/khelpcenter/userguide/screen-captures.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/shared-sessions.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/shortcuts.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/staff.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/standard-menu-entries.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/switching-sessions.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/troubleshooting-network-x.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/troubleshooting-no-open.docbook
@@ -589,6 +592,7 @@ share/doc/kde/HTML/it/kicker-applets/ktimemon.docbook
 share/doc/kde/HTML/it/kicker/common
 share/doc/kde/HTML/it/kicker/index.cache.bz2
 share/doc/kde/HTML/it/kicker/index.docbook
+share/doc/kde/HTML/it/kicker/man-kicker.1.docbook
 share/doc/kde/HTML/it/kiconedit/common
 share/doc/kde/HTML/it/kiconedit/index.cache.bz2
 share/doc/kde/HTML/it/kiconedit/index.docbook
@@ -1017,8 +1021,12 @@ share/doc/kde/HTML/it/kreversi/common
 share/doc/kde/HTML/it/kreversi/index.cache.bz2
 share/doc/kde/HTML/it/kreversi/index.docbook
 share/doc/kde/HTML/it/krfb/common
+share/doc/kde/HTML/it/krfb/email_invitation.png
 share/doc/kde/HTML/it/krfb/index.cache.bz2
 share/doc/kde/HTML/it/krfb/index.docbook
+share/doc/kde/HTML/it/krfb/invitation_management.png
+share/doc/kde/HTML/it/krfb/personal_invitation.png
+share/doc/kde/HTML/it/krfb/screenshot.png
 share/doc/kde/HTML/it/kruler/common
 share/doc/kde/HTML/it/kruler/index.cache.bz2
 share/doc/kde/HTML/it/kruler/index.docbook
@@ -1312,16 +1320,22 @@ share/doc/kde/HTML/it/noatun/common
 share/doc/kde/HTML/it/noatun/index.cache.bz2
 share/doc/kde/HTML/it/noatun/index.docbook
 share/doc/kde/HTML/it/quanta/adv-quanta.docbook
+share/doc/kde/HTML/it/quanta/common
 share/doc/kde/HTML/it/quanta/config-quanta.docbook
 share/doc/kde/HTML/it/quanta/credits-license.docbook
 share/doc/kde/HTML/it/quanta/debugging-quanta.docbook
+share/doc/kde/HTML/it/quanta/extending-quanta.docbook
 share/doc/kde/HTML/it/quanta/fundamentals.docbook
 share/doc/kde/HTML/it/quanta/glossary.docbook
+share/doc/kde/HTML/it/quanta/index.cache.bz2
+share/doc/kde/HTML/it/quanta/index.docbook
 share/doc/kde/HTML/it/quanta/installation.docbook
 share/doc/kde/HTML/it/quanta/introduction.docbook
 share/doc/kde/HTML/it/quanta/man-quanta.1.docbook
 share/doc/kde/HTML/it/quanta/q-and-a.docbook
 share/doc/kde/HTML/it/quanta/quanta-menus.docbook
+share/doc/kde/HTML/it/quanta/quanta-projects.docbook
+share/doc/kde/HTML/it/quanta/working-with-quanta.docbook
 share/doc/kde/HTML/it/scripts/man-adddebug.1.docbook
 share/doc/kde/HTML/it/scripts/man-cheatmake.1.docbook
 share/doc/kde/HTML/it/scripts/man-create_cvsignore.1.docbook
