@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/03/30 02:48:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/08/02 13:57:23 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -201,6 +201,7 @@ lib/kde3/noatun_voiceprint.la
 lib/kde3/noatun_winskin.la
 lib/kde3/noatunsimple.la
 lib/kde3/videothumbnail.la
+lib/libarts_audiofile.la
 lib/libarts_mpeglib.la
 lib/libarts_splay.la
 lib/libarts_xine.la
@@ -219,7 +220,6 @@ lib/libartsmoduleseffects.la
 lib/libartsmodulesmixers.la
 lib/libartsmodulessynth.la
 lib/libaudiocdplugins.la
-lib/libaudiofilearts.la
 lib/libkcddb.la
 lib/libkdeinit_kmix.la
 lib/libkdeinit_kmixctrl.la
