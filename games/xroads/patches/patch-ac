@@ -1,8 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2004/09/08 12:48:32 sketch Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/02 19:24:55 kristerw Exp $
 
---- xroads.c.orig	2004-09-08 13:39:59.000000000 +0100
-+++ xroads.c	2004-09-08 13:41:00.000000000 +0100
-@@ -288,7 +288,7 @@
+--- xroads.c.orig	1999-06-30 20:25:02.000000000 +0200
++++ xroads.c	2006-08-02 21:14:27.000000000 +0200
+@@ -282,13 +282,13 @@
+ }
+ 
+ /*************************************************************************************************/
+-int trunc( float num ) {  /* Truncate a float to an int */
++int mytrunc( float num ) {  /* Truncate a float to an int */
+    if (num>0) return (int)num;
+    else return (int)(num-0.5);
  }
  
  /*************************************************************************************************/
@@ -18,28 +25,33 @@ $NetBSD: patch-ac,v 1.1 2004/09/08 12:48:32 sketch Exp $
 -         || amonst->y==monst[targ].y) && (round(amonst->x) ==
 -         trunc(amonst->x) && round(amonst->y) == trunc(amonst->y))) {
 +         || amonst->y==monst[targ].y) && (roundup(amonst->x) ==
-+         trunc(amonst->x) && roundup(amonst->y) == trunc(amonst->y))) {
++         mytrunc(amonst->x) && roundup(amonst->y) == mytrunc(amonst->y))) {
  */
 -      if(data[amonst->type].attack1==VACCUUM && (round(amonst->x) ==
 -         trunc(amonst->x) && round(amonst->y) == trunc(amonst->y)) &&
 +      if(data[amonst->type].attack1==VACCUUM && (roundup(amonst->x) ==
-+         trunc(amonst->x) && roundup(amonst->y) == trunc(amonst->y)) &&
++         mytrunc(amonst->x) && roundup(amonst->y) == mytrunc(amonst->y)) &&
           clearshot(amonst, &monst[targ])) {
           watchentity(amonst, &monst[targ]);
           vacattack(amonst, &monst[targ]);
-@@ -423,9 +423,9 @@
+@@ -423,19 +423,19 @@
        else amonst->frame++;
  
        if(data[amonst->type].etype!=EFFECT) {
 -         maze[round(oldy)][round(oldx)]=-2; /* Blank out old space */
-+         maze[roundup(oldy)][roundup(oldx)]=-2; /* Blank out old space */
-          maze[trunc(oldy)][trunc(oldx)]=-2;
+-         maze[trunc(oldy)][trunc(oldx)]=-2;
 -         maze[round(amonst->y)][round(amonst->x)]=number;
+-         maze[trunc(amonst->y)][trunc(amonst->x)]=number;
++         maze[roundup(oldy)][roundup(oldx)]=-2; /* Blank out old space */
++         maze[mytrunc(oldy)][mytrunc(oldx)]=-2;
 +         maze[roundup(amonst->y)][roundup(amonst->x)]=number;
-          maze[trunc(amonst->y)][trunc(amonst->x)]=number;
++         maze[mytrunc(amonst->y)][mytrunc(amonst->x)]=number;
           }
           /* If there was something underneath the effect, redraw it */
-@@ -434,8 +434,8 @@
+-      if(maze[trunc(amonst->y)][trunc(amonst->x)]!=-2) {
+-         bmonst=&monst[maze[trunc(amonst->y)][trunc(amonst->x)]];
++      if(maze[mytrunc(amonst->y)][mytrunc(amonst->x)]!=-2) {
++         bmonst=&monst[maze[mytrunc(amonst->y)][mytrunc(amonst->x)]];
           draw_tilex2(mainwindow, data[bmonst->type].tile[bmonst->frame], (bmonst->x)*GRIDSIZE,
                       (bmonst->y)*GRIDSIZE, bmonst->color, bmonst->dir);
           }
@@ -55,40 +67,51 @@ $NetBSD: patch-ac,v 1.1 2004/09/08 12:48:32 sketch Exp $
  
        /* Only one half-step at a time */
 -   if(round(newx)!=trunc(newx) && round(newy)!=trunc(newy)) {
-+   if(roundup(newx)!=trunc(newx) && roundup(newy)!=trunc(newy)) {
++   if(roundup(newx)!=mytrunc(newx) && roundup(newy)!=mytrunc(newy)) {
  #ifdef DEBUG
        printf("Damn, in two half-steps at a time...\n");
  #endif
-@@ -574,17 +574,17 @@
+@@ -574,30 +574,30 @@
  
        /* If we're in a half-step, eqx and eqy are the space we're moving
           into */
 -   if(round(newx)!=trunc(newx)) {
-+   if(roundup(newx)!=trunc(newx)) {
-       eqy = trunc(newy);
+-      eqy = trunc(newy);
++   if(roundup(newx)!=mytrunc(newx)) {
++      eqy = mytrunc(newy);
        if(newx > player->x)
 -         eqx = round(newx);
 +         eqx = roundup(newx);
        else if(newx < player->x)
-          eqx = trunc(newx);
+-         eqx = trunc(newx);
++         eqx = mytrunc(newx);
        }
 -   else if(round(newy)!=trunc(newy)) {
-+   else if(roundup(newy)!=trunc(newy)) {
-       eqx = trunc(newx);
+-      eqx = trunc(newx);
++   else if(roundup(newy)!=mytrunc(newy)) {
++      eqx = mytrunc(newx);
        if(newy > player->y)
 -         eqy = round(newy);
 +         eqy = roundup(newy);
        else if(newy < player->y)
-          eqy = trunc(newy);
+-         eqy = trunc(newy);
++         eqy = mytrunc(newy);
        }
-@@ -595,9 +595,9 @@
+    else {
+-      eqx = trunc(newx);
+-      eqy = trunc(newy);
++      eqx = mytrunc(newx);
++      eqy = mytrunc(newy);
+       }
  /*
     switch(player->dir) {
-       case LEFT: eqx = trunc(newx); break;
+-      case LEFT: eqx = trunc(newx); break;
 -      case RIGHT: eqx = round(newx); break;
-+      case RIGHT: eqx = roundup(newx); break;
-       case UP: eqy = trunc(newy); break;
+-      case UP: eqy = trunc(newy); break;
 -      case DOWN: eqy = round(newy); break;
++      case LEFT: eqx = mytrunc(newx); break;
++      case RIGHT: eqx = roundup(newx); break;
++      case UP: eqy = mytrunc(newy); break;
 +      case DOWN: eqy = roundup(newy); break;
        default:
        }
@@ -99,43 +122,50 @@ $NetBSD: patch-ac,v 1.1 2004/09/08 12:48:32 sketch Exp $
     printf("@ %d, %d : %d\n", eqx, eqy, maze[eqy][eqx]);
 -   printf("newx: %0.2f: round %d, trunc %d\n", newx, round(newx), trunc(newx));
 -   printf("newy: %0.2f: round %d, trunc %d\n", newy, round(newy), trunc(newy));
-+   printf("newx: %0.2f: round %d, trunc %d\n", newx, roundup(newx), trunc(newx));
-+   printf("newy: %0.2f: round %d, trunc %d\n", newy, roundup(newy), trunc(newy));
++   printf("newx: %0.2f: round %d, trunc %d\n", newx, roundup(newx), mytrunc(newx));
++   printf("newy: %0.2f: round %d, trunc %d\n", newy, roundup(newy), mytrunc(newy));
     printf("Checkdest: %d\n", checkdest(eqx, eqy));
     printf("-----\n");
     }
-@@ -647,7 +647,7 @@
+@@ -646,8 +646,8 @@
+    else if(!okay) {
  #ifdef DEBUG
        printf("something in the way. (%d or %d)\n",
-              maze[trunc(newy)][trunc(newx)],
+-             maze[trunc(newy)][trunc(newx)],
 -             maze[round(newy)][round(newy)]);
++             maze[mytrunc(newy)][mytrunc(newx)],
 +             maze[roundup(newy)][roundup(newy)]);
  #endif
        newx=player->x;
        newy=player->y;
-@@ -658,14 +658,14 @@
+@@ -658,15 +658,15 @@
  #endif
  
       /* Destination has been set, now all we have to do is move there */
 -   maze[round(player->y)][round(player->x)]=-2;
+-   maze[trunc(player->y)][trunc(player->x)]=-2;
 +   maze[roundup(player->y)][roundup(player->x)]=-2;
-    maze[trunc(player->y)][trunc(player->x)]=-2;
++   maze[mytrunc(player->y)][mytrunc(player->x)]=-2;
     draw_tilex2(mainwindow, blank, player->x*GRIDSIZE, player->y*GRIDSIZE,
                 BLACK, RIGHT);
  
        /* Draw player */
     player->x=newx; player->y=newy;
 -   maze[round(player->y)][round(player->x)]=player->ind;
+-   maze[trunc(player->y)][trunc(player->x)]=player->ind;
 +   maze[roundup(player->y)][roundup(player->x)]=player->ind;
-    maze[trunc(player->y)][trunc(player->x)]=player->ind;
++   maze[mytrunc(player->y)][mytrunc(player->x)]=player->ind;
     draw_tilex2(mainwindow, data[datapos].tile[player->frame],
                 player->x*GRIDSIZE, player->y*GRIDSIZE,
-@@ -1279,7 +1279,7 @@
+                player->color, player->dir);
+@@ -1279,8 +1279,8 @@
           player[i]->health = 0;
           if(player[i]->attr & ACTIVE) {
              player[i]->attr ^= ACTIVE;
 -            maze[round(player[i]->y)][round(player[i]->x)] = -2;
+-            maze[trunc(player[i]->y)][trunc(player[i]->x)] = -2;  
 +            maze[roundup(player[i]->y)][roundup(player[i]->x)] = -2;
-             maze[trunc(player[i]->y)][trunc(player[i]->x)] = -2;  
++            maze[mytrunc(player[i]->y)][mytrunc(player[i]->x)] = -2;  
              draw_tilex2(mainwindow, blank, player[i]->x*GRIDSIZE,
                          player[i]->y*GRIDSIZE, BLACK, RIGHT);
+ #ifdef XPLOSIONS
