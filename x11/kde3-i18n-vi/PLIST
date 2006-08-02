@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/06/01 14:37:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/02 14:24:46 markd Exp $
 share/locale/vi/LC_MESSAGES/appletproxy.mo
 share/locale/vi/LC_MESSAGES/babelfish.mo
 share/locale/vi/LC_MESSAGES/blinken.mo
@@ -120,6 +120,7 @@ share/locale/vi/LC_MESSAGES/kdmconfig.mo
 share/locale/vi/LC_MESSAGES/kdmgreet.mo
 share/locale/vi/LC_MESSAGES/kdvi.mo
 share/locale/vi/LC_MESSAGES/kedit.mo
+share/locale/vi/LC_MESSAGES/keduca.mo
 share/locale/vi/LC_MESSAGES/kenolaba.mo
 share/locale/vi/LC_MESSAGES/kfax.mo
 share/locale/vi/LC_MESSAGES/kfile_drgeo.mo
@@ -171,6 +172,7 @@ share/locale/vi/LC_MESSAGES/kio_trash.mo
 share/locale/vi/LC_MESSAGES/kioexec.mo
 share/locale/vi/LC_MESSAGES/kjobviewer.mo
 share/locale/vi/LC_MESSAGES/kjumpingcube.mo
+share/locale/vi/LC_MESSAGES/klettres.mo
 share/locale/vi/LC_MESSAGES/klipper.mo
 share/locale/vi/LC_MESSAGES/klock.mo
 share/locale/vi/LC_MESSAGES/kmag.mo
@@ -180,6 +182,7 @@ share/locale/vi/LC_MESSAGES/kmenuedit.mo
 share/locale/vi/LC_MESSAGES/kminipagerapplet.mo
 share/locale/vi/LC_MESSAGES/kmousetool.mo
 share/locale/vi/LC_MESSAGES/kmouth.mo
+share/locale/vi/LC_MESSAGES/kmplot.mo
 share/locale/vi/LC_MESSAGES/knetattach.mo
 share/locale/vi/LC_MESSAGES/knewsticker.mo
 share/locale/vi/LC_MESSAGES/knotify.mo
