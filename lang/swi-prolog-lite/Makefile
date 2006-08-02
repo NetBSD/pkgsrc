@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/08/02 15:15:36 kristerw Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		swi-prolog-lite-${SWIPLVERS}
-PKGREVISION=	1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler
 
 GNU_CONFIGURE=		yes
-USE_GNU_READLINE=	# uses rl_event_hook() interface
+USE_GNU_READLINE=	yes # uses rl_event_hook() interface
 
 CONFIGURE_ENV+=		PL=swi-prolog
 CONFIGURE_ARGS+=	--disable-mt
+USE_TOOLS+=		gmake
 #CPPFLAGS+=		-DPREFIX=\"${PREFIX}\"
 #CPPFLAGS+=		-DSWIPLVERS=\"${SWIPLVERS}\"
 
