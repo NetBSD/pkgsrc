@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
+$NetBSD: patch-ab,v 1.15 2006/08/02 17:48:37 ghen Exp $
 
---- dovecot-example.conf.orig	2006-06-17 17:05:22.000000000 +0200
+--- dovecot-example.conf.orig	2006-07-05 21:51:02.000000000 +0200
 +++ dovecot-example.conf
 @@ -7,16 +7,13 @@
  # value inside quotes, eg.: key = "# char and trailing whitespace  "
  
- # Default values are shown after each value, it's not required to uncomment
--# any of the lines. Exception to this are paths, they're just examples
--# with real defaults being based on configure options. The paths listed here
+ # Default values are shown for each setting, it's not required to uncomment
+-# any of the lines. Exception to this are paths, they're just examples with
+-# the real defaults being based on configure options. The paths listed here
 -# are for configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
 -# --with-ssldir=/etc/ssl
-+# any of the lines.
++# any of the lines. 
  
  # Base directory where to store runtime data.
  #base_dir = /var/run/dovecot/
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -467,19 +464,19 @@
+@@ -468,19 +465,19 @@
  
  protocol imap {
    # Login executable location.
@@ -54,7 +54,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -489,7 +486,7 @@ protocol imap {
+@@ -490,7 +487,7 @@ protocol imap {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
    # Send IMAP capabilities in greeting message. This makes it unnecessary for
    # clients to request it with CAPABILITY command, so it saves one round-trip.
-@@ -529,10 +526,10 @@ protocol imap {
+@@ -530,10 +527,10 @@ protocol imap {
  
  protocol pop3 {
    # Login executable location.
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -590,7 +587,7 @@ protocol pop3 {
+@@ -592,7 +589,7 @@ protocol pop3 {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -85,7 +85,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
    # Workarounds for various client bugs:
    #   outlook-no-nuls:
-@@ -618,10 +615,10 @@ protocol lda {
+@@ -620,10 +617,10 @@ protocol lda {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -98,7 +98,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
    # UNIX socket path to master authentication server to find users.
    #auth_socket_path = /var/run/dovecot/auth-master
-@@ -632,7 +629,7 @@ protocol lda {
+@@ -634,7 +631,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -107,7 +107,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -744,7 +741,7 @@ auth default {
+@@ -746,7 +743,7 @@ auth default {
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work.
@@ -116,7 +116,7 @@ $NetBSD: patch-ab,v 1.14 2006/07/02 09:29:17 ghen Exp $
      #  [session=yes] [setcred=yes] [cache_key=<key>] [<service name>]
      #
      # session=yes makes Dovecot open and immediately close PAM session. Some
-@@ -772,13 +769,13 @@ auth default {
+@@ -774,13 +771,13 @@ auth default {
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
