@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2006/06/01 13:46:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.44 2006/08/02 13:45:51 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -390,6 +390,7 @@ share/applications/kde/arts.desktop
 share/applications/kde/background.desktop
 share/applications/kde/bell.desktop
 share/applications/kde/cache.desktop
+share/applications/kde/cdinfo.desktop
 share/applications/kde/clock.desktop
 share/applications/kde/colors.desktop
 share/applications/kde/componentchooser.desktop
@@ -949,6 +950,9 @@ share/doc/kde/HTML/en/kicker/screenshot_right.png
 share/doc/kde/HTML/en/kicker/taskbar_group.png
 share/doc/kde/HTML/en/kicker/terminals_icon.png
 share/doc/kde/HTML/en/kicker/windowlist_icon.png
+share/doc/kde/HTML/en/kinfocenter/cdinfo/common
+share/doc/kde/HTML/en/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/en/kinfocenter/common
 share/doc/kde/HTML/en/kinfocenter/devices/common
 share/doc/kde/HTML/en/kinfocenter/devices/index.cache.bz2
@@ -1435,6 +1439,7 @@ share/kde/apps/kconf_update/kcmdisplayrc.upd
 share/kde/apps/kconf_update/kfmclient_3_2.upd
 share/kde/apps/kconf_update/kfmclient_3_2_update.sh
 share/kde/apps/kconf_update/khotkeys_32b1_update.upd
+share/kde/apps/kconf_update/khotkeys_printscreen.upd
 share/kde/apps/kconf_update/kicker-3.1-properSizeSetting.pl
 share/kde/apps/kconf_update/kicker-3.5-kconfigXTize.pl
 share/kde/apps/kconf_update/kicker-3.5-taskbarEnums.pl
@@ -1739,6 +1744,7 @@ share/kde/apps/khelpcenter/searchhandlers/man.desktop
 share/kde/apps/khelpcenter/table-of-contents.xslt
 share/kde/apps/khotkeys/kde32b1.khotkeys
 share/kde/apps/khotkeys/konqueror_gestures_kde321.khotkeys
+share/kde/apps/khotkeys/printscreen.khotkeys
 share/kde/apps/khtml/kpartplugins/khtmlkttsd.desktop
 share/kde/apps/khtml/kpartplugins/khtmlkttsd.rc
 share/kde/apps/kicker/applets/clockapplet.desktop
@@ -3272,7 +3278,8 @@ share/kde/services/tar.protocol
 share/kde/services/textthumbnail.desktop
 share/kde/services/thumbnail.protocol
 share/kde/services/trash.protocol
-share/kde/services/useragentstrings/firefoxoncurrent.desktop
+share/kde/services/useragentstrings/firefox10oncurrent.desktop
+share/kde/services/useragentstrings/firefox15oncurrent.desktop
 share/kde/services/useragentstrings/googlebot.desktop
 share/kde/services/useragentstrings/ie401onwinnt4.desktop
 share/kde/services/useragentstrings/ie45onwinnt5.desktop
@@ -3296,7 +3303,8 @@ share/kde/services/useragentstrings/ns71oncurrent.desktop
 share/kde/services/useragentstrings/ns71onwinnt51.desktop
 share/kde/services/useragentstrings/op403onwinnt4.desktop
 share/kde/services/useragentstrings/op75oncurrent.desktop
-share/kde/services/useragentstrings/safari.desktop
+share/kde/services/useragentstrings/safari12.desktop
+share/kde/services/useragentstrings/safari20.desktop
 share/kde/services/useragentstrings/w3moncurrent.desktop
 share/kde/services/useragentstrings/wgetoncurrent.desktop
 share/kde/services/zip.protocol
@@ -4514,6 +4522,7 @@ ${HAVE_USBVIEW}@dirrm share/kde/apps/kcmusb
 @dirrm share/doc/kde/HTML/en/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/en/kinfocenter/dma
 @dirrm share/doc/kde/HTML/en/kinfocenter/devices
+@dirrm share/doc/kde/HTML/en/kinfocenter/cdinfo
 @comment in kde: @dirrm share/doc/kde/HTML/en/kinfocenter
 @dirrm share/doc/kde/HTML/en/kicker
 @dirrm share/doc/kde/HTML/en/khelpcenter/visualdict
