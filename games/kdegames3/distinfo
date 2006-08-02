@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2006/06/21 20:43:23 joerg Exp $
+$NetBSD: distinfo,v 1.31 2006/08/02 14:13:05 markd Exp $
 
-SHA1 (kdegames-3.5.3.tar.bz2) = 816b5884c67091fb1c5af924778b10b4eeba968c
-RMD160 (kdegames-3.5.3.tar.bz2) = 36ea1609fcc5cd627b16c9e225c309ff8ed212b3
-Size (kdegames-3.5.3.tar.bz2) = 10728200 bytes
-SHA1 (patch-aa) = fd39c86460f3fee9db2242179bca7401026cfe88
+SHA1 (kdegames-3.5.4.tar.bz2) = 64d780b26f960ced2099a90fdf2c8114aa2ff5dc
+RMD160 (kdegames-3.5.4.tar.bz2) = b11322342020aec0040dfc17c50ff588276ceb2c
+Size (kdegames-3.5.4.tar.bz2) = 10737313 bytes
