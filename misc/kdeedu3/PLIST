@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/06/01 14:06:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/08/02 14:03:25 markd Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -957,6 +957,7 @@ share/kde/apps/kgeography/flags/lebanon.png
 share/kde/apps/kgeography/flags/lesotho.png
 share/kde/apps/kgeography/flags/liberia.png
 share/kde/apps/kgeography/flags/libya.png
+share/kde/apps/kgeography/flags/liechtenstein.png
 share/kde/apps/kgeography/flags/lithuania.png
 share/kde/apps/kgeography/flags/lower_saxony.png
 share/kde/apps/kgeography/flags/luxembourg.png
@@ -1444,6 +1445,7 @@ share/kde/apps/klatin/data/vocabs/pl/V.kvtml
 share/kde/apps/klatin/klatinui.rc
 share/kde/apps/klettres/cs.txt
 share/kde/apps/klettres/da.txt
+share/kde/apps/klettres/de.txt
 share/kde/apps/klettres/data/sounds.xml
 share/kde/apps/klettres/en/alpha/A.ogg
 share/kde/apps/klettres/en/alpha/B.ogg
