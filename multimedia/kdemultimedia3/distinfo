@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2006/06/27 14:53:42 wiz Exp $
+$NetBSD: distinfo,v 1.32 2006/08/02 13:57:23 markd Exp $
 
-SHA1 (kdemultimedia-3.5.3.tar.bz2) = 2a75ba49bbc513b4ab5cb0d039949984742f94f5
-RMD160 (kdemultimedia-3.5.3.tar.bz2) = 2ae4ba9266b84b972e3bcd106896b6ea0124aa32
-Size (kdemultimedia-3.5.3.tar.bz2) = 6276838 bytes
+SHA1 (kdemultimedia-3.5.4.tar.bz2) = a435563cc45fb8f26090471792956c03d50c51c2
+RMD160 (kdemultimedia-3.5.4.tar.bz2) = 43cb463eb609fc7d8104b069e64d8e6550440fff
+Size (kdemultimedia-3.5.4.tar.bz2) = 6276789 bytes
 SHA1 (patch-aa) = 6decff5d7eb5a306f90e5d7cbbae039f4995641f
 SHA1 (patch-ab) = 29d8a451cd7e641f67190fa3b4980678ebe7dd70
 SHA1 (patch-ac) = f13b1d7b0285a3189b9b039daef771d9294ad413
@@ -21,4 +21,4 @@ SHA1 (patch-ao) = 1c849de2e1696c4f4e81b660a42b26e2a1c5440e
 SHA1 (patch-ar) = 604469ee9cedaccb5e75567abf1088cddab9bcbc
 SHA1 (patch-cs) = 6b00976b20b3d6af611f75921e20f88086061ce5
 SHA1 (patch-ct) = b61875aa683a08e69f0a403a8111319469fa3c4e
-SHA1 (patch-cu) = a1f6dc932f51251b278d995115ae2c316e861daa
+SHA1 (patch-cu) = 778e1d00bf485c55ddec7cebb47406f87b9e4ec8
