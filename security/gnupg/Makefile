@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2006/06/24 14:20:29 salo Exp $
+# $NetBSD: Makefile,v 1.86.2.1 2006/08/02 14:55:07 ghen Exp $
 
-DISTNAME=	gnupg-1.4.3
-PKGREVISION=	1
+DISTNAME=	gnupg-1.4.5
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/ \
@@ -34,6 +33,10 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 .if ${OPSYS} == "SunOS" || (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*))
 CONFIGURE_ARGS+=	--disable-gnupg-iconv
+.endif
+
+.if ${OPSYS} == "SunOS" && defined(ABI) && ${ABI} == 64
+CONFIGURE_ARGS+=	--disable-asm
 .endif
 
 # XXX: still needed?
