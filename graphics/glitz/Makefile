@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/07/25 19:19:27 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2006/08/03 18:22:17 rillig Exp $
 
 DISTNAME=	glitz-0.5.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
