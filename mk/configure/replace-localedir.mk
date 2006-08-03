@@ -1,4 +1,4 @@
-# $NetBSD: replace-localedir.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: replace-localedir.mk,v 1.2 2006/08/03 16:49:48 salo Exp $
 
 ######################################################################
 ### replace-localedir (PRIVATE)
@@ -41,5 +41,6 @@ SUBST_MESSAGE.pkglocaledir=	Fixing locale directory references.
 SUBST_FILES.pkglocaledir=	${_REPLACE_LOCALEDIR}
 SUBST_SED.pkglocaledir=		\
 	-e 's|^\(localedir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
+	-e 's|^\(itlocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
 	-e 's|^\(gnulocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
 	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(\.\*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
