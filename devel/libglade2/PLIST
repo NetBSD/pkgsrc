@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/12/28 21:41:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/08/03 17:35:34 drochner Exp $
 include/libglade-2.0/glade/glade-build.h
 include/libglade-2.0/glade/glade-init.h
 include/libglade-2.0/glade/glade-parser.h
@@ -23,6 +23,7 @@ share/doc/html/libglade/libglade-lib.html
 share/doc/html/libglade/libglade-modules.html
 share/doc/html/libglade/libglade-notes.html
 share/doc/html/libglade/libglade.devhelp
+share/doc/html/libglade/libglade.devhelp2
 share/doc/html/libglade/right.png
 share/doc/html/libglade/style.css
 share/doc/html/libglade/up.png
