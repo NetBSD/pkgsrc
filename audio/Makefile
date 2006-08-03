@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2006/07/26 13:21:39 drochner Exp $
+# $NetBSD: Makefile,v 1.328 2006/08/03 21:16:57 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -39,6 +39,7 @@ SUBDIR+=	dap
 SUBDIR+=	darkice
 SUBDIR+=	disc-cover
 SUBDIR+=	distmp3
+SUBDIR+=	easyh10
 SUBDIR+=	easytag
 SUBDIR+=	easytag-devel
 SUBDIR+=	eawpatches
@@ -130,6 +131,7 @@ SUBDIR+=	id3v2
 SUBDIR+=	ifp-line
 SUBDIR+=	jack
 SUBDIR+=	juke
+SUBDIR+=	kid3
 SUBDIR+=	kmp
 SUBDIR+=	ladspa
 SUBDIR+=	lame
