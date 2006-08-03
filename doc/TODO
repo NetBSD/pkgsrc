@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5273 2006/08/03 09:41:05 ghen Exp $
+$NetBSD: TODO,v 1.5274 2006/08/03 17:04:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -554,6 +554,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
+	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.14.3
@@ -617,13 +618,13 @@ Suggested package updates
 	o honeyd-1.5a
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
-	o htmldoc-1.8.26
+	o htmldoc-1.8.27
 	o http_load-20050629
 	o httperf-0.8
 	o httptunnel-3.3
 	o hydrogen-0.9.2
 	o hylafax-4.3.0
-	o hyperestraier-1.3.5
+	o hyperestraier-1.3.6
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -815,6 +816,7 @@ Suggested package updates
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
 	o openttd-0.4.7
+	o opera-9.01
 	o oregano-0.50.0
 	o oroborus-2.0.15
 	o osh-050219
@@ -945,6 +947,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o phpldapadmin-0.9.7
+	o phpmyadmin-2.8.2.1
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -1033,7 +1036,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
-	o qdbm-1.8.63
+	o qdbm-1.8.65
 	o qemu-0.8.2
 	o qt1-1.45
 	o qt2-designer-2.3.2
@@ -1174,6 +1177,7 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttyrec-1.0.6
+	o turba-2.1.2
 	o tuxpaint-0.9.15
 	o tuxpaint-config-0.0.6
 	o tuxpaint-stamps-20051125
@@ -1253,6 +1257,7 @@ Suggested package updates
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-7.0
+	o xorp-1.3
 	o xpad-2.11
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
