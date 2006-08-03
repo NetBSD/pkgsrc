@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/05/31 22:51:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2006/08/03 20:09:57 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -133,6 +133,9 @@ share/gnome/help/fish/fr/legal.xml
 share/gnome/help/fish/it/figures/fish_applet.png
 share/gnome/help/fish/it/fish.xml
 share/gnome/help/fish/it/legal.xml
+share/gnome/help/fish/sv/figures/fish_applet.png
+share/gnome/help/fish/sv/fish.xml
+share/gnome/help/fish/sv/legal.xml
 share/gnome/help/fish/uk/figures/fish_applet.png
 share/gnome/help/fish/uk/fish.xml
 share/gnome/help/fish/uk/legal.xml
@@ -251,6 +254,7 @@ share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/br/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-panel-2.0.mo
@@ -345,6 +349,7 @@ share/omf/fish/fish-C.omf
 share/omf/fish/fish-es.omf
 share/omf/fish/fish-fr.omf
 share/omf/fish/fish-it.omf
+share/omf/fish/fish-sv.omf
 share/omf/fish/fish-uk.omf
 share/omf/gnome-panel/fish-applet-2-de.omf
 share/omf/gnome-panel/fish-applet-2-ja.omf
@@ -368,6 +373,7 @@ share/omf/window-list/window-list-C.omf
 share/omf/window-list/window-list-es.omf
 share/omf/window-list/window-list-fr.omf
 share/omf/window-list/window-list-it.omf
+share/omf/window-list/window-list-sv.omf
 share/omf/window-list/window-list-uk.omf
 share/omf/window-list/window-list-zh_CN.omf
 share/omf/workspace-switcher/workspace-switcher-C.omf
@@ -375,6 +381,7 @@ share/omf/workspace-switcher/workspace-switcher-es.omf
 share/omf/workspace-switcher/workspace-switcher-fr.omf
 share/omf/workspace-switcher/workspace-switcher-it.omf
 share/omf/workspace-switcher/workspace-switcher-nl.omf
+share/omf/workspace-switcher/workspace-switcher-sv.omf
 share/omf/workspace-switcher/workspace-switcher-uk.omf
 @dirrm share/omf/workspace-switcher
 @dirrm share/omf/window-list
@@ -438,6 +445,8 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @dirrm share/gnome/help/window-list
 @dirrm share/gnome/help/fish/uk/figures
 @dirrm share/gnome/help/fish/uk
+@dirrm share/gnome/help/fish/sv/figures
+@dirrm share/gnome/help/fish/sv
 @dirrm share/gnome/help/fish/it/figures
 @dirrm share/gnome/help/fish/it
 @dirrm share/gnome/help/fish/fr/figures
