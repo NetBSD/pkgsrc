@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/03 21:16:17 wiz Exp $
+
+--- kid3/oggfile.cpp.orig	2005-10-13 15:54:34.000000000 +0000
++++ kid3/oggfile.cpp
+@@ -143,7 +143,7 @@ bool OggFile::writeTags(bool force, bool
+ 			bool setUtime = false;
+ 			struct utimbuf times;
+ 			if (preserve) {
+-				int fd = ::fileno(fpIn);
++				int fd = fileno(fpIn);
+ 				if (fd >= 0) {
+ 					struct stat fileStat;
+ 					if (::fstat(fd, &fileStat) == 0) {
