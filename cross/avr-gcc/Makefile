@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:08:30 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/08/03 19:22:31 wiz Exp $
 
 DISTNAME=		gcc-3.3.2003.05.11
 PKGNAME=		avr-gcc-3.3.2003.05.11
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		gcc-core+g++-3.3.2003.05.11${EXTRACT_SUFX} \
 			${MAN_AUX}
 
-MAINTAINER=		karlj@mdstud.chalmers.se
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU gcc-3.3 for Atmel AVR 8-bit RISC microcontrollers
 
 DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
