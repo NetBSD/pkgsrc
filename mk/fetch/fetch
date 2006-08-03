@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.5 2006/07/20 13:31:08 joerg Exp $
+# $NetBSD: fetch,v 1.6 2006/08/03 14:02:58 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,7 +58,7 @@
 # OPTIONS
 #	-c	Verify the checksum for the file.  If the checksum
 #		does not match, then the fetch is determined to be
-#		not sucessful.
+#		not successful.
 #
 #	-d dir	Fetch the files into the specified directory.
 #
