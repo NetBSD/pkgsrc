@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.901 2006/08/03 18:54:49 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.902 2006/08/03 19:48:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3743,3 +3743,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/xpkgwedge to 1.16 [tv 2006-08-03]
 	Added devel/hugs-unix version 1.0.20060515 [jmmv 2006-08-03]
 	Added devel/hugs-HUnit version 1.1.20060515 [jmmv 2006-08-03]
+	Updated devel/sparsehash to 0.4 [wiz 2006-08-03]
