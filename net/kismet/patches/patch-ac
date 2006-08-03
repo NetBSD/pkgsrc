@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
+
+--- pcapsource.cc.orig	2005-08-16 01:22:51.000000000 +0000
++++ pcapsource.cc
+@@ -44,7 +44,9 @@ typedef unsigned long u64;
+ #include <net/if_media.h>
+ #include <netinet/in.h>
+ #include <netinet/if_ether.h>
++#if defined(SYS_OPENBSD)
+ #include <dev/ic/if_wi_ieee.h>
++#endif
+ 
+ #ifdef HAVE_RADIOTAP
+ #include <net80211/ieee80211.h>

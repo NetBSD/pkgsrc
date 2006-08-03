@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
+
+--- configure.orig	2006-01-04 16:53:37.000000000 +0100
++++ configure	2006-08-03 16:18:04.000000000 +0200
+@@ -7084,6 +7084,7 @@
+ /* end confdefs.h.  */
+ 
+ 	    #include <stdio.h>
++	    #include <sys/param.h>
+ 	    #include <sys/socket.h>
+ 	    #include <net/if.h>
+ 	    #include <net/if_media.h>
