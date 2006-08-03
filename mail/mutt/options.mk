@@ -1,21 +1,26 @@
-# $NetBSD: options.mk,v 1.8 2005/12/05 23:55:11 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2006/08/03 17:07:04 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_SUPPORTED_OPTIONS=	slang ncurses ssl buffy-size
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mutt
+PKG_OPTIONS_OPTIONAL_GROUPS=	display
+PKG_OPTIONS_GROUP.display=	slang ncurses
+PKG_SUPPORTED_OPTIONS=		ssl buffy-size
+PKG_SUGGESTED_OPTIONS=		ncurses ssl
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Slang and ncurses
+### Slang
 ###
 .if !empty(PKG_OPTIONS:Mslang)
 .  include "../../devel/libslang/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
-.else
-.  if !empty(PKG_OPTIONS:Mncurses)
+.endif
+
+###
+### ncurses
+###
+.if !empty(PKG_OPTIONS:Mncurses)
 USE_NCURSES=		yes
-.  endif
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 .endif
