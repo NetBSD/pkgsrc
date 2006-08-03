@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.899 2006/08/03 15:15:25 salo Exp $
+$NetBSD: CHANGES-2006,v 1.900 2006/08/03 17:36:25 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3740,3 +3740,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey-gtk1 to 1.0.4 [ghen 2006-08-03]
 	Updated www/seamonkey-bin to 1.0.4 [ghen 2006-08-03]
 	Added net/kismet version 2006.04.01 [salo 2006-08-03]
+	Updated pkgtools/xpkgwedge to 1.16 [tv 2006-08-03]
