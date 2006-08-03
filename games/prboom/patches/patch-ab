@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2006/07/24 20:03:25 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2006/08/03 20:18:04 drochner Exp $
 
---- data/Makefile.in.orig	2006-07-23 17:40:24.000000000 +0200
+--- data/Makefile.in.orig	2006-07-30 20:14:26.000000000 +0200
 +++ data/Makefile.in
-@@ -106,7 +106,7 @@ am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
- 
+@@ -169,7 +169,7 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
 -waddir = $(datadir)/games/doom
 +waddir = $(datadir)/doom
  wad_DATA = prboom.wad
  EXTRA_DIST = prboom.wad prboom.txt
- subdir = data
+ all: all-am
