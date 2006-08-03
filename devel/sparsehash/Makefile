@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/06/01 22:42:48 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/03 19:46:42 wiz Exp $
 #
 
-DISTNAME=		sparsehash-0.1
+DISTNAME=		sparsehash-0.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=goog-sparsehash/}
 
