@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/31 18:17:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/03 19:25:52 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
 share/applications/evince.desktop
@@ -19,6 +19,8 @@ share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
 share/gnome/help/evince/es/figures/evince_start_window.png
+share/gnome/help/evince/it/evince.xml
+share/gnome/help/evince/it/figures/evince_start_window.png
 share/gnome/help/evince/nl/evince.xml
 share/gnome/help/evince/nl/figures/evince_start_window.png
 share/gnome/help/evince/ru/evince.xml
@@ -34,6 +36,7 @@ share/icons/hicolor/scalable/apps/evince.svg
 share/locale/be/LC_MESSAGES/evince.mo
 share/locale/bg/LC_MESSAGES/evince.mo
 share/locale/bn/LC_MESSAGES/evince.mo
+share/locale/bn_IN/LC_MESSAGES/evince.mo
 share/locale/br/LC_MESSAGES/evince.mo
 share/locale/ca/LC_MESSAGES/evince.mo
 share/locale/cs/LC_MESSAGES/evince.mo
@@ -80,6 +83,7 @@ share/locale/sq/LC_MESSAGES/evince.mo
 share/locale/sr/LC_MESSAGES/evince.mo
 share/locale/sr@Latn/LC_MESSAGES/evince.mo
 share/locale/sv/LC_MESSAGES/evince.mo
+share/locale/ta/LC_MESSAGES/evince.mo
 share/locale/th/LC_MESSAGES/evince.mo
 share/locale/tr/LC_MESSAGES/evince.mo
 share/locale/uk/LC_MESSAGES/evince.mo
@@ -92,6 +96,7 @@ share/omf/evince/evince-C.omf
 share/omf/evince/evince-bg.omf
 share/omf/evince/evince-el.omf
 share/omf/evince/evince-es.omf
+share/omf/evince/evince-it.omf
 share/omf/evince/evince-nl.omf
 share/omf/evince/evince-ru.omf
 share/omf/evince/evince-sr.omf
@@ -106,6 +111,8 @@ share/omf/evince/evince-uk.omf
 @dirrm share/gnome/help/evince/ru
 @dirrm share/gnome/help/evince/nl/figures
 @dirrm share/gnome/help/evince/nl
+@dirrm share/gnome/help/evince/it/figures
+@dirrm share/gnome/help/evince/it
 @dirrm share/gnome/help/evince/es/figures
 @dirrm share/gnome/help/evince/es
 @dirrm share/gnome/help/evince/el/figures
