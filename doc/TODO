@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5272 2006/08/03 08:01:41 ghen Exp $
+$NetBSD: TODO,v 1.5273 2006/08/03 09:41:05 ghen Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,6 @@ Suggested package updates
 	o file-4.17
 	o file-roller-2.14.4
 	o findutils-4.2.27
-	o firefox-1.5.0.6 [ghen]
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
 	o flyspell-1.7l
@@ -1088,7 +1087,6 @@ Suggested package updates
 	o scribus-1.2.5
 	o sdig-0.40
 	o seahorse-0.9.1
-	o seamonkey-1.0.4 [ghen]
 	o sendfile-20010424
 	o sharity-3.2
 	o sharity-light-1.3
