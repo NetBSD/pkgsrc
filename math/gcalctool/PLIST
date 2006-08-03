@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/08/03 18:58:01 drochner Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -58,7 +58,6 @@ share/gnome/help/gcalctool/sv/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/sv/figures/gcalctool_menu_symbol.png
 share/gnome/help/gcalctool/sv/figures/gcalctool_scientific_window.png
 share/gnome/help/gcalctool/sv/gcalctool.xml
-share/gnome/help/gcalctool/sv/legal.xml
 share/gnome/help/gcalctool/zh_CN/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/zh_CN/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/zh_CN/figures/gcalctool_menu_symbol.png
@@ -82,12 +81,15 @@ share/locale/ar/LC_MESSAGES/gcalctool.mo
 share/locale/az/LC_MESSAGES/gcalctool.mo
 share/locale/be/LC_MESSAGES/gcalctool.mo
 share/locale/bg/LC_MESSAGES/gcalctool.mo
+share/locale/bn/LC_MESSAGES/gcalctool.mo
+share/locale/bn_IN/LC_MESSAGES/gcalctool.mo
 share/locale/bs/LC_MESSAGES/gcalctool.mo
 share/locale/ca/LC_MESSAGES/gcalctool.mo
 share/locale/cs/LC_MESSAGES/gcalctool.mo
 share/locale/cy/LC_MESSAGES/gcalctool.mo
 share/locale/da/LC_MESSAGES/gcalctool.mo
 share/locale/de/LC_MESSAGES/gcalctool.mo
+share/locale/dz/LC_MESSAGES/gcalctool.mo
 share/locale/el/LC_MESSAGES/gcalctool.mo
 share/locale/en_CA/LC_MESSAGES/gcalctool.mo
 share/locale/en_GB/LC_MESSAGES/gcalctool.mo
@@ -110,6 +112,7 @@ share/locale/it/LC_MESSAGES/gcalctool.mo
 share/locale/ja/LC_MESSAGES/gcalctool.mo
 share/locale/ko/LC_MESSAGES/gcalctool.mo
 share/locale/lt/LC_MESSAGES/gcalctool.mo
+share/locale/lv/LC_MESSAGES/gcalctool.mo
 share/locale/mk/LC_MESSAGES/gcalctool.mo
 share/locale/ml/LC_MESSAGES/gcalctool.mo
 share/locale/mn/LC_MESSAGES/gcalctool.mo
@@ -117,7 +120,6 @@ share/locale/ms/LC_MESSAGES/gcalctool.mo
 share/locale/nb/LC_MESSAGES/gcalctool.mo
 share/locale/ne/LC_MESSAGES/gcalctool.mo
 share/locale/nl/LC_MESSAGES/gcalctool.mo
-share/locale/no/LC_MESSAGES/gcalctool.mo
 share/locale/or/LC_MESSAGES/gcalctool.mo
 share/locale/pa/LC_MESSAGES/gcalctool.mo
 share/locale/pl/LC_MESSAGES/gcalctool.mo
