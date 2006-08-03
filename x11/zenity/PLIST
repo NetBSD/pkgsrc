@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/07/26 12:32:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/08/03 19:52:49 drochner Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -51,6 +51,18 @@ share/gnome/help/zenity/fr/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/fr/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/fr/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/fr/zenity.xml
+share/gnome/help/zenity/sv/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/sv/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/sv/zenity.xml
 share/gnome/help/zenity/uk/figures/zenity-calendar-screenshot.png
 share/gnome/help/zenity/uk/figures/zenity-entry-screenshot.png
 share/gnome/help/zenity/uk/figures/zenity-error-screenshot.png
@@ -101,6 +113,7 @@ share/locale/kn/LC_MESSAGES/zenity-0.1.mo
 share/locale/ko/LC_MESSAGES/zenity-0.1.mo
 share/locale/ku/LC_MESSAGES/zenity-0.1.mo
 share/locale/lt/LC_MESSAGES/zenity-0.1.mo
+share/locale/lv/LC_MESSAGES/zenity-0.1.mo
 share/locale/mi/LC_MESSAGES/zenity-0.1.mo
 share/locale/mk/LC_MESSAGES/zenity-0.1.mo
 share/locale/ml/LC_MESSAGES/zenity-0.1.mo
@@ -139,6 +152,7 @@ share/omf/zenity/zenity-C.omf
 share/omf/zenity/zenity-bg.omf
 share/omf/zenity/zenity-es.omf
 share/omf/zenity/zenity-fr.omf
+share/omf/zenity/zenity-sv.omf
 share/omf/zenity/zenity-uk.omf
 share/zenity/clothes/gnome-tshirt.png
 share/zenity/clothes/hawaii-shirt.png
@@ -161,6 +175,8 @@ share/zenity/zenity.png
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/zenity/uk/figures
 @dirrm share/gnome/help/zenity/uk
+@dirrm share/gnome/help/zenity/sv/figures
+@dirrm share/gnome/help/zenity/sv
 @dirrm share/gnome/help/zenity/fr/figures
 @dirrm share/gnome/help/zenity/fr
 @dirrm share/gnome/help/zenity/es/figures
