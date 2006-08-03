@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.895 2006/08/02 21:17:16 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.896 2006/08/03 05:34:33 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/imapfilter to 1.2.2 [rillig 2006-08-02]
 	Updated mail/dovecot to 1.0rc4 [ghen 2006-08-02]
 	Updated mail/dovecot to 1.0rc4nb1 [ghen 2006-08-02]
+	Updated mail/dovecot to 1.0rc5 [ghen 2006-08-03]
