@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2006/07/02 13:26:01 markd Exp $
+# $NetBSD: Makefile,v 1.151 2006/08/03 19:01:00 drochner Exp $
 #
 
 COMMENT=	Mathematics
@@ -64,6 +64,7 @@ SUBDIR+=	galculator
 SUBDIR+=	gap
 SUBDIR+=	gcalctool
 SUBDIR+=	geg
+SUBDIR+=	genius
 SUBDIR+=	glpk
 SUBDIR+=	gnumeric
 SUBDIR+=	gp-autpgrp
