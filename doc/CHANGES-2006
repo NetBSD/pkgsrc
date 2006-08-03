@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.900 2006/08/03 17:36:25 tv Exp $
+$NetBSD: CHANGES-2006,v 1.901 2006/08/03 18:54:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3741,3 +3741,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey-bin to 1.0.4 [ghen 2006-08-03]
 	Added net/kismet version 2006.04.01 [salo 2006-08-03]
 	Updated pkgtools/xpkgwedge to 1.16 [tv 2006-08-03]
+	Added devel/hugs-unix version 1.0.20060515 [jmmv 2006-08-03]
+	Added devel/hugs-HUnit version 1.1.20060515 [jmmv 2006-08-03]
