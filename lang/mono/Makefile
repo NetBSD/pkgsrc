@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2006/07/31 18:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2006/08/03 18:15:07 drochner Exp $
 
-DISTNAME=	mono-1.1.12.1
-PKGREVISION=	3
+DISTNAME=	mono-1.1.13.8
 CATEGORIES=	lang
 MASTER_SITES=	http://go-mono.com/sources/mono-1.1/
 
@@ -45,7 +44,6 @@ PKGCONFIG_OVERRIDE+=	scripts/mono-nunit.pc.in
 
 REPLACE_PERL+=	mcs/class/Microsoft.VisualBasic/fixup/fixup.pl
 REPLACE_PERL+=	mcs/errors/do-tests.pl
-REPLACE_PERL+=	mcs/mbas/Test/test-mbas.pl
 REPLACE_PERL+=	mcs/tools/scan-tests.pl
 REPLACE_PERL+=	mono/benchmark/test-driver
 REPLACE_PERL+=	mono/cil/make-opcodes-def.pl
@@ -53,10 +51,27 @@ REPLACE_PERL+=	mono/metadata/make-bundle.pl
 REPLACE_PERL+=	mono/tests/stress-runner.pl
 
 EGDIR=		${PREFIX}/share/examples/mono
-CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
-CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/mono/browscap.ini
+PKG_SYSCONFSUBDIR=	mono
+CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/config
+CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/browscap.ini
+CONF_FILES+=	${EGDIR}/1.0/DefaultWsdlHelpGenerator.aspx \
+		${PKG_SYSCONFDIR}/1.0/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/1.0/machine.config ${PKG_SYSCONFDIR}/1.0/machine.config
+CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
+		${PKG_SYSCONFDIR}/2.0/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/2.0/machine.config ${PKG_SYSCONFDIR}/2.0/machine.confi
 
 TEST_TARGET=	check
+
+post-patch: substpcprefix
+# replace relative prefix in pkgconfig files
+substpcprefix:
+.for f in ${PKGCONFIG_OVERRIDE}
+	(cd ${WRKSRC}; \
+	 ${SED} 's|$${pcfiledir}/../..|@prefix@|g' <$f >$f.tmp; \
+	 ${MV} $f.tmp $f \
+	)
+.endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

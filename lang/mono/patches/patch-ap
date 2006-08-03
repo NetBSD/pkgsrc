@@ -1,0 +1,19 @@
+$NetBSD: patch-ap,v 1.1 2006/08/03 18:15:08 drochner Exp $
+
+--- mcs/jay/Makefile.orig	2006-07-27 12:57:02.000000000 +0200
++++ mcs/jay/Makefile
+@@ -21,12 +21,12 @@ ifndef NO_INSTALL
+ install-local:
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/bin
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/share/jay
+-	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/share/man/man1
++	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/man/man1
+ 	$(INSTALL_BIN) jay $(DESTDIR)$(prefix)/bin
+ 	for datafile in $(datafiles) ; do \
+ 	   $(INSTALL_DATA) $$datafile $(DESTDIR)$(prefix)/share/jay ; \
+ 	done
+-	$(INSTALL_DATA) jay.1 $(DESTDIR)$(prefix)/share/man/man1
++	$(INSTALL_DATA) jay.1 $(DESTDIR)$(prefix)/man/man1
+ 
+ uninstall-local:
+ 	-rm -f $(DESTDIR)$(prefix)/bin/jay
