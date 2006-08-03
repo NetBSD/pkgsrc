@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.55 2006/08/02 17:57:31 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.56 2006/08/03 17:51:49 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -125,3 +125,5 @@ Pullup ticket 1770 - requested by rillig
 improved upload script for bulk builds
 Pullup ticket 1774 - requested by salo
 security fix for tiff
+Pullup ticket 1775 - requested by wiz
+PLIST fix for cppunit
