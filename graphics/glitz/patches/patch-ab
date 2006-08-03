@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2006/08/03 18:22:17 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2006/08/03 19:33:55 rillig Exp $
 
---- src/glitzint.h.orig	2006-07-07 11:24:14.200890000 +1200
-+++ src/glitzint.h
+--- src/glitzint.h.orig	2006-03-13 14:43:57.000000000 +0100
++++ src/glitzint.h	2006-08-03 20:59:16.783689410 +0200
+@@ -56,7 +56,7 @@
+ #  endif
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__sun__)
++#if defined(__APPLE__) || defined(__sun)
+ # define floorf(a)    floor (a)
+ # define ceilf(a)     ceil (a)
+ # define sinf(a)      sin (a)
 @@ -69,7 +69,7 @@
  # define sqrtf(a)     sqrt (a)
  #endif
