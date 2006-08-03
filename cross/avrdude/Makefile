@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2006/08/03 19:22:31 wiz Exp $
 
 DISTNAME=	avrdude-4.1.0
 PKGREVISION=	3
 CATEGORIES=	cross
 MASTER_SITES=	http://savannah.nongnu.org/download/avrdude/stable.pkg/4.1.0/
 
-MAINTAINER=	karlj@mdstud.chalmers.se
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bsdhome.com/avrdude/
 COMMENT=	Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 
