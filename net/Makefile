@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.630 2006/07/22 19:21:11 abs Exp $
+# $NetBSD: Makefile,v 1.631 2006/08/03 15:11:28 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -163,6 +163,7 @@ SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork3
 SUBDIR+=	kftpgrabber
 SUBDIR+=	kiax
+SUBDIR+=	kismet
 SUBDIR+=	kphone
 SUBDIR+=	lambdamoo
 SUBDIR+=	lambdamoo-core
