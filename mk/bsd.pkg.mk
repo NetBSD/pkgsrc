@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1879 2006/08/02 09:46:22 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1880 2006/08/03 19:12:42 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -608,7 +608,13 @@ all: ${_PKGSRC_BUILD_TARGETS}
 # acquire-lock, release-lock are .USE macro targets for acquiring and
 # release coarse-grained locks.
 #
-_LOCKFILE=	${WRKDIR}/.lockfile
+_WRKDIR_LOCKFILE=	${WRKDIR}/.lockfile
+_PREFIX_LOCKFILE=	${PKG_DBDIR}/.lockfile
+_GET_LOCKFILE_CMD= \
+	case ${.TARGET} in						\
+	*-install-*)	lockfile=${_PREFIX_LOCKFILE};;			\
+	*)		lockfile=${_WRKDIR_LOCKFILE};;			\
+	esac
 
 acquire-lock: .USE
 .if ${PKGSRC_LOCKTYPE} == "none"
@@ -624,45 +630,52 @@ acquire-lock: .USE
 	exit 1
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${_GET_LOCKFILE_CMD};						\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
 	if ${TEST} -z "$$ppid"; then					\
 		${ERROR_MSG} "No parent process ID found.";		\
 		exit 1;							\
 	fi;								\
 	while ${TRUE}; do						\
-		if ${TEST} -f /var/run/dmesg.boot -a -f ${_LOCKFILE}; then \
-			rebooted=`${FIND} /var/run/dmesg.boot -newer ${_LOCKFILE} -print`; \
+		if ${TEST} -f /var/run/dmesg.boot -a -f "$$lockfile"; then \
+			rebooted=`${FIND} /var/run/dmesg.boot -newer "$$lockfile" -print`; \
 			if ${TEST} -n "$$rebooted"; then		\
-				${STEP_MSG} "Removing stale ${_LOCKFILE}"; \
-				${RM} -f ${_LOCKFILE};			\
+				${STEP_MSG} "Removing stale $$lockfile"; \
+				${RM} -f "$$lockfile";			\
 			fi;						\
 		fi;							\
-		${MKDIR} ${_LOCKFILE:H};				\
-		if ${SHLOCK} -f ${_LOCKFILE} -p $$ppid; then		\
+		lockdir=`echo "$$lockfile" | sed "s,/[^/].*\$$,,"`	\
+		${MKDIR} "$$lockdir";					\
+		if ${SHLOCK} -f "$$lockfile" -p $$ppid; then		\
 			break;						\
 		fi;							\
+		lockpid=`${CAT} "$$lockfile"`;				\
 		case ${PKGSRC_LOCKTYPE:Q}"" in				\
-		once)	${ERROR_MSG} "Lock is held by pid `${CAT} ${_LOCKFILE}`"; \
+		once)	${ERROR_MSG} "Lock is held by pid $$lockpid";	\
 			exit 1;						\
 			;;						\
-		sleep)	${STEP_MSG} "Lock is held by pid `${CAT} ${_LOCKFILE}`"; \
+		sleep)	${STEP_MSG} "Lock is held by pid $$lockpid";	\
 			${SLEEP} ${PKGSRC_SLEEPSECS};			\
 			;;						\
 		esac;							\
-	done
-.  if defined(PKG_VERBOSE)
-	@${STEP_MSG} "Lock acquired for \`\`${.TARGET:S/^acquire-//:S/-lock$//}'' on behalf of process `${CAT} ${_LOCKFILE}`"
-.  endif
+	done;								\
+	if ${PKG_VERBOSE:D${TRUE}:U${FALSE}}; then			\
+		lockpid=`${CAT} "$$lockfile"`;				\
+		${STEP_MSG} "Lock acquired for \`\`${.TARGET:S/^acquire-//:S/-lock$//}'' on behalf of process $$lockpid"; \
+	fi
 .endif
 
 release-lock: .USE
 .if ${PKGSRC_LOCKTYPE} == "none"
 	@${DO_NADA}
 .else
-.  if defined(PKG_VERBOSE)
-	@${STEP_MSG} "Lock released for \`\`${.TARGET:S/^release-//:S/-lock$//}'' on behalf of process `${CAT} ${_LOCKFILE}`"
-.  endif
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_LOCKFILE}
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${_GET_LOCKFILE_CMD};						\
+	if ${PKG_VERBOSE:D${TRUE}:U${FALSE}}; then			\
+		lockpid=`${CAT} "$$lockfile"`;				\
+		${STEP_MSG} "Lock released for \`\`${.TARGET:S/^release-//:S/-lock$//}'' on behalf of process $$lockpid"; \
+	fi;								\
+	${RM} -f "$$lockfile"
 .endif
 
 .PHONY: makedirs
@@ -672,7 +685,8 @@ ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_LOCKFILE} || ${RM} -fr ${WRKDIR}
+	${_GET_LOCKFILE_CMD};						\
+	${TEST} -f "$$lockfile" || ${RM} -fr ${WRKDIR}
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
@@ -687,7 +701,8 @@ makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
  ${.CURDIR}/${WRKDIR_BASENAME}:
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_LOCKFILE} || ${RM} -f ${.TARGET}
+	${_GET_LOCKFILE_CMD};						\
+	${TEST} -f "$$lockfile" || ${RM} -f ${.TARGET}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${LN} -s ${WRKDIR} ${.TARGET} 2>/dev/null; then		\
