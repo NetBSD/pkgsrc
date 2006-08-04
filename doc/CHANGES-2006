@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.909 2006/08/04 15:12:19 tron Exp $
+$NetBSD: CHANGES-2006,v 1.910 2006/08/04 17:00:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3231,6 +3231,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/xentools30 version 3.0.2.2 [bouyer 2006-07-02]
 	Updated editors/vim-share to 7.0.35 [martti 2006-07-02]
 	Added comms/obexapp version 1.4.4 [xtraeme 2006-07-02]
+	Updated audio/rhythmbox to 0.9.5 [drochner 2006-07-02]
+	Updated graphics/scigraphica to 2.1.0 [rillig 2006-07-02]
 	Updated cross/i386-netbsdpe to 3.3.6 [kent 2006-07-03]
 	Updated emulators/peace to 0.0.20060701 [kent 2006-07-03]
 	Removed devel/w32api [kent 2006-07-03]
@@ -3259,6 +3261,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libvisual-xmms to 0.2.0nb5 [wiz 2006-07-03]
 	Updated audio/libvisual to 0.4.0 [wiz 2006-07-03]
 	Updated audio/libvisual-plugins to 0.4.0 [wiz 2006-07-03]
+	Updated audio/disc-cover to 1.5.6 [drochner 2006-07-03]
 	Updated misc/edict to 2006.002 [wiz 2006-07-04]
 	Updated misc/JMdict to 2006.03 [wiz 2006-07-04]
 	Updated misc/kanjidic to 20060623 [wiz 2006-07-04]
