@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.668 2006/08/01 08:58:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.669 2006/08/04 18:32:41 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4093,12 +4093,11 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\\//) {
 				$line->log_warning("Backslashes should be doubled inside backticks.");
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Za-z_]+)//) {
+			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|\$\$|[!#?\@])//) {
 				my ($shvarname) = ($1);
 				if ($opt_warn_quoting && $check_quoting) {
 					$line->log_warning("Unquoted shell variable \$${shvarname}.");
 				}
-
 			} else {
 				last;
 			}
@@ -4115,7 +4114,14 @@ sub checkline_mk_shellword($$$) {
 		} elsif ($state == SWST_BACKT_DQUOT) {
 			if ($rest =~ s/^"//) {
 				$state = SWST_BACKT;
+
 			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
+
+			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
+
+			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
+			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|\$\$|[!#?\@])//) {
+				my ($shvarname) = ($1);
 			} else {
 				last;
 			}
