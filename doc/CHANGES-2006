@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.910 2006/08/04 17:00:10 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.911 2006/08/04 18:18:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/hugs-HaXml version 1.15.20060515 [jmmv 2006-08-04]
 	Updated net/tor to 0.1.1.23 [tv 2006-08-04]
 	Updated multimedia/xvidcore to 1.1.0nb2 [tron 2006-08-04]
+	Updated devel/atk to 1.12.1nb1 [wiz 2006-08-04]
