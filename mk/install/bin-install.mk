@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.2 2006/08/04 07:17:58 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.3 2006/08/04 20:52:27 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -28,8 +28,8 @@ _SU_BIN_INSTALL_TARGETS+=	locked-su-bin-install
 _SU_BIN_INSTALL_TARGETS+=	release-bin-install-lock
 
 .PHONY: acquire-bin-install-lock release-bin-install-lock
-acquire-bin-install-lock: acquire-lock
-release-bin-install-lock: release-lock
+acquire-bin-install-lock: acquire-localbase-lock
+release-bin-install-lock: release-localbase-lock
 
 # Install binary pkg, without strict uptodate-check first
 .PHONY: su-bin-install

@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.15 2006/07/27 21:46:46 jlam Exp $
+# $NetBSD: install.mk,v 1.16 2006/08/04 20:52:27 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -25,8 +25,8 @@ install: barrier
 .endif
 
 .PHONY: acquire-install-lock release-install-lock
-acquire-install-lock: acquire-lock
-release-install-lock: release-lock
+acquire-install-lock: acquire-lock acquire-localbase-lock
+release-install-lock: release-lock release-localbase-lock
 
 .if exists(${_COOKIE.install})
 ${_COOKIE.install}:
