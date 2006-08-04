@@ -1,39 +1,62 @@
-# $NetBSD: locking.mk,v 1.1 2006/08/04 05:55:18 rillig Exp $
+# $NetBSD: locking.mk,v 1.2 2006/08/04 20:52:27 rillig Exp $
 #
 
-# acquire-lock and release-lock are two .USE macro targets that aquire
-# and release coarse-grained locks. There are two areas of pkgsrc that
-# can be locked: The WRKDIR of a specific package or the LOCALBASE.
-# Which of those is locked depends on the name of the target where the
-# {acquire,release}-lock macro is used. If it contains -install-, as for
-# example acquire-install-lock, LOCALBASE is locked. Otherwise, WRKDIR
-# is locked.
+# This file provides the following .USE targets:
 #
-# 
+# acquire-lock
+#	Acquires a coarse-grained lock in WRKDIR.
+#
+# release-lock
+#	Releases the lock in WRKDIR.
+#
+# acquire-localbase-lock
+#	Acquires a coarse-grained lock in LOCALBASE.
+#
+# release-localbase-lock
+#	Releases the lock in LOCALBASE.
+#
 
 _WRKDIR_LOCKFILE=	${WRKDIR}/.lockfile
-_PREFIX_LOCKFILE=	${PKG_DBDIR}/.lockfile
-_GET_LOCKFILE_CMD= \
-	case ${.TARGET} in						\
-	*-install-*)	lockfile=${_PREFIX_LOCKFILE};;			\
-	*)		lockfile=${_WRKDIR_LOCKFILE};;			\
-	esac
+_LOCALBASE_LOCKFILE=	${LOCALBASE}/.lockfile
 
-acquire-lock: .USE
+#
+# Sanity checks.
+#
+
 .if ${PKGSRC_LOCKTYPE} == "none"
-	@${DO_NADA}
-.else
-	@if ${TEST} ! -x ${SHLOCK:Q}""; then				\
-		${ERROR_MSG} "The ${SHLOCK:Q} utility does not exist, and is necessary for locking."; \
-		${ERROR_MSG} "Please \""${MAKE:Q}" install\" in ../../pkgtools/shlock."; \
-		exit 1;							\
-	fi
+# No further checks.
+.elif ${PKGSRC_LOCKTYPE} == "once" || ${PKGSRC_LOCKTYPE} == "sleep"
 .  if !defined(OBJHOSTNAME)
-	@${ERROR_MSG} "PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.";	\
-	exit 1
+PKG_FAIL_REASON+=	"[locking.mk] PKGSRC_LOCKTYPE needs OBJHOSTNAME defined."
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	${_GET_LOCKFILE_CMD};						\
+.else
+PKG_FAIL_REASON+=	"[locking.mk] PKGSRC_LOCKTYPE must be one of {none,once,sleep}, not ${PKGSRC_LOCKTYPE}."
+.endif
+
+#
+# Needed tools.
+#
+
+.if ${PKGSRC_LOCKTYPE} != "none"
+USE_TOOLS+=		shlock
+.endif
+.if ${PKGSRC_LOCKTYPE} == "sleep"
+USE_TOOLS+=		sleep
+.endif
+
+#
+# The commands.
+#
+
+_CHECK_IF_SHLOCK_IS_AVAILABLE_CMD= \
+	${TEST} -x ${SHLOCK:Q}"" || {					\
+		${ERROR_MSG} "[locking.mk] shlock is not installed.";	\
+		${ERROR_MSG} "[locking.mk] Please \"cd ../../pkgtools/shlock && ${MAKE} install\"."; \
+		exit 1;							\
+	}
+
+_ACQUIRE_LOCK_CMD= \
+	${_CHECK_IF_SHLOCK_IS_AVAILABLE_CMD};				\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
 	if ${TEST} -z "$$ppid"; then					\
 		${ERROR_MSG} "No parent process ID found.";		\
@@ -49,7 +72,7 @@ acquire-lock: .USE
 		fi;							\
 		lockdir=`echo "$$lockfile" | sed "s,/[^/]*\$$,,"`;	\
 		${MKDIR} "$$lockdir";					\
-		if ${SHLOCK} -f "$$lockfile" -p $$ppid; then		\
+		if ${SHLOCK} -f "$$lockfile" -p "$$ppid"; then		\
 			break;						\
 		fi;							\
 		lockpid=`${CAT} "$$lockfile"`;				\
@@ -61,22 +84,50 @@ acquire-lock: .USE
 			${SLEEP} ${PKGSRC_SLEEPSECS};			\
 			;;						\
 		esac;							\
-	done;								\
-	if ${PKG_VERBOSE:D${TRUE}:U${FALSE}}; then			\
-		lockpid=`${CAT} "$$lockfile"`;				\
-		${STEP_MSG} "Lock acquired for \`\`${.TARGET:S/^acquire-//:S/-lock$//}'' on behalf of process $$lockpid"; \
-	fi
+	done;
+.if defined(PKG_VERBOSE)
+_ACQUIRE_LOCK_CMD+= \
+	lockpid=`${CAT} "$$lockfile"`;					\
+	${STEP_MSG} "Lock $$lockfile acquired for \`\`${.TARGET:S/^acquire-//:S/-lock$//}'' on behalf of process $$lockpid";
 .endif
 
-release-lock: .USE
+_RELEASE_LOCK_CMD=	# nothing
+.if defined(PKG_VERBOSE)
+_RELEASE_LOCK_CMD+= \
+	lockpid=`${CAT} "$$lockfile"`;				\
+	${STEP_MSG} "Lock $$lockfile released for \`\`${.TARGET:S/^release-//:S/-lock$//}'' on behalf of process $$lockpid";
+.endif
+_RELEASE_LOCK_CMD+= \
+	${RM} -f "$$lockfile"
+
+#
+# The targets.
+#
+
+.PHONY: acquire-lock release-lock
+.PHONY: acquire-localbase-lock release-localbase-lock
+
 .if ${PKGSRC_LOCKTYPE} == "none"
+acquire-lock release-lock acquire-localbase-lock release-localbase-lock: .USE
 	@${DO_NADA}
 .else
+acquire-lock: .USE
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	${_GET_LOCKFILE_CMD};						\
-	if ${PKG_VERBOSE:D${TRUE}:U${FALSE}}; then			\
-		lockpid=`${CAT} "$$lockfile"`;				\
-		${STEP_MSG} "Lock released for \`\`${.TARGET:S/^release-//:S/-lock$//}'' on behalf of process $$lockpid"; \
-	fi;								\
-	${RM} -f "$$lockfile"
+	lockfile=${_WRKDIR_LOCKFILE};					\
+	${_ACQUIRE_LOCK_CMD}
+
+release-lock: .USE
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	lockfile=${_WRKDIR_LOCKFILE};					\
+	${_RELEASE_LOCK_CMD}
+
+acquire-localbase-lock: .USE
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	lockfile=${_LOCALBASE_LOCKFILE};				\
+	${_ACQUIRE_LOCK_CMD}
+
+release-localbase-lock: .USE
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	lockfile=${_LOCALBASE_LOCKFILE};				\
+	${_RELEASE_LOCK_CMD}
 .endif

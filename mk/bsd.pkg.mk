@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1883 2006/08/04 07:04:38 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1884 2006/08/04 20:52:27 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -410,12 +410,8 @@ USE_TOOLS+=	expr
 USE_TOOLS+=	tee tsort
 .endif
 
-# We need shlock and sleep if we're using locking to synchronize multiple
-# builds over the same pkgsrc tree.
-#
-.if ${PKGSRC_LOCKTYPE} != "none"
-USE_TOOLS+=	shlock sleep
-.endif
+# Locking
+.include "${PKGSRCDIR}/mk/internal/locking.mk"
 
 # Tools
 .include "../../mk/tools/bsd.tools.mk"
@@ -604,8 +600,6 @@ all: ${_PKGSRC_BUILD_TARGETS}
 # not happy with the default actions, and you can't solve it by
 # adding pre-* or post-* targets/scripts, override these.
 ################################################################
-
-.include "${PKGSRCDIR}/mk/internal/locking.mk"
 
 .PHONY: makedirs
 makedirs: ${WRKDIR}
