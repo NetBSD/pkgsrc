@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.9 2006/07/27 22:16:06 jlam Exp $
+# $NetBSD: metadata.mk,v 1.10 2006/08/04 14:11:29 reed Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -61,14 +61,14 @@ ${_BUILD_INFO_FILE}: plist
 	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'` ;; \
 	*)	ldd=${LDD:Q} ;;						\
 	esac;								\
-	bins=`${AWK} '/^(bin|sbin|libexec)\// { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
+	bins=`${AWK} '/(^|\/)(bin|sbin|libexec)\// { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
 	case ${OBJECT_FMT:Q}"" in					\
 	ELF)								\
-		libs=`${AWK} '/^lib\/lib.*\.so\.[0-9]+$$/ { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
+		libs=`${AWK} '/(^|\/)lib\/lib.*\.so\.[0-9]+$$/ { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
 		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
 		fi;							\
-		linklibs=`${AWK} '/^[^@].*\.so\.[0-9\.]+$$/ { print "${PREFIX}/" $$0 }' ${PLIST}`; \
+		linklibs=`${AWK} '/[^@].*\.so\.[0-9\.]+$$/ { print "${PREFIX}/" $$0 }' ${PLIST}`; \
 		for i in $$linklibs; do					\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
 				${TEST} ${PKG_DEVELOPER:Uno:Q} = "no" || \
@@ -78,7 +78,7 @@ ${_BUILD_INFO_FILE}: plist
 		done;							\
 		;;							\
 	Mach-O)								\
-		libs=`${AWK} '/^lib\/lib.*\.dylib/ { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
+		libs=`${AWK} '/(^|\/)lib\/lib.*\.dylib/ { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
 		fi;							\
