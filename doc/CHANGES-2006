@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.912 2006/08/04 18:41:35 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.913 2006/08/04 20:12:56 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3785,3 +3785,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/xvidcore to 1.1.0nb2 [tron 2006-08-04]
 	Updated devel/atk to 1.12.1nb1 [wiz 2006-08-04]
 	Updated pkgtools/pkglint to 4.68 [rillig 2006-08-04]
+	Updated mail/spamprobe to 1.4.2 [ghen 2006-08-04]
