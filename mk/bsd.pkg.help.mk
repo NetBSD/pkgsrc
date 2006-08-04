@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.help.mk,v 1.3 2006/08/02 10:50:00 rillig Exp $
+# $NetBSD: bsd.pkg.help.mk,v 1.4 2006/08/04 07:34:25 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -13,6 +13,7 @@ _HELP_FILES=		# empty
 _HELP_FILES+=		mk/defaults/mk.conf
 _HELP_FILES+=		mk/bsd.prefs.mk
 _HELP_FILES+=		mk/bsd.pkg.mk
+_HELP_FILES+=		mk/bsd.options.mk
 _HELP_FILES+=		mk/*/*.mk
 
 _HELP_AWK= \
@@ -68,6 +69,9 @@ _HELP_AWK= \
 
 .if !defined(TOPIC) && defined(VARNAME)
 TOPIC=		${VARNAME}
+.endif
+.if !defined(TOPIC) && defined(topic)
+TOPIC=		${topic}
 .endif
 
 .PHONY: help
