@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/04 14:42:15 jmmv Exp $
+lib/hugs/packages/HaXml/Text/ParserCombinators/HuttonMeijer.hs
+lib/hugs/packages/HaXml/Text/ParserCombinators/HuttonMeijerWallace.hs
+lib/hugs/packages/HaXml/Text/ParserCombinators/Poly.hs
+lib/hugs/packages/HaXml/Text/ParserCombinators/PolyState.hs
+lib/hugs/packages/HaXml/Text/ParserCombinators/TextParser.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Combinators.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/DtdToHaskell/Convert.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/DtdToHaskell/Instance.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/DtdToHaskell/TypeDef.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Escape.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Html/Generate.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Html/Parse.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Html/Pretty.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Lex.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/OneOfN.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Parse.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Posn.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Pretty.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/SAX.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/TypeMapping.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Types.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Validate.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Verbatim.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Wrappers.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/XmlContent.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Xtract/Combinators.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Xtract/Lex.hs
+lib/hugs/packages/HaXml/Text/XML/HaXml/Xtract/Parse.hs
+lib/hugs/packages/HaXml/packages/HaXml/package.conf
+@dirrm lib/hugs/packages/HaXml/packages/HaXml
+@dirrm lib/hugs/packages/HaXml/packages
+@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml/Xtract
+@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml/Html
+@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml/DtdToHaskell
+@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml
+@dirrm lib/hugs/packages/HaXml/Text/XML
+@dirrm lib/hugs/packages/HaXml/Text/ParserCombinators
+@dirrm lib/hugs/packages/HaXml/Text
+@dirrm lib/hugs/packages/HaXml
+@comment in hugs: @dirrm lib/hugs/packages
