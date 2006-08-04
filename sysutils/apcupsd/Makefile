@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/13 18:23:37 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2006/08/04 08:05:54 ghen Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		5
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://www.sibbald.com/apcupsd/
+HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
 
 USE_TOOLS+=		gmake msgfmt sh
