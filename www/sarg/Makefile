@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/07/10 03:46:49 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/04 18:11:46 ben Exp $
 
 DISTNAME=		sarg-2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--with-gcc					\
 			--enable-mandir=${PREFIX}/${PKGMANDIR}/man1	\
 			--enable-sysconfdir=${PKG_SYSCONFDIR:Q}
 
+DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
 
 DIST_SUBDIR=		${DISTNAME}
 PKG_SYSCONFSUBDIR=	sarg
@@ -39,6 +40,15 @@ SUBST_FILES.sargconf=	sarg.conf sarg.1
 SUBST_SED.sargconf=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.sargconf+=	-e 's,@SQUID_ACCESSLOG@,${SQUID_ACCESSLOG},g'
 SUBST_SED.sargconf+=	-e 's,@SARG_REPORTSDIR@,${SARG_REPORTSDIR},g'
+
+SUBST_CLASSES+=		gsort
+SUBST_MESSAGE.gsort=	Adjusting sort to use GNU coreutils
+SUBST_STAGE.gsort=	post-patch
+SUBST_FILES.gsort=	authfail.c dansguardian_log.c email.c grepday.c \
+	html.c index.c lastlog.c log.c realtime.c siteuser.c \
+	smartfilter.c sort.c squidguard_log.c topsites.c topuser.c \
+	totday.c useragent.c
+SUBST_SED.gsort=	-e 's,"sort ,"'"${PREFIX}/bin/${GNU_PROGRAM_PREFIX}sort ,"
 
 BUILD_DEFS+=		SQUID_ACCESSLOG SARG_REPORTSDIR
 MAKE_ENV+=		PKG_FLAGS="-DSQUID_ACCESSLOG='\"${SQUID_ACCESSLOG}\"' \
