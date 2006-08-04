@@ -1,15 +1,6 @@
-same_OBJECTS=	same.o crc32.o
+# $NetBSD: Makefile,v 1.2 2006/08/04 22:46:27 rillig Exp $
 
-all: same
+PROG=	same
+LDADD=	-lz
 
-install: all
-	${BSD_INSTALL_PROGRAM} same ${PREFIX}/bin/same
-	${BSD_INSTALL_MAN} same.1 ${PREFIX}/man/man1/same.1
-
-.c.o:
-	${CC} ${CPPFLAGS} ${CFLAGS} -c $< -o $@
-
-same: ${same_OBJECTS}
-	${CC} ${LDFLAGS} $(same_OBJECTS) ${LIBS} -o $@
-
-.PHONY: all install
+.include <bsd.prog.mk>
