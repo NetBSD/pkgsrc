@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1882 2006/08/04 06:27:27 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1883 2006/08/04 07:04:38 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -723,11 +723,6 @@ su-target: .USE
 lint:
 	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint
 
-# List of sites carrying binary pkgs. Variables "rel" and "arch" are
-# replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
-BINPKG_SITES?= \
-	ftp://ftp.NetBSD.org/pub/NetBSD/packages/$${rel}/$${arch}
-
 # List of flags to pass to pkg_add(1) for bin-install:
 
 BIN_INSTALL_FLAGS?= 	# -v
@@ -742,34 +737,7 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
 _SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.].*@.\1@} # n.n[_.]anything => n.n
 
-# Install binary pkg, without strict uptodate-check first
-.PHONY: su-bin-install
-su-bin-install:
-	@found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
-	if [ "$$found" != "" ]; then					\
-		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
-		${ERROR_MSG} "If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ERROR_MSG} "this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
-		exit 1;							\
-	fi
-	@rel=${_SHORT_UNAME_R:Q} ; \
-	arch=${MACHINE_ARCH:Q} ; \
-	pkgpath=${PKGREPOSITORY:Q} ; \
-	for i in ${BINPKG_SITES} ; do pkgpath="$$pkgpath;$$i/All" ; done ; \
-	${ECHO} "Trying $$pkgpath" ; 	\
-	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX} ; then \
-		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
-	else 				 			\
-		${SHCOMMENT} Cycle through some FTP server here ;\
-		${ECHO_MSG} "Installing from source" ;		\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} package 		\
-			DEPENDS_TARGET=${DEPENDS_TARGET:Q} &&	\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} clean ;		\
-	fi
-
-.PHONY: bin-install
-bin-install: su-target
-	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
+.include "${PKGSRCDIR}/mk/install/bin-install.mk"
 
 ################################################################
 # Everything after here are internal targets and really
