@@ -1,9 +1,11 @@
-# $NetBSD: bin-install.mk,v 1.1 2006/08/04 07:04:38 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.2 2006/08/04 07:17:58 rillig Exp $
 #
 
-# The bin-install target tries to install a package from a prebuilt
-# binary package, and if that doesn't work, builds the package from
-# source.
+# This file provides the following targets:
+#
+# bin-install
+#	Tries to install a package from a prebuilt binary package, and
+#	if that doesn't work, builds the package from source.
 #
 # The following variables can be set by the pkgsrc user in mk.conf:
 #
