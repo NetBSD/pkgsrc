@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5276 2006/08/04 10:47:43 drochner Exp $
+$NetBSD: TODO,v 1.5277 2006/08/04 17:08:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -553,6 +553,7 @@ Suggested package updates
 	o gnome-speech-0.4.1
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.3
+	o gnome2-games-2.14.3
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.6
 	o gnus-5.10.8
@@ -743,7 +744,7 @@ Suggested package updates
 	o mplayer-plugin-firefox-3.25
 	o mpop-0.8.3
 	o mrproject-0.9.1
-	o mrtg-2.14.5
+	o mrtg-2.14.5 [pkg/32811]
 	o mserv-devel-0.41
 	o msmtp-1.4.6
 	o mtail-1.1.1
@@ -922,6 +923,7 @@ Suggested package updates
 	o pgadmin3-1.4.3
 	o phoon-20050629
 	o photopc-3.05
+	o php4-4.4.3
 	o phpldapadmin-0.9.7
 	o phpmyadmin-2.8.2.1
 	o phppgadmin-4.0.1
