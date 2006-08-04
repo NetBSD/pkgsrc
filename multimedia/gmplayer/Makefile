@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/08/04 21:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2006/08/04 21:06:59 wiz Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -66,14 +66,14 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin/gmplayer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/Skin
-.for SKIN in ${SKINS}
-	@${ECHO_MSG} "Installing skin ${SKIN}..."
-	@${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${SKIN} |	\
+.for skin in ${SKINS}
+	@${ECHO_MSG} "Installing skin ${skin}..."
+	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${skin} |	\
 	  ${GTAR} xCmf ${PREFIX}/share/mplayer/Skin -
 .endfor
-	@${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
-	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
-	@${RM} -f ${PREFIX}/share/mplayer/Skin/default
+	${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
+	${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
+	${RM} -f ${PREFIX}/share/mplayer/Skin/default
 	${LN} -s Blue ${PREFIX}/share/mplayer/Skin/default
 	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/.svn
 	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
