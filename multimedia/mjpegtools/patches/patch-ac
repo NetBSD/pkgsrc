@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.3 2006/06/30 18:39:08 tron Exp $
+$NetBSD: patch-ac,v 1.4 2006/08/04 16:43:37 tron Exp $
 
 --- y4mdenoise/Region2D.hh.orig	2004-07-18 07:43:01.000000000 +0100
-+++ y4mdenoise/Region2D.hh	2006-06-30 19:34:47.000000000 +0100
-@@ -16,7 +16,8 @@
++++ y4mdenoise/Region2D.hh	2006-08-04 17:42:07.000000000 +0100
+@@ -16,6 +16,7 @@
  
  #include "Status_t.h"
  #include <iostream>
 +#include <assert.h>
-
  
  
- // The 2-dimensional region class.  Parameterized by the numeric type
+ 
