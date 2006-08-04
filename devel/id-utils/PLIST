@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/04 19:23:39 christos Exp $
 bin/aid
 bin/defid
 bin/eid
@@ -8,8 +8,10 @@ bin/gid
 bin/lid
 bin/mkid
 bin/xtokid
-info/id-utils.info
-share/emacs/site-lisp/id-utils.el
+info/idutils.info
+share/emacs/site-lisp/idutils.el
 share/id-lang.map
-share/locale/de/LC_MESSAGES/id-utils.mo
-share/locale/fr/LC_MESSAGES/id-utils.mo
+share/locale/de/LC_MESSAGES/idutils.mo
+share/locale/fr/LC_MESSAGES/idutils.mo
+share/locale/nl/LC_MESSAGES/idutils.mo
+share/locale/pl/LC_MESSAGES/idutils.mo
