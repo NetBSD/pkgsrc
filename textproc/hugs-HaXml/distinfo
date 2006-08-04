@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/04 14:42:15 jmmv Exp $
+
+SHA1 (HaXml-1.15.20060515.tar.gz) = 571810dabd496bc9e4a0c15d231820db2aed8025
+RMD160 (HaXml-1.15.20060515.tar.gz) = ce46d819388d69f4a03bf396d0d60ffd9e9affaa
+Size (HaXml-1.15.20060515.tar.gz) = 76573 bytes
