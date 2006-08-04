@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:56 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.5 2006/08/04 13:22:11 tron Exp $
 
 DISTNAME=	js-1.5
 PKGNAME=	${DISTNAME:S/js/spidermonkey/}
@@ -22,13 +21,24 @@ INSTALLATION_DIRS=	bin include lib
 DIST_HEADERS=	jsapi.h jsautocfg.h jscompat.h jslong.h	\
 	       	jsosdep.h jsotypes.h jspubtd.h jstypes.h
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
+BUILDDIRPREFIX=	pkgsrc
+.else
+BUILDDIRPREFIX=	${OPSYS}
+.endif
+
 post-extract:
 	${CP} ${FILESDIR}/pkgsrc.mk ${WRKSRC}/config
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pkgsrc_DBG.OBJ/js ${PREFIX}/bin
-	${INSTALL_LIB} ${WRKSRC}/pkgsrc_DBG.OBJ/libjs.so ${PREFIX}/lib
-	${CP} ${WRKSRC}/pkgsrc_DBG.OBJ/jsautocfg.h ${WRKSRC}
+	${INSTALL_PROGRAM} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/js \
+	  ${PREFIX}/bin
+	${INSTALL_LIB} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/libjs.so \
+	  ${PREFIX}/lib
+	${CP} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/jsautocfg.h ${WRKSRC}
 .for f in ${DIST_HEADERS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/include
 .endfor
