@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1880 2006/08/03 19:12:42 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1881 2006/08/04 05:55:18 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -605,78 +605,7 @@ all: ${_PKGSRC_BUILD_TARGETS}
 # adding pre-* or post-* targets/scripts, override these.
 ################################################################
 
-# acquire-lock, release-lock are .USE macro targets for acquiring and
-# release coarse-grained locks.
-#
-_WRKDIR_LOCKFILE=	${WRKDIR}/.lockfile
-_PREFIX_LOCKFILE=	${PKG_DBDIR}/.lockfile
-_GET_LOCKFILE_CMD= \
-	case ${.TARGET} in						\
-	*-install-*)	lockfile=${_PREFIX_LOCKFILE};;			\
-	*)		lockfile=${_WRKDIR_LOCKFILE};;			\
-	esac
-
-acquire-lock: .USE
-.if ${PKGSRC_LOCKTYPE} == "none"
-	@${DO_NADA}
-.else
-	@if ${TEST} ! -x ${SHLOCK:Q}""; then				\
-		${ERROR_MSG} "The ${SHLOCK:Q} utility does not exist, and is necessary for locking."; \
-		${ERROR_MSG} "Please \""${MAKE:Q}" install\" in ../../pkgtools/shlock."; \
-		exit 1;							\
-	fi
-.  if !defined(OBJHOSTNAME)
-	@${ERROR_MSG} "PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.";	\
-	exit 1
-.  endif
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	${_GET_LOCKFILE_CMD};						\
-	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
-	if ${TEST} -z "$$ppid"; then					\
-		${ERROR_MSG} "No parent process ID found.";		\
-		exit 1;							\
-	fi;								\
-	while ${TRUE}; do						\
-		if ${TEST} -f /var/run/dmesg.boot -a -f "$$lockfile"; then \
-			rebooted=`${FIND} /var/run/dmesg.boot -newer "$$lockfile" -print`; \
-			if ${TEST} -n "$$rebooted"; then		\
-				${STEP_MSG} "Removing stale $$lockfile"; \
-				${RM} -f "$$lockfile";			\
-			fi;						\
-		fi;							\
-		lockdir=`echo "$$lockfile" | sed "s,/[^/].*\$$,,"`	\
-		${MKDIR} "$$lockdir";					\
-		if ${SHLOCK} -f "$$lockfile" -p $$ppid; then		\
-			break;						\
-		fi;							\
-		lockpid=`${CAT} "$$lockfile"`;				\
-		case ${PKGSRC_LOCKTYPE:Q}"" in				\
-		once)	${ERROR_MSG} "Lock is held by pid $$lockpid";	\
-			exit 1;						\
-			;;						\
-		sleep)	${STEP_MSG} "Lock is held by pid $$lockpid";	\
-			${SLEEP} ${PKGSRC_SLEEPSECS};			\
-			;;						\
-		esac;							\
-	done;								\
-	if ${PKG_VERBOSE:D${TRUE}:U${FALSE}}; then			\
-		lockpid=`${CAT} "$$lockfile"`;				\
-		${STEP_MSG} "Lock acquired for \`\`${.TARGET:S/^acquire-//:S/-lock$//}'' on behalf of process $$lockpid"; \
-	fi
-.endif
-
-release-lock: .USE
-.if ${PKGSRC_LOCKTYPE} == "none"
-	@${DO_NADA}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	${_GET_LOCKFILE_CMD};						\
-	if ${PKG_VERBOSE:D${TRUE}:U${FALSE}}; then			\
-		lockpid=`${CAT} "$$lockfile"`;				\
-		${STEP_MSG} "Lock released for \`\`${.TARGET:S/^release-//:S/-lock$//}'' on behalf of process $$lockpid"; \
-	fi;								\
-	${RM} -f "$$lockfile"
-.endif
+.include "${PKGSRCDIR}/mk/internal/locking.mk"
 
 .PHONY: makedirs
 makedirs: ${WRKDIR}
