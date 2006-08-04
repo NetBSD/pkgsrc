@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.905 2006/08/04 10:42:05 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.906 2006/08/04 11:56:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3776,3 +3776,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/libsoup-devel to 2.2.96 [drochner 2006-08-04]
 	Updated net/ORBit2 to 2.14.2 [drochner 2006-08-04]
 	Updated net/libIDL to 0.8.7 [drochner 2006-08-04]
+	Added meta-pkgs/pkg_developer version 1.0 [jmmv 2006-08-04]
