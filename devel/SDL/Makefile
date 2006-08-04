@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2006/07/23 16:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2006/08/04 22:12:28 markd Exp $
 
 DISTNAME=	SDL-1.2.11
 PKGREVISION=	1
@@ -23,11 +23,13 @@ CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS"
 .  include "../../devel/binutils/buildlink3.mk"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 NASMFLAGS_ELF=		-f elf
 NASMFLAGS_a.out=	-f aoutb
+.else
+CONFIGURE_ARGS+=	--disable-nasm
 .endif
 
 .if ${OPSYS:MNetBSD}
