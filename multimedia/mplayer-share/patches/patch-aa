@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2006/06/13 17:25:00 drochner Exp $
+$NetBSD: patch-aa,v 1.15 2006/08/04 21:01:21 wiz Exp $
 
---- configure.orig	2006-06-11 20:35:47.000000000 +0200
-+++ configure
-@@ -493,7 +493,7 @@ for ac_option do
+--- configure.orig	2006-06-11 18:35:47.000000000 +0000
++++ configure	2006-07-08 11:17:13.000000000 +0000
+@@ -493,7 +493,7 @@
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.14 2006/06/13 17:25:00 drochner Exp $
      ;;
    --enable-runtime-cpudetection)
      _runtime_cpudetection=yes
-@@ -694,11 +694,11 @@ if test "$_skip_cc_check" != yes ; then
+@@ -694,11 +694,11 @@
    esac
    echores "$cc_version"
   else
@@ -25,7 +25,16 @@ $NetBSD: patch-aa,v 1.14 2006/06/13 17:25:00 drochner Exp $
    if test "$?" -gt 0; then
      cc_version="not found"
    fi
-@@ -830,7 +830,7 @@ if x86 || x86_64 ; then
+@@ -819,7 +819,7 @@
+ elif aix; then
+   # use 'lsattr' on AIX
+   _cpuinfo="lsattr -E -l proc0 -a type"
+-elif x86; then
++elif x86 || x86_64; then
+   # all other OSes try to extract CPU information from a small helper
+   # program TOOLS/cpuinfo instead
+   $_cc -o TOOLS/cpuinfo TOOLS/cpuinfo.c
+@@ -830,7 +830,7 @@
    # gather more CPU information
    pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | _head 1`
    pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | _head 1`
@@ -34,7 +43,7 @@ $NetBSD: patch-aa,v 1.14 2006/06/13 17:25:00 drochner Exp $
    pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
    pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
  
-@@ -4136,7 +4136,7 @@ fi
+@@ -4136,7 +4136,7 @@
  if test "$_aa" = yes ; then
    _def_aa='#define HAVE_AA 1'
    if cygwin ; then
