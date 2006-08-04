@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1881 2006/08/04 05:55:18 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1882 2006/08/04 06:27:27 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -614,8 +614,7 @@ ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_GET_LOCKFILE_CMD};						\
-	${TEST} -f "$$lockfile" || ${RM} -fr ${WRKDIR}
+	${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -fr ${WRKDIR}
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
@@ -630,12 +629,11 @@ makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
  ${.CURDIR}/${WRKDIR_BASENAME}:
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_GET_LOCKFILE_CMD};						\
-	${TEST} -f "$$lockfile" || ${RM} -f ${.TARGET}
+	${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -f ${.TARGET}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${LN} -s ${WRKDIR} ${.TARGET} 2>/dev/null; then		\
-		${ECHO} "${.TARGET:T} -> ${WRKDIR}";			\
+		${ECHO_MSG} "${.TARGET:T} -> ${WRKDIR}";		\
 	fi
 .endif
 
