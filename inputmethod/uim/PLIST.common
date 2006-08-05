@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2006/06/12 16:35:20 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2006/08/05 18:49:29 wiz Exp $
 bin/uim-fep
 bin/uim-fep-tick
 bin/uim-module-manager
@@ -96,10 +96,10 @@ share/uim/pixmaps/ja_direct.png
 share/uim/pixmaps/ja_direct.svg
 share/uim/pixmaps/ja_fullwidth_alnum.png
 share/uim/pixmaps/ja_fullwidth_alnum.svg
+share/uim/pixmaps/ja_halfkana.png
+share/uim/pixmaps/ja_halfkana.svg
 share/uim/pixmaps/ja_halfwidth_alnum.png
 share/uim/pixmaps/ja_halfwidth_alnum.svg
-share/uim/pixmaps/ja_halfwidth_katakana.png
-share/uim/pixmaps/ja_halfwidth_katakana.svg
 share/uim/pixmaps/ja_hiragana.png
 share/uim/pixmaps/ja_hiragana.svg
 share/uim/pixmaps/ja_kana.png
