@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX5.3,v 1.2 2006/04/18 18:11:21 schwarz Exp $
+$NetBSD: README.IRIX5.3,v 1.3 2006/08/05 14:57:19 schwarz Exp $
 
 Installing pkgsrc on IRIX 5.3 requires some preparation.
 First, if necessary, get the IRIX 5.3 IDO (cc etc.) from SGI at
@@ -31,14 +31,15 @@ and xargs. To avoid conflicts you might want to do so under a different
 directory hierarchy than pkgsrc (in the following example
 --prefix=/usr/local is assumed). Obtain and install the following GNU
 software:
-- GNU findutils (4.2.23 is know to install)
+- GNU findutils (4.2.23 is known to install)
 - GNU grep (2.5.1a works, but you have to apply the patch from
 pkgsrc/textproc/grep/patches/patch-ab; either do so manually by editing the
 appropriate source file or first install GNU patch [2.5.4 works fine]. This
 will probably be fixed with later releases. You should configure GNU grep
 with --disable-nls and do not bother when make stops when it cannot find
 makeinfo; just proceed with make install)
-- GNU coreutils (5.21 installs out of the box)
+- GNU coreutils (5.97 works; be sure to specify GREP=/sbin/grep for
+configure)
 - GNU which (2.16 works; be sure to configure with CC="cc -Xcpluscomm")
 
 These tools can be installed independently of bootstrapping. To make them
