@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/06/17 17:17:00 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/08/05 02:08:32 markd Exp $
 
 DISTNAME=		nspr-4.6.1
 PKGREVISION=		1
@@ -33,6 +33,10 @@ SO_SUFFIX=		so.1.0
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 INSTALLATION_DIRS=	bin
+
+.if ${OPSYS} == "SunOS" && defined(ABI) && ${ABI} == "64"
+CONFIGURE_ARGS+=	--enable-64bit
+.endif
 
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
