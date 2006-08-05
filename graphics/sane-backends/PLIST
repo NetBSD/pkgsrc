@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/06/08 14:14:11 ben Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/08/05 22:41:49 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -28,6 +28,7 @@ lib/sane/libsane-fujitsu.la
 lib/sane/libsane-genesys.la
 lib/sane/libsane-gt68xx.la
 lib/sane/libsane-hp.la
+lib/sane/libsane-hp3500.la
 ${SANE_HP3900}lib/sane/libsane-hp3900.la
 lib/sane/libsane-hp4200.la
 lib/sane/libsane-hp5400.la
@@ -46,6 +47,7 @@ lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
 lib/sane/libsane-pie.la
 ${SANE_PINT}lib/sane/libsane-pint.la
+lib/sane/libsane-pixma.la
 lib/sane/libsane-plustek.la
 lib/sane/libsane-plustek_pp.la
 lib/sane/libsane-ricoh.la
@@ -57,6 +59,7 @@ lib/sane/libsane-sm3840.la
 lib/sane/libsane-snapscan.la
 lib/sane/libsane-sp15c.la
 lib/sane/libsane-st400.la
+lib/sane/libsane-stv680.la
 lib/sane/libsane-tamarack.la
 lib/sane/libsane-teco1.la
 lib/sane/libsane-teco2.la
@@ -67,9 +70,6 @@ lib/sane/libsane-umax.la
 lib/sane/libsane-umax1220u.la
 lib/sane/libsane-umax_pp.la
 man/man1/gamma4scanimage.1
-man/man5/sane-hp4200.5
-man/man5/sane-lexmark.5
-man/man5/sane-mustek_usb2.5
 man/man1/sane-config.1
 man/man1/sane-find-scanner.1
 man/man1/scanimage.1
@@ -97,11 +97,14 @@ man/man5/sane-genesys.5
 man/man5/sane-gphoto2.5
 man/man5/sane-gt68xx.5
 man/man5/sane-hp.5
+man/man5/sane-hp3500.5
 ${SANE_HP3900}man/man5/sane-hp3900.5
+man/man5/sane-hp4200.5
 man/man5/sane-hp5400.5
 man/man5/sane-hpsj5s.5
 man/man5/sane-ibm.5
 man/man5/sane-leo.5
+man/man5/sane-lexmark.5
 man/man5/sane-ma1509.5
 man/man5/sane-matsushita.5
 man/man5/sane-microtek.5
@@ -109,11 +112,13 @@ man/man5/sane-microtek2.5
 man/man5/sane-mustek.5
 man/man5/sane-mustek_pp.5
 man/man5/sane-mustek_usb.5
+man/man5/sane-mustek_usb2.5
 man/man5/sane-nec.5
 man/man5/sane-net.5
 man/man5/sane-niash.5
 man/man5/sane-pie.5
 man/man5/sane-pint.5
+man/man5/sane-pixma.5
 man/man5/sane-plustek.5
 man/man5/sane-plustek_pp.5
 man/man5/sane-pnm.5
@@ -128,6 +133,7 @@ man/man5/sane-sm3840.5
 man/man5/sane-snapscan.5
 man/man5/sane-sp15c.5
 man/man5/sane-st400.5
+man/man5/sane-stv680.5
 man/man5/sane-tamarack.5
 man/man5/sane-teco1.5
 man/man5/sane-teco2.5
@@ -272,6 +278,7 @@ share/examples/sane/sm3840.conf
 share/examples/sane/snapscan.conf
 share/examples/sane/sp15c.conf
 share/examples/sane/st400.conf
+share/examples/sane/stv680.conf
 share/examples/sane/tamarack.conf
 share/examples/sane/teco1.conf
 share/examples/sane/teco2.conf

@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.8 2006/01/12 13:08:21 joerg Exp $
+$NetBSD: patch-ab,v 1.9 2006/08/05 22:41:49 wiz Exp $
 
---- configure.orig	2006-01-12 00:55:20.000000000 +0000
+--- configure.orig	2006-07-02 22:22:09.000000000 +0000
 +++ configure
-@@ -6145,13 +6145,13 @@ if test `eval echo '${'$as_ac_Header'}'`
+@@ -7289,13 +7289,13 @@ if test `eval echo '${'$as_ac_Header'}'`
  _ACEOF
  
  
--echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
--echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+-{ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
  if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.8 2006/01/12 13:08:21 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -6213,7 +6213,7 @@ if test $ac_cv_lib_pthread_pthread_creat
+@@ -7371,7 +7371,7 @@ if test $ac_cv_lib_pthread_pthread_creat
  #define HAVE_LIBPTHREAD 1
  _ACEOF
  
