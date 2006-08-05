@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2006/04/17 13:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2006/08/05 12:20:34 adam Exp $
 
-DISTNAME=	etherape-0.9.1
-PKGREVISION=	6
+DISTNAME=	etherape-0.9.6
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
@@ -11,8 +10,8 @@ COMMENT=	Graphical network monitor
 
 USE_TOOLS+=		gmake pkg-config
 USE_DIRS+=		xdg-1.1
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	etherape
 

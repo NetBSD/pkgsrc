@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2004/11/22 15:27:53 adam Exp $
+$NetBSD: patch-aa,v 1.3 2006/08/05 12:20:34 adam Exp $
 
---- Makefile.in.orig	2004-08-10 19:14:06.000000000 +0000
+--- Makefile.in.orig	2006-05-14 19:18:18.000000000 +0200
 +++ Makefile.in
-@@ -143,7 +143,7 @@ DATADIR = .
- 
+@@ -218,7 +218,7 @@ DATADIR = .
+ # ignore bogus distcheck errors caused by scrollkeeper lazyness
+ distuninstallcheck_listfiles = find . -type f -print | grep -v '^\./var/scrollkeeper'
  man_MANS = etherape.1
- 
 -confdir = $(sysconfdir)/etherape
 +confdir = $(sysconfdir)
  conf_DATA = \
  	services
  
-@@ -652,7 +652,7 @@ info: info-recursive
+@@ -740,7 +740,7 @@ info: info-recursive
  
  info-am:
  
