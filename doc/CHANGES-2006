@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.921 2006/08/05 17:48:18 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.922 2006/08/05 17:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3795,3 +3795,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/turba to 2.1.2 [adrianp 2006-08-05]
 	Updated mail/evolution-data-server to 1.6.3 [wiz 2006-08-05]
 	Updated security/p5-IO-Socket-SSL to 0.997 [wiz 2006-08-05]
+	Updated graphics/comix to 3.4 [wiz 2006-08-05]
