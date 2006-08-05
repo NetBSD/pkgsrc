@@ -1,6 +1,6 @@
 The estd daemon dynamically sets the CPU-frequency on
-SpeedStep-enabled CPUs depending on current cpu-utilization.  It is
-written for systems running NetBSD.
+SpeedStep-enabled and PowerNow! CPUs depending on current cpu-utilization.
+It is written for systems running NetBSD.
 
 Examples:
 
