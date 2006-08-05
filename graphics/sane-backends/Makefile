@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2006/06/27 12:27:06 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/08/05 22:41:49 wiz Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
 
 DISTNAME=       sane-backends-${SANE_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-PKGREVISION=	3
 
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
@@ -37,7 +36,8 @@ ma1509.conf matsushita.conf \
 microtek.conf microtek2.conf mustek.conf mustek_usb.conf nec.conf \
 net.conf pie.conf plustek.conf plustek_pp.conf ricoh.conf s9036.conf \
 saned.conf sceptre.conf sharp.conf sm3840.conf snapscan.conf \
-sp15c.conf st400.conf tamarack.conf teco1.conf teco2.conf teco3.conf \
+sp15c.conf st400.conf stv680.conf \
+tamarack.conf teco1.conf teco2.conf teco3.conf \
 test.conf u12.conf umax.conf umax1220u.conf umax_pp.conf
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .endfor
