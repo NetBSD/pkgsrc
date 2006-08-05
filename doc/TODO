@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5277 2006/08/04 17:08:12 wiz Exp $
+$NetBSD: TODO,v 1.5278 2006/08/05 12:24:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -482,7 +482,6 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
-	o etherape-0.9.6
 	o eukleides-1.0.3
 	o euler-1.61
 	o evolution-2.6.3
