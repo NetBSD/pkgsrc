@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.918 2006/08/05 12:53:43 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.919 2006/08/05 17:20:02 christos Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3788,6 +3788,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamprobe to 1.4.2 [ghen 2006-08-04]
 	Updated fonts/mplayer-fonts to 20030714nb1 [wiz 2006-08-04]
 	Updated sysutils/same to 1.8 [rillig 2006-08-04]
+	Updated devel/id-utils to 4.1 [christos 2006-08-04]
 	Updated net/etherape to 0.9.6 [adam 2006-08-05]
 	Updated graphics/optipng to 0.5.3 [adam 2006-08-05]
 	Updated www/drupal to 4.7.3 [adrianp 2006-08-05]
