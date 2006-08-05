@@ -238,6 +238,7 @@ recommended-db
 rrdtool	
 rsaref			Use RSAREF library.
 samba	
+sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
 sdl			Use SDL as display library.
