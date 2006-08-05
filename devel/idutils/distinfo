@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+
+SHA1 (idutils-4.1.tar.gz) = 3ce5524b2962fc785d44a3ee73d32ebf975d70d1
+RMD160 (idutils-4.1.tar.gz) = 7ddadd6a97e2a096916f9ac20ccffff14cc2a330
+Size (idutils-4.1.tar.gz) = 696756 bytes
+SHA1 (patch-aa) = f957a2af9470e41c1b423b9c753456e68a46405c
+SHA1 (patch-ab) = 96a1ec3d8c49da9538342450df41c7cd17c0d21c
+SHA1 (patch-ac) = 714cc320a02235c7d49b0ea37be60cff36f6a07b
+SHA1 (patch-ad) = 05f6be0337f599736627d5bf372529e36ca22246
+SHA1 (patch-ae) = cdf05fd02278065908bdc16b599b881f6b1112ea
+SHA1 (patch-af) = 223ae437d90f98499b8095254fcca1d2651c11a1
+SHA1 (patch-ag) = d1e3dfcaa905041b12f458b3fc186ebf2fa633a1
+SHA1 (patch-ah) = d60a3738ed5b9b9db01c557b2c6e4922b913a2e7
+SHA1 (patch-ai) = ebf6092918830c95308a4a1b9145314c5fecbd58
+SHA1 (patch-aj) = 6435ee17529ab3782b340f51c7e43390aaae662d
+SHA1 (patch-ak) = c5f56cabfe54bd653874c58d55b1c198526707fb

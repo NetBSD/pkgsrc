@@ -1,0 +1,53 @@
+$NetBSD: patch-ak,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+
+--- src/mkid.c.orig	2006-02-16 01:40:30.000000000 -0500
++++ src/mkid.c	2006-08-03 15:57:10.096617302 -0400
+@@ -28,7 +28,6 @@
+ #include <pathmax.h>
+ #include <string.h>
+ #include <dirname.h>
+-#include <alloca.h>
+ #include <limits.h>
+ #include <inttostr.h>
+ #include <xalloc.h>
+@@ -40,8 +39,6 @@
+ #include "scanners.h"
+ #include "iduglobal.h"
+ 
+-char* dirname(char* path);
+-
+ struct summary
+ {
+   struct token **sum_tokens;
+@@ -372,11 +369,18 @@
+     {
+       if (errno == ENOENT)
+ 	{
+-	  char const *dirname = dir_name ((char*)filename);
+-	  if (access (dirname, 06) < 0)
++	  char *dir_name = strrchr (filename, '/');
++	  if (dir_name)
++	    {
++	      while (*--dir_name == '/')
++		continue;
++	      dir_name++;
++	    }
++	  dir_name = dir_name ? strndup (filename, dir_name - filename) : strdup(".");
++	  if (access (dir_name, 06) < 0)
+ 	    error (1, errno, _("can't create `%s' in `%s'"),
+-		   base_name (filename), dirname);
+-	  free(dirname);
++		   base_name (filename), dir_name);
++	  free(dir_name);
+ 	}
+       else
+ 	error (1, errno, _("can't modify `%s'"), filename);
+@@ -450,7 +454,7 @@
+   source_FILE = fopen (flink->fl_name, "r");
+   if (source_FILE)
+     {
+-      char *file_name = alloca (PATH_MAX);
++      char file_name[PATH_MAX];
+       if (statistics_flag)
+ 	{
+ 	  if (fstat (fileno (source_FILE), &st) < 0)
