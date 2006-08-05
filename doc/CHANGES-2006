@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.917 2006/08/05 12:46:56 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.918 2006/08/05 12:53:43 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/etherape to 0.9.6 [adam 2006-08-05]
 	Updated graphics/optipng to 0.5.3 [adam 2006-08-05]
 	Updated www/drupal to 4.7.3 [adrianp 2006-08-05]
+	Updated mail/turba to 2.1.2 [adrianp 2006-08-05]
