@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.57 2006/08/03 20:21:10 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.58 2006/08/05 19:58:47 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -129,3 +129,5 @@ Pullup ticket 1775 - requested by wiz
 PLIST fix for cppunit
 Pullup ticket 1776 - requested by wiz
 build fix for gcvs
+Pullup ticket 1777 - requested by adrianp
+security update for drupal
