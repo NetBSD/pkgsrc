@@ -1,7 +1,25 @@
-$NetBSD: patch-ah,v 1.1 2005/03/21 18:08:31 wiz Exp $
+$NetBSD: patch-ah,v 1.1.12.1 2006/08/05 20:05:37 salo Exp $
 
---- cfs_fh.c.orig	2004-11-30 11:19:25.000000000 -0500
+--- cfs_fh.c.orig	2006-08-05 14:21:22.000000000 +0100
 +++ cfs_fh.c
+@@ -289,7 +289,7 @@ doencrypt(k,s,l,salt,vect)
+      cfskey *k;
+      char *s;
+      int l;
+-     int salt;
++     u_long salt;
+      char *vect;
+ {
+ 	int i,j,smsize;
+@@ -311,7 +311,7 @@ dodecrypt(k,s,l,salt,vect)
+      cfskey *k;
+      char *s;
+      int l;
+-     int salt;
++     u_long salt;
+      char *vect;
+ {
+ 	int i,j,smsize;
 @@ -547,7 +547,9 @@ fhtofd(f,mode)
  		openfd=NULL;
  	}
