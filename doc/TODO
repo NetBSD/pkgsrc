@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5282 2006/08/05 17:57:21 wiz Exp $
+$NetBSD: TODO,v 1.5283 2006/08/05 17:58:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-4.12.23
+	o abcm2ps-4.12.24
 	o abcmidi-20060730
 	o acpi-iasl-20040715
 	o adns-1.3
@@ -1155,6 +1155,7 @@ Suggested package updates
 	o ubs-0.20
 	o ucarp-1.2
 	o ucblogo-5.5
+	o uim-1.2.0
 	o unix2dos-1.3
 	o ups-nut-2.0.4
 	o upx-2.01
@@ -1232,7 +1233,7 @@ Suggested package updates
 	o xrmap-2.33
 	o xrn-9.02
 	o xskat-4.0
-	o xterm-214
+	o xterm-216
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
