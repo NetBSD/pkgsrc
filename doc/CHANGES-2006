@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.925 2006/08/05 22:58:28 markd Exp $
+$NetBSD: CHANGES-2006,v 1.926 2006/08/06 07:54:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated inputmethod/uim to 1.2.0 [wiz 2006-08-05]
 	Renamed devel/id-utils to devel/idutils [wiz 2006-08-05]
 	Updated math/R-wle to 0.9.2 [markd 2006-08-05]
+	Updated www/drivel to 2.0.3 [jmmv 2006-08-06]
