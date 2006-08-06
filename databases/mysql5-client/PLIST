@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/13 11:19:25 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/08/06 16:30:40 tron Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -11,6 +11,7 @@ bin/mysql_fix_privilege_tables
 bin/mysql_setpermission
 bin/mysql_tableinfo
 bin/mysql_upgrade
+bin/mysql_upgrade_shell
 bin/mysql_zap
 bin/mysqlaccess
 bin/mysqladmin
