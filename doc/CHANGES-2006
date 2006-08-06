@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.940 2006/08/06 17:08:55 jdolecek Exp $
+$NetBSD: CHANGES-2006,v 1.941 2006/08/06 17:39:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3815,3 +3815,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql5-client to 5.0.24 [tron 2006-08-06]
 	Updated databases/mysql5-server to 5.0.24 [tron 2006-08-06]
 	Updated www/opera to 9.01 [jdolecek 2006-08-06]
+	Added textproc/jing version 20030619 [wiz 2006-08-06]
+	Added textproc/trang version 20030619 [wiz 2006-08-06]
