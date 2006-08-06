@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.941 2006/08/06 17:39:24 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.942 2006/08/06 18:03:48 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3817,3 +3817,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/opera to 9.01 [jdolecek 2006-08-06]
 	Added textproc/jing version 20030619 [wiz 2006-08-06]
 	Added textproc/trang version 20030619 [wiz 2006-08-06]
+	Updated games/angband-tty to 2.8.3nb2 [cube 2006-08-06]
