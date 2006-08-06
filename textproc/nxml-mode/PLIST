@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/15 21:53:25 tonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/06 18:17:17 wiz Exp $
 ${EMACS_INFOPREFIX}/nxml-mode.info
 ${EMACS_LISPPREFIX}/nxml-mode/char-name/unicode/00000-0007F.el
 ${EMACS_LISPPREFIX}/nxml-mode/char-name/unicode/00080-000FF.el
@@ -158,6 +158,7 @@ ${EMACS_LISPPREFIX}/nxml-mode/schema/docbook.rnc
 ${EMACS_LISPPREFIX}/nxml-mode/schema/locate.rnc
 ${EMACS_LISPPREFIX}/nxml-mode/schema/rdfxml.rnc
 ${EMACS_LISPPREFIX}/nxml-mode/schema/relaxng.rnc
+${EMACS_LISPPREFIX}/nxml-mode/schema/schemas.xml
 ${EMACS_LISPPREFIX}/nxml-mode/schema/soextbl.rnc
 ${EMACS_LISPPREFIX}/nxml-mode/schema/xhtml-applet.rnc
 ${EMACS_LISPPREFIX}/nxml-mode/schema/xhtml-attribs.rnc
