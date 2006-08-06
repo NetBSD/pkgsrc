@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.938 2006/08/06 15:32:33 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.939 2006/08/06 16:31:56 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3812,3 +3812,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/linux-libertine-ttf to 2.1.0 [wiz 2006-08-06]
 	Added devel/p5-Test-Harness version 2.62 [adrianp 2006-08-06]
 	Updated mail/p5-Mail-Box to 2.066 [adrianp 2006-08-06]
+	Updated databases/mysql5-client to 5.0.24 [tron 2006-08-06]
+	Updated databases/mysql5-server to 5.0.24 [tron 2006-08-06]
