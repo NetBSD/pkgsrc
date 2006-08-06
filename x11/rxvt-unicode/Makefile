@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/22 04:46:20 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/06 05:20:40 kristerw Exp $
 #
 
 DISTNAME=		rxvt-unicode-7.5
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://software.schmorp.de/pkg/rxvt-unicode
 COMMENT=		rxvt clone supporting Xft fonts and Unicode
-
-BROKEN_IN=		pkgsrc-2006Q1
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
