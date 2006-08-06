@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.939 2006/08/06 16:31:56 tron Exp $
+$NetBSD: CHANGES-2006,v 1.940 2006/08/06 17:08:55 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3814,3 +3814,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-Mail-Box to 2.066 [adrianp 2006-08-06]
 	Updated databases/mysql5-client to 5.0.24 [tron 2006-08-06]
 	Updated databases/mysql5-server to 5.0.24 [tron 2006-08-06]
+	Updated www/opera to 9.01 [jdolecek 2006-08-06]
