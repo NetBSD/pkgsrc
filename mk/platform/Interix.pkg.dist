@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
-#	$NetBSD: Interix.pkg.dist,v 1.19 2006/07/12 13:46:35 wiz Exp $
+#	$NetBSD: Interix.pkg.dist,v 1.20 2006/08/06 09:35:39 jmmv Exp $
 #
 
 /set type=dir uid=197108 gid=131616 mode=0775
@@ -1260,6 +1260,8 @@
             ..
 	    uk_UA.KOI8-U
 	    ..
+        ..
+        pkgconfig
         ..
         skel
         ..
