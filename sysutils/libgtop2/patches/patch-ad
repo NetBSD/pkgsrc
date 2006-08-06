@@ -1,41 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2006/06/06 22:11:57 minskim Exp $
+$NetBSD: patch-ad,v 1.5 2006/08/06 19:06:44 jmmv Exp $
 
---- sysdeps/freebsd/fsusage.c.orig	2005-12-12 10:09:39.000000000 +0000
+--- sysdeps/freebsd/fsusage.c.orig	2006-04-09 18:52:45.000000000 +0200
 +++ sysdeps/freebsd/fsusage.c
-@@ -1,4 +1,8 @@
- #include <config.h>
-+#ifdef HAVE_CONFIG_H
-+#include <config.h>
-+#endif
-+
- #include <glibtop.h>
- #include <glibtop/error.h>
- #include <glibtop/fsusage.h>
-@@ -10,6 +14,9 @@
- #include <unistd.h>
- #include <sys/param.h>
- #include <sys/mount.h>
-+#ifdef HAVE_SYS_STATVFS_H
-+#include <sys/statvfs.h>
-+#endif
- 
- #include <stdio.h>
- #include <string.h>
-@@ -27,16 +34,26 @@ _glibtop_freebsd_get_fsusage_read_write(
- 				      const char *path)
- {
- 	int result;
-+#ifdef STAT_STATVFS
-+	struct statvfs sfs;
-+
-+	result = statvfs (path, &sfs);
-+#else
- 	struct statfs sfs;
- 
- 	result = statfs (path, &sfs);
-+#endif
- 
- 	if (result == -1) {
+@@ -47,8 +47,12 @@ _glibtop_freebsd_get_fsusage_read_write(
  		return;
  	}
  
