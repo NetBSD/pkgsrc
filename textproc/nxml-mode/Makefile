@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/15 21:53:25 tonio Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/06 18:17:17 wiz Exp $
 
 DISTNAME=		nxml-mode-20041004
+PKGREVISION=		1
 CATEGORIES=		textproc editors
 MASTER_SITES=		http://www.thaiopensource.com/download/
 
@@ -19,6 +20,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.el* ${EMACS_LISPPREFIX:Q}/nxml-mode
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX:Q}/nxml-mode/schema
 	${INSTALL_DATA} ${WRKSRC}/schema/*.rnc ${EMACS_LISPPREFIX:Q}/nxml-mode/schema
+	${INSTALL_DATA} ${WRKSRC}/schema/*.xml ${EMACS_LISPPREFIX:Q}/nxml-mode/schema
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX:Q}/nxml-mode/char-name/unicode
 	${INSTALL_DATA} ${WRKSRC}/char-name/unicode/*.el ${EMACS_LISPPREFIX:Q}/nxml-mode/char-name/unicode
 	${INSTALL_DATA} ${WRKSRC}/nxml-mode.info ${EMACS_INFOPREFIX:Q}
