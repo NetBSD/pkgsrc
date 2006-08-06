@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2006/08/06 23:10:30 wiz Exp $
 
 --- src/fid.c.orig	2006-03-05 05:24:21.000000000 -0500
 +++ src/fid.c	2006-08-03 12:49:29.089070087 -0400
@@ -19,22 +19,3 @@ $NetBSD: patch-ai,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
    int has_slash = (strchr (file_name, '/') != 0);
    int file_name_length = strlen (file_name);
    int idx = -1;
---- src/fnid.c.orig	2006-03-05 05:24:29.000000000 -0500
-+++ src/fnid.c	2006-08-03 12:45:08.051454285 -0400
-@@ -24,7 +24,6 @@
- #include <errno.h>
- #include <stdlib.h>
- #include <errno.h>
--#include <alloca.h>
- #include <xalloc.h>
- #include <pathmax.h>
- #include <error.h>
-@@ -167,7 +166,7 @@
-     char **patv_0 = xmalloc (sizeof(char *) * (argc * 2));
-     char **patv_N;
-     char **patv = patv_0;
--    char *file_name = alloca (PATH_MAX);
-+    char file_name[PATH_MAX];
- 
-     for ( ; argc; argc--, argv++)
-       {
