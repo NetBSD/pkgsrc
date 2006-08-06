@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2006/04/13 18:23:38 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/08/06 19:06:44 jmmv Exp $
 
-DISTNAME=		libgtop-2.14.0
+DISTNAME=		libgtop-2.14.2
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.14/}
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake makeinfo msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 TEXINFO_REQD=		4.6
 
 # The following flags are for debugging purposes.  They don't need to
@@ -66,7 +66,7 @@ PLIST_SUBST+=	LIBGTOP_SUID_H=""
 
 .if ${OPSYS} != "Linux"
 post-install:
-	@${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
+	${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
 .endif
 
 # XXX This needs a check in the configure script, which should be clean

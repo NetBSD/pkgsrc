@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2006/03/30 21:09:48 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
 
 --- configure.orig	2006-03-13 10:04:55.000000000 +0100
 +++ configure
@@ -23,15 +23,6 @@ $NetBSD: patch-aa,v 1.6 2006/03/30 21:09:48 jmmv Exp $
  	  ;;
  	aix*)
  	  libgtop_sysdeps_dir=aix
-@@ -20300,7 +20300,7 @@ echo "${ECHO_T}$libgtop_sysdeps_dir" >&6
- 
- 
- 	case "$host_os" in
--	*bsd*)
-+	*bsd*|dragonfly*)
- 
- for ac_header in net/if_var.h
- do
 @@ -20472,7 +20472,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <net/netisr.h>
  #include <net/route.h>

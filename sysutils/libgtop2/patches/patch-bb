@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2005/10/12 21:49:39 jmmv Exp $
+$NetBSD: patch-bb,v 1.2 2006/08/06 19:06:44 jmmv Exp $
 
 From FreeBSD's GNOME development repository.
 
---- lib/write.c.orig	2005-06-06 14:33:42.000000000 +0200
+--- lib/write.c.orig	2006-04-10 10:41:46.000000000 +0200
 +++ lib/write.c
 @@ -22,6 +22,7 @@
  */
@@ -12,8 +12,8 @@ From FreeBSD's GNOME development repository.
  
  #include <glibtop/write.h>
  #include <glibtop/error.h>
-@@ -42,12 +43,16 @@ glibtop_write_l (glibtop *server, size_t
- 	fprintf (stderr, "LIBRARY: really writing %d bytes.\n", size);
+@@ -42,15 +43,19 @@ glibtop_write_l (glibtop *server, size_t
+ 	fprintf (stderr, "LIBRARY: really writing %d bytes.\n", (int)size);
  #endif
  
 +retry:
@@ -27,6 +27,9 @@ From FreeBSD's GNOME development repository.
 +	if (ret < 0) {
 +		if (errno == EINTR)
 +			goto retry;
- 		glibtop_error_io_r (server, ngettext ("wrote %d byte", "wrote %d bytes", size), size);
+ 		glibtop_error_io_r (server,
+ 				    ngettext("wrote %d byte",
+ 					     "wrote %d bytes", size),
+ 				    (int) size);
 +	}
  }

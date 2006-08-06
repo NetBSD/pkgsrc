@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.23 2006/06/26 12:14:25 drochner Exp $
+$NetBSD: distinfo,v 1.24 2006/08/06 19:06:44 jmmv Exp $
 
-SHA1 (libgtop-2.14.0.tar.bz2) = a396a72c415c678efb94ad3cdc9a2543d543c248
-RMD160 (libgtop-2.14.0.tar.bz2) = f6622a5e8b27e18fde9b5a728f18371afe95858a
-Size (libgtop-2.14.0.tar.bz2) = 659522 bytes
-SHA1 (patch-aa) = db6132ff556d1a20e24a817bb6d8ba247f202659
-SHA1 (patch-ab) = 20d01f064e5dae28abf3ad9cdd631d2bc5ca7676
+SHA1 (libgtop-2.14.2.tar.bz2) = 20e79a58c08e06e5f5e68d8ebbd575471f754e96
+RMD160 (libgtop-2.14.2.tar.bz2) = cb51f7252e015e17dcf3f1f991b36bf3e5496efe
+Size (libgtop-2.14.2.tar.bz2) = 664817 bytes
+SHA1 (patch-aa) = 5c4429cbd87b732b766794d57de8a81c558cbe2b
+SHA1 (patch-ab) = 27d2cac2281cb2bc2214fddcdb505c6b46b39dfd
 SHA1 (patch-ac) = c645307376eddb5c469ab00bd7ec8217feb3e2d5
-SHA1 (patch-ad) = b91a701e92e9594b27925cdb9a982866f06483d4
+SHA1 (patch-ad) = ada3c0128c0b7d3b670f8d30c910fe4c1e2e351a
 SHA1 (patch-ae) = 035419a4e8a505c672f727c843dbd977acd8ce35
 SHA1 (patch-af) = 520dbdec4a8cba6e82b08c169d97c3caebacd419
 SHA1 (patch-ag) = 74d20bdc56224ae553935cc81ce47504e98701fe
@@ -19,13 +19,9 @@ SHA1 (patch-am) = 2e10fd8096449ebc3428ef493e1ae4fe61a98e00
 SHA1 (patch-an) = 57a79bddc3f0e8237b72486aa8f8906f318ca38d
 SHA1 (patch-ao) = 72aa455cbc10afc6a744fd0684ec2d7a2e2c19c7
 SHA1 (patch-ap) = 1b842a59b821b2703b68935f59a65ffb6db3a68f
-SHA1 (patch-aq) = ca24cc64eaa6a27f7d140b2999edf5f0b524140f
-SHA1 (patch-ba) = ebe5f9a5148ff72ae978934b259e63ce15f2d4c8
-SHA1 (patch-bb) = 2e98f16668f74b64848f54db57037289623ed3f2
+SHA1 (patch-ba) = fc99c68ec9765439bc82a38223a74bde319d26d5
+SHA1 (patch-bb) = 2940eeb9468f34683bd6d8adca196b669c412bfd
 SHA1 (patch-bc) = 3638dfee30a4f10bc9662c23063df3f6a8cdc914
 SHA1 (patch-bd) = 7825fd4d2e6c06510fa3d76b4efa4d2ffab2a7d8
-SHA1 (patch-be) = ba1b688ea04f41a88b5d65b8af90927843619c0f
-SHA1 (patch-bf) = 1cf732d7ad22fbf34aa3511e77d17cacedbc810f
 SHA1 (patch-bg) = f4adb1f60c777a92e63f4ad0fef6d9addea5f856
 SHA1 (patch-bh) = afdf0dec92984528efd181a24d3ef8f3eb383173
-SHA1 (patch-bj) = f0d1a877f7aab9d1c191cd24172d39a032ead5f2
