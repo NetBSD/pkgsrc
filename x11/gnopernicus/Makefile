@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2006/07/05 05:37:47 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/08/06 19:09:10 jmmv Exp $
 #
 
-DISTNAME=		gnopernicus-1.0.3
-PKGREVISION=		1
+DISTNAME=		gnopernicus-1.1.1
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/1.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/1.1/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -29,6 +28,8 @@ CONF_FILES+=		${EGDIR}/translation_tables/en_US.a2b \
 			${PKG_SYSCONFDIR}/translation_tables/en_US.a2b
 CONF_FILES+=		${EGDIR}/translation_tables/es.a2b \
 			${PKG_SYSCONFDIR}/translation_tables/es.a2b
+CONF_FILES+=		${EGDIR}/translation_tables/fr.a2b \
+			${PKG_SYSCONFDIR}/translation_tables/fr.a2b
 CONF_FILES+=		${EGDIR}/translation_tables/sv.a2b \
 			${PKG_SYSCONFDIR}/translation_tables/sv.a2b
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
@@ -53,7 +54,10 @@ GCONF2_SCHEMAS+=	brlmonitor.schemas
 GCONF2_SCHEMAS+=	gnopernicus.schemas
 GCONF2_SCHEMAS+=	remote.schemas
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.1
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.4.1
+BUILDLINK_API_DEPENDS.gnome-speech+=	gnome-speech>=0.3.5
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.8.0
+BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.7
 
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
@@ -62,6 +66,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-mag/buildlink3.mk"
