@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/08/06 10:39:01 wiz Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
@@ -15,18 +15,21 @@ COMMENT=		XMMS plugin for faad
 #NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/faad2
-USE_TOOLS+=		automake14 gmake pkg-config
+USE_TOOLS+=		automake gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
+DISTINFO_FILE=		${.CURDIR}/../../audio/faad2/distinfo
+PATCHDIR=		${.CURDIR}/../../audio/faad2/patches
+
 
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-xmms
 CONFIGURE_ARGS+=	--with-mp4v2
-
-.include "../../mk/bsd.prefs.mk"
+BUILD_DIRS=		plugins/xmms/src
+INSTALL_DIRS=		plugins/xmms
 
 pre-configure:
 	@${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
@@ -38,14 +41,6 @@ pre-configure:
 		automake --add-missing;					\
 		autoconf;						\
 	done
-
-do-build:
-	@cd ${WRKSRC}/plugins/xmms/src && \
-		${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_TARGET}
-
-do-install:
-	@cd ${WRKSRC}/plugins/xmms && \
-		${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
