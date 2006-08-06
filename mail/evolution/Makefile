@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2006/07/05 05:37:42 jlam Exp $
+# $NetBSD: Makefile,v 1.111 2006/08/06 19:32:04 jmmv Exp $
 
-DISTNAME=		evolution-2.6.0
-PKGREVISION=		4
+DISTNAME=		evolution-2.6.3
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -86,14 +85,14 @@ BUILDLINK_API_DEPENDS.nss+=		nss>=3.9.2nb3
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.nss}/include/nss/nss
 
 post-wrapper:
-	@cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nspr.pc mozilla-nspr.pc
-	@cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nss.pc mozilla-nss.pc
+	cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nspr.pc mozilla-nspr.pc
+	cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nss.pc mozilla-nss.pc
 .else
 CONFIGURE_ARGS+=	--disable-nss
 PLIST_SUBST+=		HAVE_SMIME="@comment "
 .endif
 
-PKGCONFIG_OVERRIDE=	camel.pc.in
+PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
 GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.6.schemas
