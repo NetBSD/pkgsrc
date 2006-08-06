@@ -1,4 +1,4 @@
-# $NetBSD: ido.mk,v 1.2 2005/10/30 10:33:23 schwarz Exp $
+# $NetBSD: ido.mk,v 1.3 2006/08/06 18:59:41 schwarz Exp $
 
 .if !defined(COMPILER_IDO_MK)
 COMPILER_IDO_MK=	defined
@@ -21,6 +21,13 @@ _IDO_CC=		${_IDO_DIR}/bin/cc
 _ALIASES.CC=		cc
 CCPATH=			${IDOBASE}/bin/cc
 PKG_CC:=		${_IDO_CC}
+.endif
+.if exists(${IDOBASE}/lib/cpp)
+_IDO_VARS+=		CPP
+_IDO_CPP=		${_IDO_DIR}/bin/cpp
+_ALIASES.CPP=		cpp
+CPPPATH=		${IDOBASE}/lib/cpp
+PKG_CPP:=		${_IDO_CPP}
 .endif
 _COMPILER_STRIP_VARS+=	${_IDO_VARS}
 
@@ -53,7 +60,7 @@ ${_IDO_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
-	 ${ECHO} 'exec ${IDOBASE}/bin/${.TARGET:T} "$$@"';		\
+	 ${ECHO} 'exec ${${_var_}PATH} "$$@"';			\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
