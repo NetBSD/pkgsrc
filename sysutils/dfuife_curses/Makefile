@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/18 20:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/06 05:20:40 kristerw Exp $
 #
 
 DISTNAME=	dfuife_curses-1.5
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://packages.stura.uni-rostock.de/bsdinstaller/distfiles/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	DFUI curses frontend
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 USE_LIBTOOL=	yes
 USE_NCURSES=	yes

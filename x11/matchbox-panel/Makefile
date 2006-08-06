@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/21 22:05:02 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/06 05:20:40 kristerw Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://projects.o-hand.com/matchbox/
 COMMENT=		Panel for Matchbox
-
-BROKEN_IN=		pkgsrc-2006Q1
 
 BROKEN_GETTEXT_DETECTION=	yes
 
