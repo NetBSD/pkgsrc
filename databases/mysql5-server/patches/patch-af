@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2006/08/06 16:30:40 tron Exp $
 
---- configure.orig	2005-10-31 09:38:34.000000000 +0100
-+++ configure	2005-10-31 09:40:09.000000000 +0100
-@@ -21984,7 +21984,7 @@
+--- configure.orig	2006-07-27 19:53:44.000000000 +0100
++++ configure	2006-08-06 16:53:36.000000000 +0100
+@@ -21500,7 +21500,7 @@
    FIND_PROC="$PS \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
  else
    case $SYSTEM_TYPE in
@@ -11,7 +11,33 @@ $NetBSD: patch-af,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
        FIND_PROC="$PS p \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
        ;;
      *darwin*)
-@@ -26258,6 +26258,10 @@
+@@ -24458,13 +24458,13 @@
+   :
+ else
+ 
+-echo "$as_me:$LINENO: checking for sem_init in -lposix4" >&5
+-echo $ECHO_N "checking for sem_init in -lposix4... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for sem_init in -lrt" >&5
++echo $ECHO_N "checking for sem_init in -lrt... $ECHO_C" >&6
+ if test "${ac_cv_lib_posix4_sem_init+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lposix4  $LIBS"
++LIBS="-lrt  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -24527,7 +24527,7 @@
+ #define HAVE_LIBPOSIX4 1
+ _ACEOF
+ 
+-  LIBS="-lposix4 $LIBS"
++  LIBS="-lrt $LIBS"
+ 
+ fi
+ 
+@@ -25792,6 +25792,10 @@
        MAX_C_OPTIMIZE="-O"
      fi
      ;;
@@ -22,7 +48,18 @@ $NetBSD: patch-af,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
    *freebsd*)
      { echo "$as_me:$LINENO: WARNING: Adding fix for interrupted reads" >&5
  echo "$as_me: WARNING: Adding fix for interrupted reads" >&2;}
-@@ -39729,7 +39733,7 @@
+@@ -39038,8 +39042,8 @@
+         OPENSSL_INCLUDE=-I$incs
+       fi
+       # Test for libssl using all known library file endings
+-      if test -f $d/libssl.a || test -f $d/libssl.so || \
+-         test -f $d/libssl.sl || test -f $d/libssl.dylib ; then
++      if test -f $libs/libssl.a || test -f $libs/libssl.so || \
++         test -f $libs/libssl.sl || test -f $libs/libssl.dylib ; then
+         OPENSSL_LIB=$libs
+       fi
+       ;;
+@@ -39377,7 +39381,7 @@
  main ()
  {
  
@@ -31,3 +68,12 @@ $NetBSD: patch-af,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
  		completion_matches(0,0);
  
    ;
+@@ -41815,6 +41819,8 @@
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
