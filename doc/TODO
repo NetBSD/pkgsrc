@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5287 2006/08/06 09:59:54 wiz Exp $
+$NetBSD: TODO,v 1.5288 2006/08/06 10:37:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1198,7 +1198,6 @@ Suggested package updates
 	o xeukleides-1.0.1
 	o xfmail-1.5.4
 	o xfstt-1.7
-	o xine-lib-1.1.2 [pkg/34107]
 	o xkbset-0.5
 	o xlispstat-3.52.20
 	o xm7-303
