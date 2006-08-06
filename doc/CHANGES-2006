@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.929 2006/08/06 09:59:00 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.930 2006/08/06 10:17:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1697,7 +1697,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/digikam to 0.8.1nb2 [markd 2006-03-30]
 	Updated mail/p5-Mail-Milter to 0.07 [tv 2006-03-30]
 	Updated graphics/ImageMagick to 6.2.6.6 [ghen 2006-03-30]
-	Updated mail/postgrey to 1.2.4 [is 2006-03-30]
+	Updated mail/postgrey to 1.24 [is 2006-03-30]
 	Updated www/p5-CGI-Session to 4.09 [salo 2006-03-30]
 	Updated security/john to 1.7.0.2 [salo 2006-03-30]
 	Updated net/hping to 2.0.0.3 [salo 2006-03-30]
