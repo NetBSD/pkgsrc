@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/05/29 07:10:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/06 19:08:18 jmmv Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
@@ -236,12 +236,14 @@ share/locale/ka/LC_MESSAGES/dasher.mo
 share/locale/ko/LC_MESSAGES/dasher.mo
 share/locale/ky/LC_MESSAGES/dasher.mo
 share/locale/lt/LC_MESSAGES/dasher.mo
+share/locale/lv/LC_MESSAGES/dasher.mo
 share/locale/mk/LC_MESSAGES/dasher.mo
 share/locale/mn/LC_MESSAGES/dasher.mo
 share/locale/ms/LC_MESSAGES/dasher.mo
 share/locale/nb/LC_MESSAGES/dasher.mo
 share/locale/ne/LC_MESSAGES/dasher.mo
 share/locale/nl/LC_MESSAGES/dasher.mo
+share/locale/nn/LC_MESSAGES/dasher.mo
 share/locale/no/LC_MESSAGES/dasher.mo
 share/locale/pa/LC_MESSAGES/dasher.mo
 share/locale/pl/LC_MESSAGES/dasher.mo
