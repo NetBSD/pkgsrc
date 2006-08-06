@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.942 2006/08/06 18:03:48 cube Exp $
+$NetBSD: CHANGES-2006,v 1.943 2006/08/06 18:13:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/jing version 20030619 [wiz 2006-08-06]
 	Added textproc/trang version 20030619 [wiz 2006-08-06]
 	Updated games/angband-tty to 2.8.3nb2 [cube 2006-08-06]
+	Updated graphics/p5-Image-Info to 1.22 [wiz 2006-08-06]
