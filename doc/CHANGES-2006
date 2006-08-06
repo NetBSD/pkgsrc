@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.930 2006/08/06 10:17:51 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.931 2006/08/06 10:28:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3803,3 +3803,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/drivel to 2.0.3 [jmmv 2006-08-06]
 	Updated mail/tnef to 1.4.2 [heinz 2006-08-06]
 	Updated textproc/gtk-doc to 1.6 [jmmv 2006-08-06]
+	Updated games/grhino to 0.15.1 [ghen 2006-08-06]
