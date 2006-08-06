@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2006/07/03 05:15:49 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/08/06 18:00:05 cube Exp $
 #
 
 DISTNAME=		angband-283
 PKGNAME=		angband-tty-2.8.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/ \
 			ftp://ftp.greyhelm.com/pub/Games/Angband/Angband-2.7.x/Source/
@@ -27,6 +27,8 @@ GCC_REQD+=		2.95.3
 .endif
 
 INSTALLATION_DIRS=	bin
+
+SETGIDGAME=		yes
 
 do-install:
 	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/angband
