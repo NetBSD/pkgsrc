@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/06 05:16:51 kristerw Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
 COMMENT=		Ganglia cluster monitor, monitoring daemon
-
-BROKEN_IN=		pkgsrc-2006Q1
 
 GNU_CONFIGURE=		YES
 
