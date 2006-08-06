@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/03/08 06:40:50 wiz Exp $
+$NetBSD: distinfo,v 1.10 2006/08/06 09:35:53 jmmv Exp $
 
-SHA1 (gtk-doc-1.5.tar.bz2) = 32df689c2092a7797da6115b72416b16268c5a15
-RMD160 (gtk-doc-1.5.tar.bz2) = 95592dbe3f4bb71a926c7d0538f752c157b2362f
-Size (gtk-doc-1.5.tar.bz2) = 174409 bytes
+SHA1 (gtk-doc-1.6.tar.bz2) = f42a5517eb2317b3bf0f3d77caf40e5dad78bdf8
+RMD160 (gtk-doc-1.6.tar.bz2) = f1bb0d5396173ef00d18ee68d7c013a7734e3454
+Size (gtk-doc-1.6.tar.bz2) = 177476 bytes
