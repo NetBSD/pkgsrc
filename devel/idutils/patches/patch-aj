@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2006/08/06 23:10:30 wiz Exp $
 
---- src/lid.c.orig	2006-03-05 05:23:56.000000000 -0500
-+++ src/lid.c	2006-08-04 14:50:44.415180548 -0400
+--- src/lid.c.orig	2006-07-22 02:43:25.000000000 +0000
++++ src/lid.c
 @@ -31,7 +31,6 @@
  #include <dirname.h>
  #include <unistd.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
  #include <regex.h>
  #include <xalloc.h>
  #include <pathmax.h>
-@@ -538,10 +537,11 @@
+@@ -538,10 +537,11 @@ report_filenames (char const *name, stru
  void
  report_grep (char const *name, struct file_link **flinkv)
  {
@@ -24,7 +24,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
  
    if (key_style == ks_pattern)
      {
-@@ -575,6 +575,15 @@
+@@ -575,6 +575,15 @@ report_grep (char const *name, struct fi
  
        while (fgets (line + 1, sizeof (line) - 1, source_FILE))
  	{
@@ -40,15 +40,15 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
  	  line_number++;
  	  if (pattern)
  	    {
-@@ -589,6 +598,7 @@
+@@ -589,6 +598,7 @@ report_grep (char const *name, struct fi
  	}
        fclose (source_FILE);
      }
 +  free(line);
  }
  
- void
-@@ -765,7 +775,7 @@
+ static char **
+@@ -800,7 +810,7 @@ search_flinkv (struct file_link **flinkv
  {
    char pattern[BUFSIZ];
    unsigned int count;
@@ -57,7 +57,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
    char *eol;
  
    if (fgets (pattern, sizeof (pattern), stdin) == 0)
-@@ -1333,7 +1343,7 @@
+@@ -1368,7 +1378,7 @@ word_match (char const *name_0, char con
  	  continue;
  	}
        /* march down both strings as long as we match */
