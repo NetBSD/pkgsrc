@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/20 18:20:49 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/08/06 10:45:44 wiz Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -25,7 +25,7 @@ COMMENT=		IceWM Control Centre
 
 DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=6.3.0:../../editors/vim-xaw
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
