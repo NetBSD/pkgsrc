@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2006/05/29 16:14:25 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/08/06 07:09:51 kim Exp $
 
 DISTNAME=	irrd2.2.8
 PKGNAME=	irrd-2.2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.irrd.net/ \
 		ftp://ftp.merit.edu/radb/irrd/ \
@@ -25,7 +25,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-thread
-CONFIGURE_ENV+=		ac_cv_path_GZIP_PATH=${GZIP_CMD:Q}
 
 BUILD_DEFS+=		USE_INET6
 
