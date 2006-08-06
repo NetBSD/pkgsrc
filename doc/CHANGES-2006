@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.944 2006/08/06 18:17:40 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.945 2006/08/06 18:27:54 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3820,3 +3820,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/angband-tty to 2.8.3nb2 [cube 2006-08-06]
 	Updated graphics/p5-Image-Info to 1.22 [wiz 2006-08-06]
 	Updated textproc/nxml-mode to 20041004nb1 [wiz 2006-08-06]
+	Updated games/angband-tty to 2.8.3nb3 [cube 2006-08-06]
