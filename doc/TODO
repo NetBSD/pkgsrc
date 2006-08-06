@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5291 2006/08/06 20:48:33 jmmv Exp $
+$NetBSD: TODO,v 1.5292 2006/08/06 21:43:34 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -538,7 +538,6 @@ Suggested package updates
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.14.3
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
 	o gnomeicu-0.99.10
@@ -1123,7 +1122,6 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tob-0.26
 	o top-3.6beta1
-	o totem-1.4.4
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
