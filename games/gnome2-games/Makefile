@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2006/07/26 12:47:04 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2006/08/06 19:09:48 jmmv Exp $
 
-DISTNAME=		gnome-games-2.14.2.1
+DISTNAME=		gnome-games-2.14.3
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -55,6 +55,7 @@ GCONF2_SCHEMAS+=	same-gnome.schemas
 PYTHON_PATCH_SCRIPTS=	libgames-support/games-server.py
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 BUILDLINK_API_DEPENDS.howl+=	howl>=0.9.6
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
 BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
