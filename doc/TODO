@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5285 2006/08/05 19:56:11 wiz Exp $
+$NetBSD: TODO,v 1.5286 2006/08/06 09:59:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1051,7 +1051,6 @@ Suggested package updates
 	o sablecc-3.2
 	o samba-3.0.23a
 	o same-1.8 [don't update; same-1.3 is small and nice]
-	o sane-backends-1.0.18
 	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
