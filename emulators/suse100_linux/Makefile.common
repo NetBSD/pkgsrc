@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/07/27 12:00:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/08/06 02:54:51 perry Exp $
 
 .include "../../emulators/suse100_linux/vars.mk"
 .include "../../emulators/suse100_linux/arch.mk"
@@ -17,6 +17,7 @@ MASTER_SITE_SUSE100?= \
 	ftp://ftp.gwdg.de/pub/opensuse/${_SUSE_FTP_SUBDIR} \
 	ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
 	ftp://gd.tuwien.ac.at/linux/opensuse/${_SUSE_FTP_SUBDIR} \
+	http://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
 	ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
 	ftp://mirror.karneval.cz/pub/opensuse/${_SUSE_FTP_SUBDIR:S,distribution/,,} \
 	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD}
