@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/08/06 05:16:50 kristerw Exp $
 #
 
 DISTNAME=	autotrace-0.31.1
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autotrace/}
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://autotrace.sourceforge.net/
 COMMENT=	Convert bitmap to vector graphics
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

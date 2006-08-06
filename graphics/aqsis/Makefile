@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/08/06 05:16:50 kristerw Exp $
 #
 
 DISTNAME=		aqsis-0.6.4
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aqsis/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.aqsis.com/
 COMMENT=		Renderman clone
-
-BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

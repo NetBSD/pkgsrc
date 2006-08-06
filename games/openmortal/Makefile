@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/08/06 05:16:50 kristerw Exp $
 #
 
 DISTNAME=	openmortal-0.7
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apocalypse.rulez.org/~upi/Mortal/
 COMMENT=	Parody of Mortal Kombat with real characters
-
-BROKEN_IN=		pkgsrc-2006Q1
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
