@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.936 2006/08/06 15:04:20 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.937 2006/08/06 15:31:41 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3811,3 +3811,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_chk to 1.78 [cube 2006-08-06]
 	Updated fonts/linux-libertine-ttf to 2.1.0 [wiz 2006-08-06]
 	Added devel/p5-Test-Harness version 2.62 [adrianp 2006-08-06]
+	Updated mail/p5-Mail-Box to 2.0.66 [adrianp 2006-08-06]
