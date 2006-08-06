@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2006/08/01 12:50:23 mjl Exp $
+$NetBSD: patch-ae,v 1.2 2006/08/06 20:49:52 mjl Exp $
 
---- sserver.cpp.orig	2006-08-01 13:48:11.000000000 +0200
-+++ sserver.cpp	2006-08-01 13:54:45.000000000 +0200
+--- sserver.cpp.orig	2003-03-07 20:22:13.000000000 +0100
++++ sserver.cpp	2006-08-06 22:45:30.000000000 +0200
 @@ -52,7 +52,7 @@
  	char a_grabname[256];
  	char a_vpid[20];
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1 2006/08/01 12:50:23 mjl Exp $
  	char a_path[256]="";
  	char a_host[256];
  	int	i,n;
-@@ -169,7 +169,7 @@
+@@ -169,10 +169,10 @@
  						sprintf(a_vpid,"0x%03x",recdata.vpid);	
  						sprintf(a_apid,"0x%03x",recdata.apid);
  
@@ -19,22 +19,37 @@ $NetBSD: patch-ae,v 1.1 2006/08/01 12:50:23 mjl Exp $
 +						strlcpy (a_filename,a_path, sizeof(a_filename));
  							
  						if (strlen(a_filename)) {
- 							strcat(a_filename,"/");
-@@ -185,7 +185,7 @@
+-							strcat(a_filename,"/");
++							strlcat(a_filename, "/", sizeof(a_filename));
+ 						}
+ 
+ 						if (strlen(recdata.channelname) > 0)
+@@ -185,8 +185,8 @@
  								}
  							} while (*p_act);
  								
 -							strcat(a_filename, recdata.channelname);
-+							strlcat(a_filename, recdata.channelname, 20);
- 							strcat(a_filename, "_");
+-							strcat(a_filename, "_");
++							strlcat(a_filename, recdata.channelname, sizeof(a_filename));
++							strlcat(a_filename, "_", sizeof(a_filename));
  						}
  
-@@ -206,7 +206,7 @@
+ 						if (strlen(recdata.epgtitle) > 0)
+@@ -206,13 +206,13 @@
  								}
  							} while (*p_act++);
  							
 -							strcat(a_filename, recdata.epgtitle);
-+							strlcat(a_filename, recdata.epgtitle, 80);
- 							strcat(a_filename, "_");
+-							strcat(a_filename, "_");
++							strlcat(a_filename, recdata.epgtitle, sizeof(a_filename));
++							strlcat(a_filename, "_", sizeof(a_filename));
  						}
  
+ 						t = time (&t);
+-						strftime (buf, sizeof(a_filename)-1, "%Y%m%d_%H%M%S", localtime(&t));
+-						strcat(a_filename, buf);
++						strftime (buf, 20, "%Y%m%d_%H%M%S", localtime(&t));
++						strlcat(a_filename, buf, sizeof(a_filename));
+ 
+ 						pid = fork();
+ 						if (pid == -1) {
