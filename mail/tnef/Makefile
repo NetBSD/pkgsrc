@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/07/15 12:20:27 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2006/08/06 09:04:37 heinz Exp $
 #
 
-DISTNAME=	tnef-1.4.1
+DISTNAME=	tnef-1.4.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tnef/}
 
@@ -21,8 +21,6 @@ PKG_SUPPORTED_OPTIONS=	debug
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
-.else
-CONFIGURE_ARGS+=	--disable-debug
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
