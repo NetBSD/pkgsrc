@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2006/08/04 14:43:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.331 2006/08/06 17:38:30 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -113,6 +113,7 @@ SUBDIR+=	ja-grep
 SUBDIR+=	ja-groff
 SUBDIR+=	ja-sed
 SUBDIR+=	jade
+SUBDIR+=	jing
 SUBDIR+=	kakasi
 SUBDIR+=	kbanner
 SUBDIR+=	kdoc
@@ -305,6 +306,7 @@ SUBDIR+=	tex-xmltex
 SUBDIR+=	tex2page
 SUBDIR+=	texi2html
 SUBDIR+=	texi2roff
+SUBDIR+=	trang
 SUBDIR+=	troffcvt
 SUBDIR+=	unroff
 SUBDIR+=	untex
