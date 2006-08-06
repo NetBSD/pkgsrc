@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.38 2006/07/22 20:41:20 abs Exp $
+# $Id: pkg_chk.sh,v 1.39 2006/08/06 12:21:09 cube Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -546,12 +546,10 @@ usage()
 	-B      Check the "Build version" of packages
 	-b      Install binary packages
 	-C conf Use pkgchk.conf file 'conf'
-	-c      Check installed packages against pkgchk.conf
 	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-f      Perform a 'make fetch' for all required packages
 	-g      Generate an initial pkgchk.conf file
 	-h      This help
-	-i	Check versions of installed packages (not using pkgchk.conf)
 	-k	Continue with further packages if errors are encountered
 	-L file Redirect output from commands run into file (should be fullpath)
 	-l	List binary packages including dependencies (implies -c)
@@ -566,7 +564,7 @@ usage()
 	-v      Verbose
 
 pkg_chk verifies installed packages against pkgsrc.
-The most common usage is 'pkg_chk -i' to check all installed packages or
+The most common usage is 'pkg_chk -u -q' to check all installed packages or
 'pkg_chk -u' to update all out of date packages.
 For more advanced usage, including defining a set of desired packages based
 on hostname and type, see pkg_chk(8).
@@ -615,7 +613,7 @@ while [ $# != 0 ]; do
 	-N )	opt_N=1 ;;
 	-n )	opt_n=1 ;;
 	-P )	opt_P="$2" ; shift ;;
-	-q )	opt_q=1 ; shift ;;
+	-q )	opt_q=1 ;;
 	-r )	opt_r=1 ;;
 	-s )	opt_s=1 ;;
 	-U )	opt_U="$2" ; shift ;;
