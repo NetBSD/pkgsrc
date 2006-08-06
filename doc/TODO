@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5289 2006/08/06 11:03:27 wiz Exp $
+$NetBSD: TODO,v 1.5290 2006/08/06 11:08:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -832,7 +832,6 @@ Suggested package updates
 	o p5-File-DirSync-1.12
 	o p5-File-MimeInfo-0.12
 	o p5-FileHandle-Unget-0.16.2.1
-	o p5-Finance-Quote-1.12
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
 	o p5-HTML-FillInForm-1.05
