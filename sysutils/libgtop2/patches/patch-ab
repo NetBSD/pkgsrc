@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2006/06/26 12:14:25 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2006/08/06 19:06:44 jmmv Exp $
 
---- sysdeps/freebsd/proctime.c.orig	2005-12-12 11:09:39.000000000 +0100
+--- sysdeps/freebsd/proctime.c.orig	2006-04-04 22:01:43.000000000 +0200
 +++ sysdeps/freebsd/proctime.c
 @@ -32,6 +32,10 @@
  #include <osreldate.h>
@@ -22,16 +22,7 @@ $NetBSD: patch-ab,v 1.5 2006/06/26 12:14:25 drochner Exp $
  
  #ifndef __FreeBSD__
  static void
-@@ -138,20 +142,19 @@ glibtop_get_proc_time_p (glibtop *server
- #if (defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000))
- 	if (server->sysdeps.proc_time == 0)
- 		return;
--
--#ifndef __bsdi__
--	sprintf (filename, "/proc/%d/mem", (int) pid);
--	if (stat (filename, &statb)) return;
--#endif
- #endif
+@@ -142,11 +146,15 @@ glibtop_get_proc_time_p (glibtop *server
  
  	/* Get the process information */
  	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
@@ -45,11 +36,11 @@ $NetBSD: patch-ab,v 1.5 2006/06/26 12:14:25 drochner Exp $
  #if defined(__FreeBSD__) && (__FreeBSD_version >= 500013)
  	buf->rtime = pinfo [0].ki_runtime;
 +#elif defined(__DragonFly__)
-+	buf->rtime = pinfo[0].kp_eproc.e_uticks / 100000;
++	buf->rtime = pinfo [0].kp_eproc.e.uticks / 100000;
  #elif (defined __FreeBSD__) && (__FreeBSD_version <= 500013)
  	buf->rtime = pinfo [0].kp_proc.p_runtime;
  #else
-@@ -194,18 +197,26 @@ glibtop_get_proc_time_p (glibtop *server
+@@ -189,18 +197,26 @@ glibtop_get_proc_time_p (glibtop *server
         if ((pinfo [0].ki_flag & P_INMEM)) {
  #endif
             buf->utime = pinfo [0].ki_runtime;
@@ -79,7 +70,7 @@ $NetBSD: patch-ab,v 1.5 2006/06/26 12:14:25 drochner Exp $
              kvm_uread (server->machine.kd, &(pinfo [0]).kp_proc,
                         (unsigned long) &u_addr->u_stats,
                         (char *) &pstats, sizeof (pstats)) == sizeof (pstats))
-@@ -215,13 +226,21 @@ glibtop_get_proc_time_p (glibtop *server
+@@ -210,13 +226,21 @@ glibtop_get_proc_time_p (glibtop *server
                         buf->stime = tv2sec (pinfo[0].kp_eproc.e_stats.p_ru.ru_stime);
                         buf->cutime = tv2sec (pinfo[0].kp_eproc.e_stats.p_cru.ru_utime);
                         buf->cstime = tv2sec (pinfo[0].kp_eproc.e_stats.p_cru.ru_stime);
