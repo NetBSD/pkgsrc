@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2006/07/24 20:42:07 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2006/08/06 10:36:50 wiz Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=		11
 
 COMMENT=		Multimedia player library
 
 BUILDLINK_API_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
-SUBST_CLASSES+=		oss w32path
-
+SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/audio_out/audio_oss_out.c
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
@@ -18,8 +15,9 @@ SUBST_SED.oss+=		-e "s,\"dsp\",\"audio\",g"
 .endif
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
+SUBST_CLASSES+=		w32path
 SUBST_STAGE.w32path=	post-patch
-SUBST_FILES.w32path=	src/libw32dll/wine/module.c
+SUBST_FILES.w32path=	src/libw32dll/common.c
 SUBST_SED.w32path=	-e "s,@W32PATH@,${PREFIX}/lib/win32,"
 SUBST_MESSAGE.w32path=	Fixing win32 dll path.
 
@@ -31,6 +29,7 @@ BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"

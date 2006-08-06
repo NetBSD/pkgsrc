@@ -1,10 +1,10 @@
-$NetBSD: patch-bb,v 1.2 2004/12/21 18:56:44 drochner Exp $
+$NetBSD: patch-bb,v 1.3 2006/08/06 10:36:50 wiz Exp $
 
 --- m4/ffmpeg.m4.orig	2004-12-16 00:57:33.000000000 +0100
 +++ m4/ffmpeg.m4
-@@ -50,14 +50,6 @@ if test x"$external_ffmpeg" != "xno"; th
+@@ -56,14 +56,6 @@ if test x"$external_ffmpeg" != "xno"; th
          CPPFLAGS="${FFMPEG_CPPFLAGS} ${ac_save_CPPFLAGS}"
-         LDFLAGS="${FFMPEG_LIBS} ${ac_save_LDFLAGS}"
+         LDFLAGS="${FFMPEG_LDFLAGS} ${ac_save_LDFLAGS}"
    
 -        dnl drop the cache
 -        for i in "ac_cv_header_avcodec_h" "ac_cv_header_postprocess_h" \
