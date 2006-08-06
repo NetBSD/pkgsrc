@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/23 17:38:58 adrianp Exp $
-
---- Makefile.PL.orig	2005-04-23 00:12:41.000000000 +0100
-+++ Makefile.PL
-@@ -161,78 +161,8 @@ FIX
+--- Makefile.PL.orig	2006-08-06 13:49:57.000000000 +0100
++++ Makefile.PL	2006-08-06 13:51:08.000000000 +0100
+@@ -163,76 +163,8 @@
      exit 1;
  }
  
@@ -51,16 +49,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/23 17:38:58 adrianp Exp $
 -        print $warn;
 -    }
 -    
--    my $install  = $default_install_answer;
--    my $key = prompt "Do you want to install $module? yes/no/all", $install;
+-    my $install = $default_install_answer
+-               || prompt( "Do you want to install $module? yes/no/all"
+-                        , -t STDIN ? 'y' : 'n');
 -
--    if($key eq 'a')
--    {   $default_install_answer = 'a';
--        $install = 'y';
--    }
--    else
--    {   $install = $key eq 'y' ? 'y' : 'n';
--    }
+-    $install = $default_install_answer = 'y'
+-        if $install eq 'a';
 -
 -    next unless $install eq 'y';
 -
@@ -70,7 +64,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/23 17:38:58 adrianp Exp $
 -    print "     Added $distr version $version to the requirements\n";
 -}
 -
--my $tests = prompt "Do you want to run the (large set of) tests? yes/no", "yes";
+-my $tests = $ENV{MAILBOX_RUN_TESTS}
+-         || prompt "Do you want to run the (large set of) tests? yes/no", "yes";
+-
 -if($tests =~ m/n/i)
 -{   open F, ">", "skiptests";
 -    close F;
