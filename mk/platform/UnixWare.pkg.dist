@@ -1,6 +1,6 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
 #	NetBSD: SunOS.pkg.dist,v 1.64 2004/04/01 12:19:09 jmmv Exp
-#	$NetBSD: UnixWare.pkg.dist,v 1.20 2006/08/06 09:35:39 jmmv Exp $
+#	$NetBSD: UnixWare.pkg.dist,v 1.21 2006/08/06 11:36:59 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -360,6 +360,10 @@
                 ..
             ..
             lv
+                LC_MESSAGES
+                ..
+            ..
+            mg
                 LC_MESSAGES
                 ..
             ..

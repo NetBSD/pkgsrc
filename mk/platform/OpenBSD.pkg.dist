@@ -1,4 +1,4 @@
-#	$NetBSD: OpenBSD.pkg.dist,v 1.20 2006/08/06 09:35:39 jmmv Exp $
+#	$NetBSD: OpenBSD.pkg.dist,v 1.21 2006/08/06 11:36:59 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -846,6 +846,10 @@
                 ..
             ..
             lv
+                LC_MESSAGES
+                ..
+            ..
+            mg
                 LC_MESSAGES
                 ..
             ..
