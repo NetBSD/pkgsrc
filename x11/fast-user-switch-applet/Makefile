@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/07/05 05:37:46 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/06 19:05:14 jmmv Exp $
 #
 
-DISTNAME=	fast-user-switch-applet-2.14.0
-PKGREVISION=	1
+DISTNAME=	fast-user-switch-applet-2.14.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/fast-user-switch-applet/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,7 @@ COMMENT=	Switch between users from the GNOME Panel
 DEPENDS+=		gdm>=2.14.0:../../x11/gdm
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		gnome2-1.6
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
@@ -33,6 +32,8 @@ CONFIGURE_ARGS+=	--with-gdm-config=${PKG_SYSCONFBASE}/gdm/custom.conf
 .endif
 
 GCONF2_SCHEMAS=		fast-user-switch-applet.schemas
+
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
