@@ -1,16 +1,7 @@
-$NetBSD: patch-an,v 1.6 2006/07/24 20:42:07 drochner Exp $
+$NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
 
 --- src/input/input_cdda.c.orig	2005-10-08 15:57:42.000000000 +0200
 +++ src/input/input_cdda.c
-@@ -32,7 +32,7 @@
- #include <unistd.h>
- 
- #include <sys/types.h>
--#ifdef SYS_PARAM_H
-+#ifdef HAVE_SYS_PARAM_H
- #include <sys/param.h>
- #endif
- #ifdef HAVE_DIRENT_H
 @@ -613,14 +613,20 @@ static int read_cdrom_frames(cdda_input_
    return 0;
  }

@@ -1,21 +1,21 @@
-$NetBSD: patch-ao,v 1.9 2005/10/13 10:48:01 jmmv Exp $
+$NetBSD: patch-ao,v 1.10 2006/08/06 10:36:50 wiz Exp $
 
 --- src/libw32dll/wine/Makefile.in.orig	2005-10-09 13:28:12.000000000 +0200
 +++ src/libw32dll/wine/Makefile.in
-@@ -238,6 +238,7 @@ VORBIS_LIBS = @VORBIS_LIBS@
- W32DLL_DEP = @W32DLL_DEP@
- W32_NO_OPTIMIZE = @W32_NO_OPTIMIZE@
- WIN32_CPPFLAGS = @WIN32_CPPFLAGS@
-+WINE_LIBS = @WINE_LIBS@
- XINE_ACFLAGS = @XINE_ACFLAGS@
- XINE_BIN_AGE = @XINE_BIN_AGE@
- XINE_BUILD_CC = @XINE_BUILD_CC@
-@@ -355,7 +356,7 @@ CONFIG_CLEAN_FILES =
+@@ -65,7 +65,7 @@ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(noinst_LTLIBRARIES)
- 
- libwine_la_LDFLAGS =
 -libwine_la_LIBADD =
 +libwine_la_LIBADD = ${WINE_LIBS}
- am_libwine_la_OBJECTS = afl.lo driver.lo elfdll.lo ext.lo ldt_keeper.lo \
- 	module.lo pe_image.lo pe_resource.lo resource.lo registry.lo \
- 	vfl.lo win32.lo stubs.lo wrapper.lo
+ am_libwine_la_OBJECTS = afl.lo driver.lo elfdll.lo ext.lo \
+ 	ldt_keeper.lo module.lo pe_image.lo pe_resource.lo resource.lo \
+ 	registry.lo vfl.lo win32.lo stubs.lo wrapper.lo
+@@ -436,6 +436,7 @@ WAND_CPPFLAGS = @WAND_CPPFLAGS@
+ WAND_LDFLAGS = @WAND_LDFLAGS@
+ WAND_LIBS = @WAND_LIBS@
+ WIN32_CPPFLAGS = @WIN32_CPPFLAGS@
++WINE_LIBS = @WINE_LIBS@
+ WIN32_FALSE = @WIN32_FALSE@
+ WIN32_TRUE = @WIN32_TRUE@
+ XGETTEXT = @XGETTEXT@
