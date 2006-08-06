@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/04/17 07:07:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/08/06 19:32:04 jmmv Exp $
 bin/evolution-2.6
 include/evolution-2.6/a11y/e-table/gal-a11y-e-cell-popup.h
 include/evolution-2.6/a11y/e-table/gal-a11y-e-cell-registry.h
@@ -485,6 +485,7 @@ share/gconf/schemas/apps_evolution_calendar-2.6.schemas
 share/gconf/schemas/apps_evolution_shell-2.6.schemas
 share/gconf/schemas/evolution-mail-2.6.schemas
 share/gnome/help/evolution-2.6/C/evolution-2.6.xml
+share/gnome/help/evolution-2.6/C/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution-2.6/C/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution-2.6/C/figures/calendar.png
 share/gnome/help/evolution-2.6/C/figures/config-cal.png
@@ -546,12 +547,14 @@ share/locale/az/LC_MESSAGES/evolution-2.6.mo
 share/locale/be/LC_MESSAGES/evolution-2.6.mo
 share/locale/bg/LC_MESSAGES/evolution-2.6.mo
 share/locale/bn/LC_MESSAGES/evolution-2.6.mo
+share/locale/br/LC_MESSAGES/evolution-2.6.mo
 share/locale/bs/LC_MESSAGES/evolution-2.6.mo
 share/locale/ca/LC_MESSAGES/evolution-2.6.mo
 share/locale/cs/LC_MESSAGES/evolution-2.6.mo
 share/locale/cy/LC_MESSAGES/evolution-2.6.mo
 share/locale/da/LC_MESSAGES/evolution-2.6.mo
 share/locale/de/LC_MESSAGES/evolution-2.6.mo
+share/locale/dz/LC_MESSAGES/evolution-2.6.mo
 share/locale/el/LC_MESSAGES/evolution-2.6.mo
 share/locale/en_AU/LC_MESSAGES/evolution-2.6.mo
 share/locale/en_CA/LC_MESSAGES/evolution-2.6.mo
@@ -573,6 +576,7 @@ share/locale/id/LC_MESSAGES/evolution-2.6.mo
 share/locale/is/LC_MESSAGES/evolution-2.6.mo
 share/locale/it/LC_MESSAGES/evolution-2.6.mo
 share/locale/ja/LC_MESSAGES/evolution-2.6.mo
+share/locale/ka/LC_MESSAGES/evolution-2.6.mo
 share/locale/ko/LC_MESSAGES/evolution-2.6.mo
 share/locale/ku/LC_MESSAGES/evolution-2.6.mo
 share/locale/lt/LC_MESSAGES/evolution-2.6.mo
