@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2005/10/12 21:49:39 jmmv Exp $
+$NetBSD: patch-ba,v 1.2 2006/08/06 19:06:44 jmmv Exp $
 
 From FreeBSD's GNOME development repository.
 
---- lib/read.c.orig	2005-06-06 14:33:42.000000000 +0200
+--- lib/read.c.orig	2006-04-10 10:41:46.000000000 +0200
 +++ lib/read.c
 @@ -22,6 +22,7 @@
  */
@@ -13,7 +13,7 @@ From FreeBSD's GNOME development repository.
  #include <glibtop/error.h>
  #include <glib/gi18n-lib.h>
 @@ -56,14 +57,18 @@ glibtop_read_l (glibtop *server, size_t 
- 	fprintf (stderr, "LIBRARY: really reading %d bytes.\n", size);
+ 	fprintf (stderr, "LIBRARY: really reading %d bytes.\n", (int)size);
  #endif
  
 +retry:
@@ -28,7 +28,7 @@ From FreeBSD's GNOME development repository.
  				server,
  				ngettext ("read %d byte",
  					  "read %d bytes", size),
- 				size);
+ 				(int)size);
 +		}
  	}
  }
