@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/17 07:07:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/06 19:08:31 jmmv Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
@@ -187,6 +187,16 @@ share/gok/dictionary.txt
 share/gok/direct-selection.xam
 share/gok/directed.xam
 share/gok/dwell-selection.xam
+share/gok/dz/gok-controls.kbd
+share/gok/dz/hide.kbd
+share/gok/dz/launcher.kbd
+share/gok/dz/main.kbd
+share/gok/dz/mouse.kbd
+share/gok/dz/move-resize.kbd
+share/gok/dz/numberpad.kbd
+share/gok/dz/quit.kbd
+share/gok/dz/text-operations.kbd
+share/gok/dz/valuator.kbd
 share/gok/el/gok-controls.kbd
 share/gok/el/hide.kbd
 share/gok/el/launcher.kbd
@@ -377,6 +387,16 @@ share/gok/ja/numberpad.kbd
 share/gok/ja/quit.kbd
 share/gok/ja/text-operations.kbd
 share/gok/ja/valuator.kbd
+share/gok/ka/gok-controls.kbd
+share/gok/ka/hide.kbd
+share/gok/ka/launcher.kbd
+share/gok/ka/main.kbd
+share/gok/ka/mouse.kbd
+share/gok/ka/move-resize.kbd
+share/gok/ka/numberpad.kbd
+share/gok/ka/quit.kbd
+share/gok/ka/text-operations.kbd
+share/gok/ka/valuator.kbd
 share/gok/ko/gok-controls.kbd
 share/gok/ko/hide.kbd
 share/gok/ko/launcher.kbd
@@ -484,16 +504,6 @@ share/gok/nl/numberpad.kbd
 share/gok/nl/quit.kbd
 share/gok/nl/text-operations.kbd
 share/gok/nl/valuator.kbd
-share/gok/no/gok-controls.kbd
-share/gok/no/hide.kbd
-share/gok/no/launcher.kbd
-share/gok/no/main.kbd
-share/gok/no/mouse.kbd
-share/gok/no/move-resize.kbd
-share/gok/no/numberpad.kbd
-share/gok/no/quit.kbd
-share/gok/no/text-operations.kbd
-share/gok/no/valuator.kbd
 share/gok/numberpad.kbd
 share/gok/pa/gok-controls.kbd
 share/gok/pa/hide.kbd
@@ -699,6 +709,7 @@ share/locale/cs/LC_MESSAGES/gok.mo
 share/locale/cy/LC_MESSAGES/gok.mo
 share/locale/da/LC_MESSAGES/gok.mo
 share/locale/de/LC_MESSAGES/gok.mo
+share/locale/dz/LC_MESSAGES/gok.mo
 share/locale/el/LC_MESSAGES/gok.mo
 share/locale/en_CA/LC_MESSAGES/gok.mo
 share/locale/en_GB/LC_MESSAGES/gok.mo
@@ -717,6 +728,7 @@ share/locale/hu/LC_MESSAGES/gok.mo
 share/locale/id/LC_MESSAGES/gok.mo
 share/locale/it/LC_MESSAGES/gok.mo
 share/locale/ja/LC_MESSAGES/gok.mo
+share/locale/ka/LC_MESSAGES/gok.mo
 share/locale/ko/LC_MESSAGES/gok.mo
 share/locale/ku/LC_MESSAGES/gok.mo
 share/locale/lt/LC_MESSAGES/gok.mo
@@ -727,7 +739,6 @@ share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nb/LC_MESSAGES/gok.mo
 share/locale/ne/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
-share/locale/no/LC_MESSAGES/gok.mo
 share/locale/pa/LC_MESSAGES/gok.mo
 share/locale/pl/LC_MESSAGES/gok.mo
 share/locale/pt/LC_MESSAGES/gok.mo
@@ -769,7 +780,6 @@ share/pixmaps/gok.png
 @dirrm share/gok/pt
 @dirrm share/gok/pl
 @dirrm share/gok/pa
-@dirrm share/gok/no
 @dirrm share/gok/nl
 @dirrm share/gok/ne
 @dirrm share/gok/nb
@@ -780,6 +790,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/lt
 @dirrm share/gok/ku
 @dirrm share/gok/ko
+@dirrm share/gok/ka
 @dirrm share/gok/ja
 @dirrm share/gok/it
 @dirrm share/gok/id
@@ -799,6 +810,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/en_GB
 @dirrm share/gok/en_CA
 @dirrm share/gok/el
+@dirrm share/gok/dz
 @dirrm share/gok/de
 @dirrm share/gok/da
 @dirrm share/gok/cy
