@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.945 2006/08/06 18:27:54 cube Exp $
+$NetBSD: CHANGES-2006,v 1.946 2006/08/06 20:48:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3821,3 +3821,24 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/p5-Image-Info to 1.22 [wiz 2006-08-06]
 	Updated textproc/nxml-mode to 20041004nb1 [wiz 2006-08-06]
 	Updated games/angband-tty to 2.8.3nb3 [cube 2006-08-06]
+	Updated textproc/gtk-doc to 1.7 [jmmv 2006-08-06]
+	Updated sysutils/libgtop2 to 2.14.2 [jmmv 2006-08-06]
+	Updated x11/gtk2-engines to 2.6.10 [jmmv 2006-08-06]
+	Updated x11/gnome-themes to 2.14.3 [jmmv 2006-08-06]
+	Updated x11/gnome-session to 2.14.3 [jmmv 2006-08-06]
+	Updated x11/fast-user-switch-applet to 2.14.2 [jmmv 2006-08-06]
+	Updated audio/gnome-speech to 0.4.2 [jmmv 2006-08-06]
+	Updated editors/dasher to 4.0.4 [jmmv 2006-08-06]
+	Updated misc/gok to 1.0.10 [jmmv 2006-08-06]
+	Updated x11/gnome-mag to 0.12.6 [jmmv 2006-08-06]
+	Updated x11/gnopernicus to 1.1.1 [jmmv 2006-08-06]
+	Updated games/gnome2-games to 2.14.3 [jmmv 2006-08-06]
+	Updated sysutils/gnome2-system-monitor to 2.14.5 [jmmv 2006-08-06]
+	Updated mail/evolution to 2.6.3 [jmmv 2006-08-06]
+	Updated mail/evolution to 2.6.3 [jmmv 2006-08-06]
+	Updated misc/deskbar-applet to 2.14.2 [jmmv 2006-08-06]
+	Updated time/evolution-webcal to 2.6.0 [jmmv 2006-08-06]
+	Updated mail/evolution-exchange to 2.6.3 [jmmv 2006-08-06]
+	Updated meta-pkgs/gnome-devel to 2.14.3 [jmmv 2006-08-06]
+	Updated meta-pkgs/gnome-base to 2.14.3 [jmmv 2006-08-06]
+	Updated meta-pkgs/gnome to 2.14.3 [jmmv 2006-08-06]
