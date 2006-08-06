@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5288 2006/08/06 10:37:40 wiz Exp $
+$NetBSD: TODO,v 1.5289 2006/08/06 11:03:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -449,12 +449,12 @@ Suggested package updates
 	o diffstat-1.43
 	o dirac-0.6.0
 	o dirdiff-2.1
-	o dnsmasq-2.31
+	o dnsmasq-2.33
 	o dnstop-20050405
 	o dnstracer-1.8
 	o drscheme-352
 	o dvdauthor-0.6.11
-	o dvdrip-0.97.12
+	o dvdrip-0.97.13
 	o dvdstyler-1.5beta5
 	o dvipng-1.8
 	o dx-4.3.3
@@ -559,7 +559,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o gok-1.0.10
-	o gossip-0.13
+	o gossip-0.14
 	o gpsdrive-2.09
 	o grace-5.1.20
 	o gramofile-1.6P
@@ -735,7 +735,7 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-plugger-5.1.3
 	o moz-flash-0.4.13
-	o mp3blaster-3.2.2
+	o mp3blaster-3.2.3
 	o mpage-2.5.4
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.25
@@ -951,6 +951,7 @@ Suggested package updates
 	o posh-0.4.3
 	o postgresql-8.1.4
 	o postgresql_autodoc-1.25
+	o postgrey-1.27
 	o powermanga-0.80
 	o prayer-1.0.15
 	o prelude-lml-0.9.6
@@ -981,7 +982,7 @@ Suggested package updates
 	o py-curl-7.15.4.2
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
-	o py-gobject-2.11.0
+	o py-gobject-2.11.1
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
@@ -1138,6 +1139,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tob-0.26
 	o top-3.6beta1
+	o totem-1.4.4
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
