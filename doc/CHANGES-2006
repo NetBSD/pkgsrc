@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.947 2006/08/06 21:42:46 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.948 2006/08/06 23:11:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/gnome to 2.14.3 [jmmv 2006-08-06]
 	Updated multimedia/totem to 1.4.4 [jmmv 2006-08-06]
 	Updated multimedia/totem-xine to 1.4.4 [jmmv 2006-08-06]
+	Updated devel/idutils to 4.2 [wiz 2006-08-06]
