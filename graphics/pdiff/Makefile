@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/10 19:53:54 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/06 10:41:00 wiz Exp $
 #
 
 DISTNAME=		pdiff0.9b-src
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 EXTRACT_OPTS+=		-d pdiff
 
 WRKSRC=			${WRKDIR}/pdiff
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c c++
 
 BUILD_DEPENDS+=		cmake>=2:../../devel/cmake
 
