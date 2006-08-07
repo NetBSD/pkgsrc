@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5294 2006/08/07 14:29:53 wiz Exp $
+$NetBSD: TODO,v 1.5295 2006/08/07 17:57:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,6 @@ Suggested package updates
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o defendguin-0.0.11
-	o dejavu-ttf-2.8
 	o delegate-9.1.1
 	o denemo-0.7.5
 	o devIL-1.6.7
