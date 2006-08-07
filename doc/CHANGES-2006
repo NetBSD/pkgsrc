@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.955 2006/08/07 23:22:11 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.956 2006/08/07 23:24:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3097,6 +3097,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nmapfe to 0.9.5nb29 [salo 2006-06-15]
 	Updated fonts/adobe-cmaps to 20060615 [minskim 2006-06-15]
 	Updated print/tex-dhucs to 3.0.2 [minskim 2006-06-15]
+	Updated cad/qcad to 2.0.5.0 [chap 2006-06-15]
 	Moved www/horde3 to www/horde [adrianp 2006-06-16]
 	Moved mail/imp4 to mail/imp [adrianp 2006-06-16]
 	Updated www/horde to 3.1.1nb2 [adrianp 2006-06-16]
