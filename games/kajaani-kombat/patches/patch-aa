@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/14 22:17:29 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/07 19:35:07 wiz Exp $
 
---- Makefile.orig	2005-01-07 13:02:55.000000000 +0100
+--- Makefile.orig	2005-01-31 18:57:14.000000000 +0000
 +++ Makefile
 @@ -19,7 +19,7 @@
  
@@ -11,18 +11,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/14 22:17:29 wiz Exp $
  	DEBUG= -O $(MEDIA)
  endif
  ## WIN RELEASE
-@@ -29,12 +29,12 @@ ifeq ($(sys), WIN)
- endif
- ## UNIX RELEASE
- ifeq ($(sys), UNIX)
--	MEDIA=-D MEDIA_PATH=\"./\"
-+	MEDIA=-D MEDIA_PATH=\"${PREFIX}/share/kajaani-kombat/\"
- 	DEBUG= -O $(MEDIA)
+@@ -34,12 +34,12 @@ ifeq ($(sys), UNIX )
  endif
  ## UNIX DEBUG
- ifeq ($(sys),)
+ ifeq ($(sys), DEBUG)
 -	MEDIA=-D MEDIA_PATH=\"./\"
 +	MEDIA=-D MEDIA_PATH=\"${PREFIX}/share/kajaani-kombat/\"
  	DEBUG= -g -DDEBUG $(MEDIA)
+ endif
+ ## UNIX RELEASE (default option)
+ ifeq ($(sys), )
+-	MEDIA=-D MEDIA_PATH=\"./\"
++	MEDIA=-D MEDIA_PATH=\"${PREFIX}/share/kajaani-kombat/\"
+ 	DEBUG= -O $(MEDIA)
  endif
  
