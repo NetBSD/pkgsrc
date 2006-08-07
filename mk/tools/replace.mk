@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.174 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: replace.mk,v 1.175 2006/08/07 14:54:14 cube Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -903,7 +903,7 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 # These tools are all supplied by a Ghostscript package if there is no
 # native tool available.
 #
-_TOOLS.ghostscript=	gs pdf2ps ps2pdf
+_TOOLS.ghostscript=	dvipdf gs pdf2ps ps2pdf
 
 # This is the minimum version of Ghostscript required by the current
 # package.
