@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/07/31 21:43:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2006/08/07 11:21:45 wiz Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
@@ -27,10 +27,3 @@ LDFLAGS.NetBSD+=	-lstdc++ -lm
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
-# gcc 4.x generates code that produces background noise during playback.
-# Disabling optimizations when using this compiler solves the problem.
-.if !empty(CC_VERSION:Mgcc-4*)
-CFLAGS+=		-O0
-CXXFLAGS+=		-O0
-.endif
