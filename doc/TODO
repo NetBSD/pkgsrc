@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5298 2006/08/07 23:22:11 wiz Exp $
+$NetBSD: TODO,v 1.5299 2006/08/07 23:25:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -8,11 +8,6 @@ Suggested new packages
 
 	any complete, polished packages in pkgsrc-wip (ditto)
 	http://pkgsrc-wip.sourceforge.net/
-
-	jgloss [wip/jgloss]
-	application for adding reading and translation annotations
-	to Japanese text documents
-	http://jgloss.sourceforge.net/
 
 	loserjabber
 	GTK application which allows posting of journal entries to
@@ -38,18 +33,6 @@ Suggested new packages
 	(See mail/sq-squirrelspell for an example.)
 	http://www.squirrelmail.org/index.php3?page=15
 
-	tutos [wip/tutos]
-	the ultimate team organization software
-	http://www.tutos.org/ [agc is looking at this one]
-
-	MythTV [wip/mythtv]
-	Digital video recorder
-	http://www.mythtv.org/
-
-	Unreal Tournament server [wip/unrealtournament-server]
-	Server for Unreal Tournament first person shooter
-	http://files.sobservers.com/UnrealTournament/UTServerOnly/
-
 	p5-Crypt-PasswdMD5-1.3
 	Provides interoperable MD5-based crypt() function
 
@@ -60,9 +43,6 @@ Suggested new packages
 	info2man
 	http://freshmeat.net/projects/info2man/
 	requires perl, provides info2man and info2pod
-
-	sgmltools-lite [wip/sgmltools-lite, PR 14849]
-	Generates various output formats from DocBook SGML documents
 
 	moz-plugger
 	http://mozplugger.mozdev.org/
@@ -87,10 +67,6 @@ Suggested new packages
 	Filelight
 	http://www.methylblue.com/filelight/
 	Graphical representation of disk space usage
-
-	Cinelerra [wip/cinelerra]
-	http://heroinewarrior.com/cinelerra.php3
-	Cinelerra is a complete audio and video production environment.
 
 	SlimServer
 	http://www.slimdevices.com/pi_features.html
@@ -198,10 +174,6 @@ Suggested new packages
 	cricket 1.0.5
 	http://cricket.sourceforge.net
 	Monitoring & graphing system based on RRDtool
-
-	The Ur-Quan Masters [wip/uqm]
-	http://sc2.sourceforge.net
-	Open source version of the classic game "Star Control 2"
 
 	Webware for Python
 	http://www.webwareforpython.org/
@@ -987,7 +959,6 @@ Suggested package updates
 	o pysol-4.82
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qcad-2.0.4.0 [pkgsrc-wip]
 	o qdbm-1.8.65
 	o qemu-0.8.2
 	o qt1-1.45
