@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.5 2006/05/18 16:11:15 cube Exp $
+$NetBSD: patch-ae,v 1.5.2.1 2006/08/07 08:54:16 salo Exp $
 
 Don't install scripts handled by mysql-server.
 
---- scripts/Makefile.in.orig	2006-04-26 20:32:21.000000000 +0200
-+++ scripts/Makefile.in
-@@ -351,13 +351,12 @@ yassl_includes = @yassl_includes@
+--- scripts/Makefile.in.orig	2006-07-27 19:53:32.000000000 +0100
++++ scripts/Makefile.in	2006-08-06 15:11:56.000000000 +0100
+@@ -351,13 +351,12 @@
  yassl_libs = @yassl_libs@
  yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
  zlib_dir = @zlib_dir@
@@ -19,10 +19,10 @@ Don't install scripts handled by mysql-server.
  			mysql_zap \
  			mysqlaccess \
  			mysqlbug \
-@@ -368,7 +367,6 @@ bin_SCRIPTS = @server_scripts@ \
+@@ -368,7 +367,6 @@
  			mysql_explain_log \
  			mysql_tableinfo \
- 			mysql_upgrade \
+ 			mysql_upgrade_shell \
 -			mysqld_multi \
  			mysql_create_system_tables
  
