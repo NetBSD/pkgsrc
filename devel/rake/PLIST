@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/16 23:12:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/07 16:11:32 taca Exp $
 bin/rake
 man/man1/rake.1
 ${RUBY_SITELIBDIR}/rake.rb
@@ -30,6 +30,15 @@ ${RUBY_DOCDIR}/rake/jamis.rb
 ${RUBY_DOCDIR}/rake/proto_rake.rdoc
 ${RUBY_DOCDIR}/rake/rakefile.rdoc
 ${RUBY_DOCDIR}/rake/rational.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.4.14.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.4.15.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.5.0.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.5.3.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.5.4.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.6.0.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.7.0.rdoc
+${RUBY_DOCDIR}/rake/release_notes/rake-0.7.1.rdoc
+@dirrm ${RUBY_DOCDIR}/rake/release_notes
 @dirrm ${RUBY_DOCDIR}/rake
 ${RUBY_EXAMPLESDIR}/rake/Rakefile1
 ${RUBY_EXAMPLESDIR}/rake/Rakefile2
