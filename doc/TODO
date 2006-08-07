@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5297 2006/08/07 20:01:23 wiz Exp $
+$NetBSD: TODO,v 1.5298 2006/08/07 23:22:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -967,7 +967,6 @@ Suggested package updates
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-psyco-1.5.1
-	o py-psycopg-2.0.2
 	o py-psycopg2-2.0.3
 	o py-pyrex-0.9.3.1
 	o py-qt3-base-3.16
