@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5303 2006/08/07 23:48:40 wiz Exp $
+$NetBSD: TODO,v 1.5304 2006/08/07 23:54:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1188,7 +1188,6 @@ Suggested package updates
 	o yencode-0.46
 	o yodl-2.01.02
 	o ysm-2.9.8
-	o yudit-2.8.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.17
