@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2005/11/03 05:12:42 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/07 16:12:27 taca Exp $
 
-DISTNAME=	rubygems-0.8.11
-PKGREVISION=	1
+DISTNAME=	rubygems-0.9.0
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/5207/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/11289/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://rubygems.rubyforge.org/
+HOMEPAGE=	http://www.rubygems.org/
 COMMENT=	Ruby standard for publishing and managing third party libraries
 
 RUBY_REQD=	1.8.3

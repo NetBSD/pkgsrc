@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/18 05:43:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/08/07 16:12:27 taca Exp $
 bin/gem
 bin/gem_mirror
 bin/gem_server
+bin/gemlock
+bin/gemri
 bin/gemwhich
-bin/generate_yaml_index.rb
+bin/index_gem_repository.rb
 bin/update_rubygems
 lib/ruby/gems/${RUBY_VER_DIR}/cache/sources-0.0.1.gem
 lib/ruby/gems/${RUBY_VER_DIR}/gems/sources-0.0.1/lib/sources.rb
 lib/ruby/gems/${RUBY_VER_DIR}/specifications/sources-0.0.1.gemspec
 ${RUBY_SITELIBDIR}/gemconfigure.rb
+${RUBY_SITELIBDIR}/rbconfig/datadir.rb
+@dirrm ${RUBY_SITELIBDIR}/rbconfig
 ${RUBY_SITELIBDIR}/rubygems.rb
 ${RUBY_SITELIBDIR}/rubygems/builder.rb
 ${RUBY_SITELIBDIR}/rubygems/cmd_manager.rb
@@ -16,12 +20,12 @@ ${RUBY_SITELIBDIR}/rubygems/command.rb
 ${RUBY_SITELIBDIR}/rubygems/config_file.rb
 ${RUBY_SITELIBDIR}/rubygems/custom_require.rb
 ${RUBY_SITELIBDIR}/rubygems/dependency_list.rb
-${RUBY_SITELIBDIR}/rubygems/deployment.rb
 ${RUBY_SITELIBDIR}/rubygems/doc_manager.rb
 ${RUBY_SITELIBDIR}/rubygems/format.rb
 ${RUBY_SITELIBDIR}/rubygems/gem_commands.rb
 ${RUBY_SITELIBDIR}/rubygems/gem_openssl.rb
 ${RUBY_SITELIBDIR}/rubygems/gem_runner.rb
+${RUBY_SITELIBDIR}/rubygems/incremental_fetcher.rb
 ${RUBY_SITELIBDIR}/rubygems/installer.rb
 ${RUBY_SITELIBDIR}/rubygems/loadpath_manager.rb
 ${RUBY_SITELIBDIR}/rubygems/old_format.rb
