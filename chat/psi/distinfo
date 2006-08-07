@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2006/03/21 07:32:41 minskim Exp $
+$NetBSD: distinfo,v 1.17 2006/08/07 01:31:33 perry Exp $
 
 SHA1 (psi-0.10-20060321/psi-0.10.tar.bz2) = f1687f8b93338f47cb1c8fa363e4b4f58628f167
 RMD160 (psi-0.10-20060321/psi-0.10.tar.bz2) = b8be1490cd02f61cf86f09f2dc9f29716ea4c186
@@ -39,8 +39,8 @@ Size (psi-0.10-20060321/psi_pt_BR.qm) = 139768 bytes
 SHA1 (psi-0.10-20060321/psi_sk.qm) = 77ae0ed29af4e6cf43e37509a48c83b4f2fc5884
 RMD160 (psi-0.10-20060321/psi_sk.qm) = 4757cd60149cecc9666cabbca950acb44fe0fb3b
 Size (psi-0.10-20060321/psi_sk.qm) = 127088 bytes
-SHA1 (psi-0.10-20060321/psi_sl.qm) = 9e466382a983d724959716583b33e6f8adcd2995
-RMD160 (psi-0.10-20060321/psi_sl.qm) = 4bf51acd94cbf2a8500d42507c08bb645d534522
+SHA1 (psi-0.10-20060321/psi_sl.qm) = 67555cc727f7ba6e7ceb740418b93c031826c50d
+RMD160 (psi-0.10-20060321/psi_sl.qm) = afe18282840c05d9ff677a5836381f6985dd0c28
 Size (psi-0.10-20060321/psi_sl.qm) = 129990 bytes
 SHA1 (psi-0.10-20060321/psi_vi.qm) = 68457ded09a981de1c1a04fd06596ced922bc812
 RMD160 (psi-0.10-20060321/psi_vi.qm) = f8d444f843e47cd36e3d468a34604b71115bfaa3
