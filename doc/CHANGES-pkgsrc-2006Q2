@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.60 2006/08/06 12:18:53 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.61 2006/08/07 08:54:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -135,3 +135,5 @@ Pullup ticket 1778 - requested by adrianp
 security fix for cfs
 Pullup ticket 1779 - requested by salo
 security update for trac and ja-trac
+Pullup ticket 1780 - requested by tron
+security update for mysql5
