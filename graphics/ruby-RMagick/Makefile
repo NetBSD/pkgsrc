@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/07/02 11:03:27 taca Exp $
+# $NetBSD: Makefile,v 1.24 2006/08/07 16:16:31 taca Exp $
 
 DISTNAME=	RMagick-1.13.0
+PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/11316/ \
