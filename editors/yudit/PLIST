@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/08/12 13:47:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/07 23:54:17 wiz Exp $
 bin/mytool
 bin/uniconv
 bin/uniprint
@@ -17,6 +17,7 @@ share/yudit/data/ArmenianEast.my
 share/yudit/data/ArmenianEastPhon.my
 share/yudit/data/ArmenianWest.my
 share/yudit/data/Azeri.my
+share/yudit/data/Baybayin.my
 share/yudit/data/Belarusian.my
 share/yudit/data/Bengali-Inscript.my
 share/yudit/data/Bengali.my
@@ -40,6 +41,7 @@ share/yudit/data/Dakelh.my
 share/yudit/data/Danish.my
 share/yudit/data/Devanagari-Inscript.my
 share/yudit/data/Devanagari-Phonetic.my
+share/yudit/data/Devanagari-Velthuis.my
 share/yudit/data/Devanagari.my
 share/yudit/data/Dutch.my
 share/yudit/data/Esperanto.my
@@ -49,6 +51,7 @@ share/yudit/data/French.my
 share/yudit/data/Georgian.my
 share/yudit/data/GeorgianB.my
 share/yudit/data/German.my
+share/yudit/data/Glagolitic.my
 share/yudit/data/GrandLatin.my
 share/yudit/data/GreekAncient.my
 share/yudit/data/GreekBible.my
@@ -99,6 +102,7 @@ share/yudit/data/OldItalic.my
 share/yudit/data/Oriya-Inscript.my
 share/yudit/data/Oriya.my
 share/yudit/data/Persian.my
+share/yudit/data/Polish-slash.my
 share/yudit/data/Polish.my
 share/yudit/data/Romanian.my
 share/yudit/data/Runic-Futhark.my
@@ -290,6 +294,7 @@ share/yudit/src/ArmenianEast.kmap
 share/yudit/src/ArmenianEastPhon.kmap
 share/yudit/src/ArmenianWest.kmap
 share/yudit/src/Azeri.kmap
+share/yudit/src/Baybayin.kmap
 share/yudit/src/Belarusian.kmap
 share/yudit/src/Bengali-Inscript.kmap
 share/yudit/src/Bengali.kmap
@@ -313,6 +318,7 @@ share/yudit/src/Dakelh.kmap
 share/yudit/src/Danish.kmap
 share/yudit/src/Devanagari-Inscript.kmap
 share/yudit/src/Devanagari-Phonetic.kmap
+share/yudit/src/Devanagari-Velthuis.kmap
 share/yudit/src/Devanagari.kmap
 share/yudit/src/Dutch.kmap
 share/yudit/src/Esperanto.kmap
@@ -322,6 +328,7 @@ share/yudit/src/French.kmap
 share/yudit/src/Georgian.kmap
 share/yudit/src/GeorgianB.kmap
 share/yudit/src/German.kmap
+share/yudit/src/Glagolitic.kmap
 share/yudit/src/GrandLatin.kmap
 share/yudit/src/GreekAncient.kmap
 share/yudit/src/GreekBible.kmap
@@ -359,6 +366,7 @@ share/yudit/src/Mongolian.kmap
 share/yudit/src/Oriya-Inscript.kmap
 share/yudit/src/Oriya.kmap
 share/yudit/src/Persian.kmap
+share/yudit/src/Polish-slash.kmap
 share/yudit/src/Polish.kmap
 share/yudit/src/Romanian.kmap
 share/yudit/src/Runic-Futhark.kmap
@@ -380,8 +388,8 @@ share/yudit/src/Serbian.kmap
 share/yudit/src/Slavic.kmap
 share/yudit/src/Slovak-Programmer.kmap
 share/yudit/src/Slovenian.kmap
-share/yudit/src/SpanishPrefix.kmap
 share/yudit/src/Spanish.kmap
+share/yudit/src/SpanishPrefix.kmap
 share/yudit/src/Syriac.kmap
 share/yudit/src/Tamil-Inscript.kmap
 share/yudit/src/Tamil.kmap
