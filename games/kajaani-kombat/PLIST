@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/14 22:17:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/07 19:35:06 wiz Exp $
 bin/kajaani-kombat
 man/man6/kajaani-kombat.6
 share/kajaani-kombat/0ammo.png
@@ -153,6 +153,12 @@ share/kajaani-kombat/numpl_buttwo.png
 share/kajaani-kombat/numpl_buttwo_act.png
 share/kajaani-kombat/numpl_buttwo_focus.png
 share/kajaani-kombat/numpl_imgtext.png
+share/kajaani-kombat/options_apply.png
+share/kajaani-kombat/options_apply_act.png
+share/kajaani-kombat/options_apply_focus.png
+share/kajaani-kombat/options_cancel.png
+share/kajaani-kombat/options_cancel_act.png
+share/kajaani-kombat/options_cancel_focus.png
 share/kajaani-kombat/sound_block_down.ogg
 share/kajaani-kombat/sound_block_rotate.ogg
 share/kajaani-kombat/sound_gui_navigation.ogg
