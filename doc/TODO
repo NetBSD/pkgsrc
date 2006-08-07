@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5296 2006/08/07 19:35:40 wiz Exp $
+$NetBSD: TODO,v 1.5297 2006/08/07 20:01:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -733,7 +733,6 @@ Suggested package updates
 	o nagios-2.5
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
-	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
 	o neon-0.26.1
@@ -772,7 +771,6 @@ Suggested package updates
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
 	o openttd-0.4.7
-	o opera-9.01
 	o oregano-0.50.0
 	o oroborus-2.0.15
 	o osh-050219
