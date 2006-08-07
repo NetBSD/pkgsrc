@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.952 2006/08/07 16:16:59 taca Exp $
+$NetBSD: CHANGES-2006,v 1.953 2006/08/07 17:57:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3847,6 +3847,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/idutils to 4.2 [wiz 2006-08-06]
 	Updated graphics/ImageMagick to 6.2.8.8 [perry 2006-08-06]
 	Updated mail/dovecot to 1.0rc6 [ghen 2006-08-07]
+	Updated fonts/dejavu-ttf to 2.8 [wiz 2006-08-07]
 	Updated devel/rake to 0.7.1 [taca 2006-08-07]
 	Updated misc/rubygems to 0.9.0 [taca 2006-08-07]
 	Updated databases/ruby-mysql to 2.7.1 [taca 2006-08-07]
