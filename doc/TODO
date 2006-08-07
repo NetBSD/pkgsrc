@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5302 2006/08/07 23:47:34 wiz Exp $
+$NetBSD: TODO,v 1.5303 2006/08/07 23:48:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1181,7 +1181,6 @@ Suggested package updates
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xview-3.2.1.4.21.2
-	o xwrits-2.22
 	o xzip-182
 	o yafc-1.1
 	o yasm-0.5.0
