@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2006/04/26 07:41:17 rillig Exp $
+$NetBSD: distinfo,v 1.13 2006/08/07 23:39:56 wiz Exp $
 
-SHA1 (sox-12.17.9.tar.gz) = 1c20f73a38cc5dfe15102df0565c7f2cea7e0bd8
-RMD160 (sox-12.17.9.tar.gz) = 1ba76bf5329daafe75158757b7074f8385788353
-Size (sox-12.17.9.tar.gz) = 468174 bytes
+SHA1 (sox-12.18.1.tar.gz) = 9591248680029a6e89468daeb4046cdab6e6e759
+RMD160 (sox-12.18.1.tar.gz) = 8177a5b606aad45d7bdf8bba9ea6d818b2399301
+Size (sox-12.18.1.tar.gz) = 473181 bytes
 SHA1 (patch-aa) = a1e3d17b0f674dd55405879337754c16846e5b03
 SHA1 (patch-ab) = 52157b6875ca4ca1b116ae898e26a99652bdb55b
