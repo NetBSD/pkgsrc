@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/04 01:08:21 reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/07 13:33:01 reed Exp $
 #
 
 DISTNAME=		jwm-1.7
@@ -32,9 +32,7 @@ CONF_FILES= 		${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
 
 .include "options.mk"
 
-#.include "../../fonts/Xft2/buildlink3.mk"
-#.include "../../graphics/xpm/buildlink3.mk"
-.include "../../wip/libXft/buildlink3.mk"
-.include "../../wip/libXpm/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
