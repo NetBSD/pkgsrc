@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/08/07 23:37:49 wiz Exp $
 #
 
-DISTNAME=		snd-7.18
-PKGREVISION=		2
+DISTNAME=		snd-8.3
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snd/}
 
@@ -20,7 +19,7 @@ USE_TOOLS+=		gmake pkg-config
 
 BUILD_TARGET=		snd
 MAKEFILE=		makefile
-WRKSRC=			${WRKDIR}/snd-7
+WRKSRC=			${WRKDIR}/snd-8
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/po/de.gmo \
