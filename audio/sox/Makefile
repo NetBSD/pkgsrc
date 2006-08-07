@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2006/04/04 18:19:13 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/08/07 23:39:56 wiz Exp $
 
-DISTNAME=	sox-12.17.9
+DISTNAME=	sox-12.18.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/} \
 		http://www.cnpbagwell.com/
