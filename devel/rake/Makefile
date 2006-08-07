@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 13:54:45 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/07 16:11:32 taca Exp $
 
-DISTNAME=	rake-0.6.2
+DISTNAME=	rake-0.7.1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/6357/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/9499/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -26,14 +26,17 @@ pre-configure:
 	${RM} ${WRKSRC}/bin/rake.orig
 
 post-install:
-	@if [ ! -f ${WRKSRC}/doc/rake.1 ]; then \
+	if [ ! -f ${WRKSRC}/doc/rake.1 ]; then \
 		${GUNZIP_CMD} ${WRKSRC}/doc/rake.1.gz; \
 	fi
 	${INSTALL_MAN} ${WRKSRC}/doc/rake.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}/release_notes
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
+	for f in ${WRKSRC}/doc/release_notes/*; do \
+		${INSTALL_DATA} $$f ${DOCDIR}/release_notes; \
+	done
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/doc/example/${f} ${EXAMPLESDIR}
