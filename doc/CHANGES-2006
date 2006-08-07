@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.960 2006/08/07 23:48:39 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.961 2006/08/07 23:54:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/sox to 12.18.1 [wiz 2006-08-07]
 	Updated audio/xmms-mad to 0.5.7 [wiz 2006-08-07]
 	Updated x11/xwrits to 2.24 [wiz 2006-08-07]
+	Updated editors/yudit to 2.8.1 [wiz 2006-08-07]
