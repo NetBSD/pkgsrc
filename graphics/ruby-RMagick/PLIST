@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/02 11:03:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/08/07 16:16:31 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
@@ -359,8 +359,6 @@ ${RUBY_DOCDIR}/RMagick/ex/qbezierpath.rb
 ${RUBY_DOCDIR}/RMagick/ex/quad01.gif
 ${RUBY_DOCDIR}/RMagick/ex/quad01.rb
 ${RUBY_DOCDIR}/RMagick/ex/quantize-m.rb
-${RUBY_DOCDIR}/RMagick/ex/quantize-m_after.jpg
-${RUBY_DOCDIR}/RMagick/ex/quantize-m_before.jpg
 ${RUBY_DOCDIR}/RMagick/ex/radial_blur.jpg
 ${RUBY_DOCDIR}/RMagick/ex/radial_blur.rb
 ${RUBY_DOCDIR}/RMagick/ex/raise.jpg
