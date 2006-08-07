@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5300 2006/08/07 23:38:16 wiz Exp $
+$NetBSD: TODO,v 1.5301 2006/08/07 23:40:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1040,7 +1040,6 @@ Suggested package updates
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.4
-	o sox-12.18.1
 	o spamass-milter-0.3.1 [pkg/33206]
 	o spamprobe-1.4b
 	o spim-7.2.1
