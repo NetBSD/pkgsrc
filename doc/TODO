@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5299 2006/08/07 23:25:00 wiz Exp $
+$NetBSD: TODO,v 1.5300 2006/08/07 23:38:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ Suggested package updates
 	o smalltalk-2.1.12
 	o smlnj-110.59 [pkgsrc-wip]
 	o smokeping-2.0.9
-	o snd-8.3
 	o snes9x-1.502
 	o snort-2.6.0
 	o socat-1.5.0.0
