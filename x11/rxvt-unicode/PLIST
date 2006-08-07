@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/04 11:12:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/07 23:21:16 wiz Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -6,6 +6,7 @@ lib/urxvt/perl/automove-background
 lib/urxvt/perl/block-graphics-to-ascii
 lib/urxvt/perl/digital-clock
 lib/urxvt/perl/example-refresh-hooks
+lib/urxvt/perl/kuake
 lib/urxvt/perl/mark-urls
 lib/urxvt/perl/option-popup
 lib/urxvt/perl/readline
