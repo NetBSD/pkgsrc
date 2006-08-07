@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.949 2006/08/07 01:09:41 perry Exp $
+$NetBSD: CHANGES-2006,v 1.950 2006/08/07 06:45:30 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/totem-xine to 1.4.4 [jmmv 2006-08-06]
 	Updated devel/idutils to 4.2 [wiz 2006-08-06]
 	Updated graphics/ImageMagick to 6.2.8.8 [perry 2006-08-06]
+	Updated mail/dovecot to 1.0rc6 [ghen 2006-08-07]
