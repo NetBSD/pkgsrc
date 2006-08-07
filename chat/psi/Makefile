@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/08/07 01:31:33 perry Exp $
+# $NetBSD: Makefile,v 1.43 2006/08/07 01:35:04 perry Exp $
 
 PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
@@ -16,9 +16,6 @@ DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 DIST_SUBDIR=	${DISTNAME}-20060321
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
-# XXX uses internal bsd.pkg.mk variable
-FETCH_BEFORE_ARGS+=	${FETCH_OUTPUT_ARGS} "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c++
