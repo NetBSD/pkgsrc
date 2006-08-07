@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.954 2006/08/07 19:35:40 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.955 2006/08/07 23:22:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3853,3 +3853,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/ruby-mysql to 2.7.1 [taca 2006-08-07]
 	Updated graphics/ruby-RMagick to 1.13.0nb1 [taca 2006-08-07]
 	Updated games/kajaani-kombat to 0.7 [wiz 2006-08-07]
+	Updated x11/rxvt-unicode to 7.9 [wiz 2006-08-07]
