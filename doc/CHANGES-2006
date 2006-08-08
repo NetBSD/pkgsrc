@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.964 2006/08/08 11:49:03 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.965 2006/08/08 12:29:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ruby-RMagick to 1.13.0nb2 [taca 2006-08-08]
 	Updated lang/spidermonkey to 1.5nb3 [tron 2006-08-08]
 	Updated cad/gerbv to 1.0.2 [dmcmahill 2006-08-08]
+	Updated devel/rapidsvn to 0.9.3 [wiz 2006-08-08]
