@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/08/08 22:07:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/08 22:23:39 xtraeme Exp $
 
 DISTNAME=	estd-r5
 PKGNAME=	estd-0.5
@@ -10,7 +10,8 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.elektro-eel.org/
 COMMENT=	Dynamically sets the CPU-frequency on SpeedStep-enabled CPUs
 
-ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 DragonFly-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 DragonFly-*-i386 \
+			NetBSD-[3-9]*-amd64
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	do-configure
