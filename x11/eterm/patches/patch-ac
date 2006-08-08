@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.4 2006/08/08 10:49:01 wiz Exp $
+
+--- src/command.c.orig	2004-06-25 21:10:33.000000000 +0000
++++ src/command.c
+@@ -3002,9 +3002,9 @@ init_command(char **argv)
+     Xfd = XConnectionNumber(Xdisplay);
+     D_CMD(("Xfd = %d\n", Xfd));
+     cmdbuf_ptr = cmdbuf_endp = cmdbuf_base;
+-    AT_LEAST((int) num_fds, Xfd + 1);
++    AT_LEAST(num_fds, Xfd + 1);
+     if (pipe_fd >= 0) {
+-        AT_LEAST((int) num_fds, pipe_fd + 1);
++        AT_LEAST(num_fds, pipe_fd + 1);
+     }
+     if ((cmd_fd = command_func(argv)) < 0) {
+         print_error("Unable to run sub-command.\n");
