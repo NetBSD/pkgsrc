@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.9 2005/05/17 17:06:12 abs Exp $
+$NetBSD: patch-ac,v 1.10 2006/08/08 15:24:01 abs Exp $
 
---- OS/Makefile-NetBSD-a.out.orig	2005-05-04 12:35:39.000000000 +0100
+--- OS/Makefile-NetBSD-a.out.orig	2006-04-28 11:32:21.000000000 +0100
 +++ OS/Makefile-NetBSD-a.out
 @@ -3,7 +3,7 @@
  # Exim: OS-specific make file for NetBSD (a.out/COFF object format)

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2005/05/17 17:06:12 abs Exp $
+$NetBSD: patch-ae,v 1.9 2006/08/08 15:24:01 abs Exp $
 
---- scripts/exim_install.orig	2005-05-04 12:35:39.000000000 +0100
+--- scripts/exim_install.orig	2006-04-28 11:32:21.000000000 +0100
 +++ scripts/exim_install
-@@ -80,6 +80,8 @@ if [ "${SYSTEM_ALIASES_FILE}" = "" ] ; t
+@@ -84,6 +84,8 @@ if [ "${SYSTEM_ALIASES_FILE}" = "" ] ; t
    SYSTEM_ALIASES_FILE=/etc/aliases
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.8 2005/05/17 17:06:12 abs Exp $
  # Allow INST_xx to over-ride xx
  case "$INST_BIN_DIRECTORY"       in ?*) BIN_DIRECTORY="$INST_BIN_DIRECTORY";; esac
  case "$INST_CONFIGURE_FILE"      in ?*) CONFIGURE_FILE="$INST_CONFIGURE_FILE";; esac
-@@ -390,15 +392,8 @@ elif [ ! -f ${CONFIGURE_FILE} ]; then
+@@ -415,15 +417,8 @@ elif [ ! -f ${CONFIGURE_FILE} ]; then
      echo $com "*** Exim installation ${ver}failed ***"
      exit 1
    fi

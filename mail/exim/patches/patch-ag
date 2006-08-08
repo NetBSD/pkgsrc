@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2006/06/14 22:43:39 abs Exp $
+$NetBSD: patch-ag,v 1.6 2006/08/08 15:24:01 abs Exp $
 
---- src/spam.h.orig	2005-10-04 09:55:28.000000000 +0100
+--- src/spam.h.orig	2006-04-28 11:32:23.000000000 +0100
 +++ src/spam.h
 @@ -12,7 +12,7 @@
  #ifdef WITH_CONTENT_SCAN
