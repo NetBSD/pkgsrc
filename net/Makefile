@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.631 2006/08/03 15:11:28 salo Exp $
+# $NetBSD: Makefile,v 1.632 2006/08/08 19:43:26 abs Exp $
 #
 
 COMMENT=	Networking tools
@@ -426,6 +426,7 @@ SUBDIR+=	tcpreplay
 SUBDIR+=	tcpslice
 SUBDIR+=	tcptrace
 SUBDIR+=	tcptraceroute
+SUBDIR+=	teamspeak-client
 SUBDIR+=	tightvnc
 SUBDIR+=	tightvncviewer
 SUBDIR+=	tinc
@@ -468,6 +469,7 @@ SUBDIR+=	wget
 SUBDIR+=	whatmask
 SUBDIR+=	whoson
 SUBDIR+=	wimon
+SUBDIR+=	wireshark
 SUBDIR+=	wistumbler
 SUBDIR+=	wistumbler2
 SUBDIR+=	wistumbler2-gtk
@@ -486,7 +488,6 @@ SUBDIR+=	xnap
 SUBDIR+=	xorp
 SUBDIR+=	xrmftp
 SUBDIR+=	xtraceroute
-SUBDIR+=	wireshark
 SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
 SUBDIR+=	yaz
