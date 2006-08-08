@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2006/08/08 21:08:14 tron Exp $
+
+--- rules.mk.orig	2003-11-15 00:11:04.000000000 +0000
++++ rules.mk	2006-08-08 21:45:40.000000000 +0100
+@@ -115,9 +115,13 @@
+ 	$(RANLIB) $@
+ 
+ $(SHARED_LIBRARY): $(LIB_OBJS)
++ifeq ($(OS_ARCH),Darwin)
++	$(MKSHLIB) -o $@ $(LIB_OBJS) $(LDFLAGS) $(OTHER_LIBS) -install_name $(PREFIX)/lib/$(notdir $@)
++else
+ 	$(MKSHLIB) -o $@ $(LIB_OBJS) $(LDFLAGS) $(OTHER_LIBS)
+ endif
+ endif
++endif
+ 
+ # Java stuff
+ $(CLASSDIR)/$(OBJDIR)/$(JARPATH)/%.class: %.java
