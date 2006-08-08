@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.3 2006/08/08 15:27:36 tron Exp $
+$NetBSD: patch-ba,v 1.4 2006/08/08 15:36:00 tron Exp $
 
 --- hints/netbsd.sh.orig	2003-08-07 17:57:56.000000000 +0100
-+++ hints/netbsd.sh	2006-08-08 16:21:27.000000000 +0100
++++ hints/netbsd.sh	2006-08-08 16:33:33.000000000 +0100
 @@ -78,6 +78,30 @@
  	d_setreuid="$undef"
  	;;
@@ -57,19 +57,3 @@ $NetBSD: patch-ba,v 1.3 2006/08/08 15:27:36 tron Exp $
  case `uname -m` in
  alpha)
      echo 'int main() {}' > try.c
-@@ -179,3 +186,15 @@
- sparc) d_semctl_semid_ds=undef ;;
- esac
- 
-+
-+cat > UU/pkgsrc.cbu <<'EOCBU'
-+# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set
-+# linker options after all other call-back scripts have been invoked.
-+ldflags="-Wl,-R/usr/pkg/lib $ldflags"
-+lddlflags="-Wl,-R/usr/pkg/lib $lddlflags"
-+EOCBU
-+
-+# Set pkgsrc defaults for library and header search paths.
-+locincpth="/usr/pkg/include"
-+loclibpth="/usr/pkg/lib"
-+glibpth="/usr/lib"
