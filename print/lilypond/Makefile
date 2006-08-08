@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/04/06 18:18:15 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/08/08 19:14:39 minskim Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -17,7 +17,7 @@ BUILDLINK_API_DEPENDS.mftrace+=	mftrace>=1.1.0
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake gs:run makeinfo
+USE_TOOLS+=		bison flex gmake gs:run makeinfo
 MAKEFILE=		GNUmakefile
 
 TEXINFO_REQD=		4.7
