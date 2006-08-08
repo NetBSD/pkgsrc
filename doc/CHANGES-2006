@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.962 2006/08/08 03:14:49 taca Exp $
+$NetBSD: CHANGES-2006,v 1.963 2006/08/08 09:50:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3861,3 +3861,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xwrits to 2.24 [wiz 2006-08-07]
 	Updated editors/yudit to 2.8.1 [wiz 2006-08-07]
 	Updated graphics/ruby-RMagick to 1.13.0nb2 [taca 2006-08-08]
+	Updated lang/spidermonkey to 1.5nb3 [tron 2006-08-08]
