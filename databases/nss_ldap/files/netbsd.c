@@ -1,4 +1,4 @@
-/* $NetBSD: netbsd.c,v 1.5 2006/03/15 19:23:47 drochner Exp $ */
+/* $NetBSD: netbsd.c,v 1.6 2006/08/08 09:33:58 drochner Exp $ */
 
 #include <sys/param.h>
 #include <pwd.h>
@@ -7,6 +7,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 #include "netbsd.h"
 typedef enum nss_status NSS_STATUS;
@@ -55,7 +56,9 @@ static int nss2netbsderr[] = {
 };
 static struct passwd rpw;
 static struct group rg;
-static char pwbuf[1024], grpbuf[1024]; /* two necessary? */
+static char pwbuf[1024];
+static char *grpbuf;
+static size_t grpbuflen;
 
 static ns_mtab methods[] = {
 	{ NSDB_PASSWD, "setpwent", netbsd_setpwent, 0 },
@@ -263,6 +266,20 @@ netbsd_getpwuid_r(void *rv, void *cb_data, va_list ap)
 	return nss2netbsderr[s];
 }
 
+static int
+resize_grpbuf()
+{
+
+	if (grpbuflen > 50000) /* safety guard */
+		return (-1);
+	grpbuflen += 1024;
+	if (grpbuf)
+		free(grpbuf);
+	grpbuf = malloc(grpbuflen);
+	if (!grpbuf)
+		return (-1);
+	return (0);
+}
 
 static int
 netbsd_setgrent(void *rv, void *cb_data, va_list ap)
@@ -309,11 +326,15 @@ netbsd_getgrent(void *rv, void *cb_data, va_list ap)
 	NSS_STATUS s;
 	struct group **retval = va_arg(ap, struct group **);
 
+tryagain:
 	memset(&rg, 0, sizeof(rg));
-	s = _nss_ldap_getgrent_r(&rg, grpbuf, sizeof(grpbuf), &err);
+	s = _nss_ldap_getgrent_r(&rg, grpbuf, grpbuflen, &err);
 
 	if (s == NSS_STATUS_SUCCESS)
 		*retval = &rg;
+	else if ((s == NSS_STATUS_TRYAGAIN) && (err == ERANGE)
+		 && (resize_grpbuf() == 0))
+		goto tryagain;
 	else
 		*retval = 0;
 
@@ -355,11 +376,15 @@ netbsd_getgrnam(void *rv, void *cb_data, va_list ap)
 	struct group **retval = va_arg(ap, struct group **);
 	const char *name = va_arg(ap, const char *);
 
+tryagain:
 	memset(&rg, 0, sizeof(rg));
-	s = _nss_ldap_getgrnam_r(name, &rg, grpbuf, sizeof(grpbuf), &err);
+	s = _nss_ldap_getgrnam_r(name, &rg, grpbuf, grpbuflen, &err);
 
 	if (s == NSS_STATUS_SUCCESS)
 		*retval = &rg;
+	else if ((s == NSS_STATUS_TRYAGAIN) && (err == ERANGE)
+		 && (resize_grpbuf() == 0))
+		goto tryagain;
 	else
 		*retval = 0;
 
@@ -402,11 +427,15 @@ netbsd_getgrgid(void *rv, void *cb_data, va_list ap)
 	struct group **retval = va_arg(ap, struct group **);
 	gid_t gid = va_arg(ap, gid_t);
 
+tryagain:
 	memset(&rg, 0, sizeof(rg));
-	s = _nss_ldap_getgrgid_r(gid, &rg, grpbuf, sizeof(grpbuf), &err);
+	s = _nss_ldap_getgrgid_r(gid, &rg, grpbuf, grpbuflen, &err);
 
 	if (s == NSS_STATUS_SUCCESS)
 		*retval = &rg;
+	else if ((s == NSS_STATUS_TRYAGAIN) && (err == ERANGE)
+		 && (resize_grpbuf() == 0))
+		goto tryagain;
 	else
 		*retval = 0;
 
@@ -505,5 +534,9 @@ nss_module_register(const char *source, unsigned int *mtabsize,
 {
 	*mtabsize = sizeof(methods)/sizeof(methods[0]);
 	*unreg = NULL;
+
+	if (resize_grpbuf())
+		return 0;
+
 	return (methods);
 }
