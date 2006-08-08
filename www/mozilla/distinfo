@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.90 2006/06/06 18:28:45 ghen Exp $
+$NetBSD: distinfo,v 1.91 2006/08/08 02:51:07 christos Exp $
 
 SHA1 (mozilla-1.7.13/mozilla-1.7.13-source.tar.bz2) = c506df44c18cd8a481fdd65328bf8abeba2e423e
 RMD160 (mozilla-1.7.13/mozilla-1.7.13-source.tar.bz2) = 4360b48c8930dc427f6010c57abb8b2d0c855761
@@ -47,3 +47,4 @@ SHA1 (patch-cl) = 1450e99f5e5f31f0e8d01b68bb50494f84eed068
 SHA1 (patch-cm) = 2a347bcf5814816539835caf65dd888f71ceea20
 SHA1 (patch-cn) = e9cb26ee724c044491cc1b02d6eeb59b50769edf
 SHA1 (patch-co) = 2d0c80d7f6df59c5c12f559f1c409a82e057959d
+SHA1 (patch-cp) = 976cb208a3c5e4d4aa451d4e03d6e9bb64cad35a
