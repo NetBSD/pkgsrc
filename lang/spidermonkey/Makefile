@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/08/04 13:22:11 tron Exp $
+# $NetBSD: Makefile,v 1.6 2006/08/08 09:50:33 tron Exp $
 
 DISTNAME=	js-1.5
 PKGNAME=	${DISTNAME:S/js/spidermonkey/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/js/
 
@@ -30,13 +30,20 @@ BUILDDIRPREFIX=	pkgsrc
 BUILDDIRPREFIX=	${OPSYS}
 .endif
 
+.if ${OPSYS} == "Darwin"
+SO_SUFFIX=dylib
+.else
+SO_SUFFIX=so
+.endif
+PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
+
 post-extract:
 	${CP} ${FILESDIR}/pkgsrc.mk ${WRKSRC}/config
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/js \
 	  ${PREFIX}/bin
-	${INSTALL_LIB} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/libjs.so \
+	${INSTALL_LIB} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/libjs.${SO_SUFFIX} \
 	  ${PREFIX}/lib
 	${CP} ${WRKSRC}/${BUILDDIRPREFIX}_DBG.OBJ/jsautocfg.h ${WRKSRC}
 .for f in ${DIST_HEADERS}
