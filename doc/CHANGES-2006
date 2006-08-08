@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.968 2006/08/08 18:15:44 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.969 2006/08/08 19:55:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3867,3 +3867,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/raptor to 1.4.10 [wiz 2006-08-08]
 	Updated mail/exim to 4.62 [abs 2006-08-08]
 	Updated math/mathomatic to 12.5.19 [minskim 2006-08-08]
+	Added net/teamspeak-client version 2.0.31.55 [abs 2006-08-08]
