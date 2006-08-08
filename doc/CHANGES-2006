@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.961 2006/08/07 23:54:56 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.962 2006/08/08 03:14:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/xmms-mad to 0.5.7 [wiz 2006-08-07]
 	Updated x11/xwrits to 2.24 [wiz 2006-08-07]
 	Updated editors/yudit to 2.8.1 [wiz 2006-08-07]
+	Updated graphics/ruby-RMagick to 1.13.0nb2 [taca 2006-08-08]
