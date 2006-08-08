@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.966 2006/08/08 12:49:50 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.967 2006/08/08 15:26:52 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3865,3 +3865,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/gerbv to 1.0.2 [dmcmahill 2006-08-08]
 	Updated devel/rapidsvn to 0.9.3 [wiz 2006-08-08]
 	Updated textproc/raptor to 1.4.10 [wiz 2006-08-08]
+	Updated mail/exim to 4.62 [abs 2006-08-08]
