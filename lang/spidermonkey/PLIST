@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/27 19:47:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/08 09:50:33 tron Exp $
 bin/js
 include/jsapi.h
 include/jsautocfg.h
@@ -8,4 +8,4 @@ include/jsosdep.h
 include/jsotypes.h
 include/jspubtd.h
 include/jstypes.h
-lib/libjs.so
+lib/libjs.${SO_SUFFIX}
