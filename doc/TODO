@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5304 2006/08/07 23:54:56 wiz Exp $
+$NetBSD: TODO,v 1.5305 2006/08/08 11:49:03 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ Suggested package updates
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
-	o gerbv-1.0.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
