@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2005/10/29 22:16:07 epg Exp $
+$NetBSD: distinfo,v 1.10 2006/08/08 12:28:47 wiz Exp $
 
-SHA1 (rapidsvn-0.9.0.tar.gz) = de0db1743c0cc9486685dda92cf66e025e04cf49
-RMD160 (rapidsvn-0.9.0.tar.gz) = 256d15f60686e0825451feb5f76e70cc68bf4e9a
-Size (rapidsvn-0.9.0.tar.gz) = 573956 bytes
+SHA1 (rapidsvn-0.9.3.tar.gz) = 71a57ffb4f7944191df51c4a2a87f1c971567543
+RMD160 (rapidsvn-0.9.3.tar.gz) = 316904503ab1a067fb14b0567d6e28bc2a6ad6c5
+Size (rapidsvn-0.9.3.tar.gz) = 998268 bytes
