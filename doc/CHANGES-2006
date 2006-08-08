@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.967 2006/08/08 15:26:52 abs Exp $
+$NetBSD: CHANGES-2006,v 1.968 2006/08/08 18:15:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3866,3 +3866,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/rapidsvn to 0.9.3 [wiz 2006-08-08]
 	Updated textproc/raptor to 1.4.10 [wiz 2006-08-08]
 	Updated mail/exim to 4.62 [abs 2006-08-08]
+	Updated math/mathomatic to 12.5.19 [minskim 2006-08-08]
