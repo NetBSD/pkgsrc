@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2006/08/07 06:44:51 ghen Exp $
+# $NetBSD: Makefile,v 1.64 2006/08/09 11:26:36 abs Exp $
 
 DISTNAME=		dovecot-1.0.rc6
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/.rc/rc/}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
@@ -17,7 +18,7 @@ USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS:Q}
+CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -42,12 +43,18 @@ SUBST_FILES.paths=	dovecot-example.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	pre-configure
 
+post-build:
+	${SED} "s|/etc/ssl/|${SSLDIR}/|" ${WRKSRC}/dovecot-example.conf \
+						> ${WRKDIR}/dovecot-example.conf
+	${SED} "s|/etc/ssl|${SSLDIR}|" ${WRKSRC}/doc/mkcert.sh \
+						> ${WRKDIR}/mkcert.sh
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/dovecot-example.conf	\
+	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf	\
 		${EGDIR}/dovecot.conf.default
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/mkcert.sh ${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
