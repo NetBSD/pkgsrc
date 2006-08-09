@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.16 2006/08/04 20:52:27 rillig Exp $
+# $NetBSD: install.mk,v 1.17 2006/08/09 15:25:49 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -25,8 +25,8 @@ install: barrier
 .endif
 
 .PHONY: acquire-install-lock release-install-lock
-acquire-install-lock: acquire-lock acquire-localbase-lock
-release-install-lock: release-lock release-localbase-lock
+acquire-install-lock: acquire-lock
+release-install-lock: release-lock
 
 .if exists(${_COOKIE.install})
 ${_COOKIE.install}:
@@ -110,6 +110,10 @@ install-check-version: ${_COOKIE.extract}
 ### The targets below are run with elevated privileges.
 ######################################################################
 
+.PHONY: acquire-install-localbase-lock release-install-localbase-lock
+acquire-install-localbase-lock: acquire-localbase-lock
+release-install-localbase-lock: release-localbase-lock
+
 ######################################################################
 ### install-all, su-install-all (PRIVATE)
 ######################################################################
@@ -117,6 +121,7 @@ install-check-version: ${_COOKIE.extract}
 ### the built software, register the software installation, and run
 ### some sanity checks.
 ###
+_INSTALL_ALL_TARGETS+=		acquire-install-localbase-lock
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 _INSTALL_ALL_TARGETS+=		install-check-conflicts
 _INSTALL_ALL_TARGETS+=		install-check-installed
@@ -141,6 +146,7 @@ _INSTALL_ALL_TARGETS+=		post-install-script
 _INSTALL_ALL_TARGETS+=		register-pkg
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
+_INSTALL_ALL_TARGETS+=		release-install-localbase-lock
 _INSTALL_ALL_TARGETS+=		error-check
 
 .if empty(CHECK_SHLIBS:M[nN][oO])
