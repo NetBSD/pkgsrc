@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.972 2006/08/09 10:06:59 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.973 2006/08/09 10:47:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3872,3 +3872,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added mail/p5-Mail-Webmail-Gmail version 1.08 [jmmv 2006-08-09]
 	Added mail/p5-GMail-IMAPD version 0.93 [jmmv 2006-08-09]
 	Updated net/udpcast to 20060619 [wiz 2006-08-09]
+	Updated www/ap-auth-script to 1.10 [wiz 2006-08-09]
