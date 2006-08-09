@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile,v 1.72 2006/08/09 21:42:42 adrianp Exp $
 
-DISTNAME=	mrtg-2.12.2
-PKGREVISION=	5
+DISTNAME=	mrtg-2.14.5
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/old/ \
@@ -30,14 +29,9 @@ COMMENT=	The Multi-Router Traffic Grapher
 USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	YES
 
-BUILD_DEFS+=	USE_INET6
 LDFLAGS+=	-lgd -lintl -ljpeg
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-DEPENDS+=	p5-INET6>=2.00:../../net/p5-INET6
-.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-z-lib=${LOCALBASE}/lib
@@ -51,6 +45,8 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/mrtg.conf ${PKG_SYSCONFDIR}/mrtg.conf
 
+.include "options.mk"
+
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-patch
 SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg		\
@@ -58,16 +54,16 @@ SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg		\
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	Fixing default configuration files.
 
-INSTALLATION_DIRS=	bin libexec man/man1
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 
 post-extract:
-	@${CP} ${FILESDIR}/mrtg.conf.example ${WRKDIR}
-	@${CP} ${FILESDIR}/netstat2mrtg ${WRKDIR}
-	@${CP} ${FILESDIR}/sys2mrtg ${WRKDIR}
-	@${CP} ${FILESDIR}/envstat2mrtg ${WRKDIR}
+	${CP} ${FILESDIR}/mrtg.conf.example ${WRKDIR}
+	${CP} ${FILESDIR}/netstat2mrtg ${WRKDIR}
+	${CP} ${FILESDIR}/sys2mrtg ${WRKDIR}
+	${CP} ${FILESDIR}/envstat2mrtg ${WRKDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
