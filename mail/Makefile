@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2006/06/18 08:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.291 2006/08/09 08:05:11 jmmv Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -121,6 +121,7 @@ SUBDIR+=	offlineimap
 SUBDIR+=	p5-Email-Abstract
 SUBDIR+=	p5-Email-Simple
 SUBDIR+=	p5-Email-Valid
+SUBDIR+=	p5-GMail-IMAPD
 SUBDIR+=	p5-IMAP-Admin
 SUBDIR+=	p5-MIME-Lite
 SUBDIR+=	p5-MIME-Lite-HTML
@@ -138,6 +139,7 @@ SUBDIR+=	p5-Mail-Milter
 SUBDIR+=	p5-Mail-SPF-Query
 SUBDIR+=	p5-Mail-SRS
 SUBDIR+=	p5-Mail-Sendmail
+SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MailTools
 SUBDIR+=	p5-Net-LMTP
 SUBDIR+=	p5-Sendmail-AccessDB
