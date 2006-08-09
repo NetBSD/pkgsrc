@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.7 2006/08/02 16:53:00 rillig Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.8 2006/08/09 15:31:01 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -73,8 +73,6 @@ _CLEAN_TARGETS+=	clean-depends
 .endif
 _CLEAN_TARGETS+=	do-clean
 _CLEAN_TARGETS+=	post-clean
-
-.ORDER: ${_CLEAN_TARGETS}
 
 .PHONY: clean
 .if !target(clean)
