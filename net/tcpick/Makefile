@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:00 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/09 13:58:31 ben Exp $
 
-DISTNAME= 	tcpick-0.1.19
+DISTNAME= 	tcpick-0.2.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcpick/}
 
