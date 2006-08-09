@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2005/10/28 21:43:18 adrianp Exp $
+$NetBSD: patch-ad,v 1.2 2006/08/09 21:48:53 adrianp Exp $
 
---- bin/tSmoke.dist.orig	2005-10-23 22:31:49.000000000 +0100
+--- bin/tSmoke.dist.orig	2006-07-14 12:17:59.000000000 +0100
 +++ bin/tSmoke.dist
 @@ -50,8 +50,7 @@ use strict;
  # -- Getopt::Long
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.1 2005/10/28 21:43:18 adrianp Exp $
 -use lib "/usr/local/rrdtool-1.0.39/lib/perl";
 +use lib "@PREFIX@/lib/smokeping";
  
- use Smokeping 2.000004;
+ use Smokeping 2.000009;
  use Net::SMTP;
 @@ -60,7 +59,7 @@ use Pod::Usage;
  use RRDs;
@@ -21,7 +21,7 @@ $NetBSD: patch-ad,v 1.1 2005/10/28 21:43:18 adrianp Exp $
  
  # global variables
  my $cfg;
-@@ -473,9 +472,9 @@ past week and past month including an ov
+@@ -462,9 +461,9 @@ past week and past month including an ov
  Typical crontab used to invoke this are
  
   # Quick morning alert to see what's down
@@ -29,11 +29,11 @@ $NetBSD: patch-ad,v 1.1 2005/10/28 21:43:18 adrianp Exp $
 + 0 6 * * * @PREFIX@/bin/tSmoke.pl --q --to=mobilephone@att.net.invalid --morning
   # Weekly report on the percent availability of network systems with no detail
 - 0 8 * * * /usr/local/smokeping/bin/tSmoke.pl --q --to=mailbox@company.com.invalid --weekly --detail=0
-+ 0 8 * * * @PREFIX@/tSmoke.pl --q --to=mailbox@company.com.invalid --weekly --detail=0
++ 0 8 * * * @PREFIX@/bin/tSmoke.pl --q --to=mailbox@company.com.invalid --weekly --detail=0
  
  =head1 SETUP
  
-@@ -495,17 +494,16 @@ We need to use the following B<libraries
+@@ -484,17 +483,16 @@ We need to use the following B<libraries
  
  Set up your libraries:
  
