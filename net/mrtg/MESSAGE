@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/06/15 17:12:13 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.6 2006/08/09 21:42:42 adrianp Exp $
 
 The Multi Router Traffic Grapher is now installed.  Do note that two
 programs have changed names to more readily reflect their MRTG-specific
@@ -8,7 +8,6 @@ function; make sure to prefix them with "mrtg":
     cfgmaker -> mrtgcfgmaker
     indexmaker -> mrtgindexmaker
 
-The documentation can be found at ${PREFIX}/share/doc/mrtg/index.html;
-there is a .txt version there as well.
+The documentation can be found at ${PREFIX}/share/doc/mrtg/
 
 ===========================================================================
