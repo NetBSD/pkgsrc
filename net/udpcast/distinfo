@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/09 10:04:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2006/08/09 14:00:08 drochner Exp $
 
 SHA1 (udpcast-20060619.tar.gz) = ae95820c746fc6d6dc2c4c97d24d52105983e15c
 RMD160 (udpcast-20060619.tar.gz) = 1f8ffefc5f5a412f1b8bb371895987734f6159b1
 Size (udpcast-20060619.tar.gz) = 76311 bytes
 SHA1 (patch-aa) = 71af13c0bede7748e8b9d32f920488d263d3348f
+SHA1 (patch-ab) = ef6b9b9ccc99028cc5ff939bc708d8812e032a62
