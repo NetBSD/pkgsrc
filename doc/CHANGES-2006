@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.976 2006/08/09 14:23:57 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.977 2006/08/09 14:43:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3874,5 +3874,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/udpcast to 20060619 [wiz 2006-08-09]
 	Updated www/ap-auth-script to 1.10 [wiz 2006-08-09]
 	Updated net/tcpick to 2.1 [ben 2006-08-09]
-	Updated multimedia/ffmpeq to 0.4.9pre1nb1 [ben 2006-08-09]
+	Updated multimedia/ffmpeg to 0.4.9pre1nb1 [ben 2006-08-09]
 	Updated mail/dovecot to 1.0rc6nb2 [ghen 2006-08-09]
