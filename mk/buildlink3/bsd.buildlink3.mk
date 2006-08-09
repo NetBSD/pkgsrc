@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.185 2006/07/22 16:31:35 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.186 2006/08/09 15:31:01 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -523,8 +523,6 @@ _BLNK_TARGETS+=			buildlink-${_pkg_}
 _BLNK_TARGETS.${_pkg_}=		buildlink-${_pkg_}-message
 _BLNK_TARGETS.${_pkg_}+=	${_BLNK_COOKIE.${_pkg_}}
 _BLNK_TARGETS.${_pkg_}+=	buildlink-${_pkg_}-cookie
-
-.ORDER: ${_BLNK_TARGETS.${_pkg_}}
 
 .PHONY: buildlink-${_pkg_}
 buildlink-${_pkg_}: ${_BLNK_TARGETS.${_pkg_}}
