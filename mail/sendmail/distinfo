@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2006/07/07 18:06:27 tv Exp $
+$NetBSD: distinfo,v 1.32 2006/08/09 21:23:00 tv Exp $
 
-SHA1 (sendmail.8.13.7.tar.gz) = b70f63f5d577e14794d1a37ef5e825f9127ec996
-RMD160 (sendmail.8.13.7.tar.gz) = a1cab6a7f015bf50c1773a67f35b800c751d55ed
-Size (sendmail.8.13.7.tar.gz) = 2010008 bytes
+SHA1 (sendmail.8.13.8.tar.gz) = 8e97c10f52efe5204c08f6cb3f90c08e077ac505
+RMD160 (sendmail.8.13.8.tar.gz) = a5d333b073d681f056421e836df4067f331a8ac8
+Size (sendmail.8.13.8.tar.gz) = 2010975 bytes
 SHA1 (patch-aa) = b7ceece7760e3d637016da039f8429c1fb89f2cf
 SHA1 (patch-ab) = a2abf6e78772e257e2a1973e7730159ff24a91aa
 SHA1 (patch-ac) = 96c19300b4188dbcbd202768eea912f675dadc27
