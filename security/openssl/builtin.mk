@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2006/04/06 06:22:43 reed Exp $
+# $NetBSD: builtin.mk,v 1.20 2006/08/09 11:23:20 abs Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -209,18 +209,18 @@ buildlink-openssl-des-h:
 .  endif  # USE_OLD_DES_API == yes
 
 .  if defined(PKG_SYSCONFDIR.openssl)
-SSLCERTS=	${PKG_SYSCONFDIR.openssl}/certs
-SSLKEYS=	${PKG_SYSCONFDIR.openssl}/private
+SSLDIR= 	${PKG_SYSCONFDIR.openssl}
 .  elif ${OPSYS} == "NetBSD"
-SSLCERTS=	/etc/openssl/certs
-SSLKEYS=	/etc/openssl/private
+SSLDIR= 	/etc/openssl
 .  elif !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
-SSLCERTS=	/etc/ssl/certs		# likely place where certs live
-SSLKEYS=	/etc/ssl/private	# likely place where private keys live
+SSLDIR= 	/etc/ssl 		# most likely place
 .  else
-SSLCERTS=	${PKG_SYSCONFBASEDIR}/openssl/certs
-SSLKEYS=	${PKG_SYSCONFBASEDIR}/openssl/private
+SSLDIR= 	${PKG_SYSCONFBASEDIR}/openssl
 .  endif
-BUILD_DEFS+=	SSLCERTS SSLKEYS
+
+SSLCERTS=	${SSLDIR}/certs
+SSLKEYS=	${SSLDIR}/private
+
+BUILD_DEFS+=	SSLDIR SSLCERTS SSLKEYS
 
 .endif	# CHECK_BUILTIN.openssl
