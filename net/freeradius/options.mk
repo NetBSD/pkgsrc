@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.10 2006/07/14 22:10:01 adrianp Exp $
+# $NetBSD: options.mk,v 1.11 2006/08/09 16:42:09 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	dbm
 PKG_OPTIONS_GROUP.dbm=	bdb gdbm
 
-PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos freeradius-simul-use
+PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos freeradius-simul-use pam
 PKG_SUGGESTED_OPTIONS=	gdbm freeradius-simul-use
 
 .include "../../mk/bsd.options.mk"
@@ -98,4 +98,14 @@ CONFIGURE_ARGS+=	--without-rlm_krb5
 .else
 CONFIGURE_ENV+=	ac_cv_path_SNMPGET=""
 CONFIGURE_ENV+=	ac_cv_path_SNMPWALK=""
+.endif
+
+###
+### Use PAM for storing user details
+###
+.if !empty(PKG_OPTIONS:Mpam)
+CONFIGURE_ARGS+=	--with-rlm_pam
+PLIST_SRC+=		${PKGDIR}/PLIST.pam
+.else
+CONFIGURE_ARGS+=	--without-rlm_pam
 .endif
