@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.970 2006/08/08 21:09:52 tron Exp $
+$NetBSD: CHANGES-2006,v 1.971 2006/08/09 08:05:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3869,3 +3869,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/mathomatic to 12.5.19 [minskim 2006-08-08]
 	Added net/teamspeak-client version 2.0.31.55 [abs 2006-08-08]
 	Updated lang/spidermonkey to 1.5nb4 [tron 2006-08-08]
+	Added mail/p5-Mail-Webmail-Gmail version 1.08 [jmmv 2006-08-09]
+	Added mail/p5-GMail-IMAPD version 0.93 [jmmv 2006-08-09]
