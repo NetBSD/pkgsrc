@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.632 2006/08/08 19:43:26 abs Exp $
+# $NetBSD: Makefile,v 1.633 2006/08/09 10:06:32 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -448,6 +448,7 @@ SUBDIR+=	ttt
 SUBDIR+=	ucarp
 SUBDIR+=	ucspi-ssl
 SUBDIR+=	ucspi-tcp
+SUBDIR+=	udpcast
 SUBDIR+=	udptunnel
 SUBDIR+=	unison
 SUBDIR+=	unison-devel
