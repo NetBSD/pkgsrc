@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.979 2006/08/09 17:52:16 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.980 2006/08/09 17:59:14 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0rc6nb2 [ghen 2006-08-09]
 	Updated security/mit-krb5 to 1.4.2nb3 [salo 2006-08-09]
 	Added www/ap2-auth-radius version 1.5.7 [adrianp 2006-08-09]
+	Updated security/heimdal to 0.7.2nb3 [salo 2006-08-09]
