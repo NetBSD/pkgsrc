@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.981 2006/08/09 18:21:28 tv Exp $
+$NetBSD: CHANGES-2006,v 1.982 2006/08/09 18:36:48 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ap2-auth-radius version 1.5.7 [adrianp 2006-08-09]
 	Updated security/heimdal to 0.7.2nb3 [salo 2006-08-09]
 	Added net/queryperf version 2.1 [tv 2006-08-09]
+	Updated mail/clamav to 0.88.4 [salo 2006-08-09]
