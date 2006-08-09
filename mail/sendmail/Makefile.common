@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2006/07/07 18:06:27 tv Exp $
+# $NetBSD: Makefile.common,v 1.38 2006/08/09 21:23:00 tv Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -19,7 +19,7 @@ DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail/distinfo
 FILESDIR?=	${.CURDIR}/../../mail/sendmail/files
 PATCHDIR?=	${.CURDIR}/../../mail/sendmail/patches
 
-DIST_VERS=	8.13.7
+DIST_VERS=	8.13.8
 
 MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
 		BSD_MANOWN=${MANOWN:Q} BSD_MANGRP=${MANGRP:Q} \
