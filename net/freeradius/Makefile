@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2006/07/14 22:10:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.52 2006/08/09 16:42:09 adrianp Exp $
 
-DISTNAME=	freeradius-1.1.2
+DISTNAME=	freeradius-${RADVER}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -17,7 +18,9 @@ GNU_CONFIGURE=		YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
 FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP:Q}
+PLIST_SUBST+=		RADVER=${RADVER}
 USE_OLD_DES_API=	YES
+RADVER=			1.1.2
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
@@ -31,7 +34,6 @@ CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
 CONFIGURE_ARGS+=        --without-rlm_ippool
 CONFIGURE_ARGS+=        --without-rlm_smb
-CONFIGURE_ARGS+=	--without-rlm_pam
 CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
@@ -60,6 +62,7 @@ OWN_DIRS=		${VARBASE}/run/radiusd
 
 PKG_SYSCONFSUBDIR=	raddb
 EGDIR=			${PREFIX}/share/examples/freeradius
+CONF_FILES_MODE=	0640
 
 EGFILES=	acct_users attrs certs/demoCA/index.txt.old \
 		certs/demoCA/cacert.pem certs/demoCA/index.txt \
