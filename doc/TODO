@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5307 2006/08/08 12:49:51 wiz Exp $
+$NetBSD: TODO,v 1.5308 2006/08/09 10:07:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -994,7 +994,6 @@ Suggested package updates
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-7.8
 	o sablecc-3.2
 	o samba-3.0.23a
 	o sather-1.2.2
