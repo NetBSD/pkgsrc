@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/16 10:26:30 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/08/09 14:14:40 ben Exp $
 bin/ffmpeg
 bin/ffserver
 include/ffmpeg/avcodec.h
@@ -12,6 +12,8 @@ include/ffmpeg/rtsp.h
 include/ffmpeg/rtspcodes.h
 lib/libavcodec.la
 lib/libavformat.la
+man/man1/ffmpeg.1
+man/man1/ffserver.1
 share/doc/ffmpeg/README
 share/doc/ffmpeg/TODO
 share/doc/ffmpeg/apiexample.c
