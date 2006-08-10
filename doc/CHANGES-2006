@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1000 2006/08/10 14:54:22 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.1001 2006/08/10 15:09:36 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3903,3 +3903,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-Data-Dump version 1.06 [abs 2006-08-10]
 	Updated www/curl to 7.15.5 [wiz 2006-08-10]
 	Removed graphics/libpixman [drochner 2006-08-10]
+	Updated x11/xpmicons to 1.0nb2 [ben 2006-08-10]
