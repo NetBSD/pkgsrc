@@ -1,12 +1,14 @@
-$NetBSD: patch-ah,v 1.4 2005/12/31 00:56:42 joerg Exp $
+$NetBSD: patch-ah,v 1.5 2006/08/10 13:44:22 abs Exp $
 
---- ../../tests/configure.orig	2005-12-30 23:55:36.000000000 +0000
-+++ ../../tests/configure
-@@ -1363,6 +1363,7 @@ case "${host}" in
-         *-*-linux*)     platform=LINUX ;;
-         *-*-nto*)       platform=QNX ;;
-         *-*-freebsd*)   platform=FREEBSD ;;
-+        *-*-dragonfly*)   platform=DRAGONFLY ;;
-         *-*-netbsd*)    platform=NETBSD ;;
-         *-*-irix*)      platform=IRIX ;;
-         *-*-aix*)       platform=AIX ;;
+--- dom/impl/DOMDeepNodeListPool.c.orig	2005-09-07 16:54:58.000000000 +0100
++++ dom/impl/DOMDeepNodeListPool.c
+@@ -97,6 +97,9 @@ DOMDeepNodeListPool<TVal>::DOMDeepNodeLi
+ 
+     fIdPtrs = (TVal**) fMemoryManager->allocate(fIdPtrsCount * sizeof(TVal*));//new TVal*[fIdPtrsCount];
+     fIdPtrs[0] = 0;
++
++    // create default hasher
++    fHash = new (fMemoryManager) HashPtr();
+ }
+ 
+ template <class TVal>
