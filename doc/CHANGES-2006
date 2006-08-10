@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1003 2006/08/10 15:29:06 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1004 2006/08/10 16:13:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3906,3 +3906,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xpmicons to 1.0nb2 [ben 2006-08-10]
 	Updated misc/yelp to 2.14.3nb1 [jmmv 2006-08-10]
 	Updated finance/gnucash-docs to 2.0.0nb1 [jmmv 2006-08-10]
+	Updated devel/pango to 1.14.0 [wiz 2006-08-10]

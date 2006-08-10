@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5322 2006/08/10 16:12:41 wiz Exp $
+$NetBSD: TODO,v 1.5323 2006/08/10 16:13:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -847,7 +847,6 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pango-1.14.0
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
