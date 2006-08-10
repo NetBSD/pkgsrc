@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5317 2006/08/10 13:56:37 wiz Exp $
+$NetBSD: TODO,v 1.5318 2006/08/10 13:57:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1284,10 +1284,6 @@ Suggested cleanups in pkgsrc
 
 	o Remove USE_X11BASE if there is no good reason to install a
 	  package into X11BASE.
-
-	o Set USE_LANGUAGES appropriately in packages that use C++,
-	  Fortran, or Objective-C so that the correct type of
-	  compiler dependency is set.
 
 	o Convert packages to use VARBASE instead of hardcoding /var.
 
