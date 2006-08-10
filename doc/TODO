@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5323 2006/08/10 16:13:19 wiz Exp $
+$NetBSD: TODO,v 1.5324 2006/08/10 23:03:08 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -869,7 +869,6 @@ Suggested package updates
 	o pgadmin3-1.4.3
 	o phoon-20050629
 	o photopc-3.05
-	o php4-4.4.3
 	o phpldapadmin-0.9.7
 	o phpmyadmin-2.8.2.1
 	o phppgadmin-4.0.1
