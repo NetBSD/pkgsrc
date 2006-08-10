@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5319 2006/08/10 14:22:21 wiz Exp $
+$NetBSD: TODO,v 1.5320 2006/08/10 14:35:45 salo Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,6 @@ Suggested package updates
 	o cinepaint-0.21 [only RC1 available at the moment]
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o clamav-0.88.4
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
