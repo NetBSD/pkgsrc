@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/11 04:06:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/10 13:44:21 abs Exp $
 include/xercesc/dom/DOM.hpp
 include/xercesc/dom/DOMAttr.hpp
 include/xercesc/dom/DOMBuilder.hpp
@@ -30,6 +30,7 @@ include/xercesc/dom/DOMNodeFilter.hpp
 include/xercesc/dom/DOMNodeIterator.hpp
 include/xercesc/dom/DOMNodeList.hpp
 include/xercesc/dom/DOMNotation.hpp
+include/xercesc/dom/DOMPSVITypeInfo.hpp
 include/xercesc/dom/DOMProcessingInstruction.hpp
 include/xercesc/dom/DOMRange.hpp
 include/xercesc/dom/DOMRangeException.hpp
@@ -39,6 +40,12 @@ include/xercesc/dom/DOMTypeInfo.hpp
 include/xercesc/dom/DOMUserDataHandler.hpp
 include/xercesc/dom/DOMWriter.hpp
 include/xercesc/dom/DOMWriterFilter.hpp
+include/xercesc/dom/DOMXPathEvaluator.hpp
+include/xercesc/dom/DOMXPathException.hpp
+include/xercesc/dom/DOMXPathExpression.hpp
+include/xercesc/dom/DOMXPathNSResolver.hpp
+include/xercesc/dom/DOMXPathNamespace.hpp
+include/xercesc/dom/DOMXPathResult.hpp
 include/xercesc/dom/StDOMNode.hpp
 include/xercesc/dom/deprecated/DOM.hpp
 include/xercesc/dom/deprecated/DOMParser.hpp
@@ -107,6 +114,7 @@ include/xercesc/dom/impl/DOMTreeWalkerImpl.hpp
 include/xercesc/dom/impl/DOMTypeInfoImpl.hpp
 include/xercesc/dom/impl/DOMWriterImpl.hpp
 include/xercesc/dom/impl/XSDElementNSImpl.hpp
+include/xercesc/framework/BinOutputStream.hpp
 include/xercesc/framework/LocalFileFormatTarget.hpp
 include/xercesc/framework/LocalFileInputSource.hpp
 include/xercesc/framework/MemBufFormatTarget.hpp
@@ -115,6 +123,7 @@ include/xercesc/framework/MemoryManager.hpp
 include/xercesc/framework/StdInInputSource.hpp
 include/xercesc/framework/StdOutFormatTarget.hpp
 include/xercesc/framework/URLInputSource.hpp
+include/xercesc/framework/ValidationContext.hpp
 include/xercesc/framework/Wrapper4DOMInputSource.hpp
 include/xercesc/framework/Wrapper4InputSource.hpp
 include/xercesc/framework/XMLAttDef.hpp
@@ -123,6 +132,7 @@ include/xercesc/framework/XMLAttr.hpp
 include/xercesc/framework/XMLBuffer.hpp
 include/xercesc/framework/XMLBufferMgr.hpp
 include/xercesc/framework/XMLContentModel.hpp
+include/xercesc/framework/XMLDTDDescription.hpp
 include/xercesc/framework/XMLDocumentHandler.hpp
 include/xercesc/framework/XMLElementDecl.hpp
 include/xercesc/framework/XMLEntityDecl.hpp
@@ -130,30 +140,74 @@ include/xercesc/framework/XMLEntityHandler.hpp
 include/xercesc/framework/XMLErrorCodes.hpp
 include/xercesc/framework/XMLErrorReporter.hpp
 include/xercesc/framework/XMLFormatter.hpp
+include/xercesc/framework/XMLGrammarDescription.hpp
+include/xercesc/framework/XMLGrammarPool.hpp
 include/xercesc/framework/XMLNotationDecl.hpp
 include/xercesc/framework/XMLPScanToken.hpp
 include/xercesc/framework/XMLRecognizer.hpp
 include/xercesc/framework/XMLRefInfo.hpp
+include/xercesc/framework/XMLSchemaDescription.hpp
 include/xercesc/framework/XMLValidator.hpp
 include/xercesc/framework/XMLValidityCodes.hpp
+include/xercesc/framework/psvi/PSVIAttribute.hpp
+include/xercesc/framework/psvi/PSVIAttributeList.hpp
+include/xercesc/framework/psvi/PSVIElement.hpp
+include/xercesc/framework/psvi/PSVIHandler.hpp
+include/xercesc/framework/psvi/PSVIItem.hpp
+include/xercesc/framework/psvi/XSAnnotation.hpp
+include/xercesc/framework/psvi/XSAttributeDeclaration.hpp
+include/xercesc/framework/psvi/XSAttributeGroupDefinition.hpp
+include/xercesc/framework/psvi/XSAttributeUse.hpp
+include/xercesc/framework/psvi/XSComplexTypeDefinition.hpp
+include/xercesc/framework/psvi/XSConstants.hpp
+include/xercesc/framework/psvi/XSElementDeclaration.hpp
+include/xercesc/framework/psvi/XSFacet.hpp
+include/xercesc/framework/psvi/XSIDCDefinition.hpp
+include/xercesc/framework/psvi/XSModel.hpp
+include/xercesc/framework/psvi/XSModelGroup.hpp
+include/xercesc/framework/psvi/XSModelGroupDefinition.hpp
+include/xercesc/framework/psvi/XSMultiValueFacet.hpp
+include/xercesc/framework/psvi/XSNamedMap.c
+include/xercesc/framework/psvi/XSNamedMap.hpp
+include/xercesc/framework/psvi/XSNamespaceItem.hpp
+include/xercesc/framework/psvi/XSNotationDeclaration.hpp
+include/xercesc/framework/psvi/XSObject.hpp
+include/xercesc/framework/psvi/XSParticle.hpp
+include/xercesc/framework/psvi/XSSimpleTypeDefinition.hpp
+include/xercesc/framework/psvi/XSTypeDefinition.hpp
+include/xercesc/framework/psvi/XSValue.hpp
+include/xercesc/framework/psvi/XSWildcard.hpp
+include/xercesc/internal/BinFileOutputStream.hpp
+include/xercesc/internal/BinMemOutputStream.hpp
 include/xercesc/internal/CharTypeTables.hpp
 include/xercesc/internal/DGXMLScanner.hpp
 include/xercesc/internal/ElemStack.hpp
 include/xercesc/internal/EndOfEntityException.hpp
 include/xercesc/internal/IANAEncodings.hpp
 include/xercesc/internal/IGXMLScanner.hpp
+include/xercesc/internal/MemoryManagerArrayImpl.hpp
 include/xercesc/internal/MemoryManagerImpl.hpp
 include/xercesc/internal/ReaderMgr.hpp
 include/xercesc/internal/SGXMLScanner.hpp
+include/xercesc/internal/ValidationContextImpl.hpp
 include/xercesc/internal/VecAttrListImpl.hpp
 include/xercesc/internal/VecAttributesImpl.hpp
 include/xercesc/internal/WFXMLScanner.hpp
+include/xercesc/internal/XMLGrammarPoolImpl.hpp
 include/xercesc/internal/XMLInternalErrorHandler.hpp
 include/xercesc/internal/XMLReader.hpp
 include/xercesc/internal/XMLScanner.hpp
 include/xercesc/internal/XMLScannerResolver.hpp
+include/xercesc/internal/XProtoType.hpp
+include/xercesc/internal/XSAXMLScanner.hpp
+include/xercesc/internal/XSObjectFactory.hpp
+include/xercesc/internal/XSerializable.hpp
+include/xercesc/internal/XSerializationException.hpp
+include/xercesc/internal/XSerializeEngine.hpp
+include/xercesc/internal/XTemplateSerializer.hpp
 include/xercesc/parsers/AbstractDOMParser.hpp
 include/xercesc/parsers/DOMBuilderImpl.hpp
+include/xercesc/parsers/SAX2XMLFilterImpl.hpp
 include/xercesc/parsers/SAX2XMLReaderImpl.hpp
 include/xercesc/parsers/SAXParser.hpp
 include/xercesc/parsers/XercesDOMParser.hpp
@@ -173,6 +227,7 @@ include/xercesc/sax2/ContentHandler.hpp
 include/xercesc/sax2/DeclHandler.hpp
 include/xercesc/sax2/DefaultHandler.hpp
 include/xercesc/sax2/LexicalHandler.hpp
+include/xercesc/sax2/SAX2XMLFilter.hpp
 include/xercesc/sax2/SAX2XMLReader.hpp
 include/xercesc/sax2/XMLReaderFactory.hpp
 include/xercesc/util/ArrayIndexOutOfBoundsException.hpp
@@ -233,10 +288,10 @@ include/xercesc/util/NameIdPool.c
 include/xercesc/util/NameIdPool.hpp
 include/xercesc/util/NetAccessors/Socket/SocketNetAccessor.hpp
 include/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.hpp
-include/xercesc/util/NoDefTranscoderException.hpp
 include/xercesc/util/NoSuchElementException.hpp
 include/xercesc/util/NullPointerException.hpp
 include/xercesc/util/NumberFormatException.hpp
+include/xercesc/util/OutOfMemoryException.hpp
 include/xercesc/util/PanicHandler.hpp
 include/xercesc/util/ParseException.hpp
 include/xercesc/util/PlatformUtils.hpp
@@ -260,11 +315,12 @@ include/xercesc/util/RuntimeException.hpp
 include/xercesc/util/SchemaDateTimeException.hpp
 include/xercesc/util/SecurityManager.hpp
 include/xercesc/util/StringPool.hpp
+include/xercesc/util/SynchronizedStringPool.hpp
 include/xercesc/util/TransENameMap.c
 include/xercesc/util/TransENameMap.hpp
 include/xercesc/util/TransService.hpp
-${NATIVEICONV}include/xercesc/util/Transcoders/Iconv/IconvTransService.hpp
 ${GNUICONV}include/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp
+${NATIVEICONV}include/xercesc/util/Transcoders/Iconv/IconvTransService.hpp
 include/xercesc/util/TranscodingException.hpp
 include/xercesc/util/UTFDataFormatException.hpp
 include/xercesc/util/UnexpectedEOFException.hpp
@@ -291,16 +347,22 @@ include/xercesc/util/XMLDeleterFor.c
 include/xercesc/util/XMLDeleterFor.hpp
 include/xercesc/util/XMLDouble.hpp
 include/xercesc/util/XMLEBCDICTranscoder.hpp
+include/xercesc/util/XMLEntityResolver.hpp
 include/xercesc/util/XMLEnumerator.hpp
 include/xercesc/util/XMLExceptMsgs.hpp
 include/xercesc/util/XMLException.hpp
 include/xercesc/util/XMLFloat.hpp
+include/xercesc/util/XMLHolder.c
+include/xercesc/util/XMLHolder.hpp
+include/xercesc/util/XMLIBM1047Transcoder.hpp
 include/xercesc/util/XMLIBM1140Transcoder.hpp
+include/xercesc/util/XMLInitializer.hpp
 include/xercesc/util/XMLInteger.hpp
 include/xercesc/util/XMLMsgLoader.hpp
 include/xercesc/util/XMLNetAccessor.hpp
 include/xercesc/util/XMLNumber.hpp
 include/xercesc/util/XMLRegisterCleanup.hpp
+include/xercesc/util/XMLResourceIdentifier.hpp
 include/xercesc/util/XMLString.hpp
 include/xercesc/util/XMLStringTokenizer.hpp
 include/xercesc/util/XMLUCS4Transcoder.hpp
@@ -351,6 +413,7 @@ include/xercesc/validators/DTD/DTDGrammar.hpp
 include/xercesc/validators/DTD/DTDScanner.hpp
 include/xercesc/validators/DTD/DTDValidator.hpp
 include/xercesc/validators/DTD/DocTypeHandler.hpp
+include/xercesc/validators/DTD/XMLDTDDescriptionImpl.hpp
 include/xercesc/validators/common/AllContentModel.hpp
 include/xercesc/validators/common/CMAny.hpp
 include/xercesc/validators/common/CMBinaryOp.hpp
@@ -398,6 +461,7 @@ include/xercesc/validators/datatype/QNameDatatypeValidator.hpp
 include/xercesc/validators/datatype/StringDatatypeValidator.hpp
 include/xercesc/validators/datatype/TimeDatatypeValidator.hpp
 include/xercesc/validators/datatype/UnionDatatypeValidator.hpp
+include/xercesc/validators/datatype/XMLCanRepGroup.hpp
 include/xercesc/validators/datatype/YearDatatypeValidator.hpp
 include/xercesc/validators/datatype/YearMonthDatatypeValidator.hpp
 include/xercesc/validators/schema/ComplexTypeInfo.hpp
@@ -413,6 +477,7 @@ include/xercesc/validators/schema/SchemaSymbols.hpp
 include/xercesc/validators/schema/SchemaValidator.hpp
 include/xercesc/validators/schema/SubstitutionGroupComparator.hpp
 include/xercesc/validators/schema/TraverseSchema.hpp
+include/xercesc/validators/schema/XMLSchemaDescriptionImpl.hpp
 include/xercesc/validators/schema/XSDDOMParser.hpp
 include/xercesc/validators/schema/XSDErrorReporter.hpp
 include/xercesc/validators/schema/XSDLocator.hpp
@@ -428,6 +493,7 @@ include/xercesc/validators/schema/identity/IC_KeyRef.hpp
 include/xercesc/validators/schema/identity/IC_Selector.hpp
 include/xercesc/validators/schema/identity/IC_Unique.hpp
 include/xercesc/validators/schema/identity/IdentityConstraint.hpp
+include/xercesc/validators/schema/identity/IdentityConstraintHandler.hpp
 include/xercesc/validators/schema/identity/ValueStore.hpp
 include/xercesc/validators/schema/identity/ValueStoreCache.hpp
 include/xercesc/validators/schema/identity/XPathException.hpp
@@ -436,8 +502,8 @@ include/xercesc/validators/schema/identity/XPathMatcherStack.hpp
 include/xercesc/validators/schema/identity/XPathSymbols.hpp
 include/xercesc/validators/schema/identity/XercesXPath.hpp
 lib/libxerces-c.so
-lib/libxerces-c.so.23
-lib/libxerces-c.so.23.0
+lib/libxerces-c.so.27
+lib/libxerces-c.so.27.0
 @dirrm include/xercesc/validators/schema/identity
 @dirrm include/xercesc/validators/schema
 @dirrm include/xercesc/validators/datatype
@@ -452,14 +518,16 @@ ${NATIVEICONV}@dirrm include/xercesc/util/Transcoders/Iconv
 @dirrm include/xercesc/util/Platforms
 @dirrm include/xercesc/util/NetAccessors/Socket
 @dirrm include/xercesc/util/NetAccessors
-@dirrm include/xercesc/util/Compilers
 @dirrm include/xercesc/util/MsgLoaders/InMemory
 @dirrm include/xercesc/util/MsgLoaders
+@dirrm include/xercesc/util/Compilers
 @dirrm include/xercesc/util
 @dirrm include/xercesc/sax2
 @dirrm include/xercesc/sax
 @dirrm include/xercesc/parsers
 @dirrm include/xercesc/internal
+@dirrm include/xercesc/framework/psvi
+@dirrm include/xercesc/framework
 @dirrm include/xercesc/framework
 @dirrm include/xercesc/dom/impl
 @dirrm include/xercesc/dom/deprecated

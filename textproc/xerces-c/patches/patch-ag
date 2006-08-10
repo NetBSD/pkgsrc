@@ -1,23 +1,28 @@
-$NetBSD: patch-ag,v 1.4 2005/12/31 00:56:42 joerg Exp $
+$NetBSD: patch-ag,v 1.5 2006/08/10 13:44:22 abs Exp $
 
---- ../../tests/runConfigure.orig	2005-12-30 23:54:50.000000000 +0000
-+++ ../../tests/runConfigure
-@@ -196,7 +196,7 @@ echo "Extra link options: $linkeroptions
- # Now check if the options are correct or not, bail out if incorrect
- #
- case $platform in
--   aix | openserver | unixware | beos | linux | freebsd | netbsd | solaris | hp-10 | hp-11 | os400 | irix | ptx | tru64 | macosx | cygwin | qnx)
-+   aix | openserver | unixware | beos | linux | freebsd | netbsd | solaris | hp-10 | hp-11 | os400 | irix | ptx | tru64 | macosx | cygwin | qnx | dragonfly)
-        # platform has been recognized
-        ;;
-    *)
-@@ -264,6 +264,9 @@ else
-     elif test $platform = "freebsd"; then
-         threadingLibs="-pthread -lc_r"
-         threadingDefines="-D_THREAD_SAFE -DXML_USE_PTHREADS"
-+    elif test $platform = "dragonfly"; then
-+        threadingLibs="-pthread -lc_r"
-+        threadingDefines="-D_THREAD_SAFE -DXML_USE_PTHREADS"
-     elif test $platform = "netbsd"; then
-         threadingLibs="-pthread"
-         threadingDefines="-D_THREAD_SAFE -DXML_USE_PTHREADS"
+--- configure.orig	2005-09-07 16:55:53.000000000 +0100
++++ configure
+@@ -1309,6 +1309,7 @@ case "${host}" in
+         *-*-nto*)       platform=QNX ;;
+         *-*-linux*)     platform=LINUX ;;
+         *-*-freebsd*)   platform=FREEBSD ;;
++        *-*-dragonfly*)  platform=DRAGONFLY ;;
+         *-*-netbsd*)    platform=NETBSD ;;
+         *-*-irix*)      platform=IRIX ;;
+         *-*-aix*)       platform=AIX
+@@ -1520,6 +1521,7 @@ util/Platforms/BeOS/Makefile \
+ util/Platforms/QNX/Makefile \
+ util/Platforms/Interix/Makefile \
+ util/Platforms/Linux/Makefile \
++util/Platforms/DragonFly/Makefile \
+ util/Platforms/FreeBSD/Makefile \
+ util/Platforms/NetBSD/Makefile \
+ util/Platforms/HPUX/Makefile \
+@@ -1681,6 +1683,7 @@ util/Platforms/QNX/Makefile \
+ util/Platforms/Interix/Makefile \
+ util/Platforms/Linux/Makefile \
+ util/Platforms/FreeBSD/Makefile \
++util/Platforms/DragonFly/Makefile \
+ util/Platforms/NetBSD/Makefile \
+ util/Platforms/HPUX/Makefile \
+ util/Platforms/OS390/Makefile \

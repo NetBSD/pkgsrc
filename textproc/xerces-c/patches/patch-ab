@@ -1,79 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2004/02/15 04:14:04 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2006/08/10 13:44:22 abs Exp $
 
---- util/Transcoders/IconvGNU/IconvGNUTransService.cpp.orig	2003-05-27 10:04:57.000000000 -0500
-+++ util/Transcoders/IconvGNU/IconvGNUTransService.cpp
-@@ -94,7 +94,11 @@
- #include <locale.h>
- #include <iconv.h>
- #include <errno.h>
-+#ifdef __NetBSD__
-+#include <machine/endian.h>
-+#else
- #include <endian.h>
-+#endif
- 
- #include <xercesc/util/XMLString.hpp>
- #include <xercesc/util/XMLUniDefs.hpp>
-@@ -309,7 +313,7 @@ XMLCh    IconvGNUWrapper::toUpper (const
-     xmlChToMbc (ch, wcbuf);
- 
-     char    tmpArr[4];
--    char*    ptr = wcbuf;
-+    const char*    ptr = wcbuf;
-     size_t    len = fUChSize;
-     char    *pTmpArr = tmpArr;
-     size_t    bLen = 2;
-@@ -341,7 +345,7 @@ XMLCh    IconvGNUWrapper::toLower (const
-     xmlChToMbc (ch, wcbuf);
- 
-     char    tmpArr[4];
--    char*    ptr = wcbuf;
-+    const char*    ptr = wcbuf;
-     size_t    len = fUChSize;
-     char    *pTmpArr = tmpArr;
-     size_t    bLen = 2;
-@@ -373,7 +377,7 @@ bool    IconvGNUWrapper::isSpace(const X
-     char    tmpArr[4];
- 
-     xmlChToMbc (toCheck, wcbuf);
--    char*    ptr = wcbuf;
-+    const char*    ptr = wcbuf;
-     size_t    len = fUChSize;
-     char    *pTmpArr = tmpArr;
-     size_t    bLen = 2;
-@@ -474,7 +478,7 @@ size_t    IconvGNUWrapper::iconvFrom ( c
-                  size_t        toLen ) const
- {
-     ICONV_LOCK;
--    char ** tmpPtr = (char**)&fromPtr;
-+    const char ** tmpPtr = &fromPtr;
-     return ::iconv (fCDFrom, tmpPtr, fromLen, toPtr, &toLen);
- }
- 
-@@ -484,7 +488,7 @@ size_t    IconvGNUWrapper::iconvTo ( con
-                    size_t        toLen ) const
- {
-     ICONV_LOCK;
--    char ** tmpPtr = (char**)&fromPtr;
-+    const char ** tmpPtr = &fromPtr;
-     return ::iconv (fCDTo, tmpPtr, fromLen, toPtr, &toLen);
- }
- 
-@@ -1051,7 +1055,7 @@ XMLCh* IconvGNULCPTranscoder::transcode(
-     if (*toTranscode) {
-         const unsigned int wLent = calcRequiredSize(toTranscode);
-         if (wLent == 0) {
--            retVal = (XMLCh*) manager->allocate(sizeof(XMLCh));/new XMLCh[1];
-+	    retVal = (XMLCh*) manager->allocate(sizeof(XMLCh));//new XMLCh[1];
-             retVal[0] = 0;
-             return retVal;
-         }
-@@ -1186,7 +1190,7 @@ IconvGNUTranscoder::IconvGNUTranscoder (
-                       ,    iconv_t        cd_to
-                       ,    size_t        uchsize
-                       ,    unsigned int    ubo
--                      , MemoryManger* const manager
-+                      , MemoryManager* const manager
-     )
-     : XMLTranscoder(encodingName, blockSize, manager)
-     , IconvGNUWrapper (cd_from, cd_to, uchsize, ubo)
+--- ../../samples/configure.orig	2005-09-07 16:56:50.000000000 +0100
++++ ../../samples/configure
+@@ -1363,6 +1363,7 @@ case "${host}" in
+         *-*-linux*)     platform=LINUX ;;
+         *-*-nto*)       platform=QNX ;;
+         *-*-freebsd*)   platform=FREEBSD ;;
++        *-*-dragonfly*) platform=DRAGONFLY ;;
+         *-*-netbsd*)    platform=NETBSD ;;
+         *-*-irix*)      platform=IRIX ;;
+         *-*-aix*)       platform=AIX ;;
