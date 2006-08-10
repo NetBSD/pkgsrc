@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2006/08/10 03:21:40 minskim Exp $
 
 DISTNAME=	mmix-20030622
 PKGREVISION=	3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
 
 TEX_DEPMETHOD=	build
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	all doc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/07 02:09:57 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/10 03:21:40 minskim Exp $
 
 DISTNAME=	base
 PKGNAME=	tex-xmltex-1.9
@@ -15,7 +15,7 @@ COMMENT=	Non-validating XML parser implemented in TeX
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 USE_DIRS+=	texmf-1.0
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 .include "../../print/teTeX/module.mk"
 

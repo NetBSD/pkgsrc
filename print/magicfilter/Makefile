@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.49 2006/08/10 03:21:40 minskim Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	5
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake gs:run gzip
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${TOOLS_PATH.gs}
 CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:Q}
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 PLIST_SRC=	${WRKDIR}/PLIST
 

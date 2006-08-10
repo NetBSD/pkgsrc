@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/30 07:05:16 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/08/10 03:21:39 minskim Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++ fortran
 TEX_DEPMOD=	build
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 post-patch:
 	${MV} ${WRKSRC}/tnt ${WRKSRC}/tnt-mmtl
