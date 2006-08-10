@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.61 2006/08/07 08:54:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.62 2006/08/10 07:20:16 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -137,3 +137,11 @@ Pullup ticket 1779 - requested by salo
 security update for trac and ja-trac
 Pullup ticket 1780 - requested by tron
 security update for mysql5
+Pullup ticket 1783 - requested by salo
+security fix for mit-krb5
+Pullup ticket 1784 - requested by salo
+security fix for heimdal
+Pullup ticket 1785 - requested by salo
+security update for clamav
+Pullup ticket 1786 - requested by taca
+security fix for php5
