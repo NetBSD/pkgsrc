@@ -25,4 +25,4 @@ else
   fi
 fi
 
-exec $PHP -C -q $INCARG -d output_buffering=1 -dmemory_limit=12M $INCDIR/pearcmd.php "$@"
+exec $PHP -C -q $INCARG -d output_buffering=1 -d open_basedir="" -d safe_mode=0 -d memory_limit=12M $INCDIR/pearcmd.php "$@"
