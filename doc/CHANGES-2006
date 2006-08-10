@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.990 2006/08/10 08:56:21 abs Exp $
+$NetBSD: CHANGES-2006,v 1.991 2006/08/10 11:19:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3893,3 +3893,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed print/teTeX-sharesrc [minskim 2006-08-10]
 	Updated lang/php5 to 5.1.4nb3 [taca 2006-08-10]
 	Updated pkgtools/pkg_chk to 1.79 [abs 2006-08-10]
+	Added mail/imapsync version 1.182 [abs 2006-08-09]
