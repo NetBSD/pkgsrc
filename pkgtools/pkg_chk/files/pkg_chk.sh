@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.39 2006/08/06 12:21:09 cube Exp $
+# $Id: pkg_chk.sh,v 1.40 2006/08/10 08:54:44 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -544,7 +544,7 @@ usage()
     echo 'Usage: pkg_chk [opts]
 	-a      Add all missing packages (implies -c)
 	-B      Check the "Build version" of packages
-	-b      Install binary packages
+	-b      Use binary packages
 	-C conf Use pkgchk.conf file 'conf'
 	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-f      Perform a 'make fetch' for all required packages
@@ -558,7 +558,7 @@ usage()
 	-P dir  Set PACKAGES dir (overrides any other setting)
 	-q	Do not display actions or take any action; only list packages
 	-r	Recursively remove mismatches (use with care) (implies -i)
-	-s      Install packages by building from source
+	-s      Use source for building packages
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-u      Update all mismatched packages (implies -i)
 	-v      Verbose
@@ -656,6 +656,7 @@ test -n "$PKG_INFO"   || PKG_INFO="@PKG_INFO@"
 test -n "$SED"        || SED="@SED@"
 test -n "$SORT"	      || SORT="@SORT@"
 test -n "$TSORT"      || TSORT="@TSORT@"
+test -n "$PKG_DBDIR"  || PKG_DBDIR="@PKG_DBDIR@"
 
 if [ ! -f $MAKECONF ] ; then
     if [ -f @PREFIX@/etc/mk.conf ] ; then
