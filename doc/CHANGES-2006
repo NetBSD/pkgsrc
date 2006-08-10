@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.997 2006/08/10 14:16:21 abs Exp $
+$NetBSD: CHANGES-2006,v 1.998 2006/08/10 14:22:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3893,11 +3893,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed print/teTeX-sharesrc [minskim 2006-08-10]
 	Updated lang/php5 to 5.1.4nb3 [taca 2006-08-10]
 	Updated pkgtools/pkg_chk to 1.79 [abs 2006-08-10]
-	Added mail/imapsync version 1.182 [abs 2006-08-09]
+	Added mail/imapsync version 1.182 [abs 2006-08-10]
 	Updated net/mldonkey to 2.7.7nb1 [jmmv 2006-08-10]
-	Updated devel/p5-Module-Pluggable to 3.01 [abs 2006-08-09]
-	Updated games/openttd to 0.4.8rc2 [abs 2006-08-09]
-	Updated textproc/xerces-c to 2.7.0 [abs 2006-08-09]
-	Updated textproc/p5-XML-Xerces to 2.7.0-0 [abs 2006-08-09]
+	Updated devel/p5-Module-Pluggable to 3.01 [abs 2006-08-10]
+	Updated games/openttd to 0.4.8rc2 [abs 2006-08-10]
+	Updated textproc/xerces-c to 2.7.0 [abs 2006-08-10]
+	Updated textproc/p5-XML-Xerces to 2.7.0-0 [abs 2006-08-10]
 	Updated graphics/cairo to 1.2.2 [wiz 2006-08-10]
-	Added devel/Data-Dump version 1.06 [abs 2006-08-09]
+	Added devel/Data-Dump version 1.06 [abs 2006-08-10]
+	Updated www/curl to 7.15.5 [wiz 2006-08-10]
