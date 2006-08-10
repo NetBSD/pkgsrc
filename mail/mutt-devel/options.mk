@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.17 2006/08/08 16:17:50 tron Exp $
+# $NetBSD: options.mk,v 1.18 2006/08/10 11:41:16 wiz Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_OPTIONAL_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	slang
+PKG_OPTIONS_GROUP.display=	slang ncurses
 PKG_SUPPORTED_OPTIONS=	ssl sasl mutt-hcache idn mutt-compressed-mbox
-PKG_SUGGESTED_OPTIONS=	ncurses ssl
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 
