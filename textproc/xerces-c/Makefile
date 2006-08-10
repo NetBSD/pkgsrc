@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:30:52 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/08/10 13:44:21 abs Exp $
 #
 
-DISTNAME=	xerces-c-src_2_3_0
+DISTNAME=	xerces-c-src_2_7_0
 PKGNAME=	${DISTNAME:S/-src_/-/:S/_/./g}
-PKGREVISION=	3
 CATEGORIES=	textproc
-MASTER_SITES=	http://xml.apache.org/dist/xerces-c/stable/archives/Xerces-C_2_3_0/
+MASTER_SITES=	http://apache.rmplc.co.uk/xml/xerces-c/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xerces-c/
@@ -51,8 +50,8 @@ PLIST_SUBST+=		${PLIST_SUBST.${ICONV_TYPE}-iconv}
 .include "../../converters/libiconv/buildlink3.mk"
 
 pre-configure:
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dom/impl/*.hpp \
