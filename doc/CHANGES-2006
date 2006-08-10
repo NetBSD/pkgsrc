@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1001 2006/08/10 15:09:36 ben Exp $
+$NetBSD: CHANGES-2006,v 1.1002 2006/08/10 15:27:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3904,3 +3904,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/curl to 7.15.5 [wiz 2006-08-10]
 	Removed graphics/libpixman [drochner 2006-08-10]
 	Updated x11/xpmicons to 1.0nb2 [ben 2006-08-10]
+	Updated misc/yelp to 2.14.3nb1 [jmmv 2006-08-10]
