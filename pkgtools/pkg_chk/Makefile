@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2006/08/06 12:21:09 cube Exp $
+# $NetBSD: Makefile,v 1.42 2006/08/10 08:54:44 abs Exp $
 
-DISTNAME=	pkg_chk-1.78
+DISTNAME=	pkg_chk-1.79
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -40,6 +40,7 @@ do-build:
 	  -e 's#@SORT@#${SORT}#g' \
 	  -e 's#@TSORT@#${TSORT}#g' \
 	  -e 's#@PREFIX@#${PREFIX}#g' \
+	  -e 's#@PKG_DBDIR@#${PKG_DBDIR}#g' \
 	  ${FILESDIR}/pkg_chk.sh >${WRKSRC}/pkg_chk.sh
 
 do-install:
