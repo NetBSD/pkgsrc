@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mldonkey.sh,v 1.6 2006/02/27 22:51:22 wiz Exp $
+# $NetBSD: mldonkey.sh,v 1.7 2006/08/10 11:35:26 jmmv Exp $
 #
 # KEYWORD: shutdown
 # PROVIDE: mldonkey
@@ -11,14 +11,18 @@ if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
+: ${mldonkey_group=@MLDONKEY_GROUP@}
+: ${mldonkey_home=@MLDONKEY_HOME@}
+: ${mldonkey_logdir=@VARBASE@/log/mldonkey}
+: ${mldonkey_rundir=@VARBASE@/run/mldonkey}
+: ${mldonkey_user=@MLDONKEY_USER@}
+
 name="mldonkey"
 rcvar=${name}
 command="@PREFIX@/libexec/mldonkey/mlnet"
-command_args=">@MLDONKEY_HOME@/log 2>&1 &"
-required_dirs="@MLDONKEY_HOME@"
-mldonkey_chdir="@MLDONKEY_HOME@"
-mldonkey_group="@MLDONKEY_GROUP@"
-mldonkey_user="@MLDONKEY_USER@"
+command_args="-pid ${mldonkey_rundir} >${mldonkey_logdir}/mlnet.log 2>&1 &"
+pidfile="${mldonkey_rundir}/mlnet.pid"
+required_dirs="${mldonkey_home}"
 start_cmd="mldonkey_start"
 
 mldonkey_start() {
@@ -27,8 +31,22 @@ mldonkey_start() {
 	else
 		@ECHO@ " ${name}"
 	fi
-	@SU@ -l ${mldonkey_user} \
-	     -c "${command} ${mldonkey_flags} ${command_args}"
+
+	if [ ! -d ${mldonkey_logdir} ]; then
+		mkdir -p ${mldonkey_logdir}
+		chown ${mldonkey_user}:${mldonkey_group} ${mldonkey_logdir}
+		chmod 0700 ${mldonkey_logdir}
+	fi
+
+	if [ ! -d ${mldonkey_rundir} ]; then
+		mkdir -p ${mldonkey_rundir}
+		chown ${mldonkey_user}:${mldonkey_group} ${mldonkey_rundir}
+		chmod 0700 ${mldonkey_rundir}
+	fi
+
+	@SU@ -l ${mldonkey_user} -c \
+		"HOME=${mldonkey_home} \
+		 ${command} ${mldonkey_flags} ${command_args}"
 }
 
 if [ -f /etc/rc.subr ]; then
