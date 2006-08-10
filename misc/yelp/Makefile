@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2006/08/03 19:28:50 drochner Exp $
+# $NetBSD: Makefile,v 1.56 2006/08/10 15:27:07 jmmv Exp $
 #
 
 DISTNAME=		yelp-2.14.3
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,6 +34,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 # Require a version that has the .pc files in it.
 BUILDLINK_API_DEPENDS.firefox+=     firefox>=1.5nb2
 .endif
+
+BUILDLINK_DEPMETHOD.gnome-doc-utils+=   run
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
