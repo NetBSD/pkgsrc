@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2006/08/10 03:21:40 minskim Exp $
 
 DISTNAME=		Template-Extract-0.25
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/~autrijus/Template-Extract/
 COMMENT=		Perl5 module for extracting data structure from TT2-rendered documents
 
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 DEPENDS+=	p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 

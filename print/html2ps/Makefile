@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2006/08/10 03:21:40 minskim Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
@@ -17,7 +17,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	weblint-[0-9]*:../../www/weblint
 
 USE_TOOLS+=	gs:run perl:run
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

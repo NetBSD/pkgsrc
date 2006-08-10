@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2006/08/10 03:21:39 minskim Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -19,7 +19,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	4
 TEX_DEPMETHOD=	build
-TEX_ACCEPTED=		teTeX2 teTeX3
+TEX_ACCEPTED=		teTeX3
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3

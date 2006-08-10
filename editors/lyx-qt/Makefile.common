@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2006/07/25 12:20:44 joerg Exp $
+# $NetBSD: Makefile.common,v 1.42 2006/08/10 03:21:40 minskim Exp $
 #
 
 DISTNAME=		lyx-1.4.2
@@ -34,7 +34,7 @@ EXTRACT_USING=		gtar
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
-TEX_ACCEPTED=		teTeX2 teTeX3
+TEX_ACCEPTED=		teTeX3
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 
 CONFIGURE_ARGS+=	--with-pspell-lib=${BUILDLINK_PREFIX.aspell}/lib \

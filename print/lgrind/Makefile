@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2006/08/10 03:21:40 minskim Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/lgrind/source
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 NO_CONFIGURE=	yes
 USE_DIRS+=	texmf-1.0
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../print/teTeX/module.mk"
