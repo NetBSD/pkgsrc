@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/14 15:20:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/10 15:28:40 jmmv Exp $
 share/gnome/help/gnucash/C/appendixa.xml
 share/gnome/help/gnucash/C/appendixb.xml
 share/gnome/help/gnucash/C/appendixc.xml
@@ -227,4 +227,4 @@ share/omf/gnucash-docs/gnucash-help-de_DE.omf
 @dirrm share/gnome/help/gnucash/C/figures
 @dirrm share/gnome/help/gnucash/C
 @dirrm share/gnome/help/gnucash
-@comment in gnome1-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome/help
