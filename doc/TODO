@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5313 2006/08/10 13:29:52 abs Exp $
+$NetBSD: TODO,v 1.5314 2006/08/10 13:35:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -281,13 +281,13 @@ Suggested package updates
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.4
+	o TeXmacs-1.0.6.5
 	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
 	o abcm2ps-4.12.24
-	o abcmidi-20060730
+	o abcmidi-20060805
 	o acpi-iasl-20040715
 	o adns-1.3
 	o adocman-0.13
@@ -367,6 +367,7 @@ Suggested package updates
 	o byacc-20050813
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
+	o cairo-1.2.2
 	o cal3d-0.11.0
 	o catdoc-0.94
 	o catdoc-tk-0.94
@@ -383,6 +384,7 @@ Suggested package updates
 	o cinepaint-0.21 [only RC1 available at the moment]
 	o cint-5.16
 	o cjk-lyx-1.3.3
+	o clamav-0.88.4
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
@@ -397,6 +399,7 @@ Suggested package updates
 	o cue-20060417 [pkg/33153]
 	o cuetools-1.3.1
 	o cups-1.2.2
+	o curl-7.15.5
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsweb-3.0.6
 	o cweb-3.64a
@@ -405,6 +408,7 @@ Suggested package updates
 	o cyrus-sasl-2.1.22
 	o dap-2.1.5
 	o dar-2.3.1
+	o darkstat-3.0.540 [pkg/34158]
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -471,7 +475,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.6.9
+	o fox-1.6.13
 	o freeglut-2.4.0
 	o freesci-0.3.5
 	o fugu-1.2.3
@@ -482,6 +486,7 @@ Suggested package updates
 	o gap-4r4p3
 	o gated-3.6
 	o gauche-0.8.7 [pkg/33675]
+	o gcalctool-5.8.20
 	o gcc-3.3.6
 	o gcc-4.1.1
 	o gcombust-0.1.55
@@ -504,6 +509,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
+	o glibmm-2.10.5
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -641,6 +647,7 @@ Suggested package updates
 	o libtorrent-0.9.3
 	o libwpd-0.8.5
 	o licq-core-1.3.0
+	o liferea-1.0.20
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -1003,6 +1010,7 @@ Suggested package updates
 	o sdig-0.40
 	o seahorse-0.9.1
 	o sendfile-20010424
+	o sendmail-8.13.8
 	o sharity-3.2
 	o sharity-light-1.3
 	o shc-3.8
@@ -1159,7 +1167,7 @@ Suggested package updates
 	o xmon-1.5.6
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorg-7.0
+	o xorg-7.1
 	o xorp-1.3
 	o xpad-2.11
 	o xpp-1.5
