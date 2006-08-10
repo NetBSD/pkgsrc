@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1.2.2 2006/08/10 07:14:03 ghen Exp $
+
+--- lib/roken/Makefile.in.orig	2006-02-06 08:32:11.000000000 -0500
++++ lib/roken/Makefile.in
+@@ -1654,6 +1654,9 @@ roken.h: make-roken$(EXEEXT)
+ 
+ make-roken.c: roken.h.in roken.awk
+ 	$(AWK) -f $(srcdir)/roken.awk $(srcdir)/roken.h.in > make-roken.c
++
++print-xheaders:
++	@echo $(XHEADERS)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2006/05/31 18:22:26 ghen Exp $
+# $NetBSD: Makefile,v 1.59.2.1 2006/08/10 07:14:03 ghen Exp $
 
 DISTNAME=	heimdal-0.7.2
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.pdc.kth.se/pub/heimdal/src/	\
 		ftp://ftp.sunet.se/pub/unix/admin/mirror-pdc/heimdal/src/
@@ -96,6 +96,14 @@ OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
 RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
 INFO_FILES=		# PLIST
+
+# Dynamically determine the "replacement" headers for things missing
+# in the base system and add them to the PLIST.
+#
+GENERATE_PLIST+=	\
+	( cd ${WRKSRC}/lib/roken && ${MAKE_PROGRAM} print-xheaders |	\
+	  ${XARGS} -n 1 | ${SED} -e "s,^,include/krb5/," );		\
+	${ECHO} "@dirrm include/krb5";
 
 # Fix some places in the Heimdal sources that don't point to the correct
 # Kerberized binaries when exec'ing programs.
