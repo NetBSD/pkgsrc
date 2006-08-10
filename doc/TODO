@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5315 2006/08/10 13:50:16 abs Exp $
+$NetBSD: TODO,v 1.5316 2006/08/10 13:51:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o byacc-20050813
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
-	o cairo-1.2.2
 	o cal3d-0.11.0
 	o catdoc-0.94
 	o catdoc-tk-0.94
