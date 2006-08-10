@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.999 2006/08/10 14:38:03 salo Exp $
+$NetBSD: CHANGES-2006,v 1.1000 2006/08/10 14:54:22 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3902,3 +3902,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/cairo to 1.2.2 [wiz 2006-08-10]
 	Added devel/p5-Data-Dump version 1.06 [abs 2006-08-10]
 	Updated www/curl to 7.15.5 [wiz 2006-08-10]
+	Removed graphics/libpixman [drochner 2006-08-10]
