@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2006/07/04 06:30:25 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2006/08/10 14:18:14 wiz Exp $
 
-DISTNAME=	curl-7.15.4
+DISTNAME=	curl-7.15.5
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -26,14 +26,10 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 # needs perl
 TEST_TARGET=		check
 
-.include "../../mk/bsd.prefs.mk"
-
-.if empty(USE_INET6:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
+.include "options.mk"
 
 post-configure:
-	@if ${GREP} '#define HAVE_SYS_SELECT_H 1' ${WRKSRC}/src/config.h \
+	if ${GREP} '#define HAVE_SYS_SELECT_H 1' ${WRKSRC}/src/config.h \
 		>/dev/null; \
 	then \
 	    line='#include <sys/select.h>'; \
