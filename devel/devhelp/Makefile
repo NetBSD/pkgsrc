@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2006/07/05 05:37:40 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/08/10 14:07:55 drochner Exp $
 
-DISTNAME=		devhelp-0.7
-PKGREVISION=		16
+DISTNAME=		devhelp-0.12
 CATEGORIES=		devel x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.7/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -14,19 +13,25 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 
-BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
+PKGCONFIG_OVERRIDE+=	libdevhelp-1.0.pc.in
+GCONF2_SCHEMAS=		devhelp.schemas
 
+PKG_OPTIONS_VAR=        PKG_OPTIONS.devhelp
+.include "../../www/mozilla/gecko-options.mk"
+.include "../../mk/bsd.options.mk"
+
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../www/mozilla/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-install:
