@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/14 21:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/08/10 15:28:40 jmmv Exp $
 
 DISTNAME=		gnucash-docs-2.0.0
 PKGREVISION=		1
@@ -10,7 +10,7 @@ MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Documentation for GnuCash - personal double-entry accounting program
 
-USE_DIRS+=		gnome1-1.5
+USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
