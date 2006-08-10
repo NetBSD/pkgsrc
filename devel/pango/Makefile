@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.81 2006/07/24 23:20:50 minskim Exp $
+# $NetBSD: Makefile,v 1.82 2006/08/10 16:12:59 wiz Exp $
 
-DISTNAME=		pango-1.12.3
-PKGREVISION=		3
+DISTNAME=		pango-1.14.0
 CATEGORIES=		devel fonts
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
-			${MASTER_SITE_GNOME:=sources/pango/1.12/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.12/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.12/ \
+			${MASTER_SITE_GNOME:=sources/pango/1.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
@@ -43,6 +42,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.2
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

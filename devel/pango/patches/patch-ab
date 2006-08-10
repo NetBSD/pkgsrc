@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2006/03/14 19:50:15 tron Exp $
+$NetBSD: patch-ab,v 1.14 2006/08/10 16:12:59 wiz Exp $
 
---- configure.orig	2006-03-13 04:39:53.000000000 +0000
-+++ configure	2006-03-14 19:23:09.000000000 +0000
-@@ -24046,7 +24046,7 @@
+--- configure.orig	2006-08-08 22:15:52.000000000 +0000
++++ configure
+@@ -23058,7 +23058,7 @@ fi
  
  use_la_modules=false
  case $host in
