@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5312 2006/08/09 21:49:51 adrianp Exp $
+$NetBSD: TODO,v 1.5313 2006/08/10 13:29:52 abs Exp $
 
 Suggested new packages
 ======================
@@ -739,7 +739,6 @@ Suggested package updates
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
-	o openttd-0.4.7
 	o oregano-0.50.0
 	o oroborus-2.0.15
 	o osh-050219
