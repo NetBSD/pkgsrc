@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.988 2006/08/10 03:47:37 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.989 2006/08/10 05:57:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3891,3 +3891,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed print/teTeX-share [minskim 2006-08-10]
 	Removed print/teTeX-bin [minskim 2006-08-10]
 	Removed print/teTeX-sharesrc [minskim 2006-08-10]
+	Updated lang/php5 to 5.1.4nb3 [taca 2006-08-10]
