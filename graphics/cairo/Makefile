@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/08/10 13:50:37 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/08/10 14:28:53 drochner Exp $
 
 DISTNAME=	cairo-1.2.2
 CATEGORIES=	graphics
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--disable-xcb
 CONFIGURE_ARGS+=	--enable-glitz
 CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .if exists(/System/Library/Frameworks/Carbon.framework)
 CONFIGURE_ARGS+=	--enable-quartz
@@ -30,7 +29,6 @@ PLIST_SUBST+=		CARBON="@comment "
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
-BUILDLINK_API_DEPENDS.libpixman+=	libpixman>=0.1.5
 
 .include "../../mk/compiler.mk"
 
@@ -44,7 +42,6 @@ TEST_TARGET=			check
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
-.include "../../graphics/libpixman/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
