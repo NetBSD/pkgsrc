@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/08/10 17:44:11 drochner Exp $
 bin/linc-cleanup-sockets
 bin/linc-config
 include/linc-1.0/linc/linc-config.h
@@ -11,19 +11,19 @@ include/linc-1.0/linc/linc.h
 lib/liblinc.la
 lib/pkgconfig/linc.pc
 share/aclocal/linc.m4
-share/doc/html/linc/home.png
-share/doc/html/linc/index.html
-share/doc/html/linc/index.sgml
-share/doc/html/linc/left.png
-share/doc/html/linc/linc-LINCConnection.html
-share/doc/html/linc/linc-LINCServer.html
-share/doc/html/linc/linc-linc-config.html
-share/doc/html/linc/linc-linc-protocol.html
-share/doc/html/linc/linc-linc-types.html
-share/doc/html/linc/linc-linc.html
-share/doc/html/linc/linc.devhelp
-share/doc/html/linc/right.png
-share/doc/html/linc/up.png
-@dirrm share/doc/html/linc
+share/gtk-doc/html/linc/home.png
+share/gtk-doc/html/linc/index.html
+share/gtk-doc/html/linc/index.sgml
+share/gtk-doc/html/linc/left.png
+share/gtk-doc/html/linc/linc-LINCConnection.html
+share/gtk-doc/html/linc/linc-LINCServer.html
+share/gtk-doc/html/linc/linc-linc-config.html
+share/gtk-doc/html/linc/linc-linc-protocol.html
+share/gtk-doc/html/linc/linc-linc-types.html
+share/gtk-doc/html/linc/linc-linc.html
+share/gtk-doc/html/linc/linc.devhelp
+share/gtk-doc/html/linc/right.png
+share/gtk-doc/html/linc/up.png
+@dirrm share/gtk-doc/html/linc
 @dirrm include/linc-1.0/linc
 @dirrm include/linc-1.0

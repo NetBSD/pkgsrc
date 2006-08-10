@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/08/10 17:44:11 drochner Exp $
 #
 
 DISTNAME=		blib-1.0.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel graphics
 MASTER_SITES=		http://sven.gimp.org/blinkenlights/old/
 
@@ -19,7 +19,6 @@ PKGCONFIG_OVERRIDE+=	blib-directfb.pc.in
 PKGCONFIG_OVERRIDE+=	blib-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	blib.pc.in
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 # XXX: fix this for GNU/Linux, provide appropriate PLIST.

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/10 17:44:11 drochner Exp $
 include/blib-1.0/blib/beffects.h
 include/blib-1.0/blib/blib-directfb.h
 include/blib-1.0/blib/blib-gtk.h
@@ -50,42 +50,42 @@ lib/pkgconfig/blib-gtk.pc
 lib/pkgconfig/blib.pc
 share/blib-1.0/blinkentheme.dtd
 share/blib-1.0/bml.dtd
-share/doc/html/blib/BEffects.html
-share/doc/html/blib/BModule.html
-share/doc/html/blib/BModuleInfo.html
-share/doc/html/blib/BMovie.html
-share/doc/html/blib/BMoviePlayer.html
-share/doc/html/blib/BObject.html
-share/doc/html/blib/BReceiver.html
-share/doc/html/blib/BSender.html
-share/doc/html/blib/BTheme.html
-share/doc/html/blib/BViewDirectFB.html
-share/doc/html/blib/BViewGtk.html
-share/doc/html/blib/blib-BLib.html
-share/doc/html/blib/blib-BModule-Internal-API.html
-share/doc/html/blib/blib-BModule-Utilities.html
-share/doc/html/blib/blib-BMovieEffects.html
-share/doc/html/blib/blib-BPacket.html
-share/doc/html/blib/blib-BParams.html
-share/doc/html/blib/blib-BParser.html
-share/doc/html/blib/blib-BProtocol.html
-share/doc/html/blib/blib-BTypes.html
-share/doc/html/blib/blib-BUtils.html
-share/doc/html/blib/blib-BWriter.html
-share/doc/html/blib/blib-modules.html
-share/doc/html/blib/blib-movies.html
-share/doc/html/blib/blib-network.html
-share/doc/html/blib/blib-sim.html
-share/doc/html/blib/blib-utils.html
-share/doc/html/blib/blib.devhelp
-share/doc/html/blib/blib.html
-share/doc/html/blib/home.png
-share/doc/html/blib/index.html
-share/doc/html/blib/index.sgml
-share/doc/html/blib/left.png
-share/doc/html/blib/right.png
-share/doc/html/blib/up.png
-@dirrm share/doc/html/blib
+share/gtk-doc/html/blib/BEffects.html
+share/gtk-doc/html/blib/BModule.html
+share/gtk-doc/html/blib/BModuleInfo.html
+share/gtk-doc/html/blib/BMovie.html
+share/gtk-doc/html/blib/BMoviePlayer.html
+share/gtk-doc/html/blib/BObject.html
+share/gtk-doc/html/blib/BReceiver.html
+share/gtk-doc/html/blib/BSender.html
+share/gtk-doc/html/blib/BTheme.html
+share/gtk-doc/html/blib/BViewDirectFB.html
+share/gtk-doc/html/blib/BViewGtk.html
+share/gtk-doc/html/blib/blib-BLib.html
+share/gtk-doc/html/blib/blib-BModule-Internal-API.html
+share/gtk-doc/html/blib/blib-BModule-Utilities.html
+share/gtk-doc/html/blib/blib-BMovieEffects.html
+share/gtk-doc/html/blib/blib-BPacket.html
+share/gtk-doc/html/blib/blib-BParams.html
+share/gtk-doc/html/blib/blib-BParser.html
+share/gtk-doc/html/blib/blib-BProtocol.html
+share/gtk-doc/html/blib/blib-BTypes.html
+share/gtk-doc/html/blib/blib-BUtils.html
+share/gtk-doc/html/blib/blib-BWriter.html
+share/gtk-doc/html/blib/blib-modules.html
+share/gtk-doc/html/blib/blib-movies.html
+share/gtk-doc/html/blib/blib-network.html
+share/gtk-doc/html/blib/blib-sim.html
+share/gtk-doc/html/blib/blib-utils.html
+share/gtk-doc/html/blib/blib.devhelp
+share/gtk-doc/html/blib/blib.html
+share/gtk-doc/html/blib/home.png
+share/gtk-doc/html/blib/index.html
+share/gtk-doc/html/blib/index.sgml
+share/gtk-doc/html/blib/left.png
+share/gtk-doc/html/blib/right.png
+share/gtk-doc/html/blib/up.png
+@dirrm share/gtk-doc/html/blib
 @dirrm share/blib-1.0
 @dirrm lib/blib-1.0/modules
 @dirrm lib/blib-1.0
