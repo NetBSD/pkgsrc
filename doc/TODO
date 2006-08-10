@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5316 2006/08/10 13:51:24 wiz Exp $
+$NetBSD: TODO,v 1.5317 2006/08/10 13:56:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1278,27 +1278,6 @@ Suggested cleanups in pkgsrc
 	  Affects: cross/h8300-hms-binutils, cross/h8300-hms-gcc,
 	  cross/i386-netbsdpe, sysutils/apcupsd, sysutils/gnometoaster,
 	  sysutils/mtoolsfm, sysutils/xnc
-
-	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate
-	  LIBTOOL_OVERRIDE. Affects:
-	  audio/audacity, audio/wsoundserver, benchmarks/benchfft,
-	  cad/geda, cad/gnetlist, cad/gsymcheck, chat/gale,
-	  chat/icqlib, converters/recode, databases/iodbc,
-	  databases/tcl-gdbm, devel/eel, devel/glib,
-	  devel/libdockapp, devel/libproplist, devel/libsmi,
-	  devel/libstroke, devel/xdelta, editors/cooledit,
-	  games/xpuyopuyo, graphics/GUIlib,
-	  graphics/SDL_image, graphics/aqsis, graphics/fnlib,
-	  graphics/freetype-lib, graphics/gphoto, graphics/librsvg,
-	  graphics/plotutils-nox11, graphics/plotutils,
-	  graphics/py-gimp, graphics/scigraphica, lang/cim, lang/gb,
-	  lang/japhar, lang/vslisp,
-	  net/ja-samba, net/samba2, print/LPRng-core, print/ja-vflib-lib,
-	  print/ja-vfxdvik, security/mirrordir, sysutils/amanda-common,
-	  sysutils/medusa, textproc/chasen-base, textproc/jade,
-	  textproc/libunicode, textproc/namazu2,
-	  wm/bbconf, www/ap-jserv, www/cgicc, www/glibwww,
-	  x11/gtk+extra
 
 	o Install documentation consistently into share/doc/${PKGBASE} or
 	  share/doc/${PKGNAME}, not share/doc/html.
