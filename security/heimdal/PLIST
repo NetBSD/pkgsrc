@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2006/08/10 07:14:03 ghen Exp $
 bin/${KRB5_PREFIX}login
 bin/${KRB5_PREFIX}rcp
 bin/${KRB5_PREFIX}rsh
@@ -28,7 +28,6 @@ include/krb5/com_err.h
 include/krb5/com_right.h
 include/krb5/der.h
 include/krb5/editline.h
-include/krb5/fnmatch.h
 include/krb5/getarg.h
 include/krb5/gssapi.h
 include/krb5/hdb-private.h
@@ -705,4 +704,3 @@ share/examples/rc.d/kpasswdd
 ${LDAP}@dirrm share/examples/heimdal
 @dirrm include/krb5/ss
 @dirrm include/krb5/kadm5
-@dirrm include/krb5
