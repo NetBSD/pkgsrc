@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.14 2006/04/19 13:14:57 tonio Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.15 2006/08/10 03:35:33 minskim Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
@@ -32,7 +32,7 @@
 #   Description:
 #     The user's favorite TeX implementation
 #   Possible values:
-#     teTeX2, teTeX3
+#     teTeX3
 #   Default value:
 #     teTeX3
 #
@@ -50,9 +50,9 @@
 #  Description:
 #    Versions the package accepts (supports).
 #  Possible values:
-#    teTeX2, teTeX3
+#    teTeX3
 #  Default value:
-#    teTeX2, teTeX3
+#    teTeX3
 #
 # Variables provided for tex packages:
 #
@@ -74,7 +74,7 @@
 #   Description:
 #     The type of the used TeX package
 #   Possible values:
-#     teTeX2, teTeX3
+#     teTeX3
 
 .if !defined(TEX_BUILDLINK3_MK)
 TEX_BUILDLINK3_MK=	# defined
@@ -83,13 +83,11 @@ TEX_BUILDLINK3_MK=	# defined
 
 TEX_DEPMETHOD?= run
 
-# Assume only teTeX {2-3} are supported by default.
-TEX_ACCEPTED?=	teTeX2 teTeX3
+# Assume only teTeX 3 is supported by default.
+TEX_ACCEPTED?=	teTeX3
 
 # set up variables for buildlink or depends
 #
-BUILDLINK_API_DEPENDS.teTeX2=	teTeX-bin-2.[0-9]*
-BUILDLINK_PKGSRCDIR.teTeX2=	../../print/teTeX-bin
 BUILDLINK_API_DEPENDS.teTeX3=	teTeX-bin-3.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX3=	../../print/teTeX3-bin
 
@@ -110,9 +108,6 @@ TEX_TYPE=	none
 .if ${TEX_TYPE} == "teTeX3"
 _TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX3}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
-.elif ${TEX_TYPE} == "teTeX2"
-_TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX2}
-_TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX2}
 .endif
 
 .endif	# TEX_BUILDLINK3_MK
