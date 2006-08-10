@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/10 15:08:41 ben Exp $
 include/X11/bitmaps/app.xbm
 include/X11/bitmaps/app_mask.xbm
+include/X11/bitmaps/bg1.xbm                             
+include/X11/bitmaps/bg2.xbm                             
+include/X11/bitmaps/bg3.xbm                             
 include/X11/bitmaps/cursor.xbm
 include/X11/bitmaps/cursor_big.xbm
 include/X11/bitmaps/dir.xbm
@@ -9,6 +12,9 @@ include/X11/bitmaps/file.xbm
 include/X11/bitmaps/file_mask.xbm
 include/X11/bitmaps/files.xbm
 include/X11/bitmaps/files_mask.xbm
+include/X11/bitmaps/fl_arrow.xbm                        
+include/X11/bitmaps/fl_doc.xbm                          
+include/X11/bitmaps/fl_folder.xbm 
 include/X11/bitmaps/grey.xbm
 include/X11/bitmaps/grey_mask.xbm
 include/X11/bitmaps/link.xbm
