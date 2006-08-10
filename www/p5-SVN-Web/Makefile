@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2006/08/10 03:21:40 minskim Exp $
 
 DISTNAME=	SVN-Web-0.41
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NIKC/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Unstable snapshot of Subversion repository browser
 
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 DEPENDS+=	p5-Apache-DBI>=0.87:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-Date-Calc>=4.3:../../devel/p5-Date-Calc
