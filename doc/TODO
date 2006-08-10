@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5320 2006/08/10 14:35:45 salo Exp $
+$NetBSD: TODO,v 1.5321 2006/08/10 16:07:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,6 +383,8 @@ Suggested package updates
 	o cinepaint-0.21 [only RC1 available at the moment]
 	o cint-5.16
 	o cjk-lyx-1.3.3
+	o classpath-0.92
+	o classpath-gui-0.92
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
@@ -846,6 +848,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.14.0
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
