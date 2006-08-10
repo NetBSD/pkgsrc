@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2006/08/09 16:42:09 adrianp Exp $
+# $NetBSD: Makefile,v 1.53 2006/08/10 10:55:52 adrianp Exp $
 
 DISTNAME=	freeradius-${RADVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -15,18 +15,37 @@ COMMENT=	Free RADIUS server implementation
 CONFLICTS+=		radiusd-cistron-[0-9]*
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
-FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP:Q}
-PLIST_SUBST+=		RADVER=${RADVER}
+USE_LIBTOOL=		YES
 USE_OLD_DES_API=	YES
+
+BUILD_DEFS=		VARBASE RADIUS_USER RADIUS_GROUP
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+FILES_SUBST+=		RADIUS_USER=${RADIUS_USER:Q}
+FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP:Q}
+PLIST_SUBST+=		RADVER=${RADVER}
+MESSAGE_SUBST+=		CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} VARBASE=${VARBASE}
+MESSAGE_SUBST+=		RADIUS_USER=${RADIUS_USER:Q} XARGS=${XARGS:Q}
+MESSAGE_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP:Q} FIND=${FIND:Q}
+
+PKG_SYSCONFSUBDIR=	raddb
+RCD_SCRIPTS=		radiusd
+RADIUS_USER?=		radius
+RADIUS_GROUP?=		radius
+PKG_GROUPS=		${RADIUS_USER}
+PKG_USERS=		${RADIUS_USER}:${RADIUS_GROUP}
+OWN_DIRS_PERMS+=	${VARBASE}/run/radiusd \
+			${RADIUS_USER} ${RADIUS_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
+			${RADIUS_USER} ${RADIUS_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
+			${RADIUS_USER} ${RADIUS_GROUP} 0750
+
 RADVER=			1.1.2
+EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
-USE_LIBTOOL=		YES
-
-CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
+CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/radiusd
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--disable-ltdl-install
@@ -37,6 +56,7 @@ CONFIGURE_ARGS+=        --without-rlm_smb
 CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
+CONFIGURE_ARGS+=	--quiet
 #CONFIGURE_ARGS+=	--without-rlm_eap_peap
 #CONFIGURE_ARGS+=	--without-rlm_eap_sim
 #CONFIGURE_ARGS+=	--without-rlm_eap_tls
@@ -54,15 +74,14 @@ SUBST_SED.make+=	-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
 				-L${PREFIX}/lib|g"
 SUBST_MESSAGE.make=	Fixing Makefiles.
 
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	post-patch
+SUBST_FILES.config=	raddb/radiusd.conf.in
+SUBST_SED.config=	-e "s|@@RADIUS_USER@@|${RADIUS_USER}|g"
+SUBST_SED.config+=	-e "s|@@RADIUS_GROUP@@|${RADIUS_GROUP}|g"
+SUBST_MESSAGE.config=	Fixing configuration files.
+
 .include "options.mk"
-
-RCD_SCRIPTS=		radiusd
-
-OWN_DIRS=		${VARBASE}/run/radiusd
-
-PKG_SYSCONFSUBDIR=	raddb
-EGDIR=			${PREFIX}/share/examples/freeradius
-CONF_FILES_MODE=	0640
 
 EGFILES=	acct_users attrs certs/demoCA/index.txt.old \
 		certs/demoCA/cacert.pem certs/demoCA/index.txt \
@@ -79,7 +98,8 @@ EGFILES=	acct_users attrs certs/demoCA/index.txt.old \
 		otp.conf otppasswd.sample
 
 .for f in ${EGFILES}
-CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES_PERMS+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
+			${RADIUS_USER} ${RADIUS_GROUP} 0640
 .endfor
 
 .include "../../security/openssl/buildlink3.mk"
@@ -101,9 +121,6 @@ SUBST_SED.make+= 	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 			${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|g'
 .endif
 
-.if ${OPSYS} == "DragonFly"
-.endif
-
 .if ${MACHINE_ARCH} == "amd64"
 CFLAGS+= -fPIC
 .endif
@@ -121,5 +138,9 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
 	${MKDIR} ${PKG_SYSCONFDIR}/certs
 	${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
+	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs
+	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs/demoCA
+	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs
+	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs/demoCA
 
 .include "../../mk/bsd.pkg.mk"
