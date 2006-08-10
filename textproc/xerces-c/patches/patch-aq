@@ -1,14 +1,15 @@
-$NetBSD: patch-aq,v 1.1 2005/12/31 00:56:42 joerg Exp $
+$NetBSD: patch-aq,v 1.2 2006/08/10 13:44:22 abs Exp $
 
---- util/Platforms/Makefile.in.orig	2005-12-31 00:12:22.000000000 +0000
-+++ util/Platforms/Makefile.in
-@@ -172,6 +172,9 @@ endif
- ifeq (${PLATFORM}, FREEBSD)
-     SUBMODULE = FreeBSD
- endif
-+ifeq (${PLATFORM}, DRAGONFLY)
-+    SUBMODULE = DragonFly
-+endif
- ifeq (${PLATFORM}, NETBSD)
-     SUBMODULE = NetBSD
- endif
+--- util/XercesDefs.hpp.orig	2005-09-07 16:55:50.000000000 +0100
++++ util/XercesDefs.hpp
+@@ -266,6 +266,10 @@
+ #include    <xercesc/util/Platforms/FreeBSD/FreeBSDDefs.hpp>
+ #endif
+ 
++#if defined(XML_DRAGONFLY)
++#include    <xercesc/util/Platforms/DragonFly/DragonFlyDefs.hpp>
++#endif
++
+ #if defined(XML_OS390)
+ #include    <xercesc/util/Platforms/OS390/OS390Defs.hpp>
+ #endif

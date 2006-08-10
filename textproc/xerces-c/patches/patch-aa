@@ -1,58 +1,26 @@
-$NetBSD: patch-aa,v 1.3 2004/02/11 04:06:05 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2006/08/10 13:44:22 abs Exp $
 
---- util/Platforms/NetBSD/NetBSDPlatformUtils.cpp.orig	2003-05-27 10:04:53.000000000 -0500
-+++ util/Platforms/NetBSD/NetBSDPlatformUtils.cpp
-@@ -92,6 +92,8 @@
+--- ../../samples/Makefile.incl.orig	2005-09-07 16:56:50.000000000 +0100
++++ ../../samples/Makefile.incl
+@@ -240,6 +240,21 @@ ifeq (${PLATFORM}, FREEBSD)
+   SHLIBSUFFIX=.so
+ endif
  
- #if defined(XML_USE_ICU_TRANSCODER)
-     #include <xercesc/util/Transcoders/ICU/ICUTransService.hpp>
-+#elif defined (XML_USE_GNU_TRANSCODER)
-+    #include <xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp>
- #else
-     // Use native transcoder. Same as -DXML_USE_NATIVE_TRANSCODER
-     #include <xercesc/util/Transcoders/Iconv/IconvTransService.hpp>
-@@ -100,6 +102,8 @@
- 
- #if defined(XML_USE_ICU_MESSAGELOADER)
-     #include <xercesc/util/MsgLoaders/ICU/ICUMsgLoader.hpp>
-+#elif defined(XML_USE_ICONV_MESSAGELOADER)
-+    #include <xercesc/util/MsgLoaders/MsgCatalog/MsgCatalogLoader.hpp>
- #else
-     // Same as -DXML_USE_INMEM_MESSAGELOADER
-     #include <xercesc/util/MsgLoaders/InMemory/InMemMsgLoader.hpp>
-@@ -172,6 +176,8 @@ XMLMsgLoader* XMLPlatformUtils::loadAMsg
-     {
- #if defined (XML_USE_ICU_MESSAGELOADER)
-         retVal = new ICUMsgLoader(msgDomain);
-+#elif defined (XML_USE_ICONV_MESSAGELOADER)
-+        retVal = new MsgCatalogLoader(msgDomain);        
- #else
-         // same as -DXML_USE_INMEM_MESSAGELOADER
-         retVal = new InMemMsgLoader(msgDomain);
-@@ -199,6 +205,8 @@ XMLTransService* XMLPlatformUtils::makeT
-     // Use ICU transcoding services.
-     // same as -DXML_USE_ICU_MESSAGELOADER
-     return new ICUTransService;
-+#elif defined (XML_USE_GNU_TRANSCODER)
-+    return new IconvGNUTransService;
- #else
-     // Use native transcoding services.
-     // same as -DXML_USE_INMEM_MESSAGELOADER
-@@ -421,7 +429,7 @@ unsigned long XMLPlatformUtils::getCurre
-     return (unsigned long)(t.tv_sec*1000 + t.tv_usec);
- }
- 
--XMLCh* XMLPlatformUtils::getFullPath(const XMLCh* const srcPath)
-+XMLCh* XMLPlatformUtils::getFullPath(const XMLCh* const srcPath, MemoryManager* const)
- {
- 
-     //
-@@ -463,7 +471,7 @@ bool XMLPlatformUtils::isRelative(const 
-     return true;
- }
- 
--XMLCh* XMLPlatformUtils::getCurrentDirectory()
-+XMLCh* XMLPlatformUtils::getCurrentDirectory(MemoryManager* const)
- {
-     char  dirBuf[PATH_MAX + 1];
-     char  *curDir = getcwd(&dirBuf[0], PATH_MAX + 1);
++#=============== DRAGONFLY SPECIFIC OPTIONS =========================
++ifeq (${PLATFORM}, DRAGONFLY)
++  CMP= -c ${CXXFLAGS}
++  CC= ${COMPILER} -c -D${PLATFORM} -fPIC
++  LINK = ${COMPILER} -D${PLATFORM} -fPIC ${LDFLAGS}
++  PLATFORM_LIB_LINK_OPTIONS=-Wl,-rpath,${XERCESCROOT}/lib
++  ifdef ICUROOT
++    PLATFORM_LIB_LINK_OPTIONS+=-L${ICUROOT} -Wl,-rpath,${ICUROOT}
++    EXTRA_LINK_OPTIONS=-licudata -lstdc++ ${EXTRA_LIBS}
++  else
++    EXTRA_LINK_OPTIONS=${EXTRA_LIBS} -lstdc++
++  endif
++  SHLIBSUFFIX=.so
++endif
++
+ #=============== NETBSD SPECIFIC OPTIONS =========================
+ ifeq (${PLATFORM}, NETBSD)
+   CMP= -c ${CXXFLAGS}
