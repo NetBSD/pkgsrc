@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2006/08/10 03:31:51 minskim Exp $
+# $NetBSD: Makefile,v 1.161 2006/08/10 03:45:32 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -101,9 +101,6 @@ SUBDIR+=	scribus-doc
 SUBDIR+=	stylewriter
 SUBDIR+=	tcl-pdflib
 SUBDIR+=	teTeX
-SUBDIR+=	teTeX-bin
-SUBDIR+=	teTeX-share
-SUBDIR+=	teTeX-sharesrc
 SUBDIR+=	teTeX3-bin
 SUBDIR+=	teTeX3-texmf
 SUBDIR+=	teTeX3-texmfsrc
