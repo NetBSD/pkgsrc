@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/07 15:57:37 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2006/08/10 03:21:40 minskim Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -12,7 +12,7 @@ MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://icking-music-archive.sunsite.dk/
 COMMENT=	TeX macros to typeset music
 
-TEX_ACCEPTED=	teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX3
 
 WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
