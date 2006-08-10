@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/08/10 14:33:06 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2006/08/10 14:35:02 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ingo
 PKG_SUPPORTED_OPTIONS=	sieve imap ftp
@@ -22,6 +22,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
 ###
 ### procmail or dropmail support need the PHP FTP extension
 ###
-.if !empty((PKG_OPTIONS:Mftp)
+.if !empty(PKG_OPTIONS:Mftp)
 DEPENDS+=	${PHP_PKG_PREFIX}-ftp>4.3.3:../../net/php-ftp
 .endif
