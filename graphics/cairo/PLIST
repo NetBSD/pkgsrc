@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/07/23 05:08:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/08/10 13:50:37 wiz Exp $
 ${CARBON}include/cairo/cairo-atsui.h
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
@@ -63,6 +63,7 @@ share/doc/cairo/home.png
 share/doc/cairo/index.html
 share/doc/cairo/index.sgml
 share/doc/cairo/ix01.html
+share/doc/cairo/ix02.html
 share/doc/cairo/language-bindings.html
 share/doc/cairo/left.png
 share/doc/cairo/pt01.html

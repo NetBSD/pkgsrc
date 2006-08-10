@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2006/07/08 21:14:14 markd Exp $
+$NetBSD: patch-ad,v 1.2 2006/08/10 13:50:37 wiz Exp $
 
 --- pixman/src/slim_internal.h.orig	2006-07-09 01:01:35.889958000 +1200
 +++ pixman/src/slim_internal.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2006/07/08 21:14:14 markd Exp $
     like the function name instead of just an attribute.  */
  
 -#if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 3)) && defined(__ELF__)
-+#if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 3)) && defined(__ELF__) && !defined(__sun__)
++#if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 3)) && defined(__ELF__) && !defined(__sun)
  #define pixman_private	__attribute__((__visibility__("hidden")))
  #else
  #define pixman_private
@@ -16,7 +16,7 @@ $NetBSD: patch-ad,v 1.1 2006/07/08 21:14:14 markd Exp $
     level.  */
  
 -#if __GNUC__ >= 3 && defined(__ELF__)
-+#if __GNUC__ >= 3 && defined(__ELF__) && !defined(__sun__)
++#if __GNUC__ >= 3 && defined(__ELF__) && !defined(__sun)
  # define slim_hidden_proto(name)	slim_hidden_proto1(name, INT_##name)
  # define slim_hidden_def(name)		slim_hidden_def1(name, INT_##name)
  # define slim_hidden_proto1(name, internal)				\
