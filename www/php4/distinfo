@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.55 2006/07/18 21:21:19 adrianp Exp $
+$NetBSD: distinfo,v 1.56 2006/08/10 23:01:40 adrianp Exp $
 
-SHA1 (php-4.4.2.tar.bz2) = 88f2e9efff0add8d8e3034d4ce3a948429b88756
-RMD160 (php-4.4.2.tar.bz2) = cbef0fa4e233529422bc0944dcfb79d866013f5e
-Size (php-4.4.2.tar.bz2) = 4371185 bytes
+SHA1 (php-4.4.3.tar.bz2) = 42aec56fec03c13366c0b0aac13169138814a4b5
+RMD160 (php-4.4.3.tar.bz2) = 36c91930af44e8a1ed59eb159e6131ae8f0c77f0
+Size (php-4.4.3.tar.bz2) = 4461353 bytes
 SHA1 (patch-aa) = feb064407950d0fc732b7240e65cac84420d2407
 SHA1 (patch-ab) = 38a4bcd0d65b26c5d8e54e22b552f60831188469
 SHA1 (patch-ad) = 9ca5d2f59bfeea77a98cd0e727546d11669114cd
@@ -12,11 +12,7 @@ SHA1 (patch-ai) = 0b9c1c9fb75a64026f2fb3cbd44cc19e0a1f186c
 SHA1 (patch-aj) = cc68ce876dc5998becbe2f1f74288b5da5bbaca3
 SHA1 (patch-ak) = 1f9fbe26c7329e1d18eec053499ee2d574b5b970
 SHA1 (patch-al) = 28ad9006b387e2b9984ad49beea21c9d46e63b46
-SHA1 (patch-ao) = cd30bbff10f1d045c829f72d94304c9dcf202fc6
+SHA1 (patch-ao) = 0fd4becf023451ac8cb185df354830efc86c1344
 SHA1 (patch-ap) = 2f852abd1e9d0f089add18b2eade2831253ad00e
-SHA1 (patch-aq) = 00f410eb61624aee0c68d2fd6802a6be7adb373e
-SHA1 (patch-ar) = 5606c1ec5a7afaeda2e3cc7879cc0caa4f86ca68
-SHA1 (patch-as) = 7987c293d2290aa5e68fba87d0aa759797ace40d
 SHA1 (patch-at) = f8b3aebd61fe2d5b5a994e1d973424a1ed397f63
-SHA1 (patch-au) = b5fa682fa6b03cc91e68db7e7ed6985897a3288f
-SHA1 (patch-av) = fc105360bccbff5a5eae119f24a8aa12b4e08139
+SHA1 (patch-aw) = f8e2f36a4d9bb4a60d255127ac5984c33ea74841
