@@ -187,6 +187,7 @@ mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
+mrtg-snmpv3		Enable SNMPv3 support.
 multibyte	
 mutt-hcache		Enable header caching in mutt.
 mysql			Enable MySQL support.
@@ -249,6 +250,7 @@ skey
 slang			Enable S-Lang support.
 slp	
 small-net		Tune for a smaller networks.
+smokeping-speedycgi	Enable SpeedyCGI.
 snmp	
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
