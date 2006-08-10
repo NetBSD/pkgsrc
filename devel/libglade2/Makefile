@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2006/08/03 17:35:34 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2006/08/10 14:11:04 drochner Exp $
 #
 
 DISTNAME=		libglade-2.6.0
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
@@ -16,7 +17,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in
 
-CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
 CONFIGURE_ARGS+=	--without-xml-catalog
 
 XML_ENTRIES=	system http://glade.gnome.org/glade-2.0.dtd \
