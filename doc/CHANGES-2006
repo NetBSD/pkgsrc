@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.994 2006/08/10 13:29:28 abs Exp $
+$NetBSD: CHANGES-2006,v 1.995 2006/08/10 13:50:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3897,3 +3897,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey to 2.7.7nb1 [jmmv 2006-08-10]
 	Updated devel/p5-Module-Pluggable to 3.01 [abs 2006-08-09]
 	Updated games/openttd to 0.4.8rc2 [abs 2006-08-09]
+	Updated textproc/xerces-c to 2.7.0 [abs 2006-08-09]
+	Updated textproc/p5-XML-Xerces to 2.7.0-0 [abs 2006-08-09]
