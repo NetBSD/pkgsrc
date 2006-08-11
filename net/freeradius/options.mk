@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2006/08/09 16:42:09 adrianp Exp $
+# $NetBSD: options.mk,v 1.12 2006/08/11 16:22:04 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 
@@ -106,6 +106,7 @@ CONFIGURE_ENV+=	ac_cv_path_SNMPWALK=""
 .if !empty(PKG_OPTIONS:Mpam)
 CONFIGURE_ARGS+=	--with-rlm_pam
 PLIST_SRC+=		${PKGDIR}/PLIST.pam
+MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.pam
 .else
 CONFIGURE_ARGS+=	--without-rlm_pam
 .endif
