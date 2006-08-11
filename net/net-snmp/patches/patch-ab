@@ -1,15 +1,19 @@
-$NetBSD: patch-ab,v 1.8 2006/06/19 13:46:02 christos Exp $
+$NetBSD: patch-ab,v 1.9 2006/08/11 20:40:36 adam Exp $
 
---- agent/mibgroup/ucd-snmp/diskio.c.orig	2005-12-04 09:25:54.000000000 -0500
-+++ agent/mibgroup/ucd-snmp/diskio.c	2006-06-19 09:44:25.000000000 -0400
-@@ -419,6 +419,151 @@
+--- agent/mibgroup/ucd-snmp/diskio.c.orig	2006-08-11 22:32:57.000000000 +0200
++++ agent/mibgroup/ucd-snmp/diskio.c
+@@ -419,6 +419,155 @@ var_diskio(struct variable * vp,
  }
  #endif                          /* bsdi */
  
 +#ifdef __NetBSD__
 +#include <sys/sysctl.h>
 +static int      ndisk;
++#ifdef HW_IOSTATNAMES
++static int nmib[2] = {CTL_HW, HW_IOSTATNAMES};
++#else
 +static int nmib[2] = {CTL_HW, HW_DISKNAMES};
++#endif
 +#ifdef HW_DISKSTATS
 +#include <sys/disk.h>
 +static int dmib[3] = {CTL_HW, HW_DISKSTATS, sizeof(struct disk_sysctl)};
