@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5324 2006/08/10 23:03:08 adrianp Exp $
+$NetBSD: TODO,v 1.5325 2006/08/11 13:31:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -527,6 +527,7 @@ Suggested package updates
 	o grap-1.36
 	o grep-2.5.1a
 	o grepmail-5.3032
+	o grhino-0.15.2
 	o gri-2.12.8
 	o grig-0.7.1
 	o gsasl-0.2.12 [pkg/33638]
@@ -615,7 +616,7 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
-	o lftp-3.5.2
+	o lftp-3.5.4
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46
@@ -748,7 +749,7 @@ Suggested package updates
 	o oroborus-2.0.15
 	o osh-050219
 	o otpCalc-0.97
-	o p0f-2.0.6
+	o p0f-2.0.7
 	o p11-2.10c
 	o p4-2005.1 [schmonz]
 	o p4d-2005.1 [schmonz]
@@ -851,6 +852,7 @@ Suggested package updates
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
 	o pciutils-2.2.0
+	o pcre-ocaml-5.11.1
 	o pdmenu-1.2.87
 	o pear-Date-1.4.6
 	o pear-HTML_Common-1.2.2
@@ -928,7 +930,7 @@ Suggested package updates
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
-	o py-curl-7.15.4.2
+	o py-curl-7.15.5
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
 	o py-gobject-2.11.1
@@ -957,7 +959,7 @@ Suggested package updates
 	o pysol-4.82
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qdbm-1.8.65
+	o qdbm-1.8.67
 	o qemu-0.8.2
 	o qt1-1.45
 	o qt2-designer-2.3.2
@@ -1008,7 +1010,7 @@ Suggested package updates
 	o sharity-3.2
 	o sharity-light-1.3
 	o shc-3.8
-	o shmux-1.0b9
+	o shmux-1.0b10
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-client-1.0.3
@@ -1116,8 +1118,10 @@ Suggested package updates
 	o webmin-1.290
 	o weewm-0.01
 	o winbind-3.0.13
+	o wine-0.9.19
 	o wmctrl-1.07
 	o wmii-2.5.2 [pkg/33285]
+	o wmii-3.1
 	o wmweather-2.4.3
 	o www6to4-1.6
 	o wwwoffle-2.9
