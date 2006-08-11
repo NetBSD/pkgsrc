@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/06/08 21:57:15 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/11 18:07:33 drochner Exp $
 #
 
-DISTNAME=		maxima-5.9.2
-PKGREVISION=		1
+DISTNAME=		maxima-5.9.3
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 
