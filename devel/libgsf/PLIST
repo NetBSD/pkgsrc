@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/05/17 17:21:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/08/11 09:38:46 drochner Exp $
 bin/gsf-office-thumbnailer
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
@@ -54,44 +54,44 @@ lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
 man/man1/gsf-office-thumbnailer.1
-share/doc/libgsf/gsf/GsfClipData.html
-share/doc/libgsf/gsf/api.html
-share/doc/libgsf/gsf/dependencies.html
-share/doc/libgsf/gsf/gsf-Bononbo.html
-share/doc/libgsf/gsf/gsf-Compression.html
-share/doc/libgsf/gsf/gsf-GIOChannel.html
-share/doc/libgsf/gsf/gsf-GnomeVFS.html
-share/doc/libgsf/gsf/gsf-Infile-reading-structed-files.html
-share/doc/libgsf/gsf/gsf-Input-from-unstructured-files.html
-share/doc/libgsf/gsf/gsf-MS-OLE2.html
-share/doc/libgsf/gsf/gsf-OASIS-Open-Document.html
-share/doc/libgsf/gsf/gsf-Outfile-writing-structed-files.html
-share/doc/libgsf/gsf/gsf-Output-to-unstructured-files.html
-share/doc/libgsf/gsf/gsf-Reading-and-Writing-from-local-files-and-directories.html
-share/doc/libgsf/gsf/gsf-Text.html
-share/doc/libgsf/gsf/gsf-XML-and-libxml.html
-share/doc/libgsf/gsf/gsf-Zip.html
-share/doc/libgsf/gsf/gsf-blobs.html
-share/doc/libgsf/gsf/gsf-memory.html
-share/doc/libgsf/gsf/gsf-metadata.html
-share/doc/libgsf/gsf/gsf-users.html
-share/doc/libgsf/gsf/gsf-utils.html
-share/doc/libgsf/gsf/gsf.devhelp
-share/doc/libgsf/gsf/gsf.devhelp2
-share/doc/libgsf/gsf/history.html
-share/doc/libgsf/gsf/home.png
-share/doc/libgsf/gsf/index.html
-share/doc/libgsf/gsf/index.sgml
-share/doc/libgsf/gsf/intro.html
-share/doc/libgsf/gsf/io.html
-share/doc/libgsf/gsf/ix01.html
-share/doc/libgsf/gsf/left.png
-share/doc/libgsf/gsf/misc.html
-share/doc/libgsf/gsf/parsers.html
-share/doc/libgsf/gsf/right.png
-share/doc/libgsf/gsf/sources.html
-share/doc/libgsf/gsf/style.css
-share/doc/libgsf/gsf/up.png
+share/gtk-doc/html/gsf/GsfClipData.html
+share/gtk-doc/html/gsf/api.html
+share/gtk-doc/html/gsf/dependencies.html
+share/gtk-doc/html/gsf/gsf-Bononbo.html
+share/gtk-doc/html/gsf/gsf-Compression.html
+share/gtk-doc/html/gsf/gsf-GIOChannel.html
+share/gtk-doc/html/gsf/gsf-GnomeVFS.html
+share/gtk-doc/html/gsf/gsf-Infile-reading-structed-files.html
+share/gtk-doc/html/gsf/gsf-Input-from-unstructured-files.html
+share/gtk-doc/html/gsf/gsf-MS-OLE2.html
+share/gtk-doc/html/gsf/gsf-OASIS-Open-Document.html
+share/gtk-doc/html/gsf/gsf-Outfile-writing-structed-files.html
+share/gtk-doc/html/gsf/gsf-Output-to-unstructured-files.html
+share/gtk-doc/html/gsf/gsf-Reading-and-Writing-from-local-files-and-directories.html
+share/gtk-doc/html/gsf/gsf-Text.html
+share/gtk-doc/html/gsf/gsf-XML-and-libxml.html
+share/gtk-doc/html/gsf/gsf-Zip.html
+share/gtk-doc/html/gsf/gsf-blobs.html
+share/gtk-doc/html/gsf/gsf-memory.html
+share/gtk-doc/html/gsf/gsf-metadata.html
+share/gtk-doc/html/gsf/gsf-users.html
+share/gtk-doc/html/gsf/gsf-utils.html
+share/gtk-doc/html/gsf/gsf.devhelp
+share/gtk-doc/html/gsf/gsf.devhelp2
+share/gtk-doc/html/gsf/history.html
+share/gtk-doc/html/gsf/home.png
+share/gtk-doc/html/gsf/index.html
+share/gtk-doc/html/gsf/index.sgml
+share/gtk-doc/html/gsf/intro.html
+share/gtk-doc/html/gsf/io.html
+share/gtk-doc/html/gsf/ix01.html
+share/gtk-doc/html/gsf/left.png
+share/gtk-doc/html/gsf/misc.html
+share/gtk-doc/html/gsf/parsers.html
+share/gtk-doc/html/gsf/right.png
+share/gtk-doc/html/gsf/sources.html
+share/gtk-doc/html/gsf/style.css
+share/gtk-doc/html/gsf/up.png
 share/gconf/schemas/gsf-office-thumbnailer.schemas
 share/locale/es/LC_MESSAGES/libgsf.mo
 share/locale/sv/LC_MESSAGES/libgsf.mo
@@ -99,5 +99,4 @@ share/locale/sv/LC_MESSAGES/libgsf.mo
 @dirrm include/libgsf-1/gsf-gnome
 @dirrm include/libgsf-1/gsf
 @dirrm include/libgsf-1
-@dirrm share/doc/libgsf/gsf
-@dirrm share/doc/libgsf
+@dirrm share/gtk-doc/html/gsf
