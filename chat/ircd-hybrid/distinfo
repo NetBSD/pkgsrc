@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2006/06/06 13:04:55 adrianp Exp $
+$NetBSD: distinfo,v 1.8 2006/08/11 16:53:39 adrianp Exp $
 
-SHA1 (ircd-hybrid-7.2.1.tgz) = c5683c1fac984d210a79a8742e9c2ef31a249db8
-RMD160 (ircd-hybrid-7.2.1.tgz) = c8f859f7e6e956c6d738641b1993423212fbd377
-Size (ircd-hybrid-7.2.1.tgz) = 1013005 bytes
+SHA1 (ircd-hybrid-7.2.2.tgz) = d7c7711be9376ae48704b52d41b0934520192242
+RMD160 (ircd-hybrid-7.2.2.tgz) = b2b88a480ca08c108d967af5ca586bddf36a65ff
+Size (ircd-hybrid-7.2.2.tgz) = 1025448 bytes
 SHA1 (patch-aa) = 5ffdd9e30835e026ac900b1d83469c205b9d1bac
-SHA1 (patch-ab) = da98233fe21eb7054f6f9011f6dfbe2db04be0d5
-SHA1 (patch-ac) = ae725440d32bcf24e09ef368ef5e0fc0f236bf8a
-SHA1 (patch-ad) = 7ed782cb6df7586223201847e2cbed56a882154c
+SHA1 (patch-ab) = fde28c63ac049475ce1c4035958d430ac3b6934c
+SHA1 (patch-ac) = 87743d37e0d0fc56097852ddfb7b4e0ccdc4eb73
+SHA1 (patch-ad) = 04cb6e2339f2ac0be734510a9040985a3d57ba54
 SHA1 (patch-ae) = 888cfb10f3637daac29f7e9a71865a5d2ed93024

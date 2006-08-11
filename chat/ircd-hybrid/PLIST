@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/06/06 13:04:55 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/11 16:53:39 adrianp Exp $
 bin/encspeed
 bin/ircd
 bin/ircd-hybrid-mkpasswd
@@ -253,6 +253,7 @@ share/ircd-hybrid/help/users/whois
 share/ircd-hybrid/help/users/whowas
 share/ircd-hybrid/messages/ayb.lang
 share/ircd-hybrid/messages/custom.lang
+share/ircd-hybrid/messages/ircd-brazilian_pt.lang
 share/ircd-hybrid/messages/ircd-croatian.lang
 share/ircd-hybrid/messages/ircd-danish.lang
 share/ircd-hybrid/messages/ircd-dutch.lang
