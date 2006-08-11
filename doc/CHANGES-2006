@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1007 2006/08/11 12:36:15 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1008 2006/08/11 12:52:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3911,3 +3911,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/ffmpeg to 0.4.9pre1nb2 [ben 2006-08-10]
 	Updated mail/postfix to 2.3.2nb1 [taca 2006-08-11]
 	Updated mail/postfix-current to 20060711nb1 [taca 2006-08-11]
+	Updated archivers/zziplib to 0.10.82nb2 [taca 2006-08-11]
+	Updated security/cyrus-saslauthd to 2.1.21nb2 [taca 2006-08-11]
