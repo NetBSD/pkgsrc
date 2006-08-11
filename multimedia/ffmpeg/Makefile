@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/08/11 05:40:47 ben Exp $
+# $NetBSD: Makefile,v 1.28 2006/08/11 09:37:11 drochner Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-0.4.9pre1
@@ -11,10 +11,9 @@ HOMEPAGE=	http://ffmpeg.sourceforge.net/
 COMMENT=	MPEG decoding, encoding and streaming software
 
 HAS_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake texi2html pod2man
 USE_LIBTOOL=	YES
 
-BUILD_DEPENDS+=	texi2html-[0-9]*:../../textproc/texi2html
 CONFLICTS+=	ffmpeg-devel-[0-9]*
 
 REPLACE_PERL+=	doc/texi2pod.pl
