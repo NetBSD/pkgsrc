@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5326 2006/08/11 15:20:38 salo Exp $
+$NetBSD: TODO,v 1.5327 2006/08/11 23:16:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -574,7 +574,6 @@ Suggested package updates
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-20060519
-	o ion3-devel-20060305
 	o ipa-2.0 [pkg/32398]
 	o ipa-2.0.1
 	o ipcalc-0.41
@@ -652,6 +651,7 @@ Suggested package updates
 	o lmbench-2.5
 	o logsurfer-1.6b [pkg/33892]
 	o lout-3.31
+	o lua-5.1.1
 	o lucy-1.19p
 	o lwp-2.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
