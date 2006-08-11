@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/08/11 09:43:09 drochner Exp $
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
@@ -50,27 +50,27 @@ lib/pkgconfig/libxfcegui4-1.0.pc
 lib/xfce4/modules/libxfce4_combo.la
 lib/xfce4/modules/libxfce4_mime.la
 lib/xfce4/modules/libxfce4_mime_icons.la
-share/doc/html/libxfcegui4/XfceAboutDialog.html
-share/doc/html/libxfcegui4/XfceAppMenuItem.html
-share/doc/html/libxfcegui4/XfceFramebox.html
-share/doc/html/libxfcegui4/XfceIconTheme.html
-share/doc/html/libxfcegui4/home.png
-share/doc/html/libxfcegui4/index.html
-share/doc/html/libxfcegui4/index.sgml
-share/doc/html/libxfcegui4/left.png
-share/doc/html/libxfcegui4/libxfcegui4-Standard-Macros.html
-share/doc/html/libxfcegui4/libxfcegui4-Xfce-Gdk-extensions.html
-share/doc/html/libxfcegui4/libxfcegui4-Xfce-Gtk+-extensions.html
-share/doc/html/libxfcegui4/libxfcegui4-XfceFileChooser.html
-share/doc/html/libxfcegui4/libxfcegui4-core.html
-share/doc/html/libxfcegui4/libxfcegui4-dialogs.html
-share/doc/html/libxfcegui4/libxfcegui4-fundamentals.html
-share/doc/html/libxfcegui4/libxfcegui4-netk.html
-share/doc/html/libxfcegui4/libxfcegui4-xfce-exec.html
-share/doc/html/libxfcegui4/libxfcegui4.devhelp
-share/doc/html/libxfcegui4/reference.html
-share/doc/html/libxfcegui4/right.png
-share/doc/html/libxfcegui4/up.png
+share/gtk-doc/html/libxfcegui4/XfceAboutDialog.html
+share/gtk-doc/html/libxfcegui4/XfceAppMenuItem.html
+share/gtk-doc/html/libxfcegui4/XfceFramebox.html
+share/gtk-doc/html/libxfcegui4/XfceIconTheme.html
+share/gtk-doc/html/libxfcegui4/home.png
+share/gtk-doc/html/libxfcegui4/index.html
+share/gtk-doc/html/libxfcegui4/index.sgml
+share/gtk-doc/html/libxfcegui4/left.png
+share/gtk-doc/html/libxfcegui4/libxfcegui4-Standard-Macros.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-Xfce-Gdk-extensions.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-Xfce-Gtk+-extensions.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-XfceFileChooser.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-core.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-dialogs.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-fundamentals.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-netk.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-xfce-exec.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4.devhelp
+share/gtk-doc/html/libxfcegui4/reference.html
+share/gtk-doc/html/libxfcegui4/right.png
+share/gtk-doc/html/libxfcegui4/up.png
 share/locale/af/LC_MESSAGES/libxfcegui4.mo
 share/locale/be/LC_MESSAGES/libxfcegui4.mo
 share/locale/bn_IN/LC_MESSAGES/libxfcegui4.mo
@@ -122,5 +122,5 @@ share/xfce4/xfce-svg-test.svg
 @dirrm include/xfce4/libxfcegui4
 @dirrm lib/xfce4/modules
 @dirrm lib/xfce4
-@dirrm share/doc/html/libxfcegui4
+@dirrm share/gtk-doc/html/libxfcegui4
 @unexec ${RMDIR} %D/share/xfce4/mime 2>/dev/null || ${TRUE}
