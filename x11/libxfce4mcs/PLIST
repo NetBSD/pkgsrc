@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/09 06:42:59 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/08/11 09:43:09 drochner Exp $
 include/xfce4/libxfce4mcs/mcs-client-enum-types.h
 include/xfce4/libxfce4mcs/mcs-client.h
 include/xfce4/libxfce4mcs/mcs-common.h
@@ -7,16 +7,16 @@ lib/libxfce4mcs-client.la
 lib/libxfce4mcs-manager.la
 lib/pkgconfig/libxfce4mcs-client-1.0.pc
 lib/pkgconfig/libxfce4mcs-manager-1.0.pc
-share/doc/html/libxfce4mcs/ch01.html
-share/doc/html/libxfce4mcs/home.png
-share/doc/html/libxfce4mcs/index.html
-share/doc/html/libxfce4mcs/index.sgml
-share/doc/html/libxfce4mcs/left.png
-share/doc/html/libxfce4mcs/libxfce4mcs-mcs-client.html
-share/doc/html/libxfce4mcs/libxfce4mcs-mcs-common.html
-share/doc/html/libxfce4mcs/libxfce4mcs-mcs-manager.html
-share/doc/html/libxfce4mcs/libxfce4mcs.devhelp
-share/doc/html/libxfce4mcs/right.png
-share/doc/html/libxfce4mcs/up.png
-@dirrm share/doc/html/libxfce4mcs
+share/gtk-doc/html/libxfce4mcs/ch01.html
+share/gtk-doc/html/libxfce4mcs/home.png
+share/gtk-doc/html/libxfce4mcs/index.html
+share/gtk-doc/html/libxfce4mcs/index.sgml
+share/gtk-doc/html/libxfce4mcs/left.png
+share/gtk-doc/html/libxfce4mcs/libxfce4mcs-mcs-client.html
+share/gtk-doc/html/libxfce4mcs/libxfce4mcs-mcs-common.html
+share/gtk-doc/html/libxfce4mcs/libxfce4mcs-mcs-manager.html
+share/gtk-doc/html/libxfce4mcs/libxfce4mcs.devhelp
+share/gtk-doc/html/libxfce4mcs/right.png
+share/gtk-doc/html/libxfce4mcs/up.png
+@dirrm share/gtk-doc/html/libxfce4mcs
 @dirrm include/xfce4/libxfce4mcs
