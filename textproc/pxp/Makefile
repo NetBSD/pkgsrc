@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/11 15:44:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/11 15:46:03 wiz Exp $
 #
 
 DISTNAME=		pxp-1.1.6
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.ocaml-programming.de/packages/
 COMMENT=		Polymorphic XML parser, a validating XML-1.0 parser (OCaml)
 
 DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-DEPENDS+=		ocamlnet-[0-9]*:../../zzz/ocamlnet
+DEPENDS+=		ocamlnet-[0-9]*:../../net/ocamlnet
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		all opt
