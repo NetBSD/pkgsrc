@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.16 2006/05/26 12:36:19 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/08/11 17:39:38 drochner Exp $
 #
 
-DISTNAME=	wxPython-src-2.6.1.0
-PKGNAME=	${PYPKGPREFIX}-wxWidgets-2.6.1.0
-PKGREVISION=	4
+DISTNAME=	wxPython-src-2.6.3.3
+PKGNAME=	${PYPKGPREFIX}-wxWidgets-2.6.3.3
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	Python bindings for wxWidgets
 
-WRKSRC=		${WRKDIR}/wxPython-src-2.6.1.0/wxPython
+WRKSRC=		${WRKDIR}/wxPython-src-2.6.3.3/wxPython
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
