@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.15 2006/08/10 03:35:33 minskim Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.16 2006/08/11 13:32:28 wiz Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
@@ -6,8 +6,6 @@
 #     Modify TEX_DEFAULT to change the default version (default to teTeX3)
 #
 #	* tex files are installed...
-#	  	teTeX[2]
-#	  		-> ${PREFIX}/share/texmf
 #		teTeX3
 #	  		-> ${PREFIX}/share/texmf-local
 #   The variables PKG_TEXMFPREFIX and PKG_LOCALTEXMFPREFIX defines the main
@@ -18,7 +16,7 @@
 #   variables, we will keep
 #   PKG_TEXMFPREFIX=PKG_LOCALTEXMFPREFIX=${PREFIX}/share/texmf
 #
-#	* Assume each package supports teTeX{2,3} by default.
+#	* Assume each package supports teTeX3 by default.
 #	  To change the supported TeX versions, define TEX_ACCEPTED
 #	  explicitly before including mk/tex.buildlink3.mk.  Note that the
 #	  order is important.
