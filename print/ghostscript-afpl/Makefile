@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/23 10:28:48 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2006/08/11 13:59:52 gdt Exp $
 
 DISTNAME=	ghostscript-8.54
 PKGNAME=	ghostscript-afpl-8.54
@@ -9,6 +9,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ghostscript.sourceforge.net/
 COMMENT=	Postscript interpreter
+
+LICENSE=	afpl-license
+RESTRICTED=	Commercial distribution prohibited in most cases.
+# CDROM distribution may be acceptable in some cases, but not all, so
+# the variables are set.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 
 CONFLICTS+=		ghostscript{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
