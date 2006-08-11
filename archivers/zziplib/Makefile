@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/06/18 07:04:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/11 12:50:40 taca Exp $
 #
 
 DISTNAME=	zziplib-0.10.82
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zziplib/}
 EXTRACT_SUFX=	.tar.bz2
