@@ -433,7 +433,7 @@ pkgsrc currently contains several thousand packages, including:
 
   * www/apache - The Apache web server
 
-  * www/mozilla - The Mozilla web browser
+  * www/firefox - The Firefox web browser
 
   * meta-pkgs/gnome - The GNOME Desktop Environment
 
@@ -514,6 +514,7 @@ Table 1.1. Platforms supported by pkgsrc
 |---------------------------------------------+------------------|
 |OSF/1                                        |     Nov 2004     |
 +----------------------------------------------------------------+
+
 
 1.2. Overview
 
@@ -933,6 +934,7 @@ Table 3.1. Binary kits and available packages
 |-----------------------------------+---------------+----------+---------------|
 |Solaris 9/i386                     |20030411       |binary kit|               |
 +------------------------------------------------------------------------------+
+
 
 Simply download the binary kit for your platform, and extract it into / e.g.
 
@@ -1632,7 +1634,7 @@ involved.
 After obtaining pkgsrc, the pkgsrc directory now contains a set of packages,
 organized into categories. You can browse the online index of packages, or run
 make readme from the pkgsrc directory to build local README.html files for all
-packages, viewable with any web browser such as www/lynx or www/mozilla.
+packages, viewable with any web browser such as www/lynx or www/firefox.
 
 The default prefix for installed packages is /usr/pkg. If you wish to change
 this, you should do so by setting LOCALBASE in mk.conf. You should not try to
@@ -5196,7 +5198,7 @@ info
 readme
 
     This target generates a README.html file, which can be viewed using a
-    browser such as www/mozilla or www/links. The generated files contain
+    browser such as www/firefox or www/links. The generated files contain
     references to any packages which are in the PACKAGES directory on the local
     host. The generated files can be made to refer to URLs based on
     FTP_PKG_URL_HOST and FTP_PKG_URL_DIR. For example, if I wanted to generate
@@ -6155,9 +6157,19 @@ will automatically do the right thing.
 
 17.5.2. Where to install documentation
 
-Documentation should be installed into ${PREFIX}/share/doc/${PKGBASE} or $
-{PREFIX}/share/doc/${PKGNAME} (the latter includes the version number of the
-package).
+In general, documentation should be installed into ${PREFIX}/share/doc/$
+{PKGBASE} or ${PREFIX}/share/doc/${PKGNAME} (the latter includes the version
+number of the package).
+
+Many modern packages using GNU autoconf allow to set the directory where HTML
+documentation is installed with the "--with-html-dir" option.
+
+An exception to the above is that library API documentation generated with the
+textproc/gtk-doc tools, for use by special browsers (devhelp) should be left at
+their default location, which is ${PREFIX}/share/gtk-doc. Such documentation
+can be recognized from files ending in .devhelp or .devhelp2. (It is also
+acceptable to install such files in ${PREFIX}/share/doc; no additional
+subdirectory level is allowed in this case.)
 
 17.5.3. Installing score files
 
@@ -7590,7 +7602,7 @@ D.2. Procedure
 
 The procedure to edit the pkgsrc guide is:
 
- 1. Make sure you have the packages needed to re-generate the pkgsrc guide (and
+ 1. Make sure you have the packages needed to regenerate the pkgsrc guide (and
     other XML-based NetBSD documentation) installed. These are meta-pkgs/
     netbsd-doc for creating the ASCII and HTML versions, and meta-pkgs/
     netbsd-doc-print for the PostScript and PDF versions. You will need both
@@ -7612,16 +7624,8 @@ The procedure to edit the pkgsrc guide is:
  6. Run bmake clean && bmake to regenerate the output files with the proper RCS
     Ids.
 
- 7. Run (cd .. && cvs update pkgsrc.*) && bmake install-doc to put the
-    generated files into pkgsrc/doc.
+ 7. Run bmake regenerate to regenerate the files in both pkgsrc/doc and htdocs.
 
- 8. Run (cd .. && cvs commit -m "regenerated." pkgsrc.{html,txt}) to commit the
-    generated documentation.
-
- 9. Run (cd ../../../htdocs/Documentation/pkgsrc && cvs update) && bmake
-    install-htdocs to generate all the files for the web server.
-
-10. Run (cd ../../../htdocs/Documentation/pkgsrc && cvs commit -m
-    "regenerated.") to update the files on the web server. If you have added a
-    chapter, don't forget to run cvs add *.html before you commit the files.
+ 8. If you have added, removed or renamed some chapters, you need to
+    synchronize them using cvs add or cvs delete in the htdocs directory.
 
