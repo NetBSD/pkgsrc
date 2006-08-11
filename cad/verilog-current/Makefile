@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2006/02/05 23:08:23 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2006/08/11 13:28:08 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
-PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
@@ -18,11 +17,11 @@ CONFLICTS+=	verilog-[0-9]*
 GCC_REQD+=	3.0
 USE_LANGUAGES=	c c++
 
-SNAPDATE=		20060124
+SNAPDATE=		20060809
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gmake lex
 CONFIGURE_ARGS+=	--without-ipal
-TEST_DIRS=		${WRKSRC}
+TEST_DIRS=		.
 TEST_TARGET=		check
 
 .include "../../devel/zlib/buildlink3.mk"
