@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1006 2006/08/11 03:15:30 ben Exp $
+$NetBSD: CHANGES-2006,v 1.1007 2006/08/11 12:36:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3909,3 +3909,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.14.0 [wiz 2006-08-10]
 	Updated www/php4 to 4.4.3 [adrianp 2006-08-10]
 	Updated multimedia/ffmpeg to 0.4.9pre1nb2 [ben 2006-08-10]
+	Updated mail/postfix to 2.3.2nb1 [taca 2006-08-11]
+	Updated mail/postfix-current to 20060711nb1 [taca 2006-08-11]
