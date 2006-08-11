@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/17 07:07:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/11 15:19:35 salo Exp $
 bin/lftp
 bin/lftpget
 lib/lftp/${PKGVERSION}/cmd-mirror.so
 lib/lftp/${PKGVERSION}/cmd-sleep.so
+lib/lftp/${PKGVERSION}/liblftp-getdate.so
 lib/lftp/${PKGVERSION}/liblftp-network.so
 lib/lftp/${PKGVERSION}/liblftp-pty.so
 lib/lftp/${PKGVERSION}/proto-file.so
