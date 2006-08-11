@@ -5,11 +5,7 @@
 <title>The pkgsrc guide</title>
 <link rel="stylesheet" href="/NetBSD.css" type="text/css">
 <meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
-<meta name="description" content="pkgsrc is a centralized package management system for
-	Unix-like operating systems. This guide provides information for
-	users and developers of pkgsrc. It covers installation of binary
-	and source packages, creation of binary and source packages and
-	a high-level overview about the infrastructure.">
+<meta name="description" content="pkgsrc is a centralized package management system for Unix-like operating systems. This guide provides information for users and developers of pkgsrc. It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure.">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" lang="en">
 <div class="titlepage">
@@ -464,7 +460,7 @@ packages for himself, which is a time-costly task.</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/apache/README.html" target="_top"><code class="filename">www/apache</code></a> - The Apache
 	  web server</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/mozilla/README.html" target="_top"><code class="filename">www/mozilla</code></a> - The Mozilla
+<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> - The Firefox
 	  web browser</p></li>
 <li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome/README.html" target="_top"><code class="filename">meta-pkgs/gnome</code></a> - The GNOME
 	  Desktop Environment</p></li>
@@ -523,7 +519,7 @@ minutes!</p>
       grown a lot, and now supports the following platforms:</p>
 <div class="table">
 <a name="supported-platforms"></a><p class="title"><b>Table 1.1. Platforms supported by pkgsrc</b></p>
-<table summary="Platforms supported by pkgsrc" border="1">
+<div class="table-contents"><table summary="Platforms supported by pkgsrc" border="1">
 <colgroup>
 <col>
 <col>
@@ -588,8 +584,9 @@ minutes!</p>
 <td align="center">Nov 2004</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
+<br class="table-break">
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -1019,7 +1016,7 @@ directory on ftp.NetBSD.org.</p>
 </div>
 <div class="table">
 <a name="binary-kits"></a><p class="title"><b>Table 3.1. Binary kits and available packages</b></p>
-<table summary="Binary kits and available packages" border="1">
+<div class="table-contents"><table summary="Binary kits and available packages" border="1">
 <colgroup>
 <col>
 <col>
@@ -1190,9 +1187,9 @@ directory on ftp.NetBSD.org.</p>
 <td class="binary-pkgs-url"> </td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<p>
+<br class="table-break"><p>
 Simply download the binary kit for your platform, and extract it into
 <code class="filename">/</code> e.g.
 </p>
@@ -2023,7 +2020,7 @@ the online index of packages, or run <span><strong class="command">make readme</
 from the <code class="filename">pkgsrc</code> directory to build local
 <code class="filename">README.html</code> files for all packages, viewable with any web browser such as
 <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/lynx/README.html" target="_top"><code class="filename">www/lynx</code></a> or 
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/mozilla/README.html" target="_top"><code class="filename">www/mozilla</code></a>.</p>
+<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a>.</p>
 <p>The default <span class="emphasis"><em>prefix</em></span> for installed packages is
 <code class="filename">/usr/pkg</code>. If you wish to change this, you should do
 so by setting <code class="varname">LOCALBASE</code> in
@@ -2062,7 +2059,7 @@ to your <code class="filename">mk.conf</code>.
 <p>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
         <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to find some examples
-        &mdash; in particular, look for the <code class="varname">MASTER_SORT</code>,
+        &#8212; in particular, look for the <code class="varname">MASTER_SORT</code>,
         <code class="varname">MASTER_SORT_REGEX</code> and
         <code class="varname">INET_COUNTRY</code> definitions.  This may save some of your
         bandwidth and time.</p>
@@ -2323,7 +2320,7 @@ You can now enter:
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &mdash; it is an internal definition which refers to the
+	    &#8212; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2341,7 +2338,6 @@ You can now enter:
 	    settings used by builds in <code class="filename">/usr/src</code>.</p></li>
 <li><p><code class="varname">DEPENDS_TARGET</code>:
 	    By default, dependencies are only installed, and no binary
-
 	    package is created for them. You can set this variable to
 	    <code class="literal">package</code> to automatically create binary
 	    packages after installing dependencies.</p></li>
@@ -2797,7 +2793,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -4138,7 +4134,7 @@ a security check before building any package.  See
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -6343,7 +6339,7 @@ of <code class="varname">MAKEFILE</code> is &#8220;<span class="quote">Makefile<
 <dt><span class="term">readme</span></dt>
 <dd><p>This target generates a <code class="filename">README.html</code> file, which
 	    can be viewed using a browser such as
-	    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/mozilla/README.html" target="_top"><code class="filename">www/mozilla</code></a> or
+	    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> or
 	    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/links/README.html" target="_top"><code class="filename">www/links</code></a>.
 	    The generated files contain references to any
 	    packages which are in the <code class="varname">PACKAGES</code> directory on
@@ -7555,10 +7551,24 @@ Changes to the PLIST
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="where-to-install-documentation"></a>17.5.2. Where to install documentation</h3></div></div></div>
-<p>Documentation should be installed into
+<p>In general, documentation should be installed into
 	<code class="filename">${PREFIX}/share/doc/${PKGBASE}</code> or
 	<code class="filename">${PREFIX}/share/doc/${PKGNAME}</code> (the latter
 	includes the version number of the package).</p>
+<p>Many modern packages using GNU autoconf allow to set the directory
+	where HTML documentation is installed with the &#8220;<span class="quote">--with-html-dir</span>&#8221;
+	option.</p>
+<p>An exception to the above is that library API
+	documentation generated with the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/textproc/gtk-doc/README.html" target="_top"><code class="filename">textproc/gtk-doc</code></a> tools, for use by
+	special browsers (devhelp) should be left at their default
+	location, which is
+	<code class="filename">${PREFIX}/share/gtk-doc</code>.  Such
+	documentation can be recognized from files ending in
+	<code class="filename">.devhelp</code> or
+	<code class="filename">.devhelp2</code>.  (It is also acceptable to
+	install such files in
+	<code class="filename">${PREFIX}/share/doc</code>; no additional
+	subdirectory level is allowed in this case.)</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -8265,36 +8275,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2656363">What is the difference between
+<dt>20.1. <a href="#id2698199">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2656400">What is the difference between
+<dt>20.2. <a href="#id2698235">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2656438">What is the difference between
+<dt>20.3. <a href="#id2698342">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2656475">What is the difference between
+<dt>20.4. <a href="#id2698379">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2656493">Why does make show-var
+<dt>20.5. <a href="#id2698397">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2656521">What does
+<dt>20.6. <a href="#id2698425">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2656664">Which mailing lists are there for package
+<dt>20.7. <a href="#id2698500">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2656837">Where is the pkgsrc
+<dt>20.8. <a href="#id2698536">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -8303,14 +8313,14 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656363"></a><a name="id2656364"></a><b>20.1.</b>
+<a name="id2698199"></a><a name="id2698200"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
 	<code class="varname">MAKE_FLAGS</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">MAKEFLAGS</code> are the flags passed
 	to the pkgsrc-internal invocations of <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, while
 	<code class="varname">MAKE_FLAGS</code> are the flags that are passed to
@@ -8319,14 +8329,14 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656400"></a><a name="id2656401"></a><b>20.2.</b>
+<a name="id2698235"></a><a name="id2698236"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
 	<code class="varname">MAKE_PROGRAM</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">MAKE</code> is the path to the
 	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
 	infrastructure. <code class="varname">GMAKE</code> is the path to GNU
@@ -8337,14 +8347,14 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656438"></a><a name="id2656439"></a><b>20.3.</b>
+<a name="id2698342"></a><a name="id2698343"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
 	<code class="varname">PKGSRC_COMPILER</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">CC</code> is the path to the real C
 	compiler, which can be configured by the pkgsrc user.
 	<code class="varname">PKG_CC</code> is the path to the compiler wrapper.
@@ -8355,7 +8365,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656475"></a><a name="id2656476"></a><b>20.4.</b>
+<a name="id2698379"></a><a name="id2698380"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8363,19 +8373,19 @@ place.</p></li>
 	<code class="varname">BUILDLINK_LIBS</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p>[FIXME]</p></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656493"></a><a name="id2656494"></a><b>20.5.</b>
+<a name="id2698397"></a><a name="id2698398"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
 	say it's empty?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p>For optimization reasons, some variables are only
 	available in the &#8220;<span class="quote">wrapper</span>&#8221; phase and later. To
 	&#8220;<span class="quote">simulate</span>&#8221; the wrapper phase, append
@@ -8384,7 +8394,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656521"></a><a name="id2656522"></a><b>20.6.</b>
+<a name="id2698425"></a><a name="id2698426"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8392,7 +8402,7 @@ place.</p></li>
 	it.</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p>The <code class="literal">:=</code> is not really an
 	assignment operator, like you might expect at first sight.
 	Instead, it is a degenerate form of
@@ -8408,13 +8418,13 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656664"></a><a name="id2656802"></a><b>20.7.</b>
+<a name="id2698500"></a><a name="id2698501"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><div class="variablelist"><dl>
 <dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">tech-pkg</a></span></dt>
 <dd><p>This is a list for technical discussions related
@@ -8433,13 +8443,13 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2656837"></a><a name="id2656838"></a><b>20.8.</b>
+<a name="id2698536"></a><a name="id2698537"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top">
 <p>There are many places where you can find
 	documentation about pkgsrc:</p>
@@ -8692,8 +8702,8 @@ place.</p></li>
 <a name="infr.design.intf.proc"></a>21.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&mdash;after
-	inclusion&mdash;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&#8212;after
+	inclusion&#8212;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
@@ -9401,7 +9411,7 @@ source packages</h2></div></div></div>
 <p>The procedure to edit the pkgsrc guide is:</p>
 <div class="procedure"><ol type="1">
 <li><p>Make sure you have the packages needed to
-	re-generate the pkgsrc guide (and other XML-based NetBSD
+	regenerate the pkgsrc guide (and other XML-based NetBSD
 	documentation) installed. These are <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/netbsd-doc/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc</code></a> for creating the
 	ASCII and HTML versions, and <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/netbsd-doc-print/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc-print</code></a> for the
 	PostScript and PDF versions. You will need both packages
@@ -9422,21 +9432,13 @@ source packages</h2></div></div></div>
 <li><p>Run <span><strong class="command">bmake clean &amp;&amp; bmake</strong></span> to
 	regenerate the output files with the proper RCS
 	Ids.</p></li>
-<li><p>Run <span><strong class="command">(cd .. &amp;&amp; cvs update pkgsrc.*)
-	&amp;&amp; bmake install-doc</strong></span> to put the generated
-	files into <code class="filename">pkgsrc/doc</code>.</p></li>
-<li><p>Run <span><strong class="command">(cd .. &amp;&amp; cvs commit -m
-	"regenerated." pkgsrc.{html,txt})</strong></span> to commit the
-	generated documentation.</p></li>
-<li><p>Run <span><strong class="command">(cd
-	../../../htdocs/Documentation/pkgsrc &amp;&amp; cvs update)
-	&amp;&amp; bmake install-htdocs</strong></span> to generate all the
-	files for the web server.</p></li>
-<li><p>Run <span><strong class="command">(cd
-	../../../htdocs/Documentation/pkgsrc &amp;&amp; cvs commit -m
-	"regenerated.")</strong></span> to update the files on the web server.
-	If you have added a chapter, don't forget to run <span><strong class="command">cvs
-	add *.html</strong></span> before you commit the files.</p></li>
+<li><p>Run <span><strong class="command">bmake regenerate</strong></span> to
+	regenerate the files in both <code class="filename">pkgsrc/doc</code> and
+	<code class="filename">htdocs</code>.</p></li>
+<li><p>If you have added, removed or renamed some chapters,
+	you need to synchronize them using <span><strong class="command">cvs add</strong></span> or
+	<span><strong class="command">cvs delete</strong></span> in the htdocs
+	directory.</p></li>
 </ol></div>
 </div>
 </div>
