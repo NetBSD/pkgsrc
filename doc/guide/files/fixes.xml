@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.66 2006/08/11 12:09:33 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.67 2006/08/11 13:19:38 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1118,7 +1118,7 @@ Changes to the PLIST
 	<filename>${PREFIX}/share/gtk-doc</filename>.  Such
 	documentation can be recognized from files ending in
 	<filename>.devhelp</filename> or
-	</filename>.devhelp2</filename>.  (It is also acceptable to
+	<filename>.devhelp2</filename>.  (It is also acceptable to
 	install such files in
 	<filename>${PREFIX}/share/doc</filename>; no additional
 	subdirectory level is allowed in this case.)</para>
