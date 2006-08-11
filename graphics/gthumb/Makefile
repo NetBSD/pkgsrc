@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/05 05:37:42 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/08/11 17:13:29 drochner Exp $
 
 DISTNAME=		gthumb-2.6.9
 PKGREVISION=		3
@@ -9,7 +9,7 @@ MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://gthumb.sourceforge.net/
 COMMENT=		Image viewer and browser for the GNOME Desktop
 
-USE_TOOLS+=		intltool msgfmt pkg-config
+USE_TOOLS+=		intltool msgfmt pkg-config gmake
 USE_DIRS+=		xdg-1.1 gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
