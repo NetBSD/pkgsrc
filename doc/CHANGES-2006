@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1009 2006/08/11 13:29:29 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.1010 2006/08/11 15:06:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/zziplib to 0.10.82nb2 [taca 2006-08-11]
 	Updated security/cyrus-saslauthd to 2.1.21nb2 [taca 2006-08-11]
 	Updated cad/verilog-current to 20060809 [dmcmahill 2006-08-11]
+	Updated devel/pcre-ocaml to 5.10.3nb1 [wiz 2006-08-11]
