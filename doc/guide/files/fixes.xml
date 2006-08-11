@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.65 2006/07/27 06:39:10 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.66 2006/08/11 12:09:33 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1101,10 +1101,27 @@ Changes to the PLIST
 <sect2 id="where-to-install-documentation">
 <title>Where to install documentation</title>
 
-	<para>Documentation should be installed into
+	<para>In general, documentation should be installed into
 	<filename>${PREFIX}/share/doc/${PKGBASE}</filename> or
 	<filename>${PREFIX}/share/doc/${PKGNAME}</filename> (the latter
 	includes the version number of the package).</para>
+
+	<para>Many modern packages using GNU autoconf allow to set the directory
+	where HTML documentation is installed with the <quote>--with-html-dir</quote>
+	option.</para>
+
+	<para>An exception to the above is that library API
+	documentation generated with the <filename
+	role="pkg">textproc/gtk-doc</filename> tools, for use by
+	special browsers (devhelp) should be left at their default
+	location, which is
+	<filename>${PREFIX}/share/gtk-doc</filename>.  Such
+	documentation can be recognized from files ending in
+	<filename>.devhelp</filename> or
+	</filename>.devhelp2</filename>.  (It is also acceptable to
+	install such files in
+	<filename>${PREFIX}/share/doc</filename>; no additional
+	subdirectory level is allowed in this case.)</para>
 
 </sect2>
 
