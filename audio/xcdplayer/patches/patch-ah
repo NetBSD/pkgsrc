@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
+$NetBSD: patch-ah,v 1.5 2006/08/12 14:51:39 darcy Exp $
 
 --- internals.c.orig	Tue Jan 12 19:59:45 1993
-+++ internals.c	Mon Sep  6 18:37:05 1999
++++ internals.c
 @@ -22,6 +22,9 @@
  
  # include "debug.h"
@@ -28,7 +28,187 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  
  int
  cdrom_get_curtime() {
-@@ -170,7 +174,6 @@
+@@ -76,6 +80,170 @@ cdrom_get_curtime() {
+ 	}
+ }
+ 
++/*
++ * called by update_track when the cd has hit
++ * the end of the track or the disc.
++ */
++static void
++cdrom_atend() {
++	cdrom_timer_off();
++	leds_stop();
++	debug_printf(1, "cdrom_atend: at end\n");
++
++#ifdef sgi
++	/* Force a stop to kill the child (if any).
++	 * This is due to some sort of weirdness when the SGI runs off the 
++	 * disc during a CDreadda().
++	 */
++	if (cdi.scsi_audio) {
++		cdrom_stop();
++	}
++#endif
++	if (cdi.state & CDROM_STATE_SHUFFLE) {
++
++		if (cdi.currand == cdi.ntracks) {
++			if ((cdi.state & CDROM_STATE_CYCLE) == 0) {
++				debug_printf(1, "cdrom_atend: shuffle done\n");
++
++				cdrom_reset();
++				return;
++			}
++
++			debug_printf(1, "cdrom_atend: shuffle cycling\n");
++			shuffle_setup();
++		}
++
++		cdi.curtrack = shuffle_next_track();
++	}
++	else if (cdi.state & CDROM_STATE_PROGRAM) {
++		if ((cdi.curtrack = program_goto_next_track()) == 0)
++		{
++		    if (cdi.state & CDROM_STATE_CYCLE)
++		    {
++		        debug_printf(1, "cdrom_atend: cycling program\n");
++			cdi.curtrack = program_resume();
++			timer_fsecs = 0;
++			cdi.duration = 0;
++			timer_button_update();
++
++			(void) cdrom_play();
++		    }
++		    else
++		    {
++		        debug_printf(1, "cdrom_atend: all done\n");
++		    	cdrom_reset();
++		    }
++		    return;
++		}
++	}
++			
++	else if ((cdi.curtrack < cdi.maxtrack) && (cdi.curtrack != 0)) {
++		debug_printf(1, "cdrom_atend: continuing\n");
++		cdi.curtrack++;
++	}
++	else if (cdi.state & CDROM_STATE_CYCLE) {
++		debug_printf(1, "cdrom_atend: cycling\n");
++		cdi.curtrack = cdi.mintrack;
++	}
++	else {
++		debug_printf(1, "cdrom_atend: all done\n");
++		buttons_reset();
++		cdrom_reset();
++		return;
++	}
++
++	timer_fsecs = 0;
++	cdi.duration = 0;
++	timer_button_update();
++
++	(void) cdrom_play();
++}
++
++/*
++ * update_track is called when the timeout fires; it updates curtrack and 
++ * calls the label update routine.
++ */
++/*ARGSUSED*/
++static void
++update_track(data, id)
++	XtPointer	*data;
++	XtIntervalId	*id;
++{
++	unsigned int	curtrack;
++	Arg	args[1];
++	Boolean	state;
++
++	extern Widget	rew_button_widget;
++	extern Widget	ff_button_widget;
++#ifdef sgi
++
++	int	vol;
++#endif
++
++	if ((curtrack = cdrom_get_curtrack()) != cdi.curtrack) {
++		if (curtrack == 0) {
++			cdrom_atend();
++
++			return;
++		}
++
++		timer_fsecs = 0;
++		cdi.duration = 0;
++		timer_button_update();
++
++		cdi.curtrack = curtrack;
++		track_button_update();
++	}
++
++#ifdef sgi
++	/* Update the volume control */
++	if ((vol = cdrom_get_volume()) != 0) {
++		set_volume(vol);
++	}
++#endif
++
++	XtSetArg(args[0], XtNstate, &state);
++	XtGetValues(rew_button_widget, args, 1);
++	if (state == True)
++	{
++		cdrom_rewind();
++		leds_update(BACKWARDS);
++		if (cdi.state & CDROM_STATE_PAUSE) {
++			if (cdrom_pause() != -1)
++				 cdi.state &= ~CDROM_STATE_STOP;
++		}
++	        ivid = XtAppAddTimeOut(appc, 
++			(int)(app_data.scanPauseInterval * 1000.0), 
++			update_track, NULL);
++	}
++	else
++	{
++		leds_update(FORWARDS);
++		XtSetArg(args[0], XtNstate, &state);
++		XtGetValues(ff_button_widget, args, 1);
++		if (state == True)
++		{
++			cdrom_ff();
++			if (cdi.state & CDROM_STATE_PAUSE) {
++				if (cdrom_pause() != -1)
++					 cdi.state &= ~CDROM_STATE_STOP;
++			}
++
++			ivid = XtAppAddTimeOut(appc,
++				(int)(app_data.scanPauseInterval * 1000.0),
++				update_track, NULL);
++		}
++		else
++		{
++			if ((timer_fsecs++ % timer_mod) == 0) {
++				timer_button_update();
++			}
++			ivid = XtAppAddTimeOut(appc, TIMER_PERIOD, 
++				update_track, NULL);
++		}
++	}
++}
++
+ 
+ /*
+  * we poll the cd-rom drive every TIMER_PERIOD milliseconds to see where 
+@@ -83,8 +251,6 @@ cdrom_get_curtime() {
+  */
+ void
+ cdrom_timer_on() {
+-	static void	update_track();
+-
+ 	if (cdi.state & CDROM_STATE_PLAY)
+ 		ivid = XtAppAddTimeOut(appc, TIMER_PERIOD, update_track, NULL);
+ }
+@@ -170,7 +336,6 @@ cdrom_rewind () {
  	struct msf	track_start;
          struct msf	start_addr, end_addr;
  	int		curtrack;
@@ -36,7 +216,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  
  	if (cdrom_get_curmsf(&start_addr) == -1) {
  		debug_printf(1, "rew: error reading location\n");
-@@ -196,11 +199,11 @@
+@@ -196,11 +361,11 @@ cdrom_rewind () {
  	    if (((cdi.state & CDROM_STATE_PLAY) && 
  		 ((track_start.minute * 60) + track_start.second) >=
  		 ((start_addr.minute * 60) + start_addr.second - 
@@ -50,7 +230,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  	    {
  	        start_addr = track_start;
  	        start_addr.second++; /* guarantee we never back up too far */
-@@ -208,9 +211,9 @@
+@@ -208,9 +373,9 @@ cdrom_rewind () {
  	    else
  	    {
  		if (cdi.state & CDROM_STATE_PAUSE) {
@@ -62,7 +242,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  		}
  	        if ((char) start_addr.second < 0)
  	        {
-@@ -223,9 +226,9 @@
+@@ -223,9 +388,9 @@ cdrom_rewind () {
  	else /* normal case */
  	{
  		if (cdi.state & CDROM_STATE_PAUSE) {
@@ -74,7 +254,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  		}
  		if ((char) start_addr.second < 0)
  		{
-@@ -274,7 +277,7 @@
+@@ -274,7 +439,7 @@ cdrom_rewind () {
  	{
  	    if (scanivid == -1)
  		scanivid = XtAppAddTimeOut(appc, 
@@ -83,7 +263,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  			scan_update, NULL);
  
  	    cdi.state &= ~CDROM_STATE_PAUSE;	/* allow timer to change */
-@@ -304,7 +307,6 @@
+@@ -304,7 +469,6 @@ cdrom_ff () {
          struct msf	start_addr, end_addr,  next_start;
  	char		t;
  	int		curtrack;
@@ -91,7 +271,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  
  	if (cdrom_get_curmsf(&start_addr) == -1) {
  		debug_printf(1, "ff: error reading location\n");
-@@ -332,11 +334,11 @@
+@@ -332,11 +496,11 @@ cdrom_ff () {
  	    if (((cdi.state & CDROM_STATE_PLAY) && 
  		 ((next_start.minute * 60) + next_start.second) <=
  		 ((start_addr.minute * 60) + start_addr.second +
@@ -105,7 +285,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  	    {
  	    
  	        /* start at end of current track */
-@@ -346,9 +348,9 @@
+@@ -346,9 +510,9 @@ cdrom_ff () {
  	    else
  	    {
  		    if (cdi.state & CDROM_STATE_PAUSE) {
@@ -117,7 +297,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  		    }
  		    if (start_addr.second >= 60)
  		    {
-@@ -360,9 +362,9 @@
+@@ -360,9 +524,9 @@ cdrom_ff () {
  	else
  	{
  	    if (cdi.state & CDROM_STATE_PAUSE) {
@@ -129,7 +309,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  	    }
  	    if (start_addr.second >= 60)
  	    {
-@@ -413,7 +415,7 @@
+@@ -413,7 +577,7 @@ cdrom_ff () {
  	{
  	    if (scanivid == -1)
  		scanivid = XtAppAddTimeOut(appc, 
@@ -138,7 +318,93 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  			scan_update, NULL);
  
  	    cdi.state &= ~CDROM_STATE_PAUSE;	/* allow timer to change */
-@@ -557,7 +559,7 @@
+@@ -435,85 +599,6 @@ cdrom_ff () {
+ 
+ 
+ /*
+- * called by update_track when the cd has hit
+- * the end of the track or the disc.
+- */
+-static void
+-cdrom_atend() {
+-	cdrom_timer_off();
+-	leds_stop();
+-	debug_printf(1, "cdrom_atend: at end\n");
+-
+-#ifdef sgi
+-	/* Force a stop to kill the child (if any).
+-	 * This is due to some sort of weirdness when the SGI runs off the 
+-	 * disc during a CDreadda().
+-	 */
+-	if (cdi.scsi_audio) {
+-		cdrom_stop();
+-	}
+-#endif
+-	if (cdi.state & CDROM_STATE_SHUFFLE) {
+-
+-		if (cdi.currand == cdi.ntracks) {
+-			if ((cdi.state & CDROM_STATE_CYCLE) == 0) {
+-				debug_printf(1, "cdrom_atend: shuffle done\n");
+-
+-				cdrom_reset();
+-				return;
+-			}
+-
+-			debug_printf(1, "cdrom_atend: shuffle cycling\n");
+-			shuffle_setup();
+-		}
+-
+-		cdi.curtrack = shuffle_next_track();
+-	}
+-	else if (cdi.state & CDROM_STATE_PROGRAM) {
+-		if ((cdi.curtrack = program_goto_next_track()) == 0)
+-		{
+-		    if (cdi.state & CDROM_STATE_CYCLE)
+-		    {
+-		        debug_printf(1, "cdrom_atend: cycling program\n");
+-			cdi.curtrack = program_resume();
+-			timer_fsecs = 0;
+-			cdi.duration = 0;
+-			timer_button_update();
+-
+-			(void) cdrom_play();
+-		    }
+-		    else
+-		    {
+-		        debug_printf(1, "cdrom_atend: all done\n");
+-		    	cdrom_reset();
+-		    }
+-		    return;
+-		}
+-	}
+-			
+-	else if ((cdi.curtrack < cdi.maxtrack) && (cdi.curtrack != 0)) {
+-		debug_printf(1, "cdrom_atend: continuing\n");
+-		cdi.curtrack++;
+-	}
+-	else if (cdi.state & CDROM_STATE_CYCLE) {
+-		debug_printf(1, "cdrom_atend: cycling\n");
+-		cdi.curtrack = cdi.mintrack;
+-	}
+-	else {
+-		debug_printf(1, "cdrom_atend: all done\n");
+-		buttons_reset();
+-		cdrom_reset();
+-		return;
+-	}
+-
+-	timer_fsecs = 0;
+-	cdi.duration = 0;
+-	timer_button_update();
+-
+-	(void) cdrom_play();
+-}
+-
+-/*
+  * scan_update is called when the scan timeout fires; it updates the timer 
+  * and calls the label update routine.
+  */
+@@ -557,7 +642,7 @@ scan_update(data, id)
  				 cdi.state &= ~CDROM_STATE_STOP;
  		}
  	        ivid = XtAppAddTimeOut(appc, 
@@ -147,7 +413,7 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  			scan_update, NULL);
  	}
  	else
-@@ -574,7 +576,7 @@
+@@ -574,7 +659,7 @@ scan_update(data, id)
  			}
  
  			ivid = XtAppAddTimeOut(appc,
@@ -156,21 +422,93 @@ $NetBSD: patch-ah,v 1.4 2005/12/11 20:48:46 joerg Exp $
  				scan_update, NULL);
  		}
  		else if (scanivid != -1) {
-@@ -662,7 +664,7 @@
- 				 cdi.state &= ~CDROM_STATE_STOP;
- 		}
- 	        ivid = XtAppAddTimeOut(appc, 
+@@ -607,89 +692,3 @@ update_status(data, id)
+ 	/* Reset timer */
+ 	stativid = XtAppAddTimeOut(appc, 1000, update_status, NULL);
+ }
+-
+-/*
+- * update_track is called when the timeout fires; it updates curtrack and 
+- * calls the label update routine.
+- */
+-/*ARGSUSED*/
+-static void
+-update_track(data, id)
+-	XtPointer	*data;
+-	XtIntervalId	*id;
+-{
+-	unsigned int	curtrack;
+-	Arg	args[1];
+-	Boolean	state;
+-
+-	extern Widget	rew_button_widget;
+-	extern Widget	ff_button_widget;
+-#ifdef sgi
+-
+-	int	vol;
+-#endif
+-
+-	if ((curtrack = cdrom_get_curtrack()) != cdi.curtrack) {
+-		if (curtrack == 0) {
+-			cdrom_atend();
+-
+-			return;
+-		}
+-
+-		timer_fsecs = 0;
+-		cdi.duration = 0;
+-		timer_button_update();
+-
+-		cdi.curtrack = curtrack;
+-		track_button_update();
+-	}
+-
+-#ifdef sgi
+-	/* Update the volume control */
+-	if ((vol = cdrom_get_volume()) != 0) {
+-		set_volume(vol);
+-	}
+-#endif
+-
+-	XtSetArg(args[0], XtNstate, &state);
+-	XtGetValues(rew_button_widget, args, 1);
+-	if (state == True)
+-	{
+-		cdrom_rewind();
+-		leds_update(BACKWARDS);
+-		if (cdi.state & CDROM_STATE_PAUSE) {
+-			if (cdrom_pause() != -1)
+-				 cdi.state &= ~CDROM_STATE_STOP;
+-		}
+-	        ivid = XtAppAddTimeOut(appc, 
 -			(int)(scanPauseInterval * 1000.0), 
-+			(int)(app_data.scanPauseInterval * 1000.0), 
- 			update_track, NULL);
- 	}
- 	else
-@@ -679,7 +681,7 @@
- 			}
- 
- 			ivid = XtAppAddTimeOut(appc,
+-			update_track, NULL);
+-	}
+-	else
+-	{
+-		leds_update(FORWARDS);
+-		XtSetArg(args[0], XtNstate, &state);
+-		XtGetValues(ff_button_widget, args, 1);
+-		if (state == True)
+-		{
+-			cdrom_ff();
+-			if (cdi.state & CDROM_STATE_PAUSE) {
+-				if (cdrom_pause() != -1)
+-					 cdi.state &= ~CDROM_STATE_STOP;
+-			}
+-
+-			ivid = XtAppAddTimeOut(appc,
 -				(int)(scanPauseInterval * 1000.0),
-+				(int)(app_data.scanPauseInterval * 1000.0),
- 				update_track, NULL);
- 		}
- 		else
+-				update_track, NULL);
+-		}
+-		else
+-		{
+-			if ((timer_fsecs++ % timer_mod) == 0) {
+-				timer_button_update();
+-			}
+-			ivid = XtAppAddTimeOut(appc, TIMER_PERIOD, 
+-				update_track, NULL);
+-		}
+-	}
+-}
+-
