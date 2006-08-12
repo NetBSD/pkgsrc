@@ -7553,11 +7553,14 @@ Changes to the PLIST
 <a name="where-to-install-documentation"></a>17.5.2. Where to install documentation</h3></div></div></div>
 <p>In general, documentation should be installed into
 	<code class="filename">${PREFIX}/share/doc/${PKGBASE}</code> or
-	<code class="filename">${PREFIX}/share/doc/${PKGNAME}</code> (the latter
-	includes the version number of the package).</p>
-<p>Many modern packages using GNU autoconf allow to set the directory
-	where HTML documentation is installed with the &#8220;<span class="quote">--with-html-dir</span>&#8221;
-	option.</p>
+	<code class="filename">${PREFIX}/share/doc/${PKGNAME}</code> (the
+	latter includes the version number of the package).</p>
+<p>Many modern packages using GNU autoconf allow to set the
+	directory where HTML documentation is installed with the
+	&#8220;<span class="quote">--with-html-dir</span>&#8221; option. Sometimes using this
+	flag is needed because otherwise the documentation ends up in
+	<code class="filename">${PREFIX}/share/doc/html</code> or other
+	places.</p>
 <p>An exception to the above is that library API
 	documentation generated with the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/textproc/gtk-doc/README.html" target="_top"><code class="filename">textproc/gtk-doc</code></a> tools, for use by
 	special browsers (devhelp) should be left at their default
@@ -7567,8 +7570,15 @@ Changes to the PLIST
 	<code class="filename">.devhelp</code> or
 	<code class="filename">.devhelp2</code>.  (It is also acceptable to
 	install such files in
-	<code class="filename">${PREFIX}/share/doc</code>; no additional
-	subdirectory level is allowed in this case.)</p>
+	<code class="filename">${PREFIX}/share/doc/${PKGBASE}</code> or
+	<code class="filename">${PREFIX}/share/doc/${PKGNAME}</code>; the
+	<code class="filename">.devhelp*</code> file must be directly in that
+	directory then, no additional
+	subdirectory level is allowed in this case. This is usually
+	achieved by using
+	&#8220;<span class="quote">--with-html-dir=${PREFIX}/share/doc</span>&#8221;.
+	<code class="filename">${PREFIX}/share/gtk-doc</code> is preferred
+	though.)</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -8275,36 +8285,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2698199">What is the difference between
+<dt>20.1. <a href="#id2698292">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2698235">What is the difference between
+<dt>20.2. <a href="#id2698328">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2698342">What is the difference between
+<dt>20.3. <a href="#id2698366">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2698379">What is the difference between
+<dt>20.4. <a href="#id2698404">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2698397">Why does make show-var
+<dt>20.5. <a href="#id2698422">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2698425">What does
+<dt>20.6. <a href="#id2698450">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2698500">Which mailing lists are there for package
+<dt>20.7. <a href="#id2698524">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2698536">Where is the pkgsrc
+<dt>20.8. <a href="#id2698561">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -8313,7 +8323,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698199"></a><a name="id2698200"></a><b>20.1.</b>
+<a name="id2698292"></a><a name="id2698293"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8329,7 +8339,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698235"></a><a name="id2698236"></a><b>20.2.</b>
+<a name="id2698328"></a><a name="id2698329"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8347,7 +8357,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698342"></a><a name="id2698343"></a><b>20.3.</b>
+<a name="id2698366"></a><a name="id2698368"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8365,7 +8375,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698379"></a><a name="id2698380"></a><b>20.4.</b>
+<a name="id2698404"></a><a name="id2698405"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8378,7 +8388,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698397"></a><a name="id2698398"></a><b>20.5.</b>
+<a name="id2698422"></a><a name="id2698423"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8394,7 +8404,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698425"></a><a name="id2698426"></a><b>20.6.</b>
+<a name="id2698450"></a><a name="id2698451"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8418,7 +8428,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698500"></a><a name="id2698501"></a><b>20.7.</b>
+<a name="id2698524"></a><a name="id2698525"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8443,7 +8453,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698536"></a><a name="id2698537"></a><b>20.8.</b>
+<a name="id2698561"></a><a name="id2698562"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
