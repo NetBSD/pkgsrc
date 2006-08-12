@@ -6162,14 +6162,19 @@ In general, documentation should be installed into ${PREFIX}/share/doc/$
 number of the package).
 
 Many modern packages using GNU autoconf allow to set the directory where HTML
-documentation is installed with the "--with-html-dir" option.
+documentation is installed with the "--with-html-dir" option. Sometimes using
+this flag is needed because otherwise the documentation ends up in ${PREFIX}/
+share/doc/html or other places.
 
 An exception to the above is that library API documentation generated with the
 textproc/gtk-doc tools, for use by special browsers (devhelp) should be left at
 their default location, which is ${PREFIX}/share/gtk-doc. Such documentation
 can be recognized from files ending in .devhelp or .devhelp2. (It is also
-acceptable to install such files in ${PREFIX}/share/doc; no additional
-subdirectory level is allowed in this case.)
+acceptable to install such files in ${PREFIX}/share/doc/${PKGBASE} or ${PREFIX}
+/share/doc/${PKGNAME}; the .devhelp* file must be directly in that directory
+then, no additional subdirectory level is allowed in this case. This is usually
+achieved by using "--with-html-dir=${PREFIX}/share/doc". ${PREFIX}/share/
+gtk-doc is preferred though.)
 
 17.5.3. Installing score files
 
