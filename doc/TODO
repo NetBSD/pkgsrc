@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5328 2006/08/12 08:56:22 wiz Exp $
+$NetBSD: TODO,v 1.5329 2006/08/12 21:05:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1184,7 +1184,6 @@ Suggested package updates
 	o xview-3.2.1.4.21.2
 	o xzip-182
 	o yafc-1.1
-	o yasm-0.5.0
 	o yaz-2.1.8
 	o yencode-0.46
 	o yodl-2.01.02
