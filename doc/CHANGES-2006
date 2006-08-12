@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1013 2006/08/11 16:54:51 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.1014 2006/08/12 16:23:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/pxp version 1.1.6 [wiz 2006-08-11]
 	Added textproc/harmony version 20060526 [wiz 2006-08-11]
 	Updated chat/ircd-hybrid to 7.2.2 [adrianp 2006-08-11]
+	Added graphics/zphoto version 1.2.2 [xtraeme 2006-08-12]
