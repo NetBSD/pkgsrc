@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2006/08/10 14:36:45 drochner Exp $
+# $NetBSD: Makefile,v 1.431 2006/08/12 16:23:19 xtraeme Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -319,5 +319,6 @@ SUBDIR+=	xpm
 SUBDIR+=	xsane
 SUBDIR+=	xv
 SUBDIR+=	xzgv
+SUBDIR+=	zphoto
 
 .include "../mk/bsd.pkg.subdir.mk"
