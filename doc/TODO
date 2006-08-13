@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5330 2006/08/13 10:14:05 wiz Exp $
+$NetBSD: TODO,v 1.5331 2006/08/13 12:28:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -500,6 +500,7 @@ Suggested package updates
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
+	o gimp-ufraw-0.9.1
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
 	o gkrellm-xmms-2.1.22
@@ -645,6 +646,7 @@ Suggested package updates
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.3
+	o libtunepimp-0.5.1
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o liferea-1.0.20
@@ -683,7 +685,7 @@ Suggested package updates
 	o mined-2000.12
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
-	o miredo-0.9.7
+	o miredo-0.9.8
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.7.0
 	o mlview-0.9.0
@@ -729,7 +731,7 @@ Suggested package updates
 	o nss_ldap-248
 	o ntp-4.2.2
 	o nulib2-210
-	o nut-11.5
+	o nut-11.6
 	o objc-3.2.7
 	o ocrad-0.15
 	o odbc-postgresql-8.0.7
@@ -907,6 +909,7 @@ Suggested package updates
 	o postgrey-1.27
 	o powermanga-0.80
 	o prayer-1.0.15
+	o prboom-2.4.5
 	o prelude-lml-0.9.6
 	o proj-4.4.9
 	o projclock-0.9
