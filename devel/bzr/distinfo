@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/07/12 14:30:55 wiz Exp $
+$NetBSD: distinfo,v 1.4 2006/08/13 23:47:38 wiz Exp $
 
-SHA1 (bzr-0.8.2.tar.gz) = 1aea6e0783219f0c2d074c9407ad09cb36b4ade2
-RMD160 (bzr-0.8.2.tar.gz) = 5cdbfa3f9a87fc1b999e1bef187f1e83fc7cb251
-Size (bzr-0.8.2.tar.gz) = 720152 bytes
+SHA1 (bzr-0.9.tar.gz) = 6150ce2b814a738a72e3aab6d081769f9d2e14fe
+RMD160 (bzr-0.9.tar.gz) = e01328785bae9d275cc71311627a11edb5a89224
+Size (bzr-0.9.tar.gz) = 935724 bytes
