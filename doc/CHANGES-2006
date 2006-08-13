@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1016 2006/08/13 09:41:35 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.1017 2006/08/13 10:14:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/powerdns-pgsql version 2.9.20 [ghen 2006-08-13]
 	Added net/powerdns-sqlite version 2.9.20 [ghen 2006-08-13]
 	Added net/powerdns-ldap version 2.9.20 [ghen 2006-08-13]
+	Updated devel/gnustep-make to 1.12.0nb3 [minskim 2006-08-13]
