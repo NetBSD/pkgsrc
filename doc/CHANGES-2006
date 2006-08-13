@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1018 2006/08/13 13:02:54 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1019 2006/08/13 16:02:28 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3930,3 +3930,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/powerdns-ldap version 2.9.20 [ghen 2006-08-13]
 	Updated devel/gnustep-make to 1.12.0nb3 [minskim 2006-08-13]
 	Updated misc/gkrellm-weather to 2.0.7 [xtraeme 2006-08-13]
+	Updated databases/lbdb to 0.32 [tonio 2006-08-13]
