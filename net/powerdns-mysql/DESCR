@@ -6,4 +6,4 @@ The PowerDNS nameserver utilizes a flexible backend architecture that
 can access DNS information from any data source.  This includes file
 formats, BIND zone files, relational databases or LDAP directories.
 
-This packages provides the PostgreSQL backend module.
+This packages provides the MySQL backend module.

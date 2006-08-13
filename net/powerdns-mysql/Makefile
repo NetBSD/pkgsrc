@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.2 2006/08/13 09:35:30 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/13 09:38:42 ghen Exp $
 
 .include "../../net/powerdns/Makefile.backend"
 
-PKGNAME=		${DISTNAME:S/pdns/powerdns-pgsql/}
-COMMENT=		PostgreSQL backend module for PowerDNS
+PKGNAME=		${DISTNAME:S/pdns/powerdns-mysql/}
+COMMENT=		MySQL backend module for PowerDNS
 
-CONFIGURE_ARGS+=	--with-dynmodules="gpgsql"
-CONFIGURE_ARGS+=	--with-pgsql-lib=${BUILDLINK_PREFIX.${PGSQL_TYPE}}/lib
-CONFIGURE_ARGS+=	--with-pgsql-includes=${BUILDLINK_PREFIX.${PGSQL_TYPE}}/include
+CONFIGURE_ARGS+=	--with-dynmodules="gmysql"
+CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 
-.include "../../mk/pgsql.buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
