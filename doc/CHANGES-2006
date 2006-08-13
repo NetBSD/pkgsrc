@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1015 2006/08/12 21:05:40 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1016 2006/08/13 09:41:35 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3923,3 +3923,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/ircd-hybrid to 7.2.2 [adrianp 2006-08-11]
 	Added graphics/zphoto version 1.2.2 [xtraeme 2006-08-12]
 	Updated devel/yasm to 0.5.0 [wiz 2006-08-12]
+	Added net/powerdns version 2.9.20 [ghen 2006-08-13]
+	Added net/powerdns-mysql version 2.9.20 [ghen 2006-08-13]
+	Added net/powerdns-pgsql version 2.9.20 [ghen 2006-08-13]
+	Added net/powerdns-sqlite version 2.9.20 [ghen 2006-08-13]
+	Added net/powerdns-ldap version 2.9.20 [ghen 2006-08-13]
