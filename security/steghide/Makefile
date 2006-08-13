@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/05/11 16:23:57 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/13 23:32:22 wiz Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=steghide/}
 
-MAINTAINER=		adam@monkeybyte.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://steghide.sourceforge.net/
 COMMENT=		Steganography program
 
