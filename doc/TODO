@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5331 2006/08/13 12:28:15 wiz Exp $
+$NetBSD: TODO,v 1.5332 2006/08/13 13:02:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -502,7 +502,6 @@ Suggested package updates
 	o gimp-print-5.0 [now called gutenprint]
 	o gimp-ufraw-0.9.1
 	o gkrellm-multiping-2.0.10
-	o gkrellm-weather-2.0.7
 	o gkrellm-xmms-2.1.22
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.22
