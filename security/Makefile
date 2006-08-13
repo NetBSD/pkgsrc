@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2006/08/13 17:41:31 adrianp Exp $
+# $NetBSD: Makefile,v 1.272 2006/08/13 17:45:02 adrianp Exp $
 #
 
 COMMENT=	Security tools
@@ -176,6 +176,7 @@ SUBDIR+=	p5-Net-DNS-SEC
 SUBDIR+=	p5-Net-SSH
 SUBDIR+=	p5-Net-SSLeay
 SUBDIR+=	p5-SHA
+SUBDIR+=	p5-String-Random
 SUBDIR+=	p5-Tie-EncryptedHash
 SUBDIR+=	pakemon
 SUBDIR+=	pam-dbm
