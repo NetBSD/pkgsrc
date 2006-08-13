@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2006/07/31 10:35:38 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/08/13 10:12:27 minskim Exp $
 
 DISTNAME=	gnustep-make-1.12.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -12,6 +12,7 @@ COMMENT=	GNUstep makefile package
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	objc
+USE_TOOLS+=	csh
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
@@ -20,6 +21,11 @@ CONFIGURE_ARGS+=	--with-config-file=${PREFIX}/etc/GNUstep.conf
 
 CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
 			${PREFIX}/etc/GNUstep.conf
+
+REPLACE_INTERPRETER+=	csh
+REPLACE.csh.old=	/bin/csh
+REPLACE.csh.new=	${CSH}
+REPLACE_FILES.csh=	ld_lib_path.csh
 
 .include "../../mk/x11.buildlink3.mk"
 .include "gnustep.mk"
