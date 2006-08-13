@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
+$NetBSD: patch-ab,v 1.15 2006/08/13 07:33:37 xtraeme Exp $
 
---- src/sysdeps/netbsd.c.orig	2005-05-24 05:45:10.000000000 +0200
-+++ src/sysdeps/netbsd.c
-@@ -63,7 +63,8 @@ gkrellm_sys_cpu_read_data(void)
+--- src/sysdeps/netbsd.c.orig	2006-03-30 00:23:37.000000000 +0200
++++ src/sysdeps/netbsd.c	2006-08-13 09:25:55.000000000 +0200
+@@ -63,7 +63,8 @@
  {
     static int mib[] = { CTL_KERN, KERN_CP_TIME };
     u_int64_t cp_time[ncpus][CPUSTATES];
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
  
     if (ncpus > 1) {
         len = sizeof(cp_time[0]);
-@@ -94,7 +95,7 @@ get_ncpus(void)
+@@ -94,7 +95,7 @@
  {
  	static int mib[] = { CTL_HW, HW_NCPU };
  	int ncpus;
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
  
  	if (sysctl(mib, 2, &ncpus, &len, NULL, 0) < 0)
  		return 1;
-@@ -109,41 +110,35 @@ get_ncpus(void)
+@@ -109,39 +110,33 @@
  #include <sys/proc.h>
  #include <sys/sysctl.h>
  #include <uvm/uvm_extern.h>
@@ -43,16 +43,24 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
 -   static int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_ALL };
 +   int mib[6];
     double avenrun;
--	guint	n_forks = 0, n_processes = 0;
+ 	guint	n_forks = 0, n_processes = 0;
 -   struct uvmexp *uvmexp;
 -   int len, i;
 -
 -   if (sysctl(mib, 3, NULL, &len, NULL, 0) >= 0) {
 -      n_processes = len / sizeof(struct kinfo_proc);
-+   guint n_forks = 0, n_processes = 0;
+-   }
+-
+-   /* get name list if it is not done yet */
+-   if (kvmd == NULL) return;
+-   if (nl[0].n_type == 0) kvm_nlist(kvmd, nl);
 +   struct uvmexp_sysctl uvmexp;
 +   size_t size;
-+
+ 
+-   if (nl[0].n_type != 0) {
+-      uvmexp = (struct uvmexp *)nl[X_UVM_EXP].n_value;
+-      if (kvm_read(kvmd, (u_long)&uvmexp->forks, &i, sizeof(i)) == sizeof(i))
+-	 n_forks = i;
 +   mib[0] = CTL_KERN;
 +   mib[1] = KERN_PROC2;
 +   mib[2] = KERN_PROC_ALL;
@@ -61,28 +69,17 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
 +   mib[5] = 0;
 +   if (sysctl(mib, 6, NULL, &size, NULL, 0) >= 0) {
 +      n_processes = size / sizeof(struct kinfo_proc2);
-    }
- 
--   /* get name list if it is not done yet */
--   if (kvmd == NULL) return;
--   if (nl[0].n_type == 0) kvm_nlist(kvmd, nl);
--
--   if (nl[0].n_type != 0) {
--      uvmexp = (struct uvmexp *)nl[X_UVM_EXP].n_value;
--      if (kvm_read(kvmd, (u_long)&uvmexp->forks, &i, sizeof(i)) == sizeof(i))
--	 n_forks = i;
++   }
++
 +   mib[0] = CTL_VM;
 +   mib[1] = VM_UVMEXP2;
 +   size = sizeof(uvmexp);
 +   if (sysctl(mib, 2, &uvmexp, &size, NULL, 0) >= 0) {
 +      n_forks = uvmexp.forks;
     }
--
-+ 
+ 
     if (getloadavg(&avenrun, 1) <= 0)
- 		avenrun = 0;
- 	gkrellm_proc_assign_data(n_processes, 0, n_forks, avenrun);
-@@ -183,6 +178,96 @@ gkrellm_sys_proc_init(void)
+@@ -183,6 +178,96 @@
  
  
  /* ===================================================================== */
@@ -179,7 +176,7 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
  /* Sensor monitor interface */
  
    /* Tables of voltage correction factors and offsets derived from the
-@@ -295,7 +380,7 @@ gkrellm_sys_sensors_init(void)
+@@ -295,7 +380,7 @@
     int fd;			/* file desc. for /dev/sysmon */
     int id = 0;			/* incremented for each sensor */
     int type;
@@ -188,7 +185,7 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
     gboolean	found_sensors = FALSE;
  
     /* check if some sensor is configured */
-@@ -336,3 +421,149 @@ gkrellm_sys_sensors_init(void)
+@@ -336,3 +421,158 @@
     return found_sensors;
  }
  
@@ -198,6 +195,15 @@ $NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
 +
 +#include <sys/dkstat.h>
 +#include <sys/disk.h>
++#include <sys/sysctl.h>
++
++#ifdef HW_IOSTATS
++#define HW_DISKSTATS	HW_IOSTATS
++#define disk_sysctl	io_sysctl
++#define dk_rbytes	rbytes
++#define dk_wbytes	wbytes
++#define dk_name		name
++#endif
 +
 +gboolean
 +gkrellm_sys_disk_init(void)
