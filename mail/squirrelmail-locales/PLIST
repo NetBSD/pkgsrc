@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8.2.1 2006/07/13 12:32:09 salo Exp $
+@comment $NetBSD: PLIST,v 1.8.2.2 2006/08/14 17:14:12 ghen Exp $
 share/squirrelmail/help/bg_BG/FAQ.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
@@ -215,15 +215,6 @@ share/squirrelmail/help/sv_SE/main_folder.hlp
 share/squirrelmail/help/sv_SE/options.hlp
 share/squirrelmail/help/sv_SE/read_mail.hlp
 share/squirrelmail/help/sv_SE/search.hlp
-share/squirrelmail/help/th_TH/FAQ.hlp
-share/squirrelmail/help/th_TH/addresses.hlp
-share/squirrelmail/help/th_TH/basic.hlp
-share/squirrelmail/help/th_TH/compose.hlp
-share/squirrelmail/help/th_TH/folders.hlp
-share/squirrelmail/help/th_TH/main_folder.hlp
-share/squirrelmail/help/th_TH/options.hlp
-share/squirrelmail/help/th_TH/read_mail.hlp
-share/squirrelmail/help/th_TH/search.hlp
 share/squirrelmail/help/uk_UA/FAQ.hlp
 share/squirrelmail/help/uk_UA/addresses.hlp
 share/squirrelmail/help/uk_UA/basic.hlp
@@ -314,6 +305,8 @@ share/squirrelmail/locale/de_DE/LC_MESSAGES/calendar.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/calendar.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/change_sqlpass.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/change_sqlpass.po
+share/squirrelmail/locale/de_DE/LC_MESSAGES/compatibility.mo
+share/squirrelmail/locale/de_DE/LC_MESSAGES/compatibility.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/empty_folders.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/empty_folders.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/expire.mo
@@ -431,6 +424,8 @@ share/squirrelmail/locale/id_ID/LC_MESSAGES/askuserinfo.mo
 share/squirrelmail/locale/id_ID/LC_MESSAGES/askuserinfo.po
 share/squirrelmail/locale/id_ID/LC_MESSAGES/compatibility.mo
 share/squirrelmail/locale/id_ID/LC_MESSAGES/compatibility.po
+share/squirrelmail/locale/id_ID/LC_MESSAGES/cookie_warning.mo
+share/squirrelmail/locale/id_ID/LC_MESSAGES/cookie_warning.po
 share/squirrelmail/locale/id_ID/LC_MESSAGES/folder_sizes.mo
 share/squirrelmail/locale/id_ID/LC_MESSAGES/folder_sizes.po
 share/squirrelmail/locale/id_ID/LC_MESSAGES/squirrelmail.mo
@@ -595,6 +590,8 @@ share/squirrelmail/locale/nl_NL/LC_MESSAGES/vacation_local.po
 share/squirrelmail/locale/nl_NL/setup.php
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/abook_import_export.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/abook_import_export.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/advanced_settings.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/advanced_settings.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/archive_mail.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/archive_mail.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/askuserinfo.mo
@@ -635,6 +632,8 @@ share/squirrelmail/locale/nn_NO/LC_MESSAGES/multilogin.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/multilogin.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/naguser.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/naguser.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/newuser_wiz.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/newuser_wiz.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/proon.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/proon.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/qmailadmin_login.mo
@@ -836,120 +835,119 @@ share/squirrelmail/locale/zh_CN/setup.php
 share/squirrelmail/locale/zh_TW/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/zh_TW/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_TW/setup.php
-@dirrm share/squirrelmail/locale/ar/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ar
-@dirrm share/squirrelmail/locale/bg_BG/LC_MESSAGES
-@dirrm share/squirrelmail/locale/bg_BG
-@dirrm share/squirrelmail/locale/bn_IN/LC_MESSAGES
-@dirrm share/squirrelmail/locale/bn_IN
-@dirrm share/squirrelmail/locale/ca_ES/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ca_ES
+@dirrm share/squirrelmail/locale/zh_TW/LC_MESSAGES
+@dirrm share/squirrelmail/locale/zh_TW
+@dirrm share/squirrelmail/locale/zh_CN/LC_MESSAGES
+@dirrm share/squirrelmail/locale/zh_CN
+@dirrm share/squirrelmail/locale/uk_UA/LC_MESSAGES
+@dirrm share/squirrelmail/locale/uk_UA
+@dirrm share/squirrelmail/locale/ug/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ug
+@dirrm share/squirrelmail/locale/tr_TR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/tr_TR
+@dirrm share/squirrelmail/locale/sv_SE/LC_MESSAGES
+@dirrm share/squirrelmail/locale/sv_SE
+@dirrm share/squirrelmail/locale/sr_YU/LC_MESSAGES
+@dirrm share/squirrelmail/locale/sr_YU
+@dirrm share/squirrelmail/locale/sl_SI/LC_MESSAGES
+@dirrm share/squirrelmail/locale/sl_SI
+@dirrm share/squirrelmail/locale/sk_SK/LC_MESSAGES
+@dirrm share/squirrelmail/locale/sk_SK
+@dirrm share/squirrelmail/locale/ru_RU/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ru_RU
+@dirrm share/squirrelmail/locale/ro_RO/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ro_RO
+@dirrm share/squirrelmail/locale/pt_PT/LC_MESSAGES
+@dirrm share/squirrelmail/locale/pt_PT
+@dirrm share/squirrelmail/locale/pt_BR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/pt_BR
+@dirrm share/squirrelmail/locale/pl_PL/LC_MESSAGES
+@dirrm share/squirrelmail/locale/pl_PL
+@dirrm share/squirrelmail/locale/nn_NO/LC_MESSAGES
+@dirrm share/squirrelmail/locale/nn_NO
+@dirrm share/squirrelmail/locale/nl_NL/LC_MESSAGES
+@dirrm share/squirrelmail/locale/nl_NL
+@dirrm share/squirrelmail/locale/nb_NO/LC_MESSAGES
+@dirrm share/squirrelmail/locale/nb_NO
+@dirrm share/squirrelmail/locale/ms_MY/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ms_MY
+@dirrm share/squirrelmail/locale/lt_LT/LC_MESSAGES
+@dirrm share/squirrelmail/locale/lt_LT
+@dirrm share/squirrelmail/locale/ko_KR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ko_KR
+@dirrm share/squirrelmail/locale/ka/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ka
+@dirrm share/squirrelmail/locale/ja_JP/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ja_JP
+@dirrm share/squirrelmail/locale/it_IT/LC_MESSAGES
+@dirrm share/squirrelmail/locale/it_IT
+@dirrm share/squirrelmail/locale/is_IS/LC_MESSAGES
+@dirrm share/squirrelmail/locale/is_IS
+@dirrm share/squirrelmail/locale/id_ID/LC_MESSAGES
+@dirrm share/squirrelmail/locale/id_ID
+@dirrm share/squirrelmail/locale/hu_HU/LC_MESSAGES
+@dirrm share/squirrelmail/locale/hu_HU
+@dirrm share/squirrelmail/locale/hr_HR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/hr_HR
+@dirrm share/squirrelmail/locale/he_IL/LC_MESSAGES
+@dirrm share/squirrelmail/locale/he_IL
+@dirrm share/squirrelmail/locale/fr_FR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/fr_FR
+@dirrm share/squirrelmail/locale/fo_FO/LC_MESSAGES
+@dirrm share/squirrelmail/locale/fo_FO
+@dirrm share/squirrelmail/locale/fi_FI/LC_MESSAGES
+@dirrm share/squirrelmail/locale/fi_FI
+@dirrm share/squirrelmail/locale/fa_IR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/fa_IR
+@dirrm share/squirrelmail/locale/eu_ES/LC_MESSAGES
+@dirrm share/squirrelmail/locale/eu_ES
+@dirrm share/squirrelmail/locale/et_EE/LC_MESSAGES
+@dirrm share/squirrelmail/locale/et_EE
+@dirrm share/squirrelmail/locale/es_ES/LC_MESSAGES
+@dirrm share/squirrelmail/locale/es_ES
+@dirrm share/squirrelmail/locale/en_GB/LC_MESSAGES
+@dirrm share/squirrelmail/locale/en_GB
+@dirrm share/squirrelmail/locale/el_GR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/el_GR
+@dirrm share/squirrelmail/locale/de_DE/LC_MESSAGES
+@dirrm share/squirrelmail/locale/de_DE
+@dirrm share/squirrelmail/locale/da_DK/LC_MESSAGES
+@dirrm share/squirrelmail/locale/da_DK
 @dirrm share/squirrelmail/locale/cy_GB/LC_MESSAGES
 @dirrm share/squirrelmail/locale/cy_GB
 @dirrm share/squirrelmail/locale/cs_CZ/LC_MESSAGES
 @dirrm share/squirrelmail/locale/cs_CZ
-@dirrm share/squirrelmail/locale/da_DK/LC_MESSAGES
-@dirrm share/squirrelmail/locale/da_DK
-@dirrm share/squirrelmail/locale/de_DE/LC_MESSAGES
-@dirrm share/squirrelmail/locale/de_DE
-@dirrm share/squirrelmail/locale/el_GR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/el_GR
-@dirrm share/squirrelmail/locale/en_GB/LC_MESSAGES
-@dirrm share/squirrelmail/locale/en_GB
-@dirrm share/squirrelmail/locale/es_ES/LC_MESSAGES
-@dirrm share/squirrelmail/locale/es_ES
-@dirrm share/squirrelmail/locale/et_EE/LC_MESSAGES
-@dirrm share/squirrelmail/locale/et_EE
-@dirrm share/squirrelmail/locale/eu_ES/LC_MESSAGES
-@dirrm share/squirrelmail/locale/eu_ES
-@dirrm share/squirrelmail/locale/fa_IR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/fa_IR
-@dirrm share/squirrelmail/locale/fi_FI/LC_MESSAGES
-@dirrm share/squirrelmail/locale/fi_FI
-@dirrm share/squirrelmail/locale/fo_FO/LC_MESSAGES
-@dirrm share/squirrelmail/locale/fo_FO
-@dirrm share/squirrelmail/locale/fr_FR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/fr_FR
-@dirrm share/squirrelmail/locale/he_IL/LC_MESSAGES
-@dirrm share/squirrelmail/locale/he_IL
-@dirrm share/squirrelmail/locale/hr_HR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/hr_HR
-@dirrm share/squirrelmail/locale/hu_HU/LC_MESSAGES
-@dirrm share/squirrelmail/locale/hu_HU
-@dirrm share/squirrelmail/locale/id_ID/LC_MESSAGES
-@dirrm share/squirrelmail/locale/id_ID
-@dirrm share/squirrelmail/locale/is_IS/LC_MESSAGES
-@dirrm share/squirrelmail/locale/is_IS
-@dirrm share/squirrelmail/locale/it_IT/LC_MESSAGES
-@dirrm share/squirrelmail/locale/it_IT
-@dirrm share/squirrelmail/locale/ja_JP/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ja_JP
-@dirrm share/squirrelmail/locale/ka/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ka
-@dirrm share/squirrelmail/locale/ko_KR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ko_KR
-@dirrm share/squirrelmail/locale/lt_LT/LC_MESSAGES
-@dirrm share/squirrelmail/locale/lt_LT
-@dirrm share/squirrelmail/locale/ms_MY/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ms_MY
-@dirrm share/squirrelmail/locale/nb_NO/LC_MESSAGES
-@dirrm share/squirrelmail/locale/nb_NO
-@dirrm share/squirrelmail/locale/nl_NL/LC_MESSAGES
-@dirrm share/squirrelmail/locale/nl_NL
-@dirrm share/squirrelmail/locale/nn_NO/LC_MESSAGES
-@dirrm share/squirrelmail/locale/nn_NO
-@dirrm share/squirrelmail/locale/ug/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ug
-@dirrm share/squirrelmail/locale/pl_PL/LC_MESSAGES
-@dirrm share/squirrelmail/locale/pl_PL
-@dirrm share/squirrelmail/locale/pt_BR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/pt_BR
-@dirrm share/squirrelmail/locale/pt_PT/LC_MESSAGES
-@dirrm share/squirrelmail/locale/pt_PT
-@dirrm share/squirrelmail/locale/ro_RO/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ro_RO
-@dirrm share/squirrelmail/locale/ru_RU/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ru_RU
-@dirrm share/squirrelmail/locale/sk_SK/LC_MESSAGES
-@dirrm share/squirrelmail/locale/sk_SK
-@dirrm share/squirrelmail/locale/sl_SI/LC_MESSAGES
-@dirrm share/squirrelmail/locale/sl_SI
-@dirrm share/squirrelmail/locale/sr_YU/LC_MESSAGES
-@dirrm share/squirrelmail/locale/sr_YU
-@dirrm share/squirrelmail/locale/sv_SE/LC_MESSAGES
-@dirrm share/squirrelmail/locale/sv_SE
-@dirrm share/squirrelmail/locale/tr_TR/LC_MESSAGES
-@dirrm share/squirrelmail/locale/tr_TR
-@dirrm share/squirrelmail/locale/uk_UA/LC_MESSAGES
-@dirrm share/squirrelmail/locale/uk_UA
-@dirrm share/squirrelmail/locale/zh_CN/LC_MESSAGES
-@dirrm share/squirrelmail/locale/zh_CN
-@dirrm share/squirrelmail/locale/zh_TW/LC_MESSAGES
-@dirrm share/squirrelmail/locale/zh_TW
-@dirrm share/squirrelmail/help/bg_BG
-@dirrm share/squirrelmail/help/ca_ES
+@dirrm share/squirrelmail/locale/ca_ES/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ca_ES
+@dirrm share/squirrelmail/locale/bn_IN/LC_MESSAGES
+@dirrm share/squirrelmail/locale/bn_IN
+@dirrm share/squirrelmail/locale/bg_BG/LC_MESSAGES
+@dirrm share/squirrelmail/locale/bg_BG
+@dirrm share/squirrelmail/locale/ar/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ar
+@dirrm share/squirrelmail/help/zh_CN
+@dirrm share/squirrelmail/help/uk_UA
+@dirrm share/squirrelmail/help/sv_SE
+@dirrm share/squirrelmail/help/sr_YU
+@dirrm share/squirrelmail/help/sl_SI
+@dirrm share/squirrelmail/help/sk_SK
+@dirrm share/squirrelmail/help/ru_RU
+@dirrm share/squirrelmail/help/pt_PT
+@dirrm share/squirrelmail/help/pt_BR
+@dirrm share/squirrelmail/help/pl_PL
+@dirrm share/squirrelmail/help/nl_NL
+@dirrm share/squirrelmail/help/lt_LT
+@dirrm share/squirrelmail/help/ko_KR
+@dirrm share/squirrelmail/help/ja_JP
+@dirrm share/squirrelmail/help/it_IT
+@dirrm share/squirrelmail/help/id_ID
+@dirrm share/squirrelmail/help/fr_FR
+@dirrm share/squirrelmail/help/fi_FI
+@dirrm share/squirrelmail/help/es_ES
+@dirrm share/squirrelmail/help/en_GB
+@dirrm share/squirrelmail/help/de_DE
+@dirrm share/squirrelmail/help/da_DK
 @dirrm share/squirrelmail/help/cy_GB
 @dirrm share/squirrelmail/help/cs_CZ
-@dirrm share/squirrelmail/help/da_DK
-@dirrm share/squirrelmail/help/de_DE
-@dirrm share/squirrelmail/help/en_GB
-@dirrm share/squirrelmail/help/es_ES
-@dirrm share/squirrelmail/help/fi_FI
-@dirrm share/squirrelmail/help/fr_FR
-@dirrm share/squirrelmail/help/id_ID
-@dirrm share/squirrelmail/help/it_IT
-@dirrm share/squirrelmail/help/ja_JP
-@dirrm share/squirrelmail/help/ko_KR
-@dirrm share/squirrelmail/help/lt_LT
-@dirrm share/squirrelmail/help/nl_NL
-@dirrm share/squirrelmail/help/pl_PL
-@dirrm share/squirrelmail/help/pt_BR
-@dirrm share/squirrelmail/help/pt_PT
-@dirrm share/squirrelmail/help/ru_RU
-@dirrm share/squirrelmail/help/sk_SK
-@dirrm share/squirrelmail/help/sl_SI
-@dirrm share/squirrelmail/help/sr_YU
-@dirrm share/squirrelmail/help/sv_SE
-@dirrm share/squirrelmail/help/th_TH
-@dirrm share/squirrelmail/help/uk_UA
-@dirrm share/squirrelmail/help/zh_CN
+@dirrm share/squirrelmail/help/ca_ES
+@dirrm share/squirrelmail/help/bg_BG
