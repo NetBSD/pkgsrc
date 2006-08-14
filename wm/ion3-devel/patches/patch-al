@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2006/02/11 10:03:48 cube Exp $
+$NetBSD: patch-al,v 1.2 2006/08/14 22:42:04 wiz Exp $
 
---- system.mk.orig	2005-08-20 13:33:57.000000000 +0200
+--- system.mk.orig	2006-05-24 16:23:51.000000000 +0000
 +++ system.mk
 @@ -7,7 +7,7 @@
  ## Installation paths
@@ -31,11 +31,11 @@ $NetBSD: patch-al,v 1.1 2006/02/11 10:03:48 cube Exp $
  ##
 @@ -56,7 +56,7 @@ DL_LIBS=-ldl
  
- # If you have installed Lua 5.0 from the official tarball without changing
+ # If you have installed Lua 5.1 from the official tarball without changing
  # paths, this should do it.
 -LUA_DIR=/usr/local
 +LUA_DIR=${PREFIX}
- LUA_LIBS = -L$(LUA_DIR)/lib -llua -llualib
+ LUA_LIBS = -L$(LUA_DIR)/lib -llua
  LUA_INCLUDES = -I$(LUA_DIR)/include
  LUA=$(LUA_DIR)/bin/lua
 @@ -116,8 +116,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
