@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.65 2006/08/14 15:59:42 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.66 2006/08/14 17:14:47 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -151,3 +151,5 @@ Pullup ticket 1787 - requested by abs
 security update for openttd
 Pullup ticket 1788 - requested by tron
 build fix for perl on netbsd-4
+Pullup ticket 1789 - requested by tron
+security update for squirrelmail
