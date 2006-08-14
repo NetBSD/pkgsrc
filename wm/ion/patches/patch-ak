@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2005/02/05 00:00:11 cube Exp $
+$NetBSD: patch-ak,v 1.2 2006/08/14 22:40:53 wiz Exp $
 
---- pwm/pwm-bindings.lua.orig	2003-12-29 21:26:52.000000000 +0100
+--- pwm/pwm-bindings.lua.orig	2003-12-29 20:26:52.000000000 +0000
 +++ pwm/pwm-bindings.lua
 @@ -48,7 +48,7 @@ global_bindings{
                                    -- Display PWM manual page

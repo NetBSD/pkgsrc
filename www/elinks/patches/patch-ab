@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.3 2006/08/14 22:38:24 wiz Exp $
+
+--- src/scripting/lua/core.c.orig	2006-01-29 13:10:39.000000000 +0000
++++ src/scripting/lua/core.c
+@@ -633,7 +633,7 @@ do_hooks_file(LS, unsigned char *prefix,
+ 	if (file_can_read(file)) {
+ 		int oldtop = lua_gettop(S);
+ 
+-		if (lua_dofile(S, file) != 0)
++		if (luaL_dofile(S, file) != 0)
+ 			sleep(3); /* Let some time to see error messages. */
+ 		lua_settop(S, oldtop);
+ 	}
+@@ -755,7 +755,7 @@ handle_ret_eval(struct session *ses)
+ 		int oldtop = lua_gettop(L);
+ 
+ 		if (prepare_lua(ses) == 0) {
+-			lua_dostring(L, expr);
++			luaL_dostring(L, expr);
+ 			lua_settop(L, oldtop);
+ 			finish_lua();
+ 		}
