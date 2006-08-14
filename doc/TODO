@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5338 2006/08/14 15:58:47 tron Exp $
+$NetBSD: TODO,v 1.5339 2006/08/14 22:49:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -502,7 +502,6 @@ Suggested package updates
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
-	o gimp-ufraw-0.9.1
 	o gkrellm-multiping-2.0.10
 	o gkrellm-xmms-2.1.22
 	o gkrellm1-moon-0.6
@@ -578,7 +577,6 @@ Suggested package updates
 	o ifile-1.3.5
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
-	o ion3-20060519
 	o ipa-2.0 [pkg/32398]
 	o ipa-2.0.1
 	o ipcalc-0.41
@@ -657,7 +655,6 @@ Suggested package updates
 	o lmbench-2.5
 	o logsurfer-1.6b [pkg/33892]
 	o lout-3.31
-	o lua-5.1.1
 	o lucy-1.19p
 	o lwp-2.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
