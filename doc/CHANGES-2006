@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1028 2006/08/14 13:46:44 rpaulo Exp $
+$NetBSD: CHANGES-2006,v 1.1029 2006/08/14 15:58:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3942,3 +3942,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated benchmarks/thrulay to 0.8 [rpaulo 2006-08-14]
 	Updated devel/cflow to 1.1 [rpaulo 2006-08-14]
 	Updated devel/cflow-mode to 1.1 [rpaulo 2006-08-14]
+	Updated mail/squirrelmail to 1.4.8 [tron 2006-08-14]
+	Updated mail/squirrelmail-locales to 1.4.8 [tron 2006-08-14]
