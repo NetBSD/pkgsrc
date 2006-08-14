@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/02/17 23:46:39 adam Exp $
+$NetBSD: patch-aa,v 1.5 2006/08/14 22:43:08 wiz Exp $
 
---- configure.orig	2006-02-15 22:53:09.000000000 +0100
+--- configure.orig	2006-02-15 21:53:09.000000000 +0000
 +++ configure
 @@ -21716,8 +21716,8 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
  
@@ -78,3 +78,12 @@ $NetBSD: patch-aa,v 1.4 2006/02/17 23:46:39 adam Exp $
    fi
    if test -z "$kde_moduledir"; then
      if test "$kde_qtver" = "2"; then
+@@ -39509,7 +39509,7 @@ echo "$as_me:$LINENO: checking whether t
+ echo $ECHO_N "checking whether to enable Celestia Extension Language... $ECHO_C" >&6
+ if (test "$enable_lua" != "no"); then
+ 	CXXFLAGS="$CXXFLAGS -DCELX"
+-	LDFLAGS="$LDFLAGS -llualib -llua"
++	LDFLAGS="$LDFLAGS -llua"
+ 
+ 	if (test "$lua_includes" != "no"); then
+ 		CXXFLAGS="$CXXFLAGS -I$lua_includes"
