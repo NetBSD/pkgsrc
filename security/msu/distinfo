@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 13:10:08 agc Exp $
+$NetBSD: distinfo,v 1.9 2006/08/14 13:19:54 abs Exp $
 
-SHA1 (msu-1.06.tar.gz) = f6538a1c57db2d45d01c0948889e46942c636179
-RMD160 (msu-1.06.tar.gz) = a12dfc90206a0a428919fb555f45b1a310485f3f
-Size (msu-1.06.tar.gz) = 3295 bytes
+SHA1 (msu-1.08.tbz) = 9a2f9804a5cdc93e669573b21907a386a3a2ea64
+RMD160 (msu-1.08.tbz) = 93b2cce8567a874cd111e6f46f4a2f2e2c424a0f
+Size (msu-1.08.tbz) = 3399 bytes
