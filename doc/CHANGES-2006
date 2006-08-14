@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1025 2006/08/14 13:16:29 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.1026 2006/08/14 13:21:20 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3938,3 +3938,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libtunepimp to 0.5.1 [wiz 2006-08-13]
 	Updated devel/bzr to 0.9 [wiz 2006-08-13]
 	Updated graphics/gimp-ufraw to 0.9.1 [gdt 2006-08-14]
+	Updated security/msu to 1.08 [abd 2006-08-14]
