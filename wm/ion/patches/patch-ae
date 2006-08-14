@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2005/02/05 00:00:11 cube Exp $
+$NetBSD: patch-ae,v 1.3 2006/08/14 22:40:53 wiz Exp $
 
---- pwm/Makefile.orig	2004-07-29 05:10:32.000000000 +0200
+--- pwm/Makefile.orig	2004-07-29 03:10:32.000000000 +0000
 +++ pwm/Makefile
 @@ -55,9 +55,9 @@ pwm: $(OBJS) $(EXT_OBJS)
  
