@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2006/02/11 10:03:48 cube Exp $
+$NetBSD: patch-ad,v 1.3 2006/08/14 22:42:04 wiz Exp $
 
---- mod_statusbar/ion-statusd/statusd_load.lua.orig	2005-05-02 16:55:27.000000000 +0200
+--- mod_statusbar/ion-statusd/statusd_load.lua.orig	2006-05-24 16:23:26.000000000 +0000
 +++ mod_statusbar/ion-statusd/statusd_load.lua
-@@ -39,7 +39,7 @@ end
+@@ -42,7 +42,7 @@ end
  local function get_load_uptime()
      local f=io.popen('uptime', 'r')
      if not f then
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.2 2006/02/11 10:03:48 cube Exp $
      end
      local s=f:read('*l')
      f:close()
-@@ -47,11 +47,30 @@ local function get_load_uptime()
+@@ -50,11 +50,30 @@ local function get_load_uptime()
      return (load or "")
  end
  
