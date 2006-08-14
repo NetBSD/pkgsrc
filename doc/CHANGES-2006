@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1030 2006/08/14 22:48:09 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1031 2006/08/14 23:01:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3955,3 +3955,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/ion to 20040729nb6 [wiz 2006-08-14]
 	Updated wm/ion3-devel to 20060524 [wiz 2006-08-14]
 	Updated misc/celestia to 1.4.1nb2 [wiz 2006-08-14]
+	Updated inputmethod/uim to 1.2.1 [wiz 2006-08-14]
