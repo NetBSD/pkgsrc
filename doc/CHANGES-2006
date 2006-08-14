@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1024 2006/08/14 08:42:33 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.1025 2006/08/14 13:16:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3937,3 +3937,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/p5-Unix-ConfigFile version 0.06 [adrianp 2006-08-13]
 	Updated audio/libtunepimp to 0.5.1 [wiz 2006-08-13]
 	Updated devel/bzr to 0.9 [wiz 2006-08-13]
+	Updated graphics/gimp-ufraw to 0.9.1 [gdt 2006-08-14]
