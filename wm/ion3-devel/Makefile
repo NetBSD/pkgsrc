@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/04/27 21:14:51 rpaulo Exp $
+# $NetBSD: Makefile,v 1.14 2006/08/14 22:42:04 wiz Exp $
 #
 
-DISTNAME=	ion-3ds-20060107
+DISTNAME=	ion-3ds-20060524
 PKGNAME=	${DISTNAME:S/-3ds-/3-/}
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/ion/dl/

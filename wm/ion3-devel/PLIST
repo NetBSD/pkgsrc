@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/14 22:42:04 wiz Exp $
 bin/ion3
 bin/pwm3
 lib/ion3/bin/ion-completefile
@@ -50,18 +50,16 @@ share/doc/ion3/ChangeLog
 share/doc/ion3/LICENSE
 share/doc/ion3/README
 share/doc/ion3/RELNOTES
-share/examples/ion3/cfg_bindings.lua
 share/examples/ion3/cfg_dock.lua
 share/examples/ion3/cfg_floatws.lua
 share/examples/ion3/cfg_ion.lua
+share/examples/ion3/cfg_ioncore.lua
 share/examples/ion3/cfg_ionws.lua
 share/examples/ion3/cfg_kludges.lua
 share/examples/ion3/cfg_menu.lua
-share/examples/ion3/cfg_menus.lua
+share/examples/ion3/cfg_modules.lua
 share/examples/ion3/cfg_panews.lua
 share/examples/ion3/cfg_pwm.lua
-share/examples/ion3/cfg_pwm_bindings.lua
-share/examples/ion3/cfg_pwm_menus.lua
 share/examples/ion3/cfg_query.lua
 share/examples/ion3/cfg_sp.lua
 share/examples/ion3/cfg_statusbar.lua
@@ -85,6 +83,7 @@ share/ion3/welcome.txt
 share/locale/cs/LC_MESSAGES/ion3.mo
 share/locale/de/LC_MESSAGES/ion3.mo
 share/locale/fi/LC_MESSAGES/ion3.mo
+share/locale/ru/LC_MESSAGES/ion3.mo
 @dirrm share/ion3
 @dirrm share/examples/ion3
 @dirrm share/doc/ion3
