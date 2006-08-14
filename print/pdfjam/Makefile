@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:10:38 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/14 08:39:51 wiz Exp $
 #
 
 DISTNAME=	pdfjam_1.20
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic/firth/software/pdfjam/
 COMMENT=	Small collection of PDF utilities
-
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
 NO_BUILD=	yes
 
@@ -27,4 +25,5 @@ do-install:
 .endfor
 .undef ${_util}
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
