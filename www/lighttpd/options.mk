@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/05/31 18:22:26 ghen Exp $
+# $NetBSD: options.mk,v 1.5 2006/08/14 22:37:21 wiz Exp $
 
 PKG_OPTIONS_VAR =       PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=  bzip fam gdbm inet6 ldap lua mysql ssl memcache
@@ -52,6 +52,7 @@ CONFIGURE_ARGS+=	--with-ldap
 ###
 .if !empty(PKG_OPTIONS:Mlua)
 .  include "../../lang/lua/buildlink3.mk"
+USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-lua
 .endif
 
