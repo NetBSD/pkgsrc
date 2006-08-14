@@ -1,85 +1,37 @@
-$NetBSD: patch-aa,v 1.11 2006/06/01 06:52:28 rillig Exp $
+$NetBSD: patch-aa,v 1.12 2006/08/14 22:31:39 wiz Exp $
 
---- config.orig	2003-04-11 15:00:41.000000000 +0100
-+++ config	2006-06-01 07:40:42.963818821 +0100
-@@ -4,7 +4,7 @@
- # These are default values. Skip this section and see the explanations below.
- 
- LOADLIB=
--DLLIB=
-+#DLLIB=
- NUMBER=
- POPEN=
- TMPNAM=
-@@ -25,7 +25,7 @@ USERCONF=
- # interface (e.g., Linux, Solaris, IRIX, BSD, AIX, HPUX, and probably others),
- # uncomment the next two lines.
+--- Makefile.orig	2006-06-02 10:53:38.000000000 +0000
++++ Makefile
+@@ -11,7 +11,7 @@ PLAT= none
+ # if INSTALL_TOP is not an absolute path. (Man pages are installed from the
+ # doc directory.)
  #
--#LOADLIB= -DUSE_DLOPEN=1
-+LOADLIB= -DUSE_DLOPEN=1
- #DLLIB= -ldl
- #
- # In Linux with gcc, you should also uncomment the next definition for
-@@ -45,7 +45,7 @@ USERCONF=
- # If your system is not POSIX but has popen and pclose, define USE_POPEN=1.
- # If you don't want to support pipes, define USE_POPEN=0.
- #
--#POPEN= -DUSE_POPEN=1
-+POPEN= -DUSE_POPEN=1
- #POPEN= -DUSE_POPEN=0
- #
- # The form below will probably work in (some) Windows systems.
-@@ -108,8 +108,8 @@ EXTRA_LIBS= -lm
- # You need an ANSI C compiler. gcc is a popular one. We do not use -ansi in
- # WARN because it disables POSIX features used in the libraries.
- #
--CC= gcc
--WARN= -Wall
-+#CC= gcc
-+#WARN= -Wall
+-INSTALL_TOP= /usr/local
++INSTALL_TOP= ${PREFIX}
+ INSTALL_BIN= $(INSTALL_TOP)/bin
+ INSTALL_INC= $(INSTALL_TOP)/include
+ INSTALL_LIB= $(INSTALL_TOP)/lib
+@@ -42,7 +42,7 @@ PLATS= aix ansi bsd generic linux macosx
+ # What to install.
+ TO_BIN= lua luac
+ TO_INC= lua.h luaconf.h lualib.h lauxlib.h ../etc/lua.hpp
+-TO_LIB= liblua.a
++TO_LIB= liblua.la
+ TO_MAN= lua.1 luac.1
  
- # ------------------------------------------------------------------ C options
+ # Lua version and release.
+@@ -59,10 +59,10 @@ test:	dummy
  
-@@ -119,7 +119,7 @@ WARN= -Wall
- # debug information. If you only want the shared libraries, you may want to
- # add -fPIC to MYCFLAGS.
- #
--MYCFLAGS= -O2
-+#MYCFLAGS= -O2
- #MYCFLAGS= -O3 -fomit-frame-pointer # -fPIC
+ install: dummy
+ 	cd src && $(MKDIR) -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN) $(INSTALL_LMOD) $(INSTALL_CMOD)
+-	cd src && $(INSTALL_EXEC) $(TO_BIN) $(INSTALL_BIN)
+-	cd src && $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
+-	cd src && $(INSTALL_DATA) $(TO_LIB) $(INSTALL_LIB)
+-	cd doc && $(INSTALL_DATA) $(TO_MAN) $(INSTALL_MAN)
++	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(TO_BIN) $(INSTALL_BIN)
++	cd src && $(BSD_INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
++	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(TO_LIB) $(INSTALL_LIB)
++	cd doc && $(BSD_INSTALL_MAN) $(TO_MAN) $(INSTALL_MAN)
+ #	$(RANLIB) $(INSTALL_LIB)/$(TO_LIB)
  
- # Write here any options you may need for your C linker.
-@@ -148,11 +148,11 @@ STRIP= strip
- 
- # Locations for "make install". You may need to be root do "make install".
- #
--INSTALL_ROOT= /usr/local
-+INSTALL_ROOT= $(PREFIX)
- INSTALL_BIN= $(INSTALL_ROOT)/bin
- INSTALL_INC= $(INSTALL_ROOT)/include
- INSTALL_LIB= $(INSTALL_ROOT)/lib
--INSTALL_MAN= $(INSTALL_ROOT)/man/man1
-+INSTALL_MAN= $(INSTALL_ROOT)/$(PKGMANDIR)/man1
- 
- # You may prefer to use "install" instead of "cp" if you have it.
- # If you use "install", you may also want to change the permissions after -m.
-@@ -165,6 +165,7 @@ INSTALL_DATA= cp
- # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
- 
- V=5.0
-+LV=5:0
- 
- BIN= $(LUA)/bin
- INC= $(LUA)/include
-@@ -173,6 +174,11 @@ LIB= $(LUA)/lib
- INCS= -I$(INC) $(EXTRA_INCS)
- DEFS= $(NUMBER) $(EXTRA_DEFS)
- 
-+CCLD= $(LIBTOOL) --mode=link $(CC)
- CFLAGS= $(MYCFLAGS) $(WARN) $(INCS) $(DEFS)
- 
-+.SUFFIXES:	.lo
-+.c.lo:
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
-+
- # (end of config)
+ local:
