@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2005/09/04 04:59:36 jlam Exp $
-bin/bin2c
+@comment $NetBSD: PLIST,v 1.8 2006/08/14 22:31:39 wiz Exp $
 bin/lua
 bin/luac
 include/lauxlib.h
 include/lua.h
+include/lua.hpp
+include/luaconf.h
 include/lualib.h
 lib/liblua.la
-lib/liblualib.la
+lib/pkgconfig/lua.pc
 man/man1/lua.1
 man/man1/luac.1
 share/doc/lua/COPYRIGHT
@@ -24,17 +25,11 @@ share/examples/lua/cf.lua
 share/examples/lua/echo.lua
 share/examples/lua/env.lua
 share/examples/lua/etc/README
-share/examples/lua/etc/bin2c.c
-share/examples/lua/etc/compat.lua
-share/examples/lua/etc/doall.lua
-share/examples/lua/etc/lua.magic
-share/examples/lua/etc/lua.xpm
-share/examples/lua/etc/luser_number.h
-share/examples/lua/etc/luser_tests.h
+share/examples/lua/etc/all.c
+share/examples/lua/etc/lua.ico
 share/examples/lua/etc/min.c
 share/examples/lua/etc/noparser.c
-share/examples/lua/etc/saconfig.c
-share/examples/lua/etc/trace.c
+share/examples/lua/etc/strict.lua
 share/examples/lua/factorial.lua
 share/examples/lua/fib.lua
 share/examples/lua/fibfor.lua
@@ -49,7 +44,6 @@ share/examples/lua/sort.lua
 share/examples/lua/table.lua
 share/examples/lua/trace-calls.lua
 share/examples/lua/trace-globals.lua
-share/examples/lua/undefined.lua
 share/examples/lua/xd.lua
 @dirrm share/examples/lua/etc
 @dirrm share/examples/lua
