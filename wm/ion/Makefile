@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2006/06/08 09:47:14 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/08/14 22:40:53 wiz Exp $
 #
 
 DISTNAME=	ion-2-20040729
 PKGNAME=	${DISTNAME:S/-2-/-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/ion/dl/
 
@@ -33,7 +33,7 @@ EGFILES=		floatws.lua ion-bindings.lua ion-menus.lua	\
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-INSTALLATION_DIRS=	bin lib/ion libexec/ion man/man1
+INSTALLATION_DIRS=	bin lib/ion libexec/ion ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/doc/ion share/examples/ion share/ion
 
 .include "../../lang/lua/buildlink3.mk"
