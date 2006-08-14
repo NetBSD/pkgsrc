@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1029 2006/08/14 15:58:47 tron Exp $
+$NetBSD: CHANGES-2006,v 1.1030 2006/08/14 22:48:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3944,3 +3944,14 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cflow-mode to 1.1 [rpaulo 2006-08-14]
 	Updated mail/squirrelmail to 1.4.8 [tron 2006-08-14]
 	Updated mail/squirrelmail-locales to 1.4.8 [tron 2006-08-14]
+	Updated lang/lua to 5.1.1 [wiz 2006-08-14]
+	Updated databases/lua-sqlite to 20030228nb4 [wiz 2006-08-14]
+	Updated games/fillets-ng-data to 0.7.1 [wiz 2006-08-14]
+	Updated games/fillets-ng to 0.7.3 [wiz 2006-08-14]
+	Removed games/fillets-ng-data-cs [wiz 2006-08-14]
+	Updated mail/imapfilter to 1.2.2nb1 [wiz 2006-08-14]
+	Updated www/screws to 0.56nb3 [wiz 2006-08-14]
+	Updated games/stratagus to 2.1nb8 [wiz 2006-08-14]
+	Updated wm/ion to 20040729nb6 [wiz 2006-08-14]
+	Updated wm/ion3-devel to 20060524 [wiz 2006-08-14]
+	Updated misc/celestia to 1.4.1nb2 [wiz 2006-08-14]
