@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2005/03/20 17:52:20 jmmv Exp $
+$NetBSD: patch-ae,v 1.3 2006/08/14 22:36:47 wiz Exp $
 
---- src/Hsml/Makefile.orig	2004-11-08 23:41:48.000000000 +0100
+--- src/Hsml/Makefile.orig	2004-11-08 22:41:48.000000000 +0000
 +++ src/Hsml/Makefile
 @@ -7,7 +7,7 @@ DEBUG=-g
  DEFS+=  -DINCORE_LUA=${INCORE_LUA}
@@ -20,3 +20,12 @@ $NetBSD: patch-ae,v 1.2 2005/03/20 17:52:20 jmmv Exp $
  	@echo "-----------------"
  
  clean:
+@@ -24,7 +24,7 @@ clean:
+ 
+ opts:
+ 	echo > .opts
+-	if [ "${INCORE_LUA}" = "1" ]; then echo "-llualib -L /usr/pkg/lib -R /usr/pkg/lib -llua -lm " > .opts ; \
++	if [ "${INCORE_LUA}" = "1" ]; then echo "-L /usr/pkg/lib -R /usr/pkg/lib -llua -lm " > .opts ; \
+ 	else echo "" > .opts ; fi
+ 	if [ "`uname`" = "Linux" ]; then echo " -ldl " >> .opts ; fi
+ 
