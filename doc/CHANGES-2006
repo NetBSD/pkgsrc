@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1023 2006/08/13 23:48:03 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1024 2006/08/14 08:42:33 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3932,7 +3932,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/gkrellm-weather to 2.0.7 [xtraeme 2006-08-13]
 	Updated databases/lbdb to 0.32 [tonio 2006-08-13]
 	Added www/ap2-auth-xradius version 0.4.6 [adrianp 2006-08-13]
-	Added security/p5-String-Random version 0.21 [adrianp 2006-08-13
+	Added security/p5-String-Random version 0.21 [adrianp 2006-08-13]
 	Added security/p5-Crypt-PasswdMD5 version 1.3 [adrianp 2006-08-13]
 	Added sysutils/p5-Unix-ConfigFile version 0.06 [adrianp 2006-08-13]
 	Updated audio/libtunepimp to 0.5.1 [wiz 2006-08-13]
