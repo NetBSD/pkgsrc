@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/06 19:42:01 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/14 13:31:21 rpaulo Exp $
 bin/thrulay
-bin/thrulayd
-share/doc/thrulay/README
-share/doc/thrulay/thrulay-protocol.txt
-@dirrm share/doc/thrulay
+sbin/thrulayd
+man/man1/thrulay.1
+man/man8/thrulayd.8
