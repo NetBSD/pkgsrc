@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:32 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/14 22:33:11 wiz Exp $
 #
 
 DISTNAME=	lsqlite_src
 PKGNAME=	lua-sqlite-20030228
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://lua-users.org/files/wiki_insecure/binary_modules/luasqlite/
 EXTRACT_SUFX=	.zip
@@ -15,7 +15,7 @@ COMMENT=	SQLite binding for LUA
 WRKSRC=		${WRKDIR}
 
 CFLAGS+=	-fPIC
-LIBS+=		-llua -lsqlite -llualib
+LIBS+=		-llua -lsqlite
 
 INSTALLATION_DIRS=	lib
 
