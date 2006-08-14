@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2006/06/01 06:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/08/14 22:31:39 wiz Exp $
 
-DISTNAME=	lua-5.0.2
-PKGREVISION=	5
+DISTNAME=	lua-5.1.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -23,6 +22,7 @@ COMMENT=	Powerful light-weight language for extending applications
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake
 MAKE_ENV+=	MYCFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=	MYLDFLAGS=${LDFLAGS:M*:Q}\ ${LIBS:M*:Q}
 MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
@@ -30,10 +30,14 @@ MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
 DOCDIR=		${PREFIX}/share/doc/lua
 EGDIR=		${PREFIX}/share/examples/lua
 
-.include "../../mk/dlopen.buildlink3.mk"
+BUILD_TARGET=	linux
 
-post-build:
-	cd ${WRKSRC}/etc && ${SETENV} ${MAKE_ENV} ${MAKE} bin2c
+PKGCONFIG_OVERRIDE=	${WRKSRC}/etc/lua.pc
+
+SUBST_CLASSES+=		pc-prefix
+SUBST_FILES.pc-prefix+=	${WRKSRC}/etc/lua.pc
+SUBST_SED.pc-prefix+=	-e "s,/usr/local,${PREFIX},"
+SUBST_STAGE.pc-prefix+=	post-build
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -52,9 +56,13 @@ post-install:
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}/etc
 	set -e; \
-	cd ${WRKSRC}/etc; for f in README *.c *.h *.lua lua.magic lua.xpm; do \
+	cd ${WRKSRC}/etc; for f in README *.c *.ico *.lua; do \
 		${INSTALL_DATA} "$$f" ${EGDIR}/etc;			\
 	done
-	${INSTALL_PROGRAM} ${WRKSRC}/etc/bin2c ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc ${PREFIX}/lib/pkgconfig
 
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
