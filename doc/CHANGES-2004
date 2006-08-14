@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.19 2006/07/07 19:05:13 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.20 2006/08/14 09:06:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -464,7 +464,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rhythmbox-0.6.5 [jmmv 2004-01-24]
 	Updated pflogsumm to 1.1.0 [kim 2004-01-24]
 	Updated roller to 1.14 [kim 2004-01-24]
-	Updated pygopherd to 2.09 [recht 2004-01-24]
+	Updated pygopherd to 2.0.9 [recht 2004-01-24]
 	Renamed gnome to gnome1 [jmmv 2004-01-24]
 	Renamed gnome2 to gnome [jmmv 2004-01-24]
 	Added gtk2-extras-2.2.4 [jmmv 2004-01-24]
