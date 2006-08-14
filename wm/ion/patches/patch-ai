@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2004/02/23 13:40:21 cube Exp $
+$NetBSD: patch-ai,v 1.2 2006/08/14 22:40:53 wiz Exp $
 
---- dock/Makefile.orig	2004-02-07 16:37:01.000000000 +0100
+--- dock/Makefile.orig	2004-07-29 03:10:32.000000000 +0000
 +++ dock/Makefile
 @@ -28,9 +28,9 @@ include $(TOPDIR)/rules.mk
  ######################################

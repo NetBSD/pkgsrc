@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2006/05/15 21:30:00 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/14 22:37:57 wiz Exp $
 
---- configure.orig	2006-05-15 21:03:08.000000000 +0000
+--- configure.orig	2004-07-02 01:46:35.000000000 +0000
 +++ configure
 @@ -3050,7 +3050,7 @@ if test "`uname -a | grep -is cygwin`" -
      ARCH=win32
@@ -11,3 +11,19 @@ $NetBSD: patch-ab,v 1.1 2006/05/15 21:30:00 joerg Exp $
      ARCH=bsd
      PLATFORM="-DBSD"
  elif test "`uname -a | grep -is beos`"; then
+@@ -5548,6 +5548,7 @@ fi
+ 
+ fi
+ 
++if false; then
+     echo "$as_me:$LINENO: checking for luaopen_base in -llualib" >&5
+ echo $ECHO_N "checking for luaopen_base in -llualib... $ECHO_C" >&6
+ if test "${ac_cv_lib_lualib_luaopen_base+set}" = set; then
+@@ -5759,6 +5760,7 @@ fi
+ fi
+ 
+ fi
++fi
+ 
+ LUA_LIBS="$LUA_LIBS -lm"
+ 
