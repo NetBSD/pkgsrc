@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1031 2006/08/14 23:01:42 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1032 2006/08/15 08:43:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3956,3 +3956,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/ion3-devel to 20060524 [wiz 2006-08-14]
 	Updated misc/celestia to 1.4.1nb2 [wiz 2006-08-14]
 	Updated inputmethod/uim to 1.2.1 [wiz 2006-08-14]
+	Updated games/criticalmass to 1.0.2 [xtraeme 2006-08-15]
