@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2006/08/15 12:07:15 ghen Exp $
+# $NetBSD: Makefile,v 1.46 2006/08/15 12:26:07 ghen Exp $
 #
 
-DISTNAME=		nut-2.0.3
-PKGNAME=		ups-nut-2.0.3
-PKGREVISION=		2
+DISTNAME=		nut-2.0.4
+PKGNAME=		ups-${DISTNAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		http://random.networkupstools.org/source/2.0/
 
@@ -45,6 +44,7 @@ MESSAGE_SUBST+=		NUT_DOCDIR=${NUT_DOCDIR}
 PKG_GROUPS=		${NUT_GROUP}
 PKG_USERS=		${NUT_USER}:${NUT_GROUP}
 PKG_GECOS.${NUT_USER}=	Network UPS Tools
+PKG_HOME.${NUT_USER}=	${NUT_STATEDIR}
 PKG_SHELL.${NUT_USER}=	${SH}
 
 CONF_FILES=		${NUT_EGDIR}/ups.conf.sample ${NUT_CONFDIR}/ups.conf
