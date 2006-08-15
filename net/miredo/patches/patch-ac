@@ -1,22 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2006/05/12 08:25:47 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2006/08/15 20:54:44 rpaulo Exp $
 
---- libtun6/tun6.c.orig	2006-05-01 12:57:31.000000000 +0000
-+++ libtun6/tun6.c
-@@ -94,6 +94,8 @@ static const char *os_driver = "BSD";
+--- misc/isatapd.conf.orig	2006-08-13 13:56:57.000000000 +0100
++++ misc/isatapd.conf	2006-08-13 13:57:02.000000000 +0100
+@@ -8,7 +8,7 @@
+ ServerAddress isatap
  
- # if defined (HAVE_NET_IF_TUN_H)
- #  include <net/if_tun.h> // TUNSIFHEAD, TUNSLMODE
-+# elif defined(__DragonFly__)
-+#  include <net/tun/if_tun.h>
- # elif defined (__APPLE__)
- #  define TUNSIFHEAD  _IOW('t', 96, int)
- # endif
-@@ -213,7 +215,7 @@ tun6 *tun6_create (const char *req_name)
- 		 * Some BSD variants or older kernel versions do not support /dev/tun,
- 		 * so fallback to the old scheme.
- 		 */
--		for (unsigned i = 0; (fd == -1) && (errno != ENOENT); i++)
-+		for (unsigned i = 0; (fd == -1) && (errno == ENOENT); i++)
- 		{
- 			char tundev[5 + IFNAMSIZ];
- 			snprintf (tundev, sizeof (tundev), "/dev/tun%u", i);
+ # Name of the network tunneling interface.
+-InterfaceName	isatap
++#InterfaceName	isatap
+ 
+ # IPv4 address to bind to (default automatic)
+ #BindAddress	192.0.2.100
