@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2006/08/14 13:15:15 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2006/08/15 00:25:27 gdt Exp $
 
 DISTNAME=		ufraw-0.9.1
 PKGNAME=		gimp-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -26,7 +27,7 @@ PKG_SUGGESTED_OPTIONS=	exiv2
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mexiv2)
-CONFIGURE_ARGS+=	--with-exiv2 
+CONFIGURE_ARGS+=	--with-exiv2
 .include "../../graphics/exiv2/buildlink3.mk"
 .endif
 
@@ -40,4 +41,5 @@ CONFIGURE_ARGS+=	--with-libexif
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
