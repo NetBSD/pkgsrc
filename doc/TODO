@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5341 2006/08/15 02:06:59 jnemeth Exp $
+$NetBSD: TODO,v 1.5342 2006/08/15 08:43:59 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ Suggested package updates
 	o coreutils-5.97
 	o cqcam-0.91
 	o crafty-19.5
-	o criticalmass-1.0.0
 	o crossfire-client-1.9.1
 	o crypto++-523
 	o cstream-2.6.0
