@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2006/08/11 16:53:39 adrianp Exp $
+$NetBSD: patch-ac,v 1.6 2006/08/15 11:16:41 adrianp Exp $
 
 --- help/Makefile.in.orig	2006-07-17 07:31:26.000000000 +0100
 +++ help/Makefile.in
@@ -13,16 +13,18 @@ $NetBSD: patch-ac,v 1.5 2006/08/11 16:53:39 adrianp Exp $
  
  SYMLINKS	= topic accept cmode admin names links away whowas \
  		version kick who invite quit join list nick oper part \
-@@ -23,12 +23,12 @@ depend:
+@@ -22,13 +22,13 @@ depend:
+ 
  install: 
  	@echo installing help files...
- 	-@if test ! -d $(prefix)/help; then \
+-	-@if test ! -d $(prefix)/help; then \
 -		echo "mkdir $(prefix)/help"; \
 -		mkdir $(prefix)/help; \
 -		echo "mkdir $(prefix)/help/users"; \
 -		mkdir $(prefix)/help/users; \
 -		echo "mkdir $(prefix)/help/opers"; \
 -		mkdir $(prefix)/help/opers; \
++	-@if test ! -d $(prefix)/share/ircd-hybrid/help; then \
 +		echo "mkdir $(prefix)/share/ircd-hybrid/help"; \
 +		mkdir $(prefix)/share/ircd-hybrid/help; \
 +		echo "mkdir $(prefix)/share/ircd-hybrid/help/users"; \
