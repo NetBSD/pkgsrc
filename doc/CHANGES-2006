@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1032 2006/08/15 08:43:59 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1033 2006/08/15 12:11:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3957,3 +3957,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/celestia to 1.4.1nb2 [wiz 2006-08-14]
 	Updated inputmethod/uim to 1.2.1 [wiz 2006-08-14]
 	Updated games/criticalmass to 1.0.2 [xtraeme 2006-08-15]
+	Updated security/p5-IO-Socket-SSL to 0.998 [abs 2006-08-15]
