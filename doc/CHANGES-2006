@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1036 2006/08/15 12:27:06 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.1037 2006/08/15 15:22:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3961,3 +3961,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.2.9.0 [abs 2006-08-15]
 	Updated graphics/p5-PerlMagick to 6.2.9.0 [abs 2006-08-15]
 	Updated sysutils/ups-nut to 2.0.4 [ghen 2006-08-15]
+	Added graphics/glew version 1.3.4 [abs 2006-08-15]
