@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/03/09 18:32:33 abs Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/08/15 12:26:07 ghen Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -23,6 +23,7 @@ libexec/nut/ippon
 libexec/nut/isbmex
 libexec/nut/liebert
 libexec/nut/masterguard
+libexec/nut/megatec
 libexec/nut/metasys
 libexec/nut/mge-shut
 libexec/nut/mge-utalk
@@ -30,6 +31,7 @@ libexec/nut/mustek
 libexec/nut/oneac
 libexec/nut/powercom
 libexec/nut/powermust
+libexec/nut/rhino
 libexec/nut/safenet
 libexec/nut/sms
 libexec/nut/solis
@@ -115,6 +117,7 @@ share/doc/nut/developers.txt
 share/doc/nut/driver.list
 share/doc/nut/hid-subdrivers.txt
 share/doc/nut/ideas.txt
+share/doc/nut/megatec.txt
 share/doc/nut/new-drivers.txt
 share/doc/nut/new-names.txt
 share/doc/nut/osd-notify.txt
@@ -139,7 +142,6 @@ share/examples/rc.d/upsmon
 share/nut/cmdvartab
 share/nut/driver.list
 @dirrm share/nut
-@exec ${MKDIR} %D/share/examples/nut
 @dirrm share/examples/nut
 @exec ${MKDIR} %D/share/doc/nut/drivers
 @dirrm share/doc/nut/drivers
