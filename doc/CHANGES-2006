@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1035 2006/08/15 12:21:49 abs Exp $
+$NetBSD: CHANGES-2006,v 1.1036 2006/08/15 12:27:06 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3960,3 +3960,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/p5-IO-Socket-SSL to 0.998 [abs 2006-08-15]
 	Updated graphics/ImageMagick to 6.2.9.0 [abs 2006-08-15]
 	Updated graphics/p5-PerlMagick to 6.2.9.0 [abs 2006-08-15]
+	Updated sysutils/ups-nut to 2.0.4 [ghen 2006-08-15]
