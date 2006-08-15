@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2006/08/07 15:27:49 tv Exp $
+# $NetBSD: Makefile.common,v 1.62 2006/08/15 12:20:12 abs Exp $
 
 ###########################################################################
 #
@@ -9,11 +9,8 @@
 #
 ###########################################################################
 
-# XXX - REMOVE BELOW LINE WHEN UPDATING TO NEW VERSION - XXX
-DIST_SUBDIR=		${DISTNAME}-20060807
-
-IM_MAJOR_VER=		6.2.8
-IM_MINOR_VER=		8
+IM_MAJOR_VER=		6.2.9
+IM_MINOR_VER=		0
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
