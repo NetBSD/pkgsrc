@@ -1,21 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2006/05/02 15:36:09 rpaulo Exp $
+$NetBSD: patch-aa,v 1.4 2006/08/15 20:54:44 rpaulo Exp $
 
---- Makefile.in.orig	2006-05-01 13:58:04.000000000 +0100
-+++ Makefile.in	2006-05-02 16:10:03.000000000 +0100
-@@ -215,7 +215,7 @@ sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- ACLOCAL_AMFLAGS = -I m4
--SUBDIRS = po doc misc compat libtun6 libteredo src
-+SUBDIRS = po doc compat libtun6 libteredo src
- DIST_SUBDIRS = m4 $(SUBDIRS)
- noinst_HEADERS = include/gettext.h
- EXTRA_DIST = bootstrap autopackage/default.apspec.in
-@@ -615,7 +615,6 @@ info-am:
+--- Makefile.in.orig	2006-08-12 18:43:14.000000000 +0100
++++ Makefile.in	2006-08-13 13:51:30.000000000 +0100
+@@ -703,7 +703,6 @@ info-am:
  
  install-data-am:
  	@$(NORMAL_INSTALL)
 -	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
  
- install-exec-am:
+ install-exec-am: install-dist_sysconfDATA install-nodist_sysconfDATA
  
