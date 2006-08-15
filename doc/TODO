@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5340 2006/08/14 23:01:42 wiz Exp $
+$NetBSD: TODO,v 1.5341 2006/08/15 02:06:59 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -459,6 +459,7 @@ Suggested package updates
 	o ex-050325
 	o exim-4.63
 	o exmh-2.7.2
+	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20031025
 	o faces-1.7.7
@@ -983,6 +984,7 @@ Suggested package updates
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rio500-0.8.1
+	o rioutil-1.5.0 [schmonz]
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
 	o root-5.04.00
