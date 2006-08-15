@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/08/15 08:42:36 xtraeme Exp $
 #
 
-DISTNAME=	CriticalMass-0.9.10
-PKGNAME=	${DISTNAME:S/CM/cm/}
-PKGREVISION=	5
+DISTNAME=	CriticalMass-1.0.2
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=criticalmass/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +13,7 @@ COMMENT=	SDL/OpenGL space shoot'em up game
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 .include "../../devel/SDL/buildlink3.mk"
