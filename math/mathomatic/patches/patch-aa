@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2005/10/29 01:45:35 minskim Exp $
+$NetBSD: patch-aa,v 1.17 2006/08/15 15:38:26 minskim Exp $
 
---- makefile.orig	2005-10-20 03:36:30.000000000 -0700
+--- makefile.orig	2006-07-23 03:22:54.000000000 -0700
 +++ makefile
-@@ -5,8 +5,8 @@ CFLAGS		+= -O -DUNIX -DVERSION=\"$(VERSI
+@@ -7,8 +7,8 @@ CFLAGS		+= -O -DUNIX -DVERSION=\"$(VERSI
  LDFLAGS		+= -s
  LIBS		+= -lm
  
