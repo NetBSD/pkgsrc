@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2006/08/09 21:42:42 adrianp Exp $
+# $NetBSD: Makefile,v 1.73 2006/08/16 09:50:19 tron Exp $
 
 DISTNAME=	mrtg-2.14.5
 CATEGORIES=	net
@@ -23,7 +23,7 @@ MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://net2b.co.pt/pub/mrtg/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
+HOMEPAGE=	http://oss.oetiker.ch/mrtg/
 COMMENT=	The Multi-Router Traffic Grapher
 
 USE_TOOLS+=	perl:run
