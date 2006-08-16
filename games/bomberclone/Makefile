@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2006/06/26 21:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/08/16 15:35:25 wiz Exp $
 
-DISTNAME=		bomberclone-0.11.6.2
+DISTNAME=		bomberclone-0.11.7
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bomberclone/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.bomberclone.de/
@@ -10,8 +11,14 @@ COMMENT=		Multi-player Bomberman clone
 
 CONFLICTS=		bomberclone-data-[0-9]*
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+
+post-install:
+	${RM} -fr ${PREFIX}/share/bomberclone/*/CVS
+	${RM} -fr ${PREFIX}/share/bomberclone/*/*/CVS
+	${RM} -fr ${PREFIX}/share/bomberclone/*/*/*/CVS
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
