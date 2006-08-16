@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5344 2006/08/15 20:56:33 rpaulo Exp $
+$NetBSD: TODO,v 1.5345 2006/08/16 09:47:02 tonio Exp $
 
 Suggested new packages
 ======================
@@ -351,7 +351,6 @@ Suggested package updates
 	o bind-9.3.2
 	o binutils-2.17
 	o bioperl-1.5.0
-	o bitlbee-1.0.3
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o blackbox-0.70
 	o blender-2.42
