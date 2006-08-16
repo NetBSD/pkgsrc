@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1049 2006/08/16 20:26:02 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1050 2006/08/16 21:27:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3975,3 +3975,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/xplot-devel version 0.90.8 [gdt 2006-08-16]
 	Updated print/evince to 0.5.5 [wiz 2006-08-16]
 	Updated print/evince-nautilus to 0.5.5 [wiz 2006-08-16]
+	Updated chat/xchat to 2.6.6 [tron 2006-08-16]
+	Updated chat/xchat-python to 2.6.6 [tron 2006-08-16]
