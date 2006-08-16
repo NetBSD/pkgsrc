@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1046 2006/08/16 14:41:29 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.1047 2006/08/16 15:35:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3971,3 +3971,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/ups-nut-usb version 2.0.4 [ghen 2006-08-16]
 	Added sysutils/ups-nut-snmp version 2.0.4 [ghen 2006-08-16]
 	Added geography/epsg version 6.11 [gdt 2006-08-16]
+	Updated games/bomberclone to 0.11.7 [wiz 2006-08-16]
