@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/16 14:37:21 gdt Exp $
+share/doc/epsg/G7-1.pdf
+share/doc/epsg/G7-2.pdf
+share/doc/epsg/epsg-v6_11-readme.pdf
+share/epsg/EPSG_v6_11.mdb_Data_MySQL.sql
+share/epsg/EPSG_v6_11.mdb_Data_PostgreSQL.sql
+share/epsg/EPSG_v6_11.mdb_FKeys_MySQL.sql
+share/epsg/EPSG_v6_11.mdb_FKeys_PostgreSQL.sql
+share/epsg/EPSG_v6_11.mdb_Tables_MySQL.sql
+share/epsg/EPSG_v6_11.mdb_Tables_PostgreSQL.sql
+@dirrm share/epsg
+@dirrm share/doc/epsg
