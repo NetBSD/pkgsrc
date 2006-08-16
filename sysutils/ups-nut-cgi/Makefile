@@ -1,36 +1,17 @@
-# $NetBSD: Makefile,v 1.44 2006/08/16 12:27:35 ghen Exp $
+# $NetBSD: Makefile,v 1.45 2006/08/16 13:15:54 ghen Exp $
 
-DISTNAME=		nut-2.0.4
+.include "../../sysutils/ups-nut/Makefile.common"
+
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}
-CATEGORIES=		sysutils
-MASTER_SITES=		http://random.networkupstools.org/source/2.0/
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.networkupstools.org/
 COMMENT=		Network UPS Tools CGI scripts
-
-DISTINFO_FILE=		${.CURDIR}/../../sysutils/ups-nut/distinfo
-PATCHDIR=		${.CURDIR}/../../sysutils/ups-nut/patches
 
 DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
 
 BUILD_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}			\
-			--datadir=${NUT_DATADIR:Q}			\
-			--localstatedir=${NUT_STATEDIR:Q}		\
-			--with-statepath=${NUT_STATEDIR:Q}		\
-			--with-cgi					\
-			--with-cgipath=${NUT_CGIDIR:Q}
-
-PKG_SYSCONFSUBDIR?=	nut
-NUT_CONFDIR=		${PKG_SYSCONFDIR}
-NUT_DATADIR=		${PREFIX}/share/nut
-NUT_EGDIR=		${PREFIX}/share/examples/nut
-NUT_STATEDIR?=		${VARBASE}/db/nut
-NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin
+CONFIGURE_ARGS+=	--with-cgi
+CONFIGURE_ARGS+=	--with-cgipath=${NUT_CGIDIR:Q}
 
 BUILD_DEFS+=		NUT_STATEDIR
 
