@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5345 2006/08/16 09:47:02 tonio Exp $
+$NetBSD: TODO,v 1.5346 2006/08/16 14:48:41 gdt Exp $
 
 Suggested new packages
 ======================
@@ -547,9 +547,9 @@ Suggested package updates
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
-	o guile-1.8.0
+	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
 	o guile-gtk-0.50
-	o guile-oops-1.0.2
+	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
 	o gworkspace-0.8.2
 	o gzrecover-0.3
 	o hackbot-2.21
