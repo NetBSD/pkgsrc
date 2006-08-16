@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/08/16 18:11:40 gdt Exp $
+
+*** unsigned.c.orig	Fri Dec 12 20:16:26 1997
+--- unsigned.c	Fri Dec 12 20:16:52 1997
+***************
+*** 45,50 ****
+--- 45,54 ----
+  #define LIBC_ATOI_IS_BROKEN
+  #endif
+  
++ #ifdef __NetBSD__
++ #define LIBC_ATOI_IS_BROKEN
++ #endif
++ 
+  #ifdef LIBC_ATOI_IS_BROKEN
+  #include <ctype.h>
+  #endif
