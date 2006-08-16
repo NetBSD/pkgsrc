@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.16 2006/05/31 18:22:23 ghen Exp $
+# $NetBSD: options.mk,v 1.17 2006/08/16 20:56:02 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gssapi inet6 kqueue ldap mysql pam pgsql sasl sqlite
 PKG_OPTIONS_OPTIONAL_GROUPS= ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	ssl
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+PKG_SUGGESTED_OPTIONS+=	kqueue
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -81,6 +85,8 @@ CONFIGURE_ARGS+=	--with-sqlite
 .if !empty(PKG_OPTIONS:Mkqueue)
 CONFIGURE_ARGS+=	--with-ioloop=kqueue
 CONFIGURE_ARGS+=	--with-notify=kqueue
+.else
+# use the defaults
 .endif
 
 ###
