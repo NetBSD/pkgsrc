@@ -1,33 +1,15 @@
-# $NetBSD: Makefile,v 1.46 2006/08/15 12:26:07 ghen Exp $
-#
+# $NetBSD: Makefile,v 1.47 2006/08/16 13:15:54 ghen Exp $
 
-DISTNAME=		nut-2.0.4
+.include "Makefile.common"
+
 PKGNAME=		ups-${DISTNAME}
-CATEGORIES=		sysutils
-MASTER_SITES=		http://random.networkupstools.org/source/2.0/
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.networkupstools.org/
 COMMENT=		Network UPS Tools
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}			\
-			--datadir=${NUT_DATADIR:Q}			\
-			--localstatedir=${NUT_STATEDIR:Q}		\
-			--with-user=${NUT_USER:Q}			\
-			--with-group=${NUT_GROUP:Q}			\
-			--with-statepath=${NUT_STATEDIR:Q}		\
-			--with-drvpath=${NUT_DRVDIR:Q}			\
-			--with-altpidpath=${NUT_STATEDIR:Q}		\
-			--with-pidpath=${NUT_STATEDIR:Q}
-
-PKG_SYSCONFSUBDIR?=	nut
-NUT_CONFDIR=		${PKG_SYSCONFDIR}
-NUT_DATADIR=		${PREFIX}/share/nut
-NUT_DOCDIR=		${PREFIX}/share/doc/nut
-NUT_DRVDIR=		${PREFIX}/libexec/nut
-NUT_EGDIR=		${PREFIX}/share/examples/nut
-NUT_STATEDIR?=		${VARBASE}/db/nut
+CONFIGURE_ARGS+=	--with-user=${NUT_USER:Q}
+CONFIGURE_ARGS+=	--with-group=${NUT_GROUP:Q}
+CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
+CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
+CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
 
 NUT_USER?=		nut
 NUT_GROUP?=		nut
