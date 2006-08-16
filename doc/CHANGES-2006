@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1040 2006/08/16 09:47:02 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.1041 2006/08/16 09:54:15 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3965,3 +3965,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/mathomatic to 12.6.1 [minskim 2006-08-15]
 	Updated net/miredo to 0.9.9 [rpaulo 2006-08-15]
 	Updated chat/bitlbee to 1.0.3 [tonio 2006-08-16]
+	Updated security/caff to 0.4.7 [tonio 2006-08-16]
