@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1039 2006/08/15 20:56:33 rpaulo Exp $
+$NetBSD: CHANGES-2006,v 1.1040 2006/08/16 09:47:02 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3964,3 +3964,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/glew version 1.3.4 [abs 2006-08-15]
 	Updated math/mathomatic to 12.6.1 [minskim 2006-08-15]
 	Updated net/miredo to 0.9.9 [rpaulo 2006-08-15]
+	Updated chat/bitlbee to 1.0.3 [tonio 2006-08-16]
