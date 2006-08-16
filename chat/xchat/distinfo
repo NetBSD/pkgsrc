@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.29 2006/04/23 17:19:41 tron Exp $
+$NetBSD: distinfo,v 1.30 2006/08/16 21:25:35 tron Exp $
 
-SHA1 (xchat-2.6.2.tar.bz2) = 1bf135b3947f75f1b6c8a60c436a7a1f2613a5ae
-RMD160 (xchat-2.6.2.tar.bz2) = d7c1d0a02c9575898f68bdbd6e90d5a2fb8cb2ff
-Size (xchat-2.6.2.tar.bz2) = 1046910 bytes
+SHA1 (xc266-fix-fi.diff) = ca9eaff3aefaddbec470863881bc7bc174438488
+RMD160 (xc266-fix-fi.diff) = 7d476d8f997e94cf98b18819966a3dfbe10e4924
+Size (xc266-fix-fi.diff) = 475 bytes
+SHA1 (xchat-2.6.6.tar.bz2) = ba674165ad9f8e48acd2c0437bea6b1acc2871b9
+RMD160 (xchat-2.6.6.tar.bz2) = 27cef034342dc831e2ddb11f8bd5f6cb727e8f93
+Size (xchat-2.6.6.tar.bz2) = 1098934 bytes
 SHA1 (patch-aa) = 90af71915ac6373ebc623790f9a90642376fb1f4
