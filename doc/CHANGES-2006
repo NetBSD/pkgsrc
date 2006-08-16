@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1042 2006/08/16 10:42:42 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.1043 2006/08/16 12:28:11 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3967,3 +3967,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/bitlbee to 1.0.3 [tonio 2006-08-16]
 	Updated security/caff to 0.4.7 [tonio 2006-08-16]
 	Updated mail/mutt-devel to 1.5.13 [tonio 2006-08-16]
+	Updated sysutils/ups-nut-cgi to 2.0.4 [ghen 2006-08-16]
