@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/16 14:37:21 gdt Exp $
+
+SHA1 (epsg-6.11/epsg-v6_11sql-PostgreSQL.zip) = 4c3733da69b9ca59ba76483f656cea8333428df1
+RMD160 (epsg-6.11/epsg-v6_11sql-PostgreSQL.zip) = 1359739ebb2bfce4ed09be38c93a80ae5f51cca5
+Size (epsg-6.11/epsg-v6_11sql-PostgreSQL.zip) = 1082987 bytes
+SHA1 (epsg-6.11/epsg-v6_11sql-mySQL.zip) = 9aea90ac8d7c0e9715735625fd57f4754dbbdabe
+RMD160 (epsg-6.11/epsg-v6_11sql-mySQL.zip) = 4247d8c7b0d10a2fa67c60b1a46483c64b5d9b5b
+Size (epsg-6.11/epsg-v6_11sql-mySQL.zip) = 1083069 bytes
+SHA1 (epsg-6.11/G7-1.pdf) = fdf31f6d4fe534011e62a1498d8b054bb1fd1025
+RMD160 (epsg-6.11/G7-1.pdf) = f331d158d241b128a2b9e1d2a63c06c0f6ae855c
+Size (epsg-6.11/G7-1.pdf) = 831907 bytes
+SHA1 (epsg-6.11/G7-2.pdf) = 3fcd4d6d9f028716a27ea4f40b43e9c3f016cb32
+RMD160 (epsg-6.11/G7-2.pdf) = 06620849762a5b1419487850272fa7fe809d849f
+Size (epsg-6.11/G7-2.pdf) = 954725 bytes
