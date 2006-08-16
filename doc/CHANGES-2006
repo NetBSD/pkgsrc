@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1045 2006/08/16 13:31:20 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.1046 2006/08/16 14:41:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3970,3 +3970,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/ups-nut-cgi to 2.0.4 [ghen 2006-08-16]
 	Added sysutils/ups-nut-usb version 2.0.4 [ghen 2006-08-16]
 	Added sysutils/ups-nut-snmp version 2.0.4 [ghen 2006-08-16]
+	Added geography/epsg version 6.11 [gdt 2006-08-16]
