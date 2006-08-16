@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1041 2006/08/16 09:54:15 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.1042 2006/08/16 10:42:42 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3966,3 +3966,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/miredo to 0.9.9 [rpaulo 2006-08-15]
 	Updated chat/bitlbee to 1.0.3 [tonio 2006-08-16]
 	Updated security/caff to 0.4.7 [tonio 2006-08-16]
+	Updated mail/mutt-devel to 1.5.13 [tonio 2006-08-16]
