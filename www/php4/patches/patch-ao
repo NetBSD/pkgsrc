@@ -1,13 +1,9 @@
-$NetBSD: patch-ao,v 1.2 2006/03/06 15:57:58 cube Exp $
+$NetBSD: patch-ao,v 1.2.6.1 2006/08/16 07:17:41 salo Exp $
 
---- pear/Makefile.frag.orig	2005-11-05 19:19:23.000000000 +0100
+--- pear/Makefile.frag.orig	2006-05-07 17:33:41.000000000 +0100
 +++ pear/Makefile.frag
-@@ -3,10 +3,10 @@
- peardir=$(PEAR_INSTALLDIR)
- 
- # Skip all php.ini files altogether
--PEAR_INSTALL_FLAGS = -n -dshort_open_tag=0 -dsafe_mode=0
-+PEAR_INSTALL_FLAGS = -n -dshort_open_tag=0 -dsafe_mode=0 -dmemory_limit=16M
+@@ -6,7 +6,7 @@ peardir=$(PEAR_INSTALLDIR)
+ PEAR_INSTALL_FLAGS = -n -dshort_open_tag=0 -dopen_basedir= -dsafe_mode=0 -dmemory_limit=-1
  
  install-pear-packages: $(top_builddir)/sapi/cli/php
 -	@$(top_builddir)/sapi/cli/php $(PEAR_INSTALL_FLAGS) $(srcdir)/install-pear.php -d "$(peardir)" -b "$(bindir)" $(srcdir)/packages/*.tar
