@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.41 2006/04/23 17:19:41 tron Exp $
+# $NetBSD: Makefile,v 1.42 2006/08/16 21:25:35 tron Exp $
 
 .include "Makefile.common"
 
 MAINTAINER=		tron@NetBSD.org
+
+PATCH_SITES=		${MASTER_SITES}/patches/
+PATCHFILES=		xc266-fix-fi.diff
+PATCH_DIST_STRIP=	-p1
 
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 

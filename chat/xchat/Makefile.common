@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.50 2006/04/23 17:19:41 tron Exp $
+# $NetBSD: Makefile.common,v 1.51 2006/08/16 21:25:35 tron Exp $
 
-DISTNAME=	xchat-2.6.2
+DISTNAME=	xchat-2.6.6
 CATEGORIES=	chat gnome
 MASTER_SITES=	http://xchat.org/files/source/2.6/
 EXTRACT_SUFX=	.tar.bz2
