@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1048 2006/08/16 18:13:04 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.1049 2006/08/16 20:26:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3973,3 +3973,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added geography/epsg version 6.11 [gdt 2006-08-16]
 	Updated games/bomberclone to 0.11.7 [wiz 2006-08-16]
 	Added graphics/xplot-devel version 0.90.8 [gdt 2006-08-16]
+	Updated print/evince to 0.5.5 [wiz 2006-08-16]
+	Updated print/evince-nautilus to 0.5.5 [wiz 2006-08-16]
