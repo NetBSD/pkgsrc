@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1060 2006/08/17 14:29:01 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1061 2006/08/17 16:17:35 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3998,3 +3998,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nagios-plugin-pgsql to 1.4.3 [taca 2006-08-17]
 	Updated net/nagios-plugin-snmp to 1.4.3 [taca 2006-08-17]
 	Updated net/nagios-nrpe to 2.5.2 [taca 2006-08-17]
+	Updated lang/erlang to 11.0 [ghen 2006-08-17]
+	Updated lang/erlang-doc to 11.0 [ghen 2006-08-17]
+	Updated lang/erlang-man to 11.0 [ghen 2006-08-17]
