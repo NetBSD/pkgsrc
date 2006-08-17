@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/17 14:19:00 taca Exp $
 
---- cgi/Makefile.in.orig	2004-10-25 07:05:54.000000000 +0200
-+++ cgi/Makefile.in	2005-10-14 20:01:42.000000000 +0200
-@@ -12,10 +12,10 @@
+--- cgi/Makefile.in.orig	2006-05-31 01:31:44.000000000 +0900
++++ cgi/Makefile.in
+@@ -12,10 +12,10 @@ SRC_XDATA=../xdata
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -15,15 +15,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
  HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -191,9 +191,9 @@
- devclean: distclean
+@@ -198,9 +198,9 @@ install-unstripped:
+ 	 $(MAKE) install-basic
  
- install:
+ install-basic:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
 +	[ -d $(DESTDIR)$(CGIDIR) ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CGIDIR)
  	for file in *.cgi; do \
 -		$(INSTALL) -m 775 $(INSTALL_OPTS) $$file $(DESTDIR)$(CGIDIR); \
-+		${BSD_INSTALL_SCRIPT} $$file $(DESTDIR)$(CGIDIR); \
- 		$(STRIP) $(DESTDIR)$(CGIDIR)/$$file; \
++		$(BSD_INSTALL_SCRIPT) $$file $(DESTDIR)$(CGIDIR); \
  	done
  
+ strip-post-install:
