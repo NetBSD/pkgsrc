@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/02/19 16:30:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/08/17 13:57:23 taca Exp $
 
 DISTNAME=	netatalk-1.6.4a
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
@@ -11,12 +11,16 @@ HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake perl
-USE_LIBTOOL=		YES
+USE_TOOLS+=	gmake perl:run
+USE_LIBTOOL=	YES
+USE_OLD_DES_API=YES
+BUILDLINK_TRANSFORM+=	l:db-4.2:db4
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 RCD_SCRIPTS=	atalkd afpd papd timelord
+
+BUILD_DEFS+=	VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,7 +32,8 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 			--sysconfdir=${PKG_SYSCONFDIR:Q} \
 			--localstatedir=${VARBASE}/netatalk \
 			--with-nls-dir=${PREFIX}/share/netatalk/nls \
-			--with-uams-path=${PREFIX}/libexec/netatalk/uams
+			--with-uams-path=${PREFIX}/libexec/netatalk/uams \
+			--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 
 #CONFIGURE_ARGS+=	--with-flock-locks	# broken
 #CONFIGURE_ARGS+=	--with-bdb=${PREFIX}	# still some known issues
@@ -38,24 +43,25 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 CONF_FILES+=		${PREFIX}/share/examples/netatalk/${cf} ${PKG_SYSCONFDIR}/${cf}
 .endfor
 
-.include "options.mk"
+SUBST_CLASSES+=	paths
+SUBST_FILES.paths+=	${WRKSRC}/etc/psf/etc2ps.sh
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_STAGE.paths=	pre-configure
 
-post-patch:
-	${MV} ${WRKSRC}/etc/psf/etc2ps.sh ${WRKSRC}/etc/psf/etc2ps.sh.tmp
-	${SED} -e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3," \
-		< ${WRKSRC}/etc/psf/etc2ps.sh.tmp > ${WRKSRC}/etc/psf/etc2ps.sh
+.include "options.mk"
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/netatalk
-.for FILE in atalkd.conf netatalk.conf papd.conf AppleVolumes.default \
+.for file in atalkd.conf netatalk.conf papd.conf AppleVolumes.default \
 		AppleVolumes.system afpd.conf
-	@-( cd ${WRKSRC}/config; ${MAKE_PROGRAM} ${FILE} )
-	${INSTALL_DATA} ${WRKSRC}/config/${FILE} \
+	( cd ${WRKSRC}/config; ${MAKE_PROGRAM} ${file} || ${TRUE} )
+	${INSTALL_DATA} ${WRKSRC}/config/${file} \
 					${PREFIX}/share/examples/netatalk/
 .endfor
 
-#.include "../../databases/db3/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../devel/rx/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
