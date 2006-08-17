@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+$NetBSD: patch-af,v 1.2 2006/08/17 14:20:14 taca Exp $
 
---- plugins/Makefile.in.orig	2005-09-19 15:58:12.000000000 +0200
-+++ plugins/Makefile.in	2005-10-14 21:57:33.000000000 +0200
-@@ -402,7 +402,7 @@
+--- plugins/Makefile.in.orig	2006-04-19 12:52:11.000000000 +0900
++++ plugins/Makefile.in
+@@ -407,7 +407,7 @@ SSLOBJS = sslutils.o
  NETLIBS = $(NETOBJS) $(SOCKETLIBS)
  TESTS_ENVIRONMENT = perl -I $(top_builddir) -I $(top_srcdir)
  TESTS = @PLUGIN_TEST@
@@ -11,12 +11,12 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
  
  ##############################################################################
  # the actual targets
-@@ -977,7 +977,7 @@
+@@ -1129,7 +1129,7 @@ $(check_tcp_programs): check_tcp
  install-exec-hook:
  	cd $(DESTDIR)$(libexecdir) && \
  	for i in $(check_tcp_programs) ; do rm -f $$i; ln -s check_tcp $$i ; done ;\
--	if [ -x check_ldaps ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
-+	#if [ -x check_ldaps ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
+-	if [ -x check_ldap ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
++#	if [ -x check_ldap ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
  
  clean-local:
  	rm -f $(check_tcp_programs)

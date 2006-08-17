@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/17 14:20:14 taca Exp $
 
---- configure.orig	2005-08-01 14:34:46.000000000 -0700
-+++ configure	2005-08-03 17:03:52.000000000 -0700
-@@ -8406,7 +8406,7 @@
+--- configure.orig	2006-04-19 12:52:19.000000000 +0900
++++ configure
+@@ -24395,7 +24395,7 @@ _ACEOF
  
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
    if test -n "$PGSQL"; then
      LDFLAGS="$LDFLAGS -L$PGSQL/lib"
      CPPFLAGS="$CPPFLAGS -I$PGSQL/include"
-@@ -9051,7 +9051,7 @@
+@@ -25040,7 +25040,7 @@ _ACEOF
  
  fi
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
    EXTRAS="$EXTRAS check_radius"
  	RADIUSLIBS="-lradiusclient"
  
-@@ -9132,7 +9132,7 @@
+@@ -25121,7 +25121,7 @@ _ACEOF
  
  fi
  
@@ -29,34 +29,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
    LDAPLIBS="-lldap -llber"\
    LDAPINCLUDE="-I/usr/include/ldap"
  
-@@ -9362,7 +9362,7 @@
-   withval="$with_mysql"
-   MYSQL=$withval
- fi;
--if test -n "$MYSQL"; then
-+if false; then
-   MYSQLLIBDIR=$MYSQL/lib/mysql
-   CPPFLAGS="-I$MYSQL/include"
-   echo "$as_me:$LINENO: checking for mysql_init in -lmysqlclient" >&5
-@@ -10050,7 +10050,7 @@
- fi
- 
- fi
--if test "$ac_cv_lib_mysqlclient_mysql_init" = "yes" -o "$ac_cv_lib_mysqlclient_mysql_close" = "yes"; then
-+if false; then
- 
- 
- for ac_header in mysql/mysql.h mysql/errmsg.h
-@@ -14789,7 +14789,7 @@
- echo $ECHO_N "checking for nslookup syntax... $ECHO_C" >&6
- if test -n "$PATH_TO_NSLOOKUP"
- then
--	if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep "Invalid option: sil" >/dev/null
-+	if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | fgrep "Invalid option: sil" >/dev/null
+@@ -30212,7 +30212,7 @@ fi
  	then
- 		ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
- 		echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
-@@ -15131,7 +15131,7 @@
+ 		echo "$as_me:$LINENO: checking for nslookup syntax" >&5
+ echo $ECHO_N "checking for nslookup syntax... $ECHO_C" >&6
+-		if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep "Invalid option: sil" >/dev/null
++		if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | fgrep "Invalid option: sil" >/dev/null
+ 		then
+ 			ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
+ 			echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
+@@ -30530,7 +30530,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -65,34 +47,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -15182,7 +15182,7 @@
- echo "${ECHO_T}no" >&6
- fi
- 
--if test -x "$PATH_TO_SMBCLIENT"
-+if false
+@@ -30698,7 +30698,7 @@ if test "${with_snmpget_command+set}" = 
+   withval="$with_snmpget_command"
+   PATH_TO_SNMPGET=$withval
+ fi;
+-if test -n "$PATH_TO_SNMPGET"
++if test -n "$PATH_TO_SNMPGET" -a "$PATH_TO_SNMPGET" != "no"
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -15287,7 +15287,7 @@
- echo "${ECHO_T}no" >&6
- fi
- 
--if test -x "$PATH_TO_SNMPGET"
-+if false
- then
- 
- cat >>confdefs.h <<_ACEOF
-@@ -15339,7 +15339,7 @@
- echo "${ECHO_T}no" >&6
- fi
- 
--if test -x "$PATH_TO_SNMPGETNEXT"
-+if false
- then
- 
- cat >>confdefs.h <<_ACEOF
-@@ -15348,7 +15348,7 @@
+@@ -30765,7 +30765,7 @@ _ACEOF
  
  fi
  
@@ -101,17 +65,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
  then
  	echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
  echo $ECHO_N "checking for Net::SNMP perl module... $ECHO_C" >&6
-@@ -15500,7 +15500,7 @@
- echo "${ECHO_T}no" >&6
- fi
- 
--if test -x "$PATH_TO_FPING"
-+if false
+@@ -30929,7 +30929,7 @@ if test "${with_fping_command+set}" = se
+   withval="$with_fping_command"
+   PATH_TO_FPING=$withval
+ fi;
+-if test -n "$PATH_TO_FPING"
++if test -n "$PATH_TO_FPING" -a "$PATH_TO_FPING" != "no"
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -16657,7 +16657,7 @@
- 	EXTRAS="$EXTRAS check_dig"
+@@ -32115,7 +32115,7 @@ _ACEOF
+ 
  fi
  
 -if test -f plugins/check_nt.c ; then
@@ -119,3 +83,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
    EXTRAS="$EXTRAS check_nt"
  elif test -f ../plugins/check_nt.c ; then
    EXTRAS="$EXTRAS check_nt"
+@@ -41104,6 +41104,12 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;

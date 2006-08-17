@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/17 14:20:14 taca Exp $
 libexec/nagios/check_by_ssh
+libexec/nagios/check_clamd
 libexec/nagios/check_dhcp
 libexec/nagios/check_dig
 libexec/nagios/check_disk

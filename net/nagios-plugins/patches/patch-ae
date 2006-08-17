@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+$NetBSD: patch-ae,v 1.2 2006/08/17 14:20:14 taca Exp $
 
---- plugins/Makefile.am.orig	Fri Jul 11 08:11:06 2003
+--- plugins/Makefile.am.orig	2006-03-21 20:42:59.000000000 +0900
 +++ plugins/Makefile.am
-@@ -33,7 +33,7 @@ TESTS = @PLUGIN_TEST@
- test:
+@@ -46,7 +46,7 @@ test:
+ 	cd tests && make test
  	perl -I $(top_builddir) -I $(top_srcdir) ../test.pl
  
 -AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
@@ -11,3 +11,12 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
  
  ##############################################################################
  # the actual targets
+@@ -155,7 +155,7 @@ install-exec-hook:
+ 	cd $(DESTDIR)$(libexecdir) && \
+ 	for i in $(check_tcp_programs) ; do rm -f $$i; ln -s check_tcp $$i ; done ;\
+ 	if [ -x check_ldap ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
+-	
++
+ clean-local:
+ 	rm -f $(check_tcp_programs)
+ 
