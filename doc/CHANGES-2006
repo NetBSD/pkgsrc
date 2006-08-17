@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1056 2006/08/17 13:25:51 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1057 2006/08/17 13:58:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/ruby-DBD-sqlite to 0.1.0 [taca 2006-08-17]
 	Updated lang/php5 to 5.1.4nb4 [taca 2006-08-17]
 	Updated mail/ja-squirrelmail to 1.4.8 [taca 2006-08-17]
+	Updated net/netatalk1 to 1.6.4anb3 [taca 2006-08-17]
