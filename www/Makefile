@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2006/08/13 17:35:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.468 2006/08/17 11:57:24 darcy Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -379,6 +379,7 @@ SUBDIR+=	zope25-ZWiki
 SUBDIR+=	zope25-Zippy
 SUBDIR+=	zope25-colorz
 SUBDIR+=	zope25-zopebook
+SUBDIR+=	zope29
 SUBDIR+=	zope3
 SUBDIR+=	zopeedit
 
