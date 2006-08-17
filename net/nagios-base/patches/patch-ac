@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/17 14:19:00 taca Exp $
 
---- base/Makefile.in.orig	2004-12-09 07:48:33.000000000 +0100
-+++ base/Makefile.in	2005-10-14 20:02:10.000000000 +0200
-@@ -26,10 +26,10 @@
+--- base/Makefile.in.orig	2006-05-31 01:31:44.000000000 +0900
++++ base/Makefile.in
+@@ -26,10 +26,10 @@ LIBS=@LIBS@
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -15,13 +15,13 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
  HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -181,8 +181,7 @@
- devclean: distclean
+@@ -188,8 +188,7 @@ install-unstripped:
+ 	 $(MAKE) install-basic
  
- install:
+ install-basic:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
 -	$(INSTALL) -m 774 $(INSTALL_OPTS) @nagios_name@ $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_PROGRAM} @nagios_name@ $(DESTDIR)$(BINDIR)
- 	$(STRIP) $(DESTDIR)$(BINDIR)/@nagios_name@
  	$(INSTALL) -m 774 $(INSTALL_OPTS) @nagiostats_name@ $(DESTDIR)$(BINDIR)
- 	$(STRIP) $(DESTDIR)$(BINDIR)/@nagiostats_name@
+ 
+ strip-post-install:
