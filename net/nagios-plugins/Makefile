@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:21 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/17 14:20:14 taca Exp $
 #
 
 CATEGORIES=	net sysutils
@@ -11,6 +11,10 @@ COMMENT=	Nagios plugins
 .include "../../net/nagios-plugins/Makefile.common"
 
 .include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+= --without-pgsql --without-mysql \
+		--without-smbclient-command --without-snmpget-command \
+		--without-snmpgetnext-command --without-fping-command
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=      --with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
