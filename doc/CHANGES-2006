@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1059 2006/08/17 14:15:12 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1060 2006/08/17 14:29:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3991,3 +3991,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/netatalk1 to 1.6.4anb3 [taca 2006-08-17]
 	Updated net/synergy to 1.3.1nb1 [taca 2006-08-17]
 	Updated net/bind9 to 9.3.2 [taca 2006-08-17]
+	Updated net/nagios-base to 2.5 [taca 2006-08-17]
+	Updated net/nagios-plugins to 1.4.3 [taca 2006-08-17]
+	Updated net/nagios-plugin-ldap to 1.4.3 [taca 2006-08-17]
+	Updated net/nagios-plugin-mysql to 1.4.3 [taca 2006-08-17]
+	Updated net/nagios-plugin-pgsql to 1.4.3 [taca 2006-08-17]
+	Updated net/nagios-plugin-snmp to 1.4.3 [taca 2006-08-17]
+	Updated net/nagios-nrpe to 2.5.2 [taca 2006-08-17]
