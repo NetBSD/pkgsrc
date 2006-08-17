@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/06/04 11:06:51 joerg Exp $
+$NetBSD: distinfo,v 1.3 2006/08/17 14:23:07 taca Exp $
 
-SHA1 (nrpe-2.5.1.tar.gz) = 1beab9dc5fe77b722a12161b23b536ac5e28a6a4
-RMD160 (nrpe-2.5.1.tar.gz) = 757eb92cde878d8a0d3e483149d8969728ed7e03
-Size (nrpe-2.5.1.tar.gz) = 100382 bytes
+SHA1 (nrpe-2.5.2.tar.gz) = e0fe51474d0d08fa6fc4b09ceab9adcc2585ddac
+RMD160 (nrpe-2.5.2.tar.gz) = 79eb2486ebe81e520b4092d91f44e4c1ad0fd44e
+Size (nrpe-2.5.2.tar.gz) = 100637 bytes
 SHA1 (patch-aa) = 2e92dc516c14c61eadadd742cdf88655e580bb8d
