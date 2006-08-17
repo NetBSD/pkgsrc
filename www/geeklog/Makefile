@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/24 16:13:55 taca Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/17 14:16:56 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 VER=		1.4.0sr5-1
 NO_BUILD=	YES
 
-BUILD_DEFS+=	APACHE_GROUP
+BUILD_DEFS+=	APACHE_GROUP GEEKLOG_SITEBASE
 
 GEEKLOG_SYS=		emailgeeklogstories language plugins readme sql system
 GEEKLOG_TMPL_SUB=	backend images/articles images/library \
@@ -51,6 +51,10 @@ PLIST_SUBST+=		GEEKLOG_BASE=${GEEKLOG_BASE:Q} \
 			GEEKLOG_PUB=${GEEKLOG_PUB:Q} \
 			GEEKLOG_TMPL=${GEEKLOG_TMPL:Q}
 
+.include "../../www/geeklog/Makefile.common"
+
+PKG_SYSCONFSUBDIR?=	geeklog
+
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	${WRKDIR}/README ${WRKDIR}/createdb.php
 SUBST_FILES.paths+=	${WRKSRC}/config.php ${WRKSRC}/emailgeeklogstories
@@ -67,18 +71,13 @@ SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/geeklog.conf
 SUBST_SED.conf+=	-e 's,@GEEKLOG_DIR@,${GEEKLOG_DIR:Q},g'
 SUBST_SED.conf+=	-e 's,@GEEKLOG_PUBDIR@,${GEEKLOG_PUBDIR:Q},g'
+.if empty(GEEKLOG_SITEBASE)
+SUBST_SED.conf+=	-e '/^Alias/s,^,\#,'
+.endif
 SUBST_STAGE.conf=	post-configure
 
 INSTALLATION_DIRS=	${GEEKLOG_BASE} ${GEEKLOG_PUB} ${GEEKLOG_TMPL}/images \
 			share/examples/geeklog
-
-.include "../../www/geeklog/Makefile.common"
-
-PKG_SYSCONFSUBDIR?=	geeklog
-
-.if empty(GEEKLOG_SITEBASE)
-SUBST_SED.conf+=	-e '/^Alias/s,^,\#,'
-.endif
 
 post-extract:
 	${CP} ${FILESDIR}/README ${FILESDIR}/createdb.php \
