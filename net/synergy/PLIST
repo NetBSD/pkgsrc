@@ -1,3 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/21 19:43:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/17 14:02:23 taca Exp $
 bin/synergyc
 bin/synergys
+share/doc/html/${PKGBASE}/about.html
+share/doc/html/${PKGBASE}/authors.html
+share/doc/html/${PKGBASE}/autostart.html
+share/doc/html/${PKGBASE}/banner.html
+share/doc/html/${PKGBASE}/border.html
+share/doc/html/${PKGBASE}/compiling.html
+share/doc/html/${PKGBASE}/configuration.html
+share/doc/html/${PKGBASE}/contact.html
+share/doc/html/${PKGBASE}/developer.html
+share/doc/html/${PKGBASE}/faq.html
+share/doc/html/${PKGBASE}/history.html
+share/doc/html/${PKGBASE}/home.html
+share/doc/html/${PKGBASE}/images/logo.gif
+share/doc/html/${PKGBASE}/images/warp.gif
+share/doc/html/${PKGBASE}/index.html
+share/doc/html/${PKGBASE}/license.html
+share/doc/html/${PKGBASE}/news.html
+share/doc/html/${PKGBASE}/roadmap.html
+share/doc/html/${PKGBASE}/running.html
+share/doc/html/${PKGBASE}/security.html
+share/doc/html/${PKGBASE}/synergy.css
+share/doc/html/${PKGBASE}/tips.html
+share/doc/html/${PKGBASE}/toc.html
+share/doc/html/${PKGBASE}/trouble.html
+@dirrm share/doc/html/${PKGBASE}/images
+@dirrm share/doc/html/${PKGBASE}
