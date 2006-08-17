@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1052 2006/08/17 11:39:12 shannonjr Exp $
+$NetBSD: CHANGES-2006,v 1.1053 2006/08/17 11:59:38 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libprelude to 0.9.10.1 [shannonjr 2006-08-17]
 	Updated security/libpreludedb to 0.9.9 [shannonjr 2006-08-17]
 	Updated security/py-prewikka to 0.9.7 [shannonjr 2006-08-17]
+	Added www/zope29 2.9.4 [darcy 2006-08-17]
