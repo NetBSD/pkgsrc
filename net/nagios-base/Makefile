@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/05/17 20:47:41 bouyer Exp $
+# $NetBSD: Makefile,v 1.9 2006/08/17 14:19:00 taca Exp $
 #
 
-DISTNAME=	nagios-2.3.1
+DISTNAME=	nagios-2.5
 PKGNAME=	${DISTNAME:S/-/-base-/}
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios/nagios.lock
 RCD_SCRIPTS+=		nagios
 
 INSTALL_TARGET=		install install-config
+
+BUILD_DEFS+=	VARBASE
 
 PKG_GROUPS+=	${NAGIOS_GROUP}
 PKG_GROUPS+=	${NAGIOSADM_GROUP}
@@ -64,7 +66,7 @@ SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 pre-build:
-	@${CP} ${FILESDIR}/nagios.conf.dist ${WRKSRC}/nagios.conf.dist
+	${CP} ${FILESDIR}/nagios.conf.dist ${WRKSRC}/nagios.conf.dist
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/nagios.conf.dist ${EGDIR}/nagios.conf

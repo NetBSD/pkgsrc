@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/17 14:19:00 taca Exp $
 
---- Makefile.in.orig	2004-12-16 02:15:24.000000000 +0100
-+++ Makefile.in	2005-10-14 20:00:49.000000000 +0200
-@@ -21,16 +21,17 @@
+--- Makefile.in.orig	2006-05-31 01:31:44.000000000 +0900
++++ Makefile.in
+@@ -21,16 +21,17 @@ LDFLAGS=@LDFLAGS@ @LIBS@
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
 -LOGDIR=@localstatedir@
+-CFGDIR=@sysconfdir@
 +LOGDIR=@localstatedir@/log/nagios
- CFGDIR=@sysconfdir@
- BINDIR=@bindir@
--CGIDIR=@sbindir@
 +CGIDIR=@libexecdir@
+ BINDIR=@bindir@
+ CGIDIR=@sbindir@
  HTMLDIR=@datadir@
 +SAMPDIR=@prefix@/share/examples/nagios
  INSTALL=@INSTALL@
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -59,60 +60,6 @@
+@@ -59,60 +60,6 @@ all:
  	cd $(SRC_HTM) && $(MAKE)
  	cd $(SRC_MODULE) && $(MAKE)
  
@@ -84,10 +84,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
  
-@@ -174,10 +121,8 @@
- 	cd $(SRC_BASE) && $(MAKE) $@
- 	cd $(SRC_CGI) && $(MAKE) $@
- 	cd $(SRC_HTM) && $(MAKE) $@
+@@ -183,12 +130,11 @@ install-unstripped: 
+ 	$(MAKE) install-basic
+ 
+ install-basic:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)/archives
  	if [ $(INSTALLPERLSTUFF) = yes ]; then \
@@ -95,8 +95,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
 +		${BSD_INSTALL_SCRIPT} p1.pl $(DESTDIR)$(BINDIR); \
  	fi;
  
++
  	@echo ""
-@@ -204,14 +149,14 @@
+ 	@echo "*** Main program, CGIs and HTML files installed ***"
+ 	@echo ""
+@@ -213,14 +159,14 @@ install-basic:
  
  
  install-config:

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+$NetBSD: patch-ad,v 1.2 2006/08/17 14:19:00 taca Exp $
 
---- html/Makefile.in.orig	2003-04-10 05:46:02.000000000 +0200
-+++ html/Makefile.in	2005-10-14 20:02:37.000000000 +0200
-@@ -4,10 +4,10 @@
+--- html/Makefile.in.orig	2006-05-31 01:31:44.000000000 +0900
++++ html/Makefile.in
+@@ -4,10 +4,10 @@ LDFLAGS=@LDFLAGS@ @LIBS@
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
  HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -33,39 +33,34 @@
+@@ -33,37 +33,37 @@ distclean: clean
  devclean: distclean
  
  install:
@@ -70,9 +70,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
  	for file in images/logos/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
--
--
--
--
--
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
+ 
+ install-unstripped:
+ 	$(MAKE) install
