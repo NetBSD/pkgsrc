@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2006/07/05 05:37:43 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/08/17 23:55:16 adam Exp $
 
-DISTNAME=	aMule-2.1.1
+DISTNAME=	aMule-2.1.3
 PKGNAME=	${DISTNAME:S/aMule/amule/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amule/}
 EXTRACT_SUFX=	.tar.bz2
