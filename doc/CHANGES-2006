@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1053 2006/08/17 11:59:38 darcy Exp $
+$NetBSD: CHANGES-2006,v 1.1054 2006/08/17 13:09:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3982,3 +3982,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libpreludedb to 0.9.9 [shannonjr 2006-08-17]
 	Updated security/py-prewikka to 0.9.7 [shannonjr 2006-08-17]
 	Added www/zope29 2.9.4 [darcy 2006-08-17]
+	Updated databases/ruby-DBI to 0.1.0 [taca 2006-08-17]
+	Updated databases/ruby-DBD-mysql to 0.1.0 [taca 2006-08-17]
+	Updated databases/ruby-DBD-postgresql to 0.1.0 [taca 2006-08-17]
+	Updated databases/ruby-DBD-sqlite to 0.1.0 [taca 2006-08-17]
