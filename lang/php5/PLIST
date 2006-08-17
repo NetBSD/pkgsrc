@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/05/06 22:42:44 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/17 13:17:48 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -214,6 +214,8 @@ lib/php/.depdb
 lib/php/.depdblock
 lib/php/.filemap
 lib/php/.lock
+@exec ${MKDIR} %D/lib/php/.registry/.channel.__uri
+@exec ${MKDIR} %D/lib/php/.registry/.channel.pecl.php.net
 lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
 lib/php/.registry/pear.reg
@@ -367,7 +369,6 @@ share/php/php.gif
 @dirrm include/php/regex
 @dirrm include/php/main/streams
 @dirrm include/php/main
-@dirrm include/php/include
 @dirrm include/php/ext/xml
 @dirrm include/php/ext/standard
 @dirrm include/php/ext/session
