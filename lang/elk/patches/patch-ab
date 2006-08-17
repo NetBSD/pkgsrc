@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/10/15 23:07:21 tonio Exp $
+$NetBSD: patch-ab,v 1.5 2006/08/17 23:51:33 adam Exp $
 
---- configure.orig	2003-12-05 13:51:16.000000000 +0100
+--- configure.orig	2006-08-18 01:34:22.000000000 +0200
 +++ configure
-@@ -26177,6 +26177,9 @@ else
+@@ -27759,6 +27759,9 @@ else
    ac_cv_my_have_xaw="no (cross-compiling)"
  fi
  

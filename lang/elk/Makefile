@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.34 2006/06/02 16:39:15 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/08/17 23:51:33 adam Exp $
 
-DISTNAME=		elk-3.99.6
-PKGREVISION=		1
-CATEGORIES=		lang
-MASTER_SITES=		http://sam.zoy.org/elk/
+DISTNAME=	elk-3.99.7
+CATEGORIES=	lang
+MASTER_SITES=	http://sam.zoy.org/elk/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sam.zoy.org/elk/
-COMMENT=		Embeddable Scheme interpreter
-
-GNU_CONFIGURE=yes
-USE_LIBTOOL=  yes
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://sam.zoy.org/elk/
+COMMENT=	Embeddable Scheme interpreter
 
 USE_LANGUAGES=		c c++
-
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		WITH_XAW=${ELK_AWK:Q}
 
 .include "options.mk"
