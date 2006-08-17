@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/11 23:44:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/17 11:35:20 shannonjr Exp $
 bin/prewikka-httpd
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
@@ -60,6 +60,12 @@ ${PYSITELIB}/prewikka/modules/auth/loginpassword/__init__.pyo
 ${PYSITELIB}/prewikka/modules/auth/loginpassword/loginpassword.py
 ${PYSITELIB}/prewikka/modules/auth/loginpassword/loginpassword.pyc
 ${PYSITELIB}/prewikka/modules/auth/loginpassword/loginpassword.pyo
+${PYSITELIB}/prewikka/modules/auth/cgi/__init__.py
+${PYSITELIB}/prewikka/modules/auth/cgi/__init__.pyc
+${PYSITELIB}/prewikka/modules/auth/cgi/__init__.pyo
+${PYSITELIB}/prewikka/modules/auth/cgi/cgi.py
+${PYSITELIB}/prewikka/modules/auth/cgi/cgi.pyc
+${PYSITELIB}/prewikka/modules/auth/cgi/cgi.pyo
 ${PYSITELIB}/prewikka/modules/log/__init__.py
 ${PYSITELIB}/prewikka/modules/log/__init__.pyc
 ${PYSITELIB}/prewikka/modules/log/__init__.pyo
@@ -90,6 +96,9 @@ ${PYSITELIB}/prewikka/templates/ErrorTemplate.pyo
 ${PYSITELIB}/prewikka/templates/FilterEdition.py
 ${PYSITELIB}/prewikka/templates/FilterEdition.pyc
 ${PYSITELIB}/prewikka/templates/FilterEdition.pyo
+${PYSITELIB}/prewikka/templates/FilterListing.py
+${PYSITELIB}/prewikka/templates/FilterListing.pyc
+${PYSITELIB}/prewikka/templates/FilterListing.pyo
 ${PYSITELIB}/prewikka/templates/HTMLDocument.py
 ${PYSITELIB}/prewikka/templates/HTMLDocument.pyc
 ${PYSITELIB}/prewikka/templates/HTMLDocument.pyo
