@@ -1,28 +1,28 @@
-# $NetBSD: Makefile,v 1.78 2006/07/17 14:23:59 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2006/08/17 09:55:15 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
 
 SUBDIR+=	autoswc
 SUBDIR+=	binpatch
-#SUBDIR+=	bootstrap-extras
-#SUBDIR+=	bootstrap-mk-files
+SUBDIR+=	bootstrap-extras
+SUBDIR+=	bootstrap-mk-files
 SUBDIR+=	cdpack
 SUBDIR+=	createbuildlink
 SUBDIR+=	dfdisk
 SUBDIR+=	digest
 SUBDIR+=	genrpm
 SUBDIR+=	gensolpkg
-#SUBDIR+=	libkver		# Only under instruction of user
+SUBDIR+=	libkver		# Only under instruction of user
 SUBDIR+=	libnbcompat
-#SUBDIR+=	mtree
+SUBDIR+=	mtree
 SUBDIR+=	p5-pkgsrc-Dewey
-#SUBDIR+=	pax
+SUBDIR+=	pax
 SUBDIR+=	pkg_alternatives
 SUBDIR+=	pkg_chk
 SUBDIR+=	pkg_comp
 SUBDIR+=	pkg_filecheck
-#SUBDIR+=	pkg_install	# Only install on demand of bsd.pkg.mk
+SUBDIR+=	pkg_install	# Only install on demand of bsd.pkg.mk
 SUBDIR+=	pkg_install-info
 SUBDIR+=	pkg_notify
 SUBDIR+=	pkg_regress
@@ -45,7 +45,7 @@ SUBDIR+=	rdigest
 SUBDIR+=	revbump
 SUBDIR+=	rpm2pkg
 SUBDIR+=	shlock
-#SUBDIR+=	tnftp
+SUBDIR+=	tnftp
 SUBDIR+=	url2pkg
 SUBDIR+=	verifypc
 SUBDIR+=	x11-links
