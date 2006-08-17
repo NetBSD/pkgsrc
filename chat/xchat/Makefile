@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2006/08/16 21:25:35 tron Exp $
+# $NetBSD: Makefile,v 1.43 2006/08/17 06:58:37 tron Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 MAINTAINER=		tron@NetBSD.org
 
@@ -26,6 +28,10 @@ LDFLAGS.Darwin+=	-lX11
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	YES
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
