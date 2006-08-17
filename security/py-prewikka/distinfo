@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/05/04 13:16:42 shannonjr Exp $
+$NetBSD: distinfo,v 1.4 2006/08/17 11:35:20 shannonjr Exp $
 
-SHA1 (prewikka-0.9.5.tar.gz) = 00a6df1abaf1ca8d8e15d003b15e80e7b7298e71
-RMD160 (prewikka-0.9.5.tar.gz) = e3ba5fd878759662b6a7eff0b16d971e9c005899
-Size (prewikka-0.9.5.tar.gz) = 179329 bytes
+SHA1 (prewikka-0.9.7.tar.gz) = a11cd15a1290cd52553a824c61ab2c1e028435ff
+RMD160 (prewikka-0.9.7.tar.gz) = 29b1dfe7e81b9273ed7e59b37acb3ded85f5e836
+Size (prewikka-0.9.7.tar.gz) = 180802 bytes
