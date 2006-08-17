@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1062 2006/08/17 19:20:43 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.1063 2006/08/17 22:35:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/erlang-doc to 11.0 [ghen 2006-08-17]
 	Updated lang/erlang-man to 11.0 [ghen 2006-08-17]
 	Updated sysutils/ups-nut-cgi to 2.0.4nb1 [ghen 2006-08-17]
+	Updated devel/glib2 to 2.12.2 [wiz 2006-08-17]
