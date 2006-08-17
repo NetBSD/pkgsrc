@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/07/13 20:41:51 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/08/17 20:15:40 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -329,7 +329,6 @@ share/horde/lib/Horde/Text/Filter/tabs2spaces.php
 share/horde/lib/Horde/Text/Filter/text2html.php
 share/horde/lib/Horde/Text/Filter/words.php
 share/horde/lib/Horde/Text/Filter/xss.php
-share/horde/lib/Horde/Timer.php
 share/horde/lib/Horde/Token.php
 share/horde/lib/Horde/Token/file.php
 share/horde/lib/Horde/Token/sql.php
@@ -1310,6 +1309,7 @@ share/horde/themes/graphics/mime/text.png
 share/horde/themes/graphics/mime/vcard.png
 share/horde/themes/graphics/mime/video.png
 share/horde/themes/graphics/mime/xml.png
+share/horde/themes/graphics/mobile.png
 share/horde/themes/graphics/mobile/bottom.jpg
 share/horde/themes/graphics/mobile/display.jpg
 share/horde/themes/graphics/mobile/left.jpg
@@ -1619,7 +1619,6 @@ share/horde/util/regex_test.php
 @dirrm share/horde/locale/he_IL/LC_MESSAGES
 @dirrm share/horde/locale/he_IL
 @dirrm share/horde/locale
-@dirrm share/horde/lib/docs
 @dirrm share/horde/lib/data
 @dirrm share/horde/lib/XML/tests
 @dirrm share/horde/lib/XML/docs/examples
