@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST.common_end,v 1.3 2006/03/29 21:40:12 ghen Exp $
-@exec ${MKDIR} %D/lib/erlang/usr/lib
+@comment $NetBSD: PLIST.common_end,v 1.4 2006/08/17 16:16:30 ghen Exp $
 @dirrm lib/erlang/usr/lib
 @dirrm lib/erlang/usr/include/obsolete
 @dirrm lib/erlang/usr/include
 @dirrm lib/erlang/usr
-@dirrm lib/erlang/releases/R10B
+@dirrm lib/erlang/releases/R11B
 @dirrm lib/erlang/releases
 @dirrm lib/erlang/misc
 @dirrm lib/erlang/lib/xmerl-${VERSION.xmerl}/src
@@ -28,6 +27,8 @@
 @dirrm lib/erlang/lib/tools-${VERSION.tools}/examples
 @dirrm lib/erlang/lib/tools-${VERSION.tools}/emacs
 @dirrm lib/erlang/lib/tools-${VERSION.tools}/ebin
+@dirrm lib/erlang/lib/tools-${VERSION.tools}/c_src
+@dirrm lib/erlang/lib/tools-${VERSION.tools}/bin
 @dirrm lib/erlang/lib/tools-${VERSION.tools}
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}/src
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}/ebin
@@ -90,6 +91,7 @@
 @dirrm lib/erlang/lib/snmp-${VERSION.snmp}/mibs/v1
 @dirrm lib/erlang/lib/snmp-${VERSION.snmp}/mibs
 @dirrm lib/erlang/lib/snmp-${VERSION.snmp}/include
+@dirrm lib/erlang/lib/snmp-${VERSION.snmp}/examples/ex2
 @dirrm lib/erlang/lib/snmp-${VERSION.snmp}/examples/ex1
 @dirrm lib/erlang/lib/snmp-${VERSION.snmp}/examples
 @dirrm lib/erlang/lib/snmp-${VERSION.snmp}/ebin
@@ -181,13 +183,18 @@
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/src
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/include
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/src
+@exec ${MKDIR} %D/lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/priv
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/priv
+@exec ${MKDIR} %D/lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/ebin
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/ebin
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/c_src
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/examples
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}/ebin
 @dirrm lib/erlang/lib/kernel-${VERSION.kernel}
+@dirrm lib/erlang/lib/inviso-${VERSION.inviso}/src
+@dirrm lib/erlang/lib/inviso-${VERSION.inviso}/ebin
+@dirrm lib/erlang/lib/inviso-${VERSION.inviso}
 @dirrm lib/erlang/lib/inets-${VERSION.inets}/src
 @dirrm lib/erlang/lib/inets-${VERSION.inets}/priv/bin
 @dirrm lib/erlang/lib/inets-${VERSION.inets}/priv
@@ -278,6 +285,10 @@
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}/priv
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}/ebin
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}
+@dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src
+@dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}/plt
+@dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin
+@dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}
 @dirrm lib/erlang/lib/debugger-${VERSION.debugger}/src
 @dirrm lib/erlang/lib/debugger-${VERSION.debugger}/priv
 @dirrm lib/erlang/lib/debugger-${VERSION.debugger}/ebin
@@ -338,6 +349,10 @@
 @dirrm lib/erlang/erts-${VERSION.erts}/man
 @dirrm lib/erlang/erts-${VERSION.erts}/lib/internal
 @dirrm lib/erlang/erts-${VERSION.erts}/lib
+@dirrm lib/erlang/erts-${VERSION.erts}/include/internal/x86_64
+@dirrm lib/erlang/erts-${VERSION.erts}/include/internal/sparc32
+@dirrm lib/erlang/erts-${VERSION.erts}/include/internal/ppc32
+@dirrm lib/erlang/erts-${VERSION.erts}/include/internal/i386
 @dirrm lib/erlang/erts-${VERSION.erts}/include/internal
 @dirrm lib/erlang/erts-${VERSION.erts}/include
 @exec ${MKDIR} %D/lib/erlang/erts-${VERSION.erts}/doc
