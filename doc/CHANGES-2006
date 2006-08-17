@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1054 2006/08/17 13:09:34 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1055 2006/08/17 13:18:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3986,3 +3986,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/ruby-DBD-mysql to 0.1.0 [taca 2006-08-17]
 	Updated databases/ruby-DBD-postgresql to 0.1.0 [taca 2006-08-17]
 	Updated databases/ruby-DBD-sqlite to 0.1.0 [taca 2006-08-17]
+	Updated lang/php5 to 5.1.4nb4 [taca 2006-08-17]
