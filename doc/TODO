@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5350 2006/08/16 21:27:04 tron Exp $
+$NetBSD: TODO,v 1.5351 2006/08/17 11:58:23 darcy Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.17
 	o zircon-1.18.256
-	o zope-2.9.4
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
