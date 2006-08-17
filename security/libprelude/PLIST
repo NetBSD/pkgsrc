@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/04 13:13:17 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/08/17 11:31:40 shannonjr Exp $
 bin/libprelude-config
 bin/prelude-adduser
 include/libprelude/common.h
@@ -73,7 +73,6 @@ share/doc/libprelude/libprelude-prelude-client.html
 share/doc/libprelude/libprelude-prelude-connection-pool.html
 share/doc/libprelude/libprelude-prelude-connection.html
 share/doc/libprelude/libprelude-prelude-error.html
-share/doc/libprelude/libprelude-prelude-extract.html
 share/doc/libprelude/libprelude-prelude-failover.html
 share/doc/libprelude/libprelude-prelude-hash.html
 share/doc/libprelude/libprelude-prelude-ident.html
