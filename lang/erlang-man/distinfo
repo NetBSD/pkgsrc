@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/29 21:41:44 ghen Exp $
+$NetBSD: distinfo,v 1.2 2006/08/17 16:16:30 ghen Exp $
 
-SHA1 (erlang/otp_doc_man_R10B-10.tar.gz) = a59f09e9656979642a2b83cc1e9c3889ecec5031
-RMD160 (erlang/otp_doc_man_R10B-10.tar.gz) = b56260b7349cd4751ca56ec15fdc5515041b130b
-Size (erlang/otp_doc_man_R10B-10.tar.gz) = 594690 bytes
+SHA1 (erlang/otp_doc_man_R11B-0.tar.gz) = b093fc8c9349a744c42b2ac70d00166adb7d2bb0
+RMD160 (erlang/otp_doc_man_R11B-0.tar.gz) = 38d9218391147e192d21c438d436c98d7c0f982a
+Size (erlang/otp_doc_man_R11B-0.tar.gz) = 624684 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/29 21:41:44 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/17 16:16:30 ghen Exp $
 lib/erlang/man/man1/driver_entry.1
 lib/erlang/man/man1/epmd.1
 lib/erlang/man/man1/erl.1
@@ -106,6 +106,7 @@ lib/erlang/man/man3/crypto.3
 lib/erlang/man/man3/dbg.3
 lib/erlang/man/man3/debugger.3
 lib/erlang/man/man3/dets.3
+lib/erlang/man/man3/dialyzer.3
 lib/erlang/man/man3/dict.3
 lib/erlang/man/man3/digraph.3
 lib/erlang/man/man3/digraph_utils.3
@@ -179,6 +180,11 @@ lib/erlang/man/man3/init.3
 lib/erlang/man/man3/instrument.3
 lib/erlang/man/man3/int.3
 lib/erlang/man/man3/interceptors.3
+lib/erlang/man/man3/inviso.3
+lib/erlang/man/man3/inviso_as_lib.3
+lib/erlang/man/man3/inviso_lfm.3
+lib/erlang/man/man3/inviso_lfm_tpfreader.3
+lib/erlang/man/man3/inviso_rt.3
 lib/erlang/man/man3/io.3
 lib/erlang/man/man3/io_lib.3
 lib/erlang/man/man3/lib.3
@@ -288,6 +294,7 @@ lib/erlang/man/man3/supervisor_bridge.3
 lib/erlang/man/man3/sys.3
 lib/erlang/man/man3/systools.3
 lib/erlang/man/man3/tags.3
+lib/erlang/man/man3/tftp.3
 lib/erlang/man/man3/timer.3
 lib/erlang/man/man3/toolbar.3
 lib/erlang/man/man3/ttb.3
@@ -296,8 +303,14 @@ lib/erlang/man/man3/user.3
 lib/erlang/man/man3/webtool.3
 lib/erlang/man/man3/win32reg.3
 lib/erlang/man/man3/wrap_log_reader.3
+lib/erlang/man/man3/xmerl.3
+lib/erlang/man/man3/xmerl_eventp.3
+lib/erlang/man/man3/xmerl_scan.3
+lib/erlang/man/man3/xmerl_xpath.3
+lib/erlang/man/man3/xmerl_xs.3
 lib/erlang/man/man3/xref.3
 lib/erlang/man/man3/yecc.3
+lib/erlang/man/man3/zip.3
 lib/erlang/man/man3/zlib.3
 lib/erlang/man/man4/app.4
 lib/erlang/man/man4/appup.4
@@ -312,6 +325,7 @@ lib/erlang/man/man6/runtime_tools.6
 lib/erlang/man/man6/sasl.6
 lib/erlang/man/man6/snmp.6
 lib/erlang/man/man6/ssl.6
+lib/erlang/man/man6/stdlib.6
 @dirrm lib/erlang/man/man6
 @dirrm lib/erlang/man/man4
 @dirrm lib/erlang/man/man3
