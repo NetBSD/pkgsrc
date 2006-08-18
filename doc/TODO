@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5354 2006/08/17 23:56:50 adam Exp $
+$NetBSD: TODO,v 1.5355 2006/08/18 08:41:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -281,6 +281,7 @@ Suggested package updates
 	o MesaLib-6.5
 	o PAM-0.80
 	o REminiscence-0.1.8
+	o RealPlayerGold-10.0.8
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6.5
 	o XFree86-4.6.0
@@ -333,7 +334,7 @@ Suggested package updates
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
 	o at-spi-1.7.10
-	o autogen-5.8.4
+	o autogen-5.8.5
 	o avcheck-0.91
 	o avl-2.0.1
 	o avr-libc-1.4.1
@@ -505,7 +506,7 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade-3.0.0
 	o gld-1.7
-	o glibmm-2.10.5
+	o glibmm-2.12.0
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -541,6 +542,7 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2+-2.10.1 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
 	o gtkam-0.1.13
+	o gtkmm-2.10.0
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -740,6 +742,7 @@ Suggested package updates
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
+	o openttd-0.4.8
 	o oregano-0.50.0
 	o oroborus-2.0.15
 	o osh-050219
