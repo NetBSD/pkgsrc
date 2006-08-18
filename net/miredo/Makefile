@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/08/15 20:54:44 rpaulo Exp $
+# $NetBSD: Makefile,v 1.10 2006/08/18 13:45:57 salo Exp $
 
 DISTNAME=	miredo-0.9.9
 CATEGORIES=	net
@@ -20,13 +20,6 @@ CONF_FILES=	${EGDIR}/miredo.conf-dist ${PKG_SYSCONFDIR}/miredo.conf
 CONF_FILES+=	${EGDIR}/miredo-server.conf-dist \
 		${PKG_SYSCONFDIR}/miredo-server.conf
 CONF_FILES+=	${EGDIR}/isatapd.conf-dist ${PKG_SYSCONFDIR}/isatapd.conf
-
-INSTALLATION_DIRS=	share/examples/miredo
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/misc/miredo.conf-dist ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/misc/miredo-server.conf-dist ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/misc/isatapd.conf-dist ${EGDIR}
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
