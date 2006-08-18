@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/05/12 08:25:47 joerg Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2006/08/18 13:55:46 salo Exp $
 
-DISTNAME=	miredo-0.8.4
-PKGREVISION=	1
+DISTNAME=	miredo-0.9.9
 CATEGORIES=	net
-MASTER_SITES=	http://www.remlab.net/files/miredo/v0.8/
+MASTER_SITES=	http://www.remlab.net/files/miredo/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rpaulo@NetBSD.org
@@ -20,12 +19,7 @@ EGDIR=		${PREFIX}/share/examples/miredo
 CONF_FILES=	${EGDIR}/miredo.conf-dist ${PKG_SYSCONFDIR}/miredo.conf
 CONF_FILES+=	${EGDIR}/miredo-server.conf-dist \
 		${PKG_SYSCONFDIR}/miredo-server.conf
-
-INSTALLATION_DIRS=	share/examples/miredo
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/misc/miredo.conf-dist ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/misc/miredo-server.conf-dist ${EGDIR}
+CONF_FILES+=	${EGDIR}/isatapd.conf-dist ${PKG_SYSCONFDIR}/isatapd.conf
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
