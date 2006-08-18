@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.69 2006/08/17 07:05:12 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.70 2006/08/18 13:56:14 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -159,3 +159,5 @@ Pullup ticket 1792 - requested by wiz
 security update for bomberclone
 Pullup ticket 1791 - requested by salo
 security update for ImageMagick
+Pullup ticket 1793 - requested by rpaulo
+security update for miredo
