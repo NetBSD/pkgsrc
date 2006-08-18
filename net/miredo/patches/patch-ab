@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2006/05/02 15:36:09 rpaulo Exp $
+$NetBSD: patch-ab,v 1.4.2.1 2006/08/18 13:55:46 salo Exp $
 
---- misc/miredo.conf-dist.orig	2006-05-02 16:29:45.000000000 +0100
-+++ misc/miredo.conf-dist	2006-05-02 16:29:51.000000000 +0100
+--- misc/miredo.conf.orig	2006-08-13 13:56:16.000000000 +0100
++++ misc/miredo.conf	2006-08-13 13:56:21.000000000 +0100
 @@ -7,7 +7,7 @@
  #RelayType client
  
- # Name of the network tunneling interface.
+ # Name of the network tunneling interface.
 -InterfaceName	teredo
 +#InterfaceName	teredo
  
