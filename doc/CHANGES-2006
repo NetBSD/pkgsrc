@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1066 2006/08/18 11:33:54 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1067 2006/08/18 21:58:13 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/amule to 2.1.3 [adam 2006-08-18]
 	Updated mail/dovecot to 1.0rc7 [ghen 2006-08-18]
 	Updated comms/asterisk to 1.2.10 [adam 2006-08-18]
+	Added audio/shntool to 2.0.3 [mrg 2006-08-18]
