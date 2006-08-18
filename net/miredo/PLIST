@@ -1,28 +1,26 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/12 08:25:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2006/08/18 13:55:46 salo Exp $
+bin/teredo-mire
 sbin/miredo
 sbin/miredo-server
+sbin/miredo-checkconf
+sbin/isatapd
 include/libteredo/teredo.h
 include/libteredo/teredo-udp.h
 include/libteredo/tunnel.h
 include/libtun6/tun6.h
+man/man1/teredo-mire.1
 man/man5/miredo-server.conf.5
 man/man5/miredo.conf.5
+man/man5/isatapd.conf.5
 man/man8/miredo-checkconf.8
 man/man8/miredo-server.8
 man/man8/miredo.8
-lib/libteredo.a
+man/man8/isatapd.8
 lib/libteredo.la
-lib/libteredo.so
-lib/libteredo.so.0
-lib/libteredo.so.0.0.0
-lib/libtun6.a
 lib/libtun6.la
-lib/libtun6.so
-lib/libtun6.so.0
-lib/libtun6.so.0.0.0
-sbin/miredo-checkconf
 share/examples/miredo/miredo.conf-dist
 share/examples/miredo/miredo-server.conf-dist
+share/examples/miredo/isatapd.conf-dist
 @dirrm include/libteredo
 @dirrm include/libtun6
 @dirrm share/examples/miredo
