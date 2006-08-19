@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/17 13:17:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/08/19 14:47:44 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -161,6 +161,7 @@ include/php/ext/standard/url_scanner.h
 include/php/ext/standard/url_scanner_ex.h
 include/php/ext/xml/expat_compat.h
 include/php/ext/xml/php_xml.h
+@exec ${MKDIR} %D/include/php/include
 include/php/main/SAPI.h
 include/php/main/build-defs.h
 include/php/main/config.w32.h
@@ -379,6 +380,7 @@ share/php/php.gif
 @dirrm include/php/ext/date/lib
 @dirrm include/php/ext/date
 @dirrm include/php/ext
+@dirrm include/php/include
 @dirrm include/php/Zend
 @dirrm include/php/TSRM
 @dirrm include/php
