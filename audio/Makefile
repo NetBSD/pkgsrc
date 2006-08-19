@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.328 2006/08/03 21:16:57 wiz Exp $
+# $NetBSD: Makefile,v 1.329 2006/08/19 00:03:50 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -245,6 +245,7 @@ SUBDIR+=	rip
 SUBDIR+=	rosegarden
 SUBDIR+=	rplay
 SUBDIR+=	rsynth
+SUBDIR+=	shntool
 SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	sidplay2
