@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/08/10 13:50:37 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2006/08/19 10:33:39 wiz Exp $
 
---- test/Makefile.in.orig	2006-08-08 23:11:40.000000000 +0000
+--- test/Makefile.in.orig	2006-08-19 00:41:58.000000000 +0000
 +++ test/Makefile.in
-@@ -55,7 +55,7 @@ host_triplet = @host@
+@@ -56,7 +56,7 @@ host_triplet = @host@
  @CAIRO_CAN_TEST_GLITZ_EGL_SURFACE_TRUE@am__append_12 = $(GLITZ_EGL_LIBS)
  @CAIRO_CAN_TEST_GLITZ_GLX_SURFACE_TRUE@am__append_13 = $(GLITZ_GLX_LIBS)
  @CAIRO_CAN_TEST_GLITZ_WGL_SURFACE_TRUE@am__append_14 = $(GLITZ_WGL_LIBS)
