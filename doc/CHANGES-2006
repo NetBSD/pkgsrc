@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1068 2006/08/19 10:34:06 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1069 2006/08/19 14:52:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4009,3 +4009,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/asterisk to 1.2.10 [adam 2006-08-18]
 	Added audio/shntool to 2.0.3 [mrg 2006-08-18]
 	Updated graphics/cairo to 1.2.4 [wiz 2006-08-19]
+	Updated lang/php5 to 5.1.4nb5 [taca 2006-08-19]
+	Updated mail/ja-squirrelmail to 1.4.8nb1 [taca 2006-08-19]
