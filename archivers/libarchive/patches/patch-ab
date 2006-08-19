@@ -1,19 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2006/05/01 09:02:38 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/19 20:46:54 joerg Exp $
 
-Don't install bsdtar, just libarchive.
-
---- Makefile.in.orig	2006-03-23 18:05:56.000000000 +0100
-+++ Makefile.in	2006-05-01 10:59:03.000000000 +0200
-@@ -39,7 +39,7 @@
- PRE_UNINSTALL = :
+--- Makefile.in.orig	2006-08-19 20:35:16.000000000 +0200
++++ Makefile.in
+@@ -38,7 +38,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
+ build_triplet = @build@
  host_triplet = @host@
 -bin_PROGRAMS = bsdtar$(EXEEXT)
 +bin_PROGRAMS =
  DIST_COMMON = README $(am__configure_deps) $(dist_man_MANS) \
  	$(include_HEADERS) $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
  	$(srcdir)/config.h.in $(top_srcdir)/configure \
-@@ -158,8 +158,8 @@
+@@ -130,8 +130,8 @@ LINK = $(LIBTOOL) --tag=CC --mode=link $
  YACCCOMPILE = $(YACC) $(YFLAGS) $(AM_YFLAGS)
  LTYACCCOMPILE = $(LIBTOOL) --mode=compile $(YACC) $(YFLAGS) \
  	$(AM_YFLAGS)
@@ -24,7 +22,7 @@ Don't install bsdtar, just libarchive.
  man1dir = $(mandir)/man1
  man3dir = $(mandir)/man3
  man5dir = $(mandir)/man5
-@@ -284,12 +284,10 @@
+@@ -258,12 +258,10 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  AUTOMAKE_OPTIONS = foreign subdir-objects
  EXTRA_DIST = version config.h.in			\
@@ -39,7 +37,7 @@ Don't install bsdtar, just libarchive.
  
  #
  # Libarchive headers, source, etc.
-@@ -348,8 +346,7 @@
+@@ -326,8 +324,7 @@ libarchive_dist_man_MANS = \
  	libarchive/archive_util.3				\
  	libarchive/archive_write.3				\
  	libarchive/libarchive.3					\
