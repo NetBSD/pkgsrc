@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.12 2006/04/24 13:52:05 dillo Exp $
+# $NetBSD: Makefile.in,v 1.13 2006/08/19 14:38:52 schwarz Exp $
 
 srcdir=		@srcdir@
 
@@ -17,6 +17,8 @@ CC=		@CC@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
 DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\" -DTAR_CMD=\"$(tar)\" -DFTP_CMD=\"$(ftp)\"
 CFLAGS=		@CFLAGS@
+
+INSTALL=	@INSTALL@
 
 LIB=	libinstall.a
 
