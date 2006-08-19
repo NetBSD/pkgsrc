@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2006/05/01 09:02:38 xtraeme Exp $
+$NetBSD: patch-aa,v 1.6 2006/08/19 20:46:54 joerg Exp $
 
---- libarchive/archive.h.in.orig	2005-10-13 01:35:04.000000000 -0400
+--- libarchive/archive.h.in.orig	2006-08-18 06:31:37.000000000 +0200
 +++ libarchive/archive.h.in
 @@ -36,7 +36,10 @@
   */
@@ -10,6 +10,6 @@ $NetBSD: patch-aa,v 1.5 2006/05/01 09:02:38 xtraeme Exp $
  #include <inttypes.h>  /* For int64_t */
 +#endif
 +#include <stdlib.h>  /* For [u]intptr_t on Interix */
+ #include <stdio.h> /* For FILE * */
  #include <unistd.h>  /* For ssize_t and size_t */
  
- #ifdef __cplusplus
