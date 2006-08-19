@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.1 2006/04/22 10:54:53 jdolecek Exp $
+$NetBSD: patch-as,v 1.2 2006/08/19 16:44:15 taca Exp $
 
---- ext/date/lib/timelib_structs.h.orig	2006-04-22 12:51:57.000000000 +0200
+--- ext/date/lib/timelib_structs.h.orig	2006-04-12 03:03:52.000000000 +0900
 +++ ext/date/lib/timelib_structs.h
 @@ -21,7 +21,7 @@
  #ifndef __TIMELIB_STRUCTS_H__
@@ -11,3 +11,15 @@ $NetBSD: patch-as,v 1.1 2006/04/22 10:54:53 jdolecek Exp $
  
  #ifdef HAVE_SYS_TYPES_H
  #include <sys/types.h>
+@@ -183,7 +183,11 @@ typedef struct _timelib_tzdb {
+ #define TIMELIB_ZONETYPE_ABBR   2
+ #define TIMELIB_ZONETYPE_ID     3
+ 
++#if defined(SIZEOF_LONG_LONG_INT) && (SIZEOF_LONG_LONG_INT == 8)
++#define SECS_PER_ERA 12622780800LL
++#else
+ #define SECS_PER_ERA 12622780800L
++#endif
+ #define SECS_PER_DAY       86400
+ #define DAYS_PER_YEAR        365
+ #define DAYS_PER_LYEAR       366
