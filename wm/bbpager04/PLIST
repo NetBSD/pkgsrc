@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2006/08/20 23:07:18 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/20 23:15:25 jschauma Exp $
 bin/bbpager
 man/man1/bbpager.1
 man/man5/bbpager.bb.5
 share/bbtools/README.bbpager
-share/bbtools/bbpager.bb
-share/bbtools/bbpager.nobb
 @unexec ${RMDIR} %D/share/bbtools 2>/dev/null || ${TRUE}
