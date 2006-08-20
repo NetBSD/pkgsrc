@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/08/19 20:46:54 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/08/20 14:56:03 joerg Exp $
 #
 
-DISTNAME=	libarchive-1.2.55
+DISTNAME=	libarchive-1.2.57
 CATEGORIES=	archivers
 MASTER_SITES=	http://people.freebsd.org/~kientzle/libarchive/src/
 
