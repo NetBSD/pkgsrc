@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.71 2006/08/20 12:16:22 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.72 2006/08/20 19:34:13 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -167,3 +167,7 @@ Pullup ticket 1796 - requested by taca
 PLIST fix for php5
 Pullup ticket 1796 (part 2) - requested by taca
 security update for php5
+Pullup ticket 1797 - requested by adrianp
+security update for horde
+Pullup ticket 1798 - requested by adrianp
+security update for imp
