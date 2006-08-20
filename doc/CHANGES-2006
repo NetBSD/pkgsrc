@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1076 2006/08/20 20:06:26 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1077 2006/08/20 21:45:11 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4018,3 +4018,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/libarchive to 1.2.57 [joerg 2006-08-20]
 	Updated emulators/gxemul to 0.4.2 [xtraeme 2006-08-20]
 	Added devel/p5-Event-RPC version 0.90 [xtraeme 2006-08-20]
+	Updated graphics/libwmf to 0.2.8.4nb4 [salo 2006-08-20]
