@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2006/08/20 23:07:18 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/20 23:16:14 jschauma Exp $
 bin/bbkeys
-bin/bbkeysconf.pl
 man/man1/bbkeys.1
-man/man5/bbkeys.bb.5
 man/man5/bbkeysrc.5
-share/bbtools/bbkeys.bb
-share/bbtools/bbkeys.nobb
-share/doc/bbkeys/AUTHORS
-share/doc/bbkeys/BUGS
-share/doc/bbkeys/ChangeLog
-share/doc/bbkeys/NEWS
-share/doc/bbkeys/README
+share/bbkeys/bbkeysrc
+share/bbkeys/defaultStyle
+share/bbtools/README.bbpager
+share/bbtools/bbpager.rc
+share/share/doc/bbkeys/AUTHORS
+share/share/doc/bbkeys/BUGS
+share/share/doc/bbkeys/ChangeLog
+share/share/doc/bbkeys/LICENSE
+share/share/doc/bbkeys/NEWS
+share/share/doc/bbkeys/README
+share/share/doc/bbkeys/TODO
+@dirrm share/share/doc/bbkeys
 @unexec ${RMDIR} %D/share/bbtools 2>/dev/null || ${TRUE}
-@dirrm share/doc/bbkeys
+@dirrm share/bbkeys
