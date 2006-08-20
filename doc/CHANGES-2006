@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1071 2006/08/19 20:47:29 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.1072 2006/08/20 09:46:22 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4013,3 +4013,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/ja-squirrelmail to 1.4.8nb1 [taca 2006-08-19]
 	Updated lang/php5 to 5.1.5 [taca 2006-08-19]
 	Updated archivers/libarchive to 1.2.55 [joerg 2006-08-19]
+	Updated www/php4 to 4.4.4 [adrianp 2006-08-20]
