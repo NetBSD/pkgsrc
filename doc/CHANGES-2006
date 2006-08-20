@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1077 2006/08/20 21:45:11 salo Exp $
+$NetBSD: CHANGES-2006,v 1.1078 2006/08/20 23:10:49 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4019,3 +4019,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/gxemul to 0.4.2 [xtraeme 2006-08-20]
 	Added devel/p5-Event-RPC version 0.90 [xtraeme 2006-08-20]
 	Updated graphics/libwmf to 0.2.8.4nb4 [salo 2006-08-20]
+	Added wm/bbkeys09 version 0.9.0 [jschauma 2006-08-20]
+	Added wm/bbpager04 version 0.4.1.1 [jschauma 2006-08-20]
+	Added wm/blackbox70 version 0.70.1 [jschauma 2006-08-20]
