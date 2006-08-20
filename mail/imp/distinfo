@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2006/06/16 09:24:36 adrianp Exp $
+$NetBSD: distinfo,v 1.14.2.1 2006/08/20 19:30:44 ghen Exp $
 
-SHA1 (imp-h3-4.1.1.tar.gz) = 08c9f9b172e0846f7ecf857e3b74188e44306fa5
-RMD160 (imp-h3-4.1.1.tar.gz) = 2bfeab260e78e26b73fd11f36b5ad55d94f6c3bb
-Size (imp-h3-4.1.1.tar.gz) = 4063589 bytes
+SHA1 (imp-h3-4.1.3.tar.gz) = 463e995e8faf96001827066046d32eac31514b4a
+RMD160 (imp-h3-4.1.3.tar.gz) = 81119c941a26642828c5d383b9095ae9ccd1afad
+Size (imp-h3-4.1.3.tar.gz) = 4178089 bytes

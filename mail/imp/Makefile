@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2006/06/16 09:24:36 adrianp Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2006/08/20 19:30:44 ghen Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
-PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
 		ftp://ftp.horde.org/pub/imp/
@@ -23,8 +22,9 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.1.1
+IMPVER=		4.1.3
 PAXDIRS=	lib locale po scripts templates themes
+BUILD_DEFS+=	APACHE_USER
 
 MESSAGE_SUBST+=	IMPDIR=${IMPDIR:Q}
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
@@ -87,7 +87,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${IMPDIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${IMPDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${IMPDIR}/config
