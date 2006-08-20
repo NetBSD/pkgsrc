@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5357 2006/08/19 11:18:15 wiz Exp $
+$NetBSD: TODO,v 1.5358 2006/08/20 12:43:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,6 +432,7 @@ Suggested package updates
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o efax-gtk-3.0.11
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -531,7 +532,7 @@ Suggested package updates
 	o gri-2.12.8
 	o grig-0.7.1
 	o gsasl-0.2.12 [pkg/33638]
-	o gsasl-0.2.13
+	o gsasl-0.2.14
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
@@ -557,7 +558,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
-	o honeyd-1.5a
+	o honeyd-1.5b
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htmldoc-1.8.27
@@ -887,6 +888,7 @@ Suggested package updates
 	o pinfo-0.6.9
 	o pioneers-0.9.64
 	o pircbot-1.4.4
+	o pkg-config-0.21
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
@@ -976,6 +978,7 @@ Suggested package updates
 	o radiance-3.7.2
 	o raine-0.43.4
 	o randread-0.2
+	o rar-bin-3.6.0
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rblcheck-1.5
@@ -1068,6 +1071,7 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
+	o tailor-0.9.26
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1104,6 +1108,7 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
+	o unrar-3.6.8
 	o upx-2.01
 	o userppp-030706
 	o valgrind-3.0.1
@@ -1122,6 +1127,7 @@ Suggested package updates
 	o wcalc-2.2.2
 	o wdm-1.28
 	o webmin-1.290
+	o weechat-2.0
 	o weewm-0.01
 	o winbind-3.0.13
 	o wine-0.9.19
