@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.79 2006/08/02 23:43:47 rillig Exp $
+# $NetBSD: bootstrap,v 1.80 2006/08/20 14:25:22 schwarz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -313,7 +313,7 @@ overpath=""
 root_user=root
 bmakexenv=
 bmakexargs=
-tnftpxenv=
+tnftpxflags=
 need_extras=no
 case "$opsys" in
 Darwin)
@@ -389,8 +389,11 @@ IRIX*)
 	bmakexenv="MAKE=pmake"
 	check_compiler=yes
 	if [ `uname -r` -lt 6 ]; then
+# IRIX 5's mkdir bails out with an error when trying to create with the -p
+# option an already existing directory
+		need_mkdir=yes
 # IRIX 5 does not have uint32_t typedef'd in sys/types.h
-		tnftpxenv="CPPFLAGS=-DUINT32_T=int"
+		tnftpxflags="-DUINT32_T=int"
 # IRIX 5 is lacking fnmatch.h and regex.h, both provided by libnbcompat
 		needfnmatchh=yes
 		needregexh=yes
@@ -586,8 +589,10 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 			else
 				compiler="ido"
 			fi
+			test -n "$CC" || CC=cc
 			;;
 		SunOS)	compiler="sunpro"
+			test -n "$CC" || CC=cc
 			;;
 		esac
 	fi
@@ -756,7 +761,7 @@ case "$need_awk" in
 yes)	echo_msg "Installing awk"
 	copy_src $pkgsrcdir/lang/nawk/files awk
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
-	run_cmd "(cd $wrkdir/awk && $bmake -f Makefile CC=\"${CC}\")"
+	run_cmd "(cd $wrkdir/awk && $bmake -f Makefile CC=\"${CC}\" CFLAGS=\"${CFLAGS}\")"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
 	run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
 	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${MKCONF_EXAMPLE}
@@ -790,7 +795,7 @@ yes)	# bootstrap tnftp
 	esac
 	echo_msg "Installing tnftp"
 	copy_src $pkgsrcdir/net/tnftp/files tnftp
-	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $tnftpxenv $shprog ./configure --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && (cd src && $bmake install))"
+	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV CPPFLAGS=\"$CPPFLAGS $tnftpxflags\" $shprog ./configure --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && (cd src && $bmake install))"
 	;;
 esac
 
