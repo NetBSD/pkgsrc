@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/05 05:32:36 martti Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2006/08/20 10:43:02 ghen Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -35,6 +35,7 @@ share/squirrelmail/contrib/RPM/config.php.redhat
 share/squirrelmail/contrib/RPM/squirrelmail.conf
 share/squirrelmail/contrib/RPM/squirrelmail.cron
 share/squirrelmail/contrib/RPM/squirrelmail.spec
+share/squirrelmail/contrib/conf.pl.8
 share/squirrelmail/contrib/decrypt_headers.php
 share/squirrelmail/contrib/squirrelmail.mailto.NT2KXP.reg
 share/squirrelmail/contrib/squirrelmail.mailto.Win9x.reg
@@ -42,12 +43,6 @@ share/squirrelmail/contrib/squirrelmail.mailto.reg
 share/squirrelmail/data/.htaccess
 share/squirrelmail/data/default_pref
 share/squirrelmail/data/index.php
-share/squirrelmail/doc/Development/addressbook.txt
-share/squirrelmail/doc/Development/index.html
-share/squirrelmail/doc/Development/mime.txt
-share/squirrelmail/doc/Development/plugin.txt
-share/squirrelmail/doc/Development/rfc_documents.txt
-share/squirrelmail/doc/Development/tree.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
@@ -65,6 +60,8 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.4.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.5.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.6.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.7.txt
 share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
@@ -317,7 +314,6 @@ share/squirrelmail/plugins/translate/README
 share/squirrelmail/plugins/translate/index.php
 share/squirrelmail/plugins/translate/options.php
 share/squirrelmail/plugins/translate/setup.php
-share/squirrelmail/po/charsetconvert.pl
 share/squirrelmail/po/compilepo
 share/squirrelmail/po/independent_strings.txt
 share/squirrelmail/po/index.php
@@ -364,12 +360,17 @@ share/squirrelmail/src/view_text.php
 share/squirrelmail/src/webmail.php
 share/squirrelmail/themes/README.themes
 share/squirrelmail/themes/alien_glow.php
+share/squirrelmail/themes/autumn.php
+share/squirrelmail/themes/autumn2.php
 share/squirrelmail/themes/black_bean_burrito_theme.php
 share/squirrelmail/themes/blue_grey_theme.php
+share/squirrelmail/themes/blue_on_blue.php
 share/squirrelmail/themes/bluesnews_theme.php
 share/squirrelmail/themes/bluesome.php
 share/squirrelmail/themes/bluesteel_theme.php
 share/squirrelmail/themes/christmas.php
+share/squirrelmail/themes/classic_blue.php
+share/squirrelmail/themes/classic_blue2.php
 share/squirrelmail/themes/css/comic-sans-08.css
 share/squirrelmail/themes/css/comic-sans-10.css
 share/squirrelmail/themes/css/comic-sans-12.css
@@ -407,6 +408,7 @@ share/squirrelmail/themes/monostochastic.php
 share/squirrelmail/themes/netstyle_theme.php
 share/squirrelmail/themes/penguin.php
 share/squirrelmail/themes/plain_blue_theme.php
+share/squirrelmail/themes/powder_blue.php
 share/squirrelmail/themes/purple_theme.php
 share/squirrelmail/themes/random.php
 share/squirrelmail/themes/redmond.php
@@ -422,6 +424,8 @@ share/squirrelmail/themes/slashdot_theme.php
 share/squirrelmail/themes/spice_of_life.php
 share/squirrelmail/themes/spice_of_life_dark.php
 share/squirrelmail/themes/spice_of_life_lite.php
+share/squirrelmail/themes/techno_blue.php
+share/squirrelmail/themes/turquoise.php
 share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/themes/css
 @dirrm share/squirrelmail/themes
@@ -462,7 +466,6 @@ share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/doc/ReleaseNotes/1.3
 @dirrm share/squirrelmail/doc/ReleaseNotes/1.2
 @dirrm share/squirrelmail/doc/ReleaseNotes
-@dirrm share/squirrelmail/doc/Development
 @dirrm share/squirrelmail/doc
 @dirrm share/squirrelmail/data
 @dirrm share/squirrelmail/contrib/RPM
