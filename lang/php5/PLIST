@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/05/06 22:42:44 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2006/08/20 11:04:03 ghen Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -161,6 +161,7 @@ include/php/ext/standard/url_scanner.h
 include/php/ext/standard/url_scanner_ex.h
 include/php/ext/xml/expat_compat.h
 include/php/ext/xml/php_xml.h
+@exec ${MKDIR} %D/include/php/include
 include/php/main/SAPI.h
 include/php/main/build-defs.h
 include/php/main/config.w32.h
@@ -214,6 +215,8 @@ lib/php/.depdb
 lib/php/.depdblock
 lib/php/.filemap
 lib/php/.lock
+@exec ${MKDIR} %D/lib/php/.registry/.channel.__uri
+@exec ${MKDIR} %D/lib/php/.registry/.channel.pecl.php.net
 lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
 lib/php/.registry/pear.reg
@@ -367,7 +370,6 @@ share/php/php.gif
 @dirrm include/php/regex
 @dirrm include/php/main/streams
 @dirrm include/php/main
-@dirrm include/php/include
 @dirrm include/php/ext/xml
 @dirrm include/php/ext/standard
 @dirrm include/php/ext/session
@@ -378,6 +380,7 @@ share/php/php.gif
 @dirrm include/php/ext/date/lib
 @dirrm include/php/ext/date
 @dirrm include/php/ext
+@dirrm include/php/include
 @dirrm include/php/Zend
 @dirrm include/php/TSRM
 @dirrm include/php
