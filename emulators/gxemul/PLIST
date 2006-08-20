@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/07/02 11:35:23 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/20 16:27:44 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -27,16 +27,12 @@ share/doc/gxemul/20041213-debian_4.png
 share/doc/gxemul/20041213-debian_4_small.gif
 share/doc/gxemul/20050317-example.png
 share/doc/gxemul/20050317-example_small.png
-share/doc/gxemul/20050413-netbsd-cobalt.png
-share/doc/gxemul/20050413-netbsd-cobalt_small.png
 share/doc/gxemul/20050427-netbsd-hpcmips-1.png
 share/doc/gxemul/20050427-netbsd-hpcmips-1_small.png
 share/doc/gxemul/20050427-netbsd-hpcmips-2.png
 share/doc/gxemul/20050427-netbsd-hpcmips-2_small.png
 share/doc/gxemul/20050617-openbsd-sgi.png
 share/doc/gxemul/20050617-openbsd-sgi_small.png
-share/doc/gxemul/20050622-netbsd-evbmips-malta.png
-share/doc/gxemul/20050622-netbsd-evbmips-malta_small.png
 share/doc/gxemul/20050817-sgi-o2-success-7.png
 share/doc/gxemul/20050817-sgi-o2-success-7_small.png
 share/doc/gxemul/20050817-sgi-o2-success-8.png
@@ -53,6 +49,16 @@ share/doc/gxemul/20060504-gdb-64bit-mips.png
 share/doc/gxemul/20060504-gdb-64bit-mips_small.png
 share/doc/gxemul/20060623-netbsd-sgimips-3.0.png
 share/doc/gxemul/20060623-netbsd-sgimips-3.0_small.png
+share/doc/gxemul/20060724-netbsd-netwinder-1.png
+share/doc/gxemul/20060724-netbsd-netwinder-1_small.png
+share/doc/gxemul/20060724-netbsd-netwinder-2.png
+share/doc/gxemul/20060724-netbsd-netwinder-2_small.png
+share/doc/gxemul/20060812-netbsd-cobalt-3.0.1.png
+share/doc/gxemul/20060812-netbsd-cobalt-3.0.1_small.png
+share/doc/gxemul/20060812-netbsd-malta-3.0.1.png
+share/doc/gxemul/20060812-netbsd-malta-3.0.1_small.png
+share/doc/gxemul/20060814-netbsd-algor-3.0.1.png
+share/doc/gxemul/20060814-netbsd-algor-3.0.1_small.png
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
 share/doc/gxemul/Makefile
