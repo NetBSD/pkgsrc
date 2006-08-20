@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2006/08/19 20:46:54 joerg Exp $
+$NetBSD: distinfo,v 1.12 2006/08/20 14:56:03 joerg Exp $
 
-SHA1 (libarchive-1.2.55.tar.gz) = 2a1805c451ef286b64eb3de789fe360339309dcc
-RMD160 (libarchive-1.2.55.tar.gz) = a735788a5a6d53ae0dcd0f561ea4e2f3e3fcb339
-Size (libarchive-1.2.55.tar.gz) = 534310 bytes
-SHA1 (patch-aa) = 87364be23d093c6b584bcd805d4aed4d20f5374a
-SHA1 (patch-ab) = c7606619dc22ddbc405817f4216b9a758c96d602
+SHA1 (libarchive-1.2.57.tar.gz) = 70bf5a0a6a8af4cefda412db5a2ba53724e9e3e8
+RMD160 (libarchive-1.2.57.tar.gz) = 238a44ec554aa4fc5ae795c1af3640d253f36445
+Size (libarchive-1.2.57.tar.gz) = 536128 bytes
+SHA1 (patch-ab) = 5e92405b0898123d8240f332475d13abe85f8ad3
