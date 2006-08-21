@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1079 2006/08/21 13:26:06 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.1080 2006/08/21 16:23:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4023,3 +4023,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added wm/bbpager04 version 0.4.1.1 [jschauma 2006-08-20]
 	Added wm/blackbox70 version 0.70.1 [jschauma 2006-08-20]
 	Added sysutils/tphdisk version 20050112 [gdt 2006-08-21]
+	Updated devel/monotone to 0.29 [jmmv 2006-08-21]
+	Updated devel/monotone-server to 0.29 [jmmv 2006-08-21]
