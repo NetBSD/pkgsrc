@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1080 2006/08/21 16:23:42 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1081 2006/08/21 17:56:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4025,3 +4025,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/tphdisk version 20050112 [gdt 2006-08-21]
 	Updated devel/monotone to 0.29 [jmmv 2006-08-21]
 	Updated devel/monotone-server to 0.29 [jmmv 2006-08-21]
+	Updated audio/libtunepimp0.4 to 0.4.2nb2 [salo 2006-08-21]
