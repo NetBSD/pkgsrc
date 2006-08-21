@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2006/08/21 17:55:01 salo Exp $
+
+Security fix for CVE-2006-3600, from MusicBrainz SVN.
+
+--- lib/lookuptools.cpp.orig	2006-01-28 21:35:42.000000000 +0100
++++ lib/lookuptools.cpp	2006-08-21 16:43:11.000000000 +0200
+@@ -51,7 +51,7 @@
+     musicbrainz_t  o;
+     char          *args[7];
+     int            ret, trackNum;
+-    char           error[255], data[255], trackURI[256],
++    char           error[256], data[256], trackURI[256],
+                    artistURI[256], albumURI[256];
+     char           temp[100], duration[100], status[100];
+ 
+@@ -160,7 +160,7 @@
+             if (mb_Select1(o, MBS_SelectReleaseDate, j))
+             {
+                 // Pull back the release date and release country
+-                if (mb_GetResultData(o, MBE_ReleaseGetDate, temp, 256))
++                if (mb_GetResultData(o, MBE_ReleaseGetDate, temp, 100))
+                 {
+                     int month = 0, day = 0, year = 0;
+ 
