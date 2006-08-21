@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1078 2006/08/20 23:10:49 jschauma Exp $
+$NetBSD: CHANGES-2006,v 1.1079 2006/08/21 13:26:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added wm/bbkeys09 version 0.9.0 [jschauma 2006-08-20]
 	Added wm/bbpager04 version 0.4.1.1 [jschauma 2006-08-20]
 	Added wm/blackbox70 version 0.70.1 [jschauma 2006-08-20]
+	Added sysutils/tphdisk version 20050112 [gdt 2006-08-21]
