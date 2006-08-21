@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/06 18:09:53 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/08/21 17:29:33 dbj Exp $
 bin/qemu
 bin/qemu-img
 bin/qemu-system-arm
@@ -8,6 +8,8 @@ bin/qemu-system-ppc
 bin/qemu-system-sparc
 bin/qemu-system-x86_64
 share/doc/qemu/Makefile.multinode-NetBSD
+share/doc/qemu/qemu-doc.html
+share/doc/qemu/qemu-tech.html
 share/qemu/bios.bin
 share/qemu/keymaps/ar
 share/qemu/keymaps/common
