@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5359 2006/08/20 14:51:59 peter Exp $
+$NetBSD: TODO,v 1.5360 2006/08/21 20:21:28 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -558,7 +558,6 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
-	o honeyd-1.5b
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htmldoc-1.8.27
