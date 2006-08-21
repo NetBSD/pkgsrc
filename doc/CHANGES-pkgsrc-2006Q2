@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.72 2006/08/20 19:34:13 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.73 2006/08/21 07:04:00 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -171,3 +171,5 @@ Pullup ticket 1797 - requested by adrianp
 security update for horde
 Pullup ticket 1798 - requested by adrianp
 security update for imp
+Pullup ticket 1799 - requested by salo
+security fix for libwmf
