@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2006/08/20 23:08:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.86 2006/08/21 21:31:59 kristerw Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -12,9 +12,9 @@ SUBDIR+=	amaterus
 SUBDIR+=	amiwm
 SUBDIR+=	bbconf
 SUBDIR+=	bbkeys
-SUBDIR+=	bbkeys04
+SUBDIR+=	bbkeys09
 SUBDIR+=	bbpager
-SUBDIR+=	bbpager09
+SUBDIR+=	bbpager04
 SUBDIR+=	bbrun
 SUBDIR+=	blackbox
 SUBDIR+=	blackbox70
