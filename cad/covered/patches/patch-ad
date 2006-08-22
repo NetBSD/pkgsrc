@@ -1,0 +1,56 @@
+$NetBSD: patch-ad,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/signal.h.orig	2006-08-22 18:42:16.000000000 +0000
++++ src/signal.h
+@@ -14,40 +14,40 @@
+ 
+ 
+ /*! \brief Initializes specified signal with specified values. */
+-void signal_init( signal* sig, char* name, vector* value, int lsb );
++void signal_init( signal_s* sig, char* name, vector* value, int lsb );
+ 
+ /*! \brief Creates a new signal based on the information passed to this function. */
+-signal* signal_create( char* name, int width, int lsb );
++signal_s* signal_create( char* name, int width, int lsb );
+ 
+ /*! \brief Outputs this signal information to specified file. */
+-void signal_db_write( signal* sig, FILE* file );
++void signal_db_write( signal_s* sig, FILE* file );
+ 
+ /*! \brief Reads signal information from specified file. */
+ bool signal_db_read( char** line, module* curr_mod );
+ 
+ /*! \brief Reads and merges two signals, placing result into base signal. */
+-bool signal_db_merge( signal* base, char** line, bool same );
++bool signal_db_merge( signal_s* base, char** line, bool same );
+ 
+ /*! \brief Sets value of currently waiting bit of signal to specified value. */
+-void signal_set_wait_bit( signal* sig, int val );
++void signal_set_wait_bit( signal_s* sig, int val );
+ 
+ /*! \brief Gets value of currently waiting bit of signal. */
+-int signal_get_wait_bit( signal* sig );
++int signal_get_wait_bit( signal_s* sig );
+ 
+ /*! \brief Assigns specified VCD value to specified signal. */
+-void signal_vcd_assign( signal* sig, char* value, int msb, int lsb );
++void signal_vcd_assign( signal_s* sig, char* value, int msb, int lsb );
+ 
+ /*! \brief Adds an expression to the signal list. */
+-void signal_add_expression( signal* sig, expression* expr );
++void signal_add_expression( signal_s* sig, expression* expr );
+ 
+ /*! \brief Displays signal contents to standard output. */
+-void signal_display( signal* sig );
++void signal_display( signal_s* sig );
+ 
+ /*! \brief Converts a string to a signal. */
+-signal* signal_from_string( char** str );
++signal_s* signal_from_string( char** str );
+ 
+ /*! \brief Deallocates the memory used for this signal. */
+-void signal_dealloc( signal* sig );
++void signal_dealloc( signal_s* sig );
+ 
+ 
+ /*

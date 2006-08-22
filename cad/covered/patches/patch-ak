@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/param.c.orig	2006-08-22 18:51:23.000000000 +0000
++++ src/param.c
+@@ -369,7 +369,7 @@ void param_find_and_set_expr_value( expr
+  Sizes the specified signal according to the value of the specified
+  instance parameter value.
+ */
+-bool param_set_sig_size( signal* sig, inst_parm* icurr ) {
++bool param_set_sig_size( signal_s* sig, inst_parm* icurr ) {
+ 
+   bool established = FALSE;  /* Specifies if current signal size is fully established */
+   int  bit_sel;              /* MSB/LSB bit select value from instance parameter      */

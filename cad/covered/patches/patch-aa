@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/24 18:38:06 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/22 17:00:24 joerg Exp $
 
---- doc/Makefile.orig	Sun Aug 17 03:13:41 2003
+--- doc/Makefile.orig	2003-08-17 03:13:41.000000000 +0000
 +++ doc/Makefile
-@@ -1,13 +1,13 @@
+@@ -1,13 +1,12 @@
  all:
- 	- doxygen covered.dox
+-	- doxygen covered.dox
 -	- cd ./user; make all
 +	- cd ./user; ${MAKE} all
  

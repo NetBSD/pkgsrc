@@ -1,0 +1,54 @@
+$NetBSD: patch-af,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/db.c.orig	2004-03-16 05:45:43.000000000 +0000
++++ src/db.c
+@@ -543,7 +543,7 @@ void db_add_override_param( char* inst_n
+  Creates a vector parameter for the specified signal or expression with the specified
+  parameter expression.  This function is called by the parser.
+ */
+-void db_add_vector_param( signal* sig, expression* parm_exp, int type ) {
++void db_add_vector_param( signal_s* sig, expression* parm_exp, int type ) {
+ 
+   mod_parm* mparm;   /* Holds newly created module parameter                        */
+   mod_inst* inst;    /* Pointer to instance that is found to contain current module */
+@@ -607,8 +607,8 @@ void db_add_defparam( char* name, expres
+ */
+ void db_add_signal( char* name, static_expr* left, static_expr* right ) {
+ 
+-  signal   tmpsig;  /* Temporary signal for signal searching */
+-  signal*  sig;     /* Container for newly created signal    */
++  signal_s   tmpsig;  /* Temporary signal for signal searching */
++  signal_s*  sig;     /* Container for newly created signal    */
+   int      lsb;     /* Signal LSB                            */
+   int      width;   /* Signal width                          */
+ 
+@@ -634,7 +634,7 @@ void db_add_signal( char* name, static_e
+     if( (lsb != -1) && (width != -1) ) { 
+       sig = signal_create( name, width, lsb );
+     } else {
+-      sig = (signal*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
++      sig = (signal_s*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
+       signal_init( sig, strdup_safe( name, __FILE__, __LINE__ ), (vector*)malloc_safe( sizeof( vector ), __FILE__, __LINE__ ), lsb );
+       sig->value->width = width;      
+       sig->value->value = NULL;
+@@ -661,9 +661,9 @@ void db_add_signal( char* name, static_e
+  Searches current module for signal matching the specified name.  If the signal is
+  found, returns a pointer to the calling function for that signal.
+ */
+-signal* db_find_signal( char* name ) {
++signal_s* db_find_signal( char* name ) {
+ 
+-  signal    sig;   /* Temporary signal for comparison purposes */
++  signal_s  sig;   /* Temporary signal for comparison purposes */
+   sig_link* sigl;  /* Temporary pointer to signal link element */
+ 
+   snprintf( user_msg, USER_MSG_LENGTH, "In db_find_signal, searching for signal %s", name );
+@@ -1158,7 +1158,7 @@ void db_vcd_upscope() {
+ void db_assign_symbol( char* name, char* symbol, int msb, int lsb ) {
+ 
+   sig_link* slink;   /* Pointer to signal containing this symbol */
+-  signal    tmpsig;  /* Temporary signal to search for           */
++  signal_s  tmpsig;  /* Temporary signal to search for           */
+ 
+   snprintf( user_msg, USER_MSG_LENGTH, "In db_assign_symbol, name: %s, symbol: %s, curr_inst_scope: %s, msb: %d, lsb: %d",
+             name, symbol, curr_inst_scope, msb, lsb );

@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/param.h.orig	2006-08-22 18:51:54.000000000 +0000
++++ src/param.h
+@@ -41,7 +41,7 @@ void defparam_add( char* scope, vector* 
+ void param_set_expr_size( expression* expr, inst_parm* icurr );
+ 
+ /*! \brief Sets the specified signal size according to the specified instance parameter and resizes attached expressions. */
+-bool param_set_sig_size( signal* sig, inst_parm* icurr );
++bool param_set_sig_size( signal_s* sig, inst_parm* icurr );
+ 
+ /*! \brief Transforms a declared module parameter into an instance parameter. */
+ void param_resolve_declared( char* mscope, mod_parm* mparm, inst_parm* ip_head, inst_parm** ihead, inst_parm** itail );

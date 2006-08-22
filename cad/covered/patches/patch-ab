@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2005/03/01 00:13:44 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/22 17:00:24 joerg Exp $
 
 --- src/parser.y.orig	2004-03-16 05:45:43.000000000 +0000
-+++ src/parser.y	2005-02-28 21:12:13.000000000 +0000
-@@ -62,10 +62,24 @@
++++ src/parser.y
+@@ -61,12 +61,26 @@ int yydebug = 1; 
+    YYLLOC_DEFAULT macro that makes up a yylloc value from existing
     values. I need to supply an explicit version to account for the
     text field, that otherwise won't be copied. */
 -# define YYLLOC_DEFAULT(Current, Rhs, N)         \
@@ -33,3 +34,22 @@ $NetBSD: patch-ab,v 1.1 2005/03/01 00:13:44 dmcmahill Exp $
 +    while (0)
  
  %}
+ 
+@@ -75,7 +89,7 @@ int yydebug = 1; 
+   int	          integer;
+   vector*         number;
+   double          realtime;
+-  signal*         sig;
++  signal_s*         sig;
+   expression*     expr;
+   statement*      state;
+   static_expr*    statexp;
+@@ -3025,7 +3039,7 @@ dr_strength1
+ event_control
+   : '@' IDENTIFIER
+     {
+-      signal*     sig;
++      signal_s*     sig;
+       expression* tmp;
+       if( ignore_mode == 0 ) {
+         sig = db_find_signal( $2 );
