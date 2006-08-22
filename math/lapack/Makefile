@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:29 tv Exp $
+# $NetBSD: Makefile,v 1.21 2006/08/22 23:27:23 joerg Exp $
 #
 
 DISTNAME=	lapack
@@ -20,7 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/LAPACK
 DIST_SUBDIR=		lapack-20010201
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		YES
 BUILD_TARGET=		lapacklib
 
