@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/link.c.orig	2006-08-22 18:50:42.000000000 +0000
++++ src/link.c
+@@ -145,7 +145,7 @@ void exp_link_add( expression* expr, exp
+  Sets next pointer of element to NULL, sets the tail element to point
+  to the new element and sets the tail value to the new element.
+ */
+-void sig_link_add( signal* sig, sig_link** head, sig_link** tail ) {
++void sig_link_add( signal_s* sig, sig_link** head, sig_link** tail ) {
+ 
+   sig_link* tmp;   /* Temporary pointer to newly created sig_link element */
+ 
+@@ -396,7 +396,7 @@ exp_link* exp_link_find( expression* exp
+  a matching signal is found, the pointer to this element is returned.  If the specified
+  signal could not be matched, the value of NULL is returned.
+ */
+-sig_link* sig_link_find( signal* sig, sig_link* head ) {
++sig_link* sig_link_find( signal_s* sig, sig_link* head ) {
+ 
+   sig_link* curr;    /* Pointer to current sig_link link */
+ 

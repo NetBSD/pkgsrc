@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/binding.c.orig	2006-08-22 18:54:50.000000000 +0000
++++ src/binding.c
+@@ -187,7 +187,7 @@ void bind_remove( int id ) {
+ */
+ bool bind_perform( char* sig_name, expression* exp, module* mod_sig, module* mod_exp, bool implicit_allowed, bool fsm_bind ) {
+ 
+-  signal    tsig;           /* Temporary signal for comparison purposes          */
++  signal_s  tsig;           /* Temporary signal for comparison purposes          */
+   sig_link* sigl;           /* Pointer to found signal in specified module       */
+   char*     tmpname;        /* Temporary name containing unused signal character */
+   bool      retval = TRUE;  /* Return value for this function                    */
