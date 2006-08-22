@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.74 2006/08/21 23:41:26 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.75 2006/08/22 08:25:35 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -175,3 +175,5 @@ Pullup ticket 1799 - requested by salo
 security fix for libwmf
 Pullup ticket 1801 - requested by adrianp
 security update for honeyd
+Pullup ticket 1800 - requested by salo
+security fix for libtunepimp
