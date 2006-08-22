@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2006/08/22 14:32:11 joerg Exp $
+
+--- configure.orig	2006-08-22 16:07:31.000000000 +0000
++++ configure
+@@ -31804,7 +31804,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetPUID
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ltunepimp  $LIBS"
++LIBS="-ltunepimp $PTHREAD_LDFLAGS $PTHREAD_LIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -31874,7 +31874,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ltunepimp  $LIBS"
++LIBS="-ltunepimp $PTHREAD_LDFLAGS $PTHREAD_LIBS  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
