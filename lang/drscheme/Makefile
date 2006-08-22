@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/07/22 04:46:16 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2006/08/22 20:17:23 joerg Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -28,6 +28,11 @@ USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 
 USE_LANGUAGES=		c c++
+
+SUBST_CLASSES+=		x11root
+SUBST_STAGE.x11root=	post-patch
+SUBST_FILES.x11root=	${WRKDIR}/plt/collects/sgl/makefile.ss
+SUBST_SED.x11root=	-e 's,/usr/X11R6,${X11BASE},'
 
 DRSCHEME_VERSION=	209
 
