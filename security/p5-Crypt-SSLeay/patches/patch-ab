@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2006/08/22 22:04:51 abs Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/22 23:10:57 abs Exp $
 
 --- SSLeay.xs.orig	2003-05-28 07:55:02.000000000 +0100
 +++ SSLeay.xs
@@ -11,22 +11,12 @@ $NetBSD: patch-ab,v 1.1 2006/08/22 22:04:51 abs Exp $
                 SSL_load_error_strings();
                 ERR_load_crypto_strings();
  	       bNotFirstTime = 1;
-@@ -130,10 +130,15 @@ SSL_CTX_new(packname, ssl_version)
+@@ -130,6 +130,8 @@ SSL_CTX_new(packname, ssl_version)
  		/* v2 is the default */
  		ctx = SSL_CTX_new(SSLv2_client_method());
  	}		
--	SSL_CTX_set_options(ctx,SSL_OP_ALL|0);
 +	if (ctx == 0)
 +	   croak("SSL_CTX_new failed");
-+	else
-+	    {
-+	    SSL_CTX_set_options(ctx,SSL_OP_ALL|0);
+ 	SSL_CTX_set_options(ctx,SSL_OP_ALL|0);
  
--	SSL_CTX_set_default_verify_paths(ctx);
--	SSL_CTX_set_verify(ctx, SSL_VERIFY_NONE, NULL);
-+	    SSL_CTX_set_default_verify_paths(ctx);
-+	    SSL_CTX_set_verify(ctx, SSL_VERIFY_NONE, NULL);
-+	    }
- 
- 	RETVAL = ctx;
- 
+ 	SSL_CTX_set_default_verify_paths(ctx);
