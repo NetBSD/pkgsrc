@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5362 2006/08/22 13:27:47 gdt Exp $
+$NetBSD: TODO,v 1.5363 2006/08/22 18:22:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -283,7 +283,7 @@ Suggested package updates
 	o REminiscence-0.1.8
 	o RealPlayerGold-10.0.8
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.5
+	o TeXmacs-1.0.6.6
 	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
@@ -333,7 +333,8 @@ Suggested package updates
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
-	o at-spi-1.7.10
+	o at-spi-1.7.11
+	o atk-1.12.2
 	o autogen-5.8.5
 	o avcheck-0.91
 	o avl-2.0.1
@@ -367,6 +368,7 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.11.0
+	o capc-calc-2.12.0.8
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbrowser-0.8 [pkg/30972]
@@ -396,6 +398,7 @@ Suggested package updates
 	o cuetools-1.3.1
 	o cups-1.2.2
 	o cvs2p4-2.5.5 [schmonz]
+	o cvsd-1.0.13
 	o cvsweb-3.0.6
 	o cweb-3.64a
 	o cy-login-1.5.28
@@ -418,12 +421,13 @@ Suggested package updates
 	o diffstat-1.43
 	o dirac-0.6.0
 	o dirdiff-2.1
+	o dnetc-2.9012 [pkg/34247]
 	o dnsmasq-2.33
 	o dnstop-20050405
 	o dnstracer-1.8
 	o drscheme-352
 	o dvdauthor-0.6.11
-	o dvdrip-0.97.13
+	o dvdrip-0.98.0
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
@@ -505,14 +509,14 @@ Suggested package updates
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
-	o glade-3.0.0
+	o glade-3.0.1
 	o gld-1.7
 	o glibmm-2.12.0
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-pilot-2.0.13
-	o gnome-speech-0.4.3
+	o gnome-speech-0.4.4
 	o gnome-spell-1.0.7
 	o gnome-vfsmm-2.16.0
 	o gnomeicu-0.99.10
@@ -543,8 +547,9 @@ Suggested package updates
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtk2+-2.10.2 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
+	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
-	o gtkmm-2.10.0
+	o gtkmm-2.10.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -564,7 +569,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hydrogen-0.9.2
 	o hylafax-4.3.0
-	o hyperestraier-1.3.7
+	o hyperestraier-1.3.9
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -702,7 +707,7 @@ Suggested package updates
 	o mpop-0.8.3
 	o mrproject-0.9.1
 	o mserv-devel-0.41
-	o msmtp-1.4.6
+	o msmtp-1.4.7
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.0.5
@@ -848,6 +853,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.14.1
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
@@ -935,7 +941,7 @@ Suggested package updates
 	o py-curl-7.15.5
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
-	o py-gobject-2.11.1
+	o py-gobject-2.11.3
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
@@ -956,12 +962,13 @@ Suggested package updates
 	o py-urwid-0.8.8
 	o py-wxWidgets-2.6.3.0
 	o py-xmltools-1.4.0
+	o py-yaml-3.04
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qdbm-1.8.68
+	o qdbm-1.8.70
 	o qemu-0.8.2
 	o qt1-1.45
 	o qt2-designer-2.3.2
@@ -1027,6 +1034,7 @@ Suggested package updates
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
+	o skf-1.93.11 [pkg/34251]
 	o skill-4.1.2
 	o skkinput-2.06.4
 	o skype-1.3.0.30
@@ -1179,7 +1187,7 @@ Suggested package updates
 	o xrmap-2.33
 	o xrn-9.02
 	o xskat-4.0
-	o xterm-216
+	o xterm-217
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
