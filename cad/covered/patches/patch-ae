@@ -1,0 +1,121 @@
+$NetBSD: patch-ae,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/signal.c.orig	2006-08-22 18:49:38.000000000 +0000
++++ src/signal.c
+@@ -40,7 +40,7 @@ extern char   user_msg[USER_MSG_LENGTH];
+  creating temporary signals (reduces the need for dynamic memory allocation).
+  for performance enhancing purposes.
+ */
+-void signal_init( signal* sig, char* name, vector* value, int lsb ) {
++void signal_init( signal_s* sig, char* name, vector* value, int lsb ) {
+ 
+   sig->name     = name;
+   sig->value    = value;
+@@ -62,11 +62,11 @@ void signal_init( signal* sig, char* nam
+  values for a signal and returns a pointer to this newly created
+  signal.
+ */
+-signal* signal_create( char* name, int width, int lsb ) {
++signal_s* signal_create( char* name, int width, int lsb ) {
+ 
+-  signal* new_sig;       /* Pointer to newly created signal */
++  signal_s* new_sig;       /* Pointer to newly created signal */
+ 
+-  new_sig = (signal*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
++  new_sig = (signal_s*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
+ 
+   signal_init( new_sig, strdup_safe( name, __FILE__, __LINE__ ), vector_create( width, TRUE ), lsb );
+ 
+@@ -82,7 +82,7 @@ signal* signal_create( char* name, int w
+  specified file.  This file will be the database coverage file
+  for this design.
+ */
+-void signal_db_write( signal* sig, FILE* file ) {
++void signal_db_write( signal_s* sig, FILE* file ) {
+ 
+   exp_link* curr;      /* Pointer to current expression link element */
+ 
+@@ -125,7 +125,7 @@ bool signal_db_read( char** line, module
+ 
+   bool       retval = TRUE;  /* Return value for this function                   */
+   char       name[256];      /* Name of current signal                           */
+-  signal*    sig;            /* Pointer to the newly created signal              */
++  signal_s*    sig;            /* Pointer to the newly created signal              */
+   vector*    vec;            /* Vector value for this signal                     */
+   int        lsb;            /* Least-significant bit of this signal             */
+   int        exp_id;         /* Expression ID                                    */
+@@ -226,7 +226,7 @@ bool signal_db_read( char** line, module
+  If both signals are the same, perform the merge on the signal's 
+  vectors.
+ */
+-bool signal_db_merge( signal* base, char** line, bool same ) {
++bool signal_db_merge( signal_s* base, char** line, bool same ) {
+  
+   bool retval;         /* Return value of this function        */
+   char name[256];      /* Name of current signal               */
+@@ -269,7 +269,7 @@ bool signal_db_merge( signal* base, char
+ 
+  Sets the wait bit in the specified signal to the specified value.
+ */
+-void signal_set_wait_bit( signal* sig, int val ) {
++void signal_set_wait_bit( signal_s* sig, int val ) {
+ 
+   assert( sig != NULL );
+   assert( sig->value != NULL );
+@@ -286,7 +286,7 @@ void signal_set_wait_bit( signal* sig, i
+ 
+  Gets the value of the wait bit from the specified signal.
+ */
+-int signal_get_wait_bit( signal* sig ) {
++int signal_get_wait_bit( signal_s* sig ) {
+ 
+   assert( sig != NULL );
+   assert( sig->value != NULL );
+@@ -306,7 +306,7 @@ int signal_get_wait_bit( signal* sig ) {
+  iterates through its expression list, setting the TRUE and FALSE bits accordingly.
+  Finally, calls the simulator expr_changed function for each expression.
+ */
+-void signal_vcd_assign( signal* sig, char* value, int msb, int lsb ) {
++void signal_vcd_assign( signal_s* sig, char* value, int msb, int lsb ) {
+ 
+   exp_link* curr_expr;  /* Pointer to current expression link under evaluation      */
+ 
+@@ -344,7 +344,7 @@ void signal_vcd_assign( signal* sig, cha
+  Adds the specified expression to the end of this signal's expression
+  list.
+ */
+-void signal_add_expression( signal* sig, expression* expr ) {
++void signal_add_expression( signal_s* sig, expression* expr ) {
+ 
+   exp_link_add( expr, &(sig->exp_head), &(sig->exp_tail) );
+ 
+@@ -355,7 +355,7 @@ void signal_add_expression( signal* sig,
+ 
+  Displays signal's name, width, lsb and value vector to the standard output.
+ */
+-void signal_display( signal* sig ) {
++void signal_display( signal_s* sig ) {
+ 
+   assert( sig != NULL );
+ 
+@@ -375,9 +375,9 @@ void signal_display( signal* sig ) {
+  signal may be a standard signal name, a single bit select signal or a
+  multi-bit select signal.
+ */
+-signal* signal_from_string( char** str ) {
++signal_s* signal_from_string( char** str ) {
+ 
+-  signal* sig;         /* Pointer to newly created signal       */
++  signal_s* sig;         /* Pointer to newly created signal       */
+   char    name[4096];  /* Signal name                           */
+   int     msb;         /* MSB of signal                         */
+   int     lsb;         /* LSB of signal                         */
+@@ -408,7 +408,7 @@ signal* signal_from_string( char** str )
+  Deallocates all malloc'ed memory back to the heap for the specified
+  signal.
+ */
+-void signal_dealloc( signal* sig ) {
++void signal_dealloc( signal_s* sig ) {
+ 
+   exp_link* curr_expl;   /* Pointer to current expression link to set to NULL */
+ 
