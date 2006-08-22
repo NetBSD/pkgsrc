@@ -1,0 +1,121 @@
+$NetBSD: patch-ae,v 1.5 2006/08/22 20:17:23 joerg Exp $
+
+--- mzscheme/gc/os_dep.c.orig	2004-12-19 08:38:26.000000000 +0000
++++ mzscheme/gc/os_dep.c
+@@ -80,7 +80,7 @@
+ #   define NEED_FIND_LIMIT
+ # endif
+ 
+-#if defined(FREEBSD) && defined(I386)
++#if (defined(FREEBSD) || defined(DRAGONFLY)) && defined(I386)
+ #  include <machine/trap.h>
+ #  if !defined(PCR)
+ #    define NEED_FIND_LIMIT
+@@ -129,7 +129,7 @@
+ 
+ #ifdef UNIX_LIKE
+ # include <fcntl.h>
+-# if defined(SUNOS5SIGS) && !defined(FREEBSD)
++# if defined(SUNOS5SIGS) && !(defined(FREEBSD) || defined(DRAGONFLY))
+ #  include <sys/siginfo.h>
+ # endif
+   /* Define SETJMP and friends to be the version that restores	*/
+@@ -1385,7 +1385,7 @@ int * etext_addr;
+ }
+ # endif
+ 
+-# if defined(FREEBSD) && defined(I386) && !defined(PCR)
++# if (defined(FREEBSD) || defined(DRAGONFLY)) && defined(I386) && !defined(PCR)
+ /* Its unclear whether this should be identical to the above, or 	*/
+ /* whether it should apply to non-X86 architectures.			*/
+ /* For now we don't assume that there is always an empty page after	*/
+@@ -2253,7 +2253,7 @@ GC_bool is_ptrfree;
+ # endif /* !DARWIN */
+ # endif /* MSWIN32 || MSWINCE || DARWIN */
+ 
+-#if defined(SUNOS4) || (defined(FREEBSD) && !defined(SUNOS5SIGS))
++#if defined(SUNOS4) || ((defined(FREEBSD) || defined(DRAGONFLY)) && !defined(SUNOS5SIGS))
+     typedef void (* SIG_PF)();
+ #endif /* SUNOS4 || (FREEBSD && !SUNOS5SIGS) */
+ 
+@@ -2282,7 +2282,7 @@ GC_bool is_ptrfree;
+ #endif /* IRIX5 || OSF1 || HURD */
+ 
+ #if defined(SUNOS5SIGS)
+-# if defined(HPUX) || defined(FREEBSD)
++# if defined(HPUX) || (defined(FREEBSD) || defined(DRAGONFLY))
+ #   define SIGINFO_T siginfo_t
+ # else
+ #   define SIGINFO_T struct siginfo
+@@ -2387,7 +2387,7 @@ SIG_PF GC_old_segv_handler;	/* Also old 
+ 
+ /*ARGSUSED*/
+ #if !defined(DARWIN)
+-# if defined (SUNOS4) || (defined(FREEBSD) && !defined(SUNOS5SIGS))
++# if defined (SUNOS4) || ((defined(FREEBSD) || defined(DRAGONFLY)) && !defined(SUNOS5SIGS))
+     void GC_write_fault_handler(sig, code, scp, addr)
+     int sig, code;
+     struct sigcontext *scp;
+@@ -2398,7 +2398,7 @@ SIG_PF GC_old_segv_handler;	/* Also old 
+               	    || (FC_CODE(code) == FC_OBJERR \
+               	       && FC_ERRNO(code) == FC_PROT))
+ #   endif
+-#   ifdef FREEBSD
++#   if (defined(FREEBSD) || defined(DRAGONFLY))
+ #     define SIG_OK (sig == SIGBUS)
+ #     define CODE_OK (code == BUS_PAGE_FAULT)
+ #   endif
+@@ -2459,7 +2459,7 @@ SIG_PF GC_old_segv_handler;	/* Also old 
+ 		     || (scp -> si_code == SEGV_UNKNOWN) \
+ 		     || (scp -> si_code == BUS_OBJERR)
+ #   else
+-#     ifdef FREEBSD
++#     if (defined(FREEBSD) || defined(DRAGONFLY))
+ #       define SIG_OK (sig == SIGBUS)
+ #       define CODE_OK (scp -> si_code == BUS_PAGE_FAULT)
+ #     else
+@@ -2590,7 +2590,7 @@ SIG_PF GC_old_segv_handler;	/* Also old 
+ #		endif
+             } else {
+ #		if defined (SUNOS4) \
+-                    || (defined(FREEBSD) && !defined(SUNOS5SIGS))
++                    || ((defined(FREEBSD) || defined(DRAGONFLY)) && !defined(SUNOS5SIGS))
+ 		    (*old_handler) (sig, code, scp, addr);
+ 		    return;
+ #		endif
+@@ -2725,7 +2725,7 @@ void GC_dirty_init()
+         GC_err_printf0("Page size not multiple of HBLKSIZE\n");
+         ABORT("Page size not multiple of HBLKSIZE");
+     }
+-#   if defined(SUNOS4) || (defined(FREEBSD) && !defined(SUNOS5SIGS))
++#   if defined(SUNOS4) || ((defined(FREEBSD) || defined(DRAGONFLY)) && !defined(SUNOS5SIGS))
+       GC_old_bus_handler = signal(SIGBUS, GC_write_fault_handler);
+       if (GC_old_bus_handler == SIG_IGN) {
+         GC_err_printf0("Previously ignored bus error!?");
+@@ -2749,7 +2749,7 @@ void GC_dirty_init()
+ #	endif
+       }
+ #   endif
+-#   if (defined(SUNOS5SIGS) && !defined(FREEBSD)) || defined(IRIX5) \
++#   if (defined(SUNOS5SIGS) && !(defined(FREEBSD)|| defined(DRAGONFLY))) || defined(IRIX5) \
+        || defined(LINUX) || defined(OSF1) || defined(HURD)
+       /* SUNOS5SIGS includes HPUX */
+ #     if defined(GC_IRIX_THREADS)
+@@ -2783,7 +2783,7 @@ void GC_dirty_init()
+       }
+ #   endif /* (SUNOS5SIGS && !FREEBSD) || IRIX5 || LINUX || OSF1 || HURD */
+ #   if defined(HPUX) || defined(LINUX) || defined(HURD) \
+-      || (defined(FREEBSD) && defined(SUNOS5SIGS))
++      || ((defined(FREEBSD) || defined(DRAGONFLY)) && defined(SUNOS5SIGS))
+       sigaction(SIGBUS, &act, &oldact);
+       GC_old_bus_handler = oldact.sa_handler;
+       if (GC_old_bus_handler == SIG_IGN) {
+@@ -2795,7 +2795,7 @@ void GC_dirty_init()
+ 	  GC_err_printf0("Replaced other SIGBUS handler\n");
+ #       endif
+       }
+-#   endif /* HPUX || LINUX || HURD || (FREEBSD && SUNOS5SIGS) */
++#   endif /* HPUX || LINUX || HURD || ((FREEBSD || DRAGONFLY) && SUNOS5SIGS) */
+ #   if defined(MSWIN32)
+       GC_old_segv_handler = SetUnhandledExceptionFilter(GC_write_fault_handler);
+       if (GC_old_segv_handler != NULL) {

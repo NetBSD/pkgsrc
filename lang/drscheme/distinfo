@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 09:03:06 agc Exp $
+$NetBSD: distinfo,v 1.13 2006/08/22 20:17:23 joerg Exp $
 
 SHA1 (drscheme/209/mred-doc.plt) = 8acbb38af09f7d0cbf60db0f28ea3b1cfdbecbcc
 RMD160 (drscheme/209/mred-doc.plt) = 89b0d4b5d1093b6e9f5d6d7afad0fc7fbb99dc3c
@@ -15,6 +15,12 @@ Size (drscheme/209/tex2page-doc.plt) = 95448 bytes
 SHA1 (drscheme/209/plt-209-src-unix.tgz) = 080b3a84ccc2600033ef082e726a5b3b07820a0f
 RMD160 (drscheme/209/plt-209-src-unix.tgz) = 1041d9a7e66d4565adf9a4e139d77885d0edd556
 Size (drscheme/209/plt-209-src-unix.tgz) = 10731358 bytes
+SHA1 (patch-aa) = bc92cf718d684f008e5ab0b182c589fc7f6971a9
+SHA1 (patch-ab) = f0c67e4b890569fcef614bc0d4c403c68df6c58d
+SHA1 (patch-ac) = 2bbd5efb27022c07ef22f0508516c60a197e912b
+SHA1 (patch-ad) = 205ecb6a6d996ebb703588de9f14baf32fdea927
+SHA1 (patch-ae) = 7323ae61c6685d2ed04cbca7dc98b80d37b982a2
+SHA1 (patch-af) = 50e731f41359997e4ef59a517c4fffc4a12ffc13
 SHA1 (patch-ag) = 4670f21302de022e299be0aeaa9d6c22abadd1ee
 SHA1 (patch-ah) = 4c6fa4ca44ae951b67ea4ebc1f8df841ccabdf10
 SHA1 (patch-ai) = cdab7bed524279a287845f03c642c7aafead7dc6
