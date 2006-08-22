@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/db.h.orig	2006-08-22 18:50:14.000000000 +0000
++++ src/db.h
+@@ -30,7 +30,7 @@ void db_add_declared_param( char* name, 
+ void db_add_override_param( char* inst_name, expression* expr );
+ 
+ /*! \brief Adds signal/expression vector parameter to parameter list. */
+-void db_add_vector_param( signal* sig, expression* parm_exp, int type );
++void db_add_vector_param( signal_s* sig, expression* parm_exp, int type );
+ 
+ /*! \brief Adds specified defparam to parameter override list.  Called by parser. */
+ void db_add_defparam( char* name, expression* expr );
+@@ -42,7 +42,7 @@ void db_add_signal( char* name, static_e
+ void db_end_module( int end_line );
+ 
+ /*! \brief Finds specified signal in module and returns pointer to the signal structure.  Called by parser. */
+-signal* db_find_signal( char* name );
++signal_s* db_find_signal( char* name );
+ 
+ /*! \brief Creates new expression from specified information.  Called by parser and db_add_expression. */
+ expression* db_create_expression( expression* right, expression* left, int op, bool lhs, int line, char* sig_name );

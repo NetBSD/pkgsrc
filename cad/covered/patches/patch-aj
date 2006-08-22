@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/link.h.orig	2006-08-22 18:50:51.000000000 +0000
++++ src/link.h
+@@ -24,7 +24,7 @@ void stmt_link_add_tail( statement* stmt
+ void exp_link_add( expression* expr, exp_link** head, exp_link** tail );
+ 
+ /*! \brief Adds specified signal to sig_link element at the end of the list. */
+-void sig_link_add( signal* sig, sig_link** head, sig_link** tail );
++void sig_link_add( signal_s* sig, sig_link** head, sig_link** tail );
+ 
+ /*! \brief Adds specified FSM to fsm_link element at the end of the list. */
+ void fsm_link_add( fsm* table, fsm_link** head, fsm_link** tail );
+@@ -59,7 +59,7 @@ stmt_link* stmt_link_find( int id, stmt_
+ exp_link* exp_link_find( expression* exp, exp_link* head );
+ 
+ /*! \brief Finds specified signal in given sig_link list. */
+-sig_link* sig_link_find( signal* sig, sig_link* head );
++sig_link* sig_link_find( signal_s* sig, sig_link* head );
+ 
+ /*! \brief Finds specified FSM structure in fsm_link list. */
+ fsm_link* fsm_link_find( fsm* table, fsm_link* head );

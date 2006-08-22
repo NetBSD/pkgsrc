@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/symtable.c.orig	2006-08-22 18:52:17.000000000 +0000
++++ src/symtable.c
+@@ -158,7 +158,7 @@ int        postsim_size    = 0;
+  Creates and adds the specified symtable signal structure to the sym_sig
+  list for the specified symtab.
+ */
+-void symtable_add_sym_sig( symtable* symtab, signal* sig, int msb, int lsb ) {
++void symtable_add_sym_sig( symtable* symtab, signal_s* sig, int msb, int lsb ) {
+ 
+   sym_sig* new_ss;  /* Pointer to newly created sym_sig structure */
+ 
+@@ -226,7 +226,7 @@ symtable* symtable_create() {
+  Using the symbol as a unique ID, creates a new symtable element for specified information
+  and places it into the binary tree.
+ */
+-void symtable_add( char* sym, signal* sig, int msb, int lsb ) {
++void symtable_add( char* sym, signal_s* sig, int msb, int lsb ) {
+ 
+   symtable* curr;  /* Pointer to current symtable entry   */
+   char*     ptr;   /* Pointer to current character in sym */

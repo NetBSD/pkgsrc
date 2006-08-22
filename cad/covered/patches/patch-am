@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/sim.h.orig	2006-08-22 18:52:08.000000000 +0000
++++ src/sim.h
+@@ -23,7 +23,7 @@ void sim_set_curr_wait_signals();
+ void sim_clear_curr_wait_signals();
+ 
+ /*! \brief Searches pre-simulation queue for specified signal name. */
+-bool sim_is_curr_wait_signal( signal* sig );
++bool sim_is_curr_wait_signal( signal_s* sig );
+ 
+ /*! \brief Adds static expression values to initial simulator */
+ void sim_add_statics();

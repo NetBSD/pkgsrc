@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/symtable.h.orig	2006-08-22 18:52:40.000000000 +0000
++++ src/symtable.h
+@@ -15,7 +15,7 @@
+ symtable* symtable_create();
+ 
+ /*! \brief Creates a new symtable entry and adds it to the specified symbol table. */
+-void symtable_add( char* sym, signal* sig, int msb, int lsb );
++void symtable_add( char* sym, signal_s* sig, int msb, int lsb );
+ 
+ /*! \brief Sets all matching symtable entries to specified value */
+ void symtable_set_value( char* sym, char* value );

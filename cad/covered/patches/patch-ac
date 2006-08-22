@@ -1,0 +1,58 @@
+$NetBSD: patch-ac,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/defines.h.orig	2006-08-22 18:38:23.000000000 +0000
++++ src/defines.h
+@@ -1061,7 +1061,7 @@ typedef struct expression_s expression;
+ /*!
+  Renaming signal structure for convenience.
+ */
+-typedef struct signal_s     signal;
++typedef struct signal_s     signal_s;
+ 
+ /*!
+  Renaming FSM structure for convenience.
+@@ -1074,7 +1074,7 @@ struct expression_s {
+   int         id;          /*!< Specifies unique ID for this expression in the parent          */
+   int         ulid;        /*!< Specifies underline ID for reporting purposes                  */
+   int         line;        /*!< Specified line in file that this expression is found on        */
+-  signal*     sig;         /*!< Pointer to signal.  If NULL then no signal is attached         */
++  signal_s*   sig;         /*!< Pointer to signal.  If NULL then no signal is attached         */
+   expr_stmt*  parent;      /*!< Parent expression/statement                                    */
+   expression* right;       /*!< Pointer to expression on right                                 */
+   expression* left;        /*!< Pointer to expression on left                                  */
+@@ -1205,7 +1205,7 @@ struct signal_s {
+ 
+ /*------------------------------------------------------------------------------*/
+ struct sig_link_s {
+-  signal*   sig;   /*!< Pointer to signal in list                   */
++  signal_s* sig;   /*!< Pointer to signal in list                   */
+   sig_link* next;  /*!< Pointer to next signal link element in list */
+ };
+ 
+@@ -1252,7 +1252,7 @@ struct mod_parm_s {
+   unsigned int suppl;    /*!< Supplemental field containing type and order number */
+   exp_link*    exp_head; /*!< Pointer to head of expression list for dependents   */
+   exp_link*    exp_tail; /*!< Pointer to tail of expression list for dependents   */
+-  signal*      sig;      /*!< Pointer to associated signal (if one is available)  */
++  signal_s*    sig;      /*!< Pointer to associated signal (if one is available)  */
+   mod_parm*    next;     /*!< Pointer to next module parameter in list            */
+ };
+ 
+@@ -1370,7 +1370,7 @@ struct sym_sig_s;
+ typedef struct sym_sig_s sym_sig;
+ 
+ struct sym_sig_s {
+-  signal*  sig;   /*!< Pointer to signal that this symtable entry refers to */
++  signal_s*sig;   /*!< Pointer to signal that this symtable entry refers to */
+   int      msb;   /*!< Most significant bit of value to set                 */
+   int      lsb;   /*!< Least significant bit of value to set                */
+   sym_sig* next;  /*!< Pointer to next sym_sig link in list                 */
+@@ -1536,7 +1536,7 @@ struct fsm_var_s {
+   char*       name;   /*!< Name associated with this FSM variable     */
+   expression* ivar;   /*!< Pointer to input state expression          */
+   expression* ovar;   /*!< Pointer to output state expression         */
+-  signal*     iexp;   /*!< Pointer to input signal matching ovar name */
++  signal_s*   iexp;   /*!< Pointer to input signal matching ovar name */
+   fsm*        table;  /*!< Pointer to FSM containing signal from ovar */
+   fsm_var*    next;   /*!< Pointer to next fsm_var element in list    */
+ };
