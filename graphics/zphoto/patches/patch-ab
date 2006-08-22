@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/08/22 15:19:45 joerg Exp $
+
+--- util.c.orig	2006-08-22 17:20:22.000000000 +0000
++++ util.c
+@@ -79,7 +79,7 @@ zphoto_wprintf (const char *fmt, ...)
+     va_end(args);
+ }
+ 
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ /*
+  * They have the declaration of vasprintf in stdio.h
+  */
