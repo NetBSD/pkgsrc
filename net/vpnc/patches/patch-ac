@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2006/01/03 21:48:17 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/22 08:57:26 hubertf Exp $
 
 --- vpnc-script.orig	2006-01-03 22:36:27.000000000 +0100
 +++ vpnc-script
@@ -55,7 +55,7 @@ $NetBSD: patch-ac,v 1.1 2006/01/03 21:48:17 hubertf Exp $
 +	        # Let's assume the first default gateway is IPv4...
 +		# (On NetBSD '-f inet' and on Linux and probably Solaris,
 +		#  '-A inet' could be used to make sure... - HF)
-+		netstat -rn | awk '/^(default|0.0.0.0)/{ print $2 ; exit } '
++		netstat -rn | grep -v link | awk '/^(default|0.0.0.0)/{ print $2 ; exit } '
  	}
  	
  	set_vpngateway_route() {
