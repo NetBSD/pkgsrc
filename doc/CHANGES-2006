@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1086 2006/08/22 18:13:56 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.1087 2006/08/22 18:22:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3770,7 +3770,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/gcalctool to 5.8.19 [drochner 2006-08-04]
 	Updated graphics/eog2 to 2.14.3 [drochner 2006-08-04]
 	Updated graphics/libgdiplus to 1.1.13.6 [drochner 2006-08-04]
-	Updated x11/gtk2-sharp to 2.8.2 [drochner 2006-08-04]
+	Added x11/gtk2-sharp version 2.8.2 [drochner 2006-08-04]
 	Updated lang/mono to 1.1.13.8 [drochner 2006-08-04]
 	Updated www/gtkhtml38 to 3.10.3 [drochner 2006-08-04]
 	Updated www/liferea to 1.0.19 [drochner 2006-08-04]
