@@ -1,0 +1,42 @@
+$NetBSD: patch-af,v 1.5 2006/08/22 20:17:23 joerg Exp $
+
+--- mzscheme/sconfig.h.orig	2004-12-19 08:38:26.000000000 +0000
++++ mzscheme/sconfig.h
+@@ -288,6 +288,37 @@
+ 
+ #endif
+ 
++  /************** x86/DragonFly with gcc ****************/
++
++# if defined(__DragonFly__) && defined(i386)
++
++# define SCHEME_PLATFORM_LIBRARY_SUBPATH "dragonfly"
++
++# include "uconfig.h"
++# undef HAS_STANDARD_IOB
++
++# define HAS_BSD_IOB
++
++# define STACK_GROWS_DOWN
++
++# define USE_UNDERSCORE_SETJMP
++
++# define USE_IEEE_FP_PREDS
++# define FREEBSD_CONTROL_387
++# define POW_HANDLES_INF_CORRECTLY
++
++# define USE_DYNAMIC_FDSET_SIZE
++
++# define SIGSET_IS_SIGNAL
++
++# define USE_TM_GMTOFF_FIELD
++
++# define REGISTER_POOR_MACHINE
++
++# define FLAGS_ALREADY_SET
++
++#endif
++
+   /************** x86/FreeBSD with gcc ****************/
+ 
+ # if defined(__FreeBSD__) && defined(i386)
