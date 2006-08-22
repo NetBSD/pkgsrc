@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1088 2006/08/22 18:23:33 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1089 2006/08/22 18:25:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4034,3 +4034,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xorg-libs to 6.9.0nb7 [joerg 2006-08-22]
 	Updated x11/xorg-server to 6.9.0nb12 [joerg 2006-08-22]
 	Updated devel/pkg-config to 0.21 [wiz 2006-08-22]
+	Updated archivers/unrar to 3.6.8 [wiz 2006-08-22]
+	Updated devel/tailor to 0.9.26 [wiz 2006-08-22]
+	Updated devel/pango to 1.14.1 [wiz 2006-08-22]
+	Updated devel/atk to 1.12.2 [wiz 2006-08-22]
