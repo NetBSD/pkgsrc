@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/22 15:33:40 joerg Exp $
 #
 
 DISTNAME=		pyqt_memaid_0.2.4
@@ -14,6 +14,7 @@ COMMENT=		MemAid flash card program (py-qt3 interface)
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 
+USE_LANGUAGES=	c
 NO_BUILD=	yes
 PYDISTUTILSPKG=	yes
 
