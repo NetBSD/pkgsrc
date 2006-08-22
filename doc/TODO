@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5365 2006/08/22 18:23:33 wiz Exp $
+$NetBSD: TODO,v 1.5366 2006/08/22 18:25:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,6 @@ Suggested package updates
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
 	o at-spi-1.7.11
-	o atk-1.12.2
 	o autogen-5.8.5
 	o avcheck-0.91
 	o avl-2.0.1
@@ -853,7 +852,6 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pango-1.14.1
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
@@ -1072,7 +1070,6 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
-	o tailor-0.9.26
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1109,7 +1106,6 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
-	o unrar-3.6.8
 	o upx-2.01
 	o userppp-030706
 	o valgrind-3.0.1
