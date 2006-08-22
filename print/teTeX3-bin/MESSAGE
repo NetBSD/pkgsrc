@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/03/31 22:09:18 hubertf Exp $
+$NetBSD: MESSAGE,v 1.2 2006/08/22 22:22:29 jschauma Exp $
 
-You should consider running ${PREFIX}/bin/texconfig to adjust for your
+You should consider running ${PREFIX}/bin/texconfig-sys to adjust for your
 local environment, e.g., configure font generation to use a temporary
 directory.
 
