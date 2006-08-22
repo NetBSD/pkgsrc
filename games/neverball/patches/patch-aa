@@ -1,0 +1,75 @@
+$NetBSD: patch-aa,v 1.1 2006/08/22 15:22:31 joerg Exp $
+
+--- ball/game.c.orig	2004-07-21 21:20:07.000000000 +0000
++++ ball/game.c
+@@ -36,7 +36,7 @@ static int game_state = 0;
+ static struct s_file file;
+ static struct s_file back;
+ 
+-static float clock = 0.f;               /* Clock time                        */
++static float my_clock = 0.f;               /* Clock time                        */
+ 
+ static float game_ix;                   /* Input rotation about X axis       */
+ static float game_iz;                   /* Input rotation about Z axis       */
+@@ -102,7 +102,7 @@ int game_init(const char *file_name,
+               const char *back_name,
+               const char *grad_name, int t, int e)
+ {
+-    clock = (float) t / 100.f;
++    my_clock = (float) t / 100.f;
+ 
+     if (game_state)
+         game_free();
+@@ -159,7 +159,7 @@ void game_free(void)
+ 
+ int curr_clock(void)
+ {
+-    return (int) (clock * 100.f);
++    return (int) (my_clock * 100.f);
+ }
+ 
+ char *curr_intro(void)
+@@ -600,8 +600,8 @@ static void game_update_view(float dt)
+ 
+ static void game_update_time(float dt, int b)
+ {
+-    int tick = (int) floor(clock);
+-    int tock = (int) floor(clock * 2);
++    int tick = (int) floor(my_clock);
++    int tock = (int) floor(my_clock * 2);
+ 
+     if (goal_e && goal_k < 1.0f)
+         goal_k += dt;
+@@ -610,17 +610,17 @@ static void game_update_time(float dt, i
+ 
+     if (b)
+     {
+-        if (clock < 600.f)
+-            clock -= dt;
+-        if (clock < 0.f)
+-            clock = 0.f;
++        if (my_clock < 600.f)
++            my_clock -= dt;
++        if (my_clock < 0.f)
++            my_clock = 0.f;
+ 
+-        if (0 < tick && tick <= 10 && tick == (int) ceil(clock))
++        if (0 < tick && tick <= 10 && tick == (int) ceil(my_clock))
+         {
+             audio_play(AUD_TICK, 1.f);
+             hud_time_pulse(1.50);
+         }
+-        else if (0 < tock && tock <= 10 && tock == (int) ceil(clock * 2))
++        else if (0 < tock && tock <= 10 && tock == (int) ceil(my_clock * 2))
+         {
+             audio_play(AUD_TOCK, 1.f);
+             hud_time_pulse(1.25);
+@@ -671,7 +671,7 @@ static int game_update_state(void)
+ 
+     /* Test for time-out. */
+ 
+-    if (clock <= 0.f)
++    if (my_clock <= 0.f)
+         return GAME_TIME;
+ 
+     /* Test for fall-out. */
