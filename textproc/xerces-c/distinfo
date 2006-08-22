@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2006/08/10 13:44:21 abs Exp $
+$NetBSD: distinfo,v 1.11 2006/08/22 16:30:46 joerg Exp $
 
 SHA1 (xerces-c-src_2_7_0.tar.gz) = 56f9587f33fca0a573a45f07762e3262a255d73f
 RMD160 (xerces-c-src_2_7_0.tar.gz) = 80914da4898c694bf0299d612164483f83857baf
@@ -7,7 +7,6 @@ SHA1 (patch-aa) = 11485b77929a72c693bd9fa94c20dbbdd461fb3d
 SHA1 (patch-ab) = 581a7fb3faa93fd390af939d110c90d4b350910b
 SHA1 (patch-ac) = 8fe9f17f1a8be5e251885efe1bcf7466cbea7714
 SHA1 (patch-ad) = 4ba3a565455cbc5202f309b36365297396221f51
-SHA1 (patch-ae) = fffbbe311499bba29825b21d6eb28f6ad9957320
 SHA1 (patch-af) = d4456b93e3d867cc1275c8e5d0b33f0dc121083b
 SHA1 (patch-ag) = fac013068f8eae143995508352c0b0d8972ba0c9
 SHA1 (patch-ah) = fe86675faa35e458e7729d12c1c343fc1976c9ba
