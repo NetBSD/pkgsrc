@@ -1,0 +1,18 @@
+$NetBSD: patch-dt,v 1.3 2006/08/22 14:06:33 joerg Exp $
+
+--- agent/Makefile.in.orig	2006-03-19 21:34:14.000000000 +0000
++++ agent/Makefile.in
+@@ -136,8 +136,12 @@ libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VE
+ 	$(LIB_LD_CMD) libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION) ${LLIBAGENTOBJS}  $(LIB_LD_LIBS)
+ 	$(RANLIB) libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION)
+ 
++.if ${OPSYS} == "DragonFly"
++MIB_SYSTEM_LIBS=	-lkinfo
++.endif
++
+ libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION):    ${LMIBOBJS}
+-	$(LIB_LD_CMD) libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION) ${LMIBOBJS}  $(LIB_LD_LIBS)
++	$(LIB_LD_CMD) libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION) ${LMIBOBJS}  $(LIB_LD_LIBS) $(MIB_SYSTEM_LIBS)
+ 	$(RANLIB) libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION)
+ 
+ agentlib: libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION)
