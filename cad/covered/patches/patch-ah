@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2006/08/22 17:00:24 joerg Exp $
+
+--- src/fsm_arg.c.orig	2006-08-22 18:50:28.000000000 +0000
++++ src/fsm_arg.c
+@@ -37,7 +37,7 @@ extern char user_msg[USER_MSG_LENGTH];
+ expression* fsm_arg_parse_state( char** arg, char* mod_name ) {
+ 
+   bool        error = FALSE;  /* Specifies if a parsing error has beenf found   */
+-  signal*     sig;            /* Pointer to read-in signal                      */
++  signal_s*     sig;            /* Pointer to read-in signal                      */
+   expression* expl  = NULL;   /* Pointer to left expression                     */
+   expression* expr  = NULL;   /* Pointer to right expression                    */
+   expression* expt  = NULL;   /* Pointer to temporary expression                */
