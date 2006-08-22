@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1089 2006/08/22 18:25:55 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1090 2006/08/22 18:44:30 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4038,3 +4038,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/tailor to 0.9.26 [wiz 2006-08-22]
 	Updated devel/pango to 1.14.1 [wiz 2006-08-22]
 	Updated devel/atk to 1.12.2 [wiz 2006-08-22]
+	Updated graphics/freetype2 to 2.2.1nb2 [joerg 2006-08-22]
