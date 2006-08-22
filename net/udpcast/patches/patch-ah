@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2006/08/22 15:52:16 joerg Exp $
+
+--- senddata.c.orig	2006-08-22 17:46:18.000000000 +0000
++++ senddata.c
+@@ -3,6 +3,9 @@
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <errno.h>
++#if defined(__DragonFly__)
++#include <sys/uio.h>
++#endif
+ 
+ #include "threads.h"
+ #include "fec.h"
