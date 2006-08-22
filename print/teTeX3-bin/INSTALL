@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.4 2006/04/07 16:19:15 minskim Exp $
+# $NetBSD: INSTALL,v 1.5 2006/08/22 22:22:29 jschauma Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
@@ -163,7 +163,7 @@ SELF=$0
 ACTION=$1
 : ${PKG_PREFIX=@PREFIX@}
 
-TEXCONFIG="${PKG_PREFIX}/bin/texconfig"
+TEXCONFIG="${PKG_PREFIX}/bin/texconfig-sys"
 
 exitcode=0
 case $ACTION in
