@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1084 2006/08/22 13:51:04 tv Exp $
+$NetBSD: CHANGES-2006,v 1.1085 2006/08/22 16:31:14 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/guile-gtk to 0.5 [gdt 2006-08-22]
 	Updated lang/sun-jre15 to 5.0.8 [tv 2006-08-22]
 	Updated lang/sun-jdk15 to 5.0.8 [tv 2006-08-22]
+	Updated textproc/xerces-c to 2.7.0nb1 [joerg 2006-08-22]
