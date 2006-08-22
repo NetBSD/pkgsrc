@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.468 2006/08/17 11:57:24 darcy Exp $
+# $NetBSD: Makefile,v 1.469 2006/08/22 21:48:29 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -214,6 +214,7 @@ SUBDIR+=	p5-HTMLObject
 SUBDIR+=	p5-HTTP-Cache-Transparent
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-GHTTP
+SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Proxy
 SUBDIR+=	p5-HTTP-Request-Form
 SUBDIR+=	p5-HTTP-Server-Simple
