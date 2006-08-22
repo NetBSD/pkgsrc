@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/12 16:20:35 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2006/08/22 15:19:44 joerg Exp $
 
 SHA1 (zphoto-1.2.tar.gz) = 2d45c5df2f2a00db0d8170f18ea5ed399fb9d611
 RMD160 (zphoto-1.2.tar.gz) = 54a93da3c8303ebbf9c505891e9fa8fb32bd6a64
 Size (zphoto-1.2.tar.gz) = 414079 bytes
 SHA1 (patch-aa) = 4c15d45ecfbefadc4b9b2195e00d005e3ed2a936
+SHA1 (patch-ab) = d365aeba430374b3ba6b4f1f88731f3b809fca31
