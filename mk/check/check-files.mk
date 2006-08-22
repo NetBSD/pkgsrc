@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.5 2006/06/09 16:41:09 jlam Exp $
+# $NetBSD: check-files.mk,v 1.6 2006/08/22 18:50:56 joerg Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
@@ -140,21 +140,24 @@ ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
 		| ${SED} -e 's,/\./,/,'					\
-		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
+		| ${_CHECK_FILES_SKIP_FILTER}				\
+		| ${SORT} > ${.TARGET}					\
                 || ${TRUE}
 
 ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${PKG_SYSCONFDIR}/. -print 2>/dev/null			\
 		| ${SED} -e 's,/\./,/,'					\
-		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
+		| ${_CHECK_FILES_SKIP_FILTER} 				\
+		| ${SORT} > ${.TARGET}					\
 		|| ${TRUE}
 
 ${_CHECK_FILES_PRE.varbase} ${_CHECK_FILES_POST.varbase}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${VARBASE}/. -print 2>/dev/null				\
 		| ${SED} -e 's,/\./,/,'					\
-		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
+		| ${_CHECK_FILES_SKIP_FILTER} 				\
+		| ${SORT} > ${.TARGET}					\
 		|| ${TRUE}
 
 ###########################################################################
