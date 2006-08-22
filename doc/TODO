@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5364 2006/08/22 18:23:13 wiz Exp $
+$NetBSD: TODO,v 1.5365 2006/08/22 18:23:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -890,7 +890,6 @@ Suggested package updates
 	o pinfo-0.6.9
 	o pioneers-0.9.64
 	o pircbot-1.4.4
-	o pkg-config-0.21
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
