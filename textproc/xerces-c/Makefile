@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2006/08/10 13:44:21 abs Exp $
+# $NetBSD: Makefile,v 1.30 2006/08/22 16:30:46 joerg Exp $
 #
 
 DISTNAME=	xerces-c-src_2_7_0
 PKGNAME=	${DISTNAME:S/-src_/-/:S/_/./g}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://apache.rmplc.co.uk/xml/xerces-c/source/
 
@@ -48,6 +49,10 @@ MAKE_ENV+=		${XERCES_ENV}
 PLIST_SUBST+=		${PLIST_SUBST.${ICONV_TYPE}-iconv}
 
 .include "../../converters/libiconv/buildlink3.mk"
+
+post-extract:
+	${MKDIR} ${WRKSRC}/util/Platforms/DragonFly
+	${CP} ${WRKSRC}/util/Platforms/NetBSD/NetBSDPlatformUtils.cpp ${WRKSRC}/util/Platforms/DragonFly/DragonFlyPlatformUtils.cpp
 
 pre-configure:
 	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}
