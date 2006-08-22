@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2006/08/22 15:52:15 joerg Exp $
+
+--- receivedata.c.orig	2006-08-22 17:39:33.000000000 +0000
++++ receivedata.c
+@@ -4,6 +4,9 @@
+ #include <stdlib.h>
+ #include <sys/time.h>
+ #include <errno.h>
++#if defined(__DragonFly__)
++#include <sys/uio.h>
++#endif
+ 
+ #include "threads.h"
+ #include "log.h"
