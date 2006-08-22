@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2005/12/04 01:21:00 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/22 20:20:20 jdc Exp $
 
 --- xp.c.orig	2005-12-04 00:57:12.000000000 +0000
 +++ xp.c
-@@ -434,7 +434,6 @@ newfile(file,data, size)
+@@ -32,6 +32,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <errno.h>
+ #include <signal.h>
+ #include <sys/wait.h>
+@@ -434,7 +435,6 @@
      int size;
  
  {
@@ -10,7 +18,7 @@ $NetBSD: patch-ac,v 1.1 2005/12/04 01:21:00 joerg Exp $
      extern char* uerror();
      extern char* readfile();
      char *mess = NULL;
-@@ -649,8 +648,6 @@ main (argc, argv)
+@@ -649,8 +649,6 @@
      filedata = readfile(argc > 1 ? argv[1] : "-", &size);
  
      if (argc == 2 && !filedata) {
@@ -19,3 +27,20 @@ $NetBSD: patch-ac,v 1.1 2005/12/04 01:21:00 joerg Exp $
  	fprintf(stderr,"%s: %s: %s\n", argv[0], argv[1], uerror());
  	exit (1);
      }
+@@ -1677,6 +1675,8 @@
+  *
+  */
+ 
++static void shellr();
++
+ /*ARGSUSED*/
+ static void
+ Cmnd(w, event,params,num_params)
+@@ -1688,7 +1688,6 @@
+ 
+     char *linesearch();
+     char *lastlinesearch();
+-    static void shellr();
+     String userdata;
+     textextra *te;
+     static char cmndbuf[BUFSIZ];
