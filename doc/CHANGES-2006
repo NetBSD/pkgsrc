@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1083 2006/08/22 13:09:26 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.1084 2006/08/22 13:51:04 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4028,3 +4028,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libtunepimp0.4 to 0.4.2nb2 [salo 2006-08-21]
 	Updated security/honeyd to 1.5b [adrianp 2006-08-21]
 	Updated devel/guile-gtk to 0.5 [gdt 2006-08-22]
+	Updated lang/sun-jre15 to 5.0.8 [tv 2006-08-22]
+	Updated lang/sun-jdk15 to 5.0.8 [tv 2006-08-22]
