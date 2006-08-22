@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/07/12 13:47:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/08/22 18:25:16 wiz Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -49,6 +49,7 @@ share/doc/atk/AtkTable.html
 share/doc/atk/AtkText.html
 share/doc/atk/AtkUtil.html
 share/doc/atk/AtkValue.html
+share/doc/atk/atk-AtkHyperlinkImpl.html
 share/doc/atk/atk-AtkState.html
 share/doc/atk/atk-AtkStateSet.html
 share/doc/atk/atk.devhelp

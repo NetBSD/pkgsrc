@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2006/08/04 18:17:47 wiz Exp $
+$NetBSD: distinfo,v 1.27 2006/08/22 18:25:16 wiz Exp $
 
-SHA1 (atk-1.12.1v2/atk-1.12.1.tar.bz2) = a37c28c1302abc1f644b48e73ec320c6e7312b6d
-RMD160 (atk-1.12.1v2/atk-1.12.1.tar.bz2) = 11b6e510c8153eacdbd268497c1cfd4bb62dd79f
-Size (atk-1.12.1v2/atk-1.12.1.tar.bz2) = 641378 bytes
+SHA1 (atk-1.12.1v2/atk-1.12.2.tar.bz2) = 8c59f23a90e6b4ddcff0712dcbf1bfdaa9fc35cb
+RMD160 (atk-1.12.1v2/atk-1.12.2.tar.bz2) = bf15c1876ecbd5debbee3e6f74a9ed47523b111c
+Size (atk-1.12.1v2/atk-1.12.2.tar.bz2) = 655369 bytes
