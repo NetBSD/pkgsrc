@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2006/04/17 13:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/08/22 13:08:29 gdt Exp $
 #
 
-DISTNAME=		guile-gtk-0.40.91
-PKGREVISION=		3
+DISTNAME=		guile-gtk-0.5
 CATEGORIES=		devel x11
-MASTER_SITES=		http://www.ir.bbn.com/~gdt/pkgsrc-wip/
+MASTER_SITES=		${MASTER_SITE_GNU:=guile-gtk/}
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/guile-gtk/
@@ -15,15 +14,14 @@ USE_TOOLS+=		makeinfo
 
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 # Skip glade, because it pulls in gnome-libs.
 # Later, make a new package for just the glade parts,
-# or a BUILD_DEF.
-# glade-config may be in ${LOCALBASE}/bin, so force not using it.
+# or a PKG_OPTION.
 CONFIGURE_ARGS+=	--without-glade
-
 # .include "../../devel/libglade/buildlink3.mk"
+
 .include "../../lang/guile/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
