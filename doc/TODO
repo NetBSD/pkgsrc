@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5361 2006/08/22 13:11:56 gdt Exp $
+$NetBSD: TODO,v 1.5362 2006/08/22 13:27:47 gdt Exp $
 
 Suggested new packages
 ======================
@@ -553,7 +553,6 @@ Suggested package updates
 	o gworkspace-0.8.2
 	o gzrecover-0.3
 	o hackbot-2.21
-	o hashcash-1.18
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
