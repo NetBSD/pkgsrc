@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2006/08/22 15:52:15 joerg Exp $
+
+--- udpr-negotiate.c.orig	2006-08-22 17:40:14.000000000 +0000
++++ udpr-negotiate.c
+@@ -107,9 +107,6 @@ int startReceiver(int doWarn,
+ 	}
+ 	outFile = open(disk_config->fileName, oflags | O_BINARY, 0644);
+ 	if(outFile < 0) {
+-#ifdef NO_BB
+-	    extern int errno;
+-#endif
+ 	    udpc_fatal(1, "open outfile %s: %s\n",
+ 		       disk_config->fileName, strerror(errno));
+ 	}
