@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2005/12/09 13:56:51 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2006/08/22 19:01:27 joerg Exp $
 
---- symbol.c.orig	2005-12-09 13:51:59.000000000 +0000
+--- symbol.c.orig	1997-12-13 08:34:59.000000000 +0000
 +++ symbol.c
 @@ -6,10 +6,6 @@
  */
@@ -13,3 +13,11 @@ $NetBSD: patch-ae,v 1.1 2005/12/09 13:56:51 joerg Exp $
  extern char MSG_byte_shift[];
  extern char MSG_back_char[];
  extern char MSG_quit[];
+@@ -219,7 +215,6 @@ extern char save_region ();	/* Save regi
+ * Defined by "spawn.c".
+ */
+ extern char spawncli ();	/* Run CLI in a subjob.	 */
+-extern char clock ();		/* display time in modeline */
+ 
+ /*
+ * Defined by "window.c".
