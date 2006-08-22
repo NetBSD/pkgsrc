@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1087 2006/08/22 18:22:09 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1088 2006/08/22 18:23:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/xerces-c to 2.7.0nb1 [joerg 2006-08-22]
 	Updated x11/xorg-libs to 6.9.0nb7 [joerg 2006-08-22]
 	Updated x11/xorg-server to 6.9.0nb12 [joerg 2006-08-22]
+	Updated devel/pkg-config to 0.21 [wiz 2006-08-22]
