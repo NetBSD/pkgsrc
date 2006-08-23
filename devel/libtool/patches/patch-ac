@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
+$NetBSD: patch-ac,v 1.22 2006/08/23 19:49:12 jschauma Exp $
 
---- ltmain.sh.orig	2005-05-16 05:39:29.000000000 -0400
-+++ ltmain.sh
-@@ -188,6 +188,31 @@ func_win32_libid ()
+--- ltmain.sh.orig	Sun Dec 18 17:14:54 2005
++++ ltmain.sh	Wed Aug 23 15:40:14 2006
+@@ -226,6 +226,31 @@
  # arg is usually of the form 'gcc ...'
  func_infer_tag ()
  {
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
      if test -n "$available_tags" && test -z "$tagname"; then
        CC_quoted=
        for arg in $CC; do
-@@ -228,6 +253,27 @@ func_infer_tag ()
+@@ -266,7 +291,28 @@
  	      break
  	      ;;
  	    esac
@@ -58,11 +58,12 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
 +	      if test -n "$tagname"; then
 +		break
 +	      fi
-+	    fi
  	  fi
++	  fi
  	done
  	# If $tagname still isn't set, then no tagged configuration
-@@ -512,7 +558,7 @@ if test -z "$show_help"; then
+ 	# was found and let the user know that the "--tag" command
+@@ -568,7 +614,7 @@
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
      $echo "*** Future versions of Libtool will require --mode=MODE be specified." 1>&2
      case $nonopt in
@@ -71,7 +72,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
        mode=link
        for arg
        do
-@@ -1313,6 +1359,13 @@ EOF
+@@ -1375,6 +1421,13 @@
  	    exit $EXIT_FAILURE
  	    ;;
  	  esac
@@ -85,7 +86,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -1523,6 +1576,12 @@ EOF
+@@ -1604,6 +1657,12 @@
  	compiler_flags="$compiler_flags $arg"
  	compile_command="$compile_command $arg"
  	finalize_command="$finalize_command $arg"
@@ -98,7 +99,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  	continue
  	;;
  
-@@ -2013,6 +2072,30 @@ EOF
+@@ -2101,6 +2160,30 @@
  	  else
  	    compiler_flags="$compiler_flags $deplib"
  	  fi
@@ -129,7 +130,16 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  	  continue
  	  ;;
  	-l*)
-@@ -3153,6 +3236,7 @@ EOF
+@@ -3197,7 +3280,7 @@
+ 	    age="0"
+ 	    ;;
+ 	  irix|nonstopux)
+-	    current=`expr $number_major + $number_minor - 1`
++	    current=`expr $number_major + $number_minor`
+ 	    age="$number_minor"
+ 	    revision="$number_minor"
+ 	    ;;
+@@ -3247,6 +3330,7 @@
  	# Calculate the version variables.
  	major=
  	versuffix=
@@ -137,7 +147,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  	verstring=
  	case $version_type in
  	none) ;;
-@@ -3202,6 +3286,7 @@ EOF
+@@ -3296,6 +3380,7 @@
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -145,7 +155,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  	  ;;
  
  	osf)
-@@ -3264,6 +3349,7 @@ EOF
+@@ -3358,6 +3443,7 @@
  	if test "$avoid_version" = yes && test "$need_version" = no; then
  	  major=
  	  versuffix=
@@ -153,7 +163,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  	  verstring=""
  	fi
  
-@@ -3409,12 +3495,13 @@ EOF
+@@ -3409,12 +3495,13 @@
  	oldobjs="$objs "`$echo "X$libobjs" | $SP2NL | $Xsed -e '/\.'${libext}'$/d' -e "$lo2o" | $NL2SP`
        fi
  
@@ -173,7 +183,7 @@ $NetBSD: patch-ac,v 1.21 2006/02/28 23:34:46 joerg Exp $
  
        if test -n "$xrpath"; then
  	# If the user specified any rpath flags, then add them.
-@@ -5820,8 +5907,16 @@ relink_command=\"$relink_command\""
+@@ -5820,8 +5907,16 @@
        exit $EXIT_FAILURE
      fi
  
