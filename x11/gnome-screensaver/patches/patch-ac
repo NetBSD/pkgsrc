@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/08/23 09:49:12 jmmv Exp $
+
+--- src/gnome-screensaver-command.c.orig	2006-07-12 03:48:55.000000000 +0200
++++ src/gnome-screensaver-command.c
+@@ -320,7 +320,7 @@ main (int    argc,
+         loop = g_main_loop_new (NULL, FALSE);
+         g_main_loop_run (loop);
+ 
+-        dbus_connection_disconnect (connection);
++        dbus_connection_close (connection);
+ 
+ 	return 0;
+ }
