@@ -1,33 +1,43 @@
-# $NetBSD: Makefile,v 1.7 2006/04/08 20:50:35 reed Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/23 09:45:16 jmmv Exp $
 #
 
-DBUS_INTERFACE=	glib
-DBUS_DIRS=	dbus bus glib tools
+DISTNAME=	dbus-glib-0.71
+CATEGORIES=	sysutils
+MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
 
-.include "../../sysutils/dbus/Makefile.common"
-CONFIGURE_ARGS+=--enable-tests
-# We can't install from within the 'dbus' nor 'tools' directory automatically
-# because we'd get a lot of other stuff installed (overriding files in the
-# dbus package).
-INSTALL_DIRS=	${WRKSRC}/glib
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://www.freedesktop.org/Software/dbus
+COMMENT=	GLib bindings for the D-BUS message bus system
 
-INSTALLATION_DIRS=	bin lib/pkgconfig ${PKGMANDIR}/man1
+GNU_CONFIGURE=		YES
+USE_TOOLS+=		gmake msgfmt pkg-config
+USE_LIBTOOL=		YES
 
-PRINT_PLIST_AWK+=	/^@dirrm include\/dbus-1.0\/dbus$$/ \
-				{ print "@comment in dbus: " $$0; next; }
+PKGCONFIG_OVERRIDE=	dbus-glib-1.pc.in
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/dbus-1.0/dbus
-	${INSTALL_DATA} ${WRKSRC}/dbus/dbus-glib*.h \
-		${PREFIX}/include/dbus-1.0/dbus
-	${INSTALL_DATA} ${WRKSRC}/tools/dbus-glib-bindings.h \
-		${PREFIX}/include/dbus-1.0/dbus
-	${INSTALL_DATA} ${WRKSRC}/dbus-glib-1.pc \
-		${PREFIX}/lib/pkgconfig/dbus-glib-1.pc
-	cd ${WRKSRC}/tools && ${LIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} dbus-monitor ${PREFIX}/bin/dbus-monitor
-	${INSTALL_DATA} ${WRKSRC}/tools/dbus-monitor.1 \
-		${PREFIX}/${PKGMANDIR}/man1/dbus-monitor.1
+CONFIGURE_ARGS+=	--disable-ansi
+CONFIGURE_ARGS+=	--disable-asserts
+CONFIGURE_ARGS+=	--disable-doxygen-docs
+CONFIGURE_ARGS+=	--disable-gcov
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-verbose-mode
+CONFIGURE_ARGS+=	--disable-xml-docs
+CONFIGURE_ARGS+=	--enable-checks
+CONFIGURE_ARGS+=	--with-xml=expat
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus-glib
+PKG_SUPPORTED_OPTIONS+=	debug
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-asserts
+CONFIGURE_ARGS+=	--enable-tests
+CONFIGURE_ARGS+=	--enable-verbose-mode
+.endif
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
