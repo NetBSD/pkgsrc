@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/02 15:04:20 rxg Exp $
-${PYSITELIB}/dbus.pth
+@comment $NetBSD: PLIST,v 1.3 2006/08/23 09:45:58 jmmv Exp $
 ${PYSITELIB}/dbus/__init__.py
 ${PYSITELIB}/dbus/__init__.pyc
 ${PYSITELIB}/dbus/__init__.pyo
@@ -9,8 +8,8 @@ ${PYSITELIB}/dbus/_dbus.pyo
 ${PYSITELIB}/dbus/_util.py
 ${PYSITELIB}/dbus/_util.pyc
 ${PYSITELIB}/dbus/_util.pyo
-${PYSITELIB}/dbus/dbus_bindings.la
-${PYSITELIB}/dbus/dbus_glib_bindings.la
+${PYSITELIB}/dbus/dbus_bindings.so
+${PYSITELIB}/dbus/dbus_glib_bindings.so
 ${PYSITELIB}/dbus/decorators.py
 ${PYSITELIB}/dbus/decorators.pyc
 ${PYSITELIB}/dbus/decorators.pyo
