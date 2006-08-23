@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2006/08/23 11:22:07 minskim Exp $
+
+--- src/TclWebapache.c.orig	2004-12-03 02:17:10.000000000 +0000
++++ src/TclWebapache.c
+@@ -660,10 +660,10 @@ TclWeb_GetEnvVar( TclWebRequest *req, ch
+     TclWeb_InitEnvVars( req );
+ 
+     /* Check to see if it's a header variable first. */
+-    (const char *)val = ap_table_get( req->req->headers_in, key );
++    val = (char *)ap_table_get( req->req->headers_in, key );
+ 
+     if( !val ) {
+-	(const char *)val = ap_table_get( req->req->subprocess_env, key );
++	val = (char *)ap_table_get( req->req->subprocess_env, key );
+     }
+ 
+     return val;
