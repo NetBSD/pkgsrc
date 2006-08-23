@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: Makefile,v 1.26 2006/08/23 10:20:35 minskim Exp $
 
-DISTNAME=	ns-src-2.29
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+DISTNAME=	ns-allinone-2.29.3
+PKGNAME=	${DISTNAME:S/-allinone//}
 CATEGORIES=	net
-MASTER_SITES=	http://www.isi.edu/nsnam/dist/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.isi.edu/nsnam/ns/
@@ -15,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.12nb1
 BUILDLINK_API_DEPENDS.tk+=	tk>=8.4.12nb2
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+WRKSRC=		${WRKDIR}/ns-allinone-2.29/ns-2.29
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 PTHREAD_OPTS+=	require
