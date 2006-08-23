@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1102 2006/08/23 11:46:29 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.1103 2006/08/23 11:58:00 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4056,3 +4056,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/pcb to 20060822 [dmcmahill 2006-08-22]
 	Updated databases/libpqxx to 2.5.5 [ghen 2006-08-23]
 	Updated databases/libpqxx-doc to 2.5.5 [ghen 2006-08-23]
+	Updated security/libprelude to 0.9.10.1nb1 [shannonjr 2006-08-23]
+	Updated security/prelude-manager to 0.9.5nb3 [shannonjr 2006-08-23]
+	Updated security/py-prewikka to 0.9.7nb1 [shannonjr 2006-08-23]
