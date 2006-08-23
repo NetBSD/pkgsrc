@@ -1,0 +1,5 @@
+This package provides three utilities to manipulate MP3 audio files:
+
+* cddb2cue: Creates cue sheets from CDDB files.
+* mp3cat: Concatenates MP3 files.
+* mp3cut: Splits MP3 files according to cue sheets.
