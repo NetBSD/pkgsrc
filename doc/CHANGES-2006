@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1103 2006/08/23 11:58:00 shannonjr Exp $
+$NetBSD: CHANGES-2006,v 1.1104 2006/08/23 17:51:56 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libprelude to 0.9.10.1nb1 [shannonjr 2006-08-23]
 	Updated security/prelude-manager to 0.9.5nb3 [shannonjr 2006-08-23]
 	Updated security/py-prewikka to 0.9.7nb1 [shannonjr 2006-08-23]
+	Updated devel/py-cheetah to 2.0rc7 [shannonjr 2006-08-23]
