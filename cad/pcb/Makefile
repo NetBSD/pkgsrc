@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/06/11 14:55:31 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/08/23 11:26:44 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -13,11 +13,11 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-current-[0-9]*
 
-SNAPDATE=		20060422
+SNAPDATE=		20060822
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		WISH=${TOOLS_PATH.wish}
 USE_TOOLS+=		bison gm4:run gmake lex wish:run pkg-config
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pcb
 PKG_SUPPORTED_OPTIONS=		png
