@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/07/02 11:32:40 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/23 12:19:58 jmmv Exp $
 
---- metadata/rb-metadata-dbus-client.c.orig	2006-04-22 11:30:47.000000000 +0200
+--- metadata/rb-metadata-dbus-client.c.orig	2006-05-27 06:15:44.000000000 +0200
 +++ metadata/rb-metadata-dbus-client.c
 @@ -52,7 +52,7 @@
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.1 2006/07/02 11:32:40 drochner Exp $
  #include <sys/wait.h>
  #include <string.h>
  #include <stdlib.h>
+@@ -118,7 +118,7 @@ kill_metadata_service (void)
+ 	if (dbus_connection) {
+ 		if (dbus_connection_get_is_connected (dbus_connection)) {
+ 			rb_debug ("closing dbus connection");
+-			dbus_connection_disconnect (dbus_connection);
++			dbus_connection_close (dbus_connection);
+ 		} else {
+ 			rb_debug ("dbus connection already closed");
+ 		}
