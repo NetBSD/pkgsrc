@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1101 2006/08/23 11:27:59 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.1102 2006/08/23 11:46:29 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4054,3 +4054,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/optipng to 0.5.4 [adam 2006-08-23]
 	Updated www/ap-rivet to 0.5.0 [minskim 2006-08-23]
 	Updated cad/pcb to 20060822 [dmcmahill 2006-08-22]
+	Updated databases/libpqxx to 2.5.5 [ghen 2006-08-23]
+	Updated databases/libpqxx-doc to 2.5.5 [ghen 2006-08-23]
