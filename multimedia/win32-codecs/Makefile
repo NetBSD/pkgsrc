@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.24 2006/07/03 21:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/08/23 18:13:19 wiz Exp $
 #
 
 DISTNAME=	windows-all-20060611
 PKGNAME=	win32-codecs-060611
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www4.mplayerhq.hu/MPlayer/releases/codecs/ \
-		http://ftp5.mplayerhq.hu/mplayer/releases/codecs/ \
+		http://ftp5.mplayerhq.hu/MPlayer/releases/codecs/ \
 		ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www1.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
-		ftp://ftp5.mplayerhq.hu/mplayer/releases/codecs/
+		ftp://ftp5.mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.zip
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	qtextras-20041107.tar.bz2

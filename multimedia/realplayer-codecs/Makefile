@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/01 13:19:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/23 18:13:19 wiz Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}-20050115
@@ -6,9 +6,9 @@ PKGNAME=	realplayer-codecs-8.20050115
 PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www4.mplayerhq.hu/MPlayer/releases/codecs/ \
-		http://ftp5.mplayerhq.hu/mplayer/releases/codecs/ \
+		http://ftp5.mplayerhq.hu/MPlayer/releases/codecs/ \
 		ftp://ftp2.mplayerhq.hu/MPlayer/releases/codecs/ \
-		ftp://ftp5.mplayerhq.hu/mplayer/releases/codecs/ \
+		ftp://ftp5.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www1.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.tar.bz2
