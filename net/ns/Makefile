@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/08/23 10:20:35 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2006/08/23 10:28:06 minskim Exp $
 
 DISTNAME=	ns-allinone-2.29.3
 PKGNAME=	${DISTNAME:S/-allinone//}
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.isi.edu/nsnam/ns/
+HOMEPAGE=	http://nsnam.isi.edu/nsnam/
 COMMENT=	The UCB/LBNL Network Simulator Version 2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
