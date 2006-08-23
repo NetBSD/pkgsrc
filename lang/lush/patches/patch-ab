@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/08/23 22:01:00 wiz Exp $
+
+--- src/index.c.orig	2004-04-15 23:45:34.000000000 +0000
++++ src/index.c
+@@ -142,6 +142,9 @@ index_name(at *p)
+ }
+ 
+ 
++static at *index_set(struct index*,at**,at*,int);
++static at *index_ref(struct index*,at**);
++
+ static at *
+ index_listeval(at *p, at *q)
+ {
+@@ -150,9 +153,6 @@ index_listeval(at *p, at *q)
+   register at *qsav;
+   at *myp[MAXDIMS];
+ 
+-  static at *index_set(struct index*,at**,at*,int);
+-  static at *index_ref(struct index*,at**);
+-
+   ind = p->Object;
+ 
+   if (ind->flags & IDF_UNSIZED)
