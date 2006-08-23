@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5367 2006/08/23 11:46:58 ghen Exp $
+$NetBSD: TODO,v 1.5368 2006/08/23 16:40:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -451,6 +451,7 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
+	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
 	o ex-050325
@@ -687,6 +688,7 @@ Suggested package updates
 	o mined-2000.12
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
+	o miredo-1.0.0
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.7.0
 	o mlview-0.9.0
@@ -875,7 +877,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o phpldapadmin-0.9.7
-	o phpmyadmin-2.8.2.2
+	o phpmyadmin-2.8.2.3
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -1033,7 +1035,7 @@ Suggested package updates
 	o skf-1.93.11 [pkg/34251]
 	o skill-4.1.2
 	o skkinput-2.06.4
-	o skype-1.3.0.30
+	o skype-1.3.0.37
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
