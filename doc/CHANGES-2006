@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1099 2006/08/23 10:58:07 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1100 2006/08/23 11:22:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/mp3cut version 1.13 [jmmv 2006-08-23]
 	Updated net/nam to 1.11nb2 [minskim 2006-08-23]
 	Updated graphics/optipng to 0.5.4 [adam 2006-08-23]
+	Updated www/ap-rivet to 0.5.0 [minskim 2006-08-23]
