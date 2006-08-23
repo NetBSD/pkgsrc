@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/05/22 10:01:02 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/08/23 10:38:01 minskim Exp $
 
 DISTNAME=	moss-0.1.13
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://kldp.net/frs/download.php/1580/
 
@@ -12,8 +12,7 @@ COMMENT=	MP3/OGG Streaming Server
 DEPENDS+=	${PYPKGPREFIX}-ogg>=1.3:../../audio/py-ogg
 DEPENDS+=	${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
-
-PYTHON_VERSIONS_ACCEPTED=	23 22 21
+PYTHON_VERSIONS_INCOMPATIBLE=	20 15
 PYTHON_PATCH_SCRIPTS=	${WRKSRC}/*.py
 
 RCD_SCRIPTS=	moss
