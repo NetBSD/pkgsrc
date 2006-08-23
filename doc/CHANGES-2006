@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1091 2006/08/22 21:48:29 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.1092 2006/08/23 08:50:58 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/atk to 1.12.2 [wiz 2006-08-22]
 	Updated graphics/freetype2 to 2.2.1nb2 [joerg 2006-08-22]
 	Added www/p5-HTTP-Lite version 2.1.6 [minskim 2006-08-22]
+	Updated lang/sun-jre15 to 5.0.8nb1 [jmmv 2006-08-23]
