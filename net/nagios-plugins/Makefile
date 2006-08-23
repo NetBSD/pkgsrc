@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/08/17 14:20:14 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/23 18:45:31 wiz Exp $
 #
 
 CATEGORIES=	net sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagiosplug/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://sourceforge.net/projects/nagiosplug/
