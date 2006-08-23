@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2006/08/18 13:45:57 salo Exp $
+$NetBSD: distinfo,v 1.8 2006/08/23 22:59:09 rpaulo Exp $
 
-SHA1 (miredo-0.9.9.tar.bz2) = 15fd2dc04f295cce5a25a4372488caaf99bc6552
-RMD160 (miredo-0.9.9.tar.bz2) = 7bb88d5fc90001b8c7efdc809038bf382708bdcd
-Size (miredo-0.9.9.tar.bz2) = 441042 bytes
+SHA1 (miredo-1.0.0.tar.bz2) = f7b6aa33d940532f6370ad041fb74da67f29e18f
+RMD160 (miredo-1.0.0.tar.bz2) = ea66a1416fc5f4031316a65f1b55e69cce44c7e6
+Size (miredo-1.0.0.tar.bz2) = 437269 bytes
 SHA1 (patch-aa) = 184c8dd8ca12ecdfcf56700aef25d46eccc16c53
 SHA1 (patch-ab) = 08e67c6fa8bebfca8d47ca2b9525bda2eefb518f
 SHA1 (patch-ac) = c591e9097cf143c9bc4bde3cb66b875755547cd1
