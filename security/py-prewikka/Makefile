@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2006/08/17 11:35:20 shannonjr Exp $
+# $NetBSD: Makefile,v 1.11 2006/08/23 10:30:02 shannonjr Exp $
 #
 
-DISTNAME=		prewikka-0.9.7
-PKGNAME=		${PYPKGPREFIX}-prewikka-0.9.7
+DISTNAME=		prewikka-${VERSION}
+PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://prelude-ids.org/download/releases/
+
+VERSION=		0.9.7
 
 CONFLICTS=		prewikka-[0-9]*
 
@@ -19,7 +22,7 @@ DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 PYDISTUTILSPKG=		yes
 PYBINMODULE=		yes
 PYSETUP=		setup.py
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
+PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	scripts/prewikka-httpd
 PREWIKKA_USER?=		prewikka
 PREWIKKA_GROUP?=	prewikka
@@ -37,6 +40,7 @@ SUBST_STAGE.code=	post-patch
 SUBST_FILES.code=	runPrewikka.c
 SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.code+=	-e 's,@PREWIKKA_USER@,${PREWIKKA_USER},g'
+SUBST_SED.code+=	-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 FILES_SUBST+=	PREWIKKA_USER=${PREWIKKA_USER:Q}
 
 pre-patch:

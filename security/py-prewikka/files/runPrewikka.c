@@ -1,5 +1,6 @@
 #define PREWIKKA_HTTPD_USER "@PREWIKKA_USER@"
 #define PREWIKKA_HTTPD_PATH "@PREFIX@/bin/prewikka-httpd"
+#define PYTHON "@PYTHONBIN@"
 
 #include <unistd.h>
 #include <string.h>
@@ -116,15 +117,16 @@ int main (int argc, char **argv )
             }
 
             /* Build calling argv */
-            args[0] = PREWIKKA_HTTPD_PATH;
+            args[0] = PYTHON;
+            args[1] = PREWIKKA_HTTPD_PATH;
             for (i=1;i<argc;i++)
             {
-                args[i] = argv[i];
+               args[i+1] = argv[i];
+               args[i+2] = NULL;
             }
-            args[i++] = NULL;
 
             /* Finally transform self into prewikka-httpd */
-            if (execvp(PREWIKKA_HTTPD_PATH, args) < 0)
+            if (execvp(PYTHON, args) < 0)
                 error_sys("execve error");
             else
                 ; /* avoid if-then ambiguity */

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2006/08/23 10:30:02 shannonjr Exp $
+
+--- ./prewikka/Filter.py.orig	2006-08-16 03:40:13.000000000 -0600
++++ ./prewikka/Filter.py
+@@ -85,7 +85,7 @@ class _Filter:
+ 
+ 
+ 
+-class AlertFilter:
++class AlertFilter(_Filter):
+     _objects = CriteriaIDMEF(prelude.IDMEF_CLASS_ID_ALERT, "alert").CriteriaList
+     
+     def __iter__(self):
