@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46.2.1 2006/08/10 07:54:21 ghen Exp $
+$NetBSD: distinfo,v 1.46.2.2 2006/08/23 23:30:32 salo Exp $
 
 SHA1 (X11R6.9.0-src1.tar.gz) = a6c077ed8fdeee5fe1956a427c4cb0bc266e1bef
 RMD160 (X11R6.9.0-src1.tar.gz) = d12270a4f41a3ceee4bfd5da22d387a3aa707df8
@@ -11,8 +11,8 @@ RMD160 (X11R6.9.0-src3.tar.gz) = 1a2d1855f7b204012627a6c6bf0eaf5245fff414
 Size (X11R6.9.0-src3.tar.gz) = 10872474 bytes
 SHA1 (patch-aa) = 009b7a2679ae98ebd7071e4fa6169c3401273ca1
 SHA1 (patch-ab) = 45f06a7d1ac2316621c5707bb202b7f6042699be
-SHA1 (patch-ac) = 841979893b72455ce59b951ac137ca0c236a39f3
-SHA1 (patch-ad) = 33233761a745b4c62cf64855a5d9c196cd679cf2
+SHA1 (patch-ac) = 4b64af7f360836589943ec229247357033e883fa
+SHA1 (patch-ad) = 8b803d38021a0762e503c445a302f133e5c1f3b1
 SHA1 (patch-ae) = 4d4e00a8f9e226323975596070a8fb3f59c34b4d
 SHA1 (patch-af) = 62127e39c829cba6b01bd9f3aaaea682eec52c9e
 SHA1 (patch-ag) = d300aa92052bdfe13e799223cf055c7955e7bb8f
@@ -29,7 +29,7 @@ SHA1 (patch-aq) = fd2bcdb1c37ce0cc748b0f5c2a12d226e4486d0d
 SHA1 (patch-ar) = 1343c744c3fde364b0407f24e09d0b11d5dcb8c4
 SHA1 (patch-as) = 492de38023ab7babebe0db8ab700d76e5f2b8a8b
 SHA1 (patch-at) = de62c6d1eedda14bac4344978b18065d46de3efd
-SHA1 (patch-au) = 3b76dbc381190ef18957a5af73208a72df687151
+SHA1 (patch-au) = 8c4062d46c817b80bb0ca85821f6c69dc9947f84
 SHA1 (patch-av) = bfcdb21557e8e6f8c24399ad0077b75d4a5215c6
 SHA1 (patch-aw) = f9bc393bb6867cd5e2ed54ce7e84ddfb4837785b
 SHA1 (patch-ax) = 582b2b9d8f0f8316b9e2b5528cd14753df1f4bdf
@@ -51,6 +51,8 @@ SHA1 (patch-bm) = f9b73b7c1bd7d6d6db6d23741d5d1125eea5f860
 SHA1 (patch-bn) = 58049eb799b469b70b5a2c611b8aef37a5631c0c
 SHA1 (patch-bo) = fd34e4c71756f17294aeab63db1f15090b3edc1b
 SHA1 (patch-bp) = 6bf5252ceeefb2a59cfa16b7375bba61f4867d01
+SHA1 (patch-bq) = 8e8f9a634b80b10dae7d79faaf1684cc9d8c1fa8
+SHA1 (patch-br) = d64c6408126daf25e900a63a07c1282c719eaaab
 SHA1 (patch-ca) = 8a2a46defa2f62917128a0aaaf946cda8a169892
 SHA1 (patch-cb) = 96e00c680acbafa3665ccae650a513daea3c2a01
 SHA1 (patch-cc) = d5d72e525f9564eda7f2ea21ddb179800fb153b5
