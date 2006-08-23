@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/16 14:37:21 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/23 18:29:53 wiz Exp $
 #
 
 DISTNAME=		epsg-v6_11sql-PostgreSQL
 PKGNAME=		epsg-6.11
 CATEGORIES=		geography databases
-MASTER_SITES+=		http://www.epsg.org/databases/ \
-			http://www.epsg.org/guides/docs/
+MASTER_SITES+=		http://www.epsg.org/databases/
 DISTFILES+=		epsg-v6_11sql-PostgreSQL.zip \
 			epsg-v6_11sql-mySQL.zip \
 			G7-1.pdf G7-2.pdf
@@ -21,6 +20,9 @@ LICENSE=		epsg-license
 RESTRICTED=		No commercial redistribution
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+SITES.G7-1.pdf=		http://www.epsg.org/guides/docs/
+SITES.G7-2.pdf=		${SITES.G7-1.pdf}
 
 WRKSRC=			${WRKDIR}/epsg-v6_11sql-postgresql
 WRKSRC.pgsql=		${WRKDIR}/epsg-v6_11sql-PostgreSQL
