@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/22 13:50:26 tv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/08/23 08:50:34 jmmv Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -81,12 +81,10 @@ java/sun-1.5/lib/fonts/LucidaTypewriterRegular.ttf
 java/sun-1.5/lib/fonts/fonts.dir
 java/sun-1.5/lib/${MACHINE_ARCH}/awt_robot
 java/sun-1.5/lib/${MACHINE_ARCH}/client/Xusage.txt
-java/sun-1.5/lib/${MACHINE_ARCH}/client/classes.jsa
 java/sun-1.5/lib/${MACHINE_ARCH}/client/libjsig.so
 java/sun-1.5/lib/${MACHINE_ARCH}/client/libjvm.so
 java/sun-1.5/lib/${MACHINE_ARCH}/gtkhelper
 java/sun-1.5/lib/${MACHINE_ARCH}/headless/libmawt.so
-java/sun-1.5/lib/${MACHINE_ARCH}/jvm.cfg
 java/sun-1.5/lib/${MACHINE_ARCH}/jvm.cfg.default
 java/sun-1.5/lib/${MACHINE_ARCH}/libJdbcOdbc.so
 java/sun-1.5/lib/${MACHINE_ARCH}/libawt.so
@@ -669,6 +667,7 @@ java/sun-1.5/plugin/${MACHINE_ARCH}/ns7/libjavaplugin_oji.so
 @dirrm java/sun-1.5/man/ja_JP.eucJP/man1
 @dirrm java/sun-1.5/man/ja_JP.eucJP
 @dirrm java/sun-1.5/man
+@dirrm java/sun-1.5/lib/zi/SystemV
 @dirrm java/sun-1.5/lib/zi/Pacific
 @dirrm java/sun-1.5/lib/zi/Indian
 @dirrm java/sun-1.5/lib/zi/Europe
