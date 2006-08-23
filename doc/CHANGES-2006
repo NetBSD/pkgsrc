@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1094 2006/08/23 09:46:33 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1095 2006/08/23 10:21:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/dbus to 0.91 [jmmv 2006-08-23]
 	Updated sysutils/dbus-glib to 0.71 [jmmv 2006-08-23]
 	Updated sysutils/py-dbus to 0.71 [jmmv 2006-08-23]
+	Updated net/ns to 2.29.3 [minskim 2006-08-23]
