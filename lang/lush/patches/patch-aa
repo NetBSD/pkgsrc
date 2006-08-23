@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/23 22:01:00 wiz Exp $
+
+--- src/date.c.orig	2003-07-11 13:03:45.000000000 +0000
++++ src/date.c
+@@ -63,7 +63,7 @@ struct date {
+  */
+ 
+ 
+-static char *ansidatenames[] = {
++char *ansidatenames[] = {
+   "year",
+   "month",
+   "day",
+@@ -311,10 +311,11 @@ date_name(at *p)
+   return string_buffer;
+ }
+ 
++static at *make_date(struct date *d);
++
+ static void
+ date_serialize(at **pp, int code)
+ {
+-  static at *make_date(struct date *d);
+   void *p;
+ 
+   if (code == SRZ_READ)
