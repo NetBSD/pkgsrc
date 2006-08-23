@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5368 2006/08/23 16:40:01 wiz Exp $
+$NetBSD: TODO,v 1.5369 2006/08/23 19:13:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -644,7 +644,7 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libnids-1.21
 	o libntlm-0.3.10
-	o libprelude-0.9.10.1
+	o libprelude-0.9.10.2
 	o libpreludedb-0.9.9
 	o libshout-2.2
 	o libsmi-0.4.3
@@ -944,6 +944,7 @@ Suggested package updates
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
+	o py-prewikka-0.9.7.1
 	o py-psyco-1.5.1
 	o py-psycopg2-2.0.3
 	o py-pyrex-0.9.3.1
