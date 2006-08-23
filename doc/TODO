@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5369 2006/08/23 19:13:24 wiz Exp $
+$NetBSD: TODO,v 1.5370 2006/08/23 21:07:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -142,10 +142,6 @@ Suggested new packages
 	http://packages.qa.debian.org/t/ttf-freefont.html
 	TrueType fonts covering the UCS character sets similar to
 	Helvetica, Times and Courier.
-
-	GraphicsMagick
-	http://www.graphicsmagick.org/
-	Tools and libraries for manipulating images in over 88 formats.
 
 	grip
 	http://nostatic.org/grip/
