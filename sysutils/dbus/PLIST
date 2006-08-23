@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/30 20:57:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/08/23 09:44:27 jmmv Exp $
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
 bin/dbus-launch
+bin/dbus-monitor
 bin/dbus-send
 include/dbus-1.0/dbus/dbus-address.h
 include/dbus-1.0/dbus/dbus-bus.h
@@ -14,6 +15,7 @@ include/dbus-1.0/dbus/dbus-pending-call.h
 include/dbus-1.0/dbus/dbus-protocol.h
 include/dbus-1.0/dbus/dbus-server.h
 include/dbus-1.0/dbus/dbus-shared.h
+include/dbus-1.0/dbus/dbus-signature.h
 include/dbus-1.0/dbus/dbus-threads.h
 include/dbus-1.0/dbus/dbus-types.h
 include/dbus-1.0/dbus/dbus.h
@@ -23,6 +25,7 @@ lib/pkgconfig/dbus-1.pc
 man/man1/dbus-cleanup-sockets.1
 man/man1/dbus-daemon.1
 man/man1/dbus-launch.1
+man/man1/dbus-monitor.1
 man/man1/dbus-send.1
 share/examples/dbus/session.conf
 share/examples/dbus/system.conf
