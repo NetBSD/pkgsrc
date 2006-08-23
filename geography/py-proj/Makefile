@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/22 15:09:19 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/23 11:18:50 joerg Exp $
 #
 
 DISTNAME=		pyproj-1.7.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.cdc.noaa.gov/people/jeffrey.s.whitaker/python/
 COMMENT=		python wrapper for proj
 
 PYDISTUTILSPKG=			true
-PYTHON_VERSIONS_SUPPORTED=	23 24
+PYTHON_VERSIONS_ACCEPTED=	23 24
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME}
