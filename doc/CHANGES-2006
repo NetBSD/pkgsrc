@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1098 2006/08/23 10:44:29 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.1099 2006/08/23 10:58:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/p5-CDDB-File version 1.05 [jmmv 2006-08-23]
 	Added audio/mp3cut version 1.13 [jmmv 2006-08-23]
 	Updated net/nam to 1.11nb2 [minskim 2006-08-23]
+	Updated graphics/optipng to 0.5.4 [adam 2006-08-23]
