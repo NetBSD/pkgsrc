@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/07/11 09:41:33 shannonjr Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/23 18:51:56 wiz Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.6
 CATEGORIES=		security
-MASTER_SITES=		http://www.prelude-ids.org/download/releases/
+MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
+			http://www.prelude-ids.org/download/releases/old/
 
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/download/releases/
