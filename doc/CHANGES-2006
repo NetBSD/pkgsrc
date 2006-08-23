@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1106 2006/08/23 22:02:01 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1107 2006/08/23 23:00:11 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4062,3 +4062,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/py-cheetah to 2.0rc7 [shannonjr 2006-08-23]
 	Updated graphics/ImageMagick to 6.2.9.1 [adam 2006-08-23]
 	Added lang/lush version 1.1 [wiz 2006-08-23]
+	Updated net/miredo to 1.0.0 [rpaulo 2006-08-23]
