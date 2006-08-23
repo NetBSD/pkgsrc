@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/08/23 09:45:16 jmmv Exp $
+
+--- tools/Makefile.in.orig	2006-07-24 20:41:57.000000000 +0200
++++ tools/Makefile.in
+@@ -487,7 +487,7 @@ dbus-glib-bindings.h: dbus-bus-introspec
+ 	$(top_builddir)/dbus/dbus-binding-tool --mode=glib-client --output=dbus-glib-bindings.h dbus-bus-introspect.xml
+ 
+ dbus-bus-introspect.xml:
+-	DBUS_TOP_BUILDDIR=$(top_builddir) dbus-send --system --print-reply=literal --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.Introspectable.Introspect > dbus-bus-introspect.xml.tmp && mv dbus-bus-introspect.xml.tmp dbus-bus-introspect.xml
++	DBUS_TOP_BUILDDIR=$(top_builddir) dbus-launch dbus-send --session --print-reply=literal --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.Introspectable.Introspect > dbus-bus-introspect.xml.tmp && mv dbus-bus-introspect.xml.tmp dbus-bus-introspect.xml
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
