@@ -1,8 +1,29 @@
-$NetBSD: patch-af,v 1.7 2006/05/29 13:51:20 tron Exp $
+$NetBSD: patch-af,v 1.8 2006/08/24 22:02:02 salo Exp $
 
---- src/main.c.orig	2003-08-14 15:36:18.000000000 +0100
-+++ src/main.c	2006-05-29 14:34:26.000000000 +0100
-@@ -330,9 +330,31 @@
+--- src/main.c.orig	2003-08-14 16:36:18.000000000 +0200
++++ src/main.c	2006-08-24 23:58:29.000000000 +0200
+@@ -103,7 +103,7 @@ char	temp1[PATHLEN + 1];	/* temporary fi
+ char	temp2[PATHLEN + 1];	/* temporary file name */
+ long	totalterms;		/* total inverted index terms */
+ BOOL	trun_syms;		/* truncate symbols to 8 characters */
+-char	tempstring[8192];	/* use this as a buffer, instead of 'yytext', 
++char	tempstring[TEMPSTRING_LEN + 1]; /* use this as a buffer, instead of 'yytext', 
+ 				 * which had better be left alone */
+ char	*tmpdir;		/* temporary directory */
+ 
+@@ -247,6 +247,11 @@ main(int argc, char **argv)
+ 				switch (c) {
+ 				case 'f':	/* alternate cross-reference file */
+ 					reffile = s;
++					if (strlen(reffile) > sizeof(path) - 1) {
++						posterr("\
++cscope: reffile too long, cannot be > %d characters\n", sizeof(path) - 1);
++						/* NOTREACHED */
++					}
+ 					(void) strcpy(path, s);
+ #ifdef SHORT_NAMES_ONLY 
+ 					/* System V has a 14 character limit */
+@@ -330,9 +335,31 @@ lastarg:
  	}
  
  	/* create the temporary file names */
@@ -37,7 +58,7 @@ $NetBSD: patch-af,v 1.7 2006/05/29 13:51:20 tron Exp $
  
  	/* if running in the foreground */
  	if (signal(SIGINT, SIG_IGN) != SIG_IGN) {
-@@ -352,12 +374,12 @@
+@@ -352,12 +379,12 @@ lastarg:
  		 * used instead of failing to open a non-existant database in
  		 * the home directory
  		 */
@@ -53,7 +74,30 @@ $NetBSD: patch-af,v 1.7 2006/05/29 13:51:20 tron Exp $
  			invpost = stralloc(path);
  		}
  	}
-@@ -692,7 +714,7 @@
+@@ -467,11 +494,11 @@ lastarg:
+ 			    || (names = vpfopen(NAMEFILE, "r")) != NULL) {
+ 	
+ 				/* read any -p option from it */
+-				while (fscanf(names, "%s", path) == 1 && *path == '-') {
++				while (fgets(path, sizeof(path), names) != NULL && *path == '-') {
+ 					i = path[1];
+ 					s = path + 2;		/* for "-Ipath" */
+ 					if (*s == '\0') {	/* if "-I path" */
+-						(void) fscanf(names, "%s", path);
++						(void) fgets(path, sizeof(path), names);
+ 						s = path;
+ 					}
+ 					switch (i) {
+@@ -488,7 +515,7 @@ lastarg:
+ 		}
+ 		else {
+ 			for (i = 0; i < nsrcfiles; ++i) {
+-				if (fscanf(oldrefs, "%s", path) != 1) {
++				if (!fgets(path, sizeof(path), oldrefs) ) {
+  					posterr("cscope: cannot read source file name from file %s\n", reffile);
+ 					myexit(1);
+ 				}
+@@ -692,7 +719,7 @@ cannotwrite(char *file)
  #else
  	char *msg = mymalloc(50+strlen(file));
  

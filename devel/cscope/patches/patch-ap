@@ -1,0 +1,24 @@
+$NetBSD: patch-ap,v 1.1 2006/08/24 22:02:02 salo Exp $
+
+--- src/input.c.orig	2001-07-18 15:49:01.000000000 +0200
++++ src/input.c	2006-08-24 23:44:25.000000000 +0200
+@@ -290,7 +290,7 @@ shellpath(char *out, int limit, char *in
+ 			v = logdir(out);
+ 		}
+ 		/* copy the directory name */
+-		if (v != NULL) {
++		if (v != NULL && strlen(v) < (lastchar - out)) {
+ 			(void) strcpy(out - 1, v);
+ 			out += strlen(v) - 1;
+ 		}
+@@ -313,8 +313,8 @@ shellpath(char *out, int limit, char *in
+ 			}
+ 			*s = '\0';
+ 	
+-			/* get its value */
+-			if ((v = getenv(out)) != NULL) {
++			/* get its value, but only it isn't too big */
++			if ((v = getenv(out)) != NULL && strlen(v) < (lastchar - out)) {
+ 				(void) strcpy(out - 1, v);
+ 				out += strlen(v) - 1;
+ 			}
