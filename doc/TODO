@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5373 2006/08/24 15:45:57 taca Exp $
+$NetBSD: TODO,v 1.5374 2006/08/24 17:30:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -302,6 +302,7 @@ Suggested package updates
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
+	o amarok-1.4.2
 	o amavis-0.3.12
 	o amavisd-new-2.4.2 [pkg/34041]
 	o amaya-9.5
@@ -554,6 +555,7 @@ Suggested package updates
 	o gzrecover-0.3
 	o hackbot-2.21
 	o haskell-mode-1.45
+	o hatari-0.90
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -598,6 +600,7 @@ Suggested package updates
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
+	o k3b-0.12.17
 	o kapooka-0.3
 	o kazehakase-0.3.9
 	o kbarcode-2.0.4
@@ -846,6 +849,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.14.2
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
