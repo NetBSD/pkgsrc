@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/07/04 15:44:13 yyamano Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/24 15:45:05 taca Exp $
 
-DISTNAME=	skf_1.93.10
-PKGNAME=	skf-1.93.10
+DISTNAME=	skf_1.93.11
+PKGNAME=	skf-1.93.11
 CATEGORIES=	japanese converters
-MASTER_SITES=	http://download.sourceforge.jp/skf/20800/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skf/21441/}
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://sourceforge.jp/projects/skf/
