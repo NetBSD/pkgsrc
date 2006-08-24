@@ -1,4 +1,4 @@
-/* $NetBSD: crunchide.c,v 1.3 2004/08/02 02:02:30 kristerw Exp $ */
+/* $NetBSD: crunchide.c,v 1.4 2006/08/24 20:23:28 kristerw Exp $ */
 /* NetBSD: crunchide.c,v 1.9 1999/01/11 22:40:00 kleink Exp 	 */
 
 /*
@@ -63,7 +63,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: crunchide.c,v 1.3 2004/08/02 02:02:30 kristerw Exp $");
+__RCSID("$NetBSD: crunchide.c,v 1.4 2006/08/24 20:23:28 kristerw Exp $");
 #endif
 
 #include <unistd.h>
@@ -406,7 +406,7 @@ copy_section(ibfd, isection, arg)
 	long relcount, relsize;
 
 	osection = isection->output_section;
-	size = bfd_get_section_size_before_reloc(isection);
+	size = isection->rawsize;
 	if (size == 0 || osection == 0)
 		return;
 
@@ -424,7 +424,7 @@ copy_section(ibfd, isection, arg)
 		bfd_set_reloc(obfd, osection, relpp, relcount);
 	}
 
-	isection->_cooked_size = isection->_raw_size;
+	isection->size = isection->rawsize;
 	isection->reloc_done = 1;
 
 	if (bfd_get_section_flags(ibfd, isection) & SEC_HAS_CONTENTS) {
