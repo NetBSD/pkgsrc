@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2006/07/18 06:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2006/08/24 17:37:23 wiz Exp $
 
-DISTNAME=		amarok-1.4.1
-PKGREVISION=		1
+DISTNAME=		amarok-1.4.2
 CATEGORIES=		audio kde
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
+MASTER_SITES=		${MASTER_SITE_KDE:=amarok/1.4.2/src/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
@@ -40,6 +39,7 @@ PYTHON_PATCH_SCRIPTS= \
 	amarok/src/scripts/webcontrol/WebPublisher.py
 REPLACE_RUBY= \
 	amarok/src/amarok_proxy.rb \
+	amarok/src/mediadevice/daap/amarok_daapserver.rb \
 	amarok/src/scripts/lyrics_astraweb/lyrics_astraweb.rb \
 	amarok/src/scripts/lyrics_lyrc/lyrics_lyrc.rb \
 	amarok/src/scripts/ruby_debug/debug.rb \
@@ -54,7 +54,7 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 
 .include "options.mk"
 
-.include "../../audio/libtunepimp0.4/buildlink3.mk"
+.include "../../audio/libtunepimp/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
