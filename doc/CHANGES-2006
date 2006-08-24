@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1119 2006/08/24 17:50:13 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1120 2006/08/24 20:01:23 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4080,3 +4080,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/amaroc version 0.3 [wiz 2006-08-24]
 	Updated pkgtools/bootstrap-extras to 20060824 [wiz 2006-08-24]
 	Updated pkgtools/bootstrap-mk-files to 20060824 [wiz 2006-08-24]
+	Updated cross/binutils to 2.17.0.0 [kristerw 2006-08-24]
