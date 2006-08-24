@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/06 10:36:46 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/08/24 18:30:24 wiz Exp $
 
 SHA1 (geos-2.0.0.tar.bz2) = 68ebffa7e18f4edf932e98bd3cf20d58a439c22e
 RMD160 (geos-2.0.0.tar.bz2) = b3873169d215beb3202870618fbefbe96593fa90
@@ -6,3 +6,4 @@ Size (geos-2.0.0.tar.bz2) = 512262 bytes
 SHA1 (patch-aa) = 7b05c8507f9f06ca0492ab8b219aad6922685a4e
 SHA1 (patch-ab) = 2257c2a6bc5448486dcd1826138c1b16b1b78a4f
 SHA1 (patch-ac) = e6fa156825bf9afb7324c63d5cc4c88a88cae96b
+SHA1 (patch-ad) = f665165e73d235c6dfd4119de50ea47a37414935
