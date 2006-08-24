@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1115 2006/08/24 16:11:43 shannonjr Exp $
+$NetBSD: CHANGES-2006,v 1.1116 2006/08/24 17:38:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4075,3 +4075,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/arla to 0.43 [wennmach 2006-08-24]
 	Updated converters/skf to 1.93.11 [taca 2006-08-24]
 	Updated security/prelude-manager to 0.9.6 [shannonjr 2006-08-24]
+	Updated devel/pango to 1.14.2 [wiz 2006-08-24]
+	Updated audio/amarok to 1.4.2 [wiz 2006-08-24]
