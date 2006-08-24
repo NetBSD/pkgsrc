@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2006/08/24 08:45:35 jmmv Exp $
+
+--- boost/python/converter/rvalue_from_python_data.hpp.orig	2006-08-23 23:48:06.000000000 +0200
++++ boost/python/converter/rvalue_from_python_data.hpp
+@@ -94,7 +94,9 @@ struct rvalue_from_python_data : rvalue_
+ # if (!defined(__MWERKS__) || __MWERKS__ >= 0x3000) \
+         && (!defined(__EDG_VERSION__) || __EDG_VERSION__ >= 245) \
+         && (!defined(__DECCXX_VER) || __DECCXX_VER > 60590014) \
+-        && !defined(BOOST_PYTHON_SYNOPSIS) /* Synopsis' OpenCXX has trouble parsing this */
++        && !defined(BOOST_PYTHON_SYNOPSIS) /* Synopsis' OpenCXX has trouble parsing this */ \
++        && !(BOOST_WORKAROUND(__GNUC__, == 3) && BOOST_WORKAROUND(__GNUC_MINOR__, == 4)) \
++        && !(BOOST_WORKAROUND(__GNUC__, == 4))
+     // This must always be a POD struct with m_data its first member.
+     BOOST_STATIC_ASSERT(BOOST_PYTHON_OFFSETOF(rvalue_from_python_storage<T>,stage1) == 0);
+ # endif
