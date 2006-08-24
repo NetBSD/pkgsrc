@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/07/06 21:14:19 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/08/24 18:28:38 kristerw Exp $
 
 DISTNAME=	crosspkg-netbsd1-shark-1.6.2
 CATEGORIES=     crosspkgtools
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-1.6.2/shark/binary/sets/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD-archive/NetBSD-1.6.2/shark/binary/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES=	base.tgz comp.tgz etc.tgz games.tgz kern-GENERIC.tgz man.tgz \
 		misc.tgz text.tgz xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz \
@@ -25,19 +25,21 @@ SITES.xsrc.tgz=		${SRC_SITES}
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
+USE_TOOLS+=	tar
 
 NO_PACKAGE=	needs work to function properly as a binary package
 
 # Dynamically generate the PLIST from the installed files.
-CROSSFS_PLIST_FILES= \
-	(cd ${PREFIX};  ${FIND} crossfs/netbsd1-shark \! -type d -print ) \
+CROSSFS_PLIST_FILES_CMD= \
+	(cd ${PREFIX} && ${FIND} crossfs/netbsd1-shark \! -type d -print ) \
 	| ${SORT} -u
-CROSSFS_PLIST_DIRS= \
-	(cd ${PREFIX};  ${FIND} crossfs/netbsd1-shark -type d -print ) 	\
+CROSSFS_PLIST_DIRS_CMD= \
+	(cd ${PREFIX} && ${FIND} crossfs/netbsd1-shark -type d -print ) \
 	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
-		 -e "s,$$, 2>/dev/null || ${TRUE},"			\
+		 -e "s,\$$, 2>/dev/null || ${TRUE},"			\
 	| ${SORT} -ur
-GENERATE_PLIST+=	${CROSSFS_PLIST_FILES}; ${CROSSFS_PLIST_DIRS};
+GENERATE_PLIST+=	${CROSSFS_PLIST_FILES_CMD};
+GENERATE_PLIST+=	${CROSSFS_PLIST_DIRS_CMD};
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/crossfs/netbsd1-shark

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/07/06 21:14:19 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/24 18:28:38 kristerw Exp $
 
 DISTNAME=	crosspkg-netbsd1-acorn26-1.6.2
 CATEGORIES=	crosspkgtools
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-1.6.2/acorn26/binary/sets/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD-archive/NetBSD-1.6.2/acorn26/binary/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES=	base.tgz comp.tgz etc.tgz games.tgz kern-GENERIC.tgz man.tgz \
 		misc.tgz text.tgz xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz \
@@ -25,6 +25,7 @@ SITES.xsrc.tgz=		${SRC_SITES}
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
+USE_TOOLS+=	tar
 
 NO_PACKAGE=	needs work to function properly as a binary package
 
