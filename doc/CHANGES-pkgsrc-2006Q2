@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.77 2006/08/23 23:31:01 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.78 2006/08/24 11:51:28 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -181,3 +181,5 @@ Pullup ticket 1803 - requested by joerg
 security fix for freetype2
 Pullup ticket 1804 - requested by joerg
 security fix and sync with HEAD for xorg
+Pullup ticket 1805 - requested by tron
+security update for wireshark
