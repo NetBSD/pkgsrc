@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5374 2006/08/24 17:30:04 wiz Exp $
+$NetBSD: TODO,v 1.5375 2006/08/24 17:36:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ Suggested package updates
 	o libnids-1.21
 	o libntlm-0.3.10
 	o libprelude-0.9.10.2
-	o libpreludedb-0.9.9
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libstatgrab-0.13
