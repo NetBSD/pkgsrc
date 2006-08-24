@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/08/24 08:53:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2006/08/24 10:01:50 xtraeme Exp $
 #
 
 DISTNAME=	dvdrip-0.98.0
@@ -12,6 +12,7 @@ COMMENT=	Graphical frontend for DVD ripping
 DEPENDS+=	p5-AnyEvent>=1.02:../../devel/p5-AnyEvent
 DEPENDS+=	p5-Event-ExecFlow>=0.62:../../devel/p5-Event-ExecFlow
 DEPENDS+=	p5-Event-RPC>=0.90:../../devel/p5-Event-RPC
+DEPENDS+=	lsdvd>=0.16:../../multimedia/lsdvd
 DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
 DEPENDS+=	transcode>=0.6.9:../../multimedia/transcode
