@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/08/24 17:59:04 wennmach Exp $
+# $NetBSD: Makefile,v 1.61 2006/08/24 19:17:53 wennmach Exp $
 
 DISTNAME=		arla-0.43
 PKGREVISION=		1
@@ -16,10 +16,13 @@ CONFLICTS+=		rx-[0-9]*
 CONFLICTS+=		kth-krb4-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+BUILD_DEFS+=		BSDSRCDIR
+BUILD_DEFS+=		ARLA_CACHE
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
