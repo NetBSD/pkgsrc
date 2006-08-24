@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:26 reed Exp $
+# $NetBSD: Makefile,v 1.9 2006/08/24 09:58:14 xtraeme Exp $
 
-DISTNAME=	lsdvd-0.10
-PKGREVISION=	3
+DISTNAME=	lsdvd-0.16
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=acidrip/}
 
@@ -12,7 +11,7 @@ COMMENT=	Application displaying the contents of DVDs
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		autoconf213
+USE_TOOLS+=		autoconf
 
 BUILDLINK_API_DEPENDS.libdvdread+=	libdvdread>=0.9.5nb1
 

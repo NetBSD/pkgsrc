@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2006/04/15 21:23:40 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/24 09:58:15 xtraeme Exp $
 
---- lsdvd.c.orig	2003-09-29 21:01:00.000000000 +0000
-+++ lsdvd.c
+--- lsdvd.c.orig	2006-08-24 11:51:58.000000000 +0200
++++ lsdvd.c	2006-08-24 11:52:09.000000000 +0200
 @@ -13,6 +13,7 @@
   *  2003-04-19  Cleanups get_title_name, added dvdtime2msec, added helper macros,
-  *              output info structures in form of a Perl module, by Henk Vergonet.
+  *			  output info structures in form of a Perl module, by Henk Vergonet.
   */
 +#include <stdint.h>
  #include <dvdread/ifo_read.h>
