@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/15 21:01:31 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/08/24 10:28:11 joerg Exp $
 #
 
 DISTNAME=	xbreaky-0.0.5
@@ -12,7 +12,7 @@ COMMENT=	Breakout game for X11
 
 USE_DIRS+=	xdg-1.1
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
