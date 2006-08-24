@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/08/24 10:01:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.28 2006/08/24 11:46:24 xtraeme Exp $
 #
 
 DISTNAME=	dvdrip-0.98.0
@@ -17,8 +17,7 @@ DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
 DEPENDS+=	transcode>=0.6.9:../../multimedia/transcode
 DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
-DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
-DEPENDS+=	{cdrtools,cdrtools-ossdvd}>=1.10:../../sysutils/cdrtools
+DEPENDS+=	xvid4conf-[0-9]*:../../multimedia/xvid4conf
 DEPENDS+=	p5-gtk2>=1.0:../../x11/p5-gtk2
 DEPENDS+=	p5-Gtk2-Ex-FormFactory>=0.65:../../x11/p5-Gtk2-Ex-FormFactory
 DEPENDS+=	rar-bin-[0-9]*:../../archivers/rar-bin
