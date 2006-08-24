@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1108 2006/08/24 08:44:26 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1109 2006/08/24 08:54:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4068,3 +4068,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-glib2 to 1.120 [xtraeme 2006-08-24]
 	Updated x11/p5-gtk2 to 1.122 [xtraeme 2006-08-24]
 	Added x11/p5-Gtk2-Ex-FormFactory version 0.65 [xtraeme 2006-08-24]
+	Updated multimedia/dvdrip to 0.98 [xtraeme 2006-08-24]
