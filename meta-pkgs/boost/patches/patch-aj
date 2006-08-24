@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1 2006/08/24 08:45:35 jmmv Exp $
+
+--- boost/python/object/instance.hpp.orig	2006-08-23 23:48:06.000000000 +0200
++++ boost/python/object/instance.hpp
+@@ -41,9 +41,16 @@ struct additional_instance_size
+ {
+     typedef instance<Data> instance_data;
+     typedef instance<char> instance_char;
++#if    !(BOOST_WORKAROUND(__GNUC__, == 3) && BOOST_WORKAROUND(__GNUC_MINOR__, == 4)) \
++    && !(BOOST_WORKAROUND(__GNUC__, == 4))
+     BOOST_STATIC_CONSTANT(
+         std::size_t, value = sizeof(instance_data)
+                            - BOOST_PYTHON_OFFSETOF(instance_char,storage));
++#else
++    BOOST_STATIC_CONSTANT(
++        std::size_t, value = sizeof(instance_data)
++                           - (sizeof(PyVarObject) + sizeof(PyObject*) + sizeof(PyObject*) + sizeof(instance_holder*)));
++#endif
+ };
+ 
+ }}} // namespace boost::python::object
