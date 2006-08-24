@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:29:25 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/08/24 08:37:47 xtraeme Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
 PKGNAME=	p5-glib2-${DIST_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
@@ -18,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake pkg-config
 
-DIST_VERSION=	1.103
+DIST_VERSION=	1.120
 
 PERL5_PACKLIST=	auto/Glib/.packlist
 
