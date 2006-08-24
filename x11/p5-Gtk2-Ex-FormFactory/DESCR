@@ -1,0 +1,23 @@
+The Gtk2::Ex::FormFactory framework is for Perl Gtk2 developers who
+(at least partially ;) agree with these statements:
+
+* GUI programming is fun but often boring.
+
+* A lot of tasks in GUI programming are similar and misleads the lazy
+  programmer to do too much Copy'n Paste.
+
+* RAD tools like Glade are fine for small applications but not if you
+  want to have a consistent look and feel in bigger and modular
+  applications.
+
+Gtk2::Ex::FormFactory tries to help you with these issues by:
+
+* Strictly separating GUI design, application logic and data structures.
+
+* Giving the developer a more declarative style of defining the structure of
+  your GUI.
+
+* Giving the developer the possibility of definiting the design of the GUI
+  at a single spot in your program.
+
+* Being lightweight and easy to learn.
