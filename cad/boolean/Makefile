@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/07/20 19:16:23 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/08/24 00:01:27 dmcmahill Exp $
 #
 
 DISTNAME=	boolean_6_7
@@ -8,7 +8,7 @@ CATEGORIES=	cad graphics
 MASTER_SITES=	http://www.xs4all.nl/~kholwerd/download/boolzip/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~kholwerd/bool.html
 COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
