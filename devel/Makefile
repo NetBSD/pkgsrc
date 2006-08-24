@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.779 2006/08/24 08:33:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.780 2006/08/24 08:35:00 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -393,6 +393,7 @@ SUBDIR+=	p5-Devel-StackTrace
 SUBDIR+=	p5-Devel-Symdump
 SUBDIR+=	p5-Error
 SUBDIR+=	p5-Event
+SUBDIR+=	p5-Event-ExecFlow
 SUBDIR+=	p5-Event-RPC
 SUBDIR+=	p5-Exception-Class
 SUBDIR+=	p5-Expect
