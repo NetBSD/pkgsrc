@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1111 2006/08/24 10:18:48 tron Exp $
+$NetBSD: CHANGES-2006,v 1.1112 2006/08/24 10:49:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/dvdrip to 0.98 [xtraeme 2006-08-24]
 	Updated multimedia/lsdvd to 0.16 [xtraeme 2006-08-24]
 	Removed net/newmkdep [tron 2006-08-24]
+	Updated net/wireshark to 0.99.3 [tron 2006-08-24]
