@@ -1,4 +1,4 @@
-/* $NetBSD: mdsetimage.c,v 1.4 2004/09/09 01:33:10 wiz Exp $ */
+/* $NetBSD: mdsetimage.c,v 1.5 2006/08/24 20:18:04 kristerw Exp $ */
 /* from: NetBSD: mdsetimage.c,v 1.15 2001/03/21 23:46:48 cgd Exp $ */
 
 /*
@@ -38,7 +38,7 @@ __COPYRIGHT(
 #endif /* not lint */
 
 #ifndef lint
-__RCSID("$NetBSD: mdsetimage.c,v 1.4 2004/09/09 01:33:10 wiz Exp $");
+__RCSID("$NetBSD: mdsetimage.c,v 1.5 2006/08/24 20:18:04 kristerw Exp $");
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -243,7 +243,7 @@ find_md_root(abfd, symbols)
 			return (1);
 
 		for (p = abfd->sections; p != NULL; p = p->next) {
-			if (p->vma > s->vma || p->vma + p->_raw_size < s->vma)
+			if (p->vma > s->vma || p->vma + p->rawsize < s->vma)
 				continue;
 
 			s->offset = (size_t)(p->filepos + (s->vma - p->vma));
