@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/08/24 19:53:44 kristerw Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CROSS_BINUTILS_BUILDLINK3_MK:=	${CROSS_BINUTILS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	cross-binutils
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cross-binutils
 
 .if !empty(CROSS_BINUTILS_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.cross-binutils+=	cross-binutils>=2.15.0.0nb3
+BUILDLINK_API_DEPENDS.cross-binutils+=	cross-binutils>=2.17.0.0
 BUILDLINK_PKGSRCDIR.cross-binutils?=	../../cross/binutils
 .endif	# CROSS_BINUTILS_BUILDLINK3_MK
 
