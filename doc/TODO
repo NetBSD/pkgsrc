@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5371 2006/08/23 23:00:11 rpaulo Exp $
+$NetBSD: TODO,v 1.5372 2006/08/24 08:54:23 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o drscheme-352
 	o dvdauthor-0.6.11
-	o dvdrip-0.98.0
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
@@ -842,7 +841,6 @@ Suggested package updates
 	o p5-XML-Stream-1.22
 	o p5-XML-Twig-3.22
 	o p5-XML-XUpdate-LibXML-0.5.0
-	o p5-gtk2-2.14.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o pam-mysql-0.6.2
