@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.4 2006/05/29 13:51:20 tron Exp $
+$NetBSD: patch-ag,v 1.5 2006/08/24 22:02:02 salo Exp $
 
---- src/command.c.orig	2002-07-29 13:37:49.000000000 +0100
-+++ src/command.c	2006-05-29 14:34:26.000000000 +0100
-@@ -718,7 +718,7 @@
+--- src/command.c.orig	2002-07-29 14:37:49.000000000 +0200
++++ src/command.c	2006-08-24 23:31:53.000000000 +0200
+@@ -707,7 +707,7 @@ changestring(void)
+ 	(void) fprintf(script, "ed - <<\\!\n");
+ 	*oldfile = '\0';
+ 	seekline(1);
+-	for (i = 0; fscanf(refsfound, "%s%*s%s%*[^\n]", newfile, linenum) == 2;
++	for (i = 0; fscanf(refsfound, "%" PATHLEN_STR "s%*s%" NUMLEN_STR "s%*[^\n]", newfile, linenum) == 2;
+ 	    ++i) {
+ 		/* see if the line is to be changed */
+ 		if (change[i] == YES) {
+@@ -718,7 +718,7 @@ changestring(void)
  				
  				/* make sure it can be changed */
  				if (access(newfile, WRITE) != 0) {

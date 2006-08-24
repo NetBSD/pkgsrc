@@ -1,20 +1,21 @@
-$NetBSD: distinfo,v 1.14 2006/05/29 13:51:20 tron Exp $
+$NetBSD: distinfo,v 1.15 2006/08/24 22:02:02 salo Exp $
 
 SHA1 (cscope-15.5.tar.gz) = 2e8e66735254328399dc50757b270bcc3e9002d3
 RMD160 (cscope-15.5.tar.gz) = 30623f07043abc90d76b384c407abe5813a8a716
 Size (cscope-15.5.tar.gz) = 243793 bytes
-SHA1 (patch-aa) = 8350f5bd050fac10c5b5b5dcd7c04e7f3a883324
+SHA1 (patch-aa) = 8c477f12c67ed91b7700cf70209c3a2b64309b15
 SHA1 (patch-ab) = 646512ad53b3f3e7dab607df4c6c3d775587a03c
 SHA1 (patch-ac) = 40a69af0eb5419de827b490c960803a736040f2c
 SHA1 (patch-ad) = 7e0f25b67f3476ac90b7541595649d6a6bf65aa9
-SHA1 (patch-ae) = 0aeef81b7a18123b9814d2d93d0e08c5001f10da
-SHA1 (patch-af) = ecb2c1773b54b68e008d6afd3efc873e618ce116
-SHA1 (patch-ag) = 43f05ff194b7af96416dbd709bdc5d93080c2a0a
-SHA1 (patch-ah) = bdf4beaa30cac9032714655150f757fc5ec86210
-SHA1 (patch-ai) = fec9e178942585599163532741f76f0394fea26d
-SHA1 (patch-aj) = 8ca77d3b72bd7882db285b9b7422ae687a751bee
+SHA1 (patch-ae) = bf3ec3c4c8a8d245b7fe4745dd114fa4d253b0b9
+SHA1 (patch-af) = 816774a459cd68c6d24dc5bb436146d3e537fb5f
+SHA1 (patch-ag) = 1a94f675d2878268af7de488a5f81ae08a855715
+SHA1 (patch-ah) = 4e723e863b85f812e1dc993758b22f50554a4222
+SHA1 (patch-ai) = 19cea85408c7ab98b9b3021cd6af07794dae62f9
+SHA1 (patch-aj) = aab596f780ef213c9198f6d03886140ee7d0bcf8
 SHA1 (patch-ak) = eb61acfd3f265656d5495e7b1a1b3cf6071213c6
 SHA1 (patch-al) = 511ea0dd04b4062fac97bfd01c1a71de44e1c452
 SHA1 (patch-am) = 2c08e2ccf22b3a3852c52d5177c7a08d206c1cdf
 SHA1 (patch-an) = cef8d1d31a417125c516df403dce228ac92a307c
 SHA1 (patch-ao) = 05ae43171f04320dc1a213510b0906d3387cf35f
+SHA1 (patch-ap) = 7e1af46170ac5304a784d2719b14aae01bd4a659

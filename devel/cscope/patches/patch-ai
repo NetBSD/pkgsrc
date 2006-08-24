@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.4 2006/05/29 13:51:20 tron Exp $
+$NetBSD: patch-ai,v 1.5 2006/08/24 22:02:02 salo Exp $
 
---- src/display.c.orig	2003-09-04 16:54:02.000000000 +0100
-+++ src/display.c	2006-05-29 14:34:26.000000000 +0100
-@@ -473,24 +473,24 @@
+--- src/display.c.orig	2003-09-04 17:54:02.000000000 +0200
++++ src/display.c	2006-08-24 23:37:28.000000000 +0200
+@@ -216,7 +216,7 @@ display(void)
+ 		     disprefs < mdisprefs && screenline <= lastdispline;
+ 		     ++disprefs, ++screenline) {
+ 			/* read the reference line */
+-			if (fscanf(refsfound, "%s%s%s %[^\n]", file, function, 
++			if (fscanf(refsfound, "%" PATHLEN_STR "s%" PATHLEN_STR "s%" NUMLEN_STR "s %" TEMPSTRING_LEN_STR "[^\n]", file, function, 
+ 			    linenum, tempstring) < 4) {
+ 				break;
+ 			}
+@@ -473,24 +473,24 @@ search(void)
  	/* see if it is empty */
  	if ((c = getc(refsfound)) == EOF) {
  		if (findresult != NULL) {
@@ -32,7 +41,7 @@ $NetBSD: patch-ai,v 1.4 2006/05/29 13:51:20 tron Exp $
  				fields[field].text2, pattern);
  		}
  		return(NO);
-@@ -555,17 +555,17 @@
+@@ -555,17 +555,17 @@ progress(char *what, long current, long 
  			move(MSGLINE, 0);
  			clrtoeol();
  			addstr(what);
@@ -53,7 +62,7 @@ $NetBSD: patch-ai,v 1.4 2006/05/29 13:51:20 tron Exp $
  		}
  
  		start = now;
-@@ -603,7 +603,7 @@
+@@ -603,7 +603,7 @@ myperror(char *text) 
  		s = sys_errlist[errno];
  	}
  #endif

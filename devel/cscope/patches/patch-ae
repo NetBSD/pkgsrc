@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.8 2006/05/29 13:51:20 tron Exp $
+$NetBSD: patch-ae,v 1.9 2006/08/24 22:02:02 salo Exp $
 
---- src/build.c.orig	2003-03-05 10:43:59.000000000 +0000
-+++ src/build.c	2006-05-29 14:34:26.000000000 +0100
+--- src/build.c.orig	2003-03-05 11:43:59.000000000 +0100
++++ src/build.c	2006-08-24 23:26:31.000000000 +0200
+@@ -115,7 +115,7 @@
+ 	}
+ 	/* see if the name list is the same */
+ 	for (i = 0; i < count; ++i) {
+-		if (fscanf(oldrefs, "%s", oldname) != 1 ||
++		if (! fgets(oldname, sizeof(oldname), oldrefs)||
+ 		    strnotequal(oldname, names[i])) {
+ 			return(NO);
+ 		}
 @@ -215,7 +215,7 @@
  		(void) strcpy(newdir, "$HOME");
  	}
@@ -11,6 +20,33 @@ $NetBSD: patch-ae,v 1.8 2006/05/29 13:51:20 tron Exp $
  	}
  	/* sort the source file names (needed for rebuilding) */
  	qsort(srcfiles, (unsigned) nsrcfiles, sizeof(char *), compare);
+@@ -223,7 +223,7 @@
+ 	/* if there is an old cross-reference and its current directory matches */
+ 	/* or this is an unconditional build */
+ 	if ((oldrefs = vpfopen(reffile, "rb")) != NULL && unconditional == NO &&
+-	    fscanf(oldrefs, "cscope %d %s", &fileversion, olddir) == 2 &&
++	    fscanf(oldrefs, "cscope %d %" PATHLEN_STR "s", &fileversion, olddir) == 2 &&
+ 	    (strcmp(olddir, currentdir) == 0 || /* remain compatible */
+ 	     strcmp(olddir, newdir) == 0)) {
+ 		/* get the cross-reference file's modification time */
+@@ -292,7 +292,7 @@
+ 		/* see if the list of source files is the same and
+ 		   none have been changed up to the included files */
+ 		for (i = 0; i < nsrcfiles; ++i) {
+-			if (fscanf(oldrefs, "%s", oldname) != 1 ||
++			if (! fgets(oldname, sizeof(oldname), oldrefs) ||
+ 			    strnotequal(oldname, srcfiles[i]) ||
+ 			    lstat(srcfiles[i], &statstruct) != 0 ||
+ 			    statstruct.st_mtime > reftime) {
+@@ -301,7 +301,7 @@
+ 		}
+ 		/* the old cross-reference is up-to-date */
+ 		/* so get the list of included files */
+-		while (i++ < oldnum && fscanf(oldrefs, "%s", oldname) == 1) {
++		while (i++ < oldnum && fgets(oldname, sizeof(oldname), oldrefs)) {
+ 			addsrcfile(oldname);
+ 		}
+ 		(void) fclose(oldrefs);
 @@ -443,7 +443,7 @@
  		}
  		(void) fstat(fileno(postings), &statstruct);
