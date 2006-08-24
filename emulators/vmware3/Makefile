@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/08/24 19:44:59 veego Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -22,7 +22,7 @@ VMWARE_BIN_PATCH=	vmware-any-any-update99
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${VMWARE_BIN_PATCH}.tar.gz
-SITES.${VMWARE_BIN_PATCH}.tar.gz=	ftp://ftp.cvut.cz/vmware/
+SITES.${VMWARE_BIN_PATCH}.tar.gz=	ftp://ftp.cvut.cz/vmware/obsolete/
 
 DEPENDS+=	vmware-module>=3.2.1.8:../../emulators/vmware-module3
 DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
