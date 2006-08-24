@@ -1,0 +1,5 @@
+Event::ExecFlow offers a high level API to declare jobs, which mainly
+execute external commands, parse their output to get progress or other
+status information, triggers actions when the command has been finished
+etc. Such jobs can be chained together in a recursive fashion to fulfill
+rather complex tasks which consist of many jobs.
