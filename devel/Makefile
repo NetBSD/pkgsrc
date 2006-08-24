@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.778 2006/08/20 20:04:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.779 2006/08/24 08:33:29 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -335,6 +335,7 @@ SUBDIR+=	p5-Algorithm-Annotate
 SUBDIR+=	p5-Algorithm-Dependency
 SUBDIR+=	p5-Algorithm-Diff
 SUBDIR+=	p5-Algorithm-Merge
+SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-Array-Compare
 SUBDIR+=	p5-AtExit
