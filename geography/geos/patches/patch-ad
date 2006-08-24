@@ -1,0 +1,105 @@
+$NetBSD: patch-ad,v 1.1 2006/08/24 18:30:24 wiz Exp $
+
+--- source/headers/geos/geom.h.orig	2004-07-27 16:35:46.000000000 +0000
++++ source/headers/geos/geom.h
+@@ -546,47 +546,47 @@ public:
+ 	//double distance(Coordinate& p);
+ 	static Coordinate nullCoord;
+ 
+-	void Coordinate::setNull() {
++	void setNull() {
+ 		x=DoubleNotANumber;
+ 		y=DoubleNotANumber;
+ 		z=DoubleNotANumber;
+ 	}
+ 
+-	static Coordinate& Coordinate::getNull() {
++	static Coordinate& getNull() {
+ 		return nullCoord;
+ 	}
+ 
+-	Coordinate::Coordinate() {
++	Coordinate() {
+ 		x=0.0;
+ 		y=0.0;
+ 		z=DoubleNotANumber;
+ 	}
+ 
+-	Coordinate::Coordinate(double xNew, double yNew, double zNew) {
++	Coordinate(double xNew, double yNew, double zNew) {
+ 		x=xNew;
+ 		y=yNew;
+ 		z=zNew;
+ 	}
+ 
+-	Coordinate::Coordinate(const Coordinate& c){
++	Coordinate(const Coordinate& c){
+ 		x=c.x;
+ 		y=c.y;
+ 		z=c.z;
+ 	}
+ 
+-	Coordinate::Coordinate(double xNew, double yNew){
++	Coordinate(double xNew, double yNew){
+ 		x=xNew;
+ 		y=yNew;
+ 		z=DoubleNotANumber;
+ 	}
+ 
+-	void Coordinate::setCoordinate(const Coordinate& other) {
++	void setCoordinate(const Coordinate& other) {
+ 		x = other.x;
+ 		y = other.y;
+ 		z = other.z;
+ 	}
+ 
+-	bool Coordinate::equals2D(const Coordinate& other) const {
++	bool equals2D(const Coordinate& other) const {
+ 		if (x != other.x) {
+ 		return false;
+ 		}
+@@ -596,7 +596,7 @@ public:
+ 		return true;
+ 	}
+ 
+-	int Coordinate::compareTo(const Coordinate& other) const {
++	int compareTo(const Coordinate& other) const {
+ 		if (x < other.x) {
+ 		return -1;
+ 		}
+@@ -612,22 +612,22 @@ public:
+ 		return 0;
+ 	}
+ 
+-	bool Coordinate::equals3D(const Coordinate& other) const {
++	bool equals3D(const Coordinate& other) const {
+ 		return (x == other.x) && ( y == other.y) && (( z == other.z)||(z==DoubleNotANumber && other.z==DoubleNotANumber));
+ 	}
+ 
+-	void Coordinate::makePrecise(const PrecisionModel *precisionModel) {
++	void makePrecise(const PrecisionModel *precisionModel) {
+ 		x = precisionModel->makePrecise(x);
+ 		y = precisionModel->makePrecise(y);
+ 	}
+ 
+-	double Coordinate::distance(const Coordinate& p) const {
++	double distance(const Coordinate& p) const {
+ 		double dx = x - p.x;
+ 		double dy = y - p.y;
+ 		return sqrt(dx * dx + dy * dy);
+ 	}
+ 
+-	int Coordinate::hashCode() {
++	int hashCode() {
+         //Algorithm from Effective Java by Joshua Bloch [Jon Aquino]
+         int result = 17;
+         result = 37 * result + hashCode(x);
+@@ -639,7 +639,7 @@ public:
+      * Returns a hash code for a double value, using the algorithm from
+      * Joshua Bloch's book <i>Effective Java"</i>
+      */
+-    static int Coordinate::hashCode(double x) {
++    static int hashCode(double x) {
+         int64 f = (int64)(x);
+         return (int)(f^(f>>32));
+     }
