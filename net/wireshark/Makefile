@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.2.3 2006/07/23 23:22:05 salo Exp $
+# $NetBSD: Makefile,v 1.1.2.4 2006/08/24 11:51:06 salo Exp $
 
-DISTNAME=		wireshark-0.99.2
-PKGREVISION=		1
+DISTNAME=		wireshark-0.99.3
 CATEGORIES=		net
 MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -37,6 +36,11 @@ PTHREAD_OPTS+=		require
 .if !empty(MACHINE_PLATFORM:MDarwin-[567].*-*)
 USE_BUILTIN.libpcap=	no
 .endif
+
+# Work arround for files missing in the 0.99.3 release archive.
+# This and "${FILESDIR}/*.xpm" should be removed after the next update.
+post-extract:
+	${CP} ${FILESDIR}/*.xpm ${WRKSRC}/image/toolbar
 
 # XXX avoid rebuild after dissector patch
 pre-build:
