@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2.2.2 2006/07/22 16:14:33 salo Exp $
+@comment $NetBSD: PLIST,v 1.2.2.3 2006/08/24 11:51:06 salo Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -69,6 +69,7 @@ share/wireshark/dtds/reginfo.dtd
 share/wireshark/dtds/rss.dtd
 share/wireshark/dtds/smil.dtd
 share/wireshark/dtds/watcherinfo.dtd
+share/wireshark/dtds/xcap-caps.dtd
 share/wireshark/dumpcap.html
 share/wireshark/editcap.html
 share/wireshark/help/capture_filters.txt
