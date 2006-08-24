@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.21 2006/04/06 02:41:44 jlam Exp $
+$NetBSD: distinfo,v 1.22 2006/08/24 13:25:41 wennmach Exp $
 
-SHA1 (arla-0.41.tar.gz) = ee343833649924d829f547a6fddc88da4f3a3c83
-RMD160 (arla-0.41.tar.gz) = a4c7cdc17559d900b6ac2ede5f0f3cb29fa08b23
-Size (arla-0.41.tar.gz) = 2200301 bytes
-SHA1 (patch-ac) = abee32015e06033a22eebcd914463a3776db7127
+SHA1 (arla-0.43.tar.gz) = b11130912a14ec469a3fde46b1993f4ad6386f31
+RMD160 (arla-0.43.tar.gz) = 68b953a2591b115b2a5842a6c7fc6fae2ee2f088
+Size (arla-0.43.tar.gz) = 2852591 bytes
 SHA1 (patch-ah) = b2929d05940aa54d4544ea7ae8d95ef5cd5472a1
-SHA1 (patch-ak) = 7cf6a36acc9107458c8165a4c5ff4821fc8a946f
-SHA1 (patch-al) = 6d7af2b8fe990232a5aa684c039dfc565ecebdf8
-SHA1 (patch-aw) = 0d93bece3c221590b1ca2fb3133128266b460820
+SHA1 (patch-ak) = d316e7c827b906005113ac2ea3565621ef00133d
+SHA1 (patch-al) = eefe11aa1cee81c03fa42c2363c445212c8201dd
+SHA1 (patch-aw) = bf2e6f31ed07b4492e1be2246438dd8306c68535
 SHA1 (patch-az) = 072c2d9c8a2fea61fc04bff5d0d9fb211bbb67d6
 SHA1 (patch-bi) = 2e8201964c64b128025a752ee7354f0cc8305b1b
 SHA1 (patch-bj) = e98877cce457c01f76680f74ef9107bbed0a9654
