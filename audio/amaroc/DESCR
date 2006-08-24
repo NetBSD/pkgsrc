@@ -1,0 +1,4 @@
+Amaroc - an ncurses "frontend" for Amarok
+
+You need shell access to a machine on which Amarok
+is running. SSH is just fine.

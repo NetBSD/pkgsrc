@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/24 17:39:13 wiz Exp $
+bin/amaroc.py
+share/doc/amaroc/README
+@dirrm share/doc/amaroc
