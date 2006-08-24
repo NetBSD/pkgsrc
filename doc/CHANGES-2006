@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1116 2006/08/24 17:38:15 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1117 2006/08/24 17:40:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/prelude-manager to 0.9.6 [shannonjr 2006-08-24]
 	Updated devel/pango to 1.14.2 [wiz 2006-08-24]
 	Updated audio/amarok to 1.4.2 [wiz 2006-08-24]
+	Added audio/amaroc version 0.3 [wiz 2006-08-24]
