@@ -1,8 +1,30 @@
-$NetBSD: patch-aa,v 1.10 2006/03/23 16:09:32 yyamano Exp $
+$NetBSD: patch-aa,v 1.11 2006/08/24 22:02:02 salo Exp $
 
---- src/constants.h.orig	2003-09-05 00:54:02.000000000 +0900
-+++ src/constants.h
-@@ -95,7 +95,7 @@
+--- src/constants.h.orig	2003-09-04 17:54:02.000000000 +0200
++++ src/constants.h	2006-08-24 23:49:25.000000000 +0200
+@@ -68,6 +68,7 @@
+ #define	NUMLEN	5		/* line number length */
+ #define	PATHLEN	250		/* file pathname length */
+ #define	PATLEN	250		/* symbol pattern length */
++#define	TEMPSTRING_LEN 8191	/* max strlen() of the global temp string */
+ #define	REFFILE	"cscope.out"	/* cross-reference output file */
+ #define	NAMEFILE "cscope.files"	/* default list-of-files file */
+ #define	INVNAME	"cscope.in.out"	/* inverted index to the database */
+@@ -77,6 +78,13 @@
+ 
+ #define	STMTMAX	10000		/* maximum source statement length */
+ 
++#define STR2(x) #x
++#define STRINGIZE(x) STR2(x)
++#define PATLEN_STR STRINGIZE(PATLEN)
++#define PATHLEN_STR STRINGIZE(PATHLEN)
++#define NUMLEN_STR STRINGIZE(NUMLEN)
++#define TEMPSTRING_LEN_STR STRINGIZE(TEMPSTRING_LEN)
++
+ /* screen lines */
+ #define	FLDLINE	(LINES - FIELDS - 1)	/* first input field line */
+ #define	MSGLINE	0			/* message line */
+@@ -95,7 +103,7 @@
  #define INCLUDES	8
  #define	FIELDS		9
  

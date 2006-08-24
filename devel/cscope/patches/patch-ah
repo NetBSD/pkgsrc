@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2006/05/29 13:51:20 tron Exp $
+$NetBSD: patch-ah,v 1.5 2006/08/24 22:02:02 salo Exp $
 
---- src/dir.c.orig	2003-06-02 11:43:00.000000000 +0100
-+++ src/dir.c	2006-05-29 14:34:26.000000000 +0100
-@@ -138,7 +138,7 @@
+--- src/dir.c.orig	2003-06-02 12:43:00.000000000 +0200
++++ src/dir.c	2006-08-24 23:34:52.000000000 +0200
+@@ -138,7 +138,7 @@ sourcedir(char *dirlist)
  			
  			/* compute its path from higher view path source dirs */
  			for (i = 1; i < nvpsrcdirs; ++i) {
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.4 2006/05/29 13:51:20 tron Exp $
  					       PATHLEN - 2 - dir_len,
  					       srcdirs[i], dir);
  				addsrcdir(path);
-@@ -206,7 +206,7 @@
+@@ -206,7 +206,7 @@ includedir(char *dirlist)
  			
  			/* compute its path from higher view path source dirs */
  			for (i = 1; i < nvpsrcdirs; ++i) {
@@ -20,7 +20,16 @@ $NetBSD: patch-ah,v 1.4 2006/05/29 13:51:20 tron Exp $
  					       PATHLEN - 2 - dir_len,
  					       srcdirs[i], dir);
  				addincdir(dir, path);
-@@ -474,8 +474,6 @@
+@@ -319,7 +319,7 @@ makefilelist(void)
+ 			
+ 			/* Parse whitespace-terminated strings in line: */
+ 			point_in_line = line;
+-			while (sscanf(point_in_line, "%s", path) == 1) {
++			while (sscanf(point_in_line, "%" PATHLEN_STR "s", path) == 1) {
+ 				/* Have to store this length --- inviewpath() will
+ 				 * modify path, later! */
+ 				length_of_name = strlen(path);
+@@ -474,8 +474,6 @@ scan_dir(const char *adir, BOOL recurse_
  	DIR	*dirfile;
  	int adir_len = strlen(adir);
  
@@ -29,7 +38,7 @@ $NetBSD: patch-ah,v 1.4 2006/05/29 13:51:20 tron Exp $
  	if ((dirfile = opendir(adir)) != NULL) {
  		struct dirent *entry;
  		char	path[PATHLEN + 1];
-@@ -486,7 +484,7 @@
+@@ -486,7 +484,7 @@ scan_dir(const char *adir, BOOL recurse_
  			    && (strcmp("..",entry->d_name) != 0)) {
  				struct stat buf;
  
@@ -38,7 +47,7 @@ $NetBSD: patch-ah,v 1.4 2006/05/29 13:51:20 tron Exp $
  					PATHLEN - 2 - adir_len,
  					entry->d_name);
  
-@@ -603,14 +601,14 @@
+@@ -603,14 +601,14 @@ incfile(char *file, char *type)
  		for (i = 0; i < nincdirs; ++i) {
  			
  			/* don't include the file from two directories */
@@ -55,7 +64,7 @@ $NetBSD: patch-ah,v 1.4 2006/05/29 13:51:20 tron Exp $
  				       PATHLEN - 2 - file_len, incdirs[i],
  				       file);
  			if (access(compath(path), READ) == 0) {
-@@ -654,7 +652,7 @@
+@@ -654,7 +652,7 @@ inviewpath(char *file)
  
  		/* compute its path from higher view path source dirs */
  		for (i = 1; i < nvpsrcdirs; ++i) {
