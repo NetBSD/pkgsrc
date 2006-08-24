@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1113 2006/08/24 13:27:30 wennmach Exp $
+$NetBSD: CHANGES-2006,v 1.1114 2006/08/24 15:45:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4073,3 +4073,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed net/newmkdep [tron 2006-08-24]
 	Updated net/wireshark to 0.99.3 [tron 2006-08-24]
 	Updated net/arla to 0.43 [wennmach 2006-08-24]
+	Updated converters/skf to 1.93.11 [taca 2006-08-24]
