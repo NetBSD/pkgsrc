@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.20 2006/04/06 03:20:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/08/24 17:59:04 wennmach Exp $
 bin/afsfsperf
 bin/afstool
-bin/amon
+${X11_SUPPORT}bin/amon
 bin/arla-send-pr
 bin/bos
 bin/fs
