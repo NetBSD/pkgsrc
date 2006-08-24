@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2006/08/24 13:25:41 wennmach Exp $
+# $NetBSD: Makefile,v 1.60 2006/08/24 17:59:04 wennmach Exp $
 
 DISTNAME=		arla-0.43
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
@@ -21,6 +21,7 @@ INFO_FILES=		# PLIST
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(/usr/src/sys/lib/libkern/libkern.h)
@@ -61,8 +62,6 @@ CONF_FILES+=    ${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 RCD_SCRIPTS=	arlad
 OWN_DIRS_PERMS=	${ARLA_CACHE} ${ROOT_USER} ${ROOT_GROUP} 0700
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/lkm.conf ${WRKDIR}/lkm.conf
