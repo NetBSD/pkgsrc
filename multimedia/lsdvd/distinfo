@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2006/04/15 21:23:39 wiz Exp $
+$NetBSD: distinfo,v 1.5 2006/08/24 09:58:14 xtraeme Exp $
 
-SHA1 (lsdvd-0.10.tar.gz) = 910bab96300dade7b07baa7cb2037ef473c035d6
-RMD160 (lsdvd-0.10.tar.gz) = a3c718dba1f6556a8e03d66f453483f3e50f2027
-Size (lsdvd-0.10.tar.gz) = 36206 bytes
-SHA1 (patch-aa) = 0709200419b2a2228b4c949405c93b83c096526a
-SHA1 (patch-ab) = 048cb82748324b34340a46a93b91efb424f12763
+SHA1 (lsdvd-0.16.tar.gz) = e50f4820ec765bdcf40ae87b96c7be6f2776306e
+RMD160 (lsdvd-0.16.tar.gz) = 3b35b4e4e8360f72cfc3cf3a5c3cff551bf03cec
+Size (lsdvd-0.16.tar.gz) = 100451 bytes
+SHA1 (patch-aa) = 41ac6688a47ca1f7f20d17c4fd3d2934eecd369c
+SHA1 (patch-ab) = ab3f9890151ba3f3676e4a4226063e35ed5e0bf5
