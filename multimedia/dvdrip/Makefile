@@ -1,28 +1,26 @@
-# $NetBSD: Makefile,v 1.25 2006/06/12 16:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/08/24 08:53:35 xtraeme Exp $
 #
 
-DISTNAME=	Video-DVDRip-0.50.18
-PKGNAME=	${DISTNAME:C|Video-DVDRip|dvdrip|}
-PKGREVISION=	11
+DISTNAME=	dvdrip-0.98.0
 CATEGORIES=	multimedia x11 sysutils
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Video/}
+MASTER_SITES=	http://www.exit1.org/dvdrip/dist/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.exit1.org/dvdrip/
 COMMENT=	Graphical frontend for DVD ripping
 
-DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
-DEPENDS+=	{cdrtools,cdrtools-ossdvd}>=1.10:../../sysutils/cdrtools
+DEPENDS+=	p5-AnyEvent>=1.02:../../devel/p5-AnyEvent
+DEPENDS+=	p5-Event-ExecFlow>=0.62:../../devel/p5-Event-ExecFlow
+DEPENDS+=	p5-Event-RPC>=0.90:../../devel/p5-Event-RPC
 DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
-DEPENDS+=	p5-Gdk-Pixbuf-[0-9]*:../../graphics/p5-Gdk-Pixbuf
-DEPENDS+=	subtitleripper-[0-9]*:../../textproc/subtitleripper
 DEPENDS+=	transcode>=0.6.9:../../multimedia/transcode
-DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
-
-.if (${MACHINE_ARCH} == "i386")
-#DEPENDS+=	rar>=2.02:../../archivers/rar
-.endif
+DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
+DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
+DEPENDS+=	{cdrtools,cdrtools-ossdvd}>=1.10:../../sysutils/cdrtools
+DEPENDS+=	p5-gtk2>=1.0:../../x11/p5-gtk2
+DEPENDS+=	p5-Gtk2-Ex-FormFactory>=0.65:../../x11/p5-Gtk2-Ex-FormFactory
+DEPENDS+=	rar-bin-[0-9]*:../../archivers/rar-bin
 
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.0
 
@@ -30,12 +28,8 @@ USE_PKGLOCALEDIR=	YES
 
 PERL5_PACKLIST= auto/Video/DVDRip/.packlist
 
-# XXX xine support
-# XXX fping support
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
-
 .include "../../lang/perl5/module.mk"
-
 .include "../../mk/bsd.pkg.mk"
