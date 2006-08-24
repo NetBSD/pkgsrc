@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1120 2006/08/24 20:01:23 kristerw Exp $
+$NetBSD: CHANGES-2006,v 1.1121 2006/08/24 20:25:59 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4081,3 +4081,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/bootstrap-extras to 20060824 [wiz 2006-08-24]
 	Updated pkgtools/bootstrap-mk-files to 20060824 [wiz 2006-08-24]
 	Updated cross/binutils to 2.17.0.0 [kristerw 2006-08-24]
+	Updated cross/bfd-crunchide to 1.1nb2 [kristerw 2006-08-24]
+	Updated cross/bfd-mdsetimage to 1.15.1nb1 [kristerw 2006-08-24]
