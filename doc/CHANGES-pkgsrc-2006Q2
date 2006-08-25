@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.79 2006/08/24 22:45:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.80 2006/08/25 11:24:44 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -185,3 +185,7 @@ Pullup ticket 1805 - requested by tron
 security update for wireshark
 Pullup ticket 1807 - requested by adrianp
 security update for php4
+Pullup ticket 1808 - requested by salo
+security fix for cscope
+Pullup ticket 1806 - requested by salo
+security update for ImageMagick
