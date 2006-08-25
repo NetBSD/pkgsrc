@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.40 2006/08/10 08:54:44 abs Exp $
+# $Id: pkg_chk.sh,v 1.41 2006/08/25 19:49:54 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -205,10 +205,23 @@ fatal()
     cleanup_and_exit 1
     }
 
+fatal_later()
+    {
+    msg "*** $@" >&2
+    fatal_later=1
+    }
+
+fatal_later_check()
+    {
+    if [ "$fatal_later" = 1 ] ; then
+	cleanup_and_exit 1
+    fi
+    }
+
 fatal_maybe()
     {
     if [ -z "$opt_k" ];then
-	fatal "@"
+	fatal "$@"
     else
 	msg "$@"
     fi
@@ -242,7 +255,6 @@ list_packages()
     # DEPCHECKLIST contains packages for which binary packages are known to
     # exist, but now need to be checked for packages on which they depend
     DEPCHECKLIST=' '
-    fatal=0
     for pkgdir in $* ; do
 	extract_pkg_vars $pkgdir PKGNAME
 	if [ -z "$PKGNAME" ]; then
@@ -251,8 +263,7 @@ list_packages()
 	if is_binary_available $PKGNAME; then
 	    :
 	else
-	    msg "*** $PKGNAME - binary package missing"
-	    fatal=1
+	    fatal_later "$PKGNAME - binary package missing"
 	    continue
 	fi
 	verbose "$PKGNAME.tgz: found"
@@ -272,9 +283,8 @@ list_packages()
 		if is_binary_available $dep; then
 		    :
 		else
-		    msg "*** $dep.tgz - dependency missing for $pkg"
-		    fatal=1
-		    break 2
+		    fatal_later "$dep.tgz - dependency missing for $pkg"
+		    break
 		fi
 		PAIRLIST="${PAIRLIST}$dep.tgz $pkg.tgz\n"
 		case "$PKGLIST$DEPCHECKLIST$NEXTCHECK" in
@@ -291,9 +301,7 @@ list_packages()
 	done
 	DEPCHECKLIST="$NEXTCHECK"
     done
-    if [ $fatal = 1 ] ; then
-	fatal_maybe "Some binary packages missing"
-    fi
+    fatal_later_check
     printf "$PAIRLIST" | ${TSORT}
     }
 
@@ -628,9 +636,9 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a$opt_g$opt_l$opt_r$opt_u$opt_S$opt_N" ];
+if [ -z "$opt_a$opt_g$opt_l$opt_r$opt_u$opt_N" ];
 then
-    usage "Must specify at least one of -a, -g, -l, -r, -u -N, or -S";
+    usage "Must specify at least one of -a, -g, -l, -r, -u or -N";
 fi
 
 if [ -n "$opt_h" -o $# != 0 ];then
@@ -716,7 +724,7 @@ fi
 
 AWK_PARSE_SUMMARY='$1=="PKGNAME"{pkgname=$2} $1=="PKGPATH"{pkgpath=$2} NF==0{if (pkgpath && pkgname) print pkgpath ":" pkgname; pkgpath=""; pkgname=""} END{if (pkgpath && pkgname) print pkgpath ":" pkgname}'
 
-if [ \( -n "$opt_b" -o -n "$opt_S" \) -a -z "$opt_s" ] ; then
+if [ -n "$opt_b" -a -z "$opt_s" ] ; then
     case $PACKAGES in
 	http://*|ftp://*)
             PKGDB=`ftp -o - $PACKAGES/$SUMMARY_FILE | ${GZIP_CMD} -cd \
