@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/08/24 14:52:59 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2006/08/25 18:15:08 xtraeme Exp $
 
-SHA1 (dvdrip-0.98.0.tar.gz) = b4de287f2fd369d529123ac0e7af26fa7f5b1525
-RMD160 (dvdrip-0.98.0.tar.gz) = 63bb5e6846bd7b086b249b2a4c95b11b49cb7cdb
-Size (dvdrip-0.98.0.tar.gz) = 1082272 bytes
+SHA1 (dvdrip-0.98.1.tar.gz) = a8c8c26cbea32cbd43537ff4689d18d0d1c5ba1b
+RMD160 (dvdrip-0.98.1.tar.gz) = f3758c108f28c3804da2418bf49ec31e9277a8d7
+Size (dvdrip-0.98.1.tar.gz) = 1098743 bytes
 SHA1 (patch-aa) = 45ed212c5ef22950049fa34e871026b34bce188b
