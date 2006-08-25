@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5378 2006/08/25 12:32:29 ghen Exp $
+$NetBSD: TODO,v 1.5379 2006/08/25 16:00:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -804,7 +804,7 @@ Suggested package updates
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
-	o p5-Mail-Mbox-MessageParser-1.4001
+	o p5-Mail-Mbox-MessageParser-1.4005
 	o p5-Mail-Sendmail-0.79
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
@@ -1122,7 +1122,7 @@ Suggested package updates
 	o weechat-2.0
 	o weewm-0.01
 	o winbind-3.0.13
-	o wine-0.9.19
+	o wine-0.9.20
 	o wmctrl-1.07
 	o wmii-2.5.2 [pkg/33285]
 	o wmii-3.1
