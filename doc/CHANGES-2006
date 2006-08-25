@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1123 2006/08/25 06:31:55 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1124 2006/08/25 07:03:59 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4085,3 +4085,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cross/bfd-mdsetimage to 1.15.1nb1 [kristerw 2006-08-24]
 	Updated devel/cscope to 15.5nb2 [salo 2006-08-24]
 	Updated mail/clamsmtp to 1.7 [xtraeme 2006-08-25]
+	Updated databases/openldap-client to 2.3.27 [ghen 2006-08-25]
+	Updated databases/openldap-doc to 2.3.27 [ghen 2006-08-25]
+	Updated databases/openldap-server to 2.3.27 [ghen 2006-08-25]
+	Updated databases/openldap to 2.3.27 [ghen 2006-08-25]
