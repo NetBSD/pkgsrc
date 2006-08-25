@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1126 2006/08/25 16:01:00 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1127 2006/08/25 18:16:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4091,3 +4091,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/openldap to 2.3.27 [ghen 2006-08-25]
 	Added x11/bwidget version 1.6.0 [minskim 2006-08-25]
 	Updated graphics/comix to 3.5 [wiz 2006-08-25]
+	Updated multimedia/dvdrip to 0.98.1 [xtraeme 2006-08-25]
