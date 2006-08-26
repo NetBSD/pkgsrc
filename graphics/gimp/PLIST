@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2006/07/10 22:06:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2006/08/26 07:44:04 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -426,6 +426,7 @@ share/doc/${PKGNAME}/libgimp/libgimp-gimpundo.html
 share/doc/${PKGNAME}/libgimp/libgimp-image.html
 share/doc/${PKGNAME}/libgimp/libgimp-selectors.html
 share/doc/${PKGNAME}/libgimp/libgimp.devhelp
+share/doc/${PKGNAME}/libgimp/libgimp.devhelp2
 share/doc/${PKGNAME}/libgimp/libgimp.html
 share/doc/${PKGNAME}/libgimp/libgimpui-hierarchy.html
 share/doc/${PKGNAME}/libgimp/libgimpui.html
@@ -452,6 +453,7 @@ share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimputils.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpversion.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpwire.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase.devhelp
+share/doc/${PKGNAME}/libgimpbase/libgimpbase.devhelp2
 share/doc/${PKGNAME}/libgimpbase/libgimpbase.html
 share/doc/${PKGNAME}/libgimpbase/right.png
 share/doc/${PKGNAME}/libgimpbase/style.css
@@ -504,6 +506,7 @@ share/doc/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-enums.html
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-error.html
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-utils.html
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb.devhelp
+share/doc/${PKGNAME}/libgimpthumb/libgimpthumb.devhelp2
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb.html
 share/doc/${PKGNAME}/libgimpthumb/right.png
 share/doc/${PKGNAME}/libgimpthumb/style.css
