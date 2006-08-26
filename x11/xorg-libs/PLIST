@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/07/26 16:02:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/08/26 15:20:44 joerg Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -882,6 +882,10 @@ ${X11ROOT_PREFIX}/lib/libSM.so.6
 ${X11ROOT_PREFIX}/lib/libX11.a
 ${X11ROOT_PREFIX}/lib/libX11.so
 ${X11ROOT_PREFIX}/lib/libX11.so.6
+${X11ROOT_PREFIX}/lib/libXau.so
+${X11ROOT_PREFIX}/lib/libXau.so.6
+${X11ROOT_PREFIX}/lib/libXdmcp.so
+${X11ROOT_PREFIX}/lib/libXdmcp.so.6
 ${X11ROOT_PREFIX}/lib/libXRes.a
 ${X11ROOT_PREFIX}/lib/libXRes.so
 ${X11ROOT_PREFIX}/lib/libXRes.so.1
