@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:26 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/26 13:58:17 minskim Exp $
 #
 
 DISTNAME=		tik-0.90
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tik/}
 
@@ -10,11 +10,14 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://tik.sourceforge.net/
 COMMENT=		Tcl/Tk AOL Instant Messenger client
 
-DEPENDS+=		tk>=8.1:../../x11/tk
-
 WRKSRC=			${WRKDIR}/tik
-NO_CONFIGURE=		yes
 NO_BUILD=		yes
+USE_TOOLS+=		wish:run
+
+REPLACE_INTERPRETER+=	wish
+REPLACE.wish.old=	.*sh
+REPLACE.wish.new=	${WISH}
+REPLACE_FILES.wish=	tik.tcl
 
 TIKDIR=			${PREFIX}/libexec/tik
 INSTALLATION_DIRS=	bin
