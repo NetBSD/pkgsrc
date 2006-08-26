@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/19 17:50:57 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2006/08/26 15:29:05 joerg Exp $
 #
 
 DISTNAME=	Python-2.4.3
@@ -78,8 +78,7 @@ PLIST_SUBST+=	EXTRA_SO="@comment "
 
 # ossaudiodev is only available on x86 for the following platforms
 .if (${MACHINE_ARCH} == "i386") && \
-    (${PY_PLATNAME} == "linux2" || ${PY_PLATNAME} == "freebsd4" || \
-     ${PY_PLATNAME} == "freebsd5")
+    (${PY_PLATNAME} == "linux2" || ${OPSYS} == "FreeBSD")
 PLIST_SUBST+=	OSSAUDIODEV=
 .elif (${MACHINE_ARCH} == "x86_64") && (${PY_PLATNAME} == "linux2")
 PLIST_SUBST+=	OSSAUDIODEV=
