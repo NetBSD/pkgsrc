@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5380 2006/08/26 11:09:16 jmmv Exp $
+$NetBSD: TODO,v 1.5381 2006/08/26 23:24:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -648,7 +648,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
-	o libtorrent-0.9.3
+	o libtorrent-0.9.3 [pkg/34291]
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o liferea-1.0.20
@@ -999,7 +999,7 @@ Suggested package updates
 	o rsnapshot-1.2.9
 	o rt3-3.6.0
 	o rtcw-1.41.3
-	o rtorrent-0.5.3
+	o rtorrent-0.5.3 [pkg/34290]
 	o ruby-cmd-0.8.0
 	o sablecc-3.2
 	o samba-3.0.23a
