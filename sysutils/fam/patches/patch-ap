@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.10 2005/10/10 22:06:51 joerg Exp $
+$NetBSD: patch-ap,v 1.11 2006/08/26 15:30:57 joerg Exp $
 
 --- src/mntent_compat.c++.orig	2005-07-24 02:27:46.000000000 +0000
 +++ src/mntent_compat.c++
@@ -48,7 +48,7 @@ $NetBSD: patch-ap,v 1.10 2005/10/10 22:06:51 joerg Exp $
 +#include <sys/param.h>
 +#include <sys/ucred.h>
 +#include <sys/mount.h>
-+#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__)
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
 +# include <sys/statvfs.h>
 +#endif
 +
@@ -144,7 +144,7 @@ $NetBSD: patch-ap,v 1.10 2005/10/10 22:06:51 joerg Exp $
 +}
 +
 +static struct mntent *
-+#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__)
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
 +statfs_to_mntent (struct statvfs *mntbuf)
 +#else
 +statfs_to_mntent (struct statfs *mntbuf)
@@ -155,7 +155,7 @@ $NetBSD: patch-ap,v 1.10 2005/10/10 22:06:51 joerg Exp $
 +	_mntent.mnt_fsname = mntbuf->f_mntfromname;
 +	_mntent.mnt_dir = mntbuf->f_mntonname;
 +	_mntent.mnt_type = mntbuf->f_fstypename;
-+#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__)
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
 +	tmp = flags2opts (mntbuf->f_flag);
 +#else
 +	tmp = flags2opts (mntbuf->f_flags);
@@ -175,7 +175,7 @@ $NetBSD: patch-ap,v 1.10 2005/10/10 22:06:51 joerg Exp $
 +struct mntent *
 +getmntent (FILE *fp)
 +{
-+#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__)
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__APPLE__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
 +	static struct statvfs *mntbuf;
 +#else
 +	static struct statfs *mntbuf;
