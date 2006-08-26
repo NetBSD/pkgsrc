@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.232 2006/08/26 18:55:43 schwarz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.233 2006/08/26 19:07:00 schwarz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -306,8 +306,8 @@ SHAREMODE?=		${DOCMODE}
 
 .if defined(PREFIX) && (${PREFIX} != ${__PREFIX_SET__})
 .BEGIN:
-	@${ECHO_MSG} "You can NOT set PREFIX manually or in mk.conf.  Set LOCALBASE or X11BASE"
-	@${ECHO_MSG} "depending on your needs.  See the pkg system documentation for more info."
+	@${ECHO_MSG} "You CANNOT set PREFIX manually or in mk.conf. Set LOCALBASE or X11BASE"
+	@${ECHO_MSG} "depending on your needs. See the pkg system documentation for more info."
 	@${FALSE}
 .endif
 
