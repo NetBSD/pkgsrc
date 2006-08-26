@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5379 2006/08/25 16:00:32 wiz Exp $
+$NetBSD: TODO,v 1.5380 2006/08/26 11:09:16 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -403,6 +403,7 @@ Suggested package updates
 	o dap-2.1.5
 	o dar-2.3.1
 	o darkstat-3.0.540 [pkg/34158]
+	o dbus-0.92 [jmmv]
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
