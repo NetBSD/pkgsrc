@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1129 2006/08/26 07:46:19 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1130 2006/08/26 13:14:34 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4094,3 +4094,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/dvdrip to 0.98.1 [xtraeme 2006-08-25]
 	Updated pkgtools/pkg_chk to 1.80 [abs 2006-08-25]
 	Updated graphics/gimp to 2.2.13 [adam 2006-08-26]
+	Updated devel/generate to 2.3 [darcy 2006-08-26]
+	Updated devel/py-generate to 2.3 [darcy 2006-08-26]
