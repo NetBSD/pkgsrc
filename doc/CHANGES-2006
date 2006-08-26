@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1130 2006/08/26 13:14:34 darcy Exp $
+$NetBSD: CHANGES-2006,v 1.1131 2006/08/26 14:00:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gimp to 2.2.13 [adam 2006-08-26]
 	Updated devel/generate to 2.3 [darcy 2006-08-26]
 	Updated devel/py-generate to 2.3 [darcy 2006-08-26]
+	Updated chat/tik to 0.90nb2 [minskim 2006-08-26]
