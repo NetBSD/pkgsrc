@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/07/18 23:06:41 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/08/26 15:39:07 schwarz Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -40,4 +40,8 @@ do-test:
 	@cd ${WRKSRC} && ${SETENV} DIGESTDIR=${WRKSRC} ${SH} ./regress.sh
 	@${ECHO} "All tests completed"
 
+.if !empty(LOWER_OPSYS:Mirix5*)
+# digest uses snprintf()
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
