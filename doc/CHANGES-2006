@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1128 2006/08/25 19:51:31 abs Exp $
+$NetBSD: CHANGES-2006,v 1.1129 2006/08/26 07:46:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4093,3 +4093,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/comix to 3.5 [wiz 2006-08-25]
 	Updated multimedia/dvdrip to 0.98.1 [xtraeme 2006-08-25]
 	Updated pkgtools/pkg_chk to 1.80 [abs 2006-08-25]
+	Updated graphics/gimp to 2.2.13 [adam 2006-08-26]
