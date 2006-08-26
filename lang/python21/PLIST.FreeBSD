@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2006/08/26 15:32:29 joerg Exp $
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyo
