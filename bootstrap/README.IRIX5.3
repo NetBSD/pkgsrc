@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX5.3,v 1.3 2006/08/05 14:57:19 schwarz Exp $
+$NetBSD: README.IRIX5.3,v 1.4 2006/08/26 15:42:27 schwarz Exp $
 
 Installing pkgsrc on IRIX 5.3 requires some preparation.
 First, if necessary, get the IRIX 5.3 IDO (cc etc.) from SGI at
@@ -14,23 +14,12 @@ Furthermore, get Y2k patches from e.g.
 ftp://ftp.mayn.de/pub/really_old_stuff/irix/oldstuff/ if you haven't
 installed them already.
 
-To date, pkgsrc expects the SGI IDO cc and might run into problems when
-using gcc.
-With IDO cc and the necessary supporting tools and development files
-installed you can run bootstrap to create the essential pkgsrc tools,
-notably bmake. Once this is done you will find mk.conf.example to start
-your mk.conf pkgsrc configuration file from. You might want to add
-CFLAGS+=-O2 (or if you are using an R4K machine -O2 -mips2)
-and
-DBG=
-
 Unfortunately many of IRIX 5.3's native tools do not provide
 functionalitites that pkgsrc expects. It is therefore necessary to install
 the respective GNU tools for cp, grep, id, mkdir, test, touch, which,
 and xargs. To avoid conflicts you might want to do so under a different
-directory hierarchy than pkgsrc (in the following example
---prefix=/usr/local is assumed). Obtain and install the following GNU
-software:
+directory hierarchy than pkgsrc (in the following example /usr/local is
+assumed). Obtain and install the following GNU software:
 - GNU findutils (4.2.23 is known to install)
 - GNU grep (2.5.1a works, but you have to apply the patch from
 pkgsrc/textproc/grep/patches/patch-ab; either do so manually by editing the
@@ -42,50 +31,23 @@ makeinfo; just proceed with make install)
 configure)
 - GNU which (2.16 works; be sure to configure with CC="cc -Xcpluscomm")
 
-These tools can be installed independently of bootstrapping. To make them
-accessible to pkgsrc make sure your mk.conf contains something like this:
+To date, pkgsrc expects the SGI IDO cc and might run into problems when
+using gcc.
+With IDO cc and the necessary supporting tools and development files
+installed you can run bootstrap to create the essential pkgsrc tools,
+notably bmake:
 
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}id)
-TOOLS_PLATFORM.id=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}id
-.else
-TOOLS_PLATFORM.id=/usr/local/bin/id
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mkdir)
-TOOLS_PLATFORM.mkdir=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}mkdir -p
-.else
-TOOLS_PLATFORM.mkdir=/usr/local/bin/mkdir -p
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep)
-TOOLS_PLATFORM.grep=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
-.else
-TOOLS_PLATFORM.grep=/usr/local/bin/grep
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cp)
-TOOLS_PLATFORM.cp=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}cp
-.else
-TOOLS_PLATFORM.cp=/usr/local/bin/cp
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}test)
-TOOLS_PLATFORM.test=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}test
-.else
-TOOLS_PLATFORM.test=/usr/local/bin/test
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}touch)
-TOOLS_PLATFORM.touch=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}touch
-.else
-TOOLS_PLATFORM.touch=/usr/local/bin/touch
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs)
-TOOLS_PLATFORM.xargs=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs -r
-.else
-TOOLS_PLATFORM.xargs=/usr/local/bin/xargs -r
-.endif
-TYPE=/usr/local/bin/which
- 
+env CP=/usr/local/bin/cp GREP=/usr/local/bin/grep ID=/usr/local/bin/id MKDIR="/usr/local/bin/mkdir -p" TEST=/usr/local/bin/test TOUCH=/usr/local/bin/touch XARGS="/usr/local/bin/xargs -r" ./bootstrap
+
+Add the nedessary arguments such as --prefix= as necessary.
+You might also want to set the CFLAGS, CPPFLAGS, or LDFLAGS.
+For the IDO cc CFLAGS=-O2 (or CFLAGS="-O2 -mips2" if you are using an R4K
+machine) is recommended.
+
 IRIX 5.3 IDO does not come with a C++ compiler. For packages that require
 C++ you can get the GNU C++ compiler, g++, which is part of the gcc
 distribution. Gcc 3.4.4 is known to bootstrap on IRIX 5.3. To activate it,
-add the following lines to your mk.conf:
+add the following lines to your mk.conf after bootstrapping:
 
 CXX=g++
 USE_TOOLS+=cxx

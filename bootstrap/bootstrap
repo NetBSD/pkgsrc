@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.80 2006/08/20 14:25:22 schwarz Exp $
+# $NetBSD: bootstrap,v 1.81 2006/08/26 15:42:27 schwarz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -34,6 +34,11 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #set -x
+
+# the following environment variables are honored:
+# compiler/linker flags: CFLAGS, CPPFLAGS, LDFLAGS
+# tools: CP, GREP, ID, MKDIR, TEST, TOUCH, XARGS
+
 
 BOOTSTRAP_VERSION=20060721
 
@@ -193,7 +198,7 @@ opsys_finish()
 is_root()
 {
 	if [ `uname -s` = "IRIX" ]; then
-		if [ `uname -r` -lt 6 ]; then
+		if [ `uname -r` -lt 6  -a -z "$ID" ]; then
 	# older version of IRIX have an id command with limited features
 			if [ "`$idprog`" != "uid=0(root) gid=0(sys)" ]; then
 				return 0
@@ -394,9 +399,8 @@ IRIX*)
 		need_mkdir=yes
 # IRIX 5 does not have uint32_t typedef'd in sys/types.h
 		tnftpxflags="-DUINT32_T=int"
-# IRIX 5 is lacking fnmatch.h and regex.h, both provided by libnbcompat
+# IRIX 5 is lacking fnmatch.h needed to build mtree
 		needfnmatchh=yes
-		needregexh=yes
 	fi
 	;;
 Linux)
@@ -550,8 +554,16 @@ fi
 
 check_prog awkprog awk
 check_prog chmodprog chmod
-check_prog cpprog cp
-check_prog idprog id
+if [ -n "$CP" ]; then
+	cpprog="$CP"
+else
+	check_prog cpprog cp
+fi
+if [ -n "$ID" ]; then
+	idprog="$ID"
+else
+	check_prog idprog id
+fi
 check_prog groupsprog groups
 check_prog lnprog ln
 check_prog lsprog ls
@@ -661,9 +673,6 @@ run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure -C --prefix=$prefix --mand
 if [ x"$needfnmatchh" = x"yes" ]; then
 	$lnprog -s nbcompat/fnmatch.h $wrkdir/libnbcompat/fnmatch.h
 fi
-if [ x"$needregexh" = x"yes" ]; then
-	$lnprog -s nbcompat/regex.h $wrkdir/libnbcompat/regex.h
-fi
 
 # set up an example mk.conf file
 MKCONF_EXAMPLE=${wrkdir}/mk.conf.example
@@ -741,7 +750,7 @@ if [ "$need_fixed_strip" = "yes" ] ; then
 	need_extras=yes
 fi
 
-if [ "$need_mkdir" = "yes" ]; then
+if [ "$need_mkdir" = "yes" -a -z "$MKDIR" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/mkdir-sh $prefix/bin/mkdir-sh"
 	echo "TOOLS_PLATFORM.mkdir?=		$prefix/bin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
@@ -835,6 +844,18 @@ esac
 echo_msg "Installing pkgtools"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake && $bmake install)"
+
+# preserve compiler and tool environment variables settings
+test -z "$CP" || echo "TOOLS_PLATFORM.cp?=		$CP" >> ${MKCONF_EXAMPLE}
+test -z "$GREP" || echo "TOOLS_PLATFORM.grep?=		$GREP" >> ${MKCONF_EXAMPLE}
+test -z "$ID" || echo "TOOLS_PLATFORM.id?=		$ID" >> {MKCONF_EXAMPLE}
+test -z "$MKDIR" || echo "TOOLS_PLATFORM.mkdir?=		$MKDIR" >> ${MKCONF_EXAMPLE}
+test -z "$TEST" || echo "TOOLS_PLATFORM.test?=		$TEST" >> ${MKCONF_EXAMPLE}
+test -z "$TOUCH" || echo "TOOLS_PLATFORM.touch?=		$TOUCH" >> ${MKCONF_EXAMPLE}
+test -z "$XARGS" || echo "TOOLS_PLATFORM.xargs?=		$XARGS" >> ${MKCONF_EXAMPLE}
+test -z "$CFLAGS" || echo "CFLAGS+=		$CFLAGS" >> ${MKCONF_EXAMPLE}
+test -z "$CPPFLAGS" || echo "CPPFLAGS+=		$CPPFLAGS" >> ${MKCONF_EXAMPLE}
+test -z "$LDFLAGS" || echo "LDFLAGS+=		$LDFLAGS" >> ${MKCONF_EXAMPLE}
 
 # opsys specific fiddling
 opsys_finish
