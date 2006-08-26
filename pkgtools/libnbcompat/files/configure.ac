@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.51 2004/10/24 11:18:33 grant Exp $
+dnl $NetBSD: configure.ac,v 1.52 2006/08/26 21:28:21 seb Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -171,7 +171,7 @@ fi
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
 AC_TYPE_SIZE_T
-AC_CHECK_TYPES([long long, int8_t, int16_t, int32_t, int64_t, u_int8_t, u_int16_t, u_int32_t, u_int64_t, uint8_t, uint16_t, uint32_t, uint64_t],[],[],
+AC_CHECK_TYPES([long long, long double, int8_t, int16_t, int32_t, int64_t, u_int8_t, u_int16_t, u_int32_t, u_int64_t, uint8_t, uint16_t, uint32_t, uint64_t],[],[],
 [#if STDC_HEADERS
 #include <stdlib.h>
 #include <stddef.h>
