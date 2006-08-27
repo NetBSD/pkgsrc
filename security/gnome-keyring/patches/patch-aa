@@ -1,0 +1,141 @@
+$NetBSD: patch-aa,v 1.1 2006/08/27 16:10:21 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=353105
+
+--- gnome-keyring-daemon-io.c.orig	2005-05-04 09:17:18.000000000 +0200
++++ gnome-keyring-daemon-io.c
+@@ -45,6 +45,7 @@
+ #endif
+ 
+ typedef enum {
++	GNOME_CLIENT_STATE_INIT,
+ 	GNOME_CLIENT_STATE_CREDENTIALS,
+ 	GNOME_CLIENT_STATE_READ_DISPLAYNAME,
+ 	GNOME_CLIENT_STATE_READ_PACKET,
+@@ -91,6 +92,38 @@ static void gnome_keyring_client_state_m
+ 
+ 
+ static gboolean
++init_connection (int fd)
++{
++	char buf = '\0';
++        ssize_t len;
++
++#if defined(LOCAL_CREDS) && !defined(HAVE_CMSGCRED)
++	/* Set the socket to receive credentials on the next message,
++	 * which must be the nul-byte credentials message expected by
++	 * read_unix_socket_credentials().
++	 * CMSGCRED is preferred over LOCAL_CREDS because it provides
++	 * the remote PID. */
++	{
++		int on = 1;
++		if (setsockopt (fd, 0, LOCAL_CREDS, &on, sizeof (on)) < 0) {
++			g_warning ("Unable to set LOCAL_CREDS socket option\n");
++			return FALSE;
++		}
++	}
++#endif
++
++	len = write (fd, &buf, sizeof (buf));
++	if (len != sizeof (buf)) {
++		g_warning ("Failed to write initialization byte: %s",
++		           len == 0 ? "No data written" : strerror (errno));
++		return FALSE;
++	}
++
++	return TRUE;
++}
++
++
++static gboolean
+ read_unix_socket_credentials (int fd,
+ 			      pid_t *pid,
+ 			      uid_t *uid)
+@@ -102,22 +135,14 @@ read_unix_socket_credentials (int fd,
+ #ifdef HAVE_CMSGCRED 
+ 	char cmsgmem[CMSG_SPACE (sizeof (struct cmsgcred))];
+ 	struct cmsghdr *cmsg = (struct cmsghdr *) cmsgmem;
++#elif defined(LOCAL_CREDS)
++	char cmsgmem[CMSG_SPACE (sizeof (struct sockcred))];
++	struct cmsghdr *cmsg = (struct cmsghdr *) cmsgmem;
+ #endif
+ 	
+ 	*pid = 0;
+ 	*uid = 0;
+ 	
+-#if defined(LOCAL_CREDS) && defined(HAVE_CMSGCRED)
+-	/* Set the socket to receive credentials on the next message */
+-	{
+-		int on = 1;
+-		if (setsockopt (fd, 0, LOCAL_CREDS, &on, sizeof (on)) < 0) {
+-			g_warning ("Unable to set LOCAL_CREDS socket option\n");
+-			return FALSE;
+-		}
+-	}
+-#endif
+-	
+ 	iov.iov_base = &buf;
+ 	iov.iov_len = 1;
+ 	
+@@ -125,7 +150,7 @@ read_unix_socket_credentials (int fd,
+ 	msg.msg_iov = &iov;
+ 	msg.msg_iovlen = 1;
+ 	
+-#ifdef HAVE_CMSGCRED
++#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
+ 	memset (cmsgmem, 0, sizeof (cmsgmem));
+ 	msg.msg_control = cmsgmem;
+ 	msg.msg_controllen = sizeof (cmsgmem);
+@@ -146,7 +171,7 @@ read_unix_socket_credentials (int fd,
+ 		return FALSE;
+ 	}
+ 
+-#ifdef HAVE_CMSGCRED
++#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
+ 	if (cmsg->cmsg_len < sizeof (cmsgmem) || cmsg->cmsg_type != SCM_CREDS) {
+ 		g_warning ("Message from recvmsg() was not SCM_CREDS\n");
+ 		return FALSE;
+@@ -174,6 +199,13 @@ read_unix_socket_credentials (int fd,
+ 		
+ 		*pid = cred->cmcred_pid;
+ 		*uid = cred->cmcred_euid;
++#elif defined(LOCAL_CREDS)
++		struct sockcred *cred;
++		
++		cred = (struct sockcred *) CMSG_DATA (cmsg);
++		
++		*pid = -1;
++		*uid = cred->sc_euid;
+ #else /* !SO_PEERCRED && !HAVE_CMSGCRED */
+ 		g_warning ("Socket credentials not supported on this OS\n");
+ 		return FALSE;
+@@ -345,6 +377,12 @@ gnome_keyring_client_state_machine (Gnom
+ 	
+  new_state:
+ 	switch (client->state) {
++	case GNOME_CLIENT_STATE_INIT:
++		debug_print (("GNOME_CLIENT_STATE_INIT %p\n", client));
++                if (init_connection (client->sock))
++			client->state = GNOME_CLIENT_STATE_CREDENTIALS;
++		break;
++
+ 	case GNOME_CLIENT_STATE_CREDENTIALS:
+ 		debug_print (("GNOME_CLIENT_STATE_CREDENTIALS %p\n", client));
+ 		if (!read_unix_socket_credentials (client->sock, &pid, &uid)) {
+@@ -536,13 +574,15 @@ gnome_keyring_client_new (int fd)
+ 					      gnome_keyring_client_hup, client);
+ 	g_io_channel_unref (channel);
+ 
+-	client->state = GNOME_CLIENT_STATE_CREDENTIALS;
++	client->state = GNOME_CLIENT_STATE_INIT;
+ 	client->sock = fd;
+ 	client->input_channel = channel;
+ 	client->input_buffer = g_string_new (NULL);
+ 	client->input_pos = 0;
+ 
+ 	clients = g_list_prepend (clients, client);
++
++	gnome_keyring_client_state_machine (client);
+ }
+ 
+ 
