@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/24 12:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/08/27 01:01:15 ben Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
@@ -64,6 +64,10 @@ SUBST_MESSAGE.fix=	Fixing paths.
 post-extract:
 	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS/Defaults.dragonfly
 	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS_ENG/Defaults.dragonfly
+	${CP} ${WRKSRC}/RULES/power-macintosh-darwin-cc.rul \
+		${WRKSRC}/RULES/i386-darwin-cc.rul
+	${CP} ${WRKSRC}/RULES/power-macintosh-darwin-gcc.rul \
+		${WRKSRC}/RULES/i386-darwin-gcc.rul
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
