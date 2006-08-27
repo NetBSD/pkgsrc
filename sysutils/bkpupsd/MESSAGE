@@ -1,15 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2005/01/04 13:37:30 taca Exp $
+$NetBSD: MESSAGE,v 1.7 2006/08/27 16:21:35 taca Exp $
 
-${DOCDIR}/rc.conf.d.sample contains some shell variables
-for helping bkpupsd start up.
-
-Simple way to install NetBSD 1.5 or later is below.
-
-(1) Copy ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/bkpupsd to
-    ${RCD_SCRIPTS_DIR}/rc.d/bkpupsd.
-(2) Append ${DOCDIR}/rc.conf.d.sample to /etc/rc.conf.
-(3) Edit /etc/rc.conf for your needs, serial device and UPS type for
-    example.
+See ${DOCDIR}/rc.conf.add.sample.
 
 ===========================================================================
