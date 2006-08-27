@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/08/14 15:57:40 tron Exp $
+# $NetBSD: Makefile,v 1.76 2006/08/27 10:41:37 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.8
 #PKGREVISION=	1
@@ -21,6 +21,7 @@ USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	config/conf.pl
+BUILD_DEFS+=	APACHE_GROUP APACHE_USER VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
