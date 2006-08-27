@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/31 23:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/08/27 14:23:23 jdc Exp $
 
 DISTNAME=	libgcrypt-1.2.2
 PKGREVISION=	1
@@ -23,7 +23,8 @@ INFO_FILES=		# PLIST
 .include "../../mk/bsd.prefs.mk"
 
 .if empty(MACHINE_PLATFORM:MNetBSD-*-i386) && \
-    empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
+    empty(MACHINE_PLATFORM:MNetBSD-*-alpha) && \
+    empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
