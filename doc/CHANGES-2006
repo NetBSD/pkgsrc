@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1133 2006/08/27 01:48:01 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.1134 2006/08/27 02:15:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/tik to 0.90nb2 [minskim 2006-08-26]
 	Updated chat/tkicb to 2.1.4nb3 [minskim 2006-08-26]
 	Updated www/zope29 to 2.9.4nb1 [minskim 2006-08-27]
+	Updated devel/emacs20-elib to 1.0nb3 [minskim 2006-08-27]
