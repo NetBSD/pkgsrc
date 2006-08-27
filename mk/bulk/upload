@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.30.2.1 2006/08/02 15:59:40 salo Exp $
+# $NetBSD: upload,v 1.30.2.2 2006/08/27 11:33:17 ghen Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -118,7 +118,7 @@ install_required()
 	if [ "${verbose}" = "yes" ]; then
 		echo "upload> Installing ${pkg}"
 	fi
-	( cd "$pkg" && ${BMAKE} bulk-install) \
+	(cd "$USR_PKGSRC" && cd "$pkg" && ${BMAKE} bulk-install) \
 	|| {
 		echo "upload> ERROR: Unable to install required package $pkg!" 1>&2
 		echo "        Bailing out -- you're on your own." 1>&2
