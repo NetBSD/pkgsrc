@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5383 2006/08/27 18:20:10 wiz Exp $
+$NetBSD: TODO,v 1.5384 2006/08/27 18:23:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -822,6 +822,7 @@ Suggested package updates
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
 	o p5-Net-Jabber-2.0
+	o p5-Net-Netmask-1.9012 [pkg/34298]
 	o p5-Net-SNMP-5.1.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
