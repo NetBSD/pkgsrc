@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/02/24 20:44:14 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/27 14:00:41 hamajima Exp $
 
---- dtcpclient.c.orig	2005-05-21 08:03:05.000000000 +0000
-+++ dtcpclient.c
-@@ -73,7 +73,7 @@
+--- dtcpclient.c.orig	2006-05-26 01:36:21.000000000 +0900
++++ dtcpclient.c	2006-08-26 01:11:31.000000000 +0900
+@@ -74,7 +74,7 @@
  
  #define PIDFILE		_PATH_VARRUN "/dtcpclient.pid"
  #define PASSWDFILE	PREFIX "/etc/dtcpclient.auth"
@@ -11,3 +11,16 @@ $NetBSD: patch-ac,v 1.1 2006/02/24 20:44:14 joerg Exp $
  
  typedef enum {
  	FALSE = 0,
+@@ -173,9 +173,9 @@
+ 	int i;
+ 
+ 	MD5Init(&ctx);
+-	MD5Update(&ctx, user, strlen(user));
+-	MD5Update(&ctx, challenge, strlen(challenge));
+-	MD5Update(&ctx, pass, strlen(pass));
++	MD5Update(&ctx, (unsigned char *)user, strlen(user));
++	MD5Update(&ctx, (unsigned char *)challenge, strlen(challenge));
++	MD5Update(&ctx, (unsigned char *)pass, strlen(pass));
+ 	MD5Final(digest, &ctx);
+ 	for (i = 0;  i < 16;  i++) {
+ 		ascii_digest[i + i] = hex[digest[i] >> 4];
