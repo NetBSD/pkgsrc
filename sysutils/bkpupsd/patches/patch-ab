@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2003/07/31 11:07:31 jmmv Exp $
+$NetBSD: patch-ab,v 1.6 2006/08/27 16:21:36 taca Exp $
 
---- src/upstab.5.in.orig	2002-12-21 18:42:01.000000000 +0100
+--- src/upstab.5.in.orig	2006-08-22 13:37:55.000000000 +0900
 +++ src/upstab.5.in
-@@ -122,8 +122,8 @@ In this case, after setting serial port 
+@@ -124,8 +124,8 @@ In this case, after setting serial port 
  CTS and CAR are set.
  .Pp
  .Sh FILES
@@ -12,4 +12,4 @@ $NetBSD: patch-ab,v 1.5 2003/07/31 11:07:31 jmmv Exp $
 +.It Pa  %%pkg_sysconfdir%%/upstab
  .El
  .Sh SEE ALSO
- .Xr getcap 3 ,
+ .Xr getcap 3
