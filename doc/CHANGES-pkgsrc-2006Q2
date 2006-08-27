@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.80 2006/08/25 11:24:44 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.81 2006/08/27 11:33:49 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -189,3 +189,5 @@ Pullup ticket 1808 - requested by salo
 security fix for cscope
 Pullup ticket 1806 - requested by salo
 security update for ImageMagick
+Pullup ticket 1809 - requested by bouyer
+fix the upload script
