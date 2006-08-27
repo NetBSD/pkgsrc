@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1136 2006/08/27 16:10:44 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1137 2006/08/27 16:22:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/emacs20-elib to 1.0nb3 [minskim 2006-08-27]
 	Updated net/dtcpclient to 20060526 [hamajima 2006-08-27]
 	Updated security/gnome-keyring to 0.4.9nb2 [jmmv 2006-08-27]
+	Updated sysutils/bkpupsd to 2.2.0 [taca 2006-08-27]
