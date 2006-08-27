@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.3.2.2 2006/08/02 15:56:15 salo Exp $
+# $NetBSD: sort-packages,v 1.3.2.3 2006/08/27 11:33:17 ghen Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -20,7 +20,7 @@ set -eu
 : ${OUTDIR="/tmp"}
 : ${PKG_SUFX=".tgz"}
 : ${AUDIT_PACKAGES="audit-packages"}
-: ${PKG_INFO_CMD="pkg_info"}
+: ${PKG_INFO="pkg_info"}
 
 regular_packages="${OUTDIR}/regular_packages"
 restricted_packages="${OUTDIR}/restricted_packages"
@@ -28,17 +28,19 @@ vulnerable_packages="${OUTDIR}/vulnerable_packages"
 newline="
 "
 
-rm -f "${regular_packages}" "${restricted_packages}" "${vulnerable_packages}"
+: > "${regular_packages}"
+: > "${restricted_packages}"
+: > "${vulnerable_packages}"
 
 for pkg in *${PKG_SUFX}; do
-	build_info=`${pkg_info_cmd} -B "${pkg}"`
+	build_info=`${PKG_INFO} -B "${pkg}"`
 
 	# Note: this code needs to be that complicated because licensing
 	# issues are critical to pkgsrc, and we really don't want
 	# anything unexpected to happen here. The worst case would be
-	# some file is sorted wrongly because some change in the output
-	# of pkg_info which had not been foreseen. Therefore it is
-	# better to check as strictly as possible to make those
+	# that some file is sorted wrongly because some change in the
+	# output of pkg_info which had not been foreseen. Therefore it
+	# is better to check as strictly as possible to make those
 	# changes immediately visible.
 
 	no_bin_on_ftp="unknown"
