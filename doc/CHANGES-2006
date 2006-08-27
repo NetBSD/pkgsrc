@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1135 2006/08/27 14:00:55 hamajima Exp $
+$NetBSD: CHANGES-2006,v 1.1136 2006/08/27 16:10:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4101,3 +4101,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/zope29 to 2.9.4nb1 [minskim 2006-08-27]
 	Updated devel/emacs20-elib to 1.0nb3 [minskim 2006-08-27]
 	Updated net/dtcpclient to 20060526 [hamajima 2006-08-27]
+	Updated security/gnome-keyring to 0.4.9nb2 [jmmv 2006-08-27]
