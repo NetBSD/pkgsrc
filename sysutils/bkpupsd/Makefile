@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2006/06/18 16:00:41 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/08/27 16:21:35 taca Exp $
 #
 
-DISTNAME=	bkpupsd-2.1.2
-PKGREVISION=	5
+DISTNAME=	bkpupsd-2.2.0
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.jone-system.com/pub/misc/ \
+MASTER_SITES=	ftp://ftp.SmartField.co.jp/pub/misc/ \
 		ftp://ftp.back-street.net/pub/misc/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not exist
-COMMENT=	Simple UPS daemon for BK-Pro, BK series and FREQUPS F series
+COMMENT=	Simple UPS daemon for BK-Pro, BK and FREQUPS A/F series
 
 # Original program assumes BSD code base.
 ONLY_FOR_PLATFORM= NetBSD-*-*
