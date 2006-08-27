@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/02 20:36:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2006/08/27 18:28:37 kristerw Exp $
 
 SHA1 (gdal-1.3.1.tar.gz) = 2783c4c0d2a83a34f4c5c6a8efe41e816ba396fb
 RMD160 (gdal-1.3.1.tar.gz) = 5967608e6e1c9f0af8698fcffb58eab4dcdd518d
 Size (gdal-1.3.1.tar.gz) = 6856011 bytes
 SHA1 (patch-aa) = c8fd8c0749d2ef10a630e0c688f0696970ce1ff3
 SHA1 (patch-ab) = 207f2aede8d0a7a2c7d89d45675745c81a812307
+SHA1 (patch-ac) = 23402d8e6e44ca7767a9266e2f0bbcc36a398349
