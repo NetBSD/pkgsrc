@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/08/27 14:00:41 hamajima Exp $
 #
 
-DISTNAME=	dtcpclient-20050521
+DISTNAME=	dtcpclient-20060526
 CATEGORIES=	net
 MASTER_SITES=	http://www.imasy.or.jp/~ume/ipv6/ \
 		http://home.jp.FreeBSD.org/~ume/ipv6/
