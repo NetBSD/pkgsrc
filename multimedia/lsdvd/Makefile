@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/08/24 09:58:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2006/08/27 18:15:51 xtraeme Exp $
 
 DISTNAME=	lsdvd-0.16
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=acidrip/}
 
