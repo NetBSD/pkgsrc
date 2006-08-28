@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1143 2006/08/28 14:12:59 dsainty Exp $
+$NetBSD: CHANGES-2006,v 1.1144 2006/08/28 16:01:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4110,3 +4110,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gnome2-applets to 2.14.3nb1 [jmmv 2006-08-28]
 	Updated lang/php5 to 5.1.6 [taca 2006-08-28]
 	Updated sysutils/cdrtools to 2.01nb4 [dsainty 2006-08-28]
+	Updated net/bind9 to 9.3.2nb1 [seb 2006-08-28]
