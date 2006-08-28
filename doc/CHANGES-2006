@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1144 2006/08/28 16:01:26 seb Exp $
+$NetBSD: CHANGES-2006,v 1.1145 2006/08/28 21:58:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/php5 to 5.1.6 [taca 2006-08-28]
 	Updated sysutils/cdrtools to 2.01nb4 [dsainty 2006-08-28]
 	Updated net/bind9 to 9.3.2nb1 [seb 2006-08-28]
+	Added multimedia/gst-plugins0.10-xvid version 0.10.3 [jmmv 2006-08-28]
