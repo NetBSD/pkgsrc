@@ -1,20 +1,24 @@
-$NetBSD: patch-ab,v 1.1 2006/08/09 14:00:08 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2006/08/28 15:07:48 drochner Exp $
 
---- socklib.c.orig	2006-08-09 14:54:45.000000000 +0200
+--- socklib.c.orig	2006-05-24 00:19:49.000000000 +0200
 +++ socklib.c
-@@ -879,6 +879,7 @@ int makeSocket(addr_type_t addr_type, 
+@@ -879,6 +879,9 @@ int makeSocket(addr_type_t addr_type, 
      int ret, s;
      struct sockaddr_in myaddr;
      in_addr_t ip=0;
++#ifdef SO_REUSEPORT
 +    int one = 1;
++#endif
  
  #ifdef WINDOWS
      static int lastSocket=-1;
-@@ -897,6 +898,8 @@ int makeSocket(addr_type_t addr_type, 
+@@ -897,6 +900,10 @@ int makeSocket(addr_type_t addr_type, 
  	exit(1);
      }
  
++#ifdef SO_REUSEPORT
 +    ret = setsockopt(s, SOL_SOCKET, SO_REUSEPORT, &one, sizeof(one));
++#endif
 +
      if(addr_type == ADDR_TYPE_MCAST && tmpl != NULL) {
  	ip = tmpl->sin_addr.s_addr;
