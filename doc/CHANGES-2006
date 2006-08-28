@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1141 2006/08/28 10:02:54 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1142 2006/08/28 12:18:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4108,3 +4108,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/gnome-keyring to 0.4.9nb3 [jmmv 2006-08-28]
 	Updated security/gnome-keyring-manager to 2.14.0nb2 [jmmv 2006-08-28]
 	Updated x11/gnome2-applets to 2.14.3nb1 [jmmv 2006-08-28]
+	Updated lang/php5 to 5.1.6 [taca 2006-08-28]
