@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/08/23 09:44:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2006/08/28 08:28:57 jmmv Exp $
 #
 
-DISTNAME=	dbus-0.91
+DISTNAME=	dbus-0.92
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
 
@@ -44,6 +44,13 @@ PKG_SUPPORTED_OPTIONS+=	debug
 CONFIGURE_ARGS+=	--enable-asserts
 CONFIGURE_ARGS+=	--enable-tests
 CONFIGURE_ARGS+=	--enable-verbose-mode
+.endif
+
+# Next version will automatically detect this with a sane configure check,
+# so it should go away.
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--enable-kqueue
 .endif
 
 PKG_SYSCONFSUBDIR=	dbus-1
