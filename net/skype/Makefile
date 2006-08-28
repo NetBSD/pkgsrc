@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/22 22:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/08/28 07:54:05 ghen Exp $
 #
 
 DISTNAME=		skype_staticQT-1.2.0.18
@@ -30,11 +30,11 @@ NO_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-RESTRICTED=             Redistribution not allowed yet.
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_FTP=          ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
-LICENSE=                skype-license
+RESTRICTED=		Redistribution not allowed yet.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+LICENSE=		skype-license
 
 DATADIR=		${PREFIX}/share/skype
 DOCDIR=			${PREFIX}/share/doc/skype
