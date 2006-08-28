@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.669 2006/08/04 18:32:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.670 2006/08/28 12:41:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1790,6 +1790,7 @@ use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>(?:\s*#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_mk_shellcmd	=> qr"^\t(.*)$";
+use constant regex_rcs_conflict	=> qr"^(<<<<<<<|=======|>>>>>>>)";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
 # Note: the following regular expression looks more complicated than
@@ -1823,7 +1824,7 @@ my $regex_shellword		=  qr"\s*(
 	|	[^\(\)'\"\\\s;&\|<>\`\$] # non-special character
 	|	\$\{[^\s\"'`]+		# HACK: nested make(1) variables
 	)+ | ;;? | &&? | \|\|? | \( | \) | >& | <<? | >>? | \#.*)"sx;
-my $regex_varname		= qr"[-*+.0-9A-Z_a-z{}\[]+";
+my $regex_varname		= qr"(?:[-*+.0-9A-Z_a-z{}\[]+|\$\{[\w_]+\})+";
 my $regex_pkgbase		= qr"(?:[+.0-9A-Z_a-z]|-[A-Z_a-z])+";
 my $regex_pkgversion		= qr"\d(?:\w|\.\d)*";
 
@@ -3303,6 +3304,9 @@ sub parseline_mk($) {
 		$line->set("targets", $targets);
 		$line->set("sources", $sources);
 		defined($comment) and $line->set("comment", $comment);
+
+	} elsif ($text =~ regex_rcs_conflict) {
+		# This line is useless
 
 	} else {
 		assert(false, "Unknown line format: " . $line->to_string());
