@@ -1,0 +1,42 @@
+$NetBSD: patch-am,v 1.6 2006/08/28 05:09:05 ben Exp $
+
+--- configure.orig	2004-02-23 13:44:32.000000000 -0800
++++ configure
+@@ -19078,13 +19078,6 @@ _ACEOF
+ 
+ 		fi
+ 	;;
+-	*-*-darwin*)
+-
+-cat >>confdefs.h <<\_ACEOF
+-#define SYMBOL_PREFIX "_"
+-_ACEOF
+-
+-	;;
+ 	*-hpux-*)
+ 		ARCH_DEFINES="-DHPUX"
+ 	;;
+@@ -19099,7 +19092,7 @@ case "$host" in
+ 	i386-*-* | i486-*-* | i586-*-* | i686-*-* | i86pc-*-*)
+ 		arch_type=ix86
+ 		case "$host" in
+-		        *-*-netbsd* | *-*openbsd*)
++		        *-*-netbsd* | *-*openbsd* | *-*darwin*)
+ 			;;
+ 			*)
+ 				ARCH_DEFINES="-DI386_ASSEM"
+@@ -19778,6 +19771,14 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
