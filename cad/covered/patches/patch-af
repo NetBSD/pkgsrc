@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2006/08/22 17:00:24 joerg Exp $
+$NetBSD: patch-af,v 1.2 2006/08/28 10:07:00 joerg Exp $
 
 --- src/db.c.orig	2004-03-16 05:45:43.000000000 +0000
 +++ src/db.c
@@ -27,7 +27,7 @@ $NetBSD: patch-af,v 1.1 2006/08/22 17:00:24 joerg Exp $
        sig = signal_create( name, width, lsb );
      } else {
 -      sig = (signal*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
-+      sig = (signal_s*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
++      sig = (signal_s*)malloc_safe( sizeof( signal_s ), __FILE__, __LINE__ );
        signal_init( sig, strdup_safe( name, __FILE__, __LINE__ ), (vector*)malloc_safe( sizeof( vector ), __FILE__, __LINE__ ), lsb );
        sig->value->width = width;      
        sig->value->value = NULL;
