@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/28 05:11:06 ben Exp $
+
+SHA1 (xmms_osx_plugin-1.0.tar.gz) = 93ef4dcf8f6697c24a1924168a386c839c7df08f
+RMD160 (xmms_osx_plugin-1.0.tar.gz) = febb02b64cf9ac923aee08be443e17e647669354
+Size (xmms_osx_plugin-1.0.tar.gz) = 313050 bytes
+SHA1 (patch-aa) = 7e8119c6009cc555507528493c4a01f09c42d04b
