@@ -1,0 +1,49 @@
+$NetBSD: patch-cj,v 1.1 2006/08/28 13:56:22 dsainty Exp $
+
+isoinfo extracts files at the painful rate of 1 sector at a time.  This patch
+speeds up file extraction significantly by using a much larger buffer.
+
+Also avoid crashing under NetBSD by not making the assumption that
+fclose(NULL) is legal.
+   
+--- mkisofs/diag/isoinfo.c.orig	2005-05-16 02:21:05.000000000 +1200
++++ mkisofs/diag/isoinfo.c	2006-07-15 18:33:06.000000000 +1200
+@@ -644,7 +644,7 @@
+ 	struct iso_directory_record *idr;
+ {
+ 	int		extent, len, tlen;
+-	unsigned char	buff[2048];
++	unsigned char	buff[204800];
+ 
+ #if	defined(__CYGWIN32__) || defined(__CYGWIN__) || defined(__EMX__) || defined(__DJGPP__)
+ 	setmode(fileno(stdout), O_BINARY);
+@@ -654,16 +654,15 @@
+ 	len = isonum_733((unsigned char *)idr->size);
+ 
+ 	while (len > 0) {
+-#ifdef	USE_SCG
+-		readsecs(extent - sector_offset, buff, ISO_BLOCKS(sizeof (buff)));
+ 		tlen = (len > sizeof (buff) ? sizeof (buff) : len);
++#ifdef	USE_SCG
++		readsecs(extent - sector_offset, buff, ISO_BLOCKS(tlen));
+ #else
+ 		lseek(fileno(infile), ((off_t)(extent - sector_offset)) << 11, SEEK_SET);
+-		tlen = (len > sizeof (buff) ? sizeof (buff) : len);
+ 		read(fileno(infile), buff, tlen);
+ #endif
+ 		len -= tlen;
+-		extent++;
++		extent += ISO_BLOCKS(tlen);
+ 		write(STDOUT_FILENO, buff, tlen);
+ 	}
+ }
+@@ -1252,7 +1252,8 @@
+ 		td = td->next;
+ 	}
+ 
+-	fclose(infile);
++	if (infile != NULL)
++		fclose(infile);
+ 	return (0);
+ }
+ 
