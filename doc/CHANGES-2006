@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1137 2006/08/27 16:22:52 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1138 2006/08/28 05:12:21 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4103,3 +4103,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/dtcpclient to 20060526 [hamajima 2006-08-27]
 	Updated security/gnome-keyring to 0.4.9nb2 [jmmv 2006-08-27]
 	Updated sysutils/bkpupsd to 2.2.0 [taca 2006-08-27]
+	Added audio/xmms-osx version 1.0 [ben 2006-08-27]
