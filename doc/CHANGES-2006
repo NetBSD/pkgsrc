@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1139 2006/08/28 08:31:34 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1140 2006/08/28 09:04:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4106,3 +4106,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/xmms-osx version 1.0 [ben 2006-08-27]
 	Updated sysutils/dbus to 0.92 [jmmv 2006-08-28]
 	Updated security/gnome-keyring to 0.4.9nb3 [jmmv 2006-08-28]
+	Updated security/gnome-keyring-manager to 2.14.0nb2 [jmmv 2006-08-28]
