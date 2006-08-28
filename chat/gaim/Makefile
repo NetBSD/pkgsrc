@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2006/08/28 17:11:04 ben Exp $
 
 DISTNAME=	gaim-1.5.0
 PKGREVISION=	6
@@ -27,6 +27,10 @@ CONFIGURE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+_INSTALL_UNSTRIPPED=    yes
+.endif
 
 .if !exists(${X11BASE}/include/X11/extensions/scrnsaver.h)
 CONFIGURE_ARGS+=	--disable-screensaver
