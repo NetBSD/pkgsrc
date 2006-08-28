@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.13 2005/11/08 21:50:15 hubertf Exp $
+$NetBSD: distinfo,v 1.14 2006/08/28 22:02:51 hubertf Exp $
 
-SHA1 (ipv6calc-0.50.tar.gz) = 06610ce8d02ae82388ead4af644d1be85d4aa689
-RMD160 (ipv6calc-0.50.tar.gz) = 9e62afae35d26ae2ed6f398623cd3bf7e62479ed
-Size (ipv6calc-0.50.tar.gz) = 503695 bytes
-SHA1 (patch-aa) = 8709f2dc352e490980174e4c51c2d1238300437b
-SHA1 (patch-ab) = 89faf0a4c36436d3cafca49c7ffbdce0d090daab
-SHA1 (patch-ac) = 2ee60ab9d96346b413b2903d1e93df759a8a3cc1
-SHA1 (patch-ad) = 743ee3db6ca7159f8f2db9c1b9032e3771a311f2
+SHA1 (ipv6calc-0.61.0.tar.gz) = c31b03a102ef62edccffb3eb5c042b616ef0cf2c
+RMD160 (ipv6calc-0.61.0.tar.gz) = dc5a8e76cd49a813e5205430f11b41f60591cd30
+Size (ipv6calc-0.61.0.tar.gz) = 545036 bytes
