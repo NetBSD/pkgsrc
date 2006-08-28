@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/03/30 20:57:08 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2006/08/28 08:28:57 jmmv Exp $
 
---- bus/Makefile.in.orig	2006-02-24 17:36:50.000000000 +0100
+--- bus/Makefile.in.orig	2006-08-18 21:42:14.000000000 +0200
 +++ bus/Makefile.in
-@@ -374,11 +374,11 @@ target_alias = @target_alias@
+@@ -301,11 +301,11 @@ target_alias = @target_alias@
  target_cpu = @target_cpu@
  target_os = @target_os@
  target_vendor = @target_vendor@
@@ -17,12 +17,12 @@ $NetBSD: patch-aa,v 1.3 2006/03/30 20:57:08 jmmv Exp $
  
  EFENCE = 
  CONFIG_IN_FILES = \
-@@ -939,8 +939,6 @@ clean-local:
- 	/bin/rm *.bb *.bbg *.da *.gcov || true
- 
- install-data-hook:
--	$(mkinstalldirs) $(DESTDIR)/$(localstatedir)/run/dbus
--	$(mkinstalldirs) $(DESTDIR)/$(configdir)/system.d
- 	$(mkinstalldirs) $(DESTDIR)/$(datadir)/dbus-1/services
+@@ -852,8 +852,6 @@ install-data-hook:
+  		chmod 755 $(DESTDIR)$(DBUS_DAEMONDIR); \
+  	fi
+ 	$(INSTALL_PROGRAM) dbus-daemon $(DESTDIR)$(DBUS_DAEMONDIR)
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/run/dbus
+-	$(mkinstalldirs) $(DESTDIR)$(configdir)/system.d
+ 	$(mkinstalldirs) $(DESTDIR)$(datadir)/dbus-1/services
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
