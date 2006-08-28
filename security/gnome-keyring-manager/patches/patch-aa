@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2006/08/28 09:03:40 jmmv Exp $
+
+--- src/gnome-keyring-manager-acl-display.c.orig	2005-04-24 20:40:43.000000000 +0200
++++ src/gnome-keyring-manager-acl-display.c
+@@ -399,7 +399,7 @@ gkm_acl_display_set_acl (GKMAclDisplay *
+       path = gnome_keyring_item_ac_get_path_name (ac);
+ 
+       /* We don't want to include ourself in the list. */
+-      if (g_str_equal (path, gkm_get_application_path ()))
++      if (path != NULL && g_str_equal (path, gkm_get_application_path ()))
+ 	{
+ 	  self->priv->gkm_ac = gnome_keyring_access_control_copy (ac);
+ 	}
+@@ -410,7 +410,7 @@ gkm_acl_display_set_acl (GKMAclDisplay *
+ 	  gtk_list_store_append (self->priv->acl_store, &iter);
+ 	  gtk_list_store_set (self->priv->acl_store, &iter, 
+ 			      AC_COLUMN_NAME, name,
+-			      AC_COLUMN_PATH, path,
++			      AC_COLUMN_PATH, path == NULL ? "Unavailable" : path,
+ 			      AC_COLUMN_READ, (at & GNOME_KEYRING_ACCESS_READ),
+ 			      AC_COLUMN_WRITE, (at & GNOME_KEYRING_ACCESS_WRITE),
+ 			      AC_COLUMN_DELETE, (at & GNOME_KEYRING_ACCESS_REMOVE),
