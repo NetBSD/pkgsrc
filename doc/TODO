@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5387 2006/08/29 09:03:10 tron Exp $
+$NetBSD: TODO,v 1.5388 2006/08/29 18:07:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,7 +351,7 @@ Suggested package updates
 	o blender-2.42
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.2.6
+	o bochs-2.3
 	o bogofilter-1.0.3
 	o boolean-6.8
 	o boson-0.12
@@ -462,7 +462,7 @@ Suggested package updates
 	o fdgw-20040609
 	o fetchmail-6.3.4
 	o fhist-1.14
-	o file-4.17
+	o file-4.17 [pkg/34337]
 	o findutils-4.2.28
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
@@ -494,7 +494,7 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geda-20060824
 	o genius-0.7.6.1
-	o gentoo-0.11.56
+	o gentoo-0.11.56 [pkg/34341]
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -524,6 +524,7 @@ Suggested package updates
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
+	o gok-1.2.0
 	o gossip-0.15
 	o gpsdrive-2.09
 	o grace-5.1.20
@@ -588,6 +589,7 @@ Suggested package updates
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o iselect-1.3.0
+	o iso-codes-0.53 [pkg/34320]
 	o ispell-gaeilge-4.0
 	o ispell-russian-0.99f8
 	o ispell-slovak-0.3.0
@@ -603,7 +605,7 @@ Suggested package updates
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
-	o k3b-0.12.17
+	o k3b-0.12.17 [pkg/34325]
 	o kapooka-0.3
 	o kazehakase-0.3.9
 	o kbarcode-2.0.4
@@ -613,6 +615,7 @@ Suggested package updates
 	o kmymoney2-0.8.4
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
+	o krusader-1.70.1 [pkg/34340]
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o latd-1.21
@@ -624,8 +627,8 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46 [pkg/34294]
-	o libevent-1.1b
 	o libflash-0.4.13
+	o libgcrypt-1.2.3
 	o libggi-2.2.1
 	o libggigcp-1.0.1
 	o libggimisc-2.2.1
@@ -645,6 +648,7 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
+	o libnotify-0.4.2 [pkg/34317]
 	o libntlm-0.3.10
 	o libofx-0.8.2
 	o libprelude-0.9.10.2
@@ -655,7 +659,7 @@ Suggested package updates
 	o libtorrent-0.9.3 [pkg/34291]
 	o libwpd-0.8.5
 	o licq-core-1.3.0
-	o liferea-1.0.20
+	o liferea-1.0.21 [pkg/34319]
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -680,9 +684,9 @@ Suggested package updates
 	o matchbox-1.0
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
-	o mdf2iso-0.3.0
+	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
-	o memtest86-3.2
+	o memtest86-3.2 [pkg/34328]
 	o mew-5.1
 	o mftrace-1.2.4
 	o mgetty-1.1.35
@@ -706,7 +710,7 @@ Suggested package updates
 	o mp3blaster-3.2.3
 	o mpage-2.5.4
 	o mpich-1.2.7
-	o mplayer-plugin-firefox-3.25
+	o mplayer-plugin-firefox-3.31
 	o mpop-0.8.3
 	o mrproject-0.9.1
 	o mserv-devel-0.41
@@ -720,7 +724,7 @@ Suggested package updates
 	o nap-1.5.3
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.26.1
+	o neon-0.26.1 [pkg/34310]
 	o netcdf-4.0.0a
 	o netperf-2.4.0
 	o netpipe-3.6.2
@@ -730,6 +734,7 @@ Suggested package updates
 	o ng-1.4.4
 	o nmh-1.2.1
 	o nn-6.7.2
+	o notification-daemon-0.3.5 [pkg/34318]
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a3
@@ -745,6 +750,7 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openal-0.0.8
+	o openbox-3.3
 	o opencobol-0.31
 	o openexr-1.3.0
 	o openh323-1.17.2
@@ -756,17 +762,17 @@ Suggested package updates
 	o openttd-0.4.8
 	o oregano-0.50.0
 	o oroborus-2.0.15
-	o osh-050219
+	o osh-060124 [pkg/34313]
 	o otpCalc-0.97
 	o p0f-2.0.7
 	o p11-2.10c
 	o p4-2005.1 [schmonz]
 	o p4d-2005.1 [schmonz]
 	o p5-Apache-ASP-2.59
-	o p5-Apache-AuthCookie-3.09.01
+	o p5-Apache-AuthCookie-3.10 [pkg/34336]
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-Wrapper-0.26
+	o p5-Apache-Session-Wrapper-0.31 [pkg/34339]
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-2.09
 	o p5-Authen-SASL-Cyrus-0.13
@@ -774,27 +780,41 @@ Suggested package updates
 	o p5-Business-ISBN-Data-1.10
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
+	o p5-Cache-Simple-TimedExpiry-0.26 [pkg/34326]
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Class-Loader-2.03
+	o p5-Class-Data-Inheritable-0.05 [pkg/34332]
+	o p5-Class-Factory-1.04 [pkg/34329]
+	o p5-Class-Loader-2.03 [pkg/34338]
+	o p5-Class-MethodMaker-2.08 [pkg/34327]
+	o p5-Clone-0.19 [pkg/34333]
 	o p5-Compress-Bzip2-2.09
+	o p5-Config-Tiny-2.08 [pkg/34352]
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CipherSaber-1.00
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-Data-TemporaryBag-0.08
+	o p5-Data-TemporaryBag-0.09 [pkg/34331]
 	o p5-DateTime-Set-0.25
+	o p5-Devel-Cycle-1.07 [pkg/34335]
 	o p5-Devel-SmallProf-2.00_03
+	o p5-Devel-Symdump-2.0602 [pkg/34342]
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
+	o p5-Email-Abstract-2.13 [pkg/34371]
+	o p5-Email-Simple-1.980 [pkg/34370]
+	o p5-Email-Valid-0.176 [pkg/34374]
+	o p5-Error-0.17 [pkg/34330]
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-File-DirSync-1.12
+	o p5-File-Flat-0.96 [pkg/34348]
 	o p5-File-MimeInfo-0.12
-	o p5-FileHandle-Unget-0.16.2.1
+	o p5-File-Temp-0.17 [pkg/34346]
+	o p5-FileHandle-Unget-0.16.2.1 [pkg/34351]
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
 	o p5-HTML-FillInForm-1.05
@@ -804,20 +824,28 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
+	o p5-IO-Util-1.50 [pkg/34350]
+	o p5-IPC-Run-0.80 [pkg/34349]
 	o p5-Ima-DBI-0.34
 	o p5-Lingua-EN-Inflect-1.89
+	o p5-List-MoreUtils-0.22 [pkg/34358]
 	o p5-Locale-Codes-2.07
-	o p5-Log-Agent-0.307
+	o p5-Log-Agent-0.307 [pkg/34347]
+	o p5-Log-Dispatch-2.12 [pkg/34357]
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
+	o p5-Mail-ListDetector-0.34 [pkg/34365]
 	o p5-Mail-Mbox-MessageParser-1.4005
 	o p5-Mail-Sendmail-0.79
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
-	o p5-Module-Pluggable-2.96
+	o p5-Module-CoreList-2.07 [pkg/34356]
+	o p5-Module-Install-0.64 [pkg/34362]
+	o p5-Module-Pluggable-3.10 [pkg/34355]
+	o p5-Module-ScanDeps-0.63 [pkg/34354]
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
@@ -829,7 +857,10 @@ Suggested package updates
 	o p5-Net-SNMP-5.1.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
+	o p5-PAR-Dist-0.18 [pkg/34353]
 	o p5-PV-1.5
+	o p5-Params-Validate-0.86 [pkg/34361]
+	o p5-PathTools-3.19 [pkg/34360]
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
@@ -837,23 +868,33 @@ Suggested package updates
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
+	o p5-Set-IntSpan-1.09 [pkg/34359]
 	o p5-Set-Scalar-1.20
 	o p5-String-Approx-3.25
+	o p5-Sub-Uplevel-0.13 [pkg/34364]
 	o p5-Template-Extract-0.40
+	o p5-Test-Deep-0.095 [pkg/34345]
 	o p5-Test-Harness-2.46
+	o p5-Test-Memory-Cycle-1.04 [pkg/34372]
+	o p5-Test-Pod-1.26 [pkg/34369]
+	o p5-Test-Pod-Coverage-1.08 [pkg/34368]
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2005.0824
 	o p5-Time-HiRes-1.74
 	o p5-Time-Piece-2.00.01
 	o p5-WWW-Amazon-Wishlist-1.4
+	o p5-Want-0.11 [pkg/34367]
 	o p5-X11-Protocol-0.54
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-XML-Twig-3.22
 	o p5-XML-XUpdate-LibXML-0.5.0
+	o p5-YAML-0.62 [pkg/34343]
 	o p5-ispman-1.2
+	o p5-prefork-1.01 [pkg/34366]
 	o p5-sybperl-2.18
+	o p5-version-6701 [pkg/34373]
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
@@ -924,7 +965,7 @@ Suggested package updates
 	o puf-0.93.3
 	o puzzle-5.2
 	o pv-0.9.2
-	o pwgen-0.4 [pkg/30714]
+	o pwgen-2.05 [pkg/34334]
 	o pwlib-1.9.1
 	o pxe-1.4.2
 	o py-FourSuite-1.0b1
@@ -942,7 +983,7 @@ Suggested package updates
 	o py-curl-7.15.5
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
-	o py-gobject-2.11.3
+	o py-gobject-2.11.4
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
@@ -1130,7 +1171,7 @@ Suggested package updates
 	o wcalc-2.2.2
 	o wdm-1.28
 	o webmin-1.290
-	o weechat-2.0
+	o weechat-2.0 [pkg/34312]
 	o weewm-0.01
 	o winbind-3.0.13
 	o wine-0.9.20
@@ -1138,7 +1179,7 @@ Suggested package updates
 	o wmii-2.5.2 [pkg/33285]
 	o wmii-3.1
 	o wmweather-2.4.3
-	o www6to4-1.6
+	o www6to4-1.6 [pkg/34321]
 	o wwwoffle-2.9a
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
