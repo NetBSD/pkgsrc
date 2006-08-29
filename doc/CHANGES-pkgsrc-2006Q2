@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.81 2006/08/27 11:33:49 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.82 2006/08/29 07:03:15 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -191,3 +191,7 @@ Pullup ticket 1806 - requested by salo
 security update for ImageMagick
 Pullup ticket 1809 - requested by bouyer
 fix the upload script
+Pullup ticket 1810 - requested by wiz
+build fix for ogle
+Pullup ticket 1812 - requested by tv
+security/bugfix update for sendmail
