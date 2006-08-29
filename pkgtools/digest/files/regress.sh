@@ -1,7 +1,7 @@
 #! /bin/sh
 #
 # From
-# $NetBSD: regress.sh,v 1.3 2005/03/22 10:16:15 agc Exp $
+# $NetBSD: regress.sh,v 1.4 2006/08/29 13:43:11 joerg Exp $
 
 # one can do, for example to test with openssl: 
 #  DIGESTDIR=/path/to DIGESTCMD=openssl sh regress.sh
@@ -78,6 +78,18 @@ echo $ECHO_N "Tiger - A Fast New Hash Function, by Ross Anderson and Eli Biham, 
 diff expected6 output6 || echo "*** WARNING: output differs in test 6 (tiger) ***"
 
 rm -f expected6 output6
+
+cat > expected7 << EOF
+4e2448a4c6f486bb16b6562c73b4020bf3043e3a731bce721ae1b303d97e6d4c7181eebdb6c57e277d0e34957114cbd6c797fc9d95d8b582d225292076d4eef5
+526b2394d85683e24b29acd0fd37f7d5027f61366a1407262dc2a6a345d9e240c017c1833db1e6db6a46bd444b0c69520c856e7c6e9c366d150a7da3aeb160d1
+b37cde686c51c3970a1fb22959b6e5fe4bef90a5262e63126fabaddd0d0969783e1969459078fe7fcf7fdaa9ffbf6db80963296596169274c4a236bafeb95e7e
+EOF
+echo $ECHO_N "abc$ECHO_C" | ${DIGEST} whirlpool > output7
+echo $ECHO_N "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq$ECHO_C" | ${DIGEST} whirlpool >> output7
+echo $ECHO_N "Whirlpool - The Whirlpool hashing function.$ECHO_C" | ${DIGEST} whirlpool >> output7
+diff expected7 output7 || echo "*** WARNING: output differs in test 7 (whirlpool) ***"
+
+rm -f expected7 output7
 
 
 

@@ -714,25 +714,30 @@ TIGERFinal(uint8_t *digest, tiger_context_t *tp)
 	/* nothing to do - included for compatibility with SHA* interface */
 }
 
+static void
+print_uint64(char *buf, uint64_t val)
+{
+	int i = 0;
+	static const char hexdigits[] = "0123456789abcdef";
+
+	for (i = 0; i < 8; ++i) {
+		buf[2 * i] = hexdigits[(val >> (56 - 8 * i + 4)) & 15];
+		buf[2 * i + 1] = hexdigits[(val >> (56 - 8 * i)) & 15];
+	}
+}
+
 char *
 TIGEREnd(tiger_context_t *tp, char *buf)
 {   
-	if (tp == NULL) {
-		(void) fprintf(stderr, "NULL tiger_context_t\n");
-		return NULL;
-	}
+	int i;
 
 	if (buf == NULL && (buf = malloc(41)) == NULL) {
 		return NULL;
 	}
 
-	(void) snprintf(buf, 49, "%08x%08x%08x%08x%08x%08x",
-		(uint32_t)(tp->ctx[0] >> 32),
-		(uint32_t)(tp->ctx[0]),
-		(uint32_t)(tp->ctx[1] >> 32),
-		(uint32_t)(tp->ctx[1]),
-		(uint32_t)(tp->ctx[2] >> 32),
-		(uint32_t)(tp->ctx[2]));
+	for (i = 0; i < 3; ++i)
+		print_uint64(buf + i * 16, tp->ctx[i]);
+	buf[16 * i] = '\0';
 
 	return buf;
 }
@@ -746,11 +751,6 @@ TIGERFile(char *filename, char *buf)
 	int		fd;
 	int		num;
 	int		oerrno;
-
-	if (filename == NULL) {
-		(void) fprintf(stderr, "NULL filename\n");
-		return NULL;
-	}
 
 	TIGERInit(&ctx);
 
@@ -774,12 +774,6 @@ char *
 TIGERData(const uint8_t *data, size_t len, char *buf)
 {   
 	tiger_context_t	ctx;
-
-	/* XXX: buf may be NULL ? */
-	if (data == NULL) {
-		(void) fprintf(stderr, "TIGERData: NULL string\n");
-		return NULL;
-	}
 
 	TIGERInit(&ctx);
 	TIGERUpdate(&ctx, data, len);
