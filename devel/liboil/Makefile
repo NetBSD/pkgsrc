@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/13 18:23:14 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/08/29 10:18:14 drochner Exp $
 #
 
 DISTNAME=	liboil-0.3.6
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE+=	liboil-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	liboil.pc.in
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
