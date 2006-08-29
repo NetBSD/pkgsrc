@@ -1,10 +1,32 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/24 00:09:55 ben Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/29 05:35:27 ben Exp $
 
 --- Makefile.orig	2002-05-02 08:34:52.000000000 -0700
 +++ Makefile
 @@ -1,4 +1,4 @@
 -CCOPT = -O6
-+CCOPT = -fPIC
++CCOPT = #-O6
  
  # Global XMMS directory
  PLAYER_DIR = "\"`xmms-config --input-plugin-dir`/Meta\""
+@@ -11,10 +11,10 @@ PLUGIN_DIR = "`xmms-config --input-plugi
+ all: libmetainput.so
+ 
+ install: all
+-	cp -f libmetainput.so ${PLUGIN_DIR}
++	${LIBTOOL} --mode=install cp libmetainput.la ${PLUGIN_DIR}
+ 
+-libmetainput.so: meta-input.c
+-	gcc ${CCOPT} -shared `xmms-config --cflags` `xmms-config --libs` -DPLAYER_DIR=${PLAYER_DIR} -o libmetainput.so meta-input.c
++libmetainput.so: meta-input.lo
++	${LIBTOOL} --mode=link ${CC} `xmms-config --libs` -o libmetainput.la meta-input.lo -rpath ${PREFIX}/lib -module -avoid-version
+ 	@echo
+ 	@echo ======================================
+ 	@echo "The meta-input players directory is:"
+@@ -24,5 +24,7 @@ libmetainput.so: meta-input.c
+ 	@echo "recompile...)"
+ 	@echo ======================================
+ 	@echo
++meta-input.lo:	meta-input.c
++	${LIBTOOL} --mode=compile ${CC} ${CCOPT} `xmms-config --cflags` -DPLAYER_DIR=${PLAYER_DIR} -c meta-input.c
+ clean:
+ 	rm -f *.o libmetainput.so
