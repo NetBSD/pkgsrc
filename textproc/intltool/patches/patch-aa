@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.6 2006/08/29 14:03:39 joerg Exp $
+
+--- intltool-merge.in.in.orig	2006-08-28 10:58:43.000000000 +0200
++++ intltool-merge.in.in
+@@ -415,7 +415,7 @@ sub create_translation_database
+         {
+ 	    $nextfuzzy = 1 if /^#, fuzzy/;
+        
+-	    if (/^msgid "((\\.|[^\\])*)"/ ) 
++	    if (/^msgid "((\\.|[^\\]+)*)"/ ) 
+             {
+ 		$translations{$lang, $msgid} = $msgstr if $inmsgstr && $msgid && $msgstr;
+ 		$msgid = "";
+@@ -431,14 +431,14 @@ sub create_translation_database
+ 		$nextfuzzy = 0;
+ 	    }
+ 
+-	    if (/^msgstr "((\\.|[^\\])*)"/) 
++	    if (/^msgstr "((\\.|[^\\]+)*)"/) 
+             {
+ 	        $msgstr = unescape_po_string($1);
+ 		$inmsgstr = 1;
+ 		$inmsgid = 0;
+ 	    }
+ 
+-	    if (/^"((\\.|[^\\])*)"/) 
++	    if (/^"((\\.|[^\\]+)*)"/) 
+             {
+ 	        $msgid .= unescape_po_string($1) if $inmsgid;
+ 	        $msgstr .= unescape_po_string($1) if $inmsgstr;
