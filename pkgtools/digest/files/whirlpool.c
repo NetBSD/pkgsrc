@@ -1612,13 +1612,22 @@ whirlpool_finalize(unsigned char *result, whirlpool_context_t *structpointer)
 
 }
 
+static void
+print_uint64(char *buf, uint64_t val)
+{
+	int i = 0;
+	static const char hexdigits[] = "0123456789abcdef";
+
+	for (i = 0; i < 8; ++i) {
+		buf[2 * i] = hexdigits[(val >> (56 - 8 * i + 4)) & 15];
+		buf[2 * i + 1] = hexdigits[(val >> (56 - 8 * i)) & 15];
+	}
+}
+
 char *
 whirlpool_end(whirlpool_context_t *tp, char *buf)
 {   
-	if (tp == NULL) {
-		(void) fprintf(stderr, "NULL whirlpool_context_t\n");
-		return NULL;
-	}
+	int i;
 
 	if (buf == NULL && (buf = malloc((2 * WHIRLPOOL_DIGEST_BYTES) + 1)) == NULL) {
 		return NULL;
@@ -1626,24 +1635,9 @@ whirlpool_end(whirlpool_context_t *tp, char *buf)
 
 	whirlpool_finalize(buf, tp);
 
-	(void) snprintf(buf, (2 * WHIRLPOOL_DIGEST_BYTES) + 1,
-		"%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x",
-		(uint32_t)(tp->hash[0] >> 32),
-		(uint32_t)(tp->hash[0]),
-		(uint32_t)(tp->hash[1] >> 32),
-		(uint32_t)(tp->hash[1]),
-		(uint32_t)(tp->hash[2] >> 32),
-		(uint32_t)(tp->hash[2]),
-		(uint32_t)(tp->hash[3] >> 32),
-		(uint32_t)(tp->hash[3]),
-		(uint32_t)(tp->hash[4] >> 32),
-		(uint32_t)(tp->hash[4]),
-		(uint32_t)(tp->hash[5] >> 32),
-		(uint32_t)(tp->hash[5]),
-		(uint32_t)(tp->hash[6] >> 32),
-		(uint32_t)(tp->hash[6]),
-		(uint32_t)(tp->hash[7] >> 32),
-		(uint32_t)(tp->hash[7]));
+	for (i = 0; i < 8; ++i)
+		print_uint64(buf + i * 16, tp->hash[i]);
+	buf[16 * i] = '\0';
 
 	return buf;
 }
@@ -1667,11 +1661,6 @@ whirlpool_file(char *filename, char *buf)
         int			fd;
         int			num;
         int			oerrno;
-
-        if (filename == NULL) {
-                (void) fprintf(stderr, "NULL filename\n");
-                return NULL;
-        }
         
         whirlpool_init(&ctx);
         
