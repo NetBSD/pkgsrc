@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1153 2006/08/29 14:05:42 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.1154 2006/08/29 14:11:23 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4118,3 +4118,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/digest to 20060826 [joerg 2006-08-29]
 	Updated devel/libevent to 1.1b [tv 2006-08-29]
 	Updated textproc/intltool to 0.35.0nb1 [joerg 2006-08-29]
+	Updated audio/xmms-meta-timidity to 0.2nb3 [ben 2006-08-29]
