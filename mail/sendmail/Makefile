@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2006/06/14 18:53:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.90.2.1 2006/08/29 06:53:23 ghen Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	3
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -16,9 +15,12 @@ PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR:Q}
 RCD_SCRIPTS=	sendmail smmsp
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-build
-SUBST_FILES.paths=	../mailer.conf include/sm/conf.h smrsh/smrsh.8
-SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	../mailer.conf include/sm/conf.h smrsh/smrsh.8 cf/cf/Makefile
+SUBST_SED.paths+=	-e "s|@@BINGRP@@|${BINGRP}|g"
+SUBST_SED.paths+=	-e "s|@@BINOWN@@|${BINOWN}|g"
+SUBST_SED.paths+=	-e "s|@@INSTALL@@|${INSTALL}|g"
+SUBST_SED.paths+=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_SED.paths+=	-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
