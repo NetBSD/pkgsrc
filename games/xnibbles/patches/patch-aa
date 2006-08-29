@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2004/03/09 23:06:18 snj Exp $
+$NetBSD: patch-aa,v 1.5 2006/08/29 20:03:24 rillig Exp $
 
 --- Makefile.orig	1998-03-05 14:06:19.000000000 -0800
 +++ Makefile	2004-03-09 15:02:02.000000000 -0800
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.4 2004/03/09 23:06:18 snj Exp $
 +	$(BSD_INSTALL_DATA) sounds/*.ub $(DATADIR)/sounds
 +	$(BSD_INSTALL_PROGRAM) xnibbles $(PREFIX)/bin
 +	$(BSD_INSTALL_PROGRAM) xnleditor/xnleditor $(PREFIX)/bin
-+	$(BSD_INSTALL_MAN) xnibbles.6 $(PREFIX)/man/man6
++	$(BSD_INSTALL_MAN) xnibbles.6 $(PREFIX)/$(PKGMANDIR)/man6
  	./make-LEVELS $(DATADIR) OOGA
  
  bodyPart.o:	common.h bodyPart.h
