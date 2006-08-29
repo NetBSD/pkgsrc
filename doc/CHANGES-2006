@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1152 2006/08/29 14:02:22 tv Exp $
+$NetBSD: CHANGES-2006,v 1.1153 2006/08/29 14:05:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4117,3 +4117,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/phpmyadmin to 2.8.2.4 [tron 2006-08-29]
 	Updated pkgtools/digest to 20060826 [joerg 2006-08-29]
 	Updated devel/libevent to 1.1b [tv 2006-08-29]
+	Updated textproc/intltool to 0.35.0nb1 [joerg 2006-08-29]
