@@ -6,7 +6,7 @@ play)
 	then
 		TIMIDITY_CFG=""
 	else
-		TIMIDITY_CFG="-L XXXPREFIXXXX/share/eawpatches -c timidity.cfg"
+		TIMIDITY_CFG="-L XXXPREFIXXXX/share/freepats -c timidity.cfg"
 	fi
 	XXXPREFIXXXX/bin/timidity $TIMIDITY_CFG -U -idq -Or -o - -s 44100 "$2"
 	exit 0
