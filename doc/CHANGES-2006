@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1150 2006/08/29 09:01:57 tron Exp $
+$NetBSD: CHANGES-2006,v 1.1151 2006/08/29 13:45:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4115,3 +4115,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/ipv6calc to 0.61.0 [hubertf 2006-08-29]
 	Updated misc/udfclient to 0.5.3 [reinoud 2006-08-29]
 	Updated databases/phpmyadmin to 2.8.2.4 [tron 2006-08-29]
+	Updated pkgtools/digest to 20060826 [joerg 2006-08-29]
