@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.19 2006/07/26 20:00:27 jlam Exp $
+$NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
 
 --- src/osdep/unix/Makefile.orig	2005-04-30 16:51:13.000000000 -0400
 +++ src/osdep/unix/Makefile
@@ -67,7 +67,7 @@ $NetBSD: patch-ab,v 1.19 2006/07/26 20:00:27 jlam Exp $
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
 -	echo "$(ARRC) $(ARCHIVE) $(BINARIES);$(RANLIB) $(ARCHIVE)" > ARCHIVE
-+	echo "$(LTLINK) $(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info $(CCLIENT_MAJOR):$(CCLIENT_MINOR) `$(CAT) LDFLAGS`" > ARCHIVE
++	echo "$(LTLINK) $(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info $(CCLIENT_MAJOR):$(CCLIENT_MINOR) \`$(CAT) LDFLAGS\`" > ARCHIVE
  	echo $(OS) > OSTYPE
  	./drivers $(EXTRADRIVERS) $(DEFAULTDRIVERS) dummy
  	./mkauths $(EXTRAAUTHENTICATORS) $(DEFAULTAUTHENTICATORS)
