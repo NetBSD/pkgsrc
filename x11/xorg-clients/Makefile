@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/06/11 14:51:11 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/08/29 15:06:59 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
@@ -69,4 +69,5 @@ post-configure:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
