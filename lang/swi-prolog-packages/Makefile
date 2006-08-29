@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/08/02 15:15:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/29 23:58:24 markd Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-packages-${SWIPLVERS}
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
@@ -58,6 +59,7 @@ teardownx:
 
 
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
