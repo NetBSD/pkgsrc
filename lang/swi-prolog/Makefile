@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/08/02 15:15:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.39 2006/08/30 00:00:30 markd Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -8,8 +8,8 @@ CATEGORIES=		lang
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler suite
 
-DEPENDS+=		swi-prolog-lite-${SWIPLVERS}:../../lang/swi-prolog-lite
-DEPENDS+=		swi-prolog-packages-${SWIPLVERS}:../../lang/swi-prolog-packages
+DEPENDS+=		swi-prolog-lite-${SWIPLVERS}{,nb[0-9]*}:../../lang/swi-prolog-lite
+DEPENDS+=		swi-prolog-packages-${SWIPLVERS}{,nb[0-9]*}:../../lang/swi-prolog-packages
 
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
