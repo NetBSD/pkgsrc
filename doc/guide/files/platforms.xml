@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.33 2006/08/29 00:29:52 ben Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.34 2006/08/30 00:54:11 ben Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -285,11 +285,11 @@ file and inspect the contents before extracting it.
 &rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
 
 	<note>
-	  <para>ufsdiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.</para>
+	  <para>ufsdiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  It will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8).</para>
 	</note>
 
-	<para>Allow suid:</para>
-	<screen>&rprompt; <userinput>sudo mount -u -o suid /Volumes/NetBSD</userinput></screen>
+	<para>Allow suid and synchronous writes:</para>
+	<screen>&rprompt; <userinput>sudo mount -u -o suid,sync /Volumes/NetBSD</userinput></screen>
       </sect3>
 
       <sect3 id="platform.osx-ufs">
