@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5389 2006/08/30 00:21:07 markd Exp $
+$NetBSD: TODO,v 1.5390 2006/08/30 18:42:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -284,7 +284,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-4.12.24
+	o abcm2ps-4.12.25
 	o abcmidi-20060805
 	o acpi-iasl-20040715
 	o adns-1.3
@@ -356,7 +356,7 @@ Suggested package updates
 	o boolean-6.8
 	o boson-0.12
 	o browser-bookmarks-menu-0.4
-	o bsdiff-4.3
+	o bsdiff-4.3 [pkg/34429]
 	o btpd-0.11 [pkg/34068]
 	o bugzilla-2.22
 	o bwidget-1.7.0
@@ -402,7 +402,7 @@ Suggested package updates
 	o cygwin_lib-1.5.21.1
 	o cyrus-sasl-2.1.22
 	o dap-2.1.5
-	o dar-2.3.1
+	o dar-2.3.1 [pkg/34430]
 	o darkstat-3.0.540 [pkg/34158]
 	o dbxml-2.1.8
 	o dc_gui2-0.80
@@ -417,13 +417,13 @@ Suggested package updates
 	o devtodo-0.1.19
 	o diffstat-1.43
 	o dirac-0.6.0
-	o dirdiff-2.1
+	o dirdiff-2.1 [pkg/34432]
 	o dnetc-2.9012 [pkg/34247]
-	o dnsmasq-2.33
-	o dnstop-20050405
+	o dnsmasq-2.33 [pkg/34428]
+	o dnstop-20060517 [pkg/34425]
 	o dnstracer-1.8
 	o drscheme-352
-	o dvdauthor-0.6.11
+	o dvdauthor-0.6.11 [pkg/34431]
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
@@ -583,9 +583,9 @@ Suggested package updates
 	o ipa-2.0 [pkg/32398]
 	o ipa-2.0.1
 	o ipcalc-0.41
-	o ipcheck-0.219
+	o ipcheck-0.233 [pkg/34427]
 	o ipsec-tools-0.6.5
-	o ircservices-5.0.58
+	o ircservices-5.0.58 [pkg/34434]
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o iselect-1.3.0
@@ -607,7 +607,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o k3b-0.12.17 [pkg/34325]
 	o kapooka-0.3
-	o kazehakase-0.3.9
+	o kazehakase-0.4.0
 	o kbarcode-2.0.4
 	o kdrill-6.4
 	o kinput2-3.1
@@ -700,7 +700,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
-	o mono-1.1.16
+	o mono-1.1.17
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
@@ -708,6 +708,7 @@ Suggested package updates
 	o moz-flash-0.4.13
 	o mp3blaster-3.2.3
 	o mpage-2.5.4
+	o mpg123-0.60
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.31
 	o mpop-0.8.3
@@ -773,10 +774,10 @@ Suggested package updates
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.31 [pkg/34339]
 	o p5-Audio-Wav-0.04
-	o p5-Authen-SASL-2.09
+	o p5-Authen-SASL-2.10 [pkg/34396]
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-Business-ISBN-1.82
-	o p5-Business-ISBN-Data-1.10
+	o p5-Business-ISBN-1.82 [pkg/34388]
+	o p5-Business-ISBN-Data-1.11 [pkg/34387]
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
 	o p5-Cache-Simple-TimedExpiry-0.26 [pkg/34326]
@@ -788,12 +789,18 @@ Suggested package updates
 	o p5-Clone-0.19 [pkg/34333]
 	o p5-Compress-Bzip2-2.09
 	o p5-Config-Tiny-2.08 [pkg/34352]
-	o p5-Convert-ASN1-0.19
-	o p5-Convert-BER-1.3101
+	o p5-Convert-ASN1-0.20 [pkg/34400]
+	o p5-Convert-BER-1.3101 [pkg/34406]
+	o p5-Crypt-Blowfish-2.10 [pkg/34394]
+	o p5-Crypt-CAST5_PP-1.04 [pkg/34393]
+	o p5-Crypt-CBC-2.19 [pkg/34398]
 	o p5-Crypt-CipherSaber-1.00
+	o p5-Crypt-DSA-0.14 [pkg/34409]
+	o p5-Crypt-IDEA-1.08 [pkg/34391]
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
 	o p5-DBIx-ContextualFetch-1.03
+	o p5-Data-FormValidator-4.40 [pkg/34405]
 	o p5-Data-TemporaryBag-0.09 [pkg/34331]
 	o p5-DateTime-Set-0.25
 	o p5-Devel-Cycle-1.07 [pkg/34335]
@@ -802,15 +809,19 @@ Suggested package updates
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
+	o p5-Digest-CRC-0.10 [pkg/34408]
+	o p5-Digest-SHA-5.43 [pkg/34407]
 	o p5-Email-Abstract-2.13 [pkg/34371]
 	o p5-Email-Simple-1.980 [pkg/34370]
 	o p5-Email-Valid-0.176 [pkg/34374]
+	o p5-Encode-2.18 [pkg/34419]
 	o p5-Error-0.17 [pkg/34330]
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-File-DirSync-1.12
 	o p5-File-Flat-0.96 [pkg/34348]
+	o p5-File-MMagic-1.27 [pkg/34386]
 	o p5-File-MimeInfo-0.12
 	o p5-File-Temp-0.17 [pkg/34346]
 	o p5-FileHandle-Unget-0.16.2.1 [pkg/34351]
@@ -823,12 +834,16 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
+	o p5-IO-Socket-SSL-0.999 [pkg/34392]
 	o p5-IO-Util-1.50 [pkg/34350]
 	o p5-IPC-Run-0.80 [pkg/34349]
 	o p5-Ima-DBI-0.34
-	o p5-Lingua-EN-Inflect-1.89
+	o p5-Lingua-EN-Inflect-1.89 [pkg/34404]
+	o p5-Lingua-Stem-Snowball-0.941 [pkg/34402]
 	o p5-List-MoreUtils-0.22 [pkg/34358]
 	o p5-Locale-Codes-2.07
+	o p5-Locale-Maketext-Lexicon-0.62 [pkg/34385]
+	o p5-Locale-Maketext-Simple-0.17 [pkg/34384]
 	o p5-Log-Agent-0.307 [pkg/34347]
 	o p5-Log-Dispatch-2.12 [pkg/34357]
 	o p5-MARC-1.38
@@ -836,7 +851,7 @@ Suggested package updates
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-ListDetector-0.34 [pkg/34365]
-	o p5-Mail-Mbox-MessageParser-1.4005
+	o p5-Mail-Mbox-MessageParser-1.4005 [pkg/34390]
 	o p5-Mail-Sendmail-0.79
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
@@ -848,28 +863,36 @@ Suggested package updates
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
-	o p5-Net-Daemon-0.38
+	o p5-Net-DNS-0.58 [pkg/34383]
+	o p5-Net-Daemon-0.39 [pkg/34395]
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
+	o p5-Net-IP-1.25 [pkg/34397]
 	o p5-Net-Jabber-2.0
 	o p5-Net-Netmask-1.9012 [pkg/34298]
 	o p5-Net-SNMP-5.1.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
+	o p5-Number-Format-1.51
 	o p5-PAR-Dist-0.18 [pkg/34353]
 	o p5-PV-1.5
 	o p5-Params-Validate-0.86 [pkg/34361]
 	o p5-PathTools-3.19 [pkg/34360]
 	o p5-PerlIO-via-symlink-0.03
+	o p5-Pod-Coverage-0.18 [pkg/34421]
 	o p5-Pod-POM-0.15
+	o p5-Pod-Simple-3.04 [pkg/34418]
 	o p5-PostScript-MailLabels-2.21
+	o p5-SNMP_Session-1.08 [pkg/34382]
 	o p5-SVN-Web-0.45
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-IntSpan-1.09 [pkg/34359]
 	o p5-Set-Scalar-1.20
-	o p5-String-Approx-3.25
+	o p5-Spreadsheet-WriteExcel-2.17 [pkg/34389]
+	o p5-String-Approx-3.26 [pkg/34414]
+	o p5-String-ShellQuote-1.03 [pkg/34415]
 	o p5-Sub-Uplevel-0.13 [pkg/34364]
 	o p5-Template-Extract-0.40
 	o p5-Test-Deep-0.095 [pkg/34345]
@@ -878,16 +901,24 @@ Suggested package updates
 	o p5-Test-Pod-1.26 [pkg/34369]
 	o p5-Test-Pod-Coverage-1.08 [pkg/34368]
 	o p5-Text-BibTeX-0.34
+	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
+	o p5-Text-Glob-0.07 [pkg/34416]
+	o p5-Text-Shellwords-1.08 [pkg/34417]
 	o p5-Text-Tabs+Wrap-2005.0824
 	o p5-Time-HiRes-1.74
 	o p5-Time-Piece-2.00.01
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-Want-0.11 [pkg/34367]
 	o p5-X11-Protocol-0.54
+	o p5-XML-Atom-0.23 [pkg/34420]
+	o p5-XML-Atom-SimpleFeed-0.8 [pkg/34399]
+	o p5-XML-Atom-Stream-0.09 [pkg/34410]
+	o p5-XML-LibXML-1.60 [pkg/34411]
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
-	o p5-XML-Twig-3.22
+	o p5-XML-Twig-3.26 [pkg/34412]
+	o p5-XML-Writer-0.600 [pkg/34413]
 	o p5-XML-XUpdate-LibXML-0.5.0
 	o p5-YAML-0.62 [pkg/34343]
 	o p5-ispman-1.2
@@ -948,6 +979,7 @@ Suggested package updates
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
+	o postfix-2.3.3
 	o postgresql-8.1.4
 	o postgresql_autodoc-1.25
 	o postgrey-1.27
@@ -989,7 +1021,7 @@ Suggested package updates
 	o py-pexpect-0.99999b
 	o py-prewikka-0.9.7.1
 	o py-psyco-1.5.1
-	o py-psycopg2-2.0.3
+	o py-psycopg2-2.0.4 [pkg/34433]
 	o py-pyrex-0.9.3.1
 	o py-qt3-base-3.16
 	o py-qt3-modules-3.16
@@ -1141,7 +1173,7 @@ Suggested package updates
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o ttyrec-1.0.6
+	o ttyrec-1.0.8 [pkg/34426]
 	o tuxpaint-0.9.15
 	o tuxpaint-config-0.0.6
 	o tuxpaint-stamps-20051125
