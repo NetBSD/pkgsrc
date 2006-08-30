@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/21 16:01:44 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/30 17:07:26 drochner Exp $
 #
 
 .include "../../print/evince/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=		${DISTNAME:S/evince/evince-nautilus/}
 
 COMMENT=		File properties plugin for evince files
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
-PKG_SUPPORTED_OPTIONS=	dvi
+PKG_SUPPORTED_OPTIONS=	dvi djvu
 PKG_SUGGESTED_OPTIONS=	# none
 
 .include "../../mk/bsd.options.mk"
@@ -20,6 +20,11 @@ BUILDLINK_API_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb13
 .include "../../print/teTeX3-bin/buildlink3.mk"
 .else
 #BUILD_DIRS=		pdf backend lib properties
+.endif
+
+.if !empty(PKG_OPTIONS:Mdjvu)
+CONFIGURE_ARGS+=	--enable-djvu
+.include	"../../graphics/djvulibre/buildlink3.mk"
 .endif
 
 INSTALL_DIRS=		properties
