@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/15 10:10:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/08/30 14:55:56 adam Exp $
 share/GNUstep/System/Applications/Gorm.app/Gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/0Menus
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuAttributesInspector.gorm/data.classes
@@ -260,6 +260,7 @@ share/GNUstep/System/Library/Headers/GormCore/GormControlEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormCustomClassInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormCustomView.h
 share/GNUstep/System/Library/Headers/GormCore/GormDocument.h
+share/GNUstep/System/Library/Headers/GormCore/GormDocumentController.h
 share/GNUstep/System/Library/Headers/GormCore/GormFilePrefsManager.h
 share/GNUstep/System/Library/Headers/GormCore/GormFilesOwner.h
 share/GNUstep/System/Library/Headers/GormCore/GormFontViewController.h
@@ -297,6 +298,8 @@ share/GNUstep/System/Library/Headers/GormCore/GormViewWindow.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewWithContentViewEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewWithSubviewsEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormWindowEditor.h
+share/GNUstep/System/Library/Headers/GormCore/GormWrapperBuilder.h
+share/GNUstep/System/Library/Headers/GormCore/GormWrapperLoader.h
 share/GNUstep/System/Library/Headers/GormCore/NSCell+GormAdditions.h
 share/GNUstep/System/Library/Headers/GormCore/NSColorWell+GormExtensions.h
 share/GNUstep/System/Library/Headers/GormCore/NSFontManager+GormExtensions.h
