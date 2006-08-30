@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/05/15 11:14:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/08/30 00:15:29 markd Exp $
 bin/kile
 share/applications/kde/kile.desktop
 share/doc/kde/HTML/da/kile/common
@@ -170,6 +170,7 @@ share/kde/apps/kile/complete/tex/color.cwl
 share/kde/apps/kile/complete/tex/enumerate.cwl
 share/kde/apps/kile/complete/tex/fancybox.cwl
 share/kde/apps/kile/complete/tex/fancyhdr.cwl
+share/kde/apps/kile/complete/tex/import.cwl
 share/kde/apps/kile/complete/tex/latex-209.cwl
 share/kde/apps/kile/complete/tex/latex-dev.cwl
 share/kde/apps/kile/complete/tex/latex-document.cwl
@@ -203,6 +204,7 @@ share/kde/apps/kile/complete/tex/subfig.cwl
 share/kde/apps/kile/complete/tex/supertabular.cwl
 share/kde/apps/kile/complete/tex/tabularx.cwl
 share/kde/apps/kile/complete/tex/tex.cwl
+share/kde/apps/kile/complete/tex/textcomp.cwl
 share/kde/apps/kile/complete/tex/varioref.cwl
 share/kde/apps/kile/complete/tex/xtab.cwl
 share/kde/apps/kile/docpartui.rc
@@ -1036,6 +1038,7 @@ share/locale/sr@Latn/LC_MESSAGES/kile.mo
 share/locale/sv/LC_MESSAGES/kile.mo
 share/locale/ta/LC_MESSAGES/kile.mo
 share/locale/tr/LC_MESSAGES/kile.mo
+share/locale/uk/LC_MESSAGES/kile.mo
 share/locale/zh_CN/LC_MESSAGES/kile.mo
 @comment in kde: @dirrm share/kde/mimelnk/text
 @comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
