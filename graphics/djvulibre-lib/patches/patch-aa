@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/08/30 17:03:28 drochner Exp $
+
+--- tools/Makefile.in.orig	2005-08-23 18:49:23.000000000 +0200
++++ tools/Makefile.in
+@@ -47,7 +47,7 @@ TIFF_CFLAGS=@TIFF_CFLAGS@
+ THREAD_LIBS = @THREAD_LIBS@
+ THREAD_CFLAGS = @THREAD_CFLAGS@
+ 
+-LIBDJVU = ${top_builddir}/libdjvu/libdjvulibre.la
++LIBDJVU = ${prefix}/lib/libdjvulibre.la
+ 
+ INCS = -I${top_builddir} -I${top_srcdir} -I${top_srcdir}/libdjvu -I${srcdir}
+ FLAGS = ${DEFS} ${INCS} ${OPTS} ${JPEG_CFLAGS} ${TIFF_CFLAGS} ${THREAD_CFLAGS}
+@@ -81,7 +81,7 @@ install-bin: ${PROGRAMS} FORCE
+ install-scripts: FORCE
+ 	${INSTALL} -d ${DESTDIR}${bindir}
+ 	for n in ${SCRIPTS} ; do \
+-	  ${INSTALL_PROGRAM} -m 0755 ${srcdir}/$$n ${DESTDIR}${bindir} \
++	  ${INSTALL_SCRIPT} -m 0755 ${srcdir}/$$n ${DESTDIR}${bindir} \
+ 	  || exit ; done
+ 
+ install-man: FORCE
