@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/07/28 04:54:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/08/30 14:55:28 adam Exp $
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/GSLPR
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/stamp.make
@@ -42,11 +42,14 @@ share/GNUstep/System/Library/Headers/AppKit/GSHbox.h
 share/GNUstep/System/Library/Headers/AppKit/GSHelpManagerPanel.h
 share/GNUstep/System/Library/Headers/AppKit/GSHorizontalTypesetter.h
 share/GNUstep/System/Library/Headers/AppKit/GSInfoPanel.h
+share/GNUstep/System/Library/Headers/AppKit/GSInstantiator.h
 share/GNUstep/System/Library/Headers/AppKit/GSLayoutManager.h
 share/GNUstep/System/Library/Headers/AppKit/GSLayoutManager_internal.h
 share/GNUstep/System/Library/Headers/AppKit/GSMemoryPanel.h
 share/GNUstep/System/Library/Headers/AppKit/GSMethodTable.h
+share/GNUstep/System/Library/Headers/AppKit/GSModelLoaderFactory.h
 share/GNUstep/System/Library/Headers/AppKit/GSNibCompatibility.h
+share/GNUstep/System/Library/Headers/AppKit/GSNibContainer.h
 share/GNUstep/System/Library/Headers/AppKit/GSNibTemplates.h
 share/GNUstep/System/Library/Headers/AppKit/GSPDFPrintOperation.h
 share/GNUstep/System/Library/Headers/AppKit/GSPasteboardServer.h
@@ -152,6 +155,8 @@ share/GNUstep/System/Library/Headers/AppKit/NSSavePanel.h
 share/GNUstep/System/Library/Headers/AppKit/NSScreen.h
 share/GNUstep/System/Library/Headers/AppKit/NSScrollView.h
 share/GNUstep/System/Library/Headers/AppKit/NSScroller.h
+share/GNUstep/System/Library/Headers/AppKit/NSSearchField.h
+share/GNUstep/System/Library/Headers/AppKit/NSSearchFieldCell.h
 share/GNUstep/System/Library/Headers/AppKit/NSSecureTextField.h
 share/GNUstep/System/Library/Headers/AppKit/NSSelection.h
 share/GNUstep/System/Library/Headers/AppKit/NSSlider.h
@@ -199,11 +204,14 @@ share/GNUstep/System/Library/Headers/GNUstepGUI/GSHbox.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSHelpManagerPanel.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSHorizontalTypesetter.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSInfoPanel.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSInstantiator.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSLayoutManager.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSLayoutManager_internal.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSMemoryPanel.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSMethodTable.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSModelLoaderFactory.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSNibCompatibility.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSNibContainer.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSNibTemplates.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSPDFPrintOperation.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSPasteboardServer.h
@@ -234,11 +242,14 @@ share/GNUstep/System/Library/Headers/gnustep/gui/GSHbox.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSHelpManagerPanel.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSHorizontalTypesetter.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSInfoPanel.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSInstantiator.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSLayoutManager.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSLayoutManager_internal.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSMemoryPanel.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSMethodTable.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSModelLoaderFactory.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSNibCompatibility.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSNibContainer.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSNibTemplates.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSPDFPrintOperation.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSPasteboardServer.h
@@ -359,8 +370,11 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSPri
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpellPanel.gorm/data.classes
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpellPanel.gorm/objects.gorm
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Esperanto.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/German.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Info-gnustep.plist
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Italian.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Lojban.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-gui.so
 share/GNUstep/System/Library/Libraries/libgnustep-gui.so.${PKGVERSION}
 share/GNUstep/System/Library/Makefiles/Additional/gui.make
@@ -381,7 +395,10 @@ share/GNUstep/System/Tools/set_show_service
 @dirrm share/GNUstep/System/Library/PostScript/PPD
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/PostScript
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Makefiles/Additional
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Lojban.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Italian.lproj
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/German.lproj
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Esperanto.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpellPanel.gorm
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSPrintPanel.gorm
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSPageLayout.gorm
