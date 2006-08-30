@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5388 2006/08/29 18:07:09 wiz Exp $
+$NetBSD: TODO,v 1.5389 2006/08/30 00:21:07 markd Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,6 @@ Suggested package updates
 	o kmymoney2-0.8.4
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
-	o krusader-1.70.1 [pkg/34340]
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o latd-1.21
