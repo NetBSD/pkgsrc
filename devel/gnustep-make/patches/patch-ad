@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2006/01/17 07:35:55 adam Exp $
+$NetBSD: patch-ad,v 1.5 2006/08/30 14:53:28 adam Exp $
 
---- configure.orig	2005-12-20 17:39:33.000000000 +0100
+--- configure.orig	2006-07-29 16:52:03.000000000 +0200
 +++ configure
-@@ -5113,7 +5113,7 @@ echo $ECHO_N "checking if the compiler s
+@@ -6084,7 +6084,7 @@ echo $ECHO_N "checking if the compiler s
  
  # What we want to do: set AUTO_DEPENDENCIES to yes if gcc => 3.x
  
 -if test ! ${GCC} = "yes" ; then
 +if test "X${GCC}" != "Xyes" ; then
    AUTO_DEPENDENCIES=""
-   echo "$as_me:$LINENO: result: no: it's not gcc" >&5
- echo "${ECHO_T}no: it's not gcc" >&6
+   { echo "$as_me:$LINENO: result: no: it's not gcc" >&5
+ echo "${ECHO_T}no: it's not gcc" >&6; }
