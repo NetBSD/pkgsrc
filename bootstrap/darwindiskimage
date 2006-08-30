@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: darwindiskimage,v 1.1 2006/08/30 04:29:53 schmonz Exp $
+# $NetBSD: darwindiskimage,v 1.2 2006/08/30 04:36:10 schmonz Exp $
 
 _getdevice_and_halfway_mount()
 {
@@ -19,8 +19,17 @@ _normalize_filename()
 
 dmg_create()
 {
-	local file mountedname megabytes device
+	local fstype fs osmajor file mountedname megabytes device
 	[ $# -eq 2 ] || die 1 "Usage: $0 create <file> <megabytes>"
+
+	# Use case-sensitive HFS+ where available (Darwin >= 7)
+	fstype='Apple_UFS'
+	fs='UFS'
+	osmajor=`uname -r | awk 'BEGIN {FS="."} {print $1}'`
+	if [ ${osmajor} -ge 7 ]; then
+		fstype='Apple_HFSX'
+		fs='HFSX'
+	fi
 
 	file="`_normalize_filename \"$1\"`"
 	mountedname="`basename \"${file}\" .dmg`"
@@ -28,19 +37,13 @@ dmg_create()
 
 	# create
 	hdiutil create -quiet "${file}" -megabytes ${megabytes} \
-		-partitionType Apple_UFS -layout SPUD
-
-	# format
-	device=`_getdevice_and_halfway_mount "${file}"`
-	newfs ${device}
-	hdiutil eject -quiet "${device}"
+		-partitionType ${fstype} -layout SPUD -fs ${fs}
 
 	# rename
+	device=`_getdevice_and_halfway_mount "${file}"`
 	hdiutil mount "${file}"
 	disktool -n "${device}" "${mountedname}"
 	hdiutil eject -quiet "${device}"
-	# mountpoint="`hdiutil mount -verbose '${file}' | grep -A 1 '<key>mount-point</key>' | grep -v '<key>mount-point</key>' | sed -e 's|<string>||' -e 's|</string>||' | awk '{print $1}'`"
-	# mount | grep '^/dev/disk1' | awk '{print $3}' | sed -e 's|^/Volumes/||'
 }
 
 dmg_mount()
