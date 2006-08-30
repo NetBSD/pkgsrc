@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.35 2006/08/30 04:18:57 jnemeth Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.36 2006/08/30 04:30:53 schmonz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -280,12 +280,12 @@ file and inspect the contents before extracting it.
 	<para>Create the disk image:</para>
 
 	<screen>&rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
-&rprompt; <userinput>./ufsdiskimage create ~/Documents/NetBSD 512</userinput> # megabytes - season to taste
-&rprompt; <userinput>./ufsdiskimage mount ~/Documents/NetBSD</userinput>
+&rprompt; <userinput>./darwindiskimage create ~/Documents/NetBSD 512</userinput> # megabytes - season to taste
+&rprompt; <userinput>./darwindiskimage mount ~/Documents/NetBSD</userinput>
 &rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
 
 	<note>
-	  <para>ufsdiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  It will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.</para>
+	  <para>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  It will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.</para>
 	</note>
 
 	<para>Allow suid and synchronous writes:</para>
