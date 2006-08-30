@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1154 2006/08/29 14:11:23 ben Exp $
+$NetBSD: CHANGES-2006,v 1.1155 2006/08/30 00:21:07 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4119,3 +4119,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libevent to 1.1b [tv 2006-08-29]
 	Updated textproc/intltool to 0.35.0nb1 [joerg 2006-08-29]
 	Updated audio/xmms-meta-timidity to 0.2nb3 [ben 2006-08-29]
+	Updated lang/swi-prolog-packages to 5.6.17nb1 [markd 2006-08-29]
+	Updated sysutils/krusader to 1.70.1 [markd 2006-08-29]
+	Updated editors/kile to 1.9.2 [markd 2006-08-29]
