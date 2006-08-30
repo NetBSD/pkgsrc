@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2006/04/03 18:16:12 adam Exp $
+$NetBSD: patch-ae,v 1.5 2006/08/30 14:53:28 adam Exp $
 
---- GNUmakefile.in.orig	2006-03-14 05:42:20.000000000 +0100
+--- GNUmakefile.in.orig	2006-07-05 19:35:10.000000000 +0200
 +++ GNUmakefile.in
 @@ -115,7 +115,7 @@ all: generated-files which_lib$(EXEEXT)
  # used. (I mean: 'cd core/make; cd ..; mkdir make-build; cd
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.4 2006/04/03 18:16:12 adam Exp $
  
  ifeq ($(messages),yes)
    EC = 
-@@ -143,9 +143,9 @@ install: all @GNUSTEP_MOVE_OBSOLETE@
+@@ -144,9 +144,9 @@ install: all @GNUSTEP_MOVE_OBSOLETE@
  		$(makedir)/Instance \
  		$(makedir)/Instance/Shared \
  		$(makedir)/Instance/Documentation)

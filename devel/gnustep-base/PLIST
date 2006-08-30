@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/03 18:20:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/08/30 14:55:00 adam Exp $
 bin/openapp
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
@@ -34,6 +34,8 @@ share/GNUstep/System/Library/Headers/Foundation/NSCalendarDate.h
 share/GNUstep/System/Library/Headers/Foundation/NSCharacterSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSClassDescription.h
 share/GNUstep/System/Library/Headers/Foundation/NSCoder.h
+share/GNUstep/System/Library/Headers/Foundation/NSComparisonPredicate.h
+share/GNUstep/System/Library/Headers/Foundation/NSCompoundPredicate.h
 share/GNUstep/System/Library/Headers/Foundation/NSConnection.h
 share/GNUstep/System/Library/Headers/Foundation/NSData.h
 share/GNUstep/System/Library/Headers/Foundation/NSDate.h
@@ -48,10 +50,13 @@ share/GNUstep/System/Library/Headers/Foundation/NSDistributedNotificationCenter.
 share/GNUstep/System/Library/Headers/Foundation/NSEnumerator.h
 share/GNUstep/System/Library/Headers/Foundation/NSError.h
 share/GNUstep/System/Library/Headers/Foundation/NSException.h
+share/GNUstep/System/Library/Headers/Foundation/NSExpression.h
 share/GNUstep/System/Library/Headers/Foundation/NSFileHandle.h
 share/GNUstep/System/Library/Headers/Foundation/NSFileManager.h
 share/GNUstep/System/Library/Headers/Foundation/NSFormatter.h
 share/GNUstep/System/Library/Headers/Foundation/NSGeometry.h
+share/GNUstep/System/Library/Headers/Foundation/NSHTTPCookie.h
+share/GNUstep/System/Library/Headers/Foundation/NSHTTPCookieStorage.h
 share/GNUstep/System/Library/Headers/Foundation/NSHashTable.h
 share/GNUstep/System/Library/Headers/Foundation/NSHost.h
 share/GNUstep/System/Library/Headers/Foundation/NSIndexPath.h
@@ -74,6 +79,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSPort.h
 share/GNUstep/System/Library/Headers/Foundation/NSPortCoder.h
 share/GNUstep/System/Library/Headers/Foundation/NSPortMessage.h
 share/GNUstep/System/Library/Headers/Foundation/NSPortNameServer.h
+share/GNUstep/System/Library/Headers/Foundation/NSPredicate.h
 share/GNUstep/System/Library/Headers/Foundation/NSProcessInfo.h
 share/GNUstep/System/Library/Headers/Foundation/NSPropertyList.h
 share/GNUstep/System/Library/Headers/Foundation/NSProtocolChecker.h
@@ -91,7 +97,18 @@ share/GNUstep/System/Library/Headers/Foundation/NSThread.h
 share/GNUstep/System/Library/Headers/Foundation/NSTimeZone.h
 share/GNUstep/System/Library/Headers/Foundation/NSTimer.h
 share/GNUstep/System/Library/Headers/Foundation/NSURL.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLAuthenticationChallenge.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLCache.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLConnection.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLCredential.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLCredentialStorage.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLDownload.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLError.h
 share/GNUstep/System/Library/Headers/Foundation/NSURLHandle.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLProtectionSpace.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLProtocol.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLRequest.h
+share/GNUstep/System/Library/Headers/Foundation/NSURLResponse.h
 share/GNUstep/System/Library/Headers/Foundation/NSUndoManager.h
 share/GNUstep/System/Library/Headers/Foundation/NSUserDefaults.h
 share/GNUstep/System/Library/Headers/Foundation/NSUtilities.h
@@ -146,23 +163,28 @@ share/GNUstep/System/Library/Headers/gnustep/unicode/decomp.h
 share/GNUstep/System/Library/Headers/gnustep/unicode/latin2.h
 share/GNUstep/System/Library/Headers/gnustep/unicode/nextstep.h
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/English.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Esperanto.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/French.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/German.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Info-gnustep.plist
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Italian.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Korean.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Dutch
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/English
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Esperanto
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/French
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/German
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Hungarian
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Italian
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Korean
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Locale.aliases
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Locale.encodings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Russian
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Slovak
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Spanish
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/TraditionalChinese
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/UkraineRussian
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Ukrainian
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/.README.swp
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUmakefile
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUstep_zones
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/README
@@ -242,11 +264,13 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Ushuaia
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Aruba
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Asuncion
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Atikokan
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Atka
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Bahia
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Barbados
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Belem
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Belize
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Blanc-Sablon
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Boa_Vista
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Bogota
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Boise
@@ -329,6 +353,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Nome
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Noronha
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/North_Dakota/Center
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/North_Dakota/New_Salem
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Panama
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Pangnirtung
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Paramaribo
@@ -570,8 +595,11 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Copenhagen
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Dublin
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Gibraltar
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Guernsey
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Helsinki
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Isle_of_Man
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Istanbul
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Jersey
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Kaliningrad
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Kiev
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Lisbon
@@ -605,6 +633,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Vatican
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Vienna
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Vilnius
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Volgograd
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Warsaw
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Zagreb
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Zaporozhye
@@ -755,6 +784,7 @@ share/GNUstep/System/Tools/gdnc
 share/GNUstep/System/Tools/gdomap
 share/GNUstep/System/Tools/gspath
 share/GNUstep/System/Tools/make_strings
+share/GNUstep/System/Tools/objctidy
 share/GNUstep/System/Tools/pl
 share/GNUstep/System/Tools/pl2link
 share/GNUstep/System/Tools/pldes
@@ -790,9 +820,11 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Korean.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Italian.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/German.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/French.lproj
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Esperanto.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/English.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base
 @dirrm share/GNUstep/System/Library/Headers/gnustep/unicode

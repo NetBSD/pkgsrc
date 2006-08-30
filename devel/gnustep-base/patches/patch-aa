@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.10 2006/04/03 18:20:50 adam Exp $
+$NetBSD: patch-aa,v 1.11 2006/08/30 14:55:00 adam Exp $
 
---- configure.orig	2006-03-07 11:58:10.000000000 +0100
+--- configure.orig	2006-08-10 13:53:13.000000000 +0200
 +++ configure
-@@ -2987,12 +2987,12 @@ echo $ECHO_N "checking the Objective-C r
+@@ -3601,12 +3601,12 @@ echo $ECHO_N "checking the Objective-C r
  if test "$OBJC_RUNTIME_LIB" = "nx" -o "$OBJC_RUNTIME_LIB" = "apple"; then
-   echo "$as_me:$LINENO: result: NeXT" >&5
- echo "${ECHO_T}NeXT" >&6
+   { echo "$as_me:$LINENO: result: NeXT" >&5
+ echo "${ECHO_T}NeXT" >&6; }
 -  LIBOBJC='-lobjc'
 +  LIBOBJC='-lobjc @PTHREAD_LIBS@'
    OBJCFLAGS="-fnext-runtime -DNeXT_RUNTIME"
  else
-   echo "$as_me:$LINENO: result: GNU" >&5
- echo "${ECHO_T}GNU" >&6
+   { echo "$as_me:$LINENO: result: GNU" >&5
+ echo "${ECHO_T}GNU" >&6; }
 -  LIBOBJC='-lobjc'
 +  LIBOBJC='-lobjc @PTHREAD_LIBS@'
    OBJCFLAGS="-fgnu-runtime"
  fi
  
-@@ -3016,7 +3016,7 @@ fi
+@@ -3630,7 +3630,7 @@ fi
  # $GNUSTEP_HDIR are used before the standard ones
  #
  INCLUDE_FLAGS="$INCLUDE_FLAGS -I$GNUSTEP_HDIR"
