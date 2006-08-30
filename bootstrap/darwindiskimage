@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ufsdiskimage,v 1.2 2004/04/24 19:17:09 danw Exp $
+# $NetBSD: darwindiskimage,v 1.1 2006/08/30 04:29:53 schmonz Exp $
 
 _getdevice_and_halfway_mount()
 {
