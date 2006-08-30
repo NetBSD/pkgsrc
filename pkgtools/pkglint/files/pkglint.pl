@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.670 2006/08/28 12:41:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.671 2006/08/30 05:41:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5429,14 +5429,6 @@ sub checkline_mk_varassign($$$$$) {
 			"It is this meaning that should be described.");
 	}
 
-	if ($varname eq "BUILD_DEFS") {
-		assert(defined($mkctx_build_defs), "The build_defs variable must be defined here.");
-		foreach my $bdvar (split(qr"\s+", $value)) {
-			$mkctx_build_defs->{$bdvar} = true;
-			$opt_debug_misc and $line->log_debug("${bdvar} is added to BUILD_DEFS.");
-		}
-	}
-
 	if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
 		my ($pkgvarname) = ($1);
 		if ($varname =~ qr"^PKG_.*_REASON$") {
@@ -5672,6 +5664,24 @@ sub checklines_mk($) {
 			$allowed_targets->{"${prefix}-${action}"} = true;
 		}
 	}
+
+	#
+	# In the first pass, all additions to BUILD_DEFS are collected,
+	# to make the order of the definitions irrelevant.
+	#
+
+	foreach my $line (@{$lines}) {
+		if ($line->has("is_varassign") && $line->get("varname") eq "BUILD_DEFS") {
+			foreach my $varname (split(qr"\s+", $line->get("value"))) {
+				$mkctx_build_defs->{$varname} = true;
+				$opt_debug_misc and $line->log_debug("${varname} is added to BUILD_DEFS.");
+			}
+		}
+	}
+
+	#
+	# In the second pass, all "normal" checks are done.
+	#
 
 	if (0 <= $#{$lines}) {
 		checkline_rcsid_regex($lines->[0], qr"^#\s+", "# ");
