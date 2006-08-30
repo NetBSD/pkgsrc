@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/22 04:46:15 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/30 15:51:15 joerg Exp $
 
 DISTNAME=		gsoap_2.7.7
 PKGNAME=		gsoap-2.7.7
@@ -12,7 +12,7 @@ COMMENT=		Tools for coding SOAP XML Web Services in C and C++
 WRKSRC=			${WRKDIR}/gsoap-2.7
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		yacc
+USE_TOOLS+=		yacc flex
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoap++.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gsoap.pc.in
