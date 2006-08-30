@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2006/04/03 18:25:02 adam Exp $
+$NetBSD: distinfo,v 1.16 2006/08/30 14:55:41 adam Exp $
 
-SHA1 (gnustep-back-0.10.3.tar.gz) = f4249052b171e8fab8b2aa9fff80d0eb1c5555b0
-RMD160 (gnustep-back-0.10.3.tar.gz) = e14f1ac12621efe8ffffa55fded2419dc9372966
-Size (gnustep-back-0.10.3.tar.gz) = 841262 bytes
+SHA1 (gnustep-back-0.11.0.tar.gz) = cca91296f45bab68b5b6c9621bfe8975bb29c5e2
+RMD160 (gnustep-back-0.11.0.tar.gz) = cbcb9c6b692428a65a4135004e15cdc20868d9f6
+Size (gnustep-back-0.11.0.tar.gz) = 846937 bytes
 SHA1 (patch-aa) = 44fa9bb3ffd98a45885e750082909a47c349d29c
