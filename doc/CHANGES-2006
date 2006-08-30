@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1156 2006/08/30 14:58:07 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1157 2006/08/30 20:48:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4127,3 +4127,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gnustep-gui to 0.11.0 [adam 2006-08-30]
 	Updated x11/gnustep-back to 0.11.0 [adam 2006-08-30]
 	Updated devel/Gorm to 1.1.0 [adam 2006-08-30]
+	Updated print/abcm2ps to 4.12.25 [minskim 2006-08-30]
