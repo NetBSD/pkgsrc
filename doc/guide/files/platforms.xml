@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.36 2006/08/30 04:30:53 schmonz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.37 2006/08/30 04:47:16 schmonz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -251,7 +251,7 @@ file and inspect the contents before extracting it.
     <sect2 id="darwin">
       <title>Darwin (Mac OS X)</title>
 
-      <para>Darwin 5.x and 6.x are supported. There are two methods of using
+      <para>Darwin 5.x and up are supported. There are two methods of using
 	pkgsrc on Mac OS X, by using a <link linkend="platform.osx-image">disk
 	  image</link>, or a <link linkend="platform.osx-ufs">UFS
 	  partition</link>.</para>
@@ -270,8 +270,8 @@ file and inspect the contents before extracting it.
 	at boot time, where you must manually mount a disk image.</para>
 
       <note>
-	<para>You cannot use a HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the file system to be case-sensitive, and HFS+ is not.</para>
+	<para>You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc currently
+	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ file system as found in Darwin 7.0 and newer.</para>
       </note>
 
       <sect3 id="platform.osx-image">
