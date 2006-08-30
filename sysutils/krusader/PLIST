@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/25 12:49:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/08/30 00:07:00 markd Exp $
 bin/krusader
 lib/kde3/kio_iso.la
 lib/kde3/kio_krarc.la
@@ -185,6 +185,7 @@ share/locale/sl/LC_MESSAGES/krusader.mo
 share/locale/sr/LC_MESSAGES/krusader.mo
 share/locale/sr@Latn/LC_MESSAGES/krusader.mo
 share/locale/sv/LC_MESSAGES/krusader.mo
+share/locale/tr/LC_MESSAGES/krusader.mo
 share/locale/uk/LC_MESSAGES/krusader.mo
 share/locale/zh_CN/LC_MESSAGES/krusader.mo
 @comment in kde: @dirrm share/kde/services

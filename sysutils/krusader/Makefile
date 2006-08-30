@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/07/07 15:49:34 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/30 00:07:00 markd Exp $
 #
 
-DISTNAME=	krusader-1.70.0
+DISTNAME=	krusader-1.70.1
 CATEGORIES=	kde sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=krusader/}
 
@@ -9,7 +9,7 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://krusader.sourceforge.net/
 COMMENT=	Advanced twin-panel (commander-style) file-manager for KDE 3.x
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
