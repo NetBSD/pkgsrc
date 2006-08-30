@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/07/28 10:38:36 tron Exp $
+# $NetBSD: options.mk,v 1.5 2006/08/30 06:16:27 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	suexec
@@ -6,6 +6,9 @@ PKG_SUPPORTED_OPTIONS=	suexec
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msuexec)
+BUILD_DEFS+=		VARBASE APACHE_USER APACHE_SUEXEC_PATH
+BUILD_DEFS+=		APACHE_SUEXEC_DOCROOT APACHE_SUEXEC_LOGFILE
+
 APACHE_SUEXEC_DOCROOT?=	${PREFIX}/share/httpd/htdocs
 APACHE_SUEXEC_PATH=	/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_LOGFILE?=	${VARBASE}/log/httpd/suexec.log
