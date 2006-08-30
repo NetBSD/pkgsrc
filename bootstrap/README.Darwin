@@ -1,11 +1,11 @@
-$NetBSD: README.Darwin,v 1.4 2005/04/10 22:03:35 jschauma Exp $
+$NetBSD: README.Darwin,v 1.5 2006/08/30 04:51:05 schmonz Exp $
 
 If you are using Mac OS X, please read "README.MacOSX" as well.
 
 Terse instructions:
 
-$ ./ufsdiskimage create ~/Documents/NetBSD 512  # megabytes - season to taste
-$ ./ufsdiskimage mount ~/Documents/NetBSD
+$ ./darwindiskimage create ~/Documents/NetBSD 512  # megabytes - season to taste
+$ ./darwindiskimage mount ~/Documents/NetBSD
 $ sudo chown `id -u`:`id -g` /Volumes/NetBSD
 $ curl -O \
     ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz
@@ -18,6 +18,7 @@ Note: if you already have a UFS partition, or have a spare partition
 that you can format as UFS, use that instead of the UFS disk image.
 It'll be somewhat faster and will mount automatically at boot time.
 
-(Why can't you just use the HFS+ filesystem you've already got?
-Because pkgsrc currently requires the underlying filesystem to be
-case-sensitive, and HFS+ isn't.)
+You cannot use an ordinary HFS+ file system for pkgsrc, because
+pkgsrc currently requires the file system to be case-sensitive. You
+can, however, use a case-sensitive HFS+ file system as found in
+Darwin 7.0 and newer.
