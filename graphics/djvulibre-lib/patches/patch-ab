@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/08/30 17:03:28 drochner Exp $
+
+--- libdjvu/miniexp.h.orig	2006-02-21 20:27:41.000000000 +0100
++++ libdjvu/miniexp.h
+@@ -38,7 +38,9 @@ extern "C" { 
+ /* miniexp_t -- 
+    Opaque pointer type representing a lisp expression. */
+ 
+-typedef struct miniexp_s* miniexp_t;
++#ifndef DDJVUAPI /* avoid double declaration */
++typedef struct miniexp_s* miniexp_t; 
++#endif
+ 
+ 
+ /* There are four basic types of lisp expressions,
