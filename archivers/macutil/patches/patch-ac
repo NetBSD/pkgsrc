@@ -1,10 +1,14 @@
-$NetBSD: patch-ac,v 1.1 2005/11/07 13:23:36 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/30 15:22:15 rillig Exp $
 
---- util/transname.c.orig	2005-11-07 12:58:59.000000000 +0000
-+++ util/transname.c
-@@ -1,5 +1,6 @@
+--- util/transname.c.orig	2006-08-30 17:17:45.574356868 +0200
++++ util/transname.c	2006-08-30 17:19:54.708419336 +0200
+@@ -1,5 +1,10 @@
  #include <sys/types.h>
++#if defined(__sun)
++#include <dirent.h>
++#else
  #include <sys/dir.h>
++#endif
 +#include <limits.h>
  
  char *strncpy();
