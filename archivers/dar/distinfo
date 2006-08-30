@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2006/08/30 15:58:25 rillig Exp $
+$NetBSD: distinfo,v 1.14 2006/08/30 18:54:34 rillig Exp $
 
 SHA1 (dar-2.3.0.tar.gz) = e2e6318ad222fe5b7d47ec5d5c3828c83f2004fb
 RMD160 (dar-2.3.0.tar.gz) = 5f00a95e7eaed35cbbe6c5440970bcb4fc2b8181
@@ -6,3 +6,4 @@ Size (dar-2.3.0.tar.gz) = 1142646 bytes
 SHA1 (patch-aa) = 6f07f2bf85194cdad58d99c7cafd85e3b2c06031
 SHA1 (patch-ab) = 1d8fb3bcd9c0d6a07cb6413d0b94453264f3d499
 SHA1 (patch-ac) = 34ba67a1ae794c1069824347b67a204455d18f2e
+SHA1 (patch-ad) = b880e88531a834a69e72b9450b0aee756024fd25
