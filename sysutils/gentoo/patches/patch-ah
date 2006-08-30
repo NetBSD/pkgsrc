@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2006/08/30 16:26:58 joerg Exp $
+
+--- src/dirpane.c.orig	2006-08-30 15:45:45.000000000 +0000
++++ src/dirpane.c
+@@ -1394,7 +1394,7 @@ static void update_fs_info(DirPane *dp)
+ {
+ 	gint	old_errno = errno;
+ 
+-#if defined HAVE_STRUCT_STATVFS
++#if defined HAVE_STRUCT_STATVFS && !defined(__DragonFly__)
+ 	dp->dir.fs.valid = statvfs(dp->dir.path, &dp->dir.fs.stat) == 0;
+ #else
+ 	dp->dir.fs.valid = statfs(dp->dir.path, &dp->dir.fs.stat) == 0;
