@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/08/16 20:24:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/08/30 17:07:26 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
 share/applications/evince.desktop
@@ -8,6 +8,7 @@ share/evince/evince-toolbar.xml
 share/evince/evince-ui.xml
 share/evince/hand-open.png
 share/gconf/schemas/evince-thumbnailer.schemas
+${DJVU}share/gconf/schemas/evince-thumbnailer-djvu.schemas
 ${DVI}share/gconf/schemas/evince-thumbnailer-dvi.schemas
 share/gconf/schemas/evince.schemas
 share/gnome/help/evince/C/evince.xml
