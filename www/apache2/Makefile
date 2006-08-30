@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2006/07/28 13:35:37 tron Exp $
+# $NetBSD: Makefile,v 1.105 2006/08/30 06:16:27 rillig Exp $
 
 .include "Makefile.common"
 
@@ -12,13 +12,12 @@ COMMENT=	Apache HTTP (Web) server, version 2
 CONFLICTS=	apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 
 BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	VARBASE
 
 USE_TOOLS+=		perl perl:run pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--enable-so
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
@@ -94,6 +93,7 @@ APACHE_USER?=		www
 APACHE_GROUP?=		www
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
+BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
@@ -130,6 +130,8 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	config.layout
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.paths+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_SED.paths+=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
 SUBST_CLASSES+=		apr-lt
