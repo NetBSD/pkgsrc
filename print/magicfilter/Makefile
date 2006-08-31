@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.50 2006/08/31 08:22:38 rillig Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	5
@@ -20,29 +20,37 @@ CONFIGURE_ENV+=	GHOSTSCRIPT=${TOOLS_PATH.gs}
 CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:Q}
 TEX_ACCEPTED=	teTeX3
 
-PLIST_SRC=	${WRKDIR}/PLIST
-
 FILTER_DIR=	libexec/magicfilter
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=	PAPERSIZE
 PAPERSIZE?=	A4
+LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} "[A-Z]" "[a-z]"
+LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
+
+SUBST_CLASSES+=		mf
+SUBST_STAGE.mf=		post-build
+SUBST_MESSAGE.mf=	Adjusting paper size in filters.
+SUBST_FILES.mf=		filters/*-filter
+SUBST_SED.mf=		-e 's/-sOutputFile=-/& -sPAPERSIZE=${LOWER_PAPERSIZE:Q:Q}/'
+
+INSTALLATION_DIRS+=	${FILTER_DIR}
+
+GENERATE_PLIST+= \
+	(cd ${WRKSRC}/filters;						\
+	for f in *-filter; do						\
+	  ${ECHO} ${FILTER_DIR}/"$$f";					\
+	done;								\
+	${ECHO} "@dirrm ${FILTER_DIR}");
 
 post-install:
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@${INSTALL_DATA_DIR} ${PREFIX}/${FILTER_DIR}
-	@(cd ${WRKSRC}/filters;	\
-	  paper=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`; \
-	  for FILTER in *-filter; do \
-	    TARGET=${PREFIX}/${FILTER_DIR}/$$FILTER; \
-	    ${ECHO} "Installing $$FILTER as $$TARGET"; \
-	    ${SED} 's/-sOutputFile=-/-sOutputFile=- -sPAPERSIZE='$$paper'/' \
-		<$$FILTER >${PREFIX}/${FILTER_DIR}/$$FILTER; \
-	    ${CHOWN} ${BINOWN}:${BINGRP} $$TARGET; \
-	    ${CHMOD} ${BINMODE} $$TARGET; \
-	    ${ECHO} ${FILTER_DIR}/$$FILTER >>${PLIST_SRC}; \
-	  done)
-	@${ECHO} "@dirrm ${FILTER_DIR}" >>${PLIST_SRC}
+	set -e;								\
+	cd ${WRKSRC}/filters;						\
+	for f in *-filter; do						\
+	  ${ECHO} "Installing $$f as ${PREFIX}/${FILTER_DIR}/$$f";	\
+	  ${INSTALL_SCRIPT} "$$f" ${PREFIX}/${FILTER_DIR}/"$$f";	\
+	done
 
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
