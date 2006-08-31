@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST.py,v 1.1.1.1 2006/01/29 15:54:04 shannonjr Exp $
+@comment $NetBSD: PLIST.py,v 1.2 2006/08/31 13:04:54 rillig Exp $
 ${PYSITELIB}/_prelude.so
+${PYSITELIB}/prelude.py
 ${PYSITELIB}/prelude.pyc

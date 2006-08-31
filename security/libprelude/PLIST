@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/08/23 10:51:25 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/08/31 13:04:54 rillig Exp $
 bin/libprelude-config
 bin/prelude-adduser
 include/libprelude/common.h
@@ -102,9 +102,6 @@ share/examples/libprelude/client.conf
 share/examples/libprelude/global.conf
 share/examples/libprelude/idmef-client.conf
 share/examples/libprelude/tls.conf
-${PYSITELIB}/_prelude.so
-${PYSITELIB}/prelude.py
-${PYSITELIB}/prelude.pyc
 @dirrm share/examples/libprelude
 @dirrm share/doc/libprelude
 @dirrm include/libprelude

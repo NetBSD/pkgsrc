@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2006/06/08 22:07:24 shannonjr Exp $
+# $NetBSD: options.mk,v 1.6 2006/08/31 13:04:54 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libprelude
 PKG_SUPPORTED_OPTIONS=	perl python
@@ -14,6 +14,8 @@ PKG_SUPPORTED_OPTIONS=	perl python
 .if !empty(PKG_OPTIONS:Mperl)
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 USE_TOOLS+=		perl:run
+GENERATE_PLIST+=	cat ${PKGDIR}/PLIST.perl;
+.include "../../lang/perl5/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
@@ -21,6 +23,7 @@ CONFIGURE_ARGS+=	--with-perl=no
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PY_PATCHPLIST=		yes
+GENERATE_PLIST+=	cat ${PKGDIR}/PLIST.py;
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .else
