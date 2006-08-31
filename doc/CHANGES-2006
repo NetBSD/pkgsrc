@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1161 2006/08/31 12:44:42 seb Exp $
+$NetBSD: CHANGES-2006,v 1.1162 2006/08/31 18:45:44 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4133,3 +4133,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/cairo to 1.2.4nb1 [dmcmahill 2006-08-31]
 	Updated databases/mysql4-client to 4.1.21 [seb 2006-08-31]
 	Updated databases/mysql4-server to 4.1.21 [seb 2006-08-31]
+	Updated editors/vim-share to 7.0.76 [martti 2006-08-31]
+	Updated mail/postfix to 2.3.3 [martti 2006-08-31]
+	Updated mail/postfix-current to 2.4-20060825 [martti 2006-08-31]
