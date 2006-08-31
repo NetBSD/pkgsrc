@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2005/02/24 12:19:55 agc Exp $
+$NetBSD: distinfo,v 1.16 2006/08/31 12:04:25 hubertf Exp $
 
 SHA1 (pan-0.14.2.tar.bz2) = 39c0128906d389524e24d55691e017cf509516a0
 RMD160 (pan-0.14.2.tar.bz2) = 0dff24b1d83b6fabfb9cc38a7dea5f9e99513009
 Size (pan-0.14.2.tar.bz2) = 1834784 bytes
 SHA1 (patch-aa) = bfa992f0ad8f2dfcfd1bb9c848ff774bc5cec2b6
+SHA1 (patch-ai) = 3d4f70a9e23f905bf2ff24c87b28539c4abb94bd
