@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1160 2006/08/31 11:16:14 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.1161 2006/08/31 12:44:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4131,3 +4131,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/exim to 4.63 [abs 2006-08-30]
 	Updated net/aiccu to 20060725 [ghen 2006-08-31]
 	Updated graphics/cairo to 1.2.4nb1 [dmcmahill 2006-08-31]
+	Updated databases/mysql4-client to 4.1.21 [seb 2006-08-31]
+	Updated databases/mysql4-server to 4.1.21 [seb 2006-08-31]
