@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5392 2006/08/31 17:13:01 wiz Exp $
+$NetBSD: TODO,v 1.5393 2006/08/31 18:45:44 martti Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ Suggested package updates
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
-	o postfix-2.3.3
 	o postgresql-8.1.4
 	o postgresql_autodoc-1.25
 	o postgrey-1.27
