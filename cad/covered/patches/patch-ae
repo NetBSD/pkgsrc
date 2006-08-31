@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2006/08/22 17:00:24 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2006/08/31 17:26:42 rillig Exp $
 
---- src/signal.c.orig	2006-08-22 18:49:38.000000000 +0000
-+++ src/signal.c
+--- src/signal.c.orig	2004-03-16 06:45:43.000000000 +0100
++++ src/signal.c	2006-08-31 19:22:06.000000000 +0200
 @@ -40,7 +40,7 @@ extern char   user_msg[USER_MSG_LENGTH];
   creating temporary signals (reduces the need for dynamic memory allocation).
   for performance enhancing purposes.
@@ -22,7 +22,7 @@ $NetBSD: patch-ae,v 1.1 2006/08/22 17:00:24 joerg Exp $
 +  signal_s* new_sig;       /* Pointer to newly created signal */
  
 -  new_sig = (signal*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
-+  new_sig = (signal_s*)malloc_safe( sizeof( signal ), __FILE__, __LINE__ );
++  new_sig = (signal_s*)malloc_safe( sizeof( signal_s ), __FILE__, __LINE__ );
  
    signal_init( new_sig, strdup_safe( name, __FILE__, __LINE__ ), vector_create( width, TRUE ), lsb );
  
