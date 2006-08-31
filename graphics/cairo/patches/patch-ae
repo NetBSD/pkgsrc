@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2006/08/31 11:12:58 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.4 2006/08/31 11:17:19 dmcmahill Exp $
 
 Adapted from:
 http://ekyo.nerim.net/software/patch-1.2.0-src_cairo-xlib-surface_c
@@ -7,6 +7,8 @@ Fixes cairo on 8-bit psuedo color and other 8-bit displays.
 
 The patch listed above is for 1.2.0 and took some minor modification to
 apply to 1.2.4.
+
+See https://bugs.freedesktop.org/show_bug.cgi?id=4945 for more details.
 
 --- src/cairo-xlib-surface.c.orig	2006-08-18 14:20:16.000000000 +0000
 +++ src/cairo-xlib-surface.c	2006-08-31 10:53:10.000000000 +0000
