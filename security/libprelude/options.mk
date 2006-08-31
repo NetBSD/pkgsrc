@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2006/08/31 13:04:54 rillig Exp $
+# $NetBSD: options.mk,v 1.7 2006/08/31 18:02:41 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libprelude
 PKG_SUPPORTED_OPTIONS=	perl python
@@ -11,10 +11,12 @@ PKG_SUPPORTED_OPTIONS=	perl python
 ###       python is needed for prewikka
 ###
 
+PLIST_SRC=		${PKGDIR}/PLIST
+
 .if !empty(PKG_OPTIONS:Mperl)
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 USE_TOOLS+=		perl:run
-GENERATE_PLIST+=	cat ${PKGDIR}/PLIST.perl;
+PLIST_SRC+=		${PKGDIR}/PLIST.perl
 .include "../../lang/perl5/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-perl=no
@@ -23,7 +25,7 @@ CONFIGURE_ARGS+=	--with-perl=no
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PY_PATCHPLIST=		yes
-GENERATE_PLIST+=	cat ${PKGDIR}/PLIST.py;
+PLIST_SRC+=		${PKGDIR}/PLIST.py
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .else
