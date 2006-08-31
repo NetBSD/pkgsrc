@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5391 2006/08/30 20:48:40 minskim Exp $
+$NetBSD: TODO,v 1.5392 2006/08/31 17:13:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -284,7 +284,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcmidi-20060805
+	o abcmidi-20060829
 	o acpi-iasl-20040715
 	o adns-1.3
 	o adocman-0.13
@@ -392,7 +392,7 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20060417 [pkg/33153]
 	o cuetools-1.3.1
-	o cups-1.2.2
+	o cups-1.2.3
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.13
 	o cvsweb-3.0.6
@@ -509,18 +509,19 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade-3.0.1
 	o gld-1.7
+	o glib2-2.12.3
 	o glibmm-2.12.0
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-pilot-2.0.13
-	o gnome-speech-0.4.4
+	o gnome-speech-0.4.5
 	o gnome-spell-1.0.7
 	o gnome-vfsmm-2.16.0
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
-	o gob2-2.0.14
+	o gob2-2.0.14 [pkg/34439]
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o gok-1.2.0
@@ -530,7 +531,7 @@ Suggested package updates
 	o gramofile-1.6P
 	o grap-1.36
 	o grep-2.5.1a
-	o grepmail-5.3032
+	o grepmail-5.3032 [pkg/34438]
 	o grhino-0.15.2
 	o gri-2.12.8
 	o grig-0.7.1
@@ -1097,7 +1098,7 @@ Suggested package updates
 	o sharity-3.2
 	o sharity-light-1.3
 	o shc-3.8
-	o shmux-1.0b10
+	o shmux-1.0
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-client-1.0.3
@@ -1124,6 +1125,7 @@ Suggested package updates
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.4
 	o spamass-milter-0.3.1 [pkg/33206]
+	o spamassassin-3.1.5
 	o spim-7.2.1
 	o sqlitemanager-1.1.3
 	o squid-2.6.2 [taca]
@@ -1135,7 +1137,7 @@ Suggested package updates
 	o stellarium-0.8.1
 	o stlport-4.6.2
 	o strace-4.5.8
-	o stunnel-4.15
+	o stunnel-4.15 [pkg/34436]
 	o subtitleripper-0.3.4
 	o sun-jdk14-2.12 [pkg/34035]
 	o sun-jre14-2.12 [pkg/34035]
@@ -1161,7 +1163,7 @@ Suggested package updates
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.0.3
-	o tkdiff-4.1.3
+	o tkdiff-4.1.3 [pkg/34440]
 	o tkgate-1.8.6
 	o tkhylafax-3.2
 	o tkpasman-2.2b
