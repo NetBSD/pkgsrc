@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.14 2006/08/11 12:34:54 taca Exp $
+$NetBSD: patch-ai,v 1.15 2006/08/31 18:45:02 martti Exp $
 
---- makedefs.orig	2006-07-12 06:25:31.000000000 +0900
-+++ makedefs
-@@ -118,6 +118,8 @@ case "$SYSTEM.$RELEASE" in
+--- makedefs.orig	2006-07-31 13:04:00.000000000 +0000
++++ makedefs	2006-08-31 21:39:40.000000000 +0000
+@@ -118,6 +118,8 @@
  		;;
    FreeBSD.6*)	SYSTYPE=FREEBSD6
  		;;
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.14 2006/08/11 12:34:54 taca Exp $
    OpenBSD.2*)	SYSTYPE=OPENBSD2
  		;;
    OpenBSD.3*)	SYSTYPE=OPENBSD3
-@@ -130,6 +132,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -132,6 +134,8 @@
  		;;
     NetBSD.3*)	SYSTYPE=NETBSD3
  		;;
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.14 2006/08/11 12:34:54 taca Exp $
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
     BSD/OS.3*)	SYSTYPE=BSDI3
-@@ -180,13 +184,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -182,13 +186,6 @@
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -34,7 +34,7 @@ $NetBSD: patch-ai,v 1.14 2006/08/11 12:34:54 taca Exp $
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -218,25 +215,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -220,25 +217,8 @@
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -60,7 +60,7 @@ $NetBSD: patch-ai,v 1.14 2006/08/11 12:34:54 taca Exp $
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -247,7 +227,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -249,7 +229,6 @@
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -68,7 +68,7 @@ $NetBSD: patch-ai,v 1.14 2006/08/11 12:34:54 taca Exp $
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -275,25 +254,13 @@ case "$SYSTEM.$RELEASE" in
+@@ -277,25 +256,13 @@
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
