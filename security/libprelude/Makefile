@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/08/31 13:11:23 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/08/31 18:02:41 rillig Exp $
 #
 DISTNAME=		libprelude-0.9.10.1
 PKGREVISION=		1
@@ -21,7 +21,7 @@ BUILD_DEFS+=		PRELUDE_USER PRELUDE_GROUP VARBASE
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		make bison gawk
+USE_TOOLS+=		chown make bison gawk
 PKG_SYSCONFSUBDIR=	prelude
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
