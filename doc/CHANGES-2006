@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1162 2006/08/31 18:45:44 martti Exp $
+$NetBSD: CHANGES-2006,v 1.1163 2006/08/31 22:02:40 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4136,3 +4136,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-share to 7.0.76 [martti 2006-08-31]
 	Updated mail/postfix to 2.3.3 [martti 2006-08-31]
 	Updated mail/postfix-current to 2.4-20060825 [martti 2006-08-31]
+	Updated mail/spamassassin to 3.1.5 [mrg 2006-08-31]
