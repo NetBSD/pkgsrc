@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1158 2006/08/30 21:13:26 abs Exp $
+$NetBSD: CHANGES-2006,v 1.1159 2006/08/31 08:50:18 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4129,3 +4129,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/Gorm to 1.1.0 [adam 2006-08-30]
 	Updated print/abcm2ps to 4.12.25 [minskim 2006-08-30]
 	Updated mail/exim to 4.63 [abs 2006-08-30]
+	Updated net/aiccu to 20060725 [ghen 2006-08-31]
