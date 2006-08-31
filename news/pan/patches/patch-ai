@@ -1,0 +1,49 @@
+$NetBSD: patch-ai,v 1.1 2006/08/31 12:04:25 hubertf Exp $
+
+--- pan/base/msort.c.orig	2001-06-18 20:33:38.000000000 +0200
++++ pan/base/msort.c
+@@ -42,6 +42,7 @@ msort_with_tmp (
+ {
+ 	char *tmp;
+ 	char *b1, *b2;
++	unsigned long int *b1_ul, *b2_ul, *tmp_ul;
+ 	size_t n1, n2;
+ 	const int opsiz = sizeof(unsigned long int);
+ 
+@@ -57,24 +58,30 @@ msort_with_tmp (
+ 	msort_with_tmp (b2, n2, s, cmp, t);
+ 
+ 	tmp = t;
+-
+ 	if (s == opsiz && (b1 - (char *) 0) % opsiz == 0)
++	{
+ 		/* operating on aligned words.  Use direct word stores. */
++		b1_ul = (unsigned long int *) b1;
++		b2_ul = (unsigned long int *) b2;
++		tmp_ul = (unsigned long int *) tmp;
++
+ 		while (n1 > 0 && n2 > 0)
+ 		{
+-			if ((*cmp) (b1, b2) <= 0)
++			if ((*cmp) (b1_ul, b2_ul) <= 0)
+ 			{
+ 				--n1;
+-				*((unsigned long int *) tmp)++ =
+-					*((unsigned long int *) b1)++;
++				*tmp_ul++ = *b1_ul++;
+ 			}
+ 			else
+ 			{
+ 				--n2;
+-				*((unsigned long int *) tmp)++ =
+-					*((unsigned long int *) b2)++;
++				*tmp_ul++ = *b2_ul++;
+ 			}
+ 		}
++		b1 = (char *) b1_ul;
++		b2 = (char *) b2_ul;
++		tmp = (char *) tmp_ul;
++	}
+ 	else
+ 		while (n1 > 0 && n2 > 0)
+ 		{
