@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2005/05/23 08:55:56 rillig Exp $
+$NetBSD: patch-ah,v 1.5 2006/08/31 18:04:08 rillig Exp $
 
 --- scripts/results.orig	Fri Jul 31 21:55:19 1998
 +++ scripts/results	Mon Nov 15 14:19:57 1999
@@ -7,8 +7,8 @@ $NetBSD: patch-ah,v 1.4 2005/05/23 08:55:56 rillig Exp $
 -CONFIG=`../scripts/config`
 -RESULTS=results/$OS
 -BASE=../$RESULTS/`uname -n`
-+OS=`@PREFIX@/bin/lmbench/os`
-+CONFIG=`@PREFIX@/bin/lmbench/config`
++OS=`@PREFIX@/libexec/lmbench/os`
++CONFIG=`@PREFIX@/libexec/lmbench/config`
 +RESULTS=@PREFIX@/share/lmbench/results/$OS
 +BASE=$RESULTS/`uname -n`
  EXT=0
@@ -40,7 +40,7 @@ $NetBSD: patch-ah,v 1.4 2005/05/23 08:55:56 rillig Exp $
  	while [ $SYNC_PID -le $SYNC_MAX ]
  	do	echo Results $SYNC_PID going to ${RESULTS}.$SYNC_PID
 -		../../scripts/lmbench $CONFIG 2>../${RESULTS}.$SYNC_PID &
-+		@PREFIX@/bin/lmbench/lmbench @PREFIX@/share/lmbench/$CONFIG 2>${RESULTS}.$SYNC_PID &
++		@PREFIX@/libexec/lmbench/lmbench @PREFIX@/share/lmbench/$CONFIG 2>${RESULTS}.$SYNC_PID &
  		SYNC_PID=`expr $SYNC_PID + 1`
  	done; wait
  else	echo Results going to ${RESULTS}
@@ -48,7 +48,7 @@ $NetBSD: patch-ah,v 1.4 2005/05/23 08:55:56 rillig Exp $
  	SYNC_MAX=1
  	export SYNC_PID SYNC_MAX
 -	../../scripts/lmbench $CONFIG 2>../${RESULTS}
-+	@PREFIX@/bin/lmbench/lmbench @PREFIX@/share/lmbench/$CONFIG 2>${RESULTS}
++	@PREFIX@/libexec/lmbench/lmbench @PREFIX@/share/lmbench/$CONFIG 2>${RESULTS}
  fi
  
  if [ X$MAIL = Xyes ]
