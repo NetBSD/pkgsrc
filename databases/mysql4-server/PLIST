@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/05/26 18:25:34 seb Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/08/31 12:42:42 seb Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -14,6 +14,7 @@ bin/mysql_secure_installation
 bin/mysql_tzinfo_to_sql
 bin/mysql_waitpid
 bin/mysqld_safe
+bin/mysqldumpslow
 bin/pack_isam
 bin/perror
 bin/replace
@@ -57,6 +58,7 @@ share/mysql-test/include/have_archive.inc
 share/mysql-test/include/have_bdb.inc
 share/mysql-test/include/have_big5.inc
 share/mysql-test/include/have_blackhole.inc
+share/mysql-test/include/have_case_sensitive_file_system.inc
 share/mysql-test/include/have_compress.inc
 share/mysql-test/include/have_cp1250_ch.inc
 share/mysql-test/include/have_cp932.inc
@@ -134,6 +136,7 @@ share/mysql-test/r/blackhole.result
 share/mysql-test/r/bool.result
 share/mysql-test/r/bulk_replace.result
 share/mysql-test/r/case.result
+share/mysql-test/r/case_sensitive_file_system.require
 share/mysql-test/r/cast.result
 share/mysql-test/r/check.result
 share/mysql-test/r/check_var_limit.require
@@ -299,6 +302,7 @@ share/mysql-test/r/lock_multi.result
 share/mysql-test/r/lock_tables_lost_commit.result
 share/mysql-test/r/lowercase0.require
 share/mysql-test/r/lowercase2.require
+share/mysql-test/r/lowercase_fs_off.result
 share/mysql-test/r/lowercase_table.result
 share/mysql-test/r/lowercase_table2.result
 share/mysql-test/r/lowercase_table3.result
@@ -311,6 +315,7 @@ share/mysql-test/r/multi_statement.result
 share/mysql-test/r/multi_update.result
 share/mysql-test/r/myisam-blob.result
 share/mysql-test/r/myisam.result
+share/mysql-test/r/mysql_client.result
 share/mysql-test/r/mysql_protocols.result
 share/mysql-test/r/mysqlbinlog.result
 share/mysql-test/r/mysqlbinlog2.result
@@ -319,6 +324,7 @@ share/mysql-test/r/mysqltest.result
 share/mysql-test/r/ndb_alter_table.result
 share/mysql-test/r/ndb_autodiscover.result
 share/mysql-test/r/ndb_autodiscover2.result
+share/mysql-test/r/ndb_autodiscover3.result
 share/mysql-test/r/ndb_basic.result
 share/mysql-test/r/ndb_blob.result
 share/mysql-test/r/ndb_cache.result
@@ -332,9 +338,11 @@ share/mysql-test/r/ndb_index_unique.result
 share/mysql-test/r/ndb_insert.result
 share/mysql-test/r/ndb_limit.result
 share/mysql-test/r/ndb_load.result
+share/mysql-test/r/ndb_loaddatalocal.result
 share/mysql-test/r/ndb_lock.result
 share/mysql-test/r/ndb_minmax.result
 share/mysql-test/r/ndb_multi.result
+share/mysql-test/r/ndb_rename.result
 share/mysql-test/r/ndb_replace.result
 share/mysql-test/r/ndb_restore.result
 share/mysql-test/r/ndb_subquery.result
@@ -703,6 +711,7 @@ share/mysql-test/t/lock.test
 share/mysql-test/t/lock_multi.test
 share/mysql-test/t/lock_tables_lost_commit-master.opt
 share/mysql-test/t/lock_tables_lost_commit.test
+share/mysql-test/t/lowercase_fs_off.test
 share/mysql-test/t/lowercase_table-master.opt
 share/mysql-test/t/lowercase_table.test
 share/mysql-test/t/lowercase_table2.test
@@ -723,6 +732,7 @@ share/mysql-test/t/multi_update.test
 share/mysql-test/t/myisam-blob-master.opt
 share/mysql-test/t/myisam-blob.test
 share/mysql-test/t/myisam.test
+share/mysql-test/t/mysql_client.test
 share/mysql-test/t/mysql_client_test.test
 share/mysql-test/t/mysql_protocols.test
 share/mysql-test/t/mysqlbinlog-master.opt
@@ -734,6 +744,7 @@ share/mysql-test/t/ndb_alter_table.test
 share/mysql-test/t/ndb_autodiscover.test
 share/mysql-test/t/ndb_autodiscover2-master.opt
 share/mysql-test/t/ndb_autodiscover2.test
+share/mysql-test/t/ndb_autodiscover3.test
 share/mysql-test/t/ndb_basic.test
 share/mysql-test/t/ndb_blob.test
 share/mysql-test/t/ndb_cache.test
@@ -746,9 +757,11 @@ share/mysql-test/t/ndb_index_unique.test
 share/mysql-test/t/ndb_insert.test
 share/mysql-test/t/ndb_limit.test
 share/mysql-test/t/ndb_load.test
+share/mysql-test/t/ndb_loaddatalocal.test
 share/mysql-test/t/ndb_lock.test
 share/mysql-test/t/ndb_minmax.test
 share/mysql-test/t/ndb_multi.test
+share/mysql-test/t/ndb_rename.test
 share/mysql-test/t/ndb_replace.test
 share/mysql-test/t/ndb_restore.test
 share/mysql-test/t/ndb_subquery.test

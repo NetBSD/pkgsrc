@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/05/26 18:25:34 seb Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/08/31 12:42:42 seb Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -16,7 +16,6 @@ bin/mysqlbinlog
 bin/mysqlbug
 bin/mysqlcheck
 bin/mysqldump
-bin/mysqldumpslow
 bin/mysqlhotcopy
 bin/mysqlimport
 bin/mysqlmanager-pwgen

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/05/26 18:25:34 seb Exp $
+# $NetBSD: Makefile,v 1.31 2006/08/31 12:42:42 seb Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -45,11 +45,12 @@ post-configure:
 
 post-build:
 	cd ${WRKSRC}/scripts && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
-		${MAKE_FLAGS} mysqld_safe mysql_install_db
+		${MAKE_FLAGS} mysqld_safe mysql_install_db mysqldumpslow
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysqld_safe ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_install_db ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysqldumpslow ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_secure_installation.sh \
 		${PREFIX}/bin/mysql_secure_installation
