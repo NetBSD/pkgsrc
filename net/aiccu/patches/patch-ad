@@ -1,23 +1,23 @@
-$NetBSD: patch-ad,v 1.1 2006/06/13 18:06:21 ghen Exp $
+$NetBSD: patch-ad,v 1.2 2006/08/31 08:49:34 ghen Exp $
 
---- common/aiccu_kame.c.orig	2006-06-13 19:59:18.000000000 +0200
+--- common/aiccu_kame.c.orig	2006-07-23 16:55:14.000000000 +0200
 +++ common/aiccu_kame.c
-@@ -43,10 +43,18 @@ void aiccu_os_setup(struct TIC_Tunnel *h
+@@ -45,10 +45,18 @@ bool aiccu_os_setup(struct TIC_Tunnel *h
  			hTunnel->sIPv6_LinkLocal);
- 	}
  
+ 		/* Local side of the tunnel */
 +#ifdef __NetBSD__
-+        aiccu_exec(
-+                "ifconfig %s inet6 %s %s prefixlen 128 alias",
-+                g_aiccu->ipv6_interface,
-+                hTunnel->sIPv6_Local,
-+                hTunnel->sIPv6_POP);
-+#else
- 	aiccu_exec(
- 		"ifconfig %s inet6 %s prefixlen 128 alias",
- 		g_aiccu->ipv6_interface,
- 		hTunnel->sIPv6_Local);
++		aiccu_exec(
++			"ifconfig %s inet6 %s %s prefixlen 128 alias",
++			g_aiccu->ipv6_interface,
++			hTunnel->sIPv6_Local,
++			hTunnel->sIPv6_POP);
++#else  
+ 		aiccu_exec(
+ 			"ifconfig %s inet6 %s prefixlen 128 alias",
+ 			g_aiccu->ipv6_interface,
+ 			hTunnel->sIPv6_Local);
 +#endif
  
- 	aiccu_exec(
- 		"route add -inet6 %s -prefixlen 128 %s",
+ 		/* Remote side of the tunnel */
+ 		aiccu_exec(
