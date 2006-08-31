@@ -1,6 +1,6 @@
-$NetBSD: patch-bd,v 1.1 2006/06/19 07:53:00 seb Exp $
+$NetBSD: patch-bd,v 1.2 2006/08/31 12:42:42 seb Exp $
 
---- tests/mysql_client_test.c.orig	2006-05-24 18:00:37.000000000 +0000
+--- tests/mysql_client_test.c.orig	2006-07-19 15:10:41.000000000 +0000
 +++ tests/mysql_client_test.c
 @@ -22,6 +22,7 @@
  ***************************************************************************/
@@ -10,12 +10,13 @@ $NetBSD: patch-bd,v 1.1 2006/06/19 07:53:00 seb Exp $
  #include <my_sys.h>
  #include <mysql.h>
  #include <errmsg.h>
-@@ -11745,6 +11746,49 @@ static void test_bug12744()
+@@ -11855,6 +11856,48 @@ static void test_bug15613()
+   mysql_stmt_close(stmt);
  }
  
- /*
++/*
 +  Bug #17667: An attacker has the opportunity to bypass query logging.
-+*/
++ */
 +
 +static void test_bug17667()
 +{
@@ -55,16 +56,14 @@ $NetBSD: patch-bd,v 1.1 2006/06/19 07:53:00 seb Exp $
 +  myquery(rc);
 +}
 +
-+
-+/*
-   Bug#11718: query with function, join and order by returns wrong type
- */
  
-@@ -12078,6 +12122,7 @@ static struct my_tests_st my_tests[]= {
+ /*
+  Bug#20152: mysql_stmt_execute() writes to MYSQL_TYPE_DATE buffer
+@@ -12130,6 +12173,7 @@ static struct my_tests_st my_tests[]= {
    { "test_bug11718", test_bug11718 },
    { "test_bug12925", test_bug12925 },
    { "test_bug15613", test_bug15613 },
 +  { "test_bug17667", test_bug17667 },
+   { "test_bug20152", test_bug20152 },
    { 0, 0 }
  };
- 
