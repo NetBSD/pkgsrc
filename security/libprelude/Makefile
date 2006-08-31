@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/08/23 18:51:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/08/31 13:11:23 rillig Exp $
 #
 DISTNAME=		libprelude-0.9.10.1
 PKGREVISION=		1
@@ -13,14 +13,16 @@ COMMENT=		Provides the framework for using the Prelude system
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PRELUDE_USER?=          _prelude
-PRELUDE_GROUP?=         _prelude
+PRELUDE_USER?=		_prelude
+PRELUDE_GROUP?=		_prelude
+
+BUILD_DEFS+=		PRELUDE_USER PRELUDE_GROUP VARBASE
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		make bison gawk
-PKG_SYSCONFSUBDIR= 	prelude
+PKG_SYSCONFSUBDIR=	prelude
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
@@ -40,7 +42,7 @@ CONF_FILES+=	${PREFIX}/share/examples/libprelude/idmef-client.conf ${PKG_SYSCONF
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/tls.conf ${PKG_SYSCONFDIR}/tls.conf
 
 post-install:
-	${CHOWN} -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
+	chown -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
