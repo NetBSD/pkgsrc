@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/12/29 14:53:52 ghen Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/31 08:49:34 ghen Exp $
 
---- doc/aiccu.conf.orig	2005-01-09 17:15:19.000000000 +0100
+--- doc/aiccu.conf.orig	2006-07-18 23:24:30.000000000 +0200
 +++ doc/aiccu.conf
-@@ -6,7 +6,7 @@
- 
- # Interface names to use
- ipv4_interface eth0
+@@ -8,7 +8,7 @@
+ # ipv6_interface is the name of the interface that will be used as a tunnel interface.
+ # On *BSD the ipv6_interface should be set to gifX (eg gif0) for proto-41 tunnels
+ # or tunX (eg tun0) for AYIYA tunnels.
 -ipv6_interface sixxs
 +ipv6_interface gif0
  
