@@ -1,23 +1,39 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/12/29 14:53:52 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/31 08:49:34 ghen Exp $
 
---- unix-console/Makefile.orig	2005-01-31 19:59:30.000000000 +0100
+--- unix-console/Makefile.orig	2006-07-25 11:20:48.000000000 +0200
 +++ unix-console/Makefile
-@@ -15,11 +15,11 @@ INCS	= ../common/aiccu.h ../common/hash_
- OBJS	= main.o ../common/aiccu.o ../common/hash_md5.o ../common/hash_sha1.o ../common/common.o ../common/heartbeat.o ../common/tic.o ../common/ayiya.o ../common/aiccu_test.o
- CWARNS	= -pedantic -W -Wall -Wshadow -Wcast-align
+@@ -26,27 +26,15 @@ CWARNS += -W -Wall -Wshadow -Wpointer-ar
+ 
  #CFLAGS	+= $(CWARNS) -D_GNU_SOURCE -D_DEBUG -g3 -O0
--CFLAGS	+= $(CWARNS) -D_GNU_SOURCE -O3
-+CFLAGS	+= $(CWARNS) -D_GNU_SOURCE
- CC      = gcc
+ CFLAGS	+= $(CWARNS) -D_GNU_SOURCE
+-CC      = @gcc
++CC      = cc
  RM      = rm
  
--CFLAGS	+= -D AICCU_CONSOLE
-+CFLAGS	+= -DAICCU_CONSOLE
+-# Add -O3 when nothing is specified yet
+-ifeq ($(shell echo $(CFLAGS) | grep -c "\-O"),0)
+-CFLAGS	+= -O3
+-endif
+-
+ # This is a console client
+ CFLAGS	+= -D AICCU_CONSOLE
  
+-# GnuTLS Support ?
+-# Used by TIC to secure that communication
+-# Currently defaultly builds only on Linux, but other platforms might easily also support it
+-ifeq ($(shell uname | grep -c "Linux"),1)
+-CFLAGS	+= -D _LINUX -D AICCU_GNUTLS
+-LDFLAGS += -lgnutls
+-endif
+-
  # Linux
  ifeq ($(shell uname | grep -c "Linux"),1)
-@@ -49,6 +49,14 @@ CFLAGS	+= -pthread
- endif
++CFLAGS	+= -D _LINUX
+ CFLAGS  += -D AICCU_TYPE="\"linux\""
+ SRCS	+= ../common/aiccu_linux.c
+ OBJS	+= ../common/aiccu_linux.o
+@@ -80,12 +68,20 @@ OBJS	+= ../common/aiccu_freebsd4.o
+ CFLAGS	+= -pthread
  endif
  
 +# DragonFly
@@ -30,4 +46,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/12/29 14:53:52 ghen Exp $
 +
  # NetBSD
  ifeq ($(shell uname | grep -c "NetBSD"),1)
- CFLAGS  += -D AICCU_TYPE="\"kame\""
+-CFLAGS	+= -D _NETBSD -D AICCU_TYPE="\"kame\""
++CFLAGS	+= -D_NETBSD -DAICCU_TYPE="\"kame\""
+ SRCS	+= ../common/aiccu_kame.c
+ OBJS	+= ../common/aiccu_kame.o
+-CFLAGS	+= -pthread -D _NETBSD_SOURCE
++CFLAGS	+= -pthread -D_NETBSD_SOURCE
+ endif
+ 
+ # OpenBSD
