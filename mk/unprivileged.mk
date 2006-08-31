@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.4 2006/07/15 20:47:43 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.5 2006/08/31 16:21:20 rillig Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -55,8 +55,8 @@ NO_MTREE=		yes
 PKG_CREATE_USERGROUP=	NO
 
 # Override commands that won't work as a regular user.
-CHGRP=			${TRUE} chgrp
-CHOWN=			${TRUE} chown
+TOOLS_PLATFORM.chgrp=	${TRUE} chgrp
+TOOLS_PLATFORM.chown=	${TRUE} chown
 SU_CMD=			${SH} -c
 
 # Do not attempt to modify /etc/shells as a regular user.
