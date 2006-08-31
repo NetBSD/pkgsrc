@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2005/05/23 08:55:56 rillig Exp $
+$NetBSD: patch-ai,v 1.5 2006/08/31 18:04:08 rillig Exp $
 
 --- scripts/lmbench.orig	Fri Jul 31 21:55:19 1998
 +++ scripts/lmbench	Mon Nov 15 14:21:29 1999
@@ -6,7 +6,7 @@ $NetBSD: patch-ai,v 1.4 2005/05/23 08:55:56 rillig Exp $
  
  # Make sure we can find: ./cmd, df, and netstat
 -PATH=.:../../scripts:$PATH:/etc:/usr/etc:/sbin:/usr/sbin
-+PATH=.:@PREFIX@/bin/lmbench:$PATH:/etc:/usr/etc:/sbin:/usr/sbin
++PATH=.:@PREFIX@/libexec/lmbench:$PATH:/etc:/usr/etc:/sbin:/usr/sbin
  export PATH
  
  if [ -f $1 ]
@@ -15,10 +15,10 @@ $NetBSD: patch-ai,v 1.4 2005/05/23 08:55:56 rillig Exp $
  lat_unix
  if [ $MP = Y ]
 -then	if [ $SYNC_MAX = $SYNC_PID ]; then cp hello /tmp/hello; fi
-+then	if [ $SYNC_MAX = $SYNC_PID ]; then cp @PREFIX@/bin/lmbench/hello /tmp/hello; fi
++then	if [ $SYNC_MAX = $SYNC_PID ]; then cp @PREFIX@/libexec/lmbench/hello /tmp/hello; fi
  	synchronize $SYNC/lat_proc
 -else	cp hello /tmp/hello
-+else	cp @PREFIX@/bin/lmbench/hello /tmp/hello
++else	cp @PREFIX@/libexec/lmbench/hello /tmp/hello
  fi
  lat_proc fork
  lat_proc exec

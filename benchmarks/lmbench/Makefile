@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/07/02 20:25:34 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/08/31 18:04:08 rillig Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.bitmover.com/lmbench/
 EXTRACT_SUFX=		.tgz
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake perl:run
 BUILD_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
-INSTALLATION_DIRS=	man/man1 man/man3 man/man8
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man8
 
 post-extract:
 	${INSTALL_SCRIPT} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/scripts/gnu-os
@@ -45,7 +45,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 benchmark:
-	if [ ! -f ${PREFIX}/bin/lmbench/hello ]; then			\
+	if [ ! -f ${PREFIX}/libexec/lmbench/hello ]; then		\
 		${ECHO} "*** This benchmark must be installed to run";	\
 		exit 1;							\
 	fi
