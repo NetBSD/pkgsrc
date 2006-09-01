@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5394 2006/09/01 01:03:08 seb Exp $
+$NetBSD: TODO,v 1.5395 2006/09/01 06:36:20 gson Exp $
 
 Suggested new packages
 ======================
@@ -887,7 +887,6 @@ Suggested package updates
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
-	o p5-Set-IntSpan-1.09 [pkg/34359]
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.17 [pkg/34389]
 	o p5-String-Approx-3.26 [pkg/34414]
