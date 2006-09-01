@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.21 2006/07/03 23:51:01 rillig Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.22 2006/09/01 16:35:39 jmmv Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -45,7 +45,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.21 2006/07/03 23:51:01 rillig Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.22 2006/09/01 16:35:39 jmmv Exp $</pubdate>
 
     <abstract>
 
@@ -93,6 +93,7 @@
     &chap.debug;
     &chap.submit;
     &chap.devfaq;
+    &chap.gnome;
   </part>
 
   <!-- The pkgsrc infrastructure -->

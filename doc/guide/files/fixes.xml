@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.68 2006/08/12 21:29:40 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.69 2006/09/01 16:35:38 jmmv Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1639,20 +1639,68 @@ Changes to the PLIST
       </orderedlist>
     </sect2>
 
+
+    <sect2 id="hicolor-theme">
+      <title>Packages installing hicolor theme icons</title>
+
+      <para>If a package installs images under the
+      <filename>share/icons/hicolor</filename> and/or updates the
+      <filename>share/icons/hicolor/icon-theme.cache</filename> database,
+      you need to take some extra steps to make sure that the shared
+      theme directory is handled appropriately and that the cache
+      database is rebuilt:</para>
+
+      <orderedlist>
+        <listitem>
+	  <para>Include
+	  <filename>../../graphics/hicolor-icon-theme/buildlink3.mk</filename>
+	  instead of its <filename>buildlink3.mk</filename> file.</para>
+        </listitem>
+
+        <listitem>
+          <para>Check the PLIST and remove the entry that refers to the
+	  theme cache.</para>
+        </listitem>
+
+        <listitem>
+	  <para>Ensure that the PLIST does not remove the shared icon
+	  directories from the <filename>share/icons/hicolor</filename>
+	  hierarchy because they will be handled automatically.</para>
+        </listitem>
+      </orderedlist>
+
+      <para>The best way to verify that the PLIST is correct with
+      respect to the last two points is to regenerate it using
+      <command>make print-PLIST</command>.</para>
+    </sect2>
+
+
+    <sect2 id="desktop-files">
+      <title>Packages installing desktop files</title>
+
+      <para>If a package installs <filename>.desktop</filename> files
+      under <filename>share/applications</filename> and these include
+      MIME information, you need to take extra steps to ensure that they
+      are registered into the MIME database:</para>
+
+      <orderedlist>
+        <listitem>
+	  <para>Include
+	  <filename>../../sysutils/desktop-file-utils/desktopdb.mk</filename>.</para>
+        </listitem>
+
+        <listitem>
+          <para>Check the PLIST and remove the entry that refers to the
+	  <filename>share/applications/mimeinfo.cache</filename> file.
+	  It will be handled automatically.</para>
+        </listitem>
+      </orderedlist>
+
+      <para>The best way to verify that the PLIST is correct with
+      respect to the last point is to regenerate it using <command>make
+      print-PLIST</command>.</para>
+    </sect2>
+
   </sect1>
 
-
-  <sect1 id="feedback-to-author">
-    <title>Feedback to the author</title>
-
-    <para>If you have found any bugs in the package you make available,
-      if you had to do special steps to make it run under NetBSD or
-      if you enhanced the software in various other ways, be sure
-      to report these changes back to the original author of the
-      program! With that kind of support, the next release of the
-      program can incorporate these fixes, and people not using the
-      NetBSD packages system can win from your efforts.</para>
-
-    <para>Support the idea of free software!</para>
-  </sect1>
 </chapter>
