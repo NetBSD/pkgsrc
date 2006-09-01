@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/08/24 10:48:59 tron Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/01 19:53:47 rillig Exp $
 
 DISTNAME=		wireshark-0.99.3
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -45,6 +46,12 @@ post-extract:
 # XXX avoid rebuild after dissector patch
 pre-build:
 	${TOUCH} ${WRKSRC}/epan/dissectors/register.c
+
+SUBST_CLASSES+=		shell
+SUBST_STAGE.shell=	post-build
+SUBST_MESSAGE.shell=	Replacing @SHELL@ with a proper shell.
+SUBST_FILES.shell=	idl2wrs
+SUBST_SED.shell=	-e 's,@SHELL@,${SHELL},g'
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
