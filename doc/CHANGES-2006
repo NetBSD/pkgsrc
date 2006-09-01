@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1166 2006/09/01 06:36:20 gson Exp $
+$NetBSD: CHANGES-2006,v 1.1167 2006/09/01 12:03:44 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4140,3 +4140,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Module-CoreList to 2.07 [seb 2006-09-01]
 	Updated audio/libsndfile to 1.0.17 [adam 2006-09-01]
 	Updated devel/p5-Set-IntSpan to 1.09 [gson 2006-09-01]
+	Updated cad/gattrib to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/geda to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/geda-docs to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/geda-examples to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/geda-symbols to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/geda-utils to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/gnetlist to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/gschem to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/gsymcheck to 20060824 [dmcmahill 2006-09-01]
+	Updated cad/libgeda to 20060824 [dmcmahill 2006-09-01]
