@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/09/01 12:00:43 dmcmahill Exp $
 bin/gschem
-info/gschemdoc.info
 man/man1/gschem.1
-share/doc/geda-doc/man/gschem.html
 share/gEDA/bitmap/gschem-bus.xpm
 share/gEDA/bitmap/gschem-comp.xpm
 share/gEDA/bitmap/gschem-copy.xpm
@@ -23,10 +21,14 @@ share/gEDA/bitmap/gschem-warning.png
 share/gEDA/gschem-darkbg
 share/gEDA/gschem-gtkrc
 share/gEDA/gschem-lightbg
+share/gEDA/scheme/auto-place-attribs.scm
 share/gEDA/scheme/auto-uref.scm
 share/gEDA/scheme/generate_netlist.scm
 share/gEDA/scheme/gschem.scm
+share/gEDA/scheme/image.scm
 share/gEDA/scheme/list-keys.scm
+share/gEDA/scheme/pcb.scm
+share/gEDA/scheme/print.scm
 share/gEDA/scheme/print-NB-attribs.scm
 share/gEDA/system-gschemrc
 share/locale/de_DE/LC_MESSAGES/geda-gschem.mo
@@ -38,7 +40,6 @@ share/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
 share/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
 share/locale/ru/LC_MESSAGES/geda-gschem.mo
 @dirrm share/gEDA/bitmap
-@unexec ${RMDIR} %D/share/doc/geda-doc/man 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/01/25 01:51:34 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/09/01 12:00:43 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -574,8 +574,16 @@ share/gEDA/sym/asic/asic-cap-1.sym
 share/gEDA/sym/asic/asic-cap-2.sym
 share/gEDA/sym/asic/asic-cap-3.sym
 share/gEDA/sym/asic/asic-diode-1.sym
+share/gEDA/sym/asic/asic-nhv-1.sym
+share/gEDA/sym/asic/asic-nhhv-1.sym
 share/gEDA/sym/asic/asic-nmos-1.sym
+share/gEDA/sym/asic/asic-nmmv-1.sym
+share/gEDA/sym/asic/asic-nmv-1.sym
+share/gEDA/sym/asic/asic-phhv-1.sym
+share/gEDA/sym/asic/asic-phv-1.sym
 share/gEDA/sym/asic/asic-pmos-1.sym
+share/gEDA/sym/asic/asic-pmv-1.sym
+share/gEDA/sym/asic/asic-pmmv-1.sym
 share/gEDA/sym/asic/asic-res-1.sym
 share/gEDA/sym/asic/asic-res-2.sym
 share/gEDA/sym/asic/asic-res-3.sym
@@ -999,11 +1007,13 @@ share/gEDA/sym/maxim/max1211-1.sym
 share/gEDA/sym/maxim/max122-1.sym
 share/gEDA/sym/maxim/max12527-1.sym
 share/gEDA/sym/maxim/max12528-1.sym
+share/gEDA/sym/maxim/max12529-1.sym
 share/gEDA/sym/maxim/max12553-1.sym
 share/gEDA/sym/maxim/max12554-1.sym
 share/gEDA/sym/maxim/max12555-1.sym
 share/gEDA/sym/maxim/max12557-1.sym
 share/gEDA/sym/maxim/max12558-1.sym
+share/gEDA/sym/maxim/max12559-1.sym
 share/gEDA/sym/maxim/max135-1.sym
 share/gEDA/sym/maxim/max1407-1.sym
 share/gEDA/sym/maxim/max147-1.sym

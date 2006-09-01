@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2006/01/25 01:51:34 dmcmahill Exp $
+$NetBSD: distinfo,v 1.18 2006/09/01 12:00:43 dmcmahill Exp $
 
-SHA1 (geda/geda-gnetlist-20060123.tar.gz) = 7f9df9a5a8338b7eb1276fb97115cac9b8f0c2eb
-RMD160 (geda/geda-gnetlist-20060123.tar.gz) = 4b80f7955b61c4c15e65bad36d6a6e19d136f677
-Size (geda/geda-gnetlist-20060123.tar.gz) = 323201 bytes
+SHA1 (geda/geda-gnetlist-20060824.tar.gz) = 4c5916dbfe31feba21976d87c015ec41237b93c7
+RMD160 (geda/geda-gnetlist-20060824.tar.gz) = 26ea8bb2ea08664cd30a1af531b4c11eeae61346
+Size (geda/geda-gnetlist-20060824.tar.gz) = 332739 bytes
