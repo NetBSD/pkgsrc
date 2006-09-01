@@ -31,7 +31,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2006 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.21 2006/07/03 23:51:01 rillig Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.22 2006/09/01 16:35:39 jmmv Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -170,6 +170,10 @@
 <dt><span class="sect1"><a href="#components.Makefile">9.1. <code class="filename">Makefile</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.distinfo">9.2. <code class="filename">distinfo</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.patches">9.3. patches/*</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#components.patches.guidelines">9.3.1. Patching guidelines</a></span></dt>
+<dt><span class="sect2"><a href="#components.patches.feedback">9.3.2. Feedback to the author</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#other-mandatory-files">9.4. Other mandatory files</a></span></dt>
 <dt><span class="sect1"><a href="#components.optional">9.5. Optional files</a></span></dt>
 <dd><dl>
@@ -328,8 +332,9 @@
 <dt><span class="sect2"><a href="#intltool">17.5.15. Packages using intltool</a></span></dt>
 <dt><span class="sect2"><a href="#startup-scripts">17.5.16. Packages installing startup scripts</a></span></dt>
 <dt><span class="sect2"><a href="#tex-packages">17.5.17. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#hicolor-theme">17.5.18. Packages installing hicolor theme icons</a></span></dt>
+<dt><span class="sect2"><a href="#desktop-files">17.5.19. Packages installing desktop files</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#feedback-to-author">17.6. Feedback to the author</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#debug">18. Debugging</a></span></dt>
 <dt><span class="chapter"><a href="#submit">19. Submitting and Committing</a></span></dt>
@@ -342,44 +347,51 @@
 <dt><span class="sect1"><a href="#moving-package">19.6. Moving a package in pkgsrc</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#devfaq">20. Frequently Asked Questions</a></span></dt>
+<dt><span class="chapter"><a href="#gnome">21. GNOME packaging and porting</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#meta-packages">21.1. Meta packages</a></span></dt>
+<dt><span class="sect1"><a href="#new-package">21.2. Packaging a GNOME application</a></span></dt>
+<dt><span class="sect1"><a href="#full-update">21.3. Updating GNOME to a newer version</a></span></dt>
+<dt><span class="sect1"><a href="#patching">21.4. Patching guidelines</a></span></dt>
+</dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#infrastructure">III. The pkgsrc infrastructure internals</a></span></dt>
 <dd><dl>
-<dt><span class="chapter"><a href="#infr.design">21. Design of the pkgsrc infrastructure</a></span></dt>
+<dt><span class="chapter"><a href="#infr.design">22. Design of the pkgsrc infrastructure</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#infr.vardef">21.1. The meaning of variable definitions</a></span></dt>
-<dt><span class="sect1"><a href="#infr.vardef.problems">21.2. Avoiding problems before they arise</a></span></dt>
-<dt><span class="sect1"><a href="#infr.var">21.3. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">22.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">22.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">22.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">21.3.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">21.3.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">22.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">22.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">21.4. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">21.5. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">22.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">22.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.5.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.5.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">22.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">22.5.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.order">21.6. The order in which files are loaded</a></span></dt>
+<dt><span class="sect1"><a href="#infr.order">22.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">21.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">21.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
-</dl></dd>
-</dl></dd>
-<dt><span class="chapter"><a href="#regression">22. Regression tests</a></span></dt>
-<dd><dl>
-<dt><span class="sect1"><a href="#regression.descr">22.1. The regression tests framework</a></span></dt>
-<dt><span class="sect1"><a href="#regression.run">22.2. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">22.3. Adding a new regression test</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">22.3.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">22.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">22.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#porting">23. Porting pkgsrc</a></span></dt>
+<dt><span class="chapter"><a href="#regression">23. Regression tests</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#regression.descr">23.1. The regression tests framework</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">23.2. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">23.3. Adding a new regression test</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#regression.fun.override">23.3.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">23.3.2. Helper functions</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="#porting">24. Porting pkgsrc</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="appendix"><a href="#examples">A. A simple example package: bison</a></span></dt>
@@ -422,6 +434,10 @@ source packages</a></span></dt>
 <dt>1.1. <a href="#supported-platforms">Platforms supported by pkgsrc</a>
 </dt>
 <dt>3.1. <a href="#binary-kits">Binary kits and available packages</a>
+</dt>
+<dt>9.1. <a href="#patch-examples">Patching examples</a>
+</dt>
+<dt>21.1. <a href="#plist-handling">PLIST handling for GNOME packages</a>
 </dt>
 </dl>
 </div>
@@ -1240,7 +1256,7 @@ file and inspect the contents before extracting it.
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="darwin"></a>3.3.1. Darwin (Mac OS X)</h3></div></div></div>
-<p>Darwin 5.x and 6.x are supported. There are two methods of using
+<p>Darwin 5.x and up are supported. There are two methods of using
 	pkgsrc on Mac OS X, by using a <a href="#platform.osx-image" title="3.3.1.1. Using a disk image">disk
 	  image</a>, or a <a href="#platform.osx-ufs" title="3.3.1.2. Using a UFS partition">UFS
 	  partition</a>.</p>
@@ -1255,18 +1271,23 @@ file and inspect the contents before extracting it.
 	at boot time, where you must manually mount a disk image.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>You cannot use a HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the file system to be case-sensitive, and HFS+ is not.</p>
+<p>You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc currently
+	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ file system as found in Darwin 7.0 and newer.</p>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="platform.osx-image"></a>3.3.1.1. Using a disk image</h4></div></div></div>
 <p>Create the disk image:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd pkgsrc/bootstrap</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>./ufsdiskimage create ~/Documents/NetBSD 512</code></strong> # megabytes - season to taste
-<code class="prompt">#</code> <strong class="userinput"><code>./ufsdiskimage mount ~/Documents/NetBSD</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage create ~/Documents/NetBSD 512</code></strong> # megabytes - season to taste
+<code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage mount ~/Documents/NetBSD</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>sudo chown `id -u`:`id -g` /Volumes/NetBSD</code></strong></pre>
-<p>That's it!</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  It will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.</p>
+</div>
+<p>Allow suid and synchronous writes:</p>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sudo mount -u -o suid,sync /Volumes/NetBSD</code></strong></pre>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
@@ -2059,7 +2080,7 @@ to your <code class="filename">mk.conf</code>.
 <p>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
         <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to find some examples
-        &#8212; in particular, look for the <code class="varname">MASTER_SORT</code>,
+        &mdash; in particular, look for the <code class="varname">MASTER_SORT</code>,
         <code class="varname">MASTER_SORT_REGEX</code> and
         <code class="varname">INET_COUNTRY</code> definitions.  This may save some of your
         bandwidth and time.</p>
@@ -2320,7 +2341,7 @@ You can now enter:
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2793,7 +2814,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -3449,6 +3470,10 @@ a security check before building any package.  See
 <dt><span class="sect1"><a href="#components.Makefile">9.1. <code class="filename">Makefile</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.distinfo">9.2. <code class="filename">distinfo</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.patches">9.3. patches/*</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#components.patches.guidelines">9.3.1. Patching guidelines</a></span></dt>
+<dt><span class="sect2"><a href="#components.patches.feedback">9.3.2. Feedback to the author</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#other-mandatory-files">9.4. Other mandatory files</a></span></dt>
 <dt><span class="sect1"><a href="#components.optional">9.5. Optional files</a></span></dt>
 <dd><dl>
@@ -3607,8 +3632,9 @@ a security check before building any package.  See
 <dt><span class="sect2"><a href="#intltool">17.5.15. Packages using intltool</a></span></dt>
 <dt><span class="sect2"><a href="#startup-scripts">17.5.16. Packages installing startup scripts</a></span></dt>
 <dt><span class="sect2"><a href="#tex-packages">17.5.17. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#hicolor-theme">17.5.18. Packages installing hicolor theme icons</a></span></dt>
+<dt><span class="sect2"><a href="#desktop-files">17.5.19. Packages installing desktop files</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#feedback-to-author">17.6. Feedback to the author</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#debug">18. Debugging</a></span></dt>
 <dt><span class="chapter"><a href="#submit">19. Submitting and Committing</a></span></dt>
@@ -3621,6 +3647,13 @@ a security check before building any package.  See
 <dt><span class="sect1"><a href="#moving-package">19.6. Moving a package in pkgsrc</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#devfaq">20. Frequently Asked Questions</a></span></dt>
+<dt><span class="chapter"><a href="#gnome">21. GNOME packaging and porting</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#meta-packages">21.1. Meta packages</a></span></dt>
+<dt><span class="sect1"><a href="#new-package">21.2. Packaging a GNOME application</a></span></dt>
+<dt><span class="sect1"><a href="#full-update">21.3. Updating GNOME to a newer version</a></span></dt>
+<dt><span class="sect1"><a href="#patching">21.4. Patching guidelines</a></span></dt>
+</dl></dd>
 </dl>
 </div>
 </div>
@@ -3717,6 +3750,10 @@ a security check before building any package.  See
 <dt><span class="sect1"><a href="#components.Makefile">9.1. <code class="filename">Makefile</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.distinfo">9.2. <code class="filename">distinfo</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.patches">9.3. patches/*</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#components.patches.guidelines">9.3.1. Patching guidelines</a></span></dt>
+<dt><span class="sect2"><a href="#components.patches.feedback">9.3.2. Feedback to the author</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#other-mandatory-files">9.4. Other mandatory files</a></span></dt>
 <dt><span class="sect1"><a href="#components.optional">9.5. Optional files</a></span></dt>
 <dd><dl>
@@ -3919,11 +3956,6 @@ a security check before building any package.  See
 <p>When you have finished a package, remember to generate the checksums
       for the patch files by using the <span><strong class="command">make makepatchsum</strong></span>
       command, see <a href="#components.distinfo" title="9.2. distinfo">Section 9.2, &#8220;<code class="filename">distinfo</code>&#8221;</a>.</p>
-<p>When adding a patch that corrects a problem in the distfile (rather
-      than e.g. enforcing pkgsrc's view of where man pages should go), send
-      the patch as a bug report to the maintainer.  This benefits
-      non-pkgsrc users of the package, and usually enables removing
-      the patch in future version.</p>
 <p>Patch files that are distributed by the author or other
       maintainers can be listed in
       <code class="varname">$PATCHFILES</code>. </p>
@@ -3939,6 +3971,128 @@ a security check before building any package.  See
       it in <code class="filename">$LOCALPATCHES/graphics/png/mypatch</code>. All
       files in the named directory are expected to be patch files, and
       <span class="emphasis"><em>they are applied after pkgsrc patches are applied</em></span>.</p>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="components.patches.guidelines"></a>9.3.1. Patching guidelines</h3></div></div></div>
+<p>When fixing a portability issue in the code do not use
+      preprocessor magic to check for the current operating system nor
+      platform.  Doing so hurts portability to other platforms because
+      the OS-specific details are not abstracted appropriately.</p>
+<p>The general rule to follow is: instead of checking for the
+      operating system the application is being built on, check for the
+      specific <span class="emphasis"><em>features</em></span> you need.  For example,
+      instead of assuming that kqueue is available under NetBSD and
+      using the <code class="varname">__NetBSD__</code> macro to conditionalize
+      kqueue support, add a check that detects kqueue itself &mdash;
+      yes, this generally involves patching the
+      <span><strong class="command">configure</strong></span> script.  There is absolutely nothing
+      that prevents some OSes from adopting interfaces from other OSes
+      (e.g. Linux implementing kqueue), something that the above checks
+      cannot take into account.</p>
+<p>Of course, checking for features generally involves more
+      work on the developer's side, but the resulting changes are
+      clearner and there are chances they will work on many other
+      platforms.  Not to mention that there are higher chances of being
+      later integrated into the mainstream sources.  Remember:
+      <span class="emphasis"><em>It doesn't work unless it is right!</em></span></p>
+<p>Some typical examples:</p>
+<div class="table">
+<a name="patch-examples"></a><p class="title"><b>Table 9.1. Patching examples</b></p>
+<div class="table-contents"><table summary="Patching examples" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Where</th>
+<th>Incorrect</th>
+<th>Correct</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>configure script</td>
+<td>
+		<pre class="programlisting">case ${target_os} in
+      netbsd*) have_kvm=yes ;;
+      *)       have_kvm=no  ;;
+  esac</pre>
+	      </td>
+<td>
+		<pre class="programlisting">AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)</pre>
+	      </td>
+</tr>
+<tr>
+<td>C source file</td>
+<td>
+		<pre class="programlisting">#if defined(__NetBSD__)
+  #  include &lt;sys/event.h&gt;
+  #endif</pre>
+	      </td>
+<td>
+		<pre class="programlisting">#if defined(HAVE_SYS_EVENT_H)
+  #  include &lt;sys/event.h&gt;
+  #endif</pre>
+	      </td>
+</tr>
+<tr>
+<td>C source file</td>
+<td>
+<pre class="programlisting">int
+  monitor_file(...)
+  {
+  #if defined(__NetBSD__)
+      int fd = kqueue();
+      ...
+  #else
+      ...
+  #endif
+  }</pre>
+	      </td>
+<td>
+		<pre class="programlisting">int
+  monitor_file(...)
+  {
+  #if defined(HAVE_KQUEUE)
+      int fd = kqueue();
+      ...
+  #else
+      ...
+  #endif
+  }</pre>
+	      </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><p>For more information, please read the <span class="emphasis"><em>Making
+      packager-friendly software</em></span> article (<a href="http://www.onlamp.com/pub/a/onlamp/2005/03/31/packaging.html" target="_top">part
+      1</a>, <a href="http://www.oreillynet.com/pub/a/onlamp/2005/04/28/packaging2.html" target="_top">part
+      2</a>).  It summarizes multiple details on how to make
+      software easier to package; all the suggestions in it were
+      collected from our experience in pkgsrc work, so they are possibly
+      helpful when creating patches too.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="components.patches.feedback"></a>9.3.2. Feedback to the author</h3></div></div></div>
+<p>Always, always, <span class="strong"><strong>always</strong></span>
+      feed back any <span class="emphasis"><em>portability fixes</em></span> or
+      improvements you do to a package to the mainstream developers.
+      This is the only way to get their attention on portability issues
+      and to ensure that future versions can be built out-of-the box on
+      NetBSD.  Furthermore, any user that gets newer distfiles will get
+      the fixes straight from the packaged code.</p>
+<p>This generally involves cleaning up the patches as described
+      in the following section (because sometimes the patches that are
+      added to pkgsrc are quick hacks), filling bug reports in the
+      appropriate trackers for the projects and working with the
+      mainstream authors to accept your changes.  It is
+      <span class="emphasis"><em>extremely important</em></span> that you do it so that
+      the packages in pkgsrc are kept simple and thus further changes
+      can be done without much hassle.</p>
+<p>Support the idea of free software!</p>
+</div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -4134,7 +4288,7 @@ a security check before building any package.  See
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -6608,8 +6762,9 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#intltool">17.5.15. Packages using intltool</a></span></dt>
 <dt><span class="sect2"><a href="#startup-scripts">17.5.16. Packages installing startup scripts</a></span></dt>
 <dt><span class="sect2"><a href="#tex-packages">17.5.17. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#hicolor-theme">17.5.18. Packages installing hicolor theme icons</a></span></dt>
+<dt><span class="sect2"><a href="#desktop-files">17.5.19. Packages installing desktop files</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#feedback-to-author">17.6. Feedback to the author</a></span></dt>
 </dl>
 </div>
 <div class="sect1" lang="en">
@@ -7987,18 +8142,47 @@ Changes to the PLIST
             they will be removed only by the teTeX-bin package.</p></li>
 </ol></div>
 </div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="hicolor-theme"></a>17.5.18. Packages installing hicolor theme icons</h3></div></div></div>
+<p>If a package installs images under the
+      <code class="filename">share/icons/hicolor</code> and/or updates the
+      <code class="filename">share/icons/hicolor/icon-theme.cache</code> database,
+      you need to take some extra steps to make sure that the shared
+      theme directory is handled appropriately and that the cache
+      database is rebuilt:</p>
+<div class="orderedlist"><ol type="1">
+<li><p>Include
+	  <code class="filename">../../graphics/hicolor-icon-theme/buildlink3.mk</code>
+	  instead of its <code class="filename">buildlink3.mk</code> file.</p></li>
+<li><p>Check the PLIST and remove the entry that refers to the
+	  theme cache.</p></li>
+<li><p>Ensure that the PLIST does not remove the shared icon
+	  directories from the <code class="filename">share/icons/hicolor</code>
+	  hierarchy because they will be handled automatically.</p></li>
+</ol></div>
+<p>The best way to verify that the PLIST is correct with
+      respect to the last two points is to regenerate it using
+      <span><strong class="command">make print-PLIST</strong></span>.</p>
 </div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="feedback-to-author"></a>17.6. Feedback to the author</h2></div></div></div>
-<p>If you have found any bugs in the package you make available,
-      if you had to do special steps to make it run under NetBSD or
-      if you enhanced the software in various other ways, be sure
-      to report these changes back to the original author of the
-      program! With that kind of support, the next release of the
-      program can incorporate these fixes, and people not using the
-      NetBSD packages system can win from your efforts.</p>
-<p>Support the idea of free software!</p>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="desktop-files"></a>17.5.19. Packages installing desktop files</h3></div></div></div>
+<p>If a package installs <code class="filename">.desktop</code> files
+      under <code class="filename">share/applications</code> and these include
+      MIME information, you need to take extra steps to ensure that they
+      are registered into the MIME database:</p>
+<div class="orderedlist"><ol type="1">
+<li><p>Include
+	  <code class="filename">../../sysutils/desktop-file-utils/desktopdb.mk</code>.</p></li>
+<li><p>Check the PLIST and remove the entry that refers to the
+	  <code class="filename">share/applications/mimeinfo.cache</code> file.
+	  It will be handled automatically.</p></li>
+</ol></div>
+<p>The best way to verify that the PLIST is correct with
+      respect to the last point is to regenerate it using <span><strong class="command">make
+      print-PLIST</strong></span>.</p>
+</div>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -8285,36 +8469,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2698292">What is the difference between
+<dt>20.1. <a href="#id2698635">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2698328">What is the difference between
+<dt>20.2. <a href="#id2698672">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2698366">What is the difference between
+<dt>20.3. <a href="#id2698710">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2698404">What is the difference between
+<dt>20.4. <a href="#id2698747">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2698422">Why does make show-var
+<dt>20.5. <a href="#id2698765">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2698450">What does
+<dt>20.6. <a href="#id2698861">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2698524">Which mailing lists are there for package
+<dt>20.7. <a href="#id2699004">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2698561">Where is the pkgsrc
+<dt>20.8. <a href="#id2699041">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -8323,7 +8507,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698292"></a><a name="id2698293"></a><b>20.1.</b>
+<a name="id2698635"></a><a name="id2698636"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8339,7 +8523,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698328"></a><a name="id2698329"></a><b>20.2.</b>
+<a name="id2698672"></a><a name="id2698673"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8357,7 +8541,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698366"></a><a name="id2698368"></a><b>20.3.</b>
+<a name="id2698710"></a><a name="id2698711"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8375,7 +8559,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698404"></a><a name="id2698405"></a><b>20.4.</b>
+<a name="id2698747"></a><a name="id2698748"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8388,7 +8572,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698422"></a><a name="id2698423"></a><b>20.5.</b>
+<a name="id2698765"></a><a name="id2698766"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8404,7 +8588,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698450"></a><a name="id2698451"></a><b>20.6.</b>
+<a name="id2698861"></a><a name="id2698862"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8428,7 +8612,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698524"></a><a name="id2698525"></a><b>20.7.</b>
+<a name="id2699004"></a><a name="id2699005"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8453,7 +8637,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2698561"></a><a name="id2698562"></a><b>20.8.</b>
+<a name="id2699041"></a><a name="id2699042"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -8501,6 +8685,291 @@ place.</p></li>
 </table>
 </div>
 </div>
+<div class="chapter" lang="en">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="gnome"></a>Chapter 21. GNOME packaging and porting</h2></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl>
+<dt><span class="sect1"><a href="#meta-packages">21.1. Meta packages</a></span></dt>
+<dt><span class="sect1"><a href="#new-package">21.2. Packaging a GNOME application</a></span></dt>
+<dt><span class="sect1"><a href="#full-update">21.3. Updating GNOME to a newer version</a></span></dt>
+<dt><span class="sect1"><a href="#patching">21.4. Patching guidelines</a></span></dt>
+</dl>
+</div>
+<p>Quoting <a href="http://www.gnome.org/" target="_top">GNOME's web
+site</a>:</p>
+<div class="blockquote"><blockquote class="blockquote"><p>The GNOME project provides two things: The GNOME desktop
+  environment, an intuitive and attractive desktop for users, and the
+  GNOME development platform, an extensive framework for building
+  applications that integrate into the rest of the desktop.</p></blockquote></div>
+<p>pkgsrc provides a seamless way to automatically build and install
+a complete GNOME environment <span class="emphasis"><em>under many different
+platforms</em></span>.  We can say with confidence that pkgsrc is one of
+the most advanced build and packaging systems for GNOME due to its
+included technologies buildlink3, the wrappers and tools framework and
+automatic configuration file management.  Lots of efforts are put into
+achieving a completely clean deinstallation of installed software
+components.</p>
+<p>Given that pkgsrc is <a href="http://www.NetBSD.org/" target="_top">NetBSD</a>'s official packaging system,
+the above also means that great efforts are put into making GNOME work
+under this operating system.  Recently, <a href="http://www.dragonflybsd.org/" target="_top">DragonFly BSD</a> also adopted
+pkgsrc as its preferred packaging system, contributing lots of
+portability fixes to make GNOME build and install under it.</p>
+<p>This chapter is aimed at pkgsrc developers and other people
+interested in helping our GNOME porting and packaging efforts.  It
+provides instructions on how to manage the existing packages and some
+important information regarding their internals.</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">We need your help!</h3>
+<p>Should you have some spare cycles to devote to NetBSD, pkgsrc
+  and GNOME and are willing to learn new exciting stuff, please jump
+  straight to the <a href="http://www.NetBSD.org/contrib/projects.html#gnome" target="_top">pending
+  work</a> list!  There is still a long way to go to get a
+  fully-functional GNOME desktop under NetBSD and we need your help to
+  achieve it!</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="meta-packages"></a>21.1. Meta packages</h2></div></div></div>
+<p>pkgsrc includes three GNOME-related meta packages:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-base/README.html" target="_top"><code class="filename">meta-pkgs/gnome-base</code></a>: Provides
+    the core GNOME desktop environment.  It only includes the necessary
+    bits to get it to boot correctly, although it may lack important
+    functionality for daily operation.  The idea behind this package is
+    to let end users build their own configurations on top of this one,
+    first installing this meta package to achieve a functional setup and
+    then adding individual applications.</p></li>
+<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome/README.html" target="_top"><code class="filename">meta-pkgs/gnome</code></a>: Provides a
+    complete installation of the GNOME platform and desktop as defined
+    by the GNOME project; this is based on the components distributed in
+    the <code class="filename">platform/x.y/x.y.z/sources</code> and
+    <code class="filename">desktop/x.y/x.y.z/sources</code> directories of the
+    official FTP server.  Developer-only tools found in those
+    directories are not installed unless required by some other
+    component to work properly.  Similarly, packages from the bindings
+    set (<code class="filename">bindings/x.y/x.y.z/sources</code>) are not pulled
+    in unless required as a dependency for an end-user component.  This
+    package "extends" <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-base/README.html" target="_top"><code class="filename">meta-pkgs/gnome-base</code></a>.</p></li>
+<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-devel/README.html" target="_top"><code class="filename">meta-pkgs/gnome-devel</code></a>:
+    Installs all the tools required to build a GNOME component when
+    fetched from the CVS repository.  These are required to let the
+    <span><strong class="command">autogen.sh</strong></span> scripts work appropriately.</p></li>
+</ul></div>
+<p>In all these packages, the <code class="varname">DEPENDS</code> lines are
+sorted in a way that eases updates: a package may depend on other
+packages listed before it but not on any listed after it.  It is very
+important to keep this order to ease updates so... <span class="emphasis"><em>do not
+change it to alphabetical sorting!</em></span></p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="new-package"></a>21.2. Packaging a GNOME application</h2></div></div></div>
+<p>Almost all GNOME applications are written in C and use a common
+set of tools as their build system.  Things get different with the new
+bindings to other languages (such as Python), but the following will
+give you a general idea on the minimum required tools:</p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>Almost all GNOME applications use the GNU Autotools as their
+    build system.  As a general rule you will need to tell this to your
+    package:</p>
+<pre class="programlisting">GNU_CONFIGURE=yes
+USE_LIBTOOL=yes
+USE_TOOLS+=gmake</pre>
+</li>
+<li>
+<p>If the package uses pkg-config to detect dependencies, add this
+    tool to the list of required utilities:</p>
+<pre class="programlisting">USE_TOOLS+=pkg-config</pre>
+<p>Also use <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/verifypc/README.html" target="_top"><code class="filename">pkgtools/verifypc</code></a> at
+    the end of the build process to ensure that you did not miss to
+    specify any dependency in your package and that the version
+    requirements are all correct.</p>
+</li>
+<li><p>If the package uses intltool, be sure to include the <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/textproc/intltool/buildlink3.mk?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top"><code class="filename">pkgsrc/textproc/intltool/buildlink3.mk</code></a> file
+    to handle dependencies and to force the package to use the latest
+    available version.</p></li>
+<li>
+<p>If the package uses gtk-doc (a documentation generation
+    utility), do <span class="emphasis"><em>not</em></span> add a dependency on it.  The
+    tool is rather big and the distfile should come with pregenerated
+    documentation anyway; if it does not, it is a bug that you ought to
+    report.  For such packages you should disable gtk-doc (unless it is
+    the default) and change the location of installed HTML files:</p>
+<pre class="programlisting">CONFIGURE_ARGS+=--disable-gtk-doc
+CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/doc</pre>
+</li>
+</ul></div>
+<p>GNOME uses multiple <span class="emphasis"><em>shared</em></span> directories and
+files under the installation prefix to maintain databases.  In this
+context, shared means that those exact same directories and files are
+used among several different packages, leading to conflicts in the
+<code class="filename">PLIST</code>.  pkgsrc currently includes functionality to
+handle the most common cases, so you have to forget about using
+<code class="literal">@unexec ${RMDIR}</code> lines in your file lists and
+omitting shared files from them.  If you find yourself doing those,
+<span class="emphasis"><em>your package is most likely incorrect</em></span>.</p>
+<p>The following table lists the common situations that result in
+using shared directories or files.  For each of them, the appropriate
+solution is given.  After applying the solution be sure to
+<span class="emphasis"><em>regenerate the package's file list</em></span> with
+<span><strong class="command">make print-PLIST</strong></span> and ensure it is correct.</p>
+<div class="table">
+<a name="plist-handling"></a><p class="title"><b>Table 21.1. PLIST handling for GNOME packages</b></p>
+<div class="table-contents"><table summary="PLIST handling for GNOME packages" border="1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>If the package...</th>
+<th>Then...</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Installs OMF files under <code class="filename">share/omf</code>.</td>
+<td>See <a href="#scrollkeeper-data-files" title="17.5.10. Packages installing scrollkeeper data files">Section 17.5.10, &#8220;Packages installing scrollkeeper data files&#8221;</a>.</td>
+</tr>
+<tr>
+<td>Installs icons under the
+        <code class="filename">share/icons/hicolor</code> hierarchy or updates
+        <code class="filename">share/icons/hicolor/icon-theme.cache</code>.</td>
+<td>See <a href="#hicolor-theme" title="17.5.18. Packages installing hicolor theme icons">Section 17.5.18, &#8220;Packages installing hicolor theme icons&#8221;</a>.</td>
+</tr>
+<tr>
+<td>Installs files under
+        <code class="filename">share/mime/packages</code>.</td>
+<td>See <a href="#mime-database" title="17.5.14. Packages installing extensions to the MIME database">Section 17.5.14, &#8220;Packages installing extensions to the MIME database&#8221;</a>.</td>
+</tr>
+<tr>
+<td>Installs <code class="filename">.desktop</code> files under
+        <code class="filename">share/applications</code> and these include MIME
+        information.</td>
+<td>See <a href="#desktop-files" title="17.5.19. Packages installing desktop files">Section 17.5.19, &#8220;Packages installing desktop files&#8221;</a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break">
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="full-update"></a>21.3. Updating GNOME to a newer version</h2></div></div></div>
+<p>When seeing GNOME as a whole, there are two kinds of
+updates:</p>
+<div class="variablelist"><dl>
+<dt><span class="term">Major update</span></dt>
+<dd>
+<p>Given that there is still a very long way for GNOME 3 (if it
+      ever appears), we consider a major update one that goes from a
+      <code class="literal">2.X</code> version to a <code class="literal">2.Y</code> one,
+      where <code class="literal">Y</code> is even and greater than
+      <code class="literal">X</code>.  These are hard to achieve because they
+      introduce lots of changes in the components' code and almost all
+      GNOME distfiles are updated to newer versions.  Some of them can
+      even break API and ABI compatibility with the previous major
+      version series.  As a result, the update needs to be done all at
+      once to minimize breakage.</p>
+<p>A major update typically consists of around 80 package
+      updates and the addition of some new ones.</p>
+</dd>
+<dt><span class="term">Minor update</span></dt>
+<dd>
+<p>We consider a minor update one that goes from a
+      <code class="literal">2.A.X</code> version to a <code class="literal">2.A.Y</code>
+      one where <code class="literal">Y</code> is greater than
+      <code class="literal">X</code>.  These are easy to achieve because they do
+      not update all GNOME components, can be done in an incremental way
+      and do not break API nor ABI compatibility.</p>
+<p>A minor update typically consists of around 50 package
+      updates, although the numbers here may vary a lot.</p>
+</dd>
+</dl></div>
+<p>In order to update the GNOME components in pkgsrc to a new stable
+release (either major or minor), the following steps should be
+followed:</p>
+<div class="orderedlist"><ol type="1">
+<li>
+<p>Get a list of all the tarballs that form the new release by
+    using the following commands.  These will leave the full list of the
+    components's distfiles into the <code class="filename">list.txt</code>
+    file:</p>
+<pre class="screen"><code class="prompt">$ </code><strong class="userinput"><code>echo ls "*.tar.bz2" | \
+    ftp -V ftp://ftp.gnome.org/pub/gnome/platform/x.y/x.y.z/sources/ | \
+    awk '{ print $9 }' &gt;list.txt</code></strong>
+<code class="prompt">$ </code><strong class="userinput"><code>echo ls "*.tar.bz2" | \
+    ftp -V ftp://ftp.gnome.org/pub/gnome/desktop/x.y/x.y.z/sources/ | \
+    awk '{ print $9 }' &gt;&gt;list.txt</code></strong></pre>
+</li>
+<li><p>Open each meta package's <code class="filename">Makefile</code> and
+    bump their version to the release you are updating them to.  The
+    three meta packages should be always consistent with versioning.
+    Obviously remove any <code class="varname">PKGREVISION</code>s that might be
+    in them.</p></li>
+<li>
+<p>For each meta package, update all its
+    <code class="varname">DEPENDS</code> lines to match the latest versions as
+    shown by the above commands.  Do <span class="emphasis"><em>not</em></span> list any
+    newer version (even if found in the FTP) because the meta packages
+    are supposed to list the exact versions that form a specific GNOME
+    release.  Exceptions are permitted here if a newer version solves a
+    serious issue in the overall desktop experience; these typically
+    come in the form of a revision bump in pkgsrc, not in newer versions
+    from the developers.</p>
+<p>Packages not listed in the <code class="filename">list.txt</code> file
+    should be updated to the latest version available (if found in
+    pkgsrc).  This is the case, for example, of the dependencies on the
+    GNU Autotools in the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-devel/README.html" target="_top"><code class="filename">meta-pkgs/gnome-devel</code></a> meta package.</p>
+</li>
+<li>
+<p>Generate a patch from the modified meta packages and extract the
+    list of "new" lines.  This will provide you an outline on what
+    packages need to be updated in pkgsrc and in what order:</p>
+<pre class="screen"><code class="prompt">$ </code><strong class="userinput"><code>cvs diff gnome-devel gnome-base gnome | grep '^+D' &gt;todo.txt</code></strong></pre>
+</li>
+<li><p>For major desktop updates it is recommended to zap all your
+    installed packages and start over from scratch at this point.</p></li>
+<li><p>Now comes the longest step by far: iterate over the contents
+    of <code class="filename">todo.txt</code> and update the packages listed in
+    it in order.  For major desktop updates none of these should be
+    commited until the entire set is completed because there are chances
+    of breaking not-yet-updated packages.</p></li>
+<li><p>Once the packages are up to date and working, commit them to
+    the tree one by one with appropriate log messages.  At the end,
+    commit the three meta package updates and all the corresponding
+    changes to the <code class="filename">doc/CHANGES-&lt;YEAR&gt;</code> and
+    <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/doc/TODO?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top"><code class="filename">pkgsrc/doc/TODO</code></a> files.</p></li>
+</ol></div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="patching"></a>21.4. Patching guidelines</h2></div></div></div>
+<p>GNOME is a very big component in pkgsrc which approaches 100
+packages.  Please, it is very important that you always, always,
+<span class="strong"><strong>always</strong></span> feed back any portability
+fixes you do to a GNOME package to the mainstream developers (see <a href="#components.patches.feedback" title="9.3.2. Feedback to the author">Section 9.3.2, &#8220;Feedback to the author&#8221;</a>).  This is the only way to get
+their attention on portability issues and to ensure that future versions
+can be built out-of-the box on NetBSD.  The less custom patches in
+pkgsrc, the easier further updates are.  Those developers in charge of
+issuing major GNOME updates will be grateful if you do that.</p>
+<p>The most common places to report bugs are the <a href="http://bugzilla.gnome.org/" target="_top">GNOME's Bugzilla</a> and the <a href="http://bugzilla.freedesktop.org/" target="_top">freedesktop.org's
+Bugzilla</a>.  Not all components use these to track bugs, but most
+of them do.  Do not be short on your reports: always provide detailed
+explanations of the current failure, how it can be improved to achieve
+maximum portability and, if at all possible, provide a patch against CVS
+head.  The more verbose you are, the higher chances of your patch being
+accepted.</p>
+<p>Also, please avoid using preprocessor magic to fix portability
+issues.  While the FreeBSD GNOME people are doing a great job in porting
+GNOME to their operating system, the official GNOME sources are now
+plagued by conditionals that check for <code class="varname">__FreeBSD__</code>
+and similar macros.  This hurts portability.  Please see our patching
+guidelines (<a href="#components.patches.guidelines" title="9.3.1. Patching guidelines">Section 9.3.1, &#8220;Patching guidelines&#8221;</a>) for more
+details.</p>
+</div>
+</div>
 </div>
 <div class="part" lang="en">
 <div class="titlepage"><div><div><h1 class="title">
@@ -8514,68 +8983,68 @@ place.</p></li>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="chapter"><a href="#infr.design">21. Design of the pkgsrc infrastructure</a></span></dt>
+<dt><span class="chapter"><a href="#infr.design">22. Design of the pkgsrc infrastructure</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#infr.vardef">21.1. The meaning of variable definitions</a></span></dt>
-<dt><span class="sect1"><a href="#infr.vardef.problems">21.2. Avoiding problems before they arise</a></span></dt>
-<dt><span class="sect1"><a href="#infr.var">21.3. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">22.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">22.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">22.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">21.3.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">21.3.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">22.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">22.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">21.4. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">21.5. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">22.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">22.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.5.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.5.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">22.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">22.5.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.order">21.6. The order in which files are loaded</a></span></dt>
+<dt><span class="sect1"><a href="#infr.order">22.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">21.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">21.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
-</dl></dd>
-</dl></dd>
-<dt><span class="chapter"><a href="#regression">22. Regression tests</a></span></dt>
-<dd><dl>
-<dt><span class="sect1"><a href="#regression.descr">22.1. The regression tests framework</a></span></dt>
-<dt><span class="sect1"><a href="#regression.run">22.2. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">22.3. Adding a new regression test</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">22.3.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">22.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">22.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#porting">23. Porting pkgsrc</a></span></dt>
+<dt><span class="chapter"><a href="#regression">23. Regression tests</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#regression.descr">23.1. The regression tests framework</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">23.2. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">23.3. Adding a new regression test</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#regression.fun.override">23.3.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">23.3.2. Helper functions</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="#porting">24. Porting pkgsrc</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
 </dl></dd>
 </dl>
 </div>
 </div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="infr.design"></a>Chapter 21. Design of the pkgsrc infrastructure</h2></div></div></div>
+<a name="infr.design"></a>Chapter 22. Design of the pkgsrc infrastructure</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#infr.vardef">21.1. The meaning of variable definitions</a></span></dt>
-<dt><span class="sect1"><a href="#infr.vardef.problems">21.2. Avoiding problems before they arise</a></span></dt>
-<dt><span class="sect1"><a href="#infr.var">21.3. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">22.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">22.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">22.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">21.3.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">21.3.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">22.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">22.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">21.4. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">21.5. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">22.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">22.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.5.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.5.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">22.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">22.5.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.order">21.6. The order in which files are loaded</a></span></dt>
+<dt><span class="sect1"><a href="#infr.order">22.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">21.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">21.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">22.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">22.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -8585,7 +9054,7 @@ place.</p></li>
 	like.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.vardef"></a>21.1. The meaning of variable definitions</h2></div></div></div>
+<a name="infr.vardef"></a>22.1. The meaning of variable definitions</h2></div></div></div>
 <p>Whenever a variable is defined in the pkgsrc
 	infrastructure, the location and the way of definition provide
 	much information about the intended use of that variable.
@@ -8616,7 +9085,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.vardef.problems"></a>21.2. Avoiding problems before they arise</h2></div></div></div>
+<a name="infr.vardef.problems"></a>22.2. Avoiding problems before they arise</h2></div></div></div>
 <p>All variables that contain lists of things should default
 	to being empty. Two examples that do not follow this rule are
 	<code class="varname">USE_LANGUAGES</code> and
@@ -8640,10 +9109,10 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.var"></a>21.3. Variable evaluation</h2></div></div></div>
+<a name="infr.var"></a>22.3. Variable evaluation</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.var.load"></a>21.3.1. At load time</h3></div></div></div>
+<a name="infr.var.load"></a>22.3.1. At load time</h3></div></div></div>
 <p>Variable evaluation takes place either at load time or at
 	runtime, depending on the context in which they occur. The
 	contexts where variables are evaluated at load time are:</p>
@@ -8685,7 +9154,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.var.run"></a>21.3.2. At runtime</h3></div></div></div>
+<a name="infr.var.run"></a>22.3.2. At runtime</h3></div></div></div>
 <p>After all the files have been loaded, the values of the
 	variables cannot be changed anymore. Variables that are used in
 	the shell commands are expanded at this point.</p>
@@ -8693,7 +9162,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.varspec"></a>21.4. How can variables be specified?</h2></div></div></div>
+<a name="infr.varspec"></a>22.4. How can variables be specified?</h2></div></div></div>
 <p>There are many ways in which the definition and use of a
 	variable can be restricted in order to detect bugs and
 	violations of the (mostly unwritten) policies. See the
@@ -8702,18 +9171,18 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.design.intf"></a>21.5. Designing interfaces for Makefile fragments</h2></div></div></div>
+<a name="infr.design.intf"></a>22.5. Designing interfaces for Makefile fragments</h2></div></div></div>
 <p>Most of the <code class="filename">.mk</code> files fall into one
 	of the following classes. Cases where a file falls into more
 	than one class should be avoided as it often leads to subtle
 	bugs.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.proc"></a>21.5.1. Procedures with parameters</h3></div></div></div>
+<a name="infr.design.intf.proc"></a>22.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
@@ -8743,7 +9212,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.action"></a>21.5.2. Actions taken on behalf of parameters</h3></div></div></div>
+<a name="infr.design.intf.action"></a>22.5.2. Actions taken on behalf of parameters</h3></div></div></div>
 <p>Action files take some input parameters and may define
 	runtime variables. They shall not define loadtime variables.
 	There are action files that are included implicitly by the
@@ -8755,7 +9224,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.order"></a>21.6. The order in which files are loaded</h2></div></div></div>
+<a name="infr.order"></a>22.6. The order in which files are loaded</h2></div></div></div>
 <p>Package <code class="filename">Makefile</code>s usually consist of
 	a set of variable definitions, and include the file
 	<code class="filename">../../mk/bsd.pkg.mk</code> in the very last line.
@@ -8770,7 +9239,7 @@ place.</p></li>
 	are loaded and gives reasons for that order.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.order.prefs"></a>21.6.1. The order in <code class="filename">bsd.prefs.mk</code></h3></div></div></div>
+<a name="infr.order.prefs"></a>22.6.1. The order in <code class="filename">bsd.prefs.mk</code></h3></div></div></div>
 <p>The very first action in <code class="filename">bsd.pkg.mk</code>
 	is to define some essential variables like
 	<code class="varname">OPSYS</code>, <code class="varname">OS_VERSION</code> and
@@ -8797,7 +9266,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.order.pkg"></a>21.6.2. The order in <code class="filename">bsd.pkg.mk</code></h3></div></div></div>
+<a name="infr.order.pkg"></a>22.6.2. The order in <code class="filename">bsd.pkg.mk</code></h3></div></div></div>
 <p>First, <code class="filename">bsd.prefs.mk</code> is loaded.</p>
 <p>Then, the various <code class="filename">*-vars.mk</code> files are
 	loaded, which fill default values for those variables that have
@@ -8829,16 +9298,16 @@ place.</p></li>
 </div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="regression"></a>Chapter 22. Regression tests</h2></div></div></div>
+<a name="regression"></a>Chapter 23. Regression tests</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#regression.descr">22.1. The regression tests framework</a></span></dt>
-<dt><span class="sect1"><a href="#regression.run">22.2. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">22.3. Adding a new regression test</a></span></dt>
+<dt><span class="sect1"><a href="#regression.descr">23.1. The regression tests framework</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">23.2. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">23.3. Adding a new regression test</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">22.3.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.override">23.3.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">23.3.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -8852,12 +9321,12 @@ place.</p></li>
 	how you can add new tests.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.descr"></a>22.1. The regression tests framework</h2></div></div></div>
+<a name="regression.descr"></a>23.1. The regression tests framework</h2></div></div></div>
 <p></p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.run"></a>22.2. Running the regression tests</h2></div></div></div>
+<a name="regression.run"></a>23.2. Running the regression tests</h2></div></div></div>
 <p>You first need to install the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_regress/README.html" target="_top"><code class="filename">pkgtools/pkg_regress</code></a> package, which
 	provides the <span><strong class="command">pkg_regress</strong></span> command. Then you
 	can simply run that command, which will run all tests in the
@@ -8865,7 +9334,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.new"></a>22.3. Adding a new regression test</h2></div></div></div>
+<a name="regression.new"></a>23.3. Adding a new regression test</h2></div></div></div>
 <p>Every directory in the <code class="filename">regress</code>
 	category that contains a file called <code class="filename">spec</code>
 	is considered a regression test. This file is a shell program
@@ -8874,7 +9343,7 @@ place.</p></li>
 	needs.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="regression.fun.override"></a>22.3.1. Overridable functions</h3></div></div></div>
+<a name="regression.fun.override"></a>23.3.1. Overridable functions</h3></div></div></div>
 <p>These functions do not take any parameters. They are all
 	called in &#8220;<span class="quote">set -e</span>&#8221; mode, so you should be careful
 	to check the exitcodes of any commands you run in the
@@ -8901,7 +9370,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="regression.fun.helper"></a>22.3.2. Helper functions</h3></div></div></div>
+<a name="regression.fun.helper"></a>23.3.2. Helper functions</h3></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">exit_status(expected)</code></span></dt>
 <dd><p>This function compares the exitcode of the
@@ -8924,12 +9393,12 @@ place.</p></li>
 </div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="porting"></a>Chapter 23. Porting pkgsrc</h2></div></div></div>
+<a name="porting"></a>Chapter 24. Porting pkgsrc</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
 </dl>
 </div>
 <p>The pkgsrc system has already been ported to many
@@ -8938,7 +9407,7 @@ place.</p></li>
 	portable.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.opsys"></a>23.1. Porting pkgsrc to a new operating system</h2></div></div></div>
+<a name="porting.opsys"></a>24.1. Porting pkgsrc to a new operating system</h2></div></div></div>
 <p>To port pkgsrc to a new operating system (called
 	<code class="literal">MyOS</code> in this example), you need to touch the
 	following files:</p>
@@ -8989,7 +9458,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.compiler"></a>23.2. Adding support for a new compiler</h2></div></div></div>
+<a name="porting.compiler"></a>24.2. Adding support for a new compiler</h2></div></div></div>
 <p>TODO</p>
 </div>
 </div>
