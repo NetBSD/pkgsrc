@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2005/09/30 13:26:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/09/01 06:02:23 adam Exp $
 bin/sndfile-convert
 bin/sndfile-info
 bin/sndfile-play
 bin/sndfile-regtest
 include/sndfile.h
+include/sndfile.hh
 lib/libsndfile.la
 lib/pkgconfig/sndfile.pc
 man/man1/sndfile-convert.1
