@@ -1,16 +1,47 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/31 03:35:25 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/01 14:04:41 obache Exp $
 
 --- Makefile.in.orig	2005-12-11 19:16:14.000000000 +0900
 +++ Makefile.in
-@@ -47,7 +47,7 @@ DOCDIR		= $(datadir)/doc/@PACKAGE@
+@@ -36,6 +36,7 @@ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ LSKFDIR = @lskfdir@
++localedir = @localedir@
+ 
+ DESTDIR =
+ 
+@@ -47,9 +48,9 @@ DOCDIR		= $(datadir)/doc/@PACKAGE@
  LSFMANDIR	= $(datadir)/man
  MANCJDIR	= $(LSFMANDIR)/ja
  MANDIR		= $(mandir)/man1
 -JMANDIR		= $(mandir)/ja/man1
+-LOCALEDIR	= @localedir@
+-LOCALEJDIR	= @localedir@/ja/LC_MESSAGES
 +JMANDIR		= $(mandir)/ja_JP.EUC/man1
- LOCALEDIR	= @localedir@
- LOCALEJDIR	= @localedir@/ja/LC_MESSAGES
++LOCALEDIR	= $(localedir)
++LOCALEJDIR	= $(localedir)/ja/LC_MESSAGES
  #GETTEXT_LIB	      = -lintl
+ 
+ #
+@@ -95,8 +96,7 @@ CC = @CC@
+ #SUBDIRS = perlxs
+ SUBDIRS = 
+ 
+-#CPPFLAGS = -DLOCALEDIR=\""$(localedir)"\"
+-CPPFLAGS = 
++CPPFLAGS = -DLOCALEDIR=\""$(localedir)"\"
+ mkinstalldirs = $(SHELL) $(top_srcdir)/scripts/mkinstalldirs
+ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES = 
+@@ -105,7 +105,7 @@ CONFIG_CLEAN_FILES = 
+ # To enable this feature, you must have GNU gettext. It does not
+ # work with catgets. To enable locale, you must define HAVE_GETENV,
+ # too. Under WIN32 environemt, DEF6 is automatically disabled.
+-#DEF6		= -DUSE_LOCALE
++DEF6		= -DUSE_LOCALE
+ 
+ # Some Hacks. Will be fixed in later release, hopefully.
+ DEF8		= -DUSE_UBUF
 @@ -166,7 +166,7 @@ DEP_FILES =  .deps/skf.P
  #
  # commands
