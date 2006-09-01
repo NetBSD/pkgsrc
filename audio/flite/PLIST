@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 14:18:42 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/01 15:44:44 gdt Exp $
 bin/flite
 bin/flite_time
 include/flite/cst_alloc.h
@@ -39,6 +39,12 @@ include/flite/cst_voice.h
 include/flite/cst_wave.h
 include/flite/flite.h
 include/flite/flite_version.h
+lib/libflite.a
+lib/libflite_cmu_time_awb.a
+lib/libflite_cmu_us_kal.a
+lib/libflite_cmu_us_kal16.a
+lib/libflite_cmulex.a
+lib/libflite_usenglish.a
 share/doc/flite/README
 @dirrm share/doc/flite
 @dirrm include/flite
