@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2006/04/30 17:29:29 adam Exp $
+$NetBSD: patch-aa,v 1.13 2006/09/01 06:02:23 adam Exp $
 
---- src/Makefile.in.orig	2006-04-30 04:48:33.000000000 +0200
+--- src/Makefile.in.orig	2006-08-31 12:55:38.000000000 +0200
 +++ src/Makefile.in
-@@ -838,7 +838,7 @@ cygsndfile.def: create_symbols_file.py
+@@ -864,7 +864,7 @@ cygsndfile.def: create_symbols_file.py
  	./create_symbols_file.py cygwin $(VERSION) > cygsndfile.def
  
  # Fake dependancy to force the creation of these files.

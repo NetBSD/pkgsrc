@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.20 2006/04/30 17:29:29 adam Exp $
+$NetBSD: distinfo,v 1.21 2006/09/01 06:02:23 adam Exp $
 
-SHA1 (libsndfile-1.0.16.tar.gz) = b844603fe5106459663123630dc42abbdd06e215
-RMD160 (libsndfile-1.0.16.tar.gz) = c77c33284f0083e0375b918edea2cc13a99774f6
-Size (libsndfile-1.0.16.tar.gz) = 857117 bytes
-SHA1 (patch-aa) = 129875d506665a386f97e6fddc04ab41f372208b
+SHA1 (libsndfile-1.0.17.tar.gz) = 2f66798d596a15491fbd1191ded8125ed71ef411
+RMD160 (libsndfile-1.0.17.tar.gz) = ae93822a4c587dcdd7c70d043d2a38ed2fe3a188
+Size (libsndfile-1.0.17.tar.gz) = 819456 bytes
+SHA1 (patch-aa) = a3bb33cc28c10c9aa23a0b066339a512dbd7b0e2
 SHA1 (patch-ab) = 007a93229bc8cbcb1b27e6223e8c10e8a2e3c6eb
-SHA1 (patch-ac) = 1faf09c8760981316c562dd2172b8e02546cc9fe
-SHA1 (patch-ad) = 444f55c4fd03e1bd4620aefd168e974a2783dcf3
+SHA1 (patch-ac) = 7d49a0da2dfa9470d188873133526e8ad851c9a7
+SHA1 (patch-ad) = b730de6bb0716bece5f83c3100f9fc0f8eb2ae7d
 SHA1 (patch-ae) = 628700514d3d2e6e12abb182c697311a233c1bd9
 SHA1 (patch-af) = 9ac0dd446a2f24c2d39e20063489a3b778fcda36
 SHA1 (patch-ag) = 10d0fcda9377fc6afa2dce9e4782f49889a4f4a3
+SHA1 (patch-ah) = 8c936316ca1191f8893579a562ff705c8dde6f92
