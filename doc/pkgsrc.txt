@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2006 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.21 2006/07/03 23:51:01 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.22 2006/09/01 16:35:39 jmmv Exp $
 
 Abstract
 
@@ -151,6 +151,10 @@ II. The pkgsrc developer's guide
         9.1. Makefile
         9.2. distinfo
         9.3. patches/*
+
+            9.3.1. Patching guidelines
+            9.3.2. Feedback to the author
+
         9.4. Other mandatory files
         9.5. Optional files
 
@@ -317,8 +321,8 @@ II. The pkgsrc developer's guide
             17.5.15. Packages using intltool
             17.5.16. Packages installing startup scripts
             17.5.17. Packages installing TeX modules
-
-        17.6. Feedback to the author
+            17.5.18. Packages installing hicolor theme icons
+            17.5.19. Packages installing desktop files
 
     18. Debugging
     19. Submitting and Committing
@@ -331,42 +335,48 @@ II. The pkgsrc developer's guide
         19.6. Moving a package in pkgsrc
 
     20. Frequently Asked Questions
+    21. GNOME packaging and porting
+
+        21.1. Meta packages
+        21.2. Packaging a GNOME application
+        21.3. Updating GNOME to a newer version
+        21.4. Patching guidelines
 
 III. The pkgsrc infrastructure internals
 
-    21. Design of the pkgsrc infrastructure
+    22. Design of the pkgsrc infrastructure
 
-        21.1. The meaning of variable definitions
-        21.2. Avoiding problems before they arise
-        21.3. Variable evaluation
+        22.1. The meaning of variable definitions
+        22.2. Avoiding problems before they arise
+        22.3. Variable evaluation
 
-            21.3.1. At load time
-            21.3.2. At runtime
+            22.3.1. At load time
+            22.3.2. At runtime
 
-        21.4. How can variables be specified?
-        21.5. Designing interfaces for Makefile fragments
+        22.4. How can variables be specified?
+        22.5. Designing interfaces for Makefile fragments
 
-            21.5.1. Procedures with parameters
-            21.5.2. Actions taken on behalf of parameters
+            22.5.1. Procedures with parameters
+            22.5.2. Actions taken on behalf of parameters
 
-        21.6. The order in which files are loaded
+        22.6. The order in which files are loaded
 
-            21.6.1. The order in bsd.prefs.mk
-            21.6.2. The order in bsd.pkg.mk
+            22.6.1. The order in bsd.prefs.mk
+            22.6.2. The order in bsd.pkg.mk
 
-    22. Regression tests
+    23. Regression tests
 
-        22.1. The regression tests framework
-        22.2. Running the regression tests
-        22.3. Adding a new regression test
+        23.1. The regression tests framework
+        23.2. Running the regression tests
+        23.3. Adding a new regression test
 
-            22.3.1. Overridable functions
-            22.3.2. Helper functions
+            23.3.1. Overridable functions
+            23.3.2. Helper functions
 
-    23. Porting pkgsrc
+    24. Porting pkgsrc
 
-        23.1. Porting pkgsrc to a new operating system
-        23.2. Adding support for a new compiler
+        24.1. Porting pkgsrc to a new operating system
+        24.2. Adding support for a new compiler
 
 A. A simple example package: bison
 
@@ -402,6 +412,8 @@ List of Tables
 
 1.1. Platforms supported by pkgsrc
 3.1. Binary kits and available packages
+9.1. Patching examples
+21.1. PLIST handling for GNOME packages
 
 Chapter 1. What is pkgsrc?
 
@@ -975,7 +987,7 @@ Here are some platform-specific notes you should be aware of.
 
 3.3.1. Darwin (Mac OS X)
 
-Darwin 5.x and 6.x are supported. There are two methods of using pkgsrc on Mac
+Darwin 5.x and up are supported. There are two methods of using pkgsrc on Mac
 OS X, by using a disk image, or a UFS partition.
 
 Before you start, you will need to download and install the Mac OS X Developer
@@ -991,19 +1003,28 @@ manually mount a disk image.
 
 Note
 
-You cannot use a HFS+ file system for pkgsrc, because pkgsrc currently requires
-the file system to be case-sensitive, and HFS+ is not.
+You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc
+currently requires the file system to be case-sensitive. You can, however, use
+a case-sensitive HFS+ file system as found in Darwin 7.0 and newer.
 
 3.3.1.1. Using a disk image
 
 Create the disk image:
 
 # cd pkgsrc/bootstrap
-# ./ufsdiskimage create ~/Documents/NetBSD 512 # megabytes - season to taste
-# ./ufsdiskimage mount ~/Documents/NetBSD
+# ./darwindiskimage create ~/Documents/NetBSD 512 # megabytes - season to taste
+# ./darwindiskimage mount ~/Documents/NetBSD
 # sudo chown `id -u`:`id -g` /Volumes/NetBSD
 
-That's it!
+Note
+
+darwindiskimage will mount the filesystem nosuid, which will cause problems for
+packages that depend on setgid. It will also mount the filesystem asynchronous,
+which is somewhat dangerous according to the mount(8) man page.
+
+Allow suid and synchronous writes:
+
+# sudo mount -u -o suid,sync /Volumes/NetBSD
 
 3.3.1.2. Using a UFS partition
 
@@ -2785,6 +2806,10 @@ Table of Contents
     9.1. Makefile
     9.2. distinfo
     9.3. patches/*
+
+        9.3.1. Patching guidelines
+        9.3.2. Feedback to the author
+
     9.4. Other mandatory files
     9.5. Optional files
 
@@ -2950,8 +2975,8 @@ Table of Contents
         17.5.15. Packages using intltool
         17.5.16. Packages installing startup scripts
         17.5.17. Packages installing TeX modules
-
-    17.6. Feedback to the author
+        17.5.18. Packages installing hicolor theme icons
+        17.5.19. Packages installing desktop files
 
 18. Debugging
 19. Submitting and Committing
@@ -2964,6 +2989,12 @@ Table of Contents
     19.6. Moving a package in pkgsrc
 
 20. Frequently Asked Questions
+21. GNOME packaging and porting
+
+    21.1. Meta packages
+    21.2. Packaging a GNOME application
+    21.3. Updating GNOME to a newer version
+    21.4. Patching guidelines
 
 Chapter 8. Creating a new pkgsrc package from scratch
 
@@ -3039,6 +3070,10 @@ Table of Contents
 9.1. Makefile
 9.2. distinfo
 9.3. patches/*
+
+    9.3.1. Patching guidelines
+    9.3.2. Feedback to the author
+
 9.4. Other mandatory files
 9.5. Optional files
 
@@ -3205,11 +3240,6 @@ When you have finished a package, remember to generate the checksums for the
 patch files by using the make makepatchsum command, see Section 9.2, "distinfo"
 .
 
-When adding a patch that corrects a problem in the distfile (rather than e.g.
-enforcing pkgsrc's view of where man pages should go), send the patch as a bug
-report to the maintainer. This benefits non-pkgsrc users of the package, and
-usually enables removing the patch in future version.
-
 Patch files that are distributed by the author or other maintainers can be
 listed in $PATCHFILES.
 
@@ -3221,6 +3251,82 @@ as $LOCALPATCHES/$PKGPATH). For example, if you want to keep a private patch
 for pkgsrc/graphics/png, keep it in $LOCALPATCHES/graphics/png/mypatch. All
 files in the named directory are expected to be patch files, and they are
 applied after pkgsrc patches are applied.
+
+9.3.1. Patching guidelines
+
+When fixing a portability issue in the code do not use preprocessor magic to
+check for the current operating system nor platform. Doing so hurts portability
+to other platforms because the OS-specific details are not abstracted
+appropriately.
+
+The general rule to follow is: instead of checking for the operating system the
+application is being built on, check for the specific features you need. For
+example, instead of assuming that kqueue is available under NetBSD and using
+the __NetBSD__ macro to conditionalize kqueue support, add a check that detects
+kqueue itself ? yes, this generally involves patching the configure script.
+There is absolutely nothing that prevents some OSes from adopting interfaces
+from other OSes (e.g. Linux implementing kqueue), something that the above
+checks cannot take into account.
+
+Of course, checking for features generally involves more work on the
+developer's side, but the resulting changes are clearner and there are chances
+they will work on many other platforms. Not to mention that there are higher
+chances of being later integrated into the mainstream sources. Remember: It
+doesn't work unless it is right!
+
+Some typical examples:
+
+Table 9.1. Patching examples
+
++-----------------------------------------------------------------------------------------------+
+|  Where  |          Incorrect           |                       Correct                        |
+|---------+------------------------------+------------------------------------------------------|
+|         |case ${target_os} in          |                                                      |
+|configure|      netbsd*) have_kvm=yes ;;|AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)|
+|script   |      *)       have_kvm=no  ;;|                                                      |
+|         |  esac                        |                                                      |
+|         |                              |                                                      |
+|---------+------------------------------+------------------------------------------------------|
+|         |#if defined(__NetBSD__)       |#if defined(HAVE_SYS_EVENT_H)                         |
+|C source |  #  include <sys/event.h>    |  #  include <sys/event.h>                            |
+|file     |  #endif                      |  #endif                                              |
+|         |                              |                                                      |
+|---------+------------------------------+------------------------------------------------------|
+|         |int                           |int                                                   |
+|         |  monitor_file(...)           |  monitor_file(...)                                   |
+|         |  {                           |  {                                                   |
+|         |  #if defined(__NetBSD__)     |  #if defined(HAVE_KQUEUE)                            |
+|C source |      int fd = kqueue();      |      int fd = kqueue();                              |
+|file     |      ...                     |      ...                                             |
+|         |  #else                       |  #else                                               |
+|         |      ...                     |      ...                                             |
+|         |  #endif                      |  #endif                                              |
+|         |  }                           |  }                                                   |
+|         |                              |                                                      |
++-----------------------------------------------------------------------------------------------+
+
+
+For more information, please read the Making packager-friendly software article
+(part 1, part 2). It summarizes multiple details on how to make software easier
+to package; all the suggestions in it were collected from our experience in
+pkgsrc work, so they are possibly helpful when creating patches too.
+
+9.3.2. Feedback to the author
+
+Always, always, always feed back any portability fixes or improvements you do
+to a package to the mainstream developers. This is the only way to get their
+attention on portability issues and to ensure that future versions can be built
+out-of-the box on NetBSD. Furthermore, any user that gets newer distfiles will
+get the fixes straight from the packaged code.
+
+This generally involves cleaning up the patches as described in the following
+section (because sometimes the patches that are added to pkgsrc are quick
+hacks), filling bug reports in the appropriate trackers for the projects and
+working with the mainstream authors to accept your changes. It is extremely
+important that you do it so that the packages in pkgsrc are kept simple and
+thus further changes can be done without much hassle.
+
+Support the idea of free software!
 
 9.4. Other mandatory files
 
@@ -5425,8 +5531,8 @@ Table of Contents
     17.5.15. Packages using intltool
     17.5.16. Packages installing startup scripts
     17.5.17. Packages installing TeX modules
-
-17.6. Feedback to the author
+    17.5.18. Packages installing hicolor theme icons
+    17.5.19. Packages installing desktop files
 
 17.1. General operation
 
@@ -6468,16 +6574,37 @@ into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
  3. Make sure that none of ls-R databases are included in PLIST, as they will
     be removed only by the teTeX-bin package.
 
-17.6. Feedback to the author
+17.5.18. Packages installing hicolor theme icons
 
-If you have found any bugs in the package you make available, if you had to do
-special steps to make it run under NetBSD or if you enhanced the software in
-various other ways, be sure to report these changes back to the original author
-of the program! With that kind of support, the next release of the program can
-incorporate these fixes, and people not using the NetBSD packages system can
-win from your efforts.
+If a package installs images under the share/icons/hicolor and/or updates the
+share/icons/hicolor/icon-theme.cache database, you need to take some extra
+steps to make sure that the shared theme directory is handled appropriately and
+that the cache database is rebuilt:
 
-Support the idea of free software!
+ 1. Include ../../graphics/hicolor-icon-theme/buildlink3.mk instead of its
+    buildlink3.mk file.
+
+ 2. Check the PLIST and remove the entry that refers to the theme cache.
+
+ 3. Ensure that the PLIST does not remove the shared icon directories from the
+    share/icons/hicolor hierarchy because they will be handled automatically.
+
+The best way to verify that the PLIST is correct with respect to the last two
+points is to regenerate it using make print-PLIST.
+
+17.5.19. Packages installing desktop files
+
+If a package installs .desktop files under share/applications and these include
+MIME information, you need to take extra steps to ensure that they are
+registered into the MIME database:
+
+ 1. Include ../../sysutils/desktop-file-utils/desktopdb.mk.
+
+ 2. Check the PLIST and remove the entry that refers to the share/applications/
+    mimeinfo.cache file. It will be handled automatically.
+
+The best way to verify that the PLIST is correct with respect to the last point
+is to regenerate it using make print-PLIST.
 
 Chapter 18. Debugging
 
@@ -6814,6 +6941,251 @@ pkgsrc-users mailing list.
           others can find your questions later (see above). To be sure that the
           developer in charge reads the mail, you may CC him or her.
 
+Chapter 21. GNOME packaging and porting
+
+Table of Contents
+
+21.1. Meta packages
+21.2. Packaging a GNOME application
+21.3. Updating GNOME to a newer version
+21.4. Patching guidelines
+
+Quoting GNOME's web site:
+
+    The GNOME project provides two things: The GNOME desktop environment, an
+    intuitive and attractive desktop for users, and the GNOME development
+    platform, an extensive framework for building applications that integrate
+    into the rest of the desktop.
+
+pkgsrc provides a seamless way to automatically build and install a complete
+GNOME environment under many different platforms. We can say with confidence
+that pkgsrc is one of the most advanced build and packaging systems for GNOME
+due to its included technologies buildlink3, the wrappers and tools framework
+and automatic configuration file management. Lots of efforts are put into
+achieving a completely clean deinstallation of installed software components.
+
+Given that pkgsrc is NetBSD's official packaging system, the above also means
+that great efforts are put into making GNOME work under this operating system.
+Recently, DragonFly BSD also adopted pkgsrc as its preferred packaging system,
+contributing lots of portability fixes to make GNOME build and install under
+it.
+
+This chapter is aimed at pkgsrc developers and other people interested in
+helping our GNOME porting and packaging efforts. It provides instructions on
+how to manage the existing packages and some important information regarding
+their internals.
+
+We need your help!
+
+Should you have some spare cycles to devote to NetBSD, pkgsrc and GNOME and are
+willing to learn new exciting stuff, please jump straight to the pending work
+list! There is still a long way to go to get a fully-functional GNOME desktop
+under NetBSD and we need your help to achieve it!
+
+21.1. Meta packages
+
+pkgsrc includes three GNOME-related meta packages:
+
+  * meta-pkgs/gnome-base: Provides the core GNOME desktop environment. It only
+    includes the necessary bits to get it to boot correctly, although it may
+    lack important functionality for daily operation. The idea behind this
+    package is to let end users build their own configurations on top of this
+    one, first installing this meta package to achieve a functional setup and
+    then adding individual applications.
+
+  * meta-pkgs/gnome: Provides a complete installation of the GNOME platform and
+    desktop as defined by the GNOME project; this is based on the components
+    distributed in the platform/x.y/x.y.z/sources and desktop/x.y/x.y.z/sources
+    directories of the official FTP server. Developer-only tools found in those
+    directories are not installed unless required by some other component to
+    work properly. Similarly, packages from the bindings set (bindings/x.y/
+    x.y.z/sources) are not pulled in unless required as a dependency for an
+    end-user component. This package "extends" meta-pkgs/gnome-base.
+
+  * meta-pkgs/gnome-devel: Installs all the tools required to build a GNOME
+    component when fetched from the CVS repository. These are required to let
+    the autogen.sh scripts work appropriately.
+
+In all these packages, the DEPENDS lines are sorted in a way that eases
+updates: a package may depend on other packages listed before it but not on any
+listed after it. It is very important to keep this order to ease updates so...
+do not change it to alphabetical sorting!
+
+21.2. Packaging a GNOME application
+
+Almost all GNOME applications are written in C and use a common set of tools as
+their build system. Things get different with the new bindings to other
+languages (such as Python), but the following will give you a general idea on
+the minimum required tools:
+
+  * Almost all GNOME applications use the GNU Autotools as their build system.
+    As a general rule you will need to tell this to your package:
+
+    GNU_CONFIGURE=yes
+    USE_LIBTOOL=yes
+    USE_TOOLS+=gmake
+
+  * If the package uses pkg-config to detect dependencies, add this tool to the
+    list of required utilities:
+
+    USE_TOOLS+=pkg-config
+
+    Also use pkgtools/verifypc at the end of the build process to ensure that
+    you did not miss to specify any dependency in your package and that the
+    version requirements are all correct.
+
+  * If the package uses intltool, be sure to include the pkgsrc/textproc/
+    intltool/buildlink3.mk file to handle dependencies and to force the package
+    to use the latest available version.
+
+  * If the package uses gtk-doc (a documentation generation utility), do not
+    add a dependency on it. The tool is rather big and the distfile should come
+    with pregenerated documentation anyway; if it does not, it is a bug that
+    you ought to report. For such packages you should disable gtk-doc (unless
+    it is the default) and change the location of installed HTML files:
+
+    CONFIGURE_ARGS+=--disable-gtk-doc
+    CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/doc
+
+
+GNOME uses multiple shared directories and files under the installation prefix
+to maintain databases. In this context, shared means that those exact same
+directories and files are used among several different packages, leading to
+conflicts in the PLIST. pkgsrc currently includes functionality to handle the
+most common cases, so you have to forget about using @unexec ${RMDIR} lines in
+your file lists and omitting shared files from them. If you find yourself doing
+those, your package is most likely incorrect.
+
+The following table lists the common situations that result in using shared
+directories or files. For each of them, the appropriate solution is given.
+After applying the solution be sure to regenerate the package's file list with
+make print-PLIST and ensure it is correct.
+
+Table 21.1. PLIST handling for GNOME packages
+
++-----------------------------------------------------------------------------+
+|             If the package...             |             Then...             |
+|-------------------------------------------+---------------------------------|
+|                                           |See Section 17.5.10, "Packages   |
+|Installs OMF files under share/omf.        |installing scrollkeeper data     |
+|                                           |files".                          |
+|-------------------------------------------+---------------------------------|
+|Installs icons under the share/icons/      |See Section 17.5.18, "Packages   |
+|hicolor hierarchy or updates share/icons/  |installing hicolor theme icons". |
+|hicolor/icon-theme.cache.                  |                                 |
+|-------------------------------------------+---------------------------------|
+|                                           |See Section 17.5.14, "Packages   |
+|Installs files under share/mime/packages.  |installing extensions to the MIME|
+|                                           |database".                       |
+|-------------------------------------------+---------------------------------|
+|Installs .desktop files under share/       |See Section 17.5.19, "Packages   |
+|applications and these include MIME        |installing desktop files".       |
+|information.                               |                                 |
++-----------------------------------------------------------------------------+
+
+
+21.3. Updating GNOME to a newer version
+
+When seeing GNOME as a whole, there are two kinds of updates:
+
+Major update
+
+    Given that there is still a very long way for GNOME 3 (if it ever appears),
+    we consider a major update one that goes from a 2.X version to a 2.Y one,
+    where Y is even and greater than X. These are hard to achieve because they
+    introduce lots of changes in the components' code and almost all GNOME
+    distfiles are updated to newer versions. Some of them can even break API
+    and ABI compatibility with the previous major version series. As a result,
+    the update needs to be done all at once to minimize breakage.
+
+    A major update typically consists of around 80 package updates and the
+    addition of some new ones.
+
+Minor update
+
+    We consider a minor update one that goes from a 2.A.X version to a 2.A.Y
+    one where Y is greater than X. These are easy to achieve because they do
+    not update all GNOME components, can be done in an incremental way and do
+    not break API nor ABI compatibility.
+
+    A minor update typically consists of around 50 package updates, although
+    the numbers here may vary a lot.
+
+In order to update the GNOME components in pkgsrc to a new stable release
+(either major or minor), the following steps should be followed:
+
+ 1. Get a list of all the tarballs that form the new release by using the
+    following commands. These will leave the full list of the components's
+    distfiles into the list.txt file:
+
+    $ echo ls "*.tar.bz2" | \
+        ftp -V ftp://ftp.gnome.org/pub/gnome/platform/x.y/x.y.z/sources/ | \
+        awk '{ print $9 }' >list.txt
+    $ echo ls "*.tar.bz2" | \
+        ftp -V ftp://ftp.gnome.org/pub/gnome/desktop/x.y/x.y.z/sources/ | \
+        awk '{ print $9 }' >>list.txt
+
+ 2. Open each meta package's Makefile and bump their version to the release you
+    are updating them to. The three meta packages should be always consistent
+    with versioning. Obviously remove any PKGREVISIONs that might be in them.
+
+ 3. For each meta package, update all its DEPENDS lines to match the latest
+    versions as shown by the above commands. Do not list any newer version
+    (even if found in the FTP) because the meta packages are supposed to list
+    the exact versions that form a specific GNOME release. Exceptions are
+    permitted here if a newer version solves a serious issue in the overall
+    desktop experience; these typically come in the form of a revision bump in
+    pkgsrc, not in newer versions from the developers.
+
+    Packages not listed in the list.txt file should be updated to the latest
+    version available (if found in pkgsrc). This is the case, for example, of
+    the dependencies on the GNU Autotools in the meta-pkgs/gnome-devel meta
+    package.
+
+ 4. Generate a patch from the modified meta packages and extract the list of
+    "new" lines. This will provide you an outline on what packages need to be
+    updated in pkgsrc and in what order:
+
+    $ cvs diff gnome-devel gnome-base gnome | grep '^+D' >todo.txt
+
+ 5. For major desktop updates it is recommended to zap all your installed
+    packages and start over from scratch at this point.
+
+ 6. Now comes the longest step by far: iterate over the contents of todo.txt
+    and update the packages listed in it in order. For major desktop updates
+    none of these should be commited until the entire set is completed because
+    there are chances of breaking not-yet-updated packages.
+
+ 7. Once the packages are up to date and working, commit them to the tree one
+    by one with appropriate log messages. At the end, commit the three meta
+    package updates and all the corresponding changes to the doc/CHANGES-<YEAR>
+    and pkgsrc/doc/TODO files.
+
+21.4. Patching guidelines
+
+GNOME is a very big component in pkgsrc which approaches 100 packages. Please,
+it is very important that you always, always, always feed back any portability
+fixes you do to a GNOME package to the mainstream developers (see
+Section 9.3.2, "Feedback to the author"). This is the only way to get their
+attention on portability issues and to ensure that future versions can be built
+out-of-the box on NetBSD. The less custom patches in pkgsrc, the easier further
+updates are. Those developers in charge of issuing major GNOME updates will be
+grateful if you do that.
+
+The most common places to report bugs are the GNOME's Bugzilla and the
+freedesktop.org's Bugzilla. Not all components use these to track bugs, but
+most of them do. Do not be short on your reports: always provide detailed
+explanations of the current failure, how it can be improved to achieve maximum
+portability and, if at all possible, provide a patch against CVS head. The more
+verbose you are, the higher chances of your patch being accepted.
+
+Also, please avoid using preprocessor magic to fix portability issues. While
+the FreeBSD GNOME people are doing a great job in porting GNOME to their
+operating system, the official GNOME sources are now plagued by conditionals
+that check for __FreeBSD__ and similar macros. This hurts portability. Please
+see our patching guidelines (Section 9.3.1, "Patching guidelines") for more
+details.
+
 Part III. The pkgsrc infrastructure internals
 
 This part of the guide deals with everything from the infrastructure that is
@@ -6822,67 +7194,67 @@ maintainer should not need anything from this part.
 
 Table of Contents
 
-21. Design of the pkgsrc infrastructure
+22. Design of the pkgsrc infrastructure
 
-    21.1. The meaning of variable definitions
-    21.2. Avoiding problems before they arise
-    21.3. Variable evaluation
+    22.1. The meaning of variable definitions
+    22.2. Avoiding problems before they arise
+    22.3. Variable evaluation
 
-        21.3.1. At load time
-        21.3.2. At runtime
+        22.3.1. At load time
+        22.3.2. At runtime
 
-    21.4. How can variables be specified?
-    21.5. Designing interfaces for Makefile fragments
+    22.4. How can variables be specified?
+    22.5. Designing interfaces for Makefile fragments
 
-        21.5.1. Procedures with parameters
-        21.5.2. Actions taken on behalf of parameters
+        22.5.1. Procedures with parameters
+        22.5.2. Actions taken on behalf of parameters
 
-    21.6. The order in which files are loaded
+    22.6. The order in which files are loaded
 
-        21.6.1. The order in bsd.prefs.mk
-        21.6.2. The order in bsd.pkg.mk
+        22.6.1. The order in bsd.prefs.mk
+        22.6.2. The order in bsd.pkg.mk
 
-22. Regression tests
+23. Regression tests
 
-    22.1. The regression tests framework
-    22.2. Running the regression tests
-    22.3. Adding a new regression test
+    23.1. The regression tests framework
+    23.2. Running the regression tests
+    23.3. Adding a new regression test
 
-        22.3.1. Overridable functions
-        22.3.2. Helper functions
+        23.3.1. Overridable functions
+        23.3.2. Helper functions
 
-23. Porting pkgsrc
+24. Porting pkgsrc
 
-    23.1. Porting pkgsrc to a new operating system
-    23.2. Adding support for a new compiler
+    24.1. Porting pkgsrc to a new operating system
+    24.2. Adding support for a new compiler
 
-Chapter 21. Design of the pkgsrc infrastructure
+Chapter 22. Design of the pkgsrc infrastructure
 
 Table of Contents
 
-21.1. The meaning of variable definitions
-21.2. Avoiding problems before they arise
-21.3. Variable evaluation
+22.1. The meaning of variable definitions
+22.2. Avoiding problems before they arise
+22.3. Variable evaluation
 
-    21.3.1. At load time
-    21.3.2. At runtime
+    22.3.1. At load time
+    22.3.2. At runtime
 
-21.4. How can variables be specified?
-21.5. Designing interfaces for Makefile fragments
+22.4. How can variables be specified?
+22.5. Designing interfaces for Makefile fragments
 
-    21.5.1. Procedures with parameters
-    21.5.2. Actions taken on behalf of parameters
+    22.5.1. Procedures with parameters
+    22.5.2. Actions taken on behalf of parameters
 
-21.6. The order in which files are loaded
+22.6. The order in which files are loaded
 
-    21.6.1. The order in bsd.prefs.mk
-    21.6.2. The order in bsd.pkg.mk
+    22.6.1. The order in bsd.prefs.mk
+    22.6.2. The order in bsd.pkg.mk
 
 The pkgsrc infrastructure consists of many small Makefile fragments. Each such
 fragment needs a properly specified interface. This chapter explains how such
 an interface looks like.
 
-21.1. The meaning of variable definitions
+22.1. The meaning of variable definitions
 
 Whenever a variable is defined in the pkgsrc infrastructure, the location and
 the way of definition provide much information about the intended use of that
@@ -6909,7 +7281,7 @@ Note
 These conventions are currently not applied consistently to the complete pkgsrc
 infrastructure.
 
-21.2. Avoiding problems before they arise
+22.2. Avoiding problems before they arise
 
 All variables that contain lists of things should default to being empty. Two
 examples that do not follow this rule are USE_LANGUAGES and DISTFILES. These
@@ -6926,9 +7298,9 @@ package Makefiles. Similarly for USE_LANGUAGES, but in this case the default
 value ("c") is so short that it doesn't stand out. Nevertheless it is mentioned
 in many files.
 
-21.3. Variable evaluation
+22.3. Variable evaluation
 
-21.3.1. At load time
+22.3.1. At load time
 
 Variable evaluation takes place either at load time or at runtime, depending on
 the context in which they occur. The contexts where variables are evaluated at
@@ -6964,25 +7336,25 @@ paragraph, the -Wall is appended to the CFLAGS, but this addition will not
 appear in CONFIGURE_ARGS. In actual code, the three paragraphs from above
 typically occur in completely unrelated files.
 
-21.3.2. At runtime
+22.3.2. At runtime
 
 After all the files have been loaded, the values of the variables cannot be
 changed anymore. Variables that are used in the shell commands are expanded at
 this point.
 
-21.4. How can variables be specified?
+22.4. How can variables be specified?
 
 There are many ways in which the definition and use of a variable can be
 restricted in order to detect bugs and violations of the (mostly unwritten)
 policies. See the pkglint developer's documentation for further details.
 
-21.5. Designing interfaces for Makefile fragments
+22.5. Designing interfaces for Makefile fragments
 
 Most of the .mk files fall into one of the following classes. Cases where a
 file falls into more than one class should be avoided as it often leads to
 subtle bugs.
 
-21.5.1. Procedures with parameters
+22.5.1. Procedures with parameters
 
 In a traditional imperative programming language some of the .mk files could be
 described as procedures. They take some input parameters and?after inclusion?
@@ -7009,7 +7381,7 @@ Examples for procedures are mk/bsd.options.mk and mk/buildlink3/bsd.builtin.mk.
 To express that the parameters are evaluated at load time, they should be
 assigned using the := operator, which should be used only for this purpose.
 
-21.5.2. Actions taken on behalf of parameters
+22.5.2. Actions taken on behalf of parameters
 
 Action files take some input parameters and may define runtime variables. They
 shall not define loadtime variables. There are action files that are included
@@ -7018,7 +7390,7 @@ explicitly.
 
 An example for action files is mk/subst.mk.
 
-21.6. The order in which files are loaded
+22.6. The order in which files are loaded
 
 Package Makefiles usually consist of a set of variable definitions, and include
 the file ../../mk/bsd.pkg.mk in the very last line. Before that, they may also
@@ -7030,7 +7402,7 @@ the files are loaded matters.
 This section describes at which point the various files are loaded and gives
 reasons for that order.
 
-21.6.1. The order in bsd.prefs.mk
+22.6.1. The order in bsd.prefs.mk
 
 The very first action in bsd.pkg.mk is to define some essential variables like
 OPSYS, OS_VERSION and MACHINE_ARCH.
@@ -7052,7 +7424,7 @@ As the last steps, some essential variables from the wrapper and the package
 system flavor are loaded, as well as the variables that have been cached in
 earlier phases of a package build.
 
-21.6.2. The order in bsd.pkg.mk
+22.6.2. The order in bsd.pkg.mk
 
 First, bsd.prefs.mk is loaded.
 
@@ -7079,16 +7451,16 @@ execution, though the actual order should not matter.
 At last, some more files are included that don't set any interesting variables
 but rather just define make targets to be executed.
 
-Chapter 22. Regression tests
+Chapter 23. Regression tests
 
 Table of Contents
 
-22.1. The regression tests framework
-22.2. Running the regression tests
-22.3. Adding a new regression test
+23.1. The regression tests framework
+23.2. Running the regression tests
+23.3. Adding a new regression test
 
-    22.3.1. Overridable functions
-    22.3.2. Helper functions
+    23.3.1. Overridable functions
+    23.3.2. Helper functions
 
 The pkgsrc infrastructure consists of a large codebase, and there are many
 corners where every little bit of a file is well thought out, making pkgsrc
@@ -7097,22 +7469,22 @@ changes from breaking anything, a suite of regression tests should go along
 with every important part of the pkgsrc infrastructure. This chapter describes
 how regression tests work in pkgsrc and how you can add new tests.
 
-22.1. The regression tests framework
+23.1. The regression tests framework
 
-22.2. Running the regression tests
+23.2. Running the regression tests
 
 You first need to install the pkgtools/pkg_regress package, which provides the
 pkg_regress command. Then you can simply run that command, which will run all
 tests in the regress category.
 
-22.3. Adding a new regression test
+23.3. Adding a new regression test
 
 Every directory in the regress category that contains a file called spec is
 considered a regression test. This file is a shell program that is included by
 the pkg_regress command. The following functions can be overridden to suit your
 needs.
 
-22.3.1. Overridable functions
+23.3.1. Overridable functions
 
 These functions do not take any parameters. They are all called in "set -e"
 mode, so you should be careful to check the exitcodes of any commands you run
@@ -7140,7 +7512,7 @@ do_cleanup()
     This function cleans everything up after the test has been run. By default
     it does nothing.
 
-22.3.2. Helper functions
+23.3.2. Helper functions
 
 exit_status(expected)
 
@@ -7159,18 +7531,18 @@ output_prohibit(regex...)
     () does not match the extended regular expression. If any of the regular
     expressions matches, the test will fail.
 
-Chapter 23. Porting pkgsrc
+Chapter 24. Porting pkgsrc
 
 Table of Contents
 
-23.1. Porting pkgsrc to a new operating system
-23.2. Adding support for a new compiler
+24.1. Porting pkgsrc to a new operating system
+24.2. Adding support for a new compiler
 
 The pkgsrc system has already been ported to many operating systems, hardware
 architectures and compilers. This chapter explains the necessary steps to make
 pkgsrc even more portable.
 
-23.1. Porting pkgsrc to a new operating system
+24.1. Porting pkgsrc to a new operating system
 
 To port pkgsrc to a new operating system (called MyOS in this example), you
 need to touch the following files:
@@ -7218,7 +7590,7 @@ mk/tools/MyOS.mk
 Now, you should be able to build some basic packages, like lang/perl5, shells/
 bash.
 
-23.2. Adding support for a new compiler
+24.2. Adding support for a new compiler
 
 TODO
 
