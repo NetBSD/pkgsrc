@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2006/01/25 01:51:34 dmcmahill Exp $
+$NetBSD: distinfo,v 1.15 2006/09/01 12:00:43 dmcmahill Exp $
 
-SHA1 (geda/geda-docs-20060123.tar.gz) = 913b883397cf48aab133f03691ec1690d23707a5
-RMD160 (geda/geda-docs-20060123.tar.gz) = 470ff0c86afe19bbc5c25e2a1d452f4d2296f8f6
-Size (geda/geda-docs-20060123.tar.gz) = 2881092 bytes
+SHA1 (geda/geda-docs-20060824.tar.gz) = 5bcf494f2293982f3ff8a19ef74da60771105b2c
+RMD160 (geda/geda-docs-20060824.tar.gz) = d5790e220dc330aea76018f3242f6d9dcad9aa43
+Size (geda/geda-docs-20060824.tar.gz) = 2321318 bytes
