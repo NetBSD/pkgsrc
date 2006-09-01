@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1168 2006/09/01 14:24:35 abs Exp $
+$NetBSD: CHANGES-2006,v 1.1169 2006/09/01 15:12:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4152,3 +4152,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/libgeda to 20060824 [dmcmahill 2006-09-01]
 	Updated devel/p5-List-MoreUtils to 0.22 [abs 2006-09-01]
 	Updated devel/p5-version to 0.6701 [abs 2006-09-01]
+	Added www/py-flup version 2030 [joerg 2006-09-01]
