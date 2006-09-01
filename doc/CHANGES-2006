@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1163 2006/08/31 22:02:40 mrg Exp $
+$NetBSD: CHANGES-2006,v 1.1164 2006/09/01 01:02:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4137,3 +4137,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix to 2.3.3 [martti 2006-08-31]
 	Updated mail/postfix-current to 2.4-20060825 [martti 2006-08-31]
 	Updated mail/spamassassin to 3.1.5 [mrg 2006-08-31]
+	Updated devel/p5-Module-CoreList to 2.07 [seb 2006-09-01]
