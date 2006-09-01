@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1167 2006/09/01 12:03:44 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.1168 2006/09/01 14:24:35 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4150,3 +4150,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/gschem to 20060824 [dmcmahill 2006-09-01]
 	Updated cad/gsymcheck to 20060824 [dmcmahill 2006-09-01]
 	Updated cad/libgeda to 20060824 [dmcmahill 2006-09-01]
+	Updated devel/p5-List-MoreUtils to 0.22 [abs 2006-09-01]
+	Updated devel/p5-version to 0.6701 [abs 2006-09-01]
