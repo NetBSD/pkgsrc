@@ -1,9 +1,1 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:13 jlam Exp $
-bin/geda
-bin/graphman
-bin/raw2gw
-share/locale/de_DE/LC_MESSAGES/geda.mo
-share/locale/fr_FR/LC_MESSAGES/geda.mo
-share/locale/it/LC_MESSAGES/geda.mo
-share/locale/pt_BR/LC_MESSAGES/geda.mo
-share/locale/ru/LC_MESSAGES/geda.mo
+@comment $NetBSD: PLIST,v 1.8 2006/09/01 12:00:43 dmcmahill Exp $

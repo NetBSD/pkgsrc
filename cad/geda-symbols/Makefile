@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/02/05 23:08:21 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/09/01 12:00:43 dmcmahill Exp $
 #
 
 DISTNAME=	geda-symbols-${PKGVERSION}
-PKGREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	dmcmahill@NetBSD.org
