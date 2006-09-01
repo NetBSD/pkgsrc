@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1165 2006/09/01 06:04:15 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1166 2006/09/01 06:36:20 gson Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4139,3 +4139,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamassassin to 3.1.5 [mrg 2006-08-31]
 	Updated devel/p5-Module-CoreList to 2.07 [seb 2006-09-01]
 	Updated audio/libsndfile to 1.0.17 [adam 2006-09-01]
+	Updated devel/p5-Set-IntSpan to 1.09 [gson 2006-09-01]
