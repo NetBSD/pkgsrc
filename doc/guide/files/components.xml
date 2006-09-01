@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.26 2006/07/24 10:32:36 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.27 2006/09/01 16:35:38 jmmv Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -239,12 +239,6 @@
       for the patch files by using the <command>make makepatchsum</command>
       command, see <xref linkend="components.distinfo"/>.</para>
 
-    <para>When adding a patch that corrects a problem in the distfile (rather
-      than e.g. enforcing pkgsrc's view of where man pages should go), send
-      the patch as a bug report to the maintainer.  This benefits
-      non-pkgsrc users of the package, and usually enables removing
-      the patch in future version.</para>
-
     <para>Patch files that are distributed by the author or other
       maintainers can be listed in
       <varname>$PATCHFILES</varname>. </para>
@@ -261,6 +255,143 @@
       it in <filename>$LOCALPATCHES/graphics/png/mypatch</filename>. All
       files in the named directory are expected to be patch files, and
       <emphasis>they are applied after pkgsrc patches are applied</emphasis>.</para>
+
+    <sect2 id="components.patches.guidelines">
+      <title>Patching guidelines</title>
+
+      <para>When fixing a portability issue in the code do not use
+      preprocessor magic to check for the current operating system nor
+      platform.  Doing so hurts portability to other platforms because
+      the OS-specific details are not abstracted appropriately.</para>
+      
+      <para>The general rule to follow is: instead of checking for the
+      operating system the application is being built on, check for the
+      specific <emphasis>features</emphasis> you need.  For example,
+      instead of assuming that kqueue is available under NetBSD and
+      using the <varname>__NetBSD__</varname> macro to conditionalize
+      kqueue support, add a check that detects kqueue itself &mdash;
+      yes, this generally involves patching the
+      <command>configure</command> script.  There is absolutely nothing
+      that prevents some OSes from adopting interfaces from other OSes
+      (e.g. Linux implementing kqueue), something that the above checks
+      cannot take into account.</para>
+      
+      <para>Of course, checking for features generally involves more
+      work on the developer's side, but the resulting changes are
+      clearner and there are chances they will work on many other
+      platforms.  Not to mention that there are higher chances of being
+      later integrated into the mainstream sources.  Remember:
+      <emphasis>It doesn't work unless it is right!</emphasis></para>
+
+      <para>Some typical examples:</para>
+
+      <table id="patch-examples">
+	<title>Patching examples</title>
+
+	<tgroup cols="3">
+	  <thead>
+	    <row>
+	      <entry>Where</entry>
+	      <entry>Incorrect</entry>
+	      <entry>Correct</entry>
+	    </row>
+	  </thead>
+
+	  <tbody>
+	    <row>
+	      <entry>configure script</entry>
+	      <entry>
+		<programlisting>case ${target_os} in
+      netbsd*) have_kvm=yes ;;
+      *)       have_kvm=no  ;;
+  esac</programlisting>
+	      </entry>
+
+	      <entry>
+		<programlisting>AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)</programlisting>
+	      </entry>
+	    </row>
+
+	    <row>
+	      <entry>C source file</entry>
+	      <entry>
+		<programlisting>#if defined(__NetBSD__)
+  #  include &lt;sys/event.h&gt;
+  #endif</programlisting>
+	      </entry>
+	      <entry>
+		<programlisting>#if defined(HAVE_SYS_EVENT_H)
+  #  include &lt;sys/event.h&gt;
+  #endif</programlisting>
+	      </entry>
+	    </row>
+
+	    <row>
+	      <entry>C source file</entry>
+	      <entry><programlisting>int
+  monitor_file(...)
+  {
+  #if defined(__NetBSD__)
+      int fd = kqueue();
+      ...
+  #else
+      ...
+  #endif
+  }</programlisting>
+	      </entry>
+	      <entry>
+		<programlisting>int
+  monitor_file(...)
+  {
+  #if defined(HAVE_KQUEUE)
+      int fd = kqueue();
+      ...
+  #else
+      ...
+  #endif
+  }</programlisting>
+	      </entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </table>
+
+      <para>For more information, please read the <emphasis>Making
+      packager-friendly software</emphasis> article (<ulink
+      url="http://www.onlamp.com/pub/a/onlamp/2005/03/31/packaging.html">part
+      1</ulink>, <ulink
+      url="http://www.oreillynet.com/pub/a/onlamp/2005/04/28/packaging2.html">part
+      2</ulink>).  It summarizes multiple details on how to make
+      software easier to package; all the suggestions in it were
+      collected from our experience in pkgsrc work, so they are possibly
+      helpful when creating patches too.</para>
+
+    </sect2>
+
+    <sect2 id="components.patches.feedback">
+      <title>Feedback to the author</title>
+
+      <para>Always, always, <emphasis role="strong">always</emphasis>
+      feed back any <emphasis>portability fixes</emphasis> or
+      improvements you do to a package to the mainstream developers.
+      This is the only way to get their attention on portability issues
+      and to ensure that future versions can be built out-of-the box on
+      NetBSD.  Furthermore, any user that gets newer distfiles will get
+      the fixes straight from the packaged code.</para>
+
+      <para>This generally involves cleaning up the patches as described
+      in the following section (because sometimes the patches that are
+      added to pkgsrc are quick hacks), filling bug reports in the
+      appropriate trackers for the projects and working with the
+      mainstream authors to accept your changes.  It is
+      <emphasis>extremely important</emphasis> that you do it so that
+      the packages in pkgsrc are kept simple and thus further changes
+      can be done without much hassle.</para>
+
+      <para>Support the idea of free software!</para>
+
+    </sect2>
+
   </sect1>
 
   <sect1 id="other-mandatory-files">
