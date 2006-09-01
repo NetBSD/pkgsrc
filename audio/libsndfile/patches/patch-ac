@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2005/09/30 13:26:02 adam Exp $
+$NetBSD: patch-ac,v 1.8 2006/09/01 06:02:23 adam Exp $
 
---- examples/sndfile-play.c.orig	2005-09-04 00:11:38.000000000 +0000
+--- examples/sndfile-play.c.orig	2006-08-31 11:22:07.000000000 +0200
 +++ examples/sndfile-play.c
 @@ -34,16 +34,21 @@
  	#include <sys/time.h>
@@ -37,7 +37,7 @@ $NetBSD: patch-ac,v 1.7 2005/09/30 13:26:02 adam Exp $
  
 @@ -408,7 +413,7 @@ static int
  linux_open_dsp_device (int channels, int srate)
- {	int fd, stereo, temp, error ;
+ {	int fd, stereo, fmt ;
  
 -	if ((fd = open ("/dev/dsp", O_WRONLY, 0)) == -1 &&
 +	if ((fd = open (DEV_DSP, O_WRONLY, 0)) == -1 &&
