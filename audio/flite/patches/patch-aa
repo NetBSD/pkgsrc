@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/16 14:18:42 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/01 15:44:44 gdt Exp $
 
---- Makefile.orig	2005-11-01 14:40:45.000000000 +0100
-+++ Makefile	2006-01-16 15:15:36.000000000 +0100
-@@ -48,6 +48,7 @@
+--- Makefile.orig	2005-11-01 08:40:45.000000000 -0500
++++ Makefile
+@@ -48,6 +48,7 @@ CONFIG=configure configure.in config.sub
  FILES = Makefile README ACKNOWLEDGEMENTS COPYING $(CONFIG)
  DIST_CLEAN = config.cache config.log config.status \
  		config/config config/system.mak FileList
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/16 14:18:42 xtraeme Exp $
  
  HOST_ONLY_DIRS = tools main
  ALL = $(BUILD_DIRS)
-@@ -105,13 +106,14 @@
+@@ -105,13 +106,15 @@ tags:
  
  install:
  	@echo Installing 
@@ -26,6 +26,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/16 14:18:42 xtraeme Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(INSTALLINCDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
 +	$(BSD_INSTALL_DATA) include/*.h $(INSTALLINCDIR)
++	$(BSD_INSTALL_DATA) $(LIBDIR)/libflite* $(INSTALLLIBDIR)
 +	$(BSD_INSTALL_PROGRAM) bin/flite $(INSTALLBINDIR)
 +	$(BSD_INSTALL_PROGRAM) bin/flite_time $(INSTALLBINDIR)
 +	$(BSD_INSTALL_DATA) README $(DOCDIR)
