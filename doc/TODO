@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5393 2006/08/31 18:45:44 martti Exp $
+$NetBSD: TODO,v 1.5394 2006/09/01 01:03:08 seb Exp $
 
 Suggested new packages
 ======================
@@ -856,7 +856,6 @@ Suggested package updates
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
-	o p5-Module-CoreList-2.07 [pkg/34356]
 	o p5-Module-Install-0.64 [pkg/34362]
 	o p5-Module-Pluggable-3.10 [pkg/34355]
 	o p5-Module-ScanDeps-0.63 [pkg/34354]
