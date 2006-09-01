@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2006/07/19 19:14:37 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2006/09/01 12:00:43 dmcmahill Exp $
 #
 
 DISTNAME=	geda-${PKGVERSION}
-PKGREVISION=	2
 CATEGORIES=	cad
 
 MAINTAINER=	dmcmahill@NetBSD.org
@@ -19,12 +18,12 @@ DEPENDS+=	geda-examples-${PKGVERSION}{,nb[0-9]*}:../../cad/geda-examples
 
 .include "Makefile.common"
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		pkg-config
+EXTRACT_ONLY=   # none
+NO_CHECKSUM=	yes
+NO_CONFIGURE=   yes
+NO_BUILD=       yes
+NO_MTREE=       yes
 
-.include "../../cad/libgeda/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+do-install:     # empty
+
 .include "../../mk/bsd.pkg.mk"
