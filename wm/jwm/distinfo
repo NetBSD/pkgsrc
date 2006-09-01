@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/04 01:08:21 reed Exp $
+$NetBSD: distinfo,v 1.2 2006/09/01 15:43:10 abs Exp $
 
-SHA1 (jwm-1.7.tar.bz2) = 2ad8029277d1ba530c314ea4e5a9f930afa56a78
-RMD160 (jwm-1.7.tar.bz2) = fca374a54cff0f17eef537a228a696c79ec04fa6
-Size (jwm-1.7.tar.bz2) = 121405 bytes
+SHA1 (jwm-1.8rc1.tar.bz2) = ddbeff30648a1d582e5729483f6426bc774b0f34
+RMD160 (jwm-1.8rc1.tar.bz2) = 189b163a3635fdb1d61f6b75e26b69988d38ceef
+Size (jwm-1.8rc1.tar.bz2) = 139112 bytes
 SHA1 (patch-aa) = ac33481d7e4d081960977a05f87c698865d19c63
 SHA1 (patch-ab) = 37dde771f21eb0ae63af01ecd53f2f201dd1c6fc
