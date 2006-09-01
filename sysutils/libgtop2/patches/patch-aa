@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
+$NetBSD: patch-aa,v 1.8 2006/09/01 06:54:29 joerg Exp $
 
---- configure.orig	2006-03-13 10:04:55.000000000 +0100
+--- configure.orig	2006-07-27 18:43:37.000000000 +0000
 +++ configure
-@@ -20242,17 +20242,17 @@ echo $ECHO_N "checking for libgtop sysde
+@@ -20112,17 +20112,17 @@ echo $ECHO_N "checking for libgtop sysde
  	  libgtop_have_sysinfo=yes
  	  libgtop_need_server=no
  	  ;;
@@ -23,7 +23,16 @@ $NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
  	  ;;
  	aix*)
  	  libgtop_sysdeps_dir=aix
-@@ -20472,7 +20472,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -20170,7 +20170,7 @@ echo "${ECHO_T}$libgtop_sysdeps_dir" >&6
+ 
+ 
+ 	case "$host_os" in
+-	*bsd*)
++	*bsd* | *dragonfly*)
+ 	  echo "$as_me:$LINENO: checking for kvm_open in -lkvm" >&5
+ echo $ECHO_N "checking for kvm_open in -lkvm... $ECHO_C" >&6
+ if test "${ac_cv_lib_kvm_kvm_open+set}" = set; then
+@@ -20413,7 +20413,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <net/netisr.h>
  #include <net/route.h>
  
@@ -34,7 +43,7 @@ $NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
  #include <net/if_sppp.h>
  #else
  #include <i4b/sppp/if_sppp.h>
-@@ -20547,7 +20549,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -20488,7 +20490,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <net/netisr.h>
  #include <net/route.h>
  
@@ -45,7 +54,19 @@ $NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
  #include <net/if_sppp.h>
  #else
  #include <i4b/sppp/if_sppp.h>
-@@ -23902,6 +23906,146 @@ fi
+@@ -20561,9 +20565,10 @@ echo $ECHO_N "checking what we need to d
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   msginfo_needs=
+-	    for def in nothing KERNEL _KERNEL; do
++	    for def in nothing KERNEL _KERNEL_STRUCTURES _KERNEL; do
+ 	      cat >conftest.$ac_ext <<_ACEOF
+ #define $def
++#include <sys/types.h>
+ #include <sys/ipc.h>
+ #include <sys/msg.h>
+ #include <stdio.h>
+@@ -23925,6 +23930,146 @@ fi
  esac
  
  
@@ -192,7 +213,7 @@ $NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
  echo "$as_me:$LINENO: checking for vm_statistics in -lmach" >&5
  echo $ECHO_N "checking for vm_statistics in -lmach... $ECHO_C" >&6
  if test "${ac_cv_lib_mach_vm_statistics+set}" = set; then
-@@ -29624,7 +29768,7 @@ if test x$cross_compiling = xyes ; then
+@@ -29952,7 +30097,7 @@ if test x$cross_compiling = xyes ; then
          sunos*)
            fu_cv_sys_stat_statfs4=yes
            ;;
@@ -201,7 +222,7 @@ $NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
            fu_cv_sys_stat_statfs2_bsize=yes
            ;;
          osf*)
-@@ -30275,7 +30419,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -30603,7 +30748,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  _ACEOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
@@ -210,7 +231,7 @@ $NetBSD: patch-aa,v 1.7 2006/08/06 19:06:44 jmmv Exp $
    ok=yes
  fi
  rm -f conftest*
-@@ -31803,6 +31947,7 @@ s,@ECHO_C@,$ECHO_C,;t t
+@@ -32141,6 +32290,7 @@ s,@ECHO_C@,$ECHO_C,;t t
  s,@ECHO_N@,$ECHO_N,;t t
  s,@ECHO_T@,$ECHO_T,;t t
  s,@LIBS@,$LIBS,;t t
