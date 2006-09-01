@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1169 2006/09/01 15:12:21 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.1170 2006/09/01 15:44:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4153,3 +4153,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-List-MoreUtils to 0.22 [abs 2006-09-01]
 	Updated devel/p5-version to 0.6701 [abs 2006-09-01]
 	Added www/py-flup version 2030 [joerg 2006-09-01]
+	Updated wm/jwm to 1.8rc1 [abs 2006-09-01]
