@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX5.3,v 1.4 2006/08/26 15:42:27 schwarz Exp $
+$NetBSD: README.IRIX5.3,v 1.5 2006/09/02 11:15:49 schwarz Exp $
 
 Installing pkgsrc on IRIX 5.3 requires some preparation.
 First, if necessary, get the IRIX 5.3 IDO (cc etc.) from SGI at
@@ -39,7 +39,7 @@ notably bmake:
 
 env CP=/usr/local/bin/cp GREP=/usr/local/bin/grep ID=/usr/local/bin/id MKDIR="/usr/local/bin/mkdir -p" TEST=/usr/local/bin/test TOUCH=/usr/local/bin/touch XARGS="/usr/local/bin/xargs -r" ./bootstrap
 
-Add the nedessary arguments such as --prefix= as necessary.
+Add the necessary arguments such as --prefix= as necessary.
 You might also want to set the CFLAGS, CPPFLAGS, or LDFLAGS.
 For the IDO cc CFLAGS=-O2 (or CFLAGS="-O2 -mips2" if you are using an R4K
 machine) is recommended.

@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX,v 1.5 2005/08/02 00:23:31 reed Exp $
+$NetBSD: README.IRIX,v 1.6 2006/09/02 11:21:44 schwarz Exp $
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89).  Please set the CC environment variable according to your
@@ -9,7 +9,7 @@ Please note that you will need Irix 6.5.17 or higher, as this is the earliest
 version of Irix providing support for if_indextoname(3), if_nametoindex(3),
 etc.
 
-At this point in time, pkgsrc only supports one ABI.  That is, you can not
+At this point in time, pkgsrc only supports one ABI.  That is, you cannot
 switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
 you start out using "abi=n32", that's what all your packages will be built
 with.
