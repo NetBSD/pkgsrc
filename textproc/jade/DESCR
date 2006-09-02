@@ -13,6 +13,3 @@ An object-oriented SGML/XML parser toolkit and DSSSL engine.
     * Portable
     * Production quality
     * Free
-
-  Note: This port is a superset of the sp port.  If you have sp
-installed, you have to remove it before installing jade.
