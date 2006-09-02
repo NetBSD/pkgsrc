@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1176 2006/09/02 14:16:22 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.1177 2006/09/02 17:11:18 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4161,3 +4161,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql5-server to 5.0.24a [xtraeme 2006-09-02]
 	Updated textproc/py-gdick to 0.9.1nb7 [minskim 2006-09-02]
 	Updated databases/py-psycopg2 to 2.0.5.1 [joerg 2006-09-02]
+	Added devel/scmgit version 1.4.1 [rillig 2006-09-02]
