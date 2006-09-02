@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5398 2006/09/02 08:44:17 adrianp Exp $
+$NetBSD: TODO,v 1.5399 2006/09/02 12:27:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1007,7 +1007,7 @@ Suggested package updates
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
-	o py-curl-7.15.5
+	o py-curl-7.15.5.1
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
 	o py-gobject-2.11.4
@@ -1018,6 +1018,7 @@ Suggested package updates
 	o py-prewikka-0.9.7.1
 	o py-psyco-1.5.1
 	o py-psycopg2-2.0.4 [pkg/34433]
+	o py-psycopg2-2.0.5
 	o py-pyrex-0.9.3.1
 	o py-qt3-base-3.16
 	o py-qt3-modules-3.16
@@ -1134,6 +1135,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o strace-4.5.8
 	o stunnel-4.15 [pkg/34436]
+	o stunnel-4.16
 	o subtitleripper-0.3.4
 	o sun-jdk14-2.12 [pkg/34035]
 	o sun-jre14-2.12 [pkg/34035]
