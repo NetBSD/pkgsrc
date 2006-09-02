@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.9 2006/09/02 08:13:07 obache Exp $
+# $NetBSD: sites.mk,v 1.10 2006/09/02 09:07:03 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -7,7 +7,6 @@
 MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
 	ftp://sunsite.doc.ic.ac.uk/sites/ftp.x.org/contrib/ \
-	ftp://sunsite.sut.ac.jp/pub/archives/X11/contrib/ \
 	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/X11/contrib/ \
 	ftp://ftp.cica.es/pub/X/contrib/ \
@@ -182,7 +181,6 @@ MASTER_SITE_APACHE+=    \
 	ftp://www.ibiblio.org/pub/mirrors/apache/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://apache.secsup.org/pub/apache/dist/ \
-	ftp://sunsite.tus.ac.jp/pub/archives/www/apache/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/
 
 MASTER_SITE_MYSQL+=	\
