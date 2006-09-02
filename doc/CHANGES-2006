@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1173 2006/09/02 09:00:14 sekiya Exp $
+$NetBSD: CHANGES-2006,v 1.1174 2006/09/02 12:33:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4157,3 +4157,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-Net-IP to 1.25 [adrianp 2006-09-02]
 	Updated chat/ircservices to 5.0.58 [adrianp 2006-09-02]
 	Updated multimedia/dvdauthor to 0.6.11 [sekiya 2006-09-02]
+	Updated databases/mysql5-client to 5.0.24a [xtraeme 2006-09-02]
+	Updated databases/mysql5-server to 5.0.24a [xtraeme 2006-09-02]
