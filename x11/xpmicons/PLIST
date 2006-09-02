@@ -1,24 +1,36 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/13 15:03:55 ben Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/02 19:30:45 rillig Exp $
 include/X11/bitmaps/app.xbm
 include/X11/bitmaps/app_mask.xbm
+include/X11/bitmaps/card.xbm
 include/X11/bitmaps/cursor.xbm
 include/X11/bitmaps/cursor_big.xbm
 include/X11/bitmaps/dir.xbm
 include/X11/bitmaps/dir_mask.xbm
+include/X11/bitmaps/down.xbm
 include/X11/bitmaps/file.xbm
 include/X11/bitmaps/file_mask.xbm
 include/X11/bitmaps/files.xbm
 include/X11/bitmaps/files_mask.xbm
 include/X11/bitmaps/grey.xbm
 include/X11/bitmaps/grey_mask.xbm
+include/X11/bitmaps/keyboard.xbm
+include/X11/bitmaps/left.xbm
 include/X11/bitmaps/link.xbm
 include/X11/bitmaps/link_mask.xbm
 include/X11/bitmaps/mime.xbm
 include/X11/bitmaps/mime_mask.xbm
+include/X11/bitmaps/monitor.xbm
+include/X11/bitmaps/mouse.xbm
+include/X11/bitmaps/narrower.xbm
+include/X11/bitmaps/right.xbm
+include/X11/bitmaps/shorter.xbm
+include/X11/bitmaps/taller.xbm
 include/X11/bitmaps/text.xbm
 include/X11/bitmaps/text_mask.xbm
+include/X11/bitmaps/up.xbm
 include/X11/bitmaps/url.xbm
 include/X11/bitmaps/url_mask.xbm
+include/X11/bitmaps/wider.xbm
 include/X11/bitmaps/xfm_blackhole.xbm
 include/X11/bitmaps/xfm_cline.xbm
 include/X11/bitmaps/xfm_dir.xbm
@@ -1661,6 +1673,7 @@ include/X11/pixmaps/capital.xpm
 include/X11/pixmaps/car.xpm
 include/X11/pixmaps/car_repair.xpm
 include/X11/pixmaps/car_repair_3d.xpm
+include/X11/pixmaps/card.xpm
 include/X11/pixmaps/card_deck.xpm
 include/X11/pixmaps/card_king.xpm
 include/X11/pixmaps/cards.xpm
@@ -1780,6 +1793,7 @@ include/X11/pixmaps/compressed.xpm
 include/X11/pixmaps/compressed2.xpm
 include/X11/pixmaps/compressed2_3d.xpm
 include/X11/pixmaps/compressed_3d.xpm
+include/X11/pixmaps/computer.xpm
 include/X11/pixmaps/computer_clock.xpm
 include/X11/pixmaps/computer_clock_3d.xpm
 include/X11/pixmaps/con2.xpm
@@ -1849,6 +1863,8 @@ include/X11/pixmaps/demi.dir.xpm
 include/X11/pixmaps/demi.opendir.xpm
 include/X11/pixmaps/denmark.xpm
 include/X11/pixmaps/denmark_3d.xpm
+include/X11/pixmaps/deny-always.xpm
+include/X11/pixmaps/deny.xpm
 include/X11/pixmaps/desk.xpm
 include/X11/pixmaps/desk2.xpm
 include/X11/pixmaps/desk2_3d.xpm
@@ -2791,6 +2807,7 @@ include/X11/pixmaps/localapps.opendir.xpm
 include/X11/pixmaps/lock.xpm
 include/X11/pixmaps/lockBox.xpm
 include/X11/pixmaps/lock_dir.xpm
+include/X11/pixmaps/logo.xpm
 include/X11/pixmaps/logoff_3d.xpm
 include/X11/pixmaps/loulou.xpm
 include/X11/pixmaps/lucien.xpm
@@ -3836,6 +3853,8 @@ include/X11/pixmaps/pencil_3d.xpm
 include/X11/pixmaps/penguin.xpm
 include/X11/pixmaps/pepsi.xpm
 include/X11/pixmaps/pequin.xpm
+include/X11/pixmaps/permit-always.xpm
+include/X11/pixmaps/permit.xpm
 include/X11/pixmaps/pest.next.xpm
 include/X11/pixmaps/peter.xpm
 include/X11/pixmaps/pfordx.xpm

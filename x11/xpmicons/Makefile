@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/08/10 15:08:40 ben Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/02 19:30:45 rillig Exp $
 
 DISTNAME=	xpmicons-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://www.plig.org/xwinman/ \
 		ftp://ftp.cit.gu.edu.au/pub/AIcons/ \
@@ -27,10 +27,10 @@ INSTALLATION_DIRS=	include/X11/bitmaps include/X11/pixmaps
 .include "../../mk/x11.buildlink3.mk"
 
 post-extract:
-	${FIND} ${WRKSRC} -type d -name .xvpics -exec ${RM} -rf {} \; -prune
+	find ${WRKSRC} -type d -name .xvpics -exec rm -rf {} \; -prune
 
 do-install:
-	${FIND} ${WRKSRC} -name \*.xpm -exec ${INSTALL_DATA} {} ${PREFIX}/include/X11/pixmaps \;
-	${FIND} ${WRKSRC} -name \*.xbm -exec ${INSTALL_DATA} {} ${PREFIX}/include/X11/bitmaps \;
+	find ${WRKSRC} -name \*.xpm -exec ${INSTALL_DATA} {} ${PREFIX}/include/X11/pixmaps \;
+	find ${WRKSRC} -name \*.xbm -exec ${INSTALL_DATA} {} ${PREFIX}/include/X11/bitmaps \;
 
 .include "../../mk/bsd.pkg.mk"
