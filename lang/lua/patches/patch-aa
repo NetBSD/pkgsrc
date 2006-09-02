@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2006/08/14 22:31:39 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2006/09/02 19:22:32 rillig Exp $
 
---- Makefile.orig	2006-06-02 10:53:38.000000000 +0000
-+++ Makefile
-@@ -11,7 +11,7 @@ PLAT= none
+--- Makefile.orig	2006-06-02 12:53:38.000000000 +0200
++++ Makefile	2006-09-02 21:07:17.000000000 +0200
+@@ -11,11 +11,11 @@ PLAT= none
  # if INSTALL_TOP is not an absolute path. (Man pages are installed from the
  # doc directory.)
  #
@@ -11,6 +11,11 @@ $NetBSD: patch-aa,v 1.12 2006/08/14 22:31:39 wiz Exp $
  INSTALL_BIN= $(INSTALL_TOP)/bin
  INSTALL_INC= $(INSTALL_TOP)/include
  INSTALL_LIB= $(INSTALL_TOP)/lib
+-INSTALL_MAN= $(INSTALL_TOP)/man/man1
++INSTALL_MAN= $(INSTALL_TOP)/${PKGMANDIR}/man1
+ INSTALL_LMOD= $(INSTALL_TOP)/share/lua/$V
+ INSTALL_CMOD= $(INSTALL_TOP)/lib/lua/$V
+ 
 @@ -42,7 +42,7 @@ PLATS= aix ansi bsd generic linux macosx
  # What to install.
  TO_BIN= lua luac
