@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2006/08/21 17:29:33 dbj Exp $
+# $NetBSD: Makefile,v 1.34 2006/09/02 18:17:40 rillig Exp $
 #
 
 DISTNAME=		qemu-0.8.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
@@ -18,6 +18,7 @@ HAS_CONFIGURE=		yes
 
 GCC_REQD+=		3.0
 
+CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
 
