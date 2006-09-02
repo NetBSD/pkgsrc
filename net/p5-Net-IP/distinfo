@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/07/09 16:12:33 adrianp Exp $
+$NetBSD: distinfo,v 1.4 2006/09/02 08:28:48 adrianp Exp $
 
-SHA1 (Net-IP-1.23.tar.gz) = 5476b3ab1ea52004de60ecd682cbce8fd4b37894
-RMD160 (Net-IP-1.23.tar.gz) = 3702094742725c7682922d7a703d331f26688237
-Size (Net-IP-1.23.tar.gz) = 25715 bytes
+SHA1 (Net-IP-1.25.tar.gz) = 058a0ce86a50e882e9254371157c0c602b88f691
+RMD160 (Net-IP-1.25.tar.gz) = 92116a215d255d1a16b819df23c98bb0324df2f6
+Size (Net-IP-1.25.tar.gz) = 25749 bytes
