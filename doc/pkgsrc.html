@@ -1528,7 +1528,7 @@ file and inspect the contents before extracting it.
 <p>Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
 	version of IRIX providing support for <a href="http://netbsd.gw.com/cgi-bin/man-cgi?if_indextoname+3+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">if_indextoname</span>(3)</span></a>, <a href="http://netbsd.gw.com/cgi-bin/man-cgi?if_nametoindex+3+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">if_nametoindex</span>(3)</span></a>,
 	etc.</p>
-<p>At this point in time, pkgsrc only supports one ABI at a time.  That is, you can not
+<p>At this point in time, pkgsrc only supports one ABI at a time.  That is, you cannot
 	switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
 	you start out using "abi=n32", that's what all your packages will be built
 	with.</p>
@@ -2212,7 +2212,7 @@ You can now enter:
         See <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for more details.</p>
 <p>A final word of warning: If you set up a system that has a non-standard
         setting for <code class="varname">LOCALBASE</code>, be sure to set that
-        before any packages are installed, as you can not use several directories
+        before any packages are installed, as you cannot use several directories
         for the same purpose. Doing so will result in pkgsrc not being able to
         properly detect your installed packages, and fail miserably. Note also that
         precompiled binary packages are usually built with the default
