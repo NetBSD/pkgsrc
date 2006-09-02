@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5395 2006/09/01 06:36:20 gson Exp $
+$NetBSD: TODO,v 1.5396 2006/09/02 06:17:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -555,7 +555,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
-	o gworkspace-0.8.2
+	o gworkspace-0.8.3
 	o gzrecover-0.3
 	o hackbot-2.21
 	o haskell-mode-1.45
@@ -651,6 +651,7 @@ Suggested package updates
 	o libntlm-0.3.10
 	o libofx-0.8.2
 	o libprelude-0.9.10.2
+	o librsvg-2.16.0
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libstatgrab-0.13
@@ -741,7 +742,7 @@ Suggested package updates
 	o nss_ldap-248
 	o ntp-4.2.2
 	o nulib2-210
-	o nut-11.6
+	o nut-12.0
 	o objc-3.2.7
 	o ocrad-0.15
 	o odbc-postgresql-8.0.7
@@ -759,7 +760,7 @@ Suggested package updates
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
-	o openttd-0.4.8
+	o openttd-0.4.8 [pkg/34445]
 	o oregano-0.50.0
 	o oroborus-2.0.15
 	o osh-060124 [pkg/34313]
@@ -1078,6 +1079,7 @@ Suggested package updates
 	o rt3-3.6.0
 	o rtcw-1.41.3
 	o rtorrent-0.5.3 [pkg/34290]
+	o ruby-1.8.5
 	o ruby-cmd-0.8.0
 	o sablecc-3.2
 	o samba-3.0.23a
@@ -1122,7 +1124,6 @@ Suggested package updates
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.4
 	o spamass-milter-0.3.1 [pkg/33206]
-	o spamassassin-3.1.5
 	o spim-7.2.1
 	o sqlitemanager-1.1.3
 	o squid-2.6.2 [taca]
@@ -1214,7 +1215,7 @@ Suggested package updates
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2
 	o xblast-2.10.4
-	o xcircuit-3.4.0
+	o xcircuit-3.4.26 [pkg/34443]
 	o xdaliclock-2.23
 	o xdelta-3.0e
 	o xdesktopwaves-1.3
