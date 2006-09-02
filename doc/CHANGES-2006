@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1178 2006/09/02 19:43:43 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.1179 2006/09/02 20:58:32 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/py-psycopg2 to 2.0.5.1 [joerg 2006-09-02]
 	Added devel/scmgit version 1.4.1 [rillig 2006-09-02]
 	Updated www/galeon to 2.0.1 [rillig 2006-09-02]
+	Added devel/cogito version 0.16 [rillig 2006-09-02]
