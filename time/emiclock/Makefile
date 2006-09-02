@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/02 12:46:31 obache Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
 PKGREVISION=	3
 CATEGORIES=	x11 time
-MASTER_SITES=	ftp://ftp.noge.com/pub/EmiClock/X11/
+MASTER_SITES=	ftp://ftp.koba.jp/pub/EmiClock/X11/
 
 MAINTAINER=	minoura@NetBSD.org
 COMMENT=	Analog clock with image in the middle
