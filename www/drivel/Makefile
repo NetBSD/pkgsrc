@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/08/06 07:53:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2006/09/02 19:23:51 rillig Exp $
 #
 
 DISTNAME=	drivel-2.0.3
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
+
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 GCONF2_SCHEMAS=		drivel.schemas
 
