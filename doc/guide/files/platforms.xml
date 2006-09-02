@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.37 2006/08/30 04:47:16 schmonz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.38 2006/09/02 11:26:16 schwarz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -573,7 +573,7 @@ file and inspect the contents before extracting it.
 	version of IRIX providing support for &man.if.indextoname.3;, &man.if.nametoindex.3;,
 	etc.</para>
 
-      <para>At this point in time, pkgsrc only supports one ABI at a time.  That is, you can not
+      <para>At this point in time, pkgsrc only supports one ABI at a time.  That is, you cannot
 	switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
 	you start out using "abi=n32", that's what all your packages will be built
 	with.</para>
