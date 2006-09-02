@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2006/08/07 20:40:44 jdolecek Exp $
+# $NetBSD: Makefile,v 1.46 2006/09/02 20:21:54 rillig Exp $
 
 PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,12 +13,12 @@ COMMENT=	PSI Jabber Client
 
 DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 
-DIST_SUBDIR=	${DISTNAME}-20060806
+DIST_SUBDIR=	${DISTNAME}-20060806-1
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 
@@ -52,7 +52,7 @@ post-configure:
 	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
 	${ECHO} 'target.path=${QTDIR}/lib' \
 		>> ${WRKSRC}/libpsi/psiwidgets/psiwidgets.pro
-	${ECHO} 'QMAKE_UIC=$(QTDIR)/bin/uic -L ../libpsi/psiwidgets/.libs' \
+	${ECHO} 'QMAKE_UIC=${QTDIR}/bin/uic -L ../libpsi/psiwidgets/.libs' \
 		>> ${WRKSRC}/src/src.pro
 	cd ${WRKSRC}/libpsi/psiwidgets && ( ${SETENV} ${CONFIGURE_ENV}	\
 		${QTDIR}/bin/qmake psiwidgets.pro -o Makefile; \
