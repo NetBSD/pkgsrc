@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2006/07/12 17:55:05 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/02 14:15:13 joerg Exp $
 
---- setup.cfg.orig	2006-07-12 19:53:29.000000000 +0200
-+++ setup.cfg
-@@ -1,5 +1,5 @@
- [build_ext]
--define=PSYCOPG_EXTENSIONS,PSYCOPG_DISPLAY_SIZE,PSYCOPG_NEW_BOOLEAN,HAVE_PQFREEMEM,HAVE_PQPROTOCOL3,PSYCOPG_DEBUG
-+define=PSYCOPG_EXTENSIONS,PSYCOPG_DISPLAY_SIZE,PSYCOPG_NEW_BOOLEAN,HAVE_PQFREEMEM,HAVE_PQPROTOCOL3
- # PSYCOPG_EXTENSIONS enables extensions to PEP-249 (you really want this)
- # PSYCOPG_DISPLAY_SIZE enable display size calculation (a little slower)
- # HAVE_PQFREEMEM should be defined on PostgreSQL >= 7.3
+--- psycopg/connection_type.c.orig	2006-09-02 16:07:53.000000000 +0200
++++ psycopg/connection_type.c
+@@ -288,7 +288,6 @@ connection_setup(connectionObject *self,
+     pthread_mutex_init(&(self->lock), NULL);
+  
+     if (conn_connect(self) != 0) {
+-        pthread_mutex_destroy(&(self->lock));
+         Dprintf("connection_init: FAILED");
+         return -1;
+     }
