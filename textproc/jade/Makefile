@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2006/09/02 08:38:07 rillig Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	11
@@ -30,14 +30,15 @@ CONFIGURE_ARGS+=	--enable-mif
 CXXFLAGS+=		${CFLAGS}
 
 post-patch:
-	@${CHMOD} -R +w ${WRKSRC}
-	@${FIND} ${WRKSRC} -name '*.orig' -size 0c -type f -exec ${RM} {} \;
-	@${FIND} ${WRKSRC} -name '*.orig_dist' -size 0c -type f -exec ${RM} {} \;
+	chmod -R +w ${WRKSRC}
+	find ${WRKSRC} -name '*.orig' -size 0c -type f -exec rm {} \;
+	find ${WRKSRC} -name '*.orig_dist' -size 0c -type f -exec rm {} \;
 
 post-install:
-	@for prog in jade nsgmls sgmlnorm spam spent sx; do		\
+	set -e;								\
+	for prog in jade nsgmls sgmlnorm spam spent sx; do		\
 		${ECHO_MSG} "strip ${PREFIX}/bin/$${prog}";		\
-		strip ${PREFIX}/bin/$${prog};				\
+		strip "${PREFIX}/bin/$${prog}";				\
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/include/sp
 	${INSTALL_DATA} ${WRKSRC}/include/*.cxx ${WRKSRC}/include/*.h \
@@ -47,7 +48,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
 # Installed by print/tex-jadetex
-	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
+	rm ${PREFIX}/share/sgml/jade/*jadetex.*
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
