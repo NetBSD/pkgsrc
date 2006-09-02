@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/15 20:40:15 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/02 20:37:00 rillig Exp $
 
 DISTNAME=	ghostscript-cmaps-20020913
 PKGREVISION=	2
@@ -18,6 +18,7 @@ GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
 EXTRACT_ONLY=		# empty
 USE_TOOLS+=		gs:run
+NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
