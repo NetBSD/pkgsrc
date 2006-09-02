@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.782 2006/09/02 20:10:20 rillig Exp $
+# $NetBSD: Makefile,v 1.783 2006/09/02 21:00:34 rillig Exp $
 #
 
 COMMENT=	Development utilities
@@ -83,6 +83,7 @@ SUBDIR+=	chmlib
 SUBDIR+=	cmake
 SUBDIR+=	coconut
 SUBDIR+=	codeville
+SUBDIR+=	cogito
 SUBDIR+=	cook
 SUBDIR+=	cppunit
 SUBDIR+=	cpuflags
