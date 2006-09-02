@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/15 20:40:15 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/02 20:36:15 rillig Exp $
 
 DISTNAME=	ghostscript-cidfonts-20000901
 PKGREVISION=	2
@@ -17,6 +17,7 @@ ADOBE_RESOURCEDIR=	${PREFIX}/share/Adobe/Resource
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
 EXTRACT_ONLY=		# empty
+NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 USE_TOOLS+=		gs:run
