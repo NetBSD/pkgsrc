@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1177 2006/09/02 17:11:18 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.1178 2006/09/02 19:43:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4162,3 +4162,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/py-gdick to 0.9.1nb7 [minskim 2006-09-02]
 	Updated databases/py-psycopg2 to 2.0.5.1 [joerg 2006-09-02]
 	Added devel/scmgit version 1.4.1 [rillig 2006-09-02]
+	Updated www/galeon to 2.0.1 [rillig 2006-09-02]
