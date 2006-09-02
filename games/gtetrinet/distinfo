@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 23:11:59 agc Exp $
+$NetBSD: distinfo,v 1.5 2006/09/02 12:38:23 adrianp Exp $
 
 SHA1 (gtetrinet-0.7.7.tar.gz) = 4223617048386b58e2654b2cbe987ea1f7591011
 RMD160 (gtetrinet-0.7.7.tar.gz) = b2e107538e68af9aa403f4d286ad6bf5691a299a
 Size (gtetrinet-0.7.7.tar.gz) = 476896 bytes
 SHA1 (patch-aa) = d6496e30634be397cabe574ce2b0595f354f00e4
 SHA1 (patch-ab) = 3b7fbcaf1989bda98c445b34e278d7a9d76751f4
+SHA1 (patch-ac) = ece45fdb6e91f77b09425eb00ef7f796c8059c89
