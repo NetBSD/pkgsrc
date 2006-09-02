@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2006/07/05 05:37:46 jlam Exp $
+# $NetBSD: Makefile,v 1.102 2006/09/02 19:42:58 rillig Exp $
 #
 
-DISTNAME=		galeon-1.3.21
-PKGREVISION=		8
+DISTNAME=		galeon-2.0.1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=galeon/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://galeon.sourceforge.net/
 COMMENT=		GNOME2 Web browser based on gecko
-
-BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 CONFLICTS+=		galeon-devel-[0-9]*
 
@@ -21,8 +18,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-MOZILLA_USE_GTK2=	# yes
-MOZILLA_USE_XFT=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.galeon
 .include "../../www/mozilla/gecko-options.mk"
@@ -31,7 +26,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.galeon
 .if !empty(PKG_OPTIONS:Mfirefox)
 CONFIGURE_ARGS+=	--with-mozilla=firefox
 .else
-BUILDLINK_RPATHDIRS.mozilla-gtk2+=  lib/mozilla-gtk2
+BUILDLINK_RPATHDIRS.mozilla-gtk2+=	lib/mozilla-gtk2
 .endif
 
 GCONF2_SCHEMAS=		galeon.schemas

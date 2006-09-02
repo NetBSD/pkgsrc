@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/09/02 19:42:58 rillig Exp $
 bin/galeon
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
@@ -14,6 +14,10 @@ share/galeon/bookmarks-editor.glade
 share/galeon/bookmarks.glade
 share/galeon/bug.png
 share/galeon/certificate-dialogs.glade
+share/galeon/chrome/branding/brand.dtd
+share/galeon/chrome/branding/brand.properties
+share/galeon/chrome/galeon.manifest
+share/galeon/chrome/global/about.xhtml
 share/galeon/debian.png
 share/galeon/default-bookmarks.xbel
 share/galeon/default-prefs.js
@@ -212,6 +216,7 @@ share/locale/uk/LC_MESSAGES/galeon-2.0.mo
 share/locale/vi/LC_MESSAGES/galeon-2.0.mo
 share/locale/wa/LC_MESSAGES/galeon-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/galeon-2.0.mo
+share/locale/zh_HK/LC_MESSAGES/galeon-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/galeon-2.0.mo
 share/omf/galeon/galeon-C.omf
 share/omf/galeon/galeon-es.omf
