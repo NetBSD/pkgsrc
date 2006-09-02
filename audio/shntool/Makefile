@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/08/23 02:33:56 mrg Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/02 20:13:58 rillig Exp $
 #
 
 DISTNAME=	shntool-2.0.3
+PKGREVISION=	1
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://www.etree.org/shnutils/shntool/source/
 
