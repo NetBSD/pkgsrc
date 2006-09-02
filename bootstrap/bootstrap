@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.81 2006/08/26 15:42:27 schwarz Exp $
+# $NetBSD: bootstrap,v 1.82 2006/09/02 11:14:48 schwarz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -853,7 +853,7 @@ test -z "$MKDIR" || echo "TOOLS_PLATFORM.mkdir?=		$MKDIR" >> ${MKCONF_EXAMPLE}
 test -z "$TEST" || echo "TOOLS_PLATFORM.test?=		$TEST" >> ${MKCONF_EXAMPLE}
 test -z "$TOUCH" || echo "TOOLS_PLATFORM.touch?=		$TOUCH" >> ${MKCONF_EXAMPLE}
 test -z "$XARGS" || echo "TOOLS_PLATFORM.xargs?=		$XARGS" >> ${MKCONF_EXAMPLE}
-test -z "$CFLAGS" || echo "CFLAGS+=		$CFLAGS" >> ${MKCONF_EXAMPLE}
+test -z "$CFLAGS" || ( echo "CFLAGS+=		$CFLAGS" >> ${MKCONF_EXAMPLE}; echo "DBG=" >> ${MKCONF_EXAMPLE} ) # prevent DBG from adding default optimizer flags		
 test -z "$CPPFLAGS" || echo "CPPFLAGS+=		$CPPFLAGS" >> ${MKCONF_EXAMPLE}
 test -z "$LDFLAGS" || echo "LDFLAGS+=		$LDFLAGS" >> ${MKCONF_EXAMPLE}
 
