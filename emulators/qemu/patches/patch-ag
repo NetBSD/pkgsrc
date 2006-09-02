@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2005/12/11 09:40:39 wiz Exp $
+$NetBSD: patch-ag,v 1.5 2006/09/02 18:17:40 rillig Exp $
 
 --- configure.orig	2005-09-04 17:11:31.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.4 2005/12/11 09:40:39 wiz Exp $
      prefix="/usr/local"
  fi
 -mandir="$prefix/share/man"
-+mandir="$prefix/man"
++mandir="$prefix/$PKGMANDIR"
  datadir="$prefix/share/qemu"
  docdir="$prefix/share/doc/qemu"
  bindir="$prefix/bin"
