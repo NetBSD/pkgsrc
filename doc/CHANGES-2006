@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1171 2006/09/02 08:30:24 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.1172 2006/09/02 08:44:17 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4155,3 +4155,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/py-flup version 2030 [joerg 2006-09-01]
 	Updated wm/jwm to 1.8rc1 [abs 2006-09-01]
 	Updated net/p5-Net-IP to 1.25 [adrianp 2006-09-02]
+	Updated chat/ircservices to 5.0.58 [adrianp 2006-09-02]
