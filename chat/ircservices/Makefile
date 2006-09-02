@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2006/06/06 12:35:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2006/09/02 08:42:58 adrianp Exp $
 #
 
-DISTNAME=	ircservices-5.0.57
+DISTNAME=	ircservices-5.0.58
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.esper.net/ircservices/ \
+MASTER_SITES=	http://www.ircservices.za.net/download/ \
+		ftp://ftp.esper.net/ircservices/ \
 		ftp://ftp.esper.net/ircservices/old/ \
-		http://www.ircservices.esper.net/download/ \
 		ftp://ftp.freenet.de/pub/ftp.ircservices.za.net/pub/ircservices/
 
 MAINTAINER=	virtus@wanadoo.nl
@@ -16,6 +16,7 @@ HAS_CONFIGURE=	YES
 USE_TOOLS+=	gmake grep gsed perl
 RCD_SCRIPTS=	ircservices
 PKG_GROUPS=	services
+BUILD_DEFS=	VARBASE
 
 CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}
 
@@ -54,7 +55,7 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/ircservices/modules.conf \
 				${PREFIX}/lib/services/modules.conf \
 				${BINOWN} ${BINGRP} 0640
 
-INSTALLATION_DIRS=	lib/services man/man8 sbin
+INSTALLATION_DIRS=	lib/services ${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
 
