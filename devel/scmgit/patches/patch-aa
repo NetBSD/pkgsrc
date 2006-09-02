@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/09/02 17:11:07 rillig Exp $
+
+NetBSD 3.0 needs -liconv, too.
+
+--- Makefile.orig	2006-06-10 21:41:54.000000000 +0200
++++ Makefile	2006-07-06 20:28:19.000000000 +0200
+@@ -297,9 +297,7 @@ ifeq ($(uname_S),OpenBSD)
+ 	ALL_LDFLAGS += -L/usr/local/lib
+ endif
+ ifeq ($(uname_S),NetBSD)
+-	ifeq ($(shell expr "$(uname_R)" : '[01]\.'),2)
+-		NEEDS_LIBICONV = YesPlease
+-	endif
++	NEEDS_LIBICONV = YesPlease
+ 	ALL_CFLAGS += -I/usr/pkg/include
+ 	ALL_LDFLAGS += -L/usr/pkg/lib -Wl,-rpath,/usr/pkg/lib
+ endif
