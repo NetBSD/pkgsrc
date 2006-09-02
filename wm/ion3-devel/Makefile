@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/08/23 18:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/02 12:07:52 rpaulo Exp $
 #
 
 DISTNAME=	ion-3ds-20060524
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/-3ds-/3-/}
 CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/
 
-MAINTAINER=	rpaulo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://iki.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
