@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/09/02 17:11:07 rillig Exp $
+
+SHA1 (git-1.4.1.tar.gz) = 3471aa743752d8963c19d5e1440cfb1dece42ecb
+RMD160 (git-1.4.1.tar.gz) = a4d404d87f4bf4160639f137fc588159bc952e9e
+Size (git-1.4.1.tar.gz) = 888274 bytes
+SHA1 (patch-aa) = fb4753cb046c99c4985a2de50bc1feb562eee743
