@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.26 2006/06/20 22:21:20 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2006/09/03 08:30:42 wiz Exp $
 
 DISTNAME=	bash-3.1
-PKGNAME=	bash-3.1pl1
-PKGREVISION=	2
+PKGNAME=	bash-3.1pl17
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
 PATCH_SITES=	${MASTER_SITES:=bash-3.1-patches/}
-PATCHFILES=	bash31-001
+PATCHFILES=	bash31-001 bash31-002 bash31-003 bash31-004 \
+		bash31-005 bash31-006 bash31-007 bash31-008 \
+		bash31-009 bash31-010 bash31-011 bash31-012 \
+		bash31-013 bash31-014 bash31-015 bash31-016 \
+		bash31-017   
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
