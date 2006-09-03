@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:40 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/09/03 02:56:00 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 QDBM_BUILDLINK3_MK:=	${QDBM_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}qdbm
 
 .if !empty(QDBM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.qdbm+=	qdbm>=1.8.40
+BUILDLINK_ABI_DEPENDS.qdbm+=	qdbm>=1.8.65
 BUILDLINK_PKGSRCDIR.qdbm?=	../../databases/qdbm
 
 .include "../../mk/pthread.buildlink3.mk"
