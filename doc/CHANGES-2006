@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1196 2006/09/03 16:44:52 kleink Exp $
+$NetBSD: CHANGES-2006,v 1.1197 2006/09/03 17:14:33 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4195,3 +4195,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.8 [kleink 2006-09-03]
 	Updated textproc/p5-XML-Atom to 0.23 [kleink 2006-09-03]
 	Updated textproc/p5-XML-Atom-Stream to 0.09 [kleink 2006-09-03]
+	Updated audio/cdparanoia to 3.0.9.8nb6 [ben 2006-09-03]
