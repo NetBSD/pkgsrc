@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.1 2006/06/06 03:05:48 jlam Exp $
+# $NetBSD: extract,v 1.2 2006/09/03 16:36:37 schwarz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -100,7 +100,7 @@ set -u		# treat undefined variables as errors
 : ${CAT:=cat}
 : ${CP:=cp}
 : ${ECHO:=echo}
-: ${GZCAT:=gzcat}
+: ${GZCAT:="gzip -cd"}
 : ${LHA:=lha}
 : ${MKDIR:=mkdir}
 : ${PAX:=pax}
