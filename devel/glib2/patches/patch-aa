@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.26 2006/08/17 22:35:11 wiz Exp $
+$NetBSD: patch-aa,v 1.27 2006/09/03 08:53:04 wiz Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
 http://bugzilla.gnome.org/show_bug.cgi?id=141256
 
---- configure.orig	2006-08-15 23:32:36.000000000 +0000
+--- configure.orig	2006-08-30 05:46:14.000000000 +0000
 +++ configure
 @@ -465,7 +465,7 @@ ac_includes_default="\
  # include <unistd.h>
@@ -14,7 +14,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -32207,6 +32207,7 @@ else
+@@ -33430,6 +33430,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -22,7 +22,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -32860,6 +32861,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
+@@ -34083,6 +34084,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
  	else
    		G_MODULE_BROKEN_RTLD_GLOBAL=0
  	fi
@@ -95,7 +95,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  	echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
  echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6
  if test "${glib_cv_uscore+set}" = set; then
-@@ -33422,9 +33489,34 @@ if test x"$have_threads" != xno; then
+@@ -34645,9 +34712,34 @@ if test x"$have_threads" != xno; then
           # skip cygwin and darwin -pthread or -pthreads test
           ;;
        *)
@@ -132,7 +132,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
            if test "$cross_compiling" = yes; then
    cat >conftest.$ac_ext <<_ACEOF
  
-@@ -33513,10 +33605,12 @@ rm -f core *.core gmon.out bb.out confte
+@@ -34736,12 +34828,13 @@ rm -f core *.core gmon.out bb.out confte
  fi
            CFLAGS="$glib_save_CFLAGS"
            if test $glib_flag_works = yes ; then
@@ -140,14 +140,15 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 -	     G_THREAD_LIBS=-$flag
 +             G_THREAD_CFLAGS=$flag
 +	     G_THREAD_LIBS=$flag
+ 	     break;
            fi
          done
-+
-+         fi
++	 fi    
           ;;
      esac
    fi
-@@ -33569,6 +33663,15 @@ fi
+ 
+@@ -34793,6 +34886,15 @@ fi
  
    fi
  
@@ -163,7 +164,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
      # if we are not finding the localtime_r function, then we probably are
      # not using the proper multithread flag
  
-@@ -35522,6 +35625,10 @@ case $host in
+@@ -36746,6 +36848,10 @@ case $host in
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
@@ -174,7 +175,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  esac
  
  
-@@ -39796,6 +39905,7 @@ s,@G_MODULE_PLUGIN_LIBS@,$G_MODULE_PLUGI
+@@ -41020,6 +41126,7 @@ s,@G_MODULE_PLUGIN_LIBS@,$G_MODULE_PLUGI
  s,@G_MODULE_LDFLAGS@,$G_MODULE_LDFLAGS,;t t
  s,@G_MODULE_HAVE_DLERROR@,$G_MODULE_HAVE_DLERROR,;t t
  s,@G_MODULE_BROKEN_RTLD_GLOBAL@,$G_MODULE_BROKEN_RTLD_GLOBAL,;t t
