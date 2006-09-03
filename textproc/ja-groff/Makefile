@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/08 22:49:58 hira Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/03 00:56:30 wiz Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -11,7 +11,7 @@ PATCH_SITES=	ftp://ftp.ae.keio.ac.jp/pub/GNU/ \
 PATCHFILES=	jgroff-0.99.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	Japanese enhancement of GNU groff
 
