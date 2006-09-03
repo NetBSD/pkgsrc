@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:10:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/09/03 13:02:17 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBOFX_BUILDLINK3_MK:=	${LIBOFX_BUILDLINK3_MK}+
@@ -18,6 +18,5 @@ BUILDLINK_INCDIRS.libofx+=	include/libofx
 .endif	# LIBOFX_BUILDLINK3_MK
 
 .include "../../textproc/opensp/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
