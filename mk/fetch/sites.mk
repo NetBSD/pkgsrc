@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.11 2006/09/02 15:10:38 obache Exp $
+# $NetBSD: sites.mk,v 1.12 2006/09/03 10:21:52 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -8,7 +8,7 @@ MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
 	ftp://sunsite.doc.ic.ac.uk/sites/ftp.x.org/contrib/ \
 	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/X11/contrib/ \
+	ftp://mirror.switch.ch/mirror/X11/contrib/ \
 	ftp://ftp.cica.es/pub/X/contrib/ \
 	ftp://ftp.unicamp.br/pub/X11/contrib/ \
 	ftp://ftp.x.org/contrib/
@@ -75,7 +75,6 @@ MASTER_SITE_SUNSITE+=   \
 	ftp://ftp.lip6.fr/pub/linux/sunsite/ \
 	ftp://ftp.uni-stuttgart.de/pub/mirror/sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.cs.tu-berlin.de/pub/linux/Mirrors/sunsite.unc.edu/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/linux/sunsite/ \
 	ftp://ftp.tuwien.ac.at/pub/linux/ibiblio/
 
 MASTER_SITE_GNOME+=     \
@@ -142,7 +141,7 @@ MASTER_SITE_SUSE+=	\
 	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://ftp.duth.gr/pub/suse/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://mirror.switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
