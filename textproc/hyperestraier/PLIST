@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/03 03:42:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/09/03 12:42:49 obache Exp $
 bin/estbutler
 bin/estcall
 bin/estcmd
@@ -14,7 +14,7 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.25.0
+lib/libestraier.so.8.26.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estseek.cgi
 man/man1/estcall.1
