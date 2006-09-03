@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1179 2006/09/02 20:58:32 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.1180 2006/09/03 01:43:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3909,6 +3909,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.14.0 [wiz 2006-08-10]
 	Updated www/php4 to 4.4.3 [adrianp 2006-08-10]
 	Updated multimedia/ffmpeg to 0.4.9pre1nb2 [ben 2006-08-10]
+	Updated devel/devhelp to 0.12 [drochner 2006-08-10]
 	Updated mail/postfix to 2.3.2nb1 [taca 2006-08-11]
 	Updated mail/postfix-current to 20060711nb1 [taca 2006-08-11]
 	Updated archivers/zziplib to 0.10.82nb2 [taca 2006-08-11]
@@ -3921,6 +3922,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/pxp version 1.1.6 [wiz 2006-08-11]
 	Added textproc/harmony version 20060526 [wiz 2006-08-11]
 	Updated chat/ircd-hybrid to 7.2.2 [adrianp 2006-08-11]
+	Updated x11/py-wxWidgets to 2.6.3.3 [drochner 2006-08-11]
+	Updated editors/TeXmacs to 1.0.6.5 [drochner 2006-08-11]
+	Updated math/maxima to 5.9.3 [drochner 2006-08-11]
 	Added graphics/zphoto version 1.2.2 [xtraeme 2006-08-12]
 	Updated devel/yasm to 0.5.0 [wiz 2006-08-12]
 	Added net/powerdns version 2.9.20 [ghen 2006-08-13]
@@ -4122,6 +4126,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/swi-prolog-packages to 5.6.17nb1 [markd 2006-08-29]
 	Updated sysutils/krusader to 1.70.1 [markd 2006-08-29]
 	Updated editors/kile to 1.9.2 [markd 2006-08-29]
+	Updated www/liferea to 1.0.21 [drochner 2006-08-29]
+	Updated games/prboom to 2.4.5 [drochner 2006-08-29]
 	Updated devel/gnustep-make to 1.13.0 [adam 2006-08-30]
 	Updated devel/gnustep-base to 1.13.0 [adam 2006-08-30]
 	Updated x11/gnustep-gui to 0.11.0 [adam 2006-08-30]
@@ -4129,6 +4135,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/Gorm to 1.1.0 [adam 2006-08-30]
 	Updated print/abcm2ps to 4.12.25 [minskim 2006-08-30]
 	Updated mail/exim to 4.63 [abs 2006-08-30]
+	Updated audio/musicbrainz to 2.1.4 [drochner 2006-08-30]
+	Added graphics/djvulibre-lib version 3.5.17 [drochner 2006-08-30]
+	Added graphics/djvulibre-tools version 3.5.17 [drochner 2006-08-30]
 	Updated net/aiccu to 20060725 [ghen 2006-08-31]
 	Updated graphics/cairo to 1.2.4nb1 [dmcmahill 2006-08-31]
 	Updated databases/mysql4-client to 4.1.21 [seb 2006-08-31]
