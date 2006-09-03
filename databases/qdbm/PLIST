@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/11 21:24:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/09/03 02:56:00 obache Exp $
 bin/cbcodec
 bin/cbtest
 bin/crmgr
@@ -12,6 +12,7 @@ bin/hvtest
 bin/odidx
 bin/odmgr
 bin/odtest
+bin/qmttest
 bin/rlmgr
 bin/rltest
 bin/vlmgr
@@ -40,6 +41,7 @@ man/man1/hvtest.1
 man/man1/odidx.1
 man/man1/odmgr.1
 man/man1/odtest.1
+man/man1/qmttest.1
 man/man1/rlmgr.1
 man/man1/rltest.1
 man/man1/vlmgr.1
