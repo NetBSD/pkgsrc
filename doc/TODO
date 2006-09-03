@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5402 2006/09/03 01:43:28 wiz Exp $
+$NetBSD: TODO,v 1.5403 2006/09/03 03:05:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,6 @@ Suggested package updates
 	o pysol-4.82
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qdbm-1.8.70
 	o qemu-0.8.2
 	o qt1-1.45
 	o qt2-designer-2.3.2
