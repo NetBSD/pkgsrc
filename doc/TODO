@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5404 2006/09/03 03:45:41 obache Exp $
+$NetBSD: TODO,v 1.5405 2006/09/03 08:53:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -504,7 +504,6 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade-3.0.1
 	o gld-1.7
-	o glib2-2.12.3
 	o glibmm-2.12.0
 	o gmime-2.2.3
 	o gnet1-1.1.9
