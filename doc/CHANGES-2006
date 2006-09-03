@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1187 2006/09/03 09:00:01 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1188 2006/09/03 09:04:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/glib2 to 2.12.3 [wiz 2006-09-03]
 	Updated devel/m4 to 1.4.6 [wiz 2006-09-03]
 	Updated devel/libidn to 0.6.6 [wiz 2006-09-03]
+	Updated security/libgcrypt to 1.2.3 [wiz 2006-09-03]
