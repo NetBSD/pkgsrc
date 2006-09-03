@@ -1,0 +1,36 @@
+$NetBSD: patch-ck,v 1.1 2006/09/03 17:13:30 ben Exp $
+
+--- /dev/null	2006-09-03 08:46:15.000000000 -0700
++++ interface/osx_interface.h	2006-09-03 08:49:13.000000000 -0700
+@@ -0,0 +1,31 @@
++/******************************************************************
++ * CopyPolicy: GNU Public License 2 applies
++ * Copyright (C) 1998 Monty xiphmont@mit.edu
++ *
++ ******************************************************************/
++
++#ifndef _cdda_osx_interface_h_
++#define _cdda_osx_interface_h_
++
++#include <CoreFoundation/CFBase.h>
++#include <CoreFoundation/CFString.h>
++#include <CoreFoundation/CFNumber.h>
++#include <IOKit/IOBSD.h>
++#include <IOKit/storage/IOMedia.h>
++#include <IOKit/storage/IOCDMedia.h>
++#include <IOKit/storage/IOCDMediaBSDClient.h>
++#include "cdda_interface.h"
++
++char *osx_bsd_device_for_media(io_object_t media);
++int osx_enumerate_devices(cdrom_drive *d,
++                          int (*device_found)(cdrom_drive *, io_object_t, void *),
++                          void *data);
++io_object_t osx_default_device(cdrom_drive *d);
++int osx_read_toc(cdrom_drive *d);
++int osx_open_device(cdrom_drive *d);
++int osx_open_device_orig(cdrom_drive *d, io_object_t io);
++int osx_set_speed(cdrom_drive *d, int speed);
++int osx_enable_cdda(cdrom_drive *d, int enable);
++long osx_read_audio(cdrom_drive *d, void *buf, long begin, long sectors);
++
++#endif

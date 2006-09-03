@@ -1,0 +1,15 @@
+$NetBSD: patch-cj,v 1.1 2006/09/03 17:13:30 ben Exp $
+
+--- interface/common_interface.h.orig	1999-08-15 14:52:42.000000000 -0700
++++ interface/common_interface.h
+@@ -9,8 +9,10 @@
+ 
+ #include "low_interface.h"
+ 
++#if !(defined(__APPLE__) && defined(__MACH__))
+ extern int ioctl_ping_cdrom(int fd);
+ extern char *atapi_drive_info(int fd);
++#endif
+ extern int data_bigendianp(cdrom_drive *d);
+ extern int FixupTOC(cdrom_drive *d,int tracks);
+ 

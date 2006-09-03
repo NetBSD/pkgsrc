@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.5 2006/03/07 06:29:03 joerg Exp $
+$NetBSD: patch-cc,v 1.6 2006/09/03 17:13:30 ben Exp $
 
---- interface/utils.h.orig	2000-04-19 16:41:04.000000000 -0600
+--- interface/utils.h.orig	2000-04-19 15:41:04.000000000 -0700
 +++ interface/utils.h
-@@ -1,4 +1,18 @@
+@@ -1,4 +1,23 @@
 +#ifdef __linux__
  #include <endian.h>
 +#endif
@@ -18,38 +18,71 @@ $NetBSD: patch-cc,v 1.5 2006/03/07 06:29:03 joerg Exp $
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <machine/endian.h>
 +#endif
++#if defined(__APPLE__) && defined(__MACH__)
++#include <stdint.h>
++#include <machine/endian.h>
++#define STDERR_FILENO 2
++#endif
  #include <stdio.h>
  #include <errno.h>
  #include <string.h>
-@@ -112,6 +126,7 @@ static void cderror(cdrom_drive *d,const
+@@ -14,15 +33,27 @@ static inline int bigendianp(void){
+ }
+ 
+ static inline int32_t swap32(int32_t x){
++#if defined(__APPLE__) && defined(__MACH__)
++  return((((uint32_t)x & 0x000000ffU) << 24) | 
++	 (((uint32_t)x & 0x0000ff00U) <<  8) | 
++	 (((uint32_t)x & 0x00ff0000U) >>  8) | 
++	 (((uint32_t)x & 0xff000000U) >> 24));
++#else
+   return((((u_int32_t)x & 0x000000ffU) << 24) | 
+ 	 (((u_int32_t)x & 0x0000ff00U) <<  8) | 
+ 	 (((u_int32_t)x & 0x00ff0000U) >>  8) | 
+ 	 (((u_int32_t)x & 0xff000000U) >> 24));
++#endif
+ }
+ 
+ static inline int16_t swap16(int16_t x){
++#if defined(__APPLE__) && defined(__MACH__)
++  return((((uint16_t)x & 0x00ffU) <<  8) | 
++	 (((uint16_t)x & 0xff00U) >>  8));
++#else
+   return((((u_int16_t)x & 0x00ffU) <<  8) | 
+ 	 (((u_int16_t)x & 0xff00U) >>  8));
++#endif
+ }
+ 
+ #if BYTE_ORDER == LITTLE_ENDIAN
+@@ -112,6 +143,7 @@ static void cderror(cdrom_drive *d,const
        break;
      case CDDA_MESSAGE_FORGETIT:
      default:
-+      ;
++      break;
      }
    }
  }
-@@ -127,6 +142,7 @@ static void cdmessage(cdrom_drive *d,con
+@@ -127,6 +159,7 @@ static void cdmessage(cdrom_drive *d,con
        break;
      case CDDA_MESSAGE_FORGETIT:
      default:
-+      ;
++      break;
      }
    }
  }
-@@ -169,6 +185,7 @@ static void idperror(int messagedest,cha
+@@ -169,6 +202,7 @@ static void idperror(int messagedest,cha
        break;
      case CDDA_MESSAGE_FORGETIT:
      default:
-+      ;
++      break;
      }
    }
    if(malloced)free(buffer);
-@@ -205,6 +222,7 @@ static void idmessage(int messagedest,ch
+@@ -205,6 +239,7 @@ static void idmessage(int messagedest,ch
        break;
      case CDDA_MESSAGE_FORGETIT:
      default:
-+      ;
++      break;
      }
    }
    if(malloced)free(buffer);

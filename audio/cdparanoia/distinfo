@@ -1,20 +1,25 @@
-$NetBSD: distinfo,v 1.14 2006/05/14 21:31:01 minskim Exp $
+$NetBSD: distinfo,v 1.15 2006/09/03 17:13:30 ben Exp $
 
 SHA1 (cdparanoia-III-alpha9.8.src.tgz) = 04cc33a7d22d6255f6239e3e74195506b3bdde06
 RMD160 (cdparanoia-III-alpha9.8.src.tgz) = d9225165f83b5386c58db263d6918a7006df1481
 Size (cdparanoia-III-alpha9.8.src.tgz) = 116591 bytes
-SHA1 (patch-aa) = 31b37e9fb7be1cb16249bcd6a8561ab64c2fbf39
-SHA1 (patch-ab) = 69d2996b7089cb87ce4e3de969da795ae041e720
-SHA1 (patch-ac) = 7de8b30c5b5ed2e82090115897d7c98e61776214
-SHA1 (patch-ad) = 45cb1d2d402f5769447507c8da24e289396021e7
-SHA1 (patch-ae) = ea4cbc4a13f36ba4da39bd9a944d4123f132b86e
+SHA1 (patch-aa) = 29fd5767b37360fe804013bb171fc7e5f4d8311f
+SHA1 (patch-ab) = d4dad2ef444cd82bbe6201f7cbdcc42d1f28cc6e
+SHA1 (patch-ac) = 3d2221af8d9280c77ad0f08836cbc6f2b311d61f
+SHA1 (patch-ad) = 9a1ea1b98b5f3810e1ccae57beb8c68b5e189716
+SHA1 (patch-ae) = 6ba166c2ac73b9c03a1944989c6ffbe655d80c71
 SHA1 (patch-ba) = 51151796493c946e5bdafbd22005136ea7f27a09
-SHA1 (patch-ca) = cf29a467bd37bc642edd81f8a6aa76cfb0c15344
-SHA1 (patch-cb) = 2123635be4d7765419d62958365a6df621471439
-SHA1 (patch-cc) = 311f8e45a9c3bc86cdb106730295f28a856ae2ab
-SHA1 (patch-cd) = 81a35822f89b4f674f03cbcbd5831cac96c3aa92
+SHA1 (patch-ca) = 9c35254c09a96b622cac44198443f66f7bc0e428
+SHA1 (patch-cb) = c19ee04017b836842bb0f2d2c77e8f35aad0f9bb
+SHA1 (patch-cc) = 9398e31db2e0c4cca19a95aa7b22cdb928869429
+SHA1 (patch-cd) = 81d31fb55db0f982959395cdecc3da826bf23bfb
 SHA1 (patch-ce) = 282e3169cc26ab11924c66a312d77d7c1f59f242
-SHA1 (patch-cf) = 3ccf5e52737cb449dbead92c582646d0ebe24500
+SHA1 (patch-cf) = 650de2a80235e42acd5670a06bd1e5bcf346100d
 SHA1 (patch-cg) = b9786ee81dcb7bd2f6572a20f424dd5291a8720d
-SHA1 (patch-ch) = d28ec06a56499ff96491edc49d462f43c41d15fe
-SHA1 (patch-ci) = 7d041cabce0a8935fd1807766a93eb72e7c9c717
+SHA1 (patch-ch) = 8d16dd8c80e8f1ee35ccc299ba927d685adde01c
+SHA1 (patch-ci) = 60db1d1d2e8ec9c6d446543762218b22c597d986
+SHA1 (patch-cj) = e2420e2ccadd2d6ea30d6bf48af9c141dc395afc
+SHA1 (patch-ck) = 0232f8f42d98b49043f55cd6aaf1f50ab38fadfb
+SHA1 (patch-cl) = f511570233524feac434db160e51099316618058
+SHA1 (patch-cm) = 18001a6cf96dd6bfde8e1208be56a40fac9aa0d5
+SHA1 (patch-cn) = b79db0b24a042a5801b47e6db5e20cbf07a53475
