@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/08/02 07:02:44 taca Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/03 02:53:13 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -41,13 +41,6 @@ CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX:Q}
 .endif
 
 FILES_SUBST+=	DATE=${DATE:Q}
-
-#
-# Use Berkley DB unless a system has real ndbm(3).
-#
-.if !exists(/usr/include/ndbm.h)
-.include "../../mk/bdb.buildlink3.mk"
-.endif
 
 #
 # IRIX work around which should be fixed.
@@ -135,6 +128,4 @@ post-install:
 .endfor
 
 .include "../../lang/ruby/Makefile.common"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
