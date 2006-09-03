@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/11/23 06:20:36 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2006/09/03 02:56:00 obache Exp $
 
---- Makefile.in.orig	2005-09-01 04:19:56.000000000 +0900
+--- Makefile.in.orig	2006-08-21 00:17:27.000000000 +0900
 +++ Makefile.in
-@@ -45,13 +45,13 @@ MYLIBDIR = @libdir@
+@@ -45,7 +45,7 @@ MYLIBDIR = @libdir@
  MYBINDIR = @bindir@
  MYMAN1DIR = @mandir@/man1
  MYMAN3DIR = @mandir@/man3
@@ -11,15 +11,8 @@ $NetBSD: patch-aa,v 1.3 2005/11/23 06:20:36 minskim Exp $
  MYPCDIR = @libdir@/pkgconfig
  DESTDIR =
  
- # Building binaries
- CC = @CC@
--RELCFLAGS = -O2 -fomit-frame-pointer -DNDEBUG
-+RELCFLAGS = $(PTHREAD_CFLAGS) -O2 -fomit-frame-pointer -DNDEBUG
- CPPFLAGS = -I$(srcdir) -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
-   -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
-   -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
-@@ -59,8 +59,8 @@ CPPFLAGS = -I$(srcdir) -I$(HOME)/include
- CFLAGS = -Wall -ansi -pedantic -fPIC -fsigned-char $(RELCFLAGS)
+@@ -58,8 +58,8 @@ CPPFLAGS = -I$(srcdir) -I$(HOME)/include
+ CFLAGS = -Wall -pedantic -fPIC -fsigned-char -O3 -fomit-frame-pointer -fforce-addr @MYOPTS@
  LD = @LD@
  LIBS = -lqdbm @LIBS@
 -LIBLDFLAGS = -L. -L$(HOME)/lib -L/usr/local/lib @LIBS@
