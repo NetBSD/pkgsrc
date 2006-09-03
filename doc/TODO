@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5401 2006/09/03 01:38:42 wiz Exp $
+$NetBSD: TODO,v 1.5402 2006/09/03 01:43:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -412,7 +412,6 @@ Suggested package updates
 	o delegate-9.1.1
 	o denemo-0.7.5
 	o devIL-1.6.7
-	o devhelp-0.12
 	o devtodo-0.1.19
 	o diffstat-1.43
 	o dirac-0.6.0
@@ -654,7 +653,6 @@ Suggested package updates
 	o libtorrent-0.9.3 [pkg/34291]
 	o libwpd-0.8.5
 	o licq-core-1.3.0
-	o liferea-1.0.21 [pkg/34319]
 	o lilypond-2.8.0
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
@@ -715,7 +713,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.0.5
 	o muse-0.9.1
-	o musicbrainz-2.1.4
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
 	o ncftp2-2.8.2
@@ -975,7 +972,6 @@ Suggested package updates
 	o postgrey-1.27
 	o powermanga-0.80
 	o prayer-1.0.15
-	o prboom-2.4.5
 	o prelude-lml-0.9.6
 	o proj-4.4.9
 	o projclock-0.9
