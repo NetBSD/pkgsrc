@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1181 2006/09/03 03:05:39 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1182 2006/09/03 03:45:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4178,3 +4178,4 @@ Changes to the packages collection and infrastructure in 2006:
         Updated databases/p5-qdbm to 1.0.0.1.8.70 [obache 2006-09-03]
         Updated databases/qdbm-cgi to 0.0.1.1.8.70 [obache 2006-09-03]
         Updated databases/qdbm-plus to 1.0.0.1.8.70 [obache 2006-09-03]
+	Updated textproc/hyperestraier to 1.4.0 [obache 2006-09-03]
