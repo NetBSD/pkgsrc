@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/03 00:56:28 wiz Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	http://www.proudman51.freeserve.co.uk/psion/
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.proudman51.freeserve.co.uk/psion/
 COMMENT=	Tools to talk to the PSION organiser
 
