@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2004/04/21 12:08:10 dillo Exp $
+$NetBSD: patch-aa,v 1.11 2006/09/03 11:39:08 kristerw Exp $
 
---- Makefile.in.orig	Tue Feb 17 17:11:13 2004
-+++ Makefile.in
-@@ -338,12 +338,12 @@ inst-man:
+--- Makefile.in.orig	2006-09-03 13:12:21.000000000 +0200
++++ Makefile.in	2006-09-03 13:20:50.000000000 +0200
+@@ -338,12 +338,12 @@
  	fi
  
  inst-inc:
@@ -18,20 +18,17 @@ $NetBSD: patch-aa,v 1.10 2004/04/21 12:08:10 dillo Exp $
  	$(INSTALL_DATA) $(srcdir)/$(LIBCIG) $(DESTDIR)$(LIB)/cig
  	$(INSTALL_DATA) $(srcdir)/cig/libcig.h $(DESTDIR)$(LIB)/cig
  
-@@ -355,7 +355,11 @@ inst-misc:
+@@ -355,6 +355,9 @@
  	done &&								\
- 	for f in scheme/rts/*num.scm scheme/rts/jar-defrecord.scm; do	\
+ 	for f in $(srcdir)/scheme/rts/*num.scm $(srcdir)/scheme/rts/jar-defrecord.scm; do	\
  		$(INSTALL_DATA) $$f $(DESTDIR)$(LIB)/rts || exit 1;	\
--	done 
-+	done  &&                                                        \
-+	for f in emacs/*; do                                            \
-+		$(INSTALL_DATA) $$f $(LIB)/emacs || exit 1;             \
-+	done
-+
++	done &&								\
++	for f in emacs/*; do						\
++		$(INSTALL_DATA) $$f $(LIB)/emacs || exit 1;		\
+ 	done 
  
  inst-doc:
- 	for f in $(srcdir)/doc/*.txt $(srcdir)/doc/*.ps; do \
-@@ -419,8 +423,8 @@ dirs:
+@@ -419,8 +422,8 @@
  	}								\
  	done &&								\
  	for dir in								\
@@ -42,22 +39,16 @@ $NetBSD: patch-aa,v 1.10 2004/04/21 12:08:10 dillo Exp $
  		{ mkdir -p $(DESTDIR)$(LIB)/$$dir && [ -w $(DESTDIR)$(LIB)/$$dir ]; } || {	\
  			echo "$(DESTDIR)$(LIB)/$$dir not a writable directory" >&2; 	\
  		exit 1;						  		\
-@@ -899,9 +903,9 @@ scsh/stripped-scsh.image: $(VM) $(SCHEME
+@@ -903,9 +906,9 @@
  
  install-scsh: scsh install-scsh-image install-stripped-scsh-image
  	$(RM) $(DESTDIR)$(bindir)/$(RUNNABLE)
--	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh $(DESTDIR)$(bindir)/$(RUNNABLE)
--	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSHVM) $(DESTDIR)$(libdir)/$(LIBSCSHVM)
--	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(DESTDIR)$(libdir)/$(LIBSCSH)
-+	$(BSD_INSTALL_SCRIPT) $(srcdir)/scsh/scsh $(DESTDIR)$(bindir)/$(RUNNABLE)
-+	$(INSTALL_DATA) $(srcdir)/$(LIBSCSHVM) $(DESTDIR)$(libdir)/$(LIBSCSHVM)
-+	$(INSTALL_DATA) $(srcdir)/$(LIBSCSH) $(DESTDIR)$(libdir)/$(LIBSCSH)
+-	$(INSTALL_PROGRAM) scsh/scsh $(DESTDIR)$(bindir)/$(RUNNABLE)
+-	$(INSTALL_PROGRAM) $(LIBSCSHVM) $(DESTDIR)$(libdir)/$(LIBSCSHVM)
+-	$(INSTALL_PROGRAM) $(LIBSCSH) $(DESTDIR)$(libdir)/$(LIBSCSH)
++	$(BSD_INSTALL_SCRIPT) scsh/scsh $(DESTDIR)$(bindir)/$(RUNNABLE)
++	$(INSTALL_DATA) $(LIBSCSHVM) $(DESTDIR)$(libdir)/$(LIBSCSHVM)
++	$(INSTALL_DATA) $(LIBSCSH) $(DESTDIR)$(libdir)/$(LIBSCSH)
  	$(RANLIB) $(DESTDIR)$(libdir)/$(LIBSCSH)
  	for f in $(srcdir)/scsh/*.scm $(srcdir)/scsh/*/*.scm; \
  	    do $(INSTALL_DATA) $$f $(DESTDIR)$(LIB)/scsh/; done
-@@ -939,4 +943,4 @@ scsh/configure.scm: scsh/configure.scm.i
-             -e 's|@scsh_DEFS@|$(DEFS)|g' \
-             -e 's|@scsh_CFLAGS@|$(CFLAGS)|g' \
-             -e 's|@scsh_CPPFLAGS@|$(CPPFLAGS)|g' \
--            -e 's|@scsh_LDFLAGS@|$(LDFLAGS)|g'  $< > $@
-+            -e 's|@scsh_LDFLAGS@|$(LDFLAGS)|g'  scsh/configure.scm.in > $@

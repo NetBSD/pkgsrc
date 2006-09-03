@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2005/11/10 22:48:07 joerg Exp $
+$NetBSD: patch-ad,v 1.7 2006/09/03 11:39:08 kristerw Exp $
 
 --- scsh/syscalls1.c.orig	2004-03-11 15:54:06.000000000 +0000
 +++ scsh/syscalls1.c
@@ -10,13 +10,3 @@ $NetBSD: patch-ad,v 1.6 2005/11/10 22:48:07 joerg Exp $
  extern char **environ;
  
  /* Sux because it's dependent on 32-bitness. */
-@@ -671,7 +670,9 @@ s48_value scsh_fsync(s48_value sch_fdes)
- 
- s48_value scsh_sync()
- {
-+#if !defined(__INTERIX)
-   sync();
-+#endif
-   return S48_UNSPECIFIC;
- }
- 
