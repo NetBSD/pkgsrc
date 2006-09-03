@@ -1,18 +1,22 @@
-$NetBSD: patch-ci,v 1.3 2006/05/14 21:31:01 minskim Exp $
+$NetBSD: patch-ci,v 1.4 2006/09/03 17:13:30 ben Exp $
 
---- interface/interface.c.orig	2000-04-19 22:41:04.000000000 +0000
+--- interface/interface.c.orig	2000-04-19 15:41:04.000000000 -0700
 +++ interface/interface.c
-@@ -30,12 +30,25 @@ int cdda_close(cdrom_drive *d){
+@@ -30,12 +30,29 @@ int cdda_close(cdrom_drive *d){
  
      _clean_messages(d);
      if(d->cdda_device_name)free(d->cdda_device_name);
 +#if !defined(__FreeBSD__) && !defined(__DragonFly__)
++#if defined(__APPLE__) && defined(__MACH__)
++    if(d->fd != -1) close(d->fd);
++#else
      if(d->ioctl_device_name)free(d->ioctl_device_name);
      if(d->drive_model)free(d->drive_model);
      if(d->cdda_fd!=-1)close(d->cdda_fd);
      if(d->ioctl_fd!=-1 && d->ioctl_fd!=d->cdda_fd)close(d->ioctl_fd);
      if(d->sg)free(d->sg);
 -    
++#endif
 +#else
 +    if(d->drive_model)
 +	  free(d->drive_model);
@@ -29,3 +33,24 @@ $NetBSD: patch-ci,v 1.3 2006/05/14 21:31:01 minskim Exp $
      free(d);
    }
    return(0);
+@@ -47,6 +64,12 @@ int cdda_open(cdrom_drive *d){
+   if(d->opened)return(0);
+ 
+   switch(d->interface){
++#if defined(__APPLE__) && defined(__MACH__)
++  case OSX_IOKIT:
++    if((ret=osx_open_device(d)))
++      return ret;
++    break;
++#else
+   case GENERIC_SCSI:  
+     if((ret=scsi_init_drive(d)))
+       return(ret);
+@@ -61,6 +84,7 @@ int cdda_open(cdrom_drive *d){
+       return(ret);
+     break;
+ #endif
++#endif
+   default:
+     cderror(d,"100: Interface not supported\n");
+     return(-100);
