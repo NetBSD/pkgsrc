@@ -1,0 +1,14 @@
+$NetBSD: patch-cm,v 1.1 2006/09/03 17:13:30 ben Exp $
+
+--- configure.guess.orig	1999-08-15 14:52:30.000000000 -0700
++++ configure.guess
+@@ -459,6 +459,9 @@ EOF
+ 	        echo mips-unknown-sysv${UNAME_RELEASE}
+ 	fi
+         exit 0 ;;
++     *:Darwin:*:*)
++        echo `uname -p`-apple-darwin${UNAME_RELEASE}
++        exit 0 ;;
+ esac
+ 
+ #echo '(No uname command or uname output not recognized.)' 1>&2
