@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/08/29 10:18:14 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2006/09/03 22:55:33 rillig Exp $
 #
 
 DISTNAME=	liboil-0.3.6
@@ -25,7 +25,7 @@ TEST_TARGET=		check
 .if !empty(MACHINE_PLATFORM:MSunOS-5.8-*)
 SUBST_CLASSES+=		solaris
 SUBST_STAGE.solaris=	pre-configure
-SUBST_MESSAGES.solaris=	Replacing <stdint.h> with <inttypes.h>
+SUBST_MESSAGE.solaris=	Replacing <stdint.h> with <inttypes.h>
 SUBST_FILES.solaris=	liboil/*.h
 SUBST_SED.solaris=	-e 's,<stdint\.h>,<inttypes.h>,'
 .endif
