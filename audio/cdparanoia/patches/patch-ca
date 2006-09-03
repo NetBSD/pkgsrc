@@ -1,10 +1,15 @@
-$NetBSD: patch-ca,v 1.4 2006/03/07 06:29:03 joerg Exp $
+$NetBSD: patch-ca,v 1.5 2006/09/03 17:13:30 ben Exp $
 
---- interface/Makefile.in.orig	1999-12-14 04:27:59.000000000 +0000
+--- interface/Makefile.in.orig	1999-12-13 20:27:59.000000000 -0800
 +++ interface/Makefile.in
-@@ -21,9 +21,7 @@ CPPFLAGS+=-D_REENTRANT
- OFILES = scan_devices.o	common_interface.o cooked_interface.o interface.o\
- 	scsi_interface.o smallft.o toc.o test_interface.o
+@@ -18,12 +18,10 @@ RANLIB=@RANLIB@
+ LIBS = -lm
+ CPPFLAGS+=-D_REENTRANT
+ 
+-OFILES = scan_devices.o	common_interface.o cooked_interface.o interface.o\
+-	scsi_interface.o smallft.o toc.o test_interface.o
++OFILES = scan_devices.o	common_interface.o interface.o\
++	smallft.o toc.o test_interface.o @EXTRA_OBJS@
  
 -export VERSION
 -

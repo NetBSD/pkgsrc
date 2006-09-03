@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2002/03/04 14:45:13 itohy Exp $
+$NetBSD: patch-ad,v 1.4 2006/09/03 17:13:30 ben Exp $
 
---- utils.h.orig	Thu Apr 20 07:41:04 2000
-+++ utils.h	Sun Mar  3 23:24:19 2002
-@@ -1,5 +1,16 @@
+--- utils.h.orig	2000-04-19 15:41:04.000000000 -0700
++++ utils.h
+@@ -1,5 +1,20 @@
  #include <stdlib.h>
 +#ifdef __linux__
  #include <endian.h>
@@ -16,20 +16,31 @@ $NetBSD: patch-ad,v 1.3 2002/03/04 14:45:13 itohy Exp $
 +#include <machine/bswap.h>
 +#endif
 +#endif
++#if defined(__APPLE__) && defined(__MACH__)
++#include <stdint.h>
++#include <machine/endian.h>
++#endif
  #include <stdio.h>
  #include <errno.h>
  #include <string.h>
-@@ -19,15 +30,23 @@
+@@ -19,15 +34,34 @@ static inline int bigendianp(void){
  }
  
  static inline int32_t swap32(int32_t x){
 +#ifdef __NetBSD__
 +  return bswap32(x);
 +#else
++#if defined(__APPLE__) && defined(__MACH__)
++  return((((uint32_t)x & 0x000000ffU) << 24) | 
++        (((uint32_t)x & 0x0000ff00U) <<  8) | 
++        (((uint32_t)x & 0x00ff0000U) >>  8) | 
++        (((uint32_t)x & 0xff000000U) >> 24));
++#else
    return((((u_int32_t)x & 0x000000ffU) << 24) | 
  	 (((u_int32_t)x & 0x0000ff00U) <<  8) | 
  	 (((u_int32_t)x & 0x00ff0000U) >>  8) | 
  	 (((u_int32_t)x & 0xff000000U) >> 24));
++#endif
 +#endif
  }
  
@@ -37,6 +48,10 @@ $NetBSD: patch-ad,v 1.3 2002/03/04 14:45:13 itohy Exp $
 +#ifdef __NetBSD__
 +  return bswap16(x);
 +#else
++#if defined(__APPLE__) && defined(__MACH__)
++  return((((uint16_t)x & 0x00ffU) <<  8) | 
++	 (((uint16_t)x & 0xff00U) >>  8));
++#endif
    return((((u_int16_t)x & 0x00ffU) <<  8) | 
  	 (((u_int16_t)x & 0xff00U) >>  8));
 +#endif
