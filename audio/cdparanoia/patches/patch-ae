@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
+$NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
 
---- main.c.orig	Mon Mar 26 12:44:50 2001
-+++ main.c	Mon Mar  4 23:05:48 2002
+--- main.c.orig	2001-03-25 19:44:50.000000000 -0800
++++ main.c
 @@ -49,12 +49,18 @@
  #include <unistd.h>
  #include <string.h>
@@ -21,7 +21,7 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
  #include "interface/cdda_interface.h"
  #include "paranoia/cdda_paranoia.h"
  #include "utils.h"
-@@ -231,6 +237,7 @@
+@@ -231,6 +237,7 @@ VERSION"\n"
  "  cdparanoia [options] <span> [outfile]\n\n"
  
  "OPTIONS:\n"
@@ -29,7 +29,19 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
  "  -v --verbose                    : extra verbose operation\n"
  "  -q --quiet                      : quiet operation\n"
  "  -e --stderr-progress            : force output of progress information to\n"
-@@ -276,6 +283,50 @@
+@@ -256,9 +263,11 @@ VERSION"\n"
+ "                                    to n sectors\n"
+ "  -o --force-search-overlap  <n>  : force minimum overlap search during\n"
+ "                                    verification to n sectors\n"
++#if !(defined(__APPLE__) && defined(__MACH__))
+ "  -d --force-cdrom-device   <dev> : use specified device; disallow \n"
+ "                                    autosense\n"
+ "  -g --force-generic-device <dev> : use specified generic scsi device\n"
++#endif
+ "  -S --force-read-speed <n>       : read from device at specified speed\n"
+ "  -t --toc-offset <n>             : Add <n> sectors to the values reported\n"
+ "                                    when addressing tracks. May be negative\n"
+@@ -276,6 +285,52 @@ VERSION"\n"
  "  -Z --disable-paranoia           : disable all paranoia checking\n"
  "  -Y --disable-extra-paranoia     : only do cdda2wav-style overlap checking\n"
  "  -X --abort-on-skip              : abort on imperfect reads/skips\n\n"
@@ -57,8 +69,10 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
 +"  -n <n>     : force default number of sectors in read to n sectors\n"
 +"  -o <n>     : force minimum overlap search during\n"
 +"               verification to n sectors\n"
++#if !(defined(__APPLE__) && defined(__MACH__))
 +"  -d <dev>   : use specified device; disallow autosense\n"
 +"  -g <dev>   : use specified generic scsi device\n"
++#endif
 +"  -S <n>     : read from device at specified speed\n"
 +"  -t <n>     : Add <n> sectors to the values reported\n"
 +"               when addressing tracks. May be negative\n"
@@ -80,7 +94,7 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
  
  "OUTPUT SMILIES:\n"
  "  :-)   Normal operation, low/no jitter\n"
-@@ -376,7 +427,7 @@
+@@ -376,7 +431,7 @@ static void callback(long inpos, int fun
    int graph=30;
    char buffer[256];
    static long c_sector=0,v_sector=0;
@@ -89,7 +103,7 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
    static int last=0;
    static long lasttime=0;
    long sector,osector=0;
-@@ -587,6 +638,7 @@
+@@ -587,6 +642,7 @@ static void callback(long inpos, int fun
  
  const char *optstring = "escCn:o:O:d:g:S:prRwafvqVQhZz::YXWBi:Tt:";
  
@@ -97,7 +111,7 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
  struct option options [] = {
  	{"stderr-progress",no_argument,NULL,'e'},
  	{"search-for-drive",no_argument,NULL,'s'},
-@@ -621,6 +673,7 @@
+@@ -621,6 +677,7 @@ struct option options [] = {
  
  	{NULL,0,NULL,0}
  };
@@ -105,7 +119,7 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
  
  long blocking_write(int outf, char *buffer, long num){
    long words=0,temp;
-@@ -673,7 +726,12 @@
+@@ -673,7 +730,12 @@ int main(int argc,char *argv[]){
  
    atexit(cleanup);
  
@@ -119,11 +133,29 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
      switch(c){
      case 'B':
        batch=1;
-@@ -810,6 +868,27 @@
-   report(VERSION);
+@@ -690,6 +752,7 @@ int main(int argc,char *argv[]){
+     case 'o':
+       force_cdrom_overlap=atoi(optarg);
+       break;
++#if !(defined(__APPLE__) && defined(__MACH__))
+     case 'd':
+       if(force_cdrom_device)free(force_cdrom_device);
+       force_cdrom_device=copystring(optarg);
+@@ -698,6 +761,7 @@ int main(int argc,char *argv[]){
+       if(force_generic_device)free(force_generic_device);
+       force_generic_device=copystring(optarg);
+       break;
++#endif
+     case 'S':
+       force_cdrom_speed=atoi(optarg);
+       break;
+@@ -811,6 +875,30 @@ int main(int argc,char *argv[]){
  
    /* Query the cdrom/disc; we may need to override some settings */
-+
+ 
++#if defined(__APPLE__) && defined(__MACH__)
++  d=cdda_find_a_cdrom(verbose,NULL);
++#else
 +#ifndef __linux__	/* XXX */
 +#ifdef __NetBSD__
 +  if (!force_generic_device) {
@@ -144,6 +176,25 @@ $NetBSD: patch-ae,v 1.4 2002/03/04 14:45:13 itohy Exp $
 +  if (!force_cdrom_device)
 +    force_cdrom_device=copystring(force_generic_device);
 +#endif
- 
++
    if(force_generic_device)
      d=cdda_identify_scsi(force_generic_device,force_cdrom_device,verbose,NULL);
+   else
+@@ -841,6 +929,7 @@ int main(int argc,char *argv[]){
+ 	    report("");
+ 	}
+       }
++#endif /* __APPLE__ && __DARWIN__ */
+ 
+   if(!d){
+     if(!verbose)
+@@ -878,7 +967,9 @@ int main(int argc,char *argv[]){
+ 	      "ignoring preset and autosense",force_cdrom_sectors);
+       report(buffer);
+       d->nsectors=force_cdrom_sectors;
++#if !(defined(__APPLE__) && defined(__MACH__))
+       d->bigbuff=force_cdrom_sectors*CD_FRAMESIZE_RAW;
++#endif
+     }
+   }
+   if(force_cdrom_overlap!=-1){

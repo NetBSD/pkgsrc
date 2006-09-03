@@ -1,8 +1,25 @@
-$NetBSD: patch-ac,v 1.5 2004/03/20 11:23:51 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2006/09/03 17:13:30 ben Exp $
 
---- configure.orig	Sat Apr 15 17:13:01 2000
+--- configure.orig	2000-04-15 08:13:01.000000000 -0700
 +++ configure
-@@ -893,6 +893,12 @@ else
+@@ -884,6 +884,16 @@ else
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++case $host in
++*-*-darwin*)
++  EXTRA_OBJS=osx_interface.o
++  EXTRA_LIBS="-framework CoreFoundation -framework IOKit"
++  ;;
++*)
++  EXTRA_OBJS="cooked_interface.o scsi_interface.o"
++  EXTRA_LIBS=
++  ;;
++esac
+ 
+ if test -z "$GCC"; then
+ 	DEBUG="-g"
+@@ -893,6 +903,12 @@ else
  	i?86-*-linux*)
  		DEBUG="-g -Wall -fsigned-char"
  		OPT="-O20 -ffast-math -fsigned-char -finline-functions";;
@@ -15,7 +32,7 @@ $NetBSD: patch-ac,v 1.5 2004/03/20 11:23:51 wiz Exp $
  	*)
  		DEBUG="-g -Wall -fsigned-char"
  		OPT="-O20 -fsigned-char";;
-@@ -1084,7 +1090,6 @@ EOF
+@@ -1084,7 +1100,6 @@ EOF
  fi
  
  
@@ -23,7 +40,7 @@ $NetBSD: patch-ac,v 1.5 2004/03/20 11:23:51 wiz Exp $
  
  TYPESIZES="" 
  
-@@ -1476,6 +1481,143 @@ else
+@@ -1476,6 +1491,143 @@ else
  fi
  done
  
@@ -167,7 +184,27 @@ $NetBSD: patch-ac,v 1.5 2004/03/20 11:23:51 wiz Exp $
  
  echo $ac_n "checking whether ${MAKE-make} sets \${MAKE}""... $ac_c" 1>&6
  echo "configure:1482: checking whether ${MAKE-make} sets \${MAKE}" >&5
-@@ -1744,9 +1886,12 @@ s%@CPP@%$CPP%g
+@@ -1686,6 +1838,10 @@ for ac_option
+ do
+   case "\$ac_option" in
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
+     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
+   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
+@@ -1736,6 +1892,8 @@ s%@host_alias@%$host_alias%g
+ s%@host_cpu@%$host_cpu%g
+ s%@host_vendor@%$host_vendor%g
+ s%@host_os@%$host_os%g
++s%@EXTRA_OBJS@%$EXTRA_OBJS%g
++s%@EXTRA_LIBS@%$EXTRA_LIBS%g
+ s%@CC@%$CC%g
+ s%@RANLIB@%$RANLIB%g
+ s%@AR@%$AR%g
+@@ -1744,9 +1902,12 @@ s%@CPP@%$CPP%g
  s%@SET_MAKE@%$SET_MAKE%g
  s%@SBPCD_H@%$SBPCD_H%g
  s%@UCDROM_H@%$UCDROM_H%g

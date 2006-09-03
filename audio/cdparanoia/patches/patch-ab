@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2006/03/07 06:29:03 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2006/09/03 17:13:30 ben Exp $
 
-Note tht VERSION is *not* used for the libtool versioning.
+Note that VERSION is *not* used for the libtool versioning.
 
---- Makefile.in.orig	Wed Mar 28 07:46:58 2001
-+++ Makefile.in	Sun Mar  3 23:08:01 2002
+--- Makefile.in.orig	2001-03-27 14:46:58.000000000 -0800
++++ Makefile.in
 @@ -3,12 +3,12 @@
  # DO NOT EDIT BELOW! ##########################################################
  # (unless, of course, you know what you are doing :) ##########################
@@ -19,7 +19,7 @@ Note tht VERSION is *not* used for the libtool versioning.
  OPT=@OPT@ $(FLAGS)
  DEBUG=@DEBUG@ $(FLAGS)
  CC=@CC@
-@@ -27,29 +27,29 @@
+@@ -27,29 +27,29 @@ PWD = $(shell pwd)
  
  OFILES = main.o report.o header.o buffering_write.o
  
@@ -38,7 +38,7 @@ Note tht VERSION is *not* used for the libtool versioning.
 +STLIBDEP = interface/libcdda_interface.a paranoia/libcdda_paranoia.a
  
 +SHLIBDEP = interface/libcdda_interface.la paranoia/libcdda_paranoia.la
-+SHLIBS = $(SHLIBDEP) @LIBUTIL@ -lm
++SHLIBS = $(SHLIBDEP) @LIBUTIL@ @EXTRA_LIBS@ -lm
  
 -all: 	
 +
@@ -63,7 +63,7 @@ Note tht VERSION is *not* used for the libtool versioning.
  
  test:	
  	cd interface && $(MAKE) all
-@@ -65,31 +65,20 @@
+@@ -65,31 +65,20 @@ slib:
  
  install:
  	$(INSTALL) -d -m 0755 $(BINDIR)

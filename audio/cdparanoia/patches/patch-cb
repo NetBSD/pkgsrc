@@ -1,6 +1,6 @@
-$NetBSD: patch-cb,v 1.4 2006/03/07 06:29:03 joerg Exp $
+$NetBSD: patch-cb,v 1.5 2006/09/03 17:13:30 ben Exp $
 
---- interface/low_interface.h.orig	2001-03-26 16:12:11.000000000 +1000
+--- interface/low_interface.h.orig	2001-03-25 22:12:11.000000000 -0800
 +++ interface/low_interface.h
 @@ -25,6 +25,7 @@
  #include <sys/time.h>
