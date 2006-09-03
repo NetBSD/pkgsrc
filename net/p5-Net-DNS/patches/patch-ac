@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/09/03 16:55:15 heinz Exp $
+
+--- t/11-inet6.t.orig	2006-07-04 10:06:24.000000000 +0200
++++ t/11-inet6.t
+@@ -60,7 +60,7 @@ my $AAAA_address;
+ my $A_address;
+ 
+ 
+-SKIP: { skip "online tests are not enabled", 2 unless -e 't/online.enabled';
++SKIP: { skip "online tests are not enabled", 3 unless -e 't/online.enabled';
+ 
+ 	# First use the local resolver to query for the AAAA record of a 
+         # well known nameserver, than use v6 transport to get to that record.
