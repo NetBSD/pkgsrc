@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2006/03/22 15:12:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/03 00:56:29 wiz Exp $
 
 DISTNAME=		darcs-1.0.4
 PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://abridgegame.org/darcs/
 
-MAINTAINER=		augustss@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://abridgegame.org/darcs/
 COMMENT=		Distributed revision control system
 

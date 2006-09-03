@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:47 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:30 wiz Exp $
 
 DISTNAME=	xjman-0.5
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	japanese x11
 MASTER_SITES=	http://xjman.dsl.gr.jp/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xjman.dsl.gr.jp/
 COMMENT=	Japanized X manual from "The X Japanese Documentation Project"
 

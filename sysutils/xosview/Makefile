@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2006/07/02 10:37:53 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2006/09/03 00:56:30 wiz Exp $
 
 DISTNAME=	xosview-1.8.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xosview/}
 
-MAINTAINER=	bgrayson@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xosview.sourceforge.net/
 COMMENT=	X11 graphical display of OS statistics
 

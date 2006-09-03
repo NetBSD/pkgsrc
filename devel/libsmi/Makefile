@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:29 wiz Exp $
 #
 
 DISTNAME=	libsmi-0.1.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/libsmi/
 COMMENT=	Library to access SMI MIB information
 

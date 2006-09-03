@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:16 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:30 wiz Exp $
 #
 
 DISTNAME=	album_themes
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/
 
-MAINTAINER=	augustss@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://marginalhacks.com/Hacks/album/Download.html
 COMMENT=	Themes for the album generator
 

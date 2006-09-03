@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:09:30 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/03 00:56:29 wiz Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 COMMENT=	3D modeller with a view of 3D modelling
 
