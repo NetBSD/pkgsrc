@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: imake-check,v 1.3 2006/08/28 13:27:41 dmcmahill Exp $
+# $NetBSD: imake-check,v 1.4 2006/09/03 13:07:59 hira Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -80,7 +80,8 @@ builtin-test:
 EOF
 
 # Run imake to process the Imakefile.
-${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config -s - |
+WRAPPER_SKIP_TRANSFORM=yes \
+	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config -s - |
 	${IMAKE_MAKE} -f - builtin-test |
 	${GREP} -q yes
 exitcode="$?"
