@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/09/03 14:27:59 wiz Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
-include/openbox/3.0/openbox/parse.h
-include/openbox/3.0/openbox/render.h
-include/openbox/3.0/openbox/theme.h
-include/openbox/3.0/openbox/version.h
+include/openbox/${PKGVERSION}/openbox/color.h
+include/openbox/${PKGVERSION}/openbox/font.h
+include/openbox/${PKGVERSION}/openbox/geom.h
+include/openbox/${PKGVERSION}/openbox/gradient.h
+include/openbox/${PKGVERSION}/openbox/image.h
+include/openbox/${PKGVERSION}/openbox/instance.h
+include/openbox/${PKGVERSION}/openbox/mask.h
+include/openbox/${PKGVERSION}/openbox/parse.h
+include/openbox/${PKGVERSION}/openbox/render.h
+include/openbox/${PKGVERSION}/openbox/theme.h
+include/openbox/${PKGVERSION}/openbox/version.h
 lib/libobparser.la
 lib/libobrender.la
 lib/pkgconfig/obparser-3.0.pc
@@ -13,53 +20,99 @@ lib/pkgconfig/obrender-3.0.pc
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
 share/gnome/wm-properties/openbox.desktop
+share/locale/ca/LC_MESSAGES/openbox.mo
+share/locale/de/LC_MESSAGES/openbox.mo
 share/locale/en@boldquot/LC_MESSAGES/openbox.mo
 share/locale/en@quot/LC_MESSAGES/openbox.mo
 share/locale/es/LC_MESSAGES/openbox.mo
+share/locale/fi/LC_MESSAGES/openbox.mo
+share/locale/fr/LC_MESSAGES/openbox.mo
+share/locale/hr/LC_MESSAGES/openbox.mo
 share/locale/ja/LC_MESSAGES/openbox.mo
+share/locale/no/LC_MESSAGES/openbox.mo
+share/locale/pl/LC_MESSAGES/openbox.mo
+share/locale/pt/LC_MESSAGES/openbox.mo
+share/locale/ru/LC_MESSAGES/openbox.mo
+share/locale/sk/LC_MESSAGES/openbox.mo
 share/locale/sv/LC_MESSAGES/openbox.mo
+share/locale/zh_TW/LC_MESSAGES/openbox.mo
 share/openbox/menu.xsd
 share/openbox/rc.xsd
 share/openbox/themeupdate.py
 share/pixmaps/openbox.png
-share/themes/Allegro/openbox-3/bullet.xbm
-share/themes/Allegro/openbox-3/themerc
-share/themes/Artwiz/openbox-3/themerc
-share/themes/Blah41/openbox-3/themerc
-share/themes/Om4Ob/openbox-3/close.xbm
-share/themes/Om4Ob/openbox-3/close_hover.xbm
-share/themes/Om4Ob/openbox-3/desk.xbm
-share/themes/Om4Ob/openbox-3/desk_hover.xbm
-share/themes/Om4Ob/openbox-3/desk_toggled.xbm
-share/themes/Om4Ob/openbox-3/iconify.xbm
-share/themes/Om4Ob/openbox-3/iconify_hover.xbm
-share/themes/Om4Ob/openbox-3/iconify_pressed.xbm
-share/themes/Om4Ob/openbox-3/max.xbm
-share/themes/Om4Ob/openbox-3/max_disabled.xbm
-share/themes/Om4Ob/openbox-3/max_hover.xbm
-share/themes/Om4Ob/openbox-3/max_pressed.xbm
-share/themes/Om4Ob/openbox-3/max_toggled.xbm
-share/themes/Om4Ob/openbox-3/shade.xbm
-share/themes/Om4Ob/openbox-3/shade_disabled.xbm
-share/themes/Om4Ob/openbox-3/shade_hover.xbm
-share/themes/Om4Ob/openbox-3/shade_toggled.xbm
-share/themes/Om4Ob/openbox-3/themerc
-share/themes/TheBear/openbox-3/themerc
-@dirrm share/themes/TheBear/openbox-3
-@unexec ${RMDIR} %D/share/themes/TheBear 2>/dev/null || ${TRUE}
-@dirrm share/themes/Om4Ob/openbox-3
-@unexec ${RMDIR} %D/share/themes/Om4Ob 2>/dev/null || ${TRUE}
-@dirrm share/themes/Blah41/openbox-3
-@unexec ${RMDIR} %D/share/themes/Blah41 2>/dev/null || ${TRUE}
-@dirrm share/themes/Artwiz/openbox-3
-@unexec ${RMDIR} %D/share/themes/Artwiz 2>/dev/null || ${TRUE}
-@dirrm share/themes/Allegro/openbox-3
-@unexec ${RMDIR} %D/share/themes/Allegro 2>/dev/null || ${TRUE}
+share/themes/Mikachu/openbox-3/bullet.xbm
+share/themes/Mikachu/openbox-3/close.xbm
+share/themes/Mikachu/openbox-3/desk.xbm
+share/themes/Mikachu/openbox-3/iconify.xbm
+share/themes/Mikachu/openbox-3/max.xbm
+share/themes/Mikachu/openbox-3/themerc
+share/themes/Natura/openbox-3/close.xbm
+share/themes/Natura/openbox-3/close_hover.xbm
+share/themes/Natura/openbox-3/desk.xbm
+share/themes/Natura/openbox-3/desk_toggled.xbm
+share/themes/Natura/openbox-3/iconify.xbm
+share/themes/Natura/openbox-3/iconify_disabled.xbm
+share/themes/Natura/openbox-3/iconify_hover.xbm
+share/themes/Natura/openbox-3/max.xbm
+share/themes/Natura/openbox-3/max_disabled.xbm
+share/themes/Natura/openbox-3/max_hover.xbm
+share/themes/Natura/openbox-3/max_toggled.xbm
+share/themes/Natura/openbox-3/shade.xbm
+share/themes/Natura/openbox-3/themerc
+share/themes/artwiz-boxed/openbox-3/bullet.xbm
+share/themes/artwiz-boxed/openbox-3/close.xbm
+share/themes/artwiz-boxed/openbox-3/desk.xbm
+share/themes/artwiz-boxed/openbox-3/desk_toggled.xbm
+share/themes/artwiz-boxed/openbox-3/iconify.xbm
+share/themes/artwiz-boxed/openbox-3/max.xbm
+share/themes/artwiz-boxed/openbox-3/max_toggled.xbm
+share/themes/artwiz-boxed/openbox-3/themerc
+share/themes/bear2/openbox-3/close.xbm
+share/themes/bear2/openbox-3/close_pressed.xbm
+share/themes/bear2/openbox-3/desk.xbm
+share/themes/bear2/openbox-3/desk_toggled.xbm
+share/themes/bear2/openbox-3/iconify.xbm
+share/themes/bear2/openbox-3/iconify_disabled.xbm
+share/themes/bear2/openbox-3/iconify_pressed.xbm
+share/themes/bear2/openbox-3/max.xbm
+share/themes/bear2/openbox-3/max_disabled.xbm
+share/themes/bear2/openbox-3/max_pressed.xbm
+share/themes/bear2/openbox-3/max_toggled.xbm
+share/themes/bear2/openbox-3/shade.xbm
+share/themes/bear2/openbox-3/shade_pressed.xbm
+share/themes/bear2/openbox-3/themerc
+share/themes/orang/openbox-3/themerc
+share/themes/syscrash/openbox-3/bullet.xbm
+share/themes/syscrash/openbox-3/close.xbm
+share/themes/syscrash/openbox-3/close_disabled.xbm
+share/themes/syscrash/openbox-3/desk.xbm
+share/themes/syscrash/openbox-3/desk_toggled.xbm
+share/themes/syscrash/openbox-3/iconify.xbm
+share/themes/syscrash/openbox-3/max.xbm
+share/themes/syscrash/openbox-3/max_disabled.xbm
+share/themes/syscrash/openbox-3/max_pressed.xbm
+share/themes/syscrash/openbox-3/max_toggled.xbm
+share/themes/syscrash/openbox-3/shade.xbm
+share/themes/syscrash/openbox-3/themerc
+@dirrm share/themes/syscrash/openbox-3
+@unexec ${RMDIR} %D/share/themes/syscrash 2>/dev/null || ${TRUE}
+@dirrm share/themes/orang/openbox-3
+@unexec ${RMDIR} %D/share/themes/orang 2>/dev/null || ${TRUE}
+@dirrm share/themes/bear2/openbox-3
+@unexec ${RMDIR} %D/share/themes/bear2 2>/dev/null || ${TRUE}
+@dirrm share/themes/artwiz-boxed/openbox-3
+@unexec ${RMDIR} %D/share/themes/artwiz-boxed 2>/dev/null || ${TRUE}
+@dirrm share/themes/Natura/openbox-3
+@unexec ${RMDIR} %D/share/themes/Natura 2>/dev/null || ${TRUE}
+@dirrm share/themes/Mikachu/openbox-3
+@unexec ${RMDIR} %D/share/themes/Mikachu 2>/dev/null || ${TRUE}
 @comment in xdg-dirs: @dirrm share/themes
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
 @dirrm share/examples/openbox
-@dirrm include/openbox/3.0/openbox
-@dirrm include/openbox/3.0
+@dirrm include/openbox/${PKGVERSION}/openbox
+@dirrm include/openbox/${PKGVERSION}
 @dirrm include/openbox
+@dirrm etc/xdg/openbox
+@dirrm etc/xdg
