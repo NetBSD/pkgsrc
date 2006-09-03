@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1185 2006/09/03 08:53:32 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1186 2006/09/03 08:56:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4182,3 +4182,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added archivers/sarab version 0.2.2 [dsainty 2006-09-03]
 	Updated shells/bash to 3.1pl17 [wiz 2006-09-03]
 	Updated devel/glib2 to 2.12.3 [wiz 2006-09-03]
+	Updated devel/m4 to 1.4.6 [wiz 2006-09-03]
