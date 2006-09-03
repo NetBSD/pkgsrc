@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1193 2006/09/03 12:55:15 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1194 2006/09/03 13:02:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4190,3 +4190,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated shells/scsh to 0.6.7 [kristerw 2006-09-03]
 	Updated textproc/hyperestraier to 1.4.1 [obache 2006-09-03]
 	Added textproc/libxml++ version 1.0.5 [wiz 2006-09-03]
+	Updated finance/libofx to 0.8.2 [wiz 2006-09-03]
