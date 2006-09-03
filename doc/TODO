@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5412 2006/09/03 14:28:27 wiz Exp $
+$NetBSD: TODO,v 1.5413 2006/09/03 16:44:52 kleink Exp $
 
 Suggested new packages
 ======================
@@ -891,9 +891,6 @@ Suggested package updates
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-Want-0.11 [pkg/34367]
 	o p5-X11-Protocol-0.54
-	o p5-XML-Atom-0.23 [pkg/34420]
-	o p5-XML-Atom-SimpleFeed-0.8 [pkg/34399]
-	o p5-XML-Atom-Stream-0.09 [pkg/34410]
 	o p5-XML-LibXML-1.60 [pkg/34411]
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
