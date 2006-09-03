@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.21 2006/01/05 07:04:47 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.22 2006/09/03 02:53:13 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -213,5 +213,18 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_VER_DIR=${RUBY_VER_DIR:Q} \
 			RUBY_DLEXT=${RUBY_DLEXT:Q} \
 			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",}
+
+.if !empty(RUBY_NOVERSION:M[nN][oO])
+#
+# Use Berkley DB unless a system has real ndbm(3).
+#
+.include "../../mk/dlopen.buildlink3.mk"
+.if !exists(/usr/include/ndbm.h)
+.include "../../mk/bdb.buildlink3.mk"
+.endif
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.endif
 
 .endif # _RUBY_MK
