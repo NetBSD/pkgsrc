@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/27 17:30:50 reed Exp $
+# $NetBSD: Makefile,v 1.34 2006/09/03 00:56:29 wiz Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -8,7 +8,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/graphics/jpeg/ \
 			ftp://ftp.uu.net/graphics/jpeg/
 
-MAINTAINER=		mycroft@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ijg.org/
 COMMENT=		IJG's jpeg compression utilities
 

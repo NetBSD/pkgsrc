@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/09/03 00:56:29 wiz Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://savor.gulic.org/demos/
 # was http://usa.lostboys.nl/medialab/rollemup/Linux/
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.medialab.lostboys.nl/projects/madewith/pinball/pinballgame.html
 COMMENT=	Multi Ball, Player, Platform, Media, Cool Pinball game
 

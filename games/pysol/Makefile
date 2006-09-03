@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/09 18:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/09/03 00:56:29 wiz Exp $
 #
 
 DISTNAME=	pysol-4.81
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.pysol.org/download/pysol/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pysol.org/
 COMMENT=	Solitaire game, written in Python
 

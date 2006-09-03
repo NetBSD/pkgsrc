@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/06 06:22:35 reed Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/03 00:56:30 wiz Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.lse.epita.fr/twiki/pub/Projects/XipDump/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lse.epita.fr/twiki/bin/view/Projects/XipDump
 COMMENT=	Displays IP packets using X Window System
 
