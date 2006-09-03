@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/11 14:04:16 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:29 wiz Exp $
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31
@@ -10,7 +10,7 @@ PATCH_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/fj.sources/1995/apr/
 PATCHFILES=	xemeraldia-0.3to0.31.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	sakamoto@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Game of breaking blocks
 
 USE_IMAKE=	yes
