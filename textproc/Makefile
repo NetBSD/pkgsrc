@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2006/08/11 15:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.334 2006/09/03 12:54:05 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -123,6 +123,7 @@ SUBDIR+=	libcroco
 SUBDIR+=	libpathan
 SUBDIR+=	libunicode
 SUBDIR+=	libxml
+SUBDIR+=	libxml++
 SUBDIR+=	libxml++2
 SUBDIR+=	libxml2
 SUBDIR+=	libxslt
