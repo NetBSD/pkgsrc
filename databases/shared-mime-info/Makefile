@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/07/10 17:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/03 10:19:01 wiz Exp $
 #
 
-DISTNAME=	shared-mime-info-0.18
+DISTNAME=	shared-mime-info-0.19
 CATEGORIES=	databases
 MASTER_SITES=	http://freedesktop.org/~hadess/
 
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--disable-update-mimedb
 
