@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5409 2006/09/03 10:19:30 wiz Exp $
+$NetBSD: TODO,v 1.5410 2006/09/03 10:25:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ Suggested package updates
 	o classpath-gui-0.92
 	o cocoon-2.1.9
 	o columba-1.0RC1
-	o comix-3.5.1
 	o compface-1.5.2
 	o coreutils-6.0
 	o cqcam-0.91
