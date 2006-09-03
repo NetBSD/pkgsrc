@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2006/07/17 18:12:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/09/03 03:42:38 obache Exp $
+bin/estbutler
 bin/estcall
 bin/estcmd
 bin/estconfig
@@ -13,7 +14,7 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.18.0
+lib/libestraier.so.8.25.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estseek.cgi
 man/man1/estcall.1
@@ -86,7 +87,6 @@ share/hyperestraier/doc/pguide-en.html
 share/hyperestraier/doc/pguide-ja.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000036.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000037.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000038.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000039.html
@@ -96,6 +96,7 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000042.htm
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000043.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000044.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000045.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000046.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000001.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000002.html
@@ -124,8 +125,8 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000024.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000025.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000026.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000027.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000028.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000046.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000047.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000048.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000049.html
@@ -139,8 +140,8 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000056.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000057.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000058.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000059.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000060.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000028.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000029.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000030.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000031.html
@@ -148,6 +149,7 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000032.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000033.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000034.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000035.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000036.html
 share/hyperestraier/doc/rubynativeapi/created.rid
 share/hyperestraier/doc/rubynativeapi/files/estraier-doc_rb.html
 share/hyperestraier/doc/rubynativeapi/fr_class_index.html
