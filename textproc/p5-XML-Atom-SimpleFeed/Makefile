@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/03 14:30:08 kleink Exp $
 
-DISTNAME=	XML-Atom-SimpleFeed-0.7
+DISTNAME=	XML-Atom-SimpleFeed-0.8
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5xas
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
