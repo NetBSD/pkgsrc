@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1180 2006/09/03 01:43:28 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1181 2006/09/03 03:05:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4173,3 +4173,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/scmgit version 1.4.1 [rillig 2006-09-02]
 	Updated www/galeon to 2.0.1 [rillig 2006-09-02]
 	Added devel/cogito version 0.16 [rillig 2006-09-02]
+        Updated databases/qdbm to 1.8.70 [obache 2006-09-03]
+        Updated databases/ruby-qdbm to 1.0.0.1.8.70 [obache 2006-09-03]
+        Updated databases/p5-qdbm to 1.0.0.1.8.70 [obache 2006-09-03]
+        Updated databases/qdbm-cgi to 0.0.1.1.8.70 [obache 2006-09-03]
+        Updated databases/qdbm-plus to 1.0.0.1.8.70 [obache 2006-09-03]
