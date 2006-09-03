@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5410 2006/09/03 10:25:24 wiz Exp $
+$NetBSD: TODO,v 1.5411 2006/09/03 13:02:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -638,7 +638,6 @@ Suggested package updates
 	o libnids-1.21
 	o libnotify-0.4.2 [pkg/34317]
 	o libntlm-0.3.10
-	o libofx-0.8.2
 	o libprelude-0.9.10.2
 	o librsvg-2.16.0
 	o libshout-2.2
