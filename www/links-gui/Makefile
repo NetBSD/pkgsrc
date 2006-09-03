@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.42 2006/06/11 14:34:43 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/09/03 20:35:36 wiz Exp $
 #
 
-PKGNAME=	links-gui-2.1.0.22
+PKGNAME=	links-gui-2.1.0.23
 
 COMMENT=	Lynx-like text and graphics WWW browser
 
 CONFLICTS+=	links-[0-9]* elinks-0.3*
 
-
+USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--enable-graphics
 CONFIGURE_ARGS+=	--without-sdl
 
