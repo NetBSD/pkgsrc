@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2006/04/13 18:23:38 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/09/03 14:27:59 wiz Exp $
 
-DISTNAME=	openbox-3.2
-PKGREVISION=	3
+DISTNAME=	openbox-3.3
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 
@@ -30,8 +29,10 @@ CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
+# disabled by default in 3.3 because "it doesn't seem to work well"
+#.include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
