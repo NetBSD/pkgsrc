@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2006/08/17 22:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2006/09/03 08:53:04 wiz Exp $
 
-DISTNAME=		glib-2.12.2
+DISTNAME=		glib-2.12.3
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.12/ \
@@ -66,9 +66,9 @@ SUBST_CLASSES+=		thr
 SUBST_STAGE.thr=	post-patch
 SUBST_FILES.thr=	gthread/Makefile.in
 .  if ${OS_VERSION:R} >= 5
-SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-lpthread|g"
+SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-lpthread|g"
 .  else
-SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
+SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
 .  endif
 SUBST_MESSAGE.thr=	Fixing libgthread.
 
