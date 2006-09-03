@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1195 2006/09/03 14:28:27 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1196 2006/09/03 16:44:52 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4192,3 +4192,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/libxml++ version 1.0.5 [wiz 2006-09-03]
 	Updated finance/libofx to 0.8.2 [wiz 2006-09-03]
 	Updated wm/openbox to 3.3 [wiz 2006-09-03]
+	Updated textproc/p5-XML-Atom-SimpleFeed to 0.8 [kleink 2006-09-03]
+	Updated textproc/p5-XML-Atom to 0.23 [kleink 2006-09-03]
+	Updated textproc/p5-XML-Atom-Stream to 0.09 [kleink 2006-09-03]
