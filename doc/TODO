@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5400 2006/09/02 19:43:43 rillig Exp $
+$NetBSD: TODO,v 1.5401 2006/09/03 01:38:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ Suggested package updates
 	o dnstop-20060517 [pkg/34425]
 	o dnstracer-1.8
 	o drscheme-352
-	o dvdauthor-0.6.11 [pkg/34431]
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
@@ -451,7 +450,6 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o ex-050325
-	o exim-4.63
 	o exmh-2.7.2
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
@@ -490,7 +488,6 @@ Suggested package updates
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
-	o geda-20060824
 	o genius-0.7.6.1
 	o gentoo-0.11.56 [pkg/34341]
 	o ggiterm-0.7.1
@@ -839,7 +836,6 @@ Suggested package updates
 	o p5-Ima-DBI-0.34
 	o p5-Lingua-EN-Inflect-1.89 [pkg/34404]
 	o p5-Lingua-Stem-Snowball-0.941 [pkg/34402]
-	o p5-List-MoreUtils-0.22 [pkg/34358]
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Lexicon-0.62 [pkg/34385]
 	o p5-Locale-Maketext-Simple-0.17 [pkg/34384]
@@ -947,7 +943,6 @@ Suggested package updates
 	o pgadmin3-1.4.3
 	o phoon-20050629
 	o photopc-3.05
-	o php5-5.1.6
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
