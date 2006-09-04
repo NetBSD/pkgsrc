@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5413 2006/09/03 16:44:52 kleink Exp $
+$NetBSD: TODO,v 1.5414 2006/09/04 17:03:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -274,6 +274,7 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
+	o ImageMagick-6.2.9.3
 	o MesaLib-6.5
 	o PAM-0.80
 	o REminiscence-0.1.8
@@ -402,6 +403,7 @@ Suggested package updates
 	o dap-2.1.5
 	o dar-2.3.1 [pkg/34430]
 	o darkstat-3.0.540 [pkg/34158]
+	o dasher-4.2.0
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -427,6 +429,7 @@ Suggested package updates
 	o eagle-4.15
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
+	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.0.11
 	o egtk-0.3.6.2
@@ -439,6 +442,8 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
+	o epiphany-2.16.0
+	o epiphany-extensions-2.16.0
 	o epstool-3.08
 	o eric3-3.9.1
 	o esh-0.8.5
@@ -461,7 +466,7 @@ Suggested package updates
 	o findutils-4.2.28
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
-	o flyspell-1.7l
+	o flyspell-1.7m
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -535,7 +540,7 @@ Suggested package updates
 	o gss-0.0.17
 	o gst-plugins0.10-good-0.10.4
 	o gst-plugins0.10-ugly-0.10.4
-	o gtetrinet-0.7.9
+	o gtetrinet-0.7.10
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
@@ -614,6 +619,7 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
+	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46 [pkg/34294]
@@ -633,6 +639,7 @@ Suggested package updates
 	o liblive-2005.10.05
 	o libmatchbox-1.8
 	o libmilter-8.13.5
+	o libmm-1.4.2
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -640,6 +647,7 @@ Suggested package updates
 	o libntlm-0.3.10
 	o libprelude-0.9.10.2
 	o librsvg-2.16.0
+	o librsvg2-2.16.0
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libstatgrab-0.13
@@ -727,7 +735,7 @@ Suggested package updates
 	o nss_ldap-248
 	o ntp-4.2.2
 	o nulib2-210
-	o nut-12.0
+	o nut-12.0 [pkg/34466]
 	o objc-3.2.7
 	o ocrad-0.15
 	o odbc-postgresql-8.0.7
@@ -736,6 +744,7 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openal-0.0.8
+	o opencdk-0.5.9
 	o opencobol-0.31
 	o openexr-1.3.0
 	o openh323-1.17.2
@@ -756,6 +765,7 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookie-3.10 [pkg/34336]
 	o p5-Apache-AuthCookieDBI-2.02
+	o p5-Apache-DBI-1.03
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.31 [pkg/34339]
 	o p5-Audio-Wav-0.04
@@ -784,6 +794,7 @@ Suggested package updates
 	o p5-Crypt-IDEA-1.08 [pkg/34391]
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
+	o p5-DBD-mysql-3.0006
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-Data-FormValidator-4.40 [pkg/34405]
 	o p5-Data-TemporaryBag-0.09 [pkg/34331]
@@ -813,9 +824,12 @@ Suggested package updates
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
 	o p5-HTML-FillInForm-1.05
-	o p5-HTML-TableExtract-2.09
+	o p5-HTML-Parser-3.55
+	o p5-HTML-TableExtract-2.10
+	o p5-HTML-Tree-3.21
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
+	o p5-HTTP-Request-1.3.0 [pkg/34469]
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
@@ -855,6 +869,7 @@ Suggested package updates
 	o p5-Net-SNMP-5.1.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
+	o p5-Number-Compare-0.02
 	o p5-Number-Format-1.51
 	o p5-PAR-Dist-0.18 [pkg/34353]
 	o p5-PV-1.5
@@ -877,10 +892,12 @@ Suggested package updates
 	o p5-Sub-Uplevel-0.13 [pkg/34364]
 	o p5-Template-Extract-0.40
 	o p5-Test-Deep-0.095 [pkg/34345]
+	o p5-Test-Exception-0.22
 	o p5-Test-Harness-2.46
 	o p5-Test-Memory-Cycle-1.04 [pkg/34372]
 	o p5-Test-Pod-1.26 [pkg/34369]
 	o p5-Test-Pod-Coverage-1.08 [pkg/34368]
+	o p5-Test-Simple-0.64
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
 	o p5-Text-Glob-0.07 [pkg/34416]
@@ -889,7 +906,9 @@ Suggested package updates
 	o p5-Time-HiRes-1.74
 	o p5-Time-Piece-2.00.01
 	o p5-WWW-Amazon-Wishlist-1.4
+	o p5-WWW-Mechanize-1.20
 	o p5-Want-0.11 [pkg/34367]
+	o p5-Want-0.12
 	o p5-X11-Protocol-0.54
 	o p5-XML-LibXML-1.60 [pkg/34411]
 	o p5-XML-RAI-1.04
@@ -913,7 +932,7 @@ Suggested package updates
 	o pcre-ocaml-5.11.1
 	o pdmenu-1.2.87
 	o pear-Date-1.4.6
-	o pear-HTML_Common-1.2.2
+	o pear-HTML_Common-1.2.2 [pkg/34468]
 	o pear-HTTP_Request-1.3.0
 	o pear-Image_Canvas-0.3.0
 	o pear-Image_Graph-0.7.2
@@ -1053,7 +1072,7 @@ Suggested package updates
 	o rpc2-1.28
 	o rpm-4.4.6
 	o rsnapshot-1.2.9
-	o rt3-3.6.0
+	o rt3-3.6.1
 	o rtcw-1.41.3
 	o rtorrent-0.5.3 [pkg/34290]
 	o ruby-1.8.5
@@ -1144,6 +1163,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tob-0.26
 	o top-3.6beta1
+	o totem-2.16.0
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
@@ -1164,6 +1184,7 @@ Suggested package updates
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03
+	o vice-1.20
 	o vifm-0.3a
 	o visual-regexp-3.1
 	o vmware-5.5
@@ -1190,7 +1211,7 @@ Suggested package updates
 	o wwwoffle-2.9a
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
-	o xbindkeys-1.7.2
+	o xbindkeys-1.7.2 [pkg/34467]
 	o xblast-2.10.4
 	o xcircuit-3.4.26 [pkg/34443]
 	o xdaliclock-2.23
