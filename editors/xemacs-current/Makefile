@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2006/04/17 13:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2006/09/04 09:20:51 martin Exp $
 
-DISTNAME=	xemacs-21.5.19
-PKGREVISION=	4
+DISTNAME=	xemacs-21.5.27
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.5/}
@@ -48,16 +47,19 @@ HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-clash-detection
-CONFIGURE_ARGS+=	--error-checking=none
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--without-ncurses
 CONFIGURE_ARGS+=	--without-msw
 CONFIGURE_ARGS+=	${WITH_WIDGETS}
-CONFIGURE_ARGS+=	--infopath=${INFOPATH:Q}
-CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
-CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-infopath=${INFOPATH:Q}
+CONFIGURE_ARGS+=	--with-site-includes=${PREFIX}/include:${WRKDIR}
+CONFIGURE_ARGS+=	--with-site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
+# newer gcc has big trouble with aliasing otherwise - this should be fixed
+# in the source, but untill then, use the big hammer here:
+CFLAGS+=		-fno-strict-aliasing
+
 INFO_FILES=		# PLIST
 
 post-patch:

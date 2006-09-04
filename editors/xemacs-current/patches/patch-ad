@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
+$NetBSD: patch-ad,v 1.2 2006/09/04 09:20:51 martin Exp $
 
---- src/unexelf.c.orig	Thu Apr 12 20:24:27 2001
-+++ src/unexelf.c
-@@ -481,10 +481,19 @@
+--- src/unexelf.c.orig	2005-10-29 09:18:21.000000000 +0200
++++ src/unexelf.c	2006-08-30 17:51:08.000000000 +0200
+@@ -492,10 +492,19 @@
  
  #ifndef ElfW
  # ifdef __STDC__
@@ -24,7 +24,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
  #endif
  
  #ifndef ELF_BSS_SECTION_NAME
-@@ -952,7 +961,7 @@
+@@ -961,7 +970,7 @@
        memcpy (NEW_SECTION_H (nn).sh_offset + new_base, src,
  	      NEW_SECTION_H (nn).sh_size);
  
