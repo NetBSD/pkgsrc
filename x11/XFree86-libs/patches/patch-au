@@ -1,0 +1,106 @@
+$NetBSD: patch-au,v 1.4 2006/09/04 20:48:04 adrianp Exp $
+
+Security fix for SA21446, adapted from X.org.
+
+--- lib/font/bitmap/pcfread.c.orig	2003-11-18 02:17:04.000000000 +0100
++++ lib/font/bitmap/pcfread.c	2006-08-22 16:31:30.000000000 +0200
+@@ -32,6 +32,8 @@ from The Open Group.
+  * Author:  Keith Packard, MIT X Consortium
+  */
+ 
++#include <stdint.h>
++
+ #include "fntfilst.h"
+ #include "bitmap.h"
+ #include "pcf.h"
+@@ -129,6 +131,10 @@ pcfReadTOC(FontFilePtr file, int *countp
+ 	return (PCFTablePtr) NULL;
+     count = pcfGetLSB32(file);
+     if (IS_EOF(file)) return (PCFTablePtr) NULL;
++    if (count < 0 || count > INT32_MAX / sizeof(PCFTableRec)) {
++	pcfError("pcfReadTOC(): invalid file format\n");
++	return NULL;
++    }
+     tables = (PCFTablePtr) xalloc(count * sizeof(PCFTableRec));
+     if (!tables) {
+       pcfError("pcfReadTOC(): Couldn't allocate tables (%d*%d)\n", count, sizeof(PCFTableRec));
+@@ -248,6 +254,10 @@ pcfGetProperties(FontInfoPtr pFontInfo, 
+     if (!PCF_FORMAT_MATCH(format, PCF_DEFAULT_FORMAT))
+ 	goto Bail;
+     nprops = pcfGetINT32(file, format);
++    if (nprops <= 0 || nprops > INT32_MAX / sizeof(FontPropRec)) {
++	pcfError("pcfGetProperties(): invalid nprops value (%d)\n", nprops);
++	goto Bail;
++    }
+     if (IS_EOF(file)) goto Bail;
+     props = (FontPropPtr) xalloc(nprops * sizeof(FontPropRec));
+     if (!props) {
+@@ -263,6 +273,13 @@ pcfGetProperties(FontInfoPtr pFontInfo, 
+ 	props[i].name = pcfGetINT32(file, format);
+ 	isStringProp[i] = pcfGetINT8(file, format);
+ 	props[i].value = pcfGetINT32(file, format);
++	if (props[i].name < 0 
++	    || (isStringProp[i] != 0 && isStringProp[i] != 1)
++	    || (isStringProp[i] && props[i].value < 0)) {
++	    pcfError("pcfGetProperties(): invalid file format %d %d %d\n",
++		     props[i].name, isStringProp[i], props[i].value);
++	    goto Bail;
++	}
+ 	if (IS_EOF(file)) goto Bail;
+     }
+     /* pad the property array */
+@@ -278,6 +295,7 @@ pcfGetProperties(FontInfoPtr pFontInfo, 
+     }
+     if (IS_EOF(file)) goto Bail;
+     string_size = pcfGetINT32(file, format);
++    if (string_size < 0) goto Bail;
+     if (IS_EOF(file)) goto Bail;
+     strings = (char *) xalloc(string_size);
+     if (!strings) {
+@@ -418,6 +436,10 @@ pcfReadFont(FontPtr pFont, FontFilePtr f
+     else
+ 	nmetrics = pcfGetINT16(file, format);
+     if (IS_EOF(file)) goto Bail;
++    if (nmetrics < 0 || nmetrics > INT32_MAX / sizeof(CharInfoRec)) {
++	pcfError("pcfReadFont(): invalid file format\n");
++	goto Bail;
++    }
+     metrics = (CharInfoPtr) xalloc(nmetrics * sizeof(CharInfoRec));
+     if (!metrics) {
+       pcfError("pcfReadFont(): Couldn't allocate metrics (%d*%d)\n", nmetrics, sizeof(CharInfoRec));
+@@ -443,7 +465,7 @@ pcfReadFont(FontPtr pFont, FontFilePtr f
+     nbitmaps = pcfGetINT32(file, format);
+     if (nbitmaps != nmetrics || IS_EOF(file))
+ 	goto Bail;
+-
++    /* nmetrics is already ok, so nbitmap also is */
+     offsets = (CARD32 *) xalloc(nbitmaps * sizeof(CARD32));
+     if (!offsets) {
+       pcfError("pcfReadFont(): Couldn't allocate offsets (%d*%d)\n", nbitmaps, sizeof(CARD32));
+@@ -457,6 +479,7 @@ pcfReadFont(FontPtr pFont, FontFilePtr f
+     for (i = 0; i < GLYPHPADOPTIONS; i++) {
+ 	bitmapSizes[i] = pcfGetINT32(file, format);
+ 	if (IS_EOF(file)) goto Bail;
++	if (bitmapSizes[i] < 0) goto Bail;
+     }
+     
+     sizebitmaps = bitmapSizes[PCF_GLYPH_PAD_INDEX(format)];
+@@ -532,6 +555,7 @@ pcfReadFont(FontPtr pFont, FontFilePtr f
+ 	if (IS_EOF(file)) goto Bail;
+ 	if (nink_metrics != nmetrics)
+ 	    goto Bail;
++	/* nmetrics already checked */
+ 	ink_metrics = (xCharInfo *) xalloc(nink_metrics * sizeof(xCharInfo));
+       if (!ink_metrics) {
+           pcfError("pcfReadFont(): Couldn't allocate ink_metrics (%d*%d)\n", nink_metrics, sizeof(xCharInfo));       
+@@ -805,6 +829,10 @@ pmfReadFont(FontPtr pFont, FontFilePtr f
+     else
+ 	nmetrics = pcfGetINT16(file, format);
+     if (IS_EOF(file)) goto Bail;
++    if (nmetrics < 0 || nmetrics > INT32_MAX / sizeof(CharInfoRec)) {
++	pcfError("pmfReadFont(): invalid file format\n");
++	goto Bail;
++    }
+     metrics = (CharInfoPtr) xalloc(nmetrics * sizeof(CharInfoRec));
+     if (!metrics) {
+       pcfError("pmfReadFont(): Couldn't allocate metrics (%d*%d)\n", nmetrics, sizeof(CharInfoRec));
