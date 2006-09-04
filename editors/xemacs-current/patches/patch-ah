@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2005/01/22 13:03:06 magick Exp $
+$NetBSD: patch-ah,v 1.2 2006/09/04 09:20:51 martin Exp $
 
---- src/mule-canna.c.orig	2004-09-20 21:19:52.000000000 +0200
-+++ src/mule-canna.c
-@@ -438,7 +438,9 @@ If nil is specified for each arg, the de
+--- modules/canna/canna_api.c.orig	2005-11-16 08:14:16.000000000 +0100
++++ modules/canna/canna_api.c	2006-08-30 18:05:00.000000000 +0200
+@@ -437,7 +437,9 @@
      }
    else
      {

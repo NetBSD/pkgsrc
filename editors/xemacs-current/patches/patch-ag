@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2003/04/23 22:54:43 martin Exp $
+$NetBSD: patch-ag,v 1.2 2006/09/04 09:20:51 martin Exp $
 
---- src/event-xlike-inc.c.orig	2003-04-23 23:17:05.000000000 +0200
-+++ src/event-xlike-inc.c	2003-04-23 23:39:47.000000000 +0200
-@@ -22,12 +22,63 @@
+--- src/event-xlike-inc.c.orig	2005-06-26 20:05:04.000000000 +0200
++++ src/event-xlike-inc.c	2006-08-30 17:59:31.000000000 +0200
+@@ -22,6 +22,58 @@
  
  /* Synched up with: Not in FSF. */
  
@@ -57,10 +57,13 @@ $NetBSD: patch-ag,v 1.1 2003/04/23 22:54:43 martin Exp $
 +
 +static int last_quit_check_signal_tick_count;
 +
++
  /* For some code it's reasonable to have only one copy and conditionalize
     at run-time.  For other code it isn't. #### Perhaps all code should be
     included here, not in event-xlike.c.  However, event-xlike.c is always
-    X-specific, whereas the following code isn't, in the GTK case. */
+@@ -29,7 +81,7 @@
+ 
+ EXFUN (Funicode_to_char, 2);  /* In unicode.c.  */
  
 -static int
 +int

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/11/25 18:09:07 magick Exp $
+$NetBSD: patch-aa,v 1.5 2006/09/04 09:20:51 martin Exp $
 
---- Makefile.in.in.orig	2004-09-10 13:58:08.000000000 +0200
-+++ Makefile.in.in
-@@ -456,8 +456,13 @@ install-arch-indep: mkdir info
+--- Makefile.in.in.orig	2005-12-31 13:41:23.000000000 +0100
++++ Makefile.in.in	2006-08-30 17:24:05.000000000 +0200
+@@ -462,8 +462,13 @@
  	fi
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
