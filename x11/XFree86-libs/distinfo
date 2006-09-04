@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/09/18 19:51:55 xtraeme Exp $
+$NetBSD: distinfo,v 1.11 2006/09/04 20:48:04 adrianp Exp $
 
 SHA1 (XFree86-4.4.0-src-1.tgz) = 44b38a7044c82d0b2f785b0e6a935349abcb5d79
 RMD160 (XFree86-4.4.0-src-1.tgz) = 40917951f1f661bfa28450771bbe86e8f0dd2549
@@ -32,3 +32,4 @@ SHA1 (patch-aq) = 398fbbeca94beb6e4a878941d1b825d0b734e11b
 SHA1 (patch-ar) = c9ad52d94aedd94d7c0e0dc254d02cde5e33b637
 SHA1 (patch-as) = c0b27ef82c688c535fdd46cb5de3315e24677fc6
 SHA1 (patch-at) = 7cd02712c1ae4ca070564d2f7b5cb4e3e5b6e93b
+SHA1 (patch-au) = 8e121828d0f826f9029c0aee0f39e4e7ea2b0dac
