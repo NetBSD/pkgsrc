@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/02/17 07:38:45 martti Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/09/04 08:56:09 martti Exp $
 #
 
 ### XXX: See the other 'XXX' comment below when updating this package.
@@ -9,7 +9,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://distcc.samba.org/ftp/distcc/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		martti@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://distcc.samba.org/
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/distcc/distinfo
