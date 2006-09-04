@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/08/14 15:57:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/09/04 11:11:35 martti Exp $
 share/squirrelmail/help/bg_BG/FAQ.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
@@ -428,6 +428,8 @@ share/squirrelmail/locale/id_ID/LC_MESSAGES/cookie_warning.mo
 share/squirrelmail/locale/id_ID/LC_MESSAGES/cookie_warning.po
 share/squirrelmail/locale/id_ID/LC_MESSAGES/folder_sizes.mo
 share/squirrelmail/locale/id_ID/LC_MESSAGES/folder_sizes.po
+share/squirrelmail/locale/id_ID/LC_MESSAGES/select_language.mo
+share/squirrelmail/locale/id_ID/LC_MESSAGES/select_language.po
 share/squirrelmail/locale/id_ID/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/id_ID/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/id_ID/setup.php
