@@ -1,22 +1,43 @@
-$NetBSD: patch-ab,v 1.3 2006/08/14 22:38:24 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2006/09/04 20:23:30 abs Exp $
 
---- src/scripting/lua/core.c.orig	2006-01-29 13:10:39.000000000 +0000
+--- src/scripting/lua/core.c.orig	2006-09-04 21:19:38.000000000 +0100
 +++ src/scripting/lua/core.c
-@@ -633,7 +633,7 @@ do_hooks_file(LS, unsigned char *prefix,
- 	if (file_can_read(file)) {
- 		int oldtop = lua_gettop(S);
+@@ -644,23 +644,24 @@ do_hooks_file(LS, unsigned char *prefix,
+ void
+ init_lua(struct module *module)
+ {
+-        static const luaL_reg lualibs[] = {
+-            { "base",       luaopen_base },
+-            { "table",      luaopen_table },
+-            { "io",         luaopen_io },
+-            { "string",     luaopen_string },
+-            { "math",       luaopen_math },
+-            { NULL,         NULL }
+-        };
+-        const luaL_reg *lib;
++	static const luaL_Reg lualibs[] = {
++		{"", luaopen_base},
++		{LUA_TABLIBNAME, luaopen_table},
++		{LUA_IOLIBNAME, luaopen_io},
++		{LUA_OSLIBNAME, luaopen_os},
++		{LUA_STRLIBNAME, luaopen_string},
++		{LUA_MATHLIBNAME, luaopen_math},
++		{NULL, NULL}
++	};
++	const luaL_Reg *lib = lualibs;
  
--		if (lua_dofile(S, file) != 0)
-+		if (luaL_dofile(S, file) != 0)
- 			sleep(3); /* Let some time to see error messages. */
- 		lua_settop(S, oldtop);
- 	}
-@@ -755,7 +755,7 @@ handle_ret_eval(struct session *ses)
- 		int oldtop = lua_gettop(L);
+ 	L = lua_open();
  
- 		if (prepare_lua(ses) == 0) {
--			lua_dostring(L, expr);
-+			luaL_dostring(L, expr);
- 			lua_settop(L, oldtop);
- 			finish_lua();
- 		}
+-        for (lib = lualibs; lib->func != NULL; lib++) {
+-                lib->func(l);           /* Open the library */
+-                /* Flush stack to ignore any result from the library load */
+-                lua_settop(l, 0);
+-        }
++	for (; lib->func; lib++) {
++		lua_pushcfunction(L, lib->func);
++		lua_pushstring(L, lib->name);
++		lua_call(L, 1, 0);
++	}
+ 
+ 	lua_register(L, LUA_ALERT, l_alert);
+ 	lua_register(L, "current_url", l_current_url);
