@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1198 2006/09/03 20:36:30 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1199 2006/09/04 11:11:48 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4198,3 +4198,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/cdparanoia to 3.0.9.8nb6 [ben 2006-09-03]
 	Updated www/links to 2.1.0.23 [wiz 2006-09-03]
 	Updated www/links-gui to 2.1.0.23 [wiz 2006-09-03]
+	Updated mail/squirrelmail-locales to 1.4.8nb1 [martti 2006-09-03]
