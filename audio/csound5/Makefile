@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/04 14:17:51 ben Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_src
@@ -21,12 +21,15 @@ SCONS_ARGS=		-C ${WRKSRC} prefix=${PREFIX}
 SCONS_ARGS+=		buildDSSI=0 buildLoris=0 buildRelease=1
 SCONS_ARGS+=		useALSA=0 useJack=0 useOSC=0 usePortMIDI=0
 SCONS_ARGS+=		usePortAudio=0
+SCONS_ENV_FILE=		${WRKDIR}/ugly-pkgsrc-scons-hack.txt
 
 do-build:
+	${ECHO} ${MAKE_ENV:Q} >${SCONS_ENV_FILE}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS} install
+	cd ${WRKSRC} && SCONS_ENV="`${CAT} ${SCONS_ENV_FILE}`" && \
+		eval "${SETENV} $${SCONS_ENV} ${SCONS} ${SCONS_ARGS} install"
 	cd ${PREFIX} && ${LN} -s ../lib/csound5/csound bin/csound5
 
 .include "../../audio/fluidsynth/buildlink3.mk"
