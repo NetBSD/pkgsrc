@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2006/08/22 21:48:29 minskim Exp $
+# $NetBSD: Makefile,v 1.470 2006/09/04 13:29:07 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -277,6 +277,7 @@ SUBDIR+=	privoxy
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
+SUBDIR+=	py-flup
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
