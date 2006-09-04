@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2005/02/21 21:24:06 veego Exp $
-@exec ln -sf ../../Resource/Font %D/Acrobat5/Reader/${PLATFORM}/fonts
-@unexec ${RM} -f %D/Acrobat5/Reader/${PLATFORM}/fonts
-@exec ln -sf ../res %D/Acrobat5/Reader/${PLATFORM}/res
-@unexec ${RM} -f %D/Acrobat5/Reader/${PLATFORM}/res
+@comment $NetBSD: PLIST.common_end,v 1.2 2006/09/04 19:27:56 hubertf Exp $
 @dirrm Acrobat5/Browsers/${PLATFORM}
 @dirrm Acrobat5/Browsers
 @dirrm Acrobat5/Reader/res
