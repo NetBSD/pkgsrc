@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2006/09/05 06:04:23 cjs Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/05 06:10:01 cjs Exp $
 
-DISTNAME=	Error-0.15
+DISTNAME=	Error-0.17
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5err
 PKGREVISION=	2
