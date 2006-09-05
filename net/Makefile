@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.636 2006/08/13 09:39:53 ghen Exp $
+# $NetBSD: Makefile,v 1.637 2006/09/05 18:03:42 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -139,6 +139,7 @@ SUBDIR+=	hobbitmon
 SUBDIR+=	host
 SUBDIR+=	howl
 SUBDIR+=	hping
+SUBDIR+=	httping
 SUBDIR+=	httptunnel
 SUBDIR+=	icsi-finger
 SUBDIR+=	iftop
