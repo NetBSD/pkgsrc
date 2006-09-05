@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1200 2006/09/05 00:47:27 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1201 2006/09/05 00:57:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4200,3 +4200,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/links-gui to 2.1.0.23 [wiz 2006-09-03]
 	Updated mail/squirrelmail-locales to 1.4.8nb1 [martti 2006-09-03]
 	Updated emulators/qemu to 0.8.2 [xtraeme 2006-09-04]
+	Updated mail/mail-notification to 3.0 [gdt 2006-09-05]
