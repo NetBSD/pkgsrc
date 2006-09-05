@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.2 2006/01/01 19:12:54 hubertf Exp $
+$NetBSD: patch-al,v 1.3 2006/09/05 00:44:38 xtraeme Exp $
 
---- osdep.h.orig	2005-12-19 23:51:53.000000000 +0100
-+++ osdep.h
+--- osdep.h.orig	2006-07-22 19:23:34.000000000 +0200
++++ osdep.h	2006-09-05 01:25:58.000000000 +0200
 @@ -2,6 +2,8 @@
  #define QEMU_OSDEP_H
  
@@ -11,12 +11,20 @@ $NetBSD: patch-al,v 1.2 2006/01/01 19:12:54 hubertf Exp $
  
  int qemu_vsnprintf(char *buf, int buflen, const char *fmt, va_list args);
  void qemu_vprintf(const char *fmt, va_list ap);
-@@ -31,7 +33,11 @@ extern void __longjmp(jmp_buf env, int v
+@@ -27,13 +29,19 @@
+ 
+ #include <signal.h>
+ 
++#ifndef __NetBSD__
+ struct siginfo;
++#endif
+ 
+ /* NOTE: it works only because the glibc sigset_t is >= kernel sigset_t */
  struct qemu_sigaction {
      union {
          void (*_sa_handler)(int);
 +#ifdef __NetBSD__
-+        void (*_sa_sigaction)(int, union siginfo *, void *);
++        void (*_sa_sigaction)(int, siginfo_t *, void *);
 +#else
          void (*_sa_sigaction)(int, struct siginfo *, void *);
 +#endif

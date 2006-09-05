@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2006/09/02 18:17:40 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/05 00:44:38 xtraeme Exp $
 #
 
-DISTNAME=		qemu-0.8.1
-PKGREVISION=		4
+DISTNAME=		qemu-0.8.2
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
@@ -40,10 +39,10 @@ BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
 
 .include "../../mk/compiler.mk"
 
-# qemu cannot yet use gcc 4, see the faq/mailing lists
-# (hint: use gcc_select on darwin/macos to choose gcc 3.3 instead)
 .if !empty(CC_VERSION:Mgcc-4*)
-PKG_FAIL_REASON+=	"${PKGNAME} cannot use "${CC_VERSION:Q}
+GCC_REQD+=		3.4
+USE_PKGSRC_GCC=		yes
+CONFIGURE_ARGS+=	--disable-gcc-check
 .endif
 
 post-install:
