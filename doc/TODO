@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5415 2006/09/05 00:47:27 xtraeme Exp $
+$NetBSD: TODO,v 1.5416 2006/09/05 00:57:18 gdt Exp $
 
 Suggested new packages
 ======================
@@ -666,7 +666,6 @@ Suggested package updates
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
-	o mail-notification-3.0
 	o mailscanner-4.54.6
 	o makedepf90-2.8.8 [pkg/34306]
 	o maketool-0.8.4
