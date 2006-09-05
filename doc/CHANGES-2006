@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1207 2006/09/05 20:02:50 tv Exp $
+$NetBSD: CHANGES-2006,v 1.1208 2006/09/05 20:06:42 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4207,3 +4207,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/p5-Digest-CRC to 0.10 [tv 2006-09-05]
 	Updated textproc/p5-String-Approx to 3.26 [tv 2006-09-05]
 	Updated mail/sendmail to 8.13.8nb1 [tv 2006-09-05]
+	Updated mail/sendmail812 to 8.12.11nb4 [tv 2006-09-05]
