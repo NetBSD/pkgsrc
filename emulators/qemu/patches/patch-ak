@@ -1,21 +1,27 @@
-$NetBSD: patch-ak,v 1.7 2006/08/21 17:29:33 dbj Exp $
+$NetBSD: patch-ak,v 1.8 2006/09/05 00:44:38 xtraeme Exp $
 
---- Makefile.orig	2006-05-03 16:32:58.000000000 -0400
-+++ Makefile	2006-07-31 22:18:31.000000000 -0400
-@@ -1,10 +1,10 @@
- include config-host.mak
+--- Makefile.orig	2006-07-22 19:23:34.000000000 +0200
++++ Makefile	2006-09-05 02:37:31.000000000 +0200
+@@ -5,15 +5,15 @@
+ .PHONY: all clean distclean dvi info install install-doc tar tarbin \
+ 	speed test test2 html dvi info
  
 -CFLAGS=-Wall -O2 -g -fno-strict-aliasing -I.
-+#CFLAGS=-Wall -O2 -g -fno-strict-aliasing -I.
++CFLAGS+=-Wall -O2 -fno-strict-aliasing -I.
  ifdef CONFIG_DARWIN
  CFLAGS+= -mdynamic-no-pic
  endif
+ ifeq ($(ARCH),sparc)
+ CFLAGS+=-mcpu=ultrasparc
+ endif
 -LDFLAGS=-g
+-LIBS=
 +#LDFLAGS=-g
- LIBS=
++#LIBS=
  DEFINES+=-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
  TOOLS=qemu-img$(EXESUF)
-@@ -48,20 +48,20 @@
+ ifdef CONFIG_STATIC
+@@ -59,20 +59,21 @@
  common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
  
  install-doc: $(DOCS)
@@ -32,12 +38,13 @@ $NetBSD: patch-ak,v 1.7 2006/08/21 17:29:33 dbj Exp $
 -	mkdir -p "$(DESTDIR)$(bindir)"
 -	$(INSTALL) -m 755 -s $(TOOLS) "$(DESTDIR)$(bindir)"
 -	mkdir -p "$(DESTDIR)$(datadir)"
-+install: all install-doc
++install: all
++install: all 
 +	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
 +	$(BSD_INSTALL_PROGRAM) $(TOOLS) $(bindir)
 +	$(BSD_INSTALL_DATA_DIR) $(datadir)
  	for x in bios.bin vgabios.bin vgabios-cirrus.bin ppc_rom.bin \
- 			video.x proll.elf linux_boot.bin; do \
+ 			video.x openbios-sparc32 linux_boot.bin; do \
 -		$(INSTALL) -m 644 $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
 +		$(BSD_INSTALL_DATA) $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
  	done
