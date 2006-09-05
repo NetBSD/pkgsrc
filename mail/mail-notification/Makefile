@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2006/07/05 05:37:42 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/09/05 00:55:32 gdt Exp $
 #
 
-DISTNAME=	mail-notification-2.0
-PKGREVISION=	8
+DISTNAME=	mail-notification-3.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
@@ -18,10 +17,6 @@ USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 GCONF2_SCHEMAS=		mail-notification.schemas
-
-EGDIR=		${PREFIX}/share/examples/mail-notification
-CONF_FILES=	${EGDIR}/sound/events/mail-notification.soundlist \
-		${PKG_SYSCONFDIR}/sound/events/mail-notification.soundlist
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mail-notification
 PKG_SUPPORTED_OPTIONS=	inet6 sasl ssl
