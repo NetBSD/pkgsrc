@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1203 2006/09/05 17:04:52 tv Exp $
+$NetBSD: CHANGES-2006,v 1.1204 2006/09/05 18:05:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4203,3 +4203,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mail-notification to 3.0 [gdt 2006-09-05]
 	Updated security/p5-IO-Socket-SSL to 0.999 [abs 2006-09-03]
 	Updated databases/phppgadmin to 3.5.6 [tv 2006-09-05]
+	Added net/httping version 1.2.1 [adrianp 2006-09-05]
