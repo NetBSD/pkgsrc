@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/09/05 01:11:04 gdt Exp $
+
+--- data/Makefile.in.orig	2006-06-14 03:46:13.000000000 -0400
++++ data/Makefile.in
+@@ -282,7 +282,7 @@ target_vendor = @target_vendor@
+ # gnome_cappletdir is defined by configure
+ gnome_capplet_in_files = mail-notification-properties.desktop.in
+ gnome_capplet_DATA = mail-notification-properties.desktop
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(prefix)/share/applications
+ autostart_in_files = mail-notification.desktop.in
+ autostart_DATA = mail-notification.desktop
+ serverdir = $(libdir)/bonobo/servers
