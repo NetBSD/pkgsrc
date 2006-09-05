@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1205 2006/09/05 19:44:47 tv Exp $
+$NetBSD: CHANGES-2006,v 1.1206 2006/09/05 20:02:24 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/phppgadmin to 3.5.6 [tv 2006-09-05]
 	Added net/httping version 1.2.1 [adrianp 2006-09-05]
 	Updated security/p5-Digest-CRC to 0.10 [tv 2006-09-05]
+	Updated textproc/p5-String-Approx to 3.26 [tv 2006-09-05]
