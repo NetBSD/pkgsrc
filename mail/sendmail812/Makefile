@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/06/14 18:57:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/05 20:06:06 tv Exp $
 
 .include "options.mk"
 .include "../../mail/sendmail812/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	The well known Mail Transport Agent
 HAS_SIG=	yes
 
