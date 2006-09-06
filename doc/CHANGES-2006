@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1223 2006/09/06 20:44:47 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1224 2006/09/06 22:49:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4224,3 +4224,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/sfs to 0.7.2nb6 [wiz 2006-09-06]
 	Updated misc/dnetc to 2.9008.492 [wiz 2006-09-06]
 	Updated converters/yencode to 0.4.6 [wiz 2006-09-06]
+	Updated audio/amarok to 1.4.3 [wiz 2006-09-06]
