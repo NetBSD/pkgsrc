@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1220 2006/09/06 20:23:13 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1221 2006/09/06 20:33:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4221,3 +4221,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/cairomm version 1.2.2 [adam 2006-09-06]
 	Updated graphics/ImageMagick to 6.2.9.3 [adam 2006-09-06]
 	Updated devel/cvsd to 1.0.13 [wiz 2006-09-06]
+	Updated security/sfs to 0.7.2nb6 [wiz 2006-09-06]
