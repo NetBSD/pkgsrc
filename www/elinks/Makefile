@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/09/04 20:23:30 abs Exp $
+# $NetBSD: Makefile,v 1.27 2006/09/06 15:14:34 abs Exp $
 
 DISTNAME=		elinks-0.11.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/
 EXTRACT_SUFX=		.tar.bz2
