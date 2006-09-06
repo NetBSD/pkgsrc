@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/08/10 03:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2006/09/06 09:44:57 rillig Exp $
 
 DISTNAME=	pari-2.1.6
 PKGREVISION=	1
@@ -20,10 +20,12 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
 CONFIGURE_ARGS+=	--graphic=X11
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	--share-prefix=${PREFIX}/share
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+CONFIGURE_ENV+=		Xincroot=${X11BASE}/include
 
 TEST_TARGET=		test-compat bench
 
