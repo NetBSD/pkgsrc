@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5418 2006/09/06 12:14:33 markd Exp $
+$NetBSD: TODO,v 1.5419 2006/09/06 18:03:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,6 +276,7 @@ Suggested package updates
 	o GridSim-3.3
 	o ImageMagick-6.2.9.3
 	o MesaLib-6.5
+	o ORBit2-2.14.3
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o RealPlayerGold-10.0.8
@@ -302,6 +303,7 @@ Suggested package updates
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
+	o amarok-1.4.3
 	o amavis-0.3.12
 	o amavisd-new-2.4.2 [pkg/34041]
 	o amaya-9.5
@@ -394,8 +396,8 @@ Suggested package updates
 	o cuetools-1.3.1
 	o cups-1.2.3
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsd-1.0.13
-	o cvsweb-3.0.6
+	o cvsd-1.0.13 [pkg/34475]
+	o cvsweb-3.0.6 [pkg/34474]
 	o cweb-3.64a
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.21.1
@@ -442,6 +444,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
+	o eog2-2.16.0.1
 	o epiphany-2.16.0
 	o epiphany-extensions-2.16.0
 	o epstool-3.08
@@ -452,6 +455,7 @@ Suggested package updates
 	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
+	o evolution-2.8.0
 	o ex-050325
 	o exmh-2.7.2
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -463,6 +467,7 @@ Suggested package updates
 	o fetchmail-6.3.4
 	o fhist-1.14
 	o file-4.17 [pkg/34337]
+	o file-roller-2.16.0
 	o findutils-4.2.28
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
@@ -491,6 +496,7 @@ Suggested package updates
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o gedit-2.16.0
 	o genius-0.7.6.1
 	o gentoo-0.11.56 [pkg/34341]
 	o ggiterm-0.7.1
@@ -512,10 +518,22 @@ Suggested package updates
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-applets-2.16.0.1
+	o gnome-desktop-2.16.0
+	o gnome-doc-utils-0.8.0
+	o gnome-games-2.16.0
+	o gnome-icon-theme-2.16.0.1
+	o gnome-media-2.16.1
+	o gnome-menus-2.16.0
+	o gnome-panel-2.16.0
 	o gnome-pilot-2.0.13
+	o gnome-screensaver-2.16.0
+	o gnome-session-2.16.0
 	o gnome-speech-0.4.5
 	o gnome-spell-1.0.7
+	o gnome-user-docs-2.16.0
 	o gnome-vfsmm-2.16.0
+	o gnome2-terminal-2.16.0
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
@@ -544,13 +562,15 @@ Suggested package updates
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.10.2 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
+	o gtk2+-2.10.3 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
+	o gtklife-5.0
 	o gtkmm-2.10.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
+	o gucharmap-1.8.0
 	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
 	o gworkspace-0.8.3
@@ -618,11 +638,14 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
+	o libbonobo-2.16.0
+	o libbonoboui-2.16.0
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46 [pkg/34294]
 	o libflash-0.4.13
+	o libgda-1.9.103
 	o libggi-2.2.1
 	o libggigcp-1.0.1
 	o libggimisc-2.2.1
@@ -631,8 +654,11 @@ Suggested package updates
 	o libgiigic-1.1.1
 	o libglademm-2.6.3
 	o libgnomecanvasmm-2.16.0
+	o libgnomedb-1.9.103
 	o libgnomemm-2.16.0
+	o libgnomeui-2.16.0
 	o libgnomeuimm-2.16.0
+	o libgtop2-2.14.3
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
 	o liblive-2005.10.05
@@ -652,6 +678,7 @@ Suggested package updates
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.3 [pkg/34291]
+	o libwnck-2.16.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o lilypond-2.8.0
@@ -678,6 +705,8 @@ Suggested package updates
 	o md-whois-4.7.15
 	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
+	o mergeant-0.63
+	o metacity-2.16.0
 	o mew-5.1
 	o mftrace-1.2.4
 	o mgetty-1.1.35
@@ -713,6 +742,7 @@ Suggested package updates
 	o muse-0.9.1
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
+	o nautilus-cd-burner-2.16.0
 	o ncftp2-2.8.2
 	o ncview-1.92e
 	o neon-0.26.1 [pkg/34310]
@@ -1005,7 +1035,8 @@ Suggested package updates
 	o py-curl-7.15.5.1
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
-	o py-gobject-2.11.4
+	o py-gobject-2.12.1
+	o py-gtk2-2.10.1
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
@@ -1112,6 +1143,7 @@ Suggested package updates
 	o socat-1.5.0.0
 	o solfege-3.4.2
 	o sope-4.5.5
+	o sound-juicer-2.16.0
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.4
 	o spamass-milter-0.3.1 [pkg/33206]
@@ -1190,6 +1222,7 @@ Suggested package updates
 	o vobcopy-1.0.0
 	o vp-1.6
 	o vsftpd-2.0.5
+	o vte-0.14.0
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
@@ -1215,6 +1248,7 @@ Suggested package updates
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
 	o xdx-2.0
+	o xemacs-21.4.19
 	o xemacs-current-21.5.22
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.8.0
@@ -1228,7 +1262,7 @@ Suggested package updates
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.10
-	o xmms-alarm-0.3.7
+	o xmms-alarm-0.3.7 [pkg/34484]
 	o xmms-crossfade-1.3.10
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
@@ -1259,7 +1293,8 @@ Suggested package updates
 	o xzip-182
 	o yafc-1.1
 	o yaz-2.1.8
-	o yencode-0.46
+	o yelp-2.16.0
+	o yencode-0.46 [pkg/34485]
 	o yodl-2.01.02
 	o ysm-2.9.8
 	o zebra-0.95a
