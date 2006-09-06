@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5423 2006/09/06 20:39:51 wiz Exp $
+$NetBSD: TODO,v 1.5424 2006/09/06 20:44:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1290,7 +1290,6 @@ Suggested package updates
 	o yafc-1.1
 	o yaz-2.1.8
 	o yelp-2.16.0
-	o yencode-0.46 [pkg/34485]
 	o yodl-2.01.02
 	o ysm-2.9.8
 	o zebra-0.95a
