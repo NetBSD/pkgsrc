@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1212 2006/09/06 04:01:04 ben Exp $
+$NetBSD: CHANGES-2006,v 1.1213 2006/09/06 12:14:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4212,3 +4212,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/GeoIP to 1.4.0 [tv 2006-09-05]
 	Added regress/make-env-phases version 1.0 [ben 2006-09-05]
 	Updated sysutils/memtest86 to 3.2 [ben 2006-09-05]
+	Updated sysutils/k3b to 0.12.17 [markd 2006-09-06]
+	Updated security/libgcrypt to 1.2.3nb1 [markd 2006-09-06]
