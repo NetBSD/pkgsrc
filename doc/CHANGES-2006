@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1218 2006/09/06 19:59:03 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1219 2006/09/06 20:17:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/hyperestraier to 1.4.2 [obache 2006-09-06]
 	Updated www/cvsweb to 3.0.6 [adrianp 2006-09-06]
 	Added graphics/cairomm version 1.2.2 [adam 2006-09-06]
+	Updated graphics/ImageMagick to 6.2.9.3 [adam 2006-09-06]
