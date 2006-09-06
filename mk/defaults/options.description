@@ -23,8 +23,8 @@ avifile
 bdb	
 bktr	
 blender-exppython	Enable the Experimental Python support.
-bpf	
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
+bpf	
 buffy-size	
 canna			Use Canna as Japanese conversion program.
 catalog-mysql		Store Bacula catalog in MySQL database.
@@ -82,8 +82,8 @@ fastcgi			Use FastCGI as the CGI manager.
 ffmpeg	
 firefox			Use firefox as gecko rendering engine.
 flac	
-freetype	
 freeradius-simul-use	Enable Simultaneous-Use.
+freetype	
 ftp			Enable FTP support.
 gd	
 gdbm			Use the GNU gdbm database library.
@@ -154,6 +154,7 @@ ldap			Enable LDAP support.
 ldap-compat	
 libcrack	
 libgcrypt	
+libgpod			Enable libgpod support.
 libnet10	
 libnet11	
 libofx			Enable OFX support.
@@ -190,8 +191,8 @@ mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
 multibyte	
-mutt-hcache		Enable header caching in mutt.
 mutt-compressed-mbox    Enable compressed mailbox support in mutt.
+mutt-hcache		Enable header caching in mutt.
 mysql			Enable MySQL support.
 mysql4	
 nas			Enable usage of the Network Audio System.
