@@ -1,20 +1,27 @@
-$NetBSD: patch-ab,v 1.4 2006/09/04 20:23:30 abs Exp $
+$NetBSD: patch-ab,v 1.5 2006/09/06 15:14:34 abs Exp $
 
---- src/scripting/lua/core.c.orig	2006-09-04 21:19:38.000000000 +0100
+--- src/scripting/lua/core.c.orig	2006-01-29 13:10:39.000000000 +0000
 +++ src/scripting/lua/core.c
-@@ -644,23 +644,24 @@ do_hooks_file(LS, unsigned char *prefix,
+@@ -633,7 +633,7 @@ do_hooks_file(LS, unsigned char *prefix,
+ 	if (file_can_read(file)) {
+ 		int oldtop = lua_gettop(S);
+ 
+-		if (lua_dofile(S, file) != 0)
++		if (luaL_dofile(S, file) != 0)
+ 			sleep(3); /* Let some time to see error messages. */
+ 		lua_settop(S, oldtop);
+ 	}
+@@ -644,13 +644,24 @@ do_hooks_file(LS, unsigned char *prefix,
  void
  init_lua(struct module *module)
  {
--        static const luaL_reg lualibs[] = {
--            { "base",       luaopen_base },
--            { "table",      luaopen_table },
--            { "io",         luaopen_io },
--            { "string",     luaopen_string },
--            { "math",       luaopen_math },
--            { NULL,         NULL }
--        };
--        const luaL_reg *lib;
+-	L = lua_open();
+-
+-	luaopen_base(L);
+-	luaopen_table(L);
+-	luaopen_io(L);
+-	luaopen_string(L);
+-	luaopen_math(L);
 +	static const luaL_Reg lualibs[] = {
 +		{"", luaopen_base},
 +		{LUA_TABLIBNAME, luaopen_table},
@@ -25,14 +32,9 @@ $NetBSD: patch-ab,v 1.4 2006/09/04 20:23:30 abs Exp $
 +		{NULL, NULL}
 +	};
 +	const luaL_Reg *lib = lualibs;
- 
- 	L = lua_open();
- 
--        for (lib = lualibs; lib->func != NULL; lib++) {
--                lib->func(l);           /* Open the library */
--                /* Flush stack to ignore any result from the library load */
--                lua_settop(l, 0);
--        }
++  
++  	L = lua_open();
++  
 +	for (; lib->func; lib++) {
 +		lua_pushcfunction(L, lib->func);
 +		lua_pushstring(L, lib->name);
@@ -41,3 +43,12 @@ $NetBSD: patch-ab,v 1.4 2006/09/04 20:23:30 abs Exp $
  
  	lua_register(L, LUA_ALERT, l_alert);
  	lua_register(L, "current_url", l_current_url);
+@@ -755,7 +766,7 @@ handle_ret_eval(struct session *ses)
+ 		int oldtop = lua_gettop(L);
+ 
+ 		if (prepare_lua(ses) == 0) {
+-			lua_dostring(L, expr);
++			luaL_dostring(L, expr);
+ 			lua_settop(L, oldtop);
+ 			finish_lua();
+ 		}
