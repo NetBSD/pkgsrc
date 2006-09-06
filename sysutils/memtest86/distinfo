@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:54 agc Exp $
+$NetBSD: distinfo,v 1.5 2006/09/06 03:59:54 ben Exp $
 
-SHA1 (memtest86-3.1a.tar.gz) = 819bc8eab29b049db3a25c7efab86e1af1c8a236
-RMD160 (memtest86-3.1a.tar.gz) = 90ee5b508cf493e0f10f6352278642656aec58cc
-Size (memtest86-3.1a.tar.gz) = 142729 bytes
+SHA1 (memtest86-3.2.tar.gz) = 7df757d79e4cc4d8adfda78c7e46e0d9e0646a7f
+RMD160 (memtest86-3.2.tar.gz) = 95477b0dea1a13fdcdd28e01f0a99109702b3ed3
+Size (memtest86-3.2.tar.gz) = 131309 bytes
 SHA1 (patch-aa) = 17feab87ad3a9755f19b8eda1b9eb3696721b34e
