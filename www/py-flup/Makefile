@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/01 15:08:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/06 10:59:30 joerg Exp $
 #
 
 DISTNAME=	flup-r2030
 PKGNAME=	${PYPKGPREFIX}-flup-2030
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://www.saddi.com/software/flup/dist/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.saddi.com/software/flup/
 COMMENT=	WSGI support modules
+
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py24-setuptools
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
