@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1211 2006/09/06 03:39:16 ben Exp $
+$NetBSD: CHANGES-2006,v 1.1212 2006/09/06 04:01:04 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/bind9 to 9.3.2nb2 [adrianp 2006-09-05]
 	Updated net/GeoIP to 1.4.0 [tv 2006-09-05]
 	Added regress/make-env-phases version 1.0 [ben 2006-09-05]
+	Updated sysutils/memtest86 to 3.2 [ben 2006-09-05]

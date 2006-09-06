@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5416 2006/09/05 00:57:18 gdt Exp $
+$NetBSD: TODO,v 1.5417 2006/09/06 04:01:04 ben Exp $
 
 Suggested new packages
 ======================
@@ -679,7 +679,6 @@ Suggested package updates
 	o md-whois-4.7.15
 	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
-	o memtest86-3.2 [pkg/34328]
 	o mew-5.1
 	o mftrace-1.2.4
 	o mgetty-1.1.35
