@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/04/09 09:53:59 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2006/09/06 13:04:58 hira Exp $
 
---- INSTALL.orig	2005-11-07 12:05:16.000000000 +0000
-+++ INSTALL
-@@ -284,6 +284,8 @@ PrintRequiredFree()
+--- INSTALL.orig	2006-05-23 10:33:34.000000000 +0900
++++ INSTALL	2006-09-06 21:23:16.000000000 +0900
+@@ -287,6 +287,8 @@
  
          if [ `uname -s` = "Linux" ] ; then
            size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2006/04/09 09:53:59 wiz Exp $
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -390,6 +392,8 @@ GetInstallDirectory ()
+@@ -398,6 +400,8 @@
      AIX)
        defdir="/usr/lpp/Adobe/Acrobat7.0"
        ;;
@@ -20,7 +20,16 @@ $NetBSD: patch-aa,v 1.3 2006/04/09 09:53:59 wiz Exp $
    esac
  
    while [ -z "$InstallDir" ] ; do
-@@ -1061,6 +1065,20 @@ case "$OSname" in
+@@ -806,6 +810,8 @@
+     echo "$ST_IBP_INFO_22_1" \"$ReadInstallDir/Browser/install_browser_plugin\" "$ST_IBP_INFO_22_2"
+   fi
+ 
++  return
++
+   rm -f /usr/bin/acroread 2>/dev/null
+   ln -s "$ReadInstallDir"/bin/acroread /usr/bin/acroread 2>/dev/null
+ 
+@@ -1073,6 +1079,20 @@
      ReadDefaultNum="$ReadIntelLinuxNum"
      DefaultName="Intel/Linux"
      ;;

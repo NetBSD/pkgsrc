@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/06/13 10:28:24 salo Exp $
+$NetBSD: distinfo,v 1.6 2006/09/06 13:04:58 hira Exp $
 
 SHA1 (AdobeReader_enu-7.0.8-1.i386.tar.gz) = ed3f955a0e9ba252fcb45263de00a37e392b7b72
 RMD160 (AdobeReader_enu-7.0.8-1.i386.tar.gz) = 22c51f70bcafcd0f0b2fc2b0f0cd3c3aa42ed983
 Size (AdobeReader_enu-7.0.8-1.i386.tar.gz) = 44150042 bytes
-SHA1 (patch-aa) = 8c204cb4240ded22258b56c008007ee22edcf5af
+SHA1 (patch-aa) = 6e4d6a9304ff15a3a680880ee96111236957e6e9
