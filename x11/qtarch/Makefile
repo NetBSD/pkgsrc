@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/05/19 07:42:40 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/09/06 12:09:41 obache Exp $
 #
 
 DISTNAME=	qtarch-2.2-1
@@ -13,7 +13,7 @@ HOMEPAGE=	http://qtarch.sourceforge.net/
 COMMENT=	Graphical dialog editor for the Qt widget set
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin
