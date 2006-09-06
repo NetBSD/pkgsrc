@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5422 2006/09/06 20:23:13 wiz Exp $
+$NetBSD: TODO,v 1.5423 2006/09/06 20:39:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,6 @@ Suggested package updates
 	o diffstat-1.43
 	o dirac-0.6.0
 	o dirdiff-2.1 [pkg/34432]
-	o dnetc-2.9012 [pkg/34247]
 	o dnsmasq-2.33 [pkg/34428]
 	o dnstop-20060517 [pkg/34425]
 	o dnstracer-1.8
