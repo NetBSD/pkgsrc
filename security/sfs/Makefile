@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2006/04/23 00:12:42 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/09/06 20:33:24 wiz Exp $
 #
 
 DISTNAME=		sfs-0.7.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net security
-MASTER_SITES=		http://www.fs.net/sfs/@new-york.lcs.mit.edu,u83s4uk49nt8rmp4uwmt2exvz6d3cavh/pub/sfswww/dist/
+MASTER_SITES=		http://www.fs.net/sfswww/dist/
 
 MAINTAINER=		mike@ethmoid.org
 HOMEPAGE=		http://www.fs.net/
@@ -34,7 +34,7 @@ RCD_SCRIPTS=		sfscd sfssd
 
 .include "../../mk/bsd.prefs.mk"
 
-SFSDIR?=		/var/sfs
+SFSDIR?=		${VARBASE}/sfs
 SFS_ROOT=		${SFSDIR}
 
 OWN_DIRS_PERMS=		${SFS_ROOT} sfs sfs 555
