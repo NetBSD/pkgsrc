@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/08/24 17:37:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/09/06 22:48:14 wiz Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -827,6 +827,51 @@ share/kde/apps/amarok/images/wizard_compact.png
 share/kde/apps/amarok/images/wizard_xmms.png
 share/kde/apps/amarok/images/xine_logo.png
 share/kde/apps/amarok/ruby_lib/codes.rb
+share/kde/apps/amarok/ruby_lib/gemconfigure.rb
+share/kde/apps/amarok/ruby_lib/http11.rb
+share/kde/apps/amarok/ruby_lib/libhttp11.a
+share/kde/apps/amarok/ruby_lib/libhttp11.la
+share/kde/apps/amarok/ruby_lib/libhttp11.so
+share/kde/apps/amarok/ruby_lib/libhttp11.so.0
+share/kde/apps/amarok/ruby_lib/libhttp11.so.0.0.0
+share/kde/apps/amarok/ruby_lib/mongrel.rb
+share/kde/apps/amarok/ruby_lib/mongrel/cgi.rb
+share/kde/apps/amarok/ruby_lib/mongrel/command.rb
+share/kde/apps/amarok/ruby_lib/mongrel/configurator.rb
+share/kde/apps/amarok/ruby_lib/mongrel/debug.rb
+share/kde/apps/amarok/ruby_lib/mongrel/handlers.rb
+share/kde/apps/amarok/ruby_lib/mongrel/init.rb
+share/kde/apps/amarok/ruby_lib/mongrel/stats.rb
+share/kde/apps/amarok/ruby_lib/mongrel/tcphack.rb
+share/kde/apps/amarok/ruby_lib/rbconfig/datadir.rb
+share/kde/apps/amarok/ruby_lib/rubygems.rb
+share/kde/apps/amarok/ruby_lib/rubygems/._gem_commands.rb
+share/kde/apps/amarok/ruby_lib/rubygems/builder.rb
+share/kde/apps/amarok/ruby_lib/rubygems/cmd_manager.rb
+share/kde/apps/amarok/ruby_lib/rubygems/command.rb
+share/kde/apps/amarok/ruby_lib/rubygems/config_file.rb
+share/kde/apps/amarok/ruby_lib/rubygems/custom_require.rb
+share/kde/apps/amarok/ruby_lib/rubygems/dependency_list.rb
+share/kde/apps/amarok/ruby_lib/rubygems/doc_manager.rb
+share/kde/apps/amarok/ruby_lib/rubygems/format.rb
+share/kde/apps/amarok/ruby_lib/rubygems/gem_commands.rb
+share/kde/apps/amarok/ruby_lib/rubygems/gem_openssl.rb
+share/kde/apps/amarok/ruby_lib/rubygems/gem_runner.rb
+share/kde/apps/amarok/ruby_lib/rubygems/incremental_fetcher.rb
+share/kde/apps/amarok/ruby_lib/rubygems/installer.rb
+share/kde/apps/amarok/ruby_lib/rubygems/loadpath_manager.rb
+share/kde/apps/amarok/ruby_lib/rubygems/old_format.rb
+share/kde/apps/amarok/ruby_lib/rubygems/open-uri.rb
+share/kde/apps/amarok/ruby_lib/rubygems/package.rb
+share/kde/apps/amarok/ruby_lib/rubygems/remote_installer.rb
+share/kde/apps/amarok/ruby_lib/rubygems/rubygems_version.rb
+share/kde/apps/amarok/ruby_lib/rubygems/security.rb
+share/kde/apps/amarok/ruby_lib/rubygems/source_index.rb
+share/kde/apps/amarok/ruby_lib/rubygems/specification.rb
+share/kde/apps/amarok/ruby_lib/rubygems/timer.rb
+share/kde/apps/amarok/ruby_lib/rubygems/user_interaction.rb
+share/kde/apps/amarok/ruby_lib/rubygems/validator.rb
+share/kde/apps/amarok/ruby_lib/rubygems/version.rb
 share/kde/apps/amarok/scripts/common/Publisher.py
 share/kde/apps/amarok/scripts/common/Zeroconf.py
 share/kde/apps/amarok/scripts/lyrics_astraweb/COPYING
@@ -904,6 +949,7 @@ share/kde/services/amarokpcast.protocol
 share/kde/servicetypes/amarok_codecinstall.desktop
 share/kde/servicetypes/amarok_plugin.desktop
 share/locale/af/LC_MESSAGES/amarok.mo
+share/locale/ar/LC_MESSAGES/amarok.mo
 share/locale/az/LC_MESSAGES/amarok.mo
 share/locale/bg/LC_MESSAGES/amarok.mo
 share/locale/br/LC_MESSAGES/amarok.mo
@@ -983,6 +1029,9 @@ share/locale/zh_TW/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/amarok/scripts/lyrics_astraweb
 @dirrm share/kde/apps/amarok/scripts/common
 @dirrm share/kde/apps/amarok/scripts
+@dirrm share/kde/apps/amarok/ruby_lib/rubygems
+@dirrm share/kde/apps/amarok/ruby_lib/rbconfig
+@dirrm share/kde/apps/amarok/ruby_lib/mongrel
 @dirrm share/kde/apps/amarok/ruby_lib
 @dirrm share/kde/apps/amarok/images
 @dirrm share/kde/apps/amarok/icons/hicolor/64x64/actions
