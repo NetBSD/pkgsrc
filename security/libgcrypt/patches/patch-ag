@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2006/09/06 11:41:41 markd Exp $
+
+--- configure.orig	2006-09-06 15:55:58.000000000 +1200
++++ configure
+@@ -19575,7 +19575,7 @@ case "${target}" in
+ #       DYNLINK_MOD_CFLAGS="-shared -rdynamic $CFLAGS_PIC -Wl,-Bshareable -Wl,-x"
+         ;;
+ 
+-    *-solaris* | *-irix* | *-dec-osf* | *-netbsd* )
++    *-solaris* | *-irix* | *-dec-osf* )
+         NAME_OF_DEV_RANDOM="/dev/random"
+         NAME_OF_DEV_URANDOM="/dev/random"
+ #       DYNLINK_MOD_CFLAGS="-shared $CFLAGS_PIC"
