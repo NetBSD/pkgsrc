@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2006/02/05 23:10:13 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2006/09/06 15:38:32 tron Exp $
 
 DISTNAME=	nxtvepg-2.7.6
 PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nxtvepg/}
 
-MAINTAINER=	magick@zhadum.de
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/nxtvepg/
 COMMENT=	NextView EPG decoder
 
