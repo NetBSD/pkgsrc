@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/09/06 22:48:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/09/06 22:56:22 wiz Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -829,11 +829,7 @@ share/kde/apps/amarok/images/xine_logo.png
 share/kde/apps/amarok/ruby_lib/codes.rb
 share/kde/apps/amarok/ruby_lib/gemconfigure.rb
 share/kde/apps/amarok/ruby_lib/http11.rb
-share/kde/apps/amarok/ruby_lib/libhttp11.a
 share/kde/apps/amarok/ruby_lib/libhttp11.la
-share/kde/apps/amarok/ruby_lib/libhttp11.so
-share/kde/apps/amarok/ruby_lib/libhttp11.so.0
-share/kde/apps/amarok/ruby_lib/libhttp11.so.0.0.0
 share/kde/apps/amarok/ruby_lib/mongrel.rb
 share/kde/apps/amarok/ruby_lib/mongrel/cgi.rb
 share/kde/apps/amarok/ruby_lib/mongrel/command.rb
