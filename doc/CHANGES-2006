@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1214 2006/09/06 13:06:06 hira Exp $
+$NetBSD: CHANGES-2006,v 1.1215 2006/09/06 14:06:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/k3b to 0.12.17 [markd 2006-09-06]
 	Updated security/libgcrypt to 1.2.3nb1 [markd 2006-09-06]
 	Updated print/acroread7 to 7.0.8nb1 [hira 2006-09-06]
+	Added fonts/terminus-font version 4.20 [obache 2006-09-06]
