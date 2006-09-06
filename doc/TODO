@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5419 2006/09/06 18:03:41 wiz Exp $
+$NetBSD: TODO,v 1.5420 2006/09/06 19:26:13 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ Suggested package updates
 	o cups-1.2.3
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.13 [pkg/34475]
-	o cvsweb-3.0.6 [pkg/34474]
 	o cweb-3.64a
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.21.1
