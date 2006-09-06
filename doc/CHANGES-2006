@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1216 2006/09/06 15:26:51 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1217 2006/09/06 19:26:13 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4217,3 +4217,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/acroread7 to 7.0.8nb1 [hira 2006-09-06]
 	Added fonts/terminus-font version 4.20 [obache 2006-09-06]
 	Updated textproc/hyperestraier to 1.4.2 [obache 2006-09-06]
+	Updated www/cvsweb to 3.0.6 [adrianp 2006-09-06]
