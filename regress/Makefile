@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/11 05:03:11 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/06 03:37:54 ben Exp $
 #
 
 COMMENT=	Regression tests for pkgsrc infrastructure
@@ -10,6 +10,7 @@ SUBDIR+=	buildlink-transform
 SUBDIR+=	buildlink-unwrap
 SUBDIR+=	compiler
 SUBDIR+=	ignore-tools
+SUBDIR+=	make-env-phases
 SUBDIR+=	make-quoting
 SUBDIR+=	pkg-options
 SUBDIR+=	pkgfail
