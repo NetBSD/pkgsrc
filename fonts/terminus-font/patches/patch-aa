@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/09/06 14:01:17 obache Exp $
+
+--- Makefile.orig	2005-05-03 19:04:32.000000000 +0000
++++ Makefile
+@@ -69,7 +69,7 @@ PCF_32N	= ter-132n.pcf ter-232n.pcf ter-
+ PCF_32B	= ter-132b.pcf ter-232b.pcf ter-532b.pcf ter-932b.pcf ter-c32b.pcf ter-d32b.pcf ter-f32b.pcf ter-g32b.pcf ter-k32b.pcf ter-p32b.pcf ter-u32b.pcf ter-x32b.pcf
+ PCF	= $(PCF_12N) $(PCF_14N) $(PCF_14B) $(PCF_16N) $(PCF_16B) $(PCF_20N) $(PCF_20B) $(PCF_24N) $(PCF_24B) $(PCF_28N) $(PCF_28B) $(PCF_32N) $(PCF_32B)
+ 
+-all: $(PSF) $(PCF)
++all: $(PCF)
+ psf: $(PSF)
+ txt: $(TXT)
+ raw: $(RAW)
+@@ -79,11 +79,9 @@ pcf: $(PCF)
+ DESTDIR	= 
+ prefix	= /usr
+ psfdir	= $(prefix)/share/consolefonts
+-x11dir	= $(prefix)/X11R6/lib/X11/fonts/local
++x11dir	= $(PREFIX)/lib/X11/fonts/misc
+ 
+-install: $(PSF) $(PCF)
+-	mkdir -p $(DESTDIR)$(psfdir)
+-	for i in $(PSF) ; do gzip -c $$i > $(DESTDIR)$(psfdir)/$$i.gz ; done
++install: $(PCF)
+ 	mkdir -p $(DESTDIR)$(x11dir)
+ 	for i in $(PCF) ; do gzip -c $$i > $(DESTDIR)$(x11dir)/$$i.gz ; done
+ 
