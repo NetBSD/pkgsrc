@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/09/06 10:02:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/06 10:06:13 rillig Exp $
 
 DISTNAME=	gpsdrive-1.31
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	geography
 MASTER_SITES=	http://gpsdrive.kraftvoll.at/
 
@@ -17,14 +17,13 @@ USE_PKGLOCALEDIR=	YES
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		bash:run perl:run
 
 # XXX make this an option
 CONFIGURE_ARGS+=	--disable-mysql
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash=	src/gpsfetchmap
+REPLACE_BASH=		src/gpsfetchmap
+REPLACE_PERL=		src/gpspoint2gpsdrive.pl src/wpcvt
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
