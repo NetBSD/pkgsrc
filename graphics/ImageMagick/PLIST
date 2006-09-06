@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2006/07/17 16:01:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2006/09/06 20:15:57 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -91,6 +91,7 @@ include/magick/splay-tree.h
 include/magick/statistic.h
 include/magick/stream.h
 include/magick/string_.h
+include/magick/threshold.h
 include/magick/timer.h
 include/magick/token.h
 include/magick/transform.h
@@ -159,6 +160,7 @@ share/ImageMagick-${IM_MAJOR_VER}/config/log.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/magic.xml
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/arc.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/background.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/black.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/button.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/configure.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/definitive-guide.png
@@ -173,12 +175,14 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/label.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/logo.eps
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/logo.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/montage.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/navy.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/piechart.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/reconstruct.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/red-ball.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/red-circle.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/right.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose-over.png
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose-sigmoidal.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/rose.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/script.png
@@ -292,6 +296,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/display.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/download.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/examples.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/formats.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/fx.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/history.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/identify.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/import.html
