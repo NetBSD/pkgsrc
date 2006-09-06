@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/02 17:11:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/06 09:08:55 rillig Exp $
 bin/git
 bin/git-add
 bin/git-am
@@ -240,7 +240,6 @@ man/man1/git-write-tree.1
 man/man1/gitk.1
 man/man7/git.7
 share/git-core/python/gitMergeCommon.py
-share/git-core/python/subprocess.py
 share/git-core/templates/description
 share/git-core/templates/hooks/applypatch-msg
 share/git-core/templates/hooks/commit-msg
