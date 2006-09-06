@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1224 2006/09/06 22:49:44 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1225 2006/09/06 22:59:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/dnetc to 2.9008.492 [wiz 2006-09-06]
 	Updated converters/yencode to 0.4.6 [wiz 2006-09-06]
 	Updated audio/amarok to 1.4.3 [wiz 2006-09-06]
+	Added audio/libgpod version 0.3.2 [wiz 2006-09-06]
