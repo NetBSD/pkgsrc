@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/06 09:50:25 rillig Exp $
 
 DISTNAME=	jisx0212fonts-0.0
 PKGREVISION=	2
@@ -25,20 +25,22 @@ USE_TOOLS+=	gzip gunzip
 
 # XXX Can we assume that ${GUNZIP_CMD} can extract .Z files?
 do-extract:
-	@for f in ${DISTFILES}; do \
-		${GUNZIP_CMD} -c ${DISTDIR}/$${f} >${WRKSRC}/$${f%.*}; \
+	for f in ${DISTFILES}; do \
+		gunzip -c ${DISTDIR}/$${f} >${WRKSRC}/$${f%.*}; \
 	done
 
 do-build:
-	@cd ${WRKSRC}; \
+	set -e; \
+	cd ${WRKSRC}; \
 	for f in ${FONTS}; do \
 		${X11BASE}/bin/bdftopcf $${f}.bdf | \
-		${GZIP_CMD} -c >$${f}.pcf.gz; \
+		gzip -c >$${f}.pcf.gz; \
 	done
 
 do-install:
-	@${INSTALL_DATA_DIR} ${FONTDIR}
-	@for f in ${FONTS}; do \
+	${INSTALL_DATA_DIR} ${FONTDIR}
+	set -e; \
+	for f in ${FONTS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${FONTDIR}; \
 	done
 
