@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5420 2006/09/06 19:26:13 adrianp Exp $
+$NetBSD: TODO,v 1.5421 2006/09/06 20:17:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -274,7 +274,6 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
-	o ImageMagick-6.2.9.3
 	o MesaLib-6.5
 	o ORBit2-2.14.3
 	o PAM-0.80
