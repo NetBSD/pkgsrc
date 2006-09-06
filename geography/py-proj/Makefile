@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/23 11:18:50 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/06 09:54:39 rillig Exp $
 #
 
 DISTNAME=		pyproj-1.7.2
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.cdc.noaa.gov/people/jeffrey.s.whitaker/python/
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.cdc.noaa.gov/people/jeffrey.s.whitaker/python/
-COMMENT=		python wrapper for proj
+COMMENT=		Python wrapper for proj
 
 PYDISTUTILSPKG=			true
 PYTHON_VERSIONS_ACCEPTED=	23 24
