@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1222 2006/09/06 20:39:51 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1223 2006/09/06 20:44:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4223,3 +4223,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cvsd to 1.0.13 [wiz 2006-09-06]
 	Updated security/sfs to 0.7.2nb6 [wiz 2006-09-06]
 	Updated misc/dnetc to 2.9008.492 [wiz 2006-09-06]
+	Updated converters/yencode to 0.4.6 [wiz 2006-09-06]
