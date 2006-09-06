@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/02 20:36:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/06 09:52:42 rillig Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_translate
@@ -45,21 +45,21 @@ include/rawdataset.h
 include/thinplatespline.h
 include/vrtdataset.h
 lib/libgdal.la
-man/man1/gdal-config.1.gz
-man/man1/gdal_contour.1.gz
-man/man1/gdal_merge.py.1.gz
-man/man1/gdal_translate.1.gz
-man/man1/gdal_utilities.1.gz
-man/man1/gdaladdo.1.gz
-man/man1/gdalinfo.1.gz
-man/man1/gdaltindex.1.gz
-man/man1/gdalwarp.1.gz
-man/man1/ogr2ogr.1.gz
-man/man1/ogr_utilities.1.gz
-man/man1/ogrinfo.1.gz
-man/man1/ogrtindex.1.gz
-man/man1/pct2rgb.py.1.gz
-man/man1/rgb2pct.py.1.gz
+man/man1/gdal-config.1
+man/man1/gdal_contour.1
+man/man1/gdal_merge.py.1
+man/man1/gdal_translate.1
+man/man1/gdal_utilities.1
+man/man1/gdaladdo.1
+man/man1/gdalinfo.1
+man/man1/gdaltindex.1
+man/man1/gdalwarp.1
+man/man1/ogr2ogr.1
+man/man1/ogr_utilities.1
+man/man1/ogrinfo.1
+man/man1/ogrtindex.1
+man/man1/pct2rgb.py.1
+man/man1/rgb2pct.py.1
 share/gdal/cubewerx_extra.wkt
 share/gdal/ecw_cs.dat
 share/gdal/ellipsoid.csv
