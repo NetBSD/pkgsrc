@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/03 05:59:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:55:50 taca Exp $
 bin/redcloth
 ${RUBY_SITELIBDIR}/redcloth.rb
 ${RUBY_DOCDIR}/redcloth/CHANGELOG
 ${RUBY_DOCDIR}/redcloth/README
 ${RUBY_DOCDIR}/redcloth/REFERENCE
 @dirrm ${RUBY_DOCDIR}/redcloth
-${RUBY_SITERIDIR}/RedCloth/cdesc-RedCloth.yaml
-${RUBY_SITERIDIR}/RedCloth/new-c.yaml
-${RUBY_SITERIDIR}/RedCloth/to_html-i.yaml
-@dirrm ${RUBY_SITERIDIR}/RedCloth

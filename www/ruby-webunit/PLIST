@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/28 05:51:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/07 15:56:40 taca Exp $
 ${RUBY_SITELIBDIR}/htmlrepair.rb
 ${RUBY_SITELIBDIR}/webunit.rb
 ${RUBY_SITELIBDIR}/webunit/assert.rb
@@ -21,9 +21,6 @@ ${RUBY_SITELIBDIR}/webunit/testcase.rb
 ${RUBY_SITELIBDIR}/webunit/utils.rb
 ${RUBY_SITELIBDIR}/webunit/webunit.rb
 ${RUBY_SITELIBDIR}/webunit/ui/cui/testrunner.rb
-@dirrm ${RUBY_SITELIBDIR}/webunit/ui/cui
-@dirrm ${RUBY_SITELIBDIR}/webunit/ui
-@dirrm ${RUBY_SITELIBDIR}/webunit
 ${RUBY_DOCDIR}/webunit/index-ja.rd
 ${RUBY_DOCDIR}/webunit/COPYING
 ${RUBY_DOCDIR}/webunit/TIPS-ja.html
@@ -36,7 +33,6 @@ ${RUBY_DOCDIR}/webunit/index-en.html
 ${RUBY_DOCDIR}/webunit/index-en.rd
 ${RUBY_DOCDIR}/webunit/index-ja.html
 ${RUBY_DOCDIR}/webunit/Makefile
-@dirrm ${RUBY_DOCDIR}/webunit
 ${RUBY_EXAMPLESDIR}/webunit/conv/test_digit_view.rb
 ${RUBY_EXAMPLESDIR}/webunit/conv/digit-0.rb
 ${RUBY_EXAMPLESDIR}/webunit/conv/digit-1.cgi
@@ -49,5 +45,9 @@ ${RUBY_EXAMPLESDIR}/webunit/conv/test_digit.rb
 ${RUBY_EXAMPLESDIR}/webunit/conv/test_digit_view-0.rb
 ${RUBY_EXAMPLESDIR}/webunit/conv/test_digit_view-1.rb
 ${RUBY_EXAMPLESDIR}/webunit/conv/digit-0.cgi
+@dirrm ${RUBY_SITELIBDIR}/webunit/ui/cui
+@dirrm ${RUBY_SITELIBDIR}/webunit/ui
+@dirrm ${RUBY_SITELIBDIR}/webunit
+@dirrm ${RUBY_DOCDIR}/webunit
 @dirrm ${RUBY_EXAMPLESDIR}/webunit/conv
 @dirrm ${RUBY_EXAMPLESDIR}/webunit
