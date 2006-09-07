@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.7 2006/09/07 13:09:50 rillig Exp $
+
+SunPro defines __STDC__ to 0 by default.
+
+--- include/cast_sbox.h.orig	2003-12-08 02:59:48.000000000 +0100
++++ include/cast_sbox.h	2006-09-07 15:03:47.830134796 +0200
+@@ -9,7 +9,7 @@
+  */
+ 
+ /* sigh */
+-#if __STDC__ /* || (__STDC__ == 0 && defined(__sun)) */
++#if __STDC__ || (__STDC__ == 0 && defined(__sun))
+ #define U(x) x##U
+ #define UL(x) x##UL
+ #else
