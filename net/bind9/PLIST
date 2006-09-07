@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/06/20 13:37:22 abs Exp $
+@comment $NetBSD: PLIST,v 1.18.2.1 2006/09/07 11:20:43 ghen Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -92,6 +92,7 @@ include/isc/eventclass.h
 include/isc/file.h
 include/isc/formatcheck.h
 include/isc/fsaccess.h
+include/isc/hash.h
 include/isc/heap.h
 include/isc/hex.h
 include/isc/hmacmd5.h

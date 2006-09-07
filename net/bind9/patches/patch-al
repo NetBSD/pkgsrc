@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2004/10/03 09:20:41 tron Exp $
+$NetBSD: patch-al,v 1.1.14.1 2006/09/07 11:20:43 ghen Exp $
 
---- lib/bind/port_after.h.in.orig	2003-06-27 05:51:35.000000000 +0200
-+++ lib/bind/port_after.h.in	2004-05-18 08:15:19.000000000 +0200
-@@ -361,7 +361,7 @@
+--- lib/bind/port_after.h.in.orig	2005-10-11 09:48:14.000000000 +0900
++++ lib/bind/port_after.h.in
+@@ -376,7 +376,7 @@ int setpassent(int stayopen);
  #define gettimeofday isc__gettimeofday
  #ifdef NEED_GETTIMEOFDAY
  int isc__gettimeofday(struct timeval *tvp, struct _TIMEZONE *tzp);
