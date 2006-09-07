@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/01/03 14:29:58 taca Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/09/07 15:40:00 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -38,18 +38,5 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 			RUBY_SHLIBMAJOR=${RUBY_SHLIBMAJOR:Q} \
 			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
 			RUBY_NAME=${RUBY_NAME:Q}
-
-# Common macros.
-.if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[0-9].*)
-PTHREAD_OPTS+=  native
-.include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=	--disable-pthread
-.else
-CONFIGURE_ARGS+=	--enable-pthread
-.endif
-.endif
-.endif
 
 .include "replace.mk"
