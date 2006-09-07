@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/07 17:13:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/07 17:19:41 obache Exp $
 #
 
 DISTNAME=		terminus-font-4.20
@@ -13,6 +13,9 @@ USE_TOOLS+=		perl bdftopcf gzip
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x11dir=${PREFIX}/lib/X11/fonts/misc
+
+BUILD_TARGET=		pcf
+INSTALL_TARGET=		install-pcf
 
 FONTS_DIRS.x11=		${PREFIX}/lib/X11/fonts/misc
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/misc

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/06 14:01:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2006/09/07 17:19:41 obache Exp $
 
 SHA1 (terminus-font-4.20.tar.gz) = f8215f8236e72423c4720956587cbda4eeea9176
 RMD160 (terminus-font-4.20.tar.gz) = f7e8a3d6990d036d00c748dbb5ba466e3694e708
 Size (terminus-font-4.20.tar.gz) = 201816 bytes
-SHA1 (patch-aa) = 24349912ec279f5551acfae8f4cf14bd0abecbad
