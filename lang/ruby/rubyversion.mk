@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.22 2006/09/03 02:53:13 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.23 2006/09/07 15:40:00 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -7,7 +7,10 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # current supported Ruby's version
-RUBY18_VERSION?=	1.8.4
+RUBY18_VERSION?=	1.8.5
+
+#
+RUBY18_PATCH_DATE=	20060906
 
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
 #	packages and user can define in mk.conf.  (1.6 or 1.8)
@@ -154,12 +157,17 @@ RUBY_DLEXT=	so
 .endif
 
 #
+# Dynamic PLIST directories
+#
+RUBY_DYNAMIC_DIRS?=	# empty
+
+#
 # source directory
 #
 RUBY_SRCDIR?=	${_PKGSRC_TOPDIR}/lang/${RUBY_BASE}
 
 #
-# common PATH
+# common paths
 #
 RUBY_LIBDIR?=		${PREFIX}/lib/ruby/${RUBY_VER_DIR}
 RUBY_ARCHLIBDIR?=	${RUBY_LIBDIR}/${RUBY_ARCH}
@@ -214,17 +222,59 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_DLEXT=${RUBY_DLEXT:Q} \
 			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",}
 
-.if !empty(RUBY_NOVERSION:M[nN][oO])
 #
-# Use Berkley DB unless a system has real ndbm(3).
+# make dynamic PLIST
 #
-.include "../../mk/dlopen.buildlink3.mk"
-.if !exists(/usr/include/ndbm.h)
-.include "../../mk/bdb.buildlink3.mk"
+.if !empty(RUBY_DYNAMIC_DIRS)
+
+RUBY_PLIST_DYNAMIC=	${WRKDIR}/PLIST.work
+
+.if !defined(PLIST_SRC)
+.  if exists(${PKGDIR}/PLIST.common)
+PLIST_SRC+=		${PKGDIR}/PLIST.common
+.  elif exists(${PKGDIR}/PLIST)
+PLIST_SRC+=		${PKGDIR}/PLIST
+.  endif
+
+PLIST_SRC+=		${RUBY_PLIST_DYNAMIC}
+
+.  if exists(${PKGDIR}/PLIST.common_end)
+PLIST_SRC+=		${PKGDIR}/PLIST.common_end
+.  endif
+
 .endif
+
+RUBY_PLIST_COMMENT_CMD= \
+	${ECHO} "@comment The following lines are automatically generated"
+RUBY_PLIST_FILES_CMD= ( cd ${PREFIX}; \
+	${FIND} ${RUBY_DYNAMIC_DIRS} \( -type f -o -type l \) -print ) | \
+	${SORT} -u
+RUBY_PLIST_DIRS_CMD= ( cd ${PREFIX}; \
+	${FIND} ${RUBY_DYNAMIC_DIRS} -type d -print ) | ${SORT} -ru | \
+	${SED} -e 's|^|@dirrm |'
+RUBY_GENERATE_PLIST =	( \
+	${RUBY_PLIST_COMMENT_CMD}; \
+	${RUBY_PLIST_FILES_CMD}; \
+	${RUBY_PLIST_DIRS_CMD} ) > ${RUBY_PLIST_DYNAMIC}
+.endif
+
+.if !empty(RUBY_NOVERSION:M[nN][oO])
+# Common macros.
+.if ${OPSYS} == "NetBSD"
+.if empty(OS_VERSION:M1.[0-9].*)
+PTHREAD_OPTS+=  native
 .include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--disable-pthread
+.else
+CONFIGURE_ARGS+=	--enable-pthread
+.endif
+.endif
+.endif
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .endif
 
 .endif # _RUBY_MK
