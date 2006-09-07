@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/04 17:20:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:53:48 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/GD.${RUBY_DLEXT}
 ${RUBY_EXAMPLESDIR}/gd/example.rb
 ${RUBY_EXAMPLESDIR}/gd/gdtestttf.png
 ${RUBY_EXAMPLESDIR}/gd/gdtestttf.rb
 ${RUBY_EXAMPLESDIR}/gd/webpng.rb
-@dirrm ${RUBY_EXAMPLESDIR}/gd
 ${RUBY_DOCDIR}/gd/INSTALL.en
 ${RUBY_DOCDIR}/gd/INSTALL.ja
 ${RUBY_DOCDIR}/gd/manual.html
 ${RUBY_DOCDIR}/gd/manual.rd
 ${RUBY_DOCDIR}/gd/manual_index.html
+@dirrm ${RUBY_EXAMPLESDIR}/gd
 @dirrm ${RUBY_DOCDIR}/gd

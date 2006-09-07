@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/07 16:11:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:52:17 taca Exp $
 bin/rake
 man/man1/rake.1
 ${RUBY_SITELIBDIR}/rake.rb
@@ -19,9 +19,6 @@ ${RUBY_SITELIBDIR}/rake/ruby182_test_unit_fix.rb
 ${RUBY_SITELIBDIR}/rake/runtest.rb
 ${RUBY_SITELIBDIR}/rake/tasklib.rb
 ${RUBY_SITELIBDIR}/rake/testtask.rb
-@dirrm ${RUBY_SITELIBDIR}/rake/loaders
-@dirrm ${RUBY_SITELIBDIR}/rake/contrib
-@dirrm ${RUBY_SITELIBDIR}/rake
 ${RUBY_DOCDIR}/rake/CHANGES
 ${RUBY_DOCDIR}/rake/README
 ${RUBY_DOCDIR}/rake/TODO
@@ -38,11 +35,14 @@ ${RUBY_DOCDIR}/rake/release_notes/rake-0.5.4.rdoc
 ${RUBY_DOCDIR}/rake/release_notes/rake-0.6.0.rdoc
 ${RUBY_DOCDIR}/rake/release_notes/rake-0.7.0.rdoc
 ${RUBY_DOCDIR}/rake/release_notes/rake-0.7.1.rdoc
-@dirrm ${RUBY_DOCDIR}/rake/release_notes
-@dirrm ${RUBY_DOCDIR}/rake
 ${RUBY_EXAMPLESDIR}/rake/Rakefile1
 ${RUBY_EXAMPLESDIR}/rake/Rakefile2
 ${RUBY_EXAMPLESDIR}/rake/a.c
 ${RUBY_EXAMPLESDIR}/rake/b.c
 ${RUBY_EXAMPLESDIR}/rake/main.c
+@dirrm ${RUBY_SITELIBDIR}/rake/loaders
+@dirrm ${RUBY_SITELIBDIR}/rake/contrib
+@dirrm ${RUBY_SITELIBDIR}/rake
+@dirrm ${RUBY_DOCDIR}/rake/release_notes
+@dirrm ${RUBY_DOCDIR}/rake
 @dirrm ${RUBY_EXAMPLESDIR}/rake

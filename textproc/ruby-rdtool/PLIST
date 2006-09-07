@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/03 05:21:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:55:50 taca Exp $
 bin/rd2
 bin/rdswap
 ${RUBY_SITELIBDIR}/rd/block-element.rb
@@ -33,9 +33,7 @@ ${RUBY_SITELIBDIR}/rd/search-file.rb
 ${RUBY_SITELIBDIR}/rd/tree.rb
 ${RUBY_SITELIBDIR}/rd/version.rb
 ${RUBY_SITELIBDIR}/rd/visitor.rb
-@dirrm ${RUBY_SITELIBDIR}/rd
 ${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
-@dirrm ${RUBY_EXAMPLESDIR}/rd
 ${RUBY_DOCDIR}/rd/README.html
 ${RUBY_DOCDIR}/rd/README.html.ja
 ${RUBY_DOCDIR}/rd/README.rd
@@ -44,4 +42,6 @@ ${RUBY_DOCDIR}/rd/rd-draft.html
 ${RUBY_DOCDIR}/rd/rd-draft.html.ja
 ${RUBY_DOCDIR}/rd/rd-draft.rd
 ${RUBY_DOCDIR}/rd/rd-draft.rd.ja
+@dirrm ${RUBY_SITELIBDIR}/rd
+@dirrm ${RUBY_EXAMPLESDIR}/rd
 @dirrm ${RUBY_DOCDIR}/rd

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/12 15:23:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:51:47 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/mysql.${RUBY_DLEXT}
 ${RUBY_DOCDIR}/mysql/README.html
 ${RUBY_DOCDIR}/mysql/README_ja.html
 ${RUBY_DOCDIR}/mysql/tommy.css
-@dirrm ${RUBY_DOCDIR}/mysql
 ${RUBY_EXAMPLESDIR}/mysql/test.rb
 @dirrm ${RUBY_EXAMPLESDIR}/mysql
+@dirrm ${RUBY_DOCDIR}/mysql
