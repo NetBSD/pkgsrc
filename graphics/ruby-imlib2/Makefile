@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/07 16:27:52 taca Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -12,11 +12,11 @@ COMMENT=	Imlib2 bindings for Ruby
 
 VER=		0.5.2
 
-PLIST_SRC=		${WRKDIR}/PLIST
 REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 RUBY_HAS_ARCHLIB=	yes
 RUBY_REQD=		1.8.0
 USE_RUBY_EXTCONF=	yes
+RUBY_DYNAMIC_DIRS=	${RUBY_DOCDIR:S,${PREFIX}/,,}/imlib2
 
 INSTALL_TARGET=	site-install
 
@@ -38,15 +38,6 @@ post-install:
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/imlib2/api
 	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${RUBY_DOCDIR}/imlib2/api
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	cd ${RUBY_DOCDIR} && \
-	${FIND} imlib2 \! -type d -print | ${SORT} | \
-	while read FN; do \
-	  ${ECHO} "\$${RUBY_DOCDIR}/$${FN}"; \
-	done >> ${PLIST_SRC} && \
-	${FIND} -d imlib2 -type d -print | \
-	while read DIR; do \
-	  ${ECHO} "@dirrm \$${RUBY_DOCDIR}/$${DIR}"; \
-	done >> ${PLIST_SRC}
+	${RUBY_GENERATE_PLIST}
 
 .include "../../mk/bsd.pkg.mk"
