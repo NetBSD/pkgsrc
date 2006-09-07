@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/07 15:55:09 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/tcpwrap.${RUBY_DLEXT}
 ${RUBY_EXAMPLESDIR}/tcpwrap/echod.rb
-@dirrm ${RUBY_EXAMPLESDIR}/tcpwrap
 ${RUBY_DOCDIR}/tcpwrap/README.en
 ${RUBY_DOCDIR}/tcpwrap/tcpwrap.html.en
 ${RUBY_DOCDIR}/tcpwrap/ja/README.ja
 ${RUBY_DOCDIR}/tcpwrap/ja/tcpwrap.html.ja
+@dirrm ${RUBY_EXAMPLESDIR}/tcpwrap
 @dirrm ${RUBY_DOCDIR}/tcpwrap/ja
 @dirrm ${RUBY_DOCDIR}/tcpwrap

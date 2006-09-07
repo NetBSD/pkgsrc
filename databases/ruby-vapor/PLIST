@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/22 21:02:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:52:03 taca Exp $
 bin/vaporadmin
 ${RUBY_SITELIBDIR}/vapor.rb
 ${RUBY_SITELIBDIR}/vapor/persistencemgr.rb
@@ -12,17 +12,13 @@ ${RUBY_SITELIBDIR}/vapor/exceptions.rb
 ${RUBY_SITELIBDIR}/vapor/utils.rb
 ${RUBY_SITELIBDIR}/vapor/tuplemgr.rb
 ${RUBY_SITELIBDIR}/vapor/persistable.rb
-@dirrm ${RUBY_SITELIBDIR}/vapor
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/BackendInconsistentError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotDeletableError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotDeletableError.src/M000003.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotDeletableError.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotKnownError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotKnownError.src/M000001.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotKnownError.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/CommitError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/CommitError.src/M000002.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/CommitError.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/DeletedObjectError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/DuplicateClassError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/InvalidMetadataError.html
@@ -40,7 +36,6 @@ ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/UniquenessError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/UnknownSuperclassError.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/VaporException.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/VaporTypeError.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src/M000047.html
@@ -49,7 +44,6 @@ ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src/M000049.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src/M000050.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src/M000051.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src/M000052.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src/M000004.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src/M000005.html
@@ -62,7 +56,6 @@ ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src/M000011.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src/M000012.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src/M000013.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src/M000014.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src/M000025.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src/M000026.html
@@ -75,7 +68,6 @@ ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src/M000032.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src/M000033.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src/M000034.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src/M000035.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/QueryParser.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src/M000038.html
@@ -87,7 +79,6 @@ ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src/M000043.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src/M000044.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src/M000045.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src/M000046.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src/M000016.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src/M000017.html
@@ -97,28 +88,21 @@ ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src/M000021.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src/M000022.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src/M000023.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src/M000024.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/TransactionLog.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/TransactionLog.src/M000036.html
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor/TransactionLog.src/M000037.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/TransactionLog.src
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor
 ${RUBY_DOCDIR}/vapor/api/classes/Vapor.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/classes
 ${RUBY_DOCDIR}/vapor/api/created.rid
 ${RUBY_DOCDIR}/vapor/api/files/vapor/exceptions_rb.html
 ${RUBY_DOCDIR}/vapor/api/files/vapor/persistable_rb.html
 ${RUBY_DOCDIR}/vapor/api/files/vapor/persistencemgr_rb.html
 ${RUBY_DOCDIR}/vapor/api/files/vapor/repositorymgr_rb.html
 ${RUBY_DOCDIR}/vapor/api/files/vapor/transaction_rb.html
-@dirrm ${RUBY_DOCDIR}/vapor/api/files/vapor
-@dirrm ${RUBY_DOCDIR}/vapor/api/files
 ${RUBY_DOCDIR}/vapor/api/fr_class_index.html
 ${RUBY_DOCDIR}/vapor/api/fr_file_index.html
 ${RUBY_DOCDIR}/vapor/api/fr_method_index.html
 ${RUBY_DOCDIR}/vapor/api/index.html
 ${RUBY_DOCDIR}/vapor/api/rdoc-style.css
-@dirrm ${RUBY_DOCDIR}/vapor/api
 ${RUBY_DOCDIR}/vapor/example.html
 ${RUBY_DOCDIR}/vapor/examples/university/README
 ${RUBY_DOCDIR}/vapor/examples/university/createperson
@@ -127,9 +111,25 @@ ${RUBY_DOCDIR}/vapor/examples/university/employment
 ${RUBY_DOCDIR}/vapor/examples/university/enroll
 ${RUBY_DOCDIR}/vapor/examples/university/university.rb
 ${RUBY_DOCDIR}/vapor/examples/university/university.xml
-@dirrm ${RUBY_DOCDIR}/vapor/examples/university
-@dirrm ${RUBY_DOCDIR}/vapor/examples
 ${RUBY_DOCDIR}/vapor/metadata-example.xml
 ${RUBY_DOCDIR}/vapor/vapor.dtd
-@dirrm ${RUBY_DOCDIR}/vapor
 ${RUBY_EXAMPLESDIR}/vapor
+@dirrm ${RUBY_SITELIBDIR}/vapor
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotDeletableError.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/ClassNotKnownError.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions/CommitError.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Exceptions
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Extent.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Persistable.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/PersistenceManager.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/RepositoryManager.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/Transaction.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor/TransactionLog.src
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes/Vapor
+@dirrm ${RUBY_DOCDIR}/vapor/api/classes
+@dirrm ${RUBY_DOCDIR}/vapor/api/files/vapor
+@dirrm ${RUBY_DOCDIR}/vapor/api/files
+@dirrm ${RUBY_DOCDIR}/vapor/api
+@dirrm ${RUBY_DOCDIR}/vapor/examples/university
+@dirrm ${RUBY_DOCDIR}/vapor/examples
+@dirrm ${RUBY_DOCDIR}/vapor
