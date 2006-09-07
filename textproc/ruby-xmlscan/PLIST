@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/30 15:40:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/07 15:55:51 taca Exp $
 ${RUBY_SITELIBDIR}/xmlscan/encoding.rb
 ${RUBY_SITELIBDIR}/xmlscan/htmlscan.rb
 ${RUBY_SITELIBDIR}/xmlscan/namespace.rb
@@ -7,7 +7,6 @@ ${RUBY_SITELIBDIR}/xmlscan/scanner.rb
 ${RUBY_SITELIBDIR}/xmlscan/version.rb
 ${RUBY_SITELIBDIR}/xmlscan/visitor.rb
 ${RUBY_SITELIBDIR}/xmlscan/xmlchar.rb
-@dirrm ${RUBY_SITELIBDIR}/xmlscan
 ${RUBY_DOCDIR}/xmlscan/ChangeLog
 ${RUBY_DOCDIR}/xmlscan/README
 ${RUBY_DOCDIR}/xmlscan/THANKS
@@ -21,9 +20,6 @@ ${RUBY_DOCDIR}/xmlscan/ja/conformance.ja.html
 ${RUBY_DOCDIR}/xmlscan/ja/conformance.ja.rd
 ${RUBY_DOCDIR}/xmlscan/ja/manual.ja.html
 ${RUBY_DOCDIR}/xmlscan/ja/manual.ja.rd
-@dirrm ${RUBY_DOCDIR}/xmlscan/en
-@dirrm ${RUBY_DOCDIR}/xmlscan/ja
-@dirrm ${RUBY_DOCDIR}/xmlscan
 ${RUBY_EXAMPLESDIR}/xmlscan/chibixml.rb
 ${RUBY_EXAMPLESDIR}/xmlscan/getxmlchar.rb
 ${RUBY_EXAMPLESDIR}/xmlscan/rexml.rb
@@ -38,6 +34,10 @@ ${RUBY_EXAMPLESDIR}/xmlscan/xmlbench/parser/xmlscan-0.0.10.rb
 ${RUBY_EXAMPLESDIR}/xmlscan/xmlbench/parser/xmlscan-chibixml.rb
 ${RUBY_EXAMPLESDIR}/xmlscan/xmlbench/parser/xmlscan-rexml.rb
 ${RUBY_EXAMPLESDIR}/xmlscan/xmlbench/parser/xmlscan.rb
+@dirrm ${RUBY_SITELIBDIR}/xmlscan
+@dirrm ${RUBY_DOCDIR}/xmlscan/en
+@dirrm ${RUBY_DOCDIR}/xmlscan/ja
+@dirrm ${RUBY_DOCDIR}/xmlscan
 @dirrm ${RUBY_EXAMPLESDIR}/xmlscan/xmlbench/parser
 @dirrm ${RUBY_EXAMPLESDIR}/xmlscan/xmlbench
 @dirrm ${RUBY_EXAMPLESDIR}/xmlscan

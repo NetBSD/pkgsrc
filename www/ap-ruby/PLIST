@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/11/28 15:43:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/09/07 15:56:40 taca Exp $
 lib/httpd/mod_ruby.so
 ${RUBY_SITELIBDIR}/apache/erb-run.rb
 ${RUBY_SITELIBDIR}/apache/eruby-debug.rb
@@ -8,7 +8,6 @@ ${RUBY_SITELIBDIR}/apache/registry.rb
 ${RUBY_SITELIBDIR}/apache/query.rb
 ${RUBY_SITELIBDIR}/apache/ruby-debug.rb
 ${RUBY_SITELIBDIR}/apache/ruby-run.rb
-@dirrm ${RUBY_SITELIBDIR}/apache
 ${RUBY_SITELIBDIR}/auto-reload.rb
 ${RUBY_DOCDIR}/mod_ruby/ChangeLog
 ${RUBY_DOCDIR}/mod_ruby/NOTICE
@@ -31,11 +30,12 @@ ${RUBY_DOCDIR}/mod_ruby/html/index.en.html
 ${RUBY_DOCDIR}/mod_ruby/html/index.ja.jis.html
 ${RUBY_DOCDIR}/mod_ruby/html/install.en.html
 ${RUBY_DOCDIR}/mod_ruby/html/install.ja.jis.html
-@dirrm ${RUBY_DOCDIR}/mod_ruby/html
 ${RUBY_DOCDIR}/mod_ruby/index.en.rd
 ${RUBY_DOCDIR}/mod_ruby/index.ja.euc.rd
 ${RUBY_DOCDIR}/mod_ruby/install.en.rd
 ${RUBY_DOCDIR}/mod_ruby/install.ja.euc.rd
-@dirrm ${RUBY_DOCDIR}/mod_ruby
 ${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf
+@dirrm ${RUBY_SITELIBDIR}/apache
+@dirrm ${RUBY_DOCDIR}/mod_ruby/html
+@dirrm ${RUBY_DOCDIR}/mod_ruby
 @dirrm ${RUBY_EXAMPLESDIR}/mod_ruby

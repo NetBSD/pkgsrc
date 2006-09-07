@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/28 05:37:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/07 15:56:40 taca Exp $
 ${RUBY_SITELIBDIR}/Borges.rb
 ${RUBY_SITELIBDIR}/Borges/CGIDRbClient.rb
 ${RUBY_SITELIBDIR}/Borges/Callback/ActionCallback.rb
@@ -6,7 +6,6 @@ ${RUBY_SITELIBDIR}/Borges/Callback/Callback.rb
 ${RUBY_SITELIBDIR}/Borges/Callback/CallbackStore.rb
 ${RUBY_SITELIBDIR}/Borges/Callback/DispatchCallback.rb
 ${RUBY_SITELIBDIR}/Borges/Callback/ValueCallback.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Callback
 ${RUBY_SITELIBDIR}/Borges/Component/ApplicationEditor.rb
 ${RUBY_SITELIBDIR}/Borges/Component/ApplicationList.rb
 ${RUBY_SITELIBDIR}/Borges/Component/BatchedList.rb
@@ -19,7 +18,6 @@ ${RUBY_SITELIBDIR}/Borges/Component/DateTable.rb
 ${RUBY_SITELIBDIR}/Borges/Component/Dialog/Dialog.rb
 ${RUBY_SITELIBDIR}/Borges/Component/Dialog/InputDialog.rb
 ${RUBY_SITELIBDIR}/Borges/Component/Dialog/RadioDialog.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Component/Dialog
 ${RUBY_SITELIBDIR}/Borges/Component/ExampleBrowser.rb
 ${RUBY_SITELIBDIR}/Borges/Component/GeeWeb.rb
 ${RUBY_SITELIBDIR}/Borges/Component/NavigationBar.rb
@@ -31,48 +29,39 @@ ${RUBY_SITELIBDIR}/Borges/Component/TaskFrame.rb
 ${RUBY_SITELIBDIR}/Borges/Component/ToolFrame.rb
 ${RUBY_SITELIBDIR}/Borges/Component/Tutorial.rb
 ${RUBY_SITELIBDIR}/Borges/Component/Window.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Component
 ${RUBY_SITELIBDIR}/Borges/Controller/Component.rb
 ${RUBY_SITELIBDIR}/Borges/Controller/Controller.rb
 ${RUBY_SITELIBDIR}/Borges/Controller/Task.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Controller
 ${RUBY_SITELIBDIR}/Borges/DRb.rb
 ${RUBY_SITELIBDIR}/Borges/DRbServer.rb
 ${RUBY_SITELIBDIR}/Borges/ErrorPage/EmailErrorPage.rb
 ${RUBY_SITELIBDIR}/Borges/ErrorPage/ErrorPage.rb
 ${RUBY_SITELIBDIR}/Borges/ErrorPage/WalkbackPage.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/ErrorPage
 ${RUBY_SITELIBDIR}/Borges/Extensions/Array.rb
 ${RUBY_SITELIBDIR}/Borges/Extensions/Numeric.rb
 ${RUBY_SITELIBDIR}/Borges/Extensions/Object.rb
 ${RUBY_SITELIBDIR}/Borges/Extensions/Proc.rb
 ${RUBY_SITELIBDIR}/Borges/Extensions/String.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Extensions
 ${RUBY_SITELIBDIR}/Borges/Filter/BasicAuthentication.rb
 ${RUBY_SITELIBDIR}/Borges/Filter/Filter.rb
 ${RUBY_SITELIBDIR}/Borges/Filter/Once.rb
 ${RUBY_SITELIBDIR}/Borges/Filter/Transaction.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Filter
 ${RUBY_SITELIBDIR}/Borges/HTML/HtmlAttributes.rb
 ${RUBY_SITELIBDIR}/Borges/HTML/HtmlBuilder.rb
 ${RUBY_SITELIBDIR}/Borges/HTML/HtmlElement.rb
 ${RUBY_SITELIBDIR}/Borges/HTML/HtmlRenderer.rb
 ${RUBY_SITELIBDIR}/Borges/HTML/PluggableSelectBox.rb
 ${RUBY_SITELIBDIR}/Borges/HTML/RenderingContext.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/HTML
 ${RUBY_SITELIBDIR}/Borges/Preference/BooleanPreference.rb
 ${RUBY_SITELIBDIR}/Borges/Preference/ListPreference.rb
 ${RUBY_SITELIBDIR}/Borges/Preference/NumberPreference.rb
 ${RUBY_SITELIBDIR}/Borges/Preference/Preference.rb
 ${RUBY_SITELIBDIR}/Borges/Preference/Preferences.rb
 ${RUBY_SITELIBDIR}/Borges/Preference/StringPreference.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Preference
 ${RUBY_SITELIBDIR}/Borges/Profile/HTML.rb
 ${RUBY_SITELIBDIR}/Borges/Profile/Profile.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Profile
 ${RUBY_SITELIBDIR}/Borges/Report/ReportColumn.rb
 ${RUBY_SITELIBDIR}/Borges/Report/TableReport.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Report
 ${RUBY_SITELIBDIR}/Borges/RequestHandler/Application.rb
 ${RUBY_SITELIBDIR}/Borges/RequestHandler/Dispatcher.rb
 ${RUBY_SITELIBDIR}/Borges/RequestHandler/DocumentHandler.rb
@@ -80,20 +69,16 @@ ${RUBY_SITELIBDIR}/Borges/RequestHandler/NotFoundHandler.rb
 ${RUBY_SITELIBDIR}/Borges/RequestHandler/Registry.rb
 ${RUBY_SITELIBDIR}/Borges/RequestHandler/RequestHandler.rb
 ${RUBY_SITELIBDIR}/Borges/RequestHandler/Session.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/RequestHandler
 ${RUBY_SITELIBDIR}/Borges/Response/BasicAuthResponse.rb
 ${RUBY_SITELIBDIR}/Borges/Response/GenericResponse.rb
 ${RUBY_SITELIBDIR}/Borges/Response/HtmlResponse.rb
 ${RUBY_SITELIBDIR}/Borges/Response/NotFoundResponse.rb
 ${RUBY_SITELIBDIR}/Borges/Response/RedirectResponse.rb
 ${RUBY_SITELIBDIR}/Borges/Response/RefreshResponse.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Response
 ${RUBY_SITELIBDIR}/Borges/Session/AuthenticatedSession.rb
 ${RUBY_SITELIBDIR}/Borges/Session/ControllerSession.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Session
 ${RUBY_SITELIBDIR}/Borges/Task/PluggableTask.rb
 ${RUBY_SITELIBDIR}/Borges/Task/Tool.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Task
 ${RUBY_SITELIBDIR}/Borges/Test.rb
 ${RUBY_SITELIBDIR}/Borges/Test/CalendarTest.rb
 ${RUBY_SITELIBDIR}/Borges/Test/ClosureTest.rb
@@ -107,7 +92,6 @@ ${RUBY_SITELIBDIR}/Borges/Test/ParentTest.rb
 ${RUBY_SITELIBDIR}/Borges/Test/TestTabs.rb
 ${RUBY_SITELIBDIR}/Borges/Test/TransactionTest.rb
 ${RUBY_SITELIBDIR}/Borges/Test/UploadTest.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Test
 ${RUBY_SITELIBDIR}/Borges/TestCase.rb
 ${RUBY_SITELIBDIR}/Borges/TestCase/ActionCallbackTest.rb
 ${RUBY_SITELIBDIR}/Borges/TestCase/CallbackStoreTest.rb
@@ -123,9 +107,7 @@ ${RUBY_SITELIBDIR}/Borges/TestCase/LRUCacheTest.rb
 ${RUBY_SITELIBDIR}/Borges/TestCase/StateRegistryTest.rb
 ${RUBY_SITELIBDIR}/Borges/TestCase/Util/CallbackStore.rb
 ${RUBY_SITELIBDIR}/Borges/TestCase/Util/HtmlDocument.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/TestCase/Util
 ${RUBY_SITELIBDIR}/Borges/TestCase/ValueCallbackTest.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/TestCase
 ${RUBY_SITELIBDIR}/Borges/Utilities/ExternalID.rb
 ${RUBY_SITELIBDIR}/Borges/Utilities/LRUCache.rb
 ${RUBY_SITELIBDIR}/Borges/Utilities/RenderNotification.rb
@@ -135,30 +117,24 @@ ${RUBY_SITELIBDIR}/Borges/Utilities/SimulatedRequestNotification.rb
 ${RUBY_SITELIBDIR}/Borges/Utilities/StateHolder.rb
 ${RUBY_SITELIBDIR}/Borges/Utilities/StateRegistry.rb
 ${RUBY_SITELIBDIR}/Borges/Utilities/WeakIdentityKeyHash.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges/Utilities
 ${RUBY_SITELIBDIR}/Borges/WEBrick.rb
-@dirrm ${RUBY_SITELIBDIR}/Borges
 ${RUBY_DOCDIR}/Borges/INSTALL
 ${RUBY_DOCDIR}/Borges/LICENSE
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ActionCallbackTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ActionCallbackTest.src/M000021.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ActionCallbackTest.src/M000022.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ActionCallbackTest.src/M000023.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ActionCallbackTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Array.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Array.src/M000065.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Array.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ActionCallback.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ActionCallback.src/M000724.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ActionCallback.src/M000725.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ActionCallback.src/M000726.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ActionCallback.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Application.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Application.src/M000359.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Application.src/M000360.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Application.src/M000361.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Application.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src/M000466.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src/M000467.html
@@ -166,7 +142,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src/M000468.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src/M000469.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src/M000470.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src/M000471.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src/M000280.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src/M000281.html
@@ -176,19 +151,15 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src/M000284.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src/M000285.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src/M000286.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src/M000287.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/AuthenticatedSession.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/AuthenticatedSession.src/M000375.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/AuthenticatedSession.src/M000376.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/AuthenticatedSession.src/M000377.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/AuthenticatedSession.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthResponse.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthResponse.src/M000491.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthResponse.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthentication.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthentication.src/M000464.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthentication.src/M000465.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthentication.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src/M000264.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src/M000265.html
@@ -200,24 +171,19 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src/M000270.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src/M000271.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src/M000272.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src/M000273.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BigBatchedList.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BigBatchedList.src/M000461.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BigBatchedList.src/M000462.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BigBatchedList.src/M000463.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BigBatchedList.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BooleanPreference.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BooleanPreference.src/M000671.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BooleanPreference.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CGIDRbClient.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CGIDRbClient.src/M000210.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CGIDRbClient.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.src/M000274.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.src/M000275.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.src/M000276.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.src/M000277.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackNotFound.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src/M000424.html
@@ -230,7 +196,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src/M000430.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src/M000431.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src/M000432.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src/M000433.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src/M000348.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src/M000349.html
@@ -243,7 +208,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src/M000355.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src/M000356.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src/M000357.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src/M000358.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src/M000362.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src/M000363.html
@@ -254,7 +218,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src/M000367.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src/M000368.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src/M000369.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src/M000370.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src/M000528.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src/M000529.html
@@ -281,7 +244,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src/M000549.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src/M000550.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src/M000551.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src/M000552.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src/M000402.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src/M000403.html
@@ -290,23 +252,19 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src/M000405.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src/M000406.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src/M000407.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src/M000408.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.src/M000434.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.src/M000435.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.src/M000436.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.src/M000437.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRb.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRb.src/M000212.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRb.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src/M000596.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src/M000597.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src/M000598.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src/M000599.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src/M000600.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src/M000444.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src/M000445.html
@@ -321,7 +279,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src/M000453.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src/M000454.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src/M000455.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src/M000456.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src/M000553.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src/M000554.html
@@ -330,7 +287,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src/M000556.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src/M000557.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src/M000558.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src/M000559.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src/M000658.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src/M000659.html
@@ -345,7 +301,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src/M000667.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src/M000668.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src/M000669.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src/M000670.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src/M000474.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src/M000475.html
@@ -354,11 +309,9 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src/M000477.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src/M000478.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src/M000479.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src/M000480.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DispatchCallback.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DispatchCallback.src/M000278.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DispatchCallback.src/M000279.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DispatchCallback.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src/M000649.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src/M000650.html
@@ -368,14 +321,12 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src/M000653.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src/M000654.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src/M000655.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src/M000656.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src/M000601.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src/M000602.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src/M000603.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src/M000604.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src/M000605.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src/M000679.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src/M000680.html
@@ -386,7 +337,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src/M000684.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src/M000685.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src/M000686.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src/M000687.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src/M000332.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src/M000333.html
@@ -398,7 +348,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src/M000338.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src/M000339.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src/M000340.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src/M000341.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src/M000507.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src/M000508.html
@@ -408,13 +357,10 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src/M000511.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src/M000512.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src/M000513.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src/M000514.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExternalID.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExternalID.src/M000211.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExternalID.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Filter.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Filter.src/M000516.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Filter.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src/M000493.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src/M000494.html
@@ -430,17 +376,14 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src/M000503.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src/M000504.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src/M000505.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src/M000506.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GenericResponse.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GenericResponse.src/M000584.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GenericResponse.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src/M000636.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src/M000637.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src/M000638.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src/M000639.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src/M000640.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src/M000288.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src/M000289.html
@@ -479,12 +422,10 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src/M000321.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src/M000322.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src/M000323.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src/M000324.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlElement.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlElement.src/M000646.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlElement.src/M000647.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlElement.src/M000648.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlElement.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src/M000688.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src/M000689.html
@@ -520,7 +461,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src/M000718.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src/M000719.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src/M000720.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src/M000721.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src/M000608.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src/M000609.html
@@ -532,43 +472,34 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src/M000614.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src/M000615.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src/M000616.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src/M000617.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src/M000641.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src/M000642.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src/M000643.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src/M000644.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src/M000645.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.src/M000457.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.src/M000458.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.src/M000459.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.src/M000460.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ListPreference.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ListPreference.src/M000472.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ListPreference.src/M000473.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ListPreference.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.src/M000325.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.src/M000326.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.src/M000327.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.src/M000328.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundHandler.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundHandler.src/M000438.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundHandler.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundResponse.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundResponse.src/M000440.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundResponse.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NumberPreference.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NumberPreference.src/M000263.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NumberPreference.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Once.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Once.src/M000441.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Once.src/M000442.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Once.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src/M000342.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src/M000343.html
@@ -576,33 +507,25 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src/M000344.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src/M000345.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src/M000346.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src/M000347.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableSelectBox.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableSelectBox.src/M000606.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableSelectBox.src/M000607.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableSelectBox.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableTask.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableTask.src/M000722.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableTask.src/M000723.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableTask.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preference.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preference.src/M000378.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preference.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preferences.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preferences.src/M000672.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preferences.src/M000673.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preferences.src/M000674.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preferences.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RadioDialog.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RadioDialog.src/M000400.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RadioDialog.src/M000401.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RadioDialog.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RedirectResponse.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RedirectResponse.src/M000481.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RedirectResponse.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RefreshResponse.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RefreshResponse.src/M000439.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RefreshResponse.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src/M000585.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src/M000586.html
@@ -615,15 +538,12 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src/M000592.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src/M000593.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src/M000594.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src/M000595.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RenderNotification.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RenderingContext.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RenderingContext.src/M000443.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RenderingContext.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Report.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Report.src/M000261.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Report.src/M000262.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Report.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src/M000560.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src/M000561.html
@@ -646,21 +566,17 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src/M000577.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src/M000578.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src/M000579.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src/M000580.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Request.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Request.src/M000731.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Request.src/M000732.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Request.src/M000733.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Request.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RequestHandler.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RequestHandler.src/M000515.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RequestHandler.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.src/M000675.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.src/M000676.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.src/M000677.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.src/M000678.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src/M000379.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src/M000380.html
@@ -681,7 +597,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src/M000394.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src/M000395.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src/M000396.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src/M000397.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src/M000218.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src/M000219.html
@@ -726,21 +641,17 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src/M000257.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src/M000258.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src/M000259.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src/M000260.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SimulatedRequestNotification.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateHolder.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateHolder.src/M000398.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateHolder.src/M000399.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateHolder.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.src/M000371.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.src/M000372.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.src/M000373.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.src/M000374.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StringPreference.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StringPreference.src/M000492.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StringPreference.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src/M000482.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src/M000483.html
@@ -748,7 +659,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src/M000484.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src/M000485.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src/M000486.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src/M000487.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src/M000618.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src/M000619.html
@@ -768,20 +678,16 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src/M000632.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src/M000633.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src/M000634.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src/M000635.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Task.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Task.src/M000657.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Task.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TaskFrame.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TaskFrame.src/M000420.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TaskFrame.src/M000421.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TaskFrame.src/M000422.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TaskFrame.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tool.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tool.src/M000581.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tool.src/M000582.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tool.src/M000583.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tool.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src/M000517.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src/M000518.html
@@ -794,12 +700,10 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src/M000524.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src/M000525.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src/M000526.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src/M000527.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Transaction.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Transaction.src/M000329.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Transaction.src/M000330.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Transaction.src/M000331.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Transaction.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src/M000409.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src/M000410.html
@@ -812,34 +716,27 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src/M000416.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src/M000417.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src/M000418.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src/M000419.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ValueCallback.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ValueCallback.src/M000488.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ValueCallback.src/M000489.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ValueCallback.src/M000490.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ValueCallback.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.src/M000213.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.src/M000214.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.src/M000216.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.src/M000217.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WalkbackPage.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WalkbackPage.src/M000423.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WalkbackPage.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.src/M000727.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.src/M000728.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.src/M000729.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.src/M000730.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.src
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.src/M000140.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.src/M000141.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.src/M000142.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.src/M000143.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src/M000066.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src/M000067.html
@@ -855,19 +752,16 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src/M000076.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src/M000077.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src/M000078.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src/M000079.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src/M000009.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src/M000010.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src/M000011.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src/M000012.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src/M000013.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ClosureTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ClosureTest.src/M000018.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ClosureTest.src/M000019.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ClosureTest.src/M000020.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ClosureTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src/M000176.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src/M000177.html
@@ -876,23 +770,17 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src/M000179.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src/M000180.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src/M000181.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src/M000182.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/DispatchCallbackTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/DispatchCallbackTest.src/M000195.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/DispatchCallbackTest.src/M000196.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/DispatchCallbackTest.src/M000197.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/DispatchCallbackTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/EncodingTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/EncodingTest.src/M000174.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/EncodingTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ErrorTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ErrorTest.src/M000082.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ErrorTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest.src/M000008.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest/ExceptionTestException.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src/M000183.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src/M000184.html
@@ -900,7 +788,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src/M000185.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src/M000186.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src/M000187.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src/M000188.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src/M000026.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src/M000027.html
@@ -938,12 +825,10 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src/M000058.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src/M000059.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src/M000060.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src/M000061.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlElmentTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlElmentTest.src/M000062.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlElmentTest.src/M000063.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlElmentTest.src/M000064.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlElmentTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src/M000130.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src/M000131.html
@@ -955,7 +840,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src/M000136.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src/M000137.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src/M000138.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src/M000139.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src/M000083.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src/M000084.html
@@ -1004,7 +888,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src/M000126.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src/M000127.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src/M000128.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src/M000129.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src/M000153.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src/M000154.html
@@ -1016,49 +899,37 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src/M000159.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src/M000160.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src/M000161.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src/M000162.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/InputTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/InputTest.src/M000148.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/InputTest.src/M000149.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/InputTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.src/M000189.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.src/M000190.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.src/M000191.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.src/M000192.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Numeric.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Numeric.src/M000146.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Numeric.src/M000147.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Numeric.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/NumericTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/NumericTest.src/M000024.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/NumericTest.src/M000025.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/NumericTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Object.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Object.src/M000172.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Object.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/OnceTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/OnceTest.src/M000166.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/OnceTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ParentTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ParentTest.src/M000150.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ParentTest.src/M000151.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ParentTest.src/M000152.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ParentTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Print.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Print.src/M000199.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Print.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Proc.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Proc.src/M000080.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Proc.src/M000081.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Proc.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler.src/M000173.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler__.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler__.src/M000198.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler__.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src/M000001.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src/M000002.html
@@ -1067,35 +938,27 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src/M000004.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src/M000005.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src/M000006.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src/M000007.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/String.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/String.src/M000193.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/String.src/M000194.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/String.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StringTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/StringTest.src/M000163.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/StringTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/TestTabs.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/TestTabs.src/M000144.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/TestTabs.src/M000145.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/TestTabs.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/TransactionTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/TransactionTest.src/M000175.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/TransactionTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/UploadTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/UploadTest.src/M000167.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/UploadTest.src/M000168.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/UploadTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.src/M000014.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.src/M000015.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.src/M000016.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.src/M000017.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueHolder.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueHolder.src/M000164.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueHolder.src/M000165.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueHolder.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src/M000200.html
@@ -1105,21 +968,15 @@ ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src/M000203.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src/M000204.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src/M000205.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src/M000206.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key/IdentityKeyHash.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key/IdentityKeyHash.src/M000207.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key/IdentityKeyHash.src/M000208.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key/IdentityKeyHash.src/M000209.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key/IdentityKeyHash.src
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key
 ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/RefError.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak
 ${RUBY_DOCDIR}/Borges/RDoc/classes/req.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/req.src/M000169.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/req.src/M000170.html
 ${RUBY_DOCDIR}/Borges/RDoc/classes/req.src/M000171.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/req.src
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes
 ${RUBY_DOCDIR}/Borges/RDoc/created.rid
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/CGIDRbClient_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback/ActionCallback_rb.html
@@ -1127,7 +984,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback/CallbackStore_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback/Callback_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback/DispatchCallback_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback/ValueCallback_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/ApplicationEditor_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/ApplicationList_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/BatchedList_rb.html
@@ -1140,7 +996,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/DateTable_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Dialog/Dialog_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Dialog/InputDialog_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Dialog/RadioDialog_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Dialog
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/ExampleBrowser_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/GeeWeb_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/NavigationBar_rb.html
@@ -1152,48 +1007,39 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/TaskFrame_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/ToolFrame_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Tutorial_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Window_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Controller/Component_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Controller/Controller_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Controller/Task_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Controller
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/DRbServer_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/DRb_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/ErrorPage/EmailErrorPage_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/ErrorPage/ErrorPage_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/ErrorPage/WalkbackPage_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/ErrorPage
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions/Array_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions/Numeric_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions/Object_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions/Proc_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions/String_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Filter/BasicAuthentication_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Filter/Filter_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Filter/Once_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Filter/Transaction_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Filter
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML/HtmlAttributes_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML/HtmlBuilder_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML/HtmlElement_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML/HtmlRenderer_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML/PluggableSelectBox_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML/RenderingContext_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference/BooleanPreference_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference/ListPreference_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference/NumberPreference_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference/Preference_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference/Preferences_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference/StringPreference_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Profile/HTML_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Profile/Profile_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Profile
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Report/ReportColumn_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Report/TableReport_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Report
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/Application_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/Dispatcher_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/DocumentHandler_rb.html
@@ -1201,20 +1047,16 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/NotFoundHandler_rb.ht
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/Registry_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/RequestHandler_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler/Session_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response/BasicAuthResponse_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response/GenericResponse_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response/HtmlResponse_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response/NotFoundResponse_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response/RedirectResponse_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response/RefreshResponse_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Session/AuthenticatedSession_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Session/ControllerSession_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Session
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Task/PluggableTask_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Task/Tool_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Task
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/CalendarTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/ClosureTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/EncodingTest_rb.html
@@ -1227,7 +1069,6 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/ParentTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/TestTabs_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/TransactionTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test/UploadTest_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/ActionCallbackTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/CallbackStoreTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/CallbackTest_rb.html
@@ -1242,9 +1083,7 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/LRUCacheTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/StateRegistryTest_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/Util/CallbackStore_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/Util/HtmlDocument_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/Util
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/ValueCallbackTest_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities/ExternalID_rb.html
@@ -1256,20 +1095,14 @@ ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities/SimulatedRequestNotificati
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities/StateHolder_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities/StateRegistry_rb.html
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities/WeakIdentityKeyHash_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/WEBrick_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges
 ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges_rb.html
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files
 ${RUBY_DOCDIR}/Borges/RDoc/fr_class_index.html
 ${RUBY_DOCDIR}/Borges/RDoc/fr_file_index.html
 ${RUBY_DOCDIR}/Borges/RDoc/fr_method_index.html
 ${RUBY_DOCDIR}/Borges/RDoc/index.html
 ${RUBY_DOCDIR}/Borges/RDoc/rdoc-style.css
-@dirrm ${RUBY_DOCDIR}/Borges/RDoc
 ${RUBY_DOCDIR}/Borges/README
-@dirrm ${RUBY_DOCDIR}/Borges
 ${RUBY_EXAMPLESDIR}/Borges/ObjectSpaceBrowser.rb
 ${RUBY_EXAMPLESDIR}/Borges/SushiNet.rb
 ${RUBY_EXAMPLESDIR}/Borges/SushiNet/StoreBanner.rb
@@ -1284,6 +1117,173 @@ ${RUBY_EXAMPLESDIR}/Borges/SushiNet/StoreSearchTask.rb
 ${RUBY_EXAMPLESDIR}/Borges/SushiNet/StoreSession.rb
 ${RUBY_EXAMPLESDIR}/Borges/SushiNet/StoreTask.rb
 ${RUBY_EXAMPLESDIR}/Borges/SushiNet/sushi.ico
-@dirrm ${RUBY_EXAMPLESDIR}/Borges/SushiNet
 ${RUBY_EXAMPLESDIR}/Borges/borges-cgi.rb
+@dirrm ${RUBY_SITELIBDIR}/Borges/Callback
+@dirrm ${RUBY_SITELIBDIR}/Borges/Component/Dialog
+@dirrm ${RUBY_SITELIBDIR}/Borges/Component
+@dirrm ${RUBY_SITELIBDIR}/Borges/Controller
+@dirrm ${RUBY_SITELIBDIR}/Borges/ErrorPage
+@dirrm ${RUBY_SITELIBDIR}/Borges/Extensions
+@dirrm ${RUBY_SITELIBDIR}/Borges/Filter
+@dirrm ${RUBY_SITELIBDIR}/Borges/HTML
+@dirrm ${RUBY_SITELIBDIR}/Borges/Preference
+@dirrm ${RUBY_SITELIBDIR}/Borges/Profile
+@dirrm ${RUBY_SITELIBDIR}/Borges/Report
+@dirrm ${RUBY_SITELIBDIR}/Borges/RequestHandler
+@dirrm ${RUBY_SITELIBDIR}/Borges/Response
+@dirrm ${RUBY_SITELIBDIR}/Borges/Session
+@dirrm ${RUBY_SITELIBDIR}/Borges/Task
+@dirrm ${RUBY_SITELIBDIR}/Borges/Test
+@dirrm ${RUBY_SITELIBDIR}/Borges/TestCase/Util
+@dirrm ${RUBY_SITELIBDIR}/Borges/TestCase
+@dirrm ${RUBY_SITELIBDIR}/Borges/Utilities
+@dirrm ${RUBY_SITELIBDIR}/Borges
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ActionCallbackTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Array.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ActionCallback.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Application.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationEditor.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ApplicationList.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/AuthenticatedSession.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthResponse.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BasicAuthentication.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BatchedList.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BigBatchedList.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/BooleanPreference.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CGIDRbClient.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Callback.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/CallbackStore.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Component.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ComponentTree.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Controller.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ControllerSession.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Counter.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRb.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DRbServer.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateRangeSelector.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateSelector.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DateTable.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dialog.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DispatchCallback.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Dispatcher.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/DocumentHandler.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/EmailErrorPage.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ErrorPage.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExampleBrowser.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ExternalID.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Filter.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GeeWeb.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/GenericResponse.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlAttributes.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlBuilder.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlElement.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlRenderer.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/HtmlResponse.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/InputDialog.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/LRUCache.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ListPreference.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NavigationBar.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundHandler.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NotFoundResponse.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/NumberPreference.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Once.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Path.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableSelectBox.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/PluggableTask.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preference.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Preferences.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RadioDialog.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RedirectResponse.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RefreshResponse.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Registry.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RenderingContext.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Report.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ReportColumn.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Request.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/RequestHandler.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Response.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/SelectionDateTable.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Session.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateHolder.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StateRegistry.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/StringPreference.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TabPanel.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TableReport.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Task.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/TaskFrame.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tool.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ToolFrame.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Transaction.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Tutorial.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/ValueCallback.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WEBrickServlet.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/WalkbackPage.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges/Window.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Borges
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/CalendarTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackStoreTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/CallbackTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ClosureTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ContinuationTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/DispatchCallbackTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/EncodingTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ErrorTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ExceptionTest
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlAttributesTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlBuilderTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlElmentTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererProfiler.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlRendererTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/HtmlTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/InputTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/LRUCacheTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Numeric.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/NumericTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Object.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/OnceTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ParentTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Print.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Proc.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Profiler__.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/StateRegistryTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/String.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/StringTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/TestTabs.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/TransactionTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/UploadTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueCallbackTest.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/ValueHolder.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key/IdentityKeyHash.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak/Key
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/Weak
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes/req.src
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/classes
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Callback
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component/Dialog
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Component
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Controller
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/ErrorPage
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Extensions
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Filter
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/HTML
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Preference
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Profile
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Report
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/RequestHandler
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Response
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Session
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Task
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Test
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase/Util
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/TestCase
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges/Utilities
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib/Borges
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files/lib
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc/files
+@dirrm ${RUBY_DOCDIR}/Borges/RDoc
+@dirrm ${RUBY_DOCDIR}/Borges
+@dirrm ${RUBY_EXAMPLESDIR}/Borges/SushiNet
 @dirrm ${RUBY_EXAMPLESDIR}/Borges
