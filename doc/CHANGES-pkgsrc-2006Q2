@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.84 2006/09/06 21:51:23 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.85 2006/09/07 11:36:25 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -197,5 +197,11 @@ Pullup ticket 1812 - requested by tv
 security/bugfix update for sendmail
 Pullup ticket 1813 - requested by drochner
 security update for musicbrainz
+Pullup ticket 1814 - requested by tv
+security update for tor
 Pullup ticket 1815 - requested by ghen
 security update for openldap
+Pullup ticket 1816 - requested by adrianp
+security update for bind9
+Pullup ticket 1817 - requested by adrianp
+security fix for openssl
