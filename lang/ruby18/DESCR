@@ -1,6 +1,6 @@
 This a meta package including Ruby ${RUBY_VERSION} full release.
 
-It includes ruby18-base, ruby18-iconv, ruby18-gdbm, ruby18-curses,
-ruby18-readline, ruby18-tcltk and ruby18-tk package.
+It includes ruby18-base, ruby18-gdbm, ruby18-curses,ruby18-readline
+and ruby18-tk package.
 
 No package should depend on this package directly.
