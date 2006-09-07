@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/04 17:20:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:54:25 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/tmail/base64.${RUBY_DLEXT}
 ${RUBY_SITEARCHLIBDIR}/tmail/scanner_c.${RUBY_DLEXT}
-@dirrm ${RUBY_SITEARCHLIBDIR}/tmail
 ${RUBY_SITELIBDIR}/tmail.rb
 ${RUBY_SITELIBDIR}/tmail/address.rb
 ${RUBY_SITELIBDIR}/tmail/base64.rb
@@ -24,7 +23,6 @@ ${RUBY_SITELIBDIR}/tmail/stringio.rb
 ${RUBY_SITELIBDIR}/tmail/textutils.rb
 ${RUBY_SITELIBDIR}/tmail/tmail.rb
 ${RUBY_SITELIBDIR}/tmail/utils.rb
-@dirrm ${RUBY_SITELIBDIR}/tmail
 ${RUBY_DOCDIR}/tmail/BUGS
 ${RUBY_DOCDIR}/tmail/ChangeLog
 ${RUBY_DOCDIR}/tmail/TODO
@@ -40,7 +38,6 @@ ${RUBY_DOCDIR}/tmail/en/mailbox.html
 ${RUBY_DOCDIR}/tmail/en/port.html
 ${RUBY_DOCDIR}/tmail/en/tmail.html
 ${RUBY_DOCDIR}/tmail/en/usage.html
-@dirrm ${RUBY_DOCDIR}/tmail/en
 ${RUBY_DOCDIR}/tmail/ja/Incompatibilities.ja
 ${RUBY_DOCDIR}/tmail/ja/README.ja
 ${RUBY_DOCDIR}/tmail/ja/address.html
@@ -53,18 +50,21 @@ ${RUBY_DOCDIR}/tmail/ja/mailbox.html
 ${RUBY_DOCDIR}/tmail/ja/port.html
 ${RUBY_DOCDIR}/tmail/ja/tmail.html
 ${RUBY_DOCDIR}/tmail/ja/usage.html
-@dirrm ${RUBY_DOCDIR}/tmail/ja
-@dirrm ${RUBY_DOCDIR}/tmail
 ${RUBY_EXAMPLESDIR}/tmail/data/multipart
 ${RUBY_EXAMPLESDIR}/tmail/data/normal
 ${RUBY_EXAMPLESDIR}/tmail/data/sendtest
 ${RUBY_EXAMPLESDIR}/tmail/data/simple
 ${RUBY_EXAMPLESDIR}/tmail/data/test
-@dirrm ${RUBY_EXAMPLESDIR}/tmail/data
 ${RUBY_EXAMPLESDIR}/tmail/extract-attachements.rb
 ${RUBY_EXAMPLESDIR}/tmail/from-check.rb
 ${RUBY_EXAMPLESDIR}/tmail/multipart.rb
 ${RUBY_EXAMPLESDIR}/tmail/parse-bench.rb
 ${RUBY_EXAMPLESDIR}/tmail/parse-test.rb
 ${RUBY_EXAMPLESDIR}/tmail/sendmail.rb
+@dirrm ${RUBY_SITEARCHLIBDIR}/tmail
+@dirrm ${RUBY_SITELIBDIR}/tmail
+@dirrm ${RUBY_DOCDIR}/tmail/en
+@dirrm ${RUBY_DOCDIR}/tmail/ja
+@dirrm ${RUBY_DOCDIR}/tmail
+@dirrm ${RUBY_EXAMPLESDIR}/tmail/data
 @dirrm ${RUBY_EXAMPLESDIR}/tmail

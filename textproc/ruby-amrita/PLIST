@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 05:15:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/07 15:55:50 taca Exp $
 bin/ams
 bin/amshandler
 bin/amx
@@ -16,7 +16,6 @@ ${RUBY_SITELIBDIR}/amrita/parts.rb
 ${RUBY_SITELIBDIR}/amrita/tag.rb
 ${RUBY_SITELIBDIR}/amrita/template.rb
 ${RUBY_SITELIBDIR}/amrita/xml.rb
-@dirrm ${RUBY_SITELIBDIR}/amrita
 ${RUBY_DOCDIR}/amrita/Cgi
 ${RUBY_DOCDIR}/amrita/Cgi_ja
 ${RUBY_DOCDIR}/amrita/ChangeLog
@@ -60,7 +59,6 @@ ${RUBY_DOCDIR}/amrita/html/classes/Amrita/Node.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/NodeArray.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/PartsTemplate.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/PartsTemplate/PartsTempleteExpander.html
-@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amrita/PartsTemplate
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/PreFormatter.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/PrettyPrintFormatter.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/SanitizedString.html
@@ -74,7 +72,6 @@ ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagDT.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagEmpty.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagInfo.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagInfo/TagInfoItem.html
-@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagInfo
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagInline.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagItem.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagList.html
@@ -86,20 +83,16 @@ ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TemplateFile.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TemplateFileWithCache.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TemplateText.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amrita/XMLParser.html
-@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amrita
 ${RUBY_DOCDIR}/amrita/html/classes/Amx.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amx/AmxContext.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amx/Document.html
 ${RUBY_DOCDIR}/amrita/html/classes/Amx/Template.html
-@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amx
 ${RUBY_DOCDIR}/amrita/html/classes/Array.html
 ${RUBY_DOCDIR}/amrita/html/classes/CKAmritaElement.html
 ${RUBY_DOCDIR}/amrita/html/classes/Integer.html
 ${RUBY_DOCDIR}/amrita/html/classes/Number.html
 ${RUBY_DOCDIR}/amrita/html/classes/REXML.html
 ${RUBY_DOCDIR}/amrita/html/classes/REXML/Element.html
-@dirrm ${RUBY_DOCDIR}/amrita/html/classes/REXML
-@dirrm ${RUBY_DOCDIR}/amrita/html/classes
 ${RUBY_DOCDIR}/amrita/html/created.rid
 ${RUBY_DOCDIR}/amrita/html/files/README.html
 ${RUBY_DOCDIR}/amrita/html/files/README_ja.html
@@ -119,7 +112,6 @@ ${RUBY_DOCDIR}/amrita/html/files/docs/Tour_ja.html.back
 ${RUBY_DOCDIR}/amrita/html/files/docs/XML.html
 ${RUBY_DOCDIR}/amrita/html/files/docs/XML_ja.html
 ${RUBY_DOCDIR}/amrita/html/files/docs/XML_ja.html.back
-@dirrm ${RUBY_DOCDIR}/amrita/html/files/docs
 ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/ams_rb.html
 ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/amx_rb.html
 ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/cgikit_rb.html
@@ -134,16 +126,11 @@ ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/parts_rb.html
 ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/tag_rb.html
 ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/template_rb.html
 ${RUBY_DOCDIR}/amrita/html/files/lib/amrita/xml_rb.html
-@dirrm ${RUBY_DOCDIR}/amrita/html/files/lib/amrita
-@dirrm ${RUBY_DOCDIR}/amrita/html/files/lib
-@dirrm ${RUBY_DOCDIR}/amrita/html/files
 ${RUBY_DOCDIR}/amrita/html/fr_class_index.html
 ${RUBY_DOCDIR}/amrita/html/fr_file_index.html
 ${RUBY_DOCDIR}/amrita/html/fr_method_index.html
 ${RUBY_DOCDIR}/amrita/html/index.html
 ${RUBY_DOCDIR}/amrita/html/rdoc-style.css
-@dirrm ${RUBY_DOCDIR}/amrita/html
-@dirrm ${RUBY_DOCDIR}/amrita
 ${RUBY_EXAMPLESDIR}/amrita/bbs/README
 ${RUBY_EXAMPLESDIR}/amrita/bbs/advertize_sample.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/bbs.rb
@@ -155,43 +142,34 @@ ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_en/parts.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_en/thread.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_en/top.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_en/view.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_en
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja/board.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja/parts.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja/thread.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja/top.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja/view.rb
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja/whatsnew.html
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/kari_ja/board.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/kari_ja/parts.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/kari_ja/thread.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/kari_ja/view.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/kari_ja
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple/board.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple/thread.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple/top.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple/view.rb
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple/whatsnew.html
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/slash_en/board.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/slash_en/parts.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/slash_en/thread.html
 ${RUBY_EXAMPLESDIR}/amrita/bbs/template/slash_en/view.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/slash_en
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template
 ${RUBY_EXAMPLESDIR}/amrita/bbs/test/bbs.conf
 ${RUBY_EXAMPLESDIR}/amrita/bbs/test/testbbs.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/test
 ${RUBY_EXAMPLESDIR}/amrita/bbs/view.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs
 ${RUBY_EXAMPLESDIR}/amrita/benchmark/amrita.rb
 ${RUBY_EXAMPLESDIR}/amrita/benchmark/bench.dat
 ${RUBY_EXAMPLESDIR}/amrita/benchmark/do_bench.rb
 ${RUBY_EXAMPLESDIR}/amrita/benchmark/eruby.rhtml
 ${RUBY_EXAMPLESDIR}/amrita/benchmark/plain.rb
 ${RUBY_EXAMPLESDIR}/amrita/benchmark/test.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/benchmark
 ${RUBY_EXAMPLESDIR}/amrita/cgi/.htaccess
 ${RUBY_EXAMPLESDIR}/amrita/cgi/amshandler
 ${RUBY_EXAMPLESDIR}/amrita/cgi/bmmodel.rb
@@ -200,15 +178,12 @@ ${RUBY_EXAMPLESDIR}/amrita/cgi/bookmark.cgi
 ${RUBY_EXAMPLESDIR}/amrita/cgi/bookmark.dat.sample
 ${RUBY_EXAMPLESDIR}/amrita/cgi/bookmark.html
 ${RUBY_EXAMPLESDIR}/amrita/cgi/bookmark.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgi
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/CheckboxPage/CheckboxPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/CheckboxPage/CheckboxPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/CheckboxPage/CheckboxPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/CheckboxPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/ConditionalPage/ConditionalPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/ConditionalPage/ConditionalPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/ConditionalPage/ConditionalPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/ConditionalPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/Examples.cgi
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter/HeaderFooter.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter/HeaderFooter.html
@@ -218,51 +193,38 @@ ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter/HeaderFooterParts.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter/HeaderFooterParts.rb
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter/HeaderFooterParts_ja.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter/HeaderFooter_ja.html
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IndexPage/IndexPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IndexPage/IndexPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IndexPage/IndexPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IndexPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IntroductionPage/IntroductionPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IntroductionPage/IntroductionPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IntroductionPage/IntroductionPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IntroductionPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/MainPage/MainPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/MainPage/MainPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/MainPage/MainPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/MainPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/RepetitionPage/RepetitionPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/RepetitionPage/RepetitionPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/RepetitionPage/RepetitionPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/RepetitionPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/SourcePage/SourcePage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/SourcePage/SourcePage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/SourcePage/SourcePage.rb
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/SourcePage/SourcePage_ja.html
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/SourcePage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/StringPage/StringPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/StringPage/StringPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/StringPage/StringPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/StringPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/TextFieldPage/TextFieldPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/TextFieldPage/TextFieldPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/TextFieldPage/TextFieldPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/TextFieldPage
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/readme.txt
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld/HelloWorld.cgi
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld/MainPage/MainPage.ckd
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld/MainPage/MainPage.html
 ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld/MainPage/MainPage.rb
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld/MainPage
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit
 ${RUBY_EXAMPLESDIR}/amrita/hello/conditional.rb
 ${RUBY_EXAMPLESDIR}/amrita/hello/hello.rb
 ${RUBY_EXAMPLESDIR}/amrita/hello/list.rb
 ${RUBY_EXAMPLESDIR}/amrita/hello/table.rb
 ${RUBY_EXAMPLESDIR}/amrita/hello/template.html
-@dirrm ${RUBY_EXAMPLESDIR}/amrita/hello
 ${RUBY_EXAMPLESDIR}/amrita/tour/amstest.ams
 ${RUBY_EXAMPLESDIR}/amrita/tour/amsyaml.ams
 ${RUBY_EXAMPLESDIR}/amrita/tour/amxtest.amx
@@ -285,5 +247,43 @@ ${RUBY_EXAMPLESDIR}/amrita/tour/xhtml.rb
 ${RUBY_EXAMPLESDIR}/amrita/tour/xml1.rb
 ${RUBY_EXAMPLESDIR}/amrita/tour/xml2.rb
 ${RUBY_EXAMPLESDIR}/amrita/tour/xml3.rb
+@dirrm ${RUBY_SITELIBDIR}/amrita
+@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amrita/PartsTemplate
+@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amrita/TagInfo
+@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amrita
+@dirrm ${RUBY_DOCDIR}/amrita/html/classes/Amx
+@dirrm ${RUBY_DOCDIR}/amrita/html/classes/REXML
+@dirrm ${RUBY_DOCDIR}/amrita/html/classes
+@dirrm ${RUBY_DOCDIR}/amrita/html/files/docs
+@dirrm ${RUBY_DOCDIR}/amrita/html/files/lib/amrita
+@dirrm ${RUBY_DOCDIR}/amrita/html/files/lib
+@dirrm ${RUBY_DOCDIR}/amrita/html/files
+@dirrm ${RUBY_DOCDIR}/amrita/html
+@dirrm ${RUBY_DOCDIR}/amrita
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_en
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/2ch_ja
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/kari_ja
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/simple
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template/slash_en
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/template
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs/test
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/bbs
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/benchmark
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgi
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/CheckboxPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/ConditionalPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/HeaderFooter
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IndexPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/IntroductionPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/MainPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/RepetitionPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/SourcePage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/StringPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples/TextFieldPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/Examples
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld/MainPage
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit/HelloWorld
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/cgikit
+@dirrm ${RUBY_EXAMPLESDIR}/amrita/hello
 @dirrm ${RUBY_EXAMPLESDIR}/amrita/tour
 @dirrm ${RUBY_EXAMPLESDIR}/amrita

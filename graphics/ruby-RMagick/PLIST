@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/08/08 03:14:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/09/07 15:53:48 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
@@ -25,14 +25,12 @@ ${RUBY_EXAMPLESDIR}/RMagick/rotating_text.rb
 ${RUBY_EXAMPLESDIR}/RMagick/spinner.rb
 ${RUBY_EXAMPLESDIR}/RMagick/thumbnail.rb
 ${RUBY_EXAMPLESDIR}/RMagick/vignette.rb
-@dirrm ${RUBY_EXAMPLESDIR}/RMagick
 ${RUBY_DOCDIR}/RMagick/.rmagick
 ${RUBY_DOCDIR}/RMagick/crop_resized.rb.html
 ${RUBY_DOCDIR}/RMagick/css/.rmagick
 ${RUBY_DOCDIR}/RMagick/css/doc.css
 ${RUBY_DOCDIR}/RMagick/css/popup.css
 ${RUBY_DOCDIR}/RMagick/css/ref.css
-@dirrm ${RUBY_DOCDIR}/RMagick/css
 ${RUBY_DOCDIR}/RMagick/ex/.examples
 ${RUBY_DOCDIR}/RMagick/ex/.rmagick
 ${RUBY_DOCDIR}/RMagick/ex/Adispatch.rb
@@ -280,7 +278,6 @@ ${RUBY_DOCDIR}/RMagick/ex/images/model.miff
 ${RUBY_DOCDIR}/RMagick/ex/images/notimplemented.gif
 ${RUBY_DOCDIR}/RMagick/ex/images/smile.miff
 ${RUBY_DOCDIR}/RMagick/ex/images/spin.gif
-@dirrm ${RUBY_DOCDIR}/RMagick/ex/images
 ${RUBY_DOCDIR}/RMagick/ex/implode.gif
 ${RUBY_DOCDIR}/RMagick/ex/implode.rb
 ${RUBY_DOCDIR}/RMagick/ex/level.jpg
@@ -496,10 +493,8 @@ ${RUBY_DOCDIR}/RMagick/ex/writing_mode01.gif
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode01.rb
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode02.gif
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode02.rb
-@dirrm ${RUBY_DOCDIR}/RMagick/ex
 ${RUBY_DOCDIR}/RMagick/scripts/.rmagick
 ${RUBY_DOCDIR}/RMagick/scripts/doc.js
-@dirrm ${RUBY_DOCDIR}/RMagick/scripts
 ${RUBY_DOCDIR}/RMagick/Adispatch.rb.html
 ${RUBY_DOCDIR}/RMagick/InitialCoords.rb.html
 ${RUBY_DOCDIR}/RMagick/NewCoordSys.rb.html
@@ -706,5 +701,10 @@ ${RUBY_DOCDIR}/RMagick/vignette.rb.html
 ${RUBY_DOCDIR}/RMagick/wave.rb.html
 ${RUBY_DOCDIR}/RMagick/writing_mode01.rb.html
 ${RUBY_DOCDIR}/RMagick/writing_mode02.rb.html
+@dirrm ${RUBY_EXAMPLESDIR}/RMagick
+@dirrm ${RUBY_DOCDIR}/RMagick/css
+@dirrm ${RUBY_DOCDIR}/RMagick/ex/images
+@dirrm ${RUBY_DOCDIR}/RMagick/ex
+@dirrm ${RUBY_DOCDIR}/RMagick/scripts
 @dirrm ${RUBY_SITELIBDIR}/rvg
 @dirrm ${RUBY_DOCDIR}/RMagick
