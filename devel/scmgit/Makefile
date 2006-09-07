@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/02 23:18:05 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/07 22:21:06 rillig Exp $
 #
 
 DISTNAME=	git-1.4.1
@@ -24,11 +24,22 @@ MAKE_ENV+=	PYTHON_PATH=${PYTHONBIN:Q}
 MAKE_ENV+=	SHELL_PATH=${SH:Q}
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
+MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+
+.include "../../lang/python/application.mk"
+
+NEEDS_SUBPROCESS_PY!= \
+	if ok=`${PYTHONBIN} -c 'import subprocess; print "OK"' 2>/dev/null` \
+	&& ${TEST} "$$ok" = "OK"; then echo "no"; else echo "yes"; fi
+.if ${NEEDS_SUBPROCESS_PY} == "yes"
+PLIST_SUBST+=	IF_NEEDS_SUBPROCESS_PY=""
+.else
+PLIST_SUBST+=	IF_NEEDS_SUBPROCESS_PY="@comment "
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
