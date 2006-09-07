@@ -1,62 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/01 14:39:15 taca Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/07 16:01:30 taca Exp $
 
---- Makefile.orig	Wed Nov  1 23:03:49 2000
+--- Makefile.orig	2000-11-01 23:03:49.000000000 +0900
 +++ Makefile
-@@ -1,51 +1,8 @@
+@@ -1,5 +1,3 @@
 -CC     = gcc
 -CFLAGS = -O
--PROGRAM  = byaccr
--OBJ 	 = closure.o \
--	error.o \
--	lalr.o \
--	lr0.o \
--	main.o \
--	mkpar.o \
--	output.o \
--	reader.o \
--	skeleton.o \
--	symtab.o \
--	verbose.o \
--	warshall.o
-+PROG=	 byaccr
-+SRCS=	closure.c error.c lalr.c lr0.c main.c mkpar.c output.c reader.c \
-+	skeleton.c symtab.c verbose.c warshall.c
- 
--all: $(PROGRAM)
-+BINDIR=	${LOCALBASE}/bin
-+MKMAN=	no
- 
--SRCS   = closure.c \
--	error.c \
--	lalr.c \
--	lr0.c \
--	main.c \
--	mkpar.c \
--	output.c \
--	reader.c \
--	skeleton.c \
--	symtab.c \
--	verbose.c \
--	warshall.c
--
--$(PROGRAM): $(OBJ)
--	$(CC) -o $(PROGRAM) $(OBJ)
--	@echo "done"
--
--clean:
--	/bin/rm -rf $(OBJ) *~
--
--###
--closure.o: closure.c defs.h
--error.o: error.c defs.h
--lalr.o: lalr.c defs.h
--lr0.o: lr0.c defs.h
--main.o: main.c defs.h
--mkpar.o: mkpar.c defs.h
--output.o: output.c defs.h
--reader.o: reader.c defs.h
--skeleton.o: skeleton.c defs.h
--symtab.o: symtab.c defs.h
--verbose.o: verbose.c defs.h
--warshall.o: warshall.c defs.h
-+.include <bsd.prog.mk>
+ PROGRAM  = byaccr
+ OBJ 	 = closure.o \
+ 	error.o \
