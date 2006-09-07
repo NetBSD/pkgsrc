@@ -1,9 +1,45 @@
-# $NetBSD: pyversion.mk,v 1.43 2006/08/08 09:49:57 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.44 2006/09/07 16:22:54 rillig Exp $
+
+# This file determines which Python version is used as a dependency for
+# a package.
+#
+# The following variables may be set by the pkgsrc user in mk.conf:
+#
+# PYTHON_VERSION_DEFAULT
+#	The preferred Python version to use.
+#
+#	Possible values: 15 20 21 22 23 24
+#	Default: 24
+#
+# The following variables may be set by a package before including this
+# file:
+#
+# PYTHON_VERSIONS_ACCEPTED
+#	The Python versions that are acceptable for the package. The
+#	order of the entries matters.
+#
+#	Possible values: 24 23 22 21 20 15
+#	Default: (all)
+#
+# PYTHON_VERSIONS_INCOMPATIBLE
+#	The Python versions that are NOT acceptable for the package.
+#
+#	Possible values: 15 20 21 22 23 24
+#	Default: (depends on the platform)
+#
+# PYTHON_FOR_BUILD_ONLY
+#	Whether Python is needed only at build time or at run time.
+#
+#	Possible values: (defined) (undefined)
+#	Default: (undefined)
+#
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=				PYTHON_VERSION_DEFAULT
 
 PYTHON_VERSION_DEFAULT?=		24
 .if ${OPSYS} == "Darwin"
