@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/04 17:20:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:53:48 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/glut.${RUBY_DLEXT}
 ${RUBY_SITEARCHLIBDIR}/opengl.${RUBY_DLEXT}
 ${RUBY_EXAMPLESDIR}/opengl/aaindex.rb
@@ -50,7 +50,7 @@ ${RUBY_EXAMPLESDIR}/opengl/texgen.rb
 ${RUBY_EXAMPLESDIR}/opengl/texturesurf.rb
 ${RUBY_EXAMPLESDIR}/opengl/varray.rb
 ${RUBY_EXAMPLESDIR}/opengl/wrap.rb
-@dirrm ${RUBY_EXAMPLESDIR}/opengl
 ${RUBY_DOCDIR}/opengl/ChangeLog
 ${RUBY_DOCDIR}/opengl/README.ja
+@dirrm ${RUBY_EXAMPLESDIR}/opengl
 @dirrm ${RUBY_DOCDIR}/opengl
