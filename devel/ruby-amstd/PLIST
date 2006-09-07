@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/30 05:54:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:53:00 taca Exp $
 ${RUBY_SITELIBDIR}/amstd/aliasing.rb
 ${RUBY_SITELIBDIR}/amstd/benchmark.rb
 ${RUBY_SITELIBDIR}/amstd/bug.rb
@@ -11,8 +11,8 @@ ${RUBY_SITELIBDIR}/amstd/rbparams.rb
 ${RUBY_SITELIBDIR}/amstd/rubyloader.rb
 ${RUBY_SITELIBDIR}/amstd/timer.rb
 ${RUBY_SITELIBDIR}/amstd/version.rb
-@dirrm ${RUBY_SITELIBDIR}/amstd
 ${RUBY_DOCDIR}/amstd/README.en
 ${RUBY_DOCDIR}/amstd/README.ja
 ${RUBY_DOCDIR}/amstd/manual.rd.ja
+@dirrm ${RUBY_SITELIBDIR}/amstd
 @dirrm ${RUBY_DOCDIR}/amstd

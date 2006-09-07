@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/02 14:06:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:52:28 taca Exp $
 ${RUBY_SITELIBDIR}/active_support.rb
 ${RUBY_SITELIBDIR}/active_support/binding_of_caller.rb
 ${RUBY_SITELIBDIR}/active_support/breakpoint.rb
@@ -46,6 +46,7 @@ ${RUBY_SITELIBDIR}/active_support/ordered_options.rb
 ${RUBY_SITELIBDIR}/active_support/values/time_zone.rb
 ${RUBY_SITELIBDIR}/active_support/version.rb
 ${RUBY_SITELIBDIR}/active_support/whiny_nil.rb
+${RUBY_DOCDIR}/CHANGELOG.activesupport
 @dirrm ${RUBY_SITELIBDIR}/active_support/values
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/time
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/string
@@ -58,4 +59,3 @@ ${RUBY_SITELIBDIR}/active_support/whiny_nil.rb
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/array
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext
 @dirrm ${RUBY_SITELIBDIR}/active_support
-${RUBY_DOCDIR}/CHANGELOG.activesupport
