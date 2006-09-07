@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/27 15:22:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/09/07 15:53:00 taca Exp $
 bin/racc
 bin/racc2y
 bin/y2racc
@@ -13,7 +13,6 @@ ${RUBY_SITELIBDIR}/racc/output.rb
 ${RUBY_SITELIBDIR}/racc/rubyloader.rb
 ${RUBY_SITELIBDIR}/racc/state.rb
 ${RUBY_SITELIBDIR}/racc/usercodeparser.rb
-@dirrm ${RUBY_SITELIBDIR}/racc
 ${RUBY_DOCDIR}/racc/ChangeLog
 ${RUBY_DOCDIR}/racc/README.en
 ${RUBY_DOCDIR}/racc/README.ja
@@ -25,7 +24,6 @@ ${RUBY_DOCDIR}/racc/en/grammar.html
 ${RUBY_DOCDIR}/racc/en/index.html
 ${RUBY_DOCDIR}/racc/en/parser.html
 ${RUBY_DOCDIR}/racc/en/usage.html
-@dirrm ${RUBY_DOCDIR}/racc/en
 ${RUBY_DOCDIR}/racc/ja/NEWS.html
 ${RUBY_DOCDIR}/racc/ja/command.html
 ${RUBY_DOCDIR}/racc/ja/debug.html
@@ -33,8 +31,6 @@ ${RUBY_DOCDIR}/racc/ja/grammar.html
 ${RUBY_DOCDIR}/racc/ja/index.html
 ${RUBY_DOCDIR}/racc/ja/parser.html
 ${RUBY_DOCDIR}/racc/ja/usage.html
-@dirrm ${RUBY_DOCDIR}/racc/ja
-@dirrm ${RUBY_DOCDIR}/racc
 ${RUBY_EXAMPLESDIR}/racc/array.y
 ${RUBY_EXAMPLESDIR}/racc/array2.y
 ${RUBY_EXAMPLESDIR}/racc/calc-ja.y
@@ -44,4 +40,8 @@ ${RUBY_EXAMPLESDIR}/racc/hash.y
 ${RUBY_EXAMPLESDIR}/racc/lalr.y
 ${RUBY_EXAMPLESDIR}/racc/syntax.y
 ${RUBY_EXAMPLESDIR}/racc/yyerr.y
+@dirrm ${RUBY_SITELIBDIR}/racc
+@dirrm ${RUBY_DOCDIR}/racc/en
+@dirrm ${RUBY_DOCDIR}/racc/ja
+@dirrm ${RUBY_DOCDIR}/racc
 @dirrm ${RUBY_EXAMPLESDIR}/racc

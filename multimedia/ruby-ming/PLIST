@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 04:35:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/07 15:54:54 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/ming/ming.${RUBY_DLEXT}
-@dirrm ${RUBY_SITEARCHLIBDIR}/ming
 ${RUBY_EXAMPLESDIR}/ming/README
 ${RUBY_EXAMPLESDIR}/ming/action.rb
 ${RUBY_EXAMPLESDIR}/ming/button.rb
@@ -13,4 +12,5 @@ ${RUBY_EXAMPLESDIR}/ming/newbutton.rb
 ${RUBY_EXAMPLESDIR}/ming/shape.rb
 ${RUBY_EXAMPLESDIR}/ming/sparks.rb
 ${RUBY_EXAMPLESDIR}/ming/sprite.rb
+@dirrm ${RUBY_SITEARCHLIBDIR}/ming
 @dirrm ${RUBY_EXAMPLESDIR}/ming
