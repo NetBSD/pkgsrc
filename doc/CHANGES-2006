@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1229 2006/09/07 09:42:30 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.1230 2006/09/07 10:06:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4230,3 +4230,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/xfce4-artwork to 0.1 [martti 2006-09-07]
 	Updated security/kth-krb4 to 1.2.2 [wennmach 2006-09-07]
 	Updated security/openssl to 0.9.7inb2 [adrianp 2006-09-07]
+	Added net/mping version 2.01 [rillig 2006-09-07]
