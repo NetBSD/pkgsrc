@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1232 2006/09/07 15:50:38 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1233 2006/09/07 16:02:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed converters/ruby-iconv [taca 2006-09-07]
 	Updated lang/ruby18 to 1.8.5 [taca 2006-09-07]
 	Updated devel/ruby-mode to 1.8.5 [taca 2006-09-07]
+	Updated devel/ruby-byaccr to 0.1nb2 [taca 2006-09-07]
