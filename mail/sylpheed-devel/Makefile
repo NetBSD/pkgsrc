@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2006/06/16 14:31:12 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/09/07 07:52:18 obache Exp $
 
 DISTNAME=	sylpheed-2.2.0beta8
 PKGREVISION=	2
 CATEGORIES=	mail news x11
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
-MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/v2.2beta/
+MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v2.2beta/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	chris@NetBSD.org
-HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
+HOMEPAGE=	http://sylpheed.sraoss.jp/en/
 COMMENT=	X based e-mail and netnews client
 
 DEPENDS+=		metamail>=2.7:../../mail/metamail
