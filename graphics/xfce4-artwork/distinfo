@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/09/07 06:57:39 martti Exp $
 
-SHA1 (xfce4-artwork-0.0.4.tar.gz) = 06942598667fb54466fd4c00544fe0e4cfeb32ef
-RMD160 (xfce4-artwork-0.0.4.tar.gz) = 8339e9f5c83f3dad4d9c2b988263ad908ab87ca5
-Size (xfce4-artwork-0.0.4.tar.gz) = 1897295 bytes
+SHA1 (xfce4-artwork-0.1.tar.gz) = 4533133b18f255910935c4a91b15268b4e58d058
+RMD160 (xfce4-artwork-0.1.tar.gz) = b26a67c81e6d98ce1aea7a8865c8833513661cc7
+Size (xfce4-artwork-0.1.tar.gz) = 2004516 bytes
