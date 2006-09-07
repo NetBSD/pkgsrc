@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1230 2006/09/07 10:06:37 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.1231 2006/09/07 11:54:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4231,3 +4231,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/kth-krb4 to 1.2.2 [wennmach 2006-09-07]
 	Updated security/openssl to 0.9.7inb2 [adrianp 2006-09-07]
 	Added net/mping version 2.01 [rillig 2006-09-07]
+	Updated devel/pango to 1.14.3 [jmmv 2006-09-07]
