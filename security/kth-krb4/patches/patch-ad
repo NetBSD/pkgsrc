@@ -1,16 +1,16 @@
-$NetBSD: patch-ai,v 1.3 2006/09/07 08:46:20 wennmach Exp $
+$NetBSD: patch-ad,v 1.5 2006/09/07 08:46:20 wennmach Exp $
 
 Do not install man/man5/krb.equiv.5 to avoid a conflict with the
 cyrus-imapd package.
 
---- lib/krb/Makefile.in.orig	Thu Apr  4 16:37:53 2002
-+++ lib/krb/Makefile.in	Thu Apr  4 16:38:11 2002
-@@ -216,7 +216,7 @@
+--- lib/krb/Makefile.am.orig	Mon Apr  1 11:53:16 2002
++++ lib/krb/Makefile.am	Mon Apr  1 11:53:42 2002
+@@ -18,7 +18,7 @@
  noinst_PROGRAMS = sizetest
  
  man_MANS = kerberos.1 kerberos.3 krb_realmofhost.3 krb_sendauth.3	\
 -	krb_set_tkt_string.3 kuserok.3 tf_util.3 krb.conf.5 krb.equiv.5	\
-+	krb_set_tkt_string.3 kuserok.3 tf_util.3 krb.conf.5 \
++	krb_set_tkt_string.3 kuserok.3 tf_util.3 krb.conf.5 		\
  	krb.extra.5 krb.realms.5
  
  
