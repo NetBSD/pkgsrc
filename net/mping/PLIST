@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/07 10:06:26 rillig Exp $
+man/man8/mping.8
+sbin/mping
