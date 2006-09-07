@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/03 05:59:14 taca Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/07 15:55:50 taca Exp $
 
 DISTNAME=	RedCloth-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-redcloth-${VERSION}
@@ -13,11 +13,14 @@ VERSION=	3.0.4
 USE_RUBY_SETUP=	yes
 DOCS=		CHANGELOG README REFERENCE
 
+RUBY_DYNAMIC_DIRS= ${RUBY_SITERIDIR:S,${PREFIX}/,,}/RedCloth
+
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/redcloth
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${RUBY_DOCDIR}/redcloth
 .endfor
+	${RUBY_GENERATE_PLIST}
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
