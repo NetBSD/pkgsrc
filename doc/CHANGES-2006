@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1231 2006/09/07 11:54:59 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.1232 2006/09/07 15:50:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4232,3 +4232,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/openssl to 0.9.7inb2 [adrianp 2006-09-07]
 	Added net/mping version 2.01 [rillig 2006-09-07]
 	Updated devel/pango to 1.14.3 [jmmv 2006-09-07]
+	Updated lang/ruby18-base to 1.8.5 [taca 2006-09-07]
+	Updated databases/ruby-gdbm to 1.8.5 [taca 2006-09-07]
+	Updated devel/ruby-curses to 1.8.5 [taca 2006-09-07]
+	Updated devel/ruby-readline to 1.8.5 [taca 2006-09-07]
+	Updated x11/ruby-tk to 1.8.5 [taca 2006-09-07]
+	Removed converters/ruby-iconv [taca 2006-09-07]
+	Updated lang/ruby18 to 1.8.5 [taca 2006-09-07]
+	Updated devel/ruby-mode to 1.8.5 [taca 2006-09-07]
