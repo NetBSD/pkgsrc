@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/02 14:48:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:56:40 taca Exp $
 ${RUBY_SITELIBDIR}/action_controller.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/base.rb
@@ -76,6 +76,21 @@ ${RUBY_SITELIBDIR}/action_view/vendor/builder/blankslate.rb
 ${RUBY_SITELIBDIR}/action_view/vendor/builder/xmlbase.rb
 ${RUBY_SITELIBDIR}/action_view/vendor/builder/xmlevents.rb
 ${RUBY_SITELIBDIR}/action_view/vendor/builder/xmlmarkup.rb
+${RUBY_DOCDIR}/actionpack/CHANGELOG
+${RUBY_DOCDIR}/actionpack/README
+${RUBY_EXAMPLESDIR}/actionpack/address_book/index.rhtml
+${RUBY_EXAMPLESDIR}/actionpack/address_book/layout.rhtml
+${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.cgi
+${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.fcgi
+${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.rb
+${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.rbx
+${RUBY_EXAMPLESDIR}/actionpack/benchmark.rb
+${RUBY_EXAMPLESDIR}/actionpack/benchmark_with_ar.fcgi
+${RUBY_EXAMPLESDIR}/actionpack/blog_controller.cgi
+${RUBY_EXAMPLESDIR}/actionpack/debate/index.rhtml
+${RUBY_EXAMPLESDIR}/actionpack/debate/new_topic.rhtml
+${RUBY_EXAMPLESDIR}/actionpack/debate/topic.rhtml
+${RUBY_EXAMPLESDIR}/actionpack/debate_controller.cgi
 @dirrm ${RUBY_SITELIBDIR}/action_controller/cgi_ext
 @exec ${MKDIR} %D/${RUBY_SITELIBDIR}/action_controller/support
 @dirrm ${RUBY_SITELIBDIR}/action_controller/support
@@ -96,22 +111,7 @@ ${RUBY_SITELIBDIR}/action_view/vendor/builder/xmlmarkup.rb
 @dirrm ${RUBY_SITELIBDIR}/action_view/vendor/builder
 @dirrm ${RUBY_SITELIBDIR}/action_view/vendor
 @dirrm ${RUBY_SITELIBDIR}/action_view
-${RUBY_DOCDIR}/actionpack/CHANGELOG
-${RUBY_DOCDIR}/actionpack/README
 @dirrm ${RUBY_DOCDIR}/actionpack
-${RUBY_EXAMPLESDIR}/actionpack/address_book/index.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/address_book/layout.rhtml
 @dirrm ${RUBY_EXAMPLESDIR}/actionpack/address_book
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.cgi
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.fcgi
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.rb
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.rbx
-${RUBY_EXAMPLESDIR}/actionpack/benchmark.rb
-${RUBY_EXAMPLESDIR}/actionpack/benchmark_with_ar.fcgi
-${RUBY_EXAMPLESDIR}/actionpack/blog_controller.cgi
-${RUBY_EXAMPLESDIR}/actionpack/debate/index.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/debate/new_topic.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/debate/topic.rhtml
 @dirrm ${RUBY_EXAMPLESDIR}/actionpack/debate
-${RUBY_EXAMPLESDIR}/actionpack/debate_controller.cgi
 @dirrm ${RUBY_EXAMPLESDIR}/actionpack

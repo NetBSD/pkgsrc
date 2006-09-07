@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/03 05:26:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/09/07 15:55:50 taca Exp $
 bin/rdrt2
 bin/rt2
 ${RUBY_SITELIBDIR}/rd/rt-filter.rb
@@ -7,12 +7,10 @@ ${RUBY_SITELIBDIR}/rt/rt2txt-lib.rb
 ${RUBY_SITELIBDIR}/rt/rtparser.rb
 ${RUBY_SITELIBDIR}/rt/rtvisitor.rb
 ${RUBY_SITELIBDIR}/rt/w3m.rb
-@dirrm ${RUBY_SITELIBDIR}/rt
 ${RUBY_DOCDIR}/rt/rttool.en.rd
 ${RUBY_DOCDIR}/rt/rttool.ja.rd
 ${RUBY_DOCDIR}/rt/rttool.en.html
 ${RUBY_DOCDIR}/rt/rttool.ja.html
-@dirrm ${RUBY_DOCDIR}/rt
 ${RUBY_EXAMPLESDIR}/rt/easiest.html
 ${RUBY_EXAMPLESDIR}/rt/easiest.rt
 ${RUBY_EXAMPLESDIR}/rt/escape.html
@@ -23,4 +21,6 @@ ${RUBY_EXAMPLESDIR}/rt/test1.html
 ${RUBY_EXAMPLESDIR}/rt/test1.rt
 ${RUBY_EXAMPLESDIR}/rt/test2.html
 ${RUBY_EXAMPLESDIR}/rt/test2.rt
+@dirrm ${RUBY_SITELIBDIR}/rt
+@dirrm ${RUBY_DOCDIR}/rt
 @dirrm ${RUBY_EXAMPLESDIR}/rt
