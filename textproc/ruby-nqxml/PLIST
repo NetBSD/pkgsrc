@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/27 15:27:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/07 15:55:50 taca Exp $
 ${RUBY_SITELIBDIR}/nqxml/dispatcher.rb
 ${RUBY_SITELIBDIR}/nqxml/document.rb
 ${RUBY_SITELIBDIR}/nqxml/entities.rb
@@ -10,12 +10,9 @@ ${RUBY_SITELIBDIR}/nqxml/tokenizer.rb
 ${RUBY_SITELIBDIR}/nqxml/treeparser.rb
 ${RUBY_SITELIBDIR}/nqxml/utils.rb
 ${RUBY_SITELIBDIR}/nqxml/writer.rb
-@dirrm ${RUBY_SITELIBDIR}/nqxml
 ${RUBY_DOCDIR}/nqxml/README
-@dirrm ${RUBY_DOCDIR}/nqxml
 ${RUBY_EXAMPLESDIR}/nqxml/contrib/autodis_1.rb
 ${RUBY_EXAMPLESDIR}/nqxml/contrib/autodis_2.rb
-@dirrm ${RUBY_EXAMPLESDIR}/nqxml/contrib
 ${RUBY_EXAMPLESDIR}/nqxml/data.xml
 ${RUBY_EXAMPLESDIR}/nqxml/doc.xml
 ${RUBY_EXAMPLESDIR}/nqxml/dumpXML.rb
@@ -32,8 +29,11 @@ ${RUBY_EXAMPLESDIR}/nqxml/tests/testresource.rb
 ${RUBY_EXAMPLESDIR}/nqxml/tests/tokenizertester.rb
 ${RUBY_EXAMPLESDIR}/nqxml/tests/treeparsertester.rb
 ${RUBY_EXAMPLESDIR}/nqxml/tests/writertester.rb
-@dirrm ${RUBY_EXAMPLESDIR}/nqxml/tests
 ${RUBY_EXAMPLESDIR}/nqxml/write.rb
 ${RUBY_EXAMPLESDIR}/nqxml/writeManualDoc.rb
 ${RUBY_EXAMPLESDIR}/nqxml/writeParsedDoc.rb
+@dirrm ${RUBY_SITELIBDIR}/nqxml
+@dirrm ${RUBY_DOCDIR}/nqxml
+@dirrm ${RUBY_EXAMPLESDIR}/nqxml/contrib
+@dirrm ${RUBY_EXAMPLESDIR}/nqxml/tests
 @dirrm ${RUBY_EXAMPLESDIR}/nqxml
