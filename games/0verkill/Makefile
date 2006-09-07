@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:52 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.5 2006/09/07 05:39:37 adam Exp $
 
-DISTNAME=	0verkill-0.15
+DISTNAME=	0verkill-0.16
 CATEGORIES=	games
 MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/release/
 EXTRACT_SUFX=	.tgz
@@ -10,27 +9,29 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/
 COMMENT=	0verkill is bloody 2D action deathmatch-like game in ASCII-ART
 
-HAS_CONFIGURE=	YES
+HAS_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/0verkill share/doc/0verkill
+INSTALLATION_DIRS+=	share/0verkill/data share/0verkill/grx
 
-post-patch:
-	${SED} "s|@PREFIX@|${PREFIX}|g" ${WRKSRC}/cfg.h > ${WRKSRC}/cfg.h.done
-	${MV} ${WRKSRC}/cfg.h.done ${WRKSRC}/cfg.h
-	${SED} "s|grx/|${PREFIX}/share/0verkill/grx/|g" ${WRKSRC}/data/sprites.dat \
-		> ${WRKSRC}/data/sprites.dat.done
-	${MV} ${WRKSRC}/data/sprites.dat.done ${WRKSRC}/data/sprites.dat
+SUBST_CLASSES+=		grx
+SUBST_STAGE.grx=	post-patch
+SUBST_MESSAGE.grx=	Fix game data paths
+SUBST_FILES.grx=	data/sprites.dat data/level1.sp data/level2.sp
+SUBST_SED.grx=		-e "s|grx/|${PREFIX}/share/0verkill/grx/|g"
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_MESSAGE.prefix=	Fix game configuration path prefix
+SUBST_FILES.prefix=	cfg.h
+SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/0verkill \
-		${PREFIX}/share/doc/0verkill ${PREFIX}/share/0verkill/data \
-		${PREFIX}/share/0verkill/grx
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} 0verkill ${PREFIX}/bin
 	cd ${WRKSRC} && for f in avi bot editor server test_server; do \
 		${INSTALL_PROGRAM} $$f ${PREFIX}/bin/0verkill-$$f; \
 	done
-	cd ${WRKSRC}/data && ${INSTALL_DATA} banner.dat dynamic.dat room.dat \
-		sprites.dat ${PREFIX}/share/0verkill/data
+	${INSTALL_DATA} ${WRKSRC}/data/* ${PREFIX}/share/0verkill/data
 	${INSTALL_DATA} ${WRKSRC}/grx/* ${PREFIX}/share/0verkill/grx
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} AUTHORS README.html avi.txt \
 		bot.txt doc.html ${PREFIX}/share/doc/0verkill
