@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5425 2006/09/06 22:48:58 wiz Exp $
+$NetBSD: TODO,v 1.5426 2006/09/07 05:40:41 adam Exp $
 
 Suggested new packages
 ======================
@@ -266,7 +266,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o 0verkill-0.16
 	o 9base-2
 	o Cenon-3.71
 	o Chinput-3.0.1
