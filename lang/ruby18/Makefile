@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:47 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/07 15:40:00 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
-PKGREVISION=	1
+#PKGREVISION=
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby programming language ${RUBY_VERSION} meta package
 
 DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/ruby18-base
-DEPENDS+= ${RUBY_PKGPREFIX}-iconv>=${RUBY_VERSION}:../../converters/ruby-iconv
 DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
 DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION}:../../devel/ruby-curses
 DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
