@@ -1,18 +1,277 @@
-$NetBSD: patch-ab,v 1.5 2006/03/22 23:05:39 taca Exp $
+$NetBSD: patch-ab,v 1.6 2006/09/07 15:40:01 taca Exp $
 
---- configure.orig	2005-12-24 21:36:33.000000000 +0900
+--- configure.orig	2006-08-25 17:34:16.000000000 +0900
 +++ configure
-@@ -9356,6 +9356,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
- 		ac_cv_func_getpgrp_void=yes
- 		ac_cv_func_setitimer=no
+@@ -11310,13 +11310,21 @@ _ACEOF
+ 
+ fi
+ 
+-{ echo "$as_me:$LINENO: checking for noreturn" >&5
+-echo $ECHO_N "checking for noreturn... $ECHO_C" >&6; }
+-if test "${rb_cv_noreturn+set}" = set; then
++
++
++    { echo "$as_me:$LINENO: checking for noreturn function attribute" >&5
++echo $ECHO_N "checking for noreturn function attribute... $ECHO_C" >&6; }
++if test "${rb_cv_func_noreturn+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+-  rb_cv_noreturn=x
+-for mac in "x __attribute__ ((noreturn))" "__declspec(noreturn) x" x; do
++  rb_cv_func_noreturn=x
++if test "${ac_c_werror_flag+set}"; then
++  rb_c_werror_flag="$ac_c_werror_flag"
++else
++  unset rb_c_werror_flag
++fi
++ac_c_werror_flag=yes
++for mac in "__attribute__ ((noreturn)) x" "x __attribute__ ((noreturn))" "__declspec(noreturn) x" x; do
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -11324,7 +11332,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ #define NORETURN(x) $mac
+-NORETURN(void exit(int x));
++    NORETURN(void conftest_attribute_check(void));
+ int
+ main ()
+ {
+@@ -11367,7 +11375,7 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  rb_cv_noreturn="$mac"; break
++  rb_cv_func_noreturn="$mac"; break
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -11377,12 +11385,110 @@ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ done
++if test "${rb_c_werror_flag+set}"; then
++  ac_c_werror_flag="$rb_c_werror_flag"
++else
++  unset ac_c_werror_flag
+ fi
+-{ echo "$as_me:$LINENO: result: $rb_cv_noreturn" >&5
+-echo "${ECHO_T}$rb_cv_noreturn" >&6; }
++
++fi
++{ echo "$as_me:$LINENO: result: $rb_cv_func_noreturn" >&5
++echo "${ECHO_T}$rb_cv_func_noreturn" >&6; }
+ cat >>confdefs.h <<_ACEOF
+-#define NORETURN(x) $rb_cv_noreturn
++#define NORETURN(x) $rb_cv_func_noreturn
++_ACEOF
++
++
++
++
++    { echo "$as_me:$LINENO: checking for noinline function attribute" >&5
++echo $ECHO_N "checking for noinline function attribute... $ECHO_C" >&6; }
++if test "${rb_cv_func_noinline+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  rb_cv_func_noinline=x
++if test "${ac_c_werror_flag+set}"; then
++  rb_c_werror_flag="$ac_c_werror_flag"
++else
++  unset rb_c_werror_flag
++fi
++ac_c_werror_flag=yes
++for mac in "__attribute__ ((noinline)) x" "x __attribute__ ((noinline))" "__declspec(noinline) x" x; do
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#define NOINLINE(x) $mac
++    NOINLINE(void conftest_attribute_check(void));
++int
++main ()
++{
++
++  ;
++  return 0;
++}
+ _ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag" || test ! -s conftest.err'
++  { (case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_try") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
++  { (case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_try") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  rb_cv_func_noinline="$mac"; break
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++done
++if test "${rb_c_werror_flag+set}"; then
++  ac_c_werror_flag="$rb_c_werror_flag"
++else
++  unset ac_c_werror_flag
++fi
++
++fi
++{ echo "$as_me:$LINENO: result: $rb_cv_func_noinline" >&5
++echo "${ECHO_T}$rb_cv_func_noinline" >&6; }
++cat >>confdefs.h <<_ACEOF
++#define NOINLINE(x) $rb_cv_func_noinline
++_ACEOF
++
++
++
+ 
+ 
+ { echo "$as_me:$LINENO: checking for RUBY_EXTERN" >&5
+@@ -11629,6 +11735,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
  		;;
+ bsdi*)          LIBS="-lm $LIBS"
+                 ac_cv_sizeof_rlim_t=8;;
 +interix3*)	LIBS="-lm $LIBS"
 +		ac_cv_func_getpgrp_void=yes
 +		;;
  freebsd*)	LIBS="-lm $LIBS"
- 		echo "$as_me:$LINENO: checking whether -lxpg4 has to be linked" >&5
- echo $ECHO_N "checking whether -lxpg4 has to be linked... $ECHO_C" >&6
-@@ -14368,6 +14371,13 @@ echo $ECHO_N "checking whether OS depend
+ 		{ echo "$as_me:$LINENO: checking whether -lxpg4 has to be linked" >&5
+ echo $ECHO_N "checking whether -lxpg4 has to be linked... $ECHO_C" >&6; }
+@@ -16865,6 +16974,90 @@ _ACEOF
+ fi
+ 
+ 
++if test x"$target_cpu" = xia64; then
++    case " $LIBOBJS " in
++  *" ia64.$ac_objext "* ) ;;
++  *) LIBOBJS="$LIBOBJS ia64.$ac_objext"
++ ;;
++esac
++
++    { echo "$as_me:$LINENO: checking for __libc_ia64_register_backing_store_base" >&5
++echo $ECHO_N "checking for __libc_ia64_register_backing_store_base... $ECHO_C" >&6; }
++if test "${rb_cv___libc_ia64_register_backing_store_base+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  rb_cv___libc_ia64_register_backing_store_base=no
++    cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++extern unsigned long __libc_ia64_register_backing_store_base;
++int
++main ()
++{
++unsigned long p = __libc_ia64_register_backing_store_base;
++       printf("%ld\n", p);
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag" || test ! -s conftest.err'
++  { (case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_try") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_try") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  rb_cv___libc_ia64_register_backing_store_base=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++
++fi
++
++rm -f core conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++fi
++{ echo "$as_me:$LINENO: result: $rb_cv___libc_ia64_register_backing_store_base" >&5
++echo "${ECHO_T}$rb_cv___libc_ia64_register_backing_store_base" >&6; }
++    if test $rb_cv___libc_ia64_register_backing_store_base = yes; then
++      cat >>confdefs.h <<\_ACEOF
++#define HAVE___LIBC_IA64_REGISTER_BACKING_STORE_BASE 1
++_ACEOF
++
++    fi
++fi
++
+ { echo "$as_me:$LINENO: checking whether right shift preserve sign bit" >&5
+ echo $ECHO_N "checking whether right shift preserve sign bit... $ECHO_C" >&6; }
+ if test "${rb_cv_rshift_sign+set}" = set; then
+@@ -17849,7 +18042,7 @@ _ACEOF
+     fi
+ fi
+ if test x"$ac_cv_header_ucontext_h" = xyes; then
+-    if test x"$target_cpu" = xia64 -o x"$rb_with_pthread" = xyes; then
++    if test x"$rb_with_pthread" = xyes; then
+ 
+ 
+ for ac_func in getcontext setcontext
+@@ -18149,6 +18342,13 @@ echo $ECHO_N "checking whether OS depend
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -26,16 +285,7 @@ $NetBSD: patch-ab,v 1.5 2006/03/22 23:05:39 taca Exp $
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
  			LIBPATHFLAG=" -L'%1\$-s'"
-@@ -15121,8 +15131,6 @@ if test "$enable_shared" = 'yes'; then
- 	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR).$(TEENY) lib$(RUBY_SO_NAME).so'
- 	if test "$GCC" = yes; then
- 	    LIBRUBY_DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(@F)'
--	else
--	    enable_rpath=no
- 	fi
- 	XLDFLAGS="$XLDFLAGS "'-R${libdir}'
-  	;;
-@@ -15155,6 +15163,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -19007,6 +19207,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -50,16 +300,3 @@ $NetBSD: patch-ab,v 1.5 2006/03/22 23:05:39 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L${libdir} -L. -l$(RUBY_SO_NAME)'
  	;;
-@@ -15163,7 +15179,11 @@ if test "$enable_shared" = 'yes'; then
-   esac
- fi
- if test "$enable_rpath" = yes; then
--    LIBRUBYARG_SHARED='-Wl,-R -Wl,$(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
-+    if test "$GCC" = yes; then
-+	LIBRUBYARG_SHARED='-Wl,-R -Wl,$(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
-+    else
-+	LIBRUBYARG_SHARED='-R $(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
-+    fi
- fi
- 
- XLDFLAGS="$XLDFLAGS -L."

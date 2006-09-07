@@ -1,32 +1,34 @@
-# $NetBSD: Makefile,v 1.24 2006/09/03 02:53:13 taca Exp $
+# $NetBSD: Makefile,v 1.25 2006/09/07 15:40:00 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	4
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
+
+PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCHFILES=	ruby-1.8.5-base-${RUBY18_PATCH_DATE}.patch.bz2
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby 1.8 based release minimum package
 
 RUBY_VERSION=		${RUBY18_VERSION}
+RUBY_DYNAMIC_DIRS=	${RUBY_RIDIR:S,${PREFIX}/,,}
 
 CONFLICTS=		${RUBY_PKGPREFIX}-dbm-[0-9]* \
 			${RUBY_PKGPREFIX}-digest-[0-9]* \
+			${RUBY_PKGPREFIX}-iconv-[0-9]* \
 			${RUBY_PKGPREFIX}-openssl-[0-9]* \
 			${RUBY_PKGPREFIX}-tcltk-[0-9]*
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		yacc
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
-CONFIGURE_ARGS+=	--enable-shared \
+CONFIGURE_ARGS+=	--enable-shared --enable-install-doc \
 		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
-INSTALL_TARGET=		install install-doc
 WRKSRC=			${RUBY_WRKSRC}
 
 # Ruby build process depends on config.status's content
@@ -85,16 +87,13 @@ REPLACE_RUBY_DIRS=	${WRKSRC}/bin ${WRKSRC}/ext ${WRKSRC}/lib \
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
-	${RM} -f ${WRKSRC}/ext/iconv/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
-	${RM} -f ${WRKSRC}/ext/tcltklib/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
 pre-install:
 	cd ${WRKSRC}; ${FIND} . -name '*.orig' -exec ${RM} -f {} \;
 
 post-install:
-	${STRIP} ${RUBY}
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/pty
 	${INSTALL_DATA} ${FILESDIR}/CHANGES.pkgsrc ${RUBY_DOCDIR}
@@ -126,6 +125,7 @@ post-install:
 .for f in ${PTY_EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${RUBY_EXAMPLESDIR}/pty
 .endfor
+	${RUBY_GENERATE_PLIST}
 
 .include "../../lang/ruby/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
