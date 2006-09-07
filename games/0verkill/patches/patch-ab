@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2004/06/15 13:31:15 grant Exp $
+$NetBSD: patch-ab,v 1.3 2006/09/07 05:39:37 adam Exp $
 
---- Makefile.in.orig	2000-12-21 21:48:18.000000000 +1100
+--- Makefile.in.orig	2001-12-15 18:51:54.000000000 +0100
 +++ Makefile.in
 @@ -1,4 +1,4 @@
--CFLAGS=-O3 @CFLAGS@ @X_CFLAGS@ -Wall -W -Wstrict-prototypes -Wno-parentheses -fomit-frame-pointer 
+-CFLAGS=@CFLAGS@ -O3 @X_CFLAGS@ -Wall -W -Wstrict-prototypes -Wno-parentheses -fomit-frame-pointer 
 +CFLAGS=@CFLAGS@ @X_CFLAGS@ # -Wall -W -Wstrict-prototypes -Wno-parentheses -fomit-frame-pointer 
  #-malign-functions=0
  LDFLAGS=@LDFLAGS@
