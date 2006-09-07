@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1228 2006/09/07 08:49:53 wennmach Exp $
+$NetBSD: CHANGES-2006,v 1.1229 2006/09/07 09:42:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4229,3 +4229,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/0verkill to 0.16 [adam 2006-09-07]
 	Updated graphics/xfce4-artwork to 0.1 [martti 2006-09-07]
 	Updated security/kth-krb4 to 1.2.2 [wennmach 2006-09-07]
+	Updated security/openssl to 0.9.7inb2 [adrianp 2006-09-07]
