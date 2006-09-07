@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5426 2006/09/07 05:40:41 adam Exp $
+$NetBSD: TODO,v 1.5427 2006/09/07 08:49:53 wennmach Exp $
 
 Suggested new packages
 ======================
@@ -625,7 +625,6 @@ Suggested package updates
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
 	o ksi-3.4.2
-	o kth-krb4-1.2.2
 	o latd-1.21
 	o lavaps-2.7
 	o lcab-1.0b11
