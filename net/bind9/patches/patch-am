@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2004/10/03 09:20:41 tron Exp $
+$NetBSD: patch-am,v 1.1.2.2 2006/09/07 11:20:44 ghen Exp $
 
---- configure.in-	2004-05-16 04:58:44.000000000 +0900
-+++ configure.in	2004-05-16 05:00:43.000000000 +0900
-@@ -684,7 +684,7 @@
+--- config.threads.in.orig	2005-03-16 07:59:16.000000000 +0900
++++ config.threads.in
+@@ -48,6 +48,8 @@ case $host in
+ 	use_threads=false ;;
+ *-freebsd*)
+ 	use_threads=false ;;
++*-dragonfly*)
++	use_threads=false ;;
+ *-bsdi[234]*)
+ 	# Thread signals do not work reliably on some versions of BSD/OS.
+ 	use_threads=false ;;
+@@ -121,7 +123,7 @@ then
  				AC_MSG_RESULT(native)
  				LIBS="-lpthread $LIBS"
  			else
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.8 2004/10/03 09:20:41 tron Exp $
  				then
  					AC_MSG_RESULT(none)
  					AC_MSG_ERROR("could not find thread libraries")
-@@ -692,13 +692,20 @@
+@@ -129,13 +131,21 @@ then
  
  				if $use_threads
  				then
@@ -23,6 +32,7 @@ $NetBSD: patch-aa,v 1.8 2004/10/03 09:20:41 tron Exp $
 -					CPPFLAGS="$CPPFLAGS -I$pkg/include"
 -					STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
 +					if test -f /usr/include/pthread.h
++					then
 +						AC_MSG_RESULT(native pthreads)
 +						LIBS="-lpthread $LIBS"
 +						CPPFLAGS="$CPPFLAGS -I/usr/inclue"

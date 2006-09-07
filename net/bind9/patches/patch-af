@@ -1,43 +1,45 @@
-$NetBSD: patch-af,v 1.5 2004/10/03 09:20:41 tron Exp $
+$NetBSD: patch-af,v 1.5.14.1 2006/09/07 11:20:43 ghen Exp $
 
---- lib/bind/configure.in.orig	2004-03-15 10:02:44.000000000 +0900
-+++ lib/bind/configure.in	2004-05-16 05:09:55.000000000 +0900
-@@ -367,7 +367,8 @@
- [linking with PTL2 is highly experimental and not expected to work])
- 			CC=ptlgcc
- 		else
--			if test ! -d $LOCALBASE/pthreads
-+			if test ! -d $LOCALBASE/pthreads \
-+				-a ! -f /usr/include/pthread.h
- 			then
- 				AC_MSG_RESULT(none)
- 				use_threads=false
-@@ -375,13 +376,21 @@
- 
- 			if $use_threads
- 			then
--				AC_MSG_RESULT(mit-pthreads/unproven-pthreads)
--				pkg="$LOCALBASE/pthreads"
--				lib1="-L$pkg/lib -Wl,-R$pkg/lib"
--				lib2="-lpthread -lm -lgcc -lpthread"
--				LIBS="$lib1 $lib2 $LIBS"
--				CPPFLAGS="$CPPFLAGS -I$pkg/include"
--				STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
-+				if test -f /usr/include/pthread.h
-+				then
-+					AC_MSG_RESULT(native pthreads)
-+					LIBS="-lpthread $LIBS"
-+					CPPFLAGS="$CPPFLAGS -I/usr/include"
-+					STD_CINCLUDES="$STD_CINCLUDES -I/usr/include"
-+				else
-+					AC_MSG_RESULT(mit-pthreads/unproven-pthreads)
-+					pkg="$LOCALBASE/pthreads"
-+					lib1="-L$pkg/lib -Wl,-R$pkg/lib"
-+					lib2="-lpthread -lm -lgcc -lpthread"
-+					LIBS="$lib1 $lib2 $LIBS"
-+					CPPFLAGS="$CPPFLAGS -I$pkg/include"
-+					STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
-+				fi
- 			fi
- 		fi
+--- lib/bind/configure.in.orig	2005-10-14 10:38:46.000000000 +0900
++++ lib/bind/configure.in
+@@ -82,12 +82,7 @@ AC_SUBST(PERL)
+ #
+ case "$includedir" in
+ 	'${prefix}/include')
+-		includedir='${prefix}/bind/include'
+-		;;
+-esac
+-case "$libdir" in
+-	'${prefix}/lib')
+-		libdir='${prefix}/bind/lib'
++		includedir='${prefix}/include/bind'
  		;;
+ esac
+ 
+@@ -395,6 +390,10 @@ then
+ 			CCOPT="$CCOPT -pthread"
+ 			STD_CDEFINES="$STD_CDEFINES -D_THREAD_SAFE"
+ 			;;
++		*-dragonfly*)
++			CC="$CC -pthread"
++			CCOPT="$CCOPT -pthread"
++			;;
+ 		*-openbsd*)
+ 			CC="$CC -pthread"
+ 			CCOPT="$CCOPT -pthread"
+@@ -985,6 +984,7 @@ case "$host" in
+ 	*-bsdi[2345]*)	have_minimum_ifreq=yes;;
+ 	*-darwin*)	have_minimum_ifreq=yes;;
+ 	*-freebsd*)	have_minimum_ifreq=yes;;
++	*-drgonfly*)	have_minimum_ifreq=yes;;
+ 	*-lynxos*)	have_minimum_ifreq=yes;;
+ 	*-netbsd*)	have_minimum_ifreq=yes;;
+ 	*-next*)	have_minimum_ifreq=yes;;
+@@ -1024,6 +1024,7 @@ case "$host" in
+ 	*-darwin*)	PORT_DIR="port/darwin";;
+ 	*-osf*)		PORT_DIR="port/decunix";;
+ 	*-freebsd*)	PORT_DIR="port/freebsd";;
++	*-dragonfly*)	PORT_DIR="port/freebsd";;
+ 	*-hpux9*)	PORT_DIR="port/hpux9";;
+ 	*-hpux10*)	PORT_DIR="port/hpux10";;
+ 	*-hpux11*)	PORT_DIR="port/hpux";;

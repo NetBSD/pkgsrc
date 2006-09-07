@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2004/10/03 09:20:41 tron Exp $
+$NetBSD: patch-ac,v 1.5.14.1 2006/09/07 11:20:43 ghen Exp $
 
---- lib/lwres/getaddrinfo.c-	2004-05-16 05:03:22.000000000 +0900
-+++ lib/lwres/getaddrinfo.c	2004-05-16 05:04:33.000000000 +0900
+--- lib/lwres/getaddrinfo.c.orig	2005-06-10 08:54:33.000000000 +0900
++++ lib/lwres/getaddrinfo.c
 @@ -30,6 +30,10 @@
- #include <lwres/net.h>
  #include <lwres/netdb.h>
+ #include <lwres/stdlib.h>
  
 +#ifdef __KAME__
 +#include <net/if.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.5 2004/10/03 09:20:41 tron Exp $
  #define SA(addr)	((struct sockaddr *)(addr))
  #define SIN(addr)	((struct sockaddr_in *)(addr))
  #define SIN6(addr)	((struct sockaddr_in6 *)(addr))
-@@ -252,14 +256,22 @@
+@@ -252,14 +256,22 @@ lwres_getaddrinfo(const char *hostname, 
  			p = strchr(ntmp, '%');
  			ep = NULL;
  
