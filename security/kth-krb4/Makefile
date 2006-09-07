@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2006/06/04 13:41:10 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/09/07 08:46:20 wennmach Exp $
 #
 
-DISTNAME=		krb4-1.2.1
-PKGNAME=		kth-krb4-1.2.1
-PKGREVISION=		9
+DISTNAME=		krb4-1.2.2
+PKGNAME=		kth-krb4-1.2.2
+#PKGREVISION=		1
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -11,6 +11,7 @@ MAINTAINER=		wennmach@NetBSD.org
 HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 COMMENT=		Kerberos IV distribution from KTH
 
+CONFLICTS+=		arla-[0-9]*
 CONFLICTS+=		libdes-[0-9]*
 
 CRYPTO=			yes
@@ -37,21 +38,13 @@ PLIST_SUBST+=		KRB4_PREFIX=
 .endif
 CONFIGURE_ARGS+=	--program-transform=${KTH_KRB4_TRANSFORM:Q}
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 EXAMPLEDIR=		${PREFIX}/share/examples/kth-krb4
 
-# this hangs while compiling one of the files, at least with the
-# toolchain as of 1.5ZC (20020329)
-#.if ${MACHINE_ARCH} == "sparc64"
-#BROKEN=			toolchain problems on sparc64 (1.5ZC, 20020329)
-#.endif
-
-post-patch:
-	@for file in ${WRKSRC}/lib/kafs/kafs.h; do			\
-		${SED}	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKSRC}/lib/kafs/kafs.h
+SUBST_SED.paths+=	-e 's|/usr/arla/etc/|${PKG_SYSCONFDIR}|g'
+SUBST_STAGE.paths=	post-patch
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
