@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/04 17:20:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:58:22 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/gtk.${RUBY_DLEXT}
 ${RUBY_EXAMPLESDIR}/gtk/calendar.rb
 ${RUBY_EXAMPLESDIR}/gtk/doc/rbbr.rb
-@dirrm ${RUBY_EXAMPLESDIR}/gtk/doc
 ${RUBY_EXAMPLESDIR}/gtk/cursor.rb
 ${RUBY_EXAMPLESDIR}/gtk/dnd.rb
 ${RUBY_EXAMPLESDIR}/gtk/drawing.rb
@@ -29,7 +28,6 @@ ${RUBY_EXAMPLESDIR}/gtk/test/testb.rb
 ${RUBY_EXAMPLESDIR}/gtk/test/testc.rb
 ${RUBY_EXAMPLESDIR}/gtk/test/testd.rb
 ${RUBY_EXAMPLESDIR}/gtk/test/teste.rb
-@dirrm ${RUBY_EXAMPLESDIR}/gtk/test
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/3DRings.xpm
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/FilesQueue.xpm
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/Modeller.xpm
@@ -94,9 +92,11 @@ ${RUBY_EXAMPLESDIR}/gtk/testgtk/tree_minus.xpm
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/tree_plus.xbm
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/tree_plus.xpm
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/wmhints.rb
-@dirrm ${RUBY_EXAMPLESDIR}/gtk/testgtk
 ${RUBY_EXAMPLESDIR}/gtk/testim.rb
 ${RUBY_EXAMPLESDIR}/gtk/text.rb
 ${RUBY_EXAMPLESDIR}/gtk/texthook.rb
 ${RUBY_EXAMPLESDIR}/gtk/xbm_cursor.rb
+@dirrm ${RUBY_EXAMPLESDIR}/gtk/doc
+@dirrm ${RUBY_EXAMPLESDIR}/gtk/test
+@dirrm ${RUBY_EXAMPLESDIR}/gtk/testgtk
 @dirrm ${RUBY_EXAMPLESDIR}/gtk
