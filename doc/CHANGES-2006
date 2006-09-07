@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1227 2006/09/07 06:57:52 martti Exp $
+$NetBSD: CHANGES-2006,v 1.1228 2006/09/07 08:49:53 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/libgpod version 0.3.2 [wiz 2006-09-06]
 	Updated games/0verkill to 0.16 [adam 2006-09-07]
 	Updated graphics/xfce4-artwork to 0.1 [martti 2006-09-07]
+	Updated security/kth-krb4 to 1.2.2 [wennmach 2006-09-07]
