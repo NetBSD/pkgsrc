@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1233 2006/09/07 16:02:23 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1234 2006/09/07 18:42:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4241,3 +4241,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/ruby18 to 1.8.5 [taca 2006-09-07]
 	Updated devel/ruby-mode to 1.8.5 [taca 2006-09-07]
 	Updated devel/ruby-byaccr to 0.1nb2 [taca 2006-09-07]
+	Updated net/ORBit2 to 2.14.3 [jmmv 2006-09-07]
