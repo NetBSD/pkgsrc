@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/04/01 21:39:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/08 16:27:34 jmmv Exp $
 #
 
-DISTNAME=	xdg-x11-dirs-1.3
+DISTNAME=	xdg-x11-dirs-1.4
 CATEGORIES=	misc gnome kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
