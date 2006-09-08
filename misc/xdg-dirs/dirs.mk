@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.6 2006/04/01 21:39:54 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.7 2006/09/08 16:27:34 jmmv Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -9,6 +9,7 @@ DIRS_XDG_MK=		# defined
 XDG_DIRS=		share/application-registry
 XDG_DIRS+=		share/applications
 XDG_DIRS+=		share/desktop-directories
+XDG_DIRS+=		share/dtds
 XDG_DIRS+=		share/icons
 XDG_DIRS+=		share/images
 XDG_DIRS+=		share/mime-info
