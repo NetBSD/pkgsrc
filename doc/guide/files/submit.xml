@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.12 2006/07/29 14:14:23 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.13 2006/09/08 07:38:37 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -23,11 +23,19 @@
 	runs well; see <xref linkend="debug"/> and the rest of this
 	document. Next, generate an uuencoded gzipped &man.tar.1;
 	archive that contains all files that make up the package.
-	Finally, <command>send-pr</command> with category
-	<quote>pkg</quote>, a synopsis which includes the package name
-	and version number, a short description of your package
-	(contents of the COMMENT variable or DESCR file are OK) and
-	attach the archive to your PR.</para>
+	Finally, send this package to the pkgsrc bug tracking system,
+	either with the &man.send-pr.1; command, or if you don't have
+	that, go to the web page
+	<ulink url="http://www.NetBSD.org/Misc/send-pr.html"/>,
+	which contains some instructions and a link to a form, where you
+	can submit packages.</para>
+
+	<para>In the form of the problem report, the category should be
+	<quote>pkg</quote>, the synopsis should include the package name
+	and version number, and the description field should contain a
+	short description of your package (contents of the COMMENT
+	variable or DESCR file are OK). The uuencoded package data should
+	go into the <quote>fix</quote> field.</para>
 
 	<para>If you want to submit several packages, please send a
 	separate PR for each one, it's easier for us to track things
