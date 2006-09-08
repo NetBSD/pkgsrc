@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.23 2006/09/07 15:40:00 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.24 2006/09/08 02:36:51 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -260,16 +260,9 @@ RUBY_GENERATE_PLIST =	( \
 
 .if !empty(RUBY_NOVERSION:M[nN][oO])
 # Common macros.
-.if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[0-9].*)
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M1.[0-9].*)
 PTHREAD_OPTS+=  native
 .include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=	--disable-pthread
-.else
-CONFIGURE_ARGS+=	--enable-pthread
-.endif
-.endif
 .endif
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
