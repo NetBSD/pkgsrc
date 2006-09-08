@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2006/08/31 18:44:36 martti Exp $
+# $NetBSD: Makefile.common,v 1.64 2006/09/08 06:18:28 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -24,7 +24,9 @@ PATCHFILES+=		7.0.041 7.0.042 7.0.043 7.0.044 7.0.046 7.0.047 7.0.048
 PATCHFILES+=		7.0.049 7.0.050 7.0.051 7.0.052 7.0.053 7.0.054 7.0.055
 PATCHFILES+=		7.0.056 7.0.058 7.0.059 7.0.060 7.0.061 7.0.062 7.0.063
 PATCHFILES+=		7.0.064 7.0.066 7.0.067 7.0.068 7.0.069 7.0.070 7.0.071
-PATCHFILES+=		7.0.072 7.0.073 7.0.075 7.0.076
+PATCHFILES+=		7.0.072 7.0.073 7.0.075 7.0.076 7.0.077 7.0.078 7.0.079
+PATCHFILES+=		7.0.080 7.0.081 7.0.082 7.0.083 7.0.084 7.0.085 7.0.086
+PATCHFILES+=		7.0.087 7.0.088 7.0.089 7.0.090 7.0.091
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
@@ -63,3 +65,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
 DEPENDS+=		cscope-[0-9]*:../../devel/cscope
 CONFIGURE_ARGS+=	--enable-cscope
 .endif
+
+post-patch:
+	${FIND} ${WRKDIR} -name '*.orig_dist' -exec ${RM} {} \;
