@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2004/11/18 16:15:35 adam Exp $
+$NetBSD: patch-ad,v 1.4 2006/09/08 08:28:06 joerg Exp $
 
---- Makefile.in.orig	2004-08-02 23:20:09.000000000 +0000
+--- Makefile.in.orig	2004-08-03 01:20:09.000000000 +0200
 +++ Makefile.in
 @@ -169,7 +169,7 @@ program_transform_name = @program_transf
  sbindir = @sbindir@
@@ -43,3 +43,21 @@ $NetBSD: patch-ad,v 1.3 2004/11/18 16:15:35 adam Exp $
  	done
  
  uninstall-povconfDATA:
+@@ -813,17 +813,6 @@ install-data-local:
+ 	for f in $$filelist ; do \
+ 	  $(INSTALL_DATA) $(top_srcdir)/doc/$$f $(DESTDIR)$(povdocdir)/$$f ; \
+ 	done
+-	@echo "Copying user configuration and INI files..."; \
+-	$(mkinstalldirs) $(povconfuser); \
+-	filelist='povray.conf povray.ini'; \
+-	for f in $$filelist ; do \
+-	  if test -e $(povconfuser)/$$f; then \
+-	    echo "Creating backup of $(povconfuser)/$$f"; \
+-	    mv -f $(povconfuser)/$$f $(povconfuser)/$$f.bak; \
+-	  fi; \
+-	done; \
+-	$(INSTALL_DATA) $(top_srcdir)/povray.conf $(povconfuser)/povray.conf ; \
+-	$(INSTALL_DATA) $(top_builddir)/povray.ini $(povconfuser)/povray.ini
+ 
+ # For 'make uninstall' we remove the whole POV-Ray data directory.
+ # We have to use uninstall-local and not uninstall-data-local.
