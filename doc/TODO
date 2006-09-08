@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5428 2006/09/07 23:34:12 wiz Exp $
+$NetBSD: TODO,v 1.5429 2006/09/08 13:11:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -766,6 +766,7 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openal-0.0.8
+	o openbox-3.3.1
 	o opencdk-0.5.9
 	o opencobol-0.31
 	o openexr-1.3.0
@@ -1075,7 +1076,7 @@ Suggested package updates
 	o rar-bin-3.6.0
 	o rat-4.2.25
 	o rayshade-4.0.6
-	o rblcheck-1.5
+	o rblcheck-1.5 [pkg/34492]
 	o rc-1.7.1
 	o rdp-1.6
 	o regionset-0.2
