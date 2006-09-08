@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1235 2006/09/08 06:20:52 martti Exp $
+$NetBSD: CHANGES-2006,v 1.1236 2006/09/08 13:04:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4243,3 +4243,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/ruby-byaccr to 0.1nb2 [taca 2006-09-07]
 	Updated net/ORBit2 to 2.14.3 [jmmv 2006-09-07]
 	Updated editors/vim-share to 7.0.91 [martti 2006-09-08]
+	Updated graphics/p5-Image-ExifTool to 6.36 [gdt 2006-09-08]
