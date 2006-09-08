@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.672 2006/08/31 06:49:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.673 2006/09/08 07:45:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1781,7 +1781,7 @@ use constant regex_dependency_gt => qr"^((?:\$\{[\w_]+\}|[\w_]|-[^\d])+)>=(.*)$"
 use constant regex_dependency_wildcard
 				=> qr"^((?:\$\{[\w_]+\}|[\w_]|-[^\d\[])+)-(?:\[0-9\]|\d.*)$";
 use constant regex_gnu_configure_volatile_vars
-				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
+				=> qr"^(?:.*_)?(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
 use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
@@ -3649,6 +3649,9 @@ sub checkline_other_absolute_pathname($$) {
 		} elsif ($before =~ qr"\+\s*[\"']$") {
 			# Something like foodir + '/lib'
 
+		} elsif ($before =~ qr"\w$") {
+			# Something like $dir/lib
+
 		} else {
 			$opt_debug_misc and $line->log_debug("before=${before}");
 			checkword_absolute_pathname($line, $path);
@@ -4423,8 +4426,8 @@ sub checkline_mk_shelltext($$) {
 				"the many INSTALL_*_DIR macros is appropriate, since INSTALLATION_DIRS",
 				"takes care of that.",
 				"",
-				"Note that you should only do this if the package creates _all_ directories",
-				"it needs before trying to install files into them.");
+				"Note that you should only do this if the package creates _all_",
+				"directories it needs before trying to install files into them.");
 		}
 
 		if ($state == SCST_INSTALL_DIR2 && $shellword =~ qr"^\$") {
