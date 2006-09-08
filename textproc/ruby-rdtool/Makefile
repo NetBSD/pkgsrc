@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/09 14:07:29 taca Exp $
+# $NetBSD: Makefile,v 1.25 2006/09/08 02:38:08 taca Exp $
 
 DISTNAME=	rdtool-0.6.20
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
 
 USE_RUBY_SETUP=	yes
-REPLACE_RUBY=	bin/rd2 bin/rdswap.rb
+REPLACE_RUBY=	bin/rd2 bin/rdswap
 
 CONF_FILES+=	${RUBY_SITELIBDIR}/rd/dot.rd2rc ${PKG_SYSCONFDIR}/dot.rd2rc
 
