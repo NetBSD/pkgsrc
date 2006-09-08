@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/09/08 07:49:36 joerg Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -12,8 +12,6 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
 COMMENT=	3D shoot-em-up for 8-bit X11 displays
 
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-
 LICENSE=	xdoom-license
 
 EXTRACT_ONLY=		doomsrc.zip
@@ -21,7 +19,7 @@ EXTRACT_OPTX_ZIP=	-qo
 
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
-USE_TOOLS+=	gmake gunzip
+USE_TOOLS+=	gmake gunzip tar unzip
 MAKE_ENV+=	X11BASE=${X11BASE:Q} INSTALL_PREFIX=${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
