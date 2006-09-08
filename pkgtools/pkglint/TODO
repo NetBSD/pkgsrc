@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.51 2006/07/04 10:01:06 rillig Exp $
+$NetBSD: TODO,v 1.52 2006/09/08 07:45:40 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -33,3 +33,4 @@ include the name of an example package where a warning should occur.
   SedCommand.
 * Invent an annotation scheme for files that intentionally define
   variables for use in other files.
+* Check all the shell commands to see if they are mentioned in USE_TOOLS.
