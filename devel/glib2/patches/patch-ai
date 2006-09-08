@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.7 2006/09/08 09:32:57 joerg Exp $
+
+--- glib/gtimer.c.orig	2006-09-08 09:11:08.000000000 +0000
++++ glib/gtimer.c
+@@ -91,12 +91,17 @@ init_posix_clock (void)
+   if (!initialized)
+     {
+       initialized = TRUE;
++#if defined(__DragonFly__)
++     /* DragonFly has a monotonic clock, but not the define or sysconf support */
++     posix_clock = CLOCK_MONOTONIC;
++#else
+ #if !defined(_POSIX_MONOTONIC_CLOCK) || _POSIX_MONOTONIC_CLOCK >= 0
+       if (sysconf (_SC_MONOTONIC_CLOCK) >= 0)
+ 	posix_clock = CLOCK_MONOTONIC;
+       else
+ #endif
+ 	posix_clock = CLOCK_REALTIME;
++#endif
+     }
+ }
+ #endif
