@@ -1,13 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:09 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/09/09 12:52:11 obache Exp $
 
-SHA1 (ald-0.0.19d.tar.gz) = f8cd960ad0296c973335dbe093092f74b977364d
-RMD160 (ald-0.0.19d.tar.gz) = d93f7712495baca9818695c199e634a460676c40
-Size (ald-0.0.19d.tar.gz) = 241910 bytes
-SHA1 (patch-aa) = 465765e0e4d71221b4b81969ede83676ca8eac16
-SHA1 (patch-ab) = 51c4675bc434695b6a2bd3f3ab5ffca374e5e0eb
-SHA1 (patch-ac) = eedeb2d00cc32721d644022ec8880e181748ec99
-SHA1 (patch-ad) = e1915de0720043466e0401a92a9235a041205705
-SHA1 (patch-ae) = 7fad65a5f096d59df43e2517c5c63417e4c69891
-SHA1 (patch-af) = 94ff5b54a5d5348ca8763c9ec7fc2cd4bd740f63
-SHA1 (patch-ag) = 2da6c364f782ae406acaffc0cfa9f4f2e233e70b
-SHA1 (patch-ah) = f02fb5a82f8235ddc230788c1bd5dc4104661e70
+SHA1 (ald-0.1.7.tar.gz) = e9734b434047a3e4b0d8aed48f017bdf12f27039
+RMD160 (ald-0.1.7.tar.gz) = 37a2049005fd7101f69e26212e814ebca14dfdbf
+Size (ald-0.1.7.tar.gz) = 665998 bytes
