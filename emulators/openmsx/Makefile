@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/09/09 02:41:59 obache Exp $
 #
 
 DISTNAME=		openmsx-0.5.2
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
 
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 CONFIGURE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
 MAKE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/11 13:31:33 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/09 02:41:55 obache Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	1
@@ -29,7 +29,7 @@ BUILD_TARGET=	depend all
 ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
 LIB_TARGET=	depend lib
 LIBSRC=		${WRKDIR}/spunk
-MAKEFILE=	make/freebsd-x.mak
+MAKE_FILE=	make/freebsd-x.mak
 
 INSTALLATION_DIRS=	bin
 
@@ -42,7 +42,7 @@ post-extract:
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${LIBSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} \
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} \
 	  ${LIB_TARGET}
 
 do-install:

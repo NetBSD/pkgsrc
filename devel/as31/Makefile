@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/20 22:08:36 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/09 02:41:56 obache Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | \
 		${SED} '1,/^.! \/bin\/sh/d' | ${SH}
 USE_TOOLS+=	yacc
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 BUILD_TARGET=	as31
 
 INSTALLATION_DIRS=	bin man/man1

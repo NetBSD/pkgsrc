@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/27 02:44:02 hamajima Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/09 02:42:01 obache Exp $
 #
 
 DISTNAME=	pwc-9.0.2
@@ -21,7 +21,7 @@ do-build:
 	for f in phpsshot phpsview ; do				\
 		cd ${WRKSRC}/2.4 && ${SETENV} ${MAKE_ENV}	\
 		NOGCCERROR=					\
-		${MAKE_PROGRAM} -f ${MAKEFILE}.$$f ;		\
+		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f ;		\
 	done
 
 do-install:
