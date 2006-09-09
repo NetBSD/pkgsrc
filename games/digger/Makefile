@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/15 13:31:28 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:42:00 obache Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -14,10 +14,10 @@ COMMENT=		Digger Remastered
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS:MLinux}
-MAKEFILE=		Makefile.sdl
+MAKE_FILE=		Makefile.sdl
 USE_TOOLS+=		gmake
 .else
-MAKEFILE=		Makefile.fbsd
+MAKE_FILE=		Makefile.fbsd
 MAKE_FLAGS+=		-DSDL
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:35 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/09 02:41:59 obache Exp $
 
 DISTNAME=		ia64sim
 PKGNAME=		ia64sim-0.3
@@ -14,7 +14,7 @@ COMMENT=		IA64 simulator (Intel(R) Architecture 64)
 USE_TOOLS+=		gmake
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-MAKEFILE=		makefile.unx
+MAKE_FILE=		makefile.unx
 INSTALLATION_DIRS=	bin
 
 do-install:

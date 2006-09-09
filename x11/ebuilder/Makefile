@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/05/19 08:14:38 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/09/09 02:46:09 obache Exp $
 #
 
 DISTNAME=	ebuilder-0.56d
@@ -13,7 +13,7 @@ COMMENT=	GUI builder for the Qt library
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	c++
 USE_TOOLS+=	flex gmake
-MAKEFILE=	GNUmakefile
+MAKE_FILE=	GNUmakefile
 
 MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:M*:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/06 15:11:00 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2006/09/09 02:41:54 obache Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		3
@@ -12,7 +12,7 @@ COMMENT=		Specialized compressor for XML
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 USE_LANGUAGES=		c c++
 
 LICENSE=		xmill-license
