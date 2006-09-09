@@ -1,8 +1,19 @@
-$NetBSD: irix5.patch,v 1.1 2006/04/10 13:38:36 schwarz Exp $
+$NetBSD: irix5.patch,v 1.2 2006/09/09 20:31:46 schwarz Exp $
 
---- sgi.cf.orig	2005-12-05 16:32:49.000000000 +0100
-+++ sgi.cf	2005-12-05 16:31:59.000000000 +0100
-@@ -188,7 +188,7 @@
+--- sgi.cf.orig	2006-09-09 17:13:25.000000000 +0200
++++ sgi.cf	2006-09-09 17:52:40.000000000 +0200
+@@ -178,8 +178,10 @@
+ #define AsCmd $(TOOLROOT)/usr/bin/as
+ #define CcCmd $(TOOLROOT)/usr/bin/cc
+ #ifdef UseInstalled
++#ifndef InstallCmd
+ #define InstallCmd bsdinst
+ #endif
++#endif
+ #ifndef LdCmd
+ #define LdCmd $(TOOLROOT)/usr/bin/ld
+ #endif
+@@ -188,12 +190,14 @@
   * Actually, it doesn't matter what MakeCmd is, since we don't use it.
   * We assume that $(MAKE) gets set for us by make.
   */
@@ -11,7 +22,14 @@ $NetBSD: irix5.patch,v 1.1 2006/04/10 13:38:36 schwarz Exp $
  #define TroffCmd psroff -t
  
  #define StandardIncludes -nostdinc -I$(ROOT)/usr/include
-@@ -252,23 +252,25 @@
+ 
++#ifndef ExtraLibraries
+ #define ExtraLibraries /**/
++#endif
+ 
+ /*
+  * If we specify -nostdlib, we must supply the complete library
+@@ -252,23 +256,25 @@
  #define ManSuffix	1
  #define LibManSuffix	3
  
@@ -44,7 +62,7 @@ $NetBSD: irix5.patch,v 1.1 2006/04/10 13:38:36 schwarz Exp $
  
  /*
   * MANPACKAGE is the directory inside of cat? or man? that man pages should
-@@ -281,22 +283,22 @@
+@@ -281,22 +287,22 @@
   * InstallManPageLong - misc changes for sgi.
   */
  #define InstallManPageLong(file,destdir,dest)				@@\
@@ -73,3 +91,16 @@ $NetBSD: irix5.patch,v 1.1 2006/04/10 13:38:36 schwarz Exp $
  
  /*
   * InstallManPageAliases - generate rules to install manual page aliases.
+--- sgiLib.rules.orig	2006-09-09 20:47:39.000000000 +0200
++++ sgiLib.rules	2006-09-09 20:49:47.000000000 +0200
+@@ -97,8 +97,8 @@
+ 	$(INSTALL) -c $(INSTLIBFLAGS) Concat4(lib,libname,.so,rev) \	@@\
+ 		$(DESTDIR)dest ; \					@@\
+ 	STR=rev; if [ -n "$${STR}" ]; then \				@@\
+-	    $(INSTALL) -c -l Concat4(lib,libname,.so,rev)  \		@@\
+-		Concat3(lib,libname,.so) $(DESTDIR)dest ; \		@@\
++	    $(LN) Concat4(lib,libname,.so,rev)  \			@@\
++		$(DESTDIR)dest/Concat3(lib,libname,.so) ; \		@@\
+ 	fi
+ 
+ /*

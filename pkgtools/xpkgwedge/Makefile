@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/08/03 17:35:12 tv Exp $
+# $NetBSD: Makefile,v 1.69 2006/09/09 20:31:46 schwarz Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
@@ -53,12 +53,15 @@ PLIST_SUBST+=		IS_DARWIN="@comment "
 PLIST_SUBST+=		IS_IRIX=
 USE_TOOLS+=		patch
 . if !empty(OS_VERSION:M6*)
+PLIST_SUBST+=		IS_IRIX5="@comment "
 PLIST_SUBST+=		IS_IRIX6=
 . else
+PLIST_SUBST+=		IS_IRIX5=
 PLIST_SUBST+=		IS_IRIX6="@comment "
 . endif
 .else
 PLIST_SUBST+=		IS_IRIX="@comment "
+PLIST_SUBST+=		IS_IRIX5="@comment "
 PLIST_SUBST+=		IS_IRIX6="@comment "
 .endif
 
@@ -105,6 +108,7 @@ do-install:
 		${INSTALL_DATA} ${X11BASE}/lib/X11/config/X11.rules ${PREFIX}/lib/X11/config; \
 		cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix6.patch; \
 	else \
+		${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgiLib.rules ${PREFIX}/lib/X11/config; \
 		cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix5.patch; \
 	fi; \
 	;; \
