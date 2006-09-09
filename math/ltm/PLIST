@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/30 13:49:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/09 09:35:10 obache Exp $
 include/tommath.h
+include/tommath_class.h
+include/tommath_superclass.h
 lib/libtommath.a
 share/doc/ltm/bn.pdf
 share/doc/ltm/poster.pdf
