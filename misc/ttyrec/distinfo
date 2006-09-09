@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:58 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/09/09 13:48:02 obache Exp $
 
-SHA1 (ttyrec-1.0.4.tar.gz) = 5bcb1cbbca3fee3ce1876cc2c0584b8984df58ea
-RMD160 (ttyrec-1.0.4.tar.gz) = e7c6c2d0fd7100103d34e0a6d08f963e9e7872b0
-Size (ttyrec-1.0.4.tar.gz) = 6341 bytes
-SHA1 (patch-aa) = f08dcddcfbcf68131a1e9e9086bffc2016ae702a
+SHA1 (ttyrec-1.0.8.tar.gz) = 645f1e2a1ac4b2a32ad314711fb3da014ce9684d
+RMD160 (ttyrec-1.0.8.tar.gz) = f7538fa742d1c1e07b8b48f3fa79cfcf13ca8044
+Size (ttyrec-1.0.8.tar.gz) = 8528 bytes
+SHA1 (patch-aa) = 92efba673741631b4e6c5fff09039468acd75198
