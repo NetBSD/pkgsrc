@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1240 2006/09/09 05:04:07 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1241 2006/09/09 09:37:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4249,3 +4249,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/icon-naming-utils version 0.8.1 [jmmv 2006-09-08]
 	Updated devel/libslang to 1.4.9nb5 [kristerw 2006-09-08]
 	Updated www/zope29 to 2.9.4nb2 [taca 2006-09-09]
+	Updated math/ltm to 0.39 [obache 2006-09-09]
