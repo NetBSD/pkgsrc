@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.27 2006/07/02 23:34:03 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.28 2006/09/09 23:50:20 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -108,8 +108,7 @@ with each package.</para>
 
   <listitem>
     <para><filename role="pkg">pkgtools/mtree</filename>: Installed on
-      non-BSD systems due to lack of native mtree.
-  </para>
+      non-BSD systems due to lack of native mtree.</para>
   </listitem>
 
   <listitem>
@@ -266,12 +265,16 @@ that allow finer tuning of the tree layout.</para>
 enable this feature by adding the option
 <varname>PKG_RESUME_TRANSFERS=YES</varname> into
 <filename>/etc/mk.conf</filename>.  If, during a fetch step, an incomplete
-distfile is found, pkgsrc will try to resume it.</para> <para>You can also
+distfile is found, pkgsrc will try to resume it.</para>
+
+<para>You can also
 use a different program than the default &man.ftp.1; by changing the
 <varname>FETCH_CMD</varname> variable.  Don't forget to set
 <varname>FETCH_RESUME_ARGS</varname> and
 <varname>FETCH_OUTPUT_ARGS</varname> if you are not using default
-values.</para> <para>For example, if you want to use
+values.</para>
+
+<para>For example, if you want to use
 <filename>wget</filename> to resume downloads, you'll have to use something
 like:</para>
 
@@ -315,8 +318,7 @@ you will have to add the following line into
 </programlisting>
 
 <note><para>The DragonFly operating system defaults to using
-this X.org X11 implementation from pkgsrc.
-</para></note>
+this X.org X11 implementation from pkgsrc.</para></note>
 
 </sect1>
 
@@ -443,7 +445,7 @@ environment or in <filename>/etc/mk.conf</filename>.</para>
 <sect1 id="bsd.own.mk-missing">
 <title>What does <quote>Could not find bsd.own.mk</quote> mean?</title>
 
-<para> You didn't install the compiler set, <filename>comp.tgz</filename>,
+<para>You didn't install the compiler set, <filename>comp.tgz</filename>,
 when you installed your NetBSD machine.  Please get and install it, by
 extracting it in <filename>/</filename>:</para>
 
@@ -549,10 +551,10 @@ package is strongly recommended!  After
 the package's message, which you can get by running <userinput>pkg_info -D
 audit-packages</userinput>.</para>
 
-<para>If this package is installed, pkgsrc builds will use it to perform
-a security check before building any package.  See
-<xref linkend="variables-affecting-build"/> for ways to control this check.
-</para>
+<para>If this package is installed, pkgsrc builds will use it to
+perform a security check before building any package.  See <xref
+linkend="variables-affecting-build"/> for ways to control this
+check.</para>
 
 </sect1>
 
