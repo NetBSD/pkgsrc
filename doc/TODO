@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5429 2006/09/08 13:11:40 wiz Exp $
+$NetBSD: TODO,v 1.5430 2006/09/09 05:06:40 taca Exp $
 
 Suggested new packages
 ======================
@@ -343,6 +343,7 @@ Suggested package updates
 	o beacon-1.3
 	o benchfft-3.1
 	o bind-8.4.7
+	o bind-9.3.3
 	o binutils-2.17
 	o bioperl-1.5.0
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
@@ -1101,7 +1102,7 @@ Suggested package updates
 	o ruby-1.8.5
 	o ruby-cmd-0.8.0
 	o sablecc-3.2
-	o samba-3.0.23a
+	o samba-3.0.23c
 	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
