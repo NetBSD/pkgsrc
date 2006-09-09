@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/06/07 23:52:17 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/09 02:41:55 obache Exp $
 #
 
 DISTNAME=		gplcver-2.11a.src
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.pragmatic-c.com/gpl-cver/
 COMMENT=		Verilog simulator
 
 BUILD_DIRS=		src
-MAKEFILE=		makefile.freebsd
+MAKE_FILE=		makefile.freebsd
 BUILDLINK_LIBS.dl=	${BUILDLINK_LDADD.dl}
 
 .include "../../mk/dlopen.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/04 11:27:44 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/09/09 02:43:10 obache Exp $
 
 DISTNAME=		ntl-5.3.1
 PKGREVISION=		1
@@ -13,7 +13,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

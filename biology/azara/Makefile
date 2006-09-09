@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:20 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/09 02:41:55 obache Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -13,7 +13,7 @@ COMMENT=		Programs to process and view NMR data
 
 WRKSRC=			${WRKDIR}/azara-2.7
 
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 do-install:
 .for PROG in azara \

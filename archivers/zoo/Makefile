@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/07/19 19:34:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.28 2006/09/09 02:41:54 obache Exp $
 
 DISTNAME=	zoo-2.10pl1
 PKGNAME=	zoo-2.10.1
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
 BUILD_TARGET=	bsdansi
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 INSTALLATION_DIRS=	bin man/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:41:57 obache Exp $
 #
 
 DISTNAME=	gnustep-objc-1.3.0
@@ -12,7 +12,7 @@ COMMENT=	Objective-C runtime
 
 USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake
-MAKEFILE=	GNUmakefile
+MAKE_FILE=	GNUmakefile
 NO_CONFIGURE=	YES
 
 .include "../../devel/gnustep-make/buildlink3.mk"
