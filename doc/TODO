@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5430 2006/09/09 05:06:40 taca Exp $
+$NetBSD: TODO,v 1.5431 2006/09/09 12:55:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -293,7 +293,6 @@ Suggested package updates
 	o aewm++-1.0.27
 	o afterstep-2.2.2
 	o album-3.12
-	o ald-0.1.6 [pkg/26552]
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amanda-2.5.0
