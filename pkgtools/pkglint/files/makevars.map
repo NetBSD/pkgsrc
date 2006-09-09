@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.137 2006/09/08 07:45:36 rillig Exp $
+# $NetBSD: makevars.map,v 1.138 2006/09/09 08:46:26 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -384,12 +384,12 @@ MACHINE_ARCH		Identifier [$system]
 MACHINE_GNU_PLATFORM	PlatformTriple [$system]
 MAINTAINER		Mail_Address [m:s,c:ds]
 MAKE			ShellCommand [$system]
-MAKEFILE		Pathname [$package]
 MAKEFLAGS		List of ShellWord [$package_list]
 MAKEVARS		List of Varname [builtin.mk:a,b:a,h:a]
 MAKE_DIRS		List of Pathname [$package_list]
 MAKE_DIRS_PERMS		List of ShellWord [$package_list]
 MAKE_ENV		List of ShellWord [$package_list]
+MAKE_FILE		Pathname [$package]
 MAKE_FLAGS		List of ShellWord [$package_list]
 MAKE_PROGRAM		ShellCommand [$system]
 MANCOMPRESSED		YesNo [m:s,c:ds]
