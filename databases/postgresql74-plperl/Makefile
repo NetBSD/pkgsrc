@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/21 20:23:49 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/09 02:41:56 obache Exp $
 
 PKGNAME=		postgresql74-plperl-${BASE_VERS}
 COMMENT=		PL/Perl procedural language for the PostgreSQL backend
@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-perl
 
 BUILD_DIRS=		${WRKSRC}/src/pl/plperl
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 
 .include "../../databases/postgresql74-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/06/06 15:04:42 joerg Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/09/09 02:41:56 obache Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -31,7 +31,7 @@ BASE_VERS?=		${DIST_VERS}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"

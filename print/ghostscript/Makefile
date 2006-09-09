@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/06/14 10:39:01 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/09 02:46:08 obache Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 PKGREVISION=		8
@@ -128,7 +128,7 @@ DISTFILES+=		${GDI_DRV}.tar.gz
 EXTRACT_ONLY+=		${GDI_DRV}.tar.gz
 
 DIST_SUBDIR=		ghostscript
-MAKEFILE=		src/unix-gcc.mak
+MAKE_FILE=		src/unix-gcc.mak
 BUILD_TARGET=		std
 
 MAKEFRAGS=		${FILESDIR}/devs.nox11

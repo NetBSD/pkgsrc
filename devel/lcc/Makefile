@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/09 02:41:58 obache Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 BUILDDIR=	${WRKSRC}/src
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 INSTALLATION_DIRS=	bin libexec man/man1
 

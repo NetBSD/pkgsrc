@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:09 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/09 02:43:11 obache Exp $
 #
 
 DISTNAME=	ulinuxgnu
@@ -12,7 +12,7 @@ MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://ibutton.com/
 COMMENT=	1-Wire Public Domain Kit Version 2.00
 
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 WRKSRC=		${WRKDIR}
 
 SCRIPTS_ENV+=   SED=${SED}

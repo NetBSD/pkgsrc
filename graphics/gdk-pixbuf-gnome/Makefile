@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2006/09/09 02:42:01 obache Exp $
 
 .include "../../graphics/gdk-pixbuf/Makefile.common"
 
@@ -27,7 +27,7 @@ do-install:
 	${SH} ../libtool --mode=install ${INSTALL_DATA} \
 	  libgnomecanvaspixbuf.la ${PREFIX}/lib
 	cd ${WRKSRC}/doc && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} \
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} \
 	  ${INSTALL_TARGET}
 
 .include "../../mk/bsd.pkg.mk"

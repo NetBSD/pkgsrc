@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/06 06:21:58 reed Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:41:59 obache Exp $
 #
 
 DISTNAME=		mdiff224
@@ -14,7 +14,7 @@ COMMENT=		Compare MAME rom sets of different releases
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 BUILD_TARGET=		mamediff
 EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin

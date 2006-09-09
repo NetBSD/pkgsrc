@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/09 02:46:08 obache Exp $
 DISTNAME=	BibTool-2.48
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
@@ -8,7 +8,7 @@ HOMEPAGE=	http://www.gerd-neugebauer.de/software/TeX/BibTool.en.html
 COMMENT=	Tool to manipulate BibTeX databases
 
 GNU_CONFIGURE=		yes
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 #CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/BibTcl
 
 REPLACE_INTERPRETER+=	tcl

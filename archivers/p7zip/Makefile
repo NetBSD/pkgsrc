@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/17 17:43:16 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/09 02:41:54 obache Exp $
 
 DISTNAME=	p7zip_4.42_src_all
 PKGNAME=	p7zip-4.42
@@ -13,7 +13,7 @@ COMMENT=	File archiver with high compression
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 NO_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 

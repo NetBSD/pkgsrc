@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/07/25 15:33:38 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/09/09 02:43:10 obache Exp $
 
 DISTNAME=	tochnog-20010429
 CATEGORIES=	math
@@ -12,7 +12,7 @@ COMMENT=	Finite Element Analysis Program
 WRKSRC=		${WRKDIR}/tochnog/src
 DIST_SUBDIR=	${DISTNAME}
 EXTRACT_ONLY=	tn.tar.gz
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 BUILD_TARGET=	netbsd
 
 MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/17 20:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:42:00 obache Exp $
 #
 
 DISTNAME=	raines-0.43.3
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake perl:run pkg-config
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 MAKE_ENV+=	OSTYPE=linux
 REPLACE_PERL=	makedep
 PTHREAD_OPTS+=	require

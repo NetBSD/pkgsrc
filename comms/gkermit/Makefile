@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/18 23:18:40 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/09/09 02:41:55 obache Exp $
 #
 
 DISTNAME=	gku100
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	posix
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 MAKE_ENV+=	KFLAGS=${CFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"

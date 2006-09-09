@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/05/14 17:16:42 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/09/09 02:41:58 obache Exp $
 #
 
 DISTNAME=	manedit-0.5.6
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	CPP=${CXX:Q}
 
 # The FreeBSD makefile may be used as "generic UNIX".
-MAKEFILE=	Makefile.FreeBSD
+MAKE_FILE=	Makefile.FreeBSD
 
 INSTALLATION_DIRS=	bin man/man1 man/man7
 

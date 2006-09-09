@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/06 06:21:58 reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/09/09 02:41:59 obache Exp $
 #
 
 DISTNAME=		dutil227
@@ -14,7 +14,7 @@ COMMENT=		Create and convert emulator rom checksum files
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 BUILD_TARGET=		datutil
 EXTRACT_OPTS_ZIP=	-Laaqo
 

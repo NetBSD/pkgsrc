@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/08 06:22:51 snj Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/09 02:46:08 obache Exp $
 
 DISTNAME=	diffstat-1.41
 CATEGORIES=	textproc
@@ -11,6 +11,6 @@ COMMENT=	Display a histogram of diff changes
 
 GNU_CONFIGURE=	YES
 
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 .include "../../mk/bsd.pkg.mk"

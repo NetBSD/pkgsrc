@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:03 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/09 02:46:08 obache Exp $
 #
 
 DISTNAME=	luaexpat-1.0a
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.tecgraf.puc-rio.br/~diego/luasocket/new/
 COMMENT=	XML parser for LUA based on expat
 
 USE_TOOLS+=	gmake
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 INSTALLATION_DIRS=	lib
 

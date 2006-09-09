@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/19 02:28:52 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/09 02:43:09 obache Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -12,7 +12,7 @@ HOMEPAGE=		http://people.delphi.com/gjc/siod.html
 COMMENT=		Small-footprint implementation of the Scheme programming language
 
 WRKSRC=			${WRKDIR}
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 BUILD_TARGET=		${OPSYS}
 MAKE_ENV+=		CC=${CC:Q}
 CPPFLAGS+=		-Dunix=1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/20 22:10:45 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/09 02:41:58 obache Exp $
 #
 
 DISTNAME=	tavrasm
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 WRKSRCTOP=	${WRKDIR}/${PKGNAME_NOREV:S/.//:S/-/./}
 WRKSRC=		${WRKSRCTOP}/src
 USE_TOOLS+=	lex
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/03/04 21:29:33 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/09/09 02:41:58 obache Exp $
 
 DISTNAME=		vile-9.5
 CATEGORIES=		editors
@@ -18,7 +18,7 @@ USE_TOOLS+=		perl:run
 
 CPPFLAGS.NetBSD+=	-DMISSING_EXTERN_ENVIRON
 
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 INSTALL_TARGET=		install install-perl
 
 DATADIR=		${PREFIX}/share/vile

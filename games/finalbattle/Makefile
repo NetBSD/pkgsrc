@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/09 02:42:00 obache Exp $
 #
 
 DISTNAME=	finalbattle.0.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/finalbattle/
 COMMENT=	Multiplayer space battle simulation for X
 
 WRKSRC=		${WRKDIR}/final
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 USE_X11BASE=	yes
 

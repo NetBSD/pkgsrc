@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/08 21:08:14 tron Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:43:09 obache Exp $
 
 DISTNAME=	js-1.5
 PKGNAME=	${DISTNAME:S/js/spidermonkey/}
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/js/src
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-MAKEFILE=	Makefile.ref
+MAKE_FILE=	Makefile.ref
 
 INSTALLATION_DIRS=	bin include lib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:42:01 obache Exp $
 #
 
 DISTNAME=	ov51x-1.65-1.11-mark
@@ -21,13 +21,13 @@ do-build:
 	for f in ov519shot ov519view ; do               \
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}   \
 		NOGCCERROR=                             \
-		${MAKE_PROGRAM} -f ${MAKEFILE}.$$f ;    \
+		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f ;    \
 	done
 
 do-install:
 	for f in ov519shot ov519view ; do                       \
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}           \
-		${MAKE_PROGRAM} -f ${MAKEFILE}.$$f install ;    \
+		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ;    \
 	done
 
 .include "../../graphics/imlib/buildlink3.mk"
