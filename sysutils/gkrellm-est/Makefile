@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 18:31:50 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/09 18:34:49 heinz Exp $
 #
 
 DISTNAME=		gkrellm-est-20040710
@@ -14,7 +14,7 @@ NO_CONFIGURE=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-2.0[F-Z]*-i386 NetBSD-2.99.*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[3-9].*-i386
-ONLY_FOR_PLATFORM+=	DragonFly-1.7.*-i386 DragonFly-[2-9].*-i386
+ONLY_FOR_PLATFORM+=	DragonFly-1.[7-9].*-i386 DragonFly-[2-9].*-i386
 
 INSTALLATION_DIRS=	lib/gkrellm2/plugins
 
