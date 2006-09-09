@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1242 2006/09/09 12:55:25 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1243 2006/09/09 13:51:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/zope29 to 2.9.4nb2 [taca 2006-09-09]
 	Updated math/ltm to 0.39 [obache 2006-09-09]
 	Updated devel/ald to 0.1.7 [obache 2006-09-09]
+	Updated misc/ttyrec to 1.0.8 [obache 2006-09-09]
