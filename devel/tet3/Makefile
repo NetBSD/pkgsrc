@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/08 16:57:59 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/09 02:41:58 obache Exp $
 
 DISTNAME=	tet3.7-unsup.src
 PKGNAME=	tet3-3.7
@@ -23,7 +23,7 @@ REPLACE_PERL+=	contrib/NTperldemo/ts/tc2.pl contrib/NTperldemo/ts/tc3.pl
 REPLACE_PERL+=	contrib/tetreport/TetJournal.pl contrib/tetreport/TetReports.pl
 REPLACE_PERL+=	contrib/tetreport/tetreport.pl contrib/templates/perl-api.pl
 REPLACE_PERL+=	src/perl/api.pl
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tet3

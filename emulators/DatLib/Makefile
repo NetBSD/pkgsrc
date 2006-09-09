@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/09 02:41:59 obache Exp $
 #
 
 DISTNAME=		datlib215
@@ -14,7 +14,7 @@ COMMENT=		Data file library for some emulation tools
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 BUILD_TARGET=		datlib
 EXTRACT_OPTS_ZIP=	-Laaqo
 

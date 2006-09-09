@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:09:16 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/09 02:42:00 obache Exp $
 #
 
 DISTNAME=	icbm3d.0.4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/icbm3d/
 COMMENT=	3D X11 game of defense
 
 WRKSRC=		${WRKDIR}/icbm3d
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

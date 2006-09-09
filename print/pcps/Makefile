@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/12 20:57:39 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/09 02:46:08 obache Exp $
 #
 
 DISTNAME=	pcps840
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.swreg.org/soft_shop/695/shopscr3.shtml
 COMMENT=	Converts text files to PostScript(tm)
 
 WRKSRC=		${WRKDIR}
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 BUILD_TARGET=
 MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
 NO_CONFIGURE=	yes

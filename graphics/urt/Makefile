@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/17 13:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/09/09 02:42:01 obache Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -21,7 +21,7 @@ USE_LIBTOOL=	yes
 CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS+=	config/urt
 HAS_CONFIGURE=	yes
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 BUILD_TARGET=
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/05/06 03:43:04 reed Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/09 02:46:08 obache Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
@@ -19,7 +19,7 @@ PAPERSIZE?=	A4
 
 MAKE_ENV+=	PERL5=${PERL5:Q}
 MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
-MAKEFILE=	Makefile.unix
+MAKE_FILE=	Makefile.unix
 
 EGDIR=		${PREFIX}/share/examples/psutils
 CONF_FILES=	${EGDIR}/psutils.cfg ${PKG_SYSCONFDIR}/psutils.cfg

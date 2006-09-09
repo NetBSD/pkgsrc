@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/28 18:48:25 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:46:08 obache Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
@@ -11,7 +11,7 @@ COMMENT=	English-Chinese dictionary
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 USE_LANGUAGES=	c c++
 
 FONTS_DIRS.x11+=	${PREFIX}/share/stardic/hzfont

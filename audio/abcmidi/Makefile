@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/16 13:41:57 ben Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/09 02:41:54 obache Exp $
 #
 
 DISTNAME=	abcMIDI-${ABCMIDIVER}
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://ifdo.pugmarks.com/~seymour/runabc/
 EXTRACT_SUFX=	.zip
 WRKSRC=		${WRKDIR}/abcmidi
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 MAINTAINER=	ben@NetBSD.org
 HOMEPAGE=	http://abc.sourceforge.net/abcMIDI/

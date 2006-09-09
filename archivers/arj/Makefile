@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/12 08:28:19 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/09/09 02:41:53 obache Exp $
 
 DISTNAME=	arj-3.10.22
 CATEGORIES=	archivers
@@ -14,7 +14,7 @@ USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LD=${LD:Q}
 CONFIGURE_SCRIPT=	${WRKSRC}/gnu/configure
-MAKEFILE=		makefile.gnu
+MAKE_FILE=		makefile.gnu
 MAKE_FLAGS+=		INSTALL_DIR=${INSTALL_PROGRAM_DIR:Q}
 
 INSTALL_UNSTRIPPED=	yes # $LOCALBASE/bin/arj must have symbol table
