@@ -1,9 +1,9 @@
-# $NetBSD: build.mk,v 1.5 2006/07/22 16:31:35 jlam Exp $
+# $NetBSD: build.mk,v 1.6 2006/09/09 02:35:13 obache Exp $
 #
 # BUILD_MAKE_FLAGS is the list of arguments that is passed to the make
 #	process.
 #
-# BUILD_TARGET is the target from ${MAKEFILE} that should be invoked
+# BUILD_TARGET is the target from ${MAKE_FILE} that should be invoked
 #	to build the sources.
 #
 BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
@@ -97,7 +97,7 @@ do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
-		-f ${MAKEFILE} ${BUILD_TARGET}
+		-f ${MAKE_FILE} ${BUILD_TARGET}
 .  endfor
 .endif
 
