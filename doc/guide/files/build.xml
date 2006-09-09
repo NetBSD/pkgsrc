@@ -1,211 +1,211 @@
-<!-- $NetBSD: build.xml,v 1.32 2006/09/09 04:21:30 obache Exp $ -->
+<!-- $NetBSD: build.xml,v 1.33 2006/09/09 23:47:40 wiz Exp $ -->
 
 <chapter id="build">
-<title>The build process</title>
+  <title>The build process</title>
 
-<sect1 id="build.intro">
-<title>Introduction</title>
+  <sect1 id="build.intro">
+    <title>Introduction</title>
 
-<para>This chapter gives a detailed description on how a package is
-built. Building a package is separated into different
-<emphasis>phases</emphasis> (for example <varname>fetch</varname>,
-<varname>build</varname>, <varname>install</varname>), all of which are
-described in the following sections. Each phase is splitted into
-so-called <emphasis>stages</emphasis>, which take the name of the
-containing phase, prefixed by one of <varname>pre-</varname>,
-<varname>do-</varname> or <varname>post-</varname>. (Examples are
-<varname>pre-configure</varname>, <varname>post-build</varname>.) Most
-of the actual work is done in the <varname>do-*</varname> stages.</para>
+    <para>This chapter gives a detailed description on how a package is
+    built. Building a package is separated into different
+    <emphasis>phases</emphasis> (for example <varname>fetch</varname>,
+    <varname>build</varname>, <varname>install</varname>), all of which are
+    described in the following sections. Each phase is splitted into
+    so-called <emphasis>stages</emphasis>, which take the name of the
+    containing phase, prefixed by one of <varname>pre-</varname>,
+    <varname>do-</varname> or <varname>post-</varname>. (Examples are
+    <varname>pre-configure</varname>, <varname>post-build</varname>.) Most
+    of the actual work is done in the <varname>do-*</varname> stages.</para>
 
-<para>The basic steps for building a program are always the same.  First
-the program's source (<emphasis>distfile</emphasis>) must be brought to
-the local system and then extracted. After any pkgsrc-specific patches
-to compile properly are applied, the software can be configured, then
-built (usually by compiling), and finally the generated binaries, etc.
-can be put into place on the system.</para>
+    <para>The basic steps for building a program are always the same.  First
+    the program's source (<emphasis>distfile</emphasis>) must be brought to
+    the local system and then extracted. After any pkgsrc-specific patches
+    to compile properly are applied, the software can be configured, then
+    built (usually by compiling), and finally the generated binaries, etc.
+    can be put into place on the system.</para>
 
-</sect1>
+  </sect1>
 
   <sect1 id="build.prefix">
     <title>Program location</title>
 
     <para>Before outlining the process performed by the &os; package system in
-      the next section, here's a brief discussion on where programs are
-      installed, and which variables influence this.</para>
+    the next section, here's a brief discussion on where programs are
+    installed, and which variables influence this.</para>
 
     <para>The automatic variable <varname>PREFIX</varname> indicates
-      where all files of the final program shall be installed. It is
-      usually set to <varname>LOCALBASE</varname>
-      (<filename>/usr/pkg</filename>), or <varname>CROSSBASE</varname>
-      for pkgs in the <quote>cross</quote> category.  The value of
-      <varname>PREFIX</varname> needs to be put
-      into the various places in the program's source where paths to
-      these files are encoded.  See <xref
-      linkend="components.patches"/> and <xref
-      linkend="fixes.libtool"/> for more details.</para>
+    where all files of the final program shall be installed. It is
+    usually set to <varname>LOCALBASE</varname>
+    (<filename>/usr/pkg</filename>), or <varname>CROSSBASE</varname>
+    for pkgs in the <quote>cross</quote> category.  The value of
+    <varname>PREFIX</varname> needs to be put
+    into the various places in the program's source where paths to
+    these files are encoded.  See <xref
+    linkend="components.patches"/> and <xref
+    linkend="fixes.libtool"/> for more details.</para>
 
     <para>When choosing which of these variables to use,
-      follow the following rules:</para>
+    follow the following rules:</para>
 
     <itemizedlist>
       <listitem>
 	<para><varname>PREFIX</varname> always points to the location where the current
-	  pkg will be installed.  When referring to a pkg's own installation path,
-	  use <quote>${PREFIX}</quote>.</para>
+	pkg will be installed.  When referring to a pkg's own installation path,
+	use <quote>${PREFIX}</quote>.</para>
       </listitem>
 
       <listitem>
 	<para><varname>LOCALBASE</varname> is where all non-X11 pkgs are installed.
-	  If you need to construct a -I or -L argument to the compiler to find
-	  includes and libraries installed by another non-X11 pkg, use
-	  <quote>${LOCALBASE}</quote>. The name
-	  <varname>LOCALBASE</varname> stems from FreeBSD, which
-	  installed all packages in <filename>/usr/local</filename>. As
-	  pkgsrc leaves <filename>/usr/local</filename> for the system
-	  administrator, this variable is a misnomer.</para>
+	If you need to construct a -I or -L argument to the compiler to find
+	includes and libraries installed by another non-X11 pkg, use
+	<quote>${LOCALBASE}</quote>. The name
+	<varname>LOCALBASE</varname> stems from FreeBSD, which
+	installed all packages in <filename>/usr/local</filename>. As
+	pkgsrc leaves <filename>/usr/local</filename> for the system
+	administrator, this variable is a misnomer.</para>
       </listitem>
 
       <listitem>
 	<para><varname>X11BASE</varname> is where the actual X11 distribution (from
-	  xsrc, etc.) is installed. When looking for
-	  <emphasis>standard</emphasis> X11 includes (not
-	  those installed by a pkg), use <quote>${X11BASE}</quote>.</para>
+	xsrc, etc.) is installed. When looking for
+	<emphasis>standard</emphasis> X11 includes (not
+	those installed by a pkg), use <quote>${X11BASE}</quote>.</para>
       </listitem>
 
       <listitem>
 	<para>X11-based packages are special in that they may be installed in
-	  either <varname>X11BASE</varname> or <varname>LOCALBASE</varname>.</para>
+	either <varname>X11BASE</varname> or <varname>LOCALBASE</varname>.</para>
 
 	<para>Usually, X11 packages should be installed under
-	  <varname>LOCALBASE</varname> whenever possible.  Note that you will
-	  need to include <filename>../../mk/x11.buildlink3.mk</filename>
-	  in them to request the
-	  presence of X11 and to get the right compilation flags.</para>
+	<varname>LOCALBASE</varname> whenever possible.  Note that you will
+	need to include <filename>../../mk/x11.buildlink3.mk</filename>
+	in them to request the
+	presence of X11 and to get the right compilation flags.</para>
 
 	<para>Even though, there are some packages that cannot be installed
-	  under <varname>LOCALBASE</varname>: those that come with app-defaults
-	  files. These packages are special and they must be placed under
-	  <varname>X11BASE</varname>. To accomplish this, set either
-	  <varname>USE_X11BASE</varname> or <varname>USE_IMAKE</varname> in
-	  your package.</para>
+	under <varname>LOCALBASE</varname>: those that come with app-defaults
+	files. These packages are special and they must be placed under
+	<varname>X11BASE</varname>. To accomplish this, set either
+	<varname>USE_X11BASE</varname> or <varname>USE_IMAKE</varname> in
+	your package.</para>
 
 	<para>Some notes: If you need
-	  to find includes or libraries installed by a pkg that has
-	  <varname>USE_IMAKE</varname> or <varname>USE_X11BASE</varname> in
-	  its pkg <filename>Makefile</filename>, you need to look in
-	  <emphasis>both</emphasis> <filename>${X11BASE}</filename> and
-	  <filename>${LOCALBASE}</filename>. To force installation of
-	  all X11 packages in <varname>LOCALBASE</varname>, the
-	  <filename role="pkg">pkgtools/xpkgwedge</filename> package
-	  is enabled by default.</para>
+	to find includes or libraries installed by a pkg that has
+	<varname>USE_IMAKE</varname> or <varname>USE_X11BASE</varname> in
+	its pkg <filename>Makefile</filename>, you need to look in
+	<emphasis>both</emphasis> <filename>${X11BASE}</filename> and
+	<filename>${LOCALBASE}</filename>. To force installation of
+	all X11 packages in <varname>LOCALBASE</varname>, the
+	<filename role="pkg">pkgtools/xpkgwedge</filename> package
+	is enabled by default.</para>
       </listitem>
 
       <listitem>
 	<para><varname>X11PREFIX</varname> should be used to refer to the installed
-	  location of an X11 package. <varname>X11PREFIX</varname> will be set to
-	  <varname>X11BASE</varname> if xpkgwedge is not installed,
-	  and to <varname>LOCALBASE</varname> if xpkgwedge is installed.</para>
+	location of an X11 package. <varname>X11PREFIX</varname> will be set to
+	<varname>X11BASE</varname> if xpkgwedge is not installed,
+	and to <varname>LOCALBASE</varname> if xpkgwedge is installed.</para>
       </listitem>
 
       <listitem>
 	<para>If xpkgwedge is installed, it is possible to have some packages installed
-	  in <varname>X11BASE</varname> and some in <varname>LOCALBASE</varname>.
-	  To determine the prefix of an installed package, the
-	  <varname>EVAL_PREFIX</varname> definition can be used. It takes pairs in the
-	  format <quote>DIRNAME=&lt;package&gt;</quote>, and the &man.make.1; variable
-	  <varname>DIRNAME</varname> will be set to the prefix of the installed
-	  package &lt;package&gt;, or <quote>${X11PREFIX}</quote> if the package is
-	  not installed.</para>
+	in <varname>X11BASE</varname> and some in <varname>LOCALBASE</varname>.
+	To determine the prefix of an installed package, the
+	<varname>EVAL_PREFIX</varname> definition can be used. It takes pairs in the
+	format <quote>DIRNAME=&lt;package&gt;</quote>, and the &man.make.1; variable
+	<varname>DIRNAME</varname> will be set to the prefix of the installed
+	package &lt;package&gt;, or <quote>${X11PREFIX}</quote> if the package is
+	not installed.</para>
 
 	<para>This is best illustrated by example.</para>
 
 	<para>The following lines are taken from
-	  <filename>pkgsrc/wm/scwm/Makefile</filename>:</para>
+	<filename>pkgsrc/wm/scwm/Makefile</filename>:</para>
 
-<programlisting>
-    EVAL_PREFIX+=           GTKDIR=gtk+
-    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
-    CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
-    CONFIGURE_ARGS+=        --enable-multibyte
-</programlisting>
+	<programlisting>
+	  EVAL_PREFIX+=           GTKDIR=gtk+
+	  CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
+	  CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
+	  CONFIGURE_ARGS+=        --enable-multibyte
+	</programlisting>
 
 	<para>Specific defaults can be defined for the packages evaluated using
-	  <varname>EVAL_PREFIX</varname>, by using a definition of the form:</para>
+	<varname>EVAL_PREFIX</varname>, by using a definition of the form:</para>
 
-<programlisting>
-    GTKDIR_DEFAULT= ${LOCALBASE}
-</programlisting>
+	<programlisting>
+	  GTKDIR_DEFAULT= ${LOCALBASE}
+	</programlisting>
 
 	<para>where <varname>GTKDIR</varname> corresponds
-	  to the first definition in
-	  the <varname>EVAL_PREFIX</varname> pair.</para>
+	to the first definition in
+	the <varname>EVAL_PREFIX</varname> pair.</para>
       </listitem>
 
       <listitem>
-        <para>Within <filename>${PREFIX}</filename>, packages should
-          install files according to &man.hier.7;, with the exception that
-          manual pages go into <filename>${PREFIX}/man</filename>, not
-          <filename>${PREFIX}/share/man</filename>.</para>
+	<para>Within <filename>${PREFIX}</filename>, packages should
+	install files according to &man.hier.7;, with the exception that
+	manual pages go into <filename>${PREFIX}/man</filename>, not
+	<filename>${PREFIX}/share/man</filename>.</para>
       </listitem>
     </itemizedlist>
   </sect1>
 
-<sect1 id="build.builddirs">
-<title>Directories used during the build process</title>
+  <sect1 id="build.builddirs">
+    <title>Directories used during the build process</title>
 
-<para>When building a package, a number of directories is used to store
-source files, temporary files, pkgsrc-internal files, and so on. These
-directories are explained here.</para>
+    <para>When building a package, a number of directories is used to store
+    source files, temporary files, pkgsrc-internal files, and so on. These
+    directories are explained here.</para>
 
-<para>Some of the directory variables contain relative pathnames. There
-are two common base directories for these relative directories:
-<varname>PKGSRCDIR/PKGPATH</varname> is used for directories that are
-pkgsrc-specific. <varname>WRKSRC</varname> is used for directories
-inside the package itself.</para>
+    <para>Some of the directory variables contain relative pathnames. There
+    are two common base directories for these relative directories:
+    <varname>PKGSRCDIR/PKGPATH</varname> is used for directories that are
+    pkgsrc-specific. <varname>WRKSRC</varname> is used for directories
+    inside the package itself.</para>
 
-<variablelist>
+    <variablelist>
 
-<varlistentry><term><varname>PKGSRCDIR</varname></term>
-<listitem><para>This is an absolute pathname that points to the pkgsrc
-root directory. Generally, you don't need
-it.</para></listitem></varlistentry>
+      <varlistentry><term><varname>PKGSRCDIR</varname></term>
+      <listitem><para>This is an absolute pathname that points to the pkgsrc
+      root directory. Generally, you don't need
+      it.</para></listitem></varlistentry>
 
-<varlistentry><term><varname>PKGPATH</varname></term>
-<listitem><para>This is a pathname relative to
-<varname>PKGSRCDIR</varname> that points to the current
-package.</para></listitem></varlistentry>
+      <varlistentry><term><varname>PKGPATH</varname></term>
+      <listitem><para>This is a pathname relative to
+      <varname>PKGSRCDIR</varname> that points to the current
+      package.</para></listitem></varlistentry>
 
-<varlistentry><term><varname>WRKDIR</varname></term>
-<listitem><para>This is an absolute pathname pointing to the directory
-where all work takes place. The distfiles are extraced to this
-directory. It also contains temporary directories and log files used by
-the various pkgsrc frameworks, like <emphasis>buildlink</emphasis> or
-the <emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
+      <varlistentry><term><varname>WRKDIR</varname></term>
+      <listitem><para>This is an absolute pathname pointing to the directory
+      where all work takes place. The distfiles are extraced to this
+      directory. It also contains temporary directories and log files used by
+      the various pkgsrc frameworks, like <emphasis>buildlink</emphasis> or
+      the <emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
 
-<varlistentry><term><varname>WRKSRC</varname></term>
-<listitem><para>This is an absolute pathname pointing to the directory
-where the distfiles are extracted. It is usually a direct subdirectory
-of <varname>WRKDIR</varname>, and often it's the only directory entry
-that isn't hidden. This variable may be changed by a package
-<filename>Makefile</filename>.</para></listitem></varlistentry>
+      <varlistentry><term><varname>WRKSRC</varname></term>
+      <listitem><para>This is an absolute pathname pointing to the directory
+      where the distfiles are extracted. It is usually a direct subdirectory
+      of <varname>WRKDIR</varname>, and often it's the only directory entry
+      that isn't hidden. This variable may be changed by a package
+      <filename>Makefile</filename>.</para></listitem></varlistentry>
 
-</variablelist>
-</sect1>
+    </variablelist>
+  </sect1>
 
-<sect1 id="build.running">
-<title>Running a phase</title>
+  <sect1 id="build.running">
+    <title>Running a phase</title>
 
-<para>You can run a particular phase by typing <command>make
-phase</command>, where <emphasis>phase</emphasis> is the name of the
-phase. This will automatically run all phases that are required for this
-phase. The default phase is <varname>build</varname>, that is, when you
-run <command>make</command> without parameters in a package directory,
-the package will be built, but not installed.</para>
+    <para>You can run a particular phase by typing <command>make
+    phase</command>, where <emphasis>phase</emphasis> is the name of the
+    phase. This will automatically run all phases that are required for this
+    phase. The default phase is <varname>build</varname>, that is, when you
+    run <command>make</command> without parameters in a package directory,
+    the package will be built, but not installed.</para>
 
-</sect1>
+  </sect1>
 
-<sect1 id="build.fetch">
-<title>The <emphasis>fetch</emphasis> phase</title>
+  <sect1 id="build.fetch">
+    <title>The <emphasis>fetch</emphasis> phase</title>
 
 	<para>The first step in building a package is to fetch the
 	distribution files (distfiles) from the sites that are providing
@@ -507,7 +507,7 @@ happens in the <emphasis>configure</emphasis> phase is roughly:</para>
 
 <programlisting>
     .for d in ${CONFIGURE_DIRS}
-            cd ${WRKSRC} && cd ${d} && env ${CONFIGURE_ENV} \
+            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${CONFIGURE_ENV} \
                 ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
     .endfor
 </programlisting>
@@ -538,7 +538,7 @@ is executed.</para>
 
 <programlisting>
     .for d in ${BUILD_DIRS}
-            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
                 ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
                     -f ${MAKE_FILE} ${BUILD_TARGET}
     .endfor
@@ -582,7 +582,7 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 <programlisting>
     .for d in ${INSTALL_DIRS}
-            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
                 ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
                     -f ${MAKE_FILE} ${BUILD_TARGET}
     .endfor
@@ -651,14 +651,14 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 	</variablelist>
 
 
-</sect1>
+  </sect1>
 
-<sect1 id="build.package">
-<title>The <emphasis>package</emphasis> phase</title>
+  <sect1 id="build.package">
+    <title>The <emphasis>package</emphasis> phase</title>
 
-<para>[TODO]</para>
+    <para>[TODO]</para>
 
-</sect1>
+  </sect1>
 
   <sect1 id="build.helpful-targets">
     <title>Other helpful targets</title>
@@ -668,14 +668,14 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 	<term>pre/post-*</term>
 
 	<listitem>
-	  <para>For any of the main targets described in the previous section, two
-	    auxiliary targets exist with <quote>pre-</quote> and
-	    <quote>post-</quote> used as a prefix
-	    for the main target's name.  These targets are invoked before and
-	    after the main target is called, allowing extra configuration or
-	    installation steps be performed from a package's Makefile, for
-	    example, which a program's configure script
-	    or install target omitted.</para>
+	  <para>For any of the main targets described in the previous
+	  section, two auxiliary targets exist with
+	  <quote>pre-</quote> and <quote>post-</quote> used as a
+	  prefix for the main target's name.  These targets are
+	  invoked before and after the main target is called, allowing
+	  extra configuration or installation steps be performed from
+	  a package's Makefile, for example, which a program's
+	  configure script or install target omitted.</para>
 	</listitem>
       </varlistentry>
 
@@ -683,11 +683,12 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 	<term>do-*</term>
 
 	<listitem>
-	  <para>Should one of the main targets do the wrong thing, and should there
-	    be no variable to fix this, you can redefine it with the do-*
-	    target.  (Note that redefining the target itself instead of the
-	    do-* target is a bad idea, as the pre-* and post-* targets won't be
-	    called anymore, etc.) You will not usually need to do this.</para>
+	  <para>Should one of the main targets do the wrong thing, and
+	  should there be no variable to fix this, you can redefine it
+	  with the do-* target.  (Note that redefining the target
+	  itself instead of the do-* target is a bad idea, as the
+	  pre-* and post-* targets won't be called anymore, etc.) You
+	  will not usually need to do this.</para>
 	</listitem>
       </varlistentry>
 
@@ -695,9 +696,10 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 	<term>reinstall</term>
 
 	<listitem>
-	  <para>If you did a <command>make install</command> and you noticed some file
-	    was not installed properly, you can repeat the installation with this
-	    target, which will ignore the <quote>already installed</quote> flag.</para>
+	  <para>If you did a <command>make install</command> and you
+	  noticed some file was not installed properly, you can repeat
+	  the installation with this target, which will ignore the
+	  <quote>already installed</quote> flag.</para>
 	</listitem>
       </varlistentry>
 
@@ -706,8 +708,8 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target does a &man.pkg.delete.1; in the current directory,
-	    effectively de-installing the package. The following variables can
-	    be used to tune the behaviour:</para>
+	  effectively de-installing the package. The following variables can
+	  be used to tune the behaviour:</para>
 
 	  <variablelist>
 	    <varlistentry>
@@ -723,11 +725,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	      <listitem>
 		<para>Remove all packages that require (depend on) the given package.
-		  This can be used to remove any packages that may have been pulled in
-		  by a given package, e.g. if <command>make deinstall
-		    DEINSTALLDEPENDS=1</command> is done in
-		  <filename>pkgsrc/x11/kde</filename>, this is likely to remove whole
-		  KDE. Works by adding <quote>-R</quote> to the &man.pkg.delete.1; command line.</para>
+		This can be used to remove any packages that may have been pulled in
+		by a given package, e.g. if <command>make deinstall
+		DEINSTALLDEPENDS=1</command> is done in
+		<filename>pkgsrc/x11/kde</filename>, this is likely to remove whole
+		KDE. Works by adding <quote>-R</quote> to the &man.pkg.delete.1; command line.</para>
 	      </listitem>
 	    </varlistentry>
 	  </variablelist>
@@ -739,29 +741,29 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target causes the current package to be updated to the latest
-	    version.  The package and all depending packages first get de-installed,
-	    then current versions of the corresponding packages get compiled and
-	    installed.  This is similar to manually noting which packages are
-	    currently installed, then performing a series of <command>make
-	      deinstall</command> and <command>make install</command> (or whatever
-	    <varname>UPDATE_TARGET</varname> is set to) for these packages.</para>
+	  version.  The package and all depending packages first get de-installed,
+	  then current versions of the corresponding packages get compiled and
+	  installed.  This is similar to manually noting which packages are
+	  currently installed, then performing a series of <command>make
+	  deinstall</command> and <command>make install</command> (or whatever
+	  <varname>UPDATE_TARGET</varname> is set to) for these packages.</para>
 
 	  <para>You can use the <quote>update</quote> target to resume package
-	    updating in case a previous <command>make update</command> was interrupted
-	    for some reason.  However, in this case, make sure you don't call
-	    <command>make clean</command> or otherwise remove the list of dependent
-	    packages in <varname>WRKDIR</varname>.  Otherwise, you lose the
-	    ability to automatically update the current package along with the
-	    dependent packages you have installed.</para>
+	  updating in case a previous <command>make update</command> was interrupted
+	  for some reason.  However, in this case, make sure you don't call
+	  <command>make clean</command> or otherwise remove the list of dependent
+	  packages in <varname>WRKDIR</varname>.  Otherwise, you lose the
+	  ability to automatically update the current package along with the
+	  dependent packages you have installed.</para>
 
 	  <para>Resuming an interrupted <command>make update</command> will only work as
-	    long as the package tree remains unchanged.  If the source code for
-	    one of the packages to be updated has been changed, resuming
-	    <command>make update</command> will most certainly fail!</para>
+	  long as the package tree remains unchanged.  If the source code for
+	  one of the packages to be updated has been changed, resuming
+	  <command>make update</command> will most certainly fail!</para>
 
 	  <para>The following variables can be used either on the command line or in
-	    <filename>/etc/mk.conf</filename> to alter the behaviour of
-	    <command>make update</command>:</para>
+	  <filename>/etc/mk.conf</filename> to alter the behaviour of
+	  <command>make update</command>:</para>
 
 	  <variablelist>
 	    <varlistentry>
@@ -769,9 +771,9 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	      <listitem>
 		<para>Install target to recursively use for the updated package and the
-		  dependent packages.  Defaults to <varname>DEPENDS_TARGET</varname> if set,
-		  <quote>install</quote> otherwise for <command>make update</command>.
-		  e.g. <command>make update UPDATE_TARGET=package</command></para>
+		dependent packages.  Defaults to <varname>DEPENDS_TARGET</varname> if set,
+		<quote>install</quote> otherwise for <command>make update</command>.
+		e.g. <command>make update UPDATE_TARGET=package</command></para>
 	      </listitem>
 	    </varlistentry>
 
@@ -780,11 +782,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	      <listitem>
 		<para>Don't clean up after updating.  Useful if you want to leave the
-		  work sources of the updated packages around for inspection or
-		  other purposes.  Be sure you eventually clean up the source
-		  tree (see the <quote>clean-update</quote> target below) or you may
-		  run into troubles with old source code still lying around on your
-		  next <command>make</command> or <command>make update</command>.</para>
+		work sources of the updated packages around for inspection or
+		other purposes.  Be sure you eventually clean up the source
+		tree (see the <quote>clean-update</quote> target below) or you may
+		run into troubles with old source code still lying around on your
+		next <command>make</command> or <command>make update</command>.</para>
 	      </listitem>
 	    </varlistentry>
 
@@ -793,9 +795,9 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	      <listitem>
 		<para>Deinstall each package before installing (making
-		  <varname>DEPENDS_TARGET</varname>). This may be necessary if the
-		  <quote>clean-update</quote> target (see below) was called after
-		  interrupting a running <command>make update</command>.</para>
+		<varname>DEPENDS_TARGET</varname>). This may be necessary if the
+		<quote>clean-update</quote> target (see below) was called after
+		interrupting a running <command>make update</command>.</para>
 	      </listitem>
 	    </varlistentry>
 
@@ -804,12 +806,12 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	      <listitem>
 		<para>Allows you to disable recursion and hardcode the target for
-		  packages.  The default is <quote>update</quote> for the update target,
-		  facilitating a recursive update of prerequisite packages.
-		  Only set <varname>DEPENDS_TARGET</varname> if you want to disable
-		  recursive updates. Use <varname>UPDATE_TARGET</varname> instead to just
-		  set a specific target for each package to be installed during
-		  <command>make update</command> (see above).</para>
+		packages.  The default is <quote>update</quote> for the update target,
+		facilitating a recursive update of prerequisite packages.
+		Only set <varname>DEPENDS_TARGET</varname> if you want to disable
+		recursive updates. Use <varname>UPDATE_TARGET</varname> instead to just
+		set a specific target for each package to be installed during
+		<command>make update</command> (see above).</para>
 	      </listitem>
 	    </varlistentry>
 	  </variablelist>
@@ -821,29 +823,29 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>Clean the source tree for all packages that would get updated if
-	    <command>make update</command> was called from the current directory.
-	    This target should not be used if the current package (or any of its
-	    depending packages) have already been de-installed (e.g., after calling
-	    <command>make update</command>) or you may lose some packages you intended
-	    to update. As a rule of thumb: only use this target
-	    <emphasis>before</emphasis> the first time you run
-	    <command>make update</command> and only if you have a dirty package tree
-	    (e.g., if you used <varname>NOCLEAN</varname>).</para>
+	  <command>make update</command> was called from the current directory.
+	  This target should not be used if the current package (or any of its
+	  depending packages) have already been de-installed (e.g., after calling
+	  <command>make update</command>) or you may lose some packages you intended
+	  to update. As a rule of thumb: only use this target
+	  <emphasis>before</emphasis> the first time you run
+	  <command>make update</command> and only if you have a dirty package tree
+	  (e.g., if you used <varname>NOCLEAN</varname>).</para>
 
 	  <para>If you are unsure about whether your tree is clean, you can either
-	    perform a <command>make clean</command> at the top of the tree, or use
-	    the following sequence of commands from the directory of the package
-	    you want to update (<emphasis>before</emphasis> running
-	    <command>make update</command> for the first time, otherwise you lose
-	    all the packages you wanted to update!):</para>
+	  perform a <command>make clean</command> at the top of the tree, or use
+	  the following sequence of commands from the directory of the package
+	  you want to update (<emphasis>before</emphasis> running
+	  <command>make update</command> for the first time, otherwise you lose
+	  all the packages you wanted to update!):</para>
 
 	  <screen><prompt>#</prompt> <userinput>make clean-update</userinput>
-<prompt>#</prompt> <userinput>make clean CLEANDEPENDS=YES</userinput>
-<prompt>#</prompt> <userinput>make update</userinput></screen>
+	  <prompt>#</prompt> <userinput>make clean CLEANDEPENDS=YES</userinput>
+	  <prompt>#</prompt> <userinput>make update</userinput></screen>
 
 	  <para>The following variables can be used either on the command line or in
-	    <filename>/etc/mk.conf</filename> to alter the behaviour of
-	    <command>make clean-update</command>:</para>
+	  <filename>/etc/mk.conf</filename> to alter the behaviour of
+	  <command>make clean-update</command>:</para>
 
 	  <variablelist>
 	    <varlistentry>
@@ -851,11 +853,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	      <listitem>
 		<para>After <command>make clean</command>, do not reconstruct the list of
-		  directories to update for this package.  Only use this if <command>make
-		    update</command> successfully installed all packages you wanted to
-		  update.  Normally, this is done automatically on <command>make
-		    update</command>, but may have been suppressed by the
-		  <varname>NOCLEAN</varname> variable (see above).</para>
+		directories to update for this package.  Only use this if <command>make
+		update</command> successfully installed all packages you wanted to
+		update.  Normally, this is done automatically on <command>make
+		update</command>, but may have been suppressed by the
+		<varname>NOCLEAN</varname> variable (see above).</para>
 	      </listitem>
 	    </varlistentry>
 	  </variablelist>
@@ -867,8 +869,8 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target invokes &man.pkg.info.1; for the current
-	    package. You can use this to check which version of a package is
-	    installed.</para>
+	  package. You can use this to check which version of a package is
+	  installed.</para>
 	</listitem>
       </varlistentry>
 
@@ -900,11 +902,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>Use this target to create a file <filename>README-all.html</filename>
-	    which contains a list of all packages currently available in the &os;
-	    Packages Collection, together with the category they belong to and a
-	    short description. This file is compiled from the
-	    <filename>pkgsrc/*/README.html</filename> files, so be sure to run
-	    this <emphasis>after</emphasis> a <command>make readme</command>.</para>
+	  which contains a list of all packages currently available in the &os;
+	  Packages Collection, together with the category they belong to and a
+	  short description. This file is compiled from the
+	  <filename>pkgsrc/*/README.html</filename> files, so be sure to run
+	  this <emphasis>after</emphasis> a <command>make readme</command>.</para>
 	</listitem>
       </varlistentry>
 
@@ -913,11 +915,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This is very much the same as the <quote>readme</quote> target (see
-	    above), but is to be used when generating a pkgsrc tree to be written
-	    to a CD-ROM.  This target also produces
-	    <filename>README.html</filename> files, and can be made to refer
-	    to URLs based on <varname>CDROM_PKG_URL_HOST</varname> and
-	    <varname>CDROM_PKG_URL_DIR</varname>.</para>
+	  above), but is to be used when generating a pkgsrc tree to be written
+	  to a CD-ROM.  This target also produces
+	  <filename>README.html</filename> files, and can be made to refer
+	  to URLs based on <varname>CDROM_PKG_URL_HOST</varname> and
+	  <varname>CDROM_PKG_URL_DIR</varname>.</para>
 	</listitem>
       </varlistentry>
 
@@ -925,9 +927,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 	<term>show-distfiles</term>
 
 	<listitem>
-	  <para>This target shows which distfiles and patchfiles are needed to build
-	    the package. (<varname>DISTFILES</varname> and
-	    <varname>PATCHFILES</varname>, but not <filename>patches/*</filename>)</para>
+	  <para>This target shows which distfiles and patchfiles are
+	  needed to build the package (<varname>ALLFILES</varname>,
+	  which contains all <varname>DISTFILES</varname> and
+	  <varname>PATCHFILES</varname>, but not
+	  <filename>patches/*</filename>).</para>
 	</listitem>
       </varlistentry>
 
@@ -936,10 +940,10 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target shows nothing if the package is not installed. If a version
-	    of this package is installed, but is not the version provided in this
-	    version of pkgsrc, then a warning message is displayed. This target can
-	    be used to show which of your installed packages are downlevel, and so
-	    the old versions can be deleted, and the current ones added.</para>
+	  of this package is installed, but is not the version provided in this
+	  version of pkgsrc, then a warning message is displayed. This target can
+	  be used to show which of your installed packages are downlevel, and so
+	  the old versions can be deleted, and the current ones added.</para>
 	</listitem>
       </varlistentry>
 
@@ -948,11 +952,11 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target shows the directory in the pkgsrc hierarchy from which the
-	    package can be built and installed. This may not be the same directory
-	    as the one from which the package was installed. This target is intended
-	    to be used by people who may wish to upgrade many packages on a single
-	    host, and can be invoked from the top-level pkgsrc Makefile by using the
-	    <quote>show-host-specific-pkgs</quote> target.</para>
+	  package can be built and installed. This may not be the same directory
+	  as the one from which the package was installed. This target is intended
+	  to be used by people who may wish to upgrade many packages on a single
+	  host, and can be invoked from the top-level pkgsrc Makefile by using the
+	  <quote>show-host-specific-pkgs</quote> target.</para>
 	</listitem>
       </varlistentry>
 
@@ -961,8 +965,8 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target shows which installed packages match the current package's
-	    <varname>DEPENDS</varname>. Useful if out of date dependencies are
-	    causing build problems.</para>
+	  <varname>DEPENDS</varname>. Useful if out of date dependencies are
+	  causing build problems.</para>
 	</listitem>
       </varlistentry>
 
@@ -971,9 +975,9 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>After a package is installed, check all its binaries and (on ELF
-	    platforms) shared libraries to see if they find the shared libs they need.
-	    Run by default if <varname>PKG_DEVELOPER</varname> is set in
-	    <filename>/etc/mk.conf</filename>.</para>
+	  platforms) shared libraries to see if they find the shared libs they need.
+	  Run by default if <varname>PKG_DEVELOPER</varname> is set in
+	  <filename>/etc/mk.conf</filename>.</para>
 	</listitem>
       </varlistentry>
 
@@ -982,25 +986,25 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>After a <quote>make install</quote> from a new or
-	    upgraded pkg, this prints out an attempt to generate a new
-	    <filename>PLIST</filename> from a <command>find -newer
-	    work/.extract_done</command>.  An attempt is made to care
-	    for shared libs etc., but it is
-	    <emphasis>strongly</emphasis> recommended to review the
-	    result before putting it into
-	    <filename>PLIST</filename>. On upgrades, it's useful to
-	    diff the output of this command against an already
-	    existing <filename>PLIST</filename> file.</para>
+	  upgraded pkg, this prints out an attempt to generate a new
+	  <filename>PLIST</filename> from a <command>find -newer
+	  work/.extract_done</command>.  An attempt is made to care
+	  for shared libs etc., but it is
+	  <emphasis>strongly</emphasis> recommended to review the
+	  result before putting it into
+	  <filename>PLIST</filename>. On upgrades, it's useful to
+	  diff the output of this command against an already
+	  existing <filename>PLIST</filename> file.</para>
 
 	  <para>If the package installs files via &man.tar.1; or other
-	    methods that don't update file access times, be sure to
-	    add these files manually to your
-	    <filename>PLIST</filename>, as the <quote>find
-	    -newer</quote> command used by this target won't catch
-	    them!</para>
+	  methods that don't update file access times, be sure to
+	  add these files manually to your
+	  <filename>PLIST</filename>, as the <quote>find
+	  -newer</quote> command used by this target won't catch
+	  them!</para>
 
-	  <para> See <xref linkend="print-PLIST"/> for more
-	    information on this target.</para>
+	  <para>See <xref linkend="print-PLIST"/> for more
+	  information on this target.</para>
 	</listitem>
       </varlistentry>
 
@@ -1009,15 +1013,15 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>Used to do bulk builds. If an appropriate binary package already exists,
-	    no action is taken. If not, this target will compile, install and
-	    package it (and its depends, if <varname>PKG_DEPENDS</varname> is
-	    set properly. See <xref linkend="binary.configuration"/>).
-	    After creating the binary
-	    package, the sources, the just-installed package and its required
-	    packages are removed, preserving free disk space.</para>
+	  no action is taken. If not, this target will compile, install and
+	  package it (and its depends, if <varname>PKG_DEPENDS</varname> is
+	  set properly. See <xref linkend="binary.configuration"/>).
+	  After creating the binary
+	  package, the sources, the just-installed package and its required
+	  packages are removed, preserving free disk space.</para>
 
 	  <para><emphasis>Beware that this target may deinstall all
-	    packages installed on a system!</emphasis></para>
+	  packages installed on a system!</emphasis></para>
 	</listitem>
       </varlistentry>
 
@@ -1026,27 +1030,27 @@ of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>Used during bulk-installs to install required packages. If an
-	    up-to-date binary package is available, it will be installed via
-	    &man.pkg.add.1;. If not, <command>make bulk-package</command> will be executed,
-	    but the installed binary won't be removed. </para>
+	  up-to-date binary package is available, it will be installed via
+	  &man.pkg.add.1;. If not, <command>make bulk-package</command> will be executed,
+	  but the installed binary won't be removed.</para>
 
-	  <para> A binary package is considered <quote>up-to-date</quote> to be
-	    installed via &man.pkg.add.1; if:</para>
+	  <para>A binary package is considered <quote>up-to-date</quote> to be
+	  installed via &man.pkg.add.1; if:</para>
 
 	  <itemizedlist>
 	    <listitem>
 	      <para>None of the package's files (<filename>Makefile</filename>,
-		...) were modified since it was built.</para>
+	      ...) were modified since it was built.</para>
 	    </listitem>
 
 	    <listitem>
 	      <para>None of the package's required (binary) packages were
-		modified since it was built.</para>
+	      modified since it was built.</para>
 	    </listitem>
 	  </itemizedlist>
 
 	  <para><emphasis>Beware that this target may deinstall all
-	    packages installed on a system!</emphasis></para>
+	  packages installed on a system!</emphasis></para>
 	</listitem>
       </varlistentry>
     </variablelist>
