@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.31 2006/07/30 00:30:55 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.32 2006/09/09 04:21:30 obache Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -540,7 +540,7 @@ is executed.</para>
     .for d in ${BUILD_DIRS}
             cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
                 ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-                    -f ${MAKEFILE} ${BUILD_TARGET}
+                    -f ${MAKE_FILE} ${BUILD_TARGET}
     .endfor
 </programlisting>
 
@@ -550,13 +550,13 @@ these directories, <varname>MAKE_PROGRAM</varname> is run with the
 environment <varname>MAKE_ENV</varname> and arguments
 <varname>BUILD_MAKE_FLAGS</varname>. The variables
 <varname>MAKE_ENV</varname>, <varname>BUILD_MAKE_FLAGS</varname>,
-<varname>MAKEFILE</varname> and <varname>BUILD_TARGET</varname> may all
+<varname>MAKE_FILE</varname> and <varname>BUILD_TARGET</varname> may all
 be changed by the package.</para>
 
 <para>The default value of <varname>MAKE_PROGRAM</varname> is
 <quote>gmake</quote> if <varname>USE_TOOLS</varname> contains
 <quote>gmake</quote>, <quote>make</quote> otherwise. The default value
-of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
+of <varname>MAKE_FILE</varname> is <quote>Makefile</quote>, and
 <varname>BUILD_TARGET</varname> defaults to <quote>all</quote>.</para>
 
 </sect1>
@@ -584,7 +584,7 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
     .for d in ${INSTALL_DIRS}
             cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
                 ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                    -f ${MAKEFILE} ${BUILD_TARGET}
+                    -f ${MAKE_FILE} ${BUILD_TARGET}
     .endfor
 </programlisting>
 
