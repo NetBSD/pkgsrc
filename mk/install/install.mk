@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.17 2006/08/09 15:25:49 jlam Exp $
+# $NetBSD: install.mk,v 1.18 2006/09/09 02:35:13 obache Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -264,7 +264,7 @@ do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS}	\
-		-f ${MAKEFILE} ${INSTALL_TARGET}
+		-f ${MAKE_FILE} ${INSTALL_TARGET}
 .  endfor
 .endif
 
