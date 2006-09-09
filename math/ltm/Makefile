@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 09:01:14 obache Exp $
 #
 
 DISTNAME=		ltm-0.30
 PKGREVISION=		1
 CATEGORIES=		math
-MASTER_SITES=		http://math.libtomcrypt.org/files/
+MASTER_SITES=		http://math.libtomcrypt.com/files/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://math.libtomcrypt.org/
+HOMEPAGE=		http://math.libtomcrypt.com/
 COMMENT=		Number theoretic multiple-precision integer library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
