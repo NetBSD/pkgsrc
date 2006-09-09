@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.18 2006/07/30 00:30:33 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.19 2006/09/09 23:49:29 wiz Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -56,7 +56,6 @@
 	    that includes instructions on how to change this variable.</para>
 	</listitem>
       </itemizedlist>
-
   </sect1>
 
   <sect1 id="variables-affecting-build">
@@ -104,8 +103,7 @@
 
 	<!--	DISTDIR -->
 	<!--	FAILOVER_FETCH -->
-      </itemizedlist>
-    </para>
+      </itemizedlist></para>
   </sect1>
 
 <sect1 id="conf.compiler">
@@ -155,7 +153,7 @@
 	      <!-- XXX: some more stuff -->
 	      </listitem>
 	    </itemizedlist>
-	  </para>
+	</para>
 	</listitem>
 	<listitem><para><varname>PKG_DEBUG_LEVEL</varname>:
 	    The level of debugging output which is displayed whilst
