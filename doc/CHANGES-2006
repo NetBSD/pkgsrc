@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1239 2006/09/08 19:25:02 kristerw Exp $
+$NetBSD: CHANGES-2006,v 1.1240 2006/09/09 05:04:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/xdg-x11-dirs to 1.4 [jmmv 2006-09-08]
 	Added graphics/icon-naming-utils version 0.8.1 [jmmv 2006-09-08]
 	Updated devel/libslang to 1.4.9nb5 [kristerw 2006-09-08]
+	Updated www/zope29 to 2.9.4nb2 [taca 2006-09-09]
