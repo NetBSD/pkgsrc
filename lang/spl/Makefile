@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/29 16:31:43 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/09 02:43:09 obache Exp $
 #
 
 DISTNAME=	spl-0.9h
@@ -22,7 +22,7 @@ SUBST_SED.prefix+=	-e 's,^  cgibin_libdir.*,  cgibin_libdir = ${PREFIX}/libexec/
 #subst.mk does not correctly detect GNUmakefile as text file
 _SUBST_IS_TEXT_FILE=true
 
-MAKEFILE=	GNUmakefile
+MAKE_FILE=	GNUmakefile
 BUILD_TARGET=	all spldoc
 EGDIR=		${PREFIX}/share/examples/spl
 DOCDIR=		${PREFIX}/share/doc/spl

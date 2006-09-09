@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/11 16:35:24 smb Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:43:11 obache Exp $
 
 DISTNAME=	procps-3.2.6
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://procps.sourceforge.net/
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Watch a program with update intervals
 
-MAKEFILE=	${FILESDIR}/Makefile
+MAKE_FILE=	${FILESDIR}/Makefile
 MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 MAKE_ENV+=	MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/17 21:42:31 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:41:58 obache Exp $
 #
 
 DISTNAME=		uno_v28
@@ -12,7 +12,7 @@ HOMEPAGE=		http://spinroot.com/uno/
 COMMENT=		Tool for source code analysis
 
 WRKSRC=			${WRKDIR}/Uno/src
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 USE_TOOLS+=		bison
 

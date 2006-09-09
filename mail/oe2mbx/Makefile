@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:34 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/09 02:43:10 obache Exp $
 #
 
 DISTNAME=	oe2mbx-1.21
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gpl.no/liboe/
 COMMENT=	Outlook Express messages to the Unix mailbox format converter
 
 WRKSRC=		${WRKDIR}/liboe-0.92
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 MAKE_ENV+=      INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 		INSTALL_LIB=${INSTALL_LIB:Q} \

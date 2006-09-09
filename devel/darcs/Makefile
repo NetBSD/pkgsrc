@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/09 02:41:57 obache Exp $
 
 DISTNAME=		darcs-1.0.4
 PKGREVISION=		2
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		latex2html>=2002.2.1nb3:../../textproc/latex2html
 
 TEX_DEPMETHOD=		build
 USE_TOOLS+=		gmake
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 GNU_CONFIGURE=		yes
 
 .include "../../www/curl/buildlink3.mk"

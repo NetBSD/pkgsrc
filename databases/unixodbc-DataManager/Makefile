@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/05/18 18:04:10 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/09/09 02:41:56 obache Exp $
 
 PKGNAME=		unixodbc-DataManager-${ODBC_BASE_VERS}
 PKGREVISION=		3
@@ -34,7 +34,7 @@ INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${WRKSRC}/DataManager; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
-		${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
+		${MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/DataManager/DataManager ${PREFIX}/bin

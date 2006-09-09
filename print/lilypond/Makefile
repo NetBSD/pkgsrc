@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/08/31 18:11:31 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2006/09/09 02:46:08 obache Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake gs:run makeinfo perl
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 
 TEXINFO_REQD=		4.7
 GCC_REQD+=		3.0.5

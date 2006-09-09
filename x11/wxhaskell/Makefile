@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/09/03 00:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/09/09 02:46:09 obache Exp $
 
 DISTNAME=		wxhaskell-src-0.9.4
 PKGNAME=		${DISTNAME:S/-src//}
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 MAKE_FLAGS+=		X11BASE=${X11BASE:Q}
 
 # I don't know where that number comes from, but it changes sometimes.

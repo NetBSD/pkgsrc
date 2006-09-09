@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 14:31:07 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/09 02:43:10 obache Exp $
 
 DISTNAME=       sma-1.3.2
 CATEGORIES=	mail
@@ -11,7 +11,7 @@ COMMENT=	Sendmail log analyser
 WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 
-MAKEFILE=	Makefile
+MAKE_FILE=	Makefile
 BUILD_TARGET=	sma
 
 .include "../../mk/bsd.prefs.mk"

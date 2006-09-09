@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:30:20 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/09/09 02:43:11 obache Exp $
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://sunsite.org.uk/packages/mirror/
 COMMENT=	Mirror packages on remote sites
 
 WRKSRC=		${WRKDIR}
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 SCRIPTS_ENV+=	PERL5=${PERL5}
 
 USE_TOOLS+=	perl:run

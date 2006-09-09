@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/09 02:41:59 obache Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 BUILD_DEPENDS+=		zip>=2.0:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/Cygne-SDL-0.1
-MAKEFILE=		Makefiles/Makefile.unix
+MAKE_FILE=		Makefiles/Makefile.unix
 NO_CONFIGURE=		yes
 BUILD_DIRS=		src
 USE_LANGUAGES=		c c++

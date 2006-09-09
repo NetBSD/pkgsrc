@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:43 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/09 02:46:09 obache Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 USE_TOOLS+=	flex
 USE_X11BASE=	yes
 
-MAKEFILE=	Makefile.FreeBSD
+MAKE_FILE=	Makefile.FreeBSD
 
 DATA_FILES=	*.jpg *.dat ssystem.conf
 DOC_FILES=	LICENSE README

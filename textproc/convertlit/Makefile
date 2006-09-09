@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/09 02:46:08 obache Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -18,7 +18,7 @@ COMMENT=		Convert Microsoft Legal Reader format eBooks into open format
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		lib clit18
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		d2u

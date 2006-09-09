@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/06 06:21:58 reed Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/09 02:41:59 obache Exp $
 #
 
 DISTNAME=		zident27
@@ -14,7 +14,7 @@ COMMENT=		Identify arcade ROM sets
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 BUILD_TARGET=		zipident
 EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin

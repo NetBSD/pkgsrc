@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:42:00 obache Exp $
 #
 
 DISTNAME=		blobwars-1.04-1
@@ -14,7 +14,7 @@ COMMENT=		Blob Wars: Metal Blob Solid (platform shooter)
 
 USE_LANGUAGES=		c++
 WRKSRC=			${WRKDIR}/blobwars-1.04
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

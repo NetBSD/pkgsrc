@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/15 20:36:08 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/09/09 02:46:09 obache Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -30,7 +30,7 @@ CPPFLAGS+=		-Dunix
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-stable
 
 USE_TOOLS+=		autoconf213 gmake
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 
 USE_TOOLS+=		perl
 

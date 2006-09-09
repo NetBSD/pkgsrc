@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:45 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/09 02:41:57 obache Exp $
 #
 
 DISTNAME=	dmake-v4.1-src-export.all-unknown-all
@@ -12,7 +12,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://dmake.wticorp.com/
 COMMENT=	Portable make supported by many platforms
 
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 BUILD_TARGET=	linux
 WRKSRC=		${WRKDIR}/dmake
 
