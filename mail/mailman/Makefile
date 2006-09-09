@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2006/06/15 22:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/09/09 23:20:11 bouyer Exp $
 
-DISTNAME=	mailman-2.1.8
+DISTNAME=	mailman-2.1.9rc1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
 EXTRACT_SUFX=	.tgz
@@ -64,9 +64,9 @@ DEINSTALL_TEMPLATES+=	${FILESDIR}/DEINSTALL
 PYTHON_VERSIONS_ACCEPTED= 24 23 22 21
 PYTHON_PATCH_SCRIPTS+=	Mailman/Archiver/pipermail.py
 PYTHON_PATCH_SCRIPTS+=	Mailman/Post.py
-PYTHON_PATCH_SCRIPTS+=	admin/bin/Release.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/faq2ht.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/mm2do
+PYTHON_PATCH_SCRIPTS+=	admin/www/reset_pw.py
 PYTHON_PATCH_SCRIPTS+=	bin/msgfmt.py
 
 CONFIGURE_ARGS+=	--with-cgi-gid=${MAILMAN_CGIGROUP:Q}
