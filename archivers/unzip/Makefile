@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/06/18 07:04:16 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2006/09/09 02:41:54 obache Exp $
 
 DISTNAME=	unzip552
 PKGNAME=	unzip-5.52
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKEFILE=	unix/Makefile
+MAKE_FILE=	unix/Makefile
 BUILD_TARGET=	generic_zlib unzipsfx
 .if ${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin"
 CFLAGS+=	-DBSD

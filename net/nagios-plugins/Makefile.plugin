@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.plugin,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+# $NetBSD: Makefile.plugin,v 1.2 2006/09/09 02:43:11 obache Exp $
 #
 
 do-build:
 	cd ${WRKSRC}/lib && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE}
+	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE}
 .if ${BINARY_TARGET:D1}
 	cd ${WRKSRC}/plugins && ${SETENV} ${MAKE_ENV}	\
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BINARY_TARGET}
+	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} ${BINARY_TARGET}
 .endif
 .if ${SCRIPT_TARGET:D1}
 	cd ${WRKSRC}/plugins-scripts && ${SETENV} ${MAKE_ENV}	\
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${SCRIPT_TARGET}
+	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} ${SCRIPT_TARGET}
 .endif
 
 do-install:

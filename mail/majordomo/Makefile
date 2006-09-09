@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/16 17:11:25 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/09/09 02:43:10 obache Exp $
 
 DISTNAME=		majordomo-1.94.5
 PKGREVISION=		2
@@ -19,7 +19,7 @@ USE_TOOLS+=		perl:run
 
 BUILD_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
-MAKEFILE=		Makefile.netbsd
+MAKE_FILE=		Makefile.netbsd
 
 MAJORDOMO_TMPDIR?=	/var/tmp
 MAJORDOMO_HOMEDIR?=	/home

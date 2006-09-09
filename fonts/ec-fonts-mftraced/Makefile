@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/07 05:10:39 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:42:00 obache Exp $
 #
 
 DISTNAME=		ec-fonts-mftraced-1.0.8
@@ -14,7 +14,7 @@ USE_DIRS+=		texmf-1.1
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:Q}
 TEX_FONTMAPS=		ec-mftrace.map
 

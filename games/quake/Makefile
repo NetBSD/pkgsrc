@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2006/09/09 02:42:01 obache Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -29,8 +29,8 @@ LDFLAGS+=	${LIBOSSAUDIO}
 INSTALLATION_DIRS=	bin
 
 do-configure:
-	cd ${WRKSRC}/qw && ${LN} -fs makefile.linux ${MAKEFILE}
-	cd ${WRKSRC}/winquake && ${LN} -fs makefile.linuxi386 ${MAKEFILE}
+	cd ${WRKSRC}/qw && ${LN} -fs makefile.linux ${MAKE_FILE}
+	cd ${WRKSRC}/winquake && ${LN} -fs makefile.linuxi386 ${MAKE_FILE}
 
 do-build:
 	( cd ${WRKSRC}/qw ; ${SETENV} ${MAKE_ENV} \

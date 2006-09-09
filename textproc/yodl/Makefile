@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/06/10 20:09:44 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/09 02:46:09 obache Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	4
@@ -11,7 +11,7 @@ COMMENT=	High-level document preparation system
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	bison flex gmake
-MAKEFILE=	GNUmakefile
+MAKE_FILE=	GNUmakefile
 CONFIGURE_ENV+=	ILDFLAGS=${LDFLAGS:Q}
 
 .include "../../lang/python/application.mk"
