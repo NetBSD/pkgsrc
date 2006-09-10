@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2006/06/16 16:17:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/10 02:48:35 obache Exp $
 #
 
 DISTNAME=		simulavr-0.1.2.1
 PKGREVISION=		3
 CATEGORIES=		emulators
-MASTER_SITES=		http://freesoftware.fsf.org/download/simulavr/
+MASTER_SITES=		http://download.savannah.nongnu.org/releases/simulavr/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
