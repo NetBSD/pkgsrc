@@ -1,7 +1,7 @@
-$NetBSD: irix5.patch,v 1.2 2006/09/09 20:31:46 schwarz Exp $
+$NetBSD: irix5.patch,v 1.3 2006/09/10 13:44:58 schwarz Exp $
 
 --- sgi.cf.orig	2006-09-09 17:13:25.000000000 +0200
-+++ sgi.cf	2006-09-09 17:52:40.000000000 +0200
++++ sgi.cf	2006-09-10 10:15:18.000000000 +0200
 @@ -178,8 +178,10 @@
  #define AsCmd $(TOOLROOT)/usr/bin/as
  #define CcCmd $(TOOLROOT)/usr/bin/cc
@@ -29,18 +29,14 @@ $NetBSD: irix5.patch,v 1.2 2006/09/09 20:31:46 schwarz Exp $
  
  /*
   * If we specify -nostdlib, we must supply the complete library
-@@ -252,23 +256,25 @@
+@@ -252,23 +256,19 @@
  #define ManSuffix	1
  #define LibManSuffix	3
  
 -#undef ManDir
 -#undef LibmanDir
-+#ifndef ManDir
- #define ManDir $(CATMAN1DIR)$(MANPACKAGE)
-+#endif
-+#ifndef LibmanDir
- #define LibmanDir $(CATMAN3DIR)$(MANPACKAGE)
-+#endif
+-#define ManDir $(CATMAN1DIR)$(MANPACKAGE)
+-#define LibmanDir $(CATMAN3DIR)$(MANPACKAGE)
  #define NroffManDir $(MAN1DIR)$(MANPACKAGE)
  #define NroffLibmanDir $(MAN3DIR)$(MANPACKAGE)
  
@@ -62,7 +58,7 @@ $NetBSD: irix5.patch,v 1.2 2006/09/09 20:31:46 schwarz Exp $
  
  /*
   * MANPACKAGE is the directory inside of cat? or man? that man pages should
-@@ -281,22 +287,22 @@
+@@ -281,22 +281,22 @@
   * InstallManPageLong - misc changes for sgi.
   */
  #define InstallManPageLong(file,destdir,dest)				@@\
@@ -82,7 +78,7 @@ $NetBSD: irix5.patch,v 1.2 2006/09/09 20:31:46 schwarz Exp $
  	if [ -f file.man ]; then \					@@\
  		$(INSTALL) -c $(INSTMANFLAGS) \				@@\
 -			file.nr.z $(DESTDIR)destdir/dest.z; \		@@\
-+			file.nr.gz $(DESTDIR)destdir/dest.1.gz;	 \	@@\
++			file.nr.gz $(DESTDIR)destdir/dest.$(MANSUFFIX).gz; \	@@\
  	fi								@@\
  									@@\
  clean::									@@\
@@ -91,8 +87,8 @@ $NetBSD: irix5.patch,v 1.2 2006/09/09 20:31:46 schwarz Exp $
  
  /*
   * InstallManPageAliases - generate rules to install manual page aliases.
---- sgiLib.rules.orig	2006-09-09 20:47:39.000000000 +0200
-+++ sgiLib.rules	2006-09-09 20:49:47.000000000 +0200
+--- sgiLib.rules.orig	2006-09-10 10:29:23.000000000 +0200
++++ sgiLib.rules	2006-09-09 21:06:23.000000000 +0200
 @@ -97,8 +97,8 @@
  	$(INSTALL) -c $(INSTLIBFLAGS) Concat4(lib,libname,.so,rev) \	@@\
  		$(DESTDIR)dest ; \					@@\
