@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5436 2006/09/10 18:09:02 wiz Exp $
+$NetBSD: TODO,v 1.5437 2006/09/10 18:30:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,6 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnstop-20060517 [pkg/34425]
 	o dnstracer-1.8
-	o docbook-xsl-1.71.0
 	o drscheme-352
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
