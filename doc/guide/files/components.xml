@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.29 2006/09/10 19:11:15 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.30 2006/09/10 19:36:41 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -266,7 +266,7 @@ sections.</para>
   can be found, e.g.:</para>
   <programlisting>
     PATCHDIR= ${.CURDIR}/../xemacs/patches
-    </programlisting>>
+  </programlisting>
 
     <para>Patch files that are distributed by the author or other
     maintainers can be listed in
