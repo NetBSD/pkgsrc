@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/09/10 00:36:21 gdt Exp $
+
+SHA1 (epg-0.0.5.tar.gz) = 7ae335a428e592baf3d7074abf5435056f8bf9d4
+RMD160 (epg-0.0.5.tar.gz) = dd425b4d12770f4e9891afe1236c4fa468a38905
+Size (epg-0.0.5.tar.gz) = 85851 bytes
