@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2006/09/03 14:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/09/10 10:23:25 wiz Exp $
 
-DISTNAME=	openbox-3.3
+DISTNAME=	openbox-3.3.1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 
