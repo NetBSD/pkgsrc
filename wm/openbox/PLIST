@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.10 2006/09/03 14:27:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/09/10 10:23:26 wiz Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
-include/openbox/${PKGVERSION}/openbox/color.h
-include/openbox/${PKGVERSION}/openbox/font.h
-include/openbox/${PKGVERSION}/openbox/geom.h
-include/openbox/${PKGVERSION}/openbox/gradient.h
-include/openbox/${PKGVERSION}/openbox/image.h
-include/openbox/${PKGVERSION}/openbox/instance.h
-include/openbox/${PKGVERSION}/openbox/mask.h
-include/openbox/${PKGVERSION}/openbox/parse.h
-include/openbox/${PKGVERSION}/openbox/render.h
-include/openbox/${PKGVERSION}/openbox/theme.h
-include/openbox/${PKGVERSION}/openbox/version.h
+include/openbox/3.3/openbox/color.h
+include/openbox/3.3/openbox/font.h
+include/openbox/3.3/openbox/geom.h
+include/openbox/3.3/openbox/gradient.h
+include/openbox/3.3/openbox/image.h
+include/openbox/3.3/openbox/instance.h
+include/openbox/3.3/openbox/mask.h
+include/openbox/3.3/openbox/parse.h
+include/openbox/3.3/openbox/render.h
+include/openbox/3.3/openbox/theme.h
+include/openbox/3.3/openbox/version.h
 lib/libobparser.la
 lib/libobrender.la
 lib/pkgconfig/obparser-3.0.pc
@@ -111,8 +111,8 @@ share/themes/syscrash/openbox-3/themerc
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
 @dirrm share/examples/openbox
-@dirrm include/openbox/${PKGVERSION}/openbox
-@dirrm include/openbox/${PKGVERSION}
+@dirrm include/openbox/3.3/openbox
+@dirrm include/openbox/3.3
 @dirrm include/openbox
 @dirrm etc/xdg/openbox
 @dirrm etc/xdg
