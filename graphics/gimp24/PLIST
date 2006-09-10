@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/07/14 14:19:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/09/10 22:59:16 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -399,12 +399,17 @@ share/aclocal/gimp-2.0.m4
 share/application-registry/gimp.applications
 share/applications/gimp.desktop
 share/doc/${PKGNAME}/libgimp/GimpAspectPreview.html
+share/doc/${PKGNAME}/libgimp/GimpBrushSelectButton.html
 share/doc/${PKGNAME}/libgimp/GimpDrawableComboBox.html
 share/doc/${PKGNAME}/libgimp/GimpDrawablePreview.html
 share/doc/${PKGNAME}/libgimp/GimpFontSelectButton.html
+share/doc/${PKGNAME}/libgimp/GimpGradientSelectButton.html
 share/doc/${PKGNAME}/libgimp/GimpImageComboBox.html
+share/doc/${PKGNAME}/libgimp/GimpPaletteSelectButton.html
+share/doc/${PKGNAME}/libgimp/GimpPatternSelectButton.html
 share/doc/${PKGNAME}/libgimp/GimpProcBrowserDialog.html
 share/doc/${PKGNAME}/libgimp/GimpProgressBar.html
+share/doc/${PKGNAME}/libgimp/GimpSelectButton.html
 share/doc/${PKGNAME}/libgimp/GimpZoomPreview.html
 share/doc/${PKGNAME}/libgimp/gimpdefinitions.html
 share/doc/${PKGNAME}/libgimp/home.png
@@ -735,6 +740,8 @@ share/doc/${PKGNAME}/libgimpwidgets/stock-color-picker-black-18.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-color-picker-gray-18.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-color-picker-white-18.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-color-triangle-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-colormap-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-colormap-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-convert-grayscale-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-convert-indexed-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-convert-rgb-16.png
@@ -800,6 +807,7 @@ share/doc/${PKGNAME}/libgimpwidgets/stock-join-bevel-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-join-miter-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-join-round-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-landscape-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-landscape-22.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-layer-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-layer-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-layer-32.png
@@ -831,6 +839,7 @@ share/doc/${PKGNAME}/libgimpwidgets/stock-paths-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-paths-22.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-plugin-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-portrait-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-portrait-22.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-print-resolution-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-print-resolution-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-question-64.png
@@ -970,22 +979,13 @@ share/doc/${PKGNAME}/libgimpwidgets/stock-warning-64.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-web-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-web-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-wilber-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-wilber-22.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-wilber-48.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-wilber-64.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-wilber-eek-64.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-zoom-follow-window-12.png
 share/doc/${PKGNAME}/libgimpwidgets/style.css
 share/doc/${PKGNAME}/libgimpwidgets/up.png
-share/doc/gimp-2.3.10/libgimp/GimpBrushSelectButton.html
-share/doc/gimp-2.3.10/libgimp/GimpGradientSelectButton.html
-share/doc/gimp-2.3.10/libgimp/GimpPaletteSelectButton.html
-share/doc/gimp-2.3.10/libgimp/GimpPatternSelectButton.html
-share/doc/gimp-2.3.10/libgimp/GimpSelectButton.html
-share/doc/gimp-2.3.10/libgimpwidgets/stock-colormap-16.png
-share/doc/gimp-2.3.10/libgimpwidgets/stock-colormap-24.png
-share/doc/gimp-2.3.10/libgimpwidgets/stock-landscape-22.png
-share/doc/gimp-2.3.10/libgimpwidgets/stock-portrait-22.png
-share/doc/gimp-2.3.10/libgimpwidgets/stock-wilber-22.png
-share/doc/gimp-2.3.10/libgimpwidgets/stock-wilber-48.png
 share/examples/gimp-2.0/controllerrc
 share/examples/gimp-2.0/gimprc
 share/examples/gimp-2.0/gtkrc
@@ -1534,8 +1534,6 @@ share/gimp/2.0/themes/Default/images/preferences/image-windows.png
 share/gimp/2.0/themes/Default/images/preferences/input-devices.png
 share/gimp/2.0/themes/Default/images/preferences/interface-22.png
 share/gimp/2.0/themes/Default/images/preferences/interface.png
-share/gimp/2.0/themes/Default/images/preferences/monitor-22.png
-share/gimp/2.0/themes/Default/images/preferences/monitor.png
 share/gimp/2.0/themes/Default/images/preferences/new-image.png
 share/gimp/2.0/themes/Default/images/preferences/session.png
 share/gimp/2.0/themes/Default/images/preferences/theme-22.png
