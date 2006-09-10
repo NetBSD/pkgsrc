@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.71 2006/09/10 19:27:34 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.72 2006/09/10 19:36:31 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1164,7 +1164,7 @@
 
     <para>Sometimes packages fail to build because the compiler runs
     into an operating system specific soft limit.  With the
-    <variable>UNLIMIT_RESOURCES</variable> variable pkgsrc can be told
+    <varname>UNLIMIT_RESOURCES</varname> variable pkgsrc can be told
     to unlimit the resources.  Currently, the allowed values are
     <quote>datasize</quote> and <quote>stacksize</quote> (or both).
     Setting this variable is similar to running the shell builtin
