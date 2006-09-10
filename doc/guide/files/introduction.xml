@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.17 2006/07/30 00:30:55 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.18 2006/09/10 19:27:59 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -217,13 +217,11 @@ minutes!</para>
 	<term>The &os; package system</term>
 
 	<listitem>
-	  <para>
-	    This is the former name of <quote>pkgsrc</quote>.  It is
-	    part of the &os; operating system and can be bootstrapped to
-	    run on non-&os; operating systems as well.  It handles
-	    building (compiling), installing, and removing of
-	    packages.
-	    </para>
+	  <para>This is the former name of <quote>pkgsrc</quote>.  It
+	  is part of the &os; operating system and can be bootstrapped
+	  to run on non-&os; operating systems as well.  It handles
+	  building (compiling), installing, and removing of
+	  packages.</para>
 	</listitem>
       </varlistentry>
 
