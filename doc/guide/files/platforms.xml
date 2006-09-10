@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.39 2006/09/10 19:30:56 wiz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.40 2006/09/10 19:51:49 wiz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -214,9 +214,10 @@ file and inspect the contents before extracting it.
     <para>Installing the bootstrap kit from source should be as simple as:</para>
 
     <screen>
-      &rprompt; <userinput>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</userinput>
-      &rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
-    &rprompt; <userinput>./bootstrap</userinput></screen>
+&rprompt; <userinput>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</userinput>
+&rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
+&rprompt; <userinput>./bootstrap</userinput>
+    </screen>
 
     <para>See <xref linkend="getting"/> for other ways to get
     pkgsrc before bootstrapping. The given
@@ -355,11 +356,13 @@ file and inspect the contents before extracting it.
 	  <para>If you do not intend to use the FreeBSD ports tools, it's probably a
 	  good idea to move them out of the way to avoid confusion, e.g.</para>
 
-	  <screen>&rprompt; <userinput>cd /usr/sbin</userinput>
-	  &rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
-	  &rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
-	  &rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
-	  &rprompt; <userinput>mv pkg_info pkg_info.orig</userinput></screen>
+	  <screen>
+&rprompt; <userinput>cd /usr/sbin</userinput>
+&rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
+&rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
+&rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
+&rprompt; <userinput>mv pkg_info pkg_info.orig</userinput>
+	  </screen>
 	</listitem>
 
 	<listitem>
@@ -555,7 +558,8 @@ file and inspect the contents before extracting it.
 	installing a package to work around the issue:</para>
 
 	<screen>
-	&rprompt; <userinput>chmod -R g+w $PKG_DBDIR</userinput></screen>
+&rprompt; <userinput>chmod -R g+w $PKG_DBDIR</userinput>
+	</screen>
 
       </sect3>
     </sect2>
@@ -695,11 +699,13 @@ file and inspect the contents before extracting it.
 	  <para>If you do not intend to use the OpenBSD ports tools, it's probably a
 	  good idea to move them out of the way to avoid confusion, e.g.</para>
 
-	  <screen>&rprompt; <userinput>cd /usr/sbin</userinput>
-	  &rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
-	  &rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
-	  &rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
-	  &rprompt; <userinput>mv pkg_info pkg_info.orig</userinput></screen>
+	  <screen>
+&rprompt; <userinput>cd /usr/sbin</userinput>
+&rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
+&rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
+&rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
+&rprompt; <userinput>mv pkg_info pkg_info.orig</userinput>
+	  </screen>
 	</listitem>
 
 	<listitem>
