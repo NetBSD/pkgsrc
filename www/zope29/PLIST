@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/08/17 11:57:25 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/10 00:56:53 taca Exp $
 ${ZOPEBASEDIR}/bin/README.txt
 ${ZOPEBASEDIR}/bin/analyze.py
 ${ZOPEBASEDIR}/bin/check_catalog.py
@@ -8828,6 +8828,8 @@ ${ZOPEBASEDIR}/skel/import/ZopeTutorialExamples.zexp
 ${ZOPEBASEDIR}/skel/lib/python/README.txt.in
 ${ZOPEBASEDIR}/skel/log/README.txt
 ${ZOPEBASEDIR}/skel/var/README.txt
+share/examples/rc.d/zeo29
+share/examples/rc.d/zope29
 @dirrm ${ZOPEBASEDIR}/skel/var
 @dirrm ${ZOPEBASEDIR}/skel/log
 @dirrm ${ZOPEBASEDIR}/skel/lib/python
