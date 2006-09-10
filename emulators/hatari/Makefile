@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/10 21:58:14 adam Exp $
 
-DISTNAME=	hatari-0.80
-PKGREVISION=	2
+DISTNAME=	hatari-0.90
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
 
@@ -12,8 +11,9 @@ COMMENT=	Atari ST emulator
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
+INSTALLATION_DIRS+=	share/doc/hatari
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hatari
 	cd ${WRKSRC} && ${INSTALL_DATA} *.txt ${PREFIX}/share/doc/hatari
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.txt *.html \
 			${PREFIX}/share/doc/hatari
