@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1246 2006/09/10 00:57:37 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1247 2006/09/10 04:46:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4255,3 +4255,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mailman to 2.1.9rc1 [bouyer 2006-09-10]
 	Add security/epg version 0.0.5 [gdt 2006-09-10]
 	Updated www/zope29 to 2.9.4nb3 [taca 2006-09-10]
+	Updated net/btpd to 0.11 [obache 2006-09-10]
