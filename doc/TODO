@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5432 2006/09/09 13:51:01 obache Exp $
+$NetBSD: TODO,v 1.5433 2006/09/10 02:53:55 obache Exp $
 
 Suggested new packages
 ======================
@@ -1122,6 +1122,7 @@ Suggested package updates
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o silc-toolkit-1.0.2
 	o simh-3.5.0
+	o simulavr-0.1.2.2
 	o sipsak-0.9.6
 	o sitecopy-0.16.3
 	o sitescooper-3.1.2
