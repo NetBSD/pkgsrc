@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.82 2006/09/02 11:14:48 schwarz Exp $
+# $NetBSD: bootstrap,v 1.83 2006/09/10 20:14:43 schwarz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -185,11 +185,6 @@ opsys_finish()
         		run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/fakeldd $prefix/sbin"
 			need_extras=yes
 			echo "LDD=			$prefix/sbin/fakeldd" >> ${MKCONF_EXAMPLE}
-		fi
-		;;
-	OSF1)
-		if [ ! -e /usr/X11R6 ]; then
-			ln -sf /usr /usr/X11R6
 		fi
 		;;
 	esac
