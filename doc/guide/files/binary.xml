@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.25 2006/09/09 23:40:40 wiz Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.26 2006/09/10 19:51:49 wiz Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -17,8 +17,10 @@
     directory in pkgsrc, and run <command>make
     package</command>:</para>
 
-    <screen>&rprompt; <userinput>cd misc/figlet</userinput>
-    &rprompt; <userinput>make package</userinput></screen>
+    <screen>
+&rprompt; <userinput>cd misc/figlet</userinput>
+&rprompt; <userinput>make package</userinput>
+    </screen>
 
     <para>This will build and install your package (if not already done),
     and then build a binary package from what was installed. You can
@@ -209,8 +211,10 @@
       interfere with builds, like some libs installed in
       <filename>/usr/local</filename>, etc. then become root and type:</para>
 
-      <screen>&rprompt; <userinput>cd /usr/pkgsrc</userinput>
-      &rprompt; <userinput>sh mk/bulk/build</userinput></screen>
+      <screen>
+&rprompt; <userinput>cd /usr/pkgsrc</userinput>
+&rprompt; <userinput>sh mk/bulk/build</userinput>
+      </screen>
 
       <para>If for some reason your last build didn't complete (power
       failure, system panic, ...), you can continue it by
@@ -390,8 +394,10 @@
 	  <para>Checkout pkgsrc via cvs into
 	  <filename>/usr/sandbox/usr/pkgsrc</filename>:</para>
 
-	  <screen>&rprompt; <userinput>cd /usr/sandbox/usr</userinput>
-	  &rprompt; <userinput>cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -d -P pkgsrc</userinput></screen>
+	  <screen>
+&rprompt; <userinput>cd /usr/sandbox/usr</userinput>
+&rprompt; <userinput>cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -d -P pkgsrc</userinput>
+	  </screen>
 
 	  <para>Do not mount/link this to the copy of your pkgsrc tree
 	  you do development in, as this will likely cause problems!</para>
@@ -416,8 +422,10 @@
       <para>When the chroot sandbox is set up, you can start
       the build with the following steps:</para>
 
-      <screen>&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
-      &rprompt; <userinput>sh mk/bulk/do-sandbox-build</userinput></screen>
+      <screen>
+&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
+&rprompt; <userinput>sh mk/bulk/do-sandbox-build</userinput>
+      </screen>
 
       <para>This will just jump inside the sandbox and start building.  At
 	the end of the build, mail will be sent with the results of
@@ -483,7 +491,7 @@
       into the variable, e.g. my local account is "feyrer", but for my
       login "hubertf", I use:</para>
 
-      <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload </screen>
+      <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload</screen>
 
       <para>A separate <filename>upload</filename> directory is used
       here to allow "closing" the directory during upload. To do
@@ -501,10 +509,12 @@
       for the root account <emphasis>inside the sandbox</emphasis>
       (assuming that no keys should be present there usually):</para>
 
-      <screen>&rprompt; <userinput>chroot /usr/sandbox</userinput>
-      chroot-&rprompt; <userinput>rm $HOME/.ssh/id-dsa*</userinput>
-      chroot-&rprompt; <userinput>ssh-keygen -t dsa</userinput>
-      chroot-&rprompt; <userinput>cat $HOME/.ssh/id-dsa.pub</userinput> </screen>
+      <screen>
+&rprompt; <userinput>chroot /usr/sandbox</userinput>
+chroot-&rprompt; <userinput>rm $HOME/.ssh/id-dsa*</userinput>
+chroot-&rprompt; <userinput>ssh-keygen -t dsa</userinput>
+chroot-&rprompt; <userinput>cat $HOME/.ssh/id-dsa.pub</userinput>
+      </screen>
 
       <para>Now take the output of <filename>id-dsa.pub</filename> and
       append it to your <filename>~/.ssh/authorized_keys</filename>
@@ -520,9 +530,11 @@
       <para>Now after all this works, you can exit the sandbox and start
       the upload:</para>
 
-      <screen>chroot-&rprompt; <userinput>exit</userinput>
-      &rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
-      &rprompt; <userinput>sh mk/bulk/do-sandbox-upload</userinput> </screen>
+      <screen>
+chroot-&rprompt; <userinput>exit</userinput>
+&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
+&rprompt; <userinput>sh mk/bulk/do-sandbox-upload</userinput>
+      </screen>
 
       <para>The upload process may take quite some time. Use &man.ls.1; or
       &man.du.1; on the FTP server to monitor progress of the
@@ -540,10 +552,12 @@
       <filename>upload</filename> directory to have them accessible
       to everyone:</para>
 
-      <screen>nbftp% <userinput>cd /pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch</userinput>
-      nbftp% <userinput>mv upload/* .</userinput>
-      nbftp% <userinput>rmdir upload</userinput>
-      nbftp% <userinput>chmod 755 .</userinput> </screen>
+      <screen>
+nbftp% <userinput>cd /pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch</userinput>
+nbftp% <userinput>mv upload/* .</userinput>
+nbftp% <userinput>rmdir upload</userinput>
+nbftp% <userinput>chmod 755 .</userinput>
+      </screen>
     </sect2>
   </sect1>
 
@@ -569,22 +583,26 @@
       sufficient disk space exists in <filename>/u2</filename> to
       hold the ISO 9660 images.</para>
 
-      <screen>&rprompt; <userinput>mkdir /u2/images</userinput>
-      &rprompt; <userinput>pkg_add /usr/pkgsrc/packages/All/cdpack</userinput>
-      &rprompt; <userinput>cdpack /usr/pkgsrc/packages/All /u2/images</userinput></screen>
+      <screen>
+&rprompt; <userinput>mkdir /u2/images</userinput>
+&rprompt; <userinput>pkg_add /usr/pkgsrc/packages/All/cdpack</userinput>
+&rprompt; <userinput>cdpack /usr/pkgsrc/packages/All /u2/images</userinput>
+      </screen>
 
       <para>If you wish to include a common set of files
       (<filename>COPYRIGHT</filename>, <filename>README</filename>,
       etc.) on each CD in the collection, then you need to create a
       directory which contains these files. e.g.</para>
 
-      <screen>&rprompt; <userinput>mkdir /tmp/common</userinput>
-      &rprompt; <userinput>echo "This is a README" &gt; /tmp/common/README</userinput>
-      &rprompt; <userinput>echo "Another file" &gt; /tmp/common/COPYING</userinput>
-      &rprompt; <userinput>mkdir /tmp/common/bin</userinput>
-      &rprompt; <userinput>echo "#!/bin/sh" &gt; /tmp/common/bin/myscript</userinput>
-      &rprompt; <userinput>echo "echo Hello world" &gt;&gt; /tmp/common/bin/myscript</userinput>
-      &rprompt; <userinput>chmod 755 /tmp/common/bin/myscript</userinput></screen>
+      <screen>
+&rprompt; <userinput>mkdir /tmp/common</userinput>
+&rprompt; <userinput>echo "This is a README" &gt; /tmp/common/README</userinput>
+&rprompt; <userinput>echo "Another file" &gt; /tmp/common/COPYING</userinput>
+&rprompt; <userinput>mkdir /tmp/common/bin</userinput>
+&rprompt; <userinput>echo "#!/bin/sh" &gt; /tmp/common/bin/myscript</userinput>
+&rprompt; <userinput>echo "echo Hello world" &gt;&gt; /tmp/common/bin/myscript</userinput>
+&rprompt; <userinput>chmod 755 /tmp/common/bin/myscript</userinput>
+      </screen>
 
       <para>Now create the images:</para>
 
