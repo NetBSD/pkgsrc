@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1253 2006/09/10 22:36:32 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1254 2006/09/10 23:00:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4266,3 +4266,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/opencdk to 0.5.9 [wiz 2006-09-10]
 	Updated security/gnutls to 1.4.3 [wiz 2006-09-10]
 	Updated net/freeradius 1.1.3 [adrianp 2006-09-10]
+	Updated emulators/hatari to 0.90 [adam 2006-09-11]
+	Updated graphics/gimp24 to 2.3.11 [adam 2006-09-11]
