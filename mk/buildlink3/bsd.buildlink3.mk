@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.186 2006/08/09 15:31:01 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.187 2006/09/10 19:49:53 schwarz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -895,18 +895,29 @@ _BLNK_TRANSFORM+=	P:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
-# Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR}.
+# Transform references to ${X11BASE} into ${BUILDLINK_X11_DIR}.
+# (do so before transforming references to ${LOCALBASE} unless the
+# ${X11BASE} path is contained in ${LOCALBASE}'s path)
 #
-.if defined(USE_X11)
+.if defined(USE_X11) && empty(LOCALBASE:M${X11BASE}*)
 _BLNK_TRANSFORM+=       I:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=       L:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .endif
 #
-# Transform references into ${LOCALBASE} into ${BUILDLINK_DIR}.
+# Transform references to ${LOCALBASE} into ${BUILDLINK_DIR}.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
+.endif
+#
+# Transform references to ${X11BASE} into ${BUILDLINK_X11_DIR}.
+# (do so only after transforming references to ${LOCALBASE} if the
+# ${X11BASE} path is contained in ${LOCALBASE}'s path)
+#
+.if defined(USE_X11) && !empty(LOCALBASE:M${X11BASE}*)
+_BLNK_TRANSFORM+=	I:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
+_BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .endif
 #
 # Protect any remaining references to ${PREFIX}, ${LOCALBASE}, or ${X11BASE}.
