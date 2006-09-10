@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/09/09 20:32:40 schwarz Exp $
+# $NetBSD: Makefile,v 1.49 2006/09/10 13:42:32 schwarz Exp $
 
 DISTNAME=       xpm-3.4k
 PKGREVISION=	6
@@ -24,6 +24,10 @@ post-install:
 .endif
 
 .if !empty(LOWER_OPSYS:Mirix5*)
+SUBST_CLASSES+=	sodots
+SUBST_STAGE.sodots=	post-configure
+SUBST_FILES.sodots=	lib/Makefile
+SUBST_SED.sodots=	-e 's,\.so$$(SOXPMLIBREV),.so.$$(SOXPMLIBREV),g'
 # needs snprintf()
 . include "../../pkgtools/libnbcompat/buildlink3.mk"
 IMAKEOPTS+=	-DExtraLibraries=${BUILDLINK_LDADD.libnbcompat:Q}
@@ -34,9 +38,6 @@ post-configure:
 
 post-install:
 	cd ${PREFIX}/lib && \
-	${MV} -f libXpm.so4.11 libXpm.so.4.11 && \
-	${RM} -f libXpm.so && \
-	${LN} -sf libXpm.so.4.11 libXpm.so && \
 	${RM} -f libXpm.so.4 && \
 	${LN} -sf libXpm.so.4.11 libXpm.so.4
 	
