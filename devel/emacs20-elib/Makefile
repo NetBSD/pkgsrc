@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/08/27 02:14:07 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2006/09/10 13:17:22 obache Exp $
 
 PKGNAME=	emacs20-${DISTNAME}
 PKGREVISION=	3
 
-EMACS_TYPE=	emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs20
 
 CONFLICTS+=	elib-[0-9]*
 
