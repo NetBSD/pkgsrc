@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.13 2006/09/08 07:38:37 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.14 2006/09/10 19:32:22 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -87,84 +87,66 @@
 
 <sect1 id="committing-importing">
 <title>Committing: Importing a package into CVS</title>
-<para>
-  This section is only of interest for pkgsrc developers with write
+<para>This section is only of interest for pkgsrc developers with write
   access to the pkgsrc repository. Please remember that cvs
   imports files relative to the current working directory, and that
   the pathname that you
   give the <command>cvs import</command> command is so that it knows where
   to place the files in the repository.  Newly created packages should be
   imported with a vendor tag of <quote>TNF</quote> and a release tag of
-  <quote>pkgsrc-base</quote>, e.g:
-</para>
+  <quote>pkgsrc-base</quote>, e.g:</para>
 
 <programlisting>
     &uprompt; cd .../pkgsrc/category/pkgname
     &uprompt; cvs import pkgsrc/category/pkgname TNF pkgsrc-base
 </programlisting>
 
-<para>
-  Remember to move the directory from which you imported out of
+<para>Remember to move the directory from which you imported out of
   the way, or cvs will complain the next time you <quote>cvs
   update</quote> your source tree.  Also don't forget to add the new
-  package to the category's <filename>Makefile</filename>.
-</para>
+  package to the category's <filename>Makefile</filename>.</para>
 
-<para>
-  The commit message of the initial import should include part of the
+<para>The commit message of the initial import should include part of the
   <filename>DESCR</filename> file, so people reading the mailing lists know
-  what the package is/does.
-</para>
+  what the package is/does.</para>
 
-<para>
-  For new packages, <quote>cvs import</quote> is preferred to <quote>cvs
+<para>For new packages, <quote>cvs import</quote> is preferred to <quote>cvs
   add</quote> because the former gets everything with a single command,
-  and provides a consistent tag.
-</para>
+  and provides a consistent tag.</para>
 </sect1>
 
 <sect1 id="updating-package">
 <title>Updating a package to a newer version</title>
-<para>
-  Please always put a concise, appropriate and relevant summary of the
+<para>Please always put a concise, appropriate and relevant summary of the
   changes between old and new versions into the commit log when updating
-  a package. There are various reasons for this:
-</para>
+  a package. There are various reasons for this:</para>
 
 <itemizedlist>
 <listitem>
-<para>
-  A URL is volatile, and can change over time. It may go away completely
-  or its information may be overwritten by newer information.
-</para>
+<para>A URL is volatile, and can change over time. It may go away completely
+  or its information may be overwritten by newer information.</para>
 </listitem>
 
 <listitem>
-<para>
-  Having the change information between old and new versions in our CVS
-  repository is very useful for people who use either cvs or anoncvs.
-</para>
+<para>Having the change information between old and new versions in our CVS
+  repository is very useful for people who use either cvs or anoncvs.</para>
 </listitem>
 
 <listitem>
-<para>
-  Having the change information between old and new versions in our CVS
+<para>Having the change information between old and new versions in our CVS
   repository is very useful for people who read the pkgsrc-changes mailing
   list, so that they can make tactical decisions about when to upgrade
-  the package.
-</para>
+  the package.</para>
 </listitem>
 </itemizedlist>
 
-<para>
-  Please also recognize that, just because a new version of a package
+<para>Please also recognize that, just because a new version of a package
   has been released, it should not automatically be upgraded in the CVS
   repository.  We prefer to be conservative in the packages that are
   included in pkgsrc - development or beta packages are not really the
   best thing for most places in which pkgsrc is used. Please use your
   judgement about what should go into pkgsrc, and bear in mind that
-  stability is to be preferred above new and possibly untested features.
-</para>
+  stability is to be preferred above new and possibly untested features.</para>
 </sect1>
 
 <sect1 id="moving-package">
@@ -174,13 +156,9 @@
 <listitem><para>Make a copy of the directory somewhere else.</para></listitem>
 
 <listitem><para>Remove all CVS dirs.</para>
-<para>
-  Alternatively to the first two steps you can also do:
-</para>
+<para>Alternatively to the first two steps you can also do:</para>
 <screen><prompt>%</prompt> <userinput>cvs -d user@cvs.NetBSD.org:/cvsroot export -D today pkgsrc/category/package</userinput></screen>
-<para>
-  and use that for further work.
-</para>
+<para>and use that for further work.</para>
 </listitem>
 
 <listitem><para>Fix <varname>CATEGORIES</varname> and any
@@ -193,8 +171,7 @@ place.</para></listitem>
 
 <listitem><para>Check if any package depends on it:
 <screen><prompt>%</prompt> <userinput>cd /usr/pkgsrc</userinput>
-<prompt>%</prompt> <userinput>grep /package */*/Makefile* */*/buildlink*</userinput></screen>
-</para>
+<prompt>%</prompt> <userinput>grep /package */*/Makefile* */*/buildlink*</userinput></screen></para>
 </listitem>
 
 <listitem><para>Fix paths in packages from step 5 to point to new location.</para></listitem>
@@ -207,9 +184,7 @@ place.</para></listitem>
 
 <listitem><para>Commit the changed and removed files:</para>
 <screen><prompt>%</prompt> <userinput>cvs commit oldcategory/package oldcategory/Makefile newcategory/Makefile</userinput></screen>
-<para>
-  (and any packages from step 5, of course).
-</para>
+<para>(and any packages from step 5, of course).</para>
 </listitem>
 </orderedlist>
 

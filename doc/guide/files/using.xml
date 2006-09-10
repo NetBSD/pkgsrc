@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.24 2006/09/02 11:26:16 schwarz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.25 2006/09/10 19:33:05 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -74,22 +74,21 @@
 <sect2 id="installing-binary-packages">
 <title>Installing binary packages</title>
 
-      <para> If you have the files on a CD-ROM or downloaded them to
+      <para>If you have the files on a CD-ROM or downloaded them to
         your hard disk, you can install them with the following command
         (be sure to <command>su</command> to root first):</para>
 
         <screen><prompt>#</prompt> <userinput>pkg_add /path/to/package.tgz</userinput></screen>
 
-      <para> If you have FTP access and you don't want to download the
+      <para>If you have FTP access and you don't want to download the
         packages via FTP prior to installation, you can do this
-        automatically by giving <command>pkg_add</command> an FTP URL:
-        </para>
+        automatically by giving <command>pkg_add</command> an FTP URL:</para>
 
       <screen><prompt>#</prompt> <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package</userinput></screen>
 
       <para>Note that any prerequisite packages needed to run the
         package in question will be installed, too, assuming they are
-        present where you install from. </para>
+        present where you install from.</para>
 
       <para>To save some typing, you can set the
         <varname>PKG_PATH</varname> environment variable to a semicolon-separated
@@ -113,7 +112,7 @@
       <para>After you've installed packages, be sure to have
         <filename>/usr/pkg/bin</filename> and <filename>/usr/pkg/sbin</filename> in your
         <varname>PATH</varname> so you can actually start the just
-        installed program. </para>
+        installed program.</para>
     </sect2>
 
 <sect2 id="using.pkg_delete">
@@ -237,8 +236,7 @@ package on your system and rebuild any dependencies.
   <sect1 id="building-packages-from-source">
     <title>Building packages from source</title>
 
-<para>
-After obtaining pkgsrc, the <filename>pkgsrc</filename> directory
+<para>After obtaining pkgsrc, the <filename>pkgsrc</filename> directory
 now contains a set of packages, organized into categories. You can browse
 the online index of packages, or run <command>make readme</command>
 from the <filename>pkgsrc</filename> directory to build local
@@ -327,7 +325,7 @@ compile time.
         use the pkgsrc <command>bmake</command> command instead of
         <quote>make</quote> in the examples in this guide.</para></note>
 
-     <para>For example, type </para>
+     <para>For example, type</para>
 
       <screen>&cprompt; <userinput>cd misc/figlet</userinput>
 &cprompt; <userinput>make</userinput></screen>
@@ -449,17 +447,16 @@ You can now enter:
       <title>Selecting the compiler</title>
 
       <para>By default, pkgsrc will use GCC to build packages.  This may be
-        overridden by setting the following variables in /etc/mk.conf:
-        </para>
+        overridden by setting the following variables in /etc/mk.conf:</para>
 
       <variablelist>
         <varlistentry>
           <term><varname>PKGSRC_COMPILER</varname>:</term>
 
           <listitem>
-            <para> This is a list of values specifying the chain of
+            <para>This is a list of values specifying the chain of
               compilers to invoke when building packages.  Valid values
-              are: </para>
+              are:</para>
 
 <!-- TODO: update this list after jlam's changes in May 2005 -->
             <itemizedlist>
@@ -488,14 +485,14 @@ You can now enter:
               </listitem>
             </itemizedlist>
 
-            <para> The default is
+            <para>The default is
               <quote><varname>gcc</varname></quote>.  You can use
               <varname>ccache</varname> and/or
               <varname>distcc</varname> with an appropriate
               <varname>PKGSRC_COMPILER</varname> setting,
               e.g. <quote><varname>ccache gcc</varname></quote>.  This
               variable should always be
-              terminated with a value for a real compiler.  </para>
+              terminated with a value for a real compiler.</para>
 	  </listitem>
         </varlistentry>
 
@@ -506,10 +503,10 @@ You can now enter:
    is not gcc?
 -->
           <listitem>
-            <para> This specifies the minimum version of GCC to use
+            <para>This specifies the minimum version of GCC to use
               when building packages.  If the system GCC doesn't
               satisfy this requirement, then pkgsrc will build and
-              install one of the GCC packages to use instead. </para>
+              install one of the GCC packages to use instead.</para>
           </listitem>
         </varlistentry>
       </variablelist>
