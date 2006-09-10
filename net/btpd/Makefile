@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/04/06 06:22:30 reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/10 04:43:13 obache Exp $
 
-DISTNAME=	btpd-0.8
+DISTNAME=	btpd-0.11
 CATEGORIES=	net
 MASTER_SITES=	http://www.murmeldjur.se/btpd/ \
 		http://people.su.se/~rnyberg/btpd/
