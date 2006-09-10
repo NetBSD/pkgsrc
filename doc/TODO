@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5434 2006/09/10 04:46:11 obache Exp $
+$NetBSD: TODO,v 1.5435 2006/09/10 10:24:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openal-0.0.8
-	o openbox-3.3.1
 	o opencdk-0.5.9
 	o opencobol-0.31
 	o openexr-1.3.0
