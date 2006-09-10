@@ -1,4 +1,4 @@
-# $NetBSD: imake-check.mk,v 1.4 2005/08/10 16:28:59 jlam Exp $
+# $NetBSD: imake-check.mk,v 1.5 2006/09/10 16:39:31 tron Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,7 +67,8 @@ IMAKE?=		${X11BASE}/bin/imake				# XXX
 BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}!=				\
 	if ${SETENV} CAT=${CAT:Q} ECHO=${ECHO:Q} GREP=${GREP:Q}		\
 		IMAKE=${IMAKE:Q} IMAKE_MAKE=${IMAKE_MAKE:Q}		\
-		MKDIR=${MKDIR:Q} RM=${RM:Q} TEST=${TEST:Q}		\
+		MKDIR=${MKDIR:Q} PATH_ORIG=${_PATH_ORIG:Q}		\
+		RM=${RM:Q} TEST=${TEST:Q}				\
 		X11BASE=${X11BASE:Q}					\
 	   ${SH} ${.CURDIR}/../../mk/buildlink3/imake-check		\
 		${_pair_:C/^[^:]*\://};					\

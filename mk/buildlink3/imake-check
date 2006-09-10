@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: imake-check,v 1.4 2006/09/03 13:07:59 hira Exp $
+# $NetBSD: imake-check,v 1.5 2006/09/10 16:39:31 tron Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -79,11 +79,16 @@ builtin-test:
 #endif
 EOF
 
+# Reset command path to avoid calling wrapper scripts.
+if [ -n "$_PATH_ORIG" ]
+then
+	PATH="$_PATH_ORIG"; export PATH
+fi
+
 # Run imake to process the Imakefile.
-WRAPPER_SKIP_TRANSFORM=yes \
-	${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config -s - |
-	${IMAKE_MAKE} -f - builtin-test |
-	${GREP} -q yes
+${IMAKE} -DUseInstalled -I${X11BASE}/lib/X11/config -s - |
+${IMAKE_MAKE} -f - builtin-test |
+${GREP} -q yes
 exitcode="$?"
 
 # Clean up after ourselves.
