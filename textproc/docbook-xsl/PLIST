@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/05/30 22:13:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/09/10 18:28:52 wiz Exp $
 share/examples/docbook-xsl/README
 share/examples/docbook-xsl/biblioentry.xsl
 share/examples/docbook-xsl/testtemplate.xml
@@ -9,6 +9,8 @@ share/xsl/docbook/catalog.xml
 share/xsl/docbook/common/af.xml
 share/xsl/docbook/common/am.xml
 share/xsl/docbook/common/ar.xml
+share/xsl/docbook/common/autoidx-kimber.xsl
+share/xsl/docbook/common/autoidx-kosek.xsl
 share/xsl/docbook/common/autoidx-ng.xsl
 share/xsl/docbook/common/az.xml
 share/xsl/docbook/common/bg.xml
@@ -82,51 +84,58 @@ share/xsl/docbook/common/vi.xml
 share/xsl/docbook/common/xh.xml
 share/xsl/docbook/common/zh_cn.xml
 share/xsl/docbook/common/zh_tw.xml
-share/xsl/docbook/extensions/build.xml
-share/xsl/docbook/extensions/saxon643.jar
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/CVS.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/Callout.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/CalloutEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/ColumnScanEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/ColumnUpdateEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/CopyEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/FormatCallout.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/FormatGraphicCallout.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/FormatTextCallout.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/FormatUnicodeCallout.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/ImageIntrinsics.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/LineCountEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/NumberLinesEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/Table.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/Text.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/TextFactory.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/UnwrapLinks.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/UnwrapLinksEmitter.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/Verbatim.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/Windows1252.java
-share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon/package.html
-share/xsl/docbook/extensions/saxon644.jar
 share/xsl/docbook/extensions/saxon65.jar
-share/xsl/docbook/extensions/saxon651.jar
-share/xsl/docbook/extensions/saxon652.jar
-share/xsl/docbook/extensions/saxon653.jar
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/CVS.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/Callout.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/FormatCallout.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/FormatDingbatCallout.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/FormatGraphicCallout.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/FormatTextCallout.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/FormatUnicodeCallout.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/Func.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/ImageIntrinsics.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/Params.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/Table.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/Text.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/Verbatim.java
-share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan/package.html
-share/xsl/docbook/extensions/xalan25.jar
+share/xsl/docbook/extensions/saxon65/build.xml
+share/xsl/docbook/extensions/saxon65/dist/saxon65.jar
+share/xsl/docbook/extensions/saxon65/nbproject/build-impl.xml
+share/xsl/docbook/extensions/saxon65/nbproject/genfiles.properties
+share/xsl/docbook/extensions/saxon65/nbproject/project.properties
+share/xsl/docbook/extensions/saxon65/nbproject/project.xml
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/CVS.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/Callout.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/CalloutEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/ColumnScanEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/ColumnUpdateEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/CopyEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/FormatCallout.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/FormatGraphicCallout.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/FormatTextCallout.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/FormatUnicodeCallout.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/ImageIntrinsics.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/LineCountEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/NumberLinesEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/Table.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/Text.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/TextFactory.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/UnwrapLinks.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/UnwrapLinksEmitter.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/Verbatim.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/Windows1252.java
+share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon/package.html
+share/xsl/docbook/extensions/xalan2.jar
+share/xsl/docbook/extensions/xalan2/build.xml
+share/xsl/docbook/extensions/xalan2/dist/xalan2.jar
+share/xsl/docbook/extensions/xalan2/nbproject/build-impl.xml
+share/xsl/docbook/extensions/xalan2/nbproject/genfiles.properties
+share/xsl/docbook/extensions/xalan2/nbproject/project.properties
+share/xsl/docbook/extensions/xalan2/nbproject/project.xml
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/CVS.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/Callout.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/FormatCallout.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/FormatDingbatCallout.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/FormatGraphicCallout.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/FormatTextCallout.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/FormatUnicodeCallout.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/Func.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/ImageIntrinsics.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/Params.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/Table.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/Text.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/Verbatim.java
+share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan/package.html
 share/xsl/docbook/extensions/xalan27.jar
 share/xsl/docbook/extensions/xalan27/build.xml
+share/xsl/docbook/extensions/xalan27/dist/xalan27.jar
 share/xsl/docbook/extensions/xalan27/nbproject/build-impl.xml
 share/xsl/docbook/extensions/xalan27/nbproject/genfiles.properties
 share/xsl/docbook/extensions/xalan27/nbproject/project.properties
@@ -145,6 +154,8 @@ share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan/Table.java
 share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan/Text.java
 share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan/Verbatim.java
 share/xsl/docbook/fo/admon.xsl
+share/xsl/docbook/fo/autoidx-kimber.xsl
+share/xsl/docbook/fo/autoidx-kosek.xsl
 share/xsl/docbook/fo/autoidx-ng.xsl
 share/xsl/docbook/fo/autoidx.xsl
 share/xsl/docbook/fo/autotoc.xsl
@@ -166,6 +177,7 @@ share/xsl/docbook/fo/fop1.xsl
 share/xsl/docbook/fo/formal.xsl
 share/xsl/docbook/fo/glossary.xsl
 share/xsl/docbook/fo/graphics.xsl
+share/xsl/docbook/fo/highlight.xsl
 share/xsl/docbook/fo/htmltbl.xsl
 share/xsl/docbook/fo/index.xsl
 share/xsl/docbook/fo/info.xsl
@@ -199,6 +211,8 @@ share/xsl/docbook/fo/xep.xsl
 share/xsl/docbook/fo/xref.xsl
 share/xsl/docbook/html/admon.xsl
 share/xsl/docbook/html/annotations.xsl
+share/xsl/docbook/html/autoidx-kimber.xsl
+share/xsl/docbook/html/autoidx-kosek.xsl
 share/xsl/docbook/html/autoidx-ng.xsl
 share/xsl/docbook/html/autoidx.xsl
 share/xsl/docbook/html/autotoc.xsl
@@ -222,6 +236,7 @@ share/xsl/docbook/html/footnote.xsl
 share/xsl/docbook/html/formal.xsl
 share/xsl/docbook/html/glossary.xsl
 share/xsl/docbook/html/graphics.xsl
+share/xsl/docbook/html/highlight.xsl
 share/xsl/docbook/html/html-rtf.xsl
 share/xsl/docbook/html/html.xsl
 share/xsl/docbook/html/htmltbl.xsl
@@ -381,6 +396,7 @@ share/xsl/docbook/params/biblioentry.properties.xml
 share/xsl/docbook/params/bibliography.collection.xml
 share/xsl/docbook/params/bibliography.numbered.xml
 share/xsl/docbook/params/blockquote.properties.xml
+share/xsl/docbook/params/blurb.on.titlepage.enabled.xml
 share/xsl/docbook/params/body.end.indent.xml
 share/xsl/docbook/params/body.font.family.xml
 share/xsl/docbook/params/body.font.master.xml
@@ -435,6 +451,7 @@ share/xsl/docbook/params/column.gap.titlepage.xml
 share/xsl/docbook/params/compact.list.item.spacing.xml
 share/xsl/docbook/params/component.label.includes.part.label.xml
 share/xsl/docbook/params/component.title.properties.xml
+share/xsl/docbook/params/contrib.inline.enabled.xml
 share/xsl/docbook/params/crop.mark.bleed.xml
 share/xsl/docbook/params/crop.mark.offset.xml
 share/xsl/docbook/params/crop.mark.width.xml
@@ -458,6 +475,8 @@ share/xsl/docbook/params/eclipse.autolabel.xml
 share/xsl/docbook/params/eclipse.plugin.id.xml
 share/xsl/docbook/params/eclipse.plugin.name.xml
 share/xsl/docbook/params/eclipse.plugin.provider.xml
+share/xsl/docbook/params/editedby.enabled.xml
+share/xsl/docbook/params/email.delimiters.enabled.xml
 share/xsl/docbook/params/emphasis.propagates.style.xml
 share/xsl/docbook/params/entry.propagates.style.xml
 share/xsl/docbook/params/equation.properties.xml
@@ -509,6 +528,8 @@ share/xsl/docbook/params/header.content.properties.xml
 share/xsl/docbook/params/header.rule.xml
 share/xsl/docbook/params/header.table.height.xml
 share/xsl/docbook/params/headers.on.blank.pages.xml
+share/xsl/docbook/params/highlight.default.language.xml
+share/xsl/docbook/params/highlight.source.xml
 share/xsl/docbook/params/html.base.xml
 share/xsl/docbook/params/html.cellpadding.xml
 share/xsl/docbook/params/html.cellspacing.xml
@@ -695,6 +716,7 @@ share/xsl/docbook/params/olink.sysid.xml
 share/xsl/docbook/params/orderedlist.label.properties.xml
 share/xsl/docbook/params/orderedlist.label.width.xml
 share/xsl/docbook/params/orderedlist.properties.xml
+share/xsl/docbook/params/othercredit.like.author.enabled.xml
 share/xsl/docbook/params/page.height.portrait.xml
 share/xsl/docbook/params/page.height.xml
 share/xsl/docbook/params/page.margin.bottom.xml
@@ -736,6 +758,7 @@ share/xsl/docbook/params/profile.vendor.xml
 share/xsl/docbook/params/punct.honorific.xml
 share/xsl/docbook/params/qanda.defaultlabel.xml
 share/xsl/docbook/params/qanda.inherit.numeration.xml
+share/xsl/docbook/params/qanda.nested.in.toc.xml
 share/xsl/docbook/params/qanda.title.level1.properties.xml
 share/xsl/docbook/params/qanda.title.level2.properties.xml
 share/xsl/docbook/params/qanda.title.level3.properties.xml
@@ -764,6 +787,7 @@ share/xsl/docbook/params/refentry.version.profile.enabled.xml
 share/xsl/docbook/params/refentry.version.profile.xml
 share/xsl/docbook/params/refentry.version.suppress.xml
 share/xsl/docbook/params/refentry.xref.manvolnum.xml
+share/xsl/docbook/params/reference.autolabel.xml
 share/xsl/docbook/params/region.after.extent.xml
 share/xsl/docbook/params/region.before.extent.xml
 share/xsl/docbook/params/revhistory.table.cell.properties.xml
@@ -878,6 +902,8 @@ share/xsl/docbook/profiling/strip-attributes.xsl
 share/xsl/docbook/profiling/xsl2profile.xsl
 share/xsl/docbook/xhtml/admon.xsl
 share/xsl/docbook/xhtml/annotations.xsl
+share/xsl/docbook/xhtml/autoidx-kimber.xsl
+share/xsl/docbook/xhtml/autoidx-kosek.xsl
 share/xsl/docbook/xhtml/autoidx-ng.xsl
 share/xsl/docbook/xhtml/autoidx.xsl
 share/xsl/docbook/xhtml/autotoc.xsl
@@ -901,6 +927,7 @@ share/xsl/docbook/xhtml/footnote.xsl
 share/xsl/docbook/xhtml/formal.xsl
 share/xsl/docbook/xhtml/glossary.xsl
 share/xsl/docbook/xhtml/graphics.xsl
+share/xsl/docbook/xhtml/highlight.xsl
 share/xsl/docbook/xhtml/html-rtf.xsl
 share/xsl/docbook/xhtml/html.xsl
 share/xsl/docbook/xhtml/html2xhtml.xsl
@@ -948,20 +975,34 @@ share/xsl/docbook/xhtml/xref.xsl
 @dirrm share/xsl/docbook/extensions/xalan27/src/com
 @dirrm share/xsl/docbook/extensions/xalan27/src
 @dirrm share/xsl/docbook/extensions/xalan27/nbproject
+@dirrm share/xsl/docbook/extensions/xalan27/dist
+@exec ${MKDIR} %D/share/xsl/docbook/extensions/xalan27/build
+@dirrm share/xsl/docbook/extensions/xalan27/build
 @dirrm share/xsl/docbook/extensions/xalan27
-@dirrm share/xsl/docbook/extensions/xalan2/com/nwalsh/xalan
-@dirrm share/xsl/docbook/extensions/xalan2/com/nwalsh
-@dirrm share/xsl/docbook/extensions/xalan2/com
+@exec ${MKDIR} %D/share/xsl/docbook/extensions/xalan2/test
+@dirrm share/xsl/docbook/extensions/xalan2/test
+@dirrm share/xsl/docbook/extensions/xalan2/src/com/nwalsh/xalan
+@dirrm share/xsl/docbook/extensions/xalan2/src/com/nwalsh
+@dirrm share/xsl/docbook/extensions/xalan2/src/com
+@dirrm share/xsl/docbook/extensions/xalan2/src
+@dirrm share/xsl/docbook/extensions/xalan2/nbproject
+@dirrm share/xsl/docbook/extensions/xalan2/dist
+@exec ${MKDIR} %D/share/xsl/docbook/extensions/xalan2/build
+@dirrm share/xsl/docbook/extensions/xalan2/build
 @dirrm share/xsl/docbook/extensions/xalan2
-@dirrm share/xsl/docbook/extensions/saxon643/com/nwalsh/saxon
-@dirrm share/xsl/docbook/extensions/saxon643/com/nwalsh
-@dirrm share/xsl/docbook/extensions/saxon643/com
-@dirrm share/xsl/docbook/extensions/saxon643
-@dirrm share/xsl/docbook/extensions/build2
-@dirrm share/xsl/docbook/extensions/build
+@exec ${MKDIR} %D/share/xsl/docbook/extensions/saxon65/test
+@dirrm share/xsl/docbook/extensions/saxon65/test
+@dirrm share/xsl/docbook/extensions/saxon65/src/com/nwalsh/saxon
+@dirrm share/xsl/docbook/extensions/saxon65/src/com/nwalsh
+@dirrm share/xsl/docbook/extensions/saxon65/src/com
+@dirrm share/xsl/docbook/extensions/saxon65/src
+@dirrm share/xsl/docbook/extensions/saxon65/nbproject
+@dirrm share/xsl/docbook/extensions/saxon65/dist
+@exec ${MKDIR} %D/share/xsl/docbook/extensions/saxon65/build
+@dirrm share/xsl/docbook/extensions/saxon65/build
+@dirrm share/xsl/docbook/extensions/saxon65
 @dirrm share/xsl/docbook/extensions
 @dirrm share/xsl/docbook/common
 @dirrm share/xsl/docbook
 @unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}
 @dirrm share/examples/docbook-xsl
-@comment in xmlcatmgr: @dirrm share/xml
