@@ -1,92 +1,57 @@
-$NetBSD: patch-ai,v 1.7 2006/07/14 22:10:01 adrianp Exp $
+$NetBSD: patch-ai,v 1.8 2006/09/10 22:35:22 adrianp Exp $
 
---- configure.orig	2006-05-21 18:35:25.000000000 +0100
+--- configure.orig	2006-07-15 18:14:54.000000000 +0100
 +++ configure
-@@ -1936,13 +1936,13 @@ darwin* | rhapsody*)
-   esac
-   ;;
- 
--freebsd*)
-+freebsd*|dragonfly*)
-   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
-     case $host_cpu in
-     i*86 )
-       # Not sure whether the presence of OpenBSD here was a mistake.
-       # Let's accept both of them until this is cleared up.
--      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
-+      lt_cv_deplibs_check_method='file_magic (FreeBSD|DragonFly|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
-       lt_cv_file_magic_cmd=/usr/bin/file
-       lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
-       ;;
-@@ -3702,7 +3702,7 @@ else
-     ;;
- 
-   # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
--  freebsd*)
-+  freebsd*|dragonfly*)
-     archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
-     hardcode_libdir_flag_spec='-R$libdir'
-     hardcode_direct=yes
-@@ -4157,7 +4157,7 @@ freebsd1*)
-   dynamic_linker=no
-   ;;
- 
--freebsd*)
-+freebsd*|dragonfly*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
-   version_type=freebsd-$objformat
-   case $version_type in
-@@ -6266,14 +6266,14 @@ fi
+@@ -19321,13 +19321,13 @@ fi
  done
  
  
--  echo $ac_n "checking for pthread_create in -lpthread""... $ac_c" 1>&6
--echo "configure:6271: checking for pthread_create in -lpthread" >&5
-+  echo $ac_n "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}""... $ac_c" 1>&6
-+echo "configure:6271: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
- ac_lib_var=`echo pthread'_'pthread_create | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
+-  echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-   ac_save_LIBS="$LIBS"
+   ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 6279 "configure"
- #include "confdefs.h"
-@@ -6302,7 +6302,7 @@ fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -19386,7 +19386,7 @@ echo "$as_me:$LINENO: result: $ac_cv_lib
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
+ if test $ac_cv_lib_pthread_pthread_create = yes; then
     CFLAGS="$CFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
--                  LIBS="$LIBS -lpthread" 
-+                  LIBS="$LIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" 
+-                  LIBS="$LIBS -lpthread"
++                  LIBS="$LIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  else
-   echo "$ac_t""no" 1>&6
- echo $ac_n "checking for pthread_create in -lc_r""... $ac_c" 1>&6
-@@ -6386,7 +6386,7 @@ else
-   cat conftest.$ac_ext >&5
- fi
- rm -f conftest*
--test "$ac_cv_search_sem_init" = "no" && for i in pthread sem posix4 rt; do
-+test "$ac_cv_search_sem_init" = "no" && for i in pthread sem posix4 rt semaphore; do
- LIBS="-l$i  $ac_func_search_save_LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 6393 "configure"
-@@ -6619,7 +6619,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
-   echo $ac_n "(cached) $ac_c" 1>&6
+   echo "$as_me:$LINENO: checking for pthread_create in -lc_r" >&5
+ echo $ECHO_N "checking for pthread_create in -lc_r... $ECHO_C" >&6
+@@ -19528,7 +19528,7 @@ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ if test "$ac_cv_search_sem_init" = no; then
+-  for ac_lib in pthread sem posix4 rt; do
++  for ac_lib in pthread sem posix4 rt semaphore; do
+     LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
+     cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+@@ -19903,7 +19903,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
+   echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-   ac_save_LIBS="$LIBS"
+   ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lssl  $LIBS"
-+LIBS="-lssl -lcrypto  $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 6625 "configure"
- #include "confdefs.h"
-@@ -8423,7 +8423,7 @@ gethostbyaddrrstyle=""
- echo $ac_n "checking gethostbyaddr_r() syntax""... $ac_c" 1>&6
- echo "configure:8425: checking gethostbyaddr_r() syntax" >&5
++LIBS="-lssl -lcrypto $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -23156,7 +23156,7 @@ gethostbyaddrrstyle=""
+ echo "$as_me:$LINENO: checking gethostbyaddr_r() syntax" >&5
+ echo $ECHO_N "checking gethostbyaddr_r() syntax... $ECHO_C" >&6
  case "$host" in
 -*-freebsd*)
 +*-freebsd* | *-dragonfly*)
- 	cat >> confdefs.h <<\EOF
+ 	cat >>confdefs.h <<\_ACEOF
  #define GETHOSTBYADDRRSTYLE BSDSTYLE
- EOF
+ _ACEOF
