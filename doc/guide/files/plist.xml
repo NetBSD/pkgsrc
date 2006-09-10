@@ -1,168 +1,166 @@
-<!-- $NetBSD: plist.xml,v 1.12 2006/04/17 06:12:46 jlam Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.13 2006/09/10 19:31:42 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
 
-  <para> The <filename>PLIST</filename> file contains a package's
-    <quote>packing list</quote>, i.e. a list of files that belong to
-    the package (relative to the <filename>${PREFIX}</filename>
-    directory it's been installed in) plus some additional statements
-    - see the &man.pkg.create.1; man page for a full list.
-    This chapter addresses some issues that need attention when
-    dealing with the <filename>PLIST</filename> file (or files, see
-    below!).</para>
+  <para>The <filename>PLIST</filename> file contains a package's
+  <quote>packing list</quote>, i.e. a list of files that belong to
+  the package (relative to the <filename>${PREFIX}</filename>
+  directory it's been installed in) plus some additional statements
+  - see the &man.pkg.create.1; man page for a full list.
+  This chapter addresses some issues that need attention when
+  dealing with the <filename>PLIST</filename> file (or files, see
+  below!).</para>
 
 
   <sect1 id="rcs-id">
     <title>RCS ID</title>
 
-    <para>
-      Be sure to add a RCS ID line as the first thing in any
-      <filename>PLIST</filename> file you write:
-    </para>
+    <para>Be sure to add a RCS ID line as the first thing in any
+    <filename>PLIST</filename> file you write:</para>
 
-<programlisting>
-    @comment &#36;NetBSD&#36;
-</programlisting>
+    <programlisting>
+      @comment &#36;NetBSD&#36;
+    </programlisting>
   </sect1>
 
   <sect1 id="automatic-plist-generation">
     <title>Semi-automatic <filename>PLIST</filename> generation</title>
 
     <para>You can use the <command>make print-PLIST</command> command
-      to output a PLIST that matches any new files since the package
-      was extracted.  See <xref linkend="build.helpful-targets"/> for
-      more information on this target.</para>
+    to output a PLIST that matches any new files since the package
+    was extracted.  See <xref linkend="build.helpful-targets"/> for
+    more information on this target.</para>
   </sect1>
 
 
   <sect1 id="print-PLIST">
     <title>Tweaking output of <command>make print-PLIST</command></title>
 
-    <para> If you have used any of the *-dirs packages, as explained in
-      <xref linkend="faq.common-dirs"/>, you may have noticed that
-      <command>make print-PLIST</command> outputs a set of
-      <varname>@comment</varname>s instead of real
-      <varname>@dirrm</varname> lines.  You can also do this for
-      specific directories and files, so that the results of that
-      command are very close to reality. This helps <emphasis>a
-      lot</emphasis> during the update of packages. </para>
+    <para>If you have used any of the *-dirs packages, as explained in
+    <xref linkend="faq.common-dirs"/>, you may have noticed that
+    <command>make print-PLIST</command> outputs a set of
+    <varname>@comment</varname>s instead of real
+    <varname>@dirrm</varname> lines.  You can also do this for
+    specific directories and files, so that the results of that
+    command are very close to reality. This helps <emphasis>a
+    lot</emphasis> during the update of packages.</para>
 
-    <para> The <varname>PRINT_PLIST_AWK</varname> variable takes a set
-      of AWK patterns and actions that are used to filter the output of
-      print-PLIST.  You can <emphasis>append</emphasis> any chunk of AWK
-      scripting you like to it, but be careful with quoting. </para>
+    <para>The <varname>PRINT_PLIST_AWK</varname> variable takes a set
+    of AWK patterns and actions that are used to filter the output of
+    print-PLIST.  You can <emphasis>append</emphasis> any chunk of AWK
+    scripting you like to it, but be careful with quoting.</para>
 
-    <para> For example, to get all files inside the
-      <filename>libdata/foo</filename> directory removed from the
-      resulting PLIST:</para>
+    <para>For example, to get all files inside the
+    <filename>libdata/foo</filename> directory removed from the
+    resulting PLIST:</para>
 
-<programlisting>
-    PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
-</programlisting>
+    <programlisting>
+      PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
+    </programlisting>
 
-    <para> And to get all the <varname>@dirrm</varname> lines referring
-      to a specific (shared) directory converted to
-      <varname>@comment</varname>s: </para>
+    <para>And to get all the <varname>@dirrm</varname> lines referring
+    to a specific (shared) directory converted to
+    <varname>@comment</varname>s:</para>
 
-<programlisting>
-    PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
-</programlisting>
+    <programlisting>
+      PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
+    </programlisting>
   </sect1>
 
 
   <sect1 id="plist.misc">
     <title>Variable substitution in PLIST</title>
 
-    <para>
-      A number of variables are substituted automatically in PLISTs
-      when a package is installed on a system. This includes the
-      following variables: </para>
+    <para>A number of variables are substituted automatically in
+    PLISTs when a package is installed on a system. This includes the
+    following variables:</para>
 
     <variablelist>
       <varlistentry>
-    	  <term><varname>${MACHINE_ARCH}</varname>, <varname>${MACHINE_GNU_ARCH}</varname></term>
+	<term><varname>${MACHINE_ARCH}</varname>, <varname>${MACHINE_GNU_ARCH}</varname></term>
 
-        <listitem>
-          <para>Some packages like emacs and perl embed information
-            about which architecture they were built on into the
-            pathnames where they install their files. To handle this
-            case, PLIST will be preprocessed before actually used, and
-            the symbol
-            <quote><varname>${MACHINE_ARCH}</varname></quote> will be
-            replaced by what <command>uname -p</command> gives. The
-            same is done if the string
-            <varname>${MACHINE_GNU_ARCH}</varname> is embedded in
-            PLIST somewhere - use this on packages that have GNU
-            autoconf-created configure scripts.</para>
+	<listitem>
+	  <para>Some packages like emacs and perl embed information
+	  about which architecture they were built on into the
+	  pathnames where they install their files. To handle this
+	  case, PLIST will be preprocessed before actually used, and
+	  the symbol
+	  <quote><varname>${MACHINE_ARCH}</varname></quote> will be
+	  replaced by what <command>uname -p</command> gives. The
+	  same is done if the string
+	  <varname>${MACHINE_GNU_ARCH}</varname> is embedded in
+	  PLIST somewhere - use this on packages that have GNU
+	  autoconf-created configure scripts.</para>
 
-          <note>
-            <title>Legacy note</title>
+	  <note>
+	    <title>Legacy note</title>
 
-            <para>There used to be a symbol
-              <quote><varname>$ARCH</varname></quote> that
-              was replaced by the output of <command>uname
-              -m</command>, but that's no longer supported and has
-              been removed.</para>
-          </note>
-        </listitem>
+	    <para>There used to be a symbol
+	    <quote><varname>$ARCH</varname></quote> that
+	    was replaced by the output of <command>uname
+	    -m</command>, but that's no longer supported and has
+	    been removed.</para>
+	  </note>
+	</listitem>
       </varlistentry>
 
       <varlistentry>
-        <term><varname>${OPSYS}</varname>, <varname>${LOWER_OPSYS}</varname>, <varname>${OS_VERSION}</varname></term>
+	<term><varname>${OPSYS}</varname>, <varname>${LOWER_OPSYS}</varname>, <varname>${OS_VERSION}</varname></term>
 
-        <listitem>
-          <para>Some packages want to embed the OS name and version
-            into some paths.  To do this, use these variables in the
-            <filename>PLIST</filename>:
-          </para>
+	<listitem>
+	  <para>Some packages want to embed the OS name and version
+	  into some paths.  To do this, use these variables in the
+	  <filename>PLIST</filename>:
+	  </para>
 
-          <itemizedlist>
-            <listitem>
-              <para><varname>${OPSYS}</varname> - output of <quote><command>uname -s</command></quote></para>
-            </listitem>
+	  <itemizedlist>
+	    <listitem>
+	      <para><varname>${OPSYS}</varname> - output of <quote><command>uname -s</command></quote></para>
+	    </listitem>
 
-            <listitem>
-              <para><varname>${LOWER_OPSYS}</varname> - lowercase common name (eg. <quote>solaris</quote>)</para>
-            </listitem>
+	    <listitem>
+	      <para><varname>${LOWER_OPSYS}</varname> - lowercase common name (eg. <quote>solaris</quote>)</para>
+	    </listitem>
 
-            <listitem>
-              <para><varname>${OS_VERSION}</varname> - <quote><command>uname -r</command></quote></para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
+	    <listitem>
+	      <para><varname>${OS_VERSION}</varname> - <quote><command>uname -r</command></quote></para>
+	    </listitem>
+	  </itemizedlist>
+	</listitem>
       </varlistentry>
     </variablelist>
 
-    <para> For a complete list of values which are replaced by
-      default, please look in <filename>bsd.pkg.mk</filename> (and
-      search for <emphasis>PLIST_SUBST</emphasis>). </para>
+    <para>For a complete list of values which are replaced by
+    default, please look in <filename>bsd.pkg.mk</filename> (and
+    search for <varname>PLIST_SUBST</varname>).</para>
 
-    <para> If you want to change other variables not listed above, you
-      can add variables and their expansions to this variable in the
-      following way, similar to <varname>MESSAGE_SUBST</varname> (see <xref
-      linkend="components.optional"/>): </para>
+    <para>If you want to change other variables not listed above, you
+    can add variables and their expansions to this variable in the
+    following way, similar to <varname>MESSAGE_SUBST</varname> (see <xref
+    linkend="components.optional"/>):</para>
 
-<programlisting>
-    PLIST_SUBST+=   SOMEVAR="somevalue"
-</programlisting>
+    <programlisting>
+      PLIST_SUBST+=   SOMEVAR="somevalue"
+    </programlisting>
 
     <para>This replaces all occurrences of <quote>${SOMEVAR}</quote>
-      in the PLIST with <quote>somevalue</quote>.  </para>
+    in the <filename>PLIST</filename> with
+    <quote>somevalue</quote>.</para>
   </sect1>
 
   <sect1 id="manpage-compression">
     <title>Man page compression</title>
 
     <para>Man pages should be installed in compressed form if
-      <varname>MANZ</varname> is set (in <filename>bsd.own.mk</filename>),
-      and uncompressed otherwise. To handle this in the
-      <filename>PLIST</filename> file, the suffix <quote>.gz</quote> is
-      appended/removed automatically for man pages according to
-      <varname>MANZ</varname> and <varname>MANCOMPRESSED</varname> being set
-      or not, see above for details. This modification of the
-      <filename>PLIST</filename> file is done on a copy of it, not
-      <filename>PLIST</filename> itself.</para>
+    <varname>MANZ</varname> is set (in <filename>bsd.own.mk</filename>),
+    and uncompressed otherwise. To handle this in the
+    <filename>PLIST</filename> file, the suffix <quote>.gz</quote> is
+    appended/removed automatically for man pages according to
+    <varname>MANZ</varname> and <varname>MANCOMPRESSED</varname> being set
+    or not, see above for details. This modification of the
+    <filename>PLIST</filename> file is done on a copy of it, not
+    <filename>PLIST</filename> itself.</para>
   </sect1>
 
 
@@ -170,10 +168,11 @@
     <title>Changing PLIST source with <varname>PLIST_SRC</varname></title>
 
     <para>To use one or more files as source for the <filename>PLIST</filename> used
-      in generating the binary package, set the variable
-      <varname>PLIST_SRC</varname> to the names of that file(s).
-      The files are later concatenated using &man.cat.1;, and order of things is
-      important.</para>
+    in generating the binary package, set the variable
+    <varname>PLIST_SRC</varname> to the names of that file(s).
+    The files are later concatenated using &man.cat.1;, and the order of things is
+    important. The default for <varname>PLIST_SRC</varname> is
+    <filename>${PKGDIR}/PLIST</filename>.</para>
   </sect1>
 
 
@@ -181,28 +180,28 @@
     <title>Platform-specific and differing PLISTs</title>
 
     <para>Some packages decide to install a different set of files based on
-      the operating system being used. These differences can be
-      automatically handled by using the following files:</para>
+    the operating system being used. These differences can be
+    automatically handled by using the following files:</para>
 
     <itemizedlist>
       <listitem>
-        <para><filename>PLIST.common</filename></para>
+	<para><filename>PLIST.common</filename></para>
       </listitem>
 
       <listitem>
-        <para><filename>PLIST.${OPSYS}</filename></para>
+	<para><filename>PLIST.${OPSYS}</filename></para>
       </listitem>
 
       <listitem>
-        <para><filename>PLIST.${MACHINE_ARCH}</filename></para>
+	<para><filename>PLIST.${MACHINE_ARCH}</filename></para>
       </listitem>
 
       <listitem>
-        <para><filename>PLIST.${OPSYS}-${MACHINE_ARCH}</filename></para>
+	<para><filename>PLIST.${OPSYS}-${MACHINE_ARCH}</filename></para>
       </listitem>
 
       <listitem>
-        <para><filename>PLIST.common_end</filename></para>
+	<para><filename>PLIST.common_end</filename></para>
       </listitem>
     </itemizedlist>
   </sect1>
@@ -211,75 +210,73 @@
   <sect1 id="faq.common-dirs">
     <title>Sharing directories between packages</title>
 
-    <para> A <quote>shared directory</quote> is a directory where
-      multiple (and unrelated) packages install files.  These
-      directories are problematic because you have to add special tricks
-      in the PLIST to conditionally remove them, or have some
-      centralized package handle them. </para>
+    <para>A <quote>shared directory</quote> is a directory where
+    multiple (and unrelated) packages install files.  These
+    directories are problematic because you have to add special tricks
+    in the PLIST to conditionally remove them, or have some
+    centralized package handle them.</para>
 
-    <para> Within pkgsrc, you'll find both approaches.  If a directory
-      is shared by a few unrelated packages, it's often not worth to add
-      an extra package to remove it.  Therefore, one simply does:
-      </para>
+    <para>Within pkgsrc, you'll find both approaches.  If a directory
+    is shared by a few unrelated packages, it's often not worth to add
+    an extra package to remove it.  Therefore, one simply does:</para>
 
-<programlisting>
-    @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
-</programlisting>
+    <programlisting>
+      @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
+    </programlisting>
 
-    <para> in the PLISTs of all affected packages, instead of the
-      regular "@dirrm" line. </para>
+    <para>in the PLISTs of all affected packages, instead of the
+    regular "@dirrm" line.</para>
 
-    <para> However, if the directory is shared across many packages, two
-      different solutions are available: </para>
+    <para>However, if the directory is shared across many packages, two
+    different solutions are available:</para>
 
     <orderedlist>
       <listitem>
-        <para> If the packages have a common dependency, the directory
-          can be removed in that.  For example, see
-          <filename role="pkg">textproc/scrollkeeper</filename>, which
-	  removes the shared directory
-	  <filename>share/omf</filename>. </para>
+	<para>If the packages have a common dependency, the directory
+	can be removed in that.  For example, see
+	<filename role="pkg">textproc/scrollkeeper</filename>, which
+	removes the shared directory
+	<filename>share/omf</filename>.</para>
       </listitem>
 
       <listitem>
-        <para> If the packages using the directory are not related at
-          all (they have no common dependencies), a *-dirs package is
-          used. </para>
+	<para>If the packages using the directory are not related at
+	all (they have no common dependencies), a *-dirs package is
+	used.</para>
       </listitem>
     </orderedlist>
 
-    <para> From now on, we'll discuss the second solution.  To get an
-      idea of the *-dirs packages available, issue: </para>
+    <para>From now on, we'll discuss the second solution.  To get an
+    idea of the *-dirs packages available, issue:</para>
 
-<programlisting>
-    &cprompt; cd .../pkgsrc
-    &cprompt; ls -d */*-dirs
-</programlisting>
+    <programlisting>
+      &cprompt; cd .../pkgsrc
+      &cprompt; ls -d */*-dirs
+    </programlisting>
 
-    <para> Their use from other packages is very simple.  The
-      <varname>USE_DIRS</varname> variable takes a list of package names
-      (without the <quote>-dirs</quote> part) together with the required
-      version number (always pick the latest one when writing new
-      packages). </para>
+    <para>Their use from other packages is very simple.  The
+    <varname>USE_DIRS</varname> variable takes a list of package names
+    (without the <quote>-dirs</quote> part) together with the required
+    version number (always pick the latest one when writing new
+    packages).</para>
 
-    <para> For example, if a package installs files under
-      <filename>share/applications</filename>, it should have the
-      following line in it:
-      </para>
+    <para>For example, if a package installs files under
+    <filename>share/applications</filename>, it should have the
+    following line in it:</para>
 
-<programlisting>
-    USE_DIRS+=      xdg-1.1
-</programlisting>
+    <programlisting>
+      USE_DIRS+=      xdg-1.1
+    </programlisting>
 
-    <para> After regenerating the PLIST using <command>make
-      print-PLIST</command>, you should get the right (commented out)
-      lines. </para>
+    <para>After regenerating the PLIST using <command>make
+    print-PLIST</command>, you should get the right (commented out)
+    lines.</para>
 
-    <para> Note that even if your package is using
-      <filename>$X11BASE</filename>, it must not depend on the
-      *-x11-dirs packages.  Just specify the name without that part and
-      pkgsrc (in particular, <filename>mk/dirs.mk</filename>) will take
-      care of it. </para>
+    <para>Note that even if your package is using
+    <filename>$X11BASE</filename>, it must not depend on the
+    *-x11-dirs packages.  Just specify the name without that part and
+    pkgsrc (in particular, <filename>mk/dirs.mk</filename>) will take
+    care of it.</para>
   </sect1>
 
 </chapter>
