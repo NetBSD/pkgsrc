@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2006/08/11 16:22:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.55 2006/09/10 22:35:22 adrianp Exp $
 
 DISTNAME=	freeradius-${RADVER}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -41,7 +40,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			1.1.2
+RADVER=			1.1.3
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
