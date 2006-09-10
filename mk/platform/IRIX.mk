@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.26 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: IRIX.mk,v 1.27 2006/09/10 13:44:58 schwarz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -9,9 +9,6 @@ IMAKEOPTS+=	-DManUsr=${PREFIX}
 .if empty(OS_VERSION:M6*)
 IMAKEOPTS+=	-DShLibDir=${X11BASE}/lib
 IMAKEOPTS+=	-DOptimizerLevel="${CFLAGS}"
-IMAKEOPTS+=	-DManDir=${PREFIX}/${IMAKE_MAN_DIR}
-IMAKEOPTS+=	-DLibmanDir=${PREFIX}/${IMAKE_LIBMAN_DIR}
-IMAKEOPTS+=	-DFileManDir=${PREFIX}/${IMAKE_FILEMAN_DIR}
 IMAKEOPTS+=	-DManPath=${PREFIX}/man
 .endif
 PKGLOCALEDIR?=	share
@@ -62,6 +59,7 @@ IMAKE_MANNEWSUFFIX?=	${IMAKE_MAN_SUFFIX}
 MAKE_ENV+=		GZIP_CMD="${GZIP_CMD}"
 USE_TOOLS+=		gzip
 MANCOMPRESSED=		yes
+MANZ=			yes
 . endif
 .endif
 
