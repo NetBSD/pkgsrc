@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1249 2006/09/10 13:52:26 heinz Exp $
+>$NetBSD: CHANGES-2006,v 1.1250 2006/09/10 18:30:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/p5-Digest-SHA to 5.43 [heinz 2006-09-10]
 	Updated textproc/p5-Convert-ASN1 to 0.20 [heinz 2006-09-10]
 	Updated security/p5-Crypt-Blowfish to 2.10 [heinz 2006-09-10]
+	Updated textproc/docbook-xsl to 1.71.0 [wiz 2006-09-10]
