@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.4 2006/07/14 22:10:01 adrianp Exp $
+$NetBSD: patch-ae,v 1.5 2006/09/10 22:35:22 adrianp Exp $
 
---- Makefile.orig	2006-05-25 17:24:40.000000000 +0100
+--- Makefile.orig	2006-06-23 05:31:58.000000000 +0100
 +++ Makefile
 @@ -11,7 +11,7 @@ include Make.inc
  
  .PHONY: all clean install
  
--SUBDIRS		= ${LIBLTDLPATH} src raddb scripts doc
-+SUBDIRS		= ${LIBLTDLPATH} src scripts doc
+-SUBDIRS		= $(LTDL_SUBDIRS) src raddb scripts doc
++SUBDIRS		= $(LTDL_SUBDIRS) src scripts doc
  WHAT_TO_MAKE	= all
  
  all:
-@@ -38,9 +38,7 @@ clean:
+@@ -42,9 +42,7 @@ export DESTDIR := $(R)
  install:
  	$(INSTALL) -d -m 755	$(R)$(sbindir)
  	$(INSTALL) -d -m 755	$(R)$(bindir)
