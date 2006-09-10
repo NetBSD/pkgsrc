@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.11 2006/04/23 00:00:43 jlam Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.12 2006/09/10 19:29:52 wiz Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -59,16 +59,32 @@ which means that it cannot register files outside this directory (absolute
 path names are not allowed).  Despite this restriction, some packages need
 to install files outside this location; e.g., under
 <filename>${VARBASE}</filename> or
-<filename>${PKG_SYSCONFDIR}</filename>.</para>
+<filename>${PKG_SYSCONFDIR}</filename>.  The only way to achieve this
+is to create such files during installation time by using
+installation scripts.</para>
 
-<para>The only way to achieve this is to create such files during
-installation time by using the installation scripts.  These scripts can run
-arbitrary commands, so they have the potential to create and manage files
-anywhere in the file system.  Here is where pkginstall comes into play: it
-provides generic scripts to abstract the manipulation of such files and
-directories based on variables set in the package's
-<filename>Makefile</filename>.  The rest of this section describes these
-variables.</para>
+<para>The generic installation scripts are shell scripts that can
+contain arbitrary code.  The list of scripts to execute is taken from
+the <varname>INSTALL_FILE</varname> variable, which defaults to
+<filename>INSTALL</filename>.  A similar variable exists for package
+removal (<varname>DEINSTALL_FILE</varname>, whose default is
+<filename>DEINSTALL</filename>).  These scripts can run arbitrary
+commands, so they have the potential to create and manage files
+anywhere in the file system.</para>
+
+<para>Using these general installation files is not recommended, but
+may be needed in some special cases.  One reason for avoiding them is
+that the user has to trust the packager that there is no unwanted or
+simply erroneous code included in the installation script. Also,
+previously there were many similar scripts for the same functionality,
+and fixing a common error involved finding and changing all of
+them.</para>
+
+<para>The pkginstall framework offers another, standardized way.  It
+provides generic scripts to abstract the manipulation of such files
+and directories based on variables set in the package's
+<filename>Makefile</filename>.  The rest of this section describes
+these variables.</para>
 
 <!-- ================================================================== -->
 
@@ -432,18 +448,18 @@ syntax:</para>
     user:group
 </programlisting>
 
-<para>Further specification of user details may be done by setting per-user
-variables.
-<varname>PKG_UID.<replaceable>user</replaceable></varname> is the numeric
-UID for the user.
-<varname>PKG_GECOS.<replaceable>user</replaceable></varname> is the user's
-description or comment.
-<varname>PKG_HOME.<replaceable>user</replaceable></varname> is the user's
-home directory, and defaults to <filename>/nonexistent</filename> if not
-specified.
-<varname>PKG_SHELL.<replaceable>user</replaceable></varname> is the user's
-shell, and defaults to <filename>/sbinno/login</filename> if not specified.
-</para>
+<para>Further specification of user details may be done by setting
+per-user variables.
+<varname>PKG_UID.<replaceable>user</replaceable></varname> is the
+numeric UID for the user.
+<varname>PKG_GECOS.<replaceable>user</replaceable></varname> is the
+user's description or comment.
+<varname>PKG_HOME.<replaceable>user</replaceable></varname> is the
+user's home directory, and defaults to
+<filename>/nonexistent</filename> if not specified.
+<varname>PKG_SHELL.<replaceable>user</replaceable></varname> is the
+user's shell, and defaults to <filename>/sbinno/login</filename> if
+not specified.</para>
 
 <para>Similarly, groups can be created by adding entries to the
 <varname>PKG_GROUPS</varname> variable, whose syntax is:</para>
