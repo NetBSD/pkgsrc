@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5435 2006/09/10 10:24:38 wiz Exp $
+$NetBSD: TODO,v 1.5436 2006/09/10 18:09:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,6 +373,7 @@ Suggested package updates
 	o cfitsio-2.510
 	o cgdb-0.6.3
 	o checkbot-1.77
+	o chicken-2.41 [pkg/34504]
 	o chrony-1.21
 	o cinepaint-0.21 [only RC1 available at the moment]
 	o cint-5.16
@@ -416,6 +417,7 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnstop-20060517 [pkg/34425]
 	o dnstracer-1.8
+	o docbook-xsl-1.71.0
 	o drscheme-352
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
@@ -448,7 +450,9 @@ Suggested package updates
 	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
+	o evince-0.6.0
 	o evolution-2.8.0
+	o evolution-data-server-1.8.0
 	o ex-050325
 	o exmh-2.7.2
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -467,6 +471,7 @@ Suggested package updates
 	o flyspell-1.7m
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.4.0
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
@@ -489,6 +494,7 @@ Suggested package updates
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o geda-20060907
 	o gedit-2.16.0
 	o genius-0.7.6.1
 	o gentoo-0.11.56 [pkg/34341]
@@ -498,6 +504,7 @@ Suggested package updates
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
+	o gimp24-2.3.11
 	o gkrellm-multiping-2.0.10
 	o gkrellm-xmms-2.1.22
 	o gkrellm1-moon-0.6
@@ -516,6 +523,7 @@ Suggested package updates
 	o gnome-doc-utils-0.8.0
 	o gnome-games-2.16.0
 	o gnome-icon-theme-2.16.0.1
+	o gnome-keyring-0.6.0
 	o gnome-media-2.16.1
 	o gnome-menus-2.16.0
 	o gnome-panel-2.16.0
@@ -530,6 +538,7 @@ Suggested package updates
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
+	o gnutls-1.4.3
 	o gob2-2.0.14 [pkg/34439]
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
@@ -551,6 +560,7 @@ Suggested package updates
 	o gss-0.0.17
 	o gst-plugins0.10-good-0.10.4
 	o gst-plugins0.10-ugly-0.10.4
+	o gstreamer0.10-0.10.9.2
 	o gtetrinet-0.7.10
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
@@ -732,10 +742,11 @@ Suggested package updates
 	o msmtp-1.4.7
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-4.0.5
+	o multitail-4.2.0
 	o muse-0.9.1
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
+	o nautilus-2.16.0
 	o nautilus-cd-burner-2.16.0
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -797,6 +808,7 @@ Suggested package updates
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
 	o p5-Cache-Simple-TimedExpiry-0.26 [pkg/34326]
+	o p5-Class-Autouse-1.27
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Data-Inheritable-0.05 [pkg/34332]
 	o p5-Class-Factory-1.04 [pkg/34329]
@@ -815,8 +827,9 @@ Suggested package updates
 	o p5-Crypt-IDEA-1.08 [pkg/34391]
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-mysql-3.0006
+	o p5-DBD-mysql-3.0007
 	o p5-DBIx-ContextualFetch-1.03
+	o p5-DBIx-SearchBuilder-1.44_01
 	o p5-Data-FormValidator-4.40 [pkg/34405]
 	o p5-Data-TemporaryBag-0.09 [pkg/34331]
 	o p5-DateTime-Set-0.25
@@ -833,6 +846,7 @@ Suggested package updates
 	o p5-Email-Valid-0.176 [pkg/34374]
 	o p5-Encode-2.18 [pkg/34419]
 	o p5-Error-0.17 [pkg/34330]
+	o p5-Error-0.17004
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
@@ -1087,6 +1101,7 @@ Suggested package updates
 	o root-5.04.00
 	o root-tail-1.2
 	o rosegarden4-1.2.4 [replacing audio/rosegarden|pkgsrc-wip]
+	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.8
