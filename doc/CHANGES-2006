@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1251 2006/09/10 20:24:32 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1252 2006/09/10 21:12:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/p5-Crypt-Blowfish to 2.10 [heinz 2006-09-10]
 	Updated textproc/docbook-xsl to 1.71.0 [wiz 2006-09-10]
 	Updated security/opencdk to 0.5.9 [wiz 2006-09-10]
+	Updated security/gnutls to 1.4.3 [wiz 2006-09-10]
