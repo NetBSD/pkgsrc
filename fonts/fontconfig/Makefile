@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2006/07/23 01:09:11 minskim Exp $
+# $NetBSD: Makefile,v 1.55 2006/09/11 18:53:16 wiz Exp $
 
-DISTNAME=	fontconfig-2.3.2
-PKGREVISION=	3
+DISTNAME=	fontconfig-2.4.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
-
-PATCH_SITES=    http://www.freetype.org/freetype2/patches/
-PATCHFILES=	fontconfig-2.3.2-noftinternals.patch
-PATCH_DIST_STRIP=	-p1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -42,12 +37,21 @@ EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
 CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
-CONF_FILES+=	${EGDIR}/conf.d/autohint.conf ${PKG_SYSCONFDIR}/conf.d/autohint.conf
-CONF_FILES+=	${EGDIR}/conf.d/no-bitmaps.conf ${PKG_SYSCONFDIR}/conf.d/no-bitmaps.conf
-CONF_FILES+=	${EGDIR}/conf.d/no-sub-pixel.conf ${PKG_SYSCONFDIR}/conf.d/no-sub-pixel.conf
-CONF_FILES+=	${EGDIR}/conf.d/sub-pixel.conf ${PKG_SYSCONFDIR}/conf.d/sub-pixel.conf
-CONF_FILES+=	${EGDIR}/conf.d/unhinted.conf ${PKG_SYSCONFDIR}/conf.d/unhinted.conf
-CONF_FILES+=	${EGDIR}/conf.d/yes-bitmaps.conf ${PKG_SYSCONFDIR}/conf.d/yes-bitmaps.conf
+CONF_FILES+=	${EGDIR}/conf.d/20-fix-globaladvance.conf ${PKG_SYSCONFDIR}/conf.d/20-fix-globaladvance.conf
+CONF_FILES+=	${EGDIR}/conf.d/20-lohit-gujarati.conf ${PKG_SYSCONFDIR}/conf.d/20-lohit-gujarati.conf
+CONF_FILES+=	${EGDIR}/conf.d/20-unhint-small-vera.conf ${PKG_SYSCONFDIR}/conf.d/20-unhint-small-vera.conf
+CONF_FILES+=	${EGDIR}/conf.d/30-amt-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-amt-aliases.conf
+CONF_FILES+=	${EGDIR}/conf.d/30-urw-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-urw-aliases.conf
+CONF_FILES+=	${EGDIR}/conf.d/40-generic.conf ${PKG_SYSCONFDIR}/conf.d/40-generic.conf
+CONF_FILES+=	${EGDIR}/conf.d/49-sansserif.conf ${PKG_SYSCONFDIR}/conf.d/49-sansserif.conf
+CONF_FILES+=	${EGDIR}/conf.d/50-user.conf ${PKG_SYSCONFDIR}/conf.d/50-user.conf
+CONF_FILES+=	${EGDIR}/conf.d/51-local.conf ${PKG_SYSCONFDIR}/conf.d/51-local.conf
+CONF_FILES+=	${EGDIR}/conf.d/60-latin.conf ${PKG_SYSCONFDIR}/conf.d/60-latin.conf
+CONF_FILES+=	${EGDIR}/conf.d/65-fonts-persian.conf ${PKG_SYSCONFDIR}/conf.d/65-fonts-persian.conf
+CONF_FILES+=	${EGDIR}/conf.d/65-nonlatin.conf ${PKG_SYSCONFDIR}/conf.d/65-nonlatin.conf
+CONF_FILES+=	${EGDIR}/conf.d/69-unifont.conf ${PKG_SYSCONFDIR}/conf.d/69-unifont.conf
+CONF_FILES+=	${EGDIR}/conf.d/80-delicious.conf ${PKG_SYSCONFDIR}/conf.d/80-delicious.conf
+CONF_FILES+=	${EGDIR}/conf.d/90-synthetic.conf ${PKG_SYSCONFDIR}/conf.d/90-synthetic.conf
 
 LIBS+=		${BUILDLINK_LDADD.iconv}
 
