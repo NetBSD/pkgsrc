@@ -1,17 +1,17 @@
-$NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
+$NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
 
---- kio/kssl/kopenssl.cc.orig	2005-10-11 04:05:44.000000000 +1300
+--- kio/kssl/kopenssl.cc.orig	2006-07-22 08:16:39.000000000 +0000
 +++ kio/kssl/kopenssl.cc
-@@ -216,7 +216,7 @@ void KOpenSSLProxy::destroy() {
+@@ -217,7 +217,7 @@ void KOpenSSLProxy::destroy() {
    _me = 0L;
  }
  
 -#ifdef __OpenBSD__
-+#if defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <qdir.h>
  #include <qstring.h>
  #include <qstringlist.h>
-@@ -279,42 +279,23 @@ KConfig *cfg;
+@@ -280,42 +280,23 @@ KConfig *cfg;
  
     delete cfg;
  
@@ -45,8 +45,8 @@ $NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
 -	    #endif
 +#endif
  	    << "/usr/lib" KDELIBSUFF "/"
-+	    << "@LOCALBASE@/lib/"
-+#if !defined(__NetBSD__) && !defined(__OpenBSD__)
++	    << "/usr/pkg/lib/"
++#if !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
  	    << "/usr/ssl/lib" KDELIBSUFF "/"
  	    << "/usr/local/lib" KDELIBSUFF "/"
              << "/usr/local/openssl/lib" KDELIBSUFF "/"
@@ -56,15 +56,15 @@ $NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
 +#endif
              << "";
      
-+#if !defined(__NetBSD__) && !defined(__OpenBSD__)
++#if !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
  // FIXME: #define here for the various OS types to optimize
     libnamess
  	     #ifdef hpux
-@@ -354,6 +335,11 @@ KConfig *cfg;
+@@ -355,6 +336,11 @@ KConfig *cfg;
     for (QStringList::Iterator it = libpaths.begin();
                                it != libpaths.end();
                                ++it) {
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
 +	QString libname = findMostRecentLib(*it, "crypto");
 +	if (!libname.isNull())
 +		_cryptoLib = ll->globalLibrary(libname.latin1());
@@ -72,7 +72,7 @@ $NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -367,6 +353,7 @@ KConfig *cfg;
+@@ -368,6 +354,7 @@ KConfig *cfg;
              _cryptoLib = ll->globalLibrary(alib.latin1());
           if (_cryptoLib) break;
        }
@@ -80,7 +80,7 @@ $NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
        if (_cryptoLib) break;
     }
  
-@@ -496,16 +483,14 @@ KConfig *cfg;
+@@ -497,16 +484,14 @@ KConfig *cfg;
  #endif
     }
  
@@ -94,7 +94,7 @@ $NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
     for (QStringList::Iterator it = libpaths.begin();
                                it != libpaths.end();
                                ++it) {
-+#if defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +      QString libname = findMostRecentLib(*it, "ssl");
 +      if (!libname.isNull())
 +           _sslLib = ll->globalLibrary(libname.latin1());
@@ -102,7 +102,7 @@ $NetBSD: patch-bd,v 1.10 2005/12/11 10:53:54 markd Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -519,9 +504,9 @@ KConfig *cfg;
+@@ -520,9 +505,9 @@ KConfig *cfg;
           	_sslLib = ll->globalLibrary(alib.latin1());
           if (_sslLib) break;
        }
