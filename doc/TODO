@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5442 2006/09/11 17:11:12 wiz Exp $
+$NetBSD: TODO,v 1.5443 2006/09/11 18:57:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -469,7 +469,6 @@ Suggested package updates
 	o flyspell-1.7m
 	o fmsx-3.0
 	o fondu-040927
-	o fontconfig-2.4.0
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20

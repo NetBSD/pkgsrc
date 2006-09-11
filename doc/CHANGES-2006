@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1262 2006/09/11 17:09:09 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1263 2006/09/11 18:57:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4286,3 +4286,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/libgda to 1.9.103 [wiz 2006-09-11]
 	Updated databases/libgnomedb to 1.9.103 [wiz 2006-09-11]
 	Updated databases/mergeant to 0.63 [wiz 2006-09-11]
+	Updated fonts/fontconfig to 2.4.0 [wiz 2006-09-11]
