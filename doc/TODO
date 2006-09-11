@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5441 2006/09/11 17:09:09 wiz Exp $
+$NetBSD: TODO,v 1.5442 2006/09/11 17:11:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1160,7 +1160,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o strace-4.5.8
 	o stunnel-4.15 [pkg/34436]
-	o stunnel-4.16
+	o stunnel-4.17
 	o subtitleripper-0.3.4
 	o sun-jdk14-2.12 [pkg/34035]
 	o sun-jre14-2.12 [pkg/34035]
