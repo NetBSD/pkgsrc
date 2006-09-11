@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2006/06/26 21:23:48 minskim Exp $
+$NetBSD: patch-ac,v 1.8 2006/09/11 17:06:48 wiz Exp $
 
---- libgda/Makefile.in.orig	2006-03-24 02:14:55.000000000 -0800
+--- libgda/Makefile.in.orig	2006-09-03 13:02:28.000000000 +0000
 +++ libgda/Makefile.in
-@@ -61,7 +61,9 @@ libLTLIBRARIES_INSTALL = $(INSTALL)
+@@ -59,7 +59,9 @@ libLTLIBRARIES_INSTALL = $(INSTALL)
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  libgda_3_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.7 2006/06/26 21:23:48 minskim Exp $
  am__objects_1 = gda-enum-types.lo
  am__objects_2 =
  am__objects_3 = $(am__objects_2) gda-blob.lo gda-client.lo \
-@@ -378,8 +380,8 @@ AM_CPPFLAGS = \
+@@ -381,8 +383,8 @@ AM_CPPFLAGS = \
  	$(LIBGDA_CFLAGS) \
  	-DLIBGDA_PLUGINDIR=\""$(libdir)/libgda-$(GDA_MAJOR_VERSION).$(GDA_MINOR_VERSION)/providers"\" \
  	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" \
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.7 2006/06/26 21:23:48 minskim Exp $
  	-DDTDINSTALLDIR=\""$(LIBGDA_DTDDIR)"\"
  
  gda_marshal_built_files = gda-marshal.h gda-marshal.c
-@@ -527,7 +529,9 @@ libgda_3_la_SOURCES = \
+@@ -541,7 +543,9 @@ libgda_3_la_SOURCES = \
  	$(libgda_sources)
  
  libgda_3_la_LDFLAGS = -version-info $(GDA_CURRENT):$(GDA_REVISION):$(GDA_AGE) -no-undefined

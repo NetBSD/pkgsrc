@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2006/04/02 22:46:55 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2006/09/11 17:06:48 wiz Exp $
 
---- data/Makefile.in.orig	2006-03-24 10:14:54.000000000 +0000
+--- data/Makefile.in.orig	2006-09-03 13:02:27.000000000 +0000
 +++ data/Makefile.in
-@@ -314,7 +314,7 @@ sysconfdir = @sysconfdir@
+@@ -316,7 +316,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
  # Default global configuration file

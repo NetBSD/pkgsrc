@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.20 2006/06/26 21:23:47 minskim Exp $
+$NetBSD: distinfo,v 1.21 2006/09/11 17:06:48 wiz Exp $
 
-SHA1 (libgda-1.9.102.tar.bz2) = 6ad5ee58a4716b7d6a71a4dd9ba1767a2606b522
-RMD160 (libgda-1.9.102.tar.bz2) = 7ef4cf298a563410fdb173860da81da9de919f49
-Size (libgda-1.9.102.tar.bz2) = 1935950 bytes
-SHA1 (patch-aa) = aa93b53e2fb91650bdef82a55972ca2e1b68dd52
-SHA1 (patch-ab) = f38ccf23ce67e9ac1d1b633e451d786f9e6d2a8f
-SHA1 (patch-ac) = 7b14f5ae7b5d0574eebe200a725b824ccf4b183c
-SHA1 (patch-ad) = 1fb0ee4f17ab66e60c7445a99649e69bfad334ca
+SHA1 (libgda-1.9.103.tar.bz2) = aecb607b095c18c1d1cf8d40e632ac257030a796
+RMD160 (libgda-1.9.103.tar.bz2) = 3d9d2f82e4f81db6497647a6aeebf16d7003b34d
+Size (libgda-1.9.103.tar.bz2) = 2309707 bytes
+SHA1 (patch-ab) = 4d316d81e53716b069f6fc9ce491fd8fde0fba13
+SHA1 (patch-ac) = baa6f6b63c05a63e9488645dbb05e693dd18b1e4
+SHA1 (patch-ad) = ffd20b94beaa79787f36d30863a2413f84ae935d
 SHA1 (patch-ah) = 1a2ef8200b2ccedb632e7f952c7e214128c51693
-SHA1 (patch-ai) = 46da46dca253791de12976a2c81638bfa300c10c
+SHA1 (patch-ai) = a6e77a2accf5e53002902a991968ec46c439746c
