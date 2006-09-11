@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1254 2006/09/10 23:00:48 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1255 2006/09/11 00:04:34 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4268,3 +4268,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/freeradius 1.1.3 [adrianp 2006-09-10]
 	Updated emulators/hatari to 0.90 [adam 2006-09-11]
 	Updated graphics/gimp24 to 2.3.11 [adam 2006-09-11]
+	Updated cad/gattrib to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/geda to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/geda-docs to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/geda-examples to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/geda-symbols to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/geda-utils to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/gnetlist to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/gschem to 20060906 [dmcmahill 2006-09-10]
+	Updated cad/gsymcheck to 20060906 [dmcmahill 2006-09-10]
