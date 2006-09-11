@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2006/02/04 17:03:30 wiz Exp $
+$NetBSD: distinfo,v 1.8 2006/09/11 17:07:48 wiz Exp $
 
-SHA1 (mergeant-0.62.tar.bz2) = 9ca45fcd06a21dc4e62250dc561ada97199ace42
-RMD160 (mergeant-0.62.tar.bz2) = 226fce0beb6a22f7b79abd13c199618a78390b54
-Size (mergeant-0.62.tar.bz2) = 1005279 bytes
-SHA1 (patch-aa) = 514d079fbeef0b71e9506a9a077f3739b8a97a8c
+SHA1 (mergeant-0.63.tar.bz2) = ae9916d66608658c83f05ddff0cecb7ec6cf49a2
+RMD160 (mergeant-0.63.tar.bz2) = 546fde56ac1fd7b5543391ed4b2e8d62133f2ba0
+Size (mergeant-0.63.tar.bz2) = 971555 bytes
