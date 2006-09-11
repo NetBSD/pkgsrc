@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.53 2006/06/01 00:39:51 epg Exp $
+$NetBSD: distinfo,v 1.54 2006/09/11 04:14:30 epg Exp $
 
-SHA1 (subversion-1.3.2.tar.gz) = d69267231b5cbfbff4b1603a6a8f1e879ca5753e
-RMD160 (subversion-1.3.2.tar.gz) = 4209f361fe7d8717bbba75717d41731f7b0143f4
-Size (subversion-1.3.2.tar.gz) = 8803719 bytes
-SHA1 (patch-ad) = e821ce2a450a2430c082e42bc22fe6e73931d746
-SHA1 (patch-ag) = dbcfe77867e5960df4518b998e94e9cfb9e144fa
-SHA1 (patch-ah) = 2ee769e649e52bfbcd3049b1a1b6b1cf2b4db8c8
-SHA1 (patch-ai) = c06c40c94f0a227f3154aa0997d7a92fc6e43fee
+SHA1 (subversion-1.4.0.tar.gz) = fcea8ab76d6d6b3d532d921b94c312ca7fdc9f81
+RMD160 (subversion-1.4.0.tar.gz) = 7a868b4fe6338ccdb93916afffbe8e2692450039
+Size (subversion-1.4.0.tar.gz) = 6268503 bytes
+SHA1 (patch-ad) = 419c65ed318f4d6a7ab7dc8b0972b0e3824e6daf
+SHA1 (patch-ag) = c1e41bbb0e6a0ae5015cb24fe3db7ce67931d6b8
+SHA1 (patch-ah) = c41c68a8ad82a2e5f6c3e2568589da5b819946b4
+SHA1 (patch-ai) = cf347c90c225dc2adf4908eaa4d632cf61434b65
 SHA1 (patch-aj) = 18a90663e2abd2ea2ad5f9d3f0e76a3d937d3e64
