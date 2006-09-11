@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2006/07/26 20:00:27 jlam Exp $
+# $NetBSD: Makefile,v 1.112 2006/09/11 13:44:27 tron Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -7,7 +7,7 @@
 
 DISTNAME=       imap-2004g
 PKGNAME=        ${DISTNAME:S/-/-uw-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -28,7 +28,11 @@ LTINSTALL_LIB=		${LIBTOOL} --mode=install ${INSTALL_LIB}
 # Each platform has its own special target in the imap Makefiles.
 OPSYSVARS+=		BUILD_TARGET
 BUILD_TARGET.SunOS=	gso
+.if ${OPSYS} == Linux && exists(/usr/include/security/pam_appl.h)
+BUILD_TARGET.Linux=	lnp
+.else
 BUILD_TARGET.Linux=	slx
+.endif
 BUILD_TARGET.Darwin=	osx
 .if ${OPSYS} == "IRIX"
 .  if ${OS_VERSION} >= 6.5
@@ -39,8 +43,10 @@ BUILD_TARGET.IRIX=	sgi
 .endif
 BUILD_TARGET.OSF1=	osf
 BUILD_TARGET.OpenBSD=	bso
+.if ${OPSYS} == NetBSD && exists(/usr/include/security/pam_appl.h)
+BUILD_TARGET.NetBSD=	nep
+.endif
 BUILD_TARGET.*=		neb
-
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
 
 .include "options.mk"
