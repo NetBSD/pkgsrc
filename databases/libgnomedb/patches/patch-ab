@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2006/04/02 22:48:31 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2006/09/11 17:07:19 wiz Exp $
 
---- Makefile.in.orig	2006-03-24 12:46:42.000000000 +0000
+--- Makefile.in.orig	2006-09-03 13:29:57.000000000 +0000
 +++ Makefile.in
-@@ -289,7 +289,7 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-gtk
+@@ -291,7 +291,7 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-gtk
  @BUILD_GNOMEDB_SHARP_TRUE@GNOME_DIRECTORY = gnomedb-sharp
  @BUILD_WITH_GNOME_FALSE@GNOME_DIRECTORY = 
  @BUILD_WITH_GNOME_TRUE@GNOME_DIRECTORY = control-center
