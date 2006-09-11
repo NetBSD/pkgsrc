@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2006/09/03 03:42:38 obache Exp $
+$NetBSD: patch-ab,v 1.4 2006/09/11 15:13:28 obache Exp $
 
---- Makefile.in.orig	2006-08-18 17:31:48.000000000 +0900
+--- Makefile.in.orig	2006-09-11 21:40:24.000000000 +0900
 +++ Makefile.in
-@@ -58,7 +58,7 @@ CPPFLAGS = -I. -I$(HOME)/include -I/usr/
+@@ -59,7 +59,7 @@ CPPFLAGS = -I. -I$(HOME)/include -I/usr/
    -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
    -DPIC=1 -D_THREAD_SAFE=1 -D_REENTRANT=1 @MYDEFS@
  CFLAGS = @MYCFLAGS@
