@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1261 2006/09/11 15:15:21 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1262 2006/09/11 17:09:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4283,3 +4283,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/py-django version 0.95 [joerg 2006-09-11]
 	Updated mail/imap-uw to 2004gnb2 [tron 2006-09-11]
 	Updated textproc/hyperestraier to 1.4.3 [obache 2006-09-11]
+	Updated databases/libgda to 1.9.103 [wiz 2006-09-11]
+	Updated databases/libgnomedb to 1.9.103 [wiz 2006-09-11]
+	Updated databases/mergeant to 0.63 [wiz 2006-09-11]
