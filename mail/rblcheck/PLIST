@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/11 21:26:04 cube Exp $
 bin/rblcheck
-share/doc/rblcheck/BUGS
-share/doc/rblcheck/CHANGES
-share/doc/rblcheck/CREDITS
-share/doc/rblcheck/INSTALL
-share/doc/rblcheck/PLATFORMS
-share/doc/rblcheck/TODO
+share/doc/rblcheck/NEWS
+share/doc/rblcheck/README
+share/doc/rblcheck/rblcheck.ps
 @dirrm share/doc/rblcheck
