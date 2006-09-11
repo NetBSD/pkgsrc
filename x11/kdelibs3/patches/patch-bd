@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
+$NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
 
 --- kio/kssl/kopenssl.cc.orig	2006-07-22 08:16:39.000000000 +0000
 +++ kio/kssl/kopenssl.cc
@@ -11,7 +11,31 @@ $NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
  #include <qdir.h>
  #include <qstring.h>
  #include <qstringlist.h>
-@@ -280,42 +280,23 @@ KConfig *cfg;
+@@ -240,10 +240,20 @@ static QString findMostRecentLib(QString
+        for (QStringList::Iterator it = l.begin(); it != l.end(); ++it) {
+                QString numberpart = (*it).mid(s);
+                uint endmaj = numberpart.find('.');
+-               if (endmaj == -1)
+-                       continue;
+                bool ok;
+-               int maj = numberpart.left(endmaj).toInt(&ok);
++	       int maj;
++               if (endmaj == -1) {
++	               int maj = numberpart.toInt(&ok);
++		       if (!ok)
++		               continue;
++	               if (maj <= bestmaj)
++		               continue;
++		       bestmaj = maj;
++		       bestmin = -1;
++                       best = (*it);
++                       continue;
++               }
++               maj = numberpart.left(endmaj).toInt(&ok);
+                if (!ok)
+                        continue;
+                int min = numberpart.mid(endmaj+1).toInt(&ok);
+@@ -280,42 +290,23 @@ KConfig *cfg;
  
     delete cfg;
  
@@ -60,7 +84,7 @@ $NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess
  	     #ifdef hpux
-@@ -355,6 +336,11 @@ KConfig *cfg;
+@@ -355,6 +346,11 @@ KConfig *cfg;
     for (QStringList::Iterator it = libpaths.begin();
                                it != libpaths.end();
                                ++it) {
@@ -72,7 +96,7 @@ $NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -368,6 +354,7 @@ KConfig *cfg;
+@@ -368,6 +364,7 @@ KConfig *cfg;
              _cryptoLib = ll->globalLibrary(alib.latin1());
           if (_cryptoLib) break;
        }
@@ -80,7 +104,7 @@ $NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
        if (_cryptoLib) break;
     }
  
-@@ -497,16 +484,14 @@ KConfig *cfg;
+@@ -497,16 +494,14 @@ KConfig *cfg;
  #endif
     }
  
@@ -102,7 +126,7 @@ $NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -520,9 +505,9 @@ KConfig *cfg;
+@@ -520,10 +515,10 @@ KConfig *cfg;
           	_sslLib = ll->globalLibrary(alib.latin1());
           if (_sslLib) break;
        }
@@ -110,6 +134,8 @@ $NetBSD: patch-bd,v 1.11 2006/09/11 09:10:01 joerg Exp $
        if (_sslLib) break;
     }
 -#endif
- 
+-
++   
     if (_sslLib) {
  #ifdef KSSL_HAVE_SSL
+       // stand back from your monitor and look at this.  it's fun! :)
