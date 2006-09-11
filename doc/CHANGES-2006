@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1259 2006/09/11 11:40:29 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1260 2006/09/11 13:44:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4281,3 +4281,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/kdelibs3 to 3.5.4nb1 [joerg 2006-09-11]
 	Updated mail/evolution-data-server to 1.6.3nb1 [joerg 2006-09-11]
 	Added www/py-django version 0.95 [joerg 2006-09-11]
+	Updated mail/imap-uw to 2004gnb2 [tron 2006-09-11]
