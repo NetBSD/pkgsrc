@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2006/08/05 17:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2006/09/11 09:33:33 joerg Exp $
 #
 
 DISTNAME=	evolution-data-server-1.6.3
+PKGREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +25,8 @@ PKG_SUPPORTED_OPTIONS=	inet6
 .include "../../mk/bsd.options.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ENV+=		PTHREAD_LIB="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6.2)
 .include "../../devel/pthread-sem/buildlink3.mk"
