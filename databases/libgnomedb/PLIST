@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/09/11 17:07:19 wiz Exp $
 bin/gnome-database-properties
 bin/gnome-db-browser
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-data-cell-renderer-boolean.h
@@ -7,15 +7,19 @@ include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-data-cell-renderer-info.
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-data-cell-renderer-textual.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-boolean.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-combo.h
+include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-common-time.h
+include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-date.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-none.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-shell.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-string.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-time.h
+include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-timestamp.h
 include/libgnomedb-1.9/libgnomedb/data-entries/gnome-db-entry-wrapper.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-basic-form.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-combo.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-connection-properties.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-data-entry.h
+include/libgnomedb-1.9/libgnomedb/gnome-db-data-import.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-data-source-selector.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-data-store.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-data-widget-info.h
@@ -36,12 +40,14 @@ include/libgnomedb-1.9/libgnomedb/gnome-db-grid.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-i18n.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-login-dialog.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-login.h
+include/libgnomedb-1.9/libgnomedb/gnome-db-plugin.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-provider-selector.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-raw-form.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-raw-grid.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-report-editor.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-selector-private.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-selector.h
+include/libgnomedb-1.9/libgnomedb/gnome-db-server-operation.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-sql-console.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-stock.h
 include/libgnomedb-1.9/libgnomedb/gnome-db-tools.h
@@ -73,10 +79,7 @@ include/libgnomedb-1.9/libgnomedb/sel-tables.h
 include/libgnomedb-1.9/libgnomedb/utility.h
 lib/libglade/2.0/libgnomedb.la
 lib/libgnomedb-3.la
-lib/libgnomedb/plugins/libgnomedb_entry_cidr.la
-lib/libgnomedb/plugins/libgnomedb_entry_filesel.la
-lib/libgnomedb/plugins/libgnomedb_entry_passmd5.la
-lib/libgnomedb/plugins/libgnomedb_entry_text.la
+lib/libgnomedb/plugins/libgnomedb_entry_builtin_plugins.la
 lib/libgnomedb_graph-3.la
 lib/libgnomedb_handlers-3.la
 lib/pkgconfig/libgnomedb-2.0.pc
@@ -110,6 +113,8 @@ share/doc/libgnomedb/GnomeDbEditor.html
 share/doc/libgnomedb/GnomeDbEntryBoolean.html
 share/doc/libgnomedb/GnomeDbEntryCidr.html
 share/doc/libgnomedb/GnomeDbEntryCombo.html
+share/doc/libgnomedb/GnomeDbEntryCommonTime.html
+share/doc/libgnomedb/GnomeDbEntryDate.html
 share/doc/libgnomedb/GnomeDbEntryFilesel.html
 share/doc/libgnomedb/GnomeDbEntryNone.html
 share/doc/libgnomedb/GnomeDbEntryPassmd5.html
@@ -117,6 +122,7 @@ share/doc/libgnomedb/GnomeDbEntryShell.html
 share/doc/libgnomedb/GnomeDbEntryString.html
 share/doc/libgnomedb/GnomeDbEntryText.html
 share/doc/libgnomedb/GnomeDbEntryTime.html
+share/doc/libgnomedb/GnomeDbEntryTimestamp.html
 share/doc/libgnomedb/GnomeDbEntryWrapper.html
 share/doc/libgnomedb/GnomeDbError.html
 share/doc/libgnomedb/GnomeDbErrorDialog.html
@@ -171,12 +177,15 @@ share/doc/libgnomedb/index.html
 share/doc/libgnomedb/index.sgml
 share/doc/libgnomedb/left.png
 share/doc/libgnomedb/libgnomedb-GnomeDB-Stock-images.html
+share/doc/libgnomedb/libgnomedb-GnomeDbServerOperation.html
 share/doc/libgnomedb/libgnomedb-List-of-enumerated.html
+share/doc/libgnomedb/libgnomedb-Utilities.html
 share/doc/libgnomedb/libgnomedb-example.html
 share/doc/libgnomedb/libgnomedb-gnome-db-data-widget.html
 share/doc/libgnomedb/libgnomedb-index.html
 share/doc/libgnomedb/libgnomedb-libgnomedb.html
 share/doc/libgnomedb/libgnomedb.devhelp
+share/doc/libgnomedb/libgnomedb.devhelp2
 share/doc/libgnomedb/misc.html
 share/doc/libgnomedb/non-inst-widgets.html
 share/doc/libgnomedb/pt01.html
@@ -190,6 +199,8 @@ share/doc/libgnomedb/sampleapp4.png
 share/doc/libgnomedb/style.css
 share/doc/libgnomedb/up.png
 share/gconf/schemas/libgnomedb.schemas
+share/libgnomedb/import_encodings.xml
+share/libgnomedb/server_operation.glade
 share/locale/az/LC_MESSAGES/libgnomedb-3.mo
 share/locale/be/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ca/LC_MESSAGES/libgnomedb-3.mo
@@ -212,12 +223,12 @@ share/locale/it/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ja/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ka/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ko/LC_MESSAGES/libgnomedb-3.mo
+share/locale/lt/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ml/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ms/LC_MESSAGES/libgnomedb-3.mo
 share/locale/nb/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ne/LC_MESSAGES/libgnomedb-3.mo
 share/locale/nl/LC_MESSAGES/libgnomedb-3.mo
-share/locale/no/LC_MESSAGES/libgnomedb-3.mo
 share/locale/pl/LC_MESSAGES/libgnomedb-3.mo
 share/locale/pt/LC_MESSAGES/libgnomedb-3.mo
 share/locale/pt_BR/LC_MESSAGES/libgnomedb-3.mo
@@ -277,6 +288,7 @@ share/pixmaps/libgnomedb/gnome-db.png
 @dirrm share/omf/libgnomedb
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
+@dirrm share/libgnomedb
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/doc/libgnomedb
 @comment in xdg-dirs: @dirrm share/applications
