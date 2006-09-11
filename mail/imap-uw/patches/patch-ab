@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
+$NetBSD: patch-ab,v 1.21 2006/09/11 13:44:27 tron Exp $
 
---- src/osdep/unix/Makefile.orig	2005-04-30 16:51:13.000000000 -0400
-+++ src/osdep/unix/Makefile
-@@ -124,7 +124,7 @@ DEFAULTDRIVERS=imap nntp pop3 mh mx mbx 
+--- src/osdep/unix/Makefile.orig	2005-04-30 21:51:13.000000000 +0100
++++ src/osdep/unix/Makefile	2006-09-11 14:19:56.000000000 +0100
+@@ -124,7 +124,7 @@
  
  # Normally no need to change any of these
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
  BINARIES=osdep.o mail.o misc.o newsrc.o smanager.o utf8.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -403,9 +403,9 @@ gso:	os_sol.h	# GCC Solaris
+@@ -403,9 +403,9 @@
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
  	 ACTIVEFILE=/usr/share/news/active \
  	 RSHPATH=/usr/bin/rsh \
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
  
  gsu:	# GCC SUN-OS
  	$(BUILD) `$(CAT) SPECIALS` OS=sun \
-@@ -495,9 +495,9 @@ neb:	# NetBSD
+@@ -495,9 +495,9 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -35,7 +35,24 @@ $NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -549,7 +549,7 @@ osx:	# Mac OS X
+@@ -510,6 +510,16 @@
+ 	 BASELDFLAGS="-lsocket -lnsl -lgen" \
+ 	 RANLIB=true CC=/usr/abiccs/bin/cc
+ 
++nep:	# NetBSD with PAM
++	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
++	 CHECKPW=pam \
++	 CRXTYPE=nfs \
++	 SPOOLDIR=/var \
++	 ACTIVEFILE=/var/news/db/active \
++	 RSHPATH=/usr/bin/rsh \
++	 BASECFLAGS="-pipe" \
++	 BASELDFLAGS="-lpam"
++
+ nto:	# QNX Neutrino RTP
+ 	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
+ 	 CRXTYPE=nfs \
+@@ -549,7 +559,7 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
@@ -44,7 +61,7 @@ $NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
  
  ptx:	# PTX
  	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
-@@ -811,7 +811,7 @@ $(ARCHIVE): $(BINARIES)
+@@ -811,7 +821,7 @@
  	@$(SH) ARCHIVE
  
  .c.o:
@@ -53,7 +70,7 @@ $NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
  
  
  # Cleanup
-@@ -869,7 +869,7 @@ osdep.o:mail.h misc.h env.h fs.h ftl.h n
+@@ -869,7 +879,7 @@
  	@echo pem.h, buffer.h, bio.h, and crypto.h, that means that OpenSSL
  	@echo is not installed on your system.  Either install OpenSSL first
  	@echo or build with command: make `$(CAT) OSTYPE` SSLTYPE=none
@@ -62,7 +79,7 @@ $NetBSD: patch-ab,v 1.20 2006/08/29 23:53:55 markd Exp $
  
  osdep.c: osdepbas.c osdepckp.c osdeplog.c osdepssl.c
  	$(CAT) osdepbas.c osdepckp.c osdeplog.c osdepssl.c > osdep.c
-@@ -924,7 +924,7 @@ onceenv:
+@@ -924,7 +934,7 @@
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
