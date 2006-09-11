@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/13 17:02:04 minskim Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2006/09/11 10:39:17 ghen Exp $
 #
 
 DISTNAME=	awstats-6.6
@@ -10,7 +10,11 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
-DIST_SUBDIR=	${PKGNAME_NOREV}nb2
+# awstats are in the habit of updating the tarball but not incrementing
+# the version or name of the tarball. DIST_SUBDIR must be set like this
+# to avoid checksum errors.
+#
+DIST_SUBDIR=	${PKGNAME}
 NO_BUILD=	YES
 
 USE_TOOLS+=	perl:run
