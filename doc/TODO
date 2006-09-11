@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5440 2006/09/10 23:00:48 adam Exp $
+$NetBSD: TODO,v 1.5441 2006/09/11 17:09:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ Suggested package updates
 	o libetpan-0.46 [pkg/34294]
 	o libextractor-0.5.15
 	o libflash-0.4.13
-	o libgda-1.9.103
 	o libggi-2.2.1
 	o libggigcp-1.0.1
 	o libggimisc-2.2.1
@@ -652,7 +651,6 @@ Suggested package updates
 	o libgiigic-1.1.1
 	o libglademm-2.6.3
 	o libgnomecanvasmm-2.16.0
-	o libgnomedb-1.9.103
 	o libgnomemm-2.16.0
 	o libgnomeui-2.16.0
 	o libgnomeuimm-2.16.0
@@ -703,7 +701,6 @@ Suggested package updates
 	o md-whois-4.7.15
 	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
-	o mergeant-0.63
 	o metacity-2.16.0
 	o mew-5.1
 	o mftrace-1.2.4
