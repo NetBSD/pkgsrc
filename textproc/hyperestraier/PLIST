@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/06 15:24:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/09/11 15:13:28 obache Exp $
 bin/estbutler
 bin/estcall
 bin/estcmd
@@ -14,8 +14,9 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.27.0
+lib/libestraier.so.8.28.0
 lib/pkgconfig/hyperestraier.pc
+libexec/estfraud.cgi
 libexec/estseek.cgi
 man/man1/estcall.1
 man/man1/estcmd.1
@@ -242,6 +243,7 @@ share/hyperestraier/doc/rubypureapi/index.html
 share/hyperestraier/doc/rubypureapi/rdoc-style.css
 share/hyperestraier/doc/uguide-en.html
 share/hyperestraier/doc/uguide-ja.html
+share/hyperestraier/estfraud.conf
 share/hyperestraier/estraier.idl
 share/hyperestraier/estresult.dtd
 share/hyperestraier/estseek.conf
