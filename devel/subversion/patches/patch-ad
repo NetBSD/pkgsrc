@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.12 2006/01/02 21:13:45 epg Exp $
+$NetBSD: patch-ad,v 1.13 2006/09/11 04:14:31 epg Exp $
 
---- Makefile.in.orig	2005-10-22 12:28:49.000000000 -0400
+--- Makefile.in.orig	2006-01-24 21:57:24.000000000 -0500
 +++ Makefile.in
-@@ -618,10 +618,9 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
+@@ -627,10 +627,9 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
  $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
@@ -14,4 +14,4 @@ $NetBSD: patch-ad,v 1.12 2006/01/02 21:13:45 epg Exp $
 +swig-pl_DEPS = autogen-swig-pl libsvn_swig_perl \
    $(SWIG_PL_DIR)/native/Makefile
  swig-pl: $(swig-pl_DEPS)
- 	cd $(SWIG_PL_DIR)/native; $(MAKE)
+ 	if test "$(SWIG_PL_DIR)" != "$(SWIG_PL_SRC_DIR)"; then \
