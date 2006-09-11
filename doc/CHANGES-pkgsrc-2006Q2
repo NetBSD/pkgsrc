@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.87 2006/09/11 10:39:36 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.88 2006/09/11 11:18:21 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -209,3 +209,5 @@ Pullup ticket 1819 - requested by bouyer
 security update for mailman
 Pullup ticket 1818 - requested by adrianp
 build fix for awstats
+Pullup ticket 1821 - requested by adrianp
+security fix for gtar
