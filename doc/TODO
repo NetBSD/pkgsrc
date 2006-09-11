@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5443 2006/09/11 18:57:12 wiz Exp $
+$NetBSD: TODO,v 1.5444 2006/09/11 21:26:57 cube Exp $
 
 Suggested new packages
 ======================
@@ -1078,7 +1078,6 @@ Suggested package updates
 	o rar-bin-3.6.0
 	o rat-4.2.25
 	o rayshade-4.0.6
-	o rblcheck-1.5 [pkg/34492]
 	o rc-1.7.1
 	o rdp-1.6
 	o regionset-0.2
