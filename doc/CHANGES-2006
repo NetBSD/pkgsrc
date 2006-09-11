@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1255 2006/09/11 00:04:34 dmcmahill Exp $
+>$NetBSD: CHANGES-2006,v 1.1256 2006/09/11 04:17:10 epg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4277,3 +4277,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/gnetlist to 20060906 [dmcmahill 2006-09-10]
 	Updated cad/gschem to 20060906 [dmcmahill 2006-09-10]
 	Updated cad/gsymcheck to 20060906 [dmcmahill 2006-09-10]
+	Updated devel/subversion to 1.4.0 [epg 2006-09-11]
