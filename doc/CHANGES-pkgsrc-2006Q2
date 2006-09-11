@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.85 2006/09/07 11:36:25 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.86 2006/09/11 09:30:34 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -205,3 +205,5 @@ Pullup ticket 1816 - requested by adrianp
 security update for bind9
 Pullup ticket 1817 - requested by adrianp
 security fix for openssl
+Pullup ticket 1819 - requested by bouyer
+security update for mailman
