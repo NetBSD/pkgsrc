@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.15 2006/05/29 22:38:06 tron Exp $
+$NetBSD: distinfo,v 1.16 2006/09/11 18:53:16 wiz Exp $
 
-SHA1 (fontconfig-2.3.2.tar.gz) = 8ec60da668618383b539db9d70b8e320bd7dd031
-RMD160 (fontconfig-2.3.2.tar.gz) = 42668475cca88f265a3b12c289eea2ff61ddaa2b
-Size (fontconfig-2.3.2.tar.gz) = 964045 bytes
-SHA1 (fontconfig-2.3.2-noftinternals.patch) = c89e63ef691a779ae1ee5f8a4bda2cc55cd280c6
-RMD160 (fontconfig-2.3.2-noftinternals.patch) = 69c409a41708662bd04b9ba998e5d2b5a77b1016
-Size (fontconfig-2.3.2-noftinternals.patch) = 18275 bytes
-SHA1 (patch-aa) = 4f39b7726c11cc9d91fba0c840f26404702c0353
-SHA1 (patch-ac) = df8b145c38476e5caa1f4636be4eb56654bd11d0
+SHA1 (fontconfig-2.4.0.tar.gz) = 132b0567740a04d89cd1eef0dd66b43ca32538c0
+RMD160 (fontconfig-2.4.0.tar.gz) = 96badf68a351018d99cb432939b4f8966f0b334d
+Size (fontconfig-2.4.0.tar.gz) = 1269266 bytes
+SHA1 (patch-aa) = 6d2e24ad8db33eb71a39ef288d7329559307d9dc
+SHA1 (patch-ac) = 965087ba6e457daf17c55fc3573b51fd6425be93
