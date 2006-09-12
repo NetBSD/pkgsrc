@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/09/10 18:28:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/09/12 12:39:13 joerg Exp $
 share/examples/docbook-xsl/README
 share/examples/docbook-xsl/biblioentry.xsl
 share/examples/docbook-xsl/testtemplate.xml
@@ -209,6 +209,14 @@ share/xsl/docbook/fo/toc.xsl
 share/xsl/docbook/fo/verbatim.xsl
 share/xsl/docbook/fo/xep.xsl
 share/xsl/docbook/fo/xref.xsl
+share/xsl/docbook/highlighting/common.xsl
+share/xsl/docbook/highlighting/delphi-hl.xml
+share/xsl/docbook/highlighting/ini-hl.xml
+share/xsl/docbook/highlighting/java-hl.xml
+share/xsl/docbook/highlighting/m2-hl.xml
+share/xsl/docbook/highlighting/myxml-hl.xml
+share/xsl/docbook/highlighting/php-hl.xml
+share/xsl/docbook/highlighting/xslthl-config.xml
 share/xsl/docbook/html/admon.xsl
 share/xsl/docbook/html/annotations.xsl
 share/xsl/docbook/html/autoidx-kimber.xsl
@@ -900,6 +908,122 @@ share/xsl/docbook/profiling/profile-mode.xsl
 share/xsl/docbook/profiling/profile.xsl
 share/xsl/docbook/profiling/strip-attributes.xsl
 share/xsl/docbook/profiling/xsl2profile.xsl
+share/xsl/docbook/slides/browser/CTOCWidget.js
+share/xsl/docbook/slides/browser/overlay.js
+share/xsl/docbook/slides/browser/slides-default.css
+share/xsl/docbook/slides/browser/slides-frames.css
+share/xsl/docbook/slides/browser/slides-plain.css
+share/xsl/docbook/slides/browser/slides-table.css
+share/xsl/docbook/slides/browser/slides-w3c.css
+share/xsl/docbook/slides/browser/slides.css
+share/xsl/docbook/slides/browser/slides.js
+share/xsl/docbook/slides/browser/ua.js
+share/xsl/docbook/slides/browser/xbCollapsibleLists.js
+share/xsl/docbook/slides/browser/xbDOM.js
+share/xsl/docbook/slides/browser/xbDebug.js
+share/xsl/docbook/slides/browser/xbLibrary.js
+share/xsl/docbook/slides/browser/xbStyle-css.js
+share/xsl/docbook/slides/browser/xbStyle-nn4.js
+share/xsl/docbook/slides/browser/xbStyle-not-supported.js
+share/xsl/docbook/slides/browser/xbStyle.js
+share/xsl/docbook/slides/fo/plain-titlepage.xml
+share/xsl/docbook/slides/fo/plain-titlepage.xsl
+share/xsl/docbook/slides/fo/plain.xsl
+share/xsl/docbook/slides/graphics/active/arr-next.png
+share/xsl/docbook/slides/graphics/active/arr-prev.png
+share/xsl/docbook/slides/graphics/active/but-fforward.png
+share/xsl/docbook/slides/graphics/active/but-info.png
+share/xsl/docbook/slides/graphics/active/but-next.png
+share/xsl/docbook/slides/graphics/active/but-prev.png
+share/xsl/docbook/slides/graphics/active/but-rewind.png
+share/xsl/docbook/slides/graphics/active/nav-home.png
+share/xsl/docbook/slides/graphics/active/nav-next.png
+share/xsl/docbook/slides/graphics/active/nav-prev.png
+share/xsl/docbook/slides/graphics/active/nav-toc.png
+share/xsl/docbook/slides/graphics/active/nav-up.png
+share/xsl/docbook/slides/graphics/active/w3c-next.png
+share/xsl/docbook/slides/graphics/active/w3c-prev.png
+share/xsl/docbook/slides/graphics/active/w3c-toc.png
+share/xsl/docbook/slides/graphics/arrow.gif
+share/xsl/docbook/slides/graphics/blank.gif
+share/xsl/docbook/slides/graphics/blank.png
+share/xsl/docbook/slides/graphics/hidetoc.gif
+share/xsl/docbook/slides/graphics/inactive/but-fforward.png
+share/xsl/docbook/slides/graphics/inactive/but-info.png
+share/xsl/docbook/slides/graphics/inactive/but-next.png
+share/xsl/docbook/slides/graphics/inactive/but-prev.png
+share/xsl/docbook/slides/graphics/inactive/but-rewind.png
+share/xsl/docbook/slides/graphics/inactive/nav-home.png
+share/xsl/docbook/slides/graphics/inactive/nav-next.png
+share/xsl/docbook/slides/graphics/inactive/nav-prev.png
+share/xsl/docbook/slides/graphics/inactive/nav-toc.png
+share/xsl/docbook/slides/graphics/inactive/nav-up.png
+share/xsl/docbook/slides/graphics/inactive/w3c-next.png
+share/xsl/docbook/slides/graphics/inactive/w3c-prev.png
+share/xsl/docbook/slides/graphics/inactive/w3c-toc.png
+share/xsl/docbook/slides/graphics/plus.gif
+share/xsl/docbook/slides/graphics/pointer.png
+share/xsl/docbook/slides/graphics/showtoc.gif
+share/xsl/docbook/slides/graphics/toc/bullet.png
+share/xsl/docbook/slides/graphics/toc/closed.png
+share/xsl/docbook/slides/graphics/toc/open.png
+share/xsl/docbook/slides/html/css.xsl
+share/xsl/docbook/slides/html/default.xsl
+share/xsl/docbook/slides/html/flat.xsl
+share/xsl/docbook/slides/html/frames.xsl
+share/xsl/docbook/slides/html/graphics.xsl
+share/xsl/docbook/slides/html/jscript.xsl
+share/xsl/docbook/slides/html/plain.xsl
+share/xsl/docbook/slides/html/slides-common.xsl
+share/xsl/docbook/slides/html/tables.xsl
+share/xsl/docbook/slides/html/vslides.xsl
+share/xsl/docbook/slides/html/w3c.xsl
+share/xsl/docbook/slides/htmlhelp/htmlhelp.xsl
+share/xsl/docbook/slides/keynote/default.xsl
+share/xsl/docbook/slides/keynote/xsltsl/cmp.xsl
+share/xsl/docbook/slides/keynote/xsltsl/date-time.xsl
+share/xsl/docbook/slides/keynote/xsltsl/example.xsl
+share/xsl/docbook/slides/keynote/xsltsl/markup.xsl
+share/xsl/docbook/slides/keynote/xsltsl/math.xsl
+share/xsl/docbook/slides/keynote/xsltsl/node.xsl
+share/xsl/docbook/slides/keynote/xsltsl/stdlib.xsl
+share/xsl/docbook/slides/keynote/xsltsl/string.xsl
+share/xsl/docbook/slides/keynote/xsltsl/svg.xsl
+share/xsl/docbook/slides/keynote/xsltsl/uri.xsl
+share/xsl/docbook/slides/param.xml
+share/xsl/docbook/slides/param.xsl
+share/xsl/docbook/slides/param.xweb
+share/xsl/docbook/slides/svg/default.xsl
+share/xsl/docbook/slides/xhtml/css.xsl
+share/xsl/docbook/slides/xhtml/default.xsl
+share/xsl/docbook/slides/xhtml/flat.xsl
+share/xsl/docbook/slides/xhtml/frames.xsl
+share/xsl/docbook/slides/xhtml/graphics.xsl
+share/xsl/docbook/slides/xhtml/html2xhtml.xsl
+share/xsl/docbook/slides/xhtml/jscript.xsl
+share/xsl/docbook/slides/xhtml/plain.xsl
+share/xsl/docbook/slides/xhtml/slides-common.xsl
+share/xsl/docbook/slides/xhtml/tables.xsl
+share/xsl/docbook/slides/xhtml/vslides.xsl
+share/xsl/docbook/slides/xhtml/w3c.xsl
+share/xsl/docbook/website/autolayout.xsl
+share/xsl/docbook/website/chunk-common.xsl
+share/xsl/docbook/website/chunk-tabular.xsl
+share/xsl/docbook/website/chunk-website.xsl
+share/xsl/docbook/website/head.xsl
+share/xsl/docbook/website/makefile-dep.xsl
+share/xsl/docbook/website/olink.xsl
+share/xsl/docbook/website/param.xml
+share/xsl/docbook/website/param.xsl
+share/xsl/docbook/website/param.xweb
+share/xsl/docbook/website/rss.xsl
+share/xsl/docbook/website/tabular.xsl
+share/xsl/docbook/website/toc-tabular.xsl
+share/xsl/docbook/website/toc.xsl
+share/xsl/docbook/website/website-common.xsl
+share/xsl/docbook/website/website-targets.xsl
+share/xsl/docbook/website/website.xsl
+share/xsl/docbook/website/xbel.xsl
 share/xsl/docbook/xhtml/admon.xsl
 share/xsl/docbook/xhtml/annotations.xsl
 share/xsl/docbook/xhtml/autoidx-kimber.xsl
@@ -960,6 +1084,20 @@ share/xsl/docbook/xhtml/toc.xsl
 share/xsl/docbook/xhtml/verbatim.xsl
 share/xsl/docbook/xhtml/xref.xsl
 @dirrm share/xsl/docbook/xhtml
+@dirrm share/xsl/docbook/website
+@dirrm share/xsl/docbook/slides/xhtml
+@dirrm share/xsl/docbook/slides/svg
+@dirrm share/xsl/docbook/slides/keynote/xsltsl
+@dirrm share/xsl/docbook/slides/keynote/
+@dirrm share/xsl/docbook/slides/htmlhelp
+@dirrm share/xsl/docbook/slides/html
+@dirrm share/xsl/docbook/slides/graphics/toc
+@dirrm share/xsl/docbook/slides/graphics/inactive
+@dirrm share/xsl/docbook/slides/graphics/active
+@dirrm share/xsl/docbook/slides/graphics
+@dirrm share/xsl/docbook/slides/fo
+@dirrm share/xsl/docbook/slides/browser
+@dirrm share/xsl/docbook/slides
 @dirrm share/xsl/docbook/profiling
 @dirrm share/xsl/docbook/params
 @dirrm share/xsl/docbook/manpages
@@ -969,6 +1107,7 @@ share/xsl/docbook/xhtml/xref.xsl
 @dirrm share/xsl/docbook/images
 @dirrm share/xsl/docbook/htmlhelp
 @dirrm share/xsl/docbook/html
+@dirrm share/xsl/docbook/highlighting
 @dirrm share/xsl/docbook/fo
 @dirrm share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan
 @dirrm share/xsl/docbook/extensions/xalan27/src/com/nwalsh
