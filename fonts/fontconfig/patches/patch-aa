@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2006/09/11 18:53:16 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2006/09/12 14:52:17 joerg Exp $
 
---- Makefile.in.orig	2006-09-10 05:04:47.000000000 +0000
+--- Makefile.in.orig	2006-09-10 07:04:47.000000000 +0200
 +++ Makefile.in
 @@ -274,10 +274,11 @@ MAINTAINERCLEANFILES = $(srcdir)/aclocal
  	-type f -name Makefile.in -print` ChangeLog
@@ -15,3 +15,13 @@ $NetBSD: patch-aa,v 1.9 2006/09/11 18:53:16 wiz Exp $
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
+@@ -785,7 +786,8 @@ $(srcdir)/ChangeLog:
+ .PHONY: ChangeLog $(srcdir)/ChangeLog
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(configdir) $(DESTDIR)$(fc_cachedir)
++	$(mkinstalldirs) $(DESTDIR)$(configdir)
++	$(mkinstalldirs) $(DESTDIR)$(fc_cachedir)
+ 	if [ -f $(DESTDIR)$(configdir)/fonts.conf ]; then \
+ 	  echo "backing up existing $(DESTDIR)$(configdir)/fonts.conf"; \
+ 	  mv $(DESTDIR)$(configdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf.bak; \
