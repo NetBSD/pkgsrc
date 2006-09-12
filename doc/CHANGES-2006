@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1266 2006/09/12 08:38:35 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1267 2006/09/12 12:40:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4290,3 +4290,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/rblcheck to 1.5 [cube 2006-09-11]
 	Updated wm/fvwm-devel to 2.5.18 [martti 2006-09-11]
 	Updated fonts/fontforge to 20060822 [adam 2006-09-12]
+	Updated textproc/docbook-xsl to 1.71.0nb1 [joerg 2006-09-12]
