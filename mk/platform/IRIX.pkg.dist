@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.23 2006/09/10 17:08:25 jmmv Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.24 2006/09/12 13:20:20 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -669,7 +669,35 @@
                 LC_MESSAGES
                 ..
             ..
+            es_CL
+                LC_MESSAGES
+                ..
+            ..
+            es_CO
+                LC_MESSAGES
+                ..
+            ..
+            es_CR
+                LC_MESSAGES
+                ..
+            ..
+            es_DO
+                LC_MESSAGES
+                ..
+            ..
+            es_EC
+                LC_MESSAGES
+                ..
+            ..
             es_ES
+                LC_MESSAGES
+                ..
+            ..
+            es_GT
+                LC_MESSAGES
+                ..
+            ..
+            es_HN
                 LC_MESSAGES
                 ..
             ..
@@ -678,6 +706,30 @@
                 ..
             ..
             es_NI
+                LC_MESSAGES
+                ..
+            ..
+            es_PA
+                LC_MESSAGES
+                ..
+            ..
+            es_PE
+                LC_MESSAGES
+                ..
+            ..
+            es_PR
+                LC_MESSAGES
+                ..
+            ..
+            es_SV
+                LC_MESSAGES
+                ..
+            ..
+            es_UY
+                LC_MESSAGES
+                ..
+            ..
+            es_VE
                 LC_MESSAGES
                 ..
             ..
