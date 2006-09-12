@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1264 2006/09/11 21:26:57 cube Exp $
+>$NetBSD: CHANGES-2006,v 1.1265 2006/09/12 05:28:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4288,3 +4288,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mergeant to 0.63 [wiz 2006-09-11]
 	Updated fonts/fontconfig to 2.4.0 [wiz 2006-09-11]
 	Updated mail/rblcheck to 1.5 [cube 2006-09-11]
+	Updated wm/fvwm-devel to 2.5.18 [martti 2006-09-11]
