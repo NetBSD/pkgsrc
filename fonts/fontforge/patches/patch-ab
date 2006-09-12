@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2006/05/20 23:34:40 jlam Exp $
+$NetBSD: patch-ab,v 1.9 2006/09/12 08:37:05 adam Exp $
 
---- po/ja.po.orig	2006-04-09 18:27:13.000000000 +0200
+--- po/ja.po.orig	2006-08-06 22:27:54.000000000 +0200
 +++ po/ja.po
-@@ -5110,7 +5110,7 @@ msgstr "ブリス表意記号"
+@@ -5291,7 +5291,7 @@ msgstr "ブリス表意記号"
  msgid "Bopomofo"
  msgstr "注音字母"
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.8 2006/05/20 23:34:40 jlam Exp $
  msgstr "ブラーフミー文字"
  
  msgid "Braille"
-@@ -5251,7 +5251,7 @@ msgstr "マヤ神聖文字"
+@@ -5432,7 +5432,7 @@ msgstr "マヤ神聖文字"
  msgid "Meroitic"
  msgstr "メロエ文字"
  
