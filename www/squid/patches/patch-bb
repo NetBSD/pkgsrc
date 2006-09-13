@@ -1,14 +1,14 @@
-$NetBSD: patch-bb,v 1.9 2006/03/12 12:12:19 taca Exp $
+$NetBSD: patch-bb,v 1.10 2006/09/13 14:41:58 taca Exp $
 
---- include/autoconf.h.in.orig	2005-09-13 09:12:34.000000000 +0900
+--- include/autoconf.h.in.orig	2006-07-13 00:00:31.000000000 +0900
 +++ include/autoconf.h.in
-@@ -671,6 +671,9 @@
- /* Define if you have the <linux/netfilter_ipv4.h> header file.  */
- #undef HAVE_LINUX_NETFILTER_IPV4_H
+@@ -231,6 +231,9 @@
+ /* Define to 1 if you have the `lrand48' function. */
+ #undef HAVE_LRAND48
  
 +/* Define if you have the <machine/byte_swap.h> header file.  */
 +#undef HAVE_MACHINE_BYTE_SWAP_H
 +
- /* Define if you have the <malloc.h> header file.  */
- #undef HAVE_MALLOC_H
+ /* Define to 1 if you have the `mallinfo' function. */
+ #undef HAVE_MALLINFO
  
