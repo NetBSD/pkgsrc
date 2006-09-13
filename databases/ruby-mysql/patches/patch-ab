@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2006/09/13 13:12:54 taca Exp $
+
+--- mysql.c.in.orig	2006-06-04 23:29:28.000000000 +0900
++++ mysql.c.in
+@@ -5,10 +5,12 @@
+ #include "ruby.h"
+ #include "version.h"
+ #ifdef HAVE_MYSQL_H
++#include <my_global.h>
+ #include <mysql.h>
+ #include <errmsg.h>
+ #include <mysqld_error.h>
+ #else
++#include <mysql/my_global.h>
+ #include <mysql/mysql.h>
+ #include <mysql/errmsg.h>
+ #include <mysql/mysqld_error.h>
