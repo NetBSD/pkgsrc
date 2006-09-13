@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/12/23 15:37:41 taca Exp $
+# $NetBSD: options.mk,v 1.8 2006/09/13 14:41:58 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	aufs carp icmp pam-helper snmp ssl unlinkd
@@ -43,7 +43,7 @@ PKG_SUPPORTED_OPTIONS+=	arp-acl
 .include "../../mk/bsd.options.mk"
 
 SQUID_BACKENDS?=		ufs null
-SQUID_BASIC_AUTH_HELPERS?=	getpwnam MSNT NCSA YP winbind
+SQUID_BASIC_AUTH_HELPERS?=	getpwnam MSNT NCSA YP
 SQUID_DIGEST_AUTH_HELPERS?=	password
 SQUID_NTLM_AUTH_HELPERS?=	fakeauth SMB
 SQUID_EXTERNAL_ACL_HELPERS?=	ip_user unix_group

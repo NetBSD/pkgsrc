@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.19 2005/08/09 15:48:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/09/13 14:41:58 taca Exp $
+bin/cossdump
 bin/squidclient
 libexec/cachemgr.cgi
 man/man8/cachemgr.cgi.8
 man/man8/squid.8
-sbin/RunAccel
 sbin/RunCache
 sbin/squid
 share/doc/squid/ChangeLog
 share/doc/squid/RELEASENOTES.html
 share/doc/squid/debug-sections.txt
 share/examples/rc.d/squid
+share/examples/squid/cachemgr.conf
 share/examples/squid/mime.conf
 share/examples/squid/msntauth.conf
 share/examples/squid/squid.conf
