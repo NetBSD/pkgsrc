@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.18 2006/03/12 12:12:19 taca Exp $
+$NetBSD: patch-aa,v 1.19 2006/09/13 14:41:58 taca Exp $
 
---- src/Makefile.in.orig	2005-09-29 05:57:21.000000000 +0900
+--- src/Makefile.in.orig	2006-07-30 17:56:18.000000000 +0900
 +++ src/Makefile.in
-@@ -388,14 +388,14 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+@@ -590,14 +590,14 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
  DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
  DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
  DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
@@ -11,61 +11,62 @@ $NetBSD: patch-aa,v 1.18 2006/03/12 12:12:19 taca Exp $
  DEFAULT_SWAP_DIR = $(localstatedir)/cache
  DEFAULT_PINGER = $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
  DEFAULT_UNLINKD = $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
- DEFAULT_DISKD = $(libexecdir)/`echo diskd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD = $(libexecdir)/`echo diskd-daemon | sed '$(transform);s/$$/$(EXEEXT)/'`
 -DEFAULT_ICON_DIR = $(datadir)/icons
 -DEFAULT_ERROR_DIR = $(datadir)/errors/@ERR_DEFAULT_LANGUAGE@
 -DEFAULT_MIB_PATH = $(datadir)/mib.txt
 +DEFAULT_ICON_DIR = $(datadir)/squid/icons
 +DEFAULT_ERROR_DIR = $(datadir)/squid/errors/@ERR_DEFAULT_LANGUAGE@
 +DEFAULT_MIB_PATH = $(datadir)/squid/mib.txt
+ DEFAULT_HOSTS = @OPT_DEFAULT_HOSTS@
  
- DEFS = @DEFS@ -DDEFAULT_CONFIG_FILE=\"$(DEFAULT_CONFIG_FILE)\"
- 
-@@ -860,20 +860,20 @@ CCDEPMODE = @CCDEPMODE@
+ # Don't automatically uninstall config files
+@@ -842,20 +842,20 @@ distclean-compile:
  uninstall-info-am:
  install-dataDATA: $(data_DATA)
  	@$(NORMAL_INSTALL)
--	$(mkinstalldirs) $(DESTDIR)$(datadir)
-+	$(mkinstalldirs) $(DESTDIR)$(datadir)/squid
+-	test -z "$(datadir)" || $(mkdir_p) "$(DESTDIR)$(datadir)"
++	test -z "$(datadir)" || $(mkdir_p) "$(DESTDIR)$(datadir)/squid"
  	@list='$(data_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/$$f"; \
--	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/$$f; \
-+	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/squid/$$f"; \
-+	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/squid/$$f; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(dataDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/$$f'"; \
+-	  $(dataDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/$$f"; \
++	  echo " $(dataDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/squid/$$f'"; \
++	  $(dataDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/squid/$$f"; \
  	done
  
  uninstall-dataDATA:
  	@$(NORMAL_UNINSTALL)
  	@list='$(data_DATA)'; for p in $$list; do \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " rm -f $(DESTDIR)$(datadir)/$$f"; \
--	  rm -f $(DESTDIR)$(datadir)/$$f; \
-+	  echo " rm -f $(DESTDIR)$(datadir)/squid/$$f"; \
-+	  rm -f $(DESTDIR)$(datadir)/squid/$$f; \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(datadir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(datadir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(datadir)/squid/$$f'"; \
++	  rm -f "$(DESTDIR)$(datadir)/squid/$$f"; \
  	done
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
-@@ -1072,7 +1072,7 @@ info-am:
+@@ -1108,8 +1108,7 @@ info-am:
+ 
  install-data-am: install-data-local install-dataDATA
  
- install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
--	install-sbinPROGRAMS install-sysconfDATA
-+	install-sbinPROGRAMS
+-install-exec-am: install-libexecPROGRAMS install-sbinPROGRAMS \
+-	install-sysconfDATA
++install-exec-am: install-libexecPROGRAMS install-sbinPROGRAMS
  
  install-info: install-info-recursive
  
-@@ -1090,7 +1090,7 @@ mostlyclean-am: mostlyclean-compile most
+@@ -1136,7 +1135,7 @@ ps-am:
  
- uninstall-am: uninstall-binPROGRAMS uninstall-dataDATA uninstall-info-am \
+ uninstall-am: uninstall-dataDATA uninstall-info-am \
  	uninstall-libexecPROGRAMS uninstall-local \
 -	uninstall-sbinPROGRAMS uninstall-sysconfDATA
 +	uninstall-sbinPROGRAMS
  
  uninstall-info: uninstall-info-recursive
  
-@@ -1175,26 +1175,7 @@ repl_modules.c: repl_modules.sh Makefile
+@@ -1220,20 +1219,7 @@ repl_modules.c: repl_modules.sh Makefile
  auth_modules.c: auth_modules.sh Makefile
  	@$(SHELL) $(srcdir)/auth_modules.sh $(AUTH_MODULES) >auth_modules.c
  
@@ -81,12 +82,6 @@ $NetBSD: patch-aa,v 1.18 2006/03/12 12:12:19 taca Exp $
 -	else \
 -	        echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE)"; \
 -	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE); \
--	fi
--	@if test -f $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG) ; then \
--	        echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG)" ; \
--	else \
--	        echo "$(INSTALL_DATA) $(srcdir)/cachemgr.conf $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG)"; \
--	        $(INSTALL_DATA) $(srcdir)/cachemgr.conf $(DESTDIR)$(DEFAULT_CACHEMGR_CONFIG); \
 -	fi
 -	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX)
 +install-data-local: install-dataDATA

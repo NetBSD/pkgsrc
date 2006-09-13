@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.8 2006/03/12 12:12:19 taca Exp $
+$NetBSD: patch-ad,v 1.9 2006/09/13 14:41:58 taca Exp $
 
---- errors/Makefile.in.orig	2006-03-11 07:51:47.000000000 +0900
+--- errors/Makefile.in.orig	2006-06-12 15:09:43.000000000 +0900
 +++ errors/Makefile.in
-@@ -121,7 +121,7 @@ am__quote = @am__quote@
- install_sh = @install_sh@
- makesnmplib = @makesnmplib@
- 
+@@ -221,7 +221,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -errordir = $(datadir)/errors
 +errordir = $(datadir)/squid/errors
- 
  DEFAULT_ERROR_DIR = $(errordir)
- 
+ INSTALL_LANGUAGES = @ERR_LANGUAGES@
+ LANGUAGES = \
