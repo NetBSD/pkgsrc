@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/13 12:49:37 gdt Exp $
+share/emacs/site-lisp/epg/epa-dired.el
+share/emacs/site-lisp/epg/epa-dired.elc
+share/emacs/site-lisp/epg/epa-file.el
+share/emacs/site-lisp/epg/epa-file.elc
+share/emacs/site-lisp/epg/epa-setup.el
+share/emacs/site-lisp/epg/epa-setup.elc
+share/emacs/site-lisp/epg/epa.el
+share/emacs/site-lisp/epg/epa.elc
+share/emacs/site-lisp/epg/epg-config.el
+share/emacs/site-lisp/epg/epg-config.elc
+share/emacs/site-lisp/epg/epg.el
+share/emacs/site-lisp/epg/epg.elc
+@dirrm share/emacs/site-lisp/epg
