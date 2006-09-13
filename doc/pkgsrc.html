@@ -55,10 +55,7 @@
 </dl></dd>
 <dt><span class="sect1"><a href="#overview">1.2. Overview</a></span></dt>
 <dt><span class="sect1"><a href="#terminology">1.3. Terminology</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#term.abbrev">1.3.1. Commonly used abbreviations</a></span></dt>
-<dt><span class="sect2"><a href="#term.roles">1.3.2. Roles involved in pkgsrc</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#term.roles">1.3.1. Roles involved in pkgsrc</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#typography">1.4. Typography</a></span></dt>
 </dl></dd>
 <dt><span class="part"><a href="#users-guide">I. The pkgsrc user's guide</a></span></dt>
@@ -118,7 +115,10 @@
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl></dd>
@@ -159,7 +159,8 @@
 <dt><span class="sect1"><a href="#faq.conf">7.14. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build. What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#too-much-time">7.18. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -271,7 +272,8 @@
 <dt><span class="sect1"><a href="#build.test">15.13. The <span class="emphasis"><em>test</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.install">15.14. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.package">15.15. The <span class="emphasis"><em>package</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.helpful-targets">15.16. Other helpful targets</a></span></dt>
+<dt><span class="sect1"><a href="#build.clean">15.16. Cleaning up</a></span></dt>
+<dt><span class="sect1"><a href="#build.helpful-targets">15.17. Other helpful targets</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#tools">16. Tools needed for building or running</a></span></dt>
 <dd><dl>
@@ -464,10 +466,7 @@ source packages</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#overview">1.2. Overview</a></span></dt>
 <dt><span class="sect1"><a href="#terminology">1.3. Terminology</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#term.abbrev">1.3.1. Commonly used abbreviations</a></span></dt>
-<dt><span class="sect2"><a href="#term.roles">1.3.2. Roles involved in pkgsrc</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#term.roles">1.3.1. Roles involved in pkgsrc</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#typography">1.4. Typography</a></span></dt>
 </dl>
 </div>
@@ -678,22 +677,13 @@ minutes!</p>
 	    especially in the context of precompiled packages.</p>
 </dd>
 <dt><span class="term">Program</span></dt>
-<dd><p>The piece of software to be installed which will be constructed from
-	    all the files in the distfile by the actions defined in the
-	    corresponding package.</p></dd>
+<dd><p>The piece of software to be installed which will be
+	  constructed from all the files in the distfile by the
+	  actions defined in the corresponding package.</p></dd>
 </dl></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="term.abbrev"></a>1.3.1. Commonly used abbreviations</h3></div></div></div>
-<div class="variablelist"><dl>
-<dt><span class="term">ICE</span></dt>
-<dd><p>Internal Compiler
-	Error</p></dd>
-</dl></div>
-</div>
-<div class="sect2" lang="en">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="term.roles"></a>1.3.2. Roles involved in pkgsrc</h3></div></div></div>
+<a name="term.roles"></a>1.3.1. Roles involved in pkgsrc</h3></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term">pkgsrc users</span></dt>
 <dd>
@@ -790,7 +780,10 @@ minutes!</p>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl></dd>
@@ -831,7 +824,8 @@ minutes!</p>
 <dt><span class="sect1"><a href="#faq.conf">7.14. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build. What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#too-much-time">7.18. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -1818,20 +1812,20 @@ file and inspect the contents before extracting it.
 </dl>
 </div>
 <p>Basically, there are two ways of using pkgsrc. The first
-	is to only install the package tools and to use binary packages
-	that someone else has prepared. This is the &#8220;<span class="quote">pkg</span>&#8221;
-	in pkgsrc. The second way is to install the &#8220;<span class="quote">src</span>&#8221;
-	of pkgsrc, too. Then you are able to build your own packages,
-	and you can still use binary packages from someone else.</p>
+is to only install the package tools and to use binary packages
+that someone else has prepared. This is the &#8220;<span class="quote">pkg</span>&#8221;
+in pkgsrc. The second way is to install the &#8220;<span class="quote">src</span>&#8221;
+of pkgsrc, too. Then you are able to build your own packages,
+and you can still use binary packages from someone else.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="using-pkg"></a>4.1. Using binary packages</h2></div></div></div>
 <p>To use binary packages, you need some tools to manage
-	them. On NetBSD, these tools are already installed. On all other
-	operating systems, you need to install them first. For the
-	following platforms, prebuilt versions of the package tools
-	are available and can simply be downloaded and unpacked in the
-	<code class="filename">/</code> directory:</p>
+  them. On NetBSD, these tools are already installed. On all other
+  operating systems, you need to install them first. For the
+  following platforms, prebuilt versions of the package tools
+  are available and can simply be downloaded and unpacked in the
+  <code class="filename">/</code> directory:</p>
 <div class="informaltable">
 <a name="binary-bootstrap-kits"></a><table border="1">
 <colgroup>
@@ -1855,19 +1849,19 @@ file and inspect the contents before extracting it.
 </table>
 </div>
 <p>These pre-built package tools use
-	<code class="filename">/usr/pkg</code> for the base directory, and
-	<code class="filename">/var/db/pkg</code> for the database of installed
-	packages. If you cannot use these directories for whatever
-	reasons (maybe because you're not root), you have to build the
-	package tools yourself, which is explained in <a href="#bootstrapping-pkgsrc" title="3.2. Bootstrapping pkgsrc">Section 3.2, &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
+  <code class="filename">/usr/pkg</code> for the base directory, and
+  <code class="filename">/var/db/pkg</code> for the database of installed
+  packages. If you cannot use these directories for whatever
+  reasons (maybe because you're not root), you have to build the
+  package tools yourself, which is explained in <a href="#bootstrapping-pkgsrc" title="3.2. Bootstrapping pkgsrc">Section 3.2, &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="finding-binary-packages"></a>4.1.1. Finding binary packages</h3></div></div></div>
 <p>To install binary packages, you first need to know from
-	where to get them. You can get them on CD-ROMs, DVDs, or via FTP
-	or HTTP.</p>
+    where to get them. You can get them on CD-ROMs, DVDs, or via FTP
+    or HTTP.</p>
 <p>The binary packages can be found at the following
-	locations.</p>
+    locations.</p>
 <div class="informaltable">
 <a name="binary-packages"></a><table border="1">
 <colgroup>
@@ -1895,382 +1889,396 @@ file and inspect the contents before extracting it.
 </table>
 </div>
 <p>Most of these directories contain binary packages for
-	multiple platforms. Select the appropriate subdirectories,
-	according to your machine architecture and operating system,
-	until you find a directory called <code class="filename">All</code>. This
-	directory contains all the binary packages. Further, there are
-	subdirectories for categories that contain symbolic links that
-	point to the actual binary package in
-	<code class="filename">../All</code>. This directory layout is used for
-	all package repositories, no matter if they are accessed via
-	HTTP, FTP, NFS, CD-ROM, or the local filesystem.</p>
+    multiple platforms. Select the appropriate subdirectories,
+    according to your machine architecture and operating system,
+    until you find a directory called <code class="filename">All</code>. This
+    directory contains all the binary packages. Further, there are
+    subdirectories for categories that contain symbolic links that
+    point to the actual binary package in
+    <code class="filename">../All</code>. This directory layout is used for
+    all package repositories, no matter if they are accessed via
+    HTTP, FTP, NFS, CD-ROM, or the local filesystem.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="installing-binary-packages"></a>4.1.2. Installing binary packages</h3></div></div></div>
 <p>If you have the files on a CD-ROM or downloaded them to
-        your hard disk, you can install them with the following command
-        (be sure to <span><strong class="command">su</strong></span> to root first):</p>
+    your hard disk, you can install them with the following command
+    (be sure to <span><strong class="command">su</strong></span> to root first):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add /path/to/package.tgz</code></strong></pre>
 <p>If you have FTP access and you don't want to download the
-        packages via FTP prior to installation, you can do this
-        automatically by giving <span><strong class="command">pkg_add</strong></span> an FTP URL:</p>
+    packages via FTP prior to installation, you can do this
+    automatically by giving <span><strong class="command">pkg_add</strong></span> an FTP URL:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package</code></strong></pre>
 <p>Note that any prerequisite packages needed to run the
-        package in question will be installed, too, assuming they are
-        present where you install from.</p>
+    package in question will be installed, too, assuming they are
+    present where you install from.</p>
 <p>To save some typing, you can set the
-        <code class="varname">PKG_PATH</code> environment variable to a semicolon-separated
-	list of paths (including remote URLs); trailing slashes are not allowed.
-	</p>
+    <code class="varname">PKG_PATH</code> environment variable to a semicolon-separated
+    list of paths (including remote URLs); trailing slashes are not allowed.
+    </p>
 <p>Additionally to the <code class="filename">All</code> directory
-        there exists a <code class="filename">vulnerable</code> directory to
-        which binary packages with known vulnerabilities are
-        moved, since removing them could cause missing dependencies. To
-        use these packages, add the <code class="filename">vulnerable</code>
-        directory to your <code class="varname">PKG_PATH</code>. However, you should run
-        <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly,
-	especially after installing new packages, and verify that the
-	vulnerabilities are acceptable for your configuration. An example
-        <code class="varname">PKG_PATH</code> would be:
-      <code class="filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</code>
-        Please note that semicolon (';') is a shell meta-character, so
-        you'll probably have to quote it.</p>
+    there exists a <code class="filename">vulnerable</code> directory to
+    which binary packages with known vulnerabilities are
+    moved, since removing them could cause missing dependencies. To
+    use these packages, add the <code class="filename">vulnerable</code>
+    directory to your <code class="varname">PKG_PATH</code>. However, you should run
+    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly,
+    especially after installing new packages, and verify that the
+    vulnerabilities are acceptable for your configuration. An example
+    <code class="varname">PKG_PATH</code> would be:
+    <code class="filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</code>
+    Please note that semicolon (';') is a shell meta-character, so
+    you'll probably have to quote it.</p>
 <p>After you've installed packages, be sure to have
-        <code class="filename">/usr/pkg/bin</code> and <code class="filename">/usr/pkg/sbin</code> in your
-        <code class="varname">PATH</code> so you can actually start the just
-        installed program.</p>
+    <code class="filename">/usr/pkg/bin</code> and <code class="filename">/usr/pkg/sbin</code> in your
+    <code class="varname">PATH</code> so you can actually start the just
+    installed program.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="using.pkg_delete"></a>4.1.3. Deinstalling packages</h3></div></div></div>
 <p>To deinstall a package, it does not matter whether it was
-	installed from source code or from a binary package. The
-	<span><strong class="command">pkg_delete</strong></span> command does not know it anyway.
-	To delete a package, you can just run <span><strong class="command">pkg_delete
-	<em class="replaceable"><code>package-name</code></em></strong></span>. The package
-	name can be given with or without version number. Wildcards can
-	also be used to deinstall a set of packages, for example
-	<code class="literal">*emacs*</code>. Be sure to include them in quotes,
-	so that the shell does not expand them before
-	<code class="literal">pkg_delete</code> sees them.</p>
+    installed from source code or from a binary package. The
+    <span><strong class="command">pkg_delete</strong></span> command does not know it anyway.
+    To delete a package, you can just run <span><strong class="command">pkg_delete
+    <em class="replaceable"><code>package-name</code></em></strong></span>. The package
+    name can be given with or without version number. Wildcards can
+    also be used to deinstall a set of packages, for example
+    <code class="literal">*emacs*</code>. Be sure to include them in quotes,
+    so that the shell does not expand them before
+    <code class="literal">pkg_delete</code> sees them.</p>
 <p>The <code class="option">-r</code> option is very powerful: it
-	removes all the packages that require the package in question
-	and then removes the package itself. For example:
+    removes all the packages that require the package in question
+    and then removes the package itself. For example:
 
-</p>
+    </p>
 <pre class="screen">
-    <code class="prompt">#</code> <strong class="userinput"><code>pkg_delete -r jpeg</code></strong>
-</pre>
+<code class="prompt">#</code> <strong class="userinput"><code>pkg_delete -r jpeg</code></strong>
+    </pre>
 <p>
 
-	will remove jpeg and all the packages that used it; this allows
-	upgrading the jpeg package.</p>
+    will remove jpeg and all the packages that used it; this allows
+    upgrading the jpeg package.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="using.pkg_info"></a>4.1.4. Getting information about installed packages</h3></div></div></div>
 <p>The <span><strong class="command">pkg_info</strong></span> shows information about
-	installed packages or binary package files.</p>
+    installed packages or binary package files.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="vulnerabilities"></a>4.1.5. Checking for security vulnerabilities in installed packages</h3></div></div></div>
 <p>
-The NetBSD Security-Officer and Packages Groups maintain a list of
-known security vulnerabilities to packages which are (or have been)
-included in pkgsrc.  The list is available from the NetBSD
-FTP site at <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities</a>.
-</p>
+      The NetBSD Security-Officer and Packages Groups maintain a list of
+      known security vulnerabilities to packages which are (or have been)
+      included in pkgsrc.  The list is available from the NetBSD
+      FTP site at <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities</a>.
+    </p>
 <p>
-Through <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>, 
-this list can be downloaded
-automatically, and a security audit of all packages installed on a system
-can take place.
-</p>
+      Through <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>, 
+      this list can be downloaded
+      automatically, and a security audit of all packages installed on a system
+      can take place.
+    </p>
 <p>
-There are two components to 
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.  The first
-component, &#8220;<span class="quote">download-vulnerability-list</span>&#8221;, is for downloading
-the list of vulnerabilities from the NetBSD FTP site.  The second
-component, &#8220;<span class="quote">audit-packages</span>&#8221;, checks to see if any of your
-installed packages are vulnerable.  If a package is vulnerable, you
-will see output similar to the following:
-</p>
+      There are two components to 
+      <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.  The first
+      component, &#8220;<span class="quote">download-vulnerability-list</span>&#8221;, is for downloading
+      the list of vulnerabilities from the NetBSD FTP site.  The second
+      component, &#8220;<span class="quote">audit-packages</span>&#8221;, checks to see if any of your
+      installed packages are vulnerable.  If a package is vulnerable, you
+      will see output similar to the following:
+    </p>
 <pre class="screen">Package samba-2.0.9 has a local-root-shell vulnerability, see
-http://www.samba.org/samba/whatsnew/macroexploit.html</pre>
+    http://www.samba.org/samba/whatsnew/macroexploit.html</pre>
 <p>
-One can set up <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> to download the
-<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
-file daily, and include a package audit in the daily security script.
-Details on this are located in the <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top">MESSAGE</a>
-file for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.
-</p>
+      One can set up <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> to download the
+      <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
+      file daily, and include a package audit in the daily security script.
+      Details on this are located in the <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top">MESSAGE</a>
+      file for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.
+    </p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="pkg_versions"></a>4.1.6. Finding if newer versions of your installed packages are in pkgsrc</h3></div></div></div>
 <p>
-Install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a> and run 
-<span><strong class="command">lintpkgsrc</strong></span> with the &#8220;<span class="quote">-i</span>&#8221;
-argument to check if your packages are up-to-date, e.g.
-</p>
-<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>lintpkgsrc -i</code></strong>
+      Install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a> and run 
+      <span><strong class="command">lintpkgsrc</strong></span> with the &#8220;<span class="quote">-i</span>&#8221;
+      argument to check if your packages are up-to-date, e.g.
+    </p>
+<pre class="screen">
+<code class="prompt">%</code> <strong class="userinput"><code>lintpkgsrc -i</code></strong>
 ...
-Version mismatch: 'tcsh' 6.09.00 vs 6.10.00</pre>
+Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
+    </pre>
 <p>You can then use <span><strong class="command">make update</strong></span> to update the
-package on your system and rebuild any dependencies.
-</p>
+    package on your system and rebuild any dependencies.
+    </p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="using.pkg_admin"></a>4.1.7. Other administrative functions</h3></div></div></div>
 <p>The <span><strong class="command">pkg_admin</strong></span> executes various
-	administrative functions on the package system.</p>
+    administrative functions on the package system.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="a-word-of-warning"></a>4.1.8. A word of warning</h3></div></div></div>
 <p>Please pay very careful attention to the warnings
-        expressed in the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> manual page about the
-        inherent dangers of installing binary packages which you did
-        not create yourself, and the security holes that can be
-        introduced onto your system by indiscriminate adding of such
-        files.</p>
+    expressed in the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> manual page about the
+    inherent dangers of installing binary packages which you did
+    not create yourself, and the security holes that can be
+    introduced onto your system by indiscriminate adding of such
+    files.</p>
 <p>The same warning of course applies to every package you
-      install from source when you haven't completely read and
-      understood the source code of the package, the compiler that
-      is used to build the package and all the other tools that are
-      involved.</p>
+    install from source when you haven't completely read and
+    understood the source code of the package, the compiler that
+    is used to build the package and all the other tools that are
+    involved.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="building-packages-from-source"></a>4.2. Building packages from source</h2></div></div></div>
-<p>After obtaining pkgsrc, the <code class="filename">pkgsrc</code> directory
-now contains a set of packages, organized into categories. You can browse
-the online index of packages, or run <span><strong class="command">make readme</strong></span>
-from the <code class="filename">pkgsrc</code> directory to build local
-<code class="filename">README.html</code> files for all packages, viewable with any web browser such as
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/lynx/README.html" target="_top"><code class="filename">www/lynx</code></a> or 
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a>.</p>
-<p>The default <span class="emphasis"><em>prefix</em></span> for installed packages is
-<code class="filename">/usr/pkg</code>. If you wish to change this, you should do
-so by setting <code class="varname">LOCALBASE</code> in
-<code class="filename">mk.conf</code>. You should not try to use multiple
-different <code class="varname">LOCALBASE</code> definitions on the same system
-(inside a chroot is an exception). </p>
-<p>The rest of this chapter assumes that the package is already in pkgsrc. If it
-      is not, see <a href="#developers-guide" title="Part II. The pkgsrc developer's guide">Part II, &#8220;The pkgsrc developer's guide&#8221;</a> for instructions
-      how to create your own packages.</p>
+<p>After obtaining pkgsrc, the <code class="filename">pkgsrc</code>
+  directory now contains a set of packages, organized into
+  categories. You can browse the online index of packages, or run
+  <span><strong class="command">make readme</strong></span> from the <code class="filename">pkgsrc</code>
+  directory to build local <code class="filename">README.html</code> files for
+  all packages, viewable with any web browser such as <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/lynx/README.html" target="_top"><code class="filename">www/lynx</code></a> or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a>.</p>
+<p>The default <span class="emphasis"><em>prefix</em></span> for installed packages
+  is <code class="filename">/usr/pkg</code>. If you wish to change this, you
+  should do so by setting <code class="varname">LOCALBASE</code> in
+  <code class="filename">mk.conf</code>. You should not try to use multiple
+  different <code class="varname">LOCALBASE</code> definitions on the same
+  system (inside a chroot is an exception). </p>
+<p>The rest of this chapter assumes that the package is already
+  in pkgsrc. If it is not, see <a href="#developers-guide" title="Part II. The pkgsrc developer's guide">Part II, &#8220;The pkgsrc developer's guide&#8221;</a> for
+  instructions how to create your own packages.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="requirements"></a>4.2.1. Requirements</h3></div></div></div>
 <p>To build packages from source, you need a working C
-      compiler. On NetBSD, you need to install the
-      &#8220;<span class="quote">comp</span>&#8221; and the &#8220;<span class="quote">text</span>&#8221; distribution
-      sets. If you want to build X11-related packages, the
-      &#8220;<span class="quote">xbase</span>&#8221; and &#8220;<span class="quote">xcomp</span>&#8221; distribution
-      sets are required, too.</p>
+    compiler. On NetBSD, you need to install the
+    &#8220;<span class="quote">comp</span>&#8221; and the &#8220;<span class="quote">text</span>&#8221; distribution
+    sets. If you want to build X11-related packages, the
+    &#8220;<span class="quote">xbase</span>&#8221; and &#8220;<span class="quote">xcomp</span>&#8221; distribution
+    sets are required, too.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="fetching-distfiles"></a>4.2.2. Fetching distfiles</h3></div></div></div>
 <p>The first step for building a package is downloading the
-      distfiles (i.e. the unmodified source). If they have not yet been
-      downloaded, pkgsrc will fetch them automatically.</p>
-<p>
-If you have all files that you need in the
-<code class="filename">distfiles</code> directory,
-you don't need to connect. If the distfiles are on CD-ROM, you can
-mount the CD-ROM on <code class="filename">/cdrom</code> and add:
-</p>
+    distfiles (i.e. the unmodified source). If they have not yet been
+    downloaded, pkgsrc will fetch them automatically.</p>
+<p>If you have all files that you need in the
+    <code class="filename">distfiles</code> directory,
+    you don't need to connect. If the distfiles are on CD-ROM, you can
+    mount the CD-ROM on <code class="filename">/cdrom</code> and add:
+    </p>
 <pre class="screen">DISTDIR=/cdrom/pkgsrc/distfiles</pre>
 <p>
-to your <code class="filename">mk.conf</code>.
-</p>
-<p>You can overwrite some of the major distribution sites to fit to sites
-        that are close to your own.  Have a look at
-        <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to find some examples
-        &#8212; in particular, look for the <code class="varname">MASTER_SORT</code>,
-        <code class="varname">MASTER_SORT_REGEX</code> and
-        <code class="varname">INET_COUNTRY</code> definitions.  This may save some of your
-        bandwidth and time.</p>
+    to your <code class="filename">mk.conf</code>.</p>
+<p>You can overwrite some of the major distribution sites to
+    fit to sites that are close to your own.  By setting one or two
+    variables you can modify the order in which the master sites are
+    accessed.  <code class="varname">MASTER_SORT</code> contains a whitespace
+    delimited list of domain suffixes.
+    <code class="varname">MASTER_SORT_REGEX</code> is even more flexible, it
+    contains a whitespace delimited list of regular expressions.  It
+    has higher priority than <code class="varname">MASTER_SORT</code>.  Have a
+    look at <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to find
+    some examples.  This may save some of your bandwidth and
+    time.</p>
 <p>You can change these settings either in your shell's environment, or,
-        if you want to keep the settings, by editing the
-        <code class="filename">/etc/mk.conf</code> file,
-        and adding the definitions there.</p>
+    if you want to keep the settings, by editing the
+    <code class="filename">/etc/mk.conf</code> file,
+    and adding the definitions there.</p>
 <p>
-If a package depends on many other packages (such as
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a>), the build process may 
-alternate between periods of
-downloading source, and compiling. To ensure you have all the source
-downloaded initially you can run the command:
-</p>
+      If a package depends on many other packages (such as
+      <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a>), the build process may 
+      alternate between periods of
+      downloading source, and compiling. To ensure you have all the source
+      downloaded initially you can run the command:
+      </p>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>make fetch-list | sh</code></strong></pre>
 <p>
-which will output and run a set of shell commands to fetch the
-necessary files into the <code class="filename">distfiles</code> directory.  You can
-also choose to download the files manually.
-</p>
+      which will output and run a set of shell commands to fetch the
+      necessary files into the <code class="filename">distfiles</code> directory.  You can
+      also choose to download the files manually.
+    </p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="how-to-build-and-install"></a>4.2.3. How to build and install</h3></div></div></div>
 <p>
-Once the software has downloaded, any patches will be applied, then it
-will be compiled for you. This may take some time depending on your
-computer, and how many other packages the software depends on and their
-compile time.
-</p>
+      Once the software has downloaded, any patches will be applied, then it
+      will be compiled for you. This may take some time depending on your
+      computer, and how many other packages the software depends on and their
+      compile time.
+    </p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>If using bootstrap or pkgsrc on a non-NetBSD system,
-        use the pkgsrc <span><strong class="command">bmake</strong></span> command instead of
-        &#8220;<span class="quote">make</span>&#8221; in the examples in this guide.</p>
+    use the pkgsrc <span><strong class="command">bmake</strong></span> command instead of
+    &#8220;<span class="quote">make</span>&#8221; in the examples in this guide.</p>
 </div>
 <p>For example, type</p>
-<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>cd misc/figlet</code></strong>
-<code class="prompt">%</code> <strong class="userinput"><code>make</code></strong></pre>
+<pre class="screen">
+<code class="prompt">%</code> <strong class="userinput"><code>cd misc/figlet</code></strong>
+<code class="prompt">%</code> <strong class="userinput"><code>make</code></strong>
+    </pre>
 <p>at the shell prompt to build the various components of the
-        package.</p>
+    package.</p>
 <p>The next stage is to actually install the newly compiled
-	program onto your system. Do this by entering:
+    program onto your system. Do this by entering:
 
-</p>
+    </p>
 <pre class="screen">
-    <code class="prompt">%</code> <strong class="userinput"><code>make install</code></strong>
-</pre>
+<code class="prompt">%</code> <strong class="userinput"><code>make install</code></strong>
+    </pre>
 <p>
 
-	while you are still in the directory for whatever package you
-	are installing.</p>
+    while you are still in the directory for whatever package you
+    are installing.</p>
 <p>Installing the package on your system may require you to
-	be root.  However, pkgsrc has a
-        <span class="emphasis"><em>just-in-time-su</em></span> feature, which allows you
-        to only become root for the actual installation step.</p>
+    be root.  However, pkgsrc has a
+    <span class="emphasis"><em>just-in-time-su</em></span> feature, which allows you
+    to only become root for the actual installation step.</p>
 <p>That's it, the software should now be installed and setup for use.
-You can now enter:
+    You can now enter:
 
-</p>
+    </p>
 <pre class="screen">
-    <code class="prompt">%</code> <strong class="userinput"><code>make clean</code></strong>
-</pre>
+<code class="prompt">%</code> <strong class="userinput"><code>make clean</code></strong>
+    </pre>
 <p>
 
-	to remove the compiled files in the work directory, as you shouldn't need
-	them any more. If other packages were also added to your system
-	(dependencies) to allow your program to compile, you can tidy these up
-	also with the command:</p>
+    to remove the compiled files in the work directory, as you shouldn't need
+    them any more. If other packages were also added to your system
+    (dependencies) to allow your program to compile, you can tidy these up
+    also with the command:</p>
 <pre class="screen">
-    <code class="prompt">%</code> <strong class="userinput"><code>make clean-depends</code></strong>
-</pre>
+<code class="prompt">%</code> <strong class="userinput"><code>make clean-depends</code></strong>
+    </pre>
 <p>Taking the figlet utility as an example, we can install it on our
-        system by building as shown in <a href="#logs" title="Appendix B. Build logs">Appendix B, <i>Build logs</i></a>.</p>
-<p>The program is installed under the default root of the packages tree -
-        <code class="filename">/usr/pkg</code>. Should this not conform to your tastes,
-        set the <code class="varname">LOCALBASE</code>
-        variable in your environment, and it will use that value as the root of
-        your packages tree. So, to use <code class="filename">/usr/local</code>, set
-        <code class="varname">LOCALBASE=/usr/local</code> in your environment.  Please note
-        that you should use a directory which is
-        dedicated to packages and not shared with other programs (i.e., do not try
-        and use <code class="varname">LOCALBASE=/usr</code>).  Also, you should not try to
-        add any of your own files or directories (such as <code class="filename">src/</code>,
-        <code class="filename">obj/</code>, or <code class="filename">pkgsrc/</code>) below the
-        <code class="varname">LOCALBASE</code> tree.  This is to prevent possible conflicts
-        between programs and other files installed by the package system and
-        whatever else may have been installed there.</p>
-<p>Some packages look in <code class="filename">/etc/mk.conf</code> to alter some
-        configuration options at build time.  Have a look at
-        <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to
-        get an overview of what will be set there by default.  Environment
-        variables such as <code class="varname">LOCALBASE</code>
-        can be set in <code class="filename">/etc/mk.conf</code> to
-        save having to remember to set them each time you want to use pkgsrc.</p>
-<p>Occasionally, people want to &#8220;<span class="quote">look under the covers</span>&#8221; to see
-        what is going on when a package is building or being installed. This may be
-        for debugging purposes, or out of simple curiosity. A number of utility
-        values have been added to help with this.</p>
+    system by building as shown in <a href="#logs" title="Appendix B. Build logs">Appendix B, <i>Build logs</i></a>.</p>
+<p>The program is installed under the default root of the
+    packages tree - <code class="filename">/usr/pkg</code>. Should this not
+    conform to your tastes, set the <code class="varname">LOCALBASE</code>
+    variable in your environment, and it will use that value as the
+    root of your packages tree. So, to use
+    <code class="filename">/usr/local</code>, set
+    <code class="varname">LOCALBASE=/usr/local</code> in your environment.
+    Please note that you should use a directory which is dedicated to
+    packages and not shared with other programs (i.e., do not try and
+    use <code class="varname">LOCALBASE=/usr</code>).  Also, you should not try
+    to add any of your own files or directories (such as
+    <code class="filename">src/</code>, <code class="filename">obj/</code>, or
+    <code class="filename">pkgsrc/</code>) below the
+    <code class="varname">LOCALBASE</code> tree.  This is to prevent possible
+    conflicts between programs and other files installed by the
+    package system and whatever else may have been installed
+    there.</p>
+<p>Some packages look in <code class="filename">/etc/mk.conf</code> to
+    alter some configuration options at build time.  Have a look at
+    <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to get an overview
+    of what will be set there by default.  Environment variables such
+    as <code class="varname">LOCALBASE</code> can be set in
+    <code class="filename">/etc/mk.conf</code> to save having to remember to
+    set them each time you want to use pkgsrc.</p>
+<p>Occasionally, people want to &#8220;<span class="quote">look under the
+    covers</span>&#8221; to see what is going on when a package is building
+    or being installed. This may be for debugging purposes, or out of
+    simple curiosity. A number of utility values have been added to
+    help with this.</p>
 <div class="orderedlist"><ol type="1">
 <li>
-<p>If you invoke the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command with <code class="varname">PKG_DEBUG_LEVEL=2</code>,
-            then a huge amount of information will be displayed. For example,</p>
+<p>If you invoke the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command with
+	<code class="varname">PKG_DEBUG_LEVEL=2</code>, then a huge amount of
+	information will be displayed. For example,</p>
 <pre class="screen"><strong class="userinput"><code>make patch PKG_DEBUG_LEVEL=2</code></strong></pre>
-<p>will show all the commands that are invoked, up to and including the
-            &#8220;<span class="quote">patch</span>&#8221; stage.</p>
+<p>will show all the commands that are invoked, up to and
+	including the &#8220;<span class="quote">patch</span>&#8221; stage.</p>
 </li>
 <li>
-<p>If you want to know the value of a certain <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> definition, then
-            the <code class="varname">VARNAME</code> definition should be used, in conjunction
-            with the show-var target. e.g. to show the expansion of the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable
-            <code class="varname">LOCALBASE</code>:</p>
-<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>make show-var VARNAME=LOCALBASE</code></strong>
+<p>If you want to know the value of a certain <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+	definition, then the <code class="varname">VARNAME</code> definition
+	should be used, in conjunction with the show-var
+	target. e.g. to show the expansion of the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+	variable <code class="varname">LOCALBASE</code>:</p>
+<pre class="screen">
+<code class="prompt">%</code> <strong class="userinput"><code>make show-var VARNAME=LOCALBASE</code></strong>
 /usr/pkg
 <code class="prompt">%</code>
-          </pre>
+	</pre>
 </li>
 </ol></div>
 <p>If you want to install a binary package that you've either
-        created yourself (see next section), that you put into pkgsrc/packages manually or
-        that is located on a remote FTP server, you can use the "bin-install"
-        target. This target will install a binary package - if available - via
-        <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>, else do a <span><strong class="command">make package</strong></span>.
-        The list of remote
-        FTP sites searched is kept in the variable
-        <code class="varname">BINPKG_SITES</code>, which defaults to
-        ftp.NetBSD.org. Any flags that should be added to <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> can be put
-        into <code class="varname">BIN_INSTALL_FLAGS</code>.
-        See <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for more details.</p>
-<p>A final word of warning: If you set up a system that has a non-standard
-        setting for <code class="varname">LOCALBASE</code>, be sure to set that
-        before any packages are installed, as you cannot use several directories
-        for the same purpose. Doing so will result in pkgsrc not being able to
-        properly detect your installed packages, and fail miserably. Note also that
-        precompiled binary packages are usually built with the default
-        <code class="varname">LOCALBASE</code> of
-        <code class="filename">/usr/pkg</code>, and that you should <span class="emphasis"><em>not</em></span>
-        install any if you use a non-standard <code class="varname">LOCALBASE</code>.</p>
+    created yourself (see next section), that you put into
+    pkgsrc/packages manually or that is located on a remote FTP
+    server, you can use the "bin-install" target. This target will
+    install a binary package - if available - via <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>,
+    else do a <span><strong class="command">make package</strong></span>.  The list of remote FTP
+    sites searched is kept in the variable
+    <code class="varname">BINPKG_SITES</code>, which defaults to
+    ftp.NetBSD.org. Any flags that should be added to <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>
+    can be put into <code class="varname">BIN_INSTALL_FLAGS</code>.  See
+    <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for more
+    details.</p>
+<p>A final word of warning: If you set up a system that has a
+    non-standard setting for <code class="varname">LOCALBASE</code>, be sure to
+    set that before any packages are installed, as you cannot use
+    several directories for the same purpose. Doing so will result in
+    pkgsrc not being able to properly detect your installed packages,
+    and fail miserably. Note also that precompiled binary packages are
+    usually built with the default <code class="varname">LOCALBASE</code> of
+    <code class="filename">/usr/pkg</code>, and that you should
+    <span class="emphasis"><em>not</em></span> install any if you use a non-standard
+    <code class="varname">LOCALBASE</code>.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="selecting-the-compiler"></a>4.2.4. Selecting the compiler</h3></div></div></div>
 <p>By default, pkgsrc will use GCC to build packages.  This may be
-        overridden by setting the following variables in /etc/mk.conf:</p>
+    overridden by setting the following variables in /etc/mk.conf:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">PKGSRC_COMPILER</code>:</span></dt>
 <dd>
 <p>This is a list of values specifying the chain of
-              compilers to invoke when building packages.  Valid values
-              are:</p>
+	  compilers to invoke when building packages.  Valid values
+	  are:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="varname">distcc</code>:
-                distributed C/C++ (chainable)</p></li>
+	    distributed C/C++ (chainable)</p></li>
 <li><p><code class="varname">ccache</code>:
-                compiler cache (chainable)</p></li>
+	    compiler cache (chainable)</p></li>
 <li><p><code class="varname">gcc</code>:
-                GNU C/C++ Compiler</p></li>
+	    GNU C/C++ Compiler</p></li>
 <li><p><code class="varname">mipspro</code>:
-                Silicon Graphics, Inc. MIPSpro (n32/n64)</p></li>
+	    Silicon Graphics, Inc. MIPSpro (n32/n64)</p></li>
 <li><p><code class="varname">mipspro</code>:
-                Silicon Graphics, Inc. MIPSpro (o32)</p></li>
+	    Silicon Graphics, Inc. MIPSpro (o32)</p></li>
 <li><p><code class="varname">sunpro</code>:
-                Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</p></li>
+	    Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</p></li>
 </ul></div>
 <p>The default is
-              &#8220;<span class="quote"><code class="varname">gcc</code></span>&#8221;.  You can use
-              <code class="varname">ccache</code> and/or
-              <code class="varname">distcc</code> with an appropriate
-              <code class="varname">PKGSRC_COMPILER</code> setting,
-              e.g. &#8220;<span class="quote"><code class="varname">ccache gcc</code></span>&#8221;.  This
-              variable should always be
-              terminated with a value for a real compiler.</p>
+	  &#8220;<span class="quote"><code class="varname">gcc</code></span>&#8221;.  You can use
+	  <code class="varname">ccache</code> and/or
+	  <code class="varname">distcc</code> with an appropriate
+	  <code class="varname">PKGSRC_COMPILER</code> setting,
+	  e.g. &#8220;<span class="quote"><code class="varname">ccache gcc</code></span>&#8221;.  This
+	  variable should always be
+	  terminated with a value for a real compiler.</p>
 </dd>
 <dt><span class="term"><code class="varname">GCC_REQD</code>:</span></dt>
 <dd><p>This specifies the minimum version of GCC to use
-              when building packages.  If the system GCC doesn't
-              satisfy this requirement, then pkgsrc will build and
-              install one of the GCC packages to use instead.</p></dd>
+	  when building packages.  If the system GCC doesn't
+	  satisfy this requirement, then pkgsrc will build and
+	  install one of the GCC packages to use instead.</p></dd>
 </dl></div>
 </div>
 </div>
@@ -2284,7 +2292,10 @@ You can now enter:
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl>
@@ -2393,6 +2404,24 @@ You can now enter:
 	the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a> package if
 	you're interested in optimization for the current CPU.</p>
 </div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="conf.ldflags"></a>5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
+<p>If you want to pass flags to the linker, both in the configure
+step and the build step, you can do this in two ways.  Either set
+<code class="varname">LDFLAGS</code> or <code class="varname">LIBS</code>.  The difference
+between the two is that <code class="varname">LIBS</code> will be appended to
+the command line, while <code class="varname">LDFLAGS</code> come earlier.
+<code class="varname">LDFLAGS</code> is pre-loaded with rpath settings for ELF
+machines depending on the setting of <code class="varname">USE_IMAKE</code> or
+the inclusion of <code class="filename">mk/x11.buildlink3.mk</code>.  As with
+<code class="varname">CFLAGS</code>, if you do not wish to override these
+settings, use the <code class="literal">+=</code> operator:</p>
+<pre class="programlisting">
+    LDFLAGS+=        -your -linkerflags
+</pre>
+<p>See also <a href="#undefined-reference" title="17.5.3. Undefined reference to &#8220;...&#8221;">Section 17.5.3, &#8220;Undefined reference to &#8220;<span class="quote">...</span>&#8221;&#8221;</a>.</p>
+</div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -2405,23 +2434,23 @@ You can now enter:
 	    Run some sanity checks that package developers want:
 	    </p>
 <div class="itemizedlist"><ul type="circle">
-<li><p>make sure patches apply with zero fuzz</p></li>
-<li><p>run check-shlibs to see that all binaries will
-		find their shared libs.</p></li>
+<li><p>make sure patches apply with zero
+	      fuzz</p></li>
+<li><p>run check-shlibs to see that all
+	      binaries will find their shared libs.</p></li>
 </ul></div>
 <p>
 	</p>
 </li>
-<li><p><code class="varname">PKG_DEBUG_LEVEL</code>:
-	    The level of debugging output which is displayed whilst
-	    making and installing the package.
-	    The default value for this is 0, which will not display
-	    the commands as they are executed (normal, default, quiet
-	    operation); the value 1 will display all shell commands
-	    before their invocation, and the value 2 will display both
-	    the shell commands before their invocation, and their
-	    actual execution progress with <span><strong class="command">set -x</strong></span>
-	    will be displayed.</p></li>
+<li><p><code class="varname">PKG_DEBUG_LEVEL</code>: The level
+	of debugging output which is displayed whilst making and
+	installing the package.  The default value for this is 0,
+	which will not display the commands as they are executed
+	(normal, default, quiet operation); the value 1 will display
+	all shell commands before their invocation, and the value 2
+	will display both the shell commands before their invocation,
+	and their actual execution progress with <span><strong class="command">set
+	-x</strong></span> will be displayed.</p></li>
 </ul></div>
 <p>
     </p>
@@ -2429,12 +2458,12 @@ You can now enter:
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="selecting-build-options"></a>5.5. Selecting Build Options</h2></div></div></div>
-<p>Some packages have build time options, usually to select between
-      different dependencies, enable optional support for big dependencies
-      or enable experimental features.</p>
+<p>Some packages have build time options, usually to select
+    between different dependencies, enable optional support for big
+    dependencies or enable experimental features.</p>
 <p>To see which options, if any, a package supports, and which
-      options are mutually exclusive, run <span><strong class="command">make show-options</strong></span>,
-      for example:</p>
+    options are mutually exclusive, run <span><strong class="command">make
+    show-options</strong></span>, for example:</p>
 <pre class="programlisting">
     The following options are supported by this package:
         ssl      Enable SSL support.
@@ -2449,45 +2478,48 @@ You can now enter:
     These options are currently enabled: mozilla ssl
 </pre>
 <p>The following variables can be defined in
-      <code class="filename">/etc/mk.conf</code> to select which options to enable
-      for a package: <code class="varname">PKG_DEFAULT_OPTIONS</code>, which can be
-      used to select or disable options for all packages that support them,
-      and <code class="varname">PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em></code>,
-      which can be used to select or disable options specifically for
-      package <em class="replaceable"><code>pkgbase</code></em>.  Options listed in these
-      variables are selected, options preceded by &#8220;<span class="quote">-</span>&#8221; are
-      disabled. A few examples:</p>
+    <code class="filename">/etc/mk.conf</code> to select which options to
+    enable for a package: <code class="varname">PKG_DEFAULT_OPTIONS</code>,
+    which can be used to select or disable options for all packages
+    that support them, and
+    <code class="varname">PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em></code>,
+    which can be used to select or disable options specifically for
+    package <em class="replaceable"><code>pkgbase</code></em>.  Options listed in
+    these variables are selected, options preceded by &#8220;<span class="quote">-</span>&#8221;
+    are disabled. A few examples:</p>
 <pre class="screen">
 <code class="prompt">$</code> <span><strong class="command">grep "PKG.*OPTION" /etc/mk.conf</strong></span>
 PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </pre>
-<p>The following settings are consulted in the order given, and the
-      last setting that selects or disables an option is used:</p>
+<p>The following settings are consulted in the order given, and
+    the last setting that selects or disables an option is
+    used:</p>
 <div class="orderedlist"><ol type="1">
 <li><p>the default options as suggested by the package
-	  maintainer</p></li>
+      maintainer</p></li>
 <li><p>the options implied by the settings of legacy
-	  variables (see below)</p></li>
+      variables (see below)</p></li>
 <li><p><code class="varname">PKG_DEFAULT_OPTIONS</code></p></li>
 <li><p><code class="varname">PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em></code></p></li>
 </ol></div>
 <p>For groups of mutually exclusive options, the last option
-      selected is used, all others are automatically disabled.  If an option
-      of the group is explicitly disabled, the previously selected option,
-      if any, is used.  It is an error if no option from a required group of
-      options is selected, and building the package will fail.</p>
-<p>Before the options framework was introduced, build options were
-      selected by setting a variable (often named
-      <code class="varname">USE_<em class="replaceable"><code>FOO</code></em></code>) in
-      <code class="filename">/etc/mk.conf</code> for each option.  To ease transition
-      to the options framework for the user, these legacy variables are
-      converted to the appropriate options setting
-      (<code class="varname">PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em></code>)
-      automatically.  A warning is issued to prompt the user to
-      update <code class="filename">/etc/mk.conf</code> to use the options framework
-      directly.  Support for the legacy variables will be removed
-      eventually.</p>
+    selected is used, all others are automatically disabled.  If an
+    option of the group is explicitly disabled, the previously
+    selected option, if any, is used.  It is an error if no option
+    from a required group of options is selected, and building the
+    package will fail.</p>
+<p>Before the options framework was introduced, build options
+    were selected by setting a variable (often named
+    <code class="varname">USE_<em class="replaceable"><code>FOO</code></em></code>) in
+    <code class="filename">/etc/mk.conf</code> for each option.  To ease
+    transition to the options framework for the user, these legacy
+    variables are converted to the appropriate options setting
+    (<code class="varname">PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em></code>)
+    automatically.  A warning is issued to prompt the user to update
+    <code class="filename">/etc/mk.conf</code> to use the options framework
+    directly.  Support for the legacy variables will be removed
+    eventually.</p>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -2542,7 +2574,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="settings-for-creationg-of-binary-packages"></a>6.2. Settings for creation of binary packages</h2></div></div></div>
-<p>See <a href="#build.helpful-targets" title="15.16. Other helpful targets">Section 15.16, &#8220;Other helpful targets&#8221;</a>.</p>
+<p>See <a href="#build.helpful-targets" title="15.17. Other helpful targets">Section 15.17, &#8220;Other helpful targets&#8221;</a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -3005,7 +3037,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <dt><span class="sect1"><a href="#faq.conf">7.14. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build. What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#too-much-time">7.18. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -3236,9 +3269,9 @@ transfers.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="fetching-all-distfiles"></a>7.10. How to fetch all distfiles at once</h2></div></div></div>
-<p>You would like to download all the distfiles in a single batch from
-work or university, where you can't run a <span><strong class="command">make fetch</strong></span>.
-There is an archive of distfiles on <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/" target="_top">ftp.NetBSD.org</a>,
+<p>You would like to download all the distfiles in a single batch
+from work or university, where you can't run a <span><strong class="command">make
+fetch</strong></span>.  There is an archive of distfiles on <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/" target="_top">ftp.NetBSD.org</a>,
 but downloading the entire directory may not be appropriate.</p>
 <p>The answer here is to do a <span><strong class="command">make fetch-list</strong></span> in
 <code class="filename">/usr/pkgsrc</code> or one of its subdirectories, carry the
@@ -3255,10 +3288,10 @@ URL:</p>
 <p>then tar up <code class="filename">/tmp/distfiles</code> and take it
 home.</p>
 <p>If you have a machine running NetBSD, and you want to get
-<span class="emphasis"><em>all</em></span> distfiles (even ones that aren't for your machine
-architecture), you can do so by using the above-mentioned <span><strong class="command">make
-fetch-list</strong></span> approach, or fetch the distfiles directly by
-running:</p>
+<span class="emphasis"><em>all</em></span> distfiles (even ones that aren't for your
+machine architecture), you can do so by using the above-mentioned
+<span><strong class="command">make fetch-list</strong></span> approach, or fetch the distfiles
+directly by running:</p>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>make mirror-distfiles</code></strong></pre>
 <p>If you even decide to ignore
 <code class="varname">NO_{SRC,BIN}_ON_{FTP,CDROM}</code>, then you can get everything
@@ -3387,7 +3420,7 @@ check.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ufaq-fail"></a>7.17. A package does not build. What shall I do?</h2></div></div></div>
+<a name="ufaq-fail"></a>7.17. A package does not build.  What shall I do?</h2></div></div></div>
 <div class="procedure"><ol type="1">
 <li><p>Make sure that your copy of pkgsrc is consistent. A
 	case that occurs often is that people only update pkgsrc in
@@ -3405,6 +3438,25 @@ check.</p>
 <li><p>If the problem still exists, write a mail to the
 	<code class="literal">pkgsrc-users</code> mailing list.</p></li>
 </ol></div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="too-much-time"></a>7.18. I have a little time to kill.  What shall I do?</h2></div></div></div>
+<p>This is not really an FAQ yet, but here's the answer
+  anyway.</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>Run <span><strong class="command">pkg_chk -N</strong></span> (from the
+    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a> package).  It
+    will tell you about newer versions of installed packages that are
+    available, but not yet updated in pkgsrc.</p></li>
+<li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
+    &#8212; it contains a list of suggested new packages and a list of
+    cleanups and enhancements for pkgsrc that would be nice to
+    have.</p></li>
+<li><p>Review packages for which review was requested on
+    the <a href="http://pkgsrc-wip.sourceforge.net/" target="_top">pkgsrc-wip</a> review
+    mailing list.</p></li>
+</ul></div>
 </div>
 </div>
 </div>
@@ -3527,7 +3579,8 @@ check.</p>
 <dt><span class="sect1"><a href="#build.test">15.13. The <span class="emphasis"><em>test</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.install">15.14. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.package">15.15. The <span class="emphasis"><em>package</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.helpful-targets">15.16. Other helpful targets</a></span></dt>
+<dt><span class="sect1"><a href="#build.clean">15.16. Cleaning up</a></span></dt>
+<dt><span class="sect1"><a href="#build.helpful-targets">15.17. Other helpful targets</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#tools">16. Tools needed for building or running</a></span></dt>
 <dd><dl>
@@ -3863,12 +3916,13 @@ sections.</p>
 <p>Please pay attention to the following gotchas:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>Add <code class="varname">MANCOMPRESSED</code> if man pages are
-      installed in compressed form by the package; see comment in
-      <code class="filename">bsd.pkg.mk</code>.</p></li>
+      installed in compressed form by the package.  For packages using
+      BSD-style makefiles which honor MANZ, there is
+      <code class="varname">MANCOMPRESSED_IF_MANZ</code>.</p></li>
 <li><p>Replace <code class="filename">/usr/local</code> with
-      &#8220;<span class="quote">${PREFIX}</span>&#8221; in all files (see patches, below).</p></li>
-<li><p>If the package installs any info files, see
-      <a href="#faq.info-files" title="17.6.6. Packages installing info files">Section 17.6.6, &#8220;Packages installing info files&#8221;</a>.</p></li>
+      &#8220;<span class="quote">${PREFIX}</span>&#8221; in all files (see patches,
+      below).</p></li>
+<li><p>If the package installs any info files, see <a href="#faq.info-files" title="17.6.6. Packages installing info files">Section 17.6.6, &#8220;Packages installing info files&#8221;</a>.</p></li>
 </ul></div>
 </div>
 <div class="sect1" lang="en">
@@ -4562,7 +4616,7 @@ sections.</p>
 <a name="automatic-plist-generation"></a>11.2. Semi-automatic <code class="filename">PLIST</code> generation</h2></div></div></div>
 <p>You can use the <span><strong class="command">make print-PLIST</strong></span> command
     to output a PLIST that matches any new files since the package
-    was extracted.  See <a href="#build.helpful-targets" title="15.16. Other helpful targets">Section 15.16, &#8220;Other helpful targets&#8221;</a> for
+    was extracted.  See <a href="#build.helpful-targets" title="15.17. Other helpful targets">Section 15.17, &#8220;Other helpful targets&#8221;</a> for
     more information on this target.</p>
 </div>
 <div class="sect1" lang="en">
@@ -4835,10 +4889,12 @@ sections.</p>
 	of <code class="varname">KRB5_ACCEPTED</code> to choose between
 	adding a dependency on Heimdal or MIT-krb5 for packages that
 	require a Kerberos 5 implementation.</p></li>
-<li><p><code class="filename">motif.buildlink3.mk</code> checks
-	for a system-provided
-	Motif installation or adds a dependency on <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/lesstif/README.html" target="_top"><code class="filename">x11/lesstif</code></a> or
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/openmotif/README.html" target="_top"><code class="filename">x11/openmotif</code></a>.</p></li>
+<li><p><code class="filename">motif.buildlink3.mk</code> checks for a
+	system-provided Motif installation or adds a dependency on
+	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/lesstif/README.html" target="_top"><code class="filename">x11/lesstif</code></a> or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/openmotif/README.html" target="_top"><code class="filename">x11/openmotif</code></a>.  The user can set
+	<code class="varname">MOTIF_TYPE</code> to &#8220;<span class="quote">dt</span>&#8221;,
+	&#8220;<span class="quote">lesstif</span>&#8221;, or &#8220;<span class="quote">openmotif</span>&#8221; to choose
+	which Motif version will be used.</p></li>
 <li><p><code class="filename">oss.buildlink3.mk</code> defines several
 	variables that may be used by packages that use the
 	Open Sound System (OSS) API.</p></li>
@@ -5818,7 +5874,8 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <dt><span class="sect1"><a href="#build.test">15.13. The <span class="emphasis"><em>test</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.install">15.14. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.package">15.15. The <span class="emphasis"><em>package</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.helpful-targets">15.16. Other helpful targets</a></span></dt>
+<dt><span class="sect1"><a href="#build.clean">15.16. Cleaning up</a></span></dt>
+<dt><span class="sect1"><a href="#build.helpful-targets">15.17. Other helpful targets</a></span></dt>
 </dl>
 </div>
 <div class="sect1" lang="en">
@@ -5851,36 +5908,39 @@ support.</span>&#8221; The file is sorted by option names.</p>
     where all files of the final program shall be installed. It is
     usually set to <code class="varname">LOCALBASE</code>
     (<code class="filename">/usr/pkg</code>), or <code class="varname">CROSSBASE</code>
-    for pkgs in the &#8220;<span class="quote">cross</span>&#8221; category.  The value of
+    for pkgs in the <code class="filename">cross</code> category.  The value of
     <code class="varname">PREFIX</code> needs to be put
     into the various places in the program's source where paths to
     these files are encoded.  See <a href="#components.patches" title="9.3. patches/*">Section 9.3, &#8220;patches/*&#8221;</a> and <a href="#fixes.libtool" title="17.3.1. Shared libraries - libtool">Section 17.3.1, &#8220;Shared libraries - libtool&#8221;</a> for more details.</p>
 <p>When choosing which of these variables to use,
     follow the following rules:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><code class="varname">PREFIX</code> always points to the location where the current
-	pkg will be installed.  When referring to a pkg's own installation path,
-	use &#8220;<span class="quote">${PREFIX}</span>&#8221;.</p></li>
-<li><p><code class="varname">LOCALBASE</code> is where all non-X11 pkgs are installed.
-	If you need to construct a -I or -L argument to the compiler to find
-	includes and libraries installed by another non-X11 pkg, use
-	&#8220;<span class="quote">${LOCALBASE}</span>&#8221;. The name
+<li><p><code class="varname">PREFIX</code> always points to the location
+	where the current pkg will be installed.  When referring to a
+	pkg's own installation path, use
+	&#8220;<span class="quote">${PREFIX}</span>&#8221;.</p></li>
+<li><p><code class="varname">LOCALBASE</code> is where all non-X11 pkgs
+	are installed.  If you need to construct a -I or -L argument
+	to the compiler to find includes and libraries installed by
+	another non-X11 pkg, use &#8220;<span class="quote">${LOCALBASE}</span>&#8221;. The name
 	<code class="varname">LOCALBASE</code> stems from FreeBSD, which
 	installed all packages in <code class="filename">/usr/local</code>. As
 	pkgsrc leaves <code class="filename">/usr/local</code> for the system
 	administrator, this variable is a misnomer.</p></li>
-<li><p><code class="varname">X11BASE</code> is where the actual X11 distribution (from
-	xsrc, etc.) is installed. When looking for
-	<span class="emphasis"><em>standard</em></span> X11 includes (not
-	those installed by a pkg), use &#8220;<span class="quote">${X11BASE}</span>&#8221;.</p></li>
+<li><p><code class="varname">X11BASE</code> is where the actual X11
+	distribution (from xsrc, etc.) is installed. When looking for
+	<span class="emphasis"><em>standard</em></span> X11 includes (not those
+	installed by a package), use &#8220;<span class="quote">${X11BASE}</span>&#8221;.</p></li>
 <li>
-<p>X11-based packages are special in that they may be installed in
-	either <code class="varname">X11BASE</code> or <code class="varname">LOCALBASE</code>.</p>
+<p>X11-based packages are special in that they may be
+	installed in either <code class="varname">X11BASE</code> or
+	<code class="varname">LOCALBASE</code>.</p>
 <p>Usually, X11 packages should be installed under
-	<code class="varname">LOCALBASE</code> whenever possible.  Note that you will
-	need to include <code class="filename">../../mk/x11.buildlink3.mk</code>
-	in them to request the
-	presence of X11 and to get the right compilation flags.</p>
+	<code class="varname">LOCALBASE</code> whenever possible.  Note that you
+	will need to include
+	<code class="filename">../../mk/x11.buildlink3.mk</code> in them to
+	request the presence of X11 and to get the right compilation
+	flags.</p>
 <p>Even though, there are some packages that cannot be installed
 	under <code class="varname">LOCALBASE</code>: those that come with app-defaults
 	files. These packages are special and they must be placed under
@@ -5897,19 +5957,23 @@ support.</span>&#8221; The file is sorted by option names.</p>
 	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/xpkgwedge/README.html" target="_top"><code class="filename">pkgtools/xpkgwedge</code></a> package
 	is enabled by default.</p>
 </li>
-<li><p><code class="varname">X11PREFIX</code> should be used to refer to the installed
-	location of an X11 package. <code class="varname">X11PREFIX</code> will be set to
-	<code class="varname">X11BASE</code> if xpkgwedge is not installed,
-	and to <code class="varname">LOCALBASE</code> if xpkgwedge is installed.</p></li>
+<li><p><code class="varname">X11PREFIX</code> should be used to refer to
+	the installed location of an X11
+	package. <code class="varname">X11PREFIX</code> will be set to
+	<code class="varname">X11BASE</code> if xpkgwedge is not installed, and
+	to <code class="varname">LOCALBASE</code> if xpkgwedge is
+	installed.</p></li>
 <li>
-<p>If xpkgwedge is installed, it is possible to have some packages installed
-	in <code class="varname">X11BASE</code> and some in <code class="varname">LOCALBASE</code>.
-	To determine the prefix of an installed package, the
-	<code class="varname">EVAL_PREFIX</code> definition can be used. It takes pairs in the
-	format &#8220;<span class="quote">DIRNAME=&lt;package&gt;</span>&#8221;, and the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable
-	<code class="varname">DIRNAME</code> will be set to the prefix of the installed
-	package &lt;package&gt;, or &#8220;<span class="quote">${X11PREFIX}</span>&#8221; if the package is
-	not installed.</p>
+<p>If xpkgwedge is installed, it is possible to have some
+	packages installed in <code class="varname">X11BASE</code> and some in
+	<code class="varname">LOCALBASE</code>.  To determine the prefix of an
+	installed package, the <code class="varname">EVAL_PREFIX</code>
+	definition can be used. It takes pairs in the format
+	&#8220;<span class="quote">DIRNAME=&lt;package&gt;</span>&#8221;, and the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+	variable <code class="varname">DIRNAME</code> will be set to the prefix
+	of the installed package &lt;package&gt;, or
+	&#8220;<span class="quote">${X11PREFIX}</span>&#8221; if the package is not
+	installed.</p>
 <p>This is best illustrated by example.</p>
 <p>The following lines are taken from
 	<code class="filename">pkgsrc/wm/scwm/Makefile</code>:</p>
@@ -5919,8 +5983,9 @@ support.</span>&#8221; The file is sorted by option names.</p>
 	  CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
 	  CONFIGURE_ARGS+=        --enable-multibyte
 	</pre>
-<p>Specific defaults can be defined for the packages evaluated using
-	<code class="varname">EVAL_PREFIX</code>, by using a definition of the form:</p>
+<p>Specific defaults can be defined for the packages
+	evaluated using <code class="varname">EVAL_PREFIX</code>, by using a
+	definition of the form:</p>
 <pre class="programlisting">
 	  GTKDIR_DEFAULT= ${LOCALBASE}
 	</pre>
@@ -5982,297 +6047,311 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.fetch"></a>15.5. The <span class="emphasis"><em>fetch</em></span> phase</h2></div></div></div>
 <p>The first step in building a package is to fetch the
-	distribution files (distfiles) from the sites that are providing
-	them. This is the task of the <span class="emphasis"><em>fetch</em></span>
-	phase.</p>
+    distribution files (distfiles) from the sites that are providing
+    them. This is the task of the <span class="emphasis"><em>fetch</em></span>
+    phase.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="build.fetch.what"></a>15.5.1. What to fetch and where to get it from</h3></div></div></div>
-<p>In simple cases, <code class="varname">MASTER_SITES</code> defines
-	all URLs from where the distfile, whose name is derived from the
-	<code class="varname">DISTNAME</code> variable, is fetched. The more
-	complicated cases are described below.</p>
-<p>The variable <code class="varname">DISTFILES</code> specifies the
-	list of distfiles that have to be fetched. Its value defaults to
-	<code class="literal">${DISTNAME}${EXTRACT_SUFX}</code>, so that most
-	packages don't need to define it at all.
-	<code class="varname">EXTRACT_SUFX</code> is <code class="literal">.tar.gz</code> by
-	default, but can be changed freely. Note that if your package
-	requires additional distfiles to the default one, you cannot
-	just append the additional filenames using the
-	<code class="literal">+=</code> operator, but you have write for
-	example:</p>
+<p>In simple cases, <code class="varname">MASTER_SITES</code>
+      defines all URLs from where the distfile, whose name is
+      derived from the <code class="varname">DISTNAME</code> variable, is
+      fetched. The more complicated cases are described
+      below.</p>
+<p>The variable <code class="varname">DISTFILES</code> specifies
+      the list of distfiles that have to be fetched. Its value
+      defaults to <code class="literal">${DISTNAME}${EXTRACT_SUFX}</code>,
+      so that most packages don't need to define it at all.
+      <code class="varname">EXTRACT_SUFX</code> is
+      <code class="literal">.tar.gz</code> by default, but can be changed
+      freely. Note that if your package requires additional
+      distfiles to the default one, you cannot just append the
+      additional filenames using the <code class="literal">+=</code>
+      operator, but you have write for example:</p>
 <pre class="programlisting">
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
-</pre>
-<p>Each of the distfiles is fetched from a list of sites,
-	usually <code class="varname">MASTER_SITES</code>. If the package has
-	multiple <code class="varname">DISTFILES</code> or multiple
-	<code class="varname">PATCHFILES</code> from different sites, you can set
-	<code class="varname">SITES.<em class="replaceable"><code>distfile</code></em></code> to
-	the list of URLs where the file
-	<code class="filename"><em class="replaceable"><code>distfile</code></em></code>
-	(including the suffix) can be found.</p>
+	DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+      </pre>
+<p>Each distfile is fetched from a list of sites, usually
+      <code class="varname">MASTER_SITES</code>. If the package has multiple
+      <code class="varname">DISTFILES</code> or multiple
+      <code class="varname">PATCHFILES</code> from different sites, you can
+      set
+      <code class="varname">SITES.<em class="replaceable"><code>distfile</code></em></code>
+      to the list of URLs where the file
+      <code class="filename"><em class="replaceable"><code>distfile</code></em></code>
+      (including the suffix) can be found.</p>
 <pre class="programlisting">
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-    DISTFILES+=     foo-file.tar.gz
-    SITES.foo-file.tar.gz= \
-            http://www.somewhere.com/somehow/ \
-            http://www.somewhereelse.com/mirror/somehow/
-</pre>
+	DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+	DISTFILES+=     foo-file.tar.gz
+	SITES.foo-file.tar.gz= \
+	http://www.somewhere.com/somehow/ \
+	http://www.somewhereelse.com/mirror/somehow/
+      </pre>
 <p>When actually fetching the distfiles, each item from
-	<code class="varname">MASTER_SITES</code> or <code class="varname">SITES.*</code>
-	gets the name of each distfile appended to it, without an
-	intermediate slash. Therefore, all site values have to end with
-	a slash or other separator character. This allows for example to
-	set <code class="varname">MASTER_SITES</code> to a URL of a CGI script
-	that gets the name of the distfile as a parameter. In this case,
-	the definition would look like:</p>
+      <code class="varname">MASTER_SITES</code> or
+      <code class="varname">SITES.*</code> gets the name of each distfile
+      appended to it, without an intermediate slash. Therefore,
+      all site values have to end with a slash or other separator
+      character. This allows for example to set
+      <code class="varname">MASTER_SITES</code> to a URL of a CGI script
+      that gets the name of the distfile as a parameter. In this
+      case, the definition would look like:</p>
 <pre class="programlisting">
-    MASTER_SITES=   http://www.example.com/download.cgi?file=
-</pre>
+	MASTER_SITES=   http://www.example.com/download.cgi?file=
+      </pre>
 <p>There are some predefined values for
-	<code class="varname">MASTER_SITES</code>, which can be used in packages.
-	The names of the variables should speak for themselves.</p>
+      <code class="varname">MASTER_SITES</code>, which can be used in
+      packages.  The names of the variables should speak for
+      themselves.</p>
 <pre class="programlisting">
-    ${MASTER_SITE_APACHE}
-    ${MASTER_SITE_BACKUP}
-    ${MASTER_SITE_CYGWIN}
-    ${MASTER_SITE_DEBIAN}
-    ${MASTER_SITE_FREEBSD}
-    ${MASTER_SITE_FREEBSD_LOCAL}
-    ${MASTER_SITE_GNOME}
-    ${MASTER_SITE_GNU}
-    ${MASTER_SITE_GNUSTEP}
-    ${MASTER_SITE_IFARCHIVE}
-    ${MASTER_SITE_KDE}
-    ${MASTER_SITE_MOZILLA}
-    ${MASTER_SITE_MYSQL}
-    ${MASTER_SITE_OPENOFFICE}
-    ${MASTER_SITE_PERL_CPAN}
-    ${MASTER_SITE_PGSQL}
-    ${MASTER_SITE_R_CRAN}
-    ${MASTER_SITE_SOURCEFORGE}
-    ${MASTER_SITE_SOURCEFORGE_JP}
-    ${MASTER_SITE_SUNSITE}
-    ${MASTER_SITE_SUSE}
-    ${MASTER_SITE_TEX_CTAN}
-    ${MASTER_SITE_XCONTRIB}
-    ${MASTER_SITE_XEMACS}
-</pre>
-<p>If you choose one of these predefined sites, you may want
-	to specify a subdirectory of that site. Since these macros may
-	expand to more than one actual site, you
-	<span class="emphasis"><em>must</em></span> use the following construct to specify
-	a subdirectory:</p>
+	${MASTER_SITE_APACHE}
+	${MASTER_SITE_BACKUP}
+	${MASTER_SITE_CYGWIN}
+	${MASTER_SITE_DEBIAN}
+	${MASTER_SITE_FREEBSD}
+	${MASTER_SITE_FREEBSD_LOCAL}
+	${MASTER_SITE_GNOME}
+	${MASTER_SITE_GNU}
+	${MASTER_SITE_GNUSTEP}
+	${MASTER_SITE_IFARCHIVE}
+	${MASTER_SITE_KDE}
+	${MASTER_SITE_MOZILLA}
+	${MASTER_SITE_MYSQL}
+	${MASTER_SITE_OPENOFFICE}
+	${MASTER_SITE_PERL_CPAN}
+	${MASTER_SITE_PGSQL}
+	${MASTER_SITE_R_CRAN}
+	${MASTER_SITE_SOURCEFORGE}
+	${MASTER_SITE_SOURCEFORGE_JP}
+	${MASTER_SITE_SUNSITE}
+	${MASTER_SITE_SUSE}
+	${MASTER_SITE_TEX_CTAN}
+	${MASTER_SITE_XCONTRIB}
+	${MASTER_SITE_XEMACS}
+      </pre>
+<p>Some explanations for the less self-explaining ones:
+      <code class="varname">MASTER_SITE_BACKUP</code> contains backup sites
+      for packages that are maintained in <a href="ftp://ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/%24%7BDIST_SUBDIR%7D" target="_top">ftp://ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}</a>.  <code class="varname">MASTER_SITE_LOCAL</code> contains local
+      package source distributions that are maintained in <a href="ftp://ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/LOCAL_PORTS/" target="_top">ftp://ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/LOCAL_PORTS/</a>.</p>
+<p>If you choose one of these predefined sites, you may
+      want to specify a subdirectory of that site. Since these
+      macros may expand to more than one actual site, you
+      <span class="emphasis"><em>must</em></span> use the following construct to
+      specify a subdirectory:</p>
 <pre class="programlisting">
-    MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
-    MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
-</pre>
+	MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
+	MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+      </pre>
 <p>Note the trailing slash after the subdirectory
-	name.</p>
+      name.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="build.fetch.how"></a>15.5.2. How are the files fetched?</h3></div></div></div>
-<p>The <span class="emphasis"><em>fetch</em></span> phase makes sure that all
-	the distfiles exist in a local directory
-	(<code class="varname">DISTDIR</code>), which can be set by the pkgsrc
-	user). If the files do not exist, they are fetched using
-	commands of the form
-
-</p>
+<p>The <span class="emphasis"><em>fetch</em></span> phase makes sure that
+      all the distfiles exist in a local directory
+      (<code class="varname">DISTDIR</code>), which can be set by the pkgsrc
+      user). If the files do not exist, they are fetched using
+      commands of the form</p>
 <pre class="programlisting">
-    ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
-</pre>
-<p>
-
-	where <code class="literal">${site}</code> varies through several
-	possibilities in turn: first,
-	<code class="varname">MASTER_SITE_OVERRIDE</code> is tried, then the sites
-	specified in either <code class="varname">SITES.file</code> if defined,
-	else <code class="varname">MASTER_SITES</code> or
-	<code class="varname">PATCH_SITES</code>, as applies, then finally the
-	value of <code class="varname">MASTER_SITE_BACKUP</code>. The order of all
-	except the first can be optionally sorted by the user, via
-	setting either <code class="varname">MASTER_SORT_AWK</code> or
-	<code class="varname">MASTER_SORT_REGEX</code>.</p>
+	${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+      </pre>
+<p>where <code class="literal">${site}</code> varies through
+      several possibilities in turn: first,
+      <code class="varname">MASTER_SITE_OVERRIDE</code> is tried, then the
+      sites specified in either <code class="varname">SITES.file</code> if
+      defined, else <code class="varname">MASTER_SITES</code> or
+      <code class="varname">PATCH_SITES</code>, as applies, then finally the
+      value of <code class="varname">MASTER_SITE_BACKUP</code>. The order of
+      all except the first can be optionally sorted by the user,
+      via setting either <code class="varname">MASTER_SORT_AWK</code> or
+      <code class="varname">MASTER_SORT_REGEX</code>.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.checksum"></a>15.6. The <span class="emphasis"><em>checksum</em></span> phase</h2></div></div></div>
-<p>After the distfile(s) are fetched, their checksum is generated and
-	    compared with the checksums stored in the distinfo file. If the
-	    checksums don't match, the build is aborted. This is to ensure the same
-	    distfile is used for building, and that the distfile wasn't changed,
-	    e.g. by some malign force, deliberately changed distfiles on the master
-	    distribution site or network lossage.</p>
+<p>After the distfile(s) are fetched, their checksum is
+    generated and compared with the checksums stored in the
+    distinfo file. If the checksums don't match, the build is
+    aborted. This is to ensure the same distfile is used for
+    building, and that the distfile wasn't changed, e.g. by some
+    malign force, deliberately changed distfiles on the master
+    distribution site or network lossage.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.extract"></a>15.7. The <span class="emphasis"><em>extract</em></span> phase</h2></div></div></div>
 <p>When the distfiles are present on the local system, they
-	need to be extracted, as they usually come in the form of some
-	compressed archive format.</p>
+    need to be extracted, as they usually come in the form of some
+    compressed archive format.</p>
 <p>By default, all <code class="varname">DISTFILES</code> are
-	extracted. If you only need some of them, you can set the
-	<code class="varname">EXTRACT_ONLY</code> variable to the list of those
-	files.</p>
-<p>Extracting the files is usually done by a little program,
-	<code class="filename">mk/scripts/extract</code>, which already knows how
-	to extract various archive formats, so most likely you will not
-	need to change anything here. But if you need, the following
-	variables may help you:</p>
+    extracted. If you only need some of them, you can set the
+    <code class="varname">EXTRACT_ONLY</code> variable to the list of those
+    files.</p>
+<p>Extracting the files is usually done by a little
+    program, <code class="filename">mk/scripts/extract</code>, which
+    already knows how to extract various archive formats, so most
+    likely you will not need to change anything here. But if you
+    need, the following variables may help you:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">EXTRACT_OPTS_{BIN,LHA,PAX,RAR,TAR,ZIP,ZOO}</code></span></dt>
 <dd><p>Use these variables to override the default
-	options for an extract command, which are defined in
-	<code class="filename">mk/scripts/extract</code>.</p></dd>
+      options for an extract command, which are defined in
+      <code class="filename">mk/scripts/extract</code>.</p></dd>
 <dt><span class="term"><code class="varname">EXTRACT_USING</code></span></dt>
 <dd><p>This variable can be set to
-	<code class="literal">pax</code>, <code class="literal">tar</code> or an absolute
-	pathname pointing to the command with which tar archives should
-	be extracted.</p></dd>
+      <code class="literal">pax</code>, <code class="literal">tar</code> or an
+      absolute pathname pointing to the command with which tar
+      archives should be
+      extracted.</p></dd>
 </dl></div>
-<p>If the <code class="filename">extract</code> program doesn't serve
-	your needs, you can also override the
-	<code class="varname">EXTRACT_CMD</code> variable, which holds the command
-	used for extracting the files. This command is executed in the
-	<code class="filename">${WRKSRC}</code> directory. During execution of
-	this command, the shell variable <code class="varname">extract_file</code>
-	holds the absolute pathname of the file that is going to be
-	extracted.</p>
+<p>If the <code class="filename">extract</code> program doesn't
+    serve your needs, you can also override the
+    <code class="varname">EXTRACT_CMD</code> variable, which holds the
+    command used for extracting the files. This command is
+    executed in the <code class="filename">${WRKSRC}</code>
+    directory. During execution of this command, the shell
+    variable <code class="varname">extract_file</code> holds the absolute
+    pathname of the file that is going to be extracted.</p>
 <p>And if that still does not suffice, you can override the
-	<code class="varname">do-extract</code> target in the package
-	Makefile.</p>
+    <code class="varname">do-extract</code> target in the package
+    Makefile.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.patch"></a>15.8. The <span class="emphasis"><em>patch</em></span> phase</h2></div></div></div>
 <p>After extraction, all the patches named by the
-	    <code class="varname">PATCHFILES</code>, those present in the patches
-	    subdirectory of the package as well as in $LOCALPATCHES/$PKGPATH (e.g.
-	    <code class="filename">/usr/local/patches/graphics/png</code>) are applied.
-	    Patchfiles ending in <code class="filename">.Z</code> or
-	    <code class="filename">.gz</code> are uncompressed before they are applied,
-	    files ending in <code class="filename">.orig</code> or
-	    <code class="filename">.rej</code> are ignored. Any special options to <a href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a>
-	    can be handed in <code class="varname">PATCH_DIST_ARGS</code>.
-	    See <a href="#components.patches" title="9.3. patches/*">Section 9.3, &#8220;patches/*&#8221;</a> for more details.</p>
-<p>By default <a href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special args to make it fail if the
-	    patches apply with some lines of fuzz. Please fix (regen) the patches
-	    so that they apply cleanly. The rationale behind this is that
-	    patches that don't apply cleanly may end up being applied in the wrong
-	    place, and cause severe harm there.</p>
+    <code class="varname">PATCHFILES</code>, those present in the patches
+    subdirectory of the package as well as in
+    $LOCALPATCHES/$PKGPATH (e.g.
+    <code class="filename">/usr/local/patches/graphics/png</code>) are
+    applied.  Patchfiles ending in <code class="filename">.Z</code> or
+    <code class="filename">.gz</code> are uncompressed before they are
+    applied, files ending in <code class="filename">.orig</code> or
+    <code class="filename">.rej</code> are ignored. Any special options to
+    <a href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> can be handed in
+    <code class="varname">PATCH_DIST_ARGS</code>.  See <a href="#components.patches" title="9.3. patches/*">Section 9.3, &#8220;patches/*&#8221;</a> for more details.</p>
+<p>By default <a href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special args to make
+    it fail if the patches apply with some lines of fuzz. Please
+    fix (regen) the patches so that they apply cleanly. The
+    rationale behind this is that patches that don't apply cleanly
+    may end up being applied in the wrong place, and cause severe
+    harm there.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.tools"></a>15.9. The <span class="emphasis"><em>tools</em></span> phase</h2></div></div></div>
-<p>This is covered in
-<a href="#tools" title="Chapter 16. Tools needed for building or running">Chapter 16, <i>Tools needed for building or running</i></a>.
-</p>
+<p>This is covered in <a href="#tools" title="Chapter 16. Tools needed for building or running">Chapter 16, <i>Tools needed for building or running</i></a>.
+    </p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.wrapper"></a>15.10. The <span class="emphasis"><em>wrapper</em></span> phase</h2></div></div></div>
 <p>This phase creates wrapper programs for the compilers and
-	linkers. The following variables can be used to tweak the
-	wrappers.</p>
+    linkers. The following variables can be used to tweak the
+    wrappers.</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">ECHO_WRAPPER_MSG</code></span></dt>
 <dd><p>The command used to print progress
-		messages. Does nothing by default. Set to
-		<code class="literal">${ECHO}</code> to see the progress
-		messages.</p></dd>
+      messages. Does nothing by default. Set to
+      <code class="literal">${ECHO}</code> to see the progress
+      messages.</p></dd>
 <dt><span class="term"><code class="varname">WRAPPER_DEBUG</code></span></dt>
 <dd><p>This variable can be set to
-		<code class="literal">yes</code> (default) or
-		<code class="literal">no</code>, depending on whether you want
-		additional information in the wrapper log
-		file.</p></dd>
+      <code class="literal">yes</code> (default) or <code class="literal">no</code>,
+      depending on whether you want additional information in the
+      wrapper log file.</p></dd>
 <dt><span class="term"><code class="varname">WRAPPER_UPDATE_CACHE</code></span></dt>
 <dd><p>This variable can be set to
-		<code class="literal">yes</code> or <code class="literal">no</code>,
-		depending on whether the wrapper should use its cache,
-		which will improve the speed. The default value is
-		<code class="literal">yes</code>, but is forced to
-		<code class="literal">no</code> if the platform does not support
-		it.</p></dd>
+      <code class="literal">yes</code> or <code class="literal">no</code>, depending
+      on whether the wrapper should use its cache, which will
+      improve the speed. The default value is
+      <code class="literal">yes</code>, but is forced to
+      <code class="literal">no</code> if the platform does not support
+      it.</p></dd>
 <dt><span class="term"><code class="varname">WRAPPER_REORDER_CMDS</code></span></dt>
-<dd><p>A list of reordering commands. A
-		reordering command has the form
-		<code class="literal">reorder:l:<em class="replaceable"><code>lib1</code></em>:<em class="replaceable"><code>lib2</code></em></code>.
-		It ensures that that
-		<code class="literal">-l<em class="replaceable"><code>lib1</code></em></code>
-		occurs before
-		<code class="literal">-l<em class="replaceable"><code>lib2</code></em></code>.
-		</p></dd>
+<dd><p>A list of reordering commands. A reordering
+      command has the form
+      <code class="literal">reorder:l:<em class="replaceable"><code>lib1</code></em>:<em class="replaceable"><code>lib2</code></em></code>.
+      It ensures that that
+      <code class="literal">-l<em class="replaceable"><code>lib1</code></em></code> occurs
+      before <code class="literal">-l<em class="replaceable"><code>lib2</code></em></code>.
+      </p></dd>
 <dt><span class="term"><code class="varname">WRAPPER_TRANSFORM_CMDS</code></span></dt>
 <dd><p>A list of transformation commands. [TODO:
-		investigate further]</p></dd>
+      investigate further]</p></dd>
 </dl></div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.configure"></a>15.11. The <span class="emphasis"><em>configure</em></span> phase</h2></div></div></div>
-<p>Most pieces of software need information on the header files,
-system calls, and library routines which are available on the platform
-they run on. The process of determining this information is known as
-configuration, and is usually automated. In most cases, a script is
-supplied with the distfiles, and its invocation results in generation of
-header files, Makefiles, etc.</p>
-<p>If the package contains a configure script, this can be invoked by
-setting <code class="varname">HAS_CONFIGURE</code> to &#8220;<span class="quote">yes</span>&#8221;. If the
-configure script is a GNU autoconf script, you should set
-<code class="varname">GNU_CONFIGURE</code> to &#8220;<span class="quote">yes</span>&#8221; instead. What
-happens in the <span class="emphasis"><em>configure</em></span> phase is roughly:</p>
+<p>Most pieces of software need information on the header
+    files, system calls, and library routines which are available
+    on the platform they run on. The process of determining this
+    information is known as configuration, and is usually
+    automated. In most cases, a script is supplied with the
+    distfiles, and its invocation results in generation of header
+    files, Makefiles, etc.</p>
+<p>If the package contains a configure script, this can be
+    invoked by setting <code class="varname">HAS_CONFIGURE</code> to
+    &#8220;<span class="quote">yes</span>&#8221;. If the configure script is a GNU autoconf
+    script, you should set <code class="varname">GNU_CONFIGURE</code> to
+    &#8220;<span class="quote">yes</span>&#8221; instead. What happens in the
+    <span class="emphasis"><em>configure</em></span> phase is roughly:</p>
 <pre class="programlisting">
-    .for d in ${CONFIGURE_DIRS}
-            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${CONFIGURE_ENV} \
-                ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-    .endfor
-</pre>
-<p><code class="varname">CONFIGURE_DIRS</code> (default: &#8220;<span class="quote">.</span>&#8221;) is a
-list of pathnames relative to <code class="varname">WRKSRC</code>. In each of
-these directories, the configure script is run with the environment
-<code class="varname">CONFIGURE_ENV</code> and arguments
-<code class="varname">CONFIGURE_ARGS</code>. The variables
-<code class="varname">CONFIGURE_ENV</code>, <code class="varname">CONFIGURE_SCRIPT</code>
-(default: &#8220;<span class="quote">./configure</span>&#8221;) and
-<code class="varname">CONFIGURE_ARGS</code> may all be changed by the
-package.</p>
-<p>If the program uses an <code class="filename">Imakefile</code> for
-configuration, the appropriate steps can be invoked by setting
-<code class="varname">USE_IMAKE</code> to &#8220;<span class="quote">yes</span>&#8221;. (If you only want
-the package installed in <code class="varname">${X11PREFIX}</code> but xmkmf not
-being run, set <code class="varname">USE_X11BASE</code> instead.)</p>
+      .for d in ${CONFIGURE_DIRS}
+      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${CONFIGURE_ENV} \
+      ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+      .endfor
+    </pre>
+<p><code class="varname">CONFIGURE_DIRS</code> (default:
+    &#8220;<span class="quote">.</span>&#8221;) is a list of pathnames relative to
+    <code class="varname">WRKSRC</code>. In each of these directories, the
+    configure script is run with the environment
+    <code class="varname">CONFIGURE_ENV</code> and arguments
+    <code class="varname">CONFIGURE_ARGS</code>. The variables
+    <code class="varname">CONFIGURE_ENV</code>,
+    <code class="varname">CONFIGURE_SCRIPT</code> (default:
+    &#8220;<span class="quote">./configure</span>&#8221;) and
+    <code class="varname">CONFIGURE_ARGS</code> may all be changed by the
+    package.</p>
+<p>If the program uses an <code class="filename">Imakefile</code>
+    for configuration, the appropriate steps can be invoked by
+    setting <code class="varname">USE_IMAKE</code> to
+    &#8220;<span class="quote">yes</span>&#8221;. (If you only want the package installed in
+    <code class="varname">${X11PREFIX}</code> but xmkmf not being run, set
+    <code class="varname">USE_X11BASE</code> instead.)</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.build"></a>15.12. The <span class="emphasis"><em>build</em></span> phase</h2></div></div></div>
-<p>For building a package, a rough equivalent of the following code
-is executed.</p>
+<p>For building a package, a rough equivalent of the
+    following code is executed.</p>
 <pre class="programlisting">
-    .for d in ${BUILD_DIRS}
-            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
-                ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-                    -f ${MAKE_FILE} ${BUILD_TARGET}
-    .endfor
-</pre>
-<p><code class="varname">BUILD_DIRS</code> (default: &#8220;<span class="quote">.</span>&#8221;) is a
-list of pathnames relative to <code class="varname">WRKSRC</code>. In each of
-these directories, <code class="varname">MAKE_PROGRAM</code> is run with the
-environment <code class="varname">MAKE_ENV</code> and arguments
-<code class="varname">BUILD_MAKE_FLAGS</code>. The variables
-<code class="varname">MAKE_ENV</code>, <code class="varname">BUILD_MAKE_FLAGS</code>,
-<code class="varname">MAKE_FILE</code> and <code class="varname">BUILD_TARGET</code> may all
-be changed by the package.</p>
+      .for d in ${BUILD_DIRS}
+      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
+      ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+      -f ${MAKE_FILE} ${BUILD_TARGET}
+      .endfor
+    </pre>
+<p><code class="varname">BUILD_DIRS</code> (default:
+    &#8220;<span class="quote">.</span>&#8221;) is a list of pathnames relative to
+    <code class="varname">WRKSRC</code>. In each of these directories,
+    <code class="varname">MAKE_PROGRAM</code> is run with the environment
+    <code class="varname">MAKE_ENV</code> and arguments
+    <code class="varname">BUILD_MAKE_FLAGS</code>. The variables
+    <code class="varname">MAKE_ENV</code>,
+    <code class="varname">BUILD_MAKE_FLAGS</code>,
+    <code class="varname">MAKE_FILE</code> and
+    <code class="varname">BUILD_TARGET</code> may all be changed by the
+    package.</p>
 <p>The default value of <code class="varname">MAKE_PROGRAM</code> is
-&#8220;<span class="quote">gmake</span>&#8221; if <code class="varname">USE_TOOLS</code> contains
-&#8220;<span class="quote">gmake</span>&#8221;, &#8220;<span class="quote">make</span>&#8221; otherwise. The default value
-of <code class="varname">MAKE_FILE</code> is &#8220;<span class="quote">Makefile</span>&#8221;, and
-<code class="varname">BUILD_TARGET</code> defaults to &#8220;<span class="quote">all</span>&#8221;.</p>
+    &#8220;<span class="quote">gmake</span>&#8221; if <code class="varname">USE_TOOLS</code> contains
+    &#8220;<span class="quote">gmake</span>&#8221;, &#8220;<span class="quote">make</span>&#8221; otherwise. The
+    default value of <code class="varname">MAKE_FILE</code> is
+    &#8220;<span class="quote">Makefile</span>&#8221;, and <code class="varname">BUILD_TARGET</code>
+    defaults to &#8220;<span class="quote">all</span>&#8221;.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6283,55 +6362,66 @@ of <code class="varname">MAKE_FILE</code> is &#8220;<span class="quote">Makefile
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.install"></a>15.14. The <span class="emphasis"><em>install</em></span> phase</h2></div></div></div>
 <p>Once the build stage has completed, the final step is to
-	install the software in public directories, so users can access
-	the programs and files.</p>
+    install the software in public directories, so users can
+    access the programs and files.</p>
 <p>In the <span class="emphasis"><em>install</em></span> phase, a rough
-	equivalent of the following code is executed. Additionally,
-	before and after this code, much magic is performed to do
-	consistency checks, registering the package, and so on.</p>
+    equivalent of the following code is executed. Additionally,
+    before and after this code, much magic is performed to do
+    consistency checks, registering the package, and so on.</p>
 <pre class="programlisting">
-    .for d in ${INSTALL_DIRS}
-            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
-                ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                    -f ${MAKE_FILE} ${BUILD_TARGET}
-    .endfor
-</pre>
+      .for d in ${INSTALL_DIRS}
+      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
+      ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+      -f ${MAKE_FILE} ${BUILD_TARGET}
+      .endfor
+    </pre>
 <p>The variable's meanings are analogous to the ones in the
-	<span class="emphasis"><em>build</em></span> phase.
-	<code class="varname">INSTALL_DIRS</code> defaults to
-	<code class="varname">BUILD_DIRS</code>. <code class="varname">INSTALL_TARGET</code>
-	is &#8220;<span class="quote">install</span>&#8221; by default, plus
-	&#8220;<span class="quote">install.man</span>&#8221; if <code class="varname">USE_IMAKE</code> is
-	defined.</p>
+    <span class="emphasis"><em>build</em></span> phase.
+    <code class="varname">INSTALL_DIRS</code> defaults to
+    <code class="varname">BUILD_DIRS</code>. <code class="varname">INSTALL_TARGET</code>
+    is &#8220;<span class="quote">install</span>&#8221; by default, plus
+    &#8220;<span class="quote">install.man</span>&#8221; if <code class="varname">USE_IMAKE</code> is
+    defined and <code class="varname">NO_INSTALL_MANPAGES</code> is not
+    defined.</p>
 <p>In the <span class="emphasis"><em>install</em></span> phase, the following
-	variables are useful. They are all variations of the
-	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?install+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a> command that have the owner, group and
-	permissions preset. <code class="varname">INSTALL</code> is the plain
-	install command. The specialized variants, together with their
-	intended use, are:</p>
+    variables are useful. They are all variations of the
+    <a href="http://netbsd.gw.com/cgi-bin/man-cgi?install+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a> command that have the owner, group and
+    permissions preset. <code class="varname">INSTALL</code> is the plain
+    install command. The specialized variants, together with their
+    intended use, are:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">INSTALL_PROGRAM_DIR</code></span></dt>
-<dd><p>directories that contain binaries</p></dd>
+<dd><p>directories that contain
+      binaries</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_SCRIPT_DIR</code></span></dt>
-<dd><p>directories that contain scripts</p></dd>
+<dd><p>directories that contain
+      scripts</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_LIB_DIR</code></span></dt>
-<dd><p>directories that contain shared and static libraries</p></dd>
+<dd><p>directories that contain shared and static
+      libraries</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_DATA_DIR</code></span></dt>
-<dd><p>directories that contain data files</p></dd>
+<dd><p>directories that contain data
+      files</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_MAN_DIR</code></span></dt>
-<dd><p>directories that contain man pages</p></dd>
+<dd><p>directories that contain man
+      pages</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_PROGRAM</code></span></dt>
-<dd><p>binaries that can be stripped from debugging symbols</p></dd>
+<dd><p>binaries that can be stripped from debugging
+      symbols</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_SCRIPT</code></span></dt>
-<dd><p>binaries that cannot be stripped</p></dd>
+<dd><p>binaries that cannot be
+      stripped</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_GAME</code></span></dt>
-<dd><p>game binaries</p></dd>
+<dd><p>game
+      binaries</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_LIB</code></span></dt>
-<dd><p>shared and static libraries</p></dd>
+<dd><p>shared and static
+      libraries</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_DATA</code></span></dt>
 <dd><p>data files</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_GAME_DATA</code></span></dt>
-<dd><p>data files for games</p></dd>
+<dd><p>data files for
+      games</p></dd>
 <dt><span class="term"><code class="varname">INSTALL_MAN</code></span></dt>
 <dd><p>man pages</p></dd>
 </dl></div>
@@ -6339,230 +6429,353 @@ of <code class="varname">MAKE_FILE</code> is &#8220;<span class="quote">Makefile
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">INSTALLATION_DIRS</code></span></dt>
 <dd><p>A list of directories relative to
-		<code class="varname">PREFIX</code> that are created by pkgsrc at
-		the beginning of the <span class="emphasis"><em>install</em></span> phase.
-		If this variable is set,
-		<code class="varname">NO_MTREE</code>=&#8220;<span class="quote">yes</span>&#8221; is
-		assumed, which means that the package claims to create
-		all needed directories itself before installing files to
-		it. Therefore this variable should only be set in
-		<code class="filename">Makefile</code>s that are under control of
-		the package's author. The directories are created with
-		the correct ownership, depending on their
-		name.</p></dd>
+      <code class="varname">PREFIX</code> that are created by pkgsrc at the
+      beginning of the <span class="emphasis"><em>install</em></span> phase.  If
+      this variable is set,
+      <code class="varname">NO_MTREE</code>=&#8220;<span class="quote">yes</span>&#8221; is assumed,
+      which means that the package claims to create all needed
+      directories itself before installing files to it. Therefore
+      this variable should only be set in
+      <code class="filename">Makefile</code>s that are under control of the
+      package's author. The directories are created with the
+      correct ownership, depending on their
+      name.</p></dd>
 </dl></div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.package"></a>15.15. The <span class="emphasis"><em>package</em></span> phase</h2></div></div></div>
-<p>[TODO]</p>
+<p>Once the install stage has completed, a binary package of
+    the installed files can be built.  These binary packages can be
+    used for quick installation without previous compilation, e.g. by
+    the <span><strong class="command">make bin-install</strong></span> or by using
+    <span><strong class="command">pkg_add</strong></span>.</p>
+<p>By default, the binary packages are created in
+    <code class="filename">${PACKAGES}/All</code> and symlinks are created in
+    <code class="filename">${PACKAGES}/<em class="replaceable"><code>category</code></em></code>,
+    one for each category in the <code class="varname">CATEGORIES</code>
+    variable.  <code class="varname">PACKAGES</code> defaults to
+    <code class="filename">pkgsrc/packages</code>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="build.helpful-targets"></a>15.16. Other helpful targets</h2></div></div></div>
+<a name="build.clean"></a>15.16. Cleaning up</h2></div></div></div>
+<p>Once you're finished with a package, you can clean the work
+    directory by running <span><strong class="command">make clean</strong></span>.  If you want
+    to clean the work directories of all dependencies too, use
+    <span><strong class="command">make clean-depends</strong></span>.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="build.helpful-targets"></a>15.17. Other helpful targets</h2></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term">pre/post-*</span></dt>
-<dd><p>For any of the main targets described in the previous
-	  section, two auxiliary targets exist with
+<dd><p>For any of the main targets described in the
+	  previous section, two auxiliary targets exist with
 	  &#8220;<span class="quote">pre-</span>&#8221; and &#8220;<span class="quote">post-</span>&#8221; used as a
 	  prefix for the main target's name.  These targets are
-	  invoked before and after the main target is called, allowing
-	  extra configuration or installation steps be performed from
-	  a package's Makefile, for example, which a program's
-	  configure script or install target omitted.</p></dd>
+	  invoked before and after the main target is called,
+	  allowing extra configuration or installation steps be
+	  performed from a package's Makefile, for example, which
+	  a program's configure script or install target
+	  omitted.</p></dd>
 <dt><span class="term">do-*</span></dt>
-<dd><p>Should one of the main targets do the wrong thing, and
-	  should there be no variable to fix this, you can redefine it
-	  with the do-* target.  (Note that redefining the target
-	  itself instead of the do-* target is a bad idea, as the
-	  pre-* and post-* targets won't be called anymore, etc.) You
-	  will not usually need to do this.</p></dd>
+<dd><p>Should one of the main targets do the wrong thing,
+	  and should there be no variable to fix this, you can
+	  redefine it with the do-* target.  (Note that redefining
+	  the target itself instead of the do-* target is a bad
+	  idea, as the pre-* and post-* targets won't be called
+	  anymore, etc.) You will not usually need to do
+	  this.</p></dd>
 <dt><span class="term">reinstall</span></dt>
-<dd><p>If you did a <span><strong class="command">make install</strong></span> and you
-	  noticed some file was not installed properly, you can repeat
-	  the installation with this target, which will ignore the
-	  &#8220;<span class="quote">already installed</span>&#8221; flag.</p></dd>
+<dd>
+<p>If you did a <span><strong class="command">make install</strong></span> and
+	  you noticed some file was not installed properly, you
+	  can repeat the installation with this target, which will
+	  ignore the &#8220;<span class="quote">already installed</span>&#8221; flag.</p>
+<p>This is the default value of
+	  <code class="varname">DEPENDS_TARGET</code> except in the case of
+	  <span><strong class="command">make update</strong></span> and <span><strong class="command">make
+	  package</strong></span>, where the defaults are
+	  &#8220;<span class="quote">package</span>&#8221; and &#8220;<span class="quote">update</span>&#8221;,
+	  respectively.</p>
+</dd>
 <dt><span class="term">deinstall</span></dt>
 <dd>
-<p>This target does a <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> in the current directory,
-	  effectively de-installing the package. The following variables can
-	  be used to tune the behaviour:</p>
+<p>This target does a <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> in the
+	  current directory, effectively de-installing the
+	  package. The following variables can be used to tune the
+	  behaviour:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">PKG_VERBOSE</code></span></dt>
 <dd><p>Add a "-v" to the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> command.</p></dd>
 <dt><span class="term"><code class="varname">DEINSTALLDEPENDS</code></span></dt>
-<dd><p>Remove all packages that require (depend on) the given package.
-		This can be used to remove any packages that may have been pulled in
-		by a given package, e.g. if <span><strong class="command">make deinstall
+<dd><p>Remove all packages that require (depend on)
+		the given package.  This can be used to remove any
+		packages that may have been pulled in by a given
+		package, e.g. if <span><strong class="command">make deinstall
 		DEINSTALLDEPENDS=1</strong></span> is done in
-		<code class="filename">pkgsrc/x11/kde</code>, this is likely to remove whole
-		KDE. Works by adding &#8220;<span class="quote">-R</span>&#8221; to the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> command line.</p></dd>
+		<code class="filename">pkgsrc/x11/kde</code>, this is
+		likely to remove whole KDE. Works by adding
+		&#8220;<span class="quote">-R</span>&#8221; to the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
+		command line.</p></dd>
 </dl></div>
 </dd>
+<dt><span class="term">bin-install</span></dt>
+<dd><p>Install a binary package from local disk and via FTP
+	  from a list of sites (see the
+	  <code class="varname">BINPKG_SITES</code> variable), and do a
+	  <span><strong class="command">make package</strong></span> if no binary package is
+	  available anywhere.  The arguments given to
+	  <span><strong class="command">pkg_add</strong></span> can be set via
+	  <code class="varname">BIN_INSTALL_FLAGS</code> e.g., to do verbose
+	  operation, etc.</p></dd>
 <dt><span class="term">update</span></dt>
 <dd>
-<p>This target causes the current package to be updated to the latest
-	  version.  The package and all depending packages first get de-installed,
-	  then current versions of the corresponding packages get compiled and
-	  installed.  This is similar to manually noting which packages are
-	  currently installed, then performing a series of <span><strong class="command">make
-	  deinstall</strong></span> and <span><strong class="command">make install</strong></span> (or whatever
-	  <code class="varname">UPDATE_TARGET</code> is set to) for these packages.</p>
-<p>You can use the &#8220;<span class="quote">update</span>&#8221; target to resume package
-	  updating in case a previous <span><strong class="command">make update</strong></span> was interrupted
-	  for some reason.  However, in this case, make sure you don't call
-	  <span><strong class="command">make clean</strong></span> or otherwise remove the list of dependent
-	  packages in <code class="varname">WRKDIR</code>.  Otherwise, you lose the
-	  ability to automatically update the current package along with the
-	  dependent packages you have installed.</p>
-<p>Resuming an interrupted <span><strong class="command">make update</strong></span> will only work as
-	  long as the package tree remains unchanged.  If the source code for
-	  one of the packages to be updated has been changed, resuming
-	  <span><strong class="command">make update</strong></span> will most certainly fail!</p>
-<p>The following variables can be used either on the command line or in
-	  <code class="filename">/etc/mk.conf</code> to alter the behaviour of
-	  <span><strong class="command">make update</strong></span>:</p>
+<p>This target causes the current package to be
+	  updated to the latest version.  The package and all
+	  depending packages first get de-installed, then current
+	  versions of the corresponding packages get compiled and
+	  installed.  This is similar to manually noting which
+	  packages are currently installed, then performing a
+	  series of <span><strong class="command">make deinstall</strong></span> and
+	  <span><strong class="command">make install</strong></span> (or whatever
+	  <code class="varname">UPDATE_TARGET</code> is set to) for these
+	  packages.</p>
+<p>You can use the &#8220;<span class="quote">update</span>&#8221; target to
+	  resume package updating in case a previous <span><strong class="command">make
+	  update</strong></span> was interrupted for some reason.
+	  However, in this case, make sure you don't call
+	  <span><strong class="command">make clean</strong></span> or otherwise remove the
+	  list of dependent packages in <code class="varname">WRKDIR</code>.
+	  Otherwise, you lose the ability to automatically update
+	  the current package along with the dependent packages
+	  you have installed.</p>
+<p>Resuming an interrupted <span><strong class="command">make
+	  update</strong></span> will only work as long as the package
+	  tree remains unchanged.  If the source code for one of
+	  the packages to be updated has been changed, resuming
+	  <span><strong class="command">make update</strong></span> will most certainly
+	  fail!</p>
+<p>The following variables can be used either on the
+	  command line or in <code class="filename">/etc/mk.conf</code> to
+	  alter the behaviour of <span><strong class="command">make
+	  update</strong></span>:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">UPDATE_TARGET</code></span></dt>
-<dd><p>Install target to recursively use for the updated package and the
-		dependent packages.  Defaults to <code class="varname">DEPENDS_TARGET</code> if set,
-		&#8220;<span class="quote">install</span>&#8221; otherwise for <span><strong class="command">make update</strong></span>.
-		e.g. <span><strong class="command">make update UPDATE_TARGET=package</strong></span></p></dd>
+<dd><p>Install target to recursively use for the
+		updated package and the dependent packages.
+		Defaults to <code class="varname">DEPENDS_TARGET</code> if
+		set, &#8220;<span class="quote">install</span>&#8221; otherwise for
+		<span><strong class="command">make update</strong></span>.  Other good
+		targets are &#8220;<span class="quote">package</span>&#8221; or
+		&#8220;<span class="quote">bin-install</span>&#8221;.  Do not set this to
+		&#8220;<span class="quote">update</span>&#8221; or you will get stuck in an
+		endless loop!</p></dd>
 <dt><span class="term"><code class="varname">NOCLEAN</code></span></dt>
-<dd><p>Don't clean up after updating.  Useful if you want to leave the
-		work sources of the updated packages around for inspection or
-		other purposes.  Be sure you eventually clean up the source
-		tree (see the &#8220;<span class="quote">clean-update</span>&#8221; target below) or you may
-		run into troubles with old source code still lying around on your
-		next <span><strong class="command">make</strong></span> or <span><strong class="command">make update</strong></span>.</p></dd>
+<dd><p>Don't clean up after updating.  Useful if
+		you want to leave the work sources of the updated
+		packages around for inspection or other purposes.
+		Be sure you eventually clean up the source tree
+		(see the &#8220;<span class="quote">clean-update</span>&#8221; target below)
+		or you may run into troubles with old source code
+		still lying around on your next
+		<span><strong class="command">make</strong></span> or <span><strong class="command">make
+		update</strong></span>.</p></dd>
 <dt><span class="term"><code class="varname">REINSTALL</code></span></dt>
-<dd><p>Deinstall each package before installing (making
-		<code class="varname">DEPENDS_TARGET</code>). This may be necessary if the
-		&#8220;<span class="quote">clean-update</span>&#8221; target (see below) was called after
-		interrupting a running <span><strong class="command">make update</strong></span>.</p></dd>
+<dd><p>Deinstall each package before installing
+		(making <code class="varname">DEPENDS_TARGET</code>). This
+		may be necessary if the
+		&#8220;<span class="quote">clean-update</span>&#8221; target (see below) was
+		called after interrupting a running <span><strong class="command">make
+		update</strong></span>.</p></dd>
 <dt><span class="term"><code class="varname">DEPENDS_TARGET</code></span></dt>
-<dd><p>Allows you to disable recursion and hardcode the target for
-		packages.  The default is &#8220;<span class="quote">update</span>&#8221; for the update target,
-		facilitating a recursive update of prerequisite packages.
-		Only set <code class="varname">DEPENDS_TARGET</code> if you want to disable
-		recursive updates. Use <code class="varname">UPDATE_TARGET</code> instead to just
-		set a specific target for each package to be installed during
-		<span><strong class="command">make update</strong></span> (see above).</p></dd>
+<dd><p>Allows you to disable recursion and hardcode
+		the target for packages.  The default is
+		&#8220;<span class="quote">update</span>&#8221; for the update target,
+		facilitating a recursive update of prerequisite
+		packages.  Only set
+		<code class="varname">DEPENDS_TARGET</code> if you want to
+		disable recursive updates. Use
+		<code class="varname">UPDATE_TARGET</code> instead to just
+		set a specific target for each package to be
+		installed during <span><strong class="command">make update</strong></span>
+		(see above).</p></dd>
 </dl></div>
 </dd>
 <dt><span class="term">clean-update</span></dt>
 <dd>
-<p>Clean the source tree for all packages that would get updated if
-	  <span><strong class="command">make update</strong></span> was called from the current directory.
-	  This target should not be used if the current package (or any of its
-	  depending packages) have already been de-installed (e.g., after calling
-	  <span><strong class="command">make update</strong></span>) or you may lose some packages you intended
-	  to update. As a rule of thumb: only use this target
-	  <span class="emphasis"><em>before</em></span> the first time you run
-	  <span><strong class="command">make update</strong></span> and only if you have a dirty package tree
-	  (e.g., if you used <code class="varname">NOCLEAN</code>).</p>
-<p>If you are unsure about whether your tree is clean, you can either
-	  perform a <span><strong class="command">make clean</strong></span> at the top of the tree, or use
-	  the following sequence of commands from the directory of the package
-	  you want to update (<span class="emphasis"><em>before</em></span> running
-	  <span><strong class="command">make update</strong></span> for the first time, otherwise you lose
-	  all the packages you wanted to update!):</p>
+<p>Clean the source tree for all packages that would
+	  get updated if <span><strong class="command">make update</strong></span> was called
+	  from the current directory.  This target should not be
+	  used if the current package (or any of its depending
+	  packages) have already been de-installed (e.g., after
+	  calling <span><strong class="command">make update</strong></span>) or you may lose
+	  some packages you intended to update. As a rule of
+	  thumb: only use this target <span class="emphasis"><em>before</em></span>
+	  the first time you run <span><strong class="command">make update</strong></span>
+	  and only if you have a dirty package tree (e.g., if you
+	  used <code class="varname">NOCLEAN</code>).</p>
+<p>If you are unsure about whether your tree is
+	  clean, you can either perform a <span><strong class="command">make
+	  clean</strong></span> at the top of the tree, or use the
+	  following sequence of commands from the directory of the
+	  package you want to update (<span class="emphasis"><em>before</em></span>
+	  running <span><strong class="command">make update</strong></span> for the first
+	  time, otherwise you lose all the packages you wanted to
+	  update!):</p>
 <pre class="screen">
 <code class="prompt">#</code> <strong class="userinput"><code>make clean-update</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>make clean CLEANDEPENDS=YES</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>make update</code></strong>
 	  </pre>
-<p>The following variables can be used either on the command line or in
-	  <code class="filename">/etc/mk.conf</code> to alter the behaviour of
-	  <span><strong class="command">make clean-update</strong></span>:</p>
+<p>The following variables can be used either on the
+	  command line or in <code class="filename">/etc/mk.conf</code> to
+	  alter the behaviour of <span><strong class="command">make
+	  clean-update</strong></span>:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">CLEAR_DIRLIST</code></span></dt>
-<dd><p>After <span><strong class="command">make clean</strong></span>, do not reconstruct the list of
-		directories to update for this package.  Only use this if <span><strong class="command">make
-		update</strong></span> successfully installed all packages you wanted to
-		update.  Normally, this is done automatically on <span><strong class="command">make
-		update</strong></span>, but may have been suppressed by the
-		<code class="varname">NOCLEAN</code> variable (see above).</p></dd>
+<dd><p>After <span><strong class="command">make clean</strong></span>, do not
+		reconstruct the list of directories to update for
+		this package.  Only use this if <span><strong class="command">make
+		update</strong></span> successfully installed all
+		packages you wanted to update.  Normally, this is
+		done automatically on <span><strong class="command">make
+		update</strong></span>, but may have been suppressed by
+		the <code class="varname">NOCLEAN</code> variable (see
+		above).</p></dd>
 </dl></div>
+</dd>
+<dt><span class="term">replace</span></dt>
+<dd>
+<p>Update the installation of the current package.  This
+	  differs from update in that it does not replace dependent
+	  packages.  You will need to install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgsrc/pkgtools/pkg_tarup/README.html" target="_top"><code class="filename">pkgsrc/pkgtools/pkg_tarup</code></a> for this
+	  target to work.</p>
+<p><span class="emphasis"><em>Be careful when using this
+	  target!</em></span> There are no guarantees that dependent
+	  packages will still work, in particular they will most
+	  certainly break if you <span><strong class="command">make replace</strong></span> a
+	  library package whose shared library major version changed
+	  between your installed version and the new one.  For this
+	  reason, this target is not officially supported and only
+	  recommended for advanced users.</p>
 </dd>
 <dt><span class="term">info</span></dt>
 <dd><p>This target invokes <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_info+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a> for the current
-	  package. You can use this to check which version of a package is
-	  installed.</p></dd>
+	  package. You can use this to check which version of a
+	  package is installed.</p></dd>
+<dt><span class="term">index</span></dt>
+<dd>
+<p>This is a top-level command, i.e. it should be used in
+	  the <code class="filename">pkgsrc</code> directory.  It creates a
+	  database of all packages in the local pkgsrc tree, including
+	  dependencies, comment, maintainer, and some other useful
+	  information.  Individual entries are created by running
+	  <span><strong class="command">make describe</strong></span> in the packages'
+	  directories.  This index file is saved as
+	  <code class="filename">pkgsrc/INDEX</code>.  It can be displayed in
+	  verbose format by running <span><strong class="command">make
+	  print-index</strong></span>.  You can search in it with
+	  <span><strong class="command">make search
+	  key=<em class="replaceable"><code>something</code></em></strong></span>.  You can
+	  extract a list of all packages that depend on a particular
+	  one by running <span><strong class="command">make show-deps
+	  PKG=<em class="replaceable"><code>somepackage</code></em></strong></span>.</p>
+<p>Running this command takes a very long time, some
+	  hours even on fast machines!</p>
+</dd>
 <dt><span class="term">readme</span></dt>
-<dd><p>This target generates a <code class="filename">README.html</code> file, which
-	    can be viewed using a browser such as
-	    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> or
-	    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/links/README.html" target="_top"><code class="filename">www/links</code></a>.
-	    The generated files contain references to any
-	    packages which are in the <code class="varname">PACKAGES</code> directory on
-	    the local host. The generated files can be made to refer to URLs based on
-	    <code class="varname">FTP_PKG_URL_HOST</code> and
-	    <code class="varname">FTP_PKG_URL_DIR</code>. For example, if I wanted to generate
-	    <code class="filename">README.html</code> files which pointed to binary packages
-	    on the local machine, in the directory
-	    <code class="filename">/usr/packages</code>, set
-	    <code class="varname">FTP_PKG_URL_HOST=file://localhost</code> and
-	    <code class="varname">FTP_PKG_URL_DIR=/usr/packages</code>. The
-	    <code class="varname">${PACKAGES}</code> directory and its subdirectories will be
-	    searched for all the binary packages.</p></dd>
+<dd>
+<p>This target generates a
+	  <code class="filename">README.html</code> file, which can be
+	  viewed using a browser such as <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/links/README.html" target="_top"><code class="filename">www/links</code></a>.  The generated files
+	  contain references to any packages which are in the
+	  <code class="varname">PACKAGES</code> directory on the local
+	  host. The generated files can be made to refer to URLs
+	  based on <code class="varname">FTP_PKG_URL_HOST</code> and
+	  <code class="varname">FTP_PKG_URL_DIR</code>. For example, if I
+	  wanted to generate <code class="filename">README.html</code>
+	  files which pointed to binary packages on the local
+	  machine, in the directory
+	  <code class="filename">/usr/packages</code>, set
+	  <code class="varname">FTP_PKG_URL_HOST=file://localhost</code> and
+	  <code class="varname">FTP_PKG_URL_DIR=/usr/packages</code>. The
+	  <code class="varname">${PACKAGES}</code> directory and its
+	  subdirectories will be searched for all the binary
+	  packages.</p>
+<p>The target can be run at the toplevel or in category
+	  directories, in which case it descends recursively.</p>
+</dd>
 <dt><span class="term">readme-all</span></dt>
-<dd><p>Use this target to create a file <code class="filename">README-all.html</code>
-	  which contains a list of all packages currently available in the NetBSD
-	  Packages Collection, together with the category they belong to and a
-	  short description. This file is compiled from the
-	  <code class="filename">pkgsrc/*/README.html</code> files, so be sure to run
-	  this <span class="emphasis"><em>after</em></span> a <span><strong class="command">make readme</strong></span>.</p></dd>
+<dd><p>This is a top-level command, run it in
+	  <code class="filename">pkgsrc</code>.  Use this target to create a
+	  file <code class="filename">README-all.html</code> which contains a
+	  list of all packages currently available in the NetBSD
+	  Packages Collection, together with the category they belong
+	  to and a short description. This file is compiled from the
+	  <code class="filename">pkgsrc/*/README.html</code> files, so be sure
+	  to run this <span class="emphasis"><em>after</em></span> a <span><strong class="command">make
+	  readme</strong></span>.</p></dd>
 <dt><span class="term">cdrom-readme</span></dt>
-<dd><p>This is very much the same as the &#8220;<span class="quote">readme</span>&#8221; target (see
-	  above), but is to be used when generating a pkgsrc tree to be written
-	  to a CD-ROM.  This target also produces
-	  <code class="filename">README.html</code> files, and can be made to refer
-	  to URLs based on <code class="varname">CDROM_PKG_URL_HOST</code> and
+<dd><p>This is very much the same as the
+	  &#8220;<span class="quote">readme</span>&#8221; target (see above), but is to be
+	  used when generating a pkgsrc tree to be written to a
+	  CD-ROM.  This target also produces
+	  <code class="filename">README.html</code> files, and can be made
+	  to refer to URLs based on
+	  <code class="varname">CDROM_PKG_URL_HOST</code> and
 	  <code class="varname">CDROM_PKG_URL_DIR</code>.</p></dd>
 <dt><span class="term">show-distfiles</span></dt>
-<dd><p>This target shows which distfiles and patchfiles are
-	  needed to build the package (<code class="varname">ALLFILES</code>,
-	  which contains all <code class="varname">DISTFILES</code> and
+<dd><p>This target shows which distfiles and patchfiles
+	  are needed to build the package
+	  (<code class="varname">ALLFILES</code>, which contains all
+	  <code class="varname">DISTFILES</code> and
 	  <code class="varname">PATCHFILES</code>, but not
 	  <code class="filename">patches/*</code>).</p></dd>
 <dt><span class="term">show-downlevel</span></dt>
-<dd><p>This target shows nothing if the package is not installed. If a version
-	  of this package is installed, but is not the version provided in this
-	  version of pkgsrc, then a warning message is displayed. This target can
-	  be used to show which of your installed packages are downlevel, and so
-	  the old versions can be deleted, and the current ones added.</p></dd>
+<dd><p>This target shows nothing if the package is not
+	  installed. If a version of this package is installed,
+	  but is not the version provided in this version of
+	  pkgsrc, then a warning message is displayed. This target
+	  can be used to show which of your installed packages are
+	  downlevel, and so the old versions can be deleted, and
+	  the current ones added.</p></dd>
 <dt><span class="term">show-pkgsrc-dir</span></dt>
-<dd><p>This target shows the directory in the pkgsrc hierarchy from which the
-	  package can be built and installed. This may not be the same directory
-	  as the one from which the package was installed. This target is intended
-	  to be used by people who may wish to upgrade many packages on a single
-	  host, and can be invoked from the top-level pkgsrc Makefile by using the
+<dd><p>This target shows the directory in the pkgsrc
+	  hierarchy from which the package can be built and
+	  installed. This may not be the same directory as the one
+	  from which the package was installed. This target is
+	  intended to be used by people who may wish to upgrade
+	  many packages on a single host, and can be invoked from
+	  the top-level pkgsrc Makefile by using the
 	  &#8220;<span class="quote">show-host-specific-pkgs</span>&#8221; target.</p></dd>
 <dt><span class="term">show-installed-depends</span></dt>
-<dd><p>This target shows which installed packages match the current package's
-	  <code class="varname">DEPENDS</code>. Useful if out of date dependencies are
-	  causing build problems.</p></dd>
+<dd><p>This target shows which installed packages match
+	  the current package's <code class="varname">DEPENDS</code>. Useful
+	  if out of date dependencies are causing build
+	  problems.</p></dd>
 <dt><span class="term">check-shlibs</span></dt>
-<dd><p>After a package is installed, check all its binaries and (on ELF
-	  platforms) shared libraries to see if they find the shared libs they need.
-	  Run by default if <code class="varname">PKG_DEVELOPER</code> is set in
+<dd><p>After a package is installed, check all its
+	  binaries and (on ELF platforms) shared libraries to see
+	  if they find the shared libs they need.  Run by default
+	  if <code class="varname">PKG_DEVELOPER</code> is set in
 	  <code class="filename">/etc/mk.conf</code>.</p></dd>
 <dt><span class="term">print-PLIST</span></dt>
 <dd>
 <p>After a &#8220;<span class="quote">make install</span>&#8221; from a new or
-	  upgraded pkg, this prints out an attempt to generate a new
-	  <code class="filename">PLIST</code> from a <span><strong class="command">find -newer
-	  work/.extract_done</strong></span>.  An attempt is made to care
-	  for shared libs etc., but it is
+	  upgraded pkg, this prints out an attempt to generate a
+	  new <code class="filename">PLIST</code> from a <span><strong class="command">find
+	  -newer work/.extract_done</strong></span>.  An attempt is made
+	  to care for shared libs etc., but it is
 	  <span class="emphasis"><em>strongly</em></span> recommended to review the
 	  result before putting it into
 	  <code class="filename">PLIST</code>. On upgrades, it's useful to
 	  diff the output of this command against an already
 	  existing <code class="filename">PLIST</code> file.</p>
-<p>If the package installs files via <a href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a> or other
-	  methods that don't update file access times, be sure to
-	  add these files manually to your
+<p>If the package installs files via <a href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a> or
+	  other methods that don't update file access times, be
+	  sure to add these files manually to your
 	  <code class="filename">PLIST</code>, as the &#8220;<span class="quote">find
 	  -newer</span>&#8221; command used by this target won't catch
 	  them!</p>
@@ -6571,32 +6784,36 @@ of <code class="varname">MAKE_FILE</code> is &#8220;<span class="quote">Makefile
 </dd>
 <dt><span class="term">bulk-package</span></dt>
 <dd>
-<p>Used to do bulk builds. If an appropriate binary package already exists,
-	  no action is taken. If not, this target will compile, install and
-	  package it (and its depends, if <code class="varname">PKG_DEPENDS</code> is
-	  set properly. See <a href="#binary.configuration" title="6.3.1. Configuration">Section 6.3.1, &#8220;Configuration&#8221;</a>).
-	  After creating the binary
-	  package, the sources, the just-installed package and its required
-	  packages are removed, preserving free disk space.</p>
-<p><span class="emphasis"><em>Beware that this target may deinstall all
-	  packages installed on a system!</em></span></p>
+<p>Used to do bulk builds. If an appropriate binary
+	  package already exists, no action is taken. If not, this
+	  target will compile, install and package it (and its
+	  depends, if <code class="varname">PKG_DEPENDS</code> is set
+	  properly. See <a href="#binary.configuration" title="6.3.1. Configuration">Section 6.3.1, &#8220;Configuration&#8221;</a>).
+	  After creating the binary package, the sources, the
+	  just-installed package and its required packages are
+	  removed, preserving free disk space.</p>
+<p><span class="emphasis"><em>Beware that this target may deinstall
+	  all packages installed on a system!</em></span></p>
 </dd>
 <dt><span class="term">bulk-install</span></dt>
 <dd>
-<p>Used during bulk-installs to install required packages. If an
-	  up-to-date binary package is available, it will be installed via
-	  <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. If not, <span><strong class="command">make bulk-package</strong></span> will be executed,
+<p>Used during bulk-installs to install required
+	  packages. If an up-to-date binary package is available,
+	  it will be installed via <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. If not,
+	  <span><strong class="command">make bulk-package</strong></span> will be executed,
 	  but the installed binary won't be removed.</p>
-<p>A binary package is considered &#8220;<span class="quote">up-to-date</span>&#8221; to be
-	  installed via <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> if:</p>
+<p>A binary package is considered
+	  &#8220;<span class="quote">up-to-date</span>&#8221; to be installed via
+	  <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> if:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p>None of the package's files (<code class="filename">Makefile</code>,
-	      ...) were modified since it was built.</p></li>
-<li><p>None of the package's required (binary) packages were
-	      modified since it was built.</p></li>
+<li><p>None of the package's files
+	      (<code class="filename">Makefile</code>, ...) were modified
+	      since it was built.</p></li>
+<li><p>None of the package's required (binary)
+	      packages were modified since it was built.</p></li>
 </ul></div>
-<p><span class="emphasis"><em>Beware that this target may deinstall all
-	  packages installed on a system!</em></span></p>
+<p><span class="emphasis"><em>Beware that this target may deinstall
+	  all packages installed on a system!</em></span></p>
 </dd>
 </dl></div>
 </div>
@@ -6799,20 +7016,22 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="user-interaction"></a>17.1.3. User interaction</h3></div></div></div>
-<p>Occasionally, packages require interaction from the user, and this can be
-    in a number of ways:</p>
+<p>Occasionally, packages require interaction from the user,
+    and this can be in a number of ways:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>When fetching the distfiles, some packages require user
 	interaction such as entering username/password or accepting a
 	license on a web page.</p></li>
-<li><p>When extracting the distfiles, some packages may ask for passwords.</p></li>
+<li><p>When extracting the distfiles, some packages may ask for
+	passwords.</p></li>
 <li><p>help to configure the package before it is built</p></li>
 <li><p>help during the build process</p></li>
 <li><p>help during the installation of a package</p></li>
 </ul></div>
-<p>The <code class="varname">INTERACTIVE_STAGE</code> definition is provided to notify
-    the pkgsrc mechanism of an interactive stage which will be needed, and
-    this should be set in the package's <code class="filename">Makefile</code>, e.g.:</p>
+<p>The <code class="varname">INTERACTIVE_STAGE</code> definition is
+    provided to notify the pkgsrc mechanism of an interactive stage
+    which will be needed, and this should be set in the package's
+    <code class="filename">Makefile</code>, e.g.:</p>
 <pre class="programlisting">
       INTERACTIVE_STAGE=      build
     </pre>
@@ -6820,6 +7039,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <pre class="programlisting">
       INTERACTIVE_STAGE=      configure install
     </pre>
+<p>The user can then decide to skip this package by setting the
+    <code class="varname">BATCH</code> variable.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -6943,14 +7164,13 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h3 class="title">
 <a name="dependencies"></a>17.1.6. Handling dependencies</h3></div></div></div>
 <p>Your package may depend on some other package being present
-    - and there are various ways of expressing this
-    dependency. pkgsrc supports the <code class="varname">BUILD_DEPENDS</code>
-    and <code class="varname">DEPENDS</code> definitions, the
-    <code class="varname">USE_TOOLS</code> definition, as well as
-    dependencies via <code class="filename">buildlink3.mk</code>, which is
-    the preferred way to handle dependencies, and which uses the
-    variables named above. See <a href="#buildlink" title="Chapter 12. Buildlink methodology">Chapter 12, <i>Buildlink methodology</i></a> for more
-    information.</p>
+    - and there are various ways of expressing this dependency.
+    pkgsrc supports the <code class="varname">BUILD_DEPENDS</code> and
+    <code class="varname">DEPENDS</code> definitions, the
+    <code class="varname">USE_TOOLS</code> definition, as well as dependencies
+    via <code class="filename">buildlink3.mk</code>, which is the preferred way
+    to handle dependencies, and which uses the variables named above.
+    See <a href="#buildlink" title="Chapter 12. Buildlink methodology">Chapter 12, <i>Buildlink methodology</i></a> for more information.</p>
 <p>The basic difference between the two variables is as
     follows: The <code class="varname">DEPENDS</code> definition registers
     that pre-requisite in the binary package so it will be pulled in
@@ -7071,22 +7291,19 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     automatically. See the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/ghostscript/README.html" target="_top"><code class="filename">print/ghostscript</code></a> package for an example.
     (It relies on the jpeg sources being present in source form
     during the build.)</p>
-<p>Please also note the <code class="varname">BUILD_USES_MSGFMT</code>
-    and <code class="varname">BUILD_USES_GETTEXT_M4</code> definitions, which
-    are provided as convenience definitions.  The former works out
-    whether <a href="http://netbsd.gw.com/cgi-bin/man-cgi?msgfmt+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">msgfmt</span>(1)</span></a> is part of the base system, and, if it isn't,
-    installs the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext/README.html" target="_top"><code class="filename">devel/gettext</code></a> package.
-    The latter adds a build dependency on either an installed
-    version of an older gettext package, or if it isn't, installs the
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext-m4/README.html" target="_top"><code class="filename">devel/gettext-m4</code></a> package.</p>
+<p>Please also note the
+    <code class="varname">BUILD_USES_GETTEXT_M4</code> definition, which is
+    provided as convenience definition.  It adds a build dependency on
+    either an installed version of an older gettext package, or if it
+    isn't, installs the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext-m4/README.html" target="_top"><code class="filename">devel/gettext-m4</code></a> package.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="conflicts"></a>17.1.7. Handling conflicts with other packages</h3></div></div></div>
 <p>Your package may conflict with other packages a user might
     already have installed on his system, e.g. if your package
-    installs the same set of files like another package in our
-    pkgsrc tree.</p>
+    installs the same set of files as another package in the pkgsrc
+    tree.</p>
 <p>In this case you can set <code class="varname">CONFLICTS</code> to a
     space-separated list of packages (including version string) your
     package conflicts with.</p>
@@ -7110,7 +7327,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h3 class="title">
 <a name="not-building-packages"></a>17.1.8. Packages that cannot or should not be built</h3></div></div></div>
 <p>There are several reasons why a package might be
-    instructed to not build under certain circumstances. If the
+    instructed to not build under certain circumstances.  If the
     package builds and runs on most platforms, the exceptions
     should be noted with <code class="varname">NOT_FOR_PLATFORM</code>.  If
     the package builds and runs on a small handful of platforms,
@@ -7119,11 +7336,19 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="varname">NOT_FOR_PLATFORM</code> are OS triples
     (OS-version-platform) that can use glob-style
     wildcards.</p>
+<p>Some packages are tightly bound to a specific version of an
+    operating system, e.g. LKMs or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/lsof/README.html" target="_top"><code class="filename">sysutils/lsof</code></a>.  Such binary packages are not
+    backwards compatible with other versions of the OS, and should be
+    uploaded to a version specific directory on the FTP server.  Mark
+    these packages by setting <code class="varname">OSVERSION_SPECIFIC</code> to
+    &#8220;<span class="quote">yes</span>&#8221;.  This variable is not currently used by any of
+    the package system internals, but may be used in the
+    future.</p>
 <p>If the package should be skipped (for example, because it
     provides functionality already provided by the system), set
-    <code class="varname">PKG_SKIP_REASON</code> to a descriptive message.
-    If the package should fail because some preconditions are not
-    met, set <code class="varname">PKG_FAIL_REASON</code> to a descriptive
+    <code class="varname">PKG_SKIP_REASON</code> to a descriptive message.  If
+    the package should fail because some preconditions are not met,
+    set <code class="varname">PKG_FAIL_REASON</code> to a descriptive
     message.</p>
 </div>
 <div class="sect2" lang="en">
@@ -8268,17 +8493,17 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
 <a name="debug"></a>Chapter 18. Debugging</h2></div></div></div>
-<p>To check out all the gotchas when building a package, here are the steps
-    that I do in order to get a package working. Please note this is basically
-    the same as what was explained in the previous sections, only with some
-    debugging aids.</p>
+<p>To check out all the gotchas when building a package, here are
+  the steps that I do in order to get a package working.  Please note
+  this is basically the same as what was explained in the previous
+  sections, only with some debugging aids.</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p>Be sure to set <code class="varname">PKG_DEVELOPER=1</code>
-	in <code class="filename">/etc/mk.conf</code></p></li>
+<li><p>Be sure to set <code class="varname">PKG_DEVELOPER=1</code> in
+      <code class="filename">/etc/mk.conf</code></p></li>
 <li>
 <p>Install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a>,
-        create a directory for a new package, change into it, then run
-        <span><strong class="command">url2pkg</strong></span>:</p>
+      create a directory for a new package, change into it, then run
+      <span><strong class="command">url2pkg</strong></span>:</p>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>mkdir /usr/pkgsrc/<em class="replaceable"><code>category</code></em>/<em class="replaceable"><code>examplepkg</code></em></code></strong>
 <code class="prompt">%</code> <strong class="userinput"><code>cd /usr/pkgsrc/<em class="replaceable"><code>category</code></em>/<em class="replaceable"><code>examplepkg</code></em></code></strong>
 <code class="prompt">%</code> <strong class="userinput"><code>url2pkg http://www.example.com/path/to/distfile.tar.gz</code></strong></pre>
@@ -8287,8 +8512,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <li><p>Fill in the <code class="filename">DESCR</code> file</p></li>
 <li><p>Run <span><strong class="command">make configure</strong></span></p></li>
 <li><p>Add any dependencies glimpsed from documentation and the
-	configure step to the package's
-	<code class="filename">Makefile</code>.</p></li>
+      configure step to the package's
+      <code class="filename">Makefile</code>.</p></li>
 <li>
 <p>Make the package compile, doing multiple rounds of</p>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>make</code></strong>
@@ -8298,15 +8523,15 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <code class="prompt">%</code> <strong class="userinput"><code>mv ${WRKDIR}/.newpatches/* patches</code></strong>
 <code class="prompt">%</code> <strong class="userinput"><code>make mps</code></strong>
 <code class="prompt">%</code> <strong class="userinput"><code>make clean</code></strong></pre>
-<p>Doing as non-root user will ensure that no files are modified that
-	shouldn't be, especially during the build
-	phase. <span><strong class="command">mkpatches</strong></span>,
-	<span><strong class="command">patchdiff</strong></span> and <span><strong class="command">pkgvi</strong></span> are
-	from the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a>
-	package.</p>
+<p>Doing this step as non-root user will ensure that no files
+      are modified that shouldn't be, especially during the build
+      phase.  <span><strong class="command">mkpatches</strong></span>,
+      <span><strong class="command">patchdiff</strong></span> and <span><strong class="command">pkgvi</strong></span> are
+      from the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a>
+      package.</p>
 </li>
-<li><p>Look at the <code class="filename">Makefile</code>, fix if necessary;
-	see <a href="#components.Makefile" title="9.1. Makefile">Section 9.1, &#8220;<code class="filename">Makefile</code>&#8221;</a>.</p></li>
+<li><p>Look at the <code class="filename">Makefile</code>, fix if
+      necessary; see <a href="#components.Makefile" title="9.1. Makefile">Section 9.1, &#8220;<code class="filename">Makefile</code>&#8221;</a>.</p></li>
 <li>
 <p>Generate a <code class="filename">PLIST</code>:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make install</code></strong>
@@ -8314,40 +8539,38 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <code class="prompt">#</code> <strong class="userinput"><code>make deinstall</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>make install</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>make deinstall</code></strong></pre>
-<p>You usually need to be <code class="username">root</code> to do this.
-	Look if there are any files left:</p>
+<p>You usually need to be <code class="username">root</code> to do
+      this.  Look if there are any files left:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make print-PLIST</code></strong></pre>
 <p>If this reveals any files that are missing in
-	<code class="filename">PLIST</code>, add them.</p>
+      <code class="filename">PLIST</code>, add them.</p>
 </li>
 <li>
-<p>Now that the <code class="filename">PLIST</code> is OK,
-	install the package again and make a binary package:</p>
+<p>Now that the <code class="filename">PLIST</code> is OK, install the
+      package again and make a binary package:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make reinstall</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>make package</code></strong></pre>
 </li>
 <li>
 <p>Delete the installed package:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_delete blub</code></strong></pre>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_delete <em class="replaceable"><code>examplepkg</code></em></code></strong></pre>
 </li>
 <li>
-<p>Repeat the above <span><strong class="command">make print-PLIST</strong></span> command,
-	which shouldn't find anything now:</p>
+<p>Repeat the above <span><strong class="command">make print-PLIST</strong></span>
+      command, which shouldn't find anything now:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make print-PLIST</code></strong></pre>
 </li>
 <li>
 <p>Reinstall the binary package:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkgadd .../blub.tgz</code></strong></pre>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkgadd .../<em class="replaceable"><code>examplepkg</code></em>.tgz</code></strong></pre>
 </li>
-<li><p>Play with it. Make sure everything works.</p></li>
+<li><p>Play with it.  Make sure everything works.</p></li>
 <li>
-<p>Run <span><strong class="command">pkglint</strong></span> from
-        <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>,
-	and fix the problems it reports:</p>
+<p>Run <span><strong class="command">pkglint</strong></span> from <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>, and fix the problems it
+      reports:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkglint</code></strong></pre>
 </li>
-<li><p>Submit (or commit, if you have cvs access);
-	see <a href="#submit" title="Chapter 19. Submitting and Committing">Chapter 19, <i>Submitting and Committing</i></a>.</p></li>
+<li><p>Submit (or commit, if you have cvs access); see <a href="#submit" title="Chapter 19. Submitting and Committing">Chapter 19, <i>Submitting and Committing</i></a>.</p></li>
 </ul></div>
 </div>
 <div class="chapter" lang="en">
@@ -8529,36 +8752,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2699100">What is the difference between
+<dt>20.1. <a href="#id2699778">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2699137">What is the difference between
+<dt>20.2. <a href="#id2699814">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2699175">What is the difference between
+<dt>20.3. <a href="#id2699852">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2699212">What is the difference between
+<dt>20.4. <a href="#id2699890">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2699230">Why does make show-var
+<dt>20.5. <a href="#id2699908">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2699258">What does
+<dt>20.6. <a href="#id2699936">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2699401">Which mailing lists are there for package
+<dt>20.7. <a href="#id2700078">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2699437">Where is the pkgsrc
+<dt>20.8. <a href="#id2700115">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -8567,7 +8790,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699100"></a><a name="id2699101"></a><b>20.1.</b>
+<a name="id2699778"></a><a name="id2699779"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8583,7 +8806,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699137"></a><a name="id2699138"></a><b>20.2.</b>
+<a name="id2699814"></a><a name="id2699815"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8601,7 +8824,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699175"></a><a name="id2699176"></a><b>20.3.</b>
+<a name="id2699852"></a><a name="id2699853"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8619,7 +8842,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699212"></a><a name="id2699213"></a><b>20.4.</b>
+<a name="id2699890"></a><a name="id2699891"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8632,7 +8855,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699230"></a><a name="id2699232"></a><b>20.5.</b>
+<a name="id2699908"></a><a name="id2699909"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8648,7 +8871,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699258"></a><a name="id2699259"></a><b>20.6.</b>
+<a name="id2699936"></a><a name="id2699937"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8672,7 +8895,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699401"></a><a name="id2699402"></a><b>20.7.</b>
+<a name="id2700078"></a><a name="id2700080"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8697,7 +8920,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699437"></a><a name="id2699438"></a><b>20.8.</b>
+<a name="id2700115"></a><a name="id2700116"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -8956,10 +9179,10 @@ followed:</p>
     using the following commands.  These will leave the full list of the
     components's distfiles into the <code class="filename">list.txt</code>
     file:</p>
-<pre class="screen"><code class="prompt">$ </code><strong class="userinput"><code>echo ls "*.tar.bz2" | \
+<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>echo ls "*.tar.bz2" | \
     ftp -V ftp://ftp.gnome.org/pub/gnome/platform/x.y/x.y.z/sources/ | \
     awk '{ print $9 }' &gt;list.txt</code></strong>
-<code class="prompt">$ </code><strong class="userinput"><code>echo ls "*.tar.bz2" | \
+<code class="prompt">%</code> <strong class="userinput"><code>echo ls "*.tar.bz2" | \
     ftp -V ftp://ftp.gnome.org/pub/gnome/desktop/x.y/x.y.z/sources/ | \
     awk '{ print $9 }' &gt;&gt;list.txt</code></strong></pre>
 </li>
@@ -8987,7 +9210,7 @@ followed:</p>
 <p>Generate a patch from the modified meta packages and extract the
     list of "new" lines.  This will provide you an outline on what
     packages need to be updated in pkgsrc and in what order:</p>
-<pre class="screen"><code class="prompt">$ </code><strong class="userinput"><code>cvs diff gnome-devel gnome-base gnome | grep '^+D' &gt;todo.txt</code></strong></pre>
+<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>cvs diff gnome-devel gnome-base gnome | grep '^+D' &gt;todo.txt</code></strong></pre>
 </li>
 <li><p>For major desktop updates it is recommended to zap all your
     installed packages and start over from scratch at this point.</p></li>
@@ -9631,7 +9854,7 @@ Requesting ftp://ftp.freebsd.org/pub/FreeBSD/distfiles//bison-1.25.tar.gz (via f
 Successfully retrieved file.</pre>
 <p>Generate the checksum of the distfile into
       <code class="filename">distinfo</code>:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make makesum</code></strong></pre>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make makedistinfo</code></strong></pre>
 <p>Now compile:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make</code></strong>
 &gt;&gt; Checksum OK for bison-1.25.tar.gz.
