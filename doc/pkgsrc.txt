@@ -37,8 +37,7 @@ Table of Contents
     1.2. Overview
     1.3. Terminology
 
-        1.3.1. Commonly used abbreviations
-        1.3.2. Roles involved in pkgsrc
+        1.3.1. Roles involved in pkgsrc
 
     1.4. Typography
 
@@ -99,6 +98,7 @@ I. The pkgsrc user's guide
         5.3. Selecting and configuring the compiler
 
             5.3.1. Additional flags to the compiler (CFLAGS)
+            5.3.2. Additional flags to the linker (LDFLAGS)
 
         5.4. Developer/advanced settings
         5.5. Selecting Build Options
@@ -142,6 +142,7 @@ I. The pkgsrc user's guide
         7.15. Automated security checks
         7.16. Why do some packages ignore my CFLAGS?
         7.17. A package does not build. What shall I do?
+        7.18. I have a little time to kill. What shall I do?
 
 II. The pkgsrc developer's guide
 
@@ -257,7 +258,8 @@ II. The pkgsrc developer's guide
         15.13. The test phase
         15.14. The install phase
         15.15. The package phase
-        15.16. Other helpful targets
+        15.16. Cleaning up
+        15.17. Other helpful targets
 
     16. Tools needed for building or running
 
@@ -437,8 +439,7 @@ Table of Contents
 1.2. Overview
 1.3. Terminology
 
-    1.3.1. Commonly used abbreviations
-    1.3.2. Roles involved in pkgsrc
+    1.3.1. Roles involved in pkgsrc
 
 1.4. Typography
 
@@ -598,13 +599,7 @@ Program
     the files in the distfile by the actions defined in the corresponding
     package.
 
-1.3.1. Commonly used abbreviations
-
-ICE
-
-    Internal Compiler Error
-
-1.3.2. Roles involved in pkgsrc
+1.3.1. Roles involved in pkgsrc
 
 pkgsrc users
 
@@ -696,6 +691,7 @@ Table of Contents
     5.3. Selecting and configuring the compiler
 
         5.3.1. Additional flags to the compiler (CFLAGS)
+        5.3.2. Additional flags to the linker (LDFLAGS)
 
     5.4. Developer/advanced settings
     5.5. Selecting Build Options
@@ -738,6 +734,7 @@ Table of Contents
     7.15. Automated security checks
     7.16. Why do some packages ignore my CFLAGS?
     7.17. A package does not build. What shall I do?
+    7.18. I have a little time to kill. What shall I do?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
@@ -1615,7 +1612,8 @@ quotes, so that the shell does not expand them before pkg_delete sees them.
 The -r option is very powerful: it removes all the packages that require the
 package in question and then removes the package itself. For example:
 
-    # pkg_delete -r jpeg
+# pkg_delete -r jpeg
+
 
 will remove jpeg and all the packages that used it; this allows upgrading the
 jpeg package.
@@ -1642,7 +1640,7 @@ if any of your installed packages are vulnerable. If a package is vulnerable,
 you will see output similar to the following:
 
 Package samba-2.0.9 has a local-root-shell vulnerability, see
-http://www.samba.org/samba/whatsnew/macroexploit.html
+    http://www.samba.org/samba/whatsnew/macroexploit.html
 
 One can set up security/audit-packages to download the vulnerabilities file
 daily, and include a package audit in the daily security script. Details on
@@ -1656,6 +1654,7 @@ your packages are up-to-date, e.g.
 % lintpkgsrc -i
 ...
 Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
+
 
 You can then use make update to update the package on your system and rebuild
 any dependencies.
@@ -1714,9 +1713,12 @@ DISTDIR=/cdrom/pkgsrc/distfiles
 to your mk.conf.
 
 You can overwrite some of the major distribution sites to fit to sites that are
-close to your own. Have a look at pkgsrc/mk/defaults/mk.conf to find some
-examples ? in particular, look for the MASTER_SORT, MASTER_SORT_REGEX and
-INET_COUNTRY definitions. This may save some of your bandwidth and time.
+close to your own. By setting one or two variables you can modify the order in
+which the master sites are accessed. MASTER_SORT contains a whitespace
+delimited list of domain suffixes. MASTER_SORT_REGEX is even more flexible, it
+contains a whitespace delimited list of regular expressions. It has higher
+priority than MASTER_SORT. Have a look at pkgsrc/mk/defaults/mk.conf to find
+some examples. This may save some of your bandwidth and time.
 
 You can change these settings either in your shell's environment, or, if you
 want to keep the settings, by editing the /etc/mk.conf file, and adding the
@@ -1748,12 +1750,14 @@ For example, type
 % cd misc/figlet
 % make
 
+
 at the shell prompt to build the various components of the package.
 
 The next stage is to actually install the newly compiled program onto your
 system. Do this by entering:
 
-    % make install
+% make install
+
 
 while you are still in the directory for whatever package you are installing.
 
@@ -1764,13 +1768,15 @@ the actual installation step.
 That's it, the software should now be installed and setup for use. You can now
 enter:
 
-    % make clean
+% make clean
+
 
 to remove the compiled files in the work directory, as you shouldn't need them
 any more. If other packages were also added to your system (dependencies) to
 allow your program to compile, you can tidy these up also with the command:
 
-    % make clean-depends
+% make clean-depends
+
 
 Taking the figlet utility as an example, we can install it on our system by
 building as shown in Appendix B, Build logs.
@@ -1873,6 +1879,7 @@ Table of Contents
 5.3. Selecting and configuring the compiler
 
     5.3.1. Additional flags to the compiler (CFLAGS)
+    5.3.2. Additional flags to the linker (LDFLAGS)
 
 5.4. Developer/advanced settings
 5.5. Selecting Build Options
@@ -1951,6 +1958,20 @@ instead of the = operator:
 Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
 cpuflags package if you're interested in optimization for the current CPU.
+
+5.3.2. Additional flags to the linker (LDFLAGS)
+
+If you want to pass flags to the linker, both in the configure step and the
+build step, you can do this in two ways. Either set LDFLAGS or LIBS. The
+difference between the two is that LIBS will be appended to the command line,
+while LDFLAGS come earlier. LDFLAGS is pre-loaded with rpath settings for ELF
+machines depending on the setting of USE_IMAKE or the inclusion of mk/
+x11.buildlink3.mk. As with CFLAGS, if you do not wish to override these
+settings, use the += operator:
+
+    LDFLAGS+=        -your -linkerflags
+
+See also Section 17.5.3, "Undefined reference to "..."".
 
 5.4. Developer/advanced settings
 
@@ -2075,7 +2096,7 @@ a binary package.
 
 6.2. Settings for creation of binary packages
 
-See Section 15.16, "Other helpful targets".
+See Section 15.17, "Other helpful targets".
 
 6.3. Doing a bulk build of all packages
 
@@ -2490,6 +2511,7 @@ Table of Contents
 7.15. Automated security checks
 7.16. Why do some packages ignore my CFLAGS?
 7.17. A package does not build. What shall I do?
+7.18. I have a little time to kill. What shall I do?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
@@ -2829,6 +2851,20 @@ they have chosen.
 
  4. If the problem still exists, write a mail to the pkgsrc-users mailing list.
 
+7.18. I have a little time to kill. What shall I do?
+
+This is not really an FAQ yet, but here's the answer anyway.
+
+  * Run pkg_chk -N (from the pkgtools/pkg_chk package). It will tell you about
+    newer versions of installed packages that are available, but not yet
+    updated in pkgsrc.
+
+  * Browse pkgsrc/doc/TODO ? it contains a list of suggested new packages and a
+    list of cleanups and enhancements for pkgsrc that would be nice to have.
+
+  * Review packages for which review was requested on the pkgsrc-wip review
+    mailing list.
+
 Part II. The pkgsrc developer's guide
 
 This part of the book deals with creating and modifying packages. It starts
@@ -2949,7 +2985,8 @@ Table of Contents
     15.13. The test phase
     15.14. The install phase
     15.15. The package phase
-    15.16. Other helpful targets
+    15.16. Cleaning up
+    15.17. Other helpful targets
 
 16. Tools needed for building or running
 
@@ -3234,7 +3271,8 @@ Other variables that affect the build:
 Please pay attention to the following gotchas:
 
   * Add MANCOMPRESSED if man pages are installed in compressed form by the
-    package; see comment in bsd.pkg.mk.
+    package. For packages using BSD-style makefiles which honor MANZ, there is
+    MANCOMPRESSED_IF_MANZ.
 
   * Replace /usr/local with "${PREFIX}" in all files (see patches, below).
 
@@ -3791,7 +3829,7 @@ Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 11.2. Semi-automatic PLIST generation
 
 You can use the make print-PLIST command to output a PLIST that matches any new
-files since the package was extracted. See Section 15.16, "Other helpful
+files since the package was extracted. See Section 15.17, "Other helpful
 targets" for more information on this target.
 
 11.3. Tweaking output of make print-PLIST
@@ -4027,7 +4065,9 @@ issues:
     implementation.
 
   * motif.buildlink3.mk checks for a system-provided Motif installation or adds
-    a dependency on x11/lesstif or x11/openmotif.
+    a dependency on x11/lesstif or x11/openmotif. The user can set MOTIF_TYPE
+    to "dt", "lesstif", or "openmotif" to choose which Motif version will be
+    used.
 
   * oss.buildlink3.mk defines several variables that may be used by packages
     that use the Open Sound System (OSS) API.
@@ -4821,7 +4861,8 @@ Table of Contents
 15.13. The test phase
 15.14. The install phase
 15.15. The package phase
-15.16. Other helpful targets
+15.16. Cleaning up
+15.17. Other helpful targets
 
 15.1. Introduction
 
@@ -4846,7 +4887,7 @@ variables influence this.
 
 The automatic variable PREFIX indicates where all files of the final program
 shall be installed. It is usually set to LOCALBASE (/usr/pkg), or CROSSBASE for
-pkgs in the "cross" category. The value of PREFIX needs to be put into the
+pkgs in the cross category. The value of PREFIX needs to be put into the
 various places in the program's source where paths to these files are encoded.
 See Section 9.3, "patches/*" and Section 17.3.1, "Shared libraries - libtool"
 for more details.
@@ -4866,7 +4907,7 @@ When choosing which of these variables to use, follow the following rules:
 
   * X11BASE is where the actual X11 distribution (from xsrc, etc.) is
     installed. When looking for standard X11 includes (not those installed by a
-    pkg), use "${X11BASE}".
+    package), use "${X11BASE}".
 
   * X11-based packages are special in that they may be installed in either
     X11BASE or LOCALBASE.
@@ -4980,18 +5021,20 @@ changed freely. Note that if your package requires additional distfiles to the
 default one, you cannot just append the additional filenames using the +=
 operator, but you have write for example:
 
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+        DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
 
-Each of the distfiles is fetched from a list of sites, usually MASTER_SITES. If
-the package has multiple DISTFILES or multiple PATCHFILES from different sites,
-you can set SITES.distfile to the list of URLs where the file distfile
-(including the suffix) can be found.
 
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-    DISTFILES+=     foo-file.tar.gz
-    SITES.foo-file.tar.gz= \
-            http://www.somewhere.com/somehow/ \
-            http://www.somewhereelse.com/mirror/somehow/
+Each distfile is fetched from a list of sites, usually MASTER_SITES. If the
+package has multiple DISTFILES or multiple PATCHFILES from different sites, you
+can set SITES.distfile to the list of URLs where the file distfile (including
+the suffix) can be found.
+
+        DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+        DISTFILES+=     foo-file.tar.gz
+        SITES.foo-file.tar.gz= \
+        http://www.somewhere.com/somehow/ \
+        http://www.somewhereelse.com/mirror/somehow/
+
 
 When actually fetching the distfiles, each item from MASTER_SITES or SITES.*
 gets the name of each distfile appended to it, without an intermediate slash.
@@ -5000,42 +5043,51 @@ character. This allows for example to set MASTER_SITES to a URL of a CGI script
 that gets the name of the distfile as a parameter. In this case, the definition
 would look like:
 
-    MASTER_SITES=   http://www.example.com/download.cgi?file=
+        MASTER_SITES=   http://www.example.com/download.cgi?file=
+
 
 There are some predefined values for MASTER_SITES, which can be used in
 packages. The names of the variables should speak for themselves.
 
-    ${MASTER_SITE_APACHE}
-    ${MASTER_SITE_BACKUP}
-    ${MASTER_SITE_CYGWIN}
-    ${MASTER_SITE_DEBIAN}
-    ${MASTER_SITE_FREEBSD}
-    ${MASTER_SITE_FREEBSD_LOCAL}
-    ${MASTER_SITE_GNOME}
-    ${MASTER_SITE_GNU}
-    ${MASTER_SITE_GNUSTEP}
-    ${MASTER_SITE_IFARCHIVE}
-    ${MASTER_SITE_KDE}
-    ${MASTER_SITE_MOZILLA}
-    ${MASTER_SITE_MYSQL}
-    ${MASTER_SITE_OPENOFFICE}
-    ${MASTER_SITE_PERL_CPAN}
-    ${MASTER_SITE_PGSQL}
-    ${MASTER_SITE_R_CRAN}
-    ${MASTER_SITE_SOURCEFORGE}
-    ${MASTER_SITE_SOURCEFORGE_JP}
-    ${MASTER_SITE_SUNSITE}
-    ${MASTER_SITE_SUSE}
-    ${MASTER_SITE_TEX_CTAN}
-    ${MASTER_SITE_XCONTRIB}
-    ${MASTER_SITE_XEMACS}
+        ${MASTER_SITE_APACHE}
+        ${MASTER_SITE_BACKUP}
+        ${MASTER_SITE_CYGWIN}
+        ${MASTER_SITE_DEBIAN}
+        ${MASTER_SITE_FREEBSD}
+        ${MASTER_SITE_FREEBSD_LOCAL}
+        ${MASTER_SITE_GNOME}
+        ${MASTER_SITE_GNU}
+        ${MASTER_SITE_GNUSTEP}
+        ${MASTER_SITE_IFARCHIVE}
+        ${MASTER_SITE_KDE}
+        ${MASTER_SITE_MOZILLA}
+        ${MASTER_SITE_MYSQL}
+        ${MASTER_SITE_OPENOFFICE}
+        ${MASTER_SITE_PERL_CPAN}
+        ${MASTER_SITE_PGSQL}
+        ${MASTER_SITE_R_CRAN}
+        ${MASTER_SITE_SOURCEFORGE}
+        ${MASTER_SITE_SOURCEFORGE_JP}
+        ${MASTER_SITE_SUNSITE}
+        ${MASTER_SITE_SUSE}
+        ${MASTER_SITE_TEX_CTAN}
+        ${MASTER_SITE_XCONTRIB}
+        ${MASTER_SITE_XEMACS}
+
+
+Some explanations for the less self-explaining ones: MASTER_SITE_BACKUP
+contains backup sites for packages that are maintained in ftp://ftp.NetBSD.org:
+/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}. MASTER_SITE_LOCAL contains local
+package source distributions that are maintained in ftp://ftp.NetBSD.org:/pub/
+NetBSD/packages/distfiles/LOCAL_PORTS/.
 
 If you choose one of these predefined sites, you may want to specify a
 subdirectory of that site. Since these macros may expand to more than one
 actual site, you must use the following construct to specify a subdirectory:
 
-    MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
-    MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+        MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
+        MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+
 
 Note the trailing slash after the subdirectory name.
 
@@ -5045,7 +5097,8 @@ The fetch phase makes sure that all the distfiles exist in a local directory
 (DISTDIR), which can be set by the pkgsrc user). If the files do not exist,
 they are fetched using commands of the form
 
-    ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+        ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+
 
 where ${site} varies through several possibilities in turn: first,
 MASTER_SITE_OVERRIDE is tried, then the sites specified in either SITES.file if
@@ -5154,10 +5207,11 @@ HAS_CONFIGURE to "yes". If the configure script is a GNU autoconf script, you
 should set GNU_CONFIGURE to "yes" instead. What happens in the configure phase
 is roughly:
 
-    .for d in ${CONFIGURE_DIRS}
-            cd ${WRKSRC} && cd ${d} && env ${CONFIGURE_ENV} \
-                ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-    .endfor
+      .for d in ${CONFIGURE_DIRS}
+      cd ${WRKSRC} && cd ${d} && env ${CONFIGURE_ENV} \
+      ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+      .endfor
+
 
 CONFIGURE_DIRS (default: ".") is a list of pathnames relative to WRKSRC. In
 each of these directories, the configure script is run with the environment
@@ -5173,11 +5227,12 @@ installed in ${X11PREFIX} but xmkmf not being run, set USE_X11BASE instead.)
 
 For building a package, a rough equivalent of the following code is executed.
 
-    .for d in ${BUILD_DIRS}
-            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
-                ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-                    -f ${MAKE_FILE} ${BUILD_TARGET}
-    .endfor
+      .for d in ${BUILD_DIRS}
+      cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+      ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+      -f ${MAKE_FILE} ${BUILD_TARGET}
+      .endfor
+
 
 BUILD_DIRS (default: ".") is a list of pathnames relative to WRKSRC. In each of
 these directories, MAKE_PROGRAM is run with the environment MAKE_ENV and
@@ -5201,15 +5256,17 @@ In the install phase, a rough equivalent of the following code is executed.
 Additionally, before and after this code, much magic is performed to do
 consistency checks, registering the package, and so on.
 
-    .for d in ${INSTALL_DIRS}
-            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
-                ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                    -f ${MAKE_FILE} ${BUILD_TARGET}
-    .endfor
+      .for d in ${INSTALL_DIRS}
+      cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+      ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+      -f ${MAKE_FILE} ${BUILD_TARGET}
+      .endfor
+
 
 The variable's meanings are analogous to the ones in the build phase.
 INSTALL_DIRS defaults to BUILD_DIRS. INSTALL_TARGET is "install" by default,
-plus "install.man" if USE_IMAKE is defined.
+plus "install.man" if USE_IMAKE is defined and NO_INSTALL_MANPAGES is not
+defined.
 
 In the install phase, the following variables are useful. They are all
 variations of the install(1) command that have the owner, group and permissions
@@ -5278,9 +5335,21 @@ INSTALLATION_DIRS
 
 15.15. The package phase
 
-[TODO]
+Once the install stage has completed, a binary package of the installed files
+can be built. These binary packages can be used for quick installation without
+previous compilation, e.g. by the make bin-install or by using pkg_add.
 
-15.16. Other helpful targets
+By default, the binary packages are created in ${PACKAGES}/All and symlinks are
+created in ${PACKAGES}/category, one for each category in the CATEGORIES
+variable. PACKAGES defaults to pkgsrc/packages.
+
+15.16. Cleaning up
+
+Once you're finished with a package, you can clean the work directory by
+running make clean. If you want to clean the work directories of all
+dependencies too, use make clean-depends.
+
+15.17. Other helpful targets
 
 pre/post-*
 
@@ -5305,6 +5374,10 @@ reinstall
     properly, you can repeat the installation with this target, which will
     ignore the "already installed" flag.
 
+    This is the default value of DEPENDS_TARGET except in the case of make
+    update and make package, where the defaults are "package" and "update",
+    respectively.
+
 deinstall
 
     This target does a pkg_delete(1) in the current directory, effectively
@@ -5322,6 +5395,13 @@ deinstall
         given package, e.g. if make deinstall DEINSTALLDEPENDS=1 is done in
         pkgsrc/x11/kde, this is likely to remove whole KDE. Works by adding
         "-R" to the pkg_delete(1) command line.
+
+bin-install
+
+    Install a binary package from local disk and via FTP from a list of sites
+    (see the BINPKG_SITES variable), and do a make package if no binary package
+    is available anywhere. The arguments given to pkg_add can be set via
+    BIN_INSTALL_FLAGS e.g., to do verbose operation, etc.
 
 update
 
@@ -5350,7 +5430,9 @@ update
 
         Install target to recursively use for the updated package and the
         dependent packages. Defaults to DEPENDS_TARGET if set, "install"
-        otherwise for make update. e.g. make update UPDATE_TARGET=package
+        otherwise for make update. Other good targets are "package" or
+        "bin-install". Do not set this to "update" or you will get stuck in an
+        endless loop!
 
     NOCLEAN
 
@@ -5407,10 +5489,37 @@ clean-update
         on make update, but may have been suppressed by the NOCLEAN variable
         (see above).
 
+replace
+
+    Update the installation of the current package. This differs from update in
+    that it does not replace dependent packages. You will need to install
+    pkgsrc/pkgtools/pkg_tarup for this target to work.
+
+    Be careful when using this target! There are no guarantees that dependent
+    packages will still work, in particular they will most certainly break if
+    you make replace a library package whose shared library major version
+    changed between your installed version and the new one. For this reason,
+    this target is not officially supported and only recommended for advanced
+    users.
+
 info
 
     This target invokes pkg_info(1) for the current package. You can use this
     to check which version of a package is installed.
+
+index
+
+    This is a top-level command, i.e. it should be used in the pkgsrc
+    directory. It creates a database of all packages in the local pkgsrc tree,
+    including dependencies, comment, maintainer, and some other useful
+    information. Individual entries are created by running make describe in the
+    packages' directories. This index file is saved as pkgsrc/INDEX. It can be
+    displayed in verbose format by running make print-index. You can search in
+    it with make search key=something. You can extract a list of all packages
+    that depend on a particular one by running make show-deps PKG=somepackage.
+
+    Running this command takes a very long time, some hours even on fast
+    machines!
 
 readme
 
@@ -5424,13 +5533,16 @@ readme
     FTP_PKG_URL_DIR=/usr/packages. The ${PACKAGES} directory and its
     subdirectories will be searched for all the binary packages.
 
+    The target can be run at the toplevel or in category directories, in which
+    case it descends recursively.
+
 readme-all
 
-    Use this target to create a file README-all.html which contains a list of
-    all packages currently available in the NetBSD Packages Collection,
-    together with the category they belong to and a short description. This
-    file is compiled from the pkgsrc/*/README.html files, so be sure to run
-    this after a make readme.
+    This is a top-level command, run it in pkgsrc. Use this target to create a
+    file README-all.html which contains a list of all packages currently
+    available in the NetBSD Packages Collection, together with the category
+    they belong to and a short description. This file is compiled from the
+    pkgsrc/*/README.html files, so be sure to run this after a make readme.
 
 cdrom-readme
 
@@ -5713,6 +5825,8 @@ Multiple interactive stages can be specified:
       INTERACTIVE_STAGE=      configure install
 
 
+The user can then decide to skip this package by setting the BATCH variable.
+
 17.1.4. Handling licenses
 
 A package may be covered by a license which the user has or has not agreed to
@@ -5925,18 +6039,16 @@ distribution files to DISTFILES, so they will be extracted automatically. See
 the print/ghostscript package for an example. (It relies on the jpeg sources
 being present in source form during the build.)
 
-Please also note the BUILD_USES_MSGFMT and BUILD_USES_GETTEXT_M4 definitions,
-which are provided as convenience definitions. The former works out whether
-msgfmt(1) is part of the base system, and, if it isn't, installs the devel/
-gettext package. The latter adds a build dependency on either an installed
+Please also note the BUILD_USES_GETTEXT_M4 definition, which is provided as
+convenience definition. It adds a build dependency on either an installed
 version of an older gettext package, or if it isn't, installs the devel/
 gettext-m4 package.
 
 17.1.7. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
-installed on his system, e.g. if your package installs the same set of files
-like another package in our pkgsrc tree.
+installed on his system, e.g. if your package installs the same set of files as
+another package in the pkgsrc tree.
 
 In this case you can set CONFLICTS to a space-separated list of packages
 (including version string) your package conflicts with.
@@ -5964,6 +6076,13 @@ exceptions should be noted with NOT_FOR_PLATFORM. If the package builds and
 runs on a small handful of platforms, set ONLY_FOR_PLATFORM instead. Both
 ONLY_FOR_PLATFORM and NOT_FOR_PLATFORM are OS triples (OS-version-platform)
 that can use glob-style wildcards.
+
+Some packages are tightly bound to a specific version of an operating system,
+e.g. LKMs or sysutils/lsof. Such binary packages are not backwards compatible
+with other versions of the OS, and should be uploaded to a version specific
+directory on the FTP server. Mark these packages by setting OSVERSION_SPECIFIC
+to "yes". This variable is not currently used by any of the package system
+internals, but may be used in the future.
 
 If the package should be skipped (for example, because it provides
 functionality already provided by the system), set PKG_SKIP_REASON to a
@@ -6884,9 +7003,9 @@ what was explained in the previous sections, only with some debugging aids.
     % make mps
     % make clean
 
-    Doing as non-root user will ensure that no files are modified that
-    shouldn't be, especially during the build phase. mkpatches, patchdiff and
-    pkgvi are from the pkgtools/pkgdiff package.
+    Doing this step as non-root user will ensure that no files are modified
+    that shouldn't be, especially during the build phase. mkpatches, patchdiff
+    and pkgvi are from the pkgtools/pkgdiff package.
 
   * Look at the Makefile, fix if necessary; see Section 9.1, "Makefile".
 
@@ -6912,7 +7031,7 @@ what was explained in the previous sections, only with some debugging aids.
 
   * Delete the installed package:
 
-    # pkg_delete blub
+    # pkg_delete examplepkg
 
   * Repeat the above make print-PLIST command, which shouldn't find anything
     now:
@@ -6921,7 +7040,7 @@ what was explained in the previous sections, only with some debugging aids.
 
   * Reinstall the binary package:
 
-    # pkgadd .../blub.tgz
+    # pkgadd .../examplepkg.tgz
 
   * Play with it. Make sure everything works.
 
@@ -7368,10 +7487,10 @@ In order to update the GNOME components in pkgsrc to a new stable release
     following commands. These will leave the full list of the components's
     distfiles into the list.txt file:
 
-    $ echo ls "*.tar.bz2" | \
+    % echo ls "*.tar.bz2" | \
         ftp -V ftp://ftp.gnome.org/pub/gnome/platform/x.y/x.y.z/sources/ | \
         awk '{ print $9 }' >list.txt
-    $ echo ls "*.tar.bz2" | \
+    % echo ls "*.tar.bz2" | \
         ftp -V ftp://ftp.gnome.org/pub/gnome/desktop/x.y/x.y.z/sources/ | \
         awk '{ print $9 }' >>list.txt
 
@@ -7396,7 +7515,7 @@ In order to update the GNOME components in pkgsrc to a new stable release
     "new" lines. This will provide you an outline on what packages need to be
     updated in pkgsrc and in what order:
 
-    $ cvs diff gnome-devel gnome-base gnome | grep '^+D' >todo.txt
+    % cvs diff gnome-devel gnome-base gnome | grep '^+D' >todo.txt
 
  5. For major desktop updates it is recommended to zap all your installed
     packages and start over from scratch at this point.
@@ -7936,7 +8055,7 @@ Successfully retrieved file.
 
 Generate the checksum of the distfile into distinfo:
 
-# make makesum
+# make makedistinfo
 
 Now compile:
 
