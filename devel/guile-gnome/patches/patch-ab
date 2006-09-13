@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/09/13 16:53:05 gdt Exp $
+
+--- gnome-vfs/gnome/gw/gnome-vfs-port.c.orig	2005-01-24 06:52:57.000000000 -0500
++++ gnome-vfs/gnome/gw/gnome-vfs-port.c
+@@ -219,7 +219,7 @@ vport_fill_input (SCM port)
+ static off_t
+ vport_seek (SCM port, off_t offset, int whence)
+ {
+-    GnomeVFSFileOffset count;
++    GnomeVFSFileSize count;
+     GnomeVFSResult res;
+     scm_t_port *pt = SCM_PTAB_ENTRY (port);
+     GnomeVFSHandle *handle = (GnomeVFSHandle*)SCM_STREAM (port);
