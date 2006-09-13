@@ -1,23 +1,23 @@
-<!-- $NetBSD: debug.xml,v 1.4 2006/09/09 23:49:43 wiz Exp $ -->
+<!-- $NetBSD: debug.xml,v 1.5 2006/09/13 23:25:14 wiz Exp $ -->
 
 <chapter id="debug">
   <title>Debugging</title>
 
-  <para>To check out all the gotchas when building a package, here are the steps
-    that I do in order to get a package working. Please note this is basically
-    the same as what was explained in the previous sections, only with some
-    debugging aids.</para>
+  <para>To check out all the gotchas when building a package, here are
+  the steps that I do in order to get a package working.  Please note
+  this is basically the same as what was explained in the previous
+  sections, only with some debugging aids.</para>
 
   <itemizedlist>
     <listitem>
-      <para>Be sure to set <varname>PKG_DEVELOPER=1</varname>
-	in <filename>/etc/mk.conf</filename></para>
+      <para>Be sure to set <varname>PKG_DEVELOPER=1</varname> in
+      <filename>/etc/mk.conf</filename></para>
     </listitem>
 
     <listitem>
       <para>Install <filename role="pkg">pkgtools/url2pkg</filename>,
-        create a directory for a new package, change into it, then run
-        <command>url2pkg</command>:</para>
+      create a directory for a new package, change into it, then run
+      <command>url2pkg</command>:</para>
 
       <screen>&cprompt; <userinput>mkdir /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
 &cprompt; <userinput>cd /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
@@ -38,8 +38,8 @@
 
     <listitem>
       <para>Add any dependencies glimpsed from documentation and the
-	configure step to the package's
-	<filename>Makefile</filename>.</para>
+      configure step to the package's
+      <filename>Makefile</filename>.</para>
     </listitem>
 
     <listitem>
@@ -53,17 +53,17 @@
 &cprompt; <userinput>make mps</userinput>
 &cprompt; <userinput>make clean</userinput></screen>
 
-      <para>Doing as non-root user will ensure that no files are modified that
-	shouldn't be, especially during the build
-	phase. <command>mkpatches</command>,
-	<command>patchdiff</command> and <command>pkgvi</command> are
-	from the <filename role="pkg">pkgtools/pkgdiff</filename>
-	package.</para>
+      <para>Doing this step as non-root user will ensure that no files
+      are modified that shouldn't be, especially during the build
+      phase.  <command>mkpatches</command>,
+      <command>patchdiff</command> and <command>pkgvi</command> are
+      from the <filename role="pkg">pkgtools/pkgdiff</filename>
+      package.</para>
     </listitem>
 
     <listitem>
-      <para>Look at the <filename>Makefile</filename>, fix if necessary;
-	see <xref linkend="components.Makefile"/>.</para>
+      <para>Look at the <filename>Makefile</filename>, fix if
+      necessary; see <xref linkend="components.Makefile"/>.</para>
     </listitem>
 
     <listitem>
@@ -75,18 +75,18 @@
 &rprompt; <userinput>make install</userinput>
 &rprompt; <userinput>make deinstall</userinput></screen>
 
-      <para>You usually need to be <username>root</username> to do this.
-	Look if there are any files left:</para>
+      <para>You usually need to be <username>root</username> to do
+      this.  Look if there are any files left:</para>
 
       <screen>&rprompt; <userinput>make print-PLIST</userinput></screen>
 
       <para>If this reveals any files that are missing in
-	<filename>PLIST</filename>, add them.</para>
+      <filename>PLIST</filename>, add them.</para>
     </listitem>
 
     <listitem>
-      <para>Now that the <filename>PLIST</filename> is OK,
-	install the package again and make a binary package:</para>
+      <para>Now that the <filename>PLIST</filename> is OK, install the
+      package again and make a binary package:</para>
 
       <screen>&rprompt; <userinput>make reinstall</userinput>
 &rprompt; <userinput>make package</userinput></screen>
@@ -95,12 +95,12 @@
     <listitem>
       <para>Delete the installed package:</para>
 
-      <screen>&rprompt; <userinput>pkg_delete blub</userinput></screen>
+      <screen>&rprompt; <userinput>pkg_delete <replaceable>examplepkg</replaceable></userinput></screen>
     </listitem>
 
     <listitem>
-      <para>Repeat the above <command>make print-PLIST</command> command,
-	which shouldn't find anything now:</para>
+      <para>Repeat the above <command>make print-PLIST</command>
+      command, which shouldn't find anything now:</para>
 
       <screen>&rprompt; <userinput>make print-PLIST</userinput></screen>
     </listitem>
@@ -108,24 +108,24 @@
     <listitem>
       <para>Reinstall the binary package:</para>
 
-      <screen>&rprompt; <userinput>pkgadd .../blub.tgz</userinput></screen>
+      <screen>&rprompt; <userinput>pkgadd .../<replaceable>examplepkg</replaceable>.tgz</userinput></screen>
     </listitem>
 
     <listitem>
-      <para>Play with it. Make sure everything works.</para>
+      <para>Play with it.  Make sure everything works.</para>
     </listitem>
 
     <listitem>
-      <para>Run <command>pkglint</command> from
-        <filename role="pkg">pkgtools/pkglint</filename>,
-	and fix the problems it reports:</para>
+      <para>Run <command>pkglint</command> from <filename
+      role="pkg">pkgtools/pkglint</filename>, and fix the problems it
+      reports:</para>
 
       <screen>&rprompt; <userinput>pkglint</userinput></screen>
     </listitem>
 
     <listitem>
-      <para>Submit (or commit, if you have cvs access);
-	see <xref linkend="submit"/>.</para>
+      <para>Submit (or commit, if you have cvs access); see <xref
+      linkend="submit"/>.</para>
     </listitem>
   </itemizedlist>
 </chapter>
