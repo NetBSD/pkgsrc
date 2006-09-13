@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/09/08 02:36:51 taca Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/09/13 12:56:46 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -41,7 +41,7 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 
 .include "replace.mk"
 
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+.if !empty(RUBY_USE_PTHREAD:M[nN][oO])
 CONFIGURE_ARGS+=	--disable-pthread
 .else
 CONFIGURE_ARGS+=	--enable-pthread
