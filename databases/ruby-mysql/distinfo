@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2006/08/07 16:13:52 taca Exp $
+$NetBSD: distinfo,v 1.9 2006/09/13 13:12:54 taca Exp $
 
 SHA1 (mysql-ruby-2.7.1.tar.gz) = 792f5dc6181bf4b718aca13798fe34ece30c9e3f
 RMD160 (mysql-ruby-2.7.1.tar.gz) = 38ca6db716e9f93e6199a04f2d0f1e7449afea8e
 Size (mysql-ruby-2.7.1.tar.gz) = 29711 bytes
 SHA1 (patch-aa) = 7134c3b1da98d89687ff4ef76d7c80cfe7ed9e4a
+SHA1 (patch-ab) = 44a551082f05dc91269a7649e597a7f426701de1
