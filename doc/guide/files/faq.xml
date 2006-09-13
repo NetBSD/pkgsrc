@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.28 2006/09/09 23:50:20 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.29 2006/09/13 23:27:31 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -378,9 +378,9 @@ transfers.</para>
 <sect1 id="fetching-all-distfiles">
 <title>How to fetch all distfiles at once</title>
 
-<para>You would like to download all the distfiles in a single batch from
-work or university, where you can't run a <command>make fetch</command>.
-There is an archive of distfiles on <ulink
+<para>You would like to download all the distfiles in a single batch
+from work or university, where you can't run a <command>make
+fetch</command>.  There is an archive of distfiles on <ulink
 url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/">ftp.NetBSD.org</ulink>,
 but downloading the entire directory may not be appropriate.</para>
 
@@ -393,30 +393,30 @@ URL:</para>
 
 <para>At home:</para>
 
-<screen><prompt>%</prompt> <userinput>cd /usr/pkgsrc</userinput>
-<prompt>%</prompt> <userinput>make fetch-list FETCH_CMD=wget DISTDIR=/tmp/distfiles >/tmp/fetch.sh</userinput>
-<prompt>%</prompt> <userinput>scp /tmp/fetch.sh work:/tmp</userinput></screen>
+<screen>&cprompt; <userinput>cd /usr/pkgsrc</userinput>
+&cprompt; <userinput>make fetch-list FETCH_CMD=wget DISTDIR=/tmp/distfiles >/tmp/fetch.sh</userinput>
+&cprompt; <userinput>scp /tmp/fetch.sh work:/tmp</userinput></screen>
 
 <para>At work:</para>
 
-<screen><prompt>%</prompt> <userinput>sh /tmp/fetch.sh</userinput></screen>
+<screen>&cprompt; <userinput>sh /tmp/fetch.sh</userinput></screen>
 
 <para>then tar up <filename>/tmp/distfiles</filename> and take it
 home.</para>
 
 <para>If you have a machine running NetBSD, and you want to get
-<emphasis>all</emphasis> distfiles (even ones that aren't for your machine
-architecture), you can do so by using the above-mentioned <command>make
-fetch-list</command> approach, or fetch the distfiles directly by
-running:</para>
+<emphasis>all</emphasis> distfiles (even ones that aren't for your
+machine architecture), you can do so by using the above-mentioned
+<command>make fetch-list</command> approach, or fetch the distfiles
+directly by running:</para>
 
-<screen><prompt>%</prompt> <userinput>make mirror-distfiles</userinput></screen>
+<screen>&cprompt; <userinput>make mirror-distfiles</userinput></screen>
 
 <para>If you even decide to ignore
 <varname>NO_{SRC,BIN}_ON_{FTP,CDROM}</varname>, then you can get everything
 by running:</para>
 
-<screen><prompt>%</prompt> <userinput>make fetch NO_SKIP=yes</userinput></screen>
+<screen>&cprompt; <userinput>make fetch NO_SKIP=yes</userinput></screen>
 
 </sect1>
 
@@ -449,8 +449,8 @@ environment or in <filename>/etc/mk.conf</filename>.</para>
 when you installed your NetBSD machine.  Please get and install it, by
 extracting it in <filename>/</filename>:</para>
 
-<screen><prompt>#</prompt> <userinput>cd /</userinput>
-<prompt>#</prompt> <userinput>tar --unlink -zxvpf .../comp.tgz</userinput></screen>
+<screen>&rprompt; <userinput>cd /</userinput>
+&rprompt; <userinput>tar --unlink -zxvpf .../comp.tgz</userinput></screen>
 
 <para><filename>comp.tgz</filename> is part of every NetBSD release.  Get
 the one that corresponds to your release (determine via <command>uname
@@ -584,7 +584,7 @@ check.</para>
 </sect1>
 
 <sect1 id="ufaq-fail">
-<title>A package does not build. What shall I do?</title>
+<title>A package does not build.  What shall I do?</title>
 
 	<procedure>
 
@@ -608,6 +608,29 @@ check.</para>
 	<literal>pkgsrc-users</literal> mailing list.</para></step>
 
 	</procedure>
-	
+</sect1>
+
+<sect1 id="too-much-time">
+  <title>I have a little time to kill.  What shall I do?</title>
+
+  <para>This is not really an FAQ yet, but here's the answer
+  anyway.</para>
+
+  <itemizedlist>
+    <listitem><para>Run <command>pkg_chk -N</command> (from the
+    <filename role="pkg">pkgtools/pkg_chk</filename> package).  It
+    will tell you about newer versions of installed packages that are
+    available, but not yet updated in pkgsrc.</para></listitem>
+
+    <listitem><para>Browse <filename>pkgsrc/doc/TODO</filename>
+    &mdash; it contains a list of suggested new packages and a list of
+    cleanups and enhancements for pkgsrc that would be nice to
+    have.</para></listitem>
+
+    <listitem><para>Review packages for which review was requested on
+    the <ulink
+    url="http://pkgsrc-wip.sourceforge.net/">pkgsrc-wip</ulink> review
+    mailing list.</para></listitem>
+  </itemizedlist>
 </sect1>
 </chapter>
