@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61.2.1 2006/07/09 21:30:57 salo Exp $
+# $NetBSD: Makefile,v 1.61.2.2 2006/09/13 14:04:35 salo Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -49,6 +49,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.clients
 .if ${OPSYS} != "Interix"
 .  if (${MACHINE_ARCH} == "i386") || \
       (${MACHINE_ARCH} == "x86_64") || \
+      (${MACHINE_ARCH} == "sparc64") || \
       (${MACHINE_ARCH} == "sparc")
 .    include "../../mk/oss.buildlink3.mk"
 EGDIR=		${PREFIX}/share/examples/nas
