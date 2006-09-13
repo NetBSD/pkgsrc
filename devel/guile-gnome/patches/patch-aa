@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/09/13 16:53:05 gdt Exp $
+
+--- glib/gnome/gobject/gtype.c.orig	2005-01-24 06:52:56.000000000 -0500
++++ glib/gnome/gobject/gtype.c
+@@ -265,7 +265,7 @@ SCM_DEFINE (scm_gtype_interfaces, "gtype
+ #define FUNC_NAME s_scm_gtype_interfaces
+ {
+     GType gtype, *interfaces;
+-    gint n_interfaces, i;
++    guint n_interfaces, i;
+     SCM ret = SCM_EOL;
+ 
+     SCM_VALIDATE_GTYPE_COPY (1, type, gtype);

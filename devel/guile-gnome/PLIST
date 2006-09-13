@@ -1,0 +1,177 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/13 16:53:05 gdt Exp $
+bin/guile-gnome-0
+include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-generic.h
+include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-primitives.h
+include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-types.h
+include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba.h
+include/guile-gnome-0/guile-gnome-gobject.h
+include/guile-gnome-0/guile-gnome-gobject/gclosure.h
+include/guile-gnome-0/guile-gnome-gobject/gobject.h
+include/guile-gnome-0/guile-gnome-gobject/gparameter.h
+include/guile-gnome-0/guile-gnome-gobject/gsignal.h
+include/guile-gnome-0/guile-gnome-gobject/gtype.h
+include/guile-gnome-0/guile-gnome-gobject/gvalue.h
+info/guile-gnome-tutorial.info
+lib/guile-gnome-0/libgw-guile-gnome-atk.la
+lib/guile-gnome-0/libgw-guile-gnome-canvas.la
+lib/guile-gnome-0/libgw-guile-gnome-corba.la
+lib/guile-gnome-0/libgw-guile-gnome-gconf.la
+lib/guile-gnome-0/libgw-guile-gnome-gdk.la
+lib/guile-gnome-0/libgw-guile-gnome-glib.la
+lib/guile-gnome-0/libgw-guile-gnome-gnome-vfs.la
+lib/guile-gnome-0/libgw-guile-gnome-gobject.la
+lib/guile-gnome-0/libgw-guile-gnome-gtk.la
+lib/guile-gnome-0/libgw-guile-gnome-libglade.la
+lib/guile-gnome-0/libgw-guile-gnome-libgnome.la
+lib/guile-gnome-0/libgw-guile-gnome-libgnomeui.la
+lib/guile-gnome-0/libgw-guile-gnome-pango.la
+lib/libguile-gnome-corba-0.la
+lib/libguile-gnome-gobject-0.la
+lib/orbit-2.0/Foo_module.la
+lib/pkgconfig/guile-gnome-defs-0.pc
+lib/pkgconfig/guile-gnome-glib-0.pc
+lib/pkgconfig/guile-gnome-gtk-0.pc
+lib/pkgconfig/guile-gnome-libgnomeui-0.pc
+share/guile-gnome-0/gnome/atk.scm
+share/guile-gnome-0/gnome/canvas.scm
+share/guile-gnome-0/gnome/contrib/delay-tree-model.scm
+share/guile-gnome-0/gnome/contrib/filtered-list.scm
+share/guile-gnome-0/gnome/contrib/help-browser.scm
+share/guile-gnome-0/gnome/contrib/texinfo-buffer.scm
+share/guile-gnome-0/gnome/corba.scm
+share/guile-gnome-0/gnome/corba/primitives.scm
+share/guile-gnome-0/gnome/corba/types.scm
+share/guile-gnome-0/gnome/defs/applet.defs
+share/guile-gnome-0/gnome/defs/art.defs
+share/guile-gnome-0/gnome/defs/atk-types.defs
+share/guile-gnome-0/gnome/defs/atk.defs
+share/guile-gnome-0/gnome/defs/bonobo-types.defs
+share/guile-gnome-0/gnome/defs/bonobo.defs
+share/guile-gnome-0/gnome/defs/bonoboui-types.defs
+share/guile-gnome-0/gnome/defs/bonoboui.defs
+share/guile-gnome-0/gnome/defs/common-ignores.defs
+share/guile-gnome-0/gnome/defs/gconf-types.defs
+share/guile-gnome-0/gnome/defs/gconf.defs
+share/guile-gnome-0/gnome/defs/gdk-pixbuf-types.defs
+share/guile-gnome-0/gnome/defs/gdk-pixbuf.defs
+share/guile-gnome-0/gnome/defs/gdk-types.defs
+share/guile-gnome-0/gnome/defs/gdk.defs
+share/guile-gnome-0/gnome/defs/glib-types.defs
+share/guile-gnome-0/gnome/defs/glib.defs
+share/guile-gnome-0/gnome/defs/gnome-vfs-types.defs
+share/guile-gnome-0/gnome/defs/gnome-vfs.defs
+share/guile-gnome-0/gnome/defs/gnome.defs
+share/guile-gnome-0/gnome/defs/gtk-extrafuncs.defs
+share/guile-gnome-0/gnome/defs/gtk-types.defs
+share/guile-gnome-0/gnome/defs/gtk.defs
+share/guile-gnome-0/gnome/defs/gtkhtml2.defs
+share/guile-gnome-0/gnome/defs/gtksourceview-overrides.defs
+share/guile-gnome-0/gnome/defs/gtksourceview.defs
+share/guile-gnome-0/gnome/defs/libgda-overrides.defs
+share/guile-gnome-0/gnome/defs/libgda-types.defs
+share/guile-gnome-0/gnome/defs/libgda.defs
+share/guile-gnome-0/gnome/defs/libglade.defs
+share/guile-gnome-0/gnome/defs/libgnomecanvas-types.defs
+share/guile-gnome-0/gnome/defs/libgnomecanvas.defs
+share/guile-gnome-0/gnome/defs/libwnck-types.defs
+share/guile-gnome-0/gnome/defs/libwnck.defs
+share/guile-gnome-0/gnome/defs/nautilus.defs
+share/guile-gnome-0/gnome/defs/pango-types.defs
+share/guile-gnome-0/gnome/defs/pango.defs
+share/guile-gnome-0/gnome/defs/print.defs
+share/guile-gnome-0/gnome/defs/printui.defs
+share/guile-gnome-0/gnome/defs/ui-types.defs
+share/guile-gnome-0/gnome/defs/ui.defs
+share/guile-gnome-0/gnome/defs/vte-overrides.defs
+share/guile-gnome-0/gnome/defs/vte.defs
+share/guile-gnome-0/gnome/gconf.scm
+share/guile-gnome-0/gnome/glade.scm
+share/guile-gnome-0/gnome/glib.scm
+share/guile-gnome-0/gnome/gnome-ui.scm
+share/guile-gnome-0/gnome/gnome.scm
+share/guile-gnome-0/gnome/gobject.scm
+share/guile-gnome-0/gnome/gobject/config.scm
+share/guile-gnome-0/gnome/gobject/defs-support.scm
+share/guile-gnome-0/gnome/gobject/event-repl.scm
+share/guile-gnome-0/gnome/gobject/gclosure.scm
+share/guile-gnome-0/gnome/gobject/generics.scm
+share/guile-gnome-0/gnome/gobject/gobject.scm
+share/guile-gnome-0/gnome/gobject/gparameter.scm
+share/guile-gnome-0/gnome/gobject/gsignal.scm
+share/guile-gnome-0/gnome/gobject/gtype.scm
+share/guile-gnome-0/gnome/gobject/gvalue.scm
+share/guile-gnome-0/gnome/gobject/gw-spec-utils.scm
+share/guile-gnome-0/gnome/gobject/gw-utils.scm
+share/guile-gnome-0/gnome/gobject/utils.scm
+share/guile-gnome-0/gnome/gtk.scm
+share/guile-gnome-0/gnome/gtk/gdk-event.scm
+share/guile-gnome-0/gnome/gtk/graphical-repl.scm
+share/guile-gnome-0/gnome/gw/atk-spec.scm
+share/guile-gnome-0/gnome/gw/atk.scm
+share/guile-gnome-0/gnome/gw/canvas-spec.scm
+share/guile-gnome-0/gnome/gw/canvas.scm
+share/guile-gnome-0/gnome/gw/corba-spec.scm
+share/guile-gnome-0/gnome/gw/corba.scm
+share/guile-gnome-0/gnome/gw/gconf-spec.scm
+share/guile-gnome-0/gnome/gw/gconf.scm
+share/guile-gnome-0/gnome/gw/gdk-spec.scm
+share/guile-gnome-0/gnome/gw/gdk.scm
+share/guile-gnome-0/gnome/gw/glib-spec.scm
+share/guile-gnome-0/gnome/gw/glib.scm
+share/guile-gnome-0/gnome/gw/gnome-vfs-spec.scm
+share/guile-gnome-0/gnome/gw/gnome-vfs.scm
+share/guile-gnome-0/gnome/gw/gobject-spec.scm
+share/guile-gnome-0/gnome/gw/gobject.scm
+share/guile-gnome-0/gnome/gw/gtk-spec.scm
+share/guile-gnome-0/gnome/gw/gtk.scm
+share/guile-gnome-0/gnome/gw/libglade-spec.scm
+share/guile-gnome-0/gnome/gw/libglade.scm
+share/guile-gnome-0/gnome/gw/libgnome-spec.scm
+share/guile-gnome-0/gnome/gw/libgnome.scm
+share/guile-gnome-0/gnome/gw/libgnomeui-spec.scm
+share/guile-gnome-0/gnome/gw/libgnomeui.scm
+share/guile-gnome-0/gnome/gw/pango-spec.scm
+share/guile-gnome-0/gnome/gw/pango.scm
+share/guile-gnome-0/gnome/gw/support/defs.scm
+share/guile-gnome-0/gnome/gw/support/gobject.scm
+share/guile-gnome-0/gnome/gw/support/modules.scm
+share/guile-gnome-0/gnome/overrides/gconf.defs
+share/guile-gnome-0/gnome/overrides/gconf.defs-type-ignores
+share/guile-gnome-0/gnome/overrides/gdk-pixbuf.defs
+share/guile-gnome-0/gnome/overrides/gdk.defs
+share/guile-gnome-0/gnome/overrides/gdk.defs-type-overrides
+share/guile-gnome-0/gnome/overrides/glib.defs
+share/guile-gnome-0/gnome/overrides/gnome-vfs.defs
+share/guile-gnome-0/gnome/overrides/gnome-vfs.defs-type-ignores
+share/guile-gnome-0/gnome/overrides/gnome.defs
+share/guile-gnome-0/gnome/overrides/gtk-customs.defs
+share/guile-gnome-0/gnome/overrides/gtk.defs
+share/guile-gnome-0/gnome/overrides/gtk.defs-type-ignores
+share/guile-gnome-0/gnome/overrides/libglade.defs
+share/guile-gnome-0/gnome/overrides/libgnomecanvas.defs
+share/guile-gnome-0/gnome/overrides/ui.defs
+share/guile-gnome-0/gnome/overrides/ui.defs-type-ignores
+share/guile-gnome-0/gnome/pango.scm
+share/guile-gnome-0/gnome/vfs.scm
+share/guile/site/gnome-0.scm
+@exec ${MKDIR} %D/share/guile-gnome-platform/examples/gnome-vfs
+@dirrm share/guile-gnome-platform/examples/gnome-vfs
+@exec ${MKDIR} %D/share/guile-gnome-platform/examples/gconf
+@dirrm share/guile-gnome-platform/examples/gconf
+@dirrm share/guile-gnome-platform/examples
+@dirrm share/guile-gnome-platform
+@dirrm share/guile-gnome-0/gnome/overrides
+@dirrm share/guile-gnome-0/gnome/gw/support
+@dirrm share/guile-gnome-0/gnome/gw
+@dirrm share/guile-gnome-0/gnome/gtk
+@dirrm share/guile-gnome-0/gnome/gobject
+@dirrm share/guile-gnome-0/gnome/defs
+@dirrm share/guile-gnome-0/gnome/corba
+@dirrm share/guile-gnome-0/gnome/contrib
+@dirrm share/guile-gnome-0/gnome
+@dirrm share/guile-gnome-0
+@comment in ORBit2: @dirrm lib/orbit-2.0
+@dirrm lib/guile-gnome-0
+@dirrm include/guile-gnome-0/guile-gnome-gobject
+@dirrm include/guile-gnome-0/guile-gnome-corba
+@dirrm include/guile-gnome-0
