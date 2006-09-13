@@ -1,13 +1,13 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.14 2005/11/05 17:23:35 rillig Exp $
+# $NetBSD: port2pkg.pl,v 1.15 2006/09/13 17:05:09 ginsbach Exp $
 #
 
 require 'getopts.pl';
 $^W=1;
 use strict;
 use vars qw($opt_m);
-my($maintainer) = "tech-pkg\@NetBSD.org";
+my($maintainer) = "pkgsrc-users\@NetBSD.org";
 my($makefile, $master_site_subdir, $extract_cmd);
 my($portsdir, $pkgdir);
 my($namespace, $portname, $portversion, $distname,
