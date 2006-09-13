@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1277 2006/09/13 16:50:09 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1278 2006/09/13 17:04:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4302,4 +4302,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/ming to 0.3.0 [obache 2006-09-13]
 	Updated multimedia/py-ming to 0.3.0 [obache 2006-09-13]
 	Updated multimedia/ruby-ming to 0.1.7 [obache 2006-09-13]
-	Added wip/guile-gnome version 2.7.99nb1 [gdt 2006-09-13]
+	Added devel/guile-gnome version 2.7.99nb1 [gdt 2006-09-13]
