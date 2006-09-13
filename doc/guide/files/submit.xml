@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.14 2006/09/10 19:32:22 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.15 2006/09/13 23:34:05 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -157,7 +157,7 @@
 
 <listitem><para>Remove all CVS dirs.</para>
 <para>Alternatively to the first two steps you can also do:</para>
-<screen><prompt>%</prompt> <userinput>cvs -d user@cvs.NetBSD.org:/cvsroot export -D today pkgsrc/category/package</userinput></screen>
+<screen>&cprompt; <userinput>cvs -d user@cvs.NetBSD.org:/cvsroot export -D today pkgsrc/category/package</userinput></screen>
 <para>and use that for further work.</para>
 </listitem>
 
@@ -170,8 +170,8 @@ instead of <quote>../../category/package</quote>.</para>
 place.</para></listitem>
 
 <listitem><para>Check if any package depends on it:
-<screen><prompt>%</prompt> <userinput>cd /usr/pkgsrc</userinput>
-<prompt>%</prompt> <userinput>grep /package */*/Makefile* */*/buildlink*</userinput></screen></para>
+<screen>&cprompt; <userinput>cd /usr/pkgsrc</userinput>
+&cprompt; <userinput>grep /package */*/Makefile* */*/buildlink*</userinput></screen></para>
 </listitem>
 
 <listitem><para>Fix paths in packages from step 5 to point to new location.</para></listitem>
@@ -183,7 +183,7 @@ place.</para></listitem>
 <listitem><para>Add to <filename>newcategory/Makefile</filename>.</para></listitem>
 
 <listitem><para>Commit the changed and removed files:</para>
-<screen><prompt>%</prompt> <userinput>cvs commit oldcategory/package oldcategory/Makefile newcategory/Makefile</userinput></screen>
+<screen>&cprompt; <userinput>cvs commit oldcategory/package oldcategory/Makefile newcategory/Makefile</userinput></screen>
 <para>(and any packages from step 5, of course).</para>
 </listitem>
 </orderedlist>
