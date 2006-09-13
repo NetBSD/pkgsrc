@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5447 2006/09/13 14:43:55 taca Exp $
+$NetBSD: TODO,v 1.5448 2006/09/13 16:08:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -708,7 +708,6 @@ Suggested package updates
 	o micro_httpd-20050629
 	o mimedefang-2.57
 	o mined-2000.12
-	o ming-0.3.0
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
 	o mknmz-wwwoffle-0.7.2
