@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.1 2006/09/01 16:35:39 jmmv Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.2 2006/09/13 23:30:15 wiz Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -258,10 +258,10 @@ followed:</para>
     components's distfiles into the <filename>list.txt</filename>
     file:</para>
 
-    <screen><prompt>$ </prompt><userinput>echo ls "*.tar.bz2" | \
+    <screen>&cprompt; <userinput>echo ls "*.tar.bz2" | \
     ftp -V ftp://ftp.gnome.org/pub/gnome/platform/x.y/x.y.z/sources/ | \
     awk '{ print $9 }' &gt;list.txt</userinput>
-<prompt>$ </prompt><userinput>echo ls "*.tar.bz2" | \
+&cprompt; <userinput>echo ls "*.tar.bz2" | \
     ftp -V ftp://ftp.gnome.org/pub/gnome/desktop/x.y/x.y.z/sources/ | \
     awk '{ print $9 }' &gt;&gt;list.txt</userinput></screen>
   </listitem>
@@ -297,7 +297,7 @@ followed:</para>
     list of "new" lines.  This will provide you an outline on what
     packages need to be updated in pkgsrc and in what order:</para>
 
-    <screen><prompt>$ </prompt><userinput>cvs diff gnome-devel gnome-base gnome | grep '^+D' &gt;todo.txt</userinput></screen>
+    <screen>&cprompt; <userinput>cvs diff gnome-devel gnome-base gnome | grep '^+D' &gt;todo.txt</userinput></screen>
   </listitem>
 
   <listitem>
