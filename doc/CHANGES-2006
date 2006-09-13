@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1270 2006/09/13 09:29:06 mjl Exp $
+>$NetBSD: CHANGES-2006,v 1.1271 2006/09/13 12:29:30 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4294,3 +4294,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/mathomatic to 12.6.3 [minskim 2006-09-13]
 	Updated comms/asterisk to 1.2.12 [mjl 2006-09-13]
 	Updated comms/asterisk to 1.2.12.1 [mjl 2006-09-13]
+	Updated x11/xorg-libs to 6.9.0nb9 [joerg 2006-09-13]
