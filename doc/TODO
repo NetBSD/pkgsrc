@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5445 2006/09/13 08:03:03 obache Exp $
+$NetBSD: TODO,v 1.5446 2006/09/13 13:21:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -1158,6 +1158,7 @@ Suggested package updates
 	o stellarium-0.8.1
 	o stlport-4.6.2
 	o strace-4.5.8
+	o streamripper-1.61.27
 	o stunnel-4.15 [pkg/34436]
 	o stunnel-4.17
 	o subtitleripper-0.3.4
