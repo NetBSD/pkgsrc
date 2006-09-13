@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.19 2006/09/09 23:49:29 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.20 2006/09/13 23:36:47 wiz Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -129,6 +129,25 @@
 	you're interested in optimization for the current CPU.</para>
 
 </sect2>
+
+<sect2 id="conf.ldflags">
+<title>Additional flags to the linker (<varname>LDFLAGS</varname>)</title>
+
+<para>If you want to pass flags to the linker, both in the configure
+step and the build step, you can do this in two ways.  Either set
+<varname>LDFLAGS</varname> or <varname>LIBS</varname>.  The difference
+between the two is that <varname>LIBS</varname> will be appended to
+the command line, while <varname>LDFLAGS</varname> come earlier.
+<varname>LDFLAGS</varname> is pre-loaded with rpath settings for ELF
+machines depending on the setting of <varname>USE_IMAKE</varname> or
+the inclusion of <filename>mk/x11.buildlink3.mk</filename>.  As with
+<varname>CFLAGS</varname>, if you do not wish to override these
+settings, use the <literal>+=</literal> operator:</para>
+<programlisting>
+    LDFLAGS+=        -your -linkerflags
+</programlisting>
+<para>See also <xref linkend="undefined-reference" />.</para>
+</sect2>
 </sect1>
 
   <!-- Configuration files -->
@@ -147,24 +166,24 @@
 	<listitem><para><varname>PKG_DEVELOPER</varname>:
 	    Run some sanity checks that package developers want:
 	    <itemizedlist>
-	      <listitem><para>make sure patches apply with zero fuzz</para></listitem>
-	      <listitem><para>run check-shlibs to see that all binaries will
-		find their shared libs.</para>
+	      <listitem><para>make sure patches apply with zero
+	      fuzz</para></listitem>
+	      <listitem><para>run check-shlibs to see that all
+	      binaries will find their shared libs.</para>
 	      <!-- XXX: some more stuff -->
 	      </listitem>
 	    </itemizedlist>
 	</para>
 	</listitem>
-	<listitem><para><varname>PKG_DEBUG_LEVEL</varname>:
-	    The level of debugging output which is displayed whilst
-	    making and installing the package.
-	    The default value for this is 0, which will not display
-	    the commands as they are executed (normal, default, quiet
-	    operation); the value 1 will display all shell commands
-	    before their invocation, and the value 2 will display both
-	    the shell commands before their invocation, and their
-	    actual execution progress with <command>set -x</command>
-	    will be displayed.</para></listitem>
+	<listitem><para><varname>PKG_DEBUG_LEVEL</varname>: The level
+	of debugging output which is displayed whilst making and
+	installing the package.  The default value for this is 0,
+	which will not display the commands as they are executed
+	(normal, default, quiet operation); the value 1 will display
+	all shell commands before their invocation, and the value 2
+	will display both the shell commands before their invocation,
+	and their actual execution progress with <command>set
+	-x</command> will be displayed.</para></listitem>
       </itemizedlist>
     </para>
   </sect1>
@@ -176,13 +195,13 @@
   <sect1 id="selecting-build-options">
     <title>Selecting Build Options</title>
 
-    <para>Some packages have build time options, usually to select between
-      different dependencies, enable optional support for big dependencies
-      or enable experimental features.</para>
+    <para>Some packages have build time options, usually to select
+    between different dependencies, enable optional support for big
+    dependencies or enable experimental features.</para>
 
     <para>To see which options, if any, a package supports, and which
-      options are mutually exclusive, run <command>make show-options</command>,
-      for example:</para>
+    options are mutually exclusive, run <command>make
+    show-options</command>, for example:</para>
 
 <programlisting>
     The following options are supported by this package:
@@ -199,14 +218,15 @@
 </programlisting>
 
     <para>The following variables can be defined in
-      <filename>/etc/mk.conf</filename> to select which options to enable
-      for a package: <varname>PKG_DEFAULT_OPTIONS</varname>, which can be
-      used to select or disable options for all packages that support them,
-      and <varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname>,
-      which can be used to select or disable options specifically for
-      package <replaceable>pkgbase</replaceable>.  Options listed in these
-      variables are selected, options preceded by <quote>-</quote> are
-      disabled. A few examples:</para>
+    <filename>/etc/mk.conf</filename> to select which options to
+    enable for a package: <varname>PKG_DEFAULT_OPTIONS</varname>,
+    which can be used to select or disable options for all packages
+    that support them, and
+    <varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname>,
+    which can be used to select or disable options specifically for
+    package <replaceable>pkgbase</replaceable>.  Options listed in
+    these variables are selected, options preceded by <quote>-</quote>
+    are disabled. A few examples:</para>
 
     <screen>
 &uprompt; <command>grep "PKG.*OPTION" /etc/mk.conf</command>
@@ -214,15 +234,16 @@ PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </screen>
 
-    <para>The following settings are consulted in the order given, and the
-      last setting that selects or disables an option is used:</para>
+    <para>The following settings are consulted in the order given, and
+    the last setting that selects or disables an option is
+    used:</para>
 
     <orderedlist>
       <listitem><para>the default options as suggested by the package
-	  maintainer</para></listitem>
+      maintainer</para></listitem>
 
       <listitem><para>the options implied by the settings of legacy
-	  variables (see below)</para></listitem>
+      variables (see below)</para></listitem>
 
       <listitem><para><varname>PKG_DEFAULT_OPTIONS</varname></para></listitem>
 
@@ -230,22 +251,23 @@ PKG_OPTIONS.apache=     suexec </screen>
     </orderedlist>
 
     <para>For groups of mutually exclusive options, the last option
-      selected is used, all others are automatically disabled.  If an option
-      of the group is explicitly disabled, the previously selected option,
-      if any, is used.  It is an error if no option from a required group of
-      options is selected, and building the package will fail.</para>
+    selected is used, all others are automatically disabled.  If an
+    option of the group is explicitly disabled, the previously
+    selected option, if any, is used.  It is an error if no option
+    from a required group of options is selected, and building the
+    package will fail.</para>
 
-    <para>Before the options framework was introduced, build options were
-      selected by setting a variable (often named
-      <varname>USE_<replaceable>FOO</replaceable></varname>) in
-      <filename>/etc/mk.conf</filename> for each option.  To ease transition
-      to the options framework for the user, these legacy variables are
-      converted to the appropriate options setting
-      (<varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname>)
-      automatically.  A warning is issued to prompt the user to
-      update <filename>/etc/mk.conf</filename> to use the options framework
-      directly.  Support for the legacy variables will be removed
-      eventually.</para>
+    <para>Before the options framework was introduced, build options
+    were selected by setting a variable (often named
+    <varname>USE_<replaceable>FOO</replaceable></varname>) in
+    <filename>/etc/mk.conf</filename> for each option.  To ease
+    transition to the options framework for the user, these legacy
+    variables are converted to the appropriate options setting
+    (<varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname>)
+    automatically.  A warning is issued to prompt the user to update
+    <filename>/etc/mk.conf</filename> to use the options framework
+    directly.  Support for the legacy variables will be removed
+    eventually.</para>
   </sect1>
 
 </chapter>
