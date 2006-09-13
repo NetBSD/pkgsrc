@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.18 2006/09/10 19:27:59 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.19 2006/09/13 23:31:15 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -273,24 +273,12 @@ minutes!</para>
 	<term>Program</term>
 
 	<listitem>
-	  <para>The piece of software to be installed which will be constructed from
-	    all the files in the distfile by the actions defined in the
-	    corresponding package.</para>
+	  <para>The piece of software to be installed which will be
+	  constructed from all the files in the distfile by the
+	  actions defined in the corresponding package.</para>
 	</listitem>
       </varlistentry>
     </variablelist>
-
-<sect2 id="term.abbrev">
-<title>Commonly used abbreviations</title>
-
-	<variablelist>
-
-	<varlistentry><term>ICE</term><listitem><para>Internal Compiler
-	Error</para></listitem></varlistentry>
-
-	</variablelist>
-
-</sect2>
 
   <sect2 id="term.roles">
   <title>Roles involved in pkgsrc</title>
