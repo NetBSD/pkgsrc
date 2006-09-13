@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2006/08/07 16:13:52 taca Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/13 13:12:54 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.7.1
 PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.7.1
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://tmtm.org/downloads/mysql/ruby/
 
@@ -14,8 +15,7 @@ RUBY_HAS_ARCHLIB=	yes
 RUBY_REQD=		1.8.2
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
-CONFIGURE_ARGS+= --with-mysql-include-dir=${BUILDLINK_PREFIX.mysql-client}/include \
-		--with-mysql-lib-dir=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+CONFIGURE_ARGS+=	--with-mysql-config
 
 DOCS=		README.html README_ja.html tommy.css
 
