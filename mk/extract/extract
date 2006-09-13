@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.2 2006/09/03 16:36:37 schwarz Exp $
+# $NetBSD: extract,v 1.3 2006/09/13 11:10:36 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -180,6 +180,8 @@ esac
 case "$distfile" in
 *.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.Z|*.tar.z|*.tar|*.tar.bz)
 		_format=tar ;;
+*.cpio|*.cpio.gz|*.cpio.bz2)
+		_format=cpio ;;
 *.shar.gz|*.shar.bz2|*.shar.Z|*.shar|*.shr.gz|*.shr.bz2|*.shr.Z|*.shr)
 		_format=shar ;;
 *.zip|*.ZIP)	_format=zip ;;
@@ -252,6 +254,17 @@ tar)
 		${ECHO} 1>&2 "$self: unknown tar program: $extract_using"
 		exit 1
 	esac
+	;;
+
+cpio)
+	: ${EXTRACT_OPTS_PAX=}
+	if ${TEST} -n "$exclude_file"; then
+		exclude=yes
+		set -- dummy `${CAT} "$exclude_file"`; shift
+	fi
+	${TEST} "$exclude" = no || exclude_flag="-c"
+	$decompress_cat "$distfile" |
+		${PAX} ${EXTRACT_OPTS_PAX} $exclude_flag -r ${1+"$@"}
 	;;
 
 shar)
