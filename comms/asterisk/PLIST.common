@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2006/04/13 08:47:06 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2006/09/13 09:08:55 mjl Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -357,6 +357,7 @@ libdata/asterisk/sounds/dir-intro.gsm
 libdata/asterisk/sounds/dir-nomatch.gsm
 libdata/asterisk/sounds/dir-nomore.gsm
 libdata/asterisk/sounds/hello-world.gsm
+libdata/asterisk/sounds/hours.gsm
 libdata/asterisk/sounds/invalid.gsm
 libdata/asterisk/sounds/letters/a.gsm
 libdata/asterisk/sounds/letters/at.gsm
@@ -394,6 +395,7 @@ libdata/asterisk/sounds/letters/x.gsm
 libdata/asterisk/sounds/letters/y.gsm
 libdata/asterisk/sounds/letters/z.gsm
 libdata/asterisk/sounds/letters/zed.gsm
+libdata/asterisk/sounds/minutes.gsm
 libdata/asterisk/sounds/pbx-invalid.gsm
 libdata/asterisk/sounds/pbx-invalidpark.gsm
 libdata/asterisk/sounds/pbx-transfer.gsm
@@ -443,6 +445,7 @@ libdata/asterisk/sounds/queue-thankyou.gsm
 libdata/asterisk/sounds/queue-thereare.gsm
 libdata/asterisk/sounds/queue-youarenext.gsm
 libdata/asterisk/sounds/screen-callee-options.gsm
+libdata/asterisk/sounds/seconds.gsm
 libdata/asterisk/sounds/spy-agent.gsm
 libdata/asterisk/sounds/spy-h323.gsm
 libdata/asterisk/sounds/spy-iax.gsm

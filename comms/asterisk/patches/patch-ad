@@ -1,7 +1,5 @@
-$NetBSD: patch-ad,v 1.3 2006/01/18 11:39:54 mjl Exp $
-
---- channels/Makefile.orig	2005-12-15 11:52:30.000000000 +0100
-+++ channels/Makefile	2006-01-18 12:13:57.000000000 +0100
+--- channels/Makefile.orig	2006-08-17 23:57:19.000000000 +0200
++++ channels/Makefile	2006-09-13 10:46:23.000000000 +0200
 @@ -22,12 +22,13 @@
  endif
  
@@ -17,77 +15,57 @@ $NetBSD: patch-ad,v 1.3 2006/01/18 11:39:54 mjl Exp $
  endif
  
  ifeq (${OSARCH},Linux)
-@@ -73,41 +74,41 @@
-   SOLINK+=-lrt
+@@ -74,39 +75,39 @@
  endif
  
--ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/ixjuser.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/ixjuser.h),)
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/ixjuser.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/ixjuser.h),)
 -  CHANNEL_LIBS+=chan_phone.so
--endif
--
--ifneq ($(wildcard h323/libchanh323.a),)
--  CHANNEL_LIBS+=chan_h323.so
--endif
--
--ifneq ($(wildcard misdn/chan_misdn_lib.a),)
--  CHANNEL_LIBS+=chan_misdn.so
--  CFLAGS+=-Imisdn 
--endif
-+# ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/ixjuser.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/ixjuser.h),)
 +#   CHANNEL_LIBS+=chan_phone.so
-+# endif
-+
-+# ifneq ($(wildcard h323/libchanh323.a),)
+ endif
+ 
+ ifneq ($(wildcard h323/libchanh323.a),)
+-  CHANNEL_LIBS+=chan_h323.so
 +#   CHANNEL_LIBS+=chan_h323.so
-+# endif
-+
-+# ifneq ($(wildcard misdn/chan_misdn_lib.a),)
+ endif
+ 
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/mISDNuser/mISDNlib.h),)
+-  CHANNEL_LIBS+=chan_misdn.so
+-  CFLAGS+=-Imisdn  
 +#   CHANNEL_LIBS+=chan_misdn.so
-+#   CFLAGS+=-Imisdn 
-+# endif
++#   CFLAGS+=-Imisdn  
+ endif
  
  CFLAGS+=-Wno-missing-prototypes -Wno-missing-declarations
  
--ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/alsa/asoundlib.h),)
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/alsa/asoundlib.h),)
 -  CHANNEL_LIBS+=chan_alsa.so
--endif
--
--ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libpri.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libpri.so.1),)
++#   CHANNEL_LIBS+=chan_alsa.so
+ endif
+ 
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libpri.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libpri.so.1),)
 -  CFLAGS+=-DZAPATA_PRI
 -  ZAPPRI=-lpri
--endif
--
--ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libmfcr2.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libmfcr2.so.1),)
--  CFLAGS+=-DZAPATA_R2
--  ZAPR2=-lmfcr2
--endif
-+# ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/alsa/asoundlib.h),)
-+#   CHANNEL_LIBS+=chan_alsa.so
-+# endif
-+
-+# ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libpri.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libpri.so.1),)
 +#   CFLAGS+=-DZAPATA_PRI
 +#   ZAPPRI=-lpri
-+# endif
-+
-+# ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libmfcr2.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libmfcr2.so.1),)
+ endif
+ 
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libmfcr2.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libmfcr2.so.1),)
+-  CFLAGS+=-DZAPATA_R2
+-  ZAPR2=-lmfcr2
 +#   CFLAGS+=-DZAPATA_R2
 +#   ZAPR2=-lmfcr2
-+# endif
+ endif
  
  ALSA_SRC=chan_alsa.c
  
--ifneq ($(wildcard alsa-monitor.h),)
+ ifneq ($(wildcard alsa-monitor.h),)
 -  CFLAGS+=-DALSA_MONITOR
 -  ALSA_SRC+=alsa-monitor.h
--endif
-+# ifneq ($(wildcard alsa-monitor.h),)
-+#   CFLAGS+=-DALSA_MONITOR
-+#   ALSA_SRC+=alsa-monitor.h
-+# endif
++#  CFLAGS+=-DALSA_MONITOR
++#  ALSA_SRC+=alsa-monitor.h
+ endif
  
  ifndef WITHOUT_ZAPTEL
- ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/zaptel.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/zaptel.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/pkg/include/zaptel.h),)
 @@ -122,10 +123,10 @@
  endif
  endif # WITHOUT_ZAPTEL
