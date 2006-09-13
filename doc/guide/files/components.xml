@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.30 2006/09/10 19:36:41 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.31 2006/09/13 23:24:40 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -160,18 +160,20 @@ sections.</para>
   <itemizedlist>
     <listitem>
       <para>Add <varname>MANCOMPRESSED</varname> if man pages are
-      installed in compressed form by the package; see comment in
-      <filename>bsd.pkg.mk</filename>.</para>
+      installed in compressed form by the package.  For packages using
+      BSD-style makefiles which honor MANZ, there is
+      <varname>MANCOMPRESSED_IF_MANZ</varname>.</para>
     </listitem>
 
     <listitem>
       <para>Replace <filename>/usr/local</filename> with
-      <quote>${PREFIX}</quote> in all files (see patches, below).</para>
+      <quote>${PREFIX}</quote> in all files (see patches,
+      below).</para>
     </listitem>
 
     <listitem>
-      <para>If the package installs any info files, see
-      <xref linkend="faq.info-files"/>.</para>
+      <para>If the package installs any info files, see <xref
+      linkend="faq.info-files"/>.</para>
     </listitem>
 
   </itemizedlist>
