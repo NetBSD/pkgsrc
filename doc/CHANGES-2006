@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1267 2006/09/12 12:40:01 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1268 2006/09/13 00:39:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4291,3 +4291,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/fvwm-devel to 2.5.18 [martti 2006-09-11]
 	Updated fonts/fontforge to 20060822 [adam 2006-09-12]
 	Updated textproc/docbook-xsl to 1.71.0nb1 [joerg 2006-09-12]
+	Updated math/mathomatic to 12.6.3 [minskim 2006-09-13]
