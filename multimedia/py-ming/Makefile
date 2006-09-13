@@ -1,35 +1,22 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:30:15 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/13 15:54:58 obache Exp $
 #
 
-DISTNAME=		${MING_DISTNAME}
-PKGNAME=		${PYPKGPREFIX}-${MING_PKGNAME}
-PKGREVISION=		1
+DISTNAME=		ming-py-0.3.0
+PKGNAME=		${PYPKGPREFIX}-ming-0.3.0
 CATEGORIES=		multimedia
-MASTER_SITES=		${MING_MASTER_SITES}
-EXTRACT_SUFX=		${MING_EXTRACT_SUFX}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ming/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://ming.sourceforge.net/
 COMMENT=		Python bindings for Ming library
 
 PY_PATCHPLIST=		yes
 PYBINMODULE=		yes
 
-BUILD_TARGET=		mingcmodule.so
-BUILD_DIRS=		${WRKSRC}/py_ext
+WRKSRC=			${WRKDIR}/ming-0.3.0/py_ext
 
-MAKE_ENV+=		PYSITELIB=${PYSITELIB:Q}
-
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+PYDISTUTILSPKG=		yes
 
 .include "../../multimedia/ming/buildlink3.mk"
-.include "../../multimedia/ming/Makefile.common"
 .include "../../lang/python/extension.mk"
-
-post-build:
-	${PYTHONBIN} ${PYCOMPILEALL} ${WRKSRC}/py_ext
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/py_ext/ming.pyc ${PREFIX}/${PYSITELIB}
-
 .include "../../mk/bsd.pkg.mk"
