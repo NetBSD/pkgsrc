@@ -1,5 +1,0 @@
-EasyPG is a GnuPG interface for Emacs.  It has two aspects: convenient
-tools which allow to use GnuPG from Emacs (EasyPG Assistant), and a
-fully functional interface library to GnuPG (EasyPG Library.)  It does
-not cache passphrases, so gpg-agent (security/gnupg-devel) is
-recommended.
