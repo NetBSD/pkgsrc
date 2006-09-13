@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/01/03 15:07:29 taca Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/13 13:13:02 obache Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
 PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://madscientist.jp/~ikegami/sources/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/1765/
 
 MAINTAINER=	rasputnik@hellooperator.net
-HOMEPAGE=	http://madscientist.jp/~ikegami/ruby/ming/
+HOMEPAGE=	http://mingruby.rubyforge.org/
 COMMENT=	Ruby extension to drive the Ming SWF library
 
 USE_RUBY_SETUP=	yes
