@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1275 2006/09/13 14:43:54 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1276 2006/09/13 16:07:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4299,3 +4299,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/ruby18-base to 1.8.5nb1 [taca 2006-09-13]
 	Updated databases/ruby-mysql to 2.7.1nb1 [taca 2006-09-13]
 	Updated www/squid to 2.6.3 [taca 2006-09-13]
+	Updated multimedia/ming to 0.3.0 [obache 2006-09-13]
+	Updated multimedia/py-ming to 0.3.0 [obache 2006-09-13]
+	Updated multimedia/ruby-ming to 0.1.7 [obache 2006-09-13]
