@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.181 2006/07/09 12:23:22 taca Exp $
+# $NetBSD: Makefile,v 1.182 2006/09/13 14:41:58 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE14
-PKGNAME=	squid-2.5.14
-PKGREVISION=	3
+DISTNAME=	squid-2.6.STABLE3
+PKGNAME=	squid-2.6.3
+#PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
+MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.6/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
-
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE14-httpReplyDestroy.patch \
-		squid-2.5.STABLE14-hierarchy_tag.patch
-PATCH_DIST_STRIP= -p1
+#
+#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.6/bugs/
+#PATCHFILES=
+#PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
@@ -42,6 +41,7 @@ PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}
 
 PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
 
+CONF_FILES+=	${EXAMPLESDIR}/cachemgr.conf ${PKG_SYSCONFDIR}/cachemgr.conf
 CONF_FILES+=	${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=	${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
 CONF_FILES+=	${EXAMPLESDIR}/msntauth.conf ${PKG_SYSCONFDIR}/msntauth.conf
@@ -49,7 +49,8 @@ OWN_DIRS=	${DATADIR}
 OWN_DIRS_PERMS+= ${DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
 		 ${DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
 EXAMPLES_FILES=	src/mime.conf.default src/squid.conf.default \
-		helpers/basic_auth/MSNT/msntauth.conf.default
+		helpers/basic_auth/MSNT/msntauth.conf.default \
+		tools/cachemgr.conf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,7 +58,7 @@ PKG_SYSCONFSUBDIR?=	squid
 
 SQUID_USER?=	squid
 SQUID_GROUP?=	squid
-BUILD_DEFS+=	SQUID_USER SQUID_GROUP
+BUILD_DEFS+=	SQUID_USER SQUID_GROUP VARBASE
 
 CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 			--enable-cachemgr-hostname=localhost \
@@ -70,13 +71,14 @@ CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 #
 # generic helpers
 #
-OPTIONAL_FILES+= libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
+OPTIONAL_FILES+= libexec/diskd-daemon libexec/dnsserver
+OPTIONAL_FILES+= libexec/pinger libexec/unlinkd
 #
 # basic auth helpers (except LDAP, multi-domain-NTLM and SASL)
 #
 OPTIONAL_FILES+= libexec/getpwname_auth libexec/msnt_auth libexec/ncsa_auth
-OPTIONAL_FILES+= libexec/pam_auth man/man8/pam_auth.8 libexec/smb_auth
-OPTIONAL_FILES+= libexec/yp_auth libexec/wb_auth
+OPTIONAL_FILES+= libexec/pam_auth man/man8/ncsa_auth.8 man/man8/pam_auth.8
+OPTIONAL_FILES+= libexec/smb_auth libexec/yp_auth libexec/wb_auth
 #
 # digest auth helpers
 #
@@ -105,8 +107,7 @@ pre-install:
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES_FILES}
-	cd ${WRKSRC} && \
-	${INSTALL_DATA}	${f} ${EXAMPLESDIR}/`basename ${f} .default`
+	${INSTALL_DATA}	${WRKSRC}/${f} ${EXAMPLESDIR}/`basename ${f} .default`
 .endfor
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${DOCDIR}
