@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.9 2006/03/12 12:12:19 taca Exp $
+$NetBSD: patch-ak,v 1.10 2006/09/13 14:41:58 taca Exp $
 
---- src/cf.data.pre.orig	2006-02-26 08:01:45.000000000 +0900
+--- src/cf.data.pre.orig	2006-07-31 10:31:18.000000000 +0900
 +++ src/cf.data.pre
-@@ -953,6 +953,23 @@ DOC_START
+@@ -1349,6 +1349,23 @@ DOC_START
  DOC_END
  
  
@@ -26,3 +26,18 @@ $NetBSD: patch-ak,v 1.9 2006/03/12 12:12:19 taca Exp $
  NAME: useragent_log
  TYPE: string
  LOC: Config.Log.useragent
+@@ -3245,12 +3262,12 @@ DOC_END
+ 
+ NAME: cache_effective_user
+ TYPE: string
+-DEFAULT: nobody
++DEFAULT: @USER@
+ LOC: Config.effectiveUser
+ DOC_START
+ 	If you start Squid as root, it will change its effective/real
+ 	UID/GID to the user specified below.  The default is to change
+-	to UID to nobody.  If you define cache_effective_user, but not
++	to UID to @USER@.  If you define cache_effective_user, but not
+ 	cache_effective_group, Squid sets the GID to the effective
+ 	user's default group ID (taken from the password file) and
+ 	supplementary group list from the from groups membership of

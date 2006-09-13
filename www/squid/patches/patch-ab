@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2002/10/13 16:43:21 taca Exp $
+$NetBSD: patch-ab,v 1.7 2006/09/13 14:41:58 taca Exp $
 
---- scripts/Makefile.in.orig	Fri Jul 12 17:38:25 2002
+--- scripts/Makefile.in.orig	2006-06-12 15:10:08.000000000 +0900
 +++ scripts/Makefile.in
-@@ -26,7 +26,7 @@ VPATH = @srcdir@
- prefix = @prefix@
- exec_prefix = @exec_prefix@
- 
+@@ -198,7 +198,7 @@ am__leading_dot = @am__leading_dot@
+ am__quote = @am__quote@
+ am__tar = @am__tar@
+ am__untar = @am__untar@
 -bindir = @bindir@
 +bindir = @sbindir@
- sbindir = @sbindir@
- libexecdir = @libexecdir@
- datadir = @datadir@
+ build = @build@
+ build_alias = @build_alias@
+ build_cpu = @build_cpu@

@@ -1,31 +1,29 @@
-$NetBSD: patch-an,v 1.10 2006/03/12 12:12:19 taca Exp $
+$NetBSD: patch-an,v 1.11 2006/09/13 14:41:58 taca Exp $
 
---- configure.in.orig	2006-03-12 20:29:22.000000000 +0900
+--- configure.in.orig	2006-07-31 11:53:51.000000000 +0900
 +++ configure.in
-@@ -496,7 +496,7 @@ AC_ARG_ENABLE(snmp,
+@@ -586,7 +586,7 @@ AC_ARG_ENABLE(snmp,
  [ if test "$enableval" = "yes" ; then
      echo "SNMP monitoring enabled"
-     AC_DEFINE(SQUID_SNMP)
+     AC_DEFINE(SQUID_SNMP, 1, [Define to enable SNMP monitoring of Squid])
 -    SNMPLIB='-L../snmplib -lsnmp'
 +    SNMPLIB='../snmplib/libsnmp.a'
      AM_CONDITIONAL(USE_SNMP, true)
      SNMP_MAKEFILE=./snmplib/Makefile
      makesnmplib=snmplib
-@@ -1305,6 +1305,7 @@ AC_CHECK_HEADERS( \
+@@ -1534,6 +1534,7 @@ AC_CHECK_HEADERS(
  	libc.h \
- 	limits.h \
  	linux/netfilter_ipv4.h \
+ 	linux/netfilter_ipv4/ip_tproxy.h \
 + 	machine/byte_swap.h \
  	malloc.h \
  	math.h \
  	memory.h \
-@@ -1532,8 +1533,17 @@ AC_CHECK_TYPE(pid_t, int)
- AC_CHECK_TYPE(size_t, unsigned int)
- AC_CHECK_TYPE(ssize_t, int)
- AC_CHECK_TYPE(off_t, int)
--AC_CHECK_TYPE(mode_t, u_short)
--AC_CHECK_TYPE(fd_mask, int)
-+AC_CHECK_TYPE(mode_t, unsigned short)
+@@ -1888,7 +1889,16 @@ AC_CHECK_SYSTYPE(size_t, unsigned int)
+ AC_CHECK_SYSTYPE(ssize_t, int)
+ AC_CHECK_SYSTYPE(off_t, int)
+ AC_CHECK_SYSTYPE(mode_t, unsigned short)
+-AC_CHECK_SYSTYPE(fd_mask, int)
 +
 +dnl Check for type fd_mask
 +AC_CACHE_CHECK(for fd_set,ac_cv_have_fd_mask, [
@@ -39,7 +37,7 @@ $NetBSD: patch-an,v 1.10 2006/03/12 12:12:19 taca Exp $
  
  AC_CHECK_SIZEOF_SYSTYPE(off_t, 4)
  AC_CHECK_SIZEOF_SYSTYPE(size_t, 4)
-@@ -1741,8 +1751,8 @@ if test "$GCC" = "yes"; then
+@@ -2167,8 +2177,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	[2.95.[123]])
