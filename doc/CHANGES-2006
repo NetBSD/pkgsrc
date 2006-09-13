@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1272 2006/09/13 12:51:58 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1273 2006/09/13 13:08:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4296,3 +4296,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/asterisk to 1.2.12.1 [mjl 2006-09-13]
 	Updated x11/xorg-libs to 6.9.0nb9 [joerg 2006-09-13]
 	Renamed security/epg to security/EasyPG [gdt 2006-09-13]
+	Updated lang/ruby18-base to 1.8.5nb1 [taca 2006-09-13]
