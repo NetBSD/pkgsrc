@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.10 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.11 2006/09/13 23:26:21 wiz Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -107,7 +107,7 @@ Successfully retrieved file.</screen>
     <para>Generate the checksum of the distfile into
       <filename>distinfo</filename>:</para>
 
-    <screen>&rprompt; <userinput>make makesum</userinput></screen>
+    <screen>&rprompt; <userinput>make makedistinfo</userinput></screen>
 
     <para>Now compile:</para>
 
