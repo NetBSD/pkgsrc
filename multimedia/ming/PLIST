@@ -1,7 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 02:59:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/13 15:53:51 obache Exp $
+bin/dbl2png
+bin/gif2dbl
+bin/gif2mask
+bin/listaction
+bin/listaction_d
+bin/listfdb
+bin/listjpeg
+bin/listmp3
+bin/listswf
+bin/listswf_d
+bin/makefdb
+bin/makeswf
+bin/ming-config
+bin/png2dbl
+bin/png2swf
+bin/raw2adpcm
+bin/swftoperl
+bin/swftophp
+bin/swftopython
 include/ming.h
+include/ming_config.h
 include/mingpp.h
 lib/libming.a
 lib/libming.so
 lib/libming.so.0
-lib/libming.so.0.2
+lib/libming.so.0.3.0
+man/man1/makeswf.1
