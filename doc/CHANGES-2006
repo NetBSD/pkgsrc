@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1273 2006/09/13 13:08:20 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1274 2006/09/13 13:14:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4297,3 +4297,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xorg-libs to 6.9.0nb9 [joerg 2006-09-13]
 	Renamed security/epg to security/EasyPG [gdt 2006-09-13]
 	Updated lang/ruby18-base to 1.8.5nb1 [taca 2006-09-13]
+	Updated databases/ruby-mysql to 2.7.1nb1 [taca 2006-09-13]
