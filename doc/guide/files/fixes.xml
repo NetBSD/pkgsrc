@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.72 2006/09/10 19:36:31 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.73 2006/09/13 23:38:21 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -14,7 +14,6 @@
     where possible, that packages in pkgsrc are portable. This
     chapter mentions some particular details you should pay
     attention to while working on pkgsrc.</para>
-
   </sect2>
 
   <sect2 id="pulling-vars-from-etc-mk.conf">
@@ -42,14 +41,13 @@
     <note><para>Currently there is no exhaustive list of all
     variables that tells you whether they can be used at load time
     or only at run time, but it is in preparation.</para></note>
-
   </sect2>
 
   <sect2 id="user-interaction">
     <title>User interaction</title>
 
-    <para>Occasionally, packages require interaction from the user, and this can be
-    in a number of ways:</para>
+    <para>Occasionally, packages require interaction from the user,
+    and this can be in a number of ways:</para>
 
     <itemizedlist>
 
@@ -60,7 +58,8 @@
       </listitem>
 
       <listitem>
-	<para>When extracting the distfiles, some packages may ask for passwords.</para>
+	<para>When extracting the distfiles, some packages may ask for
+	passwords.</para>
       </listitem>
 
       <listitem>
@@ -76,9 +75,10 @@
       </listitem>
     </itemizedlist>
 
-    <para>The <varname>INTERACTIVE_STAGE</varname> definition is provided to notify
-    the pkgsrc mechanism of an interactive stage which will be needed, and
-    this should be set in the package's <filename>Makefile</filename>, e.g.:</para>
+    <para>The <varname>INTERACTIVE_STAGE</varname> definition is
+    provided to notify the pkgsrc mechanism of an interactive stage
+    which will be needed, and this should be set in the package's
+    <filename>Makefile</filename>, e.g.:</para>
 
     <programlisting>
       INTERACTIVE_STAGE=      build
@@ -90,6 +90,8 @@
       INTERACTIVE_STAGE=      configure install
     </programlisting>
 
+    <para>The user can then decide to skip this package by setting the
+    <varname>BATCH</varname> variable.</para>
   </sect2>
 
   <sect2 id="handling-licenses">
@@ -238,14 +240,13 @@
     <title>Handling dependencies</title>
 
     <para>Your package may depend on some other package being present
-    - and there are various ways of expressing this
-    dependency. pkgsrc supports the <varname>BUILD_DEPENDS</varname>
-    and <varname>DEPENDS</varname> definitions, the
-    <varname>USE_TOOLS</varname> definition, as well as
-    dependencies via <filename>buildlink3.mk</filename>, which is
-    the preferred way to handle dependencies, and which uses the
-    variables named above. See <xref linkend="buildlink"/> for more
-    information.</para>
+    - and there are various ways of expressing this dependency.
+    pkgsrc supports the <varname>BUILD_DEPENDS</varname> and
+    <varname>DEPENDS</varname> definitions, the
+    <varname>USE_TOOLS</varname> definition, as well as dependencies
+    via <filename>buildlink3.mk</filename>, which is the preferred way
+    to handle dependencies, and which uses the variables named above.
+    See <xref linkend="buildlink"/> for more information.</para>
 
     <para>The basic difference between the two variables is as
     follows: The <varname>DEPENDS</varname> definition registers
@@ -398,14 +399,12 @@
     (It relies on the jpeg sources being present in source form
     during the build.)</para>
 
-    <para>Please also note the <varname>BUILD_USES_MSGFMT</varname>
-    and <varname>BUILD_USES_GETTEXT_M4</varname> definitions, which
-    are provided as convenience definitions.  The former works out
-    whether &man.msgfmt.1; is part of the base system, and, if it isn't,
-    installs the <filename role="pkg">devel/gettext</filename> package.
-    The latter adds a build dependency on either an installed
-    version of an older gettext package, or if it isn't, installs the
-    <filename role="pkg">devel/gettext-m4</filename> package.</para>
+    <para>Please also note the
+    <varname>BUILD_USES_GETTEXT_M4</varname> definition, which is
+    provided as convenience definition.  It adds a build dependency on
+    either an installed version of an older gettext package, or if it
+    isn't, installs the <filename
+    role="pkg">devel/gettext-m4</filename> package.</para>
   </sect2>
 
 
@@ -414,8 +413,8 @@
 
     <para>Your package may conflict with other packages a user might
     already have installed on his system, e.g. if your package
-    installs the same set of files like another package in our
-    pkgsrc tree.</para>
+    installs the same set of files as another package in the pkgsrc
+    tree.</para>
 
     <para>In this case you can set <varname>CONFLICTS</varname> to a
     space-separated list of packages (including version string) your
@@ -447,7 +446,7 @@
     <title>Packages that cannot or should not be built</title>
 
     <para>There are several reasons why a package might be
-    instructed to not build under certain circumstances. If the
+    instructed to not build under certain circumstances.  If the
     package builds and runs on most platforms, the exceptions
     should be noted with <varname>NOT_FOR_PLATFORM</varname>.  If
     the package builds and runs on a small handful of platforms,
@@ -456,11 +455,20 @@
     <varname>NOT_FOR_PLATFORM</varname> are OS triples
     (OS-version-platform) that can use glob-style
     wildcards.</para>
+    <para>Some packages are tightly bound to a specific version of an
+    operating system, e.g. LKMs or <filename
+    role="pkg">sysutils/lsof</filename>.  Such binary packages are not
+    backwards compatible with other versions of the OS, and should be
+    uploaded to a version specific directory on the FTP server.  Mark
+    these packages by setting <varname>OSVERSION_SPECIFIC</varname> to
+    <quote>yes</quote>.  This variable is not currently used by any of
+    the package system internals, but may be used in the
+    future.</para>
     <para>If the package should be skipped (for example, because it
     provides functionality already provided by the system), set
-    <varname>PKG_SKIP_REASON</varname> to a descriptive message.
-    If the package should fail because some preconditions are not
-    met, set <varname>PKG_FAIL_REASON</varname> to a descriptive
+    <varname>PKG_SKIP_REASON</varname> to a descriptive message.  If
+    the package should fail because some preconditions are not met,
+    set <varname>PKG_FAIL_REASON</varname> to a descriptive
     message.</para>
   </sect2>
 
