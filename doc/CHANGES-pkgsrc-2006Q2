@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.90 2006/09/13 13:37:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.91 2006/09/13 14:04:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -215,3 +215,5 @@ Pullup ticket 1822 - requested by adrianp
 security fix for gtetrinet
 Pullup ticket 1823 - requested by seb
 security update for mysql4
+Pullup ticket 1824 - requested by jdc
+sparc64 build fix for nas
