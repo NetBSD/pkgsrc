@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5449 2006/09/13 21:05:17 tron Exp $
+$NetBSD: TODO,v 1.5450 2006/09/13 23:29:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1346,10 +1346,6 @@ Suggested pkgsrc enhancements
 		- /etc/shells changes (PKG_REGISTER_SHELLS=YES)
 		- pkg-specific rc.d script instructions
 	  (Consider renaming PKGSRC_MESSAGE_RECIPIENTS as well.)
-
-	o Document process for installing manual pages in the pkgsrc guide.
-		- INSTALL_MAN
-		- MANCOMPRESSED
 
 	o Add an install time check that examines installed files for references
 	  to ${WRKDIR}.  In particular this should help catch packages which
