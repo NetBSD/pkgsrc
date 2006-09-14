@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/09/11 18:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2006/09/14 15:07:12 tron Exp $
 
 DISTNAME=	fontconfig-2.4.0
 CATEGORIES=	fonts
@@ -29,8 +29,12 @@ CONFIGURE_ENV+=		HASDOCBOOK=no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${X11BASE} != ${LOCALBASE})
+.if ${X11BASE} != ${LOCALBASE}
 CONFIGURE_ARGS+=	--with-add-fonts=${X11BASE}/lib/X11/fonts
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 .endif
 
 EGDIR=		${PREFIX}/share/examples/fontconfig
