@@ -1,0 +1,43 @@
+$NetBSD: patch-co,v 1.1 2006/09/14 16:52:54 joerg Exp $
+
+--- programs/Xserver/os/utils.c.orig	2005-11-08 07:33:30.000000000 +0100
++++ programs/Xserver/os/utils.c
+@@ -1718,8 +1718,10 @@ System(char *command)
+     case -1:	/* error */
+ 	p = -1;
+     case 0:	/* child */
+-	setgid(getgid());
+-	setuid(getuid());
++	if (setgid(getgid()) == -1)
++	    _exit(127);
++	if (setuid(getuid()) == -1)
++	    _exit(127);
+ 	execl("/bin/sh", "sh", "-c", command, (char *)NULL);
+ 	_exit(127);
+     default:	/* parent */
+@@ -1770,8 +1772,10 @@ Popen(char *command, char *type)
+ 	xfree(cur);
+ 	return NULL;
+     case 0:	/* child */
+-	setgid(getgid());
+-	setuid(getuid());
++	if (setgid(getgid()) == -1)
++	    _exit(127);
++	if (setuid(getuid()) == -1)
++	    _exit(127);
+ 	if (*type == 'r') {
+ 	    if (pdes[1] != 1) {
+ 		/* stdout */
+@@ -1845,8 +1849,10 @@ Fopen(char *file, char *type)
+ 	xfree(cur);
+ 	return NULL;
+     case 0:	/* child */
+-	setgid(getgid());
+-	setuid(getuid());
++	if (setgid(getgid()) == -1)
++	    _exit(127);
++	if (setuid(getuid()) == -1)
++	    _exit(127);
+ 	if (*type == 'r') {
+ 	    if (pdes[1] != 1) {
+ 		/* stdout */
