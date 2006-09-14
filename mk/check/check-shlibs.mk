@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.3 2006/06/23 12:55:15 jlam Exp $
+# $NetBSD: check-shlibs.mk,v 1.4 2006/09/14 22:00:49 rillig Exp $
 
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
@@ -38,7 +38,7 @@ check-shlibs: error-check
 		${TEST} -z "$$err" || ${ECHO} "$$file: $$err";		\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	exec 1>${ERROR_DIR}/${.TARGET};					\
+	exec 1>>${ERROR_DIR}/${.TARGET};				\
 	if ${_NONZERO_FILESIZE_P} ${ERROR_DIR}/${.TARGET}; then		\
 		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
 		${ECHO} "    at runtime.  Please fix the package (add -Wl,-R.../lib in the right"; \
