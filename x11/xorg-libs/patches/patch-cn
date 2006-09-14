@@ -1,0 +1,16 @@
+$NetBSD: patch-cn,v 1.1 2006/09/14 16:52:54 joerg Exp $
+
+--- programs/Xserver/hw/xfree86/parser/write.c.orig	2005-07-03 09:01:37.000000000 +0200
++++ programs/Xserver/hw/xfree86/parser/write.c
+@@ -170,7 +170,10 @@ xf86writeConfigFile (const char *filenam
+ 					strerror(errno));
+ 			return 0;
+ 		case 0: /* child */
+-			setuid(getuid());
++			if (setuid(getuid() == -1) 
++			    FatalError("xf86writeConfigFile(): "
++				"setuid failed(%s)\n", 
++				strerror(errno));
+ 			ret = doWriteConfigFile(filename, cptr);
+ 			exit(ret);
+ 			break;

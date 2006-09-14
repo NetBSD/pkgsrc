@@ -1,0 +1,21 @@
+$NetBSD: patch-cp,v 1.1 2006/09/14 16:52:54 joerg Exp $
+
+--- programs/xdm/session.c.orig	2005-11-08 07:33:31.000000000 +0100
++++ programs/xdm/session.c
+@@ -488,8 +488,14 @@ SessionExit (struct display *d, int stat
+     else
+ 	ResetServer (d);
+     if (removeAuth) {
+-	setgid (verify.gid);
+-	setuid (verify.uid);
++	if (setgid (verify.gid) == -1) {
++	    LogError( "SessionExit: setgid: %s\n", strerror(errno));
++	    exit(status);
++	}
++	if (setuid (verify.uid) == -1) {
++	    LogError( "SessionExit: setuid: %s\n", strerror(errno));
++	    exit(status);
++	}
+ 	RemoveUserAuthorization (d, &verify);
+ #ifdef K5AUTH
+ 	/* do like "kdestroy" program */
