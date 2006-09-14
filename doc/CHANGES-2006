@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1281 2006/09/14 13:55:21 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1282 2006/09/14 15:24:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/rtorrent to 0.6.1 [tron 2006-09-13]
 	Updated net/p5-Net-Server to 0.94 [adrianp 2006-09-13]
 	Added games/bastet version 0.41 [rillig 2006-09-14]
+	Updated sysutils/mc to 4.6.1nb2 [joerg 2006-09-14]
