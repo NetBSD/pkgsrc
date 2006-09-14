@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2006/07/11 07:34:35 ghen Exp $
+# $NetBSD: Makefile,v 1.163 2006/09/14 16:17:43 rillig Exp $
 
 .include "Makefile.mirrors"
 
@@ -105,6 +105,11 @@ SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CAT@,${CAT},g'
 SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g' -e 's,@RM@,${RM},g'
 SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g' -e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	post-patch
+
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_FILES.mandir=	Makefile.in
+SUBST_SED.mandir=	-e 's,@mandir@,${PREFIX}/${PKGMANDIR},g'
 
 # Get the shared library major and minors for the installed shared
 # libraries.  We'll need these to create the versioned symlinks for
