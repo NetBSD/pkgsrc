@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.4 2005/10/09 10:30:23 jmmv Exp $
+# $NetBSD: verifypc.sh,v 1.5 2006/09/14 15:35:46 jmmv Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -124,7 +124,12 @@ main() {
 
     # Construct a list of dependency specifications for the current package.
     SORTED_DEPS=$(${MAKE} show-vars VARNAMES="BUILD_DEPENDS DEPENDS" | tr ' ' '
-' | sort -r | uniq)
+' | sed 's,\([.<>=]\)\([0-9][.:n]\),\10\2,g' | \
+    sed 's,\([.<>=]\)\([0-9][.:n]\),\10\2,g' | \
+    sort -r | \
+    sed 's,\([.<>=]\)0\([0-9][.:n]\),\1\2,g' | \
+    sed 's,\([.<>=]\)0\([0-9][.:n]\),\1\2,g' | \
+    uniq)
 
     error=0
     lines=$(cat ${log} | sort | uniq | tr ' ' '¬')
