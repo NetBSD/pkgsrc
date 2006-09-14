@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/14 17:02:40 gdt Exp $
+bin/pgsql2shp
+bin/shp2pgsql
+lib/postgresql/liblwgeom.so
+lib/postgresql/liblwgeom.so.1
+lib/postgresql/liblwgeom.so.1.1
+share/doc/html/postgis/apa.html
+share/doc/html/postgis/ch01.html
+share/doc/html/postgis/ch02.html
+share/doc/html/postgis/ch03.html
+share/doc/html/postgis/ch04.html
+share/doc/html/postgis/ch05.html
+share/doc/html/postgis/ch06.html
+share/doc/html/postgis/ch07.html
+share/doc/html/postgis/index.html
+share/doc/html/postgis/style.css
+share/doc/postgis/README.postgis
+share/doc/postgis/postgis.xml
+share/postgresql/contrib/lwpostgis.sql
+share/postgresql/contrib/lwpostgis_upgrade.sql
+share/postgresql/contrib/spatial_ref_sys.sql
+@dirrm share/postgresql/contrib
+@dirrm share/doc/postgis
+@dirrm share/doc/html/postgis
