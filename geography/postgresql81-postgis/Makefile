@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/14 17:02:40 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/14 19:16:43 gdt Exp $
 
 DISTNAME=		postgis-${VERSION}
 VERSION=		1.1.3
@@ -18,8 +18,14 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES+=		c c++
 
+CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/postgresql
+#CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/postgresql
+
+# Work around geos and proj not providing -R via foo-config/pkg-config.
+# XXX Deal with this correctly.
+LDFLAGS+=	-L${PREFIX}/lib -R${PREFIX}/lib
+CONFIGURE_ENV+=	LDFLAGS="${LDFLAGS}"
 
 DOCDIR=		${PREFIX}/share/doc/postgis
 HTMLDIR=	${PREFIX}/share/doc/html/postgis

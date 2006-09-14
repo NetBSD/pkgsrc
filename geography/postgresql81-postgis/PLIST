@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/14 17:02:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/14 19:16:43 gdt Exp $
 bin/pgsql2shp
 bin/shp2pgsql
-lib/postgresql/liblwgeom.so
-lib/postgresql/liblwgeom.so.1
-lib/postgresql/liblwgeom.so.1.1
+lib/liblwgeom.so
+lib/liblwgeom.so.1
+lib/liblwgeom.so.1.1
 share/doc/html/postgis/apa.html
 share/doc/html/postgis/ch01.html
 share/doc/html/postgis/ch02.html
