@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/30 17:09:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/14 14:48:27 rillig Exp $
 #
 
 DISTNAME=		djvulibre-3.5.17
@@ -22,6 +22,9 @@ USE_LIBTOOL=		yes
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 BUILD_DIRS=		tools xmltools
 INSTALL_DIRS=		tools xmltools
+
+REPLACE_BASH+=		tools/any2djvu
+USE_TOOLS+=		bash:run
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
