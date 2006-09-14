@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/09/14 13:55:10 rillig Exp $
+
+--- game.c.orig	2004-10-15 23:58:52.000000000 +0200
++++ game.c	2006-09-14 15:46:25.000000000 +0200
+@@ -66,7 +66,7 @@ unsigned char *well_data;
+ 
+ /* Delay before block drop one step down (usec).
+    We start at one sec. and then decreases the delay by 23% at each level. */
+-const int delay[NO_LEVELS] = {1000000, 770000, 593000, 457000, 352000, 271000, 208000, 160000, 124000, 95000};
++const int delay[NO_LEVELS] = {999999, 770000, 593000, 457000, 352000, 271000, 208000, 160000, 124000, 95000};
+ 
+ /* Window in which the action takes place. */
+ WINDOW *well_win;

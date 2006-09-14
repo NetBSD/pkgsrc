@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/09/14 13:55:10 rillig Exp $
+
+--- bast.c.orig	2004-10-15 23:58:52.000000000 +0200
++++ bast.c	2006-09-14 15:46:12.000000000 +0200
+@@ -1,7 +1,11 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <ncurses.h>
++#if defined(__linux)
+ #include <termio.h>
++#else
++#include <termios.h>
++#endif
+ #include <assert.h>
+ #include <unistd.h>
+ #include <string.h>
