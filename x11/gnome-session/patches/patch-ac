@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2006/05/03 11:21:26 drochner Exp $
+$NetBSD: patch-ac,v 1.8 2006/09/15 15:18:16 jmmv Exp $
 
---- gnome-session/main.c.orig	2006-03-21 18:37:40.000000000 +0100
+--- gnome-session/main.c.orig	2006-07-26 14:46:36.000000000 +0200
 +++ gnome-session/main.c
 @@ -43,6 +43,7 @@
  #include "command.h"
@@ -10,15 +10,15 @@ $NetBSD: patch-ac,v 1.7 2006/05/03 11:21:26 drochner Exp $
  #include "gsm-sound.h"
  #include "gsm-gsd.h"
  #include "gsm-keyring.h"
-@@ -334,6 +335,7 @@ main (int argc, char *argv[])
-   char *display_str;
+@@ -335,6 +336,7 @@ main (int argc, char *argv[])
    char **versions;
    GConfClient *gconf_client;
+   GOptionContext *goption_context;
 +  gboolean dbus_daemon_owner;
    
    if (getenv ("GSM_VERBOSE_DEBUG"))
      gsm_set_verbose (TRUE);
-@@ -415,6 +417,7 @@ main (int argc, char *argv[])
+@@ -419,6 +421,7 @@ main (int argc, char *argv[])
    fprintf (stderr, "SESSION_MANAGER=%s\n", getenv ("SESSION_MANAGER"));
    gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-session.png");
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.7 2006/05/03 11:21:26 drochner Exp $
  
    /* Make sure children see the right value for DISPLAY.  This is
       useful if --display was specified on the command line.  */
-@@ -496,6 +499,9 @@ main (int argc, char *argv[])
+@@ -503,6 +506,9 @@ main (int argc, char *argv[])
  
    gsm_keyring_daemon_stop ();
  

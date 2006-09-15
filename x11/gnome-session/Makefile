@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.74 2006/08/23 09:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.75 2006/09/15 15:18:16 jmmv Exp $
 #
 
-DISTNAME=		gnome-session-2.14.3
-PKGREVISION=		1
+DISTNAME=		gnome-session-2.16.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.14/}
-SITES.gnome-splash-2.14.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.16/}
+SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.14.0.png
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.16.0.png
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
@@ -29,6 +28,8 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
+BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
+BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1
 # Make sure we do not use old packages that rely on XDG_{CONFIG,DATA}_DIRS
 # in the environment being set.
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.1
@@ -43,6 +44,7 @@ BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 .include "../../devel/pango/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../x11/gnome2-control-center/buildlink3.mk"
@@ -52,7 +54,7 @@ BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
 	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/gnome-splash-2.14.0.png \
+	${CP} ${DISTDIR}/gnome-splash-2.16.0.png \
 	    ${WRKSRC}/gnome-session/gnome-splash.png
 
 post-install:
