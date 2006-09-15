@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.37 2006/07/05 05:37:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.38 2006/09/15 15:07:40 jmmv Exp $
 #
 
-GNOME_VFS2_VERSION=	2.14.2
+GNOME_VFS2_VERSION=	2.16.0
 
 DISTNAME=		gnome-vfs-${GNOME_VFS2_VERSION}
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -31,7 +31,6 @@ CONFIGURE_ARGS+= 	--disable-samba
 CONFIGURE_ARGS+= 	--enable-gnutls
 CONFIGURE_ARGS+=	--enable-platform-gnome-2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
@@ -101,3 +100,9 @@ do-install:
 	cd ${WRKSRC}/modules && ${LIBTOOL} --mode=finish \
 			${PREFIX}/lib/gnome-vfs-2.0/modules
 .endif
+
+.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
