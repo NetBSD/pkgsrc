@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5456 2006/09/15 20:29:24 wiz Exp $
+$NetBSD: TODO,v 1.5457 2006/09/15 20:31:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,6 @@ Suggested package updates
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
-	o at-spi-1.7.11
 	o autogen-5.8.5
 	o avcheck-0.91
 	o avl-2.0.1
@@ -400,7 +399,6 @@ Suggested package updates
 	o dap-2.1.5
 	o dar-2.3.1 [pkg/34430]
 	o darkstat-3.0.540 [pkg/34158]
-	o dasher-4.2.0
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -447,7 +445,6 @@ Suggested package updates
 	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
-	o evince-0.6.0
 	o ex-050325
 	o exmh-2.7.2
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -518,7 +515,6 @@ Suggested package updates
 	o gob2-2.0.14 [pkg/34439]
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
-	o gok-1.2.0
 	o gossip-0.15
 	o gpsdrive-2.09
 	o grace-5.1.20
@@ -549,7 +545,6 @@ Suggested package updates
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
-	o gucharmap-1.8.0
 	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
 	o gworkspace-0.8.3
@@ -783,11 +778,8 @@ Suggested package updates
 	o p5-Clone-0.19 [pkg/34333]
 	o p5-Compress-Bzip2-2.09
 	o p5-Config-Tiny-2.08 [pkg/34352]
-	o p5-Convert-ASN1-0.20 [pkg/34400]
 	o p5-Convert-BER-1.3101 [pkg/34406]
-	o p5-Crypt-Blowfish-2.10 [pkg/34394]
 	o p5-Crypt-CAST5_PP-1.04 [pkg/34393]
-	o p5-Crypt-CBC-2.19 [pkg/34398]
 	o p5-Crypt-CipherSaber-1.00
 	o p5-Crypt-DSA-0.14 [pkg/34409]
 	o p5-Crypt-IDEA-1.08 [pkg/34391]
@@ -805,8 +797,6 @@ Suggested package updates
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Digest-CRC-0.10 [pkg/34408]
-	o p5-Digest-SHA-5.43 [pkg/34407]
 	o p5-Email-Abstract-2.13 [pkg/34371]
 	o p5-Email-Simple-1.980 [pkg/34370]
 	o p5-Email-Valid-0.176 [pkg/34374]
@@ -834,7 +824,6 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
-	o p5-IO-Socket-SSL-0.999 [pkg/34392]
 	o p5-IO-Util-1.50 [pkg/34350]
 	o p5-IPC-Run-0.80 [pkg/34349]
 	o p5-Ima-DBI-0.34
@@ -861,7 +850,6 @@ Suggested package updates
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
-	o p5-Net-DNS-0.58 [pkg/34383]
 	o p5-Net-Daemon-0.39 [pkg/34395]
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
@@ -888,7 +876,6 @@ Suggested package updates
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.17 [pkg/34389]
-	o p5-String-Approx-3.26 [pkg/34414]
 	o p5-String-ShellQuote-1.03 [pkg/34415]
 	o p5-Sub-Uplevel-0.13 [pkg/34364]
 	o p5-Template-Extract-0.40
@@ -1009,8 +996,6 @@ Suggested package updates
 	o py-curl-7.15.5.1
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
-	o py-gobject-2.12.1
-	o py-gtk2-2.10.1
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
@@ -1167,7 +1152,6 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tob-0.26
 	o top-3.6beta1
-	o totem-2.16.0
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
@@ -1268,7 +1252,6 @@ Suggested package updates
 	o xzip-182
 	o yafc-1.1
 	o yaz-2.1.8
-	o yelp-2.16.0
 	o yodl-2.01.02
 	o ysm-2.9.8
 	o zebra-0.95a
