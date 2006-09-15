@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/14 22:48:45 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/15 09:50:39 he Exp $
 bin/konversation
 bin/konversationircprotocolhandler
 share/doc/kde/HTML/da/konversation/common
@@ -160,19 +160,50 @@ share/doc/kde/HTML/nl/konversation/webbrowser_screen_co.png
 share/doc/kde/HTML/pt/konversation/common
 share/doc/kde/HTML/pt/konversation/index.cache.bz2
 share/doc/kde/HTML/pt/konversation/index.docbook
+share/doc/kde/HTML/ru/konversation/index.cache.bz2
+share/doc/kde/HTML/ru/konversation/index.docbook
+share/doc/kde/HTML/sv/konversation/addchannel.png
+share/doc/kde/HTML/sv/konversation/addnetwork_co.png
+share/doc/kde/HTML/sv/konversation/addserver_co.png
+share/doc/kde/HTML/sv/konversation/channel_screen_tour_co.png
+share/doc/kde/HTML/sv/konversation/channellist_screen_co.png
+share/doc/kde/HTML/sv/konversation/checkidentities.png
+share/doc/kde/HTML/sv/konversation/colorchooser_screen.png
 share/doc/kde/HTML/sv/konversation/common
+share/doc/kde/HTML/sv/konversation/dccstatus_screen_co.png
+share/doc/kde/HTML/sv/konversation/first_channel_co.png
+share/doc/kde/HTML/sv/konversation/first_serverlist_co.png
+share/doc/kde/HTML/sv/konversation/highlighting_screen_co.png
+share/doc/kde/HTML/sv/konversation/identities_adv_co.png
+share/doc/kde/HTML/sv/konversation/identities_away_co.png
+share/doc/kde/HTML/sv/konversation/identities_gen_co.png
 share/doc/kde/HTML/sv/konversation/index.cache.bz2
 share/doc/kde/HTML/sv/konversation/index.docbook
+share/doc/kde/HTML/sv/konversation/kimproxy_create_screen2.png
+share/doc/kde/HTML/sv/konversation/kimproxy_create_screen_co.png
+share/doc/kde/HTML/sv/konversation/logviewer_co.png
+share/doc/kde/HTML/sv/konversation/nicksonline_co.png
+share/doc/kde/HTML/sv/konversation/nickthemes_screen_co.png
+share/doc/kde/HTML/sv/konversation/notification_screen_co.png
+share/doc/kde/HTML/sv/konversation/notifylist_screen_co.png
+share/doc/kde/HTML/sv/konversation/osd_demo.png
+share/doc/kde/HTML/sv/konversation/osd_screen_co.png
+share/doc/kde/HTML/sv/konversation/quickbuttons_screen.png
+share/doc/kde/HTML/sv/konversation/quickconnect_screen.png
+share/doc/kde/HTML/sv/konversation/serverlist_co.png
+share/doc/kde/HTML/sv/konversation/urlcatcher_screen_co.png
+share/doc/kde/HTML/sv/konversation/webbrowser_screen_co.png
 @comment move to: share/kde/apps/konversation/konversation.desktop
 share/kde/applications/kde/konversation.desktop
-share/kde/apps/kconf_update/konversation-0.14-mainwindow.pl
-share/kde/apps/kconf_update/${PKGNAME}-appearance.pl
-share/kde/apps/kconf_update/${PKGNAME}-colorcodes.pl
-share/kde/apps/kconf_update/${PKGNAME}-colors.pl
-share/kde/apps/kconf_update/${PKGNAME}-custombrowser.pl
-share/kde/apps/kconf_update/${PKGNAME}-notifylists.pl
-share/kde/apps/kconf_update/${PKGNAME}-sortorder.pl
-share/kde/apps/kconf_update/${PKGNAME}-tabplacement.pl
+share/kde/apps/kconf_update/konversation-0.19-appearance.pl
+share/kde/apps/kconf_update/konversation-0.19-colorcodes.pl
+share/kde/apps/kconf_update/konversation-0.19-colors.pl
+share/kde/apps/kconf_update/konversation-0.19-custombrowser.pl
+share/kde/apps/kconf_update/konversation-0.19-notifylists.pl
+share/kde/apps/kconf_update/konversation-0.19-sortorder.pl
+share/kde/apps/kconf_update/konversation-0.19-tabplacement.pl
+share/kde/apps/kconf_update/konversation-0.20-customfonts.pl
+share/kde/apps/kconf_update/konversation-0.20-quickbuttons.pl
 share/kde/apps/kconf_update/konversation.upd
 share/kde/apps/konversation/eventsrc
 share/kde/apps/konversation/konversationui.rc
@@ -264,7 +295,7 @@ share/kde/icons/hicolor/scalable/apps/konversation.svgz
 share/kde/services/konvirc.protocol
 share/kde/services/konvirc6.protocol
 share/locale/bg/LC_MESSAGES/konversation.mo
-share/locale/cs/LC_MESSAGES/konversation.mo
+share/locale/ca/LC_MESSAGES/konversation.mo
 share/locale/da/LC_MESSAGES/konversation.mo
 share/locale/de/LC_MESSAGES/konversation.mo
 share/locale/el/LC_MESSAGES/konversation.mo
@@ -273,18 +304,19 @@ share/locale/es/LC_MESSAGES/konversation.mo
 share/locale/et/LC_MESSAGES/konversation.mo
 share/locale/fi/LC_MESSAGES/konversation.mo
 share/locale/fr/LC_MESSAGES/konversation.mo
-share/locale/hi/LC_MESSAGES/konversation.mo
+share/locale/hu/LC_MESSAGES/konversation.mo
 share/locale/it/LC_MESSAGES/konversation.mo
 share/locale/ja/LC_MESSAGES/konversation.mo
+share/locale/ka/LC_MESSAGES/konversation.mo
+share/locale/ko/LC_MESSAGES/konversation.mo
 share/locale/nl/LC_MESSAGES/konversation.mo
 share/locale/pt/LC_MESSAGES/konversation.mo
-share/locale/pt_BR/LC_MESSAGES/konversation.mo
 share/locale/ru/LC_MESSAGES/konversation.mo
 share/locale/sr/LC_MESSAGES/konversation.mo
 share/locale/sr@Latn/LC_MESSAGES/konversation.mo
 share/locale/sv/LC_MESSAGES/konversation.mo
-share/locale/ta/LC_MESSAGES/konversation.mo
 share/locale/tr/LC_MESSAGES/konversation.mo
+share/locale/zh_TW/LC_MESSAGES/konversation.mo
 @unexec ${RMDIR} %D/share/kde/icons/hicolor/scalable/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/kde/icons/hicolor/64x64/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/kde/icons/hicolor/48x48/apps 2>/dev/null || ${TRUE}
