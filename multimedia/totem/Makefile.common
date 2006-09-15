@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.24 2006/08/23 09:49:35 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.25 2006/09/15 15:23:51 jmmv Exp $
 #
 
-DISTNAME=	totem-1.4.4
-PKGREVISION=	1
+DISTNAME=	totem-2.16.0
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/1.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.16/}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.hadess.net/totem.php3
@@ -27,14 +26,17 @@ GCONF2_SCHEMAS=		totem.schemas
 GCONF2_SCHEMAS+=	totem-handlers.schemas
 GCONF2_SCHEMAS+=	totem-video-thumbnail.schemas
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=		gnome-vfs2>=2.8.2
+BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
