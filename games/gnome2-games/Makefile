@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2006/08/06 19:09:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.74 2006/09/15 15:22:39 jmmv Exp $
 
-DISTNAME=		gnome-games-2.14.3
+DISTNAME=		gnome-games-2.15.92
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.15/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -69,6 +69,7 @@ BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../net/howl/buildlink3.mk"

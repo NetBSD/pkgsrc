@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/07/26 12:47:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/09/15 15:22:39 jmmv Exp $
 bin/blackjack
 bin/games-server.py
 bin/gataxx
@@ -54,7 +54,7 @@ share/gconf/schemas/iagno.schemas
 share/gconf/schemas/libgnomegames.schemas
 share/gconf/schemas/mahjongg.schemas
 share/gconf/schemas/same-gnome.schemas
-share/gnect/white_ob.cn4
+share/gnect/white_ob.cn4.gz
 share/gnibbles/level001.gnl
 share/gnibbles/level002.gnl
 share/gnibbles/level003.gnl
@@ -267,8 +267,6 @@ share/gnome/help/blackjack/C/figures/blackjack_start_window.png
 share/gnome/help/blackjack/C/figures/blackjack_win_window.png
 share/gnome/help/blackjack/C/legal.xml
 share/gnome/help/gataxx/C/figures/gataxx-legalmoves.png
-share/gnome/help/gataxx/C/figures/gataxx-prefs.png
-share/gnome/help/gataxx/C/figures/gataxx-startgame.png
 share/gnome/help/gataxx/C/gataxx.xml
 share/gnome/help/gataxx/C/legal.xml
 share/gnome/help/glines/C/figures/glines-gameover.png
@@ -343,12 +341,35 @@ share/gnome/help/same-gnome/C/figures/play.png
 share/gnome/help/same-gnome/C/figures/start-up.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
+share/icons/hicolor/48x48/apps/gnome-aisleriot.png
+share/icons/hicolor/48x48/apps/gnome-ataxx.png
+share/icons/hicolor/48x48/apps/gnome-blackjack.png
+share/icons/hicolor/48x48/apps/gnome-five-or-more.png
+share/icons/hicolor/48x48/apps/gnome-four-in-a-row.png
+share/icons/hicolor/48x48/apps/gnome-freecell.png
+share/icons/hicolor/48x48/apps/gnome-gnometris.png
+share/icons/hicolor/48x48/apps/gnome-gnomine.png
+share/icons/hicolor/48x48/apps/gnome-iagno.png
+share/icons/hicolor/48x48/apps/gnome-klotski.png
+share/icons/hicolor/48x48/apps/gnome-mahjongg.png
+share/icons/hicolor/48x48/apps/gnome-nibbles.png
+share/icons/hicolor/48x48/apps/gnome-robots.png
+share/icons/hicolor/48x48/apps/gnome-same-gnome.png
+share/icons/hicolor/48x48/apps/gnome-tali.png
+share/icons/hicolor/48x48/apps/gnome-tetravex.png
+share/icons/hicolor/scalable/apps/gnome-ataxx.svg
+share/icons/hicolor/scalable/apps/gnome-gnomine.svg
+share/icons/hicolor/scalable/apps/gnome-iagno.svg
+share/icons/hicolor/scalable/apps/gnome-nibbles.svg
+share/icons/hicolor/scalable/apps/gnome-robots.svg
+share/icons/hicolor/scalable/apps/gnome-tali.svg
 share/locale/am/LC_MESSAGES/gnome-games.mo
 share/locale/ar/LC_MESSAGES/gnome-games.mo
 share/locale/az/LC_MESSAGES/gnome-games.mo
 share/locale/be/LC_MESSAGES/gnome-games.mo
 share/locale/bg/LC_MESSAGES/gnome-games.mo
 share/locale/bn/LC_MESSAGES/gnome-games.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-games.mo
 share/locale/ca/LC_MESSAGES/gnome-games.mo
 share/locale/cs/LC_MESSAGES/gnome-games.mo
 share/locale/cy/LC_MESSAGES/gnome-games.mo
@@ -388,7 +409,7 @@ share/locale/nb/LC_MESSAGES/gnome-games.mo
 share/locale/ne/LC_MESSAGES/gnome-games.mo
 share/locale/nl/LC_MESSAGES/gnome-games.mo
 share/locale/nn/LC_MESSAGES/gnome-games.mo
-share/locale/no/LC_MESSAGES/gnome-games.mo
+share/locale/or/LC_MESSAGES/gnome-games.mo
 share/locale/pa/LC_MESSAGES/gnome-games.mo
 share/locale/pl/LC_MESSAGES/gnome-games.mo
 share/locale/pt/LC_MESSAGES/gnome-games.mo
@@ -441,11 +462,8 @@ share/pixmaps/blackjack/chip-5.svg
 share/pixmaps/cards/baize.png
 share/pixmaps/cards/slot.svg
 share/pixmaps/cards/slots/white-outline.svg
-share/pixmaps/gataxx.png
-share/pixmaps/glines.png
 share/pixmaps/glines/balls.svg
 share/pixmaps/glines/shapes.svg
-share/pixmaps/gnect-icon.png
 share/pixmaps/gnect/bg_grotty.jpg
 share/pixmaps/gnect/bg_nightfall.jpg
 share/pixmaps/gnect/bg_toplight.png
@@ -486,25 +504,16 @@ share/pixmaps/gnibbles/wall-tee-left.svg
 share/pixmaps/gnibbles/wall-tee-right.svg
 share/pixmaps/gnibbles/wall-tee-up.svg
 share/pixmaps/gnobots2/aieee.png
+share/pixmaps/gnobots2/boo.svg
 share/pixmaps/gnobots2/gnomes.png
-share/pixmaps/gnobots2/robots.png
+share/pixmaps/gnobots2/robots.svg
 share/pixmaps/gnobots2/splat.png
+share/pixmaps/gnobots2/ufo.svg
 share/pixmaps/gnobots2/yahoo.png
-share/pixmaps/gnome-aisleriot.png
-share/pixmaps/gnome-blackjack.png
-share/pixmaps/gnome-cardgame.png
-share/pixmaps/gnome-games-common/cards/bonded.png
+share/pixmaps/gnome-games-common/cards/bonded.svg
 share/pixmaps/gnome-games-common/cards/paris.svg
 share/pixmaps/gnome-games-common/icons/rteleport.png
 share/pixmaps/gnome-games-common/icons/teleport.png
-share/pixmaps/gnome-gnobots2.svg
-share/pixmaps/gnome-gnomine.png
-share/pixmaps/gnome-gnotravex.png
-share/pixmaps/gnome-gsame.png
-share/pixmaps/gnome-gtali.png
-share/pixmaps/gnome-gtetris.png
-share/pixmaps/gnome-mahjongg.png
-share/pixmaps/gnome-nibbles.png
 share/pixmaps/gnometris/7blocks-gw.png
 share/pixmaps/gnometris/7blocks-tig.png
 share/pixmaps/gnomine/bang.svg
@@ -516,7 +525,7 @@ share/pixmaps/gnomine/face-worried.png
 share/pixmaps/gnomine/flag-question.svg
 share/pixmaps/gnomine/flag.svg
 share/pixmaps/gnomine/mine.svg
-share/pixmaps/gnotski-icon.png
+share/pixmaps/gnomine/warning.svg
 share/pixmaps/gnotski.svg
 share/pixmaps/gtali/gnome-dice-1.svg
 share/pixmaps/gtali/gnome-dice-2.svg
@@ -525,7 +534,6 @@ share/pixmaps/gtali/gnome-dice-4.svg
 share/pixmaps/gtali/gnome-dice-5.svg
 share/pixmaps/gtali/gnome-dice-6.svg
 share/pixmaps/gtali/gnome-dice-none.svg
-share/pixmaps/iagno.png
 share/pixmaps/iagno/classic.png
 share/pixmaps/iagno/woodtrim.png
 share/pixmaps/mahjongg/postmodern.svg
@@ -663,6 +671,9 @@ share/sounds/iagno/gameover.wav
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnome-games
 @comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/same-gnome/C
 @dirrm share/gnome/help/same-gnome
