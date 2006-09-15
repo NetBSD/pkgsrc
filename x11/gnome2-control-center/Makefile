@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2006/07/26 12:56:13 drochner Exp $
+# $NetBSD: Makefile,v 1.69 2006/09/15 15:12:40 jmmv Exp $
 #
 
-DISTNAME=	control-center-2.14.2
+DISTNAME=	control-center-2.16.0
 PKGNAME=	gnome2-${DISTNAME}
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -18,8 +18,15 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-alsa
+CONFIGURE_ARGS+=	--disable-hal
+CONFIGURE_ARGS+=	--enable-aboutme
 CONFIGURE_ARGS+=	--with-gstreamer=0.10
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+CPPFLAGS+=		-DDBUS_API_SUBJECT_TO_CHANGE
+
+PKGCONFIG_OVERRIDE+=	gnome-settings-daemon/gnome-settings-daemon.pc
+PKGCONFIG_OVERRIDE+=	libwindow-settings/gnome-window-settings-2.0.pc
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
@@ -40,8 +47,11 @@ CONF_FILES=		${EGDIR}/theme-method.conf \
 CONF_FILES+=		${EGDIR}/font-method.conf \
 			${PKG_SYSCONFDIR}/font-method.conf
 
-BUILDLINK_API_DEPENDS.glib2=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.glib2=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.gstreamer0.10=		gstreamer0.10>=0.10.1.2
+BUILDLINK_API_DEPENDS.gst-plugins0.10-base=	gst-plugins0.10-base>=0.10.1.2
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.12
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -55,10 +65,13 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.12
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
