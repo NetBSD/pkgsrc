@@ -1,30 +1,18 @@
-$NetBSD: distinfo,v 1.57 2006/07/07 00:47:39 minskim Exp $
+$NetBSD: distinfo,v 1.58 2006/09/15 15:07:40 jmmv Exp $
 
-SHA1 (gnome-vfs-2.14.2.tar.bz2) = ffd2e5f229495f55587d8499e5f2b8b8a76e5448
-RMD160 (gnome-vfs-2.14.2.tar.bz2) = e0a67e3576d72a86c898208a93ad8ee52f72f870
-Size (gnome-vfs-2.14.2.tar.bz2) = 1816194 bytes
+SHA1 (gnome-vfs-2.16.0.tar.bz2) = 4f0f6e7288c5cd2bc667f11729596e8be92376a0
+RMD160 (gnome-vfs-2.16.0.tar.bz2) = 9f4008c0e8cae26513006e4c1f1c1c126116d8ef
+Size (gnome-vfs-2.16.0.tar.bz2) = 1890562 bytes
 SHA1 (patch-aa) = a5a3ac6be3e2a888eaaab108807d2aff651e62db
 SHA1 (patch-ab) = 6320180870f234a150dfe40f8f990deec7a2a0b5
-SHA1 (patch-ac) = 515faadbf5ad3eb65fb7fbaf6eb35ae8db3d133e
-SHA1 (patch-ad) = 5df81a0bf979f710912b42883658c10d198cca87
-SHA1 (patch-ae) = b84609561dfedd1f1b55f93298f02ea841eec407
+SHA1 (patch-ae) = 87fc8b003122d386f4adbeba436fc6ffc47cd0b0
 SHA1 (patch-af) = 6724c4a43d0d9525f5361ba7380c91adbf656e56
-SHA1 (patch-ag) = 62c6b37f79abe8bb6b1e2e29e4071e32e4684900
-SHA1 (patch-ah) = 0927ade189c14472e5768b7e4775854de519f19c
 SHA1 (patch-ai) = 6afefb35bfe3fc37e84048b95ccc272a01542ec2
-SHA1 (patch-aj) = 0159ed71a69f4f15a4353d0bb9400e9341b59b9d
-SHA1 (patch-ak) = 48574a70c117cd7327eb2dab9d7b8fa924f589b8
-SHA1 (patch-al) = 4eae29462d28f0de365266e4b5f78a0fda6ca8d2
 SHA1 (patch-am) = 4e037da71db0d3aae236475a0f2ead12738f35f9
 SHA1 (patch-ao) = 0cc64574f6d430ca385f22d28690b9cea9181390
 SHA1 (patch-ap) = 98ad7700d01007510467e2ae4ee8554f54f15320
 SHA1 (patch-aq) = 1d5ed4d6c1b3a282e68bedf6892fa8a9678ea39b
 SHA1 (patch-ar) = 33bac387ffe861141f9cd6564c24956d3e9e4cb4
-SHA1 (patch-as) = 473d0980fe9b515d59deda2e43f1ce8731c4dcc7
-SHA1 (patch-at) = d4db07273901d9b45cac8ce0796aaab08e25e297
 SHA1 (patch-au) = e3c681dd445d0774981a50eb22ae14ff4db5902c
-SHA1 (patch-av) = fd25b531deea0d53f4ddb2e62d5cdb476e599fb4
-SHA1 (patch-aw) = 22801eb932f8f7e7256be3863fcd5273a7a5213e
-SHA1 (patch-ax) = 06a104c8ae3caf01a2bf6899cd2b85980c0bb26d
-SHA1 (patch-az) = 50d74fbf4973a5f6366a20b89e17bab450e73784
+SHA1 (patch-ax) = 6b9b11df5d530b7b3aa6a3997feb7c1c93e7b2db
 SHA1 (patch-ba) = 5299eb32ff0c14eb98d8f7dd5e104cd931a02b51
