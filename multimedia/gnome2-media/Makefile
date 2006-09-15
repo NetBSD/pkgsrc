@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2006/07/07 18:21:48 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2006/09/15 15:23:00 jmmv Exp $
 
-DISTNAME=		gnome-media-2.14.2
+DISTNAME=		gnome-media-2.16.1
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -18,7 +18,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config xgettext
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV+=		XGETTEXT=${TOOLS_PATH.xgettext:Q}
 
 .include "../../mk/bsd.prefs.mk"
@@ -33,8 +32,10 @@ GCONF2_SCHEMAS+=	gnome-cd.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 GCONF2_SCHEMAS+=	gnome-volume-control.schemas
 
+BUILDLINK_API_DEPENDS.esound+=			esound>=0.2.23
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.3
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.3
+BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libgnome+=		libgnomeui>=2.13.7
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 
@@ -53,7 +54,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+#.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
