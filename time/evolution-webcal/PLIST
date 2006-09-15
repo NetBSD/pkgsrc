@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2006/08/06 19:57:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/09/15 15:24:43 jmmv Exp $
 libexec/evolution-webcal
 share/gconf/schemas/evolution-webcal.schemas
 share/locale/ar/LC_MESSAGES/evolution-webcal.mo
 share/locale/az/LC_MESSAGES/evolution-webcal.mo
 share/locale/bg/LC_MESSAGES/evolution-webcal.mo
 share/locale/bn/LC_MESSAGES/evolution-webcal.mo
+share/locale/bn_IN/LC_MESSAGES/evolution-webcal.mo
 share/locale/bs/LC_MESSAGES/evolution-webcal.mo
 share/locale/ca/LC_MESSAGES/evolution-webcal.mo
 share/locale/cs/LC_MESSAGES/evolution-webcal.mo
@@ -32,7 +33,10 @@ share/locale/ka/LC_MESSAGES/evolution-webcal.mo
 share/locale/ko/LC_MESSAGES/evolution-webcal.mo
 share/locale/ky/LC_MESSAGES/evolution-webcal.mo
 share/locale/lt/LC_MESSAGES/evolution-webcal.mo
+share/locale/lv/LC_MESSAGES/evolution-webcal.mo
 share/locale/mk/LC_MESSAGES/evolution-webcal.mo
+share/locale/ml/LC_MESSAGES/evolution-webcal.mo
+share/locale/mr/LC_MESSAGES/evolution-webcal.mo
 share/locale/ms/LC_MESSAGES/evolution-webcal.mo
 share/locale/nb/LC_MESSAGES/evolution-webcal.mo
 share/locale/ne/LC_MESSAGES/evolution-webcal.mo
@@ -46,6 +50,7 @@ share/locale/ro/LC_MESSAGES/evolution-webcal.mo
 share/locale/ru/LC_MESSAGES/evolution-webcal.mo
 share/locale/rw/LC_MESSAGES/evolution-webcal.mo
 share/locale/sk/LC_MESSAGES/evolution-webcal.mo
+share/locale/sl/LC_MESSAGES/evolution-webcal.mo
 share/locale/sq/LC_MESSAGES/evolution-webcal.mo
 share/locale/sr/LC_MESSAGES/evolution-webcal.mo
 share/locale/sr@Latn/LC_MESSAGES/evolution-webcal.mo
@@ -58,5 +63,6 @@ share/locale/uk/LC_MESSAGES/evolution-webcal.mo
 share/locale/vi/LC_MESSAGES/evolution-webcal.mo
 share/locale/xh/LC_MESSAGES/evolution-webcal.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-webcal.mo
+share/locale/zh_HK/LC_MESSAGES/evolution-webcal.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-webcal.mo
 @comment in GConf2: @dirrm share/gconf/schemas
