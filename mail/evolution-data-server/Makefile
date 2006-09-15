@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2006/09/11 09:33:33 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/09/15 15:12:07 jmmv Exp $
 #
 
-DISTNAME=	evolution-data-server-1.6.3
-PKGREVISION=	1
+DISTNAME=	evolution-data-server-1.8.0
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -20,6 +19,9 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
+PYTHON_FOR_BUILD_ONLY=	YES
+PYTHON_PATCH_SCRIPTS=	addressbook/libebook/gen-western-table.py
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution-data-server
 PKG_SUPPORTED_OPTIONS=	inet6
 .include "../../mk/bsd.options.mk"
@@ -33,7 +35,6 @@ CONFIGURE_ENV+=		PTHREAD_LIB="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
 LIBS+=		-lsemaphore
 .endif
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
 CONFIGURE_ARGS+=	--with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib
 CONFIGURE_ARGS+=	--with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
@@ -69,6 +70,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
