@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/06/30 21:46:53 wiz Exp $
+$NetBSD: distinfo,v 1.3 2006/09/15 09:50:39 he Exp $
 
-SHA1 (konversation-0.19.tar.bz2) = d4463fc8413f6a6c35448ab9e600da6464bd6adf
-RMD160 (konversation-0.19.tar.bz2) = c260ca76b4fee1f7dec460caaea52c17f11e45ef
-Size (konversation-0.19.tar.bz2) = 5452000 bytes
+SHA1 (konversation-1.0.tar.bz2) = f592727626845e568696d06b3a086d4b607f4ab3
+RMD160 (konversation-1.0.tar.bz2) = 960a6bfbec3f7fc30dcb9215b10eded30dfc22e1
+Size (konversation-1.0.tar.bz2) = 5657702 bytes
 SHA1 (patch-aa) = 1143627dbe906f77a8d16195b403653e1ab2d232
-SHA1 (patch-ab) = 18564bd353515954df4c0c936fb7b84b60990007
