@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/08/06 20:44:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/15 15:25:08 jmmv Exp $
 #
 
-DISTNAME=	evolution-exchange-2.6.3
+DISTNAME=	evolution-exchange-2.8.0
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -14,8 +14,6 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/evolution-exchange
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
