@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2006/09/15 15:14:26 jmmv Exp $
+
+--- gnomevfs/Makefile.in.orig	2006-03-12 22:30:10.000000000 +0100
++++ gnomevfs/Makefile.in
+@@ -269,9 +269,9 @@ common_ldflags = -module -avoid-version
+ 
+ # libgnomevfs binding
+ pkgpyexec_LTLIBRARIES = gnomevfs.la
+-gnomevfs_la_CFLAGS = $(GNOMEVFS_CFLAGS)
++gnomevfs_la_CFLAGS = $(GNOMEVFS_CFLAGS) $(BONOBO_ACTIVATION_CFLAGS)
+ gnomevfs_la_LDFLAGS = $(common_ldflags) -export-symbols-regex initgnomevfs
+-gnomevfs_la_LIBADD = $(GNOMEVFS_LIBS)
++gnomevfs_la_LIBADD = $(GNOMEVFS_LIBS) $(BONOBO_ACTIVATION_LIBS)
+ gnomevfs_la_SOURCES = vfsmodule.c vfs-uri.c vfs-file-info.c vfs-dir-handle.c \
+  vfs-handle.c pygnomevfs.h pygnomevfs-private.h vfs-xfer-progress-info.c \
+  vfs-context.c vfs-async-handle.c vfs-volume.c vfs-drive.c vfs-volume-monitor.c
