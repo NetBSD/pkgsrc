@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2006/08/03 18:58:01 drochner Exp $
+# $NetBSD: Makefile,v 1.57 2006/09/15 15:21:29 jmmv Exp $
 #
 
-DISTNAME=		gcalctool-5.8.19
+DISTNAME=		gcalctool-5.8.24
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +19,8 @@ USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		gcalctool.schemas
+
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"
