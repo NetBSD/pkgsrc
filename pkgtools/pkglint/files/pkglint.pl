@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.673 2006/09/08 07:45:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.674 2006/09/15 12:31:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3849,10 +3849,24 @@ sub checkline_mk_varuse($$$$) {
 	}
 
 	if ($context->shellword != VUC_SHELLWORD_UNKNOWN && $needs_quoting != dont_know) {
-		my $stripped_mod = ($mod =~ qr"(.*?)(?::M\*)?(?::Q)?$") ? $1 : $mod;
-		my $correct_mod = $stripped_mod . (($varname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q");
 
-		if ($mod ne $correct_mod && $needs_quoting == true) {
+		# In GNU configure scripts, a few variables need to be
+		# passed through the :M* operator before they reach the
+		# configure scripts.
+		my $need_mstar = false;
+		if ($varname =~ regex_gnu_configure_volatile_vars) {
+			if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"GNU_CONFIGURE"})) {
+				$need_mstar = true;
+			}
+		}
+
+		my $stripped_mod = ($mod =~ qr"(.*?)(?::M\*)?(?::Q)?$") ? $1 : $mod;
+		my $correct_mod = $stripped_mod . ($need_mstar ? ":M*:Q" : ":Q");
+
+		if ($mod eq ":M*:Q" && !$need_mstar) {
+			$line->log_note("The :M* modifier is not needed here.");
+
+		} elsif ($mod ne $correct_mod && $needs_quoting == true) {
 			if ($context->shellword == VUC_SHELLWORD_PLAIN) {
 				$line->log_warning("Please use \${${varname}${correct_mod}} instead of \${${varname}${mod}}.");
 				#$line->replace("\${${varname}}", "\${${varname}:Q}");
