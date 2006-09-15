@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5451 2006/09/14 23:19:57 wiz Exp $
+$NetBSD: TODO,v 1.5452 2006/09/15 01:54:02 taca Exp $
 
 Suggested new packages
 ======================
@@ -465,6 +465,7 @@ Suggested package updates
 	o file-4.17 [pkg/34337]
 	o file-roller-2.16.0
 	o findutils-4.2.28
+	o firefox-1.5.0.7
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
 	o flyspell-1.7m
