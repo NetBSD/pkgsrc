@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/08/06 19:53:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/15 15:24:32 jmmv Exp $
 #
 
-DISTNAME=	deskbar-applet-2.14.2
+DISTNAME=	deskbar-applet-2.16.0
 CATEGORIES=	misc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -25,6 +25,8 @@ GCONF2_SCHEMAS=		deskbar-applet.schemas
 PYTHON_ACCEPTED_VERSIONS=	24
 PYTHON_PATCH_SCRIPTS=		deskbar/deskbar-applet.py
 PY_PATCHPLIST=			yes
+
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
