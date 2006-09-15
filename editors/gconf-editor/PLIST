@@ -1,26 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/09/15 15:21:40 jmmv Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
 share/gconf/schemas/gconf-editor.schemas
-share/gnome/help/gconf-editor/C/figures/entry-blank.png
-share/gnome/help/gconf-editor/C/figures/entry-bool.png
-share/gnome/help/gconf-editor/C/figures/entry-list.png
-share/gnome/help/gconf-editor/C/figures/entry-number.png
-share/gnome/help/gconf-editor/C/figures/entry-schema.png
-share/gnome/help/gconf-editor/C/figures/entry-string.png
 share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/C/gconf-editor.xml
 share/gnome/help/gconf-editor/C/legal.xml
-share/gnome/help/gconf-editor/uk/figures/entry-blank.png
-share/gnome/help/gconf-editor/uk/figures/entry-bool.png
-share/gnome/help/gconf-editor/uk/figures/entry-list.png
-share/gnome/help/gconf-editor/uk/figures/entry-number.png
-share/gnome/help/gconf-editor/uk/figures/entry-schema.png
-share/gnome/help/gconf-editor/uk/figures/entry-string.png
-share/gnome/help/gconf-editor/uk/figures/gconf_editor_anno_window.png
-share/gnome/help/gconf-editor/uk/gconf-editor.xml
-share/gnome/help/gconf-editor/uk/legal.xml
 share/icons/hicolor/48x48/apps/gconf-editor.png
 share/locale/am/LC_MESSAGES/gconf-editor.mo
 share/locale/ar/LC_MESSAGES/gconf-editor.mo
@@ -28,6 +13,7 @@ share/locale/az/LC_MESSAGES/gconf-editor.mo
 share/locale/be/LC_MESSAGES/gconf-editor.mo
 share/locale/bg/LC_MESSAGES/gconf-editor.mo
 share/locale/bn/LC_MESSAGES/gconf-editor.mo
+share/locale/bn_IN/LC_MESSAGES/gconf-editor.mo
 share/locale/br/LC_MESSAGES/gconf-editor.mo
 share/locale/bs/LC_MESSAGES/gconf-editor.mo
 share/locale/ca/LC_MESSAGES/gconf-editor.mo
@@ -35,6 +21,7 @@ share/locale/cs/LC_MESSAGES/gconf-editor.mo
 share/locale/cy/LC_MESSAGES/gconf-editor.mo
 share/locale/da/LC_MESSAGES/gconf-editor.mo
 share/locale/de/LC_MESSAGES/gconf-editor.mo
+share/locale/dz/LC_MESSAGES/gconf-editor.mo
 share/locale/el/LC_MESSAGES/gconf-editor.mo
 share/locale/en_CA/LC_MESSAGES/gconf-editor.mo
 share/locale/en_GB/LC_MESSAGES/gconf-editor.mo
@@ -54,12 +41,14 @@ share/locale/hu/LC_MESSAGES/gconf-editor.mo
 share/locale/id/LC_MESSAGES/gconf-editor.mo
 share/locale/it/LC_MESSAGES/gconf-editor.mo
 share/locale/ja/LC_MESSAGES/gconf-editor.mo
+share/locale/ka/LC_MESSAGES/gconf-editor.mo
 share/locale/kn/LC_MESSAGES/gconf-editor.mo
 share/locale/ko/LC_MESSAGES/gconf-editor.mo
 share/locale/ku/LC_MESSAGES/gconf-editor.mo
 share/locale/li/LC_MESSAGES/gconf-editor.mo
 share/locale/lt/LC_MESSAGES/gconf-editor.mo
 share/locale/lv/LC_MESSAGES/gconf-editor.mo
+share/locale/mg/LC_MESSAGES/gconf-editor.mo
 share/locale/mk/LC_MESSAGES/gconf-editor.mo
 share/locale/ml/LC_MESSAGES/gconf-editor.mo
 share/locale/mn/LC_MESSAGES/gconf-editor.mo
@@ -68,7 +57,6 @@ share/locale/ms/LC_MESSAGES/gconf-editor.mo
 share/locale/nb/LC_MESSAGES/gconf-editor.mo
 share/locale/ne/LC_MESSAGES/gconf-editor.mo
 share/locale/nl/LC_MESSAGES/gconf-editor.mo
-share/locale/no/LC_MESSAGES/gconf-editor.mo
 share/locale/or/LC_MESSAGES/gconf-editor.mo
 share/locale/pa/LC_MESSAGES/gconf-editor.mo
 share/locale/pl/LC_MESSAGES/gconf-editor.mo
@@ -95,7 +83,6 @@ share/locale/zh_CN/LC_MESSAGES/gconf-editor.mo
 share/locale/zh_HK/LC_MESSAGES/gconf-editor.mo
 share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 share/omf/gconf-editor/gconf-editor-C.omf
-share/omf/gconf-editor/gconf-editor-uk.omf
 share/pixmaps/gconf-editor/entry-blank.png
 share/pixmaps/gconf-editor/entry-bool.png
 share/pixmaps/gconf-editor/entry-list.png
@@ -110,8 +97,6 @@ share/pixmaps/gconf-editor/folder-open.png
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gconf-editor/uk/figures
-@dirrm share/gnome/help/gconf-editor/uk
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
