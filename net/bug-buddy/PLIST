@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/09/15 15:20:31 jmmv Exp $
 bin/bug-buddy
-man/man1/bug-buddy.1
-share/applications/bug-buddy-core.desktop
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.glade
+share/bug-buddy/bug-buddy.menu
 share/bug-buddy/bug-buddy.png
 share/bug-buddy/bugzilla/gnome.bugzilla
 share/bug-buddy/bugzilla/gnome/config
@@ -17,25 +16,21 @@ share/bug-buddy/gdb-cmd
 share/bug-buddy/gnome.png
 share/bug-buddy/ximian.png
 share/gconf/schemas/bug-buddy.schemas
-share/gnome/help/bug-buddy/C/bug-buddy.xml
-share/gnome/help/bug-buddy/C/legal.xml
-share/gnome/help/bug-buddy/es/bug-buddy.xml
-share/gnome/help/bug-buddy/pa/bug-buddy.xml
-share/gnome/help/bug-buddy/sr/bug-buddy.xml
-share/gnome/help/bug-buddy/uk/bug-buddy.xml
-share/gnome/help/bug-buddy/vi/bug-buddy.xml
+share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
 share/locale/az/LC_MESSAGES/bug-buddy.mo
 share/locale/be/LC_MESSAGES/bug-buddy.mo
 share/locale/bg/LC_MESSAGES/bug-buddy.mo
 share/locale/bn/LC_MESSAGES/bug-buddy.mo
+share/locale/bn_IN/LC_MESSAGES/bug-buddy.mo
 share/locale/bs/LC_MESSAGES/bug-buddy.mo
 share/locale/ca/LC_MESSAGES/bug-buddy.mo
 share/locale/cs/LC_MESSAGES/bug-buddy.mo
 share/locale/cy/LC_MESSAGES/bug-buddy.mo
 share/locale/da/LC_MESSAGES/bug-buddy.mo
 share/locale/de/LC_MESSAGES/bug-buddy.mo
+share/locale/dz/LC_MESSAGES/bug-buddy.mo
 share/locale/el/LC_MESSAGES/bug-buddy.mo
 share/locale/en_CA/LC_MESSAGES/bug-buddy.mo
 share/locale/en_GB/LC_MESSAGES/bug-buddy.mo
@@ -56,11 +51,13 @@ share/locale/id/LC_MESSAGES/bug-buddy.mo
 share/locale/is/LC_MESSAGES/bug-buddy.mo
 share/locale/it/LC_MESSAGES/bug-buddy.mo
 share/locale/ja/LC_MESSAGES/bug-buddy.mo
+share/locale/ka/LC_MESSAGES/bug-buddy.mo
 share/locale/ko/LC_MESSAGES/bug-buddy.mo
 share/locale/ku/LC_MESSAGES/bug-buddy.mo
 share/locale/ky/LC_MESSAGES/bug-buddy.mo
 share/locale/lt/LC_MESSAGES/bug-buddy.mo
 share/locale/lv/LC_MESSAGES/bug-buddy.mo
+share/locale/mg/LC_MESSAGES/bug-buddy.mo
 share/locale/mk/LC_MESSAGES/bug-buddy.mo
 share/locale/ml/LC_MESSAGES/bug-buddy.mo
 share/locale/mn/LC_MESSAGES/bug-buddy.mo
@@ -70,7 +67,6 @@ share/locale/nb/LC_MESSAGES/bug-buddy.mo
 share/locale/ne/LC_MESSAGES/bug-buddy.mo
 share/locale/nl/LC_MESSAGES/bug-buddy.mo
 share/locale/nn/LC_MESSAGES/bug-buddy.mo
-share/locale/no/LC_MESSAGES/bug-buddy.mo
 share/locale/or/LC_MESSAGES/bug-buddy.mo
 share/locale/pa/LC_MESSAGES/bug-buddy.mo
 share/locale/pl/LC_MESSAGES/bug-buddy.mo
@@ -96,24 +92,8 @@ share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_HK/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
-share/omf/bug-buddy/bug-buddy-C.omf
-share/omf/bug-buddy/bug-buddy-es.omf
-share/omf/bug-buddy/bug-buddy-pa.omf
-share/omf/bug-buddy/bug-buddy-sr.omf
-share/omf/bug-buddy/bug-buddy-uk.omf
-share/omf/bug-buddy/bug-buddy-vi.omf
-share/pixmaps/bug-buddy.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/bug-buddy
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/bug-buddy/vi
-@dirrm share/gnome/help/bug-buddy/uk
-@dirrm share/gnome/help/bug-buddy/sr
-@dirrm share/gnome/help/bug-buddy/pa
-@dirrm share/gnome/help/bug-buddy/es
-@dirrm share/gnome/help/bug-buddy/C
-@dirrm share/gnome/help/bug-buddy
-@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/bug-buddy/bugzilla/ximian
 @dirrm share/bug-buddy/bugzilla/gnome
