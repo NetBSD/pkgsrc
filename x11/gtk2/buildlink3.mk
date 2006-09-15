@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2006/07/18 13:03:25 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2006/09/15 15:06:08 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -19,8 +19,8 @@ BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
 				{ print "@comment in gtk2: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0$$/ { next; }
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
 				{ print "@comment in gtk2: " $$0; next; }
 .endif	# GTK2_BUILDLINK3_MK
 
@@ -35,6 +35,7 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|l
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
