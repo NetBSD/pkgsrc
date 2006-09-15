@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.117 2006/08/03 19:58:24 drochner Exp $
+# $NetBSD: Makefile,v 1.118 2006/09/15 15:19:34 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.14.10
+DISTNAME=	gdm-2.16.0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-DEPENDS+=	zenity>=2.14.0:../../x11/zenity
+DEPENDS+=	zenity>=2.16.0:../../x11/zenity
 
 BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.11
 
