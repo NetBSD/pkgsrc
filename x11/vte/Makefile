@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2006/07/13 23:36:18 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2006/09/15 15:16:42 jmmv Exp $
 #
 
-DISTNAME=	vte-0.12.2
+DISTNAME=	vte-0.14.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--with-ft-exec-prefix=${BUILDLINK_PREFIX.freetype2}
 
 PKGCONFIG_OVERRIDE+=	vte.pc.in
 
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 # for FC_WIDTH
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 
