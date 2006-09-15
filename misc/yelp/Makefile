@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2006/08/10 15:27:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.57 2006/09/15 15:20:16 jmmv Exp $
 #
 
-DISTNAME=		yelp-2.14.3
-PKGREVISION=		1
+DISTNAME=		yelp-2.16.0
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -34,6 +33,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 # Require a version that has the .pc files in it.
 BUILDLINK_API_DEPENDS.firefox+=     firefox>=1.5nb2
 .endif
+BUILDLINK_API_DEPENDS.gtk2+=     		gtk2+>=2.10.0
+BUILDLINK_API_DEPENDS.libgnome+=		libgnome>=2.14.0
+BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.14.0
+BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
+BUILDLINK_API_DEPENDS.libxml2+=			libxml2>=2.6.5
 
 BUILDLINK_DEPMETHOD.gnome-doc-utils+=   run
 
@@ -41,15 +45,16 @@ BUILDLINK_DEPMETHOD.gnome-doc-utils+=   run
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
