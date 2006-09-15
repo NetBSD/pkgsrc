@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/08/06 19:05:14 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2006/09/15 15:20:05 jmmv Exp $
 
-SHA1 (fast-user-switch-applet-2.14.2.tar.bz2) = e4792fc611ba02059b0e6c3ee8f5c1f1ef729763
-RMD160 (fast-user-switch-applet-2.14.2.tar.bz2) = d469ef520998dead060d64b38bb710c350b957f4
-Size (fast-user-switch-applet-2.14.2.tar.bz2) = 497832 bytes
+SHA1 (fast-user-switch-applet-2.16.0.tar.bz2) = 7e8d9bb63fb66b698054a7c40071b4dfcfa2b58a
+RMD160 (fast-user-switch-applet-2.16.0.tar.bz2) = dfdb7ad825f8e8999ef84052305718973714893e
+Size (fast-user-switch-applet-2.16.0.tar.bz2) = 682627 bytes
