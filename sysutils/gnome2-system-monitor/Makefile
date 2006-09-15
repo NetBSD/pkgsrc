@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2006/08/06 19:10:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2006/09/15 15:23:12 jmmv Exp $
 #
 
-DISTNAME=	gnome-system-monitor-2.14.5
+DISTNAME=	gnome-system-monitor-2.15.92
 PKGNAME=	${DISTNAME:S/gnome/gnome2/}
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.15/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -34,6 +34,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
