@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.126 2006/07/05 08:40:38 tron Exp $
+# $NetBSD: Makefile,v 1.127 2006/09/15 15:06:07 jmmv Exp $
 
-DISTNAME=		gtk+-2.8.20
-PKGREVISION=		1
+DISTNAME=		gtk+-2.10.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.8/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/2.8/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
+			${MASTER_SITE_GNOME:=sources/gtk+/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
@@ -15,8 +14,9 @@ COMMENT=		GIMP Toolkit v2 - libraries for building X11 user interfaces
 
 CONFLICTS=		gtk2-engines<2.6.0
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.1
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.10.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.13.0
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
 USE_DIRS+=		xdg-1.1
@@ -29,7 +29,6 @@ GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
@@ -39,6 +38,7 @@ PKGCONFIG_OVERRIDE=	gdk-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gtk+-unix-print-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
@@ -75,8 +75,9 @@ USE_TOOLS+=		gawk
 post-install:
 	${RM} -f ${GTK_IMMODULES_DB}
 	${RM} -f ${GDK_PIXBUF_LOADERS_DB}
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/immodules
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/2.4.0/filesystems
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/2.10.0/filesystems
 
 _BUILDING_GTK2=	yes
 .include "modules.mk"
