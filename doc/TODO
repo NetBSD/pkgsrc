@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5453 2006/09/15 08:17:55 ghen Exp $
+$NetBSD: TODO,v 1.5454 2006/09/15 15:36:21 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -438,8 +438,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
-	o eog2-2.16.0.1
-	o epiphany-2.16.0
 	o epiphany-extensions-2.16.0
 	o epstool-3.08
 	o eric3-3.9.1
@@ -450,8 +448,6 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o evince-0.6.0
-	o evolution-2.8.0
-	o evolution-data-server-1.8.0
 	o ex-050325
 	o exmh-2.7.2
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -463,7 +459,6 @@ Suggested package updates
 	o fetchmail-6.3.4
 	o fhist-1.14
 	o file-4.17 [pkg/34337]
-	o file-roller-2.16.0
 	o findutils-4.2.28
 	o firefox-1.5.0.7 [ghen]
 	o flashplayer-0.4.13
@@ -484,7 +479,6 @@ Suggested package updates
 	o gap-4r4p3
 	o gated-3.6
 	o gauche-0.8.7 [pkg/33675]
-	o gcalctool-5.8.23
 	o gcc-3.3.6
 	o gcc-4.1.1
 	o gcombust-0.1.55
@@ -494,7 +488,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
 	o geda-20060907
-	o gedit-2.16.0
 	o genius-0.7.6.1
 	o gentoo-0.11.56 [pkg/34341]
 	o ggiterm-0.7.1
@@ -516,23 +509,9 @@ Suggested package updates
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.16.0.1
-	o gnome-desktop-2.16.0
-	o gnome-doc-utils-0.8.0
-	o gnome-games-2.16.0
-	o gnome-icon-theme-2.16.0.1
-	o gnome-keyring-0.6.0
-	o gnome-media-2.16.1
-	o gnome-menus-2.16.0
-	o gnome-panel-2.16.0
 	o gnome-pilot-2.0.14
-	o gnome-screensaver-2.16.0
-	o gnome-session-2.16.0
-	o gnome-speech-0.4.5
 	o gnome-spell-1.0.7
-	o gnome-user-docs-2.16.0
 	o gnome-vfsmm-2.16.0
-	o gnome2-terminal-2.16.0
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
@@ -563,7 +542,6 @@ Suggested package updates
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.10.3 [wait for gnome-2.16; breaks libgnomeui-2.14.1|drochner]
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
 	o gtklife-5.0
@@ -637,8 +615,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
-	o libbonobo-2.16.0
-	o libbonoboui-2.16.0
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
@@ -654,7 +630,6 @@ Suggested package updates
 	o libglademm-2.6.3
 	o libgnomecanvasmm-2.16.0
 	o libgnomemm-2.16.0
-	o libgnomeui-2.16.0
 	o libgnomeuimm-2.16.0
 	o libgtop2-2.14.3
 	o libhydrogen-0.9.2
@@ -670,13 +645,10 @@ Suggested package updates
 	o libnotify-0.4.2 [pkg/34317]
 	o libntlm-0.3.10
 	o libprelude-0.9.10.2
-	o librsvg-2.16.0
-	o librsvg2-2.16.0
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
-	o libwnck-2.16.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o lilypond-2.8.0
@@ -703,7 +675,6 @@ Suggested package updates
 	o md-whois-4.7.15
 	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
-	o metacity-2.16.0
 	o mew-5.1
 	o mftrace-1.2.4
 	o mgetty-1.1.35
@@ -740,7 +711,6 @@ Suggested package updates
 	o muse-0.9.1
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
-	o nautilus-2.16.0
 	o nautilus-cd-burner-2.16.0
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -1226,7 +1196,6 @@ Suggested package updates
 	o vobcopy-1.0.0
 	o vp-1.6
 	o vsftpd-2.0.5
-	o vte-0.14.0
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
