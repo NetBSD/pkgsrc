@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1285 2006/09/15 09:25:13 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1286 2006/09/15 09:51:34 he Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added geography/postgresql81-postgis version 1.1.3 [gdt 2006-09-14]
 	Updated www/firefox-bin to 1.5.0.7 [ghen 2006-09-15]
 	Updated www/seamonkey-bin to 1.0.5 [ghen 2006-09-15]
+	Updated chat/konversation to 1.0 [he 2006-09-15]
