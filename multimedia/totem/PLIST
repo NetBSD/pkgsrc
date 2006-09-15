@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/07/02 11:24:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/09/15 15:23:51 jmmv Exp $
 bin/totem
 bin/totem-video-thumbnailer
 include/totem/1/plparser/totem-disc.h
@@ -71,18 +71,25 @@ share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
 share/gnome/help/totem/uk/legal.xml
 share/gnome/help/totem/uk/totem.xml
+share/icons/hicolor/16x16/apps/totem.png
+share/icons/hicolor/22x22/apps/totem.png
+share/icons/hicolor/24x24/apps/totem.png
+share/icons/hicolor/32x32/apps/totem.png
+share/icons/hicolor/scalable/apps/totem.svg
 share/locale/am/LC_MESSAGES/totem.mo
 share/locale/ar/LC_MESSAGES/totem.mo
 share/locale/az/LC_MESSAGES/totem.mo
 share/locale/be/LC_MESSAGES/totem.mo
 share/locale/bg/LC_MESSAGES/totem.mo
 share/locale/bn/LC_MESSAGES/totem.mo
+share/locale/bn_IN/LC_MESSAGES/totem.mo
 share/locale/br/LC_MESSAGES/totem.mo
 share/locale/ca/LC_MESSAGES/totem.mo
 share/locale/cs/LC_MESSAGES/totem.mo
 share/locale/cy/LC_MESSAGES/totem.mo
 share/locale/da/LC_MESSAGES/totem.mo
 share/locale/de/LC_MESSAGES/totem.mo
+share/locale/dz/LC_MESSAGES/totem.mo
 share/locale/el/LC_MESSAGES/totem.mo
 share/locale/en_CA/LC_MESSAGES/totem.mo
 share/locale/en_GB/LC_MESSAGES/totem.mo
@@ -116,6 +123,7 @@ share/locale/nb/LC_MESSAGES/totem.mo
 share/locale/ne/LC_MESSAGES/totem.mo
 share/locale/nl/LC_MESSAGES/totem.mo
 share/locale/nn/LC_MESSAGES/totem.mo
+share/locale/or/LC_MESSAGES/totem.mo
 share/locale/pa/LC_MESSAGES/totem.mo
 share/locale/pl/LC_MESSAGES/totem.mo
 share/locale/pt/LC_MESSAGES/totem.mo
@@ -124,10 +132,12 @@ share/locale/ro/LC_MESSAGES/totem.mo
 share/locale/ru/LC_MESSAGES/totem.mo
 share/locale/rw/LC_MESSAGES/totem.mo
 share/locale/sk/LC_MESSAGES/totem.mo
+share/locale/sl/LC_MESSAGES/totem.mo
 share/locale/sq/LC_MESSAGES/totem.mo
 share/locale/sr/LC_MESSAGES/totem.mo
 share/locale/sr@Latn/LC_MESSAGES/totem.mo
 share/locale/sv/LC_MESSAGES/totem.mo
+share/locale/ta/LC_MESSAGES/totem.mo
 share/locale/te/LC_MESSAGES/totem.mo
 share/locale/th/LC_MESSAGES/totem.mo
 share/locale/tr/LC_MESSAGES/totem.mo
@@ -146,12 +156,10 @@ share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-uk.omf
-share/pixmaps/media-player-48.png
 share/pixmaps/vanity.png
 share/totem/filmholes-big-left.png
 share/totem/filmholes-big-right.png
 share/totem/filmholes.png
-share/totem/media-player-48.png
 share/totem/mozilla-viewer.glade
 share/totem/playlist-playing.png
 share/totem/playlist.glade
@@ -175,6 +183,12 @@ share/totem/vanity.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/totem
 @comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/totem/uk/figures
 @dirrm share/gnome/help/totem/uk
 @dirrm share/gnome/help/totem/ru/figures

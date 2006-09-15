@@ -1,36 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/01/12 16:57:49 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2006/09/15 15:23:51 jmmv Exp $
 
---- src/plparse/totem-disc.c.orig	2005-03-13 14:37:57.000000000 +0100
-+++ src/plparse/totem-disc.c
-@@ -43,7 +43,31 @@
- #include <glib/gi18n.h>
- #include <libgnomevfs/gnome-vfs.h>
- 
-+#if defined(__linux__)
- #include <linux/cdrom.h>
-+#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
-+#include <sys/cdio.h>
-+#include <sys/disklabel.h>
-+
-+#define CDROM_DRIVE_STATUS    0x5326
-+#define CDROM_DISC_STATUS     0x5327
-+#define CDS_AUDIO             100
-+#define CDS_MIXED             105
-+#define CDS_DATA_1            101
-+#define CDS_DATA_2            102
-+#define CDS_NO_INFO           0       /* if not implemented */
-+#define CDS_NO_DISC           1
-+#define CDS_TRAY_OPEN         2
-+#define CDS_DRIVE_NOT_READY   3
-+#define CDS_DISC_OK           4
-+#define CDS_XA_2_1            103
-+#define CDS_XA_2_2            104
-+#define CDC_DVD                       0x8000
-+#define ENOMEDIUM ENODEV
-+#define CDROM_GET_CAPABILITY CDIOCCLRDEBUG
-+#else
-+#error "No support to access the CD in this platform."
-+#endif
- 
- #include "totem-disc.h"
- 
+--- Makefile.in.orig	2006-09-03 21:39:11.000000000 +0200
++++ Makefile.in
+@@ -315,7 +315,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = po data src browser-plugin help
++SUBDIRS = po data src help
+ EXTRA_DIST = \
+ 	COPYING.LIB		\
+ 	autogen.sh		\
