@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2006/05/21 18:44:46 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/09/15 15:13:55 jmmv Exp $
 
---- gobject/Makefile.in.orig	2006-05-19 11:45:01.000000000 +0000
+--- gobject/Makefile.in.orig	2006-09-04 22:47:38.000000000 +0200
 +++ gobject/Makefile.in
-@@ -793,7 +793,7 @@ info: info-am
+@@ -873,7 +873,7 @@ info: info-am
  
  info-am:
  
--install-data-am: install-pkgincludeHEADERS
-+install-data-am:
+-install-data-am: install-pkgincludeHEADERS \
++install-data-am: \
+ 	install-pygobjectLTLIBRARIES install-pygobjectPYTHON
  
- install-exec-am: install-pkgpyexecLTLIBRARIES
- 
+ install-exec-am:

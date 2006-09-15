@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/05/21 18:44:46 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2006/09/15 15:13:55 jmmv Exp $
 
---- Makefile.in.orig	2006-04-11 14:02:29.000000000 +0000
+--- Makefile.in.orig	2006-09-05 00:23:22.000000000 +0200
 +++ Makefile.in
-@@ -744,7 +744,7 @@ info: info-recursive
+@@ -747,7 +747,7 @@ info: info-recursive
  
  info-am:
  
 -install-data-am: install-data-local install-pkgconfigDATA
 +install-data-am: install-data-local
  
- install-exec-am: install-exec-local install-nodist_pyexecPYTHON \
- 	install-pkgpyexecLTLIBRARIES install-pkgpyexecPYTHON \
-@@ -807,7 +807,7 @@ uninstall-info: uninstall-info-recursive
- 
- pygtk.py: pygtk.py.in
- 	sed -e s!\@pyexecdir\@!@pyexecdir@! \
--		< $< > $@
-+		< pygtk.py.in > $@
- pygtk.py: Makefile
- 
- # install pth file.
+ install-exec-am: install-exec-local install-pkgpyexecLTLIBRARIES \
+ 	install-pkgpyexecPYTHON install-pyexecLTLIBRARIES \
