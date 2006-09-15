@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/08/28 09:03:40 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2006/09/15 15:24:16 jmmv Exp $
 
-SHA1 (gnome-keyring-manager-2.14.0.tar.bz2) = 71e25d2184351954b9d8821b98ade8828d5259bf
-RMD160 (gnome-keyring-manager-2.14.0.tar.bz2) = 799ff976f816ac4aa1339280c0bac8f38e141307
-Size (gnome-keyring-manager-2.14.0.tar.bz2) = 391387 bytes
-SHA1 (patch-aa) = 9e944fc2100ed493447daacd739a5efe3d7f3c97
+SHA1 (gnome-keyring-manager-2.16.0.tar.bz2) = 400e50c2cdfabb846221b217aeb18774ac070d40
+RMD160 (gnome-keyring-manager-2.16.0.tar.bz2) = 30592dc2369e62e1248387a3cf25a673feb3a35a
+Size (gnome-keyring-manager-2.16.0.tar.bz2) = 454066 bytes
