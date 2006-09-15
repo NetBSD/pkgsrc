@@ -1,16 +1,16 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.65 2006/06/21 11:15:14 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.66 2006/09/15 14:37:32 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
 
 display_hw_details()
     {
-    echo "  OS              : '$(uname)'"
-    echo "  hw.model        : '$hw_model'"
-    echo "  hw.machine      : '$hw_machine'"
+    echo "  OS		    : '$(uname)'"
+    echo "  hw.model	    : '$hw_model'"
+    echo "  hw.machine	    : '$hw_machine'"
     echo "  hw.machine_arch : '$hw_machine_arch'"
-    echo "  cpu details     :"
+    echo "  cpu details	    :"
     sed -n -e 's/^/    /' -e '/^    cpu/p' /var/run/dmesg.boot
     }
 
@@ -84,7 +84,7 @@ case $hw_machine_arch in
 	*AMD\ K7\ \(Athlon\)\ XP\ *)	FLAGS='-march=athlon-xp'	;;
 	*AMD\ Athlon\ XP\ *)		FLAGS='-march=athlon-xp'	;;
 	*AMD\ K7*|*AMD\ Athlon*)	FLAGS='-march=athlon'		;;
-	*AMD\ Unknown\ K7\ \(Athlon\)*)	FLAGS='-march=athlon'		;;
+	*AMD\ Unknown\ K7\ \(Athlon\)*) FLAGS='-march=athlon'		;;
 	*386-class*)			FLAGS='-march=i386'		;;
 	*486-class*)			FLAGS='-march=i486'		;;
 	*586-class*)			FLAGS='-march=pentium'		;;
@@ -99,8 +99,8 @@ case $hw_machine_arch in
 	*\(68060*|*\ MC68060\ *) FLAGS='-m68060'	;; # Upgr amiga 3000
     esac
     case "$(egrep '^fpu0 ' /var/run/dmesg.boot)" in
-	*\(emulator\)*)		FLAGS="$FLAGS -msoft-float" ;; 
-	*\(no\ math\ support\)*) FLAGS="$FLAGS -msoft-float" ;; 
+	*\(emulator\)*)		FLAGS="$FLAGS -msoft-float" ;;
+	*\(no\ math\ support\)*) FLAGS="$FLAGS -msoft-float" ;;
     esac
     ;;
 
@@ -113,7 +113,7 @@ case $hw_machine_arch in
 		*\ MIPS\ R2000\ *)	FLAGS="-march=r2000" ;;
 		*\ MIPS\ R3000\ *)	FLAGS="-march=r3000" ;;
 		*\ MIPS\ R3000A\ *)	FLAGS="-march=r3000" ;;
-		*\ Toshiba\ TX3912\ *)  FLAGS="-march=r3900" ;;
+		*\ Toshiba\ TX3912\ *)	FLAGS="-march=r3900" ;;
 		*\ Toshiba\ TX392[27]\ *) FLAGS="-march=r3900" ;;
 		*\ MIPS\ R4000\ *)	FLAGS="-mtune=r4000 -mips2" ;; # mips3
 		*\ MIPS\ R4400\ *)	FLAGS="-mtune=r4400 -mips2" ;; # mips3
@@ -140,7 +140,7 @@ case $hw_machine_arch in
 	7400\ *)		FLAGS='-mcpu=7400'	;; # AGP G4/400 Mac
 	740\ *)			FLAGS='-mcpu=740'	;; # Untested
 	7410\ *)		FLAGS='-mcpu=7400'	;; # powerbook g4
-	7447A\ *)		FLAGS='-mcpu=7450'	;; # 
+	7447A\ *)		FLAGS='-mcpu=7450'	;; #
 	7450\ *)		FLAGS='-mcpu=7450'	;; # tibook 550
 	750\ *)			FLAGS='-mcpu=750'	;; # Untested
 
