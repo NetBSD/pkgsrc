@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.20 2006/05/13 18:29:05 adam Exp $
+$NetBSD: distinfo,v 1.21 2006/09/15 15:09:32 jmmv Exp $
 
-SHA1 (librsvg-2.14.4.tar.bz2) = 9314f0d44dbfe672dc1f1a65b66821593c3bf1ce
-RMD160 (librsvg-2.14.4.tar.bz2) = 9e294f1a2e146bf30e1bde72838b8316506c9da2
-Size (librsvg-2.14.4.tar.bz2) = 415862 bytes
+SHA1 (librsvg-2.16.0.tar.bz2) = 87917ea1300ca592e9901eb99ce070bd565b0807
+RMD160 (librsvg-2.16.0.tar.bz2) = dfadfb3dcae33e4a103eaf9a7ec29362a6148d47
+Size (librsvg-2.16.0.tar.bz2) = 420858 bytes
 SHA1 (patch-aa) = 0a0b96d35f3896b3a4e31e374317de3c22945957
 SHA1 (patch-ab) = f1cbfcccd0a7d17801d2f5b60645c39e885d7c37
-SHA1 (patch-ac) = 4fed56da97fb977d12673db2f5e70ff6e76c44e4
-SHA1 (patch-ad) = 8d488d8207a695b9c36649e4a24d67de13ff59a6
+SHA1 (patch-ac) = 2fe92bde9850e772e3ddc16a94903d15871c1c49
