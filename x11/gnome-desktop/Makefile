@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2006/08/03 20:11:03 drochner Exp $
+# $NetBSD: Makefile,v 1.59 2006/09/15 15:10:45 jmmv Exp $
 #
 
-DISTNAME=		gnome-desktop-2.14.3
+DISTNAME=		gnome-desktop-2.16.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
