@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/08/03 17:37:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/09/15 15:11:07 jmmv Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
 include/eel-2/eel/eel-art-extensions.h
@@ -8,7 +8,6 @@ include/eel-2/eel/eel-background.h
 include/eel-2/eel/eel-canvas-rect-ellipse.h
 include/eel-2/eel/eel-canvas-util.h
 include/eel-2/eel/eel-canvas.h
-include/eel-2/eel/eel-cell-renderer-pixbuf-list.h
 include/eel-2/eel/eel-dateedit-extensions.h
 include/eel-2/eel/eel-debug-drawing.h
 include/eel-2/eel/eel-debug.h
@@ -54,6 +53,7 @@ share/locale/az/LC_MESSAGES/eel-2.0.mo
 share/locale/be/LC_MESSAGES/eel-2.0.mo
 share/locale/bg/LC_MESSAGES/eel-2.0.mo
 share/locale/bn/LC_MESSAGES/eel-2.0.mo
+share/locale/bn_IN/LC_MESSAGES/eel-2.0.mo
 share/locale/br/LC_MESSAGES/eel-2.0.mo
 share/locale/bs/LC_MESSAGES/eel-2.0.mo
 share/locale/ca/LC_MESSAGES/eel-2.0.mo
