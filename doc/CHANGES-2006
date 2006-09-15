@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1290 2006/09/15 15:36:21 jmmv Exp $
+>$NetBSD: CHANGES-2006,v 1.1291 2006/09/15 15:55:20 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4392,3 +4392,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/gnome-devel to 2.16.0 [jmmv 2006-09-15]
 	Updated meta-pkgs/gnome-base to 2.16.0 [jmmv 2006-09-15]
 	Updated meta-pkgs/gnome to 2.16.0 [jmmv 2006-09-15]
+	Updated www/seamonkey to 1.0.5 [ghen 2006-09-15]
+	Updated www/seamonkey-gtk1 to 1.0.5 [ghen 2006-09-15]
