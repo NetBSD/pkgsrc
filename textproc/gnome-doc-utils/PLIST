@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/26 12:54:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/09/15 15:05:52 jmmv Exp $
 bin/gnome-doc-prepare
 bin/xml2po
 lib/pkgconfig/gnome-doc-utils.pc
@@ -6,6 +6,9 @@ lib/pkgconfig/xml2po.pc
 man/man1/xml2po.1
 share/aclocal/gnome-doc-utils.m4
 share/gnome-doc-utils/gnome-doc-utils.make
+share/gnome-doc-utils/template-document.xml
+share/gnome-doc-utils/template.make
+share/gnome-doc-utils/template.omf.in
 share/xml/gnome/xslt/docbook/common/db-chunk.xsl
 share/xml/gnome/xslt/docbook/common/db-common.xsl
 share/xml/gnome/xslt/docbook/common/db-label.xsl
