@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/15 15:10:14 jmmv Exp $
 include/libgtkhtml-3.8/gtkhtml/gtkhtml-embedded.h
 include/libgtkhtml-3.8/gtkhtml/gtkhtml-enums.h
 include/libgtkhtml-3.8/gtkhtml/gtkhtml-properties.h
@@ -85,6 +85,7 @@ share/locale/az/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/be/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/bg/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/bn/LC_MESSAGES/gtkhtml-3.8.mo
+share/locale/bn_IN/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/ca/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/cs/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/cy/LC_MESSAGES/gtkhtml-3.8.mo
@@ -115,14 +116,17 @@ share/locale/ko/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/ku/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/lt/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/lv/LC_MESSAGES/gtkhtml-3.8.mo
+share/locale/mg/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/mk/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/ml/LC_MESSAGES/gtkhtml-3.8.mo
+share/locale/mn/LC_MESSAGES/gtkhtml-3.8.mo
+share/locale/mr/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/ms/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/nb/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/ne/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/nl/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/nn/LC_MESSAGES/gtkhtml-3.8.mo
-share/locale/no/LC_MESSAGES/gtkhtml-3.8.mo
+share/locale/or/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/pa/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/pl/LC_MESSAGES/gtkhtml-3.8.mo
 share/locale/pt/LC_MESSAGES/gtkhtml-3.8.mo
