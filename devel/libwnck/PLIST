@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/05/31 21:52:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/09/15 15:09:45 jmmv Exp $
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
 include/libwnck-1.0/libwnck/libwnck.h
@@ -13,46 +13,48 @@ include/libwnck-1.0/libwnck/wnck-enum-types.h
 include/libwnck-1.0/libwnck/workspace.h
 lib/libwnck-1.la
 lib/pkgconfig/libwnck-1.0.pc
-share/doc/libwnck/ch01.html
-share/doc/libwnck/home.png
-share/doc/libwnck/index.html
-share/doc/libwnck/index.sgml
-share/doc/libwnck/intro.html
-share/doc/libwnck/left.png
-share/doc/libwnck/libwnck-WnckApplication.html
-share/doc/libwnck/libwnck-WnckClassGroup.html
-share/doc/libwnck/libwnck-WnckPager.html
-share/doc/libwnck/libwnck-WnckPagerAccessible.html
-share/doc/libwnck/libwnck-WnckPagerAccessibleFactory.html
-share/doc/libwnck/libwnck-WnckScreen.html
-share/doc/libwnck/libwnck-WnckTasklist.html
-share/doc/libwnck/libwnck-WnckWindow.html
-share/doc/libwnck/libwnck-WnckWorkspace.html
-share/doc/libwnck/libwnck-WnckWorkspaceAccessible.html
-share/doc/libwnck/libwnck-WnckWorkspaceAccessibleFactory.html
-share/doc/libwnck/libwnck-private.html
-share/doc/libwnck/libwnck-util.html
-share/doc/libwnck/libwnck-window-action-menu.html
-share/doc/libwnck/libwnck-window-menu.html
-share/doc/libwnck/libwnck-wnck-enum-types.html
-share/doc/libwnck/libwnck-xutils.html
-share/doc/libwnck/libwnck.devhelp
-share/doc/libwnck/libwnck.devhelp2
-share/doc/libwnck/right.png
-share/doc/libwnck/style.css
-share/doc/libwnck/up.png
+share/gtk-doc/html/libwnck/ch01.html
+share/gtk-doc/html/libwnck/home.png
+share/gtk-doc/html/libwnck/index.html
+share/gtk-doc/html/libwnck/index.sgml
+share/gtk-doc/html/libwnck/intro.html
+share/gtk-doc/html/libwnck/left.png
+share/gtk-doc/html/libwnck/libwnck-WnckApplication.html
+share/gtk-doc/html/libwnck/libwnck-WnckClassGroup.html
+share/gtk-doc/html/libwnck/libwnck-WnckPager.html
+share/gtk-doc/html/libwnck/libwnck-WnckPagerAccessible.html
+share/gtk-doc/html/libwnck/libwnck-WnckPagerAccessibleFactory.html
+share/gtk-doc/html/libwnck/libwnck-WnckScreen.html
+share/gtk-doc/html/libwnck/libwnck-WnckTasklist.html
+share/gtk-doc/html/libwnck/libwnck-WnckWindow.html
+share/gtk-doc/html/libwnck/libwnck-WnckWorkspace.html
+share/gtk-doc/html/libwnck/libwnck-WnckWorkspaceAccessible.html
+share/gtk-doc/html/libwnck/libwnck-WnckWorkspaceAccessibleFactory.html
+share/gtk-doc/html/libwnck/libwnck-private.html
+share/gtk-doc/html/libwnck/libwnck-util.html
+share/gtk-doc/html/libwnck/libwnck-window-action-menu.html
+share/gtk-doc/html/libwnck/libwnck-window-menu.html
+share/gtk-doc/html/libwnck/libwnck-wnck-enum-types.html
+share/gtk-doc/html/libwnck/libwnck-xutils.html
+share/gtk-doc/html/libwnck/libwnck.devhelp
+share/gtk-doc/html/libwnck/libwnck.devhelp2
+share/gtk-doc/html/libwnck/right.png
+share/gtk-doc/html/libwnck/style.css
+share/gtk-doc/html/libwnck/up.png
 share/locale/am/LC_MESSAGES/libwnck.mo
 share/locale/ar/LC_MESSAGES/libwnck.mo
 share/locale/az/LC_MESSAGES/libwnck.mo
 share/locale/be/LC_MESSAGES/libwnck.mo
 share/locale/bg/LC_MESSAGES/libwnck.mo
 share/locale/bn/LC_MESSAGES/libwnck.mo
+share/locale/bn_IN/LC_MESSAGES/libwnck.mo
 share/locale/bs/LC_MESSAGES/libwnck.mo
 share/locale/ca/LC_MESSAGES/libwnck.mo
 share/locale/cs/LC_MESSAGES/libwnck.mo
 share/locale/cy/LC_MESSAGES/libwnck.mo
 share/locale/da/LC_MESSAGES/libwnck.mo
 share/locale/de/LC_MESSAGES/libwnck.mo
+share/locale/dz/LC_MESSAGES/libwnck.mo
 share/locale/el/LC_MESSAGES/libwnck.mo
 share/locale/en_CA/LC_MESSAGES/libwnck.mo
 share/locale/en_GB/LC_MESSAGES/libwnck.mo
@@ -116,6 +118,6 @@ share/locale/xh/LC_MESSAGES/libwnck.mo
 share/locale/zh_CN/LC_MESSAGES/libwnck.mo
 share/locale/zh_HK/LC_MESSAGES/libwnck.mo
 share/locale/zh_TW/LC_MESSAGES/libwnck.mo
-@dirrm share/doc/libwnck
+@dirrm share/gtk-doc/html/libwnck
 @dirrm include/libwnck-1.0/libwnck
 @dirrm include/libwnck-1.0

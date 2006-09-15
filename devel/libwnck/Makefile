@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2006/08/03 17:39:29 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2006/09/15 15:09:45 jmmv Exp $
 #
 
-DISTNAME=	libwnck-2.14.3
+DISTNAME=	libwnck-2.16.0
 CATEGORIES=	devel x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libwnck/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libwnck/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	libwnck-1.0.pc.in
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
