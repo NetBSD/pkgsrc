@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2006/08/06 19:04:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2006/09/15 15:15:13 jmmv Exp $
 #
 
-DISTNAME=		gnome-themes-2.14.3
+DISTNAME=		gnome-themes-2.16.0
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-pre-install:
+dont-pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/Smokey-Red
 .for f in 96x96/filesystems 72x72/filesystems 64x64/filesystems \
     48x48/filesystems 48x48/emblems
@@ -51,9 +51,8 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/Crux/${f}
 .endfor
 
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../wm/metacity/buildlink3.mk"
+.include "../../graphics/icon-naming-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2-engines/buildlink3.mk"
 
