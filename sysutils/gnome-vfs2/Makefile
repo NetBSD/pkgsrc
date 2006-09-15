@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/04/27 21:14:34 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2006/09/15 15:07:40 jmmv Exp $
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
@@ -25,15 +25,7 @@ CONFIGURE_ARGS+=	--enable-fam
 .include "../../devel/GConf2/schemas.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../mk/fam.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
