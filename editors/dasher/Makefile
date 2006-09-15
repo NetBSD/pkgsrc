@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2006/08/06 19:08:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/15 15:20:56 jmmv Exp $
 
-DISTNAME=	dasher-4.0.4
+DISTNAME=	dasher-4.2.0
 CATEGORIES=	editors gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,8 +23,12 @@ GNU_CONFIGURE=		yes
 LIBS+=			-lcompat
 .endif
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
+
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -39,6 +43,7 @@ LIBS+=			-lcompat
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
