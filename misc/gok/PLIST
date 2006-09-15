@@ -1,65 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/06 19:08:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/09/15 15:22:05 jmmv Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
 lib/pkgconfig/gok-1.0.pc
 share/applications/gok.desktop
-share/doc/gok/ch01.html
-share/doc/gok/gok-GokButton.html
-share/doc/gok/gok-arraylist.html
-share/doc/gok/gok-callbacks.html
-share/doc/gok/gok-command-common.html
-share/doc/gok/gok-command-edge-data.html
-share/doc/gok/gok-command-edge.html
-share/doc/gok/gok-command-graph.html
-share/doc/gok/gok-command-predictor.html
-share/doc/gok/gok-command-vertex-data.html
-share/doc/gok/gok-command-vertex.html
-share/doc/gok/gok-global.html
-share/doc/gok/gok-gok-action.html
-share/doc/gok/gok-gok-branchback-stack.html
-share/doc/gok/gok-gok-chunker.html
-share/doc/gok/gok-gok-control.html
-share/doc/gok/gok-gok-data.html
-share/doc/gok/gok-gok-editor.html
-share/doc/gok/gok-gok-feedback.html
-share/doc/gok/gok-gok-gconf.html
-share/doc/gok/gok-gok-key.html
-share/doc/gok/gok-gok-keyboard.html
-share/doc/gok/gok-gok-keyslotter.html
-share/doc/gok/gok-gok-log-priv.html
-share/doc/gok/gok-gok-log-reader.html
-share/doc/gok/gok-gok-log.html
-share/doc/gok/gok-gok-modifier.html
-share/doc/gok/gok-gok-output.html
-share/doc/gok/gok-gok-page-accessmethod.html
-share/doc/gok/gok-gok-page-actions.html
-share/doc/gok/gok-gok-page-feedbacks.html
-share/doc/gok/gok-gok-page-keysizespace.html
-share/doc/gok/gok-gok-page-wordcomplete.html
-share/doc/gok/gok-gok-predictor.html
-share/doc/gok/gok-gok-scanner.html
-share/doc/gok/gok-gok-settings-dialog.html
-share/doc/gok/gok-gok-sound.html
-share/doc/gok/gok-gok-spy-priv.html
-share/doc/gok/gok-gok-spy.html
-share/doc/gok/gok-gok-word-complete.html
-share/doc/gok/gok-gok.html
-share/doc/gok/gok-gtkjoyswitch.html
-share/doc/gok/gok-interface.html
-share/doc/gok/gok-main.html
-share/doc/gok/gok-support.html
-share/doc/gok/gok-switchapi.html
-share/doc/gok/gok-word-complete.html
-share/doc/gok/gok.devhelp
-share/doc/gok/gok.devhelp2
-share/doc/gok/home.png
-share/doc/gok/index.html
-share/doc/gok/index.sgml
-share/doc/gok/left.png
-share/doc/gok/right.png
-share/doc/gok/style.css
-share/doc/gok/up.png
 share/gconf/schemas/gok.schemas
 share/gnome/help/gok/C/gok.xml
 share/gnome/help/gok/C/legal.xml
@@ -133,6 +77,16 @@ share/gok/bn/numberpad.kbd
 share/gok/bn/quit.kbd
 share/gok/bn/text-operations.kbd
 share/gok/bn/valuator.kbd
+share/gok/bn_IN/gok-controls.kbd
+share/gok/bn_IN/hide.kbd
+share/gok/bn_IN/launcher.kbd
+share/gok/bn_IN/main.kbd
+share/gok/bn_IN/mouse.kbd
+share/gok/bn_IN/move-resize.kbd
+share/gok/bn_IN/numberpad.kbd
+share/gok/bn_IN/quit.kbd
+share/gok/bn_IN/text-operations.kbd
+share/gok/bn_IN/valuator.kbd
 share/gok/ca/gok-controls.kbd
 share/gok/ca/hide.kbd
 share/gok/ca/launcher.kbd
@@ -430,6 +384,16 @@ share/gok/lt/numberpad.kbd
 share/gok/lt/quit.kbd
 share/gok/lt/text-operations.kbd
 share/gok/lt/valuator.kbd
+share/gok/lv/gok-controls.kbd
+share/gok/lv/hide.kbd
+share/gok/lv/launcher.kbd
+share/gok/lv/main.kbd
+share/gok/lv/mouse.kbd
+share/gok/lv/move-resize.kbd
+share/gok/lv/numberpad.kbd
+share/gok/lv/quit.kbd
+share/gok/lv/text-operations.kbd
+share/gok/lv/valuator.kbd
 share/gok/main.kbd
 share/gok/manage.kbd
 share/gok/mk/gok-controls.kbd
@@ -464,6 +428,16 @@ share/gok/mn/text-operations.kbd
 share/gok/mn/valuator.kbd
 share/gok/mouse.kbd
 share/gok/move-resize.kbd
+share/gok/mr/gok-controls.kbd
+share/gok/mr/hide.kbd
+share/gok/mr/launcher.kbd
+share/gok/mr/main.kbd
+share/gok/mr/mouse.kbd
+share/gok/mr/move-resize.kbd
+share/gok/mr/numberpad.kbd
+share/gok/mr/quit.kbd
+share/gok/mr/text-operations.kbd
+share/gok/mr/valuator.kbd
 share/gok/ms/gok-controls.kbd
 share/gok/ms/hide.kbd
 share/gok/ms/launcher.kbd
@@ -505,6 +479,16 @@ share/gok/nl/quit.kbd
 share/gok/nl/text-operations.kbd
 share/gok/nl/valuator.kbd
 share/gok/numberpad.kbd
+share/gok/or/gok-controls.kbd
+share/gok/or/hide.kbd
+share/gok/or/launcher.kbd
+share/gok/or/main.kbd
+share/gok/or/mouse.kbd
+share/gok/or/move-resize.kbd
+share/gok/or/numberpad.kbd
+share/gok/or/quit.kbd
+share/gok/or/text-operations.kbd
+share/gok/or/valuator.kbd
 share/gok/pa/gok-controls.kbd
 share/gok/pa/hide.kbd
 share/gok/pa/launcher.kbd
@@ -698,12 +682,71 @@ share/gok/zh_TW/numberpad.kbd
 share/gok/zh_TW/quit.kbd
 share/gok/zh_TW/text-operations.kbd
 share/gok/zh_TW/valuator.kbd
+share/gtk-doc/html/gok/ch01.html
+share/gtk-doc/html/gok/ch02.html
+share/gtk-doc/html/gok/ch03.html
+share/gtk-doc/html/gok/ch04.html
+share/gtk-doc/html/gok/gok-arraylist.html
+share/gtk-doc/html/gok/gok-callbacks.html
+share/gtk-doc/html/gok/gok-command-common.html
+share/gtk-doc/html/gok/gok-command-edge-data.html
+share/gtk-doc/html/gok/gok-command-edge.html
+share/gtk-doc/html/gok/gok-command-graph.html
+share/gtk-doc/html/gok/gok-command-predictor.html
+share/gtk-doc/html/gok/gok-command-vertex-data.html
+share/gtk-doc/html/gok/gok-command-vertex.html
+share/gtk-doc/html/gok/gok-global.html
+share/gtk-doc/html/gok/gok-gok-action.html
+share/gtk-doc/html/gok/gok-gok-branchback-stack.html
+share/gtk-doc/html/gok/gok-gok-chunker.html
+share/gtk-doc/html/gok/gok-gok-control.html
+share/gtk-doc/html/gok/gok-gok-data.html
+share/gtk-doc/html/gok/gok-gok-editor.html
+share/gtk-doc/html/gok/gok-gok-feedback.html
+share/gtk-doc/html/gok/gok-gok-gconf.html
+share/gtk-doc/html/gok/gok-gok-key.html
+share/gtk-doc/html/gok/gok-gok-keyboard.html
+share/gtk-doc/html/gok/gok-gok-keyslotter.html
+share/gtk-doc/html/gok/gok-gok-log-priv.html
+share/gtk-doc/html/gok/gok-gok-log-reader.html
+share/gtk-doc/html/gok/gok-gok-log.html
+share/gtk-doc/html/gok/gok-gok-modifier.html
+share/gtk-doc/html/gok/gok-gok-output.html
+share/gtk-doc/html/gok/gok-gok-page-accessmethod.html
+share/gtk-doc/html/gok/gok-gok-page-actions.html
+share/gtk-doc/html/gok/gok-gok-page-feedbacks.html
+share/gtk-doc/html/gok/gok-gok-page-keysizespace.html
+share/gtk-doc/html/gok/gok-gok-page-wordcomplete.html
+share/gtk-doc/html/gok/gok-gok-predictor.html
+share/gtk-doc/html/gok/gok-gok-scanner.html
+share/gtk-doc/html/gok/gok-gok-settings-dialog.html
+share/gtk-doc/html/gok/gok-gok-sound.html
+share/gtk-doc/html/gok/gok-gok-spy-priv.html
+share/gtk-doc/html/gok/gok-gok-spy.html
+share/gtk-doc/html/gok/gok-gok-word-complete.html
+share/gtk-doc/html/gok/gok-gok.html
+share/gtk-doc/html/gok/gok-gtkjoyswitch.html
+share/gtk-doc/html/gok/gok-interface.html
+share/gtk-doc/html/gok/gok-main.html
+share/gtk-doc/html/gok/gok-support.html
+share/gtk-doc/html/gok/gok-switchapi.html
+share/gtk-doc/html/gok/gok-word-complete.html
+share/gtk-doc/html/gok/gok.devhelp
+share/gtk-doc/html/gok/gok.devhelp2
+share/gtk-doc/html/gok/home.png
+share/gtk-doc/html/gok/index.html
+share/gtk-doc/html/gok/index.sgml
+share/gtk-doc/html/gok/left.png
+share/gtk-doc/html/gok/right.png
+share/gtk-doc/html/gok/style.css
+share/gtk-doc/html/gok/up.png
 share/locale/am/LC_MESSAGES/gok.mo
 share/locale/ar/LC_MESSAGES/gok.mo
 share/locale/az/LC_MESSAGES/gok.mo
 share/locale/be/LC_MESSAGES/gok.mo
 share/locale/bg/LC_MESSAGES/gok.mo
 share/locale/bn/LC_MESSAGES/gok.mo
+share/locale/bn_IN/LC_MESSAGES/gok.mo
 share/locale/ca/LC_MESSAGES/gok.mo
 share/locale/cs/LC_MESSAGES/gok.mo
 share/locale/cy/LC_MESSAGES/gok.mo
@@ -732,13 +775,16 @@ share/locale/ka/LC_MESSAGES/gok.mo
 share/locale/ko/LC_MESSAGES/gok.mo
 share/locale/ku/LC_MESSAGES/gok.mo
 share/locale/lt/LC_MESSAGES/gok.mo
+share/locale/lv/LC_MESSAGES/gok.mo
 share/locale/mk/LC_MESSAGES/gok.mo
 share/locale/ml/LC_MESSAGES/gok.mo
 share/locale/mn/LC_MESSAGES/gok.mo
+share/locale/mr/LC_MESSAGES/gok.mo
 share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nb/LC_MESSAGES/gok.mo
 share/locale/ne/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
+share/locale/or/LC_MESSAGES/gok.mo
 share/locale/pa/LC_MESSAGES/gok.mo
 share/locale/pl/LC_MESSAGES/gok.mo
 share/locale/pt/LC_MESSAGES/gok.mo
@@ -762,6 +808,7 @@ share/pixmaps/gok.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gok
 @comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gtk-doc/html/gok
 @dirrm share/gok/zh_TW
 @dirrm share/gok/zh_HK
 @dirrm share/gok/zh_CN
@@ -780,13 +827,16 @@ share/pixmaps/gok.png
 @dirrm share/gok/pt
 @dirrm share/gok/pl
 @dirrm share/gok/pa
+@dirrm share/gok/or
 @dirrm share/gok/nl
 @dirrm share/gok/ne
 @dirrm share/gok/nb
 @dirrm share/gok/ms
+@dirrm share/gok/mr
 @dirrm share/gok/mn
 @dirrm share/gok/ml
 @dirrm share/gok/mk
+@dirrm share/gok/lv
 @dirrm share/gok/lt
 @dirrm share/gok/ku
 @dirrm share/gok/ko
@@ -816,6 +866,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/cy
 @dirrm share/gok/cs
 @dirrm share/gok/ca
+@dirrm share/gok/bn_IN
 @dirrm share/gok/bn
 @dirrm share/gok/bg
 @dirrm share/gok/be
@@ -827,6 +878,5 @@ share/pixmaps/gok.png
 @dirrm share/gnome/help/gok
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/doc/gok
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
