@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5454 2006/09/15 15:36:21 jmmv Exp $
+$NetBSD: TODO,v 1.5455 2006/09/15 15:56:24 ghen Exp $
 
 Suggested new packages
 ======================
@@ -460,7 +460,6 @@ Suggested package updates
 	o fhist-1.14
 	o file-4.17 [pkg/34337]
 	o findutils-4.2.28
-	o firefox-1.5.0.7 [ghen]
 	o flashplayer-0.4.13
 	o fluxbox-1.0rc
 	o flyspell-1.7m
@@ -1085,7 +1084,6 @@ Suggested package updates
 	o scribus-1.2.5
 	o sdig-0.40
 	o seahorse-0.8.2
-	o seamonkey-1.0.5 [ghen]
 	o sendfile-20010424
 	o sharity-3.2
 	o sharity-light-1.3
@@ -1155,7 +1153,6 @@ Suggested package updates
 	o ted-2.17
 	o texmaker-1.4
 	o tfmxplay-1.1.6
-	o thunderbird-1.5.0.7 [ghen]
 	o tightvnc-1.3.8
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
