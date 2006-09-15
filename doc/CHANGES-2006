@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1287 2006/09/15 13:01:54 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1288 2006/09/15 13:56:54 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4317,3 +4317,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey-bin to 1.0.5 [ghen 2006-09-15]
 	Updated chat/konversation to 1.0 [he 2006-09-15]
 	Added shells/mksh version 28 [joerg 2006-09-15]
+	Updated www/firefox to 1.5.0.7 [ghen 2006-09-15]
+	Updated www/firefox-gtk1 to 1.5.0.7 [ghen 2006-09-15]
+	Updated mail/thunderbird to 1.5.0.7 [ghen 2006-09-15]
+	Updated mail/thunderbird-gtk1 to 1.5.0.7 [ghen 2006-09-15]
