@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/09/15 15:09:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.62 2006/09/15 17:09:22 drochner Exp $
 #
 
 DISTNAME=	libgnomeui-2.16.0
@@ -17,8 +17,6 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_LIBTOOL=		yes
-
-CONFIGURE_ARGS+=	--disable-gtk-doc
 
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
