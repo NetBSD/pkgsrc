@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/07/08 23:10:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/09/15 15:24:57 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 EVOLUTION_BUILDLINK3_MK:=	${EVOLUTION_BUILDLINK3_MK}+
@@ -12,16 +12,15 @@ BUILDLINK_PACKAGES+=	evolution
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}evolution
 
 .if !empty(EVOLUTION_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.6.0
-BUILDLINK_ABI_DEPENDS.evolution?=	evolution>=2.6.0nb3
+BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.8.0
 BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
 .endif	# EVOLUTION_BUILDLINK3_MK
 
-PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution\/2.6$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution\/2.8$$/ \
 				{ print "@comment in evolution: " $$0; next }
 PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution$$/ \
 				{ print "@comment in evolution: " $$0; next }
-PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution\/2.6$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution\/2.8$$/ \
 				{ print "@comment in evolution: " $$0; next }
 PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution$$/ \
 				{ print "@comment in evolution: " $$0; next }

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2006/08/23 09:49:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.113 2006/09/15 15:24:57 jmmv Exp $
 
-DISTNAME=		evolution-2.6.3
-PKGREVISION=		1
+DISTNAME=		evolution-2.8.0
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -44,7 +43,6 @@ CONFIGURE_ARGS+=	--enable-openssl=no
 CONFIGURE_ARGS+=	--enable-pilot-conduits=no
 CONFIGURE_ARGS+=	--with-krb4=/usr
 CONFIGURE_ARGS+=	--with-krb5=/usr
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 .if defined(PKGREVISION)
 CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
 .endif
@@ -96,11 +94,11 @@ PLIST_SUBST+=		HAVE_SMIME="@comment "
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
-GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.6.schemas
-GCONF2_SCHEMAS+=	apps_evolution_addressbook-2.6.schemas
-GCONF2_SCHEMAS+=	apps_evolution_calendar-2.6.schemas
-GCONF2_SCHEMAS+=	apps_evolution_shell-2.6.schemas
-GCONF2_SCHEMAS+=	evolution-mail-2.6.schemas
+GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.8.schemas
+GCONF2_SCHEMAS+=	apps_evolution_addressbook-2.8.schemas
+GCONF2_SCHEMAS+=	apps_evolution_calendar-2.8.schemas
+GCONF2_SCHEMAS+=	apps_evolution_shell-2.8.schemas
+GCONF2_SCHEMAS+=	evolution-mail-2.8.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
