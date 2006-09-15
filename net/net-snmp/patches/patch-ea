@@ -1,0 +1,454 @@
+$NetBSD: patch-ea,v 1.1 2006/09/15 20:13:55 christos Exp $
+
+--- snmplib/snmp_api.c.orig	2006-03-09 17:01:14.000000000 -0500
++++ snmplib/snmp_api.c	2006-09-15 11:59:02.723578061 -0400
+@@ -6781,7 +6781,7 @@
+         }
+ #endif /* DISABLE_MIB_LOADING */
+         atmp = inet_addr(value);
+-        if (atmp != (long) -1 || !strcmp(value, "255.255.255.255"))
++        if (atmp != (in_addr_t) -1 || !strcmp(value, "255.255.255.255"))
+             snmp_pdu_add_variable(pdu, name, name_length, ASN_IPADDRESS,
+                                   (u_char *) & atmp, sizeof(atmp));
+         else
+--- snmplib/md5.c.orig	2004-04-19 18:09:07.000000000 -0400
++++ snmplib/md5.c	2006-09-15 12:00:18.530062610 -0400
+@@ -465,7 +465,7 @@
+         goto update_end;
+ 
+     i = len;
+-    if (((unsigned int) data) % sizeof(long) != 0) {
++    if (((unsigned long) data) % sizeof(int) != 0) {
+         /*
+          * this relies on the ability to use integer math and thus we
+          * must rely on data that aligns on 32-bit-word-boundries 
+--- snmplib/text_utils.c.orig	2006-03-09 15:57:35.000000000 -0500
++++ snmplib/text_utils.c	2006-09-15 12:03:41.664878785 -0400
+@@ -461,7 +461,7 @@
+     /*
+      * get value
+      */
+-    switch((int)lpi->user_context) {
++    switch((int)(long)lpi->user_context) {
+ 
+         case PMLP_TYPE_UNSIGNED:
+             tvi->value.ul = strtoul(ptr, NULL, 0);
+@@ -497,7 +497,7 @@
+ 
+         default:
+             snmp_log(LOG_ERR,"unsupported value type %d\n",
+-                     (int)lpi->user_context);
++                     (int)(long)lpi->user_context);
+             break;
+     }
+     
+--- snmplib/scapi.c.orig	2006-01-30 07:08:15.000000000 -0500
++++ snmplib/scapi.c	2006-09-15 12:05:52.357854147 -0400
+@@ -272,7 +272,7 @@
+ 
+     u_char          buf[SNMP_MAXBUF_SMALL];
+ #if  defined(USE_OPENSSL) || defined(USE_PKCS)
+-    size_t             buf_len = sizeof(buf);
++    unsigned int    buf_len = sizeof(buf);
+ #endif
+ 
+     DEBUGTRACE;
+--- snmplib/container_binary_array.c.orig	2005-12-11 14:13:15.000000000 -0500
++++ snmplib/container_binary_array.c	2006-09-15 12:06:45.271966359 -0400
+@@ -405,7 +405,7 @@
+     /*
+      * Insert the new entry into the data array
+      */
+-    t->data[t->count++] = entry;
++    t->data[t->count++] = (void *)(unsigned long)entry;
+     t->dirty = 1;
+     return 0;
+ }
+--- include/net-snmp/types.h.orig	2006-05-26 12:36:06.000000000 -0400
++++ include/net-snmp/types.h	2006-09-15 12:14:05.096058400 -0400
+@@ -162,7 +162,7 @@
+  */
+ 
+     typedef struct netsnmp_index_s {
+-       int          len;
++       size_t       len;
+        oid         *oids;
+     } netsnmp_index;
+ 
+--- snmplib/snmp_logging.c.orig	2006-01-25 11:27:41.000000000 -0500
++++ snmplib/snmp_logging.c	2006-09-15 13:26:28.786672010 -0400
+@@ -380,7 +380,7 @@
+             if (facility == -1)  return -1;
+             logh->pri_max = pri_max;
+             logh->token   = strdup(snmp_log_syslogname(0));
+-            logh->magic   = (void *)facility;
++            logh->magic   = (void *)(long)facility;
+ 	    snmp_enable_syslog_ident(snmp_log_syslogname(0), facility);
+ 	}
+         break;
+@@ -600,7 +600,7 @@
+             continue;
+         if (logh->type == NETSNMP_LOGHANDLER_SYSLOG) {
+             snmp_disable_syslog_entry(logh);
+-            snmp_enable_syslog_ident(logh->token,(int)logh->magic);
++            snmp_enable_syslog_ident(logh->token,(int)(long)logh->magic);
+         }
+         else if (logh->type == NETSNMP_LOGHANDLER_FILE) {
+             snmp_disable_filelog_entry(logh);
+@@ -1016,7 +1016,7 @@
+ 	 */
+     if (!(logh->imagic)) {
+         const char *ident    = logh->token;
+-        int   facility = (int)logh->magic;
++        int   facility = (int)(long)logh->magic;
+         if (!ident)
+             ident = netsnmp_ds_get_string(NETSNMP_DS_LIBRARY_ID,
+                                           NETSNMP_DS_LIB_APPTYPE);
+--- agent/helpers/row_merge.c.orig	2006-01-25 11:26:38.000000000 -0500
++++ agent/helpers/row_merge.c	2006-09-15 13:29:02.792124486 -0400
+@@ -31,7 +31,7 @@
+     ret = netsnmp_create_handler("row_merge",
+                                   netsnmp_row_merge_helper_handler);
+     if (ret) {
+-        ret->myvoid = (void *) prefix_len;
++        ret->myvoid = (void *)(long)prefix_len;
+     }
+     return ret;
+ }
+@@ -165,7 +165,7 @@
+      * Use the prefix length as supplied during registration, rather
+      *  than trying to second-guess what the MIB implementer wanted.
+      */
+-    int SKIP_OID = (int)handler->myvoid;
++    int SKIP_OID = (int)(long)handler->myvoid;
+ 
+     DEBUGMSGTL(("helper:row_merge", "Got request (%d): ", SKIP_OID));
+     DEBUGMSGOID(("helper:row_merge", reginfo->rootoid, reginfo->rootoid_len));
+--- agent/mibgroup/ucd-snmp/pass.c.orig	2006-09-15 13:32:02.702526885 -0400
++++ agent/mibgroup/ucd-snmp/pass.c	2006-09-15 13:31:29.416161961 -0400
+@@ -163,6 +163,7 @@
+ {
+     struct extensible **ppass = &passthrus, **etmp, *ptmp;
+     char           *tcptr, *endopt;
++    long	    priorl;
+     int             i, priority;
+ 
+     /*
+@@ -180,10 +181,12 @@
+ 	  config_perror("priority must be an integer");
+ 	  return;
+ 	}
+-	priority = strtol((const char*) cptr, &endopt, 0);
+-	if ((priority == LONG_MIN) || (priority == LONG_MAX)) {
++	priorl = strtol((const char*) cptr, &endopt, 0);
++	if ((priorl <= INT_MIN) || (priorl >= INT_MAX)) {
+ 	  config_perror("priority under/overflow");
+ 	  return;
++	} else {
++	  priority = (int)priorl;
+ 	}
+ 	cptr = endopt;
+ 	cptr = skip_white(cptr);
+--- agent/mibgroup/ucd-snmp/pass_persist.c.orig	2005-10-03 07:52:44.000000000 -0400
++++ agent/mibgroup/ucd-snmp/pass_persist.c	2006-09-15 13:33:19.013118652 -0400
+@@ -89,6 +89,7 @@
+ {
+     struct extensible **ppass = &persistpassthrus, **etmp, *ptmp;
+     char           *tcptr, *endopt;
++    long	    priorl;
+     int             i, priority;
+ 
+     /*
+@@ -106,10 +107,12 @@
+ 	  config_perror("priority must be an integer");
+ 	  return;
+ 	}
+-	priority = strtol((const char*) cptr, &endopt, 0);
+-	if ((priority == LONG_MIN) || (priority == LONG_MAX)) {
++	priorl = strtol((const char*) cptr, &endopt, 0);
++	if ((priorl <= INT_MIN) || (priorl >= INT_MAX)) {
+ 	  config_perror("priority under/overflow");
+ 	  return;
++	} else {
++	  priority = (int)priorl;
+ 	}
+ 	cptr = endopt;
+ 	cptr = skip_white(cptr);
+--- ./agent/mibgroup/agent/nsDebug.c.orig	2005-04-21 09:32:20.000000000 -0400
++++ ./agent/mibgroup/agent/nsDebug.c	2006-09-15 13:34:51.994897981 -0400
+@@ -291,7 +291,7 @@
+ 
+     snmp_set_var_value(index, dbg_tokens[i].token_name,
+ 		       strlen(dbg_tokens[i].token_name));
+-    *loop_context = (void*)i;
++    *loop_context = (void*)(long)i;
+     *data_context = (void*)&dbg_tokens[i];
+     return index;
+ }
+@@ -301,7 +301,7 @@
+                       netsnmp_variable_list *index,
+                       netsnmp_iterator_info *data)
+ {
+-    int i = (int)*loop_context;
++    int i = (int)(long)*loop_context;
+ 
+     for (i++; i<debug_num_tokens; i++) {
+         /* skip excluded til mib is updated */
+@@ -313,7 +313,7 @@
+ 
+     snmp_set_var_value(index, dbg_tokens[i].token_name,
+ 		       strlen(dbg_tokens[i].token_name));
+-    *loop_context = (void*)i;
++    *loop_context = (void*)(long)i;
+     *data_context = (void*)&dbg_tokens[i];
+     return index;
+ }
+--- ./agent/mibgroup/host/hr_device.c.orig	2005-11-17 20:44:47.000000000 -0500
++++ ./agent/mibgroup/host/hr_device.c	2006-09-15 13:35:43.824808435 -0400
+@@ -222,7 +222,7 @@
+ {
+     int             dev_idx, type;
+     oid            *oid_p;
+-    char           *tmp_str;
++    const char           *tmp_str;
+     static char     string[1024];
+ 
+     dev_idx =
+--- ./agent/mibgroup/util_funcs.c.orig	2005-12-05 07:15:27.000000000 -0500
++++ ./agent/mibgroup/util_funcs.c	2006-09-15 13:37:10.161316785 -0400
+@@ -237,7 +237,7 @@
+ #if HAVE_EXECV
+     char            cachefile[STRMAX];
+     char            cache[MAXCACHESIZE];
+-    ssize_t         cachebytes;
++    int             cachebytes;
+     int             cfd;
+ #ifdef EXCACHETIME
+     long            curtime;
+--- ./agent/mibgroup/if-mib/ifTable/ifTable_interface.c.orig	2006-02-10 17:58:26.000000000 -0500
++++ ./agent/mibgroup/if-mib/ifTable/ifTable_interface.c	2006-09-15 13:40:07.507226461 -0400
+@@ -1409,7 +1409,7 @@
+         netsnmp_assert(NULL != dl);
+         ++(*(int*)&dl->data);
+         DEBUGMSGTL(("internal:ifTable:_mfd_ifTable_undo_setup_allocate",
+-                    "++refcount = %d\n",(int)dl->data));
++                    "++refcount = %d\n",(int)(long)dl->data));
+     }
+ 
+     return rc;
+@@ -1487,9 +1487,9 @@
+         return; /* better to lead than double free */
+ 
+     --(*(int*)&dl->data);
+-    snmp_log(LOG_ERR, "--refcount at %d\n", (int)dl->data);
++    snmp_log(LOG_ERR, "--refcount at %d\n", (int)(long)dl->data);
+ 
+-    if (0 == (int)dl->data) {
++    if (0 == (int)(long)dl->data) {
+         netsnmp_access_interface_entry_free(rowreq_ctx->undo->ifentry);
+         ifTable_release_data(rowreq_ctx->undo);
+         rowreq_ctx->undo = NULL;
+--- agent/agent_registry.c.orig	2006-06-13 08:50:36.000000000 -0400
++++ agent/agent_registry.c	2006-09-15 13:45:00.415231055 -0400
+@@ -1458,7 +1458,7 @@
+     lookup_cache *lookup_cache = NULL;
+     netsnmp_subtree *myptr = NULL, *previous = NULL;
+     int cmp = 1;
+-    int ll_off = 0;
++    size_t ll_off = 0;
+ 
+     if (subtree) {
+         myptr = subtree;
+--- ./agent/mibgroup/utilities/iquery.c.orig	2006-04-11 07:10:16.000000000 -0400
++++ ./agent/mibgroup/utilities/iquery.c	2006-09-15 13:46:09.604459976 -0400
+@@ -153,7 +153,7 @@
+         memdup( &(ss->securityEngineID), engineID, engIDLen );
+         ss->securityEngineIDLen = engIDLen;
+         if ( version == SNMP_VERSION_3 ) {
+-            memdup(&(ss->securityName), secName, strlen(secName));
++            memdup((u_char **)&(ss->securityName), secName, strlen(secName));
+             ss->securityNameLen = strlen(secName);
+         } else {
+             memdup( &(ss->community), secName, strlen(secName));
+--- perl/OID/OID.xs.orig	2005-09-09 06:09:31.000000000 -0400
++++ perl/OID/OID.xs	2006-09-15 13:51:01.268231665 -0400
+@@ -177,17 +177,21 @@
+ netsnmp_oid *
+ nso_newptr(initstring)
+     char *initstring
++    PREINIT:
++	STRLEN		len;
+     CODE:
+         if (get_tree_head() == NULL)
+             init_mib();
+         RETVAL = SNMP_MALLOC_TYPEDEF(netsnmp_oid);
+         RETVAL->name = RETVAL->namebuf;
+-        RETVAL->len = sizeof(RETVAL->namebuf)/sizeof(RETVAL->namebuf[0]);
+-        if (!snmp_parse_oid(initstring, (oid *) RETVAL->name, &RETVAL->len)) {
++        len = sizeof(RETVAL->namebuf)/sizeof(RETVAL->namebuf[0]);
++        if (!snmp_parse_oid(initstring, (oid *) RETVAL->name, &len)) {
+             snmp_log(LOG_ERR, "Can't parse: %s\n", initstring);
+             RETVAL->len = 0;
+             RETVAL = NULL;
+-        }
++        } else {
++	    RETVAL->len = len;
++	}
+     OUTPUT:
+         RETVAL
+ 
+--- ./perl/SNMP/SNMP.xs.orig	2006-05-26 12:59:15.000000000 -0400
++++ ./perl/SNMP/SNMP.xs	2006-09-15 14:11:11.883749613 -0400
+@@ -117,15 +117,15 @@
+                               netsnmp_variable_list*, struct tree *,
+                              int, int));
+ static int __sprint_num_objid _((char *, oid *, int));
+-static int __scan_num_objid _((char *, oid *, int *));
++static int __scan_num_objid _((char *, oid *, size_t *));
+ static int __get_type_str _((int, char *));
+ static int __get_label_iid _((char *, char **, char **, int));
+ static int __oid_cmp _((oid *, int, oid *, int));
+ static int __tp_sprint_num_objid _((char*,SnmpMibNode *));
+ static SnmpMibNode * __get_next_mib_node _((SnmpMibNode *));
+ static struct tree * __oid2tp _((oid*, int, struct tree *, int*));
+-static struct tree * __tag2oid _((char *, char *, oid  *, int  *, int *, int));
+-static int __concat_oid_str _((oid *, int *, char *));
++static struct tree * __tag2oid _((char *, char *, oid  *, size_t  *, int *, int));
++static int __concat_oid_str _((oid *, size_t *, char *));
+ static int __add_var_val_str _((netsnmp_pdu *, oid *, int, char *,
+                                  int, int));
+ static int __send_sync_pdu _((netsnmp_session *, netsnmp_pdu *,
+@@ -583,7 +583,7 @@
+ __scan_num_objid (buf, objid, len)
+ char *buf;
+ oid *objid;
+-int *len;
++size_t *len;
+ {
+    char *cp;
+    *len = 0;
+@@ -874,14 +874,14 @@
+ char * tag;
+ char * iid;
+ oid  * oid_arr;
+-int  * oid_arr_len;
++size_t  * oid_arr_len;
+ int  * type;
+ int    best_guess;
+ {
+    struct tree *tp = NULL;
+    struct tree *rtp = NULL;
+    oid newname[MAX_OID_LEN], *op;
+-   int newname_len = 0;
++   size_t newname_len = 0;
+    const char *cp = NULL;
+    char *module = NULL;
+ 
+@@ -1022,7 +1022,7 @@
+ static int
+ __concat_oid_str(doid_arr, doid_arr_len, soid_str)
+ oid *doid_arr;
+-int *doid_arr_len;
++size_t *doid_arr_len;
+ char * soid_str;
+ {
+    char soid_buf[STR_BUF_SIZE];
+@@ -1911,7 +1911,7 @@
+       ** we sent in this request.  Note that this is not a valid SNMP PDU,
+       ** but that's because a response has not yet been received.
+       */
+-      return (netsnmp_pdu *)reqid;
++      return (netsnmp_pdu *)(long)reqid;
+    }
+ 
+    /* This code is for synchronous mode support.
+@@ -3006,7 +3006,7 @@
+            netsnmp_pdu *pdu, *response;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            char *tag_pv;
+            snmp_xs_cb_data *xs_cb_data;
+            SV **sess_ptr_sv;
+@@ -3207,7 +3207,7 @@
+            struct tree *tp;
+            int len;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV *tmp_sv;
+            int type;
+ 	   char tmp_type_str[MAX_TYPE_NAME_LEN];
+@@ -3425,7 +3425,7 @@
+            struct tree *tp;
+            int len;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV *tmp_sv;
+            int type;
+ 	   char tmp_type_str[MAX_TYPE_NAME_LEN];
+@@ -3669,7 +3669,7 @@
+            struct tree *tp;
+            int len;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV *tmp_sv;
+            int type;
+ 	   char tmp_type_str[MAX_TYPE_NAME_LEN];
+@@ -3897,7 +3897,7 @@
+            netsnmp_session *ss;
+            netsnmp_pdu *pdu = NULL;
+ 	   oid oid_arr[MAX_OID_LEN];
+-	   int oid_arr_len;
++	   size_t oid_arr_len;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+            SV **err_num_svp;
+@@ -4115,7 +4115,7 @@
+ 	      /* Sent okay...  Return the request ID in 'pdu' as an SvIV. */
+ 	      DBPRT(1,(DBOUT "Okay, request id is %d\n", (intptr_t) pdu));
+ /*	      XSRETURN_IV((intptr_t)pdu); */
+-	      XPUSHs(sv_2mortal(newSViv(pdu)));
++	      XPUSHs(sv_2mortal(newSViv((intptr_t)pdu)));
+ 	      XSRETURN(1);
+ 	   }
+ 
+@@ -4208,7 +4208,7 @@
+            netsnmp_pdu *pdu = NULL;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+            SV **err_num_svp;
+@@ -4347,7 +4347,7 @@
+            netsnmp_pdu *pdu = NULL;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+            SV **err_num_svp;
+@@ -4484,7 +4484,7 @@
+            netsnmp_pdu *response;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            snmp_xs_cb_data *xs_cb_data;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+@@ -4715,7 +4715,7 @@
+            char str_buf[STR_BUF_SIZE];
+            char str_buf_temp[STR_BUF_SIZE];
+            oid oid_arr[MAX_OID_LEN];
+-           int oid_arr_len = MAX_OID_LEN;
++           size_t oid_arr_len = MAX_OID_LEN;
+            char * label;
+            char * iid;
+            int status = FAILURE;
