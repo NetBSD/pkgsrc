@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2006/07/05 05:37:47 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2006/09/15 15:18:02 jmmv Exp $
 #
 
-DISTNAME=		gnome-terminal-2.14.2
+DISTNAME=		gnome-terminal-2.16.0
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -21,6 +21,7 @@ USE_LIBTOOL=		YES
 
 GCONF2_SCHEMAS= 	gnome-terminal.schemas
 
+BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 
 .include "../../devel/GConf2/schemas.mk"
@@ -29,6 +30,7 @@ BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
