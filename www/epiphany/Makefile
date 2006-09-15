@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2006/08/23 09:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.64 2006/09/15 15:18:30 jmmv Exp $
 #
 
-DISTNAME=	epiphany-2.14.3
-PKGREVISION=	1
+DISTNAME=	epiphany-2.16.0
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -18,7 +17,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 
-PKGCONFIG_OVERRIDE=	data/epiphany-2.14.pc
+PKGCONFIG_OVERRIDE=	data/epiphany-2.16.pc
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
@@ -50,16 +49,21 @@ GCONF2_SCHEMAS+=	epiphany-fonts.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
 GCONF2_SCHEMAS+=	epiphany-pango.schemas
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.3
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
+BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.14.0
+BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
+BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
