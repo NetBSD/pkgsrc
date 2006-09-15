@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/05/02 17:22:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/09/15 15:21:18 jmmv Exp $
 bin/file-roller
 lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 share/applications/file-roller.desktop
@@ -54,6 +54,12 @@ share/gnome/help/file-roller/ko/figures/file-roller_main_window.png
 share/gnome/help/file-roller/ko/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/ko/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/ko/file-roller.xml
+share/gnome/help/file-roller/nl/figures/file-roller_home.png
+share/gnome/help/file-roller/nl/figures/file-roller_leftarrow.png
+share/gnome/help/file-roller/nl/figures/file-roller_main_window.png
+share/gnome/help/file-roller/nl/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/nl/figures/file-roller_uparrow.png
+share/gnome/help/file-roller/nl/file-roller.xml
 share/gnome/help/file-roller/ru/figures/file-roller_home.png
 share/gnome/help/file-roller/ru/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/ru/figures/file-roller_main_window.png
@@ -97,6 +103,7 @@ share/locale/az/LC_MESSAGES/file-roller.mo
 share/locale/be/LC_MESSAGES/file-roller.mo
 share/locale/bg/LC_MESSAGES/file-roller.mo
 share/locale/bn/LC_MESSAGES/file-roller.mo
+share/locale/bn_IN/LC_MESSAGES/file-roller.mo
 share/locale/br/LC_MESSAGES/file-roller.mo
 share/locale/bs/LC_MESSAGES/file-roller.mo
 share/locale/ca/LC_MESSAGES/file-roller.mo
@@ -132,14 +139,17 @@ share/locale/ko/LC_MESSAGES/file-roller.mo
 share/locale/ku/LC_MESSAGES/file-roller.mo
 share/locale/lt/LC_MESSAGES/file-roller.mo
 share/locale/lv/LC_MESSAGES/file-roller.mo
+share/locale/mg/LC_MESSAGES/file-roller.mo
 share/locale/mk/LC_MESSAGES/file-roller.mo
 share/locale/ml/LC_MESSAGES/file-roller.mo
 share/locale/mn/LC_MESSAGES/file-roller.mo
+share/locale/mr/LC_MESSAGES/file-roller.mo
 share/locale/ms/LC_MESSAGES/file-roller.mo
 share/locale/nb/LC_MESSAGES/file-roller.mo
 share/locale/ne/LC_MESSAGES/file-roller.mo
 share/locale/nl/LC_MESSAGES/file-roller.mo
 share/locale/nn/LC_MESSAGES/file-roller.mo
+share/locale/or/LC_MESSAGES/file-roller.mo
 share/locale/pa/LC_MESSAGES/file-roller.mo
 share/locale/pl/LC_MESSAGES/file-roller.mo
 share/locale/pt/LC_MESSAGES/file-roller.mo
@@ -173,6 +183,7 @@ share/omf/file-roller/file-roller-fr.omf
 share/omf/file-roller/file-roller-it.omf
 share/omf/file-roller/file-roller-ja.omf
 share/omf/file-roller/file-roller-ko.omf
+share/omf/file-roller/file-roller-nl.omf
 share/omf/file-roller/file-roller-ru.omf
 share/omf/file-roller/file-roller-sv.omf
 share/omf/file-roller/file-roller-uk.omf
@@ -181,6 +192,7 @@ share/omf/file-roller/file-roller-zh_HK.omf
 share/omf/file-roller/file-roller-zh_TW.omf
 @dirrm share/omf/file-roller
 @comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/gnome/help/file-roller/zh_TW/figures
 @dirrm share/gnome/help/file-roller/zh_TW
 @dirrm share/gnome/help/file-roller/zh_HK/figures
@@ -193,6 +205,8 @@ share/omf/file-roller/file-roller-zh_TW.omf
 @dirrm share/gnome/help/file-roller/sv
 @dirrm share/gnome/help/file-roller/ru/figures
 @dirrm share/gnome/help/file-roller/ru
+@dirrm share/gnome/help/file-roller/nl/figures
+@dirrm share/gnome/help/file-roller/nl
 @dirrm share/gnome/help/file-roller/ko/figures
 @dirrm share/gnome/help/file-roller/ko
 @dirrm share/gnome/help/file-roller/ja/figures
