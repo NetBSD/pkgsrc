@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/07/26 12:52:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/09/15 15:15:32 jmmv Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-nature.xml
 share/gnome-background-properties/gnome-tiles.xml
@@ -7,6 +7,7 @@ share/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/be/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bg/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bn/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ca/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/cs/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/cy/LC_MESSAGES/gnome-backgrounds.mo
@@ -38,6 +39,9 @@ share/locale/ky/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/lt/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/lv/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/mg/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/ml/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/mn/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/mr/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/nl/LC_MESSAGES/gnome-backgrounds.mo
@@ -54,6 +58,7 @@ share/locale/sq/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sr/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sv/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/ta/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/te/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/th/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/tr/LC_MESSAGES/gnome-backgrounds.mo
