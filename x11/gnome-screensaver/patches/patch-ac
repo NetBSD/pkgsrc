@@ -1,13 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2006/08/23 09:49:12 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2006/09/15 15:19:55 jmmv Exp $
 
---- src/gnome-screensaver-command.c.orig	2006-07-12 03:48:55.000000000 +0200
-+++ src/gnome-screensaver-command.c
-@@ -320,7 +320,7 @@ main (int    argc,
-         loop = g_main_loop_new (NULL, FALSE);
-         g_main_loop_run (loop);
- 
--        dbus_connection_disconnect (connection);
-+        dbus_connection_close (connection);
- 
- 	return 0;
- }
+--- src/gs-auth-pam.c.orig	2006-06-08 22:23:40.000000000 +0200
++++ src/gs-auth-pam.c
+@@ -204,7 +204,11 @@ pam_conversation (int                   
+                         if (res) {
+                                 reply [replies].resp_retcode = PAM_SUCCESS;
+                         } else {
++#if defined(PAM_INCOMPLETE)
+                                 reply [replies].resp_retcode = PAM_INCOMPLETE;
++#else
++                                reply [replies].resp_retcode = PAM_SERVICE_ERR;
++#endif
+                         }
+                 }
+         }
