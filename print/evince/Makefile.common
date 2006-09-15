@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2006/08/16 20:24:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/09/15 15:22:16 jmmv Exp $
 #
 
-DISTNAME=		evince-0.5.5
+DISTNAME=		evince-0.6.0
 CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.5/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -26,14 +26,18 @@ pre-configure:
 	${ECHO} "echo 8.51" >${BUILDLINK_DIR}/bin/gs
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/gs
 
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
+BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
+BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.3
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.2
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
