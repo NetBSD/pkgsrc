@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.7 2006/06/28 21:23:29 joerg Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/09/15 14:05:23 ghen Exp $
 
+MOZ_VER=		1.0.4
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
 PKGNAME=		${MOZILLA}-${MOZ_VER}
@@ -8,10 +9,15 @@ MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/seamonkey/releases/${MOZ_V
 MASTER_SITES+=		http://public.planetmirror.com.au/pub/seamonkey/releases/${MOZ_VER}/
 MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/seamonkey/releases/${MOZ_VER}/
 CATEGORIES=		www
-
+EXTRACT_SUFX=          .tar.bz2
+ 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/projects/seamonkey
 
+MOZILLA_BIN=		seamonkey-bin
+
+DISTINFO_FILE=		${.CURDIR}/../../www/seamonkey/distinfo
+PATCHDIR=		${.CURDIR}/../../www/seamonkey/patches
 FILESDIR=		${.CURDIR}/../../www/mozilla/files
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
@@ -80,6 +86,10 @@ MOZ_LIBDIR=		${PREFIX}/lib/${MOZILLA}
 MAKE_ENV+=		LIBRUNPATH=${MOZ_LIBDIR:Q}
 CONFIGURE_ENV+=		LIBRUNPATH=${MOZ_LIBDIR:Q}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
+
+BUILD_SVG=		# yes
+BUILD_CALENDAR=		# yes
+BUILD_MATHML=		# yes
 
 .if defined(BUILD_SVG)
 MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
