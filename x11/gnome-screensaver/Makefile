@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/08/23 09:49:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/15 15:19:54 jmmv Exp $
 #
 
-DISTNAME=	gnome-screensaver-2.14.3
-PKGREVISION=	1
+DISTNAME=	gnome-screensaver-2.16.0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.16/}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/GnomeScreensaver/
@@ -29,6 +28,11 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES=		${EGDIR}/xdg/menus/gnome-screensavers.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/gnome-screensavers.menu
+
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.8.0
+BUILDLINK_API_DEPENDS.libexif+=		libexif>=0.6.12
+BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.5.0
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}/pam.d
