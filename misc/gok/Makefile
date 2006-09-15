@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2006/08/06 19:08:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2006/09/15 15:22:05 jmmv Exp $
 #
 
-DISTNAME=		gok-1.0.10
+DISTNAME=		gok-1.2.0
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,7 +16,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
 PKGCONFIG_OVERRIDE+=    gok-1.0.pc.in
