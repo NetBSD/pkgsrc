@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5455 2006/09/15 15:56:24 ghen Exp $
+$NetBSD: TODO,v 1.5456 2006/09/15 20:29:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -534,16 +534,17 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
+	o gst-plugins0.10-base-0.10.10
 	o gst-plugins0.10-good-0.10.4
 	o gst-plugins0.10-ugly-0.10.4
-	o gstreamer0.10-0.10.9.2
+	o gstreamer0.10-0.10.10
 	o gtetrinet-0.7.10
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
-	o gtklife-5.0
+	o gtklife-5.1
 	o gtkmm-2.10.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
@@ -572,6 +573,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o idesk-0.7.5 [pkg/34487]
 	o ifile-1.3.5
+	o inkscape-0.44.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ipa-2.0 [pkg/32398]
@@ -661,6 +663,7 @@ Suggested package updates
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
+	o mailman-2.1.9
 	o mailscanner-4.54.6
 	o makedepf90-2.8.8 [pkg/34306]
 	o maketool-0.8.4
@@ -685,6 +688,7 @@ Suggested package updates
 	o minivmac-2.6.1
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.7.0
+	o mldonkey-2.8.0
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
@@ -1207,7 +1211,7 @@ Suggested package updates
 	o wmii-3.1
 	o wmweather-2.4.3
 	o www6to4-1.6 [pkg/34321]
-	o wwwoffle-2.9a
+	o wwwoffle-2.9a [pkg/34532]
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2 [pkg/34467]
@@ -1221,7 +1225,7 @@ Suggested package updates
 	o xemacs-21.4.19
 	o xemacs-current-21.5.22
 	o xerces-j-2.4.0 [pkg/21725]
-	o xerces-j-2.8.0
+	o xerces-j-2.8.1
 	o xeukleides-1.0.1
 	o xfmail-1.5.4
 	o xfstt-1.7
