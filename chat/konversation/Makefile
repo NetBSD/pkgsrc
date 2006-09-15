@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/07/22 04:46:14 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/15 09:50:39 he Exp $
 #
 
-DISTNAME=	konversation-0.19
-PKGREVISION=	1
+DISTNAME=	konversation-1.0
 CATEGORIES=	chat
 MASTER_SITES=	http://download.berlios.de/konversation/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,18 +14,19 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake perl msgfmt
 USE_LANGUAGES=	c c++
-LANGS=		da en es et st it nl pt sv
+LANGS=		da en es et st it nl pt ru sv
 
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ENV+=		kde_htmldir=${PREFIX}/share/doc/kde/HTML
-REPLACE_PERL+=		konversation/src/konversation-0.14-mainwindow.pl \
+REPLACE_PERL+=		konversation/src/konversation-0.19-appearance.pl \
 			konversation/src/konversation-0.19-colorcodes.pl \
 			konversation/src/konversation-0.19-colors.pl \
-			konversation/src/konversation-0.19-tabplacement.pl \
+			konversation/src/konversation-0.19-custombrowser.pl \
 			konversation/src/konversation-0.19-notifylists.pl \
 			konversation/src/konversation-0.19-sortorder.pl \
-			konversation/src/konversation-0.19-custombrowser.pl \
-			konversation/src/konversation-0.19-appearance.pl
+			konversation/src/konversation-0.19-tabplacement.pl \
+			konversation/src/konversation-0.20-customfonts.pl \
+			konversation/src/konversation-0.20-quickbuttons.pl
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
