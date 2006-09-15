@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/04/17 07:07:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/09/15 15:08:24 jmmv Exp $
 bin/bonobo-browser
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
@@ -41,44 +41,45 @@ lib/libbonoboui-2.la
 lib/libglade/2.0/libbonobo.la
 lib/pkgconfig/libbonoboui-2.0.pc
 share/applications/bonobo-browser.desktop
-share/doc/libbonoboui/bonobo-controls.html
-share/doc/libbonoboui/bonobo-support-utilities.html
-share/doc/libbonoboui/bonobo-ui.html
-share/doc/libbonoboui/ch01.html
-share/doc/libbonoboui/control-frame.png
-share/doc/libbonoboui/control.png
-share/doc/libbonoboui/home.png
-share/doc/libbonoboui/index.html
-share/doc/libbonoboui/index.sgml
-share/doc/libbonoboui/left.png
-share/doc/libbonoboui/libbonoboui-bonobo-a11y.html
-share/doc/libbonoboui/libbonoboui-bonobo-control-frame.html
-share/doc/libbonoboui/libbonoboui-bonobo-control.html
-share/doc/libbonoboui/libbonoboui-bonobo-file-selector-util.html
-share/doc/libbonoboui/libbonoboui-bonobo-plug.html
-share/doc/libbonoboui/libbonoboui-bonobo-property-control.html
-share/doc/libbonoboui/libbonoboui-bonobo-selector-widget.html
-share/doc/libbonoboui/libbonoboui-bonobo-selector.html
-share/doc/libbonoboui/libbonoboui-bonobo-socket.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-component.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-container.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-engine-config.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-engine.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-node.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-preferences.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-sync.html
-share/doc/libbonoboui/libbonoboui-bonobo-ui-util.html
-share/doc/libbonoboui/libbonoboui-bonobo-widget.html
-share/doc/libbonoboui/libbonoboui-bonobo-window.html
-share/doc/libbonoboui/libbonoboui-bonobo-wrapper.html
-share/doc/libbonoboui/libbonoboui-faq.html
-share/doc/libbonoboui/libbonoboui.devhelp
-share/doc/libbonoboui/right.png
-share/doc/libbonoboui/style.css
-share/doc/libbonoboui/up.png
 share/gnome-2.0/ui/Bonobo_Sample_Container-ui.xml
 share/gnome-2.0/ui/Bonobo_Sample_Hello.xml
 share/gnome-2.0/ui/bonobo-browser.xml
+share/gtk-doc/html/libbonoboui/bonobo-controls.html
+share/gtk-doc/html/libbonoboui/bonobo-support-utilities.html
+share/gtk-doc/html/libbonoboui/bonobo-ui.html
+share/gtk-doc/html/libbonoboui/ch01.html
+share/gtk-doc/html/libbonoboui/control-frame.png
+share/gtk-doc/html/libbonoboui/control.png
+share/gtk-doc/html/libbonoboui/home.png
+share/gtk-doc/html/libbonoboui/index.html
+share/gtk-doc/html/libbonoboui/index.sgml
+share/gtk-doc/html/libbonoboui/left.png
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-a11y.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-control-frame.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-control.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-file-selector-util.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-plug.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-property-control.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-selector-widget.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-selector.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-socket.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-component.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-container.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-engine-config.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-engine.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-node.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-preferences.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-sync.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-ui-util.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-widget.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-window.html
+share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-wrapper.html
+share/gtk-doc/html/libbonoboui/libbonoboui-faq.html
+share/gtk-doc/html/libbonoboui/libbonoboui.devhelp
+share/gtk-doc/html/libbonoboui/libbonoboui.devhelp2
+share/gtk-doc/html/libbonoboui/right.png
+share/gtk-doc/html/libbonoboui/style.css
+share/gtk-doc/html/libbonoboui/up.png
 share/locale/af/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/am/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ar/LC_MESSAGES/libbonoboui-2.0.mo
@@ -86,6 +87,7 @@ share/locale/az/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/be/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/bg/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/bn/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/bn_IN/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/bs/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ca/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/cs/LC_MESSAGES/libbonoboui-2.0.mo
@@ -112,6 +114,7 @@ share/locale/id/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/is/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/it/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ja/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/ka/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/kn/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ko/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ku/LC_MESSAGES/libbonoboui-2.0.mo
@@ -127,7 +130,6 @@ share/locale/nb/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ne/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/nl/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/nn/LC_MESSAGES/libbonoboui-2.0.mo
-share/locale/no/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/nso/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/or/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/pa/LC_MESSAGES/libbonoboui-2.0.mo
@@ -155,8 +157,8 @@ share/locale/zh_CN/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/zu/LC_MESSAGES/libbonoboui-2.0.mo
+@dirrm share/gtk-doc/html/libbonoboui
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@dirrm share/doc/libbonoboui
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libglade2: @dirrm lib/libglade/2.0
 @comment in libbonobo: @dirrm lib/bonobo/servers
