@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2006/08/03 17:37:48 drochner Exp $
+$NetBSD: distinfo,v 1.21 2006/09/15 15:11:07 jmmv Exp $
 
-SHA1 (eel-2.14.3.tar.bz2) = 924e3cab5e99f53c5d9eb2fff917df315fde1fec
-RMD160 (eel-2.14.3.tar.bz2) = 069c53b2d410616261f0613e7c762f4637477842
-Size (eel-2.14.3.tar.bz2) = 640614 bytes
+SHA1 (eel-2.16.0.tar.bz2) = ab87f542d3e88b18de69c42ef9d4259423c5ea7d
+RMD160 (eel-2.16.0.tar.bz2) = 09074fcba5c2f9cc5c9ea842df91dba1e46a12ab
+Size (eel-2.16.0.tar.bz2) = 672036 bytes

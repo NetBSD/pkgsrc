@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2006/08/03 17:37:48 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2006/09/15 15:11:07 jmmv Exp $
 
-DISTNAME=	eel-2.14.3
+DISTNAME=	eel-2.16.0
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eel/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eel/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +16,10 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	eel-2.0.pc.in
+
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.6.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.9.1
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.9.4
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
