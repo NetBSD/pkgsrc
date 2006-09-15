@@ -1,21 +1,28 @@
 #!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.8 2005/07/22 12:13:12 abs Exp $
+# $NetBSD: cpuflags.SunOS,v 1.9 2006/09/15 14:37:32 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=nawk
 
 display_hw_details()
     {
-    echo "  OS              : '`uname`'"
-    echo "  arch            : '$hw_arch'"
+    echo "  OS      : '`uname`'"
+    echo "  arch    : '$hw_arch'"
+    echo "  psrinfo : '$hw_psrinfo'"
     }
 
 hw_arch=`/usr/bin/uname -m`
+hw_psrinfo=`psrinfo -pv | $AWK 'NR==3{print}'` # Just gets the first CPU
 
 case $hw_arch in
     sun4c | sun4 )		FLAGS='-mcpu=cypress' ;;
     sun4m )			FLAGS='-mcpu=supersparc' ;;
     sun4u )			FLAGS='-mcpu=v9' ;;
+    i86pc )
+	case "$hw_psrinfo" in
+	    *AMD\ Opteron\(tm\)*)	FLAGS="-mcpu=opteron"	;;
+	esac
+	;;
 esac
 
 ############

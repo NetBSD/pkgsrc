@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.19 2005/11/06 15:31:20 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.20 2006/09/15 14:37:32 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -28,6 +28,7 @@ case $hw_machine_arch in
     i386)				FLAGS='-march=i386'		;;
     i486)				FLAGS='-march=i486'		;;
     i686) case $hw_model in
+	"AMD Athlon(TM) XP "*)		FLAGS='-march=athlon-xp'	;;
 	"AMD Athlon(tm) XP "*)		FLAGS='-march=athlon-xp'	;;
 	"AMD Duron(TM)")		FLAGS='-march=athlon'		;;
 	"AMD Duron(tm) ")		FLAGS='-march=athlon'		;;
@@ -44,7 +45,7 @@ case $hw_machine_arch in
 	    case "$hw_flags" in
 		*" sse2 "*)
 					FLAGS='-march=pentium4'		;;
-	    esac 
+	    esac
 
     esac ;;
 
