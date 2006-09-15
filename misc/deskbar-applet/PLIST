@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/06 19:53:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/15 15:24:32 jmmv Exp $
 lib/bonobo/servers/Deskbar_Applet.server
 lib/deskbar-applet/deskbar-applet
 lib/deskbar-applet/handlers/beagle-live.py
@@ -7,9 +7,9 @@ lib/deskbar-applet/handlers/beagle-live.pyo
 lib/deskbar-applet/handlers/beagle-static.py
 lib/deskbar-applet/handlers/beagle-static.pyc
 lib/deskbar-applet/handlers/beagle-static.pyo
-lib/deskbar-applet/handlers/email_address.py
-lib/deskbar-applet/handlers/email_address.pyc
-lib/deskbar-applet/handlers/email_address.pyo
+lib/deskbar-applet/handlers/desklicious.py
+lib/deskbar-applet/handlers/desklicious.pyc
+lib/deskbar-applet/handlers/desklicious.pyo
 lib/deskbar-applet/handlers/epiphany.py
 lib/deskbar-applet/handlers/epiphany.pyc
 lib/deskbar-applet/handlers/epiphany.pyo
@@ -25,27 +25,24 @@ lib/deskbar-applet/handlers/galago.pyo
 lib/deskbar-applet/handlers/galeon.py
 lib/deskbar-applet/handlers/galeon.pyc
 lib/deskbar-applet/handlers/galeon.pyo
+lib/deskbar-applet/handlers/gdmactions.py
+lib/deskbar-applet/handlers/gdmactions.pyc
+lib/deskbar-applet/handlers/gdmactions.pyo
 lib/deskbar-applet/handlers/google-live.py
 lib/deskbar-applet/handlers/google-live.pyc
 lib/deskbar-applet/handlers/google-live.pyo
-lib/deskbar-applet/handlers/gtkbookmarks.py
-lib/deskbar-applet/handlers/gtkbookmarks.pyc
-lib/deskbar-applet/handlers/gtkbookmarks.pyo
 lib/deskbar-applet/handlers/history.py
 lib/deskbar-applet/handlers/history.pyc
 lib/deskbar-applet/handlers/history.pyo
+lib/deskbar-applet/handlers/iswitch-window.py
+lib/deskbar-applet/handlers/iswitch-window.pyc
+lib/deskbar-applet/handlers/iswitch-window.pyo
 lib/deskbar-applet/handlers/mozilla.py
 lib/deskbar-applet/handlers/mozilla.pyc
 lib/deskbar-applet/handlers/mozilla.pyo
-lib/deskbar-applet/handlers/pathprograms.py
-lib/deskbar-applet/handlers/pathprograms.pyc
-lib/deskbar-applet/handlers/pathprograms.pyo
 lib/deskbar-applet/handlers/programs.py
 lib/deskbar-applet/handlers/programs.pyc
 lib/deskbar-applet/handlers/programs.pyo
-lib/deskbar-applet/handlers/volumes.py
-lib/deskbar-applet/handlers/volumes.pyc
-lib/deskbar-applet/handlers/volumes.pyo
 lib/deskbar-applet/handlers/web_address.py
 lib/deskbar-applet/handlers/web_address.pyc
 lib/deskbar-applet/handlers/web_address.pyo
@@ -105,6 +102,10 @@ ${PYSITELIB}/deskbar/evolution/__init__.py
 ${PYSITELIB}/deskbar/evolution/__init__.pyc
 ${PYSITELIB}/deskbar/evolution/__init__.pyo
 ${PYSITELIB}/deskbar/evolution/_evolution.la
+${PYSITELIB}/deskbar/gdmclient/__init__.py
+${PYSITELIB}/deskbar/gdmclient/__init__.pyc
+${PYSITELIB}/deskbar/gdmclient/__init__.pyo
+${PYSITELIB}/deskbar/gdmclient/_gdmclient.la
 ${PYSITELIB}/deskbar/gnomedesktop/__init__.py
 ${PYSITELIB}/deskbar/gnomedesktop/__init__.pyc
 ${PYSITELIB}/deskbar/gnomedesktop/__init__.pyo
@@ -142,27 +143,48 @@ ${PYSITELIB}/deskbar/ui/ModuleListView.pyo
 ${PYSITELIB}/deskbar/ui/__init__.py
 ${PYSITELIB}/deskbar/ui/__init__.pyc
 ${PYSITELIB}/deskbar/ui/__init__.pyo
-${PYSITELIB}/deskbar/ui/completion/CompletionDeskbarUI.py
-${PYSITELIB}/deskbar/ui/completion/CompletionDeskbarUI.pyc
-${PYSITELIB}/deskbar/ui/completion/CompletionDeskbarUI.pyo
-${PYSITELIB}/deskbar/ui/completion/DeskbarEntry.py
-${PYSITELIB}/deskbar/ui/completion/DeskbarEntry.pyc
-${PYSITELIB}/deskbar/ui/completion/DeskbarEntry.pyo
-${PYSITELIB}/deskbar/ui/completion/__init__.py
-${PYSITELIB}/deskbar/ui/completion/__init__.pyc
-${PYSITELIB}/deskbar/ui/completion/__init__.pyo
-${PYSITELIB}/deskbar/ui/cuemiac/Cuemiac.py
-${PYSITELIB}/deskbar/ui/cuemiac/Cuemiac.pyc
-${PYSITELIB}/deskbar/ui/cuemiac/Cuemiac.pyo
 ${PYSITELIB}/deskbar/ui/cuemiac/CuemiacAlignedWindow.py
 ${PYSITELIB}/deskbar/ui/cuemiac/CuemiacAlignedWindow.pyc
 ${PYSITELIB}/deskbar/ui/cuemiac/CuemiacAlignedWindow.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacAppletButton.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacAppletButton.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacAppletButton.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacButtonUI.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacButtonUI.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacButtonUI.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacEntry.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacEntry.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacEntry.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacHeader.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacHeader.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacHeader.pyo
 ${PYSITELIB}/deskbar/ui/cuemiac/CuemiacHistory.py
 ${PYSITELIB}/deskbar/ui/cuemiac/CuemiacHistory.pyc
 ${PYSITELIB}/deskbar/ui/cuemiac/CuemiacHistory.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacItems.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacItems.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacItems.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacLayoutProvider.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacLayoutProvider.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacLayoutProvider.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacModel.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacModel.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacModel.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacPopupEntry.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacPopupEntry.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacPopupEntry.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacTreeView.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacTreeView.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacTreeView.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacUIManager.py
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacUIManager.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/CuemiacUIManager.pyo
 ${PYSITELIB}/deskbar/ui/cuemiac/DeskbarAppletButton.py
 ${PYSITELIB}/deskbar/ui/cuemiac/DeskbarAppletButton.pyc
 ${PYSITELIB}/deskbar/ui/cuemiac/DeskbarAppletButton.pyo
+${PYSITELIB}/deskbar/ui/cuemiac/LingeringSelectionWindow.py
+${PYSITELIB}/deskbar/ui/cuemiac/LingeringSelectionWindow.pyc
+${PYSITELIB}/deskbar/ui/cuemiac/LingeringSelectionWindow.pyo
 ${PYSITELIB}/deskbar/ui/cuemiac/__init__.py
 ${PYSITELIB}/deskbar/ui/cuemiac/__init__.pyc
 ${PYSITELIB}/deskbar/ui/cuemiac/__init__.pyo
@@ -172,23 +194,39 @@ ${PYSITELIB}/deskbar/ui/entriac/CuemiacEntryUI.pyo
 ${PYSITELIB}/deskbar/ui/entriac/__init__.py
 ${PYSITELIB}/deskbar/ui/entriac/__init__.pyc
 ${PYSITELIB}/deskbar/ui/entriac/__init__.pyo
+${PYSITELIB}/deskbar/ui/window/CuemiacWindowUI.py
+${PYSITELIB}/deskbar/ui/window/CuemiacWindowUI.pyc
+${PYSITELIB}/deskbar/ui/window/CuemiacWindowUI.pyo
+${PYSITELIB}/deskbar/ui/window/__init__.py
+${PYSITELIB}/deskbar/ui/window/__init__.pyc
+${PYSITELIB}/deskbar/ui/window/__init__.pyo
 share/deskbar-applet/Deskbar_Applet.xml
+share/deskbar-applet/art/delicious.png
 share/deskbar-applet/art/deskbar-applet-panel-h.png
 share/deskbar-applet/art/deskbar-applet-panel-h.svg
 share/deskbar-applet/art/deskbar-applet-panel-v.png
 share/deskbar-applet/art/deskbar-applet-panel-v.svg
-share/deskbar-applet/art/deskbar-applet-small.png
-share/deskbar-applet/art/deskbar-applet.svg
 share/deskbar-applet/art/epiphany-history.png
 share/deskbar-applet/art/folder-bookmark.png
 share/deskbar-applet/art/generic.png
 share/deskbar-applet/art/google.png
+share/deskbar-applet/art/gpm-suspend-to-disk.png
+share/deskbar-applet/art/gpm-suspend-to-ram.png
 share/deskbar-applet/art/yahoo.png
 share/deskbar-applet/mozilla-search.glade
 share/deskbar-applet/prefs-dialog.glade
 share/deskbar-applet/smart-bookmarks.glade
 share/gconf/schemas/deskbar-applet.schemas
+share/icons/hicolor/16x16/apps/deskbar-applet.png
+share/icons/hicolor/22x22/apps/deskbar-applet.png
+share/icons/hicolor/32x32/apps/deskbar-applet.png
+share/icons/hicolor/48x48/apps/deskbar-applet.png
+share/icons/hicolor/icon-theme.cache
+share/icons/hicolor/scalable/apps/deskbar-applet.svg
+share/locale/be/LC_MESSAGES/deskbar-applet.mo
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
+share/locale/bn/LC_MESSAGES/deskbar-applet.mo
+share/locale/bn_IN/LC_MESSAGES/deskbar-applet.mo
 share/locale/ca/LC_MESSAGES/deskbar-applet.mo
 share/locale/cs/LC_MESSAGES/deskbar-applet.mo
 share/locale/cy/LC_MESSAGES/deskbar-applet.mo
@@ -200,6 +238,7 @@ share/locale/en_CA/LC_MESSAGES/deskbar-applet.mo
 share/locale/en_GB/LC_MESSAGES/deskbar-applet.mo
 share/locale/es/LC_MESSAGES/deskbar-applet.mo
 share/locale/et/LC_MESSAGES/deskbar-applet.mo
+share/locale/eu/LC_MESSAGES/deskbar-applet.mo
 share/locale/fi/LC_MESSAGES/deskbar-applet.mo
 share/locale/fr/LC_MESSAGES/deskbar-applet.mo
 share/locale/gl/LC_MESSAGES/deskbar-applet.mo
@@ -214,39 +253,53 @@ share/locale/ka/LC_MESSAGES/deskbar-applet.mo
 share/locale/ko/LC_MESSAGES/deskbar-applet.mo
 share/locale/ku/LC_MESSAGES/deskbar-applet.mo
 share/locale/lt/LC_MESSAGES/deskbar-applet.mo
+share/locale/lv/LC_MESSAGES/deskbar-applet.mo
+share/locale/mg/LC_MESSAGES/deskbar-applet.mo
 share/locale/mk/LC_MESSAGES/deskbar-applet.mo
+share/locale/ml/LC_MESSAGES/deskbar-applet.mo
+share/locale/mn/LC_MESSAGES/deskbar-applet.mo
+share/locale/mr/LC_MESSAGES/deskbar-applet.mo
 share/locale/nb/LC_MESSAGES/deskbar-applet.mo
 share/locale/ne/LC_MESSAGES/deskbar-applet.mo
 share/locale/nl/LC_MESSAGES/deskbar-applet.mo
+share/locale/or/LC_MESSAGES/deskbar-applet.mo
 share/locale/pa/LC_MESSAGES/deskbar-applet.mo
 share/locale/pl/LC_MESSAGES/deskbar-applet.mo
 share/locale/pt/LC_MESSAGES/deskbar-applet.mo
 share/locale/pt_BR/LC_MESSAGES/deskbar-applet.mo
 share/locale/ru/LC_MESSAGES/deskbar-applet.mo
 share/locale/sk/LC_MESSAGES/deskbar-applet.mo
+share/locale/sl/LC_MESSAGES/deskbar-applet.mo
 share/locale/sq/LC_MESSAGES/deskbar-applet.mo
 share/locale/sr/LC_MESSAGES/deskbar-applet.mo
 share/locale/sr@Latn/LC_MESSAGES/deskbar-applet.mo
 share/locale/sv/LC_MESSAGES/deskbar-applet.mo
+share/locale/ta/LC_MESSAGES/deskbar-applet.mo
 share/locale/th/LC_MESSAGES/deskbar-applet.mo
+share/locale/tr/LC_MESSAGES/deskbar-applet.mo
 share/locale/uk/LC_MESSAGES/deskbar-applet.mo
 share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
-share/pixmaps/deskbar-applet.svg
-@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/icons/hicolor/scalable/apps
+@dirrm share/icons/hicolor/48x48/apps
+@dirrm share/icons/hicolor/32x32/apps
+@dirrm share/icons/hicolor/22x22/apps
+@dirrm share/icons/hicolor/16x16/apps
+@dirrm share/icons/hicolor
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/deskbar-applet/art
 @dirrm share/deskbar-applet
+@dirrm ${PYSITELIB}/deskbar/ui/window
 @dirrm ${PYSITELIB}/deskbar/ui/entriac
 @dirrm ${PYSITELIB}/deskbar/ui/cuemiac
-@dirrm ${PYSITELIB}/deskbar/ui/completion
 @dirrm ${PYSITELIB}/deskbar/ui
 @dirrm ${PYSITELIB}/deskbar/osutils
 @dirrm ${PYSITELIB}/deskbar/keybinder
 @dirrm ${PYSITELIB}/deskbar/iconentry
 @dirrm ${PYSITELIB}/deskbar/gnomedesktop
+@dirrm ${PYSITELIB}/deskbar/gdmclient
 @dirrm ${PYSITELIB}/deskbar/evolution
 @dirrm ${PYSITELIB}/deskbar
 @dirrm lib/deskbar-applet/handlers
