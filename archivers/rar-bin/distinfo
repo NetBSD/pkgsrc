@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/03 22:36:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2006/09/16 11:29:16 wiz Exp $
 
-SHA1 (rarlinux-3.5.1.tar.gz) = f6082178e510697c9052a0696863f66716f1b347
-RMD160 (rarlinux-3.5.1.tar.gz) = a6c6ce77897994f1712795b783e699d88fad2493
-Size (rarlinux-3.5.1.tar.gz) = 677557 bytes
+SHA1 (rarlinux-3.6.0.tar.gz) = 4b43766371fd2f117fb3af5826001a7eab7a0f3b
+RMD160 (rarlinux-3.6.0.tar.gz) = c0f6d19738f69deb9fd75589e461a7a0ed430d39
+Size (rarlinux-3.6.0.tar.gz) = 752997 bytes
