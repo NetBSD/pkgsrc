@@ -1,0 +1,51 @@
+$NetBSD: patch-aw,v 1.3 2006/09/16 08:28:36 adrianp Exp $
+
+--- lib/font/Type1/scanfont.c.orig	2003-11-29 04:55:28.000000000 +0000
++++ lib/font/Type1/scanfont.c
+@@ -64,6 +64,8 @@
+ #include "spaces.h"
+ #include "fontfcn.h"
+ #include "blues.h"
++
++#include <limits.h>
+  
+ #ifdef BUILDCID
+ #define CID_BUFSIZE 80
+@@ -646,6 +648,7 @@ getFDArray(psobj *arrayP)
+   arrayP->data.valueP = tokenStartP;
+ 
+   /* allocate FDArray */
++  /* No integer overflow since arrayP->len is unsigned short */
+   FDArrayP = (psfont *)vm_alloc(arrayP->len*(sizeof(psfont)));
+   if (!(FDArrayP)) return(SCAN_OUT_OF_MEMORY);
+ 
+@@ -842,7 +845,8 @@ BuildSubrs(psfont *FontP)
+      }
+      return(SCAN_OK);
+    }
+- 
++   if (N > INT_MAX / sizeof(psobj)) 
++       return (SCAN_ERROR);
+    arrayP = (psobj *)vm_alloc(N*sizeof(psobj));
+    if (!(arrayP) ) return(SCAN_OUT_OF_MEMORY);
+    FontP->Subrs.len = N;
+@@ -903,7 +907,7 @@ BuildCharStrings(psfont *FontP)
+      }
+      else return(rc);  /* if next token was not an Int */
+    }
+-   if (N<=0) return(SCAN_ERROR);
++   if (N<=0 || N > INT_MAX / sizeof(psdict)) return(SCAN_ERROR);
+    /* save number of entries in the dictionary */
+  
+    dictP = (psdict *)vm_alloc((N+1)*sizeof(psdict));
+@@ -1711,6 +1715,10 @@ scan_cidfont(cidfont *CIDFontP, cmapres 
+     if (tokenType == TOKEN_INTEGER)
+       rangecnt = tokenValue.integer;
+ 
++    if (rangecnt < 0 || rangecnt > INT_MAX / sizeof(spacerangecode)) {
++	rc = SCAN_ERROR;
++	break;
++    }
+     /* ==> tokenLength, tokenTooLong, tokenType, and */
+     /* tokenValue are now set                        */
+ 
