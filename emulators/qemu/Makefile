@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/09/16 12:09:09 hira Exp $
+# $NetBSD: Makefile,v 1.41 2006/09/16 21:39:30 adrianp Exp $
 #
 
 DISTNAME=		qemu-0.8.2
@@ -13,8 +13,10 @@ COMMENT=		CPU emulator using dynamic translation
 CONFLICTS+=		qemu-bin-*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:build
 HAS_CONFIGURE=		yes
+
+BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,6 +42,8 @@ SUBST_FILES.smbd=	vl.c
 SUBST_SED.smbd=		-e s,/usr/sbin/smbd,${PREFIX:Q}/sbin/smbd,g
 SUBST_MESSAGE.smbd=	Fixing hardcoded paths.
 
+REPLACE_PERL+=		texi2pod.pl
+
 # Remove -march/-mcpu from CFLAGS, otherwise it will fail
 # to build in the SSE code.
 BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
@@ -54,6 +58,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/qemu
 	${INSTALL_DATA} ${FILESDIR:Q}/Makefile.multinode-NetBSD \
 		${PREFIX:Q}/share/doc/qemu/
+
+	${INSTALL_MAN} ${WRKSRC}/qemu.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/qemu-img.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
