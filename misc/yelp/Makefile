@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2006/09/15 15:20:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.58 2006/09/16 09:18:28 jmmv Exp $
 #
 
 DISTNAME=		yelp-2.16.0
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.16/}
 EXTRACT_SUFX=		.tar.bz2
@@ -39,7 +40,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.14.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 BUILDLINK_API_DEPENDS.libxml2+=			libxml2>=2.6.5
 
-BUILDLINK_DEPMETHOD.gnome-doc-utils+=   run
+BUILDLINK_DEPMETHOD.gnome-doc-utils+=   full
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
