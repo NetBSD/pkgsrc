@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/08/31 19:08:21 jschauma Exp $
+$NetBSD: distinfo,v 1.6 2006/09/16 11:44:26 rillig Exp $
 
 SHA1 (splint-3.1.1.src.tgz) = 1192e8f18e8ef63fdc7a0b0fa26c35b46d59e4e6
 RMD160 (splint-3.1.1.src.tgz) = 8a0d04b20ccdfd50f99e3ef6abd59e7b25814912
 Size (splint-3.1.1.src.tgz) = 2425108 bytes
-SHA1 (patch-aa) = 44355d0f1d589928faac22e9b8f1355e13e93230
+SHA1 (patch-aa) = 12641b1d57a1e78fae19e81c53ac27f268bca498
 SHA1 (patch-ab) = 96c5f10adce1cc1442a55aa4aa9769ca1b0b285e
