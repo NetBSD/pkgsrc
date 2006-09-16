@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/09/05 00:44:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/09/16 12:09:09 hira Exp $
 bin/qemu
 bin/qemu-img
 bin/qemu-system-arm
@@ -7,6 +7,8 @@ bin/qemu-system-mipsel
 bin/qemu-system-ppc
 bin/qemu-system-sparc
 bin/qemu-system-x86_64
+man/man1/qemu-img.1
+man/man1/qemu.1
 share/doc/qemu/Makefile.multinode-${OPSYS}
 share/qemu/bios.bin
 share/qemu/keymaps/ar
