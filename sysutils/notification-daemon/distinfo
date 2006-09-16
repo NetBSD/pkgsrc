@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/30 21:03:51 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2006/09/16 14:48:05 jmmv Exp $
 
-SHA1 (notification-daemon-0.3.4.tar.gz) = 249205579d4efedb301c47ddd9716c67af707fcc
-RMD160 (notification-daemon-0.3.4.tar.gz) = b0332dd595102037f179d86e43fd1061042a3e3e
-Size (notification-daemon-0.3.4.tar.gz) = 381647 bytes
+SHA1 (notification-daemon-0.3.5.tar.gz) = c8aa3b601db6d8b00cd9f4227fff146b8259eb71
+RMD160 (notification-daemon-0.3.5.tar.gz) = 5251ce4dcc2ae3cc637077ea71eb65a17c9102b4
+Size (notification-daemon-0.3.5.tar.gz) = 383582 bytes
