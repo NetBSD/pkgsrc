@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/09/16 20:00:03 rillig Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		6
@@ -11,7 +11,7 @@ HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		automake14 gmake
+USE_TOOLS+=		automake autoconf gmake
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG=${GNOME_CONFIG:Q}
 GNOME_CONFIG=		${WRKDIR}/gnome-config
 
 pre-configure:
-	cd ${WRKSRC} && autoheader && automake --gnu && autoreconf --force
+	cd ${WRKSRC} && autoreconf --force --install
 	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/gnome-config \
 		> ${GNOME_CONFIG}
 	${CHMOD} +x ${GNOME_CONFIG}
