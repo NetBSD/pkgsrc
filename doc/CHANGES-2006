@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1296 2006/09/16 11:29:48 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1297 2006/09/16 12:06:50 hira Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4404,3 +4404,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/yelp to 2.16.0nb1 [jmmv 2006-09-16]
 	Updated databases/libgda-postgres to 1.9.103nb1 [wiz 2006-09-16]
 	Updated archivers/rar-bin to 3.6.0 [wiz 2006-09-16]
+	Updated inputmethod/uim to 1.2.1nb1 [hira 2006-09-16]
