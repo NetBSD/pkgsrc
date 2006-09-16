@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2006/07/05 05:37:39 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/09/16 12:20:35 jmmv Exp $
 
 DISTNAME=	gnomeicu-0.99.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomeicu/}
 EXTRACT_SUFX=	.tar.bz2

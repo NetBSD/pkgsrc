@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:11:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/09/16 12:20:32 jmmv Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -23,7 +23,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}seahorse
 
 .if !empty(SEAHORSE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.seahorse+=	seahorse>=0.8.1
-BUILDLINK_ABI_DEPENDS.seahorse?=	seahorse>=0.8.1nb2
+BUILDLINK_ABI_DEPENDS.seahorse?=	seahorse>=0.8.1nb3
 BUILDLINK_PKGSRCDIR.seahorse?=	../../security/seahorse
 .endif	# SEAHORSE_BUILDLINK3_MK
 

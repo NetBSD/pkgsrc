@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2006/09/15 15:08:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.60 2006/09/16 12:20:32 jmmv Exp $
 #
 
 DISTNAME=	libgnome-2.16.0
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.16/}
 EXTRACT_SUFX=	.tar.bz2
