@@ -1,6 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/04 17:02:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/16 10:19:03 wiz Exp $
 lib/libgda-1.9/providers/libgda-postgres.la
+share/libgda/postgres_specs_add_column.xml
 share/libgda/postgres_specs_create_db.xml
+share/libgda/postgres_specs_create_index.xml
+share/libgda/postgres_specs_create_table.xml
+share/libgda/postgres_specs_drop_column.xml
+share/libgda/postgres_specs_drop_db.xml
+share/libgda/postgres_specs_drop_index.xml
+share/libgda/postgres_specs_drop_table.xml
 share/libgda/postgres_specs_dsn.xml
+share/libgda/postgres_specs_rename_table.xml
 @comment in libgda: @dirrm share/libgda
 @comment in libgda: @dirrm lib/libgda-1.9/providers
