@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1299 2006/09/16 14:49:34 jmmv Exp $
+>$NetBSD: CHANGES-2006,v 1.1300 2006/09/16 15:43:28 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/iso-codes to 0.53 [jmmv 2006-09-16]
 	Updated sysutils/libnotify to 0.4.2 [jmmv 2006-09-16]
 	Updated sysutils/notification-daemon to 0.3.5 [jmmv 2006-09-16]
+	Updated pkgtools/pkglint to 4.69 [rillig 2006-09-16]
