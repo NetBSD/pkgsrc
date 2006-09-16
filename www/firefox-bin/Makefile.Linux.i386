@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.Linux.i386,v 1.6 2006/05/03 19:47:36 jdolecek Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.6.2.1 2006/09/16 18:00:09 salo Exp $
 
 DISTNAME=	${MOZILLA}-${MOZ_DISTVER}
 MOZ_DISTDIR=	releases/${MOZ_DIR}/linux-i686/en-US
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/${MOZ_DISTDIR}/ \
-		http://ftp.cvut.cz/mozilla/firefox/${MOZ_DISTDIR}/
-
+		http://ftp.cvut.cz/mozilla/firefox/${MOZ_DISTDIR}/ \
+		http://www.mirrorservice.org/sites/ftp.mozilla.org/pub/mozilla.org/firefox/${MOZ_DISTDIR}/ \
+		ftp://ftp.fu-berlin.de/unix/www/firefox/${MOZ_DISTDIR}/
 
 MOZ_PLATFORM=	linux
