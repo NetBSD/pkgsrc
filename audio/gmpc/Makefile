@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/07/05 05:37:39 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/09/16 12:20:35 jmmv Exp $
 #
 
 DISTNAME=		gmpc-0.13.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://download.qballcow.nl/programs/gmpc-0.13/
 

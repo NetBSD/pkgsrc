@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:11:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/09/16 12:20:33 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TOTEM_BUILDLINK3_MK:=	${TOTEM_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}totem
 
 .if !empty(TOTEM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.totem+=	{totem,totem-xine}>=1.4.0
-BUILDLINK_ABI_DEPENDS.totem?=	totem>=1.4.0nb2
+BUILDLINK_ABI_DEPENDS.totem?=	totem>=2.16.0nb1
 BUILDLINK_PKGSRCDIR.totem?=	../../multimedia/totem
 .endif	# TOTEM_BUILDLINK3_MK
 

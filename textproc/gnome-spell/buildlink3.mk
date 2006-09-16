@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/07/08 23:11:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/09/16 12:20:35 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_SPELL_BUILDLINK3_MK:=	${GNOME_SPELL_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-spell
 
 .if !empty(GNOME_SPELL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-spell+=		gnome-spell>=1.0.5
-BUILDLINK_ABI_DEPENDS.gnome-spell+=	gnome-spell>=1.0.6nb5
+BUILDLINK_ABI_DEPENDS.gnome-spell+=	gnome-spell>=1.0.6nb6
 BUILDLINK_PKGSRCDIR.gnome-spell?=	../../textproc/gnome-spell
 .endif	# GNOME_SPELL_BUILDLINK3_MK
 
