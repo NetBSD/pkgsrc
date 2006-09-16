@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/08/30 14:53:28 adam Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/16 21:47:43 rillig Exp $
 
 DISTNAME=	gnustep-make-1.13.0
 CATEGORIES=	devel gnustep
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 CONFIGURE_ARGS+=	--disable-importing-config-file
 CONFIGURE_ARGS+=	--with-config-file=${PREFIX}/etc/GNUstep.conf
+MAKE_FILE=		GNUmakefile
 
 CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
 			${PREFIX}/etc/GNUstep.conf
