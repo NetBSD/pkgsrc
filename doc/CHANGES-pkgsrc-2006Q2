@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.92 2006/09/16 10:27:48 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.93 2006/09/16 18:00:37 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -219,3 +219,5 @@ Pullup ticket 1824 - requested by jdc
 sparc64 build fix for nas
 Pullup ticket 1825 - requested by joerg
 security fixes for xorg
+Pullup ticket 1826 - requested by ghen
+security update for firefox
