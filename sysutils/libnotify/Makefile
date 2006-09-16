@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/08/23 09:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/16 14:46:55 jmmv Exp $
 #
 
-DISTNAME=	libnotify-0.3.2
-PKGREVISION=	2
+DISTNAME=	libnotify-0.4.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
 
@@ -17,7 +16,6 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE=	libnotify.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
