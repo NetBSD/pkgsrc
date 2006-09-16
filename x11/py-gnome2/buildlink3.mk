@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/09/16 06:40:03 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_GNOME2_BUILDLINK3_MK:=	${PY_GNOME2_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pygnome2
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pygnome2+=	${PYPKGPREFIX}-gnome2>=2.10.0
-BUILDLINK_ABI_DEPENDS.pygnome2+=	${PYPKGPREFIX}-gnome2>=2.12.4nb1
+BUILDLINK_ABI_DEPENDS.pygnome2+=	${PYPKGPREFIX}-gnome2>=2.12.4
 BUILDLINK_PKGSRCDIR.pygnome2?=	../../x11/py-gnome2
 .endif	# PY_GNOME2_BUILDLINK3_MK
 
