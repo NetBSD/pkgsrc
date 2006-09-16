@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.5 2006/09/16 15:29:36 hira Exp $
+
 --- build/gmake/Makefile.orig	2005-07-14 23:58:10.000000000 -0700
 +++ build/gmake/Makefile	2006-04-07 23:06:38.000000000 -0700
 @@ -58,13 +58,13 @@

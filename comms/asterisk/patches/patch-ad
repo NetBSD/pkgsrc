@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.5 2006/09/16 15:29:35 hira Exp $
+
 --- channels/Makefile.orig	2006-08-17 23:57:19.000000000 +0200
 +++ channels/Makefile	2006-09-13 10:46:23.000000000 +0200
 @@ -22,12 +22,13 @@
