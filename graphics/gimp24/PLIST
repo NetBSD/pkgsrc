@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/10 22:59:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/09/16 11:09:12 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -113,6 +113,7 @@ include/gimp-2.0/libgimpbase/gimpmemsize.h
 include/gimp-2.0/libgimpbase/gimpparam.h
 include/gimp-2.0/libgimpbase/gimpparasite.h
 include/gimp-2.0/libgimpbase/gimpparasiteio.h
+include/gimp-2.0/libgimpbase/gimprectangle.h
 include/gimp-2.0/libgimpbase/gimpsignal.h
 include/gimp-2.0/libgimpbase/gimpunit.h
 include/gimp-2.0/libgimpbase/gimputils.h
@@ -123,6 +124,7 @@ include/gimp-2.0/libgimpcolor/gimpcmyk.h
 include/gimp-2.0/libgimpcolor/gimpcolor.h
 include/gimp-2.0/libgimpcolor/gimpcolorspace.h
 include/gimp-2.0/libgimpcolor/gimpcolortypes.h
+include/gimp-2.0/libgimpcolor/gimphsl.h
 include/gimp-2.0/libgimpcolor/gimphsv.h
 include/gimp-2.0/libgimpcolor/gimprgb.h
 include/gimp-2.0/libgimpconfig/gimpcolorconfig-enums.h
@@ -177,6 +179,7 @@ include/gimp-2.0/libgimpwidgets/gimpenumwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpfileentry.h
 include/gimp-2.0/libgimpwidgets/gimpframe.h
 include/gimp-2.0/libgimpwidgets/gimphelpui.h
+include/gimp-2.0/libgimpwidgets/gimphintbox.h
 include/gimp-2.0/libgimpwidgets/gimpintcombobox.h
 include/gimp-2.0/libgimpwidgets/gimpintstore.h
 include/gimp-2.0/libgimpwidgets/gimpmemsizeentry.h
@@ -322,6 +325,7 @@ lib/gimp/2.0/plug-ins/png
 lib/gimp/2.0/plug-ins/pnm
 lib/gimp/2.0/plug-ins/polar
 lib/gimp/2.0/plug-ins/postscript
+lib/gimp/2.0/plug-ins/print
 lib/gimp/2.0/plug-ins/procedure-browser
 lib/gimp/2.0/plug-ins/psd
 lib/gimp/2.0/plug-ins/psd_save
@@ -508,6 +512,7 @@ share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpmemsize.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpparam.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpparasite.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpparasiteio.html
+share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimprectangle.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpsignal.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpunit.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimputils.html
@@ -575,6 +580,7 @@ share/doc/${PKGNAME}/libgimpmath/libgimpmath-GimpMath.html
 share/doc/${PKGNAME}/libgimpmath/libgimpmath-GimpMatrix.html
 share/doc/${PKGNAME}/libgimpmath/libgimpmath-GimpVector.html
 share/doc/${PKGNAME}/libgimpmath/libgimpmath.devhelp
+share/doc/${PKGNAME}/libgimpmath/libgimpmath.devhelp2
 share/doc/${PKGNAME}/libgimpmath/libgimpmath.html
 share/doc/${PKGNAME}/libgimpmath/right.png
 share/doc/${PKGNAME}/libgimpmath/style.css
@@ -662,6 +668,7 @@ share/doc/${PKGNAME}/libgimpwidgets/gimp-enum-combo-box.png
 share/doc/${PKGNAME}/libgimpwidgets/gimp-enum-label.png
 share/doc/${PKGNAME}/libgimpwidgets/gimp-file-entry.png
 share/doc/${PKGNAME}/libgimpwidgets/gimp-frame.png
+share/doc/${PKGNAME}/libgimpwidgets/gimp-hint-box.png
 share/doc/${PKGNAME}/libgimpwidgets/gimp-int-combo-box.png
 share/doc/${PKGNAME}/libgimpwidgets/gimp-memsize-entry.png
 share/doc/${PKGNAME}/libgimpwidgets/gimp-offset-area.png
@@ -680,6 +687,7 @@ share/doc/${PKGNAME}/libgimpwidgets/ix04.html
 share/doc/${PKGNAME}/libgimpwidgets/left.png
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpEnumWidgets.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpHelpUI.html
+share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpHintBox.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpPropWidgets.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpQueryBox.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpStock.html
@@ -875,6 +883,8 @@ share/doc/${PKGNAME}/libgimpwidgets/stock-template-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-template-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-text-dir-ltr-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-text-dir-rtl-24.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-tool-heal-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-tool-heal-22.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-text-layer-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-text-layer-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-text-layer-32.png
@@ -989,6 +999,7 @@ share/doc/${PKGNAME}/libgimpwidgets/up.png
 share/examples/gimp-2.0/controllerrc
 share/examples/gimp-2.0/gimprc
 share/examples/gimp-2.0/gtkrc
+share/examples/gimp-2.0/menurc
 share/examples/gimp-2.0/ps-menurc
 share/examples/gimp-2.0/sessionrc
 share/examples/gimp-2.0/templaterc
@@ -1497,12 +1508,18 @@ share/gimp/2.0/scripts/weave.scm
 share/gimp/2.0/scripts/web-browser.scm
 share/gimp/2.0/scripts/xach-effect.scm
 share/gimp/2.0/themes/Default/gtkrc
+share/gimp/2.0/themes/Default/images/preferences/color-management-22.png
 share/gimp/2.0/themes/Default/images/preferences/color-management.png
+share/gimp/2.0/themes/Default/images/preferences/controllers-22.png
 share/gimp/2.0/themes/Default/images/preferences/controllers.png
 share/gimp/2.0/themes/Default/images/preferences/default-comment.png
+share/gimp/2.0/themes/Default/images/preferences/default-grid-22.png
 share/gimp/2.0/themes/Default/images/preferences/default-grid.png
+share/gimp/2.0/themes/Default/images/preferences/display-22.png
 share/gimp/2.0/themes/Default/images/preferences/display.png
+share/gimp/2.0/themes/Default/images/preferences/environment-22.png
 share/gimp/2.0/themes/Default/images/preferences/environment.png
+share/gimp/2.0/themes/Default/images/preferences/folders-22.png
 share/gimp/2.0/themes/Default/images/preferences/folders-brushes-22.png
 share/gimp/2.0/themes/Default/images/preferences/folders-brushes.png
 share/gimp/2.0/themes/Default/images/preferences/folders-environ-22.png
@@ -1528,16 +1545,21 @@ share/gimp/2.0/themes/Default/images/preferences/folders-tool-plug-ins.png
 share/gimp/2.0/themes/Default/images/preferences/folders-tools-22.png
 share/gimp/2.0/themes/Default/images/preferences/folders.png
 share/gimp/2.0/themes/Default/images/preferences/help-system.png
+share/gimp/2.0/themes/Default/images/preferences/image-title-22.png
 share/gimp/2.0/themes/Default/images/preferences/image-title.png
 share/gimp/2.0/themes/Default/images/preferences/image-windows-22.png
 share/gimp/2.0/themes/Default/images/preferences/image-windows.png
+share/gimp/2.0/themes/Default/images/preferences/input-devices-22.png
 share/gimp/2.0/themes/Default/images/preferences/input-devices.png
 share/gimp/2.0/themes/Default/images/preferences/interface-22.png
 share/gimp/2.0/themes/Default/images/preferences/interface.png
+share/gimp/2.0/themes/Default/images/preferences/new-image-22.png
 share/gimp/2.0/themes/Default/images/preferences/new-image.png
+share/gimp/2.0/themes/Default/images/preferences/session-22.png
 share/gimp/2.0/themes/Default/images/preferences/session.png
 share/gimp/2.0/themes/Default/images/preferences/theme-22.png
 share/gimp/2.0/themes/Default/images/preferences/theme.png
+share/gimp/2.0/themes/Default/images/preferences/tool-options-22.png
 share/gimp/2.0/themes/Default/images/preferences/tool-options.png
 share/gimp/2.0/themes/Default/images/preferences/toolbox-22.png
 share/gimp/2.0/themes/Default/images/preferences/toolbox.png
