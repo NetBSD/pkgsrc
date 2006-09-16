@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2006/05/22 22:22:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2006/09/16 07:17:52 wiz Exp $
 
 DISTNAME=		install_flash_player_7_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -16,7 +16,7 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
-FLASH_VERS=		7.0r63
+FLASH_VERS=		7.0r68
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_7_${DISTUNAME}
 
