@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/19 12:32:06 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/16 10:34:46 rillig Exp $
 #
 
 DISTNAME=		eboard-0.9.5
@@ -12,6 +12,7 @@ COMMENT=		Graphical user interface for playing chess
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl gmake
