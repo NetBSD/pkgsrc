@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.3 2006/09/16 08:28:36 adrianp Exp $
+
+--- lib/font/Type1/util.c.orig	2001-01-17 19:43:24.000000000 +0000
++++ lib/font/Type1/util.c
+@@ -97,7 +97,7 @@ vm_alloc(int bytes)
+   bytes = (bytes + 7) & ~7;
+  
+   /* Allocate the space, if it is available */
+-  if (bytes <= vm_free) {
++  if (bytes > 0 && bytes <= vm_free) {
+     answer = vm_next;
+     vm_free -= bytes;
+     vm_next += bytes;
