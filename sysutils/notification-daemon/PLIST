@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/30 21:03:51 jmmv Exp $
-lib/notification-daemon-1.0/engines/libbubble.la
+@comment $NetBSD: PLIST,v 1.2 2006/09/16 14:48:05 jmmv Exp $
 lib/notification-daemon-1.0/engines/libstandard.la
 libexec/notification-daemon
-share/dbus-1/services/notification-daemon.service
+share/dbus-1/services/org.freedesktop.Notifications.service
 share/gconf/schemas/notification-daemon.schemas
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in dbus: @dirrm share/dbus-1/services
