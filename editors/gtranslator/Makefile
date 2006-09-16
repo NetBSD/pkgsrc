@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/07/05 05:37:40 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/09/16 12:20:36 jmmv Exp $
 
 DISTNAME=	gtranslator-1.0.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtranslator/}
 

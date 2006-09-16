@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/09/16 12:20:33 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWPD_BUILDLINK3_MK:=	${LIBWPD_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libwpd
 
 .if !empty(LIBWPD_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libwpd+=	libwpd>=0.8.1nb1
-BUILDLINK_ABI_DEPENDS.libwpd?=	libwpd>=0.8.4
+BUILDLINK_ABI_DEPENDS.libwpd?=	libwpd>=0.8.4nb3
 BUILDLINK_PKGSRCDIR.libwpd?=	../../converters/libwpd
 .endif	# LIBWPD_BUILDLINK3_MK
 
