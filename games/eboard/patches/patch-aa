@@ -1,13 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2006/06/21 14:59:36 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/16 10:34:46 rillig Exp $
 
---- configure.orig	2006-06-21 14:27:15.000000000 +0000
-+++ configure
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl
-+#!/usr/pkg/bin/perl
- 
- use IO::Handle;
- 
+--- configure.orig	2003-11-27 00:48:49.000000000 +0100
++++ configure	2006-09-16 12:28:53.000000000 +0200
 @@ -237,7 +237,11 @@ sub header_check {
  	print "  $x";
  	$y = spaces(20 - length($x));
@@ -21,3 +15,12 @@ $NetBSD: patch-aa,v 1.1 2006/06/21 14:59:36 joerg Exp $
  	if (!open(TESTCC,">test.cc")) {
  	    print "cannot write test program, FAIL\n";
  	    return 0;
+@@ -514,7 +518,7 @@ print CONFIGMAKE "LDFLAGS   = @ldflags\n
+ 
+ print CONFIGMAKE "prefix    = $prefix\n";
+ print CONFIGMAKE "bindir    = $prefix/bin\n";
+-print CONFIGMAKE "mandir    = $prefix/man\n";
++print CONFIGMAKE "mandir    = $prefix/$ENV{PKGMANDIR}\n";
+ print CONFIGMAKE "datadir   = $prefix/share/$package\n";
+ print CONFIGMAKE "version   = $version\n";
+ 
