@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/05 18:02:42 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/16 10:07:55 rillig Exp $
 #
 
 DISTNAME=		httping-1.2.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.vanheusden.com/httping/
 COMMENT=		Like 'ping' but for http-requests
+
+LDFLAGS.SunOS=		-lnsl -lsocket
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/httping.1 ${PREFIX}/man/man1
