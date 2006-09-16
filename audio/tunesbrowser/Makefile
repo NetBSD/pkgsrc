@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/07/07 15:49:30 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/09/16 12:20:35 jmmv Exp $
 #
 
 DISTNAME=		tunesbrowser-0.3.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		http://craz.net/programs/itunes/files/
 EXTRACT_SUFX=		.tar.bz2

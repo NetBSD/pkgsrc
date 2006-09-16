@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/16 12:20:40 jmmv Exp $
 #
 
 DISTNAME=	gpass-0.4.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpass/}
 

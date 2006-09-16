@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/07/17 15:17:26 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/16 12:20:36 jmmv Exp $
 #
 
 DISTNAME=	ArX-2.2.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/arx/
 
