@@ -1,9 +1,9 @@
-.\"	$NetBSD: port2pkg.1,v 1.6 2006/09/13 17:22:55 ginsbach Exp $
+.\"	$NetBSD: port2pkg.1,v 1.7 2006/09/16 06:37:40 wiz Exp $
 .\"
-.\" Copyright (c) 1999 by Kazuki Sakamoto (sakamoto@netbsd.org)
+.\" Copyright (c) 1999 by Kazuki Sakamoto (sakamoto@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd January 10, 2004
+.Dd September 16, 2006
 .Dt PORT2PKG 1
 .Sh NAME
 .Nm port2pkg
@@ -40,16 +40,17 @@ Adjust maintainer of this package
 (default: pkgsrc-users@NetBSD.org).
 .El
 .Sh EXAMPLES
-.Dl port2pkg /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo
+.Dl port2pkg /mnt/ports/\*[Lt]category\*[Gt]/foo /usr/pkgsrc/\*[Lt]category\*[Gt]/foo
 or
-.Dl port2pkg -m your@email /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo
+.Dl port2pkg -m your@email /mnt/ports/\*[Lt]category\*[Gt]/foo /usr/pkgsrc/\*[Lt]category\*[Gt]/foo
 .Sh SEE ALSO
+.Xr pkglint 1
 Read
 .Ar Package Constructor's Guide
 in
 .Pa pkgsrc/doc/pkgsrc.txt .
 .Sh AUTHORS
-.An Kazuki Sakamoto Aq sakamoto@netbsd.org
+.An Kazuki Sakamoto Aq sakamoto@NetBSD.org
 .Sh BUGS
 .Nm
 is not a magic wand, please double-check converted pkgsrc.
