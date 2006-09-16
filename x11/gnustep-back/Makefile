@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/08/30 14:55:41 adam Exp $
+# $NetBSD: Makefile,v 1.37 2006/09/16 18:10:31 rillig Exp $
 
 DISTNAME=	gnustep-back-0.11.0
 CATEGORIES=	x11 gnustep
@@ -12,6 +12,7 @@ USE_LANGUAGES=	objc
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--exec-prefix=${PREFIX}/libexec/GNUstep
+MAKE_FILE=	GNUmakefile
 
 pre-install:
 	${INSTALL_DATA_DIR} ${GNUSTEP_SYSTEM_ROOT}/Library/Fonts
