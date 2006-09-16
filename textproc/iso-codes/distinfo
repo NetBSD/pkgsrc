@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/03/30 21:01:43 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2006/09/16 14:45:42 jmmv Exp $
 
-SHA1 (iso-codes_0.50.orig.tar.gz) = 80443d65db9be7151101c81789fedb93fe1f6ae5
-RMD160 (iso-codes_0.50.orig.tar.gz) = bd18cef673cabc5c872ea7db4bb9ed47044c1e36
-Size (iso-codes_0.50.orig.tar.gz) = 9254598 bytes
-SHA1 (patch-aa) = 7f47beb7660fc29fc3af5216df29fabcd6cbaf44
-SHA1 (patch-ab) = 95db4d7aaadc66dd1c1f3817ebed97487addfcdb
+SHA1 (iso-codes_0.53.orig.tar.gz) = 43e047d8ac7f6c6520737d5a0db1f6c2d45f8a24
+RMD160 (iso-codes_0.53.orig.tar.gz) = ce99d589a42a8ce3f0ab6be7d2861b6d434e8c1d
+Size (iso-codes_0.53.orig.tar.gz) = 8830752 bytes
