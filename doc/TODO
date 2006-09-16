@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5460 2006/09/16 07:18:59 wiz Exp $
+$NetBSD: TODO,v 1.5461 2006/09/16 11:29:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ Suggested package updates
 	o raine-0.43.4
 	o randread-0.2
 	o raptor-1.4.11
-	o rar-bin-3.6.0 [pkg/34510]
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1
