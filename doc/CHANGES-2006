@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1293 2006/09/16 07:18:59 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1294 2006/09/16 09:18:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4401,3 +4401,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/ns-flash to 7.0.68 [wiz 2006-09-16]
 	Updated multimedia/moz-bin-flash to 7.0.68 [wiz 2006-09-16]
 	Updated www/firefox-bin-flash to 7.0.68 [wiz 2006-09-16]
+	Updated misc/yelp to 2.16.0nb1 [jmmv 2006-09-16]
