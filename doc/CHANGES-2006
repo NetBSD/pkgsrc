@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1291 2006/09/15 15:55:20 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1292 2006/09/16 06:24:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4394,3 +4394,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/gnome to 2.16.0 [jmmv 2006-09-15]
 	Updated www/seamonkey to 1.0.5 [ghen 2006-09-15]
 	Updated www/seamonkey-gtk1 to 1.0.5 [ghen 2006-09-15]
+	Updated devel/libidn to 0.6.7 [wiz 2006-09-15]
+	Updated security/gnutls to 1.4.4 [wiz 2006-09-15]
+	Updated net/mldonkey to 2.8.0 [wiz 2006-09-15]
+	Updated net/mldonkey-gui to 2.8.0 [wiz 2006-09-15]
