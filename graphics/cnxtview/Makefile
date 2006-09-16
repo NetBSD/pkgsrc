@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/27 02:43:50 hamajima Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/16 10:45:39 rillig Exp $
 #
 
 DISTNAME=	cnxtutil-0.00-alpha
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.medias.ne.jp/~takam/bsd/
 MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#webcamnote
 COMMENT=	Creative WEBCAM Notebook Utility Programs
+
+NOT_FOR_PLATFORM=	SunOS-*-*	# needs <err.h> and <dev/usb/usb.h>
 
 MAKE_ENV+=	NOGCCERROR=
 
