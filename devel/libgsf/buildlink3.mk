@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/07/08 23:10:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/09/16 12:20:33 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGSF_BUILDLINK3_MK:=	${LIBGSF_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgsf
 
 .if !empty(LIBGSF_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.13.3
-BUILDLINK_ABI_DEPENDS.libgsf?=	libgsf>=1.14.0
+BUILDLINK_ABI_DEPENDS.libgsf?=	libgsf>=1.14.1nb2
 BUILDLINK_PKGSRCDIR.libgsf?=	../../devel/libgsf
 .endif	# LIBGSF_BUILDLINK3_MK
 
