@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2006/08/30 21:11:37 abs Exp $
+# $NetBSD: Makefile,v 1.79 2006/09/16 07:09:22 schwarz Exp $
 
 DISTNAME=	exim-4.63
 CATEGORIES=	mail net
@@ -46,6 +46,9 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 # XXX: The following will be handled by buildlink3 at some point.
 CFLAGS+=		${_STRIPFLAG_CC}
 
+# pay attention to CPPFLAGS as well
+CFLAGS+=		${CPPFLAGS}
+
 .include "options.mk"
 
 # BDB_TYPE gets set to "db1" if USE_DB185=="yes"
@@ -83,6 +86,11 @@ pre-configure:
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
 	    > ${WRKSRC}/Local/eximon.conf
+# CFLAGS is already set by pkgsrc
+	@for f in ${WRKSRC}/OS/Makefile-*; do \
+		${SED} -e 's/^CFLAGS=.*//' $$f > $$f.subst; \
+		${MV} -f $$f.subst $$f; \
+	done
 
 post-build:
 	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
