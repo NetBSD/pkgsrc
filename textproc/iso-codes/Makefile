@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/04/13 18:23:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/16 14:45:42 jmmv Exp $
 #
 
-DISTNAME=	iso-codes_0.50.orig
+DISTNAME=	iso-codes_0.53.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/iso-codes/}
