@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/30 19:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/09/16 06:21:40 wiz Exp $
 #
 
 .include "../../net/mldonkey/Makefile.common"
@@ -21,10 +21,8 @@ do-install:
 	${RM} -f ${PREFIX}/bin/mlgui
 	cd ${PREFIX}/bin && ${LN} -s ../libexec/mldonkey/mlgui mlgui
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey
-	${INSTALL_PROGRAM} ${WRKSRC}/mlchat ${PREFIX}/libexec/mldonkey
 	${INSTALL_PROGRAM} ${WRKSRC}/mlgui ${PREFIX}/libexec/mldonkey
 	${INSTALL_PROGRAM} ${WRKSRC}/mlguistarter ${PREFIX}/libexec/mldonkey
-	${INSTALL_PROGRAM} ${WRKSRC}/mlim ${PREFIX}/libexec/mldonkey
 	${INSTALL_PROGRAM} ${WRKSRC}/mlnet+gui ${PREFIX}/libexec/mldonkey
 
 .include "../../mk/bsd.pkg.mk"
