@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST.gtk,v 1.4 2006/06/12 16:35:20 wiz Exp $
+@comment $NetBSD: PLIST.gtk,v 1.5 2006/09/16 12:05:16 hira Exp $
 bin/uim-im-switcher-gtk
 bin/uim-input-pad-ja
 bin/uim-pref-gtk
 bin/uim-toolbar-gtk
 bin/uim-toolbar-gtk-systray
-lib/gtk-2.0/2.4.0/immodules/im-uim.la
+lib/gtk-2.0/2.10.0/immodules/im-uim.la
 libexec/uim-candwin-gtk
-@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/immodules
+@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/immodules
