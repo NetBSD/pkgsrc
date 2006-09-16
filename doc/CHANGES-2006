@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1292 2006/09/16 06:24:15 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1293 2006/09/16 07:18:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4398,3 +4398,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/gnutls to 1.4.4 [wiz 2006-09-15]
 	Updated net/mldonkey to 2.8.0 [wiz 2006-09-15]
 	Updated net/mldonkey-gui to 2.8.0 [wiz 2006-09-15]
+	Updated multimedia/ns-flash to 7.0.68 [wiz 2006-09-16]
+	Updated multimedia/moz-bin-flash to 7.0.68 [wiz 2006-09-16]
+	Updated www/firefox-bin-flash to 7.0.68 [wiz 2006-09-16]
