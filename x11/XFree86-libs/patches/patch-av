@@ -1,0 +1,25 @@
+$NetBSD: patch-av,v 1.3 2006/09/16 08:28:36 adrianp Exp $
+
+--- lib/font/Type1/afm.c.orig	2001-08-27 20:49:52.000000000 +0100
++++ lib/font/Type1/afm.c
+@@ -30,6 +30,8 @@
+ #include "fontmisc.h"			/* for xalloc/xfree */
+ #include "AFM.h"
+ 
++#include <limits.h>
++
+ #define PBUF 256
+ #define KBUF 20
+ 
+@@ -111,6 +113,11 @@ int CIDAFM(FILE *fd, FontInfo **pfi) {
+             
+             fi->nChars = atoi(p);
+ 
++	    if (fi->nChars < 0 || fi->nChars > INT_MAX / sizeof(Metrics)) {
++		xfree(afmbuf);
++		xfree(fi);
++		return(1);
++	    }
+             fi->metrics = (Metrics *)xalloc(fi->nChars * 
+                 sizeof(Metrics));
+             if (fi->metrics == NULL) {
