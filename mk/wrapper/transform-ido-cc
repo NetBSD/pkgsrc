@@ -1,4 +1,4 @@
-# $NetBSD: transform-ido-cc,v 1.3 2006/07/31 14:43:48 jlam Exp $
+# $NetBSD: transform-ido-cc,v 1.4 2006/09/17 18:46:00 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,7 @@ case $arg in
 ######################################################################
 -O3)
 	arg=-O2
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -58,22 +58,22 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-Wl:-R|-Wl,-rpath,|"`
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 -Wl,-rpath,*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-Wl:-rpath:|-Wl,-rpath,|"`
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 -rpath*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-rpath.|-Wl,-rpath,|"`
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 -R*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-R|-Wl,-rpath,|"`
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -81,7 +81,7 @@ case $arg in
 ######################################################################
 -fsigned-char|-fno-unsigned-char)
 	arg=-signed
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 ;;
 ######################################################################
@@ -89,7 +89,7 @@ case $arg in
 ######################################################################
 -g)
 	arg=-g3
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 ;;
 ######################################################################
@@ -111,7 +111,7 @@ case $arg in
 ######################################################################
 -[WOfm]*|-pipe|-MM|-nostd*|--disable-shared|-non_shared|-n32)
 	arg=
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -119,7 +119,7 @@ case $arg in
 ######################################################################
 -pg)
 	arg=-p
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -128,7 +128,7 @@ case $arg in
 -static)
 	arg="-B static"
 	split_arg=yes
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -136,7 +136,7 @@ case $arg in
 ######################################################################
 -notall)
 	arg=-none
-	debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
 	addtocache=yes
 	;;
 esac
