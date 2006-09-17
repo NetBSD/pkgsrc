@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.7 2005/06/09 17:06:21 jlam Exp $
+# $NetBSD: arg-source,v 1.8 2006/09/17 22:52:45 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,6 +74,7 @@ while $test $# -gt 0; do
 		list="${arg#$R}"
 		save_IFS="${IFS}"; IFS=":"
 		for dir in $list; do
+			IFS="${save_IFS}"
 			shquote "$dir"; dir="$shquoted"
 			append_queue argbuf "$R$dir"
 			$debug_log $wrapperlog "    (arg-source) push: $R$dir"
@@ -98,6 +99,7 @@ while $test $# -gt 0; do
 		*:*)
 			save_IFS="${IFS}"; IFS=":"
 			for dir in $nextarg; do
+				IFS="${save_IFS}"
 				shquote "$dir"; dir="$shquoted"
 				append_queue argbuf "$R$dir"
 				$debug_log $wrapperlog "    (arg-source) push: $R$dir"
