@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2006/05/22 22:22:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13.2.1 2006/09/17 18:42:47 salo Exp $
 
 DISTNAME=		install_flash_player_7_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -16,9 +16,11 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
-FLASH_VERS=		7.0r63
+FLASH_VERS=		7.0r68
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_7_${DISTUNAME}
+
+DISTINFO_FILE=		${.CURDIR}/../../www/firefox-bin-flash/distinfo
 
 LICENSE=		flash-license
 RESTRICTED=             Redistribution not permitted
