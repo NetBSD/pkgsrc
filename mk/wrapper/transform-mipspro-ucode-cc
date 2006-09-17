@@ -1,4 +1,4 @@
-# $NetBSD: transform-mipspro-ucode-cc,v 1.2 2006/07/31 14:43:48 jlam Exp $
+# $NetBSD: transform-mipspro-ucode-cc,v 1.3 2006/09/17 18:46:00 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,7 +46,7 @@ case $arg in
 ######################################################################
 -O*)
 	arg=
-	debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -55,7 +55,7 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg="-Wl,-rpath,${arg#-Wl,-R}"
-	debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -70,7 +70,7 @@ case $arg in
 ######################################################################
 -W*)
 	arg=
-	debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -78,7 +78,7 @@ case $arg in
 ######################################################################
 -f[Pp][Ii][Cc])
 	arg="-KPIC"
-	debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-mipspro-ucode-cc) to: $arg"
 	addtocache=yes
 	;;
 esac
