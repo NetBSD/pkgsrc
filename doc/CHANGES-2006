@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1302 2006/09/17 11:45:38 jmmv Exp $
+>$NetBSD: CHANGES-2006,v 1.1303 2006/09/17 12:08:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/notification-daemon to 0.3.5 [jmmv 2006-09-16]
 	Updated pkgtools/pkglint to 4.69 [rillig 2006-09-16]
 	Updated net/tsocks to 1.8beta5nb2 [jmmv 2006-09-17]
+	Updated sysutils/gtk-send-pr to 0.4.7 [wiz 2006-09-17]
