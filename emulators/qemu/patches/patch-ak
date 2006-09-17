@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.8 2006/09/05 00:44:38 xtraeme Exp $
+$NetBSD: patch-ak,v 1.9 2006/09/17 07:51:56 xtraeme Exp $
 
 --- Makefile.orig	2006-07-22 19:23:34.000000000 +0200
-+++ Makefile	2006-09-05 02:37:31.000000000 +0200
++++ Makefile	2006-09-17 09:43:56.000000000 +0200
 @@ -5,15 +5,15 @@
  .PHONY: all clean distclean dvi info install install-doc tar tarbin \
  	speed test test2 html dvi info
@@ -21,7 +21,7 @@ $NetBSD: patch-ak,v 1.8 2006/09/05 00:44:38 xtraeme Exp $
  DEFINES+=-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
  TOOLS=qemu-img$(EXESUF)
  ifdef CONFIG_STATIC
-@@ -59,20 +59,21 @@
+@@ -59,20 +59,20 @@
  common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
  
  install-doc: $(DOCS)
@@ -34,12 +34,10 @@ $NetBSD: patch-ak,v 1.8 2006/09/05 00:44:38 xtraeme Exp $
  	$(INSTALL) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
  endif
  
--install: all $(if $(BUILD_DOCS),install-doc)
+ install: all $(if $(BUILD_DOCS),install-doc)
 -	mkdir -p "$(DESTDIR)$(bindir)"
 -	$(INSTALL) -m 755 -s $(TOOLS) "$(DESTDIR)$(bindir)"
 -	mkdir -p "$(DESTDIR)$(datadir)"
-+install: all
-+install: all 
 +	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
 +	$(BSD_INSTALL_PROGRAM) $(TOOLS) $(bindir)
 +	$(BSD_INSTALL_DATA_DIR) $(datadir)
