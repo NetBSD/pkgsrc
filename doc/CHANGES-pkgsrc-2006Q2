@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.96 2006/09/17 09:10:06 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.97 2006/09/17 18:43:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -227,3 +227,5 @@ Pullup ticket 1827 - requested by ghen
 security update for seamonkey
 Pullup ticket 1830 - requested by wiz
 security update for gnutls
+Pullup ticket 1829 - requested by wiz
+security update for flash plugin
