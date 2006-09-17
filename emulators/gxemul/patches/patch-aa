@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.3 2006/09/17 16:38:12 he Exp $
+
+--- src/devices/dev_footbridge.c.orig	2006-02-09 21:07:12.000000000 +0100
++++ src/devices/dev_footbridge.c
+@@ -85,10 +85,18 @@ void dev_footbridge_tick(struct cpu *cpu
+ 
+ 		if (d->timer_value[i] > amount)
+ 			d->timer_value[i] -= amount;
+-		else
+-			d->timer_value[i] = 0;
++		else {
++			if (d->timer_control[i] & TIMER_MODE_PERIODIC)
++				d->timer_value[i] = 0;
++			else {
++				/* free-running timer */
++				d->timer_value[i] -= amount;
++				d->timer_value[i] &= TIMER_MAX_VAL;
++			}
++		}
+ 
+-		if (d->timer_value[i] == 0) {
++		if ((d->timer_control[i] & TIMER_MODE_PERIODIC) &&
++		    (d->timer_value[i] == 0)) {
+ 			d->timer_tick_countdown[i] --;
+ 			if (d->timer_tick_countdown[i] > 0)
+ 				continue;
