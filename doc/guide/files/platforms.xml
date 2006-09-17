@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.41 2006/09/13 23:33:18 wiz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.42 2006/09/17 23:55:28 ben Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -254,7 +254,7 @@ file and inspect the contents before extracting it.
 
       <para>Darwin 5.x and up are supported. There are two methods of using
 	pkgsrc on Mac OS X, by using a <link linkend="platform.osx-image">disk
-	  image</link>, or a <link linkend="platform.osx-ufs">UFS
+	  image</link>, or a <link linkend="platform.osx-part">UFS or HFSX
 	  partition</link>.</para>
 
       <para>Before you start, you will need to download and install the Mac OS X Developer
@@ -265,14 +265,14 @@ file and inspect the contents before extracting it.
       url="http://www.apple.com/macosx/x11/download/">http://www.apple.com/macosx/x11/download/</ulink>
       if you intend to build packages that use the X11 Window System.</para>
 
-      <para>If you already have a UFS partition, or have a spare partition
-      that you can format as UFS, it is recommended to use that instead of
+      <para>If you already have a UFS or HFSX partition, or have a spare partition
+      that you can format as UFS or HFSX, it is recommended to use that instead of
       the disk image. It'll be somewhat faster and will mount automatically
       at boot time, where you must manually mount a disk image.</para>
 
       <note>
 	<para>You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ file system as found in Darwin 7.0 and newer.</para>
+	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.</para>
       </note>
 
       <sect3 id="platform.osx-image">
@@ -286,32 +286,32 @@ file and inspect the contents before extracting it.
 &rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
 
 	<note>
-	  <para>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  It will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.</para>
+	  <para>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journalling.</para>
 	</note>
 
-	<para>Allow suid and synchronous writes:</para>
-	<screen>&rprompt; <userinput>sudo mount -u -o suid,sync /Volumes/NetBSD</userinput></screen>
+	<para>Allow suid:</para>
+	<screen>&rprompt; <userinput>sudo mount -u -o suid /Volumes/NetBSD</userinput></screen>
       </sect3>
 
-      <sect3 id="platform.osx-ufs">
-	<title>Using a UFS partition</title>
+      <sect3 id="platform.osx-part">
+	<title>Using a UFS or HFSX partition</title>
 
 	<para>By default, <filename>/usr</filename> will be on your root file
 	system, normally HFS+. It is possible to use the default
 	<emphasis>prefix</emphasis> of <filename>/usr/pkg</filename>
 	by symlinking <filename>/usr/pkg</filename> to a directory on a UFS
-	file system. Obviously, another symlink is required if you want to
+	or HFSX file system. Obviously, another symlink is required if you want to
 	place the package database directory outside the
 	<emphasis>prefix</emphasis>. e.g.</para>
 
 	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir /usr/pkg/pkgdb</userinput></screen>
 
 	<para>If you created your partitions at the time of installing Mac OS X
-	and formatted the target partition as UFS, it should automatically
+	and formatted the target partition as UFS or HFSX, it should automatically
 	mount on <filename>/Volumes/&lt;volume name&gt;</filename> when the
-	machine boots. If you are (re)formatting a partition as UFS, you need
+	machine boots. If you are (re)formatting a partition as UFS or HFSX, you need
 	to ensure that the partition map correctly reflects
-	<quote>Apple_UFS</quote> and not <quote>Apple_HFS</quote>.</para>
+	<quote>Apple_UFS</quote> or <quote>Apple_HFSX</quote> and not <quote>Apple_HFS</quote>.</para>
 
 	<para>The problem is that none of the disk tools will let you touch a
 	disk that is booted from. You can unmount the partition, but even if
@@ -322,8 +322,8 @@ file and inspect the contents before extracting it.
 	<para>You'll need to boot off of the OS X Installation (User) CD.  When
 	the Installation program starts, go up to the menu and select Disk
 	Utility.  Now, you will be able to select the partition you want
-	to be UFS, and Format it Apple UFS. Quit the Disk Utility, quit the
-	installer which will reboot your machine. The new UFS file system
+	to be UFS or HFSX, and Format it Apple UFS or HFSX. Quit the Disk Utility, quit the
+	installer which will reboot your machine. The new UFS or HFSX file system
 	will appear in Finder.</para>
 
 	<para>Be aware that the permissions on the new file system will be writable
