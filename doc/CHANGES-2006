@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1306 2006/09/17 18:21:10 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1307 2006/09/17 22:38:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4416,3 +4416,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/icon-naming-utils to 0.8.1nb1 [joerg 2006-09-17]
 	Updated lang/hugs to 200605nb1 [jmmv 2006-09-17]
 	Updated fonts/fontconfig to 2.4.0nb1 [joerg 2006-09-17]
+	Updated emulators/gxemul to 0.4.2nb1 [he 2006-09-17]
