@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1301 2006/09/17 06:28:51 agc Exp $
+>$NetBSD: CHANGES-2006,v 1.1302 2006/09/17 11:45:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4411,3 +4411,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/libnotify to 0.4.2 [jmmv 2006-09-16]
 	Updated sysutils/notification-daemon to 0.3.5 [jmmv 2006-09-16]
 	Updated pkgtools/pkglint to 4.69 [rillig 2006-09-16]
+	Updated net/tsocks to 1.8beta5nb2 [jmmv 2006-09-17]
