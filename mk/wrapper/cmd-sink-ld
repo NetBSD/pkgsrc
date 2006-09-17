@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-ld,v 1.2 2004/11/12 05:02:41 jlam Exp $
+# $NetBSD: cmd-sink-ld,v 1.3 2006/09/17 22:52:45 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,6 +51,7 @@ while ! queue_is_empty cmdbuf; do
 		save_IFS="${IFS}"; IFS=","
 		revlist=
 		for opt in $list; do
+			IFS="${save_IFS}"
 			shquote "$opt"; opt="$shquoted"
 			revlist="$opt $revlist"
 		done
