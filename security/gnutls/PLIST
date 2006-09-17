@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/05/17 21:50:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21.2.1 2006/09/17 09:09:38 salo Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -449,6 +449,7 @@ share/examples/gnutls/tcp.c
 share/locale/en@boldquot/LC_MESSAGES/gnutls.mo
 share/locale/en@quot/LC_MESSAGES/gnutls.mo
 share/locale/pl/LC_MESSAGES/gnutls.mo
+share/locale/sv/LC_MESSAGES/gnutls.mo
 @dirrm share/examples/gnutls
 @dirrm share/doc/gnutls
 @dirrm include/gnutls
