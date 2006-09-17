@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5464 2006/09/17 15:58:29 gson Exp $
+$NetBSD: TODO,v 1.5465 2006/09/17 18:53:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -434,6 +434,7 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
+	o enchant-1.3.0
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
 	o epiphany-extensions-2.16.0
@@ -462,6 +463,7 @@ Suggested package updates
 	o flyspell-1.7m
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.4.1
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
@@ -471,6 +473,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
+	o galeon-2.0.2
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
@@ -724,6 +727,7 @@ Suggested package updates
 	o nulib2-210
 	o nut-12.0 [pkg/34466]
 	o objc-3.2.7
+	o ocaml-3.09.3
 	o ocrad-0.15
 	o odbc-postgresql-8.0.7
 	o offlineimap-4.0.11
@@ -817,6 +821,7 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
+	o p5-IO-Socket-SSL-1.01
 	o p5-IO-Util-1.50 [pkg/34350]
 	o p5-IPC-Run-0.80 [pkg/34349]
 	o p5-Ima-DBI-0.34
