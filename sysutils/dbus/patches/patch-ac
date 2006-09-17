@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.5 2006/09/17 12:02:00 jmmv Exp $
+
+--- tools/run-with-tmp-session-bus.sh.orig	2006-08-10 23:44:00.000000000 +0200
++++ tools/run-with-tmp-session-bus.sh
+@@ -34,9 +34,11 @@ cat $DBUS_TOP_BUILDDIR/bus/session.conf 
+ 
+ echo "Created configuration file $CONFIG_FILE" >&2
+ 
+-export PATH=$DBUS_TOP_BUILDDIR/bus:$PATH
++PATH=$DBUS_TOP_BUILDDIR/bus:$PATH
++export PATH
+ ## the libtool script found by the path search should already do this, but
+-export LD_LIBRARY_PATH=$DBUS_TOP_BUILDDIR/dbus/.libs:$LD_LIBRARY_PATH
++LD_LIBRARY_PATH=$DBUS_TOP_BUILDDIR/dbus/.libs:$LD_LIBRARY_PATH
++export LD_LIBRARY_PATH
+ 
+ unset DBUS_SESSION_BUS_ADDRESS
+ unset DBUS_SESSION_BUS_PID
