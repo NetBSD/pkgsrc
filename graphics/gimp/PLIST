@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/09/16 10:34:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/09/17 06:49:12 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -842,7 +842,6 @@ share/doc/${PKGNAME}/libgimpwidgets/up.png
 share/examples/gimp-2.0/controllerrc
 share/examples/gimp-2.0/gimprc
 share/examples/gimp-2.0/gtkrc
-share/examples/gimp-2.0/menurc
 share/examples/gimp-2.0/ps-menurc
 share/examples/gimp-2.0/sessionrc
 share/examples/gimp-2.0/templaterc
