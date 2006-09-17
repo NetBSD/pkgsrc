@@ -1,4 +1,4 @@
-# $NetBSD: transform-aix-cc,v 1.2 2006/07/31 14:43:48 jlam Exp $
+# $NetBSD: transform-aix-cc,v 1.3 2006/09/17 18:46:00 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,14 +38,14 @@
 case $arg in
 -H[0-9]*|-T[0-9]*|-b*)
 	arg=-Wl,$arg
-	debug_log $wrapperlog "   (transform-aix-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-aix-cc) to: $arg"
 	addtocache=yes
 	;;
 # AIX ld(1) uses -G to create shared libraries, and we must make sure
 # the runtime linker is used.
 -shared)
         arg="-Wl,-G -Wl,-brtl"
-        debug_log $wrapperlog "   (transform-aix-cc) to: $arg"
+        $debug_log $wrapperlog "   (transform-aix-cc) to: $arg"
         addtocache=yes
         split_arg=yes
         ;;
