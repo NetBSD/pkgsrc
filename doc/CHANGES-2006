@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1300 2006/09/16 15:43:28 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1301 2006/09/17 06:28:51 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4403,6 +4403,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-bin-flash to 7.0.68 [wiz 2006-09-16]
 	Updated misc/yelp to 2.16.0nb1 [jmmv 2006-09-16]
 	Updated databases/libgda-postgres to 1.9.103nb1 [wiz 2006-09-16]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2006Q3 branch [agc 2006-09-16]
 	Updated archivers/rar-bin to 3.6.0 [wiz 2006-09-16]
 	Updated inputmethod/uim to 1.2.1nb1 [hira 2006-09-16]
 	Updated emulators/qemu to 0.8.2nb1 [hira 2006-09-16]
