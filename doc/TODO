@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5463 2006/09/17 12:08:51 wiz Exp $
+$NetBSD: TODO,v 1.5464 2006/09/17 15:58:29 gson Exp $
 
 Suggested new packages
 ======================
@@ -1066,6 +1066,7 @@ Suggested package updates
 	o sdig-0.40
 	o seahorse-0.8.2
 	o sendfile-20010424
+	o ser-0.9.6
 	o sharity-3.2
 	o sharity-light-1.3
 	o shc-3.8
