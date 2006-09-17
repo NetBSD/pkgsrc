@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.15 2006/03/14 17:07:47 tron Exp $
+$NetBSD: patch-ai,v 1.16 2006/09/17 15:35:52 jmmv Exp $
 
---- configure.orig	2006-03-14 13:37:39.000000000 +0000
-+++ configure	2006-03-14 15:34:00.000000000 +0000
-@@ -26102,7 +26102,7 @@
+--- configure.orig	2006-09-05 04:40:15.000000000 +0200
++++ configure
+@@ -26296,7 +26296,7 @@ echo "${ECHO_T}$gtk_uxtheme_h" >&6
  
  use_la_modules=false
  case $host in
@@ -11,3 +11,11 @@ $NetBSD: patch-ai,v 1.15 2006/03/14 17:07:47 tron Exp $
  esac
  
  if $use_la_modules ; then
+@@ -32042,6 +32042,7 @@ _ACEOF
+ fi
+ 
+ 
++CUPS_CONFIG=no
+ if test "x$CUPS_CONFIG" != "xno"; then
+   HAVE_CUPS_TRUE=
+   HAVE_CUPS_FALSE='#'
