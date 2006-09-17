@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2006/08/01 14:33:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2006/09/17 16:49:57 jmmv Exp $
 
 DISTNAME=	hugs98-May2006
 PKGNAME=	hugs98-200605
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://cvs.haskell.org/Hugs/downloads/2006-05/
 
@@ -14,6 +15,18 @@ USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.hugs
+PKG_SUGGESTED_OPTIONS=	readline
+PKG_SUPPORTED_OPTIONS=	readline
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mreadline)
+.  include "../../devel/readline/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	ac_cv_lib_readline_readline=no
+.endif
 
 .include "../../mk/bsd.pkg.mk"
 
