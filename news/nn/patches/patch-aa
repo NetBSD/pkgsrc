@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2006/06/01 23:11:29 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2006/09/17 13:18:59 rillig Exp $
 
---- Makefile.orig	2002-02-08 04:14:41.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2002-02-08 05:14:41.000000000 +0100
++++ Makefile	2006-09-17 15:17:04.000000000 +0200
 @@ -18,16 +18,16 @@
  #
  # Use /lib/cpp or /usr/ccs/lib/cpp for CPP on Solaris or SVR4 machines.
@@ -23,6 +23,15 @@ $NetBSD: patch-aa,v 1.10 2006/06/01 23:11:29 joerg Exp $
  
  
  SHELL = /bin/sh
+@@ -60,7 +60,7 @@ ymakefile: Makefile xmakefile config.h
+ 	       -DCDEBUG="$(CFLAGS)" -Iconf MF.c | \
+ 	sed -e '1,/MAKE WILL CUT HERE/d' \
+ 	    -e '/^#/d' \
+-	    -e 's/^        /	/' \
++	    -e 's/^  */	/' \
+ 	    -e '/^[ \f	]$$/d' \
+ 	    -e '/^[ \/]*[*]/d' | \
+ 	sed -n -e '/^..*$$/p' > ymakefile
 @@ -97,3 +97,5 @@ split: tar
  man/nn.1.D: man/nn.1
  	sh SPLITNN1
