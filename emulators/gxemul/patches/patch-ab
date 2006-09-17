@@ -1,0 +1,94 @@
+$NetBSD: patch-ab,v 1.1 2006/09/17 19:53:05 he Exp $
+
+--- src/diskimage.c.orig	2006-08-14 19:46:45.000000000 +0200
++++ src/diskimage.c
+@@ -1185,6 +1185,89 @@ xferp->data_in[4] = 0x2c - 4;	/*  Additi
+ 		diskimage__return_default_status_and_message(xferp);
+ 		break;
+ 
++	case SCSICDROM_READ_DISCINFO:
++		debug("CDROM_READ_DISCINFO, cmd[1]=0x%02x", xferp->cmd[1]);
++
++		retlen = 34;
++
++		scsi_transfer_allocbuf(&xferp->data_in_len,
++		    &xferp->data_in, retlen, 1);
++
++		xferp->data_in[0] = retlen - 2; /* length of info, excl len */
++		xferp->data_in[1] = 0; /* length of info, excl len field, msb */
++		xferp->data_in[2] = 0xE; /* 11 = complete ses, 10 = fin disc */
++		xferp->data_in[3] = 0; /* First track on disc */
++		xferp->data_in[4] = 1; /* Number of sessions, lsb */
++		xferp->data_in[5] = 0; /* first_track_last_session_lsb */
++		xferp->data_in[6] = 0; /* last_track_last_session_lsb */
++		xferp->data_in[7] = 0x20; /* various flags */
++		xferp->data_in[8] = 0; /* CD-ROM disc */
++		xferp->data_in[9] = 1; /* num sessions, msb */
++		xferp->data_in[10] = 0; /* first_track_last_session_msb */
++		xferp->data_in[11] = 0; /* last_track_last_session_msb */
++		{
++			int i;
++			/* Lead-in data, for completed cd-rom */
++			for (i=16; i<=23; i++) {
++				xferp->data_in[i] = 0xff;
++			}
++		}
++
++		diskimage__return_default_status_and_message(xferp);
++		break;
++
++	case SCSICDROM_READ_TRACKINFO:
++		debug("CDROM_READ_TRACKINFO");
++
++		retlen = 36;
++
++		scsi_transfer_allocbuf(&xferp->data_in_len,
++		    &xferp->data_in, retlen, 1);
++
++		diskimage_recalc_size(d);
++
++		size = d->total_size / d->logical_block_size;
++		if (d->total_size & (d->logical_block_size-1))
++			size ++;
++
++		xferp->data_in[0] = retlen - 2; /* length of info, excl len */
++		xferp->data_in[1] = 0; /* length of info, msb */
++		xferp->data_in[2] = 1; /* track#, lsb */
++		xferp->data_in[3] = 1; /* session#, lsb */
++		xferp->data_in[4] = 0; /* reserved */
++		xferp->data_in[5] = 0x6; /* trk mode: unintr. data, copyable */
++		xferp->data_in[6] = 0x81; /* trk info: RT + trk mode */
++		xferp->data_in[7] = 0x2; /* last rec=valid, next w=not valid */
++
++		{
++			int i;
++			/*
++			 * track start, next writable, free blcks,
++			 * blocking factor
++			 */ 
++			for(i=8; i<=23; i++)
++				xferp->data_in[i] = 0;
++		}
++
++		/* Track size */
++		xferp->data_in[24] = (size >> 24) & 0xff;
++		xferp->data_in[25] = (size >> 16) & 0xff;
++		xferp->data_in[26] = (size >> 8) & 0xff;
++		xferp->data_in[27] = size & 0xff;
++
++		{
++			int i;
++			/*
++			 * Last recorded address, only for dvd;
++			 * zero out rest.
++			 */
++			for(i=28; i<=35; i++)
++				xferp->data_in[i] = 0;
++		}
++
++		diskimage__return_default_status_and_message(xferp);
++		break;
++
+ 	case SCSICDROM_READ_SUBCHANNEL:
+ 		/*
+ 		 *  According to
