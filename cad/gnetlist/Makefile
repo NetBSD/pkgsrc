@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/09/01 12:00:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.43 2006/09/17 17:36:35 rillig Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
@@ -24,6 +24,9 @@ USE_TOOLS+=		gmake m4:run pkg-config
 EVAL_PREFIX+=   PCBDIR=pcb
 CONFIGURE_ARGS+=	--with-pcbm4dir=${PCBDIR}/share/pcb/m4
 CONFIGURE_ARGS+=	--with-pcbconfdir=${PKG_SYSCONFDIR}/pcb
+
+REPLACE_SH+=		scripts/sch2eaglepos.sh
+USE_TOOLS+=		sh:run
 
 .include "../../cad/libgeda/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
