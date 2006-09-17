@@ -1,4 +1,4 @@
-# $NetBSD: transform-xlc-cc,v 1.7 2006/07/31 14:43:48 jlam Exp $
+# $NetBSD: transform-xlc-cc,v 1.8 2006/09/17 18:46:00 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,14 +46,14 @@ case $arg in
 ######################################################################
 -W*)
 	arg=
-	debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
 	addtocache=yes
 	;;
 # xlc uses -qmkshrobj to create shared objects, and we also need to
 # tell the linker to use a flat namespace and allow undefined symbols.
 -dynamiclib)
 	arg="-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress"
-	debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
 	addtocache=yes
 	split_arg=yes
         ;;
@@ -61,7 +61,7 @@ case $arg in
 # the data section for PIC.
 -fno-common|-fPIC)
 	arg=-qnocommon
-	debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
 	addtocache=yes
 	;;
 ######################################################################
@@ -69,7 +69,7 @@ case $arg in
 ######################################################################
 -pipe|-ansi|-fno-gnu-keywords|-fstrict-prototypes|-no-cpp-precomp|-pedantic)
 	arg=
-	debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
+	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
 	addtocache=yes
 	;;
 esac
