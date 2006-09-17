@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2006/09/14 15:07:12 tron Exp $
+# $NetBSD: Makefile,v 1.57 2006/09/17 18:20:20 joerg Exp $
 
 DISTNAME=	fontconfig-2.4.0
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -23,6 +24,7 @@ CONFIGURE_ARGS+=	--with-freetype-config=${BUILDLINK_PREFIX.freetype2}/bin/freety
 CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE:Q}/cache/fontconfig
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ENV+=		HASDOCBOOK=no
@@ -56,6 +58,8 @@ CONF_FILES+=	${EGDIR}/conf.d/65-nonlatin.conf ${PKG_SYSCONFDIR}/conf.d/65-nonlat
 CONF_FILES+=	${EGDIR}/conf.d/69-unifont.conf ${PKG_SYSCONFDIR}/conf.d/69-unifont.conf
 CONF_FILES+=	${EGDIR}/conf.d/80-delicious.conf ${PKG_SYSCONFDIR}/conf.d/80-delicious.conf
 CONF_FILES+=	${EGDIR}/conf.d/90-synthetic.conf ${PKG_SYSCONFDIR}/conf.d/90-synthetic.conf
+
+MAKE_DIRS+=	${VARBASE}/cache
 
 LIBS+=		${BUILDLINK_LDADD.iconv}
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/11 18:53:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/09/17 18:20:20 joerg Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -318,10 +318,6 @@ share/examples/fontconfig/conf.d/80-delicious.conf
 share/examples/fontconfig/conf.d/90-synthetic.conf
 share/examples/fontconfig/fonts.conf
 share/examples/fontconfig/fonts.dtd
-@exec ${MKDIR} %D/var/cache/fontconfig
-@unexec ${RMDIR} %D/var/cache/fontconfig 2> /dev/null || ${TRUE}
-@unexec ${RMDIR} %D/var/cache 2> /dev/null || ${TRUE}
-@unexec ${RMDIR} %D/var 2> /dev/null || ${TRUE}
 @dirrm share/examples/fontconfig/conf.d
 @dirrm share/examples/fontconfig/conf.avail
 @dirrm share/examples/fontconfig
