@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.52 2006/07/31 14:53:45 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.53 2006/09/17 22:52:45 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -402,6 +402,7 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 	*)	save_IFS="$$IFS";					\
 		IFS=":";						\
 		for dir in $${PATH}; do					\
+			IFS="$$save_IFS";				\
 			case $${dir} in					\
 			*${WRAPPER_DIR}*)				\
 				;;					\
