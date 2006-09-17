@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.95 2006/09/17 08:47:34 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.96 2006/09/17 09:10:06 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -225,3 +225,5 @@ Pullup ticket 1828 - requested by ghen
 security update for thunderbird
 Pullup ticket 1827 - requested by ghen
 security update for seamonkey
+Pullup ticket 1830 - requested by wiz
+security update for gnutls
