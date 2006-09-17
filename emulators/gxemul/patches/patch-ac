@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/09/17 19:53:05 he Exp $
+
+--- src/include/diskimage.h.orig	2005-11-13 03:22:01.000000000 +0100
++++ src/include/diskimage.h
+@@ -150,6 +150,8 @@ void diskimage_dump_info(struct machine 
+ /*  SCSI CD-ROM commands:  */
+ #define	SCSICDROM_READ_SUBCHANNEL	0x42
+ #define	SCSICDROM_READ_TOC		0x43
++#define SCSICDROM_READ_DISCINFO		0x51
++#define SCSICDROM_READ_TRACKINFO	0x52
+ 
+ /*  SCSI tape commands:  */
+ #define	SCSICMD_REWIND			0x01
