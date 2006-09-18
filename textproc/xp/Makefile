@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/02/05 23:11:08 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/09/18 12:14:53 joerg Exp $
 #
 
 DISTNAME=	xp
@@ -12,13 +12,14 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.jclark.com/xml/
 COMMENT=	James Clark's non-validating XML Parser for Java
 
+USE_TOOLS+=	unzip
 EXTRACT_ONLY=	# empty
 USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-extract:
-	cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKDIR} && unzip -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 	${RM} -r ${WRKDIR}/docs/api/CVS ${WRKDIR}/docs/api/images/CVS
 
 do-install:
