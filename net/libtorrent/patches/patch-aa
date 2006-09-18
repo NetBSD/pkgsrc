@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.5 2006/09/18 22:04:52 joerg Exp $
+
+--- src/torrent/chunk_manager.cc.orig	2006-09-18 21:54:17.000000000 +0000
++++ src/torrent/chunk_manager.cc
+@@ -37,6 +37,7 @@
+ #include "config.h"
+ 
+ #include <sys/types.h>
++#include <sys/time.h>
+ #include <sys/resource.h>
+ 
+ #include "data/chunk_list.h"
