@@ -28,7 +28,7 @@ available at the time of pkgsrc-branching).  In the past, we have
 achieved this aim - recently, with newer versions of gcc, and other
 changes in the base system, we have had to relax that goal. Starting
 with the pkgsrc-2004Q2 branch, the freeze start and end times are
-recorded in the pkgsrc/doc/CHANGES file.
+recorded in the pkgsrc/doc/CHANGES-* files.
 
 The pkgsrc branch is named according to the time period at the end of
 which it was made:  pkgsrc-2003Q4, pkgsrc-2004Q1 etc.  This is
