@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/29 17:55:13 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/09/18 22:36:48 rillig Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -91,22 +91,22 @@ install-htdocs: build
 	cd ${WRKSRC} && ${CP} pkgsrc.txt pkgsrc.pdf pkgsrc.ps *.html	\
 		${HTDOCSDIR}/Documentation/pkgsrc
 
-.PHONY: regenerate regenerate-doc regenerate-htdocs
-regenerate: regenerate-doc regenerate-htdocs
+.PHONY: regen regen-doc regen-htdocs
+regen: regen-doc regen-htdocs
 
-regenerate-doc: build
+regen-doc: build
 	@${STEP_MSG} "Updating the files in pkgsrc/doc"
 	cd .. && cvs update pkgsrc.*
 	${MAKE} ${MAKEFLAGS} install-doc
 	@${STEP_MSG} "Committing the files in pkgsrc/doc"
-	cd .. && cvs commit -m "regenerated." pkgsrc.*
+	cd .. && cvs commit -m "regen" pkgsrc.*
 
-regenerate-htdocs: build
+regen-htdocs: build
 	@${STEP_MSG} "Updating the files in htdocs"
 	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs update
 	${MAKE} ${MAKEFLAGS} install-htdocs
 	@${STEP_MSG} "Committing the files in htdocs"
-	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs commit -m "regenerated."
+	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs commit -m "regen"
 
 do-lint:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} lint
