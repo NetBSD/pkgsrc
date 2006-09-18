@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1307 2006/09/17 22:38:37 he Exp $
+>$NetBSD: CHANGES-2006,v 1.1308 2006/09/18 15:38:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4417,3 +4417,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/hugs to 200605nb1 [jmmv 2006-09-17]
 	Updated fonts/fontconfig to 2.4.0nb1 [joerg 2006-09-17]
 	Updated emulators/gxemul to 0.4.2nb1 [he 2006-09-17]
+	Updated devel/monotone to 0.30 [jmmv 2006-09-18]
+	Updated devel/monotone-server to 0.30 [jmmv 2006-09-18]
