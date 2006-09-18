@@ -5,7 +5,11 @@
 <title>The pkgsrc guide</title>
 <link rel="stylesheet" href="/NetBSD.css" type="text/css">
 <meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
-<meta name="description" content="pkgsrc is a centralized package management system for Unix-like operating systems. This guide provides information for users and developers of pkgsrc. It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure.">
+<meta name="description" content="pkgsrc is a centralized package management system for
+	Unix-like operating systems. This guide provides information for
+	users and developers of pkgsrc. It covers installation of binary
+	and source packages, creation of binary and source packages and
+	a high-level overview about the infrastructure.">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" lang="en">
 <div class="titlepage">
@@ -107,7 +111,6 @@
 <dt><span class="sect2"><a href="#requirements">4.2.1. Requirements</a></span></dt>
 <dt><span class="sect2"><a href="#fetching-distfiles">4.2.2. Fetching distfiles</a></span></dt>
 <dt><span class="sect2"><a href="#how-to-build-and-install">4.2.3. How to build and install</a></span></dt>
-<dt><span class="sect2"><a href="#selecting-the-compiler">4.2.4. Selecting the compiler</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#configuring">5. Configuring pkgsrc</a></span></dt>
@@ -116,8 +119,9 @@
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">5.3.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
@@ -160,7 +164,8 @@
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#too-much-time">7.18. I have a little time to kill.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">7.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#too-much-time">7.19. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -544,7 +549,7 @@ minutes!</p>
       grown a lot, and now supports the following platforms:</p>
 <div class="table">
 <a name="supported-platforms"></a><p class="title"><b>Table 1.1. Platforms supported by pkgsrc</b></p>
-<div class="table-contents"><table summary="Platforms supported by pkgsrc" border="1">
+<table summary="Platforms supported by pkgsrc" border="1">
 <colgroup>
 <col>
 <col>
@@ -609,9 +614,8 @@ minutes!</p>
 <td align="center">Nov 2004</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<br class="table-break">
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -772,7 +776,6 @@ minutes!</p>
 <dt><span class="sect2"><a href="#requirements">4.2.1. Requirements</a></span></dt>
 <dt><span class="sect2"><a href="#fetching-distfiles">4.2.2. Fetching distfiles</a></span></dt>
 <dt><span class="sect2"><a href="#how-to-build-and-install">4.2.3. How to build and install</a></span></dt>
-<dt><span class="sect2"><a href="#selecting-the-compiler">4.2.4. Selecting the compiler</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#configuring">5. Configuring pkgsrc</a></span></dt>
@@ -781,8 +784,9 @@ minutes!</p>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">5.3.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
@@ -825,7 +829,8 @@ minutes!</p>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#too-much-time">7.18. I have a little time to kill.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">7.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#too-much-time">7.19. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -1034,7 +1039,7 @@ directory on ftp.NetBSD.org.</p>
 </div>
 <div class="table">
 <a name="binary-kits"></a><p class="title"><b>Table 3.1. Binary kits and available packages</b></p>
-<div class="table-contents"><table summary="Binary kits and available packages" border="1">
+<table summary="Binary kits and available packages" border="1">
 <colgroup>
 <col>
 <col>
@@ -1205,9 +1210,9 @@ directory on ftp.NetBSD.org.</p>
 <td class="binary-pkgs-url"> </td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<br class="table-break"><p>
+<p>
 Simply download the binary kit for your platform, and extract it into
 <code class="filename">/</code> e.g.
 </p>
@@ -1261,21 +1266,21 @@ file and inspect the contents before extracting it.
 <a name="darwin"></a>3.3.1. Darwin (Mac OS X)</h3></div></div></div>
 <p>Darwin 5.x and up are supported. There are two methods of using
 	pkgsrc on Mac OS X, by using a <a href="#platform.osx-image" title="3.3.1.1. Using a disk image">disk
-	  image</a>, or a <a href="#platform.osx-ufs" title="3.3.1.2. Using a UFS partition">UFS
+	  image</a>, or a <a href="#platform.osx-part" title="3.3.1.2. Using a UFS or HFSX partition">UFS or HFSX
 	  partition</a>.</p>
 <p>Before you start, you will need to download and install the Mac OS X Developer
       Tools from Apple's Developer Connection.  See <a href="http://developer.apple.com/macosx/" target="_top">http://developer.apple.com/macosx/</a>
       for details.  Also, make sure you install X11 for Mac OS X and the X11 SDK
       from <a href="http://www.apple.com/macosx/x11/download/" target="_top">http://www.apple.com/macosx/x11/download/</a>
       if you intend to build packages that use the X11 Window System.</p>
-<p>If you already have a UFS partition, or have a spare partition
-      that you can format as UFS, it is recommended to use that instead of
+<p>If you already have a UFS or HFSX partition, or have a spare partition
+      that you can format as UFS or HFSX, it is recommended to use that instead of
       the disk image. It'll be somewhat faster and will mount automatically
       at boot time, where you must manually mount a disk image.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ file system as found in Darwin 7.0 and newer.</p>
+	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.</p>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
@@ -1287,28 +1292,28 @@ file and inspect the contents before extracting it.
 <code class="prompt">#</code> <strong class="userinput"><code>sudo chown `id -u`:`id -g` /Volumes/NetBSD</code></strong></pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  It will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.</p>
+<p>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journalling.</p>
 </div>
-<p>Allow suid and synchronous writes:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sudo mount -u -o suid,sync /Volumes/NetBSD</code></strong></pre>
+<p>Allow suid:</p>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sudo mount -u -o suid /Volumes/NetBSD</code></strong></pre>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.osx-ufs"></a>3.3.1.2. Using a UFS partition</h4></div></div></div>
+<a name="platform.osx-part"></a>3.3.1.2. Using a UFS or HFSX partition</h4></div></div></div>
 <p>By default, <code class="filename">/usr</code> will be on your root file
 	system, normally HFS+. It is possible to use the default
 	<span class="emphasis"><em>prefix</em></span> of <code class="filename">/usr/pkg</code>
 	by symlinking <code class="filename">/usr/pkg</code> to a directory on a UFS
-	file system. Obviously, another symlink is required if you want to
+	or HFSX file system. Obviously, another symlink is required if you want to
 	place the package database directory outside the
 	<span class="emphasis"><em>prefix</em></span>. e.g.</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>./bootstrap --pkgdbdir /usr/pkg/pkgdb</code></strong></pre>
 <p>If you created your partitions at the time of installing Mac OS X
-	and formatted the target partition as UFS, it should automatically
+	and formatted the target partition as UFS or HFSX, it should automatically
 	mount on <code class="filename">/Volumes/&lt;volume name&gt;</code> when the
-	machine boots. If you are (re)formatting a partition as UFS, you need
+	machine boots. If you are (re)formatting a partition as UFS or HFSX, you need
 	to ensure that the partition map correctly reflects
-	&#8220;<span class="quote">Apple_UFS</span>&#8221; and not &#8220;<span class="quote">Apple_HFS</span>&#8221;.</p>
+	&#8220;<span class="quote">Apple_UFS</span>&#8221; or &#8220;<span class="quote">Apple_HFSX</span>&#8221; and not &#8220;<span class="quote">Apple_HFS</span>&#8221;.</p>
 <p>The problem is that none of the disk tools will let you touch a
 	disk that is booted from. You can unmount the partition, but even if
 	you newfs it, the partition type will be incorrect and the
@@ -1317,8 +1322,8 @@ file and inspect the contents before extracting it.
 <p>You'll need to boot off of the OS X Installation (User) CD.  When
 	the Installation program starts, go up to the menu and select Disk
 	Utility.  Now, you will be able to select the partition you want
-	to be UFS, and Format it Apple UFS. Quit the Disk Utility, quit the
-	installer which will reboot your machine. The new UFS file system
+	to be UFS or HFSX, and Format it Apple UFS or HFSX. Quit the Disk Utility, quit the
+	installer which will reboot your machine. The new UFS or HFSX file system
 	will appear in Finder.</p>
 <p>Be aware that the permissions on the new file system will be writable
 	by root only.</p>
@@ -1807,7 +1812,6 @@ file and inspect the contents before extracting it.
 <dt><span class="sect2"><a href="#requirements">4.2.1. Requirements</a></span></dt>
 <dt><span class="sect2"><a href="#fetching-distfiles">4.2.2. Fetching distfiles</a></span></dt>
 <dt><span class="sect2"><a href="#how-to-build-and-install">4.2.3. How to build and install</a></span></dt>
-<dt><span class="sect2"><a href="#selecting-the-compiler">4.2.4. Selecting the compiler</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -2240,47 +2244,6 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     <span class="emphasis"><em>not</em></span> install any if you use a non-standard
     <code class="varname">LOCALBASE</code>.</p>
 </div>
-<div class="sect2" lang="en">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="selecting-the-compiler"></a>4.2.4. Selecting the compiler</h3></div></div></div>
-<p>By default, pkgsrc will use GCC to build packages.  This may be
-    overridden by setting the following variables in /etc/mk.conf:</p>
-<div class="variablelist"><dl>
-<dt><span class="term"><code class="varname">PKGSRC_COMPILER</code>:</span></dt>
-<dd>
-<p>This is a list of values specifying the chain of
-	  compilers to invoke when building packages.  Valid values
-	  are:</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p><code class="varname">distcc</code>:
-	    distributed C/C++ (chainable)</p></li>
-<li><p><code class="varname">ccache</code>:
-	    compiler cache (chainable)</p></li>
-<li><p><code class="varname">gcc</code>:
-	    GNU C/C++ Compiler</p></li>
-<li><p><code class="varname">mipspro</code>:
-	    Silicon Graphics, Inc. MIPSpro (n32/n64)</p></li>
-<li><p><code class="varname">mipspro</code>:
-	    Silicon Graphics, Inc. MIPSpro (o32)</p></li>
-<li><p><code class="varname">sunpro</code>:
-	    Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</p></li>
-</ul></div>
-<p>The default is
-	  &#8220;<span class="quote"><code class="varname">gcc</code></span>&#8221;.  You can use
-	  <code class="varname">ccache</code> and/or
-	  <code class="varname">distcc</code> with an appropriate
-	  <code class="varname">PKGSRC_COMPILER</code> setting,
-	  e.g. &#8220;<span class="quote"><code class="varname">ccache gcc</code></span>&#8221;.  This
-	  variable should always be
-	  terminated with a value for a real compiler.</p>
-</dd>
-<dt><span class="term"><code class="varname">GCC_REQD</code>:</span></dt>
-<dd><p>This specifies the minimum version of GCC to use
-	  when building packages.  If the system GCC doesn't
-	  satisfy this requirement, then pkgsrc will build and
-	  install one of the GCC packages to use instead.</p></dd>
-</dl></div>
-</div>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -2293,22 +2256,39 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">5.3.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl>
 </div>
+<p>The whole pkgsrc system is configured in a single file, usually
+called <code class="filename">mk.conf</code>. In which directory pkgsrc looks for
+that file depends on the installation. On NetBSD, when you use
+<a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> from the base system, it is in the directory
+<code class="filename">/etc/</code>. In all other cases the default location is
+<code class="literal">${PREFIX}/etc/</code>, depending on where you told the
+bootstrap program to install the binary packages.</p>
+<p>During the bootstrap, an example configuration file is created. To
+use that, you have to create the directory
+<code class="filename">${PREFIX}/etc</code> and copy the example file
+there.</p>
+<p>The format of the configuration file is that of the usual
+BSD-style <code class="filename">Makefile</code>s. The whole pkgsrc configuration
+is done by setting variables in this file. Note that you can define all
+kinds of variables, and no special error checking (for example for
+spelling mistakes) takes place, so you have to try it out to see if it
+works.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="general-configuration"></a>5.1. General configuration</h2></div></div></div>
 <p>In this section, you can find some variables that apply to all
-    pkgsrc packages.  The preferred method of setting these variables is
-    by setting them in <code class="filename">/etc/mk.conf</code>. A complete
-    list of the variables that can be configured by the user is
-    available in <code class="filename">mk/defaults/mk.conf</code>, together with
-    some comments that describe the variable's intent.</p>
+    pkgsrc packages. A complete list of the variables that can be
+    configured by the user is available in
+    <code class="filename">mk/defaults/mk.conf</code>, together with some
+    comments that describe each variable's intent.</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="varname">LOCALBASE</code>: Where
 	    packages will be installed. The default is
@@ -2363,7 +2343,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2391,7 +2371,48 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <a name="conf.compiler"></a>5.3. Selecting and configuring the compiler</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conf.cflags"></a>5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
+<a name="selecting-the-compiler"></a>5.3.1. Selecting the compiler</h3></div></div></div>
+<p>By default, pkgsrc will use GCC to build packages.  This may be
+    overridden by setting the following variables in /etc/mk.conf:</p>
+<div class="variablelist"><dl>
+<dt><span class="term"><code class="varname">PKGSRC_COMPILER</code>:</span></dt>
+<dd>
+<p>This is a list of values specifying the chain of
+	  compilers to invoke when building packages.  Valid values
+	  are:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="varname">distcc</code>:
+	    distributed C/C++ (chainable)</p></li>
+<li><p><code class="varname">ccache</code>:
+	    compiler cache (chainable)</p></li>
+<li><p><code class="varname">gcc</code>:
+	    GNU C/C++ Compiler</p></li>
+<li><p><code class="varname">mipspro</code>:
+	    Silicon Graphics, Inc. MIPSpro (n32/n64)</p></li>
+<li><p><code class="varname">mipspro</code>:
+	    Silicon Graphics, Inc. MIPSpro (o32)</p></li>
+<li><p><code class="varname">sunpro</code>:
+	    Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</p></li>
+</ul></div>
+<p>The default is
+	  &#8220;<span class="quote"><code class="varname">gcc</code></span>&#8221;.  You can use
+	  <code class="varname">ccache</code> and/or
+	  <code class="varname">distcc</code> with an appropriate
+	  <code class="varname">PKGSRC_COMPILER</code> setting,
+	  e.g. &#8220;<span class="quote"><code class="varname">ccache gcc</code></span>&#8221;.  This
+	  variable should always be
+	  terminated with a value for a real compiler.</p>
+</dd>
+<dt><span class="term"><code class="varname">GCC_REQD</code>:</span></dt>
+<dd><p>This specifies the minimum version of GCC to use
+	  when building packages.  If the system GCC doesn't
+	  satisfy this requirement, then pkgsrc will build and
+	  install one of the GCC packages to use instead.</p></dd>
+</dl></div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="conf.cflags"></a>5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
 <p>If you wish to set the <code class="varname">CFLAGS</code> variable,
 	please make sure to use the <code class="literal">+=</code> operator
 	instead of the <code class="literal">=</code> operator:</p>
@@ -2406,7 +2427,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conf.ldflags"></a>5.3.2. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
+<a name="conf.ldflags"></a>5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
 <p>If you want to pass flags to the linker, both in the configure
 step and the build step, you can do this in two ways.  Either set
 <code class="varname">LDFLAGS</code> or <code class="varname">LIBS</code>.  The difference
@@ -2420,7 +2441,6 @@ settings, use the <code class="literal">+=</code> operator:</p>
 <pre class="programlisting">
     LDFLAGS+=        -your -linkerflags
 </pre>
-<p>See also <a href="#undefined-reference" title="17.5.3. Undefined reference to &#8220;...&#8221;">Section 17.5.3, &#8220;Undefined reference to &#8220;<span class="quote">...</span>&#8221;&#8221;</a>.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -2828,7 +2848,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -3038,7 +3058,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#too-much-time">7.18. I have a little time to kill.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">7.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#too-much-time">7.19. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -3441,7 +3462,20 @@ check.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="too-much-time"></a>7.18. I have a little time to kill.  What shall I do?</h2></div></div></div>
+<a name="faq.rcs-conflicts"></a>7.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</h2></div></div></div>
+<p>You have modified a file from pkgsrc, and someone else has
+modified that same file afterwards in the CVS repository. Both changes
+are in the same region of the file, so when you updated pkgsrc, the
+<code class="literal">cvs</code> command marked the conflicting changes in the
+file. Because of these markers, the file is no longer a valid
+<code class="filename">Makefile</code>.</p>
+<p>Have a look at that file, and if you don't need your local changes
+anymore, you can remove that file and run <span><strong class="command">cvs -q update
+-dP</strong></span> in that directory to download the current version.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="too-much-time"></a>7.19. I have a little time to kill.  What shall I do?</h2></div></div></div>
 <p>This is not really an FAQ yet, but here's the answer
   anyway.</p>
 <div class="itemizedlist"><ul type="disc">
@@ -3450,7 +3484,7 @@ check.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &#8212; it contains a list of suggested new packages and a list of
+    &mdash; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -4028,7 +4062,7 @@ sections.</p>
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &#8212;
+      kqueue support, add a check that detects kqueue itself &mdash;
       yes, this generally involves patching the
       <span><strong class="command">configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4043,7 +4077,7 @@ sections.</p>
 <p>Some typical examples:</p>
 <div class="table">
 <a name="patch-examples"></a><p class="title"><b>Table 9.1. Patching examples</b></p>
-<div class="table-contents"><table summary="Patching examples" border="1">
+<table summary="Patching examples" border="1">
 <colgroup>
 <col>
 <col>
@@ -4108,9 +4142,9 @@ sections.</p>
 	      </td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<br class="table-break"><p>For more information, please read the <span class="emphasis"><em>Making
+<p>For more information, please read the <span class="emphasis"><em>Making
       packager-friendly software</em></span> article (<a href="http://www.onlamp.com/pub/a/onlamp/2005/03/31/packaging.html" target="_top">part
       1</a>, <a href="http://www.oreillynet.com/pub/a/onlamp/2005/04/28/packaging2.html" target="_top">part
       2</a>).  It summarizes multiple details on how to make
@@ -4351,7 +4385,7 @@ sections.</p>
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -8752,36 +8786,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2699778">What is the difference between
+<dt>20.1. <a href="#id2657911">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2699814">What is the difference between
+<dt>20.2. <a href="#id2657947">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2699852">What is the difference between
+<dt>20.3. <a href="#id2657986">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2699890">What is the difference between
+<dt>20.4. <a href="#id2658023">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2699908">Why does make show-var
+<dt>20.5. <a href="#id2658041">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2699936">What does
+<dt>20.6. <a href="#id2658069">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2700078">Which mailing lists are there for package
+<dt>20.7. <a href="#id2658144">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>20.8. <a href="#id2700115">Where is the pkgsrc
+<dt>20.8. <a href="#id2658180">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -8790,14 +8824,14 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699778"></a><a name="id2699779"></a><b>20.1.</b>
+<a name="id2657911"></a><a name="id2657912"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
 	<code class="varname">MAKE_FLAGS</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><p><code class="varname">MAKEFLAGS</code> are the flags passed
 	to the pkgsrc-internal invocations of <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, while
 	<code class="varname">MAKE_FLAGS</code> are the flags that are passed to
@@ -8806,14 +8840,14 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699814"></a><a name="id2699815"></a><b>20.2.</b>
+<a name="id2657947"></a><a name="id2657948"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
 	<code class="varname">MAKE_PROGRAM</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><p><code class="varname">MAKE</code> is the path to the
 	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
 	infrastructure. <code class="varname">GMAKE</code> is the path to GNU
@@ -8824,14 +8858,14 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699852"></a><a name="id2699853"></a><b>20.3.</b>
+<a name="id2657986"></a><a name="id2657987"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
 	<code class="varname">PKGSRC_COMPILER</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><p><code class="varname">CC</code> is the path to the real C
 	compiler, which can be configured by the pkgsrc user.
 	<code class="varname">PKG_CC</code> is the path to the compiler wrapper.
@@ -8842,7 +8876,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699890"></a><a name="id2699891"></a><b>20.4.</b>
+<a name="id2658023"></a><a name="id2658024"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8850,19 +8884,19 @@ place.</p></li>
 	<code class="varname">BUILDLINK_LIBS</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><p>[FIXME]</p></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699908"></a><a name="id2699909"></a><b>20.5.</b>
+<a name="id2658041"></a><a name="id2658042"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
 	say it's empty?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><p>For optimization reasons, some variables are only
 	available in the &#8220;<span class="quote">wrapper</span>&#8221; phase and later. To
 	&#8220;<span class="quote">simulate</span>&#8221; the wrapper phase, append
@@ -8871,7 +8905,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2699936"></a><a name="id2699937"></a><b>20.6.</b>
+<a name="id2658069"></a><a name="id2658070"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8879,7 +8913,7 @@ place.</p></li>
 	it.</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><p>The <code class="literal">:=</code> is not really an
 	assignment operator, like you might expect at first sight.
 	Instead, it is a degenerate form of
@@ -8895,13 +8929,13 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2700078"></a><a name="id2700080"></a><b>20.7.</b>
+<a name="id2658144"></a><a name="id2658145"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top"><div class="variablelist"><dl>
 <dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">tech-pkg</a></span></dt>
 <dd><p>This is a list for technical discussions related
@@ -8920,13 +8954,13 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2700115"></a><a name="id2700116"></a><b>20.8.</b>
+<a name="id2658180"></a><a name="id2658181"></a><b>20.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"></td>
+<td align="left" valign="top"><b></b></td>
 <td align="left" valign="top">
 <p>There are many places where you can find
 	documentation about pkgsrc:</p>
@@ -9080,9 +9114,15 @@ USE_TOOLS+=gmake</pre>
     tool is rather big and the distfile should come with pregenerated
     documentation anyway; if it does not, it is a bug that you ought to
     report.  For such packages you should disable gtk-doc (unless it is
-    the default) and change the location of installed HTML files:</p>
-<pre class="programlisting">CONFIGURE_ARGS+=--disable-gtk-doc
-CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/doc</pre>
+    the default):</p>
+<pre class="programlisting">CONFIGURE_ARGS+=--disable-gtk-doc</pre>
+<p>The default location of installed HTML files
+    (<code class="filename">share/gtk-doc/&lt;package-name&gt;</code>) is correct
+    and should not be changed unless the package insists on installing
+    them somewhere else.  Otherwise programs as
+    <span><strong class="command">devhelp</strong></span> will not be able to open them.  You can
+    do that with an entry similar to:</p>
+<pre class="programlisting">CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...</pre>
 </li>
 </ul></div>
 <p>GNOME uses multiple <span class="emphasis"><em>shared</em></span> directories and
@@ -9101,7 +9141,7 @@ solution is given.  After applying the solution be sure to
 <span><strong class="command">make print-PLIST</strong></span> and ensure it is correct.</p>
 <div class="table">
 <a name="plist-handling"></a><p class="title"><b>Table 21.1. PLIST handling for GNOME packages</b></p>
-<div class="table-contents"><table summary="PLIST handling for GNOME packages" border="1">
+<table summary="PLIST handling for GNOME packages" border="1">
 <colgroup>
 <col>
 <col>
@@ -9133,9 +9173,8 @@ solution is given.  After applying the solution be sure to
 <td>See <a href="#desktop-files" title="17.6.19. Packages installing desktop files">Section 17.6.19, &#8220;Packages installing desktop files&#8221;</a>.</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<br class="table-break">
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -9464,8 +9503,8 @@ details.</p>
 <a name="infr.design.intf.proc"></a>22.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
@@ -10070,9 +10109,11 @@ source packages</a></span></dt>
 <p>As in other big projects, the directory layout of pkgsrc
 	is quite complex for newbies. This chapter explains where you
 	find things on the FTP server. The base directory on
-	<code class="filename">ftp.NetBSD.org</code> is <a href="ftp://ftp.NetBSD.org/pub/pkgsrc" target="_top"><code class="filename">/pub/pkgsrc</code></a>.
-	This directory contains some subdirectories, which are explained
-	below.</p>
+	<code class="filename">ftp.NetBSD.org</code> is <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/" target="_top"><code class="filename">/pub/pkgsrc/</code></a>.
+	On other servers it may be different, but inside this directory,
+	everything should look the same, no matter on which server you
+	are. This directory contains some subdirectories, which are
+	explained below.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="ftp-bootstrap"></a>C.1. <code class="filename">bootstrap-pkgsrc</code>: Bootstrap kits</h2></div></div></div>
@@ -10130,9 +10171,9 @@ source packages</h2></div></div></div>
 	that is the files that define how to create binary packages from
 	source archives.</p>
 <p>The directory <code class="filename">pkgsrc</code> contains a
-	snapshot of the CVS repository, which is updated on a regularly
-	basis. The file <code class="filename">pkgsrc.tar.gz</code> contains the
-	same as the directory, ready to be downloaded as a whole.</p>
+	snapshot of the CVS repository, which is updated regularly. The
+	file <code class="filename">pkgsrc.tar.gz</code> contains the same as the
+	directory, ready to be downloaded as a whole.</p>
 <p>In the directories for the quarterly branches, there is an
 	additional file called
 	<code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em>.tar.gz</code>,

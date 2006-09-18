@@ -89,7 +89,6 @@ I. The pkgsrc user's guide
             4.2.1. Requirements
             4.2.2. Fetching distfiles
             4.2.3. How to build and install
-            4.2.4. Selecting the compiler
 
     5. Configuring pkgsrc
 
@@ -97,8 +96,9 @@ I. The pkgsrc user's guide
         5.2. Variables affecting the build process
         5.3. Selecting and configuring the compiler
 
-            5.3.1. Additional flags to the compiler (CFLAGS)
-            5.3.2. Additional flags to the linker (LDFLAGS)
+            5.3.1. Selecting the compiler
+            5.3.2. Additional flags to the compiler (CFLAGS)
+            5.3.3. Additional flags to the linker (LDFLAGS)
 
         5.4. Developer/advanced settings
         5.5. Selecting Build Options
@@ -142,7 +142,9 @@ I. The pkgsrc user's guide
         7.15. Automated security checks
         7.16. Why do some packages ignore my CFLAGS?
         7.17. A package does not build. What shall I do?
-        7.18. I have a little time to kill. What shall I do?
+        7.18. What does "Makefile appears to contain unresolved cvs/rcs/???
+            merge conflicts" mean?
+        7.19. I have a little time to kill. What shall I do?
 
 II. The pkgsrc developer's guide
 
@@ -538,7 +540,6 @@ Table 1.1. Platforms supported by pkgsrc
 |OSF/1                                        |     Nov 2004     |
 +----------------------------------------------------------------+
 
-
 1.2. Overview
 
 This document is divided into three parts. The first, The pkgsrc user's guide,
@@ -682,7 +683,6 @@ Table of Contents
         4.2.1. Requirements
         4.2.2. Fetching distfiles
         4.2.3. How to build and install
-        4.2.4. Selecting the compiler
 
 5. Configuring pkgsrc
 
@@ -690,8 +690,9 @@ Table of Contents
     5.2. Variables affecting the build process
     5.3. Selecting and configuring the compiler
 
-        5.3.1. Additional flags to the compiler (CFLAGS)
-        5.3.2. Additional flags to the linker (LDFLAGS)
+        5.3.1. Selecting the compiler
+        5.3.2. Additional flags to the compiler (CFLAGS)
+        5.3.3. Additional flags to the linker (LDFLAGS)
 
     5.4. Developer/advanced settings
     5.5. Selecting Build Options
@@ -734,7 +735,9 @@ Table of Contents
     7.15. Automated security checks
     7.16. Why do some packages ignore my CFLAGS?
     7.17. A package does not build. What shall I do?
-    7.18. I have a little time to kill. What shall I do?
+    7.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+        conflicts" mean?
+    7.19. I have a little time to kill. What shall I do?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
@@ -954,7 +957,6 @@ Table 3.1. Binary kits and available packages
 |Solaris 9/i386                     |20030411       |binary kit|               |
 +------------------------------------------------------------------------------+
 
-
 Simply download the binary kit for your platform, and extract it into / e.g.
 
 # cd /
@@ -996,7 +998,7 @@ Here are some platform-specific notes you should be aware of.
 3.3.1. Darwin (Mac OS X)
 
 Darwin 5.x and up are supported. There are two methods of using pkgsrc on Mac
-OS X, by using a disk image, or a UFS partition.
+OS X, by using a disk image, or a UFS or HFSX partition.
 
 Before you start, you will need to download and install the Mac OS X Developer
 Tools from Apple's Developer Connection. See http://developer.apple.com/macosx/
@@ -1004,16 +1006,16 @@ for details. Also, make sure you install X11 for Mac OS X and the X11 SDK from
 http://www.apple.com/macosx/x11/download/ if you intend to build packages that
 use the X11 Window System.
 
-If you already have a UFS partition, or have a spare partition that you can
-format as UFS, it is recommended to use that instead of the disk image. It'll
-be somewhat faster and will mount automatically at boot time, where you must
-manually mount a disk image.
+If you already have a UFS or HFSX partition, or have a spare partition that you
+can format as UFS or HFSX, it is recommended to use that instead of the disk
+image. It'll be somewhat faster and will mount automatically at boot time,
+where you must manually mount a disk image.
 
 Note
 
 You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc
 currently requires the file system to be case-sensitive. You can, however, use
-a case-sensitive HFS+ file system as found in Darwin 7.0 and newer.
+a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.
 
 3.3.1.1. Using a disk image
 
@@ -1027,27 +1029,28 @@ Create the disk image:
 Note
 
 darwindiskimage will mount the filesystem nosuid, which will cause problems for
-packages that depend on setgid. It will also mount the filesystem asynchronous,
-which is somewhat dangerous according to the mount(8) man page.
+packages that depend on setgid. In the case of UFS, it will also mount the
+filesystem asynchronous, which is somewhat dangerous according to the mount(8)
+man page. In the case of HFSX, it will disable journalling.
 
-Allow suid and synchronous writes:
+Allow suid:
 
-# sudo mount -u -o suid,sync /Volumes/NetBSD
+# sudo mount -u -o suid /Volumes/NetBSD
 
-3.3.1.2. Using a UFS partition
+3.3.1.2. Using a UFS or HFSX partition
 
 By default, /usr will be on your root file system, normally HFS+. It is
 possible to use the default prefix of /usr/pkg by symlinking /usr/pkg to a
-directory on a UFS file system. Obviously, another symlink is required if you
-want to place the package database directory outside the prefix. e.g.
+directory on a UFS or HFSX file system. Obviously, another symlink is required
+if you want to place the package database directory outside the prefix. e.g.
 
 # ./bootstrap --pkgdbdir /usr/pkg/pkgdb
 
 If you created your partitions at the time of installing Mac OS X and formatted
-the target partition as UFS, it should automatically mount on /Volumes/<volume
-name> when the machine boots. If you are (re)formatting a partition as UFS, you
-need to ensure that the partition map correctly reflects "Apple_UFS" and not
-"Apple_HFS".
+the target partition as UFS or HFSX, it should automatically mount on /Volumes/
+<volume name> when the machine boots. If you are (re)formatting a partition as
+UFS or HFSX, you need to ensure that the partition map correctly reflects
+"Apple_UFS" or "Apple_HFSX" and not "Apple_HFS".
 
 The problem is that none of the disk tools will let you touch a disk that is
 booted from. You can unmount the partition, but even if you newfs it, the
@@ -1056,9 +1059,9 @@ mounted manually, but it won't appear in Finder.
 
 You'll need to boot off of the OS X Installation (User) CD. When the
 Installation program starts, go up to the menu and select Disk Utility. Now,
-you will be able to select the partition you want to be UFS, and Format it
-Apple UFS. Quit the Disk Utility, quit the installer which will reboot your
-machine. The new UFS file system will appear in Finder.
+you will be able to select the partition you want to be UFS or HFSX, and Format
+it Apple UFS or HFSX. Quit the Disk Utility, quit the installer which will
+reboot your machine. The new UFS or HFSX file system will appear in Finder.
 
 Be aware that the permissions on the new file system will be writable by root
 only.
@@ -1511,7 +1514,6 @@ Table of Contents
     4.2.1. Requirements
     4.2.2. Fetching distfiles
     4.2.3. How to build and install
-    4.2.4. Selecting the compiler
 
 Basically, there are two ways of using pkgsrc. The first is to only install the
 package tools and to use binary packages that someone else has prepared. This
@@ -1838,38 +1840,6 @@ miserably. Note also that precompiled binary packages are usually built with
 the default LOCALBASE of /usr/pkg, and that you should not install any if you
 use a non-standard LOCALBASE.
 
-4.2.4. Selecting the compiler
-
-By default, pkgsrc will use GCC to build packages. This may be overridden by
-setting the following variables in /etc/mk.conf:
-
-PKGSRC_COMPILER:
-
-    This is a list of values specifying the chain of compilers to invoke when
-    building packages. Valid values are:
-
-      * distcc: distributed C/C++ (chainable)
-
-      * ccache: compiler cache (chainable)
-
-      * gcc: GNU C/C++ Compiler
-
-      * mipspro: Silicon Graphics, Inc. MIPSpro (n32/n64)
-
-      * mipspro: Silicon Graphics, Inc. MIPSpro (o32)
-
-      * sunpro: Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
-
-    The default is "gcc". You can use ccache and/or distcc with an appropriate
-    PKGSRC_COMPILER setting, e.g. "ccache gcc". This variable should always be
-    terminated with a value for a real compiler.
-
-GCC_REQD:
-
-    This specifies the minimum version of GCC to use when building packages. If
-    the system GCC doesn't satisfy this requirement, then pkgsrc will build and
-    install one of the GCC packages to use instead.
-
 Chapter 5. Configuring pkgsrc
 
 Table of Contents
@@ -1878,19 +1848,34 @@ Table of Contents
 5.2. Variables affecting the build process
 5.3. Selecting and configuring the compiler
 
-    5.3.1. Additional flags to the compiler (CFLAGS)
-    5.3.2. Additional flags to the linker (LDFLAGS)
+    5.3.1. Selecting the compiler
+    5.3.2. Additional flags to the compiler (CFLAGS)
+    5.3.3. Additional flags to the linker (LDFLAGS)
 
 5.4. Developer/advanced settings
 5.5. Selecting Build Options
 
+The whole pkgsrc system is configured in a single file, usually called mk.conf.
+In which directory pkgsrc looks for that file depends on the installation. On
+NetBSD, when you use make(1) from the base system, it is in the directory /etc
+/. In all other cases the default location is ${PREFIX}/etc/, depending on
+where you told the bootstrap program to install the binary packages.
+
+During the bootstrap, an example configuration file is created. To use that,
+you have to create the directory ${PREFIX}/etc and copy the example file there.
+
+The format of the configuration file is that of the usual BSD-style Makefiles.
+The whole pkgsrc configuration is done by setting variables in this file. Note
+that you can define all kinds of variables, and no special error checking (for
+example for spelling mistakes) takes place, so you have to try it out to see if
+it works.
+
 5.1. General configuration
 
 In this section, you can find some variables that apply to all pkgsrc packages.
-The preferred method of setting these variables is by setting them in /etc/
-mk.conf. A complete list of the variables that can be configured by the user is
-available in mk/defaults/mk.conf, together with some comments that describe the
-variable's intent.
+A complete list of the variables that can be configured by the user is
+available in mk/defaults/mk.conf, together with some comments that describe
+each variable's intent.
 
   * LOCALBASE: Where packages will be installed. The default is /usr/pkg. Do
     not mix binary packages with different LOCALBASEs!
@@ -1948,7 +1933,39 @@ XXX
 
 5.3. Selecting and configuring the compiler
 
-5.3.1. Additional flags to the compiler (CFLAGS)
+5.3.1. Selecting the compiler
+
+By default, pkgsrc will use GCC to build packages. This may be overridden by
+setting the following variables in /etc/mk.conf:
+
+PKGSRC_COMPILER:
+
+    This is a list of values specifying the chain of compilers to invoke when
+    building packages. Valid values are:
+
+      * distcc: distributed C/C++ (chainable)
+
+      * ccache: compiler cache (chainable)
+
+      * gcc: GNU C/C++ Compiler
+
+      * mipspro: Silicon Graphics, Inc. MIPSpro (n32/n64)
+
+      * mipspro: Silicon Graphics, Inc. MIPSpro (o32)
+
+      * sunpro: Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
+
+    The default is "gcc". You can use ccache and/or distcc with an appropriate
+    PKGSRC_COMPILER setting, e.g. "ccache gcc". This variable should always be
+    terminated with a value for a real compiler.
+
+GCC_REQD:
+
+    This specifies the minimum version of GCC to use when building packages. If
+    the system GCC doesn't satisfy this requirement, then pkgsrc will build and
+    install one of the GCC packages to use instead.
+
+5.3.2. Additional flags to the compiler (CFLAGS)
 
 If you wish to set the CFLAGS variable, please make sure to use the += operator
 instead of the = operator:
@@ -1959,7 +1976,7 @@ Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
 cpuflags package if you're interested in optimization for the current CPU.
 
-5.3.2. Additional flags to the linker (LDFLAGS)
+5.3.3. Additional flags to the linker (LDFLAGS)
 
 If you want to pass flags to the linker, both in the configure step and the
 build step, you can do this in two ways. Either set LDFLAGS or LIBS. The
@@ -1970,8 +1987,6 @@ x11.buildlink3.mk. As with CFLAGS, if you do not wish to override these
 settings, use the += operator:
 
     LDFLAGS+=        -your -linkerflags
-
-See also Section 17.5.3, "Undefined reference to "..."".
 
 5.4. Developer/advanced settings
 
@@ -2511,7 +2526,9 @@ Table of Contents
 7.15. Automated security checks
 7.16. Why do some packages ignore my CFLAGS?
 7.17. A package does not build. What shall I do?
-7.18. I have a little time to kill. What shall I do?
+7.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+    conflicts" mean?
+7.19. I have a little time to kill. What shall I do?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
@@ -2851,7 +2868,20 @@ they have chosen.
 
  4. If the problem still exists, write a mail to the pkgsrc-users mailing list.
 
-7.18. I have a little time to kill. What shall I do?
+7.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+conflicts" mean?
+
+You have modified a file from pkgsrc, and someone else has modified that same
+file afterwards in the CVS repository. Both changes are in the same region of
+the file, so when you updated pkgsrc, the cvs command marked the conflicting
+changes in the file. Because of these markers, the file is no longer a valid
+Makefile.
+
+Have a look at that file, and if you don't need your local changes anymore, you
+can remove that file and run cvs -q update -dP in that directory to download
+the current version.
+
+7.19. I have a little time to kill. What shall I do?
 
 This is not really an FAQ yet, but here's the answer anyway.
 
@@ -3409,7 +3439,6 @@ Table 9.1. Patching examples
 |         |              }                         |                }                                     |
 |         |                                        |                                                      |
 +---------------------------------------------------------------------------------------------------------+
-
 
 For more information, please read the Making packager-friendly software article
 (part 1, part 2). It summarizes multiple details on how to make software easier
@@ -7411,10 +7440,16 @@ the minimum required tools:
     add a dependency on it. The tool is rather big and the distfile should come
     with pregenerated documentation anyway; if it does not, it is a bug that
     you ought to report. For such packages you should disable gtk-doc (unless
-    it is the default) and change the location of installed HTML files:
+    it is the default):
 
     CONFIGURE_ARGS+=--disable-gtk-doc
-    CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/doc
+
+    The default location of installed HTML files (share/gtk-doc/<package-name>)
+    is correct and should not be changed unless the package insists on
+    installing them somewhere else. Otherwise programs as devhelp will not be
+    able to open them. You can do that with an entry similar to:
+
+    CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...
 
 
 GNOME uses multiple shared directories and files under the installation prefix
@@ -7451,7 +7486,6 @@ Table 21.1. PLIST handling for GNOME packages
 |applications and these include MIME        |installing desktop files".       |
 |information.                               |                                 |
 +-----------------------------------------------------------------------------+
-
 
 21.3. Updating GNOME to a newer version
 
@@ -8264,8 +8298,10 @@ C.6. current, 200xQy: source packages
 
 As in other big projects, the directory layout of pkgsrc is quite complex for
 newbies. This chapter explains where you find things on the FTP server. The
-base directory on ftp.NetBSD.org is /pub/pkgsrc. This directory contains some
-subdirectories, which are explained below.
+base directory on ftp.NetBSD.org is /pub/pkgsrc/. On other servers it may be
+different, but inside this directory, everything should look the same, no
+matter on which server you are. This directory contains some subdirectories,
+which are explained below.
 
 C.1. bootstrap-pkgsrc: Bootstrap kits
 
@@ -8311,8 +8347,8 @@ These directories contain the "real" pkgsrc, that is the files that define how
 to create binary packages from source archives.
 
 The directory pkgsrc contains a snapshot of the CVS repository, which is
-updated on a regularly basis. The file pkgsrc.tar.gz contains the same as the
-directory, ready to be downloaded as a whole.
+updated regularly. The file pkgsrc.tar.gz contains the same as the directory,
+ready to be downloaded as a whole.
 
 In the directories for the quarterly branches, there is an additional file
 called pkgsrc-200xQy.tar.gz, which contains the state of pkgsrc when it was
