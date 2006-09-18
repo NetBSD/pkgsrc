@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.26 2006/09/13 23:39:07 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.27 2006/09/18 13:25:37 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -458,75 +458,5 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     <emphasis>not</emphasis> install any if you use a non-standard
     <varname>LOCALBASE</varname>.</para>
   </sect2>
-
-  <sect2 id="selecting-the-compiler">
-    <title>Selecting the compiler</title>
-
-    <para>By default, pkgsrc will use GCC to build packages.  This may be
-    overridden by setting the following variables in /etc/mk.conf:</para>
-
-    <variablelist>
-      <varlistentry>
-	<term><varname>PKGSRC_COMPILER</varname>:</term>
-
-	<listitem>
-	  <para>This is a list of values specifying the chain of
-	  compilers to invoke when building packages.  Valid values
-	  are:</para>
-
-	  <!-- TODO: update this list after jlam's changes in May 2005 -->
-	  <itemizedlist>
-	    <listitem><para><varname>distcc</varname>:
-	    distributed C/C++ (chainable)</para>
-	    </listitem>
-
-	    <listitem><para><varname>ccache</varname>:
-	    compiler cache (chainable)</para>
-	    </listitem>
-
-	    <listitem><para><varname>gcc</varname>:
-	    GNU C/C++ Compiler</para>
-	    </listitem>
-
-	    <listitem><para><varname>mipspro</varname>:
-	    Silicon Graphics, Inc. MIPSpro (n32/n64)</para>
-	    </listitem>
-
-	    <listitem><para><varname>mipspro</varname>:
-	    Silicon Graphics, Inc. MIPSpro (o32)</para>
-	    </listitem>
-
-	    <listitem><para><varname>sunpro</varname>:
-	    Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</para>
-	    </listitem>
-	  </itemizedlist>
-
-	  <para>The default is
-	  <quote><varname>gcc</varname></quote>.  You can use
-	  <varname>ccache</varname> and/or
-	  <varname>distcc</varname> with an appropriate
-	  <varname>PKGSRC_COMPILER</varname> setting,
-	  e.g. <quote><varname>ccache gcc</varname></quote>.  This
-	  variable should always be
-	  terminated with a value for a real compiler.</para>
-	</listitem>
-      </varlistentry>
-
-      <varlistentry>
-	<term><varname>GCC_REQD</varname>:</term>
-	<!--
-	    TODO: what are the effects of setting GCC_REQD if PKGSRC_COMPILER
-	    is not gcc?
-	-->
-	<listitem>
-	  <para>This specifies the minimum version of GCC to use
-	  when building packages.  If the system GCC doesn't
-	  satisfy this requirement, then pkgsrc will build and
-	  install one of the GCC packages to use instead.</para>
-	</listitem>
-      </varlistentry>
-    </variablelist>
-  </sect2>
-
 </sect1>
 </chapter>
