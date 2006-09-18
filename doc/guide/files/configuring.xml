@@ -1,17 +1,36 @@
-<!-- $NetBSD: configuring.xml,v 1.20 2006/09/13 23:36:47 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.21 2006/09/18 12:52:20 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
+
+<para>The whole pkgsrc system is configured in a single file, usually
+called <filename>mk.conf</filename>. In which directory pkgsrc looks for
+that file depends on the installation. On NetBSD, when you use
+&man.make.1; from the base system, it is in the directory
+<filename>/etc/</filename>. In all other cases the default location is
+<literal>${PREFIX}/etc/</literal>, depending on where you told the
+bootstrap program to install the binary packages.</para>
+
+<para>During the bootstrap, an example configuration file is created. To
+use that, you have to create the directory
+<filename>${PREFIX}/etc</filename> and copy the example file
+there.</para>
+
+<para>The format of the configuration file is that of the usual
+BSD-style <filename>Makefile</filename>s. The whole pkgsrc configuration
+is done by setting variables in this file. Note that you can define all
+kinds of variables, and no special error checking (for example for
+spelling mistakes) takes place, so you have to try it out to see if it
+works.</para>
 
   <sect1 id="general-configuration">
     <title>General configuration</title>
 
     <para>In this section, you can find some variables that apply to all
-    pkgsrc packages.  The preferred method of setting these variables is
-    by setting them in <filename>/etc/mk.conf</filename>. A complete
-    list of the variables that can be configured by the user is
-    available in <filename>mk/defaults/mk.conf</filename>, together with
-    some comments that describe the variable's intent.</para>
+    pkgsrc packages. A complete list of the variables that can be
+    configured by the user is available in
+    <filename>mk/defaults/mk.conf</filename>, together with some
+    comments that describe each variable's intent.</para>
 
       <itemizedlist>
 	<listitem><para><varname>LOCALBASE</varname>: Where
@@ -146,7 +165,6 @@ settings, use the <literal>+=</literal> operator:</para>
 <programlisting>
     LDFLAGS+=        -your -linkerflags
 </programlisting>
-<para>See also <xref linkend="undefined-reference" />.</para>
 </sect2>
 </sect1>
 
