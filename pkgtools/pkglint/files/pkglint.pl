@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.674 2006/09/15 12:31:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.675 2006/09/18 10:07:21 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -516,6 +516,21 @@ sub get($$) {
 sub set($$$) {
 	my ($self, $name, $value) = @_;
 	assert(!exists($self->[EXTRA]->{$name}), "Field ${name} already exists.");
+
+	# Make sure that the line does not become a cyclic data structure.
+	my $type = ref($value);
+	if ($type eq "") {
+		# ok
+	} elsif ($type eq "ARRAY") {
+		foreach my $element (@{$value}) {
+			my $element_type = ref($element);
+			assert($element_type eq "" || $element_type eq "PkgLint::SimpleMatch",
+				"Invalid array data type: name=${name}, type=${element_type}.");
+		}
+	} else {
+		assert(false, "Invalid data: name=${name}, value=${value}.");
+	}
+
 	$self->[EXTRA]->{$name} = $value;
 }
 
@@ -984,7 +999,7 @@ sub get_logical_line($$$) {
 
 sub load_lines($$) {
 	my ($fname, $fold_backslash_lines) = @_;
-	my ($physlines, $seen_newline, $loglines) = @_;
+	my ($physlines, $seen_newline, $loglines);
 
 	$physlines = load_physical_lines($fname);
 	if (!$physlines) {
@@ -1077,7 +1092,7 @@ sub get_folded_string($$$) {
 
 sub load_strings($$) {
 	my ($fname, $fold_backslash_lines) = @_;
-	my ($physlines, $seen_newline, $strings) = @_;
+	my ($physlines, $seen_newline, $strings);
 
 	$physlines = load_physical_lines($fname);
 	if (!$physlines) {
@@ -3253,7 +3268,7 @@ sub parseline_mk($) {
 		defined($comment) and $line->set("comment", $comment);
 
 	} elsif ($text =~ regex_mk_shellcmd) {
-		my ($shellcmd) = @_;
+		my ($shellcmd) = ($1);
 
 		# Shell command lines cannot have embedded comments.
 		$line->set("is_shellcmd", true);
@@ -3266,7 +3281,7 @@ sub parseline_mk($) {
 		}
 
 	} elsif ($text =~ regex_mk_comment) {
-		my ($comment) = @_;
+		my ($comment) = ($1);
 
 		$line->set("is_comment", true);
 		$line->set("comment", $comment);
@@ -3425,8 +3440,8 @@ sub readmakefile($$$$) {
 }
 
 sub load_package_Makefile($$$) {
-	my ($subr) = "load_package_Makefile";
 	my ($fname, $ref_whole, $ref_lines) = @_;
+	my ($subr) = "load_package_Makefile";
 	my ($whole, $lines, $all_lines);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "load_package_Makefile()");
