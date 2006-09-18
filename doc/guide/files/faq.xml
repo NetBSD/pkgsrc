@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.29 2006/09/13 23:27:31 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.30 2006/09/18 22:27:54 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -608,6 +608,22 @@ check.</para>
 	<literal>pkgsrc-users</literal> mailing list.</para></step>
 
 	</procedure>
+</sect1>
+
+<sect1 id="faq.rcs-conflicts">
+<title>What does <quote>Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</quote> mean?</title>
+
+<para>You have modified a file from pkgsrc, and someone else has
+modified that same file afterwards in the CVS repository. Both changes
+are in the same region of the file, so when you updated pkgsrc, the
+<literal>cvs</literal> command marked the conflicting changes in the
+file. Because of these markers, the file is no longer a valid
+<filename>Makefile</filename>.</para>
+
+<para>Have a look at that file, and if you don't need your local changes
+anymore, you can remove that file and run <command>cvs -q update
+-dP</command> in that directory to download the current version.</para>
+
 </sect1>
 
 <sect1 id="too-much-time">
