@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.7 2005/11/08 17:25:30 reed Exp $
+$NetBSD: README,v 1.8 2006/09/18 13:27:15 rillig Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -46,7 +46,7 @@ and $prefix/man to your MANPATH environment variable, if necessary.
 (See above for --prefix and its default value.)
 
 The bootstrap script will create an example mk.conf file located
-in your work directory as "mk.conf.example". It conatins the
+in your work directory as "mk.conf.example". It contains the
 settings you provided to the bootstrap. Copy it to your
 $sysconfdir directory (see above about --sysconfdir and its default
 value).
