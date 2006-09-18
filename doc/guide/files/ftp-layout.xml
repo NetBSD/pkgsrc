@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.5 2006/05/29 07:47:34 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.6 2006/09/18 12:16:25 rillig Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -7,9 +7,11 @@
 	is quite complex for newbies. This chapter explains where you
 	find things on the FTP server. The base directory on
 	<filename>ftp.NetBSD.org</filename> is <ulink
-	url="ftp://ftp.NetBSD.org/pub/pkgsrc"><filename>/pub/pkgsrc</filename></ulink>.
-	This directory contains some subdirectories, which are explained
-	below.</para>
+	url="ftp://ftp.NetBSD.org/pub/pkgsrc/"><filename>/pub/pkgsrc/</filename></ulink>.
+	On other servers it may be different, but inside this directory,
+	everything should look the same, no matter on which server you
+	are. This directory contains some subdirectories, which are
+	explained below.</para>
 
 <sect1 id="ftp-bootstrap">
 <title><filename>bootstrap-pkgsrc</filename>: Bootstrap kits</title>
@@ -76,9 +78,9 @@ source packages</title>
 	source archives.</para>
 
 	<para>The directory <filename>pkgsrc</filename> contains a
-	snapshot of the CVS repository, which is updated on a regularly
-	basis. The file <filename>pkgsrc.tar.gz</filename> contains the
-	same as the directory, ready to be downloaded as a whole.</para>
+	snapshot of the CVS repository, which is updated regularly. The
+	file <filename>pkgsrc.tar.gz</filename> contains the same as the
+	directory, ready to be downloaded as a whole.</para>
 
 	<para>In the directories for the quarterly branches, there is an
 	additional file called
