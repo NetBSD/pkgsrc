@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.20 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: Darwin.mk,v 1.21 2006/09/18 15:11:37 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -27,7 +27,7 @@ DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
-NOLOGIN?=		${FALSE}
+NOLOGIN?=		/usr/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		/usr/bin/sudo ${SH} -c
 ROOT_GROUP?=		wheel
@@ -40,7 +40,6 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 USERADD?=		${LOCALBASE}/sbin/useradd
 _PKG_USER_HOME?=	/var/empty	# to match other system accounts
-_PKG_USER_SHELL?=	/usr/bin/false	# to match other system accounts
 _USER_DEPENDS=		user>=20040801:../../sysutils/user_darwin
 
 # imake installs manpages in weird places
