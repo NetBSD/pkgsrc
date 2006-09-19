@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/09/16 12:20:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.64 2006/09/19 17:47:18 joerg Exp $
 #
 
 DISTNAME=	libgnomeui-2.16.0
@@ -16,7 +16,7 @@ CONFLICTS+=		gnome-libs<=1.4.2nb1
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config intltool
 USE_LIBTOOL=		yes
 
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
