@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.4 2006/07/27 14:51:54 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.5 2006/09/19 20:51:34 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -80,7 +80,7 @@ replace-interpreter:
 	cd ${WRKSRC};							\
 	for f in ${REPLACE_FILES.${_lang_}}; do				\
 		if [ -f "$${f}" ]; then					\
-			${SED} -e '1s|^#!${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
+			${SED} -e '1s|^#![[:space:]]*${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
 			< "$${f}" > "$${f}.new";			\
 			if [ -x "$${f}" ]; then				\
 				${CHMOD} a+x "$${f}.new";		\
