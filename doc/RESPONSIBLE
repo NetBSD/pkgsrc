@@ -1,4 +1,4 @@
-$NetBSD: RESPONSIBLE,v 1.6 2005/11/09 12:07:05 salo Exp $
+$NetBSD: RESPONSIBLE,v 1.7 2006/09/19 10:12:22 rillig Exp $
 
 List of sections of the system, and who is responsible for them (or
 at least considered an expert on them).
@@ -9,6 +9,7 @@ incomplete!
 
 pkgsrc Infrastructure:
 
+bootstrap	grant, jlam
 bsd.options.mk	dillo
 buildlink3	jlam
 pkg_install	agc, hubertf
@@ -19,12 +20,15 @@ README.html generation	dmcmahill
 
 pkgsrc platforms:
 
-bootstrap	grant, jlam
-Solaris		grant
-Darwin		grant, schmonz
-IRIX		jschauma
-Linux		jschauma, grant, reed
-FreeBSD		grant
-Interix		tv
-DragonFly	joerg
-OSF1		grant
+MACHINE_PLATFORM		People
+---------------------------------------------------------------------------
+IRIX-6.5-mipseb			jschauma, rillig
+SunOS-5.10-sparc		rillig
+
+Darwin				grant, schmonz
+DragonFly			joerg
+FreeBSD				grant
+Interix				tv
+Linux				jschauma, grant, reed
+OSF1				grant
+Solaris				grant
