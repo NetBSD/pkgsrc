@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum.mk,v 1.3 2006/07/19 14:54:56 jlam Exp $
+# $NetBSD: bsd.checksum.mk,v 1.4 2006/09/19 00:03:44 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
@@ -23,7 +23,7 @@
 .if defined(NO_CHECKSUM)
 .PHONY: checksum makesum makepatchsum
 .  if !target(checksum)
-checksum:
+checksum: fetch
 	@${DO_NADA}
 .  endif
 makesum makepatchsum:
