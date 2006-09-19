@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2005/09/08 08:39:59 adam Exp $
+$NetBSD: patch-ab,v 1.6 2006/09/19 22:57:18 joerg Exp $
 
 --- config/Makefile.SH.orig
 +++ config/Makefile.SH
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.5 2005/09/08 08:39:59 adam Exp $
    PLOTFILE=plotX.c
    PLOTCFLAGS=-I$Xincroot
 -  PLOTLIBS="-L$X11 -lX11 $extralib"
-+  PLOTLIBS="-Wl,-R$X11 -L$X11 -lX11 $extralib"
++  PLOTLIBS="-Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lX11 $extralib"
    if test "$osname" = concentrix; then PLOTLIBS="-lX11"; fi
    plotrunpath=$X11
    ;;
