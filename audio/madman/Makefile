@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/05/31 10:25:19 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/09/19 20:59:30 rillig Exp $
 
 DISTNAME=	madman-0.93
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=madman/}
 
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0
 
+REPLACE_SH+=		plugins/*_*
+USE_TOOLS+=		sh:run
 INSTALLATION_DIRS=	bin
 
 post-extract:
@@ -21,7 +23,7 @@ post-extract:
 	${SED} -e 's,#! /usr/bin/env python,#!${PYTHONBIN},' ${WRKSRC}/httpd/make_webdata.org > ${WRKSRC}/httpd/make_webdata
 	${CHMOD} 755 ${WRKSRC}/httpd/make_webdata
 	${MV} ${WRKSRC}/main/SConscript ${WRKSRC}/main/SConscript.org
-	${AWK} '{print} NR == 20 {print "myenv.Append(LINKFLAGS = \"${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib,-R${LOCALBASE}${QTDIR}/lib\")"}' ${WRKSRC}/main/SConscript.org > ${WRKSRC}/main/SConscript
+	${AWK} '{print} NR == 20 {print "myenv.Append(LINKFLAGS = \"${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib,-R${QTDIR}/lib\")"}' ${WRKSRC}/main/SConscript.org > ${WRKSRC}/main/SConscript
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons -C ${WRKSRC} prefix=${PREFIX} \
