@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.7 2006/09/19 17:50:46 wiz Exp $
+
+--- kcontrol/info/memory_netbsd.cpp.orig	2005-09-10 08:25:05.000000000 +0000
++++ kcontrol/info/memory_netbsd.cpp
+@@ -22,8 +22,12 @@ void KMemoryWidget::update()
+   int mib[2];
+   size_t len;
+ #ifdef UVM
+-  struct  uvmexp uvmexp;
++#if __NetBSD_Version__ > 499000100 /* 4.99.2+ */
++  struct  uvmexp_sysctl uvmexp;
+ #else
++  struct  uvmexp uvmexp;
++#endif
++#else /* !UVM */
+   struct swapent *swaplist;
+   int64_t nswap, rnswap, totalswap, freeswap, usedswap;
+ #endif
+@@ -49,7 +53,11 @@ void KMemoryWidget::update()
+ 
+ #ifdef UVM
+   mib[0] = CTL_VM;
++#if __NetBSD_Version__ > 499000100 /* 4.99.2+ */
++  mib[1] = VM_UVMEXP2;
++#else
+   mib[1] = VM_UVMEXP;
++#endif
+   len = sizeof(uvmexp);
+   if ( sysctl(mib, 2, &uvmexp, &len, NULL, 0) < 0 ) {
+     Memory_Info[FREE_MEM]     = NO_MEMORY_INFO;
