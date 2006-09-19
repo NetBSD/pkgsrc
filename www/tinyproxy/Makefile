@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/04/23 00:12:42 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/09/19 08:31:18 rillig Exp $
 #
 
 DISTNAME=	tinyproxy-1.6.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tinyproxy/}
 
@@ -14,6 +14,10 @@ GNU_CONFIGURE=	YES
 
 RCD_SCRIPTS=		tinyproxy
 PKG_SYSCONFSUBDIR=	tinyproxy
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		TINYPROXY_USER TINYPROXY_GROUP VARBASE
 
 TINYPROXY_USER?=	tinyproxy
 TINYPROXY_GROUP?=	tinyproxy
@@ -35,11 +39,13 @@ EGDIR=		${PREFIX}/share/examples/tinyproxy
 CONF_FILES=	${EGDIR}/tinyproxy.conf.default ${PKG_SYSCONFDIR}/tinyproxy.conf
 
 SUBST_CLASSES+=		docs
+SUBST_STAGE.docs=	pre-configure
 SUBST_FILES.docs=	doc/tinyproxy.8 doc/tinyproxy.conf
 SUBST_SED.docs+=	-e 's,@TINYPROXY_USER@,${TINYPROXY_USER},g'
 SUBST_SED.docs+=	-e 's,@TINYPROXY_GROUP@,${TINYPROXY_GROUP},g'
 SUBST_SED.docs+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.docs=	post-patch
+SUBST_SED.docs+=	-e 's,@DATADIR@,${PREFIX}/share/tinyproxy,g'
+SUBST_SED.docs+=	-e 's,@VARBASE@,${VARBASE},g'
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
