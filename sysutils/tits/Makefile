@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/06/25 09:49:51 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/19 19:42:48 scw Exp $
 #
 
-DISTNAME=       tits-1.1.1
-PKGREVISION=	1
+DISTNAME=       tits-1.2.2
 CATEGORIES=	sysutils
 MASTER_SITES=   http://www.mctavish.co.uk/tits/
 
@@ -11,10 +10,7 @@ COMMENT=	Server which provides telnet(1) access to one or more tty ports
 
 BINDIR=		${PREFIX}/sbin
 MANDIR=		${PREFIX}/man
-MAKE_ENV+=	BINDIR=${BINDIR:Q} MANDIR=${MANDIR:Q}
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
-MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
-RCD_SCRIPTS=	tits
+MAKE_ENV+=	BINDIR=${BINDIR} MANDIR=${MANDIR}
 
 MANCOMPRESSED_IF_MANZ=	yes
 
@@ -23,9 +19,6 @@ post-patch:
 	${SED} -e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g'	\
 	   -e 's|/usr/local|${PREFIX}|g'			\
 	   ${WRKSRC}/tits.8.in > ${WRKSRC}/tits.8
-
-pre-install:
-	${INSTALL_MAN_DIR} ${MANDIR}/cat8
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/tits.conf ${PREFIX}/share/examples/
