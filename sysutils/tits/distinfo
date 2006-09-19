@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/09/09 23:13:12 martin Exp $
+$NetBSD: distinfo,v 1.8 2006/09/19 19:42:48 scw Exp $
 
-SHA1 (tits-1.1.1.tar.gz) = 7a8242a5700296d24d74ed155a79673a6b2255a5
-RMD160 (tits-1.1.1.tar.gz) = 5fe3503d630cc9bf2b1c9829071727050765df3d
-Size (tits-1.1.1.tar.gz) = 21411 bytes
-SHA1 (patch-aa) = cb97029249e318d30b859ad4479ae6cb0c0ffcf2
-SHA1 (patch-ab) = 028c622b79518cdfe62ee8a3144593e6830e1952
-SHA1 (patch-ac) = 9df6cac6d64978182d4ef6631b4a220126e9d930
-SHA1 (patch-ad) = 66dea133c934da864bbc22ff7eb610c34d55a67f
-SHA1 (patch-ae) = 439b5b608bb20cf0dde9e03f536f4196420e916e
+SHA1 (tits-1.2.2.tar.gz) = 18c80cc4d814af1b60d8b75e9777bcb7f8b8a8b8
+RMD160 (tits-1.2.2.tar.gz) = 1628dcf16cd5cf9f559a353024c69aef6a396856
+Size (tits-1.2.2.tar.gz) = 25384 bytes
+SHA1 (patch-aa) = 3aac576267df3564c44fb837e55ac3c776ce8dab
