@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.22 2006/09/01 16:35:39 jmmv Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.23 2006/09/19 17:50:38 rillig Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -45,7 +45,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.22 2006/09/01 16:35:39 jmmv Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.23 2006/09/19 17:50:38 rillig Exp $</pubdate>
 
     <abstract>
 
@@ -68,6 +68,7 @@
     &chap.using;
     &chap.configuring;
     &chap.binary;
+    &chap.files;
     &chap.faq;
   </part>
 
