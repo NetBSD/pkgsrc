@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/09/15 15:22:16 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/09/19 11:21:37 jmmv Exp $
 #
 
 DISTNAME=		evince-0.6.0
@@ -37,7 +37,6 @@ BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.3
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
