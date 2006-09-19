@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2006/01/15 16:56:26 christos Exp $
+$NetBSD: distinfo,v 1.4 2006/09/19 23:31:40 joerg Exp $
 
 SHA1 (xsc-1.5.tar.gz) = 3b6b71c2e9d132c56e276896f4869dc08a0e43a3
 RMD160 (xsc-1.5.tar.gz) = d2519f75ad3089215b4c89ee765d1585de37db33
 Size (xsc-1.5.tar.gz) = 86015 bytes
 SHA1 (patch-aa) = 4da7181d8037d0d334fbd5330a91a45a50b59753
+SHA1 (patch-ab) = 5140c951066a672610799ae7fd1fc8b4c5f2876d
