@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:05 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/19 23:19:41 joerg Exp $
 #
 
 DISTNAME=	dgguspat
@@ -17,6 +17,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
+USE_TOOLS+=	unzip
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 do-configure:
