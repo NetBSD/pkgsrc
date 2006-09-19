@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.675 2006/09/18 10:07:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.676 2006/09/19 21:33:30 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1893,6 +1893,7 @@ my $mkctx_vardef;		# { varname => line } for all variables that
 my $mkctx_build_defs;		# Set of variables that are registered in
 				# BUILD_DEFS, to assure that all user-defined
 				# variables are added to it.
+my $mkctx_tools;		# Set of tools that are declared to be used.
 
 my @todo_items;			# The list of directory entries that still need
 				# to be checked. Mostly relevant with
@@ -2345,9 +2346,9 @@ my $load_tool_names_system_build_defs = undef;		# XXX: misplaced, but works
 my $load_tool_names_tools = undef;
 my $load_tool_names_vartools = undef;
 my $load_tool_names_varname_to_toolname = undef;
-my $load_tool_names_predefined_vartools = undef;
+my $load_tool_names_predefined_tools = undef;
 sub load_tool_names() {
-	my ($tools, $vartools, $predefined_vartools, $varname_to_toolname, @tool_files);
+	my ($tools, $vartools, $predefined_tools, $varname_to_toolname, @tool_files);
 	my ($system_build_defs);
 
 	#
@@ -2379,7 +2380,7 @@ sub load_tool_names() {
 
 	$tools = {};
 	$vartools = {};
-	$predefined_vartools = {};
+	$predefined_tools = {};
 	$varname_to_toolname = {};
 	$system_build_defs = {};
 	foreach my $basename (@tool_files) {
@@ -2393,10 +2394,10 @@ sub load_tool_names() {
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_varassign) {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
-				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
+				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+|\[)$") {
 					$tools->{$value} = true;
 
-				} elsif ($varname =~ qr"^(?:_TOOLS_VARNAME)\.([-\w.]+)$") {
+				} elsif ($varname =~ qr"^(?:_TOOLS_VARNAME)\.([-\w.]+|\[)$") {
 					$tools->{$1} = true;
 					$vartools->{$1} = $value;
 					$varname_to_toolname->{$value} = $1;
@@ -2433,10 +2434,10 @@ sub load_tool_names() {
 					$opt_debug_tools and $line->log_debug("[cond_depth=${cond_depth}] $value");
 					if ($cond_depth == 0) {
 						foreach my $tool (split(qr"\s+", $value)) {
-							if ($tool !~ regex_unresolved && exists($vartools->{$tool})) {
-								$predefined_vartools->{$tool} = true;
+							if ($tool !~ regex_unresolved && exists($tools->{$tool})) {
+								$predefined_tools->{$tool} = true;
 								# The path (without arguments) to the tool
-								$predefined_vartools->{"TOOLS_${tool}"} = true;
+								$predefined_tools->{"TOOLS_${tool}"} = true;
 							}
 						}
 					}
@@ -2460,7 +2461,7 @@ sub load_tool_names() {
 
 	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
 	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
-	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Predefined vartools: " . join(" ", sort(keys(%{$predefined_vartools}))));
+	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Predefined tools: " . join(" ", sort(keys(%{$predefined_tools}))));
 	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known varnames: " . join(" ", sort(keys(%{$varname_to_toolname}))));
 	$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "System-provided BUILD_DEFS: " . join(" ", sort(keys(%{$system_build_defs}))));
 
@@ -2474,7 +2475,7 @@ sub load_tool_names() {
 
 	$load_tool_names_tools = $tools;
 	$load_tool_names_vartools = $vartools;
-	$load_tool_names_predefined_vartools = $predefined_vartools;
+	$load_tool_names_predefined_tools = $predefined_tools;
 	$load_tool_names_varname_to_toolname = $varname_to_toolname;
 	$load_tool_names_system_build_defs = $system_build_defs;
 }
@@ -2502,11 +2503,11 @@ sub get_vartool_names() {
 # Returns the set of those tools with associated variables that a
 # package does not need to add to USE_TOOLS explicitly because they
 # are used by the pkgsrc infrastructure, too.
-sub get_predefined_vartool_names() {
-	if (!defined($load_tool_names_predefined_vartools)) {
+sub get_predefined_tool_names() {
+	if (!defined($load_tool_names_predefined_tools)) {
 		load_tool_names();
 	}
-	return $load_tool_names_predefined_vartools;
+	return $load_tool_names_predefined_tools;
 }
 
 # Returns a mapping from tool variable names to the tool name they use.
@@ -3286,7 +3287,7 @@ sub parseline_mk($) {
 		$line->set("is_comment", true);
 		$line->set("comment", $comment);
 
-	} elsif ($text eq "") {
+	} elsif ($text =~ qr"^\s*$") {
 
 		$line->set("is_empty", true);
 
@@ -3652,7 +3653,11 @@ sub checkline_other_absolute_pathname($$) {
 
 	$opt_debug_trace and $line->log_debug("checkline_other_absolute_pathname(\"${text}\")");
 
-	if ($text =~ qr"^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$") {
+	if ($text =~ qr"^#[^!]") {
+		# Don't warn for absolute pathnames in comments,
+		# except for shell interpreters.
+
+	} elsif ($text =~ qr"^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$") {
 		my ($before, $path, $after) = ($1, $2, $3);
 
 		if ($before =~ qr"\@$") {
@@ -4355,7 +4360,9 @@ sub checkline_mk_shelltext($$) {
 				$line->log_error("${shellword} is forbidden and must not be used.");
 
 			} elsif (exists(get_tool_names()->{$shellword})) {
-				# TODO: Check if the tool is mentioned in USE_TOOLS.
+				if (!exists($mkctx_tools->{$shellword})) {
+					$line->log_warning("The \"${shellword}\" tool is used but not added to USE_TOOLS.");
+				}
 
 				if (exists(get_required_vartools()->{$shellword})) {
 					$line->log_warning("Please use \"\${" . get_vartool_names()->{$shellword} . "}\" instead of \"${shellword}\".");
@@ -4367,7 +4374,9 @@ sub checkline_mk_shelltext($$) {
 				my ($vartool) = ($1);
 				my $plain_tool = get_varname_to_toolname()->{$vartool};
 
-				# TODO: Check if the tool is mentioned in USE_TOOLS.
+				if (!exists($mkctx_tools->{$plain_tool})) {
+					$line->log_warning("The \"${plain_tool}\" tool is used but not added to USE_TOOLS.");
+				}
 
 				if (defined($mkctx_target) && $mkctx_target =~ qr"^(?:pre|do|post)-") {
 					if (!exists(get_required_vartool_varnames()->{$vartool})) {
@@ -5691,6 +5700,7 @@ sub checklines_mk($) {
 	$mkctx_for_variables = {};
 	$mkctx_vardef = {};
 	$mkctx_build_defs = {};
+	$mkctx_tools = {%{get_predefined_tool_names()}};
 
 	foreach my $prefix (qw(pre do post)) {
 		foreach my $action (qw(fetch extract patch tools wrapper configure build test install package clean)) {
@@ -5699,8 +5709,8 @@ sub checklines_mk($) {
 	}
 
 	#
-	# In the first pass, all additions to BUILD_DEFS are collected,
-	# to make the order of the definitions irrelevant.
+	# In the first pass, all additions to BUILD_DEFS and USE_TOOLS
+	# are collected to make the order of the definitions irrelevant.
 	#
 
 	foreach my $line (@{$lines}) {
@@ -5708,6 +5718,12 @@ sub checklines_mk($) {
 			foreach my $varname (split(qr"\s+", $line->get("value"))) {
 				$mkctx_build_defs->{$varname} = true;
 				$opt_debug_misc and $line->log_debug("${varname} is added to BUILD_DEFS.");
+			}
+		}
+		if ($line->has("is_varassign") && $line->get("varname") eq "USE_TOOLS") {
+			foreach my $tool (split(qr"\s+", $line->get("value"))) {
+				$mkctx_tools->{$tool} = true;
+				$opt_debug_misc and $line->log_debug("${tool} is added to USE_TOOLS.");
 			}
 		}
 	}
@@ -5936,6 +5952,7 @@ sub checklines_mk($) {
 	$mkctx_target = undef;
 	$mkctx_vardef = undef;
 	$mkctx_build_defs = undef;
+	$mkctx_tools = undef;
 }
 
 sub checklines_buildlink3_inclusion($) {
