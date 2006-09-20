@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/20 23:17:41 rillig Exp $
 #
 
 DISTNAME=	gnustep-objc-lf2.95.3-r88
@@ -16,6 +16,7 @@ USE_LANGUAGES=	objc
 
 WRKSRC=		${WRKDIR}/libobjc-lf2
 USE_TOOLS+=	gmake
+MAKE_FILE=	GNUmakefile
 
 .include "../../devel/gnustep-make/buildlink3.mk"
 
