@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.47 2006/09/09 08:44:06 obache Exp $
+# $NetBSD: deprecated.map,v 1.48 2006/09/20 23:10:54 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -120,5 +120,5 @@ USE_GNU_GETTEXT		You can just remove it.
 BUILD_ENV		Use PKGSRC_MAKE_ENV instead.
 DYNAMIC_MASTER_SITES	You can just remove it.
 
-# November 2006
+# September 2006
 MAKEFILE		Use MAKE_FILE instead.
