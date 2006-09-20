@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2006/09/20 16:01:48 gdt Exp $
+
+--- tools/geos-config.in.orig	2004-07-17 05:07:17.000000000 -0400
++++ tools/geos-config.in
+@@ -34,7 +34,7 @@ case $1 in
+     echo @CFLAGS@ -I@prefix@/include 
+       ;;
+     --libs)
+-      echo -L@prefix@/lib -lgeos
++      echo -L@prefix@/lib @LDFLAGS@ -lgeos
+       ;;
+     --includes)
+       echo @prefix@/include
