@@ -11,8 +11,8 @@ This build of exim has the following non-default features enabled:
 TRANSPORT_LMTP          SUPPORT_MAILDIR         SUPPORT_MAILSTORE
 SUPPORT_MBX             AUTH_CRAM_MD5           AUTH_PLAINTEXT
 AUTH_SPA                SUPPORT_TLS             USE_TCP_WRAPPERS
-HAVE_IPV6
 
-The following default feature is disabled:
+The following default feature is disabled by default, but may be enabled by
+setting the 'exim-build-eximon' option:
 
 EXIM_MONITOR
