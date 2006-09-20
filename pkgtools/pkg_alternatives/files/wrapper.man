@@ -1,4 +1,4 @@
-.\" $NetBSD: wrapper.man,v 1.1.1.1 2005/01/25 13:00:46 jmmv Exp $
+.\" $NetBSD: wrapper.man,v 1.2 2006/09/20 12:53:21 rillig Exp $
 .\"
 .\" pkg_alternatives - Generic wrappers for programs with similar interfaces
 .\" Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -65,6 +65,6 @@ packages.
 System-wide list of candidates, manually configured by the administrator.
 .El
 .Sh SEE ALSO
-.Xr pkg_alternatives 1
+.Xr pkg_alternatives 8
 .Sh AUTHORS
 .An Julio M. Merino Vidal Aq jmmv@NetBSD.org
