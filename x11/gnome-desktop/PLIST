@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/09/15 15:10:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/09/20 13:14:09 joerg Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
@@ -248,8 +248,8 @@ share/pixmaps/gnome-xterm.png
 share/pixmaps/gtkvim.png
 share/pixmaps/kterm.xpm
 share/pixmaps/monitor.png
-share/pixmaps/${LOWER_OPSYS}-logo-icon-transparent.png
-share/pixmaps/${LOWER_OPSYS}-logo-icon.png
+share/pixmaps/netbsd-logo-icon-transparent.png
+share/pixmaps/netbsd-logo-icon.png
 share/pixmaps/vnterm.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/lgpl
