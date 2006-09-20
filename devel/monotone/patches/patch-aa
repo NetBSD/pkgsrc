@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.9 2006/09/20 13:10:10 jmmv Exp $
+
+--- cmd.hh.orig	2006-09-17 11:56:51.000000000 +0200
++++ cmd.hh
+@@ -207,7 +207,7 @@ namespace commands {                    
+ }                                                                    \
+ std::string commands::cmd_ ## C::desc()                              \
+ {                                                                    \
+-  std:string result = _(desc_.c_str());                              \
++  std::string result = _(desc_.c_str());                             \
+   result += "\n";                                                    \
+   result += (F("Alias for %s") % #realcommand).str();                \
+   return result;                                                     \
