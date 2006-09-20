@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2006/08/25 19:49:53 abs Exp $
+# $NetBSD: Makefile,v 1.44 2006/09/20 21:54:13 abs Exp $
 
-DISTNAME=	pkg_chk-1.80
+DISTNAME=	pkg_chk-1.81
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +19,7 @@ NO_CHECKSUM=	YES
 
 CONFLICTS=	pkgchk-[0-9]*
 
-INSTALLATION_DIRS=	sbin man/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.prefs.mk"
 

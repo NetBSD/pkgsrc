@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.41 2006/08/25 19:49:54 abs Exp $
+# $Id: pkg_chk.sh,v 1.42 2006/09/20 21:54:13 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -23,7 +23,7 @@ is_binary_available()
         done
 	return 1;
     else
-	if [ -f "$PACKAGES/$1.tgz" ]; then
+	if [ -f "$PACKAGES/$1$PKG_SUFX" ]; then
 	    return 0;
 	else
 	    return 1;
@@ -175,17 +175,20 @@ extract_variables()
 	cd $PKGSRCDIR/pkgtools/pkg_chk
 	extract_make_vars Makefile AWK GREP GZIP_CMD SED SORT TSORT PACKAGES \
 	                PKG_ADD PKG_DELETE PKG_INFO PKG_DBDIR PKGCHK_CONF \
- 	    		PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS
+ 	    		PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS PKG_SUFX
 	if [ -z "$PACKAGES" ];then
 	    PACKAGES=$PKGSRCDIR/packages
 	fi
     elif [ $MAKECONF != /dev/null ] ; then
 	extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF PKGCHK_UPDATE_CONF \
-			PKGCHK_TAGS PKGCHK_NOTAGS
+			PKGCHK_TAGS PKGCHK_NOTAGS PKG_SUFX
 	if [ -z "$PACKAGES" ] ; then
 	    PACKAGES=`pwd`
 	fi
     fi
+
+    # .tgz/.tbz to regexp
+    PKG_SUFX_RE=`echo $PKG_SUFX | sed 's/[.]/[.]/'`
 
     if [ ! -d $PKG_DBDIR ] ; then
 	fatal "Unable to access PKG_DBDIR ($PKG_DBDIR)"
@@ -240,7 +243,7 @@ generate_conf_from_installed()
 get_build_ver()
     {
     if [ -n "$opt_b" -a -z "$opt_s" ] ; then
-	${PKG_INFO} -. -q -b $PACKAGES/$PKGNAME.tgz | ${GREP} .
+	${PKG_INFO} -. -q -b $PACKAGES/$PKGNAME$PKG_SUFX | ${GREP} .
 	return
     fi
     # Unfortunately pkgsrc always outputs to a file, but it does helpfully
@@ -266,7 +269,7 @@ list_packages()
 	    fatal_later "$PKGNAME - binary package missing"
 	    continue
 	fi
-	verbose "$PKGNAME.tgz: found"
+	verbose "$PKGNAME$PKG_SUFX: found"
 	DEPCHECKLIST="$DEPCHECKLIST$PKGNAME ";
     done
 
@@ -275,18 +278,18 @@ list_packages()
     while [ "$DEPCHECKLIST" != ' ' ]; do
 	NEXTCHECK=' '
 	for pkg in $DEPCHECKLIST ; do
-	    DEPLIST="$(${PKG_INFO} -. -q -N $PACKAGES/$pkg.tgz | ${GREP} .. || true)"
+	    DEPLIST="$(${PKG_INFO} -. -q -N $PACKAGES/$pkg$PKG_SUFX | ${GREP} .. || true)"
 	    if [ -z "$DEPLIST" ] ; then
-		PAIRLIST="${PAIRLIST}$pkg.tgz $pkg.tgz\n"
+		PAIRLIST="${PAIRLIST}$pkg$PKG_SUFX $pkg$PKG_SUFX\n"
 	    fi
 	    for dep in $DEPLIST ; do
 		if is_binary_available $dep; then
 		    :
 		else
-		    fatal_later "$dep.tgz - dependency missing for $pkg"
+		    fatal_later "$dep$PKG_SUFX - dependency missing for $pkg"
 		    break
 		fi
-		PAIRLIST="${PAIRLIST}$dep.tgz $pkg.tgz\n"
+		PAIRLIST="${PAIRLIST}$dep$PKG_SUFX $pkg$PKG_SUFX\n"
 		case "$PKGLIST$DEPCHECKLIST$NEXTCHECK" in
 		    *" $dep "*)
 			verbose "$pkg: Duplicate depend $dep"
@@ -474,7 +477,7 @@ pkg_install()
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    export PKG_PATH=$saved_PKG_PATH
 	fi
-	run_cmd "${PKG_ADD} $PACKAGES/$PKGNAME.tgz"
+	run_cmd "${PKG_ADD} $PACKAGES/$PKGNAME$PKG_SUFX"
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    unset PKG_PATH
 	fi
@@ -737,9 +740,9 @@ if [ -n "$opt_b" -a -z "$opt_s" ] ; then
 	    if [ -d "$PACKAGES" ] ; then
 		msg_progress Scan $PACKAGES
 		cd $PACKAGES
-		for f in `ls -t | grep '\.tgz$'` ; do # Sort by time to pick up newest first
+		for f in `ls -t | grep "$PKG_SUFX_RE"'$'` ; do # Sort by time to pick up newest first
 		    PKGDIR=`${PKG_INFO} -. -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
-		    PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
+		    PKGNAME=`echo $f | ${SED} "s/$PKG_SUFX"'$//'`
 		    PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
 		done
 		PKGSRCDIR=NONE
