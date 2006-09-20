@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2006/09/20 12:57:46 joerg Exp $
+
+--- cairo/pycairo-surface.c.orig	2005-09-28 14:35:09.000000000 +0000
++++ cairo/pycairo-surface.c
+@@ -595,7 +595,7 @@ pdf_surface_set_dpi (PycairoPDFSurface *
+ 
+     if (!PyArg_ParseTuple(args, "dd:PDFSurface.set_dpi", &x_dpi, &y_dpi))
+ 	return NULL;
+-    cairo_pdf_surface_set_dpi (o->surface, x_dpi, y_dpi);
++    cairo_surface_set_fallback_resolution (o->surface, x_dpi, y_dpi);
+     Py_RETURN_NONE;
+ }
+ 
+@@ -688,7 +688,7 @@ ps_surface_set_dpi (PycairoPSSurface *o,
+ 
+     if (!PyArg_ParseTuple(args, "dd:PSSurface.set_dpi", &x_dpi, &y_dpi))
+ 	return NULL;
+-    cairo_ps_surface_set_dpi (o->surface, x_dpi, y_dpi);
++    cairo_surface_set_fallback_resolution (o->surface, x_dpi, y_dpi);
+     Py_RETURN_NONE;
+ }
+ 
