@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/27 14:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/20 14:24:44 rillig Exp $
 #
 
 DISTNAME=		gogui-0.9
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gogui/}
 EXTRACT_SUFX=		.zip
@@ -19,12 +20,20 @@ SUBST_MESSAGE.gogui=	Fixing hard-coded paths.
 SUBST_FILES.gogui=	bin/*
 SUBST_SED.gogui=	-e 's;^\(GOGUI_LIB\)=.*;\1="${LIBDIR}";'
 
-NO_BUILD=		yes
+USE_JAVA2=		yes
+USE_TOOLS+=		printf
 
 LIBDIR=			${PREFIX}/share/gogui/lib
 DOCDIR=			${PREFIX}/share/doc/gogui
 MY_MANDIR=		${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS=	bin ${LIBDIR} ${DOCDIR} ${MY_MANDIR}
+
+do-build:
+.for p in gmptogtp gogui gtpadapter gtpdisplay gtpdummy gtpregress	\
+	gtpserver gtpstatistics gtpterminal netgtp sgfthumbnail		\
+	sgftotex twogtp
+	printf "#! /bin/sh\\nexec \"${PKG_JAVA_HOME}/bin/java\" -jar \"${PREFIX}/share/gogui/lib/${p}.jar\" \"\$$@\"\\n" > ${WRKSRC}/bin/${p}
+.endfor
 
 do-install:
 	cd ${WRKSRC}/bin && ${INSTALL_SCRIPT} * ${PREFIX}/bin/.
@@ -32,4 +41,5 @@ do-install:
 	cd ${WRKSRC}/doc/manual/html && ${INSTALL_DATA} *.html *.png ${DOCDIR}/.
 	cd ${WRKSRC}/doc/manual/man && ${INSTALL_MAN} *.1 ${MY_MANDIR}/man1/.
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
