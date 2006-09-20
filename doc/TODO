@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5467 2006/09/19 17:47:03 wiz Exp $
+$NetBSD: TODO,v 1.5468 2006/09/20 22:49:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -325,6 +325,7 @@ Suggested package updates
 	o aspell-danish-1.7.6
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
+	o ast-ksh-20060214 [pkg/34575]
 	o astyle-1.15.3
 	o autogen-5.8.5
 	o avcheck-0.91
@@ -402,7 +403,7 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
-	o dd_rescue-1.12
+	o dd_rescue-1.12 [pkg/34573]
 	o defendguin-0.0.11
 	o dejavu-ttf-2.10
 	o delegate-9.1.1
@@ -416,6 +417,7 @@ Suggested package updates
 	o dnstop-20060517 [pkg/34425]
 	o dnstracer-1.8
 	o drscheme-352
+	o duplicity-0.4.2 [pkg/34574]
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
@@ -473,7 +475,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o galeon-2.0.2
+	o galeon-2.0.3
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
@@ -505,6 +507,7 @@ Suggested package updates
 	o glade-3.0.1
 	o gld-1.7
 	o glibmm-2.12.0
+	o global-5.2 [pkg/34570]
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -660,7 +663,7 @@ Suggested package updates
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
-	o mailman-2.1.9
+	o mailman-2.1.9 [pkg/34567]
 	o mailscanner-4.54.6
 	o makedepf90-2.8.8 [pkg/34306]
 	o maketool-0.8.4
@@ -1026,6 +1029,7 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
+	o python-2.5
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qt1-1.45
