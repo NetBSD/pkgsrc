@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/09/15 15:19:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/09/20 14:40:14 joerg Exp $
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
@@ -15,7 +15,7 @@ share/applications/screensavers/personal-slideshow.desktop
 share/applications/screensavers/popsquares.desktop
 share/desktop-directories/gnome-screensaver.directory
 share/examples/gnome-screensaver/pam.d/gnome-screensaver-Linux
-share/examples/gnome-screensaver/pam.d/gnome-screensaver-${OPSYS}
+share/examples/gnome-screensaver/pam.d/gnome-screensaver-NetBSD
 share/examples/gnome-screensaver/xdg/menus/gnome-screensavers.menu
 share/gconf/schemas/gnome-screensaver.schemas
 share/gnome-screensaver/gnome-screensaver-preferences.glade
