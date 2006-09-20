@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/16 12:20:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/20 19:54:51 joerg Exp $
 
 DISTNAME=	guile-gnome-platform-2.7.99
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Library to access gobject/glib/gtk and gnome from guile
 DEPENDS+=	guile-slib>=2.4.2:../../devel/guile-slib
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo pkg-config
 USE_LIBTOOL=		YES
 INFO_FILES=		# PLIST
 
