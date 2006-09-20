@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1 2006/09/20 12:58:32 joerg Exp $
+
+As cairo-1.0 from pkgsrc was shipped with PS and PDF backend enabled,
+ensure that the ABI is not broken.
+
+--- src/cairo-surface.c.orig	2006-09-20 00:06:40.000000000 +0200
++++ src/cairo-surface.c
+@@ -2116,3 +2116,22 @@ _cairo_surface_copy_pattern_for_destinat
+ 
+ /*  LocalWords:  rasterized
+  */
++
++#undef cairo_ps_surface_set_dpi
++#undef cairo_pdf_surface_set_dpi
++
++void
++cairo_ps_surface_set_dpi(cairo_surface_t	*surface,
++			 double		 x_pixels_per_inch,
++			 double		 y_pixels_per_inch)
++{
++	cairo_surface_set_fallback_resolution(surface, x_pixels_per_inch, y_pixels_per_inch);
++}
++
++void
++cairo_pdf_surface_set_dpi(cairo_surface_t	*surface,
++			 double		 x_pixels_per_inch,
++			 double		 y_pixels_per_inch)
++{
++	cairo_surface_set_fallback_resolution(surface, x_pixels_per_inch, y_pixels_per_inch);
++}
