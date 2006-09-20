@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2006/06/18 07:04:15 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2006/09/20 11:05:20 hira Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=sharutils/}
 
@@ -19,7 +19,9 @@ GNU_CONFIGURE=		yes
 
 INSTALL_TARGET=		install install-man
 INFO_FILES=		yes
-USE_TOOLS+=		makeinfo msgfmt sh:run mktemp:run
+USE_TOOLS+=		makeinfo msgfmt sh:run mktemp:run perl:run
+
+REPLACE_PERL=		src/remsync.in
 
 CONFIGURE_ARGS+=	--disable-uucode
 CONFIGURE_ENV+=		SH=${TOOLS_SH:Q}
