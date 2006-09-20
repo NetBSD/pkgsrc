@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/20 13:25:25 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/09/20 13:27:18 joerg Exp $
 #
 
 DISTNAME=	ion-3ds-20060524
@@ -26,11 +26,11 @@ EGFILES=		cfg_dock.lua cfg_floatws.lua cfg_ion.lua	\
 			cfg_menu.lua cfg_modules.lua cfg_panews.lua	\
 			cfg_pwm.lua cfg_query.lua cfg_sp.lua		\
 			cfg_statusbar.lua				\
-			dock-draw.lua look.lua look_brownsteel.lua	\
+			look.lua look_brownsteel.lua			\
 			look_clean.lua look_cleanios.lua		\
 			look_cleanviolet.lua look_dusky.lua		\
 			look_greyviolet.lua look_ios.lua		\
-			look_simpleblue.lua look_wheat2.lua		\
+			look_simpleblue.lua				\
 			lookcommon_clean.lua lookcommon_emboss.lua
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
