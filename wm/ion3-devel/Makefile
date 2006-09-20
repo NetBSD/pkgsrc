@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2006/09/02 12:07:52 rpaulo Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/20 13:25:25 joerg Exp $
 #
 
 DISTNAME=	ion-3ds-20060524
 PKGNAME=	${DISTNAME:S/-3ds-/3-/}
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://iki.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
@@ -20,11 +21,10 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 PKG_SYSCONFSUBDIR=	ion3
 EGDIR=			${PREFIX}/share/examples/ion3
-EGFILES=		cfg_bindings.lua cfg_dock.lua cfg_floatws.lua	\
-			cfg_ion.lua cfg_ionws.lua cfg_kludges.lua	\
-			cfg_menu.lua cfg_menus.lua cfg_panews.lua	\
-			cfg_pwm.lua cfg_pwm_bindings.lua		\
-			cfg_pwm_menus.lua cfg_query.lua cfg_sp.lua	\
+EGFILES=		cfg_dock.lua cfg_floatws.lua cfg_ion.lua	\
+			cfg_ioncore.lua cfg_ionws.lua cfg_kludges.lua	\
+			cfg_menu.lua cfg_modules.lua cfg_panews.lua	\
+			cfg_pwm.lua cfg_query.lua cfg_sp.lua		\
 			cfg_statusbar.lua				\
 			dock-draw.lua look.lua look_brownsteel.lua	\
 			look_clean.lua look_cleanios.lua		\
