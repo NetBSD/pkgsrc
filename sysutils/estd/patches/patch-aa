@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2006/07/24 08:11:38 adam Exp $
+$NetBSD: patch-aa,v 1.5 2006/09/20 07:19:59 rillig Exp $
 
 --- Makefile.orig	2006-07-02 11:29:29.000000000 +0200
-+++ Makefile
++++ Makefile	2006-09-20 09:15:01.000000000 +0200
 @@ -19,7 +19,8 @@ estd:	estd.c
  all: estd
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.4 2006/07/24 08:11:38 adam Exp $
 -	install -s -o root -g wheel -m 0755 estd /usr/local/sbin/estd
 -	install -d -o root -g wheel -m 0755 /usr/local/man/man1
 -	install -o root -g wheel -m 0644 estd.1 /usr/local/man/man1/estd.1
-+	install -d -o root -g wheel -m 0755 ${PREFIX}/sbin
-+	install -s -o root -g wheel -m 0755 estd ${PREFIX}/sbin/estd
-+	install -d -o root -g wheel -m 0755 ${PREFIX}/man/man1
-+	install -o root -g wheel -m 0644 estd.1 ${PREFIX}/man/man1/estd.1
-+	install -o root -g wheel -m 0644 estd.sh ${PREFIX}/share/examples/rc.d/estd
++	${BSD_INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
++	${BSD_INSTALL_PROGRAM} estd ${PREFIX}/sbin/estd
++	${BSD_INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} estd.1 ${PREFIX}/${PKGMANDIR}/man1/estd.1
++	${BSD_INSTALL_SCRIPT} estd.sh ${PREFIX}/share/examples/rc.d/estd
