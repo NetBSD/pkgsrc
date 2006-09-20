@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/09/20 16:24:46 gdt Exp $
+
+--- configure.orig	2006-07-01 00:53:02.000000000 -0400
++++ configure
+@@ -3735,7 +3735,7 @@ fi;
+ 
+ if test $USE_GEOS -gt 0; then
+ 	GEOS_DIR=`$GEOSCONFIG --prefix`
+-	GEOS_LDFLAGS=`$GEOSCONFIG --ldflags`
++	GEOS_LDFLAGS=`$GEOSCONFIG --libs`
+ 	GEOS_MAJOR=`$GEOSCONFIG --version | cut -d. -f1`
+ 	if test "$GEOS_MAJOR" = "@GEOS_VERSION@"; then
+ 		GEOS_MAJOR=1
