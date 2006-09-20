@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/20 13:00:02 rillig Exp $
 #
 
 DISTNAME=	pkg_alternatives-1.3
@@ -41,7 +41,9 @@ SUBST_SED.vars+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.vars+=	-e 's|@ROOT_USER@|${ROOT_USER}|g'
 SUBST_SED.vars+=	-e 's|@SH@|${SH}|g'
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+
+CHECK_INTERPRETER_SKIP=	${DATADIR}/wrapper.sh
 
 do-extract:
 	${CP} ${FILESDIR}/pkg_alternatives.sh ${WRKSRC}
@@ -53,7 +55,7 @@ do-extract:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_alternatives.sh \
 		${PREFIX}/sbin/pkg_alternatives
-	${INSTALL_MAN} ${WRKSRC}/pkg_alternatives.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/pkg_alternatives.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/wrapper.sh ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/wrapper.man ${DATADIR}/
