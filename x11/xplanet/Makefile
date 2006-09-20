@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/15 23:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/09/20 18:20:39 xtraeme Exp $
 
 DISTNAME=	xplanet-1.2.0
 PKGREVISION=	3
@@ -21,7 +21,20 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xplanet/${dir}
 .endfor
 
+PKG_OPTIONS_VAR=        PKG_OPTIONS.planet
+PKG_SUPPORTED_OPTIONS=  x11
+PKG_SUGGESTED_OPTIONS=  x11
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mx11)
 .include "../../devel/pango/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pango
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-xscreensaver
+.endif
+
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
