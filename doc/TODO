@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5468 2006/09/20 22:49:53 wiz Exp $
+$NetBSD: TODO,v 1.5469 2006/09/21 04:25:39 taca Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,7 @@ Suggested package updates
 	o smlnj-110.59 [pkgsrc-wip]
 	o snd-8.4
 	o snes9x-1.502
-	o snort-2.6.0
+	o snort-2.6.0.2
 	o socat-1.5.0.0
 	o solfege-3.4.2
 	o sope-4.5.5
@@ -1194,7 +1194,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
 	o wdm-1.28
-	o webmin-1.290
+	o webmin-1.300
 	o weechat-2.0 [pkg/34312]
 	o weewm-0.01
 	o winbind-3.0.13
