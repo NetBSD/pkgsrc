@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2006/04/05 23:06:33 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2006/09/21 20:23:38 rillig Exp $
 
 DISTNAME=	screen-4.0.2
 PKGREVISION=	5
@@ -32,6 +32,7 @@ SUBST_SED.paths+=	-e 's,@EXAMPLES@,${PREFIX}/share/examples/screen,g'
 SUBST_STAGE.paths=	post-patch
 
 .if (${OPSYS} == "SunOS") && exists(/usr/5bin/tic)
+INSTALLATION_DIRS+=	share/lib/terminfo
 PLIST_SUBST+=	SCREEN_TERMINFO=
 post-install: screen-terminfo
 .else
