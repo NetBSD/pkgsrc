@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2006/02/24 19:12:18 joerg Exp $
+$NetBSD: distinfo,v 1.12 2006/09/22 18:58:59 joerg Exp $
 
 SHA1 (yatsvrs-5.00p6.tar.gz) = be94b29c8631acc1d7b3c4313501b6d674e6b43f
 RMD160 (yatsvrs-5.00p6.tar.gz) = 9920ac63a2477100ddc54196c76d6d700b144642
@@ -20,7 +20,7 @@ SHA1 (patch-ao) = f697fe18121dcee1a279b5e4e8d318789cef8211
 SHA1 (patch-ap) = f42ade29527d1910f271c10797f6bd8d9f3710cc
 SHA1 (patch-aq) = ea2d7d2f21ebe3aea163d6de0a95060be2ecc381
 SHA1 (patch-ar) = 8f26f7a180790070e1137c9840c1e0edcfc02a66
-SHA1 (patch-as) = a91b38a9267f0aca96a644dbe9c16f124b5ddee8
+SHA1 (patch-as) = 5156e666d446cecf582aab900f911e568f7e8d8a
 SHA1 (patch-at) = 73704aa7d506c5a97f4fef3cc03e6ac8e983497e
 SHA1 (patch-au) = 63aa76a7a9c55c9877fe2a336903828d193c3658
 SHA1 (patch-av) = 4c87a76438f97fcafa29083c37d3a225bd219cc2
