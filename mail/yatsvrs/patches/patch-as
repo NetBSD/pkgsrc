@@ -1,8 +1,22 @@
-$NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
+$NetBSD: patch-as,v 1.5 2006/09/22 18:58:59 joerg Exp $
 
 --- yatd/dfree.c.orig	2001-07-09 03:32:52.000000000 +0000
 +++ yatd/dfree.c
-@@ -72,12 +72,6 @@ quota_get_inode_current __P(( struct dqb
+@@ -39,6 +39,13 @@ typedef u_long quota_size_t;
+ # include <sys/quota.h>
+ #endif /* HAVE_SYS_QUOTA_H */
+ 
++#ifdef __DragonFly__
++#include <sys/param.h>
++#if __DragonFly_version >= 160000
++#define dqblk ufs_dqblk
++#endif
++#endif
++
+ static int 
+ quotactl_wrapper __P((const char *pPath, struct dqblk *quota_block));
+ static int 
+@@ -72,12 +79,6 @@ quota_get_inode_current __P(( struct dqb
  
  #define DEBUG_LOCAL
  
@@ -15,7 +29,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
  int DFreeCheck(pPath, pSizFree, pNodFree)
       char   * pPath;    /* ユーザーのホームディレクトリの位置 */
       OFF_T  * pSizFree; /* 空きブロック数 */
-@@ -99,7 +93,7 @@ int DFreeCheck(pPath, pSizFree, pNodFree
+@@ -99,7 +100,7 @@ int DFreeCheck(pPath, pSizFree, pNodFree
    nodLimit = *pNodFree; /* リミットのノード数を指定する */
  
  #ifdef DEBUG_LOCAL
@@ -24,7 +38,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
  	   sizLimit, nodLimit, sizeof (OFF_T));
  #endif /* DEBUG_LOCAL */
  
-@@ -122,23 +116,30 @@ int DFreeCheck(pPath, pSizFree, pNodFree
+@@ -122,23 +123,30 @@ int DFreeCheck(pPath, pSizFree, pNodFree
  #ifdef DEBUG_LOCAL
  # ifdef BSD44 
    LogDEBUG("statfs() returns:");
@@ -67,7 +81,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
  #ifdef STRUCT_STATFS_HAVE_F_FSTYPENAME
    LogDEBUG("  fstypename: %.256s", statfsBuf.f_fstypename);
  #endif
-@@ -311,7 +312,7 @@ int FuncDFree()
+@@ -311,7 +319,7 @@ int FuncDFree()
    nodFree = SysData.nodLimitFree;
  
  #ifdef DEBUG_LOCAL
@@ -76,7 +90,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
  	     sizFree, nodFree);
  #endif
      
-@@ -325,7 +326,7 @@ int FuncDFree()
+@@ -325,7 +333,7 @@ int FuncDFree()
      if (DFreeCheck(SysData.szUserFldrDir, &sizFree, &nodFree)){
        return FAILURE;
      }
@@ -85,7 +99,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
  #endif /* DONT_CHECKDFREE */
    return SUCCESS;
  }
-@@ -427,7 +428,7 @@ static inline quota_size_t quota_get_ino
+@@ -427,7 +435,7 @@ static inline quota_size_t quota_get_ino
  
  #ifdef STRUCT_DQBLK_CURRENT_FILES
    retval = (quota_size_t)quota_block->dqb_curfiles;
@@ -94,7 +108,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
  
    return retval;
  }
-@@ -449,12 +450,12 @@ static int quotactl_wrapper(pPath,quota_
+@@ -449,12 +457,12 @@ static int quotactl_wrapper(pPath,quota_
    switch( status ){
    case SUCCESS:
      LogDEBUG("quotactl() returns:");
@@ -113,7 +127,7 @@ $NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
      return SUCCESS;
    case FAILURE:
      return FAILURE;
-@@ -494,7 +495,7 @@ static int quotactl_systemcall_support( 
+@@ -494,7 +502,7 @@ static int quotactl_systemcall_support( 
    status = quotactl(QCMD(Q_GETQUOTA, USRQUOTA),SysData.szMntFrom,
  		    SysData.pPwd->pw_uid, (caddr_t)quota_block);
    
