@@ -1,16 +1,7 @@
-$NetBSD: patch-ai,v 1.16 2006/09/17 15:35:52 jmmv Exp $
+$NetBSD: patch-ai,v 1.17 2006/09/22 21:27:11 tron Exp $
 
 --- configure.orig	2006-09-05 04:40:15.000000000 +0200
 +++ configure
-@@ -26296,7 +26296,7 @@ echo "${ECHO_T}$gtk_uxtheme_h" >&6
- 
- use_la_modules=false
- case $host in
--  *-aix*) use_la_modules=true
-+  *-aix*|*-darwin*) use_la_modules=true
- esac
- 
- if $use_la_modules ; then
 @@ -32042,6 +32042,7 @@ _ACEOF
  fi
  
