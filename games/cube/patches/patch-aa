@@ -1,16 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2005/02/15 23:28:58 peter Exp $
+$NetBSD: patch-aa,v 1.3 2006/09/22 21:48:43 joerg Exp $
 
 --- source/src/Makefile.orig	2003-12-20 16:47:58.000000000 +0100
 +++ source/src/Makefile	2004-06-10 01:27:22.000000000 +0200
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,8 @@
  CXX=g++
 -CXXOPTFLAGS=-Wall -O3 -fsigned-char -fomit-frame-pointer
 -CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags`
 +CXXOPTFLAGS=-Wall -O3 -fsigned-char -fomit-frame-pointer -Wno-deprecated
 +CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags` -DHAS_SOCKLEN_T
  
- CLIENT_LIBS=-L../enet -lenet `sdl-config --libs` -lSDL_image -lSDL_mixer -lz -lGL -lGLU 
+-CLIENT_LIBS=-L../enet -lenet `sdl-config --libs` -lSDL_image -lSDL_mixer -lz -lGL -lGLU 
++CLIENT_LIBS=-L../enet -lenet `sdl-config --libs` -lSDL_image -lSDL_mixer -lz -lGL -lGLU ${X11_LDFLAGS} -lX11
  CLIENT_OBJS= \
+ 	client.o \
+ 	clientextras.o \
 @@ -49,11 +49,11 @@
  all: enet client server
  
