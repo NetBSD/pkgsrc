@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 05:00:09 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/22 21:53:57 joerg Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/UTBI____.afm
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/UTBI____.pfa
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/UTB_____.afm
@@ -32,10 +32,6 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/courbi.pfa
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/couri.afm
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/couri.pfa
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/cursor.pfa
-${X11ROOT_PREFIX}/lib/X11/fonts/Type1/encodings.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/Type1/fonts.cache-1
-${X11ROOT_PREFIX}/lib/X11/fonts/Type1/fonts.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/Type1/fonts.scale
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l047013t.afm
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l047013t.pfa
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l047016t.afm
@@ -60,4 +56,3 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l049033t.afm
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l049033t.pfa
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l049036t.afm
 ${X11ROOT_PREFIX}/lib/X11/fonts/Type1/l049036t.pfa
-@dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/Type1

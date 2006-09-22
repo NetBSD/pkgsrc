@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:36:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
 lib/X11/fonts/Mozilla/cour1.pcf.gz
 lib/X11/fonts/Mozilla/cour2.pcf.gz
 lib/X11/fonts/Mozilla/cour3.pcf.gz
@@ -27,6 +27,7 @@ lib/X11/fonts/Mozilla/couri4.pcf.gz
 lib/X11/fonts/Mozilla/couri5.pcf.gz
 lib/X11/fonts/Mozilla/couri6.pcf.gz
 lib/X11/fonts/Mozilla/couri7.pcf.gz
+lib/X11/fonts/Mozilla/fonts.alias
 lib/X11/fonts/Mozilla/helv0.pcf.gz
 lib/X11/fonts/Mozilla/helv1.pcf.gz
 lib/X11/fonts/Mozilla/helv2.pcf.gz
