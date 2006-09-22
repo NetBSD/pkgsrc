@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/09/16 12:20:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.56 2006/09/22 15:08:09 dsainty Exp $
 #
 
 DISTNAME=		libgnomedb-1.9.103
@@ -31,6 +31,7 @@ GCONF2_SCHEMAS=		libgnomedb.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
