@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/22 07:08:16 rillig Exp $
 #
 
 DISTNAME=	GNUMail-1.1.2
@@ -14,6 +14,7 @@ USE_LANGUAGES=	objc
 
 WRKSRC=		${WRKDIR}/GNUMail
 NO_CONFIGURE=	yes
+MAKE_FILE=	GNUmakefile
 
 post-extract:
 	${RM} -r ${WRKSRC}/*/*/CVS
