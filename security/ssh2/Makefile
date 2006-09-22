@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/05/10 12:26:31 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/22 13:58:46 kivinen Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
@@ -50,6 +50,14 @@ CONFIGURE_ARGS+=	--without-ssh-agent1-compat
 CONFIGURE_ARGS+=	--without-ssh1-compat
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp-wrappers}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR:Q}
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64"
+# This seems to break x11 forwarding at least on NetBSD 3.1 amd64
+# (i.e ssh localhost xterm does not work as client will get wrong
+# auth cookie).
+# Without this it will use the xauth method and that will work.
+CONFIGURE_ARGS+=	--without-x11-security
+.endif
 
 # Setting FOREIGN_ETCDIR to PKG_SYSCONFBASEDIR may seem stupid
 # if PKG_SYSCONFDIR.${PKG_SYSCONFVAR} is set but it does no harm...
