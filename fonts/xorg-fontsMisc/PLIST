@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 04:58:31 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/22 21:53:57 joerg Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/10x20-ISO8859-1.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/10x20-ISO8859-10.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/10x20-ISO8859-11.pcf.gz
@@ -392,10 +392,7 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/misc/cudevnag12.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/cursor.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/deccurs.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/decsess.pcf.gz
-${X11ROOT_PREFIX}/lib/X11/fonts/misc/encodings.dir
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/fonts.alias
-${X11ROOT_PREFIX}/lib/X11/fonts/misc/fonts.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/misc/fonts.scale
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/gb16fs.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/gb16st.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/gb24st.pcf.gz
@@ -412,4 +409,3 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/misc/olgl10.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/olgl12.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/olgl14.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/misc/olgl19.pcf.gz
-@dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/misc

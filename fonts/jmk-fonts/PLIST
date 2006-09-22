@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/17 19:34:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/22 21:53:57 joerg Exp $
+lib/X11/fonts/jmk/fonts.alias
 lib/X11/fonts/jmk/modd-iso8859-1-06x11-bold.pcf.gz
 lib/X11/fonts/jmk/modd-iso8859-1-06x11.pcf.gz
 lib/X11/fonts/jmk/modd-iso8859-1-06x13-bold.pcf.gz

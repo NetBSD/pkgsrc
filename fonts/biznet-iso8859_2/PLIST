@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/17 19:28:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/22 21:53:56 joerg Exp $
 lib/X11/fonts/biznet/100dpi/UTI___10.pcf.gz
 lib/X11/fonts/biznet/100dpi/UTI___12.pcf.gz
 lib/X11/fonts/biznet/100dpi/UTI___14.pcf.gz
@@ -45,6 +45,7 @@ lib/X11/fonts/biznet/100dpi/courR12.pcf.gz
 lib/X11/fonts/biznet/100dpi/courR14.pcf.gz
 lib/X11/fonts/biznet/100dpi/courR18.pcf.gz
 lib/X11/fonts/biznet/100dpi/courR24.pcf.gz
+lib/X11/fonts/biznet/100dpi/fonts.alias
 lib/X11/fonts/biznet/100dpi/helvB08.pcf.gz
 lib/X11/fonts/biznet/100dpi/helvB10.pcf.gz
 lib/X11/fonts/biznet/100dpi/helvB12.pcf.gz
@@ -259,6 +260,7 @@ lib/X11/fonts/biznet/75dpi/helvR12.pcf.gz
 lib/X11/fonts/biznet/75dpi/helvR14.pcf.gz
 lib/X11/fonts/biznet/75dpi/helvR18.pcf.gz
 lib/X11/fonts/biznet/75dpi/helvR24.pcf.gz
+lib/X11/fonts/biznet/75dpi/fonts.alias
 lib/X11/fonts/biznet/75dpi/luBIS08.pcf.gz
 lib/X11/fonts/biznet/75dpi/luBIS10.pcf.gz
 lib/X11/fonts/biznet/75dpi/luBIS12.pcf.gz
@@ -394,3 +396,4 @@ lib/X11/fonts/biznet/misc/8x13B.pcf.gz
 lib/X11/fonts/biznet/misc/8x16.pcf.gz
 lib/X11/fonts/biznet/misc/9x15.pcf.gz
 lib/X11/fonts/biznet/misc/9x15B.pcf.gz
+lib/X11/fonts/biznet/misc/fonts.alias
