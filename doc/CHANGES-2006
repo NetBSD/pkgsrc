@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1318 2006/09/21 15:24:16 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1319 2006/09/22 12:03:06 dan Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/gsharutils to 4.2.1nb10 [hira 2006-09-20]
 	Updated pkgtools/pkg_chk to 1.81 [abs 2006-09-20]
 	Updated games/cgoban-java to 3.3.1 [rillig 2006-09-20]
+	Updated devel/monotone to 0.30nb1 [dan 2006-09-22]
