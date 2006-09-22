@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/22 07:08:16 rillig Exp $
 
 DISTNAME=	ImageViewer-0.6.3
 PKGREVISION=	3
@@ -12,6 +12,7 @@ COMMENT=	GNUstep image display application
 USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
+MAKE_FILE=	GNUmakefile
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

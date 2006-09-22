@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/22 05:10:55 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/22 07:08:16 rillig Exp $
 #
 
 DISTNAME=	gworkspace-0.7.1
@@ -18,6 +18,7 @@ USE_TOOLS+=	gs:run file:run sh:run
 USE_LANGUAGES=	objc
 CONFIGURE_ARGS+=	--with-sh=${TOOLS_PATH.sh:Q}
 CONFIGURE_ARGS+=	--with-file=${TOOLS_PATH.file:Q}
+MAKE_FILE=	GNUmakefile
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
