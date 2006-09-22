@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/22 21:53:57 joerg Exp $
 #
 
 DISTNAME=	jmk-x11-fonts-3.0
 PKGNAME=	jmk-fonts-3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/fonts/}
 
@@ -16,5 +16,8 @@ USE_TOOLS+=	bdftopcf
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/jmk
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/jmk
+
+post-install:
+	${RM} ${PREFIX}/lib/X11/fonts/jmk/fonts.scale
 
 .include "../../mk/bsd.pkg.mk"
