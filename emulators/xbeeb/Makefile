@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/17 06:37:55 dsainty Exp $
+# $NetBSD: Makefile,v 1.20 2006/09/22 13:21:37 dsainty Exp $
 #
 
 DISTNAME=	xbeeb-0.4.1
@@ -40,17 +40,39 @@ SUBST_FILES.nomitshm=	src/Config.h
 SUBST_SED.nomitshm=	-e "s|\#define	*MITSHM|\#undef MITSHM|"
 .endif
 
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} != "none"
+
 SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	post-patch
-SUBST_MESSAGE.dsp=	Adjusting sound device path.
+SUBST_MESSAGE.dsp=	Adjusting sound device path
 SUBST_FILES.dsp=	src/SoundOSS.c
 SUBST_SED.dsp=		-e "s|\"/dev/dsp\"|\"${DEVOSSAUDIO}\"|"
 
+SUBST_CLASSES+=		osslib
+SUBST_STAGE.osslib=	post-patch
+SUBST_MESSAGE.osslib=	Linking OSS library
+SUBST_FILES.osslib=	src/Imakefile
+SUBST_SED.osslib=	-e "s|\\(SYS_LIBRARIES[	 ]*=.*\\)|\\1 ${LIBOSSAUDIO}|"
+
+.else
+
+SUBST_CLASSES+=		nooss
+SUBST_STAGE.nooss=	post-patch
+SUBST_MESSAGE.nooss=	Disabling sound support: No OSS on this platform
+SUBST_FILES.nooss=	src/Config.h
+SUBST_SED.nooss=	-e "s|^\#define\\([	 ]*SOUND_OSS.*\\)\$$|\#undef\\1|"
+
+.endif # OSS_TYPE
+
+
 SUBST_CLASSES+=		beebroot
 SUBST_STAGE.beebroot=	post-patch
-SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path.
+SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path
 SUBST_FILES.beebroot=	src/Config.h
-SUBST_SED.beebroot=	-e "s|^\(\#define[	 ]*XBEEBROOT[	 ]*\)[^	 ].*$$|\1\"${PREFIX}/${XBEEBROOT}/\"|"
+SUBST_SED.beebroot=	-e "s|^\\(\#define[	 ]*XBEEBROOT[	 ]*\\)[^	 ].*\$$|\\1\"${PREFIX}/${XBEEBROOT}/\"|"
 
 # xbeeb build starts in the source directory
 do-configure:
@@ -83,6 +105,5 @@ do-install:
 	${CP} ${WRKSRC}/fonts/*.pcf ${PREFIX}/lib/X11/fonts/xbeeb
 	mkfontdir ${PREFIX}/lib/X11/fonts/xbeeb
 
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
