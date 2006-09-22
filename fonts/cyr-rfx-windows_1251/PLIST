@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
 lib/X11/fonts/local/windows-1251/75dpi/courB08w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/courB10w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/courB12w.pcf
@@ -23,6 +23,7 @@ lib/X11/fonts/local/windows-1251/75dpi/courR12w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/courR14w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/courR18w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/courR24w.pcf
+lib/X11/fonts/local/windows-1251/75dpi/fonts.alias
 lib/X11/fonts/local/windows-1251/75dpi/helvB08w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/helvB10w.pcf
 lib/X11/fonts/local/windows-1251/75dpi/helvB12w.pcf
@@ -128,4 +129,5 @@ lib/X11/fonts/local/windows-1251/misc/8x13w.pcf
 lib/X11/fonts/local/windows-1251/misc/8x16w.pcf
 lib/X11/fonts/local/windows-1251/misc/9x15Bw.pcf
 lib/X11/fonts/local/windows-1251/misc/9x15w.pcf
+lib/X11/fonts/local/windows-1251/misc/fonts.alias
 lib/X11/fonts/local/windows-1251/misc/nil2w.pcf

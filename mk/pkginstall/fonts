@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.2 2006/07/19 22:26:26 jlam Exp $
+# $NetBSD: fonts,v 1.3 2006/09/22 21:53:58 joerg Exp $
 #
 # Generate a +FONTS script that updates font databases for the package.
 #
@@ -37,6 +37,7 @@ TEST="@TEST@"
 TRUE="@TRUE@"
 TTMKFDIR="@TTMKFDIR@"
 TYPE1INST="@TYPE1INST@"
+X11_ENCODINGSDIR="@X11_ENCODINGSDIR@"
 
 SELF=$0
 
@@ -74,19 +75,24 @@ ${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
 	esac
 	( ${ECHO} "	$dir ($font_type)"
 	  cd $dir
+	  update_args=
+	  post_update_cmd=
 	  case $font_type in
 	  [tT][tT][fF])		update_cmd="${TTMKFDIR}" ;;
-	  [tT][yY][pP][eE]1)	update_cmd="${TYPE1INST}; ${RM} type1inst.log" ;;
-	  [xX]11)		update_cmd="${MKFONTDIR}" ;;
+	  [tT][yY][pP][eE]1)	update_cmd="${TYPE1INST}"
+				post_update_cmd="${RM} type1inst.log" ;;
+	  [xX]11)		update_cmd="${MKFONTDIR}"
+				[ ! -z "${X11_ENCODINGSDIR}" ] && update_args="-e ${X11_ENCODINGSDIR}" ;;
 	  esac
 	  ${TEST} -f "$update_cmd" || update_cmd="${TRUE}"
-	  $update_cmd >/dev/null
+	  $update_cmd $update_args >/dev/null
+	  $post_update_cmd
 	  #
 	  # Remove fonts databases if there are no fonts in the directory.
-	  # We filter out the encodings.dir, fonts.{alias,dirs,scale}, and
+	  # We filter out the encodings.dir, fonts.{dirs,scale}, and
 	  # Fontmap database files from the directory listing.
 	  #
-	  ${FIND} . -type f | ${GREP} -v "/encodings.dir" | ${GREP} -v "/fonts\." | ${GREP} -v "/Fontmap" >/dev/null || ${RM} -f fonts.* Fontmap*
+	  ${FIND} . -type f | ${GREP} -v "/encodings.dir" | ${GREP} -v "/fonts\.scale" | ${GREP} -v "/fonts\.dir" | ${GREP} -v "/Fontmap" >/dev/null || ${RM} -f fonts.dir fonts.scale Fontmap* encodings.dir > /dev/null
 	)
 done
 case "$printed_header" in

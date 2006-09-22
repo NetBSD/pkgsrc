@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
 lib/X11/fonts/local/ibm-cp866/75dpi/courB08d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/courB10d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/courB12d.pcf
@@ -23,6 +23,7 @@ lib/X11/fonts/local/ibm-cp866/75dpi/courR12d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/courR14d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/courR18d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/courR24d.pcf
+lib/X11/fonts/local/ibm-cp866/75dpi/fonts.alias
 lib/X11/fonts/local/ibm-cp866/75dpi/helvB08d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/helvB10d.pcf
 lib/X11/fonts/local/ibm-cp866/75dpi/helvB12d.pcf
@@ -128,4 +129,5 @@ lib/X11/fonts/local/ibm-cp866/misc/8x13d.pcf
 lib/X11/fonts/local/ibm-cp866/misc/8x16d.pcf
 lib/X11/fonts/local/ibm-cp866/misc/9x15Bd.pcf
 lib/X11/fonts/local/ibm-cp866/misc/9x15d.pcf
+lib/X11/fonts/local/ibm-cp866/misc/fonts.alias
 lib/X11/fonts/local/ibm-cp866/misc/nil2d.pcf

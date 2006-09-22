@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/Vera.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraIt.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraBI.ttf
@@ -9,10 +9,6 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraMoIt.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraMono.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraSe.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraSeBd.ttf
-${X11ROOT_PREFIX}/lib/X11/fonts/TTF/encodings.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/TTF/fonts.cache-1
-${X11ROOT_PREFIX}/lib/X11/fonts/TTF/fonts.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/TTF/fonts.scale
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luximb.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luximbi.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luximr.ttf
@@ -25,4 +21,3 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luxisb.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luxisbi.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luxisr.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/luxisri.ttf
-@dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/TTF

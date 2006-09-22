@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/01 19:00:10 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/22 21:53:57 joerg Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/UTBI__10-ISO8859-1.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/UTBI__10-ISO8859-10.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/UTBI__10-ISO8859-13.pcf.gz
@@ -463,10 +463,7 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/courR24-ISO8859-3.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/courR24-ISO8859-4.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/courR24-ISO8859-9.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/courR24.pcf.gz
-${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/encodings.dir
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/fonts.alias
-${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/fonts.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/fonts.scale
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/helvB08-ISO8859-1.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/helvB08-ISO8859-10.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/helvB08-ISO8859-13.pcf.gz
@@ -1897,4 +1894,3 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/timR24-ISO8859-3.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/timR24-ISO8859-4.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/timR24-ISO8859-9.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi/timR24.pcf.gz
-@dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/75dpi

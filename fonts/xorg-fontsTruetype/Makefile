@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/06/19 12:23:02 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/22 21:53:57 joerg Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsTruetype-${XORG_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 
@@ -29,6 +29,9 @@ SUBST_CLASSES+=		TTF
 SUBST_STAGE.TTF=	post-configure
 SUBST_FILES.TTF=	fonts/scaled/TTF/Makefile
 SUBST_SED.TTF=		-e "s,/usr/X11R6,${LOCALBASE},g"
+
+FONTS_DIRS.ttf=	${X11ROOT_PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.x11=	${X11ROOT_PREFIX}/lib/X11/fonts/TTF
 
 .include "../../fonts/xorg-fontsEncodings/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

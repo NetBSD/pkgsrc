@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/06/19 12:23:02 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/22 21:53:57 joerg Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsType1-${XORG_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 
@@ -28,6 +28,9 @@ SUBST_CLASSES+=		scaled
 SUBST_STAGE.scaled=	post-configure
 SUBST_FILES.scaled=	fonts/scaled/Type1/Makefile
 SUBST_SED.scaled=	-e "s,/usr/X11R6,${LOCALBASE},g"
+
+FONTS_DIRS.type1=	${X11ROOT_PREFIX}/lib/X11/fonts/Type1
+FONTS_DIRS.x11=		${X11ROOT_PREFIX}/lib/X11/fonts/Type1
 
 .include "../../fonts/xorg-fontsEncodings/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
