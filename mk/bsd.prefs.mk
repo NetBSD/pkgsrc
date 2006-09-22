@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.235 2006/09/10 20:19:39 schwarz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.236 2006/09/22 21:53:57 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -412,6 +412,9 @@ X11PREFIX=		${LOCALBASE}
 .else
 X11PREFIX=		${X11BASE}
 .endif
+
+# Default directory for font encodings
+X11_ENCODINGSDIR?=	${X11BASE}/lib/X11/fonts/encodings
 
 DEPOT_SUBDIR?=		packages
 DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
