@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/08/30 14:55:28 adam Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/22 07:08:16 rillig Exp $
 
 DISTNAME=	gnustep-gui-0.11.0
 CATEGORIES=	x11 gnustep
@@ -12,6 +12,7 @@ USE_LANGUAGES=	objc
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--exec-prefix=${PREFIX:Q}/libexec/GNUstep
+MAKE_FILE=	GNUmakefile
 
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gnustep-base/buildlink3.mk"

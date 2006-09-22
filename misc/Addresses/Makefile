@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/22 07:08:16 rillig Exp $
 #
 
 DISTNAME=		Addresses-0.4.6
@@ -14,6 +14,7 @@ USE_LANGUAGES=		objc
 
 NO_CONFIGURE=		yes
 MAKE_ENV+=		Addresses_OBJCFLAGS=-I..
+MAKE_FILE=		GNUmakefile
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../x11/gnustep-back/buildlink3.mk"

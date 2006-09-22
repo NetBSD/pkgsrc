@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/22 05:10:54 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/22 07:08:15 rillig Exp $
 #
 
 DISTNAME=	gnustep-examples-1.0.0
@@ -13,6 +13,7 @@ COMMENT=	Some GUI programming examples for GNUstep
 USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
+MAKE_FILE=	GNUmakefile
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
