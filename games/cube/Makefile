@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/22 21:48:43 joerg Exp $
 
 DISTNAME=	cube_2004_05_22
 PKGNAME=	cube-20040522
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cube/}
 
@@ -13,10 +13,13 @@ COMMENT=	Cube is a 3D First Person Shooter that uses OpenGL and SDL
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=		${WRKDIR}/cube
+GNU_CONFIGURE=	yes
+CONFIGURE_DIRS=	${WRKSRC}/source/enet
 CUBE_SRC_DIR=	${WRKSRC}/source/src
 CUBE_DATA_DIR=	${PREFIX}/share/cube
+BUILD_DIRS=	${CUBE_SRC_DIR}
+MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 
-NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake unzip
 
@@ -27,10 +30,6 @@ post-extract:
 
 post-patch:
 	@${ECHO} '#define DATADIR "${CUBE_DATA_DIR}"' >> ${CUBE_SRC_DIR}/cube.h
-
-do-build:
-	cd ${WRKSRC}/source/enet && ${SH} configure
-	cd ${CUBE_SRC_DIR} && ${GMAKE} all
 
 pre-install:
 	${INSTALL_DATA_DIR} ${CUBE_DATA_DIR}/savegames
