@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.3 2006/09/22 11:14:06 dan Exp $
+
+--- lru_writeback_cache.hh	4ac60f38211fc4ef11ee1f968bfb88fee5446937
++++ lru_writeback_cache.hh	c2fa384b9b29d6c5162fad70ebe96e6479b8aa3e
+@@ -212,19 +212,24 @@ public:
+       {
+         // Remove the last element.
+         liter = _list.end();
+-        // Unless it's the only element (i.e., the one we just inserted) -- we
+-        // never empty ourselves out completely
++        I(liter != _list.begin());
++        --liter;
++        // liter now points to the last element.  If the last element is also
++        // the first element -- i.e., the list has only one element, and we
++        // know that it's the one we just inserted -- then never mind, we
++        // never want to empty ourselves out completely.
+         if (liter == _list.begin())
+           break;
+-        --liter;
+         this->_remove(liter->first);
+       }
++    I(exists(key));
+   }
+ 
+   inline void insert_dirty(Key const & key, const Data & data)
+   {
+     insert_clean(key, data);
+     safe_insert(_dirty, key);
++    I(is_dirty(key));
+   }
+ 
+ private:
