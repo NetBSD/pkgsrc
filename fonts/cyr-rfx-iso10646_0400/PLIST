@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
 lib/X11/fonts/local/iso10646-0400/75dpi/courB08c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/courB10c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/courB12c.pcf
@@ -23,6 +23,7 @@ lib/X11/fonts/local/iso10646-0400/75dpi/courR12c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/courR14c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/courR18c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/courR24c.pcf
+lib/X11/fonts/local/iso10646-0400/75dpi/fonts.alias
 lib/X11/fonts/local/iso10646-0400/75dpi/helvB08c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/helvB10c.pcf
 lib/X11/fonts/local/iso10646-0400/75dpi/helvB12c.pcf
@@ -128,4 +129,5 @@ lib/X11/fonts/local/iso10646-0400/misc/8x13c.pcf
 lib/X11/fonts/local/iso10646-0400/misc/8x16c.pcf
 lib/X11/fonts/local/iso10646-0400/misc/9x15Bc.pcf
 lib/X11/fonts/local/iso10646-0400/misc/9x15c.pcf
+lib/X11/fonts/local/iso10646-0400/misc/fonts.alias
 lib/X11/fonts/local/iso10646-0400/misc/nil2c.pcf
