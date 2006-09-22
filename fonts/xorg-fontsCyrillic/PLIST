@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 04:57:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/22 21:53:57 joerg Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox1c.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox1cb.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox1cbo.pcf.gz
@@ -59,10 +59,7 @@ ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox6t.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox6tb.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox6tbo.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/crox6to.pcf.gz
-${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/encodings.dir
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/fonts.alias
-${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/fonts.dir
-${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/fonts.scale
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/koi10x16b.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/koi10x20.pcf.gz
 ${X11ROOT_PREFIX}/lib/X11/fonts/cyrillic/koi12x24.pcf.gz

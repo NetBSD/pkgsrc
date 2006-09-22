@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.7 2006/09/17 17:02:38 joerg Exp $
+# $NetBSD: check-files.mk,v 1.8 2006/09/22 21:53:58 joerg Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
@@ -48,12 +48,17 @@ CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
 .endfor
 
 # Mutable X11 font database files
+.if (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
+CHECK_FILES_SKIP+=	${PREFIX}/.*/encodings.dir
+CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.dir
+.endif
+.if (defined(FONTS_DIRS.ttf) && !empty(FONTS_DIRS.ttf:M*)) || \
+    (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*))
+CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.scale
+.endif
 .if (defined(FONTS_DIRS.ttf) && !empty(FONTS_DIRS.ttf:M*)) || \
     (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*)) || \
     (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
-CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.alias
-CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.dir
-CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.scale
 CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.cache-1
 .endif
 
