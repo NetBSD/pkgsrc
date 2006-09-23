@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: id3lib_strings.h,v 1.3 2006/01/11 16:41:45 joerg Exp $
+// $Id: id3lib_strings.h,v 1.4 2006/09/23 13:26:24 wiz Exp $
 
 // id3lib: a software library for creating and manipulating id3v1/v2 tags
 // Copyright 1999, 2000  Scott Thomas Haug
@@ -100,10 +100,10 @@ namespace std
 
       static char_type
       to_char_type(const int_type& __c)
-      { return char_type(); }
+      { return char_type(__c); }
 
       static int_type
-      to_int_type(const char_type& __c) { return int_type(); }
+      to_int_type(const char_type& __c) { return int_type(__c); }
 
       static bool
       eq_int_type(const int_type& __c1, const int_type& __c2)
