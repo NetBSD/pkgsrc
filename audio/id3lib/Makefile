@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/09/13 12:06:28 ben Exp $
+# $NetBSD: Makefile,v 1.26 2006/09/23 13:26:24 wiz Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3lib/}
 
