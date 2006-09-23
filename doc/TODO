@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5471 2006/09/22 21:09:37 wiz Exp $
+$NetBSD: TODO,v 1.5472 2006/09/23 13:03:18 ben Exp $
 
 Suggested new packages
 ======================
@@ -360,7 +360,6 @@ Suggested package updates
 	o bwidget-1.7.0
 	o byacc-20050813
 	o c4-1.10 [schmonz]
-	o cabextract-1.2
 	o cadaver-0.22.3
 	o cal3d-0.11.0
 	o capc-calc-2.12.1.5
