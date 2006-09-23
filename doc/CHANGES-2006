@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1321 2006/09/23 13:29:49 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1322 2006/09/23 13:53:50 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4433,3 +4433,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/cabextract to 1.2 [ben 2006-09-22]
 	Updated audio/taglib to 1.4nb2 [wiz 2006-09-23]
 	Updated audio/id3lib to 3.8.3nb3 [wiz 2006-09-23]
+	Updated archivers/gzip-base to 1.2.4bnb2 [adrianp 2006-09-23]
