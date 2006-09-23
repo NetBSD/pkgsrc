@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/09/17 16:49:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/23 13:36:06 joerg Exp $
 
 DISTNAME=	hugs98-May2006
 PKGNAME=	hugs98-200605
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.haskell.org/hugs/
 COMMENT=	Functional programming system based on Haskell 98
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bison
 
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
