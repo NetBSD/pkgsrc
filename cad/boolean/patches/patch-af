@@ -1,42 +1,45 @@
-$NetBSD: patch-af,v 1.3 2006/06/26 09:24:09 rillig Exp $
+$NetBSD: patch-af,v 1.4 2006/09/23 14:08:10 joerg Exp $
 
 Variables are referenced using $, not by plain text. Additionally, they
 should be defined before being used.
 
 --- apps/edit/CMakeLists.txt.orig	2005-07-18 21:37:32.000000000 +0200
 +++ apps/edit/CMakeLists.txt	2006-06-26 11:13:47.000000000 +0200
-@@ -26,6 +26,15 @@ FOREACH(file ${header_files})
+@@ -26,16 +26,6 @@ FOREACH(file ${header_files})
      SET( headerwithpath  ${headerwithpath} ${edit_SOURCE_DIR}/include/${file}  )
  ENDFOREACH(file)   
  
-+AUX_SOURCE_DIRECTORY( src/parser parser_src )
-+AUX_SOURCE_DIRECTORY( src/tools tools_src )
-+AUX_SOURCE_DIRECTORY( src/intrface intrface_src )
-+AUX_SOURCE_DIRECTORY( src/misc misc_src )
-+AUX_SOURCE_DIRECTORY( src/list list_src )
-+AUX_SOURCE_DIRECTORY( src/gdssourc gdssourc_src )
-+AUX_SOURCE_DIRECTORY( src/drivers drivers_src )
-+AUX_SOURCE_DIRECTORY( src/props prop_src )
-+
- IF(WIN32)
-     IF(NOT BORLAND)
- 		ADD_DEFINITIONS( -D_MSWVC_  )
-@@ -33,17 +42,9 @@ IF(WIN32)
- 	ADD_EXECUTABLE( edit WIN32 parser_src tools_src intrface_src misc_src list_src gdssourc_src drivers_src prop_src win32/boolean.rc ${headerwithpath} ) 
- ELSE(WIN32)
-     ADD_DEFINITIONS( -D__UNIX__  )
+-IF(WIN32)
+-    IF(NOT BORLAND)
+-		ADD_DEFINITIONS( -D_MSWVC_  )
+-    ENDIF(NOT BORLAND)  
+-	ADD_EXECUTABLE( edit WIN32 parser_src tools_src intrface_src misc_src list_src gdssourc_src drivers_src prop_src win32/boolean.rc ${headerwithpath} ) 
+-ELSE(WIN32)
+-    ADD_DEFINITIONS( -D__UNIX__  )
 -	ADD_EXECUTABLE( edit  parser_src tools_src intrface_src misc_src list_src gdssourc_src drivers_src prop_src ) 
+-ENDIF(WIN32)	
+-
+ AUX_SOURCE_DIRECTORY( src/parser parser_src )
+ AUX_SOURCE_DIRECTORY( src/tools tools_src )
+ AUX_SOURCE_DIRECTORY( src/intrface intrface_src )
+@@ -44,9 +34,19 @@ AUX_SOURCE_DIRECTORY( src/list list_src 
+ AUX_SOURCE_DIRECTORY( src/gdssourc gdssourc_src )
+ AUX_SOURCE_DIRECTORY( src/drivers drivers_src )
+ AUX_SOURCE_DIRECTORY( src/props prop_src )
++
++IF(WIN32)
++    IF(NOT BORLAND)
++		ADD_DEFINITIONS( -D_MSWVC_  )
++    ENDIF(NOT BORLAND)  
++	ADD_EXECUTABLE( edit WIN32 parser_src tools_src intrface_src misc_src list_src gdssourc_src drivers_src prop_src win32/boolean.rc ${headerwithpath} ) 
++ELSE(WIN32)
++    ADD_DEFINITIONS( -D__UNIX__  )
 +	ADD_EXECUTABLE( edit  ${parser_src} ${tools_src} ${intrface_src} ${misc_src} ${list_src} ${gdssourc_src} ${drivers_src} ${prop_src}) 
- ENDIF(WIN32)	
++ENDIF(WIN32)	
  
--AUX_SOURCE_DIRECTORY( src/parser parser_src )
--AUX_SOURCE_DIRECTORY( src/tools tools_src )
--AUX_SOURCE_DIRECTORY( src/intrface intrface_src )
--AUX_SOURCE_DIRECTORY( src/misc misc_src )
--AUX_SOURCE_DIRECTORY( src/list list_src )
--AUX_SOURCE_DIRECTORY( src/gdssourc gdssourc_src )
--AUX_SOURCE_DIRECTORY( src/drivers drivers_src )
--AUX_SOURCE_DIRECTORY( src/props prop_src )
+-LINK_LIBRARIES( kbool )
  
- LINK_LIBRARIES( kbool )
+ TARGET_LINK_LIBRARIES( edit  ${WXART2D_LIBS})
++TARGET_LINK_LIBRARIES( edit  kbool)
+ 
  
