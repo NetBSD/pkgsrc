@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2006/03/20 18:15:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2006/09/23 12:47:58 joerg Exp $
 
 GCC_VERSION=	3.3.5
 DISTNAME=	gcc-${GCC_VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 
-NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-*
+NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* DragonFly-*-*
 
 USE_TOOLS+=		gmake
 MAKEFLAGS+=		GMAKE_LOCALE=no
