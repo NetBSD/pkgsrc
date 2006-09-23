@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1320 2006/09/23 13:03:18 ben Exp $
+>$NetBSD: CHANGES-2006,v 1.1321 2006/09/23 13:29:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4431,3 +4431,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/cgoban-java to 3.3.1 [rillig 2006-09-20]
 	Updated devel/monotone to 0.30nb1 [dan 2006-09-22]
 	Updated archivers/cabextract to 1.2 [ben 2006-09-22]
+	Updated audio/taglib to 1.4nb2 [wiz 2006-09-23]
+	Updated audio/id3lib to 3.8.3nb3 [wiz 2006-09-23]
