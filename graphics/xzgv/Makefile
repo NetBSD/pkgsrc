@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2006/04/17 13:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/23 14:59:34 adrianp Exp $
 
 DISTNAME=	xzgv-0.8
 PKGNAME=	xzgv-0.8.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/
 
