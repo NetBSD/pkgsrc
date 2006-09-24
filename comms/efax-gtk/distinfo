@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.13 2006/06/12 09:12:33 adam Exp $
+$NetBSD: distinfo,v 1.14 2006/09/24 16:56:16 adam Exp $
 
-SHA1 (efax-gtk-3.0.10.src.tgz) = f450e0f009c2b9a2c45e2533e881fed5f24dca74
-RMD160 (efax-gtk-3.0.10.src.tgz) = eb2beba6a332060bb02c38b1b035fa4a980f28c7
-Size (efax-gtk-3.0.10.src.tgz) = 1069508 bytes
-SHA1 (patch-aa) = 31791c664d6672c9c0e9b3891e3de855e9d6f0a2
-SHA1 (patch-ab) = ec67e410d9c6d3230c9814f079025a4ee9900d72
-SHA1 (patch-ac) = c9559ab67260fbb326acc1406e89cdf558f71d4f
-SHA1 (patch-ad) = bd027f6e89cddceb646445c9dc061b0afad8b2ef
+SHA1 (efax-gtk-3.0.11.src.tgz) = 889bf4b5472f4793f436536c4770252debe75921
+RMD160 (efax-gtk-3.0.11.src.tgz) = 3ea44b04a6c7145a303d0f854802776a3f79db5b
+Size (efax-gtk-3.0.11.src.tgz) = 1076781 bytes
+SHA1 (patch-aa) = 0650232e162cac968c8a3920829fe17be38085aa
+SHA1 (patch-ab) = d71cce206417ca9aa12abf687ce8ca2c1bcdc24f
+SHA1 (patch-ac) = af6cfa319391caa6230ca69a776bdce8e7305710
+SHA1 (patch-ad) = d9212f4ded662871e3e0156dcd157a9e27dbf6f0
+SHA1 (patch-af) = 7965dfa6d497ee5886775a8bea6ceec5a4ddabe6
+SHA1 (patch-ag) = f5dbd0531e0f1e3a9f9b07603c1cde5bbf5fac33
