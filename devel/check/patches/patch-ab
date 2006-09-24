@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.4 2006/09/24 10:30:41 rillig Exp $
+
+--- tests/check_check_sub.c.orig	2005-07-19 14:46:26.000000000 +0200
++++ tests/check_check_sub.c	2006-09-24 12:28:24.848798552 +0200
+@@ -104,7 +104,10 @@ END_TEST
+ 
+ START_TEST(test_fail_empty)
+ {
++#if !defined(__SUNPRO_C)
++/* SunPro does not support the gcc-style __VA_ARGS__ use. */
+   fail();
++#endif
+ }
+ END_TEST
+ 
