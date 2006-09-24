@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1325 2006/09/24 07:29:12 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1326 2006/09/24 16:52:57 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4437,3 +4437,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/xzgv to 0.8.0.1nb3 [adrianp 2006-09-23]
 	Updated mail/sylpheed to 2.2.9 [xtraeme 2006-09-23]
 	Updated finance/gnucash-docs to 2.0.0nb2 [wiz 2006-09-24]
+	Added www/seamonkey-bin-nightly [salo 2006-09-24]
+	Removed www/mozilla [salo 2006-09-24]
+	Removed www/mozilla-gtk2 [salo 2006-09-24]
+	Removed www/mozilla-bin [salo 2006-09-24]
+	Removed www/mozilla-bin-nightly [salo 2006-09-24]
+	Removed www/moz-bin-plugger [salo 2006-09-24]
+	Removed multimedia/mplayer-plugin-mozilla [salo 2006-09-24]
+	Removed multimedia/mplayer-plugin-mozilla-gtk2 [salo 2006-09-24]
+	Removed multimedia/moz-bin-flash [salo 2006-09-24]
+	Removed multimedia/moz-flash [salo 2006-09-24]
