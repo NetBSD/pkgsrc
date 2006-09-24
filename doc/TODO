@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5472 2006/09/23 13:03:18 ben Exp $
+$NetBSD: TODO,v 1.5473 2006/09/24 09:39:02 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1164,6 +1164,7 @@ Suggested package updates
 	o tkgate-1.8.6
 	o tkhylafax-3.2
 	o tkpasman-2.2b
+	o tmda-1.1.5
 	o tob-0.26
 	o top-3.6beta1
 	o totem-2.16.1
