@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/09/16 12:20:34 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/09/24 16:47:50 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEUIMM_BUILDLINK3_MK:=	${LIBGNOMEUIMM_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgnomeuimm
 
 .if !empty(LIBGNOMEUIMM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgnomeuimm+=	libgnomeuimm>=2.10.0
-BUILDLINK_ABI_DEPENDS.libgnomeuimm?=	libgnomeuimm>=2.14.0nb2
+BUILDLINK_ABI_DEPENDS.libgnomeuimm+=	libgnomeuimm>=2.14.0nb2
 BUILDLINK_PKGSRCDIR.libgnomeuimm?=	../../devel/libgnomeuimm
 .endif	# LIBGNOMEUIMM_BUILDLINK3_MK
 
