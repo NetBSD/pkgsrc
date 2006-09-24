@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/05/09 06:36:48 martti Exp $
+# $NetBSD: Makefile,v 1.25 2006/09/24 13:43:21 joerg Exp $
 
 PKGNAME=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -13,6 +13,8 @@ CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-gui=gtk2
 CONFIGURE_ARGS+=	--with-tlib=ncurses
+
+USE_TOOLS+=		pkg-config
 
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installvimbin
