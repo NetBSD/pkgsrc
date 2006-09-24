@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/09/16 12:20:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.60 2006/09/24 16:25:51 salo Exp $
 #
 
 DISTNAME=		yelp-2.16.0
@@ -26,14 +26,8 @@ CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 
 GCONF2_SCHEMAS=		yelp.schemas
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
-.include "../../www/mozilla/gecko-options.mk"
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
-.if !empty(PKG_OPTIONS:Mfirefox)
-# Require a version that has the .pc files in it.
-BUILDLINK_API_DEPENDS.firefox+=     firefox>=1.5nb2
-.endif
 BUILDLINK_API_DEPENDS.gtk2+=     		gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libgnome+=		libgnome>=2.14.0
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.14.0
@@ -61,7 +55,7 @@ BUILDLINK_DEPMETHOD.gnome-doc-utils+=   full
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/mozilla/gecko-depends.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
