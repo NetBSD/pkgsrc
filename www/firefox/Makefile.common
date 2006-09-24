@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/06/15 22:13:59 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/09/24 16:33:33 salo Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -9,7 +9,7 @@ CATEGORIES=		www
 MAINTAINER=		taya@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/
 
-FILESDIR=		${.CURDIR}/../../www/mozilla/files
+FILESDIR=		${.CURDIR}/../../www/seamonkey/files
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
@@ -18,7 +18,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf213 gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
-INSTALL_TEMPLATES+=	${.CURDIR}/../../www/mozilla/INSTALL
+INSTALL_TEMPLATES+=	${.CURDIR}/../../www/seamonkey/INSTALL
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
@@ -193,4 +193,4 @@ SUBST_SED.pc=		-e 's|%includedir%|${PREFIX}/include/${MOZILLA}|g'
 SUBST_SED.pc+=		-e 's|%libdir%|${PREFIX}/lib/${MOZILLA}|g'
 SUBST_MESSAGE.pc=	Fixing pkgconfig files.
 
-.include "../../www/mozilla/options.mk"
+.include "../../www/seamonkey/options.mk"
