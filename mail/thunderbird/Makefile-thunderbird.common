@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.17 2006/09/15 13:55:22 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.18 2006/09/24 16:32:46 salo Exp $
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		1.5.0.7
@@ -31,4 +31,4 @@ post-install:
 	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
 		./${MOZILLA_BIN} -register
 
-.include "../../www/mozilla/Makefile.common"
+.include "../../www/seamonkey/Makefile.common"

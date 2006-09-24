@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-sunbird.common,v 1.6 2006/06/27 11:11:52 joerg Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.7 2006/09/24 16:31:38 salo Exp $
 
 MOZILLA_BIN=		sunbird-bin
 MOZ_VER=		0.3alpha2
@@ -33,4 +33,4 @@ post-install:
 	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
 		./${MOZILLA_BIN} -register
 
-.include "../../www/mozilla/Makefile.common"
+.include "../../www/seamonkey/Makefile.common"
