@@ -248,6 +248,7 @@ sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
 sdl			Use SDL as display library.
+seamonkey		Use seamonkey as gecko rendering engine.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 sieve			Enable sieve support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
