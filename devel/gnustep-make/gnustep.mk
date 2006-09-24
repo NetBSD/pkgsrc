@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.6 2005/12/05 20:50:04 rillig Exp $
+#	$NetBSD: gnustep.mk,v 1.7 2006/09/24 16:01:51 joerg Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -47,9 +47,9 @@ CFLAGS+=	${GNUSTEP_IFLAGS}
 
 USE_TOOLS+=	gmake
 .if defined(GNUSTEP_MAKEFILE)
-MAKEFILE=	${GNUSTEP_MAKEFILE}
+MAKE_FILE=	${GNUSTEP_MAKEFILE}
 .else
-MAKEFILE=	GNUmakefile
+MAKE_FILE=	GNUmakefile
 .endif
 
 .if !defined(NO_CONFIGURE) && !defined(HAS_CONFIGURE)
