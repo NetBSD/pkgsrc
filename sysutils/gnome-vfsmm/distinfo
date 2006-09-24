@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/06/14 07:27:57 adam Exp $
+$NetBSD: distinfo,v 1.4 2006/09/24 16:50:47 adam Exp $
 
-SHA1 (gnome-vfsmm-2.14.0.tar.bz2) = 01b23f8258ad09a2ee993995d10e5a698877695a
-RMD160 (gnome-vfsmm-2.14.0.tar.bz2) = 30f10b0884b1344e221aa476de3b397301957991
-Size (gnome-vfsmm-2.14.0.tar.bz2) = 324357 bytes
+SHA1 (gnome-vfsmm-2.16.0.tar.bz2) = 97ba002b42ef0903e1b3453bc5130c7c2159359a
+RMD160 (gnome-vfsmm-2.16.0.tar.bz2) = 464f50d37197cfa802efba388b6ea531c8378749
+Size (gnome-vfsmm-2.16.0.tar.bz2) = 328827 bytes
