@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.18 2006/04/22 13:16:28 tron Exp $
-
-SHA1 (mozilla-i686-pc-linux-gnu-1.7.13.tar.gz) = 04110560f02e399168b96b6033da1fe299601a97
-RMD160 (mozilla-i686-pc-linux-gnu-1.7.13.tar.gz) = 6e32dede290ad30346623b948556e480d2752b48
-Size (mozilla-i686-pc-linux-gnu-1.7.13.tar.gz) = 13901637 bytes
