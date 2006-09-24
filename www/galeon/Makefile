@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2006/09/16 12:20:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.104 2006/09/24 16:30:09 salo Exp $
 #
 
 DISTNAME=		galeon-2.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=galeon/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,15 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.galeon
-.include "../../www/mozilla/gecko-options.mk"
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mfirefox)
-CONFIGURE_ARGS+=	--with-mozilla=firefox
-.else
-BUILDLINK_RPATHDIRS.mozilla-gtk2+=	lib/mozilla-gtk2
-.endif
+.include "options.mk"
 
 GCONF2_SCHEMAS=		galeon.schemas
 
@@ -44,6 +36,6 @@ CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../www/mozilla/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"
