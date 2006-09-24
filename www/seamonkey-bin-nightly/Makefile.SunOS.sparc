@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.SunOS.sparc,v 1.1.1.1 2006/09/24 16:40:50 salo Exp $
+
+DISTNAME=	
+
+MOZ_PLATFORM=	solaris
+
+PKG_SKIP_REASON+=	"No native pre-built Solaris binary available."
