@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/09/16 12:20:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2006/09/24 16:28:20 salo Exp $
 #
 
 DISTNAME=	epiphany-2.16.0
@@ -22,28 +22,7 @@ PKGCONFIG_OVERRIDE=	data/epiphany-2.16.pc
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.epiphany
-.include "../../www/mozilla/gecko-options.mk"
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mfirefox)
-# Require a version that has the .pc files in it.
-BUILDLINK_API_DEPENDS.firefox+=	firefox>=1.5nb2
-
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
-CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
-CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
-CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
-.else
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/find
-CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/find
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/necko
-CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/necko
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
-CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
-.endif
+.include "options.mk"
 
 GCONF2_SCHEMAS=		epiphany.schemas
 GCONF2_SCHEMAS+=	epiphany-fonts.schemas
@@ -80,5 +59,5 @@ BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-.include "../../www/mozilla/gecko-depends.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"

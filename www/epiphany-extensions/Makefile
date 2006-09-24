@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/09/16 12:20:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2006/09/24 16:28:49 salo Exp $
 #
 
 DISTNAME=	epiphany-extensions-2.14.1.1
@@ -21,20 +21,7 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 CONFIGURE_ARGS+=	--with-extensions=all
 
-# this should use the same gecko option as epiphany
-PKG_OPTIONS_VAR=	PKG_OPTIONS.epiphany
-.include "../../www/mozilla/gecko-options.mk"
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mfirefox)
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/dom
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/webbrwsr
-.else
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/dom
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/webbrwsr
-.endif
+.include "options.mk"
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 
@@ -47,6 +34,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/epiphany/buildlink3.mk"
-.include "../../www/mozilla/gecko-depends.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

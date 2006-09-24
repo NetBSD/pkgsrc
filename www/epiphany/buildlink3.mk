@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/09/16 12:20:33 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/09/24 16:28:20 salo Exp $
 #
 # This Makefile fragment is included by packages that use epiphany.
 #
@@ -29,7 +29,7 @@ BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-# XXX: should pull in ../../www/mozilla/gecko-depends.mk
+# XXX: should pull in ../../www/seamonkey/gecko-depends.mk
 #      this is already pulled in directly by the only user, epiphany-extensions
 .endif # EPIPHANY_BUILDLINK3_MK
 
