@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/09/16 12:20:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/24 16:54:49 salo Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.12.0
@@ -38,7 +38,8 @@ BUILDLINK_API_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.11.1
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 # XXX optional? or firefox?
-#.include "../../www/mozilla-gtk2/buildlink3.mk"
+# seamonkey untested.
+#.include "../../www/seamonkey/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 # XXX not yet existing
 #.include "../../devel/gdl/buildlink3.mk"
