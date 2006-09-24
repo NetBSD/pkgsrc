@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2006/09/24 16:56:17 adam Exp $
+
+--- src/utils/Makefile.in.orig	2006-09-24 11:21:21.000000000 +0200
++++ src/utils/Makefile.in
+@@ -169,7 +169,7 @@ noinst_HEADERS = fdstream.h fdstream.tcc
+ 
+ INCLUDES = -DDATADIR=\"$(datadir)\" -DRC_DIR=\"$(sysconfdir)\" -DSIGC_VERSION=@SIGC_VER@
+ 
+-AM_CXXFLAGS = -D_XOPEN_SOURCE=600 @SIGC_CFLAGS@ @GTK_CFLAGS@ @GTHREAD_CFLAGS@ -I..
++AM_CXXFLAGS = @SIGC_CFLAGS@ @GTK_CFLAGS@ @GTHREAD_CFLAGS@ -I..
+ 
+ EXTRA_DIST = LGPL.TXT
+ subdir = src/utils
