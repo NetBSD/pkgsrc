@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.7 2006/09/24 17:09:13 jdc Exp $
+
+--- pdftops/GfxFont.cxx.dist	2004-02-02 22:41:09.000000000 +0000
++++ pdftops/GfxFont.cxx	2006-09-24 16:12:03.000000000 +0100
+@@ -969,7 +969,11 @@
+   if ((nameToGID = ff->getNameToGID())) {
+     for (i = 0; i < 256; ++i) {
+       if (!map[i] && (charName = enc[i])) {
+-	map[i] = (Gushort)(int)nameToGID->lookup(charName);
++	/*
++	 * Note that we are casting from "void *" here.
++	 * So, we must first cast to something at least as wide.
++	 */
++	map[i] = (Gushort)(long)nameToGID->lookup(charName);
+       }
+     }
+     delete nameToGID;
