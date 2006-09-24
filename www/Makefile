@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2006/09/24 16:46:27 salo Exp $
+# $NetBSD: Makefile,v 1.473 2006/09/24 16:46:54 salo Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -293,6 +293,7 @@ SUBDIR+=	sarg
 SUBDIR+=	screws
 SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-bin
+SUBDIR+=	seamonkey-bin-nightly
 SUBDIR+=	seamonkey-gtk1
 SUBDIR+=	sitecopy
 SUBDIR+=	skipstone
