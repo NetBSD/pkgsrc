@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/09/15 09:24:30 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2006/09/24 16:36:29 salo Exp $
 
 MOZILLA=	firefox
 MOZ_VER=	1.5.0.7
@@ -13,4 +13,4 @@ MOZ_GTK2=	YES
 
 ONLY_FOR_PLATFORM+=	Linux-*-i386
 
-.include "../../www/mozilla-bin/Makefile.common"
+.include "../../www/seamonkey-bin/Makefile.common"
