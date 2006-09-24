@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/09/24 16:56:17 adam Exp $
+
+--- src/Makefile.in.orig	2006-09-24 11:20:56.000000000 +0200
++++ src/Makefile.in
+@@ -174,7 +174,7 @@ noinst_HEADERS = mainwindow.h dialogs.h 
+ 
+ INCLUDES = -DDATADIR=\"$(datadir)\" -DRC_DIR=\"$(sysconfdir)\" -DSIGC_VERSION=@SIGC_VER@
+ 
+-AM_CXXFLAGS = -D_XOPEN_SOURCE=600 @SIGC_CFLAGS@ @GTK_CFLAGS@ @GTHREAD_CFLAGS@ @GTK_UNIX_PRINT_CFLAGS@ -I./utils
++AM_CXXFLAGS = @SIGC_CFLAGS@ @GTK_CFLAGS@ @GTHREAD_CFLAGS@ @GTK_UNIX_PRINT_CFLAGS@ -I./utils
+ 
+ AM_CFLAGS = @GTK_CFLAGS@ -I./libegg
+ 
