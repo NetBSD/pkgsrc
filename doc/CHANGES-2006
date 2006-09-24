@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1327 2006/09/24 16:58:50 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1328 2006/09/24 19:09:44 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4449,7 +4449,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed multimedia/moz-flash [salo 2006-09-24]
 	Updated devel/glibmm to 2.12.1 [adam 2006-09-24]
 	Updated x11/gtkmm to 2.10.2 [adam 2006-09-24]
-	Updated devel/gconvmm to 2.16.0 [adam 2006-09-24]
+	Updated devel/gconfmm to 2.16.0 [adam 2006-09-24]
 	Updated devel/libglademm to 2.6.3 [adam 2006-09-24]
 	Updated devel/libgnomemm to 2.16.0 [adam 2006-09-24]
 	Updated devel/libgnomeuimm to 2.16.0 [adam 2006-09-24]
