@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:59 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/09/24 16:44:36 salo Exp $
 
 MOZILLA=	thunderbird
-PKGREVISION=	1
 
 HOMEPAGE=	http://www.mozilla.org/projects/thunderbird/
 COMMENT=	Redesign of the Mozilla mail client (nightly binary pkg)
@@ -13,4 +12,4 @@ ONLY_FOR_PLATFORM+=	Linux-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-2.*-i386
 ONLY_FOR_PLATFORM+=	SunOS-5.[789]*-sparc
 
-.include "../../www/mozilla-bin-nightly/Makefile.common"
+.include "../../www/seamonkey-bin-nightly/Makefile.common"
