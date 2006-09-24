@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/07/29 14:09:12 adam Exp $
+# $NetBSD: Makefile,v 1.27 2006/09/24 16:46:03 adam Exp $
 
-DISTNAME=	gconfmm-2.14.2
+DISTNAME=	gconfmm-2.16.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gconfmm/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gconfmm/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
