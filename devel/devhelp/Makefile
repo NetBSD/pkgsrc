@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/08/10 14:07:55 drochner Exp $
+# $NetBSD: Makefile,v 1.37 2006/09/24 16:24:34 salo Exp $
 
 DISTNAME=		devhelp-0.12
 CATEGORIES=		devel x11
@@ -20,9 +20,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libdevhelp-1.0.pc.in
 GCONF2_SCHEMAS=		devhelp.schemas
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.devhelp
-.include "../../www/mozilla/gecko-options.mk"
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -31,7 +29,7 @@ PKG_OPTIONS_VAR=        PKG_OPTIONS.devhelp
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/mozilla/gecko-depends.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-install:
