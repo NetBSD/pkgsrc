@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/09/14 15:48:27 ghen Exp $
+# $NetBSD: Makefile,v 1.53 2006/09/24 15:04:35 joerg Exp $
 
 DISTNAME=	net-snmp-5.3.1
 CATEGORIES=	net
@@ -23,6 +23,10 @@ MAKE_ENV+=	OPSYS=${OPSYS:Q}
 TEST_TARGET?=		test
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+MAKE_ENV+=	MIB_SYSTEM_LIBS=-lkinfo
+.endif
 
 .if ${OPSYS} == "NetBSD"
 OSVERSION_SPECIFIC=	YES
