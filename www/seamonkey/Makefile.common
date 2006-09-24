@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/09/15 15:54:04 ghen Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/09/24 16:21:33 salo Exp $
 
 MOZ_VER=		1.0.5
 MOZ_DIST_VER?=		${MOZ_VER}
@@ -10,7 +10,7 @@ MASTER_SITES+=		http://public.planetmirror.com.au/pub/seamonkey/releases/${MOZ_V
 MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/seamonkey/releases/${MOZ_VER}/
 CATEGORIES=		www
 EXTRACT_SUFX=          .tar.bz2
- 
+
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/projects/seamonkey
 
@@ -18,7 +18,7 @@ MOZILLA_BIN=		seamonkey-bin
 
 DISTINFO_FILE=		${.CURDIR}/../../www/seamonkey/distinfo
 PATCHDIR=		${.CURDIR}/../../www/seamonkey/patches
-FILESDIR=		${.CURDIR}/../../www/mozilla/files
+FILESDIR=		${.CURDIR}/../../www/seamonkey/files
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
