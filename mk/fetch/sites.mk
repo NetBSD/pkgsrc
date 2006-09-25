@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.12 2006/09/03 10:21:52 wiz Exp $
+# $NetBSD: sites.mk,v 1.13 2006/09/25 14:13:17 salo Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -146,13 +146,11 @@ MASTER_SITE_SUSE+=	\
 	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
 MASTER_SITE_MOZILLA+=   \
-	ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/ \
-	ftp://ftp.fu-berlin.de/unix/network/www/mozilla/releases/ \
-	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/mozilla/releases/ \
-	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/mozilla/releases/ \
-	http://public.planetmirror.com.au/pub/mozilla/releases/ \
-	ftp://ftp.rediris.es/mirror/mozilla/releases/ \
-	ftp://ftp.chg.ru/pub/WWW/mozilla/mozilla/releases/
+	http://ftp.mozilla.org/pub/mozilla.org/ \
+	ftp://ftp.mozilla.org/pub/mozilla.org/ \
+	ftp://ftp.fu-berlin.de/unix/network/www/ \
+	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/ \
+	ftp://ftp.chg.ru/pub/WWW/mozilla/
 
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
