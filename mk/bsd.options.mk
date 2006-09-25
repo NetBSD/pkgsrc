@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.56 2006/06/06 00:15:45 seb Exp $
+# $NetBSD: bsd.options.mk,v 1.57 2006/09/25 08:23:59 ghen Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -391,7 +391,7 @@ pre-depends-hook: supported-options-message
 supported-options-message:
 .  if !empty(PKG_SUPPORTED_OPTIONS)
 	@${ECHO} "=========================================================================="
-	@${ECHO} "The supported build options for this package are:"
+	@${ECHO} "The supported build options for ${PKGBASE} are:"
 	@${ECHO} ""
 	@${ECHO} ${PKG_SUPPORTED_OPTIONS:O:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    if !empty(PKG_OPTIONS)
