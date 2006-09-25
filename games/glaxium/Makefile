@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/06/12 16:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/25 14:15:25 joerg Exp $
 #
 
 DISTNAME=	glaxium_0.5
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	http://xhosxe.free.fr/glaxium/
 
@@ -14,6 +14,7 @@ COMMENT=	Space-ship OpenGL shoot them up
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
+CONFIGURE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
 
 BUILD_TARGET=		glaxium
 
@@ -28,4 +29,5 @@ SUBST_MESSAGE.bill=	Fixing data path.
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
