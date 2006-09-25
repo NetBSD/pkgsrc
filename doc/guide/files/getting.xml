@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.12 2006/07/29 14:14:23 rillig Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.13 2006/09/25 09:45:31 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -47,8 +47,8 @@
 
 	<para>After downloading the tar file, change to the directory
 	where you want to have pkgsrc. This is usually
-	<filename>/usr</filename>. Then, run <command>tar xfz
-	pkgsrc.tar.gz</command> to extract the files.</para>
+	<filename>/usr</filename>. Then, run <command>gzcat
+	pkgsrc.tar.gz | tar xf -</command> to extract the files.</para>
 
 </sect2>
 <sect2 id="getting-via-sup">
