@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1329 2006/09/25 08:01:42 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1330 2006/09/25 12:18:04 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4459,3 +4459,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/efax-gtk to 3.0.11 [adam 2006-09-24]
 	Updated lang/sun-jre13 to 1.0.19 [ghen 2006-09-25]
 	Updated lang/sun-jdk13 to 1.0.19 [ghen 2006-09-25]
+	Updated net/iftop to 0.17 [abs 2006-09-25]
