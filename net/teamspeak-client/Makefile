@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/09/20 22:00:53 abs Exp $
-#
-# Note: ts2_client_rc2_2032 fails to run as non root with Runtime error 231
+# $NetBSD: Makefile,v 1.3 2006/09/25 13:15:35 abs Exp $
 
-PKGNAME=		teamspeak-client-2.0.31.55
-DISTNAME=		ts2_client_rc2_2031
-PKGREVISION=		1
+PKGNAME=		teamspeak-client-2.0.32.60
+DISTNAME=		ts2_client_rc2_2032
 CATEGORIES=		net audio
 MASTER_SITES=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/ \
 			ftp://213.202.254.114/teamspeak/releases/
