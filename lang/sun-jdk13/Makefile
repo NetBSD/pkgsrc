@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.39 2006/02/05 23:09:52 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/09/25 08:00:31 ghen Exp $
 
-DISTNAME=	j2sdk-1_3_1_17-linux-i586
-PKGNAME=	sun-jdk13-1.0.17
-PKGREVISION=	1
+DISTNAME=	j2sdk-1_3_1_19-linux-i586
+PKGNAME=	sun-jdk13-1.0.19
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Development Kit 1.3.1
 
 SHORT=		JDK
 
-DEPENDS+=	sun-jre13>=1.0.17:../../lang/sun-jre13
+DEPENDS+=	sun-jre13>=1.0.19:../../lang/sun-jre13
 
 JAVA_CLASSPATH=	${JAVA_HOME}/src.jar
 JAVA_WRAPPERS=	appletviewer extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
-WRKSRC=		${WRKDIR}/jdk1.3.1_17
+WRKSRC=		${WRKDIR}/jdk1.3.1_19
 
 # Remove parts that are in common with the JRE.
 #
