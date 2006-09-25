@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2006/03/01 23:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2006/09/25 08:00:31 ghen Exp $
 
-DISTNAME=	j2re-1_3_1_17-linux-i586
-PKGNAME=	sun-jre13-1.0.17
-PKGREVISION=	1
+DISTNAME=	j2re-1_3_1_19-linux-i586
+PKGNAME=	sun-jre13-1.0.19
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
@@ -10,7 +9,7 @@ COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
 SHORT=		JRE
 
 JAVA_WRAPPERS=	java keytool policytool rmid rmiregistry tnameserv
-WRKSRC=		${WRKDIR}/jre1.3.1_17
+WRKSRC=		${WRKDIR}/jre1.3.1_19
 REQD_DIRS=	${JAVA_HOME}
 REQD_DIRS+=	${JAVA_HOME}/lib
 REQD_DIRS+=	${JAVA_HOME}/lib/images
