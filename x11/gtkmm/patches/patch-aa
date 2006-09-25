@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.8 2006/09/25 15:49:07 adam Exp $
+
+--- gtk/gtkmm/listviewtext.cc.orig	2006-09-25 17:10:12.000000000 +0200
++++ gtk/gtkmm/listviewtext.cc
+@@ -83,7 +83,7 @@ void ListViewText::set_column_title(guin
+ 
+ Glib::ustring ListViewText::get_column_title(guint column) const
+ {
+-  g_return_val_if_fail( column < get_columns().size(), Glib::ustring() );
++  g_return_val_if_fail( column < get_columns().size(), "" );
+ 
+   return get_column(column)->get_title();
+ }
