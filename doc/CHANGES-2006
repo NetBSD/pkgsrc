@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1328 2006/09/24 19:09:44 jnemeth Exp $
+>$NetBSD: CHANGES-2006,v 1.1329 2006/09/25 08:01:42 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4457,3 +4457,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/gnome-vfsmm to 2.16.0 [adam 2006-09-24]
 	Updated textproc/libxml++2 to 2.14.0 [adam 2006-09-24]
 	Updated comms/efax-gtk to 3.0.11 [adam 2006-09-24]
+	Updated lang/sun-jre13 to 1.0.19 [ghen 2006-09-25]
+	Updated lang/sun-jdk13 to 1.0.19 [ghen 2006-09-25]
