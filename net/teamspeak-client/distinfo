@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/08 19:40:08 abs Exp $
+$NetBSD: distinfo,v 1.2 2006/09/25 13:15:35 abs Exp $
 
-SHA1 (ts2_client_rc2_2031.tar.bz2) = c633d826ba020895cc90f9bf33a079269dc19ced
-RMD160 (ts2_client_rc2_2031.tar.bz2) = 1bcc1cc6cfec1bbd946517c1228478187a65355f
-Size (ts2_client_rc2_2031.tar.bz2) = 7525269 bytes
+SHA1 (ts2_client_rc2_2032.tar.bz2) = d54c9c19a2e70cee11f9a04a3523c71da802ee8d
+RMD160 (ts2_client_rc2_2032.tar.bz2) = ee0690e0ac5f2aac090a565bf2c4fb7726fb62f4
+Size (ts2_client_rc2_2032.tar.bz2) = 7535254 bytes
