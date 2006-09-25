@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2006/07/18 23:27:14 jlam Exp $
+# $NetBSD: Makefile.common,v 1.31 2006/09/25 16:16:35 joerg Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -17,6 +17,8 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 INTERACTIVE_STAGE=	fetch
+
+CHECK_SHLIBS=	no	# expected to fail
 
 .include "../../mk/bsd.prefs.mk"
 
