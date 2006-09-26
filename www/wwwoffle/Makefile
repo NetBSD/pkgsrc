@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2006/04/11 08:10:40 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2006/09/26 13:48:43 abs Exp $
 
-DISTNAME=	wwwoffle-2.8e
-PKGREVISION=	3
+DISTNAME=	wwwoffle-2.9a
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.freeserve.co.uk/download-wwwoffle/ \
 		ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/
@@ -11,7 +10,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 
-USE_TOOLS+=	gmake gzip
+USE_TOOLS+=	gmake gzip perl tar
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR:Q}
@@ -23,6 +22,13 @@ CONF_FILES_MODE=	0640
 PLIST_SUBST+=		GZIP_CMD=${GZIP_CMD:Q}
 
 RCD_SCRIPTS=		wwwoffled
+
+SUBST_CLASSES+=                 fix-paths
+SUBST_STAGE.fix-paths=          pre-configure
+SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+SUBST_FILES.fix-paths=          cache/search/namazu/scripts/wwwoffle-namazu
+SUBST_FILES.fix-paths+=         cache/search/hyperestraier/scripts/wwwoffle-estseek
+SUBST_SED.fix-paths=            -e 's,@PREFIX@,${PREFIX},g'
 
 .include "options.mk"
 
@@ -43,17 +49,16 @@ pre-install:
 	${MKDIR} ${VARBASE}/wwwoffle/prevtime1
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/convert-cache \
-	  ${PREFIX}/sbin/wwwoffle-convert-cache
-	${INSTALL_PROGRAM} ${WRKSRC}/src/uncompress-cache \
-	  ${PREFIX}/sbin/wwwoffle-uncompress-cache
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config.pl \
 	  ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config-2.x-2.5.pl \
-	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.x-2.5.pl
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config-2.0-2.5.pl \
+	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.0-2.5.pl
 # Directories other than html and search are automatically created at run time
 	${TAR} cCf / - var/wwwoffle/html var/wwwoffle/search | ${GZIP_CMD} -9 \
 		> ${PREFIX}/libdata/wwwoffle-spool.tar.gz
+	${RMDIR} ${PREFIX}/share/doc/wwwoffle/ru
+	${RMDIR} ${PREFIX}/share/doc/wwwoffle/nl
+	${RMDIR} ${PREFIX}/share/doc/wwwoffle/it
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
