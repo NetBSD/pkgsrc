@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.182 2006/09/13 14:41:58 taca Exp $
+# $NetBSD: Makefile,v 1.183 2006/09/26 03:40:20 taca Exp $
 
-DISTNAME=	squid-2.6.STABLE3
-PKGNAME=	squid-2.6.3
+DISTNAME=	squid-2.6.STABLE4
+PKGNAME=	squid-2.6.4
 #PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.6/ \
@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 #
 # generic helpers
 #
-OPTIONAL_FILES+= libexec/diskd-daemon libexec/dnsserver
+OPTIONAL_FILES+= bin/cossdump libexec/diskd-daemon libexec/dnsserver
 OPTIONAL_FILES+= libexec/pinger libexec/unlinkd
 #
 # basic auth helpers (except LDAP, multi-domain-NTLM and SASL)
