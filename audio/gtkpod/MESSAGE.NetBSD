@@ -1,8 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.2 2006/03/25 14:25:01 smb Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.3 2006/09/26 14:18:23 smb Exp $
 
-If you are mounting your iPod via USB, you probably need at least version
-1.130 of usb_subr.c.
+If you are running a version of NetBSD earlier than 3.0 and mounting your
+iPod via USB, you need at least version 1.130 of usb_subr.c.  3.0 and later
+include the fix.
 ===========================================================================
 Before uncabling your iPod, use the 'eject' command to turn off the
 "do not disconnect" message.
