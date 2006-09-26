@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2006/09/07 10:09:38 rillig Exp $
+# $NetBSD: Makefile,v 1.639 2006/09/26 15:48:41 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -503,6 +503,5 @@ SUBDIR+=	yale-tftpd
 SUBDIR+=	yaz
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
-SUBDIR+=	zebra
 
 .include "../mk/bsd.pkg.subdir.mk"
