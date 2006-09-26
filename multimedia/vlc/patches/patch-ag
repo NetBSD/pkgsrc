@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/05/04 19:20:00 drochner Exp $
+$NetBSD: patch-ag,v 1.1 2006/09/26 07:27:19 martti Exp $
 
 --- ./modules/gui/wxwidgets/menus.cpp.orig	2006-05-04 14:22:54.000000000 +0200
 +++ ./modules/gui/wxwidgets/menus.cpp
