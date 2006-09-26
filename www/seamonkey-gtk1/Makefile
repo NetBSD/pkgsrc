@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/09/15 14:05:23 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/26 22:21:32 salo Exp $
 
 MOZILLA=		seamonkey-gtk1
 COMMENT=		Full featured gecko-based browser built with GTK1
 
-.include "../../www/seamonkey/Makefile.common"
+.include "../../www/seamonkey/Makefile-seamonkey.common"
 .include "../../mk/bsd.pkg.mk"
