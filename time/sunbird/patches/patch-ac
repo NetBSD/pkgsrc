@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2006/06/27 11:11:52 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2006/09/26 19:41:48 salo Exp $
 
 --- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2006-03-28 20:03:49.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.3 2006/06/27 11:11:52 joerg Exp $
  endif
  endif
 +ifeq (amd64,$(OS_TEST))
-+CPPSRCS		:= xptcinvoke_unixish_amd64.cpp xptcstubs_unixish_amd64.cpp
++CPPSRCS		:= xptcinvoke_x86_64_linux.cpp xptcstubs_x86_64_linux.cpp
 +endif
  endif
  #
