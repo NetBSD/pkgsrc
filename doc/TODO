@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5475 2006/09/25 18:55:20 wiz Exp $
+$NetBSD: TODO,v 1.5476 2006/09/26 21:44:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,7 +433,7 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
-	o elm-me-2.4pl123
+	o elm-me-2.4pl123d
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
@@ -617,6 +617,7 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
+	o less-395
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
@@ -950,7 +951,7 @@ Suggested package updates
 	o pgadmin3-1.4.3
 	o phoon-20050629
 	o photopc-3.05
-	o phpmyadmin-2.9.0
+	o phpmyadmin-2.9.0 [pkg/34625]
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -1043,6 +1044,7 @@ Suggested package updates
 	o python-2.5
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
+	o qdbm-1.8.71
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1146,7 +1148,7 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.4.0
+	o sylpheed-claws-2.5.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
@@ -1279,6 +1281,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.22
 	o zircon-1.18.256
+	o zope-2.10.0c1
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
