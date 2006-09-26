@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/09/13 14:41:58 taca Exp $
-bin/cossdump
+@comment $NetBSD: PLIST,v 1.21 2006/09/26 03:40:20 taca Exp $
 bin/squidclient
 libexec/cachemgr.cgi
 man/man8/cachemgr.cgi.8
