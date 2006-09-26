@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1334 2006/09/26 07:27:55 martti Exp $
+>$NetBSD: CHANGES-2006,v 1.1335 2006/09/26 13:49:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4465,3 +4465,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/squid to 2.6.4 [taca 2006-09-26]
 	Moved multimedia/vlc to multimedia/vlc07 [martti 2006-09-26]
 	Moved multimedia/vlc08 to multimedia/vlc [martti 2006-09-26]
+	Updated www/wwwoffle to 2.9a [abs 2006-09-26]
