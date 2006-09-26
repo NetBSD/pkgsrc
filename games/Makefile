@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.274 2006/09/14 13:55:21 rillig Exp $
+# $NetBSD: Makefile,v 1.275 2006/09/26 15:19:29 salo Exp $
 #
 
 COMMENT=	Games
@@ -52,7 +52,6 @@ SUBDIR+=	crossfire-client-gtk
 SUBDIR+=	crossfire-client-gtk2
 SUBDIR+=	crossfire-maps
 SUBDIR+=	crossfire-server
-SUBDIR+=	cube
 SUBDIR+=	d2x
 SUBDIR+=	dd2
 SUBDIR+=	defendguin
