@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.2 2006/05/19 20:53:34 joerg Exp $
+$NetBSD: patch-ai,v 1.1 2006/09/26 07:27:19 martti Exp $
 
 --- configure.orig	2006-05-06 15:54:17.000000000 +0000
 +++ configure

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.i386,v 1.2 2004/12/02 12:54:26 ben Exp $
-lib/vlc/libi420_rgb_mmx.a
-lib/vlc/libi420_ymga_mmx.a
-lib/vlc/libi420_yuy2_mmx.a
-lib/vlc/libi422_yuy2_mmx.a
-lib/vlc/libmemcpy3dn.a
-lib/vlc/libmemcpymmx.a
-lib/vlc/libmemcpymmxext.a
