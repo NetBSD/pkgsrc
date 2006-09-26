@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1336 2006/09/26 15:20:34 salo Exp $
+>$NetBSD: CHANGES-2006,v 1.1337 2006/09/26 15:49:25 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4467,3 +4467,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Moved multimedia/vlc08 to multimedia/vlc [martti 2006-09-26]
 	Updated www/wwwoffle to 2.9a [abs 2006-09-26]
 	Removed games/cube [salo 2006-09-26]
+	Removed net/zebra [salo 2006-09-26]
