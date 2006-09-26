@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/11 08:10:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/09/26 13:48:43 abs Exp $
 bin/wwwoffle
+bin/wwwoffle-fsck
+bin/wwwoffle-gunzip
+bin/wwwoffle-gzip
 bin/wwwoffle-hash
 bin/wwwoffle-ls
 bin/wwwoffle-mv
@@ -11,13 +14,10 @@ libdata/wwwoffle-spool.tar.gz
 man/man1/wwwoffle.1
 man/man5/wwwoffle.conf.5
 man/man8/wwwoffled.8
-sbin/wwwoffle-convert-cache
-sbin/wwwoffle-uncompress-cache
 sbin/wwwoffle-upgrade-config.pl
-sbin/wwwoffle-upgrade-config-2.x-2.5.pl
+sbin/wwwoffle-upgrade-config-2.0-2.5.pl
 sbin/wwwoffled
 share/doc/wwwoffle/CHANGES.CONF
-share/doc/wwwoffle/CONVERT
 share/doc/wwwoffle/COPYING
 share/doc/wwwoffle/FAQ
 share/doc/wwwoffle/INSTALL
@@ -29,6 +29,8 @@ share/doc/wwwoffle/README.PWD
 share/doc/wwwoffle/README.URL
 share/doc/wwwoffle/README.compress
 share/doc/wwwoffle/README.htdig
+share/doc/wwwoffle/README.https
+share/doc/wwwoffle/README.hyperestraier
 share/doc/wwwoffle/README.lang
 share/doc/wwwoffle/README.mnogosearch
 share/doc/wwwoffle/README.namazu
@@ -41,7 +43,6 @@ share/doc/wwwoffle/de/README.1st
 share/doc/wwwoffle/de/README.CONF
 share/doc/wwwoffle/de/README.CONF.html
 share/doc/wwwoffle/de/README.html
-share/doc/wwwoffle/es/CONVERT
 share/doc/wwwoffle/es/INSTALL
 share/doc/wwwoffle/es/LSM
 share/doc/wwwoffle/es/README
@@ -61,10 +62,7 @@ share/doc/wwwoffle/pl/README.1st
 share/doc/wwwoffle/pl/README.lang
 share/examples/rc.d/wwwoffled
 share/examples/wwwoffle/wwwoffle.conf
-@unexec ${RMDIR} %D/share/doc/wwwoffle/ru 2>/dev/null || ${TRUE}
 @dirrm share/doc/wwwoffle/pl
-@unexec ${RMDIR} %D/share/doc/wwwoffle/nl 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/wwwoffle/it 2>/dev/null || ${TRUE}
 @dirrm share/doc/wwwoffle/fr
 @dirrm share/doc/wwwoffle/es
 @dirrm share/doc/wwwoffle/de
