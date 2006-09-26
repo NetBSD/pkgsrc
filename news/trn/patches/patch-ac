@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2006/09/26 20:35:16 christos Exp $
 
---- Configure.orig	2001-02-22 19:17:39.000000000 +0000
-+++ Configure
-@@ -2540,7 +2540,7 @@ EOM
+--- Configure.orig	2001-02-22 14:17:39.000000000 -0500
++++ Configure	2006-09-26 15:17:42.033788587 -0400
+@@ -2540,7 +2540,7 @@
      esac
      ;;
  *)  case "$d_inews" in
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
      "$define")
  	set dflt installinews bin
  	eval $prefixit
-@@ -4412,6 +4412,9 @@ case "$nm_so_opt" in
+@@ -4412,6 +4412,9 @@
  			nm_so_opt='--dynamic'
  		fi
  		;;
@@ -21,7 +21,59 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  	esac
  	;;
  esac
-@@ -6223,14 +6226,14 @@ active='$active'
+@@ -4882,6 +4885,25 @@
+ esac
+ case "$xxx" in
+ x)
++	xxx=`./loc libncurses$_a x $libpth`
++	case "$xxx" in
++	/usr/lib*|/lib*)
++		termlib='-lncurses'
++		d_havetlib="$define"
++		echo "Termlib library found." >&4
++		;;
++	/*)
++		termlib="$xxx"
++		d_havetlib="$define"
++		echo "Termlib library found." >&4
++		;;
++	*)
++		xxx=x
++	esac
++	;;
++esac
++case "$xxx" in
++x)
+ 	xxx=`./loc libtermlib$_a x $libpth`
+ 	case "$xxx" in
+ 	/usr/lib*|/lib*)
+@@ -4939,6 +4961,25 @@
+ esac
+ case "$xxx" in
+ x)
++	xxx=`./loc libncurses.$so'*' x $libpth`
++	case "$xxx" in
++	/usr/lib*|/lib*)
++		termlib='-lncurses'
++		d_havetlib="$define"
++		echo "Terminfo library found." >&4
++		;;
++	/*)
++		termlib="$xxx"
++		d_havetlib="$define"
++		echo "Terminfo library found." >&4
++		;;
++	*)
++		xxx=x
++	esac
++	;;
++esac
++case "$xxx" in
++x)
+ 	xxx=`./loc libtermlib.$so'*' x $libpth`
+ 	case "$xxx" in
+ 	/usr/lib*|/lib*)
+@@ -6223,14 +6264,14 @@
  acttimes='$acttimes'
  aphostcmd='$aphostcmd'
  archobjs='$archobjs'
@@ -39,7 +91,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  cc='$cc'
  ccflags='$ccflags'
  cf_by='$cf_by'
-@@ -6240,7 +6243,7 @@ cntrydist='$cntrydist'
+@@ -6240,7 +6281,7 @@
  comm='$comm'
  contains='$contains'
  contdist='$contdist'
@@ -48,7 +100,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  cpp='$cpp'
  cppflags='$cppflags'
  cpplast='$cpplast'
-@@ -6305,21 +6308,21 @@ d_xenix='$d_xenix'
+@@ -6305,21 +6346,21 @@
  d_xthread='$d_xthread'
  date='$date'
  defeditor='$defeditor'
@@ -75,7 +127,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  groupdesc='$groupdesc'
  hint='$hint'
  hostbits='$hostbits'
-@@ -6376,10 +6379,10 @@ mboxchar='$mboxchar'
+@@ -6376,10 +6417,10 @@
  mimecap='$mimecap'
  mips='$mips'
  mips_type='$mips_type'
@@ -88,7 +140,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  myactive='$myactive'
  myuname='$myuname'
  n='$n'
-@@ -6417,11 +6420,11 @@ prefixexp='$prefixexp'
+@@ -6417,11 +6458,11 @@
  prefshell='$prefshell'
  privlib='$privlib'
  privlibexp='$privlibexp'
@@ -102,7 +154,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  sendmail='$sendmail'
  servername='$servername'
  sharpbang='$sharpbang'
-@@ -6442,7 +6445,7 @@ strings='$strings'
+@@ -6442,7 +6483,7 @@
  strn='$strn'
  subscriptions='$subscriptions'
  sysman='$sysman'
@@ -111,7 +163,7 @@ $NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
  tee='$tee'
  termlib='$termlib'
  test='$test'
-@@ -6450,7 +6453,7 @@ threaddir='$threaddir'
+@@ -6450,7 +6491,7 @@
  tk='$tk'
  tkinc='$tkinc'
  tklibs='$tklibs'
