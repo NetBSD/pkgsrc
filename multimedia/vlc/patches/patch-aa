@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2006/04/28 23:16:29 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2006/09/26 07:27:19 martti Exp $
 
---- modules/misc/network/ipv4.c.orig	2004-05-16 17:44:52.000000000 +0000
-+++ modules/misc/network/ipv4.c
-@@ -406,7 +406,11 @@ static int OpenUDP( vlc_object_t * p_thi
-         if( IN_MULTICAST( ntohl(inet_addr(psz_server_addr) ) ) )
-         {
-             /* set the time-to-live */
-+#ifdef __NetBSD__
-+            unsigned char ttl = p_socket->i_ttl;
-+#else
-             int ttl = p_socket->i_ttl;
-+#endif
-             if( ttl < 1 )
-             {
-                 ttl = config_GetInt( p_this, "ttl" );
+--- include/vlc_common.h.orig	2006-05-19 19:46:18.000000000 +0000
++++ include/vlc_common.h
+@@ -873,7 +873,7 @@ static inline void _SetQWBE( uint8_t *p,
+ #   define vlc_strtoll NULL
+ #endif
+ 
+-#if defined(SYS_BEOS)
++#if defined(SYS_BEOS) || defined(__DragonFly__)
+     typedef struct {
+         long long quot; /* Quotient. */
+         long long rem;  /* Remainder. */
