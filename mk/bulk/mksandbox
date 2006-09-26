@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.42 2006/06/08 01:11:43 minskim Exp $
+# $NetBSD: mksandbox,v 1.43 2006/09/26 20:56:28 minskim Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -93,7 +93,11 @@ Linux)
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
 	mountflags="--bind"
-	mountprog=/sbin/mount
+	if [ -f /bin/mount ]; then
+		mountprog=/bin/mount
+	else
+		mountprog=/sbin/mount
+	fi
 	paxprog=""
 	sedprog=/bin/sed
 	sandboxMountDirs="$sandboxMountDirs /proc"
