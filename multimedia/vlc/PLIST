@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/06/08 18:03:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/09/26 07:27:19 martti Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/06/12 16:28:13 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/09/26 07:27:19 martti Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		15
+PKGREVISION=		4
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,13 +11,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
 COMMENT=		VideoLAN Client
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
+USE_LANGUAGES=		c c++
 
-VLC_VER=		0.7.2
+VLC_VER=		0.8.5
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,26 +30,39 @@ BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
 
 CONFIGURE_ARGS+=	--disable-skins2
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
-
-CONFIGURE_ARGS+=	--enable-dvb
-CONFIGURE_ARGS+=	--enable-flac
 CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--disable-gnomevfs
+CONFIGURE_ARGS+=	--disable-gnutls
+CONFIGURE_ARGS+=	--disable-smb
+CONFIGURE_ARGS+=	--disable-dvbpsi
+CONFIGURE_ARGS+=	--disable-mod
+CONFIGURE_ARGS+=	--disable-mpc
+CONFIGURE_ARGS+=	--disable-dts
+
 CONFIGURE_ARGS+=	--with-ffmpeg-tree=${BUILDLINK_PREFIX.ffmpeg}/lib
-
-BUILD_DEFS+=		WITH_DVDCSS
-
-.if defined(WITH_DVDCSS) && !empty(WITH_DVDCSS:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-dvdcss=${BUILDLINK_PREFIX.libdvdcss}
-.include "../../multimedia/libdvdcss/buildlink3.mk"
-PLIST_SUBST+=		DVDCSS=
-.else
-CONFIGURE_ARGS+=	--disable-dvd
-PLIST_SUBST+=		DVDCSS="@comment "
-.endif
+CONFIGURE_ARGS+=	--with-ffmpeg-zlib
+CONFIGURE_ARGS+=	--enable-cddax
+CONFIGURE_ARGS+=	--enable-dvdread
+CONFIGURE_ARGS+=	--enable-faad
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins/default
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/dialogs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/images
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/js
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old/admin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old/vlm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/requests
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/selected
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/selection
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/volume
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/selected
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/volume
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/unselect
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/selection
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins2/fonts
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${PREFIX}/man/man1
 
@@ -73,7 +87,15 @@ SUBST_SED.libav=	-e "s,libavcodec/libavcodec.a,libavcodec.a,g"
 
 BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 
-.include "../../audio/flac/buildlink3.mk"
+.if ${OPSYS} == "NetBSD"
+PLIST_SUBST+=		COND_CDDA="@comment "
+PLIST_SUBST+=		COND_VCD="@comment "
+.else
+PLIST_SUBST+=		COND_CDDA=""
+PLIST_SUBST+=		COND_VCD=""
+.endif
+
+.include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
@@ -83,18 +105,17 @@ BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
-.include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-.include "../../net/openslp/buildlink3.mk"
-.include "../../sysutils/vcdimager-devel/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
