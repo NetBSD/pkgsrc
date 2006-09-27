@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1339 2006/09/27 15:18:58 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1340 2006/09/27 16:12:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4486,3 +4486,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed misc/XFree86-dirs [joerg 2006-09-27]
 	Removed meta-pkgs/XFree86 [joerg 2006-09-27]
 	Updated pkgtools/pkglint to 4.70 [joerg 2006-09-27]
+	Updated security/openssh to 4.3.1nb1 [taca 2006-09-27]
