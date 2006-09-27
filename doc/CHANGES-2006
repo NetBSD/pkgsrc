@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1340 2006/09/27 16:12:26 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1341 2006/09/27 20:37:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4487,3 +4487,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed meta-pkgs/XFree86 [joerg 2006-09-27]
 	Updated pkgtools/pkglint to 4.70 [joerg 2006-09-27]
 	Updated security/openssh to 4.3.1nb1 [taca 2006-09-27]
+	Updated net/libtorrent to 0.10.2 [tron 2006-09-27]
+	Updated net/rtorrent to 0.6.2 [tron 2006-09-27]
