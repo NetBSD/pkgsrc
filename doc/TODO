@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5478 2006/09/27 17:28:52 wiz Exp $
+$NetBSD: TODO,v 1.5479 2006/09/27 17:29:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -43,10 +43,6 @@ Suggested new packages
 	info2man
 	http://freshmeat.net/projects/info2man/
 	requires perl, provides info2man and info2pod
-
-	moz-plugger
-	http://mozplugger.mozdev.org/
-	source version of www/moz-bin-plugger
 
 	moji
 	http://moji.mozdev.org/
