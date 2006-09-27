@@ -1,24 +1,20 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/09/26 07:19:41 martti Exp $
-#
-# This Makefile fragment is included by packages that use vlc.
-#
-# This file was created automatically using createbuildlink-3.0.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2006/09/27 06:02:00 martti Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	vlc
 .endif
 
-.if !empty(VLC_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=		vlc
-BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vlc
-BUILDLINK_API_DEPENDS.vlc?=		vlc>=0.7.1
-BUILDLINK_ABI_DEPENDS.vlc?=	vlc>=0.7.2nb15
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvlc}
+BUILDLINK_PACKAGES+=	vlc
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vlc
+
+.if ${VLC_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.vlc+=	vlc>=0.7.2nb15
 BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc07
-.endif # VLC_BUILDLINK3_MK
+.endif	# VLC_BUILDLINK3_MK
 
 .include "../../multimedia/libdvdcss/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
@@ -35,6 +31,7 @@ BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc07
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
+.include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
