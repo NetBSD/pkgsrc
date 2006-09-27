@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1338 2006/09/27 11:29:33 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1339 2006/09/27 15:18:58 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4470,3 +4470,19 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed net/zebra [salo 2006-09-26]
 	Updated misc/ja-less to 358nb2 [taca 2006-09-27]
 	Updated misc/less to 382nb1 [taca 2006-09-27]
+	Removed x11/XF86Setup [joerg 2006-09-27]
+	Removed x11/XFree86-clients [joerg 2006-09-27]
+	Removed x11/XFree86-imake [joerg 2006-09-27]
+	Removed x11/XFree86-libs [joerg 2006-09-27]
+	Removed x11/XFree86-server [joerg 2006-09-27]
+	Removed fonts/XFree86-fonts100dpi [joerg 2006-09-27]
+	Removed fonts/XFree86-fonts75dpi [joerg 2006-09-27]
+	Removed fonts/XFree86-fontsCyrillic [joerg 2006-09-27]
+	Removed fonts/XFree86-fontsEncodings [joerg 2006-09-27]
+	Removed fonts/XFree86-fontsScalable [joerg 2006-09-27]
+	Removed fonts/XFree86-fontserver [joerg 2006-09-27]
+	Removed misc/XFree86-man [joerg 2006-09-27]
+	Removed misc/XFree86-docs [joerg 2006-09-27]
+	Removed misc/XFree86-dirs [joerg 2006-09-27]
+	Removed meta-pkgs/XFree86 [joerg 2006-09-27]
+	Updated pkgtools/pkglint to 4.70 [joerg 2006-09-27]
