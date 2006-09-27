@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.52 2006/02/23 19:02:50 joerg Exp $
+$NetBSD: distinfo,v 1.53 2006/09/27 16:10:59 taca Exp $
 
-SHA1 (openssh-4.3p1.tar.gz) = b1f379127829e7e820955b2825130edd1601ba59
-RMD160 (openssh-4.3p1.tar.gz) = c1d69873ecc453b40d825a2f1b3a0909da815f5e
-Size (openssh-4.3p1.tar.gz) = 940777 bytes
 SHA1 (openssh-4.3p1-hpn11.diff) = 22f2c99d314abc400bd1731d9c35b0540cbf2eae
 RMD160 (openssh-4.3p1-hpn11.diff) = c3b807437fd9f40f2ab73c52586de194b84cce6e
 Size (openssh-4.3p1-hpn11.diff) = 11024 bytes
+SHA1 (openssh-4.3p1.tar.gz) = b1f379127829e7e820955b2825130edd1601ba59
+RMD160 (openssh-4.3p1.tar.gz) = c1d69873ecc453b40d825a2f1b3a0909da815f5e
+Size (openssh-4.3p1.tar.gz) = 940777 bytes
 SHA1 (patch-aa) = 213f5f5a3c7ae0bceafac1b169063fc71806dc7c
 SHA1 (patch-ab) = 6c71ad1a39a1d6f7e48fc244993a4189c2cd9ef7
 SHA1 (patch-ac) = 8c625fdaca4d73c27e4e68b5bb3aa54327eb61ff
@@ -29,3 +29,6 @@ SHA1 (patch-at) = ffbcb38cf8578f05319b2af9cfcdb5ada2a57e78
 SHA1 (patch-au) = 052b0b6d8869ad09144e4fc9e1b3c5e03c669c44
 SHA1 (patch-av) = 5543fcf94eaad26e27043c1527921e23ecfefc77
 SHA1 (patch-aw) = 95d49965b0f24bf117e790785d3a8ef553865bda
+SHA1 (patch-ax) = 2c6923c767e7549d746d35358ecef2156012b227
+SHA1 (patch-ay) = e64d4266556ce05a5fd5e14ee4e988e7bf075576
+SHA1 (patch-az) = 341c42c82ddb6177bd8ac41813d6ad1e4b6e3839
