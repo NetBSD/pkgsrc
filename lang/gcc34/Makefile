@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/09/27 15:46:11 abs Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -84,6 +84,7 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
+MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 
 .if !empty(BUILD_F77:M[Yy][Ee][Ss])
 .include "../../devel/gmp/buildlink3.mk"
