@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.175 2006/08/07 14:54:14 cube Exp $
+# $NetBSD: replace.mk,v 1.176 2006/09/27 15:18:15 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -957,16 +957,11 @@ _TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale \
 
 .for _t_ in ${_TOOLS.x11-clients}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mx11/XFree86-clients) || \
-        !empty(PKGPATH:Mx11/xorg-clients)
+.    if !empty(PKGPATH:Mx11/xorg-clients)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_CREATE+=		${_t_}
-.      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.${_t_}?=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=XFree86-clients
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
-.      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+.      if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 TOOLS_DEPENDS.${_t_}?=	xorg-clients>=6.8:../../x11/xorg-clients
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-clients
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
@@ -987,7 +982,6 @@ _TOOLS.x11-imake=	imake makedepend mkdirhier xmkmf
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mdevel/nbitools) || \
-	!empty(PKGPATH:Mx11/XFree86-imake) || \
 	!empty(PKGPATH:Mx11/xorg-imake)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
@@ -996,10 +990,6 @@ TOOLS_CREATE+=		${_t_}
 TOOLS_DEPENDS.${_t_}?=	nbitools>=6.3nb4:../../devel/nbitools
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=nbitools
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/libexec/itools/${_t_}
-.      elif defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.${_t_}?=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 TOOLS_DEPENDS.${_t_}?=	xorg-imake>=6.8:../../x11/xorg-imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-imake

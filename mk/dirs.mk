@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.7 2006/04/06 23:09:06 minskim Exp $
+# $NetBSD: dirs.mk,v 1.8 2006/09/27 15:18:15 joerg Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -30,8 +30,6 @@ _USE_XDG_DIRS:=		${ver}
 .  elif ${pkg} == "xdg-x11" && ${_USE_XDG_X11_DIRS} < ${ver} && \
 	defined(USE_X11BASE)
 _USE_XDG_X11_DIRS:=	${ver}
-.  elif ${pkg} == "XFree86" && ${_USE_XFREE86_DIRS} < ${ver}
-_USE_XFREE86_DIRS:=	${ver}
 .  elif ${pkg} == "xorg" && ${_USE_XORG_DIRS} < ${ver}
 _USE_XORG_DIRS:=	${ver}
 .  endif
@@ -63,10 +61,6 @@ _USE_XORG_DIRS:=	${ver}
 
 .if !empty(_USE_XDG_X11_DIRS)
 .  include "../../misc/xdg-x11-dirs/dirs.mk"
-.endif
-
-.if !empty(_USE_XFREE86_DIRS)
-.  include "../../misc/XFree86-dirs/dirs.mk"
 .endif
 
 .if !empty(_USE_XORG_DIRS)
