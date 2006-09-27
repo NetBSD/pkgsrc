@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5477 2006/09/27 11:31:51 taca Exp $
+$NetBSD: TODO,v 1.5478 2006/09/27 17:28:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -279,7 +279,6 @@ Suggested package updates
 	o RealPlayerGold-10.0.8
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6.6
-	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
@@ -507,7 +506,7 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade-3.0.1
 	o gld-1.7
-	o global-5.2 [pkg/34570]
+	o global-5.2 [pkg/34570|34636]
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -1148,7 +1147,7 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.5.0
+	o sylpheed-claws-2.5.1
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
