@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/09/27 15:46:11 abs Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
 CONFIGURE_ARGS+=	--enable-shared
+MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. You

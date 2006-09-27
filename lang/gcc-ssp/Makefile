@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/07/27 18:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/09/27 15:46:11 abs Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--enable-shared
 
 USE_TOOLS+=		chmod
 MAKE_ENV+=		ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
+MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 
 CONFIGURE_DIRS=		${WRKDIR}/objdir
 BUILD_DIRS=		${CONFIGURE_DIRS}
