@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/09/13 21:04:19 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/09/27 20:36:45 tron Exp $
 include/torrent/bitfield.h
 include/torrent/block.h
 include/torrent/block_list.h
@@ -17,6 +17,8 @@ include/torrent/object_stream.h
 include/torrent/path.h
 include/torrent/peer.h
 include/torrent/piece.h
+include/torrent/peer_info.h
+include/torrent/peer_list.h
 include/torrent/poll.h
 include/torrent/poll_epoll.h
 include/torrent/poll_kqueue.h
