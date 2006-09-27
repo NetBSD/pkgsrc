@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/09/25 08:00:31 ghen Exp $
+# $NetBSD: Makefile,v 1.48 2006/09/27 06:48:56 rillig Exp $
 
 DISTNAME=	j2re-1_3_1_19-linux-i586
 PKGNAME=	sun-jre13-1.0.19
@@ -24,6 +24,13 @@ CONF_FILES=	# empty
 .for FILE in ${SFILES}
 CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
+
+# Some binary files cannot resolve their libraries. This doesn't matter
+# since they will only be called through wrappers.
+CHECK_SHLIBS_SUPPORTED=	no
+
+post-extract:
+	chmod -R go-w ${WRKSRC}
 
 do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
