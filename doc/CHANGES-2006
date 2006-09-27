@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1337 2006/09/26 15:49:25 salo Exp $
+>$NetBSD: CHANGES-2006,v 1.1338 2006/09/27 11:29:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4468,3 +4468,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/wwwoffle to 2.9a [abs 2006-09-26]
 	Removed games/cube [salo 2006-09-26]
 	Removed net/zebra [salo 2006-09-26]
+	Updated misc/ja-less to 358nb2 [taca 2006-09-27]
+	Updated misc/less to 382nb1 [taca 2006-09-27]
