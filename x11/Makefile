@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.443 2006/08/25 11:16:59 minskim Exp $
+# $NetBSD: Makefile,v 1.444 2006/09/27 15:18:15 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
 
 SUBDIR+=	9term
 SUBDIR+=	Terminal
-SUBDIR+=	XF86Setup
-SUBDIR+=	XFree86-clients
-SUBDIR+=	XFree86-imake
-SUBDIR+=	XFree86-libs
-SUBDIR+=	XFree86-server
 SUBDIR+=	XaoS
 SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xaw3d
