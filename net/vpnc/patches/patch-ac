@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2006/08/22 08:57:26 hubertf Exp $
+$NetBSD: patch-ac,v 1.3 2006/09/27 12:50:29 hubertf Exp $
 
 --- vpnc-script.orig	2006-01-03 22:36:27.000000000 +0100
 +++ vpnc-script
@@ -43,7 +43,7 @@ $NetBSD: patch-ac,v 1.2 2006/08/22 08:57:26 hubertf Exp $
  if [ -n "$IPROUTE" ]; then
  	fix_ip_get_output () {
 -		sed 's/cache//;s/metric[0-9]\+ [0-9]\+//g'
-+		sed 's/cache//;s/metric \?[0-9]\+ [0-9]\+//g'
++		sed 's/cache//;s/metric \?[0-9]\+ [0-9]\+//g;s/hoplimit [0-9]\+//g'
  	}
  
  	set_vpngateway_route() {
