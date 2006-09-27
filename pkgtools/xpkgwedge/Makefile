@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/09/09 20:31:46 schwarz Exp $
+# $NetBSD: Makefile,v 1.70 2006/09/27 15:18:15 joerg Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
@@ -79,14 +79,13 @@ post-extract:
 	@${CP} ${FILESDIR}/xpkgwedge.def ${WRKSRC}
 	@${CP} ${FILESDIR}/pkgxmkmf.in ${WRKDIR}/pkgxmkmf
 
-.if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg) || \
-    defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+.if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 X11TYPEFLAGS?=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	xpkgwedge.def
 SUBST_SED.fix=		-e "s|@X11TYPEFLAGS@|${X11TYPEFLAGS}|"
-.else # X11_TYPE == XFree86 || X11_TYPE == xorg.
+.else # X11_TYPE == xorg.
 SUBST_CLASSES+=		foo
 SUBST_STAGE.foo=	post-patch
 SUBST_FILES.foo=	xpkgwedge.def

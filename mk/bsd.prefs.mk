@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.236 2006/09/22 21:53:57 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.237 2006/09/27 15:18:15 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -391,19 +391,15 @@ USE_XPKGWEDGE=	yes
 USE_XPKGWEDGE=		yes
 .endif
 
-# Default installation prefix for meta-pkgs/XFree86 and
-# meta-pkgs/xorg.
-.if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-X11ROOT_PREFIX?=	XFree86
-.elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+# Default installation prefix for meta-pkgs/xorg.
+.if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 X11ROOT_PREFIX?=	xorg
 .else
 X11ROOT_PREFIX?=	# empty
 .endif
 
-.if ((defined(X11_TYPE) && !empty(X11_TYPE:MXFree86) || \
-     defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)) && \
-     defined(X11_TYPE) && empty(X11_TYPE:Mnative))
+.if (defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)) && \
+    (defined(X11_TYPE) && empty(X11_TYPE:Mnative))
 X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
 .endif
 
