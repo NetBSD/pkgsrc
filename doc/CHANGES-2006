@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1343 2006/09/28 10:11:37 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1344 2006/09/28 16:26:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4491,3 +4491,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/rtorrent to 0.6.2 [tron 2006-09-27]
 	Updated emulators/suse100_openssl to 10.0nb2 [salo 2006-09-28]
 	Updated security/openssh to 4.3.2 [taca 2006-09-28]
+	Updated security/pgp2 to 2.6.3ianb1 [tron 2006-09-28]
