@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/06/11 13:27:41 markd Exp $
+$NetBSD: distinfo,v 1.2 2006/09/28 01:05:33 salo Exp $
 
-SHA1 (suse100/i586/openssl-0.9.7g-2.4.i586.rpm) = 0a84c528b967ad2c52217c8a71bfc1e75adc55f7
-RMD160 (suse100/i586/openssl-0.9.7g-2.4.i586.rpm) = 8eedb3147f1ccca236a3a290bc0cd82511aadb3d
-Size (suse100/i586/openssl-0.9.7g-2.4.i586.rpm) = 1001844 bytes
-SHA1 (suse100/ppc/openssl-0.9.7g-2.4.ppc.rpm) = f2f615d7b29f680df4f66acf7ed162a1c2c3c320
-RMD160 (suse100/ppc/openssl-0.9.7g-2.4.ppc.rpm) = 040eaa87526cc324b6bc8f2545f01da6faba0d35
-Size (suse100/ppc/openssl-0.9.7g-2.4.ppc.rpm) = 1122362 bytes
-SHA1 (suse100/x86_64/openssl-0.9.7g-2.4.x86_64.rpm) = 71838d80fd26d63dde2a41db023b506c9edf0063
-RMD160 (suse100/x86_64/openssl-0.9.7g-2.4.x86_64.rpm) = fb195e2c3a813702c93c3a69c244703dc86e02d1
-Size (suse100/x86_64/openssl-0.9.7g-2.4.x86_64.rpm) = 1069778 bytes
+SHA1 (suse100/i586/openssl-0.9.7g-2.8.i586.rpm) = 0f91d714ecbbac62d5ffc539828e4d35bf1a5030
+RMD160 (suse100/i586/openssl-0.9.7g-2.8.i586.rpm) = 26dca02bf0aa6999a4b7bb8f6398609ed4c55e3a
+Size (suse100/i586/openssl-0.9.7g-2.8.i586.rpm) = 1002098 bytes
+SHA1 (suse100/ppc/openssl-0.9.7g-2.8.ppc.rpm) = 942a6ac9bfdafb06a686270c7652502b7f21854b
+RMD160 (suse100/ppc/openssl-0.9.7g-2.8.ppc.rpm) = 640d5734a2d0872b73d80ac0e9765e95d91ae51a
+Size (suse100/ppc/openssl-0.9.7g-2.8.ppc.rpm) = 1123132 bytes
+SHA1 (suse100/x86_64/openssl-0.9.7g-2.8.x86_64.rpm) = d62f56804400cbdca61cc54aa08cb8cb9dd3cd74
+RMD160 (suse100/x86_64/openssl-0.9.7g-2.8.x86_64.rpm) = 1a0b5ef53e7dddaa6c3c178788c50c68a57fa23d
+Size (suse100/x86_64/openssl-0.9.7g-2.8.x86_64.rpm) = 1069246 bytes
