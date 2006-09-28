@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5479 2006/09/27 17:29:33 wiz Exp $
+$NetBSD: TODO,v 1.5480 2006/09/28 10:12:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -749,7 +749,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openoffice-2.0.3
 	o openpam-20050616
-	o openssh-4.3p2 [pkg/32858]
+	o openssh-4.4p1 (waiting for hpn-patch)
 	o openssl-0.9.8c
 	o openttd-0.4.8 [pkg/34445]
 	o opera-9.02
