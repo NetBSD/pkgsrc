@@ -1,3 +1,3 @@
-# $NetBSD: Makefile.x86_64,v 1.1.1.1 2006/06/11 13:27:41 markd Exp $
+# $NetBSD: Makefile.x86_64,v 1.2 2006/09/28 01:05:33 salo Exp $
 
-RPMFILES=		openssl-0.9.7g-2.4.${SUSE_ARCH}.rpm
+RPMFILES=		openssl-0.9.7g-2.8.${SUSE_ARCH}.rpm
