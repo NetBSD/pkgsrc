@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5483 2006/09/29 00:31:26 obache Exp $
+$NetBSD: TODO,v 1.5484 2006/09/29 01:58:52 taca Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,7 @@ Suggested package updates
 	o openoffice-2.0.3
 	o openpam-20050616
 	o openssh-4.4p1 [waiting for hpn-patch]
-	o openssl-0.9.8c
+	o openssl-0.9.8d
 	o openttd-0.4.8 [pkg/34445]
 	o opera-9.02
 	o oregano-0.50.0
