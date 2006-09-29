@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/06/20 22:15:15 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/29 15:55:26 he Exp $
 
 DISTNAME=               sc-6.21
+PKGREVISION=		1
 CATEGORIES=             math
 MASTER_SITES=           ftp://gatekeeper.dec.com/pub/misc/
 EXTRACT_SUFX=		.tar.Z
