@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/07/07 21:32:35 cube Exp $
+# $NetBSD: Makefile,v 1.21 2006/09/29 23:38:46 cube Exp $
 
 DISTNAME=		rt-3.4.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -85,7 +85,6 @@ _RT_DB_TYPE=	SQLite
 
 # Dev dependencies:
 DEPENDS+=	p5-Regexp-Common>=2.113:../../textproc/p5-Regexp-Common
-DEPENDS+=	{p5-Apache-Test-[0-9]*,ap2-perl>=2.0.1}:../../www/p5-Apache-Test
 DEPENDS+=	p5-WWW-Mechanize>=0.72:../../www/p5-WWW-Mechanize
 DEPENDS+=	p5-Test-WWW-Mechanize-[0-9]*:../../www/p5-Test-WWW-Mechanize
 
