@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:11:26 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/09/29 22:12:51 abs Exp $
 #
 
 DISTNAME=	netscape-20040123
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
