@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/07/03 19:42:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/29 21:21:54 dmcmahill Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
-PKGNAME=		RealPlayerGold-10.0.7
+# Exact version obtained from  the output of
+#   file RealPlayer10GOLD.rpm
+PKGNAME=		RealPlayerGold-${PKGVER}
 CATEGORIES=		multimedia
 MASTER_SITES=		http://forms.real.com/real/player/download.html?f=unix/
 EXTRACT_SUFX=		.rpm
@@ -11,12 +13,24 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.real.com/linux/
 COMMENT=		Real Audio and Video Player
 
+PKGVER=			10.0.8.805.20060718
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${REALPLAYER_SUBDIR} -s3
 RPM2PKGSTRIP=		3
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DIST_SUBDIR=		${PKGNAME_NOREV}
+
+# Verify that the version of the distfile (which changes often without the name changing)
+# is still correct.  This helps sort out download errors vs out of date pkgsrc errors.
+post-fetch:
+	ver=`file ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${SED} -e 's;.*Player-;;g'  -e 's;-;.;g'` ; \
+		if [ "$$ver" != "${PKGVER}" ] ; then \
+			${ECHO} "It appears that real.com has made a new version ($$ver) available so this" ; \
+			${ECHO} "package will need updating to work correctly.  That likely the reason for" ; \
+			${ECHO} "the checksum failure." ; \
+		fi 
+
 
 .include "../../emulators/suse_linux/Makefile.application"
 
