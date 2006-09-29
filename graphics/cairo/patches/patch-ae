@@ -1,54 +1,32 @@
-$NetBSD: patch-ae,v 1.4 2006/08/31 11:17:19 dmcmahill Exp $
-
-Adapted from:
-http://ekyo.nerim.net/software/patch-1.2.0-src_cairo-xlib-surface_c
+$NetBSD: patch-ae,v 1.5 2006/09/29 13:43:41 drochner Exp $
 
 Fixes cairo on 8-bit psuedo color and other 8-bit displays.
+See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 
-The patch listed above is for 1.2.0 and took some minor modification to
-apply to 1.2.4.
-
-See https://bugs.freedesktop.org/show_bug.cgi?id=4945 for more details.
-
---- src/cairo-xlib-surface.c.orig	2006-08-18 14:20:16.000000000 +0000
-+++ src/cairo-xlib-surface.c	2006-08-31 10:53:10.000000000 +0000
-@@ -82,4 +82,6 @@
+--- src/cairo-xlib-surface.c.orig	2006-08-18 16:20:16.000000000 +0200
++++ src/cairo-xlib-surface.c
+@@ -81,6 +81,8 @@ _cairo_xlib_surface_show_glyphs (void   
+ 
  #define CAIRO_ASSUME_PIXMAP	20
  
 +struct clut_r3g3b2;
 +
  struct _cairo_xlib_surface {
      cairo_surface_t base;
-@@ -127,4 +129,7 @@
+ 
+@@ -126,6 +128,8 @@ struct _cairo_xlib_surface {
+     int num_clip_rects;
  
      XRenderPictFormat *xrender_format;
 +
 +    struct clut_r3g3b2 *clut;
-+    int workaround;
  };
  
-@@ -505,4 +510,158 @@
+ #define CAIRO_SURFACE_RENDER_AT_LEAST(surface, major, minor)	\
+@@ -504,6 +508,82 @@ _swap_ximage_to_native (XImage *ximage)
+     }
  }
  
-+#if 0
-+static void _set_optimal_cmap(Display *dpy, Colormap cmap) {
-+    int i, r, g, b;
-+    XColor cm[256];
-+
-+    for (i = 0; i < 256; i++) {
-+	r = i >> 5;
-+	g = (i >> 2) & 0x7;
-+	b = (i << 1) & 0x7;
-+	cm[i].pixel = i;
-+	cm[i].flags = DoRed | DoGreen | DoBlue;
-+	cm[i].red   = r << 13 | r << 10 | r << 7 | r << 4 | r << 1 | r >> 2;
-+	cm[i].green = g << 13 | g << 10 | g << 7 | g << 4 | g << 1 | g >> 2;
-+	cm[i].blue  = b << 13 | b << 10 | b << 7 | b << 4 | b << 1 | b >> 2;
-+    }
-+    XStoreColors(dpy, cmap, cm, 256);
-+}
-+#endif
-+
 +struct clut_r3g3b2 {
 +    struct clut_r3g3b2 *next;
 +    Display            *dpy;
@@ -125,123 +103,27 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945 for more details.
 +    return clut;
 +}
 +
-+static const char * _visualClass[] = {
-+    "StaticGray",
-+    "GrayScale",
-+    "StaticColor",
-+    "PseudoColor",
-+    "TrueColor",
-+    "DirectColor"
-+};
-+
-+
-+static void _print_visual(Visual *v) {
-+    printf("Visual: class=%s, bpRGB=%i, CM=%i, r=%lx, g=%lx, b=%lx\n",
-+	   _visualClass[v->class],
-+	   v->bits_per_rgb,
-+	   v->map_entries,
-+	   v->red_mask, v->green_mask, v->blue_mask);
-+}
-+
-+
-+#if 0
-+static void _print_ximage(XImage *x) {
-+    const char * format[] = { "XYBitmap", "XYPixmap", "ZPixmap" };
-+    printf("XImage: size=(%i,%i), xoffset=%i, format=%s, depth=%i, bpp=%i, stride=%i\n        r=%lx, g=%lx, b=%lx, unit=%i, pad=%i\n",
-+	   x->width,
-+	   x->height,
-+	   x->xoffset,
-+	   format[x->format],
-+	   x->depth,
-+	   x->bits_per_pixel,
-+	   x->bytes_per_line,
-+	   x->red_mask, x->green_mask, x->blue_mask,
-+	   x->bitmap_unit, x->bitmap_pad);
-+}
-+
-+const char * _cairoFormats[] = { "ARGB32", "RGB24", "A8", "A1" };
-+
-+static void _print_cairoimage(cairo_image_surface_t *i) {
-+    
-+    printf("CairoImage: size=(%i,%i), format=%s, depth=%i, stride=%i\n",
-+	   i->width,
-+	   i->height,
-+	   _cairoFormats[i->format],
-+	   i->depth,
-+	   i->stride);
-+}
-+
-+static void _print_cairomasks(cairo_format_masks_t *m) {
-+    printf("CairoFormatMask: bpp=%i, a=%lx, r=%lx, g=%lx, b=%lx\n",
-+	   m->bpp, m->alpha_mask, m->red_mask, m->green_mask, m->blue_mask);
-+}
-+#endif
-+
-+#define WORKAROUND_NONE           0
-+#define WORKAROUND_8BIT_GRAYLEVEL 1
-+#define WORKAROUND_8BIT_PALETTE   2
-+#if 1
-+#define WORKAROUND_R5G6B5         3
-+#endif
-+
  static cairo_status_t
  _get_image_surface (cairo_xlib_surface_t    *surface,
-@@ -659,17 +818,94 @@
+ 		    cairo_rectangle_int16_t *interest_rect,
+@@ -657,6 +737,35 @@ _get_image_surface (cairo_xlib_surface_t
+     }
+     else
      {
- 	/*
--	 * XXX This can't work.  We must convert the data to one of the
--	 * supported pixman formats.  Pixman needs another function
--	 * which takes data in an arbitrary format and converts it
--	 * to something supported by that library.
-+	 * Otherwise, we construct a buffer containing RGB24 data
-+	 * using the specified workaround.
- 	 */
-+	uint32_t *data, *dst, *clut;
-+	uint8_t  *src8;
-+	uint16_t *src16;
-+	int i,j;
 +	
-+	if(surface->visual == NULL) {
-+	    printf("No visual for surface\n");
-+	    goto FAIL;
-+	}
-+
-+	if (surface->workaround == WORKAROUND_NONE) {
-+	    printf("No workaround for this pixel format: ");
-+	    _print_visual(surface->visual);
-+	    goto FAIL;
-+	}
-+	
-+	data = (uint32_t*)malloc(ximage->height * ximage->width * 4);
-+	if(data == NULL) {
-+	    printf("Cannot allocate RGB buffer\n");
-+	    goto FAIL;
-+	}
-+	
-+	switch (surface->workaround) {
++          if(surface->clut != NULL) {
 +	    
-+	case WORKAROUND_8BIT_GRAYLEVEL:
++      	    /*
++	     * Otherwise, we construct a buffer containing RGB24 data
++	     * using the specified workaround.
++	     */
++	    uint32_t *data, *dst, *clut;
++	    uint8_t  *src8;
++	    int i,j;
 +
-+	    dst = data;
-+	    for(j = 0; j < ximage->height; j++) {
-+		src8 = (uint8_t *) (ximage->data + ximage->bytes_per_line * j);
-+		for(i = 0; i < ximage->width; i++) {
-+		    *dst++ = (*src8 << 16) | (*src8 << 8) | *src8;
-+		    src8++;
-+		}
-+	    }
-+	    break;
-+	    
-+	case WORKAROUND_8BIT_PALETTE:
-+
-+	    if(surface->clut == NULL) {
-+		surface->clut = _get_clut_r3g3b2(
-+		    surface->dpy,
-+		    DefaultColormapOfScreen(surface->screen));
-+	    }
-+
-+	    if(surface->clut == NULL) {
-+		free(data);
++	    data = (uint32_t*)malloc(ximage->height * ximage->width * 4);
++	    if(data == NULL) {
++		printf("Cannot allocate RGB buffer\n");
 +		goto FAIL;
 +	    }
 +
@@ -253,50 +135,29 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945 for more details.
 +		    *dst++ = clut[src8[i]];
 +		src8 += ximage->bytes_per_line;
 +	    }
-+	    break;
-+#if 1
-+	case WORKAROUND_R5G6B5:
-+
-+	    src16 = (uint16_t*)ximage->data;
-+	    dst = data;
-+	    for(j = 0; j < ximage->height; j++) {
-+		for(i = 0; i < ximage->width; i++) {
-+		    *dst++ = ( ( ((src16[i] & 0xf800) << 8) | ((src16[i] & 0xe000) << 3) ) |
-+			       ( ((src16[i] & 0x07e0) << 5) | ((src16[i] & 0x0600) >> 1) ) |
-+			       ( ((src16[i] & 0x001f) << 3) | ((src16[i] & 0x001f) >> 2) ) );
-+		}
-+		src16 += ximage->bytes_per_line / sizeof(*src16);
-+	    }
-+	    break;
-+#endif
-+	default:
-+	    printf("Dunno what to do with: ");
-+	    _print_visual(surface->visual);
-+	    goto FAIL;
++	    free(ximage->data);
++	    image = (cairo_image_surface_t*)
++		cairo_image_surface_create_for_data((unsigned char *)data, CAIRO_FORMAT_RGB24, ximage->width, ximage->height, ximage->width*4);
++        } else {
+ 	/*
+ 	 * XXX This can't work.  We must convert the data to one of the
+ 	 * supported pixman formats.  Pixman needs another function
+@@ -669,6 +778,8 @@ _get_image_surface (cairo_xlib_surface_t
+ 						    ximage->width,
+ 						    ximage->height,
+ 						    ximage->bytes_per_line);
 +	}
-+	free(ximage->data);
- 	image = (cairo_image_surface_t*)
--	    _cairo_image_surface_create_with_masks ((unsigned char *) ximage->data,
--						    &masks,
--						    ximage->width,
--						    ximage->height,
--						    ximage->bytes_per_line);
--	if (image->base.status)
-+	    cairo_image_surface_create_for_data((unsigned char *)data, CAIRO_FORMAT_RGB24, ximage->width, ximage->height, ximage->width*4);
 +	
-+	if (image->base.status) {
-+	    printf("Failed!\n");
-+	    free(data);
+ 	if (image->base.status)
  	    goto FAIL;
-+	}
      }
- 
-@@ -744,4 +980,30 @@
+@@ -743,6 +854,32 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
+     _cairo_xlib_surface_set_gc_clip_rects (surface);
  }
  
 +
 +static int
-+make_space_for(unsigned char ** buf, int *size, int *stride, int width, int height, int Bpp)
++_make_space_for(unsigned char ** buf, int *size, int *stride, int width, int height, int Bpp)
 +{
 +    unsigned char * data;
 +    int l;
@@ -322,137 +183,76 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945 for more details.
 +
  static cairo_status_t
  _draw_image_surface (cairo_xlib_surface_t   *surface,
-@@ -750,6 +1012,12 @@
- 		     int                    dst_y)
+ 		     cairo_image_surface_t  *image,
+@@ -751,21 +888,54 @@ _draw_image_surface (cairo_xlib_surface_
  {
-+    static unsigned char *buf = NULL;
-+    static int size = 0;
      XImage ximage;
--    unsigned int bpp, alpha, red, green, blue;
-+    unsigned int bpp, alpha, red, green, blue, stride, depth, i, j;
-+    unsigned char *data, *ilut;
-+    uint32_t *src;
-+    uint8_t *dst8;
-+    uint16_t *dst16;
+     unsigned int bpp, alpha, red, green, blue;
++    unsigned int depth = image->depth;
++    unsigned int stride = image->stride;
      int native_byte_order = _native_byte_order_lsb () ? LSBFirst : MSBFirst;
  
-@@ -757,14 +1025,87 @@
+     pixman_format_get_masks (pixman_image_get_format (image->pixman_image),
  			     &bpp, &alpha, &red, &green, &blue);
  
 +
-+    switch(surface->workaround) {
-+    case WORKAROUND_NONE:
-+      /* Default behaviour is supposed to work */
-+      stride = image->width * 4;
-+      depth = image->depth;
-+      data = image->data;
-+      break;
++    if(surface->clut != NULL) {
++	static unsigned char *buf = NULL;
++	static int size = 0;
++	int i, j;
++	unsigned char *data, *ilut;
++	uint32_t *src;
++	uint8_t *dst8;
 +
-+    case WORKAROUND_8BIT_GRAYLEVEL:
++	if (_make_space_for(&buf, &size, &stride, image->width, image->height, 1))
++            return CAIRO_STATUS_NO_MEMORY;
++	data = buf;
++	src = (uint32_t*)image->data;
++	ilut = surface->clut->ilut;
++	for(j=0;j<image->height;j++) {
++            dst8 = data + j * stride;
++            for(i=0;i<image->width;i++) {
++        	dst8[i] = ilut[ ((*src >> 16) & 0xe0) |
++                        	((*src >> 11) & 0x1c) |
++                        	((*src >> 6)  & 0x03) ];
++        	src++;
++            }
++	}
++	alpha = red = green = blue = 0;
++	depth = bpp = 8;
++      	ximage.data = data;
 +
-+      if (make_space_for(&buf, &size, &stride, image->width, image->height, 1))
-+          return CAIRO_STATUS_NO_MEMORY;
-+      data = buf;
-+
-+      for(j=0;j<image->height;j++) {
-+          src = (uint32_t*)(image->data);
-+          dst8 = data + j * stride;
-+          for(i=0;i<image->width;i++) {
-+              /* XXX use correct factor for each channel */
-+              dst8[i] = ( ((*src >> 16) & 0xff) +
-+                          ((*src >> 8) & 0xff) +
-+                          (*src & 0xff) ) / 3;
-+              src++;
-+          }
-+      }
-+
-+      alpha = red = green = blue = 0;
-+      depth = bpp = 8;
-+      break;
-+
-+    case WORKAROUND_8BIT_PALETTE:
-+
-+      if (make_space_for(&buf, &size, &stride, image->width, image->height, 1))
-+          return CAIRO_STATUS_NO_MEMORY;
-+      data = buf;
-+      src = (uint32_t*)image->data;
-+      ilut = surface->clut->ilut;
-+      for(j=0;j<image->height;j++) {
-+          dst8 = data + j * stride;
-+          for(i=0;i<image->width;i++) {
-+              dst8[i] = ilut[ ((*src >> 16) & 0xe0) |
-+                              ((*src >> 11) & 0x1c) |
-+                              ((*src >> 6)  & 0x03) ];
-+              src++;
-+          }
-+      }
-+      alpha = red = green = blue = 0;
-+      depth = bpp = 8;
-+      break;
-+
-+    case WORKAROUND_R5G6B5:
-+      if (make_space_for(&buf, &size, &stride, image->width, image->height, 2))
-+          return CAIRO_STATUS_NO_MEMORY;
-+      data = buf;
-+      src = (uint32_t*)image->data;
-+      for(j=0;j<image->height;j++) {
-+          dst16 = (uint16_t*)(data + j * stride);
-+          for(i=0;i<image->width;i++) {
-+              dst16[i] = ( ((*src >> 8) & 0xf800) |
-+                           ((*src >> 5) & 0x07e0) |
-+                           ((*src >> 3) & 0x001f) );
-+              src++;
-+          }
-+      }
-+      alpha = 0; red = 0xf800; green = 0x07e0; blue = 0x001f;
-+      depth = bpp = 16;
-+      break;
++    } else {
++      	ximage.data = (char *)image->data;
 +    }
 +    
      ximage.width = image->width;
      ximage.height = image->height;
      ximage.format = ZPixmap;
 -    ximage.data = (char *)image->data;
-+    //ximage.data = (char *)image->data;
-+    ximage.data = data;
++    // ximage.data is assigned above
      ximage.byte_order = native_byte_order;
      ximage.bitmap_unit = 32;	/* always for libpixman */
      ximage.bitmap_bit_order = native_byte_order;
      ximage.bitmap_pad = 32;	/* always for libpixman */
 -    ximage.depth = image->depth;
 -    ximage.bytes_per_line = image->stride;
-+    //ximage.depth = image->depth;
 +    ximage.depth = depth;
-+    //ximage.bytes_per_line = image->stride;
 +    ximage.bytes_per_line = stride;
      ximage.bits_per_pixel = bpp;
      ximage.red_mask = red;
-@@ -1891,4 +2232,28 @@
+     ximage.green_mask = green;
+@@ -1890,7 +2060,13 @@ _cairo_xlib_surface_create_internal (Dis
+     surface->have_clip_rects = FALSE;
      surface->clip_rects = NULL;
      surface->num_clip_rects = 0;
 +    surface->clut = NULL;
-+    surface->workaround = WORKAROUND_NONE;
-+
-+    if (surface->xrender_format == NULL) {
-+	/* Install the correct workaround */
-+	switch (visual->class) {
-+	case StaticGray:
-+	case GrayScale:
-+	    surface->workaround = WORKAROUND_8BIT_GRAYLEVEL;
-+	    break;
-+	case PseudoColor:
-+	case StaticColor:
-+	    surface->workaround = WORKAROUND_8BIT_PALETTE;
-+	    break;
-+	case TrueColor:
-+#if 1
-+	    if (visual->red_mask   == 0xf800 &&
-+		visual->green_mask == 0x07e0 &&
-+		visual->blue_mask  == 0x001f) {
-+		surface->workaround = WORKAROUND_R5G6B5;
-+	    }
-+#endif
-+	}
-+    }
  
++    if (xrender_format == NULL && 
++      	    (visual->class == PseudoColor || visual->class == StaticColor)) {
++      	surface->clut = _get_clut_r3g3b2(dpy,
++			DefaultColormapOfScreen(surface->screen));
++    }
      return (cairo_surface_t *) surface;
+ }
+ 
