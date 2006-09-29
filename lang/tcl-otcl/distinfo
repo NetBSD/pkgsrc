@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/01/27 01:18:19 minskim Exp $
+$NetBSD: distinfo,v 1.7 2006/09/29 16:28:55 minskim Exp $
 
-SHA1 (otcl-1.11.tar.gz) = a16f4b82e98a2fa9c6ba632e772af182f47f07d4
-RMD160 (otcl-1.11.tar.gz) = 02148865a0734fe01171f0456ed89beda1f6074e
-Size (otcl-1.11.tar.gz) = 315835 bytes
-SHA1 (patch-aa) = 8f0d35abe4cef5cbc03e2db870b5a2d59219d9a8
-SHA1 (patch-ab) = 8cf77eac42d84631d19cf4e2e9fdd46b51248cc7
-SHA1 (patch-ac) = 0bfd84ebef8125de5e9a5ce32fe7a1b4855d7268
+SHA1 (otcl-src-1.12.tar.gz) = 37563fa82c88368213ec30023dbb8e97db851851
+RMD160 (otcl-src-1.12.tar.gz) = 560b19229c321511b57c2a39debfa35bc9f4d523
+Size (otcl-src-1.12.tar.gz) = 315536 bytes
+SHA1 (patch-aa) = 499fc336891fb96392614b85bac4373d7f63be65
+SHA1 (patch-ab) = 0f735f21dd2204fe37990f201ec121af4eb7b470
+SHA1 (patch-ac) = c7b11d85eecc954424993f2410cb69da1d3dff1f
