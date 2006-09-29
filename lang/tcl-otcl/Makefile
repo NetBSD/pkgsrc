@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:52 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/09/29 16:28:55 minskim Exp $
 
-DISTNAME=	otcl-1.11
-PKGNAME=	tcl-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	otcl-src-1.12
+PKGNAME=	tcl-${DISTNAME:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 
@@ -14,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 CONFIGURE_ARGS+=	V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; ${ECHO} $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}

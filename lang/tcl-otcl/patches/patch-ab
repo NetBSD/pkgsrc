@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/01/27 01:18:19 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2006/09/29 16:28:55 minskim Exp $
 
---- conf/configure.in.tcl.orig	2005-09-26 21:58:15.000000000 -0700
+--- conf/configure.in.tcl.orig	2006-09-25 05:02:37.000000000 +0000
 +++ conf/configure.in.tcl
-@@ -78,7 +78,7 @@ TCL_TCL_PLACES="../lib/tcl$TCL_HI_VERS \
+@@ -84,7 +84,7 @@ TCL_TCL_PLACES="../lib/tcl$TCL_HI_VERS \
                  $x_includes \
                  /usr/contrib/include \
                  /usr/include"
