@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1345 2006/09/29 15:17:43 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1346 2006/09/29 16:29:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4493,3 +4493,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/openssh to 4.3.2 [taca 2006-09-28]
 	Updated security/pgp2 to 2.6.3ianb1 [tron 2006-09-28]
 	Updated sysutils/bkpupsd to 2.2.1 [taca 2006-09-29]
+	Updated lang/tcl-otcl to 1.12 [minskim 2006-09-29]
