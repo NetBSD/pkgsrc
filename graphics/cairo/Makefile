@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2006/09/20 12:58:32 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2006/09/29 13:43:41 drochner Exp $
 
 DISTNAME=	cairo-1.2.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
