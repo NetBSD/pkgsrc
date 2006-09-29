@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2006/08/27 16:21:35 taca Exp $
+$NetBSD: distinfo,v 1.14 2006/09/29 15:16:50 taca Exp $
 
-SHA1 (bkpupsd-2.2.0.tar.bz2) = 20d31059d0ab8b858d9c90e781d11b1aa97407fa
-RMD160 (bkpupsd-2.2.0.tar.bz2) = afac982d0370de88c3f4ea48bfd830e2ff5fcd4f
-Size (bkpupsd-2.2.0.tar.bz2) = 33808 bytes
+SHA1 (bkpupsd-2.2.1.tar.bz2) = 23ea380ca6976e91e9e70daa7b7b500c38a75f01
+RMD160 (bkpupsd-2.2.1.tar.bz2) = 0838a096e2ab3564ad1009c690123775c27b87c5
+Size (bkpupsd-2.2.1.tar.bz2) = 33796 bytes
 SHA1 (patch-aa) = 887254791ec11c45c9acca5d3250ca43dd47c4ee
 SHA1 (patch-ab) = f17fb6b0da6d320a1adab0bec1a54c1298122c6a
 SHA1 (patch-ac) = 07b68a843f6369addaebb2ad1bb24684a734ab84
