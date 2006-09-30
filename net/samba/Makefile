@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.163 2006/09/14 16:17:43 rillig Exp $
+# $NetBSD: Makefile,v 1.164 2006/09/30 22:57:22 hira Exp $
 
 .include "Makefile.mirrors"
 
 DISTNAME=		samba-3.0.22
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 DIST_SUBDIR=		${DISTNAME}
@@ -81,6 +81,11 @@ PLIST_SUBST+=		SMBMOUNT="@comment "
 # a full dependency since it's not actually needed by samba.
 #
 USE_TOOLS+=		mktemp
+
+# findsmb uses perl
+#
+USE_TOOLS+=		perl:run
+REPLACE_PERL=		source/script/findsmb.in
 
 .if !defined(PWD_MKDB)
 PWD_MKDB!=	${TYPE} pwd_mkdb 2>&1 | \
