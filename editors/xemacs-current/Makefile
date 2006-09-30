@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/09/06 15:38:32 tron Exp $
+# $NetBSD: Makefile,v 1.56 2006/09/30 12:24:45 obache Exp $
 
 DISTNAME=	xemacs-21.5.27
 
@@ -7,14 +7,14 @@ MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.5/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xemacs.org/
-COMMENT=	*BETA* XEmacs text editor version 21.5.19
+COMMENT=	*BETA* XEmacs text editor version 21.5.27
 
 CONFLICTS+=	gnuclient-[0-9]*
 
 
 BUILD_DEFS+=	XEMACS_WIDGETS
-PLIST_SUBST+=	EMACSVER=xemacs-21.5-b19
-MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b19
+PLIST_SUBST+=	EMACSVER=xemacs-21.5-b27
+MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b27
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
