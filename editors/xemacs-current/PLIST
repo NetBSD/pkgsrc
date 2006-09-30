@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/03/20 18:21:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/09/30 12:25:39 obache Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -79,9 +79,11 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extw-Xlib.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extw-Xt.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/faces.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/file-coding.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/font-mgr.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frame-impl.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frame.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frameslots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gc.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gccache-gtk.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/general-slots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/getpagesize.h
@@ -211,6 +213,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/wicat.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/windowsnt.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/xps100.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/macros.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mc-alloc.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mem-limits.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/miscplay.h
@@ -380,6 +383,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/toolbar.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/tooltalk.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ui-gtk.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/universe.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/vdb.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/window-impl.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/window.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/winslots.h
@@ -411,6 +415,7 @@ lib/${EMACSVER}/etc/InstallGuide
 lib/${EMACSVER}/etc/NEWS
 lib/${EMACSVER}/etc/ONEWS
 lib/${EMACSVER}/etc/OONEWS
+lib/${EMACSVER}/etc/PROBLEMS
 lib/${EMACSVER}/etc/README
 lib/${EMACSVER}/etc/TUTORIAL
 lib/${EMACSVER}/etc/TUTORIAL.cs
@@ -1007,6 +1012,10 @@ lib/${EMACSVER}/lisp/font.el
 lib/${EMACSVER}/lisp/font.elc
 lib/${EMACSVER}/lisp/fontl-hooks.el
 lib/${EMACSVER}/lisp/fontl-hooks.elc
+lib/${EMACSVER}/lisp/font-mgr.el
+lib/${EMACSVER}/lisp/font-mgr.elc
+lib/${EMACSVER}/lisp/fontconfig.el
+lib/${EMACSVER}/lisp/fontconfig.elc
 lib/${EMACSVER}/lisp/format.el
 lib/${EMACSVER}/lisp/format.elc
 lib/${EMACSVER}/lisp/frame.el
@@ -1235,10 +1244,14 @@ lib/${EMACSVER}/lisp/mwheel.el
 lib/${EMACSVER}/lisp/mwheel.elc
 lib/${EMACSVER}/lisp/newcomment.el
 lib/${EMACSVER}/lisp/newcomment.elc
+lib/${EMACSVER}/lisp/next-error.el
+lib/${EMACSVER}/lisp/next-error.elc
 lib/${EMACSVER}/lisp/objects.el
 lib/${EMACSVER}/lisp/objects.elc
 lib/${EMACSVER}/lisp/obsolete.el
 lib/${EMACSVER}/lisp/obsolete.elc
+lib/${EMACSVER}/lisp/occur.el
+lib/${EMACSVER}/lisp/occur.elc
 lib/${EMACSVER}/lisp/package-admin.el
 lib/${EMACSVER}/lisp/package-admin.elc
 lib/${EMACSVER}/lisp/package-get.el
