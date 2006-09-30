@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1348 2006/09/29 23:40:04 cube Exp $
+>$NetBSD: CHANGES-2006,v 1.1349 2006/09/30 04:21:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4496,3 +4496,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/tcl-otcl to 1.12 [minskim 2006-09-29]
 	Updated multimedia/RealPlayerGold to 10.0.8.805.20060718 [dmcmahill 2006-09-29]
 	Updated devel/rt3 to 3.4.5nb3 [cube 2006-09-29]
+	Updated security/openssl to 0.9.7inb3 [taca 2006-09-30]
