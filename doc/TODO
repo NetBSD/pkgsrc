@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5485 2006/09/29 18:04:21 wiz Exp $
+$NetBSD: TODO,v 1.5486 2006/09/30 12:02:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -1234,7 +1234,6 @@ Suggested package updates
 	o xdialog-2.3.1
 	o xdx-2.0
 	o xemacs-21.4.19
-	o xemacs-current-21.5.22
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.8.1
 	o xeukleides-1.0.1
