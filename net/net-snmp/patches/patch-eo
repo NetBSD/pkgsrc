@@ -1,0 +1,13 @@
+$NetBSD: patch-eo,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- snmplib/md5.c.orig	2004-04-19 22:09:07.000000000 +0000
++++ snmplib/md5.c
+@@ -465,7 +465,7 @@ MDsign(u_char * data, size_t len, u_char
+         goto update_end;
+ 
+     i = len;
+-    if (((unsigned int) data) % sizeof(long) != 0) {
++    if (((unsigned long) data) % sizeof(int) != 0) {
+         /*
+          * this relies on the ability to use integer math and thus we
+          * must rely on data that aligns on 32-bit-word-boundries 
