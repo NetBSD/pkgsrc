@@ -1,24 +1,19 @@
-$NetBSD: patch-ab,v 1.3 2006/05/06 22:38:28 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2006/10/01 14:25:23 taca Exp $
 
---- Dependencies/ZConfig-Zope-3.2.1/ZConfig/scripts/zconfig_schema2html.orig	2006-04-28 09:02:23.000000000 +0900
-+++ Dependencies/ZConfig-Zope-3.2.1/ZConfig/scripts/zconfig_schema2html
-@@ -17,5 +17,18 @@
- 
-+import sys
-+import os
-+import cgi
-+
-+if __name__ == "__main__":
+--- Dependencies/zdaemon-Zope-3.3.0/zdaemon/zdrun.py.orig	2006-09-21 19:40:21.000000000 +0900
++++ Dependencies/zdaemon-Zope-3.3.0/zdaemon/zdrun.py
+@@ -83,6 +83,14 @@ if __name__ == "__main__":
+     scriptdir = dirname(normpath(abspath(sys.argv[0])))
+     if basename(scriptdir).lower() == "zdaemon":
+         sys.path.append(dirname(scriptdir))
 +    here = os.path.dirname(os.path.realpath(__file__))
 +    swhome = os.path.dirname(here)
 +    for parts in [("src",), ("lib", "python"), ("Lib", "site-packages")]:
-+        d = os.path.join(swhome, *(parts + ("ZConfig",)))
++        d = os.path.join(swhome, *(parts + ("zdaemon",)))
 +        if os.path.isdir(d):
 +            d = os.path.join(swhome, *parts)
 +            sys.path.insert(0, d)
 +            break
-+
- import ZConfig.loader
- from ZConfig.info import *
--import sys, cgi
+ 
+ from zdaemon.zdoptions import RunnerOptions
  
