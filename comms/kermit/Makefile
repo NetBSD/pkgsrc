@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.68 2006/10/01 14:16:21 rillig Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -17,9 +17,10 @@ LICENSE=	kermit-license
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 BUILD_DEFS+=	KFLAGS LIBS MANINSTALL
-MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:M*:Q}
+MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
 MAKE_ENV+=	SSLINC=${SSLINC:Q} SSLLIB=${SSLLIB:Q}
 MAKE_FILE=	makefile
+USE_TOOLS+=	nroff
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 
@@ -41,12 +42,12 @@ PLIST_SUBST+=	HAVE_MANPAGE="@comment "
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/kermit
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kermit
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/kermit
+	set -e; \
 	for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
 	  case $$OPT in \
 	    catinstall) \
@@ -61,18 +62,18 @@ do-install:
 	  esac; \
 	done
 
-.for __tmp__ in NetBSD-1.3*
-.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-LIBS+=          -ltermcap
-.endif
+.for p in NetBSD-1.3*
+.  if ${MACHINE_PLATFORM:M${p}} != ""
+LIBS+=		-ltermcap
+.  endif
 .endfor
 
 .if ${OPSYS} == "Darwin"
-.if empty(OS_VERSION:M[0-6]\.*)
+.  if empty(OS_VERSION:M[0-6]\.*)
 BUILD_TARGET=	macosx103
-.else
+.  else
 BUILD_TARGET=	macosx10
-.endif
+.  endif
 .elif ${OPSYS} == "Linux"
 BUILD_TARGET=	linux
 .else
