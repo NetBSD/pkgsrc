@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.3 2006/10/01 08:55:32 schwarz Exp $
+
+--- pkg.c.orig	2006-09-19 01:21:12.000000000 +0200
++++ pkg.c	2006-09-19 01:21:50.000000000 +0200
+@@ -58,11 +58,11 @@
+ gboolean ignore_private_libs = TRUE;
+ 
+ static Package pkg_config_package = {
+-  .key = PACKAGE,
+-  .name = PACKAGE,
+-  .version = VERSION, /* .version */
+-  .description = "returns metainformation about installed libraries",
+-  .url = "http://pkg-config.freedesktop.org",
++  PACKAGE,
++  PACKAGE,
++  VERSION, /* .version */
++  "returns metainformation about installed libraries",
++  "http://pkg-config.freedesktop.org",
+   0 /* keep the rest as null */
+ };
+ 
