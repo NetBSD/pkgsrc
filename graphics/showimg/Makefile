@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/05/14 16:19:45 seb Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/01 14:40:12 rillig Exp $
 #
 
 DISTNAME=	showimg-0.9.4-1
 PKGNAME=	showimg-0.9.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	kde graphics x11
 MASTER_SITES=	http://www.jalix.org/projects/showimg/download/0.9.4-1/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,8 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://www.jalix.org/projects/showimg/
 COMMENT=	Feature-rich image viewer for KDE including an image management system
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config perl:run
+REPLACE_PERL+=	showimg/misc/convert2png.pl
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
