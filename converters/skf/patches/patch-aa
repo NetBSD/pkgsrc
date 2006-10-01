@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2006/09/01 14:04:41 obache Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/01 15:09:15 obache Exp $
 
---- Makefile.in.orig	2005-12-11 19:16:14.000000000 +0900
+--- Makefile.in.orig	2006-09-28 23:23:55.000000000 +0900
 +++ Makefile.in
-@@ -36,6 +36,7 @@ mandir = @mandir@
+@@ -38,6 +38,7 @@ mandir = @mandir@
  includedir = @includedir@
  oldincludedir = /usr/include
  LSKFDIR = @lskfdir@
@@ -10,21 +10,22 @@ $NetBSD: patch-aa,v 1.2 2006/09/01 14:04:41 obache Exp $
  
  DESTDIR =
  
-@@ -47,9 +48,9 @@ DOCDIR		= $(datadir)/doc/@PACKAGE@
+@@ -52,10 +53,10 @@ DOCDIR		= $(datadir)/doc/@PACKAGE@
  LSFMANDIR	= $(datadir)/man
  MANCJDIR	= $(LSFMANDIR)/ja
  MANDIR		= $(mandir)/man1
--JMANDIR		= $(mandir)/ja/man1
+-JOMANDIR	= $(mandir)/ja/man1
++JOMANDIR	= $(mandir)/ja_JP.EUC/man1
+ JMANDIR		= $(mandir)/ja_JP.UTF-8/man1
 -LOCALEDIR	= @localedir@
--LOCALEJDIR	= @localedir@/ja/LC_MESSAGES
-+JMANDIR		= $(mandir)/ja_JP.EUC/man1
+-LOCALEJDIR	= "$(LOCALEDIR)/ja/LC_MESSAGES"
 +LOCALEDIR	= $(localedir)
-+LOCALEJDIR	= $(localedir)/ja/LC_MESSAGES
- #GETTEXT_LIB	      = -lintl
++LOCALEJDIR	= "$(localedir)/ja/LC_MESSAGES"
  
- #
-@@ -95,8 +96,7 @@ CC = @CC@
- #SUBDIRS = perlxs
+ PERL_DEST_DIR	= @perl_sitearch_dir@
+ RUBY_DEST_DIR	= @ruby_sitearch_dir@
+@@ -92,8 +93,7 @@ CC = @CC@
+ 
  SUBDIRS = 
  
 -#CPPFLAGS = -DLOCALEDIR=\""$(localedir)"\"
@@ -33,21 +34,12 @@ $NetBSD: patch-aa,v 1.2 2006/09/01 14:04:41 obache Exp $
  mkinstalldirs = $(SHELL) $(top_srcdir)/scripts/mkinstalldirs
  CONFIG_HEADER = config.h
  CONFIG_CLEAN_FILES = 
-@@ -105,7 +105,7 @@ CONFIG_CLEAN_FILES = 
- # To enable this feature, you must have GNU gettext. It does not
- # work with catgets. To enable locale, you must define HAVE_GETENV,
- # too. Under WIN32 environemt, DEF6 is automatically disabled.
--#DEF6		= -DUSE_LOCALE
-+DEF6		= -DUSE_LOCALE
- 
- # Some Hacks. Will be fixed in later release, hopefully.
- DEF8		= -DUSE_UBUF
-@@ -166,7 +166,7 @@ DEP_FILES =  .deps/skf.P
+@@ -160,7 +160,7 @@ DEP_FILES =  .deps/skf.P
  #
  # commands
  #
 -MSGFMT		= /usr/bin/msgfmt
 +MSGFMT		= @MSGFMT@
- #SED		= ${SKFSED}
  SED		= @SKFSED@
  MKDIR           = mkdir
+ CHMOD		= chmod
