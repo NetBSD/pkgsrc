@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2005/11/23 06:20:36 minskim Exp $
+$NetBSD: patch-af,v 1.2 2006/10/01 07:48:38 obache Exp $
 
---- ruby/Makefile.in.orig	2004-05-12 20:36:57.000000000 +0900
+--- ruby/Makefile.in.orig	2006-09-06 12:37:33.000000000 +0900
 +++ ruby/Makefile.in
 @@ -21,7 +21,7 @@ MYDOCS = rbspex.html rbspex-ja.html rbap
  prefix = @prefix@
@@ -30,7 +30,7 @@ $NetBSD: patch-af,v 1.1 2005/11/23 06:20:36 minskim Exp $
  uninstall :
 -	pprefix=`ruby -e '$$:.each() do |path| ; printf("%s\n", path) ; end' | grep -v '^\.'` ; \
 +	pprefix=`${RUBY} -e '$$:.each() do |path| ; printf("%s\n", path) ; end' | grep -v '^\.'` ; \
- 	  find $$pprefix | sort | uniq | \
+ 	  find $$pprefix -print | sort | uniq | \
  	  egrep '(mod_depot\.so|depot\.rb|mod_curia\.so|curia\.rb|mod_villa\.so|villa\.rb)' | \
  	  xargs rm -f
 @@ -85,27 +85,27 @@ check :
