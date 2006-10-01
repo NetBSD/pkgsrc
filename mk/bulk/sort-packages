@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.3 2006/08/01 07:50:04 rillig Exp $
+# $NetBSD: sort-packages,v 1.4 2006/10/01 14:54:16 rillig Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -90,7 +90,7 @@ for pkg in *${PKG_SUFX}; do
 		echo "${pkg}" >> "${restricted_packages}"
 		;;
 	*)
-		echo "upload> WARNING: Could not sort ${pkg} into a category." 1>&2
+		echo "sort-packages> WARNING: Could not sort ${pkg} into a category." 1>&2
 		;;
 	esac
 done
