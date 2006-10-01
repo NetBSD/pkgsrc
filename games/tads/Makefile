@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:57 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/01 21:04:14 dillo Exp $
 #
 
 DISTNAME=	tads23-unix
 PKGNAME=	tads-3.0.8
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.tads.org/t3dl/
 
@@ -13,7 +14,7 @@ COMMENT=	TADS compiler and interpreter
 # for other OSs, enable appropriate Makefile sections
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	${PKGNAME_NOREV}-1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 BUILD_DIRS=	${WRKSRC}/tads2 ${WRKSRC}/tads3
