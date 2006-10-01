@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5490 2006/10/01 10:40:27 adam Exp $
+$NetBSD: TODO,v 1.5491 2006/10/01 12:15:37 obache Exp $
 
 Suggested new packages
 ======================
@@ -269,6 +269,7 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
+	o ImageMagick-6.2.9.7
 	o MesaLib-6.5
 	o PAM-0.80
 	o REminiscence-0.1.8
@@ -1079,7 +1080,7 @@ Suggested package updates
 	o rt3-3.6.1
 	o rtcw-1.41.3
 	o ruby-1.8.5
-	o ruby-RMagick-1.14.0
+	o ruby-RMagick-1.14.0 [requires ImageMagick>=6.2.9.7]
 	o ruby-cmd-0.8.0
 	o sablecc-3.2
 	o samba-3.0.23c
