@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/12 17:37:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/01 07:48:38 obache Exp $
 bin/xdptest
 bin/xcrtest
 bin/xvltest
@@ -8,8 +8,8 @@ include/xdepot.h
 include/xcuria.h
 include/xvilla.h
 lib/libxqdbm.a
-lib/libxqdbm.so.2.0.0
-lib/libxqdbm.so.2
+lib/libxqdbm.so.3.0.0
+lib/libxqdbm.so.3
 lib/libxqdbm.so
 share/doc/qdbm/plus/xspex.html
 share/doc/qdbm/plus/xspex-ja.html
