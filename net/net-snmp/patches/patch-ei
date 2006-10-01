@@ -1,0 +1,13 @@
+$NetBSD: patch-ei,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- agent/mibgroup/util_funcs.c.orig	2005-12-05 12:15:27.000000000 +0000
++++ agent/mibgroup/util_funcs.c
+@@ -237,7 +237,7 @@ get_exec_output(struct extensible *ex)
+ #if HAVE_EXECV
+     char            cachefile[STRMAX];
+     char            cache[MAXCACHESIZE];
+-    ssize_t         cachebytes;
++    int             cachebytes;
+     int             cfd;
+ #ifdef EXCACHETIME
+     long            curtime;

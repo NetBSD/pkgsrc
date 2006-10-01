@@ -1,0 +1,13 @@
+$NetBSD: patch-ep,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- snmplib/scapi.c.orig	2006-01-30 12:08:15.000000000 +0000
++++ snmplib/scapi.c
+@@ -272,7 +272,7 @@ sc_generate_keyed_hash(const oid * autht
+ 
+     u_char          buf[SNMP_MAXBUF_SMALL];
+ #if  defined(USE_OPENSSL) || defined(USE_PKCS)
+-    size_t             buf_len = sizeof(buf);
++    unsigned int    buf_len = sizeof(buf);
+ #endif
+ 
+     DEBUGTRACE;
