@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2003/12/23 23:57:16 pooka Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/01 14:47:43 rillig Exp $
 
---- mzscheme/Makefile.in.orig	2003-06-21 04:19:52.000000000 +0300
-+++ mzscheme/Makefile.in	2003-12-24 01:41:08.000000000 +0200
+--- src/mzscheme/Makefile.in.orig	2003-06-21 04:19:52.000000000 +0300
++++ src/mzscheme/Makefile.in	2003-12-24 01:41:08.000000000 +0200
 @@ -240,12 +240,6 @@
  	cd ..; cp mzscheme/mzdyn.o $(LIBIDIR)/mzdyn.o
  	cd ..; $(ICP) mzscheme/libmzgc.@LIBSFX@ $(LIBIDIR)/libmzgc.@LIBSFX@
