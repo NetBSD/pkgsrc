@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5489 2006/10/01 10:29:29 adam Exp $
+$NetBSD: TODO,v 1.5490 2006/10/01 10:40:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -921,7 +921,6 @@ Suggested package updates
 	o p5-prefork-1.01 [pkg/34366]
 	o p5-sybperl-2.18
 	o p5-version-6701 [pkg/34373]
-	o p7zip-4.43
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
