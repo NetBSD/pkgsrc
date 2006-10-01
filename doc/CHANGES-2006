@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1361 2006/10/01 14:29:44 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1362 2006/10/01 15:10:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4513,3 +4513,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/arena version 0.9.7 [agc 2006-10-01]
 	Updated www/zope3 to 3.3.0 [taca 2006-10-01]
 	Updated games/gogui to 0.9.1 [rillig 2006-10-01]
+	Updated converters/skf to 1.94.0 [obache 2006-10-01]
