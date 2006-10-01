@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5486 2006/09/30 12:02:27 obache Exp $
+$NetBSD: TODO,v 1.5487 2006/10/01 07:53:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ Suggested package updates
 	o python-2.5
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qdbm-1.8.71
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2

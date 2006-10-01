@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1354 2006/10/01 07:46:58 dsainty Exp $
+>$NetBSD: CHANGES-2006,v 1.1355 2006/10/01 07:53:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4502,3 +4502,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cpuflags to 1.03 [dmcmahill 2006-09-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2006Q3 branch [agc 2006-10-01]
 	Updated mail/nmh to 1.0.4nb7 [dsainty 2006-10-01]
+        Updated databases/qdbm to 1.8.71 [obache 2006-10-01]
+        Updated databases/ruby-qdbm to 1.0.0.1.8.71 [obache 2006-10-01]
+        Updated databases/p5-qdbm to 1.0.0.1.8.71 [obache 2006-10-01]
+        Updated databases/qdbm-cgi to 0.0.1.1.8.71 [obache 2006-10-01]
+        Updated databases/qdbm-plus to 1.0.0.1.8.71 [obache 2006-10-01]
