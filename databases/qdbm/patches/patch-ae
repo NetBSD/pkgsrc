@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2005/11/23 06:20:36 minskim Exp $
+$NetBSD: patch-ae,v 1.2 2006/10/01 07:48:38 obache Exp $
 
---- plus/Makefile.in.orig	2005-08-18 05:18:11.000000000 +0900
+--- plus/Makefile.in.orig	2006-08-24 15:23:13.000000000 +0900
 +++ plus/Makefile.in
-@@ -34,12 +34,12 @@ exec_prefix = @exec_prefix@
+@@ -34,24 +34,24 @@ exec_prefix = @exec_prefix@
  MYHEADDIR = @includedir@
  MYLIBDIR = @libdir@
  MYBINDIR = @bindir@
@@ -12,19 +12,25 @@ $NetBSD: patch-ae,v 1.1 2005/11/23 06:20:36 minskim Exp $
  
  # Building binaries
  CXX = @CXX@
--RELCXXFLAGS = -O1 -DNDEBUG
-+RELCXXFLAGS = -O1 -DNDEBUG ${PTHREAD_CFLAGS}
- CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include \
+-CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
++CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. @MYDEFS@ \
    -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
    -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
-@@ -47,8 +47,8 @@ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I
- CXXFLAGS = -Wall -ansi -pedantic -fsigned-char -fPIC $(RELCXXFLAGS)
+   -DPIC=1 -D_THREAD_SAFE=1 -D_REENTRANT=1 -DNDEBUG
+-CXXFLAGS = -Wall -ansi -pedantic -fsigned-char -fPIC -O2 -fno-strict-aliasing @MYOPTS@
++CXXFLAGS = ${PTHREAD_CFLAGS} -Wall -ansi -pedantic -fsigned-char -fPIC -O2 -fno-strict-aliasing @MYOPTS@
  LD = @LD@
  LIBS = -lqdbm @LIBS@
 -LIBLDFLAGS = -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
 -LDFLAGS = -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib -lxqdbm $(LIBS)
-+LIBLDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
-+LDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib -lxqdbm $(LIBS)
- LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(MYLIBDIR)
+-LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(MYLIBDIR)
++LIBLDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. $(LIBS)
++LDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -lxqdbm $(LIBS)
++LDENV = LD_RUN_PATH=/lib:/usr/lib:$(MYLIBDIR)
  AR = @AR@
  ARFLAGS = rcsv
+-RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/lib:$(HOME)/lib:/usr/local/lib
++RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/lib
+ 
+ 
+ 
