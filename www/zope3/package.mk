@@ -1,7 +1,7 @@
-# $NetBSD: package.mk,v 1.2 2006/05/06 22:38:28 wiz Exp $
+# $NetBSD: package.mk,v 1.3 2006/10/01 14:25:23 taca Exp $
 #
 
-DEPENDS+=		zope3>=3.2.1:../../www/zope3
+DEPENDS+=		zope3>=3.3.0:../../www/zope3
 
 .include "Makefile.common"
 

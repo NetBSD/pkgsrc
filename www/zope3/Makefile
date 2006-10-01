@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2006/05/06 22:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/01 14:25:23 taca Exp $
 #
 
-DISTNAME=		Zope-3.2.1
-PKGNAME=		zope3-3.2.1
+DISTNAME=		Zope-3.3.0
+PKGNAME=		zope3-3.3.0
 CATEGORIES=		www
-MASTER_SITES=		http://www.zope.org/Products/Zope3/3.2.1/
+MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.0/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ykomatsu@akaumigame.org
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 EXTRACT_USING=		gtar
 .endif
 
+BUILD_DEFS+=		VARBASE ZOPE3_GROUP ZOPE3_USER
 BUILD_TARGET=		build
 
 RCD_SCRIPTS=		zope3 zss3
@@ -44,10 +45,9 @@ post-install:
 	${LN} -s ${ZOPE3_DIR}/bin/mkzopeinstance ${PREFIX}/bin
 	${LN} -s ${ZOPE3_DIR}/bin/zopetest ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${ZOPE3_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Zope/LICENSES.txt ${ZOPE3_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Zope/ZopePublicLicense.txt ${ZOPE3_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Zope/doc/*.txt ${ZOPE3_DOCDIR}
-	${ECHO} "3.2.1" > ${ZOPE3_DIR}/lib/python/zope/app/version.txt
+	cd ${WRKSRC}/Zope && ${PAX} -r -w LICENSES.txt ZopePublicLicense.txt \
+		${ZOPE3_DOCDIR}
+	cd ${WRKSRC}/Zope/doc && ${PAX} -r -w *.txt ${ZOPE3_DOCDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
