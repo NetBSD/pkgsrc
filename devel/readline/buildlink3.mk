@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.25 2006/07/08 23:10:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2006/10/01 14:23:20 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	readline
@@ -29,6 +27,7 @@ BUILDLINK_TRANSFORM.readline+= \
 # when testing for -lreadline.  If BROKEN_READLINE_DETECTION is set to
 # "yes", then automatically add the right one.
 #
+.  include "../../mk/bsd.prefs.mk"
 BROKEN_READLINE_DETECTION?=	no
 .  if !empty(BROKEN_READLINE_DETECTION:M[yY][eE][sS])
 BUILDLINK_RL_TERMLIB.Linux=	curses
