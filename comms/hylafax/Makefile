@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.53 2006/05/15 19:02:47 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2006/10/01 14:00:12 rillig Exp $
 
 VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
 PKGREVISION=	3
 CATEGORIES=	comms
 MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
-MASTER_SITES_RELEASE=   ftp://ftp.hylafax.org/source/ \
-                ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
-MASTER_SITES=   ${MASTER_SITES_RELEASE}
+MASTER_SITES_RELEASE=	ftp://ftp.hylafax.org/source/ \
+	ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
+MASTER_SITES=	${MASTER_SITES_RELEASE}
 
 MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://www.hylafax.org/
@@ -17,6 +17,8 @@ DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 CONFLICTS=	hylafax-devel-[0-9]* mgetty-[0-9]*
 
+BUILD_DEFS+=	FAXUSER FAXGROUP VARBASE
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gs:run
 HAS_CONFIGURE=		yes
@@ -24,7 +26,7 @@ CONFIGURE_ARGS+=	--with-MAKE=${MAKE_PROGRAM:Q}
 CONFIGURE_ARGS+=	--with-INSTALL="" --nointeractive
 CONFIGURE_ARGS+=	--with-ZLIBINC=-I${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-LIBZ="-L${BUILDLINK_PREFIX.zlib}/lib -lz"
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} OPTIMIZER=${CFLAGS:M*:Q}
+CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} OPTIMIZER=${CFLAGS:Q}
 CONFIGURE_ENV+=		FAXUID=${FAXUSER:Q} FAXGID=${FAXGROUP:Q}
 CONFIGURE_ENV+=		VARBASE=${VARBASE:Q}
 MANCOMPRESSED=		yes
@@ -36,8 +38,8 @@ RCD_SCRIPTS=	hylafax
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
 		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
 
-PKG_OPTIONS_VAR=      PKG_OPTIONS.hylafax
-PKG_SUPPORTED_OPTIONS=        pam
+PKG_OPTIONS_VAR=	PKG_OPTIONS.hylafax
+PKG_SUPPORTED_OPTIONS=	pam
 #pam doesn't work right now, so disabled by default
 #PKG_SUGGESTED_OPTIONS=       pam
 .include "../../mk/bsd.options.mk"
@@ -49,8 +51,8 @@ CONFIGURE_ARGS+=	--disable-pam
 .endif
 
 post-install:
-	${CHOWN} ${FAXUSER} ${SUID_EXES}
-	${CHMOD} 4555 ${SUID_EXES}
+	chown ${FAXUSER} ${SUID_EXES}
+	chmod 4555 ${SUID_EXES}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
