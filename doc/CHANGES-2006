@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1360 2006/10/01 14:26:19 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1361 2006/10/01 14:29:44 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4512,3 +4512,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/p7zip to 4.43 [adam 2006-10-01]
 	Added devel/arena version 0.9.7 [agc 2006-10-01]
 	Updated www/zope3 to 3.3.0 [taca 2006-10-01]
+	Updated games/gogui to 0.9.1 [rillig 2006-10-01]
