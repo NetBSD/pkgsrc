@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/27 17:56:09 reed Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/01 10:37:14 schwarz Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	2
@@ -35,5 +35,10 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/mini_httpd.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_MAN} ${WRKSRC}/htpasswd.1 ${PREFIX}/${PKGMANDIR}/man1/mhtpasswd.1
 
+.if !empty(LOWER_OPSYS:Mirix5*)
+# needs snprintf()
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+MAKE_ENV+=	LDLIBS=${BUILDLINK_LDADD.libnbcompat:Q}
+.endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
