@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/06/18 07:04:15 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2006/10/01 13:38:33 rillig Exp $
 #
 
 DISTNAME=	cpio-2.6
@@ -27,11 +27,9 @@ CONFIGURE_ENV+=	gt_cv_func_gnugettext1_libintl=yes
 
 LIBS.NetBSD+=	-lgnumalloc
 
-.if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
-.endif
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
