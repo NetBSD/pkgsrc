@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/11/23 06:20:36 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2006/10/01 07:48:38 obache Exp $
 
---- perl/Makefile.in.orig	2005-06-19 08:12:23.000000000 +0900
+--- perl/Makefile.in.orig	2006-09-06 12:37:15.000000000 +0900
 +++ perl/Makefile.in
-@@ -21,7 +21,7 @@ MYDOCS = plspex.html plspex-ja.html plap
+@@ -21,16 +21,16 @@ MYDOCS = plspex.html plspex-ja.html plap
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  MYBINDIR = @bindir@
@@ -11,6 +11,18 @@ $NetBSD: patch-ab,v 1.1 2005/11/23 06:20:36 minskim Exp $
  DESTDIR =
  
  # Building binaries
+ CC = gcc
+-INC = -I. -I../.. -I$(HOME)/include -I/usr/local/include
++INC = -I. -I../..
+ OPTIMIZE = -O2
+ LD = ld
+-LIBS = -L../.. -I$(HOME)/lib -L/usr/local/lib -lqdbm @LIBS@
+-RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib:$(HOME)/lib
++LIBS = -L../.. -lqdbm @LIBS@
++RUNENV = LD_LIBRARY_PATH=.:..:../..
+ 
+ 
+ 
 @@ -42,15 +42,15 @@ RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr
  all :
  	cd depot && [ -f Makefile ] || \

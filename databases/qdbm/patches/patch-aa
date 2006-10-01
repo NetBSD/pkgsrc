@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/09/03 02:56:00 obache Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/01 07:48:38 obache Exp $
 
---- Makefile.in.orig	2006-08-21 00:17:27.000000000 +0900
+--- Makefile.in.orig	2006-08-24 11:56:03.000000000 +0900
 +++ Makefile.in
 @@ -45,7 +45,7 @@ MYLIBDIR = @libdir@
  MYBINDIR = @bindir@
@@ -11,14 +11,16 @@ $NetBSD: patch-aa,v 1.4 2006/09/03 02:56:00 obache Exp $
  MYPCDIR = @libdir@/pkgconfig
  DESTDIR =
  
-@@ -58,8 +58,8 @@ CPPFLAGS = -I$(srcdir) -I$(HOME)/include
+@@ -58,9 +58,9 @@ CPPFLAGS = -I$(srcdir) -I$(HOME)/include
  CFLAGS = -Wall -pedantic -fPIC -fsigned-char -O3 -fomit-frame-pointer -fforce-addr @MYOPTS@
  LD = @LD@
  LIBS = -lqdbm @LIBS@
 -LIBLDFLAGS = -L. -L$(HOME)/lib -L/usr/local/lib @LIBS@
 -LDFLAGS = -L. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
-+LIBLDFLAGS = @LDFLAGS@ -L. -L$(HOME)/lib -L/usr/local/lib @LIBS@
-+LDFLAGS = @LDFLAGS@ -L. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
- LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(MYLIBDIR)
+-LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(MYLIBDIR)
++LIBLDFLAGS = @LDFLAGS@ -L. @LIBS@
++LDFLAGS = @LDFLAGS@ -L. $(LIBS)
++LDENV = LD_RUN_PATH=/lib:/usr/lib:$(MYLIBDIR)
  AR = @AR@
  ARFLAGS = rcsv
+ RUNENV = LD_LIBRARY_PATH=.:/lib:/usr/lib:$(HOME)/lib:/usr/local/lib
