@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1351 2006/09/30 22:58:47 hira Exp $
+>$NetBSD: CHANGES-2006,v 1.1352 2006/10/01 01:02:33 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4499,3 +4499,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/openssl to 0.9.7inb3 [taca 2006-09-30]
 	Updated www/opera to 9.02 [jdolecek 2006-09-30]
 	Updated net/samba to 3.0.22nb3 [hira 2006-09-30]
+	Updated devel/cpuflags to 1.03 [dmcmahill 2006-09-30]
