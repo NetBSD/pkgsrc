@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/10 22:59:26 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/01 13:52:17 rillig Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -18,12 +18,10 @@ CONFIGURE_ARGS+=	--with-matlab
 CONFIGURE_ARGS+=	--without-octave
 CONFIGURE_ARGS+=	--without-scilab
 
-post-patch:
-	${MV} ${WRKSRC}/mex-wcalc/mexopts.sh.in \
-		${WRKSRC}/mex-wcalc/mexopts.sh.in.orig
-	${SED} 's;\.\./libwcalc;${BUILDLINK_DIR}/lib;g' \
-		${WRKSRC}/mex-wcalc/mexopts.sh.in.orig \
-		> ${WRKSRC}/mex-wcalc/mexopts.sh.in
+SUBST_CLASSES+=		mwc
+SUBST_STAGE.mwc=	post-patch
+SUBST_FILES.mwc=	mex-wcalc/mexopts.sh.in
+SUBST_SED.mwc=		-e 's;\.\./libwcalc;${BUILDLINK_DIR}/lib;g'
 
 # This depends on an installation of Matlab which pkgsrc does
 # not have.  We should find a sane way to deal with this.  It is
@@ -50,15 +48,15 @@ DEF_MATLAB_ARCH=	unknown
 DEF_MATLAB_MEX=	mex
 DEF_MEX_SUFX=	unknown
 .if ${OPSYS} == "Linux"
-. if (${MACHINE_ARCH} == "i386")
+.  if (${MACHINE_ARCH} == "i386")
 DEF_MATLAB_ARCH=	glnx86
 DEF_MEX_SUFX=	mexglx
-. endif
+.  endif
 .elif ${OPSYS} == "SunOS"
-. if (${MACHINE_ARCH} == "sparc")
+.  if (${MACHINE_ARCH} == "sparc")
 DEF_MATLAB_ARCH=	sol2
 DEF_MEX_SUFX=	mexsol
-. endif
+.  endif
 .endif
 MATLAB_ARCH?=	${DEF_MATLAB_ARCH}
 MEX_SUFX?=	${DEF_MEX_SUFX}
