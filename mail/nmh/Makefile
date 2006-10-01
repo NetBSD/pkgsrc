@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2005/12/29 06:21:51 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2006/10/01 07:34:16 dsainty Exp $
 
 DISTNAME=		nmh-1.0.4
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mhost.com/pub/nmh/ \
 			ftp://ftp.gw.com/pub/unix/mail/mh/nmh/
@@ -12,6 +12,9 @@ COMMENT=		Cleaned up MH mailer suite
 
 CONFLICTS=		ja-mh-[0-9]*
 CONFLICTS+=		ja-mh6-[0-9]*
+
+# Avoids SEGV in nmh's private version of strcasecmp() under gcc4
+CFLAGS+=		-O1
 
 # We choose DOT_LOCKING in our patches because ".lock" files are
 # the most common locking mechanism supported by mail software.
