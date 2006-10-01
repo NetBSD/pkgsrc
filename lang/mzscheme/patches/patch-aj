@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.3 2003/12/23 23:57:16 pooka Exp $
+$NetBSD: patch-aj,v 1.4 2006/10/01 14:47:43 rillig Exp $
 
---- ../collects/slibinit/init.ss.orig	2003-12-21 21:02:43.000000000 +0100
-+++ ../collects/slibinit/init.ss
+--- collects/slibinit/init.ss.orig	2003-12-21 21:02:43.000000000 +0100
++++ collects/slibinit/init.ss
 @@ -55,7 +55,7 @@
  			       [(base name dir?) (split-path base)])
  		   (and (string? base) base))))
