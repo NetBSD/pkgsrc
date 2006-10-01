@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2006/10/01 11:34:24 tron Exp $
 
 DISTNAME=		inn-2.4.3
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
 
-MAINTAINER=		tron@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.isc.org/inn.html
 COMMENT=		The public release of InterNet News (INN)
 
