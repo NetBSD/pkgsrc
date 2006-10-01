@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.29 2006/10/01 21:08:26 rillig Exp $
 
 DISTNAME=	zoo-2.10pl1
 PKGNAME=	zoo-2.10.1
@@ -19,6 +19,6 @@ NO_CONFIGURE=	yes
 BUILD_TARGET=	bsdansi
 MAKE_FILE=	makefile
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
