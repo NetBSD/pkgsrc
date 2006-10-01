@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2006/10/01 14:24:30 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/10/01 18:44:57 rillig Exp $
 
 DISTNAME=		rt-3.4.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -51,7 +51,6 @@ DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-HTTP-Server-Simple>=0.07:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-HTTP-Server-Simple-Mason>=0.09:../../www/p5-HTTP-Server-Simple-Mason
 DEPENDS+=	p5-Text-WikiFormat>=0.72:../../textproc/p5-Text-WikiFormat
-DEPENDS+=	SpeedyCGI-[0-9]*:../../www/SpeedyCGI
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
@@ -67,6 +66,18 @@ DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 .elif !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
+.endif
+.if !empty(PKG_OPTIONS:Mspeedycgi)
+DEPENDS+=	SpeedyCGI-[0-9]*:../../www/SpeedyCGI
+PLIST_SUBST+=	IF_SPEEDYCGI=""
+.else
+MAKE_FLAGS+=	RT_SPEEDYCGI_HANDLER=""
+PLIST_SUBST+=	IF_SPEEDYCGI="@comment "
+
+.PHONY: rm-speedycgi
+post-install: rm-speedycgi
+rm-speedycgi:
+	rm -f ${PREFIX}/bin/mason_handler.scgi
 .endif
 
 # Back-end dependencies
