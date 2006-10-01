@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/10/01 08:58:24 schwarz Exp $
 #
 
 DISTNAME=	catdoc-0.91.4
@@ -18,3 +18,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
 
 CPPFLAGS+=		-Dunix -D__unix
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(LOWER_OPSYS:Mirix5*)
+# needs glob.h
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+SUBST_CLASSES+=		glob_h
+SUBST_STAGE.glob_h=	post-patch
+SUBST_FILES.glob_h=	src/fileutil.c
+SUBST_SED.glob_h=	-e "s,<glob\.h>,<nbcompat/glob.h>,"
+.endif

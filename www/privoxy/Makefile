@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/09/09 02:46:09 obache Exp $
+# $NetBSD: Makefile,v 1.29 2006/10/01 08:59:43 schwarz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -29,7 +29,7 @@ CPPFLAGS+=		-Dunix
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-stable
 
-USE_TOOLS+=		autoconf213 gmake
+USE_TOOLS+=		autoconf213 gmake mktemp
 MAKE_FILE=		GNUmakefile
 
 USE_TOOLS+=		perl
@@ -66,6 +66,10 @@ post-install:
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${EGDIR}
 	${CHMOD} -R a+r ${EGDIR}
 
+.if !empty(LOWER_OPSYS:Mirix5*)
+# needs snprintf
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
