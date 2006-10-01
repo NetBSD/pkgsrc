@@ -1,0 +1,31 @@
+$NetBSD: patch-eq,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- snmplib/snmp_logging.c.orig	2006-01-25 16:27:41.000000000 +0000
++++ snmplib/snmp_logging.c
+@@ -380,7 +380,7 @@ snmp_log_options(char *optarg, int argc,
+             if (facility == -1)  return -1;
+             logh->pri_max = pri_max;
+             logh->token   = strdup(snmp_log_syslogname(0));
+-            logh->magic   = (void *)facility;
++            logh->magic   = (void *)(long)facility;
+ 	    snmp_enable_syslog_ident(snmp_log_syslogname(0), facility);
+ 	}
+         break;
+@@ -600,7 +600,7 @@ netsnmp_logging_restart(void)
+             continue;
+         if (logh->type == NETSNMP_LOGHANDLER_SYSLOG) {
+             snmp_disable_syslog_entry(logh);
+-            snmp_enable_syslog_ident(logh->token,(int)logh->magic);
++            snmp_enable_syslog_ident(logh->token,(int)(long)logh->magic);
+         }
+         else if (logh->type == NETSNMP_LOGHANDLER_FILE) {
+             snmp_disable_filelog_entry(logh);
+@@ -1016,7 +1016,7 @@ log_handler_syslog(  netsnmp_log_handler
+ 	 */
+     if (!(logh->imagic)) {
+         const char *ident    = logh->token;
+-        int   facility = (int)logh->magic;
++        int   facility = (int)(long)logh->magic;
+         if (!ident)
+             ident = netsnmp_ds_get_string(NETSNMP_DS_LIBRARY_ID,
+                                           NETSNMP_DS_LIB_APPTYPE);
