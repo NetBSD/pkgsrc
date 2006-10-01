@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2004/06/15 04:24:30 minskim Exp $
+$NetBSD: patch-ac,v 1.4 2006/10/01 21:08:26 rillig Exp $
 
 --- makefile.orig	1991-07-16 10:52:08.000000000 -0500
 +++ makefile
@@ -37,7 +37,7 @@ $NetBSD: patch-ac,v 1.3 2004/06/15 04:24:30 minskim Exp $
 -	mv zoo $(DESTDIR)/zoo
 +install:
 +	$(BSD_INSTALL_PROGRAM) $(TARGETS) $(DESTDIR)
-+	$(BSD_INSTALL_DATA) zoo.1 fiz.1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_DATA) zoo.1 fiz.1 $(PREFIX)/${PKGMANDIR}/man1
  
  # executable targets
  TARGETS = zoo fiz
