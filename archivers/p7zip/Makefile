@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/01 10:39:21 adam Exp $
 
-DISTNAME=	p7zip_4.42_src_all
-PKGNAME=	p7zip-4.42
+DISTNAME=	p7zip_4.43_src_all
+PKGNAME=	p7zip-4.43
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -49,9 +49,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${PREFIX}/lib/7z
 	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* ${PREFIX}/lib/7z/Codecs
 	${INSTALL_LIB} ${WRKSRC}/bin/Formats/* ${PREFIX}/lib/7z/Formats
-	${LN} -s ${PREFIX}/lib/7z/7z ${PREFIX}/bin
+	ln -s ${PREFIX}/lib/7z/7z ${PREFIX}/bin
 .else
-	${LN} -s 7za ${PREFIX}/bin/7z
+	ln -s 7za ${PREFIX}/bin/7z
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip/commands
