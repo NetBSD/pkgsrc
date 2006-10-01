@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/05/05 03:11:53 minskim Exp $
+# $NetBSD: Makefile,v 1.44 2006/10/01 08:52:01 schwarz Exp $
 #
 
 DISTNAME=		aspell-0.60.4
@@ -52,6 +52,14 @@ LIBS.SunOS+=		-lm
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/aspell
 
+.include "../../mk/bsd.prefs.mk"
+.if !empty(LOWER_OPSYS:Mirix5*)
+# needs vsnprintf() and snprintf()
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+CPPFLAGS+=	-DDECLARE_VSNPRINTF -DDECLARE_SNPRINTF
+# IRIX 5 has an older implementation of signal()
+CPPFLAGS+=	-DHAVE_OLD_SIGNAL
+.endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
