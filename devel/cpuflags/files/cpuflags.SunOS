@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.9 2006/09/15 14:37:32 abs Exp $
+# $NetBSD: cpuflags.SunOS,v 1.10 2006/10/01 00:59:36 dmcmahill Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=nawk
@@ -12,7 +12,7 @@ display_hw_details()
     }
 
 hw_arch=`/usr/bin/uname -m`
-hw_psrinfo=`psrinfo -pv | $AWK 'NR==3{print}'` # Just gets the first CPU
+hw_psrinfo=`psrinfo -v | $AWK 'NR==3{print}'` # Just gets the first CPU
 
 case $hw_arch in
     sun4c | sun4 )		FLAGS='-mcpu=cypress' ;;
