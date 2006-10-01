@@ -1,15 +1,37 @@
-$NetBSD: patch-ac,v 1.4 2000/04/17 10:55:03 jdolecek Exp $
+$NetBSD: patch-ac,v 1.5 2006/10/01 08:58:24 schwarz Exp $
 
-Add CPPFLAGS to CFLAGS, passed down through the environment.
-
---- src/Makefile.in.orig	Mon Apr 17 12:52:30 2000
-+++ src/Makefile.in	Mon Apr 17 12:52:01 2000
-@@ -61,7 +61,7 @@
+--- src/Makefile.in.orig	1999-12-30 15:24:10.000000000 +0100
++++ src/Makefile.in	2006-09-21 00:20:08.000000000 +0200
+@@ -18,7 +18,7 @@
+ install_targets = @installtargets@
+ # Flags to pass to your C compilier
+ # remove -O2 on HP/UX 9. It is known to cause problems
+-FLAGS=-Wall -O2 -g 
++#FLAGS=-Wall -O2 -g 
+ 
+ #Compile-time configuration of catdoc itself. Edit according to taste
+ 
+@@ -61,19 +61,19 @@
   -DREPL_EXT=\"$(REPL_EXT)\" -DUNKNOWN_CHAR=\'$(UNKNOWN_CHAR)\'\
   -DSOURCE_CHARSET=\"$(SOURCE_CHARSET)\" -DTARGET_CHARSET=\"$(TARGET_CHARSET)\"
  
 -CFLAGS=$(FLAGS) $(DEFINES) @DEFS@
-+CFLAGS=$(FLAGS) $(DEFINES) @DEFS@ $(CPPFLAGS)
++FLAGS=$(CFLAGS) $(DEFINES) @DEFS@ $(CPPFLAGS)
  OBJ=catdoc.o charsets.o substmap.o reader.o writer.o fileutil.o\
  	confutil.o analyze.o rtfreader.o
  
+ OBJXLS=xls2csv.o charsets.o substmap.o fileutil.o confutil.o
+ 
+ #.c.o:
+-#	$(CC) -c $(CFLAGS) $*
++#	$(CC) -c $(FLAGS) $*
+ all: @buildtargets@
+ catdoc: $(OBJ)
+-	$(CC)  -o catdoc  $(OBJ)
++	$(CC)  -o catdoc  $(OBJ) @LIBS@
+ xls2csv: $(OBJXLS)
+-	$(CC) -o xls2csv $(OBJXLS) -lm
++	$(CC) -o xls2csv $(OBJXLS) -lm @LIBS@
+ install: @installtargets@
+ install-catdoc:catdoc xls2csv
+ 	../mkinstalldirs $(installroot)$(bindir)
