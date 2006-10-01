@@ -1,0 +1,157 @@
+$NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- perl/SNMP/SNMP.xs.orig	2006-05-26 16:59:15.000000000 +0000
++++ perl/SNMP/SNMP.xs
+@@ -117,15 +117,15 @@ static int __snprint_value _((char *, si
+                               netsnmp_variable_list*, struct tree *,
+                              int, int));
+ static int __sprint_num_objid _((char *, oid *, int));
+-static int __scan_num_objid _((char *, oid *, int *));
++static int __scan_num_objid _((char *, oid *, size_t *));
+ static int __get_type_str _((int, char *));
+ static int __get_label_iid _((char *, char **, char **, int));
+ static int __oid_cmp _((oid *, int, oid *, int));
+ static int __tp_sprint_num_objid _((char*,SnmpMibNode *));
+ static SnmpMibNode * __get_next_mib_node _((SnmpMibNode *));
+ static struct tree * __oid2tp _((oid*, int, struct tree *, int*));
+-static struct tree * __tag2oid _((char *, char *, oid  *, int  *, int *, int));
+-static int __concat_oid_str _((oid *, int *, char *));
++static struct tree * __tag2oid _((char *, char *, oid  *, size_t  *, int *, int));
++static int __concat_oid_str _((oid *, size_t *, char *));
+ static int __add_var_val_str _((netsnmp_pdu *, oid *, int, char *,
+                                  int, int));
+ static int __send_sync_pdu _((netsnmp_session *, netsnmp_pdu *,
+@@ -583,7 +583,7 @@ static int
+ __scan_num_objid (buf, objid, len)
+ char *buf;
+ oid *objid;
+-int *len;
++size_t *len;
+ {
+    char *cp;
+    *len = 0;
+@@ -874,14 +874,14 @@ __tag2oid(tag, iid, oid_arr, oid_arr_len
+ char * tag;
+ char * iid;
+ oid  * oid_arr;
+-int  * oid_arr_len;
++size_t  * oid_arr_len;
+ int  * type;
+ int    best_guess;
+ {
+    struct tree *tp = NULL;
+    struct tree *rtp = NULL;
+    oid newname[MAX_OID_LEN], *op;
+-   int newname_len = 0;
++   size_t newname_len = 0;
+    const char *cp = NULL;
+    char *module = NULL;
+ 
+@@ -1022,7 +1022,7 @@ found:
+ static int
+ __concat_oid_str(doid_arr, doid_arr_len, soid_str)
+ oid *doid_arr;
+-int *doid_arr_len;
++size_t *doid_arr_len;
+ char * soid_str;
+ {
+    char soid_buf[STR_BUF_SIZE];
+@@ -1911,7 +1911,7 @@ _bulkwalk_send_pdu(walk_context *context
+       ** we sent in this request.  Note that this is not a valid SNMP PDU,
+       ** but that's because a response has not yet been received.
+       */
+-      return (netsnmp_pdu *)reqid;
++      return (netsnmp_pdu *)(long)reqid;
+    }
+ 
+    /* This code is for synchronous mode support.
+@@ -3006,7 +3006,7 @@ snmp_set(sess_ref, varlist_ref, perl_cal
+            netsnmp_pdu *pdu, *response;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            char *tag_pv;
+            snmp_xs_cb_data *xs_cb_data;
+            SV **sess_ptr_sv;
+@@ -3207,7 +3207,7 @@ snmp_get(sess_ref, retry_nosuch, varlist
+            struct tree *tp;
+            int len;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV *tmp_sv;
+            int type;
+ 	   char tmp_type_str[MAX_TYPE_NAME_LEN];
+@@ -3425,7 +3425,7 @@ snmp_getnext(sess_ref, varlist_ref, perl
+            struct tree *tp;
+            int len;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV *tmp_sv;
+            int type;
+ 	   char tmp_type_str[MAX_TYPE_NAME_LEN];
+@@ -3669,7 +3669,7 @@ snmp_getbulk(sess_ref, nonrepeaters, max
+            struct tree *tp;
+            int len;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV *tmp_sv;
+            int type;
+ 	   char tmp_type_str[MAX_TYPE_NAME_LEN];
+@@ -3897,7 +3897,7 @@ snmp_bulkwalk(sess_ref, nonrepeaters, ma
+            netsnmp_session *ss;
+            netsnmp_pdu *pdu = NULL;
+ 	   oid oid_arr[MAX_OID_LEN];
+-	   int oid_arr_len;
++	   size_t oid_arr_len;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+            SV **err_num_svp;
+@@ -4115,7 +4115,7 @@ snmp_bulkwalk(sess_ref, nonrepeaters, ma
+ 	      /* Sent okay...  Return the request ID in 'pdu' as an SvIV. */
+ 	      DBPRT(1,(DBOUT "Okay, request id is %d\n", (intptr_t) pdu));
+ /*	      XSRETURN_IV((intptr_t)pdu); */
+-	      XPUSHs(sv_2mortal(newSViv(pdu)));
++	      XPUSHs(sv_2mortal(newSViv((intptr_t)pdu)));
+ 	      XSRETURN(1);
+ 	   }
+ 
+@@ -4208,7 +4208,7 @@ snmp_trapV1(sess_ref,enterprise,agent,ge
+            netsnmp_pdu *pdu = NULL;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+            SV **err_num_svp;
+@@ -4347,7 +4347,7 @@ snmp_trapV2(sess_ref,uptime,trap_oid,var
+            netsnmp_pdu *pdu = NULL;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+            SV **err_num_svp;
+@@ -4484,7 +4484,7 @@ snmp_inform(sess_ref,uptime,trap_oid,var
+            netsnmp_pdu *response;
+            struct tree *tp;
+ 	   oid *oid_arr;
+-	   int oid_arr_len = MAX_OID_LEN;
++	   size_t oid_arr_len = MAX_OID_LEN;
+            snmp_xs_cb_data *xs_cb_data;
+            SV **sess_ptr_sv;
+            SV **err_str_svp;
+@@ -4715,7 +4715,7 @@ snmp_translate_obj(var,mode,use_long,aut
+            char str_buf[STR_BUF_SIZE];
+            char str_buf_temp[STR_BUF_SIZE];
+            oid oid_arr[MAX_OID_LEN];
+-           int oid_arr_len = MAX_OID_LEN;
++           size_t oid_arr_len = MAX_OID_LEN;
+            char * label;
+            char * iid;
+            int status = FAILURE;
