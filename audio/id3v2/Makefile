@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/03/04 21:28:56 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/01 12:23:39 tonio Exp $
 
 DISTNAME=	id3v2-0.1.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3v2/}
 
@@ -22,5 +22,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/id3v2
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/id3v2/README
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
