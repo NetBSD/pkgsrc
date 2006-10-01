@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/22 23:16:42 heinz Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/01 14:34:01 rillig Exp $
 
 DISTNAME=	rocksndiamonds-3.2.0
 CATEGORIES=	games x11
@@ -14,6 +14,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man6
 
 PKG_GROUPS+=	${GAMEGRP}
 PKG_USERS+=	${GAMEOWN}:${GAMEGRP}
+BUILD_DEFS+=	VARBASE SCORE_PATH
 
 SHARESUBDIR=		share/rocksndiamonds
 SHAREDIR=		${PREFIX}/${SHARESUBDIR}
@@ -62,16 +63,17 @@ do-install:
 		${PREFIX}/${PKGMANDIR}/man6/rocksndiamonds.6
 	${INSTALL_DATA_DIR} ${SHAREDIR}
 	# auto-generated PLIST
-	-${RM} -f ${WRKDIR}/PLIST.F ${WRKDIR}/PLIST.D
+	rm -f ${WRKDIR}/PLIST.F ${WRKDIR}/PLIST.D
+	set -e;								\
 	cd ${WRKSRC} &&							\
 	for d in sounds graphics levels music; do 			\
-		${FIND} $${d} -type d -print | { while read subdir; do	\
-			${INSTALL_DATA_DIR}  ${SHAREDIR}/$${subdir};	\
+		find "$${d}" -type d -print | { while read subdir; do	\
+			${INSTALL_DATA_DIR}  ${SHAREDIR}/"$${subdir}";	\
 			${ECHO} "@dirrm ${SHARESUBDIR}/$${subdir}";	\
-		done ; } | ${SORT} -r >> ${WRKDIR}/PLIST.D;		\
-		${FIND} $${d} -type f -print | while read f; do		\
-			${INSTALL_DATA} $${f} ${SHAREDIR}/$${f};	\
-			${ECHO} ${SHARESUBDIR}/$${f} >> ${WRKDIR}/PLIST.F;\
+		done ; } | sort -r >> ${WRKDIR}/PLIST.D;		\
+		find "$${d}" -type f -print | while read f; do		\
+			${INSTALL_DATA} "$${f}" ${SHAREDIR}/"$${f}";	\
+			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F;\
 		done ;							\
 	done
 
