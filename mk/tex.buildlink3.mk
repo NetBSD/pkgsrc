@@ -1,78 +1,55 @@
-# $NetBSD: tex.buildlink3.mk,v 1.16 2006/08/11 13:32:28 wiz Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.17 2006/10/01 14:53:30 rillig Exp $
 #
-# A Makefile fragment for TeX and LaTeX packages
+# This file is included by packages that need a TeX package to work.
 #
-# 	* Determine the version of teTeX to be used.
-#     Modify TEX_DEFAULT to change the default version (default to teTeX3)
-#
-#	* tex files are installed...
-#		teTeX3
-#	  		-> ${PREFIX}/share/texmf-local
-#   The variables PKG_TEXMFPREFIX and PKG_LOCALTEXMFPREFIX defines the main
-#   texmf tree, where teTeX should install his own texmf tree, and the local
-#   texmf tree, which is the place where other packages should install their
-#   latex files, like additional styles.
-#   NOTE: before all TeX-related packages are converted to use these
-#   variables, we will keep
-#   PKG_TEXMFPREFIX=PKG_LOCALTEXMFPREFIX=${PREFIX}/share/texmf
-#
-#	* Assume each package supports teTeX3 by default.
-#	  To change the supported TeX versions, define TEX_ACCEPTED
-#	  explicitly before including mk/tex.buildlink3.mk.  Note that the
-#	  order is important.
-#
-# * Optionally set TEX_DEPMETHOD to "build" to only add a build-time
-#   dependency on TeX.  That may be useful for creating documentation
-#
-# Variables for users:
+# The following variables may be set by the pkgsrc user in mk.conf:
 #
 # TEX_DEFAULT
-#   Description:
-#     The user's favorite TeX implementation
-#   Possible values:
-#     teTeX3
-#   Default value:
-#     teTeX3
+#	The user's favorite TeX implementation.
 #
-# Variables tex packages can provide:
+#	Possible values: teTeX3
+#	Default value: teTeX3
+#
+# The following variables may be set by a package:
 #
 # TEX_DEPMETHOD
-#  Description:
-#    Set tex as DEPENDS or BUILD_DEPENDS
-#  Possible values:
-#    run, build
-#  Default value:
-#    run
+#	Select whether TeX is a runtime dependency or only needed
+#	when building the package.
+#
+#	Possible values: build run
+#	Default value: run
 #
 # TEX_ACCEPTED
-#  Description:
-#    Versions the package accepts (supports).
-#  Possible values:
-#    teTeX3
-#  Default value:
-#    teTeX3
+#	List of TeX implementations that the package supports.
 #
-# Variables provided for tex packages:
+#	Possible values: teTeX3
+#	Default value: teTeX3
+#
+# After including this file, the following variables may be used, but not
+# in directives like .if, .for, etc.
 #
 # PKG_TEXMFPREFIX
-#   Description:
-#     Path to the directory the standard tex files can be found
-#   Possible values:
-# 	  ${PREFIX}/share/texmf
-# 	  ${PREFIX}/share/texmf-dist
+#	Absolute pathname of the directory where the standard TeX files
+#	can be found.
+#
+#	Typical values: ${PREFIX}/share/texmf ${PREFIX}/share/texmf-dist
 #
 # PKG_LOCALTEXMFPREFIX
-#   Description:
-#     Path to the directory the tex for extentions should be installed into
-#   Possible values:
-#   	${PREFIX}/share/texmf
-#     ${PREFIX}/share/texmf-local
+#	Absolute pathname of the directory where extensions for TeX can
+#	be found.
+#
+#	Typical values: ${PREFIX}/share/texmf ${PREFIX}/share/texmf-local
 #
 # TEX_TYPE
-#   Description:
-#     The type of the used TeX package
-#   Possible values:
-#     teTeX3
+#	The TeX implementation that has been selected based on the
+#	package's and the user's preferences.
+#
+#	Typical values: teTeX3
+#
+
+# NOTE: before all TeX-related packages are converted to use these
+# variables, we will keep PKG_TEXMFPREFIX = PKG_LOCALTEXMFPREFIX =
+# ${PREFIX}/share/texmf
 
 .if !defined(TEX_BUILDLINK3_MK)
 TEX_BUILDLINK3_MK=	# defined
