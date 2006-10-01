@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/07/07 15:49:33 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2006/10/01 14:56:46 rillig Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -33,6 +33,8 @@ SAMBA_LOGDIR?=		${SAMBA_VARDIR}/log
 SAMBA_PIDDIR?=		${SAMBA_VARDIR}/run
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 SAMBA_VARDIR?=		${VARBASE}
+BUILD_DEFS+=		SAMBA_ETCDIR SAMBA_LIBDIR SAMBA_LOCKDIR SAMBA_LOGDIR
+BUILD_DEFS+=		SAMBA_PIDDIR SAMBA_PRIVATE SAMBA_VARDIR VARBASE
 
 FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR:Q}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR:Q}
@@ -106,7 +108,6 @@ DOCDIR=		${PREFIX}/share/doc/samba
 EGDIR=		${PREFIX}/share/examples/samba
 
 USE_PKGLOCALEDIR=	YES
-USE_LANGUAGE=		c
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty
 
@@ -152,11 +153,14 @@ FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 REPLACE_PERL=		script/findsmb.in
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
-SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CAT@,${CAT},g'
-SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g' -e 's,@RM@,${RM},g'
-SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g' -e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
+SUBST_SED.paths=	-e 's,@AWK@,${AWK},g'
+SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
+SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g'
+SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
+SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 
 INSTALLATION_DIRS+=	bin include lib
 
@@ -176,7 +180,7 @@ post-extract:
 	${CP} ${FILESDIR}/deluser.sh ${WRKDIR}/deluser.sh
 
 post-install:
-	-cd ${PREFIX}/lib && ${LN} -s libsmbclient.so libsmbclient.so.0
+	cd ${PREFIX}/lib && ${LN} -s libsmbclient.so libsmbclient.so.0 || ${TRUE}
 .if !empty(NSS_WINBIND)
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINBIND} ${PREFIX}/lib
 .endif
@@ -196,7 +200,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EGDIR}/adduser.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EGDIR}/deluser.sh
-	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${EGDIR}
+	cd ${WRKDIR}/${DISTNAME}/examples && pax -wr -pp . ${EGDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EGDIR}
 	${CHMOD} -R ugo-w ${EGDIR}
 
