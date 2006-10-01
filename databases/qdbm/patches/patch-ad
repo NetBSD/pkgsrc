@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2006/01/11 18:23:02 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2006/10/01 07:48:38 obache Exp $
 
---- java/Makefile.in.orig	2005-08-18 05:18:37.000000000 +0900
+--- java/Makefile.in.orig	2006-08-24 15:44:22.000000000 +0900
 +++ java/Makefile.in
 @@ -37,7 +37,7 @@ prefix = @prefix@
  exec_prefix = @exec_prefix@
@@ -11,21 +11,24 @@ $NetBSD: patch-ad,v 1.2 2006/01/11 18:23:02 wiz Exp $
  DESTDIR =
  
  # Building binaries
-@@ -50,7 +50,7 @@ JAVAH = @JAVAH@
+@@ -50,16 +50,16 @@ JAVAH = @JAVAH@
  JAVADOC = @JAVADOC@
  JAVARUN = @JAVARUN@
  CC = @CC@
--RELCFLAGS = -O2 -DNDEBUG
-+RELCFLAGS = -O2 -DNDEBUG ${PTHREAD_CFLAGS}
- CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include \
+-CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include \
++CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. \
    -I$(MYJAVAHOME)/include -I$(MYJAVAHOME)/include/$(JVMPLATFORM) -I$(MYJAVAHOME)/Headers \
    @MYDEFS@ -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
-@@ -59,7 +59,7 @@ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I
- CFLAGS = -Wall -fPIC -fsigned-char $(RELCFLAGS)
+   -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
+   -DPIC=1 -D_THREAD_SAFE=1 -D_REENTRANT=1 -DNDEBUG
+-CFLAGS = -Wall -fPIC -fsigned-char -O2 @MYOPTS@
++CFLAGS = ${PTHREAD_CFLAGS} -Wall -fPIC -fsigned-char -O2 @MYOPTS@
  LD = @LD@
  LIBS = -lqdbm @LIBS@
 -LIBLDFLAGS = -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
-+LIBLDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
- RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/lib:$(HOME)/lib:/usr/local/lib
+-RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/lib:$(HOME)/lib:/usr/local/lib
++LIBLDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. $(LIBS)
++RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/lib
+ 
  
  
