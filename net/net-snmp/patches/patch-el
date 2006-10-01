@@ -1,0 +1,29 @@
+$NetBSD: patch-el,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- perl/OID/OID.xs.orig	2005-09-09 10:09:31.000000000 +0000
++++ perl/OID/OID.xs
+@@ -177,17 +177,21 @@ MODULE = NetSNMP::OID		PACKAGE = NetSNMP
+ netsnmp_oid *
+ nso_newptr(initstring)
+     char *initstring
++    PREINIT:
++	STRLEN		len;
+     CODE:
+         if (get_tree_head() == NULL)
+             init_mib();
+         RETVAL = SNMP_MALLOC_TYPEDEF(netsnmp_oid);
+         RETVAL->name = RETVAL->namebuf;
+-        RETVAL->len = sizeof(RETVAL->namebuf)/sizeof(RETVAL->namebuf[0]);
+-        if (!snmp_parse_oid(initstring, (oid *) RETVAL->name, &RETVAL->len)) {
++        len = sizeof(RETVAL->namebuf)/sizeof(RETVAL->namebuf[0]);
++        if (!snmp_parse_oid(initstring, (oid *) RETVAL->name, &len)) {
+             snmp_log(LOG_ERR, "Can't parse: %s\n", initstring);
+             RETVAL->len = 0;
+             RETVAL = NULL;
+-        }
++        } else {
++	    RETVAL->len = len;
++	}
+     OUTPUT:
+         RETVAL
+ 

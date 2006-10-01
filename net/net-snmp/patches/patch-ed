@@ -1,0 +1,31 @@
+$NetBSD: patch-ed,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- agent/mibgroup/agent/nsDebug.c.orig	2005-04-21 13:32:20.000000000 +0000
++++ agent/mibgroup/agent/nsDebug.c
+@@ -291,7 +291,7 @@ get_first_debug_entry(void **loop_contex
+ 
+     snmp_set_var_value(index, dbg_tokens[i].token_name,
+ 		       strlen(dbg_tokens[i].token_name));
+-    *loop_context = (void*)i;
++    *loop_context = (void*)(long)i;
+     *data_context = (void*)&dbg_tokens[i];
+     return index;
+ }
+@@ -301,7 +301,7 @@ get_next_debug_entry(void **loop_context
+                       netsnmp_variable_list *index,
+                       netsnmp_iterator_info *data)
+ {
+-    int i = (int)*loop_context;
++    int i = (int)(long)*loop_context;
+ 
+     for (i++; i<debug_num_tokens; i++) {
+         /* skip excluded til mib is updated */
+@@ -313,7 +313,7 @@ get_next_debug_entry(void **loop_context
+ 
+     snmp_set_var_value(index, dbg_tokens[i].token_name,
+ 		       strlen(dbg_tokens[i].token_name));
+-    *loop_context = (void*)i;
++    *loop_context = (void*)(long)i;
+     *data_context = (void*)&dbg_tokens[i];
+     return index;
+ }
