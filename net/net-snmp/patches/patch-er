@@ -1,0 +1,22 @@
+$NetBSD: patch-er,v 1.1 2006/10/01 20:08:29 seb Exp $
+
+--- snmplib/text_utils.c.orig	2006-03-09 20:57:35.000000000 +0000
++++ snmplib/text_utils.c
+@@ -461,7 +461,7 @@ _process_line_tvi(netsnmp_line_info *lin
+     /*
+      * get value
+      */
+-    switch((int)lpi->user_context) {
++    switch((int)(long)lpi->user_context) {
+ 
+         case PMLP_TYPE_UNSIGNED:
+             tvi->value.ul = strtoul(ptr, NULL, 0);
+@@ -497,7 +497,7 @@ _process_line_tvi(netsnmp_line_info *lin
+ 
+         default:
+             snmp_log(LOG_ERR,"unsupported value type %d\n",
+-                     (int)lpi->user_context);
++                     (int)(long)lpi->user_context);
+             break;
+     }
+     
