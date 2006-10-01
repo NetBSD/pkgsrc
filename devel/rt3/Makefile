@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/09/29 23:38:46 cube Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/01 14:24:30 rillig Exp $
 
 DISTNAME=		rt-3.4.5
 PKGREVISION=		3
@@ -51,6 +51,7 @@ DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-HTTP-Server-Simple>=0.07:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-HTTP-Server-Simple-Mason>=0.09:../../www/p5-HTTP-Server-Simple-Mason
 DEPENDS+=	p5-Text-WikiFormat>=0.72:../../textproc/p5-Text-WikiFormat
+DEPENDS+=	SpeedyCGI-[0-9]*:../../www/SpeedyCGI
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
@@ -100,10 +101,13 @@ CONFIGURE_ARGS+=	--with-rt-group=${RT_GROUP:Q}
 CONFIGURE_ARGS+=	--with-db-type=${_RT_DB_TYPE:Q}
 CONFIGURE_ARGS+=	--with-web-user=${APACHE_USER:Q}
 CONFIGURE_ARGS+=	--with-web-group=${APACHE_GROUP:Q}
-
+CONFIGURE_ARGS+=	--with-speedycgi=${PERL5_INSTALLVENDORBIN}/speedy
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 MESSAGE_SUBST+=		RT_GROUP=${RT_GROUP:Q}
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+
+post-extract:
+	cd ${WRKSRC} && chmod -R g-w .
 
 .include "Makefile.install"
 
