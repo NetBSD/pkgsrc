@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.help.mk,v 1.4 2006/08/04 07:34:25 rillig Exp $
+# $NetBSD: bsd.pkg.help.mk,v 1.5 2006/10/01 14:52:32 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -10,10 +10,7 @@
 _PKGSRC_HELP_MK=	# defined
 
 _HELP_FILES=		# empty
-_HELP_FILES+=		mk/defaults/mk.conf
-_HELP_FILES+=		mk/bsd.prefs.mk
-_HELP_FILES+=		mk/bsd.pkg.mk
-_HELP_FILES+=		mk/bsd.options.mk
+_HELP_FILES+=		mk/*.mk
 _HELP_FILES+=		mk/*/*.mk
 
 _HELP_AWK= \
@@ -38,7 +35,8 @@ _HELP_AWK= \
 		}							\
 	}								\
 	($$1 == VARNAME"?=") || ($$1 == "\#"VARNAME"=") 		\
-	|| ($$1 == "\#" && $$2 == VARNAME && last_line_was_empty) {	\
+	|| ($$1 == "\#" && last_line_was_empty &&			\
+	    ($$2 == VARNAME || $$2 == VARNAME":")) {			\
 		var = 1;						\
 	}								\
 	/^\#/ {								\
@@ -77,7 +75,11 @@ TOPIC=		${topic}
 .PHONY: help
 help:
 .if !defined(TOPIC)
-	@${ECHO} "usage: "${MAKE:Q}" help TOPIC=<VARNAME>" 1>&2
+	@${PRINTF} "usage: %s help topic=<topic>\\n" ${MAKE:Q}
+	@${PRINTF} "\\n"
+	@${PRINTF} "\\t<topic> may be a variable name or a make target,\\n"
+	@${PRINTF} "\\tfor example CONFIGURE_DIRS or patch.\\n"
+	@${PRINTF} "\\n"
 .else
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
 	cd ${PKGSRCDIR};						\
