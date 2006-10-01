@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2003/09/11 18:08:45 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/01 21:03:36 dillo Exp $
 
---- makefile.orig	2003-03-12 01:56:02.000000000 +0100
-+++ makefile
+--- src/makefile.orig	2003-03-12 01:56:02.000000000 +0100
++++ src/makefile
 @@ -24,12 +24,14 @@ VERSION		= 117
  
  ### Compiler options #########################################################
