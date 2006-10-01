@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.57 2006/09/25 08:23:59 ghen Exp $
+# $NetBSD: bsd.options.mk,v 1.58 2006/10/01 14:51:03 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -247,6 +247,7 @@ _OPTIONS_DEFAULT_SUPPORTED:=${_OPTIONS_DEFAULT_SUPPORTED} ${_opt_}
 #
 # process options from generic to specific
 #
+
 PKG_OPTIONS:=		# empty
 _OPTIONS_UNSUPPORTED:=	#empty
 .for _o_ in ${PKG_SUGGESTED_OPTIONS} ${PKG_LEGACY_OPTIONS} \
@@ -407,7 +408,7 @@ supported-options-message:
 .    if !defined(${PKG_OPTIONS_VAR})
 	@${ECHO} "	${PKG_OPTIONS_VAR} (not defined)"
 .    else
-	@${ECHO} "	${PKG_OPTIONS_VAR} = ${${PKG_OPTIONS_VAR}}"
+	@${ECHO} "	${PKG_OPTIONS_VAR} = "${${PKG_OPTIONS_VAR}:Q}
 .    endif
 .    if defined(PKG_OPTIONS_DEPRECATED_WARNINGS)
 	@${ECHO}
