@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5491 2006/10/01 12:15:37 obache Exp $
+$NetBSD: TODO,v 1.5492 2006/10/01 20:22:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -418,6 +418,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o drscheme-352
 	o duplicity-0.4.2 [pkg/34574]
+	o dvd+rw-tools-7.0
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
 	o e16menuedit2-0.0.3 [pkg/34595]
@@ -580,6 +581,7 @@ Suggested package updates
 	o ipcalc-0.41
 	o ipcheck-0.233 [pkg/34427]
 	o ipsec-tools-0.6.5
+	o ircservices-5.0.59
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o iselect-1.3.0
@@ -605,7 +607,7 @@ Suggested package updates
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
-	o kmymoney2-0.8.4
+	o kmymoney2-0.8.5 [pkg/34669]
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
 	o ksi-3.4.2
@@ -616,6 +618,7 @@ Suggested package updates
 	o leafnode-1.11.5
 	o leafpad-0.8.9
 	o less-395
+	o libcddb-1.2.2
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
@@ -712,6 +715,7 @@ Suggested package updates
 	o mserv-devel-0.41
 	o msmtp-1.4.7
 	o mtail-1.1.1 [pkg/34512]
+	o mtr-gtk-0.72
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.2.0
 	o muse-0.9.1
@@ -757,7 +761,7 @@ Suggested package updates
 	o openssl-0.9.8d
 	o openttd-0.4.8 [pkg/34445]
 	o opera-9.02
-	o oregano-0.50.0
+	o oregano-0.60.0
 	o oroborus-2.0.15
 	o osh-060124 [pkg/34313]
 	o otpCalc-0.97
@@ -789,6 +793,7 @@ Suggested package updates
 	o p5-Clone-0.19 [pkg/34333]
 	o p5-Compress-Bzip2-2.09
 	o p5-Config-Tiny-2.08 [pkg/34352]
+	o p5-Config-Tiny-2.10
 	o p5-Convert-BER-1.3101 [pkg/34406]
 	o p5-Crypt-CAST5_PP-1.04 [pkg/34393]
 	o p5-Crypt-CipherSaber-1.00
@@ -798,7 +803,7 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-3.0007
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-SearchBuilder-1.44_01
+	o p5-DBIx-SearchBuilder-1.45
 	o p5-Data-FormValidator-4.40 [pkg/34405]
 	o p5-Data-TemporaryBag-0.09 [pkg/34331]
 	o p5-DateTime-Set-0.25
@@ -839,6 +844,7 @@ Suggested package updates
 	o p5-IO-Util-1.50 [pkg/34350]
 	o p5-IPC-Run-0.80 [pkg/34349]
 	o p5-Ima-DBI-0.34
+	o p5-Image-Info-1.23
 	o p5-Lingua-EN-Inflect-1.89 [pkg/34404]
 	o p5-Lingua-Stem-Snowball-0.941 [pkg/34402]
 	o p5-Locale-Codes-2.07
@@ -846,6 +852,7 @@ Suggested package updates
 	o p5-Locale-Maketext-Simple-0.17 [pkg/34384]
 	o p5-Log-Agent-0.307 [pkg/34347]
 	o p5-Log-Dispatch-2.12 [pkg/34357]
+	o p5-Log-Dispatch-2.13
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
@@ -1059,6 +1066,7 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1
+	o rdesktop-1.5
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.18
@@ -1281,7 +1289,6 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.22
 	o zircon-1.18.256
-	o zope-3.3.0
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
