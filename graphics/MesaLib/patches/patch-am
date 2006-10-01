@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.3 2006/07/06 12:27:43 markd Exp $
+$NetBSD: patch-am,v 1.4 2006/10/01 20:31:13 schwarz Exp $
 
---- include/GL/glxext.h.orig	2005-11-08 10:20:29.000000000 +1300
-+++ include/GL/glxext.h
-@@ -334,7 +334,7 @@ typedef struct {
+--- include/GL/glxext.h.orig	2005-11-07 22:20:29.000000000 +0100
++++ include/GL/glxext.h	2006-10-01 17:27:07.000000000 +0200
+@@ -334,7 +334,7 @@
  #if defined(__sun__)
  #include <inttypes.h>
  #if defined(__STDC__)
@@ -11,3 +11,12 @@ $NetBSD: patch-am,v 1.3 2006/07/06 12:27:43 markd Exp $
  typedef long int int64_t;
  #else
  typedef long long int int64_t;   
+@@ -343,7 +343,7 @@
+ #elif defined(__UNIXOS2__) || defined(__SOL64__)
+ typedef long int int32_t;
+ typedef long long int int64_t;
+-#elif defined( __VMS )
++#elif defined( __VMS ) || defined(__sgi)
+ #include <inttypes.h>
+ #elif defined(__SCO__) || defined(__USLC__)
+ #include <stdint.h>
