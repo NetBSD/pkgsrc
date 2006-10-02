@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/06/25 08:59:22 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/02 23:26:43 rillig Exp $
 #
 
 DISTNAME=	cronolog-1.6.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.cronolog.org/download/
 
@@ -11,15 +12,16 @@ COMMENT=	Web log rotation utility that provides datestamp filenames
 
 GNU_CONFIGURE=	YES
 INFO_FILES=	yes
+USE_TOOLS+=	perl:run
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
-post-patch:
-	${SED} "s,/www/sbin/cronolog,${PREFIX}/sbin/cronolog,g"		\
-		${WRKSRC}/doc/cronolog.1m > ${WRKSRC}/doc/cronolog.1m.done
-	${MV} ${WRKSRC}/doc/cronolog.1m.done ${WRKSRC}/doc/cronolog.1m
+SUBST_CLASSES+=	cl
+SUBST_STAGE.cl=	pre-configure
+SUBST_FILES.cl=	doc/cronolog.1m
+SUBST_SED.cl=	-e "s,/www/sbin/cronolog,${PREFIX}/sbin/cronolog,g"
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
-	${MV} ${PREFIX}/man/man1/cronolog.1m ${PREFIX}/man/man8/cronolog.8
-	${MV} ${PREFIX}/man/man1/cronosplit.1m ${PREFIX}/man/man8/cronosplit.8
+	cd ${PREFIX}/${PKGMANDIR} && mv man1/cronolog.1m man8/cronolog.8
+	cd ${PREFIX}/${PKGMANDIR} && mv man1/cronosplit.1m man8/cronosplit.8
 
 .include "../../mk/bsd.pkg.mk"
