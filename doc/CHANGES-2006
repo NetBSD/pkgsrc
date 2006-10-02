@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1388 2006/10/02 20:06:17 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1389 2006/10/02 23:04:42 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4542,3 +4542,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/swatch version 3.2.1 [rillig 2006-10-02]
 	Added games/fruit version 2.1 [rillig 2006-10-02]
 	Added games/polyglot version 1.4 [rillig 2006-10-02]
+	Updated x11/XaoS to 3.2.2 [rillig 2006-10-02]
