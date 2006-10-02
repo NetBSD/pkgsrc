@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.42 2006/09/20 21:54:13 abs Exp $
+# $Id: pkg_chk.sh,v 1.43 2006/10/02 07:33:38 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -340,15 +340,27 @@ pkgdirs_from_conf()
 		opt_U="$PKGCHK_NOTAGS"
 	fi
     fi
-    if [ -n "$opt_D" ];then
-	TAGS="$TAGS,$opt_D"
-    fi
-    verbose "set   TAGS=$TAGS"
+
+    # If '-U' contains a '*' then we need to unset TAGS and PKGCHK_TAGS, but
+    # still pick up -D, and even package specific -U options
     verbose "unset TAGS=$opt_U"
+    case ",$opt_U," in
+	*,\*,*)
+	    TAGS=''
+	    ;;
+    esac
+    if [ -n "$TAGS" ];then
+	if [ -n "$opt_D" ];then
+		opt_D="$opt_D,$TAGS"
+	else
+		opt_D="$TAGS"
+	fi
+    fi
+    verbose "set   TAGS=$opt_D"
 
     # Extract list of valid pkgdirs (skip any 'alreadyset' in $LIST)
     #
-    LIST="$LIST "$(${AWK} -v alreadyset="$LIST" -v setlist=$TAGS -v unsetlist=$opt_U '
+    LIST="$LIST "$(${AWK} -v alreadyset="$LIST" -v setlist="$opt_D" -v unsetlist="$opt_U" '
     BEGIN {
 	split(alreadyset, tmp, " ");
 	for (tag in tmp) { skip[tmp[tag]] = 1; }
@@ -566,11 +578,12 @@ usage()
 	-l	List binary packages including dependencies (implies -c)
 	-N	List installed packages for which a newer version is in TODO
 	-n	Display actions that would be taken, but do not perform them
+	-p	Display the list of pkgdirs that match the current tags
 	-P dir  Set PACKAGES dir (overrides any other setting)
 	-q	Do not display actions or take any action; only list packages
 	-r	Recursively remove mismatches (use with care) (implies -i)
 	-s      Use source for building packages
-	-U tags Comma separated list of pkgchk.conf tags to unset
+	-U tags Comma separated list of pkgchk.conf tags to unset ('*' for all)
 	-u      Update all mismatched packages (implies -i)
 	-v      Verbose
 
@@ -601,11 +614,13 @@ verbose_var()
     fi
     }
 
-args=$(getopt BC:D:L:P:U:abcfghiklNnqrsSuv $*)
+args=$(getopt BC:D:L:P:U:abcfghiklNnpqrsSuv "$@")
 if [ $? != 0 ]; then
     opt_h=1
 fi
+set -o noglob # -U can be '*'
 set -- $args
+set +o noglob
 while [ $# != 0 ]; do
     case "$1" in
 	-a )	opt_a=1 ;;
@@ -623,6 +638,7 @@ while [ $# != 0 ]; do
 	-l )	opt_l=1 ;;
 	-N )	opt_N=1 ;;
 	-n )	opt_n=1 ;;
+	-p )	opt_p=1 ;;
 	-P )	opt_P="$2" ; shift ;;
 	-q )	opt_q=1 ;;
 	-r )	opt_r=1 ;;
@@ -639,13 +655,17 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a$opt_g$opt_l$opt_r$opt_u$opt_N" ];
+if [ -z "$opt_a$opt_g$opt_l$opt_p$opt_r$opt_u$opt_N" ];
 then
-    usage "Must specify at least one of -a, -g, -l, -r, -u or -N";
+    usage "Must specify at least one of -a, -g, -l, -p, -r, -u or -N";
 fi
 
-if [ -n "$opt_h" -o $# != 0 ];then
+if [ -n "$opt_h" ];then
     usage
+fi
+
+if [ $# != 0 ];then
+    usage "Additional argument ($*) given"
 fi
 
 TMPDIR=`mktemp -d /tmp/${0##*/}.XXXXXX`
@@ -758,6 +778,11 @@ fi
 if [ -n "$opt_r" -o -n "$opt_u" ];then
     verbose "Enumerate PKGDIRLIST from installed packages"
     PKGDIRLIST=$(pkgdirs_from_installed)
+fi
+
+if [ -n "$opt_p" ] ; then
+    pkgdirs_from_conf $PKGCHK_CONF $PKGDIRLIST | tr ' ' '\n'
+    exit
 fi
 
 if [ -n "$opt_a" -o -n "$opt_l" ];then	# Append to PKGDIRLIST based on conf
