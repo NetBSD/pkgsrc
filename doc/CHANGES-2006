@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1374 2006/10/02 16:50:18 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1375 2006/10/02 17:12:29 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated geography/postgresql81-postgis to 1.1.4 [gdt 2006-10-02]
 	Updated multimedia/xvidcore to 1.1.0nb3 [tron 2006-10-02]
 	Updated pkgtools/url2pkg to 2.0 [rillig 2006-10-02]
+	Added www/squirm version 1.0betaB [rillig 2006-10-02]
