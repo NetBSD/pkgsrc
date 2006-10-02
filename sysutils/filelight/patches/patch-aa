@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/10/02 18:58:55 rillig Exp $
+
+Includedir contains ${prefix}, which does not get expanded unless "eval"
+is used.
+
+--- configure.orig	2001-08-06 01:00:00.000000000 +0200
++++ configure	2006-10-02 20:34:49.000000000 +0200
+@@ -32514,7 +32514,7 @@ fi
+ 
+ 
+ 
+-jpeg_incdirs="$includedir /usr/include /usr/local/include $kde_extra_includes"
++eval "jpeg_incdirs=\"$includedir /usr/include /usr/local/include $kde_extra_includes\""
+ 
+ jpeg_incdir=NO
+ for i in $jpeg_incdirs;
