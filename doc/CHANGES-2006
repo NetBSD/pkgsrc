@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1366 2006/10/01 22:08:32 seb Exp $
+>$NetBSD: CHANGES-2006,v 1.1367 2006/10/02 00:11:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4519,3 +4519,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/tads to 3.0.8nb1 [dillo 2006-10-01]
 	Added mail/p5-Net-SMTP_auth version 0.08 [seb 2006-10-01]
 	Updated devel/p5-SVN-Notify to 2.64 [seb 2006-10-01]
+	Updated net/net-snmp to 5.3.1nb1 [seb 2006-10-02]
