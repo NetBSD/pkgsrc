@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/08/04 15:09:51 tron Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/02 14:21:13 tron Exp $
 
 DISTNAME=	xvidcore-1.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xvid.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,7 @@ MAKE_ENV+=	MKDIR=${MKDIR:Q}
 .if ${OPSYS} == "Darwin"
 post-install:
 	${RM} -f ${PREFIX}/lib/libxvidcore.so.4
+	${MV} -f ${PREFIX}/lib/libxvidcore.so ${PREFIX}/lib/libxvidcore.dylib
 .endif
 
 .include "../../mk/bsd.pkg.mk"
