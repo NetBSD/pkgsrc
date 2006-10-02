@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1370 2006/10/02 11:15:20 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1371 2006/10/02 12:42:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_chk to 1.82 [abs 2006-10-02]
 	Updated wm/icewm to 1.2.27 [ghen 2006-10-02]
 	Updated wm/icewm-imlib to 1.2.27 [ghen 2006-10-02]
+	Updated security/amavisd-new to 2.4.2 [obache 2006-10-02]
