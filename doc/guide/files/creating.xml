@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.1 2006/06/01 08:39:03 rillig Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.2 2006/10/02 16:52:22 rillig Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -69,6 +69,18 @@
 	-e</command>, which outputs additional
 	explanations.</para></step>
 
+	<step><para>In many cases the package is not yet ready to build.
+	You can find instructions for the most common cases in the next
+	section, <xref linkend="creating.common"/>. After you have
+	followed the instructions over there, you can hopefully continue
+	here.</para></step>
+
+	<step><para>Run <command>bmake clean</command> to clean the
+	working directory from the extracted files. Besides these files,
+	a lot of cache files and other system information has been saved
+	in the working directory, which may become wrong after you
+	edited the <filename>Makefile</filename>.</para></step>
+	
 	<step><para>Now, run <command>bmake</command> to build the
 	package. For the various things that can go wrong in this phase,
 	consult <xref linkend="fixes"/>.</para></step>
@@ -100,4 +112,15 @@
 
 	</procedure>
 
+<sect1 id="creating.common">
+<title>Common types of packages</title>
+
+<sect2 id="creating.perl-module">
+<title>Perl modules</title>
+
+<para>Simple Perl modules are handled automatically by
+<command>url2pkg</command>, including dependencies.</para>
+
+</sect2>
+</sect1>
 </chapter>
