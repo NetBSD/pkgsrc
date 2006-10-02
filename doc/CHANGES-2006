@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1382 2006/10/02 19:14:24 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1383 2006/10/02 19:18:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4536,3 +4536,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/filelight version 1.0 [rillig 2006-10-02]
 	Updated cross/bfd-crunchide to 1.2 [joerg 2006-10-02]
 	Added devel/p5-Carp-Clan version 5.4 [rillig 2006-10-02]
+	Updated devel/p5-Carp-Clan to 5.4 [rillig 2006-10-02]
