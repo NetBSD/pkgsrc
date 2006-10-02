@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/02 18:58:55 rillig Exp $
+bin/filelight
+lib/kde3/libfilelight.la
+share/kde/applications/kde/filelight.desktop
+share/kde/apps/filelight/filelight_partui.rc
+share/kde/apps/filelight/filelightui.rc
+share/kde/config/filelightrc
+share/kde/icons/crystalsvg/32x32/actions/view_filelight.png
+share/kde/icons/hicolor/16x16/apps/filelight.png
+share/kde/icons/hicolor/22x22/apps/filelight.png
+share/kde/icons/hicolor/32x32/apps/filelight.png
+share/kde/icons/hicolor/48x48/apps/filelight.png
+share/kde/icons/hicolor/64x64/apps/filelight.png
+share/kde/services/filelight_part.desktop
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/kde/config
+@dirrm share/kde/apps/filelight
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
