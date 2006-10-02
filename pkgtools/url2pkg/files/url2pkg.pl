@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.1 2006/10/02 16:49:30 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.2 2006/10/02 19:39:24 rillig Exp $
 #
 
 use strict;
@@ -139,7 +139,11 @@ sub magic_perlmod() {
 		open(DEPS, "cd ${abs_wrksrc} && perl -I${perllibdir} Makefile.PL |") or die;
 		while (defined(my $dep = <DEPS>)) {
 			chomp($dep);
-			push(@depends, $dep);
+			if ($dep =~ qr"\.\./\.\./") {
+				# Many Perl modules write other things to
+				# stdout, so filter them out.
+				push(@depends, $dep);
+			}
 		}
 		close(DEPS) or die;
 
@@ -175,13 +179,13 @@ sub magic_use_languages() {
 	my $c_files = `cd $abs_wrksrc && find * -type f -name "*.c" -print 2>/dev/null`;
 	my $cxx_files = `cd $abs_wrksrc && find * -type f "(" -name "*.cpp" -o -name "*.cc" -o -name "*.C" ")" -print 2>/dev/null`;
 	my $f_files = `cd $abs_wrksrc && find * -type f -name "*.f" -print 2>/dev/null`;
-	my $languages = {};
+	my @languages;
 
-	$c_files =~ qr"\S" and $languages->{"c"} = true;
-	$cxx_files =~ qr"\S" and $languages->{"c++"} = true;
-	$f_files =~ qr"\S" and $languages->{"f"} = true;
+	$c_files =~ qr"\S" and push(@languages, "c");
+	$cxx_files =~ qr"\S" and push(@languages, "c++");
+	$f_files =~ qr"\S" and push(@languages, "fortran");
 
-	my $use_languages = join(" ", sort(keys(%{$languages})));
+	my $use_languages = join(" ", @languages);
 	if ($use_languages eq "") {
 		$use_languages = "# none";
 	}
@@ -234,7 +238,7 @@ sub generate_initial_package($) {
 	}
 
 	if (!$found) {
-		if ($url =~ qr"^http://prdownloads\.sourceforge\.net/([^/]*)/[^/]*\?download$") {
+		if ($url =~ qr"^http://prdownloads\.sourceforge\.net/([^/]*)/([^/]+)\?download$") {
 			my $pkgbase = $1;
 			$distfile = $2;
 
