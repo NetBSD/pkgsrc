@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:11:01 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/02 16:10:07 rillig Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -12,7 +12,7 @@
 
 DISTNAME=	fop-0_15_0-forBeginners
 PKGNAME=	fop-0.15.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc www
 MASTER_SITES=	http://xml.apache.org/dist/fop/recent/
 EXTRACT_SUFX=	.zip
@@ -25,22 +25,22 @@ WRKSRC=		${WRKDIR}
 USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+INSTALLATION_DIRS=	lib/java share/doc/java/fop
 
 .include "../../mk/bsd.prefs.mk"
 
 post-extract:
 .if ${OPSYS:M*BSD}
-	${FIND} -d ${WRKSRC}/docs -name cvs -exec ${RM} -r '{}' \;
+	find -d ${WRKSRC}/docs -name cvs -exec ${RM} -r '{}' \;
 .else
-	${FIND} ${WRKSRC}/docs -depth -name cvs -exec ${RM} -r '{}' \;
+	find ${WRKSRC}/docs -depth -name cvs -exec ${RM} -r '{}' \;
 .endif
+	cd ${WRKSRC} && chmod -R go-w .
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/build/fop.jar ${PREFIX}/lib/java/fop.jar
 	${INSTALL_DATA} ${WRKSRC}/lib/w3c.jar ${PREFIX}/lib/java/fop-w3c.jar
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/fop
-	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/fop
+	cd ${WRKSRC}/docs && pax -rw . ${PREFIX}/share/doc/java/fop
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
