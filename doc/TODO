@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5493 2006/10/02 01:59:33 schmonz Exp $
+$NetBSD: TODO,v 1.5494 2006/10/02 09:46:45 obache Exp $
 
 Suggested new packages
 ======================
@@ -794,6 +794,7 @@ Suggested package updates
 	o p5-Config-Tiny-2.08 [pkg/34352]
 	o p5-Config-Tiny-2.10
 	o p5-Convert-BER-1.3101 [pkg/34406]
+	o p5-Convert-UUlib-1.06
 	o p5-Crypt-CAST5_PP-1.04 [pkg/34393]
 	o p5-Crypt-CipherSaber-1.00
 	o p5-Crypt-DSA-0.14 [pkg/34409]
