@@ -1,16 +1,16 @@
-.\"	$NetBSD: pkg_chk.8,v 1.23 2006/09/28 09:36:44 dillo Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.24 2006/10/02 07:33:38 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd April 4, 2006
+.Dd September 29, 2006
 .Dt PKG_CHK 8
 .Sh NAME
 .Nm pkg_chk
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl aBbcfhiklNnqrsuv
+.Op Fl aBbcfhiklNnpqrsuv
 .Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl L Ar file
@@ -113,6 +113,8 @@ if
 is available, or
 .Dq Pa \&.
 otherwise.
+.It Fl p
+Print list of package directories that will be checked, then exit.
 .It Fl q
 Do not display actions or take any action; only list information
 about package version differences.
@@ -139,6 +141,11 @@ Also includes
 .Ev PKGCHK_NOTAGS .
 Package directories can also be skipped by listing them under
 .Fl U .
+Passing
+.Sq *
+to
+.Fl U
+will result in all default tags being unset
 .It Fl u
 Automatically update any missing packages.
 If a binary package exists in
