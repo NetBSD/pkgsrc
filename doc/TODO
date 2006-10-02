@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5495 2006/10/02 09:51:38 obache Exp $
+$NetBSD: TODO,v 1.5496 2006/10/02 12:44:10 obache Exp $
 
 Suggested new packages
 ======================
@@ -297,7 +297,7 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amavisd-new-2.4.2 [pkg/34041]
+	o amavisd-new-2.4.3
 	o amaya-9.5
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
