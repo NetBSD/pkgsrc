@@ -1,15 +1,17 @@
-# $NetBSD: Makefile.common,v 1.22 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2006/10/02 21:05:44 rillig Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
 
-VERS=                   2.4.4p4
-DISTNAME?=              amanda-${VERS}
-CATEGORIES=             sysutils
-MASTER_SITES?=          http://download.sourceforge.net/amanda/
+VERS=			2.4.4p4
+DISTNAME?=		amanda-${VERS}
+CATEGORIES=		sysutils
+MASTER_SITES?=		http://download.sourceforge.net/amanda/
 
-MAINTAINER=             pkgsrc-users@NetBSD.org
-HOMEPAGE=               http://www.amanda.org/
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.amanda.org/
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 AMANDA_GROUP?=		sysadmin
@@ -23,7 +25,7 @@ AMANDA_TMP?=		/tmp/amanda
 AMANDA_VAR?=		${VARBASE}/amanda
 
 BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB
-BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR
+BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR VARBASE
 
 USE_LIBTOOL=		yes
 
