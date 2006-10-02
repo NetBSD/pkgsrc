@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2006/02/19 18:26:43 adam Exp $
+$NetBSD: distinfo,v 1.5 2006/10/02 15:29:36 rillig Exp $
 
 SHA1 (fluidsynth-1.0.7.tar.gz) = ac1572bddfaa19f20e27f349964b9224a4198b3a
 RMD160 (fluidsynth-1.0.7.tar.gz) = 1ec41b1401c41cfa8edb8fa715a42616e8459d55
 Size (fluidsynth-1.0.7.tar.gz) = 1064474 bytes
 SHA1 (patch-aa) = 0cd5f42d4df763ef358f1d8a05826e0626882bf2
 SHA1 (patch-ab) = 8b9f615cf81bab81e0e6fc8f3e1c1a589b29cd90
-SHA1 (patch-ac) = 70ec9f3fef081d0b1a5a9528ee2c57310f586cfc
+SHA1 (patch-ac) = 238fb1ee72c54a57ff57930b8fa1f7777009d616
 SHA1 (patch-ad) = 36e62eb4efc1c380f9cb8cfc5777493c0162f719
 SHA1 (patch-ae) = a4385b093eed89f752bead6408400c97be065a41
