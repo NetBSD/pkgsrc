@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5492 2006/10/01 20:22:09 wiz Exp $
+$NetBSD: TODO,v 1.5493 2006/10/02 01:59:33 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -491,7 +491,6 @@ Suggested package updates
 	o geda-20060907
 	o genius-0.7.6.1
 	o gentoo-0.11.56 [pkg/34341]
-	o getmail-4.6.4
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
