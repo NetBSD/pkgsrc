@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/10/02 11:13:22 ghen Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -336,6 +336,7 @@ share/locale/be/LC_MESSAGES/icewm.mo
 share/locale/bg/LC_MESSAGES/icewm.mo
 share/locale/ca/LC_MESSAGES/icewm.mo
 share/locale/cs/LC_MESSAGES/icewm.mo
+share/locale/da/LC_MESSAGES/icewm.mo
 share/locale/de/LC_MESSAGES/icewm.mo
 share/locale/el/LC_MESSAGES/icewm.mo
 share/locale/en/LC_MESSAGES/icewm.mo
@@ -350,6 +351,7 @@ share/locale/ja/LC_MESSAGES/icewm.mo
 share/locale/ko/LC_MESSAGES/icewm.mo
 share/locale/lt/LC_MESSAGES/icewm.mo
 share/locale/lv/LC_MESSAGES/icewm.mo
+share/locale/mk/LC_MESSAGES/icewm.mo
 share/locale/nb/LC_MESSAGES/icewm.mo
 share/locale/nl/LC_MESSAGES/icewm.mo
 share/locale/pl/LC_MESSAGES/icewm.mo
@@ -388,3 +390,5 @@ share/locale/zh_TW/LC_MESSAGES/icewm.mo
 @dirrm share/icewm
 @dirrm share/doc/icewm/html
 @dirrm share/doc/icewm
+@exec ${MKDIR} %D/etc/icewm
+@dirrm etc/icewm
