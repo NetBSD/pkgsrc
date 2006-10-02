@@ -1,2 +1,2 @@
-The unix_md5_crypt() provides a crypt()-compatible interface to the rather
-new MD5-based crypt() function found in modern operating systems.
+This code provides various crypt()-compatible interfaces to the
+MD5-based crypt() function found in various *nixes.

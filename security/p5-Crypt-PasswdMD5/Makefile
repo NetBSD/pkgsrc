@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/13 17:40:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2006/10/02 17:30:26 rillig Exp $
+#
 
 DISTNAME=	Crypt-PasswdMD5-1.3
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	perl5 security
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
+CATEGORIES=	security perl5
+MASTER_SITES=	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Crypt/
 
-MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~luismunoz/${DISTNAME}/
-COMMENT=	Provides interoperable MD5-based crypt() functions
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+MAINTAINER=	rillig@NetBSD.org
+HOMEPAGE=	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Crypt/
+COMMENT=	MD5-based crypt() function
 
 PERL5_PACKLIST=	auto/Crypt/PasswdMD5/.packlist
+USE_LANGUAGES=	# none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
