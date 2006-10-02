@@ -1,4 +1,4 @@
-<!-- $NetBSD: files.xml,v 1.2 2006/10/02 16:37:47 rillig Exp $ -->
+<!-- $NetBSD: files.xml,v 1.3 2006/10/02 17:56:27 wiz Exp $ -->
 
 <chapter id="files">
 <title>Directory layout of the installed files</title>
@@ -11,7 +11,7 @@ hierarchy. Later it was largely influenced by NetBSD. But no matter
 which operating system you are using pkgsrc with, you can expect the
 same layout for pkgsrc.</para>
 
-<para>There are mainly three root directories for pkgsrc, which are all
+<para>There are mainly four root directories for pkgsrc, which are all
 configurable in the <filename>bootstrap/bootstrap</filename> script.
 When pkgsrc has been installed as root, the default locations
 are:</para>
