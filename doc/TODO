@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5494 2006/10/02 09:46:45 obache Exp $
+$NetBSD: TODO,v 1.5495 2006/10/02 09:51:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -910,7 +910,7 @@ Suggested package updates
 	o p5-Text-Glob-0.07 [pkg/34416]
 	o p5-Text-Shellwords-1.08 [pkg/34417]
 	o p5-Text-Tabs+Wrap-2005.0824
-	o p5-Time-HiRes-1.74
+	o p5-Time-HiRes-1.91
 	o p5-Time-Piece-2.00.01
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.20
