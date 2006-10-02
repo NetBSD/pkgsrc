@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1369 2006/10/02 07:34:08 abs Exp $
+>$NetBSD: CHANGES-2006,v 1.1370 2006/10/02 11:15:20 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4522,3 +4522,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/net-snmp to 5.3.1nb1 [seb 2006-10-02]
 	Updated mail/getmail to 4.6.4 [schmonz 2006-10-02]
 	Updated pkgtools/pkg_chk to 1.82 [abs 2006-10-02]
+	Updated wm/icewm to 1.2.27 [ghen 2006-10-02]
+	Updated wm/icewm-imlib to 1.2.27 [ghen 2006-10-02]
