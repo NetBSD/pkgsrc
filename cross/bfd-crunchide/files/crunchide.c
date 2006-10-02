@@ -1,4 +1,4 @@
-/* $NetBSD: crunchide.c,v 1.4 2006/08/24 20:23:28 kristerw Exp $ */
+/* $NetBSD: crunchide.c,v 1.5 2006/10/02 19:11:13 joerg Exp $ */
 /* NetBSD: crunchide.c,v 1.9 1999/01/11 22:40:00 kleink Exp 	 */
 
 /*
@@ -63,7 +63,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: crunchide.c,v 1.4 2006/08/24 20:23:28 kristerw Exp $");
+__RCSID("$NetBSD: crunchide.c,v 1.5 2006/10/02 19:11:13 joerg Exp $");
 #endif
 
 #include <unistd.h>
@@ -297,8 +297,6 @@ hide_syms(filename, bfdname)
 			continue;
 
 		symname = bfd_asymbol_name(new_symtable[i]);
-		if (symname[0] == '_')
-			symname++;
 		if (in_keep_list(symname))
 			continue;
 
