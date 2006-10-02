@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1379 2006/10/02 18:09:24 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1380 2006/10/02 18:59:06 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4533,3 +4533,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/logjam version 4.5.3 [rillig 2006-10-02]
 	Updated chat/weechat to 0.2.1 [tonio 2006-10-02]
 	Updated devel/m4 to 1.4.7 [wiz 2006-10-02]
+	Added sysutils/filelight version 1.0 [rillig 2006-10-02]
