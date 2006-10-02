@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/02 23:30:30 rillig Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.linuxbyte.net/Chinese/dictionary/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	English-Chinese dictionary
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAKE_FILE=	makefile
 USE_LANGUAGES=	c c++
 
 FONTS_DIRS.x11+=	${PREFIX}/share/stardic/hzfont
 REQD_DIRS+=		${PREFIX}/share/stardic ${PREFIX}/share/stardic/hzfont
+
+post-extract:
+	chmod -R u+w,go-w . ${WRKSRC}
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
