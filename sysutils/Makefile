@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2006/09/16 10:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.374 2006/10/02 20:09:00 rillig Exp $
 #
 
 COMMENT=	System utilities
@@ -79,6 +79,7 @@ SUBDIR+=	fastfs
 SUBDIR+=	fatback
 SUBDIR+=	fdgw
 SUBDIR+=	file
+SUBDIR+=	filelight
 SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
 SUBDIR+=	fixelfprot
@@ -216,6 +217,7 @@ SUBDIR+=	strace
 SUBDIR+=	su2
 SUBDIR+=	sux
 SUBDIR+=	swapd
+SUBDIR+=	swatch
 SUBDIR+=	sysgen
 SUBDIR+=	sysinfo
 SUBDIR+=	syslog-ng
