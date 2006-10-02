@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2006/09/26 15:48:41 salo Exp $
+# $NetBSD: Makefile,v 1.640 2006/10/02 20:08:59 rillig Exp $
 #
 
 COMMENT=	Networking tools
@@ -188,6 +188,7 @@ SUBDIR+=	libupnp
 SUBDIR+=	linc
 SUBDIR+=	llnlxdir
 SUBDIR+=	llnlxftp
+SUBDIR+=	logjam
 SUBDIR+=	lopster
 SUBDIR+=	mDNSResponder
 SUBDIR+=	mDNSResponder-nss
