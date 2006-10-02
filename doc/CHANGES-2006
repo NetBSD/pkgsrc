@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1372 2006/10/02 13:48:09 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1373 2006/10/02 14:21:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/icewm-imlib to 1.2.27 [ghen 2006-10-02]
 	Updated security/amavisd-new to 2.4.2 [obache 2006-10-02]
 	Updated geography/postgresql81-postgis to 1.1.4 [gdt 2006-10-02]
+	Updated multimedia/xvidcore to 1.1.0nb3 [tron 2006-10-02]
