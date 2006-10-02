@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1367 2006/10/02 00:11:28 seb Exp $
+>$NetBSD: CHANGES-2006,v 1.1368 2006/10/02 01:44:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4520,3 +4520,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added mail/p5-Net-SMTP_auth version 0.08 [seb 2006-10-01]
 	Updated devel/p5-SVN-Notify to 2.64 [seb 2006-10-01]
 	Updated net/net-snmp to 5.3.1nb1 [seb 2006-10-02]
+	Updated mail/getmail to 4.6.4 [schmonz 2006-10-02]
