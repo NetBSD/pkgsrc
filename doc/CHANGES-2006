@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1387 2006/10/02 20:05:30 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1388 2006/10/02 20:06:17 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/rsnapshot to 1.2.9 [abs 2006-10-02]
 	Added sysutils/swatch version 3.2.1 [rillig 2006-10-02]
 	Added games/fruit version 2.1 [rillig 2006-10-02]
+	Added games/polyglot version 1.4 [rillig 2006-10-02]
