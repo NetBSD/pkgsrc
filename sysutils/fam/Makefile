@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/10/02 21:45:05 rillig Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -61,8 +61,8 @@ CPPFLAGS.Darwin+=	-DNDEBUG
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		sunfix dirent
 
+SUBST_CLASSES+=		sunfix
 SUBST_MESSAGE.sunfix=	Fixing ${OPSYS} namespace collision.
 SUBST_STAGE.sunfix=	pre-configure
 SUBST_FILES.sunfix+=	lib/Client.c++
@@ -72,11 +72,13 @@ SUBST_FILES.sunfix+=	src/Listener.c++
 SUBST_FILES.sunfix+=	src/TCP_Client.h
 SUBST_SED.sunfix=	-e 's/sun\([^_]\)/sa_un\1/g'
 
+SUBST_CLASSES+=		dirent
 SUBST_MESSAGE.dirent=	Fixing old sys/dir.h usage.
 SUBST_STAGE.dirent=	pre-configure
 SUBST_FILES.dirent+=	src/Directory.c++
 SUBST_FILES.dirent+=	src/DirectoryScanner.c++ src/DirectoryScanner.h
-SUBST_SED.dirent=	-e 's,sys/dir.h,dirent.h,g' -e 's/struct direct/struct dirent/g'
+SUBST_SED.dirent=	-e 's,sys/dir.h,dirent.h,g'
+SUBST_SED.dirent+=	-e 's/struct direct/struct dirent/g'
 
 .include "../../mk/compiler.mk"
 
