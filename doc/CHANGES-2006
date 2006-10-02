@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1385 2006/10/02 19:52:21 abs Exp $
+>$NetBSD: CHANGES-2006,v 1.1386 2006/10/02 19:53:27 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4539,3 +4539,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Carp-Clan to 5.4 [rillig 2006-10-02]
 	Updated pkgtools/pkglint to 4.71 [abs 2006-10-02]
 	Updated sysutils/rsnapshot to 1.2.9 [abs 2006-10-02]
+	Added sysutils/swatch version 3.2.1 [rillig 2006-10-02]
