@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/09/24 16:22:16 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/02 20:56:33 rillig Exp $
 
 DISTNAME=	cmake-2.4.2
 PKGREVISION=	1
@@ -22,7 +22,7 @@ SUBST_STAGE.cmake=	pre-configure
 SUBST_MESSAGE.cmake=	Fixing hard-coded prefix.
 SUBST_FILES.cmake=	Modules/FindCurses.cmake Modules/FindX11.cmake
 SUBST_SED.cmake=	-e "s|@prefix@|${PREFIX}|g"
-SUBST_SED.cmake=	-e "s|@x11base@|${X11BASE}|g"
+SUBST_SED.cmake+=	-e "s|@x11base@|${X11BASE}|g"
 
 post-extract:
 	${CP} ${WRKSRC}/Modules/Platform/FreeBSD.cmake \
