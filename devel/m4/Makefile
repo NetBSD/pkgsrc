@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2006/09/03 08:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2006/10/02 18:08:47 wiz Exp $
 
-DISTNAME=	m4-1.4.6
+DISTNAME=	m4-1.4.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=m4/}
 
