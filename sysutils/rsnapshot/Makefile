@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:18 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/02 19:51:37 abs Exp $
 #
 
-DISTNAME=	rsnapshot-1.2.1
-PKGREVISION=	1
+DISTNAME=	rsnapshot-1.2.9
 CATEGORIES=	net
 MASTER_SITES=	http://www.rsnapshot.org/downloads/
 
@@ -28,11 +27,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-rsync=${LOCALBASE}/bin/rsync
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rsnapshot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/rsnapshot.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/rsnapshot.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rsnapshot.conf.default ${EGDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
