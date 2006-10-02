@@ -10,14 +10,14 @@ package ExtUtils::MakeMaker;
 use strict;
 use warnings;
 
+use constant conf_pkgsrcdir	=> '@PKGSRCDIR@';
+
 BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT);
 	@ISA = qw(Exporter);
-	@EXPORT = qw(WriteMakefile);
+	@EXPORT = qw(WriteMakefile prompt);
 }
-
-use constant pkgsrcdir	=> "../..";
 
 # Finds and returns the category a given package lies in.
 # If the package does not exist, C<undef> is returned.
@@ -25,13 +25,13 @@ use constant pkgsrcdir	=> "../..";
 # of the categories is returned.
 sub find_category($) {
 	my ($pkg) = @_;
-	my $retval;
+	my ($retval, $pkgsrcdir);
 
-	opendir(D, pkgsrcdir) or die;
+	opendir(D, conf_pkgsrcdir) or die;
 	foreach my $cat (readdir(D)) {
 		next if ($cat =~ qr"^\.");
 
-		if (-d (sprintf("%s/%s/%s", pkgsrcdir, $cat, $pkg))) {
+		if (-d (conf_pkgsrcdir."/${cat}/${pkg}")) {
 			$retval = $cat;
 		}
 	}
@@ -65,6 +65,12 @@ sub WriteMakefile(%) {
 			}
 		}
 	}
+}
+
+sub prompt(@) {
+	my ($message, $default) = @_;
+
+	return $default || "";
 }
 
 1;
