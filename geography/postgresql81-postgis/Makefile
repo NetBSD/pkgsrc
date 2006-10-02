@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/09/20 16:24:46 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/02 13:47:19 gdt Exp $
 
 DISTNAME=		postgis-${VERSION}
-VERSION=		1.1.3
+VERSION=		1.1.4
 PKGNAME=		postgresql81-postgis-${VERSION}
-PKGREVISION=		1
 MASTER_SITES=	  	http://postgis.refractions.net/download/
 CATEGORIES=		databases geography
 
@@ -33,11 +32,12 @@ do-install:
 	cd ${WRKSRC} && ${GMAKE} install
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/README.postgis ${DOCDIR}
-	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/postgis.xml ${DOCDIR}
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/*.xml ${DOCDIR}
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/*.txt ${DOCDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc/html && ${PAX} -rw -pp *.html *.css ${HTMLDIR}
+	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${PREFIX}/man/man1
 
-# XXX Perhaps this should be run-depends only.
 DEPENDS+=	postgresql81-server>=8.1:../../databases/postgresql81-server
 
 .include "../../geography/geos/buildlink3.mk"
