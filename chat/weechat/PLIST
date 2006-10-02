@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/02 17:45:49 tonio Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/02 18:49:12 tonio Exp $
 bin/weechat-curses
+${WITHLUA}lib/weechat/plugins/lua.la
 ${WITHPYTHON}lib/weechat/plugins/python.la
 man/man1/weechat-curses.1
 share/doc/weechat/html/de/weechat-doc.css
