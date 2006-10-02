@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2004/07/14 21:06:57 ben Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/02 23:03:33 rillig Exp $
 
 Rip out the 16 bit i387 specific code.
 
---- src/engine/fractal.c-orig	Wed Mar  4 16:49:12 1998
-+++ src/engine/fractal.c	Sun Mar 10 16:29:06 2002
+--- src/engine/fractal.c.orig	2003-02-03 17:16:37.000000000 +0100
++++ src/engine/fractal.c	2006-10-03 00:29:20.000000000 +0200
 @@ -49,13 +49,6 @@
  #include <complex.h>
  #include <plane.h>
@@ -18,7 +18,7 @@ Rip out the 16 bit i387 specific code.
  #ifdef __alpha__
  #ifdef __linux__
  #include <asm/fpu.h>
-@@ -382,15 +375,6 @@
+@@ -382,15 +375,6 @@ make_fractalc (CONST int formula, float 
  {
    fractal_context *new_ctxt;
  
@@ -34,15 +34,3 @@ Rip out the 16 bit i387 specific code.
  #ifdef __alpha__
  #ifdef __linux__
    extern void ieee_set_fp_control (unsigned long);
---- src/engine/Makefile.in-orig	Wed Mar  4 16:49:12 1998
-+++ src/engine/Makefile.in	Sun Mar 10 16:27:30 2002
-@@ -24,8 +24,7 @@ SRCS = formulas.c \
-        3d.c \
-        subwindow.c \
-        plane.c \
--       julia.c \
--       i386.c
-+       julia.c
- 
- 
- OBJS = $(SRCS:.c=.o)
