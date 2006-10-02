@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:02 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/02 22:07:06 rillig Exp $
 #
 
 DISTNAME=	buildtool-0.16
@@ -13,7 +13,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 HAS_CONFIGURE=	yes
 
-TEST_TARGET=		test
+# The self test does not work unless the package is installed.
+#TEST_TARGET=		test
 
 PKG_SYSCONFSUBDIR=	buildtool
 
