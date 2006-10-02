@@ -1,4 +1,4 @@
-<!-- $NetBSD: files.xml,v 1.1 2006/09/19 17:50:38 rillig Exp $ -->
+<!-- $NetBSD: files.xml,v 1.2 2006/10/02 16:37:47 rillig Exp $ -->
 
 <chapter id="files">
 <title>Directory layout of the installed files</title>
@@ -11,7 +11,30 @@ hierarchy. Later it was largely influenced by NetBSD. But no matter
 which operating system you are using pkgsrc with, you can expect the
 same layout for pkgsrc.</para>
 
-<para>There are mainly three root directories for pkgsrc:</para>
+<para>There are mainly three root directories for pkgsrc, which are all
+configurable in the <filename>bootstrap/bootstrap</filename> script.
+When pkgsrc has been installed as root, the default locations
+are:</para>
+
+<programlisting>
+    LOCALBASE=              /usr/pkg
+    PKG_SYSCONFBASE=        /usr/pkg/etc
+    VARBASE=                /var
+    PKGDBDIR=               /var/db/pkg
+</programlisting>
+
+<para>In unprivileged mode (when pkgsrc has been installed as any other
+user), the default locations are:</para>
+
+<programlisting>
+    LOCALBASE=              ${HOME}/pkg
+    PKG_SYSCONFBASE=        ${HOME}/pkg/etc
+    VARBASE=                ${HOME}/pkg/var
+    PKGDBDIR=               ${HOME}/pkg/var/db/pkg
+</programlisting>
+
+<para>What these four directories are for, and what they look like is
+explained below.</para>
 
 <itemizedlist>
 
@@ -36,10 +59,10 @@ itself.</para></listitem>
 </itemizedlist>
 
 <sect1 id="files.localbase">
-<title>File system layout in <literal>${PREFIX}</literal></title>
+<title>File system layout in <literal>${LOCALBASE}</literal></title>
 
 <para>The following directories exist in a typical pkgsrc installation
-in <filename>${PREFIX}</filename>.</para>
+in <filename>${LOCALBASE}</filename>.</para>
 
 <variablelist>
 
