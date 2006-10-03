@@ -1,24 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/08/16 14:37:21 gdt Exp $
+$NetBSD: MESSAGE,v 1.2 2006/10/03 12:53:44 gdt Exp $
 
-You need to install the EPSG data into a relational database.  The
-data files are installed in ${EPSGDIR}.  Suitable commands
-are (assuming ${EPSGDB} refers to the target database).
-
-For PostgreSQL:
-	cd ${EPSGDIR}
-	psql -f EPSG_v6_11.mdb_Tables_PostgreSQL.sql ${EPSGDB}
-	psql -f EPSG_v6_11.mdb_Data_PostgreSQL.sql ${EPSGDB}
-	psql -f EPSG_v6_11.mdb_FKeys_PostgreSQL.sql ${EPSGDB}
-
-For MySQL:
-	cd ${EPSGDIR}
-	mysql -f EPSG_v6_11.mdb_Tables_MySQL.sql ${EPSGDB}
-	mysql -f EPSG_v6_11.mdb_Data_MySQL.sql ${EPSGDB}
-	mysql -f EPSG_v6_11.mdb_FKeys_MySQL.sql ${EPSGDB}
+Before the EPSG data can be used, it must be installed into a
+relational database.  The data files are installed in ${EPSGDIR}.  For
+an example script that will install the data, see ${EGDIR}/epsg.
 
 See the following two documents, which are located in ${DOCDIR},
-for a complete description.
+for a complete description of the dataset.
 
 	Using the EPSG Geodetic Parameter Dataset (Surveying and
 	Positioning Guidance Note Number 7, part 1)
