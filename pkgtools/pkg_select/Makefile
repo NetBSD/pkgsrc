@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/10/03 20:27:47 reed Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/03 20:53:38 reed Exp $
 #
 
 DISTNAME=	pkg_select-20050817
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
@@ -34,8 +35,9 @@ do-install:
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	Makefile pkg_select.1
+SUBST_FILES.path=	Makefile pkg_select.1 ${PKGBASE}.conf.example
 SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g" \
+			-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g" \
 			-e "s|/usr/pkg|${PREFIX}|g" \
 			-e "s|/var/db/pkg|${PKG_DBDIR}|g" \
 			-e "s|/usr/bin/make|${MAKE}|g"
