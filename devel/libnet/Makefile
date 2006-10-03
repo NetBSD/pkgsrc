@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/10/03 16:54:02 rillig Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
@@ -23,5 +23,10 @@ INSTALLATION_DIRS=	bin lib share/examples
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}/doc
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man=	Makefile.in
+SUBST_SED.man=		-e 's,@MAN_PREFIX@,${PREFIX}/${PKGMANDIR}/man3,g'
 
 .include "../../mk/bsd.pkg.mk"
