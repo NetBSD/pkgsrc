@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/03 20:27:47 reed Exp $
 #
 
 DISTNAME=	pkg_select-20050817
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
 WRKSRC=		${WRKDIR}/pkg_select
 NO_CONFIGURE=	yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 PKG_DBDIR?=	/var/db/pkg
 
@@ -30,7 +30,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.conf.example ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/mirrors.cvs ${PREFIX}/share/pkg_select
 	${INSTALL_DATA} ${WRKSRC}/mirrors.ftp ${PREFIX}/share/pkg_select
-	${INSTALL_MAN} ${WRKSRC}/pkg_select.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/pkg_select.1 ${PREFIX}/${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
