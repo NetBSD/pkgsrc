@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/03 09:04:10 schwarz Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/03 14:25:55 schwarz Exp $
 
 DISTNAME=	host-20040812
 CATEGORIES=	net
@@ -15,11 +15,16 @@ MAKE_FILE=	Makefile.BSD
 
 MAKE_FLAGS+=	__NetBSD__=1
 
+USE_TOOLS+=	nroff
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-static
+.endif
+.if !empty(LOWER_OPSYS:Mirix5*)
+CPPFLAGS+=	-DIRIX5
 .endif
 
 .include "../../mk/bsd.pkg.mk"
