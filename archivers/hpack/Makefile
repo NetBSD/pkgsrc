@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.34 2006/10/03 19:48:43 rillig Exp $
 
 DISTNAME=	hpack79src
 PKGNAME=	hpack-0.79
@@ -23,32 +23,30 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-MAKE_FLAGS+=	CFLAGS='-c -DLINUX -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. '${CFLAGS:M*:Q}' -Icrypt'
+MAKE_FLAGS+=	CFLAGS='-c -DLINUX -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. '${CFLAGS:Q}' -Icrypt'
 .else
-MAKE_FLAGS+=	CFLAGS='-c -DBSD386 -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. '${CFLAGS:M*:Q}' -Icrypt'
+MAKE_FLAGS+=	CFLAGS='-c -DBSD386 -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. '${CFLAGS:Q}' -Icrypt'
 .endif
 
 .if ${OPSYS} == "Darwin"
-MAKE_FLAGS+=	CMDL=${LDFLAGS:M*:Q}' -lcurses'
+MAKE_FLAGS+=	CMDL=${LDFLAGS:Q}' -lcurses'
 .else
-MAKE_FLAGS+=	CMDL=${LDFLAGS:M*:Q}' -ltermcap'
+MAKE_FLAGS+=	CMDL=${LDFLAGS:Q}' -ltermcap'
 .endif
 
 CONF_FILES=	${PREFIX}/share/hpack/hpack.cfg.example	\
 		${PKG_SYSCONFDIR}/hpack.cfg
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/hpack share/doc/hpack
 
 post-build:
-	cd ${WRKSRC}/keycvt && ${MAKE} CFLAGS="-c -D__UNIX__ "${CFLAGS:M*:Q} \
+	cd ${WRKSRC}/keycvt && ${MAKE} CFLAGS="-c -D__UNIX__ "${CFLAGS:Q} \
 		-f ${MAKE_FILE} keycvt
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hpack ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/keycvt/keycvt ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/docs/hpack.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/hpack
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hpack
 	${INSTALL_DATA} ${WRKSRC}/language.dat ${PREFIX}/share/hpack/
 	${INSTALL_DATA} ${WRKSRC}/docs/hpack.cfg ${PREFIX}/share/hpack/hpack.cfg.example
 	${INSTALL_DATA} ${WRKSRC}/docs/hpackext.doc ${PREFIX}/share/doc/hpack/
