@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5504 2006/10/03 14:35:01 obache Exp $
+$NetBSD: TODO,v 1.5505 2006/10/03 15:56:31 obache Exp $
 
 Suggested new packages
 ======================
@@ -394,6 +394,7 @@ Suggested package updates
 	o cweb-3.64a
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.21.1
+	o cyrus-imapd-2.2.13 [pkg/33576]
 	o cyrus-sasl-2.1.22
 	o dap-2.1.5
 	o dar-2.3.1 [pkg/34430]
