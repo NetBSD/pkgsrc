@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-aa,v 1.7 2006/10/03 21:06:25 adam Exp $
 
---- asmcomp/i386/emit.mlp.orig	2004-11-30 18:07:11.000000000 +0100
+--- asmcomp/i386/emit.mlp.orig	2006-03-29 16:49:19.000000000 +0200
 +++ asmcomp/i386/emit.mlp
-@@ -780,7 +780,7 @@ let emit_profile () =
+@@ -835,7 +835,7 @@ let emit_profile () =
        `	movl	%esp, %ebp\n`;
        `	pushl	%ecx\n`;
        `	pushl	%edx\n`;
