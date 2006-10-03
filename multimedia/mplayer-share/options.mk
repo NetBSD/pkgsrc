@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2006/08/04 20:48:25 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2006/10/03 14:47:40 tron Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -6,14 +6,19 @@
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 # -------------------------------------------------------------------------
 # Define PKG_SUPPORTED_OPTIONS based on the current package and system.
 # -------------------------------------------------------------------------
 
 # Options supported by both mplayer* or mencoder*.
+
+.if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread oss png theora vorbis
+.else
+PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread png theora vorbis
+.endif
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
@@ -204,9 +209,8 @@ CONFIGURE_ARGS+=	--enable-nas
 CONFIGURE_ARGS+=	--disable-nas
 .endif
 
-.if !empty(PKG_OPTIONS:Moss)
+.if ${OSS_TYPE} != "none" && !empty(PKG_OPTIONS:Moss)
 CONFIGURE_ARGS+=	--enable-ossaudio
-.  include "../../mk/oss.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ossaudio
 .endif
