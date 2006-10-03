@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1398 2006/10/03 19:00:11 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1399 2006/10/03 19:15:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4556,3 +4556,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtk2 to 2.10.4 [wiz 2006-10-03]
 	Updated net/mldonkey to 2.8.1 [wiz 2006-10-03]
 	Updated net/mldonkey-gui to 2.8.1 [wiz 2006-10-03]
+	Updated net/mtr to 0.72 [wiz 2006-10-03]

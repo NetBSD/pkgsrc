@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5508 2006/10/03 19:00:12 wiz Exp $
+$NetBSD: TODO,v 1.5509 2006/10/03 19:15:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ Suggested package updates
 	o mserv-devel-0.41
 	o msmtp-1.4.7
 	o mtail-1.1.1 [pkg/34512]
-	o mtr-gtk-0.72
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.2.0
 	o muse-0.9.1
