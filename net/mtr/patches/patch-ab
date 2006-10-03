@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
+$NetBSD: patch-ab,v 1.14 2006/10/03 19:15:20 wiz Exp $
 
---- dns.c.orig	2006-03-23 05:45:58.000000000 +0000
-+++ dns.c	2006-05-04 06:36:44.000000000 +0100
+--- dns.c.orig	2006-03-26 06:54:11.000000000 +0000
++++ dns.c
 @@ -28,13 +28,20 @@
  #include <sys/time.h>
  #include <sys/select.h>
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
  #include <unistd.h>
  #include <fcntl.h>
  #include <ctype.h>
-@@ -54,9 +61,6 @@
+@@ -54,9 +61,6 @@ extern char *sys_errlist[];
  #define strerror(errno) (((errno) >= 0 && (errno) < sys_nerr) ? sys_errlist[errno] : "unlisted error")
  #endif
  
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
  extern int af;
  
  /* Defines */
-@@ -294,6 +298,17 @@
+@@ -294,6 +298,17 @@ char nullstring[] = "";
  
  int use_dns = 1;
  
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
  
  /* Code */
  #ifdef CorruptCheck
-@@ -468,14 +483,14 @@
+@@ -468,14 +483,14 @@ void dns_open(void)
  {
    int option,i;
  
@@ -72,7 +72,7 @@ $NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
    resfd = socket(AF_INET, SOCK_DGRAM, 0);
    if (resfd == -1) {
      fprintf(stderr,"Unable to allocate socket for nameserver communication: %s\n",
-@@ -858,17 +873,17 @@
+@@ -858,17 +873,17 @@ void dorequest(char *s,int type,word id)
  {
    packetheader *hp;
    int r,i;
@@ -94,7 +94,7 @@ $NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
  		 sizeof(struct sockaddr));
  }
  
-@@ -1224,18 +1239,18 @@
+@@ -1224,18 +1239,18 @@ void dns_ack(void)
      /* Check to see if this server is actually one we sent to */
      if ( addrcmp( (void *) &(from4->sin_addr), (void *) &localhost,
                    (int) AF_INET ) == 0 ) {
@@ -119,12 +119,3 @@ $NetBSD: patch-ab,v 1.13 2006/05/04 05:40:16 tron Exp $
        sprintf(tempstring,"Resolver error: Received reply from unknown source: %s",
  	      inet_ntoa(from4->sin_addr ));
        restell(tempstring);
-@@ -1357,7 +1372,7 @@
- #ifdef ENABLE_IPV6
- /* Returns an ip6.arpa character string. */
- void addr2ip6arpa( ip_t * ip, char * buf ) {
--  char * p = (char *) ip;
-+  unsigned char * p = (unsigned char *) ip;
-   char * b = buf;
-   int i;
- 
