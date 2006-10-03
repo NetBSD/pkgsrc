@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1399 2006/10/03 19:15:49 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1400 2006/10/03 21:08:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4557,3 +4557,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey to 2.8.1 [wiz 2006-10-03]
 	Updated net/mldonkey-gui to 2.8.1 [wiz 2006-10-03]
 	Updated net/mtr to 0.72 [wiz 2006-10-03]
+	Updated lang/ocaml to 3.09.3 [adam 2006-10-03]

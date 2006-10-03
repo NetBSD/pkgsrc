@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5509 2006/10/03 19:15:49 wiz Exp $
+$NetBSD: TODO,v 1.5510 2006/10/03 21:08:36 adam Exp $
 
 Suggested new packages
 ======================
@@ -736,7 +736,6 @@ Suggested package updates
 	o nulib2-210
 	o nut-12.0 [pkg/34466]
 	o objc-3.2.7
-	o ocaml-3.09.3
 	o ocrad-0.15
 	o odbc-postgresql-8.0.7
 	o offlineimap-4.0.11
