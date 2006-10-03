@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
+$NetBSD: patch-at,v 1.12 2006/10/03 21:06:25 adam Exp $
 
---- configure.orig	2006-03-30 10:00:19.000000000 +0000
+--- configure.orig	2006-03-30 12:00:19.000000000 +0200
 +++ configure
 @@ -483,7 +483,7 @@ mksharedlibrpath=''
  
@@ -24,7 +24,15 @@ $NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
    i[3456]86-*-darwin*)          arch=i386; system=macosx;;
    i[3456]86-*-gnu*)             arch=i386; system=gnu;;
    mips-*-irix6*)                arch=mips; system=irix;;
-@@ -672,6 +674,7 @@ case "$arch,$model,$system" in
+@@ -596,6 +598,7 @@ case "$host" in
+   x86_64-*-linux*)              arch=amd64; system=linux;;
+   x86_64-*-gnu*)                arch=amd64; system=gnu;;
+   x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
++  x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
+   x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
+ esac
+ 
+@@ -672,6 +675,7 @@ case "$arch,$model,$system" in
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
@@ -32,7 +40,7 @@ $NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1060,6 +1063,7 @@ if test "$pthread_wanted" = "yes"; then
+@@ -1060,6 +1064,7 @@ if test "$pthread_wanted" = "yes"; then
    case "$host" in
      *-*-solaris*)  pthread_link="-lpthread -lposix4";;
      *-*-freebsd*)  pthread_link="-pthread";;
@@ -40,7 +48,7 @@ $NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
      *-*-openbsd*)  pthread_link="-pthread";;
      *)             pthread_link="-lpthread";;
    esac
-@@ -1107,6 +1111,7 @@ fi
+@@ -1107,6 +1112,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -48,7 +56,7 @@ $NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1153,6 +1158,7 @@ do
+@@ -1153,6 +1159,7 @@ do
      break
    fi
  done
@@ -56,7 +64,7 @@ $NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1242,31 +1248,8 @@ dbm_include="not found"
+@@ -1242,31 +1249,8 @@ dbm_include="not found"
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -90,7 +98,7 @@ $NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1278,8 +1261,8 @@ else
+@@ -1278,8 +1262,8 @@ else
    fi
    echo "DBM_INCLUDES=$dbm_include" >> Makefile
    echo "DBM_LINK=$dbm_link" >> Makefile
