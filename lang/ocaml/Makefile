@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/08/26 15:33:28 joerg Exp $
+# $NetBSD: Makefile,v 1.50.2.1 2006/10/03 14:07:54 ghen Exp $
 
 .include "Makefile.common"
 
@@ -14,7 +14,7 @@ BUILD_TARGET=		world
 ###
 
 # Stub libraries for functions missing from base system.
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
 PLIST_SRC+=	${PKGDIR}/PLIST.stub
 .endif
 
