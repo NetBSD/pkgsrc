@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/02 18:58:55 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/03 00:36:21 wiz Exp $
 #
 
 DISTNAME=	filelight-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://methylblue.com/filelight/packages/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rillig@NetBSD.org
-HOMEPAGE=	http://methylblue.com/filelight/packages/
+HOMEPAGE=	http://methylblue.com/filelight/
 COMMENT=	Graphical filesystem usage monitor
 
 GNU_CONFIGURE=	yes
