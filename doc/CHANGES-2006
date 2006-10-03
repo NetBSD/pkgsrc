@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1393 2006/10/03 14:35:01 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1394 2006/10/03 15:26:29 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4548,3 +4548,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/hyperestraier to 1.4.5 [obache 2006-10-03]
 	Updated shells/ast-ksh to 2006-02-14 [obache 2006-10-03]
 	Updated shells/static-ast-ksh to 2005-02-14 [obache 2006-10-03]
+	Updated devel/gob2 to 2.0.14 [dillo 2006-10-03]
