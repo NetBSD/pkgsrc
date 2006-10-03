@@ -1,3 +1,5 @@
+$NetBSD: patch-av,v 1.4 2006/10/03 23:01:25 schwarz Exp $
+
 --- other/pnmcolormap.c.orig	2006-10-03 17:57:34.000000000 +0200
 +++ other/pnmcolormap.c	2006-10-03 17:58:12.000000000 +0200
 @@ -169,7 +169,9 @@
