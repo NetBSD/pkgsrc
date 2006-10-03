@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.4 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-aw,v 1.5 2006/10/03 21:06:25 adam Exp $
 
---- ocamldoc/Makefile.orig	2005-11-10 15:44:36.000000000 +0100
+--- ocamldoc/Makefile.orig	2006-08-10 14:45:09.000000000 +0200
 +++ ocamldoc/Makefile
-@@ -254,24 +254,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
+@@ -258,24 +258,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
  # Installation targets
  ######################
  install: dummy

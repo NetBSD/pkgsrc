@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.4 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-am,v 1.5 2006/10/03 21:06:25 adam Exp $
 
---- camlp4/lib/Makefile.orig	2004-11-30 19:57:03.000000000 +0100
+--- camlp4/lib/Makefile.orig	2006-09-14 17:32:20.000000000 +0200
 +++ camlp4/lib/Makefile
 @@ -44,19 +44,19 @@ compare:
  	done
@@ -8,14 +8,14 @@ $NetBSD: patch-am,v 1.4 2006/01/16 09:41:48 adam Exp $
  install:
 -	-$(MKDIR) "$(LIBDIR)/camlp4"
 -	cp $(TARGET) *.mli "$(LIBDIR)/camlp4/."
--	cp *.cmi "$(LIBDIR)/camlp4/."
-+	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
+-	cp *.cmi *.cmo "$(LIBDIR)/camlp4/."
++	-${BSD_INSTALL_DATA_DIR} "$(LIBDIR)/camlp4"
 +	${BSD_INSTALL_DATA} $(TARGET) *.mli "$(LIBDIR)/camlp4/."
-+	${BSD_INSTALL_DATA} *.cmi "$(LIBDIR)/camlp4/."
++	${BSD_INSTALL_DATA} *.cmi *.cmo "$(LIBDIR)/camlp4/."
  	test -f $(TARGET:.cma=.cmxa) && $(MAKE) installopt LIBDIR="$(LIBDIR)" || true
  
  installopt:
- 	for f in $(TARGET:.cma=.cmxa) $(TARGET:.cma=.p.cmxa) *.cmx ; do \
+ 	for f in $(TARGET:.cma=.cmxa) $(TARGET:.cma=.p.cmxa) *.cmx *.o ; do \
 -		test -f $$f && cp $$f "$(LIBDIR)/camlp4/." || true ; \
 +		test -f $$f && ${BSD_INSTALL_DATA} $$f "$(LIBDIR)/camlp4/." || true ; \
  	done
