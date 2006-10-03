@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: epsg.sh,v 1.1 2006/10/03 12:53:44 gdt Exp $
+# $NetBSD: epsg.sh,v 1.2 2006/10/03 12:55:47 gdt Exp $
 
 # epsg - import EPSG data into a relational database
 
@@ -45,6 +45,10 @@ SRCDIR=${EPSGDIR}
 
 PSQL=${PREFIX}/bin/psql
 MYSQL=${PREFIX}/bin/mysql
+
+if [ $# = 0 ]; then
+    HELP=1
+fi
 
 while [ $# -gt 0 ]; do
     case $1 in
