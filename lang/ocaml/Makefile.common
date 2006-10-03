@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.16 2006/05/20 09:10:51 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2006/10/03 21:06:25 adam Exp $
 
-DISTNAME=	ocaml-3.09.2
+DISTNAME=	ocaml-3.09.3
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-3.09/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +19,7 @@ CONFIGURE_ENV+=		BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
 CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}
 CONFIGURE_ARGS+=	-libs ${LDFLAGS:Q}
 CONFIGURE_ARGS+=	-with-pthread
+CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
 CPPFLAGS+=		-DDB_DBM_HSEARCH
 
 .include "../../mk/bsd.prefs.mk"
