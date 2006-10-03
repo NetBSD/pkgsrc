@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1391 2006/10/03 04:19:22 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1392 2006/10/03 12:46:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4545,3 +4545,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/XaoS to 3.2.2 [rillig 2006-10-02]
 	Updated graphics/p5-Image-ExifTool to 6.42 [gdt 2006-10-03]
 	Updated security/pgpdump to 0.25 [taca 2006-10-03]
+	Updated textproc/hyperestraier to 1.4.5 [obache 2006-10-03]
