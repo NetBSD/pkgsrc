@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/07 15:49:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/03 12:55:32 tron Exp $
 
 DISTNAME=		mpeg4ip-1.5
 PKGREVISION=		2
@@ -17,6 +17,14 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 OVERRIDE_DIRDEPTH=	3		# */*/*/libtool
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	MPEG4IPSDL="@comment "
+.else
+PLIST_SUBST+=	MPEG4IPSDL=
+.endif
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
