@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5503 2006/10/03 12:46:49 obache Exp $
+$NetBSD: TODO,v 1.5504 2006/10/03 14:35:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -321,7 +321,6 @@ Suggested package updates
 	o aspell-danish-1.7.6
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
-	o ast-ksh-20060214 [pkg/34575]
 	o astyle-1.15.3
 	o autogen-5.8.6
 	o avcheck-0.91
