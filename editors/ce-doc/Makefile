@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/07/31 21:13:33 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/03 05:30:04 rillig Exp $
 #
 
 .include "../../editors/ce/Makefile.common"
 
 PKGNAME=		ce-doc-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT+=		, documentation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -17,7 +17,7 @@ INSTALL_TARGET=		doc-install
 INSTALLATION_DIRS=	bin share/doc/ce
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	do-configure
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	teach-ce.in
 SUBST_SED.paths=	-e 's|@LN@|${LN}|g'
 SUBST_SED.paths+=	-e '1s,/bin/bash,'${SH:Q}','
