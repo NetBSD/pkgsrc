@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1390 2006/10/03 00:26:46 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1391 2006/10/03 04:19:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/polyglot version 1.4 [rillig 2006-10-02]
 	Updated x11/XaoS to 3.2.2 [rillig 2006-10-02]
 	Updated graphics/p5-Image-ExifTool to 6.42 [gdt 2006-10-03]
+	Updated security/pgpdump to 0.25 [taca 2006-10-03]
