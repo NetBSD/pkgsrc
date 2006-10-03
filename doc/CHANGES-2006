@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1396 2006/10/03 17:43:42 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1397 2006/10/03 18:19:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4551,3 +4551,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gob2 to 2.0.14 [dillo 2006-10-03]
 	Updated security/EasyPG to 0.0.6 [gdt 2006-10-03]
 	Updated devel/py-urwid to 0.8.10 [minskim 2006-10-03]
+	Updated fonts/fontconfig to 2.4.1 [wiz 2006-10-03]
+	Updated devel/pango to 1.14.4 [wiz 2006-10-03]
+	Updated x11/gtk2 to 2.10.4 [wiz 2006-10-03]
