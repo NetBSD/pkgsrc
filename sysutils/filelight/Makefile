@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/03 00:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/03 18:17:36 wiz Exp $
 #
 
 DISTNAME=	filelight-1.0
@@ -23,5 +23,6 @@ pre-build:
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
