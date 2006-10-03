@@ -1,6 +1,17 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.1 2006/10/01 08:03:43 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.2 2006/10/03 14:32:00 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
 
 Created pkgsrc-2006Q3 branch [agc 2006-10-01 07:05 GMT]
+
+Pullup ticket 1833 - requested by uebayasi
+build fix for dict-client
+Pullup ticket 1835 - requested by dmcmahill
+build fix for pkgdiff on solaris
+Pullup ticket 1836 - requested by dmcmahill
+build fix for ocaml on solaris
+Pullup ticket 1837 - requested by dmcmahill
+build fix for hdf5 on solaris
+Pullup ticket 1838 - requested by dmcmahill
+build fix for glib2 on solaris
