@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/10/03 17:42:32 minskim Exp $
 
-SHA1 (urwid-0.8.4.tar.gz) = 48cdd41342da4eb2d94f0dcdaca1e6d42cd307c5
-RMD160 (urwid-0.8.4.tar.gz) = 1e96142236ded685804151489ff460be7b657851
-Size (urwid-0.8.4.tar.gz) = 53140 bytes
+SHA1 (urwid-0.8.10.tar.gz) = 2fade9d0957d0ab4f2ffa96b94fa801b55fdedc1
+RMD160 (urwid-0.8.10.tar.gz) = 114f0dad3e06678c007e685bc07bcd876e4fb514
+Size (urwid-0.8.10.tar.gz) = 102799 bytes

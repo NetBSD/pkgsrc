@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 00:00:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/03 17:42:32 minskim Exp $
 ${PYSITELIB}/urwid/__init__.py
 ${PYSITELIB}/urwid/__init__.pyc
 ${PYSITELIB}/urwid/__init__.pyo
@@ -8,6 +8,9 @@ ${PYSITELIB}/urwid/canvas.pyo
 ${PYSITELIB}/urwid/curses_display.py
 ${PYSITELIB}/urwid/curses_display.pyc
 ${PYSITELIB}/urwid/curses_display.pyo
+${PYSITELIB}/urwid/graphics.py
+${PYSITELIB}/urwid/graphics.pyc
+${PYSITELIB}/urwid/graphics.pyo
 ${PYSITELIB}/urwid/html_fragment.py
 ${PYSITELIB}/urwid/html_fragment.pyc
 ${PYSITELIB}/urwid/html_fragment.pyo
@@ -17,6 +20,9 @@ ${PYSITELIB}/urwid/listbox.pyo
 ${PYSITELIB}/urwid/util.py
 ${PYSITELIB}/urwid/util.pyc
 ${PYSITELIB}/urwid/util.pyo
+${PYSITELIB}/urwid/web_display.py
+${PYSITELIB}/urwid/web_display.pyc
+${PYSITELIB}/urwid/web_display.pyo
 ${PYSITELIB}/urwid/widget.py
 ${PYSITELIB}/urwid/widget.pyc
 ${PYSITELIB}/urwid/widget.pyo
