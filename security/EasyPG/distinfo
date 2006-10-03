@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/13 12:49:37 gdt Exp $
+$NetBSD: distinfo,v 1.2 2006/10/03 16:56:01 gdt Exp $
 
-SHA1 (epg-0.0.5.tar.gz) = 7ae335a428e592baf3d7074abf5435056f8bf9d4
-RMD160 (epg-0.0.5.tar.gz) = dd425b4d12770f4e9891afe1236c4fa468a38905
-Size (epg-0.0.5.tar.gz) = 85851 bytes
+SHA1 (epg-0.0.6.tar.gz) = f1d456c1ff60da021d7fce20d5f814157049e37d
+RMD160 (epg-0.0.6.tar.gz) = 05f5d0c445a173f1f01312a050059db1dfdf257b
+Size (epg-0.0.6.tar.gz) = 87324 bytes
