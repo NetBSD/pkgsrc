@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1392 2006/10/03 12:46:49 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1393 2006/10/03 14:35:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4546,3 +4546,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/p5-Image-ExifTool to 6.42 [gdt 2006-10-03]
 	Updated security/pgpdump to 0.25 [taca 2006-10-03]
 	Updated textproc/hyperestraier to 1.4.5 [obache 2006-10-03]
+	Updated shells/ast-ksh to 2006-02-14 [obache 2006-10-03]
+	Updated shells/static-ast-ksh to 2005-02-14 [obache 2006-10-03]
