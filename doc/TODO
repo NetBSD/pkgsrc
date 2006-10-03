@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5505 2006/10/03 15:56:31 obache Exp $
+$NetBSD: TODO,v 1.5506 2006/10/03 17:43:42 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1037,7 +1037,6 @@ Suggested package updates
 	o py-sybase-0.37
 	o py-textile-2.0.10
 	o py-twisted-2.4.0
-	o py-urwid-0.8.8
 	o py-wxWidgets-2.6.3.0
 	o py-xmltools-1.4.0
 	o py-yaml-3.04
