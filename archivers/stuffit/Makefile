@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/03 21:44:24 rillig Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
@@ -28,14 +28,12 @@ WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/doc/stuffit/stuff share/doc/stuffit/unstuff
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/* ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stuffit
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stuffit/stuff
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stuffit/unstuff
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/stuff/* \
 		${PREFIX}/share/doc/stuffit/stuff/
 	${INSTALL_DATA} ${WRKSRC}/doc/unstuff/* \
