@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/05/12 07:51:05 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2006/10/03 19:15:20 wiz Exp $
 
---- configure.orig	2006-05-12 07:46:21.000000000 +0000
+--- configure.orig	2006-09-29 19:41:56.000000000 +0000
 +++ configure
-@@ -6882,6 +6882,7 @@ _ACEOF
+@@ -7204,6 +7204,7 @@ _ACEOF
    LIBS="-lresolv $LIBS"
  
  else
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.6 2006/05/12 07:51:05 joerg Exp $
  
  echo "$as_me:$LINENO: checking for __res_mkquery in -lresolv" >&5
  echo $ECHO_N "checking for __res_mkquery in -lresolv... $ECHO_C" >&6
-@@ -6965,8 +6966,6 @@ fi
+@@ -7287,8 +7288,6 @@ fi
  
  fi
  
