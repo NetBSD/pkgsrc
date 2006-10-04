@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/10/04 21:44:46 wiz Exp $
 #
 
 DISTNAME=	g3d-0.0.2
 PKGREVISION=	6
 CATEGORIES=	graphics
-MASTER_SITES=	http://condor.stcloudstate.edu/~hebl9901/g3d/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 COMMENT=	3D modeller with a view of 3D modelling
 
 WRKSRC=		${WRKDIR}/g3d

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/14 22:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/04 21:43:00 wiz Exp $
 #
 
 DISTNAME=	fillets-ng-data-0.7.1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://fillets.sf.net/
+HOMEPAGE=	http://fillets.sourceforge.net/
 COMMENT=	Fish Fillets NG data files
 
 NO_BUILD=	yes
