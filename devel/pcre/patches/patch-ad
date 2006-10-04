@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2006/10/04 20:23:46 rillig Exp $
+
+--- configure.orig	2006-10-04 22:20:58.000000000 +0200
++++ configure	2006-10-04 22:21:48.000000000 +0200
+@@ -19664,7 +19664,7 @@ fi;
+ # Check whether --enable-ebcdic or --disable-ebcdic was given.
+ if test "${enable_ebcdic+set}" = set; then
+   enableval="$enable_ebcdic"
+-  if test "$enableval" == "yes"; then
++  if test "$enableval" = "yes"; then
+   EBCDIC=-DEBCDIC=1
+ fi
+ 
