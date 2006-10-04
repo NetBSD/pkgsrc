@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/07/06 21:26:23 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/04 20:50:47 wiz Exp $
 
 DISTNAME=	xchat-systray-integration-2.4.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xchat2-plugins/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://blight.altervista.org/index.php?act=Systray
+HOMEPAGE=	http://www.patriziobassi.it/blight/index.php?act=Systray
 COMMENT=	Systray icon plugin for X-Chat
 
 DEPENDS+=	xchat>=2.0:../../chat/xchat
