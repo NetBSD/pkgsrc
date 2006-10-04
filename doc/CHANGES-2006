@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1402 2006/10/04 12:12:35 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1403 2006/10/04 12:19:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4570,3 +4570,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/cy2-plain to 2.1.22 [obache 2006-10-03]
 	Updated security/cy2-sql to 2.1.22 [obache 2006-10-03]
 	Updated security/cyrus-saslauthd to 2.1.22 [obache 2006-10-03]
+	Updated mail/cyrus-imapd to 2.2.13 [obache 2006-10-03]
