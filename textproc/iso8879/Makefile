@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/09/17 08:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/04 22:01:00 wiz Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.oasis-open.org/cover/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://www.iso.ch/cate/d16387.html
+HOMEPAGE=	http://www.iso.org/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
