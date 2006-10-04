@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/29 06:21:58 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/10/04 21:53:16 wiz Exp $
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
 PKGNAME=	delegate-8.9.6
@@ -18,7 +18,7 @@ MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://www.delegate.org/
+HOMEPAGE=	http://www.delegate.org/delegate/
 COMMENT=	General purpose TCP/IP proxy system
 
 
