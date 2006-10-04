@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1352.2.1 2006/10/04 07:38:37 he Exp $
+>$NetBSD: CHANGES-2006,v 1.1352.2.2 2006/10/04 11:35:55 he Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4494,7 +4494,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/pgp2 to 2.6.3ianb1 [tron 2006-09-28]
 	Updated sysutils/bkpupsd to 2.2.1 [taca 2006-09-29]
 	Updated lang/tcl-otcl to 1.12 [minskim 2006-09-29]
-	Updated math/sc to 6.21nb1 [he 2006-09-29]
 	Updated multimedia/RealPlayerGold to 10.0.8.805.20060718 [dmcmahill 2006-09-29]
 	Updated devel/rt3 to 3.4.5nb3 [cube 2006-09-29]
 	Updated security/openssl to 0.9.7inb3 [taca 2006-09-30]
