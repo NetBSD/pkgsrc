@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2006/10/01 08:53:05 schwarz Exp $
+# $NetBSD: Makefile,v 1.82 2006/10/04 20:20:03 rillig Exp $
 
 DISTNAME=	libxml2-2.6.26
 CATEGORIES=	textproc
@@ -32,7 +32,12 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 MAKE_ENV+=	PAX=${PAX:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+USE_TOOLS+=	perl
 TEST_TARGET=	check
+.endif
 
 SUBST_CLASSES+=		cat
 SUBST_STAGE.cat=	pre-configure
@@ -40,7 +45,6 @@ SUBST_FILES.cat=	catalog.c xmlcatalog.c
 SUBST_SED.cat=	-e "s,@@SGML_DEFAULT_CATALOG@@,${SGML_DEFAULT_CATALOG},g"
 SUBST_SED.cat+=	-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
 
-.include "../../mk/bsd.prefs.mk"
 .if !empty(LOWER_OPSYS:Mirix5*)
 # needs glob.h
 . include "../../pkgtools/libnbcompat/buildlink3.mk"
