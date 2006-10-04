@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/10/04 21:20:40 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2006/10/04 21:22:43 rillig Exp $
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	2
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}
 MAKE_FILE=	makefile
 SCRIPTS_ENV+=	PERL5=${PERL5}
 MAKE_FLAGS+=	GRP=${BINGRP}
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	do_unlinks.pl mirror.pl mm.pl pkgs_to_mmin.pl
