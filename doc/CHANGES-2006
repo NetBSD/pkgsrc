@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1405 2006/10/04 20:55:51 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1406 2006/10/04 22:23:04 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4573,3 +4573,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/cyrus-imapd to 2.2.13 [obache 2006-10-03]
 	Added devel/fann version 2.0.0 [gdt 2006-10-04]
 	Updated devel/bzr to 0.11 [wiz 2006-10-04]
+	Updated graphics/g2 to 0.50 [rillig 2006-10-04]
