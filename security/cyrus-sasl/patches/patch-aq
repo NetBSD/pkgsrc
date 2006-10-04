@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.4 2006/04/18 17:41:30 jlam Exp $
+$NetBSD: patch-aq,v 1.5 2006/10/04 12:07:53 obache Exp $
 
---- sasldb/Makefile.in.orig	2005-05-15 01:58:41.000000000 -0400
+--- sasldb/Makefile.in.orig	2006-05-18 15:30:16.000000000 -0400
 +++ sasldb/Makefile.in
-@@ -239,26 +239,18 @@ extra_common_sources = db_none.c db_ndbm
+@@ -240,26 +240,18 @@ extra_common_sources = db_none.c db_ndbm
  EXTRA_DIST = NTMakefile
  
  noinst_LTLIBRARIES = libsasldb.la
@@ -29,7 +29,7 @@ $NetBSD: patch-aq,v 1.4 2006/04/18 17:41:30 jlam Exp $
  LTLIBRARIES = $(noinst_LTLIBRARIES)
  
  libsasldb_la_LDFLAGS =
-@@ -278,10 +270,9 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+@@ -279,10 +271,9 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
  CCLD = $(CC)
  LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -42,7 +42,7 @@ $NetBSD: patch-aq,v 1.4 2006/04/18 17:41:30 jlam Exp $
  
  all: all-am
  
-@@ -542,8 +533,6 @@ uninstall-am: uninstall-info-am
+@@ -543,8 +534,6 @@ uninstall-am: uninstall-info-am
  	tags uninstall uninstall-am uninstall-info-am
  
  
