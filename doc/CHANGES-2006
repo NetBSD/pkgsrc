@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1401 2006/10/04 07:42:22 he Exp $
+>$NetBSD: CHANGES-2006,v 1.1402 2006/10/04 12:12:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4559,3 +4559,14 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey-gui to 2.8.1 [wiz 2006-10-03]
 	Updated net/mtr to 0.72 [wiz 2006-10-03]
 	Updated lang/ocaml to 3.09.3 [adam 2006-10-03]
+	Updated security/cyrus-sasl to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-anonymous to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-crammd5 to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-digestmd5 to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-gssapi to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-login to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-ntlm to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-otp to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-plain to 2.1.22 [obache 2006-10-03]
+	Updated security/cy2-sql to 2.1.22 [obache 2006-10-03]
+	Updated security/cyrus-saslauthd to 2.1.22 [obache 2006-10-03]
