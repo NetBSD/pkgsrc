@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.4 2006/10/04 12:00:54 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.5 2006/10/04 12:05:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -19,3 +19,5 @@ Pullup ticket 1841 - requested by he
 documentation fix for CHANGES-2006
 Pullup ticket 1834 - requested by ghen
 options.mk fix for seamonkey
+Pullup ticket 1839 - requested by ghen
+build fix for inkscape
