@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2006/10/02 11:13:22 ghen Exp $
+# $NetBSD: Makefile.common,v 1.55 2006/10/04 19:38:06 rillig Exp $
 
 DISTNAME=		icewm-1.2.27
 CATEGORIES=		x11 wm
@@ -50,13 +50,14 @@ HTMLDIR=		${PREFIX}/share/doc/icewm/html
 INSTALL_TARGET=		install-base install-nls
 
 post-extract:
-	@${CP} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
+	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	for file in BUGS CHANGES COPYING README README.wm-session TODO; do\
-		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
+	set -e; \
+	for file in BUGS CHANGES COPYING README README.wm-session TODO; do \
+		${INSTALL_DATA} ${WRKSRC}/"$${file}" ${DOCDIR}; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${HTMLDIR}
 
