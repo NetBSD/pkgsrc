@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/04 21:45:16 wiz Exp $
 #
 
 DISTNAME=	ami-1.0.11
 PKGREVISION=	8
 CATEGORIES=	korean inputmethod
-MASTER_SITES=	http://www.kr.freebsd.org/~hwang/ami/
+MASTER_SITES=	http://kldp.net/frs/download.php/942/
+# http://kldp.net/frs/download.php/942/ami-1.2.3.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kr.freebsd.org/~hwang/ami/
+HOMEPAGE=	http://kldp.net/projects/ami
 COMMENT=	Korean input method
 
 GNU_CONFIGURE=	YES

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2006/09/09 02:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/04 21:36:00 wiz Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.dcs.rhbnc.ac.uk/pub/rdp/
+MASTER_SITES=		ftp://ftp.cs.rhul.ac.uk/pub/rdp/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.dcs.rhbnc.ac.uk/research/languages/rdp.shtml
+HOMEPAGE=		http://www.cs.rhul.ac.uk/research/languages/projects/rdp.shtml
 COMMENT=		Compiles attributed LL(1) grammars into recursive descent compilers
 
 WRKSRC=			${WRKDIR}/rdp

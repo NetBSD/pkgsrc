@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/09 16:54:11 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/04 21:39:31 wiz Exp $
 #
 
 DISTNAME=	ttf-alee_7.3
@@ -7,7 +7,7 @@ CATEGORIES=	fonts korean
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/ttf-alee/}
 
 MAINTAINER=	fox9@netb.co.kr
-HOMEPAGE=	http://packages.debian.org/unstable/x11/ttf-alee/
+HOMEPAGE=	http://packages.debian.org/unstable/x11/ttf-alee
 COMMENT=	A Lee's Hangul truetype fonts
 
 USE_X11BASE=    YES

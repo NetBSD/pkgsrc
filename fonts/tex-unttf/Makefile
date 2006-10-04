@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/15 02:34:48 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/04 21:39:31 wiz Exp $
 #
 
 DISTNAME=	fonts-unttf-20060215
@@ -8,7 +8,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://faq.ktug.or.kr/faq/DHUcs
+HOMEPAGE=	http://faq.ktug.or.kr/faq/Hangul-ucs
 COMMENT=	TeX fonts based on Un fonts
 
 DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk

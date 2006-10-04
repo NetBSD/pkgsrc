@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 21:43:01 wiz Exp $
 #
 
 DISTNAME=	majesty_demo
@@ -9,7 +9,7 @@ MASTER_SITES=	http://demos.linuxgamepublishing.com/majesty/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://majesty.linuxgamepublishing.com/
+HOMEPAGE=	http://www.linuxgamepublishing.com/info.php?id=majesty
 COMMENT=	Fantasy kingdom simulation (demo)
 
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \

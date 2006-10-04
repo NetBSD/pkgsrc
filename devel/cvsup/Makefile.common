@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2006/01/12 18:01:15 rillig Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/10/04 21:35:58 wiz Exp $
 
 DISTNAME=	cvsup-snap-16.1h
 CATEGORIES=	devel net
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/snapshots/
 
 MAINTAINER=	motoyuki@bsdclub.org
-HOMEPAGE=	http://www.polstra.com/projects/freeware/CVSup/
+HOMEPAGE=	http://www.cvsup.org/
 COMMENT=	cvsup daemon and client
 
 ONLY_FOR_PLATFORM=	DragonFly-*-i386 FreeBSD-*-i386 Linux-*-i386 \

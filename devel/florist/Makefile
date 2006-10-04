@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:42 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 21:35:58 wiz Exp $
 #
 
 DISTNAME=		florist-3.15p-src
 PKGNAME=		florist-3.15p
 PKGREVISION=	2
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.cs.nyu.edu/pub/gnat/3.15p/
+MASTER_SITES=		http://www.cs.fsu.edu/~baker/ftp/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		shannonjr@NetBSD.org
-HOMEPAGE=		ftp://ftp.cs.nyu.edu/pub/gnat/3.15p/
+HOMEPAGE=		http://www.cs.fsu.edu/~baker/florist.html
 COMMENT=		FSU implementation of POSIX.5 (Ada binding)
 
 USE_PKGLOCALEDIR=	yes

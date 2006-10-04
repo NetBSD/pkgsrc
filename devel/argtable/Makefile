@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2006/06/02 15:34:12 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/04 21:35:58 wiz Exp $
 
 DISTNAME=	argtable-1.2
 CATEGORIES=	devel
-MASTER_SITES=	http://metalab.unc.edu/pub/Linux/devel/
+MASTER_SITES=	http://www.ibiblio.org/pub/Linux/devel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://metalab.unc.edu/pub/Linux/devel/argtable.html
+HOMEPAGE=	http://www.ibiblio.org/pub/Linux/devel/argtable.html
 COMMENT=	Library for parsing command line arguments of a C/C++ program
 
 GNU_CONFIGURE=		YES

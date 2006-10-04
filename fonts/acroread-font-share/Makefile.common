@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2005/09/28 22:23:02 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/10/04 21:39:30 wiz Exp $
 #
 
 PKGNAME=	acroread-${DISTNAME}-4.0
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
-HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
+HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 
 DEPENDS+=	acroread-4.*:../../print/acroread
 

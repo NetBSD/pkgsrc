@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/09/08 07:49:36 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/10/04 21:43:01 wiz Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -9,7 +9,8 @@ MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/doom/
 DISTFILES=	doomsrc.zip doom-1.8.wad.gz
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
+# HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
+# AWOL
 COMMENT=	3D shoot-em-up for 8-bit X11 displays
 
 LICENSE=	xdoom-license

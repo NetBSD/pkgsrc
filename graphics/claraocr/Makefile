@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:46 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 21:44:46 wiz Exp $
 #
 
 DISTNAME=	clara-0.9.9
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://carroll.cac.psu.edu/pub/linux/distributions/mandrake-devel/p
 		ftp://ftp.proxad.net/pub/Distributions_Linux/Mandrake-devel/projects/claraocr/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.claraocr.org/
+HOMEPAGE=	http://www.geocities.com/claraocr/
 COMMENT=	Optical Character Recognition (OCR) program for books
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
