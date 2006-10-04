@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2006/05/13 17:01:11 ghen Exp $
+$NetBSD: patch-aj,v 1.2 2006/10/04 19:38:06 rillig Exp $
 
---- src/aapm.cc.orig	2006-02-03 07:24:27.000000000 +0100
-+++ src/aapm.cc
+--- src/aapm.cc.orig	2006-08-06 20:38:16.000000000 +0200
++++ src/aapm.cc	2006-10-04 21:23:18.000000000 +0200
 @@ -38,8 +38,12 @@
  #include <sys/file.h>
  #include <sys/ioctl.h>
@@ -10,8 +10,8 @@ $NetBSD: patch-aj,v 1.1 2006/05/13 17:01:11 ghen Exp $
 +#include <sparc/apmvar.h>
 +#else
  #include <machine/apmvar.h>
-+#endif
  #endif
++#endif
  
  YColor *YApm::apmBg = 0;
  YColor *YApm::apmFg = 0;
