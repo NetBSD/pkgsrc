@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/07/26 11:04:37 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2006/10/04 22:01:00 wiz Exp $
 #
 
 DISTNAME=	icu-3.4.1
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.software.ibm.com/software/globalization/icu/${PKGVERSION
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ibm.com/software/globalization/icu/
+HOMEPAGE=	http://www-306.ibm.com/software/globalization/icu/
 COMMENT=	Robust and full-featured Unicode services
 
 WRKSRC=			${WRKDIR}/${PKGBASE}/source
