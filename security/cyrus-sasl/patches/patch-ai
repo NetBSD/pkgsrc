@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.5 2006/04/18 17:41:30 jlam Exp $
+$NetBSD: patch-ai,v 1.6 2006/10/04 12:07:53 obache Exp $
 
---- configure.orig	2005-05-15 01:58:28.000000000 -0400
+--- configure.orig	2006-05-18 15:30:13.000000000 -0400
 +++ configure
-@@ -1331,8 +1331,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+@@ -1334,8 +1334,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.5 2006/04/18 17:41:30 jlam Exp $
  if test -r "$cache_file"; then
    # Some versions of bash will fail to source /dev/null (special
    # files actually), so we avoid doing that.
-@@ -1350,8 +1348,6 @@ echo "$as_me: creating cache $cache_file
+@@ -1353,8 +1351,6 @@ echo "$as_me: creating cache $cache_file
    >$cache_file
  fi
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.5 2006/04/18 17:41:30 jlam Exp $
  ac_aux_dir=
  for ac_dir in config $srcdir/config; do
    if test -f $ac_dir/install-sh; then
-@@ -5155,7 +5151,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5156,7 +5152,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.5 2006/04/18 17:41:30 jlam Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -5912,7 +5908,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5913,7 +5909,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -38,7 +38,7 @@ $NetBSD: patch-ai,v 1.5 2006/04/18 17:41:30 jlam Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -11158,8 +11154,15 @@ if test $ac_cv_lib_resolv_res_search = y
+@@ -11304,8 +11300,15 @@ if test $ac_cv_lib_resolv_res_search = y
  fi
  
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"
@@ -56,7 +56,7 @@ $NetBSD: patch-ai,v 1.5 2006/04/18 17:41:30 jlam Exp $
  
    cmu_save_LIBS="$LIBS"
    LIBS="$LIBS $GSSAPIBASE_LIBS"
-@@ -11257,11 +11260,6 @@ fi
+@@ -11403,11 +11406,6 @@ fi
  
  
  if test "$gssapi" != "no"; then
