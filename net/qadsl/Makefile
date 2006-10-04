@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2006/06/02 14:13:04 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/04 21:53:18 wiz Exp $
 #
+# qadsl is now GNU Alive (wip/alive)
 
 DISTNAME=	qadsl-final-1.2
 PKGNAME=	qadsl-1.2
 CATEGORIES=	net
-MASTER_SITES=	http://qba.linuxsweden.nu/code/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qba.linuxsweden.nu/
 COMMENT=	Login software for Swedish Telia ADSL/Comhem cable Internet users
 
 LIBS.SunOS+=	-lnsl -lsocket

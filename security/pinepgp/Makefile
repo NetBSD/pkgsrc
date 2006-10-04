@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 21:58:14 wiz Exp $
 #
 
 DISTNAME=		pinepgp-0.18.0
 PKGREVISION=		2
 CATEGORIES=		security mail
-MASTER_SITES=		http://www.megaloman.com/~hany/_data/pinepgp/	\
+MASTER_SITES=		http://hany.sk/~hany/_data/pinepgp/	\
 			http://terminus.sk/~hany/_data/pinepgp/		\
 			http://www.mirrors.wiretapped.net/security/cryptography/apps/mail/pinepgp/
 
 MAINTAINER=		jschauma@NetBSD.org
-HOMEPAGE=		http://www.megaloman.com/~hany/software/pinepgp/stable.html
+HOMEPAGE=		http://hany.sk/~hany/software/pinepgp/stable.html
 COMMENT=		PGP display and sending filters for pine
 
 DEPENDS+=		bash>=2:../../shells/bash2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/06/21 18:33:51 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/04 21:53:18 wiz Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -8,7 +8,7 @@ CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
+HOMEPAGE=	http://www.nosuchname.net/scotty/
 COMMENT=	Network management extensions to TCL
 
 BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.6nb4

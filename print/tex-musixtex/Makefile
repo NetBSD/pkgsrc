@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/04 21:56:35 wiz Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/musixtex/taupin/}
 DISTFILES=	musixtex-T112.tar.gz
 
 MAINTAINER=	dgriffi@cs.csubak.edu
-HOMEPAGE=	http://icking-music-archive.sunsite.dk/
+HOMEPAGE=	http://icking-music-archive.org/
 COMMENT=	TeX macros to typeset music
 
 TEX_ACCEPTED=	teTeX3

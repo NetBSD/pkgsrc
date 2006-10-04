@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/04 21:56:34 wiz Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
 PKGREVISION=	4
 CATEGORIES=	print
-MASTER_SITES=	http://www.tdb.uu.se/~jan/
+MASTER_SITES=	http://user.it.uu.se/~jan/
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.tdb.uu.se/~jan/html2ps.html
+HOMEPAGE=	http://user.it.uu.se/~jan/html2ps.html
 COMMENT=	HTML to PostScript converter
 
 DEPENDS+=	ImageMagick>=5.3.9nb1:../../graphics/ImageMagick

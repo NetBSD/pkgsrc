@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2006/04/06 03:20:54 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/04 21:53:18 wiz Exp $
 #
 
 DISTNAME=	tinc-1.0.4
 CATEGORIES=	net
-MASTER_SITES=	http://tinc.nl.linux.org/packages/
+MASTER_SITES=	http://www.tinc-vpn.org/packages/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tinc.nl.linux.org/
+HOMEPAGE=	http://www.tinc-vpn.org/
 COMMENT=	Virtual Private Network (VPN) daemon
 
 GNU_CONFIGURE=	yes

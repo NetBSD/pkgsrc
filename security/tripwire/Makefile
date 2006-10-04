@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/04 21:30:38 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/10/04 21:58:15 wiz Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/security/tripwire/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
+HOMEPAGE=	http://www.cerias.purdue.edu/about/history/coast/coast-library.html
 COMMENT=	File and directory integrity checker
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
