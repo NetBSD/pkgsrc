@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/16 14:25:36 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/10/04 20:47:44 wiz Exp $
 #
 
 DISTNAME=	gwave-20030804
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://www.cs.unc.edu/~tell/dist/
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave/
+HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave.html
 COMMENT=	Viewer for spice-like simulator output and other analog data
 
 GNU_CONFIGURE=	YES

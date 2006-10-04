@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/22 04:46:14 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/04 20:53:45 wiz Exp $
 #
 
 DISTNAME=	metakit-2.4.9.5
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://www.equi4.com/pub/mk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.equi4.com/metakit/
+HOMEPAGE=	http://www.equi4.com/metakit.html
 COMMENT=	Embedded database library
 
 GNU_CONFIGURE=	yes

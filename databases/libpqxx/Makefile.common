@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2006/08/23 11:45:26 ghen Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/10/04 20:53:45 wiz Exp $
 #
 
 LIBPQXX_VERSION=	2.5.5
@@ -7,7 +7,7 @@ CATEGORIES=		databases
 MASTER_SITES=		ftp://gborg.postgresql.org/pub/libpqxx/stable/
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://pqxx.tk/
+HOMEPAGE=		http://thaiopensource.org/development/
 
 DISTINFO_FILE=  	${.CURDIR}/../../databases/libpqxx/distinfo
 PATCHDIR=       	${.CURDIR}/../../databases/libpqxx/patches

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2006/03/04 21:29:01 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/04 20:46:42 wiz Exp $
 
 DISTNAME=	hint_unix_serial
 PKGNAME=	hint.serial-98.06.12
 CATEGORIES=	benchmarks
-MASTER_SITES=	ftp://ftp.scl.ameslab.gov/pub/HINT/source/tar/
+MASTER_SITES=	http://hint.byu.edu/pub/HINT/source/tar/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scl.ameslab.gov/Projects/HINT/
+HOMEPAGE=	http://hint.byu.edu/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
