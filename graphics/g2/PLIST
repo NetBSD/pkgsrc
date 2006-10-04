@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/26 14:59:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/04 22:22:37 rillig Exp $
 include/g2.h
-include/g2_GIF.h
 include/g2_PS.h
 include/g2_X11.h
 include/g2_gd.h
@@ -15,9 +14,9 @@ share/examples/g2/g2_test.f
 share/examples/g2/penguin.c
 share/examples/g2/penguin.inc
 share/examples/g2/pointer.c
-share/examples/g2/simple_GIF.c
 share/examples/g2/simple_PS.c
 share/examples/g2/simple_X11.c
 share/examples/g2/simple_gd.c
+share/examples/g2/simple_win32.c
 @dirrm share/doc/g2
 @dirrm share/examples/g2/
