@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2006/10/01 08:55:32 schwarz Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/04 18:48:04 rillig Exp $
+
+ISO C90 does not accept qualified initializers. Needed at least for IRIX
+5.
 
 --- pkg.c.orig	2006-09-19 01:21:12.000000000 +0200
 +++ pkg.c	2006-09-19 01:21:50.000000000 +0200
