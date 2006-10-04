@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/22 20:58:50 bouyer Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/04 21:58:13 wiz Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.task.gda.pl/mirror/ftp.cert.org/pub/tools/crack/ \
 		ftp://ftp.nask.pl/pub/CERT_NASK/CERTCC_tools/crack/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.crypticide.org/users/alecm/
+HOMEPAGE=	http://www.crypticide.com/users/alecm/
 COMMENT=	The "Sensible" Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/c50a

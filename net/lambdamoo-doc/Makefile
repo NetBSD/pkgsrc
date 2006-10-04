@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 21:53:17 wiz Exp $
 
 DISTNAME=	lambdamoo-doc-1.8.0p6
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.lambda.moo.mud.org/pub/MOO/ \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lambdamoo/} \
 		ftp://ftp.kanga.nu/pub/mirrors/ftp.lambda.moo.mud.org/pub/MOO/
 EXTRACT_SUFX=
 DISTFILES=	ProgrammersManual.texinfo HelpSystem-02Jun93.txt
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ccs.neu.edu/home/eostrom/muds/lambdamoo.html
+HOMEPAGE=	http://sourceforge.net/projects/lambdamoo/
 COMMENT=	Documentation for lambdamoo
 
 EXTRACT_ONLY=	ProgrammersManual.texinfo

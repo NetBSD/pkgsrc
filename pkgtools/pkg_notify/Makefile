@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 21:54:59 wiz Exp $
 #
 
 DISTNAME=	pkg_notify-0.4.2
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://imil.net/
+HOMEPAGE=	http://imil.net/wp/
 COMMENT=	Notifies package maintainer when a new version is available
 
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww

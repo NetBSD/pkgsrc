@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/09/28 16:21:46 tron Exp $
+# $NetBSD: Makefile,v 1.49 2006/10/04 21:58:14 wiz Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 		ftp://ftp.kiarchive.ru/pub/unix/crypto/pgp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pgpi.com/
+HOMEPAGE=	http://www.pgpi.org/
 COMMENT=	Public-key encryption and digital signature utility (v2)
 
 WRKSRC=		${WRKDIR}/src
