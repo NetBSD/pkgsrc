@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2006/04/06 06:22:18 reed Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/04 21:47:16 wiz Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	3
 CATEGORIES=	mail
-MASTER_SITES=	http://www.midwestcs.com/spf/libspf-alt/
+MASTER_SITES=	http://libspf2.org/
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://www.midwestcs.com/spf/libspf-alt/
+HOMEPAGE=	http://libspf2.org/
 COMMENT=	Sender Permitted Framework (SPF) library
 
 BUILDLINK_API_DEPENDS.bind+=	bind>=9.2.3nb3

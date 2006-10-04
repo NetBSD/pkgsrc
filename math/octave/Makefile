@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/04/06 09:10:28 adam Exp $
+# $NetBSD: Makefile,v 1.67 2006/10/04 21:47:57 wiz Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.che.wisc.edu/octave/
+HOMEPAGE=	http://www.octave.org/
 COMMENT=	High-level language, intended for numerical computations
 
 BUILD_DEPENDS+=	bison>=1.875:../../devel/bison

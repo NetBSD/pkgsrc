@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/04 21:47:16 wiz Exp $
 #
 
 DISTNAME=	evolution-exchange-2.8.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://www.novell.com/products/evolution/
+HOMEPAGE=	http://www.novell.com/products/desktop/features/evolution.html
 COMMENT=	Support for Microsoft Exchange 2000 and 2003 in Evolution
 
 GNU_CONFIGURE=		YES

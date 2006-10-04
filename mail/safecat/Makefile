@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2005/11/07 20:39:19 tv Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 21:47:16 wiz Exp $
 #
 
 DISTNAME=		safecat-1.12
 CATEGORIES=		mail
-MASTER_SITES=		http://pobox.com/~lbudney/linux/software/safecat/
+MASTER_SITES=		http://jeenyus.net/~budney/linux/software/safecat/
 
 MAINTAINER=		zuntum@NetBSD.org
-HOMEPAGE=		http://pobox.com/~lbudney/linux/software/safecat.html
+HOMEPAGE=		http://jeenyus.net/~budney/linux/software/safecat.html
 COMMENT=		Write data safely to a maildir
 
 USE_TOOLS+=		nroff

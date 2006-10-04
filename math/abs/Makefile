@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/04 21:47:57 wiz Exp $
 #
 
 DISTNAME=	abs-src-0.8
@@ -8,7 +8,8 @@ CATEGORIES=	math x11
 MASTER_SITES=	http://www.ping.be/bertin/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ping.be/bertin/abs.shtml
+# HOMEPAGE=	http://www.ping.be/bertin/abs.shtml
+# AWOL
 COMMENT=	Free spreadsheet with graphical user interface
 
 USE_X11BASE=	YES
