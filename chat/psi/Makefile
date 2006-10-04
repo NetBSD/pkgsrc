@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/09/02 20:21:54 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2006/10/04 20:50:47 wiz Exp $
 
 PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jdolecek@NetBSD.org
-HOMEPAGE=	http://psi.affinix.com/
+HOMEPAGE=	http://psi-im.org/
 COMMENT=	PSI Jabber Client
 
 DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
