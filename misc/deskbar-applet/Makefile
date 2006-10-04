@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 21:49:19 wiz Exp $
 #
 
 DISTNAME=	deskbar-applet-2.16.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://raphael.slinckx.net/deskbar
+HOMEPAGE=	http://raphael.slinckx.net/deskbar/
 COMMENT=	Omnipresent, versatile search interface for the GNOME Desktop
 
 BROKEN_IN=		pkgsrc-2006Q1

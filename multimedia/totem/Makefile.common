@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2006/09/15 15:23:51 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/10/04 21:50:09 wiz Exp $
 #
 
 DISTNAME=	totem-2.16.0
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.16/}
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://www.hadess.net/totem.php3
+HOMEPAGE=	http://www.gnome.org/projects/totem/
 COMMENT=	Movie player for the GNOME Desktop
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
