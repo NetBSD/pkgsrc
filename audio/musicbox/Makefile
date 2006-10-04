@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2006/05/13 12:59:26 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/04 20:44:19 wiz Exp $
 
 DISTNAME=	musicbox-1.01p2
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://freebsd.csie.nctu.edu.tw/Upload/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org

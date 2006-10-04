@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/14 13:35:50 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/04 20:44:19 wiz Exp $
 
 DISTNAME=	pyxmms-2.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -7,7 +7,7 @@ CATEGORIES=	audio python
 MASTER_SITES=	http://people.via.ecp.fr/~flo/2002/PyXMMS/dist/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.via.ecp.fr/~flo/index.en.xhtml\#PyXMMS_and_PyXMMS-remote
+HOMEPAGE=	http://people.via.ecp.fr/~flo/index.en.xhtml\#PyXMMS_and_PyXMMS-remote
 COMMENT=	Python interface to XMMS
 
 PYDISTUTILSPKG=	yes
