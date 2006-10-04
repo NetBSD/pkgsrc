@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2006/08/13 23:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/04 20:55:14 wiz Exp $
 #
 
-DISTNAME=		bzr-0.9
+DISTNAME=		bzr-0.11
 CATEGORIES=		devel
-MASTER_SITES=		http://www.bazaar-ng.org/pkg/
+MASTER_SITES=		http://bazaar-vcs.org/releases/src/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bazaar-ng.org/
-COMMENT=		Open source distributed version control system (Bazaar-NG)
+HOMEPAGE=		http://bazaar-vcs.org/
+COMMENT=		Open source distributed version control system
 
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
