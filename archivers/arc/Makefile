@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/07/17 17:20:14 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/10/04 20:45:46 wiz Exp $
 
 DISTNAME=	arc-5.21o
 CATEGORIES=	archivers
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arc/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arc.sourceforge.net/
+HOMEPAGE=	http://sourceforge.net/projects/arc/
 COMMENT=	Create & extract files from DOS .ARC files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
