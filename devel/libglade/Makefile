@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/04/17 13:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2006/10/04 21:35:59 wiz Exp $
 
 DISTNAME=		libglade-0.17
 PKGREVISION=		9
@@ -6,7 +6,7 @@ CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/0.17/}
 
 MAINTAINER=		rh@NetBSD.org
-HOMEPAGE=		http://www.daa.com.au/~james/gnome/
+HOMEPAGE=		http://www.jamesh.id.au/software/libglade/
 COMMENT=		Runtime interpreter for GLADE GUI files
 
 USE_TOOLS+=		msgfmt

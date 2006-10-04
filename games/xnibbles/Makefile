@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/04 21:43:01 wiz Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -8,7 +8,8 @@ CATEGORIES=		games x11
 MASTER_SITES=		http://www.tjhsst.edu/xnibbles/
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
+# HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
+# not maintained since 1999, rewritten into gnibbles
 COMMENT=		Winding snakes game for X11
 
 WRKSRC=			${WRKDIR}/xnibbles

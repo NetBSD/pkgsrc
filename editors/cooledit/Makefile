@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/04 21:37:39 wiz Exp $
 
 DISTNAME=	cooledit-3.17.17
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cooledit.sourceforge.net/
+HOMEPAGE=	# http://cooledit.sourceforge.net/
 COMMENT=	Full-featured text editor
 
 USE_LIBTOOL=		yes
