@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/26 23:33:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/04 21:35:58 wiz Exp $
 #
 
 DISTNAME=		acr-0.4
@@ -7,7 +7,7 @@ MASTER_SITES=		http://cvs.nopcode.org/ftp/acr/ \
 			ftp://ftp.nopcode.org/prj/acr/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://www.nopcode.org/pancake/acr.html
+HOMEPAGE=		http://news.nopcode.org/pancake/acr.html
 COMMENT=		Autoconf replacement
 
 GNU_CONFIGURE=		yes

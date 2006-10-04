@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2006/07/22 04:46:15 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/04 21:36:00 wiz Exp $
 #
 
 DISTNAME=	papaya-0.1.7
 PKGREVISION=	4
 CATEGORIES=	devel
-MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/		\
-		${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/index.html
+HOMEPAGE=	http://sourceforge.net/projects/papaya-utils/
 COMMENT=	Simple scripts for software development
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
