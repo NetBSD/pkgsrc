@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2006/08/26 15:32:29 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/10/04 21:07:52 rillig Exp $
 #
 
 DISTNAME=	Python-2.1.3
 PKGNAME=	python21-2.1.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.3/
 EXTRACT_SUFX=	.tgz
