@@ -1,19 +1,17 @@
-$NetBSD: distinfo,v 1.15 2006/04/18 17:41:30 jlam Exp $
+$NetBSD: distinfo,v 1.16 2006/10/04 12:07:53 obache Exp $
 
-SHA1 (cyrus-sasl-2.1.21.tar.gz) = 6449f730c963d29d43600a95373a6e2db52d6d66
-RMD160 (cyrus-sasl-2.1.21.tar.gz) = 93e0e1868453c5781602b5cce23e746b8823a26b
-Size (cyrus-sasl-2.1.21.tar.gz) = 1584931 bytes
-SHA1 (patch-aa) = 0267569a89aade1c5aa455d618ebb0016022ecc4
-SHA1 (patch-ab) = 55cd67f8856239ab90696456a16af9498a4354ae
-SHA1 (patch-ac) = 671c462164f0c763b4a646aca9afe293be9448ef
+SHA1 (cyrus-sasl-2.1.22.tar.gz) = d23454ab12054714ab97d229c86cb934ce63fbb1
+RMD160 (cyrus-sasl-2.1.22.tar.gz) = 086e20d01588cb86decad001244b72a37223354c
+Size (cyrus-sasl-2.1.22.tar.gz) = 1609278 bytes
+SHA1 (patch-aa) = a20fca0058a04d00debb78d8cc051ec8d8f57af2
+SHA1 (patch-ab) = e1cb24eb8888ae93846efbb5ef42028ac52a44bd
+SHA1 (patch-ac) = 1b653bee1a1b98e8e197911cc193c2c9b6d9f736
 SHA1 (patch-ad) = c3fe38777a281b6800115711b732254f72887107
-SHA1 (patch-ae) = cfd176eea2e1dba320be14a7d9bf2a4426ba39ad
-SHA1 (patch-af) = 40ec1378971536daddc543a66a1923451a4c381c
+SHA1 (patch-ae) = ac9403e8cdbebb8be04947c9ff8a7505002b3a36
 SHA1 (patch-ag) = 6a2713504078dad681dcc6f7ba296972d03d5b15
 SHA1 (patch-ah) = 595e58bd756e75bda5f25a19119f2fc7c27bc7d9
-SHA1 (patch-ai) = 6309e9117be65e64de635cb004385e9badcd687c
-SHA1 (patch-ak) = 1f727d2bc0536ac5d9ba28f5e4cf01c6c1998987
-SHA1 (patch-al) = d706fb15cdff279251bed0a2c0a7b5cd1bad3584
+SHA1 (patch-ai) = 8b09b26e66f64895de069ebccb582d6d5f38287d
+SHA1 (patch-ak) = e76a0ac7559845ed374c63f0261df9817e383ac1
+SHA1 (patch-al) = d1bfddb749b2f234d3750e3a83bf800bdba4cec4
 SHA1 (patch-ap) = eb87cd283f99da69916a7eb251000f2d9254f17d
-SHA1 (patch-aq) = 6d2f126a52c589a4789d1d3e3d3e8ab5e31cd82f
-SHA1 (patch-at) = cf35ac66873a5bc18216e13a1240019da99563ca
+SHA1 (patch-aq) = e7ed617db1935ed8f8c23d934da70582468c7dea

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2006/04/18 17:41:30 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2006/10/04 12:07:53 obache Exp $
 
---- configure.in.orig	2005-05-07 00:54:18.000000000 -0400
+--- configure.in.orig	2006-05-18 15:06:13.000000000 -0400
 +++ configure.in
 @@ -44,12 +44,7 @@ dnl
  AC_INIT(lib/saslint.h)
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/18 17:41:30 jlam Exp $
  
  AC_CONFIG_AUX_DIR(config)
  AC_CANONICAL_HOST
-@@ -506,7 +501,6 @@ SASL_KERBEROS_V4_CHK
+@@ -528,7 +523,6 @@ SASL_KERBEROS_V4_CHK
  SASL_GSSAPI_CHK
  
  if test "$gssapi" != "no"; then
