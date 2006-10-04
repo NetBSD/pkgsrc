@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/04 20:44:20 wiz Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
 PKGNAME=	xmms-tv-scope-0.0.2
 PKGREVISION=	8
 CATEGORIES=	xmms audio
-MASTER_SITES=	http://staff.xmms.org/zinx/xmms/
+MASTER_SITES=	http://zinx.xmms.org/xmms/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://staff.xmms.org/zinx/xmms/
+HOMEPAGE=	http://zinx.xmms.org/xmms/
 COMMENT=	3D Representation of a waveform
 
 USE_LIBTOOL=	YES

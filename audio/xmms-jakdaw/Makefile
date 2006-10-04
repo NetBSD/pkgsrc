@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:00 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 20:44:20 wiz Exp $
 
 DISTNAME=	jakdaw-0.0.4
 PKGNAME=	xmms-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	audio xmms
 MASTER_SITES=	http://www.jakdaw.ucam.org/xmms/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jakdaw.ucam.org/xmms
+HOMEPAGE=	http://www.jakdaw.ucam.org/xmms/
 COMMENT=	Very customizable XMMS plugin with nice effects
 
 GNU_CONFIGURE=	yes

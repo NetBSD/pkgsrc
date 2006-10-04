@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:39 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/04 20:44:19 wiz Exp $
 #
 
 DISTNAME=	ac3dec-0.6.1
 PKGNAME=	${DISTNAME:S/ac3dec/libac3/}
 CATEGORIES=	audio
-MASTER_SITES=	http://gusnet.cx/aaron/codecs/tarballs/
+MASTER_SITES=	http://liba52.sourceforge.net/files/
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://ess.engr.uvic.ca/~aholtzma/ac3/
+HOMEPAGE=	http://liba52.sourceforge.net/
+# obsolete -- remove in favor of liba52?
 COMMENT=	AC3 audio (as used on DVDs) decoding library
 
 GNU_CONFIGURE=  yes
