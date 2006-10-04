@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2006/04/18 17:41:30 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2006/10/04 12:07:53 obache Exp $
 
---- cmulocal/sasl2.m4.orig	2005-05-07 00:15:17.000000000 -0400
+--- cmulocal/sasl2.m4.orig	2006-05-18 15:25:34.000000000 -0400
 +++ cmulocal/sasl2.m4
-@@ -249,8 +249,11 @@ if test "$gssapi" != no; then
+@@ -252,8 +252,11 @@ if test "$gssapi" != no; then
    AC_MSG_RESULT([with implementation ${gss_impl}])
    AC_CHECK_LIB(resolv,res_search,GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lresolv")
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"

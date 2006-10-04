@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
+$NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
 
---- configure.orig	2006-04-18 13:03:08.000000000 -0400
+--- configure.orig	2006-05-19 04:30:20.000000000 +0900
 +++ configure
-@@ -9322,75 +9322,23 @@ if test "$with_pam" != no; then
+@@ -9458,75 +9458,23 @@ if test "$with_pam" != no; then
      CPPFLAGS="$CPPFLAGS -I${with_pam}/include"
      LDFLAGS="$LDFLAGS -L${with_pam}/lib"
    fi
@@ -89,7 +89,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -9399,7 +9347,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -9535,7 +9483,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -98,7 +98,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -9425,8 +9373,8 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -9561,8 +9509,8 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -109,7 +109,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -9434,7 +9382,7 @@ _ACEOF
+@@ -9570,7 +9518,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -118,7 +118,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -9467,10 +9415,10 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+@@ -9603,10 +9551,10 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc in
    yes:no )
@@ -133,7 +133,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------ ##
-@@ -9481,12 +9429,12 @@ _ASBOX
+@@ -9617,12 +9565,12 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
    no:yes )
@@ -152,7 +152,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------ ##
-@@ -9497,29 +9445,157 @@ _ASBOX
+@@ -9633,29 +9581,157 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -189,8 +189,7 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
 +echo $ECHO_N "checking for pam_start... $ECHO_C" >&6
 +if test "${ac_cv_func_pam_start+set}" = set; then
 +  echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--  with_pam=no
++else
 +  cat >conftest.$ac_ext <<_ACEOF
 +#line $LINENO "configure"
 +/* confdefs.h.  */
@@ -248,7 +247,8 @@ $NetBSD: patch-af,v 1.1 2006/04/18 17:42:59 jlam Exp $
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); }; }; then
 +  ac_cv_func_pam_start=yes
-+else
+ else
+-  with_pam=no
 +  echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
 +

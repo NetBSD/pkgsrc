@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1 2006/04/18 17:42:59 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2006/10/04 12:07:53 obache Exp $
 
---- configure.in.orig	2005-05-07 00:54:18.000000000 -0400
+--- configure.in.orig	2006-05-18 01:46:17.000000000 +0900
 +++ configure.in
-@@ -80,20 +80,36 @@ if test "$authsasldb" != no; then
-   SASL_DB_LIB="$SASL_DB_LIB ../sasldb/.libs/libsasldb.al"
+@@ -87,20 +87,36 @@ if test "$httpform" != no; then
+   AC_DEFINE(HAVE_HTTPFORM,[],[Include HTTP form Support])
  fi
  
 -AC_ARG_WITH(pam, [  --with-pam=DIR          use PAM (rooted in DIR) [yes] ],

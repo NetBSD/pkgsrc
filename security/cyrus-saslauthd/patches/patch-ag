@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2006/04/18 17:42:59 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2006/10/04 12:07:53 obache Exp $
 
---- saslauthd.h.in.orig	2005-05-15 02:02:30.000000000 -0400
+--- saslauthd.h.in.orig	2006-05-19 04:38:27.000000000 +0900
 +++ saslauthd.h.in
-@@ -89,12 +89,18 @@
+@@ -95,12 +95,18 @@
  /* Support for PAM? */
  #undef HAVE_PAM
  
