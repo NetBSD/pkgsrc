@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:53 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/04 22:01:52 wiz Exp $
 #
 
 DISTNAME=		polclock-1.11
@@ -7,7 +7,7 @@ CATEGORIES=		x11 time
 MASTER_SITES=		http://www.daionet.gr.jp/~masa/archives/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.daionet.gr.jp/~masa/glclock
+HOMEPAGE=		http://www.daionet.gr.jp/~masa/glclock/
 COMMENT=		Digital clock with some nice graphics effects
 
 USE_IMAKE=		yes
