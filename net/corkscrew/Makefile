@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/02/17 07:48:02 martti Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/04 21:53:16 wiz Exp $
 
 DISTNAME=	corkscrew-2.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.agroman.net/corkscrew/
 
 MAINTAINER=	martti@NetBSD.org
-HOMEPAGE=	http://www.agroman.net/corkscrew
+HOMEPAGE=	http://www.agroman.net/corkscrew/
 COMMENT=	Tool for tunneling SSH through HTTP proxies
 
 GNU_CONFIGURE=	YES

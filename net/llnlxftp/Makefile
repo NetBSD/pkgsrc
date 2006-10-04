@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:26 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/04 21:53:17 wiz Exp $
 #
 
 DISTNAME=		llnlxftp2.1
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.llnl.gov/pub/ia/llnlxftp/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		tor@stormwall.org
-HOMEPAGE=		http://www.llnl.gov/ia/xftp.html
+HOMEPAGE=		http://www.llnl.gov/icc/sdd/img/xftp.html
 COMMENT=		Motif FTP client
 
 USE_IMAKE=      	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/25 06:34:16 martti Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/04 21:58:14 wiz Exp $
 
 DISTNAME=	keychain-2.6.2
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@NetBSD.org
-HOMEPAGE=	http://www.gentoo.org/proj/en/keychain.xml
+HOMEPAGE=	http://www.gentoo.org/proj/en/keychain/
 COMMENT=	Nice ssh-agent front-end
 
 .if !exists(/usr/bin/ssh-agent)
