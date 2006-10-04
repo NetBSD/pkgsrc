@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2006/09/09 02:41:56 obache Exp $
+# $NetBSD: Makefile.common,v 1.14 2006/10/04 20:53:45 wiz Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -13,7 +13,7 @@ PGSQL_SITES=		http://www.postgresql.org/ftpsite/ \
 MASTER_SITES?=		${PGSQL_SITES:=source/v${DIST_VERS}/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://odbc.postgresql.org/
+HOMEPAGE=		http://pgfoundry.org/projects/psqlodbc/
 
 CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
 CONFLICTS+=		unixodbc-postgresql-[0-9]* iodbc-postgresql-[0-9]*

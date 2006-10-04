@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2006/10/04 20:51:40 wiz Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://alpha.greenie.net/mgetty/
+HOMEPAGE=	http://mgetty.greenie.net/
 COMMENT=	Handle external logins, send and receive faxes
 
 BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff

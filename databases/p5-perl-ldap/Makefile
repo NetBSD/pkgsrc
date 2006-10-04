@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/04 21:29:10 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/10/04 20:53:45 wiz Exp $
 #
 
 DISTNAME=     	perl-ldap-0.33
@@ -8,7 +8,7 @@ CATEGORIES=	databases net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perl-ldap.sourceforge.net/
+HOMEPAGE=	http://ldap.perl.org/
 COMMENT=	Perl class to access LDAP servers
 
 DEPENDS+=	p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1

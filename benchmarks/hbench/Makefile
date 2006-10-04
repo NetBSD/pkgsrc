@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2006/06/18 10:07:09 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2006/10/04 20:46:42 wiz Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
 PKGREVISION=		5
 CATEGORIES=		benchmarks
-MASTER_SITES=	http://www.eecs.harvard.edu/vino/perf/hbench/
+MASTER_SITES=		http://www.eecs.harvard.edu/vino/perf/hbench/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.eecs.harvard.edu/vino/perf/hbench/

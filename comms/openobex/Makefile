@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/09 09:27:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/04 20:51:40 wiz Exp $
 #
 
 DISTNAME=	openobex-1.3
@@ -6,7 +6,7 @@ CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
 MAINTAINER=	xtraeme@NetBSD.org
-HOMEPAGE=	http://openobex.sourceforge.net/
+HOMEPAGE=	http://openobex.triq.net/
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
 
 GNU_CONFIGURE=	yes
