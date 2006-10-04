@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2005/10/23 14:11:10 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/04 21:35:58 wiz Exp $
 #
 
 DISTNAME=		gentle-97
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.cs.cuhk.hk/pub/Linux/devel/compiler-tools/
+MASTER_SITES=		http://gentle.compilertools.net/
 
 MAINTAINER=		MarkoSchuetz@web.de
-HOMEPAGE=		http://gentle.compilertools.net/distribution.html
+HOMEPAGE=		http://gentle.compilertools.net/
 COMMENT=		Gentle Compiler Construction System
 
 USE_LIBTOOL=		yes

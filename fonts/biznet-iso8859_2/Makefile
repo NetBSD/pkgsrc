@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2006/09/22 21:53:56 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 21:39:31 wiz Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
 PKGNAME=	biznet-iso8859_2-1.0
 PKGREVISION=	4
 CATEGORIES=	fonts x11
-MASTER_SITES=	http://www.biz.net.pl/images/
+MASTER_SITES=	http://ultra.cto.us.edu.pl/pub/Unix/Fonts/ \
+		http://www.biz.net.pl/images/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.biz.net.pl/english/x-fonts/index.html

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/04 21:43:01 wiz Exp $
 #
 
 DISTNAME=	xgospel-1.12d
 PKGREVISION=	2
 CATEGORIES=	games x11
-MASTER_SITES=	http://img.teaser.fr/~jlgailly//
+MASTER_SITES=	http://gailly.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gailly.net/xgospel/
+HOMEPAGE=	http://gailly.net/go.html
 COMMENT=	X11 based IGS client for online "go" playing
 
 GNU_CONFIGURE=		yes
