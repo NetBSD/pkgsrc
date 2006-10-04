@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:30:08 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/10/04 21:47:58 wiz Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.12.1
 PKGREVISION=		2
 CATEGORIES=		math devel
-MASTER_SITES=		http://www.unidata.ucar.edu/packages/udunits/
+MASTER_SITES=		http://www.unidata.ucar.edu/software/udunits/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.unidata.ucar.edu/packages/udunits/
+HOMEPAGE=		http://www.unidata.ucar.edu/software/udunits/
 COMMENT=		Library and program for manipulating units of physical quantities
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
