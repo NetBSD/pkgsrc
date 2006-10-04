@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/04 21:58:13 wiz Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
@@ -11,7 +11,7 @@ SITES.pth-2.0.4.tar.gz=	${MASTER_SITE_GNU:=pth/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shannonjr@NetBSD.org
-HOMEPAGE=		http://www.gnupg.org/aegypten2
+HOMEPAGE=		http://www.gnupg.org/aegypten2/
 COMMENT=		X509 certificate and CRL downloader
 
 DIRMNGR_USER?=		dirmngr

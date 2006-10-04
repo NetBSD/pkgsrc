@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:18 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/04 21:53:16 wiz Exp $
 #
 
 DISTNAME=	dnstop-20050203
 CATEGORIES=	net
-MASTER_SITES=	http://dnstop.measurement-factory.com/src/
+MASTER_SITES=	http://dns.measurement-factory.com/tools/dnstop/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dnstop.measurement-factory.com/src/
+HOMEPAGE=	http://dns.measurement-factory.com/tools/dnstop/
 COMMENT=	Diagnose tcpdump trace for DNS queries/replies
 
 INSTALLATION_DIRS=	bin man/man8
