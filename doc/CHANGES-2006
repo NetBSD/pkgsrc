@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1404 2006/10/04 20:13:42 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1405 2006/10/04 20:55:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4572,3 +4572,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/cyrus-saslauthd to 2.1.22 [obache 2006-10-03]
 	Updated mail/cyrus-imapd to 2.2.13 [obache 2006-10-03]
 	Added devel/fann version 2.0.0 [gdt 2006-10-04]
+	Updated devel/bzr to 0.11 [wiz 2006-10-04]
