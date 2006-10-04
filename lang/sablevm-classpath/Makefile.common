@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/04/23 20:03:06 tonio Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/10/04 21:46:14 wiz Exp $
 #
 
 DISTNAME=	sablevm-classpath-1.13
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://sablevm.org/download/release/1.13/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sablevm.org/
+HOMEPAGE=	http://sablevm.org/
 COMMENT=	Class libraries for the SableVM Java virtual machine
 
 BUILD_DEPENDS+=		jikes>=1.18:../../lang/jikes

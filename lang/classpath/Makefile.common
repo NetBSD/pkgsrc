@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2006/05/16 13:27:33 tonio Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/10/04 21:46:13 wiz Exp $
 
 DISTNAME=		classpath-0.91
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/classpath/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/classpath
+HOMEPAGE=		http://www.gnu.org/software/classpath/
 COMMENT=		Class libraries for Java VM
 
 DEPENDS+=		jikes>=1.18:../../lang/jikes

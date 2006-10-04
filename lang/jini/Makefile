@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/23 07:41:07 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/10/04 21:46:13 wiz Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
@@ -9,7 +9,7 @@ MASTER_SITES=		# empty
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.sun.com/jini/
+HOMEPAGE=		http://www.sun.com/software/jini/
 COMMENT=		Suns Jini(tm) Technology Starter Kit
 
 ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.[6-9]*-*

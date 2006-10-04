@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/16 06:58:01 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/04 21:46:14 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -9,7 +9,7 @@ MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@NetBSD.org
-HOMEPAGE=	http://www.digicool.com/releases/ExtensionClass
+HOMEPAGE=	http://cvs.zope.org/*checkout*/Cruft/ExtensionClass/doc/Attic/Acquisition.html?rev=1.2
 COMMENT=	Python-extensible C "classes" and Acquisition for Python
 
 EXTRACT_ELEMENTS=       ${DISTNAME}/lib/Components/ExtensionClass

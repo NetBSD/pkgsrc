@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/04 21:46:14 wiz Exp $
 #
 
 DISTNAME=	spl-0.9h
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.clifford.at/spl/releases/
 
 MAINTAINER=	raphael@raphael.g-system.at
-HOMEPAGE=	http://www.clifford.at/spl
+HOMEPAGE=	http://www.clifford.at/spl/
 COMMENT=	The SPL Programming Language
 
 USE_LANGUAGES=	c

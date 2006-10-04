@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/04 21:46:12 wiz Exp $
 #
 
 DISTNAME=		cl74unix
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.inria.fr/lang/caml-light/
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://caml.inria.fr/distrib-caml-light-eng.html
+HOMEPAGE=		http://caml.inria.fr/caml-light/index.en.html
 COMMENT=		Another implementation of Caml
 
 WRKSRC=			${WRKDIR}/cl74/src

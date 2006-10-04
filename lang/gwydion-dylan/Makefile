@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/04 21:46:13 wiz Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
 PKGREVISION=		1
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.gwydiondylan.org/pub/gd/src/tar/ \
+MASTER_SITES=		ftp://ftp.opendylan.org/pub/gd/src/tar/ \
 			ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/tar/ \
 			ftp://ftp.ntua.gr/pub/lang/gwydion/src/tar/ \
 			ftp://gd.tuwien.ac.at/languages/gwydiondylan/src/tar/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gwydiondylan.org/
+HOMEPAGE=		http://www.opendylan.org/
 COMMENT=		Functional language
 
 USE_TOOLS+=		gmake perl
