@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2006/06/18 19:36:53 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 20:50:47 wiz Exp $
 #
 
 DISTNAME=	tzc-2.6.15
 PKGREVISION=	3
 CATEGORIES=	chat net
-MASTER_SITES=	http://www-2.cs.cmu.edu/People/dkindred/zephyr-mode/
+MASTER_SITES=	http://www.cs.cmu.edu/People/dkindred/zephyr-mode/
 
 MAINTAINER=	sommerfeld@NetBSD.org
-HOMEPAGE=	http://www-2.cs.cmu.edu/People/dkindred/zephyr-mode/zephyr.html
+HOMEPAGE=	http://www.cs.cmu.edu/People/dkindred/zephyr/zephyr.html
 COMMENT=	Back-end program for zephyr-mode
 
 CPPFLAGS+=      -I/usr/include/kerberosIV -I/usr/include/krb5
