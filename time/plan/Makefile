@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:30:53 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/04 22:01:52 wiz Exp $
 
 DISTNAME=	plan-1.8.4
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11 time
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/graphics/plan/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
+HOMEPAGE=	http://me.in-berlin.de/~bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src

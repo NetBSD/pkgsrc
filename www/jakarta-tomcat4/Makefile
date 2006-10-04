@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/27 15:16:44 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 22:04:09 wiz Exp $
 
 PKGNAME=        jakarta-tomcat4-${TOMCAT_VERSION}
 DISTNAME=       jakarta-tomcat-${TOMCAT_VERSION}
@@ -9,7 +9,7 @@ CATEGORIES=	www java
 # The getsite.sh script parses the HTML and extracts the urls.
 
 MAINTAINER=	erh@NetBSD.org
-HOMEPAGE=	http://jakarta.apache.org/tomcat/
+HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	The Apache Project's Java Servlet 2.3 and JSP 1.2 server
 
 TOMCAT_VERSION=	4.1.30

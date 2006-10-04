@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/15 13:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/04 22:01:00 wiz Exp $
 #
 
 DISTNAME=	ispell.el
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://kdstevens.com/pub/stevens/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kdstevens.com/~stevens/ispell-page.html
+HOMEPAGE=	http://www.eng.utah.edu/~kstevens/ispell-page.html
 COMMENT=	Emacs interface for ispell spell checker
 
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base

@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2006/06/02 13:55:11 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 22:01:52 wiz Exp $
 #
 
 DISTNAME=	pcal-4.7
 PKGREVISION=	2
 CATEGORIES=	time
-MASTER_SITES=	http://membled.com/work/mirror/pcal/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcal/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kei@NetBSD.org
-# pcal's home used to be http://www.geocities.com/SunsetStrip/Palms/5555/PS/
-HOMEPAGE=	http://membled.com/work/mirror/pcal/
+HOMEPAGE=	http://pcal.sourceforge.net/
 COMMENT=	PostScript calendar program
 
 HTDOCS=		${PREFIX}/share/httpd/htdocs

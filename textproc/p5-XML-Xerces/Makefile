@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/08/10 13:48:23 abs Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/04 22:01:00 wiz Exp $
 #
 
 DISTNAME=	XML-Xerces-2.7.0-0
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=xml/xerces-p/}
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://xml.apache.org/xerces-p/
+HOMEPAGE=	http://xerces.apache.org/xerces-p/
 COMMENT=	Validating XML parser API for Perl
 
 CONFLICTS+=	XML-Xerces-[0-9]*

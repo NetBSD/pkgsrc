@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/02 23:39:22 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/04 22:01:00 wiz Exp $
 #
 
 DISTNAME=	saxon
@@ -9,7 +9,7 @@ MASTER_SITES=	${HOMEPAGE}saxon6.0.2/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://users.iclway.co.uk/mhkay/saxon/
+HOMEPAGE=	http://users.breathe.com/mhkay/saxon/
 COMMENT=	Michael H. Kay's Java XSLT processor
 
 WRKSRC=		${WRKDIR}

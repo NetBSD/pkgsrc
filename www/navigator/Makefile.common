@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.83 2006/06/01 15:31:27 joerg Exp $
+# $NetBSD: Makefile.common,v 1.84 2006/10/04 22:04:10 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -129,7 +129,7 @@ WRKSRC=		${WRKDIR}
 # was: ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 MASTER_SITES=	http://www.gmd.de/ftp/mirrors3/ftp.linuxppc.org/linuxppc-halloween/software/
 EXTRACT_SUFX=	.rpm
-HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4.7-3.ppc.html
+HOMEPAGE=	http://lwn.net/2000/0629/a/netscape-ppc.php3
 BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 DESCR_SRC=	${WRKDIR}/DESCR.linux-powerpc
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
@@ -142,7 +142,7 @@ PLIST_ARCH=
 .endif
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE?=	http://home.netscape.com/browsers/index.html
+HOMEPAGE?=	http://www.netscape.com/browsers/index.html
 RESTRICTED=	No re-distribution without agreement from Netscape
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

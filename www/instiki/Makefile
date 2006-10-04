@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/04 22:04:09 wiz Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/2515/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://instiki.org/
+HOMEPAGE=	http://instiki.org/show/HomePage
 COMMENT=	Wiki clone that focuses on simple installation and running
 
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/10/02 16:10:07 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/10/04 22:00:59 wiz Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -14,11 +14,11 @@ DISTNAME=	fop-0_15_0-forBeginners
 PKGNAME=	fop-0.15.0
 PKGREVISION=	2
 CATEGORIES=	textproc www
-MASTER_SITES=	http://xml.apache.org/dist/fop/recent/
+MASTER_SITES=	http://xmlgraphics.apache.org/dist/fop/recent/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://xml.apache.org/fop/
+HOMEPAGE=	http://xmlgraphics.apache.org/fop/
 COMMENT=	The Apache Project's XSL Formatting Objects implementation
 
 WRKSRC=		${WRKDIR}

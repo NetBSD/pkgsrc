@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/02/05 23:11:26 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/10/04 22:04:10 wiz Exp $
 
 DISTNAME=	ns-remote
 PKGNAME=	ns-remote-1.11
@@ -8,7 +8,7 @@ MASTER_SITES=	http://home.netscape.com/newsref/std/
 DISTFILES=	remote.c vroot.h
 
 MAINTAINER=	norm@mono.org
-HOMEPAGE=	http://home.netscape.com/newsref/std/x-remote.html
+HOMEPAGE=	http://www.netscape.com/newsref/std/x-remote.html
 COMMENT=	Remote-control of Netscape and Mozilla-based browsers
 
 DIST_SUBDIR=	netscape

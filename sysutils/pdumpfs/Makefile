@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/02/03 04:43:47 taca Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/04 21:59:35 wiz Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://namazu.org/~satoru/pdumpfs/
+MASTER_SITES=	http://0xcc.net/pdumpfs/
 
 MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://namazu.org/~satoru/pdumpfs/
+HOMEPAGE=	http://0xcc.net/pdumpfs/
 COMMENT=	Simple daily backup system similar to Plan9's dumpfs
 
 VER=		1.3
