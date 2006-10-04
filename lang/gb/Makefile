@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/10/04 21:46:13 wiz Exp $
 #
 
 DISTNAME=		gb-0.0.20
@@ -7,7 +7,7 @@ CATEGORIES=		lang gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gb/0.0/}
 
 MAINTAINER=		rh@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/gb/
+HOMEPAGE=		http://www.gnome.org/projects/gb/
 COMMENT=		Basic for Gnome
 
 GNU_CONFIGURE=		YES
