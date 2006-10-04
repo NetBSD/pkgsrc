@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2006/09/03 00:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 20:44:19 wiz Exp $
 #
 
 DISTNAME=	pymusique-0.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/py//}
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	http://fuware.nanocrew.net/pymusique/
+MASTER_SITES=	http://www.pyronecrophilia.com/content/pymusique/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fuware.nanocrew.net/pymusique/
+HOMEPAGE=	http://www.pyronecrophilia.com/content/pymusique/
 COMMENT=	Interface to the iTunes Music Store
 
-RESTRICTED=	Possible legal problems due to iTuness access
+RESTRICTED=	Possible legal problems due to iTunes access
 NO_SRC_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_SRC_ON_CDROM=        ${RESTRICTED}

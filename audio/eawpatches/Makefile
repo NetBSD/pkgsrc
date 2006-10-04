@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/05 20:49:47 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/04 20:44:18 wiz Exp $
 #
 
 DISTNAME=	eawpats12_full
@@ -6,10 +6,12 @@ PKGNAME=	eawpatches-12
 PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.stardate.bc.ca/eawpatches/
+# http://www.george.ca/interests/eawpats12_full.tar.gz
 EXTRACT_SUFX=	.rar
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.stardate.bc.ca/eawpatches/html/
+# AWOL, ask http://www.sysbio.wustl.edu/pakrasi/people/ericw.php
 COMMENT=	Eric A. Welsh' patches (audio samples) for TiMidity
 
 BUILD_DEPENDS+=	unrar-[0-9]*:../../archivers/unrar

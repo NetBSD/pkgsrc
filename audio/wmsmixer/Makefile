@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 20:44:20 wiz Exp $
 #
 
 DISTNAME=	wmsmixer-0.5.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.hibernaculum.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hibernaculum.net/wmsmixer.html
+HOMEPAGE=	http://www.hibernaculum.net/wmsmixer/
 COMMENT=	Another mixer designed for WindowMaker (dockapp)
 
 NOT_FOR_PLATFORM=	Interix-*-*
