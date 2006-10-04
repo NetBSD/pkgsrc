@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.52 2006/10/04 21:31:34 rillig Exp $
+# $NetBSD: module.mk,v 1.53 2006/10/04 22:24:49 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -94,21 +94,25 @@ MAKE_PARAMS+=	${MAKE_PARAMS.${_PERL5_MODTYPE}}
 
 .PHONY: do-makemaker-configure
 do-makemaker-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
-		if ${TEST} -f $$dir/Makefile.PL; then			\
-			( cd $$dir && ${SETENV} ${MAKE_ENV}		\
-			  ${PERL5} Makefile.PL ${MAKE_PARAMS} );	\
+		cd ${WRKSRC};						\
+		if ${TEST} -f "$$dir"/Makefile.PL; then			\
+			cd "$$dir";					\
+			${SETENV} ${MAKE_ENV}				\
+				${PERL5} Makefile.PL ${MAKE_PARAMS};	\
 		fi;							\
 	done
 
 .PHONY: do-modbuild-configure
 do-modbuild-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
-		if ${TEST} -f $$dir/Build.PL; then			\
-			( cd $$dir && ${SETENV} ${MAKE_ENV}		\
-			  ${PERL5} Build.PL ${MAKE_PARAMS} );		\
+		cd ${WRKSRC};						\
+		if ${TEST} -f "$$dir"/Build.PL; then			\
+			cd "$$dir";					\
+			${SETENV} ${MAKE_ENV}				\
+				${PERL5} Build.PL ${MAKE_PARAMS};	\
 		fi;							\
 	done
 
