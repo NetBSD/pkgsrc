@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:29 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/04 21:47:16 wiz Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/
+# AWOL
 
 PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/BETA/
 PATCHFILES=	patch.20.gz patch.21e.gz patch.22e.gz patch.23e.gz \
@@ -11,7 +12,8 @@ PATCHFILES=	patch.20.gz patch.21e.gz patch.22e.gz patch.23e.gz \
 
 MAINTAINER=	itojun@itojun.org
 # in japanese
-HOMEPAGE=	http://www.foretune.co.jp/people/shigeya/distribute/
+# HOMEPAGE=	http://www.foretune.co.jp/people/shigeya/distribute/
+# AWOL
 COMMENT=	Mail dispatcher for mailing list.  Fits nicely with majordomo
 
 WRKSRC=		${WRKDIR}/distribute-pl19

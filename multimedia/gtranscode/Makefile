@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/04 21:50:08 wiz Exp $
 #
 
 DISTNAME=	gtranscode-v0.3
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.fuzzymonkey.net/files/
 
 MAINTAINER=	ccatrian@eml.cc
-HOMEPAGE=	http://fuzzymonkey.net/newfuzzy/software/gtranscode/
+HOMEPAGE=	http://fuzzymonkey.net/software/gtranscode/
 COMMENT=	GTK+ GUI front-end for transcode
 
 DEPENDS+=	transcode-[0-9]*:../../multimedia/transcode
