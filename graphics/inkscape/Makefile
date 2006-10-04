@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2006/10/04 12:05:05 salo Exp $
 
 DISTNAME=	inkscape-0.44
 PKGREVISION=	1
@@ -23,6 +23,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
+
+UNLIMIT_RESOURCES=	datasize
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
