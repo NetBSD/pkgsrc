@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.51 2006/03/09 11:10:47 itohy Exp $
+# $NetBSD: module.mk,v 1.52 2006/10/04 21:31:34 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -131,11 +131,13 @@ do-modbuild-test:
 do-modbuild-install:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
 
-.for _target_ in build test install
-.  if target(do-${_PERL5_MODTYPE}-${_target_})
-do-${_target_}: do-${_PERL5_MODTYPE}-${_target_}
-.  endif
-.endfor
+.if target(do-${_PERL5_MODTYPE}-build) && !defined(NO_BUILD)
+do-build: do-${_PERL5_MODTYPE}-build
+do-test: do-${_PERL5_MODTYPE}-test
+.endif
+.if target(do-${_PERL5_MODTYPE}-install)
+do-install: do-${_PERL5_MODTYPE}-install
+.endif
 
 
 ###########################################################################
