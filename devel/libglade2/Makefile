@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/08/10 14:11:04 drochner Exp $
+# $NetBSD: Makefile,v 1.49 2006/10/04 21:35:59 wiz Exp $
 #
 
 DISTNAME=		libglade-2.6.0
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
-HOMEPAGE=		http://www.daa.com.au/~james/gnome/
+HOMEPAGE=		http://www.jamesh.id.au/software/libglade/
 COMMENT=		Runtime interpreter for GLADE GUI files (v2)
 
 USE_TOOLS+=		gmake msgfmt pkg-config

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 21:44:46 wiz Exp $
 #
 
 DISTNAME=	wideangle
 PKGNAME=	gimp2-wideangle-1.0
 PKGREVISION=	7
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.ozemail.com.au/~hodsond/
+MASTER_SITES=	http://members.ozemail.com.au/~hodsond/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ozemail.com.au/~hodsond/wideangle.html
+HOMEPAGE=	http://members.ozemail.com.au/~hodsond/wideangle.html
 COMMENT=	GIMP plugin for wideangle lens distortions
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

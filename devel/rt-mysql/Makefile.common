@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.12 2006/07/20 19:05:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/10/04 21:36:00 wiz Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
-MASTER_SITES=	http://www.fsck.com/pub/rt/release/
+MASTER_SITES=	http://www.bestpractical.com/rt/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fsck.com/projects/rt/
+HOMEPAGE=	http://www.bestpractical.com/rt/
 COMMENT=	Industrial-grade ticketing system
 CONFLICTS=	rt-*
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/04 21:35:59 wiz Exp $
 
 DISTNAME=		giblib-1.2.4
 PKGREVISION=		4
 CATEGORIES=		devel
-MASTER_SITES=		http://www.linuxbrit.co.uk/downloads/
+MASTER_SITES=		http://linuxbrit.co.uk/downloads/
 
 MAINTAINER=		snj@NetBSD.org
-HOMEPAGE=		http://www.linuxbrit.co.uk/giblib/
+HOMEPAGE=		http://linuxbrit.co.uk/giblib/
 COMMENT=		Programming utility library
 
 GNU_CONFIGURE=		YES

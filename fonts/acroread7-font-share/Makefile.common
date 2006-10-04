@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/12/11 13:36:27 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/10/04 21:39:31 wiz Exp $
 #
 
 PKGNAME=	acroread7-${DISTNAME}-7.0
 MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc/
 
-HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep.html
+HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 
 DEPENDS+=	acroread7-7.*:../../print/acroread7
 

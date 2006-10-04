@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/04 21:35:58 wiz Exp $
 
 DISTNAME=	binutils-2.16.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/directory/binutils.html
+HOMEPAGE=	http://directory.fsf.org/binutils.html
 COMMENT=	GNU binary utilities
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
