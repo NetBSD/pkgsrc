@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.2 2006/10/03 14:32:00 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.3 2006/10/04 11:53:52 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -15,3 +15,5 @@ Pullup ticket 1837 - requested by dmcmahill
 build fix for hdf5 on solaris
 Pullup ticket 1838 - requested by dmcmahill
 build fix for glib2 on solaris
+Pullup ticket 1841 - requested by he
+documentation fix for CHANGES-2006
