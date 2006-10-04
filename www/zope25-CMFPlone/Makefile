@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/06 06:22:56 reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/04 22:04:10 wiz Exp $
 
 DISTNAME=	CMFPlone1.0.3
 PKGNAME=	zope25-CMFPlone-1.0.3
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/plone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.plone.org/
+HOMEPAGE=	http://plone.org/
 COMMENT=	Content Management System
 
 BUILDLINK_API_DEPENDS.zope+=	zope-2.6.*
