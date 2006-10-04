@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: epsg.sh,v 1.2 2006/10/03 12:55:47 gdt Exp $
+# $NetBSD: epsg-load,v 1.1 2006/10/04 14:25:57 gdt Exp $
 
 # epsg - import EPSG data into a relational database
 
