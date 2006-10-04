@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/10 16:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/04 20:23:46 rillig Exp $
 
 DISTNAME=	pcre-6.7
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-utf8
 
-PKG_CONFIG_OVERRIDE=	libpcre.pc.in
+PKGCONFIG_OVERRIDE=	libpcre.pc.in
 
 TEST_TARGET=		test
 
