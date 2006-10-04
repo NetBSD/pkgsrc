@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/06/29 16:23:08 tron Exp $
+# $NetBSD: Makefile,v 1.71 2006/10/04 17:46:01 reed Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -101,4 +101,5 @@ post-install:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
