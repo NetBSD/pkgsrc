@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/04 21:46:12 wiz Exp $
 #
 
 DISTNAME=	b116
 PKGNAME=	brandybasic-1.0.16
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.argonet.co.uk/users/dave_daniels/
+MASTER_SITES=	http://jaguar.orpheusweb.co.uk/
+# http://jaguar.orpheusweb.co.uk/brandy_119.tgz
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.argonet.co.uk/users/dave_daniels/
+HOMEPAGE=	http://jaguar.orpheusweb.co.uk/branpage.html
 COMMENT=	Brandy Basic V interpreter - Acorn ARM Computers BASIC dialect
 
 WRKSRC=		${WRKDIR}/brandy-1.0.16
