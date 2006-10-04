@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/04 20:44:18 wiz Exp $
 #
 
 DISTNAME=	cddbd-1.3.1
 PKGNAME=	cddbd-1.3.1p1
 CATEGORIES=	audio net
-MASTER_SITES=	ftp://ftp.moonsoft.com/pub/cddbd-1.3.1/ \
-		http://www.moonsoft.com/ftp/cddbd-1.3.1/
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	cddbd-1.3.1.patch1.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.moonsoft.com/software.html
+HOMEPAGE=	http://www.freedb.org/src/latest/
 COMMENT=	Internet CD Database Server
 
 INTERACTIVE_STAGE=	configure install
