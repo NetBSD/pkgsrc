@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 02:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 21:49:19 wiz Exp $
 #
 
 DISTNAME=	ulinuxgnu
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.dalsemi.com/pub/auto_id/public/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	damon@brodiefamily.org
-HOMEPAGE=	http://ibutton.com/
+HOMEPAGE=	http://www.maxim-ic.com/products/ibutton/
 COMMENT=	1-Wire Public Domain Kit Version 2.00
 
 MAKE_FILE=	makefile

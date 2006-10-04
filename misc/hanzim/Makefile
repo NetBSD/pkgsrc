@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/21 18:33:18 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/04 21:49:19 wiz Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://kamares.ucsd.edu/~arobert/Files/Chinese/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://zakros.ucsd.edu/~arobert/hanzim.html
+HOMEPAGE=	http://kamares.ucsd.edu/~arobert/hanzim.html
 COMMENT=	Chinese character learning-aid program
 
 WRKSRC=		${WRKDIR}/Hanzim

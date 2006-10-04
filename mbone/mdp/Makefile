@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2006/06/06 15:17:28 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/04 21:48:19 wiz Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
 PKGREVISION=	1
 CATEGORIES=	mbone
-MASTER_SITES+=	http://manimac.itd.nrl.navy.mil/MDP/dist/
+MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/mdp/
 MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/protolib/
 DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://manimac.itd.nrl.navy.mil/MDP/
+HOMEPAGE=	http://pf.itd.nrl.navy.mil/mdp/
 COMMENT=	Multicast file transfer
 
 WRKSRC=		${WRKDIR}/mdp/unix
