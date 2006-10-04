@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/13 22:53:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/04 22:06:57 wiz Exp $
 
 DISTNAME=	xteddy-1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	x11 games
 MASTER_SITES=	http://www.ITN.LiU.SE/~stegu/xteddy/
 
 MAINTAINER=	johnam@mail.kemper.org
-HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy
+HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy/
 COMMENT=	Cuddly teddy bear for your desktop
 
 GNU_CONFIGURE=	YES

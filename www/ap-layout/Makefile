@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/02 18:27:59 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/04 22:04:09 wiz Exp $
 #
 
 DISTNAME=	mod_layout-3.2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
 		http://software.tangent.org/download/
 
 MAINTAINER=	grant@NetBSD.org
-HOMEPAGE=	http://software.tangent.org/
+HOMEPAGE=	http://tangent.org/
 COMMENT=	Apache module to wrap static or dynamic content
 
 CONFLICTS=	ap-layout-[0-9]*

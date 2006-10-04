@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/07 12:55:52 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/04 22:04:10 wiz Exp $
 #
 
 DISTNAME=		nevow-0.3
@@ -8,7 +8,7 @@ CATEGORIES=		www python
 MASTER_SITES=		http://www.divmod.org/users/release/divmod/
 
 MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://nevow.com/
+HOMEPAGE=		http://divmod.org/trac/wiki/DivmodNevow
 COMMENT=		Next-generation web application templating system
 
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted

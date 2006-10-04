@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:11 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/04 22:01:52 wiz Exp $
 #
 
 DISTNAME=	wmMoonClock-1.27
 PKGREVISION=	1
 CATEGORIES=	x11 time
-MASTER_SITES=	http://nis-www.lanl.gov/~mgh/WindowMaker/
+MASTER_SITES=	http://reality.sgiweb.org/freeware/source/wmMoonClock/
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
+# HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
 COMMENT=	Shows lunar ephemeris to fairly high accuracy
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}/Src
