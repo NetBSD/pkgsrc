@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/08 19:47:08 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 21:36:00 wiz Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pub/sourceforge/expectpy/}
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://www.sourceforge.net/projects/expectpy/
+HOMEPAGE=	http://sourceforge.net/projects/expectpy/
 COMMENT=	Expect module for Python
 
 USE_LIBTOOL=	yes

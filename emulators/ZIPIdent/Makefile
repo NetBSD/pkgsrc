@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/09/09 02:41:59 obache Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/04 21:38:37 wiz Exp $
 #
 
 DISTNAME=		zident27
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.logiqx.com/Tools/ZIPIdent/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.logiqx.com/Tools/ZIPIdent/ZIPIdent.shtml
+HOMEPAGE=		http://www.logiqx.com/Tools/ZIPIdent/ZIPIdent.php
 COMMENT=		Identify arcade ROM sets
 
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/05/28 17:35:49 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2006/10/04 21:35:59 wiz Exp $
 
 DISTNAME=		noweb-2.9a
 PKGREVISION=		3
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cs.virginia.edu/~nr/noweb/
+HOMEPAGE=		http://www.eecs.harvard.edu/~nr/noweb/
 COMMENT=		Simple, extensible literate-programming tool
 
 DEPENDS+=		icon>=9.3:../../lang/icon

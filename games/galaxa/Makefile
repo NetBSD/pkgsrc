@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/04 21:43:00 wiz Exp $
 #
 
 DISTNAME=	galaxa.0.1
 PKGNAME=	galaxa-0.1
 PKGREVISION=	2
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/galaxa/
+MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/galaxa/
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.newbreedsoftware.com/galaxa/
+HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/galaxa/
 COMMENT=	Space game based loosely on "Galaga"
 
 WRKSRC=		${WRKDIR}/galaxa

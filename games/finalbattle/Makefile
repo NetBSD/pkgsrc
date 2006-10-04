@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 02:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/04 21:43:00 wiz Exp $
 #
 
 DISTNAME=	finalbattle.0.0
 PKGNAME=	finalbattle-0.0
 PKGREVISION=	1
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/finalbattle/
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/} \
+		ftp://ftp.billsgames.com/unix/x/finalbattle/
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/finalbattle/
+HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/finalbattle/
 COMMENT=	Multiplayer space battle simulation for X
 
 WRKSRC=		${WRKDIR}/final
