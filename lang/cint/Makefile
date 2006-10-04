@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 21:14:00 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/04 21:46:34 rillig Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -23,7 +23,8 @@ PLIST_SUBST+= HAVE_THR=""
 PLIST_SUBST+= HAVE_THR="@comment "
 .endif
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man2
+INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 USE_LANGUAGES=		c c++
 
 post-extract:
@@ -47,6 +48,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/makecint ${PREFIX}/cint
 	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh >${PREFIX}/bin/cint
 	${CHMOD} +x ${PREFIX}/bin/cint
+	rm -f ${PREFIX}/bin/makecint
 	${LN} ${PREFIX}/bin/cint ${PREFIX}/bin/makecint
 	${INSTALL_DATA} ${WRKDIR}/MAKEINFO ${PREFIX}/cint
 	${CP} -r ${WRKDIR}/include ${WRKDIR}/stl ${PREFIX}/cint
@@ -65,13 +67,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/makecint.txt ${PREFIX}/share/doc/cint
 	${INSTALL_DATA} ${WRKSRC}/doc/message.txt ${PREFIX}/share/doc/cint
 	${INSTALL_DATA} ${WRKSRC}/doc/ref.txt ${PREFIX}/share/doc/cint
-	${INSTALL_MAN} ${WRKSRC}/doc/man1/cint.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man1/makecint.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man2/garbage.2 ${PREFIX}/man/man2
-	${INSTALL_MAN} ${WRKSRC}/doc/man2/security.2 ${PREFIX}/man/man2
-	${INSTALL_MAN} ${WRKSRC}/doc/man2/unique.2 ${PREFIX}/man/man2
-	${INSTALL_MAN} ${WRKSRC}/doc/man3/array.h.3 ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/doc/man3/fft.h.3 ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/doc/man3/statistics.h.3 ${PREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/doc/man1/cint.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man1/makecint.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man2/garbage.2 ${PREFIX}/${PKGMANDIR}/man2
+	${INSTALL_MAN} ${WRKSRC}/doc/man2/security.2 ${PREFIX}/${PKGMANDIR}/man2
+	${INSTALL_MAN} ${WRKSRC}/doc/man2/unique.2 ${PREFIX}/${PKGMANDIR}/man2
+	${INSTALL_MAN} ${WRKSRC}/doc/man3/array.h.3 ${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_MAN} ${WRKSRC}/doc/man3/fft.h.3 ${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_MAN} ${WRKSRC}/doc/man3/statistics.h.3 ${PREFIX}/${PKGMANDIR}/man3
 
 .include "../../mk/bsd.pkg.mk"
