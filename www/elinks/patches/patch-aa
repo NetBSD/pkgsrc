@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2006/08/14 22:38:24 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/05 10:57:37 rillig Exp $
 
---- configure.orig	2006-01-29 13:10:47.000000000 +0000
-+++ configure
+--- configure.orig	2006-01-29 14:10:47.000000000 +0100
++++ configure	2006-10-05 12:51:00.000000000 +0200
+@@ -2959,7 +2959,7 @@ _ACEOF
+ 
+ 
+ 		echo > config.asciidoc-unsafe.txt
+-		if "$ASCIIDOC" --unsafe config.asciidoc-unsafe.txt >&/dev/null; then
++		if "$ASCIIDOC" --unsafe config.asciidoc-unsafe.txt 1>/dev/null 2>&1; then
+ 			ASCIIDOC_FLAGS=--unsafe
+ 		fi
+ 		rm config.asciidoc-unsafe.*
 @@ -17103,7 +17103,7 @@ if test -z "$disable_lua"; then
  	for luadir in "$withval" "" /usr /usr/local; do
  		for suffix in "" 50 51; do
