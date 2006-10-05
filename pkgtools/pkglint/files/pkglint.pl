@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.677 2006/10/05 12:25:38 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.678 2006/10/05 21:09:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3611,11 +3611,11 @@ sub checkline_source_absolute_pathname($$) {
 
 	$opt_debug_trace and $line->log_debug("checkline_source_absolute_pathname(${text})");
 
-	if ($text =~ qr"(.*)\"(/[^\"]*)\"") {
-		my ($before, $string) = ($1, $2);
+	if ($text =~ qr"(.*)([\"'])(/[^\"']*)\2") {
+		my ($before, $delim, $string) = ($1, $2, $3);
 
-		
-		if ($before =~ qr"[A-Z_]+\s*") {
+		$opt_debug_misc and $line->log_debug("checkline_source_absolute_pathname(before=${before}, string=${string})");
+		if ($before =~ qr"[A-Z_]+\s*$") {
 			# allowed: PREFIX "/bin/foo"
 
 		} elsif ($string =~ qr"^/[*/]") {
@@ -3686,6 +3686,9 @@ sub checkline_other_absolute_pathname($$) {
 
 		} elsif ($before =~ qr"\w$") {
 			# Something like $dir/lib
+
+		} elsif ($before =~ qr"\.$") {
+			# ../foo is not an absolute pathname.
 
 		} else {
 			$opt_debug_misc and $line->log_debug("before=${before}");
