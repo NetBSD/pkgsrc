@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1407 2006/10/04 23:57:22 dmcmahill Exp $
+>$NetBSD: CHANGES-2006,v 1.1408 2006/10/05 02:50:31 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4575,3 +4575,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/bzr to 0.11 [wiz 2006-10-04]
 	Updated graphics/g2 to 0.50 [rillig 2006-10-04]
 	Updated cad/verilog to 0.8.3 [dmcmahill 2006-10-04]
+	Updated sysutils/radmind to 1.7.1 [rillig 2006-10-05]
