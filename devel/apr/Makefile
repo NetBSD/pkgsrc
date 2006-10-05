@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2006/06/09 07:04:48 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2006/10/05 17:05:59 tron Exp $
 
 .include "../../www/apache2/Makefile.common"
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	http://apr.apache.org/
@@ -60,5 +61,7 @@ post-install:
 	${CHMOD} ${SHAREMODE} ${PREFIX}/include/apr-0/*.h
 	${CHMOD} ${PKGDIRMODE} ${PREFIX}/include/apr-0
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/include/apr-0/
+
+.include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
