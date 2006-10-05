@@ -1,4 +1,4 @@
-# $NetBSD: config-override.mk,v 1.2 2006/07/06 13:25:57 jlam Exp $
+# $NetBSD: config-override.mk,v 1.3 2006/10/05 02:59:54 rillig Exp $
 
 ######################################################################
 ### config-{guess,sub,rpath}-override (PRIVATE)
@@ -42,7 +42,7 @@ config-${_sub_}-override:
 	depth=0; pattern=config.${_sub_};				\
 	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.config-${_sub_}}; do \
 		for file in $$pattern; do				\
-			${TEST} -f "$$file" || continue;		\
+			${LS} "$$file" 1>/dev/null 2>&1 || continue;	\
 			${_SCRIPT.${.TARGET}};				\
 		done;							\
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
