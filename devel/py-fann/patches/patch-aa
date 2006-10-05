@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/10/05 14:56:23 gdt Exp $
+
+--- python/setup.py.orig	2006-01-06 16:45:28.000000000 -0500
++++ python/setup.py
+@@ -40,6 +40,6 @@ setup(
+     url='http://sourceforge.net/projects/fann/',
+     license='GNU LESSER GENERAL PUBLIC LICENSE (LGPL)',
+     py_modules=['pyfann.libfann','pyfann.fann'],
+-    ext_modules=[Extension('pyfann._libfann',['pyfann/pyfann.i','pyfann/fann_helper.c'], include_dirs=['../src/include'], extra_objects=['../src/doublefann.o']) ]
++    ext_modules=[Extension('pyfann._libfann',['pyfann/pyfann.i','pyfann/fann_helper.c'], include_dirs=['../src/include'], extra_objects=['/usr/pkg/lib/libdoublefann.a']) ]
+ )
+ 
