@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/07/17 17:59:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/05 02:49:30 rillig Exp $
 #
 
-DISTNAME=	radmind-1.6.1
+DISTNAME=	radmind-1.7.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
 
@@ -9,25 +9,22 @@ MAINTAINER=	hf@spg.tu-darmstadt.de
 HOMEPAGE=	http://rsug.itd.umich.edu/software/radmind/
 COMMENT=	Remote file administration and integrity tool
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-radminddir=${VARBASE}/radmind
+CONFIGURE_ARGS+=	--with-radminddir=${RADMINDDIR}
 CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
 USE_TOOLS+=		diff
 
-BUILD_TARGET=	all man rash
+BUILD_TARGET=		all man rash
+RADMINDDIR=		${VARBASE}/radmind
+BUILD_DEFS+=		VARBASE
 
-OWN_DIRS_PERMS+=        ${VARBASE}/radmind \
-			        ${ROOT_USER} ${ROOT_GROUP} 0750
-OWN_DIRS_PERMS+=        ${VARBASE}/radmind/client \
-				${ROOT_USER} ${ROOT_GROUP} 0750
-OWN_DIRS_PERMS+=        ${VARBASE}/radmind/preapply \
-				${ROOT_USER} ${ROOT_GROUP} 0750
-OWN_DIRS_PERMS+=        ${VARBASE}/radmind/postapply \
-				${ROOT_USER} ${ROOT_GROUP} 0750
-OWN_DIRS_PERMS+=        ${VARBASE}/radmind/cert \
-				${ROOT_USER} ${ROOT_GROUP} 0700
-RCD_SCRIPTS=	radmind
+OWN_DIRS_PERMS+=	${RADMINDDIR} ${ROOT_USER} ${ROOT_GROUP} 0750
+OWN_DIRS_PERMS+=	${RADMINDDIR}/client ${ROOT_USER} ${ROOT_GROUP} 0750
+OWN_DIRS_PERMS+=	${RADMINDDIR}/preapply ${ROOT_USER} ${ROOT_GROUP} 0750
+OWN_DIRS_PERMS+=	${RADMINDDIR}/postapply ${ROOT_USER} ${ROOT_GROUP} 0750
+OWN_DIRS_PERMS+=	${RADMINDDIR}/cert ${ROOT_USER} ${ROOT_GROUP} 0700
+RCD_SCRIPTS=		radmind
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
