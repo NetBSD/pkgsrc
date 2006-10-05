@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/10/04 19:45:58 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2006/10/05 10:05:41 rillig Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -30,8 +30,10 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 .include "options.mk"
 
-pre-configure:
+post-extract:
 	gzcat ${DISTDIR}/libwww-configure-5.4.0nb1.gz > ${WRKSRC}/configure
+
+pre-configure:
 	chmod a+x ${WRKSRC}/configure
 .for f in aclocal.m4 configure stamp-h.in
 	touch ${WRKSRC}/${f}
