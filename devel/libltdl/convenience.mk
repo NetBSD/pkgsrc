@@ -1,4 +1,4 @@
-# $NetBSD: convenience.mk,v 1.7 2006/05/19 09:12:29 tonio Exp $
+# $NetBSD: convenience.mk,v 1.8 2006/10/05 12:07:00 rillig Exp $
 #
 # Override "libltdlc.la" -- the libltdl "convenience" library embedded into
 # programs that ship with libltdl.  Also override packages attempting to
@@ -12,8 +12,8 @@ fix-libltdlc:
 	@${ECHO} 'Fixing libltdl convenience library linkage.'
 .for sd in ${LIBLTDL_CONVENIENCE_SUBDIR}
 	@cd ${WRKSRC}/${sd} && \
-		${ECHO} 'all install clean:' >Makefile.in && \
-		${ECHO} 'all install clean:' >Makefile && \
+		${ECHO} 'all install clean check:' >Makefile.in && \
+		${ECHO} 'all install clean check:' >Makefile && \
 		${RM} -f Makefile.am configure* ltdl.h *.la && \
 		${LN} -s ${BUILDLINK_DIR}/include/ltdl.h ltdl.h && \
 		${LN} -s ${BUILDLINK_DIR}/lib/libltdl.la libltdl.la && \
