@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.3 2006/10/05 02:58:28 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.4 2006/10/05 10:52:40 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -46,6 +46,8 @@ _configure-check-for-test:
 				if [ ":$$1" = ":test" ] && [ ":$$3" = ":==" ]; then \
 					found=yes;			\
 					${ERROR_MSG} "[configure.mk] $$line"; \
+				elif [ ":$$1" = ":#" ]; then		\
+					break;				\
 				fi;					\
 				shift;					\
 			done;						\
