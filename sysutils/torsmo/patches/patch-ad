@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1 2006/10/05 02:53:55 rillig Exp $
+
+--- configure.orig	2006-10-05 04:52:34.000000000 +0200
++++ configure	2006-10-05 04:53:06.000000000 +0200
+@@ -924,14 +924,14 @@ fi
+ 
+ 
+ 
+-if test x$want_seti == xyes; then
++if test x$want_seti = xyes; then
+   BUILD_SETI_TRUE=
+   BUILD_SETI_FALSE='#'
+ else
+   BUILD_SETI_TRUE='#'
+   BUILD_SETI_FALSE=
+ fi
+-if test x$want_seti == xyes; then
++if test x$want_seti = xyes; then
+   cat >> confdefs.h <<\EOF
+ #define SETI 1
+ EOF
+@@ -949,14 +949,14 @@ fi
+ 
+ 
+ 
+-if test x$want_nvctrl == xyes; then
++if test x$want_nvctrl = xyes; then
+   BUILD_NVCTRL_TRUE=
+   BUILD_NVCTRL_FALSE='#'
+ else
+   BUILD_NVCTRL_TRUE='#'
+   BUILD_NVCTRL_FALSE=
+ fi
+-if test x$want_nvctrl == xyes; then
++if test x$want_nvctrl = xyes; then
+   cat >> confdefs.h <<\EOF
+ #define NVCTRL 1
+ EOF
