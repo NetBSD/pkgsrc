@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:12 reed Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/05 16:07:58 joerg Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	2
@@ -35,8 +35,9 @@ post-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=	--disable-threads
+.if ${PTHREAD_TYPE} == "pth"
+.include "../../devel/pthread-sem/buildlink3.mk"
+LIBS+=		-lsemaphore
 .endif
 
 .include "../../mk/bsd.pkg.mk"
