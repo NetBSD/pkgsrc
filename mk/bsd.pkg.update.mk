@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.6 2006/07/27 21:46:45 jlam Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.7 2006/10/05 12:56:27 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -32,6 +32,9 @@ UPDATE_TARGET=	${DEPENDS_TARGET}
 _DDIR=	${WRKDIR}/.DDIR
 _DLIST=	${WRKDIR}/.DLIST
 
+.PHONY: update-create-ddir
+update-create-ddir: ${_DDIR}
+
 .PHONY: update
 .if !target(update)
 .if exists(${_DDIR})
@@ -49,7 +52,7 @@ RESUMEUPDATE?=	NO
 CLEAR_DIRLIST?=	YES
 
 update:
-	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} ${_DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
 .  if ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
 		${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
@@ -82,7 +85,7 @@ update:
 
 .PHONY: clean-update
 clean-update:
-	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} ${_DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${_DDIR} ] ; then					\
 		for dep in `${CAT} ${_DDIR}` ; do			\
