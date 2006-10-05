@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2006/07/17 17:59:05 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2006/10/05 02:49:30 rillig Exp $
 
---- ra.sh.orig	2006-02-21 22:57:54.000000000 +0100
-+++ ra.sh
+--- ra.sh.orig	2006-07-19 22:17:51.000000000 +0200
++++ ra.sh	2006-10-05 04:45:56.000000000 +0200
 @@ -25,7 +25,7 @@ SERVER="_RADMIND_HOST"
  TLSLEVEL="_RADMIND_AUTHLEVEL"
  EDITOR=${EDITOR:-vi}
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.4 2006/07/17 17:59:05 wiz Exp $
      if [ -d ${PREAPPLY} ]; then
 -	SCRIPTS=`find ${PREAPPLY} -perm +u+x \! -type d | sort`
 +	SCRIPTS=`find ${PREAPPLY} -perm -u+x \! -type d | sort`
- 	if [ ${SCRIPTS} ]; then
+ 	if [ "${SCRIPTS}" ]; then
  	    for script in ${SCRIPTS}; do
  		${script} "$1"
 @@ -100,7 +92,7 @@ dopreapply() {
@@ -50,6 +50,6 @@ $NetBSD: patch-ab,v 1.4 2006/07/17 17:59:05 wiz Exp $
      if [ -d ${POSTAPPLY} ]; then
 -	SCRIPTS=`find ${POSTAPPLY} -perm +u+x \! -type d | sort`
 +	SCRIPTS=`find ${POSTAPPLY} -perm -u+x \! -type d | sort`
- 	if [ ${SCRIPTS} ]; then
+ 	if [ "${SCRIPTS}" ]; then
  	    for script in ${SCRIPTS}; do
  		${script} "$1"
