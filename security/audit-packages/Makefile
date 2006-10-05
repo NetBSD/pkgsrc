@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2006/09/20 14:43:30 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2006/10/05 14:26:42 joerg Exp $
 
-DISTNAME=	audit-packages-1.43
+DISTNAME=	audit-packages-1.44
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
