@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/03/04 21:29:08 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/10/05 01:24:32 rillig Exp $
 
 DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -19,8 +19,7 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_DIRS=		${WRKSRC}/build_unix
-BUILD_DIRS=		${CONFIGURE_DIRS}
+CONFIGURE_DIRS=		build_unix
 CONFIGURE_SCRIPT=	../dist/configure
 
 CONFIGURE_ARGS+=	--enable-cxx
@@ -35,7 +34,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 # Along with a hack in patch-ab, this forces shlib detection via
 # the pkgsrc-supplied libtool only.
-CONFIGURE_ENV+=		LIBTOOL_PROG="${LIBTOOL} ${LIBTOOL_FLAGS}"
+CONFIGURE_ENV+=		LIBTOOL_PROG=${LIBTOOL:Q}\ ${LIBTOOL_FLAGS:Q}
 
 OPSYSVARS+=		LIBSO_LIBS
 LIBSO_LIBS.Interix+=	-lrpclib
@@ -58,6 +57,6 @@ PTHREAD_OPTS+=		native
 .endif
 
 post-install:
-	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/db4
+	chown -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/db4
 
 .include "../../mk/bsd.pkg.mk"
