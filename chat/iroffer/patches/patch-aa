@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2005/12/13 18:27:00 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/05 12:25:33 obache Exp $
 
---- Configure.orig	2005-12-13 18:12:12.000000000 +0000
+--- Configure.orig	2005-12-13 11:54:17.000000000 +0900
 +++ Configure
-@@ -17,7 +17,7 @@ rm -f config.error.* config.temp*
+@@ -37,7 +37,7 @@ rm -f config.error.* config.temp*
  
  case "$ostype" in
   Linux | FreeBSD | OpenBSD | NetBSD | IRIX | IRIX64 | \
