@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2006/08/31 22:00:48 mrg Exp $
+$NetBSD: distinfo,v 1.41 2006/10/05 22:18:19 mrg Exp $
 
-SHA1 (Mail-SpamAssassin-3.1.5.tar.gz) = 672399ab2e600ba2ae19d71f77974dc27512e837
-RMD160 (Mail-SpamAssassin-3.1.5.tar.gz) = 69687421671125da2678f50713ac67209a71096d
-Size (Mail-SpamAssassin-3.1.5.tar.gz) = 1162519 bytes
+SHA1 (Mail-SpamAssassin-3.1.6.tar.gz) = fbf7e7aac113313da3f7357260d1a295ff275eef
+RMD160 (Mail-SpamAssassin-3.1.6.tar.gz) = 38b4d38889a3db93b46a9096c2d7c12fa8228a20
+Size (Mail-SpamAssassin-3.1.6.tar.gz) = 1168266 bytes
 SHA1 (patch-ab) = df95d87a2f2e7af238c27c3d5468d9aad7eb000d
 SHA1 (patch-ae) = 1461b24978c75c394c607ae1d49cb49dd086b563
 SHA1 (patch-aq) = 495a3ac94a05129520e5d7018fdd56b6dad3c951
