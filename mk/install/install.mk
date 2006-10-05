@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.18 2006/09/09 02:35:13 obache Exp $
+# $NetBSD: install.mk,v 1.19 2006/10/05 01:10:59 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -127,7 +127,7 @@ _INSTALL_ALL_TARGETS+=		install-check-conflicts
 _INSTALL_ALL_TARGETS+=		install-check-installed
 .endif
 _INSTALL_ALL_TARGETS+=		install-check-umask
-.if empty(CHECK_FILES:M[nN][oO])
+.if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		check-files-pre
 .endif
 _INSTALL_ALL_TARGETS+=		install-makedirs
@@ -138,7 +138,7 @@ _INSTALL_ALL_TARGETS+=		post-install
 _INSTALL_ALL_TARGETS+=		plist
 _INSTALL_ALL_TARGETS+=		install-doc-handling
 _INSTALL_ALL_TARGETS+=		install-script-data
-.if empty(CHECK_FILES:M[nN][oO])
+.if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		check-files-post
 .endif
 _INSTALL_ALL_TARGETS+=		post-install-script
