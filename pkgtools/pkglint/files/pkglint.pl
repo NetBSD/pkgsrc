@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.676 2006/09/19 21:33:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.677 2006/10/05 12:25:38 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2936,6 +2936,12 @@ sub varname_canon($) {
 	return ($varname =~ qr"^(.*?)\..*$") ? "$1.*" : $varname;
 }
 
+sub varname_param($) {
+	my ($varname) = @_;
+
+	return ($varname =~ qr"^.*?\.(.*)$") ? $2 : undef;
+}
+
 sub determine_used_variables($) {
 	my ($lines) = @_;
 	my ($rest);
@@ -3264,6 +3270,9 @@ sub parseline_mk($) {
 
 		$line->set("is_varassign", true);
 		$line->set("varname", $varname);
+		$line->set("varcanon", varname_canon($varname));
+		my $varparam = varname_param($varname);
+		defined($varparam) and $line->set("varparam", $varparam);
 		$line->set("op", $op);
 		$line->set("value", $value);
 		defined($comment) and $line->set("comment", $comment);
@@ -3513,7 +3522,13 @@ sub checkword_absolute_pathname($$) {
 		$line->explain_warning(
 			"Absolute pathnames are often an indicator for unportable code. As",
 			"pkgsrc aims to be a portable system, absolute pathnames should be",
-			"avoided whenever possible.");
+			"avoided whenever possible.",
+			"",
+			"A special variable in this context is \${DESTDIR}, which is used in GNU",
+			"projects to specify a different directory for installation than what",
+			"the programs see later when they are executed. Usually it is empty, so",
+			"if anything after that variable starts with a slash, it is considered",
+			"an absolute pathname.");
 	}
 }
 
@@ -5555,11 +5570,11 @@ sub checklines_package_Makefile_varorder($) {
 	use constant optional	=> 1;
 	use constant many	=> 2;
 	my (@sections) = (
-		[ "initial comments", once,
+		[ "Initial comments", once,
 			[
 			]
 		],
-		[ "DISTNAME", once,
+		[ "Unsorted stuff, part 1", once,
 			[
 				[ "DISTNAME", once ],
 				[ "PKGNAME",  optional ],
@@ -5570,16 +5585,10 @@ sub checklines_package_Makefile_varorder($) {
 				[ "DIST_SUBDIR", optional ],
 				[ "EXTRACT_SUFX", optional ],
 				[ "DISTFILES", many ],
-# The following are questionable.
-#				[ "NOT_FOR_PLATFORM", optional ],
-#				[ "ONLY_FOR_PLATFORM", optional ],
-#				[ "NO_BIN_ON_FTP", optional ],
-#				[ "NO_SRC_ON_FTP", optional ],
-#				[ "NO_BIN_ON_CDROM", optional ],
-#				[ "NO_SRC_ON_CDROM", optional ],
+				[ "SITES.*", many ],
 			]
 		],
-		[ "PATCH_SITES", optional,
+		[ "Distribution patches", optional,
 			[
 				[ "PATCH_SITES", optional ], # or once?
 				[ "PATCH_SITE_SUBDIR", optional ],
@@ -5589,14 +5598,24 @@ sub checklines_package_Makefile_varorder($) {
 				[ "PATCH_DIST_CAT", optional ],
 			]
 		],
-		[ "MAINTAINER", once,
+		[ "Unsorted stuff, part 2", once,
 			[
 				[ "MAINTAINER", once ],
 				[ "HOMEPAGE", optional ],
 				[ "COMMENT", once ],
 			]
 		],
-		[ "DEPENDS", optional,
+		[ "Restrictions", optional,
+			[
+				[ "NOT_FOR_PLATFORM", optional ],
+				[ "ONLY_FOR_PLATFORM", optional ],
+				[ "NO_BIN_ON_FTP", optional ],
+				[ "NO_SRC_ON_FTP", optional ],
+				[ "NO_BIN_ON_CDROM", optional ],
+				[ "NO_SRC_ON_CDROM", optional ],
+			]
+		],
+		[ "Dependencies", optional,
 			[
 				[ "BUILD_DEPENDS", many ],
 				[ "DEPENDS", many ],
@@ -5633,20 +5652,20 @@ sub checklines_package_Makefile_varorder($) {
 		if ($text =~ qr"^#") {
 			$lineno++;
 
-		} elsif ($line->has("varname")) {
-			my $varname = $line->get("varname");
+		} elsif ($line->has("varcanon")) {
+			my $varcanon = $line->get("varcanon");
 
-			if (exists($below->{$varname})) {
-				if (defined($below->{$varname})) {
-					$line->log_warning("${varname} appears too late. Please put it below $below->{$varname}.");
+			if (exists($below->{$varcanon})) {
+				if (defined($below->{$varcanon})) {
+					$line->log_warning("${varcanon} appears too late. Please put it below $below->{$varcanon}.");
 				} else {
-					$line->log_warning("${varname} appears too late. It should be the very first definition.");
+					$line->log_warning("${varcanon} appears too late. It should be the very first definition.");
 				}
 				$lineno++;
 				next;
 			}
 
-			while ($varindex <= $#{$vars} && $varname ne $vars->[$varindex]->[0] && $vars->[$varindex]->[1] != once) {
+			while ($varindex <= $#{$vars} && $varcanon ne $vars->[$varindex]->[0] && $vars->[$varindex]->[1] != once) {
 				$below->{$vars->[$varindex]->[0]} = $below_what;
 				$varindex++;
 			}
@@ -5656,8 +5675,8 @@ sub checklines_package_Makefile_varorder($) {
 				}
 				$next_section = true;
 
-			} elsif ($varname ne $vars->[$varindex]->[0]) {
-				$line->log_warning("Expected " . $vars->[$varindex]->[0] . ", but found " . $varname . ".");
+			} elsif ($varcanon ne $vars->[$varindex]->[0]) {
+				$line->log_warning("Expected " . $vars->[$varindex]->[0] . ", but found " . $varcanon . ".");
 				$lineno++;
 
 			} else {
@@ -5667,7 +5686,7 @@ sub checklines_package_Makefile_varorder($) {
 				}
 				$lineno++;
 			}
-			$below_what = $varname;
+			$below_what = $varcanon;
 
 		} else {
 			while ($varindex <= $#{$vars}) {
