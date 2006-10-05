@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/05 14:56:23 gdt Exp $
+${PYSITELIB}/pyfann/_libfann.so
+${PYSITELIB}/pyfann/libfann.py
+${PYSITELIB}/pyfann/libfann.pyc
+${PYSITELIB}/pyfann/libfann.pyo
+@dirrm ${PYSITELIB}/pyfann
