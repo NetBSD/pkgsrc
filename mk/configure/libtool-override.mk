@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.6 2006/07/19 22:07:13 jlam Exp $
+# $NetBSD: libtool-override.mk,v 1.7 2006/10/05 02:59:54 rillig Exp $
 
 ######################################################################
 ### {libtool,shlibtool}-override (PRIVATE)
@@ -43,7 +43,7 @@ libtool-override:
 	depth=0; pattern=libtool;					\
 	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.libtool}; do	\
 		for file in $$pattern; do				\
-			${TEST} -f "$$file" || continue;		\
+			${LS} "$$file" 1>/dev/null 2>&1 || continue;	\
 			${_SCRIPT.${.TARGET}};				\
 		done;							\
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
