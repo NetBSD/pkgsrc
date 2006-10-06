@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.22 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.23 2006/10/06 14:28:46 joerg Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -74,8 +74,6 @@ _INCOMPAT_ICONV=	UnixWare-*-*
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
-
-LOCALBASE?=		${DESTDIR}/usr/pkg
 
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 
