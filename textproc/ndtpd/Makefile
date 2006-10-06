@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/04/08 23:10:29 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/10/06 15:14:33 joerg Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -37,8 +37,8 @@ RCD_SCRIPTS=	ndtpd
 FILES_SUBST+=	NDTPD_RUNDIR=${NDTPD_RUNDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/ndtpd
-NDTPD_LOGDIR=	${DESTDIR}/var/log
-NDTPD_RUNDIR=	${DESTDIR}/var/run
+NDTPD_LOGDIR=	/var/log
+NDTPD_RUNDIR=	/var/run
 # XXX NDTPD actually uses ${NDTPD_RUNDIR}/ndtpd.
 
 post-install:
