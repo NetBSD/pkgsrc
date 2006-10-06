@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/02 18:58:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/06 18:15:10 rillig Exp $
 bin/filelight
 lib/kde3/libfilelight.la
-share/kde/applications/kde/filelight.desktop
+share/applications/kde/filelight.desktop
 share/kde/apps/filelight/filelight_partui.rc
 share/kde/apps/filelight/filelightui.rc
 share/kde/config/filelightrc
