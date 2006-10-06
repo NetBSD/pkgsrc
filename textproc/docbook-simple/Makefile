@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/18 14:10:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/06 15:12:58 joerg Exp $
 #
 
 DISTNAME=	docbook-simple-1.1
@@ -16,7 +16,7 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 WRKSRC=		${WRKDIR}
-INSTDIR=	${DESTDIR}${PREFIX}/share/xml
+INSTDIR=	${PREFIX}/share/xml
 DTDDIR=		${INSTDIR}/docbook/simple/1.1
 DTDFILES=	sdbcent.mod sdocbook-custom.dtd sdocbookref-custom.dtd \
 		sdbhier.mod sdocbookref.dtd sdbpool.mod sdocbook.dtd \
