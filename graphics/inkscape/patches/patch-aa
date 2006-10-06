@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2006/03/07 04:15:22 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2006/10/06 20:29:11 adam Exp $
 
---- configure.orig	2006-03-07 02:34:46.000000000 +0000
+--- configure.orig	2006-09-07 09:21:37.000000000 +0200
 +++ configure
-@@ -21790,17 +21790,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -20883,17 +20883,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  /* Override any gcc2 internal prototype to avoid an error.  */
