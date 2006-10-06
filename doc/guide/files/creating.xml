@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.2 2006/10/02 16:52:22 rillig Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.3 2006/10/06 18:12:48 rillig Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -122,5 +122,15 @@
 <command>url2pkg</command>, including dependencies.</para>
 
 </sect2>
+
+<sect2 id="creating.kde-app">
+<title>KDE applications</title>
+
+<para>KDE applications should always include
+<filename>meta-pkgs/kde3/kde3.mk</filename>, which contains numerous
+settings that are typical of KDE packages.</para>
+
+</sect2>
+
 </sect1>
 </chapter>
