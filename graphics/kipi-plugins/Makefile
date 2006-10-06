@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/07/07 15:49:32 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/06 20:14:03 markd Exp $
 
-DISTNAME=	kipi-plugins-0.1.0-rc1
-PKGNAME=	kipi-plugins-0.1.0rc1
-PKGREVISION=	6
+DISTNAME=	kipi-plugins-0.1.2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,5 +27,4 @@ SHLIBTOOL_OVERRIDE=	# empty
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-#.include "../../x11/kdebase3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
