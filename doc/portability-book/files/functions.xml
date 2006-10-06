@@ -1,4 +1,4 @@
-<!-- $NetBSD: functions.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+<!-- $NetBSD: functions.xml,v 1.2 2006/10/06 21:44:30 rillig Exp $ -->
 
 <chapter id="functions">
 <title>C/C++: functions</title>
@@ -6,11 +6,51 @@
 <para>This chapter contains the requirements for using certain functions
 in C and C++ code.</para>
 
+<sect1 id="feature">
+<title>Feature test macros</title>
+
+<para>When writing code that conforms to a specific standard, some
+programmers may want to check that really only features from that
+standard are used. For that purpose there exist a number of so-called
+feature test macros that can be defined on the command line to the
+compiler or in C and C++ source files before including any of the
+standard include files.</para>
+
 <table>
+<title>Documentation of the feature test macros</title>
+<tgroup cols="2">
+<thead>
+<row><entry>Platform</entry><entry>Location</entry></row>
+</thead>
+<tbody>
+<row><entry>SunOS-*-*</entry><entry><literal>standards(5)</literal></entry></row>
+<row><entry>NetBSD-*-*</entry><entry><filename>/usr/include/sys/featuretest.h</filename></entry></row>
+<row><entry>Linux-*-*</entry><entry><filename>/usr/include/features.h</filename></entry></row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+
+<sect1 id="functions.byname">
 <title>Functions on various platforms</title>
-<tgroup cols="5">
+
+<sect2 id="functions.getopt">
+<title>getopt</title>
+
+<para>Solaris provides the <function>getopt</function> function in three
+of the standard headers: &lt;stdio.h&gt;, &lt;stdlib.h&gt; and
+&lt;unistd.h&gt;, but the latter definition depends on other feature
+test macros than the first two. Additionally, since Solaris 5.10, there
+is also &lt;getopt.h&gt;, which provides
+<function>getopt_long</function>, but not <function>getopt</function>.
+The exact behavior also depends on the compiler. While SUNpro is quite
+strict and requires the feature test macros, gcc finds the definition
+without any of these macros. (TODO: Investigate further.)</para>
+
+<informaltable>
+<tgroup cols="4">
 <thead><row>
-  <entry>Function name</entry>
   <entry>Platform</entry>
   <entry>Library</entry>
   <entry>Headers</entry>
@@ -19,14 +59,12 @@ in C and C++ code.</para>
 
 <tbody>
 <row>
-  <entry>getopt</entry>
   <entry>NetBSD-*-*</entry>
   <entry>c</entry>
   <entry>unistd.h</entry>
   <entry>_POSIX_C_SOURCE >= 2 || _XOPEN_SOURCE >= 4 || defined(_NETBSD_SOURCE)</entry>
 </row>
 <row>
-  <entry>getopt</entry>
   <entry>SunOS-5.10-*</entry>
   <entry>c</entry>
   <entry>unistd.h</entry>
@@ -34,6 +72,8 @@ in C and C++ code.</para>
 </row>
 </tbody>
 </tgroup>
-</table>
+</informaltable>
 
+</sect2>
+</sect1>
 </chapter>
