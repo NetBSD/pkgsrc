@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.6 2006/07/03 23:33:43 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2006/10/06 22:04:00 rillig Exp $
 
 gcc-2.95 does not know the i386 MMX registers used in the assembler
 statements, do disable them.
 
---- configure.orig	2006-03-20 18:42:25.000000000 +0000
-+++ configure
+--- configure.orig	2006-03-20 19:42:25.000000000 +0100
++++ configure	2006-10-07 00:03:06.000000000 +0200
 @@ -2053,7 +2053,7 @@ case "$host_os" in
  	solaris*)       lv_solaris=yes;;
  	linux*)         lv_linux=yes;;
@@ -31,6 +31,15 @@ statements, do disable them.
  		fi
  		if test x"$have_threads" = xposix; then
  			defattr=0
+@@ -26430,7 +26430,7 @@ build_subdirs="libvisual"
+ VISUAL_PKG_CONFIG_DEP=""
+ 
+ VISUAL_CFLAGS=""
+-if test x"$LV_THREAD_CFLAGS" == xgthread2; then
++if test x"$LV_THREAD_CFLAGS" = xgthread2; then
+   VISUAL_PKG_CONFIG_DEP="$VISUAL_PKG_CONFIG_DEP gthread-2.0"
+ elif test x"$LV_THREAD_CFLAGS" != x; then
+   VISUAL_CFLAGS=$LV_THREAD_CFLAGS
 @@ -28326,7 +28326,11 @@ _______EOF
          if test x$lv_ix86 = xyes ; then
                  cat >>$outfile <<_______EOF
