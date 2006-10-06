@@ -1,0 +1,9 @@
+<!-- $NetBSD: headers.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+
+<chapter id="headers">
+<title>C/C++: Header files</title>
+
+<para>This chapter provides information about which header files are
+available on which platform.</para>
+
+</chapter>

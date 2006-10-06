@@ -1,0 +1,3 @@
+The pkgsrc portability book covers many of the platform-specific issues
+that are useful when writing programs that are portable to a great
+number of UNIX-like operating systems.
