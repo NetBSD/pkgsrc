@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.678 2006/10/05 21:09:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.679 2006/10/06 18:58:55 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5468,6 +5468,14 @@ sub checkline_mk_varassign($$$$$) {
 		if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
 			$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
 		}
+	}
+
+	if ($varname eq "CONFIGURE_ARGS" && $value =~ qr"=\$\{PREFIX\}/share/kde") {
+		$line->log_note("Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.");
+		$line->explain_note(
+			"That file probably does many things automatically and consistently that",
+			"this package also does. When using kde3.mk, you can probably also leave",
+			"out some explicit dependencies.");
 	}
 
 	if ($varname eq "EVAL_PREFIX" && $value =~ qr"^([\w_]+)=") {
