@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5516 2006/10/05 13:11:50 obache Exp $
+$NetBSD: TODO,v 1.5517 2006/10/06 06:03:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -277,7 +277,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-4.12.27
+	o abcm2ps-5.1.1
 	o abcmidi-20060910
 	o acpi-iasl-20040715
 	o adns-1.3
@@ -322,6 +322,7 @@ Suggested package updates
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
+	o at-spi-1.7.12
 	o autogen-5.8.6
 	o avcheck-0.91
 	o avl-2.0.1
@@ -360,6 +361,7 @@ Suggested package updates
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o ccd2iso-0.2
+	o cddb-1.5.2
 	o cdl3-1.2.6
 	o cdrdao-1.2.2
 	o cfengine2-2.1.21
@@ -378,7 +380,9 @@ Suggested package updates
 	o clisp-2.40
 	o cocoon-2.1.9
 	o columba-1.0RC1
+	o comix-3.6
 	o compface-1.5.2
+	o control-center-2.16.1
 	o coreutils-6.3
 	o cqcam-0.91
 	o crafty-19.5
@@ -434,6 +438,7 @@ Suggested package updates
 	o enchant-1.3.0
 	o enlightenment-0.16.8.2
 	o enscript-1.6.4
+	o eog2-2.16.1
 	o epiphany-extensions-2.16.0
 	o epstool-3.08
 	o eric3-3.9.1
@@ -443,6 +448,9 @@ Suggested package updates
 	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
+	o evolution-2.8.1
+	o evolution-data-server-1.8.1
+	o evolution-exchange-2.8.1
 	o ex-050325
 	o exmh-2.7.2
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -463,12 +471,13 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.6.13
+	o fox-1.6.16
 	o freeglut-2.4.0
 	o freesci-0.3.5
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
+	o gail-1.9.3
 	o galeon-2.0.3
 	o gamin-0.1.6
 	o gap-4r4p3
@@ -483,6 +492,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
 	o geda-20060907
+	o gedit-2.16.1
 	o genius-0.7.6.1
 	o gentoo-0.11.56 [pkg/34341]
 	o ggiterm-0.7.1
@@ -498,14 +508,25 @@ Suggested package updates
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
-	o glade-3.0.1
+	o glade-3.0.2
 	o gld-1.7
+	o glib2-2.12.4
+	o glibmm-2.12.2
 	o global-5.2 [pkg/34570|34636]
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-applets-2.16.1
+	o gnome-backgrounds-2.16.1
+	o gnome-desktop-2.16.1
+	o gnome-games-2.16.1
+	o gnome-menus-2.16.1
+	o gnome-panel-2.16.1
 	o gnome-pilot-2.0.14
+	o gnome-session-2.16.1
 	o gnome-spell-1.0.7
+	o gnome-user-docs-2.16.1
+	o gnome2-terminal-2.16.1
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
@@ -514,6 +535,7 @@ Suggested package updates
 	o gogo-3.11p1
 	o gossip-0.17
 	o gpsdrive-2.09
+	o gq-1.2.0
 	o grace-5.1.20
 	o gramofile-1.6P
 	o grap-1.36
@@ -534,11 +556,15 @@ Suggested package updates
 	o gtetrinet-0.7.10
 	o gthumb-2.7.7
 	o gtk-systrace-20030623
+	o gtk2+-2.10.6
+	o gtk2-engines-2.8.1
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
+	o gtkhtml-3.12.1
 	o gtklife-5.1
 	o gtkpod-0.99.8
 	o gtksee-0.6.0b
+	o gtksourceview-1.8.1
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
@@ -641,6 +667,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
+	o libwnck-2.16.1
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o liferea-1.0.23
@@ -1039,6 +1066,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt4-4.2.0
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
@@ -1055,6 +1083,7 @@ Suggested package updates
 	o regionset-0.2
 	o rep-gtk-0.18
 	o resize_image-0.7
+	o rhythmbox-0.9.6
 	o rio500-0.8.1
 	o rioutil-1.5.0 [schmonz]
 	o ripmime-1.4.0.6
@@ -1113,9 +1142,9 @@ Suggested package updates
 	o snes9x-1.502
 	o snort-2.6.0.2
 	o socat-1.5.0.0
-	o solfege-3.4.2
+	o solfege-3.6.0
 	o sope-4.5.5
-	o sound-juicer-2.16.0
+	o sound-juicer-2.16.1
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.4
 	o spamass-milter-0.3.1 [pkg/33206]
@@ -1139,7 +1168,7 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.5.2
+	o sylpheed-claws-2.5.3
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
@@ -1165,7 +1194,7 @@ Suggested package updates
 	o tmda-1.1.5
 	o tob-0.26
 	o top-3.6beta1
-	o totem-2.16.1
+	o totem-2.16.2
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.10
@@ -1264,10 +1293,12 @@ Suggested package updates
 	o xzip-182
 	o yafc-1.1
 	o yaz-2.1.8
+	o yelp-2.16.1
 	o yodl-2.01.02
 	o ysm-2.9.8
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zenity-2.16.1
 	o zile-2.2.22
 	o zircon-1.18.256
 	o zope25-AbracadabraObject-2.0.0
