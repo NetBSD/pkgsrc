@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: flavor-vars.mk,v 1.2 2006/10/06 14:51:36 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -16,7 +16,7 @@ USE_TOOLS+=	date
 .endif
 
 # This is the package database directory for the default view.
-PKG_DBDIR?=		${DESTDIR}/var/db/pkg
+PKG_DBDIR?=		/var/db/pkg
 
 # _PKG_DBDIR is the actual packages database directory where we register
 # packages.
