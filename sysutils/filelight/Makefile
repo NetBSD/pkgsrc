@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/10/03 18:17:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/06 18:15:10 rillig Exp $
 #
 
 DISTNAME=	filelight-1.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://methylblue.com/filelight/packages/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,18 +12,13 @@ HOMEPAGE=	http://methylblue.com/filelight/
 COMMENT=	Graphical filesystem usage monitor
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl
 
-BUILDLINK_TRANSFORM+=	l:jpeg6b:jpeg
-
 pre-build:
 	cd ${WRKSRC}/src/part && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} dialog.h
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
