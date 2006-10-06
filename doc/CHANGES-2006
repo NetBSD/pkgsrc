@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1416 2006/10/06 06:02:17 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1417 2006/10/06 15:42:30 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4585,3 +4585,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamassassin to 3.1.6 [mrg 2006-10-05]
 	Updated devel/pango to 1.14.5 [wiz 2006-10-06]
 	Updated devel/atk to 1.12.3 [wiz 2006-10-06]
+	Updated games/openttd to 0.4.8 [ghen 2006-10-06]
