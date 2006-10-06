@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5518 2006/10/06 15:43:13 ghen Exp $
+$NetBSD: TODO,v 1.5519 2006/10/06 18:06:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade-3.0.2
 	o gld-1.7
-	o glib2-2.12.4
 	o glibmm-2.12.2
 	o global-5.2 [pkg/34570|34636]
 	o gmime-2.2.3
@@ -556,7 +555,6 @@ Suggested package updates
 	o gtetrinet-0.7.10
 	o gthumb-2.7.7
 	o gtk-systrace-20030623
-	o gtk2+-2.10.6
 	o gtk2-engines-2.8.1
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
