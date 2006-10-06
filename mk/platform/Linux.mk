@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.25 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: Linux.mk,v 1.26 2006/10/06 14:28:46 joerg Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -71,8 +71,6 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
-
-LOCALBASE?=		${DESTDIR}/usr/pkg
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
