@@ -1,0 +1,39 @@
+<!-- $NetBSD: functions.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+
+<chapter id="functions">
+<title>C/C++: functions</title>
+
+<para>This chapter contains the requirements for using certain functions
+in C and C++ code.</para>
+
+<table>
+<title>Functions on various platforms</title>
+<tgroup cols="5">
+<thead><row>
+  <entry>Function name</entry>
+  <entry>Platform</entry>
+  <entry>Library</entry>
+  <entry>Headers</entry>
+  <entry>Feature test macros</entry>
+</row></thead>
+
+<tbody>
+<row>
+  <entry>getopt</entry>
+  <entry>NetBSD-*-*</entry>
+  <entry>c</entry>
+  <entry>unistd.h</entry>
+  <entry>_POSIX_C_SOURCE >= 2 || _XOPEN_SOURCE >= 4 || defined(_NETBSD_SOURCE)</entry>
+</row>
+<row>
+  <entry>getopt</entry>
+  <entry>SunOS-5.10-*</entry>
+  <entry>c</entry>
+  <entry>unistd.h</entry>
+  <entry>(_XOPEN_SOURCE && _XOPEN_VERSION == 4) || __EXTENSIONS__</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</chapter>

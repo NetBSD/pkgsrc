@@ -1,0 +1,10 @@
+<!-- $NetBSD: devices.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+
+<chapter id="dev">
+<title>Device files</title>
+
+<para>This chapter lists the device files that are available on the
+platforms and whether they are compatible to other platform's
+devices.</para>
+
+</chapter>

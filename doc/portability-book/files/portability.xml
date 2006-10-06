@@ -1,0 +1,59 @@
+<!-- $NetBSD: portability.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//NetBSD//DTD DocBook XML V4.2-Based DocBook Extension//EN" [
+	<!ENTITY % man-refs.ent PUBLIC "-//NetBSD//ENTITIES NetBSD Manual Page Entities//EN">
+	%man-refs.ent;
+	<!ENTITY % misc.ent PUBLIC "-//NetBSD//ENTITIES NetBSD Miscellaneous Entities//EN">
+	%misc.ent;
+	<!ENTITY % chapters SYSTEM "chapters.ent">
+	%chapters;
+
+	<!ENTITY u.PR "http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=">
+]>
+
+<book id="portability">
+  <bookinfo>
+    <title>The pkgsrc portability book</title>
+
+    <authorgroup>
+      <author>
+	<firstname>Roland</firstname>
+	<surname>Illig</surname>
+
+	<affiliation>
+	  <address><email>rillig@NetBSD.org</email></address>
+	</affiliation>
+      </author>
+      <corpauthor>
+        The pkgsrc Developers
+      </corpauthor>
+    </authorgroup>
+
+    <copyright>
+      <year>2006</year>
+
+      <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc.</holder>
+    </copyright>
+
+    <pubdate>2006-10-01</pubdate>
+
+    <abstract>
+
+	<para>pkgsrc is a package management system that has been ported
+	to various POSIX-like operating systems. These systems differ in
+	a lot of small details that are all nice to know when writing
+	code that will later run on as many of these platforms as
+	possible. This book collects some of the limitations, bugs and
+	other characteristics of the pkgsrc platforms.</para>
+
+    </abstract>
+  </bookinfo>
+
+  &chap.intro;
+  &chap.utilities;
+  &chap.headers;
+  &chap.functions;
+  &chap.libraries;
+  &chap.devices;
+</book>

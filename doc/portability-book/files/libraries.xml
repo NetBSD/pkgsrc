@@ -1,0 +1,9 @@
+<!-- $NetBSD: libraries.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+
+<chapter id="libraries">
+<title>C/C++: libraries</title>
+
+<para>This chapter provides information about which libraries are
+available on which platform.</para>
+
+</chapter>

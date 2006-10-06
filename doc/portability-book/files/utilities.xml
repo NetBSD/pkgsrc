@@ -1,0 +1,134 @@
+<!-- $NetBSD: utilities.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+
+<chapter id="utilities">
+<title>Command line utilities</title>
+
+<para>This chapter collects the various bugs and peculiarities of the
+POSIX-like utilities on the platforms.</para>
+
+<sect1 id="util.sh">
+<title>sh</title>
+
+<sect2 id="util.sh.netbsd">
+<title>NetBSD</title>
+
+<para>On NetBSD, have a look at <ulink
+url="http://www.netbsd.org/cgi-bin/query-pr-list.pl?state=open&amp;state=closed&amp;state=feedback&amp;text=/bin/sh&amp;category=bin">the
+various PRs</ulink> to see what's wrong with the shell.</para>
+
+</sect2>
+
+<sect2 id="util.sh.solaris">
+<title>Solaris</title>
+
+<para>On Solaris, <filename>/bin/sh</filename> is missing some features
+that POSIX <ulink
+url="http://www.opengroup.org/onlinepubs/000095399/utilities/sh.html">requires</ulink>
+for the sh utility:</para>
+
+<programlisting>
+    $ if ! false; then echo ok; fi
+    !: not found
+
+    $ echo ${PWD%/}
+    bad substitution
+
+    $ foo=$(true)
+    syntax error: `foo=$' unexpected
+</programlisting>
+
+<para>There is another sh implementation in
+<filename>/usr/xpg4/bin</filename>, which implements these features.
+However, many shell scripts and other programs have /bin/sh
+hard-coded.</para>
+
+<para>Another incompatibility is this:</para>
+
+<programlisting>
+    $ set -- foo bar baz; echo "before: $#"; set --; echo "after: $#"
+    before: 3
+    after: 3
+</programlisting>
+
+<para>All(?) other shells, including <filename>/usr/xpg4/bin/sh</filename>,
+reply with <quote>after: 0</quote>.</para>
+
+<para>On Solaris, both <filename>/bin/sh</filename> and
+<filename>/usr/xpg4/bin/sh</filename> cannot handle empty for loops.</para>
+
+<programlisting>
+    $ for i in ; do echo "i=$i"; done
+    syntax error: `;' unexpected
+</programlisting>
+
+<para>The work-around is either to add some dummy arguments or to save
+the list of things in a variable. Looping over empty lists is no
+problem. But note that the various parameter expansions that are applied
+here differ in this case.</para>
+
+<programlisting>
+    $ things=""; for i in $things; do echo "i=$i"; done
+</programlisting>
+
+<sect3 id="util.sh.solaris.glob">
+<title>Globbing problems with quoting and hidden files</title>
+
+<programlisting>
+    rm -rf "testdir"
+    mkdir "testdir"
+    touch "testdir/.file"
+
+    x="."
+    y=".file"
+    echo "=== x and y quoted"
+    ls "$x"/*/"$y"
+    echo "=== only x quoted"
+    ls "$x"/*/$y
+    echo "=== nothing quoted"
+    ls $x/*/$y
+</programlisting>
+
+<para>The result of running this code with <filename>/bin/sh</filename>
+is that in the first case, the result of the globbing expansion is
+<quote><literal>./*/.file</literal></quote>, while in the two other
+cases, it is the correct
+<quote><literal>./testdir/.file</literal></quote>. This does only happen
+when y starts with a dot, that is, for hidden files.</para>
+
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="util.test">
+<title>test</title>
+
+<sect2 id="util.test.ext">
+<title>Non-standard extensions</title>
+
+<para>The Bourne Again Shell (Bash) allows the binary operator
+<literal>==</literal> to be used as an alias for <literal>=</literal>.
+This leads to problems when programs using this feature are ported to
+other platforms. Furthermore, there is no apparent benefit for having
+two names for the same operator.</para>
+
+</sect2>
+
+<sect2 id="util.test.bugs">
+<title>Bugs</title>
+
+<para>On NetBSD upto X.Y (see <ulink url="&u.PR;34646">PR 34646</ulink>), the &man.test.1; utility cannot
+handle the following:</para>
+
+<programlisting>
+    test ! = foo
+</programlisting>
+
+<para>POSIX <ulink
+url="http://www.opengroup.org/onlinepubs/000095399/utilities/test.html">requires</ulink>
+that when test is called with three arguments, the second operand is
+checked first to see whether it is a binary operator. On NetBSD, the
+unary <quote>!</quote> operator takes precedence.</para>
+
+</sect2>
+</sect1>
+</chapter>
