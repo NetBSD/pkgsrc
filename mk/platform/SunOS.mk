@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.27 2006/10/06 14:28:46 joerg Exp $
+# $NetBSD: SunOS.mk,v 1.28 2006/10/06 14:31:32 joerg Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -78,23 +78,7 @@ _INCOMPAT_ICONV=	SunOS-*-*
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
-# Migration aid for old /usr/local LOCALBASE
-.if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
-	!exists(${DESTDIR}/usr/pkg/libexec/cgi-bin)
-.BEGIN:
-	@echo "On Solaris and /usr/local/libexec/cgi-bin found:"
-	@echo "- If you have an existing pkgsrc installation & wish to continue"
-	@echo "  using /usr/local, append LOCALBASE=/usr/local to /etc/mk.conf."
-	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
-	@echo "  first package install."
-	@false
-.endif
-
-.if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-.else
-PKG_TOOLS_BIN?=		${LOCALBASE}/bin
-.endif
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
