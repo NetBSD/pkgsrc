@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:29:05 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/06 22:14:44 reed Exp $
 #
 
 DISTNAME=		xisp-2.7p1
-PKGREVISION=	2
+PKGREVISION=		3
 CATEGORIES=		comms x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/network/serial/} \
 			http://xisp.hellug.gr/release/ \
@@ -11,6 +11,13 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/network/serial/} \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xisp.hellug.gr/
 COMMENT=		User-friendly X11 interface to pppd/chat
+
+PKG_GROUPS=		${DIALER_GROUP}
+BUILD_DEFS+=		DIALER_GROUP
+MAKE_ENV+=		DIALER_GROUP="${DIALER_GROUP}"
+MAKE_ENV+=		VARBASE=${VARBASE:Q}
+MESSAGE_SUBST+=		DIALER_GROUP=${DIALER_GROUP}
+# XXX TODO: maybe do MODEM_DEV also?
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xisp
