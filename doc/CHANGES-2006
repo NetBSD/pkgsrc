@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1421 2006/10/06 21:02:58 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1422 2006/10/06 21:10:53 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4598,3 +4598,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/gwenview-i18n version 1.4.0 [markd 2006-10-06]
 	Updated multimedia/kmplayer to 0.9.3 [markd 2006-10-06]
 	Updated misc/stellarium to 0.8.2 [adam 2006-10-06]
+	Added doc/portability-book version 20061006 [rillig 2006-10-06]
