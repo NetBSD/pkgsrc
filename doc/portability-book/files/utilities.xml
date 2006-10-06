@@ -1,10 +1,11 @@
-<!-- $NetBSD: utilities.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+<!-- $NetBSD: utilities.xml,v 1.2 2006/10/06 22:18:33 rillig Exp $ -->
 
 <chapter id="utilities">
 <title>Command line utilities</title>
 
 <para>This chapter collects the various bugs and peculiarities of the
-POSIX-like utilities on the platforms.</para>
+<ulink url="http://www.opengroup.org/onlinepubs/000095399/idx/utilities.html">POSIX-like
+utilities</ulink> on the platforms.</para>
 
 <sect1 id="util.sh">
 <title>sh</title>
@@ -108,8 +109,10 @@ when y starts with a dot, that is, for hidden files.</para>
 <para>The Bourne Again Shell (Bash) allows the binary operator
 <literal>==</literal> to be used as an alias for <literal>=</literal>.
 This leads to problems when programs using this feature are ported to
-other platforms. Furthermore, there is no apparent benefit for having
-two names for the same operator.</para>
+other platforms. By the way, not even the GNU coreutils have that
+<quote>feature</quote>, it's really only Bash that does. After all,
+there is no apparent benefit for having two names for the same
+operator.</para>
 
 </sect2>
 
