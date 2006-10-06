@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/08/10 14:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2006/10/06 08:04:03 rillig Exp $
 
 DISTNAME=	curl-7.15.5
 CATEGORIES=	www
@@ -23,8 +23,12 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 # Work around an ICE on sparc64 with gcc2
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
-# needs perl
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 TEST_TARGET=		check
+USE_TOOLS+=		perl
+.endif
 
 .include "options.mk"
 
