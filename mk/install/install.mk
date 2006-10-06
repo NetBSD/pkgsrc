@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.19 2006/10/05 01:10:59 rillig Exp $
+# $NetBSD: install.mk,v 1.20 2006/10/06 20:13:10 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -235,6 +235,10 @@ install-makedirs:
 			dir=`${ECHO} $$dir | ${SED} "s|^${PREFIX}/||"` ;; \
 		/*)	continue ;;					\
 		esac;							\
+		if [ -f "${PREFIX}/$$dir" ]; then			\
+			${ERROR_MSG} "[install.mk] $$dir should be a directory, but is a file."; \
+			exit 1;						\
+		fi;							\
 		case "$$dir" in						\
 		*bin|*bin/*|*libexec|*libexec/*)			\
 			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
