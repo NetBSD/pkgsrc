@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: package.mk,v 1.3 2006/10/06 14:51:36 joerg Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -29,7 +29,7 @@ package-check-installed:
 package-create: package-remove ${PKGFILE} package-links
 
 _PKG_ARGS_PACKAGE+=	${_PKG_CREATE_ARGS}
-_PKG_ARGS_PACKAGE+=	-p ${PREFIX:S/^${DESTDIR}//}
+_PKG_ARGS_PACKAGE+=	-p ${PREFIX}
 _PKG_ARGS_PACKAGE+=	-L ${PREFIX}			# @src ...
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _PKG_ARGS_PACKAGE+=	-E
