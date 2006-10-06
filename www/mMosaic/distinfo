@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2006/04/19 19:21:28 wiz Exp $
+$NetBSD: distinfo,v 1.8 2006/10/06 19:15:09 schwarz Exp $
 
 SHA1 (mMosaic-3.7.2.tar.gz) = f26d4fd115a0fb7fc09947506b59e1a3790b6ac7
 RMD160 (mMosaic-3.7.2.tar.gz) = 9c7f2e2f00beaef474e53e25a91aeb604584dd06
@@ -10,4 +10,12 @@ SHA1 (patch-ad) = 995b630412892a2a7bd32da3d95c2ecd31e9a71d
 SHA1 (patch-ae) = 41eb6cccefb77f720bba0885993c453bc25dc14e
 SHA1 (patch-af) = 0cba2c49579f6631d7e7d4f1068c00c22401d879
 SHA1 (patch-ag) = 51a1021eda3d92bc8bea7dacda510b24ee8ae7ef
+SHA1 (patch-ah) = 5c78179ccb2757024994817725eefd31e45f9d33
 SHA1 (patch-ai) = 990bfbd0181fa93a53de7aaa9a98e5e954e72813
+SHA1 (patch-aj) = 5a8d74285976d234744287f5b9d08268f3e2e92d
+SHA1 (patch-ak) = 0a9c6bf97261645aed2741ca4f0d1e845132e0b7
+SHA1 (patch-al) = 5dba5394bc2e3c84504ff741d82c5e1677c9454c
+SHA1 (patch-am) = 9205dc1b78eb69fbff9866d2cd48e6e6f4f88e4b
+SHA1 (patch-an) = 3e03f847457166662da82162144a417d316a6508
+SHA1 (patch-ao) = 46430e4821335d84568d04186c91e097fd2c4447
+SHA1 (patch-ap) = e69d9299dd8a3a61e23a9772e39ae848c20dde67
