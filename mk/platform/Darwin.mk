@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.21 2006/09/18 15:11:37 tron Exp $
+# $NetBSD: Darwin.mk,v 1.22 2006/10/06 14:28:46 joerg Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -80,8 +80,6 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-Wl,-x} # cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
-
-LOCALBASE?=		${DESTDIR}/usr/pkg
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
