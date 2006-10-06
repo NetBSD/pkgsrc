@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/06 23:46:29 rillig Exp $
+
+SHA1 (checkperms-1.0.tar.gz) = 9760f6fbee8e0cf775b45172713104542dd0610a
+RMD160 (checkperms-1.0.tar.gz) = 93630679ecbd2b613246034a519df5a3dc886cc6
+Size (checkperms-1.0.tar.gz) = 4169 bytes
