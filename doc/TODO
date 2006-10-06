@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5521 2006/10/06 20:31:04 adam Exp $
+$NetBSD: TODO,v 1.5522 2006/10/06 20:39:44 markd Exp $
 
 Suggested new packages
 ======================
@@ -59,10 +59,6 @@ Suggested new packages
 	linphone
 	http://www.linphone.org/
 	Telephony on Linux (and NetBSD?)
-
-	Filelight
-	http://www.methylblue.com/filelight/
-	Graphical representation of disk space usage
 
 	SlimServer
 	http://www.slimdevices.com/pi_features.html
@@ -570,7 +566,6 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
-	o gwenview-1.4.0
 	o gworkspace-0.8.3
 	o gzrecover-0.3
 	o hackbot-2.21
