@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2006/08/22 18:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2006/10/06 06:01:25 wiz Exp $
 #
 
-DISTNAME=		atk-1.12.2
+DISTNAME=		atk-1.12.3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.12/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,9 +11,6 @@ HOMEPAGE=		http://developer.gnome.org/projects/gap/
 COMMENT=		Set of interfaces for accessibility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-# remove on next update
-DIST_SUBDIR=		atk-1.12.1v2
 
 USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes
