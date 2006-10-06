@@ -1,7 +1,9 @@
-# $NetBSD: bsd.pkg.error.mk,v 1.2 2006/06/14 15:09:34 jlam Exp $
+# $NetBSD: bsd.pkg.error.mk,v 1.3 2006/10/06 19:05:43 rillig Exp $
 
-ERROR_DIR=	${WRKDIR}/.error
-WARNING_DIR=	${WRKDIR}/.warning
+ERROR_DIR=		${WRKDIR}/.error
+WARNING_DIR=		${WRKDIR}/.warning
+_ERROR_DONE_DIR=	${WRKDIR}/.error-done
+_WARNING_DONE_DIR=	${WRKDIR}/.warning-done
 
 # Macros for outputting delayed error and warning messages that are
 # picked up by the error-check target and can be used in place of
@@ -10,8 +12,8 @@ WARNING_DIR=	${WRKDIR}/.warning
 DELAYED_ERROR_MSG?=	${ECHO} >> ${ERROR_DIR}/${.TARGET:T:C/^[.]*//:Q}
 DELAYED_WARNING_MSG?=	${ECHO} >> ${WARNING_DIR}/${.TARGET:T:C/^[.]*//:Q}
 
-makedirs: ${ERROR_DIR} ${WARNING_DIR}
-${ERROR_DIR} ${WARNING_DIR}:
+makedirs: ${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}
+${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET}
 
 .PHONY: error-check
@@ -35,7 +37,7 @@ error-check: .USE
 		break;							\
 	done;								\
 	${CAT} ./* | ${WARNING_CAT};					\
-	${RM} -f ./*
+	${MV} -f ./* ${_WARNING_DONE_DIR}
 
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${ERROR_DIR}/*.tmp;					\
@@ -47,7 +49,7 @@ error-check: .USE
 	done;								\
 	${CAT} * | ${ERROR_CAT};					\
 	if ${_NONZERO_FILESIZE_P} ./*; then				\
-		${RM} -f ./*;						\
+		${MV} -f ./* ${_ERROR_DONE_DIR};			\
 		exit 1;							\
 	fi
 
