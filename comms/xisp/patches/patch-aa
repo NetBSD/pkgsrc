@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2006/02/22 16:13:48 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2006/10/06 22:14:44 reed Exp $
 
 --- Makefile.orig	2003-06-28 14:03:03.000000000 +0000
 +++ Makefile
@@ -81,9 +81,9 @@ $NetBSD: patch-aa,v 1.9 2006/02/22 16:13:48 joerg Exp $
 +BINX11     = $(X11PREFIX)/bin
 +USRLOCAL   = $(BINX11)
 +SBINDIR    = /usr/sbin
-+VARRUN     = /var/run
++VARRUN     = $(VARBASE)/run
 +USRLIBPPP  = $(PREFIX)/libexec
-+MANDIR     = $(PREFIX)/man/man1
++MANDIR     = $(PREFIX)/$(PKGMANDIR)/man1
 +ETCPPP     = /etc/ppp
 +OPTSDIR    = $(ETCPPP)
  #INSTPPPDIR = $(ETCPPP)
@@ -98,9 +98,9 @@ $NetBSD: patch-aa,v 1.9 2006/02/22 16:13:48 joerg Exp $
 -#LINKFORMS  = -L$(LIBFORMS) -lforms
 -#INSTALL    = /usr/bin/install
 +INSTPPPDIR = $(PREFIX)/share/examples/xisp
-+PPPDLCKDIR = /var/spool/lock
++PPPDLCKDIR = $(VARBASE)/spool/lock
 +DESTDIR    = 
-+GROUP      = dialer
++GROUP      = $(DIALER_GROUP)
 +CCFLAGS    = -Wall -O
 +EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
 +.if ${OPSYS} == "DragonFly"
