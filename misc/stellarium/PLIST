@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/01 10:27:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/10/06 21:01:57 adam Exp $
 bin/stellarium
 man/man1/stellarium.1
+share/locale/af/LC_MESSAGES/stellarium.mo
+share/locale/ar/LC_MESSAGES/stellarium.mo
 share/locale/az/LC_MESSAGES/stellarium.mo
+share/locale/bg/LC_MESSAGES/stellarium.mo
 share/locale/ca/LC_MESSAGES/stellarium.mo
 share/locale/cs/LC_MESSAGES/stellarium.mo
 share/locale/da/LC_MESSAGES/stellarium.mo
@@ -14,12 +17,14 @@ share/locale/fa/LC_MESSAGES/stellarium.mo
 share/locale/fi/LC_MESSAGES/stellarium.mo
 share/locale/fr/LC_MESSAGES/stellarium.mo
 share/locale/ga/LC_MESSAGES/stellarium.mo
+share/locale/he/LC_MESSAGES/stellarium.mo
 share/locale/hu/LC_MESSAGES/stellarium.mo
 share/locale/id/LC_MESSAGES/stellarium.mo
 share/locale/it/LC_MESSAGES/stellarium.mo
 share/locale/ja/LC_MESSAGES/stellarium.mo
 share/locale/ko/LC_MESSAGES/stellarium.mo
 share/locale/lv/LC_MESSAGES/stellarium.mo
+share/locale/mt/LC_MESSAGES/stellarium.mo
 share/locale/nb/LC_MESSAGES/stellarium.mo
 share/locale/nl/LC_MESSAGES/stellarium.mo
 share/locale/nn/LC_MESSAGES/stellarium.mo
@@ -30,8 +35,10 @@ share/locale/ro/LC_MESSAGES/stellarium.mo
 share/locale/ru/LC_MESSAGES/stellarium.mo
 share/locale/sk/LC_MESSAGES/stellarium.mo
 share/locale/sv/LC_MESSAGES/stellarium.mo
+share/locale/th/LC_MESSAGES/stellarium.mo
 share/locale/tr/LC_MESSAGES/stellarium.mo
 share/locale/uk/LC_MESSAGES/stellarium.mo
+share/locale/vi/LC_MESSAGES/stellarium.mo
 share/locale/zh_CN/LC_MESSAGES/stellarium.mo
 share/locale/zh_HK/LC_MESSAGES/stellarium.mo
 share/locale/zh_TW/LC_MESSAGES/stellarium.mo
@@ -44,6 +51,7 @@ share/stellarium/data/double_txt.dat
 share/stellarium/data/fontmap.dat
 share/stellarium/data/hipparcos.fab
 share/stellarium/data/icon.bmp
+share/stellarium/data/iso639-1.utf8
 share/stellarium/data/landscapes.ini
 share/stellarium/data/name.fab
 share/stellarium/data/nebula_textures.fab
@@ -208,20 +216,13 @@ share/stellarium/textures/europa.png
 share/stellarium/textures/fog.png
 share/stellarium/textures/fogridge.png
 share/stellarium/textures/ganymede.png
+share/stellarium/textures/h1990-20.png
 share/stellarium/textures/halo.png
 share/stellarium/textures/headermenu.png
 share/stellarium/textures/hyperion.png
 share/stellarium/textures/iapetus.png
 share/stellarium/textures/io.png
 share/stellarium/textures/jupiter.png
-share/stellarium/textures/landscapes/HR1.png
-share/stellarium/textures/landscapes/HR2.png
-share/stellarium/textures/landscapes/HR3.png
-share/stellarium/textures/landscapes/HR4.png
-share/stellarium/textures/landscapes/HR5.png
-share/stellarium/textures/landscapes/HR6.png
-share/stellarium/textures/landscapes/HR7.png
-share/stellarium/textures/landscapes/HRb.png
 share/stellarium/textures/landscapes/apollo17.png
 share/stellarium/textures/landscapes/guereins1.png
 share/stellarium/textures/landscapes/guereins2.png
@@ -241,6 +242,15 @@ share/stellarium/textures/landscapes/hurricane6.png
 share/stellarium/textures/landscapes/hurricane7.png
 share/stellarium/textures/landscapes/hurricane8.png
 share/stellarium/textures/landscapes/hurricaneb.png
+share/stellarium/textures/landscapes/ocean1.png
+share/stellarium/textures/landscapes/ocean2.png
+share/stellarium/textures/landscapes/ocean3.png
+share/stellarium/textures/landscapes/ocean4.png
+share/stellarium/textures/landscapes/ocean5.png
+share/stellarium/textures/landscapes/ocean6.png
+share/stellarium/textures/landscapes/ocean7.png
+share/stellarium/textures/landscapes/ocean8.png
+share/stellarium/textures/landscapes/ocean9.png
 share/stellarium/textures/landscapes/trees_512.png
 share/stellarium/textures/logo24bits.png
 share/stellarium/textures/lune.png
