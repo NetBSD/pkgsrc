@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.11 2006/07/27 21:46:45 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.12 2006/10/06 19:04:37 rillig Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -12,6 +12,8 @@ _BARRIER_PRE_TARGETS=	checksum makedirs depends
 #	ordered so that if more than one is specified on the command-line,
 #	then pkgsrc will still do the right thing.
 #
+
+# FIXME: why is wrapper before extract?
 _BARRIER_POST_TARGETS=	tools
 _BARRIER_POST_TARGETS+=	wrapper
 _BARRIER_POST_TARGETS+=	extract
@@ -51,13 +53,23 @@ _BARRIER_CMDLINE_TARGETS+=	${_target_}
 ### targets that occur before the barrier.
 ###
 
+.PHONY: barrier-error-check
+barrier-error-check: error-check
+
 .PHONY: barrier
 barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 .if !defined(_PKGSRC_BARRIER)
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${.CURDIR}							\
+	&& ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS} \
+	|| {								\
+		exitcode="$$?";						\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes barrier-error-check; \
+		exit "$$exitcode";					\
+	}
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Leaving \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
