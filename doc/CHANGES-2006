@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1415 2006/10/05 22:20:13 mrg Exp $
+>$NetBSD: CHANGES-2006,v 1.1416 2006/10/06 06:02:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4583,3 +4583,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/audit-packages to 1.44 [joerg 2006-10-05]
 	Added devel/py-fann version 2.0.0 [gdt 2006-10-05]
 	Updated mail/spamassassin to 3.1.6 [mrg 2006-10-05]
+	Updated devel/pango to 1.14.5 [wiz 2006-10-06]
+	Updated devel/atk to 1.12.3 [wiz 2006-10-06]
