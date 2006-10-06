@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1419 2006/10/06 20:31:04 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1420 2006/10/06 20:39:45 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4590,3 +4590,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtk2 to 2.10.6 [wiz 2006-10-06]
 	Updated devel/glibmm to 2.12.2 [adam 2006-10-06]
 	Updated graphics/inkscape to 0.44.1 [adam 2006-10-06]
+	Updated graphics/libkipi to 0.1.4 [markd 2006-10-06]
+	Updated graphics/libkexif to 0.2.4 [markd 2006-10-06]
+	Updated graphics/kipi-plugins to 0.1.2 [markd 2006-10-06]
+	Updated graphics/showimg to 0.9.5 [markd 2006-10-06]
+	Updated graphics/gwenview to 1.4.0 [markd 2006-10-06]
+	Added graphics/gwenview-i18n version 1.4.0 [markd 2006-10-06]
+	Updated multimedia/kmplayer to 0.9.3 [markd 2006-10-06]
