@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2006/01/10 20:16:43 wiz Exp $
+$NetBSD: distinfo,v 1.12 2006/10/06 20:23:47 markd Exp $
 
-SHA1 (gwenview-1.3.1.tar.bz2) = be5585d7b5a158ce238df53e5caa00ffdf6034b6
-RMD160 (gwenview-1.3.1.tar.bz2) = d0477ef4e963c6dd0b89fa6c774d77f57436e799
-Size (gwenview-1.3.1.tar.bz2) = 2447404 bytes
+SHA1 (gwenview-1.4.0.tar.bz2) = e8594c5b47c79fee108a4999c23dac1130320de5
+RMD160 (gwenview-1.4.0.tar.bz2) = 0540aed93837a736d7372ccf947b312311910b44
+Size (gwenview-1.4.0.tar.bz2) = 997269 bytes
 SHA1 (patch-aa) = 8d21d30e46a2e8deea32df65b85f317a703377b9
 SHA1 (patch-ab) = 611231f9765566c5603b0b0bf128633b487ecd73
