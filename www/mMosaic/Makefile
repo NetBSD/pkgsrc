@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/19 19:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/06 19:15:09 schwarz Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -36,6 +36,8 @@ MAKEFLAGS+=	sysconfigflags='-DLINUX -Dlinux -DMOTIF1_2'
 .elif ${OPSYS:MIRIX*} != ""
 MAKEFLAGS+=	sysconfigflags='-DSVR4 -DIRIX -DMOTIF1_2'
 
+.elif ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rename:-shared:-c
 .endif
 
 .include "../../mk/bsd.pkg.mk"
