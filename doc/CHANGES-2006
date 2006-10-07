@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1434 2006/10/07 12:16:56 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1435 2006/10/07 18:36:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/aegis to 4.22 [rillig 2006-10-07]
 	Updated games/cgoban-java to 3.3.5 [rillig 2006-10-07]
 	Updated finance/kmymoney2 to 0.8.5 [markd 2006-10-07]
+	Updated graphics/comix to 3.6 [wiz 2006-10-07]

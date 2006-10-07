@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5529 2006/10/07 12:16:56 markd Exp $
+$NetBSD: TODO,v 1.5530 2006/10/07 18:36:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ Suggested package updates
 	o clisp-2.40
 	o cocoon-2.1.9
 	o columba-1.0RC1
-	o comix-3.6
 	o compface-1.5.2
 	o control-center-2.16.1
 	o coreutils-6.3
