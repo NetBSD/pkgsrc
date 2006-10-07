@@ -1,20 +1,21 @@
-$NetBSD: patch-aa,v 1.3 2006/01/08 15:37:33 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/07 08:19:08 obache Exp $
 
---- configure.orig	2003-11-13 11:18:48.000000000 +0000
+--- configure.orig	2005-04-27 20:54:13.000000000 +0900
 +++ configure
-@@ -1126,6 +1126,7 @@ rm -fr conftest*
+@@ -1127,7 +1127,7 @@ fi
+ rm -fr conftest*
  fi
  
- 
+-
 +if test ${OPSYS} != "DragonFly"; then
  if test "$buggygetaddrinfo" = "yes"; then
  	if test "$ipv6" = "yes"; then
  		echo 'Fatal: You must get working getaddrinfo() function.'
-@@ -1133,6 +1134,7 @@ if test "$buggygetaddrinfo" = "yes"; the
+@@ -1135,6 +1135,7 @@ if test "$buggygetaddrinfo" = "yes"; the
  		exit 1
  	fi
  fi
 +fi
  
  echo $ac_n "checking if --enable-idea option is specified""... $ac_c" 1>&6
- echo "configure:1139: checking if --enable-idea option is specified" >&5
+ echo "configure:1141: checking if --enable-idea option is specified" >&5
