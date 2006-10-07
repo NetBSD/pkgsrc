@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1427 2006/10/07 05:53:33 uebayasi Exp $
+>$NetBSD: CHANGES-2006,v 1.1428 2006/10/07 06:14:06 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed mail/mew3 [uebayasi 2006-10-07]
 	Updated chat/riece to 3.1.0 [uebayasi 2006-10-07]
 	Updated misc/elscreen to 1.4.3nb3 [uebayasi 2006-10-07]
+	Updated chat/navi2ch to 1.7.5nb4 [uebayasi 2006-10-07]
