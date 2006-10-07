@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5523 2006/10/07 05:12:53 obache Exp $
+$NetBSD: TODO,v 1.5524 2006/10/07 05:15:25 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -697,7 +697,6 @@ Suggested package updates
 	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
 	o metacity-2.16.3
-	o mew-5.1 [pkg/34556]
 	o mftrace-1.2.4
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
