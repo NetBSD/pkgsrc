@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/11/07 03:48:00 dillo Exp $
+$NetBSD: MESSAGE,v 1.4 2006/10/07 18:14:11 reed Exp $
 
 In order to enable POP service, you should add the following line
 to your /etc/inetd.conf:
@@ -12,4 +12,7 @@ Alternatively, if you want to run popa3d in standalone mode, you
 can add the following line to your /etc/rc.conf:
 
  popa3d=YES
+
+Note that popa3d only uses flock(2) for locking and may not be safe
+on NFS or with mail systems that only use lock files.
 ===========================================================================
