@@ -10,3 +10,6 @@ the goals are:
 4. Performance (limited by the more important goals, above).
 
 popa3d can be run from inetd, or as a stand-alone server.
+
+Note that popa3d only uses flock(2) for locking and may not be safe
+on NFS or with mail systems that only use lock files.
