@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1430 2006/10/07 07:50:59 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1431 2006/10/07 08:25:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4607,3 +4607,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/navi2ch to 1.7.5nb4 [uebayasi 2006-10-07]
 	Updated archivers/dar to 2.3.1 [obache 2006-10-07]
 	Updated net/darkstat to 3.0.540 [obache 2006-10-07]
+	Updated mail/cue to 20060417 [obache 2006-10-07]
