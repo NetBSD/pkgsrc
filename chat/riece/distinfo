@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/05/30 00:26:15 uebayasi Exp $
+$NetBSD: distinfo,v 1.6 2006/10/07 05:27:50 uebayasi Exp $
 
-SHA1 (riece-3.0.0.tar.gz) = 89f50839cefb1b1f49f2945775a16dda35ce8405
-RMD160 (riece-3.0.0.tar.gz) = 9fba925b25b8357b43921bd33cbe6935d7dae532
-Size (riece-3.0.0.tar.gz) = 362763 bytes
+SHA1 (riece-3.1.0.tar.gz) = 2fdef3a96bc9ce75495f59b781b5fbacaa89b3da
+RMD160 (riece-3.1.0.tar.gz) = 6fbca5c971864b411f0b637243d7c4b0f8167b75
+Size (riece-3.1.0.tar.gz) = 363337 bytes
