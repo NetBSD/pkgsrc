@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.18.2.1 2006/10/07 03:21:27 salo Exp $
+
+--- src/af/xap/unix/xap_UnixApp.cpp.orig	2006-10-05 11:18:55.000000000 +0900
++++ src/af/xap/unix/xap_UnixApp.cpp	2006-10-05 11:19:58.000000000 +0900
+@@ -134,10 +134,6 @@
+ 	DELETEP(m_pUnixToolbarIcons);
+ 	
+ 	delete m_fontManager;
+-
+-#if FC_MINOR > 2
+-	FcFini();
+-#endif
+ }
+ 
+ bool XAP_UnixApp::initialize(const char * szKeyBindingsKey, const char * szKeyBindingsDefaultValue)
