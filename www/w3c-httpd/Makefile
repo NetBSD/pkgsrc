@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 22:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/07 22:39:28 schwarz Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -11,7 +11,28 @@ HOMEPAGE=	http://www.w3.org/Daemon/
 COMMENT=	WWW server from the W3 Consortium (W3C)
 
 WRKSRC=		${WRKDIR}
+BUILD_TARGET=	build-all
+# prevent conflict with directory All on non-case-sensitive file systems
 USE_TOOLS+=	csh
+
+.include "../../mk/bsd.prefs.mk"
+.if (${OPSYS} == "FreeBSD") || (${OPSYS} == "DragonFly" )
+OSNAME= freebsd
+.elif (${OPSYS} == "Darwin")
+OSNAME=darwin
+CPPFLAGS+=	-Dunix
+.elif (${OPSYS} == "IRIX")
+OSNAME=sgi
+.elif (${OPSYS} == "OSF1")
+OSNAME=osf1
+.elif (${OPSYS} == "Linux")
+OSNAME=linux
+.else
+#       covers OpenBSD, too
+OSNAME= netbsd
+.endif
+
+CFLAGS+=	${CPPFLAGS}
 
 SUBST_CLASSES+=		strcasestr
 SUBST_STAGE.strcasestr=	post-patch
@@ -27,6 +48,10 @@ INSTALLATION_DIRS=	bin sbin share/examples/w3c-httpd
 .for f in all.conf caching.conf httpd.conf prot.conf proxy.conf
 CONF_FILES+=	${EGDIR:Q}/${f:Q}	${PKG_SYSCONFDIR}/${f:Q}
 .endfor
+
+post-extract:
+	cd ${WRKSRC}/All && ${MKDIR} darwin && \
+	${CP} freebsd/Makefile.include darwin/
 
 pre-configure:
 .if !defined(MD5_PW)
@@ -49,10 +74,3 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/cgiutils ${PREFIX:Q}/sbin
 
 .include "../../mk/bsd.pkg.mk"
-
-.if (${OPSYS} == "FreeBSD") || (${OPSYS} == "DragonFly")
-OSNAME=	freebsd
-.else
-#	covers OpenBSD too
-OSNAME=	netbsd
-.endif
