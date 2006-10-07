@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.6 2006/10/07 02:31:26 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.7 2006/10/07 02:47:22 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -23,3 +23,5 @@ Pullup ticket 1839 - requested by ghen
 build fix for inkscape
 Pullup ticket 1840 - requested by dmcmahill
 portability fix for bulk build script
+Pullup ticket 1844 - requested by rillig
+fix unresolved pathnames in cups
