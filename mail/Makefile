@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2006/10/01 21:46:12 seb Exp $
+# $NetBSD: Makefile,v 1.294 2006/10/07 05:20:12 uebayasi Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -101,7 +101,6 @@ SUBDIR+=	mdfrm
 SUBDIR+=	mess822
 SUBDIR+=	metamail
 SUBDIR+=	mew
-SUBDIR+=	mew3
 SUBDIR+=	mhonarc
 SUBDIR+=	milter-greylist
 SUBDIR+=	milter-regex
