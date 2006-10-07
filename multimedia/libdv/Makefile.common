@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/03/11 04:08:47 reed Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/10/07 20:35:48 tron Exp $
 
 DISTNAME=	libdv-0.104
 CATEGORIES=	multimedia
@@ -21,7 +21,8 @@ PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ARGS+=	--disable-gtk
 
 .include "../../mk/bsd.prefs.mk"
-.if empty(MACHINE_PLATFORM:M*-*-i386)
+
+.if (${OPSYS} == "Darwin") || empty(MACHINE_PLATFORM:M*-*-i386)
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
