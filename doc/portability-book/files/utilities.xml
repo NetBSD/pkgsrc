@@ -1,4 +1,4 @@
-<!-- $NetBSD: utilities.xml,v 1.2 2006/10/06 22:18:33 rillig Exp $ -->
+<!-- $NetBSD: utilities.xml,v 1.3 2006/10/07 08:13:21 rillig Exp $ -->
 
 <chapter id="utilities">
 <title>Command line utilities</title>
@@ -9,6 +9,19 @@ utilities</ulink> on the platforms.</para>
 
 <sect1 id="util.sh">
 <title>sh</title>
+
+<sect2 id="util.sh.ext">
+<title>Non-standard extensions</title>
+
+<para>The variable <varname>RANDOM</varname> is an addition of
+<filename>ksh</filename>, and <filename>bash</filename> can do it as
+well.</para>
+
+<para>The command <command>[[</command> is an addition of
+<filename>ksh</filename>, and <filename>bash</filename> can do it as
+well.</para>
+
+</sect2>
 
 <sect2 id="util.sh.netbsd">
 <title>NetBSD</title>
