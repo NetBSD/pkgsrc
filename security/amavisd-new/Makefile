@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2006/07/22 04:46:18 rillig Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2006/10/07 02:58:56 salo Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
-PKGREVISION=	3
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
-		http://ftp.cfu.net/pub/amavisd-new/ \
-		ftp://ftp.cfu.net/pub/amavisd-new/
+		http://mirror.mainloop.se/amavisd/
 
-VERSION=	2.3.3
+VERSION=	2.4.2
 PATCHLEVEL=	# empty
 
 MAINTAINER=	jdunn@aquezada.com
@@ -23,7 +21,7 @@ DEPENDS+=	p5-Compress-Zlib>=1.35:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib>=1.05:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-Digest-MD5>=2.22:../../security/p5-Digest-MD5
-DEPENDS+=	p5-MIME-tools>=5.415:../../mail/p5-MIME-tools
+DEPENDS+=	p5-MIME-tools>=5.417:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.58:../../mail/p5-MailTools
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Net>=1.16:../../net/p5-Net
