@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1424 2006/10/07 05:14:51 uebayasi Exp $
+>$NetBSD: CHANGES-2006,v 1.1425 2006/10/07 05:21:23 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4601,3 +4601,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added doc/portability-book version 20061006 [rillig 2006-10-06]
 	Added sysutils/checkperms version 1.0 [rillig 2006-10-06]
 	Updated mail/mew to 5.1 [uebayasi 2006-10-07]
+	Removed mail/mew3 [uebayasi 2006-10-07]
