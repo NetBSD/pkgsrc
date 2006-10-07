@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5526 2006/10/07 07:12:22 obache Exp $
+$NetBSD: TODO,v 1.5527 2006/10/07 07:50:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,6 @@ Suggested package updates
 	o cweb-3.64a
 	o cygwin_lib-1.5.21.1
 	o dap-2.1.5
-	o darkstat-3.0.540 [pkg/34158]
 	o db4-4.5.20
 	o dbxml-2.1.8
 	o dc_gui2-0.80
