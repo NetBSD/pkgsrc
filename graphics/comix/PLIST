@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/25 16:00:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/07 18:35:12 wiz Exp $
 bin/comicthumb
 bin/comix
-man/man1/comicthumb.1.gz
+man/man1/comicthumb.1
 man/man1/comix.1
 share/applications/comix.desktop
 share/icons/hicolor/48x48/apps/comix.png
@@ -23,7 +23,7 @@ share/pixmaps/comix.png
 share/pixmaps/comix/cbr.png
 share/pixmaps/comix/cbt.png
 share/pixmaps/comix/cbz.png
-share/pixmaps/comix/double_page.png
+share/pixmaps/comix/double-page.png
 share/pixmaps/comix/fitheight.png
 share/pixmaps/comix/fitnone.png
 share/pixmaps/comix/fitscreen.png
@@ -40,14 +40,16 @@ share/pixmaps/comix/rotate-270.png
 share/pixmaps/comix/rotate-90-jpeg.png
 share/pixmaps/comix/rotate-90.png
 share/pixmaps/comix/silk-bookmarks.png
+share/pixmaps/comix/silk-colour-adjust.png
 share/pixmaps/comix/silk-desaturate.png
-share/pixmaps/comix/silk-edit_bookmarks.png
-share/pixmaps/comix/silk-file_operations.png
+share/pixmaps/comix/silk-edit-bookmarks.png
+share/pixmaps/comix/silk-file-operations.png
+share/pixmaps/comix/silk-library-add.png
 share/pixmaps/comix/silk-library.png
-share/pixmaps/comix/silk-library_add.png
-share/pixmaps/comix/silk-recent_files.png
+share/pixmaps/comix/silk-recent-files.png
 share/pixmaps/comix/silk-slideshow.png
 share/pixmaps/comix/silk-thumbnails.png
+share/pixmaps/comix/silk-toolbars.png
 share/pixmaps/comix/silk-transform.png
 share/pixmaps/comix/silk-view.png
 share/pixmaps/comix/silk-zoom.png
