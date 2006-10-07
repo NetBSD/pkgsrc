@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/10/07 12:14:18 markd Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -110,6 +110,7 @@ share/doc/kde/HTML/en/kmymoney2/ledgers.png
 share/doc/kde/HTML/en/kmymoney2/ledgers_view.png
 share/doc/kde/HTML/en/kmymoney2/ledgerview-numbered.png
 share/doc/kde/HTML/en/kmymoney2/mainwindow_numbered.png
+share/doc/kde/HTML/en/kmymoney2/makemostof.docbook
 share/doc/kde/HTML/en/kmymoney2/new.png
 share/doc/kde/HTML/en/kmymoney2/newfile.png
 share/doc/kde/HTML/en/kmymoney2/newinst.png
@@ -322,6 +323,7 @@ share/kde/icons/hicolor/16x16/apps/kmymoney2.png
 share/kde/icons/hicolor/16x16/mimetypes/kmy.png
 share/kde/icons/hicolor/32x32/apps/kmymoney2.png
 share/kde/icons/hicolor/32x32/mimetypes/kmy.png
+share/kde/icons/hicolor/48x48/apps/kmymoney2.png
 share/kde/icons/hicolor/48x48/mimetypes/kmy.png
 share/kde/icons/hicolor/64x64/apps/kmymoney2.png
 share/kde/icons/hicolor/64x64/mimetypes/kmy.png
@@ -331,12 +333,15 @@ share/kde/mimelnk/application/x-kmymoney2.desktop
 ${HAS_LIBOFX}share/kde/services/kmm_ofximport.desktop
 share/kde/servicetypes/kmymoneyimporterplugin.desktop
 share/kde/servicetypes/kmymoneyplugin.desktop
+share/locale/ca/LC_MESSAGES/kmymoney2.mo
+share/locale/da/LC_MESSAGES/kmymoney2.mo
 share/locale/de/LC_MESSAGES/kmymoney2.mo
 share/locale/en_GB/LC_MESSAGES/kmymoney2.mo
 share/locale/es/LC_MESSAGES/kmymoney2.mo
 share/locale/fr/LC_MESSAGES/kmymoney2.mo
 share/locale/gl/LC_MESSAGES/kmymoney2.mo
 share/locale/it/LC_MESSAGES/kmymoney2.mo
+share/locale/lt/LC_MESSAGES/kmymoney2.mo
 share/locale/pt_BR/LC_MESSAGES/kmymoney2.mo
 share/locale/pt_PT/LC_MESSAGES/kmymoney2.mo
 share/locale/ru/LC_MESSAGES/kmymoney2.mo
