@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/10/07 06:12:42 uebayasi Exp $
+
+--- navi2ch-list.el.orig	2004-08-08 00:03:09.000000000 +0900
++++ navi2ch-list.el
+@@ -85,7 +85,7 @@
+     (nil " " navi2ch-list-board-name-face)))
+ 
+ (defconst navi2ch-list-bbstable-default-url
+-  "http://www.ff.iij4u.or.jp/~ch2/bbsmenu.html")
++  "http://menu.2ch.net/bbsmenu.html")
+ 
+ ;; add hook
+ (add-hook 'navi2ch-save-status-hook 'navi2ch-list-save-info)
