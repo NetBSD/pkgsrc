@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.9 2006/10/07 02:59:15 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.10 2006/10/07 03:21:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -29,3 +29,5 @@ Pullup ticket 1845 - requested by taca
 build fix for for some ruby packages
 Pullup ticket 1848 - requested by obache
 amavisd-new update
+Pullup ticket 1846 - requested by hira
+runtime fix for abiword
