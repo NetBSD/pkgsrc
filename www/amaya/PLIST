@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/02/21 22:43:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/10/07 19:16:57 schwarz Exp $
 bin/amaya
 bin/amaya-gtk
 share/Amaya/amaya/Amaya.svg
@@ -1419,8 +1419,8 @@ share/Amaya/resources/xrc/TextDlgWX.xrc
 share/Amaya/resources/xrc/TitleDlgWX.xrc
 share/Amaya/resources/xrc/Toolbar.xrc
 share/Amaya/resources/xrc/WinPrintDlgWX.xrc
-share/applications/amaya-8.8.1.desktop
-share/pixmaps/amaya-8.8.1.png
+${LINUX}share/applications/amaya-8.8.1.desktop
+${LINUX}share/pixmaps/amaya-8.8.1.png
 @dirrm share/Amaya/resources/xrc
 @dirrm share/Amaya/resources/icons/misc
 @dirrm share/Amaya/resources/icons/22x22
