@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.4 2006/08/09 15:31:01 jlam Exp $
+# $NetBSD: bin-install.mk,v 1.4.2.1 2006/10/07 15:36:51 salo Exp $
 #
 
 # This file provides the following targets:
@@ -23,19 +23,30 @@
 BINPKG_SITES?= \
 	ftp://ftp.NetBSD.org/pub/NetBSD/packages/$${rel}/$${arch}
 
-_SU_BIN_INSTALL_TARGETS=	acquire-bin-install-lock
-_SU_BIN_INSTALL_TARGETS+=	locked-su-bin-install
-_SU_BIN_INSTALL_TARGETS+=	release-bin-install-lock
+.PHONY: bin-install
+.PHONY: do-bin-install do-bin-install-from-source
+.PHONY: su-do-bin-install
+.PHONY: aquire-bin-install-lock locked-su-do-bin-install release-bin-install-lock
 
-.PHONY: acquire-bin-install-lock release-bin-install-lock
-acquire-bin-install-lock: acquire-localbase-lock
-release-bin-install-lock: release-localbase-lock
+bin-install: \
+	do-bin-install \
+	do-bin-install-from-source
 
-# Install binary pkg, without strict uptodate-check first
-.PHONY: su-bin-install
-su-bin-install: ${_SU_BIN_INSTALL_TARGETS}
+do-bin-install: su-target
+	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
 
-locked-su-bin-install:
+su-do-bin-install: \
+	acquire-bin-install-lock \
+	locked-su-do-bin-install \
+	release-bin-install-lock
+
+acquire-bin-install-lock: \
+	acquire-localbase-lock
+
+release-bin-install-lock: \
+	release-localbase-lock
+
+locked-su-do-bin-install:
 	@found=`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`;	\
 	if [ "$$found" != "" ]; then					\
 		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
@@ -52,14 +63,14 @@ locked-su-bin-install:
 	${STEP_MSG} "Installing ${PKGNAME} from $$pkgpath";		\
 	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
 		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
-	else 				 				\
-		${SHCOMMENT} "Cycle through some FTP server here";	\
-		${STEP_MSG} "No binary package found for ${PKGNAME} -- installing from source"; \
-		${RECURSIVE_MAKE} ${MAKEFLAGS} package			\
-			DEPENDS_TARGET=${DEPENDS_TARGET:Q}		\
-		&& ${RECURSIVE_MAKE} ${MAKEFLAGS} clean;		\
 	fi
 
-.PHONY: bin-install
-bin-install: su-target
-	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
+do-bin-install-from-source:
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	if ${PKG_INFO} -qe ${PKGNAME}; then				\
+		: "Nothing to do";					\
+	else								\
+		${STEP_MSG} "No binary package found for ${PKGNAME}; installing from source."; \
+		${RECURSIVE_MAKE} ${MAKEFLAGS} DEPENDS_TARGET=${DEPENDS_TARGET:Q} package \
+		&& ${RECURSIVE_MAKE} ${MAKEFLAGS} clean;		\
+	fi
