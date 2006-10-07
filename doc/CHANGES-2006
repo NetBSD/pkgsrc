@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1432 2006/10/07 08:51:23 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1433 2006/10/07 10:09:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/cue to 20060417 [obache 2006-10-07]
 	Updated devel/aegis to 4.22 [rillig 2006-10-07]
 	Updated devel/aegis to 4.22 [rillig 2006-10-07]
+	Updated games/cgoban-java to 3.3.5 [rillig 2006-10-07]
