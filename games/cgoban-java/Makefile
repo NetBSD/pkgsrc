@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/10/07 10:08:31 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/10/07 13:51:24 rillig Exp $
 #
 
 DISTNAME=	cgoban-java-3.3.5
@@ -18,7 +18,7 @@ USE_TOOLS+=	printf
 INSTALLATION_DIRS=	bin lib/java
 
 do-build:
-	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/lib/java/${DISTFILE}.jar \"\$$@\"\\n" > ${WRKSRC}/cgoban-java.sh
+	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/lib/java/${DISTNAME}.jar \"\$$@\"\\n" > ${WRKSRC}/cgoban-java.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cgoban-java.sh ${PREFIX}/bin/cgoban-java
