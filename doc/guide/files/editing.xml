@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.12 2006/07/29 17:55:13 rillig Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.13 2006/10/07 01:24:00 rillig Exp $ -->
 
 <appendix id="editing">
 <title>Editing guidelines for the pkgsrc guide</title>
@@ -70,14 +70,16 @@
 	regenerate the output files with the proper RCS
 	Ids.</para></step>
 
-	<step><para>Run <command>bmake regenerate</command> to
-	regenerate the files in both <filename>pkgsrc/doc</filename> and
-	<filename>htdocs</filename>.</para></step>
+	<step><para>Run <command>bmake regen</command> to install and
+	commit the files in both <filename>pkgsrc/doc</filename> and
+	<filename>htdocs</filename>.</para>
 
-	<step><para>If you have added, removed or renamed some chapters,
+	<note><para>If you have added, removed or renamed some chapters,
 	you need to synchronize them using <command>cvs add</command> or
 	<command>cvs delete</command> in the htdocs
-	directory.</para></step>
+	directory.</para></note>
+
+	</step>
 
 	</procedure>
 
