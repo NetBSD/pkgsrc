@@ -1,28 +1,28 @@
-$NetBSD: patch-aa,v 1.3 2005/08/22 09:47:30 cube Exp $
+$NetBSD: patch-aa,v 1.3.10.1 2006/10/07 02:58:56 salo Exp $
 
---- amavisd.conf.orig	2005-05-09 20:22:36.000000000 +0200
+--- amavisd.conf.orig	2006-06-27 11:31:50.000000000 +0000
 +++ amavisd.conf
 @@ -14,15 +14,15 @@ use strict;
  # @bypass_spam_checks_maps  = (1);  # uncomment to DISABLE anti-spam code
  
- $max_servers = 2;            # number of pre-forked children (2..15 is common)
--$daemon_user  = 'vscan';     # (no default;  customary: vscan or amavis)
--$daemon_group = 'vscan';     # (no default;  customary: vscan or amavis)
-+$daemon_user  = '@AMAVIS_USER@';     # (no default;  customary: vscan or amavis)
-+$daemon_group = '@AMAVIS_GROUP@';     # (no default;  customary: vscan or amavis)
+ $max_servers = 2;            # num of pre-forked children (2..15 is common), -m
+-$daemon_user  = 'vscan';     # (no default;  customary: vscan or amavis), -u
+-$daemon_group = 'vscan';     # (no default;  customary: vscan or amavis), -g
++$daemon_user  = '@AMAVIS_USER@';     # (no default;  customary: vscan or amavis), -u
++$daemon_group = '@AMAVIS_GROUP@';     # (no default;  customary: vscan or amavis), -g
  
  $mydomain = 'example.com';   # a convenient default for other settings
  
--$MYHOME   = '/var/amavis';   # a convenient default for other settings
-+$MYHOME   = '@AMAVIS_DIR@';   # a convenient default for other settings
- $TEMPBASE = "$MYHOME/tmp";   # working directory, needs to be created manually
+-# $MYHOME = '/var/amavis';   # a convenient default for other settings, -H
++$MYHOME   = '@AMAVIS_DIR@';   # a convenient default for other settings, -H
+ $TEMPBASE = "$MYHOME/tmp";   # working directory, needs to exist, -T
  $ENV{TMPDIR} = $TEMPBASE;    # environment variable TMPDIR
--$QUARANTINEDIR = '/var/virusmails';
-+$QUARANTINEDIR = '@AMAVIS_QUARANTINE@';
+-$QUARANTINEDIR = '/var/virusmails';  # -Q
++$QUARANTINEDIR = '@AMAVIS_QUARANTINE@';  # -Q
  # $quarantine_subdir_levels = 1;  # add level of subdirs to disperse quarantine
  
- # $daemon_chroot_dir = $MYHOME;   # chroot directory or undef
-@@ -79,7 +79,7 @@ $mailfrom_to_quarantine = ''; # null ret
+ # $daemon_chroot_dir = $MYHOME;   # chroot directory or undef, -R
+@@ -91,7 +91,7 @@ $mailfrom_to_quarantine = ''; # null ret
  # $recipient_delimiter = '+';  # undef disables address extensions altogether
  # when enabling addr extensions do also Postfix/main.cf: recipient_delimiter=+
  
