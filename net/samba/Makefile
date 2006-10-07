@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2006/09/30 22:57:22 hira Exp $
+# $NetBSD: Makefile,v 1.164.2.1 2006/10/07 15:28:32 salo Exp $
 
 .include "Makefile.mirrors"
 
@@ -85,7 +85,7 @@ USE_TOOLS+=		mktemp
 # findsmb uses perl
 #
 USE_TOOLS+=		perl:run
-REPLACE_PERL=		source/script/findsmb.in
+REPLACE_PERL=		script/findsmb.in
 
 .if !defined(PWD_MKDB)
 PWD_MKDB!=	${TYPE} pwd_mkdb 2>&1 | \
