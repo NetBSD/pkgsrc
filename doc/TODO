@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5528 2006/10/07 08:25:50 obache Exp $
+$NetBSD: TODO,v 1.5529 2006/10/07 12:16:56 markd Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ Suggested package updates
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
-	o kmymoney2-0.8.5 [pkg/34669]
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
 	o ksi-3.4.2
