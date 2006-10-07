@@ -1,21 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2005/02/18 19:39:27 reed Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/07 19:46:06 reed Exp $
 
---- src/Makefile.in.orig	2005-01-07 11:17:26.000000000 -0800
-+++ src/Makefile.in
-@@ -84,14 +84,14 @@ am__include = @am__include@
- am__quote = @am__quote@
- fsect = @fsect@
- install_sh = @install_sh@
+--- src/Makefile.in.orig	2006-10-08 03:41:58.000000000 -0700
++++ src/Makefile.in	2006-10-08 03:42:49.000000000 -0700
+@@ -192,11 +192,11 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -MAGIC = $(pkgdatadir)/magic
 +MAGIC = @sysconfdir@/magic
  lib_LTLIBRARIES = libmagic.la
  include_HEADERS = magic.h
  EXTRA_DIST = test.c
- 
- bin_PROGRAMS = file
- 
 -AM_CPPFLAGS = -DMAGIC='"$(MAGIC)"'
 +AM_CPPFLAGS = -DMAGIC='"$(MAGIC):$(pkgdatadir)/magic"'
- 
  libmagic_la_SOURCES = magic.c apprentice.c softmagic.c ascmagic.c \
  	compress.c is_tar.c readelf.c print.c fsmagic.c \
+ 	funcs.c file.h names.h patchlevel.h readelf.h tar.h apptype.c
