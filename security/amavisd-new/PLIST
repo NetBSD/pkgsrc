@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/22 09:47:30 cube Exp $
+@comment $NetBSD: PLIST,v 1.6.10.1 2006/10/07 02:58:56 salo Exp $
 ${MILTER}sbin/amavis
 ${MILTER}sbin/amavis-milter
 sbin/amavisd
@@ -12,12 +12,14 @@ share/doc/amavisd-new/README.banned
 share/doc/amavisd-new/README.chroot
 share/doc/amavisd-new/README.contributed
 share/doc/amavisd-new/README.courier
+share/doc/amavisd-new/README.courier-old
 share/doc/amavisd-new/README.customize
 share/doc/amavisd-new/README.exim_v3
 share/doc/amavisd-new/README.exim_v3_app
 share/doc/amavisd-new/README.exim_v4
 share/doc/amavisd-new/README.exim_v4_app
 share/doc/amavisd-new/README.exim_v4_app2
+share/doc/amavisd-new/README.ldap
 share/doc/amavisd-new/README.lookups
 share/doc/amavisd-new/README.milter
 share/doc/amavisd-new/README.old.scanners
@@ -27,6 +29,7 @@ share/doc/amavisd-new/README.postfix
 share/doc/amavisd-new/README.protocol
 share/doc/amavisd-new/README.sendmail
 share/doc/amavisd-new/README.sendmail-dual
+share/doc/amavisd-new/README.sendmail-dual.old
 share/doc/amavisd-new/README.sql
 share/doc/amavisd-new/RELEASE_NOTES
 share/doc/amavisd-new/amavisd-new-docs.html
