@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/04/20 22:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2006/10/07 19:16:57 schwarz Exp $
 
 DISTNAME=	amaya-fullsrc-9.2.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -29,6 +29,13 @@ LIBS+=			${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 FONTS_DIRS.ttf+=	${PREFIX}/share/Amaya/fonts
 REQD_DIRS+=		${PREFIX}/share/Amaya ${PREFIX}/share/Amaya/fonts
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+PLIST_SUBST+=	LINUX=
+.else
+PLIST_SUBST+=	LINUX="@comment "
+.endif
+
 post-extract:
 	${MKDIR} ${WRKSRC}
 
@@ -39,6 +46,7 @@ post-configure:
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
