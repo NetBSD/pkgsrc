@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.60 2006/02/12 05:00:33 rillig Exp $
+# $NetBSD: pre-build,v 1.60.6.1 2006/10/07 02:30:53 salo Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -165,7 +165,7 @@ rm -fr /tmp/mod*
 # Clean up state files
 cd "${USR_PKGSRC}"
 echo "pre-build> Cleaning up leftover state files from previous runs"
-rm -f "${BULKFILESDIR}"/*/*/"$BROKENF" "${BULKFILESDIR}"/*/*/"$BRKWRKLOG" "${BULKFILESDIR}"/*/*/"$BLDLOG"
+rm -f "${BULKFILESDIR}"/*/*/$BROKENF "${BULKFILESDIR}"/*/*/$BRKWRKLOG "${BULKFILESDIR}"/*/*/$BLDLOG
 rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$BLDLOG" "$STARTFILE"
 
 
