@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.123 2006/10/06 09:41:23 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.124 2006/10/07 06:35:01 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -184,8 +184,9 @@ BULK_MSG_CONT?=		${ECHO_MSG} "     "
 #
 
 # If this is "yes", the working directory will not be cleaned after building
-# the package. It can also be set to "pack" to save a .tar.gz file of the
-# working directory in BULKFILESDIR instead of keeping the files.
+# the package. It can also be set to "pack-if-failed" to save a .tar.gz
+# file of the working directory in BULKFILESDIR instead of keeping the files,
+# but only if the package failed to build.
 _PRESERVE_WRKDIR?=	no
 
 # create an escaped version of PKGPATH.  We do this because
@@ -535,7 +536,7 @@ bulk-package:
 			${ECHO} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${BULKFILESDIR:Q}/${BROKENFILE:Q} \
 			) 2>&1 | ${TEE} -a ${_BROKENFILE:Q}; \
 		fi ; \
-		if [ ${_PRESERVE_WRKDIR} = "pack" ]; then		\
+		if [ ${_PRESERVE_WRKDIR} = "pack-if-failed" ] && [ ! -f ${PKGFILE} ]; then \
 			(cd ${WRKDIR}					\
 			&& ${PAX} -wz -f ${_BULK_PKGLOGDIR}/wrkdir.tar.gz . \
 			) || ${TRUE};					\
