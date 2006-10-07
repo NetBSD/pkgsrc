@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/09/16 06:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2006/10/07 08:21:42 taca Exp $
 
 DISTNAME=	libidn-0.6.7
 CATEGORIES=	devel
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo pkg-config perl:build
+TEXINFO_REQD=		4.1
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
 
