@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/15 05:59:38 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/07 05:51:40 uebayasi Exp $
+${EMACS_LISPPREFIX}/elscreen/elscreen-dired.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-dnd.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-gf.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-goby.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-howm.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-server.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-w3m.el
+${EMACS_LISPPREFIX}/elscreen/elscreen-wl.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen.el
+${EMACS_LISPPREFIX}/elscreen/read-directory-name.el
 share/doc/elscreen/README
 @dirrm share/doc/elscreen
 @dirrm ${EMACS_LISPPREFIX}/elscreen
