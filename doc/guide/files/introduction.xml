@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.19 2006/09/13 23:31:15 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.20 2006/10/07 09:31:16 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -81,6 +81,27 @@ pkgsrc provides the following key features:
   available right out of the box, so you can configure it specifically
   for your environment.</para></listitem>
 </itemizedlist>
+
+<para>The following principles are basic to pkgsrc:</para>
+
+<itemizedlist>
+
+<listitem><para><quote>It should only work if it's right.</quote>
+&mdash; That means, if a package contains bugs, it's better to find
+them and to complain about them rather than to just install the package
+and hope that it works. There are numerous checks in pkgsrc that try to
+find such bugs: Static analysis tools (<filename
+role="pkg">pkgtools/pkglint</filename>), build-time checks (portability
+of shell scripts), and post-installation checks (installed files,
+references to shared libraries, script interpreters).</para></listitem>
+
+<listitem><para><quote>If it works, it should work everywhere</quote>
+&mdash; Like NetBSD has been ported to many hardware architectures,
+pkgsrc has been ported to many operating systems. Care is taken that
+packages behave the same on all platforms.</para></listitem>
+
+</itemizedlist>
+
 </sect2>
 
 <sect2 id="intro.platforms">
