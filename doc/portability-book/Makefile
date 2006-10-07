@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/07 09:28:23 rillig Exp $
 #
 
 DISTNAME=		portability-book-${TODAY}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
-DISTFILES=		htdocs-share-20061001.tar.gz
+DISTFILES=		htdocs-share-20061007.tar.gz
 
 MAINTAINER=		rillig@NetBSD.org
 #HOMEPAGE=		http://www.NetBSD.org/Documentation/pkgsrc/
