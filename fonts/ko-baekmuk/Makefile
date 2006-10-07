@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2006/07/25 15:12:27 jlam Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2006/10/07 03:25:41 salo Exp $
 #
 
 DISTNAME=	baekmuk-2.0
 PKGNAME=	ko-baekmuk-20010718
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/ \
 		http://zinc.skku.ac.kr/~wkpark/baekmuk/
