@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2005/03/04 15:32:35 uebayasi Exp $
+$NetBSD: distinfo,v 1.32 2006/10/07 05:13:14 uebayasi Exp $
 
-SHA1 (mew-4.2.tar.gz) = 5c425000122ff00a0f02460b46ed4915808d107a
-RMD160 (mew-4.2.tar.gz) = fd7ff4620b6d27eff6baf31ccba98cc10dfcb88d
-Size (mew-4.2.tar.gz) = 925037 bytes
+SHA1 (mew-5.1.tar.gz) = 144b90ddac4ce7295c7f710f9f53d15dcb032301
+RMD160 (mew-5.1.tar.gz) = 6f578b74fce677115e37bc27bf6756e59eabaf23
+Size (mew-5.1.tar.gz) = 948533 bytes
