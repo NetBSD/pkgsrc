@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/07/02 10:26:14 rillig Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/10/07 05:13:14 uebayasi Exp $
 bin/incm
 bin/mewcat
 bin/mewdecode
@@ -164,8 +164,8 @@ ${EMACS_LISPPREFIX}/mew/mew-summary4.elc
 ${EMACS_LISPPREFIX}/mew/mew-syntax.el
 ${EMACS_LISPPREFIX}/mew/mew-syntax.elc
 ${EMACS_LISPPREFIX}/mew/mew-temacs.el
-${EMACS_LISPPREFIX}/mew/mew-theme.el
-${EMACS_LISPPREFIX}/mew/mew-theme.elc
+@comment ${EMACS_LISPPREFIX}/mew/mew-theme.el
+@comment ${EMACS_LISPPREFIX}/mew/mew-theme.elc
 ${EMACS_LISPPREFIX}/mew/mew-thread.el
 ${EMACS_LISPPREFIX}/mew/mew-thread.elc
 ${EMACS_LISPPREFIX}/mew/mew-unix.el
@@ -179,6 +179,26 @@ ${EMACS_LISPPREFIX}/mew/mew-win32.el
 ${EMACS_LISPPREFIX}/mew/mew-xemacs.el
 ${EMACS_LISPPREFIX}/mew/mew.el
 ${EMACS_LISPPREFIX}/mew/mew.elc
+${EMACS_LISPPREFIX}/mew/mew-passwd.el
+${EMACS_LISPPREFIX}/mew/mew-passwd.elc
+${EMACS_LISPPREFIX}/mew/mew-search.el
+${EMACS_LISPPREFIX}/mew/mew-search.elc
+${EMACS_LISPPREFIX}/mew/mew-vars3.el
+${EMACS_LISPPREFIX}/mew/mew-vars3.elc
+${EMACS_LISPPREFIX}/mew/mew-varsx.el
+${EMACS_LISPPREFIX}/mew/mew-varsx.elc
+${EMACS_LISPPREFIX}/mew/mew-darwin.elc
+${EMACS_LISPPREFIX}/mew/mew-gemacs.elc
+${EMACS_LISPPREFIX}/mew/mew-lang-jp.elc
+${EMACS_LISPPREFIX}/mew/mew-lang-kr.elc
+${EMACS_LISPPREFIX}/mew/mew-lang-latin.elc
+${EMACS_LISPPREFIX}/mew/mew-mule.elc
+${EMACS_LISPPREFIX}/mew/mew-mule0.elc
+${EMACS_LISPPREFIX}/mew/mew-mule3.elc
+${EMACS_LISPPREFIX}/mew/mew-temacs.elc
+${EMACS_LISPPREFIX}/mew/mew-unix.elc
+${EMACS_LISPPREFIX}/mew/mew-win32.elc
+${EMACS_LISPPREFIX}/mew/mew-xemacs.elc
 @dirrm ${EMACS_LISPPREFIX}/mew/contrib
 @dirrm ${EMACS_LISPPREFIX}/mew
 @dirrm share/mew/etc
