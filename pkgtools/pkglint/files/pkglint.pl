@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.679 2006/10/06 18:58:55 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.680 2006/10/07 07:57:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6296,7 +6296,7 @@ sub checkfile_DESCR($) {
 
 sub checkfile_distinfo($) {
 	my ($fname) = @_;
-	my ($lines, %in_distinfo, $current_fname, $state);
+	my ($lines, %in_distinfo, $current_fname, $state, $patches_dir);
 
 	use constant DIS_start	=> 0;
 	use constant DIS_SHA1	=> 0;	# same as DIS_start
@@ -6320,6 +6320,13 @@ sub checkfile_distinfo($) {
 	if (1 <= $#{$lines} && $lines->[1]->text ne "") {
 		$lines->[1]->log_note("Empty line expected.");
 		$lines->[1]->explain_note("This is merely for aesthetical purposes.");
+	}
+
+	$patches_dir = $patchdir;
+	if (!defined($patches_dir) && -d "${current_dir}/patches") {
+		$patches_dir = "patches";
+	} else {
+		# it stays undefined.
 	}
 
 	$current_fname = undef;
@@ -6396,8 +6403,13 @@ sub checkfile_distinfo($) {
 			}
 		}
 
-		if ($is_patch) {
-			if (open(PATCH, "< ${current_dir}/${patchdir}/${chksum_fname}")) {
+		if ($is_patch && defined($patches_dir)) {
+			my $fname = "${current_dir}/${patches_dir}/${chksum_fname}";
+			if (!is_committed($fname)) {
+				$line->log_warning("${patches_dir}/${chksum_fname} is registered in distinfo but not added to CVS.");
+			}
+
+			if (open(PATCH, "<", $fname)) {
 				my $data = "";
 				foreach my $patchline (<PATCH>) {
 					$data .= $patchline unless $patchline =~ qr"\$NetBSD";
@@ -6418,10 +6430,12 @@ sub checkfile_distinfo($) {
 	}
 	checklines_trailing_empty_lines($lines);
 
-	foreach my $patch (<${current_dir}/$patchdir/patch-*>) {
-		$patch = basename($patch);
-		if (!exists($in_distinfo{$patch})) {
-			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
+	if (defined($patches_dir)) {
+		foreach my $patch (<${current_dir}/${patches_dir}/patch-*>) {
+			$patch = basename($patch);
+			if (!exists($in_distinfo{$patch})) {
+				log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
+			}
 		}
 	}
 }
