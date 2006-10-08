@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1443 2006/10/08 11:45:33 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1444 2006/10/08 12:45:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4622,3 +4622,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/mkvtoolnix to 1.7.0 [salo 2006-10-08]
 	Updated multimedia/mmg to 1.7.0 [salo 2006-10-08]
 	Updated misc/dirdiff to 2.1 [obache 2006-10-08]
+	Updated net/dnstop to 20060517 [obache 2006-10-08]
