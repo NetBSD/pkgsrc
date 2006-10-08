@@ -1,0 +1,15 @@
+$NetBSD: patch-ta,v 1.1 2006/10/08 20:55:12 rillig Exp $
+
+$RANDOM is specific to Bash.
+
+--- tests/Makefile.in.orig	2006-08-30 07:46:11.000000000 +0200
++++ tests/Makefile.in	2006-10-06 09:46:35.000000000 +0200
+@@ -348,7 +348,7 @@ TESTS = $(test_programs) $(test_scripts)
+ TESTS_ENVIRONMENT = srcdir=$(srcdir) \
+ 	LIBCHARSET_ALIAS_DIR=$(top_builddir)/glib/libcharset \
+ 	MALLOC_CHECK_=2	\
+-	MALLOC_PERTURB_=$$(($$RANDOM % 256))
++	MALLOC_PERTURB_=`expr $$$$ % 256`
+ 
+ 
+ progs_ldadd = $(EFENCE) $(libglib) $(EFENCE)
