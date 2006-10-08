@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1437 2006/10/08 01:48:49 salo Exp $
+>$NetBSD: CHANGES-2006,v 1.1438 2006/10/08 02:57:59 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/comix to 3.6 [wiz 2006-10-07]
 	Updated emulators/wine to 0.9.18nb2 [wiz 2006-10-08]
 	Updated www/paros to 3.2.13 [salo 2006-10-08]
+	Updated net/lftp to 3.5.5 [salo 2006-10-08]
