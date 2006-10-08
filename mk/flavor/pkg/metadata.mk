@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.10 2006/08/04 14:11:29 reed Exp $
+# $NetBSD: metadata.mk,v 1.11 2006/10/08 20:25:43 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -93,8 +93,10 @@ ${_BUILD_INFO_FILE}: plist
 		${ECHO} "REQUIRES=$$req" >> ${.TARGET}.tmp;		\
 	done
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SORT} ${.TARGET}.tmp > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	rm -f ${.TARGET};						\
+	sort ${.TARGET}.tmp > ${.TARGET};				\
+	rm -f ${.TARGET}.tmp
 
 ######################################################################
 ###
