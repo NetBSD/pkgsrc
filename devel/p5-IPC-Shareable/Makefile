@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:22 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/08 08:50:39 rillig Exp $
 #
 
 DISTNAME=	IPC-Shareable-0.60
@@ -15,6 +15,17 @@ DEPENDS+=	p5-Storable>=1.0.14:../../devel/p5-Storable
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/IPC/Shareable/.packlist
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# The tests hang on NetBSD 3.0, both as unprivileged user and as root.
+# The last words are:
+#
+# t/25ipc.......Could not create semaphore set: No space left on device
+#   at t/25ipc.t line 37
+TEST_TARGET=	# disabled
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
