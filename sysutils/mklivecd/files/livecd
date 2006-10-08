@@ -1,6 +1,6 @@
-# $NetBSD: livecd,v 1.3 2006/10/08 19:08:38 xtraeme Exp $ 
+# $NetBSD: livecd,v 1.4 2006/10/08 19:15:02 xtraeme Exp $ 
 #
-# Mount mfs directories and unpack the required files
+# Mount ramfs directories and unpack the required files
 # before anything.
 
 # PROVIDE: mklivecd
