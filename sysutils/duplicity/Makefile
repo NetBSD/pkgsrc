@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/08 13:42:21 obache Exp $
 #
 
-DISTNAME=		duplicity-0.4.1
-PKGREVISION=	2
+DISTNAME=		duplicity-0.4.2
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://savannah.nongnu.org/download/duplicity/
 
@@ -14,7 +13,7 @@ DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
 
 BUILDLINK_API_DEPENDS.librsync+=	librsync>=0.9.6
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 22 23
+PYTHON_VERSIONS_ACCEPTED= 22 23 24
 
 .include "../../devel/librsync/buildlink3.mk"
 .include "../../lang/python/application.mk"
