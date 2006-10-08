@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5533 2006/10/08 12:45:40 obache Exp $
+$NetBSD: TODO,v 1.5534 2006/10/08 13:45:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnstracer-1.8
 	o drscheme-352
-	o duplicity-0.4.2 [pkg/34574]
 	o dvd+rw-tools-7.0
 	o dvdstyler-1.5beta5
 	o dx-4.3.3
