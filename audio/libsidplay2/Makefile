@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/22 04:46:14 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/08 21:31:31 rillig Exp $
 #
 
 DISTNAME=	sidplay-libs-2.1.1
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sidplay2.sourceforge.net/
 COMMENT=	Sidplay2 Library
 
+OVERRIDE_DIRDEPTH=	3
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
