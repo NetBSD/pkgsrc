@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1439 2006/10/08 03:11:58 salo Exp $
+>$NetBSD: CHANGES-2006,v 1.1440 2006/10/08 03:46:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4617,3 +4617,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/paros to 3.2.13 [salo 2006-10-08]
 	Updated net/lftp to 3.5.5 [salo 2006-10-08]
 	Updated devel/libebml to 0.7.7 [salo 2006-10-08]
+	Updated devel/rake to 0.7.1nb1 [minskim 2006-10-08]
