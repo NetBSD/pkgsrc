@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5534 2006/10/08 13:45:18 obache Exp $
+$NetBSD: TODO,v 1.5535 2006/10/08 17:06:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -478,6 +478,7 @@ Suggested package updates
 	o gcc-3.3.6
 	o gcc-4.1.1
 	o gcdmaster-1.2.2
+	o gcin-1.2.7
 	o gcombust-0.1.55
 	o gcpio-2.6
 	o gdal-lib-1.3.2
@@ -557,7 +558,7 @@ Suggested package updates
 	o gtksourceview-1.8.1
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
-	o guile-1.8.0 [gdt: wait for 1.8.1; 1.8.0 is broken]
+	o guile-1.8.1
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
 	o gworkspace-0.8.3
 	o gzrecover-0.3
@@ -615,7 +616,9 @@ Suggested package updates
 	o kmp-0.5
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
+	o konversation-1.0.1
 	o ksi-3.4.2
+	o kye-0.9.1
 	o latd-1.21
 	o lavaps-2.7
 	o lcab-1.0b11
@@ -627,6 +630,7 @@ Suggested package updates
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
+	o libdvdread-0.9.7
 	o libetpan-0.46 [pkg/34294]
 	o libextractor-0.5.15
 	o libflash-0.4.13
@@ -653,6 +657,7 @@ Suggested package updates
 	o libnids-1.21
 	o libntlm-0.3.10
 	o libprelude-0.9.10.2
+	o libpreludedb-0.9.10
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libstatgrab-0.13
@@ -697,6 +702,7 @@ Suggested package updates
 	o mined-2000.12
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
+	o miredo-1.0.4
 	o mknmz-wwwoffle-0.7.2
 	o mlview-0.9.0
 	o mmix-20050922
@@ -724,6 +730,7 @@ Suggested package updates
 	o musicpd-0.12.0
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
+	o nautilus-2.16.1
 	o nautilus-cd-burner-2.16.0
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -818,7 +825,7 @@ Suggested package updates
 	o p5-Email-Valid-0.176 [pkg/34374]
 	o p5-Encode-2.18 [pkg/34419]
 	o p5-Error-0.17 [pkg/34330]
-	o p5-Error-0.17004
+	o p5-Error-0.17006
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
@@ -899,8 +906,9 @@ Suggested package updates
 	o p5-Sub-Uplevel-0.13 [pkg/34364]
 	o p5-Template-Extract-0.40
 	o p5-Test-Deep-0.095 [pkg/34345]
-	o p5-Test-Exception-0.22
+	o p5-Test-Exception-0.23
 	o p5-Test-Harness-2.46
+	o p5-Test-Inline-2.105
 	o p5-Test-Memory-Cycle-1.04 [pkg/34372]
 	o p5-Test-Pod-1.26 [pkg/34369]
 	o p5-Test-Pod-Coverage-1.08 [pkg/34368]
