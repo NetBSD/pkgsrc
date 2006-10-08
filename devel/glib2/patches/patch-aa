@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.30 2006/10/08 11:56:18 joerg Exp $
+$NetBSD: patch-aa,v 1.31 2006/10/08 14:51:57 joerg Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=140329
+http://bugzilla.gnome.org/show_bug.cgi?id=141256
 
 --- configure.orig	2006-10-02 01:05:29.000000000 +0200
 +++ configure
