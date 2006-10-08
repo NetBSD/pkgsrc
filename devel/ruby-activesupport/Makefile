@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/12/30 13:17:51 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/08 04:10:05 minskim Exp $
 
-DISTNAME=	activesupport-1.2.1
+DISTNAME=	activesupport-1.3.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/6566/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/9563/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -12,6 +12,8 @@ COMMENT=	Collection of classes and extensions for Rails
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+
+.include "../../lang/ruby/modules.mk"
 
 do-install:
 	${CP} -R ${WRKSRC}/lib/* ${RUBY_SITELIBDIR}
@@ -24,5 +26,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG \
 		${RUBY_DOCDIR}/CHANGELOG.activesupport
 
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
