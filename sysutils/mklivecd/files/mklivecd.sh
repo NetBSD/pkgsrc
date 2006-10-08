@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.24 2005/10/08 23:20:10 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.25 2006/10/08 19:08:38 xtraeme Exp $
 #
-# Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
+# Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -46,8 +46,7 @@
 : ${tmp_file:=/tmp/${progname}.$$}
 : ${pkgsrc_mntstat:=$config_dir/pkgsrc_mount.stat}
 : ${pkgsrcdist_mntstat:=$config_dir/pkgsrcdist_mount.stat}
-: ${MKISOFS:=@LOCALBASE@/bin/mkisofs}
-: ${CDRECORD:=@LOCALBASE@/bin/cdrecord}
+: ${packages_mntstat:=$config_dir/packages_mount.stat}
 #
 # NetBSD >= 4.0 has cdboot, no need to use grub here.
 #
@@ -122,23 +121,22 @@ bye()
 
 do_conf()
 {
-    BASE_VARS="SOURCEDIR PKGSRCDIR PKGSRCDISTDIR SHAREDIR BASEDIR WORKDIR \
-               ISODIR BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS \
+    BASE_VARS="SOURCEDIR PACKAGESDIR PKGSRCDIR PKGSRCDISTDIR SHAREDIR BASEDIR \
+               WORKDIR ISODIR BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS \
                CHROOT_SHELL"
 
     KERNEL_VARS="MULTIPLE_KERNELS BOOTKERN KERNEL_NAME"
 
-    MISC_VARS="ENABLE_X11 MKISOFS_ARGS CDRECORD_ARGS BLANK_BEFORE_BURN \
-               CDROM_DEVICE PERSONAL_CONFIG IMAGE_NAME PKG_SYSCONFDIR \
-               REMOVE_DIRS USE_GNU_GRUB GRUB_FILES_DIR HOSTNAME \
+    MISC_VARS="ENABLE_X11 MKISOFS_BIN MKISOFS_ARGS CDRECORD_BIN CDRECORD_ARGS \
+               BLANK_BEFORE_BURN CDROM_DEVICE PERSONAL_CONFIG IMAGE_NAME \
+               PKG_SYSCONFDIR REMOVE_DIRS USE_GNU_GRUB GRUB_FILES_DIR HOSTNAME \
                VND_COMPRESSION"
 
-    MNT_VARS="MNT_ETC_ARGS MNT_VAR_ARGS MNT_ROOT_ARGS \
-              MNT_TMP_ARGS MNT_HOME_ARGS MNT_PKG_SYSCONFDIR_ARGS \
-              MNT_DEV_ARGS"
+    MNT_VARS="MNT_RAMFS_CMD MNT_RAMFS_ARGS"
 
     # Base directories/sets
     : ${SOURCEDIR:=/usr/src}
+    : ${PACKAGESDIR:=/usr/pkgsrc/packages}
     : ${PKGSRCDIR:=/usr/pkgsrc}
     : ${PKGSRCDISTDIR:=/usr/pkgsrc/distfiles}
     : ${SHAREDIR:=@PREFIX@/share/mklivecd}
@@ -159,7 +157,9 @@ do_conf()
 
     # Miscellaneous options
     : ${ENABLE_X11:=no}
+    : ${MKISOFS_BIN:=@PREFIX@/bin/mkisofs}
     : ${MKISOFS_ARGS:=-J -R -nobak -v}
+    : ${CDRECORD_BIN:=@PREFIX@/bin/cdrecord}
     : ${CDRECORD_ARGS:=-v}
     : ${BLANK_BEFORE_BURN:=no}
     : ${CDROM_DEVICE:=15,1,0}
@@ -173,15 +173,8 @@ do_conf()
     #	
     # Mount arguments
     #
-    # Best value for /dev, there are >512 inodes free and some Kbytes free too.
-    # I don't recommend changing this!
-    : ${MNT_DEV_ARGS:=-o noatime -s 512k -i 64}
-    : ${MNT_ETC_ARGS:=-o noatime -s 2m}
-    : ${MNT_VAR_ARGS:=-o noatime -s 10m}
-    : ${MNT_ROOT_ARGS:=-o noatime -s 5m}
-    : ${MNT_TMP_ARGS:=-o noatime -s 10m}
-    : ${MNT_HOME_ARGS:=-o noatime -s 50m}
-    : ${MNT_PKG_SYSCONFDIR_ARGS:=-o noatime -s 1m}
+    : ${MNT_RAMFS_CMD:=mount_mfs}
+    : ${MNT_RAMFS_ARGS:=-s 128m swap}
 
     [ ! -d $config_dir ] && mkdir $config_dir
 
@@ -347,8 +340,7 @@ do_build_kernels()
 
 	config -s $SOURCEDIR/sys -b $WORKDIR/$kernname $bootkern
 	cd $kernname
-	make depend
-	make COPTS="-Os" # Don't use additional flags
+	make depend && make
 	if [ "$?" -eq 0 ]; then
             if [ "$USE_GNU_GRUB" = "yes" ]; then
                 cp $WORKDIR/$kernname/netbsd $ISODIR/$GRUB_BOOTDIR/$bootkern
@@ -545,12 +537,12 @@ do_cdlive()
 
 	(						    \
 	echo "livecd=yes";				    \
-	echo "dhclient=yes dhclient_flags=-q";		    \
+	echo "dhclient=no";                                 \
 	echo "wscons=yes";				    \
 	echo "hostname=$HOSTNAME";			    \
 	echo "nfs_client=yes";				    \
 	echo "inetd=no";				    \
-	echo "ntpdate=yes";				    \
+	echo "ntpdate=no";				    \
 	echo "savecore=no";				    \
 	) >> $ISODIR/etc/rc.conf
 
@@ -561,7 +553,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.24 2005/10/08 23:20:10 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.25 2006/10/08 19:08:38 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -606,6 +598,9 @@ _EOF_
 	[ ! -d $ISODIR/usr/pkgsrc/distfiles ] && \
 	    mkdir -p $ISODIR/usr/pkgsrc/distfiles
 
+        [ ! -d $ISODIR/usr/pkgsrc/packages ] && \
+            mkdir -p $ISODIR/usr/pkgsrc/packages
+
 	[ ! -f $ISODIR/usr/share/misc/termcap ] && \
 	    cp /usr/share/misc/termcap* $ISODIR/usr/share/misc
 
@@ -645,6 +640,23 @@ _EOF_
 	    echo "==> CANNOT FIND $PKGSRCDISTDIR"
 	fi
 
+        if [ -d $PACKAGESDIR ]; then
+            if [ -f $packages_mntstat ]; then
+                count=$(cat $packages_mntstat)
+                count=$(($count + 1))
+                echo $count > $packages_mntstat
+                echo "=> packages directory already mounted."
+            else
+                mount_null $PACKAGESDIR $ISODIR/usr/pkgsrc/packages
+                if [ "$?" -eq 0 ]; then
+                    echo "=> packages directory ready."
+                    echo "1" > $packages_mntstat
+                fi
+            fi
+        else
+            echo "==> CANNOT FIND $PACKAGESDIR"
+        fi
+
 	echo
 	chroot $ISODIR $CHROOT_SHELL
 	echo
@@ -657,16 +669,17 @@ _EOF_
 	cd $ISODIR
 	cp -f $SHAREDIR/livecd $ISODIR/etc/rc.d
 
-	SUBST_H="mount_mfs $MNT_HOME_ARGS swap /home"
-	SUBST_HT="@TAR@ xfzp /stand/mfs_home.tgz -C /"
-	SUBST_S="mount_mfs $MNT_PKG_SYSCONFDIR_ARGS swap /$PKG_SYSCONFDIR"
-	SUBST_ST="@TAR@ xfzp /stand/mfs_pkg_sysconfdir.tgz -C /"
+        mkdir -p $ISODIR/ramfs
 
-	sed -e "s|@MNT_ETC_ARGS@|$MNT_ETC_ARGS|g" \
-            -e "s|@MNT_DEV_ARGS@|$MNT_DEV_ARGS|g" \
-	    -e "s|@MNT_VAR_ARGS@|$MNT_VAR_ARGS|g" \
-	    -e "s|@MNT_ROOT_ARGS@|$MNT_ROOT_ARGS|g" \
-	    -e "s|@MNT_TMP_ARGS@|$MNT_TMP_ARGS|g" \
+        SUBST_H_MKDIR="mkdir -p /ramfs/home"
+	SUBST_H_MNT="$MNT_RAMFS_CMD $MNT_RAMFS_ARGS /ramfs/home /home"
+	SUBST_H_UNPACK="@TAR@ xfzp /stand/mfs_home.tgz -C /"
+        SUBST_S_MKDIR="mkdir -p /ramfs/pkg_sysconfdir"
+	SUBST_S_MNT="$MNT_RAMFS_CMD $MNT_RAMFS_ARGS /ramfs/pkg_sysconfdir /usr/pkg/etc" 
+	SUBST_S_UNPACK="@TAR@ xfzp /stand/mfs_pkg_sysconfdir.tgz -C /"
+
+	sed -e "s|@MNT_RAMFS_ARGS@|$MNT_RAMFS_ARGS|g" \
+            -e "s|@MNT_RAMFS_CMD@|$MNT_RAMFS_CMD|g" \
 	    $ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.in
 	mv $ISODIR/etc/rc.d/livecd.in $ISODIR/etc/rc.d/livecd
 		
@@ -686,11 +699,15 @@ _EOF_
         fi
  
 	if [ -d $ISODIR/home ]; then
-	    sed	-e "s|@HOME@|$SUBST_H|" -e "s|@HOMETAR@|$SUBST_HT|" \
+	    sed	-e "s|@HOME_MKDIR@|$SUBST_H_MKDIR|" \
+                -e "s|@HOME_MOUNT@|$SUBST_H_MOUNT|" \
+                -e "s|@HOME_UNPACK@|$SUBST_H_UNPACK|" \
 		$ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
 	    mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	else
-	    sed	-e "s|@HOME@||" -e "s|@HOMETAR@||" \
+	    sed	-e "s|@HOME_MKDIR@||" \
+                -e "s|@HOME_MOUNT@||" \
+                -e "s|@HOME_UNPACK@||" \
                 $ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
             mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	fi
@@ -700,11 +717,15 @@ _EOF_
 	    @TAR@ cfzp $ISODIR/stand/mfs_pkg_sysconfdir.tgz \
 		$PKG_SYSCONFDIR >/dev/null 2>&1
 	    showmsgstring
-	    sed	-e "s|@USRPKGETC@|$SUBST_S|" -e "s|@USRPKGETCTAR@|$SUBST_ST|" \
+	    sed	-e "s|@USRPKGETC_MKDIR@|$SUBST_S_MKDIR|" \
+                -e "s|@USRPKGETC_MOUNT@|$SUBST_S_MOUNT|" \
+                -e "s|@USRPKGETC_UNPACK@|$SUBST_S_UNPACK|" \
 		$ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
              mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	else
-	    sed -e "s|@USRPKGETC@||" -e "s|@USRPKGETCTAR@||" \
+	    sed -e "s|@USRPKGETC_MKDIR@||" \
+                -e "s|@USRPKGETC_MOUNT@||" \
+                -e "s|@USRPKGETC_UNPACK@||" \
 	        $ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
             mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	fi
@@ -739,6 +760,9 @@ _EOF_
 
 	chmod -R a+rx $ISODIR/etc/rc.d
 
+        #
+        # Unmount pkgsrc related directories.
+        #
 	if [ ! -f $pkgsrcdist_mntstat ]; then
 	    showmsg "distfiles directory was not mounted."
 	else
@@ -759,6 +783,26 @@ _EOF_
 		fi
             fi
 	fi
+
+        if [ ! -f $packages_mntstat ]; then
+            showmsg "packages directory was not mounted."
+        else
+            cnt=$(cat $packages_mntstat)
+            if [ "$cnt" -gt 1 ]; then
+                cnt=$(($cnt - 1))
+                echo $cnt > $packages_mntstat
+                echo "=>pkgsrc directory still in use by mklivecd."
+            else
+                [ -n "$verbose_mode" ] && \
+                    echo "=> Unmounting packages directory."
+                umount -R $ISODIR/usr/pkgsrc/packages
+                if [ "$?" -eq 0 ]; then
+                    rm $packages_mntstat
+                else
+                    echo "Can't umount $PACKAGESDIR."
+                fi
+            fi
+        fi
 
 	if [ ! -f $pkgsrc_mntstat ]; then
 	    showmsg "pkgsrc directory was not mounted."
@@ -835,6 +879,17 @@ _EOF_
             fi
         fi
 
+        #
+        # Detect if we are running a MULTIBOOT kernel.
+        #
+        grep -q MULTIBOOT $WORKDIR/$BOOTKERN
+        if [ "$?" -eq 0 ]; then
+            showmsg "Applying fix for MULTIBOOT kernel..."
+            sed -e "s|\--type=netbsd||g" $ISODIR/boot/grub/menu.lst > \
+                $ISODIR/boot/grub/menu.lst.in
+            mv $ISODIR/boot/grub/menu.lst.in $ISODIR/boot/grub/menu.lst
+        fi
+
         _do_real_iso_image()
         {
             if [ -f "$BASEDIR/$IMAGE_NAME.iso" ]; then
@@ -861,12 +916,12 @@ _EOF_
 
             showmsg_n "Creating ISO CD9660 image..."
             if [ "$USE_GNU_GRUB" = "yes" ]; then
-                $MKISOFS $MKISOFS_FIXED_ARGS $GRUB_BOOT_ARGS $MKISOFS_ARGS \
+                $MKISOFS_BIN $MKISOFS_FIXED_ARGS $GRUB_BOOT_ARGS $MKISOFS_ARGS \
 		-b $GRUB_BOOTDIR/$GRUB_BOOTIMAGE \
 		-o $BASEDIR/$IMAGE_NAME.iso $ISODIR > /dev/null 2>&1
 		showmsgstring
             else
-		$MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS \
+		$MKISOFS_BIN $MKISOFS_FIXED_ARGS $MKISOFS_ARGS \
 		    -b ${CDBOOT_IMG} -o $BASEDIR/$IMAGE_NAME.iso $ISODIR \
                     > /dev/null 2>&1
 		showmsgstring
@@ -892,9 +947,9 @@ _EOF_
 	fi
 
 	[ "$BLANK_BEFORE_BURN" = "yes" ] && \
-	    $CDRECORD dev=$CDROM_DEVICE $CDRECORD_ARGS blank=fast
+	    $CDRECORD_BIN dev=$CDROM_DEVICE $CDRECORD_ARGS blank=fast
 		
-	$CDRECORD dev=$CDROM_DEVICE $CDRECORD_ARGS $BASEDIR/$IMAGE_NAME.iso
+	$CDRECORD_BIN dev=$CDROM_DEVICE $CDRECORD_ARGS $BASEDIR/$IMAGE_NAME.iso
     ;;
     esac
 	
