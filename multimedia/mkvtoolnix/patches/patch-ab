@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.6 2006/10/08 05:22:19 salo Exp $
+
+--- configure.orig	2006-10-08 03:30:41.000000000 +0000
++++ configure	2006-10-08 03:52:30.000000000 +0000
+@@ -8620,7 +8620,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lmagic  $LIBS"
++LIBS="-lmagic -lz $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -8678,7 +8678,7 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_magic_magic_open" >&5
+ echo "${ECHO_T}$ac_cv_lib_magic_magic_open" >&6
+ if test $ac_cv_lib_magic_magic_open = yes; then
+-   MAGIC_LIBS="-lmagic"
++   MAGIC_LIBS="-lmagic -lz"
+ fi
+ 
+ 
