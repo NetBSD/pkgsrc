@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2006/07/02 10:00:08 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2006/10/08 17:16:59 wiz Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \

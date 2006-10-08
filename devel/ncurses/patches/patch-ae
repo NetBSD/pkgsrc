@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.7 2006/10/08 17:16:59 wiz Exp $
+
+--- progs/tset.c.orig	2005-09-25 00:43:52.000000000 +0000
++++ progs/tset.c
+@@ -1024,7 +1024,9 @@ report(const char *name, int which, unsi
+      * Check 'delete' before 'backspace', since the key_backspace value
+      * is ambiguous.
+      */
+-    if (newer == 0177)
++    if (newer == _POSIX_VDISABLE)
++	(void) fprintf(stderr, "disabled.\n");
++    else if (newer == 0177)
+ 	(void) fprintf(stderr, "delete.\n");
+     else if ((p = key_backspace) != 0
+ 	     && newer == (unsigned char) p[0]
