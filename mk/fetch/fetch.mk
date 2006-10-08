@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.21 2006/10/07 12:22:06 rillig Exp $
+# $NetBSD: fetch.mk,v 1.22 2006/10/08 11:37:38 mishka Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -30,10 +30,21 @@ _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 _BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
 # Set up _ORDERED_SITES to work out the exact list of sites for every file,
-# using the dynamic sites script, or sorting according to the master site
-# list or the patterns in MASTER_SORT or MASTER_SORT_REGEX as appropriate.
+# using the dynamic sites script, or ordering according to the master site
+# list, MASTER_SORT_RANDOM randomization feature, or the patterns in
+# MASTER_SORT or MASTER_SORT_REGEX as appropriate.
 # No actual sorting is done until _ORDERED_SITES is expanded.
 #
+.if defined(MASTER_SORT_RANDOM) && !empty(MASTER_SORT_RANDOM:M[yY][eE][sS])
+_MASTER_RAND_AWK= BEGIN { srand(seed) } {				\
+		n = split($$0, site);					\
+		for (i = n; i > 0; i--) {				\
+			ir = int(rand() * i + 1);			\
+			t = site[i]; site[i] = site[ir]; site[ir] = t;	\
+			print site[i]; } }
+_RAND_SITES_CMD= | ${AWK} -v seed=$$$$ '${_MASTER_RAND_AWK}'
+.endif
+
 .if defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
 MASTER_SORT?=
 MASTER_SORT_REGEX?=
@@ -44,9 +55,12 @@ _MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_S
 _MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt:S/\\/\\\\/g}"] = good["${srt:S/\\/\\\\/g}"] " " $$0 ; next; }
 .  endfor
 _MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
+_SORT_SITES_CMD+= | ${AWK} '${_MASTER_SORT_AWK}'
+.endif
 
-_SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${_MASTER_SORT_AWK}'
-_ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${_SORT_SITES_CMD:S/\\/\\\\/g:C/"/\"/g}`
+.if defined(_RAND_SITES_CMD) || defined(_SORT_SITES_CMD)
+_SORT_SITES_FULL_CMD= ${ECHO} $$unsorted_sites ${_RAND_SITES_CMD} ${_SORT_SITES_CMD}
+_ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${_SORT_SITES_FULL_CMD:S/\\/\\\\/g:C/"/\"/g}`
 .else
 _ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
@@ -245,8 +259,8 @@ do-fetch-file: .USE
 		fi;							\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
-	sites="${_ORDERED_SITES}";					\
+	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}}";			\
+	sites="${_ORDERED_SITES} ${_MASTER_SITE_BACKUP}";		\
 	cd ${.TARGET:H:S/\/${DIST_SUBDIR}$//} &&			\
 	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} $$sites
 	${_PKG_SILENT}${_PKG_DEBUG}					\
