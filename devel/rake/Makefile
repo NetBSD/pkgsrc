@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/08/07 16:11:32 taca Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/08 03:45:45 minskim Exp $
 
 DISTNAME=	rake-0.7.1
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/9499/
 EXTRACT_SUFX=	.tgz
@@ -19,16 +20,20 @@ DOCS=			CHANGES README TODO doc/glossary.rdoc \
 			doc/rakefile.rdoc doc/rational.rdoc
 EXAMPLES=		Rakefile1 Rakefile2 a.c b.c main.c
 
-pre-configure:
-	${MV} ${WRKSRC}/bin/rake ${WRKSRC}/bin/rake.orig
-	${ECHO} "#!${RUBY}" > ${WRKSRC}/bin/rake
-	${CAT} ${WRKSRC}/bin/rake.orig >> ${WRKSRC}/bin/rake
-	${RM} ${WRKSRC}/bin/rake.orig
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	doc/rake.1
+SUBST_SED.paths=	-e 's,/usr/share/doc/,${RUBY_DOCDIR}/,g'
 
-post-install:
+.include "../../lang/ruby/modules.mk"
+
+post-extract:
 	if [ ! -f ${WRKSRC}/doc/rake.1 ]; then \
 		${GUNZIP_CMD} ${WRKSRC}/doc/rake.1.gz; \
 	fi
+
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/rake.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${DOCDIR}/release_notes
 .for f in ${DOCS}
@@ -42,5 +47,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/example/${f} ${EXAMPLESDIR}
 .endfor
 
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
