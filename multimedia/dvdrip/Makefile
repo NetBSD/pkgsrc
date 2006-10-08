@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2006/08/25 18:15:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.31 2006/10/08 12:40:09 xtraeme Exp $
 #
 
 DISTNAME=	dvdrip-0.98.1
+PKGREVISION=	1
 CATEGORIES=	multimedia x11 sysutils
 MASTER_SITES=	http://www.exit1.org/dvdrip/dist/
 
@@ -21,7 +22,12 @@ DEPENDS+=	xvid4conf>=1.12:../../multimedia/xvid4conf
 DEPENDS+=	fping>=2.2:../../net/fping
 DEPENDS+=	p5-gtk2>=1.0:../../x11/p5-gtk2
 DEPENDS+=	p5-Gtk2-Ex-FormFactory>=0.65:../../x11/p5-Gtk2-Ex-FormFactory
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_ARCH:Mi386)
 DEPENDS+=	rar-bin-[0-9]*:../../archivers/rar-bin
+.endif
 
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.0
 
