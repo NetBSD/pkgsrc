@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1436 2006/10/08 01:06:38 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1437 2006/10/08 01:48:49 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4614,3 +4614,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/kmymoney2 to 0.8.5 [markd 2006-10-07]
 	Updated graphics/comix to 3.6 [wiz 2006-10-07]
 	Updated emulators/wine to 0.9.18nb2 [wiz 2006-10-08]
+	Updated www/paros to 3.2.13 [salo 2006-10-08]
