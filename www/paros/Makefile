@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/05/31 11:16:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/08 01:47:18 salo Exp $
 #
 
-DISTNAME=	paros-3.2.12-unix
+DISTNAME=	paros-3.2.13-unix
 PKGNAME=	${DISTNAME:S/-unix//}
 CATEGORIES=	games java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paros/}
@@ -21,7 +21,7 @@ SUBST_CLASSES+=		java
 SUBST_MESSAGE.java=	Fixing hardcoded path to Java.
 SUBST_STAGE.java=	pre-configure
 SUBST_FILES.java=	${WRKSRC}/startserver.sh
-SUBST_SED.java=		-e 's,^java,${PKG_JAVA_HOME}/bin/&,'
+SUBST_SED.java=		-e 's,java ,${PKG_JAVA_HOME}/bin/&,'
 
 do-configure:
 	@(${ECHO} '#! /bin/sh' && 			\
