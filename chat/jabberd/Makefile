@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/10/04 20:50:46 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/10/08 21:58:47 rillig Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -15,8 +15,10 @@ CONFLICTS=		jabberd2-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-HAS_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+# A self-made configure script, and GNU ones in subdirectories.
+HAS_CONFIGURE=			yes
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+USE_TOOLS+=			gmake
 
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ENV+=		prefix=${PREFIX}
