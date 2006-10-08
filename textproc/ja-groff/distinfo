@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/06/23 16:29:02 hira Exp $
+$NetBSD: distinfo,v 1.5 2006/10/08 07:33:13 hira Exp $
 
 SHA1 (groff-1.10.tar.gz) = 032eeb221aff1a621019374646819e8741c11d39
 RMD160 (groff-1.10.tar.gz) = 3dafd992282ef8bf1b71d908acc45ede575b177f
@@ -26,3 +26,4 @@ SHA1 (patch-aq) = 6ba046f7ce8d7c9de57420558801b32768dd9792
 SHA1 (patch-ar) = cddbf3b845ae009e0786d23b777724b8e1ff9a87
 SHA1 (patch-as) = a55fbc854e23782211cd0924cffadb570c57652b
 SHA1 (patch-at) = b13bd824610c39e5e02df364933c334ed07af484
+SHA1 (patch-au) = 77146f54b7523d7f34fea6dd3a0d63b8012a0a90
