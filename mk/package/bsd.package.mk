@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.7 2006/07/22 16:31:35 jlam Exp $
+# $NetBSD: bsd.package.mk,v 1.8 2006/10/08 20:31:38 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -7,6 +7,19 @@
 #
 #    package, repackage
 #
+# The following variables may be set by the package:
+#
+# MAKE_PACKAGE_AS_ROOT: YesNo
+#	When this variable is set to "no", the package is created by
+#	the user that also built the package. Since most packages don't
+#	need root privileges to create the package, the default value
+#	is "no". Packages that install unreadable files (for example
+#	with mode 4111) need to set this variable to "yes".
+#
+#	Default value: "yes", but this will change to "no" after most
+#	packages that really need this option have been identified.
+
+MAKE_PACKAGE_AS_ROOT?=	yes
 
 _COOKIE.package=	${WRKDIR}/.package_done
 
