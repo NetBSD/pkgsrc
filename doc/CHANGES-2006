@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1445 2006/10/08 13:45:18 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1446 2006/10/08 19:10:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4624,3 +4624,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/dirdiff to 2.1 [obache 2006-10-08]
 	Updated net/dnstop to 20060517 [obache 2006-10-08]
 	Updated sysutils/duplicity to 0.4.2 [obache 2006-10-08]
+	Updated sysutils/mklivecd to 0.14 [xtraeme 2006-10-08]
