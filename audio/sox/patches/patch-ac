@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.9 2006/10/08 21:21:41 rillig Exp $
+
+Fixed "test ==" and many stylistic issues.
+
+--- scripts/audiogen.orig	2004-09-23 02:52:14.000000000 +0200
++++ scripts/audiogen	2006-10-08 23:17:57.000000000 +0200
+@@ -1,24 +1,23 @@
+ #!/bin/sh
+ #
+-# usage:audiogen <rate> <channels> <filename> <length> <audio generator options>
++# usage: audiogen <rate> <channels> <filename> <length> <audio generator options>
+ #
+ # Example of using the "nul" file handler along with "synth" effect
+ # to generate audio data.  Nul file handler pipes a stream of null
+ # data non-stop.  Synth effect overrides it with its own data and
+ # stops based on length parameter.
+ 
+-if [ "$5" == "" ]; then
+-    echo "usage: $0 <rate> <channels> <filename> <length> <audio generator options>"
+-  echo
+-  echo "See sox man page and the \"synth\" effect for further information on audio generation options."
++if [ $# -ne 5 ]; then
++  { echo "usage: $0 <rate> <channels> <filename> <length> <audio generator options>"
++    echo
++    echo "See sox man page and the \"synth\" effect for further information on audio generation options."
++  } 1>&2
+   exit 1
+ fi
+ 
+ rate=$1
+-shift
+-channels=$1
+-shift
+-filename=$1
+-shift
++channels=$2
++filename=$3
++shift 3
+ 
+-sox -s -w -t nul -r $rate -c $channels /dev/null $filename synth $*
++exec sox -s -w -t nul -r "$rate" -c "$channels" /dev/null "$filename" synth "$@"
