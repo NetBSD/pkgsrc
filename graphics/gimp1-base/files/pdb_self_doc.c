@@ -1,4 +1,4 @@
-/*	$NetBSD: pdb_self_doc.c,v 1.1.1.1 2004/03/29 22:06:49 xtraeme Exp $	*/
+/*	$NetBSD: pdb_self_doc.c,v 1.2 2006/10/08 16:24:26 joerg Exp $	*/
 
 /*
  * C version of pdb_self_doc.el, makes some assumptions about the structure
@@ -11,13 +11,15 @@
 
 #include <ctype.h>
 #ifdef __NetBSD__
-#include <err.h>
+#include <sys/param.h>
 #endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef __NetBSD__
+#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+#include <err.h>
+#else
 #include <stdarg.h>
 void errx (int rc, char *fmt,...)
 {
@@ -50,12 +52,16 @@ int nprocs;
 
 #define wsspan(p) strspn(p, " \t\r\n")
 
+#if !(defined(__NetBSD__) && __NetBSD_Version__ >= 400000000)
 static char *strndup(const char *x, int len) {
 	char *p = malloc(len + 1);
-	strncpy(p, x, len);
-	p[len] = 0;
+	if(p != NULL) {
+		strncpy(p, x, len);
+		p[len] = 0;
+	}
 	return p;
 }
+#endif
 
 static int proccompar(const void *a, const void *b) {
 	return strcmp(((struct procedure *)a)->hlist[0],
