@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2006/06/08 21:21:21 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2006/10/09 07:24:06 joerg Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -26,6 +26,8 @@ JAVA_NAME=	sun15
 JAVA_UNLIMIT=	datasize
 
 MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
+
+EXTRACT_ENV+=	HOME=${WRKDIR}/fake_home
 
 # the following forces compression of jarfiles, which is a huge disk
 # space win and trivial to no speed reduction in the face of the
