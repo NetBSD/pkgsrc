@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/09/14 17:13:58 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
@@ -12,6 +12,8 @@ DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org client programs and related files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches

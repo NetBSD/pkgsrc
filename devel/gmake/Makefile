@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/07/06 12:45:50 joerg Exp $
+# $NetBSD: Makefile,v 1.69 2006/10/09 12:52:34 joerg Exp $
 
 DISTNAME=	make-3.81
 PKGNAME=	g${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 TEXINFO_REQD+=		4.0
@@ -50,10 +51,10 @@ CONFIGURE_ARGS+=	--without-libiconv
 .endif
 
 post-install:
-	${CHMOD} g-s ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
-	${CHGRP} ${BINGRP} ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
+	${CHMOD} g-s ${DESTDIR}${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
+	${CHGRP} ${BINGRP} ${DESTDIR}${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
+	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${DESTDIR}${PREFIX}/bin/gmake
 .endif
 
 .include "../../mk/bsd.pkg.mk"

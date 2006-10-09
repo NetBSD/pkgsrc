@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2006/07/24 14:11:13 joerg Exp $
+# $NetBSD: Makefile.common,v 1.43 2006/10/09 12:52:35 joerg Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will
 #   be built in.
@@ -292,18 +292,18 @@ pre-configure:
 .  if !target(do-configure)
 do-configure:
 	@for dir in ${_XINCLUDE_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${IMAKE} \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${IMAKE} \
 			-DTOPDIR=${WRKSRC} -DCURDIR=$${dir} \
 			-I${WRKSRC}/config/cf; \
 	done
 	@for dir in ${_XINCLUDE_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${MAKE_PROGRAM} Makefiles; \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} Makefiles; \
 	done
 	@for dir in ${_XINCLUDE_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${MAKE_PROGRAM} includes; \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} includes; \
 	done
 	@for dir in include ${XBUILD_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${MAKE_PROGRAM} depend; \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} depend; \
 	done
 .  endif
 
@@ -326,17 +326,17 @@ do-extract: ${WRKDIR}
 .  if !target(do-build)
 do-build:
 	@for dir in ${XBUILD_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${MAKE_PROGRAM} all; \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all; \
 	done
 .  endif
 
 .  if !target(do-install)
 do-install:
 	@for dir in ${XINSTALL_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${MAKE_PROGRAM} install; \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE_PROGRAM} install; \
 	done
 	@for dir in ${XINSTALL_MAN_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${MAKE_PROGRAM} install.man; \
+		cd ${WRKSRC}/$${dir} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE_PROGRAM} install.man; \
 	done
 .  endif
 

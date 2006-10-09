@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/05/31 07:57:17 tron Exp $
+# $NetBSD: Makefile,v 1.58 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	xpdf-3.01
 PKGNAME=	${DISTNAME}pl2
@@ -15,6 +15,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/09 12:46:26 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/09 12:52:35 joerg Exp $
 #
 
 DISTNAME=		archivemail-0.6.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=archivemail/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://archivemail.sourceforge.net/
 COMMENT=		Tool for archiving and compressing old email in mailboxes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

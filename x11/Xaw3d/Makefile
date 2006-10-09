@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/03/13 00:16:23 markd Exp $
+# $NetBSD: Makefile,v 1.49 2006/10/09 12:52:36 joerg Exp $
 #
 
 DISTNAME=	Xaw3d-1.5E
@@ -13,6 +13,7 @@ COMMENT=	3-D widgets based on the Athena Widget set
 CONFLICTS=	Xaw-Xpm-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 USE_IMAKE=	YES
@@ -32,14 +33,14 @@ XMKMF_FLAGS+=	${IMAKE_FLAGS}
 PLIST_SUBST+=	INCDIR=include/X11
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Xaw3d
-	${INSTALL_DATA} ${WRKSRC}/README.XAW3D ${PREFIX}/share/doc/Xaw3d
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Xaw3d
+	${INSTALL_DATA} ${WRKSRC}/README.XAW3D ${DESTDIR}${PREFIX}/share/doc/Xaw3d
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .if ${OPSYS} == "IRIX"
-	${INSTALL_DATA} /usr/lib${ABI}/libXaw3d* ${PREFIX}/lib/
+	${INSTALL_DATA} /usr/lib${ABI}/libXaw3d* ${DESTDIR}${PREFIX}/lib/
 	${RM} -f /usr/lib${ABI}/libXaw3d*
 .endif
-	cd ${PREFIX} && ${LS} lib/libXaw3d* >>${PLIST_SRC}
+	cd ${DESTDIR}${PREFIX} && ${LS} lib/libXaw3d* >>${PLIST_SRC}
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
