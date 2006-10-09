@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/09 20:04:23 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/09 10:48:41 gdt Exp $
 bin/exiv2
 bin/exiv2-config
+include/exiv2/cr2image.hpp
 include/exiv2/basicio.hpp
 include/exiv2/canonmn.hpp
 include/exiv2/crwimage.hpp
@@ -25,6 +26,8 @@ include/exiv2/mrwimage.hpp
 include/exiv2/nikonmn.hpp
 include/exiv2/olympusmn.hpp
 include/exiv2/panasonicmn.hpp
+include/exiv2/pngchunk.hpp
+include/exiv2/pngimage.hpp
 include/exiv2/rcsid.hpp
 include/exiv2/sigmamn.hpp
 include/exiv2/sonymn.hpp
@@ -33,6 +36,7 @@ include/exiv2/tiffcomposite.hpp
 include/exiv2/tiffimage.hpp
 include/exiv2/tiffparser.hpp
 include/exiv2/tiffvisitor.hpp
+include/exiv2/tifffwd.hpp
 include/exiv2/types.hpp
 include/exiv2/value.hpp
 lib/libexiv2.la
