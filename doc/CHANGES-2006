@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1450 2006/10/09 10:50:53 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1451 2006/10/09 11:54:11 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4629,3 +4629,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/emacs-packages to 0.7 [rillig 2006-10-09]
 	Updated databases/ruby-activerecord to 1.14.4 [minskim 2006-10-09]
 	Updated graphics/exiv2 to 0.11 [gdt 2006-10-09]
+	Updated editors/vim-share to 7.0.121 [martti 2006-10-09]
