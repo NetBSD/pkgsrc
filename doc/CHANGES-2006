@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1455 2006/10/09 22:48:40 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1456 2006/10/09 23:10:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-wx-console to 1.38.11 [ghen 2006-10-09]
 	Updated mail/dovecot to 1.0rc8 [ghen 2006-10-09]
 	Updated www/ruby-actionpack to 1.12.5 [minskim 2006-10-09]
+	Updated mail/ruby-actionmailer to 1.2.5 [minskim 2006-10-09]
