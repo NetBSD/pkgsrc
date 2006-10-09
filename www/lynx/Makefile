@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2006/09/09 02:46:09 obache Exp $
+# $NetBSD: Makefile,v 1.92 2006/10/09 01:53:06 rillig Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -8,7 +8,7 @@
 
 DISTNAME=	lynx2.8.5
 PKGNAME=	lynx-2.8.5.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
 		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${DISTNAME}/ \
@@ -36,6 +36,10 @@ MAKE_FILE=       	makefile
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 USE_TOOLS+=		gzip msgfmt
+
+REPLACE_PERL+=		samples/mailto-form.pl
+CHECK_FILES_SKIP+=	samples/mailto-form.pl
+# But no dependency on Perl.
 
 .include "options.mk"
 
