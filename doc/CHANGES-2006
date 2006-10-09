@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1449 2006/10/09 06:31:46 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1450 2006/10/09 10:50:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4628,3 +4628,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/tor to 0.1.1.24 [tv 2006-10-09]
 	Updated editors/emacs-packages to 0.7 [rillig 2006-10-09]
 	Updated databases/ruby-activerecord to 1.14.4 [minskim 2006-10-09]
+	Updated graphics/exiv2 to 0.11 [gdt 2006-10-09]
