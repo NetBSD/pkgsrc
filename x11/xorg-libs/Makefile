@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/09/14 17:13:58 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.x.org/
 COMMENT=		X.org Libraries
 
 BUILD_DEPENDS=		xorg-imake-[0-9]*:../../x11/xorg-imake
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +36,8 @@ CONFLICTS+=		libX11-[0-9]*
 CONFLICTS+=		libXau-[0-9]*
 .endif
 
+INSTALLATION_DIRS+=	${X11BASE}/lib/pkgconfig
+
 BUILDLINK_PASSTHRU_DIRS+=	${X11ROOT}/lib
 
 XBUILD_DIRS=		lib nls programs/Xserver/include \
@@ -51,19 +54,16 @@ SUBST_MESSAGE.mkstrs=	Fixing path of makestrs.
 
 post-install:
 	@${SED} ${XORG_PLIST_SED} ${PKGDIR}/PLIST > ${PLIST_SRC}
-.if ${OPSYS} == "Linux"
-	@${LDCONFIG} ${X11ROOT}/lib || ${TRUE}
-.endif
 
 pre-install:
 .if !exists(${X11BASE}/lib/pkgconfig)
-	${INSTALL_DATA_DIR} ${X11BASE}/lib/pkgconfig
+	${INSTALL_DATA_DIR} ${DESTDIR}${X11BASE}/lib/pkgconfig
 .endif
 .for f in render.pc fixesext.pc compositeext.pc
 	@${SED} -e "s,@X11BASE@,${X11BASE},g"		\
 		-e "s,@LOCALBASE@,${LOCALBASE},g"	\
 		${FILESDIR}/${f} > ${WRKSRC}/${f}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${X11BASE}/lib/pkgconfig/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${X11BASE}/lib/pkgconfig/${f}
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/06/25 19:37:44 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	xterm-212
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dickey.his.com/xterm/xterm.html
 COMMENT=	Latest terminal emulator for the X Window System
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

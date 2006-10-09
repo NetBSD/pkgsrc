@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2006/10/06 18:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=		gtk+-2.10.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		GIMP Toolkit v2 - libraries for building X11 user interfaces
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		gtk2-engines<2.6.0
 
@@ -73,11 +75,11 @@ USE_TOOLS+=		gawk
 # anew in the +INSTALL script as part of the POST-INSTALL action.
 #
 post-install:
-	${RM} -f ${GTK_IMMODULES_DB}
-	${RM} -f ${GDK_PIXBUF_LOADERS_DB}
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/immodules
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/2.10.0/filesystems
+	${RM} -f ${DESTDIR}${GTK_IMMODULES_DB}
+	${RM} -f ${DESTDIR}${GDK_PIXBUF_LOADERS_DB}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/immodules
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/modules
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/2.10.0/filesystems
 
 _BUILDING_GTK2=	yes
 .include "modules.mk"
