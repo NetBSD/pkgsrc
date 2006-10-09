@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.239 2006/10/09 11:44:06 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.240 2006/10/09 11:59:08 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -328,6 +328,8 @@ PKGDIRMODE?=		755
 
 _MAKE_CLEAN_AS_ROOT?=	no
 # Whether to run the clean target as root.
+_MAKE_INSTALL_AS_ROOT?=	yes
+# Whether to run the install target as root.
 _MAKE_PACKAGE_AS_ROOT?=	yes
 # Whether to run the package target as root.
 
