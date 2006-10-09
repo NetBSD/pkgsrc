@@ -1,7 +1,12 @@
-# $NetBSD: extract.mk,v 1.15 2006/07/27 13:47:29 jlam Exp $
+# $NetBSD: extract.mk,v 1.16 2006/10/09 02:31:57 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
+#
+# EXTRACT_DIR
+#	The directory into which the files are extracted.
+#
+#	Default value: ${WRKSRC}
 #
 #    EXTRACT_CMD is a shell command list that extracts the contents of
 #	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
@@ -80,6 +85,7 @@ ${_COOKIE.extract}: real-extract
 _REAL_EXTRACT_TARGETS+=	extract-check-interactive
 _REAL_EXTRACT_TARGETS+=	extract-message
 _REAL_EXTRACT_TARGETS+=	extract-vars
+_REAL_EXTRACT_TARGETS+=	extract-dir
 _REAL_EXTRACT_TARGETS+=	pre-extract
 _REAL_EXTRACT_TARGETS+=	do-extract
 _REAL_EXTRACT_TARGETS+=	post-extract
@@ -92,6 +98,11 @@ real-extract: ${_REAL_EXTRACT_TARGETS}
 .PHONY: extract-message
 extract-message:
 	@${PHASE_MSG} "Extracting for ${PKGNAME}"
+
+.PHONY: extract-dir
+extract-dir:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	mkdir -p ${EXTRACT_DIR}
 
 ######################################################################
 ### extract-check-interactive (PRIVATE)
@@ -184,7 +195,7 @@ do-extract: ${WRKDIR}
 .  for __file__ in ${EXTRACT_ONLY}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	extract_file=${_DISTDIR:Q}/${__file__:Q}; export extract_file;	\
-	cd ${WRKDIR} && ${EXTRACT_CMD}
+	cd ${EXTRACT_DIR} && ${EXTRACT_CMD}
 .  endfor
 .endif
 
