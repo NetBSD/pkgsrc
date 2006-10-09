@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1447 2006/10/09 00:52:04 tv Exp $
+>$NetBSD: CHANGES-2006,v 1.1448 2006/10/09 01:07:44 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4626,3 +4626,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/duplicity to 0.4.2 [obache 2006-10-08]
 	Updated sysutils/mklivecd to 0.14 [xtraeme 2006-10-08]
 	Updated net/tor to 0.1.1.24 [tv 2006-10-09]
+	Updated editors/emacs-packages to 0.7 [rillig 2006-10-09]
