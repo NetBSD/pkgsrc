@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2006/07/27 00:09:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/09 03:08:24 rillig Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
-PKGREVISION=	4
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kei@NetBSD.org,pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
@@ -14,21 +13,21 @@ COMMENT=	Machine-independent part of teTeX
 
 CONFLICTS+=	teTeX-share-[0-9]*
 
-WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/tetex
+EXTRACT_DIR=	${WRKSRC}
 NO_BUILD=	yes
-USE_TOOLS+=	patch
 
-EXTRACT_OPTS=		-X ${FILESDIR}/exclude
-EXTRACT_OPTS_TAR=	-p
+REPLACE_PERL+=	doc/generic/ruhyphen/reduce-patt doc/generic/ruhyphen/sorthyph
+# No dependency on Perl.
+REPLACE_SH+=	doc/latex/bibunits/bibtexall doc/latex/multibib/bibtexall
+USE_TOOLS+=	sh:run
+
+INSTALLATION_DIRS=	share/texmf-dist
+
+post-extract:
+	rm -f ${WRKSRC}/ls-R
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf-dist
-	extract_file=${_DISTDIR:Q}/${DISTFILES:Q};			\
-	cd ${PREFIX}/share/texmf-dist; ${EXTRACT_CMD}
-	cd ${PREFIX}/share/texmf-dist/dvipdfm/config && \
-	${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${FILESDIR}/dvipdfm-config.diff && \
-	${RM} config.orig
+	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${PREFIX}/share/texmf-dist
 
 .include "../../mk/bsd.pkg.mk"
