@@ -1,20 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2005/11/03 05:41:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/09 23:27:59 minskim Exp $
 
-DISTNAME=	actionwebservice-0.9.1
+DISTNAME=	actionwebservice-1.1.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/6578/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/12320/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/aws/
 COMMENT=	Simple support for publishing web service APIs for Rails
 
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack-[0-9]*:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.12.5:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.14.4:../../databases/ruby-activerecord
 
 USE_RUBY_SETUP=	yes
 
+.include "../../lang/ruby/modules.mk"
+
 post-install:
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/action_web_service
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${RUBY_DOCDIR}/action_web_service
+	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/action_web_service
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/action_web_service
 	${CP} -R ${WRKSRC}/examples/* ${RUBY_EXAMPLESDIR}/action_web_service
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP}				\
@@ -24,5 +30,4 @@ post-install:
 	${FIND} ${RUBY_EXAMPLESDIR}/action_web_service -type f -print |	\
 		${XARGS} ${CHMOD} ${SHAREMODE}
 
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
