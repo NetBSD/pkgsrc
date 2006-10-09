@@ -1,13 +1,14 @@
-$NetBSD: patch-af,v 1.5 2004/03/05 15:21:01 pooka Exp $
+$NetBSD: patch-af,v 1.6 2006/10/09 02:06:58 ben Exp $
 
---- include/unixconf.h.orig	2003-12-08 01:39:13.000000000 +0200
-+++ include/unixconf.h	2004-03-05 15:47:53.000000000 +0200
-@@ -19,20 +19,20 @@
+--- include/unixconf.h.orig	2003-12-07 18:39:13.000000000 -0500
++++ include/unixconf.h
+@@ -19,20 +19,21 @@
   */
  
  /* define exactly one of the following four choices */
 -/* #define BSD 1 */	/* define for 4.n/Free/Open/Net BSD  */
-+#define BSD 1		/* define for 4.n/Free/Open/Net BSD  */
++#define __NETHACK_OS__ 1
++/* #define BSD */	/* define for 4.n/Free/Open/Net BSD  */
  			/* also for relatives like SunOS 4.x, DG/UX, and */
  			/* older versions of Linux */
  /* #define ULTRIX */	/* define for Ultrix v3.0 or higher (but not lower) */
@@ -26,7 +27,7 @@ $NetBSD: patch-af,v 1.5 2004/03/05 15:21:01 pooka Exp $
  			/* including Solaris 2+ */
  #define NETWORK		/* if running on a networked system */
  			/* e.g. Suns sharing a playground through NFS */
-@@ -47,7 +47,7 @@
+@@ -47,7 +48,7 @@
  			 * job control (note that AIX is SYSV otherwise)
  			 * Also define this for AIX 3.2 */
  
@@ -35,7 +36,7 @@ $NetBSD: patch-af,v 1.5 2004/03/05 15:21:01 pooka Exp $
  			/* Should be defined for most SYSV, SVR4 (including
  			 * Solaris 2+), HPUX, and Linux systems.  In
  			 * particular, it should NOT be defined for the UNIXPC
-@@ -171,7 +171,7 @@
+@@ -171,7 +172,7 @@
  #  ifdef AMS
  #define AMS_MAILBOX	"/Mailbox"
  #  else

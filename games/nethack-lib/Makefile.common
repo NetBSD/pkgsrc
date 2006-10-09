@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2006/08/28 23:03:14 ben Exp $
+# $NetBSD: Makefile.common,v 1.20 2006/10/09 02:06:58 ben Exp $
 #
 
 NETHACK_BASEVER=	3.4.3
@@ -21,13 +21,24 @@ USE_TOOLS+=		gzip
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
 SUBST_CLASSES+=		ttylib
 SUBST_MESSAGE.ttylib=	Configuring to use ncurses
 SUBST_STAGE.ttylib=	post-patch
 SUBST_FILES.ttylib=	sys/unix/Makefile.src
 SUBST_SED.ttylib=	-e 's,^WINTTYLIB = -ltermlib,WINTTYLIB = -lncurses,'
 .endif
+
+.if ${OPSYS} == "Linux"
+NETHACK_OS=		SYSV
+.endif
+NETHACK_OS?=		BSD
+
+SUBST_CLASSES+=		os
+SUBST_MESSAGE.os=	Configuring for $(NETHACK_OS)
+SUBST_STAGE.os=		post-patch
+SUBST_FILES.os=		include/unixconf.h
+SUBST_SED.os=		-e 's,__NETHACK_OS__,${NETHACK_OS},'
 
 NETHACK_GROUP=		games
 PKG_GROUPS=             ${NETHACK_GROUP}
