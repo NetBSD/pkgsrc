@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/01/03 14:25:50 taca Exp $
+$NetBSD: distinfo,v 1.6 2006/10/09 23:09:44 minskim Exp $
 
-SHA1 (actionmailer-1.1.1.tgz) = 885962aacca106a8ad1a31a867e3c7db5d932b9e
-RMD160 (actionmailer-1.1.1.tgz) = 4a93c83ea9356adc6b5dbe3d1a1262c26f3de378
-Size (actionmailer-1.1.1.tgz) = 76369 bytes
+SHA1 (actionmailer-1.2.5.tgz) = bd9df28fe139354351e6a47db95811ccc67cd335
+RMD160 (actionmailer-1.2.5.tgz) = 2ff32362d6b46f305005b646e116e5a1b0f72c9e
+Size (actionmailer-1.2.5.tgz) = 78323 bytes
