@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/09 22:48:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/10/09 23:21:41 minskim Exp $
 ${RUBY_SITELIBDIR}/action_controller.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/base.rb
@@ -99,12 +99,12 @@ ${RUBY_EXAMPLESDIR}/actionpack/debate_controller.cgi
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor
-@exec ${MKDIR} %D/lib/ruby/site_ruby/1.8/action_controller/templates/scaffolds
+@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_controller/templates/scaffolds
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates/scaffolds
-@exec ${MKDIR} %D/lib/ruby/site_ruby/1.8/action_controller/templates/rescues
+@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_controller/templates/rescues
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates/rescues
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates
-@exec ${MKDIR} %D/lib/ruby/site_ruby/1.8/action_controller/support
+@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_controller/support
 @dirrm ${RUBY_SITELIBDIR}/action_controller/support
 @dirrm ${RUBY_SITELIBDIR}/action_controller/session
 @dirrm ${RUBY_SITELIBDIR}/action_controller/macros
