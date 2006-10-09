@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.15 2006/07/21 13:40:27 jlam Exp $
+# $NetBSD: plist.mk,v 1.16 2006/10/09 12:25:44 joerg Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -102,7 +102,7 @@ _PLIST_AWK_ENV+=	LS=${TOOLS_LS:Q}
 _PLIST_AWK_ENV+=	MANINSTALL=${MANINSTALL:Q}
 _PLIST_AWK_ENV+=	MANZ=${_MANZ:Q}
 _PLIST_AWK_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
-_PLIST_AWK_ENV+=	PREFIX=${PREFIX:Q}
+_PLIST_AWK_ENV+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
 _PLIST_AWK_ENV+=	TEST=${TOOLS_TEST:Q}
 
 # PLIST_SUBST contains package-settable "${variable}" to "value"
@@ -205,13 +205,13 @@ _PLIST_IGNORE_CMD=							\
 		[ "$$ignore" = "yes" ] || ${ECHO} "$$i";		\
 	  done )
 _GENERATE_PLIST=							\
-	${FIND} ${PREFIX} \! -type d -print | ${SORT} |			\
-		${SED} -e "s|^${PREFIX}/||" | 				\
+	${FIND} ${DESTDIR}${PREFIX} \! -type d -print | ${SORT} |	\
+		${SED} -e "s|^${DESTDIR}${PREFIX}/||" | 		\
 		${_PLIST_IGNORE_CMD};					\
-	${FIND} ${PREFIX} -type d -print | ${SORT} -r |			\
+	${FIND} ${DESTDIR}${PREFIX} -type d -print | ${SORT} -r |	\
 		${GREP} -v "^${PREFIX}$$" |				\
 		${_PLIST_IGNORE_CMD} |					\
-		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
+		${SED} -e "s|^${DESTDIR}${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
 _GENERATE_PLIST=	${CAT} ${PLIST_SRC};				\
