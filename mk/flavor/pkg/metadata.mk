@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.11 2006/10/08 20:25:43 rillig Exp $
+# $NetBSD: metadata.mk,v 1.12 2006/10/09 12:25:44 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -61,14 +61,14 @@ ${_BUILD_INFO_FILE}: plist
 	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'` ;; \
 	*)	ldd=${LDD:Q} ;;						\
 	esac;								\
-	bins=`${AWK} '/(^|\/)(bin|sbin|libexec)\// { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
+	bins=`${AWK} '/(^|\/)(bin|sbin|libexec)\// { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
 	case ${OBJECT_FMT:Q}"" in					\
 	ELF)								\
-		libs=`${AWK} '/(^|\/)lib\/lib.*\.so\.[0-9]+$$/ { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
+		libs=`${AWK} '/(^|\/)lib\/lib.*\.so\.[0-9]+$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
 		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
 		fi;							\
-		linklibs=`${AWK} '/[^@].*\.so\.[0-9\.]+$$/ { print "${PREFIX}/" $$0 }' ${PLIST}`; \
+		linklibs=`${AWK} '/[^@].*\.so\.[0-9\.]+$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${PLIST}`; \
 		for i in $$linklibs; do					\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
 				${TEST} ${PKG_DEVELOPER:Uno:Q} = "no" || \
@@ -78,7 +78,7 @@ ${_BUILD_INFO_FILE}: plist
 		done;							\
 		;;							\
 	Mach-O)								\
-		libs=`${AWK} '/(^|\/)lib\/lib.*\.dylib/ { print "${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
+		libs=`${AWK} '/(^|\/)lib\/lib.*\.dylib/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${PLIST}`; \
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
 		fi;							\
@@ -301,7 +301,7 @@ ${_SIZE_PKG_FILE}: plist
 		/^@/ { next }						\
 		{ print base $$0 }' |					\
 	${SORT} -u |							\
-	${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/" |			\
+	${SED} -e "s,^/,${DESTDIR}/," -e "s/'/'\\\\''/g" -e "s/.*/'&'/" | \
 	${XARGS} -n 256 ${LS} -ld 2>/dev/null |				\
 	${AWK} 'BEGIN { s = 0 } { s += $$5 } END { print s }'		\
 		> ${.TARGET}
@@ -333,7 +333,11 @@ _PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:sh}}
 _PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:sh}}
 
 _PKG_ARGS_INSTALL+=	${_PKG_CREATE_ARGS}
+.if ${_USE_DESTDIR} == "no"
 _PKG_ARGS_INSTALL+=	-p ${PREFIX}
+.else
+_PKG_ARGS_INSTALL+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
+.endif
 
 _DEPENDS_ARG_cmd=	depends=`${_DEPENDS_PATTERNS_CMD}`;		\
 			if ${TEST} -n "$$depends"; then			\

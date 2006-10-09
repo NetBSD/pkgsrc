@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.21 2006/10/09 11:59:08 joerg Exp $
+# $NetBSD: install.mk,v 1.22 2006/10/09 12:25:44 joerg Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -121,8 +121,10 @@ release-install-localbase-lock: release-localbase-lock
 ### the built software, register the software installation, and run
 ### some sanity checks.
 ###
+.if ${_USE_DESTDIR} != "user-destdir"
 _INSTALL_ALL_TARGETS+=		acquire-install-localbase-lock
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
+.endif
+.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) && ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		install-check-conflicts
 _INSTALL_ALL_TARGETS+=		install-check-installed
 .endif
@@ -131,7 +133,9 @@ _INSTALL_ALL_TARGETS+=		install-check-umask
 _INSTALL_ALL_TARGETS+=		check-files-pre
 .endif
 _INSTALL_ALL_TARGETS+=		install-makedirs
+.if ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		pre-install-script
+.endif
 _INSTALL_ALL_TARGETS+=		pre-install
 _INSTALL_ALL_TARGETS+=		do-install
 _INSTALL_ALL_TARGETS+=		post-install
@@ -141,12 +145,16 @@ _INSTALL_ALL_TARGETS+=		install-script-data
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		check-files-post
 .endif
+.if ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		post-install-script
-.if !defined(NO_PKG_REGISTER)
+.endif
+.if !defined(NO_PKG_REGISTER) && ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		register-pkg
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
+.if ${_USE_DESTDIR} != "user-destdir"
 _INSTALL_ALL_TARGETS+=		release-install-localbase-lock
+.endif
 _INSTALL_ALL_TARGETS+=		error-check
 
 .if empty(CHECK_SHLIBS:M[nN][oO])
@@ -225,18 +233,18 @@ MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
 .PHONY: install-makedirs
 install-makedirs:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -d ${PREFIX} || ${MKDIR} ${PREFIX}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -d ${DESTDIR}${PREFIX} || ${MKDIR} ${DESTDIR}${PREFIX}
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${MTREE_FILE} ||	\
-		${MTREE} ${MTREE_ARGS} ${PREFIX}/
+		${MTREE} ${MTREE_ARGS} ${DESTDIR}${PREFIX}/
 .endif
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	@${STEP_MSG} "Creating installation directories"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in ${INSTALLATION_DIRS}; do				\
 		case "$$dir" in						\
-		${PREFIX}/*)						\
-			dir=`${ECHO} $$dir | ${SED} "s|^${PREFIX}/||"` ;; \
+		${DESTDIR}${PREFIX}/*)					\
+			dir=`${ECHO} $$dir | ${SED} "s|^${DESTDIR}${PREFIX}/||"` ;; \
 		/*)	continue ;;					\
 		esac;							\
 		if [ -f "${PREFIX}/$$dir" ]; then			\
@@ -245,11 +253,11 @@ install-makedirs:
 		fi;							\
 		case "$$dir" in						\
 		*bin|*bin/*|*libexec|*libexec/*)			\
-			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
+			${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/$$dir ;;	\
 		${PKGMANDIR}/*)						\
-			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
+			${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/$$dir ;;		\
 		*)							\
-			${INSTALL_DATA_DIR} ${PREFIX}/$$dir ;;		\
+			${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/$$dir ;;	\
 		esac;							\
 	done
 .endif	# INSTALLATION_DIRS
@@ -265,14 +273,19 @@ install-makedirs:
 INSTALL_DIRS?=		${BUILD_DIRS}
 INSTALL_MAKE_FLAGS?=	${MAKE_FLAGS}
 INSTALL_TARGET?=	install ${USE_IMAKE:D${NO_INSTALL_MANPAGES:D:Uinstall.man}}
+.if ${_USE_DESTDIR} != "no"
+INSTALL_ENV+=		DESTDIR=${DESTDIR:Q}
+INSTALL_MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q}
+.endif
 
 .if !target(do-install)
 do-install:
 .  for _dir_ in ${INSTALL_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS}	\
-		-f ${MAKE_FILE} ${INSTALL_TARGET}
+	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 				\
+		${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS}			\
+			-f ${MAKE_FILE} ${INSTALL_TARGET}
 .  endfor
 .endif
 
@@ -301,7 +314,7 @@ _DOC_COMPRESS=								\
 		MANZ=${_MANZ}						\
 		PKG_VERBOSE=${PKG_VERBOSE}				\
 		TEST=${TOOLS_TEST:Q}					\
-	${SH} ${PKGSRCDIR}/mk/plist/doc-compress ${PREFIX}
+	${SH} ${PKGSRCDIR}/mk/plist/doc-compress ${DESTDIR}${PREFIX}
 
 .PHONY: install-doc-handling
 install-doc-handling: plist
