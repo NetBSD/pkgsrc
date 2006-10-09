@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 15:00:40 taca Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/09 06:17:20 minskim Exp $
 
-DISTNAME=	activerecord-1.12.1
+DISTNAME=	activerecord-1.14.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/6569/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/12246/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ar.rubyonrails.org/
 COMMENT=	Object-relation mapping put on rails
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport-[0-9]*:../../devel/ruby-activesupport
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.3.1:../../devel/ruby-activesupport
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_RUBY_INSTALL=	yes
 EXAMPLES=		associations.png associations.rb shared_setup.rb \
 			validation.rb
+
+.include "../../lang/ruby/modules.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/active_record/support
@@ -29,5 +31,4 @@ post-install:
 		${RUBY_EXAMPLESDIR}/activerecord
 .endfor
 
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
