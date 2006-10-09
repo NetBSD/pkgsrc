@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.13 2006/10/07 15:37:17 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.14 2006/10/09 15:44:30 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -37,3 +37,5 @@ Pullup ticket 1842 - requested by hira
 perl interpreter fix for samba
 Pullup ticket 1849 - requested by rillig
 bugfix for bin-install target
+Pullup ticket 1854 - requested by dmcmahill
+build fix for gtk2
