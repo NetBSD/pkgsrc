@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.4 2006/10/09 10:54:12 markd Exp $
+
+--- src/fcint.h.orig	2006-10-09 23:26:05.064812000 +1300
++++ src/fcint.h
+@@ -111,7 +111,7 @@
+ #define FC_BANK_LANGS	    0xfcfcfcfc
+ 
+ /* slim_internal.h */
+-#if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 3)) && defined(__ELF__)
++#if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 3)) && defined(__ELF__) && !defined(__sun)
+ #define FcPrivate		__attribute__((__visibility__("hidden")))
+ #define HAVE_GNUC_ATTRIBUTE 1
+ #include "fcalias.h"
