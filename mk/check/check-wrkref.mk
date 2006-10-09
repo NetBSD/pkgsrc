@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.4 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: check-wrkref.mk,v 1.5 2006/10/09 12:25:44 joerg Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
@@ -30,6 +30,8 @@ _CHECK_WRKREF:=		${CHECK_WRKREF}
 _CHECK_WRKREF:=		work		# "work" is the "max" option
 .endif
 
+_CHECK_WRKREF_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
+
 ######################################################################
 ### check-wrkref (PRIVATE)
 ######################################################################
@@ -43,7 +45,7 @@ check-wrkref: error-check
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
-	${PKG_FILELIST_CMD} | ${SORT} |					\
+	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
 		${SHCOMMENT} [$$file];					\
