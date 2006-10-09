@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.16 2006/10/08 20:31:38 rillig Exp $
+# $NetBSD: package.mk,v 1.17 2006/10/09 11:44:07 joerg Exp $
 
 ######################################################################
 ### package (PUBLIC)
@@ -83,12 +83,12 @@ _PACKAGE_ALL_TARGETS+=	package-warnings
 _PACKAGE_ALL_TARGETS+=	error-check
 
 .PHONY: package-all su-package-all
-.if !empty(MAKE_PACKAGE_AS_ROOT:M[Yy][Ee][Ss])
+.if !empty(_MAKE_PACKAGE_AS_ROOT:M[Yy][Ee][Ss])
 package-all: su-target
-su-package-all: ${_PACKAGE_ALL_TARGETS}
 .else
-package-all: ${_PACKAGE_ALL_TARGETS}
+package-all: su-package-all
 .endif
+su-package-all: ${_PACKAGE_ALL_TARGETS}
 
 ######################################################################
 ### package-check-installed (PRIVATE, override)
