@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.35 2006/09/13 23:23:00 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.36 2006/10/09 13:15:07 mishka Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -354,8 +354,10 @@
       defined, else <varname>MASTER_SITES</varname> or
       <varname>PATCH_SITES</varname>, as applies, then finally the
       value of <varname>MASTER_SITE_BACKUP</varname>. The order of
-      all except the first can be optionally sorted by the user,
-      via setting either <varname>MASTER_SORT_AWK</varname> or
+      all except the first and the last can be optionally sorted
+      by the user, via setting either
+      <varname>MASTER_SORT_RANDOM</varname>, and
+      <varname>MASTER_SORT_AWK</varname> or
       <varname>MASTER_SORT_REGEX</varname>.</para>
     </sect2>
 
