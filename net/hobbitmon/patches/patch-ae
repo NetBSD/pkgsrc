@@ -1,21 +1,21 @@
-$NetBSD: patch-ae,v 1.2 2005/02/20 10:51:32 manu Exp $
---- configure.orig	2005-01-24 17:31:35.000000000 +0100
-+++ configure	2005-01-24 17:33:04.000000000 +0100
-@@ -216,10 +216,10 @@
+$NetBSD: patch-ae,v 1.3 2006/10/09 13:29:00 ben Exp $
+
+--- configure.orig	2005-01-23 05:15:22.000000000 -0800
++++ configure
+@@ -216,9 +216,9 @@ else
  		if test $? -eq 0
  		then
  			echo "Found passwd entry for user $USERDATA"
- 		else
+-		else
 -			echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
 -			exit 1
++#		else
 +#			echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
 +#			exit 1
  		fi
  		echo ""; echo ""
  
- 		HOMEDIR="`echo $USERDATA|cut -d: -f6`"
-@@ -302,12 +302,12 @@
- 		fi
+@@ -303,10 +303,10 @@ else
  		echo ""; echo ""
  
  		echo "What is the name of this host [`uname -n`] ? "
@@ -30,4 +30,3 @@ $NetBSD: patch-ae,v 1.2 2005/02/20 10:51:32 manu Exp $
  		if test -z "$BBHOSTNAME"
  		then
  			BBHOSTNAME=`uname -n`
- 		fi
