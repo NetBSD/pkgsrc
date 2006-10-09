@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/09/08 06:18:28 martti Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/10/09 11:53:30 martti Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -1052,6 +1052,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.es
 share/vim/${VIM_SUBDIR}/tutor/tutor.fr
 share/vim/${VIM_SUBDIR}/tutor/tutor.gr
 share/vim/${VIM_SUBDIR}/tutor/tutor.gr.cp737
+share/vim/${VIM_SUBDIR}/tutor/tutor.gr.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.it
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.sjis
@@ -1072,23 +1073,23 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.vim
 share/vim/${VIM_SUBDIR}/tutor/tutor.zh.big5
 share/vim/${VIM_SUBDIR}/tutor/tutor.zh.euc
 share/vim/${VIM_SUBDIR}/vimrc_example.vim
+@dirrm share/vim/${VIM_SUBDIR}/tutor
+@dirrm share/vim/${VIM_SUBDIR}/tools
+@dirrm share/vim/${VIM_SUBDIR}/syntax
+@dirrm share/vim/${VIM_SUBDIR}/spell
+@dirrm share/vim/${VIM_SUBDIR}/print
+@dirrm share/vim/${VIM_SUBDIR}/plugin
+@dirrm share/vim/${VIM_SUBDIR}/macros/urm
+@dirrm share/vim/${VIM_SUBDIR}/macros/maze
+@dirrm share/vim/${VIM_SUBDIR}/macros/life
+@dirrm share/vim/${VIM_SUBDIR}/macros/hanoi
+@dirrm share/vim/${VIM_SUBDIR}/macros
+@dirrm share/vim/${VIM_SUBDIR}/indent
+@dirrm share/vim/${VIM_SUBDIR}/ftplugin
+@dirrm share/vim/${VIM_SUBDIR}/doc
+@dirrm share/vim/${VIM_SUBDIR}/compiler
+@dirrm share/vim/${VIM_SUBDIR}/colors
 @dirrm share/vim/${VIM_SUBDIR}/autoload/xml
 @dirrm share/vim/${VIM_SUBDIR}/autoload
-@dirrm share/vim/${VIM_SUBDIR}/colors
-@dirrm share/vim/${VIM_SUBDIR}/compiler
-@dirrm share/vim/${VIM_SUBDIR}/doc
-@dirrm share/vim/${VIM_SUBDIR}/ftplugin
-@dirrm share/vim/${VIM_SUBDIR}/indent
-@dirrm share/vim/${VIM_SUBDIR}/macros/hanoi
-@dirrm share/vim/${VIM_SUBDIR}/macros/life
-@dirrm share/vim/${VIM_SUBDIR}/macros/maze
-@dirrm share/vim/${VIM_SUBDIR}/macros/urm
-@dirrm share/vim/${VIM_SUBDIR}/macros
-@dirrm share/vim/${VIM_SUBDIR}/plugin
-@dirrm share/vim/${VIM_SUBDIR}/print
-@dirrm share/vim/${VIM_SUBDIR}/spell
-@dirrm share/vim/${VIM_SUBDIR}/syntax
-@dirrm share/vim/${VIM_SUBDIR}/tools
-@dirrm share/vim/${VIM_SUBDIR}/tutor
 @dirrm share/vim/${VIM_SUBDIR}
 @dirrm share/vim
