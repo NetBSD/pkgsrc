@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.16 2006/10/09 02:31:57 rillig Exp $
+# $NetBSD: extract.mk,v 1.17 2006/10/09 02:37:32 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -39,6 +39,8 @@
 #	precise manner in which extraction occurs may be tweaked by setting
 #	EXTRACT_OPTS, EXTRACT_USING and EXTRACT_ELEMENTS.
 #
+
+EXTRACT_DIR?=		${WRKDIR}
 
 _COOKIE.extract=	${WRKDIR}/.extract_done
 
@@ -195,7 +197,7 @@ do-extract: ${WRKDIR}
 .  for __file__ in ${EXTRACT_ONLY}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	extract_file=${_DISTDIR:Q}/${__file__:Q}; export extract_file;	\
-	cd ${EXTRACT_DIR} && ${EXTRACT_CMD}
+	cd ${WRKDIR} && cd ${EXTRACT_DIR} && ${EXTRACT_CMD}
 .  endfor
 .endif
 
