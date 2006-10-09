@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/03 05:41:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/09 23:27:59 minskim Exp $
 ${RUBY_SITELIBDIR}/action_web_service.rb
 ${RUBY_SITELIBDIR}/action_web_service/api.rb
 ${RUBY_SITELIBDIR}/action_web_service/base.rb
@@ -26,6 +26,9 @@ ${RUBY_SITELIBDIR}/action_web_service/struct.rb
 ${RUBY_SITELIBDIR}/action_web_service/support/class_inheritable_options.rb
 ${RUBY_SITELIBDIR}/action_web_service/support/signature_types.rb
 ${RUBY_SITELIBDIR}/action_web_service/test_invoke.rb
+${RUBY_SITELIBDIR}/action_web_service/version.rb
+${RUBY_DOCDIR}/action_web_service/CHANGELOG
+${RUBY_DOCDIR}/action_web_service/README
 ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/README
 ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/autoloading/google_search_api.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/autoloading/google_search_controller.rb
@@ -39,7 +42,6 @@ ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis/blogger_service.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis/meta_weblog_api.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis/meta_weblog_service.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/controllers/xmlrpc_controller.rb
-${RUBY_SITELIBDIR}/action_web_service/version.rb
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/controllers
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog
@@ -48,6 +50,7 @@ ${RUBY_SITELIBDIR}/action_web_service/version.rb
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/autoloading
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service
+@dirrm ${RUBY_DOCDIR}/action_web_service
 @exec ${MKDIR} ${RUBY_SITELIBDIR}/action_web_service/templates/scaffolds
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/templates/scaffolds
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/templates
