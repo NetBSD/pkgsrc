@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/09/25 12:49:58 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.x.org/
 COMMENT=	Imake and other utilities from X.org
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xorg-1.1
 INSTALL_TARGET=		install install.man
@@ -79,20 +80,20 @@ pre-install:
 		${WRKSRC}/xmakefile
 
 post-install:
-	${CHMOD} ${NONBINMODE} ${X11ROOT}/lib/X11/config/host.def
-	@${CP} ${X11ROOT}/lib/X11/config/host.def		\
-		${X11ROOT}/lib/X11/config/host.def.orig
+	${CHMOD} ${NONBINMODE} ${DESTDIR}${X11ROOT}/lib/X11/config/host.def
+	@${CP} ${DESTDIR}${X11ROOT}/lib/X11/config/host.def		\
+		${DESTDIR}${X11ROOT}/lib/X11/config/host.def.orig
 	@${SED} -e "s|\#define ProjectRoot ${X11ROOT}||"	\
-		${X11ROOT}/lib/X11/config/host.def.orig >	\
-		${X11ROOT}/lib/X11/config/host.def
-	@${RM} ${X11ROOT}/lib/X11/config/host.def.orig
+		${DESTDIR}${X11ROOT}/lib/X11/config/host.def.orig >	\
+		${DESTDIR}${X11ROOT}/lib/X11/config/host.def
+	@${RM} ${DESTDIR}${X11ROOT}/lib/X11/config/host.def.orig
 
 	@( \
 	${ECHO};					\
 	${ECHO} "#ifdef BeforeVendorCF";		\
 	${ECHO} "#define ProjectRoot ${X11ROOT}";	\
 	${ECHO} "#endif";				\
-	) >> ${X11ROOT}/lib/X11/config/host.def
+	) >> ${DESTDIR}${X11ROOT}/lib/X11/config/host.def
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*) ||	\
     !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)

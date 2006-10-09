@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2006/10/04 21:58:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://zsh.dotsrc.org/
 COMMENT=	The Z shell
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
@@ -83,11 +85,11 @@ pre-install:
 	@cd ${WRKSRC}/Completion; ${FIND} . -name \*.orig -exec ${RM} \{\} \;
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
-	@cd ${WRKSRC}/Etc; ${INSTALL_DATA} BUGS FAQ 	\
-		${PREFIX}/share/doc/zsh
-	@cd ${WRKSRC}; ${INSTALL_DATA} FEATURES NEWS	\
-		${PREFIX}/share/doc/zsh
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/zsh
+	cd ${WRKSRC}/Etc && ${INSTALL_DATA} BUGS FAQ 	\
+		${DESTDIR}${PREFIX}/share/doc/zsh
+	cd ${WRKSRC} && ${INSTALL_DATA} FEATURES NEWS	\
+		${DESTDIR}${PREFIX}/share/doc/zsh
 
 # Utilize Zsh's test framework.
 # Testing of dynamic shell only works after install has been done

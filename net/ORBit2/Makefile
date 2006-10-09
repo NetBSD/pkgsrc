@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/09/07 18:42:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2006/10/09 12:52:35 joerg Exp $
 #
 
 DISTNAME=		ORBit2-2.14.3
@@ -11,6 +11,7 @@ HOMEPAGE=		http://orbit-resource.sourceforge.net/
 COMMENT=		High-performance CORBA ORB with C language support
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		linc>=1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/12 21:53:58 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/09 12:52:35 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-fontserver-${XORG_VER}
@@ -11,6 +11,8 @@ DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org font server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	imake
 

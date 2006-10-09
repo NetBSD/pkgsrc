@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/31 23:56:28 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/09 12:52:35 joerg Exp $
 
 DISTNAME=	aalib-1.4rc5
 PKGNAME=	${DISTNAME:S/rc5/.0.5/}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
 COMMENT=	ASCII Art library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/aalib-1.4.0
 GNU_CONFIGURE=		YES

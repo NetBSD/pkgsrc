@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/30 20:50:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2006/10/09 12:52:34 joerg Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
@@ -23,7 +23,7 @@ PRINT_PLIST_AWK+=	/^@dirrm (include\/gconf|lib\/GConf|share\/gconf)$$/ \
 #      But we have to wait until a public identifier is choosen for it.
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gconf/schemas
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gconf/schemas
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

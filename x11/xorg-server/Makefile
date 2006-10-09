@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/09/14 17:13:58 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -12,6 +12,8 @@ DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org X server and related programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS=		xorg-imake-[0-9]*:../../x11/xorg-imake
 
@@ -75,9 +77,9 @@ PLIST_SUBST+=	IOPORT='@comment '
 post-install:
 	@${SED} ${XORG_PLIST_SED} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if ${OPSYS} == "Darwin"
-	${CHMOD} a+r ${X11ROOT}/bin/XDarwin
+	${CHMOD} a+r ${DESTDIR}${X11ROOT}/bin/XDarwin
 .else
-	${CHMOD} a+r ${X11ROOT}/bin/Xorg
+	${CHMOD} a+r ${DESTDIR}${X11ROOT}/bin/Xorg
 .endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"

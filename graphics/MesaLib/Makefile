@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/08/01 21:40:20 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/10/09 12:52:35 joerg Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
 PKGREVISION=	2
@@ -29,12 +29,12 @@ pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
 	cd ${WRKSRC}/include/GL; for hdr in				\
 		gl.h gl_mangle.h glext.h glx.h glxext.h glx_mangle.h	\
 		osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h;		\
 	do								\
-		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
+		${INSTALL_DATA} $${hdr} ${DESTDIR}${PREFIX}/include/GL;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

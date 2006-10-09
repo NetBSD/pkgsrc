@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2006/01/06 17:12:18 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/09 12:52:35 joerg Exp $
 
 --- Makefile.orig	2005-12-30 14:45:30.000000000 +0000
 +++ Makefile
@@ -46,8 +46,8 @@ $NetBSD: patch-aa,v 1.3 2006/01/06 17:12:18 wiz Exp $
  	@echo "  I: $(libdir)/$(SHARED_LIB)"
 -	@$(INSTALL) -m 644 $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
 +	@$(BSD_INSTALL_LIB) $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
-+	@ln -s $(libdir)/$(SHARED_LIB) $(libdir)/libxvidcore.so
-+	@ln -s $(libdir)/$(SHARED_LIB) $(libdir)/libxvidcore.so.$(API_MAJOR)
++	@ln -s $(libdir)/$(SHARED_LIB) $(DESTDIR)$(libdir)/libxvidcore.so
++	@ln -s $(libdir)/$(SHARED_LIB) $(DESTDIR)$(libdir)/libxvidcore.so.$(API_MAJOR)
  	@echo "  I: $(libdir)/$(STATIC_LIB)"
  	@$(INSTALL) -m 644 $(BUILD_DIR)/$(STATIC_LIB) $(DESTDIR)$(libdir)/$(STATIC_LIB)
  	@echo "  D: $(includedir)"

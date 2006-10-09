@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/10/06 06:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2006/10/09 12:52:34 joerg Exp $
 #
 
 DISTNAME=		atk-1.12.3
@@ -11,6 +11,7 @@ HOMEPAGE=		http://developer.gnome.org/projects/gap/
 COMMENT=		Set of interfaces for accessibility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes

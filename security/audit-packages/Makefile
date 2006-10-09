@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/10/05 14:26:42 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	audit-packages-1.44
 CATEGORIES=	security pkgtools
@@ -9,6 +9,7 @@ MAINTAINER=	agc@NetBSD.org
 COMMENT=	Tools to show vulnerabilities in installed packages
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	digest:run
 
@@ -18,8 +19,8 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=    yes
 
 OWN_DIRS=	${PKGVULNDIR}
-MAN8DIR=	${PREFIX}/${PKGMANDIR}/man8
-CAT8DIR=	${PREFIX}/${PKGMANDIR}/cat8
+MAN8DIR=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+CAT8DIR=	${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8
 INSTALLATION_DIRS=	${CAT8DIR} ${MAN8DIR} sbin
 
 .include "../../mk/bsd.prefs.mk"
@@ -58,7 +59,7 @@ do-build:
 
 do-install:
 	@for f in audit-packages download-vulnerability-list; do	\
-		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin;		\
+		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/sbin; \
 	done
 	${INSTALL_MAN} ${WRKSRC}/audit-packages.0 ${CAT8DIR}/
 	${INSTALL_MAN} ${WRKSRC}/audit-packages.8 ${MAN8DIR}/

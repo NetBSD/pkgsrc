@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/02 14:21:13 tron Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/09 12:52:35 joerg Exp $
 
 DISTNAME=	xvidcore-1.1.0
 PKGREVISION=	3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xvid.org/
 COMMENT=	ISO MPEG-4 compliant video codec
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,8 +29,8 @@ MAKE_ENV+=	MKDIR=${MKDIR:Q}
 
 .if ${OPSYS} == "Darwin"
 post-install:
-	${RM} -f ${PREFIX}/lib/libxvidcore.so.4
-	${MV} -f ${PREFIX}/lib/libxvidcore.so ${PREFIX}/lib/libxvidcore.dylib
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so.4
+	${MV} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so ${DESTDIR}${PREFIX}/lib/libxvidcore.dylib
 .endif
 
 .include "../../mk/bsd.pkg.mk"

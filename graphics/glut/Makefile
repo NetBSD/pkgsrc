@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/08/01 21:40:20 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/10/09 12:52:35 joerg Exp $
 
 PKGNAME=	glut-${MESA_VERSION}
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
@@ -20,11 +20,11 @@ pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/mesa src/glu src/glw progs
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
 	cd ${WRKSRC}/include/GL; for hdr in				\
 		glut.h glutf90.h;					\
 	do								\
-		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
+		${INSTALL_DATA} $${hdr} ${DESTDIR}${PREFIX}/include/GL;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
