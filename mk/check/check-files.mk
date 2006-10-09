@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.8 2006/09/22 21:53:58 joerg Exp $
+# $NetBSD: check-files.mk,v 1.9 2006/10/09 12:25:44 joerg Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
@@ -65,7 +65,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.cache-1
 # Mutable charset.alias file
 CHECK_FILES_SKIP+=	${PREFIX}/lib/charset.alias
 
-_CHECK_FILES_SKIP_FILTER=	${GREP} -vx ${CHECK_FILES_SKIP:@f@-e ${f:Q}@}
+_CHECK_FILES_SKIP_FILTER=	${GREP} -vx ${CHECK_FILES_SKIP:@f@-e ${DESTDIR:Q}${f:Q}@}
 
 ###########################################################################
 # These are the files generated and used by the check-files implementation
@@ -144,7 +144,7 @@ check-files-post-message:
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
+	${FIND} ${DESTDIR}${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER}				\
 		| ${SORT} > ${.TARGET}					\
@@ -152,7 +152,7 @@ ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 
 ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${PKG_SYSCONFDIR}/. -print 2>/dev/null			\
+	${FIND} ${DESTDIR}${PKG_SYSCONFDIR}/. -print 2>/dev/null	\
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} 				\
 		| ${SORT} > ${.TARGET}					\
@@ -160,7 +160,7 @@ ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 
 ${_CHECK_FILES_PRE.varbase} ${_CHECK_FILES_POST.varbase}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${VARBASE}/. -print 2>/dev/null				\
+	${FIND} ${DESTDIR}${VARBASE}/. -print 2>/dev/null		\
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} 				\
 		| ${SORT} > ${.TARGET}					\
@@ -221,7 +221,7 @@ ${_CHECK_FILES_DELETED}: ${_CHECK_FILES_DIFF}
 
 ${_CHECK_FILES_EXPECTED}: plist
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${GREP} '^[^@]' ${PLIST} | ${SED} "s|^|${PREFIX}/|" | ${SORT}	\
+	${GREP} '^[^@]' ${PLIST} | ${SED} "s|^|${DESTDIR}${PREFIX}/|" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
