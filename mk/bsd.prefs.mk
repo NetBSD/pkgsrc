@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.238 2006/10/06 14:51:36 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.239 2006/10/09 11:44:06 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -325,6 +325,11 @@ PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 .endif
 
 PKGDIRMODE?=		755
+
+_MAKE_CLEAN_AS_ROOT?=	no
+# Whether to run the clean target as root.
+_MAKE_PACKAGE_AS_ROOT?=	yes
+# Whether to run the package target as root.
 
 PKG_INSTALLATION_TYPES?= overwrite
 # This is a whitespace-separated list of installation types supported

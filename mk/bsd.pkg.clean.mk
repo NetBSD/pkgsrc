@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.8 2006/08/09 15:31:01 jlam Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.9 2006/10/09 11:44:06 joerg Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -50,7 +50,14 @@ post-clean:
 
 .PHONY: do-clean
 .if !target(do-clean)
-do-clean:
+.  if !empty(_MAKE_CLEAN_AS_ROOT:M[Yy][Ee][Ss])
+do-clean: su-target
+.  else
+do-clean: su-do-clean
+.  endif
+.endif
+
+su-do-clean:
 	@${PHASE_MSG} "Cleaning for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -d ${WRKDIR:Q}; then					\
@@ -65,7 +72,6 @@ do-clean:
 	${RMDIR} ${BUILD_DIR} 2>/dev/null || ${TRUE};			\
 	${RM} -f ${WRKDIR_BASENAME} 2>/dev/null || ${TRUE}
 .  endif
-.endif
 
 _CLEAN_TARGETS+=	pre-clean
 .if empty(CLEANDEPENDS:M[nN][oO])
