@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2006/09/08 06:18:28 martti Exp $
+# $NetBSD: Makefile.common,v 1.65 2006/10/09 11:53:30 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -26,7 +26,11 @@ PATCHFILES+=		7.0.056 7.0.058 7.0.059 7.0.060 7.0.061 7.0.062 7.0.063
 PATCHFILES+=		7.0.064 7.0.066 7.0.067 7.0.068 7.0.069 7.0.070 7.0.071
 PATCHFILES+=		7.0.072 7.0.073 7.0.075 7.0.076 7.0.077 7.0.078 7.0.079
 PATCHFILES+=		7.0.080 7.0.081 7.0.082 7.0.083 7.0.084 7.0.085 7.0.086
-PATCHFILES+=		7.0.087 7.0.088 7.0.089 7.0.090 7.0.091
+PATCHFILES+=		7.0.087 7.0.088 7.0.089 7.0.090 7.0.091 7.0.092 7.0.093
+PATCHFILES+=		7.0.094 7.0.095 7.0.096 7.0.097 7.0.098 7.0.099 7.0.100
+PATCHFILES+=		7.0.101 7.0.102 7.0.103 7.0.104 7.0.105 7.0.106 7.0.107
+PATCHFILES+=		7.0.109 7.0.110 7.0.111 7.0.112 7.0.113 7.0.114 7.0.115
+PATCHFILES+=		7.0.116 7.0.117 7.0.118 7.0.119 7.0.120 7.0.121
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
@@ -56,7 +60,7 @@ ALTERNATIVES_SRC=	${.CURDIR:Q}/../../editors/vim-share/ALTERNATIVES
 ALTERNATIVES_SRC=
 .endif
 
-PKG_SUPPORTED_OPTIONS+=	cscope
+PKG_SUPPORTED_OPTIONS+=	cscope ruby
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
 
 .include "../../mk/bsd.options.mk"
@@ -64,6 +68,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
 .if !empty(PKG_OPTIONS:Mcscope)
 DEPENDS+=		cscope-[0-9]*:../../devel/cscope
 CONFIGURE_ARGS+=	--enable-cscope
+.endif
+
+.if !empty(PKG_OPTIONS:Mruby)
+.include "../../lang/ruby/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-rubyinterp
 .endif
 
 post-patch:
