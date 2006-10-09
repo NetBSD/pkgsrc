@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2006/06/30 07:08:50 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/09 01:07:07 rillig Exp $
 
-DISTNAME=	emacs-packages-0.6
-PKGREVISION=	2
+DISTNAME=	emacs-packages-0.7
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -42,8 +41,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}riece-[0-9]*:../../chat/riece
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}lookup-[0-9]*:../../misc/lookup
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}mailcrypt-[0-9]*:../../mail/mailcrypt
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}matlab-mode-[0-9]*:../../editors/matlab-mode
-#DEPENDS+=	${EMACS_PKGNAME_PREFIX}mew-[0-9]*:../../mail/mew
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}mew-[0-9]*:../../mail/mew3
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}mew-[0-9]*:../../mail/mew
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}navi2ch-[0-9]*:../../chat/navi2ch
 .if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "20"
