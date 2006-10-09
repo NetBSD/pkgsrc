@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/09/27 15:18:15 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2006/10/09 12:52:36 joerg Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
@@ -10,6 +10,7 @@ HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Allows X11 pkgs to be built and used outside of $${X11BASE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -93,22 +94,22 @@ SUBST_SED.foo=		-e "s|\#define ExtraLoadFlags @X11TYPEFLAGS@||"
 .endif # X11_TYPE == native.
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
-	${INSTALL_DATA} ${WRKSRC}/xpkgwedge.def ${PREFIX}/lib/X11/config
-	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${PREFIX}/bin/pkgxmkmf
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/X11/config
+	${INSTALL_DATA} ${WRKSRC}/xpkgwedge.def ${DESTDIR}${PREFIX}/lib/X11/config
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${DESTDIR}${PREFIX}/bin/pkgxmkmf
 	@case ${OPSYS} in \
 	Darwin) \
-	${INSTALL_DATA} ${X11BASE}/lib/X11/config/darwin.cf ${PREFIX}/lib/X11/config; \
-	cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/darwin.cf.patch; \
+	${INSTALL_DATA} ${X11BASE}/lib/X11/config/darwin.cf ${DESTDIR}${PREFIX}/lib/X11/config; \
+	cd ${DESTDIR}${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/darwin.cf.patch; \
 	;; \
 	IRIX) \
-	${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgi.cf ${PREFIX}/lib/X11/config; \
+	${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgi.cf ${DESTDIR}${PREFIX}/lib/X11/config; \
 	if [ ${OS_VERSION} -ge 6 ]; then \
-		${INSTALL_DATA} ${X11BASE}/lib/X11/config/X11.rules ${PREFIX}/lib/X11/config; \
-		cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix6.patch; \
+		${INSTALL_DATA} ${X11BASE}/lib/X11/config/X11.rules ${DESTDIR}${PREFIX}/lib/X11/config; \
+		cd ${DESTDIR}${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix6.patch; \
 	else \
-		${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgiLib.rules ${PREFIX}/lib/X11/config; \
-		cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix5.patch; \
+		${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgiLib.rules ${DESTDIR}${PREFIX}/lib/X11/config; \
+		cd ${DESTDIR}${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix5.patch; \
 	fi; \
 	;; \
 	esac

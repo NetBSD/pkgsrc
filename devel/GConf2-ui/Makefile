@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/04/17 13:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2006/10/09 12:52:34 joerg Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	libexec
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gconf/.libs/gconf-sanity-check-2 \
-		${PREFIX}/libexec
+		${DESTDIR}${PREFIX}/libexec
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
