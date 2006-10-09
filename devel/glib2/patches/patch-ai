@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.11 2006/10/09 17:53:25 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=359190
+
+--- glib/gtimer.c.orig	2006-10-01 05:51:15.000000000 +0000
++++ glib/gtimer.c
+@@ -257,7 +257,7 @@ g_timer_elapsed (GTimer *timer,
+ 
+   if (microseconds)
+     *microseconds = (elapsed / 10) % 1000000;
+-#elif HAVE_CLOCK_GETTIME
++#elif USE_CLOCK_GETTIME
+   if (timer->active)
+     GETTIME (timer->end);
+ 
