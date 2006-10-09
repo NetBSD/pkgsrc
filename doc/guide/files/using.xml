@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.27 2006/09/18 13:25:37 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.28 2006/10/09 13:15:07 mishka Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -284,6 +284,14 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     mount the CD-ROM on <filename>/cdrom</filename> and add:
     <screen>DISTDIR=/cdrom/pkgsrc/distfiles</screen>
     to your <filename>mk.conf</filename>.</para>
+
+    <para>By default a list of distribution sites will be randomly
+    intermixed to prevent huge load on servers which holding popular
+    packages (for example, SourceForge.net mirrors). Thus, every
+    time when you need to fetch yet another distfile all the mirrors
+    will be tried in new (random) order. You can turn this feature
+    off by setting <varname>MASTER_SORT_RANDOM=NO</varname> (for
+    <varname>PKG_DEVELOPER</varname>s it's already disabled).</para>
 
     <para>You can overwrite some of the major distribution sites to
     fit to sites that are close to your own.  By setting one or two
