@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.9 2006/07/07 21:24:29 jlam Exp $
+# $NetBSD: print-plist.mk,v 1.10 2006/10/09 12:25:44 joerg Exp $
 
 ###
 ### Automatic PLIST generation
@@ -76,9 +76,9 @@ _PRINT_PLIST_COMMON_DIRS!=	${AWK} 'BEGIN {				\
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
 _PRINT_PLIST_FILES_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${_COOKIE.extract} \! -type d -print
+	${FIND} ${DESTDIR}${PREFIX}/. -xdev -newer ${_COOKIE.extract} \! -type d -print
 _PRINT_PLIST_DIRS_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${_COOKIE.extract} -type d -print
+	${FIND} ${DESTDIR}${PREFIX}/. -xdev -newer ${_COOKIE.extract} -type d -print
 
 .if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
 _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
@@ -124,7 +124,7 @@ print-PLIST:
 	 | ${_PRINT_PLIST_LIBTOOLIZE_FILTER}				\
 	 | ${SORT}							\
 	 | ${AWK} '							\
-		{ sub("${PREFIX}/\\./", ""); }				\
+		{ sub("${DESTDIR}${PREFIX}/\\./", ""); }		\
 		${_PRINT_PLIST_AWK_IGNORE} { next; } 			\
 		${PRINT_PLIST_AWK}					\
 		${_PRINT_PLIST_AWK_SUBST}				\
@@ -153,16 +153,16 @@ print-PLIST:
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
-				/${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
+				/${DESTDIR:S|/|\\/|g}${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
 				/${PKG_DBDIR:S|/|\\/|g}\// { next; }	\
-				{ sub("${PREFIX}/\\\\./", ""); }	\
+				{ sub("${DESTDIR}${PREFIX}/\\\\./", ""); }	\
 				{ sub("^${PKGINFODIR}/", "info/"); }	\
 				{ sub("^${PKGMANDIR}/", "man/"); }	\
 				/^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}(\/|$$)/ { next; } \
 				/^${PKGINFODIR:S|/|\\/|g}$$/ { next; }	\
 				${_PRINT_PLIST_COMMON_DIRS}'` ;		\
 	do								\
-		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
+		if [ `${LS} -la ${DESTDIR}${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
 			${ECHO} @exec \$${MKDIR} %D/$$i | ${AWK} '	\
 			${PRINT_PLIST_AWK}				\
 			{ print $$0; }' ;				\
