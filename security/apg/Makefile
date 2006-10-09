@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/09 12:52:36 joerg Exp $
 #
 
 DISTNAME=	apg-2.2.3
@@ -9,7 +9,9 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.adel.nursat.kz/apg/
 COMMENT=	Tool set for random password generation
 
-MAKE_ENV+=	FLAGS=${CFLAGS:M*:Q} INSTALL_PREFIX=${PREFIX:Q}
+PKG_DESTDIR_SUPPORT=	destdir
+
+MAKE_ENV+=	FLAGS=${CFLAGS:M*:Q} INSTALL_PREFIX=${DESTDIR:Q}${PREFIX:Q}
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	perl/apgcli.pl
@@ -20,6 +22,6 @@ CS_LIBS.SunOS+=	-lnsl -lsocket
 MAKE_ENV+=	CS_LIBS=${CS_LIBS:Q}
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/perl/apgcli.pl ${PREFIX}/bin/apgcli
+	${INSTALL_SCRIPT} ${WRKSRC}/perl/apgcli.pl ${DESTDIR}${PREFIX}/bin/apgcli
 
 .include "../../mk/bsd.pkg.mk"
