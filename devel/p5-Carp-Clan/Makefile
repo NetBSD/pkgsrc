@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/02 19:18:20 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/09 22:19:00 rillig Exp $
 #
 
 DISTNAME=		Carp-Clan-5.4
@@ -14,6 +14,7 @@ COMMENT=		Report errors from perspective of caller of a "clan" of modules
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Carp/Clan/.packlist
+MAKE_PARAMS+=		< /dev/null
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
