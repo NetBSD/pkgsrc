@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1454 2006/10/09 19:07:41 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1455 2006/10/09 22:48:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4638,3 +4638,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-tray-monitor to 1.38.11 [ghen 2006-10-09]
 	Updated sysutils/bacula-wx-console to 1.38.11 [ghen 2006-10-09]
 	Updated mail/dovecot to 1.0rc8 [ghen 2006-10-09]
+	Updated www/ruby-actionpack to 1.12.5 [minskim 2006-10-09]
