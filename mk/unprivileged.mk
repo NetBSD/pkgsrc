@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.5 2006/08/31 16:21:20 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.6 2006/10/09 12:25:44 joerg Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -17,7 +17,7 @@
 #	Specifies the user name (or uid) that will be used to install
 #	files.
 
-.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+.if (defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])) || ${_USE_DESTDIR} == "user-destdir"
 
 # Guess which user/group has to be used.
 .  if !defined(UNPRIVILEGED_USER) || empty(UNPRIVILEGED_USER)
@@ -26,6 +26,10 @@ UNPRIVILEGED_USER!=	${ID} -n -u
 .  if !defined(UNPRIVILEGED_GROUP) || empty(UNPRIVILEGED_GROUP)
 UNPRIVILEGED_GROUP!=	${ID} -n -g
 .  endif
+
+.if ${_USE_DESTDIR} == "user-destdir" && (!defined(UNPRIVILEGED) || empty(UNPRIVILEGED:M[Yy][Ee][Ss]))
+_SU_ROOT_USER:=		${ROOT_USER}
+.endif
 
 # Override super-user account.
 ROOT_GROUP=		${UNPRIVILEGED_GROUP}
@@ -49,7 +53,9 @@ NONBINMODE=		644
 # mtree is useless as a regular user because it won't set directory
 # ownerships correctly.
 NO_MTREE=		yes
+.endif
 
+.if (defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss]))
 # As a regular user, creation of other users and groups won't work, so
 # disable this step by default.
 PKG_CREATE_USERGROUP=	NO
