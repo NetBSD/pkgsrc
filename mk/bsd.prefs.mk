@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.240 2006/10/09 11:59:08 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.241 2006/10/09 12:25:44 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -325,6 +325,42 @@ PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 .endif
 
 PKGDIRMODE?=		755
+
+# PKG_DESTDIR_SUPPORT can only be one of "destdir" or "user-destdir".
+USE_DESTDIR?=		no
+PKG_DESTDIR_SUPPORT?=	# empty
+
+.if empty(PKG_DESTDIR_SUPPORT) || (empty(USE_DESTDIR:M[Yy][Ee][Ss]) && empty(USE_DESTDIR:M[Ff][Uu][Ll][Ll]))
+_USE_DESTDIR=		no
+.elif ${PKG_DESTDIR_SUPPORT} == "user-destdir"
+.  if !empty(USE_DESTDIR:M[Ff][Uu][Ll][Ll])
+_USE_DESTDIR=		user-destdir
+.  else
+_USE_DESTDIR=		destdir
+.  endif
+.elif ${PKG_DESTDIR_SUPPORT} == "destdir"
+_USE_DESTDIR=		destdir
+.else
+PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`destdir'' or \`\`user-destdir''."
+.endif
+
+# When using staged installation, everything gets installed into
+# ${DESTDIR}${PREFIX} instead of ${PREFIX} directly.
+#
+.if ${_USE_DESTDIR} != "no"
+DESTDIR=		${WRKDIR}/.destdir
+.  if ${_USE_DESTDIR} == "destdir"
+_MAKE_PACKAGE_AS_ROOT=	yes
+_MAKE_CLEAN_AS_ROOT=	yes
+_MAKE_INSTALL_AS_ROOT=	yes
+.  elif ${_USE_DESTDIR} == "user-destdir"
+_MAKE_PACKAGE_AS_ROOT=	no
+_MAKE_CLEAN_AS_ROOT=	no
+_MAKE_INSTALL_AS_ROOT=	no
+.  endif
+.else
+DESTDIR=
+.endif
 
 _MAKE_CLEAN_AS_ROOT?=	no
 # Whether to run the clean target as root.
