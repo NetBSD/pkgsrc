@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.12 2006/07/27 21:46:46 jlam Exp $
+# $NetBSD: depends.mk,v 1.13 2006/10/09 01:40:49 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -42,24 +42,26 @@ depends-cookie: ${_DEPENDS_FILE}
 
 ${_DEPENDS_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_REDUCE_DEPENDS_CMD} ${BUILD_DEPENDS:Q} |			\
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${_REDUCE_DEPENDS_CMD} ${BUILD_DEPENDS:Q} > ${.TARGET}.tmp;	\
 	while read dep; do						\
 		pattern=`${ECHO} $$dep | ${SED} -e "s,:.*,,"`;		\
 		dir=`${ECHO} $$dep | ${SED} -e "s,.*:,,"`;		\
 		${TEST} -n "$$pattern" || exit 1;			\
 		${TEST} -n "$$dir" || exit 1;				\
 		${ECHO} "build	$$pattern	$$dir";			\
-	done >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_REDUCE_DEPENDS_CMD} ${DEPENDS:Q} |				\
+	done < ${.TARGET}.tmp >> ${.TARGET}.tmp1
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${_REDUCE_DEPENDS_CMD} ${DEPENDS:Q} > ${.TARGET}.tmp;		\
 	while read dep; do						\
 		pattern=`${ECHO} $$dep | ${SED} -e "s,:.*,,"`;		\
 		dir=`${ECHO} $$dep | ${SED} -e "s,.*:,,"`;		\
 		${TEST} -n "$$pattern" || exit 1;			\
 		${TEST} -n "$$dir" || exit 1;				\
 		${ECHO} "full	$$pattern	$$dir";			\
-	done >> ${.TARGET}
+	done < ${.TARGET}.tmp >> ${.TARGET}.tmp2
+	${_PKG_DEBUG}${_PKG_SILENT}					\
+	cat ${.TARGET}.tmp1 ${.TARGET.tmp2} >> ${.TARGET}
 
 ######################################################################
 ### depends-install (PRIVATE, pkgsrc/mk/depends/depends.mk)
