@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/09 02:41:11 rillig Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://cse.ogi.edu/pub/mush/
 EXTRACT_SUFX=	.tar.Z
@@ -26,6 +27,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	mush
 BUILD_TARGET=	mush
+
+INSTALLATION_DIRS=	bin share/misc
 
 .include "../../mk/bsd.prefs.mk"
 
