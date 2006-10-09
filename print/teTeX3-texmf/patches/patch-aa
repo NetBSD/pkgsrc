@@ -1,7 +1,7 @@
-$NetBSD: dvipdfm-config.diff,v 1.1.1.1 2005/03/31 22:12:42 hubertf Exp $
+$NetBSD: patch-aa,v 1.1 2006/10/09 03:08:24 rillig Exp $
 
---- config.orig	2005-02-09 01:42:24.000000000 +0000
-+++ config	2005-02-09 01:42:31.000000000 +0000
+--- dvipdfm/config/config.orig	2005-02-09 01:42:24.000000000 +0000
++++ dvipdfm/config/config	2005-02-09 01:42:31.000000000 +0000
 @@ -17,7 +17,7 @@
  
  % PDF version stamp to use in output file and max version of files
