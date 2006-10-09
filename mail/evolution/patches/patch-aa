@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.22 2006/10/09 11:34:09 joerg Exp $
+
+--- widgets/e-timezone-dialog/e-timezone-dialog.c.orig	2006-09-21 19:22:45.000000000 +0000
++++ widgets/e-timezone-dialog/e-timezone-dialog.c
+@@ -80,8 +80,6 @@ struct _ETimezoneDialogPrivate {
+ 
+ #ifndef G_OS_WIN32 /* Declared properly in time.h already */
+ extern char *tzname[2];
+-extern long timezone;
+-extern int daylight;
+ #endif
+ 
+ static void e_timezone_dialog_class_init	(ETimezoneDialogClass *class);
+@@ -324,7 +322,7 @@ get_local_timezone()
+ 	icaltimezone *zone;
+ 	
+ 	tzset();
+-	zone =  icaltimezone_get_builtin_timezone_from_offset (-timezone, tzname[0]);
++	zone =  icaltimezone_get_builtin_timezone_from_offset (-get_local_offset(), tzname[0]);
+ 
+ 	return zone;
+ }
