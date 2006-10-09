@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1885 2006/10/03 14:22:16 gdt Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1886 2006/10/09 10:30:27 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -85,6 +85,9 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
 WRKSRC?=		${WRKDIR}/${DISTNAME}
+
+# Override for SU_CMD user check
+_SU_ROOT_USER?=		${ROOT_USER}
 
 .if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) || defined(DEBUG_FLAGS)
 _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
@@ -695,7 +698,7 @@ su-target: .USE
 	"")	;;							\
 	*)	${PRE_CMD.su-${.TARGET}} ;;				\
 	esac;								\
-	if ${TEST} `${ID} -u` = `${ID} -u ${ROOT_USER}`; then		\
+	if ${TEST} `${ID} -u` = `${ID} -u ${_SU_ROOT_USER}`; then	\
 		${_ROOT_CMD};						\
 	else								\
 		case ${PRE_ROOT_CMD:Q}"" in				\
@@ -703,9 +706,9 @@ su-target: .USE
 		*) ${WARNING_MSG} "Running: "${PRE_ROOT_CMD:Q} ;;	\
 		esac;							\
 		${PRE_ROOT_CMD};					\
-		${STEP_MSG} "Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
+		${STEP_MSG} "Becoming \`\`${_SU_ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
 		${SU_CMD} ${_ROOT_CMD:Q};				\
-		${STEP_MSG} "Dropping \`\`${ROOT_USER}'' privileges.";	\
+		${STEP_MSG} "Dropping \`\`${_SU_ROOT_USER}'' privileges.";	\
 	fi
 
 ################################################################
