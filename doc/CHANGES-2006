@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1452 2006/10/09 12:47:21 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1453 2006/10/09 14:21:52 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4631,3 +4631,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/exiv2 to 0.11 [gdt 2006-10-09]
 	Updated editors/vim-share to 7.0.121 [martti 2006-10-09]
 	Updated mail/cyrus-imapd to 2.2.13nb1 [obache 2006-10-09]
+	Updated sysutils/bacula to 1.38.11 [ghen 2006-10-09]
+	Updated sysutils/bacula-clientonly to 1.38.11 [ghen 2006-10-09]
+	Updated sysutils/bacula-doc to 1.38.11 [ghen 2006-10-09]
+	Updated sysutils/bacula-gnome-console to 1.38.11 [ghen 2006-10-09]
+	Updated sysutils/bacula-tray-monitor to 1.38.11 [ghen 2006-10-09]
+	Updated sysutils/bacula-wx-console to 1.38.11 [ghen 2006-10-09]
