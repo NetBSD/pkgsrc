@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5536 2006/10/09 14:22:25 ghen Exp $
+$NetBSD: TODO,v 1.5537 2006/10/09 17:57:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,6 +333,7 @@ Suggested package updates
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o beacon-1.3
 	o benchfft-3.1
+	o bglibs-1.101 [pkg/34761]
 	o bind-8.4.7
 	o bind-9.3.3
 	o binutils-2.17
@@ -340,6 +341,7 @@ Suggested package updates
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o blackbox-0.70
 	o blender-2.42
+	o bluefish-1.0.6
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.3
@@ -516,9 +518,12 @@ Suggested package updates
 	o gnome-pilot-2.0.14
 	o gnome-session-2.16.1
 	o gnome-spell-1.0.7
+	o gnome-themes-2.16.1.1
 	o gnome-user-docs-2.16.1
 	o gnome2-terminal-2.16.1
 	o gnomeicu-0.99.10
+	o gnucash-2.0.2
+	o gnucash-docs-2.0.1
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14 [pkg/34439]
@@ -654,7 +659,7 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
-	o libntlm-0.3.10
+	o libntlm-0.3.12
 	o libprelude-0.9.10.2
 	o libpreludedb-0.9.10
 	o libshout-2.2
@@ -679,6 +684,7 @@ Suggested package updates
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
+	o mailfront-1.01 [pkg/34765]
 	o mailscanner-4.54.6
 	o makedepf90-2.8.8 [pkg/34306]
 	o maketool-0.8.4
@@ -686,7 +692,7 @@ Suggested package updates
 	o malsync-2.2.0
 	o manedit-0.6.1
 	o mapserver-4.2.5
-	o maradns-1.2.08
+	o maradns-1.2.12.03
 	o matchbox-1.1 [pkg/34526]
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
@@ -705,6 +711,7 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mlview-0.9.0
 	o mmix-20050922
+	o moc-2.4.1
 	o molden-4.4
 	o mono-1.1.17
 	o moscow_ml-2.01
@@ -1127,7 +1134,7 @@ Suggested package updates
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
-	o skill-4.1.2
+	o skill-4.1.3
 	o skkinput-2.06.4
 	o skype-1.3.0.50
 	o sma-1.4
