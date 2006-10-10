@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/02/05 23:10:41 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2006/10/10 03:20:48 ben Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -49,10 +49,10 @@ PKG_SUPPORTED_OPTIONS=	libcrack
 ###
 .if !empty(PKG_OPTIONS:Mlibcrack)
 .  include "../../security/libcrack/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-libcrack
+CONFIGURE_ARGS+=	--enable-crack
 PLIST_SUBST+=		USE_LIBCRACK=
 .else
-CONFIGURE_ARGS+=	--without-libcrack
+CONFIGURE_ARGS+=	--disable-crack
 PLIST_SUBST+=		USE_LIBCRACK="@comment "
 .endif
 
