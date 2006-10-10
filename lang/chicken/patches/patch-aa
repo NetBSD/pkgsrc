@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2005/11/16 22:36:40 rillig Exp $
+$NetBSD: patch-aa,v 1.10 2006/10/10 15:04:38 obache Exp $
 
---- Makefile.am.orig	2005-07-12 15:56:39.000000000 +0200
+--- Makefile.am.orig	Mon Jul 17 19:18:42 2006
 +++ Makefile.am
-@@ -254,8 +254,8 @@ pkgdata_DATA = chicken-match-macros.scm 
+@@ -254,8 +254,8 @@ regex.exports: $(regexexports)
  
  # Install docs and sources.
  install-data-local : chicken.html
@@ -10,6 +10,6 @@ $NetBSD: patch-aa,v 1.9 2005/11/16 22:36:40 rillig Exp $
 -	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(pkgdatadir)/doc; done
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
 +	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
- 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)/$(BINARY_VERSION)
  
  chicken.html: chicken.texi

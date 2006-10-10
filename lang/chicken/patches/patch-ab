@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2005/11/16 22:36:40 rillig Exp $
+$NetBSD: patch-ab,v 1.8 2006/10/10 15:04:38 obache Exp $
 
---- Makefile.in.orig	2005-07-13 18:18:22.000000000 +0200
+--- Makefile.in.orig	Mon Jul 17 19:18:42 2006
 +++ Makefile.in
-@@ -465,7 +465,7 @@ am__CONFIG_DISTCLEAN_FILES = config.stat
-  configure.lineno
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- 	cd $(top_srcdir) && \
--	  $(AUTOMAKE) --foreign  Makefile
-+	  $(AUTOMAKE) --foreign  --ignore-deps Makefile
- Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
- 	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
- 
-@@ -1596,8 +1596,8 @@ csc.scm: csc.scm.in
+@@ -1651,8 +1651,8 @@ regex.exports: $(regexexports)
  
  # Install docs and sources.
  install-data-local : chicken.html
@@ -19,6 +10,6 @@ $NetBSD: patch-ab,v 1.7 2005/11/16 22:36:40 rillig Exp $
 -	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(pkgdatadir)/doc; done
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
 +	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
- 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)/$(BINARY_VERSION)
  
  chicken.html: chicken.texi
