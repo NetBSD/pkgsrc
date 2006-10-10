@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1461 2006/10/10 15:05:59 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1462 2006/10/10 15:08:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4645,3 +4645,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/p5-XML-SemanticDiff version 0.95 [seb 2006-10-10]
 	Added security/pam-radius version 1.3.16 [adrianp 2006-10-10]
 	Updated security/py-prewikka to 0.9.7nb2 [joerg 2006-10-10]
+	Updated lang/chicken to 2.41 [obache 2006-10-10]
