@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/08/11 13:28:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.53 2006/10/10 00:19:49 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -17,7 +17,7 @@ CONFLICTS+=	verilog-[0-9]*
 GCC_REQD+=	3.0
 USE_LANGUAGES=	c c++
 
-SNAPDATE=		20060809
+SNAPDATE=		20061009
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gmake lex
 CONFIGURE_ARGS+=	--without-ipal
