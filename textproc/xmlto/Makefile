@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/22 13:11:28 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/10 00:23:39 dmcmahill Exp $
 #
 
 DISTNAME=		xmlto-0.0.18
@@ -21,7 +21,7 @@ MAKE_ENV+=		SGML_CATALOG_FILES=${PREFIX:Q}/share/xml/catalog
 CONFIGURE_ARGS+=	--with-getopt=${PREFIX:Q}/bin/getopt
 
 REPLACE_BASH+=		xmlto.in
-USE_TOOLS+=		bash:run
+USE_TOOLS+=		bash:run mktemp
 
 INSTALLATION_DIRS=	share/xmlto/format/docbook share/xmlto/format/fo
 
