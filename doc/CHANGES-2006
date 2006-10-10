@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1460 2006/10/10 14:40:33 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1461 2006/10/10 15:05:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4644,3 +4644,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/verilog-current to 20061009 [dmcmahill 2006-10-09]
 	Added textproc/p5-XML-SemanticDiff version 0.95 [seb 2006-10-10]
 	Added security/pam-radius version 1.3.16 [adrianp 2006-10-10]
+	Updated security/py-prewikka to 0.9.7nb2 [joerg 2006-10-10]
