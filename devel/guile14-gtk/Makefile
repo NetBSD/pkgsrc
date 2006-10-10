@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/10 02:43:15 dmcmahill Exp $
 #
 
 DISTNAME=		guile-gtk-0.19
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		devel x11
 MASTER_SITES=		http://gnuwin.epfl.ch/sources/geda/
 
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/${GUILE14_SUBDIR}/share
 PLIST_SUBST+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
+LDFLAGS+=		-lltdl
 
 .include "../../lang/guile14/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
