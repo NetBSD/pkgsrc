@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2006/03/04 21:31:08 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/10/10 21:39:19 rillig Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
 PKGNAME=	egtk-0.3.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netlabs.net/hp/richieb/downloads/
 
@@ -15,17 +15,19 @@ DEPENDS+=	smalleiffel-[0-9]*:../../lang/smalleiffel
 
 WRKSRC=		${WRKDIR}/eGTK
 
-INSTALLATION_DIRS=	bin lib man/man1
+INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -rf
 	${FIND} ${WRKSRC} -type d -name "ise" -print | ${XARGS} ${RM} -rf
 	${FIND} ${WRKSRC} -type f -name "*.ace" -print | ${XARGS} ${RM} -f
+	rm -f ${WRKSRC}/examples/tictactoe/core
 	${RMDIR} ${WRKSRC}/examples/toolbar
 	${RM} ${WRKSRC}/examples/Makefile
 	cd ${WRKSRC}/C/se && ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se clean
 	${MV} ${WRKSRC}/bin/egtkbuild ${WRKSRC}/bin/egtkbuild.in
 	${MV} ${WRKSRC}/man/egtkbuild.1 ${WRKSRC}/man/egtkbuild.1.in
+	chmod -R go-w . ${WRKSRC}
 
 do-configure:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
@@ -40,7 +42,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/egtkbuild ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/man/egtkbuild.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/man/egtkbuild.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk.a ${PREFIX}/lib/libegtk_se.a
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk
