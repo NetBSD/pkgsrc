@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/10/01 15:13:22 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/10 15:05:14 joerg Exp $
 #
 
 DISTNAME=		prewikka-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
 			http://www.prelude-ids.org/download/releases/old/
@@ -29,6 +29,7 @@ PREWIKKA_USER?=		prewikka
 PREWIKKA_GROUP?=	prewikka
 PREWIKKA_HOME=		/nonexistent
 RCD_SCRIPTS=		prewikka
+PKG_SYSCONFSUBDIR=	prewikka
 
 PKG_GROUPS=	${PREWIKKA_GROUP}
 PKG_USERS=	${PREWIKKA_USER}:${PREWIKKA_GROUP}
@@ -44,6 +45,11 @@ SUBST_SED.code+=	-e 's,@PREWIKKA_USER@,${PREWIKKA_USER},g'
 SUBST_SED.code+=	-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 
 FILES_SUBST+=	PREWIKKA_USER=${PREWIKKA_USER:Q}
+
+MAKE_ENV+=	EXAMPLEDIR=share/examples/${PKGBASE}
+
+INSTALLATION_DIRS+=	${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/prewikka.conf ${PKG_SYSCONFDIR}/prewikka.conf
 
 pre-patch:
 	cp ${FILESDIR}/runPrewikka.c ${WRKSRC}
