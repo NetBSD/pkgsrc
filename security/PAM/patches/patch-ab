@@ -1,9 +1,28 @@
-$NetBSD: patch-ab,v 1.4 2004/11/16 07:46:57 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2006/10/10 03:20:48 ben Exp $
 
---- configure.in.orig	Tue Jul  9 02:17:13 2002
+--- configure.in.orig	2002-07-09 02:17:13.000000000 -0400
 +++ configure.in
-@@ -199,7 +199,7 @@ AC_CHECK_LIB(crack, FascistCheck, HAVE_L
+@@ -157,6 +157,10 @@ AC_ARG_ENABLE(lckpwdf,
+ 	WITH_LCKPWDF=no, WITH_LCKPWDF=yes)
+ AC_SUBST(WITH_LCKPWDF)
+ 
++AC_ARG_ENABLE(crack,
++[  --disable-crack do not use crack],
++	WITH_CRACK=no, WITH_CRACK=yes)
++
+ AC_CHECK_HEADERS(paths.h)
+ AC_ARG_WITH(mailspool,
+ [  --with-mailspool         path to mail spool directory
+@@ -195,11 +199,15 @@ dnl
+ dnl At least on Solaris, the existing libcrack must be dynamic.
+ dnl Ought to introduce a check for this.
+ dnl
++if test "$WITH_CRACK" = "yes"; then
+ AC_CHECK_LIB(crack, FascistCheck, HAVE_LIBCRACK=yes ; AC_DEFINE(HAVE_LIBCRACK),
  	HAVE_LIBCRACK=no)
++else
++HAVE_LIBCRACK=no
++fi
  AC_SUBST(HAVE_LIBCRACK)
  
 -AC_CHECK_LIB(crypt, fcrypt, HAVE_LIBCRYPT=yes ; AC_DEFINE(HAVE_LIBCRYPT),
@@ -11,7 +30,7 @@ $NetBSD: patch-ab,v 1.4 2004/11/16 07:46:57 jlam Exp $
  	HAVE_LIBCRYPT=no)
  AC_SUBST(HAVE_LIBCRYPT)
  AC_CHECK_LIB(util, logwtmp, HAVE_LIBUTIL=yes ; AC_DEFINE(HAVE_LIBUTIL),
-@@ -240,6 +240,13 @@ AC_CHECK_HEADERS(fcntl.h limits.h malloc
+@@ -240,6 +248,13 @@ AC_CHECK_HEADERS(fcntl.h limits.h malloc
  dnl Linux wants features.h in some of the source files.
  AC_CHECK_HEADERS(features.h)
  
@@ -25,7 +44,7 @@ $NetBSD: patch-ab,v 1.4 2004/11/16 07:46:57 jlam Exp $
  dnl For module/pam_cracklib
  AC_CHECK_HEADERS(crypt.h)
  
-@@ -257,7 +264,7 @@ dnl being found.
+@@ -257,7 +272,7 @@ dnl being found.
  
  dnl Look for cracklib dictionary
  AC_MSG_CHECKING(path to cracklib dictionary)
