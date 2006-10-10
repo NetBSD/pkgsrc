@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1458 2006/10/10 00:21:25 dmcmahill Exp $
+>$NetBSD: CHANGES-2006,v 1.1459 2006/10/10 09:55:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4642,3 +4642,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/ruby-actionmailer to 1.2.5 [minskim 2006-10-09]
 	Updated www/ruby-actionwebservice to 1.1.6 [minskim 2006-10-09]
 	Updated cad/verilog-current to 20061009 [dmcmahill 2006-10-09]
+	Added textproc/p5-XML-SemanticDiff version 0.95 [seb 2006-10-10]
