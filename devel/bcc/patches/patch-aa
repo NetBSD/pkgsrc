@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2004/06/12 02:24:57 grant Exp $
+$NetBSD: patch-aa,v 1.6 2006/10/10 06:56:05 uebayasi Exp $
 
---- ld/Makefile.orig	1994-02-20 09:32:12.000000000 +1100
+--- ld/Makefile.orig	1994-02-19 23:32:12.000000000 +0100
 +++ ld/Makefile
 @@ -1,18 +1,17 @@
 -CFLAGS		=-O -DBSD_A_OUT -DSTANDARD_GNU_A_OUT
