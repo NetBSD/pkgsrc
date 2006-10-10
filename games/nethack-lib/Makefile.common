@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2006/10/09 02:06:58 ben Exp $
+# $NetBSD: Makefile.common,v 1.21 2006/10/10 14:51:44 ben Exp $
 #
 
 NETHACK_BASEVER=	3.4.3
@@ -28,6 +28,7 @@ SUBST_STAGE.ttylib=	post-patch
 SUBST_FILES.ttylib=	sys/unix/Makefile.src
 SUBST_SED.ttylib=	-e 's,^WINTTYLIB = -ltermlib,WINTTYLIB = -lncurses,'
 .endif
+.include "../../mk/curses.buildlink3.mk"
 
 .if ${OPSYS} == "Linux"
 NETHACK_OS=		SYSV
