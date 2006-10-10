@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2006/10/10 12:09:36 tonio Exp $
+
+--- configure.orig	2006-10-10 13:57:09.000000000 +0200
++++ configure
+@@ -33169,7 +33169,7 @@ for p in $doc_xsl_prefix_path; do
+     fi
+ done
+ 
+-if test "x$DOC_XSL_PREFIX" == "x"; then
++if test "x$DOC_XSL_PREFIX" = "x"; then
+     { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+     enable_doc="no"
