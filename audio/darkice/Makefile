@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/07/22 04:46:13 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/10 20:09:22 rillig Exp $
 #
 
 DISTNAME=	darkice-0.17.1
@@ -25,15 +25,15 @@ HTMLDIR=	${PREFIX}/share/doc/darkice
 
 CONF_FILES=	${EGDIR}/darkice.conf ${PKG_SYSCONFDIR}/darkice.conf
 
-INSTALLATION_DIRS=	bin man/man1 man/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${EGDIR}/darkice.conf
 	${INSTALL_PROGRAM} ${WRKSRC}/src/darkice ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 \
-		${PREFIX}/man/man5/darkice.conf.5
+		${PREFIX}/${PKGMANDIR}/man5/darkice.conf.5
 	cd ${WRKSRC}/doc/doxygen/html && ${INSTALL_DATA} *.html ${HTMLDIR}
 
 .include "../../audio/faac/buildlink3.mk"
