@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/10 21:39:19 rillig Exp $
 bin/egtkbuild
 lib/libegtk_se.a
 man/man1/egtkbuild.1
@@ -372,7 +372,6 @@ share/examples/egtk/testgtk/window_with_close_button.e
 share/examples/egtk/tictactoe/Makefile
 share/examples/egtk/tictactoe/README
 share/examples/egtk/tictactoe/close_dialog_command.e
-share/examples/egtk/tictactoe/core
 share/examples/egtk/tictactoe/customisation.e
 share/examples/egtk/tictactoe/gtk_widget_destroy.e
 share/examples/egtk/tictactoe/loadpath.se
