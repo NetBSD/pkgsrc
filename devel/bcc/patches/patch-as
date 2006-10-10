@@ -1,7 +1,8 @@
-$NetBSD: patch-as,v 1.1 2004/01/02 15:30:04 cjep Exp $
---- ld/io.c.orig	1994-04-17 22:59:53.000000000 +0100
-+++ ld/io.c	2004-01-02 15:21:25.000000000 +0000
-@@ -13,6 +13,7 @@
+$NetBSD: patch-as,v 1.2 2006/10/10 06:56:05 uebayasi Exp $
+
+--- ld/io.c.orig	1994-04-17 23:59:53.000000000 +0200
++++ ld/io.c
+@@ -13,6 +13,7 @@ void *malloc P((unsigned size));
  #else
  #undef NULL
  #include <stdlib.h>
@@ -9,3 +10,11 @@ $NetBSD: patch-as,v 1.1 2004/01/02 15:30:04 cjep Exp $
  #endif
  
  #ifdef POSIX_HEADERS_MISSING
+@@ -33,7 +34,6 @@ int read P((int fd, void *buf, unsigned 
+ mode_t umask P((int oldmask));
+ int write P((int fd, const void *buf, unsigned nbytes));
+ #else
+-#undef NULL
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
