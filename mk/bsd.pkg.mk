@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1886 2006/10/09 10:30:27 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1887 2006/10/10 16:57:58 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -400,8 +400,8 @@ _BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 USE_TOOLS+=								\
 	[ awk basename cat chgrp chmod chown cmp cp cut dirname echo	\
 	egrep env false file find grep head hostname id install ln ls	\
-	mkdir mv pax pwd rm rmdir sed sh sort tail test touch tr true	\
-	wc xargs
+	mkdir mv pax printf pwd rm rmdir sed sh sort			\
+	tail test touch tr true	wc xargs
 
 USE_TOOLS+=	${NO_CHECKSUM:D:Udigest\:bootstrap}
 
