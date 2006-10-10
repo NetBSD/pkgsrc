@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/03 00:30:05 reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/10 00:27:30 dmcmahill Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,6 @@ COMMENT=	Spooler-independent PostScript printing filter
 CONFLICTS+=	foomatic-gswrapper-[0-9]*
 
 USE_TOOLS+=	gmake gs:run perl:run
-INSTALL_TARGET=	install-bin install-man
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -27,6 +26,18 @@ TEXTTOPS_DEPENDS=	{a2ps,enscript,mpage}-[0-9]*
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.foomatic
 PKG_SUPPORTED_OPTIONS=	cups
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=    MANINSTALL
+
+.if ${OPSYS} == "SunOS"
+# SunOS nroff has problems with foomatic-rip.1
+MANINSTALL=     none
+INSTALL_TARGET=	install-bin
+.else
+INSTALL_TARGET=	install-bin install-man
+.endif
 
 .include "../../mk/bsd.options.mk"
 
