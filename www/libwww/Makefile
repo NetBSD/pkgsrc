@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/10/05 10:05:41 rillig Exp $
+# $NetBSD: Makefile,v 1.71 2006/10/10 00:24:54 dmcmahill Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -18,7 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.libwww-configure-5.4.0nb1.gz=	${MASTER_SITE_LOCAL}
 
-USE_TOOLS+=		gmake gzcat perl
+USE_TOOLS+=		automake14 gmake gzcat perl
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
@@ -38,7 +38,7 @@ pre-configure:
 .for f in aclocal.m4 configure stamp-h.in
 	touch ${WRKSRC}/${f}
 .endfor
-	touch `${FIND} ${WRKSRC} -name Makefile.in -print`
+	cd ${WRKSRC} && automake
 
 .include "../../mk/bsd.prefs.mk"
 
