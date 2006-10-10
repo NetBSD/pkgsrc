@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.4 2002/02/18 09:43:59 jmc Exp $
+$NetBSD: patch-al,v 1.5 2006/10/10 06:56:05 uebayasi Exp $
 
---- as/pops.c.orig	Sun Jul 11 12:43:39 1993
-+++ as/pops.c	Mon Feb 18 09:40:23 2002
-@@ -72,7 +72,7 @@
+--- as/pops.c.orig	1993-07-11 14:43:39.000000000 +0200
++++ as/pops.c
+@@ -72,7 +72,7 @@ PUBLIC bool_pt checksegrel(symptr)
  register struct sym_s *symptr;
  {
      if ((symptr->type & LABIT ||
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.4 2002/02/18 09:43:59 jmc Exp $
  	((symptr->data ^ lcdata) & (RELBIT | SEGM)))
      {
  	error(SEGREL);
-@@ -263,7 +263,7 @@
+@@ -263,7 +263,7 @@ unsigned char impbits;
  PRIVATE void dofcc()
  {
      register char *bufptr;

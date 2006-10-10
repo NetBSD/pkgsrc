@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.2 1998/08/07 10:40:22 agc Exp $
+$NetBSD: patch-an,v 1.3 2006/10/10 06:56:05 uebayasi Exp $
 
---- bcc/bcc.c.orig	Sat Jul 17 07:49:49 1993
-+++ bcc/bcc.c	Thu Jul 16 22:45:40 1998
+--- bcc/bcc.c.orig	1993-07-17 14:49:49.000000000 +0200
++++ bcc/bcc.c
 @@ -27,20 +27,20 @@
  #define P(x)	()
  #endif
@@ -31,7 +31,7 @@ $NetBSD: patch-an,v 1.2 1998/08/07 10:40:22 agc Exp $
  
  #ifdef CCC
  #undef BCC86
-@@ -553,7 +553,7 @@
+@@ -553,7 +553,7 @@ char **argv;
  	    {
  		arg = ldargs.argv[argc];
  		if (arg[0] == '-' && arg[1] == 'i'
