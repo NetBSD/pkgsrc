@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.73 2006/09/13 23:38:21 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.74 2006/10/11 14:32:56 yyamano Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -158,10 +158,7 @@
     <para>When adding a package with a new license, the license
     text should be added to <filename>pkgsrc/licenses</filename>
     for displaying. A list of known licenses can be seen in this
-    directory as well as by looking at the list of (commented
-    out) <varname>ACCEPTABLE_LICENSES</varname> variable
-    settings in
-    <filename>pkgsrc/mk/defaults/mk.conf</filename>.</para>
+    directory.</para>
 
     <para>The use of <varname>LICENSE=shareware</varname>,
     <varname>LICENSE=no-commercial-use</varname>, and similar
