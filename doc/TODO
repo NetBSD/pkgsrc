@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5540 2006/10/11 05:31:02 wiz Exp $
+$NetBSD: TODO,v 1.5541 2006/10/11 11:53:05 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1406,3 +1406,6 @@ Suggested cleanups in pkgsrc
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
+
+	o Change 'make replace' to preserve the "automatic" variable.
+	  Currently the "automatic=yes" property is removed.
