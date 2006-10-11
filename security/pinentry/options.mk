@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2006/06/17 13:46:34 rillig Exp $
+# $NetBSD: options.mk,v 1.2 2006/10/11 14:51:21 gdt Exp $
 #
 
-# XXX This usage of bsd.options.mk is wrong and has to be fixed.  The
-# package has to be splitted into different packages, such as pinentry-gtk
-# and pinentry-qt, so that the frontends can be built on their own and
-# can be distributed in different binary packages.
+# XXX This usage of bsd.options.mk is incorrect.  The package should
+# to be split into three packages
+#   pinentry-curses
+#   pinentry-gtk
+#   pinentry-qt
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pinentry
 PKG_SUPPORTED_OPTIONS=	gtk qt
