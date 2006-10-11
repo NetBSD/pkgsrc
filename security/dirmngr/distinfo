@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2006/01/06 10:21:33 shannonjr Exp $
+$NetBSD: distinfo,v 1.9 2006/10/11 11:09:48 shannonjr Exp $
 
-SHA1 (dirmngr-0.9.3.tar.bz2) = bc2363b2115b18edccb4fa7b9873ad1b3c12a3ad
-RMD160 (dirmngr-0.9.3.tar.bz2) = 0775a6b85d2247ca02a576e89b89de8e767e6d2b
-Size (dirmngr-0.9.3.tar.bz2) = 478661 bytes
-SHA1 (pth-2.0.4.tar.gz) = c5ee066185a042a5cf1341a0ec10bcb94a1d4c53
-RMD160 (pth-2.0.4.tar.gz) = ba78260cb8860433cd240e24e2e90dc6997943d8
-Size (pth-2.0.4.tar.gz) = 641851 bytes
+SHA1 (dirmngr-0.9.6.tar.bz2) = 954e1dbed96a2bccfbdb1bee446fa75337a156ea
+RMD160 (dirmngr-0.9.6.tar.bz2) = fa83ca16be3a71a3d6106b18a7375f489eea593e
+Size (dirmngr-0.9.6.tar.bz2) = 499675 bytes
+SHA1 (pth-2.0.7.tar.gz) = 9a71915c89ff2414de69fe104ae1016d513afeee
+RMD160 (pth-2.0.7.tar.gz) = 80bc66777ba20d9648b7aaf3f58d593be6416910
+Size (pth-2.0.7.tar.gz) = 652640 bytes
 SHA1 (patch-aa) = f3b4c18afa24ba7838876e46c0084502c7656f4b
