@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/08/23 18:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/11 12:50:19 gdt Exp $
 #
 
 DISTNAME=	windows-all-20060611
@@ -26,6 +26,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
+LICENSE=	mplayer-codec-license
 RESTRICTED=	Unsure of codec's license
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=  ${RESTRICTED}
