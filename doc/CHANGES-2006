@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1463 2006/10/11 03:56:34 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1464 2006/10/11 05:29:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4608,7 +4608,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/dar to 2.3.1 [obache 2006-10-07]
 	Updated net/darkstat to 3.0.540 [obache 2006-10-07]
 	Updated mail/cue to 20060417 [obache 2006-10-07]
-	Updated devel/aegis to 4.22 [rillig 2006-10-07]
 	Updated devel/aegis to 4.22 [rillig 2006-10-07]
 	Updated games/cgoban-java to 3.3.5 [rillig 2006-10-07]
 	Updated finance/kmymoney2 to 0.8.5 [markd 2006-10-07]
