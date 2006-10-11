@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.11 2006/05/12 12:39:32 joerg Exp $
+$NetBSD: patch-ab,v 1.12 2006/10/11 21:14:57 dmcmahill Exp $
 
 --- configure.orig	2005-05-25 15:00:45.000000000 +0000
 +++ configure
@@ -483,8 +483,8 @@ $NetBSD: patch-ab,v 1.11 2006/05/12 12:39:32 joerg Exp $
  					if test "$USER_TK_LIB_PATH" = ""
 -					then TK_LIB=" -L$PATH_LIB_TK -l$NAME_LIB_TK"
 -					else TK_LIB=" -L$USER_TK_LIB_PATH  -l$NAME_LIB_TK"
-+					then TK_LIB=" -Wl,--rpath,$PATH_LIB_TL -L$PATH_LIB_TK -l$NAME_LIB_TK"
-+					else TK_LIB=" -Wl,--rpath,$PATH_LIB_TL -L$USER_TK_LIB_PATH  -l$NAME_LIB_TK"
++					then TK_LIB=" ${COMPILER_RPATH_FLAG}${PATH_LIB_TK} -L$PATH_LIB_TK -l$NAME_LIB_TK"
++					else TK_LIB=" ${COMPILER_RPATH_FLAG}${USER_TK_LIB_PATH} -L$USER_TK_LIB_PATH  -l$NAME_LIB_TK"
  					fi
  					break 3;
  				fi
