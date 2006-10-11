@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/29 10:23:10 shannonjr Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/11 11:59:21 shannonjr Exp $
 #
 
 DISTNAME=		gnupg-1.9.22
@@ -7,8 +7,8 @@ CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		pth-2.0.4.tar.gz
-SITES.pth-2.0.4.tar.gz=	${MASTER_SITE_GNU:=pth/}
+DISTFILES+=		pth-2.0.7.tar.gz
+SITES.pth-2.0.7.tar.gz=	${MASTER_SITE_GNU:=pth/}
 
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
@@ -50,7 +50,7 @@ PLIST_SRC+=	${.CURDIR}/PLIST.gpgsm
 # We are building a static pth library and linking against it
 # While this is not very satisfying, gpgme hangs in it's gpgsm tests if we depend on the shared (pkgsrc) pth library
 pre-configure:
-	cd  ${WRKDIR}/pth-2.0.4 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
+	cd  ${WRKDIR}/pth-2.0.7 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
