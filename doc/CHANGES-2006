@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1462 2006/10/10 15:08:56 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1463 2006/10/11 03:56:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4646,3 +4646,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added security/pam-radius version 1.3.16 [adrianp 2006-10-10]
 	Updated security/py-prewikka to 0.9.7nb2 [joerg 2006-10-10]
 	Updated lang/chicken to 2.41 [obache 2006-10-10]
+	Updated misc/p5-File-MMagic to 1.27 [taca 2006-10-11]
