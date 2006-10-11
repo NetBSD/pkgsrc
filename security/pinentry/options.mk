@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/10/11 14:55:59 shannonjr Exp $
+# $NetBSD: options.mk,v 1.4 2006/10/11 18:53:38 shannonjr Exp $
 #
 
 # XXX This usage of bsd.options.mk is incorrect.  The package should
@@ -8,7 +8,7 @@
 #   pinentry-qt
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pinentry
-PKG_SUPPORTED_OPTIONS=	gtk qt
+PKG_SUPPORTED_OPTIONS=	gtk gtk2 qt
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk)
@@ -18,6 +18,15 @@ PLIST_SUBST+=		USE_GTK=
 .else
 CONFIGURE_ARGS+=	--disable-pinentry-gtk
 PLIST_SUBST+=		USE_GTK='@comment '
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtk2)
+CONFIGURE_ARGS+=	--enable-pinentry-gtk2
+PLIST_SUBST+=		USE_GTK2=
+.  include "../../x11/gtk2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pinentry-gtk2
+PLIST_SUBST+=		USE_GTK2='@comment '
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt)
