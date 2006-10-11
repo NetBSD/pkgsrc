@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/10/11 14:51:21 gdt Exp $
+# $NetBSD: options.mk,v 1.3 2006/10/11 14:55:59 shannonjr Exp $
 #
 
 # XXX This usage of bsd.options.mk is incorrect.  The package should
@@ -24,6 +24,9 @@ PLIST_SUBST+=		USE_GTK='@comment '
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--enable-pinentry-qt
+CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--with-qt-includes=${BUILDLINK_PREFIX.qt3-libs}/qt3/include
+CONFIGURE_ARGS+=	--with-qt-libraries=${BUILDLINK_PREFIX.qt3-libs}/qt3/lib
 PLIST_SUBST+=		USE_QT=
 .  include "../../x11/qt3-libs/buildlink3.mk"
 .else
