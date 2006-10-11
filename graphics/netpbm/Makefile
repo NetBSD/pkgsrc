@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2006/10/03 22:56:50 schwarz Exp $
+# $NetBSD: Makefile,v 1.146 2006/10/11 18:44:25 rillig Exp $
 
 DISTNAME=	netpbm-10.34
 CATEGORIES=	graphics
@@ -23,7 +23,7 @@ REPLACE_PERL+=	editor/ppmfade editor/ppmshadow editor/pnmquant \
 STAGEDIR=	${WRKDIR}/staging
 
 LIBS.SunOS+=	-lsocket -lnsl
-MAKE_ENV+=	NETWORKLD=${LIBS:M*:Q}
+MAKE_ENV+=	NETWORKLD=${LIBS:Q}
 
 # Several of the netpbm shell scripts use bashisms, so force using
 # bash for all of the shell scripts.
@@ -55,7 +55,7 @@ MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 .endif
 
 MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
-MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:M*:Q}
+MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:Q}
 
 .if ${PKGSRC_COMPILER} == "ido"
 CPPFLAGS+=	-DSGI_IDO_CC
