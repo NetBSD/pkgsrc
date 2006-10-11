@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/11 11:09:48 shannonjr Exp $
 #
 
-DISTNAME=		dirmngr-0.9.3
-PKGREVISION=		3
+DISTNAME=		dirmngr-0.9.6
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/dirmngr/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		pth-2.0.4.tar.gz
-SITES.pth-2.0.4.tar.gz=	${MASTER_SITE_GNU:=pth/}
+DISTFILES+=		pth-2.0.7.tar.gz
+SITES.pth-2.0.7.tar.gz=	${MASTER_SITE_GNU:=pth/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shannonjr@NetBSD.org
@@ -25,7 +24,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gawk
 USE_PKGLOCALEDIR=	yes
 RCD_SCRIPTS=		dirmngr
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
@@ -36,7 +35,7 @@ SUBST_FILES+=		VARBASE=${VARBASE}
 SUBST_FILES+=		PREFIX=${PREFIX}
 SUBST_FILES+=		SYSCONFDIR=${SYSCONFDIR}
 SUBST_FILES+=		DIRMNGR_USER=${DIRMNGR_USER}
-SUBST_FILES+=		DIRMNGR_PATH=${DIRMNGR_PATH}
+SUBST_FILES+=		DIRMNGR_PATH=${DIRMNGR_PATH:Q}
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dirmngr
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dirmngr/trusted-certs
@@ -49,7 +48,7 @@ OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 
 # We are building a static pth library and linking against it
 pre-configure:
-	cd  ${WRKDIR}/pth-2.0.4 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
+	cd  ${WRKDIR}/pth-2.0.7 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
 
 pre-build:
 	${CP} ${FILESDIR}/runDirmngr.c ${WRKDIR}/runDirmngr.c
