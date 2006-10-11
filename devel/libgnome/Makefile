@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/09/16 12:20:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2006/10/11 00:53:47 dmcmahill Exp $
 #
 
 DISTNAME=	libgnome-2.16.0
@@ -65,4 +65,5 @@ BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
