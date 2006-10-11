@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.7 2006/07/29 16:48:27 adam Exp $
+$NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
 
---- configure.orig	2006-07-29 17:35:31.000000000 +0200
-+++ configure
+--- configure.orig	2006-07-13 23:58:38.000000000 +0200
++++ configure	2006-10-11 21:13:18.000000000 +0200
 @@ -13548,7 +13548,7 @@ else
     default_mibs=IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:HOST-RESOURCES-MIB:SNMPv2-MIB:RFC1213-MIB:NOTIFICATION-LOG-MIB:DISMAN-EVENT-MIB:DISMAN-SCHEDULE-MIB
  
@@ -171,12 +171,3 @@ $NetBSD: patch-af,v 1.7 2006/07/29 16:48:27 adam Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -35133,6 +35202,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
