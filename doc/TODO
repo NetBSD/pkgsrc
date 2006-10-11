@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5538 2006/10/10 15:08:56 obache Exp $
+$NetBSD: TODO,v 1.5539 2006/10/11 05:27:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,7 +276,7 @@ Suggested package updates
 	o YoSucker-75
 	o aap-0.144
 	o abcm2ps-5.1.1
-	o abcmidi-20060910
+	o abcmidi-20061005
 	o acpi-iasl-20040715
 	o adns-1.3
 	o adocman-0.13
@@ -439,6 +439,8 @@ Suggested package updates
 	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
+	o evince-0.6.1
+	o evince-nautilus-0.6.1
 	o evolution-2.8.1
 	o evolution-data-server-1.8.1
 	o evolution-exchange-2.8.1
@@ -450,7 +452,7 @@ Suggested package updates
 	o faces-1.7.7
 	o fd-2.08a
 	o fdgw-20040609
-	o fetchmail-6.3.4
+	o fetchmail-6.3.5
 	o fhist-1.14
 	o file-4.17 [pkg/34337]
 	o file-roller-2.16.1
@@ -666,7 +668,7 @@ Suggested package updates
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libwnck-2.16.1
-	o libwpd-0.8.5
+	o libwpd-0.8.7
 	o licq-core-1.3.0
 	o liferea-1.0.23
 	o lighttpd-1.4.12
@@ -1135,7 +1137,7 @@ Suggested package updates
 	o skampi-4.1
 	o skill-4.1.3
 	o skkinput-2.06.4
-	o skype-1.3.0.50
+	o skype-1.3.0.53
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
@@ -1151,7 +1153,7 @@ Suggested package updates
 	o source-highlight-2.5
 	o spamass-milter-0.3.1 [pkg/33206]
 	o spim-7.2.1
-	o sqlite3-3.3.7
+	o sqlite3-3.3.8
 	o sqlitemanager-1.1.3
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
