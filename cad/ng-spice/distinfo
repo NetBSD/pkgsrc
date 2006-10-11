@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2005/12/28 16:06:37 joerg Exp $
+$NetBSD: distinfo,v 1.12 2006/10/11 05:03:49 dmcmahill Exp $
 
 SHA1 (ng-spice-rework-17.tar.gz) = 5ce17a6dff309fae069e0b1e7309eb1c16b4671b
 RMD160 (ng-spice-rework-17.tar.gz) = 2345cbdb608bfb182d33c1a6497408b22acffb77
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 4cc9952823421b57fffb512e6d50483f706a5211
 SHA1 (patch-ah) = f76c5c400ee588f482211997f2d405811b945518
 SHA1 (patch-ai) = 874de21ac028eeaf1eada3fa78563a2383d6b3f1
 SHA1 (patch-aj) = 6555ae3e2e8f8c63795334e192a6d7c149afc164
+SHA1 (patch-ak) = 934a1eab94881ed57a9116f69d4c72c921451a27
