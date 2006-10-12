@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.25 2006/10/08 19:08:38 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.26 2006/10/12 15:03:51 xtraeme Exp $
 #
 # Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
@@ -253,8 +253,10 @@ do_conf_reset()
 
 copy_bootfiles()
 {
+    #
+    # GNU GRUB.
+    #
     if [ "$USE_GNU_GRUB" = "yes" ]; then
-    # GNU Grub selected.
         [ ! -d $ISODIR/$GRUB_BOOTDIR ] && mkdir -p $ISODIR/$GRUB_BOOTDIR
 	for f in $GRUB_FILES
         do
@@ -271,7 +273,9 @@ copy_bootfiles()
             fi
         done
     else
-        # We are using cdboot.
+    #
+    # NetBSD cd9660 bootloader (bootxx_cd9660)
+    #
         if [ -f ${CDBOOT_DIR}/${CDBOOT_IMG} ]; then
             cp -f ${CDBOOT_DIR}/${CDBOOT_IMG} $ISODIR
         else
@@ -345,7 +349,6 @@ do_build_kernels()
             if [ "$USE_GNU_GRUB" = "yes" ]; then
                 cp $WORKDIR/$kernname/netbsd $ISODIR/$GRUB_BOOTDIR/$bootkern
             else
-            # We are using cdboot.
                 cp $WORKDIR/$kernname/netbsd $ISODIR/$bootkern
             fi
             [ -n "$verbose_mode" ] && \
@@ -433,8 +436,7 @@ do_cdlive()
 		    config -s $SOURCEDIR/sys -b $WORKDIR/$KERNEL_NAME \
 		        $BOOTKERN
 		cd $KERNEL_NAME
-		make depend
-		make COPTS="-Os"	# Don't use additional flags
+		make depend && make
 		if [ "$?" -eq 0 ]; then
 		    copy_bootfiles
 		    showmsg_n "Compressing kernel $BOOTKERN..."
@@ -553,7 +555,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.25 2006/10/08 19:08:38 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.26 2006/10/12 15:03:51 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -882,12 +884,14 @@ _EOF_
         #
         # Detect if we are running a MULTIBOOT kernel.
         #
-        grep -q MULTIBOOT $WORKDIR/$BOOTKERN
-        if [ "$?" -eq 0 ]; then
-            showmsg "Applying fix for MULTIBOOT kernel..."
-            sed -e "s|\--type=netbsd||g" $ISODIR/boot/grub/menu.lst > \
-                $ISODIR/boot/grub/menu.lst.in
-            mv $ISODIR/boot/grub/menu.lst.in $ISODIR/boot/grub/menu.lst
+        if [ -f $ISODIR/boot/grub/menu.lst ]; then
+            grep -q MULTIBOOT $WORKDIR/$BOOTKERN
+            if [ "$?" -eq 0 ]; then
+                showmsg "Applying fix for MULTIBOOT kernel..."
+                sed -e "s|\--type=netbsd||g" $ISODIR/boot/grub/menu.lst > \
+                    $ISODIR/boot/grub/menu.lst.in
+                mv $ISODIR/boot/grub/menu.lst.in $ISODIR/boot/grub/menu.lst
+            fi
         fi
 
         _do_real_iso_image()
