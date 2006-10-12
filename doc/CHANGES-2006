@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1466 2006/10/12 03:15:10 dmcmahill Exp $
+>$NetBSD: CHANGES-2006,v 1.1467 2006/10/12 08:38:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/pinentry to 0.7.2 [shannonjr 2006-10-11]
 	Updated cad/covered to 0.4.7 [dmcmahill 2006-10-11]
 	Updated cad/covered-current to 20060904 [dmcmahill 2006-10-11]
+	Added www/rails version 1.1.6 [minskim 2006-10-12]
