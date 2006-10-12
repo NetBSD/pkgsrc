@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/07/08 23:11:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/10/12 09:24:20 martti Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_NETLOAD_PLUGIN_BUILDLINK3_MK:=	${XFCE4_NETLOAD_PLUGIN_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	xfce4-netload-plugin
 .endif
 
@@ -11,9 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-netload-plugin}
 BUILDLINK_PACKAGES+=	xfce4-netload-plugin
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-netload-plugin
 
-.if !empty(XFCE4_NETLOAD_PLUGIN_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.xfce4-netload-plugin+=	xfce4-netload-plugin>=0.3.3
-BUILDLINK_ABI_DEPENDS.xfce4-netload-plugin?=	xfce4-netload-plugin>=0.3.3nb4
+.if ${XFCE4_NETLOAD_PLUGIN_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.xfce4-netload-plugin+=	xfce4-netload-plugin>=0.3.3nb4
 BUILDLINK_PKGSRCDIR.xfce4-netload-plugin?=	../../sysutils/xfce4-netload-plugin
 .endif	# XFCE4_NETLOAD_PLUGIN_BUILDLINK3_MK
 
