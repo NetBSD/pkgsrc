@@ -1,24 +1,27 @@
-@comment $NetBSD: PLIST,v 1.3 2005/12/06 18:55:32 rillig Exp $
-bin/wmibar
-bin/wmifs
+@comment $NetBSD: PLIST,v 1.4 2006/10/12 13:16:02 obache Exp $
 bin/wmii
+bin/wmiibar
+bin/wmiifs
+bin/wmiikeys
+bin/wmiimenu
+bin/wmiiplumb
+bin/wmiir
+bin/wmiiwarp
 bin/wmiiwm
-bin/wmikeys
-bin/wmimenu
-bin/wmiplumb
-bin/wmir
-bin/wmiwarp
-man/man1/wmibar.1
-man/man1/wmifs.1
-man/man1/wmii.1
-man/man1/wmiiwm.1
-man/man1/wmikeys.1
-man/man1/wmimenu.1
-man/man1/wmir.1
-share/examples/wmii-3/extern
-share/examples/wmii-3/kmode
-share/examples/wmii-3/quit
-share/examples/wmii-3/status
-share/examples/wmii-3/welcome
-share/examples/wmii-3/wmirc
-@dirrm share/examples/wmii-3
+etc/wmii-2.5/extern
+etc/wmii-2.5/kmode
+etc/wmii-2.5/quit
+etc/wmii-2.5/status
+etc/wmii-2.5/welcome
+etc/wmii-2.5/wmiirc
+share/man/man1/wmii.1
+share/man/man1/wmiibar.1
+share/man/man1/wmiifs.1
+share/man/man1/wmiikeys.1
+share/man/man1/wmiimenu.1
+share/man/man1/wmiir.1
+share/man/man1/wmiiwm.1
+@dirrm share/man/man1
+@exec ${MKDIR} %D/etc/wmii-3
+@dirrm etc/wmii-3
+@dirrm etc/wmii-2.5
