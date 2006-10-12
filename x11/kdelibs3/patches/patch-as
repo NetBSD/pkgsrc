@@ -1,0 +1,22 @@
+$NetBSD: patch-as,v 1.6 2006/10/12 10:31:04 markd Exp $
+
+--- kdeprint/cups/kmcupsmanager.cpp.orig	2006-10-02 06:33:43.000000000 +1300
++++ kdeprint/cups/kmcupsmanager.cpp
+@@ -920,7 +920,7 @@ void KMCupsManager::checkUpdatePossibleI
+ 	kdDebug(500) << "Checking for update possible" << endl;
+ 	delete m_socket;
+         m_socket = new KNetwork::KBufferedSocket;
+-	m_socket->setTimeout( 1 );
++	m_socket->setTimeout( 1500 );
+ 	connect( m_socket, SIGNAL( connected(const KResolverEntry&) ), 
+                 SLOT( slotConnectionSuccess() ) );
+ 	connect( m_socket, SIGNAL( gotError( int ) ), SLOT( slotConnectionFailed( int ) ) );
+@@ -958,7 +958,7 @@ void KMCupsManager::slotConnectionSucces
+ 
+ void KMCupsManager::slotAsyncConnect()
+ {
+-	kdDebug(500) << "Starting async connect" << endl;
++	kdDebug(500) << "Starting async connect to " << CupsInfos::self()->hostaddr() << endl;
+ 	//m_socket->startAsyncConnect();
+         if (CupsInfos::self()->host().startsWith("/"))
+             m_socket->connect( QString(), CupsInfos::self()->host());
