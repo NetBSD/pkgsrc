@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/02 14:24:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/12 11:17:10 markd Exp $
 share/doc/kde/HTML/ko/common/fdl-translated.html
 share/doc/kde/HTML/ko/common/gpl-translated.html
 share/doc/kde/HTML/ko/common/kde-localised.css
@@ -200,6 +200,4 @@ share/locale/ko/LC_MESSAGES/timezones.mo
 share/locale/ko/charset
 share/locale/ko/entry.desktop
 share/locale/ko/flag.png
-@dirrm share/doc/kde/HTML/ko/common
-@dirrm share/doc/kde/HTML/ko
-@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde/HTML/ko/common

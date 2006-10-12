@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -623,6 +623,9 @@ share/doc/kde/HTML/da/kig/man-kig.1.docbook
 share/doc/kde/HTML/da/kinfocenter/blockdevices/common
 share/doc/kde/HTML/da/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/da/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/da/kinfocenter/cdinfo/common
+share/doc/kde/HTML/da/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/da/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/da/kinfocenter/common
 share/doc/kde/HTML/da/kinfocenter/devices/common
 share/doc/kde/HTML/da/kinfocenter/devices/index.cache.bz2
@@ -2196,6 +2199,7 @@ share/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/da/kinfocenter/dma
 @dirrm share/doc/kde/HTML/da/kinfocenter/devices
+@dirrm share/doc/kde/HTML/da/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/da/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/da/kinfocenter
 @dirrm share/doc/kde/HTML/da/kig
@@ -2320,7 +2324,7 @@ share/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/kaddressbook
 @dirrm share/doc/kde/HTML/da/kaboodle
 @dirrm share/doc/kde/HTML/da/juk
-@dirrm share/doc/kde/HTML/da/common
+@comment in kde: @dirrm share/doc/kde/HTML/da/common
 @dirrm share/doc/kde/HTML/da/cervisia
 @dirrm share/doc/kde/HTML/da/blinken
 @dirrm share/doc/kde/HTML/da/atlantik
