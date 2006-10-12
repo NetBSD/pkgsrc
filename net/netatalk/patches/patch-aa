@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2005/07/31 13:19:55 markd Exp $
+$NetBSD: patch-aa,v 1.15 2006/10/12 11:54:49 markd Exp $
 
 --- configure.orig	2005-05-18 10:14:29.000000000 +1200
 +++ configure
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.14 2005/07/31 13:19:55 markd Exp $
  	if test x"$pam_found" = "xyes" -a "x$PAMDIR" = "xNONE"; then
  		{ echo "$as_me:$LINENO: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&5
  echo "$as_me: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&2;}
+@@ -17304,7 +17304,7 @@ if test "${with_spooldir+set}" = set; th
+ 
+ 
+ 	        if test "$withval" = "no"; then
+-        	       if test x"$spool_required" == x"yes"; then
++        	       if test x"$spool_required" = x"yes"; then
+                 	       { { echo "$as_me:$LINENO: error: *** CUPS support requires a spooldir ***" >&5
+ echo "$as_me: error: *** CUPS support requires a spooldir ***" >&2;}
+    { (exit 1); exit 1; }; }
 @@ -18190,7 +18190,7 @@ cat >>confdefs.h <<\_ACEOF
  #define NETBSD 1
  _ACEOF
