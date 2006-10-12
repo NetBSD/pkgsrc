@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2006/08/02 13:48:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2006/10/12 10:37:43 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -1519,6 +1519,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateIndentScriptManagerAbst
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateIndentScriptManagerAbstract.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateJScript-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateJScript.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateJScript.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateJScriptManager-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateJScriptManager.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateJScriptManager.png
@@ -1652,6 +1653,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewEncodingAction.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewFileTypeAction-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewFileTypeAction.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewFileTypeAction.png
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewFunction-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewFunction.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewHighlightAction-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewHighlightAction.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewHighlightAction.png
@@ -1661,6 +1664,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewIndentationAction.p
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewInternal-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewInternal.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewInternal.png
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewObject-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewObject.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewSchemaAction-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewSchemaAction.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKateViewSchemaAction.png
@@ -1691,12 +1696,22 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKate_1_1DocumentExt.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKate_1_1View-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKate_1_1View.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classKate_1_1View.png
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classOutputFunction-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classOutputFunction.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classOutputObject-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classOutputObject.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classRegressionTest-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classRegressionTest.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classRegressionTest.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classScriptIndentConfigPage-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classScriptIndentConfigPage.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classScriptIndentConfigPage.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classSearchCommand-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classSearchCommand.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classSearchCommand.png
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classTestJScriptEnv-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classTestJScriptEnv.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classTestJScriptEnv.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/classes.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/deprecated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/document_8h-source.html
@@ -1853,6 +1868,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/tab_b.gif
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/tab_l.gif
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/tab_r.gif
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/tabs.css
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/test__regression_8cpp-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/test__regression_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/todo.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/html/view_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kate/kate.tag
@@ -3946,6 +3963,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/matichelper_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/matichelper_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/messagewindow_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/messagewindow_8h-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/namespaceKNetwork.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/namespaces.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/networkscanner_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/networkscanner_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/pages.html
