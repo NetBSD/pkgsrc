@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2006/08/02 14:05:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2006/10/12 10:56:36 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -2391,6 +2391,7 @@ share/kde/icons/kdeclassic/16x16/actions/series.png
 share/kde/icons/kdeclassic/16x16/actions/servicenew_kdevelop.png
 share/kde/icons/kdeclassic/16x16/actions/share.png
 share/kde/icons/kdeclassic/16x16/actions/shear.png
+share/kde/icons/kdeclassic/16x16/actions/show_side_panel.png
 share/kde/icons/kdeclassic/16x16/actions/show_table_column.png
 share/kde/icons/kdeclassic/16x16/actions/show_table_row.png
 share/kde/icons/kdeclassic/16x16/actions/signature.png
@@ -2418,6 +2419,7 @@ share/kde/icons/kdeclassic/16x16/actions/tab_left.png
 share/kde/icons/kdeclassic/16x16/actions/tab_new.png
 share/kde/icons/kdeclassic/16x16/actions/tab_new_bg.png
 share/kde/icons/kdeclassic/16x16/actions/tab_remove.png
+share/kde/icons/kdeclassic/16x16/actions/tab_remove_other.png
 share/kde/icons/kdeclassic/16x16/actions/tab_right.png
 share/kde/icons/kdeclassic/16x16/actions/targetnew_kdevelop.png
 share/kde/icons/kdeclassic/16x16/actions/tcenteralign.png
@@ -2459,6 +2461,9 @@ share/kde/icons/kdeclassic/16x16/actions/vertical_text.png
 share/kde/icons/kdeclassic/16x16/actions/view_bottom.png
 share/kde/icons/kdeclassic/16x16/actions/view_choose.png
 share/kde/icons/kdeclassic/16x16/actions/view_detailed.png
+share/kde/icons/kdeclassic/16x16/actions/view_fit_height.png
+share/kde/icons/kdeclassic/16x16/actions/view_fit_width.png
+share/kde/icons/kdeclassic/16x16/actions/view_fit_window.png
 share/kde/icons/kdeclassic/16x16/actions/view_icon.png
 share/kde/icons/kdeclassic/16x16/actions/view_left_right.png
 share/kde/icons/kdeclassic/16x16/actions/view_multicolumn.png
@@ -2748,6 +2753,7 @@ share/kde/icons/kdeclassic/16x16/apps/panel_settings.png
 share/kde/icons/kdeclassic/16x16/apps/password.png
 share/kde/icons/kdeclassic/16x16/apps/penguin.png
 share/kde/icons/kdeclassic/16x16/apps/personal.png
+share/kde/icons/kdeclassic/16x16/apps/photobook.png
 share/kde/icons/kdeclassic/16x16/apps/plan.png
 share/kde/icons/kdeclassic/16x16/apps/printmgr.png
 share/kde/icons/kdeclassic/16x16/apps/proxy.png
@@ -3516,6 +3522,7 @@ share/kde/icons/kdeclassic/22x22/actions/shadowR.png
 share/kde/icons/kdeclassic/22x22/actions/shadowRB.png
 share/kde/icons/kdeclassic/22x22/actions/shadowRU.png
 share/kde/icons/kdeclassic/22x22/actions/shadowU.png
+share/kde/icons/kdeclassic/22x22/actions/show_side_panel.png
 share/kde/icons/kdeclassic/22x22/actions/show_table_column.png
 share/kde/icons/kdeclassic/22x22/actions/show_table_row.png
 share/kde/icons/kdeclassic/22x22/actions/showmenu.png
@@ -3543,6 +3550,7 @@ share/kde/icons/kdeclassic/22x22/actions/tab_duplicate.png
 share/kde/icons/kdeclassic/22x22/actions/tab_new.png
 share/kde/icons/kdeclassic/22x22/actions/tab_new_bg.png
 share/kde/icons/kdeclassic/22x22/actions/tab_remove.png
+share/kde/icons/kdeclassic/22x22/actions/tab_remove_other.png
 share/kde/icons/kdeclassic/22x22/actions/text.png
 share/kde/icons/kdeclassic/22x22/actions/text_block.png
 share/kde/icons/kdeclassic/22x22/actions/text_bold.png
@@ -3596,6 +3604,9 @@ share/kde/icons/kdeclassic/22x22/actions/vertical_text.png
 share/kde/icons/kdeclassic/22x22/actions/view_bottom.png
 share/kde/icons/kdeclassic/22x22/actions/view_choose.png
 share/kde/icons/kdeclassic/22x22/actions/view_detailed.png
+share/kde/icons/kdeclassic/22x22/actions/view_fit_height.png
+share/kde/icons/kdeclassic/22x22/actions/view_fit_width.png
+share/kde/icons/kdeclassic/22x22/actions/view_fit_window.png
 share/kde/icons/kdeclassic/22x22/actions/view_icon.png
 share/kde/icons/kdeclassic/22x22/actions/view_left_right.png
 share/kde/icons/kdeclassic/22x22/actions/view_multicolumn.png
@@ -3624,7 +3635,9 @@ share/kde/icons/kdeclassic/22x22/apps/kivio.png
 share/kde/icons/kdeclassic/22x22/apps/konqsidebar_mediaplayer.png
 share/kde/icons/kdeclassic/22x22/apps/kpilot.png
 share/kde/icons/kdeclassic/22x22/apps/kugar.png
+share/kde/icons/kdeclassic/22x22/apps/kview.png
 share/kde/icons/kdeclassic/22x22/apps/noatun.png
+share/kde/icons/kdeclassic/22x22/apps/photobook.png
 share/kde/icons/kdeclassic/22x22/mimetypes/empty.png
 share/kde/icons/kdeclassic/22x22/mimetypes/karbon_karbon.png
 share/kde/icons/kdeclassic/22x22/mimetypes/kchart_chrt.png
@@ -3846,6 +3859,7 @@ share/kde/icons/kdeclassic/32x32/actions/rsub.png
 share/kde/icons/kdeclassic/32x32/actions/rsup.png
 share/kde/icons/kdeclassic/32x32/actions/run.png
 share/kde/icons/kdeclassic/32x32/actions/share.png
+share/kde/icons/kdeclassic/32x32/actions/show_side_panel.png
 share/kde/icons/kdeclassic/32x32/actions/signature.png
 share/kde/icons/kdeclassic/32x32/actions/sort_az.png
 share/kde/icons/kdeclassic/32x32/actions/spellcheck.png
@@ -3861,6 +3875,7 @@ share/kde/icons/kdeclassic/32x32/actions/tab_duplicate.png
 share/kde/icons/kdeclassic/32x32/actions/tab_new.png
 share/kde/icons/kdeclassic/32x32/actions/tab_new_bg.png
 share/kde/icons/kdeclassic/32x32/actions/tab_remove.png
+share/kde/icons/kdeclassic/32x32/actions/tab_remove_other.png
 share/kde/icons/kdeclassic/32x32/actions/text_block.png
 share/kde/icons/kdeclassic/32x32/actions/text_bold.png
 share/kde/icons/kdeclassic/32x32/actions/text_center.png
@@ -3880,6 +3895,9 @@ share/kde/icons/kdeclassic/32x32/actions/up.png
 share/kde/icons/kdeclassic/32x32/actions/view_bottom.png
 share/kde/icons/kdeclassic/32x32/actions/view_choose.png
 share/kde/icons/kdeclassic/32x32/actions/view_detailed.png
+share/kde/icons/kdeclassic/32x32/actions/view_fit_height.png
+share/kde/icons/kdeclassic/32x32/actions/view_fit_width.png
+share/kde/icons/kdeclassic/32x32/actions/view_fit_window.png
 share/kde/icons/kdeclassic/32x32/actions/view_icon.png
 share/kde/icons/kdeclassic/32x32/actions/view_left_right.png
 share/kde/icons/kdeclassic/32x32/actions/view_multicolumn.png
@@ -4144,6 +4162,7 @@ share/kde/icons/kdeclassic/32x32/apps/package_wordprocessing.png
 share/kde/icons/kdeclassic/32x32/apps/password.png
 share/kde/icons/kdeclassic/32x32/apps/penguin.png
 share/kde/icons/kdeclassic/32x32/apps/personal.png
+share/kde/icons/kdeclassic/32x32/apps/photobook.png
 share/kde/icons/kdeclassic/32x32/apps/plan.png
 share/kde/icons/kdeclassic/32x32/apps/printmgr.png
 share/kde/icons/kdeclassic/32x32/apps/proxy.png
