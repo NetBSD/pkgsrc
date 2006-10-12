@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2006/09/10 22:59:16 adam Exp $
+$NetBSD: patch-ab,v 1.7 2006/10/12 19:18:41 adam Exp $
 
---- configure.orig	2006-09-07 14:25:34.000000000 +0200
+--- configure.orig	2006-10-11 09:53:43.000000000 +0200
 +++ configure
-@@ -32616,6 +32616,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
+@@ -32608,6 +32608,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
    gimp_ok=yes
  fi
  rm -f conftest*
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.6 2006/09/10 22:59:16 adam Exp $
  
        if test $gimp_ok = yes; then
  
-@@ -32624,7 +32625,6 @@ cat >>confdefs.h <<\_ACEOF
+@@ -32616,7 +32617,6 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
        fi
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.6 2006/09/10 22:59:16 adam Exp $
    { echo "$as_me:$LINENO: result: $gimp_ok" >&5
  echo "${ECHO_T}$gimp_ok" >&6; }
    if test $gimp_ok = no; then
-@@ -34706,7 +34706,7 @@ echo $ECHO_N "checking if libexif is ver
+@@ -34698,7 +34698,7 @@ echo $ECHO_N "checking if libexif is ver
    fi
    { echo "$as_me:$LINENO: result: $have_exif_0_6" >&5
  echo "${ECHO_T}$have_exif_0_6" >&6; }
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.6 2006/09/10 22:59:16 adam Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_EXIF_0_6 1
-@@ -35529,7 +35529,7 @@ else
+@@ -35521,7 +35521,7 @@ else
  fi
  
  
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.6 2006/09/10 22:59:16 adam Exp $
    BUILD_PRINT_TRUE=
    BUILD_PRINT_FALSE='#'
  else
-@@ -37509,7 +37509,7 @@ else
+@@ -37590,7 +37590,7 @@ else
  fi
  
  
@@ -45,7 +45,7 @@ $NetBSD: patch-ab,v 1.6 2006/09/10 22:59:16 adam Exp $
    BUILD_SCRIPT_FU_TRUE=
    BUILD_SCRIPT_FU_FALSE='#'
  else
-@@ -37917,7 +37917,7 @@ fi
+@@ -37998,7 +37998,7 @@ fi
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
