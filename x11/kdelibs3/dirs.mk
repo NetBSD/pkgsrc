@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.9 2006/05/15 10:57:24 markd Exp $
+# $NetBSD: dirs.mk,v 1.10 2006/10/12 10:31:04 markd Exp $
 #
 
 .if !defined(DIRS_KDE3_MK)
@@ -21,9 +21,12 @@ KDE3_DIRS+=	share/doc/kde/HTML/en/common
 KDE3_DIRS+=	share/doc/kde/HTML/en/kcontrol
 KDE3_DIRS+=	share/doc/kde/HTML/en/kinfocenter
 
-.for lang in cs da de en_GB es et eu fi fr he hr hu it ja nl pt pt_BR \
-	ro ru sk sl sr sv tr uk zh_CN zh_TW
+.for lang in af ar az bg bn br bs ca cs cy da de el en_GB eo es et eu \
+	fa fi fr fy ga gl he hi hr hu is it ja kk km ko lt lv mk mn ms \
+	nb nds nl nn pa pl pt pt_BR ro ru rw se sk sl sr sr@Latn ss sv \
+	ta tg tr uk uz vi zh_CN zh_TW
 KDE3_DIRS+=	share/doc/kde/HTML/${lang}
+KDE3_DIRS+=	share/doc/kde/HTML/${lang}/common
 .endfor
 
 KDE3_DIRS+=	share/kde
