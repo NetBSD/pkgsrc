@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/08/02 14:24:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -359,6 +359,10 @@ share/doc/kde/HTML/fr/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/fr/kdebugdialog/index.docbook
 share/doc/kde/HTML/fr/kdelibs/man-artsmessage.1.docbook
 share/doc/kde/HTML/fr/kdelibs/man-checkXML.1.docbook
+share/doc/kde/HTML/fr/kdelibs/man-dcop.1.docbook
+share/doc/kde/HTML/fr/kdelibs/man-kbuildsycoca.8.docbook
+share/doc/kde/HTML/fr/kdelibs/man-kdeoptions.7.docbook
+share/doc/kde/HTML/fr/kdelibs/man-qtoptions.7.docbook
 share/doc/kde/HTML/fr/kdelirc/irkick/common
 share/doc/kde/HTML/fr/kdelirc/irkick/index.cache.bz2
 share/doc/kde/HTML/fr/kdelirc/irkick/index.docbook
@@ -417,9 +421,6 @@ share/doc/kde/HTML/fr/kdf/kdf_config.png
 share/doc/kde/HTML/fr/kdict/common
 share/doc/kde/HTML/fr/kdict/index.cache.bz2
 share/doc/kde/HTML/fr/kdict/index.docbook
-share/doc/kde/HTML/fr/kdm/common
-share/doc/kde/HTML/fr/kdm/index.cache.bz2
-share/doc/kde/HTML/fr/kdm/index.docbook
 share/doc/kde/HTML/fr/kdm/kdmrc-ref.docbook
 share/doc/kde/HTML/fr/kdvi/common
 share/doc/kde/HTML/fr/kdvi/index.cache.bz2
@@ -767,10 +768,7 @@ share/doc/kde/HTML/fr/kjots/index.docbook
 share/doc/kde/HTML/fr/kjumpingcube/common
 share/doc/kde/HTML/fr/kjumpingcube/index.cache.bz2
 share/doc/kde/HTML/fr/kjumpingcube/index.docbook
-share/doc/kde/HTML/fr/kleopatra/common
 share/doc/kde/HTML/fr/kleopatra/entities.docbook
-share/doc/kde/HTML/fr/kleopatra/index.cache.bz2
-share/doc/kde/HTML/fr/kleopatra/index.docbook
 share/doc/kde/HTML/fr/klettres/common
 share/doc/kde/HTML/fr/klettres/index.cache.bz2
 share/doc/kde/HTML/fr/klettres/index.docbook
@@ -871,6 +869,9 @@ share/doc/kde/HTML/fr/kmplot/menu.docbook
 share/doc/kde/HTML/fr/kmplot/reference.docbook
 share/doc/kde/HTML/fr/kmplot/settingsdlg.png
 share/doc/kde/HTML/fr/kmplot/using.docbook
+share/doc/kde/HTML/fr/knetworkconf/common
+share/doc/kde/HTML/fr/knetworkconf/index.cache.bz2
+share/doc/kde/HTML/fr/knetworkconf/index.docbook
 share/doc/kde/HTML/fr/knewsticker/common
 share/doc/kde/HTML/fr/knewsticker/contextmenu.png
 share/doc/kde/HTML/fr/knewsticker/index.cache.bz2
@@ -2221,6 +2222,7 @@ share/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/knotes
 @dirrm share/doc/kde/HTML/fr/knode
 @dirrm share/doc/kde/HTML/fr/knewsticker
+@dirrm share/doc/kde/HTML/fr/knetworkconf
 @dirrm share/doc/kde/HTML/fr/kmplot
 @dirrm share/doc/kde/HTML/fr/kmouth
 @dirrm share/doc/kde/HTML/fr/kmousetool
@@ -2381,7 +2383,7 @@ share/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kaddressbook
 @dirrm share/doc/kde/HTML/fr/kaboodle
 @dirrm share/doc/kde/HTML/fr/juk
-@dirrm share/doc/kde/HTML/fr/common
+@comment in kde: @dirrm share/doc/kde/HTML/fr/common
 @dirrm share/doc/kde/HTML/fr/cervisia
 @dirrm share/doc/kde/HTML/fr/atlantik
 @dirrm share/doc/kde/HTML/fr/artsbuilder/images

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/08/02 14:24:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -159,6 +159,7 @@ share/doc/kde/HTML/de/kbabel/catman.docbook
 share/doc/kde/HTML/de/kbabel/faq.docbook
 share/doc/kde/HTML/de/kbabel/glossary.docbook
 share/doc/kde/HTML/de/kbabel/kbabeldict.docbook
+share/doc/kde/HTML/de/kbabel/man-catalogmanager.1.docbook
 share/doc/kde/HTML/de/kbabel/menu.docbook
 share/doc/kde/HTML/de/kbabel/preferences.docbook
 share/doc/kde/HTML/de/kbabel/using.docbook
@@ -444,9 +445,35 @@ share/doc/kde/HTML/de/kenolaba/common
 share/doc/kde/HTML/de/kenolaba/index.cache.bz2
 share/doc/kde/HTML/de/kenolaba/index.docbook
 share/doc/kde/HTML/de/kenolaba/man-kenolaba.6.docbook
+share/doc/kde/HTML/de/kfilereplace/addstringsdialog_window.png
+share/doc/kde/HTML/de/kfilereplace/backup_option.png
+share/doc/kde/HTML/de/kfilereplace/casesensitive_option.png
+share/doc/kde/HTML/de/kfilereplace/command_option.png
 share/doc/kde/HTML/de/kfilereplace/common
+share/doc/kde/HTML/de/kfilereplace/edit.png
+share/doc/kde/HTML/de/kfilereplace/edit_add.png
+share/doc/kde/HTML/de/kfilereplace/edit_remove.png
+share/doc/kde/HTML/de/kfilereplace/eraser.png
+share/doc/kde/HTML/de/kfilereplace/filereplace.png
+share/doc/kde/HTML/de/kfilereplace/filesearch.png
+share/doc/kde/HTML/de/kfilereplace/filesimulate.png
 share/doc/kde/HTML/de/kfilereplace/index.cache.bz2
 share/doc/kde/HTML/de/kfilereplace/index.docbook
+share/doc/kde/HTML/de/kfilereplace/invert.png
+share/doc/kde/HTML/de/kfilereplace/kfr_standalone_main_window_1.png
+share/doc/kde/HTML/de/kfilereplace/optionsdialog_main_window_1.png
+share/doc/kde/HTML/de/kfilereplace/optionsdialog_main_window_2.png
+share/doc/kde/HTML/de/kfilereplace/project.png
+share/doc/kde/HTML/de/kfilereplace/projectdialog_main_window_1.png
+share/doc/kde/HTML/de/kfilereplace/projectdialog_main_window_2.png
+share/doc/kde/HTML/de/kfilereplace/recursive_option.png
+share/doc/kde/HTML/de/kfilereplace/regularexpression_option.png
+share/doc/kde/HTML/de/kfilereplace/report_example.png
+share/doc/kde/HTML/de/kfilereplace/results_view.png
+share/doc/kde/HTML/de/kfilereplace/stop.png
+share/doc/kde/HTML/de/kfilereplace/strings_view.png
+share/doc/kde/HTML/de/kfilereplace/toolbar.png
+share/doc/kde/HTML/de/kfilereplace/unsortedList.png
 share/doc/kde/HTML/de/kfind/common
 share/doc/kde/HTML/de/kfind/index.cache.bz2
 share/doc/kde/HTML/de/kfind/index.docbook
@@ -774,6 +801,7 @@ share/doc/kde/HTML/de/klines/index.docbook
 share/doc/kde/HTML/de/klinkstatus/common
 share/doc/kde/HTML/de/klinkstatus/index.cache.bz2
 share/doc/kde/HTML/de/klinkstatus/index.docbook
+share/doc/kde/HTML/de/klinkstatus/screenshot.png
 share/doc/kde/HTML/de/klipper/common
 share/doc/kde/HTML/de/klipper/index.cache.bz2
 share/doc/kde/HTML/de/klipper/index.docbook
@@ -862,6 +890,20 @@ share/doc/kde/HTML/de/kmplot/using.docbook
 share/doc/kde/HTML/de/knetattach/common
 share/doc/kde/HTML/de/knetattach/index.cache.bz2
 share/doc/kde/HTML/de/knetattach/index.docbook
+share/doc/kde/HTML/de/knetworkconf/01.png
+share/doc/kde/HTML/de/knetworkconf/02.png
+share/doc/kde/HTML/de/knetworkconf/03.png
+share/doc/kde/HTML/de/knetworkconf/04.png
+share/doc/kde/HTML/de/knetworkconf/05.png
+share/doc/kde/HTML/de/knetworkconf/06.png
+share/doc/kde/HTML/de/knetworkconf/07.png
+share/doc/kde/HTML/de/knetworkconf/08.png
+share/doc/kde/HTML/de/knetworkconf/09.png
+share/doc/kde/HTML/de/knetworkconf/11.png
+share/doc/kde/HTML/de/knetworkconf/about1.png
+share/doc/kde/HTML/de/knetworkconf/common
+share/doc/kde/HTML/de/knetworkconf/index.cache.bz2
+share/doc/kde/HTML/de/knetworkconf/index.docbook
 share/doc/kde/HTML/de/knewsticker/common
 share/doc/kde/HTML/de/knewsticker/contextmenu.png
 share/doc/kde/HTML/de/knewsticker/index.cache.bz2
@@ -2369,6 +2411,7 @@ share/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/knotes
 @dirrm share/doc/kde/HTML/de/knode
 @dirrm share/doc/kde/HTML/de/knewsticker
+@dirrm share/doc/kde/HTML/de/knetworkconf
 @dirrm share/doc/kde/HTML/de/knetattach
 @dirrm share/doc/kde/HTML/de/kmplot
 @dirrm share/doc/kde/HTML/de/kmouth
@@ -2526,7 +2569,7 @@ share/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kaddressbook
 @dirrm share/doc/kde/HTML/de/kaboodle
 @dirrm share/doc/kde/HTML/de/juk
-@dirrm share/doc/kde/HTML/de/common
+@comment in kde: @dirrm share/doc/kde/HTML/de/common
 @dirrm share/doc/kde/HTML/de/cervisia
 @dirrm share/doc/kde/HTML/de/blinken
 @dirrm share/doc/kde/HTML/de/atlantik

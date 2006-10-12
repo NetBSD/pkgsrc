@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/02 14:24:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/10/12 11:17:10 markd Exp $
 share/locale/mk/LC_MESSAGES/akregator.mo
 share/locale/mk/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/mk/LC_MESSAGES/alsaplayerui.mo
@@ -44,6 +44,7 @@ share/locale/mk/LC_MESSAGES/kabc_dir.mo
 share/locale/mk/LC_MESSAGES/kabc_file.mo
 share/locale/mk/LC_MESSAGES/kabc_ldapkio.mo
 share/locale/mk/LC_MESSAGES/kabc_net.mo
+share/locale/mk/LC_MESSAGES/kabc_slox.mo
 share/locale/mk/LC_MESSAGES/kabc_sql.mo
 share/locale/mk/LC_MESSAGES/kabcformat_binary.mo
 share/locale/mk/LC_MESSAGES/kaboodle.mo
@@ -514,6 +515,7 @@ share/locale/mk/LC_MESSAGES/tippecanoe.mo
 share/locale/mk/LC_MESSAGES/trashapplet.mo
 share/locale/mk/LC_MESSAGES/tyler.mo
 share/locale/mk/LC_MESSAGES/uachangerplugin.mo
+share/locale/mk/LC_MESSAGES/umbrello.mo
 share/locale/mk/LC_MESSAGES/useraccount.mo
 share/locale/mk/LC_MESSAGES/validatorsplugin.mo
 share/locale/mk/LC_MESSAGES/wakeup.mo

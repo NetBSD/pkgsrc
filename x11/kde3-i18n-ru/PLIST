@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/08/02 14:24:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/10/12 11:17:15 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -52,6 +52,9 @@ share/doc/kde/HTML/ru/kalzium/index.docbook
 share/doc/kde/HTML/ru/kamera/common
 share/doc/kde/HTML/ru/kamera/index.cache.bz2
 share/doc/kde/HTML/ru/kamera/index.docbook
+share/doc/kde/HTML/ru/kanagram/common
+share/doc/kde/HTML/ru/kanagram/index.cache.bz2
+share/doc/kde/HTML/ru/kanagram/index.docbook
 share/doc/kde/HTML/ru/kandy/common
 share/doc/kde/HTML/ru/kandy/index.cache.bz2
 share/doc/kde/HTML/ru/kandy/index.docbook
@@ -108,6 +111,9 @@ share/doc/kde/HTML/ru/kbabel/using.docbook
 share/doc/kde/HTML/ru/kbattleship/common
 share/doc/kde/HTML/ru/kbattleship/index.cache.bz2
 share/doc/kde/HTML/ru/kbattleship/index.docbook
+share/doc/kde/HTML/ru/kblackbox/common
+share/doc/kde/HTML/ru/kblackbox/index.cache.bz2
+share/doc/kde/HTML/ru/kblackbox/index.docbook
 share/doc/kde/HTML/ru/kbounce/common
 share/doc/kde/HTML/ru/kbounce/index.cache.bz2
 share/doc/kde/HTML/ru/kbounce/index.docbook
@@ -425,6 +431,9 @@ share/doc/kde/HTML/ru/kfloppy/index.docbook
 share/doc/kde/HTML/ru/kgamma/common
 share/doc/kde/HTML/ru/kgamma/index.cache.bz2
 share/doc/kde/HTML/ru/kgamma/index.docbook
+share/doc/kde/HTML/ru/kgeography/common
+share/doc/kde/HTML/ru/kgeography/index.cache.bz2
+share/doc/kde/HTML/ru/kgeography/index.docbook
 share/doc/kde/HTML/ru/kget/common
 share/doc/kde/HTML/ru/kget/index.cache.bz2
 share/doc/kde/HTML/ru/kget/index.docbook
@@ -1938,6 +1947,7 @@ share/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kgpg
 @dirrm share/doc/kde/HTML/ru/kghostview
 @dirrm share/doc/kde/HTML/ru/kget
+@dirrm share/doc/kde/HTML/ru/kgeography
 @dirrm share/doc/kde/HTML/ru/kgamma
 @dirrm share/doc/kde/HTML/ru/kfloppy
 @dirrm share/doc/kde/HTML/ru/kfind
@@ -2022,6 +2032,7 @@ share/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kbugbuster
 @dirrm share/doc/kde/HTML/ru/kbruch
 @dirrm share/doc/kde/HTML/ru/kbounce
+@dirrm share/doc/kde/HTML/ru/kblackbox
 @dirrm share/doc/kde/HTML/ru/kbattleship
 @dirrm share/doc/kde/HTML/ru/kbabel
 @dirrm share/doc/kde/HTML/ru/katomic
@@ -2031,12 +2042,13 @@ share/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/karm
 @dirrm share/doc/kde/HTML/ru/kappfinder
 @dirrm share/doc/kde/HTML/ru/kandy
+@dirrm share/doc/kde/HTML/ru/kanagram
 @dirrm share/doc/kde/HTML/ru/kamera
 @dirrm share/doc/kde/HTML/ru/kalzium
 @dirrm share/doc/kde/HTML/ru/kaddressbook
 @dirrm share/doc/kde/HTML/ru/kaboodle
 @dirrm share/doc/kde/HTML/ru/juk
-@dirrm share/doc/kde/HTML/ru/common
+@comment in kde: @dirrm share/doc/kde/HTML/ru/common
 @dirrm share/doc/kde/HTML/ru/cervisia
 @dirrm share/doc/kde/HTML/ru/atlantik
 @dirrm share/doc/kde/HTML/ru/artsbuilder
