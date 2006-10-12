@@ -1,7 +1,2 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/13 05:30:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/12 13:38:35 joerg Exp $
 bin/hugelatex
-${PKG_TEXMFPREFIX}/web2c/hugelatex.fmt
-${PKG_TEXMFPREFIX}/web2c/hugelatex.log
-@exec cp %D/${PKG_TEXMFPREFIX}/web2c/texmf.cnf %D/${PKG_TEXMFPREFIX}/web2c/texmf.cnf-before-hugelatex
-${PKG_TEXMFPREFIX}/web2c/texmf.cnf
-@unexec mv %D/${PKG_TEXMFPREFIX}/web2c/texmf.cnf-before-hugelatex %D/${PKG_TEXMFPREFIX}/web2c/texmf.cnf
