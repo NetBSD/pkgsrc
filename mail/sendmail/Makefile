@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2006/09/05 20:01:37 tv Exp $
+# $NetBSD: Makefile,v 1.93 2006/10/12 21:04:27 tv Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -14,6 +14,16 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 SMRSH_CMDDIR?=	${PREFIX}/libexec/sm.bin
 PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR:Q}
 RCD_SCRIPTS=	sendmail smmsp
+
+# Not OWN_DIRS, so that the admin doesn't get a suggestion to delete the
+# queue dirs if they are nonempty at deinstall (probably undesirable).
+#
+MAKE_DIRS_PERMS+=	/var/spool/clientmqueue smmsp smmsp 0770
+MAKE_DIRS_PERMS+=	/var/spool/mqueue ${ROOT_USER} ${ROOT_GROUP} 0755
+
+PKG_GROUPS=		smmsp
+PKG_USERS=		smmsp:smmsp
+PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -91,10 +101,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sendmail/SECURITY ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKSRC}/doc/op/op.me ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKSRC}/doc/op/op.ps ${PREFIX}/share/doc/sendmail
-
-PKG_GROUPS=		smmsp
-PKG_USERS=		smmsp:smmsp
-PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
 .include "../../mk/bsd.pkg.mk"
 

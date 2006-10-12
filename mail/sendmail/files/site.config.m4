@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4,v 1.5 2006/06/08 02:26:32 jlam Exp $
+# $NetBSD: site.config.m4,v 1.6 2006/10/12 21:04:27 tv Exp $
 
 # pathnames specific to pkgsrc
 #
@@ -16,5 +16,9 @@ define(`confMAN3EXT', `3')
 define(`confMAN4EXT', `4')
 define(`confMAN5EXT', `5')
 define(`confMAN8EXT', `8')
-APPENDDEF(`confENVDEF', `-I${PREFIX}/include')
+APPENDDEF(`confENVDEF', `-I${PREFIX}/include -DSMRSH_CMDDIR=${SMRSH_CMDDIR}')
 APPENDDEF(`confLIBS', `-L${PREFIX}/lib')
+
+# the following are handled by pkgsrc
+define(`confINST_DEP',`')
+define(`confNO_STATISTICS_INSTALL')
