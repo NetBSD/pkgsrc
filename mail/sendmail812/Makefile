@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/09/05 20:06:06 tv Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/12 21:05:25 tv Exp $
 
 .include "options.mk"
 .include "../../mail/sendmail812/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	The well known Mail Transport Agent
 HAS_SIG=	yes
 
@@ -16,6 +16,12 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
 PKG_GECOS.smmsp=	Sendmail Message Submission Program
+
+# Not OWN_DIRS, so that the admin doesn't get a suggestion to delete the
+# queue dirs if they are nonempty at deinstall (probably undesirable).
+#
+MAKE_DIRS_PERMS+=	/var/spool/clientmqueue smmsp smmsp 0770
+MAKE_DIRS_PERMS+=	/var/spool/mqueue ${ROOT_USER} ${ROOT_GROUP} 0755
 
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)

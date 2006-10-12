@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/30 19:56:44 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/12 21:05:25 tv Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -8,16 +8,16 @@ lib/libsm.a
 lib/libsmutil.a
 libexec/sendmail/sendmail
 libexec/sendmail/smrsh
-man/cat1/mailq.0
-man/cat1/newaliases.0
-man/cat1/vacation.0
-man/cat5/aliases.0
-man/cat8/editmap.0
-man/cat8/mailstats.0
-man/cat8/makemap.0
-man/cat8/praliases.0
-man/cat8/sendmail.0
-man/cat8/smrsh.0
+man/man1/mailq.1
+man/man1/newaliases.1
+man/man1/vacation.1
+man/man5/aliases.5
+man/man8/editmap.8
+man/man8/mailstats.8
+man/man8/makemap.8
+man/man8/praliases.8
+man/man8/sendmail.8
+man/man8/smrsh.8
 sbin/editmap
 sbin/mailstats
 sbin/makemap
