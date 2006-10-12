@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/08/02 14:24:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/et/KRegExpEditor/common
 share/doc/kde/HTML/et/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/et/KRegExpEditor/index.docbook
@@ -963,6 +963,7 @@ share/doc/kde/HTML/et/kontact/index.docbook
 share/doc/kde/HTML/et/kooka/common
 share/doc/kde/HTML/et/kooka/index.cache.bz2
 share/doc/kde/HTML/et/kooka/index.docbook
+share/doc/kde/HTML/et/kopete/chatstyle.docbook
 share/doc/kde/HTML/et/kopete/common
 share/doc/kde/HTML/et/kopete/index.cache.bz2
 share/doc/kde/HTML/et/kopete/index.docbook
@@ -2194,7 +2195,7 @@ share/locale/et/flag.png
 @dirrm share/doc/kde/HTML/et/kaboodle
 @dirrm share/doc/kde/HTML/et/juk
 @dirrm share/doc/kde/HTML/et/flashkard
-@dirrm share/doc/kde/HTML/et/common
+@comment in kde: @dirrm share/doc/kde/HTML/et/common
 @dirrm share/doc/kde/HTML/et/cervisia
 @dirrm share/doc/kde/HTML/et/blinken
 @dirrm share/doc/kde/HTML/et/atlantik
