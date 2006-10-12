@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2006/09/27 15:18:15 joerg Exp $
+# $NetBSD: Makefile,v 1.445 2006/10/12 11:46:45 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -146,6 +146,7 @@ SUBDIR+=	kde3-i18n-vi
 SUBDIR+=	kde3-i18n-zh_CN
 SUBDIR+=	kde3-i18n-zh_TW
 SUBDIR+=	kdebase3
+SUBDIR+=	kdebindings-ruby
 SUBDIR+=	kdelibdocs3
 SUBDIR+=	kdelibs3
 SUBDIR+=	keylaunch
