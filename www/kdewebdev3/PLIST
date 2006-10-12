@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/06/01 13:50:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/10/12 10:40:22 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -208,6 +208,7 @@ share/kde/applnk/.hidden/kmdr-executor.desktop
 share/kde/apps/kafkapart/entities
 share/kde/apps/kafkapart/pics/comment.png
 share/kde/apps/kafkapart/pics/php.png
+share/kde/apps/katepart/syntax/kommander.xml
 share/kde/apps/kfilereplace/kfilereplaceui.rc
 share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/back.png
 share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/backup_option.png
