@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1480 2006/10/12 20:41:42 tv Exp $
+>$NetBSD: CHANGES-2006,v 1.1481 2006/10/12 20:52:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/fann-devel version 2.1.0.20061012 [gdt 2006-10-12]
 	Updated graphics/gimp24 to 2.3.12 [adam 2006-10-12]
 	Removed mail/libmilter812 [tv 2006-10-12]
+	Added time/ruby-tzinfo version 0.3.2 [minskim 2006-10-12]
