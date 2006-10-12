@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/09 10:48:41 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/12 14:03:08 drochner Exp $
 #
 
 DISTNAME=		exiv2-0.11
@@ -17,4 +17,5 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	config/exiv2.pc.in
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
