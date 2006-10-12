@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.10 2006/10/02 15:42:47 rillig Exp $
+# $NetBSD: configure.mk,v 1.11 2006/10/12 17:57:05 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -32,9 +32,7 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 .if defined(USE_PKGLOCALEDIR)
 .  include "${PKGSRCDIR}/mk/configure/replace-localedir.mk"
 .endif
-.if defined(HAS_CONFIGURE)
-.  include "${.PARSEDIR}/check-portability.mk"
-.endif
+.include "${.PARSEDIR}/check-portability.mk"
 
 ######################################################################
 ### configure (PUBLIC)
