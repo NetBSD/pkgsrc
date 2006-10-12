@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/12 13:16:02 obache Exp $
 #
 
-DISTNAME=	wmii-20051114
-PKGREVISION=	1
+DISTNAME=	wmii-2.5.2
 CATEGORIES=	wm x11
-MASTER_SITES=	http://wmii.de/snaps/
+MASTER_SITES=	http://wmii.de/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wmii.de/
@@ -16,11 +15,21 @@ NO_CONFIGURE=		yes
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
-SUBST_CLASSES+=		vars
+SUBST_CLASSES+=		vars pfx
 SUBST_STAGE.vars=	post-patch
 SUBST_FILES.vars=	cmd/wm/wmii rc/* cmd/wm/wmii.1
 SUBST_SED.vars=		-e 's|CONFPREFIX|${PREFIX}/share/examples|g'
 SUBST_SED.vars+=	-e 's|9PREFIX|${PREFIX}|g'
+
+SUBST_STAGE.pfx = post-patch
+SUBST_FILES.pfx = config.mk
+SUBST_SED.pfx = -e s,/usr/local,${PREFIX},g
+SUBST_SED.pfx+= -e 's|/usr/X11R6|${X11BASE}|g'
+SUBST_SED.pfx+= -e 's|/usr/X11R6|${X11BASE}|g'
+SUBST_SED.pfx+= -e 's|CFLAGS = -O0 -g -Wall|CFLAGS+=|g'
+SUBST_SED.pfx+= -e 's|-g||g'
+SUBST_SED.pfx+= -e 's|/9||g'
+SUBST_SED.pfx+= -e 's|cc|${CC}|g'
 
 PKG_SYSCONFSUBDIR=	wmii-3
 EGDIR=			${PREFIX}/share/examples/wmii-3
