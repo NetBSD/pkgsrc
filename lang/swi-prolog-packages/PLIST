@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/02 15:15:36 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/12 14:14:13 joerg Exp $
 bin/xpce
 bin/xpce-client
 lib/swi-prolog-${PKGVERSION}/Makefile
-lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xpce
+lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/xpce
 lib/swi-prolog-${PKGVERSION}/include/SWI-cpp.h
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/cgi.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/files.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/memfile.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/mime.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/rdf_db.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/readutil.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/rlimit.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/sgml2pl.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/socket.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/table.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/time.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/unix.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/cgi.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/files.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/memfile.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/mime.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/rdf_db.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/readutil.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/rlimit.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/sgml2pl.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/socket.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/table.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/time.so
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/unix.so
 lib/swi-prolog-${PKGVERSION}/library/DTD/HTML4.dcl
 lib/swi-prolog-${PKGVERSION}/library/DTD/HTML4.dtd
 lib/swi-prolog-${PKGVERSION}/library/DTD/HTML4.soc
@@ -110,7 +110,7 @@ lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/appl-help/help.hlp
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/appl-help/pcedraw.hlp
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/appl-help/pcefaq.hlp
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/appl-help/plprefs.hlp
-lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bin/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xpce-client
+lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/xpce-client
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/16x16/alert.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/16x16/arrow_length.xpm
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/16x16/arrow_wing.xpm
@@ -659,7 +659,7 @@ lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/include/pce/When.h
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/include/pce/While.h
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/include/pce/Window.h
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/include/pce/WindowDecorator.h
-lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf/pl2xpce.so
+lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/pl2xpce.so
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/faq/faq.html
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/reference/bug_fixes.doc
 lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/reference/changes.doc
@@ -1266,13 +1266,13 @@ man/man1/xpce.1
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/reference
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/faq
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf
+@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/include/pce
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/patterns
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/32x32
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/16x16
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bin/${MACHINE_ARCH}-${LOWER_OPSYS}elf
+@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/appl-help
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/CXX
 @dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17
@@ -1281,7 +1281,7 @@ man/man1/xpce.1
 @dirrm lib/swi-prolog-${PKGVERSION}/library/chr
 @dirrm lib/swi-prolog-${PKGVERSION}/library/DTD
 @dirrm lib/swi-prolog-${PKGVERSION}/library
-@dirrm lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}elf
+@dirrm lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/swi-prolog-${PKGVERSION}/include
-@dirrm lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}elf
+@dirrm lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/swi-prolog-${PKGVERSION}
