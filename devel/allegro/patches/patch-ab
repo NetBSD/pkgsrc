@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.5 2006/01/22 13:55:20 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2006/10/12 17:20:19 rillig Exp $
 
 --- configure.orig	2005-11-06 10:54:00.000000000 +0100
-+++ configure
++++ configure	2006-10-12 19:19:26.000000000 +0200
+@@ -1560,7 +1560,7 @@ fi
+ # Check whether --enable-magicmain or --disable-magicmain was given.
+ if test "${enable_magicmain+set}" = set; then
+   enableval="$enable_magicmain"
+-  test "X$enableval" == "Xyes" &&
++  test "X$enableval" = "Xyes" &&
+ cat >>confdefs.h <<\_ACEOF
+ #define ALLEGRO_WITH_MAGIC_MAIN 1
+ _ACEOF
 @@ -11368,9 +11368,7 @@ if test -n "$GCC"; then
    fi
    ALLEGRO_PROFILE_CFLAGS="$CFLAGS -pg $TARGET_ARCH -O2 -funroll-loops -ffast-math $WFLAGS"
