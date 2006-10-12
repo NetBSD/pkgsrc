@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1473 2006/10/12 13:15:12 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1474 2006/10/12 13:19:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamass-milter to 0.3.1 [obache 2006-10-12]
 	Updated devel/cpuflags to 1.04 [abs 2006-10-12]
 	Updated mail/milter-greylist to 3.0rc4 [tron 2006-10-12]
+	Updated wm/wmii to 2.5.2 [obache 2006-10-12]
