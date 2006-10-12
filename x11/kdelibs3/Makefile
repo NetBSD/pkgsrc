@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2006/09/11 09:11:04 joerg Exp $
+# $NetBSD: Makefile,v 1.114 2006/10/12 10:31:04 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -24,10 +23,6 @@ SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docboo
 
 .include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=		gawk:pkgsrc
-.endif
 
 LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
 
