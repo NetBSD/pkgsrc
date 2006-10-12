@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2006/08/02 13:42:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.37 2006/10/12 10:31:04 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -60,6 +60,7 @@ bin/make_driver_db_lpr
 bin/makekdewidgets
 bin/meinproc
 bin/preparetips
+bin/start_kdeinit
 include/arts/artskde.h
 include/arts/kartsdispatcher.h
 include/arts/kartsfloatwatch.h
