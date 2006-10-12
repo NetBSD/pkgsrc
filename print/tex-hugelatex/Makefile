@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/07/27 00:09:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/12 13:38:35 joerg Exp $
 #
 
 DISTNAME=	hugelatex-2.0
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada
@@ -16,21 +16,15 @@ EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
-TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
+FILES_SUBST+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:Q}
+
+CHECK_FILES_SKIP+=	${PKG_TEXMFPREFIX}/web2c/hugelatex.fmt
+CHECK_FILES_SKIP+=	${PKG_TEXMFPREFIX}/web2c/hugelatex.log
+
 
 .include "../../print/teTeX/module.mk"
 
 do-install:
-	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-hugelatex
-	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
-	cd `dirname ${TEXMF_CNF}`; \
-	${MV} latex.fmt latex.fmt.BAK || ${TRUE} ; \
-	${ECHO} "" | ${PREFIX}/bin/latex -ini -fmt=hugelatex -progname=hugelatex latex.ini || ${TRUE}; \
-	${MV} latex.fmt hugelatex.fmt ; \
-	${MV} latex.log hugelatex.log ; \
-	${MV} latex.fmt.BAK latex.fmt || ${TRUE} ; \
-	${RM} -f texsys.aux
-	${RM} -f ${PREFIX}/bin/hugelatex
 	${LN} -s latex ${PREFIX}/bin/hugelatex
 
 .include "../../mk/bsd.pkg.mk"
