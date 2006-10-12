@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2006/10/09 12:52:36 joerg Exp $
+# $NetBSD: Makefile,v 1.131 2006/10/12 14:18:40 drochner Exp $
 
 DISTNAME=		gtk+-2.10.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -30,7 +30,6 @@ PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
