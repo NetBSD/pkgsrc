@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/15 15:10:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/10/12 13:56:26 drochner Exp $
 lib/gtk-2.0/2.10.0/engines/libclearlooks.la
 lib/gtk-2.0/2.10.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.10.0/engines/libglide.la
@@ -29,4 +29,6 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @comment in theme-dirs: @dirrm share/themes/Crux
 @dirrm share/themes/Clearlooks/gtk-2.0
 @comment in theme-dirs: @dirrm share/themes/Clearlooks
+@comment in xdg-dirs: @dirrm share/themes
+@comment in gtk2: @dirrm lib/gtk-2.0/engines
 @comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/engines
