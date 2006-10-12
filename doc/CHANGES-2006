@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1468 2006/10/12 11:21:41 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1469 2006/10/12 11:48:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/kde3-i18n-zh_TW to 3.5.5 [markd 2006-10-12]
 	Updated devel/kdevelop-base to 3.3.5 [markd 2006-10-12]
 	Updated devel/kdevelop to 3.3.5 [markd 2006-10-12]
+	Added x11/kdebindings-ruby version 3.3.5 [markd 2006-10-12]
