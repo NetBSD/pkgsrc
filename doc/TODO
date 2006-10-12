@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5544 2006/10/12 13:03:46 ben Exp $
+$NetBSD: TODO,v 1.5545 2006/10/12 13:19:40 obache Exp $
 
 Suggested new packages
 ======================
@@ -1235,7 +1235,6 @@ Suggested package updates
 	o winbind-3.0.13
 	o wine-0.9.22
 	o wmctrl-1.07
-	o wmii-2.5.2 [pkg/33285]
 	o wmii-3.1
 	o wmweather-2.4.3
 	o www6to4-1.6 [pkg/34321]
