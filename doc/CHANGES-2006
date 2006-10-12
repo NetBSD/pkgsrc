@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1482 2006/10/12 21:12:42 tv Exp $
+>$NetBSD: CHANGES-2006,v 1.1483 2006/10/12 22:56:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4758,3 +4758,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sendmail to 8.13.8nb2 [tv 2006-10-12]
 	Updated mail/sendmail812 to 8.12.11nb5 [tv 2006-10-12]
 	Added time/ruby-tzinfo version 0.3.2 [minskim 2006-10-12]
+	Updated geography/epsg to 6.11.1 [wiz 2006-10-12]
