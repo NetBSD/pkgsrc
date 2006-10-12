@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2006/09/15 15:13:55 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/10/12 13:52:14 drochner Exp $
 #
 
-DISTNAME=		pygobject-2.12.1
+DISTNAME=		pygobject-2.12.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.12/}
 
