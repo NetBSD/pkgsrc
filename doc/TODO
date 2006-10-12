@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5543 2006/10/12 12:21:29 obache Exp $
+$NetBSD: TODO,v 1.5544 2006/10/12 13:03:46 ben Exp $
 
 Suggested new packages
 ======================
@@ -254,6 +254,9 @@ Suggested new packages
 	http://www.apache.org/
 	Stable version of apache
 
+	Ncursesw 5.5 [pkg/34777 is relevant]
+	http://dickey.his.com/ncurses/ncurses.html
+	Wide version of ncurses.
 
 Suggested package updates
 =========================
