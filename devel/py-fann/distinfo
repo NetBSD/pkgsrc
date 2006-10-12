@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/10/12 19:05:08 gdt Exp $
+$NetBSD: distinfo,v 1.4 2006/10/12 19:23:41 gdt Exp $
 
-SHA1 (fann-2.1.0-20061012.tar.bz2) = 4ad8f9a55e3410bbb3a583e9466a774acd1c574e
-RMD160 (fann-2.1.0-20061012.tar.bz2) = caf138cb743752108c66a8b2542bc4cffe1c6e67
-Size (fann-2.1.0-20061012.tar.bz2) = 3396644 bytes
+SHA1 (fann-2.1.0-20061012.tar.bz2) = 2ac381d822a8cb29d07c93ac906bc6048bdc04da
+RMD160 (fann-2.1.0-20061012.tar.bz2) = 888d26649cd3046b0f9b4cf76d81b77a0b5fd052
+Size (fann-2.1.0-20061012.tar.bz2) = 3397852 bytes
 SHA1 (patch-aa) = 5b283f9682aca1cba3b4bd2ebbb1aa605ed4630a
