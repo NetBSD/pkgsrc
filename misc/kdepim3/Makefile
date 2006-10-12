@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/08/02 14:02:00 markd Exp $
+# $NetBSD: Makefile,v 1.66 2006/10/12 10:53:45 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -34,10 +34,6 @@ REPLACE_PERL+=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		libkpgp/kpgp-3.1-upgrade-address-data.pl
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=	gawk:pkgsrc
-.endif
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 BUILDLINK_DEPMETHOD.qt3-tools=	full
