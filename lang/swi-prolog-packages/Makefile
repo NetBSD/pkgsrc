@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/08/29 23:58:24 markd Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/12 14:14:13 joerg Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -9,16 +9,21 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
 
 GNU_CONFIGURE=		yes
+OVERRIDE_DIRDEPTH=	3
 USE_GNU_READLINE=	yes	# uses rl_event_hook() interface
 USE_TOOLS+=		gmake
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "xorg"
+BUILD_DEPENDS+=		xorg-server-[0-9]*:../../x11/xorg-server
+.endif
 
 CONFIGURE_ENV+=		PL=swi-prolog
 CONFIGURE_ARGS+=	--disable-mt
 
 BUILD_DIRS+=		${WRKSRC}/packages
 INSTALL_DIRS+=		${WRKSRC}/packages
-
-.include "../../mk/bsd.prefs.mk"
 
 post-configure:
 	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
