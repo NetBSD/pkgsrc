@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/06/01 14:37:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/10/12 11:17:15 markd Exp $
 share/doc/kde/HTML/zh_CN/common/fdl-translated.html
 share/doc/kde/HTML/zh_CN/common/gpl-translated.html
 share/doc/kde/HTML/zh_CN/common/kde-localised.css
@@ -550,5 +550,5 @@ share/locale/zh_CN/charset
 share/locale/zh_CN/entry.desktop
 share/locale/zh_CN/flag.png
 @dirrm share/doc/kde/HTML/zh_CN/kdevelop
-@dirrm share/doc/kde/HTML/zh_CN/common
+@comment in kde: @dirrm share/doc/kde/HTML/zh_CN/common
 @comment in kde: @dirrm share/doc/kde/HTML/zh_CN

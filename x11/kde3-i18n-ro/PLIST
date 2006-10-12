@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/08/02 14:24:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/10/12 11:17:15 markd Exp $
 share/doc/kde/HTML/ro/common/fdl-translated.html
 share/doc/kde/HTML/ro/common/gpl-translated.html
 share/doc/kde/HTML/ro/common/kde-localised.css
@@ -532,6 +532,7 @@ share/locale/ro/LC_MESSAGES/ksplashthemes.mo
 share/locale/ro/LC_MESSAGES/kstars.mo
 share/locale/ro/LC_MESSAGES/kstart.mo
 share/locale/ro/LC_MESSAGES/kstartperf.mo
+share/locale/ro/LC_MESSAGES/kstyle_highcontrast_config.mo
 share/locale/ro/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/ro/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/ro/LC_MESSAGES/ksvgplugin.mo
@@ -669,5 +670,5 @@ share/locale/ro/flag.png
 @dirrm share/doc/kde/HTML/ro/khelpcenter/visualdict
 @dirrm share/doc/kde/HTML/ro/khelpcenter/glossary
 @dirrm share/doc/kde/HTML/ro/khelpcenter
-@dirrm share/doc/kde/HTML/ro/common
+@comment in kde: @dirrm share/doc/kde/HTML/ro/common
 @comment in kde: @dirrm share/doc/kde/HTML/ro
