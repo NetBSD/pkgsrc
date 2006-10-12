@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/08/02 14:24:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/altn.png
 share/doc/kde/HTML/es/KRegExpEditor/altntool.png
 share/doc/kde/HTML/es/KRegExpEditor/anychar.png
@@ -153,6 +153,9 @@ share/doc/kde/HTML/es/blinken/blinken_helpbutton.png
 share/doc/kde/HTML/es/blinken/blinken_highscoresbutton.png
 share/doc/kde/HTML/es/blinken/blinken_nickprompt.png
 share/doc/kde/HTML/es/blinken/blinken_quitbutton.png
+share/doc/kde/HTML/es/blinken/common
+share/doc/kde/HTML/es/blinken/index.cache.bz2
+share/doc/kde/HTML/es/blinken/index.docbook
 share/doc/kde/HTML/es/cervisia/annotate.png
 share/doc/kde/HTML/es/cervisia/checkout.png
 share/doc/kde/HTML/es/cervisia/commit.png
@@ -406,6 +409,7 @@ share/doc/kde/HTML/es/kbruch/factorize.png
 share/doc/kde/HTML/es/kbruch/gui_main.png
 share/doc/kde/HTML/es/kbruch/index.cache.bz2
 share/doc/kde/HTML/es/kbruch/index.docbook
+share/doc/kde/HTML/es/kbruch/man-kbruch.1.docbook
 share/doc/kde/HTML/es/kbruch/reduced.png
 share/doc/kde/HTML/es/kbruch/settings.png
 share/doc/kde/HTML/es/kbugbuster/common
@@ -791,6 +795,7 @@ share/doc/kde/HTML/es/keduca/common
 share/doc/kde/HTML/es/keduca/index.cache.bz2
 share/doc/kde/HTML/es/keduca/index.docbook
 share/doc/kde/HTML/es/keduca/man-keduca.1.docbook
+share/doc/kde/HTML/es/keduca/man-keducabuilder.1.docbook
 share/doc/kde/HTML/es/keduca/screenshot.png
 share/doc/kde/HTML/es/kenolaba/common
 share/doc/kde/HTML/es/kenolaba/index.cache.bz2
@@ -895,6 +900,7 @@ share/doc/kde/HTML/es/khangman/index.cache.bz2
 share/doc/kde/HTML/es/khangman/index.docbook
 share/doc/kde/HTML/es/khangman/khangman1.png
 share/doc/kde/HTML/es/khangman/khangman2.png
+share/doc/kde/HTML/es/khangman/man-khangman.6.docbook
 share/doc/kde/HTML/es/khangman/settings1.png
 share/doc/kde/HTML/es/khangman/settings2.png
 share/doc/kde/HTML/es/khangman/settings3.png
@@ -1109,6 +1115,9 @@ share/doc/kde/HTML/es/kig/text_label_wizard__select_property.png
 share/doc/kde/HTML/es/kinfocenter/blockdevices/common
 share/doc/kde/HTML/es/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/es/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/es/kinfocenter/cdinfo/common
+share/doc/kde/HTML/es/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/es/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/es/kinfocenter/common
 share/doc/kde/HTML/es/kinfocenter/devices/common
 share/doc/kde/HTML/es/kinfocenter/devices/index.cache.bz2
@@ -1668,6 +1677,7 @@ share/doc/kde/HTML/es/kooka/shortcut1.png
 share/doc/kde/HTML/es/kooka/toolbar.png
 share/doc/kde/HTML/es/kooka/toolbar1.png
 share/doc/kde/HTML/es/kooka/toolbar2.png
+share/doc/kde/HTML/es/kopete/chatstyle.docbook
 share/doc/kde/HTML/es/kopete/common
 share/doc/kde/HTML/es/kopete/index.cache.bz2
 share/doc/kde/HTML/es/kopete/index.docbook
@@ -2289,6 +2299,9 @@ share/doc/kde/HTML/es/kwifimanager/index.docbook
 share/doc/kde/HTML/es/kwin4/common
 share/doc/kde/HTML/es/kwin4/index.cache.bz2
 share/doc/kde/HTML/es/kwin4/index.docbook
+share/doc/kde/HTML/es/kwordquiz/common
+share/doc/kde/HTML/es/kwordquiz/index.cache.bz2
+share/doc/kde/HTML/es/kwordquiz/index.docbook
 share/doc/kde/HTML/es/kwordquiz/kwq-dlg-characters.png
 share/doc/kde/HTML/es/kwordquiz/kwq-dlg-configure-appearance.png
 share/doc/kde/HTML/es/kwordquiz/kwq-dlg-configure-characters.png
@@ -3414,6 +3427,7 @@ share/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/es/kinfocenter/dma
 @dirrm share/doc/kde/HTML/es/kinfocenter/devices
+@dirrm share/doc/kde/HTML/es/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/es/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/es/kinfocenter
 @dirrm share/doc/kde/HTML/es/kig/scripting-api
@@ -3540,7 +3554,7 @@ share/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kaddressbook
 @dirrm share/doc/kde/HTML/es/kaboodle
 @dirrm share/doc/kde/HTML/es/juk
-@dirrm share/doc/kde/HTML/es/common
+@comment in kde: @dirrm share/doc/kde/HTML/es/common
 @dirrm share/doc/kde/HTML/es/cervisia
 @dirrm share/doc/kde/HTML/es/blinken
 @dirrm share/doc/kde/HTML/es/atlantik

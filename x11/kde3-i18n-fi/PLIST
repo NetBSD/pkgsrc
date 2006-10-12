@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/08/02 14:24:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/fi/common/fdl-translated.html
 share/doc/kde/HTML/fi/common/gpl-translated.html
 share/doc/kde/HTML/fi/common/kde-localised.css
@@ -41,6 +41,7 @@ share/locale/fi/LC_MESSAGES/audiocd_encoder_vorbis.mo
 share/locale/fi/LC_MESSAGES/audiorename_plugin.mo
 share/locale/fi/LC_MESSAGES/autorefresh.mo
 share/locale/fi/LC_MESSAGES/babelfish.mo
+share/locale/fi/LC_MESSAGES/blinken.mo
 share/locale/fi/LC_MESSAGES/cervisia.mo
 share/locale/fi/LC_MESSAGES/charlatanui.mo
 share/locale/fi/LC_MESSAGES/clockapplet.mo
@@ -77,6 +78,7 @@ share/locale/fi/LC_MESSAGES/kaccess.mo
 share/locale/fi/LC_MESSAGES/kaddressbook.mo
 share/locale/fi/LC_MESSAGES/kalarm.mo
 share/locale/fi/LC_MESSAGES/kalzium.mo
+share/locale/fi/LC_MESSAGES/kanagram.mo
 share/locale/fi/LC_MESSAGES/kandy.mo
 share/locale/fi/LC_MESSAGES/kappfinder.mo
 share/locale/fi/LC_MESSAGES/karm.mo
@@ -113,6 +115,7 @@ share/locale/fi/LC_MESSAGES/kbounce.mo
 share/locale/fi/LC_MESSAGES/kbruch.mo
 share/locale/fi/LC_MESSAGES/kbstateapplet.mo
 share/locale/fi/LC_MESSAGES/kbugbuster.mo
+share/locale/fi/LC_MESSAGES/kcachegrind.mo
 share/locale/fi/LC_MESSAGES/kcalc.mo
 share/locale/fi/LC_MESSAGES/kcharselect.mo
 share/locale/fi/LC_MESSAGES/kcharselectapplet.mo
@@ -272,6 +275,7 @@ share/locale/fi/LC_MESSAGES/kfile_xbm.mo
 share/locale/fi/LC_MESSAGES/kfile_xpm.mo
 share/locale/fi/LC_MESSAGES/kfileaudiopreview.mo
 share/locale/fi/LC_MESSAGES/kfilereplace.mo
+share/locale/fi/LC_MESSAGES/kfileshare.mo
 share/locale/fi/LC_MESSAGES/kfindpart.mo
 share/locale/fi/LC_MESSAGES/kfloppy.mo
 share/locale/fi/LC_MESSAGES/kfmclient.mo
@@ -279,6 +283,7 @@ share/locale/fi/LC_MESSAGES/kfontinst.mo
 share/locale/fi/LC_MESSAGES/kfouleggs.mo
 share/locale/fi/LC_MESSAGES/kgamma.mo
 share/locale/fi/LC_MESSAGES/kgantt.mo
+share/locale/fi/LC_MESSAGES/kgeography.mo
 share/locale/fi/LC_MESSAGES/kget.mo
 share/locale/fi/LC_MESSAGES/kghostview.mo
 share/locale/fi/LC_MESSAGES/kgoldrunner.mo
@@ -588,5 +593,5 @@ share/locale/fi/flag.png
 @dirrm share/doc/kde/HTML/fi/khelpcenter/glossary
 @dirrm share/doc/kde/HTML/fi/khelpcenter
 @dirrm share/doc/kde/HTML/fi/kfind
-@dirrm share/doc/kde/HTML/fi/common
+@comment in kde: @dirrm share/doc/kde/HTML/fi/common
 @comment in kde: @dirrm share/doc/kde/HTML/fi

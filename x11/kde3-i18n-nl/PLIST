@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/10/12 11:17:11 markd Exp $
 share/doc/kde/HTML/nl/KRegExpEditor/common
 share/doc/kde/HTML/nl/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/nl/KRegExpEditor/index.docbook
@@ -2075,7 +2075,7 @@ share/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kaddressbook
 @dirrm share/doc/kde/HTML/nl/kaboodle
 @dirrm share/doc/kde/HTML/nl/juk
-@dirrm share/doc/kde/HTML/nl/common
+@comment in kde: @dirrm share/doc/kde/HTML/nl/common
 @dirrm share/doc/kde/HTML/nl/atlantik
 @dirrm share/doc/kde/HTML/nl/artsbuilder
 @dirrm share/doc/kde/HTML/nl/ark

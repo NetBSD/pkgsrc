@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/06/01 14:37:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/10/12 11:17:10 markd Exp $
 share/doc/kde/HTML/ja/common/fdl-translated.html
 share/doc/kde/HTML/ja/common/gpl-translated.html
 share/doc/kde/HTML/ja/common/kde-localised.css
@@ -792,5 +792,5 @@ share/locale/ja/flag.png
 @dirrm share/doc/kde/HTML/ja/kcontrol/bell
 @dirrm share/doc/kde/HTML/ja/kcontrol/arts
 @dirrm share/doc/kde/HTML/ja/kcontrol
-@dirrm share/doc/kde/HTML/ja/common
+@comment in kde: @dirrm share/doc/kde/HTML/ja/common
 @comment in kde: @dirrm share/doc/kde/HTML/ja

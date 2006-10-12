@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/10/12 11:17:09 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -1255,6 +1255,6 @@ share/locale/en_GB/flag.png
 @dirrm share/doc/kde/HTML/en_GB/kate
 @dirrm share/doc/kde/HTML/en_GB/kalarm
 @dirrm share/doc/kde/HTML/en_GB/kaddressbook
-@dirrm share/doc/kde/HTML/en_GB/common
+@comment in kde: @dirrm share/doc/kde/HTML/en_GB/common
 @dirrm share/doc/kde/HTML/en_GB/cervisia
 @comment in kde: @dirrm share/doc/kde/HTML/en_GB

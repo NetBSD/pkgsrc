@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.6 2006/06/01 14:37:32 markd Exp $
+$NetBSD: patch-af,v 1.7 2006/10/12 11:17:10 markd Exp $
 
---- messages/kdewebdev/klinkstatus.po.orig	2006-05-23 07:01:22.000000000 +1200
+--- messages/kdewebdev/klinkstatus.po.orig	2006-10-02 05:54:06.000000000 +1300
 +++ messages/kdewebdev/klinkstatus.po
 @@ -2,17 +2,16 @@
  # Copyright (C) YEAR Free Software Foundation, Inc.
@@ -11,11 +11,11 @@ $NetBSD: patch-af,v 1.6 2006/06/01 14:37:32 markd Exp $
  msgstr ""
 -"Project-Id-Version: PACKAGE VERSION\n"
 +"Project-Id-Version: klinkstatus\n"
- "POT-Creation-Date: 2006-03-29 04:00+0200\n"
+ "POT-Creation-Date: 2006-09-25 02:41+0200\n"
 -"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 -"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 -"Language-Team: LANGUAGE <LL@li.org>\n"
-+"PO-Revision-Date: 2006-03-29 04:00+0200\n"
++"PO-Revision-Date: 2006-09-25 02:41+0200\n"
 +"Last-Translator: Not Known <EMAIL@ADDRESS>\n"
 +"Language-Team: is <LL@li.org>\n"
  "MIME-Version: 1.0\n"
@@ -23,5 +23,5 @@ $NetBSD: patch-af,v 1.6 2006/06/01 14:37:32 markd Exp $
 -"Content-Transfer-Encoding: ENCODING\n"
 +"Content-Transfer-Encoding: 8bit\n"
  
- #: ui/resultview.cpp:56 ui/tablelinkstatus.cpp:91 ui/tabwidgetsession.cpp:158
- #: ui/treeview.cpp:77
+ #: engine/searchmanager.cpp:500 ui/resultview.cpp:137
+ msgid "Javascript not supported"
