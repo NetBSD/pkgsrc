@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.1 2006/10/12 17:57:05 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.2 2006/10/12 20:36:34 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -15,6 +15,8 @@ set -eu
 
 exitcode=0
 
+last_heading=""
+
 error_msg() {
 	echo "ERROR: [check-portability.sh] $*" 1>&2
 	exitcode=1
@@ -24,12 +26,17 @@ warning_msg() {
 	echo "WARNING: [check-portability.sh] $*" 1>&2
 }
 
-last_heading=""
-heading() {
-
+error_heading() {
 	if test "$1" != "$last_heading"; then
 		last_heading="$1"
 		error_msg "=> $1"
+	fi
+}
+
+warning_heading() {
+	if test "$1" != "$last_heading"; then
+		last_heading="$1"
+		warning_msg "=> $1"
 	fi
 }
 
@@ -56,7 +63,7 @@ check_shell() {
 			;;
 
 		*\$RANDOM*)
-			heading "Found \$RANDOM:"
+			warning_heading "Found \$RANDOM:"
 			warning_msg "$fname: $line"
 			;;
 		esac
@@ -69,7 +76,7 @@ check_shell() {
 			case "$1" in
 			"test" | "[")
 				if [ "==" = "$3" ]; then
-					heading "Found test ... == ...:"
+					error_heading "Found test ... == ...:"
 					error_msg "$fname: $line"
 				fi
 				;;
