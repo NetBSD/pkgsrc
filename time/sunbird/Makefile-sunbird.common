@@ -1,9 +1,9 @@
-# $NetBSD: Makefile-sunbird.common,v 1.8 2006/10/04 22:01:52 wiz Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.9 2006/10/12 13:42:34 ghen Exp $
 
 MOZILLA_BIN=		sunbird-bin
-MOZ_VER=		0.3alpha2
+MOZ_VER=		0.3
 EXTRACT_SUFX=		.tar.bz2
-DISTNAME=		sunbird-${MOZ_VER:S/alpha/a/}-source
+DISTNAME=		sunbird-${MOZ_VER}.source
 CATEGORIES=		time
 MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${MOZ_VER:S/alpha/a/}/source/
 MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${MOZ_VER:S/alpha/a/}/source/

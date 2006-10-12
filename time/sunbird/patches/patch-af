@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2006/06/27 11:11:52 joerg Exp $
+$NetBSD: patch-af,v 1.3 2006/10/12 13:42:34 ghen Exp $
 
 --- security/nss/lib/freebl/unix_rand.c.orig	2006-04-04 01:01:51.000000000 +0000
 +++ security/nss/lib/freebl/unix_rand.c
@@ -10,8 +10,8 @@ $NetBSD: patch-af,v 1.2 2006/06/27 11:11:52 joerg Exp $
  #include <string.h>
  #include <signal.h>
  #include <unistd.h>
-@@ -81,7 +82,8 @@ static size_t CopyLowBits(void *dst, siz
- }
+@@ -183,7 +183,8 @@ static SECStatus RNG_kstat(PRUint32* fed
+ #endif
  
  #if defined(SCO) || defined(UNIXWARE) || defined(BSDI) || defined(FREEBSD) \
 -    || defined(NETBSD) || defined(NTO) || defined(DARWIN) || defined(OPENBSD)
