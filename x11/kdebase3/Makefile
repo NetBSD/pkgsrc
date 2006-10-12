@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2006/10/08 07:49:27 markd Exp $
+# $NetBSD: Makefile,v 1.119 2006/10/12 10:35:55 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -67,10 +66,6 @@ RCD_SCRIPTS=		kdm
 .include "../../mk/bsd.prefs.mk"
 
 LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=		gawk:pkgsrc
-.endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
 

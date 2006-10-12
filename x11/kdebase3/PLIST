@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2006/08/02 13:45:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.45 2006/10/12 10:35:55 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -2084,6 +2084,7 @@ share/kde/apps/konsole/vim.schema
 share/kde/apps/konsole/vt100.keytab
 share/kde/apps/konsole/vt420pc.keytab
 share/kde/apps/konsole/wallpapers/Blkmarble.jpg
+share/kde/apps/konsole/wallpapers/Metric-Monospace-14.png
 share/kde/apps/konsole/wallpapers/Paper01.jpg
 share/kde/apps/konsole/wallpapers/gray02.jpg
 share/kde/apps/konsole/x11r5.keytab
