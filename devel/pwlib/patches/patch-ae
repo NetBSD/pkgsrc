@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2006/05/16 15:56:43 joerg Exp $
+$NetBSD: patch-ae,v 1.6 2006/10/12 17:28:16 rillig Exp $
 
---- configure.orig	2004-11-21 23:15:48.000000000 +0000
-+++ configure
+--- configure.orig	2004-11-22 00:15:48.000000000 +0100
++++ configure	2006-10-12 19:26:05.000000000 +0200
 @@ -2059,6 +2059,14 @@ case "$target_os" in
                     need_pragma=yes ;
  		   ;;
@@ -95,6 +95,15 @@ $NetBSD: patch-ae,v 1.5 2006/05/16 15:56:43 joerg Exp $
    ;
    return 0;
  }
+@@ -6483,7 +6494,7 @@ fi
+ done
+ 
+   if test "${HAS_SDL:-unset}" != "unset" ; then
+-    if test "${X11LIBDIR:-unset}" == "unset" ; then
++    if test "${X11LIBDIR:-unset}" = "unset" ; then
+ 	X11LIBDIR=/usr/X11R6/lib
+     fi
+     echo "$as_me:$LINENO: checking for SDL_CreateYUVOverlay in -lSDL" >&5
 @@ -6492,7 +6503,7 @@ if test "${ac_cv_lib_SDL_SDL_CreateYUVOv
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
