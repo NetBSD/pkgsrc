@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/12 13:30:36 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/audio/audio.h
 include/gstreamer-0.10/gst/audio/gstaudioclock.h
@@ -43,6 +43,7 @@ lib/gstreamer-0.10/libgstaudioresample.la
 lib/gstreamer-0.10/libgstaudiotestsrc.la
 lib/gstreamer-0.10/libgstdecodebin.la
 lib/gstreamer-0.10/libgstffmpegcolorspace.la
+lib/gstreamer-0.10/libgstgdp.la
 lib/gstreamer-0.10/libgstplaybin.la
 lib/gstreamer-0.10/libgstsubparse.la
 lib/gstreamer-0.10/libgsttcp.la
