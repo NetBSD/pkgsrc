@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5545 2006/10/12 13:19:40 obache Exp $
+$NetBSD: TODO,v 1.5546 2006/10/12 23:29:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,7 @@ Suggested package updates
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
-	o afterstep-2.2.2
+	o afterstep-2.2.3
 	o album-3.13
 	o algae-4.3.6
 	o aliados-0.2.0
@@ -295,7 +295,7 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amavisd-new-2.4.3
+	o amavisd-new-2.4.3 [pkg/34788]
 	o amaya-9.5
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
@@ -565,6 +565,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.1
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
+	o gv-3.6.2
 	o gworkspace-0.8.3
 	o gzrecover-0.3
 	o hackbot-2.21
@@ -623,7 +624,6 @@ Suggested package updates
 	o kodos-2.4.5
 	o konversation-1.0.1
 	o ksi-3.4.2
-	o kye-0.9.1
 	o latd-1.21
 	o lavaps-2.7
 	o lcab-1.0b11
@@ -665,6 +665,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
+	o libtorrent-0.10.3
 	o libwnck-2.16.1
 	o libwpd-0.8.7
 	o licq-core-1.3.0
@@ -679,6 +680,7 @@ Suggested package updates
 	o lout-3.31
 	o lucy-1.19p
 	o lwp-2.1
+	o lynx-2.8.6
 	o lyx-1.4.3
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
@@ -732,7 +734,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.2.0
 	o muse-0.9.1
-	o musicpd-0.12.0
+	o musicpd-0.12.1
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
 	o nautilus-2.16.1
@@ -1099,6 +1101,7 @@ Suggested package updates
 	o rpm-4.4.6
 	o rt3-3.6.1
 	o rtcw-1.41.3
+	o rtorrent-0.6.3
 	o ruby-1.8.5
 	o ruby-RMagick-1.14.0 [requires ImageMagick>=6.2.9.7]
 	o ruby-cmd-0.8.0
@@ -1168,7 +1171,7 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.5.3
+	o sylpheed-claws-2.5.4
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
