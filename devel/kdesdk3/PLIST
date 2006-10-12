@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/06/01 14:25:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/10/12 11:08:24 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -75,6 +75,7 @@ bin/svnrevertlast
 bin/svnversions
 bin/swappo
 bin/transxx
+bin/umbodoc
 bin/umbrello
 bin/xml2pot
 bin/zonetab2pot.py
@@ -578,6 +579,8 @@ ${HAVE_SVN}share/kde/apps/konqueror/servicemenus/subversion_toplevel.desktop
 share/kde/apps/kstyle/themes/scheck.themerc
 share/kde/apps/kuiviewer/kuiviewerui.rc
 share/kde/apps/kuiviewerpart/kuiviewer_part.rc
+share/kde/apps/umbrello/common.ent
+share/kde/apps/umbrello/docbook2xhtml.xsl
 share/kde/apps/umbrello/headings/heading.adb
 share/kde/apps/umbrello/headings/heading.ads
 share/kde/apps/umbrello/headings/heading.as
@@ -701,6 +704,8 @@ share/kde/apps/umbrello/pics/uniassociation.png
 share/kde/apps/umbrello/pics/usecase.png
 share/kde/apps/umbrello/tips
 share/kde/apps/umbrello/umbrelloui.rc
+share/kde/apps/umbrello/xmi.css
+share/kde/apps/umbrello/xmi2docbook.xsl
 share/kde/config.kcfg/cervisiapart.kcfg
 share/kde/config.kcfg/kbabel.kcfg
 share/kde/config.kcfg/kbprojectsettings.kcfg
