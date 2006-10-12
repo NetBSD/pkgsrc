@@ -1,61 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2005/04/07 11:27:48 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/12 12:19:09 obache Exp $
 
---- spamass-milter.cpp.orig	2005-02-05 08:03:22.000000000 +0100
+--- spamass-milter.cpp.orig	2006-03-23 21:41:36.000000000 +0000
 +++ spamass-milter.cpp
-@@ -898,13 +898,21 @@ mlfi_envrcpt(SMFICTX* ctx, char** envrcp
- 				(envelope-from $g)$.
- 		   
- 		*/
--		const char *macro_b, *macro_s, *macro_j, *macro__;
-+		const char *macro_b, *macro_s, *macro_j, *macro__, *macro_r;
-+		char date[32];	/* sizeof("Mon, 23 Aug 2004 18:28:43 +0900") */
-+		time_t tval;
- 
- 		/* Failure to fetch {b} is not fatal.  Without this date SA can't do
- 		   future/past validation on the Date: header, but sendmail doesn't
- 		   default to allow milters to see it.
- 		*/
- 		macro_b = smfi_getsymval(ctx, "b");
-+ 		if (!macro_b)
-+		{
-+			(void) time(&tval);
-+			(void) strftime(date, sizeof(date), "%a, %d %b %Y %H:%M:%S %z", localtime(&tval));
-+			macro_b = date;
-+		}
- 			
- 		/* Sendmail currently cannot pass us the {s} macro, but
- 		   I do not know why.  Leave this in for the day sendmail is
-@@ -916,6 +924,10 @@ mlfi_envrcpt(SMFICTX* ctx, char** envrcp
- 			macro_s = sctx->helo;
- 		if (!macro_s)
- 			macro_s = "nohelo";
-+		/* Get mailer info. */
-+		macro_r = smfi_getsymval(ctx, "r");
-+		if (!macro_r)
-+			macro_r = "SMTP"; /* Assuming it as SMTP */
- 
- 		/* FQDN of this site */
- 		macro_j = smfi_getsymval(ctx, "j");
-@@ -930,10 +942,10 @@ mlfi_envrcpt(SMFICTX* ctx, char** envrcp
- 		assassin->output((string)"X-Envelope-From: "+assassin->from()+"\r\n");
- 		assassin->output((string)"X-Envelope-To: "+envrcpt[0]+"\r\n");
- 
--		if (!macro_b)
--			assassin->output((string)"Received: from "+macro_s+" ("+macro__+") by "+macro_j+";\r\n");
--		else
--			assassin->output((string)"Received: from "+macro_s+" ("+macro__+") by "+macro_j+"; "+macro_b+"\r\n");
-+		assassin->output((string)"Received: from "+macro_s
-+			+" ("+macro__+")\n\tby "+macro_j
-+			+" ("+PACKAGE_NAME+"/"+PACKAGE_VERSION	/* dummy */
-+			+") with "+macro_r+";\n\t"+macro_b+"\r\n");
- 
- 	} else
- 		assassin->output((string)"X-Envelope-To: "+envrcpt[0]+"\r\n");
-@@ -1965,7 +1977,7 @@ cmp_nocase_partial(const string& s, cons
+@@ -2033,7 +2033,7 @@ cmp_nocase_partial(const string& s, cons
    string::const_iterator p=s.begin();
    string::const_iterator p2=s2.begin();
  
--  while ( p != s.end() && p2 != s2.end() ) {
+-  while ( p != s.end() && p2 <= s2.end() ) {
 +  while ( p != s.end() ) {
      if (toupper(*p) != toupper(*p2))
      {
