@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/11 11:14:33 shannonjr Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/12 16:19:03 joerg Exp $
 #
 
 DISTNAME=	libksba-1.0.0
@@ -10,7 +10,7 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.g10code.com/p-libksba.html
 COMMENT=	X.509 library
 
-DEPENDS+=	libgpg-error>=1.2
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.2
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
