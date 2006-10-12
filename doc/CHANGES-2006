@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1478 2006/10/12 18:31:21 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1479 2006/10/12 19:19:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/sunbird to 0.3 [ghen 2006-10-12]
 	Updated sysutils/mklivecd to 0.14.1 [xtraeme 2006-10-12]
 	Added devel/fann-devel version 2.1.0.20061012 [gdt 2006-10-12]
+	Updated graphics/gimp24 to 2.3.12 [adam 2006-10-12]
