@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2006/04/23 00:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/12 13:14:43 tron Exp $
 
-DISTNAME=	milter-greylist-2.1.2
-PKGREVISION=	2
+DISTNAME=	milter-greylist-3.0rc4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
@@ -11,17 +10,18 @@ HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail
 
 
-HAS_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-user=smmsp
-CONFIGURE_ARGS+=--with-libspf_alt=${PREFIX:Q}
-CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
-BUILD_TARGET=	milter-greylist
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-user=smmsp
+
+BUILD_TARGET=		milter-greylist
 
 PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
 PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
 RCD_SCRIPTS=	milter-greylist
+
+.include "options.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/milter-greylist
