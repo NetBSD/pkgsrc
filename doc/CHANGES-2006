@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1470 2006/10/12 12:06:02 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1471 2006/10/12 12:21:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4745,3 +4745,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/kdevelop to 3.3.5 [markd 2006-10-12]
 	Added x11/kdebindings-ruby version 3.3.5 [markd 2006-10-12]
 	Added emulators/kenigma version 1.2.1 [markd 2006-10-12]
+	Updated mail/spamass-milter to 0.3.1 [obache 2006-10-12]

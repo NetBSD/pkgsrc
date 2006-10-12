@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5542 2006/10/11 19:11:21 wiz Exp $
+$NetBSD: TODO,v 1.5543 2006/10/12 12:21:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -1144,7 +1144,6 @@ Suggested package updates
 	o sound-juicer-2.16.1
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.5
-	o spamass-milter-0.3.1 [pkg/33206]
 	o spamassassin-3.1.7
 	o spim-7.2.1
 	o sqlite3-3.3.8
