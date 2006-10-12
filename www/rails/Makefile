@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/12 08:36:21 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/12 08:45:34 minskim Exp $
 
 DISTNAME=	rails-1.1.6
 CATEGORIES=	www
@@ -18,7 +18,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-actionwebservice>=1.1.6:../../www/ruby-actionwebserv
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rails/vendor/rails/railties
 
-REPLACE_RUBY_DIRS=	${WRKSRC}/bin
+REPLACE_RUBY_DIRS=	${WRKSRC}/bin ${WRKSRC}/dispatches \
+			${WRKSRC}/lib/commands/ncgi
 REPLACE_FILE_PAT=	*
 
 SUBST_CLASSES+=		paths
