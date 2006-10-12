@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1465 2006/10/11 15:16:47 shannonjr Exp $
+>$NetBSD: CHANGES-2006,v 1.1466 2006/10/12 03:15:10 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4654,3 +4654,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libprelude to 0.9.11 [shannonjr 2006-10-11]
 	Updated security/libpreludedb to 0.9.10 [shannonjr 2006-10-11]
 	Updated security/pinentry to 0.7.2 [shannonjr 2006-10-11]
+	Updated cad/covered to 0.4.7 [dmcmahill 2006-10-11]
+	Updated cad/covered-current to 20060904 [dmcmahill 2006-10-11]
