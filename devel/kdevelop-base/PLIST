@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/03/30 03:08:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/10/12 11:10:15 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -148,7 +148,11 @@ lib/kde3/kio_perldoc.la
 lib/kde3/kio_pydoc.la
 lib/kde3/libclearcaseintegrator.la
 lib/kde3/libcvsserviceintegrator.la
+lib/kde3/libdocchmplugin.la
 lib/kde3/libdoccustomplugin.la
+lib/kde3/libdocdevhelpplugin.la
+lib/kde3/libdocdoxygenplugin.la
+lib/kde3/libdockdevtocplugin.la
 lib/kde3/libdocqtplugin.la
 lib/kde3/libkchmpart.la
 lib/kde3/libkdevabbrev.la
@@ -226,10 +230,6 @@ lib/kde3/libqeditorpart.la
 lib/kde3/libsubversionintegrator.la
 lib/libd.la
 lib/libdesignerintegration.la
-lib/libdocchmplugin.la
-lib/libdocdevhelpplugin.la
-lib/libdocdoxygenplugin.la
-lib/libdockdevtocplugin.la
 lib/libdocumentation_interfaces.la
 lib/libkdevautomakeimporter.la
 lib/libkdevbuildbase.la
@@ -551,6 +551,7 @@ share/kde/apps/kdevappwizard/superwaba.png
 share/kde/apps/kdevappwizard/superwaba.tar.gz
 share/kde/apps/kdevappwizard/template-common/Artistic
 share/kde/apps/kdevappwizard/template-common/COPYING
+share/kde/apps/kdevappwizard/template-common/COPYING-DOCS
 share/kde/apps/kdevappwizard/template-common/COPYING.LIB
 share/kde/apps/kdevappwizard/template-common/LICENSE.BSD
 share/kde/apps/kdevappwizard/template-common/LICENSE.QPL
