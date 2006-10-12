@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1475 2006/10/12 13:39:39 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1476 2006/10/12 13:43:38 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/milter-greylist to 3.0rc4 [tron 2006-10-12]
 	Updated wm/wmii to 2.5.2 [obache 2006-10-12]
 	Updated print/tex-hugelatex to 2.0nb4 [joerg 2006-10-12]
+	Updated time/sunbird to 0.3 [ghen 2006-10-12]
