@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.124 2006/10/07 06:35:01 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.125 2006/10/13 23:14:45 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -537,6 +537,7 @@ bulk-package:
 			) 2>&1 | ${TEE} -a ${_BROKENFILE:Q}; \
 		fi ; \
 		if [ ${_PRESERVE_WRKDIR} = "pack-if-failed" ] && [ ! -f ${PKGFILE} ]; then \
+			${BULK_MSG} "Making an archive from the working directory."; \
 			(cd ${WRKDIR}					\
 			&& ${PAX} -wz -f ${_BULK_PKGLOGDIR}/wrkdir.tar.gz . \
 			) || ${TRUE};					\
