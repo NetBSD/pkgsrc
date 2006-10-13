@@ -1,0 +1,44 @@
+# $NetBSD: Makefile.common,v 1.1 2006/10/13 18:07:49 tron Exp $
+
+DISTNAME=	ncurses-${NC_VERS}
+NC_VERS=	5.5
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
+		ftp://dickey.his.com/ncurses/ \
+		ftp://dickey.his.com/ncurses/${NC_VERS}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://dickey.his.com/ncurses/ncurses.html
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		YES
+USE_TOOLS+=		tbl
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-libtool
+CONFIGURE_ARGS+=	--enable-bsdpad
+CONFIGURE_ARGS+=	--enable-overwrite
+CONFIGURE_ARGS+=	--with-cxx-binding
+CONFIGURE_ARGS+=	--without-ada
+CONFIGURE_ARGS+=	--without-curses-h
+CONFIGURE_ARGS+=	--without-gpm
+CONFIGURE_ARGS+=	--with-manpage-format=normal
+CONFIGURE_ARGS+=	--with-manpage-tbl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+PLIST_SUBST+=	NOT_SUNOS="@comment "
+TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
+TERMINFODIR=	share/lib/terminfo
+.else
+PLIST_SUBST+=	NOT_SUNOS=""
+TERMINFODIR=	share/terminfo
+.endif
+
+PLIST_SUBST+=	TERMINFODIR=${TERMINFODIR:Q}
+
+CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
+CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
