@@ -1,16 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/04/28 20:33:30 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/13 16:39:13 drochner Exp $
 
---- src/exec/dpexec/ccm.c.orig	2006-04-22 18:17:03.000000000 +0000
+--- src/exec/dpexec/ccm.c.orig	2006-01-03 00:49:26.000000000 +0100
 +++ src/exec/dpexec/ccm.c
-@@ -19,6 +19,7 @@
- #endif
- 
- #include <stdio.h>
-+#include <string.h>
- #include <ctype.h>
- 
- #if defined(HAVE_SYS_TYPES_H)
-@@ -82,7 +83,6 @@ _dxfSetupServer(int pport, int *psock,
+@@ -90,7 +90,6 @@ _dxfSetupServer(int pport, int *psock,
      u_short port;
      int sts;
      int oldPort;
@@ -18,9 +10,9 @@ $NetBSD: patch-aa,v 1.4 2006/04/28 20:33:30 joerg Exp $
      int tries;
  
      port = pport;
-@@ -224,7 +224,6 @@ _dxfCompleteServer(int sock, 
-     int length;
-     int fd;
+@@ -232,7 +231,6 @@ _dxfCompleteServer(int sock, 
+     socklen_t length;
+     int fd=-1;
      int sts;
 -    extern int errno; /* from <errno.h> */
      fd_set fds;

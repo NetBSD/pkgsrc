@@ -1,14 +1,14 @@
-$NetBSD: patch-ap,v 1.2 2004/04/20 22:11:48 drochner Exp $
+$NetBSD: patch-ap,v 1.3 2006/10/13 16:39:13 drochner Exp $
 
---- src/exec/dxexec/Makefile.in.orig	2003-09-26 22:22:50.000000000 +0000
-+++ src/exec/dxexec/Makefile.in	2004-04-20 19:31:41.000000000 +0000
-@@ -219,7 +219,8 @@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
- 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+--- src/exec/dxexec/Makefile.in.orig	2006-08-21 23:58:53.000000000 +0200
++++ src/exec/dxexec/Makefile.in
+@@ -70,7 +70,8 @@ LTCOMPILE = $(LIBTOOL) --tag=CC --mode=c
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
--LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 +CXXLD = $(CXX)
-+LINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CFLAGS) $(CFLAGS) \
++LINK = $(LIBTOOL) --tag=CC --mode=link $(CXXLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(libDXEXEC_la_SOURCES) $(dxexec_SOURCES)
  DIST_SOURCES = $(libDXEXEC_la_SOURCES) $(dxexec_SOURCES)
- DIST_COMMON = Makefile.am Makefile.in

@@ -1,14 +1,14 @@
-$NetBSD: patch-am,v 1.6 2006/04/28 20:33:30 joerg Exp $
+$NetBSD: patch-am,v 1.7 2006/10/13 16:39:13 drochner Exp $
 
---- src/uipp/dxuilib/PacketIF.C.orig	2003-09-26 17:38:11.000000000 +0000
-+++ src/uipp/dxuilib/PacketIF.C	2004-04-20 19:26:00.000000000 +0000
-@@ -1418,9 +1418,6 @@ void PacketIF::connectAsServer(int pport
-     int fd;
-     int sts;
-     int oldPort;
+--- src/uipp/dxuilib/PacketIF.C.orig	2006-06-29 20:58:46.000000000 +0200
++++ src/uipp/dxuilib/PacketIF.C
+@@ -1586,9 +1586,6 @@ void PacketIF::connectAsServer(int pport
+ 	int fd;
+ 	int sts;
+ 	int oldPort;
 -#if !defined(linux) && !defined(cygwin) && !defined(freebsd) && !defined(macos) && !defined(solaris)
--    extern int errno;
+-	extern int errno;
 -#endif
-     int tries;
-     fd_set fds;
-     int  width = getdtablesize();
+ 	int tries;
+ 	fd_set fds;
+ 	int  width = getdtablesize();
