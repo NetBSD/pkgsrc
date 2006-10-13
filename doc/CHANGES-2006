@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1484 2006/10/12 23:27:41 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1485 2006/10/13 02:39:46 epg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4759,3 +4759,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sendmail812 to 8.12.11nb5 [tv 2006-10-12]
 	Added time/ruby-tzinfo version 0.3.2 [minskim 2006-10-12]
 	Updated geography/epsg to 6.11.1 [wiz 2006-10-12]
+	Added devel/py-ctypes version 1.0.0 [epg 2006-10-13]
+	Added audio/libdiscid version 0.1.0 [epg 2006-10-13]
+	Added audio/py-musicbrainz version 0.4.0 [epg 2006-10-13]
