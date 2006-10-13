@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.27 2006/10/09 22:08:41 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.28 2006/10/13 21:21:11 wiz Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -144,13 +144,14 @@
 	  <quote>#!</quote>-scripts will find their
 	  interpreter.</para></listitem>
 
-	  <listitem><para><varname>PKGSRC_RUN_TEST</varname> can be set
-	  to <quote><literal>yes</literal></quote> to run each package's
-	  self-test before installing it. Note that some packages make
-	  heavy use of <quote>good</quote> random numbers, so you need
-	  to assure that the machine you are doing the bulk builds is
-	  not completely idle. Otherwise some test programs will seem to
-	  hang, while they are just waiting for new random data to be
+	  <listitem><para><varname>PKGSRC_RUN_TEST</varname> can be
+	  set to <quote><literal>yes</literal></quote> to run each
+	  package's self-test before installing it. Note that some
+	  packages make heavy use of <quote>good</quote> random
+	  numbers, so you need to assure that the machine on which you
+	  are doing the bulk builds is not completely idle. Otherwise
+	  some test programs will seem to hang, while they are just
+	  waiting for new random data to be
 	  available.</para></listitem>
 
 	</itemizedlist>
