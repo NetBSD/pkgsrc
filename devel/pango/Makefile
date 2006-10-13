@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2006/10/13 17:22:40 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2006/10/13 18:05:42 drochner Exp $
 
 DISTNAME=		pango-1.14.6
 CATEGORIES=		devel fonts
@@ -29,9 +29,7 @@ PKGCONFIG_OVERRIDE+=	pangox.pc.in
 PKGCONFIG_OVERRIDE+=	pangoxft-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangoxft.pc.in
 
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-qt=no
 
 # Avoid an ICE in gcc2 on sparc64
