@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/03/04 21:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2006/10/13 14:41:39 dsainty Exp $
 
 DISTNAME=	exmh-2.6.3
 PKGREVISION=	1
@@ -36,7 +36,25 @@ do-build:
 		FILESDIR=${FILESDIR} ${SH} ${FILESDIR}/build
 
 do-install:
-	@cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} \
-		WRKSRC=${WRKSRC} ${SH} ${FILESDIR}/install
+	${INSTALL_MAN} ${WRKSRC}/exmh.l ${PREFIX}/man/man1/exmh.1
+	for binfile in exmh-async exmh-bg exmh ftp.expect; do \
+		${INSTALL_PROGRAM} ${WRKSRC}/$$binfile ${PREFIX}/bin; \
+	done
+	vers=`sed -ne 's/^set vers \(.*\)/\1/p' ${WRKSRC}/exmh.install`; \
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/exmh-$${vers}; \
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/exmh-$${vers}/html; \
+	for libfile in \
+			${WRKSRC}/lib/PgpDecryptExpect \
+			${WRKSRC}/lib/*.tcl ${WRKSRC}/lib/*.bitmap \
+			${WRKSRC}/lib/*.ppm ${WRKSRC}/lib/help.* \
+			${WRKSRC}/lib/tclIndex ${WRKSRC}/lib/app-defaults \
+			${WRKSRC}/lib/app-defaults-* ${WRKSRC}/lib/*.mask \
+			${WRKSRC}/lib/*.exp ${WRKSRC}/lib/mime.types \
+			${WRKSRC}/lib/*.au ${WRKSRC}/lib/*.gif; do \
+		${INSTALL_DATA} $$libfile ${PREFIX}/lib/exmh-$${vers}; \
+	done; \
+	for hfile in ${WRKSRC}/lib/html/*; do \
+		${INSTALL_DATA} $$hfile ${PREFIX}/lib/exmh-$${vers}/html; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
