@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/03/04 21:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.23.6.1 2006/10/13 12:42:54 ghen Exp $
 
 DISTNAME=	intlfonts-1.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_GNU:=intlfonts/intlfonts-1.2.1-split/}
 DISTFILES=	${FONT_SETS:S/$/${EXTRACT_SUFX}/} ${MISC_FILES}
