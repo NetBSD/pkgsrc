@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.22 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: install.mk,v 1.23 2006/10/13 06:32:15 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -168,6 +168,9 @@ privileged-install-hook: check-files
 .endif
 .if empty(CHECK_INTERPRETER:M[nN][oO])
 privileged-install-hook: check-interpreter
+.endif
+.if empty(CHECK_PERMS:M[nN][oO])
+privileged-install-hook: check-perms
 .endif
 
 .PHONY: install-all su-install-all
