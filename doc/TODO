@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5546 2006/10/12 23:29:07 wiz Exp $
+$NetBSD: TODO,v 1.5547 2006/10/13 15:58:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -735,6 +735,7 @@ Suggested package updates
 	o multitail-4.2.0
 	o muse-0.9.1
 	o musicpd-0.12.1
+	o mysql-5.0.26
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
 	o nautilus-2.16.1
