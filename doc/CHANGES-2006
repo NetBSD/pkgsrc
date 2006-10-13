@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1486 2006/10/13 12:39:52 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1487 2006/10/13 12:56:01 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4763,3 +4763,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/libdiscid version 0.1.0 [epg 2006-10-13]
 	Added audio/py-musicbrainz version 0.4.0 [epg 2006-10-13]
 	Added mail/libsylph version 0.3.0 [xtraeme 2006-10-13]
+	Updated multimedia/mjpegtools to 1.8.0nb6 [tron 2006-10-13]
