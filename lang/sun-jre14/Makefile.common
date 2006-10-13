@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2006/07/20 06:52:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.31.2.1 2006/10/13 10:48:59 ghen Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -52,6 +52,8 @@ _FETCH_MESSAGE= 							\
 	"Click 'Download J2SE ${SHORT}', read and accept the"		\
 	"license, then choose 'Linux self-extracting file'."		\
 	${END_MESSAGE}
+
+EXTRACT_ENV+=	HOME=${WRKDIR}/fake_home
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 END_MESSAGE=								\
