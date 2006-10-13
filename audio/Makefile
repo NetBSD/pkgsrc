@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2006/09/06 22:58:48 wiz Exp $
+# $NetBSD: Makefile,v 1.334 2006/10/13 02:36:41 epg Exp $
 #
 
 COMMENT=	Audio tools
@@ -148,6 +148,7 @@ SUBDIR+=	libaudiofile
 SUBDIR+=	libcdaudio
 SUBDIR+=	libcddb
 SUBDIR+=	libdca
+SUBDIR+=	libdiscid
 SUBDIR+=	libgpod
 SUBDIR+=	libhydrogen
 SUBDIR+=	libid3tag
@@ -237,6 +238,7 @@ SUBDIR+=	py-ao
 SUBDIR+=	py-cddb
 SUBDIR+=	py-mad
 SUBDIR+=	py-musique
+SUBDIR+=	py-musicbrainz
 SUBDIR+=	py-ogg
 SUBDIR+=	py-vorbis
 SUBDIR+=	py-xmms
