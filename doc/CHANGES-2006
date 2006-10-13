@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1493 2006/10/13 23:03:17 reinoud Exp $
+>$NetBSD: CHANGES-2006,v 1.1494 2006/10/13 23:45:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4770,3 +4770,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/ncursesw version 5.5 [tron 2006-10-13]
 	Updated security/caff to 0.4.8 [tonio 2006-10-13]
 	Updated misc/udfclient to 0.5.4 [reinoud 2006-10-14]
+	Added devel/etrace version 2.1 [gdt 2006-10-13]
