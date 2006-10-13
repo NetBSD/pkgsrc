@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/04/20 15:28:00 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/13 06:22:54 rillig Exp $
 
---- configure.orig	2006-04-20 15:05:19.000000000 +0000
-+++ configure
-@@ -22197,13 +22197,13 @@ if test $ac_cv_lib_c_open = yes; then
+--- configure.orig	2006-06-07 17:08:36.000000000 +0200
++++ configure	2006-10-13 08:21:17.000000000 +0200
+@@ -21174,13 +21174,13 @@ if test $ac_cv_lib_c_open = yes; then
  fi
  
  
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.3 2006/04/20 15:28:00 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -22256,7 +22256,7 @@ fi
+@@ -21233,7 +21233,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_main" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_main" >&6
  if test $ac_cv_lib_pthread_main = yes; then
@@ -27,4 +27,13 @@ $NetBSD: patch-aa,v 1.3 2006/04/20 15:28:00 joerg Exp $
 +  LIBPTHREAD="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  fi
  
+ 
+@@ -23456,7 +23456,7 @@ else
+ fi;
+ echo "$as_me:$LINENO: checking for DBUS support" >&5
+ echo $ECHO_N "checking for DBUS support... $ECHO_C" >&6
+-if test x"$ac_dbus" == "xyes"; then
++if test x"$ac_dbus" = "xyes"; then
+     echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
  
