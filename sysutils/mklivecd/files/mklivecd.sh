@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.26 2006/10/12 15:03:51 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.27 2006/10/13 13:07:12 xtraeme Exp $
 #
 # Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
@@ -555,7 +555,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.26 2006/10/12 15:03:51 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.27 2006/10/13 13:07:12 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -829,7 +829,7 @@ _EOF_
 	[ -n "$verbose_mode" ] && showmsg "Size: $(du -sh $ISODIR)"
     ;;
     clean)
-        if [ -f $pkgsrc_mntstat -o -f $pkgsrcdist_mntstat ]; then
+        if [ -f $pkgsrc_mntstat -o -f $pkgsrcdist_mntstat -o -f $packages_mntstat ]; then
             showmsg "The pkgsrc directories are still in use! Exiting."
             bye 1
 	fi
@@ -884,7 +884,7 @@ _EOF_
         #
         # Detect if we are running a MULTIBOOT kernel.
         #
-        if [ -f $ISODIR/boot/grub/menu.lst ]; then
+        if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst ]; then
             grep -q MULTIBOOT $WORKDIR/$BOOTKERN
             if [ "$?" -eq 0 ]; then
                 showmsg "Applying fix for MULTIBOOT kernel..."
