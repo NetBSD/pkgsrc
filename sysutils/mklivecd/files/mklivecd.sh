@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.27 2006/10/13 13:07:12 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.28 2006/10/13 14:58:34 xtraeme Exp $
 #
 # Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
@@ -555,7 +555,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.27 2006/10/13 13:07:12 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.28 2006/10/13 14:58:34 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -673,12 +673,12 @@ _EOF_
 
         mkdir -p $ISODIR/ramfs
 
-        SUBST_H_MKDIR="mkdir -p /ramfs/home"
-	SUBST_H_MNT="$MNT_RAMFS_CMD $MNT_RAMFS_ARGS /ramfs/home /home"
-	SUBST_H_UNPACK="@TAR@ xfzp /stand/mfs_home.tgz -C /"
-        SUBST_S_MKDIR="mkdir -p /ramfs/pkg_sysconfdir"
-	SUBST_S_MNT="$MNT_RAMFS_CMD $MNT_RAMFS_ARGS /ramfs/pkg_sysconfdir /usr/pkg/etc" 
-	SUBST_S_UNPACK="@TAR@ xfzp /stand/mfs_pkg_sysconfdir.tgz -C /"
+        SUBST_H_MKDIR="/rescue/mkdir -p /ramfs/home"
+	SUBST_H_MNT="/rescue/mount_null /ramfs/home /home"
+	SUBST_H_UNPACK="/rescue/tar xfzp /stand/mfs_home.tgz -C /"
+        SUBST_S_MKDIR="/rescue/mkdir -p /ramfs/pkg_sysconfdir"
+	SUBST_S_MNT="/rescue/mount_null /ramfs/pkg_sysconfdir /usr/pkg/etc" 
+	SUBST_S_UNPACK="/rescue/tar xfzp /stand/mfs_pkg_sysconfdir.tgz -C /"
 
 	sed -e "s|@MNT_RAMFS_ARGS@|$MNT_RAMFS_ARGS|g" \
             -e "s|@MNT_RAMFS_CMD@|$MNT_RAMFS_CMD|g" \
@@ -702,7 +702,7 @@ _EOF_
  
 	if [ -d $ISODIR/home ]; then
 	    sed	-e "s|@HOME_MKDIR@|$SUBST_H_MKDIR|" \
-                -e "s|@HOME_MOUNT@|$SUBST_H_MOUNT|" \
+                -e "s|@HOME_MOUNT@|$SUBST_H_MNT|" \
                 -e "s|@HOME_UNPACK@|$SUBST_H_UNPACK|" \
 		$ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
 	    mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
@@ -720,7 +720,7 @@ _EOF_
 		$PKG_SYSCONFDIR >/dev/null 2>&1
 	    showmsgstring
 	    sed	-e "s|@USRPKGETC_MKDIR@|$SUBST_S_MKDIR|" \
-                -e "s|@USRPKGETC_MOUNT@|$SUBST_S_MOUNT|" \
+                -e "s|@USRPKGETC_MOUNT@|$SUBST_S_MNT|" \
                 -e "s|@USRPKGETC_UNPACK@|$SUBST_S_UNPACK|" \
 		$ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
              mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd

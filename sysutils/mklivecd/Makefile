@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2006/10/12 15:03:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.31 2006/10/13 14:58:34 xtraeme Exp $
 
-DISTNAME=	mklivecd-0.14.1
+DISTNAME=	mklivecd-0.14.2
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
