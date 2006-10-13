@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1489 2006/10/13 16:40:57 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1490 2006/10/13 17:25:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4766,3 +4766,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/mjpegtools to 1.8.0nb6 [tron 2006-10-13]
 	Updated sysutils/mklivecd to 0.14.2 [xtraeme 2006-10-13]
 	Updated sysutils/mklivecd to 0.14.3 [xtraeme 2006-10-13]
+	Updated devel/pango to 1.14.6 [wiz 2006-10-13]
