@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2006/10/06 06:00:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2006/10/13 17:22:40 wiz Exp $
 bin/pango-querymodules
 ${X11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -36,12 +36,14 @@ lib/libpangoft2-1.0.la
 ${X11}lib/libpangox-1.0.la
 ${X11}lib/libpangoxft-1.0.la
 lib/pango/1.5.0/modules/pango-arabic-fc.la
+lib/pango/1.5.0/modules/pango-arabic-lang.la
 ${CARBON}lib/pango/1.5.0/modules/pango-basic-atsui.la
 lib/pango/1.5.0/modules/pango-basic-fc.la
 ${X11}lib/pango/1.5.0/modules/pango-basic-x.la
 lib/pango/1.5.0/modules/pango-hangul-fc.la
 lib/pango/1.5.0/modules/pango-hebrew-fc.la
 lib/pango/1.5.0/modules/pango-indic-fc.la
+lib/pango/1.5.0/modules/pango-indic-lang.la
 lib/pango/1.5.0/modules/pango-khmer-fc.la
 lib/pango/1.5.0/modules/pango-syriac-fc.la
 lib/pango/1.5.0/modules/pango-thai-fc.la
