@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1485 2006/10/13 02:39:46 epg Exp $
+>$NetBSD: CHANGES-2006,v 1.1486 2006/10/13 12:39:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/py-ctypes version 1.0.0 [epg 2006-10-13]
 	Added audio/libdiscid version 0.1.0 [epg 2006-10-13]
 	Added audio/py-musicbrainz version 0.4.0 [epg 2006-10-13]
+	Added mail/libsylph version 0.3.0 [xtraeme 2006-10-13]
