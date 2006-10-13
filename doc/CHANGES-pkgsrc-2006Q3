@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.14 2006/10/09 15:44:30 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.15 2006/10/13 10:49:30 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -39,3 +39,5 @@ Pullup ticket 1849 - requested by rillig
 bugfix for bin-install target
 Pullup ticket 1854 - requested by dmcmahill
 build fix for gtk2
+Pullup ticket 1852 - requested by joerg
+build fix for sun-jre14 and -jdk14
