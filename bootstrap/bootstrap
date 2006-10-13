@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.85 2006/10/02 16:26:54 rillig Exp $
+# $NetBSD: bootstrap,v 1.86 2006/10/13 19:09:53 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -62,10 +62,11 @@ usage="Usage: $0 "'
     [ --varbase <varbase> ]
     [ --fetch-cmd <ftp command> ]
     [ --ignore-case-check ]
-    [ --ignore-user-check ]
+    [ --unprivileged | --ignore-user-check ]
     [ --preserve-path ]
     [ --compiler <compiler> ]
     [ --full ]
+    [ --quiet ]
     [ --help ]'
 
 # this replicates some of the logic in bsd.prefs.mk. until
@@ -277,7 +278,7 @@ while [ $# -gt 0 ]; do
 	--compiler=*)	compiler=`get_optarg "$1"` ;;
 	--compiler)	compiler="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
-	--ignore-user-check) ignoreusercheck=yes ;;
+	--unprivileged | --ignore-user-check) ignoreusercheck=yes ;;
 	--preserve-path) preserve_path=yes ;;
 	--full)		full=yes ;;
 	--quiet)	quiet=yes ;;
