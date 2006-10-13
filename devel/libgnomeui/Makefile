@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2006/09/19 17:47:18 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2006/10/13 18:13:33 drochner Exp $
 #
 
-DISTNAME=	libgnomeui-2.16.0
-PKGREVISION=	1
+DISTNAME=	libgnomeui-2.16.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.16/}
 EXTRACT_SUFX=	.tar.bz2
@@ -45,6 +44,7 @@ post-configure:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
