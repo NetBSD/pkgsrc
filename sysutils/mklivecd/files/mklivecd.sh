@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.28 2006/10/13 14:58:34 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.29 2006/10/13 16:39:53 xtraeme Exp $
 #
 # Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
@@ -546,6 +546,8 @@ do_cdlive()
 	echo "inetd=no";				    \
 	echo "ntpdate=no";				    \
 	echo "savecore=no";				    \
+	echo "ldconfig=no";				    \
+	echo "clear_tmp=no";				    \
 	) >> $ISODIR/etc/rc.conf
 
 	# /etc/rc.d/root could umount the mfs directories, 
@@ -555,7 +557,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.28 2006/10/13 14:58:34 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.29 2006/10/13 16:39:53 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -884,7 +886,7 @@ _EOF_
         #
         # Detect if we are running a MULTIBOOT kernel.
         #
-        if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst ]; then
+        if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst -a -f $WORKDIR/$BOOTKERN ]; then
             grep -q MULTIBOOT $WORKDIR/$BOOTKERN
             if [ "$?" -eq 0 ]; then
                 showmsg "Applying fix for MULTIBOOT kernel..."
@@ -901,7 +903,6 @@ _EOF_
                     echo "=> Removing $IMAGE_NAME.iso..."
                 rm $BASEDIR/$IMAGE_NAME.iso
             fi
-            [ -d $ISODIR/$BOOTDIR ] && chown -R root:wheel $ISODIR/$BOOTDIR
 
             if [ ! -f $ISODIR/stand/mfs_etc.tgz ]; then
                 showmsg "Cannot find mfs_etc.tgz file."
@@ -920,6 +921,8 @@ _EOF_
 
             showmsg_n "Creating ISO CD9660 image..."
             if [ "$USE_GNU_GRUB" = "yes" ]; then
+                [ -d $ISODIR/$GRUB_BOOTDIR ] && \
+                    chown -R root:wheel $ISODIR/$GRUB_BOOTDIR
                 $MKISOFS_BIN $MKISOFS_FIXED_ARGS $GRUB_BOOT_ARGS $MKISOFS_ARGS \
 		-b $GRUB_BOOTDIR/$GRUB_BOOTIMAGE \
 		-o $BASEDIR/$IMAGE_NAME.iso $ISODIR > /dev/null 2>&1
