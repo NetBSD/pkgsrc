@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/02/17 19:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3.6.1 2006/10/13 12:42:54 ghen Exp $
 
 CYR_RFX_ENCODING=mac-cyrillic
-PKGREVISION=	2
+PKGREVISION=	3
 
 .include "../../fonts/cyr-rfx-share/Makefile.common"

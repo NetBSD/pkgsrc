@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2.6.1 2006/10/13 12:42:54 ghen Exp $
 lib/X11/fonts/local/koi8-ub/75dpi/courB08s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/courB10s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/courB12s.pcf
@@ -23,6 +23,7 @@ lib/X11/fonts/local/koi8-ub/75dpi/courR12s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/courR14s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/courR18s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/courR24s.pcf
+lib/X11/fonts/local/koi8-ub/75dpi/fonts.alias
 lib/X11/fonts/local/koi8-ub/75dpi/helvB08s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/helvB10s.pcf
 lib/X11/fonts/local/koi8-ub/75dpi/helvB12s.pcf
@@ -128,4 +129,5 @@ lib/X11/fonts/local/koi8-ub/misc/8x13s.pcf
 lib/X11/fonts/local/koi8-ub/misc/8x16s.pcf
 lib/X11/fonts/local/koi8-ub/misc/9x15Bs.pcf
 lib/X11/fonts/local/koi8-ub/misc/9x15s.pcf
+lib/X11/fonts/local/koi8-ub/misc/fonts.alias
 lib/X11/fonts/local/koi8-ub/misc/nil2s.pcf
