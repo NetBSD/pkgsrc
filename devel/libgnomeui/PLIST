@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/09/15 15:09:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/10/13 18:13:33 drochner Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -83,13 +83,23 @@ share/gtk-doc/html/libgnomeui/GnomePixmapEntry.html
 share/gtk-doc/html/libgnomeui/GnomePropertyBox.html
 share/gtk-doc/html/libgnomeui/GnomeScores.html
 share/gtk-doc/html/libgnomeui/application-mgmt.html
-share/gtk-doc/html/libgnomeui/ch01.html
 share/gtk-doc/html/libgnomeui/deprecated.html
 share/gtk-doc/html/libgnomeui/druids.html
 share/gtk-doc/html/libgnomeui/fixme.html
 share/gtk-doc/html/libgnomeui/home.png
 share/gtk-doc/html/libgnomeui/index.html
 share/gtk-doc/html/libgnomeui/index.sgml
+share/gtk-doc/html/libgnomeui/initialization.html
+share/gtk-doc/html/libgnomeui/ix01.html
+share/gtk-doc/html/libgnomeui/ix02.html
+share/gtk-doc/html/libgnomeui/ix03.html
+share/gtk-doc/html/libgnomeui/ix04.html
+share/gtk-doc/html/libgnomeui/ix05.html
+share/gtk-doc/html/libgnomeui/ix06.html
+share/gtk-doc/html/libgnomeui/ix07.html
+share/gtk-doc/html/libgnomeui/ix08.html
+share/gtk-doc/html/libgnomeui/ix09.html
+share/gtk-doc/html/libgnomeui/ix10.html
 share/gtk-doc/html/libgnomeui/left.png
 share/gtk-doc/html/libgnomeui/libgnomeui-GnomeAuthentication.html
 share/gtk-doc/html/libgnomeui/libgnomeui-GnomeIce.html
@@ -116,6 +126,7 @@ share/gtk-doc/html/libgnomeui/libgnomeui-objects.html
 share/gtk-doc/html/libgnomeui/libgnomeui.devhelp
 share/gtk-doc/html/libgnomeui/libgnomeui.devhelp2
 share/gtk-doc/html/libgnomeui/miscellaneous.html
+share/gtk-doc/html/libgnomeui/pt01.html
 share/gtk-doc/html/libgnomeui/right.png
 share/gtk-doc/html/libgnomeui/stock_attach.png
 share/gtk-doc/html/libgnomeui/stock_book_blue.png
@@ -193,6 +204,7 @@ share/locale/ku/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/li/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/lt/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/lv/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/mg/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/mi/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/mk/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ml/LC_MESSAGES/libgnomeui-2.0.mo

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/09/16 12:20:34 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2006/10/13 18:13:33 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEUI_BUILDLINK3_MK:=	${LIBGNOMEUI_BUILDLINK3_MK}+
@@ -24,6 +24,7 @@ BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 
