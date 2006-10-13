@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2.6.1 2006/10/13 12:42:54 ghen Exp $
 lib/X11/fonts/local/mac-cyrillic/75dpi/courB08m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/courB10m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/courB12m.pcf
@@ -23,6 +23,7 @@ lib/X11/fonts/local/mac-cyrillic/75dpi/courR12m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/courR14m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/courR18m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/courR24m.pcf
+lib/X11/fonts/local/mac-cyrillic/75dpi/fonts.alias
 lib/X11/fonts/local/mac-cyrillic/75dpi/helvB08m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/helvB10m.pcf
 lib/X11/fonts/local/mac-cyrillic/75dpi/helvB12m.pcf
@@ -128,4 +129,5 @@ lib/X11/fonts/local/mac-cyrillic/misc/8x13m.pcf
 lib/X11/fonts/local/mac-cyrillic/misc/8x16m.pcf
 lib/X11/fonts/local/mac-cyrillic/misc/9x15Bm.pcf
 lib/X11/fonts/local/mac-cyrillic/misc/9x15m.pcf
+lib/X11/fonts/local/mac-cyrillic/misc/fonts.alias
 lib/X11/fonts/local/mac-cyrillic/misc/nil2m.pcf
