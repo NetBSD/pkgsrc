@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/13 02:30:49 epg Exp $
+
+SHA1 (ctypes-1.0.0.tar.gz) = e7d7e0510536c495d3bf87123a65931cf83d1505
+RMD160 (ctypes-1.0.0.tar.gz) = 78e491068c5e9c8a0e26f749a1b6ccc8e76995ed
+Size (ctypes-1.0.0.tar.gz) = 383190 bytes
