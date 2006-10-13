@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2006/10/03 14:47:40 tron Exp $
+# $NetBSD: options.mk,v 1.18 2006/10/13 20:13:14 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -44,8 +44,10 @@ PKG_SUPPORTED_OPTIONS+=	mlib
 
 # Platform-specific options.
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection mplayer-win32 \
-			xvid
+PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection xvid
+.endif
+.if ${MACHINE_ARCH} == "i386"
+PKG_SUPPORTED_OPTIONS+= mplayer-win32
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || \
     ${MACHINE_ARCH} == "alpha"
