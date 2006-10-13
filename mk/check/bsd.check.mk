@@ -1,4 +1,4 @@
-# $NetBSD: bsd.check.mk,v 1.2 2006/06/07 17:04:01 jlam Exp $
+# $NetBSD: bsd.check.mk,v 1.3 2006/10/13 06:32:15 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to build and install checks.
@@ -11,6 +11,7 @@
 
 .include "${PKGSRCDIR}/mk/check/check-files.mk"
 .include "${PKGSRCDIR}/mk/check/check-interpreter.mk"
+.include "${PKGSRCDIR}/mk/check/check-perms.mk"
 .include "${PKGSRCDIR}/mk/check/check-shlibs.mk"
 .include "${PKGSRCDIR}/mk/check/check-vulnerable.mk"
 .include "${PKGSRCDIR}/mk/check/check-wrkref.mk"
