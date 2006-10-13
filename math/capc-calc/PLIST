@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/04 16:19:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/10/13 16:52:47 drochner Exp $
 bin/calc
 bin/cscript/4dsphere
 bin/cscript/fproduct
@@ -183,6 +183,7 @@ share/calc/help/errno
 share/calc/help/error
 share/calc/help/errorcode
 share/calc/help/errorcodes
+share/calc/help/estr
 share/calc/help/euler
 share/calc/help/eval
 share/calc/help/exp
@@ -196,6 +197,7 @@ share/calc/help/ferror
 share/calc/help/fflush
 share/calc/help/fgetc
 share/calc/help/fgetfield
+share/calc/help/fgetfile
 share/calc/help/fgetline
 share/calc/help/fgets
 share/calc/help/fgetstr
