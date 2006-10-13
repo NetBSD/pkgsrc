@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1490 2006/10/13 17:25:55 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1491 2006/10/13 18:08:34 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4767,3 +4767,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/mklivecd to 0.14.2 [xtraeme 2006-10-13]
 	Updated sysutils/mklivecd to 0.14.3 [xtraeme 2006-10-13]
 	Updated devel/pango to 1.14.6 [wiz 2006-10-13]
+	Added devel/ncursesw version 5.5 [tron 2006-10-13]
