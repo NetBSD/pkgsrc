@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1492 2006/10/13 21:03:10 tonio Exp $
+>$NetBSD: CHANGES-2006,v 1.1493 2006/10/13 23:03:17 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4769,3 +4769,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.14.6 [wiz 2006-10-13]
 	Added devel/ncursesw version 5.5 [tron 2006-10-13]
 	Updated security/caff to 0.4.8 [tonio 2006-10-13]
+	Updated misc/udfclient to 0.5.4 [reinoud 2006-10-14]
