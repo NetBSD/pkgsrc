@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/20 22:11:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/13 16:40:10 drochner Exp $
 dx/samples/callmodule/README
 dx/samples/callmodule/Simple.c
 dx/samples/callmodule/ThunderStreamlines.c
@@ -219,6 +219,7 @@ dx/samples/outboard/Makefile_hp700
 dx/samples/outboard/Makefile_ibm6000
 dx/samples/outboard/Makefile_ibmpvs
 dx/samples/outboard/Makefile_intelnt
+dx/samples/outboard/Makefile_linux
 dx/samples/outboard/Makefile_os2
 dx/samples/outboard/Makefile_sgi
 dx/samples/outboard/Makefile_solaris
@@ -785,6 +786,8 @@ dx/samples/programs/PickPlot.cfg
 dx/samples/programs/PickPlot.net
 dx/samples/programs/PickStreamline.cfg
 dx/samples/programs/PickStreamline.net
+dx/samples/programs/PlotColumn.cfg
+dx/samples/programs/PlotColumn.net
 dx/samples/programs/PlotGroupOfLines.cfg
 dx/samples/programs/PlotGroupOfLines.net
 dx/samples/programs/PlotLine.cfg
@@ -910,6 +913,8 @@ dx/samples/programs/SIMPLE/MapToPlane.cfg
 dx/samples/programs/SIMPLE/MapToPlane.net
 dx/samples/programs/SIMPLE/MarkUnmark.cfg
 dx/samples/programs/SIMPLE/MarkUnmark.net
+dx/samples/programs/SIMPLE/PlotColumn.cfg
+dx/samples/programs/SIMPLE/PlotColumn.net
 dx/samples/programs/SIMPLE/Post.cfg
 dx/samples/programs/SIMPLE/Post.net
 dx/samples/programs/SIMPLE/QuantizeImage.cfg
