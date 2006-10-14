@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.16 2006/10/13 12:43:33 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.17 2006/10/14 13:12:15 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -44,3 +44,5 @@ build fix for sun-jre14 and -jdk14
 Pullup ticket 1850 - requested by joerg
 PLIST fix for cyr-rfx-iso8859_15, cyr-rfx-iso8859_5, cyr-rfx-koi8-ub,
 cyr-rfx-koi8_1, cyr-rfx-mac-cyrillic, cyr-rfx-winlatin_1, intlfonts
+Pullup ticket 1868 - requested by tron
+security update for phpmyadmin
