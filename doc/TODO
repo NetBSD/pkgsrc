@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5548 2006/10/13 17:30:12 wiz Exp $
+$NetBSD: TODO,v 1.5549 2006/10/14 04:20:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -457,7 +457,6 @@ Suggested package updates
 	o fdgw-20040609
 	o fetchmail-6.3.5
 	o fhist-1.14
-	o file-4.17 [pkg/34337]
 	o file-roller-2.16.1
 	o findutils-4.2.28
 	o flashplayer-0.4.13
