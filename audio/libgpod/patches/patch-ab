@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/10/14 01:55:03 rillig Exp $
+
+--- configure.ac.orig	2006-03-04 14:15:08.000000000 +0100
++++ configure.ac	2006-10-14 03:52:12.000000000 +0200
+@@ -70,7 +70,7 @@ dnl * hal is optional
+ dnl **************************************************
+ 
+ PKG_CHECK_MODULES(HAL, dbus-1 dbus-glib-1 hal >= 0.5.2 hal < 0.6, enable_hal05=yes, enable_hal05=no)
+-if test x$enable_hal05 == xyes; then
++if test x$enable_hal05 = xyes; then
+    AC_DEFINE_UNQUOTED(HAVE_LIBHAL, 1, [Whether HAL is available or not])
+ fi
+ LIBGPOD_CFLAGS="$LIBGPOD_CFLAGS $HAL_CFLAGS"
