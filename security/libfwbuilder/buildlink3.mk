@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2006/07/13 17:37:34 bad Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/10/14 01:42:51 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBFWBUILDER_BUILDLINK3_MK:=	${LIBFWBUILDER_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libfwbuilder
 
 .if !empty(LIBFWBUILDER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libfwbuilder+=	libfwbuilder>=2.0.12
-BUILDLINK_ABI_DEPENDS.libfwbuilder?=	libfwbuilder>=2.0.12
+BUILDLINK_ABI_DEPENDS.libfwbuilder+=	libfwbuilder>=2.0.12
 BUILDLINK_PKGSRCDIR.libfwbuilder?=	../../security/libfwbuilder
 .endif	# LIBFWBUILDER_BUILDLINK3_MK
 
