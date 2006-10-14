@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/10/14 11:12:19 obache Exp $
 lib/libstunnel.la
 man/man8/stunnel.8
 man/man8/stunnel.fr.8
@@ -12,7 +12,6 @@ share/doc/stunnel/COPYRIGHT.GPL
 share/doc/stunnel/CREDITS
 share/doc/stunnel/ChangeLog
 share/doc/stunnel/INSTALL
-share/doc/stunnel/INSTALL.W32
 share/doc/stunnel/NEWS
 share/doc/stunnel/PORTS
 share/doc/stunnel/README
