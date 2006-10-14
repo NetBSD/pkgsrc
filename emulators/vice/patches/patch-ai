@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.3 2006/10/14 02:13:04 rillig Exp $
+
+--- configure.in.orig	2006-01-08 20:32:11.000000000 +0100
++++ configure.in	2006-10-14 04:07:48.000000000 +0200
+@@ -17,7 +17,7 @@ AC_SUBST(VICE_VERSION_BUILD)
+ 
+ dnl AC_DEFINE(UNSTABLE,,[Define if this version is unstable.])
+ 
+-if test x"$VICE_VERSION_BUILD" == "x" -o x"$VICE_VERSION_BUILD" == "x0" ; then
++if test x"$VICE_VERSION_BUILD" = "x" -o x"$VICE_VERSION_BUILD" = "x0" ; then
+   VICE_VERSION=$VICE_VERSION_MAJOR"."$VICE_VERSION_MINOR
+ else
+   VICE_VERSION=$VICE_VERSION_MAJOR"."$VICE_VERSION_MINOR"."$VICE_VERSION_BUILD
+@@ -27,7 +27,7 @@ AC_SUBST(VICE_VERSION)
+ AM_INIT_AUTOMAKE(vice, $VICE_VERSION)
+ AM_CONFIG_HEADER(src/config.h)
+ 
+-if test x"$VICE_VERSION_BUILD" == "x" -o x"$VICE_VERSION_BUILD" == "x0" ; then
++if test x"$VICE_VERSION_BUILD" = "x" -o x"$VICE_VERSION_BUILD" = "x0" ; then
+   VERSION_RC=$VICE_VERSION_MAJOR","$VICE_VERSION_MINOR",0,0"
+ else
+   VERSION_RC=$VICE_VERSION_MAJOR","$VICE_VERSION_MINOR","$VICE_VERSION_BUILD",0"
+@@ -680,7 +680,7 @@ if test x"$is_win32" != "xyes" -a x"$is_
+   fi
+ fi
+ 
+-if test x"$is_beos" == "xyes"; then
++if test x"$is_beos" = "xyes"; then
+ 
+   dnl Check for needed network headers
+ 
