@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1503 2006/10/14 12:13:47 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1504 2006/10/14 18:42:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4780,3 +4780,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/phpmyadmin to 2.9.0.2 [tron 2006-10-14]
 	Updated meta-pkgs/pkg_developer to 1.1 [adrianp 2006-10-14]
 	Updated mail/pear-Mail to 1.1.14 [adrianp 2006-10-14]
+	Updated databases/mysql5-client to 5.0.26 [xtraeme 2006-10-14]
+	Updated databases/mysql5-server to 5.0.26 [xtraeme 2006-10-14]
