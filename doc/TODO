@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5555 2006/10/14 11:30:41 tron Exp $
+$NetBSD: TODO,v 1.5556 2006/10/14 18:42:12 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -734,9 +734,6 @@ Suggested package updates
 	o multitail-4.2.0
 	o muse-0.9.1
 	o musicpd-0.12.1
-	o mysql-5.0.26
-	o mysql5-client-5.0.26
-	o mysql5-server-5.0.26
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
 	o nautilus-2.16.1
