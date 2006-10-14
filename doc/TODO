@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5552 2006/10/14 08:39:33 wiz Exp $
+$NetBSD: TODO,v 1.5553 2006/10/14 09:26:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ Suggested package updates
 	o geda-20060907
 	o gedit-2.16.1
 	o genius-0.7.6.1
-	o gentoo-0.11.56 [pkg/34341]
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
