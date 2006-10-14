@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1500 2006/10/14 09:33:52 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1501 2006/10/14 11:14:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.14.7 [wiz 2006-10-14]
 	Updated sysutils/gentoo to 0.11.56 [obache 2006-10-14]
 	Updated mail/dovecot to 1.0rc9 [ghen 2006-10-14]
+	Updated security/stunnel to 4.15 [obache 2006-10-14]
