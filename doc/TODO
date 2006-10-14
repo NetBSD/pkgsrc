@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5550 2006/10/14 05:03:52 obache Exp $
+$NetBSD: TODO,v 1.5551 2006/10/14 08:39:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,7 @@ Suggested package updates
 	o cjk-lyx-1.3.3
 	o classpath-0.92
 	o classpath-gui-0.92
-	o clisp-2.40
+	o clisp-2.41
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
@@ -636,6 +636,7 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libdvdread-0.9.7
 	o libetpan-0.46 [pkg/34294]
+	o libetpan-0.47
 	o libextractor-0.5.15
 	o libflash-0.4.13
 	o libggi-2.2.1
@@ -735,6 +736,8 @@ Suggested package updates
 	o muse-0.9.1
 	o musicpd-0.12.1
 	o mysql-5.0.26
+	o mysql5-client-5.0.26
+	o mysql5-server-5.0.26
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
 	o nautilus-2.16.1
@@ -771,6 +774,8 @@ Suggested package updates
 	o openh323-1.17.2
 	o openmortal-0.7.1
 	o openoffice-2.0.3
+	o openoffice2-2.0.4
+	o openoffice2-bin-2.0.4
 	o openpam-20050616
 	o openssh-4.4p1 [waiting for hpn-patch]
 	o openssl-0.9.8d
@@ -946,6 +951,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.14.7
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o pcal-4.8
@@ -1237,7 +1243,7 @@ Suggested package updates
 	o webmin-1.300
 	o weewm-0.01
 	o winbind-3.0.13
-	o wine-0.9.22
+	o wine-0.9.23
 	o wmctrl-1.07
 	o wmii-3.1
 	o wmweather-2.4.3
