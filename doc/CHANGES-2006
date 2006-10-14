@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1494 2006/10/13 23:45:51 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1495 2006/10/14 05:03:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4771,3 +4771,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/caff to 0.4.8 [tonio 2006-10-13]
 	Updated misc/udfclient to 0.5.4 [reinoud 2006-10-14]
 	Added devel/etrace version 2.1 [gdt 2006-10-13]
+	Updated e16menuedit2 to 0.0.3 [obache 2006-10-13]
