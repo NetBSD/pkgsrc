@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2006/07/03 14:15:29 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/10/14 02:47:08 rillig Exp $
 
---- configure.orig	2005-06-24 08:38:30.000000000 +0000
-+++ configure
+--- configure.orig	2006-01-31 14:33:42.000000000 +0100
++++ configure	2006-10-14 04:40:35.000000000 +0200
 @@ -10965,7 +10965,7 @@ if test "${ac_cv_lib_FOX_1_4_fxfindfox+s
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -20,12 +20,12 @@ $NetBSD: patch-ab,v 1.1 2006/07/03 14:15:29 joerg Exp $
  
  else
    { { echo "$as_me:$LINENO: error: \"libFOX-1.4 not found\"" >&5
-@@ -13950,6 +13950,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
+@@ -11830,7 +11830,7 @@ done
+ if test "${with_static+set}" = set; then
+   withval="$with_static"
+ 
+-		if test "x$withval" == "xyes" ; then
++		if test "x$withval" = "xyes" ; then
+ 						echo "$as_me:$LINENO: checking for X" >&5
+ echo $ECHO_N "checking for X... $ECHO_C" >&6
+ 
