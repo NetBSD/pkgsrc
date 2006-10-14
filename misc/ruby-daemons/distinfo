@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/14 05:51:18 minskim Exp $
+
+SHA1 (daemons-1.0.2.tgz) = f037fd74fb783436a0d4933dbc602b8d22d933ea
+RMD160 (daemons-1.0.2.tgz) = 1b4ded8e702017a1fc905a646db2a6d35d243ef4
+Size (daemons-1.0.2.tgz) = 27064 bytes
