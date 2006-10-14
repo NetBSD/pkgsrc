@@ -1,54 +1,126 @@
-# $NetBSD: apache.mk,v 1.13 2006/07/10 17:11:32 wiz Exp $
+# $NetBSD: apache.mk,v 1.14 2006/10/14 01:09:45 rillig Exp $
 #
-# This Makefile fragment handles Apache dependencies and make variables,
-# and is meant to be included by packages that require Apache either at
-# build-time or at run-time.  apache.mk will:
+# This file is meant to be included by packages that require an apache
+# web server.
 #
-#	* set PKG_APACHE to the name of the apache web server used
+# User-settable variables:
 #
-#	* add a full dependency on the apache server
+# PKG_APACHE_DEFAULT
+#	The default apache server to use and install. If there already
+#	is an apache installed, this will have no effect.
 #
-#	* optionally add a full dependency on apr
+#	Possible values: apache13 apache2
 #
-# The available user variables are:
+# Package-settable variables:
 #
-# PKG_APACHE_DEFAULT is a user-settable variable whose value is the default
-#	apache server to use.  Possible values are apache13 and apache2.
-#   If there is already a version of apache installed this will have no
-#   effect.
+# PKG_APACHE_ACCEPTED
+#	The list of apache packages that can be used as a dependency for
+#	the package.
 #
-# The available makefile variables are:
+#	Possible values: (see PKG_APACHE_DEFAULT)
 #
-# PKG_APACHE_ACCEPTED is a package-settable list of servers that may be used as
-#	possible dependencies for the package.  Possible values are the same as
-#   for PKG_APACHE_DEFAULT.
+# USE_APR
+#	If apache2 is chosen by this file and this variable is set to
+#	"yes", a full dependency to the Apache Portable Runtime library
+#	will be added.
 #
-# USE_APR is used to note that the package requires the Apache Portable
-#   runtime to build and execute.  This is only takes effect if apache2
-#   is chosen (by this file) as the web server to use.  This adds a full
-#   dependency on apr.
+# Variables defined by this file:
+#
+# PKG_APACHE
+#	The Apache version that is actually used.
+#
+#	Possible values: (see PKG_APACHE_DEFAULT)
+#
+# APACHE_PKG_PREFIX
+#	The package name prefix for apache modules.
+#
+#	Possible values: ap13 ap2
 #
 
 .if !defined(APACHE_MK)
-APACHE_MK=	# defined
+APACHE_MK=			# defined
 
-.include "../../mk/apachever.mk"
+.include "../../mk/bsd.prefs.mk"
 
-# Add a runtime dependency on the apache server.
-# This may or may not create an actual dependency depending on
-# what the apache buildlink3.mk file does.
+# User-settable variables
+PKG_APACHE_DEFAULT?=		apache2
+BUILD_DEFS+=			PKG_APACHE_DEFAULT
+
+# Package-settable variables
+PKG_APACHE_ACCEPTED?=		${_PKG_APACHES}
+USE_APR?=			no
+
+# The available apache packages:
+_PKG_APACHES=			apache13 apache2
+
+_APACHE_PKGBASE.apache13=	apache-1\*
+_APACHE_PKG_PREFIX.apache13=	ap13
+_APACHE_PKGSRCDIR.apache13=	../../www/apache
+
+_APACHE_PKGBASE.apache2=	apache-2\*
+_APACHE_PKG_PREFIX.apache2=	ap2
+_APACHE_PKGSRCDIR.apache2=	../../www/apache2
+
 #
-.if defined(_APACHE_PKGSRCDIR)
-.  include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
+# Sanity checks.
+#
+
+.if empty(_PKG_APACHES:M${PKG_APACHE_DEFAULT})
+PKG_FAIL_REASON+=		"[apache.mk] Invalid apache package \""${PKG_APACHE_DEFAULT:Q}"\" in PKG_APACHE_DEFAULT."
+PKG_APACHE_DEFAULT=		apache2
 .endif
 
-# If we are building apache modules, then we might need a build-time
-# dependency on apr, and the apache sources?
-#
-.if ${_PKG_APACHE} == "apache2"
-.  if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
-.    include "../../devel/apr/buildlink3.mk"
+.for _ap_ in ${PKG_APACHE_ACCEPTED}
+.  if empty(_PKG_APACHES:M${_ap_})
+PKG_FAIL_REASON+=		"[apache.mk] Invalid apache package \""${_ap_:Q}"\" in PKG_APACHE_ACCEPTED."
+PKG_APACHE_ACCEPTED=		# none
 .  endif
+.endfor
+
+# Mark the acceptable apaches and check which apache packages are installed.
+.for _ap_ in ${PKG_APACHE_ACCEPTED}
+_APACHE_OK.${_ap_}=	yes
+_APACHE_INSTALLED.${_ap_}!= \
+	if ${PKG_INFO} -qe ${_APACHE_PKGBASE.${_ap_}}; then		\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+.endfor
+.for ap in ${_PKG_APACHES}
+_APACHE_OK.${ap}?=	no
+.endfor
+
+.undef PKG_APACHE
+
+# Use one of the installed apaches, ...
+.for _ap_ in ${PKG_APACHE_ACCEPTED}
+.  if ${_APACHE_INSTALLED.${_ap_}} == "yes"
+PKG_APACHE?=		${_ap_}
+.  endif
+.endfor
+
+# ... otherwise, prefer the default one if it's accepted, ...
+.if ${_APACHE_OK.${PKG_APACHE_DEFAULT}} == "yes"
+PKG_APACHE?=		${PKG_APACHE_DEFAULT}
+.endif
+
+# ... otherwise, just use the first accepted apache.
+.for ap in ${PKG_APACHE_ACCEPTED}
+PKG_APACHE?=		${ap}
+.endfor
+
+.if defined(PKG_APACHE)
+.  include "${_APACHE_PKGSRCDIR.${PKG_APACHE}}/buildlink3.mk"
+.else
+PKG_FAIL_REASON+=	"[apache.mk] No acceptable apache package found."
+PKG_APACHE=		none
+.endif
+
+APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
+
+.if (${PKG_APACHE} == "apache2") && !empty(USE_APR:M[yY][eE][sS])
+.  include "../../devel/apr/buildlink3.mk"
 .endif
 
 .endif	# APACHE_MK
