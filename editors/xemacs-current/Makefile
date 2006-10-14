@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/09/30 12:24:45 obache Exp $
+# $NetBSD: Makefile,v 1.57 2006/10/14 02:24:46 rillig Exp $
 
 DISTNAME=	xemacs-21.5.27
 
@@ -63,6 +63,6 @@ CFLAGS+=		-fno-strict-aliasing
 INFO_FILES=		# PLIST
 
 post-patch:
-	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
+	rm -f ${WRKSRC}/etc/ctags.1.orig
 
 .include "../../mk/bsd.pkg.mk"
