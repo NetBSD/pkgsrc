@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/07/04 09:58:18 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2006/10/14 08:23:29 wiz Exp $
 
 DISTNAME=	docbook-4.4
 PKGREVISION=	2
@@ -17,7 +17,7 @@ DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://www.oasis-open.org/docbook
+HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	SGML DTD designed for computer documentation
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip

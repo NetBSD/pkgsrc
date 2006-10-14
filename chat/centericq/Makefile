@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.60 2006/10/01 13:56:00 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2006/10/14 08:00:20 wiz Exp $
 #
 
 DISTNAME=	centericq-4.21.0
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	http://konst.org.ua/download/ \
+MASTER_SITES=	http://thekonst.net/download/ \
 		http://centericq.de/archive/source/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
+HOMEPAGE=	http://thekonst.net/eng/software/centericq/info.html
 COMMENT=	Instant Messenger interface supporting many protocols
 
 USE_PKGLOCALEDIR=	yes
