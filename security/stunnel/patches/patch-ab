@@ -1,29 +1,17 @@
-$NetBSD: patch-ab,v 1.16 2005/01/09 13:09:12 schmonz Exp $
+$NetBSD: patch-ab,v 1.17 2006/10/14 11:12:19 obache Exp $
 
---- configure.orig	2004-12-30 06:57:47.000000000 -0500
-+++ configure
-@@ -21495,6 +21495,7 @@ _ACEOF
- fi
+--- Makefile.in.orig	2006-03-06 20:52:41.000000000 +0000
++++ Makefile.in
+@@ -180,10 +180,10 @@ ssldir = @ssldir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ SUBDIRS = src doc tools
+-EXTRA_DIST = PORTS BUGS COPYRIGHT.GPL CREDITS INSTALL.W32 INSTALL.WCE
++EXTRA_DIST = PORTS BUGS COPYRIGHT.GPL CREDITS
+ docdir = $(datadir)/doc/stunnel
+ doc_DATA = AUTHORS BUGS ChangeLog COPYING COPYRIGHT.GPL CREDITS \
+-	INSTALL INSTALL.W32 INSTALL.WCE NEWS PORTS README TODO
++	INSTALL NEWS PORTS README TODO
  
- 
-+if false; then
- # OSF hack instead of simple AC_CHECK_LIB here
- echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
- echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
-@@ -21622,6 +21623,7 @@ _ACEOF
- 
- 
- fi
-+fi
- 
- 
- # Check for libwrap library
-@@ -22166,7 +22168,7 @@ fi;
- { echo "$as_me:$LINENO: **************************************** write the results" >&5
- echo "$as_me: **************************************** write the results" >&6;}
- LIBS="$LIBS $wrap_LIB"
--CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir/stunnel\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
-+CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
-                                                                       ac_config_files="$ac_config_files Makefile src/Makefile src/stunnel3 doc/Makefile tools/Makefile tools/stunnel.conf-sample tools/stunnel.init"
- 
- cat >confcache <<\_ACEOF
+ distcleancheck_listfiles = \
+ 	find -type f -exec sh -c 'test -f $(srcdir)/{} || echo {}' ';'
