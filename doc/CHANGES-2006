@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1497 2006/10/14 08:24:25 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1498 2006/10/14 08:36:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4773,3 +4773,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/etrace version 2.1 [gdt 2006-10-13]
 	Updated wm/e16menuedit2 to 0.0.3 [obache 2006-10-13]
 	Updated misc/ruby-daemons to 1.0.2 [minskim 2006-10-14]
+	Updated devel/pango to 1.14.7 [wiz 2006-10-14]
