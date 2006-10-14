@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:28:54 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/14 13:11:23 rillig Exp $
 
 DISTNAME=	cd-discid_0.9.orig
 PKGNAME=	cd-discid-0.9
@@ -12,13 +12,13 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	cd ${WRKSRC} && ${CC} -O -o cd-discid cd-discid.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cd-discid ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cd-discid.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/cd-discid.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
