@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.27 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: ccache.mk,v 1.28 2006/10/14 08:59:08 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,10 +35,21 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+# User-settable variables:
+#
+# CCACHE_DIR
+#	The directory where the cached compiler results are stored. By
+#	default, they are stored inside WRKDIR, so they are lost after
+#	a "make clean".
+#
+
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
+
+# User-settable variables
+CCACHE_DIR?=	${WRKDIR}/.ccache
 
 .if !empty(PKGPATH:Mdevel/ccache) || !empty(PKGPATH:Mdevel/patch)
 IGNORE_CCACHE=	yes
@@ -70,7 +81,7 @@ _USE_CCACHE=	YES
 EVAL_PREFIX+=		_CCACHEBASE=ccache
 _CCACHEBASE_DEFAULT=	${LOCALBASE}
 
-_CCACHE_DIR=	${WRKDIR}/.ccache
+_CCACHE_DIR=	${CCACHE_DIR}
 _CCACHE_VARS=	# empty
 .  if !empty(_LANGUAGES.ccache:Mc)
 PKG_CC?=	${CC}
