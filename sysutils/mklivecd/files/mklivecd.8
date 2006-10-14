@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.14 2006/10/13 13:07:12 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.15 2006/10/14 07:42:25 wiz Exp $
 .\"
 .\" mklivecd - Make your own NetBSD/i386 Live CD-ROM/DVD-ROM
 .\"
@@ -56,9 +56,9 @@ two options for the bootloader are provided since version
 .Pa the GNU Grub bootloader
 or the
 .Nx
-cdboot bootloader (since 
-.Nx
-4.0). By default it will use the first option:
+cdboot bootloader (since
+.Nx 4.0 ) .
+By default it will use the first option:
 .Pa the GNU Grub bootloader .
 You may want to change this by changing the option
 .Pa USE_GNU_GRUB
@@ -111,7 +111,7 @@ Defaults to
 .Pa $HOME/release/binary/sets .
 .It BASE_SETS
 Base sets which will be unpacked into
-.Pa $ISODIR . 
+.Pa $ISODIR .
 Sets used by default are:
 .Pa etc.tgz base.tgz comp.tgz text.tgz .
 .It CHROOT_SHELL
@@ -120,13 +120,13 @@ Defaults to
 .Sy /bin/ksh .
 .It ISODIR
 Directory used to store the main
-.Nx 
+.Nx
 base distribution.
 Defaults to
 .Pa $BASEDIR/iso .
 .It PKGSRCDIR
-The 
-.Nx 
+The
+.Nx
 pkgsrc collection directory.
 When the
 .Ar chroot
@@ -245,7 +245,8 @@ Defaults to
 .It HOSTNAME
 Hostname of the live CD-ROM/DVD-ROM, it's assigned when running the
 .Sy base
-target. Defaults to
+target.
+Defaults to
 .Sy MKLIVECD_0x00 .
 .It IMAGE_NAME
 Name of the final ISO image, e.g.:
@@ -307,9 +308,10 @@ with compression enabled.
 Note you'll need to have
 .Sy options VND_COMPRESSION
 in your kernel config, at the moment
-this option is only available on 
-.Nx
->=4.0. Defaults to
+this option is only available on
+.Nx 4.0
+and later.
+Defaults to
 .Sy no .
 .It MNT_RAMFS_ARGS
 This specifies the arguments passed to the
@@ -328,11 +330,12 @@ If you want to use
 change it just to
 .Sy tmpfs .
 .It MNT_RAMFS_CMD
-This specifies the 
-.Xr mount 8 
+This specifies the
+.Xr mount 8
 command used by
 .Nm
-in the boot configuration stage. Defaults to
+in the boot configuration stage.
+Defaults to
 .Pa mount_mfs .
 Can be changed to
 .Pa mount_tmpfs
@@ -437,7 +440,8 @@ and
 .Ar KERNEL_NAME_${foo}
 for every kernel specified on the
 .Pa MULTIPLE_KERNELS
-option. The following example shows that:
+option.
+The following example shows that:
 .Bd -literal -offset indent
 MULTIPLE_KERNELS="ACPIKERN APMKERN"
 BOOTKERN_ACPIKERN="LIVECD_ACPI"
@@ -450,8 +454,8 @@ Note that when using this option, the
 .Pa BOOTKERN
 and
 .Pa KERNEL_NAME
-variables, will don't have any effect. After building the specified
-kernels, it will update the
+variables, will don't have any effect.
+After building the specified kernels, it will update the
 .Pa menu.lst
 file automatically for the
 .Ar GNU Grub bootloader .
@@ -498,8 +502,6 @@ $ mklivecd chroot
 $ mklivecd iso
 $ mklivecd burn
 .Ed
-.Sh BUGS
-It is not perfect but at least it does its task correctly.
 .Sh SEE ALSO
 .Xr packages 7 ,
 .Xr mount_mfs 8 ,
@@ -510,3 +512,5 @@ The
 .Nm
 utility was written by
 .An Juan Romero Pardines Aq xtraeme@NetBSD.org .
+.Sh BUGS
+It is not perfect but at least it does its task correctly.
