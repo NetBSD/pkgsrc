@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2006/06/01 23:11:29 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/10/14 19:33:45 schwarz Exp $
 
-DISTNAME=	nn-6.6.5
+DISTNAME=	nn-6.7.3
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-6.6/ \
 		ftp://ftp.nndev.org/pub/nn-6.6/old/
