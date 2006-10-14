@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.7 2006/06/26 15:24:34 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2006/10/14 02:21:22 rillig Exp $
 
---- configure.orig	2004-10-01 04:25:07.000000000 +0000
-+++ configure
+--- configure.orig	2004-10-01 06:25:07.000000000 +0200
++++ configure	2006-10-14 04:20:29.000000000 +0200
+@@ -7393,7 +7393,7 @@ if test "${with_tcl+set}" = set; then
+   withval="$with_tcl"
+ 
+   xc_with_tcl=$withval
+-  if test "$withval" == "no" -o "$withval" == "NO"; then
++  if test "$withval" = "no" -o "$withval" = "NO"; then
+       xc_with_tcl=""
+   fi
+ 
 @@ -7629,6 +7629,7 @@ fi
  if test "x$xc_with_tcl" != "x" ; then
    . $tcl_config_sh
