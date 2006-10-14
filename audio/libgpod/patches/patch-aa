@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/10/14 01:55:03 rillig Exp $
+
+--- configure.orig	2006-10-14 03:51:55.000000000 +0200
++++ configure	2006-10-14 03:52:26.000000000 +0200
+@@ -19995,7 +19995,7 @@ else
+ 	HAL_LIBS=$pkg_cv_HAL_LIBS
+ 	enable_hal05=yes
+ fi
+-if test x$enable_hal05 == xyes; then
++if test x$enable_hal05 = xyes; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_LIBHAL 1
