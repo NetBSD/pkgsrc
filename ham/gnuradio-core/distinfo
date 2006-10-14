@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2006/05/28 17:28:17 joerg Exp $
+$NetBSD: distinfo,v 1.6 2006/10/14 01:48:51 rillig Exp $
 
 SHA1 (gnuradio-core-2.8.tar.gz) = d60e1ca7ad4cdf6c58c041bd705ed1d6a720c877
 RMD160 (gnuradio-core-2.8.tar.gz) = fc7107244bfac3b9facb18f7cf49b0d734f337b0
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 1c57f97b26ba7594043f3fa24d8b3fad1c50fc76
 SHA1 (patch-ac) = f7fe23cce5bfadfd6f99713caca1d0f5fd308e75
 SHA1 (patch-ad) = b60be38b16b48caa990969d14673d9b56581ed9c
 SHA1 (patch-ae) = ef7c38e1f3a7f0629cd728af18daf0310905e094
+SHA1 (patch-af) = 9d0905f8b40237e421f66f69c539858470a3d079
