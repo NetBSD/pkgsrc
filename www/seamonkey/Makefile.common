@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2006/09/26 22:21:32 salo Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/10/14 08:24:59 wiz Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -7,7 +7,7 @@ MASTER_SITES?=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
 CATEGORIES?=		www
 
 MAINTAINER?=		ghen@NetBSD.org
-HOMEPAGE?=		http://www.mozilla.org/projects/seamonkey
+HOMEPAGE?=		http://www.mozilla.org/projects/seamonkey/
 
 FILESDIR=		${.CURDIR}/../../www/seamonkey/files
 

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2006/07/25 07:37:30 martti Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/14 08:24:59 wiz Exp $
 
 DISTNAME=		JAlbum6.5
 PKGNAME=		jalbum-6.5.1
 #PKGREVISION=		1
 CATEGORIES=		www
-MASTER_SITES=		http://www.jalbum.net/download/
+MASTER_SITES=		http://jalbum.net/download/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		martti@NetBSD.org
-HOMEPAGE=		http://www.jalbum.net/
+HOMEPAGE=		http://jalbum.net/
 COMMENT=		Web photo album generator
 
 DIST_SUBDIR=		${PKGNAME_NOREV}

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2006/07/22 19:41:34 abs Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/10/14 08:24:59 wiz Exp $
 
 JK_VERSION=	1.2.15
 CATEGORIES=	www java
-MASTER_SITES=	http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/jk-${JK_VERSION}/
+MASTER_SITES=	http://www.apache.org/dist/tomcat/tomcat-connectors/jk/source/jk-${JK_VERSION}/
 
 MAINTAINER=	erh@NetBSD.org
-HOMEPAGE=	http://jakarta.apache.org/tomcat/connectors-doc/
+HOMEPAGE=	http://tomcat.apache.org/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
 
 CONFLICTS=	ap-jk-[0-9]*
