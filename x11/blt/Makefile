@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:11:31 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/14 02:16:03 rillig Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 MAKE_ENV+=		CP=${CP:Q}
+
+CHECK_INTERPRETER_SKIP+=	lib/*/demos/*.tcl
 
 .include "../../mk/bsd.prefs.mk"
 
