@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1505 2006/10/14 19:33:45 schwarz Exp $
+>$NetBSD: CHANGES-2006,v 1.1506 2006/10/14 21:28:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4593,7 +4593,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/libkipi to 0.1.4 [markd 2006-10-06]
 	Updated graphics/libkexif to 0.2.4 [markd 2006-10-06]
 	Updated graphics/kipi-plugins to 0.1.2 [markd 2006-10-06]
-	Updated graphics/showimg to 0.9.5 [markd 2006-10-06]
 	Updated graphics/gwenview to 1.4.0 [markd 2006-10-06]
 	Added graphics/gwenview-i18n version 1.4.0 [markd 2006-10-06]
 	Updated multimedia/kmplayer to 0.9.3 [markd 2006-10-06]
@@ -4783,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql5-client to 5.0.26 [xtraeme 2006-10-14]
 	Updated databases/mysql5-server to 5.0.26 [xtraeme 2006-10-14]
 	Updated news/nn to 6.7.3 [schwarz 2006-10-14]
+	Updated graphics/showimg to 0.9.5 [markd 2006-10-14]
