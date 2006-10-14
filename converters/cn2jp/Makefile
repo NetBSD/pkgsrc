@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/14 08:00:47 wiz Exp $
 
 DISTNAME=	cn2jp1.4b
 PKGNAME=	cn2jp-1.4b
 PKGREVISION=	3
 CATEGORIES=	converters
-MASTER_SITES=	http://w3.sys.es.osaka-u.ac.jp/~seke/software/cn2jp/
+# maybe ftp://ftp.ifcss.org/pub/software/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://w3.sys.es.osaka-u.ac.jp/~seke/software/cn2jp/
+# HOMEPAGE=	http://w3.sys.es.osaka-u.ac.jp/~seke/software/cn2jp/
 COMMENT=	Library for code translation between Chinese and Japanese
 
 WRKSRC=		${WRKDIR}/cn2jp
