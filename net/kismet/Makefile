@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/01 20:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/14 01:27:43 rillig Exp $
 
 DISTNAME=		kismet-2006-04-R1
 PKGNAME=		kismet-2006.04.01
@@ -12,19 +12,22 @@ COMMENT=		802.11 wireless network detector, sniffer and IDS
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_NCURSES=		# needs libpanel
+USE_NCURSES=		yes # needs libpanel
 USE_TOOLS+=		gmake perl:run
 REPLACE_PERL+=		scripts/gpsmap-helper-earthamaps
 
 # might be appended to in options.mk
 PLIST_SRC=		PLIST
 
+.include "../../mk/bsd.prefs.mk"
+
 KISMET_USER?=		kismet
 KISMET_GROUP?=		kismet
 PKG_GROUPS=		${KISMET_GROUP}
 PKG_USERS=		${KISMET_USER}:${KISMET_GROUP}::Kismet\ user:${VARBASE}/log/kismet
+BUILD_DEFS+=		KISMET_USER KISMET_GROUP VARBASE
 
-PKG_SYSCONFSUBDIR?=	${PKGBASE}
+PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/ap_manuf ${PKG_SYSCONFDIR}/ap_manuf
 CONF_FILES+=		${EGDIR}/client_manuf ${PKG_SYSCONFDIR}/client_manuf
@@ -42,7 +45,7 @@ SUBST_CLASSES+=		user
 SUBST_MESSAGE.user=	Fixing user name.
 SUBST_STAGE.user=	pre-configure
 SUBST_FILES.user=	conf/kismet.conf.in
-SUBST_SED.user=		's/your_user_here/${KISMET_USER}/'
+SUBST_SED.user=		-e 's/your_user_here/${KISMET_USER}/'
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

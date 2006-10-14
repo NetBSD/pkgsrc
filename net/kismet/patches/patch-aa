@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/14 01:27:44 rillig Exp $
 
 --- configure.orig	2006-01-04 16:53:37.000000000 +0100
-+++ configure	2006-08-03 16:18:04.000000000 +0200
-@@ -7084,6 +7084,7 @@
++++ configure	2006-10-14 03:22:26.000000000 +0200
+@@ -5689,7 +5689,7 @@ fi
+ 
+ 
+ # Do we use uclibc++?
+-if test "$foundcxxl"x == "x"; then
++if test "$foundcxxl"x = "x"; then
+ 	echo "$as_me:$LINENO: checking for main in -lstdc++" >&5
+ echo $ECHO_N "checking for main in -lstdc++... $ECHO_C" >&6
+ if test "${ac_cv_lib_stdcpp_main+set}" = set; then
+@@ -5757,7 +5757,7 @@ fi
+ 
+ fi
+ 
+-if test "$foundcxxl"x == "x"; then
++if test "$foundcxxl"x = "x"; then
+ 	{ { echo "$as_me:$LINENO: error: Neither uclibc uClibc++ or standard gcc stdc++ libraries found." >&5
+ echo "$as_me: error: Neither uclibc uClibc++ or standard gcc stdc++ libraries found." >&2;}
+    { (exit 1); exit 1; }; }
+@@ -7084,6 +7084,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  	    #include <stdio.h>
