@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/06/04 16:26:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/14 12:11:56 adrianp Exp $
 
-DISTNAME=	Mail-1.1.4
+DISTNAME=	Mail-1.1.14
 CATEGORIES=	mail
 
 CONFLICTS=	php-pear-Mail-[0-9]*
