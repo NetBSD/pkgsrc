@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 21:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/14 08:03:57 wiz Exp $
 #
 
 DISTNAME=	libcaca-0.9
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://sam.zoy.org/libcaca/
+MASTER_SITES=	http://libcaca.zoy.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sam.zoy.org/libcaca/
+HOMEPAGE=	http://libcaca.zoy.org/
 COMMENT=	Graphics library that outputs text instead of pixels, in colour
 
 USE_LIBTOOL=		yes

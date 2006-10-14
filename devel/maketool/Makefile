@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.36 2006/04/13 18:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/10/14 08:02:37 wiz Exp $
 #
 
 DISTNAME=	maketool-0.7-src
 PKGNAME=	maketool-0.7
 PKGREVISION=	4
 CATEGORIES=	devel
-MASTER_SITES=	http://www.alphalink.com.au/~gnb/maketool/
+MASTER_SITES=	http://home.alphalink.com.au/~gnb/maketool/
 
 MAINTAINER=	fredb@NetBSD.org
-HOMEPAGE=	http://www.alphalink.com.au/~gnb/maketool/
+HOMEPAGE=	http://home.alphalink.com.au/~gnb/maketool/
 COMMENT=	Graphical front end to GNU make
 
 GNU_CONFIGURE=		yes

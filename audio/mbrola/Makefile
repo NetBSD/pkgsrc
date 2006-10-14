@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:11 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/14 07:59:09 wiz Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
 PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		http://www.festvox.org/mbrola/bin/netbsd/
+MASTER_SITES=		http://tcts.fpms.ac.be/synthesis/mbrola/bin/netbsd/ \
+			http://www.festvox.org/mbrola/bin/netbsd/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		proff@iq.org
-HOMEPAGE=		http://www.festvox.org/mbrola/
+HOMEPAGE=		http://tcts.fpms.ac.be/synthesis/mbrola/
 COMMENT=		MBROLA diphone synthesizer executable
 
 LICENSE=		no-commercial-use

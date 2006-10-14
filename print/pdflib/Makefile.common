@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.18 2006/03/04 21:30:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.19 2006/10/14 08:14:24 wiz Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 CATEGORIES=		print
 MASTER_SITES=		http://www.pdflib.com/pdflib/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.pdflib.com/products/pdflib/
+HOMEPAGE=		http://www.pdflib.de/
 
 # Version numbering scheme:
 #

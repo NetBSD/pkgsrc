@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 20:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/14 07:59:10 wiz Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES= 	http://www.dotfiles.com/software/wmmp3/
-# dotfiles is alive, but /software is gone
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://www.dotfiles.com/software/wmmp3/
+# HOMEPAGE=	http://www.dotfiles.com/software/wmmp3/
 COMMENT=	Front-end for mpg123 in a Window Maker dockapp
 
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123

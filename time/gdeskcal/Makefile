@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/14 08:23:44 wiz Exp $
 #
 
 DISTNAME=		gDeskCal-0_57_1
@@ -8,7 +8,7 @@ CATEGORIES=		time
 MASTER_SITES=		http://www.pycage.de/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.pycage.de/software_gdeskcal.html
+HOMEPAGE=		http://www.pycage.de/\#gdeskcal
 COMMENT=		Desktop calendar
 
 WRKSRC=		${WRKDIR}/gDeskCal-0.57.1

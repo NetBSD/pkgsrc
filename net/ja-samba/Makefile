@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/10/01 14:56:46 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2006/10/14 08:07:06 wiz Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=		${JA_SAMBA_MASTER_SITES:S/$/beta\//}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://www.jp.samba.org/project/samba-ja/index.html.en
+HOMEPAGE=		http://www.samba.gr.jp/project/samba-ja/index.html.en
 COMMENT=		Samba supporting I18N swat and L10N for Japanese
 
 CONFLICTS+=		samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*

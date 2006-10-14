@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 21:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/14 08:02:37 wiz Exp $
 
 DISTNAME=	amstd-2.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.loveruby.net/archive/amstd/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://i.loveruby.net/en/prog/amstd.html
+HOMEPAGE=	http://i.loveruby.net/en/projects/amstd
 COMMENT=	Collection of miscellaneous Ruby modules
 
 USE_RUBY_SETUP=	yes

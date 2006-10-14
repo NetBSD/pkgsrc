@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/16 11:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/14 07:59:41 wiz Exp $
 #
 
 DISTNAME=		rarlinux-3.6.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.rarsoft.com/rar/ \
 			ftp://ftp.rarsoft.com/rar/
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.rarsoft.com/rar/
+HOMEPAGE=		http://www.rarsoft.com/rar_archiver.htm
 COMMENT=		RAR command line archiver (Linux binary)
 
 LICENSE=		rar-license
