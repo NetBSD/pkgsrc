@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.21 2005/10/04 20:58:43 sketch Exp $
+$NetBSD: patch-ac,v 1.22 2006/10/14 13:20:47 rillig Exp $
 
 --- abcde.orig	2005-10-04 21:39:38.000000000 +0100
 +++ abcde	2005-10-04 21:44:53.000000000 +0100
@@ -50,17 +50,6 @@ $NetBSD: patch-ac,v 1.21 2005/10/04 20:58:43 sketch Exp $
  else
  	HTTPGET=wget
  fi
-@@ -2197,8 +2205,8 @@
- fi
- 
- # Load system defaults
--if [ -r /etc/abcde.conf ]; then
--	. /etc/abcde.conf
-+if [ -r @PKG_SYSCONFDIR@/abcde.conf ]; then
-+	. @PKG_SYSCONFDIR@/abcde.conf
- fi
- # Load user preference defaults
- if [ -r $HOME/.abcde.conf ]; then
 @@ -2231,6 +2239,9 @@
  		CDROM=/dev/acd0c
  	elif [ -e /dev/disk1 ]; then
