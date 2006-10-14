@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1501 2006/10/14 11:14:55 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1502 2006/10/14 11:25:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/gentoo to 0.11.56 [obache 2006-10-14]
 	Updated mail/dovecot to 1.0rc9 [ghen 2006-10-14]
 	Updated security/stunnel to 4.15 [obache 2006-10-14]
+	Updated databases/phpmyadmin to 2.9.0.2 [tron 2006-10-14]
