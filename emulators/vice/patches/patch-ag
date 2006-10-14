@@ -1,7 +1,34 @@
-$NetBSD: patch-ag,v 1.5 2006/07/06 08:37:27 dillo Exp $
+$NetBSD: patch-ag,v 1.6 2006/10/14 02:13:04 rillig Exp $
 
 --- configure.orig	2006-01-08 21:31:51.000000000 +0100
-+++ configure
++++ configure	2006-10-14 04:08:10.000000000 +0200
+@@ -1319,7 +1319,7 @@ VICE_VERSION_BUILD=0
+ 
+ 
+ 
+-if test x"$VICE_VERSION_BUILD" == "x" -o x"$VICE_VERSION_BUILD" == "x0" ; then
++if test x"$VICE_VERSION_BUILD" = "x" -o x"$VICE_VERSION_BUILD" = "x0" ; then
+   VICE_VERSION=$VICE_VERSION_MAJOR"."$VICE_VERSION_MINOR
+ else
+   VICE_VERSION=$VICE_VERSION_MAJOR"."$VICE_VERSION_MINOR"."$VICE_VERSION_BUILD
+@@ -1719,7 +1719,7 @@ INSTALL_STRIP_PROGRAM="\${SHELL} \$(inst
+           ac_config_headers="$ac_config_headers src/config.h"
+ 
+ 
+-if test x"$VICE_VERSION_BUILD" == "x" -o x"$VICE_VERSION_BUILD" == "x0" ; then
++if test x"$VICE_VERSION_BUILD" = "x" -o x"$VICE_VERSION_BUILD" = "x0" ; then
+   VERSION_RC=$VICE_VERSION_MAJOR","$VICE_VERSION_MINOR",0,0"
+ else
+   VERSION_RC=$VICE_VERSION_MAJOR","$VICE_VERSION_MINOR","$VICE_VERSION_BUILD",0"
+@@ -10937,7 +10937,7 @@ done
+   fi
+ fi
+ 
+-if test x"$is_beos" == "xyes"; then
++if test x"$is_beos" = "xyes"; then
+ 
+ 
+   BEOS_NETWORK_HEADERS_PRESENT=yes
 @@ -19748,7 +19748,7 @@ _ACEOF
  
  elif [ x"${enable_gnomeui}" = x"yes" ] ; then
@@ -20,3 +47,12 @@ $NetBSD: patch-ag,v 1.5 2006/07/06 08:37:27 dillo Exp $
    fi
  
  
+@@ -21899,6 +21899,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
