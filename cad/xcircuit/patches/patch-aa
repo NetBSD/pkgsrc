@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2006/06/26 15:24:34 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2006/10/14 02:21:22 rillig Exp $
 
---- configure.in.orig	2004-10-01 04:24:09.000000000 +0000
-+++ configure.in
+--- configure.in.orig	2004-10-01 06:24:09.000000000 +0200
++++ configure.in	2006-10-14 04:19:51.000000000 +0200
+@@ -255,7 +255,7 @@ xc_with_tk_libraries=""
+ AC_ARG_WITH(tcl,
+ [  --with-tcl=DIR          Find tclConfig.sh in DIR], [
+   xc_with_tcl=$withval
+-  if test "$withval" == "no" -o "$withval" == "NO"; then
++  if test "$withval" = "no" -o "$withval" = "NO"; then
+       xc_with_tcl=""
+   fi
+ ], ) 
 @@ -469,6 +469,7 @@ fi
  if test "x$xc_with_tcl" != "x" ; then
    . $tcl_config_sh
