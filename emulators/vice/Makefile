@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/06/29 23:01:43 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2006/10/14 02:13:04 rillig Exp $
 #
 
 DISTNAME=		vice-1.19
@@ -20,7 +20,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		bdftopcf gmake mkfontdir msgfmt
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-fullscreen
 
@@ -39,16 +39,17 @@ CONFIGURE_ARGS+=	--without-oss
 
 # These changes are rather common, so sed instead of patch:
 post-patch:
+	set -e;								\
 	for file in `${FIND} ${WRKSRC} -name Makefile.in -print`	\
 			${WRKSRC}/src/arch/unix/archdep.h; do		\
-		${SED}  -e "s|/lib/vice/doc|/share/doc/vice|g"		\
+		sed  -e "s|/lib/vice/doc|/share/doc/vice|g"		\
 			-e "s|/lib/vice|/share/vice|g"			\
 			-e "/^pkglibdir/s|(libdir)|(datadir)|g"		\
-			$$file > $$file.new;				\
-		if ${CMP} -s $$file $$file.new; then			\
-			${RM} -f $$file.new;				\
+			"$$file" > "$$file".new;			\
+		if cmp -s "$$file" "$$file".new; then			\
+			rm -f "$$file".new;				\
 		else							\
-			${MV} -f $$file.new $$file;			\
+			mv -f "$$file".new "$$file";			\
 		fi;							\
 	done
 
