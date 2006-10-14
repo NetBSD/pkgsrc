@@ -1,14 +1,14 @@
-$NetBSD: patch-bf,v 1.1 2006/06/01 23:11:29 joerg Exp $
+$NetBSD: patch-bf,v 1.2 2006/10/14 19:33:45 schwarz Exp $
 
---- execute.c.orig	2006-06-01 23:09:21.000000000 +0000
-+++ execute.c
-@@ -23,9 +23,6 @@ export char *init_shell = SHELL;
- export char *user_shell;
- export char *exec_chdir_to = NULL;
+--- execute.c.orig	2006-10-14 20:46:22.000000000 +0200
++++ execute.c	2006-10-14 20:46:36.000000000 +0200
+@@ -30,9 +30,6 @@
+ char           *user_shell;
+ char           *exec_chdir_to = NULL;
  
--extern int errno;
+-extern int      errno;
 -
 -
  static int
- shell_check()
+ shell_check(void)
  {
