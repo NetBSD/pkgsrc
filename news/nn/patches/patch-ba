@@ -1,21 +1,28 @@
-$NetBSD: patch-ba,v 1.3 2002/07/08 02:21:20 kim Exp $
-
---- term.c.orig	Sun Jun 16 01:54:33 2002
-+++ term.c	Sun Jul  7 21:33:10 2002
-@@ -42,9 +42,9 @@
- #  include <termio.h>
- # endif	/* USE_TERMCAP */
+--- term.c.orig	2005-06-29 23:40:27.000000000 +0200
++++ term.c	2006-10-14 21:03:30.000000000 +0200
+@@ -25,7 +25,7 @@
+ #include "regexp.h"
+ #include "nn_term.h"
+ 
+-#if !defined(__FreeBSD__) && !(__NetBSD__) && !defined(NeXT)
++#if !defined(__FreeBSD__) && !(__NetBSD__) && !defined(NeXT) && !defined(__APPLE__) && !defined(__DragonFly__)
+ #include <stropts.h>
  #else
+ #include <sys/ioctl.h>
+@@ -74,9 +74,9 @@
+ 
+ #else
+ 
 -#ifndef __FreeBSD__
 +#ifndef HAVE_TERMIOS_H
- # include <sgtty.h>
--#endif	/* __FreeBSD__ */
-+#endif	/* HAVE_TERMIOS_H */
+ #include <sgtty.h>
+-#endif				/* __FreeBSD__ */
++#endif				/* HAVE_TERMIOS_H */
+ 
  #endif
  
- #ifdef SYSV_RESIZING
-@@ -401,6 +401,12 @@
- #endif	/* FAKE_INTERRUPT */
+@@ -456,6 +456,12 @@
+ #endif				/* FAKE_INTERRUPT */
  
  static unsigned sp_table[] = {
 +#ifdef B115200
@@ -25,5 +32,5 @@ $NetBSD: patch-ba,v 1.3 2002/07/08 02:21:20 kim Exp $
 +    B57600, 5760,
 +#endif
      B9600, 960,
+ 
  #ifdef B19200
-     B19200, 1920,

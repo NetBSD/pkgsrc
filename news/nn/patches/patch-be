@@ -1,12 +1,12 @@
-$NetBSD: patch-be,v 1.1 2006/06/01 23:11:29 joerg Exp $
+$NetBSD: patch-be,v 1.2 2006/10/14 19:33:45 schwarz Exp $
 
---- global.c.orig	2006-06-01 23:08:34.000000000 +0000
-+++ global.c
-@@ -61,7 +61,6 @@ export int who_am_i;
- export int dont_write_console = 0;
- export int mail_errors_mode = 2;
+--- global.c.orig	2005-04-20 00:26:50.000000000 +0200
++++ global.c	2006-10-14 20:43:21.000000000 +0200
+@@ -81,7 +81,6 @@
+ int             dont_write_console = 0;
+ int             mail_errors_mode = 2;
  
--extern int errno;
- struct passwd *getpwuid();
- extern char *getlogin(), *getenv();
+-extern int      errno;
+ extern char    *getlogin(), *getenv();
+ 
  

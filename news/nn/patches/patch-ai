@@ -1,27 +1,17 @@
-$NetBSD: patch-ai,v 1.7 2005/04/11 11:05:47 schwarz Exp $
+$NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
 
---- config.h-dist.orig	Thu Feb  6 18:06:02 2003
-+++ config.h-dist	Fri Apr  8 22:20:37 2005
-@@ -11,6 +11,9 @@
+--- config.h-dist.orig	2005-04-01 22:44:22.000000000 +0200
++++ config.h-dist	2006-10-14 20:03:22.000000000 +0200
+@@ -11,6 +11,8 @@
   *	(c) Copyright 1990, Kim F. Storm.  All rights reserved.
   */
  
 +#define PREFIX		"@PREFIX@"
 +#define PKG_SYSCONFDIR	"@PKG_SYSCONFDIR@"
-+
- #include <stdio.h>
- #include <ctype.h>
  
-@@ -66,7 +69,7 @@
-  *	ascii files.  (Thank you Geoff!)
-  */
- 
--/* #define NETWORK_DATABASE	*/
-+#define NETWORK_DATABASE
- 
- 
- /********************************** NNTP *********************************
-@@ -100,7 +103,7 @@
+ /*
+  * The Good Net-Keeping Seal of Approval folks seem to think it necessary to
+@@ -68,7 +70,7 @@
   *	LIB_DIRECTORY defined below.
   */
  
@@ -29,17 +19,17 @@ $NetBSD: patch-ai,v 1.7 2005/04/11 11:05:47 schwarz Exp $
 +#define NNTP_SERVER	PKG_SYSCONFDIR "/server"
  
  /*
-  *	Define NNTP_PATH_HOSTNAME to force a specific hostname into the
-@@ -138,7 +141,7 @@
+  *  Define your local domain name.  If you leave this undefined, nn will
+@@ -95,7 +97,7 @@
   *	conf/s-template.h as a starting point for writing you own.
   */
  
 -#include "s-sunos5.h"
 +#include "@SFILE@"
  
- 
- /********************** MACHINE DEPENDENT DEFINITIONS **********************
-@@ -149,7 +152,7 @@
+ /*
+  *	Define DEFAULT_PAGER as the initial value of the 'pager' variable.
+@@ -122,7 +124,7 @@
   *	conf/m-template.h as a starting point for writing you own.
   */
  
@@ -47,8 +37,19 @@ $NetBSD: patch-ai,v 1.7 2005/04/11 11:05:47 schwarz Exp $
 +#include "@MFILE@"
  
  
+ /***************************** OWNERSHIP ***************************
+@@ -139,8 +141,8 @@
+  *	Common choices are: (news, news) and (your uid, your gid)
+  */
+ 
+-#define OWNER	"news"
+-#define GROUP	"news"
++#define OWNER	"@BINOWN@"
++#define GROUP	"@BINGRP@"
+ 
+ 
  /**************************** LOCALIZATION ****************************
-@@ -182,8 +185,12 @@
+@@ -173,8 +175,12 @@
   *			   (= LIB_DIRECTORY/Log if undefined).
   */
  
@@ -57,13 +58,13 @@ $NetBSD: patch-ai,v 1.7 2005/04/11 11:05:47 schwarz Exp $
 +#define BIN_DIRECTORY	PREFIX "/bin"
 +#define LIB_DIRECTORY	PREFIX "/share/nn"
 +#ifndef _PATH_VARTMP
-+# define _PATH_VARTMP	"/var/tmp"
++# define _PATH_VARTMP  "/var/tmp"
 +#endif
 +#define TMP_DIRECTORY   _PATH_VARTMP
  
  
- /*************************** NEWS TRANSPORT **************************
-@@ -258,7 +265,10 @@
+ /*************************** MAIL INTERFACE *************************
+@@ -189,7 +195,11 @@
   */
  
  /* #define REC_MAIL	"/usr/lib/news/recmail"	*/	/* non-sendmail */
@@ -71,11 +72,12 @@ $NetBSD: patch-ai,v 1.7 2005/04/11 11:05:47 schwarz Exp $
 +#ifndef _PATH_SENDMAIL
 +# define _PATH_SENDMAIL	"/usr/lib/sendmail"
 +#endif
-+#define REC_MAIL        _PATH_SENDMAIL " -t"		/* sendmail */
- 
++#define REC_MAIL	_PATH_SENDMAIL " -t"		/* sendmail */
++
  
  /*
-@@ -307,13 +317,13 @@
+  *	nn needs to know the name of your host.
+@@ -237,13 +247,13 @@
   *	DAEMON_MAN	- nnmaster
   */
  
@@ -93,14 +95,12 @@ $NetBSD: patch-ai,v 1.7 2005/04/11 11:05:47 schwarz Exp $
  #define DAEMON_MAN_SECTION	"8"
  
  
-@@ -383,8 +393,8 @@
-  *	Common choices are:  (news, news)  and	 (your uid, your gid)
+@@ -374,7 +384,7 @@
+  *	performance (no data conversion is needed).
   */
  
--#define	OWNER	"news"
--#define	GROUP	"news"
-+#define	OWNER	"@BINOWN@"
-+#define	GROUP	"@BINGRP@"
+-/* #define NETWORK_DATABASE	*/
++#define NETWORK_DATABASE
  
- /*
-  *	Default folder directory
+ 
+ /**************************** DATABASE LOCATION **************************

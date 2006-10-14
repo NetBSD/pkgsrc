@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1504 2006/10/14 18:42:12 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1505 2006/10/14 19:33:45 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/pear-Mail to 1.1.14 [adrianp 2006-10-14]
 	Updated databases/mysql5-client to 5.0.26 [xtraeme 2006-10-14]
 	Updated databases/mysql5-server to 5.0.26 [xtraeme 2006-10-14]
+	Updated news/nn to 6.7.3 [schwarz 2006-10-14]
