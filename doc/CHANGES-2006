@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1506 2006/10/14 21:28:29 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1507 2006/10/14 21:58:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql5-server to 5.0.26 [xtraeme 2006-10-14]
 	Updated news/nn to 6.7.3 [schwarz 2006-10-14]
 	Updated graphics/showimg to 0.9.5 [markd 2006-10-14]
+	Updated mail/sylpheed-devel to 2.3.0beta2 [xtraeme 2006-10-14]
