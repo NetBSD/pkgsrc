@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1499 2006/10/14 09:26:25 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1500 2006/10/14 09:33:52 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/ruby-daemons to 1.0.2 [minskim 2006-10-14]
 	Updated devel/pango to 1.14.7 [wiz 2006-10-14]
 	Updated sysutils/gentoo to 0.11.56 [obache 2006-10-14]
+	Updated mail/dovecot to 1.0rc9 [ghen 2006-10-14]
