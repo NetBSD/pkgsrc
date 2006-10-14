@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/04 21:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/14 08:02:37 wiz Exp $
 
 DISTNAME=	BSD-Resource-1.24
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=BSD/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hut.fi/~jhi/
+HOMEPAGE=	http://users.tkk.fi/~jhi/
 COMMENT=	Perl interface to BSD process resources library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

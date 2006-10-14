@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/07 05:51:40 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/14 08:06:07 wiz Exp $
 #
 
 DISTNAME=	elscreen-1.4.3
@@ -17,7 +17,7 @@ DISTFILES=	${DISTNAME}.tar.gz \
 		elscreen-wl-0.7.0.tar.gz
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.morishima.net/~naoto/j/software/elscreen/
+HOMEPAGE=	http://www.morishima.net/~naoto/software/elscreen/
 COMMENT=	Window manager within Emacs
 
 .include "../../mk/emacs.mk"

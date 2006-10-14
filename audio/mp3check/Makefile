@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:39 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/14 07:59:09 wiz Exp $
 
 DISTNAME=	mp3check-0.8.0
 CATEGORIES=	audio
 MASTER_SITES=	http://jo.ath.cx/soft/mp3check/
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://jo.ath.cx/soft/mp3check/mp3check.html
+HOMEPAGE=	http://jo.ath.cx/soft/mp3check/
 COMMENT=	Check MP3 files for consistency
 
 GNU_CONFIGURE=	YES

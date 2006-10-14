@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/19 16:18:53 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/14 07:59:09 wiz Exp $
 
 DISTNAME=	us2-980812
 PKGNAME=	mbrolavox-${DISTNAME}
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/us2/ \
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://www.festvox.org/mbrola/
+HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/mbrola/
 COMMENT=	American English male voice for MBROLA
 
 DEPENDS+=	mbrola-301hnb1:../../audio/mbrola
