@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/04 11:54:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/14 11:57:51 adrianp Exp $
 #
 
-DISTNAME=	pkg_developer-1.0
+DISTNAME=	pkg_developer-1.1
 CATEGORIES=	meta-pkgs pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Meta-package for pkgsrc package development
 
+DEPENDS+=	checkperms>=1.0:../../sysutils/checkperms
 DEPENDS+=	createbuildlink>=3.13:../../pkgtools/createbuildlink
 DEPENDS+=	digest>=20060302:../../pkgtools/digest
 DEPENDS+=	pkg_chk>=1.77:../../pkgtools/pkg_chk
