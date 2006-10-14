@@ -1,7 +1,43 @@
-$NetBSD: patch-aa,v 1.2 2005/10/26 04:29:01 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/14 02:18:37 rillig Exp $
 
---- configure.orig	2004-04-13 22:39:47.000000000 -0500
-+++ configure
+--- configure.orig	2004-04-14 05:39:47.000000000 +0200
++++ configure	2006-10-14 04:17:03.000000000 +0200
+@@ -1430,7 +1430,7 @@ TK_LIB_STATIC=${TKCONF_PATH}/libtk${TK_V
+ # Check for the TkStep libraries (if needed)...
+ #
+ 
+-if test "$ENABLE_TKSTEP" == "yes" ; then
++if test "$ENABLE_TKSTEP" = "yes" ; then
+   TK_LIB_SPEC="-ltkstep -lXpm -ltiff"
+   { echo "$as_me:$LINENO: will link using TkStep libraries" >&5
+ echo "$as_me: will link using TkStep libraries" >&6;}
+@@ -1446,7 +1446,7 @@ echo "$as_me:$LINENO: result: $TCL_VERSI
+ echo "${ECHO_T}$TCL_VERSION" >&6
+ if test "$TCL_MAJOR_VERSION" -lt 8; then
+    echo
+-   if test "$ENABLE_UNSUPPORTED" == "yes" ; then
++   if test "$ENABLE_UNSUPPORTED" = "yes" ; then
+       { echo "$as_me:$LINENO: WARNING: you may be attempting to use TkDesk 2.x with an unsupported version of Tcl.  Good luck.  Hope it works out for you." >&5
+ echo "$as_me: WARNING: you may be attempting to use TkDesk 2.x with an unsupported version of Tcl.  Good luck.  Hope it works out for you." >&2;}
+    else
+@@ -1462,7 +1462,7 @@ echo "$as_me:$LINENO: result: $TK_VERSIO
+ echo "${ECHO_T}$TK_VERSION" >&6
+ if test "$TK_MAJOR_VERSION" -lt 8; then
+    echo
+-   if test "$ENABLE_UNSUPPORTED" == "yes" ; then
++   if test "$ENABLE_UNSUPPORTED" = "yes" ; then
+       { echo "$as_me:$LINENO: WARNING: you may be attempting to use TkDesk 2.x with an unsupported version of Tk.  Good luck.  Hope it works out for you." >&5
+ echo "$as_me: WARNING: you may be attempting to use TkDesk 2.x with an unsupported version of Tk.  Good luck.  Hope it works out for you." >&2;}
+    else
+@@ -1505,7 +1505,7 @@ echo $ECHO_N "checking version of Itcl..
+ echo "${ECHO_T}$ITCL_VERSION" >&6
+    if test "$ITCL_MAJOR_VERSION" -ne 3; then
+       echo
+-      if test "$ENABLE_UNSUPPORTED" == "yes" ; then
++      if test "$ENABLE_UNSUPPORTED" = "yes" ; then
+ 	 { echo "$as_me:$LINENO: WARNING: you may be attempting to use TkDesk 2.x with an unsupported version of Itcl.  Good luck.  Hope it works out for you." >&5
+ echo "$as_me: WARNING: you may be attempting to use TkDesk 2.x with an unsupported version of Itcl.  Good luck.  Hope it works out for you." >&2;}
+       else
 @@ -1548,10 +1548,10 @@ else
       ITCL_LIB_SPEC="-L${TCLCONF_PATH} -litcl3.1"
       ITCL_LIB_STATIC=${TCLCONF_PATH}/libitcl3.1.a
