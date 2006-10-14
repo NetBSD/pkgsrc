@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2006/10/14 01:15:28 rillig Exp $
+
+--- configure.orig	2006-10-14 03:14:06.000000000 +0200
++++ configure	2006-10-14 03:14:33.000000000 +0200
+@@ -26653,7 +26653,7 @@ fi
+ if test $ac_enable_djview != no
+ then
+ 
+-   if test "${prefix}" == "/usr" ; then
++   if test "${prefix}" = "/usr" ; then
+      ac_desktopfiles=yes
+    else
+      ac_desktopfiles=no
