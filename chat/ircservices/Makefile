@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/09/02 08:42:58 adrianp Exp $
+# $NetBSD: Makefile,v 1.26 2006/10/14 08:00:20 wiz Exp $
 #
 
 DISTNAME=	ircservices-5.0.58
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.ircservices.za.net/download/ \
 		ftp://ftp.freenet.de/pub/ftp.ircservices.za.net/pub/ircservices/
 
 MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	http://www.ircservices.esper.net/
+HOMEPAGE=	http://www.ircservices.za.net/
 COMMENT=	Services for IRC networks
 
 HAS_CONFIGURE=	YES

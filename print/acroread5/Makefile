@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/09/04 19:27:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2006/10/14 08:14:24 wiz Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.10
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
+HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
 
 CONFLICTS+=	acroread-5.*
