@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2005/04/11 11:18:06 schwarz Exp $
+$NetBSD: patch-ae,v 1.6 2006/10/14 19:33:45 schwarz Exp $
 
---- conf/s-linux.h.orig	Sat Apr  9 00:52:08 2005
-+++ conf/s-linux.h	Sat Apr  9 00:52:34 2005
-@@ -247,7 +247,7 @@
+--- conf/s-linux.h.orig	2005-06-24 00:48:52.000000000 +0200
++++ conf/s-linux.h	2006-10-14 19:44:37.000000000 +0200
+@@ -225,7 +225,7 @@
   *	Define standard compiler flags here:
   */
  
