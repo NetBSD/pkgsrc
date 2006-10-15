@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/10/15 12:21:13 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/10/15 12:36:05 adrianp Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Auth.pm
@@ -139,12 +139,12 @@ share/bugzilla/docs/html/security-mysql.html
 share/bugzilla/docs/html/security-os.html
 share/bugzilla/docs/html/security-webserver.html
 share/bugzilla/docs/html/security.html
-share/bugzilla/docs/html/trbl-bundlebugzilla.html
 share/bugzilla/docs/html/trbl-dbdsponge.html
 share/bugzilla/docs/html/trbl-index.html
 share/bugzilla/docs/html/trbl-passwd-encryption.html
 share/bugzilla/docs/html/trbl-perlmodule.html
 share/bugzilla/docs/html/trbl-relogin-everyone.html
+share/bugzilla/docs/html/trbl-relogin-some.html
 share/bugzilla/docs/html/trbl-testserver.html
 share/bugzilla/docs/html/trouble-filetemp.html
 share/bugzilla/docs/html/troubleshooting.html
@@ -156,7 +156,7 @@ share/bugzilla/docs/html/using.html
 share/bugzilla/docs/html/versions.html
 share/bugzilla/docs/html/voting.html
 share/bugzilla/docs/html/whining.html
-share/bugzilla/docs/html/x3269.html
+share/bugzilla/docs/html/x757.html
 share/bugzilla/duplicates.cgi
 share/bugzilla/duplicates.xul
 share/bugzilla/editclassifications.cgi
@@ -229,7 +229,6 @@ share/bugzilla/template/en/default/account/password/forgotten-password.txt.tmpl
 share/bugzilla/template/en/default/account/password/set-forgotten-password.html.tmpl
 share/bugzilla/template/en/default/account/prefs/account.html.tmpl
 share/bugzilla/template/en/default/account/prefs/email.html.tmpl
-share/bugzilla/template/en/default/account/prefs/footer.html.tmpl
 share/bugzilla/template/en/default/account/prefs/permissions.html.tmpl
 share/bugzilla/template/en/default/account/prefs/prefs.html.tmpl
 share/bugzilla/template/en/default/account/prefs/saved-searches.html.tmpl
@@ -251,6 +250,7 @@ share/bugzilla/template/en/default/admin/components/footer.html.tmpl
 share/bugzilla/template/en/default/admin/components/list.html.tmpl
 share/bugzilla/template/en/default/admin/components/select-product.html.tmpl
 share/bugzilla/template/en/default/admin/components/updated.html.tmpl
+share/bugzilla/template/en/default/admin/confirm-action.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/create.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/created.html.tmpl
