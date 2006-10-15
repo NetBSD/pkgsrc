@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5560 2006/10/15 12:34:48 obache Exp $
+$NetBSD: TODO,v 1.5561 2006/10/15 12:37:15 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,6 @@ Suggested package updates
 	o boson-0.13
 	o browser-bookmarks-menu-0.4
 	o bsdiff-4.3 [pkg/34429]
-	o bugzilla-2.22
 	o bwidget-1.7.0
 	o byacc-20050813
 	o c4-1.10 [schmonz]
