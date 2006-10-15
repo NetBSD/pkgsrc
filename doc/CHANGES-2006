@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1511 2006/10/15 12:14:30 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1512 2006/10/15 12:34:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-Mail-Mbox-MessageParser to 1.4005 [obache 2006-10-15]
 	Updated mail/grepmail to 5.3032 [obache 2006-10-15]
 	Updated mail/milter-greylist to 3.0rc5 [tron 2006-10-15]
+	Updated sysutils/idesk to 0.7.5 [obache 2006-10-15]
