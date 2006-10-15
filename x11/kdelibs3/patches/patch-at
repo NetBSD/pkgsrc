@@ -1,0 +1,16 @@
+$NetBSD: patch-at,v 1.6 2006/10/15 11:25:19 markd Exp $
+
+--- kate/tests/highlight.sh.orig	2006-10-16 00:04:26.000000000 +1300
++++ kate/tests/highlight.sh
+@@ -159,9 +159,9 @@ make  destdir=/usr/
+ 
+ # [[ and [ correctly need spaces to be regarded as structure,
+ # otherwise they are patterns (currently treated as normal text)
+-if [ "$p" == "" ] ; then
++if [ "$p" = "" ] ; then
+ 	ls /usr/bin/[a-z]*
+-elif [[ $p == 0 ]] ; then
++elif [[ $p = 0 ]] ; then
+ 	ls /usr/share/$p
+ fi
+ 
