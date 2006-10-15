@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5561 2006/10/15 12:37:15 adrianp Exp $
+$NetBSD: TODO,v 1.5562 2006/10/15 12:41:21 markd Exp $
 
 Suggested new packages
 ======================
@@ -611,7 +611,6 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kapooka-0.3
 	o kazehakase-0.4.1
-	o kbarcode-2.0.4
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
