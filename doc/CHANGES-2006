@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1513 2006/10/15 12:37:15 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1514 2006/10/15 12:41:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4790,3 +4790,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/milter-greylist to 3.0rc5 [tron 2006-10-15]
 	Updated sysutils/idesk to 0.7.5 [obache 2006-10-15]
 	Updated devel/bugzilla to 2.22.1 [adrianp 2006-10-15]
+	Updated graphics/kbarcode to 2.0.4 [markd 2006-10-15]
