@@ -26,6 +26,10 @@ blender-exppython	Enable the Experimental Python support.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 bpf	
 buffy-size	
+bugzilla-charts		Enable generation of charts.
+bugzilla-patchviewer	Enable patchiewer support.
+bugzilla-imagemagick	Compress .BMPs to save space.
+bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 canna			Use Canna as Japanese conversion program.
 catalog-mysql		Store Bacula catalog in MySQL database.
 catalog-pgsql		Store Bacula catalog in PostgreSQL database.
@@ -33,7 +37,6 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 cgi
 charset	
-charts	
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -211,7 +214,6 @@ oracle			Enable Oracle support.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for MacOSX Address Book.
 pam			Enable PAM support.
-patchviewer	
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre	
 perf-tuning	
@@ -324,7 +326,6 @@ xft
 xft2	
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
-xmlimportbugs	
 xmms-eq	
 xorg-server-apm	
 xorg-server-ark	
