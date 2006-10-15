@@ -1,5 +1,7 @@
+$NetBSD: patch-ba,v 1.5 2006/10/15 16:43:37 schwarz Exp $
+
 --- term.c.orig	2005-06-29 23:40:27.000000000 +0200
-+++ term.c	2006-10-14 21:03:30.000000000 +0200
++++ term.c	2006-10-15 15:22:58.000000000 +0200
 @@ -25,7 +25,7 @@
  #include "regexp.h"
  #include "nn_term.h"
@@ -9,6 +11,15 @@
  #include <stropts.h>
  #else
  #include <sys/ioctl.h>
+@@ -60,7 +60,7 @@
+ #else
+ #define USE_TERMCAP
+ 
+-#if !defined(SUNOS4) && !defined(NeXT)
++#if !defined(SUNOS4) && !defined(NeXT) && !defined(__sgi)
+ #include <termcap.h>
+ #endif				/* SUNOS4 */
+ 
 @@ -74,9 +74,9 @@
  
  #else
