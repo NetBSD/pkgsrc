@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/06/17 20:57:55 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/15 21:40:07 rillig Exp $
 #
 
 DISTNAME=		patchutils-0.2.31
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://cyberelk.net/tim/data/patchutils/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,9 +18,7 @@ USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${PREFIX}/bin/bash
-REPLACE_FILES.bash=	editdiff.in espdiff.in
+REPLACE_BASH+=		editdiff.in espdiff.in
+USE_TOOLS+=		bash:run
 
 .include "../../mk/bsd.pkg.mk"
