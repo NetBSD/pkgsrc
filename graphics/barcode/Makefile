@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/15 11:52:28 markd Exp $
 #
 
 DISTNAME=	barcode-0.98
@@ -19,6 +19,6 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			MAN3DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man3
 
 # man/man1/barcode.1
-CONFLICTS+=	xscreensaver-[0-9]*
+CONFLICTS+=	xscreensaver<5.00
 
 .include "../../mk/bsd.pkg.mk"
