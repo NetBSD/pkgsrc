@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: distinfo,v 1.13 2006/10/15 16:43:37 schwarz Exp $
 
 SHA1 (nn-6.7.3.tar.Z) = 1879aae59131e4b86e82021802918a0a39cea826
 RMD160 (nn-6.7.3.tar.Z) = 2617fe7dce42c36ae970579e27ebd00a60f23653
@@ -19,10 +19,10 @@ SHA1 (patch-ar) = 8c40f584182b734348d50489ffab1a03e791ef9c
 SHA1 (patch-at) = 11541ea36bbdacfbd84af6b3be4c4dbc983ef16d
 SHA1 (patch-au) = e247b3a62b24409a04a1f1604606d6e38474af67
 SHA1 (patch-av) = 4013cfa3d4dc9bba84593ce68310e7d9b75b0aa0
-SHA1 (patch-ax) = 8c8599991d71d4b72d56258bdaf474e4ddd13bd6
+SHA1 (patch-ax) = 43a0ca2f99c21ad0bcc047154d48d9ebf864fecf
 SHA1 (patch-ay) = d707b74d2c6d2f39b8515531cf90d435784deaf1
 SHA1 (patch-az) = 206fcead17eb09c8c019eeb78335841ff9ce9c94
-SHA1 (patch-ba) = d021b28f813aa39189b863cff3c5be059b904a54
+SHA1 (patch-ba) = a9c5dd3af5901d08bef80de67402b4cf82be6380
 SHA1 (patch-bb) = af094b78b3f2fc0cdb77dea834d74a35fbb170a4
 SHA1 (patch-bc) = 981b2abf745d41f82e1dd4b77981457a5f19591c
 SHA1 (patch-be) = 61eaadbf56104d484055ebf3b05eeaac045e4450

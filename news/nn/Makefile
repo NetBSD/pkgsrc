@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/10/15 10:27:53 schwarz Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/15 16:43:37 schwarz Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -32,7 +32,9 @@ MFILE=		m-${LOWER_ARCH}.h
 CPP+=		-traditional
 .endif
 
-MAKE_ENV+=	CC=${CC:Q}
+.if ${OPSYS} == "IRIX"
+CPPFLAGS+=	-DHAVE_TERMIO_H
+.endif
 
 post-patch:
 	@${SED} -e ' \
