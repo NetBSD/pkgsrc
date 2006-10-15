@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.791 2006/10/14 09:11:25 tron Exp $
+# $NetBSD: Makefile,v 1.792 2006/10/15 14:05:46 bouyer Exp $
 #
 
 COMMENT=	Development utilities
@@ -110,6 +110,7 @@ SUBDIR+=	darcs
 SUBDIR+=	darts
 SUBDIR+=	ddd
 SUBDIR+=	dejagnu
+SUBDIR+=	dev86
 SUBDIR+=	devIL
 SUBDIR+=	devhelp
 SUBDIR+=	device-driver-doc-de
