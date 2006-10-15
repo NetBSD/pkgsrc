@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.16 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: plist.mk,v 1.17 2006/10/15 16:20:34 joerg Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -193,6 +193,13 @@ _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 _BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
+.if ${_USE_DESTDIR} == "user-destdir"
+_SET_OWNER_GROUP=	${ECHO} "@owner ${_INSTALL_ROOT_USER}";		\
+			${ECHO} "@group ${_INSTALL_ROOT_GROUP}"
+.else
+_SET_OWNER_GROUP=	:
+.endif
+
 .if ${PLIST_TYPE} == "dynamic"
 _PLIST_IGNORE_CMD=							\
 	( while read i; do						\
@@ -205,6 +212,7 @@ _PLIST_IGNORE_CMD=							\
 		[ "$$ignore" = "yes" ] || ${ECHO} "$$i";		\
 	  done )
 _GENERATE_PLIST=							\
+	${_SET_OWNER_GROUP};						\
 	${FIND} ${DESTDIR}${PREFIX} \! -type d -print | ${SORT} |	\
 		${SED} -e "s|^${DESTDIR}${PREFIX}/||" | 		\
 		${_PLIST_IGNORE_CMD};					\
@@ -214,7 +222,8 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${DESTDIR}${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${CAT} ${PLIST_SRC};				\
+_GENERATE_PLIST=	${_SET_OWNER_GROUP};				\
+			${CAT} ${PLIST_SRC};				\
 			${GENERATE_PLIST}
 .endif
 
