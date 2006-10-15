@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/06/09 21:09:39 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2006/10/15 12:32:57 obache Exp $
 
-SHA1 (idesk-0.7.2.tar.gz) = ee911e48e16169bb75e2f5479885ca04a7e43b4c
-RMD160 (idesk-0.7.2.tar.gz) = 02f295c40ce1505c7fefdd713ee8db96fc5cd9e5
-Size (idesk-0.7.2.tar.gz) = 207021 bytes
+SHA1 (idesk-0.7.5.tar.bz2) = d00a2183835f06ff29aca61efecd831edf19ba49
+RMD160 (idesk-0.7.5.tar.bz2) = cef8fefc139dd96d6a7cf8c43637d9a504d2df14
+Size (idesk-0.7.5.tar.bz2) = 185858 bytes
