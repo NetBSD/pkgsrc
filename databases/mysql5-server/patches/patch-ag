@@ -1,15 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2006/05/18 16:11:15 cube Exp $
+$NetBSD: patch-ag,v 1.4.4.1 2006/10/15 10:18:20 salo Exp $
 
---- man/Makefile.in.orig	2006-04-26 20:31:55.000000000 +0200
-+++ man/Makefile.in
-@@ -342,8 +342,8 @@ yassl_includes = @yassl_includes@
+--- man/Makefile.in.orig	2006-10-04 13:25:43.000000000 +0200
++++ man/Makefile.in	2006-10-14 20:17:36.000000000 +0200
+@@ -344,7 +344,7 @@
  yassl_libs = @yassl_libs@
  yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
  zlib_dir = @zlib_dir@
 -man1_MANS = @man1_files@
--EXTRA_DIST = $(man1_MANS)
 +man1_MANS = mysqld.1 mysqld_multi.1
-+EXTRA_DIST = mysqld.1.in mysqld_multi.1.in
+ man8_MANS = @man8_files@
+ EXTRA_DIST = $(man1_MANS) $(man8_MANS)
  all: all-am
- 
- .SUFFIXES:

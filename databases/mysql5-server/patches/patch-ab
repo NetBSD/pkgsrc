@@ -1,26 +1,26 @@
-$NetBSD: patch-ab,v 1.2 2006/08/06 16:30:40 tron Exp $
+$NetBSD: patch-ab,v 1.2.2.1 2006/10/15 10:18:20 salo Exp $
 
---- tests/Makefile.in.orig	2006-07-27 19:53:37.000000000 +0100
-+++ tests/Makefile.in	2006-08-06 16:03:47.000000000 +0100
-@@ -102,7 +102,7 @@
- @HAVE_NETWARE_TRUE@	mysql_client_test.$(OBJEXT) \
- @HAVE_NETWARE_TRUE@	$(am__objects_1) my_memmem.$(OBJEXT)
+--- tests/Makefile.in.orig	2006-10-14 19:48:42.000000000 +0200
++++ tests/Makefile.in	2006-10-14 19:49:16.000000000 +0200
+@@ -99,7 +99,7 @@
+ am_mysql_client_test_OBJECTS = mysql_client_test.$(OBJEXT) \
+ 	$(am__objects_1) my_memmem.$(OBJEXT)
  mysql_client_test_OBJECTS = $(am_mysql_client_test_OBJECTS)
 -am__DEPENDENCIES_1 = $(top_builddir)/libmysql/libmysqlclient.la
 +am__DEPENDENCIES_1 =
  am__DEPENDENCIES_2 =
- @HAVE_NETWARE_FALSE@mysql_client_test_DEPENDENCIES =  \
- @HAVE_NETWARE_FALSE@	$(am__DEPENDENCIES_1) \
-@@ -117,7 +117,7 @@
+ mysql_client_test_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_2)
+@@ -111,7 +111,7 @@
  thread_test_SOURCES = thread_test.c
  thread_test_OBJECTS = thread_test.$(OBJEXT)
  thread_test_LDADD = $(LDADD)
 -thread_test_DEPENDENCIES = $(top_builddir)/libmysql/libmysqlclient.la
-+thread_test_DEPENDENCIES =
++thread_test_DEPENDENCIES = 
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -420,8 +420,7 @@
+@@ -416,8 +416,7 @@
  INCLUDES = -I$(top_builddir)/include -I$(top_srcdir)/include \
  			$(openssl_includes)
  
@@ -28,5 +28,5 @@ $NetBSD: patch-ab,v 1.2 2006/08/06 16:30:40 tron Exp $
 -                        $(top_builddir)/libmysql/libmysqlclient.la
 +LDADD = @CLIENT_EXTRA_LDFLAGS@ -lmysqlclient
  
- @HAVE_NETWARE_FALSE@mysql_client_test_LDADD = $(LDADD) $(CXXLDFLAGS) -L../mysys -lmysys
- @HAVE_NETWARE_TRUE@mysql_client_test_LDADD = $(LDADD) $(CXXLDFLAGS)
+ mysql_client_test_LDADD = $(LDADD) $(CXXLDFLAGS)
+ mysql_client_test_SOURCES = mysql_client_test.c $(yassl_dummy_link_fix) \

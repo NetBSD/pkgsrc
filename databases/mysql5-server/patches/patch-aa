@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2006/01/09 16:25:01 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2.6.1 2006/10/15 10:18:20 salo Exp $
 
---- Makefile.in.orig	2006-01-09 16:46:08.000000000 +0100
-+++ Makefile.in	2006-01-09 16:46:27.000000000 +0100
-@@ -365,12 +365,8 @@
+--- Makefile.in.orig	2006-10-14 19:47:57.000000000 +0200
++++ Makefile.in	2006-10-14 19:48:09.000000000 +0200
+@@ -370,12 +370,8 @@
  EXTRA_DIST = INSTALL-SOURCE INSTALL-WIN-SOURCE \
- 			README COPYING EXCEPTIONS-CLIENT
+ 			README COPYING EXCEPTIONS-CLIENT CMakeLists.txt
  
 -SUBDIRS = . include @docs_dirs@ @zlib_dir@ @yassl_dir@ \
 -			@readline_topdir@ sql-common \

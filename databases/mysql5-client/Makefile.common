@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.16 2006/09/02 12:32:12 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.16.2.1 2006/10/15 10:18:20 salo Exp $
 
-DISTNAME=		mysql-5.0.24a
+DISTNAME=		mysql-5.0.26
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
@@ -95,7 +95,7 @@ CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		autoconf gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES+=		mk scripts
@@ -112,14 +112,6 @@ SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
 SUBST_SED.scripts+=	-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scripts=	Fixing scripts.
 
-# Detect correctly sem_init(3) on NetBSD.
-.if !empty(OPSYS:MNetBSD)
-SUBST_CLASSES+=		sem
-SUBST_STAGE.sem=	post-patch
-SUBST_FILES.sem=	configure
-SUBST_SED.sem=		-e "s|-lposix4|-lrt|g"
-.endif
-
 # Fix broken shared library detection under Mac OS X
 .if ${OPSYS} == Darwin
 SUBST_CLASSES+=		dylib
@@ -127,6 +119,9 @@ SUBST_STAGE.dylib=	post-patch
 SUBST_FILES.dylib=	configure
 SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

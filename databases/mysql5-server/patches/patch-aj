@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-aj,v 1.1.1.1.8.1 2006/10/15 10:18:20 salo Exp $
 
---- scripts/mysqld_safe.sh.orig	2005-01-17 15:16:35.000000000 +0100
-+++ scripts/mysqld_safe.sh	2005-01-17 15:20:03.000000000 +0100
-@@ -253,6 +253,14 @@
-   fi
+--- scripts/mysqld_safe.sh.orig	2006-10-14 19:56:04.000000000 +0200
++++ scripts/mysqld_safe.sh	2006-10-14 19:59:48.000000000 +0200
+@@ -330,6 +330,14 @@
+   ulimit -c $core_file_size
  fi
  
 +datemsg()
@@ -17,13 +17,13 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
  #
  # If there exists an old pid file, check if the daemon is already running
  # Note: The switches to 'ps' may depend on your operating system
-@@ -263,18 +271,16 @@
+@@ -340,18 +348,16 @@
    then
      if @FIND_PROC@
      then    # The pid contains a mysqld process
 -      echo "A mysqld process already exists"
 -      echo "A mysqld process already exists at " `date` >> $err_log
-+	    datemsg "A mysqld process already exists"
++      datemsg "A mysqld process already exists"
        exit 1
      fi
    fi
@@ -34,13 +34,13 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
 -    echo "Fatal error: Can't remove the pid file: $pid_file at " `date` >> $err_log
 -    echo "Please remove it manually and start $0 again"
 -    echo "mysqld daemon not started"
-+	datemsg "Fatal error: Can't remove the pid file: $pid_file"
-+	datemsg "Please remove it manually and start $0 again"
-+	datemsg "mysqld daemon not started"
++    datemsg "Fatal error: Can't remove the pid file: $pid_file"
++    datemsg "Please remove it manually and start $0 again"
++    datemsg "mysqld daemon not started"
      exit 1
    fi
  fi
-@@ -287,11 +293,11 @@
+@@ -364,11 +370,11 @@
  # Alternatively, you can start mysqld with the "myisam-recover" option. See
  # the manual for details.
  #
@@ -54,7 +54,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
  
  # Does this work on all systems?
  #if type ulimit | grep "shell builtin" > /dev/null
-@@ -299,7 +305,7 @@
+@@ -376,7 +382,7 @@
  #  ulimit -n 256 > /dev/null 2>&1		# Fix for BSD and FreeBSD systems
  #fi
  
@@ -63,7 +63,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
  while true
  do
    rm -f $safe_mysql_unix_port $pid_file	# Some extra safety
-@@ -311,7 +317,7 @@
+@@ -388,7 +394,7 @@
    fi
    if test ! -f $pid_file		# This is removed if normal shutdown
    then
@@ -72,7 +72,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
      break
    fi
  
-@@ -324,7 +330,7 @@
+@@ -401,7 +407,7 @@
      # kill -9 is used or the process won't react on the kill.
      numofproces=`ps xaww | grep -v "grep" | grep "$ledir/$MYSQLD\>" | grep -c "pid-file=$pid_file"`
  
@@ -81,7 +81,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
      I=1
      while test "$I" -le "$numofproces"
      do 
-@@ -337,16 +343,14 @@
+@@ -414,16 +420,14 @@
        #    echo "TEST $I - $T **"
        if kill -9 $T
        then
