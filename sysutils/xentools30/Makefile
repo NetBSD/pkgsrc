@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/14 08:23:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/15 16:08:08 xtraeme Exp $
 #
 
 DISTNAME=		xen-3.0.2-2-src
@@ -135,8 +135,10 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/scripts
 
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
-	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio.h || ${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
-	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || ${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
+	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio.h || \
+		${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
+	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || \
+		${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
 
 .if ${OPSYS} == "NetBSD"
 post-build:
