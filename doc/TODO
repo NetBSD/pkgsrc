@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5558 2006/10/15 10:08:42 obache Exp $
+$NetBSD: TODO,v 1.5559 2006/10/15 10:45:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ Suggested package updates
 	o gramofile-1.6P
 	o grap-1.36
 	o grep-2.5.1a
-	o grepmail-5.3032 [pkg/34438]
 	o grhino-0.15.2
 	o gri-2.12.8
 	o grig-0.7.1
