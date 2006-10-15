@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1508 2006/10/15 08:34:02 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1509 2006/10/15 10:08:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4785,3 +4785,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/showimg to 0.9.5 [markd 2006-10-14]
 	Updated mail/sylpheed-devel to 2.3.0beta2 [xtraeme 2006-10-14]
 	Updated time/ruby-tzinfo to 0.3.2nb1 [minskim 2006-10-15]
+	Updated mail/p5-Mail-Mbox-MessageParser to 1.4005 [obache 2006-10-15]
