@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/15 12:39:10 markd Exp $
 bin/kbarcode
 lib/kde3/kfile_kbarcode.la
-share/kde/applnk/Applications/KBarcode/kbarcode-batch.desktop
-share/kde/applnk/Applications/KBarcode/kbarcode-editor.desktop
-share/kde/applnk/Applications/KBarcode/kbarcode-label.desktop
-share/kde/applnk/Applications/KBarcode/kbarcode-single.desktop
-share/kde/applnk/Applications/KBarcode/kbarcode.desktop
+share/applications/kde/kbarcode-batch.desktop
+share/applications/kde/kbarcode-editor.desktop
+share/applications/kde/kbarcode-label.desktop
+share/applications/kde/kbarcode-single.desktop
+share/applications/kde/kbarcode.desktop
+share/kde/apps/kbarcode/barcode.ps
 share/kde/apps/kbarcode/barcodes.html
 share/kde/apps/kbarcode/exampledata.sql
 share/kde/apps/kbarcode/labeldefinitions.sql
 share/kde/apps/kbarcode/logo.png
+share/kde/apps/kbarcode/rules.xml
 share/kde/icons/hicolor/16x16/actions/barcode.png
 share/kde/icons/hicolor/16x16/actions/kbarcodeellipse.png
 share/kde/icons/hicolor/16x16/actions/kbarcodegrid.png
@@ -31,5 +33,15 @@ share/locale/it/LC_MESSAGES/kbarcode.mo
 share/locale/nl/LC_MESSAGES/kbarcode.mo
 share/locale/pl/LC_MESSAGES/kbarcode.mo
 share/locale/sv/LC_MESSAGES/kbarcode.mo
+share/locale/tr/LC_MESSAGES/kbarcode.mo
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/kbarcode
-@dirrm share/kde/applnk/Applications/KBarcode
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
