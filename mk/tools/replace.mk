@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.176 2006/09/27 15:18:15 joerg Exp $
+# $NetBSD: replace.mk,v 1.177 2006/10/15 01:56:06 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -340,6 +340,17 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gawk=gawk
 TOOLS_PATH.gawk=		${TOOLS_PREFIX.gawk}/bin/${GNU_PROGRAM_PREFIX}awk
 .  endif
 TOOLS_ALIASES.gawk=		awk
+.endif
+
+.if !defined(TOOLS_IGNORE.gem) && !empty(_USE_TOOLS:Mgem)
+.  if !empty(PKGPATH:Mmisc/rubygems)
+MAKEFLAGS+=			TOOLS_IGNORE.gem=
+.  elif !empty(_TOOLS_USE_PKGSRC.gem:M[yY][eE][sS])
+TOOLS_DEPENDS.gem?=		rubygems-[0-9]*:../../misc/rubygems
+TOOLS_CREATE+=			gem
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gem=gem
+TOOLS_PATH.gem=			${TOOLS_PREFIX.gem}/bin/gem
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.gm4) && !empty(_USE_TOOLS:Mgm4)

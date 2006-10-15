@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.3 2006/09/13 11:10:36 joerg Exp $
+# $NetBSD: extract,v 1.4 2006/10/15 01:56:06 minskim Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -100,6 +100,7 @@ set -u		# treat undefined variables as errors
 : ${CAT:=cat}
 : ${CP:=cp}
 : ${ECHO:=echo}
+: ${GEM:="gem unpack"}
 : ${GZCAT:="gzip -cd"}
 : ${LHA:=lha}
 : ${MKDIR:=mkdir}
@@ -191,6 +192,7 @@ case "$distfile" in
 *.zoo)		_format=zoo ;;
 *.rar)		_format=rar ;;
 *.bin)		_format=jre-bin ;;
+*.gem)		_format=gem ;;
 *)		_format=none ;;
 esac
 ${TEST} -n "$format" || format="$_format"
@@ -303,6 +305,10 @@ rar)
 jre-bin)
 	: ${EXTRACT_OPTS_BIN=}
 	${ECHO} yes | "$distfile" ${EXTRACT_OPTS_BIN} >/dev/null
+	;;
+
+gem)
+	${GEM} "$distfile"
 	;;
 
 none)
