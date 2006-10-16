@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/10/16 00:37:56 wiz Exp $
+
+--- gnome-doc-prepare.in.orig	2005-09-13 13:40:59.000000000 +0000
++++ gnome-doc-prepare.in
+@@ -139,7 +139,7 @@ EOF
+     ;;
+ 
+   *)
+-    if [ "x$docname" == "xyes" ]
++    if [ "x$docname" = "xyes" ]
+     then
+       newdocument="$arg" 
+       docname=no
