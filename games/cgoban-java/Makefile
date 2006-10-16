@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2006/10/07 13:51:24 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2006/10/16 10:46:53 salo Exp $
 #
 
-DISTNAME=	cgoban-java-3.3.5
+DISTNAME=	cgoban-java-3.3.8
+MASTER_SITES=	http://files.gokgs.com/javaBin/
+DISTFILES=	cgoban.jar
+DIST_SUBDIR=	${DISTNAME}
 CATEGORIES=	games java
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.jar
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://kgs.kiseido.com/en_US/download.html
@@ -18,11 +19,11 @@ USE_TOOLS+=	printf
 INSTALLATION_DIRS=	bin lib/java
 
 do-build:
-	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/lib/java/${DISTNAME}.jar \"\$$@\"\\n" > ${WRKSRC}/cgoban-java.sh
+	${PRINTF} "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/lib/java/${PKGNAME}.jar \"\$$@\"\\n" > ${WRKSRC}/cgoban-java.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cgoban-java.sh ${PREFIX}/bin/cgoban-java
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${PREFIX}/lib/java/
+	${INSTALL_DATA} ${WRKSRC}/cgoban.jar ${PREFIX}/lib/java/${PKGNAME}.jar
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
