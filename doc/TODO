@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5566 2006/10/16 12:04:14 obache Exp $
+$NetBSD: TODO,v 1.5567 2006/10/16 12:16:06 obache Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,6 @@ Suggested package updates
 	o maradns-1.2.12.03
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
-	o mdf2iso-0.3.0 [pkg/34344]
 	o memcached-1.2
 	o metacity-2.16.3
 	o mftrace-1.2.4
