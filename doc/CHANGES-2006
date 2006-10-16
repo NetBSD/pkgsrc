@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1517 2006/10/16 06:56:30 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1518 2006/10/16 07:52:09 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4795,3 +4795,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/dev86 version 0.16.17 [bouyer 2006-10-15]
 	Added net/libvncserver version 0.8.2 [bouyer 2006-10-15]
 	Updated mail/dovecot to 1.0rc10 [ghen 2006-10-16]
+	Updated lang/sun-jre15 to 5.0.9 [salo 2006-10-16]
+	Updated lang/sun-jdk15 to 5.0.9 [salo 2006-10-16]
