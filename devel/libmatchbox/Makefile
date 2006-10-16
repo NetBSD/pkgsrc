@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/16 10:48:35 obache Exp $
 #
 
-DISTNAME=	libmatchbox-1.7
-PKGREVISION=	3
+DISTNAME=	libmatchbox-1.9
 CATEGORIES=	devel
-MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/libmatchbox/1.7/
+MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/libmatchbox/1.9/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.o-hand.com/matchbox/
