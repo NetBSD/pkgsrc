@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1516 2006/10/15 14:07:32 bouyer Exp $
+>$NetBSD: CHANGES-2006,v 1.1517 2006/10/16 06:56:30 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-XML-Atom-Stream to 0.10 [kleink 2006-10-15]
 	Added devel/dev86 version 0.16.17 [bouyer 2006-10-15]
 	Added net/libvncserver version 0.8.2 [bouyer 2006-10-15]
+	Updated mail/dovecot to 1.0rc10 [ghen 2006-10-16]
