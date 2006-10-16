@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/12 16:30:03 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/16 12:50:43 rillig Exp $
 
 DISTNAME=		nss-3.11
 CATEGORIES=		security
@@ -48,6 +48,7 @@ NSS_MACHINE_ARCH=	_${MACHINE_ARCH}
 .  endif
 NSS_OBJ_DIR=	${OPSYS}${NSS_SHORT_OS_VERSION}${NSS_MACHINE_ARCH}_glibc_PTH_OPT.OBJ
 .endif
+NSS_OBJ_DIR?=	${OPSYS}${OS_VERSION}_OPT.OBJ
 
 pre-configure:
 	${CP} ${FILESDIR}/DragonFly.mk \
