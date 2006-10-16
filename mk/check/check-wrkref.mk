@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.5 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: check-wrkref.mk,v 1.6 2006/10/16 19:02:53 seb Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
@@ -45,6 +45,7 @@ check-wrkref: error-check
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
+	cd ${PREFIX};							\
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
@@ -63,7 +64,7 @@ check-wrkref: error-check
 		esac;							\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	exec 1>${ERROR_DIR}/${.TARGET};					\
+	exec 1>>${ERROR_DIR}/${.TARGET};				\
 	if ${_NONZERO_FILESIZE_P} ${ERROR_DIR}/${.TARGET}; then		\
 		${ECHO} "*** The above files still have references to the build directory."; \
 		${ECHO} "    This is possibly an error that should be fixed by unwrapping"; \
