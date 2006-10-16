@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/15 11:19:12 markd Exp $
+$NetBSD: distinfo,v 1.2 2006/10/16 10:55:10 markd Exp $
 
-SHA1 (kbibtex-0.1.4.tar.bz2) = 8be4bdbeabeec5378ec9a539ab338a35baed2832
-RMD160 (kbibtex-0.1.4.tar.bz2) = 1c010f22b17dee7dd4edcccc50c9c910fff1f645
-Size (kbibtex-0.1.4.tar.bz2) = 537247 bytes
+SHA1 (kbibtex-0.1.5.tar.bz2) = a89331c3d9621995d9cd8f91fae470237ea2eca4
+RMD160 (kbibtex-0.1.5.tar.bz2) = 7a7c6ce9ff4b392104e0b35eb888eaa7e7a20383
+Size (kbibtex-0.1.5.tar.bz2) = 556109 bytes
