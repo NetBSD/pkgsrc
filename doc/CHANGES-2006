@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1531 2006/10/16 12:16:05 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1532 2006/10/16 22:18:31 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/matchbox-wm to 1.1 [obache 2006-10-16]
 	Updated devel/makedepf90 to 2.8.8 [obache 2006-10-16]
 	Updated sysutils/mdf2iso to 0.3.0 [obache 2006-10-16]
+	Updated mail/sylpheed-claws to 2.5.5 [reed 2006-10-16]
