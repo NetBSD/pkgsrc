@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2006/10/10 14:38:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.276 2006/10/16 09:16:37 martti Exp $
 #
 
 COMMENT=	Security tools
@@ -254,6 +254,7 @@ SUBDIR+=	tkpasman
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
 SUBDIR+=	xmlsec1
+SUBDIR+=	yafic
 SUBDIR+=	zebedee
 
 .include "../mk/bsd.pkg.subdir.mk"
