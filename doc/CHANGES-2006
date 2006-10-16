@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1526 2006/10/16 10:49:57 salo Exp $
+>$NetBSD: CHANGES-2006,v 1.1527 2006/10/16 10:58:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix-current to 2.4-20061015 [martti 2006-10-16]
 	Updated misc/openoffice2-bin to 2.0.4 [ghen 2006-10-16]
 	Updated games/cgoban-java to 3.3.8 [salo 2006-10-16]
+	Updated print/kbibtex to 0.1.5 [markd 2006-10-16]
