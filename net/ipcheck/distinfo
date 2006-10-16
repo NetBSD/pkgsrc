@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:13:50 agc Exp $
+$NetBSD: distinfo,v 1.6 2006/10/16 08:36:04 obache Exp $
 
-SHA1 (ipcheck-0.217/ipcheck.217) = 19f1f32a5fb2571d49d555f7a3ad53627257f2d2
-RMD160 (ipcheck-0.217/ipcheck.217) = 2cbd9785022cd19c8e0f2430e90b94b534cc5f57
-Size (ipcheck-0.217/ipcheck.217) = 165383 bytes
+SHA1 (ipcheck-0.233/ipcheck.233) = 08b87b7e7a9d746ea3d967dd734556b50fb73700
+RMD160 (ipcheck-0.233/ipcheck.233) = 28eccebf28b270ab5226bcb386f8261ffd91873b
+Size (ipcheck-0.233/ipcheck.233) = 173794 bytes
