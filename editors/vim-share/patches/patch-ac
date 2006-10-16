@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.8 2006/10/16 17:00:29 martti Exp $
+
+--- src/configure.in.orig	2006-10-16 19:41:43.000000000 +0000
++++ src/configure.in	2006-10-16 19:42:02.000000000 +0000
+@@ -2835,7 +2835,7 @@
+ 	&& test "x$GUITYPE" != "xCARBONGUI"; then
+   AC_MSG_CHECKING(whether we need -framework Carbon)
+   dnl check for MACOSX without Carbon GUI, but with FEAT_MBYTE
+-  if test "x$enable_multibyte" = "xyes" || test "x$features" == "xbig" \
++  if test "x$enable_multibyte" = "xyes" || test "x$features" = "xbig" \
+ 	|| test "x$features" = "xhuge"; then
+     LIBS="$LIBS -framework Carbon"
+     AC_MSG_RESULT(yes)
