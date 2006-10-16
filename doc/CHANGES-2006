@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1518 2006/10/16 07:52:09 salo Exp $
+>$NetBSD: CHANGES-2006,v 1.1519 2006/10/16 08:26:32 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4797,3 +4797,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0rc10 [ghen 2006-10-16]
 	Updated lang/sun-jre15 to 5.0.9 [salo 2006-10-16]
 	Updated lang/sun-jdk15 to 5.0.9 [salo 2006-10-16]
+	Updated security/keychain to 2.6.6 [martti 2006-10-16]
