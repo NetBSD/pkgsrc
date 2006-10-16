@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5562 2006/10/15 12:41:21 markd Exp $
+$NetBSD: TODO,v 1.5563 2006/10/16 08:37:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ Suggested package updates
 	o ipa-2.0 [pkg/32398]
 	o ipa-2.0.1
 	o ipcalc-0.41
-	o ipcheck-0.233 [pkg/34427]
 	o ipsec-tools-0.6.5
 	o ircservices-5.0.59
 	o ircu-2.10.12.0
