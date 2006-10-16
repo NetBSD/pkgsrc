@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1524 2006/10/16 09:48:03 martti Exp $
+>$NetBSD: CHANGES-2006,v 1.1525 2006/10/16 10:35:29 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/p5-Data-Table to 1.50 [martti 2006-10-16]
 	Updated net/p5-POE-Component-SNMP to 1.07 [martti 2006-10-16]
 	Updated mail/postfix-current to 2.4-20061015 [martti 2006-10-16]
+	Updated misc/openoffice2-bin to 2.0.4 [ghen 2006-10-16]
