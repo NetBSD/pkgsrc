@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5567 2006/10/16 12:16:06 obache Exp $
+$NetBSD: TODO,v 1.5568 2006/10/16 23:40:16 seb Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,6 @@ Suggested package updates
 	o libnids-1.21
 	o libntlm-0.3.12
 	o libshout-2.2
-	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.10.3
