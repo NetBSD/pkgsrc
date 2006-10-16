@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2006/10/14 02:13:04 rillig Exp $
+$NetBSD: distinfo,v 1.27 2006/10/16 22:09:39 wiz Exp $
 
 SHA1 (vice-1.19.tar.gz) = 8620d891fa9de29eb21e334f3c7c8254e89e80a9
 RMD160 (vice-1.19.tar.gz) = d0a62750c30e3cf8645117a8e8536a8061c260ea
@@ -12,6 +12,6 @@ SHA1 (patch-ac) = 0a0c1da41d5dc7cb322f1a6a62023c0bad1419f2
 SHA1 (patch-ad) = 5c1510a66d775b8a5a1b0a7d596aa111218993be
 SHA1 (patch-ae) = 9528bc0da7af5a0c74f5f0d2a8bf30b71802850c
 SHA1 (patch-af) = 524913b7bc753dafde909bb26ace8f0500be14d5
-SHA1 (patch-ag) = 337920d6dec8cbe04086f5b7049f27631bdfed14
+SHA1 (patch-ag) = ed6702ccb8d2c3193daf5ccae3e023c09f856e33
 SHA1 (patch-ah) = 3f92ef4e5f64b254c3d52f9bbd9921dd25ee0aeb
 SHA1 (patch-ai) = b05efe271c893f375a5396b358bdc78a96cd3e16
