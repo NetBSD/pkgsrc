@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1519 2006/10/16 08:26:32 martti Exp $
+>$NetBSD: CHANGES-2006,v 1.1520 2006/10/16 08:32:13 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4798,3 +4798,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/sun-jre15 to 5.0.9 [salo 2006-10-16]
 	Updated lang/sun-jdk15 to 5.0.9 [salo 2006-10-16]
 	Updated security/keychain to 2.6.6 [martti 2006-10-16]
+	Updated www/jalbum to 6.5.4 [martti 2006-10-16]
