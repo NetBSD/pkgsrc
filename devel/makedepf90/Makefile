@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/13 16:40:59 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/16 12:01:49 obache Exp $
 #
 
-DISTNAME=		makedepf90-2.8.4
+DISTNAME=		makedepf90-2.8.8
 CATEGORIES=		devel
 MASTER_SITES=		http://www.helsinki.fi/~eedelman/makedepf90/
 
