@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2006/10/16 10:58:24 martti Exp $
+# $NetBSD: Makefile,v 1.72 2006/10/16 11:03:07 martti Exp $
 
 DISTNAME=	postfix-2.4-20061015
 #PKGREVISION=	1
@@ -107,12 +107,12 @@ PKG_GECOS.postfix=	Postfix User
 PKG_HOME.postfix=	${POSTFIX_QUEUE_DIR}
 
 CONF_FILES=		# empty
-.for _file_ in main.cf master.cf postfix-files
-CONF_FILES+=		${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}
+.for i in main.cf master.cf postfix-files
+CONF_FILES+=		${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 CONF_FILES_PERMS=	# empty
-.for _file_ in post-install postfix-script
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+.for i in post-install postfix-script
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
 .if !empty(PKG_OPTIONS:Msasl)
