@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1525 2006/10/16 10:35:29 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1526 2006/10/16 10:49:57 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-POE-Component-SNMP to 1.07 [martti 2006-10-16]
 	Updated mail/postfix-current to 2.4-20061015 [martti 2006-10-16]
 	Updated misc/openoffice2-bin to 2.0.4 [ghen 2006-10-16]
+	Updated games/cgoban-java to 3.3.8 [salo 2006-10-16]
