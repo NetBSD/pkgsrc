@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2006/10/16 08:31:58 martti Exp $
+$NetBSD: distinfo,v 1.12 2006/10/16 11:17:21 martti Exp $
 
-SHA1 (jalbum-6.5.4/JAlbum6.5.zip) = 5dc68772979875c5e77db88af055c3b47e3bcfa8
-RMD160 (jalbum-6.5.4/JAlbum6.5.zip) = d6ff12dd957df13073f0327eadd3d4055d0b5390
-Size (jalbum-6.5.4/JAlbum6.5.zip) = 8695177 bytes
+SHA1 (jalbum-6.5.3/JAlbum6.5.zip) = 5dc68772979875c5e77db88af055c3b47e3bcfa8
+RMD160 (jalbum-6.5.3/JAlbum6.5.zip) = d6ff12dd957df13073f0327eadd3d4055d0b5390
+Size (jalbum-6.5.3/JAlbum6.5.zip) = 8695177 bytes
