@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.67 2006/10/16 09:48:00 martti Exp $
+# $NetBSD: Makefile,v 1.68 2006/10/16 09:54:49 martti Exp $
 
 DISTNAME=	postfix-2.4-20061015
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
+DIST_SUBDIR=	postfix
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
-
-DIST_SUBDIR=	postfix
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 
@@ -84,7 +83,7 @@ MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 BUILD_TARGET=		# empty
-MAKE_ENV+=		CC=${CC:Q} OPT=${CFLAGS:M*:Q}
+MAKE_ENV+=		CC=${CC:Q} OPT=${CFLAGS:Q}
 MAKE_ENV+=		AUXLIBS=${AUXLIBS:Q} CCARGS=${CCARGS:Q}
 
 RCD_SCRIPTS=		postfix
@@ -134,7 +133,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	-${RM} -f ${WRKSRC}/conf/*.orig
+	${RM} -f ${WRKSRC}/conf/*.orig
 .if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
