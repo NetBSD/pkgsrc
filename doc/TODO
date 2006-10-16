@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5564 2006/10/16 10:37:16 ghen Exp $
+$NetBSD: TODO,v 1.5565 2006/10/16 11:00:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -648,7 +648,6 @@ Suggested package updates
 	o libjit-0.0.6
 	o libksba-1.0.0
 	o liblive-2005.10.05
-	o libmatchbox-1.9 [pkg/34525]
 	o libmilter-8.13.5
 	o libmm-1.4.2
 	o libmpeg3-1.7
@@ -688,7 +687,6 @@ Suggested package updates
 	o manedit-0.6.1
 	o mapserver-4.2.5
 	o maradns-1.2.12.03
-	o matchbox-1.1 [pkg/34526]
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o mdf2iso-0.3.0 [pkg/34344]
