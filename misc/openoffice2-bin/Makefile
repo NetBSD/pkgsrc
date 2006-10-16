@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/06/30 15:38:53 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/16 10:34:51 ghen Exp $
 
 PKGNAME=		openoffice-bin-${OO_RELEASE}
 CATEGORIES=		misc
@@ -15,7 +15,7 @@ RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${WRKDIR}/PLIST.nouniq -s 1
 
 OO_VER=			2.0
-OO_RELEASE=		2.0.3
+OO_RELEASE=		2.0.4
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -49,32 +49,32 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .    endif
 DISTNAME=	OOo_${OO_RELEASE}_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/packages
+WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/packages
 .  elif ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/RPMS
+WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/RPMS
 .  endif
 .endif
 
 .if ${OPSYS} == "DragonFly"
 DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/RPMS
+WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/RPMS
 .endif
 
 .if ${OPSYS} == "Linux"
 .if ${ARCH} == "i386"
 DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/RPMS
+WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/RPMS
 .endif
 .endif
 
 .if ${OPSYS} == "SunOS"
 .if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 DISTNAME=	OOo_${OO_RELEASE}_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/packages
+WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/packages
 .elif ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_RELEASE}_Solarisx86_install
-WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/packages
+WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/packages
 .endif
 .endif
 
