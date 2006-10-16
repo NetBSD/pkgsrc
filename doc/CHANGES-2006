@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1527 2006/10/16 10:58:26 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1528 2006/10/16 11:00:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4807,3 +4807,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/openoffice2-bin to 2.0.4 [ghen 2006-10-16]
 	Updated games/cgoban-java to 3.3.8 [salo 2006-10-16]
 	Updated print/kbibtex to 0.1.5 [markd 2006-10-16]
+	Updated devel/libmatchbox to 1.9 [obache 2006-10-16]
+	Updated wm/matchbox-wm to 1.1 [obache 2006-10-16]
