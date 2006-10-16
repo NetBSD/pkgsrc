@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1522 2006/10/16 09:16:46 martti Exp $
+>$NetBSD: CHANGES-2006,v 1.1523 2006/10/16 09:34:39 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4801,3 +4801,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/jalbum to 6.5.4 [martti 2006-10-16]
 	Updated net/ipcheck to 0.233 [obache 2006-10-16]
 	Added security/yafic version 1.2.2 [martti 2006-10-16]
+	Updated databases/p5-Data-Table to 1.50 [martti 2006-10-16]
+	Updated net/p5-POE-Component-SNMP to 1.07 [martti 2006-10-16]
