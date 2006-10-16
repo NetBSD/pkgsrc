@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2006/10/14 11:12:19 obache Exp $
+$NetBSD: distinfo,v 1.21 2006/10/16 20:14:26 tv Exp $
 
 SHA1 (stunnel-4.15.tar.gz) = 735406c1ca94904581158a434214e1f6568539d0
 RMD160 (stunnel-4.15.tar.gz) = a8d5c9d3fb24d0518975cbb347729f5eba3d3f12
 Size (stunnel-4.15.tar.gz) = 497103 bytes
 SHA1 (patch-aa) = e54eed598bb069b9131ed42721df8f49069b15b8
 SHA1 (patch-ab) = 947f8ee20b28fa782786976ac19d0f7ef895f254
+SHA1 (patch-ac) = 64a24088f3a6e55bd59324a17bbcf74786ed2cb2
