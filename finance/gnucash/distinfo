@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2006/07/31 19:48:41 wiz Exp $
+$NetBSD: distinfo,v 1.31 2006/10/16 22:47:53 wiz Exp $
 
 SHA1 (gnucash-2.0.1.tar.gz) = 7834c5e6a887e62f58ad5a6ff6142916f5a13b68
 RMD160 (gnucash-2.0.1.tar.gz) = 580482709ef338c84f6d7b47f919c5b63ef61440
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = db08a08fe8181822c1038d0adb3174dc2ebbcc12
 SHA1 (patch-ab) = 01547c8c1a41ee39773a4ba960ec27be5ab2e0a2
 SHA1 (patch-ac) = b832801e5980f7ad4aeb9eb82c422c6b658d660e
 SHA1 (patch-ad) = a28ccd08bb8c4a654bb5bdf619888925c854d53f
+SHA1 (patch-ae) = b4be699625a8ae6e363cda89aaa3f2a69dd960d2
