@@ -1,16 +1,8 @@
-$NetBSD: patch-ag,v 1.14 2006/08/31 18:45:02 martti Exp $
+$NetBSD: patch-ag,v 1.15 2006/10/16 09:48:00 martti Exp $
 
---- src/util/sys_defs.h.orig	2006-07-31 13:04:29.000000000 +0000
-+++ src/util/sys_defs.h	2006-08-31 21:38:57.000000000 +0000
-@@ -28,6 +28,7 @@
-     || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
-     || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
-     || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
-+    || defined(NETBSD4) \
-     || defined(EKKOBSD1)
- #define SUPPORTED
- #include <sys/types.h>
-@@ -41,7 +42,9 @@
+--- src/util/sys_defs.h.orig	2006-10-16 12:39:27.000000000 +0000
++++ src/util/sys_defs.h	2006-10-16 12:40:30.000000000 +0000
+@@ -42,7 +42,9 @@
  #define DEF_MAILBOX_LOCK "flock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
