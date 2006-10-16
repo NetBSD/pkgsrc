@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5565 2006/10/16 11:00:54 obache Exp $
+$NetBSD: TODO,v 1.5566 2006/10/16 12:04:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -680,7 +680,6 @@ Suggested package updates
 	o magicpoint-1.11b
 	o mailfront-1.01 [pkg/34765]
 	o mailscanner-4.54.6
-	o makedepf90-2.8.8 [pkg/34306]
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o malsync-2.2.0
