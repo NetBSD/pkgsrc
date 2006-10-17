@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2006/03/30 19:15:38 ghen Exp $
+# $NetBSD: INSTALL,v 1.1.1.1.4.1 2006/10/17 15:03:01 salo Exp $
 
 MOZILLA="@MOZILLA@"
 MOZILLA_BIN="@MOZILLA_BIN@"
@@ -10,8 +10,11 @@ POST-INSTALL)
 	${MKDIR} -p "./tmpdir-${PKGNAME}"
 	LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}" HOME="./tmpdir-${PKGNAME}" \
 		${MOZILLA_FIVE_HOME}/regxpcom
-	LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}" HOME="./tmpdir-${PKGNAME}" \
-		${MOZILLA_FIVE_HOME}/regchrome
+	if ${TEST} -x ${MOZILLA_FIVE_HOME}/regchrome; then
+		LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}" \
+			HOME="./tmpdir-${PKGNAME}" \
+			${MOZILLA_FIVE_HOME}/regchrome
+	fi
 	${RM} -fr "./tmpdir-${PKGNAME}"
 	;;
 esac
