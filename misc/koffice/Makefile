@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2006/07/15 21:14:00 markd Exp $
+# $NetBSD: Makefile,v 1.86 2006/10/17 09:33:15 markd Exp $
 
-DISTNAME=	koffice-1.5.2
+DISTNAME=	koffice-1.6.0
 CATEGORIES=	misc kde
-MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.5.2/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.0/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
@@ -41,10 +41,6 @@ LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "options.mk"
 
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=		gawk:pkgsrc
-.endif
-
 post-install:
 	@# The global desktop template files need to be user-writeable, or
 	@# else users won't be able to alter them after copying them to
@@ -57,10 +53,13 @@ post-install:
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../graphics/GraphicsMagick/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/poppler-qt/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 
