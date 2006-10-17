@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.21 2006/10/17 15:32:30 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.22 2006/10/17 15:50:54 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -51,3 +51,5 @@ Pullup ticket 1851 - requested by ghen
 build fix for gecko packages no longer using regchrome
 Pullup ticket 1853 - requested by dmcmahill
 portability fixes for R
+Pullup ticket 1858 - requested by dmcmahill
+portability fix for libwmf
