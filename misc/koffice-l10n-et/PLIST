@@ -1,7 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.1 2006/10/17 09:44:06 markd Exp $
+share/doc/kde/HTML/et/karbon/common
+share/doc/kde/HTML/et/karbon/index.cache.bz2
+share/doc/kde/HTML/et/karbon/index.docbook
 share/doc/kde/HTML/et/kchart/common
 share/doc/kde/HTML/et/kchart/index.cache.bz2
 share/doc/kde/HTML/et/kchart/index.docbook
+share/doc/kde/HTML/et/kexi/basics.docbook
+share/doc/kde/HTML/et/kexi/building.docbook
+share/doc/kde/HTML/et/kexi/common
+share/doc/kde/HTML/et/kexi/comparing.docbook
+share/doc/kde/HTML/et/kexi/configuration.docbook
+share/doc/kde/HTML/et/kexi/credits.docbook
+share/doc/kde/HTML/et/kexi/database.docbook
+share/doc/kde/HTML/et/kexi/designingforms.docbook
+share/doc/kde/HTML/et/kexi/enteringdataintotables.docbook
+share/doc/kde/HTML/et/kexi/enteringdatausingforms.docbook
+share/doc/kde/HTML/et/kexi/index.cache.bz2
+share/doc/kde/HTML/et/kexi/index.docbook
+share/doc/kde/HTML/et/kexi/intro.docbook
+share/doc/kde/HTML/et/kexi/menus.docbook
+share/doc/kde/HTML/et/kexi/querydesigning.docbook
 share/doc/kde/HTML/et/kformula/common
 share/doc/kde/HTML/et/kformula/index.cache.bz2
 share/doc/kde/HTML/et/kformula/index.docbook
@@ -18,6 +36,15 @@ share/doc/kde/HTML/et/koffice/index.docbook
 share/doc/kde/HTML/et/koshell/common
 share/doc/kde/HTML/et/koshell/index.cache.bz2
 share/doc/kde/HTML/et/koshell/index.docbook
+share/doc/kde/HTML/et/kplato/commands.docbook
+share/doc/kde/HTML/et/kplato/common
+share/doc/kde/HTML/et/kplato/definitions.docbook
+share/doc/kde/HTML/et/kplato/index.cache.bz2
+share/doc/kde/HTML/et/kplato/index.docbook
+share/doc/kde/HTML/et/kplato/mainwindow.docbook
+share/doc/kde/HTML/et/kplato/options.docbook
+share/doc/kde/HTML/et/kplato/wbs.docbook
+share/doc/kde/HTML/et/kpresenter/a11y.docbook
 share/doc/kde/HTML/et/kpresenter/common
 share/doc/kde/HTML/et/kpresenter/faq.docbook
 share/doc/kde/HTML/et/kpresenter/great-presentations.docbook
@@ -28,9 +55,46 @@ share/doc/kde/HTML/et/kpresenter/menus.docbook
 share/doc/kde/HTML/et/kpresenter/options.docbook
 share/doc/kde/HTML/et/kpresenter/screen.docbook
 share/doc/kde/HTML/et/kpresenter/tutorial.docbook
+share/doc/kde/HTML/et/krita/commands-dialogs.docbook
+share/doc/kde/HTML/et/krita/commands-menus.docbook
+share/doc/kde/HTML/et/krita/commands-palettes.docbook
+share/doc/kde/HTML/et/krita/commands-toolbars.docbook
+share/doc/kde/HTML/et/krita/commands.docbook
+share/doc/kde/HTML/et/krita/common
+share/doc/kde/HTML/et/krita/credits.docbook
+share/doc/kde/HTML/et/krita/developers-plugins.docbook
+share/doc/kde/HTML/et/krita/developers-scripting.docbook
+share/doc/kde/HTML/et/krita/developers.docbook
+share/doc/kde/HTML/et/krita/faq.docbook
+share/doc/kde/HTML/et/krita/index.cache.bz2
+share/doc/kde/HTML/et/krita/index.docbook
+share/doc/kde/HTML/et/krita/installation.docbook
+share/doc/kde/HTML/et/krita/introduction.docbook
+share/doc/kde/HTML/et/krita/scripting.docbook
+share/doc/kde/HTML/et/krita/settings.docbook
+share/doc/kde/HTML/et/krita/tutorial-quick-starts.docbook
+share/doc/kde/HTML/et/krita/tutorial-select-layer.docbook
+share/doc/kde/HTML/et/krita/tutorial-starting.docbook
+share/doc/kde/HTML/et/krita/tutorial-tablet.docbook
+share/doc/kde/HTML/et/krita/tutorial.docbook
+share/doc/kde/HTML/et/krita/using-colorspaces.docbook
+share/doc/kde/HTML/et/krita/using-filters.docbook
+share/doc/kde/HTML/et/krita/using-images.docbook
+share/doc/kde/HTML/et/krita/using-layers.docbook
+share/doc/kde/HTML/et/krita/using-selections.docbook
+share/doc/kde/HTML/et/krita/using-views.docbook
+share/doc/kde/HTML/et/kspread/a11y.docbook
+share/doc/kde/HTML/et/kspread/advanced.docbook
+share/doc/kde/HTML/et/kspread/basics.docbook
 share/doc/kde/HTML/et/kspread/chart1.png
+share/doc/kde/HTML/et/kspread/commands.docbook
 share/doc/kde/HTML/et/kspread/common
+share/doc/kde/HTML/et/kspread/config.docbook
+share/doc/kde/HTML/et/kspread/configdialog.docbook
 share/doc/kde/HTML/et/kspread/copy1.png
+share/doc/kde/HTML/et/kspread/faq.docbook
+share/doc/kde/HTML/et/kspread/format.docbook
+share/doc/kde/HTML/et/kspread/importexport.docbook
 share/doc/kde/HTML/et/kspread/index.cache.bz2
 share/doc/kde/HTML/et/kspread/index.docbook
 share/doc/kde/HTML/et/kspread/shortcut1.png
@@ -49,6 +113,7 @@ share/doc/kde/HTML/et/kugar/template-elements.docbook
 share/doc/kde/HTML/et/kugar/template.docbook
 share/doc/kde/HTML/et/kugar/templatedtd.docbook
 share/doc/kde/HTML/et/kugar/tutorial.docbook
+share/doc/kde/HTML/et/kword/a11y.docbook
 share/doc/kde/HTML/et/kword/basics.docbook
 share/doc/kde/HTML/et/kword/bookmarks.docbook
 share/doc/kde/HTML/et/kword/chapnumb.docbook
@@ -69,7 +134,6 @@ share/doc/kde/HTML/et/kword/frames.docbook
 share/doc/kde/HTML/et/kword/fundimentals.docbook
 share/doc/kde/HTML/et/kword/graphics.docbook
 share/doc/kde/HTML/et/kword/headerfooter.docbook
-share/doc/kde/HTML/et/kword/horizline.docbook
 share/doc/kde/HTML/et/kword/index.cache.bz2
 share/doc/kde/HTML/et/kword/index.docbook
 share/doc/kde/HTML/et/kword/insertfile.docbook
@@ -91,64 +155,48 @@ share/doc/kde/HTML/et/kword/tutorial.docbook
 share/doc/kde/HTML/et/thesaurus/common
 share/doc/kde/HTML/et/thesaurus/index.cache.bz2
 share/doc/kde/HTML/et/thesaurus/index.docbook
-share/locale/et/LC_MESSAGES/csvfilter.mo
 share/locale/et/LC_MESSAGES/desktop_koffice.mo
 share/locale/et/LC_MESSAGES/example.mo
 share/locale/et/LC_MESSAGES/karbon.mo
-share/locale/et/LC_MESSAGES/karbonepsfilter.mo
 share/locale/et/LC_MESSAGES/kchart.mo
-share/locale/et/LC_MESSAGES/kdgantt.mo
 share/locale/et/LC_MESSAGES/kexi.mo
+share/locale/et/LC_MESSAGES/kfile_abiword.mo
+share/locale/et/LC_MESSAGES/kfile_gnumeric.mo
 share/locale/et/LC_MESSAGES/kfile_koffice.mo
 share/locale/et/LC_MESSAGES/kfile_ooo.mo
 share/locale/et/LC_MESSAGES/kformdesigner.mo
 share/locale/et/LC_MESSAGES/kformula.mo
-share/locale/et/LC_MESSAGES/kformulalatexfilter.mo
-share/locale/et/LC_MESSAGES/kformulamathmlfilter.mo
-share/locale/et/LC_MESSAGES/kformulapngfilter.mo
 share/locale/et/LC_MESSAGES/kivio.mo
 share/locale/et/LC_MESSAGES/koconverter.mo
 share/locale/et/LC_MESSAGES/koffice.mo
+share/locale/et/LC_MESSAGES/kofficefilters.mo
+share/locale/et/LC_MESSAGES/koproperty.mo
 share/locale/et/LC_MESSAGES/koshell.mo
 share/locale/et/LC_MESSAGES/kounavail.mo
 share/locale/et/LC_MESSAGES/kplato.mo
 share/locale/et/LC_MESSAGES/kpresenter.mo
-share/locale/et/LC_MESSAGES/kpresenterkwordfilter.mo
 share/locale/et/LC_MESSAGES/krita.mo
 share/locale/et/LC_MESSAGES/kscan_plugin.mo
+share/locale/et/LC_MESSAGES/kscreenshot_plugin.mo
 share/locale/et/LC_MESSAGES/kspread.mo
 share/locale/et/LC_MESSAGES/kspreadcalc_calc.mo
-share/locale/et/LC_MESSAGES/kspreaddbasefilter.mo
-share/locale/et/LC_MESSAGES/kspreadexcelimportfilter.mo
-share/locale/et/LC_MESSAGES/kspreadlatexexportfilter.mo
-share/locale/et/LC_MESSAGES/kspreadopencalcfilter.mo
-share/locale/et/LC_MESSAGES/kspreadqprofilter.mo
+share/locale/et/LC_MESSAGES/kspreadinsertcalendar.mo
 share/locale/et/LC_MESSAGES/kthesaurus.mo
 share/locale/et/LC_MESSAGES/kugar.mo
 share/locale/et/LC_MESSAGES/kword.mo
-share/locale/et/LC_MESSAGES/kwordabiwordfilter.mo
-share/locale/et/LC_MESSAGES/kwordasciifilter.mo
-share/locale/et/LC_MESSAGES/kwordhtmlexportfilter.mo
-share/locale/et/LC_MESSAGES/kwordhtmlimportfilter.mo
-share/locale/et/LC_MESSAGES/kwordlatexexportfilter.mo
-share/locale/et/LC_MESSAGES/kwordlatexfilter.mo
-share/locale/et/LC_MESSAGES/kwordlateximportfilter.mo
-share/locale/et/LC_MESSAGES/kwordmswordfilter.mo
-share/locale/et/LC_MESSAGES/kwordmswritefilter.mo
-share/locale/et/LC_MESSAGES/kwordoowriterfilter.mo
-share/locale/et/LC_MESSAGES/kwordpdfimport.mo
-share/locale/et/LC_MESSAGES/olefilterswinword97filter.mo
 share/locale/et/LC_MESSAGES/thesaurus_tool.mo
-share/locale/et/LC_MESSAGES/xsltexportfilter.mo
-share/locale/et/LC_MESSAGES/xsltimportfilter.mo
 @dirrm share/doc/kde/HTML/et/thesaurus
 @dirrm share/doc/kde/HTML/et/kword
 @dirrm share/doc/kde/HTML/et/kugar
 @dirrm share/doc/kde/HTML/et/kspread
+@dirrm share/doc/kde/HTML/et/krita
 @dirrm share/doc/kde/HTML/et/kpresenter
+@dirrm share/doc/kde/HTML/et/kplato
 @dirrm share/doc/kde/HTML/et/koshell
 @dirrm share/doc/kde/HTML/et/koffice
 @dirrm share/doc/kde/HTML/et/kivio
 @dirrm share/doc/kde/HTML/et/kformula
+@dirrm share/doc/kde/HTML/et/kexi
 @dirrm share/doc/kde/HTML/et/kchart
+@dirrm share/doc/kde/HTML/et/karbon
 @comment in kde: @dirrm share/doc/kde/HTML/et
