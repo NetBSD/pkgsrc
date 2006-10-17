@@ -1,13 +1,13 @@
-$NetBSD: patch-am,v 1.4 2006/04/12 12:37:35 markd Exp $
+$NetBSD: patch-am,v 1.5 2006/10/17 09:33:16 markd Exp $
 
---- lib/kformula/fonts/Makefile.in.orig	2006-04-09 22:34:31.000000000 +1200
+--- lib/kformula/fonts/Makefile.in.orig	2006-10-08 12:08:46.000000000 +1300
 +++ lib/kformula/fonts/Makefile.in
-@@ -523,7 +523,7 @@ x_libraries = @x_libraries@
+@@ -547,7 +547,7 @@ x_libraries = @x_libraries@
  xdg_appsdir = @xdg_appsdir@
  xdg_directorydir = @xdg_directorydir@
  xdg_menudir = @xdg_menudir@
 -fontdir = $(prefix)/share/apps/kformula/fonts
 +fontdir = $(kde_datadir)/kformula/fonts
- font_DATA = cmbx10.ttf cmex10.ttf cmmi10.ttf cmr10.ttf cmsy10.ttf msam10.ttf msbm10.ttf
- EXTRA_DIST = $(font_DATA) LICENCE
+ font_DATA = cmex10.ttf Arev.ttf ArevIt.ttf ArevBd.ttf ArevBI.ttf
+ EXTRA_DIST = $(font_DATA) README LICENSE.BAKOMA LICENSE.BITSTREAM LICENCE.AREV
  #>- all: all-am
