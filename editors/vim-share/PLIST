@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/10/09 11:53:30 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/10/17 18:31:18 martti Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -456,30 +456,41 @@ share/vim/${VIM_SUBDIR}/indent/yacc.vim
 share/vim/${VIM_SUBDIR}/indent/zsh.vim
 share/vim/${VIM_SUBDIR}/indoff.vim
 share/vim/${VIM_SUBDIR}/macros/README.txt
+share/vim/${VIM_SUBDIR}/macros/README.txt.info
 share/vim/${VIM_SUBDIR}/macros/dvorak
 share/vim/${VIM_SUBDIR}/macros/editexisting.vim
+share/vim/${VIM_SUBDIR}/macros/hanoi.info
 share/vim/${VIM_SUBDIR}/macros/hanoi/click.me
+share/vim/${VIM_SUBDIR}/macros/hanoi/click.me.info
 share/vim/${VIM_SUBDIR}/macros/hanoi/hanoi.vim
 share/vim/${VIM_SUBDIR}/macros/hanoi/poster
+share/vim/${VIM_SUBDIR}/macros/hanoi/poster.info
 share/vim/${VIM_SUBDIR}/macros/justify.vim
 share/vim/${VIM_SUBDIR}/macros/less.sh
 share/vim/${VIM_SUBDIR}/macros/less.vim
 share/vim/${VIM_SUBDIR}/macros/life/click.me
+share/vim/${VIM_SUBDIR}/macros/life/click.me.info
 share/vim/${VIM_SUBDIR}/macros/life/life.vim
 share/vim/${VIM_SUBDIR}/macros/matchit.txt
 share/vim/${VIM_SUBDIR}/macros/matchit.vim
+share/vim/${VIM_SUBDIR}/macros/maze.info
 share/vim/${VIM_SUBDIR}/macros/maze/Makefile
 share/vim/${VIM_SUBDIR}/macros/maze/README.txt
+share/vim/${VIM_SUBDIR}/macros/maze/README.txt.info
 share/vim/${VIM_SUBDIR}/macros/maze/main.aap
 share/vim/${VIM_SUBDIR}/macros/maze/maze.c
 share/vim/${VIM_SUBDIR}/macros/maze/maze_5.78
+share/vim/${VIM_SUBDIR}/macros/maze/maze_5.78.info
 share/vim/${VIM_SUBDIR}/macros/maze/maze_mac
 share/vim/${VIM_SUBDIR}/macros/maze/mazeansi.c
 share/vim/${VIM_SUBDIR}/macros/maze/mazeclean.c
 share/vim/${VIM_SUBDIR}/macros/maze/poster
+share/vim/${VIM_SUBDIR}/macros/maze/poster.info
 share/vim/${VIM_SUBDIR}/macros/shellmenu.vim
 share/vim/${VIM_SUBDIR}/macros/swapmous.vim
+share/vim/${VIM_SUBDIR}/macros/urm.info
 share/vim/${VIM_SUBDIR}/macros/urm/README.txt
+share/vim/${VIM_SUBDIR}/macros/urm/README.txt.info
 share/vim/${VIM_SUBDIR}/macros/urm/examples
 share/vim/${VIM_SUBDIR}/macros/urm/urm
 share/vim/${VIM_SUBDIR}/macros/urm/urm.vim
@@ -1045,6 +1056,7 @@ share/vim/${VIM_SUBDIR}/tools/xcmdsrv_client.c
 share/vim/${VIM_SUBDIR}/tutor/README.gr.cp737.txt
 share/vim/${VIM_SUBDIR}/tutor/README.gr.txt
 share/vim/${VIM_SUBDIR}/tutor/README.txt
+share/vim/${VIM_SUBDIR}/tutor/README.txt.info
 share/vim/${VIM_SUBDIR}/tutor/tutor
 share/vim/${VIM_SUBDIR}/tutor/tutor.ca
 share/vim/${VIM_SUBDIR}/tutor/tutor.de
@@ -1053,6 +1065,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.fr
 share/vim/${VIM_SUBDIR}/tutor/tutor.gr
 share/vim/${VIM_SUBDIR}/tutor/tutor.gr.cp737
 share/vim/${VIM_SUBDIR}/tutor/tutor.gr.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.info
 share/vim/${VIM_SUBDIR}/tutor/tutor.it
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.sjis
