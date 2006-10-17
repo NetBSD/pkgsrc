@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2006/10/17 09:44:06 markd Exp $
+# $NetBSD: Makefile,v 1.1 2006/10/17 09:44:06 markd Exp $
 
-DISTNAME=	koffice-l10n-en_GB-1.6.0
+DISTNAME=	koffice-l10n-et-1.6.0
 CATEGORIES=	misc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.0/src/koffice-l10n/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
-COMMENT=	English (Great Britain) language pack for KOffice
+COMMENT=	Estonian language pack for KOffice
 
-DEPENDS+=	kdelibs-[0-9]*:../../x11/kdelibs3
-CONFLICTS+=	koffice-i18n-en_GB-[0-9]*
+DEPENDS+=	koffice-[0-9]*:../../misc/koffice
+CONFLICTS+=	koffice-i18n-et-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
