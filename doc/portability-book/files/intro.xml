@@ -1,8 +1,22 @@
-<!-- $NetBSD: intro.xml,v 1.1.1.1 2006/10/06 21:10:41 rillig Exp $ -->
+<!-- $NetBSD: intro.xml,v 1.2 2006/10/17 06:41:01 rillig Exp $ -->
 
 <chapter id="intro">
 <title>Introduction</title>
 
-<para>Blubb.</para>
+<para>Writing programs that are portable to a wide range of platforms
+isn't easy. Maybe some platforms are lacking your favorite tool, while
+others implemented it, but with arbitrary limitations. Some don't have
+such useful functions like <funcname>snprintf</funcname> or
+<funcname>strlcpy</function>.</para>
+
+<para>This book provides information about which features are
+<emphasis>not</emphasis> on the platforms, since the features that
+<emphasis>are</emphasis> available are already documented quite well. It
+also explains how portable shell programs look like, since that's also a
+topic that hasn't spread wide yet.</para>
+
+<para>Since pkgsrc uses the POSIX tools quite a lot, and the packages
+using all other features, it's good to know on which platforms a certain
+program will not work without further work.</para>
 
 </chapter>
