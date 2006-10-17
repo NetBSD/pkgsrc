@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1538 2006/10/17 13:00:16 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1539 2006/10/17 13:30:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4827,3 +4827,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/rtorrent to 0.6.3 [tron 2006-10-17]
 	Updated shells/osh to 060124 [obache 2006-10-17]
 	Updated www/p5-Apache-AuthCookie to 3.10 [obache 2006-10-17]
+	Updated www/p5-Apache-Session-Wrapper to 0.31 [wiz 2006-07-19]
