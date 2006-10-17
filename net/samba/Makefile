@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2006/10/01 14:58:38 rillig Exp $
+# $NetBSD: Makefile,v 1.166 2006/10/17 05:46:09 rillig Exp $
 
 .include "Makefile.mirrors"
 
@@ -130,16 +130,18 @@ PLIST_SUBST+=		${LIB}_${NUM}=${${LIB}_${NUM}}
 .  endfor
 .endfor
 
+SMBLIBS=		msrpc smbclient
+SMBVERSION.msrpc=	${LIBMSRPC_MAJOR} ${LIBMSRPC_MAJOR}.${LIBMSRPC_MINOR}
+SMBVERSION.smbclient=	${LIBSMBCLIENT_MAJOR} ${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
+
 .PHONY: install-samba-lib-symlinks
 install-samba-lib-symlinks:
-	cd ${SAMBA_LIBDIR} && ${LN} -s libmsrpc.so			\
-		libmsrpc.so.${LIBMSRPC_MAJOR}
-	cd ${SAMBA_LIBDIR} && ${LN} -s libmsrpc.so			\
-		libmsrpc.so.${LIBMSRPC_MAJOR}.${LIBMSRPC_MINOR}
-	cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so			\
-		libsmbclient.so.${LIBSMBCLIENT_MAJOR}
-	cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so			\
-		libsmbclient.so.${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
+.for l in ${SMBLIBS}
+.  for v in ${SMBVERSION.${l}}
+	cd ${SAMBA_LIBDIR} && rm -f lib${l}.so.${v}			\
+	&& ln -s lib${l}.so lib${l}.so.${v}
+.  endfor
+.endfor
 
 post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
