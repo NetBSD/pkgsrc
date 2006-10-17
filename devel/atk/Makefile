@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/10/09 12:52:34 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2006/10/17 16:51:42 drochner Exp $
 #
 
 DISTNAME=		atk-1.12.3
@@ -18,9 +18,6 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	atk.pc.in
-
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc"
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
