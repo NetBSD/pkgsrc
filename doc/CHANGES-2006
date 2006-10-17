@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1533 2006/10/16 23:40:16 seb Exp $
+>$NetBSD: CHANGES-2006,v 1.1534 2006/10/17 09:49:47 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4813,3 +4813,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/mdf2iso to 0.3.0 [obache 2006-10-16]
 	Updated mail/sylpheed-claws to 2.5.5 [reed 2006-10-16]
 	Updated devel/libsmi to 0.4.5 [seb 2006-10-16]
+	Updated misc/koffice to 1.6.0 [markd 2006-10-17]
+	Updated misc/koffice-l10n-de to 1.6.0 [markd 2006-10-17]
+	Updated misc/koffice-l10n-en_GB to 1.6.0 [markd 2006-10-17]
+	Added misc/koffice-l10n-da version 1.6.0 [markd 2006-10-17]
+	Added misc/koffice-l10n-es version 1.6.0 [markd 2006-10-17]
+	Added misc/koffice-l10n-et version 1.6.0 [markd 2006-10-17]
+	Removed misc/koffice-i18n-da [markd 2006-10-17]
+	Removed misc/koffice-i18n-es [markd 2006-10-17]
+	Removed misc/koffice-i18n-et [markd 2006-10-17]
