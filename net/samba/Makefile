@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2006/10/17 05:46:09 rillig Exp $
+# $NetBSD: Makefile,v 1.167 2006/10/17 11:29:36 tv Exp $
 
 .include "Makefile.mirrors"
 
@@ -137,10 +137,10 @@ SMBVERSION.smbclient=	${LIBSMBCLIENT_MAJOR} ${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT
 .PHONY: install-samba-lib-symlinks
 install-samba-lib-symlinks:
 .for l in ${SMBLIBS}
-.  for v in ${SMBVERSION.${l}}
-	cd ${SAMBA_LIBDIR} && rm -f lib${l}.so.${v}			\
-	&& ln -s lib${l}.so lib${l}.so.${v}
-.  endfor
+	for v in ${SMBVERSION.${l}}; do					\
+		(cd ${SAMBA_LIBDIR} && rm -f lib${l}.so.$$v &&		\
+			ln -s lib${l}.so lib${l}.so.$$v);		\
+	done
 .endfor
 
 post-extract:
