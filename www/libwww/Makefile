@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/07/27 18:48:04 jlam Exp $
+# $NetBSD: Makefile,v 1.68.2.1 2006/10/17 16:18:08 salo Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -18,7 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.libwww-configure-5.4.0nb1.gz=	${MASTER_SITE_LOCAL}
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		automake14 gmake gzcat perl
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
@@ -30,21 +30,21 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 .include "options.mk"
 
-DOCDIR=			${PREFIX}/share/doc/libwww
+post-extract:
+	gzcat ${DISTDIR}/libwww-configure-5.4.0nb1.gz > ${WRKSRC}/configure
 
 pre-configure:
-	${GZCAT} ${DISTDIR}/libwww-configure-5.4.0nb1.gz > ${WRKSRC}/configure
-	${CHMOD} a+x ${WRKSRC}/configure
+	chmod a+x ${WRKSRC}/configure
 .for f in aclocal.m4 configure stamp-h.in
-	${TOUCH} ${WRKSRC}/${f}
+	touch ${WRKSRC}/${f}
 .endfor
-	${TOUCH} `${FIND} ${WRKSRC} -name Makefile.in -print`
+	cd ${WRKSRC} && automake
 
 .include "../../mk/bsd.prefs.mk"
 
 .if empty(LOWER_OPSYS:Mirix5*)
 # IRIX 5 does not have libregex
-CONFIGURE_ARGS+=        --with-regex
+CONFIGURE_ARGS+=	--with-regex
 .endif
 
 .if ${OPSYS} == "SunOS"
