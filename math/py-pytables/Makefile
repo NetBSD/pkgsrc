@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/06/06 15:35:45 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/17 14:32:32 drochner Exp $
 #
 
-DISTNAME=		pytables-1.2.1
-PKGNAME=		${PYPKGPREFIX}-pytables-1.2.1
+DISTNAME=		pytables-1.3.3
+PKGNAME=		${PYPKGPREFIX}-pytables-1.3.3
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
 
@@ -34,6 +34,9 @@ post-extract:
 	${MV} ptdump ptdump${PYVERSSUFFIX}; \
 	${MV} ptrepack ptrepack${PYVERSSUFFIX}; \
 	${MV} nctoh5 nctoh5${PYVERSSUFFIX}
+
+do-test:
+	(cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py)
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/hdf5/buildlink3.mk"
