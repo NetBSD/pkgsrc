@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5570 2006/10/17 12:29:39 tron Exp $
+$NetBSD: TODO,v 1.5571 2006/10/17 12:32:56 obache Exp $
 
 Suggested new packages
 ======================
@@ -773,7 +773,6 @@ Suggested package updates
 	o openssl-0.9.8d
 	o oregano-0.60.0
 	o oroborus-2.0.15
-	o osh-060124 [pkg/34313]
 	o otpCalc-0.97
 	o p0f-2.0.8
 	o p11-2.10c

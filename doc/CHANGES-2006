@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1536 2006/10/17 12:29:38 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1537 2006/10/17 12:32:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4825,3 +4825,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gqview-devel to 2.1.2 [gdt 2006-10-17]
 	Updated net/libtorrent to 0.10.3 [tron 2006-10-17]
 	Updated net/rtorrent to 0.6.3 [tron 2006-10-17]
+	Updated shells/osh to 060124 [obache 2006-10-17]
