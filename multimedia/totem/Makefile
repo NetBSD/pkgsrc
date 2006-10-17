@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/09/16 15:36:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/17 16:35:10 drochner Exp $
 #
 
 .include "Makefile.common"
-
-PKGREVISION=	1
 
 COMMENT+=	(using GStreamer)
 
