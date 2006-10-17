@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.16 2005/11/04 20:02:01 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.17 2006/10/17 06:13:51 rillig Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -58,6 +58,9 @@ TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 .elif exists(/usr/contrib/bin/patch)
 TOOLS_PLATFORM.patch?=		/usr/contrib/bin/patch
+.endif
+.if exists(/usr/bin/printf)
+TOOLS_PLATFORM.printf?=		/usr/bin/printf
 .endif
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
