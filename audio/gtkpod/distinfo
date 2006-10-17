@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/12/18 21:03:46 rillig Exp $
+$NetBSD: distinfo,v 1.4 2006/10/17 22:00:16 rillig Exp $
 
 SHA1 (gtkpod-0.94.0.tar.gz) = 5c6fcb70a90e4ee879e2b2a6fa54b81c57a0378d
 RMD160 (gtkpod-0.94.0.tar.gz) = 0714c6e6f221f124e6f1d53545089af86023600b
@@ -12,3 +12,4 @@ SHA1 (patch-bc) = 50d902cb7f91a16424bec543c7a3dd033cb6f957
 SHA1 (patch-bd) = 7f95521e7b79c5eb5db66e661b6ec1bbbbfa8cad
 SHA1 (patch-be) = b15b57f87b6bb8ece7f99daad4f2824f7a016595
 SHA1 (patch-bf) = 6425770193600e7aca9decd129839a95d1590d31
+SHA1 (patch-bg) = 645e060a2f5c455b893d57cc008b4b134fafe799
