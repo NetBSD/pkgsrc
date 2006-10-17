@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/08/20 11:44:09 grant Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/17 16:18:14 drochner Exp $
 
---- configure.orig	2003-12-23 23:07:34.000000000 +1100
+--- configure.orig	2006-02-15 17:34:16.000000000 +0100
 +++ configure
-@@ -3851,7 +3851,7 @@ echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+@@ -3886,7 +3886,7 @@ echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
  
      TRY_CFLAGS=`echo "$OPT_CFLAGS $CFLAGS"|sed "s/-O[0-9]*//g"`
  
@@ -11,48 +11,3 @@ $NetBSD: patch-aa,v 1.4 2005/08/20 11:44:09 grant Exp $
      echo "$as_me:$LINENO: checking if $CC supports $TRY_CFLAGS flags" >&5
  echo $ECHO_N "checking if $CC supports $TRY_CFLAGS flags... $ECHO_C" >&6
      SAVE_CFLAGS="$CFLAGS"
-@@ -24534,25 +24534,25 @@ done
- 
- 
- 
--echo "$as_me:$LINENO: checking if libtool supports -prefer-non-pic flag" >&5
--echo $ECHO_N "checking if libtool supports -prefer-non-pic flag... $ECHO_C" >&6
--    mkdir ac_test_libtool; cd ac_test_libtool; ac_cv_libtool_non_pic=no
--    echo "int g (int i); int f (int i) {return g (i);}" >f.c
--    echo "int (* hook) (int) = 0; int g (int i) {if (hook) i = hook (i); return i + 1;}" >g.c
--    ../libtool --mode=compile $CC $CFLAGS -prefer-non-pic \
--		-c f.c >/dev/null 2>&1 && \
--	../libtool --mode=compile $CC $CFLAGS -prefer-non-pic \
--		-c g.c >/dev/null 2>&1 && \
--	../libtool --mode=link $CC $CFLAGS -prefer-non-pic -o libfoo.la \
--		-rpath / f.lo g.lo >/dev/null 2>&1 &&
--	ac_cv_libtool_non_pic=yes
--    cd ..; rm -fr ac_test_libtool; echo "$as_me:$LINENO: result: $ac_cv_libtool_non_pic" >&5
--echo "${ECHO_T}$ac_cv_libtool_non_pic" >&6
--    if test x"$ac_cv_libtool_non_pic" = x"yes"; then
--	LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-non-pic"
--    else
--	:
--    fi
-+#echo "$as_me:$LINENO: checking if libtool supports -prefer-non-pic flag" >&5
-+#echo $ECHO_N "checking if libtool supports -prefer-non-pic flag... $ECHO_C" >&6
-+#    mkdir ac_test_libtool; cd ac_test_libtool; ac_cv_libtool_non_pic=no
-+#    echo "int g (int i); int f (int i) {return g (i);}" >f.c
-+#    echo "int (* hook) (int) = 0; int g (int i) {if (hook) i = hook (i); return i + 1;}" >g.c
-+#    ../libtool --mode=compile $CC $CFLAGS -prefer-non-pic \
-+#		-c f.c >/dev/null 2>&1 && \
-+#	../libtool --mode=compile $CC $CFLAGS -prefer-non-pic \
-+#		-c g.c >/dev/null 2>&1 && \
-+#	../libtool --mode=link $CC $CFLAGS -prefer-non-pic -o libfoo.la \
-+#		-rpath / f.lo g.lo >/dev/null 2>&1 &&
-+#	ac_cv_libtool_non_pic=yes
-+#    cd ..; rm -fr ac_test_libtool; echo "$as_me:$LINENO: result: $ac_cv_libtool_non_pic" >&5
-+#echo "${ECHO_T}$ac_cv_libtool_non_pic" >&6
-+#    if test x"$ac_cv_libtool_non_pic" = x"yes"; then
-+#	LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-non-pic"
-+#    else
-+#	:
-+#    fi
- 
- # Check whether --enable-accel-detect or --disable-accel-detect was given.
- if test "${enable_accel_detect+set}" = set; then
