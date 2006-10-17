@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5569 2006/10/17 09:35:13 wiz Exp $
+$NetBSD: TODO,v 1.5570 2006/10/17 12:29:39 tron Exp $
 
 Suggested new packages
 ======================
@@ -665,7 +665,6 @@ Suggested package updates
 	o libshout-2.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
-	o libtorrent-0.10.3
 	o libtunepimp-0.5.2
 	o libwnck-2.16.1
 	o libwpd-0.8.7
@@ -1098,7 +1097,6 @@ Suggested package updates
 	o rpm-4.4.6
 	o rt3-3.6.1
 	o rtcw-1.41.3
-	o rtorrent-0.6.3
 	o ruby-1.8.5
 	o ruby-RMagick-1.14.0 [requires ImageMagick>=6.2.9.7]
 	o ruby-cmd-0.8.0
