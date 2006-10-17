@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.24 2006/10/17 16:18:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.25 2006/10/17 20:37:57 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -57,3 +57,5 @@ Pullup ticket 1859 - requested by dmcmahill
 portability fix for xmlto
 Pullup ticket 1857 - requested by dmcmahill
 portability fixes for libwww
+Pullup ticket 1860 - requested by dmcmahill
+portability fix for guile14-gtk
