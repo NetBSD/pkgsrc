@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/10 20:05:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/17 14:32:32 drochner Exp $
 bin/nctoh5${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
@@ -54,6 +54,9 @@ ${PYSITELIB}/tables/VLArray.pyo
 ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
+${PYSITELIB}/tables/_comp_bzip2.so
+${PYSITELIB}/tables/_comp_lzo.so
+${PYSITELIB}/tables/_comp_ucl.so
 ${PYSITELIB}/tables/attributeaccess.py
 ${PYSITELIB}/tables/attributeaccess.pyc
 ${PYSITELIB}/tables/attributeaccess.pyo
@@ -88,6 +91,18 @@ ${PYSITELIB}/tables/proxydict.pyo
 ${PYSITELIB}/tables/registry.py
 ${PYSITELIB}/tables/registry.pyc
 ${PYSITELIB}/tables/registry.pyo
+${PYSITELIB}/tables/scripts/__init__.py
+${PYSITELIB}/tables/scripts/__init__.pyc
+${PYSITELIB}/tables/scripts/__init__.pyo
+${PYSITELIB}/tables/scripts/nctoh5.py
+${PYSITELIB}/tables/scripts/nctoh5.pyc
+${PYSITELIB}/tables/scripts/nctoh5.pyo
+${PYSITELIB}/tables/scripts/ptdump.py
+${PYSITELIB}/tables/scripts/ptdump.pyc
+${PYSITELIB}/tables/scripts/ptdump.pyo
+${PYSITELIB}/tables/scripts/ptrepack.py
+${PYSITELIB}/tables/scripts/ptrepack.pyc
+${PYSITELIB}/tables/scripts/ptrepack.pyo
 ${PYSITELIB}/tables/undoredo.py
 ${PYSITELIB}/tables/undoredo.pyc
 ${PYSITELIB}/tables/undoredo.pyo
@@ -95,5 +110,6 @@ ${PYSITELIB}/tables/utils.py
 ${PYSITELIB}/tables/utils.pyc
 ${PYSITELIB}/tables/utils.pyo
 ${PYSITELIB}/tables/utilsExtension.so
+@dirrm ${PYSITELIB}/tables/scripts
 @dirrm ${PYSITELIB}/tables/nodes
 @dirrm ${PYSITELIB}/tables
