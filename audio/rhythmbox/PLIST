@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.12 2006/07/03 13:02:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/10/17 16:45:07 drochner Exp $
 bin/rhythmbox
 bin/rhythmbox-client
-lib/rhythmbox/plugins/audioscrobbler.rb-plugin
-lib/rhythmbox/plugins/generic-player.rb-plugin
-lib/rhythmbox/plugins/libaudioscrobbler.la
-lib/rhythmbox/plugins/libgeneric-player.la
+lib/rhythmbox/plugins/audiocd.rb-plugin
+lib/rhythmbox/plugins/audioscrobbler/audioscrobbler.rb-plugin
+lib/rhythmbox/plugins/audioscrobbler/libaudioscrobbler.la
+lib/rhythmbox/plugins/cd-recorder/cd-recorder.rb-plugin
+lib/rhythmbox/plugins/cd-recorder/libcd-recorder.la
+lib/rhythmbox/plugins/generic-player/generic-player.rb-plugin
+lib/rhythmbox/plugins/generic-player/libgeneric-player.la
+lib/rhythmbox/plugins/libaudiocd.la
 libexec/rhythmbox-metadata
-share/application-registry/rhythmbox.applications
 share/applications/rhythmbox.desktop
 share/dbus-1/services/org.gnome.Rhythmbox.service
 share/doc/rhythmbox/ch01.html
@@ -228,7 +231,6 @@ share/locale/vi/LC_MESSAGES/rhythmbox.mo
 share/locale/zh_CN/LC_MESSAGES/rhythmbox.mo
 share/locale/zh_HK/LC_MESSAGES/rhythmbox.mo
 share/locale/zh_TW/LC_MESSAGES/rhythmbox.mo
-share/mime-info/rhythmbox.keys
 share/omf/rhythmbox/rhythmbox-C.omf
 share/omf/rhythmbox/rhythmbox-es.omf
 share/omf/rhythmbox/rhythmbox-fr.omf
@@ -271,7 +273,6 @@ share/rhythmbox/rhythmbox-ui.xml
 @dirrm share/rhythmbox
 @dirrm share/omf/rhythmbox
 @comment in scrollkeeper: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/rhythmbox/zh_CN/figures
@@ -292,6 +293,8 @@ share/rhythmbox/rhythmbox-ui.xml
 @dirrm share/doc/rhythmbox
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
+@dirrm lib/rhythmbox/plugins/generic-player
+@dirrm lib/rhythmbox/plugins/cd-recorder
+@dirrm lib/rhythmbox/plugins/audioscrobbler
 @dirrm lib/rhythmbox/plugins
 @dirrm lib/rhythmbox
