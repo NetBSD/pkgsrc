@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2006/06/13 12:28:09 markd Exp $
+# $NetBSD: Makefile,v 1.85.4.1 2006/10/17 15:32:08 salo Exp $
 
 DISTNAME=		R-2.3.1
 CATEGORIES=		math
@@ -74,7 +74,7 @@ INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-R_LIBDIR=		${PREFIX}/lib/R
+R_LIBDIR=		lib/R
 R_INSTALL_DIRS=		${R_LIBDIR}
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.1
@@ -99,12 +99,12 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 # when updating.
 #
 post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${R_LIBDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${R_LIBDIR}
 	${RM} -f ${PLIST_SRC}
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	( cd ${PREFIX};							\
 	  for dir in ${R_INSTALL_DIRS}; do				\
-		${FIND} $${dir#${PREFIX}/} \( -type f -o -type l \) -print; \
+		${FIND} $${dir} \( -type f -o -type l \) -print; \
 	  done;								\
 	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
 	${GREP} -v "lib/R/doc/html/search/index.txt" | 			\
@@ -113,7 +113,7 @@ post-install:
 	${ECHO} "@unexec "${RM:Q}" -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
 	( cd ${PREFIX} &&						\
 	  for dir in ${R_INSTALL_DIRS}; do				\
-		${FIND} $${dir#${PREFIX}/} -type d -print;		\
+		${FIND} $${dir} -type d -print;		\
 	  done;								\
 	) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |" >> ${PLIST_SRC}
 	${ECHO} "@exec R CMD "${PERL5:Q}" %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
