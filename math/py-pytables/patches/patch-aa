@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/02/10 20:05:12 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/17 14:32:32 drochner Exp $
 
---- setup.py.orig	2005-12-21 18:04:52.000000000 +0100
+--- setup.py.orig	2006-07-28 10:42:25.000000000 +0200
 +++ setup.py
-@@ -555,5 +555,5 @@ interactively save and retrieve large am
-                                 ),
-                       ],
-       cmdclass = cmdclass,
--      scripts = ['utils/ptdump', 'utils/ptrepack', 'utils/nctoh5'],
-+      scripts = ['utils/ptdump' + sys.version[0:3], 'utils/ptrepack' + sys.version[0:3], 'utils/nctoh5' + sys.version[0:3]],
- )
+@@ -409,7 +409,7 @@ else:
+     setuptools_kwargs['packages'] = [
+         'tables', 'tables.nodes', 'tables.scripts']
+     setuptools_kwargs['scripts'] = [
+-        'utils/ptdump', 'utils/ptrepack', 'utils/nctoh5']
++        'utils/ptdump' + sys.version[0:3], 'utils/ptrepack' + sys.version[0:3], 'utils/nctoh5' + sys.version[0:3]]
+ 
+ 
+ #Having the Python version included in the package name makes managing a
