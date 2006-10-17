@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.16 2006/07/10 22:17:58 jlam Exp $
+# $NetBSD: tools.IRIX.mk,v 1.17 2006/10/17 06:06:14 rillig Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -51,6 +51,9 @@ TOOLS_PLATFORM.mail?=		/usr/bin/mail
 TOOLS_PLATFORM.mkdir?=		/sbin/mkdir -p
 TOOLS_PLATFORM.mv?=		/sbin/mv
 TOOLS_PLATFORM.nice?=		/sbin/nice
+.if exists(/usr/bin/printf)
+TOOLS_PLATFORM.printf?=		/usr/bin/printf
+.endif
 TOOLS_PLATFORM.pwd?=		/sbin/pwd
 TOOLS_PLATFORM.rm?=		/sbin/rm
 TOOLS_PLATFORM.rmdir?=		/usr/bin/rmdir
