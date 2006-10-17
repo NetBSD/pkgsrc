@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2006/08/03 20:18:04 drochner Exp $
+$NetBSD: patch-ac,v 1.5 2006/10/17 17:02:47 drochner Exp $
 
---- src/Makefile.in.orig	2006-07-30 20:14:27.000000000 +0200
+--- src/Makefile.in.orig	2006-10-14 19:48:40.000000000 +0200
 +++ src/Makefile.in
-@@ -243,7 +243,7 @@ target_cpu = @target_cpu@
+@@ -246,7 +246,7 @@ target_cpu = @target_cpu@
  target_os = @target_os@
  target_vendor = @target_vendor@
  SUBDIRS = SDL POSIX MAC
 -gamesdir = $(prefix)/games
 +gamesdir = $(prefix)/bin
- prboom_game_server_SOURCES = d_server.c i_udp_sdl.c protocol.h
- prboom_game_server_LDADD = POSIX/libposixdoom.a @NET_LIBS@ @SDL_LIBS@
+ prboom_game_server_SOURCES = d_server.c protocol.h
+ prboom_game_server_LDADD = POSIX/libposixdoom.a SDL/i_network.o @NET_LIBS@ @SDL_LIBS@
  COMMON_SRC = \
