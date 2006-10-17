@@ -1,18 +1,25 @@
-$NetBSD: patch-ai,v 1.3 2006/05/03 12:47:47 drochner Exp $
+$NetBSD: patch-ai,v 1.4 2006/10/17 16:23:47 drochner Exp $
 
---- src/key_events.c.orig	2006-03-07 22:26:26.000000000 +0100
+--- src/key_events.c.orig	2006-10-03 01:43:11.000000000 +0200
 +++ src/key_events.c
-@@ -660,8 +660,8 @@ void kb_edit_show (void) {
+@@ -731,6 +731,7 @@ void kb_edit_show (void)
  
  static void do_edit_binding (void)
  {
--  editkey = *lookup_binding (&catch_key_iter);
-   char *title;
-+  editkey = *lookup_binding (&catch_key_iter);
- 
-   gtk_entry_set_text (GTK_ENTRY (kb_binding_desc), editkey.desc);
++  char *title;
+   editkey = *lookup_binding (&catch_key_iter);
+   editdesc = editkey.desc;
+   editkey.desc = getdesc (&editkey);
+@@ -739,7 +740,7 @@ static void do_edit_binding (void)
    gtk_text_buffer_set_text (kb_binding_command_buf, editkey.cmd, -1);
-@@ -990,9 +990,7 @@ static JSBool js_keypad_show (JSContext 
+   gtk_entry_set_text (GTK_ENTRY (kb_binding_key), editkey.keyname);
+ 
+-  char *title = g_strdup_printf (_("Keybinding: %s"), editkey.desc);
++  title = g_strdup_printf (_("Keybinding: %s"), editkey.desc);
+   gtk_window_set_title (GTK_WINDOW (kb_binding_edit_dlg), title);
+   free (title);
+ 
+@@ -1069,9 +1070,7 @@ static JSBool js_keypad_show (JSContext 
  
  /* Xine event mapping data */
  
@@ -23,7 +30,7 @@ $NetBSD: patch-ai,v 1.3 2006/05/03 12:47:47 drochner Exp $
      { "ANGLE_NEXT", XINE_EVENT_INPUT_ANGLE_NEXT },
      { "ANGLE_PREVIOUS", XINE_EVENT_INPUT_ANGLE_PREVIOUS },
      { "DOWN", XINE_EVENT_INPUT_DOWN },
-@@ -1033,7 +1031,10 @@ static const kb_xine_event_map_t xine_in
+@@ -1112,7 +1111,10 @@ static const kb_xine_event_map_t xine_in
      { "9", XINE_EVENT_INPUT_NUMBER_9 },
      { "-", -1 }, /* null event */
      { "" }
@@ -35,7 +42,7 @@ $NetBSD: patch-ai,v 1.3 2006/05/03 12:47:47 drochner Exp $
  };
  
  
-@@ -1080,9 +1081,7 @@ static void kb_xine_event_help (se_t *se
+@@ -1159,9 +1161,7 @@ static void kb_xine_event_help (se_t *se
  
  
  
@@ -46,7 +53,7 @@ $NetBSD: patch-ai,v 1.3 2006/05/03 12:47:47 drochner Exp $
      { "AUDIO", XINE_EVENT_VDR_MUTE + 1 /* ..._VDR_AUDIO */ },
      { "BACK", XINE_EVENT_VDR_BACK },
      { "BLUE", XINE_EVENT_VDR_BLUE },
-@@ -1118,7 +1117,10 @@ static const kb_xine_event_map_t xine_vd
+@@ -1197,7 +1197,10 @@ static const kb_xine_event_map_t xine_vd
      { "VOLPLUS", XINE_EVENT_VDR_VOLPLUS },
      { "YELLOW", XINE_EVENT_VDR_YELLOW },
      { "" }
