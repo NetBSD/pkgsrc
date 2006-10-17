@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2006/09/09 02:41:57 obache Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/17 21:43:38 agc Exp $
 
-DISTNAME=		darcs-1.0.4
-PKGREVISION=		2
+DISTNAME=		darcs-1.0.8
 CATEGORIES=		devel
-MASTER_SITES=		http://abridgegame.org/darcs/
+MASTER_SITES=		http://www.darcs.net/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://abridgegame.org/darcs/
+HOMEPAGE=		http://www.darcs.net/
 COMMENT=		Distributed revision control system
 
 BUILD_DEPENDS+=		latex2html>=2002.2.1nb3:../../textproc/latex2html
