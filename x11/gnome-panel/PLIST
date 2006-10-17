@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2006/09/15 15:12:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.31 2006/10/17 17:25:04 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -18,25 +18,6 @@ libexec/fish-applet-2
 libexec/notification-area-applet
 libexec/wnck-applet
 man/man1/gnome-panel.1
-share/doc/panel-applet/PanelApplet.html
-share/doc/panel-applet/applet-popups.html
-share/doc/panel-applet/applet-porting.html
-share/doc/panel-applet/applet-writing.html
-share/doc/panel-applet/home.png
-share/doc/panel-applet/index.html
-share/doc/panel-applet/index.sgml
-share/doc/panel-applet/left.png
-share/doc/panel-applet/multi-applets.html
-share/doc/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
-share/doc/panel-applet/panel-applet.devhelp
-share/doc/panel-applet/panel-applet.devhelp2
-share/doc/panel-applet/panel-applet.html
-share/doc/panel-applet/panel-signals.html
-share/doc/panel-applet/right.png
-share/doc/panel-applet/server-files.html
-share/doc/panel-applet/session-saving.html
-share/doc/panel-applet/style.css
-share/doc/panel-applet/up.png
 share/gconf/schemas/clock.schemas
 share/gconf/schemas/fish.schemas
 share/gconf/schemas/panel-compatibility.schemas
@@ -235,6 +216,25 @@ share/gnome/panel/pixmaps/gnome-gegl2.png
 share/gnome/panel/pixmaps/monkey.png
 share/gnome/panel/pixmaps/oldwanda.png
 share/gnome/panel/pixmaps/wanda.png
+share/gtk-doc/html/panel-applet/PanelApplet.html
+share/gtk-doc/html/panel-applet/applet-popups.html
+share/gtk-doc/html/panel-applet/applet-porting.html
+share/gtk-doc/html/panel-applet/applet-writing.html
+share/gtk-doc/html/panel-applet/home.png
+share/gtk-doc/html/panel-applet/index.html
+share/gtk-doc/html/panel-applet/index.sgml
+share/gtk-doc/html/panel-applet/left.png
+share/gtk-doc/html/panel-applet/multi-applets.html
+share/gtk-doc/html/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
+share/gtk-doc/html/panel-applet/panel-applet.devhelp
+share/gtk-doc/html/panel-applet/panel-applet.devhelp2
+share/gtk-doc/html/panel-applet/panel-applet.html
+share/gtk-doc/html/panel-applet/panel-signals.html
+share/gtk-doc/html/panel-applet/right.png
+share/gtk-doc/html/panel-applet/server-files.html
+share/gtk-doc/html/panel-applet/session-saving.html
+share/gtk-doc/html/panel-applet/style.css
+share/gtk-doc/html/panel-applet/up.png
 share/icons/hicolor/16x16/apps/gnome-panel-clock.png
 share/icons/hicolor/16x16/apps/gnome-panel-drawer.png
 share/icons/hicolor/16x16/apps/gnome-panel-fish.png
@@ -432,6 +432,7 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gtk-doc/html/panel-applet
 @dirrm share/gnome/panel/pixmaps
 @dirrm share/gnome/panel/glade
 @dirrm share/gnome/panel
@@ -540,6 +541,5 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/doc/panel-applet
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/panel-2.0
