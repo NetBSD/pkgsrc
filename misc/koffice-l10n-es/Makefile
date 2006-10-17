@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/03/15 00:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2006/10/17 09:44:06 markd Exp $
 
-DISTNAME=	koffice-i18n-es-1.3.5
-PKGREVISION=	6
+DISTNAME=	koffice-l10n-es-1.6.0
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.5/src/
+MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.0/src/koffice-l10n/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +10,10 @@ HOMEPAGE=	http://www.koffice.org/
 COMMENT=	Spanish language pack for KOffice
 
 DEPENDS+=	koffice-[0-9]*:../../misc/koffice
+CONFLICTS+=	koffice-i18n-es-[0-9]*
 
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake msgfmt
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/bsd.pkg.mk"
