@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.18 2006/09/15 15:14:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/10/17 17:16:11 drochner Exp $
 bin/gswitchit-plugins-capplet
 include/libgswitchit/gnome-kbd-indicator.h
 include/libgswitchit/gswitchit-config.h
+include/libgswitchit/gswitchit-config-private.h
 include/libgswitchit/gswitchit-plugin.h
-include/libgswitchit/gswitchit-plugins-app.h
 include/libgswitchit/keyboard-config-registry-client.h
 include/libgswitchit/keyboard-config-registry.h
 include/libgweather/gweather-gconf.h
@@ -77,6 +77,9 @@ share/gnome-applets/geyes/Default/config
 share/gnome-applets/geyes/Horrid/config
 share/gnome-applets/geyes/Horrid/horrid_eye.png
 share/gnome-applets/geyes/Horrid/horrid_pupil.png
+share/gnome-applets/geyes/Tango/config
+share/gnome-applets/geyes/Tango/tango-eye.png
+share/gnome-applets/geyes/Tango/tango-pupil.png
 ${BATTSTAT}share/gnome-applets/glade/battstat_applet.glade
 share/gnome-applets/glade/gswitchit-plugins.glade
 share/gnome-applets/glade/gswitchit.glade
@@ -1003,6 +1006,7 @@ ${BATTSTAT}@dirrm share/gnome/help/battstat
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-applets/gweather
 @dirrm share/gnome-applets/glade
+@dirrm share/gnome-applets/geyes/Tango
 @dirrm share/gnome-applets/geyes/Horrid
 @dirrm share/gnome-applets/geyes/Default-tiny
 @dirrm share/gnome-applets/geyes/Default
