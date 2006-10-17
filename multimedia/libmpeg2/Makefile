@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/06/19 13:21:14 adam Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/17 16:18:14 drochner Exp $
 
-DISTNAME=	mpeg2dec-0.4.0b
-PKGNAME=	libmpeg2-0.4.0b
-PKGREVISION=	5
+DISTNAME=	mpeg2dec-0.4.1
+PKGNAME=	libmpeg2-0.4.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://libmpeg2.sourceforge.net/files/
 
@@ -11,9 +10,6 @@ HOMEPAGE=	http://libmpeg2.sourceforge.net/
 COMMENT=	Library for decoding mpeg-2 and mpeg-1 video streams
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-# remove on next update, only needed for 0.4.0b
-WRKSRC=		${WRKDIR}/mpeg2dec-0.4.0
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
@@ -25,12 +21,6 @@ PKGCONFIG_OVERRIDE+=	libmpeg2/libmpeg2.pc.in
 CONFIGURE_ARGS+=	--enable-shared
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
-CONFIGURE_ENV+=		LIBMPEG2_CFLAGS=-prefer-non-pic
-.  endif
-.endif
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		ac_cv_header_altivec_h=no
