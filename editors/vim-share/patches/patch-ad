@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.10 2006/05/10 13:27:43 tonio Exp $
+$NetBSD: patch-ad,v 1.11 2006/10/17 11:43:14 seb Exp $
 
---- src/Makefile.orig	2006-05-07 15:25:27.000000000 +0200
+--- src/Makefile.orig	2006-10-17 07:00:03.000000000 +0000
 +++ src/Makefile
 @@ -1131,26 +1131,31 @@ MOTIF_BUNDLE	=
  ### Athena GUI
@@ -51,11 +51,13 @@ $NetBSD: patch-ad,v 1.10 2006/05/10 13:27:43 tonio Exp $
  	cd $(HELPSOURCE); \
  		files=`ls *.txt tags`; \
  		files="$$files `ls *.??x tags-?? 2>/dev/null || true`"; \
-@@ -1897,24 +1902,24 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
+@@ -1896,25 +1901,25 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
+ 	      fi
  	-chmod $(FILEMOD) $(DEST_TOOLS)/*
  # replace the path in some tools
- 	perlpath=`./which.sh perl` && sed -e "s+/usr/bin/perl+$$perlpath+" $(TOOLSSOURCE)/efm_perl.pl >$(DEST_TOOLS)/efm_perl.pl
+-	perlpath=`./which.sh perl` && sed -e "s+/usr/bin/perl+$$perlpath+" $(TOOLSSOURCE)/efm_perl.pl >$(DEST_TOOLS)/efm_perl.pl
 -	awkpath=`./which.sh nawk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
++	perlpath='$(TOOLS_SETENV) perl' && sed -e "s+/usr/bin/perl+$$perlpath+" $(TOOLSSOURCE)/efm_perl.pl >$(DEST_TOOLS)/efm_perl.pl
 +	awkpath=$(TOOLS_AWK) && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
  		awkpath=`./which.sh gawk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
  		awkpath=`./which.sh awk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; fi; fi
