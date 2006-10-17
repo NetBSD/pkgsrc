@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.680 2006/10/07 07:57:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.681 2006/10/17 21:42:46 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3514,6 +3514,10 @@ sub checkword_absolute_pathname($$) {
 	if ($word =~ qr"^/dev/(?:null|tty|zero)$") {
 		# These are defined by POSIX.
 
+	} elsif ($word eq "/bin/sh") {
+		# This is usually correct, although on Solaris, it's pretty
+		# feature-crippled.
+
 	} elsif ($word !~ qr"/(?:[a-z]|\$[({])") {
 		# Assume that all pathnames start with a lowercase letter.
 
@@ -5312,6 +5316,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		}
 
 	} elsif ($type eq "WrkdirSubdirectory") {
+		checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $value, $comment, $list_context, $is_guessed);
 		if ($value eq "\${WRKDIR}") {
 			# Fine.
 		} else {
