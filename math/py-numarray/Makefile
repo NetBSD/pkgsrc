@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/03/08 17:21:34 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/17 14:25:43 drochner Exp $
 #
 
-DISTNAME=	numarray-1.5.1
-PKGNAME=	${PYPKGPREFIX}-numarray-1.5.1
+DISTNAME=	numarray-1.5.2
+PKGNAME=	${PYPKGPREFIX}-numarray-1.5.2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -19,6 +19,9 @@ PLIST_SUBST+=	DOTBLAS=""
 .else
 PLIST_SUBST+=	DOTBLAS="@comment "
 .endif
+
+do-test:
+	(cd ${WRKSRC}/Lib && ${PYTHONBIN} testall.py)
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
