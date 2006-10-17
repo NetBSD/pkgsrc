@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:09 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/17 21:43:55 rillig Exp $
 
 DISTNAME=	gqmpeg-skins-20030712
 PKGREVISION=	4
@@ -81,7 +81,7 @@ COMMENT=	Skins for gqmpeg
 DEPENDS+=	gqmpeg-[0-9]*:../../audio/gqmpeg
 
 DIST_SUBDIR=	gqmpeg-skins
-WRKSRC=		${WRKDIR}/Makefile PLIST distinfo
+WRKSRC=		${WRKDIR}/Makefile
 NO_BUILD=	yes
 
 USE_TOOLS+=	gtar
