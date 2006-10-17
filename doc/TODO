@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5574 2006/10/17 13:30:20 obache Exp $
+$NetBSD: TODO,v 1.5575 2006/10/17 14:22:53 obache Exp $
 
 Suggested new packages
 ======================
@@ -784,7 +784,6 @@ Suggested package updates
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.33
 	o p5-Audio-Wav-0.04
-	o p5-Authen-SASL-2.10 [pkg/34396]
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-BSD-Resource-1.28
 	o p5-Business-ISBN-1.82 [pkg/34388]
