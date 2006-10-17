@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2006/09/16 12:20:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.80 2006/10/17 17:25:04 drochner Exp $
 #
 
-DISTNAME=		gnome-panel-2.16.0
-PKGREVISION=		1
+DISTNAME=		gnome-panel-2.16.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.16/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,9 +16,6 @@ USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
-
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 #CPPFLAGS+=	-DPANEL_GNOME_LOGO_ICON="\"netbsd-logo-icon-transparent\""
 
