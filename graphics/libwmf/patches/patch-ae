@@ -1,19 +1,20 @@
-$NetBSD: patch-ae,v 1.1 2006/08/20 21:38:45 salo Exp $
+$NetBSD: patch-ae,v 1.1.4.1 2006/10/17 15:50:37 salo Exp $
 
-Security fix for CVE-2006-3376, from Red Hat.
-
---- src/player.c.orig	2002-12-10 20:30:26.000000000 +0100
-+++ src/player.c	2006-08-20 23:29:44.000000000 +0200
-@@ -42,6 +42,7 @@
- #include "player/defaults.h" /* Provides: default settings               */
- #include "player/record.h"   /* Provides: parameter mechanism            */
+--- src/player.c.orig	2002-12-10 14:30:26.000000000 -0500
++++ src/player.c	2006-10-09 13:31:30.464278000 -0400
+@@ -44,4 +44,11 @@
  #include "player/meta.h"     /* Provides: record interpreters            */
-+#include <stdint.h>
  
++#ifdef HAVE_STDINT_H
++#include <stdint.h>
++#endif
++#ifndef UINT32_MAX
++#include <limits.h>
++#endif
++
  /**
   * @internal
-@@ -132,8 +133,14 @@
- 		}
+@@ -133,6 +140,12 @@
  	}
  
 -/*	P->Parameters = (unsigned char*) wmf_malloc (API,(MAX_REC_SIZE(API)-3) * 2 * sizeof (unsigned char));
@@ -28,4 +29,3 @@ Security fix for CVE-2006-3376, from Red Hat.
 + 	P->Parameters = (unsigned char*) wmf_malloc (API,(MAX_REC_SIZE(API)  ) * 2 * sizeof (unsigned char));
  
  	if (ERR (API))
- 	{	WMF_DEBUG (API,"bailing...");
