@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/10/17 13:50:49 gdt Exp $
 bin/gqview
 man/man1/gqview.1
 share/applications/gqview.desktop
@@ -53,7 +53,9 @@ share/doc/${PKGNAME}/html/gnu_fdl.txt
 share/doc/${PKGNAME}/html/gqview_faq.html
 share/doc/${PKGNAME}/html/index.html
 share/locale/ar/LC_MESSAGES/gqview.mo
+share/locale/be/LC_MESSAGES/gqview.mo
 share/locale/bg/LC_MESSAGES/gqview.mo
+share/locale/ca/LC_MESSAGES/gqview.mo
 share/locale/cs/LC_MESSAGES/gqview.mo
 share/locale/da/LC_MESSAGES/gqview.mo
 share/locale/de/LC_MESSAGES/gqview.mo
@@ -65,6 +67,7 @@ share/locale/hu/LC_MESSAGES/gqview.mo
 share/locale/id/LC_MESSAGES/gqview.mo
 share/locale/it/LC_MESSAGES/gqview.mo
 share/locale/ja/LC_MESSAGES/gqview.mo
+share/locale/ko/LC_MESSAGES/gqview.mo
 share/locale/nl/LC_MESSAGES/gqview.mo
 share/locale/no/LC_MESSAGES/gqview.mo
 share/locale/pl/LC_MESSAGES/gqview.mo
