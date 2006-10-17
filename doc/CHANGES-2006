@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1534 2006/10/17 09:49:47 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1535 2006/10/17 12:12:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed misc/koffice-i18n-da [markd 2006-10-17]
 	Removed misc/koffice-i18n-es [markd 2006-10-17]
 	Removed misc/koffice-i18n-et [markd 2006-10-17]
+	Updated graphics/gqview-devel to 2.1.2 [gdt 2006-10-17]
