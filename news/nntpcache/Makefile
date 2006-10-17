@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2006/03/14 12:43:10 kleink Exp $
+# $NetBSD: Makefile,v 1.28 2006/10/17 20:28:01 schwarz Exp $
 
-DISTNAME=		nntpcache-3.0.1
-PKGREVISION=		1
+DISTNAME=		nntpcache-3.0.2
 CATEGORIES=		news
 MASTER_SITES=		http://www.nntpcache.com/pub/nntpcache/ \
 			ftp://ftp.cs.tu-berlin.de/pub/net/news/nntpcache/ \
@@ -28,6 +27,7 @@ post-configure:
 		${FILESDIR}/nntpcached.rc > ${WRKSRC}/nntpcached.sh
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.d
 	${INSTALL_SCRIPT} ${WRKSRC}/nntpcached.sh ${PREFIX}/etc/rc.d/nntpcached
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nntpcache
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL FAQ FAQ.html LICENSING \
