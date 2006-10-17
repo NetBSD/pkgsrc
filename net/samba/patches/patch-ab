@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.24 2005/11/14 08:05:27 jlam Exp $
+$NetBSD: patch-ab,v 1.25 2006/10/17 05:46:09 rillig Exp $
 
---- script/installbin.sh.orig	2005-10-12 13:03:44.000000000 -0400
-+++ script/installbin.sh
-@@ -22,11 +22,12 @@ for p in $*; do
+--- script/installbin.sh.orig	2005-02-25 18:59:43.000000000 +0100
++++ script/installbin.sh	2006-10-17 07:11:30.000000000 +0200
+@@ -17,16 +17,16 @@ for p in $*; do
+  p2=`basename $p`
+  echo Installing $p as $BINDIR/$p2
+  if [ -f $BINDIR/$p2 ]; then
+-   rm -f $BINDIR/$p2.old
+-   mv $BINDIR/$p2 $BINDIR/$p2.old
++   rm -f $BINDIR/$p2
   fi
   cp $p $BINDIR/
   chmod $INSTALLPERMS $BINDIR/$p2
