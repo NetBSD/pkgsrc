@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1535 2006/10/17 12:12:24 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1536 2006/10/17 12:29:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4823,3 +4823,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed misc/koffice-i18n-es [markd 2006-10-17]
 	Removed misc/koffice-i18n-et [markd 2006-10-17]
 	Updated graphics/gqview-devel to 2.1.2 [gdt 2006-10-17]
+	Updated net/libtorrent to 0.10.3 [tron 2006-10-17]
+	Updated net/rtorrent to 0.6.3 [tron 2006-10-17]
