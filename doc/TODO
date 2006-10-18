@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5580 2006/10/18 16:40:47 adam Exp $
+$NetBSD: TODO,v 1.5581 2006/10/18 20:38:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ Suggested package updates
 	o webmin-1.300
 	o weewm-0.01
 	o winbind-3.0.13
-	o wine-0.9.23
 	o wmctrl-1.07
 	o wmii-3.1
 	o wmweather-2.4.3
