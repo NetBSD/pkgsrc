@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2006/06/24 09:14:56 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/18 18:53:03 adam Exp $
 
-DISTNAME=	slony1-1.1.5
-PKGREVISION=	1
+DISTNAME=	slony1-1.2.0
 CATEGORIES=	databases
-MASTER_SITES=	http://developer.postgresql.org/~wieck/slony1/download/
+MASTER_SITES=	http://pgfoundry.org/frs/download.php/1136/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gborg.postgresql.org/project/slony1/
 COMMENT=	Replication system for PostgreSQL
 
-USE_TOOLS+=	gmake
-
 DEPENDS+=	postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pgconfigdir=${PGSQL_PREFIX:Q}/bin
 CONFIGURE_ARGS+=	--with-pgbindir=${PGSQL_PREFIX:Q}/bin
@@ -24,7 +22,7 @@ CONFIGURE_ARGS+=	--with-pgpkglibdir=${PGSQL_PREFIX:Q}/lib/postgresql
 CONFIGURE_ARGS+=	--with-pgsharedir=${PGSQL_PREFIX:Q}/share/postgresql
 
 post-extract:
-	${CP} ${WRKSRC}/makefiles/Makefile.freebsd ${WRKSRC}/makefiles/Makefile.dragonfly
+	cp ${WRKSRC}/makefiles/Makefile.freebsd ${WRKSRC}/makefiles/Makefile.dragonfly
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/share/slon.conf-sample \
