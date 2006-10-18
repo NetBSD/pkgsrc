@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2006/10/18 19:43:00 markd Exp $
+
+--- karm/test/delete.sh.orig	2006-10-19 08:34:32.000000000 +1300
++++ karm/test/delete.sh
+@@ -24,7 +24,7 @@ RVAL=`dcop $DCOPID KarmDCOPIface version
+ 
+ tear_down
+ 
+-if [ "$RVAL" == "" ]; then 
++if [ "$RVAL" = "" ]; then 
+   echo "FAIL $0: got no version."
+   exit 1;
+ else 
