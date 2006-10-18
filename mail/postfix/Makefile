@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2006/10/16 11:03:07 martti Exp $
+# $NetBSD: Makefile,v 1.193 2006/10/18 09:26:53 martti Exp $
 
 DISTNAME=	postfix-2.3.3
 #PKGREVISION=	1
@@ -129,6 +129,7 @@ SUBST_STAGE.paths=	post-patch
 
 post-extract:
 	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	rm -f ${WRKSRC}/auxiliary/MacOSX/Postfix.StartupItem/Postfix
 
 do-configure:
 	cd ${WRKSRC} &&							\
