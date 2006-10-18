@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5576 2006/10/18 05:09:28 obache Exp $
+$NetBSD: TODO,v 1.5577 2006/10/18 11:52:49 markd Exp $
 
 Suggested new packages
 ======================
@@ -590,8 +590,6 @@ Suggested package updates
 	o imap-uw-2006b
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
-	o ipa-2.0 [pkg/32398]
-	o ipa-2.0.1
 	o ipcalc-0.41
 	o ipsec-tools-0.6.5
 	o ircservices-5.0.59
