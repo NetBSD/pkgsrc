@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1549 2006/10/18 09:07:48 drochner Exp $
+>$NetBSD: CHANGES-2006,v 1.1550 2006/10/18 11:52:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4855,3 +4855,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gnome-themes to 2.16.1.1 [drochner 2006-10-18]
 	Updated x11/gnome-panel to 2.16.1 [drochner 2006-10-18]
 	Updated lang/mono to 1.1.13.8.1 [drochner 2006-10-18]
+	Moved net/ipa to sysutils/ipa [markd 2006-10-18]
+	Updated sysutils/ipa to 2.0.1 [markd 2006-10-18]
