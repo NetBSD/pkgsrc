@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2006/10/08 01:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2006/10/18 20:37:21 adam Exp $
 
-DISTNAME=	wine-0.9.18
-PKGREVISION=	2
+DISTNAME=	wine-0.9.23
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
@@ -23,8 +22,6 @@ USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		bison gmake mktemp
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-trace
 UNLIMIT_RESOURCES=	datasize
 
 REPLACE_PERL+=		tools/winemaker tools/winedump/function_grep.pl

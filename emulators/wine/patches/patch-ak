@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.7 2006/06/12 09:07:22 adam Exp $
+$NetBSD: patch-ak,v 1.8 2006/10/18 20:37:21 adam Exp $
 
---- dlls/ntdll/file.c.orig	2006-06-08 17:06:38.000000000 +0200
+--- dlls/ntdll/file.c.orig	2006-10-13 16:43:39.000000000 +0200
 +++ dlls/ntdll/file.c
-@@ -1629,6 +1629,35 @@ NTSTATUS FILE_GetDeviceInfo( int fd, FIL
+@@ -1624,6 +1624,35 @@ NTSTATUS FILE_GetDeviceInfo( int fd, FIL
              info->DeviceType = FILE_DEVICE_DISK_FILE_SYSTEM;
              break;
          }
@@ -35,6 +35,6 @@ $NetBSD: patch-ak,v 1.7 2006/06/12 09:07:22 adam Exp $
 +	    info->DeviceType = FILE_DEVICE_NETWORK_FILE_SYSTEM;
 +	    info->Characteristics |= FILE_REMOTE_DEVICE;
 +	}
- #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+ #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__)
          struct statfs stfs;
  
