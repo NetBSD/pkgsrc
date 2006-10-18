@@ -1,4 +1,7 @@
-$NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
+$NetBSD: patch-em,v 1.2 2006/10/18 22:37:46 seb Exp $
+
+This contains local (pkgsrc) LP64 patches as well as
+http://net-snmp.cvs.sourceforge.net/net-snmp/net-snmp/perl/SNMP/SNMP.xs?r1=5.50.2.6&r2=5.50.2.7&view=patch&pathrev=V5-3-patches
 
 --- perl/SNMP/SNMP.xs.orig	2006-05-26 16:59:15.000000000 +0000
 +++ perl/SNMP/SNMP.xs
@@ -65,7 +68,25 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
     }
  
     /* This code is for synchronous mode support.
-@@ -3006,7 +3006,7 @@ snmp_set(sess_ref, varlist_ref, perl_cal
+@@ -2320,6 +2320,8 @@ _bulkwalk_finish(walk_context *context, 
+    SV **err_num_svp = hv_fetch((HV*)SvRV(context->sess_ref), "ErrorNum", 8, 1);
+ 
+    dSP;
++   dMARK;
++   dITEMS;
+ 
+    async = SvTRUE(context->perl_cb);
+ 
+@@ -2328,6 +2330,8 @@ _bulkwalk_finish(walk_context *context, 
+    ** items pushed onto the stack.  For async, create a new array and push
+    ** the references onto it.  The array is then passed to the Perl callback.
+    */
++   if(!async)
++       SP -= items;
+ 
+    DBPRT(1, (DBOUT "Bulwalk %s (saved %d/%d), ", okay ? "completed" : "had error",
+ 					context->oid_saved, context->oid_total));
+@@ -3006,7 +3010,7 @@ snmp_set(sess_ref, varlist_ref, perl_cal
             netsnmp_pdu *pdu, *response;
             struct tree *tp;
  	   oid *oid_arr;
@@ -74,7 +95,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             char *tag_pv;
             snmp_xs_cb_data *xs_cb_data;
             SV **sess_ptr_sv;
-@@ -3207,7 +3207,7 @@ snmp_get(sess_ref, retry_nosuch, varlist
+@@ -3207,7 +3211,7 @@ snmp_get(sess_ref, retry_nosuch, varlist
             struct tree *tp;
             int len;
  	   oid *oid_arr;
@@ -83,7 +104,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             SV *tmp_sv;
             int type;
  	   char tmp_type_str[MAX_TYPE_NAME_LEN];
-@@ -3425,7 +3425,7 @@ snmp_getnext(sess_ref, varlist_ref, perl
+@@ -3425,7 +3429,7 @@ snmp_getnext(sess_ref, varlist_ref, perl
             struct tree *tp;
             int len;
  	   oid *oid_arr;
@@ -92,7 +113,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             SV *tmp_sv;
             int type;
  	   char tmp_type_str[MAX_TYPE_NAME_LEN];
-@@ -3669,7 +3669,7 @@ snmp_getbulk(sess_ref, nonrepeaters, max
+@@ -3669,7 +3673,7 @@ snmp_getbulk(sess_ref, nonrepeaters, max
             struct tree *tp;
             int len;
  	   oid *oid_arr;
@@ -101,7 +122,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             SV *tmp_sv;
             int type;
  	   char tmp_type_str[MAX_TYPE_NAME_LEN];
-@@ -3897,7 +3897,7 @@ snmp_bulkwalk(sess_ref, nonrepeaters, ma
+@@ -3897,7 +3901,7 @@ snmp_bulkwalk(sess_ref, nonrepeaters, ma
             netsnmp_session *ss;
             netsnmp_pdu *pdu = NULL;
  	   oid oid_arr[MAX_OID_LEN];
@@ -110,7 +131,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             SV **sess_ptr_sv;
             SV **err_str_svp;
             SV **err_num_svp;
-@@ -4115,7 +4115,7 @@ snmp_bulkwalk(sess_ref, nonrepeaters, ma
+@@ -4115,7 +4119,7 @@ snmp_bulkwalk(sess_ref, nonrepeaters, ma
  	      /* Sent okay...  Return the request ID in 'pdu' as an SvIV. */
  	      DBPRT(1,(DBOUT "Okay, request id is %d\n", (intptr_t) pdu));
  /*	      XSRETURN_IV((intptr_t)pdu); */
@@ -119,7 +140,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
  	      XSRETURN(1);
  	   }
  
-@@ -4208,7 +4208,7 @@ snmp_trapV1(sess_ref,enterprise,agent,ge
+@@ -4208,7 +4212,7 @@ snmp_trapV1(sess_ref,enterprise,agent,ge
             netsnmp_pdu *pdu = NULL;
             struct tree *tp;
  	   oid *oid_arr;
@@ -128,7 +149,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             SV **sess_ptr_sv;
             SV **err_str_svp;
             SV **err_num_svp;
-@@ -4347,7 +4347,7 @@ snmp_trapV2(sess_ref,uptime,trap_oid,var
+@@ -4347,7 +4351,7 @@ snmp_trapV2(sess_ref,uptime,trap_oid,var
             netsnmp_pdu *pdu = NULL;
             struct tree *tp;
  	   oid *oid_arr;
@@ -137,7 +158,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             SV **sess_ptr_sv;
             SV **err_str_svp;
             SV **err_num_svp;
-@@ -4484,7 +4484,7 @@ snmp_inform(sess_ref,uptime,trap_oid,var
+@@ -4484,7 +4488,7 @@ snmp_inform(sess_ref,uptime,trap_oid,var
             netsnmp_pdu *response;
             struct tree *tp;
  	   oid *oid_arr;
@@ -146,7 +167,7 @@ $NetBSD: patch-em,v 1.1 2006/10/01 20:08:29 seb Exp $
             snmp_xs_cb_data *xs_cb_data;
             SV **sess_ptr_sv;
             SV **err_str_svp;
-@@ -4715,7 +4715,7 @@ snmp_translate_obj(var,mode,use_long,aut
+@@ -4715,7 +4719,7 @@ snmp_translate_obj(var,mode,use_long,aut
             char str_buf[STR_BUF_SIZE];
             char str_buf_temp[STR_BUF_SIZE];
             oid oid_arr[MAX_OID_LEN];
