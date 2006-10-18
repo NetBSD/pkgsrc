@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.11 2005/05/25 08:23:43 adam Exp $
+$NetBSD: patch-ae,v 1.12 2006/10/18 20:37:21 adam Exp $
 
---- programs/winetest/winetest.rc.orig	2005-04-18 09:54:24.000000000 +0000
-+++ programs/winetest/winetest.rc
-@@ -21,7 +21,6 @@
- #include <windows.h>
- #include <winres.h>
- #include "resource.h"
--#include "tests.rc"
- 
- IDD_TAG DIALOG 0, 0, 150, 65
- STYLE WS_POPUP
+--- dlls/winex11.drv/opengl.c.orig	2006-09-15 08:03:29.000000000 +0200
++++ dlls/winex11.drv/opengl.c
+@@ -48,6 +48,7 @@ WINE_DECLARE_DEBUG_CHANNEL(opengl);
+ #endif
+ #ifdef HAVE_GL_GLX_H
+ # include <GL/glx.h>
++# include <GL/glxext.h>
+ #endif
+ #ifdef HAVE_GL_GLEXT_H
+ # include <GL/glext.h>
