@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2006/10/02 00:09:55 seb Exp $
+# $NetBSD: Makefile,v 1.55 2006/10/18 22:37:46 seb Exp $
 
 DISTNAME=	net-snmp-5.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.net-smnp.org/pub/sourceforge/net-snmp/
