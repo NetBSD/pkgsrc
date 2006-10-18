@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/10/18 17:48:31 ben Exp $
+
+You will need to make ${PKGNAME_NOREV} accessible through your HTTP server.
+If you are running Apache and ap-php, then you can add the following line
+to httpd.conf:
+
+        Include ${JOOMLA_CONFFILE}
+
+to make joomla accessible through:
+
+	http://www.domain.com/joomla/
+
+Your Apache server must also be configured to support PHP, and PHP
+must be configured to support zlib and MySQL by including this in php.ini:
+
+extension=zlib.so
+extension=mysql.so
+
+===========================================================================
