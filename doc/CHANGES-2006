@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1551 2006/10/18 16:40:47 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1552 2006/10/18 17:50:23 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4863,3 +4863,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/postgresql81-plpython to 8.1.5 [adam 2006-10-18]
 	Updated databases/postgresql81-pltcl to 8.1.5 [adam 2006-10-18]
 	Updated databases/postgresql81-server to 8.1.5 [adam 2006-10-18]
+	Added www/joomla version 1.0.11 [ben 2006-10-18]
