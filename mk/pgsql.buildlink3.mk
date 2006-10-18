@@ -1,4 +1,19 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.16 2006/06/06 19:43:43 joerg Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.17 2006/10/18 20:48:58 rillig Exp $
+#
+# User-settable variables:
+#
+# PGSQL_VERSION_DEFAULT
+#
+# Package-settable variables:
+#
+# PGSQL_VERSIONS_ACCEPTED
+#
+# Variables set by this file:
+#
+# PG_LIB_EXT
+# PGSQL_TYPE
+# PGPKGSRCDIR
+#
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
