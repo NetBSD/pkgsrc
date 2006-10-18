@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.19 2006/09/13 23:23:39 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.20 2006/10/18 03:06:14 ben Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -132,7 +132,7 @@
 
       <listitem>
 	<para><filename>pgsql.buildlink3.mk</filename> will accept
-	either Postgres 7.3 or 7.4, whichever is found installed. See
+	either Postgres 7.4, 8.0, or 8.1, whichever is found installed. See
 	the file for more information.</para>
       </listitem>
 
