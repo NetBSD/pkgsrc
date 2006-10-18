@@ -132,6 +132,12 @@ imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 inet6			Enable support for IPv6.
 iodbc			Enable ODBC support via iODBC.
+ipa-memfunc-debug	Enable ipa_memfunc debugging.
+ipa-without-autorules	Disable dynamic rules support.
+ipa-without-limits	Disable limits support.
+ipa-without-rules	Disable static rules support.
+ipa-without-sublimits	Disable sublimits support.
+ipa-without-thresholds	Disable thresholds support.
 ipfilter	
 iptables	
 irssi-perl		Enable Perl support in irssi.
