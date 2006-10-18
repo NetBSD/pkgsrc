@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.4 2006/10/15 01:56:06 minskim Exp $
+# $NetBSD: extract,v 1.5 2006/10/18 16:17:42 ben Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,6 +57,10 @@
 #	this ability.
 #
 # OPTIONS
+#	-c format	Force interpretation of the distfile's compression
+#			format to be the specified format.  Valid formats
+#			are: gzip, bzip, compress, and none.
+#
 #	-d dir		Extract the files into the specified dir instead
 #			of the current working directory.  If the directory
 #			doesn't exist, then it is created along with any
@@ -118,7 +122,7 @@ set -u		# treat undefined variables as errors
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-d dir] [-f format] [-t tarprog] [-X excludefile | -x] distfile [file ...]"
+	${ECHO} 1>&2 "usage: $self [-c format] [-d dir] [-f format] [-t tarprog] [-X excludefile | -x] distfile [file ...]"
 }
 
 exclude=no
@@ -131,6 +135,7 @@ format=
 # Process optional arguments
 while ${TEST} $# -gt 0; do
 	case "$1" in
+	-c)	cformat="$2"; shift 2 ;;
 	-d)	extract_dir="$2"; shift 2 ;;
 	-f)	format="$2"; shift 2 ;;
 	-t)	extract_using="$2"; shift 2 ;;
@@ -169,12 +174,23 @@ case "$distfile" in
 	;;
 esac
 
-# Set the command to decompress the file and write the contents to stdout.
+# Derive the compression format of the archive based on the file extension.
 case "$distfile" in
-*.gz|*.tgz|*.z)		decompress_cat="${GZCAT}" ;;
-*.bz2|*.tbz|*.tbz2|*.bz)	decompress_cat="${BZCAT}" ;;
-*.Z)			decompress_cat="${GZCAT}" ;;
-*)			decompress_cat="${CAT}" ;;
+*.gz|*.tgz|*.z)			_cformat=gzip ;;
+*.bz2|*.tbz|*.tbz2|*.bz)	_cformat=bzip ;;
+*.Z)				_cformat=compress ;;
+*)				_cformat=none ;;
+esac
+${TEST} -n "$cformat" || cformat="$_cformat"
+
+# Derive the command to decompress the file and write the contents to
+# stdout, based on the file extension.
+#
+case "$cformat" in
+gzip|compress)	decompress_cat="${GZCAT}" ;;
+bzip)		decompress_cat="${BZCAT}" ;;
+none)		decompress_cat="${CAT}" ;;
+*)		decompress_cat="${CAT}" ;;
 esac
 
 # Derive the format of the archive based on the file extension.
