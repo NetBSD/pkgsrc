@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.5 2006/10/18 16:17:42 ben Exp $
+# $NetBSD: extract,v 1.6 2006/10/18 19:18:12 ben Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,6 +131,7 @@ exclude_flag=
 extract_dir=.
 extract_using=tar
 format=
+cformat=
 
 # Process optional arguments
 while ${TEST} $# -gt 0; do
