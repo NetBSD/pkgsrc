@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.140 2006/10/01 14:38:07 rillig Exp $
+# $NetBSD: makevars.map,v 1.141 2006/10/18 20:54:22 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -202,6 +202,7 @@ CFLAGS*			List of CFlag [$package_list]
 # ^^ may also be changed by the user
 CHECK_BUILTIN		YesNo [builtin.mk:d,m:s]
 CHECK_FILES_SKIP	List of Pathmask [m:a,c:a]
+CHECK_FILES_SUPPORTED	YesNo [$package]
 CHECK_INTERPRETER_SKIP	List of Pathmask [m:a,c:a]
 CHECK_SHLIBS		YesNo [m:s]
 CHECK_SHLIBS_SUPPORTED	YesNo [m:s]
@@ -472,6 +473,9 @@ PERL5_PACKLIST		List of Perl5Packlist [m:s,o:sa]
 PERL5_PACKLIST_DIR	Pathname []
 PGSQL_VERSIONS_ACCEPTED	List of { 73 74 80 }
 PGSQL_VERSION_DEFAULT	Version [$user]
+PG_LIB_EXT		{ dylib so } [$system]
+PGSQL_TYPE		{ postgresql81-client postgresql80-client postgresql74-lib } [$system]
+PGPKGSRCDIR		Pathname [$system]
 PHASE_MSG		ShellCommand [$system]
 PKGBASE			Identifier [$system]
 PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
