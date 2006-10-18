@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/10/18 20:23:15 reed Exp $
 
-DISTNAME=		wdm-1.25
-PKGREVISION=		9
+DISTNAME=		wdm-1.28
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 
@@ -21,6 +20,7 @@ CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs
 CONFIGURE_ARGS+=	--with-gfx-libs=${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
 CONFIGURE_ARGS+=	--with-runlockdir=${VARBASE}/run
+CONFIGURE_ARGS+=	--with-fakehome=${VARBASE}/run/wdm
 CONFIGURE_ENV+=		SYSTEM_SHELL=${SH:Q}
 
 RCD_SCRIPTS=		wdm
