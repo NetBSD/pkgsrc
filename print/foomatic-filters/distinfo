@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/12/17 18:35:10 jlam Exp $
+$NetBSD: distinfo,v 1.2.8.1 2006/10/18 19:45:50 salo Exp $
 
 SHA1 (foomatic-filters-3.0.2.tar.gz) = 6d949949f432212632c704904272bc32f287b577
 RMD160 (foomatic-filters-3.0.2.tar.gz) = 612529ea462f7f1500f30ffed4aec105b410936c
 Size (foomatic-filters-3.0.2.tar.gz) = 125875 bytes
-SHA1 (patch-aa) = eb58f6cf9f14b63a47bcecfd43dd31db07336841
+SHA1 (patch-aa) = dc4a7a8287d441b7ad8fc952742eb9d645054c1f
