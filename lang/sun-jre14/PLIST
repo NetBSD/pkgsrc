@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/03/07 03:22:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/10/18 05:07:07 obache Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -308,7 +308,9 @@ java/sun-1.4/lib/zi/America/Hermosillo
 java/sun-1.4/lib/zi/America/Indiana/Indianapolis
 java/sun-1.4/lib/zi/America/Indiana/Knox
 java/sun-1.4/lib/zi/America/Indiana/Marengo
+java/sun-1.4/lib/zi/America/Indiana/Petersburg
 java/sun-1.4/lib/zi/America/Indiana/Vevay
+java/sun-1.4/lib/zi/America/Indiana/Vincennes
 java/sun-1.4/lib/zi/America/Inuvik
 java/sun-1.4/lib/zi/America/Iqaluit
 java/sun-1.4/lib/zi/America/Jamaica
@@ -327,6 +329,7 @@ java/sun-1.4/lib/zi/America/Menominee
 java/sun-1.4/lib/zi/America/Merida
 java/sun-1.4/lib/zi/America/Mexico_City
 java/sun-1.4/lib/zi/America/Miquelon
+java/sun-1.4/lib/zi/America/Moncton
 java/sun-1.4/lib/zi/America/Monterrey
 java/sun-1.4/lib/zi/America/Montevideo
 java/sun-1.4/lib/zi/America/Montreal
@@ -480,7 +483,10 @@ java/sun-1.4/lib/zi/Australia/Melbourne
 java/sun-1.4/lib/zi/Australia/Perth
 java/sun-1.4/lib/zi/Australia/Sydney
 java/sun-1.4/lib/zi/CET
+java/sun-1.4/lib/zi/CST6CDT
 java/sun-1.4/lib/zi/EET
+java/sun-1.4/lib/zi/EST
+java/sun-1.4/lib/zi/EST5EDT
 java/sun-1.4/lib/zi/Etc/GMT
 java/sun-1.4/lib/zi/Etc/GMT+1
 java/sun-1.4/lib/zi/Etc/GMT+10
@@ -553,6 +559,7 @@ java/sun-1.4/lib/zi/Europe/Warsaw
 java/sun-1.4/lib/zi/Europe/Zaporozhye
 java/sun-1.4/lib/zi/Europe/Zurich
 java/sun-1.4/lib/zi/GMT
+java/sun-1.4/lib/zi/HST
 java/sun-1.4/lib/zi/Indian/Antananarivo
 java/sun-1.4/lib/zi/Indian/Chagos
 java/sun-1.4/lib/zi/Indian/Christmas
@@ -565,6 +572,8 @@ java/sun-1.4/lib/zi/Indian/Mauritius
 java/sun-1.4/lib/zi/Indian/Mayotte
 java/sun-1.4/lib/zi/Indian/Reunion
 java/sun-1.4/lib/zi/MET
+java/sun-1.4/lib/zi/MST
+java/sun-1.4/lib/zi/MST7MDT
 java/sun-1.4/lib/zi/Pacific/Apia
 java/sun-1.4/lib/zi/Pacific/Auckland
 java/sun-1.4/lib/zi/Pacific/Chatham
@@ -603,6 +612,7 @@ java/sun-1.4/lib/zi/Pacific/Tongatapu
 java/sun-1.4/lib/zi/Pacific/Truk
 java/sun-1.4/lib/zi/Pacific/Wake
 java/sun-1.4/lib/zi/Pacific/Wallis
+java/sun-1.4/lib/zi/PST8PDT
 java/sun-1.4/lib/zi/WET
 java/sun-1.4/lib/zi/ZoneInfoMappings
 java/sun-1.4/man/ja
