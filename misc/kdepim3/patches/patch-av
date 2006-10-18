@@ -1,0 +1,13 @@
+$NetBSD: patch-av,v 1.1 2006/10/18 19:43:00 markd Exp $
+
+--- karm/test/refresh_on_change.sh.orig	2006-10-19 08:34:41.000000000 +1300
++++ karm/test/refresh_on_change.sh
+@@ -48,7 +48,7 @@ RVAL=`dcop $DCOPID KarmDCOPIface taskIdF
+ tear_down
+ 
+ # check that todo was found
+-if [ "$RVAL" == "$TODO_UID" ]; then 
++if [ "$RVAL" = "$TODO_UID" ]; then 
+   echo "PASS $0"
+   exit 0;
+ else 
