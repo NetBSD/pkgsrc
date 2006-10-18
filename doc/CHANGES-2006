@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1547 2006/10/18 01:17:28 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1548 2006/10/18 05:09:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4834,3 +4834,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated news/nntpcache to 3.0.2 [schwarz 2006-10-17]
 	Updated devel/darcs to 1.0.8 [agc 2006-10-17]
 	Updated multimedia/dvdbackup to 0.1.1nb4 [wiz 2006-10-18]
+	Updated lang/sun-jre14 to 2.12 [obache 2006-10-18]
+	Updated lang/sun-jdk14 to 2.12 [obache 2006-10-18]
