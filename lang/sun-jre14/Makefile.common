@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2006/10/09 07:24:06 joerg Exp $
+# $NetBSD: Makefile.common,v 1.33 2006/10/18 12:53:54 obache Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -40,12 +40,12 @@ DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
-_FETCH_MESSAGE= 							\
+FETCH_MESSAGE= 								\
 	"The file ${DISTNAME}${EXTRACT_SUFX} containing:"		\
 	"    ${COMMENT}"						\
 	"must be fetched into:" 					\
 	"    {DISTDIR}"							\
-	"from:"; 							\
+	"from:" 							\
 	"    ${DOWNLOAD}" 						\
 	"    or ${ARCHIVE}" 						\
 	""								\
