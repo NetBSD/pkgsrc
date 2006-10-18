@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/05/11 13:58:02 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2006/10/18 13:11:58 rillig Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -22,8 +22,8 @@ GNU_CONFIGURE=		YES
 SUBST_CLASSES+=		nodos
 SUBST_STAGE.nodos=	pre-patch
 SUBST_FILES.nodos=	../language.h
-SUBST_FILES.nodos+=	dsp1.h dsp3emu.cpp dsp4emu.cpp
-SUBST_SED.nodos=	-e 's|||g'
+SUBST_FILES.nodos+=	../readme.txt dsp1.h dsp3emu.cpp dsp4emu.cpp
+SUBST_FILTER_CMD.nodos=	tr -d '\r'
 
 SUBST_CLASSES+=		paircpp
 SUBST_STAGE.paircpp=	pre-patch
@@ -38,8 +38,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/changes.txt ${PREFIX}/share/doc/snes9x
 	${INSTALL_MAN} ${WRKSRC}/hardware.txt ${PREFIX}/share/doc/snes9x
 	${INSTALL_MAN} ${WRKSRC}/problems.txt ${PREFIX}/share/doc/snes9x
-	${TR} -d '\r' <${WRKDIR}/${DISTNAME}/readme.txt >${WRKSRC}/readme.txt
-	${INSTALL_MAN} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.txt ${PREFIX}/share/doc/snes9x
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.unix \
 		${PREFIX}/share/doc/snes9x
 
@@ -55,15 +54,15 @@ PKG_SUPPORTED_OPTIONS=	mmx
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--with-assembler
-.if !empty(PKG_OPTIONS:Mmmx)
+.  if !empty(PKG_OPTIONS:Mmmx)
 CONFIGURE_ARGS+=	--with-mmx
-.endif
-.if ${OBJECT_FMT} == "a.out"
+.  endif
+.  if ${OBJECT_FMT} == "a.out"
 MAKE_ENV+=	FILEFORMAT=aoutb
 MAKE_ENV+=	_ASM_UNDERBARS=1
-.else
+.  else
 MAKE_ENV+=	FILEFORMAT=elf
-.endif
+.  endif
 .endif
 
 .if exists(${X11BASE}/lib/libXxf86dga.a)
@@ -72,9 +71,9 @@ CONFIGURE_ARGS+=	--with-extensions
 
 .if exists(/usr/include/usb.h) || exists(/usr/include/usbhid.h)
 MAKE_ENV+=	USBJOY=1
-.if exists(/usr/include/usbhid.h)
+.  if exists(/usr/include/usbhid.h)
 MAKE_ENV+=	USBHID_H=1
-.endif
+.  endif
 .elif ${OPSYS} == "DragonFly" && exists(/usr/include/libusbhid.h)
 MAKE_ENV+=	USBJOY=1
 MAKE_ENV+=	USBHID_H=1
