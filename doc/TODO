@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5579 2006/10/18 13:36:05 obache Exp $
+$NetBSD: TODO,v 1.5580 2006/10/18 16:40:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -980,7 +980,6 @@ Suggested package updates
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
-	o postgresql-8.1.4
 	o postgresql_autodoc-1.25
 	o postgrey-1.27
 	o powermanga-0.80
