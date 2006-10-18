@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1557 2006/10/18 20:40:22 ben Exp $
+>$NetBSD: CHANGES-2006,v 1.1558 2006/10/18 22:39:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4882,3 +4882,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/tcl-postgresql74 to 7.4.14 [adam 2006-10-18]
 	Updated emulators/wine to 0.9.23 [adam 2006-10-18]
 	Removed www/joomla [ben 2006-10-18]
+	Updated net/net-snmp to 5.3.1nb2 [seb 2006-10-18]
