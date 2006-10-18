@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2006/03/18 15:56:00 ben Exp $
+$NetBSD: patch-aq,v 1.2 2006/10/18 13:11:59 rillig Exp $
 
---- configure.orig	2004-12-30 14:15:48.000000000 -0800
-+++ configure
+--- configure.orig	2004-12-30 23:15:48.000000000 +0100
++++ configure	2006-10-18 13:51:14.687896164 +0200
 @@ -23,7 +23,9 @@ ac_help="$ac_help
  ac_help="$ac_help
    --with(out)-aido        Use a shared memory area for output (default: without)"
@@ -172,22 +172,3 @@ $NetBSD: patch-aq,v 1.1 2006/03/18 15:56:00 ben Exp $
  /* */
  #else
  #error No sound for this platform
-@@ -4938,6 +5022,18 @@ for ac_option
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)

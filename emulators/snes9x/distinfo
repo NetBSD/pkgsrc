@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2006/07/05 21:21:36 wiz Exp $
+$NetBSD: distinfo,v 1.16 2006/10/18 13:11:58 rillig Exp $
 
 SHA1 (snes9x-1.43-src.tar.gz) = c6883c451aeb442030862ec19a8dca25ee02d82c
 RMD160 (snes9x-1.43-src.tar.gz) = d2003f7afb208109405b41f4eec586b93518f9b2
@@ -9,7 +9,7 @@ SHA1 (patch-ac) = c1e35daa7e53536d05c1633b78c00d511ae7feb5
 SHA1 (patch-ad) = c5febcdd6b5bf0f3b4b5d8b0bc19c4716434a23e
 SHA1 (patch-ae) = c4258835925ee3a6e3606ad895ff697f379cb22f
 SHA1 (patch-af) = 19d86d23e3af2c0cef09b8eeff1303d6f100c2f8
-SHA1 (patch-ag) = b31e3840ff1245104d1bb093613eb793f4fb7a5a
+SHA1 (patch-ag) = 2d934957496d230ce2ec7cf88820254c2ccec36f
 SHA1 (patch-ah) = eb5ff0fed972644f9c8599ec5eb6a3cd3ce160cb
 SHA1 (patch-ai) = 06bd00790d1a84ee31114de4205bba22b48cd547
 SHA1 (patch-aj) = f5cdf8e917f787d7e9fc657ed7197a2c28460375
@@ -19,6 +19,8 @@ SHA1 (patch-am) = 31d0ccf2e6124126929d9064ef2212d2a8bb963e
 SHA1 (patch-an) = 3ae10526aa66ef235c223e891c67b4aed6fc48df
 SHA1 (patch-ao) = b5b721563aee09909b7d6143bd699ec86ccaed3b
 SHA1 (patch-ap) = 1c1b7f1b45d75688870a94dadadb6da055e99cd0
-SHA1 (patch-aq) = 6c591ec195bd06c2d0dfd6a947d0e57657fb306e
+SHA1 (patch-aq) = 31202122ec35997571c8df51871ff3c4034c701b
 SHA1 (patch-ar) = 72a158e69b885b9ecf47245b9b83f8b50d48f96d
 SHA1 (patch-as) = 64a9fb042f40a4a699bd4128d538fae1cb9cb810
+SHA1 (patch-ba) = 73dccd2fdab90760644af5bf7885c8d87d253a47
+SHA1 (patch-bc) = d43cdb435692b925347c192acb7c4ff5d8c1454d
