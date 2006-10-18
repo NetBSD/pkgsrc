@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2006/10/18 11:45:22 markd Exp $
+bin/ipa
+bin/ipactl
+bin/ipastat
+include/ipa_mod.h
+man/man3/ipa_mod.3
+man/man5/ipa.conf.5
+man/man5/ipastat.conf.5
+man/man8/ipa.8
+man/man8/ipactl.8
+man/man8/ipastat.8
+share/examples/rc.d/ipa
