@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.3 2006/10/18 19:43:00 markd Exp $
+
+--- karm/test/booktime-baddate.sh.orig	2006-10-19 08:33:55.000000000 +1300
++++ karm/test/booktime-baddate.sh
+@@ -13,7 +13,7 @@ RVAL=`dcop $DCOPID KarmDCOPIface bookTim
+ tear_down
+ 
+ EXPECTED=5
+-if [ "$RVAL" == "$EXPECTED" ]; then 
++if [ "$RVAL" = "$EXPECTED" ]; then 
+   echo "PASS $0"
+   exit 0;
+ else 

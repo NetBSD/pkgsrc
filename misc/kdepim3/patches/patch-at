@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2006/10/18 19:43:00 markd Exp $
+
+--- karm/test/booktime-works.sh.orig	2006-10-19 08:34:24.000000000 +1300
++++ karm/test/booktime-works.sh
+@@ -21,7 +21,7 @@ RVAL=`dcop $DCOPID KarmDCOPIface totalMi
+ SKIP_TESTFILE_DELETE=true
+ tear_down
+ 
+-if [ "x$RVAL" == "x$DURATION" ]; then 
++if [ "x$RVAL" = "x$DURATION" ]; then 
+   echo "PASS $0"
+   exit 0;
+ else 

@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2006/10/18 19:43:00 markd Exp $
+
+--- karm/test/version.sh.orig	2006-10-19 08:34:51.000000000 +1300
++++ karm/test/version.sh
+@@ -15,7 +15,7 @@ RVAL=`dcop $DCOPID KarmDCOPIface version
+ 
+ tear_down
+ 
+-if [ "$RVAL" == "$VERSION" ]; then 
++if [ "$RVAL" = "$VERSION" ]; then 
+   echo "PASS $0"
+   exit 0;
+ else 
