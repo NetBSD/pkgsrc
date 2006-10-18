@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5575 2006/10/17 14:22:53 obache Exp $
+$NetBSD: TODO,v 1.5576 2006/10/18 05:09:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -1157,8 +1157,6 @@ Suggested package updates
 	o streamripper-1.61.27
 	o stunnel-4.17
 	o subtitleripper-0.3.4
-	o sun-jdk14-2.12 [pkg/34035|34604]
-	o sun-jre14-2.12 [pkg/34035|34604]
 	o suse100_base-10.1
 	o svk-1.07
 	o sweep-0.9.1
