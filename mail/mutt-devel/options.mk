@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.20 2006/10/18 19:46:35 tonio Exp $
+# $NetBSD: options.mk,v 1.21 2006/10/18 20:06:13 tonio Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
-PKG_SUPPORTED_OPTIONS=	ssl sasl mutt-hcache idn mutt-compressed-mbox
+PKG_SUPPORTED_OPTIONS=	ssl sasl mutt-hcache idn mutt-compressed-mbox debug
 PKG_SUGGESTED_OPTIONS=	ssl curses
 
 .include "../../mk/bsd.options.mk"
@@ -100,4 +100,11 @@ CONFIGURE_ARGS+=	--enable-compressed
 CONFIGURE_ARGS+=  --with-idn=${BUILDLINK_PREFIX.libidn}
 .else
 CONFIGURE_ARGS+=  --disable-idn
+.endif
+
+###
+### Enable debugging support
+###
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
 .endif
