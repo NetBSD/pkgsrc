@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2006/10/17 06:59:24 markd Exp $
+# $NetBSD: Makefile,v 1.44 2006/10/18 11:14:26 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation
@@ -17,10 +18,17 @@ INSTALL_TARGET=		install-data-local
 
 UNLIMIT_RESOURCES+=	datasize
 SKIP_PORTABILITY_CHECK=	yes
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
 post-install:
+	${RM} -f ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
+	cd ${WRKSRC}/apidocs;						\
+	${FIND} . -type f -print | ${GREP} -v "classmap.inc" |		\
+	${GREP} -v "^./.*/.*/.*\.tag" | ${SORT} |			\
+	${SED} 's:^.:share/doc/kde/HTML/en/kdelibs-apidocs:' >> ${PLIST_SRC}; \
+	DOCDIRS=`${FIND} . -name classmap.inc -print | ${SED} 's:/classmap.inc::'`; \
 	cd ${WRKSRC};							\
-	DOCDIRS="arts dcop dnssd interfaces kabc kate kdecore kdefx kdeprint kdeui khtml kio kjs kmdi knewstuff kparts kresources kutils kwallet libkmid"; \
 	for d in $${DOCDIRS}; do					\
 		(cd $${d}; ${GMAKE} install-apidox);			\
 	done
