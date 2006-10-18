@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1554 2006/10/18 18:54:03 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1555 2006/10/18 19:28:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4871,3 +4871,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/postgresql80-pltcl to 8.0.9 [adam 2006-10-18]
 	Updated databases/postgresql80-server to 8.0.9 [adam 2006-10-18]
 	Updated databases/slony1 to 1.2.0 [adam 2006-10-18]
+	Updated databases/postgresql74 to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-client to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-contrib to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-docs to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-lib to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-plperl to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-plpython to 7.4.14 [adam 2006-10-18]
+	Updated databases/postgresql74-server to 7.4.14 [adam 2006-10-18]
+	Updated databases/tcl-postgresql74 to 7.4.14 [adam 2006-10-18]
