@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2006/10/18 20:39:14 ben Exp $
+# $NetBSD: Makefile,v 1.478 2006/10/19 20:22:29 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -105,7 +105,6 @@ SUBDIR+=	firefox-bin-nightly
 SUBDIR+=	firefox-bin-realplayer
 SUBDIR+=	firefox-gtk1
 SUBDIR+=	galeon
-SUBDIR+=	galeon12
 SUBDIR+=	galway
 SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	geeklog
