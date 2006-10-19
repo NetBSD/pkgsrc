@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2006/10/07 08:18:31 taca Exp $
+# $NetBSD: Makefile,v 1.75 2006/10/19 06:40:54 martti Exp $
 
-DISTNAME=	mrtg-2.14.5
+DISTNAME=	mrtg-2.14.7
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/old/ \
@@ -22,7 +22,7 @@ MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://sunsite.icm.edu.pl/pub/unix/net/mrtg/ \
 		ftp://net2b.co.pt/pub/mrtg/
 
-MAINTAINER=	bouyer@NetBSD.org
+MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/mrtg/
 COMMENT=	The Multi-Router Traffic Grapher
 
@@ -54,21 +54,19 @@ SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg		\
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	Fixing default configuration files.
 
-INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${EGDIR}
+INSTALLATION_DIRS+=	share/mrtg share/doc/mrtg
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 
 post-extract:
-	${CP} ${FILESDIR}/mrtg.conf.example ${WRKDIR}
-	${CP} ${FILESDIR}/netstat2mrtg ${WRKDIR}
-	${CP} ${FILESDIR}/sys2mrtg ${WRKDIR}
-	${CP} ${FILESDIR}/envstat2mrtg ${WRKDIR}
+	cp ${FILESDIR}/mrtg.conf.example ${WRKDIR}
+	cp ${FILESDIR}/netstat2mrtg ${WRKDIR}
+	cp ${FILESDIR}/sys2mrtg ${WRKDIR}
+	cp ${FILESDIR}/envstat2mrtg ${WRKDIR}
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mrtg
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mrtg
 	for FILE in ${WRKSRC}/doc/*.??*; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/mrtg; \
 	done
