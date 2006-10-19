@@ -1,0 +1,3 @@
+hddtemp is a small utility that gives you the temperature of your hard
+drive by reading S.M.A.R.T. information (for drives that support this
+feature). Note: only recent hard drives have a temperature sensor.
