@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1567 2006/10/19 14:01:46 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1568 2006/10/19 14:04:11 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4894,8 +4894,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/p5-Business-ISBN-Data to 1.11 [obache 2006-10-19]
 	Updated misc/p5-Business-ISBN to 1.82 [obache 2006-10-19]
 	Updated parallel/sge to 6.0.8 [markd 2006-10-19]
-        Updated databases/qdbm to 1.8.72 [obache 2006-10-19]
-        Updated databases/ruby-qdbm to 1.0.0.1.8.72 [obache 2006-10-19]
-        Updated databases/p5-qdbm to 1.0.0.1.8.72 [obache 2006-10-19]
-        Updated databases/qdbm-cgi to 0.0.1.1.8.72 [obache 2006-10-19]
-        Updated databases/qdbm-plus to 1.0.0.1.8.72 [obache 2006-10-19]
+	Updated databases/qdbm to 1.8.72 [obache 2006-10-19]
+	Updated databases/ruby-qdbm to 1.0.0.1.8.72 [obache 2006-10-19]
+	Updated databases/p5-qdbm to 1.0.0.1.8.72 [obache 2006-10-19]
+	Updated databases/qdbm-cgi to 0.0.1.1.8.72 [obache 2006-10-19]
+	Updated databases/qdbm-plus to 1.0.0.1.8.72 [obache 2006-10-19]
+	Updated comms/asterisk to 1.2.13 [mjl 2006-10-19]
