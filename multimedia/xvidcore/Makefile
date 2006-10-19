@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/10/11 00:04:39 grant Exp $
+# $NetBSD: Makefile,v 1.24 2006/10/19 00:15:15 wiz Exp $
 
 DISTNAME=	xvidcore-1.1.0
 PKGREVISION=	3
@@ -15,12 +15,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 # the resulting objects from the asm don't link correctly on Solaris.
-.if ${OPSYS} == "SunOS"
+# nor on amd64 -- they are not PIC, but the ABI demands it
+# big patch available from Gentoo, if someone is interested:
+# http://bugs.gentoo.org/show_bug.cgi?id=90287
+.if ${OPSYS} == "SunOS" || ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--disable-assembly
 .elif ${MACHINE_ARCH} == "i386"
 BUILD_DEPENDS+=		nasm>=0.98.34:../../devel/nasm
-.elif ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
+#.elif ${MACHINE_ARCH} == "x86_64"
+#BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 .endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
