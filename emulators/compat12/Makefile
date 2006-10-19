@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/10/19 19:37:38 wiz Exp $
 #
 
 DISTNAME=		compat12-${MACHINE_ARCH}
@@ -12,6 +12,7 @@ COMMENT=		Shared libraries for NetBSD 1.2 (and earlier) compatibility
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-ns32k \
 			NetBSD-*-sparc
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 NO_BUILD=		yes
 NO_MTREE=		yes
