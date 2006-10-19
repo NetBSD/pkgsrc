@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2006/09/16 15:29:35 hira Exp $
+$NetBSD: distinfo,v 1.21 2006/10/19 14:02:07 mjl Exp $
 
-SHA1 (asterisk-1.2.12.1.tar.gz) = 6352ca330b8fa0ae9eb0816272070a1bce58c93b
-RMD160 (asterisk-1.2.12.1.tar.gz) = 9950eea63e03ffd5845f6a34f46680eec5a0a53b
-Size (asterisk-1.2.12.1.tar.gz) = 10576676 bytes
+SHA1 (asterisk-1.2.13.tar.gz) = d2ec77e08f512a3fa11fd8639a7fe629a46ed242
+RMD160 (asterisk-1.2.13.tar.gz) = 7cf9e00a0697b16891b463345c64a615c30015a3
+Size (asterisk-1.2.13.tar.gz) = 10584113 bytes
 SHA1 (patch-aa) = e457617cb3fbec6a67971258af145cc25f0ca03e
 SHA1 (patch-ab) = 1bdae0ff206b63fe63373a307ecd23859c10cb79
 SHA1 (patch-ac) = 4f783699c7d701030788646f8b961fa9245dc127
