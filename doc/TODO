@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5584 2006/10/19 07:27:45 ghen Exp $
+$NetBSD: TODO,v 1.5585 2006/10/19 07:32:09 martti Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ Suggested package updates
 	o cinepaint-0.21 [only RC1 available at the moment]
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o clamav-0.88.5
 	o classpath-0.92
 	o classpath-gui-0.92
 	o clisp-2.41
