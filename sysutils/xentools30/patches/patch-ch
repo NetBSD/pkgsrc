@@ -1,8 +1,8 @@
-$NetBSD: patch-ch,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-ch,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- xenstat/libxenstat/src/xenstat.c.orig 2006-04-13 19:48:39.000000000 +0200
-+++ xenstat/libxenstat/src/xenstat.c	2006-07-01 23:20:36.000000000 +0200
-@@ -517,6 +517,8 @@
+--- xenstat/libxenstat/src/xenstat.c.orig	2006-10-04 04:28:30.000000000 +0200
++++ xenstat/libxenstat/src/xenstat.c	2006-10-18 15:43:34.000000000 +0200
+@@ -596,6 +596,8 @@
  /* Collect information about networks */
  static int xenstat_collect_networks(xenstat_node * node)
  {
@@ -11,11 +11,42 @@ $NetBSD: patch-ch,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
  	/* Open and validate /proc/net/dev if we haven't already */
  	if (node->handle->procnetdev == NULL) {
  		char header[sizeof(PROCNETDEV_HEADER)];
-@@ -592,6 +594,7 @@
- 		domain->networks[domain->num_networks - 1] = net;
+@@ -675,6 +677,9 @@
+ 	}
+ 
+ 	return 1;
++#else
++	return 1;
++#endif
+ }
+ 
+ /* Free network information */
+@@ -786,6 +791,7 @@
+ {
+ }
+ 
++#ifndef __NetBSD__
+ /*
+  * VBD functions
+  */
+@@ -804,10 +810,12 @@
+ 	ret[num_read] = '\0';
+ 	return num_read;
+ }
++#endif
+ 
+ /* Collect information about VBDs */
+ static int xenstat_collect_vbds(xenstat_node * node)
+ {
++#ifndef __NetBSD__
+ 	struct dirent *dp;
+ 
+ 	if (node->handle->sysfsvbd == NULL) {
+@@ -877,6 +885,7 @@
+ 		domain->vbds[domain->num_vbds - 1] = vbd;
  	}
  
 +#endif
- 	return 1;
+ 	return 1;	
  }
  
