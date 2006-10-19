@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5585 2006/10/19 07:32:09 martti Exp $
+$NetBSD: TODO,v 1.5586 2006/10/19 11:29:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -771,8 +771,6 @@ Suggested package updates
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-BSD-Resource-1.28
-	o p5-Business-ISBN-1.82 [pkg/34388]
-	o p5-Business-ISBN-Data-1.11 [pkg/34387]
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
 	o p5-Cache-Simple-TimedExpiry-0.26 [pkg/34326]
