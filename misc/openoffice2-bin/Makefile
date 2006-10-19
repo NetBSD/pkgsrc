@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/16 10:34:51 ghen Exp $
+# $NetBSD: Makefile,v 1.23 2006/10/19 19:53:37 wiz Exp $
 
 PKGNAME=		openoffice-bin-${OO_RELEASE}
 CATEGORIES=		misc
@@ -84,9 +84,7 @@ WRKSRC=		${WRKDIR}/OOD680_m5_native_packed-1_en-US.9073/packages
 .  include "Makefile.${OPSYS}.${ARCH}"
 .endif
 
-.if !defined(DISTNAME)
-DISTNAME=	# Dummy to prevent error from missing DISTNAME
-.endif
+DISTNAME?=	OOo_${OO_RELEASE}_LinuxIntel_install
 
 .include "options.mk"
 
