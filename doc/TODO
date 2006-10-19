@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5586 2006/10/19 11:29:41 obache Exp $
+$NetBSD: TODO,v 1.5587 2006/10/19 20:26:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -281,7 +281,7 @@ Suggested package updates
 	o abcm2ps-5.1.1
 	o abcmidi-20061015
 	o acpi-iasl-20040715
-	o adns-1.3
+	o adns-1.4
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
@@ -380,6 +380,7 @@ Suggested package updates
 	o clisp-2.41
 	o cocoon-2.1.9
 	o columba-1.0RC1
+	o comix-3.6.1
 	o compface-1.5.2
 	o control-center-2.16.1
 	o coreutils-6.3
@@ -409,6 +410,7 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.34
 	o dnstracer-1.8
+	o doxygen-1.5.0
 	o drscheme-352
 	o dvd+rw-tools-7.0
 	o dvdstyler-1.5beta5
@@ -490,6 +492,7 @@ Suggested package updates
 	o genius-0.7.6.1
 	o ggiterm-0.7.1
 	o ghc-6.6
+	o ghostscript-gnu-8.55
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
@@ -718,6 +721,7 @@ Suggested package updates
 	o multitail-4.2.0
 	o muse-0.9.1
 	o musicpd-0.12.1
+	o naim-0.11.8.2.1
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nap-1.5.3
 	o nautilus-cd-burner-2.16.0
@@ -1254,7 +1258,7 @@ Suggested package updates
 	o xrn-9.02
 	o xscreensaver-5.01
 	o xskat-4.0
-	o xterm-221
+	o xterm-222
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
