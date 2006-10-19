@@ -1,0 +1,29 @@
+$NetBSD: patch-ja,v 1.1 2006/10/19 12:58:12 drochner Exp $
+
+--- src/kernel/qpixmap_x11.cpp.orig	2006-10-19 13:06:42.000000000 +0200
++++ src/kernel/qpixmap_x11.cpp
+@@ -1757,6 +1757,12 @@ QPixmap QPixmap::xForm( const QWMatrix &
+ 	dbpl = ((w*bpp+31)/32)*4;
+     dbytes = dbpl*h;
+ 
++    if (dbytes != (long long) dbpl*h) { // Integer overflow detection
++	QPixmap pm;
++	pm.data->bitmap = data->bitmap;
++	return pm;
++    }
++
+ #if defined(QT_MITSHM)
+     if ( use_mitshm ) {
+ 	dptr = (uchar *)xshmimg->data;
+@@ -1866,6 +1872,11 @@ QPixmap QPixmap::xForm( const QWMatrix &
+ 		sptr = (uchar *) axi->data;
+ 		bpp  = axi->bits_per_pixel;
+ 		dbytes = dbpl * h;
++		if (dbytes != (long long) dbpl*h) { // Integer overflow detection
++		    QPixmap pm;
++		    pm.data->bitmap = data->bitmap;
++		    return pm;
++		}
+ 		dptr = (uchar *) malloc(dbytes);
+ 		Q_CHECK_PTR( dptr );
+ 		memset(dptr, 0, dbytes);
