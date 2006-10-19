@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/27 18:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/19 19:52:51 wiz Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		2
@@ -61,6 +61,8 @@ DISTNAME=	OOo_${OO_VER}_Solarisx86_install
 WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_x86_install
 .  endif
 .endif
+
+DISTNAME?=	OOo_${OO_VER}_LinuxIntel_install
 
 INSTALLATION_DIRS=	bin
 
