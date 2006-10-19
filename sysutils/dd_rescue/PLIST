@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/08 08:42:04 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/19 07:26:06 ghen Exp $
 bin/dd_rescue
+share/doc/dd_rescue/README
+@dirrm share/doc/dd_rescue

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/08 08:42:04 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/19 07:26:06 ghen Exp $
 
-DISTNAME=	dd_rescue-1.11
+DISTNAME=	dd_rescue-1.12
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
@@ -14,5 +14,7 @@ BUILD_TARGET=	dd_rescue
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/dd_rescue ${PREFIX:Q}/bin/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC:Q}/README.dd_rescue ${PREFIX}/share/doc/${PKGBASE}/README
 
 .include "../../mk/bsd.pkg.mk"

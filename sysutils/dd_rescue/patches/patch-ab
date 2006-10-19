@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.1 2006/05/09 18:31:49 joerg Exp $
-
---- dd_rescue.c.orig	2006-05-09 18:21:21.000000000 +0000
-+++ dd_rescue.c
+--- dd_rescue.c.orig	2006-07-23 13:47:50.000000000 +0200
++++ dd_rescue.c	2006-09-20 20:27:33.000000000 +0200
 @@ -55,6 +55,10 @@
  #include <sys/time.h>
  #include <sys/stat.h>
@@ -10,6 +8,6 @@ $NetBSD: patch-ab,v 1.1 2006/05/09 18:31:49 joerg Exp $
 +#undef O_DIRECT
 +#endif
 +
- int softbs, hardbs;
+ int softbs, hardbs, syncfreq;
  int maxerr, nrerr, reverse, dotrunc, abwrerr, sparse, nosparse;
  int verbose, quiet, interact, force;
