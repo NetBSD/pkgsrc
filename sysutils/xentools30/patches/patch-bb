@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-bb,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- python/xen/xend/XendRoot.py.orig	2006-01-31 17:09:21.000000000 +0100
-+++ python/xen/xend/XendRoot.py
-@@ -40,16 +40,16 @@ class XendRoot:
+--- python/xen/xend/XendRoot.py.orig	2006-10-16 22:27:14.000000000 +0200
++++ python/xen/xend/XendRoot.py	2006-10-16 22:27:58.000000000 +0200
+@@ -40,16 +40,16 @@
      """Root of the management classes."""
  
      """Default path to the config file."""
@@ -21,4 +21,4 @@ $NetBSD: patch-bb,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
 +    block_script_dir = "@XENDCONFDIR@/scripts"
  
      """Default path to the log file. """
-     logfile_default = "/var/log/xend.log"
+     logfile_default = "/var/log/xen/xend.log"
