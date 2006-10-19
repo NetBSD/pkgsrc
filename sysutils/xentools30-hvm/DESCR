@@ -1,0 +1,4 @@
+The Xen virtual machine monitor allows running several virtual machines
+on a single physical machine.  The xentools30-vmx package contains
+additionnal tools to xentools30 to run unmodified guests using the
+Intel VT or AMD VMX extentions.
