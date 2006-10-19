@@ -1,18 +1,14 @@
-$NetBSD: patch-ax,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-ax,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- misc/cpuperf/Makefile.orig	2006-04-14 02:48:38.000000000 +0900
-+++ misc/cpuperf/Makefile
-@@ -36,5 +36,5 @@ clean:
+--- misc/xend.orig	2006-10-17 15:33:55.000000000 +0200
++++ misc/xend	2006-10-17 15:38:47.000000000 +0200
+@@ -94,8 +94,7 @@
+         os.execvp('xenconsoled', ['xenconsoled'])
  
- cpuperf-xen: cpuperf.c $(HDRS) Makefile
--	$(CC) $(CFLAGS) -I $(XEN_LIBXC) -L$(XEN_LIBXC) -lxenctrl -DXENO -o $@ $<
-+	$(CC) $(CFLAGS) $(LDFLAGS) -I$(XEN_LIBXC) -L$(XEN_LIBXC) -lxenctrl -DXENO -o $@ $<
- 
- cpuperf-perfcntr: cpuperf.c $(HDRS) Makefile
-@@ -42,5 +42,5 @@ cpuperf-perfcntr: cpuperf.c $(HDRS) Make
- 
- install: all
--	$(INSTALL_PROG) $(INSTALL_BIN) $(DESTDIR)/usr/bin
-+	$(BSD_INSTALL_PROGRAM) $(INSTALL_BIN) $(PREFIX)/bin
- 
- 
+ def start_blktapctrl():
+-    if os.fork() == 0:
+-        os.execvp('blktapctrl', ['blktapctrl'])
++    ''
+             
+ def main():
+     try:

@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-al,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- console/Makefile.orig	2006-01-31 17:09:20.000000000 +0100
-+++ console/Makefile
-@@ -23,15 +23,15 @@ clean:
+--- console/Makefile.orig	2006-10-16 21:52:18.000000000 +0200
++++ console/Makefile	2006-10-16 21:53:33.000000000 +0200
+@@ -25,16 +25,16 @@
  	$(RM) client/*.o daemon/*.o
  
  xenconsoled: $(patsubst %.c,%.o,$(wildcard daemon/*.c))
@@ -15,6 +15,7 @@ $NetBSD: patch-al,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
 +	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) -L$(XEN_LIBXC) -L$(XEN_XENSTORE) \
  	      -lxenctrl -lxenstore
  
+ .PHONY: install
  install: $(BIN)
 -	$(INSTALL_DIR) -p $(DESTDIR)/$(DAEMON_INSTALL_DIR)
 -	$(INSTALL_PROG) xenconsoled $(DESTDIR)/$(DAEMON_INSTALL_DIR)

@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-cc,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- console/client/main.c.orig	2006-04-13 19:48:38.000000000 +0200
-+++ console/client/main.c	2006-05-07 23:19:41.000000000 +0200
-@@ -34,7 +34,10 @@
+--- console/client/main.c.orig	2006-10-16 22:56:01.000000000 +0200
++++ console/client/main.c	2006-10-16 22:57:28.000000000 +0200
+@@ -34,7 +34,11 @@
  #include <sys/select.h>
  #include <err.h>
  #include <errno.h>
@@ -10,14 +10,15 @@ $NetBSD: patch-cc,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
  #include <pty.h>
 +#endif
 +#include <string.h>
++
  
- #include "xenctrl.h"
  #include "xs.h"
-@@ -259,6 +262,7 @@
+ 
+@@ -253,6 +257,7 @@
  	free(str_pty);
  	free(path);
  
 +	init_term(spty, &attr);
  	init_term(STDIN_FILENO, &attr);
- 	console_loop(xc_handle, domid, spty);
+ 	console_loop(spty);
  	restore_term(STDIN_FILENO, &attr);
