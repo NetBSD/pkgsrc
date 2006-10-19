@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/10/19 19:37:38 wiz Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}${PKGMINOR}
@@ -15,6 +15,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-mipsel	\
 			NetBSD-*-ns32k NetBSD-*-sparc
 NOT_FOR_PLATFORM=	NetBSD-1.3*-*
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 NO_MTREE=		yes
 NO_BUILD=		yes
