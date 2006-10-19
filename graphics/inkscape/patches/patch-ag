@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2006/10/19 06:19:18 rillig Exp $
+
+--- share/extensions/ps2pdf.sh.orig	2006-09-06 07:43:07.000000000 +0200
++++ share/extensions/ps2pdf.sh	2006-10-19 08:15:03.000000000 +0200
+@@ -2,7 +2,7 @@
+ 
+ params=`grep "^%%DocumentMedia:" "$1" | head -n 1 | awk '{ if (NF==7) { if ($2!="plain") print "-sPAPERSIZE=" $2; else print "-dDEVICEWIDTHPOINTS=" $3 " -dDEVICEHEIGHTPOINTS=" $4; } }'`
+ 
+-if [ "x${params}x" == "xx" ]
++if [ "x${params}x" = "xx" ]
+ then 
+         params=`grep "^%%BoundingBox:" "$1" | head -n 1 | awk '{ if (NF==5) { print "-dDEVICEWIDTHPOINTS=" $4 " -dDEVICEHEIGHTPOINTS=" $5; } }'`
+ fi
