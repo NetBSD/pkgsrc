@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2004/11/18 16:15:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/10/19 23:45:55 rillig Exp $
 bin/povray
-man/man1/povray.1.gz
+man/man1/povray.1
 share/doc/${POVRAY}/AUTHORS
 share/doc/${POVRAY}/ChangeLog
 share/doc/${POVRAY}/NEWS
