@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1570 2006/10/19 20:26:14 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1571 2006/10/19 21:08:30 christos Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4902,3 +4902,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/asterisk to 1.2.13 [mjl 2006-10-19]
 	Updated textproc/hyperestraier to 1.4.6 [obache 2006-10-19]
 	Removed www/galeon12 [wiz 2006-10-19]
+	Added sysutils/hddtemp [christos 2006-10-19]
