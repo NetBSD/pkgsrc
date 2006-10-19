@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5582 2006/10/19 04:45:02 obache Exp $
+$NetBSD: TODO,v 1.5583 2006/10/19 06:41:08 martti Exp $
 
 Suggested new packages
 ======================
@@ -713,7 +713,6 @@ Suggested package updates
 	o mplayer-plugin-firefox-3.31
 	o mpop-0.8.3
 	o mrproject-0.9.1
-	o mrtg-2.14.6
 	o mserv-devel-0.41
 	o msmtp-1.4.7
 	o mtail-1.1.1 [pkg/34512]
