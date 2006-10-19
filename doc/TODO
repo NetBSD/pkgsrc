@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5583 2006/10/19 06:41:08 martti Exp $
+$NetBSD: TODO,v 1.5584 2006/10/19 07:27:45 ghen Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
-	o dd_rescue-1.12 [pkg/34573]
 	o defendguin-0.0.11
 	o dejavu-ttf-2.10
 	o delegate-9.1.1
