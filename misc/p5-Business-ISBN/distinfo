@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 11:02:56 agc Exp $
+$NetBSD: distinfo,v 1.6 2006/10/19 11:26:09 obache Exp $
 
-SHA1 (Business-ISBN-1.78.tar.gz) = 4daf8de8941f7e70cef62a86674ead4a0bfbe58d
-RMD160 (Business-ISBN-1.78.tar.gz) = 72afdd1b186421a4d42417693e122a622ff20fcb
-Size (Business-ISBN-1.78.tar.gz) = 350445 bytes
+SHA1 (Business-ISBN-1.82.tar.gz) = ae11188c4c2322c60f4154132995ec66ff041b43
+RMD160 (Business-ISBN-1.82.tar.gz) = a2f16c3c95cb919aea188820a00e369a4ffb7b40
+Size (Business-ISBN-1.82.tar.gz) = 351465 bytes
