@@ -1,4 +1,0 @@
-#!/bin/sh
-MOZILLA_FIVE_HOME=@MOZILLA_PREFIX@/lib/mozilla
-export MOZILLA_FIVE_HOME
-exec @PREFIX@/bin/galeon-bin "$@"
