@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/12/08 09:15:37 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/10/19 19:47:34 wiz Exp $
 
 # smlnj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86
@@ -26,6 +26,10 @@ BOX=		ppc
 NLFFI=		"@comment "
 .elif ${MACHINE_ARCH} == "sparc"
 BOX=		${MACHINE_ARCH}
+.else
+# for "make fetch", default to i386 instead of trying to download
+# a non-existing file
+BOX=		x86
 .endif
 
 PLIST_SUBST+=	BOX=${BOX:Q} OS=${OS:Q} NLFFI=${NLFFI}
