@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/15 19:51:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/19 14:27:33 drochner Exp $
+bin/oil-bugreport
+include/liboil-0.3/liboil/liboil-stdint.h
 include/liboil-0.3/liboil/liboil.h
 include/liboil-0.3/liboil/liboilclasses.h
 include/liboil-0.3/liboil/liboilcpu.h
@@ -15,37 +17,38 @@ include/liboil-0.3/liboil/liboiltest.h
 include/liboil-0.3/liboil/liboiltypes.h
 lib/liboil-0.3.la
 lib/pkgconfig/liboil-0.3.pc
-share/doc/liboil/ch01.html
-share/doc/liboil/ch02.html
-share/doc/liboil/home.png
-share/doc/liboil/index.html
-share/doc/liboil/index.sgml
-share/doc/liboil/left.png
-share/doc/liboil/liboil-liboilclass-unstable.html
-share/doc/liboil/liboil-liboilcpu.html
-share/doc/liboil/liboil-liboildebug.html
-share/doc/liboil/liboil-liboilfuncs-conv.html
-share/doc/liboil/liboil-liboilfuncs-copy.html
-share/doc/liboil/liboil-liboilfuncs-dct.html
-share/doc/liboil/liboil-liboilfuncs-doc.html
-share/doc/liboil/liboil-liboilfuncs-math.html
-share/doc/liboil/liboil-liboilfuncs-math8x8.html
-share/doc/liboil/liboil-liboilfuncs-pixel.html
-share/doc/liboil/liboil-liboilimpl-unstable.html
-share/doc/liboil/liboil-liboilinit-unstable.html
-share/doc/liboil/liboil-liboilinit.html
-share/doc/liboil/liboil-liboiljunk.html
-share/doc/liboil/liboil-liboilmacros.html
-share/doc/liboil/liboil-liboilparameter.html
-share/doc/liboil/liboil-liboilprofile.html
-share/doc/liboil/liboil-liboilprototype.html
-share/doc/liboil/liboil-liboilrandom.html
-share/doc/liboil/liboil-liboiltest.html
-share/doc/liboil/liboil-liboiltypes.html
-share/doc/liboil/liboil.devhelp
-share/doc/liboil/right.png
-share/doc/liboil/style.css
-share/doc/liboil/up.png
-@dirrm share/doc/liboil
+share/gtk-doc/html/liboil/ch01.html
+share/gtk-doc/html/liboil/ch02.html
+share/gtk-doc/html/liboil/home.png
+share/gtk-doc/html/liboil/index.html
+share/gtk-doc/html/liboil/index.sgml
+share/gtk-doc/html/liboil/left.png
+share/gtk-doc/html/liboil/liboil-liboilclass-unstable.html
+share/gtk-doc/html/liboil/liboil-liboilcpu.html
+share/gtk-doc/html/liboil/liboil-liboildebug.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-conv.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-copy.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-dct.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-doc.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-math.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-math8x8.html
+share/gtk-doc/html/liboil/liboil-liboilfuncs-pixel.html
+share/gtk-doc/html/liboil/liboil-liboilimpl-unstable.html
+share/gtk-doc/html/liboil/liboil-liboilinit-unstable.html
+share/gtk-doc/html/liboil/liboil-liboilinit.html
+share/gtk-doc/html/liboil/liboil-liboiljunk.html
+share/gtk-doc/html/liboil/liboil-liboilmacros.html
+share/gtk-doc/html/liboil/liboil-liboilparameter.html
+share/gtk-doc/html/liboil/liboil-liboilprofile.html
+share/gtk-doc/html/liboil/liboil-liboilprototype.html
+share/gtk-doc/html/liboil/liboil-liboilrandom.html
+share/gtk-doc/html/liboil/liboil-liboiltest.html
+share/gtk-doc/html/liboil/liboil-liboiltypes.html
+share/gtk-doc/html/liboil/liboil.devhelp
+share/gtk-doc/html/liboil/liboil.devhelp2
+share/gtk-doc/html/liboil/right.png
+share/gtk-doc/html/liboil/style.css
+share/gtk-doc/html/liboil/up.png
+@dirrm share/gtk-doc/html/liboil
 @dirrm include/liboil-0.3/liboil
 @dirrm include/liboil-0.3
