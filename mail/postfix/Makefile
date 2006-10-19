@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2006/10/18 09:26:53 martti Exp $
+# $NetBSD: Makefile,v 1.194 2006/10/19 06:37:04 martti Exp $
 
 DISTNAME=	postfix-2.3.3
 #PKGREVISION=	1
@@ -51,27 +51,27 @@ SUBST_CLASSES+=		postfix
 SUBST_STAGE.postfix=	post-configure
 SUBST_FILES.postfix=	conf/main.cf src/global/mail_params.h
 SUBST_SED.postfix=	\
-	-e "s|^\(queue_directory\) =.*|\1 = ${POSTFIX_QUEUE_DIR}|"
+	-e 's|^\(queue_directory\) =.*|\1 = ${POSTFIX_QUEUE_DIR}|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(command_directory\) =.*|\1 = ${PREFIX}/sbin|"
+	-e 's|^\(command_directory\) =.*|\1 = ${PREFIX}/sbin|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(daemon_directory\) =.*|\1 = ${LIBEXECDIR}|"
+	-e 's|^\(daemon_directory\) =.*|\1 = ${LIBEXECDIR}|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(sendmail_path\) =.*|\1 = ${PREFIX}/sbin/sendmail|"
+	-e 's|^\(sendmail_path\) =.*|\1 = ${PREFIX}/sbin/sendmail|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(newaliases_path\) =.*|\1 = ${PREFIX}/bin/newaliases|"
+	-e 's|^\(newaliases_path\) =.*|\1 = ${PREFIX}/bin/newaliases|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(mailq_path\) =.*|\1 = ${PREFIX}/bin/mailq|"
+	-e 's|^\(mailq_path\) =.*|\1 = ${PREFIX}/bin/mailq|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(setgid_group\) =.*|\1 = maildrop|"
+	-e 's|^\(setgid_group\) =.*|\1 = maildrop|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(manpage_directory\) =.*|\1 = ${PREFIX}/man|"
+	-e 's|^\(manpage_directory\) =.*|\1 = ${PREFIX}/man|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(sample_directory\) =.*|\1 = ${EXAMPLEDIR}|"
+	-e 's|^\(sample_directory\) =.*|\1 = ${EXAMPLEDIR}|'
 SUBST_SED.postfix+=	\
-	-e "s|^\(readme_directory\) =.*|\1 = ${DOCDIR}|"
+	-e 's|^\(readme_directory\) =.*|\1 = ${DOCDIR}|'
 SUBST_SED.postfix+=	\
-	-e "/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,maildrop,g"
+	-e '/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,maildrop,g'
 
 # options.mk appends to CCARGS and AUXLIBS the options needed to build
 # Postfix with support for various add-on modules.
