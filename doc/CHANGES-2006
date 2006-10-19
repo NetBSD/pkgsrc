@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1571 2006/10/19 21:08:30 christos Exp $
+>$NetBSD: CHANGES-2006,v 1.1572 2006/10/19 23:01:35 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/hyperestraier to 1.4.6 [obache 2006-10-19]
 	Removed www/galeon12 [wiz 2006-10-19]
 	Added sysutils/hddtemp [christos 2006-10-19]
+	Added sysutils/xentools30-hvm version 3.0.3 [bouyer 2006-10-19]
