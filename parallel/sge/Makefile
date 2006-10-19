@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.19 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/19 11:51:27 markd Exp $
 #
 
-DISTNAME=		sge-5.3p6
-PKGREVISION=		4
+PKGNAME=		sge-6.0.8
+DISTNAME=		sge-V60u8_TAG-src
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		# empty
+#MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/78/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gridengine.sunsource.net/
 COMMENT=		Sun Grid Engine distributed resource management system
+DOWNLOAD=		http://gridengine.sunsource.net/servlets/ProjectDocumentList
 
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run
 
+WRKSRC=			${WRKDIR}/gridengine
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
@@ -23,11 +26,17 @@ PLIST_SUBST+=		SGE_ARCH=${SGE_ARCH:Q}
 MESSAGE_SUBST+=		SGE_ROOT=${SGE_ROOT}
 MAKE_ENV+=		PERL5=${PERL5:Q}
 
+FETCH_MESSAGE=		" The file ${DISTNAME}${EXTRACT_SUFX} containing the"
+FETCH_MESSAGE+=		" Grid Engine source snapshot must be fetched into:"
+FETCH_MESSAGE+=		""
+FETCH_MESSAGE+=		"	${DISTDIR}"
+FETCH_MESSAGE+=		" from:"
+FETCH_MESSAGE+=		"	${DOWNLOAD}"
+
 SGE_USER?=		sgeadmin
 SGE_GROUP?=		sgeadmin
 PKG_GROUPS=		${SGE_GROUP}
-PKG_USERS=		${SGE_USER}:${SGE_GROUP}
-PKG_GECOS.${SGE_USER}=	Sun Grid Engine Administrator
+PKG_USERS=		${SGE_USER}:${SGE_GROUP}::Sun\ Grid\ Engine\ Administrator
 
 EVAL_PREFIX+=	PKGSRC_SSL_PREFIX=openssl
 
@@ -91,6 +100,7 @@ pre-configure:
 .for __tmp__ in source/dist/util/arch_variables source/scripts/distinst.site source/aimk.site
 	${MV} ${WRKSRC}/${__tmp__} ${WRKSRC}/${__tmp__}.bak
 	${SED} -e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};g' -e 's;@ssl_prefix@;${SSL_PREFIX};g' \
+		-e 's;@db4_prefix@;${BUILDLINK_PREFIX.db4};g' \
 		-e 's;@perl5@;${PERL5};g' ${WRKSRC}/${__tmp__}.bak > \
 		${WRKSRC}/${__tmp__}
 	${RM} ${WRKSRC}/${__tmp__}.bak
@@ -106,24 +116,30 @@ do-configure:
 .endfor
 
 do-build:
-	cd ${WRKSRC}/source && ${AIMK} -only-depend
+	cd ${WRKSRC}/source && ${AIMK} -no-jni -only-depend
 	cd ${WRKSRC}/source && ${SETENV} ${MAKE_ENV} ./scripts/zerodepend
-	cd ${WRKSRC}/source && ${AIMK} -no-qmake -no-qtcsh depend
-	cd ${WRKSRC}/source && ${AIMK} -secure
-	cd ${WRKSRC}/source && ${AIMK} -man
+	cd ${WRKSRC}/source && ${AIMK} -no-jni -no-qmake -no-qtcsh depend
+	cd ${WRKSRC}/source && ${AIMK} -no-jni
+	cd ${WRKSRC}/source && ${AIMK} -no-jni -man
 
 do-install:
-	${LN} -fs ${WRKSRC}/source/scripts/distinst ${WRKSRC}/source/scripts/myinst
 	${MKDIR} ${SGE_ROOT}
 	${CHOWN} ${SGE_USER} ${SGE_ROOT}
 	${CHGRP} ${SGE_GROUP} ${SGE_ROOT}
 	cd ${WRKSRC}/source && \
-		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} SGE_ROOT=${SGE_ROOT} ./scripts/myinst -allall ${SGE_ARCH}
-	cd ${SGE_ROOT} && ${SETENV} SGE_ROOT=${SGE_ROOT} ./util/setfileperm.sh -auto -noresport \
-		${SGE_USER} ${SGE_GROUP} ${SGE_ROOT}
+		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -allall -nobdb -noopenssl ${SGE_ARCH}
+	for f in archive checkpoint deadlock dump load printlog recover stat upgrade verify ; do \
+		ln -s ${LOCALBASE}/bin/db4_$${f} ${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
+	ln -s ${LOCALBASE}/bin/berkeley_db4_svc ${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
+	ln -s ${SSL_PREFIX}/bin/openssl ${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
+	cd ${SGE_ROOT} && ${SETENV} SGE_ROOT=${SGE_ROOT} ./util/setfileperm.sh -auto \
+		${SGE_ROOT}
 	for f in ${SGE_ROOT}/bin/${SGE_ARCH}/q* ; do \
 		cd ${PREFIX}/bin && ${LN} -fs $$f ; done
 
+#% scripts/distinst -local"
+
+.include "../../databases/db4/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"

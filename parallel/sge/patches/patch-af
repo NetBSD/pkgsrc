@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+$NetBSD: patch-af,v 1.2 2006/10/19 11:51:27 markd Exp $
 
---- source/3rdparty/qmon/iconlist/IconList.c	2003-10-02 14:25:24.000000000 +0200
-+++ source/3rdparty/qmon/iconlist/IconList.c	2003-09-30 16:35:21.000000000 +0200
+--- source/3rdparty/qmon/iconlist/IconList.c.orig	2005-05-03 21:18:02.000000000 +1200
++++ source/3rdparty/qmon/iconlist/IconList.c
 @@ -50,6 +50,10 @@
  #include <Xm/Traversal.h>
  #endif
@@ -10,6 +10,6 @@ $NetBSD: patch-af,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
 +#undef NeedWidePrototypes
 +#endif
 +
+ #ifndef SOLARIS
  #if XmVersion >= 2000
  extern void _XmResizeObject(
-                         Widget g,
