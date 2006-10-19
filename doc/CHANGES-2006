@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1564 2006/10/19 11:29:41 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1565 2006/10/19 11:53:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/sunbird to 0.3nb1 [markd 2006-10-19]
 	Updated misc/p5-Business-ISBN-Data to 1.11 [obache 2006-10-19]
 	Updated misc/p5-Business-ISBN to 1.82 [obache 2006-10-19]
+	Updated parallel/sge to 6.0.8 [markd 2006-10-19]
