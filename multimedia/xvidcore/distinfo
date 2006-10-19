@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.12 2006/10/09 12:52:35 joerg Exp $
+$NetBSD: distinfo,v 1.13 2006/10/19 00:13:42 wiz Exp $
 
 SHA1 (xvidcore-1.1.0.tar.bz2) = f3ffc21529ab7941e423df7365de22c391d2eaeb
 RMD160 (xvidcore-1.1.0.tar.bz2) = 582927437970cf81534b9ed4f02173201e10f47b
 Size (xvidcore-1.1.0.tar.bz2) = 612101 bytes
 SHA1 (patch-aa) = 593ae63ddb5ec646d7f531b99783de64a9d6ceb3
 SHA1 (patch-ab) = 445d528602f67079bca03986c2c172af3291b15d
-SHA1 (patch-ac) = b976c188dae290a87708e5f97b8a16fcddbf608b
