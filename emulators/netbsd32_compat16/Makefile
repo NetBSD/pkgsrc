@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/19 19:39:04 wiz Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -28,6 +28,7 @@ CONFLICTS=		netbsd32_compat15-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-sparc64
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-x86_64
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 NO_MTREE=		yes
 NO_BUILD=		yes
