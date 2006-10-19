@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2004/02/15 07:34:04 martti Exp $
+$NetBSD: patch-ae,v 1.4 2006/10/19 06:40:54 martti Exp $
 
---- lib/mrtg2/SNMP_Session.pm.orig	Mon Jan 19 09:30:19 2004
-+++ lib/mrtg2/SNMP_Session.pm	Sun Feb 15 09:21:08 2004
-@@ -109,3 +109,3 @@
+--- lib/mrtg2/SNMP_Session.pm.orig	2006-09-06 13:42:50.000000000 +0000
++++ lib/mrtg2/SNMP_Session.pm	2006-10-19 08:48:09.000000000 +0000
+@@ -111,3 +111,3 @@
  ###
 -$SNMP_Session::default_avoid_negative_request_ids = 0;
 +$SNMP_Session::default_avoid_negative_request_ids = 1;
