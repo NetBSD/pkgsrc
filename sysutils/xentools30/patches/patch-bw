@@ -1,7 +1,7 @@
-$NetBSD: patch-bw,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-bw,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- xenstore/list.h.orig	2006-01-31 17:09:22.000000000 +0100
-+++ xenstore/list.h
+--- xenstore/list.h.orig	2006-10-16 22:51:42.000000000 +0200
++++ xenstore/list.h	2006-10-16 22:51:57.000000000 +0200
 @@ -3,6 +3,10 @@
  /* Taken from Linux kernel code, but de-kernelized for userspace. */
  #include <stddef.h>

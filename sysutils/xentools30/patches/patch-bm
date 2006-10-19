@@ -1,10 +1,10 @@
-$NetBSD: patch-bm,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-bm,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- vnet/libxutil/Makefile.orig	2006-01-31 17:09:21.000000000 +0100
-+++ vnet/libxutil/Makefile
-@@ -69,11 +69,10 @@ check-for-zlib:
- 	fi
+--- vnet/libxutil/Makefile.orig	2006-10-16 22:30:53.000000000 +0200
++++ vnet/libxutil/Makefile	2006-10-16 22:31:48.000000000 +0200
+@@ -76,11 +76,10 @@
  
+ .PHONY: install
  install: build
 -	[ -d $(DESTDIR)/usr/$(LIBDIR) ] || $(INSTALL_DIR) -p $(DESTDIR)/usr/$(LIBDIR)
 -	$(INSTALL_PROG) libxutil.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)
@@ -16,5 +16,5 @@ $NetBSD: patch-bm,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
 +	ln -sf libxutil.so.$(MAJOR).$(MINOR) $(PREFIX)/lib/libxutil.so.$(MAJOR)
 +	ln -sf libxutil.so.$(MAJOR) $(PREFIX)/lib/libxutil.so
  
+ .PHONY: clean
  clean:
- 	-@$(RM) *.a *.so* *.o *.opic *.rpm 

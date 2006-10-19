@@ -1,19 +1,21 @@
-$NetBSD: patch-as,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-as,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- libxc/Makefile.orig	2006-04-10 00:05:53.000000000 +0200
-+++ libxc/Makefile	2006-05-05 21:49:12.000000000 +0200
-@@ -22,8 +22,6 @@
- SRCS       += xc_tbuf.c
+--- libxc/Makefile.orig	2006-10-04 04:28:15.000000000 +0200
++++ libxc/Makefile	2006-10-17 00:01:59.000000000 +0200
+@@ -21,8 +21,9 @@
+ CTRL_SRCS-y       += xc_sedf.c
+ CTRL_SRCS-y       += xc_csched.c
+ CTRL_SRCS-y       += xc_tbuf.c
+-CTRL_SRCS-$(CONFIG_X86) += xc_ptrace.c xc_ptrace_core.c xc_pagetab.c
++CTRL_SRCS-$(CONFIG_X86) += xc_pagetab.c
+ CTRL_SRCS-$(CONFIG_Linux) += xc_linux.c
++CTRL_SRCS-$(CONFIG_NetBSD) += xc_netbsd.c
  
- ifeq ($(patsubst x86%,x86,$(XEN_TARGET_ARCH)),x86)
--SRCS       += xc_ptrace.c
--SRCS       += xc_ptrace_core.c
- SRCS       += xc_pagetab.c
- endif
+ GUEST_SRCS-y :=
+ GUEST_SRCS-y += xc_load_bin.c
+@@ -78,19 +79,19 @@
  
-@@ -80,19 +78,19 @@
- 	fi
- 
+ .PHONY: install
  install: build
 -	[ -d $(DESTDIR)/usr/$(LIBDIR) ] || $(INSTALL_DIR) $(DESTDIR)/usr/$(LIBDIR)
 -	[ -d $(DESTDIR)/usr/include ] || $(INSTALL_DIR) $(DESTDIR)/usr/include
@@ -42,5 +44,5 @@ $NetBSD: patch-as,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
 +	ln -sf libxenguest.so.$(MAJOR) $(PREFIX)/lib/libxenguest.so
 +	$(BSD_INSTALL_DATA) xenguest.h $(PREFIX)/include
  
- .PHONY: TAGS clean rpm install all
- 
+ .PHONY: TAGS
+ TAGS:
