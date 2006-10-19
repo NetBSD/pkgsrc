@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.792 2006/10/15 14:05:46 bouyer Exp $
+# $NetBSD: Makefile,v 1.793 2006/10/19 20:23:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -134,11 +134,11 @@ SUBDIR+=	elfsh
 SUBDIR+=	elib
 SUBDIR+=	emacs-ilisp
 SUBDIR+=	emacs20-elib
-SUBDIR+=	etrace
 SUBDIR+=	epydoc
 SUBDIR+=	equeue
 SUBDIR+=	eric3
 SUBDIR+=	error
+SUBDIR+=	etrace
 SUBDIR+=	exctags
 SUBDIR+=	fann
 SUBDIR+=	fann-devel
