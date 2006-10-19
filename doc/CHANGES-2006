@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1561 2006/10/19 07:27:12 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1562 2006/10/19 07:32:09 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4886,3 +4886,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/ja-trac to 0.10.0.1 [obache 2006-10-19]
 	Updated net/mrtg to 2.14.7 [martti 2006-10-19]
 	Updated sysutils/dd_rescue to 1.12 [ghen 2006-10-19]
+	Updated mail/clamav to 0.88.5 [martti 2006-10-19]
