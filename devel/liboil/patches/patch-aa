@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2006/10/19 14:27:33 drochner Exp $
+
+--- liboil/liboilcpu.c.orig	2006-05-23 02:07:56.000000000 +0200
++++ liboil/liboilcpu.c
+@@ -518,6 +518,14 @@ oil_cpu_detect_cpuid (void)
+     OIL_WARNING("L2 cache: %d kbytes, %d assoc, %d lines/tag, %d line size\n",
+         (ecx>>16)&0xffff, (ecx>>12)&0xf, (ecx>>8)&0xf, ecx&0xff);
+   }
++
++#ifdef __i386__
++  /*
++   * gcc (4.1) doesn't get the alignment of automatic __m128i variables
++   * right, leading to GPFs depending on stack alignment on function call.
++   */
++  oil_cpu_flags &= ~(OIL_IMPL_FLAG_SSE2 | OIL_IMPL_FLAG_SSE3);
++#endif
+ }
+ 
+ /* Reduce the set of CPU capabilities detected by whatever detection mechanism
+@@ -542,7 +550,7 @@ oil_cpu_detect_kernel_support (void)
+ 		       OIL_IMPL_FLAG_MMXEXT | OIL_IMPL_FLAG_SSE3);
+   }
+ #endif
+-#if !defined(__linux__) && !defined(__FreeBSD__)
++#if !defined(__linux__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+   /* If we don't know that the operating system supports SSE, don't trust that
+    * it will properly support it.
+    */
