@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.3 2006/10/19 07:30:39 markd Exp $
+
+--- admin/cvs.sh.orig	2006-10-19 19:51:36.000000000 +1300
++++ admin/cvs.sh
+@@ -553,7 +553,7 @@ for subdir in $dirs; do
+ 
+    kdepotpath=${includedir:-`kde-config --expandvars --install include`}/kde.pot
+ 
+-   if test "$kdepotpath" == "NONE/kde.pot"; then
++   if test "$kdepotpath" = "NONE/kde.pot"; then
+       kdepotpath=`kde-config --expandvars --prefix`/include/kde.pot
+    fi
+ 
