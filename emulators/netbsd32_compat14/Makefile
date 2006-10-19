@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/19 19:39:04 wiz Exp $
 #
 
 DISTNAME=		compat14-${MACHINE32_ARCH}-${VERSION}
@@ -25,6 +25,7 @@ MACHINE32_ARCH=	${MACHINE_ARCH}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-x86_64
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 NO_MTREE=		yes
 NO_BUILD=		yes
