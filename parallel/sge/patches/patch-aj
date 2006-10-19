@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.2 2006/10/19 11:51:27 markd Exp $
 
---- source/3rdparty/qtcsh/tc.alloc.c.orig	2004-03-03 13:09:22.000000000 +0000
-+++ source/3rdparty/qtcsh/tc.alloc.c
-@@ -167,7 +167,7 @@ static	void	morecore	__P((int));
- #endif
+--- source/libs/uti/sge_uidgid.c.orig	2006-09-26 13:02:53.000000000 +1200
++++ source/libs/uti/sge_uidgid.c
+@@ -1532,7 +1532,7 @@ copygrp(struct group *tgrp, struct group
+    for (i = 0; tgrp->gr_mem[i] != NULL; i++) {
+       strcpy(grp->gr_mem[i], tgrp->gr_mem[i]);
+    }
+-   *(grp->gr_mem[i]) = NULL;
++   (grp->gr_mem[i]) = NULL;
  
- 
--#if defined(SOLARIS) || defined(SOLARIS64) || defined(SOLARIS86) || defined(SUN4) || defined (HP11) || defined(LINUX5) || defined(ALPHA5) || defined(ALPHA4) || defined(ALINUX) || defined(LINUX60) || defined(LINUX6) || defined(SLINUX) || defined(FREEBSD)|| defined(DARWIN) || defined(IA64LINUX) || defined(LINUXAMD64)
-+#if defined(SOLARIS) || defined(SOLARIS64) || defined(SOLARIS86) || defined(SUN4) || defined (HP11) || defined(LINUX5) || defined(ALPHA5) || defined(ALPHA4) || defined(ALINUX) || defined(LINUX60) || defined(LINUX6) || defined(SLINUX) || defined(FREEBSD)|| defined(NETBSD) || defined(DARWIN) || defined(IA64LINUX) || defined(LINUXAMD64)
- # ifdef const
- #  undef const
- # endif
+    return 0;
+ }
