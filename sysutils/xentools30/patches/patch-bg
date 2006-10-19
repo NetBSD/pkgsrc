@@ -1,16 +1,13 @@
-$NetBSD: patch-bg,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+$NetBSD: patch-bg,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 
---- security/get_decision.c.orig	2006-01-31 17:09:21.000000000 +0100
-+++ security/get_decision.c
-@@ -30,7 +30,11 @@
- #include <netinet/in.h>
- #include <xen/acm.h>
- #include <xen/acm_ops.h>
-+#ifdef __NetBSD__
-+#include <xen/NetBSD/xenio.h>
-+#else
- #include <xen/linux/privcmd.h>
-+#endif
- 
- #define PERROR(_m, _a...) \
- fprintf(stderr, "ERROR: " _m " (%d = %s)\n" , ## _a ,	\
+--- python/xen/xm/getlabel.py.orig	2006-10-15 14:22:03.000000000 +0200
++++ python/xen/xm/getlabel.py	2006-10-19 21:52:18.000000000 +0200
+@@ -55,7 +55,7 @@
+     if configfile[0] == '/':
+         fd = open(configfile, "rb")
+     else:
+-        for prefix in [".", "/etc/xen"]:
++        for prefix in [".", "@XENDCONFDIR@"]:
+             abs_file = prefix + "/" + configfile
+             if os.path.isfile(abs_file):
+                 fd = open(abs_file, "rb")
