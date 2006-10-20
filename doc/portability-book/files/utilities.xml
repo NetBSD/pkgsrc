@@ -1,4 +1,4 @@
-<!-- $NetBSD: utilities.xml,v 1.3 2006/10/07 08:13:21 rillig Exp $ -->
+<!-- $NetBSD: utilities.xml,v 1.4 2006/10/20 10:14:44 rillig Exp $ -->
 
 <chapter id="utilities">
 <title>Command line utilities</title>
@@ -6,6 +6,15 @@
 <para>This chapter collects the various bugs and peculiarities of the
 <ulink url="http://www.opengroup.org/onlinepubs/000095399/idx/utilities.html">POSIX-like
 utilities</ulink> on the platforms.</para>
+
+<sect1 id="util.ls">
+<title>ls</title>
+
+<para>On MacOS&nbsp;X, <literal>ls</literal> does not return an error
+code when the file to be listed does not exist. On some other platforms,
+it does.</para>
+
+</sect1>
 
 <sect1 id="util.sh">
 <title>sh</title>
@@ -119,7 +128,7 @@ when y starts with a dot, that is, for hidden files.</para>
 <sect2 id="util.test.ext">
 <title>Non-standard extensions</title>
 
-<para>The Bourne Again Shell (Bash) allows the binary operator
+<para>The Bourne Again Shell (bash) allows the binary operator
 <literal>==</literal> to be used as an alias for <literal>=</literal>.
 This leads to problems when programs using this feature are ported to
 other platforms. By the way, not even the GNU coreutils have that
