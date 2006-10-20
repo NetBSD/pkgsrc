@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5589 2006/10/20 15:49:16 wiz Exp $
+$NetBSD: TODO,v 1.5590 2006/10/20 17:07:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -778,7 +778,6 @@ Suggested package updates
 	o p5-BSD-Resource-1.28
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
-	o p5-Cache-Simple-TimedExpiry-0.26 [pkg/34326]
 	o p5-Class-Autouse-1.27
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Data-Inheritable-0.05 [pkg/34332]
