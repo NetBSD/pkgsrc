@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1577 2006/10/20 17:07:24 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1578 2006/10/20 20:28:22 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/gnupg-devel to 1.9.93 [shannonjr 2006-10-20]
 	Updated security/gpgme to 1.1.0nb1 [shannonjr 2006-10-20]
 	Updated devel/p5-Cache-Simple-TimedExpiry to 0.26 [obache 2006-10-20]
+	Added www/august version 0.63b [reed 2006-10-20]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.479 2006/10/19 20:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.480 2006/10/20 20:28:22 reed Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -59,6 +59,7 @@ SUBDIR+=	apache2
 SUBDIR+=	apachetop
 SUBDIR+=	apc-gui
 SUBDIR+=	asp2php
+SUBDIR+=	august
 SUBDIR+=	awstats
 SUBDIR+=	bannerfilter
 SUBDIR+=	bins
