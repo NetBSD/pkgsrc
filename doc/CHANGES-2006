@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1575 2006/10/20 13:04:56 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1576 2006/10/20 15:32:26 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4908,3 +4908,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xlockmore to 5.23 [hubertf 2006-10-20]
 	Updated x11/xlockmore-lite to 5.23 [hubertf 2006-10-20]
 	Updated databases/db4 to 4.4.20nb1 [obache 2006-10-20]
+	Updated security/libgpg-error to 1.4 [shannonjr 2006-10-20]
+	Updated security/gnupg-devel to 1.9.93 [shannonjr 2006-10-20]
+	Updated security/gpgme to 1.1.0nb1 [shannonjr 2006-10-20]
