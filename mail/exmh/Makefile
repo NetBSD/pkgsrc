@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.43 2006/10/19 07:52:34 markd Exp $
+# $NetBSD: Makefile,v 1.44 2006/10/20 08:15:14 dsainty Exp $
 
-DISTNAME=	exmh-2.6.3
-PKGREVISION=	1
+DISTNAME=	exmh-2.7.2
 CATEGORIES=	mail tk
-MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/exmh/
+MASTER_SITES=	ftp://ftp.tcl.tk/pub/tcl/exmh/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.beedub.com/exmh/
 COMMENT=	X11/TK based mail reader front end to MH
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	nmh>=1.0:../../mail/nmh
 DEPENDS+=	metamail>=2.7:../../mail/metamail
+
+USE_TOOLS+=	tclsh
+USE_TOOLS+=	wish:run
 
 .include "../../mk/bsd.prefs.mk"
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-
-WISH=		wish
-TCLSH=		tclsh
 
 # Additionally, exmh will use the following packages if present:
 # lang/expect
@@ -28,16 +26,14 @@ TCLSH=		tclsh
 # mail/faces
 # audio/rplay
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-build:
-	@cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} TCLSH=${TCLSH} \
-		WISH=${PREFIX}/bin/${WISH} WRKSRC=${WRKSRC} \
+	cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} TCLSH=${TCLSH:Q} \
+		WISH=${WISH:Q} WRKSRC=${WRKSRC} \
 		FILESDIR=${FILESDIR} ${SH} ${FILESDIR}/build
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/exmh.l ${PREFIX}/man/man1/exmh.1
-	for binfile in exmh-async exmh-bg exmh ftp.expect; do \
+	for binfile in exmh-async exmh-bg exmh-strip exmh ftp.expect; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/$$binfile ${PREFIX}/bin; \
 	done
 	vers=`sed -ne 's/^set vers \(.*\)/\1/p' ${WRKSRC}/exmh.install`; \
@@ -57,4 +53,6 @@ do-install:
 		${INSTALL_DATA} $$hfile ${PREFIX}/lib/exmh-$${vers}/html; \
 	done
 
+.include "../../x11/tk/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

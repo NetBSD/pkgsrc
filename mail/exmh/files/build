@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: build,v 1.1 2001/10/26 11:46:55 agc Exp $
+# $NetBSD: build,v 1.2 2006/10/20 08:15:15 dsainty Exp $
 # FreeBSD Id: build,v 1.5 1997/08/21 08:09:56 peter Exp
 #
 
@@ -83,7 +83,7 @@ sed <${FILESDIR}/config \
 	-e "s+!!DATE!!+${DATE}+g" \
  | sed -e 's/$/\\/' >> ${SEDFILE}
 
-for i in exmh-async exmh-bg exmh ftp.expect
+for i in exmh-async exmh-bg exmh-strip exmh ftp.expect
 do
 	echo "sed -f ${SEDFILE} < $i.MASTER > $i"
 	sed -f ${SEDFILE} < $i.MASTER > $i
