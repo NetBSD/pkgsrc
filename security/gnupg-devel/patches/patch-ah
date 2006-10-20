@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2006/10/20 15:23:58 shannonjr Exp $
+
+--- sm/Makefile.am.orig	2006-10-17 06:49:50.000000000 -0600
++++ sm/Makefile.am
+@@ -22,7 +22,7 @@
+ 
+ bin_PROGRAMS = gpgsm
+ 
+-AM_CFLAGS = $(LIBGCRYPT_CFLAGS) $(KSBA_CFLAGS) 
++AM_CFLAGS = $(LIBGCRYPT_CFLAGS) $(KSBA_CFLAGS) $(LIBASSUAN_CFLAGS)
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)/gl -I$(top_srcdir)/common -I$(top_srcdir)/intl 
+ include $(top_srcdir)/am/cmacros.am
