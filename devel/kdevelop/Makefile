@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/10/12 11:11:06 markd Exp $
+# $NetBSD: Makefile,v 1.63 2006/10/20 20:06:46 markd Exp $
 
 DISTNAME=	kdevelop-3.3.5
 CATEGORIES=	devel kde meta-pkgs
@@ -12,8 +12,11 @@ COMMENT=	Integrated Development Environment for Unix/X11/KDE
 DEPENDS+=	c-cpp-reference>=2.0.2nb4:../../devel/c-cpp-reference
 DEPENDS+=	kdbg>=1.2.5:../../devel/kdbg
 
-NO_CHECKSUM=	YES
-NO_BUILD=	YES
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 
