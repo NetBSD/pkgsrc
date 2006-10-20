@@ -1,4 +1,4 @@
-<!-- $NetBSD: intro.xml,v 1.2 2006/10/17 06:41:01 rillig Exp $ -->
+<!-- $NetBSD: intro.xml,v 1.3 2006/10/20 10:15:02 rillig Exp $ -->
 
 <chapter id="intro">
 <title>Introduction</title>
@@ -6,8 +6,8 @@
 <para>Writing programs that are portable to a wide range of platforms
 isn't easy. Maybe some platforms are lacking your favorite tool, while
 others implemented it, but with arbitrary limitations. Some don't have
-such useful functions like <funcname>snprintf</funcname> or
-<funcname>strlcpy</function>.</para>
+such useful functions like <function>snprintf</function> or
+<function>strlcpy</function>.</para>
 
 <para>This book provides information about which features are
 <emphasis>not</emphasis> on the platforms, since the features that
