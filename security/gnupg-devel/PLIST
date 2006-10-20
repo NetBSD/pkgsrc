@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/20 15:23:57 shannonjr Exp $
 bin/gpg-agent
 bin/gpg-connect-agent
 bin/gpgconf
@@ -6,10 +6,13 @@ bin/gpgkey2ssh
 bin/gpgparsemail
 bin/gpgsm-gencert.sh
 bin/watchgnupg
-info/gnupg.info
 libexec/gpg-preset-passphrase
 libexec/gpg-protect-tool
 sbin/addgnupghome
 share/gnupg/qualified.txt
 share/locale/de/LC_MESSAGES/gnupg2.mo
+share/gnupg/FAQ
+share/gnupg/com-certs.pem
+share/gnupg/faq.html
+share/gnupg/gpg-conf.skel
 @dirrm share/gnupg
