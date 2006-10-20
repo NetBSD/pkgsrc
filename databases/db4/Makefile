@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.46 2006/10/05 01:24:32 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2006/10/20 12:32:07 obache Exp $
 
 DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
 CATEGORIES=		databases
-MASTER_SITES=		http://downloads.sleepycat.com/ \
-			ftp://ftp.sleepycat.com/releases/
+MASTER_SITES=		http://download.oracle.com/berkeley-db/
 
 PATCHFILES=		patch.4.4.20.1 patch.4.4.20.2
-PATCH_SITES=		http://www.sleepycat.com/update/4.4.20/
+PATCH_SITES=		http://www.oracle.com/technology/products/berkeley-db/db/update/4.4.20/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.sleepycat.com/
-COMMENT=		Berkeley DB version 4 from Sleepycat Software
+HOMEPAGE=		http://www.oracle.com/database/berkeley-db/db/index.html
+COMMENT=		Berkeley DB version 4 from Oracle
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
