@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/06/02 18:27:57 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/20 21:56:38 jdolecek Exp $
 
 DISTNAME=	php-extensions-5.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	meta-pkgs www php5
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -38,7 +38,8 @@ DEPENDS+=	php5-mcrypt-5.1.*:../../security/php-mcrypt
 DEPENDS+=	php5-mhash-5.1.*:../../security/php-mhash
 DEPENDS+=	php5-mssql-5.1.*:../../databases/php-mssql
 DEPENDS+=	php5-mysql-5.1.*:../../databases/php-mysql
-DEPENDS+=	php5-odbc-5.1.*:../../databases/php-odbc
+# odbc kills Apache1 on startup due to threaded unixodbc
+# DEPENDS+=	php5-odbc-5.1.*:../../databases/php-odbc
 DEPENDS+=	php5-pcntl-5.1.*:../../devel/php-pcntl
 DEPENDS+=	php5-pdflib-5.1.*:../../print/php-pdflib
 DEPENDS+=	php5-pgsql-5.1.*:../../databases/php-pgsql
