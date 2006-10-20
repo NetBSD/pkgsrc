@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/06/02 18:27:57 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/20 21:56:38 jdolecek Exp $
 
 DISTNAME=	php-extensions-4.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	meta-pkgs www php4
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -37,7 +37,8 @@ DEPENDS+=	php4-mcrypt-4.4.*:../../security/php-mcrypt
 DEPENDS+=	php4-mhash-4.4.*:../../security/php-mhash
 DEPENDS+=	php4-mssql-4.4.*:../../databases/php-mssql
 DEPENDS+=	php4-mysql-4.4.*:../../databases/php-mysql
-DEPENDS+=	php4-odbc-4.4.*:../../databases/php-odbc
+# odbc kills Apache1 on startup due to threaded unixodbc
+# DEPENDS+=	php4-odbc-4.4.*:../../databases/php-odbc
 DEPENDS+=	php4-pcntl-4.4.*:../../devel/php-pcntl
 DEPENDS+=	php4-pdflib-4.4.*:../../print/php-pdflib
 DEPENDS+=	php4-pgsql-4.4.*:../../databases/php-pgsql
