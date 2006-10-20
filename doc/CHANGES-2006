@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1573 2006/10/20 08:16:40 dsainty Exp $
+>$NetBSD: CHANGES-2006,v 1.1574 2006/10/20 12:39:05 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4905,3 +4905,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/hddtemp [christos 2006-10-19]
 	Added sysutils/xentools30-hvm version 3.0.3 [bouyer 2006-10-19]
 	Updated mail/exmh to 2.7.2 [dsainty 2006-10-20]
+	Updated x11/xlockmore to 5.23 [hubertf 2006-10-20]
+	Updated x11/xlockmore-lite to 5.23 [hubertf 2006-10-20]
