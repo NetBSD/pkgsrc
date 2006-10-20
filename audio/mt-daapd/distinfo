@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/20 20:28:28 adrianp Exp $
+
+SHA1 (mt-daapd-0.2.4.tar.gz) = b8c242e5fd5d2d97010d5e09b9f02ccf9def13ab
+RMD160 (mt-daapd-0.2.4.tar.gz) = babb3f98a254aa4a014b5e7adb96276fafc84fac
+Size (mt-daapd-0.2.4.tar.gz) = 405168 bytes
+SHA1 (patch-aa) = e177bb33c19badb1da8638af61a3c3bfddf2a2ad
