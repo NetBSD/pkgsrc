@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1578 2006/10/20 20:28:22 reed Exp $
+>$NetBSD: CHANGES-2006,v 1.1579 2006/10/20 20:32:31 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4913,3 +4913,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/gpgme to 1.1.0nb1 [shannonjr 2006-10-20]
 	Updated devel/p5-Cache-Simple-TimedExpiry to 0.26 [obache 2006-10-20]
 	Added www/august version 0.63b [reed 2006-10-20]
+	Added audio/mt-daapd version 0.2.4 [adrianp 2006-10-20]
