@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5588 2006/10/20 08:17:57 dsainty Exp $
+$NetBSD: TODO,v 1.5589 2006/10/20 15:49:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -410,6 +410,7 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.34
 	o dnstracer-1.8
+	o docbook-xsl-1.71.1
 	o doxygen-1.5.0
 	o drscheme-352
 	o dvd+rw-tools-7.0
@@ -582,6 +583,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o imap-uw-2006b
+	o ingo-1.1.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ipcalc-0.41
@@ -1038,6 +1040,7 @@ Suggested package updates
 	o pygopherd-2.0.13
 	o pysol-4.82
 	o python-2.5
+	o python24-2.4.4
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qt1-1.45
@@ -1142,7 +1145,7 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.5.4
+	o sylpheed-claws-2.5.6
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
