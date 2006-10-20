@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/12 20:40:17 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/20 08:15:14 dsainty Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
+bin/exmh-strip
 bin/ftp.expect
 lib/${PKGNAME}/PgpDecryptExpect
 lib/${PKGNAME}/addr.tcl
@@ -14,6 +15,7 @@ lib/${PKGNAME}/autorefile.tcl
 lib/${PKGNAME}/background.tcl
 lib/${PKGNAME}/base64.tcl
 lib/${PKGNAME}/bindings.tcl
+lib/${PKGNAME}/bogo.tcl
 lib/${PKGNAME}/busy.tcl
 lib/${PKGNAME}/buttons.tcl
 lib/${PKGNAME}/clink.au
@@ -136,6 +138,7 @@ lib/${PKGNAME}/mh.tcl
 lib/${PKGNAME}/mime.tcl
 lib/${PKGNAME}/mime.types
 lib/${PKGNAME}/mimeSun.tcl
+lib/${PKGNAME}/mimencode.tcl
 lib/${PKGNAME}/mosaic.tcl
 lib/${PKGNAME}/msg.tcl
 lib/${PKGNAME}/msgShow.tcl
