@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.47 2006/10/20 12:32:07 obache Exp $
+# $NetBSD: Makefile,v 1.48 2006/10/20 13:00:35 obache Exp $
 
 DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://download.oracle.com/berkeley-db/
 
-PATCHFILES=		patch.4.4.20.1 patch.4.4.20.2
+PATCHFILES=		patch.4.4.20.1 patch.4.4.20.2 patch.4.4.20.3 patch.4.4.20.4
 PATCH_SITES=		http://www.oracle.com/technology/products/berkeley-db/db/update/4.4.20/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
