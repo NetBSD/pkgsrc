@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/10/04 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2006/10/20 15:25:22 shannonjr Exp $
 #
 
 DISTNAME=	gpgme-1.1.0
@@ -35,6 +35,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 # getenv_r is not detected correctly. It will be found
 # in either base system or librfuncs
 CONFIGURE_ENV+=		ac_cv_func_getenv_r=yes
+CONFIGURE_ENV+=		ac_cv_func_funopen=yes
 
 TEST_TARGET=		check
 
