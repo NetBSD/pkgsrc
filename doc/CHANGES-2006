@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1574 2006/10/20 12:39:05 hubertf Exp $
+>$NetBSD: CHANGES-2006,v 1.1575 2006/10/20 13:04:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4907,3 +4907,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/exmh to 2.7.2 [dsainty 2006-10-20]
 	Updated x11/xlockmore to 5.23 [hubertf 2006-10-20]
 	Updated x11/xlockmore-lite to 5.23 [hubertf 2006-10-20]
+	Updated databases/db4 to 4.4.20nb1 [obache 2006-10-20]
