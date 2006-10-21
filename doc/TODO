@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5599 2006/10/21 13:53:52 obache Exp $
+$NetBSD: TODO,v 1.5600 2006/10/21 14:59:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -1050,7 +1050,7 @@ Suggested package updates
 	o rt3-3.6.1
 	o rtcw-1.41.3
 	o ruby-1.8.5
-	o ruby-RMagick-1.14.0 [requires ImageMagick>=6.2.9.7]
+	o ruby-RMagick-1.14.1 [requires ImageMagick>=6.2.9.7]
 	o ruby-cmd-0.8.0
 	o sablecc-3.2
 	o samba-3.0.23c
