@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/21 12:36:07 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/21 12:59:20 adrianp Exp $
+lib/httpd/mod_security.so
 share/doc/ap-security/html-multipage/01-introduction.html
 share/doc/ap-security/html-multipage/02-installation.html
 share/doc/ap-security/html-multipage/03-configuration.html
@@ -16,11 +17,10 @@ share/doc/ap-security/html-multipage/thinkingstone.gif
 share/doc/ap-security/index.html
 share/doc/ap-security/modsecurity-manual.css
 share/doc/ap-security/modsecurity-manual.html
+share/doc/ap-security/modsecurity-manual.pdf
 share/doc/ap-security/modsecurity-manual.xml
 share/doc/ap-security/modsecurity.gif
 share/doc/ap-security/thinkingstone.gif
-lib/httpd/mod_security.so
-share/doc/ap-security/modsecurity-manual.pdf
 share/examples/ap-security/httpd.conf.example-minimal
 @dirrm share/doc/ap-security/html-multipage
 @dirrm share/doc/ap-security
