@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.5 2006/10/12 17:57:05 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.6 2006/10/21 19:07:18 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -35,5 +35,6 @@ do-configure-pre-hook: _configure-check-for-test
 _configure-check-for-test:
 	@${STEP_MSG} "Checking for portability problems in extracted files"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	[ -d ${WRKSRC}/. ] || exit 0;					\
 	cd ${WRKSRC}							\
 	&& sh ${PKGSRCDIR}/mk/configure/check-portability.sh
