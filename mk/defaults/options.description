@@ -40,6 +40,7 @@ charset
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
+cvsgraph		Enable cvsgraph support.
 dar-int32		Use 32-bit integers for file lengths in Dar.
 dar-int64		Use 64-bit integers for file lengths in Dar.
 darwin			Build and/or run on Darwin and Mac OS X.
@@ -312,6 +313,7 @@ unrealircd-topicisnuhost	/topic command to show the nick!user@host of the person
 unrealircd-ziplinks	Compress data before transmitting it between servers.
 vflib	
 vfs	
+viewvc-php		Use php to colorize .php and .inc files.
 virtualchroot	
 vorbis			Enable Ogg Vorbis support.
 vpop	
