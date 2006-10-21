@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:04 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/21 21:53:04 ben Exp $
 #
 
 DISTNAME=		tme-0.4
@@ -7,6 +7,9 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://theory.lcs.mit.edu/~fredette/tme/
 
 MAINTAINER=		skrll@NetBSD.org
+# Please do not assign PR's for this package to skrll.
+# Instead, assign them to the package author, fredette.
+
 HOMEPAGE=		http://theory.lcs.mit.edu/~fredette/tme/
 COMMENT=		The Machine Emulator
 
