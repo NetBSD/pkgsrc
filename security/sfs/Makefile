@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2006/10/04 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2006/10/21 11:53:13 agc Exp $
 #
 
 DISTNAME=		sfs-0.7.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net security
 MASTER_SITES=		http://www.fs.net/sfswww/dist/
 
@@ -20,8 +20,6 @@ CONFIGURE_ARGS+=	--disable-uvfs
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		makeinfo perl:run
-
-GCC_REQD+=		2.95.3
 
 INFO_FILES=		# PLIST
 
