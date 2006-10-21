@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.5 2005/01/18 17:25:13 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.6 2006/10/21 11:42:25 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,6 +36,8 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+#set -eu
+
 arg_pp="@_WRAP_ARG_PP@"
 arg_pp_main="@_WRAP_ARG_PP_MAIN@"
 arg_source="@_WRAP_ARG_SOURCE@"
@@ -60,6 +62,7 @@ append_extra_args=yes
 cat="@CAT@"  
 echo="@ECHO@"
 expr="@EXPR@"
+mv="@MV@"
 sed="@SED@"
 test="@TEST@"
 Xsed="$sed -e 1s/^X//"
@@ -78,6 +81,8 @@ original_cmd="$0 $@"
 msg_log $wrapperlog "[*]" $original_cmd
 
 cmd="@WRAPPEE@"
+libs=""
+rellpath=""
 do_transform=yes
 init_queue argbuf
 init_queue cmdbuf
@@ -111,8 +116,8 @@ cmd="$cmd $libs"
 @_WRAP_ENV@
 
 msg_log $wrapperlog "<.>" $cmd
-eval $cmd
-wrapper_result=$?
+wrapper_result=0
+eval "$cmd" || wrapper_result="$?"
 
 . $cleanup
 

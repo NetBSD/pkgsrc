@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.11 2005/02/14 21:43:11 jlam Exp $
+# $NetBSD: logic,v 1.12 2006/10/21 11:42:25 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,7 +56,7 @@ while ! queue_is_empty argbuf; do
 		if $test $skipargs -eq 0; then
 			do_transform=yes
 		else
-			skipargs=`$expr $skipargs - 1`
+			skipargs=`$expr $skipargs - 1 || true`
 			do_transform=no
 			argok=yes
 			continue
@@ -137,7 +137,8 @@ $cachearg) arg=$cachedarg; split_arg=$split_arg; cachehit=yes ;;
 EOF
 				$cat $cache_header \
 				     $cache_body \
-				     $cache_footer > $cache
+				     $cache_footer > $cache-$$.tmp
+				$mv -f $cache-$$.tmp $cache
 				;;
 			esac
 			;;
