@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2006/10/20 20:28:22 reed Exp $
+# $NetBSD: Makefile,v 1.481 2006/10/21 09:07:17 adrianp Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -318,6 +318,7 @@ SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
 SUBDIR+=	trac
 SUBDIR+=	urlget
+SUBDIR+=	viewvc
 SUBDIR+=	visitors
 SUBDIR+=	w3
 SUBDIR+=	w3c-httpd
