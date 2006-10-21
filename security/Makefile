@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2006/10/16 09:16:37 martti Exp $
+# $NetBSD: Makefile,v 1.277 2006/10/21 07:48:54 adrianp Exp $
 #
 
 COMMENT=	Security tools
@@ -216,6 +216,7 @@ SUBDIR+=	pyca
 SUBDIR+=	qca
 SUBDIR+=	qca-tls
 SUBDIR+=	qident
+SUBDIR+=	rainbowcrack
 SUBDIR+=	rats
 SUBDIR+=	rc5des
 SUBDIR+=	rid
