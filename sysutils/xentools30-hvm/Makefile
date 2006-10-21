@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/21 22:10:05 bouyer Exp $
 #
 
 DISTNAME=		xen-3.0.3_0-src
 PKGNAME=		xentools30-hvm-3.0.3
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
 			http://bits.xensource.com/oss-xen/release/3.0.3-0/src.tgz/
