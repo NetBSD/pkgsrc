@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1595 2006/10/21 14:44:23 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1596 2006/10/21 17:14:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4929,3 +4929,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/ap-modsecurity to 1.9.4 [adrianp 2006-10-21]
 	Updated devel/p5-Class-Data-Inheritable to 0.06 [obache 2006-10-21]
 	Updated devel/p5-Class-Factory to 1.04 [obache 2006-10-21]
+	Updated net/p5-SOAP-Lite to 0.69 [obache 2006-10-21]
