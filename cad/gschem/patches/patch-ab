@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.8 2006/10/21 19:22:12 rillig Exp $
+
+--- scripts/makeimages.orig	2006-02-26 20:33:59.000000000 +0100
++++ scripts/makeimages	2006-10-21 21:19:12.000000000 +0200
+@@ -7,9 +7,9 @@
+ # 	- ghostscript (I use aladdin gs)
+ #
+ 
+-if [ "$1" == "" ] 
++if [ $# -ne 1 ]
+ then
+-	echo "usage: makeimages path_to_libary" 
++	echo "usage: makeimages path_to_libary" 1>&2
+ 	exit 1
+ fi
+ 
