@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1591 2006/10/21 11:54:21 agc Exp $
+>$NetBSD: CHANGES-2006,v 1.1592 2006/10/21 12:39:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Test-Pod to 1.26 [obache 2006-10-21]
 	Updated lang/hugs to 200609 [uebayasi 2006-10-21]
 	Updated security/sfs to 0.7.2nb7 [agc 2006-10-21]
+	Updated ap-modsecurity to 1.9.4 [adrianp 2006-10-21]
