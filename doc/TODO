@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5595 2006/10/21 09:26:50 obache Exp $
+$NetBSD: TODO,v 1.5596 2006/10/21 09:39:43 obache Exp $
 
 Suggested new packages
 ======================
@@ -894,7 +894,6 @@ Suggested package updates
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-2.105
 	o p5-Test-Memory-Cycle-1.04 [pkg/34372]
-	o p5-Test-Pod-1.26 [pkg/34369]
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
 	o p5-Text-Glob-0.07 [pkg/34416]
