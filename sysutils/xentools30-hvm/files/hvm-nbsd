@@ -27,6 +27,9 @@ name = "hvm"
 vif = [ 'mac=00:16:3e:00:00:13, bridge=bridge0, type=ioemu' ]
 
 #----------------------------------------------------------------------------
+# device model to use: only qemu-dm available for now
+device_model = '/usr/pkg/libexec/qemu-dm'
+
 # Define the disk devices you want the domain to have access to, and
 # what you want them accessible as.
 # Each disk entry is of the form phy:UNAME,DEV,MODE
@@ -40,15 +43,26 @@ disk = [ 'file:/home/domains/vmx,ioemu:hda,w', 'file:/home/domains/i386cd.iso,io
 # floppy images; this doesn't seem to work currently. Use a iso image instead.
 #fda = '/home/domains/boot1.fs'
 
-device_model = '/usr/pkg/libexec/qemu-dm'
-
 # boot device: a = floppy, c= hard drive, d= cdrom (with the disk entry
 # before)
 boot='d'
 
 # By default, 'xm create' will try to open an X window on the current display
 # for the virtal framebuffer. You can have the virtal framebuffer in vnc
-# instead, and connect using a vnc client (using localhost:<domain number>)
+# instead, and connect using a vnc client (using localhost:$vncdisplay)
+# If vncunused is set to 1 (this is the default value), vncdisplay
+# will be set to the first unused port; so it's recommended to
 #vnc = 1
+#vncdisplay = 0
+#vncunused = 0
+
+#Xen emulates a PS/2 mouse, but the pointer in the guest has difficulties
+# tracking the absolute position. Xen can emulate a USB tablet in addition
+# to the mouse which will report the absolute position of the pointer,
+# and make the mouse much easier to use. 
+# 
+usb=1
+usbdevice='tablet'
+#usbdevice='mouse'
 
 #============================================================================
