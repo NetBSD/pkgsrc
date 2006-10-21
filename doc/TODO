@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5594 2006/10/21 08:36:14 obache Exp $
+$NetBSD: TODO,v 1.5595 2006/10/21 09:26:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -878,7 +878,6 @@ Suggested package updates
 	o p5-PathTools-3.19 [pkg/34360]
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
-	o p5-Pod-Simple-3.04 [pkg/34418]
 	o p5-PostScript-MailLabels-2.21
 	o p5-SNMP_Session-1.08 [pkg/34382]
 	o p5-SVN-Web-0.45

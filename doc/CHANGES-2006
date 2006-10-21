@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1587 2006/10/21 09:08:41 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1588 2006/10/21 09:26:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-Pod-Coverage to 0.18 [obache 2006-10-21]
 	Updated devel/p5-Test-Pod-Coverage to 1.08 [obache 2006-10-21]
 	Added www/viewvc version 1.0.3 [adrianp 2006-10-21]
+	Updated textproc/p5-Pod-Simple to 3.04 [obache 2006-10-21]
