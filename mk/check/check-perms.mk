@@ -1,14 +1,14 @@
-# $NetBSD: check-perms.mk,v 1.1 2006/10/13 06:32:15 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.2 2006/10/21 11:13:10 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
 #
-# The following variables may be set by a package:
-#
-# The following variables may be set by the pkgsrc user in mk.conf:
+# User-settable variables:
 #
 # CHECK_PERMS: YesNo (default: yes for PKG_DEVELOPER, no otherwise)
 #	Specifies whether the permissions check should be run at all.
+#
+# Package-settable variables:
 #
 # CHECK_PERMS_SKIP: List of PathMask (default: empty)
 #	A list of patterns (like man/*) that should be excluded from the
@@ -46,11 +46,14 @@ _CHECK_PERMS_SKIP_FILTER+=	*) ;;
 _CHECK_PERMS_SKIP_FILTER+=	esac
 
 .PHONY: check-perms
-.if exists(${_CHECK_PERMS_CMD})
 check-perms:
 	@${STEP_MSG} "Checking file permissions in ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -e;								\
+	${_PKG_SILENT}${_PKG_DEBUG} set -eu;				\
+	if [ ! -x ${_CHECK_PERMS_CMD:Q}"" ]; then			\
+		${WARNING_MSG} "[check-perms.mk] Skipping file permissions check."; \
+		${WARNING_MSG} "[check-perms.mk] Install sysutils/checkperms to enable this check."; \
+		exit 0;							\
+	fi;								\
 	${PKG_FILELIST_CMD}						\
 	| sort								\
 	| sed -e 's,\\,\\\\,g'						\
@@ -60,8 +63,3 @@ check-perms:
 	  done								\
 	| awk ${_CHECK_PERMS_GETDIRS_AWK:Q}				\
 	| ${_CHECK_PERMS_CMD}
-.else
-check-perms:
-	@${WARNING_MSG} "[check-perms.mk] Skipping file permissions check."
-	@${WARNING_MSG} "[check-perms.mk] Install sysutils/checkperms to enable this check."
-.endif
