@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1582 2006/10/21 07:41:24 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1583 2006/10/21 07:51:01 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4917,3 +4917,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/drupal to 4.7.4 [adrianp 2006-10-20]
 	Added chat/anope version 1.7.17 [adrianp 2006-10-20]
 	Updated devel/p5-Test-Simple to 0.64 [obache 2006-10-21]
+	Added security/rainbowcrack version 1.2 [adrianp 2006-10-21]
