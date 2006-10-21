@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2005/11/22 21:55:55 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/21 07:38:42 obache Exp $
 
---- Makefile.PL.orig	2005-10-02 03:40:52.000000000 +0200
+--- Makefile.PL.orig	2006-07-09 18:49:50.000000000 +0900
 +++ Makefile.PL
-@@ -51,9 +51,7 @@ WriteMakefile(
-     LICENSE         => 'perl',
+@@ -50,9 +50,7 @@ WriteMakefile(
+     VERSION_FROM    => "lib/$PACKAGE_FILE.pm", # finds $VERSION
      PREREQ_PM       => { 
                          Test::Harness   => 2.03,
 -                       },
