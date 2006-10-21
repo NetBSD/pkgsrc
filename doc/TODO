@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5598 2006/10/21 13:34:22 obache Exp $
+$NetBSD: TODO,v 1.5599 2006/10/21 13:53:52 obache Exp $
 
 Suggested new packages
 ======================
@@ -759,7 +759,6 @@ Suggested package updates
 	o p5-CGI-Minimal-1.24
 	o p5-Class-Autouse-1.27
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Class-Factory-1.04 [pkg/34329]
 	o p5-Class-Loader-2.03 [pkg/34338]
 	o p5-Class-MethodMaker-2.08 [pkg/34327]
 	o p5-Clone-0.19 [pkg/34333]
