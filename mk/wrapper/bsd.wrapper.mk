@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.53 2006/09/17 22:52:45 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.54 2006/10/21 10:01:23 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -264,12 +264,14 @@ _WRAP_EXTRA_ARGS.CC+=	-Xcpluscomm -Olimit 6000
 .endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
-_WRAP_ARG_PP.CXX=	${WRAPPER_TMPDIR}/arg-pp-sunpro-cxx
-_WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-sunpro-cxx
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-sunpro-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-sunpro-cc
+_WRAP_ARG_PP.CXX=	${WRAPPER_TMPDIR}/arg-pp-sunpro-cxx
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+_WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-sunpro-cxx
+_WRAP_CACHE_BODY.CPP=	${_WRAP_CACHE_BODY.CC}
+_WRAP_TRANSFORM.CPP=	${_WRAP_TRANSFORM.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mxlc)
