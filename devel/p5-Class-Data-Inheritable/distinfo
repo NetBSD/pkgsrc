@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/11/23 22:08:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2006/10/21 13:32:32 obache Exp $
 
-SHA1 (Class-Data-Inheritable-0.04.tar.gz) = 81ea1aed71ab6c0ebdc6916ddece3e4fac3939e5
-RMD160 (Class-Data-Inheritable-0.04.tar.gz) = 678fd9226c3366b0b9f783ae8ddada30e972045f
-Size (Class-Data-Inheritable-0.04.tar.gz) = 5521 bytes
+SHA1 (Class-Data-Inheritable-0.06.tar.gz) = d4a4411dcce43d6de633d56a121d06d6fb39b34d
+RMD160 (Class-Data-Inheritable-0.06.tar.gz) = b90b7a9ef38c7a2fad789dbbcbb6cefeb064f162
+Size (Class-Data-Inheritable-0.06.tar.gz) = 5623 bytes
