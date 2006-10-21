@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5591 2006/10/21 07:41:24 obache Exp $
+$NetBSD: TODO,v 1.5592 2006/10/21 07:57:21 obache Exp $
 
 Suggested new packages
 ======================
@@ -805,7 +805,6 @@ Suggested package updates
 	o p5-DateTime-Set-0.25
 	o p5-Devel-Cycle-1.07 [pkg/34335]
 	o p5-Devel-SmallProf-2.00_03
-	o p5-Devel-Symdump-2.0602 [pkg/34342]
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0

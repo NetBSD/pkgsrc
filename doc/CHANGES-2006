@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1583 2006/10/21 07:51:01 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1584 2006/10/21 07:57:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4918,3 +4918,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added chat/anope version 1.7.17 [adrianp 2006-10-20]
 	Updated devel/p5-Test-Simple to 0.64 [obache 2006-10-21]
 	Added security/rainbowcrack version 1.2 [adrianp 2006-10-21]
+	Updated devel/p5-Devel-Symdump to 2.0604 [obache 2006-10-21]
