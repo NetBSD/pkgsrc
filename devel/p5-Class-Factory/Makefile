@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/08/06 06:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/21 13:51:50 obache Exp $
 
-DISTNAME=	Class-Factory-1.03
+DISTNAME=	Class-Factory-1.04
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5clf
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
