@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1590 2006/10/21 11:20:55 uebayasi Exp $
+>$NetBSD: CHANGES-2006,v 1.1591 2006/10/21 11:54:21 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4925,3 +4925,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-Pod-Simple to 3.04 [obache 2006-10-21]
 	Updated devel/p5-Test-Pod to 1.26 [obache 2006-10-21]
 	Updated lang/hugs to 200609 [uebayasi 2006-10-21]
+	Updated security/sfs to 0.7.2nb7 [agc 2006-10-21]
