@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5596 2006/10/21 09:39:43 obache Exp $
+$NetBSD: TODO,v 1.5597 2006/10/21 11:52:57 rillig Exp $
 
 Suggested new packages
 ======================
@@ -9,19 +9,10 @@ Suggested new packages
 	any complete, polished packages in pkgsrc-wip (ditto)
 	http://pkgsrc-wip.sourceforge.net/
 
-	loserjabber
-	GTK application which allows posting of journal entries to
-	  http://www.livejournal.com/ .
-	http://loserjabber.sourceforge.net/
-
 	resin
 	Fast JSP server. (I will import this when we have a native
 	Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
-
-	squirm
-	Fast and configurable redirector for Squid.
-	http://squirm.foote.com.au/
 
 	smsclient
 	Send SMS messages to mobile phones and pagers on wide range
@@ -32,9 +23,6 @@ Suggested new packages
 	SquirrelMail has a plugin feature and several plugins exist.
 	(See mail/sq-squirrelspell for an example.)
 	http://www.squirrelmail.org/index.php3?page=15
-
-	p5-Crypt-PasswdMD5-1.3
-	Provides interoperable MD5-based crypt() function
 
 	p5-CGI-AppToolkit-0.051
 	Perl CGI application toolkit
@@ -96,19 +84,10 @@ Suggested new packages
 	http://choosefont.sourceforge.net/
 	Utility for browsing, previewing and selecting a X11 font.
 
-	rkhunter
-	http://www.rkhunter.org/projects/rootkit_hunter.html
-	Security auditing scanner for rootkits, backdoors, local
-	exploits and more.
-
 	logrider
 	http://ilya-evseev.narod.ru/posix/logrider/
 	Scan system logs for alert/hacking signatures based on set
 	of static filters.
-
-	swatch
-	http://swatch.sourceforge.net/
-	Active log file monitoring tool.
 
 	ardour
 	http://ardour.org/
