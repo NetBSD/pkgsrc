@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/05 17:49:53 abs Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/21 20:00:45 he Exp $
 #
 
 DISTNAME=	Class-DBI-v3.0.14
@@ -19,6 +19,7 @@ DEPENDS+=	p5-File-Temp>=0.12:../../devel/p5-File-Temp
 DEPENDS+=	p5-Ima-DBI>=0.33:../../databases/p5-Ima-DBI
 DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 DEPENDS+=	p5-UNIVERSAL-moniker>=0.06:../../devel/p5-UNIVERSAL-moniker
+DEPENDS+=	p5-version>=0:../../devel/p5-version
 
 PERL5_PACKLIST=	auto/Class/DBI/.packlist
 
