@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.2 2006/10/12 20:36:34 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.3 2006/10/21 10:37:48 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -50,6 +50,8 @@ check_shell() {
 		# a safe usage of $RANDOM, it will pass the test.
 
 		# Strip comments.
+		# Note: this has the side-effect that the # in $# is also
+		# regarded as a comment.
 		line="${line%%#*}"
 
 		# Check for $RANDOM, which is specific to ksh and bash.
