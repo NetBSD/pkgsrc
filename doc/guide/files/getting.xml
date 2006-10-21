@@ -1,17 +1,16 @@
-<!-- $NetBSD: getting.xml,v 1.13 2006/09/25 09:45:31 rillig Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.14 2006/10/21 11:57:11 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
 
-	<para>The most common location where pkgsrc is installed is
-	<filename>/usr/pkgsrc</filename> for the <quote>package
-	sources</quote> and <filename>/usr/pkg</filename> for the
-	installed binary packages. You are though free to install the
-	sources and binary packages wherever you want in your
-	filesystem, provided that both paths do not contain white-space
-	or other characters that are interpreted specially by the shell
-	and some other programs. A safe bet is to use only letters,
-	digits, underscores and dashes in the names.</para>
+<para>Before you download and extract the files, you need to decide
+where you want to extract them. When using pkgsrc as root user, pkgsrc
+is usually installed in <filename>/usr/pkgsrc</filename>. You are though
+free to install the sources and binary packages wherever you want in
+your filesystem, provided that the pathname does not contain white-space
+or other characters that are interpreted specially by the shell and some
+other programs. A safe bet is to use only letters, digits, underscores
+and dashes.</para>
 
 <sect1 id="getting-first">
 <title>Getting pkgsrc for the first time</title>
