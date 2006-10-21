@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.54 2006/10/21 10:01:23 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.55 2006/10/21 11:42:25 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -343,6 +343,7 @@ _WRAP_SUBST_SED=							\
 	-e "s|@CAT@|${CAT:Q}|g"						\
 	-e "s|@ECHO@|${ECHO:Q}|g"					\
 	-e "s|@EXPR@|${EXPR:Q}|g"					\
+	-e "s|@MV@|${MV}|g"						\
 	-e "s|@SED@|${SED:Q}|g"						\
 	-e "s|@TEST@|${TEST:Q}|g"					\
 	-e "s|@WRAPPER_SHELL@|${WRAPPER_SHELL:Q}|g"			\
