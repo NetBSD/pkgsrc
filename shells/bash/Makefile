@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/10/07 08:22:08 taca Exp $
+# $NetBSD: Makefile,v 1.29 2006/10/21 11:39:16 rillig Exp $
 
 DISTNAME=	bash-3.1
 PKGNAME=	bash-3.1pl17
@@ -32,6 +32,7 @@ TEST_TARGET=		test
 
 INFO_FILES=		# PLIST
 PKG_SHELL=		bin/bash
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 # All features enabled by default.
 CONFIGURE_ARGS+=	--enable-readline
@@ -89,8 +90,8 @@ BUILDLINK_API_DEPENDS.readline+=	readline>=4.3
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
