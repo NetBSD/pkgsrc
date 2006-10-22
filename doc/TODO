@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5607 2006/10/22 21:40:36 wiz Exp $
+$NetBSD: TODO,v 1.5608 2006/10/22 21:41:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -43,10 +43,6 @@ Suggested new packages
 	wxmozilla
 	http://wxmozilla.sourceforge.net/
 	Mozilla using the wxWidgets toolkit.
-
-	linphone
-	http://www.linphone.org/
-	Telephony on Linux (and NetBSD?)
 
 	SlimServer
 	http://www.slimdevices.com/pi_features.html
@@ -153,11 +149,6 @@ Suggested new packages
 	server daemon. It lets users run messages through filters like
 	ClamAV and SpamAssassin during SMTP transactions, so the server
 	can reject mail before assuming responsibility for its delivery.
-
-	Nvu - Complete Web Authoring System
-	http://www.nvu.com/
-	Nvu is based on the Mozilla Composer and development
-	is financially supported by Linspire.
 
 	TROPHY
 	http://trophy.sourceforge.net/
