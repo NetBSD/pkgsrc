@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/09/15 15:12:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/10/22 22:50:41 wiz Exp $
 include/evolution-data-server-1.8/camel/broken-date-parser.h
 include/evolution-data-server-1.8/camel/camel-address.h
 include/evolution-data-server-1.8/camel/camel-arg.h
@@ -722,6 +722,7 @@ share/gtk-doc/html/libebook/EBookListener.html
 share/gtk-doc/html/libebook/EBookView.html
 share/gtk-doc/html/libebook/EBookViewListener.html
 share/gtk-doc/html/libebook/EContact.html
+share/gtk-doc/html/libebook/EDestination.html
 share/gtk-doc/html/libebook/EVCard.html
 share/gtk-doc/html/libebook/ch01.html
 share/gtk-doc/html/libebook/home.png
@@ -730,7 +731,6 @@ share/gtk-doc/html/libebook/index.sgml
 share/gtk-doc/html/libebook/left.png
 share/gtk-doc/html/libebook/libebook-EAddressWestern.html
 share/gtk-doc/html/libebook/libebook-ENameWestern.html
-share/gtk-doc/html/libebook/libebook-e-book-async.html
 share/gtk-doc/html/libebook/libebook-e-book-query.html
 share/gtk-doc/html/libebook/libebook-e-book-types.html
 share/gtk-doc/html/libebook/libebook.devhelp
