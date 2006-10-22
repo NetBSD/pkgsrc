@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.12 2005/01/12 22:58:29 grant Exp $
+# $NetBSD: xlc.mk,v 1.13 2006/10/22 00:14:17 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -33,6 +33,13 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+#
+# This is the compiler definition for IBM's XL C/C++ compiler suite.
+#
+# User-settable variables:
+#
+# XLCBASE
+#	The base directory where the compiler is installed.
 #
 
 .if !defined(COMPILER_XLC_MK)
