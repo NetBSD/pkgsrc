@@ -124,7 +124,7 @@ I. The pkgsrc user's guide
 
     7. Directory layout of the installed files
 
-        7.1. File system layout in ${PREFIX}
+        7.1. File system layout in ${LOCALBASE}
         7.2. File system layout in ${VARBASE}
 
     8. Frequently Asked Questions
@@ -154,6 +154,16 @@ I. The pkgsrc user's guide
 II. The pkgsrc developer's guide
 
     9. Creating a new pkgsrc package from scratch
+
+        9.1. Common types of packages
+
+            9.1.1. Perl modules
+            9.1.2. KDE applications
+
+        9.2. Examples
+
+            9.2.1. How the www/nvu package came into pkgsrc
+
     10. Package components - files, directories and contents
 
         10.1. Makefile
@@ -505,6 +515,20 @@ pkgsrc provides the following key features:
     needs. Support for local packages and patches is available right out of the
     box, so you can configure it specifically for your environment.
 
+The following principles are basic to pkgsrc:
+
+  * "It should only work if it's right." ? That means, if a package contains
+    bugs, it's better to find them and to complain about them rather than to
+    just install the package and hope that it works. There are numerous checks
+    in pkgsrc that try to find such bugs: Static analysis tools (pkgtools/
+    pkglint), build-time checks (portability of shell scripts), and
+    post-installation checks (installed files, references to shared libraries,
+    script interpreters).
+
+  * "If it works, it should work everywhere" ? Like NetBSD has been ported to
+    many hardware architectures, pkgsrc has been ported to many operating
+    systems. Care is taken that packages behave the same on all platforms.
+
 1.1.2. Supported platforms
 
 pkgsrc consists of both a source distribution and a binary distribution for
@@ -544,6 +568,7 @@ Table 1.1. Platforms supported by pkgsrc
 |---------------------------------------------+------------------|
 |OSF/1                                        |     Nov 2004     |
 +----------------------------------------------------------------+
+
 
 1.2. Overview
 
@@ -723,7 +748,7 @@ Table of Contents
 
 7. Directory layout of the installed files
 
-    7.1. File system layout in ${PREFIX}
+    7.1. File system layout in ${LOCALBASE}
     7.2. File system layout in ${VARBASE}
 
 8. Frequently Asked Questions
@@ -764,12 +789,13 @@ Table of Contents
     2.2.1. Via tar files
     2.2.2. Via CVS
 
-The most common location where pkgsrc is installed is /usr/pkgsrc for the
-"package sources" and /usr/pkg for the installed binary packages. You are
-though free to install the sources and binary packages wherever you want in
-your filesystem, provided that both paths do not contain white-space or other
-characters that are interpreted specially by the shell and some other programs.
-A safe bet is to use only letters, digits, underscores and dashes in the names.
+Before you download and extract the files, you need to decide where you want to
+extract them. When using pkgsrc as root user, pkgsrc is usually installed in /
+usr/pkgsrc. You are though free to install the sources and binary packages
+wherever you want in your filesystem, provided that the pathname does not
+contain white-space or other characters that are interpreted specially by the
+shell and some other programs. A safe bet is to use only letters, digits,
+underscores and dashes.
 
 2.1. Getting pkgsrc for the first time
 
@@ -795,8 +821,8 @@ The tar file for the stable branch 2006Q1 is in the directory 2006Q1 and is
 also called pkgsrc.tar.gz.
 
 After downloading the tar file, change to the directory where you want to have
-pkgsrc. This is usually /usr. Then, run tar xfz pkgsrc.tar.gz to extract the
-files.
+pkgsrc. This is usually /usr. Then, run gzcat pkgsrc.tar.gz | tar xf - to
+extract the files.
 
 2.1.2. Via SUP
 
@@ -966,6 +992,7 @@ Table 3.1. Binary kits and available packages
 |-----------------------------------+---------------+----------+---------------|
 |Solaris 9/i386                     |20030411       |binary kit|               |
 +------------------------------------------------------------------------------+
+
 
 Simply download the binary kit for your platform, and extract it into / e.g.
 
@@ -1724,6 +1751,13 @@ DISTDIR=/cdrom/pkgsrc/distfiles
 
 to your mk.conf.
 
+By default a list of distribution sites will be randomly intermixed to prevent
+huge load on servers which holding popular packages (for example,
+SourceForge.net mirrors). Thus, every time when you need to fetch yet another
+distfile all the mirrors will be tried in new (random) order. You can turn this
+feature off by setting MASTER_SORT_RANDOM=NO (for PKG_DEVELOPERs it's already
+disabled).
+
 You can overwrite some of the major distribution sites to fit to sites that are
 close to your own. By setting one or two variables you can modify the order in
 which the master sites are accessed. MASTER_SORT contains a whitespace
@@ -2192,6 +2226,12 @@ Some other options are scattered in the pkgsrc infrastructure:
   * CHECK_INTERPRETER (pkgsrc/mk/bsd.pkg.check.mk) can be set to "yes" to check
     that the installed "#!"-scripts will find their interpreter.
 
+  * PKGSRC_RUN_TEST can be set to "yes" to run each package's self-test before
+    installing it. Note that some packages make heavy use of "good" random
+    numbers, so you need to assure that the machine on which you are doing the
+    bulk builds is not completely idle. Otherwise some test programs will seem
+    to hang, while they are just waiting for new random data to be available.
+
 6.3.1.3. pre-build.local
 
 It is possible to configure the bulk build to perform certain site-specific
@@ -2519,7 +2559,7 @@ Chapter 7. Directory layout of the installed files
 
 Table of Contents
 
-7.1. File system layout in ${PREFIX}
+7.1. File system layout in ${LOCALBASE}
 7.2. File system layout in ${VARBASE}
 
 The files that are installed by pkgsrc are organized in a way that is similar
@@ -2529,7 +2569,25 @@ its file system hierarchy. Later it was largely influenced by NetBSD. But no
 matter which operating system you are using pkgsrc with, you can expect the
 same layout for pkgsrc.
 
-There are mainly three root directories for pkgsrc:
+There are mainly four root directories for pkgsrc, which are all configurable
+in the bootstrap/bootstrap script. When pkgsrc has been installed as root, the
+default locations are:
+
+    LOCALBASE=              /usr/pkg
+    PKG_SYSCONFBASE=        /usr/pkg/etc
+    VARBASE=                /var
+    PKGDBDIR=               /var/db/pkg
+
+In unprivileged mode (when pkgsrc has been installed as any other user), the
+default locations are:
+
+    LOCALBASE=              ${HOME}/pkg
+    PKG_SYSCONFBASE=        ${HOME}/pkg/etc
+    VARBASE=                ${HOME}/pkg/var
+    PKGDBDIR=               ${HOME}/pkg/var/db/pkg
+
+What these four directories are for, and what they look like is explained
+below.
 
   * LOCALBASE corresponds to the /usr directory in the base system. It is the
     "main" directory where the files are installed and contains the well-known
@@ -2541,9 +2599,10 @@ There are mainly three root directories for pkgsrc:
   * PKG_SYSCONFDIR corresponds to /etc in the base system. It contains
     configuration files of the packages, as well as pkgsrc's mk.conf itself.
 
-7.1. File system layout in ${PREFIX}
+7.1. File system layout in ${LOCALBASE}
 
-The following directories exist in a typical pkgsrc installation in ${PREFIX}.
+The following directories exist in a typical pkgsrc installation in $
+{LOCALBASE}.
 
 bin
 
@@ -3034,6 +3093,16 @@ more like a reference manual for pkgsrc.
 Table of Contents
 
 9. Creating a new pkgsrc package from scratch
+
+    9.1. Common types of packages
+
+        9.1.1. Perl modules
+        9.1.2. KDE applications
+
+    9.2. Examples
+
+        9.2.1. How the www/nvu package came into pkgsrc
+
 10. Package components - files, directories and contents
 
     10.1. Makefile
@@ -3242,6 +3311,17 @@ Table of Contents
 
 Chapter 9. Creating a new pkgsrc package from scratch
 
+Table of Contents
+
+9.1. Common types of packages
+
+    9.1.1. Perl modules
+    9.1.2. KDE applications
+
+9.2. Examples
+
+    9.2.1. How the www/nvu package came into pkgsrc
+
 When you find a package that is not yet in pkgsrc, you most likely have a URL
 from where you can download the source code. Starting with this URL, creating a
 package involves only a few steps.
@@ -3286,26 +3366,240 @@ package involves only a few steps.
     "good" one. If you don't know what pkglint's warnings want to tell you, try
     pkglint --explain or pkglint -e, which outputs additional explanations.
 
- 6. Now, run bmake to build the package. For the various things that can go
+ 6. In many cases the package is not yet ready to build. You can find
+    instructions for the most common cases in the next section, Section 9.1,
+    "Common types of packages". After you have followed the instructions over
+    there, you can hopefully continue here.
+
+ 7. Run bmake clean to clean the working directory from the extracted files.
+    Besides these files, a lot of cache files and other system information has
+    been saved in the working directory, which may become wrong after you
+    edited the Makefile.
+
+ 8. Now, run bmake to build the package. For the various things that can go
     wrong in this phase, consult Chapter 18, Making your package work.
 
- 7. When the package builds fine, the next step is to install the package. Run
+ 9. When the package builds fine, the next step is to install the package. Run
     bmake install and hope that everything works.
 
- 8. Up to now, the file PLIST, which contains a list of the files that are
+10. Up to now, the file PLIST, which contains a list of the files that are
     installed by the package, is nearly empty. Run bmake print-PLIST >PLIST to
     generate a probably correct list. Check the file using your preferred text
     editor to see if the list of files looks plausible.
 
- 9. Run pkglint again to see if the generated PLIST contains garbage or not.
+11. Run pkglint again to see if the generated PLIST contains garbage or not.
 
-10. When you ran bmake install, the package has been registered in the database
+12. When you ran bmake install, the package has been registered in the database
     of installed files, but with an empty list of files. To fix this, run bmake
     deinstall and bmake install again. Now the package is registered with the
     list of files from PLIST.
 
-11. Run bmake package to create a binary package from the set of installed
+13. Run bmake package to create a binary package from the set of installed
     files.
+
+9.1. Common types of packages
+
+9.1.1. Perl modules
+
+Simple Perl modules are handled automatically by url2pkg, including
+dependencies.
+
+9.1.2. KDE applications
+
+KDE applications should always include meta-pkgs/kde3/kde3.mk, which contains
+numerous settings that are typical of KDE packages.
+
+9.2. Examples
+
+9.2.1. How the www/nvu package came into pkgsrc
+
+9.2.1.1. The initial package
+
+Looking at the file pkgsrc/doc/TODO, I saw that the "nvu" package has not yet
+been imported into pkgsrc. As the description says it has to do with the web,
+the obvious choice for the category is "www".
+
+    $ mkdir www/nvu
+    $ cd www/nvu
+
+The web site says that the sources are available as a tar file, so I fed that
+URL to the url2pkg program:
+
+    $ url2pkg http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+
+My editor popped up, and I added a PKGNAME line below the DISTNAME line, as the
+package name should not have the word "sources" in it. I also filled in the
+MAINTAINER, HOMEPAGE and COMMENT fields. Then the package Makefile looked like
+that:
+
+    # $NetBSD$
+    #
+
+    DISTNAME=       nvu-1.0-sources
+    PKGNAME=        nvu-1.0
+    CATEGORIES=     www
+    MASTER_SITES=   http://cvs.nvu.com/download/
+    EXTRACT_SUFX=   .tar.bz2
+
+    MAINTAINER=     rillig@NetBSD.org
+    HOMEPAGE=       http://cvs.nvu.com/
+    COMMENT=        Web Authoring System
+
+    # url2pkg-marker (please do not remove this line.)
+    .include "../../mk/bsd.pkg.mk"
+
+Then, I quit the editor and watched pkgsrc downloading a large source archive:
+
+    url2pkg> Running "make makesum" ...
+    => Required installed package digest>=20010302: digest-20060826 found
+    => Fetching nvu-1.0-sources.tar.bz2
+    Requesting http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+    100% |*************************************| 28992 KB  150.77 KB/s    00:00 ETA
+    29687976 bytes retrieved in 03:12 (150.77 KB/s)
+    url2pkg> Running "make extract" ...
+    => Required installed package digest>=20010302: digest-20060826 found
+    => Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+    => Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+    work.bacc -> /tmp/roland/pkgsrc/www/nvu/work.bacc
+    ===> Installing dependencies for nvu-1.0
+    ===> Overriding tools for nvu-1.0
+    ===> Extracting for nvu-1.0
+    url2pkg> Adjusting the Makefile.
+
+    Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!
+
+    Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)
+
+9.2.1.2. Fixing all kinds of problems to make the package work
+
+Now that the package has been extracted, let's see what's inside it. The
+package has a README.txt, but that only says something about mozilla, so it's
+probably useless for seeing what dependencies this package has. But since there
+is a GNU configure script in the package, let's hope that it will complain
+about everything it needs.
+
+    $ bmake
+    => Required installed package digest>=20010302: digest-20060826 found
+    => Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+    => Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+    ===> Patching for nvu-1.0
+    ===> Creating toolchain wrappers for nvu-1.0
+    ===> Configuring for nvu-1.0
+    [...]
+    configure: error: Perl 5.004 or higher is required.
+    [...]
+    WARNING: Please add USE_TOOLS+=perl to the package Makefile.
+    [...]
+
+That worked quite well. So I opened the package Makefile in my editor, and
+since it already has a USE_TOOLS line, I just appended "perl" to it. Since the
+dependencies of the package have changed now, and since a perl wrapper is
+automatically installed in the "tools" phase, I need to build the package from
+scratch.
+
+    $ bmake clean
+    ===> Cleaning for nvu-1.0
+    $ bmake
+    [...]
+    *** /tmp/roland/pkgsrc/www/nvu/work.bacc/.tools/bin/make is not \
+    GNU Make.  You will not be able to build Mozilla without GNU Make.
+    [...]
+
+So I added "gmake" to the USE_TOOLS line and tried again (from scratch).
+
+    [...]
+    checking for GTK - version >= 1.2.0... no
+    *** Could not run GTK test program, checking why...
+    [...]
+
+Now to the other dependencies. The first question is: Where is the GTK package
+hidden in pkgsrc?
+
+    $ echo ../../*/gtk*
+    [many packages ...]
+    $ echo ../../*/gtk
+    ../../x11/gtk
+    $ echo ../../*/gtk2
+    ../../x11/gtk2
+    $ echo ../../*/gtk2/bui*
+    ../../x11/gtk2/buildlink3.mk
+
+The first try was definitely too broad. The second one had exactly one result,
+which is very good. But there is one pitfall with GNOME packages. Before GNOME
+2 had been released, there were already many GNOME 1 packages in pkgsrc. To be
+able to continue to use these packages, the GNOME 2 packages were imported as
+separate packages, and their names usually have a "2" appended. So I checked
+whether this was the case here, and indeed it was.
+
+Since the GTK2 package has a buildlink3.mk file, adding the dependency is very
+easy. I just inserted an .include line before the last line of the package
+Makefile, so that it now looks like this:
+
+    [...]
+    .include "../../x11/gtk2/buildlink3.mk"
+    .include "../../mk/bsd.pkg.mk
+
+After another bmake clean && bmake, the answer was:
+
+    [...]
+    checking for gtk-config... /home/roland/pkg/bin/gtk-config
+    checking for GTK - version >= 1.2.0... no
+    *** Could not run GTK test program, checking why...
+    *** The test program failed to compile or link. See the file config.log for the
+    *** exact error that occured. This usually means GTK was incorrectly installed
+    *** or that you have moved GTK since it was installed. In the latter case, you
+    *** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
+    configure: error: Test for GTK failed.
+    [...]
+
+In this particular case, the assumption that "every package prefers GNOME 2"
+had been wrong. The first of the lines above told me that this package really
+wanted to have the GNOME 1 version of GTK. If the package had looked for GTK2,
+it would have looked for pkg-config instead of gtk-config. So I changed the x11
+/gtk2 to x11/gtk in the package Makefile, and tried again.
+
+    [...]
+    cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr     -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
+    In file included from xpidl.c:42:
+    xpidl.h:53:24: libIDL/IDL.h: No such file or directory
+    In file included from xpidl.c:42:
+    xpidl.h:132: error: parse error before "IDL_ns"
+    [...]
+
+The package still does not find all of its dependencies. Now the question is:
+Which package provides the libIDL/IDL.h header file?
+
+    $ echo ../../*/*idl*
+    ../../devel/py-idle ../../wip/idled ../../x11/acidlaunch
+    $ echo ../../*/*IDL*
+    ../../net/libIDL
+
+Let's take the one from the second try. So I included the ../../net/libIDL/
+buildlink3.mk file and tried again. But the error didn't change. After digging
+through some of the code, I concluded that the build process of the package was
+broken and couldn't have ever worked, but since the Mozilla source tree is
+quite large, I didn't want to fix it. So I added the following to the package
+Makefile and tried again:
+
+    CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
+    BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+
+The latter line is needed because the package expects the library libIDL.so,
+but only libIDL-2.so is available. So I told the compiler wrapper to rewrite
+that on the fly.
+
+The next problem was related to a recent change of the FreeType interface. I
+looked up in www/seamonkey which patch files were relevant for this issue and
+copied them to the patches directory. Then I retried, fixed the patches so that
+they applied cleanly and retried again. This time, everything worked.
+
+9.2.1.3. Installing the package
+
+    $ bmake CHECK_FILES=no install
+    [...]
+    $ bmake print-PLIST >PLIST
+    $ bmake deinstall
+    $ bmake install
 
 Chapter 10. Package components - files, directories and contents
 
@@ -3569,6 +3863,7 @@ Table 10.1. Patching examples
 |         |              }                         |                }                                     |
 |         |                                        |                                                      |
 +---------------------------------------------------------------------------------------------------------+
+
 
 For more information, please read the Making packager-friendly software article
 (part 1, part 2). It summarizes multiple details on how to make software easier
@@ -4231,8 +4526,8 @@ issues:
   * oss.buildlink3.mk defines several variables that may be used by packages
     that use the Open Sound System (OSS) API.
 
-  * pgsql.buildlink3.mk will accept either Postgres 7.3 or 7.4, whichever is
-    found installed. See the file for more information.
+  * pgsql.buildlink3.mk will accept either Postgres 7.4, 8.0, or 8.1, whichever
+    is found installed. See the file for more information.
 
   * pthread.buildlink3.mk uses the value of PTHREAD_OPTS and checks for native
     pthreads or adds a dependency on devel/pth as needed.
@@ -5262,8 +5557,9 @@ they are fetched using commands of the form
 where ${site} varies through several possibilities in turn: first,
 MASTER_SITE_OVERRIDE is tried, then the sites specified in either SITES.file if
 defined, else MASTER_SITES or PATCH_SITES, as applies, then finally the value
-of MASTER_SITE_BACKUP. The order of all except the first can be optionally
-sorted by the user, via setting either MASTER_SORT_AWK or MASTER_SORT_REGEX.
+of MASTER_SITE_BACKUP. The order of all except the first and the last can be
+optionally sorted by the user, via setting either MASTER_SORT_RANDOM, and
+MASTER_SORT_AWK or MASTER_SORT_REGEX.
 
 16.6. The checksum phase
 
@@ -6033,8 +6329,7 @@ acceptance of the particular license:
 
 When adding a package with a new license, the license text should be added to
 pkgsrc/licenses for displaying. A list of known licenses can be seen in this
-directory as well as by looking at the list of (commented out)
-ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/defaults/mk.conf.
+directory.
 
 The use of LICENSE=shareware, LICENSE=no-commercial-use, and similar language
 is deprecated because it does not crisply refer to a particular license text.
@@ -7617,6 +7912,7 @@ Table 22.1. PLIST handling for GNOME packages
 |information.                               |                                 |
 +-----------------------------------------------------------------------------+
 
+
 22.3. Updating GNOME to a newer version
 
 When seeing GNOME as a whole, there are two kinds of updates:
@@ -8536,8 +8832,11 @@ The procedure to edit the pkgsrc guide is:
  6. Run bmake clean && bmake to regenerate the output files with the proper RCS
     Ids.
 
- 7. Run bmake regenerate to regenerate the files in both pkgsrc/doc and htdocs.
+ 7. Run bmake regen to install and commit the files in both pkgsrc/doc and
+    htdocs.
 
- 8. If you have added, removed or renamed some chapters, you need to
+    Note
+
+    If you have added, removed or renamed some chapters, you need to
     synchronize them using cvs add or cvs delete in the htdocs directory.
 

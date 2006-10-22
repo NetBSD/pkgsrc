@@ -5,11 +5,7 @@
 <title>The pkgsrc guide</title>
 <link rel="stylesheet" href="/NetBSD.css" type="text/css">
 <meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
-<meta name="description" content="pkgsrc is a centralized package management system for
-	Unix-like operating systems. This guide provides information for
-	users and developers of pkgsrc. It covers installation of binary
-	and source packages, creation of binary and source packages and
-	a high-level overview about the infrastructure.">
+<meta name="description" content="pkgsrc is a centralized package management system for Unix-like operating systems. This guide provides information for users and developers of pkgsrc. It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure.">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" lang="en">
 <div class="titlepage">
@@ -146,7 +142,7 @@
 </dl></dd>
 <dt><span class="chapter"><a href="#files">7. Directory layout of the installed files</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#files.localbase">7.1. File system layout in <code class="literal">${PREFIX}</code></a></span></dt>
+<dt><span class="sect1"><a href="#files.localbase">7.1. File system layout in <code class="literal">${LOCALBASE}</code></a></span></dt>
 <dt><span class="sect1"><a href="#files.varbase">7.2. File system layout in <code class="literal">${VARBASE}</code></a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#faq">8. Frequently Asked Questions</a></span></dt>
@@ -176,6 +172,15 @@
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
 <dd><dl>
 <dt><span class="chapter"><a href="#creating">9. Creating a new pkgsrc package from scratch</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#creating.common">9.1. Common types of packages</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#creating.perl-module">9.1.1. Perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">9.1.2. KDE applications</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="#creating.examples">9.2. Examples</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#creating.nvu">9.2.1. How the www/nvu package came into pkgsrc</a></span></dt></dl></dd>
+</dl></dd>
 <dt><span class="chapter"><a href="#components">10. Package components - files, directories and contents</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#components.Makefile">10.1. <code class="filename">Makefile</code></a></span></dt>
@@ -493,13 +498,13 @@ packages for himself, which is a time-costly task.</p>
 <p>pkgsrc currently contains several thousand packages,
       including:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/apache/README.html" target="_top"><code class="filename">www/apache</code></a> - The Apache
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/apache/README.html" target="_top"><code class="filename">www/apache</code></a> - The Apache
 	  web server</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> - The Firefox
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> - The Firefox
 	  web browser</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome/README.html" target="_top"><code class="filename">meta-pkgs/gnome</code></a> - The GNOME
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/gnome/README.html" target="_top"><code class="filename">meta-pkgs/gnome</code></a> - The GNOME
 	  Desktop Environment</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a> - The K
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a> - The K
 	  Desktop Environment</p></li>
 </ul></div>
 <p>...just to name a few.</p>
@@ -541,6 +546,20 @@ pkgsrc provides the following key features:
   available right out of the box, so you can configure it specifically
   for your environment.</p></li>
 </ul></div>
+<p>The following principles are basic to pkgsrc:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
+&mdash; That means, if a package contains bugs, it's better to find
+them and to complain about them rather than to just install the package
+and hope that it works. There are numerous checks in pkgsrc that try to
+find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
+of shell scripts), and post-installation checks (installed files,
+references to shared libraries, script interpreters).</p></li>
+<li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
+&mdash; Like NetBSD has been ported to many hardware architectures,
+pkgsrc has been ported to many operating systems. Care is taken that
+packages behave the same on all platforms.</p></li>
+</ul></div>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -554,7 +573,7 @@ minutes!</p>
       grown a lot, and now supports the following platforms:</p>
 <div class="table">
 <a name="supported-platforms"></a><p class="title"><b>Table 1.1. Platforms supported by pkgsrc</b></p>
-<table summary="Platforms supported by pkgsrc" border="1">
+<div class="table-contents"><table summary="Platforms supported by pkgsrc" border="1">
 <colgroup>
 <col>
 <col>
@@ -619,8 +638,9 @@ minutes!</p>
 <td align="center">Nov 2004</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
+<br class="table-break">
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -816,7 +836,7 @@ minutes!</p>
 </dl></dd>
 <dt><span class="chapter"><a href="#files">7. Directory layout of the installed files</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#files.localbase">7.1. File system layout in <code class="literal">${PREFIX}</code></a></span></dt>
+<dt><span class="sect1"><a href="#files.localbase">7.1. File system layout in <code class="literal">${LOCALBASE}</code></a></span></dt>
 <dt><span class="sect1"><a href="#files.varbase">7.2. File system layout in <code class="literal">${VARBASE}</code></a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#faq">8. Frequently Asked Questions</a></span></dt>
@@ -863,15 +883,14 @@ minutes!</p>
 </dl></dd>
 </dl>
 </div>
-<p>The most common location where pkgsrc is installed is
-	<code class="filename">/usr/pkgsrc</code> for the &#8220;<span class="quote">package
-	sources</span>&#8221; and <code class="filename">/usr/pkg</code> for the
-	installed binary packages. You are though free to install the
-	sources and binary packages wherever you want in your
-	filesystem, provided that both paths do not contain white-space
-	or other characters that are interpreted specially by the shell
-	and some other programs. A safe bet is to use only letters,
-	digits, underscores and dashes in the names.</p>
+<p>Before you download and extract the files, you need to decide
+where you want to extract them. When using pkgsrc as root user, pkgsrc
+is usually installed in <code class="filename">/usr/pkgsrc</code>. You are though
+free to install the sources and binary packages wherever you want in
+your filesystem, provided that the pathname does not contain white-space
+or other characters that are interpreted specially by the shell and some
+other programs. A safe bet is to use only letters, digits, underscores
+and dashes.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="getting-first"></a>2.1. Getting pkgsrc for the first time</h2></div></div></div>
@@ -899,8 +918,8 @@ minutes!</p>
 	directory <code class="filename">2006Q1</code> and is also called <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/2006Q1/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
 <p>After downloading the tar file, change to the directory
 	where you want to have pkgsrc. This is usually
-	<code class="filename">/usr</code>. Then, run <span><strong class="command">tar xfz
-	pkgsrc.tar.gz</strong></span> to extract the files.</p>
+	<code class="filename">/usr</code>. Then, run <span><strong class="command">gzcat
+	pkgsrc.tar.gz | tar xf -</strong></span> to extract the files.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -1049,7 +1068,7 @@ directory on ftp.NetBSD.org.</p>
 </div>
 <div class="table">
 <a name="binary-kits"></a><p class="title"><b>Table 3.1. Binary kits and available packages</b></p>
-<table summary="Binary kits and available packages" border="1">
+<div class="table-contents"><table summary="Binary kits and available packages" border="1">
 <colgroup>
 <col>
 <col>
@@ -1220,9 +1239,9 @@ directory on ftp.NetBSD.org.</p>
 <td class="binary-pkgs-url"> </td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<p>
+<br class="table-break"><p>
 Simply download the binary kit for your platform, and extract it into
 <code class="filename">/</code> e.g.
 </p>
@@ -1496,10 +1515,10 @@ file and inspect the contents before extracting it.
 <p>Interix has no native support for audio output.  For audio
 	  support, pkgsrc uses the <span><strong class="command">esound</strong></span> client/server
 	  audio system on Interix.  Unlike on most platforms, the
-	  <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/audio/esound/README.html" target="_top"><code class="filename">audio/esound</code></a> package does
+	  <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/audio/esound/README.html" target="_top"><code class="filename">audio/esound</code></a> package does
 	  <span class="emphasis"><em>not</em></span> contain the <span><strong class="command">esd</strong></span>
 	  server component.  To output audio via an Interix host, the
-	  <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/emulators/cygwin_esound/README.html" target="_top"><code class="filename">emulators/cygwin_esound</code></a> package
+	  <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/emulators/cygwin_esound/README.html" target="_top"><code class="filename">emulators/cygwin_esound</code></a> package
 	  must also be installed.</p>
 </li>
 <li>
@@ -1702,7 +1721,7 @@ file and inspect the contents before extracting it.
 	for building all packages.</p>
 <p>It is recommended that an external gcc be used only for bootstrapping,
 	then either build gcc from
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/gcc/README.html" target="_top"><code class="filename">lang/gcc</code></a> or install a binary gcc
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/gcc/README.html" target="_top"><code class="filename">lang/gcc</code></a> or install a binary gcc
 	package, then remove gcc used during bootstrapping.</p>
 <p>Binary packages of gcc can be found through <a href="http://www.sun.com/bigadmin/common/freewareSearch.html" target="_top">http://www.sun.com/bigadmin/common/freewareSearch.html</a>.</p>
 </div>
@@ -1789,13 +1808,13 @@ file and inspect the contents before extracting it.
 <p>Sometimes, when using <span><strong class="command">libtool</strong></span>,
       <code class="filename">/bin/ksh</code> crashes with a segmentation fault.
       The workaround is to use another shell for the configure
-      scripts, for example by installing <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a> and adding the following lines
+      scripts, for example by installing <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a> and adding the following lines
       to your <code class="filename">mk.conf</code>:</p>
 <pre class="programlisting">
 	CONFIG_SHELL=   ${LOCALBASE}/bin/bash
 	WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
       </pre>
-<p>Then, rebuild the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/libtool-base/README.html" target="_top"><code class="filename">devel/libtool-base</code></a> package.</p>
+<p>Then, rebuild the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/libtool-base/README.html" target="_top"><code class="filename">devel/libtool-base</code></a> package.</p>
 </div>
 </div>
 </div>
@@ -1937,7 +1956,7 @@ and you can still use binary packages from someone else.</p>
     moved, since removing them could cause missing dependencies. To
     use these packages, add the <code class="filename">vulnerable</code>
     directory to your <code class="varname">PKG_PATH</code>. However, you should run
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly,
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly,
     especially after installing new packages, and verify that the
     vulnerabilities are acceptable for your configuration. An example
     <code class="varname">PKG_PATH</code> would be:
@@ -1991,14 +2010,14 @@ and you can still use binary packages from someone else.</p>
       FTP site at <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities</a>.
     </p>
 <p>
-      Through <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>, 
+      Through <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>, 
       this list can be downloaded
       automatically, and a security audit of all packages installed on a system
       can take place.
     </p>
 <p>
       There are two components to 
-      <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.  The first
+      <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.  The first
       component, &#8220;<span class="quote">download-vulnerability-list</span>&#8221;, is for downloading
       the list of vulnerabilities from the NetBSD FTP site.  The second
       component, &#8220;<span class="quote">audit-packages</span>&#8221;, checks to see if any of your
@@ -2008,18 +2027,18 @@ and you can still use binary packages from someone else.</p>
 <pre class="screen">Package samba-2.0.9 has a local-root-shell vulnerability, see
     http://www.samba.org/samba/whatsnew/macroexploit.html</pre>
 <p>
-      One can set up <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> to download the
+      One can set up <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> to download the
       <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
       file daily, and include a package audit in the daily security script.
       Details on this are located in the <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top">MESSAGE</a>
-      file for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.
+      file for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.
     </p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="pkg_versions"></a>4.1.6. Finding if newer versions of your installed packages are in pkgsrc</h3></div></div></div>
 <p>
-      Install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a> and run 
+      Install <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a> and run 
       <span><strong class="command">lintpkgsrc</strong></span> with the &#8220;<span class="quote">-i</span>&#8221;
       argument to check if your packages are up-to-date, e.g.
     </p>
@@ -2062,7 +2081,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
   categories. You can browse the online index of packages, or run
   <span><strong class="command">make readme</strong></span> from the <code class="filename">pkgsrc</code>
   directory to build local <code class="filename">README.html</code> files for
-  all packages, viewable with any web browser such as <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/lynx/README.html" target="_top"><code class="filename">www/lynx</code></a> or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a>.</p>
+  all packages, viewable with any web browser such as <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/lynx/README.html" target="_top"><code class="filename">www/lynx</code></a> or <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a>.</p>
 <p>The default <span class="emphasis"><em>prefix</em></span> for installed packages
   is <code class="filename">/usr/pkg</code>. If you wish to change this, you
   should do so by setting <code class="varname">LOCALBASE</code> in
@@ -2096,6 +2115,13 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <pre class="screen">DISTDIR=/cdrom/pkgsrc/distfiles</pre>
 <p>
     to your <code class="filename">mk.conf</code>.</p>
+<p>By default a list of distribution sites will be randomly
+    intermixed to prevent huge load on servers which holding popular
+    packages (for example, SourceForge.net mirrors). Thus, every
+    time when you need to fetch yet another distfile all the mirrors
+    will be tried in new (random) order. You can turn this feature
+    off by setting <code class="varname">MASTER_SORT_RANDOM=NO</code> (for
+    <code class="varname">PKG_DEVELOPER</code>s it's already disabled).</p>
 <p>You can overwrite some of the major distribution sites to
     fit to sites that are close to your own.  By setting one or two
     variables you can modify the order in which the master sites are
@@ -2113,7 +2139,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     and adding the definitions there.</p>
 <p>
       If a package depends on many other packages (such as
-      <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a>), the build process may 
+      <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/kde3/README.html" target="_top"><code class="filename">meta-pkgs/kde3</code></a>), the build process may 
       alternate between periods of
       downloading source, and compiling. To ensure you have all the source
       downloaded initially you can run the command:
@@ -2432,7 +2458,7 @@ works.</p>
 <p>Using <code class="varname">CFLAGS=</code> (i.e. without the
 	&#8220;<span class="quote">+</span>&#8221;) may lead to problems with packages that need
 	to add their own flags.  Also, you may want to take a look at
-	the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a> package if
+	the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a> package if
 	you're interested in optimization for the current CPU.</p>
 </div>
 <div class="sect2" lang="en">
@@ -2597,7 +2623,7 @@ PKG_OPTIONS.apache=     suexec </pre>
     it. Binary packages are created by default in
     <code class="filename">/usr/pkgsrc/packages</code>, in the form of a
     gzipped tar file. See <a href="#logs.package" title="B.2. Packaging figlet">Section B.2, &#8220;Packaging figlet&#8221;</a> for a
-    continuation of the above <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/misc/figlet/README.html" target="_top"><code class="filename">misc/figlet</code></a> example.</p>
+    continuation of the above <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/misc/figlet/README.html" target="_top"><code class="filename">misc/figlet</code></a> example.</p>
 <p>See <a href="#submit" title="Chapter 20. Submitting and Committing">Chapter 20, <i>Submitting and Committing</i></a> for information on how to submit
     such a binary package.</p>
 </div>
@@ -2693,6 +2719,15 @@ PKG_OPTIONS.apache=     suexec </pre>
 	  &#8220;<span class="quote">yes</span>&#8221; to check that the installed
 	  &#8220;<span class="quote">#!</span>&#8221;-scripts will find their
 	  interpreter.</p></li>
+<li><p><code class="varname">PKGSRC_RUN_TEST</code> can be
+	  set to &#8220;<span class="quote"><code class="literal">yes</code></span>&#8221; to run each
+	  package's self-test before installing it. Note that some
+	  packages make heavy use of &#8220;<span class="quote">good</span>&#8221; random
+	  numbers, so you need to assure that the machine on which you
+	  are doing the bulk builds is not completely idle. Otherwise
+	  some test programs will seem to hang, while they are just
+	  waiting for new random data to be
+	  available.</p></li>
 </ul></div>
 </div>
 <div class="sect3" lang="en">
@@ -2845,7 +2880,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sandbox/dev ; sh MAKEDEV all</code></strong></pre>
 </li>
 <li>
-<p><code class="filename">/etc/resolv.conf</code> (for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/smtpd/README.html" target="_top"><code class="filename">security/smtpd</code></a> and mail):</p>
+<p><code class="filename">/etc/resolv.conf</code> (for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/smtpd/README.html" target="_top"><code class="filename">security/smtpd</code></a> and mail):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cp /etc/resolv.conf /usr/sandbox/etc</code></strong></pre>
 </li>
 <li>
@@ -2853,12 +2888,12 @@ PKG_OPTIONS.apache=     suexec </pre>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cp /etc/mail/sendmail.cf /usr/sandbox/etc/mail</code></strong></pre>
 </li>
 <li>
-<p><code class="filename">/etc/localtime</code> (for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/smtpd/README.html" target="_top"><code class="filename">security/smtpd</code></a>):</p>
+<p><code class="filename">/etc/localtime</code> (for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/smtpd/README.html" target="_top"><code class="filename">security/smtpd</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime</code></strong></pre>
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -3004,7 +3039,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <p>After your pkgsrc bulk-build has completed, you may wish to
     create a CD-ROM set of the resulting binary packages to assist
     in installing packages on other machines.  The
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/cdpack/README.html" target="_top"><code class="filename">pkgtools/cdpack</code></a> package provides
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/cdpack/README.html" target="_top"><code class="filename">pkgtools/cdpack</code></a> package provides
     a simple tool for creating the ISO 9660 images.
     <span><strong class="command">cdpack</strong></span> arranges the packages on the CD-ROMs in a
     way that keeps all the dependencies for a given package on the same
@@ -3050,7 +3085,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#files.localbase">7.1. File system layout in <code class="literal">${PREFIX}</code></a></span></dt>
+<dt><span class="sect1"><a href="#files.localbase">7.1. File system layout in <code class="literal">${LOCALBASE}</code></a></span></dt>
 <dt><span class="sect1"><a href="#files.varbase">7.2. File system layout in <code class="literal">${VARBASE}</code></a></span></dt>
 </dl>
 </div>
@@ -3061,7 +3096,26 @@ pkgsrc initially came from FreeBSD and had adopted its file system
 hierarchy. Later it was largely influenced by NetBSD. But no matter
 which operating system you are using pkgsrc with, you can expect the
 same layout for pkgsrc.</p>
-<p>There are mainly three root directories for pkgsrc:</p>
+<p>There are mainly four root directories for pkgsrc, which are all
+configurable in the <code class="filename">bootstrap/bootstrap</code> script.
+When pkgsrc has been installed as root, the default locations
+are:</p>
+<pre class="programlisting">
+    LOCALBASE=              /usr/pkg
+    PKG_SYSCONFBASE=        /usr/pkg/etc
+    VARBASE=                /var
+    PKGDBDIR=               /var/db/pkg
+</pre>
+<p>In unprivileged mode (when pkgsrc has been installed as any other
+user), the default locations are:</p>
+<pre class="programlisting">
+    LOCALBASE=              ${HOME}/pkg
+    PKG_SYSCONFBASE=        ${HOME}/pkg/etc
+    VARBASE=                ${HOME}/pkg/var
+    PKGDBDIR=               ${HOME}/pkg/var/db/pkg
+</pre>
+<p>What these four directories are for, and what they look like is
+explained below.</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="varname">LOCALBASE</code> corresponds to the
 <code class="filename">/usr</code> directory in the base system. It is the
@@ -3081,9 +3135,9 @@ itself.</p></li>
 </ul></div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="files.localbase"></a>7.1. File system layout in <code class="literal">${PREFIX}</code></h2></div></div></div>
+<a name="files.localbase"></a>7.1. File system layout in <code class="literal">${LOCALBASE}</code></h2></div></div></div>
 <p>The following directories exist in a typical pkgsrc installation
-in <code class="filename">${PREFIX}</code>.</p>
+in <code class="filename">${LOCALBASE}</code>.</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="filename">bin</code></span></dt>
 <dd><p>Contains executable programs that are intended to be
@@ -3242,71 +3296,71 @@ section attempts only to make the reader aware of the utilities and when
 they might be useful, and not to duplicate the documentation that comes
 with each package.</p>
 <p>Utilities used by pkgsrc (automatically installed when needed):</p>
-<div class="itemizedlist"><ul type="disc"><li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/x11-links/README.html" target="_top"><code class="filename">pkgtools/x11-links</code></a>:
+<div class="itemizedlist"><ul type="disc"><li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/x11-links/README.html" target="_top"><code class="filename">pkgtools/x11-links</code></a>:
       Symlinks for use by buildlink.</p></li></ul></div>
 <p>OS tool augmentation (automatically installed when needed):</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/digest/README.html" target="_top"><code class="filename">pkgtools/digest</code></a>:
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/digest/README.html" target="_top"><code class="filename">pkgtools/digest</code></a>:
       Calculates various kinds of checksums (including SHA1).</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/libnbcompat/README.html" target="_top"><code class="filename">pkgtools/libnbcompat</code></a>:
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/libnbcompat/README.html" target="_top"><code class="filename">pkgtools/libnbcompat</code></a>:
       Compatibility library for pkgsrc tools.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/mtree/README.html" target="_top"><code class="filename">pkgtools/mtree</code></a>: Installed on
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/mtree/README.html" target="_top"><code class="filename">pkgtools/mtree</code></a>: Installed on
       non-BSD systems due to lack of native mtree.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a>:
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a>:
       Up-to-date replacement for
       <code class="filename">/usr/sbin/pkg_install</code>, or for use on operating
       systems where pkg_install is not present.</p></li>
 </ul></div>
 <p>Utilities used by pkgsrc (not automatically installed):</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_tarup/README.html" target="_top"><code class="filename">pkgtools/pkg_tarup</code></a>:
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_tarup/README.html" target="_top"><code class="filename">pkgtools/pkg_tarup</code></a>:
       Create a binary package from an
       already-installed package.  Used by <span><strong class="command">make replace</strong></span> to
       save the old package.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/dfdisk/README.html" target="_top"><code class="filename">pkgtools/dfdisk</code></a>:
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/dfdisk/README.html" target="_top"><code class="filename">pkgtools/dfdisk</code></a>:
       Adds extra functionality to pkgsrc, allowing it to fetch distfiles
       from multiple locations. It currently supports the following
       methods: multiple CD-ROMs and network FTP/HTTP connections.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/xpkgwedge/README.html" target="_top"><code class="filename">pkgtools/xpkgwedge</code></a>: Put X11
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/xpkgwedge/README.html" target="_top"><code class="filename">pkgtools/xpkgwedge</code></a>: Put X11
       packages someplace else (enabled by default).</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a>: Determine the
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a>: Determine the
       best compiler flags to optimise code for your current CPU and
       compiler.</p></li>
 </ul></div>
 <p>Utilities for keeping track of installed packages, being up to date,
 etc:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a>: Reports on
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a>: Reports on
       packages whose installed versions do not match the latest pkgsrc
       entries.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdep/README.html" target="_top"><code class="filename">pkgtools/pkgdep</code></a>: Makes
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdep/README.html" target="_top"><code class="filename">pkgtools/pkgdep</code></a>: Makes
       dependency graphs of packages, to aid in choosing a strategy for
       updating.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdepgraph/README.html" target="_top"><code class="filename">pkgtools/pkgdepgraph</code></a>: Makes
-      graphs from the output of <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdep/README.html" target="_top"><code class="filename">pkgtools/pkgdep</code></a> (uses graphviz).</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>: The
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdepgraph/README.html" target="_top"><code class="filename">pkgtools/pkgdepgraph</code></a>: Makes
+      graphs from the output of <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdep/README.html" target="_top"><code class="filename">pkgtools/pkgdep</code></a> (uses graphviz).</p></li>
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>: The
       pkglint(1) program checks a pkgsrc entry for errors, lintpkgsrc(1)
       does various checks on the complete pkgsrc system.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgsurvey/README.html" target="_top"><code class="filename">pkgtools/pkgsurvey</code></a>: Report what
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgsurvey/README.html" target="_top"><code class="filename">pkgtools/pkgsurvey</code></a>: Report what
       packages you have installed.</p></li>
 </ul></div>
 <p>Utilities for people maintaining or creating individual packages:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a>: Automate
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a>: Automate
       making and maintaining patches for a package (includes pkgdiff,
       pkgvi, mkpatches, etc.).</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/rpm2pkg/README.html" target="_top"><code class="filename">pkgtools/rpm2pkg</code></a>,
-      <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a>: Aids in
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/rpm2pkg/README.html" target="_top"><code class="filename">pkgtools/rpm2pkg</code></a>,
+      <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a>: Aids in
       converting to pkgsrc.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/gensolpkg/README.html" target="_top"><code class="filename">pkgtools/gensolpkg</code></a>: Convert
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/gensolpkg/README.html" target="_top"><code class="filename">pkgtools/gensolpkg</code></a>: Convert
       pkgsrc to a Solaris package.</p></li>
 </ul></div>
 <p>Utilities for people maintaining pkgsrc (or: more obscure pkg
 utilities)</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_comp/README.html" target="_top"><code class="filename">pkgtools/pkg_comp</code></a>: Build
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_comp/README.html" target="_top"><code class="filename">pkgtools/pkg_comp</code></a>: Build
       packages in a chrooted area.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/libkver/README.html" target="_top"><code class="filename">pkgtools/libkver</code></a>: Spoof
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/libkver/README.html" target="_top"><code class="filename">pkgtools/libkver</code></a>: Spoof
       kernel version for chrooted cross builds.</p></li>
 </ul></div>
 </div>
@@ -3453,13 +3507,13 @@ by running:</p>
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tmac.andoc-missing"></a>8.11. What does &#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</h2></div></div></div>
-<p>When compiling the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a>
+<p>When compiling the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a>
 package, you get the error from make that it doesn't know how to make
 <code class="filename">/usr/share/tmac/tmac.andoc</code>? This indicates that
 you don't have installed the &#8220;<span class="quote">text</span>&#8221; set (nroff, ...) from
 the NetBSD base distribution on your machine.  It is recommended to do
 that to format man pages.</p>
-<p>In the case of the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a> package, you
+<p>In the case of the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a> package, you
 can get away with setting <code class="varname">NOMAN=YES</code> either in the
 environment or in <code class="filename">/etc/mk.conf</code>.</p>
 </div>
@@ -3483,7 +3537,7 @@ the one that corresponds to your release (determine via <span><strong class="com
 password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install sudo (either as binary package or from
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/sudo/README.html" target="_top"><code class="filename">security/sudo</code></a>) and then put the following
+<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/sudo/README.html" target="_top"><code class="filename">security/sudo</code></a>) and then put the following
 into your <code class="filename">/etc/mk.conf</code>:</p>
 <pre class="programlisting">
     .if exists(${LOCALBASE}/bin/sudo)
@@ -3522,7 +3576,7 @@ attackers.  In an effort to lessen the exposure, the NetBSD packages team
 maintains a database of known-exploits to packages which have at one time
 been included in pkgsrc.  The database can be downloaded automatically, and
 a security audit of all packages installed on a system can take place.  To
-do this, install the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> package.  It has two
+do this, install the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> package.  It has two
 components:</p>
 <div class="orderedlist"><ol type="1">
 <li>
@@ -3538,7 +3592,7 @@ components:</p>
     including a description of the type of vulnerability, and a URL
     containing more information.</p></li>
 </ol></div>
-<p>Use of the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>
+<p>Use of the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>
 package is strongly recommended!  After
 &#8220;<span class="quote">audit-packages</span>&#8221; is installed, please read
 the package's message, which you can get by running <strong class="userinput"><code>pkg_info -D
@@ -3610,7 +3664,7 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
   anyway.</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>Run <span><strong class="command">pkg_chk -N</strong></span> (from the
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a> package).  It
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a> package).  It
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
@@ -3637,6 +3691,15 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="chapter"><a href="#creating">9. Creating a new pkgsrc package from scratch</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#creating.common">9.1. Common types of packages</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#creating.perl-module">9.1.1. Perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">9.1.2. KDE applications</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="#creating.examples">9.2. Examples</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#creating.nvu">9.2.1. How the www/nvu package came into pkgsrc</a></span></dt></dl></dd>
+</dl></dd>
 <dt><span class="chapter"><a href="#components">10. Package components - files, directories and contents</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#components.Makefile">10.1. <code class="filename">Makefile</code></a></span></dt>
@@ -3843,42 +3906,51 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
 <a name="creating"></a>Chapter 9. Creating a new pkgsrc package from scratch</h2></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl>
+<dt><span class="sect1"><a href="#creating.common">9.1. Common types of packages</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#creating.perl-module">9.1.1. Perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">9.1.2. KDE applications</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="#creating.examples">9.2. Examples</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#creating.nvu">9.2.1. How the www/nvu package came into pkgsrc</a></span></dt></dl></dd>
+</dl>
+</div>
 <p>When you find a package that is not yet in pkgsrc, you
-	most likely have a URL from where you can download the source
-	code. Starting with this URL, creating a package involves only a
-	few steps.</p>
+most likely have a URL from where you can download the source
+code. Starting with this URL, creating a package involves only a
+few steps.</p>
 <div class="procedure"><ol type="1">
-<li><p>First, install the packages <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a> and <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>.</p></li>
+<li><p>First, install the packages <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a> and <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>.</p></li>
 <li><p>Then, choose one of the top-level directories as the
-	category in which you want to place your package. You can also
-	create a directory of your own (maybe called
-	<code class="filename">local</code>). In that category directory, create
-	another directory for your package and change into
-	it.</p></li>
-<li><p>Run the program <span><strong class="command">url2pkg</strong></span>, which
-	will ask you for a URL. Enter the URL of the distribution file
-	(in most cases a <code class="filename">.tar.gz</code> file) and watch
-	how the basic ingredients of your package are created
-	automatically. The distribution file is extracted automatically
-	to fill in some details in the <code class="filename">Makefile</code>
-	that would otherwise have to be done manually.</p></li>
+category in which you want to place your package. You can also create a
+directory of your own (maybe called <code class="filename">local</code>). In that
+category directory, create another directory for your package and change
+into it.</p></li>
+<li><p>Run the program <span><strong class="command">url2pkg</strong></span>, which will ask
+you for a URL. Enter the URL of the distribution file (in most cases a
+<code class="filename">.tar.gz</code> file) and watch how the basic ingredients
+of your package are created automatically. The distribution file is
+extracted automatically to fill in some details in the
+<code class="filename">Makefile</code> that would otherwise have to be done
+manually.</p></li>
 <li>
-<p>Examine the extracted files to determine the
-	dependencies of your package. Ideally, this is mentioned in some
-	<code class="filename">README</code> file, but things may differ. For
-	each of these dependencies, look where it exists in pkgsrc, and
-	if there is a file called <code class="filename">buildlink3.mk</code> in
-	that directory, add a line to your package
-	<code class="filename">Makefile</code> which includes that file just
-	before the last line. If the <code class="filename">buildlink3.mk</code>
-	file does not exist, add a <code class="varname">DEPENDS</code> line to
-	the Makefile, which specifies the version of the dependency and
-	where it can be found in pkgsrc. This line should be placed in
-	the third paragraph. If the dependency is only needed for
-	building the package, but not when using it, use
-	<code class="varname">BUILD_DEPENDS</code> instead of
-	<code class="varname">DEPENDS</code>. Your package may then look like
-	this:</p>
+<p>Examine the extracted files to determine the dependencies of
+your package. Ideally, this is mentioned in some
+<code class="filename">README</code> file, but things may differ. For each of
+these dependencies, look where it exists in pkgsrc, and if there is a
+file called <code class="filename">buildlink3.mk</code> in that directory, add a
+line to your package <code class="filename">Makefile</code> which includes that
+file just before the last line. If the
+<code class="filename">buildlink3.mk</code> file does not exist, add a
+<code class="varname">DEPENDS</code> line to the Makefile, which specifies the
+version of the dependency and where it can be found in pkgsrc. This line
+should be placed in the third paragraph. If the dependency is only
+needed for building the package, but not when using it, use
+<code class="varname">BUILD_DEPENDS</code> instead of <code class="varname">DEPENDS</code>.
+Your package may then look like this:</p>
 <pre class="programlisting">
     [...]
 
@@ -3893,36 +3965,277 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
     .include "../../mk/bsd.pkg.mk"
 </pre>
 </li>
-<li><p>Run <span><strong class="command">pkglint</strong></span> to see what things
-	still need to be done to make your package a &#8220;<span class="quote">good</span>&#8221;
-	one. If you don't know what pkglint's warnings want to tell you,
-	try <span><strong class="command">pkglint --explain</strong></span> or <span><strong class="command">pkglint
-	-e</strong></span>, which outputs additional
-	explanations.</p></li>
-<li><p>Now, run <span><strong class="command">bmake</strong></span> to build the
-	package. For the various things that can go wrong in this phase,
-	consult <a href="#fixes" title="Chapter 18. Making your package work">Chapter 18, <i>Making your package work</i></a>.</p></li>
-<li><p>When the package builds fine, the next step is to
-	install the package. Run <span><strong class="command">bmake install</strong></span> and
-	hope that everything works.</p></li>
-<li><p>Up to now, the file <code class="filename">PLIST</code>,
-	which contains a list of the files that are installed by the
-	package, is nearly empty. Run <span><strong class="command">bmake print-PLIST
-	&gt;PLIST</strong></span> to generate a probably correct list. Check
-	the file using your preferred text editor to see if the list of
-	files looks plausible.</p></li>
-<li><p>Run <span><strong class="command">pkglint</strong></span> again to see if the
-	generated <code class="filename">PLIST</code> contains garbage or
-	not.</p></li>
-<li><p>When you ran <span><strong class="command">bmake install</strong></span>, the
-	package has been registered in the database of installed files,
-	but with an empty list of files. To fix this, run <span><strong class="command">bmake
-	deinstall</strong></span> and <span><strong class="command">bmake install</strong></span> again.
-	Now the package is registered with the list of files from
-	<code class="filename">PLIST</code>.</p></li>
-<li><p>Run <span><strong class="command">bmake package</strong></span> to create a
-	binary package from the set of installed files.</p></li>
+<li><p>Run <span><strong class="command">pkglint</strong></span> to see what things still need
+to be done to make your package a &#8220;<span class="quote">good</span>&#8221; one. If you don't
+know what pkglint's warnings want to tell you, try <span><strong class="command">pkglint
+--explain</strong></span> or <span><strong class="command">pkglint
+-e</strong></span>, which outputs additional
+explanations.</p></li>
+<li><p>In many cases the package is not yet ready to build. You can
+find instructions for the most common cases in the next section, <a href="#creating.common" title="9.1. Common types of packages">Section 9.1, &#8220;Common types of packages&#8221;</a>. After you have followed the instructions
+over there, you can hopefully continue here.</p></li>
+<li><p>Run <span><strong class="command">bmake clean</strong></span> to clean the working
+directory from the extracted files. Besides these files, a lot of cache
+files and other system information has been saved in the working
+directory, which may become wrong after you edited the
+<code class="filename">Makefile</code>.</p></li>
+<li><p>Now, run <span><strong class="command">bmake</strong></span> to build the package. For
+the various things that can go wrong in this phase, consult <a href="#fixes" title="Chapter 18. Making your package work">Chapter 18, <i>Making your package work</i></a>.</p></li>
+<li><p>When the package builds fine, the next step is to install
+the package. Run <span><strong class="command">bmake install</strong></span> and hope that
+everything works.</p></li>
+<li><p>Up to now, the file <code class="filename">PLIST</code>, which
+contains a list of the files that are installed by the package, is
+nearly empty. Run <span><strong class="command">bmake print-PLIST
+&gt;PLIST</strong></span> to generate a probably correct list. Check
+the file using your preferred text editor to see if the list of
+files looks plausible.</p></li>
+<li><p>Run <span><strong class="command">pkglint</strong></span> again to see if the generated
+<code class="filename">PLIST</code> contains garbage or not.</p></li>
+<li><p>When you ran <span><strong class="command">bmake install</strong></span>, the package
+has been registered in the database of installed files, but with an
+empty list of files. To fix this, run <span><strong class="command">bmake deinstall</strong></span>
+and <span><strong class="command">bmake install</strong></span> again. Now the package is
+registered with the list of files from
+<code class="filename">PLIST</code>.</p></li>
+<li><p>Run <span><strong class="command">bmake package</strong></span> to create a binary
+package from the set of installed files.</p></li>
 </ol></div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="creating.common"></a>9.1. Common types of packages</h2></div></div></div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="creating.perl-module"></a>9.1.1. Perl modules</h3></div></div></div>
+<p>Simple Perl modules are handled automatically by
+<span><strong class="command">url2pkg</strong></span>, including dependencies.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="creating.kde-app"></a>9.1.2. KDE applications</h3></div></div></div>
+<p>KDE applications should always include
+<code class="filename">meta-pkgs/kde3/kde3.mk</code>, which contains numerous
+settings that are typical of KDE packages.</p>
+</div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="creating.examples"></a>9.2. Examples</h2></div></div></div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="creating.nvu"></a>9.2.1. How the www/nvu package came into pkgsrc</h3></div></div></div>
+<div class="sect3" lang="en">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="creating.nvu.init"></a>9.2.1.1. The initial package</h4></div></div></div>
+<p>Looking at the file <code class="filename">pkgsrc/doc/TODO</code>, I saw
+that the &#8220;<span class="quote">nvu</span>&#8221; package has not yet been imported into
+pkgsrc. As the description says it has to do with the web, the obvious
+choice for the category is &#8220;<span class="quote">www</span>&#8221;.</p>
+<pre class="programlisting">
+    <code class="prompt">$</code> mkdir www/nvu
+    <code class="prompt">$</code> cd www/nvu
+</pre>
+<p>The web site says that the sources are available as a tar file, so
+I fed that URL to the <span><strong class="command">url2pkg</strong></span> program:</p>
+<pre class="programlisting">
+    <code class="prompt">$</code> url2pkg http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+</pre>
+<p>My editor popped up, and I added a <code class="varname">PKGNAME</code> line
+below the <code class="varname">DISTNAME</code> line, as the package name should
+not have the word &#8220;<span class="quote">sources</span>&#8221; in it. I also filled in the
+<code class="varname">MAINTAINER</code>, <code class="varname">HOMEPAGE</code> and
+<code class="varname">COMMENT</code> fields. Then the package
+<code class="filename">Makefile</code> looked like that:</p>
+<pre class="programlisting">
+    # $NetBSD$
+    #
+
+    DISTNAME=       nvu-1.0-sources
+    PKGNAME=        nvu-1.0
+    CATEGORIES=     www
+    MASTER_SITES=   http://cvs.nvu.com/download/
+    EXTRACT_SUFX=   .tar.bz2
+
+    MAINTAINER=     rillig@NetBSD.org
+    HOMEPAGE=       http://cvs.nvu.com/
+    COMMENT=        Web Authoring System
+
+    # url2pkg-marker (please do not remove this line.)
+    .include "../../mk/bsd.pkg.mk"
+</pre>
+<p>Then, I quit the editor and watched pkgsrc downloading a large
+source archive:</p>
+<pre class="programlisting">
+    url2pkg&gt; Running "make makesum" ...
+    =&gt; Required installed package digest&gt;=20010302: digest-20060826 found
+    =&gt; Fetching nvu-1.0-sources.tar.bz2
+    Requesting http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+    100% |*************************************| 28992 KB  150.77 KB/s    00:00 ETA
+    29687976 bytes retrieved in 03:12 (150.77 KB/s)
+    url2pkg&gt; Running "make extract" ...
+    =&gt; Required installed package digest&gt;=20010302: digest-20060826 found
+    =&gt; Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+    =&gt; Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+    work.bacc -&gt; /tmp/roland/pkgsrc/www/nvu/work.bacc
+    ===&gt; Installing dependencies for nvu-1.0
+    ===&gt; Overriding tools for nvu-1.0
+    ===&gt; Extracting for nvu-1.0
+    url2pkg&gt; Adjusting the Makefile.
+
+    Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!
+
+    Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)
+</pre>
+</div>
+<div class="sect3" lang="en">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="creating.nvu.problems"></a>9.2.1.2. Fixing all kinds of problems to make the package work</h4></div></div></div>
+<p>Now that the package has been extracted, let's see what's inside
+it. The package has a <code class="filename">README.txt</code>, but that only
+says something about mozilla, so it's probably useless for seeing what
+dependencies this package has. But since there is a GNU configure script
+in the package, let's hope that it will complain about everything it
+needs.</p>
+<pre class="programlisting">
+    <code class="prompt">$</code> bmake
+    =&gt; Required installed package digest&gt;=20010302: digest-20060826 found
+    =&gt; Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+    =&gt; Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+    ===&gt; Patching for nvu-1.0
+    ===&gt; Creating toolchain wrappers for nvu-1.0
+    ===&gt; Configuring for nvu-1.0
+    [...]
+    configure: error: Perl 5.004 or higher is required.
+    [...]
+    WARNING: Please add USE_TOOLS+=perl to the package Makefile.
+    [...]
+</pre>
+<p>That worked quite well. So I opened the package Makefile in my
+editor, and since it already has a <code class="varname">USE_TOOLS</code> line, I
+just appended &#8220;<span class="quote">perl</span>&#8221; to it. Since the dependencies of the
+package have changed now, and since a perl wrapper is automatically
+installed in the &#8220;<span class="quote">tools</span>&#8221; phase, I need to build the package
+from scratch.</p>
+<pre class="programlisting">
+    <code class="prompt">$</code> bmake clean
+    ===&gt; Cleaning for nvu-1.0
+    <code class="prompt">$</code> bmake
+    [...]
+    *** /tmp/roland/pkgsrc/www/nvu/work.bacc/.tools/bin/make is not \
+    GNU Make.  You will not be able to build Mozilla without GNU Make.
+    [...]
+</pre>
+<p>So I added &#8220;<span class="quote">gmake</span>&#8221; to the
+<code class="varname">USE_TOOLS</code> line and tried again (from scratch).</p>
+<pre class="programlisting">
+    [...]
+    checking for GTK - version &gt;= 1.2.0... no
+    *** Could not run GTK test program, checking why...
+    [...]
+</pre>
+<p>Now to the other dependencies. The first question is: Where is the
+GTK package hidden in pkgsrc?</p>
+<pre class="programlisting">
+    <code class="prompt">$</code> echo ../../*/gtk*
+    [many packages ...]
+    <code class="prompt">$</code> echo ../../*/gtk
+    ../../x11/gtk
+    <code class="prompt">$</code> echo ../../*/gtk2
+    ../../x11/gtk2
+    <code class="prompt">$</code> echo ../../*/gtk2/bui*
+    ../../x11/gtk2/buildlink3.mk
+</pre>
+<p>The first try was definitely too broad. The second one had exactly
+one result, which is very good. But there is one pitfall with GNOME
+packages. Before GNOME 2 had been released, there were already many
+GNOME 1 packages in pkgsrc. To be able to continue to use these
+packages, the GNOME 2 packages were imported as separate packages, and
+their names usually have a &#8220;<span class="quote">2</span>&#8221; appended. So I checked
+whether this was the case here, and indeed it was.</p>
+<p>Since the GTK2 package has a <code class="filename">buildlink3.mk</code>
+file, adding the dependency is very easy. I just inserted an
+<code class="literal">.include</code> line before the last line of the package
+<code class="filename">Makefile</code>, so that it now looks like this:</p>
+<pre class="programlisting">
+    [...]
+    .include "../../x11/gtk2/buildlink3.mk"
+    .include "../../mk/bsd.pkg.mk
+</pre>
+<p>After another <span><strong class="command">bmake clean &amp;&amp; bmake</strong></span>, the answer
+was:</p>
+<pre class="programlisting">
+    [...]
+    checking for gtk-config... /home/roland/pkg/bin/gtk-config
+    checking for GTK - version &gt;= 1.2.0... no
+    *** Could not run GTK test program, checking why...
+    *** The test program failed to compile or link. See the file config.log for the
+    *** exact error that occured. This usually means GTK was incorrectly installed
+    *** or that you have moved GTK since it was installed. In the latter case, you
+    *** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
+    configure: error: Test for GTK failed.
+    [...]
+</pre>
+<p>In this particular case, the assumption that &#8220;<span class="quote">every package
+prefers GNOME 2</span>&#8221; had been wrong. The first of the lines above
+told me that this package really wanted to have the GNOME 1 version of
+GTK. If the package had looked for GTK2, it would have looked for
+<span><strong class="command">pkg-config</strong></span> instead of <span><strong class="command">gtk-config</strong></span>.
+So I changed the <code class="literal">x11/gtk2</code> to
+<code class="literal">x11/gtk</code> in the package <code class="filename">Makefile</code>,
+and tried again.</p>
+<pre class="programlisting">
+    [...]
+    cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr     -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
+    In file included from xpidl.c:42:
+    xpidl.h:53:24: libIDL/IDL.h: No such file or directory
+    In file included from xpidl.c:42:
+    xpidl.h:132: error: parse error before "IDL_ns"
+    [...]
+</pre>
+<p>The package still does not find all of its dependencies. Now the
+question is: Which package provides the
+<code class="filename">libIDL/IDL.h</code> header file?</p>
+<pre class="programlisting">
+    <code class="prompt">$</code> echo ../../*/*idl*
+    ../../devel/py-idle ../../wip/idled ../../x11/acidlaunch
+    <code class="prompt">$</code> echo ../../*/*IDL*
+    ../../net/libIDL
+</pre>
+<p>Let's take the one from the second try. So I included the
+<code class="filename">../../net/libIDL/buildlink3.mk</code> file and tried
+again. But the error didn't change. After digging through some of the
+code, I concluded that the build process of the package was broken and
+couldn't have ever worked, but since the Mozilla source tree is quite
+large, I didn't want to fix it. So I added the following to the package
+<code class="filename">Makefile</code> and tried again:</p>
+<pre class="programlisting">
+    CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
+    BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+</pre>
+<p>The latter line is needed because the package expects the library
+<code class="filename">libIDL.so</code>, but only
+<code class="filename">libIDL-2.so</code> is available. So I told the compiler
+wrapper to rewrite that on the fly.</p>
+<p>The next problem was related to a recent change of the FreeType
+interface. I looked up in <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/seamonkey/README.html" target="_top"><code class="filename">www/seamonkey</code></a>
+which patch files were relevant for this issue and copied them to the
+<code class="filename">patches</code> directory. Then I retried, fixed the
+patches so that they applied cleanly and retried again. This time,
+everything worked.</p>
+</div>
+<div class="sect3" lang="en">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="creating.nvu.inst"></a>9.2.1.3. Installing the package</h4></div></div></div>
+<pre class="programlisting">
+    <code class="prompt">$</code> bmake CHECK_FILES=no install
+    [...]
+    <code class="prompt">$</code> bmake print-PLIST &gt;PLIST
+    <code class="prompt">$</code> bmake deinstall
+    <code class="prompt">$</code> bmake install
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
@@ -3982,7 +4295,7 @@ sections.</p>
     the package file to create if the <code class="varname">PKGNAME</code>
     isn't unique on a SVR4 system. The default is
     <code class="varname">PKGNAME</code>, which may be shortened when you use
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/gensolpkg/README.html" target="_top"><code class="filename">pkgtools/gensolpkg</code></a>. Only add
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/gensolpkg/README.html" target="_top"><code class="filename">pkgtools/gensolpkg</code></a>. Only add
     <code class="varname">SVR4_PKGNAME</code> if <code class="varname">PKGNAME</code>
     does not produce an unique package name on a SVR4 system.
     The length of <code class="varname">SVR4_PKGNAME</code> is limited to 5
@@ -4060,7 +4373,7 @@ sections.</p>
       set <code class="varname">WRKSRC</code> to point to the proper name in
       <code class="filename">${WRKDIR}</code>, for example
       <code class="varname">WRKSRC=${WRKDIR}/${DISTNAME}/unix</code>. See
-      <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/tcl/README.html" target="_top"><code class="filename">lang/tcl</code></a> and <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/tk/README.html" target="_top"><code class="filename">x11/tk</code></a> for other examples.</p>
+      <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/tcl/README.html" target="_top"><code class="filename">lang/tcl</code></a> and <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/tk/README.html" target="_top"><code class="filename">x11/tk</code></a> for other examples.</p>
 <p>The name of the working directory created by pkgsrc is
       taken from the <code class="varname">WRKDIR_BASENAME</code>
       variable. By default, its value is
@@ -4106,7 +4419,7 @@ sections.</p>
   <span><strong class="command">make makedistinfo</strong></span> or <span><strong class="command">make mdi</strong></span>
   command.</p>
 <p>Some packages have different sets of distfiles depending on
-  the platform, for example <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/navigator/README.html" target="_top"><code class="filename">www/navigator</code></a>). These are kept in the same
+  the platform, for example <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/navigator/README.html" target="_top"><code class="filename">www/navigator</code></a>). These are kept in the same
   <code class="filename">distinfo</code> file and care should be taken when
   upgrading such a package to ensure distfile information is not
   lost.</p>
@@ -4135,7 +4448,7 @@ sections.</p>
   get stored in the patch files, as these will cause problems when
   later checked into the NetBSD CVS tree. Use the
   <span><strong class="command">pkgdiff</strong></span> from the
-  <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a> package to avoid
+  <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a> package to avoid
   these problems.</p>
 <p>For even more automation, we recommend using
   <span><strong class="command">mkpatches</strong></span> from the same package to make a
@@ -4207,7 +4520,7 @@ sections.</p>
 <p>Some typical examples:</p>
 <div class="table">
 <a name="patch-examples"></a><p class="title"><b>Table 10.1. Patching examples</b></p>
-<table summary="Patching examples" border="1">
+<div class="table-contents"><table summary="Patching examples" border="1">
 <colgroup>
 <col>
 <col>
@@ -4272,9 +4585,9 @@ sections.</p>
 	      </td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<p>For more information, please read the <span class="emphasis"><em>Making
+<br class="table-break"><p>For more information, please read the <span class="emphasis"><em>Making
       packager-friendly software</em></span> article (<a href="http://www.onlamp.com/pub/a/onlamp/2005/03/31/packaging.html" target="_top">part
       1</a>, <a href="http://www.oreillynet.com/pub/a/onlamp/2005/04/28/packaging2.html" target="_top">part
       2</a>).  It summarizes multiple details on how to make
@@ -4737,7 +5050,7 @@ sections.</p>
     VAR:=   ${VAR:N${_othervar_:C/-//}}
 </pre>
 <p>For a more complex code snippet and a workaround, see the
-      package <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/regress/make-quoting/README.html" target="_top"><code class="filename">regress/make-quoting</code></a>, testcase
+      package <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/regress/make-quoting/README.html" target="_top"><code class="filename">regress/make-quoting</code></a>, testcase
       <code class="varname">bug1</code>.</p>
 </div>
 </div>
@@ -4924,7 +5237,7 @@ sections.</p>
 <div class="orderedlist"><ol type="1">
 <li><p>If the packages have a common dependency, the directory
 	can be removed in that.  For example, see
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/textproc/scrollkeeper/README.html" target="_top"><code class="filename">textproc/scrollkeeper</code></a>, which
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/textproc/scrollkeeper/README.html" target="_top"><code class="filename">textproc/scrollkeeper</code></a>, which
 	removes the shared directory
 	<code class="filename">share/omf</code>.</p></li>
 <li><p>If the packages using the directory are not related at
@@ -5048,14 +5361,14 @@ sections.</p>
 	<code class="varname">BDB_DEFAULT</code>.</p></li>
 <li><p><code class="filename">curses.buildlink3.mk</code>: If the system
 	comes with neither Curses nor NCurses, this will take care
-	to install the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/ncurses/README.html" target="_top"><code class="filename">devel/ncurses</code></a> package.</p></li>
+	to install the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/ncurses/README.html" target="_top"><code class="filename">devel/ncurses</code></a> package.</p></li>
 <li><p><code class="filename">krb5.buildlink3.mk</code> uses the value
 	of <code class="varname">KRB5_ACCEPTED</code> to choose between
 	adding a dependency on Heimdal or MIT-krb5 for packages that
 	require a Kerberos 5 implementation.</p></li>
 <li><p><code class="filename">motif.buildlink3.mk</code> checks for a
 	system-provided Motif installation or adds a dependency on
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/lesstif/README.html" target="_top"><code class="filename">x11/lesstif</code></a> or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/openmotif/README.html" target="_top"><code class="filename">x11/openmotif</code></a>.  The user can set
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/lesstif/README.html" target="_top"><code class="filename">x11/lesstif</code></a> or <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/openmotif/README.html" target="_top"><code class="filename">x11/openmotif</code></a>.  The user can set
 	<code class="varname">MOTIF_TYPE</code> to &#8220;<span class="quote">dt</span>&#8221;,
 	&#8220;<span class="quote">lesstif</span>&#8221;, or &#8220;<span class="quote">openmotif</span>&#8221; to choose
 	which Motif version will be used.</p></li>
@@ -5063,11 +5376,11 @@ sections.</p>
 	variables that may be used by packages that use the
 	Open Sound System (OSS) API.</p></li>
 <li><p><code class="filename">pgsql.buildlink3.mk</code> will accept
-	either Postgres 7.3 or 7.4, whichever is found installed. See
+	either Postgres 7.4, 8.0, or 8.1, whichever is found installed. See
 	the file for more information.</p></li>
 <li><p><code class="filename">pthread.buildlink3.mk</code> uses the value of
 	<code class="varname">PTHREAD_OPTS</code> and checks for native pthreads or adds
-	a dependency on <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/pth/README.html" target="_top"><code class="filename">devel/pth</code></a> as needed.</p></li>
+	a dependency on <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/pth/README.html" target="_top"><code class="filename">devel/pth</code></a> as needed.</p></li>
 <li><p><code class="filename">xaw.buildlink3.mk</code> uses the value of
 	<code class="varname">XAW_TYPE</code> to choose a particular Athena widgets
 	library.</p></li>
@@ -5088,7 +5401,7 @@ sections.</p>
     <code class="filename">buildlink3.mk</code> files that it needs to find
     headers and libraries that it needs in turn.</p>
 <p>To generate an initial <code class="filename">buildlink3.mk</code>
-    file for further editing, Rene Hexel's <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/createbuildlink/README.html" target="_top"><code class="filename">pkgtools/createbuildlink</code></a>
+    file for further editing, Rene Hexel's <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/createbuildlink/README.html" target="_top"><code class="filename">pkgtools/createbuildlink</code></a>
     package is highly recommended.  For most packages, the following
     command will generate a good starting point for
     <code class="filename">buildlink3.mk</code> files:</p>
@@ -5602,7 +5915,7 @@ set based upon the following variables:</p>
     variable only makes sense in the package's
     <code class="filename">Makefile</code> (i.e., it is not user-customizable).</p>
 <p>As an example, consider the Apache package,
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/apache2/README.html" target="_top"><code class="filename">www/apache2</code></a>, which places its
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/apache2/README.html" target="_top"><code class="filename">www/apache2</code></a>, which places its
     configuration files under the
     <code class="filename">httpd/</code> subdirectory of
     <code class="varname">PKG_SYSCONFBASE</code>.  This should be set in the package
@@ -5673,7 +5986,7 @@ during the package installation to update what is in
 <code class="varname">CONF_FILES</code> and <code class="varname">CONF_FILES_PERMS</code> are
 used.  Check out <a href="#files-outside-prefix" title="14.1.2. File manipulation">Section 14.1.2, &#8220;File manipulation&#8221;</a> for information
 about their syntax and their purpose.  Here is an example, taken from the
-<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/mail/mutt/README.html" target="_top"><code class="filename">mail/mutt</code></a> package:</p>
+<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/mail/mutt/README.html" target="_top"><code class="filename">mail/mutt</code></a> package:</p>
 <pre class="programlisting">
     EGDIR=        ${PREFIX}/share/doc/mutt/samples
     CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
@@ -5702,7 +6015,7 @@ to:</p>
 <div class="orderedlist"><ol type="1">
 <li><p>Store the script inside <code class="filename">${FILESDIR}</code>, with
     the <code class="literal">.sh</code> suffix appended.  Considering the
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/cups/README.html" target="_top"><code class="filename">print/cups</code></a> package as an example, it has a
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/print/cups/README.html" target="_top"><code class="filename">print/cups</code></a> package as an example, it has a
     <code class="filename">cupsd.sh</code> in its files directory.</p></li>
 <li>
 <p>Tell pkginstall to handle it, appending the name of the script,
@@ -5785,7 +6098,7 @@ accomplish this task.</p>
 <p>When a package provides a shell interpreter, it has to set the
 <code class="varname">PKG_SHELL</code> variable to its absolute file name.  This will
 add some hooks to the installation scripts to handle it.  Consider the
-following example, taken from <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/zsh/README.html" target="_top"><code class="filename">shells/zsh</code></a>:</p>
+following example, taken from <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/zsh/README.html" target="_top"><code class="filename">shells/zsh</code></a>:</p>
 <pre class="programlisting">
     PKG_SHELL=      ${PREFIX}/bin/zsh
 </pre>
@@ -5811,7 +6124,7 @@ where <em class="replaceable"><code>type</code></em> can be one of &#8220;<span 
 installation scripts to run the appropriate commands to update the fonts
 database files within each of those directories.  For convenience, if the
 directory path is relative, it is taken to be relative to the package's
-installation prefix.  Consider the following example, taken from <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/dbz-ttf/README.html" target="_top"><code class="filename">fonts/dbz-ttf</code></a>:</p>
+installation prefix.  Consider the following example, taken from <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/fonts/dbz-ttf/README.html" target="_top"><code class="filename">fonts/dbz-ttf</code></a>:</p>
 <pre class="programlisting">
     FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
 </pre>
@@ -6118,7 +6431,7 @@ support.</span>&#8221; The file is sorted by option names.</p>
 	<span class="emphasis"><em>both</em></span> <code class="filename">${X11BASE}</code> and
 	<code class="filename">${LOCALBASE}</code>. To force installation of
 	all X11 packages in <code class="varname">LOCALBASE</code>, the
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/xpkgwedge/README.html" target="_top"><code class="filename">pkgtools/xpkgwedge</code></a> package
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/xpkgwedge/README.html" target="_top"><code class="filename">pkgtools/xpkgwedge</code></a> package
 	is enabled by default.</p>
 </li>
 <li><p><code class="varname">X11PREFIX</code> should be used to refer to
@@ -6327,8 +6640,10 @@ support.</span>&#8221; The file is sorted by option names.</p>
       defined, else <code class="varname">MASTER_SITES</code> or
       <code class="varname">PATCH_SITES</code>, as applies, then finally the
       value of <code class="varname">MASTER_SITE_BACKUP</code>. The order of
-      all except the first can be optionally sorted by the user,
-      via setting either <code class="varname">MASTER_SORT_AWK</code> or
+      all except the first and the last can be optionally sorted
+      by the user, via setting either
+      <code class="varname">MASTER_SORT_RANDOM</code>, and
+      <code class="varname">MASTER_SORT_AWK</code> or
       <code class="varname">MASTER_SORT_REGEX</code>.</p>
 </div>
 </div>
@@ -6814,7 +7129,7 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <dd>
 <p>Update the installation of the current package.  This
 	  differs from update in that it does not replace dependent
-	  packages.  You will need to install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgsrc/pkgtools/pkg_tarup/README.html" target="_top"><code class="filename">pkgsrc/pkgtools/pkg_tarup</code></a> for this
+	  packages.  You will need to install <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgsrc/pkgtools/pkg_tarup/README.html" target="_top"><code class="filename">pkgsrc/pkgtools/pkg_tarup</code></a> for this
 	  target to work.</p>
 <p><span class="emphasis"><em>Be careful when using this
 	  target!</em></span> There are no guarantees that dependent
@@ -6853,7 +7168,7 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <dd>
 <p>This target generates a
 	  <code class="filename">README.html</code> file, which can be
-	  viewed using a browser such as <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/links/README.html" target="_top"><code class="filename">www/links</code></a>.  The generated files
+	  viewed using a browser such as <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/firefox/README.html" target="_top"><code class="filename">www/firefox</code></a> or <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/www/links/README.html" target="_top"><code class="filename">www/links</code></a>.  The generated files
 	  contain references to any packages which are in the
 	  <code class="varname">PACKAGES</code> directory on the local
 	  host. The generated files can be made to refer to URLs
@@ -7235,7 +7550,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     is done by placing the license in
     <code class="filename">pkgsrc/licenses</code> and setting the
     <code class="varname">LICENSE</code> variable to a string identifying the
-    license, e.g. in <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/xv/README.html" target="_top"><code class="filename">graphics/xv</code></a>:</p>
+    license, e.g. in <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/graphics/xv/README.html" target="_top"><code class="filename">graphics/xv</code></a>:</p>
 <pre class="programlisting">
       LICENSE=        xv-license
     </pre>
@@ -7261,10 +7576,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>When adding a package with a new license, the license
     text should be added to <code class="filename">pkgsrc/licenses</code>
     for displaying. A list of known licenses can be seen in this
-    directory as well as by looking at the list of (commented
-    out) <code class="varname">ACCEPTABLE_LICENSES</code> variable
-    settings in
-    <code class="filename">pkgsrc/mk/defaults/mk.conf</code>.</p>
+    directory.</p>
 <p>The use of <code class="varname">LICENSE=shareware</code>,
     <code class="varname">LICENSE=no-commercial-use</code>, and similar
     language is deprecated because it does not crisply refer to
@@ -7439,7 +7751,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	correctly and if there's no
 	<code class="filename">buildlink3.mk</code> file, this is specified
 	using the <code class="varname">DEPENDS</code> variable. The
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/lyx/README.html" target="_top"><code class="filename">print/lyx</code></a> package needs to
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/print/lyx/README.html" target="_top"><code class="filename">print/lyx</code></a> package needs to
 	be able to execute the latex binary from the teTeX package
 	when it runs, and that is specified:</p>
 <pre class="programlisting">
@@ -7452,14 +7764,14 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>If your package needs files from another package to build,
     add the relevant distribution files to
     <code class="varname">DISTFILES</code>, so they will be extracted
-    automatically. See the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/ghostscript/README.html" target="_top"><code class="filename">print/ghostscript</code></a> package for an example.
+    automatically. See the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/print/ghostscript/README.html" target="_top"><code class="filename">print/ghostscript</code></a> package for an example.
     (It relies on the jpeg sources being present in source form
     during the build.)</p>
 <p>Please also note the
     <code class="varname">BUILD_USES_GETTEXT_M4</code> definition, which is
     provided as convenience definition.  It adds a build dependency on
     either an installed version of an older gettext package, or if it
-    isn't, installs the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext-m4/README.html" target="_top"><code class="filename">devel/gettext-m4</code></a> package.</p>
+    isn't, installs the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/gettext-m4/README.html" target="_top"><code class="filename">devel/gettext-m4</code></a> package.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -7471,8 +7783,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>In this case you can set <code class="varname">CONFLICTS</code> to a
     space-separated list of packages (including version string) your
     package conflicts with.</p>
-<p>For example, <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw3d/README.html" target="_top"><code class="filename">x11/Xaw3d</code></a>
-    and <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw-Xpm/README.html" target="_top"><code class="filename">x11/Xaw-Xpm</code></a>
+<p>For example, <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/Xaw3d/README.html" target="_top"><code class="filename">x11/Xaw3d</code></a>
+    and <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/Xaw-Xpm/README.html" target="_top"><code class="filename">x11/Xaw-Xpm</code></a>
     install the same shared library, thus you set in
     <code class="filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
 <pre class="programlisting">
@@ -7501,7 +7813,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     (OS-version-platform) that can use glob-style
     wildcards.</p>
 <p>Some packages are tightly bound to a specific version of an
-    operating system, e.g. LKMs or <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/lsof/README.html" target="_top"><code class="filename">sysutils/lsof</code></a>.  Such binary packages are not
+    operating system, e.g. LKMs or <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/lsof/README.html" target="_top"><code class="filename">sysutils/lsof</code></a>.  Such binary packages are not
     backwards compatible with other versions of the OS, and should be
     uploaded to a version specific directory on the FTP server.  Mark
     these packages by setting <code class="varname">OSVERSION_SPECIFIC</code> to
@@ -7666,7 +7978,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     fetch</strong></span> will call <code class="filename">files/getsite.sh</code>
     with the name of each file to download as an argument, expecting
     it to output the URL of the directory from which to download
-    it. <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/ns-cult3d/README.html" target="_top"><code class="filename">graphics/ns-cult3d</code></a> is an
+    it. <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/graphics/ns-cult3d/README.html" target="_top"><code class="filename">graphics/ns-cult3d</code></a> is an
     example of this usage.</p>
 <p>If the download can't be automated, because the user must
     submit personal information to apply for a password, or must pay
@@ -7720,7 +8032,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     compiler, linker, etc. to get the Right Thing, which can be
     pretty annoying especially if you don't have all the machines
     at your hand to test things.  The
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/libtool/README.html" target="_top"><code class="filename">devel/libtool</code></a> pkg
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/libtool/README.html" target="_top"><code class="filename">devel/libtool</code></a> pkg
     can help here, as it just &#8220;<span class="quote">knows</span>&#8221; how to build
     both static and dynamic libraries from a set of source files,
     thus being platform-independent.</p>
@@ -8181,7 +8493,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="filename">${PREFIX}/share/doc/html</code> or other
     places.</p>
 <p>An exception to the above is that library API documentation
-    generated with the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/textproc/gtk-doc/README.html" target="_top"><code class="filename">textproc/gtk-doc</code></a> tools, for use by special
+    generated with the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/textproc/gtk-doc/README.html" target="_top"><code class="filename">textproc/gtk-doc</code></a> tools, for use by special
     browsers (devhelp) should be left at their default location, which
     is <code class="filename">${PREFIX}/share/gtk-doc</code>.  Such
     documentation can be recognized from files ending in
@@ -8297,7 +8609,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     default, a minimum version of 3.12 is required. If the system
     does not provide a <span><strong class="command">makeinfo</strong></span> command or if it
     does not match the required minimum, a build dependency on the
-    <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gtexinfo/README.html" target="_top"><code class="filename">devel/gtexinfo</code></a> package will
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/gtexinfo/README.html" target="_top"><code class="filename">devel/gtexinfo</code></a> package will
     be added automatically.</p>
 <p>The build and installation process of the software provided
     by the package should not use the
@@ -8577,7 +8889,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     executables for running binaries from a one operating system
     on a different one (if the latter supports it).  One example
     is running Linux binaries on NetBSD.</p>
-<p>The <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/rpm2pkg/README.html" target="_top"><code class="filename">pkgtools/rpm2pkg</code></a>
+<p>The <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/rpm2pkg/README.html" target="_top"><code class="filename">pkgtools/rpm2pkg</code></a>
     helps in extracting and packaging Linux rpm packages.</p>
 <p>The <code class="varname">CHECK_SHLIBS</code> can be set to no to
     avoid the <span><strong class="command">check-shlibs</strong></span> target, which tests
@@ -8665,7 +8977,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <li><p>Be sure to set <code class="varname">PKG_DEVELOPER=1</code> in
       <code class="filename">/etc/mk.conf</code></p></li>
 <li>
-<p>Install <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a>,
+<p>Install <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a>,
       create a directory for a new package, change into it, then run
       <span><strong class="command">url2pkg</strong></span>:</p>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>mkdir /usr/pkgsrc/<em class="replaceable"><code>category</code></em>/<em class="replaceable"><code>examplepkg</code></em></code></strong>
@@ -8691,7 +9003,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
       are modified that shouldn't be, especially during the build
       phase.  <span><strong class="command">mkpatches</strong></span>,
       <span><strong class="command">patchdiff</strong></span> and <span><strong class="command">pkgvi</strong></span> are
-      from the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a>
+      from the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkgdiff/README.html" target="_top"><code class="filename">pkgtools/pkgdiff</code></a>
       package.</p>
 </li>
 <li><p>Look at the <code class="filename">Makefile</code>, fix if
@@ -8730,7 +9042,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </li>
 <li><p>Play with it.  Make sure everything works.</p></li>
 <li>
-<p>Run <span><strong class="command">pkglint</strong></span> from <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>, and fix the problems it
+<p>Run <span><strong class="command">pkglint</strong></span> from <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>, and fix the problems it
       reports:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkglint</code></strong></pre>
 </li>
@@ -8916,36 +9228,36 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>21.1. <a href="#id2658401">What is the difference between
+<dt>21.1. <a href="#id2685573">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>21.2. <a href="#id2658437">What is the difference between
+<dt>21.2. <a href="#id2685609">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>21.3. <a href="#id2658475">What is the difference between
+<dt>21.3. <a href="#id2685648">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>21.4. <a href="#id2658581">What is the difference between
+<dt>21.4. <a href="#id2685685">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>21.5. <a href="#id2658599">Why does make show-var
+<dt>21.5. <a href="#id2685703">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>21.6. <a href="#id2658627">What does
+<dt>21.6. <a href="#id2685731">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>21.7. <a href="#id2658701">Which mailing lists are there for package
+<dt>21.7. <a href="#id2685805">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>21.8. <a href="#id2658738">Where is the pkgsrc
+<dt>21.8. <a href="#id2685842">Where is the pkgsrc
 	documentation?</a>
 </dt>
 </dl>
@@ -8954,14 +9266,14 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658401"></a><a name="id2658402"></a><b>21.1.</b>
+<a name="id2685573"></a><a name="id2685574"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
 	<code class="varname">MAKE_FLAGS</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">MAKEFLAGS</code> are the flags passed
 	to the pkgsrc-internal invocations of <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, while
 	<code class="varname">MAKE_FLAGS</code> are the flags that are passed to
@@ -8970,14 +9282,14 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658437"></a><a name="id2658438"></a><b>21.2.</b>
+<a name="id2685609"></a><a name="id2685610"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
 	<code class="varname">MAKE_PROGRAM</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">MAKE</code> is the path to the
 	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
 	infrastructure. <code class="varname">GMAKE</code> is the path to GNU
@@ -8988,14 +9300,14 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658475"></a><a name="id2658476"></a><b>21.3.</b>
+<a name="id2685648"></a><a name="id2685649"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
 	<code class="varname">PKGSRC_COMPILER</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">CC</code> is the path to the real C
 	compiler, which can be configured by the pkgsrc user.
 	<code class="varname">PKG_CC</code> is the path to the compiler wrapper.
@@ -9006,7 +9318,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658581"></a><a name="id2658582"></a><b>21.4.</b>
+<a name="id2685685"></a><a name="id2685686"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9014,19 +9326,19 @@ place.</p></li>
 	<code class="varname">BUILDLINK_LIBS</code>?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p>[FIXME]</p></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658599"></a><a name="id2658600"></a><b>21.5.</b>
+<a name="id2685703"></a><a name="id2685704"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
 	say it's empty?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p>For optimization reasons, some variables are only
 	available in the &#8220;<span class="quote">wrapper</span>&#8221; phase and later. To
 	&#8220;<span class="quote">simulate</span>&#8221; the wrapper phase, append
@@ -9035,7 +9347,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658627"></a><a name="id2658628"></a><b>21.6.</b>
+<a name="id2685731"></a><a name="id2685732"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9043,7 +9355,7 @@ place.</p></li>
 	it.</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><p>The <code class="literal">:=</code> is not really an
 	assignment operator, like you might expect at first sight.
 	Instead, it is a degenerate form of
@@ -9059,13 +9371,13 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658701"></a><a name="id2658702"></a><b>21.7.</b>
+<a name="id2685805"></a><a name="id2685806"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top"><div class="variablelist"><dl>
 <dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">tech-pkg</a></span></dt>
 <dd><p>This is a list for technical discussions related
@@ -9084,13 +9396,13 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2658738"></a><a name="id2658739"></a><b>21.8.</b>
+<a name="id2685842"></a><a name="id2685843"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
 </tr>
 <tr class="answer">
-<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"></td>
 <td align="left" valign="top">
 <p>There are many places where you can find
 	documentation about pkgsrc:</p>
@@ -9181,14 +9493,14 @@ important information regarding their internals.</p>
 <a name="meta-packages"></a>22.1. Meta packages</h2></div></div></div>
 <p>pkgsrc includes three GNOME-related meta packages:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-base/README.html" target="_top"><code class="filename">meta-pkgs/gnome-base</code></a>: Provides
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/gnome-base/README.html" target="_top"><code class="filename">meta-pkgs/gnome-base</code></a>: Provides
     the core GNOME desktop environment.  It only includes the necessary
     bits to get it to boot correctly, although it may lack important
     functionality for daily operation.  The idea behind this package is
     to let end users build their own configurations on top of this one,
     first installing this meta package to achieve a functional setup and
     then adding individual applications.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome/README.html" target="_top"><code class="filename">meta-pkgs/gnome</code></a>: Provides a
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/gnome/README.html" target="_top"><code class="filename">meta-pkgs/gnome</code></a>: Provides a
     complete installation of the GNOME platform and desktop as defined
     by the GNOME project; this is based on the components distributed in
     the <code class="filename">platform/x.y/x.y.z/sources</code> and
@@ -9198,8 +9510,8 @@ important information regarding their internals.</p>
     component to work properly.  Similarly, packages from the bindings
     set (<code class="filename">bindings/x.y/x.y.z/sources</code>) are not pulled
     in unless required as a dependency for an end-user component.  This
-    package "extends" <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-base/README.html" target="_top"><code class="filename">meta-pkgs/gnome-base</code></a>.</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-devel/README.html" target="_top"><code class="filename">meta-pkgs/gnome-devel</code></a>:
+    package "extends" <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/gnome-base/README.html" target="_top"><code class="filename">meta-pkgs/gnome-base</code></a>.</p></li>
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/gnome-devel/README.html" target="_top"><code class="filename">meta-pkgs/gnome-devel</code></a>:
     Installs all the tools required to build a GNOME component when
     fetched from the CVS repository.  These are required to let the
     <span><strong class="command">autogen.sh</strong></span> scripts work appropriately.</p></li>
@@ -9230,7 +9542,7 @@ USE_TOOLS+=gmake</pre>
 <p>If the package uses pkg-config to detect dependencies, add this
     tool to the list of required utilities:</p>
 <pre class="programlisting">USE_TOOLS+=pkg-config</pre>
-<p>Also use <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/verifypc/README.html" target="_top"><code class="filename">pkgtools/verifypc</code></a> at
+<p>Also use <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/verifypc/README.html" target="_top"><code class="filename">pkgtools/verifypc</code></a> at
     the end of the build process to ensure that you did not miss to
     specify any dependency in your package and that the version
     requirements are all correct.</p>
@@ -9271,7 +9583,7 @@ solution is given.  After applying the solution be sure to
 <span><strong class="command">make print-PLIST</strong></span> and ensure it is correct.</p>
 <div class="table">
 <a name="plist-handling"></a><p class="title"><b>Table 22.1. PLIST handling for GNOME packages</b></p>
-<table summary="PLIST handling for GNOME packages" border="1">
+<div class="table-contents"><table summary="PLIST handling for GNOME packages" border="1">
 <colgroup>
 <col>
 <col>
@@ -9303,8 +9615,9 @@ solution is given.  After applying the solution be sure to
 <td>See <a href="#desktop-files" title="18.6.19. Packages installing desktop files">Section 18.6.19, &#8220;Packages installing desktop files&#8221;</a>.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
+<br class="table-break">
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -9373,7 +9686,7 @@ followed:</p>
 <p>Packages not listed in the <code class="filename">list.txt</code> file
     should be updated to the latest version available (if found in
     pkgsrc).  This is the case, for example, of the dependencies on the
-    GNU Autotools in the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome-devel/README.html" target="_top"><code class="filename">meta-pkgs/gnome-devel</code></a> meta package.</p>
+    GNU Autotools in the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/gnome-devel/README.html" target="_top"><code class="filename">meta-pkgs/gnome-devel</code></a> meta package.</p>
 </li>
 <li>
 <p>Generate a patch from the modified meta packages and extract the
@@ -9779,7 +10092,7 @@ details.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="regression.run"></a>24.2. Running the regression tests</h2></div></div></div>
-<p>You first need to install the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_regress/README.html" target="_top"><code class="filename">pkgtools/pkg_regress</code></a> package, which
+<p>You first need to install the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_regress/README.html" target="_top"><code class="filename">pkgtools/pkg_regress</code></a> package, which
 	provides the <span><strong class="command">pkg_regress</strong></span> command. Then you
 	can simply run that command, which will run all tests in the
 	<code class="filename">regress</code> category.</p>
@@ -9906,7 +10219,7 @@ details.</p>
 	platform and add them.</p></dd>
 </dl></div>
 <p>Now, you should be able to build some basic packages, like
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/perl5/README.html" target="_top"><code class="filename">lang/perl5</code></a>, <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a>.</p>
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/perl5/README.html" target="_top"><code class="filename">lang/perl5</code></a>, <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -9984,7 +10297,7 @@ details.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="checking-package-with-pkglint"></a>A.1.4. Checking a package with <span><strong class="command">pkglint</strong></span></h3></div></div></div>
 <p>The NetBSD package system comes with
-        <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>
+        <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>
 	which helps to check the contents of these
 	files. After installation it is quite easy to use, just change to the
 	directory of the package you wish to examine and execute
@@ -10345,8 +10658,8 @@ source packages</h2></div></div></div>
 <div class="procedure"><ol type="1">
 <li><p>Make sure you have the packages needed to
 	regenerate the pkgsrc guide (and other XML-based NetBSD
-	documentation) installed. These are <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/netbsd-doc/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc</code></a> for creating the
-	ASCII and HTML versions, and <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/netbsd-doc-print/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc-print</code></a> for the
+	documentation) installed. These are <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/netbsd-doc/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc</code></a> for creating the
+	ASCII and HTML versions, and <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/netbsd-doc-print/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc-print</code></a> for the
 	PostScript and PDF versions. You will need both packages
 	installed, to make sure documentation is consistent across all
 	formats.</p></li>
@@ -10365,13 +10678,18 @@ source packages</h2></div></div></div>
 <li><p>Run <span><strong class="command">bmake clean &amp;&amp; bmake</strong></span> to
 	regenerate the output files with the proper RCS
 	Ids.</p></li>
-<li><p>Run <span><strong class="command">bmake regenerate</strong></span> to
-	regenerate the files in both <code class="filename">pkgsrc/doc</code> and
-	<code class="filename">htdocs</code>.</p></li>
-<li><p>If you have added, removed or renamed some chapters,
+<li>
+<p>Run <span><strong class="command">bmake regen</strong></span> to install and
+	commit the files in both <code class="filename">pkgsrc/doc</code> and
+	<code class="filename">htdocs</code>.</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>If you have added, removed or renamed some chapters,
 	you need to synchronize them using <span><strong class="command">cvs add</strong></span> or
 	<span><strong class="command">cvs delete</strong></span> in the htdocs
-	directory.</p></li>
+	directory.</p>
+</div>
+</li>
 </ol></div>
 </div>
 </div>
