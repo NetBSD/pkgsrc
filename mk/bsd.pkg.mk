@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1888 2006/10/15 16:20:34 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1889 2006/10/22 06:50:49 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -266,6 +266,13 @@ _PKG_SILENT=		# empty
 _PKG_DEBUG=		set -x;
 _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
+
+# This variable can be prepended to all shell commands that should not
+# be printed by default, but when PKGSRC_DEBUG_LEVEL is non-zero.
+# It also re-adds the error checking that has been removed in 2004 to
+# make bmake conform to POSIX.
+#
+RUN=			${_PKG_SILENT}${_PKG_DEBUG} set -e;
 
 # A few aliases for *-install targets
 INSTALL=		${TOOLS_INSTALL}	# XXX override sys.mk
