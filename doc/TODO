@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5606 2006/10/22 21:38:33 wiz Exp $
+$NetBSD: TODO,v 1.5607 2006/10/22 21:40:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,6 @@ Suggested package updates
 	o gnome-backgrounds-2.16.1
 	o gnome-desktop-2.16.1
 	o gnome-games-2.16.1
-	o gnome-menus-2.16.1
 	o gnome-pilot-2.0.14
 	o gnome-session-2.16.1
 	o gnome-spell-1.0.7
