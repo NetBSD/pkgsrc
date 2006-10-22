@@ -1,5 +1,6 @@
-$NetBSD: patch-af,v 1.2 2005/12/31 00:02:28 wiz Exp $
---- builtins/printf.def.orig	2005-10-29 20:51:29.000000000 +0200
+$NetBSD: patch-af,v 1.3 2006/10/22 11:18:10 wiz Exp $
+
+--- builtins/printf.def.orig	2006-09-18 12:48:42.000000000 +0000
 +++ builtins/printf.def
 @@ -64,6 +64,11 @@ $END
  #include "bashgetopt.h"
@@ -27,7 +28,7 @@ $NetBSD: patch-af,v 1.2 2005/12/31 00:02:28 wiz Exp $
  
  #if !defined (errno)
  extern int errno;
-@@ -438,7 +450,11 @@ printf_builtin (list)
+@@ -452,7 +464,11 @@ printf_builtin (list)
  		p = pp = getintmax ();
  		if (p != pp)
  		  {
@@ -39,7 +40,7 @@ $NetBSD: patch-af,v 1.2 2005/12/31 00:02:28 wiz Exp $
  		    PF (f, pp);
  		  }
  		else
-@@ -465,7 +481,11 @@ printf_builtin (list)
+@@ -479,7 +495,11 @@ printf_builtin (list)
  		p = pp = getuintmax ();
  		if (p != pp)
  		  {
