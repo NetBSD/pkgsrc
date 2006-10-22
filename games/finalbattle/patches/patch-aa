@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/08/27 14:06:09 garbled Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/22 01:06:27 rillig Exp $
 
 --- makefile.orig	Thu Apr  2 21:55:07 1998
 +++ makefile	Sun Jul 26 06:51:44 1998
@@ -19,21 +19,21 @@ $NetBSD: patch-aa,v 1.3 1998/08/27 14:06:09 garbled Exp $
 @@ -27,2 +29,18 @@
  
 +install: final
-+	install -s -o bin -g bin -m 0755 final $(INSTALLROOT)/bin
++	install -s -m 0755 final $(INSTALLROOT)/bin
 +	mkdir -p $(SPRITES)/asteroids
 +	mkdir -p $(SPRITES)/obj
 +	mkdir -p $(SPRITES)/ships
 +	mkdir -p $(SPRITES)/upgrade
 +	mkdir -p $(SPRITES)/weapon
-+	install -o bin -g bin -m 0644 sprites/asteroids/* $(SPRITES)/asteroids
-+	install -o bin -g bin -m 0644 sprites/obj/* $(SPRITES)/obj
-+	install -o bin -g bin -m 0644 sprites/ships/* $(SPRITES)/ships
-+	install -o bin -g bin -m 0644 sprites/upgrade/* $(SPRITES)/upgrade
-+	install -o bin -g bin -m 0644 sprites/weapon/* $(SPRITES)/weapon
++	install -m 0644 sprites/asteroids/* $(SPRITES)/asteroids
++	install -m 0644 sprites/obj/* $(SPRITES)/obj
++	install -m 0644 sprites/ships/* $(SPRITES)/ships
++	install -m 0644 sprites/upgrade/* $(SPRITES)/upgrade
++	install -m 0644 sprites/weapon/* $(SPRITES)/weapon
 +	@rm -r sprites/*/
-+	install -o bin -g bin -m 0644 sprites/* $(SPRITES)
-+	install -o bin -g bin -m 0644 final.news $(DATA)
-+	install -o bin -g bin -m 0644 README.txt $(DATA)
++	install -m 0644 sprites/* $(SPRITES)
++	install -m 0644 final.news $(DATA)
++	install -m 0644 README.txt $(DATA)
  
 @@ -30,12 +48,9 @@
  
