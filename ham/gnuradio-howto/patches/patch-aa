@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2006/10/22 21:03:15 rillig Exp $
+
+--- config/gr_boost.m4.orig	2005-11-22 04:55:54.000000000 +0100
++++ config/gr_boost.m4	2006-10-22 23:02:05.000000000 +0200
+@@ -43,8 +43,8 @@ AC_DEFUN([GR_REQUIRE_BOOST_INCLUDES],
+ 	           [path to boost c++ include files]),
+     [
+       # "yes" and "no" are bogus answers
+-      if test x"$with_boost_include_dir" == xyes ||
+-         test x"$with_boost_include_dir" == xno; then
++      if test x"$with_boost_include_dir" = xyes ||
++         test x"$with_boost_include_dir" = xno; then
+ 	gr_boost_include_dir=
+       else
+         gr_boost_include_dir=$with_boost_include_dir
