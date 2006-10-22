@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2006/10/07 08:19:08 obache Exp $
+$NetBSD: patch-aa,v 1.5 2006/10/22 20:59:01 schwarz Exp $
 
---- configure.orig	2005-04-27 20:54:13.000000000 +0900
-+++ configure
-@@ -1127,7 +1127,7 @@ fi
+--- configure.orig	2005-04-27 13:54:13.000000000 +0200
++++ configure	2006-10-22 22:53:47.000000000 +0200
+@@ -675,7 +675,7 @@
+ 	;;
+ esac
+ 
+-OPTS="-O"
++OPTS=""
+ 
+ 
+ 
+@@ -1127,7 +1127,7 @@
  rm -fr conftest*
  fi
  
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2006/10/07 08:19:08 obache Exp $
  if test "$buggygetaddrinfo" = "yes"; then
  	if test "$ipv6" = "yes"; then
  		echo 'Fatal: You must get working getaddrinfo() function.'
-@@ -1135,6 +1135,7 @@ if test "$buggygetaddrinfo" = "yes"; the
+@@ -1135,6 +1135,7 @@
  		exit 1
  	fi
  fi
