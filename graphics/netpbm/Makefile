@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2006/10/11 18:44:25 rillig Exp $
+# $NetBSD: Makefile,v 1.147 2006/10/22 21:11:15 rillig Exp $
 
 DISTNAME=	netpbm-10.34
 CATEGORIES=	graphics
@@ -84,7 +84,8 @@ post-install:
 	${RM} -rf link man/web && 				\
 	${MKDIR} share/doc/netpbm &&				\
 	${CP} ${WRKSRC}/doc/* share/doc/netpbm &&		\
-	${MV} share/doc/netpbm/*.1	man/man1 &&		\
+	mkdir ${PKGMANDIR}/man1 &&				\
+	${MV} share/doc/netpbm/*.1	${PKGMANDIR}/man1 &&	\
 	${MV} misc share/netpbm && 				\
 	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
 	${FIND} * \! -type d -print | ${SORT} >${PLIST_SRC} &&	\

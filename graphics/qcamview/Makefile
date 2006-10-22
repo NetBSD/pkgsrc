@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/09 02:42:01 obache Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/22 21:12:33 rillig Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
@@ -15,6 +15,7 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#qcam
 COMMENT=	Logitech Quickcam Express USB Utilities
 
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 do-build:
 	for f in qcamshot qcamview ; do				\
