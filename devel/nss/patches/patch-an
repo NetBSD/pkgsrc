@@ -1,18 +1,18 @@
-$NetBSD: patch-an,v 1.1 2006/07/12 16:30:04 rillig Exp $
+$NetBSD: patch-an,v 1.2 2006/10/22 15:32:47 dmcmahill Exp $
 
 https://bugzilla.mozilla.org/show_bug.cgi?id=323977
 https://bugzilla.mozilla.org/attachment.cgi?id=209007&action=view
 
 Added DragonFly.
 
-Index: mozilla/security/nss/lib/freebl/Makefile
-===================================================================
-RCS file: /cvsroot/mozilla/security/nss/lib/freebl/Makefile,v
-retrieving revision 1.70
-diff -u -r1.70 Makefile
---- mozilla/security/nss/lib/freebl/Makefile	22 Nov 2005 07:13:32 -0000	1.70
-+++ mozilla/security/nss/lib/freebl/Makefile	19 Jan 2006 21:47:47 -0000
-@@ -188,6 +188,17 @@
+Also, when building on solaris with gcc, be sure to correctly set the
+flags used by the solaris assembler which is explicitly called out in
+the makefile in a couple of places.  This prevents errors when trying to
+assemble files which contain cpu specific instructions.
+
+--- mozilla/security/nss/lib/freebl/Makefile.orig	2005-11-22 02:13:32.000000000 -0500
++++ mozilla/security/nss/lib/freebl/Makefile
+@@ -188,6 +188,17 @@ endif
  endif
  endif
  
@@ -30,3 +30,24 @@ diff -u -r1.70 Makefile
  ifeq ($(OS_TARGET),SunOS)
  
  # The -R '$ORIGIN' linker option instructs this library to search for its
+@@ -227,16 +238,20 @@ ifeq ($(CPU_ARCH),sparc)
+ 	endif
+ 	ifdef USE_ABI32_INT64
+ 	    ARCHFLAG=-mcpu=v9 -Wa,-xarch=v8plus
++	    SOLARIS_AS_FLAGS = -xarch=v8plus -K PIC
+ 	endif
+ 	ifdef USE_ABI32_FPU
+ 	    ARCHFLAG=-mcpu=v9 -Wa,-xarch=v8plus
++	    SOLARIS_AS_FLAGS = -xarch=v8plusa -K PIC
+ 	endif # USE_ABI32_FPU
+ 	ifdef USE_ABI64_INT
+ 	    # this builds for Sparc v9a pure 64-bit architecture
++	    SOLARIS_AS_FLAGS = -xarch=v9 -K PIC
+ 	endif
+ 	ifdef USE_ABI64_FPU
+ 	    # this builds for Sparc v9a pure 64-bit architecture
+ 	    # It uses floating point, and 32-bit word size
++	    SOLARIS_AS_FLAGS = -xarch=v9a -K PIC
+ 	endif
+     else # NS_USE_GCC
+ 	ifdef USE_ABI32_INT32
