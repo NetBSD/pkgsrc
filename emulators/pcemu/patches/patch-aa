@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/09/24 19:29:56 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/22 00:59:45 rillig Exp $
 
 --- Makefile.orig	Wed Jun 22 10:29:06 1994
 +++ Makefile
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.3 2000/09/24 19:29:56 hubertf Exp $
 +		${LOCALPREFIX}/lib/pcemu/font \
 +		${LOCALPREFIX}/lib/pcemu/C \
 +		${LOCALPREFIX}/bin
-+	install -c -s -o bin -g bin pcemu ${LOCALPREFIX}/bin/
++	install -c -s pcemu ${LOCALPREFIX}/bin/
 +	install -c -m 666 bootstrap/display.bin \
 +		${LOCALPREFIX}/lib/pcemu/DriveA
 +	install -c -m 644 BUGS CHANGES README TODO  bootstrap/README.BSD     \
