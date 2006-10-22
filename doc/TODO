@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5601 2006/10/22 12:38:53 wiz Exp $
+$NetBSD: TODO,v 1.5602 2006/10/22 15:56:46 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -465,6 +465,7 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geda-20060907
 	o gedit-2.16.1
+	o getmail-4.6.5
 	o genius-0.7.6.1
 	o ggiterm-0.7.1
 	o ghc-6.6
@@ -1043,6 +1044,7 @@ Suggested package updates
 	o rp-pppoe-3.8
 	o rpc2-1.28
 	o rpm-4.4.6
+	o rss2email-2.60
 	o rt3-3.6.1
 	o rtcw-1.41.3
 	o ruby-1.8.5
@@ -1087,7 +1089,7 @@ Suggested package updates
 	o snes9x-1.502
 	o snort-2.6.0.2
 	o socat-1.5.0.0
-	o solfege-3.6.0
+	o solfege-3.6.3
 	o sope-4.5.5
 	o sound-juicer-2.16.1
 	o source-highlight-2.3 [pkg/32325]
@@ -1133,7 +1135,7 @@ Suggested package updates
 	o tkgate-1.8.6
 	o tkhylafax-3.2
 	o tkpasman-2.2b
-	o tmda-1.1.5
+	o tmda-1.1.8
 	o tob-0.26
 	o top-3.6beta1
 	o tpasm-1.2
