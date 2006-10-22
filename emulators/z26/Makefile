@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/22 16:30:22 rillig Exp $
 #
 
 DISTNAME=		z26v213
@@ -18,8 +18,10 @@ ONLY_FOR_PLATFORM+=	*-*-i386
 WRKSRC=			${WRKDIR}/z26_snapshot-20040523
 USE_TOOLS+=		gmake perl
 BUILD_TARGET=		netbsd
-MAKE_ENV+=		"INSTALL_BINDIR=${PREFIX}/bin"
-MAKE_ENV+=		"INSTALL_MANDIR=${PREFIX}/man/man1"
+MAKE_ENV+=		INSTALL_BINDIR=${PREFIX}/bin
+MAKE_ENV+=		INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_FLAGS+=		INSTALL_USER=${ROOT_USER}
+MAKE_FLAGS+=		INSTALL_GROUP=${ROOT_GROUP}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
