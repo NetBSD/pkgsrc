@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2006/10/21 11:39:16 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/10/22 11:18:10 wiz Exp $
 
-DISTNAME=	bash-3.1
-PKGNAME=	bash-3.1pl17
+DISTNAME=	bash-3.2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
-PATCH_SITES=	${MASTER_SITES:=bash-3.1-patches/}
-PATCHFILES=	bash31-001 bash31-002 bash31-003 bash31-004 \
-		bash31-005 bash31-006 bash31-007 bash31-008 \
-		bash31-009 bash31-010 bash31-011 bash31-012 \
-		bash31-013 bash31-014 bash31-015 bash31-016 \
-		bash31-017   
+PATCH_SITES=	${MASTER_SITES:=bash-3.2-patches/}
+PATCHFILES=	bash32-001
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
@@ -53,8 +48,7 @@ CONFIGURE_ARGS+=	--enable-array-variables
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
-PKG_SUPPORTED_OPTIONS=	multibyte static
-PKG_SUGGESTED_OPTIONS=	multibyte
+PKG_SUPPORTED_OPTIONS=	static
 
 .include "../../mk/bsd.options.mk"
 
@@ -65,13 +59,6 @@ PKG_SUGGESTED_OPTIONS=	multibyte
 CONFIGURE_ARGS+=	--enable-static-link
 BUILDLINK_DEPMETHOD.gettext=	build
 BUILDLINK_DEPMETHOD.readline=	build
-.endif
-
-##
-## Multibyte support
-##
-.if empty(PKG_OPTIONS:Mmultibyte)
-CONFIGURE_ENV+=	ac_cv_type_wctype_t=no
 .endif
 
 # the code has problems with older versions of yacc
