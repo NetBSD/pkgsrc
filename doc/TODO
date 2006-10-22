@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5600 2006/10/21 14:59:38 obache Exp $
+$NetBSD: TODO,v 1.5601 2006/10/22 12:38:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,7 +308,6 @@ Suggested package updates
 	o avr-libc-1.4.1
 	o avrdude-5.1
 	o baci-20040415
-	o bash-3.2
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -359,7 +358,6 @@ Suggested package updates
 	o clisp-2.41
 	o cocoon-2.1.9
 	o columba-1.0RC1
-	o comix-3.6.1
 	o compface-1.5.2
 	o control-center-2.16.1
 	o coreutils-6.3
@@ -389,7 +387,6 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.34
 	o dnstracer-1.8
-	o docbook-xsl-1.71.1
 	o doxygen-1.5.0
 	o drscheme-352
 	o dvd+rw-tools-7.0
@@ -1030,7 +1027,6 @@ Suggested package updates
 	o rc-1.7.1
 	o rdesktop-1.5
 	o rdp-1.6
-	o readline-5.2
 	o regionset-0.2
 	o rep-gtk-0.18
 	o resize_image-0.7
