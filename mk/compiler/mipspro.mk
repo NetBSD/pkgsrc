@@ -1,4 +1,12 @@
-# $NetBSD: mipspro.mk,v 1.34 2005/01/12 18:37:52 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.35 2006/10/22 00:14:17 rillig Exp $
+#
+# This is the compiler definition for the MIPSpro C compiler.
+#
+# User-settable variables:
+#
+# MIPSPROBASE
+#	The base directory where the compiler is installed.
+#
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
