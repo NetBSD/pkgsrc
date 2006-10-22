@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1598 2006/10/22 11:32:27 bouyer Exp $
+>$NetBSD: CHANGES-2006,v 1.1599 2006/10/22 12:38:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4932,3 +4932,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-SOAP-Lite to 0.69 [obache 2006-10-21]
 	Added www/nvu version 1.0 [rillig 2006-10-21]
 	Updated www/trac to 0.10 [bouyer 2006-10-22]
+	Updated devel/readline to 5.2 [wiz 2006-10-22]
+	Updated graphics/comix to 3.6.1 [wiz 2006-10-22]
+	Updated textproc/docbook-xsl to 1.71.1 [wiz 2006-10-22]
