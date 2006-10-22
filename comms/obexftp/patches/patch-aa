@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
-
---- aclocal.m4.orig	2006-05-16 15:50:36.000000000 +0100
-+++ aclocal.m4
-@@ -56,6 +56,9 @@ if test "$ac_bluetooth_enabled" = yes; t
+--- aclocal.m4.orig	2006-05-16 16:50:36.000000000 +0200
++++ aclocal.m4	2006-10-22 10:07:38.000000000 +0200
+@@ -56,6 +56,9 @@
  				#ifdef __FreeBSD__
  				#include <sys/types.h>
  				#include <bluetooth.h>
@@ -12,7 +10,7 @@ $NetBSD: patch-aa,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
  				#else /* Linux */
  				#include <sys/socket.h>
  				#include <bluetooth/bluetooth.h>
-@@ -65,6 +68,9 @@ if test "$ac_bluetooth_enabled" = yes; t
+@@ -65,6 +68,9 @@
  				#ifdef __FreeBSD__
  				bdaddr_t bdaddr;
  				struct sockaddr_rfcomm addr;
@@ -22,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
  				#else /* Linux */
  				bdaddr_t bdaddr;
  				struct sockaddr_rc addr;
-@@ -76,6 +82,7 @@ if test "$ac_bluetooth_enabled" = yes; t
+@@ -76,6 +82,7 @@
  		AC_DEFINE([HAVE_BLUETOOTH], [1], [Define if system supports Bluetooth and it's enabled])
  		BLUETOOTH_CFLAGS=""
  		BLUETOOTH_LIBS="-lbluetooth"
@@ -30,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
  	fi
  	AC_SUBST(BLUETOOTH_CFLAGS)
  	AC_SUBST(BLUETOOTH_LIBS)
-@@ -92,14 +99,22 @@ AC_DEFUN([SDPLIB_CHECK],[
+@@ -92,14 +99,22 @@
  	AC_MSG_CHECKING(for Bluetooth SDP support)
  
  	AC_TRY_COMPILE(	[
@@ -54,3 +52,16 @@ $NetBSD: patch-aa,v 1.2 2006/07/17 12:29:57 xtraeme Exp $
  	if test $am_cv_sdplib_found = yes; then
  		AC_DEFINE(HAVE_SDPLIB,1,[Define if system supports Bluetooth SDP])
  
+@@ -118,6 +133,12 @@
+ 	AC_MSG_CHECKING(for USB support)
+ 
+ 	AC_TRY_COMPILE( [
++				#ifdef __NetBSD__
++				#include <bluetooth.h>
++				#else
++				#include <bluetooth/bluetooth.h>
++				#endif
++
+ 				#include <openobex/obex.h>
+ 				#include <openobex/obex_const.h>
+ 			],[
