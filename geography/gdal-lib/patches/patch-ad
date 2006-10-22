@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2006/10/22 20:37:01 rillig Exp $
+
+--- mkbindist.sh.orig	2003-07-02 08:38:27.000000000 +0200
++++ mkbindist.sh	2006-10-22 22:36:02.000000000 +0200
+@@ -7,7 +7,7 @@ if [ $# -lt 2 ] ; then
+   exit
+ fi
+ 
+-if [ $1 == "-dev" ] ; then
++if [ "x$1" == "x-dev" ] ; then
+   STRIP_DEV=0
+   shift
+ else
+@@ -59,7 +59,7 @@ cc -o $DIST_DIR/bin/burnpath dist_docs/b
+ #
+ # Clean anything we don't want for non-developer releases.
+ #
+-if [ "$STRIP_DEV" == "1" ] ; then
++if [ "$STRIP_DEV" = "1" ] ; then
+   rm -f $DIST_DIR/html/class_*
+   rm -f $DIST_DIR/html/struct_*
+   rm -f $DIST_DIR/html/*-source.html

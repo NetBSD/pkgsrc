@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 09:03:09 agc Exp $
+$NetBSD: distinfo,v 1.9 2006/10/22 20:29:49 rillig Exp $
 
 SHA1 (mercury-compiler-0.11.0.tar.gz) = 17feadfa8e8783738fc18428c6ab59b61c1e8a73
 RMD160 (mercury-compiler-0.11.0.tar.gz) = a29edbca8253e921fa5f7c17f605f71ec0a65b56
@@ -16,3 +16,5 @@ SHA1 (patch-aj) = fb0df25aeb55a1c466fa0def40b7096269ba8d6c
 SHA1 (patch-ak) = 20223ebfa573659d2217b6177bf2e2b523eb248d
 SHA1 (patch-al) = 5eb7f071049b163807f7a0c833eeecd941e7cbfb
 SHA1 (patch-am) = d0d3211c8d3e55beaba5a73b39f6bb3853e1602d
+SHA1 (patch-an) = d581d673d677f88fc4a48319df3a6458e598499b
+SHA1 (patch-ao) = c9b57f296e98cc860cdbcb0332abe2e979c2248b
