@@ -1,4 +1,12 @@
-# $NetBSD: sunpro.mk,v 1.34 2006/07/06 11:46:33 markd Exp $
+# $NetBSD: sunpro.mk,v 1.35 2006/10/22 00:14:17 rillig Exp $
+#
+# This is the compiler definition for the SUNWspro C compiler.
+#
+# User-settable variables:
+#
+# SUNWSPROBASE
+#	The base directory where the compiler is installed.
+#
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
