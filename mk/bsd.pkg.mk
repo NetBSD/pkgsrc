@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1889 2006/10/22 06:50:49 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1890 2006/10/22 07:00:41 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -211,6 +211,12 @@ ALL_ENV+=	LDFLAGS=${LDFLAGS:M*:Q}
 ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
 ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
+
+# This variable can be added to MAKE_ENV to ease installation of packages
+# that use BSD-style Makefiles.
+BSD_MAKE_ENV=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+BSD_MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
+BSD_MAKE_ENV+=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/${PKGMANDIR}
 
 _BUILD_DEFS=		${BUILD_DEFS}
 _BUILD_DEFS+=		LOCALBASE
