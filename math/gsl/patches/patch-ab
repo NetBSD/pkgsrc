@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2006/10/22 19:51:05 schwarz Exp $
+
+--- ./randist/gausszig.c.orig	2006-10-22 10:54:48.000000000 +0200
++++ ./randist/gausszig.c	2006-10-22 10:55:05.000000000 +0200
+@@ -164,7 +164,7 @@
+ 
+ 
+ double
+-gsl_ran_gaussian_ziggurat (const gsl_rng * r, double sigma)
++gsl_ran_gaussian_ziggurat (const gsl_rng * r, const double sigma)
+ {
+   unsigned long int i, j;
+   int sign;
