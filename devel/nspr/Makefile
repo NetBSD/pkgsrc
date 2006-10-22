@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/08/05 02:08:32 markd Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/22 15:23:27 dmcmahill Exp $
 
 DISTNAME=		nspr-4.6.1
 PKGREVISION=		1
@@ -34,9 +34,22 @@ PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 INSTALLATION_DIRS=	bin
 
-.if ${OPSYS} == "SunOS" && defined(ABI) && ${ABI} == "64"
+# see ${WRKSRC}/nspr-4.6.1/mozilla/nsprpub/pr/src/md/unix/Makefile.in
+# for the bit about 32-bit sun4u machines installing an extra file.
+# That is why we have this specific test and modify the PLIST
+.if ${OPSYS} == "SunOS" 
+.  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
+.  else
+HW_CLASS!=	${UNAME} -m
+.    if ${HW_CLASS} == "sun4u"
+SUN4U_32=
+.    endif
+.  endif
 .endif
+
+SUN4U_32?=		@comment
+PLIST_SUBST+=		SUN4U_32=${SUN4U_32}
 
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon

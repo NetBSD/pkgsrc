@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/02 05:51:14 ben Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/10/22 15:23:27 dmcmahill Exp $
 bin/nspr-config
 include/nspr/md/_aix.h
 include/nspr/md/_aix32.cfg
@@ -130,6 +130,7 @@ include/nspr/prtrace.h
 include/nspr/prtypes.h
 include/nspr/prvrsion.h
 include/nspr/prwin16.h
+${SUN4U_32}lib/nspr/cpu/sparcv8plus/libnspr_flt4.so
 lib/nspr/libnspr4.a
 lib/nspr/libnspr4.${SO_SUFFIX}
 lib/nspr/libplc4.a
@@ -141,4 +142,5 @@ lib/pkgconfig/nspr.pc
 @dirrm include/nspr/obsolete
 @dirrm include/nspr/md
 @dirrm include/nspr
+${SUN4U_32}@dirrm lib/nspr/cpu/sparcv8plus
 @dirrm lib/nspr
