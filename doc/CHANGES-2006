@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1605 2006/10/22 21:38:10 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1606 2006/10/22 21:40:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4964,3 +4964,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libtunepimp to 0.5.2 [wiz 2006-10-22]
 	Updated graphics/ImageMagick to 6.3.0.0 [adam 2006-10-22]
 	Updated devel/libextractor to 0.5.15 [adam 2006-10-22]
+	Updated sysutils/gnome-menus to 2.16.1 [wiz 2006-10-22]
