@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/10/22 06:52:57 rillig Exp $
+
+--- setup.py.orig	2006-10-02 01:39:28.000000000 +0200
++++ setup.py	2006-10-22 07:05:04.000000000 +0200
+@@ -207,7 +207,7 @@ elif 'py2exe' in sys.argv:
+ else:
+     # std setup
+     ARGS = {'scripts': ['bzr'],
+-            'data_files': [('man/man1', ['bzr.1'])],
++            'data_files': [(os.getenv('PKGMANDIR', 'man') + '/man1', ['bzr.1'])],
+             'cmdclass': {'build': bzr_build,
+                          'install_scripts': my_install_scripts,
+                         },

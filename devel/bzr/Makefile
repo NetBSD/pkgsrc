@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/04 20:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/22 06:52:57 rillig Exp $
 #
 
 DISTNAME=		bzr-0.11
@@ -11,7 +11,7 @@ COMMENT=		Open source distributed version control system
 
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
-PY_PATCHPLIST=          yes
+PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 TEST_TARGET=		check
 
