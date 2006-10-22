@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2006/05/28 14:11:24 joerg Exp $
+$NetBSD: patch-ac,v 1.7 2006/10/22 21:26:19 adam Exp $
 
---- src/main/Makefile.in.orig	2006-05-28 13:27:06.000000000 +0000
+--- src/main/Makefile.in.orig	2006-09-06 23:07:45.000000000 +0200
 +++ src/main/Makefile.in
-@@ -280,7 +280,7 @@ AM_CFLAGS = \
+@@ -286,7 +286,7 @@ lib_LTLIBRARIES = \
  extract_LDADD = \
    $(top_builddir)/src/main/libextractor.la 
  

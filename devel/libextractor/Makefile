@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2006/09/16 12:20:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2006/10/22 21:26:19 adam Exp $
 
-DISTNAME=	libextractor-0.5.14
-PKGREVISION=	2
+DISTNAME=	libextractor-0.5.15
 CATEGORIES=	devel
 MASTER_SITES=	http://gnunet.org/libextractor/download/
 
