@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2006/09/12 12:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2006/10/22 12:36:53 wiz Exp $
 #
 
-DISTNAME=	docbook-xsl-1.71.0
-PKGREVISION=	1
+DISTNAME=	docbook-xsl-1.71.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +21,7 @@ REPLACE_PERL+=	fo/pdf2index
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
 XSLDIR=		${PREFIX}/share/xsl/docbook
 XSLMODS=	common extensions fo highlighting html htmlhelp images javahelp \
-		lib manpages params profiling slides website xhtml
+		lib manpages params profiling slides website wordml xhtml
 
 XML_CATALOGS=	${XSLDIR}/catalog.xml
 
