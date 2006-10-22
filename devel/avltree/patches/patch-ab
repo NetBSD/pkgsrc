@@ -1,8 +1,0 @@
-$NetBSD: patch-ab,v 1.1 2000/10/01 11:52:24 rh Exp $
-
---- /dev/null	Sun Oct  1 13:42:37 2000
-+++ shlib_version
-@@ -0,0 +1,3 @@
-+#!/bin/sh
-+major=1
-+minor=1
