@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:02 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/22 06:31:43 rillig Exp $
 
 DISTNAME=		bcc
 PKGNAME=		bcc-95.3.12
@@ -12,16 +12,25 @@ NOT_FOR_PLATFORM+=	Interix-*-*		# no <a.out.h>
 
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q} \
 			MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q} MANMODE=${MANMODE:Q}
+MAKE_ENV+=		BINDIR=${PREFIX}/bin
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MANCOMPRESSED_IF_MANZ=	yes
 
-do-configure:
-	${RM} -f ${WRKSRC}/as/typeconv.o
-	${MV} ${WRKSRC}/bcc ${WRKSRC}/bcc-cc1
-	${MKDIR} ${WRKSRC}/bcc
-	${CP} ${FILESDIR}/Makefile.bcc ${WRKSRC}/bcc/Makefile
-	${CP} ${FILESDIR}/ld86.1 ${WRKSRC}/ld/
-	${CP} ${FILESDIR}/as86.1 ${WRKSRC}/as/
-	${CP} ${FILESDIR}/bcc.1 ${WRKSRC}/bcc/
-	${CP} ${FILESDIR}/bcc-cc1.1 ${WRKSRC}/bcc-cc1/
+INSTALLATION_DIRS=	bin lib/bcc ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+
+post-extract:
+	set -e; \
+	cd ${FILESDIR}; \
+	mkdir ${WRKSRC}/bcc-cc1; \
+	cp Makefile.main ${WRKSRC}/Makefile; \
+	cp Makefile.ld ${WRKSRC}/ld/Makefile; \
+	cp ld86.1 ${WRKSRC}/ld/; \
+	cp Makefile.as ${WRKSRC}/as/Makefile; \
+	cp as86.1 ${WRKSRC}/as/; \
+	cp Makefile.bcc ${WRKSRC}/bcc/Makefile; \
+	cp bcc.1 ${WRKSRC}/bcc/; \
+	cp Makefile.bcc-cc1 ${WRKSRC}/bcc-cc1/Makefile; \
+	cp bcc-cc1.1 ${WRKSRC}/bcc-cc1/
+	rm -f ${WRKSRC}/as/typeconv.o
 
 .include "../../mk/bsd.pkg.mk"
