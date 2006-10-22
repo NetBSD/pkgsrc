@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.681 2006/10/17 21:42:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.682 2006/10/22 05:25:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3627,6 +3627,9 @@ sub checkline_source_absolute_pathname($$) {
 
 		} elsif ($string !~ qr"^/\w") {
 			# Assume that pathnames start with a letter or digit.
+
+		} elsif ($before =~ qr"\+\s*[\"']$") {
+			# Something like foodir + '/lib'
 
 		} else {
 			$abspath = $string;
