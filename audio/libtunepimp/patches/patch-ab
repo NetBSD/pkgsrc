@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/07/24 13:01:16 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2006/10/22 21:24:35 wiz Exp $
 
---- lib/threads/posix/Makefile.in.orig	2006-07-24 12:42:15.000000000 +0000
+--- lib/threads/posix/Makefile.in.orig	2006-09-30 13:57:41.000000000 +0000
 +++ lib/threads/posix/Makefile.in
-@@ -211,8 +211,7 @@ target_alias = @target_alias@
+@@ -212,8 +212,7 @@ target_alias = @target_alias@
  INCLUDES = -I$(top_srcdir)/include/tunepimp-0.5
  noinst_LTLIBRARIES = libtpthread.la
  libtpthread_la_SOURCES = mutex.cpp mutex.h thread.cpp thread.h semaphore.cpp semaphore.h
