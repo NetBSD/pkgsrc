@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1604 2006/10/22 21:36:11 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1605 2006/10/22 21:38:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4779,7 +4779,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libgsf to 1.14.2 [drochner 2006-10-13]
 	Updated x11/vte to 0.14.1 [drochner 2006-10-13]
 	Updated x11/gnome2-terminal to 2.16.1 [drochner 2006-10-13]
-	Updated x11/gktsourceview to 1.8.1 [drochner 2006-10-13]
+	Updated x11/gtksourceview to 1.8.1 [drochner 2006-10-13]
 	Added devel/py-ctypes version 1.0.0 [epg 2006-10-13]
 	Added audio/libdiscid version 0.1.0 [epg 2006-10-13]
 	Added audio/py-musicbrainz version 0.4.0 [epg 2006-10-13]
