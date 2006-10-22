@@ -158,8 +158,7 @@ DDEESSCCRRIIPPTTIIOONN
      [[nnoo--]]vvaarroorrddeerr       Warn if the variables in a package _M_a_k_e_f_i_l_es are not
                          ordered in the way it is described the pkgsrc guide.
 
-     OOtthheerr aarrgguummeennttss
-
+   OOtthheerr aarrgguummeennttss
            _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
                                ted, the current directory is checked.
 
