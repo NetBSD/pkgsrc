@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/09 02:42:01 obache Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/22 21:26:04 rillig Exp $
 #
 
 DISTNAME=	ov51x-1.65-1.11-mark
@@ -16,6 +16,7 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#ov519
 COMMENT=	USB cameras based OV519 Utility Programs
 
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 do-build:
 	for f in ov519shot ov519view ; do               \
