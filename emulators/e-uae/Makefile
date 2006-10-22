@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/22 19:38:58 rillig Exp $
 
 DISTNAME=	e-uae-0.8.28
 PKGREVISION=	2
@@ -10,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.rcdrummond.net/uae/
 COMMENT=	Enhanced Ubiquitous Amiga Emulator
 
-CONFLICTS+=	uae-*
+CONFLICTS+=	uae-[0-9]*
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
