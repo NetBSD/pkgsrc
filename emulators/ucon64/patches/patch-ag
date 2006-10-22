@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2006/10/22 17:55:41 rillig Exp $
+
+--- install_beos.sh.orig	2003-05-21 16:21:12.000000000 +0200
++++ install_beos.sh	2006-10-22 19:39:20.000000000 +0200
+@@ -7,7 +7,7 @@ areply=$(alert "This will start installa
+ uCON64 will be installed in $HOME/config/bin.
+ 
+ Do you want to continue?" "Cancel" "Install")
+-if [ "$areply" ==  "Install" ]; then
++if [ "$areply" =  "Install" ]; then
+   cp ucon64 "$HOME/config/bin"
+   if [ ! -e "$HOME/.ucon64" ]; then
+     mkdir "$HOME/.ucon64"
+@@ -24,7 +24,7 @@ if [ "$areply" ==  "Install" ]; then
+   drreply=$(alert "In order to communicate with a backup device (\"copier\") uCON64 needs the BeOS ioport driver by Caz Jones. You needn't install it if you don't want to use uCON64 for communicating with a copier.
+ 
+ Would you like to do install it?" "No" "Yes, install driver")
+-  if [ "$drreply" ==  "Yes, install driver" ]; then
++  if [ "$drreply" =  "Yes, install driver" ]; then
+     if [ -e "$HOME/ioport" ]; then
+       cd "$HOME/ioport/driver"
+       install_ioport
