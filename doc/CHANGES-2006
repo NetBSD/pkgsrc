@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1607 2006/10/22 21:56:55 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1608 2006/10/22 22:51:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4966,3 +4966,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libextractor to 0.5.15 [adam 2006-10-22]
 	Updated sysutils/gnome-menus to 2.16.1 [wiz 2006-10-22]
 	Updated x11/gnome-desktop to 2.16.1 [wiz 2006-10-22]
+	Updated mail/evolution-data-server to 1.8.1 [wiz 2006-10-22]
