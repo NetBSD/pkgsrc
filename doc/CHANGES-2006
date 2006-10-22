@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1601 2006/10/22 19:51:22 heinz Exp $
+>$NetBSD: CHANGES-2006,v 1.1602 2006/10/22 21:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/php4 to 4.4.4nb2 [adrianp 2006-10-22]
 	Updated lang/php5 to 5.1.6nb2 [adrianp 2006-10-22]
 	Updated misc/esniper to 2.14.0nb2 [heinz 2006-10-22]
+	Updated audio/libtunepimp to 0.5.2 [wiz 2006-10-22]
