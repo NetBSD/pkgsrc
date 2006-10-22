@@ -1,4 +1,13 @@
-# $NetBSD: ido.mk,v 1.3 2006/08/06 18:59:41 schwarz Exp $
+# $NetBSD: ido.mk,v 1.4 2006/10/22 00:14:17 rillig Exp $
+#
+# This is the compiler definition for the SGI IRIS Development Option
+# cc (IRIX 5).
+#
+# User-settable variables:
+#
+# IDOBASE
+#	The base directory where the compiler is installed.
+#
 
 .if !defined(COMPILER_IDO_MK)
 COMPILER_IDO_MK=	defined
