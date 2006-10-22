@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5602 2006/10/22 15:56:46 schmonz Exp $
+$NetBSD: TODO,v 1.5603 2006/10/22 21:25:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o libshout-2.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
-	o libtunepimp-0.5.2
 	o libwpd-0.8.7
 	o licq-core-1.3.0
 	o liferea-1.0.23
