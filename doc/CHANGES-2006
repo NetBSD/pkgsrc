@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1597 2006/10/21 21:54:24 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1598 2006/10/22 11:32:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4931,3 +4931,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Class-Factory to 1.04 [obache 2006-10-21]
 	Updated net/p5-SOAP-Lite to 0.69 [obache 2006-10-21]
 	Added www/nvu version 1.0 [rillig 2006-10-21]
+	Updated www/trac to 0.10 [bouyer 2006-10-22]
