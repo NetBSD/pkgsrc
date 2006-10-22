@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/10/16 12:50:43 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/22 15:32:47 dmcmahill Exp $
 
 DISTNAME=		nss-3.11
 CATEGORIES=		security
@@ -35,6 +35,20 @@ MAKEFLAGS+=	NS_USE_GCC=YES
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
+.elif ${OPSYS} == "SunOS"
+.  if ${PKGSRC_COMPILER} == "gcc"
+NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_gcc_OPT.OBJ
+.  else
+NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
+.  endif
+
+# on solaris/sparc, we get a different set of libs.  
+# How about NetBSD/sparc and sparc64?
+.  if ${MACHINE_ARCH} == "sparc"
+SUNOS_TRUE=	
+SUNOS_FALSE=	"@comment "
+.  endif
+
 .elif ${OPSYS} == "Linux"
 NSS_SHORT_OS_VERSION!=	echo ${OS_VERSION} | ${SED} -e 's/^\([[:digit:]]\.[[:digit:]]\)\..*$$/\1/'
 .  if ${MACHINE_ARCH} == "i386"
@@ -48,7 +62,13 @@ NSS_MACHINE_ARCH=	_${MACHINE_ARCH}
 .  endif
 NSS_OBJ_DIR=	${OPSYS}${NSS_SHORT_OS_VERSION}${NSS_MACHINE_ARCH}_glibc_PTH_OPT.OBJ
 .endif
-NSS_OBJ_DIR?=	${OPSYS}${OS_VERSION}_OPT.OBJ
+
+SUNOS_TRUE?=	"@comment "
+SUNOS_FALSE?=	
+PLIST_SUBST+=	SUNOS_TRUE=${SUNOS_TRUE:Q}
+PLIST_SUBST+=	SUNOS_FALSE=${SUNOS_FALSE}
+
+NSS_OBJ_DIR?=  ${OPSYS}${OS_VERSION}_OPT.OBJ
 
 pre-configure:
 	${CP} ${FILESDIR}/DragonFly.mk \
