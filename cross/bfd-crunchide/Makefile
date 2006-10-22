@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/10/02 19:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/22 07:01:05 rillig Exp $
 
 DISTNAME=	bfd-crunchide-1.2
 CATEGORIES=	cross
@@ -18,6 +18,7 @@ NO_CONFIGURE=	yes
 USE_CROSSBASE=	yes
 CPPFLAGS+=	-I${PREFIX}/include
 MAKE_ENV+=	LIBS=${BFD_LIBS:Q}
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 BFD_LIBS=	${PREFIX}/lib/libbfd.a ${PREFIX}/lib/libiberty.a ${PREFIX}/lib/libintl.a
 
