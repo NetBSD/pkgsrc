@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2006/10/12 13:16:02 obache Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/22 13:02:57 obache Exp $
 #
 
 DISTNAME=	wmii-2.5.2
 CATEGORIES=	wm x11
-MASTER_SITES=	http://wmii.de/download/
+MASTER_SITES=	http://suckless.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wmii.de/
+HOMEPAGE=	http://wmii.suckless.org/
 COMMENT=	Modular and keyboard-friendly window manager
 
 DEPENDS+=		9base-[0-9]*:../../sysutils/9base
