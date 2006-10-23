@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2006/10/23 09:42:23 drochner Exp $
+
+--- plugins/maxima/bin/tm_maxima.orig	2006-10-21 21:37:11.000000000 +0200
++++ plugins/maxima/bin/tm_maxima
+@@ -18,7 +18,8 @@ case $1 in
+   5.9.0) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.9.0.lisp" \
+       | maxima_filter;;
+   5.9.1) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.9.1.lisp";;
+-  5.9.1.1* | 5.9.2* | 5.9.3) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.9.2.lisp";;
++  5.9.1.1* | 5.9.2* | 5.9.3*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.9.2.lisp";;
++  5.10.*) exec maxima -u $1 -l $2 -p "$TEXMACS_MAXIMA_PATH/texmacs-maxima-5.10.0.lisp";;
+   cygwin)
+     CYGWIN_ROOT="C:\cygwin"
+     CYGWIN_TEXMACS_HOME=`echo $TEXMACS_HOME_PATH | sed 's|/|\\\\|g'`
