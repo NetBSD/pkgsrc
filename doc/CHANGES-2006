@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1619 2006/10/23 20:04:45 jdolecek Exp $
+>$NetBSD: CHANGES-2006,v 1.1620 2006/10/23 20:09:37 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4993,3 +4993,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/qt3-mysql to 3.3.7 [adam 2006-10-23]
 	Updated security/base to 1.2.6 [adrianp 2006-10-23]
 	Updated sysutils/pwgen to 2.05 [jdolecek 2006-10-23]
+	Updated www/pear-HTML_Common to 1.2.3 [jdolecek 2006-10-23]
