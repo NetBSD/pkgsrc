@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2006/10/17 11:29:36 tv Exp $
+# $NetBSD: Makefile,v 1.168 2006/10/23 03:26:24 dan Exp $
 
 .include "Makefile.mirrors"
 
@@ -16,6 +16,7 @@ COMMENT=		SMB/CIFS protocol server suite
 
 CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
 			winbind-[0-9]*
+MAKE_JOBS_SAFE=		NO
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
