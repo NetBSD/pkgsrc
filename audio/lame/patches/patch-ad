@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/03/27 17:33:28 he Exp $
+$NetBSD: patch-ad,v 1.2 2006/10/23 01:30:34 ben Exp $
 
---- libmp3lame/machine.h.orig	2004-03-27 18:23:04.000000000 +0100
+--- libmp3lame/machine.h.orig	2006-09-24 13:53:32.000000000 +0000
 +++ libmp3lame/machine.h
-@@ -113,6 +113,7 @@ char *strchr (), *strrchr ();
+@@ -111,6 +111,7 @@ char *strchr (), *strrchr ();
  # include <float.h>
  # define FLOAT_MAX FLT_MAX
  #else
