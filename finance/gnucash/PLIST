@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/07/31 19:48:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/10/23 21:46:39 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -144,9 +144,7 @@ include/gnucash/gnc-ui-common.h
 include/gnucash/gnc-ui-util.h
 include/gnucash/gnc-window.h
 include/gnucash/gncObject.h
-include/gnucash/gnctreemodelsort.h
 include/gnucash/gtable.h
-include/gnucash/gtktreedatalist.h
 include/gnucash/guid.h
 include/gnucash/guile-util.h
 include/gnucash/import-match-map.h
@@ -622,7 +620,6 @@ share/gnucash/guile-modules/gnucash/report/stylesheet-plain.scm
 share/gnucash/guile-modules/gnucash/report/stylesheets.scm
 share/gnucash/guile-modules/gnucash/report/taxtxf-de_DE.scm
 share/gnucash/guile-modules/gnucash/report/taxtxf.scm
-share/gnucash/guile-modules/gnucash/report/test-graphing.scm
 share/gnucash/guile-modules/gnucash/report/transaction.scm
 share/gnucash/guile-modules/gnucash/report/trial-balance.scm
 share/gnucash/guile-modules/gnucash/report/utility-reports.scm
