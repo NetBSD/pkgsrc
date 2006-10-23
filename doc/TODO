@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5620 2006/10/23 22:48:37 wiz Exp $
+$NetBSD: TODO,v 1.5621 2006/10/23 22:53:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,7 @@ Suggested package updates
 	o columba-1.0RC1
 	o compface-1.5.2
 	o control-center-2.16.1
-	o coreutils-6.3
+	o coreutils-6.4
 	o cqcam-0.91
 	o crafty-19.5
 	o crossfire-client-1.9.1
@@ -366,6 +366,7 @@ Suggested package updates
 	o delegate-9.1.1
 	o denemo-0.7.5
 	o devIL-1.6.7
+	o devilspie-0.18
 	o devtodo-0.1.19
 	o diffstat-1.43
 	o dirac-0.6.0
@@ -445,7 +446,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm-2.16.1
 	o gdsreader-0.3.2
-	o geda-20061020
 	o gedit-2.16.1
 	o genius-0.7.6.1
 	o getmail-4.6.5
@@ -629,6 +629,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
+	o mencoder-1.0rc9
 	o metacity-2.16.3
 	o mftrace-1.2.4
 	o mgetty-1.1.35
@@ -654,6 +655,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpg123-0.61
 	o mpich-1.2.7
+	o mplayer-1.0rc9
 	o mplayer-plugin-firefox-3.31
 	o mpop-0.8.3
 	o mrproject-0.9.1
@@ -735,7 +737,7 @@ Suggested package updates
 	o p5-Crypt-IDEA-1.08 [pkg/34391]
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-mysql-3.0007
+	o p5-DBD-mysql-3.0008
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.45
 	o p5-Data-FormValidator-4.40 [pkg/34405]
@@ -751,7 +753,7 @@ Suggested package updates
 	o p5-Email-Valid-0.176 [pkg/34374]
 	o p5-Encode-2.18 [pkg/34419]
 	o p5-Error-0.17 [pkg/34330]
-	o p5-Error-0.17006
+	o p5-Error-0.17007
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
@@ -839,6 +841,7 @@ Suggested package updates
 	o p5-Text-Tabs+Wrap-2005.0824
 	o p5-Time-HiRes-1.91
 	o p5-Time-Piece-2.00.01
+	o p5-Tree-Simple-1.17
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.20
 	o p5-Want-0.11 [pkg/34367]
@@ -846,6 +849,7 @@ Suggested package updates
 	o p5-X11-Protocol-0.54
 	o p5-XML-LibXML-1.60 [pkg/34411]
 	o p5-XML-RAI-1.04
+	o p5-XML-RSS-1.11
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-XML-Twig-3.26 [pkg/34412]
@@ -1133,6 +1137,7 @@ Suggested package updates
 	o wdm-1.28
 	o webmin-1.300
 	o weewm-0.01
+	o win32-codecs-20061022
 	o winbind-3.0.13
 	o wmctrl-1.07
 	o wmii-3.1
