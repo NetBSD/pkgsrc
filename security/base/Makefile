@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/06/06 19:41:43 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/23 18:19:45 adrianp Exp $
 #
 
-DISTNAME=	base-1.2.5
+DISTNAME=	base-1.2.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
@@ -51,7 +51,8 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 .include "options.mk"
 
 post-extract:
-	@${CP} ${FILESDIR}/base.conf ${WRKSRC}/base.conf
+	${CP} ${FILESDIR}/base.conf ${WRKSRC}/base.conf
+	${RM} ${WRKSRC}/includes/base_action.inc.php.orig
 
 do-install:
 	${INSTALL_DATA_DIR} ${BASE_DIR}
@@ -70,7 +71,7 @@ do-install:
 		cd ${WRKSRC}/${i:Q} && ${PAX} -rw . ${BASE_DIR}/${i:Q}
 .	endfor
 
-	@${CHOWN} ${WWW_USER} ${BASE_DIR}
+	${CHOWN} ${WWW_USER} ${BASE_DIR}
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
