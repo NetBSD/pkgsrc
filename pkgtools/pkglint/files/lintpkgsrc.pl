@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.112 2006/10/02 19:35:43 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.113 2006/10/23 09:19:32 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -290,7 +290,7 @@ sub check_prebuilt_packages() {
         $File::Find::prune = 1;
 
     }
-    elsif (/(.+)-(\d.*)\.tgz$/) {
+    elsif (/(.+)-(\d.*)\.t[bg]z$/) {
         my ( $pkg, $ver ) = ( $1, $2 );
 
         # XXX: hack for python and ruby prefix support
