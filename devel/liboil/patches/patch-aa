@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/10/19 14:27:33 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/23 18:39:24 drochner Exp $
 
 --- liboil/liboilcpu.c.orig	2006-05-23 02:07:56.000000000 +0200
 +++ liboil/liboilcpu.c
@@ -26,3 +26,12 @@ $NetBSD: patch-aa,v 1.1 2006/10/19 14:27:33 drochner Exp $
    /* If we don't know that the operating system supports SSE, don't trust that
     * it will properly support it.
     */
+@@ -743,7 +751,7 @@ oil_cpu_detect_mips(void)
+ static void
+ oil_cpu_detect_arch(void)
+ {
+-#ifdef __i386__
++#if defined(__i386__) || defined(__amd64__)
+   oil_cpu_detect_i386();
+ #endif
+ #if defined(__powerpc__) || defined(__PPC__) || defined(__ppc__)
