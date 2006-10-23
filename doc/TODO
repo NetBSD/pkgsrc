@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5610 2006/10/22 22:51:32 wiz Exp $
+$NetBSD: TODO,v 1.5611 2006/10/23 00:24:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -234,7 +234,6 @@ Suggested package updates
 	o 9base-2
 	o Cenon-3.71
 	o Chinput-3.0.1
-	o GConf2-2.16.0
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
