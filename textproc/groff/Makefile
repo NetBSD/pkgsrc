@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/10/03 13:40:22 schwarz Exp $
+# $NetBSD: Makefile,v 1.40 2006/10/23 12:54:05 dmcmahill Exp $
 #
 
 DISTNAME=	groff-1.19.2
@@ -24,6 +24,7 @@ REPLACE_FILES.sed+=	font/devps/generate/symbol.sed
 
 .include "options.mk"
 
+PLIST_SRC+=		${WRKDIR}/PLIST-local
 PLIST_SRC+=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
@@ -57,5 +58,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mdoc.local \
 		${PREFIX}/share/groff/site-tmac
+	${FIND} ${PREFIX}/lib/groff/site-tmac -type f -print | \
+		${SED} 's;${PREFIX}/;;g' > ${WRKDIR}/PLIST-local
 
 .include "../../mk/bsd.pkg.mk"
