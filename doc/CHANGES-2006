@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1612 2006/10/23 07:34:49 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1613 2006/10/23 09:20:20 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4972,3 +4972,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/GConf2-ui to 2.16.0 [wiz 2006-10-23]
 	Updated audio/lame to 3.97 [ben 2006-10-23]
 	Updated security/opencdk to 0.5.10 [wiz 2006-10-23]
+	Updated pkgtools/pkglint to 4.72 [abs 2006-10-23]
