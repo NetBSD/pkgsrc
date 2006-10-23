@@ -1,8 +1,8 @@
-$NetBSD: patch-ja,v 1.1 2006/10/19 12:58:12 drochner Exp $
+$NetBSD: patch-ja,v 1.2 2006/10/23 14:54:11 adam Exp $
 
---- src/kernel/qpixmap_x11.cpp.orig	2006-10-19 13:06:42.000000000 +0200
+--- src/kernel/qpixmap_x11.cpp.orig	2006-10-19 16:25:12.000000000 +0200
 +++ src/kernel/qpixmap_x11.cpp
-@@ -1757,6 +1757,12 @@ QPixmap QPixmap::xForm( const QWMatrix &
+@@ -1766,6 +1766,12 @@ QPixmap QPixmap::xForm( const QWMatrix &
  	dbpl = ((w*bpp+31)/32)*4;
      dbytes = dbpl*h;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ja,v 1.1 2006/10/19 12:58:12 drochner Exp $
  #if defined(QT_MITSHM)
      if ( use_mitshm ) {
  	dptr = (uchar *)xshmimg->data;
-@@ -1866,6 +1872,11 @@ QPixmap QPixmap::xForm( const QWMatrix &
+@@ -1875,6 +1881,11 @@ QPixmap QPixmap::xForm( const QWMatrix &
  		sptr = (uchar *) axi->data;
  		bpp  = axi->bits_per_pixel;
  		dbytes = dbpl * h;
