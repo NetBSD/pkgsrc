@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/10/23 09:03:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.29 2006/10/23 15:37:52 tron Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -32,6 +32,7 @@ share/gtk-doc/html/gconf/gconf-gconf-sources.html
 share/gtk-doc/html/gconf/gconf-gconf-value.html
 share/gtk-doc/html/gconf/gconf-gconf.html
 share/gtk-doc/html/gconf/gconf.devhelp
+share/gtk-doc/html/gconf/gconf.devhelp2
 share/gtk-doc/html/gconf/home.png
 share/gtk-doc/html/gconf/index.html
 share/gtk-doc/html/gconf/index.sgml
