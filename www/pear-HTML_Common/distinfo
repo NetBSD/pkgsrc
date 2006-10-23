@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2006/10/23 20:09:00 jdolecek Exp $
 
-SHA1 (pear/HTML_Common-1.2.1.tgz) = 7d4faec3d084d12ad06b17cda1d540dc5e6cf24c
-RMD160 (pear/HTML_Common-1.2.1.tgz) = 45dbf3724e2bf04b421cb606693738280da362bf
-Size (pear/HTML_Common-1.2.1.tgz) = 3637 bytes
+SHA1 (pear/HTML_Common-1.2.3.tgz) = 6f4f0d230e64820086ea8b7aab101d44511a97ad
+RMD160 (pear/HTML_Common-1.2.3.tgz) = 6f522d95397604bc6a46d34f7a98d09471c7933d
+Size (pear/HTML_Common-1.2.3.tgz) = 4746 bytes
