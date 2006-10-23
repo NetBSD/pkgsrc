@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5616 2006/10/23 10:12:36 wiz Exp $
+$NetBSD: TODO,v 1.5617 2006/10/23 12:30:11 tron Exp $
 
 Suggested new packages
 ======================
@@ -512,7 +512,6 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.1
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
-	o gv-3.6.2
 	o gworkspace-0.8.3
 	o gzrecover-0.3
 	o hackbot-2.21
