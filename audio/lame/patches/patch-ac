@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2004/01/20 15:46:12 adam Exp $
+$NetBSD: patch-ac,v 1.7 2006/10/23 01:30:34 ben Exp $
 
---- frontend/Makefile.in.orig	2004-01-11 11:16:21.000000000 +0000
+--- frontend/Makefile.in.orig	2006-09-24 13:53:31.000000000 +0000
 +++ frontend/Makefile.in
-@@ -91,7 +91,7 @@ LDADD = @LDADD@ \
+@@ -156,7 +156,7 @@ LDADD = @LDADD@ \
  	$(top_builddir)/libmp3lame/libmp3lame.la \
  	@FRONTEND_LDADD@
  
