@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/10 15:28:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/23 22:47:45 wiz Exp $
 share/gnome/help/gnucash/C/appendixa.xml
 share/gnome/help/gnucash/C/appendixb.xml
 share/gnome/help/gnucash/C/appendixc.xml
@@ -21,6 +21,13 @@ share/gnome/help/gnucash/C/chartofaccts.xml
 share/gnome/help/gnucash/C/chtacctseg.xml
 share/gnome/help/gnucash/C/custom.xml
 share/gnome/help/gnucash/C/fdl-appendix.xml
+share/gnome/help/gnucash/C/figures/AccountReg_Screen.png
+share/gnome/help/gnucash/C/figures/AccountTree_Screen.png
+share/gnome/help/gnucash/C/figures/Pref_AccntPeriod.png
+share/gnome/help/gnucash/C/figures/Pref_Accnts.png
+share/gnome/help/gnucash/C/figures/Pref_Business.png
+share/gnome/help/gnucash/C/figures/Pref_DateTime.png
+share/gnome/help/gnucash/C/figures/Report_Screen.png
 share/gnome/help/gnucash/C/figures/accts_CreateAssetsAccount.png
 share/gnome/help/gnucash/C/figures/accts_DefaultExpenseAccounts.png
 share/gnome/help/gnucash/C/figures/accts_DefaultIncomeAccounts.png
