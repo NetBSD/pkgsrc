@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1616 2006/10/23 12:30:11 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1617 2006/10/23 14:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4985,3 +4985,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/geda to 20061020 [dmcmahill 2006-10-23]
 	Removed graphics/libgdgeda [dmcmahill 2006-10-23]
 	Updated print/gv to 3.6.2 [tron 2006-10-23]
+	Updated x11/qt3 to 3.3.7 [adam 2006-10-23]
+	Updated x11/qt3-libs to 3.3.7 [adam 2006-10-23]
+	Updated x11/qt3-tools to 3.3.7 [adam 2006-10-23]
+	Updated x11/qt3-docs to 3.3.7 [adam 2006-10-23]
+	Updated x11/qt3-psql to 3.3.7 [adam 2006-10-23]
+	Updated x11/qt3-mysql to 3.3.7 [adam 2006-10-23]
