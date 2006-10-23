@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.5 2006/07/02 22:45:17 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.6 2006/10/23 14:49:28 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -151,7 +151,9 @@
 	<listitem><para>Many of the files in the
 	<filename>mk/</filename> directory start with a comment that
 	describes the purpose of the file and how it can be used by the
-	pkgsrc user and package authors.</para></listitem>
+	pkgsrc user and package authors. An easy way to find this
+	documentation is to run <command>bmake
+	help</command>.</para></listitem>
 
 	<listitem><para>The CVS log messages are a rich source of
 	information, but they tend to be highly abbreviated, especially
