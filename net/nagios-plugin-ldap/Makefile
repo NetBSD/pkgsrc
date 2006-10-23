@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/17 14:21:39 taca Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/23 07:17:40 seb Exp $
 #
 
 PKGNAME=	nagios-plugin-ldap-${PLUGINSVERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	net sysutils databases
 MAINTAINER=     pkgsrc-users@NetBSD.org
 COMMENT=	Nagios ldap plugin
 
-DEPENDS+=	nagios-plugins-${PLUGINSVERSION}:../../net/nagios-plugins
+DEPENDS+=	nagios-plugins-${PLUGINSVERSION}{,nb[0-9]*}:../../net/nagios-plugins
 
 .include "../../net/nagios-plugins/Makefile.common"
 
