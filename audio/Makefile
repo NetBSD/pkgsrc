@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.336 2006/10/20 20:30:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.337 2006/10/23 23:59:56 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -43,7 +43,6 @@ SUBDIR+=	distmp3
 SUBDIR+=	easyh10
 SUBDIR+=	easytag
 SUBDIR+=	easytag-devel
-SUBDIR+=	eawpatches
 SUBDIR+=	emixer
 SUBDIR+=	esound
 SUBDIR+=	faac
