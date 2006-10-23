@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5621 2006/10/23 22:53:37 wiz Exp $
+$NetBSD: TODO,v 1.5622 2006/10/23 22:59:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -589,7 +589,6 @@ Suggested package updates
 	o libgiigic-1.1.1
 	o libgtop2-2.14.4
 	o libhydrogen-0.9.2
-	o libidn-0.6.8
 	o libjit-0.0.6
 	o liblive-2005.10.05
 	o libmilter-8.13.5
