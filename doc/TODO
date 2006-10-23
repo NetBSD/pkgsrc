@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5615 2006/10/23 08:29:55 wiz Exp $
+$NetBSD: TODO,v 1.5616 2006/10/23 10:12:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm-2.16.1
 	o gdsreader-0.3.2
-	o geda-20060907
+	o geda-20061020
 	o gedit-2.16.1
 	o genius-0.7.6.1
 	o getmail-4.6.5
@@ -655,7 +655,7 @@ Suggested package updates
 	o moz-flash-0.4.13
 	o mp3blaster-3.2.3
 	o mpage-2.5.4
-	o mpg123-0.60
+	o mpg123-0.61
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.31
 	o mpop-0.8.3
@@ -978,6 +978,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt3-libs-3.3.7
 	o qt4-4.2.0
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -985,7 +986,7 @@ Suggested package updates
 	o radiance-3.7.2
 	o raine-0.43.4
 	o randread-0.2
-	o raptor-1.4.11
+	o raptor-1.4.13
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1
@@ -1048,7 +1049,7 @@ Suggested package updates
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
 	o smlnj-110.59 [pkgsrc-wip]
-	o snd-8.4
+	o snd-8.5
 	o snes9x-1.502
 	o snort-2.6.0.2
 	o socat-1.5.0.0
