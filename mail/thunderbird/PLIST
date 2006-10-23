@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/06/07 15:23:21 ghen Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/10/23 09:43:06 markd Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -20,6 +20,8 @@ lib/${MOZILLA}/thunderbird-config
 @comment begin DSO
 lib/${MOZILLA}/components/libaccessibility.${SO_SUFFIX}
 lib/${MOZILLA}/components/libappcomps.${SO_SUFFIX}
+lib/${MOZILLA}/components/libauth.${SO_SUFFIX}
+lib/${MOZILLA}/components/libautoconfig.${SO_SUFFIX}
 lib/${MOZILLA}/components/libcaps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libchrome.${SO_SUFFIX}
 lib/${MOZILLA}/components/libcommandlines.${SO_SUFFIX}
@@ -54,12 +56,15 @@ lib/${MOZILLA}/components/libpref.${SO_SUFFIX}
 lib/${MOZILLA}/components/librdf.${SO_SUFFIX}
 lib/${MOZILLA}/components/libremoteservice.${SO_SUFFIX}
 lib/${MOZILLA}/components/libspellchecker.${SO_SUFFIX}
+lib/${MOZILLA}/components/libsystem-pref.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtoolkitcomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtxmgr.${SO_SUFFIX}
 lib/${MOZILLA}/components/libuconv.${SO_SUFFIX}
+lib/${MOZILLA}/components/libuniversalchardet.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwallet.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwalletviewers.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebbrwsr.${SO_SUFFIX}
+lib/${MOZILLA}/components/libwebsrvcs.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwidget_gtk2.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
@@ -125,6 +130,7 @@ lib/${MOZILLA}/components/alerts.xpt
 lib/${MOZILLA}/components/appshell.xpt
 lib/${MOZILLA}/components/appstartup.xpt
 lib/${MOZILLA}/components/autocomplete.xpt
+lib/${MOZILLA}/components/autoconfig.xpt
 lib/${MOZILLA}/components/bookmarks.xpt
 lib/${MOZILLA}/components/caps.xpt
 lib/${MOZILLA}/components/chardet.xpt
@@ -221,6 +227,7 @@ lib/${MOZILLA}/components/nsDownloadProgressListener.js
 lib/${MOZILLA}/components/nsExtensionManager.js
 lib/${MOZILLA}/components/nsFilePicker.js
 lib/${MOZILLA}/components/nsHelperAppDlg.js
+lib/${MOZILLA}/components/nsInterfaceInfoToIDL.js
 lib/${MOZILLA}/components/nsLDAPPrefsService.js
 lib/${MOZILLA}/components/nsMailDefaultHandler.js
 lib/${MOZILLA}/components/nsProgressDialog.js
@@ -255,6 +262,7 @@ lib/${MOZILLA}/components/walletpreview.xpt
 lib/${MOZILLA}/components/webBrowser_core.xpt
 lib/${MOZILLA}/components/webbrowserpersist.xpt
 lib/${MOZILLA}/components/webshell_idls.xpt
+lib/${MOZILLA}/components/websrvcs.xpt
 lib/${MOZILLA}/components/widget.xpt
 lib/${MOZILLA}/components/windowds.xpt
 lib/${MOZILLA}/components/windowwatcher.xpt
