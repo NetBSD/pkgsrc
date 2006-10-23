@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2006/10/07 03:07:25 markd Exp $
+# $NetBSD: Makefile,v 1.438 2006/10/23 09:51:59 dmcmahill Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -170,7 +170,6 @@ SUBDIR+=	libart2
 SUBDIR+=	libcaca
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk
-SUBDIR+=	libgdgeda
 SUBDIR+=	libgdiplus
 SUBDIR+=	libggi
 SUBDIR+=	libggigcp
