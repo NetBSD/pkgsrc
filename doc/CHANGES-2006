@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1615 2006/10/23 09:53:04 dmcmahill Exp $
+>$NetBSD: CHANGES-2006,v 1.1616 2006/10/23 12:30:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4984,3 +4984,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/geda-examples to 20061020 [dmcmahill 2006-10-23]
 	Updated cad/geda to 20061020 [dmcmahill 2006-10-23]
 	Removed graphics/libgdgeda [dmcmahill 2006-10-23]
+	Updated print/gv to 3.6.2 [tron 2006-10-23]
