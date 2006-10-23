@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5612 2006/10/23 00:31:37 wiz Exp $
+$NetBSD: TODO,v 1.5613 2006/10/23 01:31:38 ben Exp $
 
 Suggested new packages
 ======================
@@ -567,7 +567,6 @@ Suggested package updates
 	o kodos-2.4.5
 	o konversation-1.0.1
 	o ksi-3.4.2
-	o lame-3.97
 	o latd-1.21
 	o lavaps-2.7
 	o lbdb-0.33
