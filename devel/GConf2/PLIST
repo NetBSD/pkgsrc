@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2006/04/17 07:07:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.27 2006/10/23 00:22:14 wiz Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -31,6 +31,7 @@ share/doc/gconf/gconf-gconf-sources.html
 share/doc/gconf/gconf-gconf-value.html
 share/doc/gconf/gconf-gconf.html
 share/doc/gconf/gconf.devhelp
+share/doc/gconf/gconf.devhelp2
 share/doc/gconf/home.png
 share/doc/gconf/index.html
 share/doc/gconf/index.sgml
@@ -45,6 +46,7 @@ share/locale/az/LC_MESSAGES/GConf2.mo
 share/locale/be/LC_MESSAGES/GConf2.mo
 share/locale/bg/LC_MESSAGES/GConf2.mo
 share/locale/bn/LC_MESSAGES/GConf2.mo
+share/locale/bn_IN/LC_MESSAGES/GConf2.mo
 share/locale/bs/LC_MESSAGES/GConf2.mo
 share/locale/ca/LC_MESSAGES/GConf2.mo
 share/locale/cs/LC_MESSAGES/GConf2.mo
@@ -71,6 +73,7 @@ share/locale/id/LC_MESSAGES/GConf2.mo
 share/locale/is/LC_MESSAGES/GConf2.mo
 share/locale/it/LC_MESSAGES/GConf2.mo
 share/locale/ja/LC_MESSAGES/GConf2.mo
+share/locale/ka/LC_MESSAGES/GConf2.mo
 share/locale/ko/LC_MESSAGES/GConf2.mo
 share/locale/ku/LC_MESSAGES/GConf2.mo
 share/locale/lt/LC_MESSAGES/GConf2.mo
@@ -83,7 +86,7 @@ share/locale/nb/LC_MESSAGES/GConf2.mo
 share/locale/ne/LC_MESSAGES/GConf2.mo
 share/locale/nl/LC_MESSAGES/GConf2.mo
 share/locale/nn/LC_MESSAGES/GConf2.mo
-share/locale/no/LC_MESSAGES/GConf2.mo
+share/locale/or/LC_MESSAGES/GConf2.mo
 share/locale/pa/LC_MESSAGES/GConf2.mo
 share/locale/pl/LC_MESSAGES/GConf2.mo
 share/locale/pt/LC_MESSAGES/GConf2.mo
