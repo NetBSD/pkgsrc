@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/09/01 12:00:43 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/10/23 09:43:13 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -1680,4 +1680,4 @@ share/gEDA/system-gafrc
 @dirrm share/gEDA/sym/4000
 @dirrm share/gEDA/sym
 @dirrm share/gEDA
-@dirrm share/doc/geda-doc
+@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}

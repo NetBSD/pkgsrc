@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/10 19:47:54 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/10/23 09:43:13 dmcmahill Exp $
 share/doc/geda-doc/gedadocs.html
 share/doc/geda-doc/tutorials/gsch2pcb/gschem-warmup.html
 share/doc/geda-doc/tutorials/gsch2pcb/images/board-1.png
@@ -24,6 +24,7 @@ share/doc/geda-doc/tutorials/gsch2pcb/images/warmup-2.png
 share/doc/geda-doc/tutorials/gsch2pcb/transistor-guide.html
 share/doc/geda-doc/tutorials/gsch2pcb/tutorial-old.html
 share/doc/geda-doc/tutorials/gsch2pcb/tutorial.html
+share/doc/geda-doc/wiki/001geda_debian.html
 share/doc/geda-doc/wiki/001geda_documentation.html
 share/doc/geda-doc/wiki/001geda_faq-attribs.html
 share/doc/geda-doc/wiki/001geda_faq-gnetlist.html
@@ -44,6 +45,7 @@ share/doc/geda-doc/wiki/001geda_suse_10.html
 share/doc/geda-doc/wiki/001geda_tasks.html
 share/doc/geda-doc/wiki/001geda_todos.html
 share/doc/geda-doc/wiki/001geda_usage.html
+share/doc/geda-doc/wiki/_detail/001geda_design_flow.html
 share/doc/geda-doc/wiki/_detail/geda_ambiguous1.html
 share/doc/geda-doc/wiki/_detail/geda_ambiguous1_fixed.html
 share/doc/geda-doc/wiki/_detail/geda_coordinatespace.html
@@ -63,6 +65,17 @@ share/doc/geda-doc/wiki/_detail/geda_switcap_figure2.html
 share/doc/geda-doc/wiki/_detail/geda_switcap_figure3.html
 share/doc/geda-doc/wiki/_detail/geda_switcap_figure4.html
 share/doc/geda-doc/wiki/_detail/geda_terminal_screenshot_001.html
+share/doc/geda-doc/wiki/_detail/tragesym_acroread_selectiontable.html
+share/doc/geda-doc/wiki/_detail/tragesym_gschem_finished.html
+share/doc/geda-doc/wiki/_detail/tragesym_gschem_showhidden.html
+share/doc/geda-doc/wiki/_detail/tragesym_kpdf_pinconfiguration.html
+share/doc/geda-doc/wiki/_detail/tragesym_kpdf_pindescription.html
+share/doc/geda-doc/wiki/_detail/tragesym_ooo_attributes.html
+share/doc/geda-doc/wiki/_detail/tragesym_ooo_changedpins.html
+share/doc/geda-doc/wiki/_detail/tragesym_ooo_rearanged.html
+share/doc/geda-doc/wiki/_detail/tragesym_ooo_selection.html
+share/doc/geda-doc/wiki/_detail/tragesym_xemacs_modifiedselection.html
+share/doc/geda-doc/wiki/_detail/tragesym_xemacs_rawselection.html
 share/doc/geda-doc/wiki/_media/001geda_ambiguous1.png
 share/doc/geda-doc/wiki/_media/001geda_ambiguous1_fixed.png
 share/doc/geda-doc/wiki/_media/001geda_coordinatespace.jpg
@@ -82,6 +95,17 @@ share/doc/geda-doc/wiki/_media/001geda_switcap_figure2.jpg
 share/doc/geda-doc/wiki/_media/001geda_switcap_figure3.jpg
 share/doc/geda-doc/wiki/_media/001geda_switcap_figure4.jpg
 share/doc/geda-doc/wiki/_media/001geda_terminal_screenshot_001.jpg
+share/doc/geda-doc/wiki/_media/001tragesym_acroread_selectiontable.png
+share/doc/geda-doc/wiki/_media/001tragesym_gschem_finished.png
+share/doc/geda-doc/wiki/_media/001tragesym_gschem_showhidden.png
+share/doc/geda-doc/wiki/_media/001tragesym_kpdf_pinconfiguration.png
+share/doc/geda-doc/wiki/_media/001tragesym_kpdf_pindescription.png
+share/doc/geda-doc/wiki/_media/001tragesym_ooo_attributes.png
+share/doc/geda-doc/wiki/_media/001tragesym_ooo_changedpins.png
+share/doc/geda-doc/wiki/_media/001tragesym_ooo_rearanged.png
+share/doc/geda-doc/wiki/_media/001tragesym_ooo_selection.png
+share/doc/geda-doc/wiki/_media/001tragesym_xemacs_modifiedselection.png
+share/doc/geda-doc/wiki/_media/001tragesym_xemacs_rawselection.png
 share/doc/geda-doc/wiki/_media/002geda_ambiguous1.png
 share/doc/geda-doc/wiki/_media/002geda_ambiguous1_fixed.png
 share/doc/geda-doc/wiki/_media/002geda_coordinatespace.jpg
@@ -101,6 +125,17 @@ share/doc/geda-doc/wiki/_media/002geda_switcap_figure2.jpg
 share/doc/geda-doc/wiki/_media/002geda_switcap_figure3.jpg
 share/doc/geda-doc/wiki/_media/002geda_switcap_figure4.jpg
 share/doc/geda-doc/wiki/_media/002geda_terminal_screenshot_001.jpg
+share/doc/geda-doc/wiki/_media/002tragesym_acroread_selectiontable.png
+share/doc/geda-doc/wiki/_media/002tragesym_gschem_finished.png
+share/doc/geda-doc/wiki/_media/002tragesym_gschem_showhidden.png
+share/doc/geda-doc/wiki/_media/002tragesym_kpdf_pinconfiguration.png
+share/doc/geda-doc/wiki/_media/002tragesym_kpdf_pindescription.png
+share/doc/geda-doc/wiki/_media/002tragesym_ooo_attributes.png
+share/doc/geda-doc/wiki/_media/002tragesym_ooo_changedpins.png
+share/doc/geda-doc/wiki/_media/002tragesym_ooo_rearanged.png
+share/doc/geda-doc/wiki/_media/002tragesym_ooo_selection.png
+share/doc/geda-doc/wiki/_media/002tragesym_xemacs_modifiedselection.png
+share/doc/geda-doc/wiki/_media/002tragesym_xemacs_rawselection.png
 share/doc/geda-doc/wiki/_media/geda_ambiguous1.png
 share/doc/geda-doc/wiki/_media/geda_ambiguous1_fixed.png
 share/doc/geda-doc/wiki/_media/geda_coordinatespace.jpg
@@ -120,6 +155,19 @@ share/doc/geda-doc/wiki/_media/geda_switcap_figure2.jpg
 share/doc/geda-doc/wiki/_media/geda_switcap_figure3.jpg
 share/doc/geda-doc/wiki/_media/geda_switcap_figure4.jpg
 share/doc/geda-doc/wiki/_media/geda_terminal_screenshot_001.jpg
+share/doc/geda-doc/wiki/_media/tragesym_acroread_selectiontable.png
+share/doc/geda-doc/wiki/_media/tragesym_gschem_finished.png
+share/doc/geda-doc/wiki/_media/tragesym_gschem_showhidden.png
+share/doc/geda-doc/wiki/_media/tragesym_kpdf_pinconfiguration.png
+share/doc/geda-doc/wiki/_media/tragesym_kpdf_pindescription.png
+share/doc/geda-doc/wiki/_media/tragesym_ooo_attributes.png
+share/doc/geda-doc/wiki/_media/tragesym_ooo_changedpins.png
+share/doc/geda-doc/wiki/_media/tragesym_ooo_rearanged.png
+share/doc/geda-doc/wiki/_media/tragesym_ooo_selection.png
+share/doc/geda-doc/wiki/_media/tragesym_template
+share/doc/geda-doc/wiki/_media/tragesym_template.txt
+share/doc/geda-doc/wiki/_media/tragesym_xemacs_modifiedselection.png
+share/doc/geda-doc/wiki/_media/tragesym_xemacs_rawselection.png
 share/doc/geda-doc/wiki/docs_20060124_gschem_ug_app_a.html
 share/doc/geda-doc/wiki/docs_20060124_gschem_ug_app_b.html
 share/doc/geda-doc/wiki/docs_20060124_gschem_ug_app_c.html
@@ -222,6 +270,8 @@ share/doc/geda-doc/wiki/geda_systemc_netlister_readme.html
 share/doc/geda-doc/wiki/geda_tasks.html
 share/doc/geda-doc/wiki/geda_todos.html
 share/doc/geda-doc/wiki/geda_tragesym_readme.html
+share/doc/geda-doc/wiki/geda_tragesym_tutorial.html
+share/doc/geda-doc/wiki/geda_ubuntu.html
 share/doc/geda-doc/wiki/geda_usage.html
 share/doc/geda-doc/wiki/geda_vams_netlister_readme.html
 share/doc/geda-doc/wiki/geda_verilog_netlister_readme.html
@@ -278,6 +328,7 @@ share/doc/geda-doc/wiki/lib/images/interwiki/wp.gif
 share/doc/geda-doc/wiki/lib/images/interwiki/wpde.gif
 share/doc/geda-doc/wiki/lib/images/interwiki/wpmeta.gif
 share/doc/geda-doc/wiki/lib/images/smileys/icon_smile.gif
+share/doc/geda-doc/wiki/lib/images/smileys/icon_wink.gif
 share/doc/geda-doc/wiki/lib/images/success.png
 share/doc/geda-doc/wiki/lib/plugins/definitionlist/images/bullet.gif
 share/doc/geda-doc/wiki/lib/plugins/note/images/important.png
@@ -313,4 +364,4 @@ share/doc/geda-doc/wiki/start_fr.html
 @dirrm share/doc/geda-doc/tutorials/gsch2pcb/images
 @dirrm share/doc/geda-doc/tutorials/gsch2pcb
 @dirrm share/doc/geda-doc/tutorials
-@dirrm share/doc/geda-doc
+@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
