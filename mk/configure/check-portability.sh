@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.3 2006/10/21 10:37:48 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.4 2006/10/23 16:07:12 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -10,8 +10,14 @@
 # the PATH, it calls the utilities by their base names. It also assumes
 # to be interpreted by a POSIX-conforming shell.
 #
+# ENVIRONMENT VARIABLES
+#
+#	SKIP_FILTER: A shell command that excludes some patterns.
+#
 
 set -eu
+
+: ${SKIP:=""}
 
 exitcode=0
 
@@ -93,10 +99,7 @@ find * -type f -print 2>/dev/null \
 | {
 	while read fname; do
 
-		case "$fname" in
-		*.orig)
-			continue;;
-		esac
+		eval "case \"\$fname\" in $SKIP_FILTER *.orig) continue;; esac"
 
 		read firstline < "$fname" || continue
 		case "$firstline" in
