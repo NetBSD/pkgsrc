@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/09/30 18:37:09 jdolecek Exp $
+# $NetBSD: Makefile,v 1.60 2006/10/23 11:01:54 dmcmahill Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -64,7 +64,7 @@ OPERA_ARCH=		-sol8-sparc
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${_OPERA_MACHINE_ARCH}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
-WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
+WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}-434
 
 BUILD_DEFS+=		INSTALL_ETC_OPERARC
 INSTALL_ETC_OPERARC?=	no
@@ -122,7 +122,9 @@ post-install-manpage:
 
 .if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
 do-install:
-	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX:Q}
+	@${ECHO} "n" > ${WRKSRC}/inst.cmd
+	@${ECHO} "n" >> ${WRKSRC}/inst.cmd
+	@cd ${WRKSRC} && ${CAT} ${WRKSRC}/inst.cmd | ./install.sh --prefix=${PREFIX:Q}
 	@${ECHO} "=> You can ignore any previous lines about opera6rc"
 	@${ECHO}
 
