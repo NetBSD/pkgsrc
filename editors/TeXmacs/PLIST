@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2006/08/11 18:05:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.31 2006/10/23 09:42:23 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -1925,6 +1925,7 @@ share/TeXmacs/plugins/matlab/code/tmdisp.m
 share/TeXmacs/plugins/matlab/code/tmrepl.m
 share/TeXmacs/plugins/matlab/code/typeinfo.m
 share/TeXmacs/plugins/matlab/progs/init-matlab.scm
+share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.10.0.lisp
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.6.lisp
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.9.0.lisp
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.9.1.lisp
