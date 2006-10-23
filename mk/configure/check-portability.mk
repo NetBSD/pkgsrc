@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.6 2006/10/21 19:07:18 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.7 2006/10/23 16:07:12 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -20,12 +20,19 @@
 #
 #	Default value: no
 #
+# CHECK_PORTABILITY_SKIP: List of Pathmask
+#	The list of files that should be skipped in the portability
+#	check.
+#
+#	Default value: empty.
+#
 
 .if defined(PKG_DEVELOPER) && !empty(PKG_DEVELOPER:M[Yy][Ee][Ss])
 CHECK_PORTABILITY?=		yes
 .endif
 CHECK_PORTABILITY?=		no
 SKIP_PORTABILITY_CHECK?=	no
+CHECK_PORTABILITY_SKIP?=	# none
 
 .if ${CHECK_PORTABILITY:M[Yy][Ee][Ss]} != "" && \
     ${SKIP_PORTABILITY_CHECK:M[Yy][Ee][Ss]} == ""
@@ -37,4 +44,5 @@ _configure-check-for-test:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ -d ${WRKSRC}/. ] || exit 0;					\
 	cd ${WRKSRC}							\
-	&& sh ${PKGSRCDIR}/mk/configure/check-portability.sh
+	&& env SKIP_FILTER=${CHECK_PORTABILITY_SKIP:@p@${p}) continue;;@:Q} \
+		sh ${PKGSRCDIR}/mk/configure/check-portability.sh
