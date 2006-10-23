@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2006/02/27 01:45:25 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
 
---- Config.orig	2005-01-06 07:51:08.000000000 -0500
-+++ Config
+--- Config.orig	2005-01-06 13:51:08.000000000 +0100
++++ Config	2006-10-23 10:21:43.000000000 +0200
 @@ -15,9 +15,9 @@ DIRECT_ENABLE        = false  # Experime
  MUTEX_SEMAPHORE      = false  # Use SYSV mutexes rather than file locking
  
  # Following depend on the way that you have configured c-client
 -CCLIENT_SSL_ENABLE   = false  # C-client was built with SSL support
-+CCLIENT_SSL_ENABLE   = true  # C-client was built with SSL support
- CCLIENT_PAM_ENABLE   = false  # C-client was built with PAM support
+-CCLIENT_PAM_ENABLE   = false  # C-client was built with PAM support
 -CCLIENT_KERB_ENABLE  = false  # C-client was built with Kerberos support
++CCLIENT_SSL_ENABLE   = true  # C-client was built with SSL support
++CCLIENT_PAM_ENABLE   = true  # C-client was built with PAM support
 +CCLIENT_KERB_ENABLE  = true  # C-client was built with Kerberos support
  
  # Probably don't need the following
@@ -66,15 +67,28 @@ $NetBSD: patch-aa,v 1.7 2006/02/27 01:45:25 joerg Exp $
  
  ############################################################################
  
-@@ -149,7 +149,7 @@ RW_GROUP   = prayer
+@@ -142,16 +142,16 @@ BROOT=
+ 
+ # Directory, User and group for read-write files: log files, sockets etc
+ VAR_PREFIX = /var/spool/prayer
+-RW_USER    = prayer
+-RW_GROUP   = prayer
++RW_USER    = ${PRAYER_USER}
++RW_GROUP   = ${PRAYER_GROUP}
+ 
+ # Root Directory, User and group for read-only configuration files.
  # Default configuration and permissions does not allow prayer user to
  # update prayer configuration file.
  
 -PREFIX    = /usr/local/prayer
+-RO_USER   = root
+-RO_GROUP  = prayer
 +#PREFIX    = /usr/local/prayer
- RO_USER   = root
- RO_GROUP  = prayer
++RO_USER   = ${ROOT_USER}
++RO_GROUP  = ${PRAYER_GROUP}
  
+ # Access permissions for general objects (wrt above users and groups)
+ PUBLIC_EXEC  = 0755
 @@ -164,6 +164,6 @@ PRIVATE_DIR  = 0750
  PRIVATE_FILE = 0640
  
