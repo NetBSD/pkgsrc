@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1610 2006/10/23 00:24:58 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1611 2006/10/23 01:31:38 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/wpa_gui version 0.4.9 [rpaulo 2006-10-23]
 	Updated devel/GConf2 to 2.16.0 [wiz 2006-10-23]
 	Updated devel/GConf2-ui to 2.16.0 [wiz 2006-10-23]
+	Updated audio/lame to 3.97 [ben 2006-10-23]
