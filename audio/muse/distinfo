@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/12/11 23:44:40 joerg Exp $
+$NetBSD: distinfo,v 1.6 2006/10/23 23:48:45 rillig Exp $
 
 SHA1 (MuSE-0.9.tar.gz) = c73dfe6cf5a8da3430864a76d0bc8d9f2cb7d118
 RMD160 (MuSE-0.9.tar.gz) = 53eb653a0488ae3a5ef9486d8b2a9006fdba619d
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = fcf1efbbd99d70e055c903c41431a1630ca381fa
 SHA1 (patch-ad) = 5f2322a1c9c3c9ee4e4dbe3aa810c0f2c5d999fd
 SHA1 (patch-ae) = 1097b09eb842fe1d90ec28913ad511e515f55a8a
 SHA1 (patch-af) = 20b68a9758ec109b3dec37b5898076a0cff5bfcc
+SHA1 (patch-ag) = 65515e3a2e8947a1ac1b01e5585a1ca04513bd70
