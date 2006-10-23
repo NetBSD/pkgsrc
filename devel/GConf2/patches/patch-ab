@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2004/09/21 16:44:50 jmmv Exp $
+$NetBSD: patch-ab,v 1.3 2006/10/23 00:22:14 wiz Exp $
 
---- Makefile.in.orig	2004-09-14 21:36:45.000000000 +0200
+--- Makefile.in.orig	2006-10-05 12:48:26.000000000 +0000
 +++ Makefile.in
-@@ -675,10 +675,6 @@ uninstall-info: uninstall-info-recursive
+@@ -711,10 +711,6 @@ uninstall-info: uninstall-info-recursive
  
  
  install-data-local:

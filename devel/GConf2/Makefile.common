@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.40 2006/10/09 12:52:34 joerg Exp $
+# $NetBSD: Makefile.common,v 1.41 2006/10/23 00:22:14 wiz Exp $
 #
 
-GCONF2_VERSION=		2.14.0
+GCONF2_VERSION=		2.16.0
 
 DISTNAME=		GConf-${GCONF2_VERSION}
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -24,7 +24,7 @@ PATCHDIR=		${.CURDIR}/../GConf2/patches
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 
 PKGCONFIG_OVERRIDE=	gconf-2.0.pc.in
 
