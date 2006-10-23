@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/10/19 10:27:06 markd Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/23 10:49:34 markd Exp $
 
 MOZILLA=		sunbird
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		Mozilla stand-alone calendar application
 
