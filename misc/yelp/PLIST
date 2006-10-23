@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/09/15 15:20:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/10/23 19:36:09 drochner Exp $
 bin/gnome-help
 bin/yelp
 share/applications/yelp.desktop
@@ -49,6 +49,7 @@ share/locale/ky/LC_MESSAGES/yelp.mo
 share/locale/li/LC_MESSAGES/yelp.mo
 share/locale/lt/LC_MESSAGES/yelp.mo
 share/locale/lv/LC_MESSAGES/yelp.mo
+share/locale/mg/LC_MESSAGES/yelp.mo
 share/locale/mk/LC_MESSAGES/yelp.mo
 share/locale/ml/LC_MESSAGES/yelp.mo
 share/locale/mn/LC_MESSAGES/yelp.mo
