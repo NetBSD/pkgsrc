@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2006/09/28 00:40:32 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/10/23 09:43:13 dmcmahill Exp $
 #
 
 DIST_SUBDIR=	geda
-PKGVERSION=	20060906
+PKGVERSION=	20061020
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 		http://www.geda.seul.org/devel/${PKGVERSION}/
