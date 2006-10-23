@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/10 15:05:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/10/23 14:38:14 joerg Exp $
 bin/prewikka-httpd
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
@@ -214,6 +214,7 @@ share/prewikka/htdocs/js/functions.js
 @dirrm ${PYSITELIB}/prewikka/modules/log/stderr
 @dirrm ${PYSITELIB}/prewikka/modules/log
 @dirrm ${PYSITELIB}/prewikka/modules/auth/loginpassword
+@dirrm ${PYSITELIB}/prewikka/modules/auth/cgi
 @dirrm ${PYSITELIB}/prewikka/modules/auth
 @dirrm ${PYSITELIB}/prewikka/modules
 @dirrm ${PYSITELIB}/prewikka
