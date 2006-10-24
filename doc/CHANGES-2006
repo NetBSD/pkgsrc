@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1630 2006/10/24 14:11:37 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1631 2006/10/24 18:00:05 smb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed mail/sylpheed-claws-ghostscript-viewer [cube 2006-10-24]
 	Updated devel/p5-Clone to 0.22 [obache 2006-10-24]
 	Updated textproc/p5-Encode to 2.18 [obache-2006-10-24]
+	Added sysutils/memtestplus version 1.65 [smb-2006-10-24]

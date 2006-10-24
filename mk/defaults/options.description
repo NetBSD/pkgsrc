@@ -180,6 +180,8 @@ m68060-optimized	Optimize for m68060 (only).
 mad			Enable usage of the mad library to play MP3 files.
 magick	
 mdc2	
+memtesplus-iso		Build a .iso file for memtest+
+memtesplus-serialconsole	Enable use of serial console for memtest+
 metarefresh	
 mex			Enable matlab mex support (Linux and Solaris only).
 mhash	
