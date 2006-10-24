@@ -1,19 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/03/15 00:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/24 08:44:23 rillig Exp $
 
-DISTNAME=	koffice-i18n-ru-1.3.5
-PKGREVISION=	5
-CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.5/src/
-EXTRACT_SUFX=	.tar.bz2
+KOFFICE_LANGUAGE=	Russian
+KOFFICE_LANGCODE=	ru
+PKGREVISION=		5
 
-MAINTAINER=	ianzag@mail.ru
-HOMEPAGE=	http://www.koffice.org/
-COMMENT=	Russian language pack for KOffice
-
-DEPENDS+=	kdelibs-[0-9]*:../../x11/kdelibs3
-
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../misc/koffice/i18n.mk"
 .include "../../mk/bsd.pkg.mk"

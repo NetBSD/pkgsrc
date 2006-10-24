@@ -1,19 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/03/15 00:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/24 08:44:22 rillig Exp $
 
-DISTNAME=	koffice-i18n-fr-1.3.5
-PKGREVISION=	6
-CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.5/src/
-EXTRACT_SUFX=	.tar.bz2
+KOFFICE_LANGUAGE=	French
+KOFFICE_LANGCODE=	fr
+PKGREVISION=		6
 
-MAINTAINER=	ianzag@mail.ru
-HOMEPAGE=	http://www.koffice.org/
-COMMENT=	French language pack for KOffice
-
-DEPENDS+=	koffice-[0-9]*:../../misc/koffice
-
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../misc/koffice/i18n.mk"
 .include "../../mk/bsd.pkg.mk"
