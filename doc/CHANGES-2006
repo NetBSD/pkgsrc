@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1626 2006/10/24 00:09:23 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1627 2006/10/24 10:10:16 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5004,3 +5004,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed misc/fooseti [wiz 2006-10-24]
 	Removed misc/setiathome [wiz 2006-10-24]
 	Removed textproc/py-Lupy [wiz 2006-10-24]
+	Removed mail/sylpheed-claws-image-viewer [cube 2006-10-24]
