@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5623 2006/10/24 10:48:23 cube Exp $
+$NetBSD: TODO,v 1.5624 2006/10/24 13:16:37 obache Exp $
 
 Suggested new packages
 ======================
@@ -724,7 +724,6 @@ Suggested package updates
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03 [pkg/34338]
 	o p5-Class-MethodMaker-2.08 [pkg/34327]
-	o p5-Clone-0.19 [pkg/34333]
 	o p5-Compress-Bzip2-2.09
 	o p5-Config-Tiny-2.08 [pkg/34352]
 	o p5-Config-Tiny-2.10
