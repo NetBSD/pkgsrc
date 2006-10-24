@@ -1,4 +1,4 @@
-# $NetBSD: i18n.mk,v 1.1 2006/10/24 07:34:13 rillig Exp $
+# $NetBSD: i18n.mk,v 1.2 2006/10/24 08:43:40 rillig Exp $
 #
 
 # This file provides useful defaults for the i18n packages of koffice.
@@ -16,7 +16,7 @@ KOFFICE_VERSION?=	1.3.5
 
 DISTNAME=	koffice-i18n-${KOFFICE_LANGCODE}-${KOFFICE_VERSION}
 CATEGORIES=	misc kde
-MASTER_SITES=	${MASTER_SITE_KDE:=koffice-${KOFFICE_VERSION}/src/koffice-l10n/}
+MASTER_SITES=	${MASTER_SITE_KDE:=koffice-${KOFFICE_VERSION}/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	ianzag@mail.ru
@@ -26,10 +26,13 @@ COMMENT=	${KOFFICE_LANGUAGE} language pack for KOffice
 BUILD_DEPENDS+=	kdelibs>=3:../../x11/kdelibs3
 CONFLICTS+=	koffice-l10n-${KOFFICE_LANGCODE}-[0-9]*
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		ko
 SUBST_STAGE.ko=		pre-configure
 SUBST_FILES.ko=		configure
 SUBST_SED.ko=		-e 's,\(build_arts" \)==\( "no"\),\1=\2,'
+
+.include "../../meta-pkgs/kde3/kde3.mk"
