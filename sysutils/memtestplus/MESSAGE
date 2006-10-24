@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/10/24 18:00:05 smb Exp $
+
+Memtest86+ is a standalone program, it does not run within an operating
+system.  It has been designed to boot from a PC floppy disk.  To install
+Memtest86 on a floppy, insert a disk then type:
+	dd if=${PREFIX}/mdec/memtestplus.bin of=/dev/rfd0a conv=osync
+
+If you have built the optional .iso file, you can use cdrtools to
+burn it to a CD.
+
+The documentation claims that the .bin file can be booted by LILO; I have
+not tested that.
+
+Please read the documentation at:
+	${PREFIX}/share/doc/memtestplus/README
+	${PREFIX}/share/doc/memtestplus/FAQ
+	http://www.memtest.org
+
+===========================================================================
