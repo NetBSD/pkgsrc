@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/11 13:07:09 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/24 17:33:59 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
 PKGREVISION=	3
@@ -17,6 +17,8 @@ SUBST_SED.gtk=		-e "s/distccmon-gnome/distccmon-gtk/g"
 SUBST_MESSAGE.gtk=	Renaming -gnome to -gtk.
 
 BUILD_TARGET=		distccmon-gnome
+
+CHECK_PORTABILITY_SKIP+=	contrib/redhat/*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/distccmon-gnome \
