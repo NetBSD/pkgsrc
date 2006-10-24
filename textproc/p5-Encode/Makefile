@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/13 19:45:41 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/24 14:09:43 obache Exp $
 
-DISTNAME=	Encode-2.14
+DISTNAME=	Encode-2.18
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Encode/}
