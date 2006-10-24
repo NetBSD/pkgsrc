@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5622 2006/10/23 22:59:13 wiz Exp $
+$NetBSD: TODO,v 1.5623 2006/10/24 10:48:23 cube Exp $
 
 Suggested new packages
 ======================
@@ -1075,7 +1075,6 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o sylpheed-claws-2.5.6
-	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
