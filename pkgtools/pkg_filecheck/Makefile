@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/02 10:32:09 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/10/24 18:19:22 rillig Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.2
@@ -22,7 +22,7 @@ FILES_SUBST+=	PKG_DBDIR=${PKG_DBDIR:Q}
 CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
 
-INSTALLATION_DIRS=	bin man/man1 man/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 .include "../../mk/bdb.buildlink3.mk"
 
@@ -45,14 +45,14 @@ post-extract:
 do-build:
 	cd ${WRKSRC} \
 	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${BDB_LIBS} \
-		-o pkg_filecheck pkg_filecheck.c \
+		-o pkg_filecheck pkg_filecheck.c
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/builddb.pl ${PREFIX}/bin/builddb
 	${INSTALL_PROGRAM} ${WRKSRC}/pkg_filecheck ${PREFIX}/bin/pkg_filecheck
-	${INSTALL_MAN} ${WRKSRC}/builddb.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.conf.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/builddb.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.conf.5 ${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pkg_filecheck
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
 		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
