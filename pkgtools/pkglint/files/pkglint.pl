@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.682 2006/10/22 05:25:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.683 2006/10/24 07:18:41 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3628,7 +3628,7 @@ sub checkline_source_absolute_pathname($$) {
 		} elsif ($string !~ qr"^/\w") {
 			# Assume that pathnames start with a letter or digit.
 
-		} elsif ($before =~ qr"\+\s*[\"']$") {
+		} elsif ($before =~ qr"\+\s*$") {
 			# Something like foodir + '/lib'
 
 		} else {
@@ -4002,6 +4002,10 @@ sub checkline_mk_shellword($$$) {
 
 		checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", shellword_vuc);
 		return;
+	}
+
+	if ($shellword =~ qr"\$\{PREFIX\}/man(?:$|/)") {
+		$line->log_warning("Please use \${PKGMANDIR} instead of \"man\".");
 	}
 
 	# Note: SWST means [S]hell[W]ord [ST]ate
@@ -5626,8 +5630,8 @@ sub checklines_package_Makefile_varorder($) {
 		],
 		[ "Restrictions", optional,
 			[
-				[ "NOT_FOR_PLATFORM", optional ],
-				[ "ONLY_FOR_PLATFORM", optional ],
+				[ "NOT_FOR_PLATFORM", many ],
+				[ "ONLY_FOR_PLATFORM", many ],
 				[ "NO_BIN_ON_FTP", optional ],
 				[ "NO_SRC_ON_FTP", optional ],
 				[ "NO_BIN_ON_CDROM", optional ],
