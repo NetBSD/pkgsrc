@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2006/10/23 23:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.338 2006/10/24 00:00:47 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -136,7 +136,6 @@ SUBDIR+=	kmp
 SUBDIR+=	ladspa
 SUBDIR+=	lame
 SUBDIR+=	liba52
-SUBDIR+=	libac3
 SUBDIR+=	libao
 SUBDIR+=	libao-arts
 SUBDIR+=	libao-esound
