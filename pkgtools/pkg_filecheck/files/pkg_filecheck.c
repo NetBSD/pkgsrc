@@ -1,5 +1,5 @@
 /*
-  $NetBSD: pkg_filecheck.c,v 1.3 2006/07/02 10:32:09 rillig Exp $
+  $NetBSD: pkg_filecheck.c,v 1.4 2006/10/24 19:23:38 rillig Exp $
 
   pkg_filecheck.c -- check for files not owned by any package
   Copyright (C) 2001 Dieter Baron
@@ -302,10 +302,9 @@ push(struct array *a, void *el)
     void *p;
 
     if (a->len + 2 > a->alen) {
-	if (a->alen > 1024)
-	    alen = a->alen+1024;
-	else 
-	    alen = a->alen * 2;
+	alen = (a->alen == 0) ? 8
+	     : (a->alen < 1024) ? (a->alen * 2)
+	     : (a->alen + 1024);
 
 	if ((p=realloc(a->p, alen*sizeof(void *))) == NULL) {
 	    fprintf(stderr, "%s: malloc failure\n", prg);
