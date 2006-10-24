@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/07/07 19:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/24 21:01:18 rillig Exp $
 
 DISTNAME=	usrp-0.12
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Non GNU Radio specific part of the USRP code base
 
 BUILD_DEPENDS+=	sdcc>=2.4.0:../../devel/sdcc
