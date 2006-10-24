@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/16 12:20:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/24 09:04:53 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
 COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
@@ -13,6 +13,8 @@ CATEGORIES+=	gnome
 CONFIGURE_ARGS+=	--with-gnome
 
 BUILD_TARGET=		distccmon-gnome
+
+CHECK_PORTABILITY_SKIP+=	contrib/redhat/*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/distccmon-gnome ${PREFIX:Q}/bin
