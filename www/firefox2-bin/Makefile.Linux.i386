@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2006/10/24 22:20:58 ghen Exp $
+
+DISTNAME=		firefox-${MOZ_DISTVER}
+MOZ_DISTDIR=		releases/${MOZ_DISTVER}/linux-i686/en-US
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/firefox/${MOZ_DISTDIR}/
+
+MOZ_PLATFORM=		linux
