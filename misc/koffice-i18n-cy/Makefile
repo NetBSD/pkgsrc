@@ -1,20 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/03/21 19:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/24 08:44:22 rillig Exp $
 
-DISTNAME=	koffice-i18n-cy-1.3.5
-PKGREVISION=	5
-CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.5/src/
-EXTRACT_SUFX=	.tar.bz2
+KOFFICE_LANGUAGE=	Welsh
+KOFFICE_LANGCODE=	cy
+PKGREVISION=		5
 
-BUILD_DEPENDS+=	kdelibs>=3:../../x11/kdelibs3
-
-MAINTAINER=	ianzag@mail.ru
-HOMEPAGE=	http://www.koffice.org/
-COMMENT=	Welsh language pack for KOffice
-
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-
-USE_PKGLOCALEDIR=	YES
-
+.include "../../misc/koffice/i18n.mk"
 .include "../../mk/bsd.pkg.mk"
