@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/10/24 08:57:30 rillig Exp $
 
 DISTNAME=	bzflag-2.0.2.20050318
 PKGNAME=	${DISTNAME:S/.20050318//}
@@ -26,6 +26,8 @@ SUBST_SED.fixme+=   -e "s|@LINUX_FALSE@|\#|g"
 .endif
 
 CONFIGURE_ARGS+=	--with-ncurses
+
+CHECK_PORTABILITY_SKIP+=	debian/*
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
