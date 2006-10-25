@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:03 zuntum Exp $
-bin/figlet
+@comment $NetBSD: PLIST,v 1.2 2006/10/25 14:36:09 rillig Exp $
 bin/chkfont
+bin/figlet
 bin/figlist
 bin/showfigfonts
-man/man6/figlet.6.gz
+man/man6/figlet.6
 share/figlet/646-ca.flc
 share/figlet/646-ca2.flc
 share/figlet/646-cn.flc
