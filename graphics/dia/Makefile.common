@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2006/07/22 04:46:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/10/25 16:52:24 joerg Exp $
 #
 
 DISTNAME=	dia-0.95-1
@@ -15,7 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/dia/patches
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool pkg-config msgfmt
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
