@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1639 2006/10/25 14:10:44 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1640 2006/10/25 14:54:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5015,7 +5015,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/firefox2-gtk1 version 2.0 [ghen 2006-10-24]
 	Added www/firefox2-bin version 2.0 [ghen 2006-10-24]
 	Updated editors/vim-share to 7.0.152 [martti 2006-10-25]
-	Updated textproc/p5-Data-FromValidator to 4.40 [obache 2006-10-25]
+	Updated textproc/p5-Data-FormValidator to 4.40 [obache 2006-10-25]
 	Updated devel/p5-Data-TemporaryBag to 0.09 [obache 2006-10-25]
 	Added mail/avenger version 0.7.7 [rillig 2006-10-25]
 	Updated devel/p5-Devel-Cycle to 1.07 [obache 2006-10-25]
