@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2006/10/17 18:31:18 martti Exp $
+# $NetBSD: Makefile.common,v 1.67 2006/10/25 07:03:23 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -35,7 +35,8 @@ PATCHFILES+=		7.0.113 7.0.114 7.0.115 7.0.116 7.0.117 7.0.118 7.0.119
 PATCHFILES+=		7.0.120 7.0.121 7.0.122 7.0.123 7.0.124 7.0.125 7.0.126
 PATCHFILES+=		7.0.127 7.0.128 7.0.129 7.0.130 7.0.131 7.0.132 7.0.133
 PATCHFILES+=		7.0.134 7.0.135 7.0.136 7.0.137 7.0.138 7.0.139 7.0.140
-PATCHFILES+=		7.0.141 7.0.142 7.0.143 7.0.144
+PATCHFILES+=		7.0.141 7.0.142 7.0.143 7.0.144 7.0.145 7.0.146 7.0.147
+PATCHFILES+=		7.0.148 7.0.149 7.0.150 7.0.151 7.0.152
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
