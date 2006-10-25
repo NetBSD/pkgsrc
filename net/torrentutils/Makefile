@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/25 21:07:11 rillig Exp $
 #
 
 DISTNAME=		torrentutils-0.3.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		http://oskarsapps.mine.nu/src/
 
@@ -14,12 +14,9 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		bash:run gmake perl:run
+REPLACE_BASH+=		defrag.in
 REPLACE_PERL=		torrenttool.in
-
-post-build:
-	${SED} "s!/bin/sh!${PREFIX}/bin/bash!" ${WRKSRC}/defrag \
-		> ${WRKSRC}/defrag.patched && \
-	${MV} ${WRKSRC}/defrag.patched ${WRKSRC}/defrag
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
