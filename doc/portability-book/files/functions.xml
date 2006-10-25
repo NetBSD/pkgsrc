@@ -1,4 +1,4 @@
-<!-- $NetBSD: functions.xml,v 1.2 2006/10/06 21:44:30 rillig Exp $ -->
+<!-- $NetBSD: functions.xml,v 1.3 2006/10/25 21:33:59 rillig Exp $ -->
 
 <chapter id="functions">
 <title>C/C++: functions</title>
@@ -75,5 +75,12 @@ without any of these macros. (TODO: Investigate further.)</para>
 </informaltable>
 
 </sect2>
+
+<sect2 id="functions.nanosleep">
+<title>nanosleep</title>
+
+<para>On Solaris, the <literal>rt</literal> library is needed.</para>
+</sect2>
+
 </sect1>
 </chapter>
