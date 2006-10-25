@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/09 16:05:11 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/25 12:44:26 dsainty Exp $
 #
 
 DISTNAME=	ppower-0.1.5
@@ -15,6 +15,9 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		lex
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+EGDIR=			${PREFIX}/share/examples/ppower
+CONF_FILES+=		${EGDIR}/ppower.conf ${PKG_SYSCONFDIR}/ppower.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ppower
