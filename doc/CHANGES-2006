@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1641 2006/10/25 17:13:58 bad Exp $
+>$NetBSD: CHANGES-2006,v 1.1642 2006/10/25 18:58:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added mail/avenger version 0.7.7 [rillig 2006-10-25]
 	Updated devel/p5-Devel-Cycle to 1.07 [obache 2006-10-25]
 	Updated security/ipsec-tools to 0.6.6 [bad 2006-10-25]
+	Updated www/py-moin to 1.5.4nb1 [joerg 2006-10-25]
