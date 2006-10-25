@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2006/10/25 21:06:14 rillig Exp $
+
+--- Configure.orig	2001-09-13 13:15:28.000000000 +0200
++++ Configure	2006-10-25 23:02:00.000000000 +0200
+@@ -54,15 +54,12 @@ else
+ fi
+ 
+ 
+-if [ "${OS}" == "BSD" ]; then
+-   LDFLAGS="`sdl-config --libs` -lm -L/usr/X11R6/lib -lX11 -lXext -lXxf86dga -lXxf86misc -lXxf86vm"
+-elif [ "${OS}" == "Linux" ]; then
+-   LDFLAGS="`sdl-config --libs`"
+-elif [ "${OS}" == "BeOS" ]; then
+-   LDFLAGS="`sdl-config --libs`"
+-elif  [ "${OS}" == "UNIX" ]; then
+-   LDFLAGS="`sdl-config --libs`"
+-fi
++case "$OS" in
++BSD)	LDFLAGS="`sdl-config --libs` -lm -L/usr/X11R6/lib -lX11 -lXext -lXxf86dga -lXxf86misc -lXxf86vm";;
++Linux)	LDFLAGS="`sdl-config --libs`";;
++BeOS)	LDFLAGS="`sdl-config --libs`";;
++UNIX)	LDFLAGS="`sdl-config --libs`";;
++esac
+ 
+ echo -n "Checking Release Type..."
+ if [ "${type}" == "debug" ]; then

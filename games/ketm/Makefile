@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/12 16:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/10/25 21:06:14 rillig Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -15,25 +15,16 @@ BUILD_TARGET=	ketm
 
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/ketm/data
 
-post-patch:
-	cd ${WRKSRC} &&							\
-	for f in *.c; do						\
-		${SED} "s,data/,${LOCALBASE}/share/ketm/data/,g" $${f}	\
-			> $${f}.done;					\
-		${MV} $${f}.done $${f};					\
-	done
-
-	${SED} "s,data/,${LOCALBASE}/share/ketm/data/,g"		\
-		${WRKSRC}/font.h > ${WRKSRC}/font.h.done
-	${MV} ${WRKSRC}/font.h.done ${WRKSRC}/font.h
+SUBST_CLASSES+=		ketm
+SUBST_STAGE.ketm=	pre-configure
+SUBST_FILES.ketm=	*.c font.h
+SUBST_SED.ketm=		-e "s,data/,${LOCALBASE}/share/ketm/data/,g"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ketm ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ketm
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/ketm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ketm/data
 	cd ${WRKSRC}/data && 						\
 		${INSTALL_DATA} *.bmp *.dat ${PREFIX}/share/ketm/data
 
