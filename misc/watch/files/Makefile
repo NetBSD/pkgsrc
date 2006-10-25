@@ -1,10 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/16 01:32:51 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/25 21:37:51 rillig Exp $
 
 PROG=	watch
-LDADD+=	-lcurses
-DPADD+=	${LIBCURSES}
-
-BINDIR=	${PREFIX}/bin
-MANDIR=	${PREFIX}/man
+LDADD+=	-lncurses ${LIBS}
 
 .include <bsd.prog.mk>
