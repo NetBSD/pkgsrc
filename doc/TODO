@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5630 2006/10/25 13:58:07 obache Exp $
+$NetBSD: TODO,v 1.5631 2006/10/25 14:10:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -734,7 +734,6 @@ Suggested package updates
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.45
 	o p5-DateTime-Set-0.25
-	o p5-Devel-Cycle-1.07 [pkg/34335]
 	o p5-Devel-SmallProf-2.00_03
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
