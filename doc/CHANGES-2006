@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1637 2006/10/25 13:58:07 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1638 2006/10/25 14:05:42 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5017,3 +5017,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-share to 7.0.152 [martti 2006-10-25]
 	Updated textproc/p5-Data-FromValidator to 4.40 [obache 2006-10-25]
 	Updated devel/p5-Data-TemporaryBag to 0.09 [obache 2006-10-25]
+	Added mail/avenger version 0.7.7 [rillig 2006-10-25]
