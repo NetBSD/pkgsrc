@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.6 2006/10/23 14:49:28 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.7 2006/10/25 14:24:54 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -179,5 +179,31 @@
 	</answer>
 
 </qandaentry>
+
+<qandaentry id="devfaq.too-much-time">
+<question><para>I have a little time to kill.  What shall I
+do?</para></question>
+
+<answer><para>This is not really an FAQ yet, but here's the answer  
+anyway.</para>
+
+  <itemizedlist>
+    <listitem><para>Run <command>pkg_chk -N</command> (from the
+    <filename role="pkg">pkgtools/pkg_chk</filename> package).  It
+    will tell you about newer versions of installed packages that are
+    available, but not yet updated in pkgsrc.</para></listitem>
+
+    <listitem><para>Browse <filename>pkgsrc/doc/TODO</filename>
+    &mdash; it contains a list of suggested new packages and a list of
+    cleanups and enhancements for pkgsrc that would be nice to
+    have.</para></listitem>
+
+    <listitem><para>Review packages for which review was requested on
+    the <ulink
+    url="http://pkgsrc-wip.sourceforge.net/">pkgsrc-wip</ulink> review
+    mailing list.</para></listitem>
+  </itemizedlist>
+</answer></qandaentry>
+
 </qandaset>
 </chapter>
