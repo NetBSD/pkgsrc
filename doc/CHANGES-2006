@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1644 2006/10/26 14:54:16 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1645 2006/10/26 14:58:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5023,3 +5023,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/py-moin to 1.5.4nb1 [joerg 2006-10-25]
 	Updated devel/automake to 1.10 [wiz 2006-10-26]
 	Updated x11/devilspie to 0.18 [wiz 2006-10-26]
+	Updated mail/p5-Email-Simple to 1.995 [obache 2006-10-26]
+	Updated mail/p5-Email-Valid to 0.176 [obache 2006-10-26]
+	Updated mail/p5-Email-Abstract to 0.176 [obache 2006-10-26]

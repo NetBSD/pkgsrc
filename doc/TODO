@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5634 2006/10/26 14:54:16 wiz Exp $
+$NetBSD: TODO,v 1.5635 2006/10/26 14:58:51 obache Exp $
 
 Suggested new packages
 ======================
@@ -739,9 +739,6 @@ Suggested package updates
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Email-Abstract-2.13 [pkg/34371]
-	o p5-Email-Simple-1.980 [pkg/34370]
-	o p5-Email-Valid-0.176 [pkg/34374]
 	o p5-Error-0.17007
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
