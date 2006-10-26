@@ -1,4 +1,6 @@
-# $NetBSD: test.mk,v 1.7 2006/09/09 02:35:13 obache Exp $
+# $NetBSD: test.mk,v 1.8 2006/10/26 21:12:47 rillig Exp $
+#
+# Package-settable variables:
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -8,11 +10,27 @@
 #       process.
 #
 # TEST_MAKE_FLAGS is the list of arguments that is passed to the make
-#	process.
+#	process, in addition to the usual MAKE_FLAGS.
 #
+# Variables defined by this file:
+#
+# TEST_MAKE_CMD
+#	This command sets the proper environment for the test phase
+#	and runs make(1) on it. It takes a list of make targets and
+#	flags as argument.
+#
+# See also:
+#	mk/build/build.mk
+#
+
 TEST_DIRS?=		${BUILD_DIRS}
 TEST_ENV+=		${MAKE_ENV}
-TEST_MAKE_FLAGS?=	${MAKE_FLAGS}
+TEST_MAKE_FLAGS?=	# none
+
+TEST_MAKE_CMD= \
+	${SETENV} ${MAKE_ENV}						\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${TEST_MAKE_FLAGS}	\
+			-f ${MAKE_FILE} 
 
 ######################################################################
 ### test (PUBLIC)
@@ -100,8 +118,7 @@ do-test:
 .    for _dir_ in ${TEST_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS}	\
-		-f ${MAKE_FILE} ${TEST_TARGET}
+	${TEST_MAKE_CMD} ${TEST_TARGET}
 .    endfor
 .  else
 do-test:
