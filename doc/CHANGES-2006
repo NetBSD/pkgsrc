@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1645 2006/10/26 14:58:51 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1646 2006/10/26 15:00:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5025,4 +5025,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/devilspie to 0.18 [wiz 2006-10-26]
 	Updated mail/p5-Email-Simple to 1.995 [obache 2006-10-26]
 	Updated mail/p5-Email-Valid to 0.176 [obache 2006-10-26]
-	Updated mail/p5-Email-Abstract to 0.176 [obache 2006-10-26]
+	Updated mail/p5-Email-Abstract to 2.131 [obache 2006-10-26]
