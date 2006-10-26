@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/26 14:53:40 wiz Exp $
 bin/devilspie
 man/man1/devilspie.1
 share/doc/devilspie/README
-share/locale/de/LC_MESSAGES/devilspie.mo
 @dirrm share/doc/devilspie
