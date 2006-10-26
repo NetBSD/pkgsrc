@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.8 2006/10/26 20:41:56 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.9 2006/10/26 21:32:55 rillig Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -103,7 +103,6 @@ _show-dbginfo-build:
 	@${PRINTF} "MAKE_ENV (sorted alphabetically):\\n"; ${MAKE_ENV:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
 	@${PRINTF} "MAKE_PROGRAM:\\n\\t%s\\n" ${MAKE_PROGRAM:Q}
 	@${PRINTF} "MAKE_FLAGS:\\n"; ${MAKE_FLAGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
-	@${PRINTF} "\\t%s\\n" ${MAKE_FLAGS}
 	@${PRINTF} "BUILD_MAKE_FLAGS:\\n"; ${BUILD_MAKE_FLAGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
 
 _show-dbginfo-install:
