@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.23 2006/10/13 06:32:15 rillig Exp $
+# $NetBSD: install.mk,v 1.24 2006/10/26 20:05:03 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -274,7 +274,7 @@ install-makedirs:
 .PHONY: pre-install do-install post-install
 
 INSTALL_DIRS?=		${BUILD_DIRS}
-INSTALL_MAKE_FLAGS?=	${MAKE_FLAGS}
+INSTALL_MAKE_FLAGS?=	# none
 INSTALL_TARGET?=	install ${USE_IMAKE:D${NO_INSTALL_MANPAGES:D:Uinstall.man}}
 .if ${_USE_DESTDIR} != "no"
 INSTALL_ENV+=		DESTDIR=${DESTDIR:Q}
@@ -287,7 +287,7 @@ do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 				\
-		${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
 			-f ${MAKE_FILE} ${INSTALL_TARGET}
 .  endfor
 .endif
