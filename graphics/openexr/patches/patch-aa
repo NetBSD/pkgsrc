@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2006/06/14 19:20:05 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/26 17:44:10 adam Exp $
 
---- exrmaketiled/Image.h.orig	2006-06-14 20:56:22.000000000 +0200
+--- exrmaketiled/Image.h.orig	2006-06-05 04:04:52.000000000 +0200
 +++ exrmaketiled/Image.h
 @@ -49,6 +49,7 @@
  #include <string>
@@ -8,5 +8,5 @@ $NetBSD: patch-aa,v 1.1 2006/06/14 19:20:05 adam Exp $
  
 +class Image;
  
- class ImageChannel
- {
+ class Image;
+ 
