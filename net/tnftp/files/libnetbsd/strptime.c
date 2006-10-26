@@ -1,4 +1,4 @@
-/*	NetBSD: strptime.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	$NetBSD: strptime.c,v 1.1.1.3 2006/10/26 07:24:14 lukem Exp $	*/
 /*	from	NetBSD: strptime.c,v 1.18 1999/04/29 02:58:30 tv Exp	*/
 
 /*-
@@ -275,20 +275,23 @@ literal:
 		case 'p':	/* The locale's equivalent of AM/PM. */
 			LEGAL_ALT(0);
 			/* AM? */
-			if (strcasecmp(am_pm[0], bp) == 0) {
+			len = strlen(am_pm[0]);
+			if (strncasecmp(am_pm[0], bp, len) == 0) {
 				if (tm->tm_hour > 11)
 					return (0);
 
-				bp += strlen(am_pm[0]);
+				bp += len;
 				break;
 			}
+
 			/* PM? */
-			else if (strcasecmp(am_pm[1], bp) == 0) {
+			len = strlen(am_pm[1]);
+			if (strncasecmp(am_pm[1], bp, len) == 0) {
 				if (tm->tm_hour > 11)
 					return (0);
 
 				tm->tm_hour += 12;
-				bp += strlen(am_pm[1]);
+				bp += len;
 				break;
 			}
 
