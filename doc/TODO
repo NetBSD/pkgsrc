@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5635 2006/10/26 14:58:51 obache Exp $
+$NetBSD: TODO,v 1.5636 2006/10/26 17:45:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -692,7 +692,6 @@ Suggested package updates
 	o oo2c-2.1.7
 	o openal-0.0.8
 	o opencobol-0.31
-	o openexr-1.4.0a
 	o openh323-1.17.2
 	o openmortal-0.7.1
 	o openoffice-2.0.4
