@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/10/03 17:42:32 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/26 18:52:20 tonio Exp $
 
-DISTNAME=	urwid-0.8.10
+DISTNAME=	urwid-0.9.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://excess.org/urwid/
 
-MAINTAINER=	minskim@NetBSD.org
+MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://excess.org/urwid/
 COMMENT=	Curses-based Python user interface library
 
