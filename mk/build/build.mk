@@ -1,13 +1,35 @@
-# $NetBSD: build.mk,v 1.7 2006/10/05 23:35:23 reed Exp $
+# $NetBSD: build.mk,v 1.8 2006/10/26 21:12:47 rillig Exp $
+#
+# This file defines what happens in the build phase, excluding the
+# self-test, which is defined in test.mk.
+#
+# Package-settable variables:
 #
 # BUILD_MAKE_FLAGS is the list of arguments that is passed to the make
-#	process.
+#	process, in addition to the usual MAKE_FLAGS.
 #
 # BUILD_TARGET is the target from ${MAKE_FILE} that should be invoked
 #	to build the sources.
 #
-BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
+# Variables defined in this file:
+#
+# BUILD_MAKE_CMD
+#	This command sets the proper environment for the build phase
+#	and runs make(1) on it. It takes a list of make targets and
+#	flags as argument.
+#
+# See also:
+#	mk/build/test.mk
+#
+
+BUILD_MAKE_FLAGS?=	# none
 BUILD_TARGET?=		all
+
+BUILD_MAKE_CMD= \
+	${SETENV} ${MAKE_ENV}						\
+		${MAKE_PROGRAM} ${_MAKE_JOBS}				\
+			${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}		\
+			-f ${MAKE_FILE}
 
 .if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
 _MAKE_JOBS=	# nothing
@@ -102,8 +124,7 @@ do-build:
 .  for _dir_ in ${BUILD_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${_MAKE_JOBS} 		\
-		${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
+	${BUILD_MAKE_CMD} ${BUILD_TARGET}
 .  endfor
 .endif
 
