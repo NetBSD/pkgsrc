@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.7 2006/10/23 16:07:12 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.8 2006/10/26 14:42:53 tv Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -27,7 +27,7 @@
 #	Default value: empty.
 #
 
-.if defined(PKG_DEVELOPER) && !empty(PKG_DEVELOPER:M[Yy][Ee][Ss])
+.if defined(PKG_DEVELOPER)
 CHECK_PORTABILITY?=		yes
 .endif
 CHECK_PORTABILITY?=		no
