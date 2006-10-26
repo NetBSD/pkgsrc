@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2006/10/09 12:46:01 obache Exp $
+# $NetBSD: Makefile,v 1.68 2006/10/26 01:10:35 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13
 PKGREVISION=	1
@@ -57,12 +57,10 @@ PKG_OPTIONS+=	gssapi
 .if !empty(PKG_OPTIONS:Mkerberos4)
 .  if exists(/usr/include/kerberosIV/krb.h)
 CRYPTO+=		uses Kerberos encryption code
-CONFIGURE_ARGS+=	--with-auth=krb
 CONFIGURE_ARGS+=	--with-krb=/usr
 .  endif
 .elif !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-auth=krb5
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
@@ -70,7 +68,6 @@ GSSIMPL.mit-krb5=	mit
 CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
 COMERRBASE=		${KRB5BASE}
 .else
-CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb
 CONFIGURE_ARGS+=	--disable-gssapi
 .endif
