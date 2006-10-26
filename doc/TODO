@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5632 2006/10/26 14:38:34 wiz Exp $
+$NetBSD: TODO,v 1.5633 2006/10/26 14:52:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,7 @@ Suggested package updates
 	o amanda-server-2.5.0
 	o amavis-0.3.12
 	o amavisd-new-2.4.3 [pkg/34788]
-	o amaya-9.5
+	o amaya-9.52
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
 	o anthy-7900 [pkg/34651]
@@ -559,6 +559,7 @@ Suggested package updates
 	o kodos-2.4.5
 	o konversation-1.0.1
 	o ksi-3.4.2
+	o kye-0.9.2
 	o latd-1.21
 	o lavaps-2.7
 	o lbdb-0.33
@@ -567,6 +568,7 @@ Suggested package updates
 	o leafnode-1.11.5
 	o leafpad-0.8.9
 	o less-395
+	o lftp-3.5.6
 	o libcddb-1.3.0
 	o libcdio-0.77
 	o libdockapp-0.6.1
@@ -639,6 +641,7 @@ Suggested package updates
 	o moc-2.4.1
 	o molden-4.4
 	o mono-1.1.18
+	o monotone-viz-0.15
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
@@ -690,7 +693,7 @@ Suggested package updates
 	o oo2c-2.1.7
 	o openal-0.0.8
 	o opencobol-0.31
-	o openexr-1.3.0
+	o openexr-1.4.0a
 	o openh323-1.17.2
 	o openmortal-0.7.1
 	o openoffice-2.0.4
@@ -1186,7 +1189,7 @@ Suggested package updates
 	o yaz-2.1.8
 	o yelp-2.16.1
 	o yodl-2.01.02
-	o ysm-2.9.8
+	o ysm-2.9.9
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.16.1
