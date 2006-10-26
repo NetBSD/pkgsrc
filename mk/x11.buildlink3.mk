@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink3.mk,v 1.4 2005/08/01 00:37:21 rillig Exp $
+# $NetBSD: x11.buildlink3.mk,v 1.5 2006/10/26 17:08:08 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require an X11 distribution.  x11.buildlink3.mk will include the
@@ -23,4 +23,4 @@ X11_LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
 X11_LDFLAGS+=	-L${X11BASE}/lib${LIBABISUFFIX}
 .endif	# X11_BUILDLINK3_MK
 
-.sinclude "${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk"
+.include "${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk"
