@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2006/08/22 20:17:23 joerg Exp $
+$NetBSD: distinfo,v 1.14 2006/10/26 13:54:25 rillig Exp $
 
 SHA1 (drscheme/209/mred-doc.plt) = 8acbb38af09f7d0cbf60db0f28ea3b1cfdbecbcc
 RMD160 (drscheme/209/mred-doc.plt) = 89b0d4b5d1093b6e9f5d6d7afad0fc7fbb99dc3c
@@ -30,3 +30,4 @@ SHA1 (patch-an) = bca5a79edd48a2670d02496b6da3799c13c0aed6
 SHA1 (patch-ao) = 667593d28a695fd7caee210deb8ee06e72019c40
 SHA1 (patch-ap) = 60702692e0d60282df187531fa06973e1eb48817
 SHA1 (patch-ar) = f8820476ef90c8efd44a7ce2128e0c7cb23080cd
+SHA1 (patch-as) = 806c50437fc3eefed2d6a56b715399dc2a3350bd
