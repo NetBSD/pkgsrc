@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1643 2006/10/26 14:38:34 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1644 2006/10/26 14:54:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5022,3 +5022,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/ipsec-tools to 0.6.6 [bad 2006-10-25]
 	Updated www/py-moin to 1.5.4nb1 [joerg 2006-10-25]
 	Updated devel/automake to 1.10 [wiz 2006-10-26]
+	Updated x11/devilspie to 0.18 [wiz 2006-10-26]
