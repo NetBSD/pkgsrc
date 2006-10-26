@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/22 17:55:41 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/26 14:44:35 tv Exp $
 #
 
 DISTNAME=		ucon64-2.0.0-src
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--disable-dload
 CPPFLAGS+=		-D__unix__
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+CHECK_PORTABILITY_SKIP+=install_beos.sh
 
 INSTALLATION_DIRS=	share/examples/ucon64 share/doc/ucon64/images
 
