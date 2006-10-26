@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.12 2006/09/17 18:46:00 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.13 2006/10/26 07:01:46 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,7 +74,7 @@ case $arg in
 # Solaris' linker exports all dynamic symbols by default when building
 # a shared object.
 ######################################################################
--Wl,--export-dynamic)
+-Wl,--export-dynamic | -Wl,-E)
 	arg=
 	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
