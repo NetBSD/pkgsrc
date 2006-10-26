@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/18 16:40:26 wiz Exp $
+$NetBSD: distinfo,v 1.2 2006/10/26 14:54:07 obache Exp $
 
-SHA1 (Email-Abstract-2.01.tar.gz) = 8aa33be472b3c86d86f6ff05b5136fc0e8d23aab
-RMD160 (Email-Abstract-2.01.tar.gz) = f3df889275d2a161cbe7669a27b403ff84f55b48
-Size (Email-Abstract-2.01.tar.gz) = 6267 bytes
+SHA1 (Email-Abstract-2.131.tar.gz) = 6cc1641e33466ac3fc294a9ecb6d91e46f7fd0bd
+RMD160 (Email-Abstract-2.131.tar.gz) = e7a1b9cd278db464b57d315d42c6062713a34b17
+Size (Email-Abstract-2.131.tar.gz) = 8595 bytes
