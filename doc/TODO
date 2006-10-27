@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5638 2006/10/27 13:03:16 obache Exp $
+$NetBSD: TODO,v 1.5639 2006/10/27 17:22:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,6 +450,7 @@ Suggested package updates
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
+	o gimp-ufraw-0.10
 	o gkrellm-multiping-2.0.10
 	o gkrellm-xmms-2.1.22
 	o gkrellm1-moon-0.6
@@ -470,7 +471,7 @@ Suggested package updates
 	o gnome-session-2.16.1
 	o gnome-spell-1.0.7
 	o gnome-user-docs-2.16.1
-	o gnomeicu-0.99.10
+	o gnomeicu-0.99.12
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -573,7 +574,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.46 [pkg/34294]
-	o libetpan-0.47
+	o libetpan-0.48
 	o libevent-1.2
 	o libflash-0.4.13
 	o libggi-2.2.1
@@ -596,6 +597,8 @@ Suggested package updates
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libwpd-0.8.7
+	o libxml2-2.6.27
+	o libxslt-1.1.18
 	o licq-core-1.3.0
 	o lighttpd-1.4.13
 	o lilypond-2.8.0
