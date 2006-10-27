@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2006/10/25 07:03:23 martti Exp $
+# $NetBSD: Makefile.common,v 1.68 2006/10/27 16:26:33 schwarz Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -60,6 +60,10 @@ PATCH_DIST_ARGS=	-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
 PATCHDIR=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
 
+.if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
+BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
+.endif
+
 .if empty(PKGNAME:Mvim-share*)
 ALTERNATIVES_SRC=	${.CURDIR:Q}/../../editors/vim-share/ALTERNATIVES
 .else
@@ -82,4 +86,4 @@ CONFIGURE_ARGS+=	--enable-rubyinterp
 .endif
 
 post-patch:
-	${FIND} ${WRKDIR} -name '*.orig_dist' -exec ${RM} {} \;
+	${FIND} ${WRKDIR} -name '*.orig_dist' -exec ${RM} -f {} \;
