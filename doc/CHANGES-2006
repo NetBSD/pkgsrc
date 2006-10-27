@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1653 2006/10/27 17:38:09 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1654 2006/10/27 20:46:07 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5033,3 +5033,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-FileHandle-Unget to 0.1621 [obache 2006-10-27]
 	Updated mail/milter-greylist to 3.0rc6 [tron 2006-10-27]
 	Updated mail/clamsmtp to 1.8 [xtraeme 2006-10-27]
+	Updated devel/arena to 0.9.7nb1 [agc 2006-10-27]
