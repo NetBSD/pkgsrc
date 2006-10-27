@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/26 17:52:13 wiz Exp $
+$NetBSD: distinfo,v 1.6 2006/10/27 12:42:57 obache Exp $
 
-SHA1 (File-Temp-0.16.tar.gz) = 05717ea9f4cc69b140e5a7342261e85d0e7263d6
-RMD160 (File-Temp-0.16.tar.gz) = 4248df47b68375f11ab83e4f1060b4fcda665b0c
-Size (File-Temp-0.16.tar.gz) = 31603 bytes
+SHA1 (File-Temp-0.17.tar.gz) = c187a4c4175e970db0993c4e2e550ffdc4316fe2
+RMD160 (File-Temp-0.17.tar.gz) = 81300ff6ee0313fd182fe84603709670e4b8f0e5
+Size (File-Temp-0.17.tar.gz) = 33174 bytes
