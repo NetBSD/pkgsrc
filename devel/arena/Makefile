@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/01 10:48:22 agc Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/27 20:43:26 agc Exp $
 
 DISTNAME=	arena-0.9.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.minimalinux.org/arena/
 

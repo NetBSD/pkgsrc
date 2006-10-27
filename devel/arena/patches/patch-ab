@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/10/27 20:43:27 agc Exp $
+
+--- libstdlib/foreign.c	2006/10/27 18:48:01	1.1
++++ libstdlib/foreign.c	2006/10/27 18:48:35
+@@ -262,7 +262,7 @@
+       break;
+     case 'p':
+       pres = ptrcall(func, args, dargs);
+-      res = mem_make_pointer(pres, mfree);
++      res = (pres) ? mem_make_pointer(pres, mfree) : value_make_void();
+       break;
+     default:
+       res = value_make_void();
