@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1650 2006/10/27 12:44:09 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1651 2006/10/27 13:03:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/py-urwid to 0.9.7.1 [tonio 2006-10-26]
 	Updated security/amap to 5.2 [adrianp 2006-10-27]
 	Updated devel/p5-File-Temp to 0.17 [obache 2006-10-27]
+	Updated devel/p5-FileHandle-Unget to 0.1621 [obache 2006-10-27]
