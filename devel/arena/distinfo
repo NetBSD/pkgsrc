@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/01 10:48:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2006/10/27 20:43:27 agc Exp $
 
 SHA1 (arena-0.9.7.tar.gz) = 0f3cd981b966e248b8b1ffa410ace5ee9820f8a4
 RMD160 (arena-0.9.7.tar.gz) = e8f3b43357c03077a552881c4861f2c702874ef0
 Size (arena-0.9.7.tar.gz) = 232873 bytes
+SHA1 (patch-aa) = 2a5d33427ea7cf5217e4415f1a445253c862a250
+SHA1 (patch-ab) = f3c6959c457a7ec0db0ad822e0c78bd7a616c32f
