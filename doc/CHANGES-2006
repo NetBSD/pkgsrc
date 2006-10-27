@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1651 2006/10/27 13:03:16 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1652 2006/10/27 13:24:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/amap to 5.2 [adrianp 2006-10-27]
 	Updated devel/p5-File-Temp to 0.17 [obache 2006-10-27]
 	Updated devel/p5-FileHandle-Unget to 0.1621 [obache 2006-10-27]
+	Updated mail/milter-greylist to 3.0rc6 [tron 2006-10-27]
