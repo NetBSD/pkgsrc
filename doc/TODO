@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5636 2006/10/26 17:45:09 adam Exp $
+$NetBSD: TODO,v 1.5637 2006/10/27 12:44:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,6 @@ Suggested package updates
 	o p5-File-DirSync-1.12
 	o p5-File-Flat-0.96 [pkg/34348]
 	o p5-File-MimeInfo-0.12
-	o p5-File-Temp-0.17 [pkg/34346]
 	o p5-FileHandle-Unget-0.16.2.1 [pkg/34351]
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
