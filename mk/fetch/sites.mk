@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.14 2006/10/17 12:14:03 dsainty Exp $
+# $NetBSD: sites.mk,v 1.15 2006/10/27 13:38:52 drochner Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -375,6 +375,62 @@ MASTER_SITE_PGSQL+=	\
 	ftp://ftp10.us.postgresql.org/pub/postgresql/ \
 	ftp://ftp22.us.postgresql.org/mirrors/ftp.postgresql.org/ \
 	ftp://ftp24.us.postgresql.org/postgresql/
+
+MASTER_SITE_GENTOO+= \
+	http://distro.ibiblio.org/pub/linux/distributions/gentoo/ \
+	http://csociety-ftp.ecn.purdue.edu/pub/gentoo/ \
+	http://gentoo.mirrors.pair.com/ \
+	http://gentoo.chem.wisc.edu/gentoo/ \
+	http://adelie.polymtl.ca/ \
+	http://mirrors.tds.net/gentoo/ \
+	ftp://ftp.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
+	http://ftp.gentoo.skynet.be/pub/gentoo/ \
+	http://ftp.belnet.be/mirror/rsync.gentoo.org/gentoo/ \
+	http://ftp.easynet.nl/mirror/gentoo/ \
+	http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
+	http://trumpetti.atm.tut.fi/gentoo/ \
+	http://ds.thn.htu.se/linux/gentoo/ \
+	http://sunsite.cnlab-switch.ch/ftp/mirror/gentoo/ \
+	http://linux.rz.ruhr-uni-bochum.de/download/gentoo-mirror/ \
+	http://mirrors.sec.informatik.tu-darmstadt.de/gentoo/ \
+	http://ftp.uni-erlangen.de/pub/mirrors/gentoo/ \
+	http://darkstar.ist.utl.pt/gentoo/ \
+	http://ftp.caliu.info/pub/gentoo/ \
+	http://gentoo.inode.at/ \
+	http://ftp.rhnet.is/pub/gentoo/ \
+	http://gentoo.mirror.sdv.fr/ \
+	http://public.planetmirror.com/pub/gentoo/ \
+	http://ftp.gentoo.or.kr/ \
+	http://mirror.gentoo.gr.jp/ \
+	http://gentoo.gg3.net/ \
+	http://gentoo.kems.net/ \
+	ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo/ \
+	ftp://csociety-ftp.ecn.purdue.edu/pub/gentoo/ \
+	ftp://mirror.iawnet.sandia.gov/pub/gentoo/ \
+	ftp://ftp.ussg.iu.edu/pub/linux/gentoo/ \
+	ftp://ftp.ucsb.edu/pub/mirrors/linux/gentoo/ \
+	ftp://gentoo.mirrors.pair.com/ \
+	ftp://mirrors.tds.net/gentoo/ \
+	ftp://ftp.gentoo.skynet.be/pub/gentoo/ \
+	ftp://ftp.belnet.be/mirror/rsync.gentoo.org/gentoo/ \
+	ftp://ftp.easynet.nl/mirror/gentoo/ \
+	ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
+	ftp://trumpetti.atm.tut.fi/gentoo/ \
+	ftp://sunsite.cnlab-switch.ch/mirror/gentoo/ \
+	ftp://ftp.join.uni-muenster.de/pub/linux/distributions/gentoo/ \
+	ftp://ftp6.uni-muenster.de/pub/linux/distributions/gentoo/ \
+	ftp://ftp.tu-clausthal.de/pub/linux/gentoo/ \
+	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gentoo/ \
+	ftp://linux.rz.ruhr-uni-bochum.de/gentoo-mirror/ \
+	ftp://ftp.uni-erlangen.de/pub/mirrors/gentoo/ \
+	ftp://darkstar.ist.utl.pt/pub/gentoo/ \
+	ftp://ftp.caliu.info/pub/gentoo/ \
+	ftp://gentoo.inode.at/source/ \
+	ftp://ftp.rhnet.is/pub/gentoo/ \
+	ftp://files.gentoo.gr/ \
+	ftp://ftp.planetmirror.com/pub/gentoo/ \
+	ftp://ftp.ecc.u-tokyo.ac.jp/GENTOO/ \
+	ftp://gentoo.kems.net/pub/mirrors/gentoo/
 
 MASTER_SITE_FREEBSD+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
