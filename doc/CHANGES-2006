@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1648 2006/10/26 18:53:49 tonio Exp $
+>$NetBSD: CHANGES-2006,v 1.1649 2006/10/27 10:37:23 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5028,3 +5028,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-Email-Abstract to 2.131 [obache 2006-10-26]
 	Updated graphics/openexr to 1.4.0 [adam 2006-10-26]
 	Updated devel/py-urwid to 0.9.7.1 [tonio 2006-10-26]
+	Updated security/amap to 5.2 [adrianp 2006-10-27]
