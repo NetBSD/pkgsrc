@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- client/mysqlbinlog.cc.orig	2006-10-23 23:42:07.000000000 +0200
++++ client/mysqlbinlog.cc	2006-10-23 23:42:55.000000000 +0200
+@@ -37,6 +37,9 @@
+ #include "mysql_priv.h" 
+ #include "log_event.h"
+ #include "sql_common.h"
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
+ 
+ #define BIN_LOG_HEADER_SIZE	4
+ #define PROBE_HEADER_LEN	(EVENT_LEN_OFFSET+4)

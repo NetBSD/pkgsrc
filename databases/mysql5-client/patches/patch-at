@@ -1,0 +1,15 @@
+$NetBSD: patch-at,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- sql/log_event.h.orig	2006-10-24 00:00:12.000000000 +0200
++++ sql/log_event.h	2006-10-24 00:00:43.000000000 +0200
+@@ -18,6 +18,10 @@
+ #ifndef _log_event_h
+ #define _log_event_h
+ 
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
++
+ #ifdef __EMX__
+ #undef write  // remove pthread.h macro definition, conflict with write() class member
+ #endif
