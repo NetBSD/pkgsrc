@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 21:48:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/28 21:29:47 wiz Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
@@ -9,7 +9,7 @@ MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/protolib/
 DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://pf.itd.nrl.navy.mil/mdp/
+HOMEPAGE=	http://cs.itd.nrl.navy.mil/work/mdp/
 COMMENT=	Multicast file transfer
 
 WRKSRC=		${WRKDIR}/mdp/unix
