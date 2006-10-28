@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/16 16:17:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/28 21:29:47 wiz Exp $
 
 DISTNAME=	xmltv-0.5.42
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://membled.com/work/apps/xmltv/
+HOMEPAGE=	http://xmltv.org/wiki/
 COMMENT=	Set of utilities to manage your TV viewing
 
 # needed
