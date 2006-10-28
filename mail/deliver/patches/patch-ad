@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/04/27 14:06:05 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2006/10/28 15:17:17 schwarz Exp $
 
---- unctime.y.orig	Wed Dec  1 19:16:21 1999
-+++ unctime.y	Sun Jan 30 08:41:53 2000
-@@ -80,6 +80,9 @@
+--- unctime.y.orig	1999-12-02 03:16:21.000000000 +0100
++++ unctime.y	2006-10-28 13:10:57.000000000 +0200
+@@ -80,12 +80,15 @@
  #  define USE_FTIME
  # endif
  #endif
@@ -12,6 +12,13 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/04/27 14:06:05 wiz Exp $
  
  #ifdef USE_GETTOD
  # include <sys/time.h>
+ #else
+ # include <time.h>
+-# ifdef USE_FTIME
++# if defined(USE_FTIME) && !defined(NO_SYS_TIMEB_H)
+ #  include <sys/timeb.h>
+ # endif
+ #endif
 @@ -331,6 +334,7 @@
  /* Is y a leap year? */
  #define leap(y) (((y) % 4 == 0 && (y) % 100 != 0) || (y) % 400 == 0)
