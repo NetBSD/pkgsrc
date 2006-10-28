@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5642 2006/10/28 08:38:48 obache Exp $
+$NetBSD: TODO,v 1.5643 2006/10/28 08:52:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -814,7 +814,6 @@ Suggested package updates
 	o p5-String-ShellQuote-1.03 [pkg/34415]
 	o p5-Sub-Uplevel-0.13 [pkg/34364]
 	o p5-Template-Extract-0.40
-	o p5-Test-Deep-0.095 [pkg/34345]
 	o p5-Test-Exception-0.24
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-2.105
