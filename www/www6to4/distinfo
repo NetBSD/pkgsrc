@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:40 wiz Exp $
+$NetBSD: distinfo,v 1.5 2006/10/28 03:00:35 obache Exp $
 
-SHA1 (www6to4-1.5.tar.gz) = a5ceac1c6c919900cb19df42f06018f45031cb84
-RMD160 (www6to4-1.5.tar.gz) = 3a9a206bf87529fd22931624cdc3bf31f4dd36e4
-Size (www6to4-1.5.tar.gz) = 25691 bytes
+SHA1 (www6to4-1.6.tar.gz) = 951b9b6a3ccba77db9190a16e5b78692c405865c
+RMD160 (www6to4-1.6.tar.gz) = 591bfa5fd079393429c3734ff41cf6d445ba0d6f
+Size (www6to4-1.6.tar.gz) = 25798 bytes
