@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- client/sql_string.cc.orig	2006-10-23 23:26:59.000000000 +0200
++++ client/sql_string.cc	2006-10-23 23:27:27.000000000 +0200
+@@ -38,6 +38,10 @@
+ 
+ #include "sql_string.h"
+ 
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
++
+ /*****************************************************************************
+ ** String functions
+ *****************************************************************************/
