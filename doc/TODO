@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5641 2006/10/28 03:02:44 obache Exp $
+$NetBSD: TODO,v 1.5642 2006/10/28 08:38:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,6 @@ Suggested package updates
 	o p5-XML-Twig-3.26 [pkg/34412]
 	o p5-XML-Writer-0.600 [pkg/34413]
 	o p5-XML-XUpdate-LibXML-0.5.0
-	o p5-YAML-0.62 [pkg/34343]
 	o p5-ispman-1.2
 	o p5-prefork-1.01 [pkg/34366]
 	o p5-sybperl-2.18
