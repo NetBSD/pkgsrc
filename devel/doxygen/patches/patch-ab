@@ -1,7 +1,11 @@
-$NetBSD: patch-ab,v 1.6 2005/08/03 21:41:30 recht Exp $
+$NetBSD: patch-ab,v 1.7 2006/10/28 03:18:58 dsainty Exp $
 
---- Makefile.in.orig	2005-05-18 20:41:27.000000000 +0200
-+++ Makefile.in	2005-08-03 23:00:07.000000000 +0200
+The "cp -r doc" may by chance copy language.doc with an older
+modification timestamp than some of its dependencies.  Use
+gmake's --assume-new to avoid this being a problem.
+
+--- Makefile.in.orig	2005-11-21 07:05:07.000000000 +1300
++++ Makefile.in	2006-10-27 12:35:47.484445000 +1300
 @@ -50,8 +50,8 @@
  
  install: doxywizard_install 
@@ -13,3 +17,12 @@ $NetBSD: patch-ab,v 1.6 2005/08/03 21:41:30 recht Exp $
  	$(INSTTOOL) -d $(INSTALL)/$(MAN1DIR)
  	cat doc/doxygen.1    | sed -e "s/DATE/$(DATE)/g" -e "s/VERSION/$(VERSION)/g" > $(INSTALL)/$(MAN1DIR)/doxygen.1 ; \
  	cat doc/doxytag.1    | sed -e "s/DATE/$(DATE)/g" -e "s/VERSION/$(VERSION)/g" > $(INSTALL)/$(MAN1DIR)/doxytag.1 ; \
+@@ -67,7 +67,7 @@
+ 	echo "PERL     = $(PERL)"    >> $(DOCDIR)/doc/Makefile
+ 	cat doc/Makefile.in          >> $(DOCDIR)/doc/Makefile
+ 	cd $(DOCDIR)/examples ; $(MAKE)
+-	cd $(DOCDIR)/doc ; $(MAKE)
++	cd $(DOCDIR)/doc ; $(MAKE) --assume-new=language.doc
+ 	rm -rf $(DOCDIR)/doc
+ 	cd $(DOCDIR)/latex ; $(MAKE)
+ 	cp $(DOCDIR)/latex/doxygen_manual.pdf $(DOCDIR)
