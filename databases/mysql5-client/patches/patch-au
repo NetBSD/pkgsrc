@@ -1,0 +1,43 @@
+$NetBSD: patch-au,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- client/mysql.cc.orig	Tue Oct 24 00:24:08 2006
++++ client/mysql.cc	Mon Oct 23 23:11:25 2006
+@@ -38,7 +38,15 @@
+ #endif
+ #include "my_readline.h"
+ #include <signal.h>
++#ifdef IRIX5
++#define _MYSQL_END_TYPE (void (*)(...))
++#else
++#define _MYSQL_END_TYPE
++#endif
+ #include <violite.h>
++#ifdef NEEDS_BSTRING_H              // defines bzero()
++#include <bstring.h>
++#endif
+ 
+ #if defined(USE_LIBEDIT_INTERFACE) && defined(HAVE_LOCALE_H)
+ #include <locale.h>
+@@ -420,10 +428,10 @@
+     ignore_errors=1;				// Don't abort monitor
+ 
+   if (opt_sigint_ignore)
+-    signal(SIGINT, SIG_IGN);
++    signal(SIGINT, _MYSQL_END_TYPE SIG_IGN);
+   else
+-    signal(SIGINT, mysql_sigint);		// Catch SIGINT to clean up
+-  signal(SIGQUIT, mysql_end);			// Catch SIGQUIT to clean up
++    signal(SIGINT, _MYSQL_END_TYPE mysql_sigint);		// Catch SIGINT to clean up
++  signal(SIGQUIT, _MYSQL_END_TYPE mysql_end);			// Catch SIGQUIT to clean up
+ 
+   /*
+     Run in interactive mode like the ingres/postgres monitor
+@@ -495,7 +503,7 @@
+   char kill_buffer[40];
+   MYSQL *kill_mysql= NULL;
+ 
+-  signal(SIGINT, mysql_sigint);
++  signal(SIGINT, _MYSQL_END_TYPE mysql_sigint);
+ 
+   /* terminate if no query being executed, or we already tried interrupting */
+   if (!executing_query || interrupted_query++)

@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- libmysqld/sql_string.cc.orig	2006-10-23 23:29:34.000000000 +0200
++++ libmysqld/sql_string.cc	2006-10-23 23:29:54.000000000 +0200
+@@ -38,6 +38,10 @@
+ 
+ #include "sql_string.h"
+ 
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
++
+ /*****************************************************************************
+ ** String functions
+ *****************************************************************************/
