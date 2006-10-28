@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1656 2006/10/28 08:38:48 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1657 2006/10/28 08:52:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5036,3 +5036,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/arena to 0.9.7nb1 [agc 2006-10-27]
 	Updated www/www6to4 to 1.6 [obache 2006-10-28]
 	Updated textproc/p5-YAML to 0.62 [obache 2006-10-28]
+	Updated devel/p5-Test-Deep to 0.096 [obache 2006-10-28]
