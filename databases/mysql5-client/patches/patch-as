@@ -1,0 +1,14 @@
+$NetBSD: patch-as,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- libmysqld/log_event.cc.orig	2006-10-23 23:52:01.000000000 +0200
++++ libmysqld/log_event.cc	2006-10-23 23:52:30.000000000 +0200
+@@ -24,6 +24,9 @@
+ #include  "mysql_priv.h"
+ #include "slave.h"
+ #include <my_dir.h>
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
+ #endif /* MYSQL_CLIENT */
+ 
+ #define log_cs	&my_charset_latin1

@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- sql/log_event.cc.orig	2006-10-23 23:49:26.000000000 +0200
++++ sql/log_event.cc	2006-10-23 23:50:20.000000000 +0200
+@@ -24,6 +24,9 @@
+ #include  "mysql_priv.h"
+ #include "slave.h"
+ #include <my_dir.h>
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bcmp() */
++#endif
+ #endif /* MYSQL_CLIENT */
+ 
+ #define log_cs	&my_charset_latin1
