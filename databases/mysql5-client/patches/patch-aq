@@ -1,0 +1,14 @@
+$NetBSD: patch-aq,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+
+--- strings/decimal.c.orig	2006-10-23 23:45:14.000000000 +0200
++++ strings/decimal.c	2006-10-23 23:45:46.000000000 +0200
+@@ -106,6 +106,9 @@
+ #include <my_sys.h> /* for my_alloca */
+ #include <m_string.h>
+ #include <decimal.h>
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
+ 
+ /*
+   Internally decimal numbers are stored base 10^9 (see DIG_BASE below)
