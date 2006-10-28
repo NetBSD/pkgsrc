@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/20 22:13:33 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/28 15:17:17 schwarz Exp $
 
 DISTNAME=	deliver-2.1.14
 PKGREVISION=	1
@@ -15,6 +15,12 @@ PKG_SYSCONFSUBDIR=		deliver
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.deliver
 PKG_SUPPORTED_OPTIONS=		deliver-suid
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(LOWER_OPSYS:Mirix5*)
+CPPFLAGS+=	-DNO_SYS_TIMEB_H
+.endif
 
 .include "../../mk/bsd.options.mk"
 
