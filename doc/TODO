@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5639 2006/10/27 17:22:25 wiz Exp $
+$NetBSD: TODO,v 1.5640 2006/10/28 02:22:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ Suggested package updates
 	o p5-HTML-Tree-3.21
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
-	o p5-HTTP-Request-1.3.0 [pkg/34469]
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
@@ -857,7 +856,6 @@ Suggested package updates
 	o pdmenu-1.2.87
 	o pear-Date-1.4.6
 	o pear-HTML_Common-1.2.2 [pkg/34468]
-	o pear-HTTP_Request-1.3.0
 	o pear-Image_Canvas-0.3.0
 	o pear-Image_Graph-0.7.2
 	o pear-Log-1.9.6
