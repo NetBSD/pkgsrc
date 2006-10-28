@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/11/03 16:56:04 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/28 03:00:35 obache Exp $
 #
 
-DISTNAME=	www6to4-1.5
+DISTNAME=	www6to4-1.6
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	Lightweight http proxy, helps IPv4 only browsers
 
 BUILD_TARGET=	# empty
+
+WRKSRC=		${WRKDIR}/www6to4-1-6
 
 INSTALLATION_DIRS=	sbin
 
