@@ -106,6 +106,7 @@ gpgme			Enable gpg support, by using the gpgme library.
 gpgsm	
 gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
+graphicsmagick		Use GraphicsMagick as imaging library.
 graphs	
 groff-docs		Install documentation images.
 gsasl	
@@ -126,6 +127,7 @@ id3
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 idn			Internationalized Domain Names (IDN) support.
 ifevents	
+imagemagick		Use ImageMagick as imaging library.
 imap			Enable imap support.
 imapuw-cleartextpwd	Allow cleartext passwords over non-encrypted connections.
 imapuw-whoson		Enable whoson support.
