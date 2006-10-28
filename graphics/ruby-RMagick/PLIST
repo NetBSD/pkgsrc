@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/09/07 15:53:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/10/28 02:03:45 obache Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
@@ -15,7 +15,9 @@ ${RUBY_SITELIBDIR}/rvg/stylable.rb
 ${RUBY_SITELIBDIR}/rvg/text.rb
 ${RUBY_SITELIBDIR}/rvg/transformable.rb
 ${RUBY_SITELIBDIR}/rvg/units.rb
+${RUBY_EXAMPLESDIR}/RMagick/demo.rb
 ${RUBY_EXAMPLESDIR}/RMagick/describe.rb
+${RUBY_EXAMPLESDIR}/RMagick/find_similar_region.rb
 ${RUBY_EXAMPLESDIR}/RMagick/histogram.rb
 ${RUBY_EXAMPLESDIR}/RMagick/identify.rb
 ${RUBY_EXAMPLESDIR}/RMagick/image_opacity.rb
@@ -153,7 +155,8 @@ ${RUBY_DOCDIR}/RMagick/ex/cubic02.gif
 ${RUBY_DOCDIR}/RMagick/ex/cubic02.rb
 ${RUBY_DOCDIR}/RMagick/ex/cycle_colormap.gif
 ${RUBY_DOCDIR}/RMagick/ex/cycle_colormap.rb
-${RUBY_DOCDIR}/RMagick/ex/demo.rb
+${RUBY_DOCDIR}/RMagick/ex/dissolve.jpg
+${RUBY_DOCDIR}/RMagick/ex/dissolve.rb
 ${RUBY_DOCDIR}/RMagick/ex/drawcomp.rb
 ${RUBY_DOCDIR}/RMagick/ex/drawcomp1.gif
 ${RUBY_DOCDIR}/RMagick/ex/drawcomp2.gif
@@ -282,8 +285,6 @@ ${RUBY_DOCDIR}/RMagick/ex/implode.gif
 ${RUBY_DOCDIR}/RMagick/ex/implode.rb
 ${RUBY_DOCDIR}/RMagick/ex/level.jpg
 ${RUBY_DOCDIR}/RMagick/ex/level.rb
-${RUBY_DOCDIR}/RMagick/ex/level_channel.jpg
-${RUBY_DOCDIR}/RMagick/ex/level_channel.rb
 ${RUBY_DOCDIR}/RMagick/ex/line.gif
 ${RUBY_DOCDIR}/RMagick/ex/line.rb
 ${RUBY_DOCDIR}/RMagick/ex/line01.gif
@@ -293,6 +294,8 @@ ${RUBY_DOCDIR}/RMagick/ex/map_after.jpg
 ${RUBY_DOCDIR}/RMagick/ex/map_before.jpg
 ${RUBY_DOCDIR}/RMagick/ex/map_f.jpg
 ${RUBY_DOCDIR}/RMagick/ex/map_f.rb
+${RUBY_DOCDIR}/RMagick/ex/mask.jpg
+${RUBY_DOCDIR}/RMagick/ex/mask.rb
 ${RUBY_DOCDIR}/RMagick/ex/matte_fill_to_border.rb
 ${RUBY_DOCDIR}/RMagick/ex/matte_fill_to_border_after.gif
 ${RUBY_DOCDIR}/RMagick/ex/matte_fill_to_border_before.gif
@@ -328,8 +331,6 @@ ${RUBY_DOCDIR}/RMagick/ex/oil_paint.jpg
 ${RUBY_DOCDIR}/RMagick/ex/oil_paint.rb
 ${RUBY_DOCDIR}/RMagick/ex/opacity.gif
 ${RUBY_DOCDIR}/RMagick/ex/opacity.rb
-${RUBY_DOCDIR}/RMagick/ex/opaque.jpg
-${RUBY_DOCDIR}/RMagick/ex/opaque.rb
 ${RUBY_DOCDIR}/RMagick/ex/ordered_dither.jpg
 ${RUBY_DOCDIR}/RMagick/ex/ordered_dither.rb
 ${RUBY_DOCDIR}/RMagick/ex/path.gif
@@ -384,7 +385,6 @@ ${RUBY_DOCDIR}/RMagick/ex/rvg_pattern.gif
 ${RUBY_DOCDIR}/RMagick/ex/rvg_pattern.rb
 ${RUBY_DOCDIR}/RMagick/ex/rvg_stroke_dasharray.gif
 ${RUBY_DOCDIR}/RMagick/ex/rvg_stroke_dasharray.rb
-${RUBY_DOCDIR}/RMagick/ex/rm_demo_out.miff
 ${RUBY_DOCDIR}/RMagick/ex/rm_gravity_out.miff
 ${RUBY_DOCDIR}/RMagick/ex/roll.jpg
 ${RUBY_DOCDIR}/RMagick/ex/roll.rb
@@ -409,6 +409,8 @@ ${RUBY_DOCDIR}/RMagick/ex/shave.jpg
 ${RUBY_DOCDIR}/RMagick/ex/shave.rb
 ${RUBY_DOCDIR}/RMagick/ex/shear.jpg
 ${RUBY_DOCDIR}/RMagick/ex/shear.rb
+${RUBY_DOCDIR}/RMagick/ex/sketch.jpg
+${RUBY_DOCDIR}/RMagick/ex/sketch.rb
 ${RUBY_DOCDIR}/RMagick/ex/skewx.gif
 ${RUBY_DOCDIR}/RMagick/ex/skewx.rb
 ${RUBY_DOCDIR}/RMagick/ex/skewy.gif
@@ -487,6 +489,8 @@ ${RUBY_DOCDIR}/RMagick/ex/viewex.gif
 ${RUBY_DOCDIR}/RMagick/ex/viewex.rb
 ${RUBY_DOCDIR}/RMagick/ex/vignette.jpg
 ${RUBY_DOCDIR}/RMagick/ex/vignette.rb
+${RUBY_DOCDIR}/RMagick/ex/watermark.jpg
+${RUBY_DOCDIR}/RMagick/ex/watermark.rb
 ${RUBY_DOCDIR}/RMagick/ex/wave.jpg
 ${RUBY_DOCDIR}/RMagick/ex/wave.rb
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode01.gif
@@ -495,6 +499,7 @@ ${RUBY_DOCDIR}/RMagick/ex/writing_mode02.gif
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode02.rb
 ${RUBY_DOCDIR}/RMagick/scripts/.rmagick
 ${RUBY_DOCDIR}/RMagick/scripts/doc.js
+${RUBY_DOCDIR}/RMagick/scripts/stripeTables.js
 ${RUBY_DOCDIR}/RMagick/Adispatch.rb.html
 ${RUBY_DOCDIR}/RMagick/InitialCoords.rb.html
 ${RUBY_DOCDIR}/RMagick/NewCoordSys.rb.html
@@ -550,7 +555,7 @@ ${RUBY_DOCDIR}/RMagick/crop_with_gravity.rb.html
 ${RUBY_DOCDIR}/RMagick/cubic01.rb.html
 ${RUBY_DOCDIR}/RMagick/cubic02.rb.html
 ${RUBY_DOCDIR}/RMagick/cycle_colormap.rb.html
-${RUBY_DOCDIR}/RMagick/demo.rb.html
+${RUBY_DOCDIR}/RMagick/dissolve.rb.html
 ${RUBY_DOCDIR}/RMagick/draw.html
 ${RUBY_DOCDIR}/RMagick/drawcomp.rb.html
 ${RUBY_DOCDIR}/RMagick/drop_shadow.rb.html
@@ -587,12 +592,12 @@ ${RUBY_DOCDIR}/RMagick/imusage.html
 ${RUBY_DOCDIR}/RMagick/index.html
 ${RUBY_DOCDIR}/RMagick/info.html
 ${RUBY_DOCDIR}/RMagick/level.rb.html
-${RUBY_DOCDIR}/RMagick/level_channel.rb.html
 ${RUBY_DOCDIR}/RMagick/line.rb.html
 ${RUBY_DOCDIR}/RMagick/line01.rb.html
 ${RUBY_DOCDIR}/RMagick/magick.html
 ${RUBY_DOCDIR}/RMagick/map.rb.html
 ${RUBY_DOCDIR}/RMagick/map_f.rb.html
+${RUBY_DOCDIR}/RMagick/mask.rb.html
 ${RUBY_DOCDIR}/RMagick/matte_fill_to_border.rb.html
 ${RUBY_DOCDIR}/RMagick/matte_floodfill.rb.html
 ${RUBY_DOCDIR}/RMagick/matte_replace.rb.html
@@ -609,7 +614,7 @@ ${RUBY_DOCDIR}/RMagick/nonzero.rb.html
 ${RUBY_DOCDIR}/RMagick/normalize.rb.html
 ${RUBY_DOCDIR}/RMagick/oil_paint.rb.html
 ${RUBY_DOCDIR}/RMagick/opacity.rb.html
-${RUBY_DOCDIR}/RMagick/opaque.rb.html
+${RUBY_DOCDIR}/RMagick/optequiv.html
 ${RUBY_DOCDIR}/RMagick/ordered_dither.rb.html
 ${RUBY_DOCDIR}/RMagick/path.rb.html
 ${RUBY_DOCDIR}/RMagick/pattern1.rb.html
@@ -659,6 +664,7 @@ ${RUBY_DOCDIR}/RMagick/shade.rb.html
 ${RUBY_DOCDIR}/RMagick/shadow.rb.html
 ${RUBY_DOCDIR}/RMagick/shave.rb.html
 ${RUBY_DOCDIR}/RMagick/shear.rb.html
+${RUBY_DOCDIR}/RMagick/sketch.rb.html
 ${RUBY_DOCDIR}/RMagick/skewx.rb.html
 ${RUBY_DOCDIR}/RMagick/skewy.rb.html
 ${RUBY_DOCDIR}/RMagick/smile.rb.html
@@ -698,6 +704,7 @@ ${RUBY_DOCDIR}/RMagick/unsharp_mask.rb.html
 ${RUBY_DOCDIR}/RMagick/usage.html
 ${RUBY_DOCDIR}/RMagick/viewex.rb.html
 ${RUBY_DOCDIR}/RMagick/vignette.rb.html
+${RUBY_DOCDIR}/RMagick/watermark.rb.html
 ${RUBY_DOCDIR}/RMagick/wave.rb.html
 ${RUBY_DOCDIR}/RMagick/writing_mode01.rb.html
 ${RUBY_DOCDIR}/RMagick/writing_mode02.rb.html
