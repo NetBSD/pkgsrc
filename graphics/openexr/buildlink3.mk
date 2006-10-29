@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:53 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/10/29 13:51:18 dsainty Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENEXR_BUILDLINK3_MK:=	${OPENEXR_BUILDLINK3_MK}+
@@ -15,6 +15,10 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openexr
 BUILDLINK_API_DEPENDS.openexr+=	openexr>=1.2.1
 BUILDLINK_ABI_DEPENDS.openexr+=	openexr>=1.2.2nb1
 BUILDLINK_PKGSRCDIR.openexr?=	../../graphics/openexr
+
+PTHREAD_OPTS+=	require
 .endif	# OPENEXR_BUILDLINK3_MK
+
+.include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
