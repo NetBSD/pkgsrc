@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1667 2006/10/29 15:41:32 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1668 2006/10/29 18:08:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5050,3 +5050,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/screen to 4.0.3 [tron 2006-10-29]
 	Updated devel/p5-File-Flat to 0.96 [obache 2006-10-29]
 	Updated devel/p5-IPC-Run to 0.80 [obache 2006-10-29]
+	Updated converters/txt2pdbdoc to 1.4.4nb1 [minskim 2006-10-29]
