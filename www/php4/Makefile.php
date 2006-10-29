@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.35 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile.php,v 1.35.8.1 2006/10/29 16:47:58 ghen Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -22,8 +22,6 @@ CONFIGURE_ARGS+=	--with-exec-dir=${PREFIX}/libexec/php4
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-regex=system
-CONFIGURE_ARGS+=	--enable-memory-limit
-CONFIGURE_ARGS+=	--enable-track-vars
 
 # Support for linking some PHP4 extensions statically into the php CGI and
 # into the apache mod_php.so DSO.
