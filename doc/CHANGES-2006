@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1668 2006/10/29 18:08:38 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1669 2006/10/29 18:23:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5051,3 +5051,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-File-Flat to 0.96 [obache 2006-10-29]
 	Updated devel/p5-IPC-Run to 0.80 [obache 2006-10-29]
 	Updated converters/txt2pdbdoc to 1.4.4nb1 [minskim 2006-10-29]
+	Updated mail/sylpheed-devel to 2.3.0beta3 [xtraeme 2006-10-29]
