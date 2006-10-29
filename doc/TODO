@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5645 2006/10/28 23:23:23 wiz Exp $
+$NetBSD: TODO,v 1.5646 2006/10/29 15:08:52 tron Exp $
 
 Suggested new packages
 ======================
@@ -1007,7 +1007,6 @@ Suggested package updates
 	o sbcl-0.9.13 [pkg/33580]
 	o scew-0.4.0
 	o sch-3.8.3
-	o screen-4.0.3
 	o sdig-0.40
 	o seahorse-0.8.2
 	o sendfile-20010424
