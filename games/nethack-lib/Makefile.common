@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/10/10 14:51:44 ben Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/10/29 21:12:46 pooka Exp $
 #
 
 NETHACK_BASEVER=	3.4.3
@@ -13,6 +13,8 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.nethack.org/
+
+.if !defined(NO_BUILD)  # following stuff not needed for nethack meta pkg
 
 WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
 HAS_CONFIGURE=		yes
@@ -44,12 +46,9 @@ SUBST_SED.os=		-e 's,__NETHACK_OS__,${NETHACK_OS},'
 NETHACK_GROUP=		games
 PKG_GROUPS=             ${NETHACK_GROUP}
 
-.if !defined(NO_CONFIGURE)
 pre-configure:
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
-.endif
 
-.if !defined(NO_BUILD)
 post-patch:
 	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
 	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g'				\
@@ -57,4 +56,5 @@ post-patch:
 		| ${AWK} '{ print $$1 }'`'|g'				\
 		< ${WRKSRC}/config.h-pre > ${WRKSRC}/include/config.h
 	@${RM} -f ${WRKSRC}/config.h-pre
-.endif
+
+.endif # !NO_BUILD
