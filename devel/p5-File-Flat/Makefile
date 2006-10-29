@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:29:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 15:17:42 obache Exp $
 #
 
-DISTNAME=	File-Flat-0.95
+DISTNAME=	File-Flat-0.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
@@ -11,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Flat/
 COMMENT=	Implements a flat file system
 
-BUILD_DEPENDS+=	p5-ExtUtils-AutoInstall>=0.59:../../devel/p5-ExtUtils-AutoInstall
 BUILD_DEPENDS+=	p5-Test-ClassAPI>=1.02:../../devel/p5-Test-ClassAPI
 DEPENDS+=	p5-File-Remove>=0.21:../../sysutils/p5-File-Remove
 DEPENDS+=	p5-File-NCopy>=0.32:../../sysutils/p5-File-NCopy
