@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.26 2006/10/18 19:46:13 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.27 2006/10/29 18:59:47 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -61,3 +61,11 @@ Pullup ticket 1860 - requested by dmcmahill
 portability fix for guile14-gtk
 Pullup ticket 1861 - requested by dmcmahill
 portability fixes for foomatic-filters
+Pullup ticket 1889 - requested by adrianp
+security fix for php
+Ticket 1891 - requested by tron
+security update for screen
+Pullup ticket 1888 - requested by adrianp
+security update for ingo
+Pullup ticket 1872 - requested by martti
+latest update for clamav
