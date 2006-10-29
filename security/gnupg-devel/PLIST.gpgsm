@@ -1,6 +1,17 @@
-@comment $NetBSD: PLIST.gpgsm,v 1.3 2006/01/06 11:05:18 shannonjr Exp $
+@comment $NetBSD: PLIST.gpgsm,v 1.4 2006/10/29 18:11:22 shannonjr Exp $
+bin/gpg-connect-agent
+bin/gpgconf
+bin/gpgkey2ssh
+bin/gpgparsemail
 bin/gpgsm
+bin/gpgsm-gencert.sh
 bin/kbxutil
 bin/scdaemon
+bin/watchgnupg
 lib/gnupg/pcsc-wrapper
-@dirrm lib/gnupg
+sbin/addgnupghome
+share/gnupg/FAQ
+share/gnupg/com-certs.pem
+share/gnupg/faq.html
+share/gnupg/gpg-conf.skel
+share/gnupg/qualified.txt
