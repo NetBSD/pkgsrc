@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2005/12/28 17:53:24 reed Exp $
+$NetBSD: distinfo,v 1.27.6.1 2006/10/29 16:55:06 ghen Exp $
 
-SHA1 (screen-4.0.2.tar.gz) = 461eb9d5edc211e1480d7b5e94d89c4d9ba3643f
-RMD160 (screen-4.0.2.tar.gz) = 42aea3d27ed25104f2a48606ea73234b715e480f
-Size (screen-4.0.2.tar.gz) = 840519 bytes
+SHA1 (screen-4.0.3.tar.gz) = 7bc6e2f0959ffaae6f52d698c26c774e7dec3545
+RMD160 (screen-4.0.3.tar.gz) = 8c3903c1642ae30fd9d5706298919428552f7754
+Size (screen-4.0.3.tar.gz) = 840602 bytes
 SHA1 (patch-aa) = f3f56a45dc7ab55db41b1a8d16a26134691280b1
 SHA1 (patch-ab) = f4fc914ad9c48cb83cf3633630cb83e4a8e90ff5
 SHA1 (patch-ac) = 4eb492cd7cf9cf0df11337e91dc8f55f440de761
