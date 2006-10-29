@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1658 2006/10/28 11:49:52 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1659 2006/10/29 00:16:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5038,3 +5038,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-YAML to 0.62 [obache 2006-10-28]
 	Updated devel/p5-Test-Deep to 0.096 [obache 2006-10-28]
 	Updated devel/p5-Log-Agent to 0.307 [obache 2006-10-28]
+	Updated geography/epsg to 6.11.2 [wiz 2006-10-29]
