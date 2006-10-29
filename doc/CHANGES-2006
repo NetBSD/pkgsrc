@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1666 2006/10/29 15:19:38 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1667 2006/10/29 15:41:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5049,3 +5049,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/qdbm-plus to 1.0.0.1.8.73 [obache 2006-10-29]
 	Updated misc/screen to 4.0.3 [tron 2006-10-29]
 	Updated devel/p5-File-Flat to 0.96 [obache 2006-10-29]
+	Updated devel/p5-IPC-Run to 0.80 [obache 2006-10-29]
