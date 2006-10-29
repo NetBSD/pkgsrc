@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2006/10/18 20:37:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2006/10/29 20:03:58 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -92,8 +92,10 @@ include/wine/windows/axextend.idl
 include/wine/windows/basetsd.h
 include/wine/windows/basetyps.h
 include/wine/windows/cderr.h
+include/wine/windows/cfgmgr32.h
 include/wine/windows/cguid.h
 include/wine/windows/cierror.h
+include/wine/windows/clusapi.h
 include/wine/windows/comcat.h
 include/wine/windows/comcat.idl
 include/wine/windows/commctrl.h
@@ -126,7 +128,6 @@ include/wine/windows/dciddi.h
 include/wine/windows/dciman.h
 include/wine/windows/dde.h
 include/wine/windows/ddeml.h
-include/wine/windows/ddk/cfgmgr32.h
 include/wine/windows/ddk/compstui.h
 include/wine/windows/ddk/ntddcdvd.h
 include/wine/windows/ddk/ntddser.h
@@ -376,6 +377,8 @@ include/wine/windows/tom.idl
 include/wine/windows/twain.h
 include/wine/windows/unknwn.h
 include/wine/windows/unknwn.idl
+include/wine/windows/urlhist.h
+include/wine/windows/urlhist.idl
 include/wine/windows/urlmon.h
 include/wine/windows/urlmon.idl
 include/wine/windows/usp10.h
