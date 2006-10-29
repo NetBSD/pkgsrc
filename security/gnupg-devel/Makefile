@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2006/10/20 15:23:57 shannonjr Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/29 18:11:22 shannonjr Exp $
 #
 
 DISTNAME=		gnupg-1.9.93
 PKGNAME=		${DISTNAME:S/gnupg/gnupg-devel/}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
 EXTRACT_SUFX=		.tar.bz2
@@ -77,4 +78,5 @@ BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.0
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../security/pinentry/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
