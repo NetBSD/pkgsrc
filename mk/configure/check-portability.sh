@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.4 2006/10/23 16:07:12 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.5 2006/10/29 20:12:49 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -13,6 +13,9 @@
 # ENVIRONMENT VARIABLES
 #
 #	SKIP_FILTER: A shell command that excludes some patterns.
+#
+# See also:
+#	mk/configure/check-portability.mk
 #
 
 set -eu
