@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/29 16:02:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/29 13:13:07 dsainty Exp $
 bin/exrdisplay
 bin/exrenvmap
 bin/exrheader
@@ -11,6 +11,10 @@ include/OpenEXR/IexErrnoExc.h
 include/OpenEXR/IexMacros.h
 include/OpenEXR/IexMathExc.h
 include/OpenEXR/IexThrowErrnoExc.h
+include/OpenEXR/IlmThread.h
+include/OpenEXR/IlmThreadMutex.h
+include/OpenEXR/IlmThreadPool.h
+include/OpenEXR/IlmThreadSemaphore.h
 include/OpenEXR/ImathBox.h
 include/OpenEXR/ImathBoxAlgo.h
 include/OpenEXR/ImathColor.h
@@ -79,6 +83,7 @@ include/OpenEXR/ImfRgbaYca.h
 include/OpenEXR/ImfStandardAttributes.h
 include/OpenEXR/ImfStringAttribute.h
 include/OpenEXR/ImfTestFile.h
+include/OpenEXR/ImfThreading.h
 include/OpenEXR/ImfTileDescription.h
 include/OpenEXR/ImfTileDescriptionAttribute.h
 include/OpenEXR/ImfTiledInputFile.h
@@ -90,12 +95,14 @@ include/OpenEXR/ImfVecAttribute.h
 include/OpenEXR/ImfVersion.h
 include/OpenEXR/ImfWav.h
 include/OpenEXR/ImfXdr.h
+include/OpenEXR/OpenEXRConfig.h
 include/OpenEXR/half.h
 include/OpenEXR/halfFunction.h
 include/OpenEXR/halfLimits.h
 lib/libHalf.la
 lib/libIex.la
 lib/libIlmImf.la
+lib/libIlmThread.la
 lib/libImath.la
 lib/pkgconfig/OpenEXR.pc
 share/aclocal/openexr.m4
