@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2004/10/30 09:50:33 xtraeme Exp $
+$NetBSD: patch-aa,v 1.13.16.1 2006/10/29 17:31:03 ghen Exp $
 
---- configure.orig	2004-10-18 02:37:47.000000000 +1000
-+++ configure	2004-10-19 09:28:50.000000000 +1000
-@@ -11558,6 +11558,7 @@
+--- configure.orig	2006-10-15 21:56:53.000000000 +0000
++++ configure	2006-10-19 10:16:35.000000000 +0000
+@@ -13374,6 +13374,7 @@
   	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
   	CLAMD_LIBS="-lpthread"
   	CLAMAV_MILTER_LIBS="$CLAMAV_MILTER_LIBS -lpthread"
