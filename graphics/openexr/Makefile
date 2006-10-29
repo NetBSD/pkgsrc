@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/29 13:13:07 dsainty Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/29 13:51:18 dsainty Exp $
 
 DISTNAME=	openexr-1.4.0a
 PKGNAME=	openexr-1.4.0
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/OpenExr.pc.in
 TEST_TARGET=		check
+PTHREAD_OPTS+=		require
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,5 +25,6 @@ TEST_TARGET=		check
 LDFLAGS+=		-lmx
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
