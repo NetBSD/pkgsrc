@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.53 2006/10/21 08:22:54 wiz Exp $
+$NetBSD: distinfo,v 1.54 2006/10/29 20:03:58 adam Exp $
 
-SHA1 (wine-0.9.23.tar.bz2) = 598a6482cedec84ad95910084600bad38e80bfed
-RMD160 (wine-0.9.23.tar.bz2) = 3b588b0a5f41db336c976cb82ad538e4cd62dbe9
-Size (wine-0.9.23.tar.bz2) = 11197988 bytes
-SHA1 (patch-aa) = d660ead61768a7c2e819e4d554ca416972b191f1
+SHA1 (wine-0.9.24.tar.bz2) = 401736bf76674b447df688392ff3a53709229eae
+RMD160 (wine-0.9.24.tar.bz2) = 4fe83188dd8ec0d8a10f8f248b3121cedbe4ba59
+Size (wine-0.9.24.tar.bz2) = 11258286 bytes
+SHA1 (patch-aa) = ba1c86faa7e9d7008622f105359229d3593e3cee
 SHA1 (patch-ab) = 66c1f1ec98674d15c7a72e8ac16105c28aa25e91
-SHA1 (patch-ac) = 461302adb27d3a0eb224dc1ca1b853d58300baa8
-SHA1 (patch-ad) = 67366ff3feed3f0941f8ca8d7cb097b16dd5d421
+SHA1 (patch-ac) = 79157f03206befc34e00b6b2f117c126bbf2e12c
 SHA1 (patch-ae) = a4f39995baf5511ddc70b4e1c006a159a86eeb22
 SHA1 (patch-af) = a55e83f71f09fdbc5f980999ca9d435aac4120f9
 SHA1 (patch-ag) = c4bf5a592ad5cad67ff933c5da418c58d6e1367a
