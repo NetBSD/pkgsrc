@@ -1,18 +1,33 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/20 15:23:57 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/10/29 18:11:22 shannonjr Exp $
 bin/gpg-agent
-bin/gpg-connect-agent
-bin/gpgconf
-bin/gpgkey2ssh
-bin/gpgparsemail
-bin/gpgsm-gencert.sh
-bin/watchgnupg
 libexec/gpg-preset-passphrase
 libexec/gpg-protect-tool
-sbin/addgnupghome
-share/gnupg/qualified.txt
+share/locale/be/LC_MESSAGES/gnupg2.mo
+share/locale/ca/LC_MESSAGES/gnupg2.mo
+share/locale/cs/LC_MESSAGES/gnupg2.mo
+share/locale/da/LC_MESSAGES/gnupg2.mo
 share/locale/de/LC_MESSAGES/gnupg2.mo
-share/gnupg/FAQ
-share/gnupg/com-certs.pem
-share/gnupg/faq.html
-share/gnupg/gpg-conf.skel
-@dirrm share/gnupg
+share/locale/el/LC_MESSAGES/gnupg2.mo
+share/locale/en@boldquot/LC_MESSAGES/gnupg2.mo
+share/locale/en@quot/LC_MESSAGES/gnupg2.mo
+share/locale/eo/LC_MESSAGES/gnupg2.mo
+share/locale/es/LC_MESSAGES/gnupg2.mo
+share/locale/et/LC_MESSAGES/gnupg2.mo
+share/locale/fi/LC_MESSAGES/gnupg2.mo
+share/locale/fr/LC_MESSAGES/gnupg2.mo
+share/locale/gl/LC_MESSAGES/gnupg2.mo
+share/locale/hu/LC_MESSAGES/gnupg2.mo
+share/locale/id/LC_MESSAGES/gnupg2.mo
+share/locale/it/LC_MESSAGES/gnupg2.mo
+share/locale/ja/LC_MESSAGES/gnupg2.mo
+share/locale/nb/LC_MESSAGES/gnupg2.mo
+share/locale/pl/LC_MESSAGES/gnupg2.mo
+share/locale/pt/LC_MESSAGES/gnupg2.mo
+share/locale/pt_BR/LC_MESSAGES/gnupg2.mo
+share/locale/ro/LC_MESSAGES/gnupg2.mo
+share/locale/ru/LC_MESSAGES/gnupg2.mo
+share/locale/sk/LC_MESSAGES/gnupg2.mo
+share/locale/sv/LC_MESSAGES/gnupg2.mo
+share/locale/tr/LC_MESSAGES/gnupg2.mo
+share/locale/zh_CN/LC_MESSAGES/gnupg2.mo
+share/locale/zh_TW/LC_MESSAGES/gnupg2.mo
