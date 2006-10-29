@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5646 2006/10/29 15:08:52 tron Exp $
+$NetBSD: TODO,v 1.5647 2006/10/29 15:19:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -750,7 +750,6 @@ Suggested package updates
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-File-DirSync-1.12
-	o p5-File-Flat-0.96 [pkg/34348]
 	o p5-File-MimeInfo-0.12
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
