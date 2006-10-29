@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.19 2004/11/05 19:41:16 erh Exp $
+# $Id: pkg_tarup,v 1.20 2006/10/29 07:50:27 erh Exp $
 #
 # Tar up installed package
 #
@@ -205,17 +205,23 @@ while [ $# -gt 0 ] ; do
 	esac
 done
 
+add_all_deps_to_list()
+{
+	# Make the input separator only a newline so spaces are allowed
+	oIFS="$IFS"
+	IFS="
+"
+	for f in `pkg_info -qf "$1" | ${GREP} @pkgdep | ${SED} -e's/^@pkgdep[[:space:]]*//' ` ; do
+		add_to_list "$f"
+		add_all_deps_to_list "$f"
+	done
+	IFS="$oIFS"
+}
+
 while [ $# -gt 0 ] ; do
 	add_to_list "$1"
 	if [ $GETDEPS -eq 1 ] ; then
-		# Make the input separator only a newline so spaces are allowed
-		oIFS="$IFS"
-		IFS="
-"
-		for f in `pkg_info -qf "$1" | ${GREP} @pkgdep | ${SED} -e's/^@pkgdep[[:space:]]*//' ` ; do
-			add_to_list "$f"
-		done
-		IFS="$oIFS"
+		add_all_deps_to_list "$1"
 	fi
 	shift
 done
