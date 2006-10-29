@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1661 2006/10/29 08:23:01 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1662 2006/10/29 08:44:55 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5040,4 +5040,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Log-Agent to 0.307 [obache 2006-10-28]
 	Updated geography/epsg to 6.11.2 [wiz 2006-10-29]
 	Updated lang/ruby18-base to 1.8.5nb2 [taca 2006-10-29]
-	Updated mail/ingo to 1.1.1 [adrianp 2006-10-29]
+	Updated mail/ingo to 1.1.2 [adrianp 2006-10-29]
