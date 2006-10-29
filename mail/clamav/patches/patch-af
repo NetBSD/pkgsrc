@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2004/08/01 04:35:33 jlam Exp $
+$NetBSD: patch-af,v 1.1.18.1 2006/10/29 17:31:03 ghen Exp $
 
---- database/Makefile.in.orig	Thu Jul 29 17:50:06 2004
-+++ database/Makefile.in
-@@ -344,17 +344,6 @@ install:
+--- database/Makefile.in.orig	2006-10-15 21:46:39.000000000 +0000
++++ database/Makefile.in	2006-10-19 10:17:33.000000000 +0000
+@@ -351,17 +351,6 @@
  	@test -f $(DESTDIR)$(DBINST)/mirrors.txt && rm -f $(DESTDIR)$(DBINST)/mirrors.txt || true
  	@test -f $(DESTDIR)$(DBINST)/viruses.db && rm -f $(DESTDIR)$(DBINST)/viruses.db || true
  	@test -f $(DESTDIR)$(DBINST)/viruses.db2 && rm -f $(DESTDIR)$(DBINST)/viruses.db2 || true

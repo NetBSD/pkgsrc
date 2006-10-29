@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2005/02/14 11:20:13 grant Exp $
+$NetBSD: patch-ad,v 1.9.14.1 2006/10/29 17:31:03 ghen Exp $
 
---- docs/Makefile.in.orig	2005-02-14 09:40:05.000000000 +1100
-+++ docs/Makefile.in
-@@ -182,6 +182,8 @@ EXTRA_DIST = clamdoc.pdf man clamav-mirr
+--- docs/Makefile.in.orig	2006-10-15 21:46:39.000000000 +0000
++++ docs/Makefile.in	2006-10-19 10:17:15.000000000 +0000
+@@ -191,6 +191,8 @@
  man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5
  all: all-am
  
