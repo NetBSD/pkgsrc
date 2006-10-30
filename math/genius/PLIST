@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/03 18:59:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/30 21:41:26 drochner Exp $
 bin/genius
 bin/gnome-genius
 include/genius/compil.h
@@ -30,6 +30,7 @@ share/genius/gel/combinatorics/misc.gel
 share/genius/gel/combinatorics/recursive_sequences.gel
 share/genius/gel/equation_solving/diffeqs.gel
 share/genius/gel/equation_solving/find_root.gel
+share/genius/gel/equation_solving/formulas.gel
 share/genius/gel/equation_solving/loader.gel
 share/genius/gel/functions/complex_numbers.gel
 share/genius/gel/functions/delta.gel
@@ -66,6 +67,11 @@ share/genius/plugins/test.plugin
 share/gnome/help/genius/C/about.xml
 share/gnome/help/genius/C/examples.xml
 share/gnome/help/genius/C/figures/genius_window.png
+share/gnome/help/genius/C/figures/line_plot.png
+share/gnome/help/genius/C/figures/line_plot_graph.png
+share/gnome/help/genius/C/figures/parametric.png
+share/gnome/help/genius/C/figures/parametric_graph.png
+share/gnome/help/genius/C/figures/surface_graph.png
 share/gnome/help/genius/C/gel-absolute-value-modulus.xml
 share/gnome/help/genius/C/gel-comparison-operators.xml
 share/gnome/help/genius/C/gel-conditionals.xml
@@ -79,6 +85,7 @@ share/gnome/help/genius/C/gel-matrix-support.xml
 share/gnome/help/genius/C/gel-matrix-transpose.xml
 share/gnome/help/genius/C/gel-modular-evaluation.xml
 share/gnome/help/genius/C/gel-operator-list.xml
+share/gnome/help/genius/C/gel-plotting.xml
 share/gnome/help/genius/C/gel-polynomials.xml
 share/gnome/help/genius/C/gel-previous-result.xml
 share/gnome/help/genius/C/gel-references.xml
