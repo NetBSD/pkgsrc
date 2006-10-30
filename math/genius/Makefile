@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/30 21:41:26 drochner Exp $
 #
 
-DISTNAME=		genius-0.7.5
-PKGREVISION=		1
+DISTNAME=		genius-0.7.6.1
 CATEGORIES=		math
 MASTER_SITES=		http://ftp.5z.com/pub/genius/
 
@@ -16,6 +15,9 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 USE_DIRS+=		gnome2-1.5
 USE_GNU_READLINE=	yes
+
+do-test:
+	(cd ${WRKSRC}/src; perl geniustest.pl)
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
