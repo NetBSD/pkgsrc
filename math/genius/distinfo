@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/03 18:59:58 drochner Exp $
+$NetBSD: distinfo,v 1.2 2006/10/30 21:41:26 drochner Exp $
 
-SHA1 (genius-0.7.5.tar.gz) = 56f650ecc75a42515c53646cd8f6e6176ac643ad
-RMD160 (genius-0.7.5.tar.gz) = 7812973feff873657380035e032a39e838be5fa5
-Size (genius-0.7.5.tar.gz) = 2565613 bytes
+SHA1 (genius-0.7.6.1.tar.gz) = 74cd331e5700ab6cb6f2b5965cbb71bc404e60de
+RMD160 (genius-0.7.6.1.tar.gz) = 7c8102e4f1a17440a6b62a675162ffd1e5fcd4fa
+Size (genius-0.7.6.1.tar.gz) = 2845668 bytes
