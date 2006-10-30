@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1672 2006/10/30 03:46:48 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1673 2006/10/30 04:09:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5055,3 +5055,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.24 [adam 2006-10-29]
 	Updated fonts/alee-ttf to 11.1 [minskim 2006-10-29]
 	Updated textproc/hyperestraier to 1.4.7 [obache 2006-10-30]
+	Updated devel/p5-IO-Util to 1.50 [obache 2006-10-30]
