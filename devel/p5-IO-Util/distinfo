@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/08/04 07:39:15 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2006/10/30 04:07:42 obache Exp $
 
-SHA1 (IO-Util-1.48.tar.gz) = 23f53b9c7d1f68749c0e8993538e5b1cee7d9130
-RMD160 (IO-Util-1.48.tar.gz) = fa095e2b8fa4177bc036f3c61adcf0ba76c3fa8a
-Size (IO-Util-1.48.tar.gz) = 13607 bytes
+SHA1 (IO-Util-1.5.tar.gz) = 54c4e258f8b9aafde66834478b47d9c8f12acd8e
+RMD160 (IO-Util-1.5.tar.gz) = da389482043260fe531e15a9f8ef8bd9b022882f
+Size (IO-Util-1.5.tar.gz) = 14017 bytes
