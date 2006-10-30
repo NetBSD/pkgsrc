@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1676 2006/10/30 15:40:00 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1677 2006/10/30 21:53:54 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5059,3 +5059,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/monotone-viz to 0.15 [dan 2006-10-30]
 	Updated devel/p5-PAR-Dist to 0.21 [obache 2006-10-30]
 	Updated games/scummvm to 0.9.1 [adam 2006-10-30]
+	Added graphics/xmorph version 20060817 [agc 2006-10-30]
