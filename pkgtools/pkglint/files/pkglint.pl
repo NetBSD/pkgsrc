@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.683 2006/10/24 07:18:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.684 2006/10/30 22:27:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6291,6 +6291,9 @@ sub checkfile_DESCR($) {
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
 		checkline_spellcheck($line);
+		if ($line->text =~ qr"\$\{") {
+			$line->log_warning("Variables are not expanded in the DESCR file.");
+		}
 	}
 	checklines_trailing_empty_lines($lines);
 
@@ -6309,6 +6312,7 @@ sub checkfile_DESCR($) {
 sub checkfile_distinfo($) {
 	my ($fname) = @_;
 	my ($lines, %in_distinfo, $current_fname, $state, $patches_dir);
+	my ($di_is_committed);
 
 	use constant DIS_start	=> 0;
 	use constant DIS_SHA1	=> 0;	# same as DIS_start
@@ -6316,6 +6320,8 @@ sub checkfile_distinfo($) {
 	use constant DIS_Size	=> 2;
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_distinfo()");
+
+	$di_is_committed = is_committed($fname);
 
 	checkperms($fname);
 	if (!($lines = load_file($fname))) {
@@ -6417,7 +6423,7 @@ sub checkfile_distinfo($) {
 
 		if ($is_patch && defined($patches_dir)) {
 			my $fname = "${current_dir}/${patches_dir}/${chksum_fname}";
-			if (!is_committed($fname)) {
+			if ($di_is_committed && !is_committed($fname)) {
 				$line->log_warning("${patches_dir}/${chksum_fname} is registered in distinfo but not added to CVS.");
 			}
 
