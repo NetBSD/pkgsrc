@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5652 2006/10/30 04:09:02 obache Exp $
+$NetBSD: TODO,v 1.5653 2006/10/30 13:03:43 obache Exp $
 
 Suggested new packages
 ======================
@@ -807,7 +807,6 @@ Suggested package updates
 	o p5-Net-Z3950-0.46
 	o p5-Number-Compare-0.02
 	o p5-Number-Format-1.51
-	o p5-PAR-Dist-0.18 [pkg/34353]
 	o p5-PV-1.5
 	o p5-Params-Validate-0.86 [pkg/34361]
 	o p5-PathTools-3.19 [pkg/34360]
