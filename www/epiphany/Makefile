@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2006/09/24 16:28:20 salo Exp $
+# $NetBSD: Makefile,v 1.67 2006/10/30 21:25:16 drochner Exp $
 #
 
-DISTNAME=	epiphany-2.16.0
-PKGREVISION=	1
+DISTNAME=	epiphany-2.16.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.16/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,8 +18,6 @@ USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	data/epiphany-2.16.pc
-
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "options.mk"
 
