@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/27 10:35:47 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/30 14:07:28 adrianp Exp $
 #
 
 DISTNAME=       amap-5.2
@@ -43,7 +43,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/amap ${PREFIX}/bin
 	${LN} -s ${PREFIX}/bin/amap ${PREFIX}/bin/amap6
 	${INSTALL_PROGRAM} ${WRKSRC}/amapcrap ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/amap.1 ${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/amap.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/appdefs.trig ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${EGDIR}
