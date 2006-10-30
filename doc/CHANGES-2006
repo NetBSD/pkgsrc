@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1674 2006/10/30 08:04:40 dan Exp $
+>$NetBSD: CHANGES-2006,v 1.1675 2006/10/30 13:03:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5057,3 +5057,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/hyperestraier to 1.4.7 [obache 2006-10-30]
 	Updated devel/p5-IO-Util to 1.50 [obache 2006-10-30]
 	Updated devel/monotone-viz to 0.15 [dan 2006-10-30]
+	Updated devel/p5-PAR-Dist to 0.21 [obache 2006-10-30]
