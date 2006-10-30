@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1675 2006/10/30 13:03:43 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1676 2006/10/30 15:40:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5058,3 +5058,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-IO-Util to 1.50 [obache 2006-10-30]
 	Updated devel/monotone-viz to 0.15 [dan 2006-10-30]
 	Updated devel/p5-PAR-Dist to 0.21 [obache 2006-10-30]
+	Updated games/scummvm to 0.9.1 [adam 2006-10-30]
