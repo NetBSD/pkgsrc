@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2006/10/09 12:52:35 joerg Exp $
+# $NetBSD: Makefile.common,v 1.44 2006/10/30 10:27:00 dsainty Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will
 #   be built in.
@@ -120,7 +120,24 @@ KERNMAN_SUFFIX=		${MAN_SUFFIX}
 FILEMAN_SUFFIX=		${MAN_SUFFIX}
 MISCMAN_SUFFIX=		${MAN_SUFFIX}
 
-.endif # NetBSD
+.elif ${OPSYS} == "SunOS"
+
+XF86RUSH=		'@comment '
+IMAKE_MANTOOLS=
+LIBDRI=
+MANSOURCEPATH=          man/man
+MAN_DIR=                ${MANSOURCEPATH}1
+LIBMAN_DIR=             ${MANSOURCEPATH}3
+KERNMAN_DIR=            ${MANSOURCEPATH}4
+FILEMAN_DIR=            ${MANSOURCEPATH}5
+MISCMAN_DIR=            ${MANSOURCEPATH}7
+MAN_SUFFIX=             1x
+LIBMAN_SUFFIX=          3x
+KERNMAN_SUFFIX=         4
+FILEMAN_SUFFIX=         5
+MISCMAN_SUFFIX=         7
+
+.endif # SunOS
 
 .if !defined(XORG_ONLY_DIRS) || empty(XORG_ONLY_DIRS:M[Yy][Ee][Ss])
 
