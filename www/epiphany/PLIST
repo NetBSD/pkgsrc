@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/09/15 15:18:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/10/30 21:25:16 drochner Exp $
 bin/epiphany
 include/epiphany/2.16/epiphany/ephy-adblock-manager.h
 include/epiphany/2.16/epiphany/ephy-adblock.h
@@ -41,32 +41,6 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
-share/doc/epiphany/EphyCommandManager.html
-share/doc/epiphany/EphyEmbed.html
-share/doc/epiphany/EphyNodeDb.html
-share/doc/epiphany/EphyTab.html
-share/doc/epiphany/EphyWindow.html
-share/doc/epiphany/ch01.html
-share/doc/epiphany/ch02.html
-share/doc/epiphany/epiphany-EphyEmbedFactory.html
-share/doc/epiphany/epiphany-EphyEmbedPersist.html
-share/doc/epiphany/epiphany-EphyEmbedSingle.html
-share/doc/epiphany/epiphany-EphyExtensionsManager.html
-share/doc/epiphany/epiphany-EphyGlade.html
-share/doc/epiphany/epiphany-EphyPermissionManager.html
-share/doc/epiphany/epiphany-ephy-cookie-manager.html
-share/doc/epiphany/epiphany-ephy-password-manager.html
-share/doc/epiphany/epiphany-ephy-session.html
-share/doc/epiphany/epiphany-ephy-shell.html
-share/doc/epiphany/epiphany.devhelp
-share/doc/epiphany/epiphany.devhelp2
-share/doc/epiphany/home.png
-share/doc/epiphany/index.html
-share/doc/epiphany/index.sgml
-share/doc/epiphany/left.png
-share/doc/epiphany/right.png
-share/doc/epiphany/style.css
-share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-download.png
 share/epiphany/art/epiphany-entry.png
@@ -157,6 +131,32 @@ share/gnome/help/epiphany/uk/figures/ephy-addressbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/uk/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/uk/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/uk/figures/ephy-screenshot.png
+share/gtk-doc/html/epiphany/EphyCommandManager.html
+share/gtk-doc/html/epiphany/EphyEmbed.html
+share/gtk-doc/html/epiphany/EphyNodeDb.html
+share/gtk-doc/html/epiphany/EphyTab.html
+share/gtk-doc/html/epiphany/EphyWindow.html
+share/gtk-doc/html/epiphany/ch01.html
+share/gtk-doc/html/epiphany/ch02.html
+share/gtk-doc/html/epiphany/epiphany-EphyEmbedFactory.html
+share/gtk-doc/html/epiphany/epiphany-EphyEmbedPersist.html
+share/gtk-doc/html/epiphany/epiphany-EphyEmbedSingle.html
+share/gtk-doc/html/epiphany/epiphany-EphyExtensionsManager.html
+share/gtk-doc/html/epiphany/epiphany-EphyGlade.html
+share/gtk-doc/html/epiphany/epiphany-EphyPermissionManager.html
+share/gtk-doc/html/epiphany/epiphany-ephy-cookie-manager.html
+share/gtk-doc/html/epiphany/epiphany-ephy-password-manager.html
+share/gtk-doc/html/epiphany/epiphany-ephy-session.html
+share/gtk-doc/html/epiphany/epiphany-ephy-shell.html
+share/gtk-doc/html/epiphany/epiphany.devhelp
+share/gtk-doc/html/epiphany/epiphany.devhelp2
+share/gtk-doc/html/epiphany/home.png
+share/gtk-doc/html/epiphany/index.html
+share/gtk-doc/html/epiphany/index.sgml
+share/gtk-doc/html/epiphany/left.png
+share/gtk-doc/html/epiphany/right.png
+share/gtk-doc/html/epiphany/style.css
+share/gtk-doc/html/epiphany/up.png
 share/icons/hicolor/48x48/apps/epiphany-bookmarks.png
 share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
@@ -250,6 +250,7 @@ share/omf/epiphany/epiphany-uk.omf
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gtk-doc/html/epiphany
 @dirrm share/gnome/help/epiphany/uk/figures
 @dirrm share/gnome/help/epiphany/uk
 @dirrm share/gnome/help/epiphany/sv/figures
@@ -283,7 +284,6 @@ share/omf/epiphany/epiphany-uk.omf
 @dirrm share/epiphany/chrome
 @dirrm share/epiphany/art
 @dirrm share/epiphany
-@dirrm share/doc/epiphany
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/epiphany/2.16/plugins
