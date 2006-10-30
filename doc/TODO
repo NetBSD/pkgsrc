@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5651 2006/10/29 20:06:38 wiz Exp $
+$NetBSD: TODO,v 1.5652 2006/10/30 04:09:02 obache Exp $
 
 Suggested new packages
 ======================
@@ -773,7 +773,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-IO-Socket-SSL-1.01
-	o p5-IO-Util-1.50 [pkg/34350]
 	o p5-Ima-DBI-0.34
 	o p5-Image-Info-1.23
 	o p5-Lingua-EN-Inflect-1.89 [pkg/34404]
