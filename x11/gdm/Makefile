@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2006/09/22 19:56:59 drochner Exp $
+# $NetBSD: Makefile,v 1.121 2006/10/30 21:44:28 drochner Exp $
 #
 
-DISTNAME=	gdm-2.16.0
-PKGREVISION=	2
+DISTNAME=	gdm-2.16.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.16/}
 EXTRACT_SUFX=	.tar.bz2
