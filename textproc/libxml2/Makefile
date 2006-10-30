@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2006/10/04 20:20:03 rillig Exp $
+# $NetBSD: Makefile,v 1.83 2006/10/30 20:57:30 drochner Exp $
 
-DISTNAME=	libxml2-2.6.26
+DISTNAME=	libxml2-2.6.27
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
-EXTRACT_SUFX=	.tar.bz2
-#MASTER_SITES=	ftp://xmlsoft.org/
+MASTER_SITES=	ftp://xmlsoft.org/libxml2/
+#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
@@ -18,7 +17,6 @@ PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-html-subdir=libxml2
 CONFIGURE_ARGS+=	--without-python
 
