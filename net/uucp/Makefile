@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/30 03:33:59 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/30 04:12:18 jlam Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	1
@@ -46,6 +46,10 @@ UUCP_PUBDIR?=		${UUCP_SPOOLDIR}public
 UUCP_LOGFILE?=		${UUCP_SPOOLDIR}/Log
 UUCP_STATFILE?=		${UUCP_SPOOLDIR}/Stats
 UUCP_DEBUGFILE?=	${UUCP_SPOOLDIR}/Debug
+
+OWN_DIRS_PERMS=		${UUCP_LOCKDIR} ${UUCP_USER} ${UUCP_GROUP} 0755
+OWN_DIRS_PERMS+=	${UUCP_SPOOLDIR} ${UUCP_USER} ${UUCP_GROUP} 0755
+OWN_DIRS_PERMS+=	${UUCP_PUBDIR} ${UUCP_USER} ${UUCP_GROUP} 1777
 
 # Generate a policy_local.h header file that holds the paths used by UUCP.
 post-configure:
