@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2006/02/12 00:13:55 salo Exp $
+$NetBSD: patch-ab,v 1.24 2006/10/31 03:31:20 taca Exp $
 
---- configure.ac.orig	2006-01-29 07:22:39.000000000 -0600
-+++ configure.ac	2006-02-08 20:55:34.000000000 -0600
-@@ -277,6 +277,15 @@
+--- configure.ac.orig	2006-09-25 04:08:59.000000000 +0900
++++ configure.ac
+@@ -324,6 +324,15 @@ main() { if (NSVersionOfRunTimeLibrary("
  		;;
  	esac
  	;;
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.23 2006/02/12 00:13:55 salo Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  	AC_DEFINE(BROKEN_INET_NTOA, 1,
-@@ -597,6 +606,9 @@
+@@ -663,6 +672,9 @@ mips-sony-bsd|mips-sony-newsos4)
          ;;
  esac
  
@@ -28,7 +28,15 @@ $NetBSD: patch-ab,v 1.23 2006/02/12 00:13:55 salo Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -3668,9 +3680,17 @@
+@@ -745,6 +757,7 @@ AC_CHECK_HEADERS( \
+ 	maillock.h \
+ 	ndir.h \
+ 	net/if_tun.h \
++	net/tun/if_tun.h \
+ 	netdb.h \
+ 	netgroup.h \
+ 	pam/pam_appl.h \
+@@ -3873,9 +3886,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -48,7 +56,7 @@ $NetBSD: patch-ab,v 1.23 2006/02/12 00:13:55 salo Exp $
  	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location",
  		[Define if you want to specify the path to your utmpx file])
  fi
-@@ -3694,9 +3714,17 @@
+@@ -3899,9 +3920,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -68,7 +76,7 @@ $NetBSD: patch-ab,v 1.23 2006/02/12 00:13:55 salo Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location",
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -3743,7 +3771,7 @@
+@@ -3941,7 +3970,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
