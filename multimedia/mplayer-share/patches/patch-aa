@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.16 2006/10/03 14:32:24 tron Exp $
+$NetBSD: patch-aa,v 1.17 2006/10/31 22:33:28 wiz Exp $
 
---- configure.orig	2006-06-11 19:35:47.000000000 +0100
-+++ configure	2006-10-03 14:25:36.000000000 +0100
-@@ -493,7 +493,7 @@
+--- configure.orig	2006-10-22 22:32:31.000000000 +0000
++++ configure
+@@ -515,7 +515,7 @@ for ac_option do
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
 -    _ld_extra=-L`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
 +    _ld_extra="${_ld_extra} -Wl,-R"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -Wl\,-R,g'`" -L"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
      ;;
-   --enable-runtime-cpudetection)
-     _runtime_cpudetection=yes
-@@ -694,11 +694,11 @@
+   --extra-libs=*)
+     _extra_libs=`echo $ac_option | cut -d '=' -f 2`
+@@ -719,11 +719,11 @@ if test "$_gcc_check" = yes ; then
    esac
    echores "$cc_version"
   else
@@ -25,16 +25,7 @@ $NetBSD: patch-aa,v 1.16 2006/10/03 14:32:24 tron Exp $
    if test "$?" -gt 0; then
      cc_version="not found"
    fi
-@@ -819,7 +819,7 @@
- elif aix; then
-   # use 'lsattr' on AIX
-   _cpuinfo="lsattr -E -l proc0 -a type"
--elif x86; then
-+elif x86 || x86_64; then
-   # all other OSes try to extract CPU information from a small helper
-   # program TOOLS/cpuinfo instead
-   $_cc -o TOOLS/cpuinfo TOOLS/cpuinfo.c
-@@ -830,7 +830,7 @@
+@@ -855,7 +855,7 @@ if x86 || x86_64 ; then
    # gather more CPU information
    pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | _head 1`
    pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | _head 1`
@@ -43,7 +34,15 @@ $NetBSD: patch-aa,v 1.16 2006/10/03 14:32:24 tron Exp $
    pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
    pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
  
-@@ -4136,7 +4136,7 @@
+@@ -3034,7 +3034,6 @@ fi
+ echores "$_pthreads"
+ 
+ echocheck "rpath"
+-netbsd &&_rpath=yes
+ if test "$_rpath" = yes ; then
+   for I in `echo $_ld_extra | sed 's/-L//g'` ; do
+     tmp="$tmp ` echo $I | sed 's/.*/ -L& -Wl,-R&/'`"
+@@ -4192,7 +4191,7 @@ fi
  if test "$_aa" = yes ; then
    _def_aa='#define HAVE_AA 1'
    if cygwin ; then
@@ -52,30 +51,3 @@ $NetBSD: patch-aa,v 1.16 2006/10/03 14:32:24 tron Exp $
    fi
    _vosrc="$_vosrc vo_aa.c"
    _vomodules="aa $_vomodules"
-@@ -6190,7 +6190,7 @@
-   elif cc_check -lavutil $_ld_lm ; then
-     _libavutil_so=yes
-   fi
--  if test "$_libavutil_so" == yes ; then
-+  if test "$_libavutil_so" = yes ; then
-     _res_comment="using libavutil.so, but static libavutil is recommended"
-   fi
- fi
-@@ -6217,7 +6217,7 @@
-   elif cc_check -lavcodec $_ld_lm ; then
-     _libavcodec_so=yes
-   fi
--  if test "$_libavcodec_so" == yes ; then
-+  if test "$_libavcodec_so" = yes ; then
-     _res_comment="using libavcodec.so, but static libavcodec is recommended"
-   fi
- fi
-@@ -6239,7 +6239,7 @@
-   elif cc_check $_ld_lm -lavformat ; then
-     _libavformat_so=yes  
-   fi
--  if test "$_libavformat_so" == yes ; then
-+  if test "$_libavformat_so" = yes ; then
-     _res_comment="using libavformat.so, but static libavformat is recommended"
-   fi
- fi
