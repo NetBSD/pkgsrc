@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5658 2006/10/31 19:46:48 wiz Exp $
+$NetBSD: TODO,v 1.5659 2006/10/31 22:34:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
-	o mencoder-1.0rc9
 	o mergeant-0.64
 	o metacity-2.16.3
 	o mftrace-1.2.4
@@ -661,7 +660,6 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpg123-0.61
 	o mpich-1.2.7
-	o mplayer-1.0rc9
 	o mplayer-plugin-firefox-3.31
 	o mpop-0.8.3
 	o mrproject-0.9.1
