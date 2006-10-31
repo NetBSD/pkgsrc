@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5655 2006/10/31 03:32:58 taca Exp $
+$NetBSD: TODO,v 1.5656 2006/10/31 15:12:19 obache Exp $
 
 Suggested new packages
 ======================
@@ -796,7 +796,6 @@ Suggested package updates
 	o p5-Math-MatrixReal-1.9
 	o p5-Module-Install-0.64 [pkg/34362]
 	o p5-Module-Pluggable-3.10 [pkg/34355]
-	o p5-Module-ScanDeps-0.63 [pkg/34354]
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
