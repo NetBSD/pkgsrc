@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1680 2006/10/31 10:12:41 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1681 2006/10/31 15:12:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5063,3 +5063,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/konversation to 1.0.1 [adrianp 2006-10-30]
 	Updated security/openssh to 4.4.1 [taca 2006-10-31]
 	Updated databases/postgresql74-docs to 7.4.14nb1 [ghen 2006-10-31]
+	Updated devel/p5-Module-ScanDeps to 0.68 [obache 2006-10-31]
