@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
+$NetBSD: patch-aa,v 1.42 2006/10/31 03:31:19 taca Exp $
 
---- configure.orig	2006-02-01 05:33:51.000000000 -0600
-+++ configure	2006-02-08 22:02:30.000000000 -0600
-@@ -5417,6 +5417,36 @@
+--- configure.orig	2006-09-26 20:03:41.000000000 +0900
++++ configure
+@@ -7326,6 +7326,36 @@ _ACEOF
  		;;
  	esac
  	;;
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -6233,7 +6263,7 @@
+@@ -7931,7 +7961,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  	;;
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  	check_for_libcrypt_later=1
  
  cat >>confdefs.h <<\_ACEOF
-@@ -7269,6 +7299,9 @@
+@@ -9144,6 +9174,9 @@ _ACEOF
          ;;
  esac
  
@@ -57,9 +57,17 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
 +
  # Allow user to specify flags
  
- # Check whether --with-cflags or --without-cflags was given.
-@@ -26694,14 +26727,21 @@
- rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ # Check whether --with-cflags was given.
+@@ -9344,6 +9377,7 @@ for ac_header in \
+ 	maillock.h \
+ 	ndir.h \
+ 	net/if_tun.h \
++	net/tun/if_tun.h \
+ 	netdb.h \
+ 	netgroup.h \
+ 	pam/pam_appl.h \
+@@ -32055,14 +32089,21 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
 -		cat >>confdefs.h <<\_ACEOF
@@ -84,8 +92,8 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
  _ACEOF
  
-@@ -26769,14 +26809,20 @@
- rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -32143,14 +32184,20 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
 -		cat >>confdefs.h <<\_ACEOF
@@ -110,7 +118,7 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -28002,7 +28048,7 @@
+@@ -33383,7 +33430,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
