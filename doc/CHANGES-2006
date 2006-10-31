@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1685 2006/10/31 20:38:31 agc Exp $
+>$NetBSD: CHANGES-2006,v 1.1686 2006/10/31 22:34:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5077,3 +5077,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added misc/ruby-gem_plugin version 0.2.1 [minskim 2006-10-31]
 	Updated converters/wv to 1.2.4 [adam 2006-10-31]
 	Updated devel/arena to 0.9.8 [agc 2006-10-31]
+	Updated multimedia/mplayer-share to 1.0rc9 [wiz 2006-10-31]
+	Updated multimedia/mplayer to 1.0rc9 [wiz 2006-10-31]
+	Updated multimedia/gmplayer to 1.0rc9 [wiz 2006-10-31]
+	Updated multimedia/mencoder to 1.0rc9 [wiz 2006-10-31]
