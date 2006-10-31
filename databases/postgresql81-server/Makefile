@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/23 00:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.4.4.1 2006/10/31 10:18:20 ghen Exp $
 
 PKGNAME=	postgresql81-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -75,17 +75,17 @@ RCD_SCRIPTS=		pgsql
 #
 post-wrapper:
 .if ${OPSYS} == "SunOS"
-	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+	touch ${BUILDLINK_DIR}/include/crypt.h
 .endif
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC}/src/backend &&					\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
 		../../src/include/parser/parse.h			\
 		../../src/include/utils/fmgroids.h
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC}/src/port &&					\
-       	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
+       	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 .include "../../mk/bsd.pkg.mk"

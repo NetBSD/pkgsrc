@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2006/05/26 17:47:58 joerg Exp $
+# $NetBSD: Makefile.common,v 1.23.4.1 2006/10/31 10:18:20 ghen Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -11,7 +11,7 @@
 
 DISTNAME?=	postgresql-${DIST_VERS}
 CATEGORIES+=	databases
-MASTER_SITES?=  ${MASTER_SITE_PGSQL:=source/v${DIST_VERS}/}
+MASTER_SITES?=	${MASTER_SITE_PGSQL:=source/v${DIST_VERS}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	joerg@NetBSD.org
@@ -35,7 +35,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql80/patches
 #
 # Note: Do not forget jdbc-postgresql80 when updating version
 #
-DIST_VERS?=		8.0.8
+DIST_VERS?=		8.0.9
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql80-client+=	postgresql80-client>=${BASE_VERS}
@@ -114,48 +114,48 @@ LIBS+=		-lintl
 
 post-extract:
 	if ${TEST} -d ${WRKSRC}/src; then				\
-		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
-		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
+		rm -f ${WRKSRC}/src/Makefile.custom;			\
+		cp -f ${COMMON_FILESDIR}/Makefile.custom		\
 			${WRKSRC}/src/Makefile.custom;			\
-		${RM} -f ${WRKSRC}/src/Makefile.shlib;			\
-		${CP} -f ${COMMON_FILESDIR}/Makefile.libtool		\
+		rm -f ${WRKSRC}/src/Makefile.shlib;			\
+		cp -f ${COMMON_FILESDIR}/Makefile.libtool		\
 			${WRKSRC}/src/Makefile.shlib;			\
 	fi
 	if ${TEST} -d ${WRKSRC}/src/interfaces/libpq; then		\
-		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
-		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
+		rm -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
 			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
 	fi
 	if ${TEST} -d ${WRKSRC}/src/interfaces/libpgtcl; then		\
-		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
-		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
+		rm -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 	fi
 .if !empty(USE_LIBLTDL:M[yY][eE][sS])
 	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
 		template=${PGSQL_TEMPLATE.${OPSYS}:Q};			\
-		${RM} -f ${WRKSRC}/src/backend/port/dynloader/$$template.[ch]; \
-		${CP} -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
+		rm -f ${WRKSRC}/src/backend/port/dynloader/$$template.[ch]; \
+		cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
 			${WRKSRC}/src/backend/port/dynloader/$$template.h; \
 		${ECHO} "static int dummy = 0;"				\
 			 >${WRKSRC}/src/backend/port/dynloader/$$template.c
 	fi
 .endif
 	if ${TEST} -d ${WRKSRC}/src/template; then			\
-		${TOUCH} ${WRKSRC}/src/template/dragonfly;		\
+		touch ${WRKSRC}/src/template/dragonfly;		\
 	fi
 	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
-		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c	\
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c	\
 			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
-		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h	\
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h	\
 			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
 	fi
 	if ${TEST} -d ${WRKSRC}/src/include/port; then			\
-		${CP} ${WRKSRC}/src/include/port/freebsd.h		\
+		cp ${WRKSRC}/src/include/port/freebsd.h		\
 			${WRKSRC}/src/include/port/dragonfly.h;		\
 	fi
 	if ${TEST} -d ${WRKSRC}/src/makefiles; then			\
-		${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd		\
+		cp ${WRKSRC}/src/makefiles/Makefile.freebsd		\
 			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
 	fi
 
@@ -165,7 +165,7 @@ post-extract:
 # PostgreSQL sources).  Please don't change this value unless you know
 # what you are doing.
 #
-BUILD_DEFS+=    PGSQL_BLCKSZ
+BUILD_DEFS+=	PGSQL_BLCKSZ
 
 .if defined(PGSQL_BLCKSZ)
 .PHONY: pgsql-blcksz

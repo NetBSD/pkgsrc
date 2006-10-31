@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/07/17 17:32:30 joerg Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2006/10/31 10:18:19 ghen Exp $
 
 PKGNAME=		postgresql74-lib-${BASE_VERS}
 SVR4_PKGNAME=		pstgl
@@ -11,15 +11,15 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DIRS+=		${WRKSRC}/src/include
-BUILD_DIRS+=		${WRKSRC}/src/interfaces
-BUILD_DIRS+=		${WRKSRC}/src/bin/pg_config
+BUILD_DIRS+=		src/include
+BUILD_DIRS+=		src/interfaces
+BUILD_DIRS+=		src/bin/pg_config
 
 # without this the Darwin build fails
 # (-bundle_loader related)
-BUILD_DIRS+=		${WRKSRC}/src/backend
+BUILD_DIRS+=		src/backend
 
-BUILD_DIRS+=		${WRKSRC}/src/pl
+BUILD_DIRS+=		src/pl
 
 # As told by Josh Berkus
 .include "../../mk/pthread.buildlink3.mk"
@@ -41,24 +41,20 @@ post-wrapper:
 # "/usr/include/crypt.h" -- we want the definitions in the former.
 #
 .if (${OPSYS} == "SunOS")
-	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+	touch ${BUILDLINK_DIR}/include/crypt.h
 .endif
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
-		${MAKE_PROGRAM} -C src/include install
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
-		${MAKE_PROGRAM} -C src/interfaces install
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
-		${MAKE_PROGRAM} -C src/bin/pg_config install
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
-		${MAKE_PROGRAM} -C src/pl install
-	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}	\
+	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} -C src/include install
+	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} -C src/interfaces install
+	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} -C src/bin/pg_config install
+	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} -C src/pl install
+	cd ${WRKSRC}/src/include && env ${MAKE_ENV} \
 		${MAKE_PROGRAM} install-all-headers
 
 post-install:
-	${EGREP} -v "^#" ${FILESDIR}/man.lib > ${WRKDIR}/man_tar
-	cd ${PREFIX}/${PKGMANDIR} && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
+	egrep -v "^#" ${FILESDIR}/man.lib > ${WRKDIR}/man_tar
+	cd ${PREFIX}/${PKGMANDIR} && tar -zxm -T ${WRKDIR}/man_tar  		\
 		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../security/openssl/buildlink3.mk"

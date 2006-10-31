@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/04/23 00:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.26.4.1 2006/10/31 10:18:19 ghen Exp $
 
 PKGNAME=		postgresql74-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -58,15 +58,15 @@ post-wrapper:
 # "/usr/include/crypt.h" -- we want the definitions in the former.
 #
 .if (${OPSYS} == "SunOS")
-	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+	touch ${BUILDLINK_DIR}/include/crypt.h
 .endif
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
 		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/port && \
-       	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
+       	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 pre-install:
 	@case "X${PGUSER}" in						\
@@ -82,8 +82,8 @@ pre-install:
 	esac
 
 post-install:
-	${EGREP} -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
-	cd ${PREFIX}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
+	egrep -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
+	cd ${PREFIX}/man && tar -zxm -T ${WRKDIR}/man_tar  		\
 		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../databases/postgresql74-lib/buildlink3.mk"
