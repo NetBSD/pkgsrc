@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1688 2006/10/31 22:51:17 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1689 2006/10/31 23:05:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/py-markdown version 1.6a [joerg 2006-10-31]
 	Updated multimedia/win32-codecs to 061022 [wiz 2006-10-31]
 	Updated security/opencdk to 0.5.11 [wiz 2006-10-31]
+	Updated www/curl to 7.16.0 [wiz 2006-10-31]
