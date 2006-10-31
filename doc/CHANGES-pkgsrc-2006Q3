@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.27 2006/10/29 18:59:47 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.28 2006/10/31 10:18:57 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -69,3 +69,5 @@ Pullup ticket 1888 - requested by adrianp
 security update for ingo
 Pullup ticket 1872 - requested by martti
 latest update for clamav
+Pullup ticket 1879 - requested by joerg
+security updates for postgresql
