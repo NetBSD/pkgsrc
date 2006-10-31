@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1683 2006/10/31 19:45:21 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1684 2006/10/31 20:08:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5075,3 +5075,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/zenity to 2.16.1 [drochner 2006-10-31]
 	Updated x11/gnome-session to 2.16.1 [drochner 2006-10-31]
 	Added misc/ruby-gem_plugin version 0.2.1 [minskim 2006-10-31]
+	Updated converters/wv to 1.2.4 [adam 2006-10-31]
