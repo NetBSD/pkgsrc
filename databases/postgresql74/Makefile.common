@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2006/05/26 17:47:58 joerg Exp $
+# $NetBSD: Makefile.common,v 1.36.4.1 2006/10/31 10:18:19 ghen Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -9,9 +9,9 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 
-DISTNAME?=		postgresql-${DIST_VERS}
-CATEGORIES+=		databases
-MASTER_SITES?=  ${MASTER_SITE_PGSQL:=source/v${DIST_VERS}/}
+DISTNAME?=	postgresql-${DIST_VERS}
+CATEGORIES+=	databases
+MASTER_SITES?=	${MASTER_SITE_PGSQL:=source/v${DIST_VERS}/}
 
 # Craft a MASTER_SORT_REGEX that understands the location of the country
 # code in the FTP server name for the PostgreSQL mirror sites.
@@ -35,7 +35,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql74/patches
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
 # Note: Do not forget jdbc-postgresql when updating version
-DIST_VERS?=		7.4.13
+DIST_VERS?=		7.4.14
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql74-lib?=	postgresql74-lib>=${BASE_VERS}
@@ -87,8 +87,8 @@ CFLAGS:=		${CFLAGS:S/-ffast-math//}
 
 post-extract:
 	if [ -d ${WRKSRC}/src ]; then					\
-		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
-		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
+		rm -f ${WRKSRC}/src/Makefile.custom;			\
+		cp -f ${COMMON_FILESDIR}/Makefile.custom		\
 			${WRKSRC}/src/Makefile.custom;			\
 	fi
 .for platform in irix5
@@ -101,51 +101,51 @@ post-extract:
 .endfor
 .for platform in interix3
 	if [ -d ${WRKSRC}/src/template ]; then				\
-		${RM} -f ${WRKSRC}/src/template/${platform};		\
-		${CP} -f ${COMMON_FILESDIR}/${platform}.template	\
+		rm -f ${WRKSRC}/src/template/${platform};		\
+		cp -f ${COMMON_FILESDIR}/${platform}.template	\
 			${WRKSRC}/src/template/${platform};		\
 	fi
 .endfor
 .for platform in interix3
 	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
-		${RM} -f ${WRKSRC}/src/backend/port/dynloader/${platform}.h; \
-		${CP} -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
+		rm -f ${WRKSRC}/src/backend/port/dynloader/${platform}.h; \
+		cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
 			${WRKSRC}/src/backend/port/dynloader/${platform}.h; \
-		${TOUCH} ${WRKSRC}/src/backend/port/dynloader/${platform}.c; \
+		touch ${WRKSRC}/src/backend/port/dynloader/${platform}.c; \
 	fi
 .endfor
 	if [ -d ${WRKSRC}/src/interfaces/libpq ]; then			\
-		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
-		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
+		rm -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
 			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
 	fi
 	if [ -d ${WRKSRC}/src/interfaces/libpgtcl ]; then		\
-		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
-		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
+		rm -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 	fi
 	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
-		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch]; \
-		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]			\
+		rm -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch]; \
+		cp -f ${COMMON_FILESDIR}/netbsd.[ch]			\
 			${WRKSRC}/src/backend/port/dynloader/;		\
 	fi
 	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
-		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
 			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
-		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
 			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
-		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
 			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
 	fi
 	if [ -d ${WRKSRC}/src/template ]; then				\
-		${TOUCH} ${WRKSRC}/src/template/dragonfly;		\
+		touch ${WRKSRC}/src/template/dragonfly;		\
 	fi
 	if [ -d ${WRKSRC}/src/include/port ]; then			\
-		${CP} ${WRKSRC}/src/include/port/freebsd.h		\
+		cp ${WRKSRC}/src/include/port/freebsd.h		\
 			${WRKSRC}/src/include/port/dragonfly.h;		\
 	fi
 	if [ -d ${WRKSRC}/src/makefiles ]; then				\
-		${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd		\
+		cp ${WRKSRC}/src/makefiles/Makefile.freebsd		\
 			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
 	fi
 

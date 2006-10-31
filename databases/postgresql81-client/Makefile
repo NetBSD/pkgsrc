@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/28 19:48:22 joerg Exp $
+# $NetBSD: Makefile,v 1.3.6.1 2006/10/31 10:18:20 ghen Exp $
 
 PKGNAME=	postgresql81-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -65,13 +65,13 @@ USE_GNU_READLINE=	yes
 #
 .if ${OPSYS} == "SunOS"
 post-wrapper:
-	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+	touch ${BUILDLINK_DIR}/include/crypt.h
 .endif
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC}/src/backend &&					\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
 		../../src/include/parser/parse.h			\
 		../../src/include/utils/fmgroids.h
 
@@ -82,7 +82,7 @@ post-install:
 	do								\
 		${INSTALL_DATA} $$file ${PG_DOC_DIR}/$$file;		\
         done
-	${CP} -R ${WRKSRC}/doc/TODO.detail ${PG_DOC_DIR}
-	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PG_DOC_DIR}/TODO.detail
+	cp -R ${WRKSRC}/doc/TODO.detail ${PG_DOC_DIR}
+	chown -R ${DOCOWN}:${DOCGRP} ${PG_DOC_DIR}/TODO.detail
 
 .include "../../mk/bsd.pkg.mk"

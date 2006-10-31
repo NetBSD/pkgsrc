@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/21 20:23:49 joerg Exp $
+# $NetBSD: Makefile,v 1.20.6.1 2006/10/31 10:18:19 ghen Exp $
 
 PKGNAME=		postgresql74-client-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
@@ -15,16 +15,16 @@ CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
-BUILD_DIRS=		${WRKSRC}/src/bin
+BUILD_DIRS=		src/bin
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
 		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
 
 post-install:
-	${EGREP} -v "^#" ${FILESDIR}/man.client > ${WRKDIR}/man_tar_files
-	cd ${PREFIX}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar_files	\
+	egrep -v "^#" ${FILESDIR}/man.client > ${WRKDIR}/man_tar_files
+	cd ${PREFIX}/man && tar -zxm -T ${WRKDIR}/man_tar_files	\
 		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../mk/bsd.prefs.mk"

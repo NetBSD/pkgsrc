@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/21 20:23:49 joerg Exp $
+# $NetBSD: Makefile,v 1.13.6.1 2006/10/31 10:18:19 ghen Exp $
 
 PKGNAME=		postgresql74-contrib-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
@@ -11,14 +11,14 @@ CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
-BUILD_DIRS=		${WRKSRC}/contrib
+BUILD_DIRS=		contrib
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
 		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/port && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" && ${LOWER_OPSYS_VERSUFFIX} == "4"
