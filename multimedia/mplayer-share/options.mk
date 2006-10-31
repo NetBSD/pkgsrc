@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2006/10/13 20:13:14 wiz Exp $
+# $NetBSD: options.mk,v 1.19 2006/10/31 22:33:28 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -24,7 +24,7 @@ PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread png theora vorbis
 .if !empty(PKGNAME:M*mplayer*)
 PKG_OPTIONS_OPTIONAL_GROUPS=	faadgroup
 PKG_OPTIONS_GROUP.faadgroup=	faad mplayer-internal-faad
-PKG_SUGGESTED_OPTIONS+=		faad
+PKG_SUGGESTED_OPTIONS+=		mplayer-internal-faad
 
 PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas sdl
 
@@ -86,7 +86,6 @@ CONFIGURE_ARGS+=	--disable-arts
 
 .if !empty(PKG_OPTIONS:Mcdparanoia)
 CONFIGURE_ARGS+=	--enable-cdparanoia
-CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia"
 .  include "../../audio/cdparanoia/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-cdparanoia
@@ -122,13 +121,13 @@ CONFIGURE_ARGS+=	--disable-esd
 
 
 .if empty(PKG_OPTIONS:Mfaad) && empty(PKG_OPTIONS:Mmplayer-internal-faad)
-CONFIGURE_ARGS+=	--disable-external-faad
-CONFIGURE_ARGS+=	--disable-internal-faad
+CONFIGURE_ARGS+=	--disable-faad-external
+CONFIGURE_ARGS+=	--disable-faad-internal
 .elif !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=	--enable-external-faad
+CONFIGURE_ARGS+=	--enable-faad-external
 .  include "../../audio/faad2/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--enable-internal-faad
+CONFIGURE_ARGS+=	--enable-faad-internal
 .endif
 
 .if !empty(PKG_OPTIONS:Mggi)
@@ -239,10 +238,10 @@ CONFIGURE_ARGS+=	--disable-theora
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
-CONFIGURE_ARGS+=	--enable-vorbis
+CONFIGURE_ARGS+=	--enable-libvorbis
 .  include "../../audio/libvorbis/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-vorbis
+CONFIGURE_ARGS+=	--disable-libvorbis
 .endif
 
 .if !empty(PKG_OPTIONS:Mxvid)
