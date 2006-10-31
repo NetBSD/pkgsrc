@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/05/26 17:47:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6.4.1 2006/10/31 10:18:19 ghen Exp $
 share/doc/postgresql/FAQ
 share/doc/postgresql/FAQ_AIX
 share/doc/postgresql/FAQ_DEV
@@ -444,6 +444,7 @@ share/doc/postgresql/release-7-3-12.html
 share/doc/postgresql/release-7-3-13.html
 share/doc/postgresql/release-7-3-14.html
 share/doc/postgresql/release-7-3-15.html
+share/doc/postgresql/release-7-3-16.html
 share/doc/postgresql/release-7-3-2.html
 share/doc/postgresql/release-7-3-3.html
 share/doc/postgresql/release-7-3-4.html
@@ -457,6 +458,7 @@ share/doc/postgresql/release-7-4-1.html
 share/doc/postgresql/release-7-4-10.html
 share/doc/postgresql/release-7-4-11.html
 share/doc/postgresql/release-7-4-12.html
+share/doc/postgresql/release-7-4-13.html
 share/doc/postgresql/release-7-4-2.html
 share/doc/postgresql/release-7-4-3.html
 share/doc/postgresql/release-7-4-4.html
@@ -674,4 +676,5 @@ share/doc/postgresql/xoper.html
 share/doc/postgresql/xplang.html
 share/doc/postgresql/xtypes.html
 @dirrm share/doc/postgresql/TODO.detail
+@dirrm share/doc/postgresql
 @unexec ${RMDIR} %D/doc/postgresql 2>/dev/null || ${TRUE}
