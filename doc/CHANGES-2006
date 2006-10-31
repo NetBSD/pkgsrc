@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1686 2006/10/31 22:34:31 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1687 2006/10/31 22:41:15 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5081,3 +5081,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/mplayer to 1.0rc9 [wiz 2006-10-31]
 	Updated multimedia/gmplayer to 1.0rc9 [wiz 2006-10-31]
 	Updated multimedia/mencoder to 1.0rc9 [wiz 2006-10-31]
+	Added textproc/py-markdown version 1.6a [joerg 2006-10-31]
