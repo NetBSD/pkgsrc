@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2006/03/15 16:44:50 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/31 23:13:51 joerg Exp $
 
 LIB=		libtrio
-LIB_VER=	1:0
+LIB_VER=	2:0:1
 LIBS?=		-lm
 
-SRCS=		trio.c strio.c
-HDRS=		trio.h triop.h
+SRCS=		trio.c triostr.c trionan.c
+HDRS=		trio.h triop.h triodef.h trionan.h triostr.h
 OBJS=		${SRCS:.c=.lo}
 
 PREFIX?=	/usr/local
 LIBDIR?=	${PREFIX}/lib
 INCLUDEDIR?=	${PREFIX}/include
-MANDIR?=	${PREFIX}/${PKGMANDIR}
-MANDIR3?=	${MANDIR}/man3
 
 BSD_INSTALL?=		install
 BSD_INSTALL_DIR?=	${BSD_INSTALL} -d
@@ -34,12 +32,9 @@ clean:
 	-${LIBTOOL} --mode=clean ${RM} ${OBJS} ${LIB}.la
 
 install:
-	${BSD_INSTALL_DIR} ${LIBDIR} ${INCLUDEDIR}
-	${BSD_INSTALL_DATA} ${HDRS} ${INCLUDEDIR}
-	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIB}.la ${LIBDIR}/${LIB}.la
-	${BSD_INSTALL_DIR} ${MANDIR3}
-	${BSD_INSTALL_DATA} man/man3/strio.3 man/man3/trio_printf.3 \
-	    man/man3/trio_register.3 man/man3/trio_scanf.3 ${MANDIR3}
+	${BSD_INSTALL_DIR} ${DESTDIR}${LIBDIR} ${DESTDIR}${INCLUDEDIR}
+	${BSD_INSTALL_DATA} ${HDRS} ${DESTDIR}${INCLUDEDIR}
+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIB}.la ${DESTDIR}${LIBDIR}/${LIB}.la
 
 ${LIB}.la: ${OBJS}
 	${LIBTOOL} --mode=link ${CC} -o $@ ${CFLAGS} ${LDFLAGS} \
