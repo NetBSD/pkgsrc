@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1681 2006/10/31 15:12:19 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1682 2006/10/31 19:18:54 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5064,3 +5064,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/openssh to 4.4.1 [taca 2006-10-31]
 	Updated databases/postgresql74-docs to 7.4.14nb1 [ghen 2006-10-31]
 	Updated devel/p5-Module-ScanDeps to 0.68 [obache 2006-10-31]
+	Updated textproc/libxml2 to 2.6.27 [drochner 2006-10-31]
+	Updated textproc/libxslt to 1.1.18 [drochner 2006-10-31]
+	Updated www/liferea to 1.0.25 [drochner 2006-10-31]
+	Updated www/epiphany to 2.16.1 [drochner 2006-10-31]
+	Updated www/galeon to 2.0.3 [drochner 2006-10-31]
+	Updated graphics/eog2 to 2.16.1.1 [drochner 2006-10-31]
+	Updated graphics/gnome-backgrounds to 2.16.1 [drochner 2006-10-31]
+	Updated math/genius to 0.7.6.1 [drochner 2006-10-31]
+	Updated x11/zenity to 2.16.1 [drochner 2006-10-31]
+	Updated x11/gnome-session to 2.16.1 [drochner 2006-10-31]
