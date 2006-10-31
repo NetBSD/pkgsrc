@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2006/10/23 07:33:42 wiz Exp $
+$NetBSD: distinfo,v 1.13 2006/10/31 22:49:57 wiz Exp $
 
-SHA1 (opencdk-0.5.10.tar.gz) = db4af36730dcbb2ab9ac93f6ce1ec27e5a36876f
-RMD160 (opencdk-0.5.10.tar.gz) = 4ef8aefb57fbd4c8d06366ab9f15204cbbc956fc
-Size (opencdk-0.5.10.tar.gz) = 518544 bytes
+SHA1 (opencdk-0.5.11.tar.gz) = c89bae403acfac96e8e987355cf9b633b0186fd3
+RMD160 (opencdk-0.5.11.tar.gz) = 2bc1f5c879f51e474d9277ee28de4c139f7efd0e
+Size (opencdk-0.5.11.tar.gz) = 519267 bytes
