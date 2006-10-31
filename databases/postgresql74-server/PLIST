@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2006/10/31 10:18:19 ghen Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -29,6 +29,7 @@ lib/postgresql/utf8_and_win1256.so
 lib/postgresql/utf8_and_win874.so
 man/man1/postgres.1
 man/man1/postmaster.1
+share/examples/rc.d/pgsql
 share/locale/cs/LC_MESSAGES/postgres.mo
 share/locale/de/LC_MESSAGES/postgres.mo
 share/locale/es/LC_MESSAGES/postgres.mo
@@ -43,7 +44,6 @@ share/locale/sv/LC_MESSAGES/postgres.mo
 share/locale/tr/LC_MESSAGES/postgres.mo
 share/locale/zh_CN/LC_MESSAGES/postgres.mo
 share/locale/zh_TW/LC_MESSAGES/postgres.mo
-share/examples/rc.d/pgsql
 share/postgresql/conversion_create.sql
 share/postgresql/information_schema.sql
 share/postgresql/pg_hba.conf.sample
