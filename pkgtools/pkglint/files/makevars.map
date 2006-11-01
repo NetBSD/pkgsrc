@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.141 2006/10/18 20:54:22 rillig Exp $
+# $NetBSD: makevars.map,v 1.142 2006/11/01 09:14:45 joerg Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -503,6 +503,7 @@ PKG_CREATE		ShellCommand [$system]
 PKG_DEBUG_LEVEL		Integer [$cmdline]
 PKG_DEFAULT_OPTIONS	List of Option [$user]
 PKG_DELETE		ShellCommand [$system]
+PKG_DESTDIR_SUPPORT	List of { destdir user-destdir } [m:s,c:s]
 PKG_FAIL_REASON		List of ShellWord [$package_list]
 PKG_GECOS.*		Message [m:s]
 PKG_GID.*		Integer [m:s]
