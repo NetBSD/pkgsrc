@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1691 2006/11/01 06:41:33 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1692 2006/11/01 07:21:12 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5087,3 +5087,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/curl to 7.16.0 [wiz 2006-10-31]
 	Updated devel/trio to 1.11 [joerg 2006-10-31]
 	Added www/mongrel version 0.3.13.4 [minskim 2006-11-01]
+	Added devel/doxymacs version 1.7.0 [dsainty 2006-11-01]
