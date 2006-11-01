@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/09/08 19:23:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.59 2006/11/01 08:58:27 joerg Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -18,6 +18,7 @@ HOMEPAGE=	http://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
@@ -26,9 +27,9 @@ GNU_CONFIGURE=		yes
 DLOPEN_REQUIRE_PTHREADS=no
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/slang
-	${MV} ${PREFIX}/share/doc/slang/slangdoc.html \
-		${PREFIX}/share/doc/html/slang
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/slang
+	${MV} ${DESTDIR}${PREFIX}/share/doc/slang/slangdoc.html \
+		${DESTDIR}${PREFIX}/share/doc/html/slang
 
 .include "../../mk/bsd.prefs.mk"
 
