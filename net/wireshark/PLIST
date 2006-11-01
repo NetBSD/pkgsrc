@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/24 10:48:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2006/11/01 21:42:58 ghen Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -31,7 +31,6 @@ lib/wireshark/plugins/${PKGVERSION}/opsi.la
 lib/wireshark/plugins/${PKGVERSION}/parlay.la
 lib/wireshark/plugins/${PKGVERSION}/pcli.la
 lib/wireshark/plugins/${PKGVERSION}/profinet.la
-lib/wireshark/plugins/${PKGVERSION}/rdm.la
 lib/wireshark/plugins/${PKGVERSION}/rlm.la
 lib/wireshark/plugins/${PKGVERSION}/rtnet.la
 lib/wireshark/plugins/${PKGVERSION}/rudp.la
@@ -49,6 +48,7 @@ man/man1/tshark.1
 man/man1/wireshark.1
 man/man4/wireshark-filter.4
 share/wireshark/AUTHORS-SHORT
+share/wireshark/COPYING
 share/wireshark/capinfos.html
 share/wireshark/cfilters
 share/wireshark/colorfilters
@@ -66,6 +66,7 @@ share/wireshark/dtds/itunes.dtd
 share/wireshark/dtds/pocsettings.dtd
 share/wireshark/dtds/presence.dtd
 share/wireshark/dtds/reginfo.dtd
+share/wireshark/dtds/rlmi.dtd
 share/wireshark/dtds/rss.dtd
 share/wireshark/dtds/smil.dtd
 share/wireshark/dtds/watcherinfo.dtd
