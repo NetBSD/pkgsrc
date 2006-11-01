@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1690 2006/10/31 23:18:36 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1691 2006/11/01 06:41:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5086,3 +5086,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/opencdk to 0.5.11 [wiz 2006-10-31]
 	Updated www/curl to 7.16.0 [wiz 2006-10-31]
 	Updated devel/trio to 1.11 [joerg 2006-10-31]
+	Added www/mongrel version 0.3.13.4 [minskim 2006-11-01]
