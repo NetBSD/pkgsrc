@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1697 2006/11/01 15:19:28 martin Exp $
+>$NetBSD: CHANGES-2006,v 1.1698 2006/11/01 16:42:31 bad Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Log-Dispatch to 2.13 [obache 2006-11-01]
 	Updated mail/mutt to 1.4.2.2nb1 [tron 2006-11-01]
 	Updated net/rp-pppoe to 3.8 [martin 2006-11-01]
+	Removed databases/xmysql [bad 2006-11-01]
