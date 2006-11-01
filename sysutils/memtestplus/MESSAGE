@@ -1,10 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/10/24 18:00:05 smb Exp $
+$NetBSD: MESSAGE,v 1.2 2006/11/01 15:38:15 mlelstv Exp $
 
 Memtest86+ is a standalone program, it does not run within an operating
 system.  It has been designed to boot from a PC floppy disk.  To install
 Memtest86 on a floppy, insert a disk then type:
 	dd if=${PREFIX}/mdec/memtestplus.bin of=/dev/rfd0a conv=osync
+
+The package also includes the ELF binary ${PREFIX}/mdec/memtestplus
+that the NetBSD bootstrap can load instead of a kernel. Please see
+boot(8) for details. If your ${PREFIX}/mdec directory is not on the
+root filesystem you need to copy the ELF binary there first.
 
 If you have built the optional .iso file, you can use cdrtools to
 burn it to a CD.
