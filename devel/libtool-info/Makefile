@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/31 05:37:08 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/11/01 08:59:03 joerg Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -13,10 +13,6 @@ CONFLICTS+=	libtool<1.3.5nb11
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
 
-do-build:
-	cd ${WRKSRC}/doc ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-
-do-install:
-	cd ${WRKSRC}/doc ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
+BUILD_DIRS=	doc
 
 .include "../../mk/bsd.pkg.mk"
