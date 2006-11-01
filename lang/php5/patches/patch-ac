@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2006/11/01 11:33:34 tron Exp $
+
+--- ext/curl/interface.c.orig	2006-08-10 18:16:35.000000000 +0100
++++ ext/curl/interface.c	2006-11-01 11:27:50.000000000 +0000
+@@ -28,6 +28,14 @@
+ 
+ #if HAVE_CURL
+ 
++#ifndef	CURLOPT_PASSWDFUNCTION
++#define	CURLOPT_PASSWDFUNCTION	0
++#endif
++
++#ifndef CURLOPT_FTPASCII
++#define	CURLOPT_FTPASCII	0
++#endif
++
+ #include <stdio.h>
+ #include <string.h>
+ 
