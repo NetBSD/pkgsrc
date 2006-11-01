@@ -1,22 +1,20 @@
-$NetBSD: patch-aa,v 1.3 2006/08/24 10:48:59 tron Exp $
+$NetBSD: patch-aa,v 1.3.2.1 2006/11/01 21:42:58 ghen Exp $
 
---- epan/dissectors/packet-radiotap.c.orig	2006-08-23 23:26:24.000000000 +0100
-+++ epan/dissectors/packet-radiotap.c	2006-08-24 10:19:28.000000000 +0100
-@@ -397,7 +397,12 @@
+--- epan/dissectors/packet-radiotap.c.orig	2006-10-31 17:59:09.000000000 +0000
++++ epan/dissectors/packet-radiotap.c	2006-11-01 11:44:20.000000000 +0000
+@@ -531,6 +531,11 @@
      guint8 db, rflags;
      guint32 present, next_present;
      int bit;
--	gboolean has_fcs = FALSE;
-+    gboolean has_fcs = FALSE;
 +    gint8 align;
 +#define RTALIGN(size) \
-+      align = ((offset + ((size) - 1)) & ~((size) - 1)) - offset; \
-+      offset += align; \
-+      length_remaining -= align
++	align = ((offset + ((size) - 1)) & ~((size) - 1)) - offset; \
++	offset += align; \
++	length_remaining -= align
  
      if(check_col(pinfo->cinfo, COL_PROTOCOL))
  	col_set_str(pinfo->cinfo, COL_PROTOCOL, "WLAN");
-@@ -569,6 +574,7 @@
+@@ -745,6 +750,7 @@
  	    length_remaining--;
  	    break;
  	case IEEE80211_RADIOTAP_CHANNEL:
@@ -24,7 +22,7 @@ $NetBSD: patch-aa,v 1.3 2006/08/24 10:48:59 tron Exp $
  	    if (length_remaining < 4)
  		break;
  	    if (tree) {
-@@ -586,6 +592,7 @@
+@@ -762,6 +768,7 @@
  	case IEEE80211_RADIOTAP_FHSS:
  	case IEEE80211_RADIOTAP_TX_ATTENUATION:
  	case IEEE80211_RADIOTAP_DB_TX_ATTENUATION:
@@ -32,7 +30,7 @@ $NetBSD: patch-aa,v 1.3 2006/08/24 10:48:59 tron Exp $
  	    if (length_remaining < 2)
  		break;
  #if 0
-@@ -595,6 +602,9 @@
+@@ -771,6 +778,9 @@
  	    length_remaining-=2;
  	    break;
  	case IEEE80211_RADIOTAP_TSFT:
@@ -42,7 +40,7 @@ $NetBSD: patch-aa,v 1.3 2006/08/24 10:48:59 tron Exp $
  	    if (length_remaining < 8)
  		break;
  	    if (tree) {
-@@ -605,6 +615,7 @@
+@@ -781,6 +791,7 @@
  	    length_remaining-=8;
  	    break;
  	case IEEE80211_RADIOTAP_LOCK_QUALITY:
