@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:03 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/11/01 15:17:13 martin Exp $
 man/man5/pppoe.conf.5
-man/man8/adsl-connect.8
-man/man8/adsl-setup.8
-man/man8/adsl-start.8
-man/man8/adsl-status.8
-man/man8/adsl-stop.8
-man/man8/pppoe.8
+man/man8/pppoe-connect.8
 man/man8/pppoe-server.8
-sbin/adsl-connect
-sbin/adsl-setup
-sbin/adsl-start
-sbin/adsl-status
-sbin/adsl-stop
+man/man8/pppoe-setup.8
+man/man8/pppoe-start.8
+man/man8/pppoe-status.8
+man/man8/pppoe-stop.8
+man/man8/pppoe.8
 sbin/pppoe
+sbin/pppoe-connect
 sbin/pppoe-server
-share/doc/rp-pppoe/CHANGES
-share/doc/rp-pppoe/HOW-TO-CONNECT
-share/doc/rp-pppoe/LICENSE
-share/doc/rp-pppoe/README
-share/doc/rp-pppoe/SERVPOET
-share/doc/rp-pppoe/pap-secrets
+sbin/pppoe-setup
+sbin/pppoe-start
+sbin/pppoe-status
+sbin/pppoe-stop
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/HOW-TO-CONNECT
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/SERVPOET
+share/doc/${PKGNAME}/pap-secrets
 share/examples/rc.d/pppoe
-share/examples/rp-pppoe/pppoe.conf
 share/examples/rp-pppoe/pppoe-server-options
+share/examples/rp-pppoe/pppoe.conf
 @dirrm share/examples/rp-pppoe
-@dirrm share/doc/rp-pppoe
+@dirrm share/doc/${PKGNAME}
