@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/11/01 15:38:15 mlelstv Exp $
+
+--- memtest.lds.orig	2005-09-11 20:17:15.000000000 +0200
++++ memtest.lds
+@@ -3,7 +3,7 @@ OUTPUT_ARCH(i386);
+ 
+ ENTRY(_start); 
+ SECTIONS {
+-	. = 0x10000;
++	. = 0x80000;
+ 	_start = . ;
+ 	.data : {
+ 		*(.data)
