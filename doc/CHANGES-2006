@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1693 2006/11/01 09:15:29 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1694 2006/11/01 13:02:37 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5089,3 +5089,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/mongrel version 0.3.13.4 [minskim 2006-11-01]
 	Added devel/doxymacs version 1.7.0 [dsainty 2006-11-01]
 	Updated pkgtools/pkglint to 4.73 [joerg 2006-11-01]
+	Updated net/wireshark to 0.99.4 [tron 2006-11-01]
