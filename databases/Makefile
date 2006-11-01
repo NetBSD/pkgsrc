@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2006/07/27 22:08:11 rillig Exp $
+# $NetBSD: Makefile,v 1.216 2006/11/01 16:39:19 bad Exp $
 #
 
 COMMENT=	Databases
@@ -193,7 +193,6 @@ SUBDIR+=	tinycdb
 SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
-SUBDIR+=	xmysql
 SUBDIR+=	xsqlmenu
 SUBDIR+=	yasql
 SUBDIR+=	zope-mysql
