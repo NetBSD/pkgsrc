@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile.common,v 1.67 2006/11/01 09:01:56 joerg Exp $
 
 ###########################################################################
 ###########################################################################
@@ -33,6 +33,7 @@ HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 CONFLICTS=	glibtool-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
