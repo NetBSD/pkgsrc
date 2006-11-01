@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.8 2006/11/01 13:32:32 tron Exp $
+
+--- lib.c.orig	2002-04-29 18:12:18.000000000 +0100
++++ lib.c	2006-11-01 13:22:51.000000000 +0000
+@@ -351,8 +351,8 @@
+   struct stat osb, nsb;
+   int fd;
+ 
+-  if ((fd = open (path, flags, 0600)) < 0)
+-    return fd;
++  if ((fd = open (path, flags, S_IRUSR|S_IWUSR)) < 0)
++    return (-1);
+ 
+   /* make sure the file is not symlink */
+   if (lstat (path, &osb) < 0 || fstat (fd, &nsb) < 0 ||
+@@ -363,6 +363,13 @@
+     return (-1);
+   }
+ 
++  /* Make sure the file is owned by us and has save permissions. */
++  if (nsb.st_uid != geteuid() ||
++      (nsb.st_mode & (S_IRWXG|S_IRWXO)) != 0) {
++    close (fd);
++    return (-1);
++  }
++
+   return (fd);
+ }
+ 
