@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/01 07:02:31 dsainty Exp $
+bin/${PKGNAME}_parser
+${EMACS_LISPPREFIX}/${PKGNAME}.el
+${EMACS_LISPPREFIX}/${PKGNAME}.elc
+${EMACS_LISPPREFIX}/xml-parse.el
+${EMACS_LISPPREFIX}/xml-parse.elc
+@unexec ${RMDIR} %D/${EMACS_LISPPREFIX} 2>/dev/null || ${TRUE}
