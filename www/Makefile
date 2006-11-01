@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.483 2006/10/24 22:21:56 ghen Exp $
+# $NetBSD: Makefile,v 1.484 2006/11/01 06:41:33 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -154,6 +154,7 @@ SUBDIR+=	make_album
 SUBDIR+=	micro_httpd
 SUBDIR+=	mini_httpd
 SUBDIR+=	mknmz-wwwoffle
+SUBDIR+=	mongrel
 SUBDIR+=	navigator
 SUBDIR+=	neon
 SUBDIR+=	netscape
