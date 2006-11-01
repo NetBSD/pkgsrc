@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1695 2006/11/01 13:36:25 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1696 2006/11/01 13:38:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5091,3 +5091,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.73 [joerg 2006-11-01]
 	Updated net/wireshark to 0.99.4 [tron 2006-11-01]
 	Updated devel/p5-Log-Dispatch to 2.13 [obache 2006-11-01]
+	Updated mail/mutt to 1.4.2.2nb1 [tron 2006-11-01]
