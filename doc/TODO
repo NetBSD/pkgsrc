@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5662 2006/11/01 00:44:49 obache Exp $
+$NetBSD: TODO,v 1.5663 2006/11/01 13:36:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -773,8 +773,6 @@ Suggested package updates
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Lexicon-0.62 [pkg/34385]
 	o p5-Locale-Maketext-Simple-0.17 [pkg/34384]
-	o p5-Log-Dispatch-2.12 [pkg/34357]
-	o p5-Log-Dispatch-2.13
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
