@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5661 2006/10/31 23:05:01 wiz Exp $
+$NetBSD: TODO,v 1.5662 2006/11/01 00:44:49 obache Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ Suggested package updates
 	o vmware-5.5
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vnc2swf-0.9.0
 	o vobcopy-1.0.0
 	o vp-1.6
 	o vsftpd-2.0.5
