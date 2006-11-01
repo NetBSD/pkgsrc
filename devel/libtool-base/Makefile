@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2006/04/01 11:21:42 grant Exp $
+# $NetBSD: Makefile,v 1.79 2006/11/01 09:01:56 joerg Exp $
 
 ###########################################################################
 ###########################################################################
@@ -94,7 +94,7 @@ post-build:
 		${FILESDIR}/shlibtool.in > ${WRKSRC}/shlibtool
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${PREFIX}/bin/shlibtool
+	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/bin/shlibtool
 .endif
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
