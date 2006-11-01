@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2006/10/24 18:00:05 smb Exp $
+$NetBSD: distinfo,v 1.2 2006/11/01 15:38:15 mlelstv Exp $
 
 SHA1 (memtest86+-1.65.tar.gz) = f9c27f813cc9ada7efe98e6dc587ab6d2c496ba1
 RMD160 (memtest86+-1.65.tar.gz) = 629379f7660dbc6ab071a9d9839ce0528752dda8
 Size (memtest86+-1.65.tar.gz) = 146203 bytes
 SHA1 (patch-aa) = db53250c1c2cef5b3dd369f55ea91981272d8530
 SHA1 (patch-ab) = defa256b698c32a40e4274597f3de79c1ea8eb10
+SHA1 (patch-ac) = 9bc3afa1bc7fe59cc2875fcdc90c6660593d8b89
