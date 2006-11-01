@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2006/11/01 15:17:13 martin Exp $
 
---- src/Makefile.in.orig	Mon Jul  8 16:38:24 2002
-+++ src/Makefile.in	Mon Oct  7 21:56:42 2002
-@@ -22,7 +22,7 @@ DEFINES=
- prefix=@prefix@
- exec_prefix=@exec_prefix@
- mandir=@mandir@
--docdir=@prefix@/doc/rp-pppoe-$(VERSION)
-+docdir=@prefix@/share/doc/rp-pppoe
- install=@INSTALL@
- install_dir=@INSTALL@ -d
- sbindir=@sbindir@
-@@ -61,6 +61,9 @@ PATHS='-DPPPOE_PATH="$(PPPOE_PATH)"' '-D
+--- src/Makefile.in.orig	2006-04-02 16:29:42.000000000 +0200
++++ src/Makefile.in	2006-11-01 12:32:04.000000000 +0100
+@@ -61,6 +61,9 @@
  CFLAGS= @CFLAGS@ $(LIC_INCDIR) $(DEFINES) $(LIC_DEFINE) $(PATHS) -Ilibevent
  TARGETS=@TARGETS@
  PPPOE_SERVER_LIBS=$(LIC_LIBDIR) $(LIC_LIB)
@@ -21,18 +12,7 @@ $NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
  
  all: $(TARGETS)
  	@echo ""
-@@ -69,8 +72,8 @@ all: $(TARGETS)
- pppoe-sniff: pppoe-sniff.o if.o common.o debug.o
- 	@CC@ -o pppoe-sniff pppoe-sniff.o if.o common.o debug.o
- 
--pppoe-server: pppoe-server.o if.o debug.o common.o md5.o libevent/libevent.a @PPPOE_SERVER_DEPS@
--	@CC@ -o pppoe-server @RDYNAMIC@ pppoe-server.o if.o debug.o common.o md5.o $(PPPOE_SERVER_LIBS) -Llibevent -levent
-+pppoe-server: pppoe-server.o if.o debug.o common.o libevent/libevent.a @PPPOE_SERVER_DEPS@
-+	@CC@ -o pppoe-server @RDYNAMIC@ pppoe-server.o if.o debug.o common.o $(PPPOE_SERVER_LIBS) -Llibevent -levent
- 
- pppoe: pppoe.o if.o debug.o common.o ppp.o discovery.o
- 	@CC@ -o pppoe pppoe.o if.o debug.o common.o ppp.o discovery.o
-@@ -87,9 +90,6 @@ discovery.o: discovery.c pppoe.h
+@@ -87,9 +90,6 @@
  ppp.o: ppp.c pppoe.h
  	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o ppp.o ppp.c
  
@@ -42,8 +22,8 @@ $NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
  pppoe-server.o: pppoe-server.c pppoe.h @PPPOE_SERVER_DEPS@
  	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o pppoe-server.o pppoe-server.c
  
-@@ -147,7 +147,7 @@ install: all
- 	$(install) -m 755 ../scripts/adsl-setup $(RPM_INSTALL_ROOT)$(sbindir)
+@@ -147,7 +147,7 @@
+ 	$(install) -m 755 ../scripts/pppoe-setup $(RPM_INSTALL_ROOT)$(sbindir)
  	-mkdir -p $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/CHANGES $(RPM_INSTALL_ROOT)$(docdir)
 -	$(install) -m 644 ../doc/KERNEL-MODE-PPPOE $(RPM_INSTALL_ROOT)$(docdir)
@@ -51,8 +31,8 @@ $NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
  	$(install) -m 644 ../doc/HOW-TO-CONNECT $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/LICENSE $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../README $(RPM_INSTALL_ROOT)$(docdir)
-@@ -166,47 +166,47 @@ install: all
- 	$(install) -m 644 ../man/adsl-setup.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
+@@ -166,47 +166,47 @@
+ 	$(install) -m 644 ../man/pppoe-setup.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man5
  	$(install) -m 644 ../man/pppoe.conf.5 $(RPM_INSTALL_ROOT)$(mandir)/man5
 -	-mkdir -p $(RPM_INSTALL_ROOT)/etc/ppp
@@ -74,19 +54,19 @@ $NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
 -		$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)-example ; \
 -	fi
 -	@if [ -f /etc/redhat-release ] ; then \
--		echo "Looks like a Red Hat system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
+-		echo "Looks like a Red Hat system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe" ; \
 -		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
--		$(install) -m 755 ../scripts/adsl-init $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
+-		$(install) -m 755 ../scripts/pppoe-init $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe ; \
 -	fi
 -	@if [ -f /etc/turbolinux-release ] ; then \
--		echo "Looks like a TurboLinux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
+-		echo "Looks like a TurboLinux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe" ; \
 -		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
--		$(install) -m 755 ../scripts/adsl-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
+-		$(install) -m 755 ../scripts/pppoe-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe ; \
 -	fi
 -	@if [ -f /etc/SuSE-release ] ; then \
--		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
+-		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe" ; \
 -		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
--		$(install) -m 755 ../scripts/adsl-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
+-		$(install) -m 755 ../scripts/pppoe-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe ; \
 -	fi
 +#	-mkdir -p $(RPM_INSTALL_ROOT)/etc/ppp
 +#	-mkdir -p $(RPM_INSTALL_ROOT)$(PLUGIN_DIR)
@@ -107,19 +87,19 @@ $NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
 +#		$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)-example ; \
 +#	fi
 +#	@if [ -f /etc/redhat-release ] ; then \
-+#		echo "Looks like a Red Hat system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
++#		echo "Looks like a Red Hat system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
-+#		$(install) -m 755 ../scripts/adsl-init $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
++#		$(install) -m 755 ../scripts/pppoe-init $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe ; \
 +#	fi
 +#	@if [ -f /etc/turbolinux-release ] ; then \
-+#		echo "Looks like a TurboLinux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
++#		echo "Looks like a TurboLinux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
-+#		$(install) -m 755 ../scripts/adsl-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
++#		$(install) -m 755 ../scripts/pppoe-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe ; \
 +#	fi
 +#	@if [ -f /etc/SuSE-release ] ; then \
-+#		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
++#		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
-+#		$(install) -m 755 ../scripts/adsl-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
++#		$(install) -m 755 ../scripts/pppoe-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/pppoe ; \
 +#	fi
  
  	# L2TP
@@ -136,5 +116,5 @@ $NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
 +#		$(install) -m 600 l2tp/l2tp.conf $(RPM_INSTALL_ROOT)/etc/l2tp/l2tp.conf.example ; \
 +#	fi
  	@echo ""
- 	@echo "Type 'adsl-setup' to configure the software."
+ 	@echo "Type 'pppoe-setup' to configure the software."
  
