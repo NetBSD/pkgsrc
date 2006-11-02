@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/31 05:37:09 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/11/02 18:17:22 joerg Exp $
 
 DISTNAME=	nasm-0.98.39
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://nasm.sourceforge.net/
 COMMENT=	General-purpose x86 assembler
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake makeinfo perl
 GCC_REQD+=		3.0
@@ -19,6 +20,8 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
 BUILD_TARGET=		everything
 INSTALL_TARGET=		install_everything
+
+INSTALL_ENV+=	INSTALLROOT=${DESTDIR}
 
 MAKE_ENV+=	PERL5=${PERL5:Q}			\
 		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}

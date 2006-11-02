@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/10/29 15:08:27 tron Exp $
+# $NetBSD: Makefile,v 1.70 2006/11/02 18:21:18 joerg Exp $
 
 DISTNAME=	screen-4.0.3
 CATEGORIES=	misc shells
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 
@@ -39,11 +40,11 @@ PLIST_SUBST+=	SCREEN_TERMINFO="@comment "
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
-		${PREFIX}/share/examples/screen/etcscreenrc
+		${DESTDIR}${PREFIX}/share/examples/screen/etcscreenrc
 	${INSTALL_DATA} ${WRKSRC}/etc/screenrc				\
-		${PREFIX}/share/examples/screen/screenrc
+		${DESTDIR}${PREFIX}/share/examples/screen/screenrc
 
 .PHONY: screen-terminfo
 screen-terminfo:

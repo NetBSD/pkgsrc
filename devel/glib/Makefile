@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.83 2006/11/02 18:17:22 joerg Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		10
@@ -14,6 +14,7 @@ COMMENT=		Some useful routines for C programming (glib1)
 CONFLICTS=		gtk+-1.0.*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
