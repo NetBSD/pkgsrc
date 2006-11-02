@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2006/09/22 13:58:46 kivinen Exp $
+$NetBSD: distinfo,v 1.12 2006/11/02 12:31:58 kivinen Exp $
 
 SHA1 (ssh-3.2.9.1.tar.gz) = 22e4589c889aef18e53a8942716084f0d8ede7db
 RMD160 (ssh-3.2.9.1.tar.gz) = 21bfe97fae477dea1109c6e6eb44a448b6b2f250
@@ -36,3 +36,5 @@ SHA1 (patch-bd) = 0a57de059fcd647c375f310d6d58712a2f3d4c89
 SHA1 (patch-be) = 788a8fa682e968d9e3cd55213547f82908cc3a0a
 SHA1 (patch-bf) = 64fa9f13619a9d222af9a24d0b1069033facdef1
 SHA1 (patch-bg) = 73da22930f753fc02cd4a5bad30b4edf226d1180
+SHA1 (patch-bh) = 3a4798d70198858af33a6325325fb37dfc50356e
+SHA1 (patch-bi) = 6d8ad1c52b0e27ba262c8837dbb55c8ca4e744a7
