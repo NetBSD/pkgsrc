@@ -1,0 +1,13 @@
+$NetBSD: patch-ed,v 1.1 2006/11/02 19:15:07 rillig Exp $
+
+--- examples/vif-bridge.orig	2006-10-15 14:22:03.000000000 +0200
++++ examples/vif-bridge	2006-11-02 20:11:03.000000000 +0100
+@@ -61,7 +61,7 @@ esac
+ handle_iptable
+ 
+ log debug "Successful vif-bridge $command for $vif, bridge $bridge."
+-if [ "$command" == "online" ]
++if [ "$command" = "online" ]
+ then
+   success
+ fi

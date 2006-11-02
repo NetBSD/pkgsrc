@@ -1,0 +1,13 @@
+$NetBSD: patch-ea,v 1.1 2006/11/02 19:15:07 rillig Exp $
+
+--- examples/blktap.orig	2006-10-15 14:22:03.000000000 +0200
++++ examples/blktap	2006-11-02 20:04:22.000000000 +0100
+@@ -7,7 +7,7 @@ dir=$(dirname "$0")
+ 
+ findCommand "$@"
+ 
+-if [ "$command" == 'add' ]
++if [ "$command" = 'add' ]
+ then
+   success
+ fi
