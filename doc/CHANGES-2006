@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1702 2006/11/02 13:59:01 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1703 2006/11/02 17:43:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5098,3 +5098,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/checkperms to 1.3 [rillig 2006-11-02]
 	Updated devel/p5-PathTools to 3.23 [obache 2006-11-02]
 	Added devel/makedepend version 1.0.0 [joerg 2006-11-02]
+	Updated lang/tcl to 8.4.14 [adam 2006-11-02]
+	Updated x11/tk to 8.4.14 [adam 2006-11-02]
