@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
+$NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
 
---- unix/Makefile.in.orig	2005-12-06 03:42:37.000000000 +0100
+--- unix/Makefile.in.orig	2006-10-19 19:27:34.000000000 +0200
 +++ unix/Makefile.in
-@@ -93,7 +93,7 @@ HTML_INSTALL_DIR	= $(INSTALL_ROOT)$(HTML
+@@ -94,7 +94,7 @@ HTML_INSTALL_DIR	= $(INSTALL_ROOT)$(HTML
  # The directory containing the Tcl sources and headers appropriate
  # for this version of Tk ("srcdir" will be replaced or has already
  # been replaced by the configure script):
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  
  # The directory containing the Tcl library archive file appropriate
  # for this version of Tk:
-@@ -209,8 +209,8 @@ TCL_EXE			= @TCLSH_PROG@
+@@ -210,8 +210,8 @@ TCL_EXE			= @TCLSH_PROG@
  INSTALL_STRIP_PROGRAM   = -s
  INSTALL_STRIP_LIBRARY   = -S -S
  
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  INSTALL_LIBRARY		= ${INSTALL}
  INSTALL_DATA		= ${INSTALL} -m 644
  
-@@ -233,6 +233,7 @@ TK_STUB_LIB_FLAG	= @TK_STUB_LIB_FLAG@
+@@ -234,6 +234,7 @@ TK_STUB_LIB_FLAG	= @TK_STUB_LIB_FLAG@
  #TK_STUB_LIB_FLAG	= -ltkstub
  
  TK_LIB_FILE		= @TK_LIB_FILE@
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  #TK_LIB_FILE		= libtk.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -262,7 +263,7 @@ WISH_LIBS = $(TCL_LIB_SPEC) @LIBS@ $(X11
+@@ -263,7 +264,7 @@ WISH_LIBS = $(TCL_LIB_SPEC) @LIBS@ $(X11
  # these definitions by hand.
  
  STLIB_LD		= @STLIB_LD@
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  TK_SHLIB_LD_EXTRAS	= @TK_SHLIB_LD_EXTRAS@
  
-@@ -309,7 +310,8 @@ XLIB_DIR		= $(TOP_DIR)/xlib
+@@ -310,7 +311,8 @@ XLIB_DIR		= $(TOP_DIR)/xlib
  # should be compressed and linked with softlinks
  MAN_FLAGS               = @MAN_FLAGS@
  
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
  -I${UNIX_DIR} -I${GENERIC_DIR} \
-@@ -480,7 +482,7 @@ DEMOPROGS = browse hello ixset rmt rolod
+@@ -481,7 +483,7 @@ DEMOPROGS = browse hello ixset rmt rolod
  
  all: binaries libraries doc
  
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  
  libraries:
  
-@@ -492,7 +494,7 @@ doc: $(TOP_DIR)/doc/man.macros
+@@ -493,7 +495,7 @@ doc: $(TOP_DIR)/doc/man.macros
  
  # The following target is configured by autoconf to generate either
  # a shared library or non-shared library for Tk.
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  	rm -f $@
  	@MAKE_LIB@
  
-@@ -521,8 +523,8 @@ tkLibObjs:
+@@ -522,8 +524,8 @@ tkLibObjs:
  objs: ${OBJS}
  
  
@@ -78,7 +78,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o wish
  
  # Resetting the LIB_RUNTIME_DIR below is required so that
-@@ -535,7 +537,7 @@ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
+@@ -536,7 +538,7 @@ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
  	$(MAKE) tktest-real LIB_RUNTIME_DIR=`pwd`:$(TCL_BIN_DIR)
  
  tktest-real:
@@ -87,7 +87,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o tktest
  
  # FIXME: This xttest rule seems to be broken in a number of ways.
-@@ -543,7 +545,7 @@ tktest-real:
+@@ -544,7 +546,7 @@ tktest-real:
  # lib location logic from tktest, and it is not clear where this
  # test.o object file comes from.
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
@@ -96,7 +96,7 @@ $NetBSD: patch-aa,v 1.17 2006/01/16 14:48:34 adam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(LD_SEARCH_FLAGS) -lXt -o xttest
  
-@@ -613,7 +615,7 @@ install-strip:
+@@ -614,7 +616,7 @@ install-strip:
  # some ranlibs write to current directory, and this might not always be
  # possible (e.g. if installing as root).
  

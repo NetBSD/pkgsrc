@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2006/04/27 08:18:09 adam Exp $
+$NetBSD: patch-ad,v 1.10 2006/11/02 17:42:03 adam Exp $
 
---- unix/configure.in.orig	2006-04-19 14:29:37.000000000 +0200
+--- unix/configure.in.orig	2006-10-19 19:27:34.000000000 +0200
 +++ unix/configure.in
-@@ -296,6 +296,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -302,6 +302,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.9 2006/04/27 08:18:09 adam Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -470,11 +474,18 @@ else
+@@ -476,11 +480,18 @@ else
      if test "$SHARED_BUILD" = "0" || test "$TCL_NEEDS_EXP_FILE" = "0"; then
          if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
              eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
