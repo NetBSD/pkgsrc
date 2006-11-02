@@ -1,0 +1,13 @@
+$NetBSD: patch-ef,v 1.1 2006/11/02 19:15:07 rillig Exp $
+
+--- examples/vif-route.orig	2006-10-15 14:22:03.000000000 +0200
++++ examples/vif-route	2006-11-02 20:04:53.000000000 +0100
+@@ -50,7 +50,7 @@ fi
+ handle_iptable
+ 
+ log debug "Successful vif-route $command for $vif."
+-if [ "$command" == "online" ]
++if [ "$command" = "online" ]
+ then
+   success
+ fi
