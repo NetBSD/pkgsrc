@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.55 2006/10/21 11:42:25 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.56 2006/11/02 23:25:00 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -456,155 +456,37 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 generate-wrappers: ${_target_}
 .endfor
 
-${WRAPPER_TMPDIR}/transform-solaris-gcc:				\
-		${WRAPPER_SRCDIR}/transform-solaris-gcc
+.for w in \
+	arg-pp-darwin-gcc \
+	arg-pp-mipspro-cc \
+	arg-pp-sunpro-cxx \
+	cmd-sink-aix-cc \
+	cmd-sink-aix-ld \
+	cmd-sink-aix-xlc \
+	cmd-sink-darwin-xlc \
+	cmd-sink-icc-cc \
+	cmd-sink-icc81-cc \
+	cmd-sink-interix-gcc \
+	cmd-sink-ld \
+	cmd-sink-osf1-cc \
+	cmd-sink-osf1-ld \
+	cmd-sink-solaris-imake \
+	cmd-sink-sunpro-cxx \
+	cmd-sink-unixware-gcc \
+	transform-aix-cc \
+	transform-ccc-cc \
+	transform-icc-cc \
+	transform-ido-cc \
+	transform-mipspro-cc \
+	transform-mipspro-ucode-cc \
+	transform-solaris-gcc \
+	transform-sunpro-cc \
+	transform-xlc-cc
+${WRAPPER_TMPDIR}/${w}: ${WRAPPER_SRCDIR}/${w}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-solaris-imake:				\
-		${WRAPPER_SRCDIR}/cmd-sink-solaris-imake
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/arg-pp-darwin-gcc:					\
-		${WRAPPER_SRCDIR}/arg-pp-darwin-gcc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/arg-pp-mipspro-cc:					\
-		${WRAPPER_SRCDIR}/arg-pp-mipspro-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/arg-pp-sunpro-cxx:					\
-		${WRAPPER_SRCDIR}/arg-pp-sunpro-cxx
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-aix-xlc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-aix-xlc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-aix-cc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-aix-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-aix-ld:					\
-		${WRAPPER_SRCDIR}/cmd-sink-aix-ld
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-darwin-xlc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-darwin-xlc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-interix-gcc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-interix-gcc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-ld:						\
-		${WRAPPER_SRCDIR}/cmd-sink-ld
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-unixware-gcc:				\
-		${WRAPPER_SRCDIR}/cmd-sink-unixware-gcc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-osf1-ld:					\
-		${WRAPPER_SRCDIR}/cmd-sink-osf1-ld
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-osf1-cc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-osf1-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-ccc-cc:					\
-		${WRAPPER_SRCDIR}/transform-ccc-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-icc-cc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-icc-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-icc81-cc:					\
-		${WRAPPER_SRCDIR}/cmd-sink-icc81-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-aix-cc:					\
-		${WRAPPER_SRCDIR}/transform-aix-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-icc-cc:					\
-		${WRAPPER_SRCDIR}/transform-icc-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-mipspro-cc:					\
-		${WRAPPER_SRCDIR}/transform-mipspro-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-mipspro-ucode-cc:				\
-		${WRAPPER_SRCDIR}/transform-mipspro-ucode-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/cmd-sink-sunpro-cxx:					\
-		${WRAPPER_SRCDIR}/cmd-sink-sunpro-cxx
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-ido-cc:					\
-		${WRAPPER_SRCDIR}/transform-ido-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-sunpro-cc:					\
-		${WRAPPER_SRCDIR}/transform-sunpro-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
-${WRAPPER_TMPDIR}/transform-xlc-cc:					\
-		${WRAPPER_SRCDIR}/transform-xlc-cc
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+.endfor
 
 .if !target(${_WRAP_GEN_REORDER})
 ${_WRAP_GEN_REORDER}: 							\
