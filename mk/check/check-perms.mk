@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.2 2006/10/21 11:13:10 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.3 2006/11/02 02:44:17 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -22,6 +22,8 @@ CHECK_PERMS?=		yes
 CHECK_PERMS?=		no
 .endif
 
+CHECK_PERMS_SKIP?=		# none
+
 #.if !empty(CHECK_PERMS:M[Yy][Ee][Ss])
 #_POST_INSTALL_CHECKS+=	check-perms
 #.endif
@@ -39,27 +41,25 @@ _CHECK_PERMS_GETDIRS_AWK=						\
 		}							\
 	}
 
-CHECK_PERMS_SKIP?=		# none
-_CHECK_PERMS_SKIP_FILTER=	case "$$file" in
-_CHECK_PERMS_SKIP_FILTER+=	${CHECK_PERMS_SKIP:@.pattern.@${PREFIX}/${.pattern.}|${.pattern.}) continue ;;@}
-_CHECK_PERMS_SKIP_FILTER+=	*) ;;
-_CHECK_PERMS_SKIP_FILTER+=	esac
-
 .PHONY: check-perms
 check-perms:
 	@${STEP_MSG} "Checking file permissions in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG} set -eu;				\
-	if [ ! -x ${_CHECK_PERMS_CMD:Q}"" ]; then			\
+	${PKG_INFO} -qe "checkperms>=1.1"				\
+	|| {								\
 		${WARNING_MSG} "[check-perms.mk] Skipping file permissions check."; \
 		${WARNING_MSG} "[check-perms.mk] Install sysutils/checkperms to enable this check."; \
 		exit 0;							\
-	fi;								\
+	};								\
 	${PKG_FILELIST_CMD}						\
 	| sort								\
 	| sed -e 's,\\,\\\\,g'						\
 	| while read file; do						\
-		${_CHECK_PERMS_SKIP_FILTER};				\
+		case "$$file" in					\
+		${CHECK_PERMS_SKIP:@p@${PREFIX}/${p}|${p}) continue ;;@}\
+		*) ;;							\
+		esac;							\
 		printf "%s\\n" "$$file";				\
 	  done								\
 	| awk ${_CHECK_PERMS_GETDIRS_AWK:Q}				\
-	| ${_CHECK_PERMS_CMD}
+	| ${_CHECK_PERMS_CMD} -c
