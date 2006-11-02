@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/10/02 16:21:33 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.63 2006/11/02 18:02:07 joerg Exp $
 #
 
 DISTNAME=	pkgdiff-0.119
@@ -11,6 +11,7 @@ HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Tools to create, maintain and send back patches for pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
@@ -68,12 +69,12 @@ do-build:
 
 do-install:
 .for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
-	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${DESTDIR}${PREFIX}/bin
 .   if !empty(MANINSTALL:Mcatinstall)
-	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 .   endif
 .   if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${FILESDIR}/${FILE}.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${FILESDIR}/${FILE}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .   endif
 .endfor
 
