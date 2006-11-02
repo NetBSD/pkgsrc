@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2006/10/07 22:39:28 schwarz Exp $
+$NetBSD: distinfo,v 1.6 2006/11/02 18:59:35 rillig Exp $
 
 SHA1 (w3c-httpd-3.0A.tar.gz) = 90d31fa16079e3eb959f361469f0f59af4611618
 RMD160 (w3c-httpd-3.0A.tar.gz) = 6254b39cbc89f7f4ecc0928d02dbb171548265a4
@@ -16,3 +16,4 @@ SHA1 (patch-ba) = 9d6fc677a3aecb9dfba8fc46e7de6da8008bc0b1
 SHA1 (patch-bb) = 17e0cf4b86138d6bdd843315ca0aac01357d872a
 SHA1 (patch-bc) = cc1d854a61aac394faeaa7be4013459b8b7618fe
 SHA1 (patch-ca) = 7a6ad8bf8493aab8d6e9fb4a189493d8d7225996
+SHA1 (patch-cb) = 01be696c5bd517be783d810411a6827b0ee9cfb0
