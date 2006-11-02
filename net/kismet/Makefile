@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/14 01:27:43 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/02 14:20:49 adrianp Exp $
 
 DISTNAME=		kismet-2006-04-R1
 PKGNAME=		kismet-2006.04.01
@@ -15,6 +15,7 @@ USE_LANGUAGES=		c c++
 USE_NCURSES=		yes # needs libpanel
 USE_TOOLS+=		gmake perl:run
 REPLACE_PERL+=		scripts/gpsmap-helper-earthamaps
+LIBS.NetBSD+=		-lm
 
 # might be appended to in options.mk
 PLIST_SRC=		PLIST
