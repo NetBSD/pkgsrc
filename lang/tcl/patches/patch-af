@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.20 2006/04/27 08:17:09 adam Exp $
+$NetBSD: patch-af,v 1.21 2006/11/02 17:41:23 adam Exp $
 
---- unix/tcl.m4.orig	2006-04-20 16:42:21.000000000 +0200
+--- unix/tcl.m4.orig	2006-10-19 19:26:15.000000000 +0200
 +++ unix/tcl.m4
 @@ -1032,6 +1032,7 @@ AC_DEFUN([SC_CONFIG_CFLAGS], [
      # Step 3: set configuration options based on system name and version.
@@ -110,7 +110,7 @@ $NetBSD: patch-af,v 1.20 2006/04/27 08:17:09 adam Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -1867,6 +1898,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1880,6 +1911,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  		CC_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -120,7 +120,7 @@ $NetBSD: patch-af,v 1.20 2006/04/27 08:17:09 adam Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -2045,8 +2079,8 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -2058,8 +2092,8 @@ dnl AC_CHECK_TOOL(AR, ar)
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
@@ -131,7 +131,7 @@ $NetBSD: patch-af,v 1.20 2006/04/27 08:17:09 adam Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -2076,10 +2110,10 @@ dnl        esac
+@@ -2089,10 +2123,10 @@ dnl        esac
  
      # Stub lib does not depend on shared/static configuration
      if test "$RANLIB" = "" ; then

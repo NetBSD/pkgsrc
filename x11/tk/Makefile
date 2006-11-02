@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/04/27 08:18:09 adam Exp $
+# $NetBSD: Makefile,v 1.57 2006/11/02 17:42:03 adam Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -37,12 +37,13 @@ SUBST_FILES.tk-config=	unix/tkConfig.sh
 SUBST_SED.tk-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
 SUBST_SED.tk-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tk|"
 
+INSTALLATION_DIRS+=	${PREFIX}/include/tk
+INSTALLATION_DIRS+=	${PREFIX}/include/tk/generic
+INSTALLATION_DIRS+=	${PREFIX}/include/tk/unix
+
 post-install:
-	${RM} -f ${PREFIX}/bin/wish
-	${LN} -s wish8.4 ${PREFIX}/bin/wish
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tk/generic
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tk/unix
+	rm -f ${PREFIX}/bin/wish
+	ln -s wish8.4 ${PREFIX}/bin/wish
 	${INSTALL_DATA} ${WRKSRC}/generic/default.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/generic/ks_names.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/generic/tk.h ${PREFIX}/include/tk/generic

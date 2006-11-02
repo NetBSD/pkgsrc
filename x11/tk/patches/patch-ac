@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
+$NetBSD: patch-ac,v 1.16 2006/11/02 17:42:03 adam Exp $
 
---- unix/tcl.m4.orig	2006-04-19 14:29:38.000000000 +0200
+--- unix/tcl.m4.orig	2006-10-19 19:27:34.000000000 +0200
 +++ unix/tcl.m4
-@@ -1032,6 +1032,7 @@ AC_DEFUN([SC_CONFIG_CFLAGS], [
+@@ -1033,6 +1033,7 @@ AC_DEFUN([SC_CONFIG_CFLAGS], [
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
      LDFLAGS_ORIG="$LDFLAGS"
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -1279,6 +1280,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1280,6 +1281,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    DL_LIBS=""
  	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
  	    ;;
  	IRIX-6.*)
  	    SHLIB_CFLAGS=""
-@@ -1304,6 +1308,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1305,6 +1309,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  		esac
  		LDFLAGS="$LDFLAGS -n32"
  	    fi
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
  	    ;;
  	IRIX64-6.*)
  	    SHLIB_CFLAGS=""
-@@ -1327,6 +1334,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1328,6 +1335,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  	            LDFLAGS="$LDFLAGS -64"
  	        fi
  	    fi
@@ -40,7 +40,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
  	    ;;
  	Linux*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -1372,6 +1382,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1373,6 +1383,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    # XIM peeking works under XFree86.
  	    AC_DEFINE(PEEK_XCLOSEIM)
  
@@ -50,7 +50,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
  	    ;;
  	GNU*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -1431,23 +1444,27 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1432,23 +1445,27 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[[1-2]].*)
@@ -80,7 +80,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
  		if test $tcl_cv_ld_elf = yes; then
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
  		else
-@@ -1867,6 +1884,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1881,6 +1898,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  		CC_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -90,7 +90,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -2045,8 +2065,8 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -2059,8 +2079,8 @@ dnl AC_CHECK_TOOL(AR, ar)
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
@@ -101,7 +101,7 @@ $NetBSD: patch-ac,v 1.15 2006/04/27 08:18:09 adam Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -2076,10 +2096,10 @@ dnl        esac
+@@ -2090,10 +2110,10 @@ dnl        esac
  
      # Stub lib does not depend on shared/static configuration
      if test "$RANLIB" = "" ; then
