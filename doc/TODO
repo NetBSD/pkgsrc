@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5664 2006/11/01 17:14:42 wiz Exp $
+$NetBSD: TODO,v 1.5665 2006/11/02 13:44:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ Suggested package updates
 	o p5-Number-Format-1.51
 	o p5-PV-1.5
 	o p5-Params-Validate-0.86 [pkg/34361]
-	o p5-PathTools-3.19 [pkg/34360]
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
