@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/10/31 23:04:22 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2006/11/02 18:01:09 joerg Exp $
 
 DISTNAME=	curl-7.16.0
 CATEGORIES=	www
@@ -12,6 +12,7 @@ HOMEPAGE=	http://curl.haxx.se/
 COMMENT=	Client that groks URLs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # list it into IPv6-ready packages
 BUILD_DEFS+=	USE_INET6
@@ -47,16 +48,17 @@ post-configure:
 	      ${WRKSRC}/include/curl/multi.h
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/curl
-	for _f in MANUAL TheArtOfHttpScripting FAQ		\
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/curl
+	for _f in MANUAL TheArtOfHttpScripting FAQ			\
 		curl-config.pdf curl.pdf; do				\
-		${INSTALL_DATA} ${WRKSRC}/docs/$${_f}		\
-			 ${PREFIX}/share/doc/curl/${_f};	\
+		${INSTALL_DATA} ${WRKSRC}/docs/$${_f}			\
+			 ${DESTDIR}${PREFIX}/share/doc/curl/${_f};	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/curl
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/curl
 	for _f in ${WRKSRC}/docs/examples/*.c				\
 		${WRKSRC}/docs/examples/README; do			\
-		${INSTALL_DATA} $${_f} ${PREFIX}/share/examples/curl;	\
+		${INSTALL_DATA} $${_f} 					\
+			${DESTDIR}${PREFIX}/share/examples/curl;	\
 	done
 
 .include "../../devel/libidn/buildlink3.mk"

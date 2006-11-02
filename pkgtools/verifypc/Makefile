@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/14 15:35:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/02 18:02:08 joerg Exp $
 #
 
 DISTNAME=	verifypc-1.4
@@ -10,6 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Sanity check package dependencies according to pkg-config
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		YES
@@ -31,7 +32,7 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/verifypc.sh \
-		${PREFIX}/bin/verifypc
-	${INSTALL_MAN} ${WRKSRC}/verifypc.1 ${PREFIX}/${PKGMANDIR}/man1/
+		${DESTDIR}${PREFIX}/bin/verifypc
+	${INSTALL_MAN} ${WRKSRC}/verifypc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
