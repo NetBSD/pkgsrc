@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/10/25 14:02:00 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2006/11/02 02:26:55 rillig Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-0.4.9pre1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
 
 HAS_CONFIGURE=	YES
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 USE_TOOLS+=	gmake texi2html pod2man
 USE_LIBTOOL=	YES
 
