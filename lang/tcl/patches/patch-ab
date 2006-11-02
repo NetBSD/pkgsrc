@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
+$NetBSD: patch-ab,v 1.35 2006/11/02 17:41:23 adam Exp $
 
---- unix/configure.orig	2006-04-20 16:42:21.000000000 +0200
+--- unix/configure.orig	2006-10-19 19:26:15.000000000 +0200
 +++ unix/configure
-@@ -2557,12 +2557,13 @@ fi
+@@ -2558,12 +2558,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2977,6 +2978,21 @@ fi
+@@ -2978,6 +2979,21 @@ fi
  		LD_LIBRARY_PATH_VAR="SHLIB_PATH"
  	    fi
  	    ;;
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
  	IRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
  	    SHLIB_SUFFIX=".a"
-@@ -3217,6 +3233,9 @@ fi
+@@ -3218,6 +3234,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*)
@@ -49,7 +49,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -3249,13 +3268,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -3250,13 +3269,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -61,9 +61,9 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
 -		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
- echo "configure:3261: checking for ELF" >&5
+ echo "configure:3262: checking for ELF" >&5
  if eval "test \"`echo '$''{'tcl_cv_ld_elf'+set}'`\" = set"; then
-@@ -3284,6 +3301,9 @@ rm -f conftest*
+@@ -3285,6 +3302,9 @@ rm -f conftest*
  fi
  
  echo "$ac_t""$tcl_cv_ld_elf" 1>&6
@@ -73,7 +73,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
  		if test $tcl_cv_ld_elf = yes; then
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
  		else
-@@ -3381,7 +3401,7 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
+@@ -3382,7 +3402,7 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -4358,16 +4378,16 @@ fi
+@@ -4156,16 +4176,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -103,7 +103,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -7886,7 +7906,7 @@ else
+@@ -9006,7 +9026,7 @@ else
              TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
          fi
          TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -112,7 +112,7 @@ $NetBSD: patch-ab,v 1.34 2006/04/27 08:17:09 adam Exp $
      else
          TCL_BUILD_EXP_FILE="lib.exp"
          eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -7917,13 +7937,21 @@ VERSION=${TCL_VERSION}
+@@ -9037,13 +9057,21 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then
