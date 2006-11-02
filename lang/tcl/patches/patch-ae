@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2006/04/27 08:17:09 adam Exp $
+$NetBSD: patch-ae,v 1.10 2006/11/02 17:41:23 adam Exp $
 
---- unix/configure.in.orig	2006-04-20 16:42:21.000000000 +0200
+--- unix/configure.in.orig	2006-10-19 19:26:15.000000000 +0200
 +++ unix/configure.in
-@@ -533,7 +533,7 @@ else
+@@ -607,7 +607,7 @@ else
              TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
          fi
          TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.9 2006/04/27 08:17:09 adam Exp $
      else
          TCL_BUILD_EXP_FILE="lib.exp"
          eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -564,13 +564,21 @@ VERSION=${TCL_VERSION}
+@@ -638,13 +638,21 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then
