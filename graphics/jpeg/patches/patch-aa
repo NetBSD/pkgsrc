@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2005/12/27 17:30:50 reed Exp $
+$NetBSD: patch-aa,v 1.9 2006/11/02 18:00:43 joerg Exp $
 
 --- makefile.cfg.orig	1998-03-21 11:08:57.000000000 -0800
 +++ makefile.cfg
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.8 2005/12/27 17:30:50 reed Exp $
  manprefix =
  manext = 1
 -mandir = $(prefix)/man/man$(manext)
-+mandir = @mandir@/man$(manext)
++mandir = $(DESTDIR)@mandir@/man$(manext)
  
  # The name of your C compiler:
  CC= @CC@
