@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/08/29 13:43:11 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2006/11/02 18:02:07 joerg Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -13,6 +13,7 @@ HOMEPAGE?=	http://www.NetBSD.org/Documentation/software/packages.html
 COMMENT?=	Message digest wrapper utility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
@@ -33,7 +34,7 @@ do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 pre-install:
-	-@${MKDIR} ${PKG_DBDIR}
+	-@${MKDIR} ${DESTDIR}${PKG_DBDIR}
 
 do-test:
 	@${ECHO} "No news is good news"
