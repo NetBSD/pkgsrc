@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/08/22 18:43:50 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2006/11/03 22:22:10 joerg Exp $
 
 DISTNAME=	freetype-2.2.1
 PKGREVISION=	2
@@ -17,6 +17,7 @@ HOMEPAGE=	http://www.freetype.org/
 COMMENT=	Font rendering engine and library API
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		grep gmake

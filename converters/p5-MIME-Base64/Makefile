@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/01/01 22:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/11/03 22:19:54 joerg Exp $
 #
 
 VERS=			3.07
@@ -13,6 +13,7 @@ HOMEPAGE=		http://search.cpan.org/dist/MIME-Base64/
 COMMENT=		Perl5 module for Base64 and Quoted-Printable encodings
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/MIME/Base64/.packlist
 
