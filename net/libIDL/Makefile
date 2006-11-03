@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/08/03 17:29:07 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2006/11/03 07:47:23 joerg Exp $
 
 DISTNAME=	libIDL-0.8.7
 CATEGORIES=	net gnome
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	CORBA Interface Definition Language parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex pkg-config
