@@ -1,0 +1,7 @@
+XPM (X PixMap) is a format for storing and retrieving X pixmaps
+to and from files.
+
+This libXpm is from the modular Xorg X11.
+
+This package includes the cxpm(1) tool for checking XPM files
+and the sxpm(1) tool for viewing and conversions of XPM files.
