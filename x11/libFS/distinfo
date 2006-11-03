@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/03 17:21:54 joerg Exp $
+
+SHA1 (libFS-1.0.0.tar.bz2) = 603ce6e8883b2629ff603f7709427b062be437fe
+RMD160 (libFS-1.0.0.tar.bz2) = de1b1fb8e39b5ccaf43eaa00e5e1e779d5f65410
+Size (libFS-1.0.0.tar.bz2) = 236606 bytes
