@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2006/10/01 14:48:39 rillig Exp $
+# $NetBSD: Makefile,v 1.123 2006/11/03 07:09:45 joerg Exp $
 
 DISTNAME=	perl-5.8.8
 PKGREVISION=	3
@@ -10,6 +10,8 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.perl.org/
 COMMENT=	Practical Extraction and Report Language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
 		p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2]
@@ -87,7 +89,9 @@ CONFIGURE_ARGS+=	-Dvendorprefix=${PERL5_VENDORPREFIX:Q}
 # The Perl Configure script will install scripts into "*/script"
 # directories if they exist, so override with explicit settings.
 #
-CONFIGURE_ARGS+=	-Dscriptdir=${PERL5_PERLBASE:Q}/bin
+PERL5_SCRIPTDIR=	${PERL5_PERLBASE}/bin
+
+CONFIGURE_ARGS+=	-Dscriptdir=${PERL5_SCRIPTDIR:Q}
 CONFIGURE_ARGS+=	-Dsitescript=${PERL5_SITEBASE:Q}/bin
 CONFIGURE_ARGS+=	-Dvendorscript=${PERL5_VENDORBASE:Q}/bin
 
@@ -112,8 +116,10 @@ CONFIGURE_ARGS+=	-Dvendorlib_stem=${PERL5_VENDORBASE:Q}
 # Avoid manpage conflicts between the standard Perl library, 3rd-party
 # modules, and other packages.
 #
+PERL5_MAN1DIR=		${PERL5_PERLBASE}/${PKGMANDIR}/man1
+
 CONFIGURE_ARGS+=	-Dman1ext="1"
-CONFIGURE_ARGS+=	-Dman1dir=${PERL5_PERLBASE:Q}/${PKGMANDIR:Q}/man1
+CONFIGURE_ARGS+=	-Dman1dir=${PERL5_MAN1DIR:Q}
 CONFIGURE_ARGS+=	-Dsiteman1dir=${PERL5_SITEBASE:Q}/${PKGMANDIR:Q}/man1
 CONFIGURE_ARGS+=	-Dvendorman1dir=${PERL5_VENDORBASE:Q}/${PKGMANDIR:Q}/man1
 CONFIGURE_ARGS+=	-Dman3ext="3"
@@ -316,8 +322,7 @@ post-build:
 		${FILESDIR}/perllink.in > ${WRKDIR}/perllink.sh
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-PERL5_PACKLIST_DIR_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
-			echo $$installarchlib
+PERL5_PACKLIST_DIR_cmd=	. ${WRKSRC}/config.sh;	echo $$installarchlib
 PERL5_PACKLIST_DIR=	${PERL5_PACKLIST_DIR_cmd:sh}
 PERL5_PACKLIST=		.packlist
 FILES_SUBST+=		PERL5_COMMENT=\#
@@ -327,25 +332,19 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 post-install: perl5-post-install
 
 perl5-post-install:
-	if ${TEST} -x ${PREFIX}/bin/a2p; then				\
-		strip ${PREFIX}/bin/a2p;				\
+	if ${TEST} -x ${DESTDIR}${PREFIX}/bin/a2p; then			\
+		strip ${DESTDIR}${PREFIX}/bin/a2p;			\
 	fi
-	eval `${PERL5} -V:installsitearch 2>/dev/null`;			\
-	eval `${PERL5} -V:installvendorarch 2>/dev/null`;		\
-	${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};		\
-	${RMDIR} -p $$installvendorarch 2>/dev/null || ${TRUE};		\
-	eval `${PERL5} -V:scriptdir 2>/dev/null`;			\
-	eval `${PERL5} -V:man1dir 2>/dev/null`;				\
-	${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh $$scriptdir/perllink;	\
-	${INSTALL_MAN} ${FILESDIR}/perllink.1 $$man1dir/perllink.1;	\
-	${RM} -f ${PREFIX}/bin/perllink					\
-		${PREFIX}/${PKGMANDIR}/man1/perllink.1;			\
-	${LN} -s $$scriptdir/perllink ${PREFIX}/bin/perllink;		\
-	${LN} -s $$man1dir/perllink.1					\
-		${PREFIX}/${PKGMANDIR}/man1/perllink.1;			\
+	${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh ${DESTDIR}${PERL5_SCRIPTDIR}/perllink;	\
+	${INSTALL_MAN} ${FILESDIR}/perllink.1 ${DESTDIR}${PERL5_MAN1DIR}/perllink.1;	\
+	${RM} -f ${DESTDIR}${PREFIX}/bin/perllink				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;		\
+	${LN} -s ${PERL5_SCRIPTDIR}/perllink ${DESTDIR}${PREFIX}/bin/perllink;	\
+	${LN} -s ${PERL5_MAN1DIR}/perllink.1					\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;	\
 	{ ${CAT} ${PKGDIR}/PLIST;					\
-	  ${ECHO} "$$scriptdir/perllink";				\
-	  ${ECHO} "$$man1dir/perllink.1";				\
+	  ${ECHO} "${PERL5_SCRIPTDIR}/perllink";			\
+	  ${ECHO} "${PERL5_MAN1DIR}/perllink.1";			\
 	} | ${SED} -e "s,^"${PREFIX:Q}"/,," > ${PLIST_SRC}
 
 .include "packlist.mk"
