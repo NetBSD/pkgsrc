@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/03 20:50:11 joerg Exp $
+
+--- src/Makefile.in.orig	2006-04-14 18:09:04.523350440 -0700
++++ src/Makefile.in	2006-04-14 18:17:41.556749416 -0700
+@@ -650,10 +650,10 @@
+ 
+ $(BUILT_SOURCE):
+ 	$(top_builddir)/util/makestrs -i $(top_srcdir) $(STRINGSABIOPTIONS) < $(STRING_LIST) > StringDefs.c
+-	$(INSTALL) -d $(top_builddir)/src
+-	$(INSTALL) -d $(top_builddir)/include/X11
+-	$(install_sh_DATA) StringDefs.h $(top_builddir)/include/X11
+-	$(install_sh_DATA) Shell.h $(top_builddir)/include/X11
++	mkdir -p $(top_builddir)/src
++	mkdir -p $(top_builddir)/include/X11
++	cp StringDefs.h $(top_builddir)/include/X11
++	cp Shell.h $(top_builddir)/include/X11
+ 	rm StringDefs.h Shell.h
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
