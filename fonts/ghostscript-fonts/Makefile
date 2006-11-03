@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/03 19:18:38 joerg Exp $
 
 DISTNAME=		ghostscript-fonts-8.11
 CATEGORIES=		fonts
@@ -9,6 +9,8 @@ DISTFILES=		${GS_FONTS_STD} ${GS_FONTS_OTHER}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gs-fonts.sourceforge.net/
 COMMENT=		Postscript fonts for Aladdin Ghostscript
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #  Note: the following two are special files.  In the 5.50 directory
 #  on the FTP site, there are symlinks:
@@ -30,19 +32,18 @@ NO_BUILD=		YES
 WRKSRC=			${WRKDIR}/fonts
 
 FONTS_DIR=		${PREFIX}/share/ghostscript/fonts
+INSTALLATION_DIRS=	share/ghostscript/fonts
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ghostscript
-	${INSTALL_DATA_DIR} ${FONTS_DIR}
 	for ext in afm gsf pfa pfb pfm;				\
 	do							\
 		for f in ${WRKSRC}/*.$${ext};			\
 		do						\
-			${INSTALL_DATA} $${f} ${FONTS_DIR};	\
+			${INSTALL_DATA} $${f} ${DESTDIR}${FONTS_DIR};	\
 		done;						\
 	done
-	${INSTALL_DATA} ${WRKSRC}/fonts.dir ${FONTS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/fonts.scale ${FONTS_DIR}
-	${INSTALL_DATA} ${FILESDIR}/fonts.alias ${FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts.dir ${DESTDIR}${FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts.scale ${DESTDIR}${FONTS_DIR}
+	${INSTALL_DATA} ${FILESDIR}/fonts.alias ${DESTDIR}${FONTS_DIR}
 
 .include "../../mk/bsd.pkg.mk"
