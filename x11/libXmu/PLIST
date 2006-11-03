@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 20:53:29 joerg Exp $
+include/X11/Xmu/Atoms.h
+include/X11/Xmu/CharSet.h
+include/X11/Xmu/CloseHook.h
+include/X11/Xmu/Converters.h
+include/X11/Xmu/CurUtil.h
+include/X11/Xmu/CvtCache.h
+include/X11/Xmu/DisplayQue.h
+include/X11/Xmu/Drawing.h
+include/X11/Xmu/Editres.h
+include/X11/Xmu/EditresP.h
+include/X11/Xmu/Error.h
+include/X11/Xmu/ExtAgent.h
+include/X11/Xmu/Initer.h
+include/X11/Xmu/Lookup.h
+include/X11/Xmu/Misc.h
+include/X11/Xmu/StdCmap.h
+include/X11/Xmu/StdSel.h
+include/X11/Xmu/SysUtil.h
+include/X11/Xmu/WidgetNode.h
+include/X11/Xmu/WinUtil.h
+include/X11/Xmu/Xct.h
+include/X11/Xmu/Xmu.h
+lib/libXmu.la
+lib/libXmuu.la
+lib/pkgconfig/xmu.pc
+lib/pkgconfig/xmuu.pc
+@dirrm include/X11/Xmu
