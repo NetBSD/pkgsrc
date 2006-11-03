@@ -1,0 +1,2 @@
+This package contains the mkfontdir, a program to generate legacy X11
+font indices. This is from the modular X.org project.
