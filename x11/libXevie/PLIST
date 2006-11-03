@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 21:50:18 joerg Exp $
+include/X11/extensions/Xevie.h
+lib/libXevie.la
+lib/pkgconfig/xevie.pc
+man/man3/Xevie.3
+man/man3/XevieEnd.3
+man/man3/XevieQueryVersion.3
+man/man3/XevieSelectInput.3
+man/man3/XevieSendEvent.3
+man/man3/XevieStart.3
+@dirrm include/X11/extensions
+@dirrm include/X11
