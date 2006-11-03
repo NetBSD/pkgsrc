@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 21:40:59 joerg Exp $
+include/X11/extensions/Xvlib.h
+lib/libXv.la
+lib/pkgconfig/xv.pc
+man/man3/Xv.3
+man/man3/XvFreeAdaptorInfo.3
+man/man3/XvFreeEncodingInfo.3
+man/man3/XvGetPortAttribute.3
+man/man3/XvGetStill.3
+man/man3/XvGetVideo.3
+man/man3/XvGrabPort.3
+man/man3/XvPortNotify.3
+man/man3/XvPutStill.3
+man/man3/XvPutVideo.3
+man/man3/XvQueryAdaptors.3
+man/man3/XvQueryBestSize.3
+man/man3/XvQueryEncodings.3
+man/man3/XvQueryExtension.3
+man/man3/XvSelectPortNotify.3
+man/man3/XvSelectVideoNotify.3
+man/man3/XvSetPortAttribute.3
+man/man3/XvStopVideo.3
+man/man3/XvUngrabPort.3
+man/man3/XvVideoNotify.3
+@comment @dirrm include/X11/extensions
