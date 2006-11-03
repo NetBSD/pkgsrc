@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-osf1-ld,v 1.1 2004/11/20 04:37:08 grant Exp $
+# $NetBSD: cmd-sink-osf1-ld,v 1.2 2006/11/03 07:28:53 rillig Exp $
 
 # Empty out the command buffer and build up the command line in $cmd.
 osf1runpath=
@@ -32,6 +32,11 @@ while ! queue_is_empty cmdbuf; do
 		*)	osf1runpath="$osf1runpath:$dir" ;;
 		esac
 		$debug_log $wrapperlog "    (cmd-sink-osf1-ld) drop: $dir [adding to osf1runpath]"
+		;;
+	-Wl,-h,*)
+		arg="-Wl,-soname"${arg#"-Wl,-h"}
+		$debug_log $wrapperlog "    (cmd-sink-osf1-ld) pop: $arg"
+		. $buildcmd
 		;;
 	-pthread)
 		arg="-lpthread"
