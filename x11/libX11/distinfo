@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/03 18:11:18 joerg Exp $
+
+SHA1 (libX11-1.0.3.tar.bz2) = ec0493d3669862a9a4f9955532e3bd73b0806be1
+RMD160 (libX11-1.0.3.tar.bz2) = 285a878a8ec9ecbd86e67897ca15ce96c994f38a
+Size (libX11-1.0.3.tar.bz2) = 1449835 bytes
