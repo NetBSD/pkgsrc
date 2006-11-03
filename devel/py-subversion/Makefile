@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2006/07/07 15:49:32 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/11/03 19:34:11 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Python bindings and tools for Subversion
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/subversion/Makefile.common"
 
@@ -22,18 +24,19 @@ MAKE_FLAGS+=		swig_pydir=${LOCALBASE}/${PYSITELIB}/libsvn \
 
 TEST_TARGET=		all check check-swig-py
 
+INSTALLATION_DIRS=	${SVNEXAMPLES}/python ${SVNEXAMPLES}/hook-scripts
+
 post-patch:
 	${RM} ${WRKSRC}/build-outputs.mk
 	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
 post-install:
-	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/python
-	${INSTALL_DATA} ${WRKSRC}/tools/examples/*.py ${SVNEXAMPLES}/python
+	${INSTALL_DATA} ${WRKSRC}/tools/examples/*.py ${DESTDIR}${SVNEXAMPLES}/python
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/mailer/mailer.py \
-		${SVNEXAMPLES}/hook-scripts
+		${DESTDIR}${SVNEXAMPLES}/hook-scripts
 	${INSTALL_DATA} \
 		${WRKSRC}/tools/hook-scripts/mailer/mailer.conf.example \
-		${SVNEXAMPLES}/hook-scripts
+		${DESTDIR}${SVNEXAMPLES}/hook-scripts
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../lang/python/application.mk"
