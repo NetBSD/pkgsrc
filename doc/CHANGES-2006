@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1714 2006/11/03 16:45:22 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1715 2006/11/03 18:31:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5117,3 +5117,20 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/mkfontdir version 1.0.2 [joerg 2006-11-03]
 	Added fonts/mkfontscale version 1.0.2 [joerg 2006-11-03]
 	Added fonts/libfontenc version 1.0.2 [joerg 2006-11-03]
+	Added x11/xtrans version 1.0.2 [joerg 2006-11-03]
+	Updated x11/xproto to 7.0.9 [joerg 2006-11-03]
+	Added x11/fontsproto version 2.0.2 [joerg 2006-11-03]
+	Added x11/libFS version 1.0.0 [joerg 2006-11-03]
+	Added x11/libICE version 1.0.1 [joerg 2006-11-03]
+	Added x11/libSM version 1.0.1 [joerg 2006-11-03]
+	Added x11/bigreqsproto version 1.0.2 [joerg 2006-11-03]
+	Added x11/inputproto version 1.3.2 [joerg 2006-11-03]
+	Added x11/kbproto version 1.0.3 [joerg 2006-11-03]
+	Added x11/xcmiscproto version 1.1.2 [joerg 2006-11-03]
+	Added x11/xf86bigfontproto version 1.1.2 [joerg 2006-11-03]
+	Added x11/libXau version 1.0.0 [joerg 2006-11-03]
+	Added x11/libXdmcp version 1.0.1 [joerg 2006-11-03]
+	Added x11/libXdmcp version 1.0.1 [joerg 2006-11-03]
+	Added x11/libX11 version 1.0.3 [joerg 2006-11-03]
+	Added x11/libXext version 1.0.2 [joerg 2006-11-03]
+	Added x11/libXi version 1.0.0 [joerg 2006-11-03]
