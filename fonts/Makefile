@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2006/11/03 16:44:56 joerg Exp $
+# $NetBSD: Makefile,v 1.96 2006/11/03 19:11:59 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -48,6 +48,7 @@ SUBDIR+=	dbz-ttf
 SUBDIR+=	dejavu-ttf
 SUBDIR+=	ec-fonts-mftraced
 SUBDIR+=	efont-unicode
+SUBDIR+=	encodings
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
 SUBDIR+=	freefont-ttf

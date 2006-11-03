@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1715 2006/11/03 18:31:19 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1716 2006/11/03 19:11:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5134,3 +5134,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/libX11 version 1.0.3 [joerg 2006-11-03]
 	Added x11/libXext version 1.0.2 [joerg 2006-11-03]
 	Added x11/libXi version 1.0.0 [joerg 2006-11-03]
+	Updated fonts/encodings to 1.0.1 [joerg 2006-11-03]
