@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2006/07/07 01:31:42 markd Exp $
+# $NetBSD: Makefile.common,v 1.17 2006/11/03 07:01:42 wiz Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -97,7 +97,7 @@ CONFIGURE_ARGS+=	--infopath=${INFOPATH:Q}
 
 CFLAGS+=		-Dunix
 
-CHECK_WRKREF_SKIP=	${PREFIX}/bin/xemacs*
+CHECK_WRKREF_SKIP=	bin/xemacs*
 
 post-extract:
 	@for f in ${EXTRA_FILES}; do \
