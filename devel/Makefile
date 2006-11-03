@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.794 2006/11/01 07:05:34 dsainty Exp $
+# $NetBSD: Makefile,v 1.795 2006/11/03 16:24:18 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -300,6 +300,7 @@ SUBDIR+=	lincvs
 SUBDIR+=	ltsa
 SUBDIR+=	lwp
 SUBDIR+=	m4
+SUBDIR+=	makedepend
 SUBDIR+=	makedepf90
 SUBDIR+=	maketool
 SUBDIR+=	mantis
