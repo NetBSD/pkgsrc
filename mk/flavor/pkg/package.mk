@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.5 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: package.mk,v 1.6 2006/11/03 08:01:04 joerg Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -111,3 +111,29 @@ tarup-pkg:
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${PKGREPOSITORY}				\
 		${_PKG_TARUP_CMD} ${PKGNAME}
+
+######################################################################
+### package-install (PUBLIC)
+######################################################################
+### When DESTDIR support is active, package-install uses package to
+### create a binary package and installs it.
+### Otherwise it is identical to calling package.
+###
+
+.PHONY: package-install real-package-install su-real-package-install
+.if defined(_PKGSRC_BARRIER)
+package-install: package real-package-install
+.else
+package-install: barrier
+.endif
+
+.if ${_USE_DESTDIR} != "no"
+real-package-install: su-target
+.else
+real-package-install:
+	@${DO_NADA}
+.endif
+
+su-real-package-install:
+	@${PHASE_MSG} "Install binary package of "${PKGNAME:Q}
+	cd ${PREFIX} && ${PKG_ADD} ${PKGFILE}
