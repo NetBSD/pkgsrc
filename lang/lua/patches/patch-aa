@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.13 2006/09/02 19:22:32 rillig Exp $
+$NetBSD: patch-aa,v 1.14 2006/11/03 06:46:21 joerg Exp $
 
---- Makefile.orig	2006-06-02 12:53:38.000000000 +0200
-+++ Makefile	2006-09-02 21:07:17.000000000 +0200
+--- Makefile.orig	2006-06-02 10:53:38.000000000 +0000
++++ Makefile
 @@ -11,11 +11,11 @@ PLAT= none
  # if INSTALL_TOP is not an absolute path. (Man pages are installed from the
  # doc directory.)
@@ -25,18 +25,20 @@ $NetBSD: patch-aa,v 1.13 2006/09/02 19:22:32 rillig Exp $
  TO_MAN= lua.1 luac.1
  
  # Lua version and release.
-@@ -59,10 +59,10 @@ test:	dummy
+@@ -58,11 +58,11 @@ test:	dummy
+ 	src/lua test/hello.lua
  
  install: dummy
- 	cd src && $(MKDIR) -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN) $(INSTALL_LMOD) $(INSTALL_CMOD)
+-	cd src && $(MKDIR) -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN) $(INSTALL_LMOD) $(INSTALL_CMOD)
 -	cd src && $(INSTALL_EXEC) $(TO_BIN) $(INSTALL_BIN)
 -	cd src && $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
 -	cd src && $(INSTALL_DATA) $(TO_LIB) $(INSTALL_LIB)
 -	cd doc && $(INSTALL_DATA) $(TO_MAN) $(INSTALL_MAN)
-+	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(TO_BIN) $(INSTALL_BIN)
-+	cd src && $(BSD_INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
-+	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(TO_LIB) $(INSTALL_LIB)
-+	cd doc && $(BSD_INSTALL_MAN) $(TO_MAN) $(INSTALL_MAN)
++	cd src && $(MKDIR) -p ${DESTDIR}$(INSTALL_BIN) ${DESTDIR}$(INSTALL_INC) ${DESTDIR}$(INSTALL_LIB) ${DESTDIR}$(INSTALL_MAN) ${DESTDIR}$(INSTALL_LMOD) ${DESTDIR}$(INSTALL_CMOD)
++	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(TO_BIN) ${DESTDIR}$(INSTALL_BIN)
++	cd src && $(BSD_INSTALL_DATA) $(TO_INC) ${DESTDIR}$(INSTALL_INC)
++	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(TO_LIB) ${DESTDIR}$(INSTALL_LIB)
++	cd doc && $(BSD_INSTALL_MAN) $(TO_MAN) ${DESTDIR}$(INSTALL_MAN)
  #	$(RANLIB) $(INSTALL_LIB)/$(TO_LIB)
  
  local:
