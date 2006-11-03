@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2006/04/05 01:42:00 epg Exp $
+# $NetBSD: Makefile,v 1.29 2006/11/03 19:34:11 joerg Exp $
 
 PKGNAME=	subversion-${SVNVER}
 COMMENT=	Version control system, meta-package
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	subversion-base-${SVNVER}{,nb[0-9]*}:../../devel/subversion-base
 DEPENDS+=	p5-subversion-${SVNVER}{,nb[0-9]*}:../../devel/p5-subversion
