@@ -5,5 +5,4 @@ Xlib or Xt.
 
 This also includes the Mini Xmu library that does not use Xt and Xaw.
 
-This is part of the X Libraries and Protocol Headers Project at
-freedesktop.org.
+This is from the modular X.org project.
