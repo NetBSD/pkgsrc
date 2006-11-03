@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.5 2006/10/03 11:07:05 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.6 2006/11/03 08:01:04 joerg Exp $
 #
 
 # This file provides the following targets:
@@ -71,6 +71,6 @@ do-bin-install-from-source:
 		: "Nothing to do";					\
 	else								\
 		${STEP_MSG} "No binary package found for ${PKGNAME}; installing from source."; \
-		${RECURSIVE_MAKE} ${MAKEFLAGS} DEPENDS_TARGET=${DEPENDS_TARGET:Q} package \
+		${RECURSIVE_MAKE} ${MAKEFLAGS} DEPENDS_TARGET=${DEPENDS_TARGET:Q} package-install \
 		&& ${RECURSIVE_MAKE} ${MAKEFLAGS} clean;		\
 	fi
