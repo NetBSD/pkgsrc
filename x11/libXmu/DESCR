@@ -1,0 +1,9 @@
+This Xmu library contains miscellaneous utilities and is not part of the
+Xlib standard.  It contains routines which only use public interfaces
+so that it may be layered on top of any proprietary implementation of
+Xlib or Xt.
+
+This also includes the Mini Xmu library that does not use Xt and Xaw.
+
+This is part of the X Libraries and Protocol Headers Project at
+freedesktop.org.
