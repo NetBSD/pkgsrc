@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/09/06 14:58:00 abs Exp $
+# $NetBSD: Makefile,v 1.32 2006/11/03 06:46:21 joerg Exp $
 
 DISTNAME=	lua-5.1.1
 PKGREVISION=	1
@@ -21,6 +21,7 @@ HOMEPAGE=	http://www.lua.org/
 COMMENT=	Powerful light-weight language for extending applications
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
@@ -49,27 +50,27 @@ SUBST_SED.pc-prefix+=	-e "s,/usr/local,${PREFIX},"
 SUBST_STAGE.pc-prefix+=	post-build
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	set -e; \
 	cd ${WRKSRC}; for f in README COPYRIGHT HISTORY; do		\
-		${INSTALL_DATA} "$$f" ${DOCDIR};			\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR};		\
 	done
 	set -e; \
 	cd ${WRKSRC}/doc; for f in *.html *.gif; do			\
-		${INSTALL_DATA} "$$f" ${DOCDIR};			\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR};		\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	set -e; \
 	cd ${WRKSRC}/test; for f in README *.lua; do			\
-		${INSTALL_DATA} "$$f" ${EGDIR};				\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR};		\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}/etc
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/etc
 	set -e; \
 	cd ${WRKSRC}/etc; for f in README *.c *.ico *.lua; do \
-		${INSTALL_DATA} "$$f" ${EGDIR}/etc;			\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR}/etc;		\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
-	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc ${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
