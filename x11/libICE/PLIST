@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 17:27:30 joerg Exp $
+include/X11/ICE/ICE.h
+include/X11/ICE/ICEconn.h
+include/X11/ICE/ICElib.h
+include/X11/ICE/ICEmsg.h
+include/X11/ICE/ICEproto.h
+include/X11/ICE/ICEutil.h
+lib/libICE.la
+lib/pkgconfig/ice.pc
+@dirrm include/X11/ICE
+@comment @dirrm include/X11
