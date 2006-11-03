@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/03 15:10:11 is Exp $
+
+SHA1 (pgtcl1.5.3.tar.gz) = 0f8a832acc347fba5d2974c91ee4ea0db8eb8dc2
+RMD160 (pgtcl1.5.3.tar.gz) = 8a0839526f41e68617e36f65816c321c2125c07a
+Size (pgtcl1.5.3.tar.gz) = 166300 bytes
+SHA1 (patch-ab) = 1b14c8d494a2bd2a22983c63679dab2b15a17874
