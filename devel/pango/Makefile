@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2006/10/14 08:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2006/11/03 11:27:56 joerg Exp $
 
 DISTNAME=		pango-1.14.7
+PKGREVISION=		1
 CATEGORIES=		devel fonts
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pango/1.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +11,7 @@ HOMEPAGE=		http://www.pango.org/
 COMMENT=		Library for layout and rendering of text
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
@@ -34,6 +36,8 @@ CONFIGURE_ARGS+=	--with-qt=no
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
+
+CHECK_FILES_SKIP+=	libdata/pango/pango.modules
 
 .include "options.mk"
 
