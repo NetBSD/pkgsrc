@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
+$NetBSD: patch-af,v 1.7 2006/11/03 07:15:41 joerg Exp $
 
---- Makefile.pre.in.orig	2006-03-13 14:08:41.000000000 +0100
-+++ Makefile.pre.in	2006-09-20 12:51:11.139973424 +0200
-@@ -30,6 +30,7 @@
+--- Makefile.pre.in.orig	2006-03-13 13:08:41.000000000 +0000
++++ Makefile.pre.in
+@@ -30,6 +30,7 @@ VPATH=		@srcdir@
  
  CC=		@CC@
  CXX=		@CXX@
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  LINKCC=		@LINKCC@
  AR=		@AR@
  RANLIB=		@RANLIB@
-@@ -56,7 +57,7 @@
+@@ -56,7 +57,7 @@ MAKESETUP=      $(srcdir)/Modules/makese
  OPT=		@OPT@
  BASECFLAGS=	@BASECFLAGS@
  CFLAGS=		$(BASECFLAGS) $(OPT)
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  LDFLAGS=	@LDFLAGS@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
-@@ -153,7 +154,6 @@
+@@ -153,7 +154,6 @@ LIBC=		@LIBC@
  SYSLIBS=	$(LIBM) $(LIBC)
  SHLIBS=		@SHLIBS@
  
@@ -27,7 +27,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  THREADOBJ=	@THREADOBJ@
  DLINCLDIR=	@DLINCLDIR@
  DYNLOADFILE=	@DYNLOADFILE@
-@@ -308,10 +308,10 @@
+@@ -308,10 +308,10 @@ LIBRARY_OBJS=	\
  all:		$(BUILDPYTHON) oldsharedmods sharedmods
  
  # Build the interpreter
@@ -41,7 +41,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  
  platform: $(BUILDPYTHON)
  	$(RUNSHARED) ./$(BUILDPYTHON) -E -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform
-@@ -351,14 +351,18 @@
+@@ -351,14 +351,18 @@ $(LIBRARY): $(LIBRARY_OBJS)
  
  libpython$(VERSION).so: $(LIBRARY_OBJS)
  	if test $(INSTSONAME) != $(LDLIBRARY); then \
@@ -63,7 +63,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  
  # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
  # minimal framework (not including the Lib directory and such) in the current
-@@ -437,8 +441,8 @@
+@@ -437,8 +441,8 @@ Modules/getpath.o: $(srcdir)/Modules/get
  		-DVPATH='"$(VPATH)"' \
  		-o $@ $(srcdir)/Modules/getpath.c
  
@@ -74,7 +74,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  
  
  $(GRAMMAR_H) $(GRAMMAR_C): $(PGEN) $(GRAMMAR_INPUT)
-@@ -520,7 +524,7 @@
+@@ -520,7 +524,7 @@ PYTHON_HEADERS= \
  		Include/weakrefobject.h \
  		pyconfig.h
  
@@ -83,7 +83,7 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  
  
  ######################################################################
-@@ -629,7 +633,12 @@
+@@ -629,7 +633,12 @@ altbininstall:	$(BUILDPYTHON)
  				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) libpython$(VERSION)$(SO)); \
  			fi \
  		fi; \
@@ -97,7 +97,16 @@ $NetBSD: patch-af,v 1.6 2006/09/20 12:07:19 rillig Exp $
  	fi
  
  # Install the manual page
-@@ -792,7 +801,7 @@
+@@ -747,7 +756,7 @@ $(srcdir)/Lib/$(PLATDIR):
+ 	export PYTHONPATH; PYTHONPATH="`pwd`/Lib"; \
+ 	export DYLD_FRAMEWORK_PATH; DYLD_FRAMEWORK_PATH="`pwd`"; \
+ 	export EXE; EXE="$(BUILDEXE)"; \
+-	cd $(srcdir)/Lib/$(PLATDIR); ./regen
++	cd $(srcdir)/Lib/$(PLATDIR); $(RUNSHARED) ./regen
+ 
+ # Install the include files
+ INCLDIRSTOMAKE=$(INCLUDEDIR) $(CONFINCLUDEDIR) $(INCLUDEPY) $(CONFINCLUDEPY)
+@@ -792,7 +801,7 @@ libainstall:	all
  		fi; \
  	fi
  	$(INSTALL_DATA) Modules/config.c $(DESTDIR)$(LIBPL)/config.c

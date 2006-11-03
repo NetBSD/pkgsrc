@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2006/06/01 15:25:03 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2006/11/03 07:15:41 joerg Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
@@ -1292,6 +1292,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/math.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/md5.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
 ${NISMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
+${NO_NISMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/nis_failed.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/regex.so

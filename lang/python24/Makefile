@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/08/26 15:29:05 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/11/03 07:15:41 joerg Exp $
 #
 
 DISTNAME=	Python-2.4.3
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
@@ -94,8 +96,10 @@ INSTALL_UNSTRIPPED=	yes
 .if ${OPSYS} == "IRIX"
 .  if ${ABI} == "64"
 PLIST_SUBST+=	NISMODULE="@comment "
+PLIST_SUBST+=	NO_NISMODULE="@comment "
 .  else
 PLIST_SUBST+=	NISMODULE=
+PLIST_SUBST+=	NO_NISMODULE="@comment "
 .  endif
 PLIST_SUBST+=	BSDDBMODULE="@comment "
 PLIST_SUBST+=	NOSHLIB="@comment "
@@ -106,7 +110,13 @@ MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 PLIST_SUBST+=	BSDDBMODULE=
 PLIST_SUBST+=	NOSHLIB=
+.if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
 PLIST_SUBST+=	NISMODULE=
+PLIST_SUBST+=	NO_NISMODULE="@comment "
+.else
+PLIST_SUBST+=	NISMODULE="@comment "
+PLIST_SUBST+=	NO_NISMODULE=
+.endif
 .endif
 
 .if defined(BUILDLINK_TRANSFORM)
@@ -134,8 +144,8 @@ post-build:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} libpython2.4.2.dylib)
 
 post-install:
-	${LN} -fs ${PREFIX}/lib/libpython2.4.2.dylib	\
-		${PREFIX}/lib/libpython2.4.dylib
+	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.4.2.dylib	\
+		${DESTDIR}${PREFIX}/lib/libpython2.4.dylib
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
