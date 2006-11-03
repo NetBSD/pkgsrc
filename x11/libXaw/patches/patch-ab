@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/11/03 21:12:55 joerg Exp $
+
+--- Makefile.in.orig	2006-11-02 10:01:13.000000000 +0000
++++ Makefile.in
+@@ -649,7 +649,6 @@ uninstall-info: uninstall-info-recursive
+ 
+ 
+ install-exec-hook:
+-	cd $(DESTDIR)$(libdir) && rm -f libXaw.so && ln -s $(DEFAULT_LIB) libXaw.so
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
