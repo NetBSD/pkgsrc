@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1709 2006/11/03 10:08:55 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1710 2006/11/03 10:42:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5110,3 +5110,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/hyperestraier to 1.4.8 [obache 2006-11-03]
 	Updated pkgtools/pkg_install to 20061103 [joerg 2006-11-03]
 	Updated devel/p5-Params-Validate to 0.84 [obache 2006-11-03]
+	Updated devel/p5-Module-Install to 0.64 [obache 2006-11-03]

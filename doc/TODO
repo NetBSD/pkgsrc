@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5668 2006/11/03 09:57:17 obache Exp $
+$NetBSD: TODO,v 1.5669 2006/11/03 10:42:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -784,7 +784,6 @@ Suggested package updates
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
-	o p5-Module-Install-0.64 [pkg/34362]
 	o p5-Module-Pluggable-3.10 [pkg/34355]
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
