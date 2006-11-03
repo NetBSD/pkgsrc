@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2006/10/13 18:05:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2006/11/03 11:27:56 joerg Exp $
 bin/pango-querymodules
 ${X11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -53,7 +53,6 @@ lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
 ${X11}lib/pkgconfig/pangox.pc
 ${X11}lib/pkgconfig/pangoxft.pc
-libdata/pango/pango.modules
 ${X11}libdata/pango/pangox.aliases
 man/man1/pango-querymodules.1
 share/gtk-doc/html/pango/PangoEngineLang.html
