@@ -1,0 +1,4 @@
+This is the libX11 library that is the C binding to the X protocol. It
+is the foundation of practically every X Window System program out there.
+
+This is from the modular X.org X11 project.
