@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 18:08:58 joerg Exp $
+include/X11/extensions/XKB.h
+include/X11/extensions/XKBgeom.h
+include/X11/extensions/XKBproto.h
+include/X11/extensions/XKBsrv.h
+include/X11/extensions/XKBstr.h
+lib/pkgconfig/kbproto.pc
