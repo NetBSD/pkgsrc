@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.12 2006/10/06 19:04:37 rillig Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.13 2006/11/03 08:01:04 joerg Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -27,6 +27,7 @@ _BARRIER_POST_TARGETS+=	reinstall
 _BARRIER_POST_TARGETS+=	replace
 _BARRIER_POST_TARGETS+=	package
 _BARRIER_POST_TARGETS+=	repackage
+_BARRIER_POST_TARGETS+=	package-install
 
 .for _target_ in ${_BARRIER_POST_TARGETS}
 .  if make(${_target_})
