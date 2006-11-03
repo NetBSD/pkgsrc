@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.447 2006/11/03 20:22:46 joerg Exp $
+# $NetBSD: Makefile,v 1.448 2006/11/03 22:11:06 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -33,6 +33,7 @@ SUBDIR+=	ede
 SUBDIR+=	efltk
 SUBDIR+=	egtk
 SUBDIR+=	eterm
+SUBDIR+=	evieext
 SUBDIR+=	fast-user-switch-applet
 SUBDIR+=	fbdesk
 SUBDIR+=	filerunner
@@ -167,10 +168,26 @@ SUBDIR+=	libFS
 SUBDIR+=	libICE
 SUBDIR+=	libSM
 SUBDIR+=	libX11
+SUBDIR+=	libXTrap
 SUBDIR+=	libXau
+SUBDIR+=	libXaw
+SUBDIR+=	libXdamage
 SUBDIR+=	libXdmcp
+SUBDIR+=	libXevie
 SUBDIR+=	libXext
+SUBDIR+=	libXfixes
+SUBDIR+=	libXfont
+SUBDIR+=	libXft
 SUBDIR+=	libXi
+SUBDIR+=	libXinerama
+SUBDIR+=	libXmu
+SUBDIR+=	libXp
+SUBDIR+=	libXpm
+SUBDIR+=	libXrandr
+SUBDIR+=	libXrender
+SUBDIR+=	libXres
+SUBDIR+=	libXt
+SUBDIR+=	libXv
 SUBDIR+=	libexo
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
@@ -241,6 +258,7 @@ SUBDIR+=	randrproto
 SUBDIR+=	ratmen
 SUBDIR+=	recordproto
 SUBDIR+=	renderproto
+SUBDIR+=	resourceproto
 SUBDIR+=	rep-gtk
 SUBDIR+=	rox-session
 SUBDIR+=	rox-wallpaper
