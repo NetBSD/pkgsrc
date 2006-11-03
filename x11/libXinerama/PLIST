@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 20:56:24 joerg Exp $
+lib/libXinerama.la
+lib/pkgconfig/xinerama.pc
+@comment in panoramixext: @dirrm include/X11/extensions
