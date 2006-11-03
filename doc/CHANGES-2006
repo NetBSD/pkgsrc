@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1718 2006/11/03 20:23:39 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1719 2006/11/03 22:11:06 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5144,3 +5144,21 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/recordproto version 1.13.2 [joerg 2006-11-03]
 	Added x11/scrnsaverproto version 1.1.0 [joerg 2006-11-03]
 	Added x11/videoproto version 2.2.2 [joerg 2006-11-03]
+	Added x11/libXt version 1.0.3 [joerg 2006-11-03]
+	Added x11/libXmu version 1.0.2 [joerg 2006-11-03]
+	Added x11/libXinerama version 1.0.1 [joerg 2006-11-03]
+	Added x11/libXTrap version 1.0.0 [joerg 2006-11-03]
+	Added x11/libXp version 1.0.0 [joerg 2006-11-03]
+	Added x11/libXpm version 3.5.6 [joerg 2006-11-03]
+	Added x11/libXaw version 1.0.1 [joerg 2006-11-03]
+	Added x11/libXrender version 0.9.2 [joerg 2006-11-03]
+	Added x11/libXrandr version 1.1.2 [joerg 2006-11-03]
+	Added x11/libXft version 2.1.10 [joerg 2006-11-03]
+	Added x11/libXfixes version 4.0.1 [joerg 2006-11-03]
+	Added x11/libXv version 1.0.2 [joerg 2006-11-03]
+	Added x11/libXfont version 1.2.3 [joerg 2006-11-03]
+	Added x11/evieext version 1.0.2 [joerg 2006-11-03]
+	Added x11/libXevie version 1.0.2 [joerg 2006-11-03]
+	Added x11/libXdamage version 1.0.3 [joerg 2006-11-03]
+	Added x11/resourceproto version 1.0.2 [joerg 2006-11-03]
+	Added x11/libXres version 1.0.2 [joerg 2006-11-03]
