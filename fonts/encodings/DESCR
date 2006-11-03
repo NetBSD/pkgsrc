@@ -1,0 +1,3 @@
+The package provides the X.org font encoding files, such as
+adobe-dingbats.enc.gz, ibm-cp866.enc, jisx0212.1990-0.enc.gz,
+and others. This is from the modular X.org project.
