@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/29 06:22:20 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/11/03 06:56:24 joerg Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://xmlcatmgr.sourceforge.net/
 COMMENT=	XML and SGML catalog manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
@@ -26,6 +27,8 @@ REQD_DIRS=	${PREFIX}/share/sgml ${PREFIX}/share/xml
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/(sgml|xml)$$/ { next; }
 
+INSTALLATION_DIRS+=	share/examples/xmlcatmgr
+
 post-build:
 	@${ECHO} "Creating SGML catalogs..."
 	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml create
@@ -39,10 +42,9 @@ post-build:
 		nextCatalog ${PREFIX}/share/xml/catalog
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/catalog.etc.sgml ${EGDIR}/catalog.etc.sgml
-	${INSTALL_DATA} ${WRKDIR}/catalog.etc.xml ${EGDIR}/catalog.etc.xml
-	${INSTALL_DATA} ${WRKDIR}/catalog.sgml ${EGDIR}/catalog.share.sgml
-	${INSTALL_DATA} ${WRKDIR}/catalog.xml ${EGDIR}/catalog.share.xml
+	${INSTALL_DATA} ${WRKDIR}/catalog.etc.sgml ${DESTDIR}${EGDIR}/catalog.etc.sgml
+	${INSTALL_DATA} ${WRKDIR}/catalog.etc.xml ${DESTDIR}${EGDIR}/catalog.etc.xml
+	${INSTALL_DATA} ${WRKDIR}/catalog.sgml ${DESTDIR}${EGDIR}/catalog.share.sgml
+	${INSTALL_DATA} ${WRKDIR}/catalog.xml ${DESTDIR}${EGDIR}/catalog.share.xml
 
 .include "../../mk/bsd.pkg.mk"
