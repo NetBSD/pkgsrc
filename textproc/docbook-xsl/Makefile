@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/10/22 12:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/11/03 19:17:39 joerg Exp $
 #
 
 DISTNAME=	docbook-xsl-1.71.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docbook.sourceforge.net/
 COMMENT=	Docbook XSL modular stylesheet
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
 
@@ -25,19 +27,17 @@ XSLMODS=	common extensions fo highlighting html htmlhelp images javahelp \
 
 XML_CATALOGS=	${XSLDIR}/catalog.xml
 
+INSTALLATION_DIRS=	${EGDIR} ${XSLDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm . ${EGDIR}
-	${INSTALL_DATA_DIR} ${XSLDIR}
-	${INSTALL_DATA} ${WRKSRC}/VERSION ${XSLDIR}
-	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${XSLDIR}/catalog.xml
+	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm . ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/VERSION ${DESTDIR}${XSLDIR}
+	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DESTDIR}${XSLDIR}/catalog.xml
 	for d in ${XSLMODS}; do \
-	    ${ECHO} "${INSTALL_DATA_DIR} ${XSLDIR}/$$d"; \
-	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/"; \
-	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/; \
+	    ${ECHO} "${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}/$$d"; \
+	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
+	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
 	done
-	${RM} -f ${XSLDIR}/common/ko.xml.orig
-	${RM} -f ${XSLDIR}/common/pi.xsl.orig
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
