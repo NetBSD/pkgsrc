@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 17:41:55 joerg Exp $
+#
+
+DISTNAME=		inputproto-1.3.2
+CATEGORIES=		x11
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		joerg@NetBSD.org
+HOMEPAGE=		http://xorg.freedesktop.org/
+COMMENT=		Input extension headers from X.org
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS+=		xextensions-[0-9]*
+
+GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=	inputproto.pc.in
+USE_LANGUAGES=		# empty
+
+.include "../../mk/bsd.pkg.mk"
