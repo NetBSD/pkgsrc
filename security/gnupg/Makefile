@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2006/08/05 03:13:25 dsainty Exp $
+# $NetBSD: Makefile,v 1.91 2006/11/03 07:45:44 joerg Exp $
 
 DISTNAME=	gnupg-1.4.5
 CATEGORIES=	security
@@ -18,6 +18,7 @@ HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
@@ -53,7 +54,7 @@ SUBST_SED.fixme=    -e "s,ALIGN (3),ALIGN (4),g"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS \
-	    ${PREFIX}/share/gnupg
+	    ${DESTDIR}${PREFIX}/share/gnupg
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
