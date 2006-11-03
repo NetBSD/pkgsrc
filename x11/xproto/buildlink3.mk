@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/11 14:42:04 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/11/03 17:04:38 joerg Exp $
 #
 # This Makefile fragment is included by packages that use xproto.
 #
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES+=	xproto
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xproto
 
 .if !empty(XPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.xproto?=		xproto>=6.6
+BUILDLINK_API_DEPENDS.xproto?=		xproto>=7.0.9
 BUILDLINK_PKGSRCDIR.xproto?=		../../x11/xproto
 BUILDLINK_DEPMETHOD.xproto?=		build
 .endif # XPROTO_BUILDLINK3_MK
