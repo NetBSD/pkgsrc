@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/09 22:11:42 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/11/03 19:23:55 joerg Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -11,6 +11,8 @@ COMMENT=	Courier maildir utilities
 HOMEPAGE=	http://www.courier-mta.org/
 
 CONFLICTS=	courier-maildirmake-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
@@ -70,37 +72,37 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/deliverquota		\
-		${PREFIX}/bin/deliverquota
+		${DESTDIR}${PREFIX}/bin/deliverquota
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/maildiracl			\
-		${PREFIX}/bin/courier-maildiracl
+		${DESTDIR}${PREFIX}/bin/courier-maildiracl
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/maildirkw			\
-		${PREFIX}/bin/courier-maildirkw
+		${DESTDIR}${PREFIX}/bin/courier-maildirkw
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/maildirmake		\
-		${PREFIX}/bin/courier-maildirmake
+		${DESTDIR}${PREFIX}/bin/courier-maildirmake
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildiracl.1			\
-		${PREFIX}/${PKGMANDIR}/man1/courier-maildiracl.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/courier-maildiracl.1
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildirkw.1			\
-		${PREFIX}/${PKGMANDIR}/man1/courier-maildirkw.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/courier-maildirkw.1
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildirmake.1			\
-		${PREFIX}/${PKGMANDIR}/man1/courier-maildirmake.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/courier-maildirmake.1
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildir.5			\
-		${PREFIX}/${PKGMANDIR}/man5/courier-maildir.5
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/courier-maildir.5
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildirquota.7			\
-		${PREFIX}/${PKGMANDIR}/man7/maildirquota.7
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/maildirquota.7
 	${INSTALL_MAN} ${WRKSRC}/maildir/deliverquota.8			\
-		${PREFIX}/${PKGMANDIR}/man8/deliverquota.8
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/deliverquota.8
 	${INSTALL_DATA} ${WRKSRC}/maildir/quotawarnmsg			\
-		${EGDIR}/quotawarnmsg
+		${DESTDIR}${EGDIR}/quotawarnmsg
 	${INSTALL_SCRIPT} ${WRKSRC}/maildir/sharedindexinstall		\
-		${PREFIX}/sbin/sharedindexinstall
+		${DESTDIR}${PREFIX}/sbin/sharedindexinstall
 	${INSTALL_SCRIPT} ${WRKSRC}/maildir/sharedindexsplit		\
-		${PREFIX}/sbin/sharedindexsplit
+		${DESTDIR}${PREFIX}/sbin/sharedindexsplit
 	${INSTALL_SCRIPT} ${WRKDIR}/sharedindexupdate.sh		\
-		${EGDIR}/sharedindexupdate
+		${DESTDIR}${EGDIR}/sharedindexupdate
 	grep "^${DOCDIR:S/${PREFIX}\///}" ${PKGDIR}/PLIST |		\
 	while read file; do						\
 		src=${WRKSRC:Q}/maildir/`basename $$file`;		\
-		dst=${PREFIX:Q}"/$$file";				\
+		dst=${DESTDIR}${PREFIX:Q}"/$$file";			\
 		${INSTALL_DATA} "$$src" "$$dst";			\
 	done
 
