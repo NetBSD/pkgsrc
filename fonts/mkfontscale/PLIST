@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.4 2006/11/03 16:43:17 joerg Exp $
+bin/mkfontscale
+man/man1/mkfontscale.1
