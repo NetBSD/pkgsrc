@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/03 21:45:46 joerg Exp $
+
+SHA1 (libXfont-1.2.3.tar.bz2) = 97aed7a88c43086a816a3586d08e9ed17411d6d9
+RMD160 (libXfont-1.2.3.tar.bz2) = b9447b970c911f4a615d39a30eaa2caad00f5350
+Size (libXfont-1.2.3.tar.bz2) = 623938 bytes
