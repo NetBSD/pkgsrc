@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/09/24 16:33:33 salo Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/11/03 07:53:05 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -169,7 +169,7 @@ post-build:
 		${WRKSRC:Q}/dist/bin/chrome/installed-chrome.txt
 
 do-install:
-	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR:Q}/moz-install
+	${SETENV} ${SCRIPTS_ENV} DESTDIR=${DESTDIR} ${SH} ${FILESDIR:Q}/moz-install
 
 .include "../../mk/pthread.buildlink3.mk"
 
