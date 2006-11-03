@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1707 2006/11/03 09:36:06 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1708 2006/11/03 09:57:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/qdbm-plus to 1.0.0.1.8.74 [obache 2006-11-03]
 	Updated textproc/hyperestraier to 1.4.8 [obache 2006-11-03]
 	Updated pkgtools/pkg_install to 20061103 [joerg 2006-11-03]
+	Updated devel/p5-Params-Validate] to 0.84 [obache 2006-11-03]
