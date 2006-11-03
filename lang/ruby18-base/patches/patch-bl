@@ -1,0 +1,13 @@
+$NetBSD: patch-bl,v 1.3 2006/11/03 05:36:23 taca Exp $
+
+--- lib/cgi.rb.orig	2006-11-02 22:44:37.000000000 +0900
++++ lib/cgi.rb
+@@ -1018,7 +1018,7 @@ class CGI
+               else
+                 stdinput.read(content_length)
+               end
+-          if c.nil?
++          if c.nil? || c.empty?
+             raise EOFError, "bad content body"
+           end
+           buf.concat(c)
