@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/03 06:57:40 joerg Exp $
 #
 
 DISTNAME=		ipw2200-fw-2.3
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		Damien.Bergamini@Free.FR
 HOMEPAGE=		http://damien.bergamini.free.fr/ipw/
 COMMENT=		Firmware binary images for iwi(4) driver
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=		intel-ipw-license
 
@@ -25,15 +27,16 @@ WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
+INSTALLATION_DIRS+=	libdata/if_iwi
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/if_iwi
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/libdata/if_iwi
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-boot.fw ${PREFIX}/libdata/if_iwi/iwi-boot.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-bss.fw ${PREFIX}/libdata/if_iwi/iwi-bss.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-bss_ucode.fw ${PREFIX}/libdata/if_iwi/iwi-ucode-bss.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-ibss.fw ${PREFIX}/libdata/if_iwi/iwi-ibss.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-ibss_ucode.fw ${PREFIX}/libdata/if_iwi/iwi-ucode-ibss.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer.fw ${PREFIX}/libdata/if_iwi/iwi-sniffer.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer_ucode.fw ${PREFIX}/libdata/if_iwi/iwi-ucode-sniffer.fw
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/libdata/if_iwi
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-boot.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-boot.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-bss.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-bss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-bss_ucode.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-ucode-bss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-ibss.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-ibss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-ibss_ucode.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-ucode-ibss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-sniffer.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer_ucode.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-ucode-sniffer.fw
 
 .include "../../mk/bsd.pkg.mk"
