@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.2 2006/08/14 22:42:04 wiz Exp $
+$NetBSD: patch-al,v 1.3 2006/11/03 07:02:23 wiz Exp $
 
 --- system.mk.orig	2006-05-24 16:23:51.000000000 +0000
 +++ system.mk
@@ -54,7 +54,7 @@ $NetBSD: patch-al,v 1.2 2006/08/14 22:42:04 wiz Exp $
  
 -CFLAGS=-g -Os $(WARN) $(DEFINES) $(EXTRA_INCLUDES) $(INCLUDES)
 -LDFLAGS=-g -Os $(EXTRA_LIBS) $(LIBS)
-+CFLAGS+= $(WARN) $(DEFINES) $(EXTRA_INCLUDES) $(INCLUDES)
++CFLAGS+= $(WARN) $(DEFINES) $(EXTRA_INCLUDES) $(INCLUDES) -fPIC
 +LDFLAGS+= $(EXTRA_LIBS) $(LIBS)
  EXPORT_DYNAMIC=-Xlinker --export-dynamic
  
