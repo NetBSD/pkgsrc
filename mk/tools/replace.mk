@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.177 2006/10/15 01:56:06 minskim Exp $
+# $NetBSD: replace.mk,v 1.178 2006/11/03 19:08:58 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -959,6 +959,14 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .endfor
 
 ######################################################################
+
+# These tools are provided by modular Xorg if there is no native tool
+# available
+#
+TOOLS_DEPENDS.mkfontscale?=	mkfontscale-[0-9]*:../../fonts/mkfontscale
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontscale=mkfontscale
+TOOLS_PATH.mkfontscale=		${TOOLS_PREFIX.mkfontscale}/bin/mkfontscale
+TOOLS_CREATE.mkfontscale=	mkfontscale
 
 # These tools are all supplied by an X11 clients package if there is no
 # native tool available.
