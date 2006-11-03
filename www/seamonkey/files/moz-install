@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.2 2006/11/03 07:53:05 joerg Exp $
+# $NetBSD: moz-install,v 1.3 2006/11/03 13:44:12 joerg Exp $
 
-${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 ${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 ${CHGRP} ${BINGRP} ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 ${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/${MOZILLA}
