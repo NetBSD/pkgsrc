@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/03 16:30:48 joerg Exp $
+
+SHA1 (libfontenc-1.0.2.tar.bz2) = 31e694d6e8390616e6feaf98f03c627fb287eb99
+RMD160 (libfontenc-1.0.2.tar.bz2) = e09eee80b950f45ca7cda3dfe884971132646b44
+Size (libfontenc-1.0.2.tar.bz2) = 229242 bytes
