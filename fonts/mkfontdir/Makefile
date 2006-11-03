@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 16:26:08 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/03 16:48:58 joerg Exp $
 #
 
 DISTNAME=		mkfontdir-1.0.2
@@ -12,6 +12,8 @@ COMMENT=		X11 Font Index Generator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=		mkfontscale>=1.0.1:../../fonts/mkfontscale
 
 GNU_CONFIGURE=		yes
 
