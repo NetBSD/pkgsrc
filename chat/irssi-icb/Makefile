@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/11/03 07:12:25 joerg Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -10,6 +10,8 @@ DISTFILES=	${DISTNAME}.tar.gz ${IRSSI_DISTFILE}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.irssi.org/
 COMMENT=	Irssi plugin to access ICB networks
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../chat/irssi/Makefile.common"
 
@@ -24,6 +26,8 @@ SHLIBTOOL_OVERRIDE=	# empty
 
 CONFIGURE_ARGS+=	--with-irssi=${WRKDIR}/${IRSSI_DISTNAME}
 
+INSTALLATION_DIRS+=	share/doc/irssi
+
 post-extract:
 	cd ${WRKDIR} && ${LN} -s ${IRSSI_DISTNAME:S/a//} ${IRSSI_DISTNAME}
 	${MV} ${WRKDIR}/${DISTNAME} ${WRKDIR}/${IRSSI_DISTNAME}
@@ -31,7 +35,7 @@ post-extract:
 	${CP} ${IRSSI_CONFIG} ${WRKDIR}/${IRSSI_DISTNAME}/irssi-config
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/irssi/README.icb
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/irssi/README.icb
 
 .include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
