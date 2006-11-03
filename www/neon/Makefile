@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/02/05 23:11:26 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2006/11/03 19:16:41 joerg Exp $
 
 DISTNAME=		neon-0.25.5
 PKGREVISION=		2
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.webdav.org/neon/
 COMMENT=		HTTP and WebDAV client library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

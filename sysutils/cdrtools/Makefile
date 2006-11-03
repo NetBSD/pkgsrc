@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/08/28 13:56:22 dsainty Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/03 19:15:45 joerg Exp $
 
 DISTNAME=	cdrtools-2.01
 PKGREVISION=	4
@@ -13,6 +13,7 @@ COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs
 CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,22 +75,22 @@ post-build:
 
 do-install:
 	cd ${WRKSRC}/cdda2wav;						\
-		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${DESTDIR}${PREFIX}/bin;	\
+		${INSTALL_MAN} cdda2wav.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/cdrecord;						\
-		${INSTALL_PROGRAM} OBJ/*/cdrecord ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdrecord.1 ${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_PROGRAM} OBJ/*/cdrecord ${DESTDIR}${PREFIX}/bin;	\
+		${INSTALL_MAN} cdrecord.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/mkisofs;						\
-		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
-		${INSTALL_MAN} mkisofs.8 ${PREFIX}/${PKGMANDIR}/man8
+		${INSTALL_PROGRAM} OBJ/*/mkisofs ${DESTDIR}${PREFIX}/bin;		\
+		${INSTALL_MAN} mkisofs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	cd ${WRKSRC}/mkisofs/diag;					\
 		for f in devdump isodump isoinfo isovfy; do		\
-			${INSTALL_PROGRAM} OBJ/*/$$f ${PREFIX}/bin;	\
-			${INSTALL_MAN} isoinfo.8 ${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
+			${INSTALL_PROGRAM} OBJ/*/$$f ${DESTDIR}${PREFIX}/bin;	\
+			${INSTALL_MAN} isoinfo.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
 		done
 	cd ${WRKSRC}/readcd;						\
-		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
-		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_PROGRAM} OBJ/*/readcd ${DESTDIR}${PREFIX}/bin;		\
+		${INSTALL_MAN} readcd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

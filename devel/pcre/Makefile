@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/10/04 20:23:46 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/11/03 19:22:55 joerg Exp $
 
 DISTNAME=	pcre-6.7
 CATEGORIES=	devel
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

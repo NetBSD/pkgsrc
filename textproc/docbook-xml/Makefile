@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/10/06 15:13:55 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/11/03 19:17:39 joerg Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
@@ -14,6 +14,7 @@ HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	XML DTD designed for computer documentation
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
@@ -47,16 +48,16 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/xml\/docbook$$/ \
 
 pre-install:
 .for ver in ${VER}
-	@[ -d ${DTDDIR}/${ver} ] || ${INSTALL_DATA_DIR} ${DTDDIR}/${ver}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DTDDIR}/${ver}
 .endfor
 
 do-install:
 .for ver in ${VER}
-	@(cd ${DTDDIR}/${ver}; ${UNZIP_CMD} ${DISTDIR}/docbook-xml-${ver}.zip)
-	@(cd ${DTDDIR}/${ver}; ${MV} catalog.xml catalog)
+	cd ${DESTDIR}${DTDDIR}/${ver} && ${UNZIP_CMD} ${DISTDIR}/docbook-xml-${ver}.zip
+	cd ${DESTDIR}${DTDDIR}/${ver} && ${MV} catalog.xml catalog
 .endfor
-	@${SED} -e 's|V4.2|V4.1.2|g' <${DTDDIR}/4.2/catalog \
-	    >${DTDDIR}/4.2/catalog-4.1.2
+	${SED} -e 's|V4.2|V4.1.2|g' <${DESTDIR}${DTDDIR}/4.2/catalog \
+	    >${DESTDIR}${DTDDIR}/4.2/catalog-4.1.2
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
