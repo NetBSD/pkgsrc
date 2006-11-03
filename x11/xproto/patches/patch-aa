@@ -1,0 +1,81 @@
+$NetBSD: patch-aa,v 1.1 2006/11/03 17:03:04 joerg Exp $
+
+--- Xos_r.h.in.orig	2006-11-02 08:15:48.000000000 +0000
++++ Xos_r.h.in
+@@ -188,6 +188,13 @@ extern void XtProcessUnlock(
+ #  endif
+ # endif
+ 
++#undef _XOS_R_H_MTSAFE_DIRENTAPI
++#undef _XOS_R_H_MTSAFE_NETDBAPI
++#undef _XOS_R_H_MTSAFE_PWDAPI
++#undef _XOS_R_H_MTSAFE_UNISTDAPI
++#undef _XOS_R_H_MTSAFE_STRINGAPI
++#undef _XOS_R_H_MTSAFE_TIMEAPI
++#undef _XOS_R_H_MTSAFE_GRPAPI
+ #endif /* !defined WIN32 */
+ 
+ /*
+@@ -226,7 +233,7 @@ extern void XtProcessUnlock(
+ 
+ #if defined(X_INCLUDE_PWD_H) && !defined(_XOS_INCLUDED_PWD_H)
+ # include <pwd.h>
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_PWDAPI)
++# if defined(_XOS_MTSAFE_PWAPI)
+ #  define XOS_USE_MTSAFE_PWDAPI 1
+ # endif
+ #endif
+@@ -410,7 +417,7 @@ typedef int _Xgetpwret;
+ #if defined(X_INCLUDE_NETDB_H) && !defined(_XOS_INCLUDED_NETDB_H) \
+     && !defined(WIN32)
+ # include <netdb.h>
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_NETDBAPI)
++# if defined(_XOS_R_H_MTSAFE_NETDBAPI)
+ #  define XOS_USE_MTSAFE_NETDBAPI 1
+ # endif
+ #endif
+@@ -573,7 +580,7 @@ typedef int _Xgetservbynameparams; /* du
+ #   define dirent direct
+ #  endif
+ # endif
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_DIRENTAPI)
++# if defined(_XOS_R_H_MTSAFE_DIRENTAPI)
+ #  define XOS_USE_MTSAFE_DIRENTAPI 1
+ # endif
+ #endif
+@@ -691,7 +698,7 @@ extern int _Preaddir_r(DIR *, struct dir
+ 
+ #if defined(X_INCLUDE_UNISTD_H) && !defined(_XOS_INCLUDED_UNISTD_H)
+ /* <unistd.h> already included by <X11/Xos.h> */
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_UNISTDAPI)
++# if defined(_XOS_R_H__MTSAFE_UNISTDAPI)
+ #  define XOS_USE_MTSAFE_UNISTDAPI 1
+ # endif
+ #endif
+@@ -831,7 +838,7 @@ typedef struct {
+ 
+ #if defined(X_INCLUDE_STRING_H) && !defined(_XOS_INCLUDED_STRING_H)
+ /* <string.h> has already been included by <X11/Xos.h> */
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_STRINGAPI)
++# if defined(_XOS_R_H_MTSAFE_STRINGAPI)
+ #  define XOS_USE_MTSAFE_STRINGAPI 1
+ # endif
+ #endif
+@@ -883,7 +890,7 @@ typedef char * _Xstrtokparams;
+ 
+ #if defined(X_INCLUDE_TIME_H) && !defined(_XOS_INCLUDED_TIME_H)
+ # include <time.h>
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_TIMEAPI)
++# if defined(_XOS_R_H_MTSAFE_TIMEAPI)
+ #  define XOS_USE_MTSAFE_TIMEAPI 1
+ # endif
+ #endif
+@@ -1046,7 +1053,7 @@ typedef struct tm _Xltimeparams;
+ 
+ #if defined(X_INCLUDE_GRP_H) && !defined(_XOS_INCLUDED_GRP_H)
+ # include <grp.h>
+-# if defined(XUSE_MTSAFE_API) || defined(XUSE_MTSAFE_GRPAPI)
++# if defined(_XOS_R_H_MTSAFE_GRPAPI)
+ #  define XOS_USE_MTSAFE_GRPAPI 1
+ # endif
+ #endif
