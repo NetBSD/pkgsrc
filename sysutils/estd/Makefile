@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/20 07:19:59 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/11/03 19:15:45 joerg Exp $
 
 DISTNAME=	estd-r5
 PKGNAME=	estd-0.5
@@ -9,6 +9,10 @@ MASTER_SITES=	http://www.elektro-eel.org/
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.elektro-eel.org/
 COMMENT=	Dynamically sets the CPU-frequency on SpeedStep-enabled CPUs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	share/examples/rc.d
 
 ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 DragonFly-*-i386 \
 			NetBSD-[4-9]*-x86_64
