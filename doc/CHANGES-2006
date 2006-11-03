@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1719 2006/11/03 22:11:06 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1720 2006/11/03 22:28:11 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5162,3 +5162,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/libXdamage version 1.0.3 [joerg 2006-11-03]
 	Added x11/resourceproto version 1.0.2 [joerg 2006-11-03]
 	Added x11/libXres version 1.0.2 [joerg 2006-11-03]
+	Updated textproc/p5-XML-Simple to 2.16 [seb 2006-11-03]
