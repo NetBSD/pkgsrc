@@ -1,8 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-ab,v 1.7 2006/11/03 12:45:21 joerg Exp $
 
-Note that VERSION is *not* used for the libtool versioning.
-
---- Makefile.in.orig	2001-03-27 14:46:58.000000000 -0800
+--- Makefile.in.orig	2001-03-27 22:46:58.000000000 +0000
 +++ Makefile.in
 @@ -3,12 +3,12 @@
  # DO NOT EDIT BELOW! ##########################################################
@@ -63,26 +61,24 @@ Note that VERSION is *not* used for the libtool versioning.
  
  test:	
  	cd interface && $(MAKE) all
-@@ -65,31 +65,20 @@ slib:
+@@ -64,32 +64,20 @@ slib:
+ 	cd paranoia && $(MAKE) slib
  
  install:
- 	$(INSTALL) -d -m 0755 $(BINDIR)
+-	$(INSTALL) -d -m 0755 $(BINDIR)
 -	$(INSTALL) -m 0755 $(srcdir)/cdparanoia $(BINDIR)
-+	$(LIBTOOL) --mode=install $(INSTALL) -m 0755 $(srcdir)/cdparanoia $(BINDIR)
- 	$(INSTALL) -d -m 0755 $(MANDIR)
- 	$(INSTALL) -d -m 0755 $(MANDIR)/man1
- 	$(INSTALL) -m 0644 $(srcdir)/cdparanoia.1 $(MANDIR)/man1
- 	$(INSTALL) -d -m 0755 $(INCLUDEDIR)
- 	$(INSTALL) -m 0644 $(srcdir)/paranoia/cdda_paranoia.h $(INCLUDEDIR)
- 	$(INSTALL) -d -m 0755 $(LIBDIR)
+-	$(INSTALL) -d -m 0755 $(MANDIR)
+-	$(INSTALL) -d -m 0755 $(MANDIR)/man1
+-	$(INSTALL) -m 0644 $(srcdir)/cdparanoia.1 $(MANDIR)/man1
+-	$(INSTALL) -d -m 0755 $(INCLUDEDIR)
+-	$(INSTALL) -m 0644 $(srcdir)/paranoia/cdda_paranoia.h $(INCLUDEDIR)
+-	$(INSTALL) -d -m 0755 $(LIBDIR)
 -	$(INSTALL) -m 0644 $(srcdir)/paranoia/libcdda_paranoia.so.0.$(VERSION) $(LIBDIR)
 -	$(INSTALL) -m 0644 $(srcdir)/paranoia/libcdda_paranoia.a $(LIBDIR)
-+	$(LIBTOOL) --mode=install $(INSTALL) -m 0644 $(srcdir)/paranoia/libcdda_paranoia.la $(LIBDIR)
- 	$(INSTALL) -m 0644 $(srcdir)/interface/cdda_interface.h $(INCLUDEDIR)
+-	$(INSTALL) -m 0644 $(srcdir)/interface/cdda_interface.h $(INCLUDEDIR)
 -	$(INSTALL) -m 0644 $(srcdir)/interface/libcdda_interface.so.0.$(VERSION) $(LIBDIR)
 -	$(INSTALL) -m 0644 $(srcdir)/interface/libcdda_interface.a $(LIBDIR)
-+	$(LIBTOOL) --mode=install $(INSTALL) -m 0644 $(srcdir)/interface/libcdda_interface.la $(LIBDIR)
- 	$(INSTALL) -m 0644 $(srcdir)/utils.h $(INCLUDEDIR)
+-	$(INSTALL) -m 0644 $(srcdir)/utils.h $(INCLUDEDIR)
 -	ln -fs libcdda_interface.so.0.$(VERSION) \
 -		$(LIBDIR)/libcdda_interface.so.0
 -	ln -fs libcdda_interface.so.0.$(VERSION) \
@@ -91,6 +87,17 @@ Note that VERSION is *not* used for the libtool versioning.
 -		$(LIBDIR)/libcdda_paranoia.so.0
 -	ln -fs libcdda_paranoia.so.0.$(VERSION) \
 -		$(LIBDIR)/libcdda_paranoia.so
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(BINDIR)
++	$(LIBTOOL) --mode=install ${BSD_INSTALL_PROGRAM} $(srcdir)/cdparanoia ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} $(srcdir)/cdparanoia.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(INCLUDEDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(LIBDIR)
++	${BSD_INSTALL_DATA} $(srcdir)/interface/cdda_interface.h ${DESTDIR}$(INCLUDEDIR)
++	${BSD_INSTALL_DATA} $(srcdir)/paranoia/cdda_paranoia.h ${DESTDIR}$(INCLUDEDIR)
++	${BSD_INSTALL_DATA} $(srcdir)/utils.h ${DESTDIR}$(INCLUDEDIR)
++	$(LIBTOOL) --mode=install ${BSD_INSTALL_LIB} $(srcdir)/paranoia/libcdda_paranoia.la ${DESTDIR}$(LIBDIR)
++	$(LIBTOOL) --mode=install ${BSD_INSTALL_LIB} $(srcdir)/interface/libcdda_interface.la ${DESTDIR}$(LIBDIR)
  
  cdparanoia:	$(OFILES) $(LIBDEP)
 -		$(LD) $(CFLAGS) $(LDFLAGS) $(OFILES) \
