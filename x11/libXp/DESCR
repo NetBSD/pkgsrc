@@ -1,0 +1,5 @@
+The X Print Service Extension Library (libXp) provides public APIs
+to allow client applications to render to non-display devices.
+It can query about printers, send jobs, and more.
+
+This is from the modular X.org.
