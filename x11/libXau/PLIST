@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 17:56:32 joerg Exp $
+include/X11/Xauth.h
+lib/libXau.la
+lib/pkgconfig/xau.pc
+man/man3/Xau.3
+man/man3/XauDisposeAuth.3
+man/man3/XauFileName.3
+man/man3/XauGetAuthByAddr.3
+man/man3/XauGetBestAuthByAddr.3
+man/man3/XauLockAuth.3
+man/man3/XauReadAuth.3
+man/man3/XauUnlockAuth.3
+man/man3/XauWriteAuth.3
