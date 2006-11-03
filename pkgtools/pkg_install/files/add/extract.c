@@ -1,4 +1,4 @@
-/*	$NetBSD: extract.c,v 1.13 2005/11/22 15:44:59 ben Exp $	*/
+/*	$NetBSD: extract.c,v 1.14 2006/11/03 09:35:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.13 2005/11/22 15:44:59 ben Exp $");
+__RCSID("$NetBSD: extract.c,v 1.14 2006/11/03 09:35:14 joerg Exp $");
 #endif
 #endif
 
@@ -243,7 +243,8 @@ extract_plist(char *home, package_t *pkg)
 				} else {
 					/* rename failed, try copying with a big tar command */
 					if (last_chdir != Directory) {
-						pushout(last_chdir);
+						if (last_chdir != NULL)
+							pushout(last_chdir);
 						last_chdir = Directory;
 					} else if (p->name[0] == '/') {
 						pushout(Directory);
