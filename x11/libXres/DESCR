@@ -1,0 +1,5 @@
+This package contains the X Resource Information Extension Library
+from the modular X.org project.
+
+X-Resource is an extension that allows a client to query the X
+server about its usage of various resources.
