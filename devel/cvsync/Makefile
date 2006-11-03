@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.82 2006/11/03 19:22:55 joerg Exp $
 #
 
 DISTNAME=	cvsync-0.24.19
@@ -11,9 +11,10 @@ HOMEPAGE=	http://www.cvsync.org/
 COMMENT=	Portable incremental cvs repository syncer
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/cvsync
 
 MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q}
 MAKE_ENV+=	MANMODE=${MANMODE:Q}
@@ -55,11 +56,10 @@ MAKE_ENV+=	HASH_TYPE="openssl"
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/cvsync.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-FreeBSD.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-NetBSD.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-OpenBSD.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/cvsync.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-FreeBSD.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-NetBSD.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-OpenBSD.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
