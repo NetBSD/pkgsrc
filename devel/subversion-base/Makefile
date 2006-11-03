@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2006/10/13 12:25:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.39 2006/11/03 19:34:11 joerg Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/subversion/Makefile.common"
 
@@ -37,19 +38,20 @@ SUBST_SED.paths=        -e "s|/usr/local/bin/|${PREFIX}/bin|g"
 SUBST_MESSAGE.paths=    Fixing hardcoded /usr/local/bin paths.
 
 post-install:
-	${INSTALL_DATA_DIR} ${SVNDOC}
-	cd ${WRKSRC} && ${INSTALL_DATA} INSTALL README ${SVNDOC}
-	cd ${WRKSRC}/doc/user && ${INSTALL_DATA} *.html *.txt ${SVNDOC}
-	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/backup
-	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/cgi
-	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/hook-scripts
+	${INSTALL_DATA_DIR} ${DESTDIR}${SVNDOC}
+	cd ${WRKSRC} && ${INSTALL_DATA} INSTALL README ${DESTDIR}${SVNDOC}
+	cd ${WRKSRC}/doc/user && ${INSTALL_DATA} *.html *.txt ${DESTDIR}${SVNDOC}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SVNEXAMPLES}/backup
+	${INSTALL_DATA_DIR} ${DESTDIR}${SVNEXAMPLES}/cgi
+	${INSTALL_DATA_DIR} ${DESTDIR}${SVNEXAMPLES}/hook-scripts
 	${INSTALL_DATA} ${WRKSRC}/tools/backup/hot-backup.py \
-		${SVNEXAMPLES}/backup
-	${INSTALL_DATA} ${WRKSRC}/contrib/cgi/tweak-log.cgi ${SVNEXAMPLES}/cgi
+		${DESTDIR}${SVNEXAMPLES}/backup
+	${INSTALL_DATA} ${WRKSRC}/contrib/cgi/tweak-log.cgi \
+		${DESTDIR}${SVNEXAMPLES}/cgi
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/commit-email.pl \
-		${SVNEXAMPLES}/hook-scripts
+		${DESTDIR}${SVNEXAMPLES}/hook-scripts
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/svnperms* \
-		${SVNEXAMPLES}/hook-scripts
+		${DESTDIR}${SVNEXAMPLES}/hook-scripts
 
 .PHONY: svn-build-outputs-hack
 # Use this target to update the build-outputs.mk hack for sub-packages.
