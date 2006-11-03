@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1710 2006/11/03 10:42:48 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1711 2006/11/03 11:24:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5111,3 +5111,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_install to 20061103 [joerg 2006-11-03]
 	Updated devel/p5-Params-Validate to 0.84 [obache 2006-11-03]
 	Updated devel/p5-Module-Install to 0.64 [obache 2006-11-03]
+	Updated mail/p5-Mail-ListDetector to 0.34 [obache 2006-11-03]

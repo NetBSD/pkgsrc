@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5670 2006/11/03 11:13:26 taca Exp $
+$NetBSD: TODO,v 1.5671 2006/11/03 11:24:43 obache Exp $
 
 Suggested new packages
 ======================
@@ -779,7 +779,6 @@ Suggested package updates
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
-	o p5-Mail-ListDetector-0.34 [pkg/34365]
 	o p5-Mail-Sendmail-0.79
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
