@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1713 2006/11/03 15:15:04 is Exp $
+>$NetBSD: CHANGES-2006,v 1.1714 2006/11/03 16:45:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5114,3 +5114,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-Mail-ListDetector to 0.34 [obache 2006-11-03]
 	Updated devel/p5-prefork to 1.01 [obache 2006-11-03]
 	Added databases/pgtclng version 1.5.3 [is 2006-11-03]
+	Added fonts/mkfontdir version 1.0.2 [joerg 2006-11-03]
+	Added fonts/mkfontscale version 1.0.2 [joerg 2006-11-03]
+	Added fonts/libfontenc version 1.0.2 [joerg 2006-11-03]
