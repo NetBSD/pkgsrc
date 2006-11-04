@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2006/08/05 12:44:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2006/11/04 22:56:48 salo Exp $
 
-DISTNAME=	drupal-4.7.3
+DISTNAME=	drupal-4.7.4
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -14,6 +14,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
 NO_BUILD=	YES
 DRUPAL=		${PREFIX}/share/drupal
 PAX_DIRS=	database includes misc modules scripts themes
+BUILD_DEFS+=	APACHE_USER APACHE_GROUP
 
 CONF_FILES=	${PREFIX}/share/examples/drupal/drupal.conf \
 		${PKG_SYSCONFDIR}/drupal.conf
@@ -59,5 +60,9 @@ do-install:
 
 	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DRUPAL}/files
 	${CHMOD} 0770 ${DRUPAL}/files
+
+post-install:
+	${FIND} ${DRUPAL}/themes -name \*.jpg | ${XARGS} ${CHMOD} 0644
+	${FIND} ${DRUPAL}/themes -name \*.png | ${XARGS} ${CHMOD} 0644
 
 .include "../../mk/bsd.pkg.mk"
