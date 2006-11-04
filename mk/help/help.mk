@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.1 2006/10/23 14:40:15 rillig Exp $
+# $NetBSD: help.mk,v 1.2 2006/11/04 22:04:44 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -9,7 +9,7 @@
 .if !defined(_PKGSRC_HELP_MK)
 _PKGSRC_HELP_MK=	# defined
 
-_HELP_FILES=		mk/*.mk mk/*/*.mk
+_HELP_FILES=		mk/*.mk mk/*/*.mk mk/defaults/mk.conf
 
 .if defined(VARNAME)
 TOPIC?=		${VARNAME}
