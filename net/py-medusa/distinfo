@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/04 17:48:10 wiz Exp $
+
+SHA1 (medusa-0.5.4.tar.gz) = f03f1a10b1f5b8b3c9a869e81a7c5c9f8f676188
+RMD160 (medusa-0.5.4.tar.gz) = 84da6140aaf3e677e86014a4e87c83ada39776ec
+Size (medusa-0.5.4.tar.gz) = 107744 bytes
