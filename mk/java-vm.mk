@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.48 2006/11/04 21:02:57 rillig Exp $
+# $NetBSD: java-vm.mk,v 1.49 2006/11/04 21:22:30 rillig Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -27,8 +27,8 @@
 #	should be set to "yes". It can also be set to "1.4" or "1.5" to
 #	require an even more recent implementation.
 #
-#	Possible values: (undefined) yes 1.4 1.5
-#	Default value: (undefined)
+#	Possible values: yes no 1.4 1.5
+#	Default value: no
 #
 # PKG_JVMS_ACCEPTED
 #	The list of JVMs that may be used as possible implementations.
@@ -47,28 +47,19 @@ JAVA_VM_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# By default, assume we need the JDK.
 USE_JAVA?=	yes
-.if !empty(USE_JAVA:M[rR][uU][nN])
-USE_JAVA=	run
-.endif
+USE_JAVA2?=	no
 
 PKG_JVM_DEFAULT?=	# empty
 PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JVMs that may be used with java-vm.mk.
 #
-.if defined(USE_JAVA2) && ${USE_JAVA2} == "1.5"
-_PKG_JVMS?=		sun-jdk15 scsl-jdk15
-.elif defined(USE_JAVA2) && ${USE_JAVA2} == "1.4"
-_PKG_JVMS?=		sun-jdk14 sun-jdk15 scsl-jdk15 jdk14
-.elif defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
-_PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe \
-			sun-jdk15 scsl-jdk15 scsl-jdk15 jdk14 # win32-jdk
-.else
-_PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe \
-			sun-jdk15 scsl-jdk15 jdk14 # win32-jdk
-.endif
+_PKG_JVMS.1.5=		sun-jdk15 scsl-jdk15
+_PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
+_PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe # win32-jdk
+_PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
+_PKG_JVMS=		${_PKG_JVMS.${USE_JAVA2}}
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
 # default JVM.  Note that this has lower precedence than PKG_JVM_DEFAULT.
