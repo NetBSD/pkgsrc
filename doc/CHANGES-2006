@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1721 2006/11/04 10:32:48 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1722 2006/11/04 11:14:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/libXres version 1.0.2 [joerg 2006-11-03]
 	Updated textproc/p5-XML-Simple to 2.16 [seb 2006-11-03]
 	Updated devel/p5-Want to 0.12 [obache 2006-11-04]
+	Updated devel/p5-Test-Memory-Cycle to 1.04 [obache 2006-11-04]
