@@ -1,4 +1,4 @@
-# $NetBSD: pam.buildlink3.mk,v 1.7 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.8 2006/11/04 22:18:58 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a PAM implementation.  pam.buildlink3.mk will:
@@ -72,8 +72,8 @@ PAM_TYPE=	none
 .  endif
 PAMBASE=	${BUILDLINK_PREFIX.${PAM_TYPE}}
 
-BUILD_DEFS+=	PAM_TYPE
-BUILD_DEFS+=	PAMBASE
+BUILD_DEFS+=		PAM_DEFAULT
+BUILD_DEFS_EFFECTS+=	PAMBASE PAM_TYPE
 .endif	# PAM_BUILDLINK3_MK
 
 .if ${PAM_TYPE} == "none"
