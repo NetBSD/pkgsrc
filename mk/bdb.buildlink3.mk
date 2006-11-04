@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.17 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.18 2006/11/04 22:18:41 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  It abstracts finding the
@@ -30,20 +30,25 @@
 #	  the Berkeley DB library;
 #       * set BDB_TYPE to the Berkeley DB implementation used.
 #
-# There are two user-settable variables that can be used to control
-# the selection of the Berkeley DB implementation:
+# User-settable variables:
 #
-# BDB_DEFAULT is a user-settable variable whose value represents the
-#	package we use when either a db-1.85 interface isn't required,
-#	or a db-1.85 interface is required, but it's not built-in.
-#       This should be set in /etc/mk.conf, and should not be set by pkg
-#	Makefiles. 
+# BDB_DEFAULT
+#	This value represents the package we use when either a db-1.85
+#	interface isn't required, or a db-1.85 interface is required,
+#	but it's not built-in.
 #
-# BDB185_DEFAULT is a user-settable variable whose value represents the
-#	package we use when a db-1.85 interface is required.  It defaults
-#	to "db1" if it's built-in, or to ${BDB_DEFAULT} otherwise.
+#	FIXME: Improve the wording of the text above so that one can
+#	understand it.
 #
-# BDB_ACCEPTED is a package-settable list of Berkeley DB implementations
+# BDB185_DEFAULT
+#	The package we use when a db-1.85 interface is required.
+#	It defaults to "db1" if it's built-in, or to ${BDB_DEFAULT}
+#	otherwise.
+#
+# Package-settable variables:
+#
+# BDB_ACCEPTED
+#	The list of Berkeley DB implementations
 #       that may be used by the package.  Note that if the list does not
 #	include db1 and does not include BDB_DEFAULT, the package will not
 #	build - this is the second unhandled case above.
@@ -121,8 +126,8 @@ BDB_TYPE=	none
 BDBBASE=	${BUILDLINK_PREFIX.${BDB_TYPE}}
 BDB_LIBS=	${BUILDLINK_LDADD.${BDB_TYPE}}
 
-BUILD_DEFS+=	BDB_TYPE
-BUILD_DEFS+=	BDBBASE
+BUILD_DEFS+=		BDB_DEFAULT BDB185_DEFAULT
+BUILD_DEFS_EFFECTS+=	BDBBASE BDB_LIBS BDB_TYPE
 
 .endif	# BDB_BUILDLINK3_MK
 

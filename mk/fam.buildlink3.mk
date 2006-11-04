@@ -1,4 +1,4 @@
-# $NetBSD: fam.buildlink3.mk,v 1.4 2005/09/03 21:34:19 jlam Exp $
+# $NetBSD: fam.buildlink3.mk,v 1.5 2006/11/04 22:18:58 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a FAM implementation.  fam.buildlink3.mk will:
@@ -40,8 +40,8 @@ FAM_TYPE=	none
 .  endif
 FAMBASE=	${BUILDLINK_PREFIX.${FAM_TYPE}}
 
-BUILD_DEFS+=	FAM_TYPE
-BUILD_DEFS+=	FAMBASE
+BUILD_DEFS+=		FAM_DEFAULT
+BUILD_DEFS_EFFECTS+=	FAMBASE FAM_TYPE
 .endif	# MK_FAM_BUILDLINK3_MK
 
 .if ${FAM_TYPE} == "none"
