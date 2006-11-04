@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1729 2006/11/04 18:37:28 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1730 2006/11/04 21:45:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/phpmyadmin to 2.9.0.3 [tron 2006-11-04]
 	Added net/py-medusa version 0.5.4 [wiz 2006-11-04]
 	Updated devel/bzr to 0.12 [wiz 2006-11-04]
+	Updated mail/dovecot to 1.0rc11 [ghen 2006-11-04]
