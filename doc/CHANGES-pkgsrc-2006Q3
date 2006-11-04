@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.33 2006/11/04 22:25:34 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.34 2006/11/04 22:57:08 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -85,3 +85,5 @@ Pullup ticket 1900 - requested by tron
 security update for phpmyadmin
 Pullup ticket 1873 - requested by adrianp
 security update for bugzilla
+Pullup ticket 1874 - requested by adrianp
+security update for drupal
