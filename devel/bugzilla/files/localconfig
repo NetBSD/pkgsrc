@@ -17,7 +17,7 @@ $index_html = 0;
 # viewer), we need the cvs binary to access files and revisions.
 # Because it's possible that this program is not in your path, you can specify
 # its location here.  Please specify the full path to the executable.
-$cvsbin = "/usr/bin/cvs";
+$cvsbin = "@CVS@";
 
 
 
@@ -71,7 +71,7 @@ $webservergroup = "@BZ_WEB_GROUP@";
 # can be obtained by listing Bugzilla/DB directory - every module corresponds
 # to one supported database and the name corresponds to a driver name.
 #
-$db_driver = "mysql";
+$db_driver = "@DBDRIVER@";
 
 
 
@@ -115,3 +115,5 @@ $db_sock = '';
 # doesn't work)
 #
 $db_check = 1;
+
+

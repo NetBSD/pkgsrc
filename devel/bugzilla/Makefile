@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2006/11/04 22:23:14 salo Exp $
 #
 
-DISTNAME=	bugzilla-2.20.1
-PKGREVISION=	1
+DISTNAME=	bugzilla-2.22.1
 CATEGORIES=	www devel
-MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=webtools/}
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.bugzilla.org/
@@ -12,15 +11,16 @@ COMMENT=	Web based bug tracking system
 
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
-DEPENDS+=	p5-DBD-mysql>=2.9003:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBI>=1.38:../../databases/p5-DBI
 DEPENDS+=	p5-File-Spec>=0.84:../../devel/p5-File-Spec
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
-DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
+DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
 DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
-DEPENDS+=	p5-MailTools>=1.65:../../mail/p5-MailTools
+DEPENDS+=	p5-MailTools>=1.74:../../mail/p5-MailTools
+DEPENDS+=	p5-MIME-Base64>=3.01:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-MIME-tools>=5.406:../../mail/p5-MIME-tools
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -30,8 +30,9 @@ NO_BUILD=	YES
 
 BZ_WEB_GROUP?=	${APACHE_GROUP}
 SENDMAIL?=	/usr/sbin/sendmail
+CVS?=		/usr/bin/cvs
 
-BUILD_DEFS+=	BZ_WEB_GROUP SENDMAIL APACHE_USER
+BUILD_DEFS+=	BZ_WEB_GROUP SENDMAIL APACHE_USER APACHE_GROUP CVS
 
 MESSAGE_SUBST+=	BZDIR=${BZDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
@@ -52,6 +53,8 @@ SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
 SUBST_SED.conf=		-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.conf+=	-e "s|@BZDIR@|${BZDIR}|g"
+SUBST_SED.conf+=	-e "s|@CVS@|${CVS}|g"
+SUBST_SED.conf+=	-e "s|@DBDRIVER@|${DBDRIVER}|g"
 SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 
 post-extract:
@@ -82,10 +85,8 @@ do-install:
 
 	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${BZDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.html ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.js ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/ant.jpg ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/duplicates.xul ${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/Bugzilla.pm ${BZDIR}
@@ -104,5 +105,5 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/${i}
 .endfor
 
-# .include "../../mk/apache.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
