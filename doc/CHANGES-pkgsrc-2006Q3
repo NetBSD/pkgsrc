@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.31 2006/11/02 09:03:17 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.32 2006/11/04 16:47:33 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -77,3 +77,9 @@ Pullup ticket 1893 - requested by tron
 security update for wireshark
 Pullup ticket 1895 - requested by joerg
 install fix for mutt
+Pullup ticket 1898 - requested by adrianp
+security fix for php
+Pullup ticket 1899 - requested by adrianp
+security fix for php
+Pullup ticket 1900 - requested by tron
+security update for phpmyadmin
