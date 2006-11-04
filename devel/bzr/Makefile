@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/10/22 06:52:57 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/04 18:36:14 wiz Exp $
 #
 
-DISTNAME=		bzr-0.11
+DISTNAME=		bzr-0.12
 CATEGORIES=		devel
 MASTER_SITES=		http://bazaar-vcs.org/releases/src/
 
@@ -17,6 +17,18 @@ TEST_TARGET=		check
 
 PYTHON_VERSIONS_ACCEPTED=	24
 PYTHON_PATCH_SCRIPTS=		bzr
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+DEPENDS+=		${PYPKGPREFIX}-medusa>=0:../../net/py-medusa
+.endif
+
+SUBST_CLASSES+=			python
+SUBST_MESSAGE.python+=		Fix python path for test case.
+SUBST_STAGE.python+=		post-extract
+SUBST_FILES.python+=		Makefile
+SUBST_SED.python+=		-e 's,python ,${PYTHONBIN} ,'
 
 post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} generate_docs.py man
