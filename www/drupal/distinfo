@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2006/08/05 12:44:02 adrianp Exp $
+$NetBSD: distinfo,v 1.11.2.1 2006/11/04 22:56:48 salo Exp $
 
-SHA1 (drupal-4.7.3.tar.gz) = 6055aa45086133b81c4234d9059b7a1dbca7e0d6
-RMD160 (drupal-4.7.3.tar.gz) = b302287bbae08fe0c3829cc83a6bc4419822dad0
-Size (drupal-4.7.3.tar.gz) = 484988 bytes
+SHA1 (drupal-4.7.4.tar.gz) = 9fc022c817c5801f5373eb664cb90c2f0ec6aed2
+RMD160 (drupal-4.7.4.tar.gz) = c2875e17922aa23e56f25750cab2d717b6db998c
+Size (drupal-4.7.4.tar.gz) = 490920 bytes
