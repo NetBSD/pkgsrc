@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1726 2006/11/04 12:10:54 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1727 2006/11/04 15:51:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5170,3 +5170,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-SNMP_Session to 1.08 [obache 2006-11-04]
 	Updated misc/p5-Locale-Maketext-Simple to 0.18 [obache 2006-11-04]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.62 [obache 2006-11-04]
+	Updated databases/phpmyadmin to 2.9.0.3 [tron 2006-11-04]
