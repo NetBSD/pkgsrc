@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1724 2006/11/04 11:33:35 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1725 2006/11/04 11:57:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5168,3 +5168,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/php4 to 4.4.4nb3 [adrianp 2006-11-04]
 	Updated lang/php5 to 5.1.6nb3 [adrianp 2006-11-04]
 	Updated net/p5-SNMP_Session to 1.08 [obache 2006-11-04]
+	Updated misc/p5-Locale-Maketext-Simple to 0.18 [obache 2006-11-04]
