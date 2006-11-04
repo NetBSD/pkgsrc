@@ -1,8 +1,15 @@
-# $NetBSD: bsd.install-vars.mk,v 1.3 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.4 2006/11/04 07:42:51 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
 # bsd.install.mk is included.
+#
+# Package-settable variables:
+#
+# INSTALLATION_DIRS_FROM_PLIST
+#	If set to "yes", the static PLIST files of the package will
+#	be used to determine which directories need to be created before
+#	the "real" installation should start.
 #
 
 # If a package sets INSTALLATION_DIRS, then it's known to pre-create
@@ -12,6 +19,12 @@
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 NO_MTREE=	yes
 .endif
+
+INSTALLATION_DIRS_FROM_PLIST?=	no
+.if !empty(INSTALLATION_DIRS_FROM_PLIST:M[Yy][Ee][Ss])
+NO_MTREE=	yes
+.endif
+
 #
 # Certain classes of packages never need to run mtree during installation
 # because they manage the creation of their own directories.

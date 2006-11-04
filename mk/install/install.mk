@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.25 2006/11/03 15:48:48 joerg Exp $
+# $NetBSD: install.mk,v 1.26 2006/11/04 07:42:51 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -133,6 +133,9 @@ _INSTALL_ALL_TARGETS+=		install-check-umask
 _INSTALL_ALL_TARGETS+=		check-files-pre
 .endif
 _INSTALL_ALL_TARGETS+=		install-makedirs
+.if !empty(INSTALLATION_DIRS_FROM_PLIST:M[Yy][Ee][Ss])
+_INSTALL_ALL_TARGETS+=		install-dirs-from-PLIST
+.endif
 .if ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		pre-install-script
 .endif
@@ -264,6 +267,33 @@ install-makedirs:
 		esac;							\
 	done
 .endif	# INSTALLATION_DIRS
+
+# Creates the directories for all files that are mentioned in the static
+# PLIST files of the package, to make the declaration of
+# INSTALLATION_DIRS redundant in some cases.
+#
+# To enable this, the variable INSTALLATION_DIRS_FROM_PLIST must be set
+# to "yes".
+#
+.PHONY: install-dirs-from-PLIST
+install-dirs-from-PLIST:
+	@${STEP_MSG} "Creating installation directories from PLIST files"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${CAT} ${PLIST_SRC} | sed -n -e 's,\\,\\\\,' -e 's,^man,${PKGMANDIR},' -e 's,^\([^$$@]*\)/[^/]*$$,\1,p' \
+	| while read dir; do						\
+		if [ -f "${DESTDIR}/${PREFIX}/$$dir" ]; then		\
+			${ERROR_MSG} "[install.mk] $$dir should be a directory, but is a file."; \
+			exit 1;						\
+		fi;							\
+		case "$$dir" in						\
+		*bin|*bin/*|*libexec|*libexec/*)			\
+			${INSTALL_PROGRAM_DIR} "${DESTDIR}${PREFIX}/$$dir";; \
+		${PKGMANDIR}/*)						\
+			${INSTALL_MAN_DIR} "${DESTDIR}${PREFIX}/$$dir";; \
+		*)							\
+			${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/$$dir";; \
+		esac;							\
+	done
 
 ######################################################################
 ### pre-install, do-install, post-install (PUBLIC, override)
