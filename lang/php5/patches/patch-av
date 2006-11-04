@@ -1,0 +1,32 @@
+$NetBSD: patch-av,v 1.2.2.1 2006/11/04 16:25:31 ghen Exp $
+
+# CVE-2006-5465
+
+--- ext/standard/html.c.orig	2006-02-25 21:32:11.000000000 +0000
++++ ext/standard/html.c
+@@ -1096,7 +1096,7 @@ PHPAPI char *php_escape_html_entities(un
+ 
+ 		matches_map = 0;
+ 
+-		if (len + 9 > maxlen)
++		if (len + 16 > maxlen)
+ 			replaced = erealloc (replaced, maxlen += 128);
+ 
+ 		if (all) {
+@@ -1121,9 +1121,15 @@ PHPAPI char *php_escape_html_entities(un
+ 			}
+ 
+ 			if (matches_map) {
++				int l = strlen(rep);
++				/* increase the buffer size */
++				if (len + 2 + l >= maxlen) {
++					replaced = erealloc(replaced, maxlen += 128);
++				}
++
+ 				replaced[len++] = '&';
+ 				strcpy(replaced + len, rep);
+-				len += strlen(rep);
++				len += l;
+ 				replaced[len++] = ';';
+ 			}
+ 		}
