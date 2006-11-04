@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/11/23 22:17:32 wiz Exp $
+$NetBSD: distinfo,v 1.4 2006/11/04 11:13:29 obache Exp $
 
-SHA1 (Test-Memory-Cycle-1.02.tar.gz) = 10124ab6c8ef8457ed2aa3dd604d3fdf87f774d6
-RMD160 (Test-Memory-Cycle-1.02.tar.gz) = 77b51cf534c625028b6f8ceaf5313c7c2e393570
-Size (Test-Memory-Cycle-1.02.tar.gz) = 4607 bytes
+SHA1 (Test-Memory-Cycle-1.04.tar.gz) = c451b49cd52ce5943a43efaf64bff877742c3e99
+RMD160 (Test-Memory-Cycle-1.04.tar.gz) = e28c0d844b5d917668498624afb1eb3af8d7d525
+Size (Test-Memory-Cycle-1.04.tar.gz) = 5128 bytes
