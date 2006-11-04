@@ -1,30 +1,46 @@
-# $NetBSD: java-vm.mk,v 1.47 2006/05/15 19:44:06 tv Exp $
+# $NetBSD: java-vm.mk,v 1.48 2006/11/04 21:02:57 rillig Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
-# build-time or at run-time.  java-vm.mk will:
+# build-time or at run-time.
 #
-#	* set PKG_JVM and PKG_JAVA_HOME to the name of the JVM used and
-#	  to the directory in which the JVM is installed, respectively;
+# User-settable variables:
 #
-#	* add a full dependency on the JRE and possibly a build dependency
-#	  on the JDK.
+# PKG_JVM_DEFAULT
+#	The JVM that should be used if nothing particular is specified.
 #
-# There are four variables used to tweak the JVM selection:
+#	Possible values: jdk sun-jdk13 blackdown-jdk13 kaffe
+#		sun-jdk14 jdk14 sun-jdk15 scsl-jdk15
+#	Default value: (platform-dependent)
 #
-# USE_JAVA is used to note whether a build-time dependency on the JDK is
-#	added (the default).  If USE_JAVA is set to "run", then we _don't_
-#	add the dependency on the JDK.  The default value is "yes".
+# Package-settable variables:
 #
-# USE_JAVA2 is used to note that the package requires a Java2 implementation.
-#	It's undefined by default, but may be set to "yes" or to one of
-#	1.4 or 1.5
+# USE_JAVA
+#	When set to "yes", a build-time dependency on the JDK is added.
+#	When set to "run", a run-time dependency on the JRE is added.
 #
-# PKG_JVM_DEFAULT is a user-settable variable whose value is the default
-#	JVM to use.
+#	Possible values: yes run
+#	Default value: yes
 #
-# PKG_JVMS_ACCEPTED is a package-settable list of JVMs that may be used as
-#	possible dependencies for the package.
+# USE_JAVA2
+#	When the package needs a Java 2 implementation, this variable
+#	should be set to "yes". It can also be set to "1.4" or "1.5" to
+#	require an even more recent implementation.
+#
+#	Possible values: (undefined) yes 1.4 1.5
+#	Default value: (undefined)
+#
+# PKG_JVMS_ACCEPTED
+#	The list of JVMs that may be used as possible implementations.
+#
+# Variables set by this file:
+#
+# PKG_JVM
+#	The name of the selected Java implementation.
+#
+# PKG_JAVA_HOME
+#	The directory where the JVM is installed.
+#
 
 .if !defined(JAVA_VM_MK)
 JAVA_VM_MK=	# defined
