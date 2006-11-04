@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.1 2006/10/23 14:40:15 rillig Exp $
+# $NetBSD: help.awk,v 1.2 2006/11/04 22:05:43 rillig Exp $
 #
 
 BEGIN {
@@ -36,7 +36,8 @@ BEGIN {
 	w2 = ($2 == tolower($2)) ? toupper($2) : $2;
 
 	if ((w1 == uctopic"?=") ||
-	    (w1 == "#"uctopic"=") ||
+	    (index(w1, "#"uctopic"=") == 1) ||
+	    (index(w1, "#"uctopic"?=") == 1) ||
 	    (w1 == "#" && last_line_was_empty &&
 	     (w2 == uctopic || w2 == uctopic":"))) {
 		var = 1;
