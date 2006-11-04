@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/08/28 08:28:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2006/11/04 00:42:30 rillig Exp $
 #
 
 DISTNAME=	dbus-0.92
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
 
@@ -57,9 +58,11 @@ PKG_SYSCONFSUBDIR=	dbus-1
 MAKE_DIRS=		${PKG_SYSCONFDIR}/event.d
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/system.d
 
+DOCDIR=			${PREFIX}/share/doc/dbus
 EGDIR=			${PREFIX}/share/examples/dbus
 CONF_FILES=		${EGDIR}/session.conf ${PKG_SYSCONFDIR}/session.conf
 CONF_FILES+=		${EGDIR}/system.conf ${PKG_SYSCONFDIR}/system.conf
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 
 RCD_SCRIPTS=		dbus
 
@@ -67,6 +70,9 @@ PKG_GROUPS=		messagebus
 PKG_USERS=		messagebus:messagebus
 PKG_GECOS.messagebus=	System message bus
 PKG_HOME.messagebus=	${VARBASE}/run/dbus
+
+post-install:
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.txt ${DOCDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
