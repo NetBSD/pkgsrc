@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.643 2006/10/22 23:22:28 rpaulo Exp $
+# $NetBSD: Makefile,v 1.644 2006/11/04 17:48:40 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -363,6 +363,7 @@ SUBDIR+=	py-google
 SUBDIR+=	py-kenosis
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
+SUBDIR+=	py-medusa
 SUBDIR+=	py-mimelib
 SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
