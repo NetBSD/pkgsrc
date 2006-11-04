@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/02 22:07:06 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/11/04 10:16:37 rillig Exp $
 #
 
 DISTNAME=	buildtool-0.16
@@ -20,6 +20,7 @@ PKG_SYSCONFSUBDIR=	buildtool
 
 CONFIGURE_ARGS+=	-p ${PREFIX}
 CONFIGURE_ARGS+=	-c ${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	-M ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		SH=${SH:Q}
 
 post-install:
