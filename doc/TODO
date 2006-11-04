@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5678 2006/11/04 15:51:12 tron Exp $
+$NetBSD: TODO,v 1.5679 2006/11/04 18:37:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,6 @@ Suggested package updates
 	o bsdiff-4.3 [pkg/34429]
 	o bwidget-1.7.0
 	o byacc-20050813
-	o bzr-0.12
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.11.0
