@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/31 22:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/11/05 17:35:58 joerg Exp $
 
 DISTNAME=	opencdk-0.5.11
 CATEGORIES=	security devel
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	Open Crypto Development Kit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -25,13 +26,12 @@ HTMLDIR=	${PREFIX}/share/doc/html/opencdk
 
 PKGCONFIG_OVERRIDE=	src/opencdk.pc.in
 
+INSTALLATION_DIRS=	${DOCDIR} ${HTMLDIR} ${EGDIR}
+
 pre-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS ${DOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA}	${WRKSRC}/doc/opencdk-api.html ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.gpg *.c ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA}	${WRKSRC}/doc/opencdk-api.html ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.gpg *.c ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"

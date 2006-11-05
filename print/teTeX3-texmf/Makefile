@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/09 03:08:24 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/05 17:34:44 joerg Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 MAINTAINER=	kei@NetBSD.org,pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	teTeX-share-[0-9]*
 
@@ -28,6 +30,6 @@ post-extract:
 	rm -f ${WRKSRC}/ls-R
 
 do-install:
-	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${PREFIX}/share/texmf-dist
+	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist
 
 .include "../../mk/bsd.pkg.mk"

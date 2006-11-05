@@ -1,7 +1,18 @@
-$NetBSD: patch-af,v 1.1 2004/03/11 22:10:48 ben Exp $
+$NetBSD: patch-af,v 1.2 2006/11/05 17:37:55 joerg Exp $
 
---- po/makefile.inn.orig	2004-01-28 11:30:38.000000000 -0800
+--- po/makefile.inn.orig	2004-01-28 19:30:38.000000000 +0000
 +++ po/makefile.inn
+@@ -21,8 +21,8 @@ DESTDIR= @DESTDIR@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = @NLS_DATADIR@
+-localedir = $(DESTDIR)$(datadir)/locale
+-gnulocaledir = $(DESTDIR)$(prefix)/share/locale
++localedir = /usr/pkg/share/locale
++gnulocaledir = /usr/pkg/share/locale
+ gettextsrcdir = $(DESTDIR)$(prefix)/share/gettext/po
+ subdir = po
+ 
 @@ -71,6 +71,11 @@ INSTOBJEXT = @INSTOBJEXT@
  	$(MSGFMT) -o $@ $<
  
@@ -14,3 +25,24 @@ $NetBSD: patch-af,v 1.1 2004/03/11 22:10:48 ben Exp $
  	file=$(srcdir)/`echo $* | sed 's,.*/,,'`.gmo \
  	  && rm -f $$file && $(GMSGFMT) -o $$file $<
  
+@@ -113,16 +118,16 @@ install-data: install-data-@USE_NLS@
+ install-data-no: all
+ install-data-yes: all
+ 	if test -r "$(MKINSTALLDIRS)"; then \
+-	  $(MKINSTALLDIRS) $(datadir); \
++	  $(MKINSTALLDIRS) $(DESTDIR)$(datadir); \
+ 	else \
+-	  $(SHELL) $(top_srcdir)/mkdirs.sh $(datadir); \
++	  $(SHELL) $(top_srcdir)/mkdirs.sh $(DESTDIR)$(datadir); \
+ 	fi
+ 	@catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+ 	  case "$$cat" in \
+-	    *.gmo) destdir=$(gnulocaledir);; \
+-	    *)     destdir=$(localedir);; \
++	    *.gmo) destdir=$(DESTDIR)$(gnulocaledir);; \
++	    *)     destdir=$(DESTDIR)$(localedir);; \
+ 	  esac; \
+ 	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
+ 	  dir=$$destdir/$$lang/LC_MESSAGES; \

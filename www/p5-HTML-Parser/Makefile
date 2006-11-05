@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/07/19 22:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/11/05 17:37:55 joerg Exp $
 #
 
 DISTNAME=		HTML-Parser-3.54
@@ -11,13 +11,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-Parser/
 COMMENT=		Perl5 module to parse HTML text documents
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		p5-HTML-Tagset>=3.0:../../www/p5-HTML-Tagset
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 # needed for HTTP/Headers self-test, but this would create a circular
 # dependency -- weird.
 #DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/HTML/Parser/.packlist
 

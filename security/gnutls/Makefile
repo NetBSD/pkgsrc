@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/09/16 06:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2006/11/05 17:35:58 joerg Exp $
 
 DISTNAME=	gnutls-1.4.4
 CATEGORIES=	security devel
@@ -14,6 +14,7 @@ HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
@@ -34,15 +35,12 @@ MAKE_ENV+=		TZ=UTC
 DOCDIR=		${PREFIX}/share/doc/gnutls
 EGDIR=		${PREFIX}/share/examples/gnutls
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/gnutls
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} include/gnutls
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/TODO ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/gnutls.ps ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/TODO ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/gnutls.ps ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${DESTDIR}${EGDIR}
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2006/10/09 01:53:06 rillig Exp $
+# $NetBSD: Makefile,v 1.93 2006/11/05 17:37:55 joerg Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -26,6 +26,7 @@ HOMEPAGE=	http://lynx.isc.org/
 COMMENT=	Alphanumeric display oriented World-Wide Web Client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		lynx
 WRKSRC=			${WRKDIR}/${DISTNAME:S/./-/g}
@@ -78,10 +79,10 @@ CONFIGURE_ARGS+=	--enable-read-eta
 .include "../../security/openssl/buildlink3.mk"
 
 post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
-	${FIND} ${PREFIX}/share/lynx -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/lynx
+	${FIND} ${DESTDIR}${PREFIX}/share/lynx -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	# gets created when applying 2.8.5.2 patch -- remove on
 	# patchless update
-	${RM} -f ${PREFIX}/share/lynx/lynx_doc/CHANGES.orig_dist
+	${RM} -f ${DESTDIR}${PREFIX}/share/lynx/lynx_doc/CHANGES.orig_dist
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/01/22 20:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/11/05 17:35:59 joerg Exp $
 #
 
 DISTNAME=		Digest-SHA1-2.11
@@ -11,11 +11,12 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Digest-SHA1/
 COMMENT=		Perl5 module for SHA1
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		p5-Digest>=1.00:../../security/p5-Digest
 
 CONFLICTS+=		p5-Digest-MD5<=2.12
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Digest/SHA1/.packlist
 
