@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2006/10/20 13:00:35 obache Exp $
+$NetBSD: distinfo,v 1.26 2006/11/05 17:43:59 joerg Exp $
 
 SHA1 (db4-4.4.20/db-4.4.20.tar.gz) = bb4c68a4afc14712eb2954b7991f5dc9fe93bf7b
 RMD160 (db4-4.4.20/db-4.4.20.tar.gz) = 5940d9244b4df4897f66f1b67d3c967081c18b85
@@ -15,6 +15,6 @@ Size (db4-4.4.20/patch.4.4.20.3) = 1366 bytes
 SHA1 (db4-4.4.20/patch.4.4.20.4) = 8875add3312fdc0548fbd4dedb71b4f8637dc6c9
 RMD160 (db4-4.4.20/patch.4.4.20.4) = 46cf2177aee1ce00c0044817610231541722c4d3
 Size (db4-4.4.20/patch.4.4.20.4) = 837 bytes
-SHA1 (patch-aa) = dea422ca0265dc43a5cc9d342be6d2edd6ceeaf3
+SHA1 (patch-aa) = 7e1b32555143fae455b033452d7639b5cfa70666
 SHA1 (patch-ab) = 2c0db053fb5e27ce45becdb5ec3c498ecda96348
 SHA1 (patch-ac) = 9ca09880abf95f415d5dc8b2595d3da755af18d9
