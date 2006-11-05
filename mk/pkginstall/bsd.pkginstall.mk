@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.16 2006/11/05 14:51:24 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.17 2006/11/05 15:10:08 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -313,7 +313,7 @@ su-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 #	SPECIAL_PERMS+=	/path/to/suidroot ${SETUID_ROOT_PERMS}
 #
 SPECIAL_PERMS?=		# empty
-SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4711
 
 _INSTALL_PERMS_FILE=		${_PKGINSTALL_DIR}/perms
 _INSTALL_PERMS_DATAFILE=	${_PKGINSTALL_DIR}/perms-data
