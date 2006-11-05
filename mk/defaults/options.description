@@ -339,6 +339,7 @@ xft2
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xmms-eq	
+xml			Enable XML support.
 xorg-server-apm	
 xorg-server-ark	
 xorg-server-ati	
