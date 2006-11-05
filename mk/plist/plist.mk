@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.17 2006/10/15 16:20:34 joerg Exp $
+# $NetBSD: plist.mk,v 1.18 2006/11/05 15:10:08 joerg Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -194,8 +194,8 @@ _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 _BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
 .if ${_USE_DESTDIR} == "user-destdir"
-_SET_OWNER_GROUP=	${ECHO} "@owner ${_INSTALL_ROOT_USER}";		\
-			${ECHO} "@group ${_INSTALL_ROOT_GROUP}"
+_SET_OWNER_GROUP=	${ECHO} "@owner ${REAL_ROOT_USER}";		\
+			${ECHO} "@group ${REAL_ROOT_GROUP}"
 .else
 _SET_OWNER_GROUP=	:
 .endif
