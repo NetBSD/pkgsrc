@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/10/23 02:30:19 dan Exp $
+# $NetBSD: Makefile,v 1.55 2006/11/05 17:23:45 joerg Exp $
 
 DISTNAME=	librsvg-2.16.0
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://librsvg.sourceforge.net/
 COMMENT=	SVG library for GNOME2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	librsvg2-gtk-[0-9]*
 MAKE_JOBS_SAFE=	NO
