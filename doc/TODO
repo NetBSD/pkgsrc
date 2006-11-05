@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5684 2006/11/05 05:23:32 obache Exp $
+$NetBSD: TODO,v 1.5685 2006/11/05 14:21:41 seb Exp $
 
 Suggested new packages
 ======================
@@ -817,7 +817,6 @@ Suggested package updates
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.20
 	o p5-X11-Protocol-0.54
-	o p5-XML-LibXML-1.60 [pkg/34411]
 	o p5-XML-RAI-1.04
 	o p5-XML-RSS-1.12
 	o p5-XML-SAX-Expat-0.37
