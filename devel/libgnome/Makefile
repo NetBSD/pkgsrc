@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/10/11 00:53:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.62 2006/11/05 17:49:33 joerg Exp $
 #
 
 DISTNAME=	libgnome-2.16.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Core GNOME2 library (non-graphical)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 

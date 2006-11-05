@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/27 12:42:57 obache Exp $
+# $NetBSD: Makefile,v 1.17 2006/11/05 17:49:34 joerg Exp $
 #
 
 DISTNAME=	File-Temp-0.17
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/File-Temp/
 COMMENT=	Provides functions for generating temporary files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/File/Temp/.packlist
 

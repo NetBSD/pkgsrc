@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/05 17:49:33 joerg Exp $
 #
 
 DISTNAME=		libcfg+-0.6.2
@@ -11,6 +11,7 @@ HOMEPAGE=		http://platon.sk/projects/libcfg+/
 COMMENT=		Command line and configuration file parsing library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

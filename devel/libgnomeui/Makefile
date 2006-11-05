@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/10/13 18:13:33 drochner Exp $
+# $NetBSD: Makefile,v 1.66 2006/11/05 17:49:34 joerg Exp $
 #
 
 DISTNAME=	libgnomeui-2.16.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Core GNOME2 graphical libraries
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome-libs<=1.4.2nb1
 

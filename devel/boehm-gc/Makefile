@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/07/17 17:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2006/11/05 17:49:33 joerg Exp $
 
 DISTNAME=	gc6.8
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 COMMENT=	Garbage collection and memory leak detection for C and C++
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
@@ -44,7 +45,7 @@ pre-build:
 		${WRKSRC}/doc/gc.man.in > ${WRKSRC}/doc/gc.man
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/${PKGMANDIR}/man3/gc.3
+	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/gc.3
 
 do-test:
 	cd ${WRKSRC} && \

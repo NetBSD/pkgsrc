@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:45 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/11/05 17:49:34 joerg Exp $
 
 DISTNAME=	libsigc++-2.0.17
 PKGNAME=	libsigc++2-2.0.17
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -29,10 +31,9 @@ PKGCONFIG_OVERRIDE=	sigc++-2.0.pc.in
 CONFIGURE_ARGS+=	--disable-threads
 .endif
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/adaptors/lambda/macros
-	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/adaptors/macros
-	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/functors/macros
-	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/macros
+INSTALLATION_DIRS= include/sigc++-2.0/sigc++/adaptors/lambda/macros \
+	include/sigc++-2.0/sigc++/adaptors/macros \
+	include/sigc++-2.0/sigc++/functors/macros \
+	include/sigc++-2.0/sigc++/macros
 
 .include "../../mk/bsd.pkg.mk"
