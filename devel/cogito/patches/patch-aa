@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2006/10/16 00:44:15 wiz Exp $
-
---- t/test-lib.sh.orig	2005-11-27 16:26:16.000000000 +0000
-+++ t/test-lib.sh
-@@ -87,16 +87,16 @@ test_failure_ () {
+$NetBSD: patch-aa,v 1.2 2006/11/05 08:06:40 rillig Exp $
+--- t/test-lib.sh~	2006-10-19 18:24:07.000000000 +0200
++++ t/test-lib.sh	2006-10-19 18:26:02.000000000 +0200
+@@ -87,16 +87,16 @@
  	say "FAIL $test_count: $1"
  	shift
  	echo "$@" | sed -e 's/^/	/'
@@ -21,8 +20,8 @@ $NetBSD: patch-aa,v 1.1 2006/10/16 00:44:15 wiz Exp $
 +	test "$#" = 2 ||
  	error "bug in the test script: not 2 parameters to test-expect-failure"
  	say >&3 "expecting failure: $2"
- 	if eval >&3 2>&4 "$2"
-@@ -108,7 +108,7 @@ test_expect_failure () {
+ 	if eval </dev/null >&3 2>&4 "$2"
+@@ -108,7 +108,7 @@
  }
  
  test_expect_success () {
@@ -30,4 +29,4 @@ $NetBSD: patch-aa,v 1.1 2006/10/16 00:44:15 wiz Exp $
 +	test "$#" = 2 ||
  	error "bug in the test script: not 2 parameters to test-expect-success"
  	say >&3 "expecting success: $2"
- 	if eval >&3 2>&4 "$2"
+ 	if eval </dev/null >&3 2>&4 "$2"

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/10/16 00:44:15 wiz Exp $
+$NetBSD: distinfo,v 1.3 2006/11/05 08:06:40 rillig Exp $
 
-SHA1 (cogito-0.16.tar.bz2) = c2f05217a6f9e1bd4233d2a101bb6bbacf0521b7
-RMD160 (cogito-0.16.tar.bz2) = ca92effa6d313b430b9f15f238c187a3318a50ef
-Size (cogito-0.16.tar.bz2) = 80407 bytes
-SHA1 (patch-aa) = 45f08d99399f698a196469b6dec78bc4277089fa
+SHA1 (cogito-0.18.tar.bz2) = 5d734f00107b35467378591cc24aaac83bcc4c02
+RMD160 (cogito-0.18.tar.bz2) = b9a60ad00f2d341ebf043a2a8edd3a457d6d0982
+Size (cogito-0.18.tar.bz2) = 107913 bytes
+SHA1 (patch-aa) = eb2740a0ac5ca0b5f7c1bce2747ef9ce0e792dc1
