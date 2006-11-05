@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.187 2006/09/10 19:49:53 schwarz Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.188 2006/11/05 14:39:11 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -572,6 +572,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
+	${LOCALBASE})   buildlink_dir="${BUILDLINK_DIR}" ;;		\
 	${X11BASE})     buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
 	*)              buildlink_dir="${BUILDLINK_DIR}" ;;		\
 	esac;								\
