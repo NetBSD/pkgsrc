@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.7 2006/10/15 16:20:34 joerg Exp $
+# $NetBSD: unprivileged.mk,v 1.8 2006/11/05 14:36:13 joerg Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -46,6 +46,8 @@ MANGRP=			${UNPRIVILEGED_GROUP}
 MANOWN=			${UNPRIVILEGED_USER}
 SHAREGRP=		${UNPRIVILEGED_GROUP}
 SHAREOWN=		${UNPRIVILEGED_USER}
+DOCGRP=			${UNPRIVILEGED_GROUP}
+DOCOWN=			${UNPRIVILEGED_USER}
 
 # Override installation modes.  As a regular user, we may have problems
 # when overwriting files if they are not writable.
