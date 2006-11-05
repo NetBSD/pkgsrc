@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/11/03 22:27:34 seb Exp $
+# $NetBSD: Makefile,v 1.18 2006/11/05 17:06:43 joerg Exp $
 #
 
 DISTNAME=	XML-Simple-2.16
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Simple/
 COMMENT=	Easy Perl API to read/write XML
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=       p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
 DEPENDS+=       p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
