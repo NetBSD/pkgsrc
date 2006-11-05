@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1737 2006/11/05 05:23:32 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1738 2006/11/05 08:07:15 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5180,3 +5180,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-Net-Daemon to 0.39 [obache 2006-11-05]
 	Updated textproc/p5-Number-Format to 1.52 [obache 2006-11-05]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.89 [obache 2006-11-05]
+	Updated devel/cogito to 0.18 [rillig 2006-11-05]
