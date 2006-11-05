@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5685 2006/11/05 14:21:41 seb Exp $
+$NetBSD: TODO,v 1.5686 2006/11/05 14:29:31 seb Exp $
 
 Suggested new packages
 ======================
@@ -823,7 +823,6 @@ Suggested package updates
 	o p5-XML-Stream-1.22
 	o p5-XML-Twig-3.26 [pkg/34412]
 	o p5-XML-Writer-0.600 [pkg/34413]
-	o p5-XML-XUpdate-LibXML-0.5.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-version-6701 [pkg/34373]
