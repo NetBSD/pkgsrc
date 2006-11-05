@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/21 14:00:42 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2006/11/05 17:23:44 joerg Exp $
 
 DISTNAME=	lcms-1.15
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	Light Color Management System -- a color management library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -29,7 +30,7 @@ INSTALLATION_DIRS+=	share/doc/lcms
 
 post-install:
 .for _f_ in LCMSAPI.TXT TUTORIAL.TXT
-	${INSTALL_DATA} ${WRKSRC}/doc/${_f_} ${PREFIX}/share/doc/lcms/${_f_}
+	${INSTALL_DATA} ${WRKSRC}/doc/${_f_} ${DESTDIR}${PREFIX}/share/doc/lcms/${_f_}
 .endfor
 
 .include "../../graphics/jpeg/buildlink3.mk"

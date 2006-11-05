@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/08/03 18:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/11/05 17:23:44 joerg Exp $
 
 DISTNAME=	glitz-0.5.6
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://cairographics.org/snapshots/
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://freedesktop.org/Software/glitz
 COMMENT=	OpenGL 2D graphics library and a backend for gl output in cairo
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

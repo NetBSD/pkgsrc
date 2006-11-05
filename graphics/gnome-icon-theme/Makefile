@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/09/15 15:09:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2006/11/05 17:23:44 joerg Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.16.0.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1

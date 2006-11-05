@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/04/17 13:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/11/05 17:23:45 joerg Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.14.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Canvas library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

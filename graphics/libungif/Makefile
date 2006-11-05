@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/05/01 21:44:04 minskim Exp $
+# $NetBSD: Makefile,v 1.40 2006/11/05 17:23:45 joerg Exp $
 
 DISTNAME=	libungif-4.1.4
 PKGREVISION=	1
@@ -13,6 +13,7 @@ COMMENT=	Tools and library routines for working with GIF images
 CONFLICTS=	giflib-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -29,7 +30,7 @@ post-patch:
 	@${RM} ${WRKSRC}/doc/gif2x11.html
 
 post-install:
-	cd ${PREFIX}/lib && 						\
+	cd ${DESTDIR}${PREFIX}/lib && 					\
 	for SOURCE in libungif.*; do					\
 	  TARGET=`echo $$SOURCE | ${SED} -e s/libungif/libgif/`;	\
 	  ${RM} -f $$TARGET; 						\
@@ -40,9 +41,9 @@ post-install:
 	    ${LN} -s $$SOURCE $$TARGET;					\
 	  fi;								\
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} COPYING UNCOMPRESSED_GIF ${DOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} COPYING UNCOMPRESSED_GIF ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${DESTDIR}${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"

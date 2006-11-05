@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/04 21:29:50 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/11/05 17:23:45 joerg Exp $
 
 DISTNAME=	lm1009
 PKGNAME=	mng-1.0.9
@@ -13,6 +13,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Waiting for automake to be pkgviews-enabled
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -31,7 +33,7 @@ CPPFLAGS+=		${BUILDLINK_CPPFLAGS.lcms}
 
 DOCDIR=			${PREFIX}/share/doc/mng
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man3 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${DOCDIR}
 
 pre-configure:
 	cd ${WRKSRC};							\
@@ -43,13 +45,12 @@ pre-configure:
 	autoconf
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}/doc && \
-		${INSTALL_DATA} Plan1.png Plan2.png libmng.txt ${DOCDIR}
+		${INSTALL_DATA} Plan1.png Plan2.png libmng.txt ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/doc/man && \
-		${INSTALL_MAN} libmng.3 ${PREFIX}/${PKGMANDIR}/man3
+		${INSTALL_MAN} libmng.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 	cd ${WRKSRC}/doc/man && \
-		${INSTALL_MAN} jng.5 mng.5 ${PREFIX}/${PKGMANDIR}/man5
+		${INSTALL_MAN} jng.5 mng.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
