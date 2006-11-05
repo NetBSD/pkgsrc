@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2006/11/01 09:04:56 joerg Exp $
+# $NetBSD: Makefile,v 1.68 2006/11/05 14:32:08 joerg Exp $
 
 DISTNAME=	mc-4.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
 		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
@@ -12,7 +12,7 @@ COMMENT=	User-friendly file manager and visual shell
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config unzip:run zip:run
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -35,6 +35,8 @@ post-install:
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS+=	--without-ext2undel
 CONFIGURE_ARGS+=	--without-gpm-mouse
+
+CONFIGURE_ARGS+=	UNZIP=${TOOLS_PATH.unzip} ZIP=${TOOLS_PATH.zip}
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
