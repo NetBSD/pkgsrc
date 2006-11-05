@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1894 2006/11/05 15:15:24 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1895 2006/11/05 19:11:29 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -24,6 +24,10 @@
 ############################################################################
 
 .MAIN: all
+
+.if defined(.MAKEFLAGS) && !empty(.MAKEFLAGS:M-j*)
+PKG_FAIL_REASON+=	"[bsd.pkg.mk] pkgsrc does not support parallel make for the infrastructure."
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
