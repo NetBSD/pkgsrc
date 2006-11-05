@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/22 22:50:33 tv Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/05 17:35:59 joerg Exp $
 #
 
 DISTNAME=		GnuPG-Interface-0.34
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnupg-interface/}
 MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://gnupg-interface.sourceforge.net/
 COMMENT=		Perl interface to GnuPG
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Class-MakeMethods>=1.010:../../devel/p5-Class-MakeMethods
 DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
