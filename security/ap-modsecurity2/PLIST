@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/05 14:33:37 adrianp Exp $
+lib/httpd/mod_security2.so
+share/doc/ap-security/breach-logo-small.gif
+share/doc/ap-security/html-multipage/01-introduction.html
+share/doc/ap-security/html-multipage/02-installation.html
+share/doc/ap-security/html-multipage/03-configuration-directives.html
+share/doc/ap-security/html-multipage/04-processing-phases.html
+share/doc/ap-security/html-multipage/05-variables.html
+share/doc/ap-security/html-multipage/06-transformation-functions.html
+share/doc/ap-security/html-multipage/07-actions.html
+share/doc/ap-security/html-multipage/08-operators.html
+share/doc/ap-security/html-multipage/breach-logo-small.gif
+share/doc/ap-security/html-multipage/index.html
+share/doc/ap-security/html-multipage/modsecurity-reference.css
+share/doc/ap-security/html-multipage/modsecurity.gif
+share/doc/ap-security/index.html
+share/doc/ap-security/modsecurity2-apache-reference.html
+share/doc/ap-security/modsecurity2-apache-reference.pdf
+share/doc/ap-security/modsecurity2-apache-reference.xml
+share/doc/ap-security/modsecurity.gif
+share/doc/ap-security/modsecurity-reference.css
+share/examples/ap-security/modsecurity.conf-minimal
+@dirrm share/doc/ap-security/html-multipage
+@dirrm share/doc/ap-security
+@dirrm share/examples/ap-security
