@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1733 2006/11/05 02:29:02 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1734 2006/11/05 04:11:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5176,3 +5176,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0rc11 [ghen 2006-11-04]
 	Added inputmethod/libhangul version 0.0.3 [minskim 2006-11-05]
 	Updated math/p5-Spreadsheet-WriteExcel to 2.17 [obache 2006-11-05]
+	Updated net/p5-Net-Daemon to 0.39 [obache 2006-11-05]
