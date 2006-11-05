@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/04 20:42:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/05 17:17:04 joerg Exp $
 
 DISTNAME=	mplayer-fonts-20030714
 PKGREVISION=	1
@@ -19,6 +19,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mplayerhq.hu/
 COMMENT=	Fonts for mplayer and gmplayer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	mplayer-share<1.0rc7nb2
 
 DIST_SUBDIR=	${DISTNAME}
@@ -26,15 +28,15 @@ DIST_SUBDIR=	${DISTNAME}
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
+INSTALLATION_DIRS= share/mplayer/fonts
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/fonts
 	for D in font-arial-cp1250 font-arial-iso-8859-1 \
 		font-arial-iso-8859-2 font-arial-iso-8859-7; do \
 		(cd ${WRKDIR}/$$D && \
-			${PAX} -rwpppm * ${PREFIX}/share/mplayer/fonts); \
+			${PAX} -rwpppm * ${DESTDIR}${PREFIX}/share/mplayer/fonts); \
 	done
 	${LN} -s ${PREFIX}/share/mplayer/fonts/font-arial-18-iso-8859-1 \
-		${PREFIX}/share/mplayer/font
+		${DESTDIR}${PREFIX}/share/mplayer/font
 
 .include "../../mk/bsd.pkg.mk"
