@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2006/09/07 15:40:01 taca Exp $
+$NetBSD: patch-ab,v 1.6.2.1 2006/11/05 19:17:54 salo Exp $
 
 --- configure.orig	2006-08-25 17:34:16.000000000 +0900
 +++ configure
@@ -300,3 +300,14 @@ $NetBSD: patch-ab,v 1.6 2006/09/07 15:40:01 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L${libdir} -L. -l$(RUBY_SO_NAME)'
  	;;
+@@ -19017,8 +19225,10 @@ fi
+ if test "$enable_rpath" = yes; then
+     if test "$GCC" = yes; then
+        LIBRUBYARG_SHARED='-Wl,-R -Wl,$(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
++       LIBRUBY_DLDFLAGS='-Wl,-R -Wl,$(libdir) -L$(libdir) -L. '"$LIBRUBY_DLDFLAGS"
+     else
+        LIBRUBYARG_SHARED='-R $(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
++       LIBRUBY_DLDFLAGS='-R $(libdir) -L$(libdir) -L. '"$LIBRUBY_DLDFLAGS"
+     fi
+ fi
+ 
