@@ -1,21 +1,15 @@
-$NetBSD: patch-ac,v 1.4 2006/01/03 15:33:22 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2006/11/05 21:51:21 rillig Exp $
 
---- Makefile.in.orig	1999-11-07 16:39:32.000000000 +0000
-+++ Makefile.in
-@@ -9,13 +9,13 @@ sbindir=@sbindir@
- mandir=@mandir@
- 
- # Root of X11 tree
--XROOT = @xroot@
-+XROOT = ${X11BASE}
- 
- # Compiler and flags
+--- Makefile.in.orig	2004-12-20 15:15:05.000000000 +0100
++++ Makefile.in	2006-11-05 22:03:06.000000000 +0100
+@@ -11,8 +11,8 @@ mandir=@mandir@
  # DEFS should include -Dacceptarg3_t=int (replace with the correct data type)
  CXX = @CXX@
--CXXFLAGS = @extracxxflags@ @DEFS@ -O2 -I@includedir@ -I$(XROOT)/include -I/usr/local/include -I/usr/contrib/include -c
--LDFLAGS = @extraldflags@ -L@libdir@ -L$(XROOT)/lib -L/usr/local/lib -L/usr/contrib/lib -s -o
-+CXXFLAGS = @extracxxflags@ @DEFS@ -O2 -I@includedir@ -I$(XROOT)/include -I/usr/local/include -I/usr/contrib/include -DPREFIX='"${prefix}"' -DPKG_SYSCONFDIR='"@sysconfdir@"' -c
-+LDFLAGS = @extraldflags@ -L@libdir@ -Wl,-R@libdir@ -L$(XROOT)/lib -Wl,-R$(XROOT)/lib -s -o
+ CC = @CC@
+-CXXFLAGS = @extracxxflags@ @DEFS@ -I@includedir@ -Ilibtcd -I@xroot@/include @normalcxxflags@ -c
+-LDFLAGS = @extraldflags@ -L@libdir@ -L@xlibdir@ @normalldflags@ -o
++CXXFLAGS = @extracxxflags@ @DEFS@ -I@includedir@ -Ilibtcd -I@xroot@/include @normalcxxflags@ -DPREFIX='"${prefix}"' -DPKG_SYSCONFDIR='"@sysconfdir@"' -c
++LDFLAGS = @extraldflags@ -L@libdir@ -Wl,-R@libdir@ -L@xlibdir@ -Wl,-R@xlibdir@ @normalldflags@ -o
  
  # Extra switches and libs determined by configure.in
  extraswitches=@extraswitches@
