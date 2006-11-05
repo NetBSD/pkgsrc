@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.105 2006/08/30 06:16:27 rillig Exp $
+# $NetBSD: Makefile,v 1.106 2006/11/05 17:52:38 adrianp Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -137,7 +137,7 @@ SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_CLASSES+=		apr-lt
 SUBST_STAGE.apr-lt=	post-configure
 SUBST_FILES.apr-lt=	build/config_vars.mk
-SUBST_SED.apr-lt=	-e 's|^\(LIBTOOL =\) [^ ]*|\1 $$(SHELL) $$(top_builddir)/libtool|g'
+SUBST_SED.apr-lt=	-e 's|^\(LIBTOOL =\) [^ ]*|\1 $$(SHELL) $$(top_builddir)/build/libtool|g'
 SUBST_MESSAGE.apr-lt=	Fixing libtool references.
 
 SUBST_CLASSES+=		confs
@@ -184,7 +184,7 @@ CONFIGURE_ARGS+=	${AP_CFG_ARGS.${ap_mod}}
 .endfor
 
 post-extract:
-	${TOUCH} ${WRKSRC}/libtool
+	${TOUCH} ${WRKSRC}/build/libtool
 
 post-build:
 	${SED} "s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g"			\
