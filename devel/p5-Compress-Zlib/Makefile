@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/07/19 22:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/11/05 17:49:34 joerg Exp $
 
 DISTNAME=		Compress-Zlib-1.42
 PKGNAME=		p5-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Compress-Zlib/
 COMMENT=		Perl5 module interface to the zlib compression library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Compress/Zlib/.packlist
 MAKE_ENV+=		BUILD_ZLIB=False
