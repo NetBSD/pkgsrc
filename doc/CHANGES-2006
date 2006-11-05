@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1735 2006/11/05 04:30:14 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1736 2006/11/05 05:07:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5178,3 +5178,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/p5-Spreadsheet-WriteExcel to 2.17 [obache 2006-11-05]
 	Updated net/p5-Net-Daemon to 0.39 [obache 2006-11-05]
 	Updated textproc/p5-Number-Format to 1.52 [obache 2006-11-05]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.89 [obache 2006-11-05]
