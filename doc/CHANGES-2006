@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1741 2006/11/05 14:09:02 seb Exp $
+>$NetBSD: CHANGES-2006,v 1.1742 2006/11/05 14:12:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed doc/portability-book [rillig 2006-11-05]
 	Updated textproc/p5-XML-LibXML to 1.61.003 [seb 2006-11-05]
 	Updated shells/xsh to 1.8.2nb5 [seb 2006-11-05]
+	Deleted textproc/p5-XML-LibXML-XPathContext [seb 2006-11-05]
