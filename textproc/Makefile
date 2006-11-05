@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2006/10/31 22:41:15 joerg Exp $
+# $NetBSD: Makefile,v 1.338 2006/11/05 14:10:14 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -213,7 +213,6 @@ SUBDIR+=	p5-XML-Handler-YAWriter
 SUBDIR+=	p5-XML-LibXML
 SUBDIR+=	p5-XML-LibXML-Common
 SUBDIR+=	p5-XML-LibXML-Iterator
-SUBDIR+=	p5-XML-LibXML-XPathContext
 SUBDIR+=	p5-XML-LibXSLT
 SUBDIR+=	p5-XML-NamespaceSupport
 SUBDIR+=	p5-XML-Node
