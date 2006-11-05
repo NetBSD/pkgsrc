@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/09/16 12:20:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2006/11/05 17:37:55 joerg Exp $
 #
 
 DISTNAME=	libgtkhtml-2.6.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering GTK2 widget
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config

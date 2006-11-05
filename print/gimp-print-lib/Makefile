@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/31 23:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/11/05 17:34:44 joerg Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-lib-4.2.7
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	Drivers for Canon, Epson, Lexmark, and PCL printers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake lex
 USE_PKGLOCALEDIR=	yes
