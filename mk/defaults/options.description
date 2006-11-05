@@ -6,6 +6,7 @@ abook			Enable abook support.
 ac3_passthrough	
 ads	
 alsa	
+anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 antialias	
 apop	
