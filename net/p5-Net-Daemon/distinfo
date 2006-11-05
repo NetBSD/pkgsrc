@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:13:58 agc Exp $
+$NetBSD: distinfo,v 1.6 2006/11/05 04:09:39 obache Exp $
 
-SHA1 (Net-Daemon-0.36.tar.gz) = a37d9888590577ccaa6abd667c4dc36643b7fa51
-RMD160 (Net-Daemon-0.36.tar.gz) = e81e44d5099a288e56df0bc152c00609ed8e56af
-Size (Net-Daemon-0.36.tar.gz) = 26496 bytes
+SHA1 (Net-Daemon-0.39.tar.gz) = 6799ec70460936bd3737fa5b91741af07bc0bdc8
+RMD160 (Net-Daemon-0.39.tar.gz) = aba653ca4065e8133053948f8aa08a21a83baba5
+Size (Net-Daemon-0.39.tar.gz) = 31737 bytes
