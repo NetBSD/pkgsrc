@@ -1,40 +1,38 @@
-# $NetBSD: Makefile,v 1.18 2006/07/22 04:46:17 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/11/05 21:51:21 rillig Exp $
 
-DISTNAME=	xtide-2.4
-PKGREVISION=	5
-CATEGORIES= 	misc x11
+DISTNAME=	xtide-2.8.3
+CATEGORIES=	misc x11
 MASTER_SITES=	ftp://ftp.flaterco.com/xtide/
-DISTFILES=	${XTIDE_SRC} harmonics.txt.gz offsets.xml.gz
+DISTFILES=	${DISTNAME}.tar.bz2 ${HARMONICS_FILE}.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.flaterco.com/
 COMMENT=	X11 tide predictor
 
-EXTRACT_ONLY=	${XTIDE_SRC}
-XTIDE_SRC=	${DISTNAME}${EXTRACT_SUFX}
-
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+HARMONICS_FILE=	harmonics-dwf-20060708.tcd
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=		${PREFIX}/share/examples/xtide
 CONF_FILES=	${EGDIR}/xtide.conf ${PKG_SYSCONFDIR}/xtide.conf
 
-post-patch:
-	@cd ${WRKSRC}/DOCUMENTATION;					\
-	for f in *; do							\
-		${MV} $$f $$f.bak;					\
-		${SED} -e 's|/usr/local|${PREFIX}|g' < $$f.bak > $$f;	\
-	done
+SUBST_CLASSES+=	xt
+SUBST_STAGE.xt=	pre-configure
+SUBST_FILES.xt=	DOCUMENTATION/*
+SUBST_SED.xt=	-e 's|/usr/local|${PREFIX}|g'
+
+PLIST_SUBST+=	HARMONICS_FILE=${HARMONICS_FILE:Q}
+
+INSTALLATION_DIRS=	share/xtide ${EGDIR}
+
+post-extract:
+	${ECHO} "${PREFIX}/share/xtide/${HARMONICS_FILE}" > ${WRKDIR}/xtide.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xtide
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${GZCAT} ${DISTDIR}/harmonics.txt.gz > ${WRKDIR}/harmonics.txt
-	${GZCAT} ${DISTDIR}/offsets.xml.gz > ${WRKDIR}/offsets.xml
-	${CP} ${FILESDIR}/xtide.conf ${EGDIR}/xtide.conf
-	${CP} ${WRKDIR}/harmonics.txt ${PREFIX}/share/xtide
-	${CP} ${WRKDIR}/offsets.xml ${PREFIX}/share/xtide
+	${INSTALL_DATA} ${WRKDIR}/xtide.conf ${EGDIR}/xtide.conf
+	${INSTALL_DATA} ${WRKDIR}/${HARMONICS_FILE} ${PREFIX}/share/xtide
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
