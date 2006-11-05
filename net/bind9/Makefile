@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2006/09/05 20:45:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.83 2006/11/05 15:49:22 seb Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -57,10 +57,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/rfc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/bind9
-	${INSTALL_DATA} ${WRKSRC}/doc/arm/* ${PREFIX}/share/doc/bind9/arm
-	${INSTALL_DATA} ${WRKSRC}/doc/draft/* ${PREFIX}/share/doc/bind9/draft
-	${INSTALL_DATA} ${WRKSRC}/doc/misc/* ${PREFIX}/share/doc/bind9/misc
-	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
+	set -e; cd ${WRKSRC}/doc && ${PAX} -rwppm			\
+	  -s ',.*xsl.*,,' -s ',Makefile.*,,' -s ',.*\.pl,,'		\
+	  . ${PREFIX}/share/doc/bind9
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
