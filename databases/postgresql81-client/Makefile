@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/10/18 16:33:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/05 17:42:30 joerg Exp $
 
 PKGNAME=	postgresql81-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/postgresql81/Makefile.common"
 
@@ -80,9 +82,9 @@ post-install:
 		FAQ* KNOWN_BUGS MISSING_FEATURES README.* TODO		\
 		bug.template;						\
 	do								\
-		${INSTALL_DATA} $$file ${PG_DOC_DIR}/$$file;		\
+		${INSTALL_DATA} $$file ${DESTDIR}${PG_DOC_DIR}/$$file;		\
         done
-	cp -R ${WRKSRC}/doc/TODO.detail ${PG_DOC_DIR}
-	chown -R ${DOCOWN}:${DOCGRP} ${PG_DOC_DIR}/TODO.detail
+	cp -R ${WRKSRC}/doc/TODO.detail ${DESTDIR}${PG_DOC_DIR}
+	chown -R ${DOCOWN}:${DOCGRP} ${DESTDIR}${PG_DOC_DIR}/TODO.detail
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/10/20 13:00:35 obache Exp $
+# $NetBSD: Makefile,v 1.49 2006/11/05 17:43:59 joerg Exp $
 
 DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -14,6 +14,7 @@ HOMEPAGE=		http://www.oracle.com/database/berkeley-db/db/index.html
 COMMENT=		Berkeley DB version 4 from Oracle
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
@@ -56,7 +57,9 @@ PTHREAD_OPTS+=		native
 .  include "../../mk/pthread.buildlink3.mk"
 .endif
 
+INSTALLATION_DIRS=	include/db4 lib share/doc/db4
+
 post-install:
-	chown -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/db4
+	chown -R ${DOCOWN}:${DOCGRP} ${DESTDIR}${PREFIX}/share/doc/db4
 
 .include "../../mk/bsd.pkg.mk"

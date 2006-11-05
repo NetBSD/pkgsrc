@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2006/01/06 15:08:47 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2006/11/05 17:43:59 joerg Exp $
 
---- dist/Makefile.in.orig	2005-11-08 13:47:22.000000000 +0100
+--- dist/Makefile.in.orig	2005-11-08 12:47:22.000000000 +0000
 +++ dist/Makefile.in
 @@ -11,7 +11,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -60,7 +60,26 @@ $NetBSD: patch-aa,v 1.10 2006/01/06 15:08:47 wiz Exp $
  libtso=		$(libtso_base)-$(LIBVERSION)@MODSUFFIX@
  libtso_static=	$(libtso_base)-$(LIBVERSION).a
  libtso_target=	$(libtso_base)-$(LIBVERSION).la
-@@ -903,11 +903,10 @@ install_utilities:
+@@ -867,8 +867,7 @@ install_include:
+ 	    ($(mkdir) -p $(DESTDIR)$(includedir) && \
+ 	    $(chmod) $(dmode) $(DESTDIR)$(includedir))
+ 	@cd $(DESTDIR)$(includedir) && $(rm) -f $(INCDOT)
+-	@$(cp) -p $(INCDOT) $(DESTDIR)$(includedir)
+-	@cd $(DESTDIR)$(includedir) && $(chmod) $(fmode) $(INCDOT)
++	${BSD_INSTALL_DATA} $(INCDOT) $(DESTDIR)$(includedir)
+ 
+ uninstall_include:
+ 	@cd $(DESTDIR)$(includedir) && $(rm) -f $(INCDOT)
+@@ -879,7 +878,7 @@ install_lib:
+ 	    ($(mkdir) -p $(DESTDIR)$(libdir) && \
+ 	    $(chmod) $(dmode) $(DESTDIR)$(libdir))
+ 	@cd $(DESTDIR)$(libdir) && $(rm) -f $(LIB_INSTALL_FILE_LIST)
+-	@$(INSTALLER) @INSTALL_LIBS@ $(DESTDIR)$(libdir)
++	@libtool --mode=install ${BSD_INSTALL_LIB} @INSTALL_LIBS@ $(DESTDIR)$(libdir)
+ 	@(cd $(DESTDIR)$(libdir) && \
+ 	    test -f $(libso) && $(ln) -s $(libso) $(libso_default); \
+ 	    test -f $(libso) && $(ln) -s $(libso) $(libso_major); \
+@@ -903,11 +902,8 @@ install_utilities:
  	    ($(mkdir) -p $(DESTDIR)$(bindir) && \
  	    $(chmod) $(dmode) $(DESTDIR)$(bindir))
  	@for i in $(UTIL_PROGS); do \
@@ -70,9 +89,7 @@ $NetBSD: patch-aa,v 1.10 2006/01/06 15:08:47 wiz Exp $
 -		test -f $(strip) && $(strip) $(DESTDIR)$(bindir)/$$i || true; \
 -		$(chmod) $(emode) $(DESTDIR)$(bindir)/$$i; \
 +		target="${DESTDIR}${bindir}/`echo $$i | sed '${transform}'`"; \
-+		$(INSTALLER) $$i $${target}; \
-+		test -f $(strip) && $(strip) $${target} || true; \
-+		$(chmod) $(emode) $${target}; \
++		libtool --mode=install ${BSD_INSTALL_PROGRAM} $$i $$target; \
  	done
  
  uninstall_utilities:
