@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2006/10/10 18:39:27 heinz Exp $
+# $NetBSD: Makefile,v 1.77 2006/11/05 17:15:54 joerg Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.1.7
 PKGNAME=	spamassassin-3.1.7
@@ -9,6 +9,9 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,8 +28,6 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 .endif
 
 CONFLICTS=		p5-Mail-SpamAssassin-[1-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
@@ -135,18 +136,18 @@ post-install:
 		spamc/README.qmail					\
 		sample-nonspam.txt sample-spam.txt spamd/README		\
 		spamd/README.vpopmail
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for f in STATISTICS-set0.txt STATISTICS-set1.txt STATISTICS-set2.txt	\
 	  STATISTICS-set3.txt
-	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DOCDIR}
+	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DESTDIR}${DOCDIR}
 	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for dir in masses sql ldap tools
 	@cd ${WRKSRC};							\
 	for d in `${FIND} ${dir} -type d -print`; do			\
-		${INSTALL_DATA_DIR} ${DOCDIR}/$$d;			\
+		${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/$$d;			\
 	done;								\
 	for f in `${FIND} ${dir} -type f -print`; do			\
 		if ${TEST} -x $$f ; then				\
@@ -154,9 +155,9 @@ post-install:
 				> $${f}.fixed &&			\
 			${MV} $${f}.fixed $$f &&			\
 			${CHMOD} +x $$f &&				\
-			${INSTALL_SCRIPT} $$f ${DOCDIR}/$$f;		\
+			${INSTALL_SCRIPT} $$f ${DESTDIR}${DOCDIR}/$$f;		\
 		else							\
-			${INSTALL_DATA} $$f ${DOCDIR}/$$f;		\
+			${INSTALL_DATA} $$f ${DESTDIR}${DOCDIR}/$$f;		\
 		fi;							\
 		${ECHO} "${DOC_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done;								\
@@ -169,16 +170,16 @@ post-install:
 		${ECHO} "${RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done;								\
 	for f in ${PRE_FILES}; do					\
-		${INSTALL_DATA} $$f ${EGDIR} &&				\
+		${INSTALL_DATA} $$f ${DESTDIR}${EGDIR} &&				\
 		${ECHO} ${EG_SUBDIR}/$$f >> ${PLIST_ADD};		\
 	done
 	@# examples are in the static PLIST
-	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}
-	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}
-	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${EGDIR}
-	@${CHOWN} ${SHAREOWN} ${RULESDIR}/*
-	@${CHGRP} ${SHAREGRP} ${RULESDIR}/*
-	@${CHMOD} a=r ${RULESDIR}/*
+	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${DESTDIR}${EGDIR}
+	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${DESTDIR}${EGDIR}
+	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${DESTDIR}${EGDIR}
+	@${CHOWN} ${SHAREOWN} ${DESTDIR}${RULESDIR}/*
+	@${CHGRP} ${SHAREGRP} ${DESTDIR}${RULESDIR}/*
+	@${CHMOD} a=r ${DESTDIR}${RULESDIR}/*
 	@{ for d in ${INSTALLATION_DIRS}; do				\
 		${ECHO} "@dirrm $$d";					\
 	done; } | ${SORT} -r >> ${PLIST_ADD};

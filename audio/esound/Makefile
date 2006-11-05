@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/08/26 15:25:26 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2006/11/05 17:14:19 joerg Exp $
 
 DISTNAME=		esound-0.2.36
 PKGREVISION=		1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.tux.org/~ricdude/EsounD.html
 COMMENT=		The Enlightened sound daemon
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	esound.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/10/02 21:45:05 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/11/05 17:09:00 joerg Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -15,6 +15,7 @@ HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # fam is bundled with IRIX
 NOT_FOR_PLATFORM=	IRIX-*-*
