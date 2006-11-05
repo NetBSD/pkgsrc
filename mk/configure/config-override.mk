@@ -1,4 +1,4 @@
-# $NetBSD: config-override.mk,v 1.4 2006/11/05 07:41:06 rillig Exp $
+# $NetBSD: config-override.mk,v 1.5 2006/11/05 12:40:01 rillig Exp $
 
 ######################################################################
 ### config-{guess,sub,rpath}-override (PRIVATE)
@@ -33,16 +33,16 @@ config-${_sub_}-override:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	for file in ${${_OVERRIDE_VAR.${_sub_}}}; do			\
-		${TEST} -f "$$file" || ${TEST} -h "$$file" || continue; \
+		[ -f "$$file" ] || [ -h "$$file" ] || continue;		\
 		${_SCRIPT.${.TARGET}};					\
 	done
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	depth=0; pattern=config.${_sub_};				\
-	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.config-${_sub_}}; do \
+	while [ $$depth -le ${OVERRIDE_DIRDEPTH.config-${_sub_}} ]; do	\
 		for file in $$pattern; do				\
-			test -f "$$file" || test -h "$$file" || continue; \
+			[ -f "$$file" ] || [ -h "$$file" ] || continue;	\
 			${_SCRIPT.${.TARGET}};				\
 		done;							\
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\

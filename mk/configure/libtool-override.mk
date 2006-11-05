@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.8 2006/11/05 07:41:06 rillig Exp $
+# $NetBSD: libtool-override.mk,v 1.9 2006/11/05 12:40:01 rillig Exp $
 
 ######################################################################
 ### {libtool,shlibtool}-override (PRIVATE)
@@ -32,7 +32,7 @@ libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	set -- dummy ${LIBTOOL_OVERRIDE}; shift;			\
-	while ${TEST} $$# -gt 0; do					\
+	while [ $$# -gt 0 ]; do						\
 		file="$$1"; shift;					\
 		[ -f "$$file" ] || [ -h "$$file" ] || continue;		\
 		${_SCRIPT.${.TARGET}};					\
@@ -41,7 +41,7 @@ libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	depth=0; pattern=libtool;					\
-	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.libtool}; do	\
+	while [ $$depth -le ${OVERRIDE_DIRDEPTH.libtool} ]; do		\
 		for file in $$pattern; do				\
 			[ -f "$$file" ] || [ -h "$$file" ] || continue; \
 			${_SCRIPT.${.TARGET}};				\
@@ -57,7 +57,7 @@ shlibtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	set -- dummy ${SHLIBTOOL_OVERRIDE}; shift;			\
-	while ${TEST} $$# -gt 0; do					\
+	while [ $$# -gt 0 ]; do						\
 		file="$$1"; shift;					\
 		[ -f "$$file" ] || [ -h "$$file" ] || continue;		\
 		${_SCRIPT.${.TARGET}};					\
@@ -66,7 +66,7 @@ shlibtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	depth=0; pattern=libtool;					\
-	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.shlibtool}; do	\
+	while [ $$depth -le ${OVERRIDE_DIRDEPTH.shlibtool} ]; do	\
 		for file in $$pattern; do				\
 			[ -f "$$file" ] || [ -h "$$file" ] || continue; \
 			${_SCRIPT.${.TARGET}};				\
