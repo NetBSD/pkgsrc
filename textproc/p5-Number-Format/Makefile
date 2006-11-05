@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:48 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/05 04:28:47 obache Exp $
 #
 
-DISTNAME=		Number-Format-1.45
+DISTNAME=		Number-Format-1.52
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Number/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/search?module=Number::Format
+HOMEPAGE=		http://search.cpan.org/~wrw/Number-Format/
 COMMENT=		Perl extension for formatting numbers
 
 PERL5_PACKLIST=		auto/Number/Format/.packlist
