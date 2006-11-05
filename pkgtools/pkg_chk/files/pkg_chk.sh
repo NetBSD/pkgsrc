@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.43 2006/10/02 07:33:38 abs Exp $
+# $Id: pkg_chk.sh,v 1.44 2006/11/05 21:53:27 tron Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -88,8 +88,8 @@ check_packages_installed()
 
 cleanup_and_exit()
     {
-    rm -f $TMPFILE
-    rmdir $TMPDIR
+    rm -f $MY_TMPFILE
+    rmdir $MY_TMPDIR
     exit "$@"
     }
 
@@ -248,9 +248,9 @@ get_build_ver()
     fi
     # Unfortunately pkgsrc always outputs to a file, but it does helpfully
     # allows # us to specify the name
-    rm -f $TMPFILE
-    ${MAKE} _BUILD_VERSION_FILE=$TMPFILE $TMPFILE
-    cat $TMPFILE
+    rm -f $MY_TMPFILE
+    ${MAKE} _BUILD_VERSION_FILE=$MY_TMPFILE $MY_TMPFILE
+    cat $MY_TMPFILE
     }
 
 list_packages()
@@ -668,8 +668,8 @@ if [ $# != 0 ];then
     usage "Additional argument ($*) given"
 fi
 
-TMPDIR=`mktemp -d /tmp/${0##*/}.XXXXXX`
-TMPFILE=$TMPDIR/tmp
+MY_TMPDIR=`mktemp -d ${TMPDIR-/tmp}/${0##*/}.XXXXXX`
+MY_TMPFILE=$MY_TMPDIR/tmp
 
 # Hide PKG_PATH to avoid breakage in 'make' calls
 saved_PKG_PATH=$PKG_PATH
