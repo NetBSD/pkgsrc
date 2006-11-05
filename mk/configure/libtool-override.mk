@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.7 2006/10/05 02:59:54 rillig Exp $
+# $NetBSD: libtool-override.mk,v 1.8 2006/11/05 07:41:06 rillig Exp $
 
 ######################################################################
 ### {libtool,shlibtool}-override (PRIVATE)
@@ -34,7 +34,7 @@ libtool-override:
 	set -- dummy ${LIBTOOL_OVERRIDE}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		file="$$1"; shift;					\
-		${TEST} -f "$$file" || continue;			\
+		[ -f "$$file" ] || [ -h "$$file" ] || continue;		\
 		${_SCRIPT.${.TARGET}};					\
 	done
 .else
@@ -43,7 +43,7 @@ libtool-override:
 	depth=0; pattern=libtool;					\
 	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.libtool}; do	\
 		for file in $$pattern; do				\
-			${LS} "$$file" 1>/dev/null 2>&1 || continue;	\
+			[ -f "$$file" ] || [ -h "$$file" ] || continue; \
 			${_SCRIPT.${.TARGET}};				\
 		done;							\
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
@@ -59,7 +59,7 @@ shlibtool-override:
 	set -- dummy ${SHLIBTOOL_OVERRIDE}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		file="$$1"; shift;					\
-		${TEST} -f "$$file" || continue;			\
+		[ -f "$$file" ] || [ -h "$$file" ] || continue;		\
 		${_SCRIPT.${.TARGET}};					\
 	done
 .else
@@ -68,7 +68,7 @@ shlibtool-override:
 	depth=0; pattern=libtool;					\
 	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.shlibtool}; do	\
 		for file in $$pattern; do				\
-			${TEST} -f "$$file" || continue;		\
+			[ -f "$$file" ] || [ -h "$$file" ] || continue; \
 			${_SCRIPT.${.TARGET}};				\
 		done;							\
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
