@@ -1,4 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/03 20:56:24 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/11/05 16:55:28 joerg Exp $
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${X11_TYPE} != "modular"
+.include "../../mk/x11.buildlink3.mk"
+.else
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXINERAMA_BUILDLINK3_MK:=	${LIBXINERAMA_BUILDLINK3_MK}+
@@ -22,3 +28,5 @@ BUILDLINK_PKGSRCDIR.libXinerama?=	../../x11/libXinerama
 .include "../../x11/xineramaproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+
+.endif
