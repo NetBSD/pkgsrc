@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5682 2006/11/05 04:30:14 obache Exp $
+$NetBSD: TODO,v 1.5683 2006/11/05 05:07:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -769,7 +769,6 @@ Suggested package updates
 	o p5-IO-Socket-SSL-1.01
 	o p5-Ima-DBI-0.34
 	o p5-Image-Info-1.23
-	o p5-Lingua-EN-Inflect-1.89 [pkg/34404]
 	o p5-Lingua-Stem-Snowball-0.941 [pkg/34402]
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
