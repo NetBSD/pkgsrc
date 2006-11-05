@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/11/05 17:34:44 joerg Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 PKGNAME=	ghostscript-gnu-${GS_VERS}
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNU Postscript interpreter with all drivers
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	ghostscript{,-nox11}-[0-9]*
 CONFLICTS+=	ghostscript-afpl-[0-9]*
@@ -93,7 +95,7 @@ post-extract:
 
 # Reinstall the gs binary so that it's properly stripped.
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/gs ${PREFIX}/bin/gs
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/gs ${DESTDIR}${PREFIX}/bin/gs
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
