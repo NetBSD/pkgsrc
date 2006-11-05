@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:49:48 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/11/05 17:14:20 joerg Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
@@ -14,6 +14,7 @@ COMMENT=	High-quality MPEG audio decoder
 CONFLICTS=	mad<0.15
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -30,6 +31,6 @@ post-build:
 		< ${FILESDIR}/mad.pc.in > ${WRKDIR}/mad.pc
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/mad.pc ${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKDIR}/mad.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
