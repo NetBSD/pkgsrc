@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/05 14:33:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/05 18:05:33 adrianp Exp $
 
 DISTNAME=	modsecurity-apache_2.0.3
 PKGNAME=	${APACHE_PKG_PREFIX}-modsecurity-2.0.3
@@ -18,6 +18,8 @@ EGDIR=			${PREFIX}/share/examples/ap-security
 CONF_FILES=		${EGDIR}/modsecurity.conf-minimal \
 			${PKG_SYSCONFDIR}/httpd/modsecurity.conf
 MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC
+
+BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.59nb2
 
 SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
