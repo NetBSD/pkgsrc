@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1749 2006/11/05 21:51:50 rillig Exp $
+>$NetBSD: CHANGES-2006,v 1.1750 2006/11/05 21:53:57 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/bind9 to 9.3.2nb3 [seb 2006-11-05]
 	Updated textproc/p5-XML-LibXSLT to 1.61 [seb 2006-11-05]
 	Updated misc/xtide to 2.8.3 [rillig 2006-11-05]
+	Updated pkgtools/pkg_chk to 1.83 [tron 2006-11-05]
