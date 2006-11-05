@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1731 2006/11/05 01:45:42 minskim Exp $
+>$NetBSD: CHANGES-2006,v 1.1732 2006/11/05 01:55:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5174,4 +5174,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/py-medusa version 0.5.4 [wiz 2006-11-04]
 	Updated devel/bzr to 0.12 [wiz 2006-11-04]
 	Updated mail/dovecot to 1.0rc11 [ghen 2006-11-04]
-	Updated inputmethod/libhangul to 0.0.3 [minskim 2006-11-05]
+	Added inputmethod/libhangul version 0.0.3 [minskim 2006-11-05]
