@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1747 2006/11/05 16:40:39 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1748 2006/11/05 19:57:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added security/ap-modsecurity2 version 2.0.3 [adrianp 2006-11-05]
 	Updated mail/dovecot to 1.0rc12 [ghen 2006-11-05]
 	Updated net/bind9 to 9.3.2nb3 [seb 2006-11-05]
+	Updated textproc/p5-XML-LibXSLT to 1.61 [seb 2006-11-05]
