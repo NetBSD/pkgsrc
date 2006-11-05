@@ -1,4 +1,4 @@
-<!-- $NetBSD: utilities.xml,v 1.4 2006/10/20 10:14:44 rillig Exp $ -->
+<!-- $NetBSD: utilities.xml,v 1.5 2006/11/05 07:24:04 rillig Exp $ -->
 
 <chapter id="utilities">
 <title>Command line utilities</title>
@@ -124,6 +124,47 @@ when y starts with a dot, that is, for hidden files.</para>
 
 <sect1 id="util.test">
 <title>test</title>
+
+<sect2 id="util.test.options">
+<title>Supported options</title>
+
+<para>It is expected that the <emphasis>test</emphasis> utility fully
+supports the POSIX standard. Any deviations from it are recorded in the
+<quote>Unsupported</quote> column.</para>
+
+<table>
+<title>Supported options of the <emphasis>test</emphasis> utility</title>
+<tgroup cols="2">
+<thead>
+<row><entry>Platform</entry><entry>Unsupported</entry><entry>Supported</entry><entry>Extensions</entry></row>
+</thead>
+<tbody>
+<row><entry>AIX-4.3-powerpc</entry><entry></entry><entry>bcdefghLnprstuwxz</entry><entry>k</entry></row>
+<row><entry>IRIX-6.5-mipseb</entry><entry></entry><entry>bcdefghLnprstuwxz</entry><entry>k</entry></row>
+<row><entry>Linux-2.6.*-*</entry><entry></entry><entry>bcdefgLnprSstuwxz</entry><entry>GkO nt ot ef</entry></row>
+<row><entry>NetBSD-3.0-*</entry><entry></entry><entry>bcdefgLnprSstuwxz</entry><entry>GkO nt ot ef</entry></row>
+<row><entry>SunOS-5.10-* /bin/sh</entry><entry>eS</entry><entry>bcdfghLnprstuwz</entry><entry>k</entry></row>
+<row><entry>SunOS-5.10-* /bin/test</entry><entry></entry><entry>bcdefgLnprSstuwxz</entry><entry>aGkOo nt ot ef</entry></row>
+</tbody>
+</tgroup>
+</table>
+
+<para>Remarks:</para>
+
+<itemizedlist>
+
+<listitem><para>On Solaris-5.10-*, the behavior of the
+<literal>-f</literal> operator depends on the value of the environment
+variable <varname>PATH</varname>.</para></listitem>
+
+<listitem><para>On Solaris-5.10-*, <filename>/usr/ucb/test</filename>
+behaves like the builtin command in <filename>/bin/sh</filename>. On the
+other hand, <filename>/usr/bin/test</filename> conforms to
+POSIX.</para></listitem>
+
+</itemizedlist>
+
+</sect2>
 
 <sect2 id="util.test.ext">
 <title>Non-standard extensions</title>
