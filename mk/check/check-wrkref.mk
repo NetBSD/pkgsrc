@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.6 2006/10/16 19:02:53 seb Exp $
+# $NetBSD: check-wrkref.mk,v 1.7 2006/11/05 14:46:50 joerg Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
@@ -45,7 +45,7 @@ check-wrkref: error-check
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
-	cd ${PREFIX};							\
+	cd ${DESTDIR}${PREFIX};						\
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
