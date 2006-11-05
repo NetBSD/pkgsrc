@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5687 2006/11/05 19:21:54 wiz Exp $
+$NetBSD: TODO,v 1.5688 2006/11/05 19:29:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -282,6 +282,7 @@ Suggested package updates
 	o argus-3.4
 	o arnold-20040104
 	o asapm-3.1
+	o asc-1.16.4
 	o aspell-danish-1.7.6
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
@@ -487,6 +488,7 @@ Suggested package updates
 	o gossip-0.18
 	o gpsdrive-2.09
 	o gq-1.2.0
+	o gqview-2.0.3
 	o grace-5.1.20
 	o gramofile-1.6P
 	o gramps-2.2.2
