@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1743 2006/11/05 14:28:58 seb Exp $
+>$NetBSD: CHANGES-2006,v 1.1744 2006/11/05 14:36:19 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5186,3 +5186,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated shells/xsh to 1.8.2nb5 [seb 2006-11-05]
 	Deleted textproc/p5-XML-LibXML-XPathContext [seb 2006-11-05]
 	Updated textproc/p5-XML-XUpdate-LibXML to 0.6.0 [seb 2006-11-05]
+	Added security/ap-modsecurity2 version 2.0.3 [adrianp 2006-11-05]
