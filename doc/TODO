@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5681 2006/11/05 04:11:20 obache Exp $
+$NetBSD: TODO,v 1.5682 2006/11/05 04:30:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -792,7 +792,6 @@ Suggested package updates
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-Number-Compare-0.02
-	o p5-Number-Format-1.51
 	o p5-PV-1.5
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
