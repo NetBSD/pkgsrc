@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/10/04 22:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/11/05 17:06:43 joerg Exp $
 
 DISTNAME=	docutils-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://docutils.sourceforge.net/
 COMMENT=	Python tool to generate documents
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 PYDISTUTILSPKG=	YES

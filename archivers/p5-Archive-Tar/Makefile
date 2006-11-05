@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/10 20:41:41 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2006/11/05 17:10:43 joerg Exp $
 
 DISTNAME=		Archive-Tar-1.29
 PKGNAME=		p5-${DISTNAME}
@@ -15,6 +15,7 @@ DEPENDS+=		p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_PARAMS+=		"-d"	# Text::Diff is a prerequisite
 USE_LANGUAGES=		# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/11/04 00:42:30 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/05 17:09:00 joerg Exp $
 #
 
 DISTNAME=	dbus-0.92
@@ -9,6 +9,8 @@ MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	Message bus system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	dbus-glib<0.71
 CONFLICTS+=	py*-dbus<0.71
