@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:22 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/05 17:49:34 joerg Exp $
 
 DISTNAME=		IO-Zlib-1.04
 PKGNAME=		p5-${DISTNAME}
@@ -10,9 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO-Zlib/
 COMMENT=		Perl5 IO:: style interface to Compress::Zlib
 
-DEPENDS+=		p5-Compress-Zlib>=1.16:../../devel/p5-Compress-Zlib
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=		p5-Compress-Zlib>=1.16:../../devel/p5-Compress-Zlib
 
 PERL5_PACKLIST=		auto/IO/Zlib/.packlist
 

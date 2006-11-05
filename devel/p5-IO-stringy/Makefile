@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/12 16:39:47 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2006/11/05 17:49:34 joerg Exp $
 #
 
 DISTNAME=	IO-stringy-2.110
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/IO-stringy/
 COMMENT=	Perl class for I/O on in-core objects like strings and arrays
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IO/Stringy/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2006/10/13 18:07:49 tron Exp $
+# $NetBSD: Makefile,v 1.74 2006/11/05 17:49:34 joerg Exp $
 
 .include "Makefile.common"
 
@@ -28,6 +28,6 @@ post-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
-		${PREFIX}/share/examples/ncurses++demo.cc
+		${DESTDIR}${PREFIX}/share/examples/ncurses++demo.cc
 
 .include "../../mk/bsd.pkg.mk"

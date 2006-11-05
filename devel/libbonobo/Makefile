@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/09/15 15:06:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.51 2006/11/05 17:49:33 joerg Exp $
 
 DISTNAME=		libbonobo-2.16.0
 CATEGORIES=		devel gnome
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/
 COMMENT=		GNOME2 Object activation framework library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		bonobo-activation-[0-9]*
 

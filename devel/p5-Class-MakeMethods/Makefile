@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/05 17:49:34 joerg Exp $
 #
 
 DISTNAME=		Class-MakeMethods-1.01
@@ -12,6 +12,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Class-MakeMethods/
 COMMENT=		Getter/setter OO method maker for class elements
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 PERL5_PACKLIST=		auto/Class/MakeMethods/.packlist

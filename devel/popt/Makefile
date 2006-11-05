@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/13 18:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/11/05 17:49:34 joerg Exp $
 #
 
 DISTNAME=	popt-1.7
@@ -12,6 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line option parsing library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		ORBit<=0.5.3
 
