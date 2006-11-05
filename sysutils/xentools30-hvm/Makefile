@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/21 22:10:05 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/05 20:47:26 rillig Exp $
 #
 
 DISTNAME=		xen-3.0.3_0-src
@@ -23,6 +23,7 @@ CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
 
 WRKSRC=			${WRKDIR}/xen-3.0.3_0-src/tools
+CHECK_PORTABILITY_SKIP+=	examples/*
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST=		EGDIR=${EGDIR}
