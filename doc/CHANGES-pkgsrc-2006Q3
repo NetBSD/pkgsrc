@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.35 2006/11/05 01:09:35 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.36 2006/11/05 19:29:45 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -89,3 +89,7 @@ Pullup ticket 1874 - requested by adrianp
 security update for drupal
 Pullup ticket 1880 - requested by drochner
 security update for qt3
+Pullup ticket 1901 - requested by taca
+portability fixes for ruby18
+Pullup ticket 1897 - requested by taca
+security fix for ruby18-base
