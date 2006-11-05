@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/05 14:33:37 adrianp Exp $
+
+--- apache2/Makefile.orig	2006-10-24 18:35:09.000000000 +0100
++++ apache2/Makefile
+@@ -1,7 +1,7 @@
+ builddir     = .
+ 
+ #top_dir      = /usr/share/apache2
+-top_dir      = /home/ivanr/apache22
++top_dir      = @PREFIX@/share/httpd
+ 
+ top_srcdir   = ${top_dir}
+ top_builddir = ${top_dir}
+@@ -11,13 +11,13 @@ include ${top_builddir}/build/special.mk
+ APXS      = apxs
+ APACHECTL = apachectl
+ 
+-INCLUDES = -I /usr/include/libxml2
+-DEFS = -DWITH_LIBXML2
++INCLUDES += -I@PREFIX@/include/httpd @XMLINC@
++DEFS += @XMLDEFS@
+ #LIBS = -Lmy/lib/dir -lmylib
+ 
+-CFLAGS = -g -Wuninitialized -std=c99 -Wall -Wmissing-prototypes -Wshadow -Wunused-variable -Wunused-value -Wchar-subscripts -Wsign-compare
++#CFLAGS = -g -Wuninitialized -std=c99 -Wall -Wmissing-prototypes -Wshadow -Wunused-variable -Wunused-value -Wchar-subscripts -Wsign-compare
+ 
+ all: local-shared-build
+ 
+ clean:
+ 	-rm -f *.o *.lo *.slo *.la *~ .libs
