@@ -1,6 +1,6 @@
-$NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
+$NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
 
---- interface/cooked_interface.c.orig	2000-04-20 08:41:04.000000000 +1000
+--- interface/cooked_interface.c.orig	Thu Apr 20 00:41:04 2000
 +++ interface/cooked_interface.c
 @@ -10,9 +10,11 @@
  #include "common_interface.h"
@@ -84,7 +84,7 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
    int retry_count,err;
    struct cdrom_read_audio arg;
    char *buffer=(char *)p;
-@@ -127,7 +174,133 @@ static long cooked_read (cdrom_drive *d,
+@@ -127,7 +174,147 @@ static long cooked_read (cdrom_drive *d,
    } while (err);
    
    return(sectors);
@@ -92,7 +92,7 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
 +#ifdef __NetBSD__
 +  errx(1, "cooked_read: not implemented");
 +#endif
-+}
+ }
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +static int
 +cooked_readtoc(cdrom_drive *d)
@@ -162,6 +162,10 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
 +cooked_read(cdrom_drive *d, void *p, long begin, long sectors)
 +{
 +	int retry_count = 0;
++/* CDIOCREADAUDIO has been removed in FreeBSD 5.1-CURRENT */
++#if __FreeBSD_version >= 501106
++	int bsize = CD_FRAMESIZE_RAW;
++#else
 +	struct ioc_read_audio arg;
 +
 +	if (sectors > d->nsectors)
@@ -170,10 +174,20 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
 +	arg.address_format = CD_LBA_FORMAT;
 +	arg.address.lba = begin;
 +	arg.buffer = p;
++#endif
 +
++#if __FreeBSD_version >= 501106
++	if (ioctl(d->ioctl_fd, CDRIOCSETBLOCKSIZE, &bsize) == -1) {
++		return -7;
++	}
++#endif
 +	for (;;) {
++#if  __FreeBSD_version >= 501106
++		if (pread(d->ioctl_fd, p, sectors*bsize, begin*bsize) != sectors*bsize) {
++#else
 +		arg.nframes = sectors;
 +		if (ioctl(d->ioctl_fd, CDIOCREADAUDIO, &arg) == -1) {
++#endif
 +			if (!d->error_retry)
 +				return -7;
 +
@@ -212,13 +226,13 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
 +	}
 +
 +	return sectors;
- }
++}
 +#endif
 +
  
  /* hook */
  static int Dummy (cdrom_drive *d,int Switch){
-@@ -191,8 +364,11 @@ static void check_exceptions(cdrom_drive
+@@ -191,8 +378,11 @@ static void check_exceptions(cdrom_drive
  
  /* set function pointers to use the ioctl routines */
  int cooked_init_drive (cdrom_drive *d){
@@ -231,7 +245,7 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
    switch(d->drive_type){
    case MATSUSHITA_CDROM_MAJOR:	/* sbpcd 1 */
    case MATSUSHITA_CDROM2_MAJOR:	/* sbpcd 2 */
-@@ -243,6 +419,9 @@ int cooked_init_drive (cdrom_drive *d){
+@@ -243,6 +433,9 @@ int cooked_init_drive (cdrom_drive *d){
    default:
      d->nsectors=40; 
    }
@@ -241,7 +255,7 @@ $NetBSD: patch-ce,v 1.3 2006/03/07 06:29:03 joerg Exp $
    d->enable_cdda = Dummy;
    d->read_audio = cooked_read;
    d->set_speed = cooked_setspeed;
-@@ -255,5 +434,6 @@ int cooked_init_drive (cdrom_drive *d){
+@@ -255,5 +448,6 @@ int cooked_init_drive (cdrom_drive *d){
    if((ret=verify_read_command(d)))return(ret);
    d->error_retry=1;
    return(0);
