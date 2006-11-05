@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2006/11/03 11:27:56 joerg Exp $
+# $NetBSD: Makefile,v 1.93 2006/11/05 14:06:06 joerg Exp $
 
 DISTNAME=		pango-1.14.7
 PKGREVISION=		1
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-qt=no
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
-CHECK_FILES_SKIP+=	libdata/pango/pango.modules
+CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 
 .include "options.mk"
 
