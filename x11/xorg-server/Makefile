@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/10/09 12:52:36 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2006/11/06 12:18:09 dsainty Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -30,6 +30,8 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 XORG_PLIST_ENTRY=	${OPSYS}
+
+SPECIAL_PERMS=		${X11ROOT_PREFIX}/bin/Xorg ${SETUID_ROOT_PERMS}
 
 REPLACE_PERL+=		exports/lib/modules/getconfig*
 REPLACE_PERL+=		programs/Xserver/hw/xfree86/getconfig/getconfig.pl
