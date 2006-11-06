@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.42 2006/09/17 23:55:28 ben Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.43 2006/11/06 17:58:06 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -383,9 +383,13 @@ file and inspect the contents before extracting it.
       (not including XP Home), or 2003.  SFU can be downloaded from <ulink
       url="http://www.microsoft.com/windows/sfu/">http://www.microsoft.com/windows/sfu/</ulink>.</para>
 
-      <para>Services for Unix 3.5, current as of this writing, has been tested.  3.0
-      or 3.1 may work, but are not officially supported.  (The main difference
-      in 3.0/3.1 is lack of pthreads.)</para>
+      <para>Services for Unix 3.5 has been tested.  3.0 or 3.1 may work, but
+      are not officially supported.  (The main difference in 3.0/3.1 is lack
+      of pthreads, but other parts of libc may also be lacking.)</para>
+
+      <para>Services for Unix Applications (aka SUA) is an integrated component
+      of Windows Server 2003 R2 and Windows Vista.  As of this writing, SUA's
+      Interix 5.x subsystem not been tested with pkgsrc.</para>
 
       <sect3 id="platform.interix-sfu-install">
 	<title>When installing Interix/SFU</title>
@@ -423,6 +427,17 @@ file and inspect the contents before extracting it.
 	support contract; however, a NetBSD developer has made most Interix
 	hotfixes available for personal use from <ulink
 	url="http://www.duh.org/interix/hotfixes.php">http://www.duh.org/interix/hotfixes.php</ulink>.</para>
+
+	<para>In addition to the hotfix noted above, it may be necessary to
+	disable Data Execution Prevention entirely to make Interix functional.
+	This may happen only with certain types of CPUs; the cause is not fully
+	understood at this time.  If gcc or other applications still segfault
+	repeatedly after installing one of the hotfixes note above, the
+	following option can be added to the appropriate "boot.ini" line on the
+	Windows boot drive:  /NoExecute=AlwaysOff
+	(WARNING, this will disable DEP completely, which may be a security
+	risk if applications are often run as a user in the Administrators
+	group!)</para>
 
       </sect3>
 
@@ -500,12 +515,6 @@ file and inspect the contents before extracting it.
 	  <ulink url="http://www.interopsystems.com/InteropXserver.htm">Interop X Server</ulink>),
 	  and the free X11 server included with
 	  <ulink url="http://x.cygwin.com/">Cygwin</ulink>.</para>
-
-	  <para>Also, StarNet Communications has graciously provided a free
-	  version of their X-Win32 product that accepts connections only
-	  from localhost:
-	  <ulink url="http://www.starnet.com/xwin32LX/get_xwin32LX.htm">X-Win32 LX</ulink>,
-	  recommended by the maintainer of Interix pkgsrc support.</para></listitem>
 
 	  <listitem><para><emphasis role="strong">X11 acceleration:</emphasis></para>
 	  <para>Because Interix runs in a completely different NT subsystem from
