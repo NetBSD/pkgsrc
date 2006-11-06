@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2006/11/06 11:00:24 joerg Exp $
 #
 
 DISTNAME=		rdesktop-1.4.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rdesktop/}
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.rdesktop.org/
 COMMENT=		Open-source Remote Desktop Protocol client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-x=${X11BASE:Q}
@@ -24,5 +26,6 @@ SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
