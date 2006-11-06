@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/10/12 19:18:41 adam Exp $
+# $NetBSD: Makefile,v 1.29 2006/11/06 11:27:08 joerg Exp $
 
 DISTNAME=	gimp-2.3.12
 CATEGORIES=	graphics
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
 COMMENT=	Image manipulation program similar to Photoshop[tm]
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gimp<=1.2.3
 
@@ -63,6 +65,10 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
