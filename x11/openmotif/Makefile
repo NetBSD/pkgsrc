@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/05/21 11:41:59 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2006/11/06 10:32:18 joerg Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -10,6 +10,9 @@ MASTER_SITES=	http://ftp.motifzone.com/src/
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.opengroup.org/openmotif/
 COMMENT=		The Open Group Motif toolkit for the X Window System
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,9 +38,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 CONFLICTS+=		lesstif-[0-9]*
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		flex gmake tbl
 GNU_CONFIGURE=		yes
@@ -89,5 +89,11 @@ post-build:
 		${MV} -f $${manpage}.tblized $${manpage};		\
 	done
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
