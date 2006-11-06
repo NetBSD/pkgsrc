@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2006/08/10 13:50:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2006/11/06 09:46:41 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -30,7 +30,7 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.cairo=${PKG_BUILD_OPTIONS.cairo:Q}
 MAKEVARS+=	PKG_BUILD_OPTIONS.cairo
 
 .if !empty(PKG_BUILD_OPTIONS.cairo:Mx11)
-.include "../../x11/Xrender/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
