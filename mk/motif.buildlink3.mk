@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink3.mk,v 1.10 2005/12/05 22:07:07 rillig Exp $
+# $NetBSD: motif.buildlink3.mk,v 1.11 2006/11/06 11:29:38 joerg Exp $
 #
 # Package-settable variables:
 #
@@ -82,6 +82,8 @@ _MOTIFBASE=		${BUILDLINK_PREFIX.lesstif}
 # ${BUILDLINK_DIR}.
 #
 BUILDLINK_PREFIX.motif=	${_MOTIFBASE}
+
+.include "../../mk/x11.buildlink3.mk"
 .endif
 
 .if !defined(MOTIFBASE)
@@ -89,7 +91,6 @@ MOTIF_TYPE:=		${_MOTIF_TYPE}
 MOTIFBASE=		${_MOTIFBASE}
 .endif
 
-.include "../../mk/x11.buildlink3.mk"
 
 MAKE_ENV+=		MOTIFLIB=${MOTIFLIB:Q}
 MAKE_ENV+=		MOTIFBASE=${_MOTIFBASE:Q}
