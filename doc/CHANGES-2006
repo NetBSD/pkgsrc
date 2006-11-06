@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1754 2006/11/06 20:59:49 jdolecek Exp $
+>$NetBSD: CHANGES-2006,v 1.1755 2006/11/06 21:12:35 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5197,3 +5197,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-XML-Twig to 3.26 [obache 2006-11-06]
 	Updated x11/inputproto to 1.4 [joerg 2006-11-06]
 	Updated www/php-eaccelerator to 0.9.5 [jdolecek 2006-11-06]
+	Updated www/php-apc to 3.0.12p2 [jdolecek 2006-11-06]
