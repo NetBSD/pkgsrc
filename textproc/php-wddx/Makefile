@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/04 16:26:55 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/11/06 21:37:37 jdolecek Exp $
 
 MODNAME=		wddx
 CATEGORIES+=		textproc
@@ -17,9 +17,9 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include/libxml2 \
 
 .include "../../lang/php/phpversion.mk"
 
-# link against libxml2 on PHP5 (the code is using expat compat
-# build wrapper)
+# link against libxml2 on PHP5
 .if ${PKG_PHP_VERSION} == 5
+CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_DIR}
 .include "../../textproc/libxml2/buildlink3.mk"
 .else
 .include "../../textproc/expat/buildlink3.mk"
