@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/08 07:21:28 reed Exp $
+# $NetBSD: Makefile,v 1.33 2006/11/06 11:25:24 joerg Exp $
 
 DISTNAME=	t1lib-5.1.0
 PKGREVISION=	5
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for generating bitmaps from Adobe Type 1 fonts
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
@@ -22,7 +23,7 @@ DATADIR=	${PREFIX}/share/${PKGBASE}
 CONF_FILES=	${EGDIR}/t1lib.config.sample ${DATADIR}/t1lib.config
 CONF_FILES+=	${EGDIR}/FontDataBase ${DATADIR}/FontDataBase
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	t1lib.config.sample
@@ -37,16 +38,19 @@ pre-build:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}
 
 post-install:
-	${INSTALL_DATA_DIR} ${DATADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
 	cd ${WRKSRC};							\
-	${PAX} -rw Fonts ${DATADIR};					\
-	${CHMOD} go+r ${DATADIR}/Fonts/enc/IsoLatin2.enc;		\
-	${PAX} -rw -s "/doc/${PKGBASE}/" doc ${PREFIX}/share/doc
+	${PAX} -rw Fonts ${DESTDIR}${DATADIR};					\
+	${CHMOD} go+r ${DESTDIR}${DATADIR}/Fonts/enc/IsoLatin2.enc;		\
+	${PAX} -rw -s "/doc/${PKGBASE}/" doc ${DESTDIR}${PREFIX}/share/doc
 
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/t1lib.config.sample ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/t1lib.config.sample ${DESTDIR}${EGDIR}
 	cd ${WRKSRC}/examples;						\
-	${PAX} -rw FontDataBase t1example1.c t1lib.config ${EGDIR}
+	${PAX} -rw FontDataBase t1example1.c t1lib.config ${DESTDIR}${EGDIR}
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
