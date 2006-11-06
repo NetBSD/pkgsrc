@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.20 2006/10/20 22:10:33 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.21 2006/11/06 22:17:50 jdolecek Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -9,6 +9,7 @@ PATCHDIR=	${.CURDIR}/../../lang/php5/patches
 BUILD_DEFS+=		USE_INET6
 
 USE_LIBTOOL=		YES
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
@@ -29,6 +30,7 @@ CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--disable-posix
 CONFIGURE_ARGS+=	--disable-dom
 CONFIGURE_ARGS+=	--disable-pdo
+CONFIGURE_ARGS+=	--disable-json
 
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
