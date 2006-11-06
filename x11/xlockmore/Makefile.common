@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2006/10/20 12:38:48 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.45 2006/11/06 10:04:42 joerg Exp $
 #
 # This Makefile.common is included by:
 #
@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=	--without-dpms
 CONFIGURE_ARGS+=	--disable-allow-root
 .endif
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 
 # Set the complete paths to the sound files and set the default xlock
 # mode/screensaver.
