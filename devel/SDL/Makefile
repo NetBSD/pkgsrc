@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2006/10/09 12:52:34 joerg Exp $
+# $NetBSD: Makefile,v 1.75 2006/11/06 11:21:58 joerg Exp $
 
 DISTNAME=	SDL-1.2.11
 PKGREVISION=	1
@@ -72,5 +72,7 @@ CONFIGURE_ARGS+=	--enable-pth
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
