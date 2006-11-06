@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/10/09 12:52:36 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/11/06 10:10:58 joerg Exp $
 
 DISTNAME=	xterm-212
 CATEGORIES=	x11
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/x11.buildlink3.mk"
 
 .if exists(/usr/include/wchar.h)
 CONFIGURE_ARGS+= --enable-wide-chars
@@ -45,4 +44,7 @@ post-install:
 	${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 .endif
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
