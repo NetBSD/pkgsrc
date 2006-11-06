@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/06 22:22:51 jdolecek Exp $
+
+SHA1 (php-json/json-1.2.1.tgz) = e139b3885a2e68dc979024b91aa9f3e75057d548
+RMD160 (php-json/json-1.2.1.tgz) = ccbc9d3ffd04a11502366e534c78a1f0ce3cd6c0
+Size (php-json/json-1.2.1.tgz) = 17780 bytes
