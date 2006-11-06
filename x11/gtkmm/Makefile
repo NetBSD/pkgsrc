@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/09/24 16:44:19 adam Exp $
+# $NetBSD: Makefile,v 1.43 2006/11/06 10:36:42 joerg Exp $
 
 DISTNAME=	gtkmm-2.10.2
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ interface to Gtk+ v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
