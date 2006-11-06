@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/10/31 22:33:28 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/11/06 14:06:17 joerg Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
 
@@ -20,9 +20,12 @@ INSTALLATION_DIRS+=	bin
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin
 
 .include "../../multimedia/mplayer-share/Makefile.depends"
 
