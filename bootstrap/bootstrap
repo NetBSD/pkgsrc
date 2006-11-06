@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.87 2006/11/06 21:01:42 tv Exp $
+# $NetBSD: bootstrap,v 1.88 2006/11/06 21:08:42 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -883,13 +883,13 @@ register_package() {
 echo_msg "Registering installed packages"
 run_cmd "(cd $pkgsrcdir/pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
 case "$need_awk" in
-yes)	register_package "lang/nawk" "PKG_PRESERVE=yes";;
+yes)	register_package "lang/nawk";;
 esac
 case "$need_sed" in
-yes)	register_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace PKG_PRESERVE=yes";;
+yes)	register_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace";;
 esac
 case "$need_bsd_install" in
-yes)	register_package "sysutils/install-sh" "PKG_PRESERVE=yes";;
+yes)	register_package "sysutils/install-sh";;
 esac
 case "$need_extras" in
 yes)	register_package "pkgtools/bootstrap-extras";;
