@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:50 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/11/06 11:26:30 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AALIB_BUILDLINK3_MK:=	${AALIB_BUILDLINK3_MK}+
@@ -34,7 +34,7 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.aalib
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.aalib:Mx11)
-.  include "../../mk/x11.buildlink3.mk"
+.  include "../../x11/libX11/buildlink3.mk"
 .endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
