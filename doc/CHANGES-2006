@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1752 2006/11/06 13:42:04 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1753 2006/11/06 15:23:55 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5195,3 +5195,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_chk to 1.83 [tron 2006-11-05]
 	Updated textproc/p5-XML-SAX-Writer to 0.50 [obache 2006-11-06]
 	Updated textproc/p5-XML-Twig to 3.26 [obache 2006-11-06]
+	Updated x11/inputproto to 1.4 [joerg 2006-11-06]
