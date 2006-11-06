@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/04/05 16:04:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/11/06 10:49:29 joerg Exp $
 
 TETEX_BIN_VERS=		3.0
 DIST_SUBDIR=		teTeX
@@ -59,4 +59,4 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"

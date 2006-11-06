@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/07 15:49:33 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/11/06 10:49:29 joerg Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - binaries
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
@@ -40,7 +42,13 @@ CONF_FILES+=	${PREFIX}/share/texmf/web2c/texmf.cnf.dist		\
 		${PREFIX}/share/texmf/web2c/texmf.cnf
 OWN_DIRS+=	${PREFIX}/share/texmf-var ${PREFIX}/share/texmf-local
 
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	texmf=${DESTDIR}${PREFIX}/share/texmf
+INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
 .include "../../print/teTeX3-bin/Makefile.common"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
