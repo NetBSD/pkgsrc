@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/06 13:31:13 obache Exp $
 
-DISTNAME=	XML-SAX-Writer-0.44
+DISTNAME=	XML-SAX-Writer-0.50
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -10,8 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-SAX-Writer/
 COMMENT=	SAX2 (XML) Writer
 
+DEPENDS+=	p5-Text-Iconv>=1.2:../../converters/p5-Text-Iconv
+DEPENDS+=	p5-XML-SAX>=0.12:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-NamespaceSupport>=0.03:../../textproc/p5-XML-NamespaceSupport
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
+DEPENDS+=	p5-XML-Filter-BufferText>=0.01:../../textproc/p5-XML-Filter-BufferText
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
