@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1751 2006/11/06 13:32:55 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1752 2006/11/06 13:42:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5194,3 +5194,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/xtide to 2.8.3 [rillig 2006-11-05]
 	Updated pkgtools/pkg_chk to 1.83 [tron 2006-11-05]
 	Updated textproc/p5-XML-SAX-Writer to 0.50 [obache 2006-11-06]
+	Updated textproc/p5-XML-Twig to 3.26 [obache 2006-11-06]
