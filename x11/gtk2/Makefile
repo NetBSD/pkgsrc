@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2006/10/12 14:18:40 drochner Exp $
+# $NetBSD: Makefile,v 1.132 2006/11/06 10:42:38 joerg Exp $
 
 DISTNAME=		gtk+-2.10.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -88,16 +88,21 @@ _BUILDING_GTK2=	yes
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
-.include "../../x11/Xfixes/buildlink3.mk"
-.include "../../x11/Xrandr/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
