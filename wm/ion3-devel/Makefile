@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/11/03 07:02:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/11/06 11:33:52 joerg Exp $
 #
 
 DISTNAME=	ion-3ds-20060524
@@ -12,6 +12,7 @@ HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
@@ -36,7 +37,13 @@ EGFILES=		cfg_dock.lua cfg_floatws.lua cfg_ion.lua	\
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
