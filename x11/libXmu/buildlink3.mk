@@ -1,4 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/03 20:53:29 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/11/06 09:59:11 joerg Exp $
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${X11_TYPE} != "modular"
+.include "../../mk/x11.buildlink3.mk"
+.else
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXMU_BUILDLINK3_MK:=	${LIBXMU_BUILDLINK3_MK}+
@@ -22,3 +28,5 @@ BUILDLINK_PKGSRCDIR.libXmu?=	../../x11/libXmu
 .include "../../x11/xproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+
+.endif
