@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/10/20 21:56:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.20 2006/11/06 21:36:49 jdolecek Exp $
 
 DISTNAME=	php-extensions-4.4
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	meta-pkgs www php4
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,6 +15,7 @@ DEPENDS+=	php-4.4.*:../../www/php4
 DEPENDS+=	${APACHE_PKG_PREFIX}-php4-4.4.*:../../www/ap-php
 
 # extensions buildable with both PHP 4.x and PHP 5.x
+DEPENDS+=	php4-apc-4.4.*:../../www/php-apc
 DEPENDS+=	php4-bcmath-4.4.*:../../math/php-bcmath
 DEPENDS+=	php4-bz2-4.4.*:../../archivers/php-bz2
 DEPENDS+=	php4-calendar-4.4.*:../../misc/php-calendar
