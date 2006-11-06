@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5689 2006/11/05 23:13:40 taca Exp $
+$NetBSD: TODO,v 1.5690 2006/11/06 13:42:04 obache Exp $
 
 Suggested new packages
 ======================
@@ -828,7 +828,6 @@ Suggested package updates
 	o p5-XML-RSS-1.12
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
-	o p5-XML-Twig-3.26 [pkg/34412]
 	o p5-XML-Writer-0.600 [pkg/34413]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
