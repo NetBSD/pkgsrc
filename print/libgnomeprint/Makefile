@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/07/05 05:37:44 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2006/11/06 10:58:56 joerg Exp $
 #
 
 DISTNAME=	libgnomeprint-2.12.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.levien.com/gnome/print-arch.html
 COMMENT=	Library for the GNOME2 Printing Architecture
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
@@ -55,5 +57,4 @@ PRINT_PLIST_AWK+=	/cups/ { print "$${USE_CUPS}" $$0; next; }
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
