@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/07/11 00:57:43 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2006/11/07 09:26:37 joerg Exp $
 
 DISTNAME=	maildrop-2.0.2
 CATEGORIES=     security
@@ -8,6 +8,8 @@ EXTRACT_SUFX=   .tar.bz2
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Courier mail delivery agent with filtering abilities
 HOMEPAGE=	http://www.courier-mta.org/maildrop/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 
@@ -42,16 +44,18 @@ CONFIGURE_ARGS+=	--disable-authlib
 .endif
 
 REQD_DIRS=	${DOCDIR}
-SPECIAL_PERMS=	bin/maildrop ${ROOT_USER} ${COURIER_GROUP} 4711
+SPECIAL_PERMS=	bin/lockmail ${REAL_ROOT_USER} ${COURIER_GROUP} 755
+SPECIAL_PERMS+=	bin/maildrop ${REAL_ROOT_USER} ${COURIER_GROUP} 4755
 
 .include "../../devel/sysexits/buildlink3.mk"
 
+INSTALLATION_DIRS=	${DOCDIR}/maildrop
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/maildrop/maildroptips.html ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}/maildrop
-	${INSTALL_DATA} ${WRKSRC}/maildrop/README.html ${DOCDIR}/maildrop
-	${INSTALL_DATA} ${WRKSRC}/maildrop/makedat.html ${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/maildrop/makedat.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/maildrop/maildroptips.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/maildrop/README.html ${DESTDIR}${DOCDIR}/maildrop
+	${INSTALL_DATA} ${WRKSRC}/maildrop/makedat.html ${DESTDIR}${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/maildrop/makedat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
