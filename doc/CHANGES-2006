@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1765 2006/11/07 14:54:43 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1766 2006/11/07 17:41:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5210,3 +5210,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/milter-greylist to 3.0rc7 [tron 2006-11-07]
 	Updated textproc/p5-XML-Writer to 0.601 [obache 2006-11-07]
 	Updated textproc/p5-Text-Glob to 0.07 [obache 2006-11-07]
+	Added x11/libxkbfile version 1.0.4 [joerg 2006-11-07]
+	Added x11/xinit version 1.0.3 [joerg 2006-11-07]
+	Added x11/xkbcomp version 1.0.2 [joerg 2006-11-07]
+	Added x11/xkbdata version 1.0.1 [joerg 2006-11-07]
+	Added x11/xmodmap version 1.0.2 [joerg 2006-11-07]
+	Added x11/xrdb version 1.0.2 [joerg 2006-11-07]
+	Added x11/xset version 1.0.2 [joerg 2006-11-07]
+	Added x11/xsetroot version 1.0.1 [joerg 2006-11-07]
