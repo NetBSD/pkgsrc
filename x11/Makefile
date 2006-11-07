@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.450 2006/11/07 17:41:02 joerg Exp $
+# $NetBSD: Makefile,v 1.451 2006/11/07 21:08:18 kristerw Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -260,8 +260,8 @@ SUBDIR+=	randrproto
 SUBDIR+=	ratmen
 SUBDIR+=	recordproto
 SUBDIR+=	renderproto
-SUBDIR+=	resourceproto
 SUBDIR+=	rep-gtk
+SUBDIR+=	resourceproto
 SUBDIR+=	rox-session
 SUBDIR+=	rox-wallpaper
 SUBDIR+=	ruby-gnome2-gnome
@@ -310,13 +310,13 @@ SUBDIR+=	xbindkeys-tk
 SUBDIR+=	xbitmaps
 SUBDIR+=	xcb
 SUBDIR+=	xclip
+SUBDIR+=	xcmiscproto
 SUBDIR+=	xcolors
 SUBDIR+=	xcolorsel
 SUBDIR+=	xcompmgr
 SUBDIR+=	xcruise
 SUBDIR+=	xcursor
 SUBDIR+=	xcursorgen
-SUBDIR+=	xcmiscproto
 SUBDIR+=	xdaemon
 SUBDIR+=	xdaemon2
 SUBDIR+=	xdesktopwaves
@@ -387,8 +387,8 @@ SUBDIR+=	xpmroot
 SUBDIR+=	xpns
 SUBDIR+=	xpostit
 SUBDIR+=	xproto
-SUBDIR+=	xrestop
 SUBDIR+=	xrdb
+SUBDIR+=	xrestop
 SUBDIR+=	xscreensaver
 SUBDIR+=	xscreensaver-demo
 SUBDIR+=	xscribble
@@ -402,6 +402,7 @@ SUBDIR+=	xteddy2
 SUBDIR+=	xterm
 SUBDIR+=	xtermset
 SUBDIR+=	xtoolwait
+SUBDIR+=	xtrans
 SUBDIR+=	xvattr
 SUBDIR+=	xvidcap
 SUBDIR+=	xvidcap-gtk2
@@ -409,7 +410,6 @@ SUBDIR+=	xview
 SUBDIR+=	xview-clients
 SUBDIR+=	xview-config
 SUBDIR+=	xview-lib
-SUBDIR+=	xtrans
 SUBDIR+=	xwatchwin
 SUBDIR+=	xwit
 SUBDIR+=	xworld
