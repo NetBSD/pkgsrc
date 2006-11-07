@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2006/10/19 23:00:06 bouyer Exp $
+# $NetBSD: Makefile,v 1.379 2006/11/07 20:58:53 kristerw Exp $
 #
 
 COMMENT=	System utilities
@@ -145,6 +145,7 @@ SUBDIR+=	medusa
 SUBDIR+=	memconf
 SUBDIR+=	memtest86
 SUBDIR+=	memtester
+SUBDIR+=	memtestplus
 SUBDIR+=	mencvcd
 SUBDIR+=	mesure
 SUBDIR+=	mgm
