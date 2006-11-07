@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2006/10/09 12:52:36 joerg Exp $
+# $NetBSD: Makefile,v 1.72 2006/11/07 09:28:09 joerg Exp $
 
 DISTNAME=	audit-packages-1.44
 CATEGORIES=	security pkgtools
@@ -19,8 +19,8 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=    yes
 
 OWN_DIRS=	${PKGVULNDIR}
-MAN8DIR=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-CAT8DIR=	${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8
+MAN8DIR=	${PREFIX}/${PKGMANDIR}/man8
+CAT8DIR=	${PREFIX}/${PKGMANDIR}/cat8
 INSTALLATION_DIRS=	${CAT8DIR} ${MAN8DIR} sbin
 
 .include "../../mk/bsd.prefs.mk"
@@ -61,11 +61,11 @@ do-install:
 	@for f in audit-packages download-vulnerability-list; do	\
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/sbin; \
 	done
-	${INSTALL_MAN} ${WRKSRC}/audit-packages.0 ${CAT8DIR}/
-	${INSTALL_MAN} ${WRKSRC}/audit-packages.8 ${MAN8DIR}/
-	${RM} -f ${CAT8DIR}/download-vulnerability-list.0
-	${LN} -s audit-packages.0 ${CAT8DIR}/download-vulnerability-list.0
-	${RM} -f ${MAN8DIR}/download-vulnerability-list.8
-	${LN} -s audit-packages.8 ${MAN8DIR}/download-vulnerability-list.8
+	${INSTALL_MAN} ${WRKSRC}/audit-packages.0 ${DESTDIR}${CAT8DIR}/
+	${INSTALL_MAN} ${WRKSRC}/audit-packages.8 ${DESTDIR}${MAN8DIR}/
+	${RM} -f ${DESTDIR}${CAT8DIR}/download-vulnerability-list.0
+	${LN} -s audit-packages.0 ${DESTDIR}${CAT8DIR}/download-vulnerability-list.0
+	${RM} -f ${DESTDIR}${MAN8DIR}/download-vulnerability-list.8
+	${LN} -s audit-packages.8 ${DESTDIR}${MAN8DIR}/download-vulnerability-list.8
 
 .include "../../mk/bsd.pkg.mk"
