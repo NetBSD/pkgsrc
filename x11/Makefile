@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.449 2006/11/05 16:40:39 joerg Exp $
+# $NetBSD: Makefile,v 1.450 2006/11/07 17:41:02 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -190,6 +190,7 @@ SUBDIR+=	libXres
 SUBDIR+=	libXt
 SUBDIR+=	libXv
 SUBDIR+=	libexo
+SUBDIR+=	libxbdfile
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
@@ -348,8 +349,11 @@ SUBDIR+=	xglobe
 SUBDIR+=	xgrk
 SUBDIR+=	xhangglider
 SUBDIR+=	xineramaproto
+SUBDIR+=	xinit
 SUBDIR+=	xjman
+SUBDIR+=	xkbcomp
 SUBDIR+=	xkbd
+SUBDIR+=	xkbdata
 SUBDIR+=	xkbset
 SUBDIR+=	xkeycaps
 SUBDIR+=	xless
@@ -360,6 +364,7 @@ SUBDIR+=	xlupe
 SUBDIR+=	xmascot
 SUBDIR+=	xmindpath
 SUBDIR+=	xmms-osd
+SUBDIR+=	xmodmap
 SUBDIR+=	xmon
 SUBDIR+=	xmountains
 SUBDIR+=	xmove
@@ -383,11 +388,14 @@ SUBDIR+=	xpns
 SUBDIR+=	xpostit
 SUBDIR+=	xproto
 SUBDIR+=	xrestop
+SUBDIR+=	xrdb
 SUBDIR+=	xscreensaver
 SUBDIR+=	xscreensaver-demo
 SUBDIR+=	xscribble
 SUBDIR+=	xscript
 SUBDIR+=	xservers
+SUBDIR+=	xset
+SUBDIR+=	xsetroot
 SUBDIR+=	xsnow
 SUBDIR+=	xteddy
 SUBDIR+=	xteddy2
