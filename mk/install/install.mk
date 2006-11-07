@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.26 2006/11/04 07:42:51 rillig Exp $
+# $NetBSD: install.mk,v 1.27 2006/11/07 18:16:19 joerg Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -239,7 +239,7 @@ MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
 .PHONY: install-makedirs
 install-makedirs:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -d ${DESTDIR}${PREFIX} || ${MKDIR} ${DESTDIR}${PREFIX}
+	${_PKG_SILENT}${_PKG_DEBUG}${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${MTREE_FILE} ||	\
 		${MTREE} ${MTREE_ARGS} ${DESTDIR}${PREFIX}/
