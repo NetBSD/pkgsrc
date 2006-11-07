@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2006/10/24 10:47:16 cube Exp $
+# $NetBSD: Makefile,v 1.299 2006/11/07 21:01:59 kristerw Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -9,6 +9,7 @@ SUBDIR+=	YoSucker
 SUBDIR+=	anomy-sanitizer
 SUBDIR+=	archivemail
 SUBDIR+=	autorespond
+SUBDIR+=	avenger
 SUBDIR+=	balsa2
 SUBDIR+=	bbmail
 SUBDIR+=	bmf
