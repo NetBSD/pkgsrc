@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1760 2006/11/07 07:42:40 schmonz Exp $
+>$NetBSD: CHANGES-2006,v 1.1761 2006/11/07 08:04:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix-current to 2.4-20061019 [martti 2006-11-07]
 	Updated mail/clamav to 0.88.6 [martti 2006-11-07]
 	Updated mail/tmda to 1.1.9 [schmonz 2006-11-07]
+	Updated mail/getmail to 4.6.5 [schmonz 2006-11-07]
