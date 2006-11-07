@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/11/07 09:24:32 joerg Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.mctavish.co.uk/mad123/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mctavish.co.uk/mad123/
 COMMENT=	Command-line MPEG audio player
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,8 +40,8 @@ MAKE_FLAGS+=	USE_SUN=yes
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${PREFIX}/bin/mad123
-	${INSTALL_MAN} ${WRKSRC}/mad123.1 ${PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${DESTDIR}${PREFIX}/bin/mad123
+	${INSTALL_MAN} ${WRKSRC}/mad123.1 ${DESTDIR}${PREFIX}/man/man1/
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
