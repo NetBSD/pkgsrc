@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.37 2006/11/07 07:56:00 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.38 2006/11/07 08:30:25 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -95,3 +95,5 @@ Pullup ticket 1897 - requested by taca
 security fix for ruby18-base
 Pullup ticket 1902 - requested by briggs
 build fix for autoconf
+Pullup ticket 1903 - requested by martti
+latest update for clamav
