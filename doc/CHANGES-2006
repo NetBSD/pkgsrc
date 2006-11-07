@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1764 2006/11/07 13:51:51 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1765 2006/11/07 14:54:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5209,3 +5209,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/bglibs to 1.102 [schmonz 2006-11-07]
 	Updated mail/milter-greylist to 3.0rc7 [tron 2006-11-07]
 	Updated textproc/p5-XML-Writer to 0.601 [obache 2006-11-07]
+	Updated textproc/p5-Text-Glob to 0.07 [obache 2006-11-07]
