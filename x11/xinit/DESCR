@@ -1,0 +1,2 @@
+This package provides xinit and startx, utilities for starting the
+X Window System server. This is from the modular X.org.
