@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/11/03 18:19:07 tonio Exp $
+# $NetBSD: Makefile,v 1.54 2006/11/07 09:27:11 joerg Exp $
 
 DISTNAME=		mutt-1.5.13
 PKGREVISION=		1
@@ -14,6 +14,7 @@ HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP & S/MIME support
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
