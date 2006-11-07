@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/11/06 22:06:35 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/11/07 16:46:51 tron Exp $
 
 .if !defined(DISTNAME)
 DISTNAME=		php-${PHP_BASE_VERS}
@@ -8,8 +8,7 @@ CATEGORIES+=		www php5
 
 .if !defined(PECL_VERSION)
 MASTER_SITES?=		http://www.php.net/distributions/ \
-			http://php3.de/distributions/ \
-			ftp://ftp.php.net/pub/distributions/
+			http://php3.de/distributions/
 EXTRACT_SUFX?=		.tar.bz2
 .endif
 
