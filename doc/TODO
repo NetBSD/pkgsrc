@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5691 2006/11/07 07:42:40 schmonz Exp $
+$NetBSD: TODO,v 1.5692 2006/11/07 08:04:44 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -451,7 +451,6 @@ Suggested package updates
 	o gdm-2.16.2
 	o gdsreader-0.3.2
 	o gedit-2.16.2
-	o getmail-4.6.5
 	o ggiterm-0.7.1
 	o ghc-6.6
 	o ghostscript-gnu-8.55
