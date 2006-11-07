@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/24 17:33:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2006/11/07 14:53:10 obache Exp $
 
-SHA1 (Text-Glob-0.06.tar.gz) = 8158ffc186c473a06f5e2bc8c5468225b3641066
-RMD160 (Text-Glob-0.06.tar.gz) = a49603fe4341e6774a798e65c5aa442bd8fc0849
-Size (Text-Glob-0.06.tar.gz) = 3547 bytes
+SHA1 (Text-Glob-0.07.tar.gz) = a74c665f5e01b93d4f652633e52f2790d7f26450
+RMD160 (Text-Glob-0.07.tar.gz) = c6bd70e7e7802c8825e39f2ae28eed501d8ef9db
+Size (Text-Glob-0.07.tar.gz) = 3691 bytes
