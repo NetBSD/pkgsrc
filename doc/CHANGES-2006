@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1762 2006/11/07 08:08:27 schmonz Exp $
+>$NetBSD: CHANGES-2006,v 1.1763 2006/11/07 13:50:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5207,3 +5207,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/tmda to 1.1.9 [schmonz 2006-11-07]
 	Updated mail/getmail to 4.6.5 [schmonz 2006-11-07]
 	Updated devel/bglibs to 1.102 [schmonz 2006-11-07]
+	Updated mail/milter-greylist to 3.0rc7 [tron 2006-11-07]
