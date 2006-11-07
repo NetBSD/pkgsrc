@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1758 2006/11/07 07:09:10 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1759 2006/11/07 07:09:58 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5201,3 +5201,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/php-json 1.2.1 [jdolecek 2006-11-06]
 	Updated lang/php5 to 5.2.0 [jdolecek 2006-11-06]
 	Updated security/openssh to 4.4.1nb1 [taca 2006-11-07]
+	Updated mail/postfix to 2.3.4 [martti 2006-11-07]
+	Updated mail/postfix-current to 2.4-20061019 [martti 2006-11-07]
+	Updated mail/clamav to 0.88.6 [martti 2006-11-07]
