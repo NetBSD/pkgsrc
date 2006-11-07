@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/07 17:18:15 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/11/07 17:22:27 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXKBFILE_BUILDLINK3_MK:=	${LIBXKBFILE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libxkbfile
 
 .if !empty(LIBXKBFILE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libxkbfile+=	libxkbfile>=0.99.1
-BUILDLINK_PKGSRCDIR.libxkbfile?=	../../wip/libxkbfile
+BUILDLINK_PKGSRCDIR.libxkbfile?=	../../x11/libxkbfile
 .endif	# LIBXKBFILE_BUILDLINK3_MK
 
 .include "../../x11/kbproto/buildlink3.mk"
