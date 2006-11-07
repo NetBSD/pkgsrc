@@ -1,0 +1,3 @@
+The xkbcomp tool converts descriptions of an XKB keymap into other
+formats, most importantly the compiled keymaps used by XKB-capable
+X servers.
