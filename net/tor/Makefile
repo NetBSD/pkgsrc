@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/10/26 14:47:37 tv Exp $
+# $NetBSD: Makefile,v 1.36 2006/11/08 19:41:10 tv Exp $
 #
 
-DISTNAME=		tor-0.1.1.24
+DISTNAME=		tor-0.1.1.25
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
