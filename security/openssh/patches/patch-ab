@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.24 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-ab,v 1.25 2006/11/08 01:49:22 taca Exp $
 
---- configure.ac.orig	2006-09-25 04:08:59.000000000 +0900
+--- configure.ac.orig	2006-10-07 08:07:21.000000000 +0900
 +++ configure.ac
-@@ -324,6 +324,15 @@ main() { if (NSVersionOfRunTimeLibrary("
+@@ -127,6 +127,9 @@ AC_ARG_WITH(rpath,
+ 	]
+ )
+ 
++# pkgsrc handles any rpath settings this package needs
++need_dash_r=
++
+ # Allow user to specify flags
+ AC_ARG_WITH(cflags,
+ 	[  --with-cflags           Specify additional flags to pass to compiler],
+@@ -194,6 +197,7 @@ AC_CHECK_HEADERS( \
+ 	maillock.h \
+ 	ndir.h \
+ 	net/if_tun.h \
++	net/tun/if_tun.h \
+ 	netdb.h \
+ 	netgroup.h \
+ 	pam/pam_appl.h \
+@@ -454,6 +458,15 @@ main() { if (NSVersionOfRunTimeLibrary("
  		;;
  	esac
  	;;
@@ -18,25 +36,7 @@ $NetBSD: patch-ab,v 1.24 2006/10/31 03:31:20 taca Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  	AC_DEFINE(BROKEN_INET_NTOA, 1,
-@@ -663,6 +672,9 @@ mips-sony-bsd|mips-sony-newsos4)
-         ;;
- esac
- 
-+# pkgsrc handles any rpath settings this package needs
-+need_dash_r=
-+
- # Allow user to specify flags
- AC_ARG_WITH(cflags,
- 	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -745,6 +757,7 @@ AC_CHECK_HEADERS( \
- 	maillock.h \
- 	ndir.h \
- 	net/if_tun.h \
-+	net/tun/if_tun.h \
- 	netdb.h \
- 	netgroup.h \
- 	pam/pam_appl.h \
-@@ -3873,9 +3886,17 @@ AC_TRY_COMPILE([
+@@ -3876,9 +3889,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.24 2006/10/31 03:31:20 taca Exp $
  	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location",
  		[Define if you want to specify the path to your utmpx file])
  fi
-@@ -3899,9 +3920,17 @@ AC_TRY_COMPILE([
+@@ -3902,9 +3923,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.24 2006/10/31 03:31:20 taca Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location",
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -3941,7 +3970,7 @@ echo "OpenSSH has been configured with t
+@@ -3944,7 +3973,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
