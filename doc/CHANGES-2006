@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1769 2006/11/08 05:11:57 epg Exp $
+>$NetBSD: CHANGES-2006,v 1.1770 2006/11/08 07:54:29 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/cvm to 0.82 [schmonz 2006-11-07]
 	Updated security/openssh to 4.5.1 [taca 2006-11-08]
 	Updated devel/subversion to 1.4.2 [epg 2006-11-08]
+	Updated editors/vim-share to 7.0.162 [martti 2006-11-08]
