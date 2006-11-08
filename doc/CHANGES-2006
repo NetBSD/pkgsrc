@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1772 2006/11/08 09:52:01 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1773 2006/11/08 10:05:39 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5227,3 +5227,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox to 1.5.0.8 [ghen 2006-11-08]
 	Updated www/firefox-bin to 1.5.0.8 [ghen 2006-11-08]
 	Updated www/firefox-gtk1 to 1.5.0.8 [ghen 2006-11-08]
+	Updated mail/mimedefang to 2.58 [markd 2006-11-08]
+	Updated graphics/kbarcode to 2.0.5 [markd 2006-11-08]
