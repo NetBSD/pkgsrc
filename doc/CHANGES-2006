@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1768 2006/11/08 01:50:08 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1769 2006/11/08 05:11:57 epg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5220,3 +5220,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/xsetroot version 1.0.1 [joerg 2006-11-07]
 	Updated security/cvm to 0.82 [schmonz 2006-11-07]
 	Updated security/openssh to 4.5.1 [taca 2006-11-08]
+	Updated devel/subversion to 1.4.2 [epg 2006-11-08]
