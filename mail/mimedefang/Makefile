@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/11/08 09:42:05 markd Exp $
 
-DISTNAME=		mimedefang-2.56
+DISTNAME=		mimedefang-2.58
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
@@ -31,7 +31,7 @@ PKG_GROUPS=		${DEFANG_GROUP}
 PKG_USERS=		${DEFANG_USER}:${DEFANG_GROUP}
 
 BUILD_DEFS+=		PKG_SYSCONFSUBDIR DEFANG_SPOOLDIR
-BUILD_DEFS+=		DEFANG_USER DEFANG_GROUP
+BUILD_DEFS+=		DEFANG_USER DEFANG_GROUP VARBASE
 
 EGDIR=			${PREFIX}/share/examples/mimedefang
 SHAREDIR=		${PREFIX}/share/mimedefang
@@ -66,9 +66,8 @@ CONFIGURE_ENV+=		NAI=${PREFIX}/bin/uvscan
 # Doesn't work with pth
 PTHREAD_OPTS+=		require native
 
-INSTALLATION_DIRS=	bin man/man5 man/man7 man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${SHAREDIR}
@@ -77,13 +76,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/watch-mimedefang ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mimedefang.pl ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/watch-mimedefang.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-filter.5 ${PREFIX}/man/man5
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-protocol.7 ${PREFIX}/man/man7
+	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/watch-mimedefang.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang-filter.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/mimedefang-protocol.7 ${PREFIX}/${PKGMANDIR}/man7
 	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${EGDIR}/mimedefang-filter
 	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${EGDIR}/sa-mimedefang.cf
 
