@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.24 2006/04/06 06:21:56 reed Exp $
+# $NetBSD: Makefile.common,v 1.25 2006/11/08 11:29:14 adam Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
-MASTER_SITES=   	http://subversion.tigris.org/tarballs/
+MASTER_SITES=		http://subversion.tigris.org/tarballs/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://subversion.tigris.org/
@@ -13,13 +14,12 @@ SVNEXAMPLES=		${PREFIX}/share/examples/subversion
 SVNDOC=			${PREFIX}/share/doc/subversion
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/subversion/distinfo
-FILESDIR=       	${.CURDIR}/../../devel/subversion/files
+FILESDIR=		${.CURDIR}/../../devel/subversion/files
 PATCHDIR=		${.CURDIR}/../../devel/subversion/patches
 
-GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
