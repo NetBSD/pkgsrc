@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1774 2006/11/08 13:16:43 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1775 2006/11/08 13:48:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/kbarcode to 2.0.5 [markd 2006-11-08]
 	Updated mail/thunderbird to 1.5.0.8 [ghen 2006-11-08]
 	Updated mail/thunderbird-gtk1 to 1.5.0.8 [ghen 2006-11-08]
+	Updated graphics/p5-Gdk-Pixbuf to 0.7009nb12 [obache 2006-11-08]
