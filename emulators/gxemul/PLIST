@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/20 16:27:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/11/09 20:01:55 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -59,10 +59,10 @@ share/doc/gxemul/20060812-netbsd-malta-3.0.1.png
 share/doc/gxemul/20060812-netbsd-malta-3.0.1_small.png
 share/doc/gxemul/20060814-netbsd-algor-3.0.1.png
 share/doc/gxemul/20060814-netbsd-algor-3.0.1_small.png
+share/doc/gxemul/20061029-netbsd-dreamcast.png
+share/doc/gxemul/20061029-netbsd-dreamcast_small.png
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
-share/doc/gxemul/Makefile
-share/doc/gxemul/Makefile.skel
 share/doc/gxemul/README
 share/doc/gxemul/RELEASE
 share/doc/gxemul/TODO
@@ -105,8 +105,8 @@ share/doc/gxemul/intro.html
 share/doc/gxemul/maddr.gif
 share/doc/gxemul/make_doc_footer.html
 share/doc/gxemul/make_doc_header.html
-share/doc/gxemul/make_documentation.sh
 share/doc/gxemul/misc.html
+share/doc/gxemul/networking.html
 share/doc/gxemul/openbsd-pmax-20040710.png
 share/doc/gxemul/openbsd-pmax-20040710_small.png
 share/doc/gxemul/sgi-o2-real.jpg
