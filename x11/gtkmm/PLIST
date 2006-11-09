@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/09/24 16:44:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/11/09 16:37:36 adam Exp $
 bin/demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1405,8 +1405,6 @@ share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1LayoutLine.html
 share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1LayoutRun-members.html
 share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1LayoutRun.html
 share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1Layout__inherit__graph.png
-share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1Matrix-members.html
-share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1Matrix.html
 share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1Rectangle-members.html
 share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1Rectangle.html
 share/doc/gtkmm-2.4/docs/reference/html/classPango_1_1Renderer-members.html
@@ -1617,8 +1615,6 @@ share/doc/gtkmm-2.4/docs/reference/html/group__Containers.png
 share/doc/gtkmm-2.4/docs/reference/html/group__Dialogs.html
 share/doc/gtkmm-2.4/docs/reference/html/group__Menus.html
 share/doc/gtkmm-2.4/docs/reference/html/group__Menus.png
-share/doc/gtkmm-2.4/docs/reference/html/group__Printing.html
-share/doc/gtkmm-2.4/docs/reference/html/group__RecentFiles.html
 share/doc/gtkmm-2.4/docs/reference/html/group__TextView.html
 share/doc/gtkmm-2.4/docs/reference/html/group__TextView.png
 share/doc/gtkmm-2.4/docs/reference/html/group__TreeView.html
@@ -1682,7 +1678,6 @@ share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__124.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__125.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__126.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__127.png
-share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__128.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__13.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__14.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__15.png
@@ -1791,7 +1786,6 @@ share/doc/gtkmm-2.4/docs/reference/html/list_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/liststore_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/listviewtext_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/main_8h.html
-share/doc/gtkmm-2.4/docs/reference/html/matrix_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/menu_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/menu__elems_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/menubar_8h.html
@@ -2101,6 +2095,8 @@ share/doc/gtkmm-2.4/docs/tutorial/html/aphs04.html
 share/doc/gtkmm-2.4/docs/tutorial/html/aphs05.html
 share/doc/gtkmm-2.4/docs/tutorial/html/aphs06.html
 share/doc/gtkmm-2.4/docs/tutorial/html/aphs07.html
+share/doc/gtkmm-2.4/docs/tutorial/html/api.html
+share/doc/gtkmm-2.4/docs/tutorial/html/apis02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch01.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch01s02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch02.html
