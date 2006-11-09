@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.2 2006/08/10 13:50:37 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2006/11/09 20:57:41 drochner Exp $
 
---- src/cairoint.h.orig	2006-08-08 07:19:51.000000000 +0000
+--- src/cairoint.h.orig	2006-11-02 23:53:40.000000000 +0100
 +++ src/cairoint.h
-@@ -67,7 +67,7 @@
+@@ -72,7 +72,7 @@
  
  CAIRO_BEGIN_DECLS
  
 -#if __GNUC__ >= 3 && defined(__ELF__)
 +#if __GNUC__ >= 3 && defined(__ELF__) && !defined(__sun)
- # define slim_hidden_proto(name)	slim_hidden_proto1(name, INT_##name)
- # define slim_hidden_def(name)		slim_hidden_def1(name, INT_##name)
- # define slim_hidden_proto1(name, internal)				\
-@@ -95,7 +95,7 @@ CAIRO_BEGIN_DECLS
+ # define slim_hidden_proto(name)	slim_hidden_proto1(name, slim_hidden_int_name(name))
+ # define slim_hidden_def(name)		slim_hidden_def1(name, slim_hidden_int_name(name))
+ # define slim_hidden_int_name(name) INT_##name
+@@ -101,7 +101,7 @@ CAIRO_BEGIN_DECLS
  #endif
  
  /* slim_internal.h */
