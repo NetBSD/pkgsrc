@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/03 14:25:55 schwarz Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/09 09:26:21 rillig Exp $
 
 DISTNAME=	host-20040812
 CATEGORIES=	net
@@ -8,11 +8,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.weird.com/~woods/projects/host.html
 COMMENT=	Powerful DNS query and testing tool
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 NO_CONFIGURE =	yes
 
+MAKE_ENV+=	${BSD_MAKE_ENV}
 MAKE_FILE=	Makefile.BSD
-
 MAKE_FLAGS+=	__NetBSD__=1
 
 USE_TOOLS+=	nroff
