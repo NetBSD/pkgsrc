@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/09 19:07:56 bad Exp $
+bin/fwbedit21
+bin/fwblookup21
+bin/fwbuilder21
+bin/fwb_ipt21
+bin/fwb_pf21
+bin/fwb_ipf21
+bin/fwb_ipfw21
+share/doc/fwbuilder-${PKGVERSION}/AUTHORS
+share/doc/fwbuilder-${PKGVERSION}/ChangeLog
+share/doc/fwbuilder-${PKGVERSION}/COPYING
+share/doc/fwbuilder-${PKGVERSION}/Credits
+share/doc/fwbuilder-${PKGVERSION}/FWBuilder-Routing-LICENSE.txt
+share/doc/fwbuilder-${PKGVERSION}/README.floppyfw
+share/doc/fwbuilder-${PKGVERSION}/README.ipf
+share/doc/fwbuilder-${PKGVERSION}/README.ipfw
+share/doc/fwbuilder-${PKGVERSION}/README.ipt
+share/doc/fwbuilder-${PKGVERSION}/README.pf
+share/doc/fwbuilder-${PKGVERSION}/README.routing
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.txt
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.html
+share/doc/fwbuilder-${PKGVERSION}/PatchAcceptancePolicy.txt
+share/doc/fwbuilder-${PKGVERSION}/PatchAcceptancePolicy.txt
+@dirrm share/doc/fwbuilder-${PKGVERSION}
+share/fwbuilder21/locale/fwbuilder_de.qm
+share/fwbuilder21/locale/fwbuilder_es.qm
+share/fwbuilder21/locale/fwbuilder_fr.qm
+share/fwbuilder21/locale/fwbuilder_ja.qm
+share/fwbuilder21/locale/fwbuilder_ru.qm
+share/fwbuilder21/locale/fwbuilder_sv.qm
+@dirrm share/fwbuilder21/locale
+share/fwbuilder21/objects_init.xml
+share/fwbuilder21/templates.xml
+share/fwbuilder21/resources.xml
+share/fwbuilder21/os/freebsd.xml
+share/fwbuilder21/os/fwsm_os.xml
+share/fwbuilder21/os/linksys.xml
+share/fwbuilder21/os/linux24.xml
+share/fwbuilder21/os/macosx.xml
+share/fwbuilder21/os/openbsd.xml
+share/fwbuilder21/os/pix_os.xml
+share/fwbuilder21/os/solaris.xml
+share/fwbuilder21/os/unknown_os.xml
+@dirrm share/fwbuilder21/os
+share/fwbuilder21/platform/fwsm.xml
+share/fwbuilder21/platform/ipf.xml
+share/fwbuilder21/platform/ipfw.xml
+share/fwbuilder21/platform/iptables.xml
+share/fwbuilder21/platform/pf.xml
+share/fwbuilder21/platform/pix.xml
+share/fwbuilder21/platform/unknown.xml
+@dirrm share/fwbuilder21/platform
+@dirrm share/fwbuilder21
+share/man/man1/fwbedit21.1
+share/man/man1/fwb_ipf21.1
+share/man/man1/fwb_ipfw21.1
+share/man/man1/fwb_ipt21.1
+share/man/man1/fwblookup21.1
+share/man/man1/fwb_pf21.1
+share/man/man1/fwbuilder21.1
