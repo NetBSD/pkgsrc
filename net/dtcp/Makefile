@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/07/09 13:21:02 taca Exp $
+# $NetBSD: Makefile,v 1.19 2006/11/09 09:24:21 rillig Exp $
 #
 
 DISTNAME=	dtcp-20060109
@@ -14,7 +14,7 @@ DEPENDS+=	qpopper-[0-9]*:../../mail/qpopper
 
 RCD_SCRIPTS=	dtcpc dtcps
 
-MAKE_ENV+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
