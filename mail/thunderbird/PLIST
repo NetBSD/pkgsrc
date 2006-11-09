@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/06/07 15:23:21 ghen Exp $
+@comment $NetBSD: PLIST,v 1.15.4.1 2006/11/09 09:30:56 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -20,6 +20,8 @@ lib/${MOZILLA}/thunderbird-config
 @comment begin DSO
 lib/${MOZILLA}/components/libaccessibility.${SO_SUFFIX}
 lib/${MOZILLA}/components/libappcomps.${SO_SUFFIX}
+lib/${MOZILLA}/components/libauth.${SO_SUFFIX}
+lib/${MOZILLA}/components/libautoconfig.${SO_SUFFIX}
 lib/${MOZILLA}/components/libcaps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libchrome.${SO_SUFFIX}
 lib/${MOZILLA}/components/libcommandlines.${SO_SUFFIX}
@@ -54,12 +56,15 @@ lib/${MOZILLA}/components/libpref.${SO_SUFFIX}
 lib/${MOZILLA}/components/librdf.${SO_SUFFIX}
 lib/${MOZILLA}/components/libremoteservice.${SO_SUFFIX}
 lib/${MOZILLA}/components/libspellchecker.${SO_SUFFIX}
+lib/${MOZILLA}/components/libsystem-pref.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtoolkitcomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtxmgr.${SO_SUFFIX}
 lib/${MOZILLA}/components/libuconv.${SO_SUFFIX}
+lib/${MOZILLA}/components/libuniversalchardet.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwallet.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwalletviewers.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebbrwsr.${SO_SUFFIX}
+lib/${MOZILLA}/components/libwebsrvcs.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwidget_gtk2.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
@@ -125,6 +130,7 @@ lib/${MOZILLA}/components/alerts.xpt
 lib/${MOZILLA}/components/appshell.xpt
 lib/${MOZILLA}/components/appstartup.xpt
 lib/${MOZILLA}/components/autocomplete.xpt
+lib/${MOZILLA}/components/autoconfig.xpt
 lib/${MOZILLA}/components/bookmarks.xpt
 lib/${MOZILLA}/components/caps.xpt
 lib/${MOZILLA}/components/chardet.xpt
@@ -221,6 +227,7 @@ lib/${MOZILLA}/components/nsDownloadProgressListener.js
 lib/${MOZILLA}/components/nsExtensionManager.js
 lib/${MOZILLA}/components/nsFilePicker.js
 lib/${MOZILLA}/components/nsHelperAppDlg.js
+lib/${MOZILLA}/components/nsInterfaceInfoToIDL.js
 lib/${MOZILLA}/components/nsLDAPPrefsService.js
 lib/${MOZILLA}/components/nsMailDefaultHandler.js
 lib/${MOZILLA}/components/nsProgressDialog.js
@@ -255,6 +262,7 @@ lib/${MOZILLA}/components/walletpreview.xpt
 lib/${MOZILLA}/components/webBrowser_core.xpt
 lib/${MOZILLA}/components/webbrowserpersist.xpt
 lib/${MOZILLA}/components/webshell_idls.xpt
+lib/${MOZILLA}/components/websrvcs.xpt
 lib/${MOZILLA}/components/widget.xpt
 lib/${MOZILLA}/components/windowds.xpt
 lib/${MOZILLA}/components/windowwatcher.xpt
@@ -271,6 +279,8 @@ lib/${MOZILLA}/components/xpinstall.xpt
 lib/${MOZILLA}/components/xulapp.xpt
 lib/${MOZILLA}/components/xuldoc.xpt
 lib/${MOZILLA}/components/xultmpl.xpt
+lib/${MOZILLA}/defaults/autoconfig/platform.js
+lib/${MOZILLA}/defaults/autoconfig/prefcalls.js
 lib/${MOZILLA}/defaults/isp/US/movemail.rdf
 lib/${MOZILLA}/defaults/isp/US/rss.rdf
 lib/${MOZILLA}/defaults/isp/movemail.rdf
@@ -557,6 +567,9 @@ include/${MOZILLA}/appshell/nsIWindowMediator.h
 include/${MOZILLA}/appshell/nsIWindowMediatorListener.h
 include/${MOZILLA}/appshell/nsIXULBrowserWindow.h
 include/${MOZILLA}/appshell/nsIXULWindow.h
+include/${MOZILLA}/autoconfig/nsIAutoConfig.h
+include/${MOZILLA}/autoconfig/nsILDAPSyncQuery.h
+include/${MOZILLA}/autoconfig/nsIReadConfig.h
 include/${MOZILLA}/bayesflt/nsBayesianFilter.h
 include/${MOZILLA}/bayesflt/nsBayesianFilterCID.h
 include/${MOZILLA}/browser/nsIBrowserInstance.h
@@ -2153,6 +2166,8 @@ include/${MOZILLA}/string/nsXPIDLString.h
 include/${MOZILLA}/string/string-template-def-char.h
 include/${MOZILLA}/string/string-template-def-unichar.h
 include/${MOZILLA}/string/string-template-undef.h
+include/${MOZILLA}/system-pref/nsSystemPrefLog.h
+include/${MOZILLA}/system-pref/nsSystemPrefService.h
 include/${MOZILLA}/toolkitcomps/nsICommandLine.h
 include/${MOZILLA}/toolkitcomps/nsICommandLineHandler.h
 include/${MOZILLA}/toolkitcomps/nsICommandLineRunner.h
@@ -2259,6 +2274,36 @@ include/${MOZILLA}/webshell/nsIDocumentLoaderFactory.h
 include/${MOZILLA}/webshell/nsILinkHandler.h
 include/${MOZILLA}/webshell/nsIRefreshURI.h
 include/${MOZILLA}/webshell/nsIWebShellServices.h
+include/${MOZILLA}/websrvcs/nsIGenericInterfaceInfoSet.h
+include/${MOZILLA}/websrvcs/nsIInterfaceInfoToIDL.h
+include/${MOZILLA}/websrvcs/nsISOAPAttachments.h
+include/${MOZILLA}/websrvcs/nsISOAPBlock.h
+include/${MOZILLA}/websrvcs/nsISOAPCall.h
+include/${MOZILLA}/websrvcs/nsISOAPCallCompletion.h
+include/${MOZILLA}/websrvcs/nsISOAPDecoder.h
+include/${MOZILLA}/websrvcs/nsISOAPEncoder.h
+include/${MOZILLA}/websrvcs/nsISOAPEncoding.h
+include/${MOZILLA}/websrvcs/nsISOAPFault.h
+include/${MOZILLA}/websrvcs/nsISOAPHeaderBlock.h
+include/${MOZILLA}/websrvcs/nsISOAPMessage.h
+include/${MOZILLA}/websrvcs/nsISOAPParameter.h
+include/${MOZILLA}/websrvcs/nsISOAPPropertyBagMutator.h
+include/${MOZILLA}/websrvcs/nsISOAPResponse.h
+include/${MOZILLA}/websrvcs/nsISOAPResponseListener.h
+include/${MOZILLA}/websrvcs/nsISOAPService.h
+include/${MOZILLA}/websrvcs/nsISOAPServiceRegistry.h
+include/${MOZILLA}/websrvcs/nsISOAPTransport.h
+include/${MOZILLA}/websrvcs/nsISOAPTransportListener.h
+include/${MOZILLA}/websrvcs/nsISchema.h
+include/${MOZILLA}/websrvcs/nsISchemaLoader.h
+include/${MOZILLA}/websrvcs/nsIScriptableInterfaceInfo.h
+include/${MOZILLA}/websrvcs/nsIWSDL.h
+include/${MOZILLA}/websrvcs/nsIWSDLLoader.h
+include/${MOZILLA}/websrvcs/nsIWSDLSOAPBinding.h
+include/${MOZILLA}/websrvcs/nsIWSPInterfaceInfoService.h
+include/${MOZILLA}/websrvcs/nsIWebScriptsAccessService.h
+include/${MOZILLA}/websrvcs/nsIWebServiceErrorHandler.h
+include/${MOZILLA}/websrvcs/nsIWebServiceProxy.h
 include/${MOZILLA}/widget/mozcontainer.h
 include/${MOZILLA}/widget/mozdrawingarea.h
 include/${MOZILLA}/widget/nsEvent.h
@@ -2717,6 +2762,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm lib/${MOZILLA}/defaults/messenger
 @dirrm lib/${MOZILLA}/defaults/isp/US
 @dirrm lib/${MOZILLA}/defaults/isp
+@dirrm lib/${MOZILLA}/defaults/autoconfig
 @dirrm lib/${MOZILLA}/defaults
 @dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
@@ -2736,6 +2782,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/xmlextras
 @dirrm include/${MOZILLA}/windowwatcher
 @dirrm include/${MOZILLA}/widget
+@dirrm include/${MOZILLA}/websrvcs
 @dirrm include/${MOZILLA}/webshell
 @dirrm include/${MOZILLA}/webbrwsr
 @dirrm include/${MOZILLA}/webbrowserpersist
@@ -2757,6 +2804,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/txtsvc
 @dirrm include/${MOZILLA}/txmgr
 @dirrm include/${MOZILLA}/toolkitcomps
+@dirrm include/${MOZILLA}/system-pref
 @dirrm include/${MOZILLA}/string
 @dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/sidebar
@@ -2843,6 +2891,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/caps
 @dirrm include/${MOZILLA}/browser
 @dirrm include/${MOZILLA}/bayesflt
+@dirrm include/${MOZILLA}/autoconfig
 @dirrm include/${MOZILLA}/appshell
 @dirrm include/${MOZILLA}/appcomps
 @dirrm include/${MOZILLA}/alerts
