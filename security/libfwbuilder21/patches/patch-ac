@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/11/09 19:06:37 bad Exp $
+
+--- doc/doc.pro.orig	2004-09-08 07:34:46.000000000 +0200
++++ doc/doc.pro
+@@ -8,6 +8,7 @@ TEMPLATE = app
+ QMAKE_RUN_CC  = @echo
+ QMAKE_RUN_CXX = @echo
+ QMAKE_LINK    = @echo
++QMAKE_LIBTOOL = @echo
+ 
+ TARGET        = 
+ 
