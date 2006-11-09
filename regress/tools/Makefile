@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/09/20 07:39:54 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/09 12:39:55 rillig Exp $
 #
 
 DISTNAME=	# not applicable
-PKGNAME=	regress-tools-1.1
+PKGNAME=	regress-tools-1.2
 CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -12,8 +12,8 @@ COMMENT=	Test whether the TOOLS do what I expect
 
 NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
-REGRESS_TESTS=	awk sed sort tr
-USE_TOOLS+=	awk sed sort tr
+REGRESS_TESTS=	awk sed sh sort tr
+USE_TOOLS+=	awk sed sh sort tr
 
 do-build:
 .for t in ${REGRESS_TESTS}
