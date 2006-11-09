@@ -1,4 +1,4 @@
-# $NetBSD: check-subr.sh,v 1.2 2006/11/09 10:52:21 rillig Exp $
+# $NetBSD: check-subr.sh,v 1.3 2006/11/09 15:12:46 rillig Exp $
 #
 # This file contains shell functions that are used by the various shell
 # programs that check things in pkgsrc. All these programs must be
@@ -22,7 +22,9 @@
 # 1. The SKIP_FILTER variable can be used in the following pattern,
 # usually inside a "for" or "while" loop.
 #
-#	eval "case \"\$fname\" in $SKIP_FILTER *.orig) continue;; esac"
+#	skip=no
+#	eval "case \"\$fname\" in $SKIP_FILTER *.orig) skip=yes;; esac"
+#	[ $skip = no ] || continue
 #
 # 2. The programs using this file are run with the tools wrapper
 # directory in the PATH, so they call the utilities by their base names.
