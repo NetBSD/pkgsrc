@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/01 10:31:51 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/09 08:31:31 rillig Exp $
 
 PROG=	strfile
-BINDIR=	${PREFIX}/bin
 MAN=	strfile.8
-MANDIR=	${PREFIX}/man
 
 .include <bsd.prog.mk>
