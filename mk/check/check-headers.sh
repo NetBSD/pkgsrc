@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.6 2006/11/09 14:41:18 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.7 2006/11/09 21:07:25 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -66,6 +66,9 @@ something like this:
 
     # in the Makefile.am files (can be more than one):
     AM_CPPFLAGS= -DFOO_DIR=\\"@FOO_DIR@\\"
+
+See also:
+http://www.gnu.org/software/autoconf/manual/html_node/Defining-Directories.html
 
 If this check is wrong and the package really wants to have "\${" in the
 macros, append the above filenames to the CHECK_HEADERS_SKIP variable in
