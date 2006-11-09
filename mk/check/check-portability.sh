@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.5 2006/10/29 20:12:49 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.1 2006/11/09 02:53:15 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -6,48 +6,11 @@
 # The most prominent example is the "==" operator of test(1), which is
 # only implemented by bash and some versions of the ksh.
 #
-# Note: because this program is run with the tools wrapper directory in
-# the PATH, it calls the utilities by their base names. It also assumes
-# to be interpreted by a POSIX-conforming shell.
-#
-# ENVIRONMENT VARIABLES
-#
-#	SKIP_FILTER: A shell command that excludes some patterns.
-#
-# See also:
-#	mk/configure/check-portability.mk
-#
 
 set -eu
 
-: ${SKIP:=""}
-
-exitcode=0
-
-last_heading=""
-
-error_msg() {
-	echo "ERROR: [check-portability.sh] $*" 1>&2
-	exitcode=1
-}
-
-warning_msg() {
-	echo "WARNING: [check-portability.sh] $*" 1>&2
-}
-
-error_heading() {
-	if test "$1" != "$last_heading"; then
-		last_heading="$1"
-		error_msg "=> $1"
-	fi
-}
-
-warning_heading() {
-	if test "$1" != "$last_heading"; then
-		last_heading="$1"
-		warning_msg "=> $1"
-	fi
-}
+. "${PKGSRCDIR}/mk/check/check-subr.sh"
+cs_setprogname "$0"
 
 # usage: check_shell <fname>
 check_shell() {
@@ -74,8 +37,8 @@ check_shell() {
 			;;
 
 		*\$RANDOM*)
-			warning_heading "Found \$RANDOM:"
-			warning_msg "$fname: $line"
+			cs_warning_heading "Found \$RANDOM:"
+			cs_warning_msg "$fname: $line"
 			;;
 		esac
 
@@ -87,8 +50,8 @@ check_shell() {
 			case "$1" in
 			"test" | "[")
 				if [ "==" = "$3" ]; then
-					error_heading "Found test ... == ...:"
-					error_msg "$fname: $line"
+					cs_error_heading "Found test ... == ...:"
+					cs_error_msg "$fname: $line"
 				fi
 				;;
 			esac
@@ -111,5 +74,5 @@ find * -type f -print 2>/dev/null \
 			;;
 		esac
 	done
-	exit $exitcode
+	cs_exit
 }

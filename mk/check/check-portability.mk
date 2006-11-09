@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.8 2006/10/26 14:42:53 tv Exp $
+# $NetBSD: check-portability.mk,v 1.1 2006/11/09 02:53:15 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -19,6 +19,7 @@
 #	package.
 #
 #	Default value: no
+#	Deprecated: Use CHECK_PORTABILITY_SKIP instead.
 #
 # CHECK_PORTABILITY_SKIP: List of Pathmask
 #	The list of files that should be skipped in the portability
@@ -36,13 +37,14 @@ CHECK_PORTABILITY_SKIP?=	# none
 
 .if ${CHECK_PORTABILITY:M[Yy][Ee][Ss]} != "" && \
     ${SKIP_PORTABILITY_CHECK:M[Yy][Ee][Ss]} == ""
-do-configure-pre-hook: _configure-check-for-test
+pre-configure-checks-hook: _check-portability
 .endif
-.PHONY: _configure-check-for-test
-_configure-check-for-test:
+.PHONY: _check-portability
+_check-portability:
 	@${STEP_MSG} "Checking for portability problems in extracted files"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	[ -d ${WRKSRC}/. ] || exit 0;					\
-	cd ${WRKSRC}							\
-	&& env SKIP_FILTER=${CHECK_PORTABILITY_SKIP:@p@${p}) continue;;@:Q} \
-		sh ${PKGSRCDIR}/mk/configure/check-portability.sh
+	cd ${WRKSRC};							\
+	env	PKGSRCDIR=${PKGSRCDIR:Q}				\
+		SKIP_FILTER=${CHECK_PORTABILITY_SKIP:@p@${p}) continue;;@:Q} \
+		sh ${PKGSRCDIR}/mk/check/check-portability.sh

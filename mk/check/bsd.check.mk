@@ -1,7 +1,23 @@
-# $NetBSD: bsd.check.mk,v 1.3 2006/10/13 06:32:15 rillig Exp $
+# $NetBSD: bsd.check.mk,v 1.4 2006/11/09 02:53:15 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to build and install checks.
+#
+# There are some predefined hooks where checks can be added:
+#
+# pre-configure-checks-hook
+#	Is run before configuring the package.
+#
+# pre-build-checks-hook
+#	Is run before building the package.
+#
+# #notyet post-install-privileged-checks-hook
+#	Is run after the installation, as the user who installed
+#	the package.
+#
+# #notyet post-install-checks-hook
+#	Is run after the installation, as the user who built
+#	the package.
 #
 # The following are the "public" targets provided this module:
 #
@@ -15,6 +31,12 @@
 .include "${PKGSRCDIR}/mk/check/check-shlibs.mk"
 .include "${PKGSRCDIR}/mk/check/check-vulnerable.mk"
 .include "${PKGSRCDIR}/mk/check/check-wrkref.mk"
+.include "${.PARSEDIR}/check-headers.mk"
+.include "${.PARSEDIR}/check-portability.mk"
+
+pre-configure-checks-hook \
+pre-build-checks-hook: .PHONY
+	@${DO_NADA}
 
 ######################################################################
 ### check-clean (PRIVATE)
