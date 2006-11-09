@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2006/10/30 21:52:35 agc Exp $
+# $NetBSD: Makefile,v 1.440 2006/11/09 05:15:49 uebayasi Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -202,6 +202,7 @@ SUBDIR+=	ns-cult3d
 SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
 SUBDIR+=	ocrad
+SUBDIR+=	opencv
 SUBDIR+=	opendis
 SUBDIR+=	openexr
 SUBDIR+=	optipng
