@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/09 05:13:41 uebayasi Exp $
+
+--- docs/Makefile.in.orig	2006-11-04 00:54:54.000000000 +0900
++++ docs/Makefile.in
+@@ -224,7 +224,7 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+-opencvdocdir = $(pkgdatadir)/doc
++opencvdocdir = $(datadir)/doc/opencv
+ nobase_dist_opencvdoc_DATA = cvcam.rtf faq.htm index.htm \
+     license.txt opencv.jpg opencvman_old.pdf \
+     papers/algo_tracking.pdf papers/avbpa99.ps papers/camshift.pdf \
