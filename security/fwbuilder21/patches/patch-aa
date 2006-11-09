@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/09 19:07:56 bad Exp $
+
+--- po/po.pro.orig	2005-09-04 20:49:14.000000000 +0000
++++ po/po.pro
+@@ -7,11 +7,13 @@ win32 {
+   QMAKE_RUN_CC  = @echo
+   QMAKE_RUN_CXX = @echo
+   QMAKE_LINK    = @echo
++  QMAKE_LIBTOOL = @echo
+ }
+ !win32 {
+   QMAKE_RUN_CC  = @echo > /dev/null
+   QMAKE_RUN_CXX = @echo > /dev/null
+   QMAKE_LINK    = @echo > /dev/null
++  QMAKE_LIBTOOL = @echo > /dev/null
+ }
+ 
+ TARGET        = po
