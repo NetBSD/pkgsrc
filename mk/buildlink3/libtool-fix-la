@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.7 2005/12/09 16:16:41 hira Exp $
+# $NetBSD: libtool-fix-la,v 1.8 2006/11/09 02:07:59 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,6 +131,7 @@ if $test -f $lafile; then
 		esac
 	done
 
+	: ${relink_command=""}
 	relink=
 	for i in ${relink_command}; do
 		case $i in
