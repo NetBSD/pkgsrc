@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.8 2006/10/26 21:12:47 rillig Exp $
+# $NetBSD: build.mk,v 1.9 2006/11/09 02:53:15 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -81,6 +81,7 @@ ${_COOKIE.build}: real-build
 _REAL_BUILD_TARGETS+=	build-check-interactive
 _REAL_BUILD_TARGETS+=	build-message
 _REAL_BUILD_TARGETS+=	build-vars
+_REAL_BUILD_TARGETS+=	pre-build-checks-hook
 _REAL_BUILD_TARGETS+=	pre-build
 _REAL_BUILD_TARGETS+=	do-build
 _REAL_BUILD_TARGETS+=	post-build
