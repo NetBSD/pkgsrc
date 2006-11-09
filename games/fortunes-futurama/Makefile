@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/11 20:26:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/09 08:44:04 rillig Exp $
 #
 
 DISTNAME=	fortunes-futurama-0.2
@@ -16,11 +16,11 @@ STRFILE=	${LOCALBASE}/bin/strfile
 WRKSRC=		${WRKDIR}
 
 do-build:
-	${STRFILE} ${WRKDIR}/${PKGNAME}
+	${STRFILE} ${WRKDIR}/${DISTNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/games/fortune/
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME} ${PREFIX}/share/games/fortune/futurama
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}.dat ${PREFIX}/share/games/fortune/futurama.dat
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME} ${PREFIX}/share/games/fortune/futurama
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.dat ${PREFIX}/share/games/fortune/futurama.dat
 
 .include "../../mk/bsd.pkg.mk"
