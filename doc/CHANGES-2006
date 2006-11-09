@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1781 2006/11/09 15:42:24 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1782 2006/11/09 19:13:32 bad Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5241,3 +5241,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/squid to 2.6.5 [taca 2006-11-09]
 	Updated editors/abiword to 2.4.6 [adam 2006-11-09]
 	Updated editors/abiword-plugins to 2.4.6 [adam 2006-11-09]
+	Added security/libfwbuilder21 version 2.1.7 [bad 2006-11-09]
+	Added security/fwbuilder21 version 2.1.7 [bad 2006-11-09]
