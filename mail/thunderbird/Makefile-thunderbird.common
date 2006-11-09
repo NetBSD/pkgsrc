@@ -1,7 +1,7 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.18 2006/09/24 16:32:46 salo Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.18.2.1 2006/11/09 09:30:56 salo Exp $
 
 MOZILLA_BIN=		thunderbird-bin
-MOZ_VER=		1.5.0.7
+MOZ_VER=		1.5.0.8
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		thunderbird-${MOZ_VER}-source
 CATEGORIES=		mail
@@ -17,7 +17,6 @@ DISTINFO_FILE=		${.CURDIR}/../../mail/thunderbird/distinfo
 PATCHDIR=		${.CURDIR}/../../mail/thunderbird/patches
 
 CONFIGURE_ARGS+=	--enable-application=mail
-CONFIGURE_ARGS+=	--enable-extensions=wallet,spellcheck,xmlextras
 CONFIGURE_ARGS+=	--enable-single-profile
 CONFIGURE_ARGS+=	--enable-debug=-g
 CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
