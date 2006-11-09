@@ -1,0 +1,12 @@
+OpenCV means Intel(R) Open Source Computer Vision Library. It is a
+collection of C functions and a few C++ classes that implement many
+popular Image Processing and Computer Vision algorithms.
+
+OpenCV provides cross-platform middle-to-high level API that includes
+about 300 C functions and a few C++ classes. Also there are Python
+bindings to OpenCV. OpenCV has no strict dependencies on external
+libraries, though it can use some (such as libjpeg, ffmpeg, GTK+ etc.)
+
+OpenCV provides transparent interface to Intel(R) Integrated Performance
+Primitives (IPP). That is, it loads automatically IPP libraries optimized
+for specific processor at runtime, if they are available.
