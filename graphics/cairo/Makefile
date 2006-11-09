@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/11/05 17:23:44 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2006/11/09 13:26:36 dsainty Exp $
 
 DISTNAME=	cairo-1.2.4
 PKGREVISION=	3
@@ -38,6 +38,9 @@ BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
 .if !empty(PKGSRC_COMPILER:Mmipspro*)
 CFLAGS+=			-c99
 .endif
+
+# For snprintf()
+CPPFLAGS.SunOS+=		-D__EXTENSIONS__
 
 TEST_TARGET=			check
 
