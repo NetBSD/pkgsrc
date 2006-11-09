@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/08/27 14:00:41 hamajima Exp $
+# $NetBSD: Makefile,v 1.10 2006/11/09 09:15:45 rillig Exp $
 #
 
 DISTNAME=	dtcpclient-20060526
@@ -20,6 +20,8 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	dtcpclient.8
 SUBST_SED.paths=	's|/usr/local|${PREFIX}|g'
+
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
