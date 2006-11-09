@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.mk,v 1.1 2006/11/09 02:53:15 rillig Exp $
+# $NetBSD: check-headers.mk,v 1.2 2006/11/09 14:41:18 rillig Exp $
 #
 # This file checks the C and C++ header files for possible problems.
 #
@@ -33,5 +33,5 @@ _check-headers:
 	[ -d ${WRKSRC}/. ] || exit 0;					\
 	cd ${WRKSRC};							\
 	env	PKGSRCDIR=${PKGSRCDIR:Q}				\
-		SKIP_FILTER=${CHECK_HEADERS_SKIP:@p@${p}) continue;;@:Q} \
+		SKIP_FILTER=${CHECK_HEADERS_SKIP:@p@${p}) skip=yes;;@:Q} \
 		sh ${PKGSRCDIR}/mk/check/check-headers.sh
