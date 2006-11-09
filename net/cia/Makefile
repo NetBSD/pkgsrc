@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/08/24 10:13:03 tron Exp $
+# $NetBSD: Makefile,v 1.10 2006/11/09 09:14:05 rillig Exp $
 
 DISTNAME=	cia-20030922
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Simple IP accounting software
 
 DOC_DIR=	${PREFIX}/share/doc/cia
 EXAMPLES_DIR=	${PREFIX}/share/examples/cia
-MAKE_ENV+=	BINDIR="${PREFIX}/bin"
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR}
