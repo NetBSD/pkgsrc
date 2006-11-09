@@ -1,17 +1,35 @@
-# $NetBSD: check-files.mk,v 1.9 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: check-files.mk,v 1.10 2006/11/09 21:29:26 rillig Exp $
+#
+# This file checks that the list of installed files matches the PLIST.
+# For that purpose it records the file list of LOCALBASE before and
+# after the installation of the package and compares these lists with
+# the PLIST.
+#
+# User-settable variables:
+#
+# CHECK_FILES
+#	"yes" to enable the check, "no" to disable it.
+#
+#	Default value: "yes" for PKG_DEVELOPERs, "no" otherwise.
+#
+# CHECK_FILES_STRICT
+#	When set to "yes", VARBASE and PKG_SYSCONFDIR are checked in
+#	addition to LOCALBASE.
+#
+# Package-settable variables:
+#
+# CHECK_FILES_SKIP
+#	A list of regular expressions (FIXME: all other checks use shell
+#	patterns) that names files to be skipped. This is useful to
+#	avoid getting errors triggered by changes in directories not
+#	really handled by pkgsrc.
+#
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
 .endif
-
 CHECK_FILES?=		no
 CHECK_FILES_STRICT?=	no
-
-###########################################################################
-# CHECK_FILES_SKIP is a list of file names that will be skipped when
-# analyzing file lists in the check-files target.  This is useful to
-# avoid getting errors triggered by changes in directories not really
-# handled by pkgsrc.
 
 # Info index files updated when a new info file is added.
 .if defined(INFO_FILES)
