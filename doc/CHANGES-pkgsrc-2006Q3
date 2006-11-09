@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.39 2006/11/09 04:59:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.40 2006/11/09 07:29:29 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -99,3 +99,5 @@ Pullup ticket 1903 - requested by martti
 latest update for clamav
 Pullup ticket 1904 - requested by tron
 security update for milter-greylist
+Pullup ticket 1905 - requested by ghen
+security update for firefox
