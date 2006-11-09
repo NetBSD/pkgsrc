@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.1 2006/11/09 02:53:15 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.2 2006/11/09 10:52:21 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -11,6 +11,9 @@ set -eu
 
 . "${PKGSRCDIR}/mk/check/check-subr.sh"
 cs_setprogname "$0"
+
+found_random=no
+found_test_eqeq=no
 
 # usage: check_shell <fname>
 check_shell() {
@@ -37,6 +40,7 @@ check_shell() {
 			;;
 
 		*\$RANDOM*)
+			found_random=yes
 			cs_warning_heading "Found \$RANDOM:"
 			cs_warning_msg "$fname: $line"
 			;;
@@ -50,6 +54,7 @@ check_shell() {
 			case "$1" in
 			"test" | "[")
 				if [ "==" = "$3" ]; then
+					found_test_eqeq=yes
 					cs_error_heading "Found test ... == ...:"
 					cs_error_msg "$fname: $line"
 				fi
@@ -74,5 +79,33 @@ find * -type f -print 2>/dev/null \
 			;;
 		esac
 	done
+
+	if [ $found_random = yes ]; then
+		cs_explain <<EOF
+The variable \$RANDOM is not required for a POSIX-conforming shell, and
+many implementations of /bin/sh do not support it. It should therefore
+not be used in shell programs that are meant to be portable across a
+large number of POSIX-like systems.
+EOF
+	fi
+
+	if [ $found_test_eqeq = yes ]; then
+		cs_explain <<EOF
+The "test" command, as well as the "[" command, are not required to know
+the "==" operator. Only a few implementations like bash and some
+versions of ksh support it.
+
+When you run "test foo == foo" on a platform that does not support the
+"==" operator, the result will be "false" instead of "true". This can
+lead to unexpected behavior.
+
+There are two ways to fix this error message. If the file that contains
+the "test ==" is needed for building the package, you should create a
+patch for it, replacing the "==" operator with "=". If the file is not
+needed, add its name to the CHECK_PORTABILITY_SKIP variable in the
+package Makefile.
+EOF
+	fi
+
 	cs_exit
 }

@@ -1,4 +1,4 @@
-# $NetBSD: check-subr.sh,v 1.1 2006/11/09 02:53:15 rillig Exp $
+# $NetBSD: check-subr.sh,v 1.2 2006/11/09 10:52:21 rillig Exp $
 #
 # This file contains shell functions that are used by the various shell
 # programs that check things in pkgsrc. All these programs must be
@@ -73,6 +73,20 @@ cs_error_msg() {
 # usage: cs_warning_msg "warning message"
 cs_warning_msg() {
 	echo "WARNING: [$cs_progname] $*" 1>&2
+}
+
+cs_hline=\
+"==========================================================================="
+
+# usage: cs_explain <<EOF
+cs_explain() {
+	{ echo ""
+	  echo "Explanation:"
+	  echo "$cs_hline"
+	  cat
+	  echo "$cs_hline"
+	  echo ""
+	} 1>&2
 }
 
 # usage: cs_exit
