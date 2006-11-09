@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/11/09 19:06:37 bad Exp $
+
+--- qmake.inc.in.orig	2006-06-22 06:50:45.000000000 +0200
++++ qmake.inc.in
+@@ -27,11 +27,10 @@ unix {
+ 	migration.path          =$(DDIR)@TEMPLATE_DIR@/migration
+ 	doc.path                =$(DDIR)@DOCDIR@
+ 
+-	CONFIG                 += warn_on debug
++	CONFIG                 += warn_on
+ 	QMAKE_CFLAGS_DEBUG     += -Wno-unused-parameter
+-	QMAKE_CFLAGS_RELEASE   += -Wno-unused-parameter
+ 	QMAKE_CXXFLAGS_DEBUG   += -Wno-unused-parameter @CXXFLAGS@
+-	QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter @CXXFLAGS@
++	QMAKE_CXXFLAGS_RELEASE += @CXXFLAGS@
+ }
+ }
+ 
+@@ -45,5 +44,6 @@ exists(qmake2.inc) {
+ }
+ 
+ CONFIG     -= qt
++CONFIG     += thread
+ 
+ INSTALLS   += target
