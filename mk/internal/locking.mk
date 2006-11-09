@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.2 2006/08/04 20:52:27 rillig Exp $
+# $NetBSD: locking.mk,v 1.3 2006/11/09 02:11:44 rillig Exp $
 #
 
 # This file provides the following .USE targets:
@@ -77,10 +77,10 @@ _ACQUIRE_LOCK_CMD= \
 		fi;							\
 		lockpid=`${CAT} "$$lockfile"`;				\
 		case ${PKGSRC_LOCKTYPE:Q}"" in				\
-		once)	${ERROR_MSG} "Lock is held by pid $$lockpid";	\
+		once)	${ERROR_MSG} "Lock ${.TARGET} is held by pid $$lockpid";	\
 			exit 1;						\
 			;;						\
-		sleep)	${STEP_MSG} "Lock is held by pid $$lockpid";	\
+		sleep)	${STEP_MSG} "Lock ${.TARGET} is held by pid $$lockpid";	\
 			${SLEEP} ${PKGSRC_SLEEPSECS};			\
 			;;						\
 		esac;							\
