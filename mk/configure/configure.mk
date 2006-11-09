@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.11 2006/10/12 17:57:05 rillig Exp $
+# $NetBSD: configure.mk,v 1.12 2006/11/09 02:53:15 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -32,7 +32,6 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 .if defined(USE_PKGLOCALEDIR)
 .  include "${PKGSRCDIR}/mk/configure/replace-localedir.mk"
 .endif
-.include "${.PARSEDIR}/check-portability.mk"
 
 ######################################################################
 ### configure (PUBLIC)
@@ -74,10 +73,15 @@ ${_COOKIE.configure}: real-configure
 ### real-configure is a helper target onto which one can hook all of the
 ### targets that do the actual configuration of the sources.
 ###
+#
+# Note: pre-configure-checks-hook comes after pre-configure to allow
+# packages for fixing bad files with SUBST_STAGE.* = pre-configure.
+#
 _REAL_CONFIGURE_TARGETS+=	configure-check-interactive
 _REAL_CONFIGURE_TARGETS+=	configure-message
 _REAL_CONFIGURE_TARGETS+=	configure-vars
 _REAL_CONFIGURE_TARGETS+=	pre-configure
+_REAL_CONFIGURE_TARGETS+=	pre-configure-checks-hook
 _REAL_CONFIGURE_TARGETS+=	do-configure-pre-hook
 _REAL_CONFIGURE_TARGETS+=	do-configure
 _REAL_CONFIGURE_TARGETS+=	do-configure-post-hook
