@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/06/30 16:17:27 tron Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/09 09:09:32 rillig Exp $
 
 DISTNAME=	bsddip-1.02
 CATEGORIES=	net
@@ -17,5 +17,9 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 NO_CONFIGURE=	yes
 MANCOMPRESSED_IF_MANZ=	yes
+MAKE_ENV+=	${BSD_MAKE_ENV}
+
+post-extract:
+	cp -f ${FILESDIR}/Makefile ${WRKSRC}/.
 
 .include "../../mk/bsd.pkg.mk"
