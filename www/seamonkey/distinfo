@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2006/09/15 15:54:04 ghen Exp $
+$NetBSD: distinfo,v 1.10.2.1 2006/11/09 11:49:00 salo Exp $
 
-SHA1 (seamonkey-1.0.5.source.tar.bz2) = 60be0112e369a06958c0295ad2de995ab476cef1
-RMD160 (seamonkey-1.0.5.source.tar.bz2) = 9f99f4a542c3a4e1c7e054e73c9ca08cd7252e63
-Size (seamonkey-1.0.5.source.tar.bz2) = 35886383 bytes
+SHA1 (seamonkey-1.0.6.source.tar.bz2) = 01c8de239518bfe778978062efd85b050380b5e3
+RMD160 (seamonkey-1.0.6.source.tar.bz2) = 61ba4a30c28d857f6f64649879ba12d64001c7a6
+Size (seamonkey-1.0.6.source.tar.bz2) = 35900661 bytes
 SHA1 (patch-aa) = 2d117311991c4c71803f3c446334d7b6f1e1067a
 SHA1 (patch-ab) = 4bcabb447ca151c5e87e8799398ee239e69f3f90
 SHA1 (patch-ac) = b05971f672c83c80a29edc69c2055fd6ca855fa1
@@ -11,7 +11,7 @@ SHA1 (patch-ae) = f3c8ffcdfc8c0d5cc75413602c97c731721d751e
 SHA1 (patch-af) = 4844013ad49c77b87be7c30931ca786f246b40f3
 SHA1 (patch-ag) = eaebefa81d03b2ebc8a32465f59889d92944d750
 SHA1 (patch-ah) = 8f92f4294ead04ddc5b719ff66b4aada912dcc01
-SHA1 (patch-ai) = 89b0fb6fb691a6d40e7f1a5bdc8335d63e491c7b
+SHA1 (patch-ai) = 189aa46f116e424c23368e1c7fbc6c56dd389954
 SHA1 (patch-aj) = 951b5ea63116d876a6fcef586256a5728a2df2cf
 SHA1 (patch-ak) = f867ca0973fb4d0ca325b25f83586f10f6e85e32
 SHA1 (patch-al) = d916f38de2fa0ca1993ec75c457fccc60ee6d612
@@ -19,6 +19,7 @@ SHA1 (patch-an) = 99ac2da44322db96f8d65fbfdb380727b9da96fe
 SHA1 (patch-ao) = 617d232bd335bc988388f2004ca919c829e371da
 SHA1 (patch-ap) = 856f74f774b4db7df9b4453aea4d849893ee6bf1
 SHA1 (patch-aq) = 29183e61d6b1a38853151426c2d4ffe45efd9c43
+SHA1 (patch-at) = 1b541df50b9ed94613524d1d48ff98970d8f21dd
 SHA1 (patch-aw) = db73e21e67dc4200312285973faaaed308ea436e
 SHA1 (patch-ax) = b32483c5259cbe95202944683889bf20a7c1650e
 SHA1 (patch-ba) = add9ecd6cff002525b2bc63aad7eb142e610b190
@@ -60,3 +61,4 @@ SHA1 (patch-dt) = 9eef43663de12721ecc38124d5bd4a90a825eefc
 SHA1 (patch-du) = c6e66bb420ce9ea988f89b57d1c20a247704cfcf
 SHA1 (patch-dv) = a380d261d4c2771a672d2b0f4f1f23821e3e5266
 SHA1 (patch-dw) = 263a64d06c6b62041c62ed4532858339d37e1873
+SHA1 (patch-ec) = 925a6f76bbfa77661256d46b0d14e847c16a865f
