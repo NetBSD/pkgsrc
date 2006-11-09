@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2006/11/05 14:34:50 adrianp Exp $
+# $NetBSD: Makefile,v 1.279 2006/11/09 19:11:33 bad Exp $
 #
 
 COMMENT=	Security tools
@@ -59,6 +59,7 @@ SUBDIR+=	fragroute
 SUBDIR+=	fressh
 SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
+SUBDIR+=	fwbuilder21
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnome-keyring-manager
 SUBDIR+=	gnu-crypto
@@ -93,6 +94,7 @@ SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libdes
 SUBDIR+=	libfwbuilder
+SUBDIR+=	libfwbuilder21
 SUBDIR+=	libgcrypt
 SUBDIR+=	libgpg-error
 SUBDIR+=	libidea
