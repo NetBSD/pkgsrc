@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2006/09/15 09:24:30 ghen Exp $
+$NetBSD: distinfo,v 1.20.2.1 2006/11/09 07:28:47 salo Exp $
 
-SHA1 (firefox/releases/1.5.0.7/linux-i686/en-US/firefox-1.5.0.7.tar.gz) = 61bdb6a73f6ab02abfde0070e946ea443171fda4
-RMD160 (firefox/releases/1.5.0.7/linux-i686/en-US/firefox-1.5.0.7.tar.gz) = db54624c61650e9102b4b893a3635631764bd275
-Size (firefox/releases/1.5.0.7/linux-i686/en-US/firefox-1.5.0.7.tar.gz) = 8472682 bytes
+SHA1 (firefox/releases/1.5.0.8/linux-i686/en-US/firefox-1.5.0.8.tar.gz) = e619932889af2ce23ea70be3209fa5edfbf37e85
+RMD160 (firefox/releases/1.5.0.8/linux-i686/en-US/firefox-1.5.0.8.tar.gz) = 071f7911fcf59ca535ab87fd3a58e9aa642670ee
+Size (firefox/releases/1.5.0.8/linux-i686/en-US/firefox-1.5.0.8.tar.gz) = 8480597 bytes
