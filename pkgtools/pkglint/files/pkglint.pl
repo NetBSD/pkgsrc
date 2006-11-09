@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.684 2006/10/30 22:27:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.685 2006/11/09 23:59:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3149,10 +3149,10 @@ sub variable_needs_quoting($$$) {
 		Filemask FileMode Filename
 		Identifier
 		Option
-		Pathmask Pathname PkgName PkgRevision
+		Pathmask Pathname PkgName PkgOptionsVar PkgRevision
 		RelativePkgDir RelativePkgPath
 		URL UserGroupName
-		Version
+		Varname Version
 		WrkdirSubdirectory
 	));
 
