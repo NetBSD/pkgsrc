@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.2 2006/11/09 09:51:46 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.3 2006/11/09 10:26:50 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -12,6 +12,8 @@ set -eu
 . "${PKGSRCDIR}/mk/check/check-subr.sh"
 cs_setprogname "$0"
 
+found_unresolved_variable=no
+
 # usage: check_header <fname>
 check_header() {
 	# See the end of the loop for the redirection.
@@ -20,6 +22,7 @@ check_header() {
 		# Check for "${" in macro definitions.
 		case "$line" in
 		"#define"*"\${"*)
+			found_unresolved_variable=yes
 			cs_error_heading "Found unresolved variable in macro:"
 			cs_error_msg "$fname: $line"
 			;;
@@ -40,5 +43,32 @@ find * -type f -print 2>/dev/null \
 			;;
 		esac
 	done
+
+	if [ $found_unresolved_variable = yes ]; then
+		cat 1>&2 <<EOF
+
+===========================================================================
+The above macros probably contain references to shell variables.
+
+The cause of this problem is usually that in a configure.ac or
+configure.in file, there is some code like
+
+    FOO_DIR=\"\${bindir}\"
+    AC_DEFINE_UNQUOTED(FOO_DIR, \"\$FOO_DIR\", [Directory where foo files go])
+
+You can fix this by telling the original package author not to use
+AC_DEFINE_UNQUOTED for directories. Instead, {he,she} should do
+something like this:
+
+    # in configure.ac:
+    foodir=\"\${bindir}\"
+    AC_SUBST(FOO_DIR)
+
+    # in the Makefile.am files (can be more than one):
+    AM_CPPFLAGS= -DFOO_DIR=\\\"@FOO_DIR@\\\"
+===========================================================================
+EOF
+
+	fi
 	cs_exit
 }
