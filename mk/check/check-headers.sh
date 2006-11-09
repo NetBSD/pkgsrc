@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.4 2006/11/09 10:31:54 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.5 2006/11/09 10:52:21 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -45,8 +45,7 @@ find * -type f -print 2>/dev/null \
 	done
 
 	if [ $found_unresolved_variable = yes ]; then
-		cat 1>&2 <<EOF
-===========================================================================
+		cs_explain <<EOF
 The above macros may contain references to shell variables.
 
 The cause of this problem is usually that in a configure.ac or
@@ -69,7 +68,6 @@ something like this:
 If this check is wrong and the package really wants to have "\${" in the
 macros, append the above filenames to the CHECK_HEADERS_SKIP variable in
 the package Makefile.
-===========================================================================
 EOF
 
 	fi
