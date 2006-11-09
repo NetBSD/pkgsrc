@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/11 20:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/09 08:36:46 rillig Exp $
 #
 
 DISTNAME=	fortunes-calvin-0.2
@@ -16,11 +16,11 @@ STRFILE=	${LOCALBASE}/bin/strfile
 WRKSRC=		${WRKDIR}
 
 do-build:
-	${STRFILE} ${WRKDIR}/${PKGNAME}
+	${STRFILE} ${WRKDIR}/${DISTNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/games/fortune/
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME} ${PREFIX}/share/games/fortune/calvin
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}.dat ${PREFIX}/share/games/fortune/calvin.dat
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${PREFIX}/share/games/fortune/calvin
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}.dat ${PREFIX}/share/games/fortune/calvin.dat
 
 .include "../../mk/bsd.pkg.mk"
