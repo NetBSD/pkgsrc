@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1778 2006/11/08 19:41:40 tv Exp $
+>$NetBSD: CHANGES-2006,v 1.1779 2006/11/09 05:14:57 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey-gtk1 to 1.0.6 [ghen 2006-11-08]
 	Updated mail/dovecot to 1.0rc13 [ghen 2006-11-08]
 	Updated net/tor to 0.1.1.25 [tv 2006-11-08]
+	Added graphics/opencv version 1.0.0 [uebayasi 2006-11-09]
