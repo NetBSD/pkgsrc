@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.14 2006/10/14 01:09:45 rillig Exp $
+# $NetBSD: apache.mk,v 1.15 2006/11/09 02:05:08 rillig Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -42,9 +42,9 @@ APACHE_MK=			# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# User-settable variables
 PKG_APACHE_DEFAULT?=		apache2
 BUILD_DEFS+=			PKG_APACHE_DEFAULT
+BUILD_DEFS_EFFECTS+=		PKG_APACHE APACHE_PKG_PREFIX
 
 # Package-settable variables
 PKG_APACHE_ACCEPTED?=		${_PKG_APACHES}
