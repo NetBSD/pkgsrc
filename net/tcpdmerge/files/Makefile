@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/06 02:58:39 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/09 09:36:41 rillig Exp $
 
-BINDIR=	${PREFIX}/bin
 PROG=	tcpdmerge
 NOMAN=	yes
 
