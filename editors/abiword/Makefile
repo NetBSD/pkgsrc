@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2006/10/05 10:49:23 adam Exp $
+# $NetBSD: Makefile,v 1.105 2006/11/09 15:25:32 adam Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	2
 
 COMMENT=	Open Source cross-platform word processor
 
@@ -37,22 +35,22 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 USE_GNU_ICONV=		yes
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/AbiSuite-2.4/AbiWord
 
 post-build:
 	cd ${WRKDIR}/${DISTNAME}/abiword-docs/ && env \
 		ABI_DOC_DEST=${WRKDIR} \
 		ABI_DOC_PROG=${WRKSRC}/src/wp/main/unix/AbiWord-2.4 \
 		./make-html.sh
-	${FIND} ${WRKDIR}/help -type d -exec ${CHMOD} ${PKGDIRMODE} "{}" \;
-	${FIND} ${WRKDIR}/help \( -name "*.abw.orig" -or -name "*.abw"	\
+	find ${WRKDIR}/help -type d -exec ${CHMOD} ${PKGDIRMODE} "{}" \;
+	find ${WRKDIR}/help \( -name "*.abw.orig" -or -name "*.abw"	\
 		-or -name "*.info" -or -name "*.xhtml" \) -exec ${RM} "{}" \;
 
 post-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
 		${PREFIX}/${PKGMANDIR}/man1/abiword.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/AbiSuite-2.4/AbiWord
-	${CP} -R ${WRKDIR}/help ${PREFIX}/share/AbiSuite-2.4/AbiWord/
+	cp -R ${WRKDIR}/help ${PREFIX}/share/AbiSuite-2.4/AbiWord/
 
 .if !empty(PKG_OPTIONS:Mgucharmap)
 .include "../../fonts/gucharmap/buildlink3.mk"
