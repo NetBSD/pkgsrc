@@ -1,34 +1,32 @@
-# $NetBSD: check-wrkref.mk,v 1.7 2006/11/05 14:46:50 joerg Exp $
+# $NetBSD: check-wrkref.mk,v 1.8 2006/11/09 15:10:16 rillig Exp $
+#
+# This file checks that the installed files don't contain any strings
+# that point to the directory where the package had been built, to make
+# sure that the package still works after the source code has been
+# cleaned up.
+#
+# User-settable variables:
+#
+# CHECK_WRKREF:
+#	The kind of check that should be done. Say "no" for no check
+#	at all, "tools" for checking references to the directory where
+#	the tool wrappers had been, and "work" to check references to
+#	anything from the working directory.
+#
+#	Default value: "tools" for PKG_DEVELOPERs, "no" otherwise.
+#
+# Package-settable variables:
+#
+# CHECK_WRKREF_SKIP:
+#	The list of filename patterns that should be excluded from this
+#	test.
+#
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
 .endif
 CHECK_WRKREF?=		no
-
-###########################################################################
-# CHECK_WRKREF_SKIP is a list of shell globs.  Installed files that
-# match these globs are skipped when running the check-wrkref target.
-#
-.if !defined(_CHECK_WRKREF_SKIP_FILTER)
-_CHECK_WRKREF_SKIP_FILTER=	${TRUE}
-.  if defined(CHECK_WRKREF_SKIP) && !empty(CHECK_WRKREF_SKIP)
-_CHECK_WRKREF_SKIP_FILTER=	case "$$file" in
-_CHECK_WRKREF_SKIP_FILTER+=	${_CHECK_WRKREF_SKIP_FILTER_BODY}
-_CHECK_WRKREF_SKIP_FILTER+=	*) ;;
-_CHECK_WRKREF_SKIP_FILTER+=	esac
-.  endif
-.endif
-.if !defined(_CHECK_WRKREF_SKIP_FILTER_BODY)
-.  for _pattern_ in ${CHECK_WRKREF_SKIP}
-_CHECK_WRKREF_SKIP_FILTER_BODY+=	${_pattern_}) continue ;;
-.  endfor
-.endif
-MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER_BODY
-
-_CHECK_WRKREF:=		${CHECK_WRKREF}
-.if !empty(_CHECK_WRKREF:Mwork)
-_CHECK_WRKREF:=		work		# "work" is the "max" option
-.endif
+CHECK_WRKREF_SKIP?=	# none
 
 _CHECK_WRKREF_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
@@ -48,16 +46,17 @@ check-wrkref: error-check
 	cd ${DESTDIR}${PREFIX};						\
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
-		${_CHECK_WRKREF_SKIP_FILTER};				\
+		case "$$file" in					\
+		${CHECK_WRKREF_SKIP:@p@${p}) continue;; @}		\
+		*) ;;							\
+		esac;							\
 		${SHCOMMENT} [$$file];					\
-		case ${_CHECK_WRKREF:Mwork:Q}"" in			\
-		work)							\
+		case ${CHECK_WRKREF:Q}"" in				\
+		*work*)							\
 			${GREP} ${WRKDIR} "$$file" 2>/dev/null |	\
 			${SED} -e "s|^|$$file:	|";			\
 			;;						\
-		esac;							\
-		case ${_CHECK_WRKREF:Mtools:Q}"" in			\
-		tools)							\
+		*tools*)						\
 			${GREP} ${TOOLS_DIR} "$$file" 2>/dev/null |	\
 			${SED} -e "s|^|$$file:	|";			\
 			;;						\
