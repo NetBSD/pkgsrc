@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/08 16:21:17 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2006/11/09 08:31:31 rillig Exp $
 
 DISTNAME=	fortune-strfile-0
 CATEGORIES=	games
@@ -10,10 +10,9 @@ COMMENT=	Tool to prepare a fortune database
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
-MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP} MANMODE=${MANMODE}
+MAKE_ENV+=	${BSD_MAKE_ENV}
 
 do-extract:
-	${CP} ${FILESDIR}/strfile.* ${FILESDIR}/Makefile ${WRKSRC}
+	cp ${FILESDIR}/strfile.* ${FILESDIR}/Makefile ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
