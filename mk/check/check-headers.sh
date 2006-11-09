@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.1 2006/11/09 02:53:15 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.2 2006/11/09 09:51:46 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -32,17 +32,13 @@ find * -type f -print 2>/dev/null \
 | {
 	while read fname; do
 
-		case "$fname" in
-		*.h | *.hpp | *.h++ | *.hxx)
-			;;
-		*)
-			continue
-			;;
-		esac
-
 		eval "case \"\$fname\" in $SKIP_FILTER *.orig) continue;; esac"
 
-		check_header "$fname"
+		case "$fname" in
+		*.h | *.hpp | *.h++ | *.hxx)
+			check_header "$fname"
+			;;
+		esac
 	done
 	cs_exit
 }
