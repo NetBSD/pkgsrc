@@ -1,4 +1,10 @@
-# $NetBSD: check-portability.awk,v 1.1 2006/11/09 14:36:18 rillig Exp $
+# $NetBSD: check-portability.awk,v 1.2 2006/11/09 15:12:15 rillig Exp $
+#
+# Checks a shell file for possible portability problems.
+#
+# ENVIRONMENT
+#	(See check-subr.awk)
+#
 
 BEGIN {
 	found_random = no;
@@ -75,4 +81,6 @@ END {
 		h = h "package Makefile.\n";
 		cs_explain(h);
 	}
+
+	cs_exit();
 }
