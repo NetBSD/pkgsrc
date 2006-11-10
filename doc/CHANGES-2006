@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1783 2006/11/09 20:03:18 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1784 2006/11/10 00:26:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5244,3 +5244,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added security/libfwbuilder21 version 2.1.7 [bad 2006-11-09]
 	Added security/fwbuilder21 version 2.1.7 [bad 2006-11-09]
 	Updated emulators/gxemul to 0.4.3 [xtraeme 2006-11-09]
+	Updated www/ja-trac to 0.10.1.1 [obache 2006-11-10]
