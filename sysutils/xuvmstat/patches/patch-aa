@@ -1,17 +1,24 @@
-$NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
+$NetBSD: patch-aa,v 1.8 2006/11/10 10:07:20 martin Exp $
 
---- xuvmstat.c.orig	2006-06-02 11:45:59.000000000 +0200
-+++ xuvmstat.c	2006-06-02 11:46:59.000000000 +0200
-@@ -46,7 +46,7 @@ void redraw __P((struct xdpy *, Window, 
+--- xuvmstat.c.orig	2005-09-09 15:38:48.000000000 +0200
++++ xuvmstat.c	2006-11-10 10:52:11.000000000 +0100
+@@ -40,13 +40,13 @@
+ 
+ #include "libcdcx.h"
+ 
+-void get_uvmexp __P((struct uvmexp *));
++void get_uvmexp __P((struct uvmexp_sysctl *));
+ void redraw __P((struct xdpy *, Window, GC, int));
+ 
  
  u_long black, white, red, green, blue, magenta, orange, purple;
  XFontStruct *fnt_fixed, *fnt_8x13bold;
 -struct uvmexp cexp, oexp;	/* current, old */
-+struct uvmexp curexp, oexp;	/* current, old */
++struct uvmexp_sysctl curexp, oexp;	/* current, old */
  struct timeval tv, otv;
  struct graph *gp_faults, *gp_traps, *gp_intrs, *gp_ctx;
  
-@@ -100,7 +100,7 @@ char **argv;
+@@ -100,7 +100,7 @@
    XMapRaised(xdpy.dpy, win);
    XFlush(xdpy.dpy);
  
@@ -20,7 +27,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
    gettimeofday(&tv, NULL);
    get_uvmexp(&oexp);
    gettimeofday(&otv, NULL);
-@@ -135,8 +135,8 @@ char **argv;
+@@ -135,8 +135,8 @@
        if (retval == 0) {
          timeradd(&now, &incr, &ping);
          otv = tv;
@@ -31,7 +38,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
          gettimeofday(&tv, NULL);
          /* NEW GRAPH DATA HERE */
  
-@@ -186,7 +186,7 @@ int was_timeout;
+@@ -186,7 +186,7 @@
  
    XSetFont(xdpy->dpy, gc, fnt_fixed->fid); 
    snprintf(buf, sizeof(buf),"The UVM system manages %d %d-byte pages",
@@ -40,7 +47,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
    XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
    y += get_fontheight(fnt_fixed) + 5;
-@@ -205,12 +205,12 @@ int was_timeout;
+@@ -205,12 +205,12 @@
        colors[4] = purple;
      }
   
@@ -59,7 +66,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
  		  vals, colors, white);
    }
  
-@@ -229,12 +229,12 @@ int was_timeout;
+@@ -229,12 +229,12 @@
        colors[4] = purple;
      } 
    
@@ -78,7 +85,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
                    vals, colors, white);
    }
  
-@@ -245,11 +245,11 @@ int was_timeout;
+@@ -245,11 +245,11 @@
      u_long vals[3];
      u_long colors[3];
  
@@ -94,7 +101,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
  		vals, colors, white);
    }
  
-@@ -260,10 +260,10 @@ int was_timeout;
+@@ -260,10 +260,10 @@
      u_long vals[2];
      u_long colors[2];
  
@@ -108,7 +115,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
  		vals, colors, white);
    }
  
-@@ -274,10 +274,10 @@ int was_timeout;
+@@ -274,10 +274,10 @@
      u_long vals[2];
      u_long colors[2];
  
@@ -122,8 +129,12 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
  		vals, colors, white);
    }
  
-@@ -292,12 +292,12 @@ int was_timeout;
-       static int *before[6], *after[6];
+@@ -289,15 +289,15 @@
+     if (init == 0) {
+       static char *names[] = { "faults", "anon", "ancow", "obj", 
+ 	"copy", "zero" };
+-      static int *before[6], *after[6];
++      static int64_t *before[6], *after[6];
        static u_long color[6];
        init = 1;
 -      before[0] = &oexp.faults; after[0] = &cexp.faults; color[0] = black;
@@ -141,8 +152,12 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
        gp_faults = create_graph(6, "FAULTS", names, before, after, color, white);
      }  
  
-@@ -314,7 +314,7 @@ int was_timeout;
-       static int *before[1], *after[1];
+@@ -311,10 +311,10 @@
+ 
+     if (init == 0) {
+       static char *names[] = { "traps" };
+-      static int *before[1], *after[1];
++      static int64_t *before[1], *after[1];
        static u_long color[1];
        init = 1;
 -      before[0] = &oexp.traps; after[0] = &cexp.traps; color[0] = black;
@@ -150,8 +165,12 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
        gp_traps = create_graph(1, "TRAPS", names, before, after, color, white);
      }  
  
-@@ -333,9 +333,9 @@ int was_timeout;
-       static int *before[3], *after[3];
+@@ -330,12 +330,12 @@
+ 
+     if (init == 0) {
+       static char *names[] = { "intrs", "soft", "syscall" };
+-      static int *before[3], *after[3];
++      static int64_t *before[3], *after[3];
        static u_long color[3];
        init = 1;
 -      before[0] = &oexp.intrs; after[0] = &cexp.intrs; color[0] = black;
@@ -163,8 +182,12 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
        gp_intrs = create_graph(3, "INTRS", names, before, after, color, white);
      }  
  
-@@ -352,9 +352,9 @@ int was_timeout;
-       static int *before[3], *after[3];
+@@ -349,12 +349,12 @@
+ 
+     if (init == 0) {
+       static char *names[] = { "cswtch", "swin", "swout" };
+-      static int *before[3], *after[3];
++      static int64_t *before[3], *after[3];
        static u_long color[3];
        init = 1;
 -      before[0] = &oexp.swtch; after[0] = &cexp.swtch; color[0] = black;
@@ -176,7 +199,7 @@ $NetBSD: patch-aa,v 1.7 2006/06/02 09:52:31 martin Exp $
        gp_ctx = create_graph(3, "SWITCH/SWAP", names, before, after, color, white);
      }  
  
-@@ -373,25 +373,25 @@ int was_timeout;
+@@ -373,25 +373,25 @@
      y += get_fontheight(fnt_fixed) + 5;
  
      snprintf(buf, sizeof(buf), " woke=%d, revs=%d, swout=%d",
