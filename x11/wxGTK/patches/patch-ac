@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.9 2006/11/10 14:07:02 rillig Exp $
+
+In the cases where $objfile contains a slash, its directory must be
+created in advance.
+
+--- bk-deps.orig	2006-11-10 09:48:30.615710392 +0100
++++ bk-deps	2006-11-10 09:48:18.682569460 +0100
+@@ -90,6 +90,7 @@ elif test $DEPSMODE = unixcc; then
+         esac
+         shift
+     done
++    mkdir -p `dirname "$DEPSDIR/$objfile"`
+     eval "$cmd $DEPSFLAG" | sed "s|.*:|$objfile:|" >${DEPSDIR}/${objfile}.d
+     exit 0
+ else
