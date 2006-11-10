@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2003/12/31 18:39:42 lha Exp $
+$NetBSD: patch-aa,v 1.4 2006/11/10 17:57:51 perry Exp $
 
 NetBSD doesn't have a sha1sum, use digest instead
 
---- lisp/sha1-el.el.orig	2003-12-16 01:57:29.000000000 +0100
-+++ lisp/sha1-el.el	2003-12-31 19:18:42.000000000 +0100
+--- lisp/sha1.el.orig	2006-02-07 23:18:30.000000000 -0500
++++ lisp/sha1.el
 @@ -73,7 +73,7 @@
    :type 'integer
    :group 'sha1)
