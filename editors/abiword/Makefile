@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2006/11/09 15:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.106 2006/11/10 16:53:28 tv Exp $
 
 .include "Makefile.common"
 
@@ -43,9 +43,9 @@ post-build:
 		ABI_DOC_DEST=${WRKDIR} \
 		ABI_DOC_PROG=${WRKSRC}/src/wp/main/unix/AbiWord-2.4 \
 		./make-html.sh
-	find ${WRKDIR}/help -type d -exec ${CHMOD} ${PKGDIRMODE} "{}" \;
+	find ${WRKDIR}/help -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	find ${WRKDIR}/help \( -name "*.abw.orig" -or -name "*.abw"	\
-		-or -name "*.info" -or -name "*.xhtml" \) -exec ${RM} "{}" \;
+		-or -name "*.info" -or -name "*.xhtml" \) -print | ${XARGS} ${RM} -f
 
 post-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
