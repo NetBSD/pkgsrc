@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/09 05:13:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/10 10:50:21 taca Exp $
 #
 
 DISTNAME=		opencv-1.0.0
@@ -10,10 +10,9 @@ HOMEPAGE=		http://opencvlibrary.sourceforge.net/
 COMMENT=		Library for computer vision problems
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake automake autoconf pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-AUTOMAKE_REQD=  	1.9
 INSTALLATION_DIRS+=	share/doc/opencv/papers share/doc/opencv/ref/pics \
 			share/opencv/haarcascades
 
@@ -22,10 +21,6 @@ PKGCONFIG_OVERRIDE+=	opencv.pc.in
 
 CONFIGURE_ARGS+=--with-swig=no
 CONFIGURE_ARGS+=--with-python=no
-
-pre-configure:
-	cd ${WRKSRC};				\
-	automake -a --foreign -i; autoconf
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
