@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/03/20 17:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/10 17:57:51 perry Exp $
 
-DISTNAME=	gnus-5.10.6
+DISTNAME=	gnus-5.10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	mail
-MASTER_SITES=	http://quimby.gnus.org/gnus/dist/
+#PKGREVISION=	2
+CATEGORIES=	mail news
+MASTER_SITES=	http://www.gnus.org/dist/
 
 MAINTAINER=	lha@NetBSD.org
 HOMEPAGE=	http://www.gnus.org/
