@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.8 2006/02/12 00:13:55 salo Exp $
+$NetBSD: patch-ag,v 1.8.6.1 2006/11/10 11:50:26 salo Exp $
 
---- config.h.in.orig	2006-02-01 05:33:49.000000000 -0600
-+++ config.h.in	2006-02-08 21:02:59.000000000 -0600
+--- config.h.in.orig	2006-09-26 20:03:33.000000000 +0900
++++ config.h.in
 @@ -32,6 +32,9 @@
     */
  #undef BROKEN_ONE_BYTE_DIRENT_D_NAME
@@ -11,4 +11,14 @@ $NetBSD: patch-ag,v 1.8 2006/02/12 00:13:55 salo Exp $
 +
  /* Define if you have a broken realpath. */
  #undef BROKEN_REALPATH
+ 
+@@ -573,6 +576,9 @@
+ /* Define to 1 if you have the <net/if_tun.h> header file. */
+ #undef HAVE_NET_IF_TUN_H
+ 
++/* Define to 1 if you have the <net/tun/if_tun.h> header file. */
++#undef HAVE_NET_TUN_IF_TUN_H
++
+ /* Define if you are on NeXT */
+ #undef HAVE_NEXT
  

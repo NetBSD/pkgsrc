@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.7 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-ak,v 1.7.10.1 2006/11/10 11:50:26 salo Exp $
 
---- auth.c.orig	2005-08-31 11:59:49.000000000 -0500
+--- auth.c.orig	2006-09-07 09:36:43.000000000 +0900
 +++ auth.c
-@@ -388,7 +388,7 @@
+@@ -377,7 +377,7 @@ check_key_in_hostfiles(struct passwd *pw
  		user_hostfile = tilde_expand_filename(userfile, pw->pw_uid);
  		if (options.strict_modes &&
  		    (stat(user_hostfile, &st) == 0) &&
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.7 2005/09/21 18:07:09 reed Exp $
  		    (st.st_mode & 022) != 0)) {
  			logit("Authentication refused for %.100s: "
  			    "bad owner or modes for %.200s",
-@@ -441,7 +441,7 @@
+@@ -430,7 +430,7 @@ secure_filename(FILE *f, const char *fil
  
  	/* check the open file to avoid races */
  	if (fstat(fileno(f), &st) < 0 ||
@@ -20,7 +20,7 @@ $NetBSD: patch-ak,v 1.7 2005/09/21 18:07:09 reed Exp $
  	    (st.st_mode & 022) != 0) {
  		snprintf(err, errlen, "bad ownership or modes for file %s",
  		    buf);
-@@ -458,7 +458,7 @@
+@@ -447,7 +447,7 @@ secure_filename(FILE *f, const char *fil
  
  		debug3("secure_filename: checking '%s'", buf);
  		if (stat(buf, &st) < 0 ||
