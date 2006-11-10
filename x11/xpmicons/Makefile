@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/24 16:20:43 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/11/10 16:49:58 tv Exp $
 
 DISTNAME=	xpmicons-1.0
 PKGREVISION=	4
@@ -31,10 +31,12 @@ PLIST_SRC+=	PLIST.icons
 .endif
 
 post-extract:
-	find ${WRKSRC} -type d -name .xvpics -exec rm -rf {} \; -prune
+	find ${WRKSRC} -type d -name .xvpics -print | ${XARGS} rm -rf
 
 do-install:
-	find ${WRKSRC} -name \*.xpm -exec ${INSTALL_DATA} {} ${PREFIX}/include/X11/pixmaps \;
-	find ${WRKSRC} -name \*.xbm -exec ${INSTALL_DATA} {} ${PREFIX}/include/X11/bitmaps \;
+	find ${WRKSRC} -name \*.xpm -print | \
+		while read f; do ${INSTALL_DATA} $$f ${PREFIX}/include/X11/pixmaps; done
+	find ${WRKSRC} -name \*.xbm -print | \
+		while read f; do ${INSTALL_DATA} $$f ${PREFIX}/include/X11/bitmaps; done
 
 .include "../../mk/bsd.pkg.mk"
