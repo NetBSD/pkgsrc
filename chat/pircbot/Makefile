@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:04 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/11/10 16:50:54 tv Exp $
 #
 
 DISTNAME=	pircbot-0.9.11
@@ -16,8 +16,8 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 post-extract:
-	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} \;
-	${FIND} ${WRKSRC} -type f -exec ${CHMOD} 644 {} \;
+	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
+	${FIND} ${WRKSRC} -type f -print | ${XARGS} ${CHMOD} 644
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java

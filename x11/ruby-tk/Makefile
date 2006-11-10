@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/09/07 15:43:20 taca Exp $
+# $NetBSD: Makefile,v 1.25 2006/11/10 16:54:54 tv Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-tk-${RUBY_VERSION}
@@ -23,8 +23,7 @@ CONFIGURE_ARGS+=	--with-X11-dir=${X11BASE:Q}
 REPLACE_RUBY_DIRS=	${WRKSRC}/sample
 
 pre-configure:
-	@cd ${WRKSRC}; \
-	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} \( -name '*.orig' -o -name '*.bak' \) -print | ${XARGS} ${RM} -f
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tk
