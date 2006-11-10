@@ -1,24 +1,34 @@
-# $NetBSD: alternatives.mk,v 1.7 2006/06/15 22:13:59 jlam Exp $
+# $NetBSD: alternatives.mk,v 1.8 2006/11/10 20:48:41 rillig Exp $
 #
 # This Makefile fragment handles the alternatives system, registering a
 # package in the database.
 #
-# The ALTERNATIVES_SRC variable contains the path to a file listing the
-# alternatives provided by the package.  It defaults to the ALTERNATIVES
-# file in the current directory if found.  If this variable is empty, no
-# actions are taken by this file.
+# User-settable variables:
+#
+# (none)
+#
+# Package-settable variables:
+#
+# ALTERNATIVES_SRC
+#	A _single_ file that contains the alternatives provided by the
+#	package.
+#
+#	Default value: The name of the ALTERNATIVES file in the package
+#	directory, if it exists. Otherwise, nothing.
+#
+# Variables defined by this file:
+#
+# PKG_ALTERNATIVES
+#	The path to the pkg_alternatives command.
 #
 
 .if !defined(ALTERNATIVES_MK)
 ALTERNATIVES_MK=	# defined
 
-.if !defined(ALTERNATIVES_SRC)
-.  if exists(${.CURDIR}/ALTERNATIVES)
+.if exists(${.CURDIR}/ALTERNATIVES)
 ALTERNATIVES_SRC?=	${.CURDIR}/ALTERNATIVES
-.  else
-ALTERNATIVES_SRC?=
-.  endif
 .endif
+ALTERNATIVES_SRC?=	# none
 
 .if !empty(ALTERNATIVES_SRC)
 
