@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1788 2006/11/10 18:29:08 perry Exp $
+>$NetBSD: CHANGES-2006,v 1.1789 2006/11/10 21:01:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5249,3 +5249,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/jalbum to 6.5.4 [martti 2006-11-10]
 	Updated editors/lyx-qt to 1.4.3 [reed 2006-11-10]
 	Updated mail/gnus to 5.10.8 [perry 2006-11-10]
+	Updated geography/geos to 2.2.3 [gdt 2006-11-10]
