@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/06/30 09:54:42 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/10 17:42:48 tv Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -123,7 +123,7 @@ do-build:
 		${MV} ${WRKSRC:Q}/"$$i" ${WRKSRC:Q}/doc/; \
 	done
 	cd ${WRKSRC:Q} && \
-	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -exec ${RM} -f {} \;
+	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/bin/netdisco_daemon \
