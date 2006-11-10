@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.5 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-aq,v 1.5.14.1 2006/11/10 11:50:26 salo Exp $
 
---- sshpty.c.orig	2004-06-21 22:56:02.000000000 -0400
+--- sshpty.c.orig	2006-08-05 11:39:41.000000000 +0900
 +++ sshpty.c
-@@ -62,7 +62,7 @@ pty_allocate(int *ptyfd, int *ttyfd, cha
+@@ -78,7 +78,7 @@ pty_allocate(int *ptyfd, int *ttyfd, cha
  void
  pty_release(const char *tty)
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.5 2005/03/07 23:29:50 tv Exp $
  		error("chown %.100s 0 0 failed: %.100s", tty, strerror(errno));
  	if (chmod(tty, (mode_t) 0666) < 0)
  		error("chmod %.100s 0666 failed: %.100s", tty, strerror(errno));
-@@ -203,7 +203,7 @@ pty_setowner(struct passwd *pw, const ch
+@@ -224,7 +224,7 @@ pty_setowner(struct passwd *pw, const ch
  	if (st.st_uid != pw->pw_uid || st.st_gid != gid) {
  		if (chown(tty, pw->pw_uid, gid) < 0) {
  			if (errno == EROFS &&

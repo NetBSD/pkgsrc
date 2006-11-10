@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.2 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-au,v 1.2.10.1 2006/11/10 11:50:26 salo Exp $
 
---- openbsd-compat/bsd-openpty.c.orig	2005-02-25 17:04:29.000000000 -0600
+--- openbsd-compat/bsd-openpty.c.orig	2006-08-24 18:52:30.000000000 +0900
 +++ openbsd-compat/bsd-openpty.c
-@@ -102,15 +102,17 @@
+@@ -121,15 +121,17 @@ openpty(int *amaster, int *aslave, char 
  		return (-1);
  	}
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.6 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-aj,v 1.6.14.1 2006/11/10 11:50:26 salo Exp $
 
---- auth-rhosts.c.orig	2003-11-17 05:13:41.000000000 -0500
+--- auth-rhosts.c.orig	2006-08-05 11:39:39.000000000 +0900
 +++ auth-rhosts.c
-@@ -198,7 +198,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
+@@ -212,7 +212,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
  		return 0;
  
  	/* If not logging in as superuser, try /etc/hosts.equiv and shosts.equiv. */
@@ -11,7 +11,7 @@ $NetBSD: patch-aj,v 1.6 2005/03/07 23:29:50 tv Exp $
  		if (check_rhosts_file(_PATH_RHOSTS_EQUIV, hostname, ipaddr,
  		    client_user, pw->pw_name)) {
  			auth_debug_add("Accepted for %.100s [%.100s] by /etc/hosts.equiv.",
-@@ -224,7 +224,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
+@@ -238,7 +238,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
  		return 0;
  	}
  	if (options.strict_modes &&
@@ -20,7 +20,7 @@ $NetBSD: patch-aj,v 1.6 2005/03/07 23:29:50 tv Exp $
  	    (st.st_mode & 022) != 0)) {
  		logit("Rhosts authentication refused for %.100s: "
  		    "bad ownership or modes for home directory.", pw->pw_name);
-@@ -251,7 +251,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
+@@ -265,7 +265,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
  		 * allowing access to their account by anyone.
  		 */
  		if (options.strict_modes &&
