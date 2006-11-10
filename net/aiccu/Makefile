@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/08/31 08:49:34 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/10 20:58:09 rillig Exp $
 
 DISTNAME=		aiccu_2006.07.25
 PKGNAME=		${DISTNAME:S/_/-/:S/.//g}
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.sixxs.net/tools/aiccu/
 COMMENT=		Automatic IPv6 Connectivity Client Utility
 
 USE_TOOLS+=		gmake
+CHECK_PORTABILITY_SKIP+=	debian/*
 
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	post-patch
