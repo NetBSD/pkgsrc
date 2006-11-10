@@ -1,24 +1,36 @@
-$NetBSD: patch-av,v 1.4 2006/02/12 00:13:55 salo Exp $
+$NetBSD: patch-av,v 1.4.6.1 2006/11/10 11:50:26 salo Exp $
 
---- sshd.c.orig	2005-12-23 21:59:12.000000000 -0600
-+++ sshd.c	2006-02-08 21:08:46.000000000 -0600
-@@ -574,10 +574,15 @@
+--- sshd.c.orig	2006-10-29 17:01:29.000000000 +0900
++++ sshd.c
+@@ -232,7 +232,11 @@ int *startup_pipes = NULL;
+ int startup_pipe;		/* in child */
+ 
+ /* variables used for privilege separation */
++#ifdef HAVE_INTERIX
+ int use_privsep = -1;
++#else
++int use_privsep = 0;
++#endif
+ struct monitor *pmonitor = NULL;
+ 
+ /* global authentication context */
+@@ -608,10 +612,15 @@ privsep_preauth_child(void)
  	/* XXX not ready, too heavy after chroot */
- 	do_setusercontext(pw);
+ 	do_setusercontext(privsep_pw);
  #else
 +#ifdef HAVE_INTERIX
 +	if (setuser(pw->pw_name, NULL, SU_COMPLETE))
 +		fatal("setuser: %.100s", strerror(errno));
 +#else
- 	gidset[0] = pw->pw_gid;
+ 	gidset[0] = privsep_pw->pw_gid;
  	if (setgroups(1, gidset) < 0)
  		fatal("setgroups: %.100s", strerror(errno));
- 	permanently_set_uid(pw);
+ 	permanently_set_uid(privsep_pw);
 +#endif /* HAVE_INTERIX */
  #endif
  }
  
-@@ -617,7 +622,7 @@
+@@ -651,7 +660,7 @@ privsep_preauth(Authctxt *authctxt)
  		close(pmonitor->m_sendfd);
  
  		/* Demote the child */
@@ -27,7 +39,7 @@ $NetBSD: patch-av,v 1.4 2006/02/12 00:13:55 salo Exp $
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
  	}
-@@ -630,7 +635,7 @@
+@@ -664,7 +673,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -36,7 +48,7 @@ $NetBSD: patch-av,v 1.4 2006/02/12 00:13:55 salo Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -914,8 +919,10 @@
+@@ -1256,8 +1265,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -48,7 +60,7 @@ $NetBSD: patch-av,v 1.4 2006/02/12 00:13:55 salo Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1174,7 +1181,7 @@
+@@ -1519,7 +1530,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -57,7 +69,7 @@ $NetBSD: patch-av,v 1.4 2006/02/12 00:13:55 salo Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1191,8 +1198,10 @@
+@@ -1536,8 +1547,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -67,4 +79,4 @@ $NetBSD: patch-av,v 1.4 2006/02/12 00:13:55 salo Exp $
 +#endif
  
  	if (rexec_flag) {
- 		rexec_argv = xmalloc(sizeof(char *) * (rexec_argc + 2));
+ 		rexec_argv = xcalloc(rexec_argc + 2, sizeof(char *));

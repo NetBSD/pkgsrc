@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.9 2005/11/04 14:47:17 tv Exp $
+$NetBSD: patch-ai,v 1.9.8.1 2006/11/10 11:50:26 salo Exp $
 
---- openbsd-compat/openbsd-compat.h.orig	2005-08-26 16:15:20.000000000 -0400
+--- openbsd-compat/openbsd-compat.h.orig	2006-09-03 21:44:50.000000000 +0900
 +++ openbsd-compat/openbsd-compat.h
-@@ -78,6 +78,10 @@ size_t strlcat(char *dst, const char *sr
+@@ -83,6 +83,10 @@ size_t strlcat(char *dst, const char *sr
  int setenv(register const char *name, register const char *value, int rewrite);
  #endif
  
