@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1789 2006/11/10 21:01:28 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1790 2006/11/10 21:32:35 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5250,3 +5250,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/lyx-qt to 1.4.3 [reed 2006-11-10]
 	Updated mail/gnus to 5.10.8 [perry 2006-11-10]
 	Updated geography/geos to 2.2.3 [gdt 2006-11-10]
+	Updated net/sipsak to 0.9.6 [schwarz 2006-11-10]

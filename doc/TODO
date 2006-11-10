@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5697 2006/11/10 18:29:08 perry Exp $
+$NetBSD: TODO,v 1.5698 2006/11/10 21:32:35 schwarz Exp $
 
 Suggested new packages
 ======================
@@ -1004,7 +1004,6 @@ Suggested package updates
 	o silc-toolkit-1.0.2
 	o simh-3.5.0
 	o simulavr-0.1.2.2
-	o sipsak-0.9.6
 	o sitecopy-0.16.3
 	o sitescooper-3.1.2
 	o sjeng-11.2
