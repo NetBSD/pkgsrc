@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.awk,v 1.2 2006/11/09 15:12:15 rillig Exp $
+# $NetBSD: check-portability.awk,v 1.3 2006/11/10 08:17:06 rillig Exp $
 #
 # Checks a shell file for possible portability problems.
 #
@@ -24,7 +24,7 @@ function check_random(line) {
 
 	} else if (line ~ /\$RANDOM/) {
 		found_random = yes;
-		cs_warning_heading("Found \$RANDOM:");
+		cs_warning_heading("Found $RANDOM:");
 		cs_warning_msg(cs_fname ": " $0);
 	}
 }
