@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.2.2 2006/11/10 12:18:52 salo Exp $
+
+--- Makefile.in.orig	2006-10-30 11:21:09.000000000 +0900
++++ Makefile.in
+@@ -721,7 +721,7 @@ dist-hook:
+ 
+ install-pinger:
+ 	chown root $(DEFAULT_PINGER) 
+-	chmod 4711 $(DEFAULT_PINGER)
++	chmod 4511 $(DEFAULT_PINGER)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
