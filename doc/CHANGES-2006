@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1790 2006/11/10 21:32:35 schwarz Exp $
+>$NetBSD: CHANGES-2006,v 1.1791 2006/11/10 21:57:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5251,3 +5251,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/gnus to 5.10.8 [perry 2006-11-10]
 	Updated geography/geos to 2.2.3 [gdt 2006-11-10]
 	Updated net/sipsak to 0.9.6 [schwarz 2006-11-10]
+	Updated emulators/wine to 0.9.25 [adam 2006-11-10]
