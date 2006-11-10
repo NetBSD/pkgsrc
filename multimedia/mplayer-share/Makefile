@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/11/06 14:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/10 17:42:15 tv Exp $
 
 .include "Makefile.common"
 
@@ -18,9 +18,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${DESTDIR}${PREFIX}/share/mplayer
 	(cd ${WRKSRC}/DOCS && \
 		${PAX} -rwpppm * ${DESTDIR}${PREFIX}/share/mplayer/DOCS); \
-	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type d -exec ${CHMOD} \
-		${PKGDIRMODE} \{\} \;
-	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type f -exec ${CHMOD} \
-		${SHAREMODE} \{\} \;
+	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type d -print | \
+		${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type f -print | \
+		${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../mk/bsd.pkg.mk"

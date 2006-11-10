@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/06/25 17:06:08 rillig Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/11/10 17:41:13 tv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -37,7 +37,7 @@ GCC_REQD+=		3.2 # if using gcc; ignored otherwise
 # future timestamp than the sources.  If this happens, print-PLIST does
 # not work.
 pre-configure:
-	@cd ${WRKSRC} && ${FIND} . -type f -exec ${TOUCH} {} \;
+	@cd ${WRKSRC} && ${FIND} . -type f -print | ${XARGS} ${TOUCH}
 
 # Generate a new user.hpp or use the installed one, depending on the
 # package we are building.
