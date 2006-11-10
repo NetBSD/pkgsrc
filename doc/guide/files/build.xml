@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.36 2006/10/09 13:15:07 mishka Exp $ -->
+<!-- $NetBSD: build.xml,v 1.37 2006/11/10 21:36:37 schwarz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -403,7 +403,8 @@
 
       <varlistentry><term><varname>EXTRACT_USING</varname></term>
       <listitem><para>This variable can be set to
-      <literal>pax</literal>, <literal>tar</literal> or an
+      <literal>gtar</literal>, <literal>nbtar</literal> (which is the
+      default value), <literal>pax</literal>, or an
       absolute pathname pointing to the command with which tar
       archives should be
       extracted.</para></listitem></varlistentry>
