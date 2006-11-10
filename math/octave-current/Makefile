@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/10/04 21:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2006/11/10 17:40:11 tv Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
@@ -55,7 +55,7 @@ OCTAVE_HTML=	faq/Octave-FAQ_*.html interpreter/octave_*.html \
 UNWRAP_FILES+=	mkoctfile octave-bug src/oct-conf.h
 
 post-extract:
-	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -print | ${XARGS} ${RM} -f
 	${MKDIR} ${WRKSRC}/src/pic
 
 # substitute in the real path to various bits of the toolchain because
