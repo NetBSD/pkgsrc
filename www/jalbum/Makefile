@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/10/16 11:17:21 martti Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/10 10:34:26 martti Exp $
 
-DISTNAME=		JAlbum6.5
-PKGNAME=		jalbum-6.5.3
+DISTNAME=		JAlbum${VERSION}
+PKGNAME=		jalbum-${VERSION}
 #PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://jalbum.net/download/
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://jalbum.net/
 COMMENT=		Web photo album generator
+
+VERSION=		6.5.4
 
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	blackdown-jdk13 kaffe sun-jdk13 sun-jdk14 sun-jdk15
