@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2006/09/20 16:01:48 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/10 21:00:23 gdt Exp $
 #
 
-DISTNAME=		geos-2.0.0
-PKGREVISION=		1
+DISTNAME=		geos-2.2.3
 CATEGORIES=		geography
 MASTER_SITES=		http://geos.refractions.net/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		mchittur@cs.nmsu.edu
+MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://geos.refractions.net/
 COMMENT=		C++ port of the Java Topology Suite (JTS)
 
