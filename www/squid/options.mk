@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2006/09/13 14:41:58 taca Exp $
+# $NetBSD: options.mk,v 1.8.2.1 2006/11/10 12:18:52 salo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	aufs carp icmp pam-helper snmp ssl unlinkd
@@ -72,6 +72,7 @@ CONFIGURE_ARGS+=	--enable-carp
 
 .if !empty(PKG_OPTIONS:Micmp)
 CONFIGURE_ARGS+=	--enable-icmp
+INSTALL_TARGET+=	install install-pinger
 .endif
 
 .if !empty(PKG_OPTIONS:Mpam-helper)

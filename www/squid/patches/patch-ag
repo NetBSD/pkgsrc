@@ -1,25 +1,16 @@
-$NetBSD: patch-ag,v 1.24 2006/09/13 14:41:58 taca Exp $
+$NetBSD: patch-ag,v 1.24.2.1 2006/11/10 12:18:52 salo Exp $
 
---- configure.orig	2006-07-31 11:53:51.000000000 +0900
+--- configure.orig	2006-11-03 22:20:14.000000000 +0900
 +++ configure
-@@ -3970,7 +3970,7 @@ cat >>confdefs.h <<\_ACEOF
- #define SQUID_SNMP 1
- _ACEOF
- 
--    SNMPLIB='-L../snmplib -lsnmp'
-+    SNMPLIB='../snmplib/libsnmp.a'
- 
- 
- if true; then
-@@ -7057,6 +7057,7 @@ for ac_header in sys/types.h \
- 	libc.h \
+@@ -7321,6 +7321,7 @@ for ac_header in sys/types.h \
  	linux/netfilter_ipv4.h \
  	linux/netfilter_ipv4/ip_tproxy.h \
-+ 	machine/byte_swap.h \
  	malloc.h \
++  	machine/byte_swap.h \
  	math.h \
  	memory.h \
-@@ -13512,9 +13513,9 @@ _ACEOF
+ 	mount.h \
+@@ -13789,9 +13790,9 @@ _ACEOF
  
  fi
  
@@ -32,30 +23,10 @@ $NetBSD: patch-ag,v 1.24 2006/09/13 14:41:58 taca Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -13523,46 +13524,64 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--
--/* What a mess.. many systems have added the (now standard) bit types
-- * in their own ways, so we need to scan a wide variety of headers to
-- * find them..
-- */
--#include <sys/types.h>
--#if STDC_HEADERS
--#include <stdlib.h>
--#include <stddef.h>
--#endif
--#if HAVE_INTTYPES_H
--#include <inttypes.h>
--#endif
--#if HAVE_SYS_TYPES_H
- #include <sys/types.h>
--#endif
--#if HAVE_SYS_BITYPES_H
--#include <sys/bitypes.h>
--#endif
--
+@@ -13820,26 +13821,63 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <sys/bitypes.h>
+ #endif
+ 
 +#include <sys/time.h>
 +#include <sys/unistd.h>
 +int
@@ -129,7 +100,7 @@ $NetBSD: patch-ag,v 1.24 2006/09/13 14:41:58 taca Exp $
  
  echo "$as_me:$LINENO: checking size of off_t" >&5
  echo $ECHO_N "checking size of off_t... $ECHO_C" >&6
-@@ -15530,8 +15549,8 @@ if test "$GCC" = "yes"; then
+@@ -15807,8 +15845,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	2.95.[123])
