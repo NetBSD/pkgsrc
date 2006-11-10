@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/10/16 08:31:58 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/11/10 10:34:26 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -182,11 +182,18 @@ share/jalbum/plugins/makedoc.bat
 share/jalbum/plugins/readme.txt
 share/jalbum/plugins/wishlist.txt
 share/jalbum/readme.html
+share/jalbum/res/djvu.gif
 share/jalbum/res/doc.gif
 share/jalbum/res/folder.gif
 share/jalbum/res/img.gif
 share/jalbum/res/mdb.gif
 share/jalbum/res/movie.gif
+share/jalbum/res/ooo.gif
+share/jalbum/res/ooo_base.gif
+share/jalbum/res/ooo_calc.gif
+share/jalbum/res/ooo_draw.gif
+share/jalbum/res/ooo_impress.gif
+share/jalbum/res/ooo_writer.gif
 share/jalbum/res/pdf.gif
 share/jalbum/res/ppt.gif
 share/jalbum/res/txt.gif
