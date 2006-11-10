@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.15 2006/02/12 00:13:55 salo Exp $
+$NetBSD: patch-ac,v 1.15.6.1 2006/11/10 11:50:26 salo Exp $
 
---- defines.h.orig	2005-12-17 05:04:09.000000000 -0600
-+++ defines.h	2006-02-08 20:58:45.000000000 -0600
+--- defines.h.orig	2006-09-21 22:13:30.000000000 +0900
++++ defines.h
 @@ -30,6 +30,15 @@
  
  /* Constants */
@@ -15,10 +15,10 @@ $NetBSD: patch-ac,v 1.15 2006/02/12 00:13:55 salo Exp $
 +# define ROOTGID	0
 +#endif
 +
- #ifndef SHUT_RDWR
+ #if defined(HAVE_DECL_SHUT_RD) && HAVE_DECL_SHUT_RD == 0
  enum
  {
-@@ -442,10 +451,6 @@
+@@ -437,10 +446,6 @@ struct winsize {
  # define __attribute__(x)
  #endif /* !defined(__GNUC__) || (__GNUC__ < 2) */
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.15 2006/02/12 00:13:55 salo Exp $
  #if !defined(HAVE_ATTRIBUTE__SENTINEL__) && !defined(__sentinel__)
  # define __sentinel__
  #endif
-@@ -639,6 +644,24 @@
+@@ -643,6 +648,24 @@ struct winsize {
  #    endif
  #  endif
  #endif

@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
+$NetBSD: patch-aa,v 1.41.6.1 2006/11/10 11:50:25 salo Exp $
 
---- configure.orig	2006-02-01 05:33:51.000000000 -0600
-+++ configure	2006-02-08 22:02:30.000000000 -0600
-@@ -5417,6 +5417,36 @@
+--- configure.orig	2006-11-07 22:07:18.000000000 +0900
++++ configure
+@@ -5835,6 +5835,9 @@ if test "${with_rpath+set}" = set; then
+ fi
+ 
+ 
++# pkgsrc handles any rpath settings this package needs
++need_dash_r=
++
+ # Allow user to specify flags
+ 
+ # Check whether --with-cflags was given.
+@@ -5976,6 +5979,7 @@ for ac_header in \
+ 	maillock.h \
+ 	ndir.h \
+ 	net/if_tun.h \
++	net/tun/if_tun.h \
+ 	netdb.h \
+ 	netgroup.h \
+ 	pam/pam_appl.h \
+@@ -7919,6 +7923,36 @@ _ACEOF
  		;;
  	esac
  	;;
@@ -39,7 +57,7 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -6233,7 +6263,7 @@
+@@ -8524,7 +8558,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  	;;
@@ -48,18 +66,8 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  	check_for_libcrypt_later=1
  
  cat >>confdefs.h <<\_ACEOF
-@@ -7269,6 +7299,9 @@
-         ;;
- esac
- 
-+# pkgsrc handles any rpath settings this package needs
-+need_dash_r=
-+
- # Allow user to specify flags
- 
- # Check whether --with-cflags or --without-cflags was given.
-@@ -26694,14 +26727,21 @@
- rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -32058,14 +32092,21 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
 -		cat >>confdefs.h <<\_ACEOF
@@ -84,8 +92,8 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
  _ACEOF
  
-@@ -26769,14 +26809,20 @@
- rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -32146,14 +32187,20 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
 -		cat >>confdefs.h <<\_ACEOF
@@ -110,7 +118,7 @@ $NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -28002,7 +28048,7 @@
+@@ -33386,7 +33433,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

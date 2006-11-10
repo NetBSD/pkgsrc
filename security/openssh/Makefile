@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.171 2006/09/28 10:10:52 taca Exp $
+# $NetBSD: Makefile,v 1.171.2.1 2006/11/10 11:50:25 salo Exp $
 
-DISTNAME=		openssh-4.3p2
-PKGNAME=		openssh-4.3.2
-#PKGREVISION=		1
+DISTNAME=		openssh-4.5p1
+PKGNAME=		openssh-4.5.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -30,6 +29,9 @@ CRYPTO=			yes
 
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		USE_INET6
+
+BUILD_DEFS+=		OPENSSH_CHROOT OPENSSH_GROUP OPENSSH_USER
+BUILD_DEFS+=		VARBASE
 
 INSTALL_TARGET=		install-nokeys
 PLIST_SRC=		# empty
@@ -135,14 +137,20 @@ PLIST_SRC+=		${.CURDIR}/PLIST.prng
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		# empty
-.for FILE in ${CONFS}
-CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.for f in ${CONFS}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
+
+SUBST_CLASSES+=		patch
+SUBST_STAGE.patch=	pre-configure
+SUBST_FILES.patch=	session.c
+SUBST_SED.patch=	-e '/channel_input_port_forward_request/s/0/ROOTUID/'
+SUBST_MESSAGE.patch=	More patch a file.
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
