@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.7 2006/11/09 21:07:25 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.8 2006/11/10 07:59:01 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -21,7 +21,7 @@ check_header() {
 
 		# Check for "${" in macro definitions.
 		case "$line" in
-		"#define"*"\"\${"[a-z]*"}"*"\""*)
+		"#"*define*\"\$\{[A-Za-z]*\}/*\"*)
 			found_unresolved_variable=yes
 			cs_error_heading "Found unresolved variable in macro:"
 			cs_error_msg "$fname: $line"
