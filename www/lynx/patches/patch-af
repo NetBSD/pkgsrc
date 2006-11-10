@@ -1,18 +1,7 @@
-$NetBSD: patch-af,v 1.2 2006/11/05 17:37:55 joerg Exp $
+$NetBSD: patch-af,v 1.3 2006/11/10 00:09:07 rillig Exp $
 
 --- po/makefile.inn.orig	2004-01-28 19:30:38.000000000 +0000
 +++ po/makefile.inn
-@@ -21,8 +21,8 @@ DESTDIR= @DESTDIR@
- prefix = @prefix@
- exec_prefix = @exec_prefix@
- datadir = @NLS_DATADIR@
--localedir = $(DESTDIR)$(datadir)/locale
--gnulocaledir = $(DESTDIR)$(prefix)/share/locale
-+localedir = /usr/pkg/share/locale
-+gnulocaledir = /usr/pkg/share/locale
- gettextsrcdir = $(DESTDIR)$(prefix)/share/gettext/po
- subdir = po
- 
 @@ -71,6 +71,11 @@ INSTOBJEXT = @INSTOBJEXT@
  	$(MSGFMT) -o $@ $<
  
