@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/01/04 18:30:16 reed Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/11/10 20:04:26 rillig Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -13,6 +13,8 @@ BUILD_TARGET=		build
 WRKSRC=			${WRKDIR}/${DISTNAME:C|-src||}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
+
+CHECK_HEADERS_SKIP=	src/sqsh_config.h
 
 CONF_FILES+=		${PREFIX}/share/examples/sqsh/sample.sqshrc ${PKG_SYSCONFDIR}/sqshrc
 
