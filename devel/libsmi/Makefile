@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/10/16 23:39:50 seb Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/10 20:15:17 rillig Exp $
 #
 
 DISTNAME=	libsmi-0.4.5
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/
 
@@ -22,6 +23,7 @@ CONFIGURE_ARGS+=--with-pibdir=${PIBDIR:Q}
 # this might make it easier to use scotty's and ucd-snmp's mibs,
 # and local ones too
 CONFIGURE_ARGS+=--with-smipath="${MIBDIR}:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 REPLACE_SH+=	tools/smicache.in
 REPLACE_SH+=	tools/smistrip.in
@@ -36,6 +38,6 @@ CPPFLAGS+=	-Dstrtoll=strtoq -Dstrtoull=strtouq
 .endif
 
 post-extract:
-	${RM} -f ${WRKSRC}/test/smilint-smiv2.test
+	rm -f ${WRKSRC}/test/smilint-smiv2.test
 
 .include "../../mk/bsd.pkg.mk"
