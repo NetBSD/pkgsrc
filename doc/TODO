@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5696 2006/11/08 10:05:39 markd Exp $
+$NetBSD: TODO,v 1.5697 2006/11/10 18:29:08 perry Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,6 @@ Suggested package updates
 	o gnome-spell-1.0.7
 	o gnome-user-docs-2.16.1
 	o gnomeicu-0.99.12
-	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
