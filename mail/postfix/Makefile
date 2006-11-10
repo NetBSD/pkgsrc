@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2006/11/07 07:08:26 martti Exp $
+# $NetBSD: Makefile,v 1.196 2006/11/10 08:08:55 rillig Exp $
 
 DISTNAME=	postfix-2.3.4
 #PKGREVISION=	1
@@ -15,6 +15,7 @@ CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl
+CHECK_HEADERS_SKIP+=	src/global/mail_params.h
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,7 +24,7 @@ USE_TOOLS+=	perl
 # ${PKG_SYSCONFDIR}/main.cf.
 #
 POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE POSTFIX_QUEUE_DIR
 
 # CCARGS is a list of options to pass to the preprocessor/compiler.
 # AUXLIBS is a list of options to pass to the linker.
