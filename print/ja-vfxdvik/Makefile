@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/11/11 13:38:27 rillig Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -21,7 +21,7 @@ DEPENDS+=	ja-ptex-bin>=3.1.9:../../print/ja-ptex-bin
 
 .include "../../print/teTeX/module.mk"
 
-BUILD_DIRS=		${WRKDIR}/${DISTNAME}/texk/xdvik
+BUILD_DIRS=		texk/xdvik
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
