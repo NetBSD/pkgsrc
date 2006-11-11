@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.14 2006/11/11 07:00:57 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.15 2006/11/11 07:50:28 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,136 +34,123 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+transform_setname "transform-sunpro-cc"
 case $arg in
--MM)	# Create dependency lines for Makefiles
-	arg="-xM1"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+
+-MM)
+	# Create dependency lines for Makefiles
+	transform_to "-xM1"
 	;;
-######################################################################
-# SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically convert
-# those GCC -O<n> values to -xO<n>.
-######################################################################
+
 -O[12345])
-	arg="-xO${arg#-O}"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically
+	# convert those GCC -O<n> values to -xO<n>.
+	transform_to "-xO${arg#-O}"
 	;;
-######################################################################
-# Silently ignore all other -O* options, except for "-O", which SunPro
-# interprets as asking for the default optimization level.
-######################################################################
+
 -O?*)
-	arg=
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# Silently ignore all other -O* options, except for "-O", which
+	# SunPro interprets as asking for the default optimization level.
+	transform_discard
 	;;
-######################################################################
-# Directories for the runtime library search path are passed via simply
-# "-R<dir>", not "-Wl,-R<dir>".
-######################################################################
+
 -Wl,-R*)
-	arg="${arg#-Wl,}"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# Directories for the runtime library search path are passed via
+	# simply "-R<dir>", not "-Wl,-R<dir>".
+	transform_to "${arg#-Wl,}"
 	;;
-######################################################################
-# SunPro uses -h to set the shared object name.
-######################################################################
+-R*)
+	transform_pass
+	;;
+
 -Wl,-soname=*)
-	arg="-h${arg#-Wl,-soname=}"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# SunPro uses -h to set the shared object name.
+	transform_to "-h${arg#-Wl,-soname=}"
 	;;
-######################################################################
-# Solaris' linker exports all dynamic symbols by default when building
-# a shared object.
-######################################################################
--Wl,--export-dynamic | -Wl,-E)
-	arg=
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+
+-Wl,--export-dynamic|\
+-Wl,-E)
+	# Solaris' linker exports all dynamic symbols by default when
+	# building a shared object.
+	transform_discard
 	;;
-######################################################################
-# SunPro compiler accepts -Wl,* so just pass it on through.
-######################################################################
+
 -Wl,*)
+	# SunPro compiler accepts -Wl,* so just pass it on through.
 	addtocache=yes
 	;;
-######################################################################
-# SunPro compilers don't understand any other -W* arguments, so just
-# silently ignore the rest.
-######################################################################
+
 -W*)
-	arg=
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# SunPro compilers don't understand any other -W* arguments,
+	# so just silently ignore the rest.
+	transform_discard
 	;;
-######################################################################
-# Solaris' linker uses -Bstatic to create static objects.
-######################################################################
+
 -static)
-	arg="-Bstatic"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# Solaris' linker uses -Bstatic to create static objects.
+	transform_to "-Bstatic"
 	;;
-######################################################################
-# Solaris' linker uses -G to create shared objects.
-######################################################################
---export-dynamic|-shared)
-	arg="-G"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+
+--export-dynamic|\
+-shared)
+	# Solaris' linker uses -G to create shared objects.
+	transform_to "-G"
 	;;
-######################################################################
-# SunPro uses -Kpic to create position independent code.
-######################################################################
+
 -f[Pp][Ii][Cc])
-	arg="-Kpic"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# SunPro uses -Kpic to create position independent code.
+	transform_to "-Kpic"
 	;;
-######################################################################
-# SunPro needs -mt -lpthread for POSIX threads.
-######################################################################
+
 -pthread)
-	arg="-mt -lpthread"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# SunPro needs -mt -lpthread for POSIX threads.
+	transform_to "-mt -lpthread"
 	split_arg=yes
 	;;
-######################################################################
-# -fast implies -xlibmopt, which uses the optimized math routines in
-# libsunmath. libsunmath is only available as part of SunPro, so
-# disable the use of the optimized math library (at least until it can
-# be statically linked).
-######################################################################
+
 -fast)
-	arg="-fast -xnolibmopt"
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# -fast implies -xlibmopt, which uses the optimized math
+	# routines in libsunmath. libsunmath is only available as part of
+	# SunPro, so disable the use of the optimized math library
+	# (at least until it can be statically linked).
+	transform_to "-fast -xnolibmopt"
 	split_arg=yes
 	;;
-######################################################################
-# Pass through -f flags that SunPro understands.
-######################################################################
--fd|-features*|-flags|-flteval*|-fnonstd*|-fns*|-fprecision*|-fround*|-fsimple*|-fsingle|-fstore|-ftrap*)
+
+-fd|\
+-features*|\
+-flags|\
+-flteval*|\
+-fnonstd*|\
+-fns*|\
+-fprecision*|\
+-fround*|\
+-fsimple*|\
+-fsingle|\
+-fstore|\
+-ftrap*)
+	# Pass through -f flags that SunPro understands.
 	addtocache=yes
 	;;
-######################################################################
-# Ignore all other -f flags.
-######################################################################
+
 -f*)
-	arg=
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+	# Ignore all other -f flags.
+	transform_discard
 	;;
-######################################################################
-# Ignore some flags that are unnecessary for SunPro.
-######################################################################
--ansi|-pedantic|-pipe|-traditional)
-	arg=
-	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
-	addtocache=yes
+
+-ansi|\
+-pedantic|\
+-pipe|\
+-traditional)
+	# Ignore some flags that are unnecessary for SunPro.
+	transform_discard
+	;;
+
+-[DILlU]*|\
+-[cgOo])
+	transform_pass
+	;;
+-*)
+	transform_pass_unknown
 	;;
 esac
