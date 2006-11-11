@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.6 2006/10/21 11:42:25 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.7 2006/11/11 07:44:46 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,6 +54,7 @@ shell_lib="@_WRAP_SHELL_LIB@"
 scan="@_WRAP_SCAN@"
 transform="@_WRAP_TRANSFORM@"
 transform_sed="@_WRAP_TRANSFORM_SED@"
+wrapper_subr_sh="@_WRAP_SUBR_SH@"
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
@@ -68,6 +69,7 @@ test="@TEST@"
 Xsed="$sed -e 1s/^X//"
 
 . $shell_lib
+. "$wrapper_subr_sh"
 
 updatecache=${WRAPPER_UPDATE_CACHE-@WRAPPER_UPDATE_CACHE@}
 reorder=${WRAPPER_REORDER-no}
