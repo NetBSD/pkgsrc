@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.56 2006/11/02 23:25:00 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.57 2006/11/11 07:44:46 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -184,6 +184,7 @@ _WRAP_LOGIC?=			${WRAPPER_TMPDIR}/logic
 _WRAP_REORDERLIBS?=		${WRAPPER_TMPDIR}/reorderlibs
 _WRAP_SCAN?=			${WRAPPER_TMPDIR}/scan
 _WRAP_SHELL_LIB?=		${WRAPPER_TMPDIR}/shell-lib
+_WRAP_SUBR_SH?=			${WRAPPER_TMPDIR}/wrapper-subr.sh
 _WRAP_SKIP_TRANSFORM?=		no
 _WRAP_TRANSFORM?=		${_WRAP_EMPTY_FILE}
 _WRAP_TRANSFORM_SED?=		# empty
@@ -349,7 +350,8 @@ _WRAP_SUBST_SED=							\
 	-e "s|@WRAPPER_SHELL@|${WRAPPER_SHELL:Q}|g"			\
 	-e "s|@_WRAP_LOG@|${_WRAP_LOG:Q}|g"				\
 	-e "s|@_WRAP_REORDERLIBS@|${_WRAP_REORDERLIBS:Q}|g"		\
-	-e "s|@_WRAP_SHELL_LIB@|${_WRAP_SHELL_LIB:Q}|g"
+	-e "s|@_WRAP_SHELL_LIB@|${_WRAP_SHELL_LIB:Q}|g"			\
+	-e "s|@_WRAP_SUBR_SH@|${_WRAP_SUBR_SH}|g"
 
 .for _wrappee_ in ${_WRAPPEES}
 _WRAP_SUBST_SED.${_wrappee_}=						\
@@ -394,6 +396,7 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAP_REORDERLIBS}					\
 		${_WRAP_SCAN.${_wrappee_}}				\
 		${_WRAP_SHELL_LIB}					\
+		${_WRAP_SUBR_SH}					\
 		${_WRAP_TRANSFORM.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
@@ -481,7 +484,8 @@ generate-wrappers: ${_target_}
 	transform-mipspro-ucode-cc \
 	transform-solaris-gcc \
 	transform-sunpro-cc \
-	transform-xlc-cc
+	transform-xlc-cc \
+	wrapper-subr.sh
 ${WRAPPER_TMPDIR}/${w}: ${WRAPPER_SRCDIR}/${w}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
