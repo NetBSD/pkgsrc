@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.1 2006/11/11 10:27:21 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/11/11 20:12:24 adam Exp $
 
 --- glib/glibmm/date.h.orig	2006-10-16 11:26:32.000000000 +0200
 +++ glib/glibmm/date.h
-@@ -24,7 +24,6 @@
+@@ -24,7 +24,9 @@
   */
  
  
--  #undef G_DISABLE_DEPRECATED //So we can use deprecated functions in our deprecated methods.
++#if !defined(_LP64)
+   #undef G_DISABLE_DEPRECATED //So we can use deprecated functions in our deprecated methods.
++#endif
   
  #include <glibmm/ustring.h>
  
