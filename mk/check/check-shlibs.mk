@@ -1,31 +1,37 @@
-# $NetBSD: check-shlibs.mk,v 1.5 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: check-shlibs.mk,v 1.6 2006/11/11 23:27:51 rillig Exp $
+#
+# This file verifies that all libraries used by the package can be found
+# at run-time.
+#
+# User-settable variables:
+#
+# CHECK_SHLIBS:
+#	Whether the check should be enabled or not.
+#
+#	Default value: "yes" for PKG_DEVELOPERs, "no" otherwise.
+#
+# Package-settable variables:
+#
+# CHECK_LIBS_SUPPORTED:
+#	Whether the check should be enabled for this package or not.
+#
+#	Default value: yes
+#
 
-# For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
-CHECK_SHLIBS?=		yes
+CHECK_SHLIBS?=			yes
 .endif
-CHECK_SHLIBS?=		no
+CHECK_SHLIBS?=			no
+CHECK_SHLIBS_SUPPORTED?=	yes
 
 # All binaries and shared libraries.
 _CHECK_SHLIBS_ERE=	/(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib)
 
-_CHECK_SHLIB_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
+_CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
-######################################################################
-### check-shlibs (PRIVATE)
-######################################################################
-### check-shlibs verifies that all libraries used by the package can be
-### found at run-time.
-###
-.PHONY: check-shlibs
-.if !empty(CHECK_SHLIBS_SUPPORTED:M[nN][oO])
-check-shlibs:
-	@${DO_NADA}
-.else
-check-shlibs: error-check
+check-shlibs: error-check .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
-.  if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
+	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
 	case ${LDD:Q}"" in						\
@@ -33,7 +39,7 @@ check-shlibs: error-check
 	*)	ldd=${LDD:Q} ;;						\
 	esac;								\
 	${TEST} -x "$$ldd" || exit 0;					\
-	${_CHECK_SHLIB_FILELIST_CMD} |					\
+	${_CHECK_SHLIBS_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
 	while read file; do						\
 		err=`$$ldd $$file 2>&1 | ${GREP} "not found" || ${TRUE}`; \
@@ -47,5 +53,3 @@ check-shlibs: error-check
 		${ECHO} "    places)!";					\
 		${SHCOMMENT} Might not error-out for non-pkg-developers; \
 	fi
-.  endif
-.endif
