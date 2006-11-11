@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:10:36 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/11 22:12:54 rillig Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,8 @@ DEPENDS=	foomatic-filters>=3.0.2:../../print/foomatic-filters
 
 REQD_DIRS=	share/foomatic
 PLIST_SRC=	${WRKDIR}/PLIST_SRC
+
+CHECK_PORTABILITY_SKIP=		install
 
 do-build:
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
