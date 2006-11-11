@@ -1,4 +1,25 @@
-# $NetBSD: install.mk,v 1.28 2006/11/11 23:31:38 rillig Exp $
+# $NetBSD: install.mk,v 1.29 2006/11/11 23:51:30 rillig Exp $
+#
+# This file provides the code for the "install" phase.
+#
+# Public targets:
+#
+# install:
+#	Installs the package files into LOCALBASE.
+#
+
+# Interface for other infrastructure components:
+#
+# Hooks for use by the infrastructure:
+#
+# privileged-install-hook:
+#	This hook is placed after the package has been installed,
+#	before leaving the privileged mode.
+#
+# unprivileged-install-hook:
+#	This hook is placed _before_ switching to privileged mode
+#	in order to install the package.
+#
 
 ######################################################################
 ### install (PUBLIC)
@@ -73,17 +94,9 @@ install-check-interactive:
 	@${DO_NADA}
 .endif
 
-######################################################################
-### unprivileged-install-hook (PRIVATE, override, hook)
-######################################################################
-### unprivileged-install-hook is a generic hook target that is run just
-### before pkgsrc elevates privileges for install-all.
-###
 .PHONY: unprivileged-install-hook
-.if !target(unprivileged-install-hook)
 unprivileged-install-hook:
 	@${DO_NADA}
-.endif
 
 ######################################################################
 ### install-check-version (PRIVATE)
@@ -363,17 +376,8 @@ register-pkg:
 	@${DO_NADA}
 .endif
 
-######################################################################
-### privileged-install-hook (PRIVATE, override, hook)
-######################################################################
-### privileged-install-hook is a generic hook target that is run just
-### before pkgsrc drops elevated privileges.
-###
-.PHONY: privileged-install-hook
-.if !target(privileged-install-hook)
-privileged-install-hook:
+privileged-install-hook: .PHONY
 	@${DO_NADA}
-.endif
 
 ######################################################################
 ### install-clean (PRIVATE)
