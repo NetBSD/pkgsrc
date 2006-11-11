@@ -1,4 +1,4 @@
-#	$NetBSD: Darwin.sys.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: Darwin.sys.mk,v 1.2 2006/11/11 18:24:52 jschauma Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix=		We run UNIX.
@@ -21,12 +21,12 @@ COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c
 LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 .if exists(/usr/bin/gcc)
-CC?=		gcc -pipe
+CC?=		gcc
 .else
-CC?=		cc -pipe
+CC?=		cc
 .endif
 DBG?=		-O2
-CFLAGS?=	${DBG}
+CFLAGS?=	-pipe ${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
