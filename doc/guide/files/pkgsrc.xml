@@ -1,7 +1,6 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.23 2006/09/19 17:50:38 rillig Exp $ -->
-
-
 <?xml version="1.0"?>
+<!-- $NetBSD: pkgsrc.xml,v 1.24 2006/11/11 05:39:09 rillig Exp $ -->
+
 <!DOCTYPE book PUBLIC "-//NetBSD//DTD DocBook XML V4.2-Based DocBook Extension//EN" [
 
 <!ENTITY % man-refs.ent PUBLIC "-//NetBSD//ENTITIES NetBSD Manual Page Entities//EN">
@@ -45,7 +44,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.23 2006/09/19 17:50:38 rillig Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.24 2006/11/11 05:39:09 rillig Exp $</pubdate>
 
     <abstract>
 
