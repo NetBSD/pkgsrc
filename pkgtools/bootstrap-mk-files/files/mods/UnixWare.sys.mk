@@ -1,4 +1,4 @@
-#	$NetBSD: UnixWare.sys.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: UnixWare.sys.mk,v 1.2 2006/11/11 18:24:52 jschauma Exp $
 #	NetBSD: SunOS.sys.mk,v 1.1.1.1 2004/03/11 13:04:00 grant Exp
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
@@ -22,15 +22,15 @@ LINK.s?=	${CC} ${AFLAGS} ${LDFLAGS}
 COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
 LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-# gcc on Unixware has no internal macro to identify the system
-CC?=		gcc -DUNIXWARE
+CC?=		gcc
 DBG?=		-O2
-CFLAGS?=	${DBG}
+# gcc on Unixware has no internal macro to identify the system
+CFLAGS?=	-DUNIXWARE ${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CXX?=		g++ -DUNIXWARE
-CXXFLAGS?=	${CFLAGS}
+CXX?=		g++
+CXXFLAGS?=	-DUNIXWARE ${CFLAGS}
 COMPILE.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
 LINK.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
 

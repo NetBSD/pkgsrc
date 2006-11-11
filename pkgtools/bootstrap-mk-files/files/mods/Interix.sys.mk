@@ -1,4 +1,4 @@
-#	$NetBSD: Interix.sys.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: Interix.sys.mk,v 1.2 2006/11/11 18:24:52 jschauma Exp $
 
 unix?=		We run Unix
 OS!=		uname -s
@@ -20,11 +20,11 @@ COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
 LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 # Unless told otherwise, assume GNU CC
-CC?=		gcc -D_ALL_SOURCE
+CC?=		gcc
 
 DBG?=		-O
 
-CFLAGS?=	${DBG}
+CFLAGS?=	-D_ALL_SOURCE ${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
