@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1791 2006/11/10 21:57:13 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1792 2006/11/11 10:28:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5252,3 +5252,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated geography/geos to 2.2.3 [gdt 2006-11-10]
 	Updated net/sipsak to 0.9.6 [schwarz 2006-11-10]
 	Updated emulators/wine to 0.9.25 [adam 2006-11-10]
+	Updated devel/glibmm to 2.12.2nb2 [adam 2006-11-10]
