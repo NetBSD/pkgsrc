@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.74 2006/10/11 14:32:56 yyamano Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.75 2006/11/11 05:38:27 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1137,7 +1137,7 @@
 <sect2 id="undefined-reference">
 <title>Undefined reference to <quote>...</quote></title>
 
-	<para>This compiler error often means that a package did not
+	<para>This error message often means that a package did not
 	link to a shared library it needs. The following functions are
 	known to cause this error message over and over.</para>
 
@@ -1161,6 +1161,35 @@
     -l<replaceable>foo</replaceable></literal> to the package
     <filename>Makefile</filename> and then say <command>bmake clean;
     bmake</command>.</para>
+
+<sect3 id="undefined-reference-sunpro">
+<title>Special issue: The SunPro compiler</title>
+
+<para>When you are using the SunPro compiler, there is another
+possibility. That compiler cannot handle the following code:</para>
+
+<programlisting>
+    extern int extern_func(int);
+    
+    static inline int
+    inline_func(int x)
+    {
+        return extern_func(x);
+    }
+    
+    int main(void)
+    {
+        return 0;
+    }
+</programlisting>
+
+<para>It generates the code for <function>inline_func</function> even if
+that function is never used. This code then refers to
+<function>extern_func</function>, which can usually not be resolved. To
+solve this problem you can try to tell the package to disable inlining
+of functions.</para>
+
+</sect3>
 
   </sect2>
 
