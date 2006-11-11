@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.13 2006/10/26 07:01:46 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.14 2006/11/11 07:00:57 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,6 +35,11 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 case $arg in
+-MM)	# Create dependency lines for Makefiles
+	arg="-xM1"
+	$debug_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
 ######################################################################
 # SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically convert
 # those GCC -O<n> values to -xO<n>.
