@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2006 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.23 2006/09/19 17:50:38 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.24 2006/11/11 05:39:09 rillig Exp $
 
 Abstract
 
@@ -149,7 +149,6 @@ I. The pkgsrc user's guide
         8.17. A package does not build. What shall I do?
         8.18. What does "Makefile appears to contain unresolved cvs/rcs/???
             merge conflicts" mean?
-        8.19. I have a little time to kill. What shall I do?
 
 II. The pkgsrc developer's guide
 
@@ -772,7 +771,6 @@ Table of Contents
     8.17. A package does not build. What shall I do?
     8.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
         conflicts" mean?
-    8.19. I have a little time to kill. What shall I do?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
@@ -2717,7 +2715,6 @@ Table of Contents
 8.17. A package does not build. What shall I do?
 8.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
     conflicts" mean?
-8.19. I have a little time to kill. What shall I do?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
@@ -3069,20 +3066,6 @@ Makefile.
 Have a look at that file, and if you don't need your local changes anymore, you
 can remove that file and run cvs -q update -dP in that directory to download
 the current version.
-
-8.19. I have a little time to kill. What shall I do?
-
-This is not really an FAQ yet, but here's the answer anyway.
-
-  * Run pkg_chk -N (from the pkgtools/pkg_chk package). It will tell you about
-    newer versions of installed packages that are available, but not yet
-    updated in pkgsrc.
-
-  * Browse pkgsrc/doc/TODO ? it contains a list of suggested new packages and a
-    list of cleanups and enhancements for pkgsrc that would be nice to have.
-
-  * Review packages for which review was requested on the pkgsrc-wip review
-    mailing list.
 
 Part II. The pkgsrc developer's guide
 
@@ -7000,7 +6983,7 @@ and documenting it in pkgsrc/doc/HACKS. See that file for a number of examples.
 
 18.5.3. Undefined reference to "..."
 
-This compiler error often means that a package did not link to a shared library
+This error message often means that a package did not link to a shared library
 it needs. The following functions are known to cause this error message over
 and over.
 
@@ -7024,6 +7007,28 @@ and over.
 
 To fix these linker errors, it is often sufficient to say LIBS.OperatingSystem+
 = -lfoo to the package Makefile and then say bmake clean; bmake.
+
+18.5.3.1. Special issue: The SunPro compiler
+
+When you are using the SunPro compiler, there is another possibility. That
+compiler cannot handle the following code:
+
+    extern int extern_func(int);
+
+    static inline int
+    inline_func(int x)
+    {
+        return extern_func(x);
+    }
+
+    int main(void)
+    {
+        return 0;
+    }
+
+It generates the code for inline_func even if that function is never used. This
+code then refers to extern_func, which can usually not be resolved. To solve
+this problem you can try to tell the package to disable inlining of functions.
 
 18.5.4. Running out of memory
 
@@ -7672,6 +7677,7 @@ pkgsrc-users mailing list.
     the := inside it.
 21.7. Which mailing lists are there for package developers?
 21.8. Where is the pkgsrc documentation?
+21.9. I have a little time to kill. What shall I do?
 
 21.1. What is the difference between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?
 
@@ -7747,7 +7753,8 @@ pkgsrc-users mailing list.
 
         * Many of the files in the mk/ directory start with a comment that
           describes the purpose of the file and how it can be used by the
-          pkgsrc user and package authors.
+          pkgsrc user and package authors. An easy way to find this
+          documentation is to run bmake help.
 
         * The CVS log messages are a rich source of information, but they tend
           to be highly abbreviated, especially for actions that occur often.
@@ -7763,6 +7770,21 @@ pkgsrc-users mailing list.
           see who has written it and ask on the tech-pkg mailing list, so that
           others can find your questions later (see above). To be sure that the
           developer in charge reads the mail, you may CC him or her.
+
+21.9. I have a little time to kill. What shall I do?
+
+      This is not really an FAQ yet, but here's the answer anyway.
+
+        * Run pkg_chk -N (from the pkgtools/pkg_chk package). It will tell you
+          about newer versions of installed packages that are available, but
+          not yet updated in pkgsrc.
+
+        * Browse pkgsrc/doc/TODO ? it contains a list of suggested new packages
+          and a list of cleanups and enhancements for pkgsrc that would be nice
+          to have.
+
+        * Review packages for which review was requested on the pkgsrc-wip
+          review mailing list.
 
 Chapter 22. GNOME packaging and porting
 

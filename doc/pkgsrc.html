@@ -31,7 +31,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2006 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.23 2006/09/19 17:50:38 rillig Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.24 2006/11/11 05:39:09 rillig Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -166,7 +166,6 @@
 <dt><span class="sect1"><a href="#ufaq-cflags">8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">8.17. A package does not build.  What shall I do?</a></span></dt>
 <dt><span class="sect1"><a href="#faq.rcs-conflicts">8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#too-much-time">8.19. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -860,7 +859,6 @@ minutes!</p>
 <dt><span class="sect1"><a href="#ufaq-cflags">8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">8.17. A package does not build.  What shall I do?</a></span></dt>
 <dt><span class="sect1"><a href="#faq.rcs-conflicts">8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#too-much-time">8.19. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -3243,7 +3241,6 @@ currently running.</p></dd>
 <dt><span class="sect1"><a href="#ufaq-cflags">8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">8.17. A package does not build.  What shall I do?</a></span></dt>
 <dt><span class="sect1"><a href="#faq.rcs-conflicts">8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#too-much-time">8.19. I have a little time to kill.  What shall I do?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -3656,25 +3653,6 @@ file. Because of these markers, the file is no longer a valid
 <p>Have a look at that file, and if you don't need your local changes
 anymore, you can remove that file and run <span><strong class="command">cvs -q update
 -dP</strong></span> in that directory to download the current version.</p>
-</div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="too-much-time"></a>8.19. I have a little time to kill.  What shall I do?</h2></div></div></div>
-<p>This is not really an FAQ yet, but here's the answer
-  anyway.</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p>Run <span><strong class="command">pkg_chk -N</strong></span> (from the
-    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a> package).  It
-    will tell you about newer versions of installed packages that are
-    available, but not yet updated in pkgsrc.</p></li>
-<li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &mdash; it contains a list of suggested new packages and a list of
-    cleanups and enhancements for pkgsrc that would be nice to
-    have.</p></li>
-<li><p>Review packages for which review was requested on
-    the <a href="http://pkgsrc-wip.sourceforge.net/" target="_top">pkgsrc-wip</a> review
-    mailing list.</p></li>
-</ul></div>
 </div>
 </div>
 </div>
@@ -8386,7 +8364,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="undefined-reference"></a>18.5.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</h3></div></div></div>
-<p>This compiler error often means that a package did not
+<p>This error message often means that a package did not
 	link to a shared library it needs. The following functions are
 	known to cause this error message over and over.</p>
 <div class="informaltable">
@@ -8445,6 +8423,31 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     -l<em class="replaceable"><code>foo</code></em></code> to the package
     <code class="filename">Makefile</code> and then say <span><strong class="command">bmake clean;
     bmake</strong></span>.</p>
+<div class="sect3" lang="en">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="undefined-reference-sunpro"></a>18.5.3.1. Special issue: The SunPro compiler</h4></div></div></div>
+<p>When you are using the SunPro compiler, there is another
+possibility. That compiler cannot handle the following code:</p>
+<pre class="programlisting">
+    extern int extern_func(int);
+    
+    static inline int
+    inline_func(int x)
+    {
+        return extern_func(x);
+    }
+    
+    int main(void)
+    {
+        return 0;
+    }
+</pre>
+<p>It generates the code for <code class="function">inline_func</code> even if
+that function is never used. This code then refers to
+<code class="function">extern_func</code>, which can usually not be resolved. To
+solve this problem you can try to tell the package to disable inlining
+of functions.</p>
+</div>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -9228,37 +9231,40 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>21.1. <a href="#id2685573">What is the difference between
+<dt>21.1. <a href="#id2685494">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>21.2. <a href="#id2685609">What is the difference between
+<dt>21.2. <a href="#id2685530">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>21.3. <a href="#id2685648">What is the difference between
+<dt>21.3. <a href="#id2685637">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>21.4. <a href="#id2685685">What is the difference between
+<dt>21.4. <a href="#id2685674">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>21.5. <a href="#id2685703">Why does make show-var
+<dt>21.5. <a href="#id2685692">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>21.6. <a href="#id2685731">What does
+<dt>21.6. <a href="#id2685720">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>21.7. <a href="#id2685805">Which mailing lists are there for package
+<dt>21.7. <a href="#id2685795">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>21.8. <a href="#id2685842">Where is the pkgsrc
+<dt>21.8. <a href="#id2685831">Where is the pkgsrc
 	documentation?</a>
+</dt>
+<dt>21.9. <a href="#devfaq.too-much-time">I have a little time to kill.  What shall I
+do?</a>
 </dt>
 </dl>
 <table border="0" summary="Q and A Set">
@@ -9266,7 +9272,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685573"></a><a name="id2685574"></a><b>21.1.</b>
+<a name="id2685494"></a><a name="id2685495"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9282,7 +9288,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685609"></a><a name="id2685610"></a><b>21.2.</b>
+<a name="id2685530"></a><a name="id2685531"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9300,7 +9306,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685648"></a><a name="id2685649"></a><b>21.3.</b>
+<a name="id2685637"></a><a name="id2685638"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9318,7 +9324,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685685"></a><a name="id2685686"></a><b>21.4.</b>
+<a name="id2685674"></a><a name="id2685675"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9331,7 +9337,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685703"></a><a name="id2685704"></a><b>21.5.</b>
+<a name="id2685692"></a><a name="id2685693"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9347,7 +9353,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685731"></a><a name="id2685732"></a><b>21.6.</b>
+<a name="id2685720"></a><a name="id2685721"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9371,7 +9377,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685805"></a><a name="id2685806"></a><b>21.7.</b>
+<a name="id2685795"></a><a name="id2685796"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9396,7 +9402,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2685842"></a><a name="id2685843"></a><b>21.8.</b>
+<a name="id2685831"></a><a name="id2685832"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9419,7 +9425,9 @@ place.</p></li>
 <li><p>Many of the files in the
 	<code class="filename">mk/</code> directory start with a comment that
 	describes the purpose of the file and how it can be used by the
-	pkgsrc user and package authors.</p></li>
+	pkgsrc user and package authors. An easy way to find this
+	documentation is to run <span><strong class="command">bmake
+	help</strong></span>.</p></li>
 <li><p>The CVS log messages are a rich source of
 	information, but they tend to be highly abbreviated, especially
 	for actions that occur often. Some contain a detailed
@@ -9437,6 +9445,33 @@ place.</p></li>
 	find your questions later (see above). To be sure that the
 	developer in charge reads the mail, you may CC him or
 	her.</p></li>
+</ul></div>
+</td>
+</tr>
+<tr class="question">
+<td align="left" valign="top">
+<a name="devfaq.too-much-time"></a><a name="id2685894"></a><b>21.9.</b>
+</td>
+<td align="left" valign="top"><p>I have a little time to kill.  What shall I
+do?</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"></td>
+<td align="left" valign="top">
+<p>This is not really an FAQ yet, but here's the answer  
+anyway.</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>Run <span><strong class="command">pkg_chk -N</strong></span> (from the
+    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_chk/README.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a> package).  It
+    will tell you about newer versions of installed packages that are
+    available, but not yet updated in pkgsrc.</p></li>
+<li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
+    &mdash; it contains a list of suggested new packages and a list of
+    cleanups and enhancements for pkgsrc that would be nice to
+    have.</p></li>
+<li><p>Review packages for which review was requested on
+    the <a href="http://pkgsrc-wip.sourceforge.net/" target="_top">pkgsrc-wip</a> review
+    mailing list.</p></li>
 </ul></div>
 </td>
 </tr>
