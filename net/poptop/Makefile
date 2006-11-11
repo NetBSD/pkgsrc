@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:29 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/11 16:50:54 rillig Exp $
 #
 
 DISTNAME=	pptpd-1.2.1
@@ -27,6 +27,7 @@ SUBST_FILES.logwtmp=	pptpctrl.c
 SUBST_SED.logwtmp=	-e s,@@PREFIX@@,${PREFIX},
 
 RCD_SCRIPTS=	pptpd
+CHECK_PORTABILITY_SKIP+=	version
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

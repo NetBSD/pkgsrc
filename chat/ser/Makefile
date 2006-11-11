@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/04 21:29:04 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/11/11 16:48:14 rillig Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -24,6 +24,8 @@ REQD_DIRS=	${EGDIR}
 MAKE_ENV+= BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
 MAKE_ENV+= cfg-prefix=${PREFIX}/share/examples
 MAKE_ENV+= EGDIR=${EGDIR:Q}
+
+CHECK_PORTABILITY_SKIP+=	scripts/sc
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
