@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.6 2006/11/11 23:27:51 rillig Exp $
+# $NetBSD: check-shlibs.mk,v 1.7 2006/11/11 23:31:38 rillig Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -29,7 +29,12 @@ _CHECK_SHLIBS_ERE=	/(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib)
 
 _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
-check-shlibs: error-check .PHONY
+.if !empty(CHECK_SHLIBS:M[Yy][Ee][Ss]) && \
+    !empty(CHECK_SHLIBS_SUPPORTED:M[Yy][Ee][Ss])
+privileged-install-hook: _check-shlibs
+.endif
+
+_check-shlibs: error-check .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\

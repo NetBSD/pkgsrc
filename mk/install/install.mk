@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.27 2006/11/07 18:16:19 joerg Exp $
+# $NetBSD: install.mk,v 1.28 2006/11/11 23:31:38 rillig Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -160,9 +160,6 @@ _INSTALL_ALL_TARGETS+=		release-install-localbase-lock
 .endif
 _INSTALL_ALL_TARGETS+=		error-check
 
-.if empty(CHECK_SHLIBS:M[nN][oO])
-privileged-install-hook: check-shlibs
-.endif
 .if empty(CHECK_WRKREF:M[nN][oO])
 privileged-install-hook: check-wrkref
 .endif
