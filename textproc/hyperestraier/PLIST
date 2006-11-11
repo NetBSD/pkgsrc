@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/11/03 06:09:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/11/11 12:42:20 obache Exp $
 bin/estbutler
 bin/estcall
 bin/estcmd
@@ -14,7 +14,7 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.33.0
+lib/libestraier.so.8.34.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estfraud.cgi
 libexec/estproxy.cgi
@@ -144,6 +144,7 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000058.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000059.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000060.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000061.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000062.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000029.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000030.html
@@ -193,6 +194,8 @@ share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000070.ht
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000071.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000072.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000073.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000074.html
+share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src/M000075.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000001.html
 share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src/M000002.html
