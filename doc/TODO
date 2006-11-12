@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5698 2006/11/10 21:32:35 schwarz Exp $
+$NetBSD: TODO,v 1.5699 2006/11/12 07:01:07 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1042,7 +1042,6 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o sylpheed-claws-2.5.6
-	o sylpheed-devel-2.3.0beta4
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
