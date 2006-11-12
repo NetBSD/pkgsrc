@@ -1,17 +1,18 @@
-$NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-ai,v 1.9 2006/11/12 01:28:03 rillig Exp $
 
 --- config.h-dist.orig	2005-04-01 22:44:22.000000000 +0200
-+++ config.h-dist	2006-10-14 20:03:22.000000000 +0200
-@@ -11,6 +11,8 @@
++++ config.h-dist	2006-11-12 02:24:05.000000000 +0100
+@@ -11,6 +11,9 @@
   *	(c) Copyright 1990, Kim F. Storm.  All rights reserved.
   */
  
 +#define PREFIX		"@PREFIX@"
 +#define PKG_SYSCONFDIR	"@PKG_SYSCONFDIR@"
++#define MANDIR		"@PREFIX@/@PKGMANDIR@"
  
  /*
   * The Good Net-Keeping Seal of Approval folks seem to think it necessary to
-@@ -68,7 +70,7 @@
+@@ -68,7 +71,7 @@
   *	LIB_DIRECTORY defined below.
   */
  
@@ -20,7 +21,7 @@ $NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
  
  /*
   *  Define your local domain name.  If you leave this undefined, nn will
-@@ -95,7 +97,7 @@
+@@ -95,7 +98,7 @@
   *	conf/s-template.h as a starting point for writing you own.
   */
  
@@ -29,7 +30,7 @@ $NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
  
  /*
   *	Define DEFAULT_PAGER as the initial value of the 'pager' variable.
-@@ -122,7 +124,7 @@
+@@ -122,7 +125,7 @@
   *	conf/m-template.h as a starting point for writing you own.
   */
  
@@ -38,7 +39,7 @@ $NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
  
  
  /***************************** OWNERSHIP ***************************
-@@ -139,8 +141,8 @@
+@@ -139,8 +142,8 @@
   *	Common choices are: (news, news) and (your uid, your gid)
   */
  
@@ -49,7 +50,7 @@ $NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
  
  
  /**************************** LOCALIZATION ****************************
-@@ -173,8 +175,12 @@
+@@ -173,8 +176,12 @@
   *			   (= LIB_DIRECTORY/Log if undefined).
   */
  
@@ -64,7 +65,7 @@ $NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
  
  
  /*************************** MAIL INTERFACE *************************
-@@ -189,7 +195,11 @@
+@@ -189,7 +196,11 @@
   */
  
  /* #define REC_MAIL	"/usr/lib/news/recmail"	*/	/* non-sendmail */
@@ -77,25 +78,29 @@ $NetBSD: patch-ai,v 1.8 2006/10/14 19:33:45 schwarz Exp $
  
  /*
   *	nn needs to know the name of your host.
-@@ -237,13 +247,13 @@
+@@ -237,13 +248,17 @@
   *	DAEMON_MAN	- nnmaster
   */
  
 -#define USER_MAN_DIR	"/usr/local/man/man1"
-+#define USER_MAN_DIR	PREFIX "/man/man1"
++#ifndef MANDIR
++#define MANDIR PREFIX "/man"
++#endif
++
++#define USER_MAN_DIR	MANDIR "/man1"
  #define USER_MAN_SECTION	"1"
  
 -#define SYS_MAN_DIR	"/usr/local/man/man1"
 -#define SYS_MAN_SECTION		"1m"
-+#define SYS_MAN_DIR	PREFIX "/man/man1"
++#define SYS_MAN_DIR	MANDIR "/man1"
 +#define SYS_MAN_SECTION		"1"
  
 -#define DAEMON_MAN_DIR	"/usr/local/man/man8"
-+#define DAEMON_MAN_DIR	PREFIX "/man/man8"
++#define DAEMON_MAN_DIR	MANDIR "/man8"
  #define DAEMON_MAN_SECTION	"8"
  
  
-@@ -374,7 +384,7 @@
+@@ -374,7 +389,7 @@
   *	performance (no data conversion is needed).
   */
  

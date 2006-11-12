@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/10/15 16:43:37 schwarz Exp $
+# $NetBSD: Makefile,v 1.33 2006/11/12 01:28:03 rillig Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -40,6 +40,7 @@ post-patch:
 	@${SED} -e ' \
 	    s#@PREFIX@#${PREFIX}#; \
 	    s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#; \
+	    s#@PKGMANDIR@#${PKGMANDIR}#; \
 	    s#@BINOWN@#${BINOWN}#; \
 	    s#@BINGRP@#${BINGRP}#; \
 	    s#@MFILE@#${MFILE}#; \
