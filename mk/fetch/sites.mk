@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.15 2006/10/27 13:38:52 drochner Exp $
+# $NetBSD: sites.mk,v 1.16 2006/11/12 12:10:46 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -245,7 +245,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.stardiv.de/pub/OpenOffice.org/ \
 	http://openoffice.mirrors.ilisys.com.au/ \
 	ftp://ftp.pucpr.br/openoffice/ \
-	http://openoffice.behrsolutions.com/ \
 	http://www.ibiblio.org/pub/mirrors/openoffice/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
 	http://openoffice.mirrors.pair.com/ftp/ \
