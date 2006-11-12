@@ -1,35 +1,45 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:29:02 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/11/12 14:25:50 dmcmahill Exp $
 
-DISTNAME=	xcircuit-3.3.0
-PKGREVISION=	1
+DISTNAME=	xcircuit-3.4.26
 CATEGORIES=	cad graphics
-MASTER_SITES=	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/
+MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/ \
+		http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xcircuit.ece.jhu.edu/
+MAINTAINER=	shaun@inerd.com
+HOMEPAGE=	http://opencircuitdesign.com/xcircuit/
 COMMENT=	Drawing program for X11 (especially for circuits)
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gs:run
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-tcl
+
+.include "../../lang/tcl/Makefile.version"
+.include "../../x11/tk/Makefile.version"
+
+CONFIGURE_ARGS+=--prefix=${PREFIX}
+CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=--with-tclincls=${BUILDLINK_PREFIX.tcl}/include
 CONFIGURE_ARGS+=--with-tcllibs=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=--with-tkincls=${BUILDLINK_PREFIX.tk}/include
 CONFIGURE_ARGS+=--with-tklibs=${BUILDLINK_PREFIX.tk}/lib
+#CFLAGS+=	-DBUILTINS_DIR=${PREFIX}/lib/${DISTNAME:C/\.[^\.]*$//}
+LDFLAGS+= 	-ltcl${TCL_VERSION:C/\.[^\.]*$//:C/\.//g}
+LDFLAGS+=	-ltk${TK_VERSION:C/\.[^\.]*$//:C/\.//g}
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 BUILD_TARGET=	tcl
-INSTALL_TARGET=	install-tcl
+INSTALL_TARGET= install-tcl
 
 post-extract:
-	${RM} -fr ${WRKSRC}/examples/CVS
 	${MV} -f ${WRKSRC}/examples/.xcircuitrc ${WRKSRC}/examples/xcircuitrc
 	${TOUCH} ${WRKSRC}/menudep.h
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xcircuit/
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/xcircuit/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xcircuit
+	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${PREFIX}/share/examples/xcircuit/
+	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${PREFIX}/share/examples/xcircuit/
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
