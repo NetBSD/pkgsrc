@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.30 2006/11/12 00:13:26 rillig Exp $
+# $NetBSD: install.mk,v 1.31 2006/11/12 00:51:00 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -175,12 +175,6 @@ _INSTALL_ALL_TARGETS+=		error-check
 
 .if empty(CHECK_FILES:M[nN][oO])
 privileged-install-hook: check-files
-.endif
-.if empty(CHECK_INTERPRETER:M[nN][oO])
-privileged-install-hook: check-interpreter
-.endif
-.if empty(CHECK_PERMS:M[nN][oO])
-privileged-install-hook: check-perms
 .endif
 
 .PHONY: install-all su-install-all
