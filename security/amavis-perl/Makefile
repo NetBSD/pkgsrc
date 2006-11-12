@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/11/12 02:56:41 rillig Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}
@@ -57,8 +57,9 @@ CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR:Q}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO:Q}
 CONFIGURE_ARGS+=--enable-all
 CONFIGURE_ARGS+=--with-amavisuser=amavis
+CONFIGURE_ARGS+=--with-perl=${PERL5}
 
-INSTALLATION_DIRS=	sbin man/man1 man/man5 man/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 post-build:
 	${SED} -e "s|/etc/amavisd.conf|${PREFIX}/etc/amavis/amavisd.conf|" \
@@ -91,10 +92,10 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/doc/amavis
 	# Man pages
 .if empty(PKG_OPTIONS:Mmilter)
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/${PKGMANDIR}/man1
 .endif
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${PREFIX}/man/man5
-	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
