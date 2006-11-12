@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/08 19:03:34 he Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/12 02:03:39 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME:S:-doc-:_:}
@@ -24,6 +24,7 @@ INSTALL_TARGET=	install-doc install-man
 BUILD_TARGET=	build-doc build-man
 
 MAKE_ENV+=	PERL5=${PERL5:Q}
+CHECK_PORTABILITY_SKIP+=	node/node.d/*
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../lang/python/application.mk"
