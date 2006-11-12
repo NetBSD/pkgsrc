@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:30:21 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/11/12 20:58:51 rillig Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -35,7 +35,7 @@ EXAMPLE_DIR=	share/examples/nc
 
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKSRC}/data/PLIST.data
 
-INSTALLATION_DIRS=	man/man1 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 sbin
 
 post-build:
 	@cd ${WRKSRC}/data && ${SETENV} ${MAKE_ENV} ${MAKE} ${EXTRA_PROGS}
@@ -56,6 +56,6 @@ do-install:
 	done;							\
 	${ECHO} "@dirrm ${EXAMPLE_DIR}" >> PLIST.data;		\
 	)
-	${INSTALL_MAN} ${FILESDIR}/nc.1 ${PREFIX}/man/man1/nc.1
+	${INSTALL_MAN} ${FILESDIR}/nc.1 ${PREFIX}/${PKGMANDIR}/man1/nc.1
 
 .include "../../mk/bsd.pkg.mk"
