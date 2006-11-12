@@ -1,23 +1,26 @@
-# $NetBSD: check-interpreter.mk,v 1.14 2006/10/10 13:01:26 joerg Exp $
-
+# $NetBSD: check-interpreter.mk,v 1.15 2006/11/12 00:37:44 rillig Exp $
+#
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
 # have a "#!" line with a non-existent interpreter will generate an
 # error message if they are executable, and a warning message otherwise.
 #
-# The following variables may be set by the pkgsrc user in mk.conf:
+# User-settable variables:
 #
-# CHECK_INTERPRETER: YesNo (default: no)
+# CHECK_INTERPRETER
 #	Whether this check should be enabled or not.
 #
-# The following variables may be set by a package:
+#	Default value: "no"
 #
-# CHECK_INTERPRETER_SKIP: List of paths or paths with wildcards
-#	(default: empty)
-#	(example: share/package1/* share/package2/somefile)
-#	The list of files that are skipped when running the check.
-#	Additionally, all files in share/examples and share/doc are
-#	skipped as well.
+# Package-settable variables:
+#
+# CHECK_INTERPRETER_SKIP
+#	The list of file patterns that are skipped by the check.
+#	All files in share/examples and share/doc are skipped as well.
+#
+#	Default value: (empty)
+#
+#	Example: share/package1/* share/package2/somefile
 #
 
 CHECK_INTERPRETER?=		no
@@ -26,11 +29,6 @@ CHECK_INTERPRETER_SKIP?=	# empty
 _CHECK_INTERP_SKIP=		share/doc/*
 _CHECK_INTERP_SKIP+=		share/examples/*
 _CHECK_INTERP_SKIP+=		${CHECK_INTERPRETER_SKIP}
-
-_CHECK_INTERP_SKIP_FILTER=	case $$file in
-_CHECK_INTERP_SKIP_FILTER+=	${_CHECK_INTERP_SKIP:@.pattern.@${PREFIX}/${.pattern.}|${.pattern.}) continue ;;@}
-_CHECK_INTERP_SKIP_FILTER+=	*) ;;
-_CHECK_INTERP_SKIP_FILTER+=	esac
 
 _CHECK_INTERP_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
@@ -50,8 +48,11 @@ check-interpreter: error-check
 	cd ${PREFIX};							\
 	${_CHECK_INTERP_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |\
 	while read file; do						\
-		${_CHECK_INTERP_SKIP_FILTER};				\
-		if ${TEST} ! -r "$$file"; then				\
+		case "$$file" in					\
+		${_CHECK_INTERP_SKIP:@p@${PREFIX}/${p}|${p}) continue ;;@} \
+		*) ;;							\
+		esac;							\
+		if [ ! -r "$$file" ]; then				\
 			${DELAYED_WARNING_MSG} "[check-interpreter.mk] File \"$$file\" cannot be read."; \
 			continue;					\
 		fi;							\
@@ -60,11 +61,11 @@ check-interpreter: error-check
 		|| {	${DELAYED_WARNING_MSG} "[check-interpreter.mk] sed(1) failed for \"$$file\"."; \
 			continue;					\
 		};							\
-		case $$interp in					\
+		case "$$interp" in					\
 		"") continue;						\
 		esac;							\
-		if ${TEST} ! -f "$$interp"; then			\
-			if ${TEST} -x "$$file"; then			\
+		if [ ! -f "$$interp" ]; then				\
+			if [ -x "$$file" ]; then			\
 				${DELAYED_ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
 			else						\
 				${DELAYED_WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
