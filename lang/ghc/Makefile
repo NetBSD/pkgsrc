@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/07/31 18:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/11/12 21:58:38 kristerw Exp $
 
 DISTNAME=	ghc-6.4.2
 PKGREVISION=	3
@@ -13,7 +13,7 @@ COMMENT=	Compiler for the functional language Haskell
 
 SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+ONLY_FOR_PLATFORM= FreeBSD-*-i386 NetBSD-*-i386
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/ghc-boot/ghc/compiler/ghc-inplace
