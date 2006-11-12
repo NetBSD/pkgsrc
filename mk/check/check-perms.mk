@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.3 2006/11/02 02:44:17 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.4 2006/11/12 00:44:24 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -15,6 +15,9 @@
 #	check. Note that a * in a pattern also matches a slash in a
 #	pathname.
 #
+# CHECK_PERMS_AUTOFIX: YesNo
+#	If set to yes, any unusual permissions are fixed automatically.
+#
 
 .if defined(PKG_DEVELOPER)
 CHECK_PERMS?=		yes
@@ -22,11 +25,18 @@ CHECK_PERMS?=		yes
 CHECK_PERMS?=		no
 .endif
 
-CHECK_PERMS_SKIP?=		# none
+CHECK_PERMS_SKIP?=	# none
+CHECK_PERMS_AUTOFIX?=	no
 
-#.if !empty(CHECK_PERMS:M[Yy][Ee][Ss])
-#_POST_INSTALL_CHECKS+=	check-perms
-#.endif
+.if !empty(CHECK_PERMS_AUTOFIX:M[Yy][Ee][Ss])
+_CHECK_PERMS_FLAGS=	-cff
+.else
+_CHECK_PERMS_FLAGS=	-c
+.endif
+
+.if !empty(CHECK_PERMS:M[Yy][Ee][Ss])
+privileged-install-hook: _check-perms
+.endif
 
 _CHECK_PERMS_CMD=	${LOCALBASE}/bin/checkperms
 _CHECK_PERMS_GETDIRS_AWK=						\
@@ -41,8 +51,7 @@ _CHECK_PERMS_GETDIRS_AWK=						\
 		}							\
 	}
 
-.PHONY: check-perms
-check-perms:
+_check-perms: .PHONY
 	@${STEP_MSG} "Checking file permissions in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG} set -eu;				\
 	${PKG_INFO} -qe "checkperms>=1.1"				\
@@ -62,4 +71,4 @@ check-perms:
 		printf "%s\\n" "$$file";				\
 	  done								\
 	| awk ${_CHECK_PERMS_GETDIRS_AWK:Q}				\
-	| ${_CHECK_PERMS_CMD} -c
+	| ${_CHECK_PERMS_CMD} ${_CHECK_PERMS_FLAGS}
