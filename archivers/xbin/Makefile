@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/09 18:20:58 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/11/12 02:50:21 rillig Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -30,7 +30,7 @@ LDFLAGS+=		-lcompat
 CFLAGS.Interix+=	-DBSD
 CFLAGS.Darwin+=		-DBSD
 
-INSTALLATION_DIRS=	bin man/cat1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1
 
 post-extract:
 .for dfile in ${DISTFILES}
@@ -43,6 +43,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PRGNAME:Q} ${PREFIX:Q}/bin
-	${INSTALL_MAN} ${WRKSRC:Q}/${PRGNAME:Q}.man ${PREFIX:Q}/man/cat1/${PRGNAME:Q}.0
+	${INSTALL_MAN} ${WRKSRC:Q}/${PRGNAME:Q}.man ${PREFIX:Q}/${PKGMANDIR}/cat1/${PRGNAME:Q}.0
 
 .include "../../mk/bsd.pkg.mk"
