@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/11/12 15:13:56 hira Exp $
 bin/mlcc
 bin/mlclient
 bin/mlterm
@@ -6,6 +6,7 @@ lib/libkik.la
 lib/libmkf.la
 lib/mlterm/libathena.la
 lib/mlterm/libim-kbd.la
+${UIM}lib/mlterm/libim-uim.la
 lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
 lib/mlterm/libnext.la
