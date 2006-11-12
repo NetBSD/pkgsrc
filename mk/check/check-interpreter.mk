@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.15 2006/11/12 00:37:44 rillig Exp $
+# $NetBSD: check-interpreter.mk,v 1.16 2006/11/12 00:49:57 rillig Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -32,17 +32,12 @@ _CHECK_INTERP_SKIP+=		${CHECK_INTERPRETER_SKIP}
 
 _CHECK_INTERP_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
-######################################################################
-### check-interpreter (PRIVATE)
-######################################################################
-### check-interpreter verifies that the interpreters for all installed
-### scripts exist.
-###
-.PHONY: check-interpreter
-check-interpreter: error-check
-	@${STEP_MSG} "Checking for non-existent script interpreters"	\
-		     "in ${PKGNAME}"
-.if !defined(NO_PKG_REGISTER)
+.if !empty(CHECK_INTERPRETER:M[Yy][Ee][Ss])
+privileged-install-hook: _check-interpreter
+.endif
+
+_check-interpreter: error-check .PHONY
+	@${STEP_MSG} "Checking for non-existent script interpreters in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	set -e;								\
 	cd ${PREFIX};							\
@@ -72,4 +67,3 @@ check-interpreter: error-check
 			fi;						\
 		fi;							\
 	done
-.endif
