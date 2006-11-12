@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.29 2006/11/11 23:51:30 rillig Exp $
+# $NetBSD: install.mk,v 1.30 2006/11/12 00:13:26 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -173,9 +173,6 @@ _INSTALL_ALL_TARGETS+=		release-install-localbase-lock
 .endif
 _INSTALL_ALL_TARGETS+=		error-check
 
-.if empty(CHECK_WRKREF:M[nN][oO])
-privileged-install-hook: check-wrkref
-.endif
 .if empty(CHECK_FILES:M[nN][oO])
 privileged-install-hook: check-files
 .endif
