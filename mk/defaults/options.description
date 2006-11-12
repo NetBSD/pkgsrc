@@ -301,6 +301,7 @@ trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
+uim			Enable UIM support.
 unicode	
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
