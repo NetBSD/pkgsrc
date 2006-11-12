@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.8 2006/11/09 15:10:16 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.9 2006/11/12 00:09:50 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -8,10 +8,12 @@
 # User-settable variables:
 #
 # CHECK_WRKREF:
-#	The kind of check that should be done. Say "no" for no check
-#	at all, "tools" for checking references to the directory where
-#	the tool wrappers had been, and "work" to check references to
-#	anything from the working directory.
+#	The kind of directory that must not appear in installed files.
+#
+#	* "no" to disable this check at all
+#	* "tools" for the tool wrapper directory
+#	* "work" for WRKDIR
+#	* "wrkobjdir" for WRKOBJDIR
 #
 #	Default value: "tools" for PKG_DEVELOPERs, "no" otherwise.
 #
@@ -30,17 +32,19 @@ CHECK_WRKREF_SKIP?=	# none
 
 _CHECK_WRKREF_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
-######################################################################
-### check-wrkref (PRIVATE)
-######################################################################
-### check-wrkref verifies that the installed files are free of
-### hard-coded references to the work directory.
-###
-.PHONY: check-wrkref
-check-wrkref: error-check
+_CHECK_WRKREF_DIR.no=		# none
+_CHECK_WRKREF_DIR.work=		${WRKDIR}
+_CHECK_WRKREF_DIR.tools=	${TOOLS_DIR}
+_CHECK_WRKREF_DIR.wrkobjdir=	${WRKOBJDIR}
+
+.if !defined(_CHECK_WRKREF_DIR.${CHECK_WRKREF})
+PKG_FAIL_REASON+=	"[check-wrkref.mk] CHECK_WRKREF must be one of { no tools work objwrkdir }."
+.endif
+_CHECK_WRKREF_DIR=	${_CHECK_WRKREF_DIR.${CHECK_WRKREF}}
+
+check-wrkref: error-check .PHONY
 	@${STEP_MSG} "Checking for work-directory references in ${PKGNAME}"
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
+	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
 	cd ${DESTDIR}${PREFIX};						\
@@ -50,15 +54,13 @@ check-wrkref: error-check
 		${CHECK_WRKREF_SKIP:@p@${p}) continue;; @}		\
 		*) ;;							\
 		esac;							\
-		${SHCOMMENT} [$$file];					\
-		case ${CHECK_WRKREF:Q}"" in				\
-		*work*)							\
-			${GREP} ${WRKDIR} "$$file" 2>/dev/null |	\
-			${SED} -e "s|^|$$file:	|";			\
+		${SHCOMMENT} "[$$file]";				\
+		case ${_CHECK_WRKREF_DIR:Q}"" in			\
+		"")	${ERROR_MSG} "[check-wrkref.mk] The directory to check is empty."; \
+			exit 1;						\
 			;;						\
-		*tools*)						\
-			${GREP} ${TOOLS_DIR} "$$file" 2>/dev/null |	\
-			${SED} -e "s|^|$$file:	|";			\
+		*)	grep ${_CHECK_WRKREF_DIR:Q}"" "$$file" 2>/dev/null | \
+			sed -e "s|^|$$file:	|";			\
 			;;						\
 		esac;							\
 	done
@@ -69,4 +71,3 @@ check-wrkref: error-check
 		${ECHO} "    This is possibly an error that should be fixed by unwrapping"; \
 		${ECHO} "    the files or adding missing tools to the package makefile!"; \
 	fi
-.endif
