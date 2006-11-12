@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1793 2006/11/11 12:43:38 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1794 2006/11/12 07:01:07 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5254,3 +5254,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.25 [adam 2006-11-10]
 	Updated devel/glibmm to 2.12.2nb2 [adam 2006-11-10]
 	Updated textproc/hyperestraier to 1.4.9 [obache 2006-11-11]
+	Updated mail/sylpheed-devel to 2.3.0beta5 [xtraeme 2006-11-12]
