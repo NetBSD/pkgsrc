@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2006/11/07 21:08:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.452 2006/11/12 21:50:40 kristerw Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -190,10 +190,10 @@ SUBDIR+=	libXres
 SUBDIR+=	libXt
 SUBDIR+=	libXv
 SUBDIR+=	libexo
-SUBDIR+=	libxbdfile
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
+SUBDIR+=	libxkbfile
 SUBDIR+=	libxklavier
 SUBDIR+=	libzvt
 SUBDIR+=	matchbox-common
