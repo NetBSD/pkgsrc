@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2006/10/14 02:21:22 rillig Exp $
+$NetBSD: patch-aa,v 1.9 2006/11/12 14:25:50 dmcmahill Exp $
 
---- configure.in.orig	2004-10-01 06:24:09.000000000 +0200
-+++ configure.in	2006-10-14 04:19:51.000000000 +0200
-@@ -255,7 +255,7 @@ xc_with_tk_libraries=""
+--- configure.in.orig	2006-04-10 21:51:35.000000000 +0000
++++ configure.in
+@@ -165,7 +165,7 @@ AC_ARG_WITH(opengl,
+ dnl Graphics double-buffering? Enabled by default unless OpenGL used.
+ AC_ARG_ENABLE(double-buffer,
+ [  --disable-double-buffer disable graphics double-buffering], , [
+-  if test "x$xc_with_GL" == "x" ; then
++  if test "x$xc_with_GL" = "x" ; then
+     AC_DEFINE(DOUBLEBUFFER)
+   else
+     AC_MSG_WARN(Double-buffering option not applicable to OpenGL version.)
+@@ -298,7 +298,7 @@ xc_with_tk_libraries=""
  AC_ARG_WITH(tcl,
  [  --with-tcl=DIR          Find tclConfig.sh in DIR], [
    xc_with_tcl=$withval
@@ -11,24 +20,31 @@ $NetBSD: patch-aa,v 1.8 2006/10/14 02:21:22 rillig Exp $
        xc_with_tcl=""
    fi
  ], ) 
-@@ -469,6 +469,7 @@ fi
- if test "x$xc_with_tcl" != "x" ; then
-   . $tcl_config_sh
-   . $tk_config_sh
-+  LIBS="${LIBS} ${TCL_LIBS}"
- 
-   if test "$TCL_VERSION" = "7.6" -a "$TK_VERSION" = "4.2" ; then
-     :
-@@ -544,7 +545,7 @@ fi
+@@ -574,12 +574,12 @@ if test "x$xc_with_tcl" != "x" ; then
+   if test "x${xc_with_tcl_includes}" != "x" ; then
+     if test -r "${xc_with_tcl_includes}/tcl.h" ; then
+       TCL_INC_DIR=${xc_with_tcl_includes}
+-    elif test "x${TCL_INCLUDE_SPEC}" == "x" ; then
++    elif test "x${TCL_INCLUDE_SPEC}" = "x" ; then
+       echo "Can't find tcl.h in \"${xc_with_tcl_includes}\""
+       echo "Reverting to non-Tcl compilation"
+       xc_with_tcl=""
+     fi
+-  elif test "x${TCL_INCLUDE_SPEC}" == "x" ; then
++  elif test "x${TCL_INCLUDE_SPEC}" = "x" ; then
+     for dir in \
+      ${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION} \
+      ${TCL_PREFIX}/include \
+@@ -633,7 +633,7 @@ fi
  
  if test "x$xc_with_tcl" != "x" ; then
    case $target in
--    *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|OpenBSD-*)
+-    *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|*-*-openbsd*|OpenBSD-*)
 +    *-sunos4*|*-*-netbsd|*-*-netbsdelf|NetBSD-*|FreeBSD-*|OpenBSD-*|*-*-dragonfly*)
        TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
        TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
        ;;
-@@ -886,13 +887,13 @@ if test "x$xc_with_tcl" != "x" ; then
+@@ -1013,12 +1013,12 @@ if test "x$xc_with_tcl" != "x" ; then
        EXTRA_LIB_SPECS="-ldl"
        ;;
  
@@ -39,10 +55,8 @@ $NetBSD: patch-aa,v 1.8 2006/10/14 02:21:22 rillig Exp $
        if test "$test_ok" = yes; then
 -        SHLIB_CFLAGS="-fpic"
 -        SHLIB_LD="ld"
--        LDDL_FLAGS="-Bshareable -x ${LIB_SPEC}"
 +        SHLIB_CFLAGS="-fPIC"
 +        SHLIB_LD=$CC
-+        LDDL_FLAGS="-shared"
+         LDDL_FLAGS="-shared"
        fi
        ;;
- 
