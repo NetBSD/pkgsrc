@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/21 16:31:25 yyamano Exp $
+# $NetBSD: Makefile,v 1.25 2006/11/12 02:22:44 rillig Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -56,13 +56,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock-classic
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if (${OPSYS} == SunOS) || (${OPSYS} == "Linux") || (${OPSYS} == "Interix") || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/asclock.man ${PREFIX}/man/man1/asclock.1
-	@${ECHO} man/man1/asclock.1 >> ${PLIST_SRC}
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/asclock.man ${PREFIX}/${PKGMANDIR}/man1/asclock.1
+	@${ECHO} ${PKGMANDIR}/man1/asclock.1 >> ${PLIST_SRC}
 .else
-	${INSTALL_MAN_DIR} ${PREFIX}/man/cat1
-	${INSTALL_MAN} ${WRKSRC}/asclock.0 ${PREFIX}/man/cat1/asclock.0
-	@${ECHO} man/cat1/asclock.0 >> ${PLIST_SRC}
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_MAN} ${WRKSRC}/asclock.0 ${PREFIX}/${PKGMANDIR}/cat1/asclock.0
+	@${ECHO} ${PKGMANDIR}/cat1/asclock.0 >> ${PLIST_SRC}
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic
 .for LANGUAGE in ${LANGUAGES}

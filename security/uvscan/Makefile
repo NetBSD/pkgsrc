@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/10/14 08:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/11/12 02:27:39 rillig Exp $
 
 DISTNAME=		vlnx440e
 PKGNAME=		uvscan-4.40
@@ -44,7 +44,7 @@ CONF_FILES+=		${EGDATDIR}/names.dat ${UVSCANDIR}/names.dat
 CONF_FILES+=		${EGDATDIR}/scan.dat ${UVSCANDIR}/scan.dat
 REQD_DIRS=		${UVSCANDIR}
 
-INSTALLATION_DIRS=	bin man/man1 sbin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 sbin
 
 USE_TOOLS+=		gtar:run
 
@@ -65,7 +65,7 @@ post-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/update_dat ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${UVSCANDIR}
 	${RM} -f ${PREFIX}/bin/uvscan
 	${LN} -sf ../${UVSCANDIR:S/${PREFIX}\///}/uvscan ${PREFIX}/bin/uvscan
