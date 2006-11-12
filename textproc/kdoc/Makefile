@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:11:03 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/11/12 01:44:57 rillig Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
 PKGREVISION=	2
 CATEGORIES=	textproc kde
 
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/3.0/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/3.0/src/ \
-		ftp://ftp.uk.kde.org/pub/kde/stable/3.0/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/3.0/src/
-
+MASTER_SITES=	${MASTER_SITE_KDE:=3.0/src/}
 MAINTAINER=	wulf@NetBSD.org
 COMMENT=	C++ and IDL Class Documentation Tool
 
