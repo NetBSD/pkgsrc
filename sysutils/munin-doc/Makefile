@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/12 02:03:39 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/12 02:04:59 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME:S:-doc-:_:}
@@ -24,6 +24,7 @@ INSTALL_TARGET=	install-doc install-man
 BUILD_TARGET=	build-doc build-man
 
 MAKE_ENV+=	PERL5=${PERL5:Q}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 CHECK_PORTABILITY_SKIP+=	node/node.d/*
 
 .include "../../mk/bsd.pkg.mk"
