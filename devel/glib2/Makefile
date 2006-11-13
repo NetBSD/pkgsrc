@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2006/10/09 12:52:34 joerg Exp $
+# $NetBSD: Makefile,v 1.109 2006/11/13 18:34:38 drochner Exp $
 
 DISTNAME=		glib-2.12.4
 PKGNAME=		${DISTNAME:S/glib/glib2/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.12/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/pub/glib/2.12/ \
@@ -35,9 +36,7 @@ PKGCONFIG_OVERRIDE+=	gthread-2.0.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
 CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
