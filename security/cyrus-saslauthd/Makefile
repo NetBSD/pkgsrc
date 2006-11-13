@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/10/04 12:07:53 obache Exp $
+# $NetBSD: Makefile,v 1.35 2006/11/13 15:47:14 obache Exp $
 
 DISTNAME=	cyrus-sasl-2.1.22
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/saslauthd
 EXTRACT_ELEMENTS=	${DISTNAME}/saslauthd
+EXTRACT_ELEMENTS+=	${DISTNAME}/include/md5.h
 EXTRACT_ELEMENTS+=	${DISTNAME}/include/hmac-md5.h
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -40,15 +41,14 @@ INSTALLATION_DIRS=	bin
 
 .include "../../security/openssl/buildlink3.mk"
 
+SUBST_CLASSES+=		sysconf
+SUBST_MESSAGE.sysconf=	Fixing path to ${PKG_SYSCONFDIR}
+SUBST_STAGE.sysconf=	post-build
+SUBST_FILES.sysconf=	LDAP_SASLAUTHD saslauthd.mdoc
+SUBST_SED.sysconf=	-e "s,/usr/local/etc/,${PKG_SYSCONFDIR}/,g"
+
 post-configure:
 	${LN} -sf saslauthd.h ${WRKSRC}/config.h
-
-post-build:
-	cd ${WRKSRC}; for f in LDAP_SASLAUTHD saslauthd.mdoc; do	\
-		${SED}	-e "s|/usr/local/etc/|${PKG_SYSCONFDIR}/|g"	\
-			$$f > $$f.new;					\
-		${MV} -f $$f.new $$f;					\
-	done
 
 post-install:
 	for f in saslcache testsaslauthd; do				\
