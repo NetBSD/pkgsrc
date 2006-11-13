@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.12 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: metadata.mk,v 1.13 2006/11/13 18:02:09 agc Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -21,6 +21,7 @@ ${PKG_DB_TMPDIR}:
 ###
 _BUILD_INFO_FILE=	${PKG_DB_TMPDIR}/+BUILD_INFO
 _BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d %H:%M:%S %z"
+_BUILD_HOST_cmd=	${UNAME} -a
 _METADATA_TARGETS+=	${_BUILD_INFO_FILE}
 
 ${_BUILD_INFO_FILE}: plist
@@ -55,6 +56,8 @@ ${_BUILD_INFO_FILE}: plist
 	${ECHO} "MAINTAINER=${MAINTAINER}" >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}" >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}" >> ${.TARGET}.tmp
 .if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${LDD:Q}"" in						\
