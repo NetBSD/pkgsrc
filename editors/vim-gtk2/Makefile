@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/09/24 13:43:21 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/11/13 17:56:38 reed Exp $
 
 PKGNAME=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -21,8 +21,8 @@ INSTALL_TARGET=		installvimbin
 
 post-install:
 .for f in gvim.1 gview.1 rgvim.1 rgview.1
-	${RM} -f ${PREFIX:Q}/man/man1/${f:Q}
-	${LN} -s vim.1 ${PREFIX:Q}/man/man1/${f:Q}
+	${RM} -f ${PREFIX:Q}/${PKGMANDIR}/man1/${f:Q}
+	${LN} -s vim.1 ${PREFIX:Q}/${PKGMANDIR}/man1/${f:Q}
 .endfor
 .for f in gvim gview rgvim rgview rvim rview
 	${RM} -f ${PREFIX:Q}/bin/${f:Q}
@@ -30,7 +30,8 @@ post-install:
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
