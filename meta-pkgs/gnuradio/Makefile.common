@@ -1,14 +1,18 @@
-# $NetBSD: Makefile.common,v 1.5 2006/07/22 04:46:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/11/13 16:19:40 wulf Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
 
+.include        "../../meta-pkgs/gnuradio/Makefile.version"
+
+DISTNAME=	gnuradio-${VERSION}
 CATEGORIES+=	ham
-MASTER_SITES?=	${MASTER_SITE_GNU:=gnuradio/}
+MASTER_SITES?=	http://gnuradio.org/releases/gnuradio/
 
 MAINTAINER?=	wulf@NetBSD.org
 HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -23,7 +27,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 EGDIR=          ${PREFIX}/share/examples/gnuradio/conf.d
 PKG_SYSCONFSUBDIR=gnuradio/conf.d
 
-pre-configure:
-	cd ${WRKSRC}; ./bootstrap
+CONFIGURE_ARGS+=        --sysconfdir=${PREFIX}/share/examples
+CONFIGURE_ARGS+=        --disable-all-components
 
 .include "../../mk/bsd.prefs.mk"
