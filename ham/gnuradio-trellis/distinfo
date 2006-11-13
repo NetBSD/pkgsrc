@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/13 17:30:30 wulf Exp $
+
+SHA1 (gnuradio-3.0.2.tar.gz) = 9d9a0e22c9e4fd9735f62c0145b9ceb61a33f9c2
+RMD160 (gnuradio-3.0.2.tar.gz) = 3ff771c2d13d680fb76d7ca82a6a11678c7069ae
+Size (gnuradio-3.0.2.tar.gz) = 3190212 bytes
