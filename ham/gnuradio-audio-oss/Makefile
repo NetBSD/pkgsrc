@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2006/04/27 03:04:26 wulf Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/13 16:34:45 wulf Exp $
 
-VERSION=	0.9
-DISTNAME=	gr-audio-oss-${VERSION}
 PKGNAME=	gnuradio-audio-oss-${VERSION}
-WRKSRC=		${WRKDIR}/${DISTNAME}
 COMMENT=	Open Sound System support for GNU Radio
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
 CONF_FILES+=	${EGDIR}/gr-audio-oss.conf ${PKG_SYSCONFDIR}/gr-audio-oss.conf
-CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/share/examples
+CONFIGURE_ARGS+=--enable-gr-audio-oss
+
+PYTHON_PATCH_SCRIPTS+=	gr-audio-oss/src/qa_oss.py
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../ham/gnuradio-core/buildlink3.mk"
