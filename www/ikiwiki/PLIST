@@ -1,0 +1,552 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/13 01:25:25 dan Exp $
+bin/ikiwiki
+libexec/w3m/cgi-bin/ikiwiki-w3m.cgi
+man/man1/ikiwiki.1
+man/man8/ikiwiki-mass-rebuild.8
+sbin/ikiwiki-mass-rebuild
+@comment find share/ikiwiki share/doc/ikiwiki -type f
+share/ikiwiki/templates/inlinepagetitle.tmpl
+share/ikiwiki/templates/blogpost.tmpl
+share/ikiwiki/templates/editpage.tmpl
+share/ikiwiki/templates/estseek.conf
+share/ikiwiki/templates/inlinepage.tmpl
+share/ikiwiki/templates/notifymail.tmpl
+share/ikiwiki/templates/misc.tmpl
+share/ikiwiki/templates/passwordmail.tmpl
+share/ikiwiki/templates/page.tmpl
+share/ikiwiki/templates/rsspage.tmpl
+share/ikiwiki/templates/recentchanges.tmpl
+share/ikiwiki/templates/atomitem.tmpl
+share/ikiwiki/templates/aggregatepost.tmpl
+share/ikiwiki/templates/rssitem.tmpl
+share/ikiwiki/templates/searchform.tmpl
+share/ikiwiki/templates/atompage.tmpl
+share/ikiwiki/templates/feedlink.tmpl
+share/ikiwiki/basewiki/smileys/attention.png
+share/ikiwiki/basewiki/smileys/alert.png
+share/ikiwiki/basewiki/smileys/angry.png
+share/ikiwiki/basewiki/smileys/checkmark.png
+share/ikiwiki/basewiki/smileys/biggrin.png
+share/ikiwiki/basewiki/smileys/icon-error.png
+share/ikiwiki/basewiki/smileys/devil.png
+share/ikiwiki/basewiki/smileys/frown.png
+share/ikiwiki/basewiki/smileys/icon-info.png
+share/ikiwiki/basewiki/smileys/idea.png
+share/ikiwiki/basewiki/smileys/ohwell.png
+share/ikiwiki/basewiki/smileys/redface.png
+share/ikiwiki/basewiki/smileys/sad.png
+share/ikiwiki/basewiki/smileys/smile.png
+share/ikiwiki/basewiki/smileys/smile2.png
+share/ikiwiki/basewiki/smileys/smile3.png
+share/ikiwiki/basewiki/smileys/smile4.png
+share/ikiwiki/basewiki/smileys/star_off.png
+share/ikiwiki/basewiki/smileys/star_on.png
+share/ikiwiki/basewiki/smileys/thumbs-up.png
+share/ikiwiki/basewiki/smileys/tired.png
+share/ikiwiki/basewiki/smileys/tongue.png
+share/ikiwiki/basewiki/subpage/linkingrules.mdwn
+share/ikiwiki/basewiki/wikiicons/diff.png
+share/ikiwiki/basewiki/local.css
+share/ikiwiki/basewiki/helponformatting.mdwn
+share/ikiwiki/basewiki/pagespec.mdwn
+share/ikiwiki/basewiki/blog.mdwn
+share/ikiwiki/basewiki/preprocessordirective.mdwn
+share/ikiwiki/basewiki/index.mdwn
+share/ikiwiki/basewiki/markdown.mdwn
+share/ikiwiki/basewiki/wikilink.mdwn
+share/ikiwiki/basewiki/sandbox.mdwn
+share/ikiwiki/basewiki/smileys.mdwn
+share/ikiwiki/basewiki/style.css
+share/ikiwiki/basewiki/subpage.mdwn
+share/ikiwiki/basewiki/shortcuts.mdwn
+share/ikiwiki/basewiki/favicon.ico
+share/doc/ikiwiki/html/download.html
+share/doc/ikiwiki/html/git.html
+share/doc/ikiwiki/html/BSD
+share/doc/ikiwiki/html/backlinks.html
+share/doc/ikiwiki/html/bugs.html
+share/doc/ikiwiki/html/GPL
+share/doc/ikiwiki/html/ikiwiki.setup
+share/doc/ikiwiki/html/cgi.html
+share/doc/ikiwiki/html/post-commit.html
+share/doc/ikiwiki/html/joey.html
+share/doc/ikiwiki/html/ikiwiki-mass-rebuild.html
+share/doc/ikiwiki/html/about_rcs_backends.html
+share/doc/ikiwiki/html/commit-internals.html
+share/doc/ikiwiki/html/features.html
+share/doc/ikiwiki/html/freesoftware.html
+share/doc/ikiwiki/html/hyperestraier.html
+share/doc/ikiwiki/html/ikiwikiusers.html
+share/doc/ikiwiki/html/pagehistory.html
+share/doc/ikiwiki/html/index.html
+share/doc/ikiwiki/html/install.html
+share/doc/ikiwiki/html/logo.html
+share/doc/ikiwiki/html/news.html
+share/doc/ikiwiki/html/recentchanges.html
+share/doc/ikiwiki/html/plugins.html
+share/doc/ikiwiki/html/usage.html
+share/doc/ikiwiki/html/security.html
+share/doc/ikiwiki/html/roadmap.html
+share/doc/ikiwiki/html/sandbox.html
+share/doc/ikiwiki/html/subversion.html
+share/doc/ikiwiki/html/setup.html
+share/doc/ikiwiki/html/smileys.html
+share/doc/ikiwiki/html/templates.html
+share/doc/ikiwiki/html/tags.html
+share/doc/ikiwiki/html/whyikiwiki.html
+share/doc/ikiwiki/html/todo.html
+share/doc/ikiwiki/html/patchqueue.html
+share/doc/ikiwiki/html/w3mmode.html
+share/doc/ikiwiki/html/jonassmedegaard.html
+share/doc/ikiwiki/html/tla.html
+share/doc/ikiwiki/html/logo/ikiwiki_old2.svgz
+share/doc/ikiwiki/html/logo/ikiwiki.png
+share/doc/ikiwiki/html/logo/ikiwiki_large.png
+share/doc/ikiwiki/html/logo/ikiwiki_old.png
+share/doc/ikiwiki/html/logo/ikiwiki.svgz
+share/doc/ikiwiki/html/logo/ikiwiki_old2.png
+share/doc/ikiwiki/html/logo/ikiwiki_button.png
+share/doc/ikiwiki/html/news/seeking_article_writer.html
+share/doc/ikiwiki/html/news/version_1.30.html
+share/doc/ikiwiki/html/news/version_1.29.html
+share/doc/ikiwiki/html/news/stylesheets.html
+share/doc/ikiwiki/html/news/svn_move.html
+share/doc/ikiwiki/html/news/version_1.31.html
+share/doc/ikiwiki/html/mercurial.html
+share/doc/ikiwiki/html/css_market.html
+share/doc/ikiwiki/html/examples.html
+share/doc/ikiwiki/html/css.html
+share/doc/ikiwiki/html/plugins/haiku.html
+share/doc/ikiwiki/html/plugins/map.html
+share/doc/ikiwiki/html/plugins/type/core.html
+share/doc/ikiwiki/html/plugins/type/html.html
+share/doc/ikiwiki/html/plugins/type/link.html
+share/doc/ikiwiki/html/plugins/type/format.html
+share/doc/ikiwiki/html/plugins/type/fun.html
+share/doc/ikiwiki/html/plugins/type/meta.html
+share/doc/ikiwiki/html/plugins/type/tags.html
+share/doc/ikiwiki/html/plugins/type/chrome.html
+share/doc/ikiwiki/html/plugins/type/useful.html
+share/doc/ikiwiki/html/plugins/type/slow.html
+share/doc/ikiwiki/html/plugins/type/special-purpose.html
+share/doc/ikiwiki/html/plugins/otl.html
+share/doc/ikiwiki/html/plugins/htmlscrubber.html
+share/doc/ikiwiki/html/plugins/brokenlinks.html
+share/doc/ikiwiki/html/plugins/pagecount.html
+share/doc/ikiwiki/html/plugins/inline.html
+share/doc/ikiwiki/html/plugins/meta.html
+share/doc/ikiwiki/html/plugins/orphans.html
+share/doc/ikiwiki/html/plugins/camelcase.html
+share/doc/ikiwiki/html/plugins/search.html
+share/doc/ikiwiki/html/plugins/smiley.html
+share/doc/ikiwiki/html/plugins/write.html
+share/doc/ikiwiki/html/plugins/mdwn.html
+share/doc/ikiwiki/html/plugins/html.html
+share/doc/ikiwiki/html/plugins/wikitext.html
+share/doc/ikiwiki/html/plugins/tag.html
+share/doc/ikiwiki/html/plugins/polygen.html
+share/doc/ikiwiki/html/plugins/pagestats.html
+share/doc/ikiwiki/html/plugins/htmltidy.html
+share/doc/ikiwiki/html/plugins/fortune.html
+share/doc/ikiwiki/html/plugins/aggregate.html
+share/doc/ikiwiki/html/plugins/template.html
+share/doc/ikiwiki/html/plugins/sidebar.html
+share/doc/ikiwiki/html/plugins/rst.html
+share/doc/ikiwiki/html/plugins/googlecalendar.html
+share/doc/ikiwiki/html/plugins/contrib.html
+share/doc/ikiwiki/html/plugins/typography.html
+share/doc/ikiwiki/html/plugins/ddate.html
+share/doc/ikiwiki/html/plugins/linkmap.html
+share/doc/ikiwiki/html/plugins/toc.html
+share/doc/ikiwiki/html/plugins/favicon.html
+share/doc/ikiwiki/html/plugins/contrib/googlemaps.html
+share/doc/ikiwiki/html/plugins/contrib/linguas.html
+share/doc/ikiwiki/html/plugins/contrib/img.html
+share/doc/ikiwiki/html/plugins/contrib/syntax.html
+share/doc/ikiwiki/html/plugins/shortcut.html
+share/doc/ikiwiki/html/plugins/img.html
+share/doc/ikiwiki/html/sandbox/just_another_test.html
+share/doc/ikiwiki/html/sandbox/testtest.html
+share/doc/ikiwiki/html/sandbox/test.html
+share/doc/ikiwiki/html/sandbox/foo.wiki
+share/doc/ikiwiki/html/sandbox/my_blog_entry.html
+share/doc/ikiwiki/html/sandbox/yes.html
+share/doc/ikiwiki/html/todo/mailnotification.html
+share/doc/ikiwiki/html/todo/htmlvalidation.html
+share/doc/ikiwiki/html/todo/metadata.html
+share/doc/ikiwiki/html/todo/done.html
+share/doc/ikiwiki/html/todo/plugin.html
+share/doc/ikiwiki/html/todo/blogging.html
+share/doc/ikiwiki/html/todo/tla.html
+share/doc/ikiwiki/html/todo/blogs.html
+share/doc/ikiwiki/html/todo/Case.html
+share/doc/ikiwiki/html/todo/lists.html
+share/doc/ikiwiki/html/todo/html.html
+share/doc/ikiwiki/html/todo/link_map.html
+share/doc/ikiwiki/html/todo/logo.html
+share/doc/ikiwiki/html/todo/search.html
+share/doc/ikiwiki/html/todo/aggregation.html
+share/doc/ikiwiki/html/todo/adding_new_pages_by_using_the_web_interface.html
+share/doc/ikiwiki/html/todo/automatic_rebuilding_of_html_pages.html
+share/doc/ikiwiki/html/todo/rss_title_description.html
+share/doc/ikiwiki/html/todo/multiple_templates.html
+share/doc/ikiwiki/html/todo/onlinepageediting.html
+share/doc/ikiwiki/html/todo/optimisations.html
+share/doc/ikiwiki/html/todo/pageindexes.html
+share/doc/ikiwiki/html/todo/pluggablerenderers.html
+share/doc/ikiwiki/html/todo/tags.html
+share/doc/ikiwiki/html/todo/utf8.html
+share/doc/ikiwiki/html/todo/sigs.html
+share/doc/ikiwiki/html/todo/strftime.html
+share/doc/ikiwiki/html/todo/terminalclient.html
+share/doc/ikiwiki/html/todo/underlay.html
+share/doc/ikiwiki/html/todo/upgradehooks.html
+share/doc/ikiwiki/html/todo/wikilinkfeatures.html
+share/doc/ikiwiki/html/todo/improve_globlists.html
+share/doc/ikiwiki/html/todo/toplevel_index.html
+share/doc/ikiwiki/html/todo/plugin_data_storage.html
+share/doc/ikiwiki/html/todo/recentchanges.html
+share/doc/ikiwiki/html/todo/mercurial.html
+share/doc/ikiwiki/html/todo/spell_check_plug-in.html
+share/doc/ikiwiki/html/todo/spam_fighting.html
+share/doc/ikiwiki/html/todo/RSS_links.html
+share/doc/ikiwiki/html/todo/linkify_and_preprocessor_ordering.html
+share/doc/ikiwiki/html/todo/plugin_dependency_calulation.html
+share/doc/ikiwiki/html/todo/firm_up_plugin_interface.html
+share/doc/ikiwiki/html/todo/Moving_Pages.html
+share/doc/ikiwiki/html/bugs/Disappearing_Pages.html
+share/doc/ikiwiki/html/bugs/meta_inline.html
+share/doc/ikiwiki/html/bugs/done.html
+share/doc/ikiwiki/html/bugs/inline_page_not_updated_on_removal.html
+share/doc/ikiwiki/html/bugs/bestlink_change_update_issue.html
+share/doc/ikiwiki/html/bugs/svn+ssh_commit_fail.html
+share/doc/ikiwiki/html/bugs/html_errors.html
+share/doc/ikiwiki/html/bugs/word_wrap.html
+share/doc/ikiwiki/html/bugs/rss_feed_cleanup_on_delete.html
+share/doc/ikiwiki/html/bugs/diff_links_to_backtrace.html
+share/doc/ikiwiki/html/bugs/rss_output_relative_links.html
+share/doc/ikiwiki/html/bugs/underlaydir_file_expose.html
+share/doc/ikiwiki/html/bugs/utf8_svn_log.html
+share/doc/ikiwiki/html/bugs/markdown_module_location.html
+share/doc/ikiwiki/html/bugs/broken_parentlinks.html
+share/doc/ikiwiki/html/bugs/utf8_html_templates.html
+share/doc/ikiwiki/html/bugs/404_when_cancel_create_page.html
+share/doc/ikiwiki/html/bugs/tags_base_dir_not_used_when_creating_new_tags.html
+share/doc/ikiwiki/html/bugs/helponformatting_link_disappears.html
+share/doc/ikiwiki/html/bugs/PREFIX_not_honoured_for_underlaydir.html
+share/doc/ikiwiki/html/bugs/pruning_is_too_strict.html
+share/doc/ikiwiki/html/bugs/Problems_using_cygwin.html
+share/doc/ikiwiki/html/bugs/svn_post-commit_wrapper_can__39__t_find_IkiWiki.pm_if_not_installed.html
+share/doc/ikiwiki/html/bugs/tagging_with_a_publication_date.html
+share/doc/ikiwiki/html/patchqueue/pruning_is_too_strict.html
+share/doc/ikiwiki/html/patchqueue/various_fixes.html
+share/doc/ikiwiki/html/patchqueue/l10n.html
+share/doc/ikiwiki/html/patchqueue/index.html_allowed.html
+share/doc/ikiwiki/html/w3mmode/ikiwiki.setup
+share/doc/ikiwiki/html/templates/note.html
+share/doc/ikiwiki/html/templates/plugin.html
+share/doc/ikiwiki/html/css_market/kirkambar.css
+share/doc/ikiwiki/html/css_market/zack.css
+share/doc/ikiwiki/html/examples/blog/posts/first_post.html
+share/doc/ikiwiki/html/examples/blog/index.html
+share/doc/ikiwiki/html/examples/blog/sidebar.html
+share/doc/ikiwiki/html/examples/blog/posts.html
+share/doc/ikiwiki/html/examples/blog/tags.html
+share/doc/ikiwiki/html/examples/blog/tags/life.html
+share/doc/ikiwiki/html/examples/blog/tags/tech.html
+share/doc/ikiwiki/html/examples/blog.html
+share/doc/ikiwiki/html/preprocessordirective.html
+share/doc/ikiwiki/html/helponformatting.html
+share/doc/ikiwiki/html/pagespec.html
+share/doc/ikiwiki/html/blog.html
+share/doc/ikiwiki/html/local.css
+share/doc/ikiwiki/html/smileys/attention.png
+share/doc/ikiwiki/html/smileys/alert.png
+share/doc/ikiwiki/html/smileys/angry.png
+share/doc/ikiwiki/html/smileys/checkmark.png
+share/doc/ikiwiki/html/smileys/biggrin.png
+share/doc/ikiwiki/html/smileys/icon-error.png
+share/doc/ikiwiki/html/smileys/devil.png
+share/doc/ikiwiki/html/smileys/frown.png
+share/doc/ikiwiki/html/smileys/icon-info.png
+share/doc/ikiwiki/html/smileys/idea.png
+share/doc/ikiwiki/html/smileys/ohwell.png
+share/doc/ikiwiki/html/smileys/redface.png
+share/doc/ikiwiki/html/smileys/sad.png
+share/doc/ikiwiki/html/smileys/smile.png
+share/doc/ikiwiki/html/smileys/smile2.png
+share/doc/ikiwiki/html/smileys/smile3.png
+share/doc/ikiwiki/html/smileys/smile4.png
+share/doc/ikiwiki/html/smileys/star_off.png
+share/doc/ikiwiki/html/smileys/star_on.png
+share/doc/ikiwiki/html/smileys/thumbs-up.png
+share/doc/ikiwiki/html/smileys/tired.png
+share/doc/ikiwiki/html/smileys/tongue.png
+share/doc/ikiwiki/html/subpage/linkingrules.html
+share/doc/ikiwiki/html/markdown.html
+share/doc/ikiwiki/html/wikilink.html
+share/doc/ikiwiki/html/style.css
+share/doc/ikiwiki/html/subpage.html
+share/doc/ikiwiki/html/shortcuts.html
+share/doc/ikiwiki/html/favicon.ico
+share/doc/ikiwiki/html/wikiicons/diff.png
+share/doc/ikiwiki/logo/ikiwiki_old2.svgz
+share/doc/ikiwiki/logo/ikiwiki.png
+share/doc/ikiwiki/logo/discussion.mdwn
+share/doc/ikiwiki/logo/ikiwiki_large.png
+share/doc/ikiwiki/logo/ikiwiki_old.png
+share/doc/ikiwiki/logo/ikiwiki.svgz
+share/doc/ikiwiki/logo/ikiwiki_old2.png
+share/doc/ikiwiki/logo/ikiwiki_button.png
+share/doc/ikiwiki/news/seeking_article_writer/discussion.mdwn
+share/doc/ikiwiki/news/seeking_article_writer.mdwn
+share/doc/ikiwiki/news/version_1.30.mdwn
+share/doc/ikiwiki/news/version_1.29.mdwn
+share/doc/ikiwiki/news/stylesheets.mdwn
+share/doc/ikiwiki/news/svn_move.mdwn
+share/doc/ikiwiki/news/version_1.31.mdwn
+share/doc/ikiwiki/git.mdwn
+share/doc/ikiwiki/BSD
+share/doc/ikiwiki/plugins/type/core.mdwn
+share/doc/ikiwiki/plugins/type/html.mdwn
+share/doc/ikiwiki/plugins/type/link.mdwn
+share/doc/ikiwiki/plugins/type/format.mdwn
+share/doc/ikiwiki/plugins/type/fun.mdwn
+share/doc/ikiwiki/plugins/type/meta.mdwn
+share/doc/ikiwiki/plugins/type/tags.mdwn
+share/doc/ikiwiki/plugins/type/chrome.mdwn
+share/doc/ikiwiki/plugins/type/useful.mdwn
+share/doc/ikiwiki/plugins/type/slow.mdwn
+share/doc/ikiwiki/plugins/type/special-purpose.mdwn
+share/doc/ikiwiki/plugins/haiku.mdwn
+share/doc/ikiwiki/plugins/map.mdwn
+share/doc/ikiwiki/plugins/contrib/googlemaps/discussion.mdwn
+share/doc/ikiwiki/plugins/contrib/img/discussion.mdwn
+share/doc/ikiwiki/plugins/contrib/googlemaps.mdwn
+share/doc/ikiwiki/plugins/contrib/linguas.mdwn
+share/doc/ikiwiki/plugins/contrib/syntax/discussion.mdwn
+share/doc/ikiwiki/plugins/contrib/img.mdwn
+share/doc/ikiwiki/plugins/contrib/syntax.mdwn
+share/doc/ikiwiki/plugins/otl.mdwn
+share/doc/ikiwiki/plugins/htmlscrubber.mdwn
+share/doc/ikiwiki/plugins/brokenlinks.mdwn
+share/doc/ikiwiki/plugins/pagecount.mdwn
+share/doc/ikiwiki/plugins/inline.mdwn
+share/doc/ikiwiki/plugins/meta.mdwn
+share/doc/ikiwiki/plugins/orphans.mdwn
+share/doc/ikiwiki/plugins/camelcase.mdwn
+share/doc/ikiwiki/plugins/search.mdwn
+share/doc/ikiwiki/plugins/smiley.mdwn
+share/doc/ikiwiki/plugins/write.mdwn
+share/doc/ikiwiki/plugins/mdwn.mdwn
+share/doc/ikiwiki/plugins/html.mdwn
+share/doc/ikiwiki/plugins/wikitext.mdwn
+share/doc/ikiwiki/plugins/tag.mdwn
+share/doc/ikiwiki/plugins/polygen.mdwn
+share/doc/ikiwiki/plugins/pagestats.mdwn
+share/doc/ikiwiki/plugins/htmltidy.mdwn
+share/doc/ikiwiki/plugins/fortune.mdwn
+share/doc/ikiwiki/plugins/aggregate.mdwn
+share/doc/ikiwiki/plugins/template.mdwn
+share/doc/ikiwiki/plugins/sidebar.mdwn
+share/doc/ikiwiki/plugins/rst.mdwn
+share/doc/ikiwiki/plugins/googlecalendar.mdwn
+share/doc/ikiwiki/plugins/contrib.mdwn
+share/doc/ikiwiki/plugins/typography.mdwn
+share/doc/ikiwiki/plugins/ddate.mdwn
+share/doc/ikiwiki/plugins/linkmap.mdwn
+share/doc/ikiwiki/plugins/toc.mdwn
+share/doc/ikiwiki/plugins/favicon.mdwn
+share/doc/ikiwiki/plugins/shortcut.mdwn
+share/doc/ikiwiki/plugins/img.mdwn
+share/doc/ikiwiki/sandbox/just_another_test.mdwn
+share/doc/ikiwiki/sandbox/testtest.mdwn
+share/doc/ikiwiki/sandbox/test.mdwn
+share/doc/ikiwiki/sandbox/foo.wiki
+share/doc/ikiwiki/sandbox/my_blog_entry.mdwn
+share/doc/ikiwiki/sandbox/yes.mdwn
+share/doc/ikiwiki/todo/mailnotification.mdwn
+share/doc/ikiwiki/todo/htmlvalidation.mdwn
+share/doc/ikiwiki/todo/metadata.mdwn
+share/doc/ikiwiki/todo/done.mdwn
+share/doc/ikiwiki/todo/plugin.mdwn
+share/doc/ikiwiki/todo/blogging.mdwn
+share/doc/ikiwiki/todo/tla.mdwn
+share/doc/ikiwiki/todo/blogs.mdwn
+share/doc/ikiwiki/todo/Case.mdwn
+share/doc/ikiwiki/todo/lists.mdwn
+share/doc/ikiwiki/todo/html.mdwn
+share/doc/ikiwiki/todo/link_map.mdwn
+share/doc/ikiwiki/todo/logo.mdwn
+share/doc/ikiwiki/todo/search.mdwn
+share/doc/ikiwiki/todo/aggregation.mdwn
+share/doc/ikiwiki/todo/adding_new_pages_by_using_the_web_interface.mdwn
+share/doc/ikiwiki/todo/automatic_rebuilding_of_html_pages.mdwn
+share/doc/ikiwiki/todo/onlinepageediting/discussion.mdwn
+share/doc/ikiwiki/todo/discussion_page_as_blog.mdwn
+share/doc/ikiwiki/todo/multiple_templates.mdwn
+share/doc/ikiwiki/todo/onlinepageediting.mdwn
+share/doc/ikiwiki/todo/optimisations.mdwn
+share/doc/ikiwiki/todo/pageindexes.mdwn
+share/doc/ikiwiki/todo/pluggablerenderers.mdwn
+share/doc/ikiwiki/todo/tags.mdwn
+share/doc/ikiwiki/todo/utf8.mdwn
+share/doc/ikiwiki/todo/sigs.mdwn
+share/doc/ikiwiki/todo/strftime.mdwn
+share/doc/ikiwiki/todo/terminalclient.mdwn
+share/doc/ikiwiki/todo/underlay.mdwn
+share/doc/ikiwiki/todo/upgradehooks.mdwn
+share/doc/ikiwiki/todo/wikilinkfeatures.mdwn
+share/doc/ikiwiki/todo/improve_globlists.mdwn
+share/doc/ikiwiki/todo/toplevel_index.mdwn
+share/doc/ikiwiki/todo/plugin_data_storage.mdwn
+share/doc/ikiwiki/todo/recentchanges.mdwn
+share/doc/ikiwiki/todo/mercurial.mdwn
+share/doc/ikiwiki/todo/rss_title_description.mdwn
+share/doc/ikiwiki/todo/spell_check_plug-in.mdwn
+share/doc/ikiwiki/todo/spam_fighting.mdwn
+share/doc/ikiwiki/todo/RSS_links.mdwn
+share/doc/ikiwiki/todo/linkify_and_preprocessor_ordering.mdwn
+share/doc/ikiwiki/todo/plugin_dependency_calulation.mdwn
+share/doc/ikiwiki/todo/firm_up_plugin_interface.mdwn
+share/doc/ikiwiki/todo/Moving_Pages.mdwn
+share/doc/ikiwiki/cgi.mdwn
+share/doc/ikiwiki/GPL
+share/doc/ikiwiki/download.mdwn
+share/doc/ikiwiki/bugs.mdwn
+share/doc/ikiwiki/about_rcs_backends.mdwn
+share/doc/ikiwiki/backlinks.mdwn
+share/doc/ikiwiki/bugs/Disappearing_Pages.mdwn
+share/doc/ikiwiki/bugs/meta_inline.mdwn
+share/doc/ikiwiki/bugs/done.mdwn
+share/doc/ikiwiki/bugs/inline_page_not_updated_on_removal.mdwn
+share/doc/ikiwiki/bugs/bestlink_change_update_issue.mdwn
+share/doc/ikiwiki/bugs/svn+ssh_commit_fail.mdwn
+share/doc/ikiwiki/bugs/html_errors.mdwn
+share/doc/ikiwiki/bugs/word_wrap.mdwn
+share/doc/ikiwiki/bugs/rss_feed_cleanup_on_delete.mdwn
+share/doc/ikiwiki/bugs/diff_links_to_backtrace.mdwn
+share/doc/ikiwiki/bugs/rss_output_relative_links.mdwn
+share/doc/ikiwiki/bugs/underlaydir_file_expose.mdwn
+share/doc/ikiwiki/bugs/utf8_svn_log.mdwn
+share/doc/ikiwiki/bugs/markdown_module_location.mdwn
+share/doc/ikiwiki/bugs/broken_parentlinks.mdwn
+share/doc/ikiwiki/bugs/utf8_html_templates.mdwn
+share/doc/ikiwiki/bugs/404_when_cancel_create_page.mdwn
+share/doc/ikiwiki/bugs/tags_base_dir_not_used_when_creating_new_tags.mdwn
+share/doc/ikiwiki/bugs/helponformatting_link_disappears.mdwn
+share/doc/ikiwiki/bugs/PREFIX_not_honoured_for_underlaydir.mdwn
+share/doc/ikiwiki/bugs/pruning_is_too_strict.mdwn
+share/doc/ikiwiki/bugs/Problems_using_cygwin.mdwn
+share/doc/ikiwiki/bugs/svn_post-commit_wrapper_can__39__t_find_IkiWiki.pm_if_not_installed.mdwn
+share/doc/ikiwiki/bugs/tagging_with_a_publication_date.mdwn
+share/doc/ikiwiki/index/discussion.mdwn
+share/doc/ikiwiki/ikiwiki-mass-rebuild.mdwn
+share/doc/ikiwiki/commit-internals.mdwn
+share/doc/ikiwiki/ikiwiki.setup
+share/doc/ikiwiki/post-commit.mdwn
+share/doc/ikiwiki/index.mdwn
+share/doc/ikiwiki/features.mdwn
+share/doc/ikiwiki/freesoftware.mdwn
+share/doc/ikiwiki/hyperestraier.mdwn
+share/doc/ikiwiki/ikiwikiusers.mdwn
+share/doc/ikiwiki/pagehistory.mdwn
+share/doc/ikiwiki/install.mdwn
+share/doc/ikiwiki/joey.mdwn
+share/doc/ikiwiki/logo.mdwn
+share/doc/ikiwiki/news.mdwn
+share/doc/ikiwiki/patchqueue/pruning_is_too_strict.mdwn
+share/doc/ikiwiki/patchqueue/various_fixes.mdwn
+share/doc/ikiwiki/patchqueue/l10n.mdwn
+share/doc/ikiwiki/patchqueue/index.html_allowed/discussion.mdwn
+share/doc/ikiwiki/patchqueue/index.html_allowed.mdwn
+share/doc/ikiwiki/plugins.mdwn
+share/doc/ikiwiki/usage.mdwn
+share/doc/ikiwiki/w3mmode/ikiwiki.setup
+share/doc/ikiwiki/recentchanges.mdwn
+share/doc/ikiwiki/roadmap.mdwn
+share/doc/ikiwiki/sandbox.mdwn
+share/doc/ikiwiki/security.mdwn
+share/doc/ikiwiki/setup.mdwn
+share/doc/ikiwiki/smileys.mdwn
+share/doc/ikiwiki/subversion.mdwn
+share/doc/ikiwiki/tags.mdwn
+share/doc/ikiwiki/templates.mdwn
+share/doc/ikiwiki/todo.mdwn
+share/doc/ikiwiki/whyikiwiki.mdwn
+share/doc/ikiwiki/w3mmode.mdwn
+share/doc/ikiwiki/templates/note.mdwn
+share/doc/ikiwiki/templates/plugin.mdwn
+share/doc/ikiwiki/patchqueue.mdwn
+share/doc/ikiwiki/css_market/kirkambar.css
+share/doc/ikiwiki/css_market/zack.css
+share/doc/ikiwiki/tla.mdwn
+share/doc/ikiwiki/examples/blog/posts/first_post.mdwn
+share/doc/ikiwiki/examples/blog/tags/life.mdwn
+share/doc/ikiwiki/examples/blog/tags/tech.mdwn
+share/doc/ikiwiki/examples/blog/index.mdwn
+share/doc/ikiwiki/examples/blog/sidebar.mdwn
+share/doc/ikiwiki/examples/blog/posts.mdwn
+share/doc/ikiwiki/examples/blog/tags.mdwn
+share/doc/ikiwiki/examples/blog.mdwn
+share/doc/ikiwiki/jonassmedegaard.mdwn
+share/doc/ikiwiki/mercurial.mdwn
+share/doc/ikiwiki/.ikiwiki/aggregate
+share/doc/ikiwiki/.ikiwiki/lockfile
+share/doc/ikiwiki/.ikiwiki/index
+share/doc/ikiwiki/css_market.mdwn
+share/doc/ikiwiki/css.mdwn
+share/doc/ikiwiki/examples.mdwn
+@comment find share/ikiwiki share/doc/ikiwiki | sort -r | sed -e 's/^/@dirrm /'
+@dirrm share/ikiwiki/templates
+@dirrm share/ikiwiki/basewiki/wikiicons
+@dirrm share/ikiwiki/basewiki/subpage
+@dirrm share/ikiwiki/basewiki/smileys
+@dirrm share/ikiwiki/basewiki
+@dirrm share/ikiwiki
+@dirrm share/doc/ikiwiki/w3mmode
+@dirrm share/doc/ikiwiki/todo/onlinepageediting
+@dirrm share/doc/ikiwiki/todo
+@dirrm share/doc/ikiwiki/templates
+@dirrm share/doc/ikiwiki/sandbox
+@dirrm share/doc/ikiwiki/plugins/type
+@dirrm share/doc/ikiwiki/plugins/contrib/syntax
+@dirrm share/doc/ikiwiki/plugins/contrib/img
+@dirrm share/doc/ikiwiki/plugins/contrib/googlemaps
+@dirrm share/doc/ikiwiki/plugins/contrib
+@dirrm share/doc/ikiwiki/plugins
+@dirrm share/doc/ikiwiki/patchqueue/index.html_allowed
+@dirrm share/doc/ikiwiki/patchqueue
+@dirrm share/doc/ikiwiki/news/seeking_article_writer
+@dirrm share/doc/ikiwiki/news
+@dirrm share/doc/ikiwiki/markdown
+@dirrm share/doc/ikiwiki/logo
+@dirrm share/doc/ikiwiki/index
+@dirrm share/doc/ikiwiki/html/wikiicons
+@dirrm share/doc/ikiwiki/html/w3mmode
+@dirrm share/doc/ikiwiki/html/todo
+@dirrm share/doc/ikiwiki/html/templates
+@dirrm share/doc/ikiwiki/html/subpage
+@dirrm share/doc/ikiwiki/html/smileys
+@dirrm share/doc/ikiwiki/html/sandbox
+@dirrm share/doc/ikiwiki/html/plugins/type
+@dirrm share/doc/ikiwiki/html/plugins/contrib
+@dirrm share/doc/ikiwiki/html/plugins
+@dirrm share/doc/ikiwiki/html/patchqueue
+@dirrm share/doc/ikiwiki/html/news
+@dirrm share/doc/ikiwiki/html/logo
+@dirrm share/doc/ikiwiki/html/examples/blog/tags
+@dirrm share/doc/ikiwiki/html/examples/blog/posts
+@dirrm share/doc/ikiwiki/html/examples/blog
+@dirrm share/doc/ikiwiki/html/examples
+@dirrm share/doc/ikiwiki/html/css_market
+@dirrm share/doc/ikiwiki/html/bugs
+@dirrm share/doc/ikiwiki/html
+@dirrm share/doc/ikiwiki/examples/blog/tags
+@dirrm share/doc/ikiwiki/examples/blog/posts
+@dirrm share/doc/ikiwiki/examples/blog
+@dirrm share/doc/ikiwiki/examples
+@dirrm share/doc/ikiwiki/css_market
+@dirrm share/doc/ikiwiki/bugs
+@dirrm share/doc/ikiwiki/.ikiwiki
+@dirrm share/doc/ikiwiki
