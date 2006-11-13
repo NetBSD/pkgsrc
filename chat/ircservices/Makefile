@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/10/14 08:00:20 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/11/13 23:12:38 adrianp Exp $
 #
 
-DISTNAME=	ircservices-5.0.58
+DISTNAME=	ircservices-5.0.59
 CATEGORIES=	chat
 MASTER_SITES=	http://www.ircservices.za.net/download/ \
 		ftp://ftp.esper.net/ircservices/ \
@@ -71,10 +71,10 @@ PLIST_SRC+=	${.CURDIR}/PLIST
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ircservices
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ircservices
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html \
 		${PREFIX}/share/doc/html/ircservices
-	${INSTALL_MAN} ${WRKSRC}/docs/*.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/docs/*.8 ${PREFIX}/${PKGMANDIR}/man8
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/services/helpfiles
 	${INSTALL_DATA} ${WRKSRC}/data/example-ircservices.conf \
 		${PREFIX}/share/examples/ircservices/ircservices.conf
