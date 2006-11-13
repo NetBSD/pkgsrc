@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2006/11/10 14:07:02 rillig Exp $
+$NetBSD: distinfo,v 1.29 2006/11/13 17:11:16 drochner Exp $
 
 SHA1 (wxGTK-2.6.3.tar.bz2) = 7c2dfe27a56aa99b4ea557a436bf84a13a579a9d
 RMD160 (wxGTK-2.6.3.tar.bz2) = d7465860d7c07b42d299d4b4c5d015b25f96a9dd
@@ -8,4 +8,3 @@ RMD160 (wxGTK-2.6.3-libtool.diff2.bz2) = 3250c47641c023228e44e6477ecb7aaf6828042
 Size (wxGTK-2.6.3-libtool.diff2.bz2) = 136484 bytes
 SHA1 (patch-aa) = 0ef5ae28b70a3290e37363193248365f4cf03cec
 SHA1 (patch-ab) = 3e9c6bc0df33e466390a4f6483b1c84e2eb9257b
-SHA1 (patch-ac) = a46662f057b521352e03a678185b215cc80f35f4
