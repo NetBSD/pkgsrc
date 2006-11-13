@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/11/13 20:58:15 drochner Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -51,30 +51,30 @@ lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-lpr.la
 lib/pkgconfig/libgnomeprint-2.2.pc
-share/doc/libgnomeprint/home.png
-share/doc/libgnomeprint/index.html
-share/doc/libgnomeprint/index.sgml
-share/doc/libgnomeprint/left.png
-share/doc/libgnomeprint/libgnomeprint-Pango-Integration.html
-share/doc/libgnomeprint/libgnomeprint-building.html
-share/doc/libgnomeprint/libgnomeprint-compiling.html
-share/doc/libgnomeprint/libgnomeprint-gnome-font-face.html
-share/doc/libgnomeprint/libgnomeprint-gnome-font.html
-share/doc/libgnomeprint/libgnomeprint-gnome-glyphlist.html
-share/doc/libgnomeprint/libgnomeprint-gnome-pgl.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-config.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-job.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-paper.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-unit.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print.html
-share/doc/libgnomeprint/libgnomeprint-gnome-rfont.html
-share/doc/libgnomeprint/libgnomeprint-resources.html
-share/doc/libgnomeprint/libgnomeprint.devhelp
-share/doc/libgnomeprint/libgnomeprint.html
-share/doc/libgnomeprint/libgnomeprintunsorted.html
-share/doc/libgnomeprint/right.png
-share/doc/libgnomeprint/style.css
-share/doc/libgnomeprint/up.png
+share/gtk-doc/html/libgnomeprint/home.png
+share/gtk-doc/html/libgnomeprint/index.html
+share/gtk-doc/html/libgnomeprint/index.sgml
+share/gtk-doc/html/libgnomeprint/left.png
+share/gtk-doc/html/libgnomeprint/libgnomeprint-Pango-Integration.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-building.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-compiling.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-font-face.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-font.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-glyphlist.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-pgl.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-config.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-job.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-paper.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-unit.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-rfont.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-resources.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint.devhelp
+share/gtk-doc/html/libgnomeprint/libgnomeprint.html
+share/gtk-doc/html/libgnomeprint/libgnomeprintunsorted.html
+share/gtk-doc/html/libgnomeprint/right.png
+share/gtk-doc/html/libgnomeprint/style.css
+share/gtk-doc/html/libgnomeprint/up.png
 share/libgnomeprint/${PKGVERSION}/globals.xml
 share/libgnomeprint/${PKGVERSION}/models/GNOME-GENERIC-PS.xml
 share/libgnomeprint/${PKGVERSION}/models/GNOME-PDF-WRITER.xml
@@ -156,7 +156,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
 @dirrm share/libgnomeprint/${PKGVERSION}/models
 @dirrm share/libgnomeprint/${PKGVERSION}
 @dirrm share/libgnomeprint
-@dirrm share/doc/libgnomeprint
+@dirrm share/gtk-doc/html/libgnomeprint
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules/transports
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules/filters
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/05/31 18:13:54 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2006/11/13 21:00:39 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-glib-${POPPLER_VERS}
+PKGREVISION=		1
 
 COMMENT=		PDF rendering library (GLib wrapper)
 
@@ -22,8 +23,6 @@ CONFIGURE_ARGS+=	--disable-splash-output
 CONFIGURE_ARGS+=	--disable-poppler-qt
 # Don't compile GTK+ test program.
 CONFIGURE_ARGS+=	--disable-gtk-test
-
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 BUILD_DIRS=		${WRKSRC}/goo ${WRKSRC}/fofi ${WRKSRC}/poppler \
 			${WRKSRC}/glib

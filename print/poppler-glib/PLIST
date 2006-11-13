@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/31 18:13:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/11/13 21:00:39 drochner Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-attachment.h
 include/poppler/glib/poppler-document.h
@@ -9,20 +9,21 @@ include/poppler/glib/poppler.h
 lib/libpoppler-glib.la
 lib/pkgconfig/poppler-cairo.pc
 lib/pkgconfig/poppler-glib.pc
-share/doc/poppler/ch01.html
-share/doc/poppler/home.png
-share/doc/poppler/index.html
-share/doc/poppler/index.sgml
-share/doc/poppler/left.png
-share/doc/poppler/poppler-poppler-action.html
-share/doc/poppler/poppler-poppler-document.html
-share/doc/poppler/poppler-poppler-enums.html
-share/doc/poppler/poppler-poppler-page.html
-share/doc/poppler/poppler-poppler.html
-share/doc/poppler/poppler.devhelp
-share/doc/poppler/poppler.devhelp2
-share/doc/poppler/right.png
-share/doc/poppler/style.css
-share/doc/poppler/up.png
-@comment @dirrm share/doc/poppler
+share/gtk-doc/html/poppler/ch01.html
+share/gtk-doc/html/poppler/home.png
+share/gtk-doc/html/poppler/index.html
+share/gtk-doc/html/poppler/index.sgml
+share/gtk-doc/html/poppler/left.png
+share/gtk-doc/html/poppler/poppler-poppler-action.html
+share/gtk-doc/html/poppler/poppler-poppler-document.html
+share/gtk-doc/html/poppler/poppler-poppler-enums.html
+share/gtk-doc/html/poppler/poppler-poppler-page.html
+share/gtk-doc/html/poppler/poppler-poppler.html
+share/gtk-doc/html/poppler/poppler.devhelp
+share/gtk-doc/html/poppler/poppler.devhelp2
+share/gtk-doc/html/poppler/right.png
+share/gtk-doc/html/poppler/style.css
+share/gtk-doc/html/poppler/up.png
+@dirrm share/gtk-doc/html/poppler
 @dirrm include/poppler/glib
+@dirrm include/poppler

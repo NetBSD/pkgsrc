@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2006/11/06 10:58:56 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2006/11/13 20:58:15 drochner Exp $
 #
 
 DISTNAME=	libgnomeprint-2.12.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,9 +21,6 @@ GNU_CONFIGURE=		YES
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.4
 
 PKGCONFIG_OVERRIDE=	libgnomeprint/libgnomeprint-2.2.pc.in
-
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgnomeprint
 PKG_SUPPORTED_OPTIONS=	cups
