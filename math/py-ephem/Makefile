@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/13 15:55:55 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/13 22:49:51 gdt Exp $
 #
 
 DISTNAME=		pyephem-3.7b
@@ -9,6 +9,12 @@ MASTER_SITES=		http://www.rhodesmill.org/brandon/projects/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rhodesmill.org/brandon/projects/pyephem.html
 COMMENT=		Scientific-grade astronomical computations for Python
+
+# See ../../x11/xephem/Makefile.
+LICENSE=		xephem-license
+RESTRICTED=		Combined work is both GPL and non-Free
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PYDISTUTILSPKG=			true
 PYTHON_VERSIONS_ACCEPTED=	23 24
