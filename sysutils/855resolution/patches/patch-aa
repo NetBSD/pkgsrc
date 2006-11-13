@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/10/12 02:15:30 christos Exp $
+$NetBSD: patch-aa,v 1.3 2006/11/13 15:00:56 obache Exp $
 
 --- 855resolution.c	2005-05-08 15:46:02.000000000 -0400
 +++ 855resolution.c	2005-10-11 17:24:05.000000000 -0400
@@ -118,7 +118,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/12 02:15:30 christos Exp $
  
 --- vbios.h	2005-05-08 15:47:45.000000000 -0400
 +++ vbios.h	2005-10-11 17:21:51.000000000 -0400
-@@ -16,6 +16,20 @@
+@@ -16,6 +16,24 @@
  
  #define VBIOS_SIZE 0x10000
  
@@ -131,7 +131,11 @@ $NetBSD: patch-aa,v 1.2 2005/10/12 02:15:30 christos Exp $
 +#ifdef __NetBSD__
 +#include <machine/pio.h>
 +#include <machine/sysarch.h>
++# if defined(__i386__)
 +#define iopl(a) i386_iopl(a)
++# elif defined(__x86_64__)
++#define iopl(a) x86_64_iopl(a)
++# endif
 +#define OUTL(a, b)	outl(b, a)
 +#define OUTB(a, b)	outb(b, a)
 +#endif
