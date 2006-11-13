@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/11/05 17:09:00 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/11/13 15:18:45 drochner Exp $
 #
 
-DISTNAME=	dbus-glib-0.71
+DISTNAME=	dbus-glib-0.72
 CATEGORIES=	sysutils
-MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
+MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-glib/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
