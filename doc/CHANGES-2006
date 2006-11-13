@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1803 2006/11/13 20:07:11 smb Exp $
+>$NetBSD: CHANGES-2006,v 1.1804 2006/11/13 20:14:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5272,7 +5272,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/gnuradio-gsm to 3.0.2 [wulf 2006-11-14]
 	Updated ham/gnuradio-howto to 3.0.2 [wulf 2006-11-14]
 	Added ham/gnuradio-radio-astronomy version 3.0.2 [wulf 2006-11-14]
-	Added ham/gnuradio-trellis-sdl version 3.0.2 [wulf 2006-11-14]
+	Added ham/gnuradio-trellis version 3.0.2 [wulf 2006-11-14]
 	Updated ham/gnuradio-usrp to 3.0.2 [wulf 2006-11-14]
 	Added ham/gnuradio-video-sdl version 3.0.2 [wulf 2006-11-14]
 	Updated ham/gnuradio-wxgui to 3.0.2 [wulf 2006-11-14]
