@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2006/09/11 17:06:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.43 2006/11/13 21:37:12 drochner Exp $
 #
 
 DISTNAME=		libgda-1.9.103
@@ -19,8 +19,6 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc
 CONFIGURE_ARGS+=	--without-ldap
 CONFIGURE_ARGS+=	--without-mysql
 
