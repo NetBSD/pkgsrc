@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1804 2006/11/13 20:14:42 jnemeth Exp $
+>$NetBSD: CHANGES-2006,v 1.1805 2006/11/13 20:34:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5260,7 +5260,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/Markdown version 1.0.1 [dan 2006-11-13]
 	Added www/ikiwiki version 1.32 [dan 2006-11-13]
 	Updated mail/dovecot to 1.0rc14 [ghen 2006-11-13]
-	Updated www/apache-tomcat55 to 5.5.20 [abs 2006-07-07]
+	Updated www/apache-tomcat55 to 5.5.20 [abs 2006-11-13]
 	Added math/py-ephem version 3.7b [wulf 2006-11-14]
 	Updated meta-pkgs/gnuradio to 3.0.2 [wulf 2006-11-14]
 	Added ham/gnuradio-audio-jack version 3.0.2 [wulf 2006-11-14]
