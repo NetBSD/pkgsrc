@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/04/27 03:04:26 wulf Exp $
+$NetBSD: distinfo,v 1.4 2006/11/13 16:34:45 wulf Exp $
 
-SHA1 (gr-audio-oss-0.9.tar.gz) = 5349ef580957b42d4b72800e4826b12cc88f0162
-RMD160 (gr-audio-oss-0.9.tar.gz) = 282778b59081ba2f8a9bfe777714dc9087ca6e51
-Size (gr-audio-oss-0.9.tar.gz) = 348974 bytes
+SHA1 (gnuradio-3.0.2.tar.gz) = 9d9a0e22c9e4fd9735f62c0145b9ceb61a33f9c2
+RMD160 (gnuradio-3.0.2.tar.gz) = 3ff771c2d13d680fb76d7ca82a6a11678c7069ae
+Size (gnuradio-3.0.2.tar.gz) = 3190212 bytes
