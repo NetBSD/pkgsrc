@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1796 2006/11/12 14:28:18 dmcmahill Exp $
+>$NetBSD: CHANGES-2006,v 1.1797 2006/11/13 01:30:52 dan Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5257,3 +5257,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sylpheed-devel to 2.3.0beta5 [xtraeme 2006-11-12]
 	Added misc/pciids version 20061026 [jmmv 2006-11-12]
 	Updated cad/xcircuit to 3.4.26 [dmcmahill 2006-11-12]
+	Added textproc/Markdown version 1.0.1 [dan 2006-11-13]
+	Added www/ikiwiki version 1.32 [dan 2006-11-13]
