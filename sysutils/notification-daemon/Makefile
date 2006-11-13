@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/09/16 14:48:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/13 19:40:04 drochner Exp $
 #
 
-DISTNAME=	notification-daemon-0.3.5
+DISTNAME=	notification-daemon-0.3.6
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/notification-daemon/
 
@@ -12,6 +12,8 @@ COMMENT=	Shows notification messages on the desktop
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config
+
+GCONF2_SCHEMAS=	notification-daemon.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
