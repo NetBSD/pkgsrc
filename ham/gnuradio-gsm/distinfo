@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/04/27 03:09:07 wulf Exp $
+$NetBSD: distinfo,v 1.4 2006/11/13 17:20:56 wulf Exp $
 
-SHA1 (gr-gsm-fr-vocoder-0.3.tar.gz) = 23d671580f4516e4da2ff2ebde5c753597a865ac
-RMD160 (gr-gsm-fr-vocoder-0.3.tar.gz) = 0c86c4e21b78bbdb80ddb87553e2552c4ebcae7c
-Size (gr-gsm-fr-vocoder-0.3.tar.gz) = 384127 bytes
+SHA1 (gnuradio-3.0.2.tar.gz) = 9d9a0e22c9e4fd9735f62c0145b9ceb61a33f9c2
+RMD160 (gnuradio-3.0.2.tar.gz) = 3ff771c2d13d680fb76d7ca82a6a11678c7069ae
+Size (gnuradio-3.0.2.tar.gz) = 3190212 bytes
