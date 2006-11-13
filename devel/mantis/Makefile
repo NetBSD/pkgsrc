@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/06/02 18:27:55 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/11/13 22:40:33 hubertf Exp $
 
 DISTNAME=	mantis-1.0.3
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://www.mantisdb.org/
+HOMEPAGE=	http://www.mantisbt.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.6:../../www/ap-php
