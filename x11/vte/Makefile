@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2006/10/13 18:25:47 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2006/11/13 21:02:53 drochner Exp $
 #
 
 DISTNAME=	vte-0.14.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,9 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
-CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-ft-exec-prefix=${BUILDLINK_PREFIX.freetype2}
 
 PKGCONFIG_OVERRIDE+=	vte.pc.in
