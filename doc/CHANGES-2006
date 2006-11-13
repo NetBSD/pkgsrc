@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1801 2006/11/13 18:18:24 wulf Exp $
+>$NetBSD: CHANGES-2006,v 1.1802 2006/11/13 19:30:14 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5278,3 +5278,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/gnuradio-wxgui to 3.0.2 [wulf 2006-11-14]
 	Updated ham/usrp to 3.0.2 [wulf 2006-11-14]
 	Added ham/usrp-docs version 3.0.2 [wulf 2006-11-14]
+	Updated graphics/spca5view to version 0.60 [reinoud 2006-11-14]
+
