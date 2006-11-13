@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/04 21:59:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/13 15:00:56 obache Exp $
 #
 
 DISTNAME=	855resolution-0.4
@@ -11,10 +11,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perso.orange.fr/apoirier/
 COMMENT=	BIOS VESA resolution utility for 855/865/915 Intel chips
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-i386
 
 WRKSRC=		${WRKDIR}/855resolution
 USE_TOOLS+=	gmake
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+MAKE_ENV+=	EXTRA_LIBS=-l${MACHINE_ARCH}
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/855resolution
