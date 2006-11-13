@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1808 2006/11/13 21:43:04 reinoud Exp $
+>$NetBSD: CHANGES-2006,v 1.1809 2006/11/13 23:22:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5281,3 +5281,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/spcaview to version 0.60 [reinoud 2006-11-13]
 	Added www/firefox2-bin-flash version 7.0.68 [smb 2006-11-13]
 	Updated sysutils/xentools30-hvm to 3.0.3nb2 [bouyer 2006-11-13]
+	Updated chat/ircservices to 5.0.59 [adrianp 2006-11-13]
