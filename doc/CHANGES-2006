@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1798 2006/11/13 07:55:05 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1799 2006/11/13 11:27:02 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/Markdown version 1.0.1 [dan 2006-11-13]
 	Added www/ikiwiki version 1.32 [dan 2006-11-13]
 	Updated mail/dovecot to 1.0rc14 [ghen 2006-11-13]
+	Updated www/apache-tomcat55 to 5.5.20 [abs 2006-07-07]
