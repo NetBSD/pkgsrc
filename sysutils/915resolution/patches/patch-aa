@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
+$NetBSD: patch-aa,v 1.2 2006/11/13 04:15:02 obache Exp $
 
---- 915resolution.c.orig	2006-06-06 22:55:58.000000000 +1200
+--- 915resolution.c.orig	2006-02-02 23:28:34.000000000 +0900
 +++ 915resolution.c
-@@ -22,7 +22,18 @@
+@@ -22,7 +22,22 @@
  #include <string.h>
  #include <sys/mman.h>
  #include <fcntl.h>
@@ -14,14 +14,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
 +#ifdef __NetBSD__
 +#include <machine/pio.h>
 +#include <machine/sysarch.h>
++# if defined(__i386__)
 +#define iopl(a) i386_iopl(a)
++# elif defined(__x86_64__)
++#define iopl(a) x86_64_iopl(a)
++# endif
 +#define OUTL(a, b)     outl(b, a)
 +#define OUTB(a, b)     outb(b, a)
 +#endif
  #include <unistd.h>
  #include <assert.h>
  
-@@ -169,7 +180,7 @@ void initialize_system(char * filename) 
+@@ -169,7 +184,7 @@ void initialize_system(char * filename) 
  }
  
  cardinal get_chipset_id(void) {
@@ -30,7 +34,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
      return inl(0xcfc);
  }
  
-@@ -476,11 +487,11 @@ void unlock_vbios(vbios_map * map) {
+@@ -476,11 +491,11 @@ void unlock_vbios(vbios_map * map) {
          case CT_UNKWN:
              break;
          case CT_855GM:
@@ -45,7 +49,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
              break;
          case CT_845G:
          case CT_865G:
-@@ -488,13 +499,13 @@ void unlock_vbios(vbios_map * map) {
+@@ -488,13 +503,13 @@ void unlock_vbios(vbios_map * map) {
          case CT_915GM:
          case CT_945G:
          case CT_945GM:
@@ -63,7 +67,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
              break;
          }
      }
-@@ -526,8 +537,8 @@ void relock_vbios(vbios_map * map) {
+@@ -526,8 +541,8 @@ void relock_vbios(vbios_map * map) {
          case CT_UNKWN:
              break;
          case CT_855GM:
@@ -74,7 +78,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
              break;
          case CT_845G:
          case CT_865G:
-@@ -535,9 +546,9 @@ void relock_vbios(vbios_map * map) {
+@@ -535,9 +550,9 @@ void relock_vbios(vbios_map * map) {
          case CT_915GM:
          case CT_945G:
          case CT_945GM:
