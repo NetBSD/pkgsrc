@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/11/07 09:30:16 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/11/13 15:16:20 drochner Exp $
 #
 
-DISTNAME=	dbus-0.92
-PKGREVISION=	1
+DISTNAME=	dbus-1.0.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
+MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
@@ -49,22 +48,14 @@ CONFIGURE_ARGS+=	--enable-tests
 CONFIGURE_ARGS+=	--enable-verbose-mode
 .endif
 
-# Next version will automatically detect this with a sane configure check,
-# so it should go away.
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--enable-kqueue
-.endif
-
 PKG_SYSCONFSUBDIR=	dbus-1
 MAKE_DIRS=		${PKG_SYSCONFDIR}/event.d
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/system.d
 
-DOCDIR=			${PREFIX}/share/doc/dbus
 EGDIR=			${PREFIX}/share/examples/dbus
 CONF_FILES=		${EGDIR}/session.conf ${PKG_SYSCONFDIR}/session.conf
 CONF_FILES+=		${EGDIR}/system.conf ${PKG_SYSCONFDIR}/system.conf
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS=	${EGDIR}
 
 RCD_SCRIPTS=		dbus
 
@@ -72,9 +63,6 @@ PKG_GROUPS=		messagebus
 PKG_USERS=		messagebus:messagebus
 PKG_GECOS.messagebus=	System message bus
 PKG_HOME.messagebus=	${VARBASE}/run/dbus
-
-post-install:
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.txt ${DESTDIR}${DOCDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

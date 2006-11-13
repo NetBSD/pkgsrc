@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbus.sh,v 1.4 2006/08/28 08:28:57 jmmv Exp $
+# $NetBSD: dbus.sh,v 1.5 2006/11/13 15:16:20 drochner Exp $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
@@ -21,6 +21,7 @@ dbus_prestart() {
 		@CHMOD@ 0755 "@VARBASE@/run/dbus"
 		@CHOWN@ messagebus:messagebus "@VARBASE@/run/dbus"
 	fi
+	@PREFIX@/bin/dbus-uuidgen --ensure
 }
 
 load_rc_config $name
