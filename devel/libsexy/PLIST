@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/30 21:02:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/13 19:42:38 drochner Exp $
 include/libsexy/sexy-enum-types.h
 include/libsexy/sexy-icon-entry.h
 include/libsexy/sexy-spell-entry.h
@@ -8,19 +8,20 @@ include/libsexy/sexy-url-label.h
 include/libsexy/sexy.h
 lib/libsexy.la
 lib/pkgconfig/libsexy.pc
-share/doc/libsexy/SexyIconEntry.html
-share/doc/libsexy/SexySpellEntry.html
-share/doc/libsexy/SexyTooltip.html
-share/doc/libsexy/SexyTreeView.html
-share/doc/libsexy/SexyUrlLabel.html
-share/doc/libsexy/ch01.html
-share/doc/libsexy/home.png
-share/doc/libsexy/index.html
-share/doc/libsexy/index.sgml
-share/doc/libsexy/left.png
-share/doc/libsexy/libsexy.devhelp
-share/doc/libsexy/right.png
-share/doc/libsexy/style.css
-share/doc/libsexy/up.png
-@dirrm share/doc/libsexy
+share/gtk-doc/html/libsexy/SexyIconEntry.html
+share/gtk-doc/html/libsexy/SexySpellEntry.html
+share/gtk-doc/html/libsexy/SexyTooltip.html
+share/gtk-doc/html/libsexy/SexyTreeView.html
+share/gtk-doc/html/libsexy/SexyUrlLabel.html
+share/gtk-doc/html/libsexy/ch01.html
+share/gtk-doc/html/libsexy/home.png
+share/gtk-doc/html/libsexy/index.html
+share/gtk-doc/html/libsexy/index.sgml
+share/gtk-doc/html/libsexy/left.png
+share/gtk-doc/html/libsexy/libsexy.devhelp
+share/gtk-doc/html/libsexy/libsexy.devhelp2
+share/gtk-doc/html/libsexy/right.png
+share/gtk-doc/html/libsexy/style.css
+share/gtk-doc/html/libsexy/up.png
+@dirrm share/gtk-doc/html/libsexy
 @dirrm include/libsexy

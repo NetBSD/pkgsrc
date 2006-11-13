@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/30 21:02:04 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2006/11/13 19:42:38 drochner Exp $
 
-SHA1 (libsexy-0.1.8.tar.gz) = 3b068533e959ebdc3c47bff49ab9d6c953298cc2
-RMD160 (libsexy-0.1.8.tar.gz) = 8167afe7a66d2909c5a1069f68b4c500cb3aeed9
-Size (libsexy-0.1.8.tar.gz) = 370540 bytes
+SHA1 (libsexy-0.1.10.tar.gz) = a7a39fa38d25039c7d3e219cbeb9690f065e7ef7
+RMD160 (libsexy-0.1.10.tar.gz) = 65650b47f0e1ded2fb7409a3ad22834147aab0c9
+Size (libsexy-0.1.10.tar.gz) = 387337 bytes
