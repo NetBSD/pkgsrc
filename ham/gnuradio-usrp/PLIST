@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/27 03:14:19 wulf Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/11/13 18:12:41 wulf Exp $
 include/gnuradio/swig/usrp1.i
 include/gnuradio/usrp1_sink_base.h
 include/gnuradio/usrp1_sink_c.h
@@ -40,3 +40,6 @@ ${PYSITELIB}/gnuradio/usrp.pyo
 ${PYSITELIB}/gnuradio/usrp1.py
 ${PYSITELIB}/gnuradio/usrp1.pyc
 ${PYSITELIB}/gnuradio/usrp1.pyo
+${PYSITELIB}/gnuradio/usrp_multi.py
+${PYSITELIB}/gnuradio/usrp_multi.pyc
+${PYSITELIB}/gnuradio/usrp_multi.pyo
