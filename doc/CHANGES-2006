@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1805 2006/11/13 20:34:38 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1806 2006/11/13 20:40:44 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added ham/usrp-docs version 3.0.2 [wulf 2006-11-14]
 	Updated graphics/spca5view to version 0.60 [reinoud 2006-11-14]
 	Added www/firefox2-bin-flash version 7.0.68 [smb 2006-11-13]
+	Updated sysutils/xentools30-hvm to 3.0.3nb2 [bouyer 2006-11-13]
