@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1799 2006/11/13 11:27:02 abs Exp $
+>$NetBSD: CHANGES-2006,v 1.1800 2006/11/13 16:01:34 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5261,3 +5261,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ikiwiki version 1.32 [dan 2006-11-13]
 	Updated mail/dovecot to 1.0rc14 [ghen 2006-11-13]
 	Updated www/apache-tomcat55 to 5.5.20 [abs 2006-07-07]
+	Added math/py-ephem version 3.7b [wulf 2006-11-14]
