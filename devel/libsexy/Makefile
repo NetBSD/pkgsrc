@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/04/17 13:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/13 19:42:38 drochner Exp $
 #
 
-DISTNAME=	libsexy-0.1.8
-PKGREVISION=	1
+DISTNAME=	libsexy-0.1.10
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexy/
 
@@ -13,8 +12,6 @@ COMMENT=	Collection of GTK+ widgets that beautify standard widgets
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE=	libsexy.pc.in
 
