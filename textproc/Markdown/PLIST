@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/13 01:20:09 dan Exp $
+bin/Markdown
+${PERL5_SITELIB}/Markdown.pm
+share/doc/Markdown/License.text
+share/doc/Markdown/Markdown Readme.text
