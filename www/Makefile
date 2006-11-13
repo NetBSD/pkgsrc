@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2006/11/01 06:41:33 minskim Exp $
+# $NetBSD: Makefile,v 1.485 2006/11/13 01:30:52 dan Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -129,6 +129,7 @@ SUBDIR+=	htmllint
 SUBDIR+=	http_load
 SUBDIR+=	iasp
 SUBDIR+=	ijb
+SUBDIR+=	ikiwiki
 SUBDIR+=	instiki
 SUBDIR+=	ja-trac
 SUBDIR+=	jakarta-servletapi
