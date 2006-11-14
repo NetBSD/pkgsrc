@@ -1,14 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2006/08/17 06:58:37 tron Exp $
+# $NetBSD: Makefile,v 1.44 2006/11/14 10:38:36 tron Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
-
 MAINTAINER=		tron@NetBSD.org
-
-PATCH_SITES=		${MASTER_SITES}/patches/
-PATCHFILES=		xc266-fix-fi.diff
-PATCH_DIST_STRIP=	-p1
 
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
@@ -18,7 +12,6 @@ USE_TOOLS+=		msgfmt
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ARGS+=	--enable-textfe
 CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
