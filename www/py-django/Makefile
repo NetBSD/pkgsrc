@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/03 14:14:18 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/14 13:36:53 joerg Exp $
 
 DISTNAME=	Django-0.95
 PKGNAME=	${PYPKGPREFIX}-django-0.95
@@ -15,8 +15,12 @@ PYBINMODULE=	# yes
 PYTHON_VERSIONS_ACCEPTED=	24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py24-setuptools
+PKG_DESTDIR_SUPPORT=	# empty
+
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
+
+CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/easy-install.pth
 
 FILES_SUBST+=	PY_MANAGE_EGGS=${PREFIX}/bin/${PYPKGPREFIX}-manage-eggs
 FILES_SUBST+=	DJANGOEGG=${PREFIX}/${PYSITELIB}/Django-0.95-py2.4.egg
