@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2006/10/12 14:00:06 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2006/11/14 16:46:46 drochner Exp $
 #
 
-DISTNAME=	gnome-python-2.16.0
+DISTNAME=	gnome-python-2.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.16/}
