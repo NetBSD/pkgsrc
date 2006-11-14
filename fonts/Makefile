@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2006/11/07 21:00:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.98 2006/11/14 21:22:41 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -27,6 +27,7 @@ SUBDIR+=	arphic-ttf
 SUBDIR+=	artwiz-fonts
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
+SUBDIR+=	bdftopcf
 SUBDIR+=	biznet-iso8859_2
 SUBDIR+=	chkfontpath
 SUBDIR+=	cyberbase-ttf
@@ -49,6 +50,10 @@ SUBDIR+=	dejavu-ttf
 SUBDIR+=	ec-fonts-mftraced
 SUBDIR+=	efont-unicode
 SUBDIR+=	encodings
+SUBDIR+=	font-bitstream-type1
+SUBDIR+=	font-cursor-misc
+SUBDIR+=	font-misc-misc
+SUBDIR+=	font-util
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
 SUBDIR+=	freefont-ttf
@@ -82,6 +87,7 @@ SUBDIR+=	libfontenc
 SUBDIR+=	linux-libertine-ttf
 SUBDIR+=	mftrace
 SUBDIR+=	mglfonts
+SUBDIR+=	mkcfm
 SUBDIR+=	mkfontalias
 SUBDIR+=	mkfontdir
 SUBDIR+=	mkfontscale
