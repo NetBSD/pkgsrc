@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1822 2006/11/14 21:22:41 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1823 2006/11/14 23:07:00 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5312,3 +5312,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-bitstream-type1 version 1.0.0 [joerg 2006-11-14]
 	Added fonts/font-cursor-misc version 1.0.0 [joerg 2006-11-14]
 	Added fonts/font-misc-misc version 1.0.0 [joerg 2006-11-14]
+	Added x11/xf86-video-wsfb version 0.2.0 [reed 2006-11-14]
