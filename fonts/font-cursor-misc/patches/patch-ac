@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/11/14 20:54:15 joerg Exp $
+
+--- Makefile.in.orig	2006-11-14 21:41:51.000000000 +0100
++++ Makefile.in
+@@ -81,7 +81,6 @@ MAINTAINER_MODE_FALSE = @MAINTAINER_MODE
+ MAINTAINER_MODE_TRUE = @MAINTAINER_MODE_TRUE@
+ MAKEINFO = @MAKEINFO@
+ MKFONTDIR = @MKFONTDIR@
+-MKFONTSCALE = @MKFONTSCALE@
+ PACKAGE = @PACKAGE@
+ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
+ PACKAGE_NAME = @PACKAGE_NAME@
+@@ -389,8 +388,6 @@ uninstall-am: uninstall-fontDATA uninsta
+ 	$(BDFTOPCF) -t $< | gzip > $@
+ 
+ install-data-hook:
+-	@rm -f $(DESTDIR)$(fontdir)/fonts.scale
+-	$(MKFONTSCALE) $(DESTDIR)$(fontdir)
+ 	@rm -f $(DESTDIR)$(fontdir)/font.dir
+ 	$(MKFONTDIR) $(DESTDIR)$(fontdir)
+ 
