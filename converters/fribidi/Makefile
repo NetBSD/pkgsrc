@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 20:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/11/14 13:55:34 joerg Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fribidi.org/
 COMMENT=		Free Implementation of the Unicode Bidirectional Algorithm
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
