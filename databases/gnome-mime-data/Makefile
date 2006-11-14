@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2006/07/05 05:37:39 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/11/14 16:58:13 drochner Exp $
 #
 
-DISTNAME=		gnome-mime-data-2.4.2
-PKGREVISION=		2
+DISTNAME=		gnome-mime-data-2.4.3
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mime-data/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +16,7 @@ CONFLICTS=		gnome-vfs<=1.0.3
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		intltool msgfmt perl
+USE_TOOLS+=		intltool msgfmt perl gmake
 GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE=	gnome-mime-data-2.0.pc.in
