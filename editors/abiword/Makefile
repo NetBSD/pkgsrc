@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2006/11/10 16:53:28 tv Exp $
+# $NetBSD: Makefile,v 1.107 2006/11/14 14:26:46 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -49,8 +51,8 @@ post-build:
 
 post-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
-		${PREFIX}/${PKGMANDIR}/man1/abiword.1
-	cp -R ${WRKDIR}/help ${PREFIX}/share/AbiSuite-2.4/AbiWord/
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/abiword.1
+	cp -R ${WRKDIR}/help ${DESTDIR}${PREFIX}/share/AbiSuite-2.4/AbiWord/
 
 .if !empty(PKG_OPTIONS:Mgucharmap)
 .include "../../fonts/gucharmap/buildlink3.mk"
