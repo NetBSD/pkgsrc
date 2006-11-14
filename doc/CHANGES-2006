@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1820 2006/11/14 17:19:55 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1821 2006/11/14 18:24:03 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5305,3 +5305,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/xf86-input-keyboard version 1.1.1 [joerg 2006-11-14]
 	Added x11/xf86-input-mouse version 1.1.2 [joerg 2006-11-14]
 	Added x11/xf86-video-ati version 6.6.3 [joerg 2006-11-14]
+	Updated x11/libdrm to 2.3.0 [joerg 2006-11-14]
