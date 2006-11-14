@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2006/10/04 21:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2006/11/14 14:29:10 joerg Exp $
 #
 
 DISTNAME=		libglade-2.6.0
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.jamesh.id.au/software/libglade/
 COMMENT=		Runtime interpreter for GLADE GUI files (v2)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		YES
@@ -26,8 +28,7 @@ BUILDLINK_API_DEPENDS.atk+=		atk>=1.9.0
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
+OWN_DIRS+=	lib/libglade/2.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
