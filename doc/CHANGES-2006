@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1818 2006/11/14 15:56:32 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1819 2006/11/14 17:04:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5301,3 +5301,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/libxkbui version 1.0.2 [joerg 2006-11-14]
 	Added x11/xf86driproto version 2.0.3 [joerg 2006-11-14]
 	Added x11/xf86dgaproto version 2.0.2 [joerg 2006-11-14]
+	Added x11/modular-xorg-server version 1.1.1 [joerg 2006-11-14]
