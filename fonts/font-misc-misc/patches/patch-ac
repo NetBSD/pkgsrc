@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/11/14 21:20:55 joerg Exp $
+
+--- Makefile.in.orig	2005-12-21 09:19:58.000000000 +0100
++++ Makefile.in
+@@ -616,10 +616,6 @@ uninstall-am: uninstall-fontDATA uninsta
+ 	@rm -f $@
+ 	$(BDFTOPCF) -t $< | gzip > $@
+ 
+-.bdft.bdf:
+-	@rm -f $@
+-	$(PERL) $(BDFTRUNCATE) 0x3200 < $< > $@
+-
+ .bdf-ISO8859-1.bdf:
+ 	@rm -f $@
+ 	$(UCS2ANY) $< $(UTIL_DIR)/map-ISO8859-1 ISO8859-1
+@@ -691,8 +687,6 @@ t.bdf.pcf.gz:
+ all-local: $(BUILT_BDF_FILES) $(font_DATA)
+ 
+ install-data-hook:
+-	@rm -f $(DESTDIR)$(fontdir)/fonts.scale
+-	$(MKFONTSCALE) $(DESTDIR)$(fontdir)
+ 	@rm -f $(DESTDIR)$(fontdir)/font.dir
+ 	$(MKFONTDIR) $(DESTDIR)$(fontdir)
+ 
