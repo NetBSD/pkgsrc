@@ -1,13 +1,15 @@
-$NetBSD: patch-az,v 1.2 2001/04/19 20:51:33 jtb Exp $
+$NetBSD: patch-az,v 1.3 2006/11/14 13:16:00 wennmach Exp $
 
---- src/dbase/grdraster.man.orig	Thu Apr 12 00:08:51 2001
-+++ src/dbase/grdraster.man
+Adapt to pkgsrc directory structure.
+
+--- src/dbase/grdraster.man.orig	2006-11-13 16:02:21.000000000 +0100
++++ src/dbase/grdraster.man	2006-11-13 16:03:13.000000000 +0100
 @@ -8,7 +8,7 @@
  .SH DESCRIPTION
- \fBgrdraster\fP reads a file called \fIgrdraster.info\fP from the directory
- pointed to by the environment parameter $GMT_GRIDDIR (if this parameter is
--not set it defaults to $GMTHOME/share/dbase). The info file defines binary
-+not set it defaults to $GMTHOME/share/gmt/dbase). The info file defines binary
- arrays of data stored in scan-line format in data files. Each file is given
- a \fIfilenumber\fP in the info file. \fBgrdraster\fP figures out how to
- load the raster data into a grd file spanning a region defined by \fB\-R\fP.
+ \fBgrdraster\fP reads a file called \fIgrdraster.info\fP from the current
+ working directory, the directories pointed to by the environment variables
+-\fB$GMT_USERDIR\fP and \fB$GMT_GRIDDIR\fP, or in \fB$GMTHOME\fP/share/dbase
++\fB$GMT_USERDIR\fP and \fB$GMT_GRIDDIR\fP, or in \fB$GMTHOME\fP/share/gmt/dbase
+ (in that order).  The file \fIgrdraster.info\fP defines binary
+ arrays of data stored in scan-line format in data files.  Each file is given
+ a \fIfilenumber\fP in the info file.  \fBgrdraster\fP figures out how to
