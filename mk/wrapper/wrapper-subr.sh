@@ -1,4 +1,4 @@
-# $NetBSD: wrapper-subr.sh,v 1.1 2006/11/11 07:44:46 rillig Exp $
+# $NetBSD: wrapper-subr.sh,v 1.2 2006/11/14 13:40:20 rillig Exp $
 #
 # This file contains shell functions that are useful to the wrapper
 # scripts.
@@ -12,14 +12,14 @@ transform_setname() {
 # usage: transform_to "newarg"
 transform_to() {
 	arg="$1"
-	$debug_log $wrapperlog "   ($wrapsubr_name) to: $1"
+	$debug_log $wrapperlog "    ($wrapsubr_name) to: $1"
 	addtocache=yes
 }
 
 # usage: transform_to_nocache "newarg"
 transform_to_nocache() {
 	arg="$1"
-	$debug_log $wrapperlog "   ($wrapsubr_name) to: $1"
+	$debug_log $wrapperlog "    ($wrapsubr_name) to: $1"
 	addtocache=no
 }
 
@@ -38,4 +38,3 @@ transform_pass_unknown() {
 	#echo "warning: $wrapsubr_name: unknown option $arg" 1>/dev/tty
 	addtocache=no
 }
-	
