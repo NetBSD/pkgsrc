@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
+
+--- hw/xfree86/os-support/Makefile.in.orig	2006-11-06 21:29:12.000000000 +0000
++++ hw/xfree86/os-support/Makefile.in
+@@ -560,7 +560,7 @@ noinst_LTLIBRARIES = libxorgos.la
+ libxorgos_la_SOURCES = xorgos.c
+ libxorgos_la_LIBADD = @XORG_OS_SUBDIR@/lib@XORG_OS_SUBDIR@.la \
+                       bus/libbus.la \
+-                      misc/libmisc.la
++                      misc/libmisc.la -li386
+ 
+ DISTCLEANFILES = xorgos.c
+ all: all-recursive
