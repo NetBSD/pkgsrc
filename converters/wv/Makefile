@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/10/31 20:06:08 adam Exp $
+# $NetBSD: Makefile,v 1.59 2006/11/14 13:55:34 joerg Exp $
 
 DISTNAME=	wv-1.2.4
 CATEGORIES=	converters
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://wvware.sourceforge.net/
 COMMENT=	Library and executables to access Microsoft Word files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -28,5 +30,5 @@ MAKE_FILE=		GNUmakefile
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
