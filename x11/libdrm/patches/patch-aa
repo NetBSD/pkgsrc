@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/14 14:22:12 joerg Exp $
+
+--- shared-core/drm.h.orig	2006-11-06 16:05:55.000000000 +0000
++++ shared-core/drm.h
+@@ -139,6 +139,8 @@ typedef unsigned long long drm_u64_t;
+ 
+ typedef unsigned int drm_handle_t;
+ #else
++#include <stdint.h>
++typedef uint64_t drm_u64_t;
+ typedef unsigned long drm_handle_t;	/**< To mapped regions */
+ #endif
+ typedef unsigned int drm_context_t;	/**< GLXContext handle */
