@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1809 2006/11/13 23:22:06 adrianp Exp $
+>$NetBSD: CHANGES-2006,v 1.1810 2006/11/14 00:59:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/firefox2-bin-flash version 7.0.68 [smb 2006-11-13]
 	Updated sysutils/xentools30-hvm to 3.0.3nb2 [bouyer 2006-11-13]
 	Updated chat/ircservices to 5.0.59 [adrianp 2006-11-13]
+	Updated x11/x11vnc to 0.8.3 [obache 2006-11-14]
