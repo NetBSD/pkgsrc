@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2006/11/14 15:15:35 joerg Exp $
+# $NetBSD: Makefile,v 1.455 2006/11/14 15:56:32 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -194,10 +194,12 @@ SUBDIR+=	libXxf86misc
 SUBDIR+=	libXxf86vm
 SUBDIR+=	libdrm
 SUBDIR+=	libexo
+SUBDIR+=	liblbxutil
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
 SUBDIR+=	libxkbfile
+SUBDIR+=	libxkbui
 SUBDIR+=	libxklavier
 SUBDIR+=	libzvt
 SUBDIR+=	matchbox-common
@@ -330,6 +332,8 @@ SUBDIR+=	xearth
 SUBDIR+=	xephem
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
+SUBDIR+=	xf86dgaproto
+SUBDIR+=	xf86driproto
 SUBDIR+=	xf86miscproto
 SUBDIR+=	xf86vidmodeproto
 SUBDIR+=	xfce3
