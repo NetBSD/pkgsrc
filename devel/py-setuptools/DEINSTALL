@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2006/11/14 13:33:29 joerg Exp $
+#
+
+case $STAGE in
+DEINSTALL)
+	${RM} @PYSITELIB@/easy-install.pth
+	;;
+esac
