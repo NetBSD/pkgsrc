@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5700 2006/11/13 23:22:06 adrianp Exp $
+$NetBSD: TODO,v 1.5701 2006/11/14 10:40:06 tron Exp $
 
 Suggested new packages
 ======================
@@ -1108,7 +1108,6 @@ Suggested package updates
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2 [pkg/34467]
 	o xblast-2.10.4
-	o xchat-2.6.8
 	o xcircuit-3.4.26 [pkg/34443]
 	o xdaliclock-2.23
 	o xdelta-3.0e
