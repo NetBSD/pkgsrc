@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1811 2006/11/14 10:40:06 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1812 2006/11/14 12:32:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5285,3 +5285,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/x11vnc to 0.8.3 [obache 2006-11-14]
 	Updated chat/xchat to 2.6.8 [tron 2006-11-14]
 	Updated chat/xchat-python to 2.6.8 [tron 2006-11-14]
+	Updated mail/sma to 1.4 [obache 2006-11-14]
