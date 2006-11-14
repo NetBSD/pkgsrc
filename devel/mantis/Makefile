@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2006/11/13 22:40:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2006/11/14 13:05:12 adrianp Exp $
 
-DISTNAME=	mantis-1.0.3
-PKGREVISION=	1
+DISTNAME=	mantis-1.0.6
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -53,8 +52,6 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOMIZATION ${PREFIX}/share/doc/mantis
 	${INSTALL_DATA} ${WRKSRC}/doc/INSTALL ${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/doc/UPGRADING ${PREFIX}/share/doc/mantis
 	${MV} ${WRKSRC}/config_inc.php.sample ${WRKSRC}/config_inc.php
 
 . 	for f in ${MANTIS_EG}
