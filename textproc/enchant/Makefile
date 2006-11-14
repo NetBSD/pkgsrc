@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/10/04 22:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/11/14 13:56:15 joerg Exp $
 #
 
 DISTNAME=		enchant-1.2.6
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.2.6/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.abisource.com/projects/enchant/
 COMMENT=		Generic spell checking library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
