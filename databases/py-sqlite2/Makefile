@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/14 20:17:59 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/14 13:39:17 joerg Exp $
 
 DISTNAME=	pysqlite-2.0.7
 PKGNAME=	${PYPKGPREFIX}-sqlite2-2.0.7
@@ -12,7 +12,7 @@ COMMENT=	SQLite database adapter for Python
 PYDISTUTILSPKG=	yes
 # XXX version specific setuptools, should add something to extension.mk
 PYTHON_VERSIONS_ACCEPTED= 24
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py24-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 TESTCMD=	from lib import test; \
 		test.test()
