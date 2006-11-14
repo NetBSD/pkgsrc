@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/14 20:15:05 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/14 21:11:10 joerg Exp $
 #
 
 DISTNAME=		font-util-1.0.1
@@ -13,5 +13,8 @@ COMMENT=		Tools for truncating and subseting of ISO10646-1 BDF fonts
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+
+USE_TOOLS+=		perl:run
+REPLACE_PERL+=		bdftruncate.pl
 
 .include "../../mk/bsd.pkg.mk"
