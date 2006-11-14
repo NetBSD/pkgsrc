@@ -1,17 +1,19 @@
-$NetBSD: patch-aq,v 1.4 2005/06/22 08:34:54 jlam Exp $
+$NetBSD: patch-aq,v 1.5 2006/11/14 13:16:00 wennmach Exp $
+
+Libtoolize.
 
 --- src/misc/makefile.orig	Wed Apr 11 19:58:09 2001
 +++ src/misc/makefile
-@@ -6,7 +6,7 @@
- 
- include ../makegmt.macros
+@@ -8,7 +8,7 @@
+ GMTSRCDIR	= ..
+ include ../gmtalldeps.macros
  
 -CDF		= -L$(NETCDF)/lib -lnetcdf
 +CDF		= -Wl,-R$(NETCDF)/lib -L$(NETCDF)/lib -lnetcdf
  
  CFLAGS		= $(CC_OPT) $(WIN32) -I$(srcdir) -I$(NETCDF)/include 
  
-@@ -30,7 +30,7 @@
+@@ -39,7 +39,7 @@
  
  install:	all
  		for i in $(MISC); do \
@@ -20,12 +22,19 @@ $NetBSD: patch-aq,v 1.4 2005/06/22 08:34:54 jlam Exp $
  		done
  
  uninstall:
-@@ -51,7 +51,7 @@
+@@ -59,11 +59,11 @@
+ #       program dependencies
  #-------------------------------------------------------------------------------
  
- $(MISC):	$(MISC_O)
--		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L.. -L$(libdir) -lpsl -lgmt $(CDF) $(LIBS) -o $@
-+		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.lo ../libpsl.la ../libgmt.la $(CDF) $(LIBS) -o $@
+-$(MISC):	$(MISC_O) $(GMTLIB)
+-		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L.. -L$(libdir) -lgmt $(CDF) $(LIBS) -o $@
++$(MISC):	$(MISC_O)
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.lo ../libgmt.la ../libpsl.la $(CDF) $(LIBS) -o $@
+ 
+-$(MISCPS):	$(MISCPS_O) $(GMTLIB)
+-		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L.. -L$(libdir) -lgmt -lgmtps -lpsl $(CDF) $(LIBS) -o $@
++$(MISCPS):	$(MISCPS_O)
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.lo ../libgmt.la ../libgmtps.la  ../libpsl.la $(CDF) $(LIBS) -o $@
  
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
