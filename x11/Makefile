@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2006/11/14 17:19:54 joerg Exp $
+# $NetBSD: Makefile,v 1.458 2006/11/14 23:07:00 reed Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -335,6 +335,7 @@ SUBDIR+=	xextproto
 SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-input-mouse
 SUBDIR+=	xf86-video-ati
+SUBDIR+=	xf86-video-wsfb
 SUBDIR+=	xf86bigfontproto
 SUBDIR+=	xf86dgaproto
 SUBDIR+=	xf86driproto
