@@ -1,0 +1,5 @@
+These functions provide an interface to the server extension
+XFree86-VidModeExtension which allows the video modes to be queried
+and adjusted dynamically and mode switching to be controlled.
+
+This library is from the modular X.org project.
