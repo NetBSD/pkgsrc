@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1816 2006/11/14 14:16:52 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1817 2006/11/14 15:15:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5291,4 +5291,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/py-setuptools version 0.6c1nb1 [joerg 2006-11-14]
 	Removed devel/py24-setuptools [joerg 2006-11-14]
 	Added x11/glproto version 1.4.8 [joerg 2006-11-14]
+	Added x11/libdrm version 2.2.0 [joerg 2006-11-14]
+	Added x11/xf86miscproto version 0.9.2 [joerg 2006-11-14]
+	Added x11/libXxf86misc version 1.0.1 [joerg 2006-11-14]
+	Added x11/xf86vidmodeproto version 2.2.2 [joerg 2006-11-14]
+	Added x11/libXxf86vm version 1.0.1 [joerg 2006-11-14]
 	Updated devel/global to 5.2 [obache 2006-11-14]

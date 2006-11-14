@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2006/11/14 13:40:24 joerg Exp $
+# $NetBSD: Makefile,v 1.454 2006/11/14 15:15:35 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -190,6 +190,9 @@ SUBDIR+=	libXrender
 SUBDIR+=	libXres
 SUBDIR+=	libXt
 SUBDIR+=	libXv
+SUBDIR+=	libXxf86misc
+SUBDIR+=	libXxf86vm
+SUBDIR+=	libdrm
 SUBDIR+=	libexo
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
@@ -327,6 +330,8 @@ SUBDIR+=	xearth
 SUBDIR+=	xephem
 SUBDIR+=	xextproto
 SUBDIR+=	xf86bigfontproto
+SUBDIR+=	xf86miscproto
+SUBDIR+=	xf86vidmodeproto
 SUBDIR+=	xfce3
 SUBDIR+=	xfce4-clipman-plugin
 SUBDIR+=	xfce4-desktop
