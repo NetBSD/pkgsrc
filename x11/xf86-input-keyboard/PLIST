@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 17:15:00 joerg Exp $
+lib/xorg/modules/input/kbd_drv.la
+lib/xorg/modules/input/keyboard_drv.la
+man/man4/kbd.4
+man/man4/keyboard.4
+@comment @dirrm lib/xorg/modules/input
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
