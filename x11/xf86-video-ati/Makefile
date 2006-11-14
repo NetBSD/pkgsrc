@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/14 17:18:50 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/14 17:24:33 reed Exp $
 
 DISTNAME=	xf86-video-ati-6.6.3
 CATEGORIES=	x11
@@ -14,7 +14,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
-.include "../../wip/modular-xorg-server/buildlink3.mk"
+.include "../../x11/modular-xorg-server/buildlink3.mk"
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
