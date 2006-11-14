@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.50 2006/11/14 13:50:13 joerg Exp $
 
 DISTNAME=	unrarsrc-3.6.8
 PKGNAME=	${DISTNAME:S/src//}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.rarlab.com/
 COMMENT=	Extract, view & test RAR archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 USE_LANGUAGES=	c++
@@ -24,13 +25,12 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/unrar
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/unrar
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/unrar
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} unrar ${PREFIX:Q}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/unrar ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && ${INSTALL_DATA} readme.txt license.txt	\
-		${PREFIX:Q}/share/doc/unrar
+		${DESTDIR}${PREFIX}/share/doc/unrar
 
 .include "../../mk/bsd.prefs.mk"
 
