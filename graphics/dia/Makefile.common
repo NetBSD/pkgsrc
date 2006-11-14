@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/10/25 16:52:24 joerg Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/11/14 14:09:50 joerg Exp $
 #
 
 DISTNAME=	dia-0.95-1
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.95/}
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/dia/
 COMMENT=	Program for creating diagrams of all kinds
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/dia/patches
