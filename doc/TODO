@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5702 2006/11/14 12:32:59 obache Exp $
+$NetBSD: TODO,v 1.5703 2006/11/14 13:19:19 wennmach Exp $
 
 Suggested new packages
 ======================
@@ -229,7 +229,6 @@ Suggested package updates
 	o Chinput-3.0.1
 	o DatLib-2.18
 	o DatUtil-2.30
-	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
