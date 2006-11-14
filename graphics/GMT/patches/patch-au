@@ -1,19 +1,19 @@
-$NetBSD: patch-au,v 1.3 2005/06/22 08:34:54 jlam Exp $
+$NetBSD: patch-au,v 1.4 2006/11/14 13:16:00 wennmach Exp $
+
+Libtoolize.
 
 --- src/x_system/makefile.orig	Wed Apr 11 19:58:09 2001
 +++ src/x_system/makefile
-@@ -20,8 +20,8 @@
- include ../makegmt.macros
+@@ -23,7 +23,7 @@
  #
  
--CFLAGS	= $(CC_OPT) $(WIN32) -I$(includedir) -I../mgg -I$(NETCDF)/include
--ALLLIB  = -L$(libdir) -lgmt -L../mgg -lgmt_mgg -lpsl -L$(NETCDF)/lib -lnetcdf $(LIBS)
-+CFLAGS	= $(CC_OPT) $(WIN32) -I$(includedir) -I.. -I../mgg -I$(NETCDF)/include
-+ALLLIB  = ../libgmt.la ../mgg/libgmt_mgg.la ../libpsl.la -Wl,-R$(NETCDF)/lib -L$(NETCDF)/lib -lnetcdf $(LIBS)
+ CFLAGS	= $(CC_OPT) $(WIN32) -I$(srcdir) -I../mgg -I$(NETCDF)/include
+-ALLLIB  = -L../mgg -lgmt_mgg -L.. -L$(libdir) -lgmt -lpsl -L$(NETCDF)/lib -lnetcdf $(LIBS)
++ALLLIB  = ../mgg/libgmt_mgg.la ../libgmt.la ../libpsl.la -Wl,-R$(NETCDF)/lib -L$(NETCDF)/lib -lnetcdf $(LIBS)
  
  ALL_C	= x_edit.c x_init.c x_list.c x_over.c x_report.c x_remove.c x_setup.c x_solve_dc_drift.c x_update.c
  
-@@ -35,7 +35,7 @@
+@@ -37,7 +37,7 @@
  
  install:	all
  		for i in $(ALL); do \
@@ -22,16 +22,17 @@ $NetBSD: patch-au,v 1.3 2005/06/22 08:34:54 jlam Exp $
  		done
  
  uninstall:
-@@ -56,9 +56,10 @@
+@@ -57,10 +57,10 @@
+ #	program dependencies
  #-------------------------------------------------------------------------------
  
- $(ALL):		$(ALL_O)
+-$(ALL):		$(ALL_O) $(GMTLIB)
 -		$(CC) $(CFLAGS) $(LDFLAGS) $@.o $(ALLLIB) -o $@
++$(ALL):		$(ALL_O)
 +		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.lo $(ALLLIB) -o $@
  
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
 +		@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
  
- $(ALL_O):	x_system.h
-+
+ $(ALL_O):	x_system.h $(GMT_H)

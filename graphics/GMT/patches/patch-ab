@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.5 2005/06/22 08:34:54 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2006/11/14 13:16:00 wennmach Exp $
 
---- src/makegmt.macros.in.orig	2001-03-02 00:40:57.000000000 -0500
-+++ src/makegmt.macros.in
-@@ -48,6 +48,9 @@ LIBS	= @LIBS@
+--- src/makegmt.macros.in.orig	2006-11-08 16:19:32.000000000 +0100
++++ src/makegmt.macros.in	2006-11-08 16:20:29.000000000 +0100
+@@ -49,6 +49,9 @@
  # Misc. Standard Utilities:
  #---------------------------------------------------------------
  INSTALL		= @INSTALL@
 +INSTALL_PROGRAM = @INSTALL_PROGRAM@
 +INSTALL_SCRIPT  = @INSTALL_SCRIPT@
-+INSTALL_DATA	= @INSTALL_DATA@
++INSTALL_DATA    = @INSTALL_DATA@
  AWK		= @AWK@
  AS		= @AS@
  AR		= @AR@
-@@ -139,4 +142,4 @@ ALPHA_SINCOS_O	= @ALPHA_SINCOS_O@
+@@ -146,4 +149,4 @@
  #	Select STATIC (Default) or SHARED libraries
  #-------------------------------------------------------------------------------
  #
 -GMTLIB	= @GMTLIB@
-+GMTLIB	= libpsl.la libgmt.la
++GMTLIB	= libpsl.la libgmt.la libgmtps.la
