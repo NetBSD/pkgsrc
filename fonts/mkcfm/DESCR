@@ -1,0 +1,4 @@
+The mkcfm tool creates summaries of font metric files in CID font
+directories.  Those summaries speed up the CID rasterizer as it
+doesn't have to read the usually large font metric files on access
+to compute them.
