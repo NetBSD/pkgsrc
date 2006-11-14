@@ -1,22 +1,24 @@
-$NetBSD: patch-ay,v 1.5 2001/04/20 17:16:19 jtb Exp $
+$NetBSD: patch-ay,v 1.6 2006/11/14 13:16:00 wennmach Exp $
 
---- src/dbase/grdraster.c.orig	Wed Apr 11 23:07:29 2001
-+++ src/dbase/grdraster.c
-@@ -41,7 +41,7 @@
- 	BOOLEAN swap_me;	/* TRUE if data set need to be swapped */
- };
+Change method to determine endianness and adapt to pkgsrc directory structure.
+
+--- src/dbase/grdraster.c.orig	2006-11-13 15:56:13.000000000 +0100
++++ src/dbase/grdraster.c	2006-11-13 15:59:44.000000000 +0100
+@@ -50,7 +50,7 @@
+ {
+ 	BOOLEAN xyz_out = FALSE;
  
 -#if WORDS_BIGENDIAN == 0
 +#if BYTE_ORDER == LITTLE_ENDIAN
  	char my_endian = 'L';	/* This machine is Little endian */
  #else
  	char my_endian = 'B';	/* This machine is Big endian */
-@@ -601,7 +601,7 @@
- 	struct RASTER_INFO *rasinfo;
+@@ -646,7 +646,7 @@
  
- 	if ((d = getenv ("GMT_GRIDDIR")) == CNULL)	/* Look in default location */
--		sprintf (dir, "%s%cshare%cdbase\0", GMTHOME, DIR_DELIM, DIR_DELIM);
-+		sprintf (dir, "%s%cshare%cgmt%cdbase\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM);
- 	else
- 		strcpy (dir, d);
+ 	/* Find and open the file grdraster.info */
  
+-	if (!(GMT_getdatapath("grdraster.info", dir) || GMT_getsharepath("dbase", "grdraster", ".info", dir))) {
++	if (!(GMT_getdatapath("grdraster.info", dir) || GMT_getsharepath("gmt/dbase", "grdraster", ".info", dir))) {
+ 		fprintf(stderr, "%s: ERROR cannot find file grdraster.info", GMT_program);
+ 		return (0);
+ 	}

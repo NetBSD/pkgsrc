@@ -1,8 +1,10 @@
-$NetBSD: patch-an,v 1.3 2005/06/22 08:34:54 jlam Exp $
+$NetBSD: patch-an,v 1.4 2006/11/14 13:16:00 wennmach Exp $
+
+Libtoolize.
 
 --- src/gshhs/makefile.orig	Sat Jan 27 03:10:36 2001
 +++ src/gshhs/makefile
-@@ -12,19 +12,19 @@
+@@ -13,19 +13,19 @@
  all:		gshhs gshhs_dp
  
  install:	all
@@ -13,7 +15,7 @@ $NetBSD: patch-an,v 1.3 2005/06/22 08:34:54 jlam Exp $
  
  clean:	
 -		\rm -f *.o *% gshhs$(EXE) gshhs_dp$(EXE)
-+		\rm -f *.o *.lo .libs *% gshhs$(EXE) gshhs_dp$(EXE)
++		\rm -f *.o *.lo *% gshhs$(EXE) gshhs_dp$(EXE)
  
  spotless:	clean
  
