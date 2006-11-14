@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/03 14:13:56 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/14 13:36:53 joerg Exp $
 #
 
 DISTNAME=	flup-r2030
@@ -11,7 +11,10 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.saddi.com/software/flup/
 COMMENT=	WSGI support modules
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py24-setuptools
+PKG_DESTDIR_SUPPORT=	# empty
+
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py-setuptools
+CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/easy-install.pth
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
