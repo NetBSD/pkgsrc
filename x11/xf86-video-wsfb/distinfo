@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/14 23:05:04 reed Exp $
+
+SHA1 (xf86-video-wsfb-0.2.0.tar.bz2) = c32cb7ae69aba42be0cef1d813d24d25a42d653b
+RMD160 (xf86-video-wsfb-0.2.0.tar.bz2) = 8599cfc54556d7cf4d77eff1f2022f2ab36ca04b
+Size (xf86-video-wsfb-0.2.0.tar.bz2) = 209144 bytes
