@@ -1,9 +1,11 @@
-$NetBSD: patch-as,v 1.3 2005/06/22 08:34:54 jlam Exp $
+$NetBSD: patch-as,v 1.4 2006/11/14 13:16:00 wennmach Exp $
 
---- ./src/spotter/makefile.orig	Wed Apr 11 19:58:09 2001
-+++ ./src/spotter/makefile
-@@ -19,7 +19,7 @@
- include ../makegmt.macros
+Libtoolize.
+
+--- src/spotter/makefile.orig	Wed Apr 11 19:58:09 2001
++++ src/spotter/makefile
+@@ -21,7 +21,7 @@
+ include ../gmtalldeps.macros
  
  CFLAGS	= $(CC_OPT) $(WIN32) -I$(srcdir) -I$(NETCDF)/include
 -CDF	= -L$(NETCDF)/lib -lnetcdf
@@ -11,7 +13,7 @@ $NetBSD: patch-as,v 1.3 2005/06/22 08:34:54 jlam Exp $
  
  SPOT_H	= spotter.h
  
-@@ -41,7 +41,7 @@
+@@ -43,7 +43,7 @@
  
  install:	all
  		for i in $(SPOT); do \
@@ -20,11 +22,13 @@ $NetBSD: patch-as,v 1.3 2005/06/22 08:34:54 jlam Exp $
  		done
  
  uninstall:
-@@ -73,7 +73,7 @@
+@@ -74,8 +74,8 @@
+ #	program dependencies
  #-------------------------------------------------------------------------------
  
- $(SPOT):	libspotter.a $(SPOT_O)
--		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L. -lspotter -L.. -L$(libdir) -lpsl -lgmt $(CDF) $(LIBS) -o $@
+-$(SPOT):	libspotter.a $(SPOT_O) $(GMTLIB)
+-		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L. -lspotter -L.. -L$(libdir) -lgmt $(CDF) $(LIBS) -o $@
++$(SPOT):	libspotter.a $(SPOT_O)
 +		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.lo -L. -lspotter -L.. ../libpsl.la ../libgmt.la $(CDF) $(LIBS) -o $@
  
  .c.o:
