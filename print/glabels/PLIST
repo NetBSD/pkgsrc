@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/11/14 16:54:29 drochner Exp $
 bin/glabels
 bin/glabels-batch
 include/libglabels/libglabels.h
@@ -28,6 +28,14 @@ share/gnome/help/glabels/C/figures/glabels-template-cd.png
 share/gnome/help/glabels/C/figures/glabels-template-label.png
 share/gnome/help/glabels/C/figures/glabels-template-layout.png
 share/gnome/help/glabels/C/figures/main-window-empty.png
+share/gnome/help/glabels/C/figures/merge-ex1-1.png
+share/gnome/help/glabels/C/figures/merge-ex1-2.png
+share/gnome/help/glabels/C/figures/merge-ex1-3.png
+share/gnome/help/glabels/C/figures/merge-ex1-4.png
+share/gnome/help/glabels/C/figures/merge-ex2-1.png
+share/gnome/help/glabels/C/figures/merge-ex2-2.png
+share/gnome/help/glabels/C/figures/merge-ex2-3.png
+share/gnome/help/glabels/C/figures/merge-ex2-4.png
 share/gnome/help/glabels/C/figures/object-editor-sidebar.png
 share/gnome/help/glabels/C/figures/print-copies.png
 share/gnome/help/glabels/C/figures/print-merge.png

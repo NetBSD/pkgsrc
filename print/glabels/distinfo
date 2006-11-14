@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/04/29 12:39:25 agc Exp $
+$NetBSD: distinfo,v 1.5 2006/11/14 16:54:29 drochner Exp $
 
-SHA1 (glabels-2.0.2.tar.gz) = d579d2bf8187316ec3f846d4eea2b8ab448dca60
-RMD160 (glabels-2.0.2.tar.gz) = 0950e410e1f590869cfdd5b336b51b443b5d6742
-Size (glabels-2.0.2.tar.gz) = 1614927 bytes
-SHA1 (patch-aa) = e1363080ce671e56611da755b6dcc73ee88f93a1
+SHA1 (glabels-2.0.4.tar.gz) = 3794028a978e6976ea230b191a28746d3a9bb4a7
+RMD160 (glabels-2.0.4.tar.gz) = 9ed141bc23c085d0f5131192463421e07f13945a
+Size (glabels-2.0.4.tar.gz) = 1920095 bytes
