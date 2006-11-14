@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
+
+--- configure.orig	2006-07-08 01:46:19.000000000 +0200
++++ configure
+@@ -24340,6 +24340,11 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<\_ACEOF
++#define PCVT_SUPPORT 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
+ #define WSCONS_SUPPORT 1
+ _ACEOF
+ 
+@@ -27910,7 +27915,7 @@ _ACEOF
+ 
+ fi
+ 
+-VENDOR_RELEASE="((($VERSION_MAJOR) * 10000000) + (($VERSION_MINOR) * 100000) + (($VERSION_PATCH) * 1000) + $VERSION_SNAP)"
++VENDOR_RELEASE=`expr \( $VERSION_MAJOR \* 10000000 \) + \( $VERSION_MINOR \* 100000 \) + \( $VERSION_PATCH \* 1000 \) + $VERSION_SNAP`
+ 
+ if test $VERSION_SNAP = "0"; then
+ 	if test $VERSION_PATCH = "0"; then
