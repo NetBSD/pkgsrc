@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.43 2006/11/06 17:58:06 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.44 2006/11/14 11:56:56 hubertf Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -515,6 +515,7 @@ file and inspect the contents before extracting it.
 	  <ulink url="http://www.interopsystems.com/InteropXserver.htm">Interop X Server</ulink>),
 	  and the free X11 server included with
 	  <ulink url="http://x.cygwin.com/">Cygwin</ulink>.</para>
+	  </listitem>
 
 	  <listitem><para><emphasis role="strong">X11 acceleration:</emphasis></para>
 	  <para>Because Interix runs in a completely different NT subsystem from
