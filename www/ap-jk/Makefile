@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2006/07/22 19:41:34 abs Exp $
+# $NetBSD: Makefile,v 1.39 2006/11/15 11:04:04 abs Exp $
 
-DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
+DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	ap-jk-${JK_VERSION}
-PKGREVISION=	1
 
 MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
