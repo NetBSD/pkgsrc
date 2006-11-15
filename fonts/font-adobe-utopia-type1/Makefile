@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 10:42:07 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/15 11:09:15 joerg Exp $
 #
 
 DISTNAME=		font-adobe-utopia-type1-1.0.1
@@ -13,7 +13,7 @@ COMMENT=		Adobe Utopia Type1 fonts
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake
 
 FONTS_DIRS.type1=	lib/X11/fonts/Type1
 FONTS_DIRS.x11=		lib/X11/fonts/Type1
