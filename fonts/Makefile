@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2006/11/14 21:22:41 joerg Exp $
+# $NetBSD: Makefile,v 1.99 2006/11/15 09:44:23 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -50,6 +50,10 @@ SUBDIR+=	dejavu-ttf
 SUBDIR+=	ec-fonts-mftraced
 SUBDIR+=	efont-unicode
 SUBDIR+=	encodings
+SUBDIR+=	font-adobe-100dpi
+SUBDIR+=	font-adobe-75dpi
+SUBDIR+=	font-adobe-utopia-100dpi
+SUBDIR+=	font-adobe-utopia-75dpi
 SUBDIR+=	font-bitstream-type1
 SUBDIR+=	font-cursor-misc
 SUBDIR+=	font-misc-misc
