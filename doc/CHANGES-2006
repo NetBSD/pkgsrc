@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1827 2006/11/15 11:05:28 abs Exp $
+>$NetBSD: CHANGES-2006,v 1.1828 2006/11/15 11:29:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5320,5 +5320,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-adobe-75dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-adobe-utopia-75dpi version 1.0.1 [joerg 2006-11-15]
 	Added fonts/font-adobe-utopia-100dpi version 1.0.1 [joerg 2006-11-15]
+	Added fonts/font-adobe-utopia-type1 version 1.0.1 [joerg 2006-11-15]
 	Updated www/ap-jk to 1.2.19 [abs 2006-11-15]
 	Updated www/ap2-jk to 1.2.19 [abs 2006-11-15]
+	Added fonts/font-bh-100dpi version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bh-75dpi version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bh-lucidatypewriter-100dpi version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bh-lucidatypewriter-75dpi version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bh-ttf version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bh-type1 version 1.0.0 [joerg 2006-11-15]
