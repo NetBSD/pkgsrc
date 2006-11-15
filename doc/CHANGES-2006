@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1828 2006/11/15 11:29:22 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1829 2006/11/15 15:05:49 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5329,3 +5329,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-bh-lucidatypewriter-75dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-bh-ttf version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-bh-type1 version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bitstream-100dpi version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-bitstream-75dpi version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-daewoo-misc version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-dec-misc version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-ibm-type1 version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-isas-misc version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-jis-misc version 1.0.0 [joerg 2006-11-15]
+	Added fonts/font-mutt-misc version 1.0.0 [joerg 2006-11-15]
