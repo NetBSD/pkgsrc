@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/10/03 12:09:14 ghen Exp $
+# $NetBSD: options.mk,v 1.4 2006/11/15 15:28:21 martin Exp $
 
 PKG_OPTIONS_VAR		= PKG_OPTIONS.gecko
 PKG_SUPPORTED_OPTIONS	= debug
@@ -13,6 +13,8 @@ PKG_SUPPORTED_OPTIONS  += official-mozilla-branding
 # so it is correct
 .if empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--disable-debug
+.else
+CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 # Enable Official mozilla.org Branding for Firefox or Thunderbird.
