@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/15 11:23:32 joerg Exp $
+
+SHA1 (font-bh-lucidatypewriter-75dpi-1.0.0.tar.bz2) = 01e9bc09581457dfb00fe8ac97cb31d012f96fce
+RMD160 (font-bh-lucidatypewriter-75dpi-1.0.0.tar.bz2) = a2fa441a655710e602ea56f64d763b43c5a47cb7
+Size (font-bh-lucidatypewriter-75dpi-1.0.0.tar.bz2) = 152897 bytes
+SHA1 (patch-aa) = 4a569356792e42ff8c858fc825b591aed8bb6572
+SHA1 (patch-ab) = 695f63012bd466ca1bf1498df7d88e9f12295dce
+SHA1 (patch-ac) = fa4de51cb30fc50566bff502397c7f05dcbd929b
