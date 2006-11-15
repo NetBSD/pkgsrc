@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2006/08/04 08:05:54 ghen Exp $
+# $NetBSD: Makefile,v 1.45 2006/11/15 21:46:24 bouyer Exp $
 
-DISTNAME=		apcupsd-3.8.6
-PKGREVISION=		5
+DISTNAME=		apcupsd-3.12.4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -10,6 +9,7 @@ HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
 
 USE_TOOLS+=		gmake msgfmt sh
+USE_LANGUAGES+=		c++
 
 GNU_CONFIGURE=		yes
 
@@ -23,6 +23,8 @@ PKG_SYSCONFSUBDIR= apcupsd
 #CONFIGURE_ARGS+=	--enable-threads	# compile threading code
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 
+CONFIGURE_ARGS+=	--enable-net		# enable NIS network driver
+#CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
 CONFIGURE_ARGS+=	--with-lock-dir=${VARBASE}/spool/lock
@@ -40,11 +42,17 @@ CONF_FILES_PERMS+= ${EGDIR}/apcupsd.master.conf ${PKG_SYSCONFDIR}/apcupsd.conf $
 CONF_FILES_PERMS+= ${EGDIR}/changeme ${PKG_SYSCONFDIR}/changeme ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commfailure ${PKG_SYSCONFDIR}/commfailure ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commok ${PKG_SYSCONFDIR}/commok ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+= ${EGDIR}/masterconnect ${PKG_SYSCONFDIR}/masterconnect ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+= ${EGDIR}/mastertimeout ${PKG_SYSCONFDIR}/mastertimeout ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+= ${EGDIR}/offbattery ${PKG_SYSCONFDIR}/offbattery ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+= ${EGDIR}/mainsback ${PKG_SYSCONFDIR}/mainsback ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
 RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/distributions/netbsd/apcupsd
+
+EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
+    etc/masterconnect etc/mastertimeout etc/offbattery etc/onbattery
+MANFILES= apcupsd apctest
 
 # we should probably allow the tty to be set in /etc/mk.conf too
 #
@@ -55,52 +63,31 @@ post-build:
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|' \
 		${WRKSRC}/examples/apcupsd.slave.conf > \
 		${WRKDIR}/apcupsd.slave.conf
+.for file in ${MANFILES}
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|'\
 	     -e 's|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|' \
-	     ${WRKSRC}/doc/apcupsd.man > ${WRKSRC}/doc/apcupsd.8
+	     ${WRKSRC}/doc/${file}.man > ${WRKSRC}/doc/${file}.8
+.endfor
 
-DOCS=	README.BackUPS		\
-	README.BackUPS-Pro	\
-	README.NewerBackUPS-Pro	\
-	README.Share-UPS	\
-	README.SmartUPS-VS	\
-	README.apcaccess	\
-	README.autoconfig	\
-	README.cable		\
-	Statement.APCC 		\
-	apcupsd-bug-1 		\
-	apcupsd-bug-2 		\
-	minicom.txt		\
-	port.gif
-
-HTMLDOCS= apcaccess.html apcnisd.html apctest.html apcupsd-styles.css \
-	 apcupsd.book apcupsd.gif apcupsd.html batteries.html bugs.html \
-	 cables.html cgiprogs.html charging.gif config-examples.html \
-	 configure.html data.html eprom.html events.html faq.html index.html \
-	 install.html invoking.html kernel_config.html license.html \
-	 logging.html master-slave.html multiUPS.html multimon.gif \
-	 new_features_3_7_0.html new_features_3_8_0.html \
-	 new_features_3_8_1.html new_features_3_8_2.html \
-	 new_features_3_8_3.html new_features_3_8_4.html \
-	 new_features_3_8_5.html oldversions.html onbatt.gif online.gif \
-	 security.html shutdown.html status.gif status.html stopping.html \
-	 testing.html thanks.gif thanks.html troubles.html \
-	 upgrading_to_3_7_0.html upsbible.html usb.html win32.html \
-	 wininstall1.gif wininstall2.gif wininstall3.gif wininstall4.gif \
-	 wininstall5.gif wininstall6.gif wininstall7.gif
+HTMLDOCS= apcupsd.gif bclogo.gif bugs.html bugs.wml index.html index.wml \
+    license.html license.wml lists.html lists.wml mail16d.png menu.inc \
+    publishsite support.html support.wml systems.html systems.wml template.inc
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/apcupsd
 	${INSTALL_DATA} ${WRKDIR}/apcupsd.master.conf \
 		${PREFIX}/share/examples/apcupsd
 	${INSTALL_DATA} ${WRKDIR}/apcupsd.slave.conf \
 		${PREFIX}/share/examples/apcupsd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/apcupsd
-.for file in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/apcupsd
+.for file in ${EGFILES}
+	${INSTALL_SCRIPT} ${WRKSRC}/platforms/${file} \
+		${PREFIX}/share/examples/apcupsd
 .endfor
+	${INSTALL_SCRIPT} ${WRKSRC}/platforms/netbsd/apcupsd \
+	    ${PREFIX}/share/examples/rc.d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/apcupsd
 .for file in ${HTMLDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/manual/${file} \
+	${INSTALL_DATA} ${WRKSRC}/doc/home-page/${file} \
 		${PREFIX}/share/doc/html/apcupsd
 .endfor
 
