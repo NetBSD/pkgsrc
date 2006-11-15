@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1830 2006/11/15 15:15:32 drochner Exp $
+>$NetBSD: CHANGES-2006,v 1.1831 2006/11/15 21:47:30 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-isas-misc version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-jis-misc version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-mutt-misc version 1.0.0 [joerg 2006-11-15]
+	Updated sysutils/apcupsd to 3.12.4 [bouyer 2006-11-15]
