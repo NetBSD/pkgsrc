@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 09:19:19 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/15 10:29:32 joerg Exp $
 #
 
 DISTNAME=		font-adobe-75dpi-1.0.0
@@ -16,6 +16,11 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any
 
 FONTS_DIRS.x11=		lib/X11/fonts/75dpi
+
+INSTALLATION_DIRS=	share/doc/font-adobe-75dpi
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/font-adobe-75dpi
 
 .include "../../fonts/font-util/buildlink3.mk"
 
