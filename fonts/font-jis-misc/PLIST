@@ -1,14 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2006/11/15 14:57:14 joerg Exp $
-lib/X11/fonts/misc/cu-alt12.pcf.gz
-lib/X11/fonts/misc/cu-arabic12.pcf.gz
-lib/X11/fonts/misc/cu-devnag12.pcf.gz
-lib/X11/fonts/misc/cu-lig12.pcf.gz
-lib/X11/fonts/misc/cu-pua12.pcf.gz
-lib/X11/fonts/misc/cu12.pcf.gz
-lib/X11/fonts/misc/cuarabic12.pcf.gz
-lib/X11/fonts/misc/cudevnag12.pcf.gz
-share/doc/font-mutt-misc/COPYING
-@dirrm share/doc/font-mutt-misc
+@comment $NetBSD: PLIST,v 1.1.1.3 2006/11/15 15:00:00 joerg Exp $
+lib/X11/fonts/misc/jiskan16.pcf.gz
+lib/X11/fonts/misc/jiskan24.pcf.gz
 @comment @dirrm lib/X11/fonts/misc
 @comment @dirrm lib/X11/fonts
 @comment @dirrm lib/X11
