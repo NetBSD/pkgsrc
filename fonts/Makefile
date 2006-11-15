@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2006/11/15 11:29:22 joerg Exp $
+# $NetBSD: Makefile,v 1.101 2006/11/15 15:05:49 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -61,9 +61,17 @@ SUBDIR+=	font-bh-lucidatypewriter-100dpi
 SUBDIR+=	font-bh-lucidatypewriter-75dpi
 SUBDIR+=	font-bh-ttf
 SUBDIR+=	font-bh-type1
+SUBDIR+=	font-bitstream-100dpi
+SUBDIR+=	font-bitstream-75dpi
 SUBDIR+=	font-bitstream-type1
 SUBDIR+=	font-cursor-misc
+SUBDIR+=	font-daewoo-misc
+SUBDIR+=	font-dec-misc
+SUBDIR+=	font-ibm-type1
+SUBDIR+=	font-isas-misc
+SUBDIR+=	font-jis-misc
 SUBDIR+=	font-misc-misc
+SUBDIR+=	font-mutt-misc
 SUBDIR+=	font-util
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
