@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1823 2006/11/14 23:07:00 reed Exp $
+>$NetBSD: CHANGES-2006,v 1.1824 2006/11/15 01:13:28 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5313,3 +5313,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-cursor-misc version 1.0.0 [joerg 2006-11-14]
 	Added fonts/font-misc-misc version 1.0.0 [joerg 2006-11-14]
 	Added x11/xf86-video-wsfb version 0.2.0 [reed 2006-11-14]
+	Updated math/fftwf to 3.1.2 [wulf 2006-11-15]
