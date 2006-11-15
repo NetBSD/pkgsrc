@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/11/15 14:56:38 joerg Exp $
+$NetBSD: patch-ac,v 1.1.1.2 2006/11/15 15:00:00 joerg Exp $
 
 --- configure.ac.orig	2005-12-15 01:24:24.000000000 +0100
 +++ configure.ac
