@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.10 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: print-plist.mk,v 1.11 2006/11/15 10:40:34 joerg Exp $
 
 ###
 ### Automatic PLIST generation
@@ -39,6 +39,19 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /emul\/linux\/proc/)
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${PKGINFODIR:S|/|\\/|g}\/dir$$/)
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${PKGINFODIR:S|/|\\/|g}\/[^\/]+(-[0-9]+)(\.gz)?$$/)
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^([^\/]*\/)*(info\/[^\/]+|[^\/]+\.info)(-[0-9]+)(\.gz)?$$/)
+.endif
+.if (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/encodings\.dir/)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.dir/)
+.endif
+.if (defined(FONTS_DIRS.ttf) && !empty(FONTS_DIRS.ttf:M*)) || \
+    (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*))
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.scale/)
+.endif
+.if (defined(FONTS_DIRS.ttf) && !empty(FONTS_DIRS.ttf:M*)) || \
+    (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*)) || \
+    (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.cache-1/)
 .endif
 
 # Common (system) directories not to generate @dirrm statements for
