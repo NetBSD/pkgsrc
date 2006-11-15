@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/11/15 13:36:12 joerg Exp $
+
+--- configure.ac.orig	2006-11-15 14:24:26.000000000 +0100
++++ configure.ac
+@@ -29,7 +29,6 @@ AM_MAINTAINER_MODE
+ AC_PROG_INSTALL
+ 
+ AC_PATH_PROG(BDFTOPCF, bdftopcf)
+-AC_PATH_PROG(MKFONTSCALE, mkfontscale)
+ AC_PATH_PROG(MKFONTDIR, mkfontdir)
+ 
+ m4_ifdef([AS_HELP_STRING], , [m4_define([AS_HELP_STRING], m4_defn([AC_HELP_STRING]))])
