@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2006/05/31 18:22:25 ghen Exp $
+# $NetBSD: options.mk,v 1.7 2006/11/15 18:09:19 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pureftpd
 PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql ssl virtualchroot utf8
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-pgsql
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tls
+CONFIGURE_ARGS+=	--with-certfile=${SSLKEYS}/pure-ftpd.pem
 .endif
 
 .if !empty(PKG_OPTIONS:Mvirtualchroot)
