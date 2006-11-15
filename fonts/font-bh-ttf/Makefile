@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 11:24:09 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/15 14:00:21 joerg Exp $
 #
 
 DISTNAME=		font-bh-ttf-1.0.0
@@ -21,7 +21,5 @@ INSTALLATION_DIRS=	share/doc/font-bh-ttf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/font-bh-ttf
-
-.include "../../fonts/font-util/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
