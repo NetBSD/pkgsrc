@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2006/11/15 14:57:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 14:57:54 joerg Exp $
 lib/X11/fonts/misc/cu-alt12.pcf.gz
 lib/X11/fonts/misc/cu-arabic12.pcf.gz
 lib/X11/fonts/misc/cu-devnag12.pcf.gz
