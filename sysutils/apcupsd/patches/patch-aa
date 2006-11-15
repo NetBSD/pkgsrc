@@ -1,25 +1,19 @@
-$NetBSD: patch-aa,v 1.3 2002/12/01 22:32:26 bouyer Exp $
+$NetBSD: patch-aa,v 1.4 2006/11/15 21:46:25 bouyer Exp $
 
---- doc/apcupsd.man.orig	Fri Feb  2 23:46:33 2001
-+++ doc/apcupsd.man	Sun Dec  1 13:13:59 2002
-@@ -4,19 +4,19 @@
- .\" LP paragraph
- .\" IP indented paragraph
- .\" TP hanging label
--.TH apcupsd 8 "APC UPS management under Linux -- November 1999"
-+.TH apcupsd 8 "APC UPS management under Unix -- November 1999"
+--- doc/apcupsd.man.orig	2005-09-13 14:34:36.000000000 +0200
++++ doc/apcupsd.man	2006-11-15 17:30:21.000000000 +0100
+@@ -8,15 +8,15 @@
  .SH NAME
--apcupsd \- daemon for most APC's UPS for Linux
-+apcupsd \- daemon for most APC's UPS for Unix
+ apcupsd \- daemon for most APC's UPS for Linux
  .SH SYNOPSIS
--.B /sbin/apcupsd 
-+.B @@PREFIX@@/sbin/apcupsd 
+-.B /sbin/apcupsd
++.B @@PREFIX@@/sbin/apcupsd
  .br
 -.B /etc/apcupsd/apccontrol
-+.B @@SYSCONFDIR@@/apccontrol
++.B @@SYSCONFDIR@@/apcupsd/apccontrol
  .br
 -.B /etc/apcupsd/apcupsd.conf
-+.B @@SYSCONFDIR@@/apcupsd.conf
++.B @@SYSCONFDIR@@/apcupsd/apcupsd.conf
  .br
 -.B /sbin/apcaccess
 +.B @@PREFIX@@/sbin/apcaccess
@@ -29,50 +23,34 @@ $NetBSD: patch-aa,v 1.3 2002/12/01 22:32:26 bouyer Exp $
  .br
  .SH DESCRIPTION
  .LP
-@@ -29,7 +29,7 @@
- above shutdown conditions is met, "apcupsd" will inform users about this
- fact.
+@@ -38,7 +38,7 @@
+ conditions is met, apcupsd will inform users about this fact.
  
--The shutdown is made by script calls to "/etc/apcupsd/apccontrol", which
-+The shutdown is made by script calls to "@@SYSCONFDIR@@/apccontrol", which
- is called by "apcupsd". Consequently, no changes to /etc/inittab are necessary.
- There is no communication between "apcupsd" and init(1) process.
- Apcupsd modifies the halt script so that at the end of the shutdown
-@@ -50,22 +50,18 @@
- has a network connection with the slaves and sends them information
- about the UPS status.
- 
--.LP
--RedHat and S.u.S.E. versions of Linux have direct install support.  All
--other "FLAVORS" of Linux will need some fussing with to get the install
--correct.
- .SH OPTIONS
+ The shutdown is made by script calls to
+-"/etc/apcupsd/apccontrol", which is called by "apcupsd".
++"@@SYSCONFDIR@@/apcupsd/apccontrol", which is called by "apcupsd".
+ Consequently, no changes to /etc/inittab are necessary.  There is
+ no communication between apcupsd and init(1) process.  Apcupsd
+ modifies the halt script so that at the end of the shutdown
+@@ -75,7 +75,7 @@
  .TP
  .B \-c --configure
  Attempts to configure the UPS EPROM to the values specified in the
 -configuration file "/etc/apcupsd/apcupsd.conf".
-+configuration file "@@SYSCONFDIR@@/apcupsd.conf".
- .TP
- .B \-d --debug <level>
- Turns on debugging output for a NETSLAVE or a NETMASTER.
++configuration file "@@SYSCONFDIR@@/apcupsd/apcupsd.conf".
+ This option is now deprecated (not supported) and should not
+ be used. Instead use the apctest program, which has an interactive
+ EEPROM configuration.
+@@ -85,7 +85,7 @@
  .TP
  .B \-f --config-file <file>
  Specifies the location of the configuration file.  The default
 -is: /etc/apcupsd/apcupsd.conf
-+is: @@SYSCONFDIR@@/apcupsd.conf
++is: @@SYSCONFDIR@@/apcupsd/apcupsd.conf
  .TP
  .B \-k --killpower
  Attempt to turn the UPS off. This option is normally only
-@@ -74,7 +70,7 @@
- .TP
- .B \-n --rename-ups
- Attempts to change the UPS name stored in the UPS EPROM
--to that specified in your "/etc/apcupsd/apcupsd.conf" file.
-+to that specified in your "@@SYSCONFDIR@@/apcupsd.conf" file.
- .TP
- .B \-u --update-battery-date
- Attempts to update the battery date stored in the UPS EPROM. Normally
-@@ -88,12 +84,12 @@
+@@ -100,12 +100,12 @@
  
  .SH CONFIGURATION
  It may be necessary to change the configuration information in the file
@@ -87,40 +65,24 @@ $NetBSD: patch-aa,v 1.3 2002/12/01 22:32:26 bouyer Exp $
  are:
  
  .LP
-@@ -131,7 +127,7 @@
- -- <name of serial port>
- .br
- Please specify which device is used for UPS communication.
--The default is /dev/ttyS[0|1|2|3].
-+The default is /dev/tty0[0|1|2|3].
- .LP
- .B  LOCKFILE
- -- <path to lockfile>
-@@ -615,13 +611,13 @@
- .br
- 940-0023A     Simple Signal UNIX, [BROKEN STILL].
+@@ -399,7 +399,7 @@
+ are disabled or set to default values. Currently, there is not a known
+ way for early signals to be sent to BASIC Ports. MINUTES are set to 0.
  .SH FILES
 -.B /etc/apcupsd/apcupsd.conf
-+.B @@SYSCONFDIR@@/apcupsd.conf
++.B @@SYSCONFDIR@@/apcupsd/apcupsd.conf
  - configuration file.
  .br
--.B /etc/apcupsd/apcupsd.status
-+.B /var/run/apcupsd.status
- - STATUS file
- .br
--.B /etc/apcupsd/apcupsd.events
-+.B /var/log/apcupsd.events
- - where up to the last 50 events are stored
- for the network information server.
- .SH EVENTS
-@@ -630,8 +626,8 @@
- ...
+ .B /var/log/apcupsd.status
+@@ -415,9 +415,9 @@
  
  These events are sent to the system log, optionally sent
--to the temporary events file (/etc/apcupsd/apcupsd.events),
+ to the temporary events file (/var/log/apcupsd.events),
 -and they also generate a call to /etc/apcupsd/apccontrol
-+to the temporary events file (/var/run/apcupsd.events),
-+and they also generate a call to @@SYSCONFDIR@@/apccontrol
++and they also generate a call to @@SYSCONFDIR@@/apcupsd/apccontrol
  which in turn will call any scripts you have placed in the
- /etc/apcupsd directory.
+-/etc/apcupsd directory.
++@@SYSCONFDIR@@/apcupsd directory.
  
+ .SH DATA format
+ If the DATATIME configuration command is set nonzero, 
