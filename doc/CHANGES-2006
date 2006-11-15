@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1824 2006/11/15 01:13:28 wulf Exp $
+>$NetBSD: CHANGES-2006,v 1.1825 2006/11/15 01:24:45 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5314,3 +5314,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-misc-misc version 1.0.0 [joerg 2006-11-14]
 	Added x11/xf86-video-wsfb version 0.2.0 [reed 2006-11-14]
 	Updated math/fftwf to 3.1.2 [wulf 2006-11-15]
+	Updated devel/epydoc to 2.1nb3 [wulf 2006-11-15]
+	Updated audio/jack to 0.100.0nb2 [wulf 2006-11-15]
