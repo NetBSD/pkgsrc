@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/15 09:40:44 joerg Exp $
+
+SHA1 (font-adobe-utopia-75dpi-1.0.1.tar.bz2) = db30aa20271d8b6aeab7a0dff13c516fcea12af1
+RMD160 (font-adobe-utopia-75dpi-1.0.1.tar.bz2) = 0c4a7ef7fe8f5c688ceaebd1f5f6e6a2a1920813
+Size (font-adobe-utopia-75dpi-1.0.1.tar.bz2) = 213520 bytes
+SHA1 (patch-aa) = 613a47432c2681cfdfb5f38f058746cc1841e955
+SHA1 (patch-ab) = df549136dd887fac6115125ecef24002e1a460d7
+SHA1 (patch-ac) = 933e1fa4c16d3e985405a0c7b1a8c8f7ac8d0de0
