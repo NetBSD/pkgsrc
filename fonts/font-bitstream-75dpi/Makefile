@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2006/11/15 13:35:28 joerg Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 13:36:12 joerg Exp $
 #
 
 DISTNAME=		font-bitstream-75dpi-1.0.0
