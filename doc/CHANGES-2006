@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1829 2006/11/15 15:05:49 joerg Exp $
+>$NetBSD: CHANGES-2006,v 1.1830 2006/11/15 15:15:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5329,6 +5329,18 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-bh-lucidatypewriter-75dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-bh-ttf version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-bh-type1 version 1.0.0 [joerg 2006-11-15]
+	Updated databases/gnome-mime-data to 2.4.3 [drochner 2006-11-15]
+	Updated misc/goffice to 0.2.2 [drochner 2006-11-15]
+	Updated print/glabels to 2.0.4 [drochner 2006-11-15]
+	Updated sysutils/nautilus to 2.16.2 [drochner 2006-11-15]
+	Updated x11/py-gnome2 to 2.16.2 [drochner 2006-11-15]
+	Updated sysutils/libnotify to 0.4.3 [drochner 2006-11-15]
+	Updated devel/libsexy to 0.1.10 [drochner 2006-11-15]
+	Updated sysutils/notification-daemon to 0.3.6 [drochner 2006-11-15]
+	Updated security/gnutls to 1.4.5 [drochner 2006-11-15]
+	Updated sysutils/dbus-glib to 0.72 [drochner 2006-11-15]
+	Updated sysutils/dbus to 1.0.0 [drochner 2006-11-15]
+	Updated net/libsoup-devel to 2.2.97 [drochner 2006-11-15]
 	Added fonts/font-bitstream-100dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-bitstream-75dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-daewoo-misc version 1.0.0 [joerg 2006-11-15]
