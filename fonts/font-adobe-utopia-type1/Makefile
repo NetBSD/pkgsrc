@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/15 11:12:15 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/15 14:00:21 joerg Exp $
 #
 
 DISTNAME=		font-adobe-utopia-type1-1.0.1
@@ -21,7 +21,5 @@ INSTALLATION_DIRS=	share/doc/font-adobe-utopia-type1
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/font-adobe-utopia-type1
-
-.include "../../fonts/font-util/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
