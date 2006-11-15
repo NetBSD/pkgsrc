@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/15 14:56:38 joerg Exp $
+
+--- Makefile.am.orig	2005-11-24 06:21:15.000000000 +0100
++++ Makefile.am
+@@ -40,8 +40,6 @@ CLEANFILES = $(font_DATA)
+ EXTRA_DIST = $(BDF_FILES) autogen.sh
+ 
+ install-data-hook:
+-	@rm -f $(DESTDIR)$(fontdir)/fonts.scale
+-	$(MKFONTSCALE) $(DESTDIR)$(fontdir)
+ 	@rm -f $(DESTDIR)$(fontdir)/font.dir
+ 	$(MKFONTDIR) $(DESTDIR)$(fontdir)
+ 
