@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 13:34:48 joerg Exp $
+lib/X11/fonts/100dpi/charB08.pcf.gz
+lib/X11/fonts/100dpi/charB10.pcf.gz
+lib/X11/fonts/100dpi/charB12.pcf.gz
+lib/X11/fonts/100dpi/charB14.pcf.gz
+lib/X11/fonts/100dpi/charB18.pcf.gz
+lib/X11/fonts/100dpi/charB24.pcf.gz
+lib/X11/fonts/100dpi/charBI08.pcf.gz
+lib/X11/fonts/100dpi/charBI10.pcf.gz
+lib/X11/fonts/100dpi/charBI12.pcf.gz
+lib/X11/fonts/100dpi/charBI14.pcf.gz
+lib/X11/fonts/100dpi/charBI18.pcf.gz
+lib/X11/fonts/100dpi/charBI24.pcf.gz
+lib/X11/fonts/100dpi/charI08.pcf.gz
+lib/X11/fonts/100dpi/charI10.pcf.gz
+lib/X11/fonts/100dpi/charI12.pcf.gz
+lib/X11/fonts/100dpi/charI14.pcf.gz
+lib/X11/fonts/100dpi/charI18.pcf.gz
+lib/X11/fonts/100dpi/charI24.pcf.gz
+lib/X11/fonts/100dpi/charR08.pcf.gz
+lib/X11/fonts/100dpi/charR10.pcf.gz
+lib/X11/fonts/100dpi/charR12.pcf.gz
+lib/X11/fonts/100dpi/charR14.pcf.gz
+lib/X11/fonts/100dpi/charR18.pcf.gz
+lib/X11/fonts/100dpi/charR24.pcf.gz
+lib/X11/fonts/100dpi/tech14.pcf.gz
+lib/X11/fonts/100dpi/techB14.pcf.gz
+lib/X11/fonts/100dpi/term14.pcf.gz
+lib/X11/fonts/100dpi/termB14.pcf.gz
+share/doc/font-bitstream-100dpi/COPYING
+@dirrm share/doc/font-bitstream-100dpi
+@comment @dirrm lib/X11/fonts/100dpi
+@comment @dirrm lib/X11/fonts
+@comment @dirrm lib/X11
