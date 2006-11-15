@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/10/14 01:33:50 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/15 01:11:13 wulf Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
-DISTNAME=		fftw-3.0.1-fma
+DISTNAME=		fftw-3.1.2-fma
 .else
-DISTNAME=		fftw-3.0.1
+DISTNAME=		fftw-3.1.2
 .endif
-PKGNAME=		fftwf-3.0.1
-PKGREVISION=		1
+PKGNAME=		fftwf-3.1.2
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
@@ -21,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-float
 
-DEPENDS+=		fftw>=3.0.1:../../math/fftw
+DEPENDS+=		fftw>=3.1.2:../../math/fftw
 
 .if (${MACHINE_ARCH} == "i386")
 #CONFIGURE_ARGS+=	--enable-sse
