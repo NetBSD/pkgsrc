@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 11:25:43 joerg Exp $
+lib/X11/fonts/Type1/l047013t.afm
+lib/X11/fonts/Type1/l047013t.pfa
+lib/X11/fonts/Type1/l047016t.afm
+lib/X11/fonts/Type1/l047016t.pfa
+lib/X11/fonts/Type1/l047033t.afm
+lib/X11/fonts/Type1/l047033t.pfa
+lib/X11/fonts/Type1/l047036t.afm
+lib/X11/fonts/Type1/l047036t.pfa
+lib/X11/fonts/Type1/l048013t.afm
+lib/X11/fonts/Type1/l048013t.pfa
+lib/X11/fonts/Type1/l048016t.afm
+lib/X11/fonts/Type1/l048016t.pfa
+lib/X11/fonts/Type1/l048033t.afm
+lib/X11/fonts/Type1/l048033t.pfa
+lib/X11/fonts/Type1/l048036t.afm
+lib/X11/fonts/Type1/l048036t.pfa
+lib/X11/fonts/Type1/l049013t.afm
+lib/X11/fonts/Type1/l049013t.pfa
+lib/X11/fonts/Type1/l049016t.afm
+lib/X11/fonts/Type1/l049016t.pfa
+lib/X11/fonts/Type1/l049033t.afm
+lib/X11/fonts/Type1/l049033t.pfa
+lib/X11/fonts/Type1/l049036t.afm
+lib/X11/fonts/Type1/l049036t.pfa
+share/doc/font-bh-type1/COPYING
+@dirrm share/doc/font-bh-type1
+@comment @dirrm lib/X11/fonts/Type1
+@comment @dirrm lib/X11/fonts
+@comment @dirrm lib/X11
