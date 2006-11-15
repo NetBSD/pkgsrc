@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2006/11/15 14:57:14 joerg Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 14:57:54 joerg Exp $
 #
 
 DISTNAME=		font-mutt-misc-1.0.0
