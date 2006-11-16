@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/06/01 13:54:09 markd Exp $
+# $NetBSD: Makefile,v 1.55 2006/11/16 02:51:26 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -23,6 +23,8 @@ REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	krfb/krfb_httpd/krfb_httpd
+
+CONFIGURE_ARGS+=	--disable-meanwhile
 
 .include "../../mk/bsd.prefs.mk"
 
