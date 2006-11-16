@@ -1,47 +1,41 @@
-# $NetBSD: pkg_fail_reason.mk,v 1.1 2006/11/14 13:56:14 rillig Exp $
+# $NetBSD: pkg_fail_reason.mk,v 1.2 2006/11/16 09:38:53 rillig Exp $
 #
 
 # This file prints the error that are collected when the Makefiles are
 # loaded.
 #
 
-.if !defined(NO_SKIP)
+PKG_FAIL_REASON?=	# none
+PKG_SKIP_REASON?=	# none
 
-#
-# Now print some error messages that we know we should ignore the pkg
-#
-.  if defined(PKG_FAIL_REASON) || defined(PKG_SKIP_REASON)
-.PHONY: do-check-pkg-fail-or-skip-reason
-fetch checksum extract patch configure all build install package \
-update depends do-check-pkg-fail-or-skip-reason:
-.    if defined(SKIP_SILENT)
+.PHONY: _check-pkg-fail-reason
+_check-pkg-fail-reason: .USEBEFORE
+.if defined(SKIP_SILENT)
 	@${DO_NADA}
-.    else
-.      if defined(PKG_FAIL_REASON) && !empty(PKG_FAIL_REASON:M*)
+.else
+.  if !empty(PKG_FAIL_REASON:M*)
 	@for str in ${PKG_FAIL_REASON}; do				\
 		${ERROR_MSG} "$$str";					\
 	done
-.      endif
-.      if defined(PKG_SKIP_REASON) && !empty(PKG_SKIP_REASON:M*)
-	@${WARNING_MSG} "Skipping ${PKGNAME}:";				\
-	for str in ${PKG_SKIP_REASON}; do				\
+.  endif
+.  if !empty(PKG_SKIP_REASON:M*)
+	@for str in "Skipping ${PKGNAME}:" ${PKG_SKIP_REASON}; do	\
 		${WARNING_MSG} "$$str";					\
 	done
-.      endif
-.    endif
-.    if defined(PKG_FAIL_REASON) && !empty(PKG_FAIL_REASON:M*)
-	@${FALSE}
-.    endif
-.  endif # SKIP
-.endif # !NO_SKIP
-
-.PHONY: do-check-pkg-fail-reason
-do-check-pkg-fail-reason:
-	@${DO_NADA}
-
-# This target should appear as a dependency of every top level target that
-# is intended to be called by the user or by a package different from the
-# current package.
-.if defined(PKG_FAIL_REASON)
-do-check-pkg-fail-reason: do-check-pkg-fail-or-skip-reason
+.  endif
 .endif
+.if !empty(PKG_FAIL_REASON:M*)
+	@${FALSE}
+.endif
+
+# All the "public" targets should be listed here.
+#
+.if !defined(NO_SKIP)
+.  if !empty(PKG_FAIL_REASON) || !empty(PKG_SKIP_REASON)
+# FIXME: check-vulnerable is only used here because it is depended
+# upon by each of the "main" pkgsrc targets. Probably its name should be
+# generalized, and both check-vulnerable and _check-pkg-fail-reason should
+# depend on the generalized target.
+check-vulnerable: _check-pkg-fail-reason
+.  endif
+.endif # !NO_SKIP
