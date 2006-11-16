@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1896 2006/11/14 13:56:14 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1897 2006/11/16 09:38:53 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -563,8 +563,6 @@ PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 .endif
 
-.include "${.PARSEDIR}/internal/pkg_fail_reason.mk"
-
 # Add these defs to the ones dumped into +BUILD_DEFS
 _BUILD_DEFS+=	PKGPATH
 _BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
@@ -916,3 +914,4 @@ changes-entry:
 .if make(help)
 .include "${PKGSRCDIR}/mk/help/help.mk"
 .endif
+.include "${.PARSEDIR}/internal/pkg_fail_reason.mk"
