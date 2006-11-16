@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5704 2006/11/14 14:16:52 obache Exp $
+$NetBSD: TODO,v 1.5705 2006/11/16 08:01:01 taca Exp $
 
 Suggested new packages
 ======================
@@ -978,7 +978,7 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-8.0
 	o sablecc-3.2
-	o samba-3.0.23c
+	o samba-3.0.23d
 	o sarg-2.2.2
 	o sather-1.2.2
 	o sawfish-1.3
