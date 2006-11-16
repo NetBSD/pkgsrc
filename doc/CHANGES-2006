@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1832 2006/11/16 14:39:00 abs Exp $
+>$NetBSD: CHANGES-2006,v 1.1833 2006/11/16 21:53:24 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5351,3 +5351,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added fonts/font-mutt-misc version 1.0.0 [joerg 2006-11-15]
 	Updated sysutils/apcupsd to 3.12.4 [bouyer 2006-11-15]
 	Updated sysutils/rconfig to 0.45 [abs 2006-11-15]
+	Updated devel/arena to 0.9.9 [agc 2006-11-15]
