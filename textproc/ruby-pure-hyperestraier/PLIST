@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/17 15:45:46 obache Exp $
+${RUBY_SITELIBDIR}/estraierpure.rb
+bin/estcall.rb
