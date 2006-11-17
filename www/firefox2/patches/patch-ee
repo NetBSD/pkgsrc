@@ -1,0 +1,13 @@
+$NetBSD: patch-ee,v 1.1 2006/11/17 13:37:36 martin Exp $
+
+--- js/src/jsemit.c.orig	2006-10-10 20:01:02.000000000 +0200
++++ js/src/jsemit.c	2006-11-17 13:00:12.000000000 +0100
+@@ -3867,7 +3867,7 @@ js_EmitTree(JSContext *cx, JSCodeGenerat
+     JSAtom *atom;
+     JSAtomListElement *ale;
+     jsatomid atomIndex;
+-    intN noteIndex;
++    ptrdiff_t noteIndex;
+     JSSrcNoteType noteType;
+     jsbytecode *pc;
+     JSOp op;
