@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.21 2006/11/11 12:42:20 obache Exp $
+$NetBSD: distinfo,v 1.22 2006/11/17 15:14:34 obache Exp $
 
 SHA1 (hyperestraier-1.4.9.tar.gz) = d9933d42c0dd76e118753282d2772ef76b50c501
 RMD160 (hyperestraier-1.4.9.tar.gz) = 3541cc0421d01a2d5e222ac8fab63b57abf2b422
 Size (hyperestraier-1.4.9.tar.gz) = 974492 bytes
 SHA1 (patch-aa) = bab0503d5af614063e9df47e3b1476d3c503c939
 SHA1 (patch-ab) = ada246537ef1ffa5fd4491b6cc99fa47b1a364e5
+SHA1 (patch-ac) = 561b99d3bd8c7090a8329c90263a2eed16c4d189
+SHA1 (patch-ad) = 377d995e656dd85f33bcb4654530a254c26aabd0
