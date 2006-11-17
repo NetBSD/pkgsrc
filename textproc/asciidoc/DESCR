@@ -1,2 +1,3 @@
 The asciidoc command translates specially formatted text files into
-various output formats such as HTML, man pages, nicely formatted text.
+various output formats such as HTML, docbook, LaTeX (experimental),
+man pages, and nicely formatted text.
