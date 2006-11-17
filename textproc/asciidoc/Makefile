@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/10 09:28:05 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/17 20:43:48 reed Exp $
 #
 
-DISTNAME=		asciidoc-7.1.2
+DISTNAME=		asciidoc-8.1.0
 CATEGORIES=		textproc
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${HOMEPAGE}	\
+			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
 MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://www.methods.co.nz/asciidoc/
@@ -22,12 +23,26 @@ SUBST_MESSAGE.ad=	Fixing hard-coded paths.
 SUBST_FILES.ad=		asciidoc.py
 SUBST_SED.ad=		-e 's,^\(GLOBAL_CONFIG_DIR\).*=.*,\1 = "${PREFIX}/share/asciidoc",'
 
-INSTALLATION_DIRS=	bin share/asciidoc
+INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
+			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \
+			share/asciidoc/javascripts \
+			share/asciidoc/images/icons/callouts \
+			${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/asciidoc.py ${PREFIX}/bin/asciidoc
-	cd ${WRKSRC} && ${PAX} -wr -pma *.conf stylesheets ${PREFIX}/share/asciidoc/.
+	${INSTALL_SCRIPT} ${WRKSRC}/a2x ${PREFIX}/bin/a2x
+	${INSTALL_MAN} ${WRKSRC}/doc/asciidoc.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/a2x.1 ${PREFIX}/${PKGMANDIR}/man1/
+	cd ${WRKSRC} && ${PAX} -wr -pma *.conf stylesheets filters/*.py \
+		filters/*.conf docbook-xsl/*.xsl stylesheets/*.css	\
+		javascripts/*.js images/icons/callouts/* images/icons/*.png \
+		${PREFIX}/share/asciidoc/.
 
+do-test:
+	cd ${WRKSRC} && ./asciidoc.py -v doc/asciidoc.txt
+
+# requires Python 2.3 or newer
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
