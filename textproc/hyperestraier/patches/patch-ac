@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/11/17 15:14:34 obache Exp $
+
+--- perlnative/Makefile.in.orig	2006-09-06 12:30:26.000000000 +0900
++++ perlnative/Makefile.in
+@@ -44,7 +44,7 @@ RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/
+ all :
+ 	( cd src && if ! [ -f Makefile ] ; \
+ 	  then $(RUNENV) $(PERL) Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	  LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; fi )
++	  LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor; fi )
+ 	( cd src && make )
+ 	@printf '\n'
+ 	@printf '#================================================================\n'
