@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.4 2006/11/12 00:44:24 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.5 2006/11/17 01:05:47 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -28,7 +28,11 @@ CHECK_PERMS?=		no
 CHECK_PERMS_SKIP?=	# none
 CHECK_PERMS_AUTOFIX?=	no
 
-.if !empty(CHECK_PERMS_AUTOFIX:M[Yy][Ee][Ss])
+# The checkperms command does not yet support Interix with the -c flag.
+# See PR 34968.
+.if !empty(MACHINE_PLATFORM:MInterix-*-*)
+_CHECK_PERMS_FLAGS=
+.elif !empty(CHECK_PERMS_AUTOFIX:M[Yy][Ee][Ss])
 _CHECK_PERMS_FLAGS=	-cff
 .else
 _CHECK_PERMS_FLAGS=	-c
