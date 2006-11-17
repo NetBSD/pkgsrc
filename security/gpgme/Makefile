@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2006/10/20 15:28:01 shannonjr Exp $
+# $NetBSD: Makefile,v 1.48 2006/11/17 12:16:00 shannonjr Exp $
 #
 
 DISTNAME=	gpgme-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/
@@ -11,7 +11,12 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
 
+PKG_OPTIONS_VAR=        PKG_OPTIONS.gpgme
+PKG_SUPPORTED_OPTIONS=	gpgsm
+.include "../../mk/bsd.options.mk"
+.if empty(PKG_OPTIONS:Mgpgsm)
 DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
+.endif
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -23,10 +28,6 @@ SUBST_FILES.pthread=	gpgme/gpgme-config.in
 SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
 SUBST_SED.pthread+=	-e 's,@PTHREAD_CFLAGS@,${PTHREAD_CFLAGS},g'
 SUBST_STAGE.pthread=	post-patch
-
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gpgme
-PKG_SUPPORTED_OPTIONS=	gpgsm
-.include "../../mk/bsd.options.mk"
 
 LIBS.SunOS+=		-lnsl -lsocket
 
@@ -56,8 +57,8 @@ BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
 ## Option to build with gpgsm. This provides SMIME support
 ##
 .if !empty(PKG_OPTIONS:Mgpgsm)
-.  include "../../security/gnupg-devel/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpgsm
+.  include "../../security/gnupg2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg2}/bin/gpgsm
 .else
 CONFIGURE_ARGS+=	--without-gpgsm
 .endif
