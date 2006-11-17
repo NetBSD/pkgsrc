@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.188 2006/11/05 14:39:11 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.189 2006/11/17 09:19:37 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -570,6 +570,10 @@ ${_BLNK_COOKIE.${_pkg_}}:
 		exit 1;							\
 		;;							\
 	esac
+	${RUN} [ ${X11BASE:Q}"" ] || {					\
+		${ERROR_MSG} "[bsd.buildlink3.mk] X11BASE is not set correctly."; \
+		exit 1;							\
+	}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
 	${LOCALBASE})   buildlink_dir="${BUILDLINK_DIR}" ;;		\
