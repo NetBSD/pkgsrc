@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/17 15:42:27 obache Exp $
+${RUBY_SITEARCHLIBDIR}/estraier.${RUBY_DLEXT}
+bin/estcmd.rb
