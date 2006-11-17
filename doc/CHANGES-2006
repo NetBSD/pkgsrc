@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1834 2006/11/17 12:17:53 shannonjr Exp $
+>$NetBSD: CHANGES-2006,v 1.1835 2006/11/17 12:36:05 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5353,3 +5353,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/rconfig to 0.45 [abs 2006-11-15]
 	Updated devel/arena to 0.9.9 [agc 2006-11-15]
 	Added security/gnupg2 version 2.0.0 [shannonjr 2006-11-15]
+	Updated security/libassuan to version 1.0.0 [shannonjr 2006-11-15]
