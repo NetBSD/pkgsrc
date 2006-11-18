@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1839 2006/11/18 14:27:21 taca Exp $
+>$NetBSD: CHANGES-2006,v 1.1840 2006/11/18 16:12:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5360,3 +5360,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/asciidoc to 8.1.0 [reed 2006-11-17]
 	Updated net/rsync to 2.6.9 [adam 2006-11-18]
 	Updated graphics/png to 1.2.13 [taca 2006-11-18]
+	Added security/starttls version 0.10 [obache 2006-11-18]
