@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.26 2006/10/06 14:28:46 joerg Exp $
+# $NetBSD: Linux.mk,v 1.27 2006/11/18 07:48:06 rillig Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -88,6 +88,7 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
+
 .if (${MACHINE_ARCH} == "x86_64")
 ABI?=	64
 LIBABISUFFIX?=          64
