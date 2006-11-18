@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2006/11/05 17:31:10 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2006/11/18 09:12:53 adam Exp $
 
-DISTNAME=	rsync-2.6.8
+DISTNAME=	rsync-2.6.9
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		ftp://rsync.samba.org/pub/rsync/ \
@@ -10,7 +10,7 @@ MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		ftp://ftp.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/unix/network/rsync/
 
-MAINTAINER=     tron@NetBSD.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
 
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/doc/rsync
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-included-popt \
 			--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
 TEST_TARGET=		test
