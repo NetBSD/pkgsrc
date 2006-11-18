@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2006/10/07 21:01:16 reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/11/18 18:43:00 jschauma Exp $
 
 DISTNAME=	mod_python-${VERSION}
-PKGREVISION=	1
 PKGNAME=	ap2-${PYPKGPREFIX}-python-${VERSION}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/modpython/}
@@ -13,7 +12,7 @@ COMMENT=	Apache module that embeds the Python interpreter
 
 USE_LIBTOOL=	YES
 APACHE_MODULE=	YES
-VERSION=	3.2.8
+VERSION=	3.2.10
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-apxs=${APXS:Q}
