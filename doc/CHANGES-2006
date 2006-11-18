@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1842 2006/11/18 19:08:23 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1843 2006/11/18 20:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5238,6 +5238,15 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0rc13 [ghen 2006-11-08]
 	Updated net/tor to 0.1.1.25 [tv 2006-11-08]
 	Added graphics/opencv version 1.0.0 [uebayasi 2006-11-09]
+	Updated graphics/gqview to 2.0.3 [drochner 2006-11-09]
+	Updated devel/libgsf to 1.14.4 [drochner 2006-11-09]
+	Updated graphics/librsvg to 2.16.1 [drochner 2006-11-09]
+	Updated graphics/cairo to 1.2.6 [drochner 2006-11-09]
+	Updated editors/TeXmacs to 1.0.6.6 [drochner 2006-11-09]
+	Updated editors/gedit to 2.16.2 [drochner 2006-11-09]
+	Updated devel/eel2 to 2.16.1 [drochner 2006-11-09]
+	Updated games/kye to 0.9.2 [drochner 2006-11-09]
+	Updated math/gcalctool to 5.8.25 [drochner 2006-11-09]
 	Updated www/squid to 2.6.5 [taca 2006-11-09]
 	Updated editors/abiword to 2.4.6 [adam 2006-11-09]
 	Updated editors/abiword-plugins to 2.4.6 [adam 2006-11-09]
@@ -5341,6 +5350,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/dbus-glib to 0.72 [drochner 2006-11-15]
 	Updated sysutils/dbus to 1.0.0 [drochner 2006-11-15]
 	Updated net/libsoup-devel to 2.2.97 [drochner 2006-11-15]
+	Remove net/libsoup [drochner 2006-11-15]
 	Added fonts/font-bitstream-100dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-bitstream-75dpi version 1.0.0 [joerg 2006-11-15]
 	Added fonts/font-daewoo-misc version 1.0.0 [joerg 2006-11-15]
