@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5706 2006/11/18 20:50:39 wiz Exp $
+$NetBSD: TODO,v 1.5707 2006/11/18 20:52:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,6 @@ Suggested package updates
 	o gkrellm1-snmp-0.22
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
-	o glabels-2.0.4
 	o glade-3.1.0
 	o gld-1.7
 	o gmime-2.2.3
@@ -861,7 +860,6 @@ Suggested package updates
 	o pgadmin3-1.6.0
 	o phoon-20050629
 	o photopc-3.05
-	o php5-5.2.0
 	o phpmyadmin-2.9.1
 	o phppgadmin-4.0.1
 	o phylip-3.65
@@ -984,7 +982,6 @@ Suggested package updates
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rp-pppoe-3.8
 	o rpc2-1.28
 	o rpm-4.4.6
 	o rss2email-2.60
@@ -1128,7 +1125,6 @@ Suggested package updates
 	o xbindkeys-1.7.2 [pkg/34467]
 	o xblast-2.10.4
 	o xchm-1.10
-	o xcircuit-3.4.26 [pkg/34443]
 	o xdaliclock-2.23
 	o xdelta-3.0e
 	o xdesktopwaves-1.3
