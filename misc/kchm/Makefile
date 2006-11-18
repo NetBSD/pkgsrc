@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/24 18:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/18 20:40:14 wiz Exp $
 #
 
 DISTNAME=	kchm-0.6.5
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
+
+CONFLICTS=	chmlib-[0-9]*
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
