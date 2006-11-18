@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1838 2006/11/18 09:14:20 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1839 2006/11/18 14:27:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5359,3 +5359,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/ruby-pure-hyperestraier version 1.0.0.1.4.9 [obache 2006-11-17]
 	Updated textproc/asciidoc to 8.1.0 [reed 2006-11-17]
 	Updated net/rsync to 2.6.9 [adam 2006-11-18]
+	Updated graphics/png to 1.2.13 [taca 2006-11-18]
