@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1844 2006/11/18 21:05:56 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1845 2006/11/18 21:08:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5375,3 +5375,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/links to 2.1.0.24 [wiz 2006-11-18]
 	Updated www/links-gui to 2.1.0.24 [wiz 2006-11-18]
 	Updated multimedia/xvidcore to 1.1.2 [wiz 2006-11-18]
+	Updated mail/tnef to 1.4.3 [wiz 2006-11-18]
