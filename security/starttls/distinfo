@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/18 16:09:12 obache Exp $
+
+SHA1 (starttls-0.10.tar.gz) = bf2074d047474ef33f5da9924f6fd52a119dc578
+RMD160 (starttls-0.10.tar.gz) = ad9c3bc690dd1bf11f4f173edf05b2f2eaff1275
+Size (starttls-0.10.tar.gz) = 67295 bytes
