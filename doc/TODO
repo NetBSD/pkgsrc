@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5710 2006/11/18 21:08:54 wiz Exp $
+$NetBSD: TODO,v 1.5711 2006/11/18 22:03:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ Suggested package updates
 	o libshout-2.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
-	o libwpd-0.8.7
 	o licq-core-1.3.0
 	o lighttpd-1.4.13
 	o lilypond-2.10.0
