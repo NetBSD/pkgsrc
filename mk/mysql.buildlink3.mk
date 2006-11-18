@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.5 2006/01/07 10:47:39 xtraeme Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.6 2006/11/18 08:29:13 rillig Exp $
 
 .if !defined(MYSQL_VERSION_MK)
 MYSQL_VERSION_MK=	# defined
@@ -69,7 +69,7 @@ MYSQL_PKGSRCDIR=	../../databases/mysql5-client
 MYSQL_PKGSRCDIR=	../../databases/mysql4-client
 .else
 # force an error
-PKG_SKIP_REASON+=	"${_MYSQL_VERSION} is not a valid mysql package."
+PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] ${_MYSQL_VERSION} is not a valid mysql package."
 .endif
 
 .include "${MYSQL_PKGSRCDIR}/buildlink3.mk"
