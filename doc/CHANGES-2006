@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1847 2006/11/18 23:57:03 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1848 2006/11/18 23:59:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5379,3 +5379,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated converters/libwpd to 0.8.7 [wiz 2006-11-18]
 	Updated databases/sqlite3 to 3.3.8 [wiz 2006-11-18]
 	Updated databases/sqlite3-tcl to 3.3.8 [wiz 2006-11-18]
+	Updated sysutils/desktop-file-utils to 0.12 [wiz 2006-11-18]
