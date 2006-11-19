@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1851 2006/11/19 01:53:36 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1852 2006/11/19 04:59:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5383,3 +5383,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/xchm to 1.10 [wiz 2006-11-19]
 	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.9nb1 [obache 2006-11-19]
 	Updated x11/eterm to 0.9.3nb3 [obache 2006-11-19]
+	Added math/units version 1.86 [obache 2006-11-19]
