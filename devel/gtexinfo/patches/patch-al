@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 2006/02/11 01:04:19 joerg Exp $
+$NetBSD: patch-al,v 1.2.6.1 2006/11/19 12:22:44 ghen Exp $
 
-Security fix for CAN-2005-3001.
+Security fix for CAN-2005-3001 and CVE-2006-4810
 
---- util/texindex.c.orig	2004-04-11 19:56:47.000000000 +0200
+--- util/texindex.c.orig	2004-04-11 18:56:47.000000000 +0100
 +++ util/texindex.c
 @@ -387,14 +387,15 @@ For more information about these matters
  /* Return a name for temporary file COUNT. */
@@ -47,6 +47,15 @@ Security fix for CAN-2005-3001.
  }
  
  
+@@ -837,7 +845,7 @@ readline (struct linebuffer *linebuffer,
+         {
+           buffer = (char *) xrealloc (buffer, linebuffer->size *= 2);
+           p += buffer - linebuffer->buffer;
+-          end += buffer - linebuffer->buffer;
++          end = buffer - linebuffer->buffer;
+           linebuffer->buffer = buffer;
+         }
+       if (c < 0 || c == '\n')
 @@ -882,7 +890,7 @@ sort_offline (char *infile, off_t total,
  
    for (i = 0; i < ntemps; i++)
