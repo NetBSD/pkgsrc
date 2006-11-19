@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1854 2006/11/19 15:56:10 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1855 2006/11/19 20:54:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added math/units version 1.86 [obache 2006-11-19]
 	Updated mail/dovecot to 1.0rc15 [ghen 2006-11-19]
 	Updated databases/phpmyadmin to 2.9.1.1 [tron 2006-11-19]
+	Updated math/mathomatic to 12.6.7 [minskim 2006-11-19]
