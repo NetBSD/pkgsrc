@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/05/01 21:17:06 minskim Exp $
+# $NetBSD: Makefile,v 1.35.4.1 2006/11/19 12:15:43 ghen Exp $
 
 DISTNAME=	proftpd-1.3.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
