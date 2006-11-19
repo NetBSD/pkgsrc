@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/19 04:56:17 obache Exp $
+bin/${GNU_PROGRAM_PREFIX}units
+info/units.info
+man/man1/${GNU_PROGRAM_PREFIX}units.1
+share/units.dat
