@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/11/13 16:59:22 wulf Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/19 02:22:42 wulf Exp $
 
 PKGNAME=        gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -8,6 +8,7 @@ COMMENT=	Runtime system and DSP blocks for GNU Radio
 CONF_FILES+=	${EGDIR}/gnuradio-core.conf ${PKG_SYSCONFDIR}/gnuradio-core.conf
 CONFIGURE_ARGS+=--enable-gnuradio-core
 
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/swig/gen-swig-bug-fix
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/bin/microtune.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/doc/xml/doxy2swig.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/general/generate_all.py
