@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/19 11:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/19 19:03:56 shannonjr Exp $
 #
 
 DISTNAME=		gnupg-2.0.0
@@ -67,6 +67,7 @@ pre-configure:
 	${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} install
 	cd  ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./autogen.sh
 
+BUILDLINK_API_DEPENDS.gettext+=		gettext-lib>=0.14.1
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.0
 
