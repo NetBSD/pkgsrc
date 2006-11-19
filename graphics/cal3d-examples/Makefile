@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/11/19 23:11:18 rillig Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -35,18 +35,14 @@ pre-configure:
 	${CHMOD} 755 ${WRKSRC}/tools/converter/autogen.sh
 	cd ${WRKSRC}/tools/converter && ./autogen.sh
 
-post-patch:
-	for f in ${PATCHDATA}; do \
-		${CP} ${WRKDATADIR}/$$f ${WRKDATADIR}/$$f.pkgsrc && \
-		${SED} -e 's|@@DATADIR@@|${DATADIR}|g' ${WRKDATADIR}/$$f.pkgsrc > \
-			${WRKDATADIR}/$$f && \
-		${RM} ${WRKDATADIR}/$$f.pkgsrc; \
-		${RM} ${WRKDATADIR}/$$f.orig; \
-		done
+SUBST_CLASSES+=		c3
+SUBST_STAGE.c3=		post-configure
+SUBST_FILES.c3=		${PATCHDATA:S,^,${WRKDATADIR}/,}
+SUBST_SED.c3=		-e 's|@@DATADIR@@|${DATADIR}|g'
 
 post-install:
 	${INSTALL_DATA_DIR} ${DATADIR}
-	cd ${WRKDATADIR} && ${PAX} -rw -pe [a-z]* ${DATADIR}
+	cd ${WRKDATADIR} && ${PAX} -rw -pp -s ',.*\.orig$$,,' [a-z]* ${DATADIR}
 
 .include "../../graphics/cal3d/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
