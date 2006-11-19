@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/11/10 10:50:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/19 23:13:42 rillig Exp $
 #
 
 DISTNAME=		opencv-1.0.0
+PKGREVISION=		1
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 
@@ -18,6 +19,11 @@ INSTALLATION_DIRS+=	share/doc/opencv/papers share/doc/opencv/ref/pics \
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	opencv.pc.in
+
+SUBST_CLASSES+=		py
+SUBST_STAGE.py=		pre-configure
+SUBST_FILES.py=		samples/python/*.py
+SUBST_SED.py=		-e 's,/usr/bin/python,/usr/bin/env python,'
 
 CONFIGURE_ARGS+=--with-swig=no
 CONFIGURE_ARGS+=--with-python=no
