@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/11/05 20:39:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/19 11:50:25 wiz Exp $
 #
 
 DISTNAME=		xen-3.0.3_0-src
 PKGNAME=		xentools30-3.0.3
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
 			http://bits.xensource.com/oss-xen/release/3.0.3-0/src.tgz/
