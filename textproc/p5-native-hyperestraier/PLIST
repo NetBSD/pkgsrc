@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/17 15:40:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/19 01:18:02 obache Exp $
+bin/estcmd.pl
