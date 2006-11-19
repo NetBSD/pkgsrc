@@ -1,5 +1,5 @@
-#!/bin/sh
-# $NetBSD: build,v 1.94 2006/02/11 21:44:16 rillig Exp $
+#!/bin/sh 
+# $NetBSD: build,v 1.95 2006/11/19 03:06:26 jschauma Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -90,7 +90,7 @@ die() {
 # For more sophisticated output, you may use all the variables that this
 # example function uses.
 post_filter_cmd() {
-	${SED} "s;^;`date '+%Y/%m/%d %H:%M:%S'`  ${built}/${tot}=${percent} ${pkgdir} @ ${MACHINE_ARCH}> ;g"
+	${SED} "s;^;`date '+%Y/%m/%d %H:%M:%S'`  ${percent} ${pkgdir} @ ${MACHINE_ARCH}> ;g"
 }
 
 
@@ -361,14 +361,16 @@ echo "build> Starting actual build using the order specified in $ORDERFILE..."
 # make sure we have something to grep in in the build loop
 touch "${main_buildlog}" || die "Cannot write to ${main_buildlog}."
 
-tot=`wc -l "${ORDERFILE}" | ${AWK} '{print $1}'`
+tot=`${AWK} 'END { print NR }' "${ORDERFILE}"`
 for pkgdir in `cat "${ORDERFILE}"`
 do
 	if ${GREP} -q "^${pkgdir}\$" "${main_buildlog}"; then
 		: "skip this package"
 	else
-		built=`wc -l "${main_buildlog}" | ${AWK} '{print $1}'`
-		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
+		percent=`${AWK} -v tot="${tot}" '
+			END {
+				printf("%d/%d=%4.1f%%", NR, tot, NR*100/tot);
+			}' "${main_buildlog}"`
 		( cd "${pkgsrc_dir}/${pkgdir}" \
 		  && ${NICE_LEVEL} ${BMAKE} USE_BULK_CACHE=yes "${target}" \
 			$makeargs </dev/null | post_filter_cmd
