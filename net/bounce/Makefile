@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2006/01/06 02:37:11 garbled Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/19 08:03:05 wiz Exp $
 #
 
 DISTNAME=		bounce-0.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		p99dreyf@criens.u-psud.fr
+MAINTAINER=		manu@NetBSD.org
 COMMENT=		Tool to forward TCP connection from one IP to another
 
 CONFLICTS+=		majordomo-*
