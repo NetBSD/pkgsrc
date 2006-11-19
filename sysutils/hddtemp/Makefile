@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2006/10/19 21:00:18 christos Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/19 09:44:35 wiz Exp $
 
 DISTNAME=	hddtemp-0.3-beta15
 PKGNAME=	hddtemp-0.3b15
 CATEGORIES=	sysutils
-EXTRACT_SUFX=	tar.bz2
 MASTER_SITES=	http://www.guzu.net/files/
-
-SITES.hddtemp.db=	http://www.guzu.net/linux/
-DISTFILES+=	hddtemp.db
-
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} hddtemp.db
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	christos@NetBSD.org
 HOMEPAGE=	http://www.guzu.net/linux/hddtemp.php
 COMMENT=	Gather temperature stats for disk drives
+
+SITES.hddtemp.db=	http://www.guzu.net/linux/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 ONLY_FOR_PLATFORM=      Linux-*-*
