@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/03/22 22:51:52 joerg Exp $
+$NetBSD: distinfo,v 1.5 2006/11/19 22:36:20 rillig Exp $
 
-SHA1 (live.2003.04.04.tar.gz) = f5c7cffd92f5811c004c30e2b1f889f817539afb
-RMD160 (live.2003.04.04.tar.gz) = 645840b7c371609b4265005091d4d14e7bc995af
-Size (live.2003.04.04.tar.gz) = 276978 bytes
-SHA1 (patch-aa) = dd4a99f255200d89b3bc9c6e709c53d8e4817e5c
-SHA1 (patch-ab) = c1db6185f37f61bf1645d122fbd480c2f9502c79
-SHA1 (patch-ac) = 61b890142c0d8870a245de0d50a3762266419e8c
-SHA1 (patch-ad) = 791a7100cf383e9ad96445419157c9a8073be5a6
+SHA1 (live.2006.11.16a.tar.gz) = 605d0e288a8d09654ef0d2cc271f0bc0837c53f5
+RMD160 (live.2006.11.16a.tar.gz) = f43dfc069ca17008d96a6f217f80549747cf724a
+Size (live.2006.11.16a.tar.gz) = 425773 bytes

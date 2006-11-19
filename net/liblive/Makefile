@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2006/07/31 21:08:03 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/11/19 22:36:20 rillig Exp $
 #
 
-DISTNAME=	live.2003.04.04
+DISTNAME=	live.2006.11.16a
 PKGNAME=	lib${DISTNAME:S/./-/}
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://www.live.com/liveMedia/public/
+MASTER_SITES=	http://www.live555.com/liveMedia/public/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.live.com/liveMedia/
+HOMEPAGE=	http://www.live555.com/liveMedia/
 COMMENT=	Set of C++ libraries for multimedia streaming
 
 WRKSRC=		${WRKDIR}/live
@@ -21,7 +21,6 @@ do-configure:
 	${CP} ${FILESDIR}/config.netbsd ${WRKSRC}
 	${CP} ${FILESDIR}/config.netbsd ${WRKSRC}/config.dragonfly
 	cd ${WRKSRC} && ${SH} ./genMakefiles ${LOWER_OPSYS}
-	${RM} -f ${WRKSRC}/testProgs/qtParse
 
 do-install:
 .for lib in BasicUsageEnvironment UsageEnvironment groupsock liveMedia
@@ -34,11 +33,17 @@ do-install:
 		${INSTALL_DATA} $$i ${PREFIX}/include/liblive/${lib} ;	\
 	done
 .endfor
-.for bin in openRTSP playSIP qtParse sapWatch testMP3Receiver		\
-	testMP3Streamer testMPEGAudioVideoStreamer testMPEGSplitter	\
-	testMPEGVideoReceiver testMPEGVideoStreamer testRelay vobStreamer
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/liblive
+.for bin in testMP3Streamer testMPEG1or2VideoStreamer 			\
+	testMPEG1or2AudioVideoStreamer testMPEG2TransportStreamer 	\
+	testMPEG4VideoStreamer testWAVAudioStreamer testAMRAudioStreamer\
+	vobStreamer testMP3Receiver testMPEG1or2VideoReceiver sapWatch 	\
+	testRelay testOnDemandRTSPServer testMPEG1or2AudioVideoToDarwin \
+	testMPEG4VideoToDarwin  openRTSP playSIP testMPEG1or2Splitter 	\
+	testMPEG1or2ProgramToTransportStream
 	cd ${WRKSRC}/testProgs &&					\
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${bin} ${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} 			\
+		${bin} ${PREFIX}/share/examples/liblive
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
