@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/14 01:01:17 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/11/19 22:48:07 rillig Exp $
 
 DISTNAME=	dotfile-2.4.1
 PKGREVISION=	2
@@ -20,10 +20,14 @@ DOTFILE_LANG?=	english
 
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
+MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}/man1
+
+post-build:
+	rm -f ${WRKSRC}/Generator/makeHelp
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/${PKGNAME_NOREV:Q}
-	cd ${WRKSRC:Q}/Doc && ${PAX} -rw . ${PREFIX:Q}/share/doc/${PKGNAME_NOREV:Q}
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX:Q}/share/doc/${PKGNAME_NOREV:Q}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME_NOREV}
+	cd ${WRKSRC:Q}/Doc && ${PAX} -rw -s ',.*\.orig$$,,' . ${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"
