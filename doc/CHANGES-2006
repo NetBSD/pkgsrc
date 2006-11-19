@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1853 2006/11/19 10:37:22 ghen Exp $
+>$NetBSD: CHANGES-2006,v 1.1854 2006/11/19 15:56:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5385,3 +5385,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/eterm to 0.9.3nb3 [obache 2006-11-19]
 	Added math/units version 1.86 [obache 2006-11-19]
 	Updated mail/dovecot to 1.0rc15 [ghen 2006-11-19]
+	Updated databases/phpmyadmin to 2.9.1.1 [tron 2006-11-19]
