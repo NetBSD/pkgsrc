@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.45 2006/11/10 12:19:14 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.46 2006/11/19 12:25:46 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -111,3 +111,9 @@ Pullup ticket 1909 - requested by taca
 security update for openssh
 Pullup ticket 1910 - requested by taca
 bugfix update for squid
+Pullup ticket 1912 - requested by taca
+security update for png
+Pullup ticket 1913 - requested by adrianp
+security fix for proftpd
+Pullup ticket 1914 - requested by adrianp
+security fix for gtexinfo
