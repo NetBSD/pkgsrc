@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1857 2006/11/20 11:01:34 markd Exp $
+>$NetBSD: CHANGES-2006,v 1.1858 2006/11/20 12:07:30 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5391,3 +5391,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/kdelibs3 to 3.5.5nb1 [markd 2006-11-20]
 	Updated misc/kdepim3 to 3.5.5nb1 [markd 2006-11-20]
 	Updated print/kbibtex to 0.1.5nb1 [markd 2006-11-20]
+	Updated net/autonet to 0.22 [abs 2006-11-20]
