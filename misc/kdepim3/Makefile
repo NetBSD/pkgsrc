@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/10/12 10:53:45 markd Exp $
+# $NetBSD: Makefile,v 1.67 2006/11/20 10:30:18 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -32,6 +32,15 @@ REPLACE_PERL+=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/upgrade-signature.pl \
 		kmail/upgrade-transport.pl \
 		libkpgp/kpgp-3.1-upgrade-address-data.pl
+
+CHECK_PORTABILITY_SKIP+=karm/test/booktime-baddate.sh \
+		karm/test/booktime-badduration.sh \
+		karm/test/booktime-badtime.sh \
+		karm/test/booktime-baduid.sh \
+		karm/test/booktime-works.sh \
+		karm/test/delete.sh \
+		karm/test/refresh_on_change.sh \
+		karm/test/version.sh
 
 .include "../../mk/bsd.prefs.mk"
 
