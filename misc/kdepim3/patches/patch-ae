@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.9 2006/11/20 10:57:43 markd Exp $
+
+--- korganizer/korganizer.desktop.orig	2006-10-02 06:30:39.000000000 +1300
++++ korganizer/korganizer.desktop
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-MimeType=text/calendar;text/x-vcalendar;
+ Comment=Calendar and Scheduling Program
+ Comment[af]=Kalender en Skedulering Program
+ Comment[ar]=برنامج الجدولة والتقويم
+@@ -61,7 +60,7 @@ Comment[xh]=Ikhalenda no Dweliso lwenkqu
+ Comment[zh_CN]=日历和日程安排程序
+ Comment[zh_TW]=行事曆與排程軟體
+ Comment[zu]=Ikhalenda kanye Neprogramu Yokugcina isikhathi
+-Exec=korganizer --import %u
++Exec=korganizer
+ Icon=korganizer
+ Path=
+ DocPath=korganizer/index.html

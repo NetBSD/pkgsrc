@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2006/10/12 10:53:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2006/11/20 10:57:43 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -473,6 +473,7 @@ share/applications/kde/kmail_view.desktop
 share/applications/kde/knotes.desktop
 share/applications/kde/konsolekalendar.desktop
 share/applications/kde/korganizer.desktop
+share/applications/kde/korganizer-import.desktop
 share/applications/kde/kpalmdoc.desktop
 share/applications/kde/kpilot.desktop
 share/applications/kde/kpilotdaemon.desktop
