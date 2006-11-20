@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.9 2006/11/20 10:57:43 markd Exp $
+
+--- korganizer/Makefile.in.orig	2006-10-03 07:54:21.000000000 +1300
++++ korganizer/Makefile.in
+@@ -841,7 +841,7 @@ part_DATA = korganizer_part.rc
+ kde_servicetypes_DATA = dcopcalendar.desktop
+ KDE_ICON = AUTO
+ #>- META_INCLUDES = $(srcdir)/interfaces/korganizer
+-xdg_apps_DATA = korganizer.desktop
++xdg_apps_DATA = korganizer.desktop korganizer-import.desktop
+ kde_kcfg_DATA = korganizer.kcfg
+ kde_services_DATA = korganizer_configmain.desktop \
+                     korganizer_configtime.desktop \
