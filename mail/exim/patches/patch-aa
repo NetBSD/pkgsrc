@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
+$NetBSD: patch-aa,v 1.17 2006/11/20 11:56:42 abs Exp $
 
---- Local/Makefile.pkgsrc.orig	2006-08-08 16:11:10.000000000 +0100
+--- Local/Makefile.pkgsrc.orig	2006-11-15 11:58:34.000000000 +0000
 +++ Local/Makefile.pkgsrc
 @@ -100,7 +100,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
  # you want to use a group other than the default group for the given user.
  
 -# EXIM_GROUP=
-+EXIM_GROUP=@EXIM_GROUP@
++EXIM_GROUP=ref:@EXIM_GROUP@
  
  # Many sites define a user called "exim", with an appropriate default group,
  # and use
@@ -47,28 +47,6 @@ $NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
  
  
  
-@@ -235,7 +235,7 @@ TRANSPORT_SMTP=yes
- # This one is special-purpose, and commonly not required, so it is not
- # included by default.
- 
--# TRANSPORT_LMTP=yes
-+TRANSPORT_LMTP=yes
- 
- 
- #------------------------------------------------------------------------------
-@@ -244,9 +244,9 @@ TRANSPORT_SMTP=yes
- # MBX, is included only when requested. If you do not know what this is about,
- # leave these settings commented out.
- 
--# SUPPORT_MAILDIR=yes
--# SUPPORT_MAILSTORE=yes
--# SUPPORT_MBX=yes
-+SUPPORT_MAILDIR=yes
-+SUPPORT_MAILSTORE=yes
-+SUPPORT_MBX=yes
- 
- 
- #------------------------------------------------------------------------------
 @@ -320,7 +320,7 @@ LOOKUP_LSEARCH=yes
  # files are defaulted in the OS/Makefile-Default file, but can be overridden in
  # local OS-specific make files.
@@ -92,21 +70,7 @@ $NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -562,10 +562,11 @@ HEADERS_CHARSET="ISO-8859-1"
- # leave these settings commented out.
- 
- # This setting is required for any TLS support (either OpenSSL or GnuTLS)
--# SUPPORT_TLS=yes
-+SUPPORT_TLS=yes
- 
- # Uncomment this setting if you are using OpenSSL
--# TLS_LIBS=-lssl -lcrypto
-+TLS_LIBS=-L${SSLBASE}/lib -Wl,-R${SSLBASE}/lib -lssl -lcrypto
-+TLS_INCLUDE=-I${SSLBASE}/include
- 
- # Uncomment these settings if you are using GnuTLS
- # USE_GNUTLS=yes
-@@ -629,7 +630,7 @@ HEADERS_CHARSET="ISO-8859-1"
+@@ -629,7 +629,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -115,17 +79,7 @@ $NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -791,7 +792,8 @@ ZCAT_COMMAND=/usr/bin/zcat
- # this setting. See the manual section entitled "Use of tcpwrappers" in the
- # chapter on building and installing Exim.
- #
--# USE_TCP_WRAPPERS=yes
-+USE_TCP_WRAPPERS=yes
-+EXTRALIBS_EXIM=-lwrap
- #
- # You may well also have to specify a local "include" file and an additional
- # library for TCP wrappers, so you probably need something like this:
-@@ -870,11 +872,11 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -870,11 +870,11 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -142,7 +96,7 @@ $NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -1068,7 +1070,7 @@ TMPDIR="/tmp"
+@@ -1068,7 +1068,7 @@ TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -151,10 +105,12 @@ $NetBSD: patch-aa,v 1.16 2006/08/08 15:24:01 abs Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1104,3 +1106,8 @@ TMPDIR="/tmp"
+@@ -1104,3 +1104,10 @@ TMPDIR="/tmp"
  # SUPPORT_MOVE_FROZEN_MESSAGES=yes
  
  # End of EDITME for Exim 4.
++
++EXTRALIBS_EXIM=-liconv
 +
 +@EXIM_USE_DB_CONFIG@
 +@EXIM_DBMLIB@
