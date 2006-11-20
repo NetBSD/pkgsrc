@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2006/11/20 09:30:26 markd Exp $
+# $NetBSD: Makefile,v 1.116 2006/11/20 09:32:02 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -55,6 +55,10 @@ SUBST_STAGE.kdemagic=	pre-configure
 SUBST_MESSAGE.kdemagic=	Add LOCALBASE paths to magic file.
 SUBST_FILES.kdemagic=	kio/magic
 SUBST_SED.kdemagic=	-n -e 'p' -e 's:/usr/local/bin:${LOCALBASE}/bin:p'
+
+SPECIAL_PERMS+=	${PREFIX}/bin/fileshareset	${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/bin/kgrantpty		${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/bin/kpac_dhcp_helper	${SETUID_ROOT_PERMS}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdelibs
 PKG_SUPPORTED_OPTIONS=	cups debug
