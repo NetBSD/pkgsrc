@@ -1,25 +1,49 @@
-# $NetBSD: options.mk,v 1.9 2006/05/31 18:22:24 ghen Exp $
+# $NetBSD: options.mk,v 1.10 2006/11/20 11:56:42 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
-PKG_SUPPORTED_OPTIONS=	exim-build-eximon exim-content-scan exim-lookup-dnsdb
-PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
-PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
-PKG_SUPPORTED_OPTIONS+= exim-old-demime gdbm inet6 saslauthd
-PKG_SUGGESTED_OPTIONS=	exim-content-scan exim-lookup-dsearch exim-old-demime
+PKG_SUPPORTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
+PKG_SUPPORTED_OPTIONS+= exim-appendfile-mbx exim-build-eximon
+PKG_SUPPORTED_OPTIONS+= exim-content-scan exim-lookup-cdb exim-lookup-dnsdb
+PKG_SUPPORTED_OPTIONS+= exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
+PKG_SUPPORTED_OPTIONS+= exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
+PKG_SUPPORTED_OPTIONS+= exim-old-demime exim-router-iplookup exim-tcp-wrappers
+PKG_SUPPORTED_OPTIONS+= exim-tls exim-transport-lmtp gdbm inet6 saslauth
+
+PKG_SUGGESTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
+PKG_SUGGESTED_OPTIONS+= exim-appendfile-mbx exim-content-scan
+PKG_SUGGESTED_OPTIONS+= exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
+PKG_SUGGESTED_OPTIONS+= exim-tls
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_SRC=${PKGDIR}/PLIST
 
+.if !empty(PKG_OPTIONS:Mexim-appendfile-maildir)
+LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILDIR=yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-appendfile-mailstore)
+LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILSTORE=yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-appendfile-mbx)
+LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MBX=yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mexim-build-eximon)
 LOCAL_MAKEFILE_OPTIONS+=EXIM_MONITOR=eximon.bin
 LOCAL_MAKEFILE_OPTIONS+=X11=${X11BASE}
 PLIST_SRC+=${PKGDIR}/PLIST.eximon
-.include "../../mk/x11.buildlink3.mk"
+.  include "../../mk/x11.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-content-scan)
 LOCAL_MAKEFILE_OPTIONS+=WITH_CONTENT_SCAN=YES
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-lookup-cdb)
+LOCAL_MAKEFILE_OPTIONS+=LOOKUP_CDB=YES
+DEPENDS+=cdb-[0-9]*:../../databases/cdb
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-dnsdb)
@@ -33,36 +57,56 @@ LOCAL_MAKEFILE_OPTIONS+=LOOKUP_DSEARCH=YES
 .if !empty(PKG_OPTIONS:Mexim-lookup-ldap)
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_LDAP=YES
 LOCAL_MAKEFILE_OPTIONS+=LDAP_LIB_TYPE=OPENLDAP2
-LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.openldap-client}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.openldap-client} -lldap -llber
+LOOKUP_LIBS+=-lldap -llber
 .  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-mysql)
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_MYSQL=YES
-LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.mysql}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.mysql} -lmysqlclient
+LOOKUP_LIBS+=-lmysqlclient
 .  include "../../mk/mysql.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-pgsql)
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_PGSQL=YES
-LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.pgsql}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.mysql} -lpq
+LOOKUP_LIBS+=-lpq
 .  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-sqlite)
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_SQLITE=YES
-LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.sqlite3}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.sqlite3} -lsqlite3
+LOOKUP_LIBS+=-lsqlite3
 .  include "../../databases/sqlite3/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-whoson)
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_WHOSON=YES
-LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -L${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -lwhoson
+LOOKUP_LIBS+=-lwhoson
 .  include "../../net/whoson/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-old-demime)
 LOCAL_MAKEFILE_OPTIONS+=WITH_OLD_DEMIME=YES
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-router-iplookup)
+LOCAL_MAKEFILE_OPTIONS+=ROUTER_IPLOOKUP=yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-tcp-wrappers)
+LOCAL_MAKEFILE_OPTIONS+=USE_TCP_WRAPPERS=yes
+LOOKUP_LIBS+=-lwrap
+.  include "../../security/tcp_wrappers/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-tls)
+LOCAL_MAKEFILE_OPTIONS+=SUPPORT_TLS=yes
+LOOKUP_LIBS+=-lssl -lcrypto
+.  include "../../security/openssl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-transport-lmtp)
+LOCAL_MAKEFILE_OPTIONS+=TRANSPORT_LMTP=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
