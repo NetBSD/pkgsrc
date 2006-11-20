@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2006/07/05 05:37:39 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2006/11/20 18:34:27 bad Exp $
 #
 
-DISTNAME=		jpilot-0.99.8
+DISTNAME=		jpilot-0.99.9
 CATEGORIES=		comms
 MASTER_SITES=		http://jpilot.org/
 
@@ -17,11 +17,11 @@ USE_X11=		YES
 USE_OLD_DES_API=	YES
 USE_DIRS+=		gnome1-1.0
 USE_TOOLS+=		intltool msgfmt pkg-config
+USE_LANGUAGES+=		c
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
+CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk2}"
 CONFIGURE_ARGS+=	--with-pilot-prefix="${BUILDLINK_PREFIX.pilot-link-libs}"
-CONFIGURE_ARGS+=	--enable-gtk2
 LDFLAGS+=		-export-dynamic
 
 DOCDIR=			${PREFIX}/share/doc/jpilot
