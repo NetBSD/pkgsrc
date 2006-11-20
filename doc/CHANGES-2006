@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1860 2006/11/20 18:38:49 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1861 2006/11/20 18:47:34 bad Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5394,3 +5394,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/autonet to 0.22 [abs 2006-11-20]
 	Updated www/ja-trac to 0.10.2.1 [obache 2006-11-20]
 	Updated mail/sylpheed to 2.2.10 [xtraeme 2006-11-20]
+	Updated comms/jpilot to 0.99.9 [bad 2006-11-20]
