@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2006/09/16 07:09:22 schwarz Exp $
+# $NetBSD: Makefile,v 1.80 2006/11/20 11:56:42 abs Exp $
 
 DISTNAME=	exim-4.63
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -63,7 +64,7 @@ post-extract:
 		${WRKSRC}/OS/
 
 pre-configure:
-	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 		-e 's:@EXIM_USER@:${EXIM_USER}:' \
 		-e 's:@EXIM_GROUP@:${EXIM_GROUP}:' \
@@ -82,7 +83,7 @@ pre-configure:
 .for opt in ${LOCAL_MAKEFILE_OPTIONS}
 	@${ECHO} ${opt} >> ${WRKSRC}/Local/Makefile
 .endfor
-	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
 	    > ${WRKSRC}/Local/eximon.conf
@@ -93,7 +94,7 @@ pre-configure:
 	done
 
 post-build:
-	@${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
@@ -102,6 +103,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${PREFIX}/${PKGMANDIR}/man8/exim.8
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
