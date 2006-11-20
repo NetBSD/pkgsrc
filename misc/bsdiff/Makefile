@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/07/25 13:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/20 07:30:35 cjep Exp $
 #
 
-DISTNAME=		bsdiff-4.2
-PKGREVISION=		1
+DISTNAME=		bsdiff-4.3
 CATEGORIES=		misc
 MASTER_SITES=		http://www.daemonology.net/bsdiff/
 
