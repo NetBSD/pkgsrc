@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2006/10/12 10:31:04 markd Exp $
+# $NetBSD: Makefile,v 1.115 2006/11/20 09:30:26 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -34,6 +34,8 @@ REPLACE_PERL+= \
 	kio/useragent.pl \
 	kio/misc/fileshareset \
 	kdeui/preparetips
+
+CHECK_PORTABILITY_SKIP+=kate/tests/highlight.sh
 
 UNLIMIT_RESOURCES=	datasize memorysize
 
