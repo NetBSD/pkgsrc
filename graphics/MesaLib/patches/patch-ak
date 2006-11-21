@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.4 2006/11/21 21:26:03 tv Exp $
+
+--- src/mesa/main/glheader.h.orig	2005-11-27 13:16:31.000000000 -0500
++++ src/mesa/main/glheader.h
+@@ -77,6 +77,8 @@
+ #  if _MSC_VER == 1200
+      typedef UINT_PTR uintptr_t;
+ #  endif 
++#elif defined(__INTERIX)
++#  include <stdlib.h>
+ #else
+ #  include <inttypes.h>
+ #endif
