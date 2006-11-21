@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2006/11/08 01:49:22 taca Exp $
+# $NetBSD: Makefile,v 1.175 2006/11/21 17:47:53 tv Exp $
 
 DISTNAME=		openssh-4.5p1
 PKGNAME=		openssh-4.5.1
@@ -45,6 +45,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE.Interix
 BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind /usr/local/lib/bind
 CONFIGURE_ENV+=		ac_cv_func_openpty=no
 CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
+CPPFLAGS+=		-DIOV_MAX=16 # default is INT_MAX, way too large
 CPPFLAGS+=		-I/usr/local/include/bind
 LDFLAGS+=		-L/usr/local/lib/bind
 LIBS+=			-lbind -ldb -lcrypt
