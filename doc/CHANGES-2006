@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1862 2006/11/21 08:38:49 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1863 2006/11/21 10:39:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5396,3 +5396,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sylpheed to 2.2.10 [xtraeme 2006-11-20]
 	Updated comms/jpilot to 0.99.9 [bad 2006-11-20]
 	Updated mail/milter-greylist to 3.0 [tron 2006-11-21]
+	Updated graphics/p5-Image-ExifTool to 6.57 [gdt 2006-11-21]
