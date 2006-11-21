@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/21 13:44:14 wennmach Exp $
+
+SHA1 (g95_source.tgz) = 89cc9246837b1709f41abc5cbc312538f598c1a0
+RMD160 (g95_source.tgz) = ac5bb3168fe7038966def09863951b059f71d48a
+Size (g95_source.tgz) = 1314899 bytes
+SHA1 (gcc-core-4.0.3.tar.gz) = 2694281fa05ae0e39cd871fcc52745e35a2dfefc
+RMD160 (gcc-core-4.0.3.tar.gz) = fd960201a888537ad84e71b72b6b1170ad94eaa0
+Size (gcc-core-4.0.3.tar.gz) = 20137297 bytes
+SHA1 (patch-aa) = 4e2c95a34b940025c47ad7e5b9d22bb522674ec8
+SHA1 (patch-ab) = 304c526fb94b000b05adf9ce7bbe7a073dc0c6fa
