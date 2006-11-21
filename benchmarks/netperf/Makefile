@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/09 02:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.1 2006/11/21 10:59:25 tron Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
