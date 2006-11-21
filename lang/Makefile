@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2006/08/23 22:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2006/11/21 13:47:24 wennmach Exp $
 #
 
 COMMENT=	Programming languages
@@ -36,6 +36,7 @@ SUBDIR+=	ezm3
 SUBDIR+=	f2c
 SUBDIR+=	focal
 SUBDIR+=	fort77
+SUBDIR+=	g95
 SUBDIR+=	gauche
 SUBDIR+=	gawk
 SUBDIR+=	gb
