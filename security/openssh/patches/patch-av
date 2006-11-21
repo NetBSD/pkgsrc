@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.5 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-av,v 1.6 2006/11/21 17:43:56 tv Exp $
 
 --- sshd.c.orig	2006-10-29 17:01:29.000000000 +0900
 +++ sshd.c
@@ -19,7 +19,7 @@ $NetBSD: patch-av,v 1.5 2006/10/31 03:31:20 taca Exp $
  	do_setusercontext(privsep_pw);
  #else
 +#ifdef HAVE_INTERIX
-+	if (setuser(pw->pw_name, NULL, SU_COMPLETE))
++	if (setuser(privsep_pw->pw_name, NULL, SU_COMPLETE))
 +		fatal("setuser: %.100s", strerror(errno));
 +#else
  	gidset[0] = privsep_pw->pw_gid;
