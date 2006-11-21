@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2006/10/23 12:29:56 tron Exp $
+# $NetBSD: Makefile,v 1.62 2006/11/21 13:58:10 tron Exp $
 
 DISTNAME=	gv-3.6.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
 
