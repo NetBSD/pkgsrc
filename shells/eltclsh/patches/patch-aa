@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/21 15:27:42 obache Exp $
+
+--- src/loop.c.orig	2005-10-04 07:29:20.000000000 +0000
++++ src/loop.c
+@@ -301,7 +301,7 @@ elTclshLoop(int argc, char **argv, ElTcl
+     */
+ 
+  done:
+-   if (iinfo->command != NULL) Tcl_DecrRefCount(iinfo->command);
++   if (iinfo->command != NULL) {Tcl_DecrRefCount(iinfo->command);}
+    snprintf(buffer, sizeof(buffer), "exit %d", exitCode);
+    Tcl_Eval(iinfo->interp, buffer);
+ }
