@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2006/11/13 15:05:45 drochner Exp $
+# $NetBSD: Makefile,v 1.646 2006/11/21 10:59:25 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -234,7 +234,6 @@ SUBDIR+=	netcat6
 SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
-SUBDIR+=	netperf
 SUBDIR+=	netpipes
 SUBDIR+=	netsaint-base
 SUBDIR+=	netsaint-plugin-cluster
