@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1865 2006/11/21 14:08:29 wennmach Exp $
+>$NetBSD: CHANGES-2006,v 1.1866 2006/11/21 15:30:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5399,3 +5399,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/p5-Image-ExifTool to 6.57 [gdt 2006-11-21]
 	Added lang/g95 version 0.91 [wennmach 2006-11-21]
 	Updated print/gv to 3.6.2nb1 [tron 2006-11-21]
+	Added shells/eltclsh version 1.6 [obache 2006-11-21]
