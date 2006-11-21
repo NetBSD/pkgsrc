@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1 2006/11/21 10:59:25 tron Exp $
 netperf/netperf
 netperf/netserver
 netperf/tcp_range_script
