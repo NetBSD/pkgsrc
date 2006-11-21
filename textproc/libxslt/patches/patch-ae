@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.1 2006/11/21 23:55:05 recht Exp $
+
+--- libxslt/transform.c.orig	2006-08-16 17:33:08.000000000 +0200
++++ libxslt/transform.c
+@@ -1074,8 +1074,12 @@ xsltCopyAttrListNoOverwrite(xsltTransfor
+ 	    } else
+ 		copyNs = NULL;
+ 	}
++	/*
++	 * If attribute has a value, we need to copy it (watching out
++	 * for possible entities)
++	 */
+ 	if (attr->children)
+-	    value = xmlNodeListGetString(attr->doc, attr->children, 1);
++	    value = xmlNodeListGetString(attr->doc, attr->children, 0);
+ 	/*
+ 	* REVISIT: I think xmlNewDocProp() is the only attr function
+ 	* which does not eval if the attr is of type ID. This is good,

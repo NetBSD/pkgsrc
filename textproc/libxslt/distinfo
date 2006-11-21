@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2006/10/30 21:03:21 drochner Exp $
+$NetBSD: distinfo,v 1.42 2006/11/21 23:55:05 recht Exp $
 
 SHA1 (libxslt-1.1.18.tar.gz) = 49aef9520e72b70a9026efa030fad828da0f7b22
 RMD160 (libxslt-1.1.18.tar.gz) = 14241203635a1d83ff3e72efd623177e6dc2aa2f
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 3e745804f7f3900eaf88dc6d7ea831b81b0ff765
 SHA1 (patch-ab) = 70216897fc4c91d148eeece637df53a0f2555f1c
 SHA1 (patch-ac) = eed53c657171b5af321470c3f3e9ba222b8d4367
 SHA1 (patch-ad) = 8353ad7cc928cb386e57e0bc65f8ebc2c90a1323
+SHA1 (patch-ae) = 4e5a545a8c0e1de3e32c79266b0605fa57bbe6bf
