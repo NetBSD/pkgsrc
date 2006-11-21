@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1864 2006/11/21 13:59:38 tron Exp $
+>$NetBSD: CHANGES-2006,v 1.1865 2006/11/21 14:08:29 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5397,4 +5397,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/jpilot to 0.99.9 [bad 2006-11-20]
 	Updated mail/milter-greylist to 3.0 [tron 2006-11-21]
 	Updated graphics/p5-Image-ExifTool to 6.57 [gdt 2006-11-21]
+	Added lang/g95 version 0.91 [wennmach 2006-11-21]
 	Updated print/gv to 3.6.2nb1 [tron 2006-11-21]
