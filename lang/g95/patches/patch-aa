@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/21 13:44:17 wennmach Exp $
+
+Install documentation into the appropriate directory.
+
+--- configure.orig	2006-11-21 09:24:55.000000000 +0100
++++ configure	2006-11-21 09:32:41.000000000 +0100
+@@ -308,7 +308,7 @@
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CPP build build_cpu build_vendor build_os host host_cpu host_vendor host_os EGREP ALLOCA GCC_DIR DEST_LIBDIR PREFIX EXTRA_OPTS PARTS LDADD0 GCC_TRUE GCC_FALSE GCC41_TRUE GCC41_FALSE TARGET_SYSTEM_ROOT DEFAULT_TARGET_VERSION DEFAULT_TARGET_MACHINE G95_SPEC G95_CFLAGS COMMON_LDFLAGS G95_WORD LINK_SPEC STARTFILE_PREFIX_2 LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CPP build build_cpu build_vendor build_os host host_cpu host_vendor host_os EGREP ALLOCA GCC_DIR DEST_LIBDIR DEST_DOCDIR PREFIX EXTRA_OPTS PARTS LDADD0 GCC_TRUE GCC_FALSE GCC41_TRUE GCC41_FALSE TARGET_SYSTEM_ROOT DEFAULT_TARGET_VERSION DEFAULT_TARGET_MACHINE G95_SPEC G95_CFLAGS COMMON_LDFLAGS G95_WORD LINK_SPEC STARTFILE_PREFIX_2 LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -3994,6 +3994,7 @@
+ echo "${ECHO_T}$gcc_version" >&6
+ 
+    DEST_LIBDIR=$prefix/lib/gcc-lib/$host/$gcc_version
++   DEST_DOCDIR=$prefix/share/doc/g95
+    SAVE_DIR=`pwd`
+    PREFIX=$prefix
+ 
+@@ -6356,6 +6357,7 @@
+ s,@ALLOCA@,$ALLOCA,;t t
+ s,@GCC_DIR@,$GCC_DIR,;t t
+ s,@DEST_LIBDIR@,$DEST_LIBDIR,;t t
++s,@DEST_DOCDIR@,$DEST_DOCDIR,;t t
+ s,@PREFIX@,$PREFIX,;t t
+ s,@EXTRA_OPTS@,$EXTRA_OPTS,;t t
+ s,@PARTS@,$PARTS,;t t
