@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/21 15:27:42 obache Exp $
+
+SHA1 (eltclsh-1.6.tar.gz) = 159d79c265ed6cf3efd1c926f58c6705c630ed4e
+RMD160 (eltclsh-1.6.tar.gz) = daf83a9f509015e0c6d405f57ae6940e0f129d06
+Size (eltclsh-1.6.tar.gz) = 328626 bytes
+SHA1 (patch-aa) = 77ed0d9200df1b533997e4d0147d4bd3e3226108
