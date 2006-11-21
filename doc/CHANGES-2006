@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1866 2006/11/21 15:30:27 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1867 2006/11/21 23:58:08 recht Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5400,3 +5400,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added lang/g95 version 0.91 [wennmach 2006-11-21]
 	Updated print/gv to 3.6.2nb1 [tron 2006-11-21]
 	Added shells/eltclsh version 1.6 [obache 2006-11-21]
+	Updated textproc/libxslt to 1.1.18nb1 [recht 2006-11-21]
