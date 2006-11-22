@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2006/11/21 23:55:05 recht Exp $
+# $NetBSD: Makefile,v 1.72 2006/11/22 17:09:33 ghen Exp $
 
 DISTNAME=	libxslt-1.1.18
 PKGREVISION=	1
@@ -29,7 +29,7 @@ TEST_TARGET=		check
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
-BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.25
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
