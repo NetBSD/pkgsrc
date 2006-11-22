@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1867 2006/11/21 23:58:08 recht Exp $
+>$NetBSD: CHANGES-2006,v 1.1868 2006/11/22 00:14:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5401,3 +5401,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/gv to 3.6.2nb1 [tron 2006-11-21]
 	Added shells/eltclsh version 1.6 [obache 2006-11-21]
 	Updated textproc/libxslt to 1.1.18nb1 [recht 2006-11-21]
+	Updated sysutils/xentools20 to 2.0.7nb9 [seb 2006-11-22]
