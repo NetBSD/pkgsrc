@@ -1,11 +1,11 @@
-$NetBSD: patch-ap,v 1.1.1.1 2006/03/30 19:15:48 ghen Exp $
+$NetBSD: patch-ap,v 1.2 2006/11/22 12:48:29 ghen Exp $
 
---- security/coreconf/command.mk.orig	2004-04-25 17:02:17.000000000 +0200
+--- security/coreconf/command.mk.orig	2006-02-03 23:26:36.000000000 +0100
 +++ security/coreconf/command.mk
-@@ -46,7 +46,7 @@ CCF           = $(CC) $(CFLAGS)
+@@ -45,7 +45,7 @@ ASFLAGS      += $(CFLAGS)
+ CCF           = $(CC) $(CFLAGS)
  LINK_DLL      = $(LINK) $(OS_DLLFLAGS) $(DLLFLAGS)
  LINK_EXE      = $(LINK) $(OS_LFLAGS) $(LFLAGS)
- NFSPWD        = $(NSINSTALL_DIR)/nfspwd
 -CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
 +CFLAGS       += $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
  		$(XCFLAGS)
