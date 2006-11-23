@@ -1,0 +1,29 @@
+$NetBSD: patch-aj,v 1.1.2.1 2006/11/23 19:56:43 salo Exp $
+
+Fix a file-cache buffer overflow as documented in
+http://www.dovecot.org/list/dovecot-news/2006-November/000023.html
+
+From dovecot-1.0rc15.
+
+--- src/lib/file-cache.c	28 May 2006 23:43:44 -0000	1.12.2.1
++++ src/lib/file-cache.c	18 Nov 2006 23:35:35 -0000	1.12.2.4
+@@ -128,8 +128,8 @@
+ 	i_assert(psize > 0);
+ 
+ 	bits = buffer_get_space_unsafe(cache->page_bitmask, 0,
+-				       poffset / CHAR_BIT +
+-				       (psize + CHAR_BIT - 1) / CHAR_BIT);
++				       (poffset + psize + CHAR_BIT - 1) /
++				       CHAR_BIT);
+ 
+ 	dest_offset = poffset * page_size;
+ 	dest = PTR_OFFSET(cache->mmap_base, dest_offset);
+@@ -282,7 +282,7 @@
+ 	}
+ 
+ 	bits = buffer_get_space_unsafe(cache->page_bitmask, offset / CHAR_BIT,
+-				       (size + CHAR_BIT - 1) / CHAR_BIT);
++				       1 + (size + CHAR_BIT - 1) / CHAR_BIT);
+ 
+ 	/* set the first byte */
+ 	for (i = offset % CHAR_BIT, mask = 0; i < CHAR_BIT && size > 0; i++) {
