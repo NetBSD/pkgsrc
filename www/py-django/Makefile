@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/09/17 13:42:07 joerg Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2006/11/23 09:41:31 ghen Exp $
 
 DISTNAME=	Django-0.95
 PKGNAME=	${PYPKGPREFIX}-django-0.95
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://media.djangoproject.com/releases/0.95/
 
@@ -14,8 +15,11 @@ PYBINMODULE=	# yes
 PYTHON_VERSIONS_ACCEPTED=	24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py24-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py24-setuptools
 DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
+
+FILES_SUBST+=	PY_MANAGE_EGGS=${PREFIX}/bin/${PYPKGPREFIX}-manage-eggs
+FILES_SUBST+=	DJANGOEGG=${PREFIX}/${PYSITELIB}/Django-0.95-py2.4.egg
 
 .include "options.mk"
 
