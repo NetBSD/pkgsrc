@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2006/11/09 20:57:41 drochner Exp $
+$NetBSD: distinfo,v 1.28 2006/11/23 11:33:02 drochner Exp $
 
 SHA1 (cairo-1.2.6.tar.gz) = b86b4017a9abd565ef11c72b7faee9082a04118f
 RMD160 (cairo-1.2.6.tar.gz) = 4469a661b294e342ee77e726c1cefccd4837ae2e
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 5f3e97e89b8353e03ed4bf78c1cfb73765199bf2
 SHA1 (patch-ad) = b4500f17e6769ecd05902b20bb54c07887a6f6fe
 SHA1 (patch-ae) = 9ce7cab8e4f1394efdd516d5f83d2d53edb02064
 SHA1 (patch-af) = 257e2c4e73842e4a2f236765b9dae1c6f355c8b4
+SHA1 (patch-ag) = 8ac5d971f38a5fb58faeacdf5f1a4d6510663eb9
