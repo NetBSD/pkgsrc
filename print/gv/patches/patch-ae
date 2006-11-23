@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2006/01/15 20:07:42 joerg Exp $
+$NetBSD: patch-ae,v 1.8.6.1 2006/11/23 09:03:49 ghen Exp $
 
---- src/Ghostview.c.orig	2006-01-15 20:00:42.000000000 +0000
+--- src/Ghostview.c.orig	2006-07-04 21:09:52.000000000 +0200
 +++ src/Ghostview.c
-@@ -88,8 +88,6 @@ typedef char *XPointer;
+@@ -83,8 +83,6 @@ typedef char *XPointer;
  #endif
  
  #include <errno.h>

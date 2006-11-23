@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.5 2006/01/15 20:07:42 joerg Exp $
+$NetBSD: patch-af,v 1.5.6.1 2006/11/23 09:03:49 ghen Exp $
 
---- src/error.h.orig	2006-01-15 20:01:54.000000000 +0000
+--- src/error.h.orig	2005-08-10 13:33:21.000000000 +0200
 +++ src/error.h
-@@ -51,8 +51,6 @@
- #   endif
- #endif 
- #   include <errno.h>
--    /* BSD 4.3 errno.h does not declare errno */
--    extern int errno;
- #endif
+@@ -36,8 +36,6 @@
+ 
+ 
+ #include <errno.h>
+-/* BSD 4.3 errno.h does not declare errno */
+-extern int errno;
  
  extern char*			open_fail_error (
+ #if NeedFunctionPrototypes
