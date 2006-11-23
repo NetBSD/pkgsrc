@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/19 04:43:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/11/23 10:52:57 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/trac/About.py
@@ -442,7 +442,6 @@ share/trac/wiki-macros/TracGuideToc.py
 @dirrm share/trac/htdocs/css
 @dirrm share/trac/htdocs
 @dirrm share/trac/cgi-bin
-@dirrm share/trac
 @dirrm share/examples/trac
 @dirrm ${PYSITELIB}/trac/wiki
 @dirrm ${PYSITELIB}/trac/web
