@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.37 2006/11/10 21:36:37 schwarz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.38 2006/11/23 11:47:54 yyamano Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -185,7 +185,7 @@
 
       <varlistentry><term><varname>WRKDIR</varname></term>
       <listitem><para>This is an absolute pathname pointing to the directory
-      where all work takes place. The distfiles are extraced to this
+      where all work takes place. The distfiles are extracted to this
       directory. It also contains temporary directories and log files used by
       the various pkgsrc frameworks, like <emphasis>buildlink</emphasis> or
       the <emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
@@ -389,7 +389,7 @@
     files.</para>
 
     <para>Extracting the files is usually done by a little
-    program, <filename>mk/scripts/extract</filename>, which
+    program, <filename>mk/extract/extract</filename>, which
     already knows how to extract various archive formats, so most
     likely you will not need to change anything here. But if you
     need, the following variables may help you:</para>
@@ -399,7 +399,7 @@
       <varlistentry><term><varname>EXTRACT_OPTS_{BIN,LHA,PAX,RAR,TAR,ZIP,ZOO}</varname></term>
       <listitem><para>Use these variables to override the default
       options for an extract command, which are defined in
-      <filename>mk/scripts/extract</filename>.</para></listitem></varlistentry>
+      <filename>mk/extract/extract</filename>.</para></listitem></varlistentry>
 
       <varlistentry><term><varname>EXTRACT_USING</varname></term>
       <listitem><para>This variable can be set to
