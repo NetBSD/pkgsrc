@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2006/11/05 15:49:22 seb Exp $
+# $NetBSD: Makefile,v 1.84 2006/11/23 22:19:38 hubertf Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -74,6 +74,8 @@ post-install:
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none") || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-vax) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-sparc) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-m68k)
 CONFIGURE_ARGS+=	--disable-threads
 .else
