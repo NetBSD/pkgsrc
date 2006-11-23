@@ -1,4 +1,4 @@
-<!-- $NetBSD: files.xml,v 1.3 2006/10/02 17:56:27 wiz Exp $ -->
+<!-- $NetBSD: files.xml,v 1.4 2006/11/23 11:44:47 yyamano Exp $ -->
 
 <chapter id="files">
 <title>Directory layout of the installed files</title>
@@ -20,7 +20,7 @@ are:</para>
     LOCALBASE=              /usr/pkg
     PKG_SYSCONFBASE=        /usr/pkg/etc
     VARBASE=                /var
-    PKGDBDIR=               /var/db/pkg
+    PKG_DBDIR=              /var/db/pkg
 </programlisting>
 
 <para>In unprivileged mode (when pkgsrc has been installed as any other
@@ -30,7 +30,7 @@ user), the default locations are:</para>
     LOCALBASE=              ${HOME}/pkg
     PKG_SYSCONFBASE=        ${HOME}/pkg/etc
     VARBASE=                ${HOME}/pkg/var
-    PKGDBDIR=               ${HOME}/pkg/var/db/pkg
+    PKG_DBDIR=              ${HOME}/pkg/var/db/pkg
 </programlisting>
 
 <para>What these four directories are for, and what they look like is
