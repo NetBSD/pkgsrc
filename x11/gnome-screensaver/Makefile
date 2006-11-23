@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/09/20 14:40:14 joerg Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2006/11/23 12:23:28 ghen Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.16.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.16/}
 
@@ -18,6 +18,12 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_X11=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# gnome-screensaver-dialog drops SUID privs
+CONFIGURE_ARGS+=	--disable-pam
+.endif
 
 PKGCONFIG_OVERRIDE=	data/gnome-screensaver.pc
 
