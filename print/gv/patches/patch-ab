@@ -1,25 +1,88 @@
-$NetBSD: patch-ab,v 1.7 2004/12/30 21:04:25 snj Exp $
+$NetBSD: patch-ab,v 1.7.14.1 2006/11/23 09:03:49 ghen Exp $
 
---- src/ps.c.orig	2004-12-07 15:55:59.000000000 -0800
-+++ src/ps.c	2004-12-30 12:36:25.000000000 -0800
-@@ -531,16 +531,16 @@ unc_ok:
-       doc->beginheader = position;
-       section_len = line_len;
-     } else if (iscomment(line,"%PDF-") && cmd_scan_pdf) {
--      
--      /* PDF hack to set DELAYSAFER on interpreter invocation */
--      pdf_delaysafer_hack = 1;
--
-       struct document *retval = NULL;
-       FILE *tmpfile = (FILE*)NULL;
-       char *filename_dsc;
-       char cmd[512];
-       char s[512];
-       mode_t old_umask;
-+      
-+      /* PDF hack to set DELAYSAFER on interpreter invocation */
-+      pdf_delaysafer_hack = 1;
-+
-       filename_dsc=file_getTmpFilename(NULL,filename_raw);
-       sprintf(cmd,cmd_scan_pdf,filename,filename_dsc);
-       old_umask = umask(0077);
+--- src/gv_message.h.orig	2005-03-31 14:02:39.000000000 +0100
++++ src/gv_message.h	2006-10-23 13:16:40.000000000 +0100
+@@ -29,48 +29,48 @@
+ char *message_usage = "\
+ Usage: gv [OPTION]... [FILE]\n\
+ PostScript and PDF viewer.\n\
+-  [-]-monochrome                      display document using only black and white\n\
+-  [-]-grayscale                       display document without colors\n\
+-  [-]-color                           display document as usual\n\
+-  [-]-safer                           start ghostscript in safe mode\n\
+-  [-]-nosafer                         do not start ghostscript in safe mode\n\
+-  [-]-quiet                           start ghostscript with the -dQUIET option\n\
+-  [-]-noquiet                         do not start ghostscript with the -dQUIET option\n\
+-  [-]-arguments=ARGS                  start ghostscript with additional options as specified\n\
++  --monochrome                      display document using only black and white\n\
++  --grayscale                       display document without colors\n\
++  --color                           display document as usual\n\
++  --safer                           start ghostscript in safe mode\n\
++  --nosafer                         do not start ghostscript in safe mode\n\
++  --quiet                           start ghostscript with the -dQUIET option\n\
++  --noquiet                         do not start ghostscript with the -dQUIET option\n\
++  --arguments=ARGS                  start ghostscript with additional options as specified\n\
+                                       by the string ARGS\n\
+-  [-]-page=LABEL                      display the page with label LABEL first\n\
+-  [-]-center                          the page should be centered automatically\n\
+-  [-]-nocenter                        the page should not be centered automatically\n\
+-  [-]-media=MEDIA                     selects the paper size to be used\n\
+-  [-]-orientation=ORIENTATION         sets the orientation of the page\n\
+-  [-]-scale=N                         selects the scale N\n\
+-  [-]-scalebase=N                     selects the scale base N\n\
+-  [-]-swap                            interchange the meaning of the orientations landscape\n\
++  --page=LABEL                      display the page with label LABEL first\n\
++  --center                          the page should be centered automatically\n\
++  --nocenter                        the page should not be centered automatically\n\
++  --media=MEDIA                     selects the paper size to be used\n\
++  --orientation=ORIENTATION         sets the orientation of the page\n\
++  --scale=N                         selects the scale N\n\
++  --scalebase=N                     selects the scale base N\n\
++  --swap                            interchange the meaning of the orientations landscape\n\
+                                       and seascape\n\
+-  [-]-noswap                          do not interchange the meaning of the orientation\n\
++  --noswap                          do not interchange the meaning of the orientation\n\
+                                       landscape and seascape\n\
+-  [-]-antialias                       use antialiasing\n\
+-  [-]-noantialias                     do not use antialiasing\n\
+-  [-]-dsc                             dsc comments are respected\n\
+-  [-]-nodsc                           dsc comments are not respected\n\
+-  [-]-eof                             ignore the postscript EOF comment while scanning\n\
++  --antialias                       use antialiasing\n\
++  --noantialias                     do not use antialiasing\n\
++  --dsc                             dsc comments are respected\n\
++  --nodsc                           dsc comments are not respected\n\
++  --eof                             ignore the postscript EOF comment while scanning\n\
+                                       documents\n\
+-  [-]-noeof                           do not ignore the postscript EOF comment while\n\
++  --noeof                           do not ignore the postscript EOF comment while\n\
+                                       scanning documents\n\
+-  [-]-pixmap                          use backing pixmap\n\
+-  [-]-nopixmap                        do not use backing pixmap\n\
+-  [-]-watch                           watch the document file for changes\n\
+-  [-]-nowatch                         do not watch the document file for changes\n\
+-  [-]-help                            print a help message and exit\n\
+-  [-]-usage                           print a usage message and exit\n\
+-  [-]-resize                          fit the size of the window to the size of the page\n\
+-  [-]-noresize                        do not fit the size of the window to the size of the page\n\
++  --pixmap                          use backing pixmap\n\
++  --nopixmap                        do not use backing pixmap\n\
++  --watch                           watch the document file for changes\n\
++  --nowatch                         do not watch the document file for changes\n\
++  --help                            print a help message and exit\n\
++  --usage                           print a usage message and exit\n\
++  --resize                          fit the size of the window to the size of the page\n\
++  --noresize                        do not fit the size of the window to the size of the page\n\
+   -geometry [<width>][x<height>][{+-}<xoffset>{+-}<yoffset>]\n\
+-  [-]-ad=FILE                         read and use additional resources from FILE\n\
+-  [-]-style=FILE                      read and use additional resources from FILE. These resources\n\
++  --ad=FILE                         read and use additional resources from FILE\n\
++  --style=FILE                      read and use additional resources from FILE. These resources\n\
+                                       have lower priority than those provided on the context of --ad\n\
+-  [-]-spartan                         shortcut for --style=gv_spartan.dat\n\
+-  [-]-version                         show gv version and exit\n\
++  --spartan                         shortcut for --style=gv_spartan.dat\n\
++  --version                         show gv version and exit\n\
+ ";
+ 
+ char *message_help = "\

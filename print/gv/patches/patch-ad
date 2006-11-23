@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.4 2005/02/24 07:43:30 reed Exp $
+$NetBSD: patch-ad,v 1.4.14.1 2006/11/23 09:03:49 ghen Exp $
 
---- src/file.c.orig	Tue Dec  7 15:37:40 2004
+--- src/file.c.orig	2005-08-10 13:33:21.000000000 +0200
 +++ src/file.c
-@@ -296,6 +296,9 @@ file_fileIsNotUseful(fn)
-     errno = EISDIR;
-   } else if (s.st_size == 0) {
-     r = 1;
+@@ -265,6 +265,9 @@ int file_fileIsDir(fn)
+ /* file_fileIsNotUseful */
+ /*############################################################*/
+ 
 +#ifndef ENODATA
 +#define ENODATA ENOMSG
 +#endif
-     errno = ENODATA;
-   }
-   IMESSAGE(r)
+ int
+ file_fileIsNotUseful(fn)
+   char *fn;

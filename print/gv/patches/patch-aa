@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.13 2005/02/24 07:43:30 reed Exp $
+$NetBSD: patch-aa,v 1.13.14.1 2006/11/23 09:03:49 ghen Exp $
 
---- src/main.c.orig	Mon Dec  6 15:36:57 2004
-+++ src/main.c
-@@ -321,6 +321,8 @@ int main(argc, argv)
-     Dimension    maximum_width,maximum_height;
-     unsigned int gwidth=0,gheight=0;
-     int          dim_forced;
-+    int          opt_counter = 0;
-+    int          c;
- 
- /*###  initializing global variables ####################################*/
- 
-@@ -419,8 +421,6 @@ int main(argc, argv)
+--- src/main.c.orig	2006-09-14 19:56:08.000000000 +0100
++++ src/main.c	2006-10-23 12:50:43.000000000 +0100
+@@ -408,7 +408,7 @@
     }
  
     /*### Manage GNU command line arguments ########################*/
--   int opt_counter = 0;
--   int c;
-    while ((c = getopt_long (argc, argv, "vhu", GNU_longOptions, NULL))
+-   while ((c = getopt_long_only (argc, argv, "vhu", GNU_longOptions, NULL))
++   while ((c = getopt_long (argc, argv, "vhu", GNU_longOptions, NULL))
  	  != -1)
       {
+ 
