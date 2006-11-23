@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.44 2006/11/14 11:56:56 hubertf Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.45 2006/11/23 04:31:56 jschauma Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -117,7 +117,7 @@ directory on ftp.NetBSD.org.</para>
 	<entry role="osname">Interix 3.5</entry>
 	<entry role="date">20051010</entry>
 	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Interix-3.5-i386-20051010.tar.gz">binary kit</ulink></entry>
-	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Interix-3.5/i386/current/">binary packages</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
       </row>
       <row>
 	<entry role="osname">IRIX 6.5 n32-bit ABI</entry>
