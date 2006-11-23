@@ -1,10 +1,10 @@
-$NetBSD: patch-ax,v 1.2 2006/11/22 12:48:30 ghen Exp $
+$NetBSD: patch-ax,v 1.3 2006/11/23 10:04:15 ghen Exp $
 
---- security/coreconf/SunOS5.mk.orig	2006-02-03 23:26:36.000000000 +0100
+--- security/coreconf/SunOS5.mk.orig	2004-10-11 04:15:42.000000000 +0200
 +++ security/coreconf/SunOS5.mk
-@@ -176,6 +176,10 @@ endif
+@@ -182,6 +182,10 @@ endif
+ 	DSO_LDOPTS += -G -h $(notdir $@)
  endif
- DSO_LDOPTS += -z combreloc -z defs -z ignore
  
 +ifdef LIBRUNPATH
 +DSO_LDOPTS += -R$(LIBRUNPATH)
