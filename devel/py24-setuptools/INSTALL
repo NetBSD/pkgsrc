@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.2.2.2 2006/11/23 09:41:31 ghen Exp $
+#
+
+case $STAGE in
+POST-INSTALL)
+	cat > @PYSITELIB@/easy-install.pth << EOF
+import sys; sys.__plen = len(sys.path)
+./setuptools-0.6c1-py2.4.egg
+import sys; new=sys.path[sys.__plen:]; del sys.path[sys.__plen:]; p=getattr(sys,'__egginsert',0); sys.path[p:p]=new; sys.__egginsert = p+len(new)
+EOF
+	;;
+esac
