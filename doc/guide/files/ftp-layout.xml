@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.6 2006/09/18 12:16:25 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.7 2006/11/23 11:42:54 yyamano Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -70,7 +70,7 @@
 </sect1>
 <sect1 id="ftp-source">
 <title><filename>current</filename>,
-<filename>200<replaceable>x</replaceable>Q<replaceable>y</replaceable></filename>:
+<filename>pkgsrc-200<replaceable>x</replaceable>Q<replaceable>y</replaceable></filename>:
 source packages</title>
 
 	<para>These directories contain the <quote>real</quote> pkgsrc,
