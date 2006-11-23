@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1868 2006/11/22 00:14:14 seb Exp $
+>$NetBSD: CHANGES-2006,v 1.1869 2006/11/23 00:38:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5402,3 +5402,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added shells/eltclsh version 1.6 [obache 2006-11-21]
 	Updated textproc/libxslt to 1.1.18nb1 [recht 2006-11-21]
 	Updated sysutils/xentools20 to 2.0.7nb9 [seb 2006-11-22]
+	Updated graphics/gimp-ufraw to 0.10 [gdt 2006-11-23]
