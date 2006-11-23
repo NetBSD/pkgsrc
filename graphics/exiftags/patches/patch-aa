@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/07/01 12:54:09 adam Exp $
+$NetBSD: patch-aa,v 1.5 2006/11/23 18:43:34 reed Exp $
 
 --- Makefile.orig	2005-01-05 00:30:32.000000000 +0000
 +++ Makefile
@@ -24,4 +24,4 @@ $NetBSD: patch-aa,v 1.4 2005/07/01 12:54:09 adam Exp $
 -	chmod 0644 $(mandir)/man1/exiftags.1 $(mandir)/man1/exifcom.1 \
 -	$(mandir)/man1/exiftime.1
 +	${BSD_INSTALL_PROGRAM} exiftags exifcom exiftime ${PREFIX}/bin
-+	${BSD_INSTALL_MAN} exiftags.1 exifcom.1 exiftime.1 ${PREFIX}/man/man1
++	${BSD_INSTALL_MAN} exiftags.1 exifcom.1 exiftime.1 ${PREFIX}/${PKGMANDIR}/man1
