@@ -5,8 +5,3 @@ Mozilla Firefox and Mozilla Thunderbird, our group of dedicated volunteers
 works to ensure that you can have "everything but the kitchen sink" (a web
 browser, mail client, HTML composer, address book, IRC client and calendar),
 and have it stable enough for corporate use.
-
-This package is a preview of the upcoming stable version, showing off new but
-potentially not finalized features. It is intended for developers and testers
-only -- not for end users.  To get the latest version intended for end users,
-use the www/seamonkey* packages.
