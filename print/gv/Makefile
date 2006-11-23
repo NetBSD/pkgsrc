@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2006/04/06 18:18:15 jlam Exp $
+# $NetBSD: Makefile,v 1.60.4.1 2006/11/23 09:03:49 ghen Exp $
 
-DISTNAME=	gv-3.6.1
+DISTNAME=	gv-3.6.2
 PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
@@ -13,19 +13,13 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gs:run makeinfo
 
 TEXINFO_REQD=		4.2
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 # this pkg does not work with std xaw, but xpm and xaw3d work
 XAW_TYPE?=		3d
 .include "../../mk/bsd.prefs.mk"
 .if ${XAW_TYPE} == "standard"
 XAW_TYPE=		3d
-.endif
-
-.if !exists(/usr/include/getopt.h)
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
-post-extract:
-	cd ${WRKSRC}/src && ${LN} -s ${PREFIX}/include/nbcompat.h getopt.h
 .endif
 
 .include "../../mk/xaw.buildlink3.mk"
