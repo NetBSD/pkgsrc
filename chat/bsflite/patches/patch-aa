@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2006/01/11 18:13:25 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2006/11/23 00:54:01 obache Exp $
 
---- Makefile.orig	2006-01-09 12:10:53.000000000 -0600
+--- Makefile.orig	2006-11-07 16:56:52.000000000 -0500
 +++ Makefile
 @@ -2,7 +2,7 @@ EXEC=bsflite
  #EXEC=bsflite.exe
- #CC=i386-pc-msdosdjgpp-gcc
+ #CC=i586-pc-msdosdjgpp-gcc
  #CC=mingw32-gcc
 -CC=gcc
 +#CC=gcc
  #
- # Add -DCOLOR for ANSI color support
- # Add also -DCOLOR_DARKBG if you have a xterm/screen with
-@@ -20,10 +20,10 @@ CFLAGS=-Os -Wall -pipe
+ # Add -DDUMP_PROFILE to dump all HTML profiles to a file.
+ # 	Edit PROFILE_DUMP_PATH in bsf.h to set the path.
+@@ -16,10 +16,10 @@ CFLAGS=-Os -pipe
  # Add -lsocket -lbind for Zeta R1 (and potentially BeOS)
- #     (thanks, Brennan Cleveland)
+ #     (thanks to Brennan Cleveland)
  #
 -LIBS=-limcomm
 +LIBS+=-limcomm
@@ -21,6 +21,6 @@ $NetBSD: patch-aa,v 1.2 2006/01/11 18:13:25 wiz Exp $
  #LIBS+=-lwsock32
 -LDFLAGS=-Limcomm/ -s
 +LDFLAGS+=-Limcomm/ -s
- #LDFLAGS+=-L/usr/local/djgpp/watt/lib
- SOURCES=aim.c away.c bsf.c cleaner.c config.c conn.c input.c log.c out.c queue.c util.c
- OBJECTS=aim.o away.o bsf.o cleaner.o config.o conn.o input.o log.o out.o queue.o util.o
+ #LDFLAGS+=-L/usr/local/cross-tools/watt/lib
+ 
+ INSTALL=/usr/bin/install
