@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1870 2006/11/23 00:55:16 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1871 2006/11/23 11:09:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5404,3 +5404,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/xentools20 to 2.0.7nb9 [seb 2006-11-22]
 	Updated graphics/gimp-ufraw to 0.10 [gdt 2006-11-23]
 	Updated chat/bsflite to 0.82 [obache 2006-11-23]
+	Updated www/ja-trac to 0.10.2.1nb1 [obache 2006-11-23]
