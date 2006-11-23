@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2006/09/16 12:20:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2006/11/23 00:31:06 gdt Exp $
 
-DISTNAME=		ufraw-0.9.1
+DISTNAME=		ufraw-0.10
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -16,6 +15,10 @@ USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		perl:run pod2man
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
+
+CONFIGURE_ARGS+=	--enable-mime
+
+GCONF2_SCHEMAS=		ufraw.schemas
 
 # This package uses too much C99 code to be patched.
 GCC_REQD+=		3.0
@@ -37,8 +40,11 @@ CONFIGURE_ARGS+=	--with-libexif
 .include "../../graphics/libexif/buildlink3.mk"
 .endif
 
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
