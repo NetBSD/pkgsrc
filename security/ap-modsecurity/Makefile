@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:10:42 joerg Exp $
+# $NetBSD: Makefile,v 1.3.6.1 2006/11/23 09:21:44 ghen Exp $
 #
 
-DISTNAME=	modsecurity-1.8.7
-PKGNAME=	ap-modsecurity-1.8.7
-PKGREVISION=	2
+DISTNAME=	modsecurity-apache_1.9.4
+PKGNAME=	${APACHE_PKG_PREFIX}-modsecurity-1.9.4
 CATEGORIES=	www security
 MASTER_SITES=	http://www.modsecurity.org/download/
 
@@ -26,25 +25,20 @@ PTHREAD_OPTS+=	require
 
 do-build:
 	cd ${WRKSRC}/${APACHE_DIR} && \
-		${SETENV} PATH=${PATH} \
+		${SETENV} PATH=${PATH:Q} \
 		${APXS} ${CPPFLAGS} ${LDFLAGS} -c mod_security.c
 
 do-install:
 	cd ${WRKSRC}/${APACHE_DIR} && \
-		${SETENV} PATH=${PATH} \
+		${SETENV} PATH=${PATH:Q} \
 		${APXS} ${CPPFLAGS} ${LDFLAGS} -i mod_security.${MOD_EXTN}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ap-security
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ap-security
 
-	${INSTALL_DATA} ${WRKSRC}/httpd.conf.regression-v1 \
-		${PREFIX}/share/examples/ap-security
-	${INSTALL_DATA} ${WRKSRC}/httpd.conf.regression-v2 \
-		${PREFIX}/share/examples/ap-security
 	${INSTALL_DATA} ${WRKSRC}/httpd.conf.example-minimal \
 		${PREFIX}/share/examples/ap-security
-	${INSTALL_DATA} ${WRKSRC}/modsecurity-manual.pdf \
-		${PREFIX}/share/doc/ap-security
+	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/ap-security
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/14 18:29:39 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.8.1 2006/11/23 09:21:44 ghen Exp $
 lib/httpd/mod_security.so
+share/doc/ap-security/html-multipage/01-introduction.html
+share/doc/ap-security/html-multipage/02-installation.html
+share/doc/ap-security/html-multipage/03-configuration.html
+share/doc/ap-security/html-multipage/04-rules.html
+share/doc/ap-security/html-multipage/05-actions.html
+share/doc/ap-security/html-multipage/06-special_features.html
+share/doc/ap-security/html-multipage/07-logging.html
+share/doc/ap-security/html-multipage/08-miscellaneous.html
+share/doc/ap-security/html-multipage/09-examples.html
+share/doc/ap-security/html-multipage/aa-recommended_configuration.html
+share/doc/ap-security/html-multipage/index.html
+share/doc/ap-security/html-multipage/modsecurity-manual.css
+share/doc/ap-security/html-multipage/modsecurity.gif
+share/doc/ap-security/html-multipage/thinkingstone.gif
+share/doc/ap-security/index.html
+share/doc/ap-security/modsecurity-manual.css
+share/doc/ap-security/modsecurity-manual.html
 share/doc/ap-security/modsecurity-manual.pdf
+share/doc/ap-security/modsecurity-manual.xml
+share/doc/ap-security/modsecurity.gif
+share/doc/ap-security/thinkingstone.gif
 share/examples/ap-security/httpd.conf.example-minimal
-share/examples/ap-security/httpd.conf.regression-v1
-share/examples/ap-security/httpd.conf.regression-v2
-@dirrm share/examples/ap-security
+@dirrm share/doc/ap-security/html-multipage
 @dirrm share/doc/ap-security
+@dirrm share/examples/ap-security
