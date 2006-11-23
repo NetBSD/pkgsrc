@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.46 2006/11/19 12:25:46 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.47 2006/11/23 10:06:37 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -117,3 +117,11 @@ Pullup ticket 1913 - requested by adrianp
 security fix for proftpd
 Pullup ticket 1914 - requested by adrianp
 security fix for gtexinfo
+Pullup ticket 1916 - requested by tron
+security update for phpmyadmin
+Pullup ticket 1918 - requested by tron
+security update for gv
+Pullup ticket 1890 - requested by adrianp
+bugfix update for ap-modsecurity
+Pullup ticket 1896 - requested by joerg
+install fix for py24-setuptools
