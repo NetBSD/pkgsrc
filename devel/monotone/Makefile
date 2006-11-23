@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2006/09/22 11:14:05 dan Exp $
+# $NetBSD: Makefile,v 1.30 2006/11/23 17:38:35 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.30
+DISTNAME=	monotone-0.31
 CATEGORIES=	devel
 MASTER_SITES=	http://monotone.ca/downloads/
-PKGREVISION=	1
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
