@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.29 2006/11/23 11:42:54 yyamano Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.30 2006/11/23 11:49:55 yyamano Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -134,12 +134,12 @@
 	  building errors would not show up.</para></listitem>
 
 	  <listitem><para><varname>CHECK_FILES</varname>
-	  (<filename>pkgsrc/mk/bsd.pkg.check.mk</filename>) can be set to
+	  (<filename>pkgsrc/mk/check/check-files.mk</filename>) can be set to
 	  <quote>yes</quote> to check that the installed set of files
 	  matches the <filename>PLIST</filename>.</para></listitem>
 
 	  <listitem><para><varname>CHECK_INTERPRETER</varname>
-	  (<filename>pkgsrc/mk/bsd.pkg.check.mk</filename>) can be set to
+	  (<filename>pkgsrc/mk/check/check-interpreter.mk</filename>) can be set to
 	  <quote>yes</quote> to check that the installed
 	  <quote>#!</quote>-scripts will find their
 	  interpreter.</para></listitem>
