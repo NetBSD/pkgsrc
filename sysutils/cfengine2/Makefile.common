@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/08/18 23:03:44 ben Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/11/24 23:04:15 wiz Exp $
 #
 
 CFENGINE_VERSION= 2.1.10
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.iu.hio.no/pub/cfengine/ \
 		http://sunsite.utk.edu/ftp/pub/cfengine/cfengine-ftp/
 
-MAINTAINER=	mike@ethmoid.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cfengine.org/
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/cfengine2/distinfo
