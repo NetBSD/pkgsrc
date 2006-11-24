@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2006/10/01 08:52:01 schwarz Exp $
+$NetBSD: distinfo,v 1.22 2006/11/24 16:31:48 rillig Exp $
 
 SHA1 (aspell-0.60.4.tar.gz) = 07353593eb89e64c49b1fd8dd405e3ee0ed86291
 RMD160 (aspell-0.60.4.tar.gz) = e0408acd4f3304c957aeea0b17a28d0c44e11064
@@ -6,7 +6,7 @@ Size (aspell-0.60.4.tar.gz) = 1676825 bytes
 SHA1 (patch-aa) = f68dd79ef2d3290b019d7588cadb4fdf53b3b988
 SHA1 (patch-ab) = 615a676128dab7d79e697f56330c8aaa6c901d3f
 SHA1 (patch-ac) = 8adbd2b330830ba0fb3fc063bee0fac69b0a1f64
-SHA1 (patch-ad) = ac4dd7b4df79b7755be1184f625460b64762a89c
+SHA1 (patch-ad) = 0af066d4da0e4f6e69135a2d3bc58858b71cac8a
 SHA1 (patch-ae) = d35f3544f44464a36685903ade3cdeb59c5fd836
 SHA1 (patch-af) = b34d98280c83f270f86ad3cf0f31e48688f53138
 SHA1 (patch-ag) = 04b34f2b780a632a5045120ae408ceea591a66de
