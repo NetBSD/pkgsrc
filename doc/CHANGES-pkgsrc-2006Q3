@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.48 2006/11/23 19:57:19 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.49 2006/11/24 15:04:35 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -125,5 +125,9 @@ Pullup ticket 1890 - requested by adrianp
 bugfix update for ap-modsecurity
 Pullup ticket 1896 - requested by joerg
 install fix for py24-setuptools
+Pullup ticket 1919 - requested by drochner
+runtime fix for gnome-screensaver
 Pullup ticket 1915 - requested by ghen
 security fix for dovecot
+Pullup ticket 1911 - requested by obache
+security update for ja-trac
