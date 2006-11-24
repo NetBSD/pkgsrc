@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/24 12:55:31 drochner Exp $
+${PYSITELIB}/gmenu.la
