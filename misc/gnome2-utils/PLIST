@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/15 15:23:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/11/24 18:21:45 drochner Exp $
 bin/baobab
 bin/gnome-dictionary
 bin/gnome-panel-screenshot
@@ -70,6 +70,12 @@ share/gnome/help/baobab/C/figures/baobab_remote.png
 share/gnome/help/baobab/C/figures/baobab_treemaps.png
 share/gnome/help/baobab/C/figures/baobab_window.png
 share/gnome/help/baobab/C/legal.xml
+share/gnome/help/baobab/fr/baobab.xml
+share/gnome/help/baobab/fr/figures/baobab_fullscan.png
+share/gnome/help/baobab/fr/figures/baobab_prefs.png
+share/gnome/help/baobab/fr/figures/baobab_remote.png
+share/gnome/help/baobab/fr/figures/baobab_treemaps.png
+share/gnome/help/baobab/fr/figures/baobab_window.png
 share/gnome/help/baobab/sv/baobab.xml
 share/gnome/help/baobab/sv/figures/baobab_fullscan.png
 share/gnome/help/baobab/sv/figures/baobab_prefs.png
@@ -160,6 +166,8 @@ share/gnome/help/gnome-system-log/es/figures/syslog_window.png
 share/gnome/help/gnome-system-log/es/gnome-system-log.xml
 share/gnome/help/gnome-system-log/fr/figures/syslog_window.png
 share/gnome/help/gnome-system-log/fr/gnome-system-log.xml
+share/gnome/help/gnome-system-log/it/figures/syslog_window.png
+share/gnome/help/gnome-system-log/it/gnome-system-log.xml
 share/gnome/help/gnome-system-log/sv/figures/syslog_window.png
 share/gnome/help/gnome-system-log/sv/gnome-system-log.xml
 share/gnome/help/gnome-system-log/uk/figures/syslog_window.png
@@ -259,6 +267,7 @@ share/locale/zh_CN/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 share/omf/baobab/baobab-C.omf
+share/omf/baobab/baobab-fr.omf
 share/omf/baobab/baobab-sv.omf
 share/omf/gnome-dictionary/gnome-dictionary-C.omf
 share/omf/gnome-dictionary/gnome-dictionary-el.omf
@@ -276,6 +285,7 @@ share/omf/gnome-search-tool/gnome-search-tool-uk.omf
 share/omf/gnome-system-log/gnome-system-log-C.omf
 share/omf/gnome-system-log/gnome-system-log-es.omf
 share/omf/gnome-system-log/gnome-system-log-fr.omf
+share/omf/gnome-system-log/gnome-system-log-it.omf
 share/omf/gnome-system-log/gnome-system-log-sv.omf
 share/omf/gnome-system-log/gnome-system-log-uk.omf
 share/pixmaps/gsearchtool/thumbnail_frame.png
@@ -294,6 +304,8 @@ share/pixmaps/gsearchtool/thumbnail_frame.png
 @dirrm share/gnome/help/gnome-system-log/uk
 @dirrm share/gnome/help/gnome-system-log/sv/figures
 @dirrm share/gnome/help/gnome-system-log/sv
+@dirrm share/gnome/help/gnome-system-log/it/figures
+@dirrm share/gnome/help/gnome-system-log/it
 @dirrm share/gnome/help/gnome-system-log/fr/figures
 @dirrm share/gnome/help/gnome-system-log/fr
 @dirrm share/gnome/help/gnome-system-log/es/figures
@@ -331,6 +343,8 @@ share/pixmaps/gsearchtool/thumbnail_frame.png
 @dirrm share/gnome/help/gnome-dictionary
 @dirrm share/gnome/help/baobab/sv/figures
 @dirrm share/gnome/help/baobab/sv
+@dirrm share/gnome/help/baobab/fr/figures
+@dirrm share/gnome/help/baobab/fr
 @dirrm share/gnome/help/baobab/C/figures
 @dirrm share/gnome/help/baobab/C
 @dirrm share/gnome/help/baobab
