@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.23 2006/11/23 17:38:35 jmmv Exp $
+$NetBSD: distinfo,v 1.24 2006/11/24 12:51:39 drochner Exp $
 
 SHA1 (monotone-0.31.tar.gz) = 67d72bac1b145835fb8c2f0a52072aeb18940f17
 RMD160 (monotone-0.31.tar.gz) = 03bc93be570297591b2f88bedba4f7950de70487
 Size (monotone-0.31.tar.gz) = 4743694 bytes
-SHA1 (patch-aa) = 73f5a3066c7f82de8178c6f00848db12b60aa6ae
-SHA1 (patch-ab) = b65dc4ca12bd753ad433cbb15ac19fb8592db939
