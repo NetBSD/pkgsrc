@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/03/31 15:08:00 drochner Exp $
+$NetBSD: distinfo,v 1.10 2006/11/24 15:44:25 drochner Exp $
 
-SHA1 (gliv-1.9.5.tar.bz2) = c18d0822ee0d7cee75cdb73efd08da8cc415c632
-RMD160 (gliv-1.9.5.tar.bz2) = a5a9e456f53570846fb56befabd744eac6415f91
-Size (gliv-1.9.5.tar.bz2) = 508325 bytes
+SHA1 (gliv-1.9.6.tar.bz2) = 7c1b070eaf73d0884abddc19d287a7b938a5e4fe
+RMD160 (gliv-1.9.6.tar.bz2) = 23424c5f96ee4c1f05fada5be6a60a9dcc2de781
+Size (gliv-1.9.6.tar.bz2) = 518971 bytes
