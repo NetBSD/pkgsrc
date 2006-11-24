@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2006/09/15 15:12:40 jmmv Exp $
+$NetBSD: patch-aa,v 1.9 2006/11/24 18:31:25 drochner Exp $
 
---- capplets/about-me/gnome-about-me-password.c.orig	2006-06-11 10:50:31.000000000 +0200
+--- capplets/about-me/gnome-about-me-password.c.orig	2006-09-15 13:12:18.000000000 +0200
 +++ capplets/about-me/gnome-about-me-password.c
 @@ -30,6 +30,7 @@
  /* Are all of these needed? */
@@ -10,45 +10,3 @@ $NetBSD: patch-aa,v 1.8 2006/09/15 15:12:40 jmmv Exp $
  #include <stdlib.h>
  #include <glade/glade.h>
  #include <unistd.h>
-@@ -183,7 +184,7 @@ spawn_passwd (PasswordDialog *pdialog, G
- {
- 	gchar	*argv[2];
- 	gchar	*envp[1];
--	gint	stdin, stdout, stderr;
-+	gint	fdstdin, fdstdout, fdstderr;
- 	
- 	argv[0] = "/usr/bin/passwd";	/* Is it safe to rely on a hard-coded path? */
- 	argv[1] = NULL;
-@@ -204,9 +205,9 @@ spawn_passwd (PasswordDialog *pdialog, G
- 								   NULL,						/* Child setup */
- 								   NULL,						/* Data to child setup */
- 								   &pdialog->backend_pid,		/* PID */
--								   &stdin,						/* Stdin */
--								   &stdout,						/* Stdout */
--								   &stderr,						/* Stderr */
-+								   &fdstdin,						/* Stdin */
-+								   &fdstdout,						/* Stdout */
-+								   &fdstderr,						/* Stderr */
- 								   error)) {					/* GError */
- 		
- 		/* An error occured */
-@@ -216,7 +217,7 @@ spawn_passwd (PasswordDialog *pdialog, G
- 	}
- 	
- 	/* 2>&1 */
--	if (dup2 (stderr, stdout) == -1) {
-+	if (dup2 (fdstderr, fdstdout) == -1) {
- 		/* Failed! */
- 		g_set_error (error,
- 					 PASSDLG_ERROR, 
-@@ -230,8 +231,8 @@ spawn_passwd (PasswordDialog *pdialog, G
- 	}
- 	
- 	/* Open IO Channels */
--	pdialog->backend_stdin = g_io_channel_unix_new (stdin);
--	pdialog->backend_stdout = g_io_channel_unix_new (stdout);
-+	pdialog->backend_stdin = g_io_channel_unix_new (fdstdin);
-+	pdialog->backend_stdout = g_io_channel_unix_new (fdstdout);
- 	
- 	/* Set raw encoding */
- 	/* Set nonblocking mode */
