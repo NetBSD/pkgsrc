@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/11/12 01:02:47 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/11/24 23:04:14 wiz Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		4
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvsgui/}
 # extra distfile containing an updated configure script
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gcvs-1.0-configure.tar.gz
 
-MAINTAINER=		mike@ethmoid.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cvsgui.sourceforge.net/
 COMMENT=		GTK interface for CVS
 
