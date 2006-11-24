@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/24 12:55:31 drochner Exp $
+
+--- python/Makefile.in.orig	2006-11-23 16:53:30.000000000 +0100
++++ python/Makefile.in
+@@ -56,8 +56,7 @@ am__installdirs = "$(DESTDIR)$(gmenudir)
+ gmenuLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(gmenu_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+-gmenu_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+-	$(top_builddir)/libmenu/libgnome-menu.la
++gmenu_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+ am_gmenu_la_OBJECTS = gmenu.lo
+ gmenu_la_OBJECTS = $(am_gmenu_la_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+@@ -262,7 +261,7 @@ INCLUDES = \
+ gmenudir = $(pyexecdir)
+ gmenu_LTLIBRARIES = gmenu.la
+ gmenu_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex initgmenu
+-gmenu_la_LIBADD = $(GLIB_LIBS) $(top_builddir)/libmenu/libgnome-menu.la
++gmenu_la_LIBADD = $(GLIB_LIBS) $(prefix)/lib/libgnome-menu.la
+ gmenu_la_SOURCES = gmenu.c
+ all: all-am
+ 
