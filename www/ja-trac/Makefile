@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/07/11 17:38:42 salo Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2006/11/24 15:03:41 ghen Exp $
 #
 
-DISTNAME=	trac-0.9.6-ja-1
-PKGNAME=	ja-trac-0.9.6.1
+DISTNAME=	trac-0.10-ja-3
+PKGNAME=	ja-trac-0.10.0.3
 CATEGORIES=	www devel
 MASTER_SITES=	http://www.i-act.co.jp/project/products/downloads/
 EXTRACT_SUFX=	.zip
@@ -22,6 +22,10 @@ PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
 PYTHON_PATCH_SCRIPTS=	contrib/*.py contrib/*-hook
 PYTHON_VERSIONS_ACCEPTED=	24 23
+
+OWN_DIRS+=	${PREFIX}/share/trac
+OWN_DIRS+=	${PREFIX}/share/trac/conf
+OWN_DIRS+=	${PREFIX}/share/trac/plugins
 
 EGDIR=		${PREFIX}/share/examples/trac
 

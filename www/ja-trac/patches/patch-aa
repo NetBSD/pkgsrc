@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/12 13:45:43 rillig Exp $
+$NetBSD: patch-aa,v 1.1.1.1.6.1 2006/11/24 15:03:41 ghen Exp $
 
---- setup.py.orig	2005-11-13 17:35:19.000000000 +0900
+--- setup.py.orig	2006-11-14 11:03:36.000000000 +0900
 +++ setup.py
-@@ -228,7 +228,7 @@ Japanese translated edition.
+@@ -231,7 +231,7 @@ Japanese translated edition.
                    (_p('share/trac/htdocs'), glob(_p('htdocs/*.*')) + [_p('htdocs/README')]),
                    (_p('share/trac/htdocs/css'), glob(_p('htdocs/css/*'))),
                    (_p('share/trac/htdocs/js'), glob(_p('htdocs/js/*'))),
