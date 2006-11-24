@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/07/29 07:48:58 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2006/11/24 23:04:15 wiz Exp $
 
 DISTNAME=	dictd-1.9.15
 PKGNAME=	dict-server-1.9.15
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/
 
-MAINTAINER=	mike@ethmoid.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol server
 
