@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/21 13:44:14 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/24 12:28:12 wennmach Exp $
 
 DISTNAME=		g95_source
 VERSION=		0.91
 PKGNAME=		g95-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 EXTRACT_SUFX.g95_source=	.tgz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX.g95_source}
