@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/13 01:20:09 dan Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/24 20:28:14 riz Exp $
 #
 
 DISTNAME=	Markdown_1.0.1
@@ -19,6 +19,7 @@ REPLACE_PERL+=	Markdown.pl
 
 PERL5_SITELIB=	${PERL5_SUB_INSTALLVENDORLIB:Q}
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:Q}
+INSTALLATION_DIRS=	${PERL5_INSTALLVENDORLIB}
 
 .include "../../mk/bsd.prefs.mk"
 
