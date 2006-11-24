@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/09/16 14:45:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2006/11/24 18:03:35 drochner Exp $
 #
 
-DISTNAME=	iso-codes_0.53.orig
+DISTNAME=	iso-codes-0.58
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/iso-codes/}
+MASTER_SITES=	ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/pkg-isocodes/
