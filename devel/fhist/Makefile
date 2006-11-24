@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/20 22:09:46 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2006/11/24 23:01:45 wiz Exp $
 #
 
 DISTNAME=		fhist-1.13
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=		devel
 MASTER_SITES=		http://fhist.sourceforge.net/
 
-MAINTAINER=		Matthew@Aldous.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fhist.sourceforge.net/
 COMMENT=		File history and comparison tools
 
