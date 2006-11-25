@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.22 2006/10/08 11:37:38 mishka Exp $
+# $NetBSD: fetch.mk,v 1.23 2006/11/25 21:33:39 jdolecek Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -36,7 +36,7 @@ _BUILD_DEFS+=	_DISTFILES _PATCHFILES
 # No actual sorting is done until _ORDERED_SITES is expanded.
 #
 .if defined(MASTER_SORT_RANDOM) && !empty(MASTER_SORT_RANDOM:M[yY][eE][sS])
-_MASTER_RAND_AWK= BEGIN { srand(seed) } {				\
+_MASTER_RAND_AWK= BEGIN { srand(seed); ORS = " " } {			\
 		n = split($$0, site);					\
 		for (i = n; i > 0; i--) {				\
 			ir = int(rand() * i + 1);			\
@@ -55,7 +55,7 @@ _MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_S
 _MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt:S/\\/\\\\/g}"] = good["${srt:S/\\/\\\\/g}"] " " $$0 ; next; }
 .  endfor
 _MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
-_SORT_SITES_CMD+= | ${AWK} '${_MASTER_SORT_AWK}'
+_SORT_SITES_CMD= | ${AWK} '${_MASTER_SORT_AWK}'
 .endif
 
 .if defined(_RAND_SITES_CMD) || defined(_SORT_SITES_CMD)
