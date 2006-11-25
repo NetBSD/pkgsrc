@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.8 2006/10/18 20:37:21 adam Exp $
+$NetBSD: patch-ak,v 1.9 2006/11/25 13:23:14 adam Exp $
 
---- dlls/ntdll/file.c.orig	2006-10-13 16:43:39.000000000 +0200
+--- dlls/ntdll/file.c.orig	2006-11-24 17:18:04.000000000 +0100
 +++ dlls/ntdll/file.c
-@@ -1624,6 +1624,35 @@ NTSTATUS FILE_GetDeviceInfo( int fd, FIL
+@@ -1765,6 +1765,35 @@ static NTSTATUS get_device_info( int fd,
              info->DeviceType = FILE_DEVICE_DISK_FILE_SYSTEM;
              break;
          }
