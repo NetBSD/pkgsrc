@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/25 15:41:26 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 20:47:57 rillig Exp $
 #
 
 DISTNAME=	worker-2.14.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 
@@ -17,6 +18,8 @@ GNU_CONFIGURE=	YES
 #DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 
 USE_X11BASE=	yes
+REPLACE_BASH+=	scripts/*.sh scripts/*r
+USE_TOOLS+=	bash:run
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
