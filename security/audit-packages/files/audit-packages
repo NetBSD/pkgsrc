@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.28 2006/10/05 14:26:42 joerg Exp $
+# $NetBSD: audit-packages,v 1.29 2006/11/25 13:43:42 agc Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -197,8 +197,9 @@ while read pat type url; do
 		vulnpkgs=`@PKG_TOOLS_BIN@/pkg_info -e "$pat"`
 	else
 		vulnpkgs=
-		if `@PKG_TOOLS_BIN@/pkg_admin pmatch "$pat" "$one_package"` ; then
-			vulnpkgs=$one_package
+		one_pkg=`@PKG_TOOLS_BIN@/pkg_info -e "$one_package"`
+		if `@PKG_TOOLS_BIN@/pkg_admin pmatch "$pat" "$one_pkg"` ; then
+			vulnpkgs=$one_pkg
 		fi
 	fi
 	for pkg in $vulnpkgs ; do
