@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1873 2006/11/23 17:39:52 jmmv Exp $
+>$NetBSD: CHANGES-2006,v 1.1874 2006/11/25 12:46:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-share to 7.0.162nb1 [ghen 2006-11-23]
 	Updated devel/monotone to 0.31 [jmmv 2006-11-23]
 	Updated devel/monotone-server to 0.31 [jmmv 2006-11-23]
+	Updated www/p5-Kwiki-Users-Remote to 0.04nb1 [obache 2006-11-25]
