@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1875 2006/11/25 13:24:48 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1876 2006/11/25 13:39:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5411,3 +5411,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/p5-Kwiki-Users-Remote to 0.04nb1 [obache 2006-11-25]
 	Updated fonts/fontforge to 20061014 [adam 2006-11-25]
 	Updated emulators/wine to 0.9.26 [adam 2006-11-25]
+	Added security/cy2-ldapdb version 2.1.22 [obache 2006-11-25]
