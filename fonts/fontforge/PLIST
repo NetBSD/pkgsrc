@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/12 08:37:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/11/25 13:23:01 adam Exp $
 bin/fontforge
 bin/sfddiff
 lib/libgdraw.la
@@ -6,10 +6,14 @@ lib/libgunicode.la
 lib/pkgconfig/fontforge.pc
 man/man1/fontforge.1
 man/man1/sfddiff.1
+share/locale/de/LC_MESSAGES/FontForge.mo
+share/locale/el/LC_MESSAGES/FontForge.mo
+share/locale/en_GB/LC_MESSAGES/FontForge.mo
 share/locale/es/LC_MESSAGES/FontForge.mo
 share/locale/fr/LC_MESSAGES/FontForge.mo
-share/locale/gr/LC_MESSAGES/FontForge.mo
 share/locale/it/LC_MESSAGES/FontForge.mo
 share/locale/ja/LC_MESSAGES/FontForge.mo
+share/locale/pl/LC_MESSAGES/FontForge.mo
 share/locale/ru/LC_MESSAGES/FontForge.mo
 share/locale/vi/LC_MESSAGES/FontForge.mo
+share/locale/zh_CN/LC_MESSAGES/FontForge.mo
