@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/09/24 16:35:39 salo Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/11/25 20:28:49 jdolecek Exp $
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -34,6 +34,7 @@ _MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases
 _MASTER_SITES+=		http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
 _MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
 _MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://ftp.uni-erlangen.de/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
 _MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/network/www/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
 _MASTER_SITES+=		http://ftp.cvut.cz/mozilla/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
 .  for _site_ in ${_MASTER_SITES}
