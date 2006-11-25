@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.16 2006/11/12 12:10:46 obache Exp $
+# $NetBSD: sites.mk,v 1.17 2006/11/25 14:46:50 jdolecek Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -87,7 +87,8 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
 	ftp://ftp.chg.ru/pub/X11/gnome/ \
 	ftp://ftp.dataplus.se/pub/linux/gnome/ \
-	ftp://ftp.dit.upm.es/linux/gnome/
+	ftp://ftp.dit.upm.es/linux/gnome/ \
+	ftp://sunsite.mff.cuni.cz/pub/GNOME/
 
 MASTER_SITE_KDE+=	\
 	ftp://ftp.kde.org/pub/kde/stable/ \
