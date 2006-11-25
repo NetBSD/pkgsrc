@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/25 15:41:26 uebayasi Exp $
+
+SHA1 (worker-2.14.1.tar.gz) = 0e88043a00d12b477f098533cd0f163833221a37
+RMD160 (worker-2.14.1.tar.gz) = 27cab3bd31ad440626946bfc445fa75be9545165
+Size (worker-2.14.1.tar.gz) = 1000621 bytes
