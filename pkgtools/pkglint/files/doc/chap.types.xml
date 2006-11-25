@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.13 2006/07/02 09:47:17 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.14 2006/11/25 20:27:42 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -191,7 +191,7 @@
 <title>Future Directions</title>
 
 	<para>Currently the ACLs only cover the <quote>user
-	space</quote> of pksrc. They will be extended later to also
+	space</quote> of pkgsrc. They will be extended later to also
 	check for valid variable definition and use in the pkgsrc
 	infrastructure, as well as the user configuration file. For
 	completeness, those variables that are intended to be specified
@@ -317,7 +317,7 @@
 	<listitem><para>An option from the
 	<literal>PKG_OPTIONS</literal> framework. Options should not
 	contain underscores. They should be documented in
-	<filename>pkgsrc/mk/default/options.description</filename>.</para>
+	<filename>pkgsrc/mk/defaults/options.description</filename>.</para>
 	</listitem></varlistentry>
 
 	<varlistentry><term><literal><type>Pathlist</type></literal></term>
