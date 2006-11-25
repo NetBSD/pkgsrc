@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1878 2006/11/25 14:02:58 sketch Exp $
+>$NetBSD: CHANGES-2006,v 1.1879 2006/11/25 15:43:24 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5414,3 +5414,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added security/cy2-ldapdb version 2.1.22 [obache 2006-11-25]
 	Updated security/audit-packages to 1.45 [agc 2006-11-25]
 	Updated x11/eterm to 0.9.4 [sketch 2006-11-25]
+	Added x11/worker version 2.14.1 [uebayasi 2006-11-25]
