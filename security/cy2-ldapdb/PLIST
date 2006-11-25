@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/25 13:35:25 obache Exp $
+lib/sasl2/libldapdb.la
