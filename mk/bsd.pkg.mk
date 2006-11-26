@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1898 2006/11/19 09:32:29 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1899 2006/11/26 08:37:03 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -914,4 +914,4 @@ changes-entry:
 .if make(help)
 .include "${PKGSRCDIR}/mk/help/help.mk"
 .endif
-.include "${.PARSEDIR}/internal/pkg_fail_reason.mk"
+.include "${.PARSEDIR}/misc/can-be-built-here.mk"
