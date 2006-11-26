@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.7 2006/11/11 07:44:46 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.8 2006/11/26 08:42:42 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,7 +58,6 @@ wrapper_subr_sh="@_WRAP_SUBR_SH@"
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
-append_extra_args=yes
 
 cat="@CAT@"  
 echo="@ECHO@"
@@ -79,8 +78,7 @@ yes)	debug_log="msg_log" ;;
 *)	debug_log=":" ;;
 esac
 
-original_cmd="$0 $@"
-msg_log $wrapperlog "[*]" $original_cmd
+msg_log "$wrapperlog" "[*] $0 $*"
 
 cmd="@WRAPPEE@"
 libs=""
@@ -89,6 +87,7 @@ do_transform=yes
 init_queue argbuf
 init_queue cmdbuf
 
+append_extra_args=yes
 . $scan
 
 case $append_extra_args in
