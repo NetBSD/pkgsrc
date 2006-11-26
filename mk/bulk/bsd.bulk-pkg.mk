@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.125 2006/10/13 23:14:45 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.126 2006/11/26 03:08:24 jschauma Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -301,8 +301,8 @@ bulk-check-uptodate:
 			uptodate=0; \
 		elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ]; then \
 			${SHCOMMENT} "Check files of this package"; \
-			newfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`"; \
-			nnewfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`"; \
+			newfiles="`${FIND} . -type f -newer "${REF}" ! \( -name ${WRKDIR_BASE} -or -name README.html -or -name DESCR -or -name COMMENT -or -name Repository -or -name Entries -or -name Root -or -name Tag \) -print || ${TRUE}`"; \
+			nnewfiles="`echo $$newfiles | ${WC} -w`"; \
 			if [ "$$nnewfiles" -gt 0 ]; then \
 				${BULK_MSG} 1>&2 "Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..."; \
 				uptodate=0; \
@@ -351,7 +351,7 @@ bulk-package:
 		${ECHO} '###' ; \
 		${ECHO} '###' `date`: ; \
 		${ECHO} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
-		${ECHO} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} '^d' | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
+		${ECHO} '### Current pkg count: ' `${FIND} ${PKG_DBDIR} -type d ! -name '.' -prune -print | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO} '###' ; \
 	fi \
 	) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}
