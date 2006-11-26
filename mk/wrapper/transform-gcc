@@ -1,0 +1,42 @@
+# $NetBSD: transform-gcc,v 1.1 2006/11/26 09:56:46 rillig Exp $
+#
+
+transform_setname "transform-gcc"
+case $arg in
+-c|\
+-D?*|\
+-I?*|\
+-L?*|\
+-l?*|\
+-O|\
+-O[012345s]*|\
+-o|\
+-std=c99|\
+-U?*|\
+-W|\
+-W[cLlS],*|\
+-Wall|\
+-Wcast-qual|\
+-Wextra|\
+-Werror|\
+-Wformat=[012]|\
+-Wmissing-prototypes|\
+-Wno-error|\
+-Wno-long-long|\
+-Wno-traditional|\
+-Wno-uninitialized|\
+-Wno-unused|\
+-Wno-write-strings|\
+-Wpointer-arith|\
+-Wreturn-type|\
+-Wshadow|\
+-Wsign-compare|\
+-Wstrict-prototypes|\
+-Wswitch|\
+-Wwrite-strings)
+	transform_pass
+	;;
+-*)
+	transform_discard_with_warning
+	;;
+esac
