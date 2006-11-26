@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.12 2006/10/21 11:42:25 rillig Exp $
+# $NetBSD: logic,v 1.13 2006/11/26 14:42:17 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -135,9 +135,11 @@ while ! queue_is_empty argbuf; do
 				$cat >> $cache_body << EOF
 $cachearg) arg=$cachedarg; split_arg=$split_arg; cachehit=yes ;;
 EOF
-				$cat $cache_header \
-				     $cache_body \
-				     $cache_footer > $cache-$$.tmp
+				{ echo "case \$arg in"
+				  $cat $cache_body
+				  echo "*) cachehit=no ;;"
+				  echo "esac"
+				} > $cache-$$.tmp
 				$mv -f $cache-$$.tmp $cache
 				;;
 			esac
