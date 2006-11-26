@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1879 2006/11/25 15:43:24 uebayasi Exp $
+>$NetBSD: CHANGES-2006,v 1.1880 2006/11/26 09:02:31 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5415,3 +5415,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/audit-packages to 1.45 [agc 2006-11-25]
 	Updated x11/eterm to 0.9.4 [sketch 2006-11-25]
 	Added x11/worker version 2.14.1 [uebayasi 2006-11-25]
+	Updated editors/vim-share to 7.0.168 [martti 2006-11-26]
