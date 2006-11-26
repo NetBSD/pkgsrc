@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/11/19 11:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/26 22:34:30 wiz Exp $
 #
 
-DISTNAME=	git-1.4.1
+DISTNAME=	git-1.4.4.1
 PKGNAME=	scm${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -28,6 +27,9 @@ BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
+PERL5_PACKLIST=	auto/Git/.packlist
+PERL5_CONFIGURE_DIRS=	${WRKSRC}/perl
+
 .include "../../lang/python/application.mk"
 
 NEEDS_SUBPROCESS_PY!= \
@@ -39,6 +41,12 @@ PLIST_SUBST+=	IF_NEEDS_SUBPROCESS_PY=""
 PLIST_SUBST+=	IF_NEEDS_SUBPROCESS_PY="@comment "
 .endif
 
+post-install:
+	chmod 644 ${PREFIX}/${PKGMANDIR}/man1/git*.1
+	chmod 644 ${PREFIX}/${PKGMANDIR}/man7/git*.7
+	chmod 644 ${PREFIX}/share/git-core/python/*.py
+
+.include "../../lang/perl5/module.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
