@@ -1,7 +1,10 @@
-# $NetBSD: transform-gcc,v 1.1 2006/11/26 09:56:46 rillig Exp $
+# $NetBSD: transform-gcc,v 1.2 2006/11/26 10:00:04 rillig Exp $
 #
+# This file prints warning messages for all obscure gcc options into the
+# wrapper log file.
 
 transform_setname "transform-gcc"
+
 case $arg in
 -c|\
 -D?*|\
@@ -34,9 +37,8 @@ case $arg in
 -Wstrict-prototypes|\
 -Wswitch|\
 -Wwrite-strings)
-	transform_pass
-	;;
+	transform_pass ;;
+
 -*)
-	transform_discard_with_warning
-	;;
+	transform_pass_with_warning ;;
 esac
