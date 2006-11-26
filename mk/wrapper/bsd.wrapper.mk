@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.58 2006/11/26 09:56:46 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.59 2006/11/26 13:02:53 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -332,10 +332,6 @@ _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
-_WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-solaris-gcc
-_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-solaris-gcc
-_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
-_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 _WRAP_CMD_SINK.IMAKE=	${WRAPPER_TMPDIR}/cmd-sink-solaris-imake
 _WRAP_CACHE_BODY.IMAKE=	${WRAPPER_TMPDIR}/cache-body-solaris-imake
 .endif
@@ -488,7 +484,6 @@ generate-wrappers: ${_target_}
 	transform-ido-cc \
 	transform-mipspro-cc \
 	transform-mipspro-ucode-cc \
-	transform-solaris-gcc \
 	transform-sunpro-cc \
 	transform-xlc-cc \
 	wrapper-subr.sh
