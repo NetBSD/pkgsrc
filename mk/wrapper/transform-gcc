@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.2 2006/11/26 10:00:04 rillig Exp $
+# $NetBSD: transform-gcc,v 1.3 2006/11/26 13:02:53 rillig Exp $
 #
 # This file prints warning messages for all obscure gcc options into the
 # wrapper log file.
@@ -6,6 +6,16 @@
 transform_setname "transform-gcc"
 
 case $arg in
+
+-KPIC|\
+-kPIC)
+	# Needed for the Solaris imake.
+	transform_to "-fPIC" ;;
+
+-mt)
+	# Needed on Solaris with SunPro.
+	transform_to "-threads" ;;
+
 -c|\
 -D?*|\
 -I?*|\
