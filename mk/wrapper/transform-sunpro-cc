@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.15 2006/11/11 07:50:28 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.16 2006/11/26 09:55:52 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -151,6 +151,6 @@ case $arg in
 	transform_pass
 	;;
 -*)
-	transform_pass_unknown
+	transform_pass_with_warning
 	;;
 esac
