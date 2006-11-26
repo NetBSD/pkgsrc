@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.3 2006/11/26 13:02:53 rillig Exp $
+# $NetBSD: transform-gcc,v 1.4 2006/11/26 14:39:52 rillig Exp $
 #
 # This file prints warning messages for all obscure gcc options into the
 # wrapper log file.
@@ -18,13 +18,21 @@ case $arg in
 
 -c|\
 -D?*|\
+-E|\
+-fPIC|\
+-g|\
 -I?*|\
 -L?*|\
 -l?*|\
+-M[DFPT]|\
 -O|\
 -O[012345s]*|\
 -o|\
+-pthread|\
+-shared|\
+-static|\
 -std=c99|\
+-std=gnu99|\
 -U?*|\
 -W|\
 -W[cLlS],*|\
