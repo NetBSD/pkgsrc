@@ -1,4 +1,4 @@
-.\"	$NetBSD: printindex.1,v 1.6 2006/01/19 10:21:12 rillig Exp $
+.\"	$NetBSD: printindex.1,v 1.7 2006/11/26 08:39:52 rillig Exp $
 .\"
 .\" Copyright (c) 2005 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -46,6 +46,9 @@
 .Sh DESCRIPTION
 Generates a mapping from pkgsrc directories to the current package
 version and prints it on stdout.
+It also checks whether the package can be built on this system at all
+and marks those that cannot be built as broken.
+.Pp
 Each line of the output has two fields:
 the package directory (in the form
 .Ql category/package )

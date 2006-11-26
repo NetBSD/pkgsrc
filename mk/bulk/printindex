@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.28 2005/11/28 01:14:35 rillig Exp $
+# $NetBSD: printindex,v 1.29 2006/11/26 08:39:52 rillig Exp $
 #
 
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -134,6 +134,9 @@ case $list in
 	exit 1
 esac
 
+newline="
+"
+
 #
 # Print the table of PKGPATH and PKGNAME.
 #
@@ -158,9 +161,24 @@ for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 	esac
 
 	if cd "${pkgsrcdir}/${pkgdir}"; then
-		if pkgname=`${BMAKE} show-var VARNAME=PKGNAME`; then
+		if output=`${BMAKE} show-var VARNAME=PKGNAME can-be-built-here`; then
+			reasons=""
+			{
+				read pkgname
+				read can_be_built_here
+				while read reason; do
+					reasons="$reasons$reason$newline"
+				done
+			} <<EOF
+$output
+EOF
 			echo "${pkgdir}	${pkgname}"
 			done_pkgs="${done_pkgs} =${pkgdir}="
+
+			if [ "$can_be_built_here" != "yes" ]; then
+				${mkbulkdir} "${bulkfilesdir}/${pkgdir}"
+				echo "$reasons" > "${bulkfilesdir}/${pkgdir}/${brokenfile}"
+			fi
 		else
 			echo "$0: error: could not extract PKGNAME for ${pkgdir} -- skipping." 1>&2
 
