@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.59 2006/11/26 13:02:53 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.60 2006/11/26 14:42:17 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -172,9 +172,7 @@ _WRAP_ARG_PP_MAIN?=		${WRAPPER_TMPDIR}/arg-pp-main
 _WRAP_ARG_SOURCE?=		${WRAPPER_TMPDIR}/arg-source
 _WRAP_BUILDCMD?=		${WRAPPER_TMPDIR}/buildcmd
 _WRAP_CACHE?=			${WRAPPER_TMPDIR}/cache
-_WRAP_CACHE_HEADER?=		${WRAPPER_TMPDIR}/cache-header
 _WRAP_CACHE_BODY?=		${WRAPPER_TMPDIR}/cache-body
-_WRAP_CACHE_FOOTER?=		${WRAPPER_TMPDIR}/cache-footer
 _WRAP_CLEANUP?=			${_WRAP_EMPTY_FILE}
 _WRAP_CMD_SINK?=		${WRAPPER_TMPDIR}/cmd-sink
 _WRAP_GEN_REORDER?=		${WRAPPER_TMPDIR}/gen-reorder
@@ -207,9 +205,7 @@ _WRAP_ARG_PP_MAIN.${_wrappee_}?=	${_WRAP_ARG_PP_MAIN}
 _WRAP_ARG_SOURCE.${_wrappee_}?=		${_WRAP_ARG_SOURCE}
 _WRAP_BUILDCMD.${_wrappee_}?=		${_WRAP_BUILDCMD}
 _WRAP_CACHE.${_wrappee_}?=		${_WRAP_CACHE}
-_WRAP_CACHE_HEADER.${_wrappee_}?=	${_WRAP_CACHE_HEADER}
 _WRAP_CACHE_BODY.${_wrappee_}?=		${_WRAP_CACHE_BODY}
-_WRAP_CACHE_FOOTER.${_wrappee_}?=	${_WRAP_CACHE_FOOTER}
 _WRAP_CLEANUP.${_wrappee_}?=		${_WRAP_CLEANUP}
 _WRAP_CMD_SINK.${_wrappee_}?=		${_WRAP_CMD_SINK}
 _WRAP_LOG.${_wrappee_}?=		${_WRAP_LOG}
@@ -363,9 +359,7 @@ _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_ARG_SOURCE@|${_WRAP_ARG_SOURCE.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_BUILDCMD@|${_WRAP_BUILDCMD.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_CACHE@|${_WRAP_CACHE.${_wrappee_}:Q}|g"		\
-	-e "s|@_WRAP_CACHE_HEADER@|${_WRAP_CACHE_HEADER.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_CACHE_BODY@|${_WRAP_CACHE_BODY.${_wrappee_}:Q}|g"	\
-	-e "s|@_WRAP_CACHE_FOOTER@|${_WRAP_CACHE_FOOTER.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_CLEANUP@|${_WRAP_CLEANUP.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_CMD_SINK@|${_WRAP_CMD_SINK.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_LOG@|${_WRAP_LOG.${_wrappee_}:Q}|g"		\
@@ -576,33 +570,15 @@ ${_WRAP_BUILDCMD.${_wrappee_}}: ${WRAPPER_SRCDIR}/buildcmd
 .  endif
 
 .  if !target(${_WRAP_CACHE.${_wrappee_}})
-${_WRAP_CACHE.${_wrappee_}}:						\
-		${_WRAP_CACHE_HEADER.${_wrappee_}}			\
-		${_WRAP_CACHE_BODY.${_wrappee_}}			\
-		${_WRAP_CACHE_FOOTER.${_wrappee_}}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-.  endif
-
-.  if !target(${_WRAP_CACHE_HEADER.${_wrappee_}})
-${_WRAP_CACHE_HEADER.${_wrappee_}}: ${WRAPPER_SRCDIR}/cache-header
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+${_WRAP_CACHE.${_wrappee_}}:
+	${RUN} mkdir ${.TARGET:H}
+	${RUN} echo "cachehit=no" > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_CACHE_BODY.${_wrappee_}})
 ${_WRAP_CACHE_BODY.${_wrappee_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
-.  endif
-
-.  if !target(${_WRAP_CACHE_FOOTER.${_wrappee_}})
-${_WRAP_CACHE_FOOTER.${_wrappee_}}: ${WRAPPER_SRCDIR}/cache-footer
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_CMD_SINK.${_wrappee_}})

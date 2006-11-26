@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.8 2006/11/26 08:42:42 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.9 2006/11/26 14:42:17 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,9 +43,7 @@ arg_pp_main="@_WRAP_ARG_PP_MAIN@"
 arg_source="@_WRAP_ARG_SOURCE@"
 buildcmd="@_WRAP_BUILDCMD@"
 cache="@_WRAP_CACHE@"
-cache_header="@_WRAP_CACHE_HEADER@"
 cache_body="@_WRAP_CACHE_BODY@"
-cache_footer="@_WRAP_CACHE_FOOTER@"
 cleanup="@_WRAP_CLEANUP@"
 cmd_sink="@_WRAP_CMD_SINK@"
 logic="@_WRAP_LOGIC@"
