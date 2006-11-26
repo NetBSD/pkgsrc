@@ -1,0 +1,136 @@
+# $NetBSD: can-be-built-here.mk,v 1.1 2006/11/26 08:37:03 rillig Exp $
+#
+# This file checks whether a package can be built in the current pkgsrc
+# environment. It checks the following variables:
+#
+# * NOT_FOR_COMPILER, ONLY_FOR_COMPILER
+# * NOT_FOR_PLATFORM, ONLY_FOR_PLATFORM
+# * NOT_FOR_UNPRIVILEGED, ONLY_FOR_UNPRIVILEGED
+# * PKG_FAIL_REASON, PKG_SKIP_REASON
+#
+
+_CBBH_CHECKS=		# none, but see below.
+
+# Check NOT_FOR_COMPILER
+_CBBH_CHECKS+=		ncomp
+_CBBH_MSGS.ncomp=	"This package is not available for these compilers: "${NOT_FOR_COMPILER:Q}"."
+
+_CBBH.ncomp=		yes
+.for c in ${NOT_FOR_COMPILER}
+.  for pc in ${PKGSRC_COMPILER}
+# The left-hand side of the == operator must be a "real" variable.
+_c:= ${c}
+.    if ${_c} == ${pc}
+_CBBH.ncomp=		no
+.    endif
+.  endfor
+.endfor
+
+# Check ONLY_FOR_COMPILER
+_CBBH_CHECKS+=		ocomp
+_CBBH_MSGS.ocomp=	"This package is only available for these compilers: "${ONLY_FOR_COMPILER:Q}"."
+
+_CBBH.ocomp=		yes
+.if defined(ONLY_FOR_COMPILER) && !empty(ONLY_FOR_COMPILER)
+_CBBH.ocomp=		yes
+.  for pc in ${PKGSRC_COMPILER}
+.    if empty(ONLY_FOR_COMPILER:M${pc})
+_CBBH.ocomp=		no
+.    endif
+.  endfor
+.endif
+
+# Check NOT_FOR_PLATFORM
+_CBBH_CHECKS+=		nplat
+_CBBH_MSGS.nplat=	"This package is not available for these platforms: "${NOT_FOR_PLATFORM:Q}"."
+
+_CBBH.nplat=		yes
+.for p in ${NOT_FOR_PLATFORM}
+.  if !empty(MACHINE_PLATFORM:M${p})
+_CBBH.nplat=		no
+.  endif
+.endfor
+
+# Check ONLY_FOR_PLATFORM
+_CBBH_CHECKS+=		oplat
+_CBBH_MSGS.oplat=	"This package is only available for these platforms: "${ONLY_FOR_PLATFORM:Q}"."
+
+_CBBH.oplat=		yes
+.if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
+_CBBH.oplat=		no
+.  for p in ${ONLY_FOR_PLATFORM}
+.    if !empty(MACHINE_PLATFORM:M${p})
+_CBBH.oplat=		yes
+.    endif
+.  endfor
+.endif
+
+# Check NOT_FOR_UNPRIVILEGED
+_CBBH_CHECKS+=		nunpriv
+_CBBH_MSGS.nunpriv=	"This package is not available in unprivileged mode."
+
+_CBBH.nunpriv=		yes
+.if defined(NOT_FOR_UNPRIVILEGED) && !empty(NOT_FOR_UNPRIVILEGED:M[Yy][Ee][Ss])
+.  if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+_CBBH.nunpriv=		no
+.  endif
+.endif
+
+# Check ONLY_FOR_UNPRIVILEGED
+_CBBH_CHECKS+=		ounpriv
+_CBBH_MSGS.ounpriv=	"This package is not available in unprivileged mode."
+
+_CBBH.ounpriv=		yes
+.if defined(ONLY_FOR_UNPRIVILEGED) && !empty(ONLY_FOR_UNPRIVILEGED:M[Yy][Ee][Ss])
+.  if empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+_CBBH.ounpriv=		no
+.  endif
+.endif
+
+# Check PKG_FAIL_REASON
+_CBBH_CHECKS+=		fail
+_CBBH_MSGS.fail=	"This package has set PKG_FAIL_REASON:" ${PKG_FAIL_REASON}
+
+_CBBH.fail=		yes
+.if defined(PKG_FAIL_REASON) && !empty(PKG_FAIL_REASON)
+_CBBH.fail=		no
+.endif
+
+# Check PKG_SKIP_REASON
+_CBBH_CHECKS+=		skip
+_CBBH_MSGS.skip=	"This package has set PKG_SKIP_REASON:" ${PKG_SKIP_REASON}
+
+_CBBH.skip=		yes
+.if defined(PKG_SKIP_REASON) && !empty(PKG_SKIP_REASON)
+_CBBH.skip=		no
+.endif
+
+# Collect and combine the results
+_CBBH=			yes
+_CBBH_MSGS=		# none
+.for c in ${_CBBH_CHECKS}
+.  if ${_CBBH.${c}} != "yes"
+_CBBH=			no
+_CBBH_MSGS+=		${_CBBH_MSGS.${c}}
+.  endif
+.endfor
+
+# In the first line, this target prints either "yes" or "no", saying
+# whether this package can be built. If the package can not be built,
+# the reasons are given in the following lines.
+#
+can-be-built-here: .PHONY
+	@${ECHO} ${_CBBH}
+	@:; ${_CBBH_MSGS:@m@${ECHO} ${m} ; @}
+
+_cbbh:
+	@:; ${_CBBH_MSGS:@m@${ERROR_MSG} ${m} ; @}
+	@${FALSE}
+
+.if ${_CBBH} == "no"
+# FIXME: check-vulnerable is only used here because it is depended
+# upon by each of the "main" pkgsrc targets. Probably its name should be
+# generalized, and both check-vulnerable and _cbbh should depend
+# on the generalized target.
+check-vulnerable: _cbbh
+.endif
