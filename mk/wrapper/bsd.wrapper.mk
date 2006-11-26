@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.57 2006/11/11 07:44:46 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.58 2006/11/26 09:56:46 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -291,6 +291,11 @@ _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
+.if !empty(PKGSRC_COMPILER:Mgcc)
+_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-gcc
+_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+.endif
+
 _WRAP_CMD_SINK.LD=		${WRAPPER_TMPDIR}/cmd-sink-ld
 _WRAP_SKIP_TRANSFORM.IMAKE=	yes
 
@@ -478,6 +483,7 @@ generate-wrappers: ${_target_}
 	cmd-sink-unixware-gcc \
 	transform-aix-cc \
 	transform-ccc-cc \
+	transform-gcc \
 	transform-icc-cc \
 	transform-ido-cc \
 	transform-mipspro-cc \
