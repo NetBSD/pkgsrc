@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2006/06/24 10:52:23 hira Exp $
+$NetBSD: patch-ad,v 1.2.4.1 2006/11/27 10:01:46 ghen Exp $
 
---- texk/dvipsk/Makefile.in.orig	2006-05-11 16:30:49.000000000 +0900
-+++ texk/dvipsk/Makefile.in	2006-05-11 16:34:55.000000000 +0900
+--- texk/dvipsk/Makefile.in.orig	2006-11-12 17:09:31.000000000 +0900
++++ texk/dvipsk/Makefile.in	2006-11-12 17:21:04.000000000 +0900
 @@ -19,6 +19,7 @@
  ac_include ../make/cross.mk
  ac_include ../make/texi.mk
@@ -28,7 +28,19 @@ $NetBSD: patch-ad,v 1.2 2006/06/24 10:52:23 hira Exp $
  afm2tfm: $(kpathsea) afm2tfm.o
  	$(kpathsea_link) afm2tfm.o $(LOADLIBES) 
  # Omit LOADLIBES since no need to dynamically link with kpathsea.
-@@ -110,8 +114,8 @@
+@@ -87,11 +91,8 @@
+ install-exec: all
+ 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir)
+ 	for p in $(programs); do $(INSTALL_LIBTOOL_PROG) $$p $(bindir); done
+-	rm -f $(bindir)/o$(program)
+-	ln -s $(program) $(bindir)/o$(program)
+ uninstall-exec:
+ 	for p in $(programs); do rm -f $(bindir)/$$p; done
+-	rm -f $(bindir)/o$(program)
+ 
+ install-data: $(program).info
+ 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(infodir) $(psheaderdir)/base
+@@ -110,31 +111,18 @@
  #	  $(INSTALL_DATA) $(srcdir)/psfonts.map $(psheaderdir)/base/psfonts.map; \
  #        else true; fi
  # psfonts_jp.map.
@@ -37,5 +49,36 @@ $NetBSD: patch-ad,v 1.2 2006/06/24 10:52:23 hira Exp $
 +	$(INSTALL) -d $(texmflcl)/fonts/map/dvips/ptex
 +	$(INSTALL_DATA) $(srcdir)/psfonts_jp.map $(texmflcl)/fonts/map/dvips/ptex/psfonts_jp.map
  # Info files.
- 	cd $(srcdir) && for i in $(program).i*; do \
- 	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
+-	cd $(srcdir) && for i in $(program).i*; do \
+-	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
+ # Man pages.
+-	$(INSTALL_DATA) $(srcdir)/$(program).1 $(man1dir)/$(program).$(manext)
+-	rm -f $(man1dir)/o$(program).$(manext)
+-	ln -s $(program).$(manext) $(man1dir)/o$(program).$(manext)
+-	$(INSTALL_DATA) $(srcdir)/afm2tfm.1 $(man1dir)/afm2tfm.$(manext)
+ # TeX macros.
+ #	cd $(srcdir)/tex && for m in *.tex; do \
+ #	  $(INSTALL_DATA) $$m $(dvips_plain_macrodir)/$$m; done
+ 	$(POST_INSTALL)
+-	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
+-	  install-info --info-dir=$(infodir) $(infodir)/$(program).info; \
+-	else true; fi
+ 
+ uninstall-data:
+ 	$(PRE_UNINSTALL)
+-	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
+-	  install-info --delete --info-dir=$(infodir) $(infodir)/$(program).info; \
+-	else true; fi
+ 	$(NORMAL_UNINSTALL)
+-	rm -f $(infodir)/dvips.i*
+ #	for h in $(prologues); do rm -f $(psheaderdir)/base/$$h; done
+ #	cd $(srcdir)/reencode && for e in *.enc; do rm -f $(psheaderdir)/base/$$e; \
+ #	  done
+@@ -146,7 +134,6 @@
+ #        else true; fi
+ 	rm -f $(texmf)/fonts/map/dvips/ptex/psfonts_jp.map
+ 	rmdir $(texmf)/fonts/map/dvips/ptex
+-	rm -f $(man1dir)/dvips.$(manext) $(man1dir)/afm2tfm.$(manext)
+ 
+ distname = dvipsk
+ program_files = *.texi *.info* *.lpro psfonts.map *.1 texc.script \
