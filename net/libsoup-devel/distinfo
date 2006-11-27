@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2006/11/13 15:04:23 drochner Exp $
+$NetBSD: distinfo,v 1.20 2006/11/27 21:19:58 drochner Exp $
 
-SHA1 (libsoup-2.2.97.tar.bz2) = 066ee6085bdc3a7ba49fcf275847ebbef3ead8bd
-RMD160 (libsoup-2.2.97.tar.bz2) = 207b39cf00303c95454f14573b47c9db1e84e103
-Size (libsoup-2.2.97.tar.bz2) = 500561 bytes
+SHA1 (libsoup-2.2.98.tar.bz2) = ea54df3accba13985d2d595ba0386bc78dc3a24e
+RMD160 (libsoup-2.2.98.tar.bz2) = 5e2ab616c09f2b069fdc4d40d3c816ffc1bc9481
+Size (libsoup-2.2.98.tar.bz2) = 501406 bytes
