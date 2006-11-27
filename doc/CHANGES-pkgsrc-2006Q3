@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.50 2006/11/24 15:09:02 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.51 2006/11/27 10:15:58 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -133,3 +133,7 @@ Pullup ticket 1915 - requested by ghen
 security fix for dovecot
 Pullup ticket 1911 - requested by obache
 security update for ja-trac
+Pullup ticket 1921 - requested by hira
+install fix for ja-ptex-bin
+Pullup ticket 1922 - requested by hira
+PLIST fix for net/freeradius
