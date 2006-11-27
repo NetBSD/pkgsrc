@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5716 2006/11/23 00:55:16 obache Exp $
+$NetBSD: TODO,v 1.5717 2006/11/27 20:33:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,7 @@ Suggested package updates
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
-	o afterstep-2.2.3
+	o afterstep-2.2.4
 	o album-3.13
 	o algae-4.3.6
 	o aliados-0.2.0
@@ -258,6 +258,7 @@ Suggested package updates
 	o amanda-server-2.5.0
 	o amavis-0.3.12
 	o amavisd-new-2.4.3 [pkg/34788]
+	o amavisd-new-2.4.4
 	o amaya-9.52
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
@@ -285,6 +286,7 @@ Suggested package updates
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
+	o autoconf-2.61
 	o autogen-5.8.7
 	o avcheck-0.91
 	o avl-2.0.1
@@ -338,10 +340,11 @@ Suggested package updates
 	o classpath-gui-0.92
 	o clisp-2.41
 	o cocoon-2.1.9
+	o cogito-0.18.2
 	o columba-1.0RC1
 	o compface-1.5.2
 	o control-center-2.16.1
-	o coreutils-6.4
+	o coreutils-6.6
 	o cqcam-0.91
 	o crafty-19.5
 	o crossfire-client-1.9.1
@@ -360,19 +363,21 @@ Suggested package updates
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o defendguin-0.0.11
-	o dejavu-ttf-2.10
+	o dejavu-ttf-2.12
 	o delegate-9.3.1
 	o denemo-0.7.5
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
+	o digikam-0.8.2
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.35
 	o dnstracer-1.8
 	o doxygen-1.5.1
-	o drscheme-352
+	o drscheme-360
 	o dvd+rw-tools-7.0
+	o dvdrip-0.98.2
 	o dvdstyler-1.5beta5
 	o dvipng-1.9
 	o dx-4.3.3
@@ -387,6 +392,7 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
+	o elinks-0.11.2
 	o elm-me-2.4pl123d
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
@@ -430,9 +436,10 @@ Suggested package updates
 	o fox-1.6.19
 	o freeglut-2.4.0
 	o freesci-0.3.5
-	o frozen-bubble-2.0.0
+	o frozen-bubble-2.1.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
+	o g-wrap-1.9.7
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
@@ -466,11 +473,15 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.1.0
 	o gld-1.7
+	o gliv-1.9.6
+	o glpk-4.13
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.16.1
+	o gnome-desktop-2.16.2
 	o gnome-games-2.16.1
+	o gnome-icon-theme-2.16.1
 	o gnome-pilot-2.0.14
 	o gnome-spell-1.0.7
 	o gnome-user-docs-2.16.1
@@ -485,10 +496,10 @@ Suggested package updates
 	o grace-5.1.20
 	o gramofile-1.6P
 	o gramps-2.2.2
-	o gramps2-2.2.1
+	o gramps2-2.2.3
 	o grap-1.36
 	o grep-2.5.1a
-	o grhino-0.15.2
+	o grhino-0.16.0
 	o gri-2.12.8
 	o grig-0.7.1
 	o gsasl-0.2.12 [pkg/33638]
@@ -509,12 +520,16 @@ Suggested package updates
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-1.8.1
+	o guile-lib-0.1.3
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
+	o gwenview-1.4.1
 	o gworkspace-0.8.3
+	o gzip-1.3.6
 	o gzrecover-0.3
 	o hackbot-2.21
 	o haskell-mode-1.45
 	o hercules-3.02
+	o hicolor-icon-theme-0.10
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
@@ -558,6 +573,7 @@ Suggested package updates
 	o kapooka-0.3
 	o kazehakase-0.4.2
 	o kdrill-6.4
+	o kid3-0.8
 	o kinput2-3.1
 	o kmp-0.5
 	o ko-baekmuk-2.1
@@ -618,6 +634,7 @@ Suggested package updates
 	o lynx-2.8.6
 	o lyx-1.4.3
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
+	o m4-1.4.8
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mailfront-1.01 [pkg/34765]
@@ -627,7 +644,7 @@ Suggested package updates
 	o malsync-2.2.0
 	o manedit-0.6.1
 	o mapserver-4.2.5
-	o maradns-1.2.12.03
+	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
@@ -643,7 +660,7 @@ Suggested package updates
 	o minivmac-2.6.1
 	o miredo-1.0.4
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.8.0
+	o mkvtoolnix-1.8.1
 	o mlview-0.9.0
 	o mmix-20050922
 	o moc-2.4.1
@@ -671,8 +688,9 @@ Suggested package updates
 	o mysql5-server-5.0.27
 	o naim-0.11.8.2.1
 	o nano-1.2.5 [pkg/32859|pkg/34511]
-	o nano-2.0.0
+	o nano-2.0.1
 	o nap-1.5.3
+	o nautilus-2.16.3
 	o nautilus-cd-burner-2.16.0
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -690,6 +708,7 @@ Suggested package updates
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a3
+	o nss-3.11.4
 	o nss_ldap-248
 	o ntp-4.2.2
 	o nulib2-210
@@ -725,6 +744,7 @@ Suggested package updates
 	o p5-BSD-Resource-1.28
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
+	o p5-Cache-Simple-TimedExpiry-0.27
 	o p5-Class-Autouse-1.27
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03 [pkg/34338]
@@ -761,7 +781,7 @@ Suggested package updates
 	o p5-HTML-FillInForm-1.05
 	o p5-HTML-Parser-3.55
 	o p5-HTML-TableExtract-2.10
-	o p5-HTML-Tree-3.22
+	o p5-HTML-Tree-3.23
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Request-Form-0.952
@@ -772,6 +792,7 @@ Suggested package updates
 	o p5-Image-Info-1.23
 	o p5-Lingua-Stem-Snowball-0.941 [pkg/34402]
 	o p5-Locale-Codes-2.07
+	o p5-Log-Dispatch-2.14
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
@@ -829,6 +850,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.14.8
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o parrot-0.4.7
@@ -917,7 +939,7 @@ Suggested package updates
 	o py-logging-0.4.9.6
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
-	o py-prewikka-0.9.7.1
+	o py-prewikka-0.9.8
 	o py-psyco-1.5.1
 	o py-psycopg2-2.0.4 [pkg/34433]
 	o py-psycopg2-2.0.5
@@ -1095,7 +1117,7 @@ Suggested package updates
 	o vmware-5.5
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vobcopy-1.0.0
+	o vobcopy-1.0.1
 	o vp-1.6
 	o vsftpd-2.0.5
 	o wMosaic-3.8.22
@@ -1120,7 +1142,7 @@ Suggested package updates
 	o xdx-2.0
 	o xemacs-21.4.19
 	o xerces-j-2.4.0 [pkg/21725]
-	o xerces-j-2.8.1
+	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xfmail-1.5.4
 	o xfstt-1.7
