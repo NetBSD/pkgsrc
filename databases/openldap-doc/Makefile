@@ -1,10 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2006/08/25 07:02:28 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/27 17:24:11 ghen Exp $
 
 DISTNAME=		openldap-2.3.27
 PKGNAME=		${DISTNAME:S/-/-doc-/}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 MASTER_SITES+=		http://ftp.openldap.org/pub/OpenLDAP/openldap-release/
+MASTER_SITES+=		http://www.PlanetMirror.com/pub/openldap/openldap-release/
+MASTER_SITES+=		ftp://gd.tuwien.ac.at/infosys/network/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://ftp.matrix.com.br/pub/openldap/openldap-release/
+MASTER_SITES+=		ftp://ftp.ucr.ac.cr/pub/Unix/openldap/openldap-release/
+MASTER_SITES+=		ftp://ftp.ntua.gr/mirror/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://it.openldap.org/pub/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://ftp.dti.ad.jp/pub/net/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://ftp.u-aizu.ac.jp/pub/net/openldap/openldap-release/
+MASTER_SITES+=		ftp://ftp.holywar.net/pub/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://ftp.nl.uu.net/pub/unix/db/openldap/openldap-release/
+MASTER_SITES+=		ftp://ftp.linux.pt/pub/mirrors/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/openldap-release/
+MASTER_SITES+=		ftp://ftp.plig.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ghen@NetBSD.org
