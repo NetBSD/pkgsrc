@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5717 2006/11/27 20:33:34 wiz Exp $
+$NetBSD: TODO,v 1.5718 2006/11/27 20:38:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,7 +369,6 @@ Suggested package updates
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
-	o digikam-0.8.2
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.35
@@ -408,7 +407,6 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
-	o eterm-0.9.4
 	o eukleides-1.0.3
 	o euler-1.61
 	o evolution-2.8.1.1
@@ -473,7 +471,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.1.0
 	o gld-1.7
-	o gliv-1.9.6
 	o glpk-4.13
 	o gmime-2.2.3
 	o gnet1-1.1.9
@@ -568,7 +565,6 @@ Suggested package updates
 	o john-1.7.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
-	o jpilot-0.99.9
 	o jwhois-3.2.3
 	o kapooka-0.3
 	o kazehakase-0.4.2
@@ -649,7 +645,6 @@ Suggested package updates
 	o md-whois-4.7.15
 	o memcached-1.2
 	o mergeant-0.64
-	o metacity-2.16.3
 	o mftrace-1.2.4
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
@@ -1064,7 +1059,6 @@ Suggested package updates
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-2.2.10
 	o sylpheed-claws-2.6.0
 	o sympa-5.2
 	o sysinfo-4.2.2
