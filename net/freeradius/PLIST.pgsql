@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.pgsql,v 1.3 2006/08/09 16:42:09 adrianp Exp $
-lib/rlm_sql_postgresql-${RADVER}.la
+@comment $NetBSD: PLIST.pgsql,v 1.3.2.1 2006/11/27 10:15:34 ghen Exp $
 lib/rlm_sql_postgresql.la
