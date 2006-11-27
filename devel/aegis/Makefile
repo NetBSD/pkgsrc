@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/11/24 23:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/11/27 17:17:56 joerg Exp $
 #
 
 DISTNAME=	aegis-4.22
@@ -9,6 +9,8 @@ MASTER_SITES=	http://aegis.sourceforge.net/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aegis.sourceforge.net/
 COMMENT=	Aegis is a transaction base software configuration management system
+
+EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-nlsdir=${_PKGLOCALEDIR:Q}
