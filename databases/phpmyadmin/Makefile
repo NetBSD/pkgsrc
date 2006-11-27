@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2006/11/19 15:55:54 tron Exp $
+# $NetBSD: Makefile,v 1.56 2006/11/27 17:30:56 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,7 @@ PLIST_SUBST+=	CP=${CP:Q} DIST_VERSION=${DIST_VERSION:Q} \
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
 		PMCONFFILE=${PMCONFFILE:Q} PMDIR=${PMDIR:Q} \
 		EXDIR=${EXDIR:Q}
+USE_TOOLS+=	perl:run
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
 DIST_VERSION=	2.9.1.1
@@ -26,12 +28,18 @@ DOC_FILES=	CREDITS ChangeLog \
 		RELEASE-DATE-${DIST_VERSION} TODO
 
 APACHE_USER?=	www
+APACHE_GROUP?=	www
+PKG_GROUPS=	${APACHE_GROUP}
+PKG_USERS=	${APACHE_USER}:${APACHE_GROUP}
+BUILD_DEFS+=	APACHE_USER APACHE_GROUP
+
 EXDIR=		${PREFIX}/share/examples/phpmyadmin
 PMCONFFILE=	${PKG_SYSCONFDIR}/config.inc.php
 PMDIR=		${PREFIX}/share/phpmyadmin
 CONF_FILES=	${EXDIR}/config.inc.php ${PKG_SYSCONFDIR}/config.inc.php
-SPECIAL_PERMS=	${PKG_SYSCONFDIR}/config.inc.php ${APACHE_USER} wheel 0600
-BUILD_DEFS+=	APACHE_USER
+REPLACE_PERL+=	scripts/convertcfg.pl
+SPECIAL_PERMS=	${PKG_SYSCONFDIR}/config.inc.php ${APACHE_USER} \
+		${APACHE_GROUP} 0600
 
 PKG_SYSCONFSUBDIR?=	phpmyadmin
 
