@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1886 2006/11/27 21:01:47 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1887 2006/11/27 21:48:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5413,8 +5413,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/liboil to 0.3.10 [drochner 2006-11-24]
 	Updated graphics/gliv to 1.9.6 [drochner 2006-11-24]
 	Updated sysutils/gnome-vfs2 to 2.16.3 [drochner 2006-11-24]
-	Updated sysutils/gnome-vfs2-cdda to 2.16.3 [drochner 2006-11-24]
-	Updated sysutils/gnome-vfs2-smb to 2.16.3 [drochner 2006-11-24]
+	Updated audio/gnome-vfs2-cdda to 2.16.3 [drochner 2006-11-24]
+	Updated net/gnome-vfs2-smb to 2.16.3 [drochner 2006-11-24]
 	Updated wm/metacity to 2.16.3 [drochner 2006-11-24]
 	Updated textproc/iso-codes to 0.58 [drochner 2006-11-24]
 	Updated misc/gnome2-utils to 2.16.2 [drochner 2006-11-24]
