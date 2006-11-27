@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/10/22 22:50:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/11/27 21:21:19 drochner Exp $
 include/evolution-data-server-1.8/camel/broken-date-parser.h
 include/evolution-data-server-1.8/camel/camel-address.h
 include/evolution-data-server-1.8/camel/camel-arg.h
@@ -753,7 +753,6 @@ share/gtk-doc/html/libecal/libecal-e-cal-time-util.html
 share/gtk-doc/html/libecal/libecal-e-cal-types.html
 share/gtk-doc/html/libecal/libecal-e-cal-util.html
 share/gtk-doc/html/libecal/libecal.devhelp
-share/gtk-doc/html/libecal/libecal.devhelp2
 share/gtk-doc/html/libecal/right.png
 share/gtk-doc/html/libecal/style.css
 share/gtk-doc/html/libecal/up.png
@@ -807,7 +806,6 @@ share/gtk-doc/html/libedataserver/libedataserver-e-util.html
 share/gtk-doc/html/libedataserver/libedataserver-e-xml-hash-utils.html
 share/gtk-doc/html/libedataserver/libedataserver-md5-utils.html
 share/gtk-doc/html/libedataserver/libedataserver.devhelp
-share/gtk-doc/html/libedataserver/libedataserver.devhelp2
 share/gtk-doc/html/libedataserver/right.png
 share/gtk-doc/html/libedataserver/style.css
 share/gtk-doc/html/libedataserver/up.png
