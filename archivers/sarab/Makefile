@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/03 06:27:04 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/27 14:24:01 dsainty Exp $
 
 DISTNAME=	sarab-0.2.2
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarab/}
 
