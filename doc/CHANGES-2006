@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1881 2006/11/26 22:35:10 wiz Exp $
+>$NetBSD: CHANGES-2006,v 1.1882 2006/11/27 12:55:35 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5417,3 +5417,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/worker version 2.14.1 [uebayasi 2006-11-25]
 	Updated editors/vim-share to 7.0.168 [martti 2006-11-26]
 	Updated devel/scmgit to 1.4.4.1 [wiz 2006-11-26]
+	Updated databases/openldap-client to 2.3.27nb1 [ghen 2006-11-27]
+	Updated databases/openldap-server to 2.3.27nb1 [ghen 2006-11-27]
