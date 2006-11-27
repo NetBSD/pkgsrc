@@ -1,8 +1,19 @@
-$NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
+$NetBSD: patch-ai,v 1.2 2006/11/27 22:05:34 tv Exp $
 
---- src/xheader.c.orig	2004-09-06 12:31:14.000000000 +0100
+--- src/xheader.c.orig	2004-09-06 07:31:14.000000000 -0400
 +++ src/xheader.c
-@@ -783,6 +783,32 @@ code_num (uintmax_t value, char const *k
+@@ -24,6 +24,10 @@
+ #include <stpcpy.h>
+ #include <xstrtol.h>
+ 
++#ifndef SIZE_MAX
++# define SIZE_MAX ((size_t) -1)
++#endif
++
+ #include "common.h"
+ 
+ #define obstack_chunk_alloc xmalloc
+@@ -783,6 +787,32 @@ code_num (uintmax_t value, char const *k
    xheader_print (xhdr, keyword, sbuf);
  }
  
@@ -35,7 +46,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
  static void
  dummy_coder (struct tar_stat_info const *st __attribute__ ((unused)),
  	     char const *keyword __attribute__ ((unused)),
-@@ -821,7 +847,7 @@ static void
+@@ -821,7 +851,7 @@ static void
  gid_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
@@ -44,7 +55,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
      st->stat.st_gid = u;
  }
  
-@@ -903,7 +929,7 @@ static void
+@@ -903,7 +933,7 @@ static void
  size_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
@@ -53,7 +64,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
      st->archive_file_size = st->stat.st_size = u;
  }
  
-@@ -918,7 +944,7 @@ static void
+@@ -918,7 +948,7 @@ static void
  uid_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
@@ -62,7 +73,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
      st->stat.st_uid = u;
  }
  
-@@ -946,7 +972,7 @@ static void
+@@ -946,7 +976,7 @@ static void
  sparse_size_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
@@ -71,7 +82,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
      st->stat.st_size = u;
  }
  
-@@ -962,10 +988,10 @@ static void
+@@ -962,10 +992,10 @@ static void
  sparse_numblocks_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
@@ -84,7 +95,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
        st->sparse_map_avail = 0;
      }
  }
-@@ -982,8 +1008,14 @@ static void
+@@ -982,8 +1012,14 @@ static void
  sparse_offset_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
@@ -100,7 +111,7 @@ $NetBSD: patch-ai,v 1.1 2006/09/03 17:24:16 adrianp Exp $
  }
  
  static void
-@@ -998,15 +1030,13 @@ static void
+@@ -998,15 +1034,13 @@ static void
  sparse_numbytes_decoder (struct tar_stat_info *st, char const *arg)
  {
    uintmax_t u;
