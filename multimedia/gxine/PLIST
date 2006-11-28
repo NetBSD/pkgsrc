@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/10/17 16:23:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/11/28 21:49:57 drochner Exp $
 bin/gxine
 bin/gxine_client
 lib/gxine/gxineplugin.la
@@ -21,7 +21,6 @@ share/gxine/pixmaps/set-volume.svg
 share/gxine/pixmaps/speaker.png
 share/gxine/pixmaps/splash.png
 share/icons/hicolor/64x64/apps/gxine.png
-share/pixmaps/gxine.png
 share/locale/cs/LC_MESSAGES/gxine.mo
 share/locale/cs/LC_MESSAGES/gxine.theme.mo
 share/locale/de/LC_MESSAGES/gxine.mo
@@ -42,7 +41,12 @@ share/locale/uk/LC_MESSAGES/gxine.mo
 share/locale/uk/LC_MESSAGES/gxine.theme.mo
 share/locale/zh_CN/LC_MESSAGES/gxine.mo
 share/locale/zh_CN/LC_MESSAGES/gxine.theme.mo
+share/pixmaps/gxine.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gxine/pixmaps
 @dirrm share/gxine
 @dirrm share/examples/gxine
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gxine
