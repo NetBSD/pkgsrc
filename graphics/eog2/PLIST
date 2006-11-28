@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/10/30 21:35:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/11/28 22:25:12 drochner Exp $
 bin/eog
 share/applications/eog.desktop
 share/eog/eog-gtk-ui.xml
@@ -30,8 +30,8 @@ share/gnome/help/eog/ko/eog.xml
 share/gnome/help/eog/ko/figures/eog_start_window.png
 share/gnome/help/eog/ko/legal.xml
 share/gnome/help/eog/sv/eog.xml
+share/gnome/help/eog/sv/figures/eog_save_as_window.png
 share/gnome/help/eog/sv/figures/eog_start_window.png
-share/gnome/help/eog/sv/legal.xml
 share/gnome/help/eog/uk/eog.xml
 share/gnome/help/eog/uk/figures/eog_save_as_window.png
 share/gnome/help/eog/uk/figures/eog_start_window.png
