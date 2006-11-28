@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2006/08/05 03:13:25 dsainty Exp $
+# $NetBSD: Makefile,v 1.90.2.1 2006/11/28 08:21:42 ghen Exp $
 
 DISTNAME=	gnupg-1.4.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/ \
