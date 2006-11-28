@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2006/10/04 19:38:06 rillig Exp $
+# $NetBSD: Makefile.common,v 1.56 2006/11/28 15:26:18 rillig Exp $
 
 DISTNAME=		icewm-1.2.27
 CATEGORIES=		x11 wm
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--with-cfgdir=${PKG_SYSCONFDIR:Q}
 .if !exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 CONFIGURE_ARGS+=	--disable-xinerama
 .endif
+MAKE_FLAGS+=		LOCDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 PKG_SYSCONFSUBDIR=	icewm
 
@@ -44,6 +45,7 @@ CONFIGURE_ARGS+=	--with-unicode-set=utf-32
 .else
 .  include "../../converters/libiconv/buildlink3.mk"
 .endif
+LIBS.SunOS+=		-lintl
 
 DOCDIR=			${PREFIX}/share/doc/icewm
 HTMLDIR=		${PREFIX}/share/doc/icewm/html
