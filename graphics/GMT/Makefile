@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/11/14 13:16:00 wennmach Exp $
+# $NetBSD: Makefile,v 1.30 2006/11/28 18:02:33 wennmach Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.soest.hawaii.edu/gmt/4/		\
 		ftp://falcon.grdl.noaa.gov/pub/gmt/4/		\
