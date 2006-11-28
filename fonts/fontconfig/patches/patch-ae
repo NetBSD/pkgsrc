@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.4 2006/10/09 10:54:12 markd Exp $
+$NetBSD: patch-ae,v 1.5 2006/11/28 16:15:30 tv Exp $
 
---- src/fcint.h.orig	2006-10-09 23:26:05.064812000 +1300
+--- src/fcint.h.orig	2006-09-15 03:06:40.000000000 -0400
 +++ src/fcint.h
+@@ -35,7 +35,7 @@
+ #include <inttypes.h>
+ #elif defined(HAVE_STDINT_H)
+ #include <stdint.h>
+-#else
++#elif !defined(__INTERIX)
+ #error missing C99 integer data types
+ #endif
+ #include <string.h>
 @@ -111,7 +111,7 @@
  #define FC_BANK_LANGS	    0xfcfcfcfc
  
