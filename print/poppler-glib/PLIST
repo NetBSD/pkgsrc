@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/11/13 21:00:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/11/28 21:47:27 drochner Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-attachment.h
 include/poppler/glib/poppler-document.h
@@ -26,4 +26,3 @@ share/gtk-doc/html/poppler/style.css
 share/gtk-doc/html/poppler/up.png
 @dirrm share/gtk-doc/html/poppler
 @dirrm include/poppler/glib
-@dirrm include/poppler
