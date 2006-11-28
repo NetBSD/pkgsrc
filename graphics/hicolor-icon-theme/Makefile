@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/11/05 17:23:44 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/28 22:02:34 drochner Exp $
 #
 
-DISTNAME=	hicolor-icon-theme-0.9
-PKGREVISION=	1
+DISTNAME=	hicolor-icon-theme-0.10
 CATEGORIES=	graphics
 MASTER_SITES=	http://icon-theme.freedesktop.org/releases/
 
