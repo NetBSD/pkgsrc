@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2006/09/15 15:20:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2006/11/28 22:31:21 drochner Exp $
 #
 
-DISTNAME=	gnome-speech-0.4.5
+DISTNAME=	gnome-speech-0.4.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-speech/0.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,8 +14,6 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--disable-gtk-doc
 
 # Disable Java support.
 CONFIGURE_ARGS+=	JAVAC=no JAVA=no IDLJ=no JAB=no
