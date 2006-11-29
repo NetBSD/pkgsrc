@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbus.sh,v 1.5 2006/11/13 15:16:20 drochner Exp $
+# $NetBSD: dbus.sh,v 1.6 2006/11/29 10:11:53 ghen Exp $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
@@ -19,7 +19,7 @@ dbus_prestart() {
 	if @TEST@ ! -d "@VARBASE@/run/dbus"; then
 		@MKDIR@ "@VARBASE@/run/dbus"
 		@CHMOD@ 0755 "@VARBASE@/run/dbus"
-		@CHOWN@ messagebus:messagebus "@VARBASE@/run/dbus"
+		@CHOWN@ @DBUS_USER@:@DBUS_GROUP@ "@VARBASE@/run/dbus"
 	fi
 	@PREFIX@/bin/dbus-uuidgen --ensure
 }
