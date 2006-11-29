@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1890 2006/11/29 01:26:27 gdt Exp $
+>$NetBSD: CHANGES-2006,v 1.1891 2006/11/29 10:30:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/asciidoc to 8.1.0nb1 [wiz 2006-11-27]
 	Updated security/gnupg to 1.4.5nb1 [taca 2006-11-28]
 	Updated graphics/exiv2 to 0.12 [xtraeme 2006-11-28]
+	Updated net/ngrep 1.45 [adam 2006-11-29]
