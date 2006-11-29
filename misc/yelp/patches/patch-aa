@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2006/10/23 19:36:09 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2006/11/29 22:00:49 drochner Exp $
 
---- ./src/yelp-utils.c.orig	2006-10-23 21:06:59.000000000 +0200
+--- ./src/yelp-utils.c.orig	2006-11-20 23:23:16.000000000 +0100
 +++ ./src/yelp-utils.c
-@@ -789,6 +789,9 @@ convert_man_uri (gchar *uri, gboolean tr
+@@ -789,7 +789,7 @@ convert_man_uri (gchar *uri, gboolean tr
  	if (!g_spawn_command_line_sync ("manpath", &manp, NULL, NULL, NULL))
  	    manp = g_strdup (g_getenv ("MANPATH"));
- 
-+	if (!manp)
+ 	if (!manp) {
+-	    return NULL;
 +	    manp = g_strdup ("/usr/share/man");
-+
+ 	}
  	g_strstrip (manp);
  	manpath = g_strsplit (manp, ":", -1);
- 
