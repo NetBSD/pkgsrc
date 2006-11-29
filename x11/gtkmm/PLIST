@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/11/09 16:37:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/11/29 19:05:17 adam Exp $
 bin/demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1615,6 +1615,8 @@ share/doc/gtkmm-2.4/docs/reference/html/group__Containers.png
 share/doc/gtkmm-2.4/docs/reference/html/group__Dialogs.html
 share/doc/gtkmm-2.4/docs/reference/html/group__Menus.html
 share/doc/gtkmm-2.4/docs/reference/html/group__Menus.png
+share/doc/gtkmm-2.4/docs/reference/html/group__Printing.html
+share/doc/gtkmm-2.4/docs/reference/html/group__RecentFiles.html
 share/doc/gtkmm-2.4/docs/reference/html/group__TextView.html
 share/doc/gtkmm-2.4/docs/reference/html/group__TextView.png
 share/doc/gtkmm-2.4/docs/reference/html/group__TreeView.html
@@ -1678,6 +1680,8 @@ share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__124.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__125.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__126.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__127.png
+share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__128.png
+share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__129.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__13.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__14.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__15.png
