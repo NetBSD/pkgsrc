@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1894 2006/11/29 19:11:20 adam Exp $
+>$NetBSD: CHANGES-2006,v 1.1895 2006/11/29 22:18:19 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5444,3 +5444,25 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/easyh10 to 1.5 [ghen 2006-11-29]
 	Updated devel/glibmm to 2.12.3 [adam 2006-11-29]
 	Updated x11/gtkmm to 2.10.5 [adam 2006-11-29]
+	Updated www/epiphany to 2.16.2 [drochner 2006-11-29]
+	Updated audio/gnome-speech to 0.4.6 [drochner 2006-11-29]
+	Updated audio/sound-juicer to 2.14.5 [drochner 2006-11-29]
+	Updated graphics/eog2 to 2.16.2 [drochner 2006-11-29]
+	Updated graphics/gnome-icon-theme to 2.16.1 [drochner 2006-11-29]
+	Updated graphics/gnome-backgrounds to 2.16.2 [drochner 2006-11-29]
+	Updated x11/gnome-desktop to 2.16.2 [drochner 2006-11-29]
+	Updated x11/gnome-panel to 2.16.2 [drochner 2006-11-29]
+	Updated x11/gnome-session to 2.16.2 [drochner 2006-11-29]
+	Updated x11/gnome-themes to 2.16.2 [drochner 2006-11-29]
+	Updated x11/gnome2-applets to 2.16.2 [drochner 2006-11-29]
+	Updated x11/gtk2-engines to 2.8.2 [drochner 2006-11-29]
+	Updated x11/zenity to 2.16.2 [drochner 2006-11-29]
+	Updated graphics/hicolor-icon-theme to 0.10 [drochner 2006-11-29]
+	Updated graphics/png to 1.2.14 [drochner 2006-11-29]
+	Updated mail/evolution-data-server to 1.8.2 [drochner 2006-11-29]
+	Updated net/libsoup-devel to 2.298 [drochner 2006-11-29]
+	Updated sysutils/nautilus to 2.16.3 [drochner 2006-11-29]
+	Updated www/gtkhtml38 to 3.12.2 [drochner 2006-11-29]
+	Updated devel/eel2 to 2.16.3 [drochner 2006-11-29]
+	Updated devel/libwnck to 2.16.2 [drochner 2006-11-29]
+	Updated devel/pango to 1.14.8 [drochner 2006-11-29]
