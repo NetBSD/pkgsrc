@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.16 2006/11/26 09:55:52 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.17 2006/11/29 17:36:15 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,6 +36,9 @@
 
 transform_setname "transform-sunpro-cc"
 case $arg in
+
+-E)
+	transform_pass ;;
 
 -MM)
 	# Create dependency lines for Makefiles
