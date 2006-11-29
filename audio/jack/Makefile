@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/11/15 01:19:15 wulf Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/29 18:48:23 xtraeme Exp $
 #
 
 DISTNAME=		jack-audio-connection-kit-0.100.0
 PKGNAME=		jack-0.100.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jackit/}
 
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 
 PKGCONFIG_OVERRIDE+=	jack.pc.in
+
+LIBS+=			${LIBOSSAUDIO}
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
