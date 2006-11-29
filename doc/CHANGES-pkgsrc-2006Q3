@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.51 2006/11/27 10:15:58 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.52 2006/11/29 15:02:09 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -127,8 +127,8 @@ Pullup ticket 1896 - requested by joerg
 install fix for py24-setuptools
 Pullup ticket 1919 - requested by drochner
 runtime fix for gnome-screensaver
-Pullup ticket 1920 - requested by adrianp                                                         
-fix security fix for proftpd                                                                                                                                                                                         
+Pullup ticket 1920 - requested by adrianp
+fix security fix for proftpd
 Pullup ticket 1915 - requested by ghen
 security fix for dovecot
 Pullup ticket 1911 - requested by obache
@@ -137,3 +137,5 @@ Pullup ticket 1921 - requested by hira
 install fix for ja-ptex-bin
 Pullup ticket 1922 - requested by hira
 PLIST fix for net/freeradius
+Pullup ticket 1923 - requested by ghen
+security fix for openldap
