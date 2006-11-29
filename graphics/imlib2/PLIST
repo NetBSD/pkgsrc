@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2005/01/11 13:37:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.7.14.1 2006/11/29 17:16:35 ghen Exp $
 bin/imlib2-config
 bin/imlib2_bumpmap
 bin/imlib2_colorspace
 bin/imlib2_conv
+bin/imlib2_grab
 bin/imlib2_poly
 bin/imlib2_show
 bin/imlib2_test

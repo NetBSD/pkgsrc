@@ -1,0 +1,32 @@
+$NetBSD: patch-cg,v 1.1.2.2 2006/11/29 17:16:35 ghen Exp $
+
+--- src/modules/loaders/loader_tiff.c.orig	2006-09-05 02:37:07.000000000 +0200
++++ src/modules/loaders/loader_tiff.c
+@@ -75,7 +75,7 @@ static void
+ raster(TIFFRGBAImage_Extra * img, uint32 * rast,
+        uint32 x, uint32 y, uint32 w, uint32 h)
+ {
+-   uint32              image_width, image_height;
++   int                image_width, image_height;
+    uint32             *pixel, pixel_value;
+    int                 i, j, dy, rast_offset;
+    DATA32             *buffer_pixel, *buffer = img->image->data;
+@@ -202,8 +202,16 @@ load(ImlibImage * im, ImlibProgressFunct
+      }
+    
+    rgba_image.image = im;
+-   im->w = width = rgba_image.rgba.width;
+-   im->h = height = rgba_image.rgba.height;
++   width = rgba_image.rgba.width;
++   height = rgba_image.rgba.height;
++   if (width < 1 || height < 1 || width >= 16384 || height >= 16384)
++     {
++        TIFFRGBAImageEnd((TIFFRGBAImage *) & rgba_image);
++        TIFFClose(tif);
++        return 0;
++     }
++   im->w = width;
++   im->h = height;
+    rgba_image.num_pixels = num_pixels = width * height;
+    if (rgba_image.rgba.alpha != EXTRASAMPLE_UNSPECIFIED)
+       SET_FLAG(im->flags, F_HAS_ALPHA);
