@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3.4.1 2006/11/27 10:01:46 ghen Exp $
+$NetBSD: distinfo,v 1.3.4.2 2006/11/29 17:33:39 ghen Exp $
 
 SHA1 (teTeX/dvipsk-jpatch-p1.7a.tar.gz) = 1b4051fe443fcffe2b12199fcf2df01550c57f32
 RMD160 (teTeX/dvipsk-jpatch-p1.7a.tar.gz) = f9c1a12b17e3d0c904bfe0bb145f84b59eb74eff
@@ -9,7 +9,7 @@ Size (teTeX/mendexk2.6d.tar.gz) = 30503 bytes
 SHA1 (teTeX/ptex-src-3.1.9.tar.gz) = 816ca1bb43f8835a81a8804a3d6068f1710984bf
 RMD160 (teTeX/ptex-src-3.1.9.tar.gz) = 05aca5199437a5d5a99d531f33d04f2a472ca2f7
 Size (teTeX/ptex-src-3.1.9.tar.gz) = 131943 bytes
-SHA1 (patch-aa) = dc1d81face4bd3a401628527706d42fcaf8df778
+SHA1 (patch-aa) = 622575507406aeda1c98062e98e234053a55923d
 SHA1 (patch-ab) = 7015dfdaa6cbaf50a91afd5682231b30a9f17d22
 SHA1 (patch-ac) = 43c6d4e27cbdbaf043800fe07b346a0d865d96a3
 SHA1 (patch-ad) = 98e6edf48ff971ab9864336678a59afa44c92126

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2006/06/24 10:52:23 hira Exp $
+$NetBSD: patch-aa,v 1.2.4.1 2006/11/29 17:33:39 ghen Exp $
 
 --- texk/web2c/ptex-src-3.1.9/Makefile.in.orig	2005-03-07 15:30:44.000000000 +0900
-+++ texk/web2c/ptex-src-3.1.9/Makefile.in	2006-06-24 16:39:39.000000000 +0900
++++ texk/web2c/ptex-src-3.1.9/Makefile.in	2006-11-27 19:12:16.000000000 +0900
 @@ -5,12 +5,18 @@
  
  default: programs formats
@@ -123,7 +123,7 @@ $NetBSD: patch-aa,v 1.2 2006/06/24 10:52:23 hira Exp $
 -	else true; fi
 -	$(INSTALL_DATA) texmf.cnf $(web2cdir)/texmf.cnf
 +	$(SHELL) $(top_srcdir)/mkinstalldirs \
-+		$(texpool_lcl_dir) $(web2c_lcl_dir) $(fontnamedir)
++		$(texpool_lcl_dir) $(web2c_lcl_dir)
 +	$(INSTALL_DATA) ptex.pool $(texpool_lcl_dir)/ptex.pool
 +#	if [ -f $(web2cdir)/texmf.cnf ]; then \
 +#		mv -f $(web2cdir)/texmf.cnf $(web2cdir)/texmf.cnf.orig ;\
