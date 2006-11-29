@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/13 19:15:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/11/29 19:03:38 adam Exp $
 include/glibmm-2.4/glibmm.h
 include/glibmm-2.4/glibmm/arrayhandle.h
 include/glibmm-2.4/glibmm/class.h
@@ -215,6 +215,24 @@ share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PollFD-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PollFD.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Private-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Private.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Property-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Property.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyBase-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyBase.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyBase__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__Base-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__Base.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__Base__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__ReadOnly-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__ReadOnly.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__ReadOnly__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__WriteOnly-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__WriteOnly.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__WriteOnly__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1PropertyProxy__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Property__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Quark-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Quark.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Quark__inherit__graph.png
@@ -279,6 +297,9 @@ share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyConnectionNode.
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyNormal-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyNormal.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyNormal__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyProperty-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyProperty.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalProxyProperty__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalTimeout-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1SignalTimeout.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Source-members.html
@@ -599,6 +620,8 @@ share/doc/glibmm-2.4/docs/reference/html/inherit__graph__81.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__82.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__83.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__84.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__85.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__86.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__9.png
 share/doc/glibmm-2.4/docs/reference/html/inherits.html
 share/doc/glibmm-2.4/docs/reference/html/init_8h.html
@@ -703,8 +726,8 @@ share/doc/glibmm-2.4/examples/thread/thread.cc
 share/doc/glibmm-2.4/examples/thread/threadpool.cc
 @dirrm share/doc/glibmm-2.4/examples/thread
 @dirrm share/doc/glibmm-2.4/examples/options
-@dirrm share/doc/glibmm-2.4/examples/iochannel_stream
 @dirrm share/doc/glibmm-2.4/examples/markup
+@dirrm share/doc/glibmm-2.4/examples/iochannel_stream
 @dirrm share/doc/glibmm-2.4/examples/child_watch
 @dirrm share/doc/glibmm-2.4/examples
 @dirrm share/doc/glibmm-2.4/docs/reference/html
