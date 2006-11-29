@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/28 16:42:05 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/29 13:46:15 xtraeme Exp $
 #
 
 DISTNAME=	dirsize-0.6
@@ -11,6 +11,8 @@ HOMEPAGE=	http://plasmasturm.org/code/dirsize/
 COMMENT=	Outputs aggregate size of all files in one or more directories
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Interix"
 .  include "../../devel/libiberty/application.mk" # need asprintf(3)
