@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/11/13 15:16:20 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2006/11/29 10:11:53 ghen Exp $
 #
 
 DISTNAME=	dbus-1.0.0
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-xml=expat
 CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--with-dbus-user=${DBUS_USER}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
 PKG_SUPPORTED_OPTIONS+=	debug
@@ -59,10 +60,15 @@ INSTALLATION_DIRS=	${EGDIR}
 
 RCD_SCRIPTS=		dbus
 
-PKG_GROUPS=		messagebus
-PKG_USERS=		messagebus:messagebus
-PKG_GECOS.messagebus=	System message bus
-PKG_HOME.messagebus=	${VARBASE}/run/dbus
+BUILD_DEFS+=		DBUS_USER DBUS_GROUP
+
+PKG_GROUPS=		${DBUS_GROUP}
+PKG_USERS=		${DBUS_USER}:${DBUS_GROUP}
+PKG_GECOS.${DBUS_USER}=	System message bus
+PKG_HOME.${DBUS_USER}=	${VARBASE}/run/dbus
+
+FILES_SUBST+=		DBUS_USER=${DBUS_USER}
+FILES_SUBST+=		DBUS_GROUP=${DBUS_GROUP}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
