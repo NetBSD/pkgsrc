@@ -1,0 +1,13 @@
+$NetBSD: patch-ce,v 1.1.2.2 2006/11/29 17:16:35 ghen Exp $
+
+--- src/modules/loaders/loader_pnm.c.orig	2006-09-05 02:37:07.000000000 +0200
++++ src/modules/loaders/loader_pnm.c
+@@ -80,7 +80,7 @@ load(ImlibImage * im, ImlibProgressFunct
+              int                 i = 0;
+ 
+              /* read numbers */
+-             while (c != EOF && !isspace(c))
++             while (c != EOF && i+1 < sizeof(buf) && !isspace(c))
+                {
+                   buf[i++] = c;
+                   c = fgetc(f);
