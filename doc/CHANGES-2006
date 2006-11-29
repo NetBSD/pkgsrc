@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1889 2006/11/28 15:15:50 xtraeme Exp $
+>$NetBSD: CHANGES-2006,v 1.1890 2006/11/29 01:26:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5433,6 +5433,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/openldap-server to 2.3.27nb1 [ghen 2006-11-27]
 	Updated archivers/sarab to 0.2.2nb1 [dsainty 2006-11-27]
 	Updated databases/phpmyadmin to 2.9.1.1nb1 [tron 2006-11-27]
+	Updated graphics/gqview-devel to 2.1.4 [gdt 2006-11-27]
 	Updated security/gnupg2 to 2.0.0nb3 [shannonjr 2006-11-27]
 	Updated textproc/asciidoc to 8.1.0nb1 [wiz 2006-11-27]
 	Updated security/gnupg to 1.4.5nb1 [taca 2006-11-28]
