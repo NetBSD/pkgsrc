@@ -1,16 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2006/02/20 09:15:44 markd Exp $
+$NetBSD: patch-aa,v 1.4 2006/11/29 12:02:10 xtraeme Exp $
 
---- digikam/utilities/imageeditor/imlibinterface.cpp.orig	2006-01-17 07:10:18.000000000 +1300
-+++ digikam/utilities/imageeditor/imlibinterface.cpp
-@@ -23,10 +23,10 @@
+--- digikam/libs/dimg/loaders/pngloader.h.orig	2006-11-28 18:19:08.000000000 +0100
++++ digikam/libs/dimg/loaders/pngloader.h	2006-11-28 18:19:25.000000000 +0100
+@@ -23,6 +23,7 @@
  
- extern "C" 
+ extern "C"
  {
-+#include <unistd.h>
- #include <tiffio.h>
- #include <sys/types.h>
- #include <sys/stat.h>
--#include <unistd.h>
++#include <stdarg.h>
+ #include <png.h>
  }
-  
- // C++ includes.
+ 
