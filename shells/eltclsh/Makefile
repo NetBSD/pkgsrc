@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/21 15:27:42 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/30 18:02:28 joerg Exp $
 
 DISTNAME=	eltclsh-1.6
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://softs.laas.fr/openrobots/distfiles/
 
@@ -14,7 +15,7 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake groff
+USE_TOOLS+=		gmake
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
