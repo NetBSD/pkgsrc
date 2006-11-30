@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2006/11/06 14:06:17 joerg Exp $
+# $NetBSD: Makefile.common,v 1.35 2006/11/30 15:00:45 joerg Exp $
 
 MPLAYER_DIST_VERSION=	1.0rc1
 
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
 			--with-extralibdir="${LOCALBASE}/lib" \
 			--with-x11libdir="${X11BASE}/lib" \
+			--with-extraincdir=${X11BASE}/include \
 			--disable-mpdvdkit \
 			--disable-smb
 
