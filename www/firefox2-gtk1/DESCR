@@ -10,4 +10,4 @@ JavaScript, C++, etc. Many extensions are available.
 Firefox 2 is the next generation release of the award-winning Firefox web
 browser from Mozilla.
 
-firefox2-gtk1 uses GTK+-1.x widgets.
+firefox-gtk1 uses GTK+-1.x widgets.
