@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/21 15:27:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/30 18:02:28 joerg Exp $
 bin/eltclsh
 bin/elwish
-man/cat1/eltclsh.0
 man/man1/eltclsh.1
 share/eltcl/complete.tcl
 share/eltcl/init.tcl
