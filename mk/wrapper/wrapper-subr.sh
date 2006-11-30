@@ -1,4 +1,4 @@
-# $NetBSD: wrapper-subr.sh,v 1.5 2006/11/30 11:40:24 rillig Exp $
+# $NetBSD: wrapper-subr.sh,v 1.6 2006/11/30 12:11:48 rillig Exp $
 #
 # This file contains shell functions that are useful to the wrapper
 # scripts.
@@ -24,28 +24,25 @@ transform_to_and_split() {
 	split_arg=yes
 }
 
-# usage: transform_to_nocache "newarg"
-transform_to_nocache() {
-	arg="$1"
-	$debug_log $wrapperlog "    ($wrapsubr_name) to: $1"
-	addtocache=no
-}
-
 # usage: transform_discard
 transform_discard() {
-	transform_to ""
+	$debug_log $wrapperlog "    ($wrapsubr_name) discarded: $arg"
+	arg=""
+	addtocache=yes
+	split_arg=yes
 }
 
 # usage: transform_discard_with_warning [warning]
 transform_discard_with_warning() {
 	_warning=${1-"discarding option $arg"}
 	msg_log "$wrapperlog" "WARNING: [$wrapsubr_name] $_warning"
-	transform_to ""
+	transform_discard
 	addtocache=no
 }
 
 # usage: transform_pass
 transform_pass() {
+	$debug_log $wrapperlog "    ($wrapsubr_name) to: $arg [unchanged]"
 	addtocache=yes
 }
 
