@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.4 2006/11/30 21:56:49 joerg Exp $
+
+--- digikam/libs/dmetadata/dmetadata.cpp.orig	2006-11-30 18:20:17.000000000 +0000
++++ digikam/libs/dmetadata/dmetadata.cpp
+@@ -2039,6 +2039,16 @@ bool DMetadata::removeGPSInfo()
+     return false;
+ }
+ 
++#ifdef __DragonFly__
++static double trunc(double val)
++{
++	if (val > 0)
++		return floor(val);
++	else
++		return ceil(val);
++}
++#endif
++
+ void DMetadata::convertToRational(double number, long int* numerator, 
+                                    long int* denominator, int rounding)
+ {
