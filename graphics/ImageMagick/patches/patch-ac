@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.16 2006/11/30 22:55:31 joerg Exp $
+
+--- magick/option.h.orig	2006-11-30 22:13:12.000000000 +0000
++++ magick/option.h
+@@ -78,7 +78,7 @@ typedef enum
+   MagickModuleOptions,
+   /* MagickResourceOptions, -- duplicate Function context dependant */
+   MagickThresholdOptions,
+-  MagickTypeOptions,
++  MagickTypeOptions
+ } MagickOption;
+ 
+ typedef struct _OptionInfo
