@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/02 17:33:25 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/30 19:02:40 joerg Exp $
 #
 
 DISTNAME=	logjam-4.5.3
@@ -13,7 +13,7 @@ COMMENT=	GTK client for LiveJournal.com
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xmms
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl pkg-config
+USE_TOOLS+=		perl pkg-config intltool
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
