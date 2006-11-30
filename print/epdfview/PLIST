@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/30 07:30:29 reed Exp $
+bin/epdfview
+share/applications/epdfview.desktop
+share/epdfview/pixmaps/icon_epdfview-24.png
+share/epdfview/pixmaps/icon_epdfview-32.png
+share/epdfview/pixmaps/icon_epdfview-48.png
+share/epdfview/pixmaps/stock_find_next_24.png
+share/epdfview/pixmaps/stock_find_previous_24.png
+share/epdfview/pixmaps/stock_rotate-270.png
+share/epdfview/pixmaps/stock_rotate-90.png
+share/epdfview/pixmaps/stock_zoom-page-width.png
+share/epdfview/ui/epdfview-ui-print.xml
+share/epdfview/ui/epdfview-ui.xml
+share/locale/ca/LC_MESSAGES/epdfview.mo
+share/locale/de/LC_MESSAGES/epdfview.mo
+share/locale/es/LC_MESSAGES/epdfview.mo
+share/locale/fr/LC_MESSAGES/epdfview.mo
+share/locale/vi/LC_MESSAGES/epdfview.mo
+@dirrm share/epdfview/ui
+@dirrm share/epdfview/pixmaps
+@dirrm share/epdfview
+@comment @dirrm share/applications
