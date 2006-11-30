@@ -1,13 +1,21 @@
-# $NetBSD: transform-gcc,v 1.4 2006/11/26 14:39:52 rillig Exp $
+# $NetBSD: transform-gcc,v 1.5 2006/11/30 10:01:29 rillig Exp $
 #
-# This file prints warning messages for all obscure gcc options into the
-# wrapper log file.
+# This file handles the transformations needed for gcc that can be done
+# looking at only one argument at a time.
+#
 
 transform_setname "transform-gcc"
 
 case $arg in
 
--KPIC|\
+-[EcgOos]		|\
+-[DILlU]?*		|\
+-O[01])
+	# Standard options.
+	transform_pass ;;
+
+-fPIC			|\
+-KPIC			|\
 -kPIC)
 	# Needed for the Solaris imake.
 	transform_to "-fPIC" ;;
@@ -16,44 +24,33 @@ case $arg in
 	# Needed on Solaris with SunPro.
 	transform_to "-threads" ;;
 
--c|\
--D?*|\
--E|\
--fPIC|\
--g|\
--I?*|\
--L?*|\
--l?*|\
--M[DFPT]|\
--O|\
--O[012345s]*|\
--o|\
--pthread|\
--shared|\
--static|\
--std=c99|\
--std=gnu99|\
--U?*|\
--W|\
--W[cLlS],*|\
--Wall|\
--Wcast-qual|\
--Wextra|\
--Werror|\
--Wformat=[012]|\
--Wmissing-prototypes|\
--Wno-error|\
--Wno-long-long|\
--Wno-traditional|\
--Wno-uninitialized|\
--Wno-unused|\
--Wno-write-strings|\
--Wpointer-arith|\
--Wreturn-type|\
--Wshadow|\
--Wsign-compare|\
--Wstrict-prototypes|\
--Wswitch|\
+-M[DFPT]		|\
+-O[23s]			|\
+-pthread		|\
+-shared			|\
+-static			|\
+-std=c99		|\
+-std=gnu99		|\
+-W			|\
+-W[cLlS],*		|\
+-Wall			|\
+-Wcast-qual		|\
+-Wextra			|\
+-Werror			|\
+-Wformat=[012]		|\
+-Wmissing-prototypes	|\
+-Wno-error		|\
+-Wno-long-long		|\
+-Wno-traditional	|\
+-Wno-uninitialized	|\
+-Wno-unused		|\
+-Wno-write-strings	|\
+-Wpointer-arith		|\
+-Wreturn-type		|\
+-Wshadow		|\
+-Wsign-compare		|\
+-Wstrict-prototypes	|\
+-Wswitch		|\
 -Wwrite-strings)
 	transform_pass ;;
 
