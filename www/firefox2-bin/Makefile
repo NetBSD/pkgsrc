@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/11/25 21:38:51 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/30 11:40:14 ghen Exp $
 
 MOZILLA=		firefox
-MOZ_EXTRA=		2
 MOZ_VER=		2.0
 MOZ_DISTVER=		${MOZ_VER}
 
@@ -13,7 +12,5 @@ DIST_SUBDIR=		${MOZILLA}/releases/${MOZ_DIR}
 MOZ_GTK2=		YES
 
 ONLY_FOR_PLATFORM+=	Linux-*-i386
-
-WRKSRC=			${WRKDIR}/firefox
 
 .include "../../www/seamonkey-bin/Makefile.common"
