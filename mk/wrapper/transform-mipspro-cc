@@ -1,4 +1,4 @@
-# $NetBSD: transform-mipspro-cc,v 1.3 2006/09/17 18:46:00 rillig Exp $
+# $NetBSD: transform-mipspro-cc,v 1.4 2006/11/30 13:00:16 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,45 +34,38 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+transform_setname "transform-mipspro-cc"
+
 case $arg in
-######################################################################
-# MIPSpro can handle -O[123] and -Ofast[=platform], so just pass them
+
+# Standard options.
+-[cEgOos]	|\
+-[DILlU]?*	|\
+-O[01]		) transform_pass ;;
+
+
+# MIPSpro can handle -O[23] and -Ofast[=platform], so just pass them
 # on through.
-######################################################################
--O[123]|-Ofast|-Ofast=*)
-	addtocache=yes
-	;;
-######################################################################
+-O[23]		|\
+-Ofast		|\
+-Ofast=*	) transform_pass ;;
+
 # Ignore all other -O* options.
-######################################################################
--O*)
-	arg=
-	$debug_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
-	addtocache=yes
-	;;
-######################################################################
+-O*		) transform_discard_with_warning ;;
+
 # Directories for the runtime library search path are passed via
 # "-Wl,-rpath,<dir>", not "-Wl,-R<dir>".
-######################################################################
--Wl,-R*)
-	arg="-Wl,-rpath,${arg#-Wl,-R}"
-	$debug_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
-	addtocache=yes
-	;;
-######################################################################
+-Wl,-R*		) transform_to "-Wl,-rpath,${arg#-Wl,-R}" ;;
+
 # The MIPSpro compiler accepts these -W* directives, so just pass them
 # on through.
-######################################################################
--W[ablfpR]*,*)
-	addtocache=yes
-	;;
-######################################################################
+-W[ablfpR]*,*	) transform_pass ;;
+
 # Ignore all of the other -W* directives, which are likely to be
 # GCCisms.
-######################################################################
--W*)
-	arg=
-	$debug_log $wrapperlog "   (transform-mipspro-cc) to: $arg"
-	addtocache=yes
-	;;
+-W*		) transform_discard_with_warning ;;
+
+# Unknown options.
+-*		) transform_pass_with_warning ;;
+
 esac
