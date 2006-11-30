@@ -1,0 +1,17 @@
+This package allows to access CP/M file systems similar to the
+well-known mtools package, which accesses MSDOS file systems. I use it
+for file exchange with a Z80-PC simulator, but it works on floppy
+devices as well. Currently it contains:
+
+* cpmls - list sorted directory with output similar to ls, DIR, P2DOS
+	DIR and CP/M3 DIR[FULL]
+* cpmcp - copy files from and to CP/M file systems
+* cpmrm - erase files from CP/M file systems
+* cpmchmod - change file permissions
+* cpmchattr - change file attributes
+* mkfs.cpm - make a CP/M file system
+* fsck.cpm - check and repair a CP/M file system (only simple errors
+	can be repaired so far). Some images of broken file systems
+	are provided for testing.
+* fsed.cpm - view CP/M file system
+* manual pages for everything including the CP/M file system format

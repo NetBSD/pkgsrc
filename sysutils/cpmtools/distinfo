@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/30 12:04:16 obache Exp $
+
+SHA1 (cpmtools-2.5.tar.gz) = f563ed2fff83f6e9f7b7dfaf9c93c330d089542e
+RMD160 (cpmtools-2.5.tar.gz) = 36548809b9296023cd89e3b54aa26e51f9431763
+Size (cpmtools-2.5.tar.gz) = 131166 bytes
