@@ -1,32 +1,29 @@
-# $NetBSD: transform-ccc-cc,v 1.3 2006/09/17 18:46:00 rillig Exp $
+# $NetBSD: transform-ccc-cc,v 1.4 2006/11/30 11:58:55 rillig Exp $
 #
 
+transform_setname "transform-ccc-cc"
+
 case $arg in
-######################################################################
+
+# Standard options (except -g, which is handled later).
+-[cEOo]		|\
+-[DILlU]?*	|\
+-O[01]		) transform_pass ;;
+
+# XXX: What's the benefit of -g3 over -g?
+-g		) transform_to "-g3" ;;
+
 # Directories for the runtime library search path are passed via
 # "-Wl,-rpath,<dir>", not "-Wl,-R<dir>".
-######################################################################
--Wl,-R*)
-	arg="-Wl,-rpath,${arg#-Wl,-R}"
-	$debug_log $wrapperlog "   (transform-ccc-cc) to: $arg"
-	addtocache=yes
-	;;
--W[LlSc],*)
-	addtocache=yes
-	;;
--W*)
-	arg=
-	$debug_log $wrapperlog "   (transform-ccc-cc) to: $arg"
-	addtocache=yes
-	;;
--mieee)
-	arg="-ieee"
-	$debug_log $wrapperlog "	(transform-ccc-cc) to: $arg"
-	addtocache=yes
-	;;
--g)
-	arg="-g3"
-	$debug_log $wrapperlog "   (transform-ccc-cc) to: $arg"
-	addtocache=yes
-	;;
+-Wl,-R*		) transform_to "-Wl,-rpath,${arg#-Wl,-R}" ;;
+
+-W[LlSc],*	) transform_pass ;;
+
+# Ignore options that are likely to be GCC warnings.
+-W*		) transform_discard_with_warning ;;
+
+-mieee		) transform_to "-ieee" ;;
+
+-*		) transform_pass_with_warning ;;
+
 esac
