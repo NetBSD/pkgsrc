@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/09/16 12:20:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.46 2006/11/30 20:48:15 joerg Exp $
 #
 
 DISTNAME=		mergeant-0.63
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNOME2 GNOME-DB database front-end
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool perl pkg-config
+USE_TOOLS+=		gmake intltool perl pkg-config msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-gtk-doc
