@@ -1,4 +1,4 @@
-# $NetBSD: transform-icc-cc,v 1.6 2006/11/26 13:00:26 rillig Exp $
+# $NetBSD: transform-icc-cc,v 1.7 2006/11/30 12:18:32 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,6 +37,13 @@
 transform_setname "transform-icc-cc"
 
 case $arg in
+
+# Standard options (except -s, which is handled below).
+-[cEgOo]		|\
+-[DILlU]?*		|\
+-O[01]			) transform_pass ;;
+
+# ignore flags that icc doesn't understand.
 -fexceptions		|\
 -ffast-math		|\
 -fomit-frame-pointer	|\
@@ -44,26 +51,22 @@ case $arg in
 -OPT:*			|\
 -pedantic		|\
 -pipe			|\
--s)
-	# ignore flags that icc doesn't understand.
-	transform_discard ;;
+-s			) transform_discard ;;
 
--finline-functions)
-	transform_to "-Ob2" ;;
+-finline-functions	) transform_to "-Ob2" ;;
 
 -funroll-all-loops	|\
--funroll-loops)
-	transform_to "-unroll" ;;
+-funroll-loops		) transform_to "-unroll" ;;
 
 -O[4-9]			|\
--O[12][0-9])
-	transform_to "-O3" ;;
+-O[12][0-9]		) transform_to "-O3" ;;
 
 -Wall			|\
--Wl,*)
-	transform_pass ;;
+-Wl,*			) transform_pass ;;
 
--W*)
-	transform_discard_with_warning ;;
+-W*			) transform_discard_with_warning ;;
+
+# Unknown options.
+-*			) transform_pass_with_warning ;;
 
 esac
