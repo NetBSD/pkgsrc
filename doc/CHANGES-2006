@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1899 2006/11/30 12:07:08 obache Exp $
+>$NetBSD: CHANGES-2006,v 1.1900 2006/11/30 14:08:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/epdfview version 0.1.5 [reed 2006-11-30]
 	Removed www/firefox2-bin-flash [ghen 2006-11-30]
 	Added sysutils/cpmtools version 2.5 [obache 2006-11-30]
+	Updated security/EasyPG to 0.0.8 [gdt 2006-11-30]
