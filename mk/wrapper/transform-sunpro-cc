@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.17 2006/11/29 17:36:15 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.18 2006/11/30 12:49:57 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,125 +35,87 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 transform_setname "transform-sunpro-cc"
+
 case $arg in
 
--E)
-	transform_pass ;;
+# Standard options.
+-[cEgOos]	|\
+-[DILlU]?*	|\
+-O[01]		) transform_pass ;;
 
--MM)
-	# Create dependency lines for Makefiles
-	transform_to "-xM1"
-	;;
+# Create dependency lines for Makefiles
+-MM		) transform_to "-xM1" ;;
 
--O[12345])
-	# SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically
-	# convert those GCC -O<n> values to -xO<n>.
-	transform_to "-xO${arg#-O}"
-	;;
+# SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically
+# convert those GCC -O<n> values to -xO<n>.
+-O[2345]	) transform_to "-xO${arg#-O}" ;;
 
--O?*)
-	# Silently ignore all other -O* options, except for "-O", which
-	# SunPro interprets as asking for the default optimization level.
-	transform_discard
-	;;
+# Ignore all other -O* options.
+-O*		) transform_discard_with_warning ;;
 
--Wl,-R*)
-	# Directories for the runtime library search path are passed via
-	# simply "-R<dir>", not "-Wl,-R<dir>".
-	transform_to "${arg#-Wl,}"
-	;;
--R*)
-	transform_pass
-	;;
+# Directories for the runtime library search path are passed via
+# simply "-R<dir>", not "-Wl,-R<dir>".
+# XXX: Why? For me, -Wl,-R works equally well.
+-Wl,-R*		) transform_to "${arg#-Wl,}" ;;
+-R*		) transform_pass ;;
 
--Wl,-soname=*)
-	# SunPro uses -h to set the shared object name.
-	transform_to "-h${arg#-Wl,-soname=}"
-	;;
+# SunPro uses -h to set the shared object name.
+-Wl,-soname=*	) transform_to "-h${arg#-Wl,-soname=}" ;;
 
--Wl,--export-dynamic|\
--Wl,-E)
-	# Solaris' linker exports all dynamic symbols by default when
-	# building a shared object.
-	transform_discard
-	;;
+# Solaris' linker exports all dynamic symbols by default when
+# building a shared object.
+-Wl,--export-dynamic |\
+-Wl,-E		) transform_discard ;;
 
--Wl,*)
-	# SunPro compiler accepts -Wl,* so just pass it on through.
-	addtocache=yes
-	;;
+# Let the options to the linker pass unmodified.
+-Wl,*		) transform_pass ;;
 
--W*)
-	# SunPro compilers don't understand any other -W* arguments,
-	# so just silently ignore the rest.
-	transform_discard
-	;;
+# Ignore options that are probably meant for GCC.
+-W*		) transform_discard_with_warning ;;
 
--static)
-	# Solaris' linker uses -Bstatic to create static objects.
-	transform_to "-Bstatic"
-	;;
+# Solaris' linker uses -Bstatic to create static objects.
+-static		) transform_to "-Bstatic" ;;
 
---export-dynamic|\
--shared)
-	# Solaris' linker uses -G to create shared objects.
-	transform_to "-G"
-	;;
+# Solaris' linker uses -G to create shared objects.
+--export-dynamic |\
+-shared		) transform_to "-G" ;;
 
--f[Pp][Ii][Cc])
-	# SunPro uses -Kpic to create position independent code.
-	transform_to "-Kpic"
-	;;
+-fPIC		|\
+-fpic		) transform_to "-Kpic" ;;
 
--pthread)
-	# SunPro needs -mt -lpthread for POSIX threads.
-	transform_to "-mt -lpthread"
-	split_arg=yes
-	;;
+# SunPro needs -mt -lpthread for POSIX threads.
+-pthread	) transform_to_and_split "-mt -lpthread" ;;
 
--fast)
-	# -fast implies -xlibmopt, which uses the optimized math
-	# routines in libsunmath. libsunmath is only available as part of
-	# SunPro, so disable the use of the optimized math library
-	# (at least until it can be statically linked).
-	transform_to "-fast -xnolibmopt"
-	split_arg=yes
-	;;
+# -fast implies -xlibmopt, which uses the optimized math
+# routines in libsunmath. libsunmath is only available as part of
+# SunPro, so disable the use of the optimized math library
+# (at least until it can be statically linked).
+-fast		) transform_to_and_split "-fast -xnolibmopt" ;;
 
--fd|\
--features*|\
--flags|\
--flteval*|\
--fnonstd*|\
--fns*|\
--fprecision*|\
--fround*|\
--fsimple*|\
--fsingle|\
--fstore|\
--ftrap*)
-	# Pass through -f flags that SunPro understands.
-	addtocache=yes
-	;;
+# Pass through those -f flags that SunPro understands.
+-fd		|\
+-features*	|\
+-flags		|\
+-flteval*	|\
+-fnonstd*	|\
+-fns*		|\
+-fprecision*	|\
+-fround*	|\
+-fsimple*	|\
+-fsingle	|\
+-fstore		|\
+-ftrap*		) transform_pass ;;
 
--f*)
-	# Ignore all other -f flags.
-	transform_discard
-	;;
+# Ignore all other -f flags.
+-f*		) transform_discard_with_warning ;;
 
--ansi|\
--pedantic|\
--pipe|\
--traditional)
-	# Ignore some flags that are unnecessary for SunPro.
-	transform_discard
-	;;
+# Ignore some flags that are unnecessary for SunPro.
+-ansi		|\
+-pedantic	|\
+-pipe		|\
+-traditional	) transform_discard ;;
 
--[DILlU]*|\
--[cgOo])
-	transform_pass
-	;;
--*)
-	transform_pass_with_warning
-	;;
+# Unknown options.
+-*		) transform_pass_with_warning ;;
+
 esac
