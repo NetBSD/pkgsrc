@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/30 12:04:16 obache Exp $
+bin/cpmchattr
+bin/cpmchmod
+bin/cpmcp
+bin/cpmls
+bin/cpmrm
+bin/fsck.cpm
+bin/fsed.cpm
+bin/mkfs.cpm
+man/man1/cpmchattr.1
+man/man1/cpmchmod.1
+man/man1/cpmcp.1
+man/man1/cpmls.1
+man/man1/cpmrm.1
+man/man1/fsck.cpm.1
+man/man1/fsed.cpm.1
+man/man1/mkfs.cpm.1
+man/man5/cpm.5
+share/cpmtools/diskdefs
+@dirrm share/cpmtools
