@@ -1,4 +1,4 @@
-# $NetBSD: transform-ido-cc,v 1.4 2006/09/17 18:46:00 rillig Exp $
+# $NetBSD: transform-ido-cc,v 1.5 2006/11/30 12:34:30 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,22 +35,22 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+transform_setname "transform-ido-cc"
+
 case $arg in
-######################################################################
-# IDO 5.3 handles these -O statements, so just pass them through
-# preserve -Olimit settings
-######################################################################
--O0|-O|-O1|-O2|-Olimit)
-	addtocache=yes
-	;;
-######################################################################
-# IDO 5.3 seems to have problems with -O3, so downgrade it
-######################################################################
--O3)
-	arg=-O2
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
+
+# Standard options.
+-[cEgOos]	|\
+-[DILlU]?*	|\
+-O[01]		) transform_pass ;;
+
+# IDO 5.3 knows some more optimization options.
+-O2		|\
+-Olimit		) transform_pass ;;
+
+# IDO 5.3 seems to have problems with -O3, so downgrade it.
+-O3		) transform_to "-O2" ;;
+
 ######################################################################
 # Directories for the runtime library search path are passed via
 # "-Wl,-rpath,<dir>", not "-Wl,-R<dir>".
@@ -58,47 +58,28 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-Wl:-R|-Wl,-rpath,|"`
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
+	transform_to "$arg" ;;
 -Wl,-rpath,*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-Wl:-rpath:|-Wl,-rpath,|"`
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
+	transform_to "$arg" ;;
 -rpath*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-rpath.|-Wl,-rpath,|"`
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
+	transform_to "$arg" ;;
 -R*)
 	arg=`$echo "X$arg" | $Xsed -e "s|,|:|g" -e "s|^-R|-Wl,-rpath,|"`
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
-######################################################################
+	transform_to "$arg" ;;
+
 # different syntax
-######################################################################
--fsigned-char|-fno-unsigned-char)
-	arg=-signed
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-;;
-######################################################################
+-fsigned-char	|\
+-fno-unsigned-char) transform_to "-signed" ;;
+
 # use -g3 in order to prevent disabling optimization
-######################################################################
--g)
-	arg=-g3
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-;;
-######################################################################
+-g		) transform_to "-g3" ;;
+
 # The IDO 5.3 compiler accepts these -W* directives, so just pass them
 # on through.
-######################################################################
--W[pKMfjusmocabyz]*,*)
-	addtocache=yes
-	;;
+-W[pKMfjusmocabyz]*,*) transform_pass ;;
+
 ######################################################################
 # Ignore all of the other -W*, -O*, -f*, -m* directives, which are
 # likely to be GCCisms.
@@ -109,34 +90,24 @@ case $arg in
 # ignore options that should prevent the use of shared libraries.
 # ignore -n32, which is a MIPSpro-specific option.
 ######################################################################
--[WOfm]*|-pipe|-MM|-nostd*|--disable-shared|-non_shared|-n32)
-	arg=
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
-######################################################################
+-[WOfm]*	|\
+-pipe		|\
+-MM		|\
+-nostd*		|\
+--disable-shared|\
+-non_shared	|\
+-n32		) transform_discard_with_warning ;;
+
 # different syntax for profiling
-######################################################################
--pg)
-	arg=-p
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
-######################################################################
+-pg		) transform_to "-p" ;;
+
 # different syntax
-######################################################################
--static)
-	arg="-B static"
-	split_arg=yes
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
-######################################################################
+-static		) transform_to_and_split "-B static" ;;
+
 # different syntax
-######################################################################
--notall)
-	arg=-none
-	$debug_log $wrapperlog "   (transform-ido-cc) to: $arg"
-	addtocache=yes
-	;;
+-notall		) transform_to "-none" ;;
+
+# Unknown options.
+-*		) transform_pass_with_warning ;;
+
 esac
