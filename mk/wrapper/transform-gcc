@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.5 2006/11/30 10:01:29 rillig Exp $
+# $NetBSD: transform-gcc,v 1.6 2006/11/30 11:34:23 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -8,22 +8,13 @@ transform_setname "transform-gcc"
 
 case $arg in
 
+# Standard options.
 -[EcgOos]		|\
 -[DILlU]?*		|\
--O[01])
-	# Standard options.
-	transform_pass ;;
+-O[01]			) transform_pass ;;
 
+# GCC extensions.
 -fPIC			|\
--KPIC			|\
--kPIC)
-	# Needed for the Solaris imake.
-	transform_to "-fPIC" ;;
-
--mt)
-	# Needed on Solaris with SunPro.
-	transform_to "-threads" ;;
-
 -M[DFPT]		|\
 -O[23s]			|\
 -pthread		|\
@@ -51,9 +42,14 @@ case $arg in
 -Wsign-compare		|\
 -Wstrict-prototypes	|\
 -Wswitch		|\
--Wwrite-strings)
-	transform_pass ;;
+-Wwrite-strings		) transform_pass ;;
 
--*)
-	transform_pass_with_warning ;;
+# Other compiler's options that have corresponding GCC options.
+-KPIC			|\
+-kPIC			) transform_to "-fPIC" ;;
+-mt			) transform_to "-threads" ;;
+
+# Unknown options.
+-*			) transform_pass_with_warning ;;
+
 esac
