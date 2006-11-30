@@ -1,4 +1,4 @@
->$NetBSD: CHANGES-2006,v 1.1897 2006/11/30 07:33:23 reed Exp $
+>$NetBSD: CHANGES-2006,v 1.1898 2006/11/30 11:43:22 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5468,3 +5468,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.14.8 [drochner 2006-11-29]
 	Updated textproc/p5-XML-LibXSLT to 1.62 [seb 2006-11-30]
 	Added print/epdfview version 0.1.5 [reed 2006-11-30]
+	Removed www/firefox2-bin-flash [ghen 2006-11-30]
