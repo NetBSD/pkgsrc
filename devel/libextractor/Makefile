@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/10/22 21:26:19 adam Exp $
+# $NetBSD: Makefile,v 1.24 2006/11/30 18:58:49 joerg Exp $
 
 DISTNAME=	libextractor-0.5.15
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Metadata extractor for various file data types
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
