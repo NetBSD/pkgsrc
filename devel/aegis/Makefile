@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/11/27 17:17:56 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/01 13:54:49 joerg Exp $
 #
 
 DISTNAME=	aegis-4.22
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://aegis.sourceforge.net/
 
@@ -16,7 +16,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-nlsdir=${_PKGLOCALEDIR:Q}
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		groff gsoelim msgfmt perl:run yacc
+USE_TOOLS+=		groff gsoelim msgfmt perl:run yacc patch
+
+CONFIGURE_ENV+=		ac_cv_path_PATCH=${TOOLS_PATCH:Q}
 
 EGDIR=			${PREFIX}/share/examples/aegis
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
