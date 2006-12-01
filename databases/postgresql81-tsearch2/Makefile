@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/01 20:13:49 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/01 20:15:12 joerg Exp $
 
 PKGNAME=	postgresql81-tsearch2-${BASE_VERS}
-COMMENT=	PL/Python procedural language for the PostgreSQL backend
+COMMENT=	Tsearch2 contrib module for fulltext indexing in PostgreSQL
 
 DEPENDS+=	postgresql81-server>=${BASE_VERS}:../../databases/postgresql81-server
 
