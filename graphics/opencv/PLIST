@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/09 05:13:41 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/01 14:03:02 joerg Exp $
+bin/opencv-createsamples
+bin/opencv-haartraining
+bin/opencv-performance
 include/opencv/cv.h
 include/opencv/cv.hpp
 include/opencv/cvaux.h
