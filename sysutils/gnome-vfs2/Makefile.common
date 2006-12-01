@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2006/11/24 17:30:22 drochner Exp $
+# $NetBSD: Makefile.common,v 1.40 2006/12/01 21:16:02 rillig Exp $
 #
 
 GNOME_VFS2_VERSION=	2.16.3
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+MAKE_FLAGS+=		localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	modulesconfdir=${PREFIX}/share/examples/gnome-vfs-2.0/modules
