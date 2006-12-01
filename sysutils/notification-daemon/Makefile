@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/13 19:40:04 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/01 14:00:16 joerg Exp $
 #
 
 DISTNAME=	notification-daemon-0.3.6
@@ -11,7 +11,7 @@ COMMENT=	Shows notification messages on the desktop
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
 GCONF2_SCHEMAS=	notification-daemon.schemas
 
