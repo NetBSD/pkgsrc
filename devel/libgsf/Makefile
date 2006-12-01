@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2006/09/16 12:20:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2006/12/01 13:00:48 salo Exp $
 #
 
-DISTNAME=	libgsf-1.14.1
-PKGREVISION=	2
+DISTNAME=	libgsf-1.14.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
 PKGCONFIG_OVERRIDE+=	libgsf-gnome-1.pc.in
 
-CONFIGURE_ARGS+=	--disable-gtk-doc
+CONFIGURE_ARGS+=	--without-python
 
 GCONF2_SCHEMAS=		gsf-office-thumbnailer.schemas
 
