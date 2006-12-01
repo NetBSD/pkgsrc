@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.15 2006/08/11 09:38:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2006/12/01 13:00:48 salo Exp $
+bin/gsf
 bin/gsf-office-thumbnailer
+bin/gsf-vba-dump
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
