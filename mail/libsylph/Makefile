@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/13 12:38:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/01 20:22:19 joerg Exp $
 #
 
 DISTNAME=	libsylph-0.3.0
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=		lex
+USE_TOOLS+=		lex pkg-config
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
