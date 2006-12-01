@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2006/10/16 13:06:09 reed Exp $
+# $NetBSD: Makefile.common,v 1.18 2006/12/01 14:09:01 joerg Exp $
 
 DISTNAME=	sylpheed-claws-${SYLPHEED_VERSION}
 CATEGORIES=	mail news x11
@@ -10,7 +10,7 @@ HOMEPAGE=	http://claws.sylpheed.org/
 DISTINFO_FILE=	${.CURDIR}/../../mail/sylpheed-claws/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/sylpheed-claws/patches
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
