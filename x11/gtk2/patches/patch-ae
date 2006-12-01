@@ -1,0 +1,114 @@
+$NetBSD: patch-ae,v 1.12 2006/12/01 08:15:38 minskim Exp $
+
+http://cvs.gnome.org/viewcvs/gtk%2B/gtk/Makefile.am?r1=1.315&r2=1.316
+
+--- gtk/Makefile.in.orig	2006-10-03 09:57:51.000000000 -0700
++++ gtk/Makefile.in
+@@ -853,7 +853,7 @@ gtk_base_c_sources = \
+ 	$(gtk_clipboard_dnd_c_sources)
+ 
+ gtk_c_sources = $(gtk_base_c_sources) $(am__append_5) $(am__append_7) $(am__append_9) $(am__append_11) $(am__append_12)
+-gtk_all_c_sources = $(gtk_base_c_sources) $(gtk_os_unix_c_sources) $(gtk_os_win32_c_sources) $(gtk_use_x11_c_sources) $(gtk_use_win32_c_sources) $(gtk_use_stuc_c_sources)
++gtk_all_c_sources = $(gtk_base_c_sources) $(gtk_os_unix_c_sources) $(gtk_os_win32_c_sources) $(gtk_use_x11_c_sources) $(gtk_use_win32_c_sources) $(gtk_use_stub_c_sources)
+ 
+ gtk_os_unix_c_sources = \
+ 	gtkfilesystemunix.c		\
+@@ -886,7 +886,7 @@ gtk_use_win32_c_sources = \
+ 	gtkwin32embed.c   \
+ 	gtkwin32embedwidget.c
+ 
+-gtk_use_stuc_c_sources = \
++gtk_use_stub_c_sources = \
+ 	gtkplug-stub.c   \
+ 	gtksocket-stub.c
+ 
+@@ -1343,7 +1343,8 @@ am__libgtk_directfb_2_0_la_SOURCES_DIST 
+ 	gtkprintunixdialog.c gtkprintbackend.c gtkfilesystemwin32.c \
+ 	gtkprint-win32.c gtkprintoperation-win32.c gtkplug-x11.c \
+ 	gtksocket-x11.c gtkxembed.c gtktrayicon-x11.c gtkplug-win32.c \
+-	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c
++	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c \
++	gtkplug-stub.c gtksocket-stub.c
+ @USE_QUARTZ_TRUE@am__objects_1 = gtkclipboard-quartz.lo gtkdnd-quartz.lo \
+ @USE_QUARTZ_TRUE@	gtkquartz.lo
+ @USE_QUARTZ_FALSE@am__objects_1 = gtkclipboard.lo gtkdnd.lo
+@@ -1428,6 +1429,7 @@ am__objects_7 = gtkplug-x11.lo gtksocket
+ am__objects_9 = gtkplug-win32.lo gtksocket-win32.lo gtkwin32embed.lo \
+ 	gtkwin32embedwidget.lo
+ @USE_WIN32_TRUE@@USE_X11_FALSE@am__objects_10 = $(am__objects_9)
++am__objects_11 = gtkplug-stub.lo gtksocket-stub.lo
+ @USE_WIN32_FALSE@@USE_X11_FALSE@am__objects_12 = $(am__objects_11)
+ am__objects_13 = $(am__objects_2) $(am__objects_4) $(am__objects_6) \
+ 	$(am__objects_8) $(am__objects_10) $(am__objects_12)
+@@ -1509,7 +1511,8 @@ am__libgtk_linux_fb_2_0_la_SOURCES_DIST 
+ 	gtkprintunixdialog.c gtkprintbackend.c gtkfilesystemwin32.c \
+ 	gtkprint-win32.c gtkprintoperation-win32.c gtkplug-x11.c \
+ 	gtksocket-x11.c gtkxembed.c gtktrayicon-x11.c gtkplug-win32.c \
+-	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c
++	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c \
++	gtkplug-stub.c gtksocket-stub.c
+ am_libgtk_linux_fb_2_0_la_OBJECTS = $(am__objects_13)
+ libgtk_linux_fb_2_0_la_OBJECTS = $(am_libgtk_linux_fb_2_0_la_OBJECTS)
+ @OS_UNIX_TRUE@libgtk_quartz_2_0_la_DEPENDENCIES = \
+@@ -1588,7 +1591,8 @@ am__libgtk_quartz_2_0_la_SOURCES_DIST = 
+ 	gtkprintunixdialog.c gtkprintbackend.c gtkfilesystemwin32.c \
+ 	gtkprint-win32.c gtkprintoperation-win32.c gtkplug-x11.c \
+ 	gtksocket-x11.c gtkxembed.c gtktrayicon-x11.c gtkplug-win32.c \
+-	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c
++	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c \
++	gtkplug-stub.c gtksocket-stub.c
+ am_libgtk_quartz_2_0_la_OBJECTS = $(am__objects_13)
+ libgtk_quartz_2_0_la_OBJECTS = $(am_libgtk_quartz_2_0_la_OBJECTS)
+ am__libgtk_win32_2_0_la_SOURCES_DIST = fnmatch.c gtkaboutdialog.c \
+@@ -1660,7 +1664,8 @@ am__libgtk_win32_2_0_la_SOURCES_DIST = f
+ 	gtkprintunixdialog.c gtkprintbackend.c gtkfilesystemwin32.c \
+ 	gtkprint-win32.c gtkprintoperation-win32.c gtkplug-x11.c \
+ 	gtksocket-x11.c gtkxembed.c gtktrayicon-x11.c gtkplug-win32.c \
+-	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c
++	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c \
++	gtkplug-stub.c gtksocket-stub.c
+ am_libgtk_win32_2_0_la_OBJECTS = $(am__objects_13)
+ libgtk_win32_2_0_la_OBJECTS = $(am_libgtk_win32_2_0_la_OBJECTS)
+ @OS_UNIX_TRUE@libgtk_x11_2_0_la_DEPENDENCIES = \
+@@ -1739,7 +1744,8 @@ am__libgtk_x11_2_0_la_SOURCES_DIST = fnm
+ 	gtkprintunixdialog.c gtkprintbackend.c gtkfilesystemwin32.c \
+ 	gtkprint-win32.c gtkprintoperation-win32.c gtkplug-x11.c \
+ 	gtksocket-x11.c gtkxembed.c gtktrayicon-x11.c gtkplug-win32.c \
+-	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c
++	gtksocket-win32.c gtkwin32embed.c gtkwin32embedwidget.c \
++	gtkplug-stub.c gtksocket-stub.c
+ am_libgtk_x11_2_0_la_OBJECTS = $(am__objects_13)
+ libgtk_x11_2_0_la_OBJECTS = $(am_libgtk_x11_2_0_la_OBJECTS)
+ bin_PROGRAMS = gtk-query-immodules-2.0$(EXEEXT) \
+@@ -1872,6 +1878,7 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/gtkpapersize.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtkpathbar.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtkpixmap.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/gtkplug-stub.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtkplug-win32.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtkplug-x11.Plo ./$(DEPDIR)/gtkplug.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtkpreview.Plo \
+@@ -1918,6 +1925,7 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/gtksettings.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtksignal.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtksizegroup.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/gtksocket-stub.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtksocket-win32.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtksocket-x11.Plo \
+ @AMDEP_TRUE@	./$(DEPDIR)/gtksocket.Plo \
+@@ -2232,6 +2240,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkpapersize.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkpathbar.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkpixmap.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkplug-stub.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkplug-win32.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkplug-x11.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkplug.Plo@am__quote@
+@@ -2281,6 +2290,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksettings.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksignal.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksizegroup.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksocket-stub.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksocket-win32.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksocket-x11.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtksocket.Plo@am__quote@
