@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.14 2006/12/01 08:15:38 minskim Exp $
+
+http://cvs.gnome.org/viewcvs/gtk%2B/gtk/Makefile.am?r1=1.315&r2=1.316
+
+--- gtk/Makefile.am.orig	2006-10-02 10:27:53.000000000 -0700
++++ gtk/Makefile.am
+@@ -635,10 +635,10 @@ gtk_use_win32_c_sources = \
+ 	gtksocket-win32.c \
+ 	gtkwin32embed.c   \
+ 	gtkwin32embedwidget.c
+-gtk_use_stuc_c_sources = \
++gtk_use_stub_c_sources = \
+ 	gtkplug-stub.c   \
+ 	gtksocket-stub.c
+-gtk_all_c_sources += $(gtk_use_x11_c_sources) $(gtk_use_win32_c_sources) $(gtk_use_stuc_c_sources)
++gtk_all_c_sources += $(gtk_use_x11_c_sources) $(gtk_use_win32_c_sources) $(gtk_use_stub_c_sources)
+ if USE_X11
+ gtk_private_h_sources += gtkxembed.h gtktrayicon.h xembed.h
+ gtk_c_sources += $(gtk_use_x11_c_sources)
