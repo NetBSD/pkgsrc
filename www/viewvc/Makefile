@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/21 09:05:44 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/01 20:27:25 rillig Exp $
 #
 
 DISTNAME=	viewvc-1.0.3
@@ -36,6 +36,8 @@ SUBST_SED.conf=		-e "s|@VIEWVCDIR@|${VIEWVCDIR}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.conf+=	-e "s|@PHP_OPT@|${PHP_OPT}|g"
 SUBST_SED.conf+=	-e "s|@CVSGRAPH_OPT@|${CVSGRAPH_OPT}|g"
+
+CHECK_PORTABILITY_SKIP=	tools/make-release
 
 do-install:
 	(cd ${WRKSRC} && \
