@@ -1,0 +1,6 @@
+The Tsearch2 contrib module contains an implementation of a new data
+type tsvector - a searchable data type with indexed access. In a
+nutshell, tsvector is a set of unique words along with their
+positional information in the document, organized in a special
+structure optimized for fast access and lookup. This data type can
+be used as backend for efficient full text search engines.
