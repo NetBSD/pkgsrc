@@ -54,7 +54,7 @@ MKSHLIB = $(LD) -shared $(XMKSHLIBOPTS)
 
 CPU_ARCH = $(shell uname -m)
 # don't filter in x86-64 architecture
-ifneq (x86_64,$(CPU_ARCH))
+ifneq (amd64,$(CPU_ARCH))
 ifeq (86,$(findstring 86,$(CPU_ARCH)))
 CPU_ARCH = x86
 OS_CFLAGS+= -DX86_LINUX
@@ -90,7 +90,7 @@ endif
 # Use the editline library to provide line-editing support.
 JS_EDITLINE = 1
 
-ifeq ($(CPU_ARCH),x86_64)
+ifeq ($(CPU_ARCH),amd64)
 # Use VA_COPY() standard macro on x86-64
 # FIXME: better use it everywhere
 OS_CFLAGS += -DHAVE_VA_COPY -DVA_COPY=va_copy
