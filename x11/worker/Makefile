@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/25 20:47:57 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/01 20:51:25 joerg Exp $
 #
 
 DISTNAME=	worker-2.14.1
@@ -22,4 +22,5 @@ REPLACE_BASH+=	scripts/*.sh scripts/*r
 USE_TOOLS+=	bash:run
 
 .include "../../mk/x11.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
