@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1906 2006/12/01 15:46:40 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1907 2006/12/01 20:16:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5477,3 +5477,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/gnuradio-core to 3.0.2nb1 [wulf 2006-11-13]
 	Updated net/rdesktop to 1.5.0 [hubeertf 2006-12-01]
 	Updated graphics/sane-frontends 1.0.14 [adam 2006-12-01]
+	Added databases/postgresql81-tsearch2 version 8.1.5 [joerg 2006-12-01]
