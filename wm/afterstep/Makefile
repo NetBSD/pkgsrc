@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2006/10/01 15:15:12 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2006/12/01 20:17:51 joerg Exp $
 
 DISTNAME=	AfterStep-2.1.2
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
-REPLACE_PERL+=		tools/ascommand.pl
+REPLACE_PERL+=		tools/ascommand.pl tools/installastheme.pl tools/makeastheme.pl
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
