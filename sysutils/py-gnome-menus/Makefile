@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/24 12:55:31 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/01 11:06:04 joerg Exp $
 #
 
 DISTNAME=	gnome-menus-2.16.1
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--enable-python
 BUILD_DIRS=		python
 INSTALL_DIRS=		python
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
 PY_PATCHPLIST=		yes
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
