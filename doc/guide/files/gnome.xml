@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.4 2006/11/26 11:46:41 jmmv Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.5 2006/12/01 14:19:06 reed Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -126,8 +126,8 @@ USE_TOOLS+=gmake</programlisting>
   </listitem>
 
   <listitem>
-    <para>If the package uses intltool, be sure to include the <filename
-    role="cvsweb">pkgsrc/textproc/intltool/buildlink3.mk</filename> file
+    <para>If the package uses intltool, be sure to add 
+    <literal>intltool</literal> to the <varname>USE_TOOLS</varname>
     to handle dependencies and to force the package to use the latest
     available version.</para>
   </listitem>

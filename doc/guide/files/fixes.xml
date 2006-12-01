@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.75 2006/11/11 05:38:27 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.76 2006/12/01 14:19:06 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1674,8 +1674,8 @@ of functions.</para>
   <sect2 id="intltool">
     <title>Packages using intltool</title>
 
-    <para>If a package uses intltool during its build, include the
-    <filename>../../textproc/intltool/buildlink3.mk</filename> file,
+    <para>If a package uses intltool during its build, add
+    <literal>intltool</literal> to the <varname>USE_TOOLS</varname>,
     which forces it to use the intltool package provided by pkgsrc,
     instead of the one bundled with the distribution file.</para>
 
