@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/12/01 11:47:12 joerg Exp $
+
+--- source/libffi/configure.orig	2006-12-01 11:34:01.000000000 +0000
++++ source/libffi/configure
+@@ -3483,6 +3483,7 @@ i*86-*-solaris2.1[0-9]*) TARGET=X86_64; 
+ i*86-*-solaris*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-beos*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-freebsd* | i*86-*-kfreebsd*-gnu) TARGET=X86; TARGETDIR=x86;;
++i*86-*-dragonfly*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-netbsdelf* | i*86-*-knetbsd*-gnu) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-openbsd*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-rtems*) TARGET=X86; TARGETDIR=x86;;
