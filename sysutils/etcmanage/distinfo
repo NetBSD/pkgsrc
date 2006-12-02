@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/08 20:51:47 gdt Exp $
+$NetBSD: distinfo,v 1.2 2006/12/02 19:04:26 gdt Exp $
 
-SHA1 (etcmanage-0.2.tar.gz) = fd7d636d9bc777b9105d9bfa290d50c2cb8c698a
-RMD160 (etcmanage-0.2.tar.gz) = 2e8dbd036a5659bb753c0329eb071ed081547d20
-Size (etcmanage-0.2.tar.gz) = 48310 bytes
+SHA1 (etcmanage-0.3.tar.gz) = b37ae76bf54cff16ee40f813a01d2696e2614099
+RMD160 (etcmanage-0.3.tar.gz) = b6dd7ea4534e122b2157aebe04ff7d8f5980bb96
+Size (etcmanage-0.3.tar.gz) = 57763 bytes
