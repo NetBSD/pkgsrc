@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.29 2006/10/13 16:39:53 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.30 2006/12/02 01:04:47 xtraeme Exp $
 #
 # Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
@@ -557,7 +557,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.29 2006/10/13 16:39:53 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.30 2006/12/02 01:04:47 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -887,13 +887,15 @@ _EOF_
         # Detect if we are running a MULTIBOOT kernel.
         #
         if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst -a -f $WORKDIR/$BOOTKERN ]; then
-            grep -q MULTIBOOT $WORKDIR/$BOOTKERN
+            gunzip $ISODIR/$GRUB_BOOTDIR/$BOOTKERN
+            config -x $ISODIR/$GRUB_BOOTDIR/$BOOTKERN | grep -q MULTIBOOT
             if [ "$?" -eq 0 ]; then
                 showmsg "Applying fix for MULTIBOOT kernel..."
                 sed -e "s|\--type=netbsd||g" $ISODIR/boot/grub/menu.lst > \
                     $ISODIR/boot/grub/menu.lst.in
                 mv $ISODIR/boot/grub/menu.lst.in $ISODIR/boot/grub/menu.lst
             fi
+            gzip -9 $ISODIR/$GRUB_BOOTDIR/$BOOTKERN
         fi
 
         _do_real_iso_image()
