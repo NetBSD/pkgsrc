@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1908 2006/12/02 01:05:50 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1909 2006/12/02 08:40:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5479,3 +5479,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/sane-frontends 1.0.14 [adam 2006-12-01]
 	Added databases/postgresql81-tsearch2 version 8.1.5 [joerg 2006-12-01]
 	Updated sysutils/mklivecd to 0.14.4 [xtraeme 2006-12-01]
+	Updated graphics/gimp24 to 2.3.13nb1 [minskim 2006-12-02]
