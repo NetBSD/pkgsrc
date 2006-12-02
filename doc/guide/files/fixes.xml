@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.76 2006/12/01 14:19:06 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.77 2006/12/02 13:02:14 kano Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -201,7 +201,7 @@
 
 	<para>Binaries may not be placed on an FTP server.  Set
 	this variable to <varname>${RESTRICTED}</varname>
-	whenever a binary package may not not be made available
+	whenever a binary package may not be made available
 	on the Internet.</para>
       </listitem>
 
