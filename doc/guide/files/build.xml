@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.38 2006/11/23 11:47:54 yyamano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.39 2006/12/02 06:03:31 kano Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -313,10 +313,10 @@
       <para>Some explanations for the less self-explaining ones:
       <varname>MASTER_SITE_BACKUP</varname> contains backup sites
       for packages that are maintained in <ulink
-      url="ftp://ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}"
+      url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}"
       />.  <varname>MASTER_SITE_LOCAL</varname> contains local
       package source distributions that are maintained in <ulink
-      url="ftp://ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/LOCAL_PORTS/"
+      url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/"
       />.</para>
 
       <para>If you choose one of these predefined sites, you may
@@ -1005,7 +1005,7 @@
 	  <para>Update the installation of the current package.  This
 	  differs from update in that it does not replace dependent
 	  packages.  You will need to install <filename
-	  role="pkg">pkgsrc/pkgtools/pkg_tarup</filename> for this
+	  role="pkg">pkgtools/pkg_tarup</filename> for this
 	  target to work.</para>
 
 	  <para><emphasis>Be careful when using this
