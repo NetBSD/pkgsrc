@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.4 2006/07/24 12:13:35 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.5 2006/12/02 13:02:14 kano Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -273,7 +273,7 @@
 
 	<para>Then, the various <filename>*-vars.mk</filename> files are
 	loaded, which fill default values for those variables that have
-	not been defined by the the package. These variables may later
+	not been defined by the package. These variables may later
 	be used even in unrelated files.</para>
 
 	<para>Then, the file <filename>bsd.pkg.error.mk</filename>
