@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.56 2006/11/16 02:42:13 markd Exp $
+# $NetBSD: compiler.mk,v 1.57 2006/12/02 22:32:59 jschauma Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -49,8 +49,8 @@
 # USE_LANGUAGES
 #	Lists the languages used in the source code of the package,
 #	and is used to determine the correct compilers to install.
-#	Valid values are: c, c++, fortran, java, objc.  The default
-#	is "c".
+#	Valid values are: c, c99, c++, fortran, java, objc.  The
+#       default is "c".
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
