@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/11/30 23:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.32 2006/12/02 08:39:18 minskim Exp $
 
 DISTNAME=	gimp-2.3.13
+PKGREVISION=1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.3/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.3/ \
@@ -43,7 +44,7 @@ CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 UNLIMIT_RESOURCES+=	datasize
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
-.for f in controllerrc gimprc gtkrc ps-menurc sessionrc templaterc unitrc
+.for f in controllerrc gimprc gtkrc menurc ps-menurc sessionrc templaterc unitrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
