@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.22 2006/09/18 13:25:37 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.23 2006/12/02 06:12:40 kano Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -67,7 +67,10 @@ works.</para>
 	    <filename>ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/</filename>.</para>
 	</listitem>
 	<listitem><para><varname>BINPKG_SITES</varname>:
-	    List of sites carrying binary pkgs.</para>
+	    List of sites carrying binary pkgs. <replaceable>rel</replaceable> and
+	    <replaceable>arch</replaceable> are replaced with OS
+	    release (<quote>2.0</quote>, etc.) and architecture
+	    (<quote>mipsel</quote>, etc.).</para>
 	</listitem>
 	<listitem><para><varname>ACCEPTABLE_LICENSES</varname>:
 	    List of acceptable licenses. Whenever you try to build a package
@@ -101,10 +104,7 @@ works.</para>
 	<listitem><para><varname>LOCALPATCHES</varname>:
 	    Directory for local patches that aren't part of pkgsrc.
 	    See <xref linkend="components.patches" /> for more
-	    information. <replaceable>rel</replaceable> and
-	    <replaceable>arch</replaceable> are replaced with OS
-	    release (<quote>2.0</quote>, etc.) and architecture
-	    (<quote>mipsel</quote>, etc.).</para>
+	    information.</para>
 	</listitem>
 	<listitem><para><varname>PKGMAKECONF</varname>: Location of
 	    the <filename>mk.conf</filename> file used by a package's
