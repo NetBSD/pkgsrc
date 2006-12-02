@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/11/08 19:41:10 tv Exp $
+# $NetBSD: Makefile,v 1.37 2006/12/02 22:32:59 jschauma Exp $
 #
 
 DISTNAME=		tor-0.1.1.25
@@ -11,6 +11,7 @@ COMMENT=		Anonymizing overlay network for TCP
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_LANGUAGES+=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
@@ -36,10 +37,6 @@ FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
 
 CHECK_PORTABILITY_SKIP+=contrib/*
-
-.if !empty(PKGSRC_COMPILER:Mmipspro)
-CFLAGS+=		-c99
-.endif
 
 post-patch:
 	${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'		\

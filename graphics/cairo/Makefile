@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/11/09 20:57:40 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2006/12/02 22:32:59 jschauma Exp $
 
 DISTNAME=	cairo-1.2.6
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ COMMENT=	Vector graphics library with cross-device output support
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES+=		c99
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
@@ -31,12 +32,6 @@ PLIST_SUBST+=		CARBON="@comment "
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mmipspro*)
-CFLAGS+=			-c99
-.endif
 
 # For snprintf()
 CPPFLAGS.SunOS+=		-D__EXTENSIONS__

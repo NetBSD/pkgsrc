@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2006/06/15 20:40:16 jlam Exp $
+# $NetBSD: Makefile,v 1.120 2006/12/02 22:33:00 jschauma Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		9
@@ -20,6 +20,7 @@ USE_DIRS+=		xdg-1.1
 USE_X11BASE=		yes
 USE_TOOLS+=		gmake msgfmt perl
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES+=		c99
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	gdk.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+.pc.in
@@ -43,12 +44,6 @@ GTK_VERSION=		${DISTNAME:S/gtk+-//}
 GTK_MAJOR_VERSION=	${GTK_VERSION:C/\..*//}
 GTK_MINOR_VERSION=	${GTK_VERSION:C/[^.]*\.//:C/\..*//}
 GTK_MICRO_VERSION=	${GTK_VERSION:C/.*\.//}
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mmipspro*)
-CFLAGS+=                -c99
-.endif
 
 # We patch the version info in the configure scripts for reasons related to
 # shared library numbering, but we don't want it to leak into the various

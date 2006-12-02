@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/11/05 17:34:44 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/12/02 22:33:00 jschauma Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 PKGNAME=	ghostscript-gnu-${GS_VERS}
@@ -22,6 +22,7 @@ CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=	ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
+USE_LANGUAGES+=		c99
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-ijs
@@ -75,12 +76,6 @@ HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
 LIBDIR=			${GSDATADIR}/lib
 
 PLIST_SUBST+=		GS_VERS=${GS_VERS:Q}
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mmipspro*)
-CFLAGS+=		-c99
-.endif
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin

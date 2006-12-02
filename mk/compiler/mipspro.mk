@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.35 2006/10/22 00:14:17 rillig Exp $
+# $NetBSD: mipspro.mk,v 1.36 2006/12/02 22:32:59 jschauma Exp $
 #
 # This is the compiler definition for the MIPSpro C compiler.
 #
@@ -70,6 +70,10 @@ _LANGUAGES.mipspro=	# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
 .endfor
+
+.if !empty(USE_LANGUAGES:Mc99)
+_WRAP_EXTRA_ARGS.CC+=	-c99
+.endif
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.mipspro)
