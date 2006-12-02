@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.28 2006/10/15 01:31:23 minskim Exp $
+# $NetBSD: tools.Darwin.mk,v 1.29 2006/12/02 05:30:35 minskim Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -88,6 +88,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.unzip?=		/usr/bin/unzip
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 .if exists(/usr/bin/wish)
 TOOLS_PLATFORM.wish?=		/usr/bin/wish
