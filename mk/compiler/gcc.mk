@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.85 2006/10/22 00:14:17 rillig Exp $
+# $NetBSD: gcc.mk,v 1.86 2006/12/02 22:32:59 jschauma Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -136,6 +136,10 @@ _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .endfor
+
+.if !empty(USE_LANGUAGES:Mc99)
+_WRAP_EXTRA_ARGS.CC+=	-std=c99
+.endif
 
 # GCC has this annoying behaviour where it advocates in a multi-line
 # banner the use of "#include" over "#import" when including headers.

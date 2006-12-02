@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:09:34 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/02 22:32:59 jschauma Exp $
 #
 
 DISTNAME=	jasper-1.701.0
@@ -14,14 +14,9 @@ COMMENT=	Software-based reference implementation of the JPEG-2000 codec
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
+USE_LANGUAGES+=		c99
 USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--enable-shared --without-x --disable-opengl
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mmipspro*)
-CFLAGS+=		-c99
-.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jasper
