@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.15 2006/09/13 23:34:05 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.16 2006/12/02 06:05:27 kano Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -52,7 +52,7 @@
 <title>General notes when adding, updating, or removing packages</title>
 
 	<para>Please note all package additions, updates, moves, and
-	removals in <filename>pkgsrc/doc/CHANGES</filename>. It's very
+	removals in <filename>pkgsrc/doc/CHANGES-<replaceable>YYYY</replaceable></filename>. It's very
 	important to keep this file up to date and conforming to the
 	existing format, because it will be used by scripts to
 	automatically update pages on <ulink
@@ -64,16 +64,16 @@
 
 	<para>When the <varname>PKGREVISION</varname> of a package is
 	bumped, the change should appear in
-	<filename>pkgsrc/doc/CHANGES</filename> if it is security
+	<filename>pkgsrc/doc/CHANGES-<replaceable>YYYY</replaceable></filename> if it is security
 	related or otherwise relevant. Mass bumps that result from a
 	dependency being updated should not be mentioned. In all other
 	cases it's the developer's decision.</para>
 
 <para>There is a make target that helps in creating proper
-  <filename>CHANGES</filename> entries:  <command>make
+  <filename>CHANGES-<replaceable>YYYY</replaceable></filename> entries:  <command>make
   changes-entry</command>. It uses the optional <varname>CTYPE</varname>
   and <varname>NETBSD_LOGIN_NAME</varname> variables. The general
-  usage is to first make sure that your <filename>CHANGES</filename>
+  usage is to first make sure that your <filename>CHANGES-<replaceable>YYYY</replaceable></filename>
   file is up-to-date (to avoid having to resolve conflicts later-on)
   and then to <command>cd</command> to the package directory.  For
   package updates, <command>make changes-entry</command> is enough.
@@ -82,7 +82,7 @@
   "Moved", or "Removed".  You can set <varname>NETBSD_LOGIN_NAME</varname>
   in <filename>/etc/mk.conf</filename> if your local login name is
   not the same as your NetBSD login name. Don't forget to commit
-  the changes to <filename>pkgsrc/doc/CHANGES</filename>!</para>
+  the changes to <filename>pkgsrc/doc/CHANGES-<replaceable>YYYY</replaceable></filename>!</para>
 </sect1>
 
 <sect1 id="committing-importing">
