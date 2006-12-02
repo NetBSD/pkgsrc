@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5720 2006/12/02 13:52:03 wiz Exp $
+$NetBSD: TODO,v 1.5721 2006/12/02 13:52:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -977,7 +977,6 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1
-	o rdesktop-1.5
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.18
