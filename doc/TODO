@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5719 2006/12/02 13:47:25 wiz Exp $
+$NetBSD: TODO,v 1.5720 2006/12/02 13:52:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,9 +476,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.16.1
-	o gnome-desktop-2.16.2
 	o gnome-games-2.16.1
-	o gnome-icon-theme-2.16.1
 	o gnome-pilot-2.0.14
 	o gnome-spell-1.0.7
 	o gnome-user-docs-2.16.1
@@ -527,7 +525,6 @@ Suggested package updates
 	o hackbot-2.21
 	o haskell-mode-1.45
 	o hercules-3.02
-	o hicolor-icon-theme-0.10
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
@@ -690,7 +687,6 @@ Suggested package updates
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.1
 	o nap-1.5.3
-	o nautilus-2.16.3
 	o nautilus-cd-burner-2.16.0
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -851,7 +847,6 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pango-1.14.8
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o parrot-0.4.7
