@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/12/02 10:15:46 wulf Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SWIG_BUILDLINK3_MK:=	${SWIG_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}swig
 
 .if !empty(SWIG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.swig+=	swig>=1.3.24
-BUILDLINK_ABI_DEPENDS.swig+=	swig>=1.3.29
+BUILDLINK_ABI_DEPENDS.swig+=	swig>=1.3.31
 BUILDLINK_PKGSRCDIR.swig?=	../../devel/swig
 # only contains a static library
 BUILDLINK_DEPMETHOD.swig?=	build
