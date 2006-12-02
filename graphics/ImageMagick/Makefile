@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2006/11/30 22:55:31 joerg Exp $
+# $NetBSD: Makefile,v 1.147 2006/12/02 22:32:59 jschauma Exp $
 
 .include "Makefile.common"
 
@@ -13,7 +13,7 @@ CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -43,12 +43,6 @@ CONFIGURE_ARGS+=	--without-perl
 
 # WMF linkage is currently broke, since libMagick would need symbols from libWand
 CONFIGURE_ARGS+=	--without-wmf
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mmipspro*)
-CFLAGS+=		-c99
-.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
