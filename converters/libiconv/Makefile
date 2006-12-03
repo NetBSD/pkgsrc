@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/12/02 22:33:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.46 2006/12/03 11:20:12 cbiere Exp $
 
 DISTNAME=	libiconv-1.10
 PKGREVISION=	3
@@ -16,7 +16,7 @@ PATCH_DIST_STRIP=	-p1
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES+=		c99
+USE_LANGUAGES+=		c99 c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
