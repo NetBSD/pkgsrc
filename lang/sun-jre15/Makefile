@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.37 2006/10/23 19:38:15 tv Exp $
+# $NetBSD: Makefile,v 1.38 2006/12/03 00:51:21 wiz Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	jre-1_5_0_09-linux-i586
+DISTNAME=	jre-1_5_0_09-linux-${DIST_ARCH}
 PKGNAME=	sun-jre15-5.0.9
 PKGREVISION=	1
 MASTER_SITES=	# empty
 
 SHORT_NAME=	JRE
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./:S/_/./:S/-linux-i586//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./:S/_/./:C/-linux-.*//}
 JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
 REQD_DIRS=	${JAVA_HOME}
@@ -19,7 +19,16 @@ REQD_DIRS+=	${JAVA_HOME}/lib/images
 REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
 REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
-.sinclude "sfiles.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+DIST_ARCH=	i586
+.sinclude "sfiles-i386.mk"
+.elif ${MACHINE_ARCH} == "x86_64"
+DIST_ARCH=	amd64
+.sinclude "sfiles-x86_64.mk"
+.endif
+
 .for FILE in ${SFILES}
 CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
