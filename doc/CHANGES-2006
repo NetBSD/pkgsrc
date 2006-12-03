@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1916 2006/12/03 10:34:08 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1917 2006/12/03 15:23:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5501,3 +5501,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gwenview to 1.4.1 [markd 2006-12-03]
 	Updated graphics/gwenview-i18n to 1.4.1 [markd 2006-12-03]
 	Updated multimedia/avidemux to 2.3.0 [xtraeme 2006-12-03]
+	Updated archivers/gtar-base to 1.15.1nb4 [tron 2006-12-03]
