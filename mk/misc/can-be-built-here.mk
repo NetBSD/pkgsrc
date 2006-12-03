@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.1 2006/11/26 08:37:03 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.2 2006/12/03 21:47:26 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -7,6 +7,16 @@
 # * NOT_FOR_PLATFORM, ONLY_FOR_PLATFORM
 # * NOT_FOR_UNPRIVILEGED, ONLY_FOR_UNPRIVILEGED
 # * PKG_FAIL_REASON, PKG_SKIP_REASON
+#
+# It also depends on the following internal variables:
+#
+# NO_SKIP
+#	When defined, the checks in this file are skipped. It is called
+#	NO_SKIP because the code that skips builting the package should
+#	_not_ be run.
+#
+#	XXX: It's weird to have three negations in such a short variable
+#	name.
 #
 
 _CBBH_CHECKS=		# none, but see below.
@@ -127,7 +137,7 @@ _cbbh:
 	@:; ${_CBBH_MSGS:@m@${ERROR_MSG} ${m} ; @}
 	@${FALSE}
 
-.if ${_CBBH} == "no"
+.if !defined(NO_SKIP) && ${_CBBH} == "no"
 # FIXME: check-vulnerable is only used here because it is depended
 # upon by each of the "main" pkgsrc targets. Probably its name should be
 # generalized, and both check-vulnerable and _cbbh should depend
