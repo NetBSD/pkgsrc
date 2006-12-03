@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/17 09:44:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/12/03 04:17:28 markd Exp $
+share/doc/kde/HTML/de/karbon/common
+share/doc/kde/HTML/de/karbon/index.cache.bz2
+share/doc/kde/HTML/de/karbon/index.docbook
 share/doc/kde/HTML/de/kchart/common
 share/doc/kde/HTML/de/kchart/index.cache.bz2
 share/doc/kde/HTML/de/kchart/index.docbook
@@ -72,7 +75,10 @@ share/doc/kde/HTML/de/kpresenter/menus.docbook
 share/doc/kde/HTML/de/kpresenter/options.docbook
 share/doc/kde/HTML/de/kpresenter/screen.docbook
 share/doc/kde/HTML/de/kpresenter/tutorial.docbook
+share/doc/kde/HTML/de/krita/commands.docbook
 share/doc/kde/HTML/de/krita/credits.docbook
+share/doc/kde/HTML/de/krita/developers.docbook
+share/doc/kde/HTML/de/krita/installation.docbook
 share/doc/kde/HTML/de/kspread/a11y.docbook
 share/doc/kde/HTML/de/kspread/advanced.docbook
 share/doc/kde/HTML/de/kspread/basics.docbook
@@ -285,4 +291,5 @@ share/locale/de/LC_MESSAGES/thesaurus_tool.mo
 @dirrm share/doc/kde/HTML/de/kformula
 @dirrm share/doc/kde/HTML/de/kexi
 @dirrm share/doc/kde/HTML/de/kchart
+@dirrm share/doc/kde/HTML/de/karbon
 @comment in kde: @dirrm share/doc/kde/HTML/de

@@ -1,19 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2006/10/17 09:44:06 markd Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/03 04:17:28 markd Exp $
 
-DISTNAME=	koffice-l10n-da-1.6.0
-CATEGORIES=	misc kde
-MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.0/src/koffice-l10n/}
-EXTRACT_SUFX=	.tar.bz2
+KOFFICE_LANGUAGE=	Danish
+KOFFICE_LANGCODE=	da
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.koffice.org/
-COMMENT=	Danish language pack for KOffice
-
-DEPENDS+=	koffice-[0-9]*:../../misc/koffice
-CONFLICTS+=	koffice-i18n-da-[0-9]*
-
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake msgfmt
-
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../misc/koffice/l10n.mk"
 .include "../../mk/bsd.pkg.mk"
