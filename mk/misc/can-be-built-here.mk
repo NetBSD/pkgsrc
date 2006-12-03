@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.2 2006/12/03 21:47:26 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.3 2006/12/03 21:58:20 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -43,7 +43,9 @@ _CBBH_MSGS.ocomp=	"This package is only available for these compilers: "${ONLY_F
 _CBBH.ocomp=		yes
 .if defined(ONLY_FOR_COMPILER) && !empty(ONLY_FOR_COMPILER)
 _CBBH.ocomp=		yes
-.  for pc in ${PKGSRC_COMPILER}
+# Ignore compilers that only cache or distribute the real work that has
+# to be done (see PR 35173).
+.  for pc in ${PKGSRC_COMPILER:Nccache:Ndistcc}
 .    if empty(ONLY_FOR_COMPILER:M${pc})
 _CBBH.ocomp=		no
 .    endif
