@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2006/12/03 21:48:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.arping
-PKG_SUPPORTED_OPTIONS=	arping1 arping2
+PKG_OPTIONS_REQUIRED_GROUPS=	libnet
+PKG_OPTIONS_GROUP.libnet=	arping1 arping2
 PKG_SUGGESTED_OPTIONS= 	arping1
 
 .include "../../mk/bsd.options.mk"
