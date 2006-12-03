@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/11/14 13:56:15 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/12/03 19:47:48 abs Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--with-omfdirs=${PREFIX}/share/omf
 CONFIGURE_ARGS+=	--with-omfdirs=${LOCALBASE}/share/omf:${X11PREFIX}/share/omf
 .endif
 
+MAKE_ENV+=		ICONV=iconv
+
 SCROLLKEEPER_DATADIR=	${PREFIX}/libdata/scrollkeeper
 SCROLLKEEPER_REBUILDDB=	${PREFIX}/bin/scrollkeeper-rebuilddb
 FILES_SUBST+=		SCROLLKEEPER_DATADIR=${SCROLLKEEPER_DATADIR:Q}
@@ -65,6 +67,7 @@ SUBST_STAGE.sc-gtfd=	post-patch
 SUBST_FILES.sc-gtfd=	libs/install.c
 SUBST_SED.sc-gtfd=	-e s,scrollkeeper-get-toc-from-docpath\ ,${PREFIX}/bin/scrollkeeper-get-toc-from-docpath\ ,
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
