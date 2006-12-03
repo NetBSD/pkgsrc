@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.5 2006/12/01 14:19:06 reed Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.6 2006/12/03 01:03:38 kano Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -317,7 +317,7 @@ followed:</para>
     <para>Now comes the longest step by far: iterate over the contents
     of <filename>todo.txt</filename> and update the packages listed in
     it in order.  For major desktop updates none of these should be
-    commited until the entire set is completed because there are chances
+    committed until the entire set is completed because there are chances
     of breaking not-yet-updated packages.</para>
   </listitem>
 

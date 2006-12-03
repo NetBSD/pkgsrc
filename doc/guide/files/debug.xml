@@ -1,4 +1,4 @@
-<!-- $NetBSD: debug.xml,v 1.5 2006/09/13 23:25:14 wiz Exp $ -->
+<!-- $NetBSD: debug.xml,v 1.6 2006/12/03 01:03:38 kano Exp $ -->
 
 <chapter id="debug">
   <title>Debugging</title>
@@ -108,7 +108,7 @@
     <listitem>
       <para>Reinstall the binary package:</para>
 
-      <screen>&rprompt; <userinput>pkgadd .../<replaceable>examplepkg</replaceable>.tgz</userinput></screen>
+      <screen>&rprompt; <userinput>pkg_add .../<replaceable>examplepkg</replaceable>.tgz</userinput></screen>
     </listitem>
 
     <listitem>
