@@ -43,11 +43,12 @@
 
 #CC = gcc
 #CCC = g++
-CFLAGS +=  -Wall -Wno-format
-OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE # -DHAVE_LOCALTIME_R
+CFLAGS+=	-Wall -Wno-format
+OS_CFLAGS=	-DJS_THREADSAFE -DXP_UNIX -DSVR4 
+OS_CFLAGS+=	-DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE # -DHAVE_LOCALTIME_R
 
 RANLIB = echo
-MKSHLIB = $(LD) -shared $(XMKSHLIBOPTS)
+MKSHLIB = $(LD) -lplds4 -lplc4 -lnspr4 -shared $(LDFLAGS) $(XMKSHLIBOPTS)
 
 #.c.o:
 #      $(CC) -c -MD $*.d $(CFLAGS) $<
@@ -64,7 +65,6 @@ ifeq (gcc, $(CC))
 # (http://bugzilla.mozilla.org/show_bug.cgi?id=24892)
 GCC_VERSION := $(shell gcc -v 2>&1 | grep version | awk '{ print $$3 }')
 GCC_LIST:=$(sort 2.91.66 $(GCC_VERSION) )
-
 ifeq (2.91.66, $(firstword $(GCC_LIST)))
 CFLAGS+= -DGCC_OPT_BUG
 endif
@@ -74,7 +74,7 @@ endif
 
 GFX_ARCH = x
 
-OS_LIBS = -lm -lc
+OS_LIBS = -lm $(LDFLAGS)
 
 ASFLAGS += -x assembler-with-cpp
 
@@ -87,17 +87,7 @@ ifeq ($(CPU_ARCH),alpha)
 OS_CFLAGS += -mieee
 endif
 
-# Use the editline library to provide line-editing support.
-JS_EDITLINE = 1
+JS_READLINE = 1
 
-ifeq ($(CPU_ARCH),amd64)
-# Use VA_COPY() standard macro on x86-64
-# FIXME: better use it everywhere
 OS_CFLAGS += -DHAVE_VA_COPY -DVA_COPY=va_copy
-endif
-
-ifeq ($(CPU_ARCH),x86_64)
-# We need PIC code for shared libraries
-# FIXME: better patch rules.mk & fdlibm/Makefile*
 OS_CFLAGS += -DPIC -fPIC
-endif
