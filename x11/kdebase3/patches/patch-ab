@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2006/09/19 17:50:46 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2006/12/03 03:44:52 markd Exp $
 
 --- kcontrol/info/memory_netbsd.cpp.orig	2005-09-10 08:25:05.000000000 +0000
 +++ kcontrol/info/memory_netbsd.cpp
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.7 2006/09/19 17:50:46 wiz Exp $
    size_t len;
  #ifdef UVM
 -  struct  uvmexp uvmexp;
-+#if __NetBSD_Version__ > 499000100 /* 4.99.2+ */
++#if __NetBSD_Version__ > 106000000
 +  struct  uvmexp_sysctl uvmexp;
  #else
 +  struct  uvmexp uvmexp;
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.7 2006/09/19 17:50:46 wiz Exp $
  
  #ifdef UVM
    mib[0] = CTL_VM;
-+#if __NetBSD_Version__ > 499000100 /* 4.99.2+ */
++#if __NetBSD_Version__ > 106000000
 +  mib[1] = VM_UVMEXP2;
 +#else
    mib[1] = VM_UVMEXP;
