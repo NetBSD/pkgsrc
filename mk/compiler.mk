@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.57 2006/12/02 22:32:59 jschauma Exp $
+# $NetBSD: compiler.mk,v 1.58 2006/12/03 08:34:45 seb Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -72,6 +72,11 @@ BSD_COMPILER_MK=	defined
 
 # Since most packages need a C compiler, this is the default value.
 USE_LANGUAGES?=	c
+
+# Add c support if c99 is set
+.if !empty(USE_LANGUAGES:Mc99)
+USE_LANGUAGES+=	c
+.endif
 
 # For environments where there is an external gcc too, but pkgsrc
 # should use the pkgsrc one for consistency.
