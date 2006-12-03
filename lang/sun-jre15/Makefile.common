@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/10/24 12:42:10 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/12/03 00:51:21 wiz Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -40,7 +40,7 @@ LDD=		${TRUE}
 .include "../../emulators/suse_linux/Makefile.application"
 
 .if !defined(USE_NATIVE_LINUX)
-ONLY_FOR_PLATFORM=	*-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 .  if ${SUSE_DIR_PREFIX} == "suse91"
 DEPENDS+=	suse_locale-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
 .  endif
