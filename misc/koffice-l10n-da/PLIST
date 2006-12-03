@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/10/17 09:44:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/03 04:17:28 markd Exp $
 share/doc/kde/HTML/da/karbon/common
 share/doc/kde/HTML/da/karbon/index.cache.bz2
 share/doc/kde/HTML/da/karbon/index.docbook
@@ -8,13 +8,18 @@ share/doc/kde/HTML/da/kchart/index.docbook
 share/doc/kde/HTML/da/kexi/basics.docbook
 share/doc/kde/HTML/da/kexi/building.docbook
 share/doc/kde/HTML/da/kexi/common
+share/doc/kde/HTML/da/kexi/comparing.docbook
 share/doc/kde/HTML/da/kexi/configuration.docbook
 share/doc/kde/HTML/da/kexi/credits.docbook
 share/doc/kde/HTML/da/kexi/database.docbook
+share/doc/kde/HTML/da/kexi/designingforms.docbook
+share/doc/kde/HTML/da/kexi/enteringdataintotables.docbook
+share/doc/kde/HTML/da/kexi/enteringdatausingforms.docbook
 share/doc/kde/HTML/da/kexi/index.cache.bz2
 share/doc/kde/HTML/da/kexi/index.docbook
 share/doc/kde/HTML/da/kexi/intro.docbook
 share/doc/kde/HTML/da/kexi/menus.docbook
+share/doc/kde/HTML/da/kexi/querydesigning.docbook
 share/doc/kde/HTML/da/kformula/common
 share/doc/kde/HTML/da/kformula/index.cache.bz2
 share/doc/kde/HTML/da/kformula/index.docbook
@@ -57,6 +62,8 @@ share/doc/kde/HTML/da/krita/commands-toolbars.docbook
 share/doc/kde/HTML/da/krita/commands.docbook
 share/doc/kde/HTML/da/krita/common
 share/doc/kde/HTML/da/krita/credits.docbook
+share/doc/kde/HTML/da/krita/developers-plugins.docbook
+share/doc/kde/HTML/da/krita/developers-scripting.docbook
 share/doc/kde/HTML/da/krita/developers.docbook
 share/doc/kde/HTML/da/krita/faq.docbook
 share/doc/kde/HTML/da/krita/index.cache.bz2
@@ -68,11 +75,14 @@ share/doc/kde/HTML/da/krita/settings.docbook
 share/doc/kde/HTML/da/krita/tutorial-quick-starts.docbook
 share/doc/kde/HTML/da/krita/tutorial-select-layer.docbook
 share/doc/kde/HTML/da/krita/tutorial-starting.docbook
+share/doc/kde/HTML/da/krita/tutorial-tablet.docbook
 share/doc/kde/HTML/da/krita/tutorial.docbook
 share/doc/kde/HTML/da/krita/using-colorspaces.docbook
 share/doc/kde/HTML/da/krita/using-filters.docbook
+share/doc/kde/HTML/da/krita/using-images.docbook
 share/doc/kde/HTML/da/krita/using-layers.docbook
 share/doc/kde/HTML/da/krita/using-selections.docbook
+share/doc/kde/HTML/da/krita/using-views.docbook
 share/doc/kde/HTML/da/kspread/a11y.docbook
 share/doc/kde/HTML/da/kspread/advanced.docbook
 share/doc/kde/HTML/da/kspread/basics.docbook
