@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1914 2006/12/03 03:12:43 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1915 2006/12/03 05:14:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5485,3 +5485,18 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/etcmanage to 0.3 [gdt 2006-12-02]
 	Updated net/rdesktop to 1.5.0nb1 [seb 2006-12-02]
 	Updated archivers/lha to 114.9nb3 [obache 2006-12-03]
+	Updated graphics/kdegraphics3 to 3.5.5nb1 [markd 2006-12-03]
+	Updated misc/koffice to 1.6.1 [markd 2006-12-03]
+	Updated misc/koffice-l10n-da to 1.6.1 [markd 2006-12-03]
+	Updated misc/koffice-l10n-de to 1.6.1 [markd 2006-12-03]
+	Updated misc/koffice-l10n-en_GB to 1.6.1 [markd 2006-12-03]
+	Updated misc/koffice-l10n-es to 1.6.1 [markd 2006-12-03]
+	Updated misc/koffice-l10n-et to 1.6.1 [markd 2006-12-03]
+	Added misc/koffice-l10n-fi version 1.6.1 [markd 2006-12-03]
+	Added misc/koffice-l10n-fr version 1.6.1 [markd 2006-12-03]
+	Removed misc/koffice-i18n-fa [markd 2006-12-03]
+	Removed misc/koffice-i18n-fi [markd 2006-12-03]
+	Removed misc/koffice-i18n-fr [markd 2006-12-03]
+	Updated editors/kile to 1.9.3 [markd 2006-12-03]
+	Updated graphics/gwenview to 1.4.1 [markd 2006-12-03]
+	Updated graphics/gwenview-i18n to 1.4.1 [markd 2006-12-03]
