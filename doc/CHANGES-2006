@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1913 2006/12/02 23:15:58 seb Exp $
+$NetBSD: CHANGES-2006,v 1.1914 2006/12/03 03:12:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/enlightenment to 0.16.8.4 [obache 2006-12-02]
 	Updated sysutils/etcmanage to 0.3 [gdt 2006-12-02]
 	Updated net/rdesktop to 1.5.0nb1 [seb 2006-12-02]
+	Updated archivers/lha to 114.9nb3 [obache 2006-12-03]
