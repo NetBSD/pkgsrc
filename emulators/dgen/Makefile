@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/12/03 17:07:41 xtraeme Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -25,7 +25,7 @@ BUILDLINK_TRANSFORM+=	rm:-march=pentium
 BUILDLINK_TRANSFORM+=	rm:-fno-rtti
 
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-3*)
+.if !empty(CC_VERSION:Mgcc-[34]*)
 BUILDLINK_TRANSFORM+=	'opt:-m\(align-loops.*\):-f\1'
 BUILDLINK_TRANSFORM+=	'opt:-m\(align-jumps.*\):-f\1'
 BUILDLINK_TRANSFORM+=	'opt:-m\(align-functions.*\):-f\1'
