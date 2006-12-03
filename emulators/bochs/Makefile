@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/06/25 18:00:05 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2006/12/03 22:18:16 jmmv Exp $
 
 DISTNAME=		bochs-2.2.1
 PKGREVISION=		1
@@ -59,11 +59,32 @@ BOCHS_MAINDIR=		${PREFIX}/share/bochs
 BOCHS_BIOSDIR=		${BOCHS_MAINDIR}/bios
 BOCHS_FONTDIR=		${BOCHS_MAINDIR}/xfonts
 
+.if ${OPSYS} == "Darwin"
+INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}/libexec/bochs
+MESSAGE_SRC=		${.CURDIR}/MESSAGE.Darwin
+PLIST_SRC=		${.CURDIR}/PLIST.Darwin
+
+post-configure:
+	${MV} ${WRKSRC}/.bochsrc ${WRKSRC}/.bochsrc.BAK
+	${SED} -e 's@XXXPREFIXXXX@$$BXSHARE@' \
+		< ${WRKSRC}/.bochsrc.BAK > ${WRKSRC}/.bochsrc
+
+post-build:
+	{ ${ECHO} '#! ${SH}'; \
+	  ${ECHO} 'exec ${PREFIX}/libexec/bochs/bochs.app/Contents/MacOS/bochs'\
+	          '"$$@"'; } >${WRKDIR}/bochs.sh
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/bochs.sh ${PREFIX}/bin/bochs
+	${LN} -fs ${PREFIX}/libexec/bochs/bxcommit ${PREFIX}/bin/bxcommit
+	${LN} -fs ${PREFIX}/libexec/bochs/bximage ${PREFIX}/bin/bximage
+.else
 .include "../../mk/x11.buildlink3.mk"
 
 post-configure:
 	${MV} ${WRKSRC}/.bochsrc ${WRKSRC}/.bochsrc.BAK
 	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' \
 		< ${WRKSRC}/.bochsrc.BAK > ${WRKSRC}/.bochsrc
+.endif
 
 .include "../../mk/bsd.pkg.mk"
