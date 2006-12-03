@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2006/11/27 19:28:37 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2006/12/03 17:00:39 gdt Exp $
 
-DISTNAME=	gqview-2.1.4
+DISTNAME=	gqview-2.1.5
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqview/}
 
@@ -14,6 +14,7 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
