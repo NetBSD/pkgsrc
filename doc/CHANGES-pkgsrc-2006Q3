@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.53 2006/12/01 13:01:13 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.54 2006/12/04 08:47:38 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -141,3 +141,5 @@ Pullup ticket 1923 - requested by ghen
 security fix for openldap
 Pullup ticket 1928 - requested by drochner
 security update for libgsf
+Pullup ticket 1929 - requested by tron
+security fix for gtar-base
