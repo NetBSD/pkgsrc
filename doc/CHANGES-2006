@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1923 2006/12/04 14:18:17 mjl Exp $
+$NetBSD: CHANGES-2006,v 1.1924 2006/12/04 15:16:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5504,6 +5504,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/avidemux to 2.3.0 [xtraeme 2006-12-03]
 	Updated archivers/gtar-base to 1.15.1nb4 [tron 2006-12-03]
 	Added sysutils/i810switch 0.6.5 [christos 2006-12-03]
+	Updated mail/dspam to 3.6.8nb1 [obache 2006-12-04]
 	Updated fonts/fontconfig to 2.4.2 [wiz 2006-12-04]
 	Updated devel/m4 to 1.4.8 [wiz 2006-12-04]
 	Updated mail/squirrelmail to 1.4.9a [obache 2006-12-04]
