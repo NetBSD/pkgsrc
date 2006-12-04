@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/04 16:04:54 xtraeme Exp $
+bin/varnishhist
+bin/varnishlog
+bin/varnishncsa
+bin/varnishstat
+bin/varnishtop
+lib/libvarnish.la
+lib/libvarnishapi.la
+lib/libvcl.la
+man/man1/varnishd.1
+man/man1/varnishhist.1
+man/man1/varnishlog.1
+man/man1/varnishncsa.1
+man/man1/varnishstat.1
+man/man1/varnishtop.1
+man/man7/vcl.7
+sbin/varnishd
