@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2006/11/09 15:16:21 taca Exp $
+# $NetBSD: options.mk,v 1.10 2006/12/04 21:50:54 jdolecek Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	aufs carp icmp pam-helper snmp ssl unlinkd
@@ -36,7 +36,7 @@ PKG_SUGGESTED_OPTIONS+=	diskd
 .endif
 
 # limited platform support arp-acl
-.if !empty(OPSYS:MFreeBSD) || !empty(OPSYS:MLinux) || !empty(OPSYS:MSunOS)
+.if !empty(OPSYS:MFreeBSD) || !empty(OPSYS:MNetBSD) || !empty(OPSYS:MOpenBSD) || !empty(OPSYS:MLinux) || !empty(OPSYS:MSunOS)
 PKG_SUPPORTED_OPTIONS+=	arp-acl
 .endif
 
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--enable-ipf-transparent
 .endif
 
 .if !empty(PKG_OPTIONS:Marp-acl)
-CONFIGURE_ARGS+=	--arp-acl
+CONFIGURE_ARGS+=	--enable-arp-acl
 .endif
 
 .if !empty(PKG_OPTIONS:Mcarp)
