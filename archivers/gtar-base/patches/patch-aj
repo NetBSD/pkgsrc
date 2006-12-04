@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1.2.2 2006/12/04 08:46:26 ghen Exp $
+
+--- src/common.h.orig	2004-12-21 14:31:58.000000000 +0000
++++ src/common.h	2006-12-03 15:13:25.000000000 +0000
+@@ -124,6 +124,9 @@
+ 
+ GLOBAL bool absolute_names_option;
+ 
++/* Allow GNUTYPE_NAMES type? */
++GLOBAL bool allow_name_mangling_option;
++
+ /* Display file times in UTC */
+ GLOBAL bool utc_option;
+ 
