@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2006/12/03 22:18:16 jmmv Exp $
+$NetBSD: patch-ab,v 1.9 2006/12/04 17:37:24 jmmv Exp $
 
---- iodev/cdrom.cc.orig	2006-12-03 20:55:44.000000000 +0100
-+++ iodev/cdrom.cc
-@@ -109,7 +109,7 @@ extern "C" {
- #include <unistd.h>
- #include <fcntl.h>
- #include <sys/ioctl.h>
--#include <dev/disk.h>
-+#include <sys/disk.h>
- #include <errno.h>
- #include <paths.h>
- #include <sys/param.h>
+--- iodev/soundosx.cc.orig	2006-03-03 21:29:50.000000000 +0100
++++ iodev/soundosx.cc
+@@ -5,7 +5,7 @@
+ // This file (SOUNDOSX.CC) written and donated by Brian Huffman
+ 
+ #ifdef PARANOID
+-#include <MacTypes.h>
++#include <CoreServices/CoreServices.h>
+ #else
+ #define Float32 KLUDGE_Float32
+ #define Float64 KLUDGE_Float64
