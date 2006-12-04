@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5731 2006/12/04 13:09:29 obache Exp $
+$NetBSD: TODO,v 1.5732 2006/12/04 13:25:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -287,7 +287,6 @@ Suggested package updates
 	o aspell-faroese-0.2.26
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
-	o autoconf-2.61
 	o autogen-5.8.7
 	o avcheck-0.91
 	o avl-2.0.1
