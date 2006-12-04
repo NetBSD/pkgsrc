@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2006/11/30 15:24:52 obache Exp $
+# $NetBSD: Makefile,v 1.382 2006/12/04 07:20:15 agc Exp $
 #
 
 COMMENT=	System utilities
@@ -118,6 +118,7 @@ SUBDIR+=	hcidump
 SUBDIR+=	hddtemp
 SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
+SUBDIR+=	i810switch
 SUBDIR+=	idesk
 SUBDIR+=	install-sh
 SUBDIR+=	ipa
