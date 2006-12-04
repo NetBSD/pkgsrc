@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2006/12/03 22:18:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2006/12/04 17:37:24 jmmv Exp $
 
-DISTNAME=		bochs-2.2.1
-PKGREVISION=		1
+DISTNAME=		bochs-2.3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -17,57 +16,81 @@ USE_LANGUAGES=		c c++
 ONLY_FOR_COMPILER=	gcc
 CXXFLAGS+=		-DPARANOID
 
-# These options are not enabled by default because they can adversely impact
-# performance. The number of processors can be either 1 (default), 2, or 4.
-#CONFIGURE_ARGS+=	--enable-debugger --enable-disasm
-#CONFIGURE_ARGS+=	--enable-processors=2
 CONFIGURE_ARGS+=	--enable-cdrom
 CONFIGURE_ARGS+=	--enable-ne2000
-CONFIGURE_ARGS+=	--enable-sb16=dummy
-.if !defined(BOCHS_TINY)
-CONFIGURE_ARGS+=	--enable-new-pit
-CONFIGURE_ARGS+=	--enable-pci
-CONFIGURE_ARGS+=	--enable-cpu-level=6
-CONFIGURE_ARGS+=	--enable-apic
-CONFIGURE_ARGS+=	--enable-usb
-CONFIGURE_ARGS+=	--enable-4meg-pages
-CONFIGURE_ARGS+=	--enable-pae
-CONFIGURE_ARGS+=	--enable-guest2host-tlb
-CONFIGURE_ARGS+=	--enable-repeat-speedups
-CONFIGURE_ARGS+=	--enable-icache
-.include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:M*-*-i386)
-CONFIGURE_ARGS+=	--enable-fast-function-calls
-.endif
-CONFIGURE_ARGS+=	--enable-global-pages
-CONFIGURE_ARGS+=	--enable-host-specific-asms
-CONFIGURE_ARGS+=	--enable-all-optimizations
-CONFIGURE_ARGS+=	--enable-vbe
-CONFIGURE_ARGS+=	--enable-fpu
-CONFIGURE_ARGS+=	--enable-mmx
-CONFIGURE_ARGS+=	--enable-3dnow
-CONFIGURE_ARGS+=	--enable-sse=2
-CONFIGURE_ARGS+=	--enable-daz
-CONFIGURE_ARGS+=	--enable-sep
-.endif # !BOCHS_TINY
-CONFIGURE_ENV+=		CXXFLAGS="-I${X11BASE}/include ${CXXFLAGS}"
-MANCOMPRESSED=		yes
-MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q} \
-			GUNZIP_CMD=${GUNZIP_CMD:Q}
 
-BOCHS_MAINDIR=		${PREFIX}/share/bochs
-BOCHS_BIOSDIR=		${BOCHS_MAINDIR}/bios
-BOCHS_FONTDIR=		${BOCHS_MAINDIR}/xfonts
+MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q}
+MAKE_ENV+=		GUNZIP_CMD=${GUNZIP_CMD:Q}
+MAKE_ENV+=		WGET=${FETCH_CMD:Q}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.bochs
+PKG_SUPPORTED_OPTIONS+=	debug tiny
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
+
+# Debugging features for the client operating systems.  These options are
+# not enabled by default because they can adversely impact performance.
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debugger
+CONFIGURE_ARGS+=	--enable-disasm
+CONFIGURE_ARGS+=	--enable-iodebug
+CONFIGURE_ARGS+=	--enable-x86-debugger
+.endif
+
+.if empty(PKG_OPTIONS:Mtiny)
+CONFIGURE_ARGS+=	--enable-3dnow
+CONFIGURE_ARGS+=	--enable-4meg-pages
+CONFIGURE_ARGS+=	--enable-all-optimizations
+CONFIGURE_ARGS+=	--enable-apic
+CONFIGURE_ARGS+=	--enable-cpu-level=6
+CONFIGURE_ARGS+=	--enable-daz
+CONFIGURE_ARGS+=	--enable-fpu
+CONFIGURE_ARGS+=	--enable-global-pages
+CONFIGURE_ARGS+=	--enable-guest2host-tlb
+CONFIGURE_ARGS+=	--enable-host-specific-asms
+CONFIGURE_ARGS+=	--enable-icache
+CONFIGURE_ARGS+=	--enable-mmx
+CONFIGURE_ARGS+=	--enable-new-pit
+CONFIGURE_ARGS+=	--enable-pae
+CONFIGURE_ARGS+=	--enable-pci
+CONFIGURE_ARGS+=	--enable-repeat-speedups
+CONFIGURE_ARGS+=	--enable-sep
+CONFIGURE_ARGS+=	--enable-sse=3
+CONFIGURE_ARGS+=	--enable-usb
+CONFIGURE_ARGS+=	--enable-vbe
+CONFIGURE_ARGS+=	--enable-x86-64
+
+.  if !empty(MACHINE_PLATFORM:M*-*-i386)
+CONFIGURE_ARGS+=	--enable-fast-function-calls
+.  endif
+
+.  if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-sb16=osx
+.  elif ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=	--enable-sb16=freebsd
+.  elif ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--enable-sb16=linux
+.  else
+CONFIGURE_ARGS+=	--enable-sb16=dummy
+.  endif
+.endif
+
+.if ${OPSYS} == "Linux"
+BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,\#,'
+BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,,'
+.elif ${OPSYS} == "Darwin"
+BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,\#,'
+BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,\#,'
+.else
+BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,,'
+BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,\#,'
+.endif
 
 .if ${OPSYS} == "Darwin"
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}/libexec/bochs
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Darwin
 PLIST_SRC=		${.CURDIR}/PLIST.Darwin
-
-post-configure:
-	${MV} ${WRKSRC}/.bochsrc ${WRKSRC}/.bochsrc.BAK
-	${SED} -e 's@XXXPREFIXXXX@$$BXSHARE@' \
-		< ${WRKSRC}/.bochsrc.BAK > ${WRKSRC}/.bochsrc
 
 post-build:
 	{ ${ECHO} '#! ${SH}'; \
@@ -79,12 +102,11 @@ post-install:
 	${LN} -fs ${PREFIX}/libexec/bochs/bxcommit ${PREFIX}/bin/bxcommit
 	${LN} -fs ${PREFIX}/libexec/bochs/bximage ${PREFIX}/bin/bximage
 .else
-.include "../../mk/x11.buildlink3.mk"
-
-post-configure:
-	${MV} ${WRKSRC}/.bochsrc ${WRKSRC}/.bochsrc.BAK
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' \
-		< ${WRKSRC}/.bochsrc.BAK > ${WRKSRC}/.bochsrc
+.  include "../../mk/x11.buildlink3.mk"
 .endif
+
+pre-configure:
+	${SED} ${BOCHSRC_SUBST} <${WRKSRC}/.bochsrc >${WRKSRC}/.bochsrc.new
+	mv ${WRKSRC}/.bochsrc.new ${WRKSRC}/.bochsrc
 
 .include "../../mk/bsd.pkg.mk"
