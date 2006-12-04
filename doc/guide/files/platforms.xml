@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.47 2006/12/03 01:03:38 kano Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.48 2006/12/04 14:34:20 kano Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -620,7 +620,7 @@ file and inspect the contents before extracting it.
       default.</para>
 
       <para>If you have both the MIPSPro compiler chain installed as well as gcc,
-      but want to make sure that MIPRPro is used, please set your <varname>PATH</varname>
+      but want to make sure that MIPSPro is used, please set your <varname>PATH</varname>
       to <emphasis>not</emphasis> include the location of gcc (often
       <filename>/usr/freeware/bin</filename>), and (important) pass the
       '--preserve-path' flag.</para>
