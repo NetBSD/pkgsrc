@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/12/03 12:18:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.36 2006/12/04 13:55:31 tron Exp $
 #
 
 DISTNAME=	avidemux_2.3.0
@@ -39,11 +39,11 @@ PKG_SUPPORTED_OPTIONS=	mmx
 CONFIGURE_ARGS+=	--disable-mmx
 
 post-configure:
-	${MV} ${WRKSRC}/avidemux/adm_lavcodec/config.mak \
-		${WRKSRC}/avidemux/adm_lavcodec/config.mak.in
+	${MV} ${WRKSRC}/avidemux/ADM_lavcodec/config.mak \
+		${WRKSRC}/avidemux/ADM_lavcodec/config.mak.in
 	${SED} -e 's/TARGET_MMX=yes/TARGET_MMX=no/g' \
-		< ${WRKSRC}/avidemux/adm_lavcodec/config.mak.in \
-		> ${WRKSRC}/avidemux/adm_lavcodec/config.mak
+		< ${WRKSRC}/avidemux/ADM_lavcodec/config.mak.in \
+		> ${WRKSRC}/avidemux/ADM_lavcodec/config.mak
 .endif
 
 .include "../../audio/faac/buildlink3.mk"
