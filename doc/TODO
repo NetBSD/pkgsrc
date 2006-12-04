@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5729 2006/12/04 12:42:58 wiz Exp $
+$NetBSD: TODO,v 1.5730 2006/12/04 12:47:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o lynx-2.8.6
 	o lyx-1.4.3
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
-	o m4-1.4.8
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mailfront-1.01 [pkg/34765]
