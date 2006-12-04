@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1922 2006/12/04 13:25:50 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1923 2006/12/04 14:18:17 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5393,6 +5393,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/kbibtex to 0.1.5nb1 [markd 2006-11-20]
 	Updated net/autonet to 0.22 [abs 2006-11-20]
 	Updated www/ja-trac to 0.10.2.1 [obache 2006-11-20]
+	Updated misc/esniper to 2.15.0 [mjl 2006-11-20]
 	Updated mail/sylpheed to 2.2.10 [xtraeme 2006-11-20]
 	Updated comms/jpilot to 0.99.9 [bad 2006-11-20]
 	Updated mail/milter-greylist to 3.0 [tron 2006-11-21]
@@ -5507,3 +5508,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/m4 to 1.4.8 [wiz 2006-12-04]
 	Updated mail/squirrelmail to 1.4.9a [obache 2006-12-04]
 	Updated devel/autoconf to 2.61 [wiz 2006-12-04]
+	Updated chat/micq to 0.5.2 [mjl 2006-12-04]
