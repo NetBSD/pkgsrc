@@ -1,0 +1,9 @@
+Varnish is
+
+* a high-performace HTTP accelerator designed for content-heavy
+  dynamic web sites.
+* designed for maximum performance on modern hardware and modern
+  operating systems. Varnish takes full advantage of modern virtual
+  memory systems and of advanced operating system features such as
+  kqueue, accept filters, sendfile etc. where available.
+* open source, published under a two-clause BSD license.
