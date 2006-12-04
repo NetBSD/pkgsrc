@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/10/22 15:23:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/04 13:32:42 tron Exp $
 
 DISTNAME=		nspr-4.6.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_MOZILLA:S/mozilla\//nspr\//g:=v4.6.1/src/}
 
@@ -48,7 +48,7 @@ SUN4U_32=
 .  endif
 .endif
 
-SUN4U_32?=		@comment
+SUN4U_32?=		"@comment "
 PLIST_SUBST+=		SUN4U_32=${SUN4U_32}
 
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
