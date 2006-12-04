@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1925 2006/12/04 16:06:16 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1926 2006/12/04 17:38:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/autoconf to 2.61 [wiz 2006-12-04]
 	Updated chat/micq to 0.5.2 [mjl 2006-12-04]
 	Added www/varnish version 1.0.2 [xtraeme 2006-12-04]
+	Updated emulators/bochs to 2.3 [jmmv 2006-12-04]
