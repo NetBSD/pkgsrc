@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1921 2006/12/04 13:09:29 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1922 2006/12/04 13:25:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5506,3 +5506,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/fontconfig to 2.4.2 [wiz 2006-12-04]
 	Updated devel/m4 to 1.4.8 [wiz 2006-12-04]
 	Updated mail/squirrelmail to 1.4.9a [obache 2006-12-04]
+	Updated devel/autoconf to 2.61 [wiz 2006-12-04]
