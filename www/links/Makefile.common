@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.31 2006/09/03 20:35:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.31.2.1 2006/12/05 09:54:54 ghen Exp $
 
-DISTNAME=	links-2.1pre23
+DISTNAME=	links-2.1pre26
 CATEGORIES=	www
 MASTER_SITES=	http://links.twibright.com/download/
 EXTRACT_SUFX=  .tar.bz2
 
 MAINTAINER=	jschauma@NetBSD.org
-HOMEPAGE=	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/
+HOMEPAGE=	http://links.twibright.com/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
