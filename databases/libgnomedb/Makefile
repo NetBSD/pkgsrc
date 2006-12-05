@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2006/11/13 21:38:25 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2006/12/05 10:23:07 wiz Exp $
 #
 
-DISTNAME=		libgnomedb-1.9.103
-PKGREVISION=		2
+DISTNAME=		libgnomedb-1.99.1
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/1.9/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/1.99/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,6 +19,8 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	libgnomedb-2.0.pc.in
 
 GCONF2_SCHEMAS=		libgnomedb.schemas
+
+BUILDLINK_API_DEPENDS.libgda?=  libgda>=1.99.1
 
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
