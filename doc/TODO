@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5735 2006/12/05 09:25:35 wiz Exp $
+$NetBSD: TODO,v 1.5736 2006/12/05 10:24:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -590,14 +590,12 @@ Suggested package updates
 	o libevent-1.2
 	o libextractor-0.5.16
 	o libflash-0.4.13
-	o libgda-1.99.1
 	o libggi-2.2.1
 	o libggigcp-1.0.1
 	o libggimisc-2.2.1
 	o libggiwmh-0.3.1
 	o libgii-1.0.1
 	o libgiigic-1.1.1
-	o libgnomedb-1.99.1
 	o libgtop2-2.14.4
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
@@ -637,7 +635,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
-	o mergeant-0.64
 	o mftrace-1.2.4
 	o mgetty-1.1.35
 	o mhonarc-2.6.16

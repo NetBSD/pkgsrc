@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1929 2006/12/05 09:25:35 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1930 2006/12/05 10:24:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5519,3 +5519,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/links to 2.1.0.26 [wiz 2006-12-05]
 	Updated www/links-gui to 2.1.0.26 [wiz 2006-12-05]
 	Updated x11/devilspie to 0.19 [wiz 2006-12-05]
+	Updated databases/libgda to 1.99.1 [wiz 2006-12-05]
+	Updated databases/libgda-postgres to 1.99.1 [wiz 2006-12-05]
+	Updated databases/libgnomedb to 1.99.1 [wiz 2006-12-05]
+	Updated databases/mergeant to 0.64 [wiz 2006-12-05]
