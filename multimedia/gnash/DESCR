@@ -1,0 +1,16 @@
+Gnash is a player for animated "movies" in the Macromedia Shockwave Flash
+(.swf) format.  It can be run as a graphical application, as a Web browser
+plugin, or as a library used by other programs.  It is not yet complete;
+it does not correctly handle every .swf file.
+
+Many of the Flash movies that I come across play fine in Gnash.  Many
+others do not.  In particular, Flash movies that are used for browser
+navigation may still have a few issues with some URLs left. Most
+Flash based navigation of a web site should work.
+
+Gnash supports the majority of Flash opcodes up to SWF version 7, and
+a wide sampling of ActionScript classes for SWF version 7. All the core
+ones are implemented, and many of the newer ones work, but may be missing
+some of their methods. All unimplemented opcodes and ActionScript classes
+and methods print a warning when using -v with gnash or gprocessor. Using
+gprocessor -v is a quick way to see why a movie isn't playing correctly.
