@@ -48,7 +48,7 @@ OS_CFLAGS=	-DJS_THREADSAFE -DXP_UNIX -DSVR4
 OS_CFLAGS+=	-DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE # -DHAVE_LOCALTIME_R
 
 RANLIB = echo
-MKSHLIB = $(LD) -lplds4 -lplc4 -lnspr4 -shared $(LDFLAGS) $(XMKSHLIBOPTS)
+MKSHLIB = $(LD) -lm -lplds4 -lplc4 -lnspr4 -shared $(LDFLAGS) $(XMKSHLIBOPTS)
 
 #.c.o:
 #      $(CC) -c -MD $*.d $(CFLAGS) $<
