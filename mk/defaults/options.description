@@ -22,6 +22,7 @@ audiofile
 authlib	
 avifile	
 bdb	
+bittorrent		Enable bittorrent support
 bktr	
 blender-exppython	Enable the Experimental Python support.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
@@ -85,11 +86,13 @@ faad			Enable AAC decoding support using faad2.
 fam	
 fastcgi			Use FastCGI as the CGI manager.
 ffmpeg	
+finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 flac	
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype	
-ftp			Enable FTP support.
+fsp			Enable File Service Protocol (FSP) support.
+ftp			Enable File Transport Protocol (FTP) support.
 gd	
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
@@ -103,6 +106,7 @@ gnome
 gnupg	
 gnuplot	
 gnutls			Enable GNU TLS support.
+gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
 gpgsm	
 gqmpeg-japanese		Japanese ID3 tag support.
@@ -213,6 +217,7 @@ mysql4
 nas			Enable usage of the Network Audio System.
 native	
 ncurses			Enable ncurses support.
+nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nogui	
 ogg			Enable Ogg support.
@@ -279,6 +284,7 @@ spamassassin-taint-checks	Enable Perl taint checks to improve security.
 spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
 spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
+spidermonkey		Enable Mozilla's C implementation of JavaScript.
 sqlite			Enable SQLite support.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
