@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/05 15:15:24 wiz Exp $
+
+--- configure.orig	2006-11-17 19:09:10.000000000 +0000
++++ configure
+@@ -4303,13 +4303,13 @@ echo $ECHO_N "checking for library file 
+   LIBPRE="lib"
+ 
+   if test "x$LIBPRE" != "x" ; then
+-	if test x"$EXEEXT"	== "exe"; then
++	if test x"$EXEEXT"	= "exe"; then
+ 	   LIBPRE="lib"
+ 	fi
+   fi
+ 
+   if test "x$LIBEXT" != "x" ; then
+-	if test x"$EXEEXT"	== "exe"; then
++	if test x"$EXEEXT"	= "exe"; then
+ 	   LIBEXT="dll"
+ 	fi
+   fi
+@@ -45388,7 +45388,7 @@ _ACEOF
+ 
+ 
+ 
+-if test x"$EXEEXT" == "exe"; then
++if test x"$EXEEXT" = "exe"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_WINSOCK 1
