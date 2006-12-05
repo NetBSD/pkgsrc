@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5734 2006/12/05 09:09:32 wiz Exp $
+$NetBSD: TODO,v 1.5735 2006/12/05 09:25:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o denemo-0.7.5
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
-	o devilspie-0.19
 	o devtodo-0.1.19
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
