@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2006/08/18 23:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2006/12/05 18:24:39 gdt Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -26,6 +26,7 @@ SUBDIR+=	pkg_install
 SUBDIR+=	pkg_install-info
 SUBDIR+=	pkg_notify
 SUBDIR+=	pkg_regress
+SUBDIR+=	pkg_rolling-replace
 SUBDIR+=	pkg_select
 SUBDIR+=	pkg_tarup
 SUBDIR+=	pkgclean
