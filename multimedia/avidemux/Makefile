@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/12/05 21:00:26 tron Exp $
+# $NetBSD: Makefile,v 1.39 2006/12/05 23:16:48 tron Exp $
 #
 
 DISTNAME=	avidemux_2.3.0
@@ -36,6 +36,11 @@ PKG_SUPPORTED_OPTIONS=	mmx
 
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=		-D__maxosx__
+
+.if ${MACHINE_ARCH} == "powerpc"
+CONFIGURE_ARGS+=	--enable-altivec
+CONFIGURE_ENV+=		CCAS=${CC}
+.endif
 .endif
 
 .include "../../mk/bsd.options.mk"
