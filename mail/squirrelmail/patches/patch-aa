@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2006/07/13 07:59:34 martti Exp $
+$NetBSD: patch-aa,v 1.11.2.1 2006/12/05 08:21:34 ghen Exp $
 
---- config/config_default.php.orig	2006-06-08 15:37:31.000000000 +0000
-+++ config/config_default.php	2006-07-13 10:23:36.000000000 +0000
-@@ -400,7 +400,7 @@
+--- config/config_default.php.orig	2006-10-07 11:58:42.000000000 +0000
++++ config/config_default.php
+@@ -414,7 +414,7 @@ $default_sub_of_inbox = true;
   * false. (Cyrus works fine whether it's true OR false).
   * @global bool $show_contain_subfolders_option
   */
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.11 2006/07/13 07:59:34 martti Exp $
  
  /**
   * These next two options set the defaults for the way that the
-@@ -445,7 +445,7 @@
+@@ -459,7 +459,7 @@ $noselect_fix_enable = false;
   *   $data_dir = SM_PATH . 'data/';
   * @global string $data_dir
   */
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.11 2006/07/13 07:59:34 martti Exp $
  
  /**
   * Attachments directory
-@@ -463,7 +463,7 @@
+@@ -477,7 +477,7 @@ $data_dir = SM_PATH . 'data/';
   *    + It should probably be another directory than data_dir.
   * @global string $attachment_dir
   */
