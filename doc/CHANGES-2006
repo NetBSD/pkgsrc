@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1927 2006/12/05 08:15:10 martti Exp $
+$NetBSD: CHANGES-2006,v 1.1928 2006/12/05 09:08:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5388,6 +5388,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/phpmyadmin to 2.9.1.1 [tron 2006-11-19]
 	Updated math/mathomatic to 12.6.7 [minskim 2006-11-19]
 	Updated wm/wmakerconf to 2.11nb8 [tron 2006-11-19]
+	Updated net/liblive to 2006.11.16a [rillig 2006-11-19]
 	Updated x11/kdelibs3 to 3.5.5nb1 [markd 2006-11-20]
 	Updated misc/kdepim3 to 3.5.5nb1 [markd 2006-11-20]
 	Updated print/kbibtex to 0.1.5nb1 [markd 2006-11-20]
@@ -5513,3 +5514,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/varnish version 1.0.2 [xtraeme 2006-12-04]
 	Updated emulators/bochs to 2.3 [jmmv 2006-12-04]
 	Updated editors/vim-share to 7.0.174 [martti 2006-12-05]
+	Updated devel/libidn to 0.6.9 [wiz 2006-12-05]
+	Updated audio/libtunepimp to 0.5.3 [wiz 2006-12-05]
+	Updated www/links to 2.1.0.26 [wiz 2006-12-05]
+	Updated www/links-gui to 2.1.0.26 [wiz 2006-12-05]
