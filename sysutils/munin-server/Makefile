@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/11/12 02:21:08 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/05 14:53:32 xtraeme Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S:-server-:_:}
-PKGNAME=	munin-server-1.3.1
-PKGREVISION=	2
+PKGNAME=	munin-server-1.3.2
+#PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
 COMMENT=	System monitoring tool, server version
 
+DEPENDS+=	p5-Date-Manip>=0:../../devel/p5-Date-Manip
+DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 DEPENDS+=	rrdtool>=1.2:../../databases/rrdtool
 DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
@@ -46,6 +48,8 @@ OWN_DIRS_PERMS+=${VARBASE}/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=${VARBASE}/run/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=${VARBASE}/log/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=${VARBASE}/munin/plugin-state ${MUNIN_USER} ${MUNIN_GROUP} 0775
+
+BUILD_DEFS+=	VARBASE
 
 INSTALL_TARGET=	install-main
 
@@ -86,7 +90,7 @@ CONF_FILES+=	${TMPL_EGDIR}/${f} ${INST_TMPL_DIR}/${f}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/build/server/munin.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/build/server/munin.conf ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../lang/perl5/module.mk"
