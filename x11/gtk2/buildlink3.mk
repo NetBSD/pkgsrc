@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2006/11/06 10:42:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2006/12/05 21:26:59 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -24,6 +24,24 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0\/(engines|filesystems|immodules|
 				{ print "@comment in gtk2: " $$0; next; }
 .endif	# GTK2_BUILDLINK3_MK
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !defined(PKG_BUILD_OPTIONS.gtk2+)
+PKG_BUILD_OPTIONS.gtk2+!= \
+	cd ${BUILDLINK_PKGSRCDIR.gtk2} && \
+	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.gtk2+=${PKG_BUILD_OPTIONS.gtk2+:Q}
+.endif
+MAKEVARS+=	PKG_BUILD_OPTIONS.gtk2+
+
+.if !empty(PKG_BUILD_OPTIONS.gtk2+:Mx11)
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.endif
+
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -32,10 +50,5 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0\/(engines|filesystems|immodules|
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
