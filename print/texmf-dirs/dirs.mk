@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.8 2006/06/24 10:39:32 hira Exp $
+# $NetBSD: dirs.mk,v 1.9 2006/12/05 21:00:12 minskim Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -12,6 +12,7 @@ TEXMF_DIRS+=	bibtex/bst
 TEXMF_DIRS+=	doc
 TEXMF_DIRS+=	doc/bibtex
 TEXMF_DIRS+=	doc/fonts
+TEXMF_DIRS+=	doc/generic
 TEXMF_DIRS+=	doc/latex
 TEXMF_DIRS+=	dvipdfm
 TEXMF_DIRS+=	fonts
@@ -38,8 +39,11 @@ TEXMF_DIRS+=	omega
 TEXMF_DIRS+=	omega/ocp
 TEXMF_DIRS+=	omega/otp
 TEXMF_DIRS+=	tex
+TEXMF_DIRS+=	tex/context
+TEXMF_DIRS+=	tex/generic
 TEXMF_DIRS+=	tex/lambda
 TEXMF_DIRS+=	tex/latex
+TEXMF_DIRS+=	tex/plain
 TEXMF_DIRS+=	web2c
 
 .if defined(_USE_TEXMF_DIRS) && !empty(_USE_TEXMF_DIRS)
