@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.18 2006/11/30 12:49:57 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.19 2006/12/05 22:29:27 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -92,7 +92,7 @@ case $arg in
 # (at least until it can be statically linked).
 -fast		) transform_to_and_split "-fast -xnolibmopt" ;;
 
-# Pass through those -f flags that SunPro understands.
+# Pass through those options that SunPro understands.
 -fd		|\
 -features*	|\
 -flags		|\
@@ -104,7 +104,8 @@ case $arg in
 -fsimple*	|\
 -fsingle	|\
 -fstore		|\
--ftrap*		) transform_pass ;;
+-ftrap*		|\
+-mt		) transform_pass ;;
 
 # Ignore all other -f flags.
 -f*		) transform_discard_with_warning ;;
