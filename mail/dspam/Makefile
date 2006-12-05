@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2006/06/18 08:29:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.52.4.1 2006/12/05 08:07:06 ghen Exp $
 
 DISTNAME=	dspam-3.6.8
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -12,8 +13,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 USE_TOOLS+=		perl:run pkg-config
-REPLACE_PERL=		src/tools/dspam_genaliases.in			\
-			src/tools/dspam_corpus.in			\
+REPLACE_PERL=		src/tools/dspam_train.in			\
 			webui/cgi-bin/*.cgi webui/cgi-bin/configure.pl.in
 
 PKGCONFIG_OVERRIDE+=	src/dspam.pc.in
