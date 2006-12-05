@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.49 2006/09/15 15:06:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.50 2006/12/05 21:26:59 minskim Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
 bin/gtk-update-icon-cache
-include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h
-include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h
+${X11}include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h
+${X11}include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h
@@ -48,7 +48,7 @@ include/gtk-2.0/gdk/gdkspawn.h
 include/gtk-2.0/gdk/gdktypes.h
 include/gtk-2.0/gdk/gdkvisual.h
 include/gtk-2.0/gdk/gdkwindow.h
-include/gtk-2.0/gdk/gdkx.h
+${X11}include/gtk-2.0/gdk/gdkx.h
 include/gtk-2.0/gtk/gtk.h
 include/gtk-2.0/gtk/gtkaboutdialog.h
 include/gtk-2.0/gtk/gtkaccelgroup.h
@@ -258,7 +258,7 @@ lib/gtk-2.0/2.10.0/immodules/im-thai-broken.la
 lib/gtk-2.0/2.10.0/immodules/im-ti-er.la
 lib/gtk-2.0/2.10.0/immodules/im-ti-et.la
 lib/gtk-2.0/2.10.0/immodules/im-viqr.la
-lib/gtk-2.0/2.10.0/immodules/im-xim.la
+${X11}lib/gtk-2.0/2.10.0/immodules/im-xim.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-ani.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-bmp.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-gif.la
@@ -276,17 +276,21 @@ lib/gtk-2.0/2.10.0/loaders/libpixbufloader-xpm.la
 lib/gtk-2.0/2.10.0/printbackends/libprintbackend-file.la
 lib/gtk-2.0/2.10.0/printbackends/libprintbackend-lpr.la
 lib/gtk-2.0/include/gdkconfig.h
-lib/libgdk-x11-2.0.la
+${QUARTZ}lib/libgdk-quartz-2.0.la
+${X11}lib/libgdk-x11-2.0.la
 lib/libgdk_pixbuf-2.0.la
-lib/libgdk_pixbuf_xlib-2.0.la
-lib/libgtk-x11-2.0.la
+${X11}lib/libgdk_pixbuf_xlib-2.0.la
+${QUARTZ}lib/libgtk-quartz-2.0.la
+${X11}lib/libgtk-x11-2.0.la
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
-lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
-lib/pkgconfig/gdk-x11-2.0.pc
+${QUARTZ}lib/pkgconfig/gdk-quartz-2.0.pc
+${X11}lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
+${X11}lib/pkgconfig/gdk-x11-2.0.pc
 lib/pkgconfig/gtk+-2.0.pc
+${QUARTZ}lib/pkgconfig/gtk+-quartz-2.0.pc
 lib/pkgconfig/gtk+-unix-print-2.0.pc
-lib/pkgconfig/gtk+-x11-2.0.pc
+${X11}lib/pkgconfig/gtk+-x11-2.0.pc
 man/man1/gdk-pixbuf-csource.1
 man/man1/gdk-pixbuf-query-loaders.1
 man/man1/gtk-query-immodules-2.0.1
@@ -1133,7 +1137,7 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrm include/gtk-unix-print-2.0/gtk
 @dirrm include/gtk-unix-print-2.0
 @dirrm include/gtk-2.0/gtk
-@dirrm include/gtk-2.0/gdk-pixbuf-xlib
+${X11}@dirrm include/gtk-2.0/gdk-pixbuf-xlib
 @dirrm include/gtk-2.0/gdk-pixbuf
 @dirrm include/gtk-2.0/gdk
 @dirrm include/gtk-2.0
