@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5737 2006/12/05 10:29:17 wiz Exp $
+$NetBSD: TODO,v 1.5738 2006/12/05 10:48:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -585,7 +585,7 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libetpan-0.46 [pkg/34294]
 	o libetpan-0.48
-	o libevent-1.2
+	o libevent-1.2a
 	o libextractor-0.5.16
 	o libflash-0.4.13
 	o libggi-2.2.1
