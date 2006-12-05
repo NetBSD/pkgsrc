@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/08/14 15:57:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.19.2.1 2006/12/05 08:21:34 ghen Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -62,6 +62,8 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.4.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.5.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.6.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.7.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.8.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.9.txt
 share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
@@ -251,7 +253,6 @@ share/squirrelmail/plugins/mail_fetch/functions.php
 share/squirrelmail/plugins/mail_fetch/index.php
 share/squirrelmail/plugins/mail_fetch/options.php
 share/squirrelmail/plugins/mail_fetch/setup.php
-share/squirrelmail/plugins/make_archive.pl
 share/squirrelmail/plugins/message_details/index.php
 share/squirrelmail/plugins/message_details/message_details_bottom.php
 share/squirrelmail/plugins/message_details/message_details_main.php
