@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/07/21 23:28:37 abs Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/05 14:53:32 xtraeme Exp $
 #
 
 DISTNAME=	munin_${VER}
-VER=		1.3.1
+VER=		1.3.2
 PKGNAME=	munin-node-${VER}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
-PKGREVISION=	4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
@@ -16,7 +15,7 @@ DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run tar
 USE_TOOLS+=	gmake
 USE_PKGINSTALL=	YES
 
@@ -67,6 +66,8 @@ FILES_SUBST+=	MUNIN_GROUP=${MUNIN_GROUP:Q}
 
 MESSAGE_SUBST+=	VARBASE=${VARBASE:Q}
 
+BUILD_DEFS+=	VARBASE
+
 RCD_SCRIPTS+=	munin-node
 
 EGDIR=		${PREFIX}/share/examples/munin
@@ -79,7 +80,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/build/node/munin-node.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/build/node/munin-node.conf ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../lang/python/application.mk"
