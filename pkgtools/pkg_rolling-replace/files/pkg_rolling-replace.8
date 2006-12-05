@@ -1,0 +1,91 @@
+.\" $NetBSD: pkg_rolling-replace.8,v 1.1.1.1 2006/12/05 18:23:52 gdt Exp $
+.Dd August 7, 2006
+.Dt PKG_ROLLING-REPLACE 8
+.Sh NAME
+.Nm pkg_rolling-replace
+.Nd rebuild or update packages using 'make replace' in tsorted order
+.Sh SYNOPSIS
+.Nm
+.Op Fl hnuvx
+.Op Fl x Ar pkgs
+.Sh DESCRIPTION
+.Nm
+runs 'make replace' on packages that have been marked with the
+ 'unsafe_depends=YES' flag or the 'rebuild=YES' flag, optionally
+replacing any outdated packages (as reported by
+.Xr pkg_chk 8 )
+as well.
+.Pp
+Whenever 'make replace' is run on a package, all installed packages
+that depend on it are marked with the 'unsafe_depends=YES' flag, which
+indicates that they may no longer be ABI-compatible with the replaced
+package.  Running
+.Nm
+with no arguments will restore such packages to a safe state by
+building a dependency graph, running
+.Xr tsort 1
+on it, and running 'make replace' in the resulting topological order.
+The dependency graph and topological sort are re-calculated after each
+'make replace', in case it causes additional
+packages to be marked unsafe.
+.Pp
+The user can mark additional packages to be rebuilt by setting the
+ 'rebuild=YES' flag on them using the command 
+.Dl % pkg_admin set rebuild=YES <pkg>
+.Pp
+If the
+.Fl u
+option is given,
+.Nm
+will use
+.Xl pkg_chk 8
+to check for packages for which the version in pkgsrc is different
+than the installed version, and run 'make replace' on those packages
+as well (tsorting them along with the unsafe/rebuild packages).
+(Usually this results in packages being upgraded to newer versions,
+assuming the pkgsrc tree is more recent than the currently installed
+packages.)
+.Pp
+.Ss Options
+.Bl -tag -width xxxxxxxx
+.It Fl h
+Brief help.
+.It Fl n
+Display actions that would be taken, but don't actually run 'make
+replace' or change any flags on installed packages.  This option
+attempts to calculate the new packages that would be marked unsafe
+after each 'make replace'.
+.It Fl u
+Use
+.Xl pkg_chk 8
+to check for outdated packages, and replace those too.
+.It Fl v
+Verbose output.
+.It Fl x Ar pkgs
+Exclude the comma-separated list of packages from the update check
+when
+.Fl u
+is given (does not exclude unsafe or rebuild-requested packages).
+.El
+.Sh ENVIRONMENT
+.Nm
+uses the following environment variables.
+.Bl -tag -width xxxx
+.It Ev PKGSRCDIR
+Base of pkgsrc tree.  Defaults to
+.Pa /usr/pkgsrc
+.It Ev PKG_DBDIR
+pkgsrc database directory.
+If not set in environment then defaults to
+.Pa /var/db/pkg
+.El
+.Sh AUTHORS
+.An Nick Goffee
+.Aq ngoffee@bbn.com ,
+with initial idea and many suggestions from
+.An Greg Troxel
+.Aq gdt@ir.bbn.com .
+.Sh BUGS
+.Nm
+does not run fully automatically when any significant number of
+packages need to be replaced.
