@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/12/04 13:32:42 tron Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/05 17:43:06 tron Exp $
 
 DISTNAME=		nspr-4.6.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_MOZILLA:S/mozilla\//nspr\//g:=v4.6.1/src/}
 
@@ -53,7 +53,16 @@ PLIST_SUBST+=		SUN4U_32=${SUN4U_32}
 
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
+
+SUBST_CLASSES+=		libpath
+SUBST_STAGE.libpath=	post-configure
+SUBST_FILES.libpath=	config/autoconf.mk
+SUBST_SED.libpath=	-e 's,@executable_path/$$@,${PREFIX}/lib/nspr/$$(notdir $$@),'
 .endif
+
+post-extract:
+	${CHMOD} -R g-w ${WRKSRC}/..
+	${CHMOD} -x ${WRKSRC}/../pr/include/prvrsion.h
 
 pre-configure:
 	cd ${WRKSRC}/.. && autoconf
