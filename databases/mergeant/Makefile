@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2006/11/30 20:48:15 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/12/05 10:23:57 wiz Exp $
 #
 
-DISTNAME=		mergeant-0.63
-PKGREVISION=		1
+DISTNAME=		mergeant-0.64
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/mergeant/0.63/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/mergeant/0.64/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -17,6 +16,9 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-gtk-doc
 USE_LIBTOOL=		YES
+
+BUILDLINK_API_DEPENDS.libgda?=		libgda>=1.99.0
+BUILDLINK_API_DEPENDS.libgnomedb?=	libgnomedb>=1.99.0
 
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
