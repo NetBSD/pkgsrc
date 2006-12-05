@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/12/05 13:01:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.38 2006/12/05 21:00:26 tron Exp $
 #
 
 DISTNAME=	avidemux_2.3.0
@@ -32,6 +32,10 @@ CONFIGURE_ARGS+=	\
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avidemux
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS=	mmx
+.endif
+
+.if ${OPSYS} == "Darwin"
+CPPFLAGS+=		-D__maxosx__
 .endif
 
 .include "../../mk/bsd.options.mk"
