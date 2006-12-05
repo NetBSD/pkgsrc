@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/12/03 10:11:49 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/12/05 18:04:18 tron Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SPIDERMONKEY_BUILDLINK3_MK:=	${SPIDERMONKEY_BUILDLINK3_MK}+
@@ -13,7 +13,11 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}spidermonkey
 
 .if !empty(SPIDERMONKEY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.spidermonkey+=	spidermonkey>=1.5
+.if ${OPSYS} == "Darwin"
 BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb6
+.else
+BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb8
+.endif
 BUILDLINK_PKGSRCDIR.spidermonkey?=	../../lang/spidermonkey
 .endif	# SPIDERMONKEY_BUILDLINK3_MK
 
