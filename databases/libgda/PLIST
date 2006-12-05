@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/11/13 21:37:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/12/05 10:22:27 wiz Exp $
 bin/gda-author-dict-file
 bin/gda-diagnose
 bin/gda-inspect-dict-file
@@ -6,112 +6,108 @@ bin/gda-list-config
 bin/gda-report-test
 bin/gda-run
 bin/gda-test-connection
-bin/gda-test-delimiter
-bin/gda-test-models
-bin/gda-test-server-operation
-bin/gda-test-sql
-include/libgda-1.9/libgda-report/gda-report-document.h
-include/libgda-1.9/libgda-report/gda-report-item-detail.h
-include/libgda-1.9/libgda-report/gda-report-item-label.h
-include/libgda-1.9/libgda-report/gda-report-item-pagefooter.h
-include/libgda-1.9/libgda-report/gda-report-item-pageheader.h
-include/libgda-1.9/libgda-report/gda-report-item-repfield.h
-include/libgda-1.9/libgda-report/gda-report-item-report.h
-include/libgda-1.9/libgda-report/gda-report-item-reportfooter.h
-include/libgda-1.9/libgda-report/gda-report-item-reportheader.h
-include/libgda-1.9/libgda-report/gda-report-item-sqlquery.h
-include/libgda-1.9/libgda-report/gda-report-item.h
-include/libgda-1.9/libgda-report/gda-report-result.h
-include/libgda-1.9/libgda-report/gda-report-types.h
-include/libgda-1.9/libgda-report/gda-report-valid.h
-include/libgda-1.9/libgda-report/gda-report.h
-include/libgda-1.9/libgda/gda-blob.h
-include/libgda-1.9/libgda/gda-client.h
-include/libgda-1.9/libgda/gda-column-index.h
-include/libgda-1.9/libgda/gda-column.h
-include/libgda-1.9/libgda/gda-command.h
-include/libgda-1.9/libgda/gda-config.h
-include/libgda-1.9/libgda/gda-connection-event.h
-include/libgda-1.9/libgda/gda-connection.h
-include/libgda-1.9/libgda/gda-data-access-wrapper.h
-include/libgda-1.9/libgda/gda-data-handler.h
-include/libgda-1.9/libgda/gda-data-model-array.h
-include/libgda-1.9/libgda/gda-data-model-extra.h
-include/libgda-1.9/libgda/gda-data-model-filter-sql.h
-include/libgda-1.9/libgda/gda-data-model-hash.h
-include/libgda-1.9/libgda/gda-data-model-import.h
-include/libgda-1.9/libgda/gda-data-model-index.h
-include/libgda-1.9/libgda/gda-data-model-iter.h
-include/libgda-1.9/libgda/gda-data-model-private.h
-include/libgda-1.9/libgda/gda-data-model-query.h
-include/libgda-1.9/libgda/gda-data-model-row.h
-include/libgda-1.9/libgda/gda-data-model.h
-include/libgda-1.9/libgda/gda-data-proxy.h
-include/libgda-1.9/libgda/gda-decl.h
-include/libgda-1.9/libgda/gda-dict-aggregate.h
-include/libgda-1.9/libgda/gda-dict-constraint.h
-include/libgda-1.9/libgda/gda-dict-database.h
-include/libgda-1.9/libgda/gda-dict-field.h
-include/libgda-1.9/libgda/gda-dict-function.h
-include/libgda-1.9/libgda/gda-dict-private.h
-include/libgda-1.9/libgda/gda-dict-reg-aggregates.h
-include/libgda-1.9/libgda/gda-dict-reg-functions.h
-include/libgda-1.9/libgda/gda-dict-reg-queries.h
-include/libgda-1.9/libgda/gda-dict-reg-types.h
-include/libgda-1.9/libgda/gda-dict-table.h
-include/libgda-1.9/libgda/gda-dict-type.h
-include/libgda-1.9/libgda/gda-dict.h
-include/libgda-1.9/libgda/gda-entity-field.h
-include/libgda-1.9/libgda/gda-entity.h
-include/libgda-1.9/libgda/gda-enum-types.h
-include/libgda-1.9/libgda/gda-enums.h
-include/libgda-1.9/libgda/gda-graphviz.h
-include/libgda-1.9/libgda/gda-log.h
-include/libgda-1.9/libgda/gda-marshal.h
-include/libgda-1.9/libgda/gda-object-ref.h
-include/libgda-1.9/libgda/gda-object.h
-include/libgda-1.9/libgda/gda-parameter-list.h
-include/libgda-1.9/libgda/gda-parameter.h
-include/libgda-1.9/libgda/gda-quark-list.h
-include/libgda-1.9/libgda/gda-query-condition.h
-include/libgda-1.9/libgda/gda-query-field-agg.h
-include/libgda-1.9/libgda/gda-query-field-all.h
-include/libgda-1.9/libgda/gda-query-field-field.h
-include/libgda-1.9/libgda/gda-query-field-func.h
-include/libgda-1.9/libgda/gda-query-field-value.h
-include/libgda-1.9/libgda/gda-query-field.h
-include/libgda-1.9/libgda/gda-query-join.h
-include/libgda-1.9/libgda/gda-query-object.h
-include/libgda-1.9/libgda/gda-query-parsing.h
-include/libgda-1.9/libgda/gda-query-private.h
-include/libgda-1.9/libgda/gda-query-target.h
-include/libgda-1.9/libgda/gda-query.h
-include/libgda-1.9/libgda/gda-referer.h
-include/libgda-1.9/libgda/gda-renderer.h
-include/libgda-1.9/libgda/gda-row.h
-include/libgda-1.9/libgda/gda-server-operation.h
-include/libgda-1.9/libgda/gda-server-provider-extra.h
-include/libgda-1.9/libgda/gda-server-provider-private.h
-include/libgda-1.9/libgda/gda-server-provider.h
-include/libgda-1.9/libgda/gda-threader.h
-include/libgda-1.9/libgda/gda-transaction.h
-include/libgda-1.9/libgda/gda-util.h
-include/libgda-1.9/libgda/gda-value.h
-include/libgda-1.9/libgda/gda-xml-storage.h
-include/libgda-1.9/libgda/graph/gda-dict-reg-graphs.h
-include/libgda-1.9/libgda/graph/gda-graph-item.h
-include/libgda-1.9/libgda/graph/gda-graph-query.h
-include/libgda-1.9/libgda/graph/gda-graph.h
-include/libgda-1.9/libgda/handlers/gda-handler-bin.h
-include/libgda-1.9/libgda/handlers/gda-handler-boolean.h
-include/libgda-1.9/libgda/handlers/gda-handler-numerical.h
-include/libgda-1.9/libgda/handlers/gda-handler-string.h
-include/libgda-1.9/libgda/handlers/gda-handler-time.h
-include/libgda-1.9/libgda/handlers/gda-handler-type.h
-include/libgda-1.9/libgda/libgda.h
-include/libgda-1.9/libsql/sql_parser.h
-include/libgda-1.9/sql-delimiter/gda-sql-delimiter.h
-lib/libgda-1.9/providers/libgda-sqlite.la
+include/libgda-1.99/libgda-report/gda-report-document.h
+include/libgda-1.99/libgda-report/gda-report-item-detail.h
+include/libgda-1.99/libgda-report/gda-report-item-label.h
+include/libgda-1.99/libgda-report/gda-report-item-pagefooter.h
+include/libgda-1.99/libgda-report/gda-report-item-pageheader.h
+include/libgda-1.99/libgda-report/gda-report-item-repfield.h
+include/libgda-1.99/libgda-report/gda-report-item-report.h
+include/libgda-1.99/libgda-report/gda-report-item-reportfooter.h
+include/libgda-1.99/libgda-report/gda-report-item-reportheader.h
+include/libgda-1.99/libgda-report/gda-report-item-sqlquery.h
+include/libgda-1.99/libgda-report/gda-report-item.h
+include/libgda-1.99/libgda-report/gda-report-result.h
+include/libgda-1.99/libgda-report/gda-report-types.h
+include/libgda-1.99/libgda-report/gda-report-valid.h
+include/libgda-1.99/libgda-report/gda-report.h
+include/libgda-1.99/libgda/gda-blob.h
+include/libgda-1.99/libgda/gda-client.h
+include/libgda-1.99/libgda/gda-column-index.h
+include/libgda-1.99/libgda/gda-column.h
+include/libgda-1.99/libgda/gda-command.h
+include/libgda-1.99/libgda/gda-config.h
+include/libgda-1.99/libgda/gda-connection-event.h
+include/libgda-1.99/libgda/gda-connection.h
+include/libgda-1.99/libgda/gda-data-access-wrapper.h
+include/libgda-1.99/libgda/gda-data-handler.h
+include/libgda-1.99/libgda/gda-data-model-array.h
+include/libgda-1.99/libgda/gda-data-model-extra.h
+include/libgda-1.99/libgda/gda-data-model-filter-sql.h
+include/libgda-1.99/libgda/gda-data-model-hash.h
+include/libgda-1.99/libgda/gda-data-model-import.h
+include/libgda-1.99/libgda/gda-data-model-index.h
+include/libgda-1.99/libgda/gda-data-model-iter.h
+include/libgda-1.99/libgda/gda-data-model-private.h
+include/libgda-1.99/libgda/gda-data-model-query.h
+include/libgda-1.99/libgda/gda-data-model-row.h
+include/libgda-1.99/libgda/gda-data-model.h
+include/libgda-1.99/libgda/gda-data-proxy.h
+include/libgda-1.99/libgda/gda-decl.h
+include/libgda-1.99/libgda/gda-dict-aggregate.h
+include/libgda-1.99/libgda/gda-dict-constraint.h
+include/libgda-1.99/libgda/gda-dict-database.h
+include/libgda-1.99/libgda/gda-dict-field.h
+include/libgda-1.99/libgda/gda-dict-function.h
+include/libgda-1.99/libgda/gda-dict-private.h
+include/libgda-1.99/libgda/gda-dict-reg-aggregates.h
+include/libgda-1.99/libgda/gda-dict-reg-functions.h
+include/libgda-1.99/libgda/gda-dict-reg-queries.h
+include/libgda-1.99/libgda/gda-dict-reg-types.h
+include/libgda-1.99/libgda/gda-dict-table.h
+include/libgda-1.99/libgda/gda-dict-type.h
+include/libgda-1.99/libgda/gda-dict.h
+include/libgda-1.99/libgda/gda-entity-field.h
+include/libgda-1.99/libgda/gda-entity.h
+include/libgda-1.99/libgda/gda-enum-types.h
+include/libgda-1.99/libgda/gda-enums.h
+include/libgda-1.99/libgda/gda-graphviz.h
+include/libgda-1.99/libgda/gda-log.h
+include/libgda-1.99/libgda/gda-marshal.h
+include/libgda-1.99/libgda/gda-object-ref.h
+include/libgda-1.99/libgda/gda-object.h
+include/libgda-1.99/libgda/gda-parameter-list.h
+include/libgda-1.99/libgda/gda-parameter.h
+include/libgda-1.99/libgda/gda-quark-list.h
+include/libgda-1.99/libgda/gda-query-condition.h
+include/libgda-1.99/libgda/gda-query-field-agg.h
+include/libgda-1.99/libgda/gda-query-field-all.h
+include/libgda-1.99/libgda/gda-query-field-field.h
+include/libgda-1.99/libgda/gda-query-field-func.h
+include/libgda-1.99/libgda/gda-query-field-value.h
+include/libgda-1.99/libgda/gda-query-field.h
+include/libgda-1.99/libgda/gda-query-join.h
+include/libgda-1.99/libgda/gda-query-object.h
+include/libgda-1.99/libgda/gda-query-parsing.h
+include/libgda-1.99/libgda/gda-query-private.h
+include/libgda-1.99/libgda/gda-query-target.h
+include/libgda-1.99/libgda/gda-query.h
+include/libgda-1.99/libgda/gda-referer.h
+include/libgda-1.99/libgda/gda-renderer.h
+include/libgda-1.99/libgda/gda-row.h
+include/libgda-1.99/libgda/gda-server-operation.h
+include/libgda-1.99/libgda/gda-server-provider-extra.h
+include/libgda-1.99/libgda/gda-server-provider-private.h
+include/libgda-1.99/libgda/gda-server-provider.h
+include/libgda-1.99/libgda/gda-threader.h
+include/libgda-1.99/libgda/gda-transaction.h
+include/libgda-1.99/libgda/gda-util.h
+include/libgda-1.99/libgda/gda-value.h
+include/libgda-1.99/libgda/gda-xml-storage.h
+include/libgda-1.99/libgda/graph/gda-dict-reg-graphs.h
+include/libgda-1.99/libgda/graph/gda-graph-item.h
+include/libgda-1.99/libgda/graph/gda-graph-query.h
+include/libgda-1.99/libgda/graph/gda-graph.h
+include/libgda-1.99/libgda/handlers/gda-handler-bin.h
+include/libgda-1.99/libgda/handlers/gda-handler-boolean.h
+include/libgda-1.99/libgda/handlers/gda-handler-numerical.h
+include/libgda-1.99/libgda/handlers/gda-handler-string.h
+include/libgda-1.99/libgda/handlers/gda-handler-time.h
+include/libgda-1.99/libgda/handlers/gda-handler-type.h
+include/libgda-1.99/libgda/libgda.h
+include/libgda-1.99/libsql/sql_parser.h
+include/libgda-1.99/sql-delimiter/gda-sql-delimiter.h
+lib/libgda-1.99/providers/libgda-sqlite.la
 lib/libgda-3.la
 lib/libgda-report-3.la
 lib/libgda_graph-3.la
@@ -121,6 +117,7 @@ lib/libgdasql.la
 lib/pkgconfig/libgda-2.0.pc
 share/examples/libgda/config
 share/examples/libgda/sales_test.db
+share/gtk-doc/html/libgda/DataModels.png
 share/gtk-doc/html/libgda/GdaBlob.html
 share/gtk-doc/html/libgda/GdaClient.html
 share/gtk-doc/html/libgda/GdaColumn.html
@@ -180,16 +177,15 @@ share/gtk-doc/html/libgda/GdaThreader.html
 share/gtk-doc/html/libgda/GdaTransaction.html
 share/gtk-doc/html/libgda/GdaXmlStorage.html
 share/gtk-doc/html/libgda/architecture.html
-share/gtk-doc/html/libgda/ch04s03.html
-share/gtk-doc/html/libgda/ch05s04.html
-share/gtk-doc/html/libgda/ch05s05.html
-share/gtk-doc/html/libgda/ch05s06.html
-share/gtk-doc/html/libgda/ch06.html
-share/gtk-doc/html/libgda/ch11.html
+share/gtk-doc/html/libgda/ch05s03.html
+share/gtk-doc/html/libgda/ch06s02.html
+share/gtk-doc/html/libgda/ch06s03.html
+share/gtk-doc/html/libgda/ch07.html
 share/gtk-doc/html/libgda/ch12.html
 share/gtk-doc/html/libgda/ch13.html
-share/gtk-doc/html/libgda/ch15.html
+share/gtk-doc/html/libgda/ch14.html
 share/gtk-doc/html/libgda/ch16.html
+share/gtk-doc/html/libgda/ch17.html
 share/gtk-doc/html/libgda/compiling.html
 share/gtk-doc/html/libgda/connection.html
 share/gtk-doc/html/libgda/connections.html
@@ -209,6 +205,7 @@ share/gtk-doc/html/libgda/fdl-section8.html
 share/gtk-doc/html/libgda/fdl-section9.html
 share/gtk-doc/html/libgda/fdl-using.html
 share/gtk-doc/html/libgda/fdl.html
+share/gtk-doc/html/libgda/features.html
 share/gtk-doc/html/libgda/fetch-blob.html
 share/gtk-doc/html/libgda/get-last-insert-id.html
 share/gtk-doc/html/libgda/getting_started.html
@@ -223,6 +220,7 @@ share/gtk-doc/html/libgda/introduction.html
 share/gtk-doc/html/libgda/ix01.html
 share/gtk-doc/html/libgda/left.png
 share/gtk-doc/html/libgda/libgda-Configuration.html
+share/gtk-doc/html/libgda/libgda-Convenient-functions.html
 share/gtk-doc/html/libgda/libgda-Default-Data-handlers.html
 share/gtk-doc/html/libgda/libgda-Gda-Value.html
 share/gtk-doc/html/libgda/libgda-GdaCommand.html
@@ -281,8 +279,6 @@ share/gtk-doc/html/libgda/libgda.devhelp2
 share/gtk-doc/html/libgda/main_example.html
 share/gtk-doc/html/libgda/manage-gdavalue.html
 share/gtk-doc/html/libgda/managing-errors.html
-share/gtk-doc/html/libgda/migration-configuration.html
-share/gtk-doc/html/libgda/migration-executing-commands.html
 share/gtk-doc/html/libgda/migration.html
 share/gtk-doc/html/libgda/misc.html
 share/gtk-doc/html/libgda/part_begin.html
@@ -366,12 +362,12 @@ share/locale/zh_TW/LC_MESSAGES/libgda-3.mo
 @dirrm share/libgda
 @dirrm share/gtk-doc/html/libgda
 @dirrm share/examples/libgda
-@dirrm lib/libgda-1.9/providers
-@dirrm lib/libgda-1.9
-@dirrm include/libgda-1.9/sql-delimiter
-@dirrm include/libgda-1.9/libsql
-@dirrm include/libgda-1.9/libgda/handlers
-@dirrm include/libgda-1.9/libgda/graph
-@dirrm include/libgda-1.9/libgda-report
-@dirrm include/libgda-1.9/libgda
-@dirrm include/libgda-1.9
+@dirrm lib/libgda-1.99/providers
+@dirrm lib/libgda-1.99
+@dirrm include/libgda-1.99/sql-delimiter
+@dirrm include/libgda-1.99/libsql
+@dirrm include/libgda-1.99/libgda/handlers
+@dirrm include/libgda-1.99/libgda/graph
+@dirrm include/libgda-1.99/libgda-report
+@dirrm include/libgda-1.99/libgda
+@dirrm include/libgda-1.99
