@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.43 2006/11/13 21:37:12 drochner Exp $
+# $NetBSD: Makefile.common,v 1.44 2006/12/05 10:22:27 wiz Exp $
 #
 
-DISTNAME=		libgda-1.9.103
+DISTNAME=		libgda-1.99.1
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.9/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.99/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
