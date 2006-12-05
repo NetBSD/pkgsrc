@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/07/23 14:25:46 rillig Exp $
+# $NetBSD: Makefile,v 1.29.2.1 2006/12/05 07:57:12 ghen Exp $
 
 DISTNAME=	lha-114i
 PKGNAME=	lha-114.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/ \
 		ftp://ftp.win.ne.jp/pub/misc/

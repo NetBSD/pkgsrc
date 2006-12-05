@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2005/10/03 11:20:55 joerg Exp $
+$NetBSD: patch-al,v 1.1.8.1 2006/12/05 07:57:13 ghen Exp $
 
---- src/lha_macro.h.orig	2005-07-22 14:26:32.000000000 +0000
+--- src/lha_macro.h.orig	2000-10-04 23:57:38.000000000 +0900
 +++ src/lha_macro.h
 @@ -68,7 +68,6 @@ extern char    *realloc();
  #endif
@@ -10,3 +10,12 @@ $NetBSD: patch-al,v 1.1 2005/10/03 11:20:55 joerg Exp $
  
  #define	FALSE			0
  #define TRUE			1
+@@ -324,6 +323,8 @@ typedef short   				node;
+ /* Individual macro define													*/
+ /* ------------------------------------------------------------------------ */
+ 
++#define MIN(a,b) ((a) <= (b) ? (a) : (b))
++
+ /* from crcio.c */
+ #define CRCPOLY			0xA001		/* CRC-16 */
+ #define UPDATE_CRC(c)	crc = crctable[(crc ^ (c)) & 0xFF] ^ (crc >> CHAR_BIT)
