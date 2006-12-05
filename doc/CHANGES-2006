@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1938 2006/12/05 18:04:40 tron Exp $
+$NetBSD: CHANGES-2006,v 1.1939 2006/12/05 18:25:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added multimedia/gnash version 0.7.2 [wiz 2006-12-05]
 	Updated devel/nspr to 4.6.1nb3 [tron 2006-12-05]
 	Updated lang/spidermonkey to 1.5nb8 [tron 2006-12-05]
+	Added pkgtools/pkg_rolling-replace version 0.04nb2 [gdt 2006-12-05]
