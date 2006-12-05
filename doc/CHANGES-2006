@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1933 2006/12/05 13:18:01 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1934 2006/12/05 14:55:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5527,3 +5527,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey to 2.8.2 [wiz 2006-12-05]
 	Updated net/mldonkey-gui to 2.8.2 [wiz 2006-12-05]
 	Updated mail/dspam to 3.6.8nb2 [obache 2006-12-05]
+	Updated sysutils/munin-docs to 1.3.2 [xtraeme 2006-12-05]
+	Updated sysutils/munin-node to 1.3.2 [xtraeme 2006-12-05]
+	Updated sysutils/munin-server to 1.3.2 [xtraeme 2006-12-05]
+
