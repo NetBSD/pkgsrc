@@ -1,0 +1,273 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/06 00:49:01 wiz Exp $
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/AUTHORS
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/ChangeLog
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/FILES
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/INSTALL
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/README
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/TODO
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/brave-gnu-world-logo-mask.jpg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/brave-gnu-world-logo.25.eps
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/brave-gnu-world-logo.25.jpg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/brave-gnu-world-logo.eps
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/brave-gnu-world-logo.jpg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/pgfmanual-mindmap-1.pdf
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images/pgfmanual-mindmap-2.pdf
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses/LICENSE
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses/gnu-free-documentation-license-1.2.txt
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses/gnu-public-license-2.txt
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses/latex-project-public-license-1.3c.txt
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses/manifest-code.txt
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses/manifest-documentation.txt
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/macros/pgfmanual-en-macros.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-actions.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-arrows.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-design.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-images.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-layers.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-nodes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-paths.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-patterns.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-plots.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-points.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-quick.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-scopes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-shadings.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-snakes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-base-transformations.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-drivers.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-guidelines.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-installation.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-introduction.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-3d.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-arrows.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-automata.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-backgrounds.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-edges.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-er.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-mindmaps.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-patterns.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-petri.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-plot-handlers.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-plot-marks.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-shapes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-snakes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-library-trees.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-license.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-main.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-pages.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-pgffor.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-commands.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-overview.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-paths.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-protocol.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-actions.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-coordinates.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-design.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-paths.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-scopes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-shapes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-transformations.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tikz-trees.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tutorial-nodes.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-tutorial.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-en-xxcolor.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/pgfmanual-main.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-asymptotic-example.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-asymptotic-example.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-exp.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-exp.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-parametric-example.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-parametric-example.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-sin.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-sin.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-x.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgf-x.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgfmanual-sine.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgfmanual-sine.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgfplotgnuplot-example.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots/pgfplotgnuplot-example.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm/en/Makefile
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm/en/pgfmanual.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm/pgfmanual-dvipdfm.cfg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips/en/Makefile
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips/en/pgfmanual.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips/pgfmanual-dvips.cfg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex/en/Makefile
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex/en/pgfmanual.pdf
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex/en/pgfmanual.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex/pgfmanual-pdftex.cfg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht/en/Makefile
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht/en/pgfmanual.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht/pgfmanual-tex4ht.cfg
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/Makefile
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/pgfmanual.tex
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-asymptotic-example.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-asymptotic-example.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-exp.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-exp.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-parametric-example.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-parametric-example.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-sin.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-sin.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-x.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgf-x.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgfmanual-sine.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgfmanual-sine.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgfplotgnuplot-example.gnuplot
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots/pgfplotgnuplot-example.table
+${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/pgfmanual-vtex.cfg
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgf.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfbim.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfbla.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfbpl.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfbpt.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfbsh.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfbsn.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer/t-pgfcor.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/frontendlayer/t-tikz.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/systemlayer/t-pgfsys.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/utilities/t-pgffor.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/utilities/t-pgfmod.tex
+${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/utilities/t-pgfrcs.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfbaseimage.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfbaselayers.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfbasepatterns.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfbaseplot.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfbaseshapes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfbasesnakes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcore.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcoremath.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/frontendlayer/tikz.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibraryshapes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarysnakes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikz3d.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzarrows.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzautomata.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzbackgrounds.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzer.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzmindmap.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzpatterns.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzpetri.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzplothandlers.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzplotmarks.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzshapes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikzsnakes.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikztopaths.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries/pgflibrarytikztrees.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgf.cfg
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-common-postscript.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-common-svg.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-dvi.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-dvipdfm.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-dvips.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-tex4ht.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-textures.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys-vtex.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsys.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities/pgffor.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities/pgfrcs.code.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities/pgfutil-common.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities/pgfutil-context.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities/pgfutil-latex.def
+${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities/pgfutil-plain.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgf.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfbaseimage.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfbaselayers.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfbasepatterns.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfbaseplot.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfbaseshapes.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfbasesnakes.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer/pgfcore.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgfarrows.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgfautomata.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgfheaps.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibraryarrows.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibraryautomata.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibraryplothandlers.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibraryplotmarks.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibraryshapes.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibrarysnakes.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibrarytikzbackgrounds.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgflibrarytikztrees.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgfnodes.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility/pgfshade.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/frontendlayer/pgfpict2e.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/frontendlayer/tikz.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/systemlayer/pgfsys.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities/pgffor.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities/pgfpages.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities/pgfrcs.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities/pgfreadexternal.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities/pgfwriteexternal.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities/xxcolor.sty
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgf.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfbaseimage.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfbaselayers.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfbasepatterns.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfbaseplot.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfbaseshapes.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfbasesnakes.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer/pgfcore.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/frontendlayer/tikz.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/systemlayer/pgfsys.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities/pgffor.tex
+${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities/pgfrcs.tex
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/systemlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/frontendlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/systemlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/frontendlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/frontendlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/utilities
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/systemlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/frontendlayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht/en
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex/en
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips/en
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm/en
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/macros
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf
