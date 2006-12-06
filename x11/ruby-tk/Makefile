@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.25 2006/11/10 16:54:54 tv Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/06 16:33:16 taca Exp $
 
-DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGPREFIX}-tk-${RUBY_VERSION}
+DISTNAME=		${RUBY_DISTNAME}
+PKGNAME=		${RUBY_PKGPREFIX}-tk-${RUBY_VERSION_SUFFIX}
 #PKGREVISION=
-CATEGORIES=	x11 ruby
-MASTER_SITES=	${MASTER_SITE_RUBY}
+CATEGORIES=		x11 ruby
+MASTER_SITES=		${MASTER_SITE_RUBY}
 
-PATCH_SITES=	${MASTER_SITE_LOCAL}
-PATCHFILES=	ruby-1.8.5-tk-${RUBY18_PATCH_DATE}.patch.bz2
-PATCH_DIST_STRIP= -p2
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		ruby-1.8.5-tk-${RUBY18_PATCH_DATE}.patch.bz2
+PATCH_DIST_STRIP=	-p3
 
-MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	${RUBY_HOMEPAGE}
-COMMENT=	Ruby interface to the Tk widget set including Tcl/TK library
+MAINTAINER=		taca@NetBSD.org
+HOMEPAGE=		${RUBY_HOMEPAGE}
+COMMENT=		Ruby interface to the Tk widget set
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
@@ -22,8 +22,13 @@ CONFIGURE_ARGS+=	--with-X11-dir=${X11BASE:Q}
 
 REPLACE_RUBY_DIRS=	${WRKSRC}/sample
 
-pre-configure:
-	${FIND} ${WRKSRC} \( -name '*.orig' -o -name '*.bak' \) -print | ${XARGS} ${RM} -f
+post-extract:
+	${CHMOD} ${SHAREMODE} ${WRKSRC}/sample/tkextlib/tktable/tcllogo.gif
+
+pre-install:
+	cd ${WRKSRC}; \
+	${FIND} . \( -name '*.bak' -o -name '*.orig' -o \
+			-name '*.orig_dist' \) -exec ${RM} -f {} \;
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tk
