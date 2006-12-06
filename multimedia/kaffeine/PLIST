@@ -1,0 +1,140 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/06 18:30:11 xtraeme Exp $
+bin/kaffeine
+include/kaffeine/kaffeineaudioencoder.h
+include/kaffeine/kaffeinepart.h
+include/kaffeine/mrl.h
+include/kaffeine/xine_part.h
+include/kaffeine/xine_part_iface.h
+lib/kde3/libkaffeinemp3lame.la
+lib/kde3/libkaffeineoggvorbis.la
+lib/kde3/libxinepart.la
+lib/libkaffeineaudioencoder.la
+lib/libkaffeinepart.la
+share/applications/kde/kaffeine.desktop
+share/doc/kde/HTML/en/kaffeine/discwindow.png
+share/doc/kde/HTML/en/kaffeine/dvbbroadcast.png
+share/doc/kde/HTML/en/kaffeine/dvbclient.png
+share/doc/kde/HTML/en/kaffeine/dvbconfig.png
+share/doc/kde/HTML/en/kaffeine/dvbepg.png
+share/doc/kde/HTML/en/kaffeine/dvblive.jpg
+share/doc/kde/HTML/en/kaffeine/dvbscan.png
+share/doc/kde/HTML/en/kaffeine/dvbtimers.png
+share/doc/kde/HTML/en/kaffeine/dvbwin.png
+share/doc/kde/HTML/en/kaffeine/gstpart.png
+share/doc/kde/HTML/en/kaffeine/index.cache.bz2
+share/doc/kde/HTML/en/kaffeine/index.docbook
+share/doc/kde/HTML/en/kaffeine/kaffeinepart.png
+share/doc/kde/HTML/en/kaffeine/playlistwin.png
+share/doc/kde/HTML/en/kaffeine/startwindow.png
+share/kde/apps/kaffeine/dvbdata.tar.gz
+share/kde/apps/kaffeine/kaffeinedisc.rc
+share/kde/apps/kaffeine/kaffeineplaylist.rc
+share/kde/apps/kaffeine/kaffeineui.rc
+share/kde/apps/kaffeine/logo
+share/kde/apps/kaffeine/logo.mpg
+share/kde/apps/kaffeine/mms.protocol
+share/kde/apps/kaffeine/nocover.png
+share/kde/apps/kaffeine/pics/playing.png
+share/kde/apps/kaffeine/rtsp.protocol
+share/kde/apps/kaffeine/xine_part.rc
+share/kde/apps/konqueror/servicemenus/kaffeine_append_file.desktop
+share/kde/apps/konqueror/servicemenus/kaffeine_open_directory.desktop
+share/kde/apps/konqueror/servicemenus/kaffeine_play_audiocd.desktop
+share/kde/apps/konqueror/servicemenus/kaffeine_play_dvd.desktop
+share/kde/apps/konqueror/servicemenus/kaffeine_play_vcd.desktop
+share/kde/apps/profiles/kaffeine.profile.xml
+share/kde/icons/hicolor/128x128/apps/kaffeine.png
+share/kde/icons/hicolor/16x16/actions/player_mute.png
+share/kde/icons/hicolor/16x16/actions/player_record.png
+share/kde/icons/hicolor/16x16/apps/kaffeine.png
+share/kde/icons/hicolor/16x16/apps/kdvbra.png
+share/kde/icons/hicolor/16x16/apps/kdvbrac.png
+share/kde/icons/hicolor/16x16/apps/kdvbtv.png
+share/kde/icons/hicolor/16x16/apps/kdvbtvc.png
+share/kde/icons/hicolor/16x16/apps/kilogram.png
+share/kde/icons/hicolor/16x16/mimetypes/mime_kaffeine.png
+share/kde/icons/hicolor/22x22/actions/player_mute.png
+share/kde/icons/hicolor/22x22/actions/player_record.png
+share/kde/icons/hicolor/22x22/apps/kaffeine.png
+share/kde/icons/hicolor/22x22/apps/kilogram.png
+share/kde/icons/hicolor/32x32/actions/player_mute.png
+share/kde/icons/hicolor/32x32/actions/player_record.png
+share/kde/icons/hicolor/32x32/apps/kaffeine-pause.png
+share/kde/icons/hicolor/32x32/apps/kaffeine-play.png
+share/kde/icons/hicolor/32x32/apps/kaffeine-record.png
+share/kde/icons/hicolor/32x32/apps/kaffeine.png
+share/kde/icons/hicolor/32x32/apps/kilogram.png
+share/kde/icons/hicolor/32x32/mimetypes/mime_kaffeine.png
+share/kde/icons/hicolor/48x48/apps/kaffeine.png
+share/kde/icons/hicolor/48x48/mimetypes/mime_kaffeine.png
+share/kde/icons/hicolor/64x64/apps/kaffeine.png
+share/kde/mimelnk/application/x-kaffeine.desktop
+share/kde/services/kaffeinemp3lame.desktop
+share/kde/services/kaffeineoggvorbis.desktop
+share/kde/services/xine_part.desktop
+share/kde/servicetypes/kaffeineaudioencoder.desktop
+share/locale/ar/LC_MESSAGES/kaffeine.mo
+share/locale/bg/LC_MESSAGES/kaffeine.mo
+share/locale/bn/LC_MESSAGES/kaffeine.mo
+share/locale/br/LC_MESSAGES/kaffeine.mo
+share/locale/ca/LC_MESSAGES/kaffeine.mo
+share/locale/cs/LC_MESSAGES/kaffeine.mo
+share/locale/da/LC_MESSAGES/kaffeine.mo
+share/locale/de/LC_MESSAGES/kaffeine.mo
+share/locale/el/LC_MESSAGES/kaffeine.mo
+share/locale/es/LC_MESSAGES/kaffeine.mo
+share/locale/et/LC_MESSAGES/kaffeine.mo
+share/locale/fi/LC_MESSAGES/kaffeine.mo
+share/locale/fr/LC_MESSAGES/kaffeine.mo
+share/locale/ga/LC_MESSAGES/kaffeine.mo
+share/locale/gl/LC_MESSAGES/kaffeine.mo
+share/locale/he/LC_MESSAGES/kaffeine.mo
+share/locale/hu/LC_MESSAGES/kaffeine.mo
+share/locale/it/LC_MESSAGES/kaffeine.mo
+share/locale/ja/LC_MESSAGES/kaffeine.mo
+share/locale/ka/LC_MESSAGES/kaffeine.mo
+share/locale/km/LC_MESSAGES/kaffeine.mo
+share/locale/lt/LC_MESSAGES/kaffeine.mo
+share/locale/mk/LC_MESSAGES/kaffeine.mo
+share/locale/nb/LC_MESSAGES/kaffeine.mo
+share/locale/nl/LC_MESSAGES/kaffeine.mo
+share/locale/nn/LC_MESSAGES/kaffeine.mo
+share/locale/pa/LC_MESSAGES/kaffeine.mo
+share/locale/pl/LC_MESSAGES/kaffeine.mo
+share/locale/pt/LC_MESSAGES/kaffeine.mo
+share/locale/pt_BR/LC_MESSAGES/kaffeine.mo
+share/locale/ru/LC_MESSAGES/kaffeine.mo
+share/locale/sk/LC_MESSAGES/kaffeine.mo
+share/locale/sr/LC_MESSAGES/kaffeine.mo
+share/locale/sr@Latn/LC_MESSAGES/kaffeine.mo
+share/locale/sv/LC_MESSAGES/kaffeine.mo
+share/locale/tr/LC_MESSAGES/kaffeine.mo
+share/locale/uk/LC_MESSAGES/kaffeine.mo
+share/locale/uz/LC_MESSAGES/kaffeine.mo
+share/locale/xx/LC_MESSAGES/kaffeine.mo
+share/locale/zh_CN/LC_MESSAGES/kaffeine.mo
+share/locale/zh_TW/LC_MESSAGES/kaffeine.mo
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/apps/profiles
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@dirrm share/kde/apps/kaffeine/pics
+@dirrm share/kde/apps/kaffeine
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
+@dirrm include/kaffeine

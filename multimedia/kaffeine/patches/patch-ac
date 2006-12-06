@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/12/06 18:30:11 xtraeme Exp $
+
+--- kaffeine/src/instwizard.h.orig	2006-12-06 18:35:21.000000000 +0100
++++ kaffeine/src/instwizard.h	2006-12-06 18:35:41.000000000 +0100
+@@ -45,7 +45,7 @@
+ 
+ 	void internalWizard();
+ 
+-	QString stdout;
++	QString stdout_local;
+ 
+ 	InstWizard(const InstWizard &);
+ 	InstWizard operator=(const InstWizard &);
