@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/05 02:58:02 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/06 21:15:34 reed Exp $
 
 DISTNAME=		elinks-0.4.3
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dawszy@arhea.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://elinks.or.cz/
 COMMENT=		Extended/Enhanced Links
 
