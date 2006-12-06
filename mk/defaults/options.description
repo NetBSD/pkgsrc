@@ -256,6 +256,7 @@ qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
 qt	
+quartz			Enable Quartz support on Mac OS X.	
 quota	
 radius	
 rc5	
