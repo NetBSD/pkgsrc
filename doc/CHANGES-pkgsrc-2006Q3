@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.57 2006/12/05 13:48:44 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.58 2006/12/06 13:00:18 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -157,3 +157,5 @@ Pullup ticket 1935 - requested by wiz
 security update for links, links-gui
 Pullup ticket 1936 - requested by obache
 runtime fix for dspam
+Pullup ticket 1937 - requested by wiz
+security update for suse_libpng
