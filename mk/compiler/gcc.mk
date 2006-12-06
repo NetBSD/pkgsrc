@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.86 2006/12/02 22:32:59 jschauma Exp $
+# $NetBSD: gcc.mk,v 1.87 2006/12/06 16:18:19 joerg Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -138,7 +138,7 @@ _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .endfor
 
 .if !empty(USE_LANGUAGES:Mc99)
-_WRAP_EXTRA_ARGS.CC+=	-std=c99
+_WRAP_EXTRA_ARGS.CC+=	-std=gnu99
 .endif
 
 # GCC has this annoying behaviour where it advocates in a multi-line
