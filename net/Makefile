@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.646 2006/11/21 10:59:25 tron Exp $
+# $NetBSD: Makefile,v 1.647 2006/12/06 23:13:15 bouyer Exp $
 #
 
 COMMENT=	Networking tools
@@ -287,6 +287,7 @@ SUBDIR+=	p5-Net-IPv4Addr
 SUBDIR+=	p5-Net-IPv6Addr
 SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-Ident
+SUBDIR+=	p5-Net-NBName
 SUBDIR+=	p5-Net-Packet
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Net-RawIP
