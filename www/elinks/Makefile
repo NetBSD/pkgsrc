@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2006/09/06 15:14:34 abs Exp $
+# $NetBSD: Makefile,v 1.28 2006/12/06 00:19:12 hubertf Exp $
 
 DISTNAME=		elinks-0.11.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +17,8 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--enable-256-colors
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+
+.include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
