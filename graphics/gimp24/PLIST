@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/11/30 23:41:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/12/06 06:39:37 minskim Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -367,6 +367,7 @@ lib/gimp/2.0/plug-ins/tiff
 lib/gimp/2.0/plug-ins/tile
 lib/gimp/2.0/plug-ins/tileit
 lib/gimp/2.0/plug-ins/tiler
+${TWAIN}lib/gimp/2.0/plug-ins/twain
 lib/gimp/2.0/plug-ins/uniteditor
 lib/gimp/2.0/plug-ins/unsharp
 lib/gimp/2.0/plug-ins/uri
@@ -987,6 +988,7 @@ share/gimp/2.0/themes/Default/images/stock-question-64.png
 share/gimp/2.0/themes/Default/images/stock-warning-64.png
 share/gimp/2.0/themes/Small/gtkrc
 share/gimp/2.0/tips/gimp-tips.xml
+${TWAIN}share/gimp/2.0/twain/gimp-twain.png
 share/gtk-doc/html/libgimp/GimpAspectPreview.html
 share/gtk-doc/html/libgimp/GimpBrushSelectButton.html
 share/gtk-doc/html/libgimp/GimpDrawablePreview.html
@@ -1928,6 +1930,7 @@ share/mime-info/gimp.keys
 @dirrm share/gtk-doc/html/libgimpcolor
 @dirrm share/gtk-doc/html/libgimpbase
 @dirrm share/gtk-doc/html/libgimp
+${TWAIN}@dirrm share/gimp/2.0/twain
 @dirrm share/gimp/2.0/tips
 @dirrm share/gimp/2.0/themes/Small
 @dirrm share/gimp/2.0/themes/Default/images/preferences
