@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.685 2006/11/09 23:59:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.686 2006/12/06 23:42:43 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1800,8 +1800,8 @@ use constant regex_gnu_configure_volatile_vars
 use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
-use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"(?:\s*#.*)?$";
-use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>(?:\s*#.*)?$";
+use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"\s*(?:#.*)?$";
+use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>\s*(?:#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_mk_shellcmd	=> qr"^\t(.*)$";
@@ -5833,6 +5833,9 @@ sub checklines_mk($) {
 
 			if ($includefile =~ qr"/x11-links/buildlink3\.mk$") {
 				$line->log_error("${includefile} must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.");
+			}
+			if ($includefile =~ qr"/intltool/buildlink3\.mk$") {
+				$line->log_warning("Please say \"USE_TOOLS+= intltool\" instead of this line.");
 			}
 			if ($includefile =~ qr"(.*)/builtin\.mk$") {
 				my ($dir) = ($1);
