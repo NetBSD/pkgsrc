@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2006/12/05 15:15:50 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2006/12/06 18:31:35 xtraeme Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -44,6 +44,7 @@ SUBDIR+=	gstreamer0.10
 SUBDIR+=	gstreamer0.8
 SUBDIR+=	gtranscode
 SUBDIR+=	gxine
+SUBDIR+=	kaffeine
 SUBDIR+=	kdemultimedia3
 SUBDIR+=	kmplayer
 SUBDIR+=	libassetml
