@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2006/01/04 21:22:06 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/12/06 17:08:07 joerg Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.sleepycat.com/pub/ \
 		ftp://ftp.foretune.co.jp/pub/tools/nvi/
@@ -25,7 +25,8 @@ CONFIGURE_ENV+=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
 CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 
 CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
-USE_TOOLS+=	sh
+CONFIGURE_ENV+=	vi_cv_path_perl=${TOOLS_PATH.perl:Q}
+USE_TOOLS+=	sh perl:run
 
 CPPFLAGS+=	-DGTAGS
 
