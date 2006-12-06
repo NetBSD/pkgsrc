@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2006/12/06 16:37:27 joerg Exp $
 
 DISTNAME=		magicpoint-1.10a
-PKGREVISION=		10
+PKGREVISION=		11
 #DISTNAME=		magicpoint-1.11b.tar.gz
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/ \
@@ -73,6 +73,10 @@ CONFIGURE_ARGS+=	--enable-${engine}
 CONFIGURE_ARGS+=	--disable-${engine}
 .  endif
 .endfor
+
+.if !empty(PKG_OPTIONS:Mxft2)
+.include "../../graphics/freetype2/buildlink3.mk"
+.endif
 
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
