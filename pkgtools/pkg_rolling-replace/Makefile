@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/05 18:23:52 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/06 00:54:25 xtraeme Exp $
 
 DISTNAME=	pkg_rolling-replace-0.04
 PKGREVISION=	2
@@ -30,8 +30,10 @@ do-extract: check-pkgsrc-patch
 	cp ${FILESDIR}/pkg_rolling-replace.sh ${WRKSRC}
 
 do-install: check-pkgsrc-patch
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_rolling-replace.sh ${PREFIX}/sbin/pkg_rolling-replace
-	${INSTALL_SCRIPT} ${FILESDIR}/pkg_rolling-replace.8 ${PREFIX}/${PKGMANDIR}/man8/pkg_rolling-replace.8
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_rolling-replace.sh \
+		${PREFIX}/sbin/pkg_rolling-replace
+	${INSTALL_SCRIPT} ${FILESDIR}/pkg_rolling-replace.8 \
+		${PREFIX}/${PKGMANDIR}/man8/pkg_rolling-replace.8
 
 check-pkgsrc-patch:
 	@${ECHO_N} "=> Checking for unsafe_depends support in pkgsrc..."; \
