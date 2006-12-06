@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/31 15:34:44 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/12/06 16:42:20 joerg Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	4
@@ -12,8 +12,8 @@ COMMENT=	Multilingual GNU editing macros (editor)
 CONFLICTS=	emacs-[0-9]*
 
 # build PATH in the dumped mule is not a problem
-CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule
-CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule-19.28
+CHECK_WRKREF_SKIP+=	bin/mule
+CHECK_WRKREF_SKIP+=	bin/mule-19.28
 
 WRKSRC=			${WRKDIR}/mule
 USE_TOOLS+=		gmake makeinfo
