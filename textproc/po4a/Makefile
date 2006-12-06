@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/18 20:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/06 17:18:49 joerg Exp $
 #
 
 DISTNAME=		po4a-0.23
@@ -17,7 +17,7 @@ DEPENDS+=		p5-SGMLS-[0-9]*:../../textproc/p5-SGMLS
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=		p5-Text-WrapI18N-[0-9]*:../../textproc/p5-Text-WrapI18N
 
-USE_TOOLS+=		pkg-config perl:run
+USE_TOOLS+=		pkg-config perl:run msgmerge msgfmt
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=         auto/po4a/.packlist
