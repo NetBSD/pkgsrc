@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/06/21 19:02:03 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2006/12/06 16:52:20 joerg Exp $
 #
 
 DISTNAME=		MUMmer3.18
 PKGNAME=		mummer-3.18
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 
@@ -17,6 +17,7 @@ USE_LANGUAGES=		c c++
 
 MAKE_ENV+=		SH=${SH:Q}
 MAKE_ENV+=		PERL=${PERL5:Q}
+MAKE_ENV+=		CSH=${TOOLS_PATH.csh:Q}
 INSTALLATION_DIRS=	bin
 
 do-install:
