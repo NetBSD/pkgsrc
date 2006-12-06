@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/12/06 18:58:45 joerg Exp $
+
+--- configure.orig	2006-12-06 18:43:28.000000000 +0000
++++ configure
+@@ -18665,7 +18665,7 @@ CPPFLAGS="$CPPFLAGS -I$abs_srcdir/includ
+ 
+ echo "$as_me:$LINENO: checking for gcc/g++" >&5
+ echo $ECHO_N "checking for gcc/g++... $ECHO_C" >&6
+-if test "$GXX" == "yes" ; then
++if test "$GXX" = "yes" ; then
+    echo "$as_me:$LINENO: result: found (using \"-Wall\" and \"-fexceptions\")" >&5
+ echo "${ECHO_T}found (using \"-Wall\" and \"-fexceptions\")" >&6
+    CPPFLAGS="$CPPFLAGS -Wall -fexceptions"
