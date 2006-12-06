@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/06/30 16:20:23 salo Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/06 10:35:58 wiz Exp $
 
 DISTNAME=		suse_libpng-${SUSE_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
