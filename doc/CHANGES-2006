@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1955 2006/12/06 23:02:05 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1956 2006/12/06 23:14:18 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added multimedia/kaffeine version 0.8.3 [xtraeme 2006-12-06]
 	Updated www/elinks to 0.11.2 [reed 2006-12-06]
 	Updated security/gnupg to 1.4.6 [wiz 2006-12-06]
+	Added net/p5-Net-NBName version 0.26 [bouyer 2006-12-06]
