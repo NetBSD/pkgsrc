@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 21:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/06 14:45:42 joerg Exp $
 
 DISTNAME=	cooledit-3.17.17
 PKGREVISION=	2
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
 
 post-configure:
-	if ${GREP} -q mbstate_t /usr/include/machine/ansi.h ; then :; else \
+	if ${GREP} -q mbstate_t /usr/include/wchar.h ; then :; else \
 		${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak ; \
 		${SED} 's;^.*HAVE_WCHAR_H.*$$;/* mbstate_t is missing from machine/ansi.h */;g' \
 			< ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h ; \
