@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2006/12/06 08:52:31 obache Exp $
+$NetBSD: distinfo,v 1.24 2006/12/06 12:14:00 obache Exp $
 
 SHA1 (libgda-1.99.1.tar.bz2) = bdd5b113e8b2a63974a85e91f65da07f1838324a
 RMD160 (libgda-1.99.1.tar.bz2) = cd7376f906f052253e244300950f52b24b2375c2
@@ -9,3 +9,4 @@ SHA1 (patch-ad) = ffd20b94beaa79787f36d30863a2413f84ae935d
 SHA1 (patch-ah) = 1a2ef8200b2ccedb632e7f952c7e214128c51693
 SHA1 (patch-ai) = a6e77a2accf5e53002902a991968ec46c439746c
 SHA1 (patch-aj) = e42905b1b74de4d85e13b5164ac86914b597c7cb
+SHA1 (patch-ak) = 81e4d71c96837d888705d9eb7269fc08eb5a0187
