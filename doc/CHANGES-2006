@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1948 2006/12/06 14:52:31 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1949 2006/12/06 15:38:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5541,3 +5541,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/suse100_libpng to 10.0nb2 [wiz 2006-12-06]
 	Updated print/evince to 0.6.1nb1 [wiz 2006-12-06]
 	Updated print/evince-nautilus to 0.6.1nb1 [wiz 2006-12-06]
+	Updated mail/ja-squirrelmail to 1.4.9a [taca 2006-12-06]
+	Updated misc/fd to 2.09a [taca 2006-12-06]
