@@ -159,6 +159,7 @@ kde
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
+klash			Install Konqueror flash plugin.
 kqueue	
 krb4	
 krb5	
