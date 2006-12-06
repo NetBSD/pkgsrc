@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/12/06 18:30:11 xtraeme Exp $
+
+--- kaffeine/src/instwizard.cpp.orig	2006-12-06 18:36:17.000000000 +0100
++++ kaffeine/src/instwizard.cpp	2006-12-06 18:37:58.000000000 +0100
+@@ -149,9 +149,9 @@
+ 	connect(&process, SIGNAL(receivedStdout(KProcess*,char*,int)), this, SLOT(slotStdout(KProcess*, char*, int)));
+ 	process.start(KProcess::Block, KProcess::Stdout);
+ 
+-	if (stdout.contains('1'))
++	if (stdout_local.contains('1'))
+ 		info << "<font color=\"DarkGreen\">" << i18n("Ok.") << "</font>";
+-	else if (stdout.contains('0'))
++	else if (stdout_local.contains('0'))
+ 		info << "<font color=\"DarkRed\">" << i18n("DMA mode off! For smooth DVD playback run as root:") +  " \"hdparm -d1 /dev/dvd\".</font>";
+ 	else
+ 		info << "<font color=\"DarkBlue\">" << i18n("Can't check DMA mode. Permission denied or no such device:")
+@@ -274,5 +274,5 @@
+ {
+ 	QString output = QString::fromLatin1(buffer, buflen);
+ 	kdDebug() << "WizardDialog: got from hdparm: " << output << "\n";
+-	stdout.append(output);
++	stdout_local.append(output);
+ }
