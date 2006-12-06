@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2006/12/05 06:45:00 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2006/12/06 17:23:24 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PANGO_BUILDLINK3_MK:=	${PANGO_BUILDLINK3_MK}+
@@ -29,9 +29,11 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.pango
 
 .if !empty(PKG_BUILD_OPTIONS.pango:Mx11)
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
