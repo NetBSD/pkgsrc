@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.2 2006/10/02 19:39:24 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.3 2006/12/06 01:00:41 rillig Exp $
 #
 
 use strict;
@@ -82,6 +82,7 @@ sub print_section($$) {
 #
 
 my ($distname, $abs_wrkdir, $abs_wrksrc);
+my (@wrksrc_files, @wrksrc_dirs);
 my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todo);
 my ($pkgname);
 
@@ -106,12 +107,14 @@ sub magic_configure() {
 }
 
 sub magic_gconf2_schemas() {
-	my $gconf2_files = `cd $abs_wrksrc && find * -type f -name "*.schemas" -o -name "*.schemas.in*" -print 2>/dev/null | sed -e 's|^.*/||' -e 's/.in.in\$//' -e 's/.in\$//'`;
-	if ($gconf2_files =~ qr"\S") {
-		push(@build_vars, ["CONFIGURE_ENV+", "GCONF_SCHEMA_FILE_DIR=\${PREFIX:Q}/share/gconf/schemas/"]);
-		push(@build_vars, ["MAKE_ENV+", "GCONF_SCHEMA_FILE_DIR=\${PREFIX:Q}/share/gconf/schemas/"]);
-		foreach my $f (split(qr"\s+", $gconf2_files)) {
-			push(@extra_vars, ["GCONF2_SCHEMAS+", $f]);
+	my @gconf2_files = grep(/schemas(?:\.in.*)$/, @wrksrc_files);
+	if (@gconf2_files) {
+		push(@build_vars, ["CONFIGURE_ENV+", "GCONF_SCHEMA_FILE_DIR=\${PREFIX}/share/gconf/schemas/"]);
+		push(@build_vars, ["MAKE_ENV+", "GCONF_SCHEMA_FILE_DIR=\${PREFIX}/share/gconf/schemas/"]);
+		foreach my $f (@gconf2_files) {
+			if ($f =~ qr"(.*schemas)") {
+				push(@extra_vars, ["GCONF2_SCHEMAS+", $1]);
+			}
 		}
 		push(@includes, "../../devel/GConf2/schemas.mk");
 	}
@@ -160,30 +163,27 @@ sub magic_perlmod() {
 }
 
 sub magic_pkg_config() {
-	my $pkg_config_files = `cd $abs_wrksrc && find * -type f -name "*.pc.in" -a ! -name "*-uninstalled.pc.in" -print 2>/dev/null`;
-	if ($pkg_config_files =~ qr"\S") {
+	my @pkg_config_files = grep { /\.pc\.in$/ && ! /-uninstalled\.pc\.in$/ } @wrksrc_files;
+	if (@pkg_config_files) {
 		push(@build_vars, ["USE_TOOLS+", "pkg-config"]);
 	}
-	foreach my $f (split(qr"\s+", $pkg_config_files)) {
+	foreach my $f (@pkg_config_files) {
 		push(@extra_vars, ["PKGCONFIG_OVERRIDE+", $f]);
 	}
 }
 
 sub magic_po() {
-	if (`cd $abs_wrksrc && find * -type f -name "*.mo" -o -name "*.gmo" -print 2>/dev/null` =~ qr"\S") {
+	if (grep(/\.g?mo$/, @wrksrc_files)) {
 		push(@build_vars, ["USE_PKGLOCALEDIR", "yes"]);
 	}
 }
 
 sub magic_use_languages() {
-	my $c_files = `cd $abs_wrksrc && find * -type f -name "*.c" -print 2>/dev/null`;
-	my $cxx_files = `cd $abs_wrksrc && find * -type f "(" -name "*.cpp" -o -name "*.cc" -o -name "*.C" ")" -print 2>/dev/null`;
-	my $f_files = `cd $abs_wrksrc && find * -type f -name "*.f" -print 2>/dev/null`;
 	my @languages;
 
-	$c_files =~ qr"\S" and push(@languages, "c");
-	$cxx_files =~ qr"\S" and push(@languages, "c++");
-	$f_files =~ qr"\S" and push(@languages, "fortran");
+	grep(/\.c$/, @wrksrc_files) and push(@languages, "c");
+	grep(/\.(cpp|c\+\+|cxx|cc|C)$/, @wrksrc_files) and push(@languages, "c++");
+	grep(/\.f$/, @wrksrc_files) and push(@languages, "fortran");
 
 	my $use_languages = join(" ", @languages);
 	if ($use_languages eq "") {
@@ -337,6 +337,9 @@ sub adjust_package_from_extracted_distfiles()
 		$abs_wrksrc = $abs_wrkdir;
 	}
 
+	chomp(@wrksrc_files = `cd "${abs_wrkdir}" && find * -type f`);
+	chomp(@wrksrc_dirs = `cd "${abs_wrkdir}" && find * -type d`);
+
 	magic_configure();
 	magic_gconf2_schemas();
 	magic_libtool();
@@ -364,7 +367,7 @@ sub adjust_package_from_extracted_distfiles()
 		}
 	}
 
-	if (scalar(@todo) != 0) {
+	if (@todo) {
 		foreach my $todo (@todo) {
 			print MF2 ("# TODO: ${todo}\n");
 		}
