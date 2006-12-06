@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1951 2006/12/06 16:40:25 taca Exp $
+$NetBSD: CHANGES-2006,v 1.1952 2006/12/06 16:46:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5545,7 +5545,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/fprot-workstation-bin to 4.6.7 [taca 2006-12-06]
 	Updated misc/fd to 2.09a [taca 2006-12-06]
 	Updated databases/ruby-gdbm to 1.8.5.20061205 [taca 2006-12-06]
-	Updated devel/ruby-curses to 1.8.5.20061205 [taca 2006-12-06]
 	Updated devel/ruby-curses to 1.8.5.20061205 [taca 2006-12-06]
 	Updated devel/ruby-mode to 1.8.5.20061205 [taca 2006-12-06]
 	Updated devel/ruby-readline to 1.8.5.20061205 [taca 2006-12-06]
