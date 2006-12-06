@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2006/12/02 08:39:18 minskim Exp $
+# $NetBSD: Makefile,v 1.33 2006/12/06 06:39:37 minskim Exp $
 
 DISTNAME=	gimp-2.3.13
-PKGREVISION=1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.3/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.3/ \
@@ -50,6 +50,12 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+.if exists(/System/Library/Frameworks/TWAIN.framework)
+PLIST_SUBST+=	TWAIN=""
+.else
+PLIST_SUBST+=	TWAIN="@comment "
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
