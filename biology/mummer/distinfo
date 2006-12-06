@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2006/04/19 16:50:36 joerg Exp $
+$NetBSD: distinfo,v 1.7 2006/12/06 16:52:20 joerg Exp $
 
 SHA1 (MUMmer3.18.tar.gz) = 484846f7ff68e19bc0e0deca92254fd423947a9f
 RMD160 (MUMmer3.18.tar.gz) = 7361a90d28e2432a9163e0745ab854dfd31cf306
 Size (MUMmer3.18.tar.gz) = 3069437 bytes
-SHA1 (patch-aa) = 369c4646b01acb4607aae933b70a08448331c3e6
-SHA1 (patch-ab) = 8548bc11a6d43b489ea9af5dbca584ce0d2750c9
+SHA1 (patch-aa) = 707f0466ac20b58feb22a5fd525f5f8d9df31dac
+SHA1 (patch-ab) = af42da79fd287786cb83efa9c9b4fc8025abd728
 SHA1 (patch-ac) = 7f0f16bdd83bc80833f1ffdcfe1bad7c2ee76eec
 SHA1 (patch-ad) = 0804b2c966d7035c23444c4f72e1d93e45805bcf
