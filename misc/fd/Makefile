@@ -1,29 +1,51 @@
-# $NetBSD: Makefile,v 1.22 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/12/06 15:36:31 taca Exp $
 #
 
-DISTNAME=	FD-1.03u
-PKGNAME=	fd-1.03u
-CATEGORIES=	misc
+DISTNAME=	FD-2.09a
+PKGNAME=	fd-2.09a
+CATEGORIES=	misc shells
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 
 MAINTAINER=	nobu@psrc.isac.co.jp
+HOMEPAGE=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 COMMENT=	File and directory management tool
 
-BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1
+MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR:Q}
 
-MANLANG=	ja
-MAKE_ENV+=	LANG=${MANLANG:Q}
-DOCS=		README FAQ HISTORY ToAdmin
+MANLANG?=	ja_JP.eucJP
+MAKE_ENV+=	LANGDIR=${MANLANG:Q} DATADIR=${DATADIR:Q}
+PLIST_SUBST+=	FD_CONFIG=${FD_CONFIG:Q} MANLANG=${MANLANG:Q}
 
-# require maintainer signature for binary package distributions
-do-configure:
-	@cd ${WRKSRC}; v=version.h; ${MV} $$v $$v.orig; \
-	${SED} 's/\(distributor = \)NULL/\1"${MAINTAINER}"/' $$v.orig > $$v
+DATADIR=	${PREFIX}/share/fd
+DOCDIR=		${PREFIX}/share/doc/fd
+EXAMPLESDIR=	${PREFIX}/share/examples/fd
+
+DOCS=		FAQ LICENSES HISTORY README TECHKNOW ToAdmin
+
+.include "options.mk"
+
+CONF_FILES+=	${EXAMPLESDIR:Q}/${FD_CONFIG} ${PKG_SYSCONFDIR:Q}/${FD_CONFIG}
+
+.if empty(PKG_OPTIONS:Mfd-small)
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKSRC}/PLIST ${PKGDIR}/PLIST.common_end
+.else
+USE_TOOLS+=	patch
+
+post-configure:
+	cd ${WRKSRC}; ${PATCH} -R < _fdrc.dif
+.endif
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fd
-	@for i in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/fd; \
+	${INSTALL_DATA_DIR} ${DOCDIR}/ja
+	cd ${WRKSRC}; \
+	for i in ${DOCS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$$i.eng ${DOCDIR}/$$i; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}/ja; \
 	done
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} _fdrc ${EXAMPLESDIR}/${FD_CONFIG}
+.if empty(PKG_OPTIONS:Mfd-small)
+	${ECHO} "share/fd/fd-dict.tbl" > ${WRKSRC}/PLIST
+.endif
 
 .include "../../mk/bsd.pkg.mk"
