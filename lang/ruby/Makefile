@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2006/01/03 14:39:51 taca Exp $
+# $NetBSD: Makefile,v 1.41 2006/12/06 16:34:42 taca Exp $
 
-DISTNAME=	ruby-${RUBY_VERSION}
+DISTNAME=	ruby-${RUBY_VERSION}.${RUBY_PATCH_DATE}
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
