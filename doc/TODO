@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5740 2006/12/06 15:05:12 wiz Exp $
+$NetBSD: TODO,v 1.5741 2006/12/06 18:31:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -183,10 +183,6 @@ Suggested new packages
 	kplayer
 	http://kplayer.sourceforge.net/
 	KDE media player based on MPlayer.
-
-	kaffeine
-	http://kaffeine.sourceforge.net/
-	Full featured Multimedia-Player for KDE using Xine as backend.
 
 	oKle
 	http://okle.sourceforge.net/
