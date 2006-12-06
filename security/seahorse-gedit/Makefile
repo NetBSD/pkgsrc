@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/16 12:20:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/06 19:51:52 joerg Exp $
 
 DISTNAME=	seahorse-0.8.1
 PKGNAME=	seahorse-gedit-0.8.1
@@ -16,7 +16,7 @@ DISTINFO_FILE=	${.CURDIR}/../seahorse/distinfo
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -28,6 +28,9 @@ BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 
 BUILD_DIRS=	plugins/gedit
 INSTALL_DIRS=	plugins/gedit
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
