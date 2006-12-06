@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/10/12 14:16:22 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2006/12/06 14:48:35 wiz Exp $
 #
 
 .include "../../print/evince/Makefile.common"
+PKGREVISION=		1
 
 COMMENT=		Document viewer for the GNOME Desktop
 
