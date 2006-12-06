@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2006/11/29 22:59:49 reed Exp $
+# $NetBSD: Makefile,v 1.149 2006/12/06 23:04:26 rillig Exp $
 
 DISTNAME=	netpbm-10.34
 CATEGORIES=	graphics
@@ -24,6 +24,7 @@ STAGEDIR=	${WRKDIR}/staging
 
 LIBS.SunOS+=	-lsocket -lnsl
 MAKE_ENV+=	NETWORKLD=${LIBS:Q}
+MAKE_FLAGS+=	PKGMANDIR=${PKGMANDIR}
 
 # Several of the netpbm shell scripts use bashisms, so force using
 # bash for all of the shell scripts.
@@ -82,6 +83,7 @@ post-install:
 	cd ${STAGEDIR} && 					\
 	${MV} link/* lib && 					\
 	${RM} -rf link man/web && 				\
+	(rmdir man || ${TRUE}) &&				\
 	${MKDIR} share/doc/netpbm &&				\
 	${CP} ${WRKSRC}/doc/* share/doc/netpbm &&		\
 	${MKDIR} ${PKGMANDIR}/man1 &&				\
