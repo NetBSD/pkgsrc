@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2006/05/20 08:39:08 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/12/07 11:24:28 markd Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
-PKGREVISION=	2
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
 
 BUILDLINK_API_DEPENDS.gcc3cxx+=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}{,nb*}
