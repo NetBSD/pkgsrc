@@ -1,17 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2003/09/19 18:06:36 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/12/07 06:27:30 cjs Exp $
 
---- Makefile.orig	Tue Jun  2 04:06:52 1998
-+++ Makefile	Fri Sep 19 15:34:28 2003
-@@ -38,9 +38,9 @@
- CPPDEBUG := -DDEBUG $(CPPDEBUG)
- CPPOPTIM := -DNDEBUG $(CPPOPTIM)
+--- configure.in.orig	2000-10-19 16:35:15.000000000 +0900
++++ configure.in	2006-12-07 15:08:35.000000000 +0900
+@@ -10,7 +10,7 @@
+   CPPFLAGS="${CPPFLAGS} -DNDEBUG"
+ fi
  
--CPPFLAGS = -I. -Ilib $(CPP$(HOW))
--CFLAGS = $(CONFIG) $(CFLAGS$(HOW))
--LDFLAGS = $(LDFLAGS$(HOW))
-+CPPFLAGS += -I. -Ilib $(CPP$(HOW))
-+#CFLAGS = $(CONFIG) $(CFLAGS$(HOW))
-+#LDFLAGS = $(LDFLAGS$(HOW))
+-CPPFLAGS="${CPPFLAGS} -D_GNU_SOURCE -D_XOPEN_SOURCE"
++CPPFLAGS="${CPPFLAGS} -D_GNU_SOURCE"
+ LDFLAGS="${LDFLAGS}"
  
- HTTPERF = httperf object call conn sess core event http timer $(EXTRA)
- 
+ dnl Checks for programs.
