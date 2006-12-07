@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2006/04/19 17:20:00 cube Exp $
+# $NetBSD: Makefile,v 1.25 2006/12/07 02:57:05 xtraeme Exp $
 
-DISTNAME=	mod_perl-2.0.1
+DISTNAME=	mod_perl-2.0.3
 PKGNAME=	${DISTNAME:S/mod_/ap2-/}
-PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	http://perl.apache.org/dist/
 
