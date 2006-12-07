@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.61 2006/12/07 13:55:13 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.62 2006/12/07 14:00:29 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -165,3 +165,5 @@ Pullup ticket 1947 - requested by markd
 security update for koffice
 Pullup ticket 1944 - requested by wiz
 security update for gnupg
+Pullup ticket 1938 - requested by wiz
+security update for libgsf
