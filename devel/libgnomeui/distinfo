@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.22 2006/10/13 18:13:33 drochner Exp $
+$NetBSD: distinfo,v 1.23 2006/12/07 13:13:08 minskim Exp $
 
 SHA1 (libgnomeui-2.16.1.tar.bz2) = 13154032427c0599ca741de50301cdc3a9ab3088
 RMD160 (libgnomeui-2.16.1.tar.bz2) = 9cb97cb90014df2f477c24b7c41873a74704dff8
 Size (libgnomeui-2.16.1.tar.bz2) = 1482097 bytes
+SHA1 (patch-aa) = eeb1df38aa7c3f1fdb3c2c1bc8722f050ad2156b
