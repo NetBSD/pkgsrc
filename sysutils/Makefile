@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2006/12/04 07:20:15 agc Exp $
+# $NetBSD: Makefile,v 1.383 2006/12/07 20:33:21 plunky Exp $
 #
 
 COMMENT=	System utilities
@@ -28,7 +28,9 @@ SUBDIR+=	bacula-tray-monitor
 SUBDIR+=	bacula-wx-console
 SUBDIR+=	bbsload
 SUBDIR+=	bchunk
+SUBDIR+=	bcmfw
 SUBDIR+=	bkpupsd
+SUBDIR+=	btpin-qt
 SUBDIR+=	burn
 SUBDIR+=	ccd2iso
 SUBDIR+=	ccze
