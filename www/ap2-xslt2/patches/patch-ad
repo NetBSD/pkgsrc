@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/12/07 02:34:01 xtraeme Exp $
+
+--- utils/Makefile.in.orig	2006-12-07 03:03:58.000000000 +0100
++++ utils/Makefile.in	2006-12-07 03:05:11.000000000 +0100
+@@ -126,15 +126,15 @@
+ install: install-modxslt-parse install-modxslt-config install-modxslt-perror
+ 
+ install-modxslt-perror:
+-	$(LIBTOOL) --mode=install install $(IFLAGS) -D -m 0755 -o root -g root modxslt-perror \
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) modxslt-perror \
+ 		$(DESTDIR)$(bindir)/modxslt-perror
+ 
+ install-modxslt-parse:
+-	$(LIBTOOL) --mode=install install $(IFLAGS) -D -m 0755 -o root -g root modxslt-parse \
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) modxslt-parse \
+ 		$(DESTDIR)$(bindir)/modxslt-parse
+ 
+ install-modxslt-config:
+-	install -D -m 0755 -o root -g root modxslt-config \
++	$(BSD_INSTALL_SCRIPT) modxslt-config \
+ 		$(DESTDIR)$(bindir)/modxslt-config
+ 
+ uninstall: uninstall-modxslt-parse uninstall-modxslt-config uninstall-modxslt-perror

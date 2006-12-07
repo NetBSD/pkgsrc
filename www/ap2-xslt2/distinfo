@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/12/07 02:34:01 xtraeme Exp $
+
+SHA1 (modxslt-2004112100.tar.gz) = a9b4d43695f2f0ac7baa42063a2abb2d0aa6f774
+RMD160 (modxslt-2004112100.tar.gz) = 0fcbc99d22632f3a7535bd19eae0466a729828a8
+Size (modxslt-2004112100.tar.gz) = 1740676 bytes
+SHA1 (patch-aa) = c292443b9d72ad1e37054cf4c6a2b615b8dd735d
+SHA1 (patch-ab) = 326350cd9db151315e0ba8143ffb90d5dd9a78fc
+SHA1 (patch-ac) = 4f9d75ef323d585bf8b72142bee0b7be17ca706c
+SHA1 (patch-ad) = f7e5ce7c710822eaae27e1295ecfcf2b813e3f25
+SHA1 (patch-ae) = 986bf5dfd9116991d27c56b67838d094a641f38f

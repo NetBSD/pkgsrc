@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/12/07 02:34:01 xtraeme Exp $
+
+--- doc/man/Makefile.in.orig	2004-10-02 10:24:10.000000000 +0200
++++ doc/man/Makefile.in	2006-12-07 03:17:46.000000000 +0100
+@@ -77,8 +77,10 @@
+ 	$(XSLT) $(XSLTPARAM) modxslt-parse.xml 
+ 
+ install: modxslt-config.1 modxslt-perror.1 modxslt-parse.1
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) --mode=0644 --owner=root --group=root $^ $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) modxslt-config.1 $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) modxslt-perror.1 $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) modxslt-parse.1 $(DESTDIR)$(mandir)/man1
+ 
+ uninstall:	
+ 	rm $(DESTDIR)$(mandir)/man1/{modxslt-config.1,modxslt-parse.1,modxslt-perror.1}
