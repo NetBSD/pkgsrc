@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/07 02:34:01 xtraeme Exp $
+
+--- lib/Makefile.in.orig	2004-10-02 10:24:02.000000000 +0200
++++ lib/Makefile.in	2006-12-07 02:53:57.000000000 +0100
+@@ -156,13 +156,13 @@
+ install: install-library install-headers
+ 
+ install-library: libmodxslt$(LIB_VERSION).la 
+-	$(LIBTOOL) --mode=install install $(IFLAGS) -D -m 0644 -o root -g root \
+-		libmodxslt$(LIB_VERSION).la $(DESTDIR)$(libdir)/libmodxslt$(LIB_VERSION).la
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) \
++		   libmodxslt$(LIB_VERSION).la $(DESTDIR)$(libdir)
+ 
+ install-headers:
+-	$(INSTALL) -d -m 0755 -o root -g root $(DESTDIR)$(includedir)/modxslt$(LIB_VERSION)
+-	$(INSTALL) -m 0644 -o root -g root $(srcdir)/modxslt$(LIB_VERSION)/*.h $(DESTDIR)$(includedir)/modxslt$(LIB_VERSION)
+-	$(INSTALL) -m 0644 -o root -g root ./modxslt$(LIB_VERSION)/*.h $(DESTDIR)$(includedir)/modxslt$(LIB_VERSION)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(includedir)/modxslt2
++	$(BSD_INSTALL_DATA) $(srcdir)/modxslt$(LIB_VERSION)/*.h $(DESTDIR)$(includedir)/modxslt2
++	$(BSD_INSTALL_DATA) ./modxslt$(LIB_VERSION)/*.h $(DESTDIR)$(includedir)/modxslt2
+ 
+ uninstall: uninstall-library uninstall-headers
+ 

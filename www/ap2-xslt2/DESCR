@@ -1,0 +1,23 @@
+mod-xslt2 is a server side module able to transform ``xml''
+documents in ``html'' (or to any other format) before they
+even get back to the browser.
+
+mod-xslt2 main features include:
+
+* Ability to parse generated xml (ability to parse the output of
+  php or perl scripts).
+
+* Ability to use the ``xslt'' indicated by the <?xml-stylesheet
+  processing instruction.
+
+* Ability to send back the xml file unparsed to the browser.
+
+* Ability to fetch xslt or DTDs from scripts rather than from
+  static files.
+
+* Ability to fetch a different xslt depending on the content of
+  the request headers, of the get parameters or the web server
+  environment.
+
+* Ability to allow xslt stylesheets to make use of these
+  variables to generate output.
