@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/30 23:02:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/07 11:08:26 markd Exp $
 bin/konversation
 bin/konversationircprotocolhandler
+share/applications/kde/konversation.desktop
 share/doc/kde/HTML/da/konversation/common
 share/doc/kde/HTML/da/konversation/index.cache.bz2
 share/doc/kde/HTML/da/konversation/index.docbook
@@ -160,6 +161,7 @@ share/doc/kde/HTML/nl/konversation/webbrowser_screen_co.png
 share/doc/kde/HTML/pt/konversation/common
 share/doc/kde/HTML/pt/konversation/index.cache.bz2
 share/doc/kde/HTML/pt/konversation/index.docbook
+share/doc/kde/HTML/ru/konversation/common
 share/doc/kde/HTML/ru/konversation/index.cache.bz2
 share/doc/kde/HTML/ru/konversation/index.docbook
 share/doc/kde/HTML/sv/konversation/addchannel.png
@@ -193,8 +195,6 @@ share/doc/kde/HTML/sv/konversation/quickconnect_screen.png
 share/doc/kde/HTML/sv/konversation/serverlist_co.png
 share/doc/kde/HTML/sv/konversation/urlcatcher_screen_co.png
 share/doc/kde/HTML/sv/konversation/webbrowser_screen_co.png
-@comment move to: share/kde/apps/konversation/konversation.desktop
-share/kde/applications/kde/konversation.desktop
 share/kde/apps/kconf_update/konversation-0.19-appearance.pl
 share/kde/apps/kconf_update/konversation-0.19-colorcodes.pl
 share/kde/apps/kconf_update/konversation-0.19-colors.pl
@@ -325,18 +325,19 @@ share/locale/sv/LC_MESSAGES/konversation.mo
 share/locale/ta/LC_MESSAGES/konversation.mo
 share/locale/tr/LC_MESSAGES/konversation.mo
 share/locale/zh_TW/LC_MESSAGES/konversation.mo
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/scalable/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/64x64/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/48x48/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/32x32/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/22x22/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/16x16/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/128x128/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/scalable/actions 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/32x32/actions 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/22x22/actions 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/crystalsvg/16x16/actions 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/config.kcfg 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/konversation/themes/square
 @dirrm share/kde/apps/konversation/themes/smiling
 @dirrm share/kde/apps/konversation/themes/default
@@ -346,32 +347,23 @@ share/locale/zh_TW/LC_MESSAGES/konversation.mo
 @dirrm share/kde/apps/konversation/themes
 @dirrm share/kde/apps/konversation/scripts
 @dirrm share/kde/apps/konversation
-@unexec ${RMDIR} %D/share/kde/apps/kconf_update 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/apps 2>/dev/null || ${TRUE}
-@dirrm share/kde/applications/kde
-@dirrm share/kde/applications
-@unexec ${RMDIR} %D/share/kde 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/sv/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/sv 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/sv
+@dirrm share/doc/kde/HTML/ru/konversation
 @dirrm share/doc/kde/HTML/pt/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/pt 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/pt
 @dirrm share/doc/kde/HTML/nl/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/nl 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/nl
 @dirrm share/doc/kde/HTML/it/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/it 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/it
 @dirrm share/doc/kde/HTML/et/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/et 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/es/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/es 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/es
 @dirrm share/doc/kde/HTML/en/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/en 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/da/konversation
-@unexec ${RMDIR} %D/share/doc/kde/HTML/da 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/da/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/en/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/es/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/et/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/it/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/nl/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/pt/common 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/kde/HTML/sv/common 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm share/applications/kde
