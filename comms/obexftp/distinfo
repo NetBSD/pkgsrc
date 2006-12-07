@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2006/10/22 16:38:40 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2006/12/07 14:22:18 xtraeme Exp $
 
 SHA1 (obexftp-0.20.tar.bz2) = 0b3a7d2aeb0dbd24d75761a7e59f42f46ea5ef82
 RMD160 (obexftp-0.20.tar.bz2) = ded5cf4d95eac77d5f6ee0a39f3789eb962534ed
 Size (obexftp-0.20.tar.bz2) = 351641 bytes
-SHA1 (patch-aa) = 34e1794f7cf4d06d4edb65cdd36470fa88afdb71
+SHA1 (patch-aa) = e70d2fd0655a95a43f3a9440e5a2e2ab91a2ed54
 SHA1 (patch-ab) = d4693413a992f53f6aca92d9e920185c1b5e4f0e
 SHA1 (patch-ac) = d06b6be98745778e2ce8e97762c102d4dbccecfc
 SHA1 (patch-ad) = 8c3b99cbc2f45fe039aae000aeebb2d5779355f9
