@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2006/11/24 12:28:12 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/07 14:49:39 wennmach Exp $
 
 DISTNAME=		g95_source
-VERSION=		0.91
+VERSION=		0.90
 PKGNAME=		g95-${VERSION}
-PKGREVISION=		2
+#PKGREVISION=		1
 CATEGORIES=		lang
 EXTRACT_SUFX.g95_source=	.tgz
+DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX.g95_source}
 DISTFILES+=		gcc-core-4.0.3.tar.gz
-SITES.g95_source.tgz=	http://ftp.g95.org/
+SITES.g95_source.tgz=	http://ftp.g95.org/v0.9/
 SITES.gcc-core-4.0.3.tar.gz= ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.0.3/
 
 MAINTAINER=		wennmach@NetBSD.org
