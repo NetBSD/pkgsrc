@@ -1,0 +1,3 @@
+btpin-qt is a graphical Bluetooth PIN Client for NetBSD. It sits in
+the background until a PIN request is sent by the bthcid(8) daemon,
+when it puts up a dialog for the user to enter a PIN.
