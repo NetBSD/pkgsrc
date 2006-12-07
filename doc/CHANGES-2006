@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1956 2006/12/06 23:14:18 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.1957 2006/12/07 02:35:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5556,3 +5556,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/elinks to 0.11.2 [reed 2006-12-06]
 	Updated security/gnupg to 1.4.6 [wiz 2006-12-06]
 	Added net/p5-Net-NBName version 0.26 [bouyer 2006-12-06]
+	Added www/ap2-xslt2 version 2004112100 [xtraeme 2006-12-07]
