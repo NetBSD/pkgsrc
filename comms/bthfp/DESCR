@@ -1,0 +1,4 @@
+Very basic implementation of the Bluetooth Handsfree Profile for NetBSD.
+
+bthfp opens a control connection to your phone and copies audio data
+to and from your system audio as appropriate.
