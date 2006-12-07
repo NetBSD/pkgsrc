@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.7 2006/12/01 21:10:18 rillig Exp $
+# $NetBSD: transform-gcc,v 1.8 2006/12/07 00:32:36 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -15,6 +15,7 @@ case $arg in
 
 # GCC extensions.
 -fPIC			|\
+-ggdb			|\
 -M[DFPT]		|\
 -O[23s]			|\
 -pipe			|\
@@ -26,6 +27,7 @@ case $arg in
 -W			|\
 -W[cLlS],*		|\
 -Wall			|\
+-Wcast-align		|\
 -Wcast-qual		|\
 -Wextra			|\
 -Werror			|\
@@ -45,6 +47,11 @@ case $arg in
 -Wstrict-prototypes	|\
 -Wswitch		|\
 -Wwrite-strings		) transform_pass ;;
+
+# Options specific to g++.
+-fmessage-length=*	|\
+-fno-exceptions		|\
+-fno-rtti		) transform_pass ;;
 
 # Other compiler's options that have corresponding GCC options.
 -KPIC			|\
