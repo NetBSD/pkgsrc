@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/11/30 15:00:45 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/12/07 14:09:03 drochner Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	1
@@ -19,8 +19,6 @@ BUILDLINK_PASSTHRU_DIRS+=	/usr/X11R6/include
 
 INSTALLATION_DIRS+=	bin
 
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
