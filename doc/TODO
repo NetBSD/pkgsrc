@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5741 2006/12/06 18:31:35 xtraeme Exp $
+$NetBSD: TODO,v 1.5742 2006/12/07 06:28:42 cjs Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,6 @@ Suggested package updates
 	o html2wml-0.4.11
 	o htmldoc-1.8.27
 	o http_load-20050629
-	o httperf-0.8
 	o httptunnel-3.3
 	o hydrogen-0.9.2
 	o hylafax-4.3.0
