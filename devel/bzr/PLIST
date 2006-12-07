@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/11/04 18:36:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/12/07 17:07:40 wiz Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -135,6 +135,9 @@ ${PYSITELIB}/bzrlib/config.pyo
 ${PYSITELIB}/bzrlib/conflicts.py
 ${PYSITELIB}/bzrlib/conflicts.pyc
 ${PYSITELIB}/bzrlib/conflicts.pyo
+${PYSITELIB}/bzrlib/debug.py
+${PYSITELIB}/bzrlib/debug.pyc
+${PYSITELIB}/bzrlib/debug.pyo
 ${PYSITELIB}/bzrlib/decorators.py
 ${PYSITELIB}/bzrlib/decorators.pyc
 ${PYSITELIB}/bzrlib/decorators.pyo
@@ -173,6 +176,9 @@ ${PYSITELIB}/bzrlib/externalcommand.pyo
 ${PYSITELIB}/bzrlib/fetch.py
 ${PYSITELIB}/bzrlib/fetch.pyc
 ${PYSITELIB}/bzrlib/fetch.pyo
+${PYSITELIB}/bzrlib/generate_ids.py
+${PYSITELIB}/bzrlib/generate_ids.pyc
+${PYSITELIB}/bzrlib/generate_ids.pyo
 ${PYSITELIB}/bzrlib/gpg.py
 ${PYSITELIB}/bzrlib/gpg.pyc
 ${PYSITELIB}/bzrlib/gpg.pyo
@@ -185,6 +191,9 @@ ${PYSITELIB}/bzrlib/hashcache.pyo
 ${PYSITELIB}/bzrlib/help.py
 ${PYSITELIB}/bzrlib/help.pyc
 ${PYSITELIB}/bzrlib/help.pyo
+${PYSITELIB}/bzrlib/help_topics.py
+${PYSITELIB}/bzrlib/help_topics.pyc
+${PYSITELIB}/bzrlib/help_topics.pyo
 ${PYSITELIB}/bzrlib/identitymap.py
 ${PYSITELIB}/bzrlib/identitymap.pyc
 ${PYSITELIB}/bzrlib/identitymap.pyo
@@ -344,6 +353,9 @@ ${PYSITELIB}/bzrlib/tests/EncodingAdapter.pyo
 ${PYSITELIB}/bzrlib/tests/HTTPTestUtil.py
 ${PYSITELIB}/bzrlib/tests/HTTPTestUtil.pyc
 ${PYSITELIB}/bzrlib/tests/HTTPTestUtil.pyo
+${PYSITELIB}/bzrlib/tests/HttpServer.py
+${PYSITELIB}/bzrlib/tests/HttpServer.pyc
+${PYSITELIB}/bzrlib/tests/HttpServer.pyo
 ${PYSITELIB}/bzrlib/tests/TestUtil.py
 ${PYSITELIB}/bzrlib/tests/TestUtil.pyc
 ${PYSITELIB}/bzrlib/tests/TestUtil.pyo
@@ -395,6 +407,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_commit.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_conflicts.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_conflicts.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_conflicts.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_debug.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_debug.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_debug.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_diff.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_diff.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_diff.pyo
@@ -446,6 +461,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_missing.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_mv.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_mv.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_mv.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_nick.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_nick.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_nick.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_non_ascii.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_non_ascii.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_non_ascii.pyo
@@ -470,6 +488,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_remerge.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_remove.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_remove.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_remove.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_remove_tree.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_remove_tree.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_remove_tree.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_revert.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_revert.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_revert.pyo
@@ -668,6 +689,9 @@ ${PYSITELIB}/bzrlib/tests/test_fetch.pyo
 ${PYSITELIB}/bzrlib/tests/test_ftp_transport.py
 ${PYSITELIB}/bzrlib/tests/test_ftp_transport.pyc
 ${PYSITELIB}/bzrlib/tests/test_ftp_transport.pyo
+${PYSITELIB}/bzrlib/tests/test_generate_ids.py
+${PYSITELIB}/bzrlib/tests/test_generate_ids.pyc
+${PYSITELIB}/bzrlib/tests/test_generate_ids.pyo
 ${PYSITELIB}/bzrlib/tests/test_gpg.py
 ${PYSITELIB}/bzrlib/tests/test_gpg.pyc
 ${PYSITELIB}/bzrlib/tests/test_gpg.pyo
@@ -892,6 +916,9 @@ ${PYSITELIB}/bzrlib/tests/test_whitebox.pyo
 ${PYSITELIB}/bzrlib/tests/test_workingtree.py
 ${PYSITELIB}/bzrlib/tests/test_workingtree.pyc
 ${PYSITELIB}/bzrlib/tests/test_workingtree.pyo
+${PYSITELIB}/bzrlib/tests/test_wsgi.py
+${PYSITELIB}/bzrlib/tests/test_wsgi.pyc
+${PYSITELIB}/bzrlib/tests/test_wsgi.pyo
 ${PYSITELIB}/bzrlib/tests/test_xml.py
 ${PYSITELIB}/bzrlib/tests/test_xml.pyc
 ${PYSITELIB}/bzrlib/tests/test_xml.pyo
@@ -988,6 +1015,9 @@ ${PYSITELIB}/bzrlib/transform.pyo
 ${PYSITELIB}/bzrlib/transport/__init__.py
 ${PYSITELIB}/bzrlib/transport/__init__.pyc
 ${PYSITELIB}/bzrlib/transport/__init__.pyo
+${PYSITELIB}/bzrlib/transport/chroot.py
+${PYSITELIB}/bzrlib/transport/chroot.pyc
+${PYSITELIB}/bzrlib/transport/chroot.pyo
 ${PYSITELIB}/bzrlib/transport/decorator.py
 ${PYSITELIB}/bzrlib/transport/decorator.pyc
 ${PYSITELIB}/bzrlib/transport/decorator.pyo
@@ -1012,9 +1042,15 @@ ${PYSITELIB}/bzrlib/transport/http/_pycurl_errors.pyo
 ${PYSITELIB}/bzrlib/transport/http/_urllib.py
 ${PYSITELIB}/bzrlib/transport/http/_urllib.pyc
 ${PYSITELIB}/bzrlib/transport/http/_urllib.pyo
+${PYSITELIB}/bzrlib/transport/http/_urllib2_wrappers.py
+${PYSITELIB}/bzrlib/transport/http/_urllib2_wrappers.pyc
+${PYSITELIB}/bzrlib/transport/http/_urllib2_wrappers.pyo
 ${PYSITELIB}/bzrlib/transport/http/response.py
 ${PYSITELIB}/bzrlib/transport/http/response.pyc
 ${PYSITELIB}/bzrlib/transport/http/response.pyo
+${PYSITELIB}/bzrlib/transport/http/wsgi.py
+${PYSITELIB}/bzrlib/transport/http/wsgi.pyc
+${PYSITELIB}/bzrlib/transport/http/wsgi.pyo
 ${PYSITELIB}/bzrlib/transport/local.py
 ${PYSITELIB}/bzrlib/transport/local.pyc
 ${PYSITELIB}/bzrlib/transport/local.pyo
@@ -1135,6 +1171,7 @@ ${PYSITELIB}/bzrlib/xml_serializer.pyo
 man/man1/bzr.1
 share/doc/bzr/centralized_workflow.txt
 share/doc/bzr/configuration.txt
+share/doc/bzr/http_smart_server.txt
 share/doc/bzr/index.txt
 share/doc/bzr/plugins.txt
 share/doc/bzr/server.txt
