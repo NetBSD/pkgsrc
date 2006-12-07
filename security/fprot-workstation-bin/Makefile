@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2006/04/12 13:34:49 tron Exp $
+# $NetBSD: Makefile,v 1.33.4.1 2006/12/07 15:01:25 salo Exp $
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
-PKGREVISION=		2
 CATEGORIES=		security
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -27,7 +26,7 @@ WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
 USE_TOOLS+=		perl:run
 
-FPVER=			4.6.6
+FPVER=			4.6.7
 DATDIR=			${PREFIX}/share/fprot-workstation-bin
 DOCDIR=			${PREFIX}/share/doc/fprot-workstation-bin
 FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
@@ -57,7 +56,7 @@ DISTNAME=		fp-solaris-sparc-ws-${FPVER}
 DEPENDS+=	netbsd32_compat16>=1.0:../../emulators/netbsd32_compat16
 .endif
 
-DIST_SUBDIR=		${DISTNAME}
+DIST_SUBDIR=		${PKGBASE}-20061204
 
 SUBST_CLASSES+=		f-prot
 SUBST_MESSAGE.f-prot=	Configuring f-prot location.
@@ -72,7 +71,7 @@ SUBST_FILES.paths=	tools/check-updates.pl
 SUBST_SED.paths=	-e "s,XXXFPDIRXXX,${FPDIR},"
 SUBST_SED.paths+=	-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
-INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/f-prot.sh ${PREFIX}/bin/f-prot
