@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1961 2006/12/07 12:53:08 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1962 2006/12/07 14:11:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5567,3 +5567,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/gcc3-ada to 3.3.6 [markd 2006-12-07]
 	Updated lang/gcc3-objc to 3.3.6 [markd 2006-12-07]
 	Updated misc/logsurfer to 1.6.2 [obache 2006-12-07]
+	Updated mail/sylpheed-devel to 2.3.0beta6 [xtraeme 2006-12-07]
