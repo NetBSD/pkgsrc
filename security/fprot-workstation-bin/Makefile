@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/12/06 15:27:59 taca Exp $
+# $NetBSD: Makefile,v 1.35 2006/12/07 05:40:07 taca Exp $
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
@@ -76,8 +76,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/f-prot.sh ${PREFIX}/bin/f-prot
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/check-updates.pl ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/man_pages/check-updates.pl.8 ${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/man_pages/f-prot.1 ${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man_pages/check-updates.pl.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/man_pages/f-prot.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${DATDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.DEF ${DATDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
