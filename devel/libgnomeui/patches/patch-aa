@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.7 2006/12/07 13:13:08 minskim Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=382923
+
+--- libgnomeui/gnome-ui-init.c.orig	2006-10-05 03:45:42.000000000 -0700
++++ libgnomeui/gnome-ui-init.c
+@@ -840,7 +840,9 @@ static void libgnomeui_segv_handle(int s
+         /* Make sure we release grabs */
+         gdk_pointer_ungrab(GDK_CURRENT_TIME);
+         gdk_keyboard_ungrab(GDK_CURRENT_TIME);
++#ifdef GDK_WINDOWING_X11
+         XUngrabServer (GDK_DISPLAY ());
++#endif
+ 
+         gdk_flush();
+         
