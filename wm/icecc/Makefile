@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/08/06 10:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/08 12:05:05 obache Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
 DISTNAME=		icecc-2.9
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icecc/}
 DISTFILES=		icecc-2.9.tar.bz2		\
@@ -71,9 +71,5 @@ post-install:
 .include "../../editors/vim-share/version.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/py-qt3-base/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
