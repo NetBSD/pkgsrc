@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1966 2006/12/07 22:11:47 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.1967 2006/12/08 12:26:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5574,3 +5574,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/bcmfw version 1.0 [plunky 2006-12-07]
 	Added sysutils/btpin-qt version 1.0 [plunky 2006-12-07]
 	Updated databases/libgnomedb to 1.99.1nb1 [minskim 2006-12-07]
+	Updated wm/icecc to 2.9nb5 [obache 2006-12-07]
