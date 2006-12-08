@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/07/04 06:23:00 wiz Exp $
+$NetBSD: distinfo,v 1.6 2006/12/08 16:59:56 wiz Exp $
 
-SHA1 (edict-2006.002/edict.gz) = 7c8006ce537dd53317d341b806ea139efa17f315
-RMD160 (edict-2006.002/edict.gz) = f04589eb4f045569310d9451dbbae02c6efef0d3
-Size (edict-2006.002/edict.gz) = 2195807 bytes
-SHA1 (edict-2006.002/edict_doc.txt) = 1b4cc496a1e7763010db6e94f0e6ffbf0581134c
-RMD160 (edict-2006.002/edict_doc.txt) = d735550b9a014d29693c878ce079dda01cc1d194
-Size (edict-2006.002/edict_doc.txt) = 24000 bytes
+SHA1 (edict-20061208/edict.gz) = 0861650586674e33f0d55b66fcd94d4f54fc1946
+RMD160 (edict-20061208/edict.gz) = a8f54df92cff0de88882b963429130b80f00bf3e
+Size (edict-20061208/edict.gz) = 2302714 bytes
+SHA1 (edict-20061208/edict_doc.html) = d2d994d7a46e22b153de82da1ebeb56118b2f0cd
+RMD160 (edict-20061208/edict_doc.html) = 03af0cdeb2530adac58f4a82d1a99d220c85760a
+Size (edict-20061208/edict_doc.html) = 17990 bytes
