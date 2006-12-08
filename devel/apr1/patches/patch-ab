@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/08 23:29:53 xtraeme Exp $
+
+--- apr-util/configure.orig	2006-12-08 18:05:10.000000000 +0100
++++ apr-util/configure	2006-12-08 18:05:58.000000000 +0100
+@@ -31501,7 +31501,7 @@
+ fi
+ 
+ 
+-      if test "$apu_have_pgsql" == "0"; then
++      if test "$apu_have_pgsql" = "0"; then
+         if test "${ac_cv_header_postgresql_libpq_fe_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for postgresql/libpq-fe.h" >&5
+ echo $ECHO_N "checking for postgresql/libpq-fe.h... $ECHO_C" >&6
+@@ -32732,7 +32732,7 @@
+ fi
+ 
+ 
+-      if test "$apu_have_mysql" == "0"; then
++      if test "$apu_have_mysql" = "0"; then
+         if test "${ac_cv_header_mysql_mysql_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for mysql/mysql.h" >&5
+ echo $ECHO_N "checking for mysql/mysql.h... $ECHO_C" >&6
