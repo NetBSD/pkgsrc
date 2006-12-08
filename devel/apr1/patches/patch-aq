@@ -1,0 +1,22 @@
+$NetBSD: patch-aq,v 1.1.1.1 2006/12/08 23:29:53 xtraeme Exp $
+
+--- apr/config.layout.orig	Thu Apr  3 17:14:54 2003
++++ apr/config.layout	Thu Apr  3 17:14:01 2003
+@@ -229,3 +229,17 @@
+     infodir:       ${exec_prefix}/share/info
+     libsuffix:    -${APR_MAJOR_VERSION}
+ </Layout>
++
++#   NetBSD (pkgsrc) layout
++<Layout NetBSD>
++    prefix:        @PREFIX@
++    exec_prefix:   ${prefix}
++    bindir:        ${exec_prefix}/bin
++    sbindir:       ${exec_prefix}/sbin
++    libexecdir:    ${exec_prefix}/lib/httpd
++    mandir:        ${prefix}/man
++    datadir:       ${prefix}/share/httpd
++    includedir:    ${prefix}/include/apr
++    localstatedir: /var
++    runtimedir:    ${localstatedir}/run
++</Layout>
