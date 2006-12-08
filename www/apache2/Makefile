@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.106 2006/11/05 17:52:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.107 2006/12/08 23:51:37 xtraeme Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
 COMMENT=	Apache HTTP (Web) server, version 2
 
-CONFLICTS=	apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
+CONFLICTS=	apache-*ssl-[0-9]* apache>=2.2 apache6-[0-9]*
 
 BUILD_DEFS+=	USE_INET6
 BUILD_DEFS+=	VARBASE
