@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/12/07 02:57:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/08 23:34:11 xtraeme Exp $
 
 DISTNAME=	mod_perl-2.0.3
 PKGNAME=	${DISTNAME:S/mod_/ap2-/}
@@ -10,6 +10,8 @@ HOMEPAGE=	http://perl.apache.org/
 COMMENT=	Module that embeds a Perl interpreter into Apache
 
 CONFLICTS=	ap-perl-[0-9]* p5-Apache-Test-[0-9]*
+
+PKG_APACHE_ACCEPTED=	apache2 apache22
 
 APACHE_MODULE=		# defined
 PERL5_PACKLIST=		auto/mod_perl2/.packlist
@@ -23,5 +25,5 @@ post-install:
 	${CP} -R ${WRKSRC}/docs/* ${MODPERLDOCSDIR}
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
