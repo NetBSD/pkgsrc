@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/08 23:34:10 xtraeme Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
@@ -23,6 +23,8 @@ NO_CONFIGURE=		yes
 APACHE_MODULE_NAME=	mod_auth_mysql
 DOC_DIR=		${PREFIX}/share/doc/${APACHE_MODULE_NAME}
 
+PKG_APACHE_ACCEPTED=	apache2 apache22
+
 post-extract:
 	${MKDIR} ${WRKSRC}
 	${MV} ${WRKDIR}/${DISTNAME} ${WRKSRC}
@@ -42,7 +44,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/mysql-group-auth.txt ${DOC_DIR}
 
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/mysql.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
