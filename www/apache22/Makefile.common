@@ -1,0 +1,12 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/12/08 23:31:52 xtraeme Exp $
+
+DISTNAME=		httpd-${APACHE_VERSION}
+EXTRACT_SUFX=		.tar.bz2
+# When updating this version be sure to update the checksum and remove
+# any PKGREVISION for devel/apr also.
+APACHE_VERSION=		2.2.3
+APR_VERSION=		1.2.8
+MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
+			${MASTER_SITE_APACHE:=httpd/old/} \
+			http://www.NetBSD.org/images/logos/
+MAINTAINER=		tron@NetBSD.org
