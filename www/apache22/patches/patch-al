@@ -1,0 +1,31 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/12/08 23:31:52 xtraeme Exp $
+
+--- include/httpd.h.orig	2006-12-08 18:47:07.000000000 +0100
++++ include/httpd.h	2006-12-08 18:48:21.000000000 +0100
+@@ -129,7 +129,7 @@
+ #if defined(OS2) || defined(WIN32)
+ #define DEFAULT_ERRORLOG "logs/error.log"
+ #else
+-#define DEFAULT_ERRORLOG "logs/error_log"
++#define DEFAULT_ERRORLOG DEFAULT_REL_LOGFILEDIR "/error.log"
+ #endif
+ #endif /* DEFAULT_ERRORLOG */
+ 
+@@ -145,7 +145,7 @@
+ 
+ /** The name of the server config file */
+ #ifndef SERVER_CONFIG_FILE
+-#define SERVER_CONFIG_FILE "conf/httpd.conf"
++#define SERVER_CONFIG_FILE DEFAULT_REL_SYSCONFDIR "/httpd.conf"
+ #endif
+ 
+ /** The default path for CGI scripts if none is currently set */
+@@ -235,7 +235,7 @@
+ 
+ /** The name of the MIME types file */
+ #ifndef AP_TYPES_CONFIG_FILE
+-#define AP_TYPES_CONFIG_FILE "conf/mime.types"
++#define AP_TYPES_CONFIG_FILE DEFAULT_REL_SYSCONFDIR "/mime.types"
+ #endif
+ 
+ /*
