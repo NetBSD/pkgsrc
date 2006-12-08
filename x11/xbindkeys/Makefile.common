@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2006/03/04 21:31:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/12/08 16:16:12 obache Exp $
 #
 
-DISTNAME=	xbindkeys-1.7.1
+DISTNAME=	xbindkeys-1.7.3
 CATEGORIES=	x11
 MASTER_SITES=	http://hocwp.free.fr/xbindkeys/
 
