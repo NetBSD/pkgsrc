@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.647 2006/12/06 23:13:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.648 2006/12/08 22:16:06 cube Exp $
 #
 
 COMMENT=	Networking tools
@@ -377,6 +377,7 @@ SUBDIR+=	quagga-devel
 SUBDIR+=	queryperf
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	radiusd-cistron
+SUBDIR+=	rbldnsd
 SUBDIR+=	rdesktop
 SUBDIR+=	rdist6
 SUBDIR+=	rinetd
