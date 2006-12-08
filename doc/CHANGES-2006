@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1973 2006/12/08 20:41:55 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1974 2006/12/08 22:17:25 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5586,3 +5586,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/kanjidic2 to 20061208 [wiz 2006-12-08]
 	Added graphics/pngcheck version 2.2.0 [wiz 2006-12-08]
 	Updated time/p5-DateTime-Set to 0.25 [wiz 2006-12-08]
+	Added net/rbldnsd version 0.996a [cube 2006-12-08]
