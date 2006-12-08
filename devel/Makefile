@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.796 2006/11/16 20:18:09 kristerw Exp $
+# $NetBSD: Makefile,v 1.797 2006/12/08 23:30:35 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -35,6 +35,7 @@ SUBDIR+=	apache-ant
 SUBDIR+=	apache-ant15
 SUBDIR+=	apel
 SUBDIR+=	apr
+SUBDIR+=	apr1
 SUBDIR+=	arena
 SUBDIR+=	argtable
 SUBDIR+=	as31
