@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:18 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/08 23:34:11 xtraeme Exp $
 
 DISTNAME=	mod_chroot-0.3
 PKGNAME=	ap2-chroot-0.3
@@ -13,6 +13,8 @@ COMMENT=	Module to easily run Apache in a chroot environment
 APACHE_MODULE=		# defined
 NO_CONFIGURE=		yes
 
+PKG_APACHE_ACCEPTED=	apache2 apache22
+
 do-build:
 	cd ${WRKSRC} && ${APXS} -c mod_chroot.c
 
@@ -21,5 +23,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_chroot
 	cd ${WRKSRC} && ${INSTALL_DATA} [A-Z]* ${PREFIX}/share/doc/mod_chroot/
 
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

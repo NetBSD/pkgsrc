@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/07 02:34:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/08 23:34:11 xtraeme Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -17,12 +17,14 @@ USE_TOOLS+=	gmake
 APACHE_MODULE=	yes
 DIST_VER=	2004112100
 
+PKG_APACHE_ACCEPTED=	apache2 apache22
+
 CONFIGURE_ARGS+=	--enable-fallback-wraparound
 CONFIGURE_ARGS+=	--enable-libxslt-hack
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
