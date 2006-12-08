@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/12/08 22:14:12 cube Exp $
+
+rbldnsd doesn't have a configuration file and requires a certain number of
+parameters on its command line.
+
+In rc.conf, you will have to set the following variables to sensible
+values:
+
+  - rbldnsd_zones:  the list of managed zones, following the syntax
+                    described by rbldnsd(8).
+
+  - rbldnsd_flags:  at least one occurrence of -b is required.
+
+  - rbldnsd_chrootdir:  while optional, this option is strongly
+                        recommended.
+
+===========================================================================
