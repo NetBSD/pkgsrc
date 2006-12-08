@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5748 2006/12/08 14:59:35 obache Exp $
+$NetBSD: TODO,v 1.5749 2006/12/08 16:17:58 obache Exp $
 
 Suggested new packages
 ======================
@@ -1112,7 +1112,6 @@ Suggested package updates
 	o wmweather-2.4.3
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
-	o xbindkeys-1.7.2 [pkg/34467]
 	o xblast-2.10.4
 	o xdaliclock-2.23
 	o xdelta-3.0e
