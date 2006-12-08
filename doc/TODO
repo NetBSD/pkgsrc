@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5751 2006/12/08 20:41:55 wiz Exp $
+$NetBSD: TODO,v 1.5752 2006/12/08 23:39:24 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -211,10 +211,6 @@ Suggested new packages
 	Enigmail
 	http://enigmail.mozdev.org/
 	GnuPG extension for the Mozilla/Thunderbird mail client
-
-	Apache 2.2.x
-	http://www.apache.org/
-	Stable version of apache [xtraeme]
 
 
 Suggested package updates
