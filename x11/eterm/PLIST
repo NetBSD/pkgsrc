@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/11 14:02:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/08 12:06:59 sketch Exp $
 bin/Esetroot
 bin/Etbg
 bin/Etbg_update_list
@@ -9,6 +9,7 @@ bin/Ettable
 bin/kEsetroot
 lib/libEterm.la
 man/man1/Eterm.1
+share/Eterm/gdb.scr
 share/Eterm/pix/bar_horizontal_1.png
 share/Eterm/pix/bar_horizontal_2.png
 share/Eterm/pix/bar_horizontal_3.png
