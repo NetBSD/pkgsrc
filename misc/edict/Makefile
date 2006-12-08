@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2006/07/04 06:23:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/08 16:59:56 wiz Exp $
 #
+# Update instructions:
+# . bump PKGNAME to today's date
+# . get distfiles from OMASTER_SITES
+# . update ${DISTDIR}/${PKGNAME_NOREV} to
+#   ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 DISTNAME=	edict
-PKGNAME=	edict-2006.002
+PKGNAME=	edict-20061208
 CATEGORIES=	japanese misc
-MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
-		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
-		ftp://ftp.nrc.ca/pub/packages/nihongo/ \
-		http://www.bcit-broadcast.com/monash/ \
-		ftp://ftp.sedl.org/pub/mirrors/nihongo/ \
-		ftp://ftp.net.usf.edu/pub/monash/ \
-		ftp://ftp.u-aizu.ac.jp/pub/SciEng/nihongo/ftp.cc.monash.edu.au/ \
-		ftp://ftp.funet.fi/pub/culture/japan/mirrors/monash/pub/nihongo/
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
+OMASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.gz
-DISTFILES=	edict.gz edict_doc.txt
+DISTFILES=	edict.gz edict_doc.html
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
@@ -31,7 +30,7 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict.gz \
 		${PREFIX}/share/edict
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/edict
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict_doc.txt \
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict_doc.html \
 		${PREFIX}/share/doc/edict
 
 .include "../../mk/bsd.pkg.mk"

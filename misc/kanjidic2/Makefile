@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:39 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/12/08 16:59:56 wiz Exp $
 #
+# Update instructions:
+# . bump PKGNAME to today's date
+# . get distfiles from OMASTER_SITES
+# . update ${DISTDIR}/${PKGNAME_NOREV} to
+#   ftp.NetBSD.org:/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 DISTNAME=	kanjidic2
-PKGNAME=	kanjidic2-2004.2.1
+PKGNAME=	kanjidic2-20061208
 CATEGORIES=	japanese misc
-MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
-		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
-		ftp://ftp.nrc.ca/pub/packages/nihongo/ \
-		http://www.bcit-broadcast.com/monash/ \
-		ftp://ftp.sedl.org/pub/mirrors/nihongo/ \
-		ftp://ftp.net.usf.edu/pub/monash/ \
-		ftp://ftp.u-aizu.ac.jp/pub/SciEng/nihongo/ftp.cc.monash.edu.au/ \
-		ftp://ftp.funet.fi/pub/culture/japan/mirrors/monash/pub/nihongo/
+MASTER_SITES=	${MASTER_SITES_LOCAL:=${PKGNAME_NOREV}/}
+OMASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.gz
 DISTFILES=	kanjidic2.xml.gz kanjidic_doc.html kanjidic2_ov.html kanjidic2_dtd.gz kanjidic2_xsd.gz
 
