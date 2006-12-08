@@ -1,0 +1,53 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/12/08 23:31:52 xtraeme Exp $
+
+--- docs/conf/httpd.conf.in.orig	2006-12-08 21:49:32.000000000 +0100
++++ docs/conf/httpd.conf.in	2006-12-08 22:18:42.000000000 +0100
+@@ -365,37 +365,37 @@
+ # necessary.
+ 
+ # Server-pool management (MPM specific)
+-#Include @rel_sysconfdir@/extra/httpd-mpm.conf
++#Include @rel_sysconfdir@/httpd-mpm.conf
+ 
+ # Multi-language error messages
+-#Include @rel_sysconfdir@/extra/httpd-multilang-errordoc.conf
++#Include @rel_sysconfdir@/httpd-multilang-errordoc.conf
+ 
+ # Fancy directory listings
+-#Include @rel_sysconfdir@/extra/httpd-autoindex.conf
++#Include @rel_sysconfdir@/httpd-autoindex.conf
+ 
+ # Language settings
+-#Include @rel_sysconfdir@/extra/httpd-languages.conf
++#Include @rel_sysconfdir@/httpd-languages.conf
+ 
+ # User home directories
+-#Include @rel_sysconfdir@/extra/httpd-userdir.conf
++#Include @rel_sysconfdir@/httpd-userdir.conf
+ 
+ # Real-time info on requests and configuration
+-#Include @rel_sysconfdir@/extra/httpd-info.conf
++#Include @rel_sysconfdir@/httpd-info.conf
+ 
+ # Virtual hosts
+-#Include @rel_sysconfdir@/extra/httpd-vhosts.conf
++#Include @rel_sysconfdir@/httpd-vhosts.conf
+ 
+ # Local access to the Apache HTTP Server Manual
+-#Include @rel_sysconfdir@/extra/httpd-manual.conf
++#Include @rel_sysconfdir@/httpd-manual.conf
+ 
+ # Distributed authoring and versioning (WebDAV)
+-#Include @rel_sysconfdir@/extra/httpd-dav.conf
++#Include @rel_sysconfdir@/httpd-dav.conf
+ 
+ # Various default settings
+-#Include @rel_sysconfdir@/extra/httpd-default.conf
++#Include @rel_sysconfdir@/httpd-default.conf
+ 
+ # Secure (SSL/TLS) connections
+-#Include @rel_sysconfdir@/extra/httpd-ssl.conf
++#Include @rel_sysconfdir@/httpd-ssl.conf
+ #
+ # Note: The following must must be present to support
+ #       starting without SSL on platforms with no /dev/random equivalent
