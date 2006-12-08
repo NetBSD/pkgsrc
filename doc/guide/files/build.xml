@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.40 2006/12/04 12:39:52 kano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.41 2006/12/08 19:06:41 drochner Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -290,6 +290,7 @@
 	${MASTER_SITE_DEBIAN}
 	${MASTER_SITE_FREEBSD}
 	${MASTER_SITE_FREEBSD_LOCAL}
+	${MASTER_SITE_GENTOO}
 	${MASTER_SITE_GNOME}
 	${MASTER_SITE_GNU}
 	${MASTER_SITE_GNUSTEP}
