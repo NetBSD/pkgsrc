@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2006/09/17 12:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/12/08 14:21:20 obache Exp $
 #
 
-DISTNAME=		gtk-send-pr-0.4.7
+DISTNAME=		gtk-send-pr-0.4.8
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.berlios.de/gtk-send-pr/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		flynn@energyhq.es.eu.org
+MAINTAINER=		mmendez@energyhq.be
 HOMEPAGE=		http://gtk-send-pr.berlios.de/index.html
 COMMENT=		GTK+ based problem report tool
 
