@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1970 2006/12/08 16:17:58 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1971 2006/12/08 17:01:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5580,3 +5580,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Module-Pluggable to 3.4 [obache 2006-12-08]
 	Updated x11/xbindkeys to 1.7.3 [obache 2006-12-08]
 	Updated x11/xbindkeys-tk to 1.7.3 [obache 2006-12-08]
+	Updated misc/edict to 20061208 [wiz 2006-12-08]
+	Updated misc/JMdict to 20061208 [wiz 2006-12-08]
+	Updated misc/kanjidic to 20061208 [wiz 2006-12-08]
+	Updated misc/kanjidic2 to 20061208 [wiz 2006-12-08]
