@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/12/05 23:16:48 tron Exp $
+# $NetBSD: Makefile,v 1.40 2006/12/08 22:06:28 joerg Exp $
 #
 
 DISTNAME=	avidemux_2.3.0
@@ -21,6 +21,7 @@ USE_TOOLS+=		gmake perl pkg-config
 CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LIBS+=			${LIBOSSAUDIO}
 
+CONFIGURE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
 CONFIGURE_ENV+=		ac_cv_path_ART_CONFIG=no
 CONFIGURE_ARGS+=	--without-newfaad
 CONFIGURE_ARGS+=	--disable-faad # Dolby doesn't allow binary distribution
