@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.1.1.1 2006/12/08 23:29:53 xtraeme Exp $
+
+--- apr-util/config.layout.orig	2006-12-08 17:55:16.000000000 +0100
++++ apr-util/config.layout	2006-12-08 17:56:48.000000000 +0100
+@@ -230,3 +230,17 @@
+     libsuffix:     -${APRUTIL_MAJOR_VERSION}
+     installbuilddir: ${prefix}/usr/share/apache2/build
+ </Layout>
++
++#   NetBSD (pkgsrc) layout
++<Layout NetBSD>
++     prefix:        @PREFIX@
++     exec_prefix:   ${prefix}
++     bindir:        ${exec_prefix}/bin
++     sbindir:       ${exec_prefix}/sbin
++     libexecdir:    ${exec_prefix}/lib/httpd
++     mandir:        ${prefix}/man
++     datadir:       ${prefix}/share/httpd
++     includedir:    ${prefix}/include/apr
++     localstatedir: /var
++     runtimedir:    ${localstatedir}/run
++</Layout>
