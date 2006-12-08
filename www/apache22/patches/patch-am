@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2006/12/08 23:31:52 xtraeme Exp $
+
+--- include/scoreboard.h.orig	2005-02-04 20:21:18.000000000 +0000
++++ include/scoreboard.h
+@@ -36,7 +36,7 @@ extern "C" {
+ 
+ /* Scoreboard file, if there is one */
+ #ifndef DEFAULT_SCOREBOARD
+-#define DEFAULT_SCOREBOARD "logs/apache_runtime_status"
++#define DEFAULT_SCOREBOARD DEFAULT_REL_RUNTIMEDIR "/apache_runtime_status"
+ #endif
+ 
+ /* Scoreboard info on a process is, for now, kept very brief --- 
