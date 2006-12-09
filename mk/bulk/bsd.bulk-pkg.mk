@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.127 2006/12/09 19:40:53 jschauma Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.128 2006/12/09 19:56:54 jschauma Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -351,7 +351,7 @@ bulk-package:
 		${ECHO} '###' ; \
 		${ECHO} '###' `date`: ; \
 		${ECHO} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
-		${ECHO} '### Current pkg count: ' `${FIND} ${PKG_DBDIR} -type d ! -name '.' -prune -print | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
+		${ECHO} '### Current pkg count: ' `cd ${PKG_DBDIR} && ${FIND} . -type d ! -name '.' -prune -print | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO} '###' ; \
 	fi \
 	) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}
