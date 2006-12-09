@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.126 2006/11/26 03:08:24 jschauma Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.127 2006/12/09 19:40:53 jschauma Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -301,7 +301,7 @@ bulk-check-uptodate:
 			uptodate=0; \
 		elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ]; then \
 			${SHCOMMENT} "Check files of this package"; \
-			newfiles="`${FIND} . -type f -newer "${REF}" ! \( -name ${WRKDIR_BASE} -or -name README.html -or -name DESCR -or -name COMMENT -or -name Repository -or -name Entries -or -name Root -or -name Tag \) -print || ${TRUE}`"; \
+			newfiles="`${FIND} . \( \( -name CVS -or -name ${WRKDIR_BASENAME} \) -prune \) -or \( -type f -newer "${REF}" ! \( -name README.html -or -name DESCR -or -name COMMENT -or -name '.*' \) \) -print || ${TRUE}`"; \
 			nnewfiles="`echo $$newfiles | ${WC} -w`"; \
 			if [ "$$nnewfiles" -gt 0 ]; then \
 				${BULK_MSG} 1>&2 "Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..."; \
