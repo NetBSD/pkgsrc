@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5754 2006/12/09 13:58:51 obache Exp $
+$NetBSD: TODO,v 1.5755 2006/12/09 14:07:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -483,8 +483,6 @@ Suggested package updates
 	o grhino-0.16.0
 	o gri-2.12.8
 	o grig-0.7.1
-	o gsasl-0.2.12 [pkg/33638]
-	o gsasl-0.2.14
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
