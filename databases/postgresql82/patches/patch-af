@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+
+--- src/timezone/localtime.c.orig	2005-10-15 11:49:51.000000000 +0900
++++ src/timezone/localtime.c
+@@ -77,18 +77,18 @@ struct rule
+ 
+ static long detzcode(const char *codep);
+ static const char *getzname(const char *strp);
+-static const char *getnum(const char *strp, int *nump, int min, int max);
++static const char *getnum(const char *strp, int *nump, const int min, const int max);
+ static const char *getsecs(const char *strp, long *secsp);
+ static const char *getoffset(const char *strp, long *offsetp);
+ static const char *getrule(const char *strp, struct rule * rulep);
+ static void gmtload(struct state * sp);
+-static void gmtsub(const pg_time_t *timep, long offset, struct pg_tm * tmp);
+-static void localsub(const pg_time_t *timep, long offset, struct pg_tm * tmp, const pg_tz *tz);
+-static void timesub(const pg_time_t *timep, long offset,
++static void gmtsub(const pg_time_t *timep, const long offset, struct pg_tm * tmp);
++static void localsub(const pg_time_t *timep, const long offset, struct pg_tm * tmp, const pg_tz *tz);
++static void timesub(const pg_time_t *timep, const long offset,
+ 		const struct state * sp, struct pg_tm * tmp);
+-static pg_time_t transtime(pg_time_t janfirst, int year,
+-		  const struct rule * rulep, long offset);
+-int			tzparse(const char *name, struct state * sp, int lastditch);
++static pg_time_t transtime(const pg_time_t janfirst, const int year,
++		  const struct rule * rulep, const long offset);
++int			tzparse(const char *name, struct state * sp, const int lastditch);
+ 
+ /* GMT timezone */
+ static struct state gmtmem;
