@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.29 2006/11/25 13:43:42 agc Exp $
+# $NetBSD: audit-packages,v 1.30 2006/12/09 12:30:47 adrianp Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -191,6 +191,25 @@ found_vulnpkg=0
 while read pat type url; do
 	case "$pat" in
 	\#*|'') continue;;
+	esac
+
+	case "$IGNORE_URLS" in
+	"")	;;
+	*)	ignore=false;
+		for u in $IGNORE_URLS; do
+			if [ "x$u" = "x$url" ]; then
+				ignore=true
+				break
+			fi
+		done
+		if $ignore; then
+			case "$verbose" in
+			yes)	echo "Ignoring vulnerability for $url with pattern $pat"
+				;;
+			esac
+			continue
+		fi
+		;;
 	esac
 
 	if [ -z "$one_package" ] ; then
