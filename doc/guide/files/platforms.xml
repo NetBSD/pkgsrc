@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.48 2006/12/04 14:34:20 kano Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.49 2006/12/09 15:44:19 kano Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -145,7 +145,7 @@ directory on ftp.NetBSD.org.</para>
       </row>
       <row>
 	<entry role="osname">OpenBSD 3.5/i386</entry>
-	<entry role="date">20040507</entry>
+	<entry role="date">20040703</entry>
 	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.5-i386-20040703.tar.gz">binary kit</ulink></entry>
 	<entry role="binary-pkgs-url"></entry>
       </row>
@@ -157,7 +157,7 @@ directory on ftp.NetBSD.org.</para>
       </row>
       <row>
 	<entry role="osname">Slackware Linux 9/i386</entry>
-	<entry role="date">20031023</entry>
+	<entry role="date">20040703</entry>
 	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-i386-slackware9-20040703.tar.gz">binary kit</ulink></entry>
 	<entry role="binary-pkgs-url"></entry>
       </row>
@@ -175,9 +175,9 @@ directory on ftp.NetBSD.org.</para>
       </row>
       <row>
 	<entry role="osname">Solaris 9/sparc</entry>
-	<entry role="date">20041208</entry>
-	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-sparc-20041208.tar.gz">binary kit</ulink></entry>
-	<entry role="binary-pkgs-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/SunOS-5.9/sparc/">binary packages</ulink></entry>
+	<entry role="date">20060713</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-sparc-pkgsrc-2006Q2.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
       </row>
       <row>
 	<entry role="osname">Solaris 9/i386</entry>
