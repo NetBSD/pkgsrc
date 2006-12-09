@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+
+--- src/timezone/private.h.orig	2005-02-23 13:34:21.000000000 +0900
++++ src/timezone/private.h
+@@ -66,8 +66,8 @@ extern int	unlink(const char *filename);
+ extern char *icalloc(int nelem, int elsize);
+ extern char *icatalloc(char *old, const char *new);
+ extern char *icpyalloc(const char *string);
+-extern char *imalloc(int n);
+-extern void *irealloc(void *pointer, int size);
++extern char *imalloc(const int n);
++extern void *irealloc(void *pointer, const int size);
+ extern void icfree(char *pointer);
+ extern void ifree(char *pointer);
+ extern char *scheck(const char *string, const char *format);
