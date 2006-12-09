@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/08 16:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/09 08:20:47 wiz Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -9,7 +9,7 @@
 DISTNAME=	kanjidic
 PKGNAME=	kanjidic-20061208
 CATEGORIES=	japanese misc
-MASTER_SITES=	${MASTER_SITES_LOCAL:=${PKGNAME_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
 OMASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.gz
 DISTFILES=	kanjidic.gz kanjidic.doc
