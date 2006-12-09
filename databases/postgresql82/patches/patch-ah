@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+
+--- src/timezone/strftime.c.orig	2006-07-14 16:52:27.000000000 +0200
++++ src/timezone/strftime.c
+@@ -89,7 +89,7 @@ static const struct lc_time_T C_time_loc
+ };
+ 
+ static char *_add(const char *, char *, const char *);
+-static char *_conv(int, const char *, char *, const char *);
++static char *_conv(const int, const char *, char *, const char *);
+ static char *_fmt(const char *, const struct pg_tm *, char *,
+ 	 const char *, int *);
+ 

@@ -1,0 +1,39 @@
+$NetBSD: patch-am,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+
+--- contrib/tsearch2/Makefile.orig	2006-09-11 17:14:46.000000000 +0200
++++ contrib/tsearch2/Makefile
+@@ -10,7 +10,7 @@ OBJS = dict_ex.o dict.o snmap.o stopword
+        ts_locale.o ts_lexize.o ginidx.o
+ 
+ SUBDIRS     := snowball ispell wordparser
+-SUBDIROBJS  := $(SUBDIRS:%=%/SUBSYS.o)
++SUBDIROBJS  := $(SUBDIRS:%=%/libSUBSYS.la)
+ 
+ OBJS	+= $(SUBDIROBJS)
+ 
+@@ -22,7 +22,7 @@ DOCS = README.tsearch2
+ REGRESS = tsearch2
+ 
+ SHLIB_LINK += $(filter -lm, $(LIBS))
+-
++shmodule=yes
+ 
+ ifdef USE_PGXS
+ PGXS := $(shell pg_config --pgxs)
+@@ -32,6 +32,7 @@ subdir = contrib/tsearch2
+ top_builddir = ../..
+ include $(top_builddir)/src/Makefile.global
+ include $(top_srcdir)/contrib/contrib-global.mk
++include $(top_builddir)/src/Makefile.shlib
+ endif
+ 
+ 
+@@ -40,7 +41,7 @@ $(SUBDIROBJS): $(SUBDIRS:%=%-recursive) 
+ .PHONY: $(SUBDIRS:%=%-recursive)
+ 
+ $(SUBDIRS:%=%-recursive):
+-	$(MAKE) -C $(subst -recursive,,$@) SUBSYS.o
++	$(MAKE) -C $(subst -recursive,,$@) libSUBSYS.la
+ 
+ tsearch2.sql: tsearch.sql.in
+ 	sed -e 's,MODULE_PATHNAME,$$libdir/$(MODULE_big),g' $< >$@
