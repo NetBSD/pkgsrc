@@ -1,32 +1,33 @@
-# $NetBSD: Makefile,v 1.26.2.2 2006/11/05 19:28:55 salo Exp $
+# $NetBSD: Makefile,v 1.26.2.3 2006/12/09 10:17:47 salo Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	3
+PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
+#PKGREVISION=
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 PATCH_SITES=	${MASTER_SITE_LOCAL}
 PATCHFILES=	ruby-1.8.5-base-${RUBY18_PATCH_DATE}.patch.bz2
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby 1.8 based release minimum package
 
-RUBY_VERSION=		${RUBY18_VERSION}
-RUBY_DYNAMIC_DIRS=	${RUBY_RIDIR:S,${PREFIX}/,,}
+RUBY_VERSION=	${RUBY18_VERSION}
 
-CONFLICTS=		${RUBY_PKGPREFIX}-dbm-[0-9]* \
-			${RUBY_PKGPREFIX}-digest-[0-9]* \
-			${RUBY_PKGPREFIX}-iconv-[0-9]* \
-			${RUBY_PKGPREFIX}-openssl-[0-9]* \
-			${RUBY_PKGPREFIX}-tcltk-[0-9]*
+CONFLICTS=	${RUBY_PKGPREFIX}-dbm-[0-9]* \
+		${RUBY_PKGPREFIX}-digest-[0-9]* \
+		${RUBY_PKGPREFIX}-iconv-[0-9]* \
+		${RUBY_PKGPREFIX}-openssl-[0-9]* \
+		${RUBY_PKGPREFIX}-tcltk-[0-9]*
 
-USE_LANGUAGES=		c
-GNU_CONFIGURE=		yes
-TEST_TARGET=		test
-CONFIGURE_ARGS+=	--enable-shared --enable-install-doc \
+USE_LANGUAGES=	c
+USE_TOOLS+=	yacc
+GNU_CONFIGURE=	yes
+TEST_TARGET=	test
+CONFIGURE_ARGS+= --enable-shared \
 		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
@@ -42,6 +43,8 @@ MAKE_DIRS+=	${RUBY_SITERIDIR}
 .if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX:Q}
 .endif
+
+.include "options.mk"
 
 FILES_SUBST+=	DATE=${DATE:Q}
 
@@ -68,7 +71,6 @@ DOCS=		COPYING COPYING.ja ChangeLog README \
 		doc/shell.rd doc/shell.rd.ja doc/irb/irb-tools.rd.ja \
 		doc/irb/irb.rd doc/irb/irb.rd.ja
 EXT_DOCS=	bigdecimal/bigdecimal_en.html bigdecimal/bigdecimal_ja.html \
-		digest/digest.txt digest/digest.txt.ja \
 		dl/doc/dl.txt enumerator/enumerator.txt \
 		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt \
 		zlib/doc/zlib.rd
@@ -92,7 +94,8 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
 pre-install:
-	cd ${WRKSRC}; ${FIND} . -name '*.orig' -exec ${RM} -f {} \;
+	cd ${WRKSRC}; ${FIND} . \( -name '*.orig' -o -name '*.orig_dist' \) \
+		-exec ${RM} -f {} \;
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb

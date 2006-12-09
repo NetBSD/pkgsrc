@@ -243,6 +243,7 @@ readline
 recommended-db	
 rrdtool	
 rsaref			Use RSAREF library.
+ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samba	
 sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
