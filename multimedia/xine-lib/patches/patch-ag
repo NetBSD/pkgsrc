@@ -1,15 +1,18 @@
-$NetBSD: patch-ag,v 1.13 2006/09/29 21:20:04 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.13.2.1 2006/12/09 09:13:15 salo Exp $
 
---- configure.ac.orig	2006-07-09 10:36:29.000000000 -0400
-+++ configure.ac	2006-09-29 12:47:48.000000000 -0400
-@@ -197,5 +197,5 @@
+--- configure.ac.orig	2006-11-05 15:16:56.000000000 +0000
++++ configure.ac
+@@ -221,7 +221,7 @@ AC_ARG_WITH(pthread-prefix, 
+   [pthread_prefix="no"])
  
  case "$host" in
 -  *-*-freebsd*)
 +  *-*-freebsd* | *-*-dragonfly*)
      if test x"$pthread_prefix" = "xno"; then
        pthread_prefix="/usr/local"
-@@ -463,4 +463,7 @@
+     fi
+@@ -508,6 +508,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
+ AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
  AC_SUBST(NET_LIBS)
  
 +WINE_LIBS=""
@@ -17,43 +20,44 @@ $NetBSD: patch-ag,v 1.13 2006/09/29 21:20:04 dmcmahill Exp $
 +AC_SUBST(WINE_LIBS)
  
  dnl ---------------------------------------------
-@@ -567,5 +570,5 @@
-   [with_v4l=${enableval}], [with_v4l=yes])
- 
--if test "x$with_v4l" == "xyes"; then
-+if test "x$with_v4l" = "xyes"; then
-   AC_CHECK_HEADER(linux/videodev.h, have_v4l=yes,)
- else
-@@ -654,5 +657,5 @@
+ dnl socklen_t
+@@ -698,7 +701,7 @@ XXMC_LIBS="-L$xxmc_path -l$xxmc_stub"
+ AC_MSG_CHECKING(whether to enable the xxmc plugin with vld extensions)
  AC_MSG_RESULT()
  dnl Check if vld "extended" XvMC is available
 -if test x$xxmc_stub == "xXvMCW" && test x$ac_have_xv == "xyes"; then
 +if test x$xxmc_stub = "xXvMCW" && test x$ac_have_xv = "xyes"; then
  	AC_CHECK_LIB($xxmc_stub, XvMCPutSlice,
               	     ac_have_xxmc="yes",
-@@ -684,5 +687,5 @@
+ 	             [ac_have_xxmc="no"
+@@ -728,7 +731,7 @@ if test x$ac_have_xxmc = "xyes"; then
+ fi
  dnl Try fallback to standard XvMC if vld failed
  if test x$ac_have_xxmc = "xno"; then
 -  if test x$xxmc_stub == "xXvMCW"; then
 +  if test x$xxmc_stub = "xXvMCW"; then
  	  AC_CHECK_LIB($xxmc_stub, XvMCCreateContext,
                 ac_have_xxmc="yes",
-@@ -738,5 +741,5 @@
+ 	       [ac_have_xxmc="no"
+@@ -782,7 +785,7 @@ saved_libs="$LIBS"
+ XVMC_LIBS="-L$xvmc_path -l$xvmc_stub"
  AC_MSG_CHECKING(whether to enable the xvmc plugin)
  AC_MSG_RESULT()
 -if test x$xvmc_stub == "xXvMCW"; then
 +if test x$xvmc_stub = "xXvMCW"; then
  	AC_CHECK_LIB($xvmc_stub, XvMCCreateContext,
               ac_have_xvmc="yes",
-@@ -783,6 +786,5 @@
- if test "x$with_xinerama" = "xyes"; then
-   AC_CHECK_LIB(Xinerama, XineramaQueryExtension, 
--             [X_LIBS="$X_LIBS -lXinerama"
--              AC_DEFINE(HAVE_XINERAMA,1,[Define this if you have libXinerama installed])
-+             [AC_DEFINE(HAVE_XINERAMA,1,[Define this if you have libXinerama installed])
-               ac_have_xinerama="yes"],,
-              [$X_LIBS $X_PRE_LIBS -lXext $X_EXTRA_LIBS])
-@@ -1294,8 +1296,19 @@
+ 	     [ac_have_xvmc="no"
+@@ -833,7 +836,6 @@ if test "x$enable_xinerama" != "xno"; th
+    ])
+    if test "x$ac_have_xinerama" = "xyes"; then
+       AC_DEFINE(HAVE_XINERAMA,1,[Define this if you have libXinerama installed])
+-      X_LIBS="${X_LIBS} ${XINERAMA_LIBS}"
+    fi
+ else
+   ac_have_xinerama=no
+@@ -1325,10 +1327,21 @@ AC_ARG_ENABLE([oss],
+   [with_oss=$enableval], [with_oss=yes])
  
  if test "x$with_oss" = "xyes"; then
 +
@@ -73,14 +77,18 @@ $NetBSD: patch-ag,v 1.13 2006/09/29 21:20:04 dmcmahill Exp $
 +	    #include <sys/ioctl.h>
  	    #include <soundcard.h>
  	    #else
-@@ -1312,5 +1325,5 @@
+ 	    #include <sys/soundcard.h>
+@@ -1343,7 +1356,7 @@ else
+   have_ossaudio=no
  fi
  AM_CONDITIONAL(HAVE_OSS, test x"$have_ossaudio" = "xyes")
 -
 +AC_SUBST(OSS_LIBS)
  
  dnl ---------------------------------------------
-@@ -1393,7 +1406,8 @@
+ dnl Alsa support
+@@ -1468,9 +1481,10 @@ AC_ARG_ENABLE([gnomevfs],
+   [with_gnome_vfs=$enableval], [with_gnome_vfs=yes])
  
  if test "x$with_gnome_vfs" = "xyes"; then
 -  PKG_CHECK_MODULES(GNOME_VFS, gnome-vfs-2.0,
@@ -92,10 +100,13 @@ $NetBSD: patch-ag,v 1.13 2006/09/29 21:20:04 dmcmahill Exp $
 +  no_gnome_vfs=yes
    AC_SUBST(GNOME_VFS_CFLAGS)
    AC_SUBST(GNOME_VFS_LIBS)
-@@ -1743,5 +1757,5 @@
+   if test x"$no_gnome_vfs" != "xyes"; then
+@@ -1816,7 +1830,7 @@ int has_timeout=sizeof(test.timeout);],
+      	    AC_DEFINE([HAVE_WIN32_CDROM], [1], 
                        [Define 1 if you have MinGW CD-ROM support])
  	 ;;
 -         freebsd4.*)
 +         freebsd4.* | dragonfly*)
       	    AC_DEFINE([HAVE_FREEBSD_CDROM], [1], 
                        [Define 1 if you have FreeBSD CD-ROM support])
+ 	 ;;

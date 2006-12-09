@@ -1,11 +1,11 @@
-$NetBSD: patch-dc,v 1.1 2006/08/14 12:15:38 joerg Exp $
+$NetBSD: patch-dc,v 1.1.2.1 2006/12/09 09:13:15 salo Exp $
 
 Move some inlined functions to a place before they are used,
 otherwise GCC barfs when -fno-unit-a-time is active.
 
---- src/libffmpeg/libavcodec/msmpeg4.c.orig	2006-08-14 11:51:09.000000000 +0000
+--- src/libffmpeg/libavcodec/msmpeg4.c.orig	2006-08-02 08:02:40.000000000 +0100
 +++ src/libffmpeg/libavcodec/msmpeg4.c
-@@ -1479,186 +1479,6 @@ static int msmpeg4v2_decode_motion(MpegE
+@@ -1408,181 +1408,6 @@ static int msmpeg4v2_decode_motion(MpegE
      return val;
  }
  
@@ -102,7 +102,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 -    uint32_t * const mb_type_ptr= &s->current_picture.mb_type[ s->mb_x + s->mb_y*s->mb_stride ];
 -
 -    if (s->pict_type == P_TYPE) {
--        set_stat(ST_INTER_MB);
 -        if (s->use_skip_mb_code) {
 -            if (get_bits1(&s->gb)) {
 -                /* skip mb */
@@ -128,7 +127,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 -
 -        cbp = code & 0x3f;
 -    } else {
--        set_stat(ST_INTRA_MB);
 -        s->mb_intra = 1;
 -        code = get_vlc2(&s->gb, ff_msmp4_mb_i_vlc.table, MB_INTRA_VLC_BITS, 2);
 -        if (code < 0)
@@ -153,7 +151,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 -            s->rl_table_index = decode012(&s->gb);
 -            s->rl_chroma_table_index = s->rl_table_index;
 -        }
--        set_stat(ST_MV);
 -        h263_pred_motion(s, 0, 0, &mx, &my);
 -        if (msmpeg4_decode_motion(s, &mx, &my) < 0)
 -            return -1;
@@ -164,7 +161,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 -        *mb_type_ptr = MB_TYPE_L0 | MB_TYPE_16x16;
 -    } else {
 -//printf("I at %d %d %d %06X\n", s->mb_x, s->mb_y, ((cbp&3)? 1 : 0) +((cbp&0x3C)? 2 : 0), show_bits(&s->gb, 24));
--        set_stat(ST_INTRA_MB);
 -        s->ac_pred = get_bits1(&s->gb);
 -        *mb_type_ptr = MB_TYPE_INTRA;
 -        if(s->inter_intra_pred){
@@ -188,11 +184,10 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 -
 -    return 0;
 -}
--//#define ERROR_DETAILS
+ //#define ERROR_DETAILS
  static inline int msmpeg4_decode_block(MpegEncContext * s, DCTELEM * block,
                                int n, int coded, const uint8_t *scan_table)
- {
-@@ -1909,6 +1729,187 @@ static inline int msmpeg4_decode_block(M
+@@ -1831,6 +1656,182 @@ static inline int msmpeg4_decode_block(M
      return 0;
  }
  
@@ -289,7 +284,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 +    uint32_t * const mb_type_ptr= &s->current_picture.mb_type[ s->mb_x + s->mb_y*s->mb_stride ];
 +
 +    if (s->pict_type == P_TYPE) {
-+        set_stat(ST_INTER_MB);
 +        if (s->use_skip_mb_code) {
 +            if (get_bits1(&s->gb)) {
 +                /* skip mb */
@@ -315,7 +309,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 +
 +        cbp = code & 0x3f;
 +    } else {
-+        set_stat(ST_INTRA_MB);
 +        s->mb_intra = 1;
 +        code = get_vlc2(&s->gb, ff_msmp4_mb_i_vlc.table, MB_INTRA_VLC_BITS, 2);
 +        if (code < 0)
@@ -340,7 +333,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 +            s->rl_table_index = decode012(&s->gb);
 +            s->rl_chroma_table_index = s->rl_table_index;
 +        }
-+        set_stat(ST_MV);
 +        h263_pred_motion(s, 0, 0, &mx, &my);
 +        if (msmpeg4_decode_motion(s, &mx, &my) < 0)
 +            return -1;
@@ -351,7 +343,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 +        *mb_type_ptr = MB_TYPE_L0 | MB_TYPE_16x16;
 +    } else {
 +//printf("I at %d %d %d %06X\n", s->mb_x, s->mb_y, ((cbp&3)? 1 : 0) +((cbp&0x3C)? 2 : 0), show_bits(&s->gb, 24));
-+        set_stat(ST_INTRA_MB);
 +        s->ac_pred = get_bits1(&s->gb);
 +        *mb_type_ptr = MB_TYPE_INTRA;
 +        if(s->inter_intra_pred){
@@ -375,7 +366,6 @@ otherwise GCC barfs when -fno-unit-a-time is active.
 +
 +    return 0;
 +}
-+//#define ERROR_DETAILS
 +
  static int msmpeg4_decode_dc(MpegEncContext * s, int n, int *dir_ptr)
  {
