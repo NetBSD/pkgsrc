@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:17 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/09 13:57:29 obache Exp $
 #
 
-DISTNAME=		libntlm-0.3.8
+DISTNAME=		libntlm-0.3.12
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/libntlm/releases/
 
@@ -14,6 +14,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-PKGCONFIG_OVERRIDE+=    libntlm.pc.in
+PKGCONFIG_OVERRIDE+=	libntlm.pc.in
 
 .include "../../mk/bsd.pkg.mk"
