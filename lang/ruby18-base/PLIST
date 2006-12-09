@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/09/07 15:40:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2006/12/09 10:17:47 salo Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -26,6 +26,8 @@ ${RUBY_LIBDIR}/cgi-lib.rb
 ${RUBY_LIBDIR}/cgi.rb
 ${RUBY_LIBDIR}/complex.rb
 ${RUBY_LIBDIR}/csv.rb
+${RUBY_LIBDIR}/digest.rb
+${RUBY_LIBDIR}/digest/digest/sha2.rb
 ${RUBY_LIBDIR}/date/format.rb
 ${RUBY_LIBDIR}/date.rb
 ${RUBY_LIBDIR}/date2.rb
@@ -63,8 +65,10 @@ ${RUBY_LIBDIR}/gserver.rb
 ${RUBY_ARCHLIBDIR}/bigdecimal.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/config.h
 ${RUBY_ARCHLIBDIR}/defines.h
+${RUBY_ARCHLIBDIR}/digest.h
 ${RUBY_ARCHLIBDIR}/dbm.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/digest.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/digest/bubblebabble.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/digest/md5.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/digest/rmd160.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/digest/sha1.${RUBY_DLEXT}
@@ -590,8 +594,6 @@ ${RUBY_DOCDIR}/README.ja
 ${RUBY_DOCDIR}/ToDo
 ${RUBY_DOCDIR}/bigdecimal_en.html
 ${RUBY_DOCDIR}/bigdecimal_ja.html
-${RUBY_DOCDIR}/digest.txt
-${RUBY_DOCDIR}/digest.txt.ja
 ${RUBY_DOCDIR}/dl.txt
 ${RUBY_DOCDIR}/enumerator.txt
 ${RUBY_DOCDIR}/etc.txt

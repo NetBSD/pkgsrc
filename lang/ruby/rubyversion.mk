@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.27.2.1 2006/10/07 02:55:16 salo Exp $
+# $NetBSD: rubyversion.mk,v 1.27.2.2 2006/12/09 10:17:47 salo Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -7,10 +7,10 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # current supported Ruby's version
-RUBY18_VERSION?=	1.8.5
+RUBY18_VERSION=		1.8.5
 
-#
-RUBY18_PATCH_DATE=	20060906
+# patch date
+RUBY18_PATCH_DATE=	20061205
 
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
 #	packages and user can define in mk.conf.  (1.6 or 1.8)
@@ -23,11 +23,12 @@ RUBY_VERSION_DEFAULT?=	1.8
 #
 #	Default value is set to ${RUBY_VERSION_DEFAULT}
 #
-.if !defined(RUBY_VERSION)
 .if ${RUBY_VERSION_DEFAULT} == "1.8"
 RUBY_VERSION?=		${RUBY18_VERSION}
+RUBY_PATCH_DATE?=	${RUBY18_PATCH_DATE}
 .endif
-.endif
+
+RUBY_VERSION_SUFFIX=	${RUBY_VERSION}.${RUBY_PATCH_DATE}
 
 # RUBY_VERSION_SUPPORTED defines the list of ${RUBY_VER} which is
 #	supported by the package.  It should be defined by the packages
@@ -50,13 +51,15 @@ RUBY_VERSION_LIST= 18
 #
 RUBY_NOVERSION?=	No
 
-# _RUBY_VER_MAJOR, _RUBY_VER_MINOR, _RUBY_VERS_TEENY is defined from
-#	version of Ruby.  It could be used in packages' Makefile but
-#	it isn't recommended.
+# _RUBY_VER_MAJOR, _RUBY_VER_MINOR, _RUBY_VER_TEENY and _RUBY_PATCHLEVEL
+# is defined from version of Ruby.  It should not be used in packages'
+# Makefile.
 #
-_RUBY_VER_MAJOR=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
-_RUBY_VER_MINOR=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
-_RUBY_VERS_TEENY=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
+_RUBY_VER=		${RUBY_VERSION:C/(-.*)//}
+_RUBY_VER_MAJOR=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
+_RUBY_VER_MINOR=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
+_RUBY_VER_TEENY=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
+_RUBY_PATCHLEVEL=	${RUBY_VERSION:C/(.*-)//}
 
 # RUBY_VER defines Ruby base release.
 #
@@ -128,13 +131,13 @@ RUBY_SHLIBVER?=		${RUBY_VERSION}
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
 RUBY_SHLIBMAJOR=	${RUBY_VER}
-RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VERS_TEENY}
+RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VER_TEENY}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 RUBY_SHLIBMAJOR=	# unused
 RUBY_SHLIBVER=		${RUBY_VER}
 .elif ${OPSYS} == "OpenBSD"
 RUBY_SHLIBMAJOR=	# unused
-RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_VERS_TEENY}
+RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 .elif ${OPSYS} == "IRIX"
 RUBY_SHLIBMAJOR=	# unused
 .elif ${OPSYS} == "Linux"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/01/03 14:41:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.6.6.1 2006/12/09 10:17:48 salo Exp $
 ${RUBY_SITEARCHLIBDIR}/tcltklib.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/multi-tk.rb
 ${RUBY_SITELIBDIR}/remote-tk.rb
@@ -243,6 +243,7 @@ ${RUBY_SITELIBDIR}/tkextlib/tclx/tclx.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/dialog.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/setup.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/sizegrip.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/style.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tbutton.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tcheckbutton.rb
@@ -298,6 +299,7 @@ ${RUBY_SITELIBDIR}/tkextlib/treectrl/tktreectrl.rb
 ${RUBY_SITELIBDIR}/tkextlib/trofs.rb
 ${RUBY_SITELIBDIR}/tkextlib/trofs/setup.rb
 ${RUBY_SITELIBDIR}/tkextlib/trofs/trofs.rb
+${RUBY_SITELIBDIR}/tkextlib/version.rb
 ${RUBY_SITELIBDIR}/tkextlib/vu.rb
 ${RUBY_SITELIBDIR}/tkextlib/vu/bargraph.rb
 ${RUBY_SITELIBDIR}/tkextlib/vu/charts.rb
@@ -475,6 +477,7 @@ ${RUBY_EXAMPLESDIR}/tk/demos-jp/twind2.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/unicodeout.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/vscale.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/widget
+${RUBY_EXAMPLESDIR}/tk/editable_listbox.rb
 ${RUBY_EXAMPLESDIR}/tk/encstr_usage.rb
 ${RUBY_EXAMPLESDIR}/tk/images/earth.gif
 ${RUBY_EXAMPLESDIR}/tk/images/earthris.gif
@@ -490,6 +493,7 @@ ${RUBY_EXAMPLESDIR}/tk/images/pattern.xbm
 ${RUBY_EXAMPLESDIR}/tk/images/tcllogo.gif
 ${RUBY_EXAMPLESDIR}/tk/images/teapot.ppm
 ${RUBY_EXAMPLESDIR}/tk/irbtk.rb
+${RUBY_EXAMPLESDIR}/tk/irbtkw.rbw
 ${RUBY_EXAMPLESDIR}/tk/iso2022-kr.txt
 ${RUBY_EXAMPLESDIR}/tk/menubar1.rb
 ${RUBY_EXAMPLESDIR}/tk/menubar2.rb

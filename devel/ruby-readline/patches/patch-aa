@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/11/02 08:59:05 taca Exp $
+$NetBSD: patch-aa,v 1.4.8.1 2006/12/09 10:17:47 salo Exp $
 
 This patch is generated with "diff -u -U 2".
 
@@ -20,3 +20,11 @@ This patch is generated with "diff -u -U 2".
  
  if enable_libedit
    unless (have_readline_header("editline/readline.h") ||
+@@ -42,7 +39,6 @@ else
+   end
+ end
+ 
+-have_readline_var("rl_filename_completion_function")
+ have_readline_var("rl_deprep_term_function")
+ have_readline_var("rl_completion_append_character")
+ have_readline_var("rl_basic_word_break_characters")
