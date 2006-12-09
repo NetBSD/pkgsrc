@@ -1,0 +1,20 @@
+# $NetBSD: GNUmakefile.libpq,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+#
+# This GNUmakefile overrides the `all' target of $(libpq_srcdir)/Makefile
+# to be empty if INSTALLED_LIBPQ is defined.  This handles the submake
+# targets sprinkled throughout the PostgreSQL Makefiles that execute
+#
+#	@$(MAKE) -C $(libpq_builddir) all
+#
+# to ensure that the libpq libraries are built first.  If INSTALLED_LIBPQ
+# is defined, then have the `all' target simple return success.
+
+ifdef INSTALLED_LIBPQ
+all:
+	@test -f libpq.a || touch libpq.a
+endif
+
+%: force
+	@$(MAKE) -f Makefile $@
+
+force: ;

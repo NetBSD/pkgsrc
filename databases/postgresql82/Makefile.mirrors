@@ -1,0 +1,101 @@
+# $NetBSD: Makefile.mirrors,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+#
+# This Makefile fragment contains the mirror sites for fetching PostgreSQL.
+#
+# To fetch from the nearest mirror, you may need to set
+# PGSQL_MIRRORS_SORT appropriately, e.g.:
+#
+#   PGSQL_MIRRORS_SORT=	.at .de
+#
+
+###
+### This list was last updated on 20050801.
+###
+PGSQL_MIRRORS=	\
+	ftp://ftp.au.postgresql.org/pub/postgresql/ \
+	ftp://ftp2.au.postgresql.org/pub/postgresql/ \
+	ftp://ftp.at.postgresql.org/db/www.postgresql.org/pub/ \
+	ftp://ftp.be.postgresql.org/postgresql/ \
+	ftp://ftp.ba.postgresql.org/pub/postgresql/ \
+	ftp://ftp.br.postgresql.org/pub/PostgreSQL/ \
+	ftp://ftp3.bg.postgresql.org/postgresql/ \
+	ftp://ftp3.ca.postgresql.org/pub/ \
+	ftp://ftp4.ca.postgresql.org/pub/postgresql/ \
+	ftp://ftp.cl.postgresql.org/ftp/pub/postgresql/ \
+	ftp://ftp.cn.postgresql.org/ftp.postgresql.org/ \
+	ftp://ftp.co.postgresql.org/pub/mirrors/postgresql/ \
+	ftp://ftp2.cr.postgresql.org/pub/Unix/postgres/ \
+	ftp://ftp.hr.postgresql.org/postgresql/ \
+	ftp://ftp.cz.postgresql.org/pub/ftp.postgresql.org/ \
+	ftp://ftp2.cz.postgresql.org/pub/postgresql/ \
+	ftp://ftp.dk.postgresql.org/postgresql/ \
+	ftp://ftp.ee.postgresql.org/mirrors/postgresql/ \
+	ftp://ftp.fr.postgresql.org/ \
+	ftp://ftp2.fr.postgresql.org/postgresql/ \
+	ftp://ftp3.fr.postgresql.org/pub/postgresql/ \
+	ftp://ftp.de.postgresql.org/mirror/postgresql/ \
+	ftp://ftp2.de.postgresql.org/pub/postgresql/ \
+	ftp://ftp3.de.postgresql.org/pub/Mirrors/ftp.postgresql.org/ \
+	ftp://ftp7.de.postgresql.org/pub/ftp.postgresql.org/ \
+	ftp://ftp8.de.postgresql.org/pub/misc/pgsql/ \
+	ftp://ftp.gr.postgresql.org/pub/databases/postgresql/ \
+	ftp://ftp2.gr.postgresql.org/pub/databases/postgresql/ \
+	ftp://ftp.hk.postgresql.org/postgresql/ \
+	ftp://ftp3.hu.postgresql.org/pub/postgresql/ \
+	ftp://ftp7.id.postgresql.org/pub/postgresql/ \
+	ftp://ftp8.id.postgresql.org/pub/PostgreSQL/ \
+	ftp://ftp.ie.postgresql.org/mirrors/ftp.postgresql.org/pub/ \
+	ftp://ftp2.ie.postgresql.org/mirrors/ftp.postgresql.org/ \
+	ftp://ftp.il.postgresql.org/ftp.postgresql.org/ \
+	ftp://ftp2.it.postgresql.org/mirrors/postgres/ \
+	ftp://ftp6.it.postgresql.org/pub/PostgreSQL/ \
+	ftp://ftp7.it.postgresql.org/pub/unix/postgres/ \
+	ftp://ftp.jp.postgresql.org/ \
+	ftp://ftp2.jp.postgresql.org/pub/postgresql/ \
+	ftp://ftp.kr.postgresql.org/postgresql/ \
+	ftp://ftp.lv.postgresql.org/pub/software/postgresql/ \
+	ftp://ftp.eu.postgresql.org/pub/unix/db/postgresql/ \
+	ftp://ftp.nl.postgresql.org:21/pub/mirror/postgresql/ \
+	ftp://ftp2.nl.postgresql.org/mirror/postgresql/ \
+	ftp://ftp4.nl.postgresql.org/postgresql.zeelandnet.nl/ \
+	ftp://ftp.nz.postgresql.org/postgresql/ \
+	ftp://ftp.no.postgresql.org/pub/databases/postgresql/ \
+	ftp://ftp6.pl.postgresql.org/pub/postgresql/ \
+	ftp://ftp7.pl.postgresql.org/pub/mirror/ftp.postgresql.org/ \
+	ftp://ftp8.pl.postgresql.org/pub/postgresql/ \
+	ftp://ftp.pt.postgresql.org/postgresql/ \
+	ftp://ftp.pr.postgresql.org/pub/Mirrors/postgresql/ \
+	ftp://ftp6.ro.postgresql.org/pub/mirrors/ftp.postgresql.org/ \
+	ftp://ftp.ru.postgresql.org/pub/mirrors/pgsql/ \
+	ftp://ftp2.ru.postgresql.org/pub/databases/postgresql/ \
+	ftp://ftp3.ru.postgresql.org/pub/mirror/postgresql/pub/ \
+	ftp://ftp7.ru.postgresql.org/pub/mirror/postgresql/ \
+	ftp://ftp2.sk.postgresql.org/pub/postgresql/ \
+	ftp://ftp5.es.postgresql.org/mirror/postgresql/ \
+	ftp://ftp.se.postgresql.org/pub/databases/relational/postgresql/ \
+	ftp://ftp2.ch.postgresql.org/pub/postgresql/ \
+	ftp://ftp.tw.postgresql.org/pub/postgresql/ \
+	ftp://ftp3.tw.postgresql.org/pub/Unix/Database/postgresql/ \
+	ftp://ftp5.tw.postgresql.org/pub/Unix/Database/PostgreSQL/ \
+	ftp://ftp6.tr.postgresql.org/postgresql/ \
+	ftp://ftp2.uk.postgresql.org/sites/ftp.postgresql.org/ \
+	ftp://ftp4.uk.postgresql.org/sites/ftp.postgresql.org/ \
+	ftp://ftp8.uk.postgresql.org/sites/ftp.postgresql.org/ \
+	ftp://ftp.us.postgresql.org/pub/mirrors/postgresql/ \
+	ftp://ftp3.us.postgresql.org/pub/postgresql/ \
+	ftp://ftp5.us.postgresql.org/pub/PostgreSQL/ \
+	ftp://ftp8.us.postgresql.org/postgresql/ \
+	ftp://ftp9.us.postgresql.org/pub/mirrors/postgresql/ \
+	ftp://ftp10.us.postgresql.org/pub/postgresql/ \
+	ftp://ftp22.us.postgresql.org/mirrors/ftp.postgresql.org/ \
+	ftp://ftp24.us.postgresql.org/postgresql/
+
+# Default to fetching from a .us mirror for the sake of the main NetBSD
+# ftp server.
+#
+PGSQL_MIRRORS_SORT?=	.us
+
+# Craft a MASTER_SORT_REGEX that understands the location of the country
+# code in the FTP server name for the PostgreSQL mirror sites.
+#
+MASTER_SORT_REGEX+=	${PGSQL_MIRRORS_SORT:S/./\\./g:C/.*/:\/\/[^[\/]*&\/ :\/\/[^\/]*&\\./}

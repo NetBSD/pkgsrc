@@ -1,0 +1,42 @@
+# $NetBSD: Makefile.custom,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+#
+# This file is included at the end of Makefile.global, which is included
+# by every sub-Makefile in the build tree.  Makefiles for shared
+# libraries include Makefile.global then Makefile.shlib.
+#
+
+# Override any OS-specific locations for where to put SQL man pages.
+sqlmansect = 7
+
+# Override installation paths to avoid logic in Makefile.global.
+includedir = $(prefix)/include
+libdir = $(exec_prefix)/lib
+pkglibdir = $(libdir)/postgresql
+pkgincludedir = $(includedir)/postgresql
+
+# INSTALLED_LIBPQ is passed in from the environment and tells the build
+# system how to link to an installed libpq.*.
+#
+ifdef INSTALLED_LIBPQ
+libpq = -lpq
+else
+ifdef LIBTOOL
+libpq = $(libpq_builddir)/libpq.la
+endif
+ifdef PGFILEDESC
+libpq = -L$(libpq_builddir)/.libs -lpq
+endif
+endif
+
+# In pkgsrc, libpython is always present as a shared library.
+shared_libpython = yes
+
+# $(libpq_builddir)/libpq.a is used in several places as a dependency,
+# but if we're building with libtool, then we don't actually want to
+# create that file since it will mess up the re-linking process.
+# Declare it to be phony to prevent GNU make from thinking it's a
+# target.
+#
+ifdef LIBTOOL
+.PHONY: $(libpq_builddir)/libpq.a
+endif

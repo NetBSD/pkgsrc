@@ -1,0 +1,79 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+
+--- src/backend/port/dynloader/netbsd.c.orig	2006-03-11 05:38:31.000000000 +0100
++++ src/backend/port/dynloader/netbsd.c
+@@ -46,65 +46,30 @@ static char sccsid[] = "@(#)dl.c	5.4 (Be
+ 
+ #include "dynloader.h"
+ 
+-static char error_message[BUFSIZ];
++#ifndef HAVE_DLOPEN
+ 
+ char *
+-BSD44_derived_dlerror(void)
++pg_dlerror(void)
+ {
+-	static char ret[BUFSIZ];
+-
+-	strcpy(ret, error_message);
+-	error_message[0] = 0;
+-	return (ret[0] == 0) ? NULL : ret;
++	return "dynaloader unsupported";
+ }
+ 
+ void *
+-BSD44_derived_dlopen(const char *file, int num)
++pg_dlopen(const char *file, int num)
+ {
+-#if defined(__mips__)
+-	snprintf(error_message, sizeof(error_message),
+-			 "dlopen (%s) not supported", file);
++	elog(ERROR, "dynamic load not supported");
+ 	return NULL;
+-#else
+-	void	   *vp;
+-
+-	if ((vp = dlopen((char *) file, num)) == NULL)
+-		snprintf(error_message, sizeof(error_message),
+-				 "dlopen (%s) failed: %s", file, dlerror());
+-	return vp;
+-#endif
+ }
+ 
+ void *
+-BSD44_derived_dlsym(void *handle, const char *name)
++pg_dlsym(void *handle, const char *name)
+ {
+-#if defined(__mips__)
+-	snprintf(error_message, sizeof(error_message),
+-			 "dlsym (%s) failed", name);
+ 	return NULL;
+-#elif defined(__ELF__)
+-	return dlsym(handle, name);
+-#else
+-	void	   *vp;
+-	char		buf[BUFSIZ];
+-
+-	if (*name != '_')
+-	{
+-		snprintf(buf, sizeof(buf), "_%s", name);
+-		name = buf;
+-	}
+-	if ((vp = dlsym(handle, (char *) name)) == NULL)
+-		snprintf(error_message, sizeof(error_message),
+-				 "dlsym (%s) failed", name);
+-	return vp;
+-#endif
+ }
+ 
+ void
+-BSD44_derived_dlclose(void *handle)
++pg_dlclose(void *handle)
+ {
+-#if defined(__mips__)
+-#else
+-	dlclose(handle);
+-#endif
+ }
++
++#endif /* ! HAVE_DLOPEN */
