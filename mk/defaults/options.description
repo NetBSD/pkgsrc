@@ -32,6 +32,7 @@ bugzilla-charts		Enable generation of charts.
 bugzilla-patchviewer	Enable patchiewer support.
 bugzilla-imagemagick	Compress .BMPs to save space.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
+bzip2			Enable compression using bzip2
 canna			Use Canna as Japanese conversion program.
 catalog-mysql		Store Bacula catalog in MySQL database.
 catalog-pgsql		Store Bacula catalog in PostgreSQL database.
@@ -122,6 +123,7 @@ gtk			Enable support for GTK.
 gtkfe
 gtkspell		Enable gtkspell support.	
 gucharmap	
+gzip			Enable compression using gzip
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hdf5	
 homedir	
