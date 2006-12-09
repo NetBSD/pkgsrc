@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/02/19 20:49:11 recht Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/09 02:05:24 obache Exp $
 #
 
-DISTNAME=		rss2html-0.8
+DISTNAME=		rss2html-0.8.2
 CATEGORIES=		converters
 MASTER_SITES=		http://cvs.nopcode.org/ftp/rss2html/ \
 			ftp://ftp.nopcode.org/prj/rss2html/
@@ -19,4 +19,5 @@ INSTALLATION_DIRS+=	bin
 LIBS.SunOS+=		-lnsl -lsocket
 MAKE_ENV+=		LIBS=${LIBS:M*:Q}
 
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
