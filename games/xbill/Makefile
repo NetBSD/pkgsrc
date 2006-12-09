@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/11/24 22:23:00 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/09 17:14:05 rillig Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -26,6 +26,8 @@ MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 MAKE_ENV+=		GAMEGRP=${GAMEGRP:Q}
 MAKE_ENV+=		GAMEMODE=${GAMEMODE:Q}
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores ${VARBASE}/games/xbill.scores ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man6
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xbill.man ${PREFIX}/${PKGMANDIR}/man6/xbill.6
