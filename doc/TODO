@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5753 2006/12/09 02:29:31 markd Exp $
+$NetBSD: TODO,v 1.5754 2006/12/09 13:58:51 obache Exp $
 
 Suggested new packages
 ======================
@@ -590,7 +590,6 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
-	o libntlm-0.3.12
 	o libshout-2.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
