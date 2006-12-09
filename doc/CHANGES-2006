@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1985 2006/12/09 16:20:56 adam Exp $
+$NetBSD: CHANGES-2006,v 1.1986 2006/12/09 17:08:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/postgresql82-plpython version 8.2.0 [adam 2006-12-09]
 	Added databases/postgresql82-pltcl version 8.2.0 [adam 2006-12-09]
 	Added databases/postgresql82-tsearch2 version 8.2.0 [adam 2006-12-09]
+	Updated geography/postgresql81-postgis to 1.2.0 [gdt 2006-12-09]
