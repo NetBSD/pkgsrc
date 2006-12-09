@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2006/11/25 13:23:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2006/12/09 19:42:43 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -510,7 +510,6 @@ lib/wine/explorer.exe.so
 lib/wine/gdi.exe16
 lib/wine/gdi32.dll.so
 ${WINE_OPENGL}lib/wine/glu32.dll.so
-${WINE_OPENGL}lib/wine/glut32.dll.so
 lib/wine/gphoto2.ds.so
 lib/wine/hh.exe.so
 lib/wine/hhctrl.ocx.so
@@ -574,7 +573,6 @@ lib/wine/libdxerr9.a
 lib/wine/libdxguid.a
 lib/wine/libgdi32.def
 ${WINE_OPENGL}lib/wine/libglu32.def
-${WINE_OPENGL}lib/wine/libglut32.def
 lib/wine/libhid.def
 lib/wine/libhlink.def
 lib/wine/libicmp.def
