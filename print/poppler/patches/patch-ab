@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2006/05/31 18:13:54 drochner Exp $
+$NetBSD: patch-ab,v 1.5.4.1 2006/12/09 08:38:35 salo Exp $
 
---- utils/Makefile.in.orig	2006-05-22 22:15:21.000000000 +0200
+--- utils/Makefile.in.orig	2006-09-22 02:54:29.000000000 +0200
 +++ utils/Makefile.in
 @@ -52,7 +52,7 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = $(top_builddir)/config.h \
@@ -11,33 +11,29 @@ $NetBSD: patch-ab,v 1.5 2006/05/31 18:13:54 drochner Exp $
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  PROGRAMS = $(bin_PROGRAMS)
-@@ -61,41 +61,41 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
+@@ -60,35 +60,35 @@ am__objects_1 = parseargs.$(OBJEXT)
+ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT) $(am__objects_1)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
- am__DEPENDENCIES_1 =
--pdffonts_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdffonts_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdffonts_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdffonts_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  am_pdfimages_OBJECTS = pdfimages.$(OBJEXT) ImageOutputDev.$(OBJEXT) \
  	$(am__objects_1)
  pdfimages_OBJECTS = $(am_pdfimages_OBJECTS)
  pdfimages_LDADD = $(LDADD)
--pdfimages_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdfimages_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdfimages_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdfimages_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  am_pdfinfo_OBJECTS = pdfinfo.$(OBJEXT) $(am__objects_1)
  pdfinfo_OBJECTS = $(am_pdfinfo_OBJECTS)
  pdfinfo_LDADD = $(LDADD)
--pdfinfo_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdfinfo_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdfinfo_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdfinfo_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  am_pdftohtml_OBJECTS = pdftohtml.$(OBJEXT) HtmlFonts.$(OBJEXT) \
  	HtmlLinks.$(OBJEXT) HtmlOutputDev.$(OBJEXT) $(am__objects_1)
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
--pdftohtml_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdftohtml_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdftohtml_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdftohtml_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  am__pdftoppm_SOURCES_DIST = pdftoppm.cc parseargs.c parseargs.h
 -@BUILD_SPLASH_OUTPUT_TRUE@am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT) \
 -@BUILD_SPLASH_OUTPUT_TRUE@	$(am__objects_1)
@@ -45,24 +41,22 @@ $NetBSD: patch-ab,v 1.5 2006/05/31 18:13:54 drochner Exp $
 +	$(am__objects_1)
  pdftoppm_OBJECTS = $(am_pdftoppm_OBJECTS)
  pdftoppm_LDADD = $(LDADD)
--pdftoppm_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdftoppm_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdftoppm_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdftoppm_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  am_pdftops_OBJECTS = pdftops.$(OBJEXT) $(am__objects_1)
  pdftops_OBJECTS = $(am_pdftops_OBJECTS)
  pdftops_LDADD = $(LDADD)
--pdftops_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdftops_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdftops_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdftops_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  am_pdftotext_OBJECTS = pdftotext.$(OBJEXT) $(am__objects_1)
  pdftotext_OBJECTS = $(am_pdftotext_OBJECTS)
  pdftotext_LDADD = $(LDADD)
--pdftotext_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
-+pdftotext_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
- 	$(am__DEPENDENCIES_1)
+-pdftotext_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la
++pdftotext_DEPENDENCIES = $(prefix)/lib/libpoppler.la
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -283,12 +283,12 @@ sbindir = @sbindir@
+ am__depfiles_maybe = depfiles
+@@ -278,12 +278,12 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
@@ -80,7 +74,7 @@ $NetBSD: patch-ab,v 1.5 2006/05/31 18:13:54 drochner Exp $
  INCLUDES = \
  	-I$(top_srcdir)				\
  	-I$(top_srcdir)/utils			\
-@@ -296,8 +296,8 @@ INCLUDES = \
+@@ -291,8 +291,8 @@ INCLUDES = \
  	$(UTILS_CFLAGS)
  
  LDADD = \

@@ -1,0 +1,49 @@
+$NetBSD: patch-ac,v 1.2.6.1 2006/12/09 08:38:35 salo Exp $
+
+--- configure.orig	2006-10-12 12:26:10.000000000 +0200
++++ configure
+@@ -25346,7 +25346,7 @@ if test "x$qt_libdir" != "xno" ; then
+     fi
+ fi
+ 
+-if test "x$have_qt" == "xyes"; then
++if test "x$have_qt" = "xyes"; then
+     ac_ext=cc
+ ac_cpp='$CXXCPP $CPPFLAGS'
+ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+@@ -25534,7 +25534,7 @@ if test "x$qt_libdir" != "xno" ; then
+     fi
+ fi
+ 
+-if test "x$have_qt" == "xyes"; then
++if test "x$have_qt" = "xyes"; then
+     ac_ext=cc
+ ac_cpp='$CXXCPP $CPPFLAGS'
+ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+@@ -25754,7 +25754,7 @@ if test "x$qt4_libdir" != "xno" ; then
+     fi
+ fi
+ 
+-if test "x$have_qt4" == "xyes"; then
++if test "x$have_qt4" = "xyes"; then
+     POPPLER_QT4_CXXFLAGS="-I$qt4_incdir"
+     if test x$windows_qt = xyes; then
+ 	POPPLER_QT4_LIBS="-L$qt4_libdir -lQtCore4 -lQtGui4 -lQtXml4"
+@@ -25827,7 +25827,7 @@ if test "x$qt4_libdir" != "xno" ; then
+     fi
+ fi
+ 
+-if test "x$have_qt4" == "xyes"; then
++if test "x$have_qt4" = "xyes"; then
+     POPPLER_QT4_CXXFLAGS="-I$qt4_incdir"
+     if test x$windows_qt = xyes; then
+ 	POPPLER_QT4_LIBS="-L$qt4_libdir -lQtCore4 -lQtGui4 -lQtXml4"
+@@ -25910,7 +25910,7 @@ if test "x$qt4test_libdir" != "xno" ; th
+     fi
+ fi
+ 
+-if test "x$have_qt4testlib" == "xyes"; then
++if test "x$have_qt4testlib" = "xyes"; then
+     POPPLER_QTTEST_CXXFLAGS="-I$qt4test_incdir"
+     POPPLER_QTTEST_LIBS="-L$qt4test_libdir -lQtTest"
+     enable_poppler_qt4testlib="yes"

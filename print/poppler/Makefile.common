@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2006/05/31 18:13:54 drochner Exp $
+# $NetBSD: Makefile.common,v 1.6.4.1 2006/12/09 08:38:35 salo Exp $
 #
 
-POPPLER_VERS=		0.5.3
+POPPLER_VERS=		0.5.4
 DISTNAME=		poppler-${POPPLER_VERS}
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
