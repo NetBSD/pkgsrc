@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.65 2006/12/09 08:39:03 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.66 2006/12/09 09:13:42 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -173,3 +173,5 @@ Pullup ticket 1950 - requested by rillig
 bulk build upload script fix
 Pullup ticket 1940 - requested by wiz
 security update for evince
+Pullup ticket 1948 - requested by abs
+security update for xine-lib
