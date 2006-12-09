@@ -1,0 +1,175 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+#
+# This Makefile fragment is included by all PostgreSQL packages built from
+# the main sources of the PostgreSQL distribution except jdbc-postgresql.
+#
+# The PostgreSQL package naming scheme, aside from the obvious piecewise
+# packages, is as follows:
+#
+#	<lang>-postgresql	client-side interface to PostgreSQL
+#	postgresql-<lang>	server-side module for PostgreSQL backend
+
+.include "../../databases/postgresql82/Makefile.mirrors"
+
+DISTNAME?=	postgresql-${DIST_VERS}
+CATEGORIES+=	databases
+MASTER_SITES?=	${PGSQL_MIRRORS:=source/v${DIST_VERS}/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER?=	adam@NetBSD.org
+HOMEPAGE?=	http://www.postgresql.org/
+
+CONFLICTS+=	postgresql-[0-9]*
+CONFLICTS+=	postgresql73-[0-9]*
+CONFLICTS+=	postgresql74-[0-9]*
+CONFLICTS+=	postgresql80-[0-9]*
+CONFLICTS+=	postgresql81-[0-9]*
+
+DISTINFO_FILE?=		${.CURDIR}/../postgresql82/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../postgresql82/files
+PATCHDIR?=		${.CURDIR}/../postgresql82/patches
+
+# Version numbering scheme:
+#
+# DIST_VERS		version number on the postgresql distfile
+# BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
+#
+# Note: Do not forget jdbc-postgresql82 when updating version
+#
+DIST_VERS?=		8.2.0
+BASE_VERS?=		${DIST_VERS}
+
+BUILDLINK_API_DEPENDS.postgresql82-client+=	postgresql82-client>=${BASE_VERS}
+
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		bison gmake lex msgfmt
+PKG_SYSCONFSUBDIR=	postgresql
+
+# in 7.4.x/8.0.x, this is done by autoconf stuff which has leading whitespace
+USE_PKGLOCALEDIR=	yes
+SUBST_CLASSES+=		pglocale
+SUBST_FILES.pglocale=	configure config/programs.m4
+SUBST_STAGE.pglocale=	pre-configure
+SUBST_SED.pglocale=	-e 's|\( localedir[	 :]*=\).*|\1${PG_LOCALE_DIR}|'
+
+.include "../../mk/bsd.prefs.mk"
+
+PGSQL_TEMPLATE.SunOS=		solaris
+PGSQL_TEMPLATE.IRIX=		irix5
+.if !defined(PGSQL_TEMPLATE.${OPSYS})
+PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
+.endif
+
+PG_SUBPREFIX=		# empty
+.if empty(PG_SUBPREFIX)
+PG_PREFIX=		${PREFIX}
+PLIST_SUBST+=		PG_SUBPREFIX=
+.else
+PG_PREFIX=		${PREFIX}/${PG_SUBPREFIX}
+BUILD_DEFS+=		PG_SUBPREFIX
+PLIST_SUBST+=		PG_SUBPREFIX=${PG_SUBPREFIX}/
+BUILDLINK_PASSTHRU_DIRS+=	${PG_PREFIX}
+.endif
+PG_DATA_DIR=		${PG_PREFIX}/share/postgresql
+PG_DOC_DIR=		${PG_PREFIX}/share/doc/postgresql
+PG_LOCALE_DIR=		${PG_PREFIX}/${PKGLOCALEDIR}/locale
+PG_ETC_DIR=		${PKG_SYSCONFDIR:S/^${PREFIX}\//${PG_PREFIX}\//}
+
+GNU_CONFIGURE_PREFIX=	${PG_PREFIX}
+CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR}
+CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
+CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR}
+CONFIGURE_ARGS+=	--with-template=${PGSQL_TEMPLATE.${OPSYS}}
+CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--without-zlib
+CONFIGURE_ARGS+=	--enable-nls
+
+CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-tcl
+
+# Enable Rendezvous on Mac OS X
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-rendezvous
+.endif
+
+# PostgreSQL explicitly forbids any use of -ffast-math
+BUILDLINK_TRANSFORM+=	rm:-ffast-math
+
+# USE_LIBLTDL is "yes" or "no" depending on whether we're using libltdl
+# to provide "dlopen" functionality for the PostgreSQL backend.
+#
+.if ${OPSYS} == "Interix"
+USE_LIBLTDL?=		yes
+.endif
+USE_LIBLTDL?=		no
+
+FILES_SUBST+=		PG_PREFIX=${PG_PREFIX:Q}
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+
+post-extract:
+	if ${TEST} -d ${WRKSRC}/src; then				\
+		rm -f ${WRKSRC}/src/Makefile.custom;			\
+		cp -f ${COMMON_FILESDIR}/Makefile.custom		\
+			${WRKSRC}/src/Makefile.custom;			\
+		rm -f ${WRKSRC}/src/Makefile.shlib;			\
+		cp -f ${COMMON_FILESDIR}/Makefile.libtool		\
+			${WRKSRC}/src/Makefile.shlib;			\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/interfaces/libpq; then		\
+		rm -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
+			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/interfaces/libpgtcl; then		\
+		rm -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+		cp -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
+			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+.if !empty(USE_LIBLTDL:M[yY][eE][sS])
+	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
+		template=${PGSQL_TEMPLATE.${OPSYS}:Q};			\
+		rm -f ${WRKSRC}/src/backend/port/dynloader/$$template.[ch]; \
+		cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
+			${WRKSRC}/src/backend/port/dynloader/$$template.h; \
+		${ECHO} "static int dummy = 0;"				\
+			 >${WRKSRC}/src/backend/port/dynloader/$$template.c
+	fi
+.endif
+	if ${TEST} -d ${WRKSRC}/src/template; then			\
+		touch ${WRKSRC}/src/template/dragonfly;		\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c	\
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
+		cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h	\
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
+	fi
+	if ${TEST} -d ${WRKSRC}/src/include/port; then			\
+		cp ${WRKSRC}/src/include/port/freebsd.h		\
+			${WRKSRC}/src/include/port/dragonfly.h;		\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/makefiles; then			\
+		cp ${WRKSRC}/src/makefiles/Makefile.freebsd		\
+			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
+	fi
+
+# PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
+# This also limits the size of a tuple.  The valid values are powers
+# of 2 up to 32768, and the default size is 8196 (hardcoded in the
+# PostgreSQL sources).  Please don't change this value unless you know
+# what you are doing.
+#
+BUILD_DEFS+=	PGSQL_BLCKSZ
+
+.if defined(PGSQL_BLCKSZ)
+.PHONY: pgsql-blcksz
+pre-configure: pgsql-blcksz
+pgsql-blcksz:
+	for file in ${WRKSRC}/src/include/pg_config_manual.h; do	\
+		${SED} -e "/^#define[ 	]*BLCKSZ[ 	]*/s/^\(#define[ 	]*BLCKSZ\).*/\1	${PGSQL_BLCKSZ}/" $$file > $$file.new; \
+		${MV} -f $$file.new $$file;				\
+	done
+.endif
