@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.34 2006/08/10 17:58:10 rillig Exp $
+# $NetBSD: upload,v 1.34.2.1 2006/12/09 08:15:22 salo Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -187,6 +187,7 @@ vulnerable_packages="$TMP/vulnerable_packages"
 restricted_packages="$TMP/restricted_packages"
 old_packages="$TMP/old_packages"
 good_packages="$TMP/regular_packages"
+all_good_packages="$TMP/all_regular_packages"
 
 upload_general="$TMP"/upload_general
 upload_vulnerable="$TMP"/upload_vulnerable
@@ -234,6 +235,12 @@ cd $packages
 
 echo "upload> Checking for restricted and vulnerable packages"
 (cd All && env PKG_INFO="${pkg_info}" OUTDIR="${TMP}" PKGVULNDIR="${distdir}" sh "${pkgsrcdir}/mk/bulk/sort-packages")
+
+# Add the name of the package file, including all its symlinks to the
+# list of files to be uploaded.
+while read package; do
+	ls -1 */"$package"
+done < "$good_packages" > "$all_good_packages"
 
 if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 
@@ -295,7 +302,7 @@ cat <<EOF > "$upload_general"
 #! /bin/sh
 set -e
 cd "$packages"
-rsync $RSFLAGS --include-from="${good_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/"
+rsync $RSFLAGS --files-from="${all_good_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/"
 EOF
 chmod +x "$upload_general"
 
