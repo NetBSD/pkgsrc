@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/05/31 18:13:54 drochner Exp $
+# $NetBSD: Makefile,v 1.13.4.1 2006/12/09 08:38:35 salo Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-qt-${POPPLER_VERS}
+PKGREVISION=		1
 
 COMMENT=		PDF rendering library (QT wrapper)
 
@@ -27,6 +28,8 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/qt/libpoppler-qt.la ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/qt/poppler-qt.h ${PREFIX}/include/poppler
 	${INSTALL_DATA} ${WRKSRC}/qt/poppler-page-transition.h \
+		${PREFIX}/include/poppler
+	${INSTALL_DATA} ${WRKSRC}/qt/poppler-link-qt3.h \
 		${PREFIX}/include/poppler
 	${INSTALL_DATA} ${WRKSRC}/poppler-qt.pc ${PREFIX}/lib/pkgconfig
 

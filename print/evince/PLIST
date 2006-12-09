@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/19 11:21:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12.2.1 2006/12/09 08:38:35 salo Exp $
 bin/evince
 bin/evince-thumbnailer
 share/applications/evince.desktop
@@ -20,6 +20,8 @@ share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
 share/gnome/help/evince/es/figures/evince_start_window.png
+share/gnome/help/evince/fi/evince.xml
+share/gnome/help/evince/fi/figures/evince_start_window.png
 share/gnome/help/evince/fr/evince.xml
 share/gnome/help/evince/fr/figures/evince_start_window.png
 share/gnome/help/evince/it/evince.xml
@@ -30,10 +32,12 @@ share/gnome/help/evince/ru/evince.xml
 share/gnome/help/evince/ru/figures/evince_start_window.png
 share/gnome/help/evince/sr/evince.xml
 share/gnome/help/evince/sr/figures/evince_start_window.png
+share/gnome/help/evince/sv/evince.xml
+share/gnome/help/evince/sv/figures/evince_start_window.png
 share/gnome/help/evince/uk/evince.xml
 share/gnome/help/evince/uk/figures/evince_start_window.png
-share/icons/hicolor/16x16/apps/evince-16.png
-share/icons/hicolor/22x22/apps/evince-22.png
+share/icons/hicolor/16x16/apps/evince.png
+share/icons/hicolor/22x22/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
 share/locale/be/LC_MESSAGES/evince.mo
@@ -103,11 +107,13 @@ share/omf/evince/evince-C.omf
 share/omf/evince/evince-bg.omf
 share/omf/evince/evince-el.omf
 share/omf/evince/evince-es.omf
+share/omf/evince/evince-fi.omf
 share/omf/evince/evince-fr.omf
 share/omf/evince/evince-it.omf
 share/omf/evince/evince-nl.omf
 share/omf/evince/evince-ru.omf
 share/omf/evince/evince-sr.omf
+share/omf/evince/evince-sv.omf
 share/omf/evince/evince-uk.omf
 @dirrm share/omf/evince
 @comment in scrollkeeper: @dirrm share/omf
@@ -118,6 +124,8 @@ share/omf/evince/evince-uk.omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/evince/uk/figures
 @dirrm share/gnome/help/evince/uk
+@dirrm share/gnome/help/evince/sv/figures
+@dirrm share/gnome/help/evince/sv
 @dirrm share/gnome/help/evince/sr/figures
 @dirrm share/gnome/help/evince/sr
 @dirrm share/gnome/help/evince/ru/figures
@@ -128,6 +136,8 @@ share/omf/evince/evince-uk.omf
 @dirrm share/gnome/help/evince/it
 @dirrm share/gnome/help/evince/fr/figures
 @dirrm share/gnome/help/evince/fr
+@dirrm share/gnome/help/evince/fi/figures
+@dirrm share/gnome/help/evince/fi
 @dirrm share/gnome/help/evince/es/figures
 @dirrm share/gnome/help/evince/es
 @dirrm share/gnome/help/evince/el/figures
