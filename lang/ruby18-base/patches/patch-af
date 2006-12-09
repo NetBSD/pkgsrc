@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.2.2 2006/12/09 10:17:48 salo Exp $
+
+--- common.mk.orig	2006-12-06 00:02:32.000000000 +0900
++++ common.mk
+@@ -3,7 +3,7 @@ lib: $(LIBRUBY)
+ dll: $(LIBRUBY_SO)
+ 
+ RUBYOPT       =
+-NULLCMD       =
++NULLCMD       = :
+ 
+ STATIC_RUBY   = static-ruby
+ 

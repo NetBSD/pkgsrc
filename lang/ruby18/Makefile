@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/09/07 15:40:00 taca Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2006/12/09 10:17:47 salo Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION_SUFFIX}
 #PKGREVISION=
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
@@ -17,10 +17,10 @@ DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION}:../../devel/ruby-curses
 DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
 DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION}:../../x11/ruby-tk
 
-RUBY_VERSION=		${RUBY18_VERSION}
-NO_CHECKSUM=		yes
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
+RUBY_VERSION=	${RUBY18_VERSION}
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	@${ECHO_MSG} This is only a meta package.
