@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.17 2006/10/18 20:48:58 rillig Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.18 2006/12/09 16:18:55 adam Exp $
 #
 # User-settable variables:
 #
@@ -21,7 +21,7 @@ PGVERSION_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_VERSION_DEFAULT?=		80
-PGSQL_VERSIONS_ACCEPTED?=	81 80 74
+PGSQL_VERSIONS_ACCEPTED?=	82 81 80 74
 
 # transform the list into individual variables
 .for pv in ${PGSQL_VERSIONS_ACCEPTED}
@@ -46,6 +46,9 @@ _PGSQL_VERSION_74_INSTALLED=	yes
 _PGSQL_VERSION_73_INSTALLED=yes
 .endif
 .else
+.if exists(${LOCALBASE}/lib/libecpg.so.5.0.2)
+_PGSQL_VERSION_82_INSTALLED=	yes
+.endif
 .if exists(${LOCALBASE}/lib/libecpg.so.5.0.1)
 _PGSQL_VERSION_81_INSTALLED=	yes
 .endif
@@ -97,7 +100,10 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 #
 # set variables for the version we decided to use:
 #
-.if ${_PGSQL_VERSION} == "81"
+.if ${_PGSQL_VERSION} == "82"
+PGSQL_TYPE=	postgresql82-client
+PGPKGSRCDIR=	../../databases/postgresql82-client
+.elif ${_PGSQL_VERSION} == "81"
 PGSQL_TYPE=	postgresql81-client
 PGPKGSRCDIR=	../../databases/postgresql81-client
 .elif ${_PGSQL_VERSION} == "80"
