@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.10 2006/12/09 19:42:43 adam Exp $
+
+--- tools/wineshelllink.orig	2006-12-09 20:04:14.000000000 +0100
++++ tools/wineshelllink
+@@ -101,7 +101,7 @@ directory_entry()
+ [Desktop Entry]
+ Type=Directory
+ EOF
+-    if [ "$1" == "wine" ] ; then
++    if [ "$1" = "wine" ] ; then
+         echo "Name=Wine"
+         echo "Icon=wine"
+     else
+@@ -208,7 +208,7 @@ if [ $mode = "menu" ] ; then
+     mkdir -p "$xdg_data_dir/applications/wine/`dirname "$link"`"
+ 
+     linkpath=`dirname "$link" | sed 's!/!-!g'`
+-    if [ "$linkpath" == "." ] ; then 
++    if [ "$linkpath" = "." ] ; then 
+         linkpath=""
+     else
+         linkpath="-$linkpath"
