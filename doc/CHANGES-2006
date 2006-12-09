@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1982 2006/12/09 12:32:09 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.1983 2006/12/09 13:58:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.3.1.0 [adam 2006-12-09]
 	Updated x11/libXmu to 1.0.3 [joerg 2006-12-09]
 	Updated security/audit-packages to 1.46 [adrianp 2006-12-09]
+	Updated devel/libntlm to 0.3.12 [obache 2006-12-09]
