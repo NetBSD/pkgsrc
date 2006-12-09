@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/04/13 18:23:37 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/09 14:06:13 obache Exp $
 
-DISTNAME=		gsasl-0.2.5
-PKGREVISION=		1
+DISTNAME=		gsasl-0.2.15
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/gsasl/releases/ \
-			${MASTER_SITE_GNU:=gsasl/}
+			ftp://alpha.gnu.org/pub/gnu/gsasl/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gsasl/
@@ -18,14 +17,20 @@ TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-libgcrypt
+CONFIGURE_ARGS+=	--enable-gssapi=${GSSIMPL.${KRB5_TYPE}}
+GSSIMPL.heimdal=	heimdal
+GSSIMPL.mit-krb5=	mit
 
-PKGCONFIG_OVERRIDE+=    libgsasl.pc.in
-INFO_FILES=		# PLIST
+PKGCONFIG_OVERRIDE+=	lib/libgsasl.pc.in
+INFO_FILES=		YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libntlm/buildlink3.mk"
-.include "../../security/gss/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
