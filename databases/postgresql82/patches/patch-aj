@@ -1,0 +1,30 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+
+--- contrib/tsearch2/snowball/Makefile.orig	2006-01-27 17:32:31.000000000 +0100
++++ contrib/tsearch2/snowball/Makefile
+@@ -1,6 +1,6 @@
+ # $PostgreSQL: pgsql/contrib/tsearch2/snowball/Makefile,v 1.9 2006/01/27 16:32:31 teodor Exp $
+ 
+-SUBOBJS = english_stem.o api.o russian_stem.o russian_stem_UTF8.o utilities.o
++SUBOBJS = english_stem.lo api.lo russian_stem.lo russian_stem_UTF8.lo utilities.lo
+ 
+ EXTRA_CLEAN = SUBSYS.o $(SUBOBJS)
+ 
+@@ -14,13 +14,14 @@ subdir = contrib/tsearch2/snowball
+ top_builddir = ../../..
+ include $(top_builddir)/src/Makefile.global
+ include $(top_srcdir)/contrib/contrib-global.mk
++include $(top_srcdir)/src/Makefile.shlib
+ endif
+ 
+ override CFLAGS += $(CFLAGS_SL)
+ 
+-all: SUBSYS.o
++all: libSUBSYS.la
+ 
+-SUBSYS.o: $(SUBOBJS)
+-	$(LD) $(LDREL) $(LDOUT) $@ $^
++libSUBSYS.la: $(SUBOBJS)
++	libtool --mode=link ${CC} -o libSUBSYS.la ${SUBOBJS}
+ 
+ 

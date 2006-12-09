@@ -1,0 +1,120 @@
+#-------------------------------------------------------------------------
+#
+# Makefile.libtool
+#    Common rules for buildling libtool archives
+#
+# IDENTIFICATION
+#    $NetBSD: Makefile.libtool,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+#
+#-------------------------------------------------------------------------
+
+##
+## Hacks/workarounds for makefiles in certain directories
+##
+
+# The following directories are building loadable shared modules, not
+# shared libraries.
+#
+ifneq (,$(findstring src/backend/utils/mb/conversion_procs/,$(subdir)))
+shmodule	= yes
+else
+ifneq (,$(findstring src/pl/,$(subdir)))
+shmodule	= yes
+else
+shmodule	= no
+endif
+endif
+
+# Fix dependencies in some makefiles that assume the target matches
+# %.o so that when built for libtool, the target matches the corresponding
+# %.lo.
+#
+ifeq ($(subdir), src/interfaces/ecpg/ecpglib)
+path.lo: path.c $(top_builddir)/src/port/pg_config_paths.h
+endif
+
+ifeq ($(subdir), src/interfaces/libpq)
+fe-connect.lo: fe-connect.c $(top_builddir)/src/port/pg_config_paths.h
+endif
+
+ifeq ($(subdir), src/pl/plpgsql/src)
+pl_gram.lo pl_handler.lo pl_comp.lo pl_exec.lo pl_funcs.lo: plpgsql.h $(srcdir)/pl.tab.h
+pl_gram.lo: $(srcdir)/pl_scan.c
+endif
+
+
+##
+## VARIABLE DEFINITIONS
+##
+
+# Loadable shared modules are named differently from shared libraries
+# and are installed into $(pkglibdir).
+#
+ifeq ($(shmodule),yes)
+ltlib		= $(NAME)$(DLSUFFIX)
+ltmodule	= -module
+rpathdir	= $(pkglibdir)
+else
+ltlib		= lib$(NAME)$(DLSUFFIX)
+ltmodule	=
+endif
+
+DLSUFFIX	= .la
+
+LTCOMPILE	= $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS)
+LTLINK		= $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(ltmodule) -rpath $(rpathdir) -version-info $(SO_MAJOR_VERSION):$(SO_MINOR_VERSION)
+LTOBJS		= $(OBJS:%.o=%.lo)
+
+# Define INSTALL_SHLIB and shlib for the benefit of Makefiles for
+# loadable modules that have their own target for installing the
+# module.
+#
+INSTALL_LTLIB	= $(LIBTOOL) --mode=install $(INSTALL)
+INSTALL_STLIB	= $(INSTALL_LTLIB)
+INSTALL_SHLIB	= $(INSTALL_LTLIB)
+shlib		= $(ltlib)
+
+%.lo : %.c
+	$(LTCOMPILE) -c $< -o $@
+
+
+##
+## BUILD
+##
+
+.PHONY: all-lib all-static-lib all-shared-lib all-la-lib
+all-lib all-static-lib all-shared-lib: all-la-lib
+
+all-la-lib: $(ltlib)
+
+$(ltlib): $(LTOBJS)
+	$(LTLINK) -o $@ $(LTOBJS) $(SHLIB_LINK)
+
+
+##
+## INSTALL
+##
+
+.PHONY: install-lib install-lib-static install-lib-shared install-lib-la
+install-lib install-static-lib install-shared-lib: install-lib-la
+
+install-lib-la: $(ltlib)
+	$(INSTALL_LTLIB) $< $(DESTDIR)$(libdir)/$(ltlib)
+
+
+##
+## UNINSTALL
+##
+
+.PHONY: uninstall-lib
+uninstall-lib:
+	$(LIBTOOL) --mode=uninstall rm -f $(DESTDIR)$(libdir)/$(ltlib)
+
+
+##
+## CLEAN
+##
+
+.PHONY: clean-lib
+clean-lib:
+	$(LIBTOOL) --mode=clean rm -f $(ltlib) $(LTOBJS)

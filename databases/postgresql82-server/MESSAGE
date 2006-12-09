@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/12/09 15:34:40 adam Exp $
+
+To enable this package, put the following into your /etc/rc.conf:
+
+	pgsql=yes
+	pgsql_flags="-l"     # enables SSL connections (TCP/IP and
+				# ~pgsql/data/server.crt required)
+
+and ensure that
+
+	${RCD_SCRIPTS_DIR}/pgsql start
+
+is run at the appropriate time.
+
+Note: PostgreSQL 8.2 accepts TCP/IP connections on localhost address
+by default.
+
+===========================================================================
