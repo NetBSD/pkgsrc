@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/12/09 02:16:03 markd Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/09 02:27:47 markd Exp $
 #
 
-DISTNAME=	byacc-20040328
-PKGREVISION=	1
+DISTNAME=	byacc-20050813
 CATEGORIES=	devel
 MASTER_SITES=	ftp://invisible-island.net/byacc/
 EXTRACT_SUFX=	.tgz
