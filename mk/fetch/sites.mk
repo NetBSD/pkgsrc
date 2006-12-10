@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.18 2006/12/10 11:28:40 wiz Exp $
+# $NetBSD: sites.mk,v 1.19 2006/12/10 11:30:16 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -41,7 +41,6 @@ MASTER_SITE_PERL_CPAN+= \
 	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/ \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.tuwien.ac.at/pub/CPAN/modules/by-module/ \
-	ftp://mirrors.cloud9.net/mirrors/CPAN/modules/by-module/ \
 	http://cpan.perl.org/CPAN/modules/by-module/ \
 	ftp://ftp.fi.muni.cz/pub/CPAN/modules/by-module/
 
