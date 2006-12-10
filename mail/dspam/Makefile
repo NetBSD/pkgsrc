@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/12/05 13:16:35 obache Exp $
+# $NetBSD: Makefile,v 1.55 2006/12/10 04:36:30 obache Exp $
 
 DISTNAME=	dspam-3.6.8
 PKGREVISION=	2
@@ -139,7 +139,7 @@ post-install:
 .  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
 	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
 	cd ${WRKSRC}/src/tools.${drv}_drv && \
-		${PAX} -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/${drv}
+		${PAX} -rwppm ./*.sql ${DATADIR}/${drv}
 .  endif
 .endfor
 
