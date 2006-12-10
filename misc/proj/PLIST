@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/12/10 01:27:55 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/12/10 02:05:27 gdt Exp $
 bin/cs2cs
 bin/geod
 bin/invgeod
@@ -32,6 +32,8 @@ share/proj/nad.lst
 share/proj/nad27
 share/proj/nad83
 share/proj/ntv1_can.dat
+share/proj/null
+share/proj/nzgd2kgrid0005.gsb
 share/proj/other.extra
 share/proj/proj_def.dat
 share/proj/prvi
