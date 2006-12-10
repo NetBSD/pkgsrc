@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5761 2006/12/10 10:53:58 wiz Exp $
+$NetBSD: TODO,v 1.5762 2006/12/10 18:54:39 gdt Exp $
 
 Suggested new packages
 ======================
@@ -845,7 +845,7 @@ Suggested package updates
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
-	o pilot-link-0.11.8
+	o pilot-link-0.12.1
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
