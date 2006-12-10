@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2006/06/15 22:21:44 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/10 01:06:38 minskim Exp $
 
-DISTNAME=	dhucs-3.0.2cvs-20060616
+DISTNAME=	dhucs-3.1.4cvs-20061118
 PKGNAME=	tex-${DISTNAME:C/cvs-.*//}
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/current/
