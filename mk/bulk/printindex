@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.29 2006/11/26 08:39:52 rillig Exp $
+# $NetBSD: printindex,v 1.30 2006/12/10 13:59:31 rillig Exp $
 #
 
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -161,6 +161,13 @@ for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 	esac
 
 	if cd "${pkgsrcdir}/${pkgdir}"; then
+
+		# The NetBSD /bin/sh creates lots of zombies for the backticks
+		# line below, and it doesn't clean them up until a real
+		# command is executed. (See PR 35227)
+		#
+		cat </dev/null
+
 		if output=`${BMAKE} show-var VARNAME=PKGNAME can-be-built-here`; then
 			reasons=""
 			{
