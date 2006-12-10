@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2006/06/05 15:49:05 xtraeme Exp $
+# $NetBSD: options.mk,v 1.17 2006/12/10 00:30:01 xtraeme Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -6,7 +6,7 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
-			domainscale virtualusers preferences-extension \
+			domainscale preferences-extension \
 			clamav ldap syslog debug verbose-debug
 
 .include "../../mk/bsd.options.mk"
@@ -143,7 +143,7 @@ CONFIGURE_ARGS+=	--enable-homedir
 ### Enable DSPAM's graph.cgi to produce graphs of spam statistics.
 ###
 .if !empty(PKG_OPTIONS:Mgraphs)
-DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
+DEPENDS+=		p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
 .endif
 
 ###
@@ -193,10 +193,10 @@ CONFIGURE_ARGS+=	--enable-clamav
 ### set flat logfile pathname for logging
 ###
 .if !empty(PKG_OPTIONS:Msyslog)
-CONFIGURE_ARGS+=--enable-syslog
+CONFIGURE_ARGS+=	--enable-syslog
 .else
-CONFIGURE_ARGS+=--disable-syslog
-CONFIGURE_ARGS+=--with-logfile=${DSPAM_LOGFILE}
+CONFIGURE_ARGS+=	--disable-syslog
+CONFIGURE_ARGS+=	--with-logfile=${DSPAM_LOGFILE}
 .endif
 
 ###
