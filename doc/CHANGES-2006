@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1991 2006/12/10 04:13:47 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.1992 2006/12/10 10:15:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5477,7 +5477,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gimp24 to 2.3.13 [adam 2006-12-01]
 	Updated textproc/p5-XML-Atom to 0.25 [kleink 2006-12-01]
 	Updated ham/gnuradio-core to 3.0.2nb1 [wulf 2006-11-13]
-	Updated net/rdesktop to 1.5.0 [hubeertf 2006-12-01]
+	Updated net/rdesktop to 1.5.0 [hubertf 2006-12-01]
 	Updated graphics/sane-frontends 1.0.14 [adam 2006-12-01]
 	Added databases/postgresql81-tsearch2 version 8.1.5 [joerg 2006-12-01]
 	Updated sysutils/mklivecd to 0.14.4 [xtraeme 2006-12-01]
