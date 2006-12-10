@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/29 15:55:26 he Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/10 02:15:15 rillig Exp $
 
 DISTNAME=               sc-6.21
 PKGREVISION=		1
@@ -11,5 +11,6 @@ COMMENT=		Curses-based spreadsheet program
 
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		yacc
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
