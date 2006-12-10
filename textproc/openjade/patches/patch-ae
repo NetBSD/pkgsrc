@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2006/12/10 23:02:40 minskim Exp $
+
+--- Makefile.prog.in.orig	2002-01-22 03:57:53.000000000 -0800
++++ Makefile.prog.in
+@@ -12,14 +12,14 @@ LINKFLAGS = @LINKFLAGS@
+ 
+ ALL_LIBS = $(XLIBS) $(LIBS)
+ Makefile.lt:
+-	echo 'LT_LIBS='`echo $(ALL_LIBS)|sed 's/\.a/.la/g'` >Makefile.lt
++	echo 'LT_LIBS='`echo $(ALL_LIBS)|sed 's/\.a/.la/g|sed 's/(^| )-l[0-9a-z]*//g'` >Makefile.lt
+ 
+ PROG:=$(shell echo "$(PROG)" | sed '@program_transform_name@')
+ 
+ all: $(PROG)
+ 
+ $(PROG): $(OBJS) $(COBJS) $(LT_LIBS)
+-	$(LIBTOOL) --mode=link $(CXX) $(LINKFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(COBJS) $(LT_LIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(LINKFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(COBJS) $(LT_LIBS) $(DEPLIBS)
+ 
+ install: $(PROG)
+ 	-test -d $(DESTDIR)$(bindir) || \
