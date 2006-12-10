@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.5 2006/12/02 13:02:14 kano Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.6 2006/12/10 16:46:50 kano Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -236,7 +236,7 @@
 <sect2 id="infr.order.prefs">
 <title>The order in <filename>bsd.prefs.mk</filename></title>
 
-	<para>The very first action in <filename>bsd.pkg.mk</filename>
+	<para>The very first action in <filename>bsd.prefs.mk</filename>
 	is to define some essential variables like
 	<varname>OPSYS</varname>, <varname>OS_VERSION</varname> and
 	<varname>MACHINE_ARCH</varname>.</para>
