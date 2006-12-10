@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5758 2006/12/10 01:51:04 gdt Exp $
+$NetBSD: TODO,v 1.5759 2006/12/10 02:07:01 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -250,8 +250,6 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amavisd-new-2.4.3 [pkg/34788]
-	o amavisd-new-2.4.4
 	o amaya-9.52
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
