@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1993 2006/12/10 10:44:53 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.1994 2006/12/10 11:03:03 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5130,7 +5130,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/xcmiscproto version 1.1.2 [joerg 2006-11-03]
 	Added x11/xf86bigfontproto version 1.1.2 [joerg 2006-11-03]
 	Added x11/libXau version 1.0.0 [joerg 2006-11-03]
-	Added x11/libXdmcp version 1.0.1 [joerg 2006-11-03]
 	Added x11/libXdmcp version 1.0.1 [joerg 2006-11-03]
 	Added x11/libX11 version 1.0.3 [joerg 2006-11-03]
 	Added x11/libXext version 1.0.2 [joerg 2006-11-03]
