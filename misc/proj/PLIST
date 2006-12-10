@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/14 23:36:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/12/10 01:27:55 gdt Exp $
 bin/cs2cs
 bin/geod
 bin/invgeod
@@ -7,6 +7,7 @@ bin/nad2bin
 bin/nad2nad
 bin/proj
 include/nad_list.h
+include/org_proj4_Projections.h
 include/proj_api.h
 include/projects.h
 lib/libproj.la
@@ -25,11 +26,13 @@ share/proj/alaska
 share/proj/conus
 share/proj/epsg
 share/proj/esri
+share/proj/esri.extra
 share/proj/hawaii
 share/proj/nad.lst
 share/proj/nad27
 share/proj/nad83
 share/proj/ntv1_can.dat
+share/proj/other.extra
 share/proj/proj_def.dat
 share/proj/prvi
 share/proj/stgeorge
