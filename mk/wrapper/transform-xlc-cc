@@ -1,4 +1,4 @@
-# $NetBSD: transform-xlc-cc,v 1.8 2006/09/17 18:46:00 rillig Exp $
+# $NetBSD: transform-xlc-cc,v 1.9 2006/12/10 03:14:59 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,42 +34,39 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+transform_setname "transform-xlc-cc"
+
 case $arg in
-######################################################################
-# Leave -Wl, unchanged.
-######################################################################
--Wl,*)
-	;;
-######################################################################
-# XL C doesn't understand many -W* arguments, so just silently ignore
-# them all.
-######################################################################
--W*)
-	arg=
-	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	;;
+
+# Standard options.
+-[cEgOos]	|\
+-[DILlU]?*	|\
+-O[01]		) transform_pass ;;
+
+-Wl,*		) transform_pass ;;
+
+-W*		) transform_discard_with_warning ;;
+
 # xlc uses -qmkshrobj to create shared objects, and we also need to
 # tell the linker to use a flat namespace and allow undefined symbols.
--dynamiclib)
-	arg="-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress"
-	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	split_arg=yes
-        ;;
+-dynamiclib	) transform_to_and_split "-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress" ;;
+
 # -qnocommon is the xlc argument to allocate uninitialized globals in
 # the data section for PIC.
--fno-common|-fPIC)
-	arg=-qnocommon
-	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	;;
+-fPIC		|\
+-fno-common	) transform_to "-qnocommon" ;;
+
+
 ######################################################################
 # Ignore some flags that are unnecessary for XL C.
 ######################################################################
--pipe|-ansi|-fno-gnu-keywords|-fstrict-prototypes|-no-cpp-precomp|-pedantic)
-	arg=
-	$debug_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-	addtocache=yes
-	;;
+-ansi		|\
+-fno-gnu-keywords |\
+-fstrict-prototypes |\
+-no-cpp-precomp	|\
+-pedantic	|\
+-pipe		) transform_discard_with_warning ;;
+
+-*		) transform_pass_with_warning ;;
+
 esac
