@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.9 2006/12/09 12:06:55 rillig Exp $
+# $NetBSD: transform-gcc,v 1.10 2006/12/10 00:18:17 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -17,6 +17,7 @@ case $arg in
 -fPIC			|\
 -fno-implicit-templates	|\
 -ggdb			|\
+-M			|\
 -M[DFMPT]		|\
 -O[23s]			|\
 -pipe			|\
