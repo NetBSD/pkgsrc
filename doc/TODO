@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5762 2006/12/10 18:54:39 gdt Exp $
+$NetBSD: TODO,v 1.5763 2006/12/10 21:07:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -486,7 +486,9 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
-	o gtar-1.16
+	o gst-plugins0.10-base-0.10.11
+	o gstreamer0.10-0.10.11
+	o gtar-1.16.1
 	o gtetrinet-0.7.10
 	o gthumb-2.7.7
 	o gtk-systrace-20030623
@@ -538,6 +540,7 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
+	o jasper-1.900.0
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
@@ -709,6 +712,7 @@ Suggested package updates
 	o p5-Apache-DBI-1.05
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.33
+	o p5-Apache-Test-1.29
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-BSD-Resource-1.28
@@ -796,7 +800,7 @@ Suggested package updates
 	o p5-Test-Exception-0.24
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-2.105
-	o p5-Test-Simple-0.65
+	o p5-Test-Simple-0.66
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
 	o p5-Text-Shellwords-1.08 [pkg/34417]
@@ -808,7 +812,7 @@ Suggested package updates
 	o p5-WWW-Mechanize-1.20
 	o p5-X11-Protocol-0.54
 	o p5-XML-RAI-1.04
-	o p5-XML-RSS-1.20
+	o p5-XML-RSS-1.21
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
