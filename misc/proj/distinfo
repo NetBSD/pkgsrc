@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 11:02:57 agc Exp $
+$NetBSD: distinfo,v 1.7 2006/12/10 01:27:55 gdt Exp $
 
-SHA1 (proj-4.4.7.tar.gz) = 7da5ec181d29ca2628578738632be7843a567e23
-RMD160 (proj-4.4.7.tar.gz) = b348f4ff7b32e8fcb023642659bbe0a098d43e27
-Size (proj-4.4.7.tar.gz) = 459333 bytes
-SHA1 (proj-nad27-1.1.tar.gz) = 0885c8ca5c9311bbe9c99faf8c2c51ded3b7dd23
-RMD160 (proj-nad27-1.1.tar.gz) = 55c309d975437a8f4301c61ccf56e58c69460a4c
-Size (proj-nad27-1.1.tar.gz) = 1816642 bytes
+SHA1 (proj-4.5.0.tar.gz) = 891960e1c15f462fa4b56e4ee778184afec3d39a
+RMD160 (proj-4.5.0.tar.gz) = 7bb79f248567287736f63148b63cb5c7e3d3a58c
+Size (proj-4.5.0.tar.gz) = 655450 bytes
+SHA1 (proj-nad27-1.2.tar.gz) = a474606caf950e359421dff4dadee56b2e504a03
+RMD160 (proj-nad27-1.2.tar.gz) = 79624b4e51ea0e7a85266516a0dca63b62a4ba96
+Size (proj-nad27-1.2.tar.gz) = 1830374 bytes
