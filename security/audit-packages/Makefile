@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2006/12/09 12:30:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.75 2006/12/10 13:06:45 dmcmahill Exp $
 
 DISTNAME=	audit-packages-1.46
 CATEGORIES=	security pkgtools
@@ -55,6 +55,10 @@ SUBST_SED.paths+=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|@FIND@|${FIND}|g'
 SUBST_MESSAGE.paths=	Fixing paths.
 
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+USE_TOOLS+=	nroff
+.endif
+
 do-build:
 	for f in audit-packages audit-packages.0 audit-packages.8 	\
 		download-vulnerability-list; do				\
@@ -62,8 +66,6 @@ do-build:
 	done
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
-USE_TOOLS+=	nroff
-
 	# pre-created man-pages are "mandoc" pages, these OS need "man",
 	# so regen the .0 page
 	${NROFF} -man ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
