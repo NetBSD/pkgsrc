@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5765 2006/12/11 16:29:37 wennmach Exp $
+$NetBSD: TODO,v 1.5766 2006/12/11 19:13:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -485,8 +485,6 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
-	o gst-plugins0.10-base-0.10.11
-	o gstreamer0.10-0.10.11
 	o gtar-1.16.1
 	o gtetrinet-0.7.10
 	o gthumb-2.7.7
@@ -619,6 +617,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
+	o mercurial-0.9.2
 	o mftrace-1.2.4
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
@@ -918,7 +917,7 @@ Suggested package updates
 	o py-qt3-base-3.17
 	o py-qt3-modules-3.16
 	o py-qt3-qscintilla-3.16
-	o py-qt3-sip-4.5
+	o py-qt3-sip-4.5.2
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
 	o py-sqlite2-2.3.1
