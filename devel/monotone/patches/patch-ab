@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.5 2006/12/11 08:13:13 dan Exp $
+
+--- cmd_automate.cc	eaa1ad0948253c507dfafc1521b8885260ba2db6
++++ cmd_automate.cc	5b90227ffcfe111cead5ab503b2df2ed81899835
+@@ -28,7 +28,7 @@ namespace automation {
+   static map<string, automate * const> * automations;
+   automate::automate(string const &n, string const &p,
+                      options::options_type const & o)
+-    : name(n), params(p), options(o)
++    : name(n), params(p), opts(o)
+   {
+     static bool first(true);
+     if (first)
+@@ -350,7 +350,7 @@ AUTOMATE(stdio, "", options::opts::autom
+       try
+         {
+           options::options_type opts = options::opts::globals();
+-          opts = opts | find_automation(cmd, help_name).options;
++          opts = opts | find_automation(cmd, help_name).opts;
+           opts.instantiate(&app.opts).from_key_value_pairs(params);
+           automate_command(cmd, args, help_name, app, os);
+         }
+@@ -402,7 +402,7 @@ commands::cmd_automate::get_options(vect
+ {
+   if (args.size() < 2)
+     return options::options_type();
+-  return find_automation(idx(args,1), idx(args,0)()).options;
++  return find_automation(idx(args,1), idx(args,0)()).opts;
+ }
+ 
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/11/23 17:38:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2006/12/11 08:13:13 dan Exp $
 #
 
 DISTNAME=	monotone-0.31
@@ -8,6 +8,8 @@ MASTER_SITES=	http://monotone.ca/downloads/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
 COMMENT=	Free distributed version control system
+
+PKGREVISION=	1
 
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
