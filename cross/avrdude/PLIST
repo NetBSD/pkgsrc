@@ -1,49 +1,29 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/22 18:41:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/12/11 16:26:39 wennmach Exp $
 bin/avrdude
-etc/avrdude.conf
 info/avrdude.info
 man/man1/avrdude.1
-share/doc/avrdude/avrdude.pdf
-share/doc/avrdude/avrdude-html/avrdude.html
-share/doc/avrdude/avrdude-html/avrdude_abt.html
-share/doc/avrdude/avrdude-html/avrdude_1.html
-share/doc/avrdude/avrdude-html/avrdude_10.html
-share/doc/avrdude/avrdude-html/avrdude_11.html
-share/doc/avrdude/avrdude-html/avrdude_12.html
-share/doc/avrdude/avrdude-html/avrdude_13.html
-share/doc/avrdude/avrdude-html/avrdude_14.html
-share/doc/avrdude/avrdude-html/avrdude_15.html
-share/doc/avrdude/avrdude-html/avrdude_16.html
-share/doc/avrdude/avrdude-html/avrdude_17.html
-share/doc/avrdude/avrdude-html/avrdude_18.html
-share/doc/avrdude/avrdude-html/avrdude_19.html
-share/doc/avrdude/avrdude-html/avrdude_2.html
-share/doc/avrdude/avrdude-html/avrdude_20.html
-share/doc/avrdude/avrdude-html/avrdude_21.html
-share/doc/avrdude/avrdude-html/avrdude_22.html
-share/doc/avrdude/avrdude-html/avrdude_23.html
-share/doc/avrdude/avrdude-html/avrdude_24.html
-share/doc/avrdude/avrdude-html/avrdude_25.html
-share/doc/avrdude/avrdude-html/avrdude_26.html
-share/doc/avrdude/avrdude-html/avrdude_27.html
-share/doc/avrdude/avrdude-html/avrdude_28.html
-share/doc/avrdude/avrdude-html/avrdude_29.html
-share/doc/avrdude/avrdude-html/avrdude_3.html
-share/doc/avrdude/avrdude-html/avrdude_30.html
-share/doc/avrdude/avrdude-html/avrdude_31.html
-share/doc/avrdude/avrdude-html/avrdude_32.html
-share/doc/avrdude/avrdude-html/avrdude_33.html
-share/doc/avrdude/avrdude-html/avrdude_34.html
-share/doc/avrdude/avrdude-html/avrdude_35.html
-share/doc/avrdude/avrdude-html/avrdude_36.html
-share/doc/avrdude/avrdude-html/avrdude_37.html
-share/doc/avrdude/avrdude-html/avrdude_4.html
-share/doc/avrdude/avrdude-html/avrdude_5.html
-share/doc/avrdude/avrdude-html/avrdude_6.html
-share/doc/avrdude/avrdude-html/avrdude_7.html
-share/doc/avrdude/avrdude-html/avrdude_8.html
-share/doc/avrdude/avrdude-html/avrdude_9.html
-share/doc/avrdude/avrdude-html/avrdude_toc.html
-share/doc/avrdude/avrdude.ps
-@dirrm share/doc/avrdude/avrdude-html
-@dirrm share/doc/avrdude
+share/examples/avrdude/avrdude.conf
+share/doc/${DISTNAME}/avrdude.pdf
+share/doc/${DISTNAME}/avrdude-html/avrdude.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_abt.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_1.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_10.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_11.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_12.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_13.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_14.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_15.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_16.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_17.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_2.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_3.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_4.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_5.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_6.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_7.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_8.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_9.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_toc.html
+share/doc/${DISTNAME}/avrdude.ps
+@dirrm share/doc/${DISTNAME}/avrdude-html
+@dirrm share/doc/${DISTNAME}
