@@ -1,29 +1,91 @@
-$NetBSD: patch-ad,v 1.7.2.1 2006/11/01 21:16:51 ghen Exp $
+$NetBSD: patch-ad,v 1.7.2.2 2006/12/11 13:55:22 ghen Exp $
 
---- lib.c.orig	2002-04-29 18:12:18.000000000 +0100
-+++ lib.c	2006-11-01 13:22:51.000000000 +0000
-@@ -351,8 +351,8 @@
+Security fixes for CVE-2006-5297 and CVE-2006-5298, from mutt git.
+
+--- lib.c.orig	2002-04-29 19:12:18.000000000 +0200
++++ lib.c	2006-12-11 13:24:17.000000000 +0100
+@@ -346,13 +346,84 @@ int safe_rename (const char *src, const 
+   return 0;
+ }
+ 
++/* Create a temporary directory next to a file name */
++
++int mutt_mkwrapdir (const char *path, char *newfile, size_t nflen, 
++		    char *newdir, size_t ndlen)
++{
++  const char *basename;
++  char parent[_POSIX_PATH_MAX];
++  char *p;
++  int rv;
++
++  strfcpy (parent, NONULL (path), sizeof (parent));
++  
++  if ((p = strrchr (parent, '/')))
++  {
++    *p = '\0';
++    basename = p + 1;
++  }
++  else
++  {
++    strfcpy (parent, ".", sizeof (parent));
++    basename = path;
++  }
++
++  do 
++  {
++    snprintf (newdir, ndlen, "%s/%s", parent, ".muttXXXXXX");
++    mktemp (newdir);
++  } 
++  while ((rv = mkdir (newdir, 0700)) == -1 && errno == EEXIST);
++  
++  if (rv == -1)
++    return -1;
++  
++  snprintf (newfile, nflen, "%s/%s", newdir, NONULL(basename));
++  return 0;  
++}
++
++int mutt_put_file_in_place (const char *path, const char *safe_file, const char *safe_dir)
++{
++  int rv;
++  
++  rv = safe_rename (safe_file, path);
++  unlink (safe_file);
++  rmdir (safe_dir);
++  return rv;
++}
++
+ int safe_open (const char *path, int flags)
+ {
    struct stat osb, nsb;
    int fd;
  
--  if ((fd = open (path, flags, 0600)) < 0)
--    return fd;
-+  if ((fd = open (path, flags, S_IRUSR|S_IWUSR)) < 0)
-+    return (-1);
++  if (flags & O_EXCL) 
++  {
++    char safe_file[_POSIX_PATH_MAX];
++    char safe_dir[_POSIX_PATH_MAX];
++
++    if (mutt_mkwrapdir (path, safe_file, sizeof (safe_file),
++			safe_dir, sizeof (safe_dir)) == -1)
++      return -1;
++    
++    if ((fd = open (safe_file, flags, 0600)) < 0)
++    {
++      rmdir (safe_dir);
++      return fd;
++    }
++    
++    if (mutt_put_file_in_place (path, safe_file, safe_dir) == -1)
++    {
++      close (fd);
++      return -1;
++    }
++  }
++  else
++  {
+   if ((fd = open (path, flags, 0600)) < 0)
+     return fd;
++  }
  
    /* make sure the file is not symlink */
    if (lstat (path, &osb) < 0 || fstat (fd, &nsb) < 0 ||
-@@ -363,6 +363,13 @@
-     return (-1);
-   }
- 
-+  /* Make sure the file is owned by us and has save permissions. */
-+  if (nsb.st_uid != geteuid() ||
-+      (nsb.st_mode & (S_IRWXG|S_IRWXO)) != 0) {
-+    close (fd);
-+    return (-1);
-+  }
-+
-   return (fd);
- }
- 

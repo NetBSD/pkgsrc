@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.144.2.2 2006/11/02 09:02:58 ghen Exp $
+# $NetBSD: Makefile,v 1.144.2.3 2006/12/11 13:55:22 ghen Exp $
 
 DISTNAME=		mutt-1.4.2.2i
-PKGREVISION=		2
+PKGREVISION=		3
 PKGNAME=		${DISTNAME:C/i$//}
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
