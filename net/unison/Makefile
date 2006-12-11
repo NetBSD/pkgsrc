@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/06 06:22:35 reed Exp $
+# $NetBSD: Makefile,v 1.33 2006/12/11 23:00:31 tonio Exp $
 
 DISTNAME=	unison-2.13.16
 PKGREVISION=	2
@@ -17,9 +17,10 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
 # docs: unison-manual.pdf/html/ps/dvi
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
-MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
+MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
@@ -35,9 +36,9 @@ MAKE_FLAGS+=	THREADS=true
 .endif
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	share/doc/unison
 
 post-install:
-		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/unison
