@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5766 2006/12/11 19:13:19 wiz Exp $
+$NetBSD: TODO,v 1.5767 2006/12/11 23:16:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
-	o mercurial-0.9.2
 	o mftrace-1.2.4
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
