@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2000 2006/12/11 13:58:01 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.2001 2006/12/11 14:54:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/cdrdao to 1.2.2 [drochner 2006-12-11]
 	Updated sysutils/gcdmaster to 1.2.2 [drochner 2006-12-11]
 	Updated www/liferea to 1.0.27 [drochner 2006-12-11]
+	Updated math/sc to 6.21nb2 [obache 2006-12-11]
