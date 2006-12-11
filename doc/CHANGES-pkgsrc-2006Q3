@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.69 2006/12/09 10:37:50 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.70 2006/12/11 11:49:48 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -181,3 +181,5 @@ Pullup ticket 1943 - requested by taca
 security update for ruby18
 Pullup ticket 1949 - requested by wiz
 security fix for tnftpd
+Pullup ticket 1951 - requested by salo
+security update for ImageMagick
