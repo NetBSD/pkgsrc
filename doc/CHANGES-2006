@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1999 2006/12/11 12:48:20 salo Exp $
+$NetBSD: CHANGES-2006,v 1.2000 2006/12/11 13:58:01 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5618,3 +5618,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/xmms-alarm to 0.3.7 [obache 2006-12-11]
 	Updated mail/mutt to 1.4.2.2nb3 [salo 2006-12-11]
 	Updated mail/mutt-devel to 1.5.13nb2 [salo 2006-12-11]
+	Updated multimedia/gstreamer0.10 to 0.10.11 [drochner 2006-12-11]
+	Updated multimedia/gst-plugins0.10-base to 0.10.11 [drochner 2006-12-11]
+	Updated sysutils/cdrdao to 1.2.2 [drochner 2006-12-11]
+	Updated sysutils/gcdmaster to 1.2.2 [drochner 2006-12-11]
+	Updated www/liferea to 1.0.27 [drochner 2006-12-11]
