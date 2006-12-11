@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/14 11:16:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/11 12:38:18 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -10,6 +10,7 @@ include/gstreamer-0.10/gst/base/gstbasesink.h
 include/gstreamer-0.10/gst/base/gstbasesrc.h
 include/gstreamer-0.10/gst/base/gstbasetransform.h
 include/gstreamer-0.10/gst/base/gstcollectpads.h
+include/gstreamer-0.10/gst/base/gstdataqueue.h
 include/gstreamer-0.10/gst/base/gstpushsrc.h
 include/gstreamer-0.10/gst/base/gsttypefindhelper.h
 include/gstreamer-0.10/gst/controller/gstcontroller.h
