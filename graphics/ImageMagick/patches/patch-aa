@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.37 2006/07/17 16:01:36 adam Exp $
+$NetBSD: patch-aa,v 1.37.2.1 2006/12/11 11:49:04 ghen Exp $
 
---- configure.orig	2006-07-13 04:29:32.000000000 +0200
+--- configure.orig	2006-11-27 02:54:52.000000000 +0100
 +++ configure
-@@ -25322,9 +25322,6 @@ fi
+@@ -18993,9 +18993,6 @@ fi
  # Enable building/use of libltdl if we are building shared libraries regardless
  # of whether modules are built or not.
  with_ltdl='no'
@@ -10,5 +10,32 @@ $NetBSD: patch-aa,v 1.37 2006/07/17 16:01:36 adam Exp $
 -  with_ltdl='yes'
 -fi
  
+  if test "$with_ltdl" != 'no'; then
+   WITH_LTDL_TRUE=
+@@ -34391,7 +34388,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define HasFONTCONFIG 1
+ _ACEOF
  
+-  if test "$with_modules" == 'no' ; then
++  if test "$with_modules" = 'no' ; then
+     CPPFLAGS="$FONTCONFIG_CFLAGS $CPPFLAGS"
+   fi
+ fi
+@@ -36509,7 +36506,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define HasGVC 1
+ _ACEOF
  
+-  if test "$with_modules" == 'no' ; then
++  if test "$with_modules" = 'no' ; then
+     CPPFLAGS="$GVC_CFLAGS $CPPFLAGS"
+   fi
+ fi
+@@ -37054,7 +37051,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define HasRSVG 1
+ _ACEOF
+ 
+-  if test "$with_modules" == 'no' ; then
++  if test "$with_modules" = 'no' ; then
+     CPPFLAGS="$RSVG_CFLAGS $CPPFLAGS"
+   fi
+ fi
