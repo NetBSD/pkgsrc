@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1998 2006/12/11 09:11:23 obache Exp $
+$NetBSD: CHANGES-2006,v 1.1999 2006/12/11 12:48:20 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5616,3 +5616,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/proj-doc to 1.1 [gdt 2006-12-10]
 	Updated devel/monotone to 0.31nb1 [dan 2006-12-11]
 	Updated audio/xmms-alarm to 0.3.7 [obache 2006-12-11]
+	Updated mail/mutt to 1.4.2.2nb3 [salo 2006-12-11]
+	Updated mail/mutt-devel to 1.5.13nb2 [salo 2006-12-11]
