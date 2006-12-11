@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/04 21:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/11 12:53:02 obache Exp $
 #
 
 DISTNAME=		open-cobol-0.23
@@ -18,12 +18,20 @@ USE_PKGLOCALEDIR=	yes
 INFO_FILES=		# PLIST
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
+TEST_TARGET=		check
+
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--with-lfs
 CONFIGURE_ENV+=		NCURSES_LIB=${BUILDLINK_LDADD.ncurses:Q}
 
 EGDIR=			${PREFIX}/share/examples/open-cobol
 CONF_FILES=		${EGDIR}/libconf.conf ${PKG_SYSCONFDIR}/libconf.conf
+
+# XXX: followings can be removed when update to 0.33.
+SUBST_CLASSES+=		fixchkgmp
+SUBST_STAGE.fixchkgmp=	pre-configure
+SUBST_FILES.fixchkgmp=	configure
+SUBST_SED.fixchkgmp=	-e 's|__gmp_rand|__gmp_randinit|g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
