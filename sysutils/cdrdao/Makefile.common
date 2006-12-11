@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2006/06/30 01:44:55 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/12/11 12:28:36 drochner Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		david@maxwell.net
 HOMEPAGE=		http://cdrdao.sourceforge.net/
@@ -15,7 +16,7 @@ DISTINFO_FILE=		${CDRDAODIR}/distinfo
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CDRDAO_VER=		1.2.1
+CDRDAO_VER=		1.2.2
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
