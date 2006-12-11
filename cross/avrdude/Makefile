@@ -1,29 +1,32 @@
-# $NetBSD: Makefile,v 1.17 2006/08/10 03:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/11 16:26:39 wennmach Exp $
 
-DISTNAME=	avrdude-4.1.0
-PKGREVISION=	3
-CATEGORIES=	cross
-MASTER_SITES=	http://savannah.nongnu.org/download/avrdude/stable.pkg/4.1.0/
+DISTNAME=		avrdude-5.2
+#PKGREVISION=		1
+CATEGORIES=		cross
+MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bsdhome.com/avrdude/
-COMMENT=	Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.bsdhome.com/avrdude/
+COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 
-USE_GNU_READLINE=	YES
+USE_GNU_READLINE=	yes
 TEX_DEPMETHOD=		build
 TEX_ACCEPTED=		teTeX3
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	makeinfo texi2html
-INFO_FILES=	# PLIST
+.include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--disable-versioned-doc
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		makeinfo texi2html
+INFO_FILES=		yes
+EGDIR=			${PREFIX}/share/examples/avrdude
+CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
+CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
+			${ROOT_USER} ${ROOT_GROUP} 644
 
-# Remove avrdude's buggy and outdated texinfo.tex that was breaking
-# modern etex.
-#
-post-extract:
-	${RM} -f ${WRKSRC}/doc/texinfo.tex
+CONFIGURE_ARGS+=	--enable-doc
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--egconfdir=${EGDIR:Q}
+PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
