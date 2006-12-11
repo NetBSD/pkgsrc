@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/12 13:30:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/11 12:46:08 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/audio/audio.h
 include/gstreamer-0.10/gst/audio/gstaudioclock.h
@@ -24,11 +24,13 @@ include/gstreamer-0.10/gst/interfaces/propertyprobe.h
 include/gstreamer-0.10/gst/interfaces/tuner.h
 include/gstreamer-0.10/gst/interfaces/tunerchannel.h
 include/gstreamer-0.10/gst/interfaces/tunernorm.h
+include/gstreamer-0.10/gst/interfaces/videoorientation.h
 include/gstreamer-0.10/gst/interfaces/xoverlay.h
 include/gstreamer-0.10/gst/netbuffer/gstnetbuffer.h
 include/gstreamer-0.10/gst/riff/riff-ids.h
 include/gstreamer-0.10/gst/riff/riff-media.h
 include/gstreamer-0.10/gst/riff/riff-read.h
+include/gstreamer-0.10/gst/rtp/gstbasertpaudiopayload.h
 include/gstreamer-0.10/gst/rtp/gstbasertpdepayload.h
 include/gstreamer-0.10/gst/rtp/gstbasertppayload.h
 include/gstreamer-0.10/gst/rtp/gstrtpbuffer.h
@@ -42,6 +44,7 @@ lib/gstreamer-0.10/libgstaudiorate.la
 lib/gstreamer-0.10/libgstaudioresample.la
 lib/gstreamer-0.10/libgstaudiotestsrc.la
 lib/gstreamer-0.10/libgstdecodebin.la
+lib/gstreamer-0.10/libgstdecodebin2.la
 lib/gstreamer-0.10/libgstffmpegcolorspace.la
 lib/gstreamer-0.10/libgstgdp.la
 lib/gstreamer-0.10/libgstplaybin.la
