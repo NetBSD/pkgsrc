@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/12/06 17:23:24 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/12/12 21:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PANGO_BUILDLINK3_MK:=	${PANGO_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ BUILDLINK_ABI_DEPENDS.pango+=	pango>=1.12.1nb1
 BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 .endif	# PANGO_BUILDLINK3_MK
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !defined(PKG_BUILD_OPTIONS.pango)
 PKG_BUILD_OPTIONS.pango!= \
