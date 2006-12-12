@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/12/09 13:39:28 shannonjr Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/12 13:11:35 shannonjr Exp $
 #
 
-DISTNAME=		gnupg-2.0.0
+DISTNAME=		gnupg-2.0.1
 PKGNAME=		${DISTNAME:S/gnupg/gnupg2/}
-PKGREVISION=		4
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=		.tar.bz2
@@ -69,7 +68,6 @@ pre-configure:
 	${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} install
 	cd  ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./autogen.sh
 
-BUILDLINK_API_DEPENDS.gettext+=		gettext-lib>=0.14.1
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.0
 
