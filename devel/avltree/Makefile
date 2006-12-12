@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/22 07:12:14 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/12 14:44:18 joerg Exp $
 
 DISTNAME=	avltree-1.1
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ MANCOMPRESSED_IF_MANZ=	yes
 INSTALL_TARGET=	includes install
 MAKE_ENV+=	${BSD_MAKE_ENV}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
+INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
 
 post-extract:
 	cp -f ${FILESDIR}/Makefile ${WRKSRC}/
