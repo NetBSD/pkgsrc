@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.686 2006/12/06 23:42:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.687 2006/12/12 21:56:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6241,8 +6241,10 @@ sub checkfile_buildlink3_mk($) {
 	my $have_dependencies = false;
 	my $need_empty_line = false;
 	while (true) {
-		if (expect($lines, \$lineno, qr"^\.include \"\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk\"$")
-		 || expect($lines, \$lineno, qr"^\.include \"\.\./\.\./mk/(\S+)\.buildlink3\.mk\"$")) {
+		if (expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk\"$")
+		 || expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./mk/(\S+)\.buildlink3\.mk\"$")
+		 || expect($lines, \$lineno, qr"^\.if !empty\(PKG_BUILD_OPTIONS\.${bl_pkgbase}:M\S+\)$")
+		 || expect($lines, \$lineno, qr"^\.endif$")) {
 			$have_dependencies = true;
 			$need_empty_line = true;
 		} elsif ($have_dependencies && expect($lines, \$lineno, qr"^$")) {
@@ -6594,7 +6596,7 @@ sub checkfile_package_Makefile($$$) {
 			# probably contains a statement that C is
 			# really not needed.
 
-		} elsif ($value !~ qr"(?:^|\s+)(?:c|objc)(?:\s+|$)") {
+		} elsif ($value !~ qr"(?:^|\s+)(?:c|c99|objc)(?:\s+|$)") {
 			$pkgctx_vardef->{"GNU_CONFIGURE"}->log_warning("GNU_CONFIGURE almost always needs a C compiler, ...");
 			$languages_line->log_warning("... but \"c\" is not added to USE_LANGUAGES.");
 		}
