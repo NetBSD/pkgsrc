@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2004 2006/12/11 23:16:33 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2005 2006/12/12 07:05:22 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5627,3 +5627,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cross/avrdude to 5.2 [wennmach 2006-12-11]
 	Updated mail/clamav to 0.88.7 [xtraeme 2006-12-11]
 	Updated devel/mercurial to 0.9.2 [wiz 2006-12-11]
+	Updated x11/xfce4-utils to 4.2.3nb6 [martti 2006-12-12]
+	Updated editors/vim-share to 7.0.178 [martti 2006-12-12]
+	Updated x11/xpmroot to 2.4.20 [martti 2006-12-12]
+	Updated wm/fvwm to 2.4.20 [martti 2006-12-12]
+	Updated wm/fvwm-devel to 2.5.19 [martti 2006-12-12]
