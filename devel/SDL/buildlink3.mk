@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2006/11/06 11:21:58 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2006/12/12 21:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_BUILDLINK3_MK:=	${SDL_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
 
 PTHREAD_OPTS+=	require
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
