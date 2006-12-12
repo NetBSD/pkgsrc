@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2007 2006/12/12 19:28:10 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2008 2006/12/12 19:30:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5461,7 +5461,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/hicolor-icon-theme to 0.10 [drochner 2006-11-29]
 	Updated graphics/png to 1.2.14 [drochner 2006-11-29]
 	Updated mail/evolution-data-server to 1.8.2 [drochner 2006-11-29]
-	Updated net/libsoup-devel to 2.298 [drochner 2006-11-29]
+	Updated net/libsoup-devel to 2.2.98 [drochner 2006-11-29]
 	Updated sysutils/nautilus to 2.16.3 [drochner 2006-11-29]
 	Updated www/gtkhtml38 to 3.12.2 [drochner 2006-11-29]
 	Updated devel/eel2 to 2.16.3 [drochner 2006-11-29]
