@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/04/25 07:49:10 martti Exp $
+# $NetBSD: Makefile,v 1.51 2006/12/12 06:48:56 martti Exp $
 #
 
 DISTNAME=	fvwm-${PKG_VERSION}
 PKGNAME=	xpmroot-${PKG_VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/
@@ -12,7 +12,7 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.fvwm.org/generated/manpages/xpmroot.html
 COMMENT=	Sets the root window to an Xpm pixmap
 
-PKG_VERSION=	2.4.19
+PKG_VERSION=	2.4.20
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
@@ -22,10 +22,10 @@ CONFIGURE_ARGS+=	--without-extras --disable-dmalloc --without-gnome
 INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/man1
 
 do-build:
-	@(cd ${WRKSRC:Q}/libs && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all)
-	@(cd ${WRKSRC:Q}/utils && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xpmroot)
+	(cd ${WRKSRC:Q}/libs && \
+		env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all)
+	(cd ${WRKSRC:Q}/utils && \
+		env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xpmroot)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/utils/xpmroot ${PREFIX:Q}/bin
