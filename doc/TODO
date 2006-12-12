@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5768 2006/12/12 19:30:53 wiz Exp $
+$NetBSD: TODO,v 1.5769 2006/12/12 20:28:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,6 @@ Suggested package updates
 	o stella-2.2
 	o stlport-4.6.2
 	o strace-4.5.8
-	o streamripper-1.61.27
 	o stunnel-4.20
 	o subtitleripper-0.3.4
 	o sun-jdk15-5.10
