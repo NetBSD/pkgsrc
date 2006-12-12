@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.687 2006/12/12 21:56:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.688 2006/12/12 22:13:38 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5828,6 +5828,11 @@ sub checklines_mk($) {
 			}
 
 			if ($includefile eq "../../mk/bsd.prefs.mk") {
+				if ($line->fname =~ qr"buildlink3\.mk$") {
+					$line->log_note("For efficiency reasons, please include bsd.fast.prefs.mk instead of bsd.prefs.mk.");
+				}
+				$seen_bsd_prefs_mk = true;
+			} elsif ($includefile eq "../../mk/bsd.fast.prefs.mk") {
 				$seen_bsd_prefs_mk = true;
 			}
 
@@ -6243,7 +6248,7 @@ sub checkfile_buildlink3_mk($) {
 	while (true) {
 		if (expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk\"$")
 		 || expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./mk/(\S+)\.buildlink3\.mk\"$")
-		 || expect($lines, \$lineno, qr"^\.if !empty\(PKG_BUILD_OPTIONS\.${bl_pkgbase}:M\S+\)$")
+		 || expect($lines, \$lineno, qr"^\.if !empty\(PKG_BUILD_OPTIONS\.\Q${bl_pkgbase}\E:M\S+\)$")
 		 || expect($lines, \$lineno, qr"^\.endif$")) {
 			$have_dependencies = true;
 			$need_empty_line = true;
