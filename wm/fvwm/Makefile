@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/11/26 13:32:43 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/12 06:57:59 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
-PKGREVISION=	4
+#PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/ \
@@ -16,12 +16,12 @@ DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.4.19
+FVWM_VER=	2.4.20
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run tar
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
 
@@ -39,8 +39,8 @@ CONFIGURE_ARGS+=	--with-imagepath=${PREFIX:Q}/lib/X11/fvwm2/pixmaps:${X11BASE:Q}
 CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}
 
 post-extract:
-	${MKDIR} ${WRKDIR:Q}/icons
-	cd ${WRKDIR:Q}/icons && ${TAR} -xzf ${DISTDIR:Q}/fvwm_icons.tgz
+	mkdir ${WRKDIR:Q}/icons
+	cd ${WRKDIR:Q}/icons && tar -xzf ${DISTDIR:Q}/fvwm_icons.tgz
 
 post-install:
 	${INSTALL_DATA} \
