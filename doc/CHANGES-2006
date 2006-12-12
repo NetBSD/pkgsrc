@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2009 2006/12/12 20:28:15 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2010 2006/12/12 21:55:11 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5635,3 +5635,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/squid to 2.6.6 [taca 2006-12-12]
 	Updated finance/gnucash to 2.0.3 [wiz 2006-12-12]
 	Updated audio/streamripper to 1.61.27 [wiz 2006-12-12]
+	Updated time/kronolith to 2.1.4 [adrianp 2006-12-12]
