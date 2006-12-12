@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/26 08:50:13 adam Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/12 19:34:06 joerg Exp $
 
 DISTNAME=	dante-1.1.19
 CATEGORIES=	net security
@@ -14,6 +14,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/socks.conf
 CONFIGURE_ARGS+=	--with-sockd-conf=${PKG_SYSCONFDIR}/sockd.conf
+
+CHECK_PORTABILITY_SKIP=	contrib/StartupItems.Dante
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dante
