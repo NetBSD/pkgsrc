@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2008 2006/12/12 19:30:16 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2009 2006/12/12 20:28:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5634,3 +5634,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/fvwm-devel to 2.5.19 [martti 2006-12-12]
 	Updated www/squid to 2.6.6 [taca 2006-12-12]
 	Updated finance/gnucash to 2.0.3 [wiz 2006-12-12]
+	Updated audio/streamripper to 1.61.27 [wiz 2006-12-12]
