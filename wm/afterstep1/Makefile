@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/12 13:59:15 joerg Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/ \
 		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/AfterStep/stable/
@@ -16,7 +16,7 @@ DEPENDS+=		asclock-[0-9]*:../../time/asclock
 DEPENDS+=		xp-[0-9]*:../../x11/xp
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		autoconf213
+USE_TOOLS+=		autoconf213 perl:run
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-staticlibs
