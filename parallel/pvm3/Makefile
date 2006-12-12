@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/10/04 21:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2006/12/12 19:29:13 wiz Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -84,30 +84,30 @@ do-install:
 		${PVM_DIR}/bin/${PVM_ARCH}/ ; done
 
 	${INSTALL_DATA_DIR} ${PVM_DIR}/conf
-	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.def  ${PVM_DIR}/conf
-	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.m4  ${PVM_DIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.def ${PVM_DIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.m4 ${PVM_DIR}/conf
 
 	${INSTALL_DATA_DIR} ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/*.c  ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/*.f  ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/Readme  ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/Makefile.aimk  ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/*.c ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/*.f ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/Readme ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/Makefile.aimk ${PVM_DIR}/examples
 
 	${INSTALL_DATA_DIR} ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/*.c  ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/*.f  ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Readme  ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile.aimk  ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile  ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/*.c ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/*.f ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Readme ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile.aimk ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile ${PVM_DIR}/gexamples
 
 	${INSTALL_DATA_DIR} ${PVM_DIR}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PVM_DIR}/include
 
-	${INSTALL_MAN_DIR}  ${PREFIX}/man/man1
-	${INSTALL_MAN_DIR}  ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/man/man3
-	${RM} ${PREFIX}/man/man1/PVM.1
-	${LN} -s ${PREFIX}/man/man1/pvm_intro.1 ${PREFIX}/man/man1/PVM.1
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/${PKGMANDIR}/man3
+	${RM} ${PREFIX}/${PKGMANDIR}/man1/PVM.1
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/pvm_intro.1 ${PREFIX}/${PKGMANDIR}/man1/PVM.1
 
 .include "../../mk/bsd.pkg.mk"
