@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.146 2006/12/06 00:46:27 wiz Exp $
+# $NetBSD: makevars.map,v 1.147 2006/12/12 21:56:44 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -659,7 +659,7 @@ USE_GNU_READLINE	Yes [m:s,c:s,o:s]
 USE_IMAKE		Yes [m:s]
 USE_JAVA		{ run yes } [$package]
 USE_JAVA2		{ YES yes no 1.4 1.5 } [$package]
-USE_LANGUAGES		List of { c c++ fortran java objc } [m:s,c:s,o:s]
+USE_LANGUAGES		List of { c c99 c++ fortran java objc } [m:s,c:s,o:s]
 USE_LIBTOOL		Yes [$package]
 USE_MAKEINFO		Yes [$package]
 USE_MSGFMT_PLURALS	Yes [$package]
