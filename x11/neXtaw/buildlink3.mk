@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/12/12 21:52:38 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NEXTAW_BUILDLINK3_MK:=	${NEXTAW_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ BUILDLINK_ABI_DEPENDS.neXtaw+=	neXtaw>=0.15.1nb2
 BUILDLINK_PKGSRCDIR.neXtaw?=	../../x11/neXtaw
 .endif	# NEXTAW_BUILDLINK3_MK
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/x11.buildlink3.mk"
 
 LIBXAW?=	-L${BUILDLINK_PREFIX.neXtaw}/lib			\

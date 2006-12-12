@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2006/10/23 09:55:22 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2006/12/12 21:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -22,7 +22,7 @@ BUILDLINK_FILES.apr+=	bin/apr-config
 BUILDLINK_FILES.apr+=	bin/apu-config
 BUILDLINK_FILES.apr+=	lib/*.exp
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .  if !defined(PKG_BUILD_OPTIONS.apr)
 PKG_BUILD_OPTIONS.apr!=	cd ${BUILDLINK_PKGSRCDIR.apr} && \

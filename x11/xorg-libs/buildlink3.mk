@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/07/10 21:50:34 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2006/12/12 21:52:38 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XORG_LIBS_BUILDLINK3_MK:=	${XORG_LIBS_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxorg-libs}
 BUILDLINK_PACKAGES:=	xorg-libs ${BUILDLINK_PACKAGES}
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xorg-libs
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(XORG_LIBS_BUILDLINK3_MK:M+)
 

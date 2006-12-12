@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/12/12 21:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
 
 .if !empty(BUILDLINK_DEPTH:M+)

@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/12/09 15:35:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/12/12 21:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 POSTGRESQL82_CLIENT_BUILDLINK3_MK:=	${POSTGRESQL82_CLIENT_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	postgresql82-client

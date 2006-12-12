@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2006/07/08 23:10:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2006/12/12 21:52:36 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	perl
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}perl
 
 .if !empty(PERL5_BUILDLINK3_MK:M+)
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 USE_TOOLS+=			perl
 PERL5_REQD+=			5.8.7
 TOOLS_DEPENDS.perl=		# buildlink3 will handle the dependency

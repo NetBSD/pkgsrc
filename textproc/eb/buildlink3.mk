@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:11:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/12/12 21:52:37 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EB_BUILDLINK3_MK:=	${EB_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ _EB_REQD=		3.3.2nb1
 # configure argument.)
 #
 # XXX We need something generic.
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 PKG_SYSCONFDIR.eb=$$(						\
 	if ${PKG_ADMIN} pmatch 'eb>=${_EB_REQD}'		\
 	    $$( ${PKG_INFO} -e eb ) 2>/dev/null; then		\

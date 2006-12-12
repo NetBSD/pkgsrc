@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/07/08 23:10:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/12/12 21:52:36 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OCAML_BUILDLINK3_MK:=	${OCAML_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.09.1nb2
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 BUILDLINK_DEPMETHOD.ocaml?=	build
 
-.  include "../../mk/bsd.prefs.mk"
+.  include "../../mk/bsd.fast.prefs.mk"
 .  if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=		yes
 .  endif

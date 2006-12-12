@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2006/07/08 23:10:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2006/12/12 21:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB_BUILDLINK3_MK:=	${DB_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.db2?=	../../databases/db
 BUILDLINK_INCDIRS.db2?=		include/db2
 BUILDLINK_LDADD.db2=		-ldb2
 
-.  include "../../mk/bsd.prefs.mk"
+.  include "../../mk/bsd.fast.prefs.mk"
 .  if defined(USE_DB185) && !empty(USE_DB185:M[yY][eE][sS])
 BUILDLINK_LIBS.db2=		${BUILDLINK_LDADD.db2}
 BUILDLINK_TRANSFORM+=		l:db:db2

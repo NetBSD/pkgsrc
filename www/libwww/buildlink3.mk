@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/09/24 17:40:39 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/12/12 21:52:37 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWWW_BUILDLINK3_MK:=	${LIBWWW_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ BUILDLINK_ABI_DEPENDS.libwww+=	libwww>=5.4.0nb5
 BUILDLINK_PKGSRCDIR.libwww?=	../../www/libwww
 .endif	# LIBWWW_BUILDLINK3_MK
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !defined(PKG_BUILD_OPTIONS.libwww)
 PKG_BUILD_OPTIONS.libwww!= \

@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/12/12 21:52:37 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBRADIUS_LINUX_BUILDLINK3_MK:=	${LIBRADIUS_LINUX_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libradius
