@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/12/12 21:52:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/12/12 21:55:27 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -31,8 +31,6 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.apr=${PKG_BUILD_OPTIONS.apr:Q}
 MAKEVARS+=	PKG_BUILD_OPTIONS.apr
 .endif	# APR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
-
 .if !empty(PKG_BUILD_OPTIONS.apr:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
 .endif
@@ -44,3 +42,5 @@ BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
