@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.3 2006/11/09 14:36:18 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.4 2006/12/12 21:10:41 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -28,13 +28,24 @@ check_shell() {
 
 find * -type f -print 2>/dev/null \
 | {
+	opsys=`uname -s`-`uname -r`
 	while read fname; do
 
 		skip=no
 		eval "case \"\$fname\" in $SKIP_FILTER *.orig) skip=yes;; esac"
 		[ $skip = no ] || continue
 
-		read firstline < "$fname" || continue
+		case "$opsys" in
+		SunOS-5.9)
+			# See also (if you can):
+			# http://sunsolve.sun.com/search/document.do?assetkey=1-1-4250902-1
+			firstline=`sed 1q < "$fname"`
+			;;
+
+		*)	read firstline < "$fname" || continue
+			;;
+		esac
+
 		case "$firstline" in
 		"#!"*"/bin/sh")
 			check_shell "$fname"
