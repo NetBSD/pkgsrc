@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.29 2006/12/02 05:30:35 minskim Exp $
+# $NetBSD: tools.Darwin.mk,v 1.30 2006/12/12 23:44:25 minskim Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -6,6 +6,8 @@ TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.bash?=		/bin/bash
+TOOLS_PLATFORM.bison?=		/usr/bin/bison
+TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
 TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
