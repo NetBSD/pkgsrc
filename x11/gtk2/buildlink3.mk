@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2006/12/05 21:26:59 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2006/12/12 21:52:38 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -24,7 +24,7 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0\/(engines|filesystems|immodules|
 				{ print "@comment in gtk2: " $$0; next; }
 .endif	# GTK2_BUILDLINK3_MK
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !defined(PKG_BUILD_OPTIONS.gtk2+)
 PKG_BUILD_OPTIONS.gtk2+!= \

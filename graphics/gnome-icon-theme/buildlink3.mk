@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:10:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/12/12 21:52:36 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -21,7 +21,7 @@ BUILDLINK_PKGSRCDIR.gnome-icon-theme?=	../../graphics/gnome-icon-theme
 #
 USE_TOOLS+=	perl
 
-.  include "../../mk/bsd.prefs.mk"
+.  include "../../mk/bsd.fast.prefs.mk"
 
 dirs!=	${GREP} "^@dirrm" ${.CURDIR}/../../graphics/gnome-icon-theme/PLIST | \
 	${CUT} -d ' ' -f 2

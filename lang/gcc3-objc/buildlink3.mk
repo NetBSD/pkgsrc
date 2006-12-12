@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.16 2006/07/08 23:10:54 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/12/12 21:52:36 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GCC3_OBJC_BUILDLINK3_MK:=	${GCC3_OBJC_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	gcc3-objc

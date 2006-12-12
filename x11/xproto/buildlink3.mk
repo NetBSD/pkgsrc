@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/11/03 17:04:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/12/12 21:52:38 joerg Exp $
 #
 # This Makefile fragment is included by packages that use xproto.
 #
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${X11_TYPE} == "xorg"
 .include "../../mk/x11.buildlink3.mk"

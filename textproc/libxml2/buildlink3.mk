@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/10/01 08:53:05 schwarz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/12/12 21:52:37 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXML2_BUILDLINK3_MK:=	${LIBXML2_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.libxml2?=	../../textproc/libxml2
 BUILDLINK_FILES.libxml2+=	bin/xml2-config
 .endif	# LIBXML2_BUILDLINK3_MK
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .if !empty(LOWER_OPSYS:Mirix5*)
 # for glob
 . include "../../pkgtools/libnbcompat/buildlink3.mk"

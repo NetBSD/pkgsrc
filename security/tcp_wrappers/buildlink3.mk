@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:11:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/12/12 21:52:37 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TCP_WRAPPERS_BUILDLINK3_MK:=	${TCP_WRAPPERS_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.tcp_wrappers?=	../../security/tcp_wrappers
 .endif	# TCP_WRAPPERS_BUILDLINK3_MK
 
 # need libnsl and libsocket to link into an executable on Solaris.
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 BUILDLINK_LDADD.tcp_wrappers+=		-lnsl -lsocket
