@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.76 2006/11/10 08:10:23 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2006/12/13 06:23:06 martti Exp $
 
-DISTNAME=	postfix-2.4-20061019
+DISTNAME=	postfix-2.4-20061210
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
 DIST_SUBDIR=	postfix
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
 
@@ -15,7 +15,7 @@ CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl
-CHECK_HEADERS_SKIP=	src/global/mail_params.h
+CHECK_HEADERS_SKIP+=	src/global/mail_params.h
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,7 +24,7 @@ CHECK_HEADERS_SKIP=	src/global/mail_params.h
 # ${PKG_SYSCONFDIR}/main.cf.
 #
 POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE POSTFIX_QUEUE_DIR
 
 # CCARGS is a list of options to pass to the preprocessor/compiler.
 # AUXLIBS is a list of options to pass to the linker.
