@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/30 07:02:51 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/13 21:23:45 wennmach Exp $
 
 DISTNAME=		avr-libc-1.2.5
 PKGREVISION=		3
@@ -17,11 +17,13 @@ BUILD_DEPENDS+=		doxygen>=1.4.7:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
-USE_BZIP2=		yes
 USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		CC=${LOCALBASE}/bin/avr-gcc
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
+CONFIGURE_ENV+=		AS=${PREFIX}/bin/avr-as
+CONFIGURE_ENV+=		AR=${PREFIX}/bin/avr-ar
+CONFIGURE_ENV+=		RANLIB=${PREFIX}/bin/avr-ranlib
+CONFIGURE_ENV+=		CC=${PREFIX}/bin/avr-gcc
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--disable-versioned-doc
 # avr-libc's method to build the man pages seems to be broken
@@ -29,11 +31,14 @@ CONFIGURE_ARGS+=	--disable-man-doc
 CONFIGURE_SCRIPT=	${SRCDIR}/doconf
 SRCDIR=			${WRKDIR}/${DISTNAME}
 
+post-extract:
+	${INSTALL} -m 755 ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config.guess
+
 do-build:
-	(cd ${WRKSRC}; ./domake MAKE=${GMAKE})
+	cd ${WRKSRC} && ./domake MAKE=${GMAKE:Q}
 
 do-install:
-	(cd ${WRKSRC}; ./domake MAKE=${GMAKE} install)
+	cd ${WRKSRC} && ./domake MAKE=${GMAKE:Q} install
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc/examples
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc/examples/demo
@@ -42,21 +47,21 @@ do-install:
 		${WRKSRC}/LICENSE \
 		${WRKSRC}/AUTHORS \
 		${PREFIX}/share/doc/avr-libc
-	@for f in avr-recv.c io.c prg printf.h progmem.c \
+	for f in avr-recv.c io.c prg printf.h progmem.c \
 		send_byte.s signal.c;\
 	do \
 		${INSTALL_DATA} ${WRKSRC}/doc/examples/$$f \
 			${PREFIX}/share/doc/avr-libc/examples; \
 	done
-	(cd ${WRKSRC}/doc/examples/demo; ${GMAKE})
-	(cd ${WRKSRC}/doc/examples/demo; ${GMAKE} dox)
-	@for f in Makefile demo.c demo.bin demo.hex demo.pdf \
+	cd ${WRKSRC}/doc/examples/demo && ${GMAKE}
+	cd ${WRKSRC}/doc/examples/demo && ${GMAKE} dox
+	for f in Makefile demo.c demo.bin demo.hex demo.pdf \
 		demo.srec;\
 	do \
 		${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/$$f \
 			${PREFIX}/share/doc/avr-libc/examples/demo; \
 	done
-	@for f in Makefile twitest.c;\
+	for f in Makefile twitest.c;\
 	do \
 		${INSTALL_DATA} ${WRKSRC}/doc/examples/twitest/$$f \
 			${PREFIX}/share/doc/avr-libc/examples/twitest; \
