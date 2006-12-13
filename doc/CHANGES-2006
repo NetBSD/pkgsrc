@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2014 2006/12/13 10:56:51 taca Exp $
+$NetBSD: CHANGES-2006,v 1.2015 2006/12/13 17:34:07 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5641,3 +5641,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix to 2.3.5 [martti 2006-12-13]
 	Updated mail/postfix-current to 2.4-20061210 [martti 2006-12-13]
 	Updated devel/ruby-readline to 1.8.5.20061205nb1 [taca 2006-12-13]
+	Updated misc/openoffice2-bin to 2.1.0 [ghen 2006-12-13]
