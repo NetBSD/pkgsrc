@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.64 2006/07/26 17:00:03 wiz Exp $
+# $NetBSD: post-build,v 1.65 2006/12/13 16:05:25 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -175,6 +175,7 @@ get_mk_conf_vars(qw(
 	ORDERFILE
 	PAX
 	PKG_DBDIR
+	PKGSRC_COMPILER
 	STARTFILE
 	SUPPORTSFILE
 	X11BASE
@@ -404,6 +405,7 @@ sub writeReport {
 		print <<EOF;
 pkgsrc bulk build results
 $os $vars{osrev}/$vars{MACHINE_ARCH}
+Compiler: $vars{PKGSRC_COMPILER}
 
 Summary:
 
