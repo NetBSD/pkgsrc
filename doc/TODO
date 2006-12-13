@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5771 2006/12/13 17:34:43 ghen Exp $
+$NetBSD: TODO,v 1.5772 2006/12/13 17:56:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,6 @@ Suggested package updates
 	o dx-4.3.3
 	o e2fsprogs-1.38
 	o eagle-4.15
-	o easytag-devel-1.99.13
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ede-1.1
