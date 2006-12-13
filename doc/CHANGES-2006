@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2013 2006/12/13 06:54:43 martti Exp $
+$NetBSD: CHANGES-2006,v 1.2014 2006/12/13 10:56:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5640,3 +5640,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/maradns to 1.0.39 [obache 2006-12-13]
 	Updated mail/postfix to 2.3.5 [martti 2006-12-13]
 	Updated mail/postfix-current to 2.4-20061210 [martti 2006-12-13]
+	Updated devel/ruby-readline to 1.8.5.20061205nb1 [taca 2006-12-13]
