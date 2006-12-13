@@ -1,4 +1,4 @@
-# $NetBSD: utility.mk,v 1.3 2006/07/27 22:01:28 jlam Exp $
+# $NetBSD: utility.mk,v 1.4 2006/12/13 07:48:17 ghen Exp $
 
 ######################################################################
 ###
@@ -74,3 +74,7 @@ show-pkgsrc-dir:
 		${ECHO} ${PKGPATH};					\
 	fi
 .endif
+
+# Short aliases
+.PHONY: sid
+sid: show-installed-depends
