@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/13 21:21:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2006/12/13 08:48:39 ghen Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -20,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/kronolith
 EGDIR=		${PREFIX}/share/examples/kronolith
 HORDEDIR=	${PREFIX}/share/horde
 KRONOLITHDIR=	${HORDEDIR}/kronolith
-KRONOLITHVER=	2.1.2
+KRONOLITHVER=	2.1.4
 PAXDIRS=	js lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	KRONOLITHDIR=${KRONOLITHDIR:Q}
