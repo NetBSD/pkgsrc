@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/13 21:21:29 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2006/12/13 08:48:39 ghen Exp $
 share/doc/kronolith/INSTALL
 share/doc/kronolith/README
 share/doc/kronolith/RELEASE_NOTES
@@ -53,6 +53,7 @@ share/horde/kronolith/lib/base.php
 share/horde/kronolith/lib/prefs.php
 share/horde/kronolith/lib/version.php
 share/horde/kronolith/locale/ar_SY/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/sl_SI/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/bg_BG/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/cs_CZ/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/da_DK/LC_MESSAGES/kronolith.mo
@@ -113,6 +114,7 @@ share/horde/kronolith/po/pt_PT.po
 share/horde/kronolith/po/ro_RO.po
 share/horde/kronolith/po/ru_RU.po
 share/horde/kronolith/po/sk_SK.po
+share/horde/kronolith/po/sl_SI.po
 share/horde/kronolith/po/sv_SE.po
 share/horde/kronolith/po/zh_CN.po
 share/horde/kronolith/po/zh_TW.po
@@ -131,6 +133,7 @@ share/horde/kronolith/scripts/upgrades/1.1_to_2.0.pgsql.sql
 share/horde/kronolith/scripts/upgrades/2004-05-19_convert_categories_to_strings.php
 share/horde/kronolith/scripts/upgrades/2004-12-21_add_event_uid.pgsql.sql
 share/horde/kronolith/scripts/upgrades/2004-12-21_add_event_uid.sql
+share/horde/kronolith/scripts/upgrades/2006-08-20_fix_recur_int_fields.mysql.sql
 share/horde/kronolith/search.php
 share/horde/kronolith/templates/attendees/attendees.inc
 share/horde/kronolith/templates/calendars/calendars.inc
@@ -143,8 +146,6 @@ share/horde/kronolith/templates/data/import.inc
 share/horde/kronolith/templates/day/all_day.inc
 share/horde/kronolith/templates/day/head.inc
 share/horde/kronolith/templates/day/head_side_by_side.inc
-share/horde/kronolith/templates/day/row.inc
-share/horde/kronolith/templates/day/row_half.inc
 share/horde/kronolith/templates/day/rows.html
 share/horde/kronolith/templates/delete/delete.inc
 share/horde/kronolith/templates/delete/one.inc
@@ -159,9 +160,9 @@ share/horde/kronolith/templates/fbview/meetingblock.tpl
 share/horde/kronolith/templates/fbview/row.tpl
 share/horde/kronolith/templates/fbview/section.tpl
 share/horde/kronolith/templates/fbview/unknownblock.tpl
-share/horde/kronolith/templates/javascript/goto.inc
 share/horde/kronolith/templates/javascript/open_attendees_win.js
 share/horde/kronolith/templates/javascript/open_calendar_search.js
+share/horde/kronolith/templates/javascript/goto.js
 share/horde/kronolith/templates/menu.inc
 share/horde/kronolith/templates/month/head.inc
 share/horde/kronolith/templates/month/head_side_by_side.inc
@@ -246,6 +247,8 @@ share/horde/kronolith/year.php
 @dirrm share/horde/kronolith/locale/tr_TR
 @dirrm share/horde/kronolith/locale/sv_SE/LC_MESSAGES
 @dirrm share/horde/kronolith/locale/sv_SE
+@dirrm share/horde/kronolith/locale/sl_SI/LC_MESSAGES
+@dirrm share/horde/kronolith/locale/sl_SI
 @dirrm share/horde/kronolith/locale/sk_SK/LC_MESSAGES
 @dirrm share/horde/kronolith/locale/sk_SK
 @dirrm share/horde/kronolith/locale/ru_RU/LC_MESSAGES
