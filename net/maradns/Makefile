@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:20 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/13 04:35:16 obache Exp $
 
-DISTNAME=	maradns-1.0.28
+DISTNAME=	maradns-1.0.39
 CATEGORIES=	net
-MASTER_SITES=	http://www.maradns.org/download/
+MASTER_SITES=	http://www.maradns.org/download/1.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
