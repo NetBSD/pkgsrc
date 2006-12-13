@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.71 2006/12/11 14:09:44 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.72 2006/12/13 08:49:05 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -187,3 +187,7 @@ Pullup ticket 1953 - requested by salo
 security fix for mutt
 Pullup ticket 1954 - requested by salo
 security fix for mutt-devel
+Pullup ticket 1956 - requested by wiz
+security update for streamripper
+Pullup ticket 1957 - requested by adrianp
+security update for kronolith
