@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2006/12/13 10:55:51 taca Exp $
+
+--- readline.c.orig	2006-08-07 18:01:27.000000000 +0900
++++ readline.c
+@@ -34,7 +34,11 @@ static ID completion_proc, completion_ca
+ 
+ #ifndef HAVE_RL_FILENAME_COMPLETION_FUNCTION
+ # define rl_filename_completion_function filename_completion_function
++#endif
++#ifndef HAVE_RLUSERNAME_COMPLETION_FUNCTION
+ # define rl_username_completion_function username_completion_function
++#endif
++#ifndef HAVE_RL_COMPLETION_MATCHES
+ # define rl_completion_matches completion_matches
+ #endif
+ 
