@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/13 13:25:55 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/13 04:35:16 obache Exp $
 bin/askmara
 bin/getzone
 man/man1/askmara.1
@@ -123,6 +123,7 @@ share/doc/maradns/source/convert.ej
 share/doc/maradns/source/credits.ej
 share/doc/maradns/source/credits.embed
 share/doc/maradns/source/csv1.ej
+share/doc/maradns/source/dangling.ej
 share/doc/maradns/source/data_structures.ej
 share/doc/maradns/source/ej.doc.format
 share/doc/maradns/source/ej.template
@@ -150,6 +151,7 @@ share/doc/maradns/tutorial/Makefile
 share/doc/maradns/tutorial/authoritative.html
 share/doc/maradns/tutorial/compile.html
 share/doc/maradns/tutorial/convert.html
+share/doc/maradns/tutorial/dangling.html
 share/doc/maradns/tutorial/glossary.html
 share/doc/maradns/tutorial/man.csv1.html
 share/doc/maradns/tutorial/man.maradns.html
