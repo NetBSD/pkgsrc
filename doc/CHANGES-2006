@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2016 2006/12/13 17:56:32 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2017 2006/12/13 23:31:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5643,3 +5643,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/ruby-readline to 1.8.5.20061205nb1 [taca 2006-12-13]
 	Updated misc/openoffice2-bin to 2.1.0 [ghen 2006-12-13]
 	Updated audio/easytag-devel to 1.99.13 [wiz 2006-12-13]
+	Updated mail/getmail to 4.6.6 [schmonz 2006-12-13]
