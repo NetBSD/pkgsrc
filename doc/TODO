@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5770 2006/12/12 23:05:52 wiz Exp $
+$NetBSD: TODO,v 1.5771 2006/12/13 17:34:43 ghen Exp $
 
 Suggested new packages
 ======================
@@ -698,7 +698,7 @@ Suggested package updates
 	o opencobol-0.32
 	o openh323-1.17.2
 	o openmortal-0.7.1
-	o openoffice-2.0.4
+	o openoffice-2.1.0
 	o openpam-20050616
 	o openssl-0.9.8d
 	o oregano-0.60.0
