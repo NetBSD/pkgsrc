@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/15 20:12:07 joerg Exp $
+include/X11/extensions/Xcomposite.h
+lib/libXcomposite.la
+lib/pkgconfig/xcomposite.pc
+@dirrm include/X11/extensions
+@dirrm include/X11
