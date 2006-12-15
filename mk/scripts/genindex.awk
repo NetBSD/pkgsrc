@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.4 2003/09/02 07:00:08 jlam Exp $
+# $NetBSD: genindex.awk,v 1.5 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,7 @@
 #
 # alldepends[]  : index=pkgdir (math/scilab)
 #                 Flattened dependency list by name.
-#         
+#
 #
 
 
@@ -240,7 +240,7 @@ END {
 	
 	printf("Generating INDEX file\n");
 	
-# Output format:       
+# Output format:
 #  package-name|package-path|installation-prefix|comment| \
 #  description-file|maintainer|categories|build deps|run deps|for arch| \
 #  not for opsys|homepage
@@ -298,7 +298,7 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 				  pkg, topdep, alldepends[pkg]);
 		return(alldepends[pkg]);
 	}
-   
+
 # recursively gather depends that each of the depends has
 	pkgreg = reg2str(pkg);
 	split(topdep, deps);
@@ -368,10 +368,10 @@ function fulldir2pkgdir(d, i){
 # take the depends lists and uniq them.
 #
 function uniq(list, deps, i, ulist){
-   
+
 # split out the depends
 	split(list, deps);
-   
+
 	i = 1;
 	ulist = " ";
 	while (i in deps){
