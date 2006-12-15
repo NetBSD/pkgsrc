@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/06/09 22:01:00 ghen Exp $
+# $NetBSD: Makefile,v 1.31 2006/12/15 20:32:55 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 PKGREVISION=	1
@@ -21,5 +21,5 @@ CONFIGURE_ARGS+=	--disable-server
 .include "../../audio/esound/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

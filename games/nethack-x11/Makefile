@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/02/05 23:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/12/15 20:32:55 joerg Exp $
 #
 
 .include "../../games/nethack-lib/Makefile.common"
@@ -28,5 +28,5 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/win/X11/nethack.rc \
 	    ${PREFIX}/share/${NETHACK_DIR}/nethack.x11.rc
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
