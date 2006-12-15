@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.11 2006/11/12 20:57:55 rillig Exp $
+# $NetBSD: check-files.mk,v 1.12 2006/12/15 13:15:06 martti Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -263,7 +263,7 @@ ${_CHECK_FILES_MISSING_SKIP}:						\
 		   ${_CHECK_FILES_MISSING_REAL} |			\
 	${GREP} '^-[^-]' | ${SED} "s|^-||"				\
 		> ${.TARGET}
-	
+
 ${_CHECK_FILES_EXTRA}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${DIFF} -u  ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\

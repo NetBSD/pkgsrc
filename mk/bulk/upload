@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.36 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: upload,v 1.37 2006/12/15 13:15:06 martti Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -277,7 +277,7 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 	[ "${BSDSUM}" = "echo" ] && rm BSDSUM
 	[ "${CKSUM}" = "echo" ] && rm CKSUM
 	[ "${SYSVSUM}" = "echo" ] && rm SYSVSUM
-	
+
 	if [ "${SIGN_AS-}" != "" ]; then
 		for i in ${SUMFILES}; do
 			if [ -s $i ]; then
