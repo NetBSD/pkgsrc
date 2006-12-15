@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2006/04/19 12:19:47 reed Exp $
+# $NetBSD: builtin.mk,v 1.2 2006/12/15 20:43:01 joerg Exp $
 
 BUILTIN_PKG:=	xproto
 
@@ -11,7 +11,7 @@ BUILTIN_FIND_FILES.H_XFUNCPROTO=	${X11BASE}/include/X11/Xfuncproto.h
 ### Determine if there is a built-in implementation of the package and
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
-.if !defined(IS_BUILTIN.xproto)
+.if !defined(IS_BUILTIN.xproto) || ${X11BASE} == ${LOCALBASE}
 IS_BUILTIN.xproto=	no
 .  if empty(H_XFUNCPROTO:M__nonexistent__)
 IS_BUILTIN.xproto=	yes
