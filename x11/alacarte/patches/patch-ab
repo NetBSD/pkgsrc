@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/15 19:57:42 drochner Exp $
+
+--- Alacarte/DialogHandler.py.orig	2006-11-23 23:16:51.000000000 +0100
++++ Alacarte/DialogHandler.py
+@@ -98,7 +98,7 @@ class DialogHandler:
+ 		if button.icon_path:
+ 			dialog.set_current_folder(button.icon_path.rsplit('/', 1)[0])
+ 		else:
+-			dialog.set_current_folder('/usr/share/icons/')
++			dialog.set_current_folder('@PREFIX@' + '/share/icons/')
+ 		preview = gtk.VBox()
+ 		preview.set_spacing(8)
+ 		preview.set_size_request(92, 92)
