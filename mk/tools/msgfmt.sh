@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.25 2006/06/23 21:05:43 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.26 2006/12/15 13:15:07 martti Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -195,7 +195,7 @@ BEGIN {
 	obsolete = ""
 
 	while (result == 1) {
-	
+
 		# Buffer any "msgid" statements into the singular array.
 		# Strip all trailing empty strings that have no effect on
 		# the output.
