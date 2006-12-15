@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/10/13 19:02:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/12/15 20:05:02 drochner Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -54,6 +54,7 @@ share/gtksourceview-1.0/language-specs/ini.lang
 share/gtksourceview-1.0/language-specs/java.lang
 share/gtksourceview-1.0/language-specs/javascript.lang
 share/gtksourceview-1.0/language-specs/language.dtd
+share/gtksourceview-1.0/language-specs/language.rng
 share/gtksourceview-1.0/language-specs/latex.lang
 share/gtksourceview-1.0/language-specs/lua.lang
 share/gtksourceview-1.0/language-specs/makefile.lang
