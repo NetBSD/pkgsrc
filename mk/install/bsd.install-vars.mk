@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install-vars.mk,v 1.4 2006/11/04 07:42:51 rillig Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.5 2006/12/15 20:54:47 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -11,6 +11,13 @@
 #	be used to determine which directories need to be created before
 #	the "real" installation should start.
 #
+
+# If a package sets PKG_DESTDIR_SUPPORT to a non-empty value,
+# it is supposed to deal with missing directories already.
+#
+.if !empty(PKG_DESTDIR_SUPPORT)
+NO_MTREE=	yes
+.endif
 
 # If a package sets INSTALLATION_DIRS, then it's known to pre-create
 # all of the directories that it needs at install-time, so we don't need
