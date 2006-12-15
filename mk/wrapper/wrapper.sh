@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.11 2006/12/14 22:25:19 dmcmahill Exp $
+# $NetBSD: wrapper.sh,v 1.12 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,7 +57,7 @@ wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
 
-cat="@CAT@"  
+cat="@CAT@"
 echo="@ECHO@"
 expr="@EXPR@"
 mv="@MV@"
