@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/25 15:34:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/15 14:34:21 wiz Exp $
 #
 
 DISTNAME=	Text-LevenshteinXS-0.03
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-LevenshteinXS
 COMMENT=	XS implementation of the Levenshtein edit distance
 

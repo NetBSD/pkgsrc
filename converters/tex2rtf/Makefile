@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/15 14:34:19 wiz Exp $
 
 DISTNAME=		tex2rtf-2.01-source
 PKGNAME=		tex2rtf-2.01
@@ -7,7 +7,7 @@ CATEGORIES=		converters textproc
 MASTER_SITES=		ftp://biolpc22.york.ac.uk/pub/tex2rtf/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.wxwidgets.org/tex2rtf/index.htm
 COMMENT=		LaTex-to-RTF translator
 
