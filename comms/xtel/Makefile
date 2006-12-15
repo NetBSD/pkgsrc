@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/28 17:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/15 20:32:53 joerg Exp $
 #
 
 DISTNAME=	xtel-3.3.0
@@ -17,6 +17,6 @@ FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/xtel
 REQD_DIRS=	${PREFIX}/lib/X11/fonts/xtel
 
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

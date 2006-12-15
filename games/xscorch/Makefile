@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/09 08:21:57 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/15 20:32:56 joerg Exp $
 
 DISTNAME=	xscorch-0.2.0
 PKGREVISION=	2
@@ -16,6 +16,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-gnome
 
 .include "../../audio/libmikmod/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
