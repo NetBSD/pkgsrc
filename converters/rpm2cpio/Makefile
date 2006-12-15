@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:06 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/12/15 18:03:42 joerg Exp $
 
 DISTNAME=	rpm2cpio
 PKGNAME=	rpm2cpio-1.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	# none
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iagora.com/~espel/hacks.html
 COMMENT=	Convert .rpm files for extraction with cpio, needs just perl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -24,6 +26,6 @@ do-build:
 
 # conflicts with rpm package, which also contains a rpm2cpio
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/rpm2cpio ${PREFIX}/bin/rpm2cpio.pl
+	${INSTALL_SCRIPT} ${WRKDIR}/rpm2cpio ${DESTDIR}${PREFIX}/bin/rpm2cpio.pl
 
 .include "../../mk/bsd.pkg.mk"
