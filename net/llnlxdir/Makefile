@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/14 08:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/15 20:32:59 joerg Exp $
 #
 
 DISTNAME=		llnlxdir2_1_2
@@ -20,7 +20,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdir ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/XDir.ad ${PREFIX}/lib/X11/app-defaults/XDir
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

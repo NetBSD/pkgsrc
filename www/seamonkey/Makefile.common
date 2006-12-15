@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/10/14 08:24:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/12/15 20:33:03 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=gtk2 --disable-gnomevfs
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
 .endif
 
@@ -190,7 +190,7 @@ CONFIGURE_ARGS+=	--with-pthreads
 .if ${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)
 CONFIGURE_ARGS+=	--enable-xft
 # pkgconfig defaults to a "build" dependency, which is what we want.
-.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .endif
 
 # Fix for firefox* packages.

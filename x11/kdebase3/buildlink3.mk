@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2006/07/08 23:11:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2006/12/15 20:33:04 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -37,8 +37,8 @@ BUILDLINK_API_DEPENDS.Xrandr+=      Xrandr>=1.0
 .if !empty(PKG_BUILD_OPTIONS.kdebase:Msasl)
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
-.include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

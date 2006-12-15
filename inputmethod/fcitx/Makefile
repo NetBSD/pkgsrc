@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/28 21:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/15 20:32:58 joerg Exp $
 #
 
 DISTNAME=		fcitx-3.1.1
@@ -17,6 +17,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-xft
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/09/09 02:41:59 obache Exp $
+# $NetBSD: Makefile,v 1.53 2006/12/15 20:32:55 joerg Exp $
 
 DISTNAME=		vile-9.5
 PKGNAME=		xvile-9.5
@@ -45,7 +45,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
 	done
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 

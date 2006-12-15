@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/21 13:23:31 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/15 20:32:57 joerg Exp $
 
 DISTNAME=		camlimages-2.2.0
 PKGREVISION=		4
@@ -37,10 +37,10 @@ PLIST_SUBST+=	COND_DLL="@comment "
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

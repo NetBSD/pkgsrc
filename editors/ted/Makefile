@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/17 13:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2006/12/15 20:32:54 joerg Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
@@ -84,7 +84,7 @@ do-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

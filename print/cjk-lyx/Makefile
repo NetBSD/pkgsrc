@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/09/21 16:16:24 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/12/15 20:33:00 joerg Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -31,7 +31,7 @@ USE_LIBTOOL=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xforms/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 

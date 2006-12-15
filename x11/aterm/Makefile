@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/12/11 12:23:24 sketch Exp $
+# $NetBSD: Makefile,v 1.32 2006/12/15 20:33:03 joerg Exp $
 #
 
 DISTNAME=	aterm-1.0.0
@@ -45,6 +45,6 @@ SPECIAL_PERMS=		${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/12/15 20:32:56 joerg Exp $
 
 DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		4
@@ -20,6 +20,6 @@ MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q} GAMEGRP=${GAMEGRP:Q} \
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/xgalaga/README
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

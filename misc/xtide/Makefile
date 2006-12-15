@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/11/05 21:51:21 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/15 20:32:59 joerg Exp $
 
 DISTNAME=	xtide-2.8.3
 CATEGORIES=	misc x11
@@ -35,5 +35,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${HARMONICS_FILE} ${PREFIX}/share/xtide
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

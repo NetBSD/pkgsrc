@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:10:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/12/15 20:32:54 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DEVIL_BUILDLINK3_MK:=	${DEVIL_BUILDLINK3_MK}+
@@ -23,6 +23,6 @@ BUILDLINK_PKGSRCDIR.devIL?=	../../devel/devIL
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

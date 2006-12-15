@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/12/15 20:23:52 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2006/12/15 20:32:57 joerg Exp $
 
 DISTNAME=		gthumb-2.8.1
 CATEGORIES=		graphics
@@ -26,6 +26,7 @@ BUILDLINK_API_DEPENDS.libglade2+=   libglade2>=2.4.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -38,6 +39,5 @@ BUILDLINK_API_DEPENDS.libglade2+=   libglade2>=2.4.0
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

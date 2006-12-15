@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/11/12 14:25:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.29 2006/12/15 20:32:53 joerg Exp $
 
 DISTNAME=	xcircuit-3.4.26
 CATEGORIES=	cad graphics
@@ -41,7 +41,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${PREFIX}/share/examples/xcircuit/
 	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${PREFIX}/share/examples/xcircuit/
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
