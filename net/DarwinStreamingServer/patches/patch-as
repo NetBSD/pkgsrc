@@ -1,0 +1,12 @@
+$NetBSD: patch-as,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+
+--- Server.tproj/RTPSessionInterface.h.orig	2006-12-14 20:37:45.000000000 +0100
++++ Server.tproj/RTPSessionInterface.h
+@@ -40,6 +40,7 @@
+ 
+ #include "RTCPSRPacket.h"
+ #include "RTSPSessionInterface.h"
++#include "RTSPRequestInterface.h"
+ #include "TimeoutTask.h"
+ #include "Task.h"
+ #include "RTPBandwidthTracker.h"

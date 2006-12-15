@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+--- PlaylistBroadcaster.tproj/BroadcasterSession.cpp.orig	2004-09-30 16:40:54.000000000 +0200
++++ PlaylistBroadcaster.tproj/BroadcasterSession.cpp	2005-12-17 22:20:45.000000000 +0100
+@@ -350,7 +350,7 @@
+ #if BROADCAST_SESSION_DEBUG
+         qtss_printf("Session timing out.\n");
+ #endif
+-#if __FreeBSD__ || __MacOSX__
++#if __FreeBSD__ || __MacOSX__ || __NetBSD__
+         if (fTransportType != kTCPTransportType)
+         {
+             fTimeoutTask.RefreshTimeout();
+@@ -554,7 +554,7 @@
+                 }
+                 break;
+             }
+-#if __FreeBSD__ || __MacOSX__
++#if __FreeBSD__ || __MacOSX__ || __NetBSD__
+             case kBroadcasting:
+             {   
+ #if BROADCAST_SESSION_DEBUG

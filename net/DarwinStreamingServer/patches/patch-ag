@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+--- PlaylistBroadcaster.tproj/BCasterTracker.cpp.orig	2003-08-16 01:53:06.000000000 +0200
++++ PlaylistBroadcaster.tproj/BCasterTracker.cpp	2005-12-17 22:20:45.000000000 +0100
+@@ -49,8 +49,10 @@
+ #include <fcntl.h>
+ #include <sys/file.h>
+ #include <sys/stat.h>
++#ifndef __NetBSD__
+ #include <sys/types.h>
+-#if !(defined(__solaris__) || defined(__osf__) || defined(__hpux__))
++#endif
++#if !(defined(__solaris__) || defined(__osf__) || defined(__hpux__) || defined(__NetBSD__))
+ 	#include <sys/sysctl.h>
+ #endif
+ #include <sys/time.h>
