@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/11/10 16:18:48 tv Exp $
+# $NetBSD: Makefile,v 1.43 2006/12/15 20:32:57 joerg Exp $
 #
 
 DISTNAME=	xart19980415
@@ -22,5 +22,5 @@ post-extract:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

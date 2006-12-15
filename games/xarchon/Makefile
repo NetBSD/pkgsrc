@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/28 16:23:55 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/12/15 20:32:56 joerg Exp $
 #
 
 DISTNAME=	xarchon-0.60
@@ -25,7 +25,7 @@ CONFIGURE_ENV+=	CC=${CC:Q}
 #HF#CONFIGURE_ENV+=	GTK_CONFIG=${X11PREFIX}/bin/gtk-config
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 #HF#.include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

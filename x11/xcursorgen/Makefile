@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/15 20:33:05 joerg Exp $
 
 DISTNAME=	xcursorgen-4.3.0
 PKGREVISION=	4
@@ -20,6 +20,6 @@ LIBPNG=		-L${BUILDLINK_PREFIX.png}/lib				\
 MAKE_FLAGS+=	LIBPNGLIB=${LIBPNG:Q}
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

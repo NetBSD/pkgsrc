@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/03/02 10:41:41 martti Exp $
+# $NetBSD: Makefile,v 1.44 2006/12/15 20:32:54 joerg Exp $
 
 PKGNAME=		vim-xaw-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -39,7 +39,7 @@ post-install:
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

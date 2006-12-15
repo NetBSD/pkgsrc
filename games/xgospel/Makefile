@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 21:43:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/15 20:32:56 joerg Exp $
 #
 
 DISTNAME=	xgospel-1.12d
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-xaw3d
 # Don't find libintl.a...it's only needed on SCO UNIX.
 CONFIGURE_ENV+=		ac_cv_lib_intl=no
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
