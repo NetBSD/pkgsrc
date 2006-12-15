@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/01 14:32:48 ben Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/15 14:34:20 wiz Exp $
 #
 
 DISTNAME=	ABC2PS-${ABC2PSVER}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ihp-ffo.de/~msm/abc_src/
 EXTRACT_SUFX=	.tar.Z
 WRKSRC=		${WRKDIR}
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ihp-ffo.de/~msm/
 COMMENT=	Music typesetting program for abc
 

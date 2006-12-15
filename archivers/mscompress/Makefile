@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/23 14:39:49 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/15 14:34:18 wiz Exp $
 #
 
 DISTNAME=		mscompress-0.3
@@ -6,7 +6,7 @@ CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/compress/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.penguin.cz/pub/users/mhi/mscompress/
 COMMENT=		Microsoft "compress.exe/expand.exe" compatible (de)compressor
 
