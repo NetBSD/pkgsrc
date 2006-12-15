@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.5 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: genindex.awk,v 1.6 2006/12/15 13:15:06 martti Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -76,7 +76,7 @@ BEGIN {
 	else {topdepends[pkg] = "";}
 	if (pkg in topbuilddepends) {}
 	else {topbuilddepends[pkg] = "";}
-	
+
 	for (i = 3; i <= NF; i++) {
 		split($i, a,":");
 		pkgpat = a[1];
@@ -96,14 +96,14 @@ BEGIN {
 			printf("\tpkgpat = %s\n", pkgpat);
 			printf("\tpkgdir = %s\n", pkgdir);
 		}
-		
-		
+
+
 #
 # store the package directory in a associative array with the wildcard
 # pattern as the index since we will need to be able to look this up later
 #
 		pat2dir[pkgpat] = pkgdir;
-		
+
 		if (deptype == "depends") {
 			topdepends[pkg] = topdepends[pkg] " " pkgpat " " ;
 			if (debug) {
@@ -119,7 +119,7 @@ BEGIN {
 			topbuilddepends[pkg] = topbuilddepends[pkg] " " pkgpat " " ;
 		}
 	}
-	
+
 	next;
 }
 
@@ -208,7 +208,7 @@ END {
         indexf = SORT " > INDEX";
 	if ( dependsfile == "" ) dependsfile = "/dev/null";
 	if ( builddependsfile == "" ) builddependsfile = "/dev/null";
-	
+
 	printf("Flattening dependencies\n");
 	printf("") > dependsfile;
 	for (toppkg in topdepends){
@@ -222,13 +222,13 @@ END {
 		flatdepends[toppkg] = alldepends[toppkg];
 	}
 	close(dependsfile);
-	
-	
+
+
 # clear out the flattened depends list and repeat for the build depends
 	for( pkg in alldepends) {
 		delete alldepends[pkg];
 	}
-	
+
 	printf("Flattening build dependencies\n");
 	printf("") > builddependsfile;
 	for (toppkg in topbuilddepends){
@@ -237,14 +237,14 @@ END {
 		       toppkg, alldepends[toppkg]) >> builddependsfile;
 	}
 	close(builddependsfile);
-	
+
 	printf("Generating INDEX file\n");
-	
+
 # Output format:
 #  package-name|package-path|installation-prefix|comment| \
 #  description-file|maintainer|categories|build deps|run deps|for arch| \
 #  not for opsys|homepage
-	
+
 	pkgcnt = 0;
 	for (toppkg in topdepends){
 		pkgcnt++;
@@ -327,16 +327,16 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 		  if (debug) printf("\t%s is already listed in %s\n",
 				    deps[i], alldepends[pkg]);
 		}
-		
+
 		i = i + 1;
 	} # while i
-	
+
 	if (debug) printf("\tcalling uniq() on alldepends[%s] = %s\n",
 			  pkg, alldepends[pkg]);
 	alldepends[pkg] = uniq(alldepends[pkg]);
 	if (debug) printf("\tuniq() output alldepends[%s] = %s\n",
 			  pkg, alldepends[pkg]);
-	return(alldepends[pkg]);	
+	return(alldepends[pkg]);
 }
 
 #

@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.FreeBSD,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: usergroupfuncs.FreeBSD,v 1.2 2006/12/15 13:15:06 martti Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
@@ -8,7 +8,7 @@
 #	Returns 1 if neither $group nor $groupid exist
 #	Returns 2 if $group or $groupid exist but don't match
 #	Returns 3 for all errors
-#	
+#
 group_exists()
 {
 	_group="$1"; _groupid="$2"
@@ -48,7 +48,7 @@ group_exists()
 #	Returns 1 if neither $user nor $userid exist
 #	Returns 2 if $user or $userid exist but don't match
 #	Returns 3 for all errors
-#	
+#
 user_exists()
 {
 	_user="$1"; _userid="$2"

@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.24 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: genreadme.awk,v 1.25 2006/12/15 13:15:06 martti Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,7 +81,7 @@ BEGIN {
 	else {topdepends[pkg] = "";}
 	if (pkg in topbuilddepends) {}
 	else {topbuilddepends[pkg] = "";}
-	
+
 	for (i = 3; i <= NF; i++) {
 		split($i, a,":");
 		pkgpat = a[1];
@@ -101,14 +101,14 @@ BEGIN {
 			printf("\tpkgpat = %s\n", pkgpat);
 			printf("\tpkgdir = %s\n", pkgdir);
 		}
-		
-		
+
+
 #
 # store the package directory in a associative array with the wildcard
 # pattern as the index since we will need to be able to look this up later
 #
 		pat2dir[pkgpat] = pkgdir;
-		
+
 		if (deptype == "depends") {
 			topdepends[pkg] = topdepends[pkg] " " pkgpat " " ;
 			if (debug) {
@@ -124,7 +124,7 @@ BEGIN {
 			topbuilddepends[pkg] = topbuilddepends[pkg] " " pkgpat " " ;
 		}
 	}
-	
+
 	next;
 }
 
@@ -212,7 +212,7 @@ END {
 	  printf("**** ------- ****\n") > "/dev/stderr";
 	  exit(1);
 	}
-	
+
 	if (rc == 2) {
 	  printf("\n**** WARNING ****\n") > "/dev/stderr";
 	  printf("* No binary packages directory found\n") > "/dev/stderr";
@@ -240,7 +240,7 @@ END {
 		flatdepends[toppkg] = alldepends[toppkg];
 	}
 	close(dependsfile);
-	
+
 
 # clear out the flattened depends list and repeat for the build depends
 	for( key in alldepends ) {
@@ -254,9 +254,9 @@ END {
 		       toppkg, alldepends[toppkg]) >> builddependsfile;
 	}
 	close(builddependsfile);
-	
+
 	vfile = DISTDIR "/pkg-vulnerabilities";
-	
+
 # extract date for vulnerabilities file
 	cmd = "ls -l " vfile;
 	if ((cmd | getline) > 0) {
@@ -306,7 +306,7 @@ END {
 		}
 		topdepends[SINGLEPKG] = "yes";
 	}
-	
+
 	printf("Generating README.html files\n");
 	pkgcnt = 0;
 	if (do_pkg_readme) {
@@ -316,7 +316,7 @@ END {
 			pkgcnt++;
 			pkgdir = PKGSRCDIR "/" toppkg;
 			readmenew=pkgdir  "/" readme_name;
-			
+
 			if (debug) printf("Creating %s for %s\n",
 					  readme, readmenew);
 			printf(".");
@@ -365,7 +365,7 @@ END {
 			close(htmldeps_file);
 			if (debug) printf("wrote = %d entries to \"%s\"\n",
 					  i-1, htmldeps_file);
-			
+
 			vul = "";
 			if (have_vfile) {
 				i = 1;
@@ -396,7 +396,7 @@ END {
 					vul="<I>(no vulnerabilities known)</I>";
 				}
 			}
-			
+
 
 			if (debug) {
 			  printf("Checking for binary package with lookup_cache( %s)\n",
@@ -404,7 +404,7 @@ END {
 			}
 # lookup_cache( wildcard ) will produce HTML for the packages which are found
 			lookup_cache( toppkg );
-			
+
 
 
 			if ( flatdepends[toppkg] ~ /^[ \t]*$/ ) {
@@ -412,7 +412,7 @@ END {
 			} else {
 				rundeps = flatdepends[toppkg];
 			}
-			
+
 			while((getline < templatefile) > 0){
 				gsub(/%%PORT%%/, toppkg);
 				gsub(/%%PKG%%/, pkgdir2name[toppkg]);
@@ -686,16 +686,16 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 		  if (debug) printf("\t%s is already listed in %s\n",
 				    deps[i], alldepends[pkg]);
 		}
-		
+
 		i = i + 1;
 	} # while i
-	
+
 	if (debug) printf("\tcalling uniq() on alldepends[%s] = %s\n",
 			  pkg, alldepends[pkg]);
 	alldepends[pkg] = uniq(alldepends[pkg]);
 	if (debug) printf("\tuniq() output alldepends[%s] = %s\n",
 			  pkg, alldepends[pkg]);
-	return(alldepends[pkg]);	
+	return(alldepends[pkg]);
 }
 
 #
