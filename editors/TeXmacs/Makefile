@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2006/11/09 21:01:45 drochner Exp $
+# $NetBSD: Makefile,v 1.64 2006/12/15 19:24:30 drochner Exp $
 
-DISTNAME=		TeXmacs-1.0.6.6-src
+DISTNAME=		TeXmacs-1.0.6.7-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
@@ -39,12 +39,6 @@ REPLACE_FILES.bash+=	plugins/mupad/bin/tm_mupad_help
 REPLACE_FILES.bash+=	plugins/octave/bin/tm_octave
 REPLACE_FILES.bash+=	plugins/reduce/bin/tm_reduce
 REPLACE_FILES.bash+=	plugins/xypic/bin/tm_xypic
-
-# temporary to support maxima-5.10
-# can probably go away on next TeXmacs update
-post-extract:
-	${CP} ${FILESDIR}/texmacs-maxima-5.10.0.lisp \
-		${WRKSRC}/plugins/maxima/lisp
 
 pre-install:
 	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
