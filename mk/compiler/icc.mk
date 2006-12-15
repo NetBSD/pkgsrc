@@ -1,4 +1,4 @@
-# $NetBSD: icc.mk,v 1.3 2006/10/22 00:14:17 rillig Exp $
+# $NetBSD: icc.mk,v 1.4 2006/12/15 12:46:24 martti Exp $
 #
 # This is the compiler definition for the Intel compilers.
 #
@@ -78,7 +78,7 @@ CONFIGURE_ENV+=		ac_cv___attribute__=yes
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_ICC_VARS}
 .  if !target(${_ICC_${_var_}})
-override-tools: ${_ICC_${_var_}}        
+override-tools: ${_ICC_${_var_}}
 ${_ICC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\

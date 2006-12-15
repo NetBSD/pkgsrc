@@ -1,4 +1,4 @@
-# $Id: parallel.txt,v 1.6 2005/12/06 08:25:18 rillig Exp $
+# $Id: parallel.txt,v 1.7 2006/12/15 12:46:24 martti Exp $
 #
 
 These are my (<dmcmahill>) thoughts on how one would want a parallel
@@ -72,7 +72,7 @@ Single Machine Build Comments
 ====================================================================
 
 There are several features of this approach that are worth mentioning
-explicitly. 
+explicitly.
 
 1)  Packages are built in the correct order.  We don't want to rebuild
     the gnome meta-pkg and then rebuild gnome-libs for example.
@@ -100,7 +100,7 @@ explicitly.
     not needed before each build, we reduce the amount of installing
     and deinstalling needed during the build.  For example, it is
     quite common to build several packages in a row which all need GNU
-    make or perl. 
+    make or perl.
 
 4)  Using the 'supportsfile' to mark all packages which depend upon a
     package which has just failed to build can greatly reduce the time
@@ -123,7 +123,7 @@ master   == master machine.  This machine is in charge of directing
 slave#x  == slave machine #x.  All slave machines are of the same
             MACHINE_ARCH and have the same operating system and access
             the same pkgsrc tree via NFS and access the same binary
-            packages directory. 
+            packages directory.
 
             If the master machine is also to be used as a build
             machine, then it is also considered a slave.

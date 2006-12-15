@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1899 2006/11/26 08:37:03 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1900 2006/12/15 12:46:23 martti Exp $
 #
 # This file is in the public domain.
 #
@@ -524,7 +524,7 @@ PKG_FAIL_REASON+= "${PKGNAME} is restricted:" \
 PKG_FAIL_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
-.  if defined(USE_X11) && (${X11_TYPE} == "native") && !exists(${X11BASE}) 
+.  if defined(USE_X11) && (${X11_TYPE} == "native") && !exists(${X11BASE})
 PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if defined(BROKEN)

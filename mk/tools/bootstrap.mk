@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.7 2005/10/09 20:19:26 heinz Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -45,7 +45,7 @@
 # XXX This file should go away and the bootstrap script should be
 # XXX taught to write out the correct TOOLS_PLATFORM.* definitions
 # XXX on its own, based on the configuration used.
-# 
+#
 
 .if ${OPSYS} == "AIX"
 TOOLS_PLATFORM.install?=	${LOCALBASE}/bin/install-sh

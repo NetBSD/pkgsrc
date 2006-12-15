@@ -1,4 +1,4 @@
-# $NetBSD: ido.mk,v 1.4 2006/10/22 00:14:17 rillig Exp $
+# $NetBSD: ido.mk,v 1.5 2006/12/15 12:46:24 martti Exp $
 #
 # This is the compiler definition for the SGI IRIS Development Option
 # cc (IRIX 5).
@@ -50,7 +50,7 @@ _COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG},
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
 # ones requested by the package in USE_LANGUAGES.
-# 
+#
 _LANGUAGES.ido=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.ido+=	${LANGUAGES.ido:M${_lang_}}
@@ -64,7 +64,7 @@ PREPEND_PATH+=	${_IDO_DIR}/bin
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_IDO_VARS}
 .  if !target(${_IDO_${_var_}})
-override-tools: ${_IDO_${_var_}}        
+override-tools: ${_IDO_${_var_}}
 ${_IDO_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\

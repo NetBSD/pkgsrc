@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: usergroup-check,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: usergroup-check,v 1.2 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 ######################################################################
 #
 # NAME
-#	usergroup-check -- verify that users/groups match numeric IDs 
+#	usergroup-check -- verify that users/groups match numeric IDs
 #
 # SYNOPSIS
 #	usergroup-check -g [group_entry ...]

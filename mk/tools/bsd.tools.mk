@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.45 2006/07/25 18:04:25 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.46 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,7 +77,7 @@ tools: ${_TOOLS_TARGETS}
 .  else
 tools: barrier
 .  endif
-.endif 
+.endif
 
 .PHONY: acquire-tools-lock release-tools-lock
 acquire-tools-lock: acquire-lock

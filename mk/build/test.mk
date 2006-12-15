@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.8 2006/10/26 21:12:47 rillig Exp $
+# $NetBSD: test.mk,v 1.9 2006/12/15 12:46:23 martti Exp $
 #
 # Package-settable variables:
 #
@@ -30,7 +30,7 @@ TEST_MAKE_FLAGS?=	# none
 TEST_MAKE_CMD= \
 	${SETENV} ${MAKE_ENV}						\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${TEST_MAKE_FLAGS}	\
-			-f ${MAKE_FILE} 
+			-f ${MAKE_FILE}
 
 ######################################################################
 ### test (PUBLIC)
