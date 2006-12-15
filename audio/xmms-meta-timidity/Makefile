@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/29 14:09:30 ben Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/15 14:34:19 wiz Exp $
 #
 
 DISTNAME=		xmms-meta-timidity-0.2
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# empty
 COMMENT=		XMMS meta input script for timidity
 
