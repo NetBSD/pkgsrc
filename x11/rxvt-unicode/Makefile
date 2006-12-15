@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/15 15:01:30 martin Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/15 16:01:16 martin Exp $
 #
 
 DISTNAME=		rxvt-unicode-8.1
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--enable-transparency	\
 			--enable-menubar	\
 			--enable-xpm-background	\
 			--enable-xgetdefault	\
-			--with-term=rxvt	\
 			--enable-24bit
 
 post-install:
