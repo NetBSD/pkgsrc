@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.8 2006/12/02 13:02:14 kano Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.9 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -184,7 +184,7 @@
 <question><para>I have a little time to kill.  What shall I
 do?</para></question>
 
-<answer><para>This is not really an FAQ yet, but here's the answer  
+<answer><para>This is not really an FAQ yet, but here's the answer
 anyway.</para>
 
   <itemizedlist>

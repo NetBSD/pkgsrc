@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.41 2006/12/08 19:06:41 drochner Exp $ -->
+<!-- $NetBSD: build.xml,v 1.42 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -261,7 +261,7 @@
 	http://www.somewhere.com/somehow/ \
 	http://www.somewhereelse.com/mirror/somehow/
       </programlisting>
-      
+
       <para>When actually fetching the distfiles, each item from
       <varname>MASTER_SITES</varname> or
       <varname>SITES.*</varname> gets the name of each distfile
@@ -660,26 +660,26 @@
       <varlistentry><term><varname>INSTALL_MAN_DIR</varname></term>
       <listitem><para>directories that contain man
       pages</para></listitem></varlistentry>
-      
+
       <varlistentry><term><varname>INSTALL_PROGRAM</varname></term>
       <listitem><para>binaries that can be stripped from debugging
       symbols</para></listitem></varlistentry>
-      
+
       <varlistentry><term><varname>INSTALL_SCRIPT</varname></term>
       <listitem><para>binaries that cannot be
       stripped</para></listitem></varlistentry>
-      
+
       <varlistentry><term><varname>INSTALL_GAME</varname></term>
       <listitem><para>game
       binaries</para></listitem></varlistentry>
-      
+
       <varlistentry><term><varname>INSTALL_LIB</varname></term>
       <listitem><para>shared and static
       libraries</para></listitem></varlistentry>
-      
+
       <varlistentry><term><varname>INSTALL_DATA</varname></term>
       <listitem><para>data files</para></listitem></varlistentry>
-      
+
       <varlistentry><term><varname>INSTALL_GAME_DATA</varname></term>
       <listitem><para>data files for
       games</para></listitem></varlistentry>

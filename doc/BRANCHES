@@ -58,7 +58,7 @@ known that a fix works and closes the security hole. Other bug fixes
 and enhancements will enter a "cooling-off period" of two working days
 from receipt of the pullup request.  Developers requesting pullups
 should take note of this - if you are requesting that a security fix
-be pulled up, please mark the request as being for a "security fix". 
+be pulled up, please mark the request as being for a "security fix".
 The criterion for acceptance of a pullup is a simple one - does it
 enhance the pkgsrc branch?  - and the pullup manager's decision is
 subjective and final.  To request a pullup, the developer should

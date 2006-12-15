@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.6 2006/12/03 01:03:38 kano Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.7 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -126,7 +126,7 @@ USE_TOOLS+=gmake</programlisting>
   </listitem>
 
   <listitem>
-    <para>If the package uses intltool, be sure to add 
+    <para>If the package uses intltool, be sure to add
     <literal>intltool</literal> to the <varname>USE_TOOLS</varname>
     to handle dependencies and to force the package to use the latest
     available version.</para>
@@ -141,7 +141,7 @@ USE_TOOLS+=gmake</programlisting>
     the default):</para>
 
     <programlisting>CONFIGURE_ARGS+=--disable-gtk-doc</programlisting>
-    
+
     <para>The default location of installed HTML files
     (<filename>share/gtk-doc/&lt;package-name&gt;</filename>) is correct
     and should not be changed unless the package insists on installing
@@ -220,7 +220,7 @@ updates:</para>
 <variablelist>
   <varlistentry>
     <term>Major update</term>
-    
+
     <listitem>
       <para>Given that there is still a very long way for GNOME 3 (if it
       ever appears), we consider a major update one that goes from a
@@ -240,7 +240,7 @@ updates:</para>
 
   <varlistentry>
     <term>Minor update</term>
-    
+
     <listitem>
       <para>We consider a minor update one that goes from a
       <literal>2.A.X</literal> version to a <literal>2.A.Y</literal>
@@ -281,7 +281,7 @@ followed:</para>
     Obviously remove any <varname>PKGREVISION</varname>s that might be
     in them.</para>
   </listitem>
- 
+
   <listitem>
     <para>For each meta package, update all its
     <varname>DEPENDS</varname> lines to match the latest versions as

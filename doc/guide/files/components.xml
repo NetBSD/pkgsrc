@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.31 2006/09/13 23:24:40 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.32 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -155,7 +155,7 @@ sections.</para>
     </listitem>
 
   </itemizedlist></para>
-  
+
   <para>Please pay attention to the following gotchas:</para>
   <itemizedlist>
     <listitem>
@@ -295,7 +295,7 @@ sections.</para>
       preprocessor magic to check for the current operating system nor
       platform.  Doing so hurts portability to other platforms because
       the OS-specific details are not abstracted appropriately.</para>
-      
+
       <para>The general rule to follow is: instead of checking for the
       operating system the application is being built on, check for the
       specific <emphasis>features</emphasis> you need.  For example,
@@ -307,7 +307,7 @@ sections.</para>
       that prevents some OSes from adopting interfaces from other OSes
       (e.g. Linux implementing kqueue), something that the above checks
       cannot take into account.</para>
-      
+
       <para>Of course, checking for features generally involves more
       work on the developer's side, but the resulting changes are
       cleaner and there are chances they will work on many other
@@ -556,7 +556,7 @@ sections.</para>
 	infrastructure, so you don't need an extra
 	<literal>.include</literal> line for
 	it.</para></listitem></varlistentry>
-	
+
 	<varlistentry><term><filename>options.mk</filename></term>
 	<listitem><para>This file contains the code for the
 	package-specific options (see <xref linkend="options"/>) that can be
