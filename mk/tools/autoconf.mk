@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.13 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.14 2006/12/15 13:15:07 martti Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -75,7 +75,7 @@ PKG_FAIL_REASON+=	"\`\`autoconf'' and \`\`autoconf213'' conflict in USE_TOOLS."
 # autoconf.
 #
 _TOOLS_AC_NAMES=	autoconf	autoconf-2.13
-_TOOLS_AC_NAMES+=	autoheader	autoheader-2.13	
+_TOOLS_AC_NAMES+=	autoheader	autoheader-2.13
 _TOOLS_AC_NAMES+=	autom4te
 _TOOLS_AC_NAMES+=	autoreconf	autoreconf-2.13
 _TOOLS_AC_NAMES+=	autoscan	autoscan-2.13
