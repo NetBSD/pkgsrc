@@ -1,17 +1,4 @@
-$NetBSD: manual.README,v 1.9 2006/03/02 18:50:17 tv Exp $
-
-************************************************************************
-**** WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING ***
-
-Currently (as of libtool 1.5.22), libtool requires "autoconf 2.59c", a
-pre-release build of Autoconf.  The instructions below should still be
-followed, but Autoconf must be built from its CVS sources of at least
-"-D2005/12/01".  Ensure that PATH is set appropriately to include that
-version's install directory first.  Once autoconf 2.60 is released and
-pkgsrc is updated to use it, this hack will no longer be required.
-
-**** WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING ***
-************************************************************************
+$NetBSD: manual.README,v 1.10 2006/12/15 19:27:24 tv Exp $
 
 The "manual-*" patch files are used to maintain the pkgsrc version of
 libtool.  These files contain patches for the .m4 files in libtool which are
