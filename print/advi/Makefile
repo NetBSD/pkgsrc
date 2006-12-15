@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/15 20:33:00 joerg Exp $
 
 DISTNAME=		advi-1.6.0
 PKGREVISION=		4
@@ -57,10 +57,10 @@ post-install:
 .include "../../graphics/camlimages/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

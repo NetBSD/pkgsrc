@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/08/03 18:48:59 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2006/12/15 20:32:57 joerg Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.13.6
@@ -23,14 +23,14 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

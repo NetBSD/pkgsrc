@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2006/11/24 18:31:25 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2006/12/15 20:33:04 joerg Exp $
 #
 
 DISTNAME=	control-center-2.16.2
@@ -63,7 +63,6 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
@@ -81,8 +80,9 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
