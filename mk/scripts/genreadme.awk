@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.23 2006/07/28 02:41:07 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.24 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,7 @@
 #
 # alldepends[]  : index=pkgdir (math/scilab)
 #                 Flattened dependency list by name.
-#                
+#
 BEGIN {
 	do_pkg_readme=1;
 # set to 1 to use "README-new.html" as the name
@@ -349,9 +349,9 @@ END {
 #						 pat2dir[dpkgs[i]],
 #						 readme_name, nm);
 # We use a temp file to hold the html dependencies because for
-# packages like gnome, this list can get very very large and 
+# packages like gnome, this list can get very very large and
 # become larger than what some awk implementations can deal
-# with.  The nawk shipped with solaris 9 is an example of 
+# with.  The nawk shipped with solaris 9 is an example of
 # such a limited awk.
 				printf("%s<a href=\"../../%s/%s\">%s</a>\n",
 						 htmldeps,
@@ -519,9 +519,9 @@ END {
 #							pkgdir2name[dir],
 #							comment[dir]);
 # We use a temp file to hold the list of all packages because
-# this list can get very very large and 
+# this list can get very very large and
 # become larger than what some awk implementations can deal
-# with.  The nawk shipped with solaris 9 is an example of 
+# with.  The nawk shipped with solaris 9 is an example of
 # such a limited awk.
 					printf("<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
 							pkg, readme_name,
@@ -566,7 +566,7 @@ END {
 			close(readme);
 			close(templatefile);
 			copy_readme(readmenew, readme);
-  
+
 			gsub(/href=\"/, "href=\""category"/", pkgs);
 			allcat = sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
 					 allcat, category, readme_name,
@@ -657,7 +657,7 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 				  pkg, topdep, alldepends[pkg]);
 		return(alldepends[pkg]);
 	}
-   
+
 # recursively gather depends that each of the depends has
 	pkgreg = reg2str(pkg);
 	split(topdep, deps);
@@ -746,10 +746,10 @@ function fulldir2pkgdir(d, i){
 # take the depends lists and uniq them.
 #
 function uniq(list, deps, i, ulist){
-   
+
 # split out the depends
 	split(list, deps);
-   
+
 	i = 1;
 	ulist = " ";
 	while (i in deps){

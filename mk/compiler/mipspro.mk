@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.36 2006/12/02 22:32:59 jschauma Exp $
+# $NetBSD: mipspro.mk,v 1.37 2006/12/15 12:46:24 martti Exp $
 #
 # This is the compiler definition for the MIPSpro C compiler.
 #
@@ -65,7 +65,7 @@ _COMPILER_ABI_FLAG.64=	-64
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
 # ones requested by the package in USE_LANGUAGES.
-# 
+#
 _LANGUAGES.mipspro=	# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
@@ -83,7 +83,7 @@ PREPEND_PATH+=	${_MIPSPRO_DIR}/bin
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_MIPSPRO_VARS}
 .  if !target(${_MIPSPRO_${_var_}})
-override-tools: ${_MIPSPRO_${_var_}}        
+override-tools: ${_MIPSPRO_${_var_}}
 ${_MIPSPRO_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\

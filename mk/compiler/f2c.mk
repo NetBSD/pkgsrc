@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.7 2006/07/25 10:20:03 rillig Exp $
+# $NetBSD: f2c.mk,v 1.8 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -55,7 +55,7 @@ _USE_F2C=	NO
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
-# 
+#
 LANGUAGES.f2c=	fortran
 _LANGUAGES.f2c=	# empty
 .for _lang_ in ${USE_LANGUAGES}

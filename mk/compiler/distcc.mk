@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.28 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: distcc.mk,v 1.29 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,7 +52,7 @@ _USE_DISTCC=	NO
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
-# 
+#
 LANGUAGES.distcc=	c c++
 _LANGUAGES.distcc=	# empty
 .for _lang_ in ${USE_LANGUAGES}
