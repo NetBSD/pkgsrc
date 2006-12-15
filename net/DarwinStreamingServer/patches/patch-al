@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+--- CommonUtilitiesLib/OSHeaders.h.orig  2003-08-16 01:52:52.000000000 +0200
++++ CommonUtilitiesLib/OSHeaders.h	2005-02-25 17:03:31.000000000 +0100
+@@ -48,7 +48,7 @@
+ 
+ 
+ /* Platform-specific components */
+-#if __linux__ || __linuxppc__ || __FreeBSD__ || __MacOSX__
++#if __linux__ || __linuxppc__ || __FreeBSD__ || __MacOSX__ || __NetBSD__
+     
+     /* Defines */
+     #define _64BITARG_ "q"

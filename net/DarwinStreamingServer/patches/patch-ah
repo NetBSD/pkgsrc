@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+--- MP3Broadcaster/MP3Broadcaster.cpp.orig  2003-08-16 01:53:04.000000000 +0200
++++ MP3Broadcaster/MP3Broadcaster.cpp	2005-02-25 17:03:32.000000000 +0100
+@@ -38,13 +38,16 @@
+     #include <unistd.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
+ 
+ #ifndef __Win32__
+         #include <netdb.h>
+     #if defined (__solaris__) || defined (__osf__) || defined (__hpux__)
+         #include "daemon.h"
+     #else
+-        #ifndef __FreeBSD__
++        #ifndef __FreeBSD__ || __OpenBSD__ || __NetBSD__
+             #include <sys/sysctl.h>
+         #endif
+     #endif
