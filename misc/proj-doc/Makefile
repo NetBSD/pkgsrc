@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/12/11 15:51:52 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/15 18:20:39 dsainty Exp $
 
 DISTNAME=		proj-pdf-docs
 PKGNAME=		proj-doc-1.1
 PKGREVISION=		1
 CATEGORIES=		misc geography
-MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/
+MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/ \
+			http://dl.maptools.org/dl/proj/
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.remotesensing.org/proj/
