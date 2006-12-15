@@ -1,0 +1,8 @@
+Darwin Streaming Server is an open source project intended for developers who
+need to stream QuickTime and MPEG-4 media on alternative platforms such as
+Windows, Linux, and Solaris, or those developers who need to extend and/or
+modify the existing streaming server code to fit their needs. Darwin Streaming
+Server is only supported by the open source community and is not eligible for
+technical support from Apple. Apple hosts a number of email discussion lists
+for Darwin Streaming Server users and developers to share ideas and discuss
+deployment scenarios.

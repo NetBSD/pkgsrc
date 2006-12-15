@@ -1,0 +1,13 @@
+$NetBSD: patch-av,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+
+--- QTFileTools/QTFileInfo.tproj/Makefile.POSIX.orig	2006-12-15 09:06:50.000000000 +0100
++++ QTFileTools/QTFileInfo.tproj/Makefile.POSIX
+@@ -6,7 +6,7 @@ C++ = $(CPLUS)
+ CC = $(CCOMP)
+ LINK = $(LINKER)
+ CCFLAGS += $(COMPILER_FLAGS) $(INCLUDE_FLAG) ../../PlatformHeader.h -g -Wall
+-LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a
++LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a
+ 
+ #OPTIMIZATION
+ CCFLAGS += -O3
