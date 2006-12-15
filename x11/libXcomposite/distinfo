@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/12/15 20:12:07 joerg Exp $
+
+SHA1 (libXcomposite-0.3.1.tar.bz2) = d5c7883f1d3a98e0fd055226b2a1d4b6ffe5ca54
+RMD160 (libXcomposite-0.3.1.tar.bz2) = a62753ff8751d56070c93ffa180eb0cd834f2350
+Size (libXcomposite-0.3.1.tar.bz2) = 221073 bytes
