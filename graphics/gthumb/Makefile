@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/15 20:23:52 drochner Exp $
 
-DISTNAME=		gthumb-2.6.9
-PKGREVISION=		4
+DISTNAME=		gthumb-2.8.1
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.8/}
 
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://gthumb.sourceforge.net/
@@ -40,4 +39,5 @@ BUILDLINK_API_DEPENDS.libglade2+=   libglade2>=2.4.0
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
