@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/07/22 04:51:29 rillig Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/12/15 20:43:00 joerg Exp $
 
 BUILTIN_PKG:=	renderproto
 
@@ -11,7 +11,7 @@ BUILTIN_FIND_FILES.H_RENDER=	${X11BASE}/include/X11/extensions/render.h
 ### Determine if there is a built-in implementation of the package and
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
-.if !defined(IS_BUILTIN.renderproto)
+.if !defined(IS_BUILTIN.renderproto) || ${X11BASE} == ${LOCALBASE}
 IS_BUILTIN.renderproto=	no
 #
 # Here, we skip checking whether the files are under ${LOCALBASE} since
