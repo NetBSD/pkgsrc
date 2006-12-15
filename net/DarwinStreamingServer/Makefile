@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/15 09:03:46 adam Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/15 13:11:10 adam Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.4-Source
 PKGNAME=	DarwinStreamingServer-5.5.4
@@ -121,7 +121,7 @@ SUBST_FILES.path+=	streamingserver.xml-POSIX
 SUBST_SED.path+=	-e "s|/etc/streaming|${PKG_SYSCONFDIR}/streaming|"
 SUBST_SED.path+=	-e "s|/movies|/share/streaming/movies|"
 SUBST_SED.path+=	-e "s|/usr/local|${PREFIX}|"
-SUBST_SED.path+=	-e "s|/sbin/StreamingServer|libexec/StreamingServer|"
+SUBST_SED.path+=	-e "s|/sbin/StreamingServer|/libexec/StreamingServer|"
 SUBST_SED.path+=	-e "s|/var/streaming/AdminHtml|${PREFIX}/share/streaming/AdminHtml|"
 SUBST_SED.path+=	-e "s|/var/streaming/playlists|${PREFIX}/share/streaming/playlists|"
 SUBST_SED.path+=	-e "s|/var/streaming/logs|${VARBASE}/log/streaming|"
