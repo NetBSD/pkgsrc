@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+
+SHA1 (DarwinStreamingSrvr5.5.4-Source.tar) = 8d7c50abd9dee2da8bfcf5b080ad6a5f04b7e159
+RMD160 (DarwinStreamingSrvr5.5.4-Source.tar) = 741844be26fca61ae2da809191d80ae7894f845d
+Size (DarwinStreamingSrvr5.5.4-Source.tar) = 32829440 bytes
+SHA1 (patch-aa) = 3e5dd1ecf1892677937424966a6825735290f62d
+SHA1 (patch-ab) = 6ef4b4a419fe4760c607829f0131a9eec49899d4
+SHA1 (patch-ac) = a54ea3650b48ea951630e17bee311722ec0e02cd
+SHA1 (patch-ad) = f86c6c9372cdef07953ebaa3643d1254e6a3e1eb
+SHA1 (patch-ae) = 90196ccc784f85527452821cb32da6ee4d131a68
+SHA1 (patch-af) = c699baddac5fce4e974a0b2b992545255c6e9d05
+SHA1 (patch-ag) = e2d174cac6568725343443e1fc01545a5c984655
+SHA1 (patch-ah) = 351c35db68160fbdf8492885c4ad05269e3efe13
+SHA1 (patch-ai) = 91248634b1ab3e1961ce800183d965b45bd686dd
+SHA1 (patch-aj) = 271167cb450f6fe4bc81b4e9705ea4c6069d72c6
+SHA1 (patch-ak) = 6e7b780a5d79fca8d187408dcba08adc2a8fed35
+SHA1 (patch-al) = d0accc9d15c09c3ff5c8d53c6981a7be41e6a6b3
+SHA1 (patch-am) = ea0fd464440eb749e2c0eba0d255218e4ccc37cc
+SHA1 (patch-an) = 5634d5f22002f07ec2abd4ebdd49366979149c74
+SHA1 (patch-ao) = 24c52b5de2f4a5d8484822a3225921d929e3b59b
+SHA1 (patch-ap) = 08828b78fa5847826061b3766d113cecc55a48cb
+SHA1 (patch-aq) = 1168e928db76833d25774a3fb5fd9223ba669d78
+SHA1 (patch-ar) = dda83105b0ff25ada62ee36e10b879a38d833324
+SHA1 (patch-as) = fd17b346afc4c4ebaa0c7bbf84229a2187860d6b
+SHA1 (patch-at) = 7cb7d452fc7f8e903998638271952f6232da8469
+SHA1 (patch-au) = 89fe0648eb3acd83a9138f0b79c12e54086fa2a2
+SHA1 (patch-av) = 6408826975740e2e75a1a1c019516542d44552ed
