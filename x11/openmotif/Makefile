@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/11/06 10:32:18 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/12/15 19:13:22 joerg Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
 PKGNAME=	openmotif-${PKGVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.motifzone.com/src/
 
@@ -79,6 +79,7 @@ post-patch:
 			${RM} -f $${manpage}.presubst;			\
 		done;							\
 	done
+	echo "#include <X11/Xos_r.h>" > ${WRKSRC}/lib/Xm/Xmos_r.h
 
 # Filter the manpages through tbl.
 post-build:
