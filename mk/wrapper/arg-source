@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.8 2006/09/17 22:52:45 rillig Exp $
+# $NetBSD: arg-source,v 1.9 2006/12/15 12:46:24 martti Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,12 +63,12 @@ while $test $# -gt 0; do
 	# Same for -R and -Wl,-rpath and -Wl,-rpath-link.
 	##############################################################
 	-R*:*|-Wl,-R*:*|\
-	-Wl,-rpath,*:*|-Wl,-rpath-link,*:*|-Wl,--rpath,*:*)     
-		case $arg in  
+	-Wl,-rpath,*:*|-Wl,-rpath-link,*:*|-Wl,--rpath,*:*)
+		case $arg in
 		-R*)			R="-R" ;;
 		-Wl,-R*)		R="-Wl,-R" ;;
-		-Wl,-rpath,*)		R="-Wl,-rpath," ;;      
-		-Wl,-rpath-link,*)	R="-Wl,-rpath-link," ;; 
+		-Wl,-rpath,*)		R="-Wl,-rpath," ;;
+		-Wl,-rpath-link,*)	R="-Wl,-rpath-link," ;;
 		-Wl,--rpath,*)		R="-Wl,--rpath," ;;
 		esac
 		list="${arg#$R}"
@@ -88,10 +88,10 @@ while $test $# -gt 0; do
 	##############################################################
 	-Wl,-R|-Wl,-rpath|-Wl,-rpath-link|-Wl,--rpath)
 		nextarg="$1"; shift
-		case $arg in  
+		case $arg in
 		-Wl,-R)			R="-Wl,-R" ;;
-		-Wl,-rpath)		R="-Wl,-rpath," ;;      
-		-Wl,-rpath-link)	R="-Wl,-rpath-link," ;; 
+		-Wl,-rpath)		R="-Wl,-rpath," ;;
+		-Wl,-rpath-link)	R="-Wl,-rpath-link," ;;
 		-Wl,--rpath)		R="-Wl,--rpath," ;;
 		esac
 		nextarg="${nextarg#-Wl,}"

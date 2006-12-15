@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.87 2006/12/06 16:18:19 joerg Exp $
+# $NetBSD: gcc.mk,v 1.88 2006/12/15 12:46:24 martti Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -146,7 +146,7 @@ _WRAP_EXTRA_ARGS.CC+=	-std=gnu99
 # This generates a huge number of warnings when building practically all
 # Objective-C code where it is convention to use "#import".  Suppress
 # the warning if we're building Objective-C code using GCC.
-# 
+#
 .if !empty(_LANGUAGES.gcc:Mobjc)
 CFLAGS+=	-Wno-import
 .endif
@@ -423,7 +423,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 GCC_USE_SYMLINKS?=	no
 .for _var_ in ${_GCC_VARS}
 .  if !target(${_GCC_${_var_}})
-override-tools: ${_GCC_${_var_}}        
+override-tools: ${_GCC_${_var_}}
 ${_GCC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 .    if !empty(GCC_USE_SYMLINKS:Myes)
