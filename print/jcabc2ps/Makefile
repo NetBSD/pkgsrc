@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/24 08:42:44 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/15 14:34:20 wiz Exp $
 #
 
 DISTNAME=	jcabc2ps-src
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://ecf-guest.mit.edu/~jc/music/abc/src/
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ecf-guest.mit.edu/~jc/music/abc/src/
 COMMENT=	Music typesetting program for abc
 
