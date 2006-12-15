@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/15 14:34:19 wiz Exp $
 #
 
 DISTNAME=	flac-1.1.2
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	audio archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flac.sourceforge.net/
 COMMENT=	FLAC XMMS plugin
 

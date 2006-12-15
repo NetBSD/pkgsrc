@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/12/15 14:34:20 wiz Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.oersted.co.jp/~yav/soft/fkiss/
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.oersted.co.jp/~yav/soft/indexe.html#fkiss
 COMMENT=		Kisekae viewer
 

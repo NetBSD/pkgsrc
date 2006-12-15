@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/12 17:09:50 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/15 14:34:19 wiz Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
@@ -8,7 +8,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.csounds.com/
 COMMENT=		Csound5 Reference Manual
 

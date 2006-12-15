@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/22 04:46:15 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/15 14:34:20 wiz Exp $
 #
 
 DISTNAME=		ivan-0.50
@@ -6,7 +6,7 @@ PKGREVISION=		6
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ivan/}
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ivan.sourceforge.net/
 COMMENT=		Graphical roguelike featuring deep gameplay
 

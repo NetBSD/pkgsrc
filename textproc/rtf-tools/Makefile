@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/11 19:42:25 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/15 14:34:21 wiz Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://www.snake.net/software/RTF/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		RTF to troff/groff/text converter
 

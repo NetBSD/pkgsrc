@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/14 01:29:50 ben Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/15 14:34:20 wiz Exp $
 #
 
 DISTNAME=      	Hash-Case-1.003
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5hac
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.overmeer.net/perlws2003-hash/0-0/
 COMMENT=	Perl module that implements case-insensitive hashes
 

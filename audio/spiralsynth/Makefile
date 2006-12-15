@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/22 05:54:52 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/12/15 14:34:19 wiz Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/Software/SpiralSynth/dload/
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pawfal.org/Software/SpiralSynth/
 COMMENT=		Polyphonic analogue softsynth
 
