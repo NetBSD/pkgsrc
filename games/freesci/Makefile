@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/12 16:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/15 20:32:55 joerg Exp $
 #
 
 DISTNAME=		freesci-0.3.4c
@@ -24,8 +24,8 @@ post-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 #.include "../../mk/motif.buildlink3.mk"
 #.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

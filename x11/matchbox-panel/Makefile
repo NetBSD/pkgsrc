@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/06 05:20:40 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/15 20:33:04 joerg Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -31,8 +31,8 @@ PLIST_SUBST+=	COND_APM=""
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../devel/libmatchbox/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

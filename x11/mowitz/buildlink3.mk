@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/12/15 20:33:04 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MOWITZ_BUILDLINK3_MK:=	${MOWITZ_BUILDLINK3_MK}+
@@ -17,6 +17,6 @@ BUILDLINK_ABI_DEPENDS.Mowitz+=	Mowitz>=0.2.2nb2
 BUILDLINK_PKGSRCDIR.Mowitz?=	../../x11/mowitz
 .endif	# MOWITZ_BUILDLINK3_MK
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

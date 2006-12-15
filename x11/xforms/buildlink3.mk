@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/12/15 20:33:05 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XFORMS_BUILDLINK3_MK:=	${XFORMS_BUILDLINK3_MK}+
@@ -19,6 +19,6 @@ BUILDLINK_PKGSRCDIR.xforms?=	../../x11/xforms
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2006/09/04 08:56:09 martti Exp $
+# $NetBSD: Makefile,v 1.73 2006/12/15 20:32:53 joerg Exp $
 #
 
 DISTNAME=	ddd-3.3.11
@@ -48,6 +48,6 @@ post-install:
 	${GZIP_CMD} ${PREFIX:Q}/share/doc/ddd/ddd-paper.ps
 	${GZIP_CMD} ${PREFIX:Q}/share/doc/ddd/ddd.ps
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

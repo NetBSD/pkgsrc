@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/11/16 02:28:58 markd Exp $
+# $NetBSD: Makefile,v 1.50 2006/12/15 20:32:57 joerg Exp $
 
 DISTNAME=	xfig.3.2.5-alpha5.full
 PKGNAME=	xfig-3.2.5alpha5
@@ -52,7 +52,7 @@ post-install:
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
