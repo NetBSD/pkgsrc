@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.12 2006/09/10 19:29:52 wiz Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.13 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -468,7 +468,7 @@ not specified.</para>
     group
 </programlisting>
 
-<para>The numeric GID of the group may be set by defining 
+<para>The numeric GID of the group may be set by defining
 <varname>PKG_GID.<replaceable>group</replaceable></varname>.</para>
 
 <para>If a package needs to create the users and groups at an earlier

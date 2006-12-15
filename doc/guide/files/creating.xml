@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.5 2006/10/21 20:39:24 rillig Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.6 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -13,7 +13,7 @@ few steps.</para>
 <step><para>First, install the packages <filename
 role="pkg">pkgtools/url2pkg</filename> and <filename
 role="pkg">pkgtools/pkglint</filename>.</para></step>
-	
+
 <step><para>Then, choose one of the top-level directories as the
 category in which you want to place your package. You can also create a
 directory of your own (maybe called <filename>local</filename>). In that
