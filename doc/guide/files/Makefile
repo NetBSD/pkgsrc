@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/09/19 17:50:38 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/15 13:22:14 martti Exp $
 
 WEB_PREFIX?=	${.CURDIR}/../htdocs
 
@@ -38,7 +38,7 @@ SRCS+=	using.xml
 SRCS+=	chapters.ent
 
 # Make deeper TOC:
-XSL_DBX_WITH_TOC_SECTION_DEPTH?= 2 
+XSL_DBX_WITH_TOC_SECTION_DEPTH?= 2
 
 # Avoid extra normalization
 NO_TIDY?=	yes

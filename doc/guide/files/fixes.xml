@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.77 2006/12/02 13:02:14 kano Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.78 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -333,7 +333,7 @@
 
 	<para>Please note that such dependencies should only be
 	updated if a package requires a newer pre-requisite, but
-	not to denote recommendations such as 
+	not to denote recommendations such as
 	ABI changes that do not prevent a package from building
 	correctly.  Such recommendations can be expressed using
 	<varname>ABI_DEPENDS</varname>:</para>
@@ -679,7 +679,7 @@
     set <varname>DIST_SUBDIR</varname> to a unique directory name,
     usually based on <varname>PKGNAME_NOREV</varname>. All
     <varname>DISTFILES</varname> and
-    <varname>PATCHFILES</varname> for this package will be put in that 
+    <varname>PATCHFILES</varname> for this package will be put in that
     subdirectory of the local distfiles directory.  In case this
     happens more often, <varname>PKGNAME</varname> can be used (thus
     including the <filename>nbX</filename> suffix) or a date stamp
@@ -960,7 +960,7 @@
 
   <sect2 id="basic-programming-languages">
     <title>C, C++, and Fortran</title>
-    
+
     <para>Compilers for the C, C++, and Fortran languages comes with
     the NetBSD base system.  By default, pkgsrc assumes that a package
     is written in C and will hide all other compilers (via the wrapper
@@ -1170,13 +1170,13 @@ possibility. That compiler cannot handle the following code:</para>
 
 <programlisting>
     extern int extern_func(int);
-    
+
     static inline int
     inline_func(int x)
     {
         return extern_func(x);
     }
-    
+
     int main(void)
     {
         return 0;
@@ -1819,7 +1819,7 @@ of functions.</para>
 
 <sect1 id="punting">
   <title>Marking packages as having problems</title>
-  
+
   <para>In some cases one does not have the time to solve a problem
   immediately.  There are currently two ways to declare that one knows
   that a package has problems.</para>

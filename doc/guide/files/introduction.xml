@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.20 2006/10/07 09:31:16 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.21 2006/12/15 13:22:14 martti Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -194,7 +194,7 @@ minutes!</para>
 	<link linkend="users-guide" endterm="users-guide.title"/>,
 	describes how one can use one of the packages in the Package
 	Collection, either by installing a precompiled binary package,
-	or by building one's own copy using the &os; package system. 
+	or by building one's own copy using the &os; package system.
 	The second part, <link linkend="developers-guide"
 	endterm="developers-guide.title"/>, explains how to prepare a
 	package so it can be easily built by other &os; users without
