@@ -1,0 +1,25 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+
+You need to set up a DarwinStreamingServer administrator username and
+password:
+
+	# qtpasswd -c username
+	# echo admin: username > ${PKG_SYSCONFDIR}/streaming/qtgroups
+
+N.B. qtpasswd will overwrite the existing file with the -c option.
+The file
+	${PKG_SYSCONFDIR}/streaming/qtgroups
+will contain users separated by white space for each group.
+
+In order to run the DarwinStreamingServer administration tools you need to
+install SSL keys into
+	${PKG_SYSCONFDIR}/streaming/streamingadminserver.pem
+
+After the administration tools are up and running you should be able to
+access them at
+	http://your.hostname:1220/
+If you select 'Secure Administration (SSL)' you'll be directed to
+	https://your.hostname:1240/
+
+===========================================================================
