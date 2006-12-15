@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.648 2006/12/08 22:16:06 cube Exp $
+# $NetBSD: Makefile,v 1.649 2006/12/15 09:05:34 adam Exp $
 #
 
 COMMENT=	Networking tools
 
 SUBDIR+=	6tunnel
+SUBDIR+=	DarwinStreamingServer
 SUBDIR+=	GeoIP
 SUBDIR+=	IglooFTP
 SUBDIR+=	LaBrea
