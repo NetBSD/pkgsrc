@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2006/03/04 21:30:55 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2006/12/15 20:33:03 joerg Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -30,4 +30,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.contrib ${PREFIX}/share/doc/wmx
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/wmx
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"

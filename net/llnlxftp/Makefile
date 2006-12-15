@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/15 20:32:59 joerg Exp $
 #
 
 DISTNAME=		llnlxftp2.1
@@ -20,7 +20,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xftp ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/XFtp.ad ${PREFIX}/lib/X11/app-defaults/XFtp
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

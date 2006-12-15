@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/01/31 11:44:53 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2006/12/15 20:33:06 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xterm
 PKG_SUPPORTED_OPTIONS=	xterm-luit freetype
@@ -23,6 +23,6 @@ CONFIGURE_ARGS+= --enable-luit
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+= --enable-freetype
 
-.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .endif
 

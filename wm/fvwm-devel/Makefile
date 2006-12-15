@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/12 07:05:01 martti Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/15 20:33:02 joerg Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
@@ -36,7 +36,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

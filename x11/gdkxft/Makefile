@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/17 13:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/12/15 20:33:04 joerg Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -30,9 +30,9 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/control-center/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

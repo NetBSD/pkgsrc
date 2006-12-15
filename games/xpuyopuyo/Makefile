@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/09/16 20:00:03 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2006/12/15 20:32:56 joerg Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		6
@@ -28,6 +28,6 @@ pre-configure:
 	${CHMOD} +x ${GNOME_CONFIG}
 
 .include "../../audio/libmikmod/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

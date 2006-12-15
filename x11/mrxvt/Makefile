@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:47:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/15 20:33:04 joerg Exp $
 #
 
 DISTNAME=	mrxvt-0.4.1
@@ -31,6 +31,6 @@ SPECIAL_PERMS=	${PREFIX}/bin/mrxvt ${SETUID_ROOT_PERMS}
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/12/15 20:32:57 joerg Exp $
 
 DISTNAME=	fly-1.6.5
 PKGREVISION=	8
@@ -37,5 +37,5 @@ do-install:
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

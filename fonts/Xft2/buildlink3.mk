@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2006/07/08 23:10:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2006/12/15 20:32:55 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XFT2_BUILDLINK3_MK:=	${XFT2_BUILDLINK3_MK}+
@@ -18,6 +18,6 @@ BUILDLINK_PKGSRCDIR.Xft2?=	../../fonts/Xft2
 .endif	# XFT2_BUILDLINK3_MK
 
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

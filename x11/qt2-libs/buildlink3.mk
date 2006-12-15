@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/12/15 20:33:04 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT2_LIBS_BUILDLINK3_MK:=	${QT2_LIBS_BUILDLINK3_MK}+
@@ -20,12 +20,12 @@ BUILDLINK_LIBDIRS.qt2-libs=	qt2/lib
 .endif	# QT2_LIBS_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 
 QTDIR=		${BUILDLINK_PREFIX.qt2-libs}/qt2
 CONFIGURE_ENV+=	QTDIR=${QTDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/15 20:32:54 joerg Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--disable-lcms
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
