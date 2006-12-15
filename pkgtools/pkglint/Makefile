@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.353 2006/11/01 09:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.354 2006/12/15 17:38:40 joerg Exp $
 #
 
 DISTNAME=	pkglint-4.73
@@ -15,6 +15,7 @@ DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 
@@ -54,19 +55,16 @@ do-extract:
 	cd ${FILESDIR} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${PREFIX}/bin/pkglint
-	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${PREFIX}/bin/lintpkgsrc
-	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash.pl ${PREFIX}/bin/plist-clash
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${DESTDIR}${PREFIX}/bin/pkglint
+	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${DESTDIR}${PREFIX}/bin/lintpkgsrc
+	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash.pl ${DESTDIR}${PREFIX}/bin/plist-clash
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
-	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/${PKGMANDIR}/cat1
-	${INSTALL_DATA} ${FILESDIR}/makevars.map ${PREFIX}/share/pkglint/
-	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${PREFIX}/share/pkglint/
-
-post-install:
-	${PREFIX}/bin/pkglint -q 1>&2
+	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_DATA} ${FILESDIR}/makevars.map ${DESTDIR}${PREFIX}/share/pkglint/
+	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${DESTDIR}${PREFIX}/share/pkglint/
 
 .include "../../mk/bsd.pkg.mk"

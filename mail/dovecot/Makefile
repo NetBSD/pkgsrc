@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/11/19 10:36:34 ghen Exp $
+# $NetBSD: Makefile,v 1.76 2006/12/15 17:35:20 joerg Exp $
 
 DISTNAME=		dovecot-1.0.rc15
 PKGNAME=		${DISTNAME:S/.rc/rc/}
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -49,11 +50,10 @@ post-build:
 						> ${WRKDIR}/mkcert.sh
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf	\
-		${EGDIR}/dovecot.conf.default
-	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/mkcert.sh ${EGDIR}
+		${DESTDIR}${EGDIR}/dovecot.conf.default
+	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/mkcert.sh ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
