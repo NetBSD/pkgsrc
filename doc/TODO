@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5776 2006/12/14 11:20:09 martti Exp $
+$NetBSD: TODO,v 1.5777 2006/12/15 01:14:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -234,7 +234,7 @@ Suggested package updates
 	o YoSucker-75
 	o aap-0.144
 	o abcm2ps-5.2.1
-	o abcmidi-20061103
+	o abcmidi-20061211
 	o acpi-iasl-20040715
 	o adns-1.4
 	o adocman-0.13
@@ -322,7 +322,7 @@ Suggested package updates
 	o cfitsio-2.510
 	o cgdb-0.6.3
 	o checkbot-1.77
-	o cherokee-0.5.5
+	o cherokee-0.5.6
 	o chrony-1.21
 	o cinepaint-0.21.2
 	o cint-5.16
@@ -526,6 +526,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o imap-uw-2006c1
+	o imapsync-1.197
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20061029
@@ -596,6 +597,7 @@ Suggested package updates
 	o libshout-2.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
+	o libtorrent-0.11.0
 	o licq-core-1.3.0
 	o lighttpd-1.4.13
 	o lilypond-2.10.0
@@ -974,6 +976,7 @@ Suggested package updates
 	o rss2email-2.60
 	o rt3-3.6.1
 	o rtcw-1.41.3
+	o rtorrent-0.7.0
 	o ruby-1.8.5
 	o ruby-cmd-0.8.0
 	o rudiments-0.30
@@ -1010,7 +1013,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-1.3.0.53
 	o smalleiffel-0.90
-	o smalltalk-2.3
+	o smalltalk-2.3.1
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.60
 	o snd-8.6
@@ -1040,6 +1043,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o sylpheed-claws-2.6.0
+	o sylpheed-devel-2.3.0beta7
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
