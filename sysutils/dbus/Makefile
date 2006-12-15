@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/11/29 10:11:53 ghen Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/15 19:06:00 drochner Exp $
 #
 
-DISTNAME=	dbus-1.0.0
+DISTNAME=	dbus-1.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -35,11 +35,10 @@ CONFIGURE_ARGS+=	--enable-checks
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-xml=expat
-CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-dbus-user=${DBUS_USER}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
-PKG_SUPPORTED_OPTIONS+=	debug
+PKG_SUPPORTED_OPTIONS+=	debug nox11
 
 .include "../../mk/bsd.options.mk"
 
@@ -47,6 +46,12 @@ PKG_SUPPORTED_OPTIONS+=	debug
 CONFIGURE_ARGS+=	--enable-asserts
 CONFIGURE_ARGS+=	--enable-tests
 CONFIGURE_ARGS+=	--enable-verbose-mode
+.endif
+
+.if !empty(PKG_OPTIONS:Mnox11)
+CONFIGURE_ARGS+=	--without-x
+.else
+.include "../../mk/x11.buildlink3.mk"
 .endif
 
 PKG_SYSCONFSUBDIR=	dbus-1
