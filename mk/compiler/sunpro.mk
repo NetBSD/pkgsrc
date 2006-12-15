@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.35 2006/10/22 00:14:17 rillig Exp $
+# $NetBSD: sunpro.mk,v 1.36 2006/12/15 12:46:24 martti Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -79,7 +79,7 @@ PREPEND_PATH+=	${_SUNPRO_DIR}/bin
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_SUNPRO_VARS}
 .  if !target(${_SUNPRO_${_var_}})
-override-tools: ${_SUNPRO_${_var_}}        
+override-tools: ${_SUNPRO_${_var_}}
 ${_SUNPRO_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
