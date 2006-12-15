@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+--- PlaylistBroadcaster.tproj/GetLocalIPAddressString.c.orig	2003-08-16 01:53:06.000000000 +0200
++++ PlaylistBroadcaster.tproj/GetLocalIPAddressString.c	2005-12-17 22:20:45.000000000 +0100
+@@ -82,7 +82,7 @@
+         
+ #if (__linux__ || __MacOSX__ || __MACOS__ || __linuxppc__ || __solaris__ || __sgi__)
+         err = ioctl(tempSocket, SIOCGIFCONF, (char*)&ifc);
+-#elif __FreeBSD__
++#elif __FreeBSD__ || __NetBSD__
+         err = ioctl(tempSocket, OSIOCGIFCONF, (char*)&ifc);
+ #else
+         #error
+@@ -90,7 +90,7 @@
+         if (err == -1) break;
+         
+ 
+-#if __FreeBSD__
++#if __FreeBSD__ || __NetBSD__
+         {
+             int netdev1, netdev2;
+             struct ifreq *netdevifr;

@@ -1,0 +1,12 @@
+$NetBSD: patch-an,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+--- MP3Broadcaster/BroadcasterMain.cpp.orig	2005-12-11 18:56:36.000000000 +0000
++++ MP3Broadcaster/BroadcasterMain.cpp	2005-12-11 18:57:08.000000000 +0000
+@@ -216,7 +216,7 @@
+ 
+ struct sigaction act;
+     
+-#if defined(sun) || defined(i386) || defined(__MacOSX__) || defined(__sgi__) || defined(__osf__) || defined(__hpux__)
++#if defined(sun) || defined(i386) || defined(__MacOSX__) || defined(__sgi__) || defined(__osf__) || defined(__hpux__) || defined(__NetBSD__)
+     sigemptyset(&act.sa_mask);
+     act.sa_flags = 0;
+     act.sa_handler = (void(*)(int))&SignalEventHandler;
