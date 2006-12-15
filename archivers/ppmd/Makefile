@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/15 14:34:18 wiz Exp $
 #
 
 DISTNAME=	ppmdi1
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://compression.ru/ds/
 EXTRACT_SUFX=	.rar
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compression.ru/ds/
 COMMENT=	PPM file compressor
 

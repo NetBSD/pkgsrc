@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/10/18 13:11:58 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2006/12/15 14:34:20 wiz Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.lysator.liu.se/snes9x/${SNESVER}/ \
 			http://files.ipherswipsite.com/snes9x/ \
 			http://vincent.grigorieff.free.fr/snes9x/
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 

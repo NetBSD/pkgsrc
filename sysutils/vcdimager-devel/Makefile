@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/06 06:22:46 reed Exp $
+# $NetBSD: Makefile,v 1.35 2006/12/15 14:34:20 wiz Exp $
 #
 
 DISTNAME=	vcdimager-0.7.23
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vcdimager.org/
 COMMENT=	Mastering suite for Video CDs
 
