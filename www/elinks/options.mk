@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2006/12/06 00:20:26 hubertf Exp $
+# $NetBSD: options.mk,v 1.3 2006/12/16 11:23:45 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp spidermonkey fsp finger gopher
 PKG_SUPPORTED_OPTIONS+=	inet6 x11
 PKG_OPTIONS_GROUP.tls=	gnutls ssl
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
-PKG_SUGGESTED_OPTIONS=	ssl 
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -47,12 +47,12 @@ CONFIGURE_ARGS+=	--disable-sm-scripting
 CONFIGURE_ARGS+=	--with-openssl
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--without-openssl
-.elif !empty(PKG_OPTIONS:Mgnutls)				 
+.elif !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+= --with-gnutls-includes=${BUILDLINK_PREFIX.gnutls}/include
 CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
 CONFIGURE_ARGS+= --without-openssl
 .include "../../security/gnutls/buildlink3.mk"
-.endif							
+.endif
 
 .if !empty(PKG_OPTIONS:Mfsp)
 CONFIGURE_ARGS+=	--enable-fsp
@@ -71,4 +71,3 @@ CONFIGURE_ARGS+=	--enable-gopher
 .else
 CONFIGURE_ARGS+=	--disable-gopher
 .endif
-
