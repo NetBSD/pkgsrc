@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/10/17 17:08:07 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2006/12/16 11:01:44 wiz Exp $
 
 DISTNAME=	scribus-1.2.5
 CATEGORIES=	print
@@ -13,6 +13,7 @@ USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 PTHREAD_OPTS+=		require
 
+USE_DIRS+=		xdg-1.4
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
 
