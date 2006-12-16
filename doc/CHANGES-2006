@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2023 2006/12/16 15:28:18 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.2024 2006/12/16 15:29:50 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5650,5 +5650,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/libXcomposite version 0.3.1 [joerg 2006-12-15]
 	Removed www/elinks04 [wiz 2006-12-16]
 	Removed lang/lua4 [wiz 2006-12-16]
-	Updated devel/p5-Graph to 0.80 [bouyer 2006-12-15]
-	Updated net/netdisco to 0.95 [bouyer 2006-12-15]
+	Updated devel/p5-Graph to 0.80 [bouyer 2006-12-16]
+	Updated net/netdisco to 0.95 [bouyer 2006-12-16]
