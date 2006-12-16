@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/11/10 17:42:48 tv Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/16 15:25:41 bouyer Exp $
 #
 
-DISTNAME=		netdisco-0.94_with_mibs
-PKGNAME=		netdisco-0.94
-PKGREVISION=		5
+DISTNAME=		netdisco-0.95_with_mibs
+PKGNAME=		netdisco-0.95
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 
@@ -21,6 +20,7 @@ DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=		p5-Graph-[0-9]*:../../devel/p5-Graph
 DEPENDS+=		p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
 DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=		p5-Net-NBName-[0-9]*:../../net/p5-Net-NBName
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -39,10 +39,11 @@ REPLACE_PERL+=	mibs/chk_dups
 REPLACE_PERL+=	mibs/rm_cisco_dups
 REPLACE_PERL+=	mibs/chk_mibs
 REPLACE_PERL+=	mibs/snmpwalkmib
+REPLACE_PERL+=	sql/pg
 
-SUBST_CLASSES+=			installdir path var apachevers
+SUBST_CLASSES+=			installdir path varbase apachevers
 SUBST_STAGE.installdir=		pre-configure
-SUBST_FILES.installdir=		sql/pg_run sql/pg_init sql/pg_back
+SUBST_FILES.installdir=		sql/pg
 SUBST_FILES.installdir+=	bin/netdisco_daemon
 SUBST_FILES.installdir+=	netdisco
 SUBST_FILES.installdir+=	netdisco.conf netdisco.crontab
@@ -71,10 +72,10 @@ SUBST_FILES.path+=	INSTALL netdisco.crontab
 SUBST_SED.path=		-e "s|/usr/local/bin|${PREFIX}/bin|g"
 SUBST_MESSAGE.path=	Fixing hardcoded path.
 
-SUBST_STAGE.var=	pre-configure
-SUBST_FILES.var=	netdisco.conf
-SUBST_SED.var=		-e "s|@VARBASE@|${VARBASE}|g"
-SUBST_MESSAGE.var=	Fixing data directory.
+SUBST_STAGE.varbase=	pre-configure
+SUBST_FILES.varbase=	netdisco.conf
+SUBST_SED.varbase=		-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_MESSAGE.varbase=	Fixing data directory.
 
 NETDISCOUSER?=	netdisco
 NETDISCOGROUP?=	netdisco
@@ -103,14 +104,14 @@ RCD_SCRIPTS=		netdisco
 
 .if ${PKG_APACHE} == "apache13"
 SUBST_STAGE.apachevers=	pre-configure
-SUBST_FILES.var=	netdisco_apache.conf
-SUBST_SED.var=		-e "s|@APACHE2@|\#uncomment for apache2|g"
-SUBST_MESSAGE.var=	Fixing config files for apache-1.3
+SUBST_FILES.apachevers=	netdisco_apache.conf
+SUBST_SED.apachevers=	-e "s|@APACHE2@|\#uncomment for apache2|g"
+SUBST_MESSAGE.apachevers= Fixing config files for apache-1.3
 .elif ${PKG_APACHE} == "apache2"
 SUBST_STAGE.apachevers=	pre-configure
-SUBST_FILES.var=	netdisco_apache.conf
-SUBST_SED.var=		-e "s|@APACHE2@||g"
-SUBST_MESSAGE.var=	Fixing config files for apache-2
+SUBST_FILES.apachevers=	netdisco_apache.conf
+SUBST_SED.apachevers=	-e "s|@APACHE2@||g"
+SUBST_MESSAGE.apachevers= Fixing config files for apache-2
 .endif
 
 do-build:
@@ -137,6 +138,7 @@ do-install:
 	    netdisco_apache.conf netdisco_apache_dir.conf; do \
 		${MV} ${PREFIX:Q}/netdisco/"$$i" ${EGDIR:Q}/ ;\
 	done
+	${MKDIR} ${PREFIX:Q}/netdisco/mason
 	${CHGRP} -R ${APACHE_GROUP} ${PREFIX:Q}/netdisco/mason
 	${CHMOD} -R 775 ${PREFIX:Q}/netdisco/mason
 
