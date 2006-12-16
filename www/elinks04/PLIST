@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 11:09:54 recht Exp $
-bin/elinks
-man/man1/elinks.1
-man/man5/elinks.conf.5
-man/man5/elinkskeys.5
