@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2006/03/09 20:25:28 bouyer Exp $
+$NetBSD: patch-ad,v 1.2 2006/12/16 15:25:41 bouyer Exp $
 
---- netdisco_apache.conf.orig	2004-03-07 20:13:49.000000000 +0100
-+++ netdisco_apache.conf	2006-03-09 16:34:23.000000000 +0100
-@@ -4,8 +4,10 @@
+--- netdisco_apache.conf.orig	2006-11-14 01:27:14.000000000 +0100
++++ netdisco_apache.conf	2006-12-06 22:08:24.000000000 +0100
+@@ -14,8 +14,10 @@
  
  # Pool Database Connections
  PerlModule Apache::DBI
@@ -14,7 +14,7 @@ $NetBSD: patch-ad,v 1.1 2006/03/09 20:25:28 bouyer Exp $
  	order allow,deny
  	allow from all
  </Directory>
-@@ -14,12 +16,12 @@
+@@ -24,12 +26,12 @@
  # Preload the netdisco module into global server space.
  #   and parse the config file only once.
  { package HTML::Mason::Commands;
@@ -30,15 +30,3 @@ $NetBSD: patch-ad,v 1.1 2006/03/09 20:25:28 bouyer Exp $
      #use Apache::ProxyRewriteMax;
  }
  
-@@ -30,8 +32,9 @@
-     use strict;
- 
-     my $ah = new HTML::Mason::ApacheHandler(
--        comp_root              => '/usr/local/netdisco/html',
--        data_dir               => '/usr/local/netdisco/mason',
-+@APACHE2@        args_method            => 'mod_perl',
-+        comp_root              => '/usr/pkg/netdisco/html',
-+        data_dir               => '/usr/pkg/netdisco/mason',
-         request_class          => 'MasonX::Request::WithApacheSession',
-         session_class          => 'Apache::Session::Postgres',
-         session_commit         => 1,
