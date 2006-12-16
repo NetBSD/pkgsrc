@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2006/12/15 20:43:00 joerg Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/12/16 01:04:43 joerg Exp $
 
 # TODO: builtin.mk failed to use native on XFree86
 # the two headers are identical with native XFree86
@@ -14,7 +14,9 @@ BUILTIN_FIND_FILES.H_RANDR=	${X11BASE}/include/X11/extensions/randr.h
 ### Determine if there is a built-in implementation of the package and
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
-.if !defined(IS_BUILTIN.randrproto) || ${X11BASE} == ${LOCALBASE}
+.if ${X11BASE} == ${LOCALBASE}
+IS_BUILTIN.randrproto=	no
+.elif !defined(IS_BUILTIN.randrproto)
 IS_BUILTIN.randrproto=	no
 #
 # Here, we skip checking whether the files are under ${LOCALBASE} since
