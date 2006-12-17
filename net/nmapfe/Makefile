@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/12/17 17:57:31 salo Exp $
 #
 
-DISTNAME=	nmap-4.11
+DISTNAME=	nmap-4.20
 PKGNAME=	nmapfe-0.9.5
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net security
 MASTER_SITES=	http://insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,11 +23,11 @@ DISTINFO_FILE=	${.CURDIR}/../../net/nmap/distinfo
 CONFIGURE_DIRS=	nbase nmapfe
 BUILD_DIRS=	nbase nmapfe
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nmapfe/nmapfe ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/nmapfe.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/docs/nmapfe.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/gtk2/buildlink3.mk"
 
