@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2006/10/02 20:09:00 rillig Exp $
+# $NetBSD: Makefile,v 1.277 2006/12/17 10:34:03 wiz Exp $
 #
 
 COMMENT=	Games
@@ -145,6 +145,7 @@ SUBDIR+=	majesty-demo
 SUBDIR+=	minami
 SUBDIR+=	mirrormagic
 SUBDIR+=	mirrormagic-sdl
+SUBDIR+=	monsterz
 SUBDIR+=	moon-buggy
 SUBDIR+=	moria
 SUBDIR+=	nagi
