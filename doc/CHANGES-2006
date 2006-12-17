@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2025 2006/12/17 10:35:18 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2026 2006/12/17 15:39:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5653,3 +5653,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Graph to 0.80 [bouyer 2006-12-16]
 	Updated net/netdisco to 0.95 [bouyer 2006-12-16]
 	Added games/monsterz version 0.7.0 [wiz 2006-12-17]
+	Updated sysutils/dbus to 1.0.2nb1 [jmmv 2006-12-17]
