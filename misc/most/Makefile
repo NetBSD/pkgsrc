@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/10/04 21:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/17 17:17:19 joerg Exp $
 
 DISTNAME=	most-4.9.0
 PKGREVISION=	1
@@ -12,6 +12,13 @@ COMMENT=	Pager (like less) which has support for windows and binary files
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-x
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# prevent duplicate definition of zopen
+CFLAGS+= -D_POSIX_C_SOURCE
+.endif
 
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
