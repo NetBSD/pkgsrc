@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2031 2006/12/17 19:34:52 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2032 2006/12/17 21:08:26 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5659,3 +5659,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nmap to 4.20 [salo 2006-12-17]
 	Added x11/libXtst version 1.0.1 [joerg 2006-12-17]
 	Updated sysutils/grub to 0.97nb7 [jmmv 2006-12-17]
+	Updated security/libnasl to 2.2.9 [salo 2006-12-17]
+	Updated security/nessus-libraries to 2.2.9 [salo 2006-12-17]
+	Updated security/nessus-core to 2.2.9 [salo 2006-12-17]
+	Updated security/nessus-plugins to 2.2.9 [salo 2006-12-17]
+	Updated security/nessus to 2.2.9 [salo 2006-12-17]
