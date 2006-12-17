@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2006/12/16 14:07:24 tv Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/12/17 16:06:31 joerg Exp $
 
 BUILTIN_PKG:=	renderproto
 
@@ -11,12 +11,15 @@ BUILTIN_FIND_FILES.H_RENDER=	${X11BASE}/include/X11/extensions/render.h
 ### Determine if there is a built-in implementation of the package and
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
-.if !defined(IS_BUILTIN.renderproto)
+.if ${X11BASE} == ${LOCALBASE}
+IS_BUILTIN.renderproto=	no
+.elif !defined(IS_BUILTIN.renderproto)
 IS_BUILTIN.renderproto=	no
 #
 # Here, we skip checking whether the files are under ${LOCALBASE} since
 # we'll consider this X11 package to be built-in even if it's a part
-# of one of the pkgsrc-installed X11 distributions.
+# of one of the pkgsrc-installed X11 distributions. This does not apply
+# to modular Xorg which is caught above.
 #
 .  if empty(H_RENDER:M__nonexistent__)
 IS_BUILTIN.renderproto=	yes
