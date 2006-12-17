@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2027 2006/12/17 17:21:25 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.2028 2006/12/17 17:58:43 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5655,3 +5655,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/monsterz version 0.7.0 [wiz 2006-12-17]
 	Updated sysutils/dbus to 1.0.2nb1 [jmmv 2006-12-17]
 	Updated www/trac to 0.10.3 [bouyer 2006-12-17]
+	Updated net/nmap to 4.20 [salo 2006-12-17]
