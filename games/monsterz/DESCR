@@ -1,0 +1,12 @@
+Monsterz is a little puzzle game, similar to the famous Bejeweled
+or Zookeeper.
+
+The goal of the game is to create rows of similar monsters, either
+horizontally or vertically. The only allowed move is the swap of
+two adjacent monsters, on the condition that it creates a row of
+three or more. When alignments are cleared, pieces fall from the
+top of the screen to fill the board again. Chain reactions earn
+you even more points.
+
+This game is mostly about luck, but it remains highly addictive.
+You have been warned.
