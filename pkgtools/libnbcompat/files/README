@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.12 2005/11/28 20:47:29 schwarz Exp $
+$NetBSD: README,v 1.13 2006/12/17 19:27:57 jschauma Exp $
 
  0 Introduction
  ==============
@@ -54,9 +54,13 @@ on the following operating systems:
 libnbcompat-20041024 has been tested to build and install correctly
 on the following operating systems:
 
+	FreeBSD-4.11/i386		<jschauma@NetBSD.org>
+	FreeBSD-6.1/amd64		<jschauma@NetBSD.org>
 	Darwin-8.3/powerpc		<schwarz@NetBSD.org>
 	IRIX-5.3/mipseb			<schwarz@NetBSD.org>
+	IRIX-6.5/mipseb			<jschauma@NetBSD.org>
 	Linux/i386			<schwarz@NetBSD.org>
+	RHEL4 Linux 2.6/i386		<jschauma@NetBSD.org>
 
  3 Usage
  =======
