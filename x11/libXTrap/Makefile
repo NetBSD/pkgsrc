@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 20:58:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/17 22:33:10 joerg Exp $
 #
 
 DISTNAME=		libXTrap-1.0.0
@@ -19,8 +19,11 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xtrap.pc.in
 
+BUILDLINK_DEPMETHOD.libXi?=	build
+
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/trapproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
