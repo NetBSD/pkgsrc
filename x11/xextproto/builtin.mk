@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2006/12/16 01:04:43 joerg Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/12/17 19:10:22 joerg Exp $
 
 BUILTIN_PKG:=	xextproto
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_FILES.H_XEXTPROTO=	\
 ###
 .if ${X11BASE} == ${LOCALBASE}
 IS_BUILTIN.xextproto=	no
-.elif !defined(IS_BUILTIN.xproto)
+.elif !defined(IS_BUILTIN.xextproto)
 IS_BUILTIN.xextproto=	no
 #
 # Here, we skip checking whether the files are under ${LOCALBASE} since
