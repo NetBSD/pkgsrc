@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2006/12/17 17:55:49 salo Exp $
 #
 
-DISTNAME=	nmap-4.11
+DISTNAME=	nmap-4.20
 CATEGORIES=	net security
 MASTER_SITES=	http://insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,9 @@ HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+BUILDLINK_API_DEPENDS.libpcap=	libpcap>=0.9.4
+BUILDLINK_API_DEPENDS.libpcre=	libpcre>=6.7
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -40,7 +43,7 @@ CFLAGS.SunOS+=	-D__FUNCTION__=__FILE__
 # is only understood by the GNU compiler. For a normal build the dependen-
 # cies are not needed anyway, only when patching files and fixing bugs.
 pre-build:
-	echo "# ignored" > ${WRKSRC}/makefile.dep
+	${ECHO} "# ignored" > ${WRKSRC}/makefile.dep
 .endif
 
 .include "../../devel/pcre/buildlink3.mk"
