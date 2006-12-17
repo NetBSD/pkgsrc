@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2032 2006/12/17 21:08:26 salo Exp $
+$NetBSD: CHANGES-2006,v 1.2033 2006/12/17 21:54:29 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5664,3 +5664,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/nessus-core to 2.2.9 [salo 2006-12-17]
 	Updated security/nessus-plugins to 2.2.9 [salo 2006-12-17]
 	Updated security/nessus to 2.2.9 [salo 2006-12-17]
+	Updated net/tor to 0.1.1.26 [tv 2006-12-17]
