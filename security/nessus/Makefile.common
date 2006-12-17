@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2006/04/25 12:45:57 salo Exp $
+# $NetBSD: Makefile.common,v 1.29 2006/12/17 21:06:22 salo Exp $
 #
 # Common Makefile for:
 #  * nessus-core
@@ -6,24 +6,17 @@
 #  * nessus-plugins
 #  * libnasl
 
-VERS=		2.2.7
+VERS=		2.2.9
 
 CATEGORIES=	security x11 net
 MASTER_SITES?=	ftp://ftp.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.cis.fed.gov/pub/nessus/nessus-${VERS}/src/ \
 		ftp://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/src/ \
 		http://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/src/ \
-		ftp://nessus.via.ecp.fr/nessus/nessus-${VERS}/src/ \
-		ftp://cvs.nessus.org/pub/nessus/nessus-${VERS}/src/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/nessus/nessus-${VERS}/src/ \
 		ftp://ftp.chg.ru/pub/security/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.sekure.net/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.nectec.or.th/pub/mirrors/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.pt.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.au.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.stuff.ca/pub/nessus/nessus-${VERS}/src/ \
+		ftp://ftp.wiretapped.net/pub/security/vulnerability-assessment/nessus/nessus-${VERS}/src/ \
 		ftp://ftp.at.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.linux.org.tr/pub/security/nessus/nessus-${VERS}/src/
+		ftp://ftp.linux.org.tr/pub/mirrors/nessus/nessus-${VERS}/src/
 
 MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://www.nessus.org/
