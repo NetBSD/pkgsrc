@@ -1,13 +1,26 @@
-$NetBSD: patch-aa,v 1.7 2005/11/03 19:09:46 martti Exp $
+$NetBSD: patch-aa,v 1.7.8.1 2006/12/18 14:28:32 ghen Exp $
 
---- Makefile.in.orig	2005-05-07 22:19:49.000000000 +0300
-+++ Makefile.in	2005-11-03 18:43:25.000000000 +0200
-@@ -112,7 +112,7 @@
+--- Makefile.in.orig	2006-12-01 23:46:50.000000000 +0000
++++ Makefile.in	2006-12-14 11:23:26.000000000 +0000
+@@ -63,10 +63,10 @@
+ 	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPSHUT_OBJS)
+ 
+ ftptop$(EXEEXT): lib utils
+-	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPTOP_OBJS) $(CURSES_LIBS) -lsupp
++	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPTOP_OBJS) $(CURSES_LIBS) -lsupp -lintl
+ 
+ ftpwho$(EXEEXT): lib utils
+-	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPWHO_OBJS) -lsupp
++	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPWHO_OBJS) -lsupp -lintl
+ 
+ 
+ # BSD install -d doesn't work, so ...
+@@ -121,7 +121,7 @@
  	$(INSTALL_MAN) $(top_srcdir)/utils/ftpwho.1   $(DESTDIR)$(mandir)/man1
  	$(INSTALL_MAN) $(top_srcdir)/src/xferlog.5    $(DESTDIR)$(mandir)/man5
  
--install-all: install-proftpd install-modules install-utils install-conf install-man $(INSTALL_DEPS)
-+install-all: install-proftpd install-modules install-utils install-man $(INSTALL_DEPS)
+-install-all: install-proftpd install-modules install-utils install-conf install-man install-headers install-locales $(INSTALL_DEPS)
++install-all: install-proftpd install-modules install-utils install-man install-headers install-locales $(INSTALL_DEPS)
  
  install: all install-all
  
