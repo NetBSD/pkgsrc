@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:15 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/18 01:36:45 wiz Exp $
 #
 
 DISTNAME=	glickomania-1.0
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://hibase.cs.hut.fi/~cessu/glickomania/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hibase.cs.hut.fi/~cessu/glickomania/
 COMMENT=	Clear a board by removing groups of identical, adjacent tiles
 
