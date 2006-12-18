@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/12/18 16:32:57 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/18 23:53:51 wiz Exp $
 #
 
 DISTNAME=		monsterz-0.7.0
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://sam.zoy.org/monsterz/
 
