@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2006/10/28 21:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2006/12/18 10:13:38 joerg Exp $
 
 DISTNAME=       xpm-3.4k
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://koala.ilog.fr/ftp/pub/xpm/ \
 		${MASTER_SITE_XCONTRIB:=libraries/}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://koala.ilog.fr/lehors/xpm.html
 COMMENT=	The X Pixmap library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+CONFLICTS+=		libXpm-[0-9]*
 
 USE_IMAKE=	yes
 
