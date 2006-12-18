@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/13 19:26:01 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/12/18 01:34:18 wiz Exp $
 #
 
 DISTNAME=	easytag-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=easytag/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://easytag.sourceforge.net/
 COMMENT=	Tool to view, edit and write ID3 v1&2 TAGs with a GTK+ interface
 
