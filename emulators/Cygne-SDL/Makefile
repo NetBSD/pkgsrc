@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/09/09 02:41:59 obache Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/18 01:34:54 wiz Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
@@ -7,7 +7,7 @@ PKGREVISION=		5
 CATEGORIES=		emulators
 MASTER_SITES=		http://sdlemu.ngemu.com/OpenProjects/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://icculus.org/Cygne-SDL/
 COMMENT=		Bandai Wonderswan Color handheld emulator
 
