@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.72 2006/12/13 08:49:05 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.73 2006/12/18 12:37:59 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -191,3 +191,5 @@ Pullup ticket 1956 - requested by wiz
 security update for streamripper
 Pullup ticket 1957 - requested by adrianp
 security update for kronolith
+Pullup ticket 1959 - requested by ghen
+security update for clamav
