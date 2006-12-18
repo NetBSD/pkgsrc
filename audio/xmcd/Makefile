@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/12/15 20:32:53 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2006/12/18 11:15:19 tron Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    9
@@ -21,6 +21,8 @@ MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
 MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/man/man1
 MAKE_ENV+=		SHELL=${SH:Q}
 
+CHECK_PERMS_SKIP+=	lib/X11/xmcd/discog/*
+
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-S]*-*
 
 .include "../../mk/bsd.prefs.mk"
@@ -34,7 +36,7 @@ ARCHBIN=	${PREFIX}/lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}
 XMCDDIR=	${PREFIX}/lib/X11/xmcd
 PLIST_SUBST+=	ARCH=${ARCH:Q}
 
-_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4711
+_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4511
 SPECIAL_PERMS=	${ARCHBIN}/cda ${_SETUID_ROOT}
 SPECIAL_PERMS+=	${ARCHBIN}/xmcd ${_SETUID_ROOT}
 
