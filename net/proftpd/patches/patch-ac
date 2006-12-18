@@ -1,49 +1,49 @@
-$NetBSD: patch-ac,v 1.4.6.2 2006/11/23 12:30:27 ghen Exp $
+$NetBSD: patch-ac,v 1.4.6.3 2006/12/18 14:28:32 ghen Exp $
 
---- src/main.c.orig	2006-03-15 19:41:01.000000000 +0000
-+++ src/main.c
-@@ -116,6 +116,8 @@ static unsigned char have_dead_child = F
+--- configure.in.orig	2006-12-06 18:55:14.000000000 +0000
++++ configure.in	2006-12-14 10:28:37.000000000 +0000
+@@ -486,19 +486,22 @@
+   [ if test x"$enableval" = x"yes" ; then
  
- static char sbuf[PR_TUNABLE_BUFFER_SIZE] = {'\0'};
+       dnl The libintl library is only needed on non-GNU systems.  If it
+-      dnl is not installed, and the admin enables NLS support, the linker
+-      dnl will complain.
++      dnl is not installed, and the admin enables NLS support, then we
++      dnl should abort.
  
-+#define PR_DEFAULT_CMD_BUFSZ    512
-+
- static char **Argv = NULL;
- static char *LastArgv = NULL;
- static const char *PidPath = PR_PID_FILE_PATH;
-@@ -820,17 +822,24 @@ static void cmd_loop(server_rec *server,
-       pr_timer_reset(TIMER_IDLE, NULL);
- 
-     if (cmd_buf_size == -1) {
--      long *buf_size = get_param_ptr(main_server->conf,
--        "CommandBufferSize", FALSE);
+       AC_CHECK_LIB(intl, bindtextdomain,
+-        ac_build_addl_libs="-lintl $ac_build_addl_libs"
+-        AC_DEFINE(HAVE_LIBINTL, 1, [Define if libintl is present.])
 -
--      if (buf_size == NULL || *buf_size <= 0)
--        cmd_buf_size = 512;
+-        dnl Will it be problem that LIBS is not automatically updated
+-        dnl to include -lintl here, since we are defining our own actions?
++        [ac_build_addl_libs="-lintl $ac_build_addl_libs"
++         AC_DEFINE(HAVE_LIBINTL, 1, [Define if libintl is present.])
++         AC_DEFINE(PR_USE_NLS, 1, [Define if using NLS support.])
++         ENABLE_NLS="1"
++        ],
++        [AC_CHECK_LIB(c, bindtextdomain,
++          [AC_DEFINE(PR_USE_NLS, 1, [Define if using NLS support.])
++           ENABLE_NLS="1"
++          ],
++          [AC_MSG_ERROR([libintl support, required for NLS, not present -- aborting])]
++        ])
+       )
 -
--      else if (*buf_size + 1 > sizeof(buf)) {
--	pr_log_pri(PR_LOG_WARNING, "Invalid CommandBufferSize size given. "
--          "Resetting to 512.");
--	cmd_buf_size = 512;
--      }
-+      int *bufsz = get_param_ptr(main_server->conf, "CommandBufferSize", FALSE);
-+    if (bufsz == NULL) {
-+      cmd_buf_size = PR_DEFAULT_CMD_BUFSZ;
-+    }
-+    else if ( bufsz <= 0 ) {
-+      pr_log_pri(PR_LOG_WARNING, "invalid CommandBufferSize size (%d) "
-+                 "given, resetting to default buffer size (%u)",
-+		 *bufsz, (unsigned int) PR_DEFAULT_CMD_BUFSZ);
-+      cmd_buf_size = PR_DEFAULT_CMD_BUFSZ;
-+    } else if (*bufsz + 1 > sizeof(buf)) {
-+	     pr_log_pri(PR_LOG_WARNING, "invalid CommandBufferSize size (%d) "
-+			"given, using default buffer size (%u) instead",
-+			*bufsz, (unsigned int) PR_DEFAULT_CMD_BUFSZ);
-+	     cmd_buf_size = PR_DEFAULT_CMD_BUFSZ;
-+	   } else {
-+	     pr_log_debug(DEBUG1, "setting CommandBufferSize to %d", *bufsz);
-+	     cmd_buf_size = (long) *bufsz;
-+	   }
-     }
+-      AC_DEFINE(PR_USE_NLS, 1, [Define if using NLS support.])
+-      ENABLE_NLS="1"
+     fi
+   ])
  
-     buf[cmd_buf_size - 1] = '\0';
+@@ -1927,9 +1930,9 @@
+ AC_DEFINE_UNQUOTED(PR_CONFIG_DIR, "`eval echo "${sysconfdir}"`")
+ AC_DEFINE_UNQUOTED(PR_LIBEXEC_DIR, "`eval echo "${libexecdir}"`")
+ AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${datadir}/locale"`")
+-AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/proftpd"`")
++AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/run"`")
+ AC_DEFINE_UNQUOTED(PR_CONFIG_FILE_PATH, "`eval echo "${sysconfdir}/proftpd.conf"`")
+-AC_DEFINE_UNQUOTED(PR_PID_FILE_PATH, "`eval echo "${localstatedir}/proftpd.pid"`")
++AC_DEFINE_UNQUOTED(PR_PID_FILE_PATH, "`eval echo "${localstatedir}/run/proftpd.pid"`")
+ 
+ prefix="$pr_saved_prefix"
+ exec_prefix="$pr_saved_exec_prefix"
