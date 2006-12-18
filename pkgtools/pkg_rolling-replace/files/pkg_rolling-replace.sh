@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.1.1.1 2006/12/05 18:23:52 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.2 2006/12/18 12:36:17 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -67,14 +67,8 @@ test -n "$PKGSRCDIR" || PKGSRCDIR=/usr/pkgsrc
 
 unset PKG_PATH || true  #or pkgsrc makefiles will complain
 
-MAKE=make
-# XXX Find BSD make at package build time.
-UNAME=`uname`
-case "$UNAME" in
-    Darwin)
-    MAKE=bmake
-    ;;
-esac
+# Substituted by pkgsrc at pre-configure time.
+MAKE=@MAKE@
 
 usage()
 {
