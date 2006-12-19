@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/10/24 08:48:36 rillig Exp $
+# $NetBSD: Makefile,v 1.59 2006/12/19 18:21:10 wiz Exp $
 
 DISTNAME=	xemacs-21.5.27
 
@@ -63,8 +63,8 @@ CFLAGS+=		-fno-strict-aliasing
 INFO_FILES=		# PLIST
 
 # build PATH in the dumped emacs is not a problem
-CHECK_WRKREF_SKIP+=	${PREFIX}/bin/xemacs
-CHECK_WRKREF_SKIP+=	${PREFIX}/bin/xemacs-${EMACSVERSION}
+CHECK_WRKREF_SKIP+=	bin/xemacs
+CHECK_WRKREF_SKIP+=	bin/xemacs-${EMACSVERSION}
 
 post-patch:
 	rm -f ${WRKSRC}/etc/ctags.1.orig
