@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+
+--- Imake.tmpl.orig	2006-12-18 01:09:37.000000000 +0100
++++ Imake.tmpl
+@@ -1447,9 +1447,9 @@ TCLIBDIR = TclLibDir
+ #ifndef DependCmd
+ #if UseGccMakeDepend
+ #ifdef UseInstalled		/* assume BINDIR in path */
+-#define DependCmd gccmakedep
++#define DependCmd ccmakedep
+ #else
+-#define DependCmd $(DEPENDSRC)/gccmakedep
++#define DependCmd $(DEPENDSRC)/ccmakedep
+ #endif
+ #elif UseCCMakeDepend
+ #ifdef UseInstalled		/* assume BINDIR in path */
