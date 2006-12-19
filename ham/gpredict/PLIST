@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/14 22:10:24 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/19 19:11:19 wiz Exp $
 bin/gpredict
 man/man1/gpredict.1
 share/gpredict/AUTHORS
@@ -19,6 +19,7 @@ share/gpredict/data/radar.tle
 share/gpredict/data/sample.qth
 share/gpredict/data/science.tle
 share/gpredict/data/weather.tle
+share/locale/en_GB/LC_MESSAGES/goocanvas.mo
 share/pixmaps/gpredict/icons/gpredict-antenna.png
 share/pixmaps/gpredict/icons/gpredict-azel-small.png
 share/pixmaps/gpredict/icons/gpredict-calendar.png
