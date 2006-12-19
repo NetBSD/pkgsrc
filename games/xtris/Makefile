@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/19 12:28:00 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/19 12:40:48 rillig Exp $
 #
 
 DISTNAME=	xtris-1.15
@@ -12,6 +12,8 @@ COMMENT=	Multi-player version of a popular game for the X Window system
 
 WRKSRC=		${WRKDIR}/xtris
 USE_X11BASE=	yes
+LIBS.SunOS+=	-lsocket -lnsl
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 .include "options.mk"
 
