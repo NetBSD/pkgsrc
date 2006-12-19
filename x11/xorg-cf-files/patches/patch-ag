@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+
+--- Imake.cf.orig	2005-11-08 06:33:24.000000000 +0000
++++ Imake.cf
+@@ -234,8 +234,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+ # ifdef mc68000
+ #   define Mc68020Architecture
+ # endif
+-# ifdef __arm32__
++# if defined(__arm__) || defined(__arm32__)
+ #   define Arm32Architecture
++#   undef __arm__
+ #   undef __arm32__
+ # endif
+ # ifdef __vax__
+@@ -246,6 +247,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+ #   define PpcArchitecture
+ #   undef __powerpc__
+ # endif
++# ifdef __x86_64__
++#  define AMD64Architecture
++#  undef __x86_64__
++# endif
+ #endif /* NetBSD */
+ 
+ /* Systems based on kernel of NetBSD */

@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+
+--- darwin.cf.orig	2005-12-06 11:18:05.000000000 +0100
++++ darwin.cf	2005-12-06 11:20:10.000000000 +0100
+@@ -97,7 +97,7 @@
+  * Turn off to build on raw Darwin systems.
+  */
+ #ifndef DarwinQuartzSupport
+-# define DarwinQuartzSupport    YES
++# define DarwinQuartzSupport    @@DARWIN_USE_QUARTZ@@
+ #endif
+ 
+ #if DarwinQuartzSupport
+@@ -170,7 +170,7 @@
+  * so we use the 3.1-based version in this case.
+  */
+ #if (GccMajorVersion == 3) && (GccMinorVersion == 3)
+-# define CppCmd                 /usr/bin/cpp3
++# define CppCmd                 /usr/bin/cpp
+ #else
+ # define CppCmd                 /usr/bin/cpp
+ #endif
+@@ -184,8 +184,8 @@
+ #endif
+ 
+ /* we have a gcc compatible compiler, but its not called gcc */
+-#define CcCmd                   /usr/bin/cc
+-#define CplusplusCmd            /usr/bin/c++
++#define CcCmd                   @@PKGSRC_CC@@
++#define CplusplusCmd            @@PKGSRC_CXX@@
+ 
+ /* default flags to pass to cc */
+ #ifndef DefaultCCOptions
+@@ -213,7 +213,7 @@
+ #ifdef PpcDarwinArchitecture
+ # define DarwinMachineDefines   -D__powerpc__
+ # if HasGcc3
+-#  define OptimizedCDebugFlags  -Os
++#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ # else
+ #  define OptimizedCDebugFlags  -O2
+ # endif
+@@ -223,7 +223,7 @@
+ #ifdef i386DarwinArchitecture
+ # define DarwinMachineDefines   -D__i386__
+ # if HasGcc3
+-#  define OptimizedCDebugFlags  -Os
++#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ # else
+ #  define OptimizedCDebugFlags  -O2 -fno-strength-reduce
+ # endif
