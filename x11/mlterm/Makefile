@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2006/11/12 15:13:56 hira Exp $
+# $NetBSD: Makefile,v 1.47 2006/12/19 07:53:57 wiz Exp $
 
-DISTNAME=	mlterm-2.9.2
-PKGREVISION=	4
+DISTNAME=	mlterm-2.9.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
@@ -27,7 +26,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
-CONFIGURE_ARGS+=	--with-type-engines=xft
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--without-libintl-prefix
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
