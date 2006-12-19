@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/14 20:58:18 adam Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/19 13:39:14 rillig Exp $
 
 DISTNAME=	rzip-2.1
 CATEGORIES=	archivers
@@ -9,11 +9,12 @@ HOMEPAGE=	http://rzip.samba.org/
 COMMENT=	Create or extract .rz files, like gzip but smaller
 
 GNU_CONFIGURE=	yes
+MAKE_FLAGS+=	INSTALL_MAN=${PREFIX}/${PKGMANDIR}
 
 post-install:
 	${LN} -f ${PREFIX}/bin/rzip ${PREFIX}/bin/runzip
-	${RM} -f ${PREFIX}/man/man1/runzip.1
-	${LN} -s rzip.1 ${PREFIX}/man/man1/runzip.1
+	${RM} -f ${PREFIX}/${PKGMANDIR}/man1/runzip.1
+	${LN} -s rzip.1 ${PREFIX}/${PKGMANDIR}/man1/runzip.1
 
 .include "../../mk/bsd.prefs.mk"
 
