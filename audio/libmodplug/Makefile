@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/19 20:08:22 wiz Exp $
 #
 
-DISTNAME=		libmodplug-0.7
-PKGREVISION=		1
+DISTNAME=		libmodplug-0.8.4
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 
