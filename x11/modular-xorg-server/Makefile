@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/14 17:08:58 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/19 17:36:00 joerg Exp $
 
 DISTNAME=	xorg-server-1.1.1
 PKGNAME=	modular-${DISTNAME}
@@ -56,9 +56,7 @@ BUILDLINK_API_DEPENDS.xkbui+=		xkbui>=1.0.2
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/recordproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
 .include "../../x11/resourceproto/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
