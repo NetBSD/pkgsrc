@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:46 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/19 23:38:49 rillig Exp $
 #
 
 DISTNAME=	elf-0.5.3
@@ -16,11 +16,11 @@ GNU_CONFIGURE=	YES
 BUILD_DIRS=	${WRKSRC}/src
 BUILD_TARGET=	elf
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/elf ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/elf.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/elf.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
