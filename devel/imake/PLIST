@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/19 22:56:06 joerg Exp $
+bin/ccmakedep
+bin/cleanlinks
+bin/imake
+bin/makeg
+bin/mergelib
+bin/mkdirhier
+bin/mkhtmlindex
+bin/revpath
+bin/xmkmf
+man/man1/ccmakedep.1
+man/man1/cleanlinks.1
+man/man1/imake.1
+man/man1/makeg.1
+man/man1/mergelib.1
+man/man1/mkdirhier.1
+man/man1/mkhtmlindex.1
+man/man1/revpath.1
+man/man1/xmkmf.1
