@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+
+--- bsdLib.rules.orig	2006-02-03 04:02:44.000000000 +0100
++++ bsdLib.rules
+@@ -229,11 +229,7 @@ LintLibReferences(varname,libname,libsou
+  * InstallSharedLibrary - generate rules to install the shared library.
+  * NOTE: file must be executable, hence "INSTBINFLAGS"
+  */
+-#if !defined(FreeBSDArchitecture) || defined(DragonFlyArchitecture)
+ INSTALLMINORREV = true
+-#else
+-INSTALLMINORREV = false
+-#endif
+ 
+ #ifndef InstallSharedLibrary
+ #define InstallSharedLibrary(libname,rev,dest)				@@\
