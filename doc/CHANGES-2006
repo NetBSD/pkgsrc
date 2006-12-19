@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2040 2006/12/19 20:09:02 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2041 2006/12/19 22:58:15 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5672,3 +5672,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/openobex to 1.3nb1 [wiz 2006-12-19]
 	Updated ham/gpredict to 0.6.1nb1 [wiz 2006-12-19]
 	Updated audio/libmodplug to 0.8.4 [wiz 2006-12-19]
+	Added x11/xorg-cf-files version 1.0.2 [joerg 2006-12-19]
+	Added devel/imake version 1.0.2 [joerg 2006-12-19]
