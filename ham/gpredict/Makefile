@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/12/14 22:10:24 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/19 19:11:19 wiz Exp $
 
 DISTNAME=	gpredict-0.6.1
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=groundstation/}
 
@@ -14,6 +15,7 @@ USE_PKGLOCALEDIR=yes
 GNU_CONFIGURE=	yes
 
 .include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
 .include "../../devel/gal/buildlink3.mk"
 #.include "../../ham/hamlib/buildlink3.mk"
