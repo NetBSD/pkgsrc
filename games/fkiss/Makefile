@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/12/19 12:06:28 rillig Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
 CFLAGS+=		-DDEV_SOUND="\"${DEVOSSSOUND}\""
 BUILD_TARGET=		fkiss
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 post-patch:
 	${MV} ${WRKSRC}/sound.c ${WRKSRC}/sound.c.bak
@@ -34,7 +34,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fkiss ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/fkiss.man ${PREFIX}/man/man6/fkiss.6
+	${INSTALL_MAN} ${WRKSRC}/fkiss.man ${PREFIX}/${PKGMANDIR}/man6/fkiss.6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/fkiss
 	${INSTALL_DATA} ${WRKSRC}/fkissrc.smp \
 		${PREFIX}/share/examples/fkiss/fkissrc
