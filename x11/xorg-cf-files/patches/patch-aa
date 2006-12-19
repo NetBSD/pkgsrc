@@ -1,0 +1,87 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+
+--- NetBSD.cf.orig	2005-11-30 06:20:06.000000000 +0100
++++ NetBSD.cf
+@@ -126,7 +126,7 @@ XCOMM operating system:  OSName (OSMajor
+ # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
+       (OSMajorVersion == 2 && OSMinorVersion < 99) || \
+       (OSMajorVersion < 2))
+-#  define LibraryMTDefines	-DUSE_NBSD_THREADLIB
++#  define LibraryMTDefines	@@NETBSD_THREADLIB@@
+ # endif
+ # define SystemMTDefines	-D_REENTRANT
+ # define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
+@@ -150,7 +150,7 @@ XCOMM operating system:  OSName (OSMajor
+ #define MkdirHierCmd		mkdir -p
+ 
+ #undef CcCmd
+-#define CcCmd 			gcc
++#define CcCmd 			@@PKGSRC_CC@@
+ #ifndef DefaultCCOptions
+ #if defined(UseInstalled)
+ #define DefaultCCOptions 	/**/
+@@ -166,7 +166,7 @@ XCOMM operating system:  OSName (OSMajor
+ #endif
+ #endif
+ 
+-#define CppCmd			cpp
++#define CppCmd			@@PKGSRC_CPP@@
+ #define StandardCppOptions	-traditional
+ #define StandardCppDefines	/**/
+ #define PreProcessCmd   	CcCmd -E
+@@ -195,7 +195,7 @@ XCOMM operating system:  OSName (OSMajor
+  * Disabled for NetBSD/vax until I figure out the scheme. --CS 
+  */
+ #if ((OSMajorVersion > 0) && defined(i386Architecture)) || \
+-    defined(PpcArchitecture)
++    defined(PpcArchitecture) || defined(AMD64Architecture)
+ #  ifndef DoLoadableServer
+ #  define DoLoadableServer	YES
+ #  endif
+@@ -231,7 +231,7 @@ XCOMM operating system:  OSName (OSMajor
+ #  define ServerExtraSysLibs	-li386
+ # endif
+ #else
+-# define OptimizedCDebugFlags 	-O2
++# define OptimizedCDebugFlags 	-O2 GccAliasingArgs
+ # if defined(SparcArchitecture)
+ #  define ServerOSDefines 	-DDDXOSINIT
+ # elif defined(AlphaArchitecture)
+@@ -284,6 +284,8 @@ XCOMM operating system:  OSName (OSMajor
+ #  ifndef XFree86ConsoleDefines
+ #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
+ #  endif
++#elif defined(ia64Architecture) || defined(AMD64Architecture)
++#define ServerExtraDefines GccGasOption XFree86ServerDefines -D_XSERVER64
+ #else
+ #  define ServerExtraDefines GccGasOption
+ #endif
+@@ -404,6 +406,10 @@ XCOMM operating system:  OSName (OSMajor
+ # endif /* MTRRBuiltin */
+ #endif /* i386Architecture */
+ 
++#if defined(AMD64Architecture)
++# define HasMTRRBuiltin                YES
++#endif
++
+ /*
+  * agpgart support (NetBSD 1.5Y and up)
+  */
+@@ -590,7 +596,7 @@ InstallManPageAliasesBase(file,destdir,a
+ # define BuildXInputLib          YES
+ #endif
+ 
+-#if defined(i386Architecture) || defined(Arm32Architecture) || defined(AlphaArchitecture) || defined(PpcArchitecture)
++#if defined(i386Architecture) || defined(Arm32Architecture) || defined(AlphaArchitecture) || defined(PpcArchitecture) || defined(AMD64Architecture)
+ # include <xorg.cf>
+ #endif
+ 
+@@ -651,7 +664,7 @@ sed 's/\.[0-9]*$$//'`
+  */
+ #ifdef PpcArchitecture
+ 
+-# define OptimizedCDebugFlags 	-O2
++# define OptimizedCDebugFlags 	-O2 GccAliasingArgs
+ # define XkbServerDefines	-DXKB_ALWAYS_USES_SOFT_REPEAT
+ 
+ # ifndef DoLoadableServer
