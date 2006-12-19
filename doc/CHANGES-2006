@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2035 2006/12/19 07:54:51 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.2036 2006/12/19 12:19:50 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/tor to 0.1.1.26 [tv 2006-12-17]
 	Updated multimedia/ns-flash to 7.0.69 [perry 2006-12-18]
 	Updated x11/mlterm to 2.9.3 [wiz 2006-12-19]
+	Added x11/xev version 1.0.2 [reed 2006-12-18]
