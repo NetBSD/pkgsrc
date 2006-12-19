@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+
+--- linux.cf.orig	2005-12-06 11:06:50.000000000 +0100
++++ linux.cf	2005-12-06 11:09:08.000000000 +0100
+@@ -609,10 +609,10 @@
+ #  if defined (i386Architecture) && ((GccMajorVersion >3) \
+    || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
+ #   ifndef CcCmd
+-#    define CcCmd		gcc -m32
++#    define CcCmd		@@PKGSRC_CC@@
+ #   endif
+ #   ifndef CplusplusCmd
+-#    define CplusplusCmd	c++ -m32
++#    define CplusplusCmd	@@PKGSRC_CXX@@
+ #   endif
+ #  endif
+ #  if defined (Ppc64Architecture)
+@@ -624,8 +624,8 @@
+ #   endif
+ #  endif
+ #  ifndef CcCmd
+-#   define CcCmd		gcc
+-#   define CplusplusCmd		c++
++#   define CcCmd		@@PKGSRC_CC@@
++#   define CplusplusCmd		@@PKGSRC_CXX@@
+ #  endif
+ #  ifndef AsCmd
+ #   define AsCmd		CcCmd -c -x assembler
+@@ -779,7 +779,6 @@
+ #define YaccCmd			bison -y
+ #define LexCmd			flex -l
+ #define HasFlex			YES
+-#define LexLib			-lfl
+ #define PreProcessCmd		CcCmd -E
+ #define PostIncDir		DefaultGccIncludeDir
+ #define LdCombineFlags		-r
+@@ -853,7 +852,7 @@
+ 
+ #ifdef i386Architecture
+ # ifndef OptimizedCDebugFlags
+-#  define OptimizedCDebugFlags	DefaultGcc2i386Opt
++#  define OptimizedCDebugFlags	@@PKGSRC_CFLAGS@@
+ # endif
+ # define LinuxMachineDefines	-D__i386__
+ # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
+@@ -1053,9 +1052,6 @@ InstallNamedTargetNoClobber(install,file
+ #define TtClientDepLibs $(DEPTTLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+ 
+ #if HaveLib64
+-# ifndef LibDirName
+-#  define LibDirName		lib64
+-# endif
+ # ifndef SystemUsrLibDir
+ #  define SystemUsrLibDir	/usr/lib64
+ # endif
