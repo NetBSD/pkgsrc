@@ -1,0 +1,11 @@
+The imake package contains the imake utility for generating Makefiles,
+plus the following support programs:
+
+   - ccmakedep
+   - cleanlinks
+   - makeg
+   - mergelib
+   - mkdirhier
+   - mkhtmlindex
+   - revpath
+   - xmkmf
