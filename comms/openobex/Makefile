@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/10/04 20:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/19 18:09:23 wiz Exp $
 #
 
 DISTNAME=	openobex-1.3
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
@@ -13,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE=	openobex-config.in
+PKGCONFIG_OVERRIDE=	openobex.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
