@@ -1,4 +1,4 @@
-#     $NetBSD: Darwin.x11.dist,v 1.8 2006/04/09 12:37:01 wiz Exp $
+#     $NetBSD: Darwin.x11.dist,v 1.9 2006/12/19 17:54:50 wiz Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -613,6 +613,10 @@
                 ..
             ..
             se
+                LC_MESSAGES
+                ..
+            ..
+            si
                 LC_MESSAGES
                 ..
             ..
