@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2045 2006/12/20 11:02:56 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.2046 2006/12/20 11:36:10 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5677,6 +5677,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/opera to 9.10 [jdolecek 2006-12-20]
 	Updated mail/tmda to 1.1.9nb1 [schmonz 2006-12-20]
 	Updated devel/libglade2 to 2.6.0nb3 [wiz 2006-12-20]
+	Updated comms/asterisk to 1.2.14 [mjl 2006-12-20]
 	Updated www/firefox to 1.5.0.9 [ghen 2006-12-20]
 	Updated www/firefox-bin to 1.5.0.9 [ghen 2006-12-20]
 	Updated www/firefox-gtk1 to 1.5.0.9 [ghen 2006-12-20]
