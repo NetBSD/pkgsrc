@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.189 2006/11/17 09:19:37 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.190 2006/12/20 01:04:47 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -420,9 +420,9 @@ BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 .endif
 #
 # Add the X11 library directory to the library search paths if the package
-# uses X11.
+# uses X11 and we are not using modular Xorg.
 #
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 .  if empty(BUILDLINK_LDFLAGS:M-L${X11BASE}/lib${LIBABISUFFIX})
 BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib${LIBABISUFFIX}
 .  endif
@@ -482,7 +482,7 @@ do-buildlink: buildlink-directories
 buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_BINDIR}
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
 .endif
@@ -759,7 +759,7 @@ _BLNK_PASSTHRU_RPATHDIRS+=	${LOCALBASE}/lib
 # Allow ${X11BASE}/lib in the runtime library search path for USE_X11
 # packages so that X11 libraries can be found.
 #
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_PASSTHRU_RPATHDIRS+=	${X11BASE}/lib
 .endif
 #
@@ -784,7 +784,7 @@ _BLNK_MANGLE_DIRS+=	/usr/lib
 _BLNK_MANGLE_DIRS+=	${PREFIX}
 .endif
 _BLNK_MANGLE_DIRS+=	${LOCALBASE}
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_MANGLE_DIRS+=	${X11BASE}
 .endif
 
@@ -811,7 +811,7 @@ _BLNK_UNPROTECT_DIRS+=	/usr/lib
 _BLNK_UNPROTECT_DIRS+=	${PREFIX}
 .endif
 _BLNK_UNPROTECT_DIRS+=	${LOCALBASE}
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_UNPROTECT_DIRS+=	${X11BASE}
 .endif
 _BLNK_UNPROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
@@ -866,7 +866,7 @@ _BLNK_TRANSFORM+=	opt-sub:-L/usr/lib:-L${_BLNK_MANGLE_DIR./usr/lib}
 # the canonical actual installed paths.
 #
 _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}:${LOCALBASE}
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}:${X11BASE}
 .endif
 #
@@ -894,7 +894,7 @@ _BLNK_TRANSFORM+=	depot:${DEPOTBASE}:${LOCALBASE}
 # ${LOCALBASE} or ${X11BASE} into references into ${BUILDLINK_DIR}.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  if defined(USE_X11)
+.  if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=	P:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .  endif
 _BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
@@ -904,7 +904,7 @@ _BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 # (do so before transforming references to ${LOCALBASE} unless the
 # ${X11BASE} path is contained in ${LOCALBASE}'s path)
 #
-.if defined(USE_X11) && empty(LOCALBASE:M${X11BASE}*)
+.if defined(USE_X11) && empty(LOCALBASE:M${X11BASE}*) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=       I:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=       L:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .endif
@@ -920,7 +920,7 @@ _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 # (do so only after transforming references to ${LOCALBASE} if the
 # ${X11BASE} path is contained in ${LOCALBASE}'s path)
 #
-.if defined(USE_X11) && !empty(LOCALBASE:M${X11BASE}*)
+.if defined(USE_X11) && !empty(LOCALBASE:M${X11BASE}*) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=	I:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .endif
@@ -931,7 +931,7 @@ _BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=	untransform:sub-mangle:${PREFIX}:${_BLNK_MANGLE_DIR.${PREFIX}}
 .endif
 _BLNK_TRANSFORM+=	untransform:sub-mangle:${LOCALBASE}:${_BLNK_MANGLE_DIR.${LOCALBASE}}
-.if defined(USE_X11)
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=	untransform:sub-mangle:${X11BASE}:${_BLNK_MANGLE_DIR.${X11BASE}}
 .endif
 #
