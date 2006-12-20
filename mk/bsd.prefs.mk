@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.241 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.242 2006/12/20 01:04:46 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -560,7 +560,10 @@ PKG_DEFAULT_OPTIONS?=	# empty
 PKG_OPTIONS?=		# empty
 
 # we want this *before* compiler.mk, so that compiler.mk paths override them
-PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
+.if ${X11_TYPE} != "modular" && defined(USE_X11)
+PREPEND_PATH+=		${X11BASE}/bin
+.endif
+PREPEND_PATH+=		${LOCALBASE}/bin
 
 # Wrapper framework definitions
 .include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
