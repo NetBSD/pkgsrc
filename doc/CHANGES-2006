@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2047 2006/12/20 12:55:06 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.2048 2006/12/20 14:23:48 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5683,3 +5683,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-gtk1 to 1.5.0.9 [ghen 2006-12-20]
 	Updated mail/thunderbird to 1.5.0.9 [ghen 2006-12-20]
 	Updated mail/thunderbird-gtk1 to 1.5.0.9 [ghen 2006-12-20]
+	Updated www/seamonkey to 1.0.7 [ghen 2006-12-20]
+	Updated www/seamonkey-bin to 1.0.7 [ghen 2006-12-20]
+	Updated www/seamonkey-gtk1 to 1.0.7 [ghen 2006-12-20]
