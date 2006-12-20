@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.5 2006/12/20 23:43:40 dmcmahill Exp $
+
+Already exists upstream.  Needed for compilers such as sun studio compilers
+that do not define __FUNCTION__
+
+--- src/convert_sym.c.orig	2006-08-02 09:34:19.000000000 -0400
++++ src/convert_sym.c
+@@ -51,4 +51,12 @@
+ #endif
+ 
++
++/* __FUNCTION__ seems to be a gcc thing */
++#ifndef __GNUC__
++#define __FUNCTION1(a,b) a ":" #b
++#define __FUNCTION2(a,b) __FUNCTION1(a,b)
++#define __FUNCTION__ __FUNCTION2(__FILE__,__LINE__)
++#endif
++
+ #if 0 /* removed by AVH just to make a -Wall -Werror happy */
+ #ifndef lint
