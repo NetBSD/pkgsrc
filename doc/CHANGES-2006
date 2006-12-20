@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2052 2006/12/20 20:50:20 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.2053 2006/12/20 21:39:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5648,6 +5648,15 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/DarwinStreamingServer version 5.5.4 [adam 2006-12-15]
 	Update x11/rxvt-unicode to 8.1 [martin 2006-12-15]
 	Added x11/libXcomposite version 0.3.1 [joerg 2006-12-15]
+	Updated sysutils/dbus to 1.0.2 [drochner 2006-12-15]
+	Updated multimedia/totem to 2.16.4 [drochner 2006-12-15]
+	Updated devel/pango to 1.14.9 [drochner 2006-12-15]
+	Updated editors/TeXmacs to 1.0.6.7 [drochner 2006-12-15]
+	Updated textproc/intltool to 0.35.1 [drochner 2006-12-15]
+	Added x11/alacarte to 0.10.1 [drochner 2006-12-15]
+	Updated editors/dasher to 4.2.2 [drochner 2006-12-15]
+	Updated x11/gtksourceview to 1.8.2 [drochner 2006-12-15]
+	Updated graphics/gthumb to 2.8.1 [drochner 2006-12-15]
 	Removed www/elinks04 [wiz 2006-12-16]
 	Removed lang/lua4 [wiz 2006-12-16]
 	Updated devel/p5-Graph to 0.80 [bouyer 2006-12-16]
