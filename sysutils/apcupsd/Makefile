@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2006/11/17 19:51:20 bouyer Exp $
+# $NetBSD: Makefile,v 1.47 2006/12/20 20:49:12 bouyer Exp $
 
 DISTNAME=		apcupsd-3.12.4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
+PKGREVISION=		1
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
@@ -24,6 +25,7 @@ PKG_SYSCONFSUBDIR= apcupsd
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 
 CONFIGURE_ARGS+=	--enable-net		# enable NIS network driver
+CONFIGURE_ARGS+=	--enable-usb		# enable USB network driver
 #CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
