@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.49 2006/12/20 00:35:10 joerg Exp $
 #
 
 DISTNAME=		snd-8.3
@@ -30,5 +30,6 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
