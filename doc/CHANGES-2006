@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2042 2006/12/19 23:03:05 jdolecek Exp $
+$NetBSD: CHANGES-2006,v 1.2043 2006/12/20 03:23:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5675,3 +5675,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/xorg-cf-files version 1.0.2 [joerg 2006-12-19]
 	Added devel/imake version 1.0.2 [joerg 2006-12-19]
 	Updated www/opera to 9.10 [jdolecek 2006-12-20]
+	Updated mail/tmda to 1.1.9nb1 [schmonz 2006-12-20]
