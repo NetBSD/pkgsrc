@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/20 00:00:58 joerg Exp $
 #
 
 DISTNAME=		arping-2.05
@@ -20,7 +20,7 @@ LIBS.SunOS+=		-lsocket -lnsl
 BUILD_FOR=		openbsd
 .elif ${OPSYS} == "Linux"
 BUILD_FOR=		linux
-.elif ${OPSYS} == "FreeBSD"
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 BUILD_FOR=		freebsd
 .elif ${OPSYS} == "SunOS"
 BUILD_FOR=		solaris
