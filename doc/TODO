@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5787 2006/12/19 18:08:21 wiz Exp $
+$NetBSD: TODO,v 1.5788 2006/12/20 01:19:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -543,6 +543,7 @@ Suggested package updates
 	o ispell-russian-0.99f8
 	o ispell-slovak-0.3.0
 	o ispman-1.2
+	o ja-trac-0.10.3.1
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
@@ -1079,7 +1080,6 @@ Suggested package updates
 	o top-3.6beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.10.3
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
