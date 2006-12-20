@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 18:11:18 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/20 15:09:12 joerg Exp $
 #
 
 DISTNAME=		libX11-1.0.3
@@ -21,8 +21,6 @@ USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-man-pages=3
 PKGCONFIG_OVERRIDE+=	x11.pc.in
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
