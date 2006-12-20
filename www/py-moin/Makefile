@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/25 18:57:34 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/20 04:56:53 reed Exp $
 #
 
 DISTNAME=	moin-1.5.4
@@ -8,7 +8,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moin/}
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://moinmoin.wiwiwiwiweb.de/
+HOMEPAGE=	http://moinmoin.wikiwikiweb.de/
 COMMENT=	Python clone of WikiWiki
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
