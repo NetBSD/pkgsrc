@@ -1,0 +1,16 @@
+Firmware binary images for use with the iwi(4) driver.
+This is version 3.0 of the firmware which is not compatible
+with older drivers.
+
+Original archive is available from Intel at:
+http://ipw2200.sourceforge.net/firmware.php?fid=4
+
+There are four different images:
+
+iwi-boot.fw		Boot firmware
+iwi-bss.fw		BSS mode (aka infrastructure mode) firmware
+iwi-ibss.fw		IBSS mode (aka ad-hoc mode) firmware
+iwi-ucode-bss.fw	BSS mode microcode
+iwi-ucode-ibss.fw	IBSS mode microcode
+
+To download firmware to your adapter, use the iwictl(8) tool.
