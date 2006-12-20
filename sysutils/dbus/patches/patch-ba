@@ -1,0 +1,14 @@
+$NetBSD: patch-ba,v 1.1.2.1 2006/12/20 17:15:36 ghen Exp $
+
+--- bus/signals.c.orig	2005-11-22 21:37:00.000000000 +0100
++++ bus/signals.c
+@@ -1067,6 +1067,9 @@ match_rule_equal (BusMatchRule *a,
+   if (a->flags != b->flags)
+     return FALSE;
+ 
++  if (a->matches_go_to != b->matches_go_to)
++    return FALSE;
++
+   if ((a->flags & BUS_MATCH_MESSAGE_TYPE) &&
+       a->message_type != b->message_type)
+     return FALSE;
