@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.9 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.10 2006/12/20 03:23:18 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -10,7 +10,7 @@
 	<literal>pkgsrc-users</literal> mailing list.</para>
 
 <qandaset>
-<qandaentry>
+<qandaentry id="devfaq.makeflags">
 
 	<question><para>What is the difference between
 	<varname>MAKEFLAGS</varname>, <varname>.MAKEFLAGS</varname> and
@@ -23,7 +23,7 @@
 	package. [FIXME: What is .MAKEFLAGS for?]</para></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.make">
 
 	<question><para>What is the difference between
 	<varname>MAKE</varname>, <varname>GMAKE</varname> and
@@ -38,7 +38,7 @@
 	package.</para></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.cc">
 
 	<question><para>What is the difference between
 	<varname>CC</varname>, <varname>PKG_CC</varname> and
@@ -53,7 +53,7 @@
 	information about the latter variable.</para></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.bl3flags">
 
 	<question><para>What is the difference between
 	<varname>BUILDLINK_LDFLAGS</varname>,
@@ -63,7 +63,7 @@
 	<answer><para>[FIXME]</para></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.bl3prefix">
 
 	<question><para>Why does <command>make show-var
 	VARNAME=BUILDLINK_PREFIX.<replaceable>foo</replaceable></command>
@@ -76,7 +76,7 @@
 	command.</para></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.master_sites">
 
 	<question><para>What does
 	<literal>${MASTER_SITE_SOURCEFORGE:=package/}</literal> mean? I
@@ -97,7 +97,7 @@
 	together.</para></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.mailinglists">
 
 	<question><para>Which mailing lists are there for package
 	developers?</para></question>
@@ -126,7 +126,7 @@
 	</variablelist></answer>
 
 </qandaentry>
-<qandaentry>
+<qandaentry id="devfaq.documentation">
 
 	<question><para>Where is the pkgsrc
 	documentation?</para></question>
