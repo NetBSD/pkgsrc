@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.75 2006/12/18 20:18:22 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.76 2006/12/20 17:16:26 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -197,3 +197,5 @@ Pullup ticket 1960 - requested by salo
 security update for proftpd
 Pullup ticket 1961 - requested by tv
 security update for tor
+Pullup ticket 1967 - requested by drochner
+security fix for dbus
