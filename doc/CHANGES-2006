@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2051 2006/12/20 17:43:33 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.2052 2006/12/20 20:50:20 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5690,3 +5690,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox2-bin to 2.0.0.1 [ghen 2006-12-20]
 	Added sysutils/iwi-firmware3 version 3.0 [joerg 2006-12-20]
 	Updated sysutils/iwi-firmware to 2.3nb2 [joerg 2006-12-20]
+	Updated sysutils/apcupsd to 3.12.4nb1 [bouyer 2006-12-20]
