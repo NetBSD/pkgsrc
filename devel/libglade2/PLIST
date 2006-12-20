@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/11/14 14:29:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/12/20 07:37:02 wiz Exp $
 include/libglade-2.0/glade/glade-build.h
 include/libglade-2.0/glade/glade-init.h
 include/libglade-2.0/glade/glade-parser.h
@@ -32,6 +32,5 @@ share/xml/libglade/glade-2.0.dtd
 @dirrm share/xml/libglade
 @comment in xmlcatmgr: @dirrm share/xml
 @dirrm share/gtk-doc/html/libglade
-@dirrm lib/libglade
 @dirrm include/libglade-2.0/glade
 @dirrm include/libglade-2.0
