@@ -1,4 +1,6 @@
 Firmware binary images for use with the iwi(4) driver.
+This is version 2.3 of the firmware which might not be
+compatible with newer drivers.
 
 Original archive is available from Intel at:
 http://ipw2200.sourceforge.net/firmware.php?fid=4
