@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5789 2006/12/20 10:06:06 ghen Exp $
+$NetBSD: TODO,v 1.5790 2006/12/20 21:39:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -225,10 +225,12 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o MyPasswordSafe-20061216
+	o ORBit2-2.14.4
 	o PAM-0.80
 	o R-2.4.1
 	o REminiscence-0.1.8
 	o ROMBuild-2.8
+	o SDL_gfx-2.0.14
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6.7
 	o XaoS-3.1.1
@@ -242,6 +244,7 @@ Suggested package updates
 	o adtool-1.3
 	o aewm++-1.0.27
 	o afterstep-2.2.4
+	o alacarte-0.10.2
 	o album-3.13
 	o algae-4.3.6
 	o aliados-0.2.0
@@ -280,7 +283,7 @@ Suggested package updates
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
 	o at-spi-1.7.13
-	o autogen-5.8.7
+	o autogen-5.8.8
 	o avcheck-0.91
 	o avl-2.0.1
 	o avr-libc-1.4.1
@@ -363,7 +366,7 @@ Suggested package updates
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
-	o digikam-0.9.0rc2
+	o digikam-0.9.0
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.35
@@ -390,6 +393,7 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
+	o enlightenment-0.16.8.5
 	o enscript-1.6.4
 	o epiphany-extensions-2.16.0
 	o epstool-3.08
@@ -399,6 +403,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o evince-0.7
 	o evolution-2.8.1.1
 	o evolution-exchange-2.8.1
 	o ex-050325
@@ -460,8 +465,9 @@ Suggested package updates
 	o gkrellm1-snmp-0.22
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
-	o glade-3.1.0
+	o glade-3.1.4
 	o gld-1.7
+	o glib2-2.12.5
 	o glpk-4.13
 	o gmime-2.2.3
 	o gnet1-1.1.9
@@ -477,6 +483,7 @@ Suggested package updates
 	o gnustep-objc-1.4.0
 	o gnutls-1.6.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
+	o gocr-0.43
 	o gogo-3.11p1
 	o gossip-0.19
 	o gpsdrive-2.09
@@ -489,7 +496,7 @@ Suggested package updates
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
-	o grig-0.7.1
+	o grig-0.7.2
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
@@ -840,6 +847,7 @@ Suggested package updates
 	o parrot-0.4.7
 	o pcal-4.8
 	o pciutils-2.2.0
+	o pcre-7.0
 	o pcre-ocaml-5.11.1
 	o pdmenu-1.2.87
 	o pear-Date-1.4.6
@@ -1055,7 +1063,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o sylpheed-claws-2.6.0
-	o sylpheed-devel-2.3.0beta7
+	o sylpheed-devel-2.3.0rc
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tailor-0.9.27
@@ -1097,7 +1105,7 @@ Suggested package updates
 	o ubs-0.20
 	o ucarp-1.2
 	o ucblogo-5.5
-	o uim-1.3.0
+	o uim-1.3.0 [pkg/35297]
 	o unix2dos-1.3
 	o upx-2.90
 	o userppp-030706
@@ -1125,6 +1133,7 @@ Suggested package updates
 	o wmctrl-1.07
 	o wmii-3.1
 	o wmweather-2.4.3
+	o wxGTK-2.8
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xblast-2.10.4
