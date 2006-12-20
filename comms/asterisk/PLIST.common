@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2006/09/13 09:08:55 mjl Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2006/12/20 11:34:55 mjl Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -208,6 +208,16 @@ libdata/asterisk/keys/iaxtel.pub
 libdata/asterisk/mohmp3/fpm-calm-river.mp3
 libdata/asterisk/mohmp3/fpm-sunshine.mp3
 libdata/asterisk/mohmp3/fpm-world-mix.mp3
+libdata/asterisk/sounds/silence/1.gsm
+libdata/asterisk/sounds/silence/10.gsm
+libdata/asterisk/sounds/silence/2.gsm
+libdata/asterisk/sounds/silence/3.gsm
+libdata/asterisk/sounds/silence/4.gsm
+libdata/asterisk/sounds/silence/5.gsm
+libdata/asterisk/sounds/silence/6.gsm
+libdata/asterisk/sounds/silence/7.gsm
+libdata/asterisk/sounds/silence/8.gsm
+libdata/asterisk/sounds/silence/9.gsm
 libdata/asterisk/sounds/agent-alreadyon.gsm
 libdata/asterisk/sounds/agent-incorrect.gsm
 libdata/asterisk/sounds/agent-loggedoff.gsm
