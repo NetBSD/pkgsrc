@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/10/13 06:52:11 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/12/20 15:30:52 joerg Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -16,6 +16,12 @@ DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+CHECK_PORTABILITY_SKIP+=	\
+	src/tla/tests/changeset-tests/chmod_random \
+	src/tla/tests/changeset-tests/run-spaces-test.sh \
+	src/tla/tests/changeset-tests/run-test.sh
+    
 
 REPLACE_BASH+=	src/tla/tests/changeset-tests/chmod_random
 USE_TOOLS+=	bash
