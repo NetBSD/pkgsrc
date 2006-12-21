@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.77 2006/12/21 02:13:54 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q3,v 1.1.2.78 2006/12/21 02:27:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q3 branch:
@@ -201,3 +201,5 @@ Pullup ticket 1967 - requested by drochner
 security fix for dbus
 Pullup ticket 1962 - requested by wiz
 security update for gdm
+Pullup ticket 1963 - requested by wiz
+security update for libmodplug
