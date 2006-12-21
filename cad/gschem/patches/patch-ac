@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.5 2006/12/21 02:49:28 dmcmahill Exp $
+
+Make this work with non-gcc.  Patch in upstream sources already.
+
+---src/x_menus.c.orig	2006-08-06 12:45:29.000000000 -0400
++++src/x_menus.c
+@@ -239,7 +239,7 @@ void get_main_menu(TOPLEVEL * w_current,
+  *
+  */
+ static gchar* gettext_fn(const gchar *path,
+-			 gpointer func_data __attribute__((unused)))
++			 gpointer func_data ATTRIBUTE_UNUSED)
+ {
+ 	return gettext(path);
+ }
