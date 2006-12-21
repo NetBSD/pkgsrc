@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.13 2006/12/21 02:49:28 dmcmahill Exp $
+
+Make this work with non-gcc.  Patch in upstream sources already.
+
+--- include/globals.h.orig	2006-09-30 13:03:21.000000000 -0400
++++ include/globals.h
+@@ -97,5 +97,19 @@ extern SCM new_page_hook;
+ # define N_(String) (String)
+ #endif
+ 
++/*
++ * __attribute__((unused)) is a gcc extension so define
++ * a portable macro, ATTRIBUTE_UNUSED, to use instead
++ */
++#ifndef GCC_VERSION
++#define GCC_VERSION (__GNUC__ * 1000 + __GNUC_MINOR__)
++#endif /* GCC_VERSION */
++
++#if GCC_VERSION > 2007
++#define ATTRIBUTE_UNUSED __attribute__((unused))
++#else
++#define ATTRIBUTE_UNUSED
++#endif
++
+ /*EK* used by prototype.h */
+ #include "../include/x_states.h"
