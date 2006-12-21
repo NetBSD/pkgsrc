@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/12/19 00:21:37 perry Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/21 04:07:33 dmcmahill Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -23,7 +23,7 @@ DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTUNAME=		linux
 DISTNAME=		install_flash_player_7_${DISTUNAME}
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
-FLASH_VERS=		7.0r66
+FLASH_VERS=		7.0r67
 DISTUNAME=		solaris
 DISTNAME=		install_flash_player_7_${DISTUNAME}_sparc
 .else
