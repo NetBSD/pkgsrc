@@ -10,5 +10,5 @@ Limitation is following :
  * AiCrypto S/MIME can not operate any MultiPart analysis. Therefore,
     the Clear Signature message type is not available to use.
  * Signature and message will be embeded in smime.p7s file.
- * Verification process requires the certificates, which shuold be
+ * Verification process requires the certificates, which should be
     embeded in the S/MIME message.
