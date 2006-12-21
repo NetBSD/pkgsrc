@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/23 00:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/12/21 16:13:53 jmmv Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -58,6 +58,9 @@ SUBST_SED.paths=	-e "s|/usr/local/lib/irc|${PKG_SYSCONFDIR}|g" \
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 INSTALLATION_DIRS=	man/man8 sbin
+
+post-extract:
+	mv ${WRKSRC}/tools/Makefile.crypt ${WRKSRC}/tools/Makefile.crypt.in
 
 post-build:
 	@cd ${WRKSRC}/tools && \
