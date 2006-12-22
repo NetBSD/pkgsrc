@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/05/18 14:26:48 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2006/12/22 13:24:16 obache Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		6
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www-unix.mcs.anl.gov/mpi/mpich/index.html
+HOMEPAGE=		http://www-unix.mcs.anl.gov/mpi/mpich1/
 COMMENT=		Free implementation of the Message Passing Interface
 
 .if !exists(/usr/bin/ssh)
