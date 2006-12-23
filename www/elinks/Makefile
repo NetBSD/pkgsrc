@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/12/06 22:28:58 reed Exp $
+# $NetBSD: Makefile,v 1.31 2006/12/23 10:18:39 wiz Exp $
 
 DISTNAME=		elinks-0.11.2
 CATEGORIES=		www
@@ -23,6 +23,5 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
