@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.10 2006/11/05 16:24:43 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.11 2006/12/23 14:18:44 rillig Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -61,7 +61,16 @@ _show-dbginfo-config.status:
 	for cs in ${CONFIGURE_DIRS:=/config.status}; do			\
 	  if ${TEST} ! -f "$${cs}"; then continue; fi;			\
 	  ${PRINTF} "%s:\\n" "$${cs}";					\
-	  ${SED} -n 's:^s,@\([^@]*\)\@,\(.*\),;t t$$:	\1=\2:p' "$${cs}" \
+	  ${SED} -n -e 's,|#_!!_#|,,g'					\
+		-e '/s,^\\(\[	#\]\*\\)/d'				\
+		-e 's:^s,@\([^@]*\)@,\(.*\),;t t$$:	\1=\2:p'	\
+		-e 's:^s&@\([^@]*\)@&\(.*\)&;t t$$:	\1=\2:p'	\
+		-e 's:^s,@\([^@]*\)@,\(.*\),g$$:	\1=\2:p'	\
+		-e 's:^s%@\([^@]*\)@%\(.*\)%g$$:	\1=\2:p'	\
+		-e 's:^s&@\([^@]*\)@&\(.*\)&g$$:	\1=\2:p'	\
+		-e 's:^\(s[^[:alnum:]].*\):	&:p'			\
+		-e '/:\[FHLC\]/q'					\
+		    "$${cs}"						\
 	  | ${SORT};							\
 	done; fi
 .else
