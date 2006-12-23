@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2006/11/29 22:00:49 drochner Exp $
+# $NetBSD: Makefile,v 1.63 2006/12/23 13:59:57 rillig Exp $
 #
 
 DISTNAME=		yelp-2.16.2
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.16/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +21,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 
 GCONF2_SCHEMAS=		yelp.schemas
