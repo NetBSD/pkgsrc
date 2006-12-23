@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/12/19 18:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2006/12/23 16:16:40 obache Exp $
 
 DISTNAME=	xemacs-21.5.27
 
@@ -13,8 +13,9 @@ CONFLICTS+=	gnuclient-[0-9]*
 
 
 BUILD_DEFS+=	XEMACS_WIDGETS
-PLIST_SUBST+=	EMACSVER=xemacs-21.5-b27
-MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b27
+EMACSVERSION=	21.5-b27
+PLIST_SUBST+=	EMACSVER=xemacs-${EMACSVERSION}
+MESSAGE_SUBST+=	EMACSVER=xemacs-${EMACSVERSION}
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
