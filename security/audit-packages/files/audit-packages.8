@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.8,v 1.20 2006/12/09 12:30:47 adrianp Exp $
+.\" $NetBSD: audit-packages.8,v 1.21 2006/12/23 09:34:56 wiz Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -173,13 +173,17 @@ This can be changed by defining the environment variable
 .Ev PKGVULNDIR
 to the directory containing the vulnerabilities file.
 .Pp
-If a URL is specified in IGNORE_URLS then all entries listed in
+If a URL is specified in
+.Ev IGNORE_URLS
+then all entries listed in
 .Pa pkg-vulnerabilities
 that match that URL will not be reported when
-.Pa audit-packages 
-is run.  Running
 .Pa audit-packages
--v will display the details of all entries skipped if IGNORE_URLS
+is run.
+Running
+.Nm Fl v
+will display the details of all entries skipped if
+.Ev IGNORE_URLS
 is set.
 .Sh EXIT STATUS
 .Ex -std audit-packages
@@ -196,12 +200,15 @@ file.
 .It Ev FETCH_ARGS
 Specifies optional arguments for the ftp client.
 .It Ev FETCH_PROTO
-Specifies the protocol to use when fetching the 
+Specifies the protocol to use when fetching the
 .Pa pkg-vulnerabilities
-file. Currently supports only http and ftp. The default is ftp.
+file.
+Currently supports only http and ftp.
+The default is ftp.
 .It Ev IGNORE_URLS
-A list of vulnerability URLs to be ignored.  This allows for
-ignoring certain URLs that are attached to a vulnerability.
+A list of vulnerability URLs to be ignored.
+This allows for ignoring certain URLs that are attached to a
+vulnerability.
 .El
 .Sh FILES
 @PKGVULNDIR@/pkg-vulnerabilities
@@ -239,7 +246,6 @@ file with the following setting in
 @PKG_SYSCONFDIR@/audit-packages.conf :
 .Pp
 export FETCH_PROTO="http"
-.Pp
 .Sh DIAGNOSTICS
 The following errors can occur:
 .Bl -tag -width 10n
@@ -282,12 +288,12 @@ package.
 .Xr pkg_info 1 ,
 .Xr mk.conf 5 ,
 .Xr packages 7 ,
-@PKGSRCDIR@/mk/defaults/mk.conf
+.Pa @PKGSRCDIR@/mk/defaults/mk.conf
 and
 .Rs
 .%T "Documentation on the NetBSD Package System"
 .Re
-@PKGSRCDIR@/doc/pkgsrc.txt
+.Pa @PKGSRCDIR@/doc/pkgsrc.txt
 .Sh HISTORY
 The
 .Nm
