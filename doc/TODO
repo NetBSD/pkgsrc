@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5792 2006/12/21 21:48:59 wiz Exp $
+$NetBSD: TODO,v 1.5793 2006/12/23 07:11:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -230,13 +230,13 @@ Suggested package updates
 	o R-2.4.1
 	o REminiscence-0.1.8
 	o ROMBuild-2.8
-	o SDL_gfx-2.0.14
+	o SDL_gfx-2.0.15
 	o SmartEiffel-2.1
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-5.2.1
-	o abcmidi-20061211
+	o abcm2ps-5.2.2
+	o abcmidi-20061221
 	o acpi-iasl-20040715
 	o adns-1.4
 	o adocman-0.13
@@ -244,7 +244,7 @@ Suggested package updates
 	o aewm++-1.0.27
 	o afterstep-2.2.4
 	o alacarte-0.10.2
-	o album-3.13
+	o album-4.00
 	o algae-4.3.6
 	o aliados-0.2.0
 	o allegro-4.2.1
@@ -335,7 +335,7 @@ Suggested package updates
 	o classpath-gui-0.93 [pkg/35262]
 	o clisp-2.41
 	o cmake-2.4.5
-	o cocoon-2.1.9
+	o cocoon-2.1.10
 	o cogito-0.18.2
 	o columba-1.0RC1
 	o compface-1.5.2
@@ -497,7 +497,9 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
+	o gst-plugins0.10-bad-0.10.4
 	o gst-plugins0.10-ffmpeg-0.10.2
+	o gst-plugins0.10-good-0.10.5
 	o gst-plugins0.10-ugly-0.10.5
 	o gtar-1.16.1
 	o gtetrinet-0.7.10
@@ -528,7 +530,7 @@ Suggested package updates
 	o http_load-20050629
 	o httptunnel-3.3
 	o hydrogen-0.9.2
-	o hylafax-4.3.0
+	o hylafax-5.0.2
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -564,6 +566,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kapooka-0.3
 	o kazehakase-0.4.3
+	o kdbg-2.0.5
 	o kdrill-6.4
 	o kid3-0.8
 	o kinput2-3.1
@@ -686,6 +689,7 @@ Suggested package updates
 	o neon-0.26.1 [pkg/34310]
 	o neon-0.26.2
 	o nessus-3.0.4
+	o net-snmp-5.4
 	o netcdf-4.0.0a
 	o netperf-2.4.0
 	o netpipe-3.6.2
@@ -1045,12 +1049,13 @@ Suggested package updates
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.5
 	o spim-7.2.1
+	o spl-1.0pre3 [pkg/35308]
 	o sqlitemanager-1.1.3
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
-	o stella-2.2
+	o stella-2.3
 	o stlport-4.6.2
 	o strace-4.5.8
 	o stunnel-4.20
@@ -1104,6 +1109,7 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o uim-1.3.0 [pkg/35297]
+	o uim-1.3.1
 	o unix2dos-1.3
 	o upx-2.90
 	o userppp-030706
@@ -1206,6 +1212,7 @@ Suggested package updates
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.46.0
 	o zopeedit-0.8
+	o zsnes-1.50
 	o zziplib-0.13.38
 
 Infrastructure problems which need addressing
