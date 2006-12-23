@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/12/23 10:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/23 10:35:56 wiz Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
@@ -13,6 +13,8 @@ COMMENT=	Play most popular animation formats and show pictures
 HOMEPAGE=	http://xanim.polter.net/
 
 EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
+
+LICENSE=	xanim-license
 
 .include "Makefile.codecs"
 
