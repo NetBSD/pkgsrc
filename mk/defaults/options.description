@@ -69,6 +69,10 @@ dynamic
 eb			Enable EB dictionary library support.
 edit	
 efnet			Enable tweaks to support EFNet.
+elinks-exmode		Enable vi-like command entry.
+elinks-fastmem		Allow direct use of system memory allocation functions.
+elinks-html-highlight	Enable HTML highlighting using DOM engine.
+elinks-root-exec	Allow elinks to run as root. 
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 esound			Enable support for the Enlightment Sound Daemon.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
@@ -81,6 +85,7 @@ exim-lookup-pgsql	Perform lookups in PostgreSQL database.
 exim-lookup-sqlite	Perform lookups in SQLite database.
 exim-lookup-whoson	Lookup in whoson dynamic IP address.
 exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
+expat			Use the expat library for XML parsing. 
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faac	
 faad			Enable AAC decoding support using faad2.
@@ -93,7 +98,6 @@ firefox			Use firefox as gecko rendering engine.
 flac	
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype	
-fsp			Enable File Service Protocol (FSP) support.
 ftp			Enable File Transport Protocol (FTP) support.
 gd	
 gdbm			Use the GNU gdbm database library.
