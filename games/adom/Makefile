@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/17 18:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/23 10:29:49 wiz Exp $
 #
 
 DISTNAME=	adom-111-elf
@@ -23,10 +23,9 @@ NO_CONFIGURE=	YES
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/adom
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/adom
 	${INSTALL_DATA} ${WRKSRC}/*.* ${PREFIX}/share/doc/adom
 	${INSTALL_PROGRAM} ${WRKSRC}/adom ${PREFIX}/bin
 
