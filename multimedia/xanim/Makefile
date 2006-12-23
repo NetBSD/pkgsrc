@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/23 10:33:29 wiz Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia x11
 MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/ \
 		ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/modules/
@@ -10,6 +10,7 @@ DISTFILES=	${EXTRACT_ONLY} ${CODEC_FILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Play most popular animation formats and show pictures
+HOMEPAGE=	http://xanim.polter.net/
 
 EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
 
@@ -39,14 +40,15 @@ XANIM_AUDIO.NetBSD=	XA_AUDIO_DEFS="-DXA_NetBSD_AUDIO"
 XANIM_AUDIO.SunOS=	XA_AUDIO_DEFS="-DXA_SPARC_AUDIO -DSVR4 -DXA_SELECT"
 
 post-extract:
-	@${LN} -s docs/xanim.man ${WRKSRC}
-	@${MKDIR} ${WRKSRC}/mods
+	${LN} -s docs/xanim.man ${WRKSRC}
+	${MKDIR} ${WRKSRC}/mods
 .if defined(CODEC_FILES) && !empty(CODEC_FILES)
-	@for file in ${CODEC_FILES}; do					\
+	for file in ${CODEC_FILES}; do					\
 		${CP} ${DISTDIR}/$$file ${WRKSRC}/mods;			\
 		${GUNZIP_CMD} ${WRKSRC}/mods/$$file;			\
 	done
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
