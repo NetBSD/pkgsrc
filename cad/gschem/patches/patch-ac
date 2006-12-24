@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2006/12/21 02:49:28 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.6 2006/12/24 10:20:34 dmcmahill Exp $
 
 Make this work with non-gcc.  Patch in upstream sources already.
 
----src/x_menus.c.orig	2006-08-06 12:45:29.000000000 -0400
-+++src/x_menus.c
+--- src/x_menus.c.orig	2006-08-06 12:45:29.000000000 -0400
++++ src/x_menus.c
 @@ -239,7 +239,7 @@ void get_main_menu(TOPLEVEL * w_current,
   *
   */
