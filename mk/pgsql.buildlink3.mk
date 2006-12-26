@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.18 2006/12/09 16:18:55 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.19 2006/12/26 18:42:44 adam Exp $
 #
 # User-settable variables:
 #
@@ -36,6 +36,12 @@ PG_LIB_EXT=so
 
 # check what is installed
 .if ${OPSYS} == "Darwin"
+.if exists(${LOCALBASE}/lib/libecpg.5.0.2.dylib)
+_PGSQL_VERSION_82_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/lib/libecpg.5.0.1.dylib)
+_PGSQL_VERSION_81_INSTALLED=	yes
+.endif
 .if exists(${LOCALBASE}/lib/libecpg.5.0.dylib)
 _PGSQL_VERSION_80_INSTALLED=	yes
 .endif
