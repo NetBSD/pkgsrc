@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/12/20 03:22:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2006/12/26 06:44:16 schmonz Exp $
 #
 
 DISTNAME=	tmda-1.1.9
@@ -51,6 +51,9 @@ INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/pythonlib/email/mime ${EGDIR}
 
 do-build:
 	cd ${WRKSRC} && ${PYTHONBIN} ./compileall
+
+pre-install:
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
 	for f in ${TMDA_PROGRAMS}; do \
