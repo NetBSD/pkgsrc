@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2006/12/26 11:05:56 wiz Exp $
+
+--- glib/glibmm/date.h.orig	2006-09-21 19:47:43.000000000 +0000
++++ glib/glibmm/date.h
+@@ -128,7 +128,7 @@ enum DMY
+    * @deprecated Please use set_time(time_t) or set_time(const GTimeVal&).
+    */
+   void set_time(GTime time);
+-  #endif // GLIBMM_DISABLE_DEPRECATED
++  #else
+ 
+ 
+   /** Sets the value of a date from a <type>time_t</type> value. 
+@@ -140,6 +140,7 @@ enum DMY
+    * Since: 2.10
+    */
+   void set_time(time_t timet);
++  #endif // GLIBMM_DISABLE_DEPRECATED
+ 
+   /** Sets the value of a date from a GTimeVal value.  Note that the
+    * tv_usec member is ignored, because Glib::Date can't make use of the
