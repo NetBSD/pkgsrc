@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2006/12/19 22:58:15 joerg Exp $
+# $NetBSD: Makefile,v 1.465 2006/12/27 12:26:05 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -170,6 +170,7 @@ SUBDIR+=	libFS
 SUBDIR+=	libICE
 SUBDIR+=	libSM
 SUBDIR+=	libX11
+SUBDIR+=	libXScrnSaver
 SUBDIR+=	libXTrap
 SUBDIR+=	libXau
 SUBDIR+=	libXaw
@@ -193,6 +194,7 @@ SUBDIR+=	libXres
 SUBDIR+=	libXtst
 SUBDIR+=	libXt
 SUBDIR+=	libXv
+SUBDIR+=	libXxf86dga
 SUBDIR+=	libXxf86misc
 SUBDIR+=	libXxf86vm
 SUBDIR+=	libdrm
