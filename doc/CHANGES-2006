@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2064 2006/12/27 17:40:50 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.2065 2006/12/27 18:19:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5721,3 +5721,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed databases/postgresql74-server [joerg 2006-12-27]
 	Removed databases/tcl-postgresql74 [joerg 2006-12-27]
 	Added print/ghostscript6 version 6.01nb8 [joerg 2006-12-27]
+	Updated print/ghostscript to 8.54 [joerg 2006-12-27]
