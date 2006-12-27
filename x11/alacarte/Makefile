@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/15 19:57:42 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/27 12:05:58 joerg Exp $
 #
 
 DISTNAME=	alacarte-0.10.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.realistanew.com/projects/alacarte/
 COMMENT=	Menu editor for the GNOME desktop
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	intltool perl pkg-config gmake
+USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
 
 PYTHON_VERSIONS_ACCEPTED= 24
 PY_PATCHPLIST=	yes
