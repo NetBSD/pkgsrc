@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 22:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:44 joerg Exp $
 #
 
 DISTNAME=	xcruise-0.24
@@ -21,4 +21,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.jp ${PREFIX}/share/doc/xcruise
 	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/xcruise
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

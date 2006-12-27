@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/02 12:46:31 obache Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/27 13:37:40 joerg Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -34,4 +34,5 @@ post-install:
 		${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/EmiClock
 
 .include "../../mk/xaw.buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

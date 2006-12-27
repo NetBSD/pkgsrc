@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/06 09:59:24 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/27 13:37:37 joerg Exp $
 #
 
 DISTNAME=		xrmap-2.29
@@ -18,5 +18,9 @@ MAKE_FLAGS+=		MANPATH=${PREFIX}/${PKGMANDIR}
 # directory shared by factbook_text and factbook_html
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rmap/factbook
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

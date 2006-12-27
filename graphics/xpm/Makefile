@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/12/18 10:13:38 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2006/12/27 13:37:38 joerg Exp $
 
 DISTNAME=       xpm-3.4k
 PKGREVISION=	7
@@ -45,4 +45,7 @@ post-install:
 	
 .endif
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

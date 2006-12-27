@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/15 20:32:58 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/12/27 13:37:38 joerg Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -68,6 +68,8 @@ teardownx:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 #.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

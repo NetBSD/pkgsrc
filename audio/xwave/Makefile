@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/12/15 20:32:53 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/12/27 13:37:36 joerg Exp $
 #
 
 DISTNAME=		xwave2
@@ -24,6 +24,7 @@ do-install:
 			${WRKSRC}/INSTALL \
 			${PREFIX}/share/doc/xwave2
 
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 

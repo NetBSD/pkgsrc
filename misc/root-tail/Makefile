@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:39 joerg Exp $
 #
 
 DISTNAME=	root-tail-0.0.10
@@ -12,4 +12,6 @@ COMMENT=	Allows printing of text directly to the X11 root window
 
 USE_IMAKE=	YES
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

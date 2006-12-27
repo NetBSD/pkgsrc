@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/15 20:33:02 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/12/27 13:37:41 joerg Exp $
 
 DISTNAME=	openbox-3.3.1
 CATEGORIES=	wm x11
@@ -27,11 +27,16 @@ EGDIR=			${PREFIX}/share/examples/openbox
 CONF_FILES=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/openbox/menu.xml
 CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 # disabled by default in 3.3 because "it doesn't seem to work well"
 #.include "../../x11/startup-notification/buildlink3.mk"
 

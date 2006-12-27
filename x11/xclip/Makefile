@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/08 06:31:40 snj Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/27 13:37:43 joerg Exp $
 #
 
 DISTNAME=	xclip-0.08
@@ -13,4 +13,5 @@ COMMENT=	Command line interface to the X windows clipboard
 WRKSRC=		${WRKDIR}/xclip
 USE_IMAKE=	YES
 
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
