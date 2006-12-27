@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.178 2006/11/03 19:08:58 joerg Exp $
+# $NetBSD: replace.mk,v 1.179 2006/12/27 19:22:18 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -936,7 +936,7 @@ _TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu
 .  if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
 .  else
-_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript
 .  endif
 TOOLS_DEPENDS.ghostscript=	{${_TOOLS_DEP.ghostscript}}>=${GHOSTSCRIPT_REQD}:${_TOOLS_PKGSRCDIR.ghostscript}
 MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
