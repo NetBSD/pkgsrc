@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=		tightvnc-1.2.9
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -31,5 +31,8 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/27 13:37:37 joerg Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
@@ -20,4 +20,6 @@ WRKSRC=		${WRKDIR}/Xev111
 USE_IMAKE=	yes
 BUILD_TARGET=	xbat
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

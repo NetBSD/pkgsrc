@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:16 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	jetpack
 PKGNAME=	jetpack-1.0
@@ -21,4 +21,6 @@ post-install:
 	@${CHMOD} 0775 ${PREFIX}/share/jetpack
 	${INSTALL_MAN} ${WRKSRC}/jetpack.man ${PREFIX}/man/man6/jetpack.6
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

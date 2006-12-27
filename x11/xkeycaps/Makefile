@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:31:13 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:45 joerg Exp $
 #
 
 DISTNAME=	xkeycaps-2.46
@@ -21,4 +21,7 @@ pre-configure:
 	${CAT} Imakefile.old >>Imakefile
 .endif
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

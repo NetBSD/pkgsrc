@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:10:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/12/27 13:37:38 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLUT_BUILDLINK3_MK:=	${GLUT_BUILDLINK3_MK}+
@@ -18,5 +18,6 @@ BUILDLINK_PKGSRCDIR.glut?=	../../graphics/glut
 .endif	# GLUT_BUILDLINK3_MK
 
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

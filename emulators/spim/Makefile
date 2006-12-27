@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/04/24 22:22:55 markd Exp $
+# $NetBSD: Makefile,v 1.32 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	spim-7.1
 PKGREVISION=	3
@@ -43,4 +43,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/cycle.ps \
 		${PREFIX}/share/doc/spim
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
