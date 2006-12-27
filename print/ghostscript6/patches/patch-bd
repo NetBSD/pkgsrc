@@ -1,0 +1,31 @@
+$NetBSD: patch-bd,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- lib/sysvlp.sh.orig	2000-03-09 08:40:40.000000000 +0000
++++ lib/sysvlp.sh
+@@ -27,20 +27,23 @@ files="$*"
+ # Brother HL-4: switch to HP laserjet II+ emulation
+ # echo "\033\015H\c"
+ 
++TEMPDIR=`mktemp -td sysvlp.XXXXXX` || exit 1
++
+ i=1
+ while [ $i -le $copies ]
+ do
+ 	for file in $files
+ 	do
+ 		$GSHOME/gs \
+-			-sOUTPUTFILE=/tmp/psp$$.%02d \
++			-sOUTPUTFILE=$TEMPDIR/psp$$.%02d \
+ 			-sDEVICE=$DEVICE \
+ 			$EHANDLER $file \
+ 			< /dev/null >> /usr/tmp/ps_log 2>&1
+ 
+-		cat /tmp/psp$$.* 2>> /usr/tmp/ps_log
+-		rm -f /tmp/psp$$.*
++		cat $TEMPDIR/psp$$.* 2>> /usr/tmp/ps_log
++		rm -f $TEMPDIR/psp$$.*
+ 	done
+ 	i=`expr $i + 1`
+ done
++rmdir $TEMPDIR
+ exit 0

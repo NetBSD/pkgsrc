@@ -1,0 +1,22 @@
+$NetBSD: patch-be,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- src/dviprlib.c.orig	2005-12-06 21:32:25.000000000 +0000
++++ src/dviprlib.c
+@@ -1433,7 +1433,7 @@ char *dviprt_stringsname[] = { CFG_STRIN
+ char *dviprt_prtcodename[] = { CFG_PRTCODE_NAME, NULL };
+ char *dviprt_encodename[] = { CFG_ENCODE_NAME, NULL };
+ 
+-private FILE *dviprt_messagestream = stderr;
++private FILE *dviprt_messagestream;
+ 
+ /*--- library functions ---*/
+ int
+@@ -1585,6 +1585,8 @@ dviprt_initlibrary(dviprt_print *pprint,
+ {
+   dviprt_encoder *pencode;
+   uint pins = pprt->integer[CFG_PINS]*8;
++
++  dviprt_messagestream = stderr;
+   
+   pprint->printer = pprt;
+   height += (pins-1);

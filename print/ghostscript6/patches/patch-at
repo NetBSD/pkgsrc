@@ -1,0 +1,139 @@
+$NetBSD: patch-at,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- src/unix-gcc.mak.orig	Thu Dec 20 00:32:55 2001
++++ src/unix-gcc.mak
+@@ -30,12 +30,12 @@
+ 
+ BINDIR=./bin
+ GLSRCDIR=./src
+-GLGENDIR=./obj
+-GLOBJDIR=./obj
++GLGENDIR=./object
++GLOBJDIR=./object
+ PSSRCDIR=./src
+ PSLIBDIR=./lib
+-PSGENDIR=./obj
+-PSOBJDIR=./obj
++PSGENDIR=./object
++PSOBJDIR=./object
+ 
+ # Do not edit the next group of lines.
+ 
+@@ -58,7 +58,7 @@
+ INSTALL_PROGRAM = $(INSTALL) -m 755
+ INSTALL_DATA = $(INSTALL) -m 644
+ 
+-prefix = /usr/local
++prefix = ${PREFIX}
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ scriptdir = $(bindir)
+@@ -69,8 +69,8 @@
+ gsdir = $(datadir)/ghostscript
+ gsdatadir = $(gsdir)/$(GS_DOT_VERSION)
+ 
+-docdir=$(gsdatadir)/doc
+-exdir=$(gsdatadir)/examples
++docdir=$(datadir)/doc/html/ghostscript
++exdir=$(datadir)/examples/ghostscript
+ vfdir=$(gsdatadir)/vflib
+ GS_DOCDIR=$(docdir)
+ 
+@@ -156,7 +156,7 @@
+ # what its name is.
+ # See gs.mak and Make.htm for more information.
+ 
+-SHARE_LIBPNG=0
++SHARE_LIBPNG=1
+ LIBPNG_NAME=png
+ 
+ # Define the directory where the zlib sources are stored.
+@@ -168,7 +168,7 @@
+ # what its name is (usually libz, but sometimes libgz).
+ # See gs.mak and Make.htm for more information.
+ 
+-SHARE_ZLIB=0
++SHARE_ZLIB=1
+ #ZLIB_NAME=gz
+ ZLIB_NAME=z
+ 
+@@ -244,8 +244,11 @@
+ # include pthreads in libc and don't require any additional library.
+ # All reasonable platforms require -lm, but Rhapsody and perhaps one or
+ # two others fold libm into libc and don't require any additional library.
++#
++# If async device drivers won't be built, then -lpthread (or local equivalent)
++# can be removed from STDLIBS.
+ 
+-STDLIBS=-lpthread -lm
++STDLIBS=-lm
+ 
+ # Define the include switch(es) for the X11 header files.
+ # This can be null if handled in some other way (e.g., the files are
+@@ -281,7 +284,7 @@
+ #VFLIBS=VFlib
+ VFINCLUDE=
+ VFLIBDIRS=
+-VFLIBS=VFlib2 ttf
++VFLIBS=VFlib2 ttf intl
+ 
+ # Define whether this platform has floating point hardware:
+ #	FPU_TYPE=2 means floating point is faster than fixed point.
+@@ -339,7 +342,7 @@
+ # Choose the device(s) to include.  See devs.mak for details,
+ # devs.mak and contrib.mak for the list of available devices.
+ 
+-DEVICE_DEVS=$(DD)x11.dev $(DD)x11alpha.dev $(DD)x11cmyk.dev $(DD)x11gray2.dev $(DD)x11gray4.dev $(DD)x11mono.dev
++#DEVICE_DEVS=$(DD)x11.dev $(DD)x11alpha.dev $(DD)x11cmyk.dev $(DD)x11gray2.dev $(DD)x11gray4.dev $(DD)x11mono.dev
+ 
+ #DEVICE_DEVS1=
+ #DEVICE_DEVS2=
+@@ -357,27 +360,27 @@
+ #DEVICE_DEVS14=
+ #DEVICE_DEVS15=
+ 
+-DEVICE_DEVS1=$(DD)bmpmono.dev $(DD)bmpgray.dev $(DD)bmpsep1.dev $(DD)bmpsep8.dev $(DD)bmp16.dev $(DD)bmp256.dev $(DD)bmp16m.dev $(DD)bmp32b.dev
+-DEVICE_DEVS2=$(DD)bmpamono.dev $(DD)bmpasep1.dev $(DD)bmpasep8.dev $(DD)bmpa16.dev $(DD)bmpa256.dev $(DD)bmpa16m.dev $(DD)bmpa32b.dev
+-DEVICE_DEVS3=$(DD)deskjet.dev $(DD)djet500.dev $(DD)laserjet.dev $(DD)ljetplus.dev $(DD)ljet2p.dev $(DD)ljet3.dev $(DD)ljet3d.dev $(DD)ljet4.dev $(DD)ljet4d.dev $(DD)lj5mono.dev $(DD)lj5gray.dev
+-DEVICE_DEVS4=$(DD)cdeskjet.dev $(DD)cdjcolor.dev $(DD)cdjmono.dev $(DD)cdj550.dev $(DD)pj.dev $(DD)pjxl.dev $(DD)pjxl300.dev
+-DEVICE_DEVS5=$(DD)uniprint.dev
+-DEVICE_DEVS6=$(DD)bj10e.dev $(DD)bj200.dev $(DD)bjc600.dev $(DD)bjc800.dev
+-DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev
+-DEVICE_DEVS8=$(DD)pcxmono.dev $(DD)pcxgray.dev $(DD)pcx16.dev $(DD)pcx256.dev $(DD)pcx24b.dev $(DD)pcxcmyk.dev
+-DEVICE_DEVS9=$(DD)pbm.dev $(DD)pbmraw.dev $(DD)pgm.dev $(DD)pgmraw.dev $(DD)pgnm.dev $(DD)pgnmraw.dev $(DD)pnm.dev $(DD)pnmraw.dev $(DD)ppm.dev $(DD)ppmraw.dev $(DD)pkm.dev $(DD)pkmraw.dev $(DD)pksm.dev $(DD)pksmraw.dev
+-DEVICE_DEVS10=$(DD)tiffcrle.dev $(DD)tiffg3.dev $(DD)tiffg32d.dev $(DD)tiffg4.dev $(DD)tifflzw.dev $(DD)tiffpack.dev
+-DEVICE_DEVS11=$(DD)tiff12nc.dev $(DD)tiff24nc.dev
+-DEVICE_DEVS12=$(DD)psmono.dev $(DD)psgray.dev $(DD)psrgb.dev $(DD)bit.dev $(DD)bitrgb.dev $(DD)bitcmyk.dev
+-DEVICE_DEVS13=$(DD)pngmono.dev $(DD)pnggray.dev $(DD)png16.dev $(DD)png256.dev $(DD)png16m.dev
+-DEVICE_DEVS14=$(DD)jpeg.dev $(DD)jpeggray.dev
+-DEVICE_DEVS15=$(DD)pdfwrite.dev $(DD)pswrite.dev $(DD)epswrite.dev $(DD)pxlmono.dev $(DD)pxlcolor.dev
+-
+-DEVICE_DEVS16=
+-DEVICE_DEVS17=
+-DEVICE_DEVS18=
+-DEVICE_DEVS19=
+-DEVICE_DEVS20=$(DD)cljet5.dev $(DD)cljet5c.dev
++#DEVICE_DEVS1=$(DD)bmpmono.dev $(DD)bmpgray.dev $(DD)bmpsep1.dev $(DD)bmpsep8.dev $(DD)bmp16.dev $(DD)bmp256.dev $(DD)bmp16m.dev $(DD)bmp32b.dev
++#DEVICE_DEVS2=$(DD)bmpamono.dev $(DD)bmpasep1.dev $(DD)bmpasep8.dev $(DD)bmpa16.dev $(DD)bmpa256.dev $(DD)bmpa16m.dev $(DD)bmpa32b.dev
++#DEVICE_DEVS3=$(DD)deskjet.dev $(DD)djet500.dev $(DD)laserjet.dev $(DD)ljetplus.dev $(DD)ljet2p.dev $(DD)ljet3.dev $(DD)ljet3d.dev $(DD)ljet4.dev $(DD)ljet4d.dev $(DD)lj5mono.dev $(DD)lj5gray.dev
++#DEVICE_DEVS4=$(DD)cdeskjet.dev $(DD)cdjcolor.dev $(DD)cdjmono.dev $(DD)cdj550.dev $(DD)pj.dev $(DD)pjxl.dev $(DD)pjxl300.dev
++#DEVICE_DEVS5=$(DD)uniprint.dev
++#DEVICE_DEVS6=$(DD)bj10e.dev $(DD)bj200.dev $(DD)bjc600.dev $(DD)bjc800.dev
++#DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev
++#DEVICE_DEVS8=$(DD)pcxmono.dev $(DD)pcxgray.dev $(DD)pcx16.dev $(DD)pcx256.dev $(DD)pcx24b.dev $(DD)pcxcmyk.dev
++#DEVICE_DEVS9=$(DD)pbm.dev $(DD)pbmraw.dev $(DD)pgm.dev $(DD)pgmraw.dev $(DD)pgnm.dev $(DD)pgnmraw.dev $(DD)pnm.dev $(DD)pnmraw.dev $(DD)ppm.dev $(DD)ppmraw.dev $(DD)pkm.dev $(DD)pkmraw.dev $(DD)pksm.dev $(DD)pksmraw.dev
++#DEVICE_DEVS10=$(DD)tiffcrle.dev $(DD)tiffg3.dev $(DD)tiffg32d.dev $(DD)tiffg4.dev $(DD)tifflzw.dev $(DD)tiffpack.dev
++#DEVICE_DEVS11=$(DD)tiff12nc.dev $(DD)tiff24nc.dev
++#DEVICE_DEVS12=$(DD)psmono.dev $(DD)psgray.dev $(DD)psrgb.dev $(DD)bit.dev $(DD)bitrgb.dev $(DD)bitcmyk.dev
++#DEVICE_DEVS13=$(DD)pngmono.dev $(DD)pnggray.dev $(DD)png16.dev $(DD)png256.dev $(DD)png16m.dev
++#DEVICE_DEVS14=$(DD)jpeg.dev $(DD)jpeggray.dev
++#DEVICE_DEVS15=$(DD)pdfwrite.dev $(DD)pswrite.dev $(DD)epswrite.dev $(DD)pxlmono.dev $(DD)pxlcolor.dev
++
++#DEVICE_DEVS16=
++#DEVICE_DEVS17=
++#DEVICE_DEVS18=
++#DEVICE_DEVS19=
++#DEVICE_DEVS20=$(DD)cljet5.dev $(DD)cljet5c.dev
+ 
+ # ---------------------------- End of options --------------------------- #
+ 
