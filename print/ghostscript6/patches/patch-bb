@@ -1,0 +1,10 @@
+$NetBSD: patch-bb,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- lib/ps2epsi.orig	2000-03-09 08:40:40.000000000 +0000
++++ lib/ps2epsi
+@@ -3,3 +3,4 @@
+ 
+-tmpfile=/tmp/ps2epsi$$
++tmpfile=`mktemp -t ps2epsi.XXXXXX || exit 1`
++trap "rm -rf $tmpfile" 0 1 2 3 7 13 15
+ 

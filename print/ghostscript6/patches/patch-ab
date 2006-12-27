@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- lib/gs_init.ps.orig	Mon May  1 20:24:46 2000
++++ lib/gs_init.ps	Mon May  1 20:26:23 2000
+@@ -1704,3 +1704,7 @@
+ (END GC) VMDEBUG
+ 
+ % The interpreter will run the initial procedure (start).
++
++% unofficial patch:
++% make it possible to print from within acroread pdf viewer
++/Default currenthalftone /Halftone defineresource pop
