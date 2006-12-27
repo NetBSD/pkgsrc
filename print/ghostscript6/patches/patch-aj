@@ -1,0 +1,24 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- src/gdevlips.mak.orig	Mon May  1 20:24:43 2000
++++ src/gdevlips.mak	Mon May  1 20:26:23 2000
+@@ -37,10 +37,10 @@
+ $(GLOBJ)gdevespg.$(OBJ): $(GLSRC)gdevespg.c $(GLSRC)gdevlprn.h $(PDEVH)
+ 	$(GLCC) -DA4 $(GLO_)gdevespg.$(OBJ) $(C_) $(GLSRC)gdevespg.c
+ 
+-$(GLOBJ)escpage.dev: $(escpage_) $(DD)page.dev
++$(DD)escpage.dev: $(escpage_) $(DD)page.dev
+ 	$(SETPDEV) $(DD)escpage $(escpage_)
+ 
+-$(GLOBJ)lp2000.dev: $(escpage_) $(DD)page.dev
++$(DD)lp2000.dev: $(escpage_) $(DD)page.dev
+ 	$(SETPDEV) $(DD)lp2000 $(escpage_)
+ 
+ ### --- The NEC NPDL language printer device ------ ###
+@@ -49,5 +49,5 @@
+ $(GLOBJ)gdevnpdl.$(OBJ): $(GLSRC)gdevnpdl.c $(GLSRC)gdevlprn.h $(PDEVH)
+ 	$(GLCC) -DA4 $(GLO_)gdevnpdl.$(OBJ) $(C_) $(GLSRC)gdevnpdl.c
+ 
+-$(GLOBJ)npdl.dev: $(npdl_) $(DD)page.dev
++$(DD)npdl.dev: $(npdl_) $(DD)page.dev
+ 	$(SETPDEV) $(DD)npdl $(npdl_)
