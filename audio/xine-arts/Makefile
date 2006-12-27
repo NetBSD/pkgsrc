@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/08/06 10:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2006/12/27 10:33:22 ghen Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
@@ -10,6 +10,7 @@ COMMENT=	The aRts audio output plugin for xine-lib
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib
 
 BUILD_DIRS=	${WRKSRC}/src/audio_out
+CONFIGURE_ARGS+= --without-x
 
 INSTALLATION_DIRS=	lib/xine/plugins/${XINE_LIB_VER}
 
