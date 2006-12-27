@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.179 2006/12/27 19:22:18 joerg Exp $
+# $NetBSD: replace.mk,v 1.180 2006/12/27 19:27:40 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -947,7 +947,8 @@ MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
 .    if !empty(PKGPATH:Mprint/ghostscript) || \
         !empty(PKGPATH:Mprint/ghostscript-afpl) || \
         !empty(PKGPATH:Mprint/ghostscript-esp) || \
-        !empty(PKGPATH:Mprint/ghostscript-gnu)
+        !empty(PKGPATH:Mprint/ghostscript-gnu) || \
+        !empty(PKGPATH:Mprint/ghostscript6)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${TOOLS_DEPENDS.ghostscript}
