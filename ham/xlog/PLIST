@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/12/27 11:56:09 wulf Exp $
 bin/xlog
 man/man1/xlog.1
 share/application-registry/xlog.applications
 share/applications/xlog.desktop
 share/applnk/Applications/xlog.desktop
+share/locale/cs/LC_MESSAGES/xlog.mo
 share/locale/da/LC_MESSAGES/xlog.mo
 share/locale/es/LC_MESSAGES/xlog.mo
 share/locale/fr/LC_MESSAGES/xlog.mo
 share/locale/nl/LC_MESSAGES/xlog.mo
 share/locale/pl/LC_MESSAGES/xlog.mo
 share/locale/sk/LC_MESSAGES/xlog.mo
+share/locale/sv/LC_MESSAGES/xlog.mo
 share/mime-info/xlog.keys
 share/mime-info/xlog.mime
 share/mime/packages/xlog.xml
@@ -36,6 +38,7 @@ share/pixmaps/xlog/s9.xpm
 share/pixmaps/xlog/xlog-b4.png
 share/pixmaps/xlog/xlog-icon.png
 share/pixmaps/xlog/xlog-keyer.png
+share/pixmaps/xlog/xlog-scoring.png
 share/pixmaps/xlog/xlog.png
 share/pixmaps/xlog/xlog.xpm
 share/xlog/AUTHORS
@@ -44,6 +47,7 @@ share/xlog/ChangeLog
 share/xlog/FAQ
 share/xlog/FAQ.fr
 share/xlog/FAQ.pl
+share/xlog/KEYS
 share/xlog/MANUAL
 share/xlog/MANUAL.fr
 share/xlog/MANUAL.pl
@@ -52,6 +56,8 @@ share/xlog/TODO
 share/xlog/dxcc/cty.dat
 share/xlog/images/xlog-defaultsdialog.png
 share/xlog/images/xlog-dupecheckdialog.png
+share/xlog/images/xlog-exportdialog.png
+share/xlog/images/xlog-importdialog.png
 share/xlog/images/xlog-keyerwindow.png
 share/xlog/images/xlog-logeditor.png
 share/xlog/images/xlog-mainwindow.png
@@ -61,13 +67,18 @@ share/xlog/images/xlog-openlogdialog.png
 share/xlog/images/xlog-preferencesdialog-hamlib.png
 share/xlog/images/xlog-preferencesdialog-info.png
 share/xlog/images/xlog-printdialog.png
+share/xlog/images/xlog-scorewindow.png
 share/xlog/images/xlog-workedwindow.png
 share/xlog/qsllabels.glabels
-@dirrm share/applnk/Applications
-@dirrm share/applnk
+@dirrm share/xlog/images
+@dirrm share/xlog/dxcc
+@dirrm share/xlog
+@dirrm share/pixmaps/xlog
 @dirrm share/mimelnk/text
 @dirrm share/mimelnk
-@dirrm share/pixmaps/xlog
-@dirrm share/xlog/dxcc
-@dirrm share/xlog/images
-@dirrm share/xlog
+@dirrm share/mime/packages
+@dirrm share/mime
+@dirrm share/mime-info
+@dirrm share/application-registry
+@dirrm share/applnk/Applications
+@dirrm share/applnk
