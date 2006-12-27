@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5797 2006/12/27 12:04:55 wulf Exp $
+$NetBSD: TODO,v 1.5798 2006/12/27 13:43:09 wulf Exp $
 
 Suggested new packages
 ======================
@@ -305,7 +305,6 @@ Suggested package updates
 	o bittorrent-5.0.0
 	o blackbox-0.70
 	o blender-2.42
-	o bluefish-1.0.6
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bogofilter-1.0.3
