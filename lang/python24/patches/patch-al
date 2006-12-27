@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
+$NetBSD: patch-al,v 1.11 2006/12/27 20:49:04 joerg Exp $
 
---- configure.orig	2006-02-17 09:39:55.000000000 +0100
+--- configure.orig	2006-02-17 08:39:55.000000000 +0000
 +++ configure
 @@ -312,7 +312,7 @@ ac_includes_default="\
  # include <unistd.h>
@@ -864,7 +864,7 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	case $ac_sys_system in
  	AIX*)
  	   exp_extra="\"\""
-@@ -3413,7 +3506,7 @@ _ACEOF
+@@ -3413,15 +3506,10 @@ _ACEOF
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -873,7 +873,15 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -3837,7 +3930,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
+-	  case $ac_sys_system in
+-	      FreeBSD*)
+-		SOVERSION=`echo $SOVERSION|cut -d "." -f 1`
+-		;;
+-	  esac
+ 	  INSTSONAME="$LDLIBRARY".$SOVERSION
+ 	  ;;
+     hp*|HP*)
+@@ -3837,7 +3925,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
  	    ;;
  	# is there any other compiler on Darwin besides gcc?
  	Darwin*)
@@ -887,7 +895,7 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	    ;;
      esac
      ;;
-@@ -10373,12 +10471,12 @@ then
+@@ -10373,12 +10466,12 @@ then
  				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -903,7 +911,7 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -10388,6 +10486,7 @@ then
+@@ -10388,6 +10481,7 @@ then
  			LDSHARED="ld -Bshareable ${LDFLAGS}"
  		fi;;
  	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
@@ -911,7 +919,7 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -10421,6 +10520,7 @@ then
+@@ -10421,6 +10515,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -919,7 +927,7 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -10478,6 +10578,7 @@ then
+@@ -10478,6 +10573,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
@@ -927,7 +935,7 @@ $NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -21203,15 +21304,15 @@ s,@SGI_ABI@,$SGI_ABI,;t t
+@@ -21203,15 +21299,15 @@ s,@SGI_ABI@,$SGI_ABI,;t t
  s,@EXTRAPLATDIR@,$EXTRAPLATDIR,;t t
  s,@EXTRAMACHDEPPATH@,$EXTRAMACHDEPPATH,;t t
  s,@CONFIGURE_MACOSX_DEPLOYMENT_TARGET@,$CONFIGURE_MACOSX_DEPLOYMENT_TARGET,;t t
