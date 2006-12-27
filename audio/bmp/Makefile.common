@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/07/31 21:43:55 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/12/27 13:37:35 joerg Exp $
 #
 
 DISTNAME=	bmp-0.9.7.1
@@ -85,6 +85,8 @@ post-patch:
 .  endif
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -92,5 +94,6 @@ post-patch:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"

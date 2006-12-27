@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	5
@@ -16,4 +16,6 @@ COMMENT=	Dockable network monitor
 
 USE_IMAKE=	YES
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

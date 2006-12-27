@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:37 joerg Exp $
 
 DISTNAME=	xjewel-1.6
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	jdc@NetBSD.org
 COMMENT=	X windows-based dropping jewels game
 
 USE_IMAKE=	yes
-USE_TOOLS+=	gzcat bdftopcf
+USE_TOOLS+=	gzcat bdftopcf mkfontdir
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

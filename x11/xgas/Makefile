@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:47 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:45 joerg Exp $
 
 DISTNAME=	xgas
 PKGNAME=        xgas-1.0
@@ -15,4 +15,6 @@ post-install:
 	@${CHMOD} 755 ${PREFIX}/bin/xgas
 	@${CHOWN} bin:bin ${PREFIX}/bin/xgas
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

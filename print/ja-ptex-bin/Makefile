@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -111,4 +111,6 @@ do-install:
 pre-clean:
 	cd ../../print/teTeX3-bin && ${MAKE} clean
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
