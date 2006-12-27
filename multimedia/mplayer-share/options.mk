@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2006/10/31 22:33:28 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2006/12/27 21:14:12 joerg Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -239,7 +239,6 @@ CONFIGURE_ARGS+=	--disable-theora
 
 .if !empty(PKG_OPTIONS:Mvorbis)
 CONFIGURE_ARGS+=	--enable-libvorbis
-.  include "../../audio/libvorbis/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libvorbis
 .endif
