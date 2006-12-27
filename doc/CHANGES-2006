@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2055 2006/12/24 10:39:16 jnemeth Exp $
+$NetBSD: CHANGES-2006,v 1.2056 2006/12/27 04:13:02 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5702,3 +5702,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/apcupsd to 3.12.4nb1 [bouyer 2006-12-20]
 	Updated multimedia/xanim to 2.92.0nb2 [wiz 2006-12-23]
 	Updated meta-pkgs/netbsd-www to 1.4nb3 [jnemeth 2006-12-24]
+	Updated ham/hamlib to 1.2.6 [wulf 2006-12-27]
