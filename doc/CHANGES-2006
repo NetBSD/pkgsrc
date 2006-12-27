@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2062 2006/12/27 13:42:07 wulf Exp $
+$NetBSD: CHANGES-2006,v 1.2063 2006/12/27 15:58:56 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5710,3 +5710,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/libXScrnSaver version 1.1.2 [joerg 2006-12-27]
 	Added x11/libXxf86dga version 1.0.1 [joerg 2006-12-27]
 	Updated www/bluefish to 1.0.6 [wulf 2006-12-27]
+	Removed databases/jdbc-postgresql74 [joerg 2006-12-27]
+	Removed databases/postgresql74 [joerg 2006-12-27]
+	Removed databases/postgresql74-client [joerg 2006-12-27]
+	Removed databases/postgresql74-contrib [joerg 2006-12-27]
+	Removed databases/postgresql74-docs [joerg 2006-12-27]
+	Removed databases/postgresql74-lib [joerg 2006-12-27]
+	Removed databases/postgresql74-plperl [joerg 2006-12-27]
+	Removed databases/postgresql74-plpython [joerg 2006-12-27]
+	Removed databases/postgresql74-server [joerg 2006-12-27]
+	Removed databases/tcl-postgresql74 [joerg 2006-12-27]
