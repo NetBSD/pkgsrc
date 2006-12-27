@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:11 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:40 joerg Exp $
 #
 
 DISTNAME=		xcal41
@@ -20,4 +20,7 @@ post-extract:
 	    ${SED} -e '1,/--shar starts here--/d' $$i | ${SH} >/dev/null 2>&1; \
 	done
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

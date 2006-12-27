@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/12/15 20:32:54 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
@@ -30,8 +30,8 @@ CONFIGURE_ENV+=	ac_tiff_includes="${BUILDLINK_PREFIX.tiff}/include"
 CONFIGURE_ENV+=	ac_tiff_libraries="${BUILDLINK_PREFIX.tiff}/lib"
 CONFIGURE_ENV+=	ac_xm_includes="${BUILDLINK_PREFIX.openmotif}/include"
 CONFIGURE_ENV+=	ac_xm_libraries="${BUILDLINK_PREFIX.openmotif}/lib"
-CONFIGURE_ENV+=	ac_xpm_includes="${BUILDLINK_PREFIX.xpm}/include"
-CONFIGURE_ENV+=	ac_xpm_libraries="${BUILDLINK_PREFIX.xpm}/lib"
+CONFIGURE_ENV+=	ac_xpm_includes="${BUILDLINK_PREFIX.libXpm}/include"
+CONFIGURE_ENV+=	ac_xpm_libraries="${BUILDLINK_PREFIX.libXpm}/lib"
 CONFIGURE_ENV+=	ac_zlib_includes="${BUILDLINK_PREFIX.zlib}/include"
 CONFIGURE_ENV+=	ac_zlib_libraries="${BUILDLINK_PREFIX.zlib}/lib"
 

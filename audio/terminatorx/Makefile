@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/11 14:34:17 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:35 joerg Exp $
 #
 
 DISTNAME=	terminatorX-3.82
@@ -37,6 +37,7 @@ SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

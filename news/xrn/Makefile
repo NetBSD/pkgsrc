@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:39 joerg Exp $
 #
 
 DISTNAME=	9.01
@@ -23,4 +23,7 @@ pre-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/xrn;	\
 	done
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

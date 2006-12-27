@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/20 20:48:35 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	spider
 PKGNAME=	spider-1.1
@@ -12,4 +12,7 @@ COMMENT=	Solitaire card game from xcontrib
 USE_IMAKE=	yes
 INSTALL_TARGET=	install install.doc install.man
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

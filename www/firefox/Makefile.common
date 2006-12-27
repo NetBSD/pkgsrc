@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/12/15 20:33:03 joerg Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/12/27 13:37:42 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -46,11 +46,17 @@ BUILD_TARGET=		# empty
 
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .if defined(MOZILLA_USE_GTK2)
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk2 --disable-gnomevfs
 .else
 .include "../../graphics/freetype2/buildlink3.mk"

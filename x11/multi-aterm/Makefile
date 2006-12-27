@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/12/15 20:33:04 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:43 joerg Exp $
 #
 
 DISTNAME=	multi-aterm-0.0.4
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-half-shadow
 CONFIGURE_ARGS+=	--enable-shading
 CONFIGURE_ARGS+=	--enable-fading
 CONFIGURE_ARGS+=	--enable-transparency
-CONFIGURE_ARGS+=	--with-xpm=${BUILDLINK_PREFIX.xpm}
+CONFIGURE_ARGS+=	--with-xpm=${BUILDLINK_PREFIX.libXpm}
 
 .include "options.mk"
 

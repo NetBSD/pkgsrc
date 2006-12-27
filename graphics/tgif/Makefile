@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/10/04 21:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2006/12/27 13:37:38 joerg Exp $
 #
 
 DISTNAME=		tgif-4.1.45
@@ -26,6 +26,8 @@ post-patch::
 	@${CP}  ${OS_TEMPLATE} ${WRKSRC}/Tgif.tmpl
 
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 

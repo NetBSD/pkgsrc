@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/12/27 13:37:39 joerg Exp $
 #
 
 DISTNAME=	kdrill5.11.6
@@ -31,4 +31,6 @@ post-install:
 	${GZIP_CMD} -c ${PREFIX}/share/kanjidic/kanjidic > \
 		${PREFIX}/share/kdrill/kanjidic.gz
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

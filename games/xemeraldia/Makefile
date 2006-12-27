@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/27 13:37:37 joerg Exp $
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31
@@ -23,4 +23,7 @@ PLIST_SUBST=	GAMES_DIR=${GAMES_DIR:Q}
 CONF_FILES_PERMS+=	/dev/null ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores \
 			${ROOT_USER} games 664
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

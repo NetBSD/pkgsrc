@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/12/15 20:32:56 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/27 13:37:37 joerg Exp $
 #
 
 DISTNAME=	xscrabble-1.0
@@ -35,5 +35,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/xscrabble.scores ${EGDIR}/xscrabble.scores.dist
 	${INSTALL_DATA} ${WRKSRC}/XScrabble.ad ${PREFIX}/lib/X11/app-defaults/XScrabble
 
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:37 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:36 joerg Exp $
 #
 
 DISTNAME=	x48_041
@@ -25,4 +25,6 @@ post-install:
 		${INSTALL_DATA} ROMDump ROMDump.s \
 			${PREFIX}/share/doc/x48/romdump
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

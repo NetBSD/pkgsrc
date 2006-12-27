@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/15 20:33:03 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:42 joerg Exp $
 
 DISTNAME=		AfterStep-1.0
 PKGNAME=		fvwm-wharf-1.0
@@ -21,5 +21,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/modules/Wharf/Wharf ${PREFIX}/bin/Fvwm-Wharf
 	${INSTALL_MAN} ${WRKSRC}/modules/Wharf/Wharf.man ${PREFIX}/man/man1/Fvwm-Wharf.1
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

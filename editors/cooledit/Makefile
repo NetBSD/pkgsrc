@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/12/15 20:32:54 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	cooledit-3.17.17
 PKGREVISION=	2
@@ -25,5 +25,6 @@ post-configure:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
