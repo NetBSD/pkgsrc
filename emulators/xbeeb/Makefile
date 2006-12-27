@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/09/22 13:21:37 dsainty Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/27 12:42:36 joerg Exp $
 #
 
 DISTNAME=	xbeeb-0.4.1
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.cloud9.co.uk/james/BBCMicro/Xbeeb/
 COMMENT=	Acorn BBC Micro emulator with an X based interface
 
 USE_IMAKE=	yes
+USE_TOOLS+=	bdftopcf
 MAN_PAGE=	${WRKDIR}/xbeeb.1
 
 XBEEBROOT=	share/xbeeb
