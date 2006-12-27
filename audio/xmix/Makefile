@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/09 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/12/27 13:37:35 joerg Exp $
 
 DISTNAME=		xmix-2.1
 PKGREVISION=		2
@@ -22,5 +22,7 @@ pre-configure:
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/XMix ${PREFIX}/lib/X11/app-defaults
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

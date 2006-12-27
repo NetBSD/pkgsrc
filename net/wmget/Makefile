@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/15 20:32:59 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=	wmget-0.6.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -26,5 +26,7 @@ SUBST_SED.paths=	-e 's|^PREFIX=.*|PREFIX=${LOCALBASE}|'
 USE_TOOLS+=	gmake
 
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

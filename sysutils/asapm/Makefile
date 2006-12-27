@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/12/15 20:33:00 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/12/27 13:37:39 joerg Exp $
 #
 
 DISTNAME=		asapm-2.11
@@ -19,8 +19,8 @@ PKG_FAIL_REASON+=	"APM needs /usr/include/machine/apmvar.h to build."
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-jpeg	# there actually is no JPEG support
 CONFIGURE_ARGS+=	--with-xpm
-CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include
-CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib
+CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include
+CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

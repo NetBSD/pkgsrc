@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	crack-attack-1.1.14
 PKGREVISION=	3
@@ -20,5 +20,6 @@ post-install:
 
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

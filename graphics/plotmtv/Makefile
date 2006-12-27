@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:51 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:38 joerg Exp $
 
 DISTNAME=	Plotmtv1.4.1
 PKGNAME=	plotmtv-1.4.1
@@ -22,4 +22,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Tests/run.sh ${WRKSRC}/Tests/run.csh \
 		${PREFIX}/share/examples/plotmtv
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

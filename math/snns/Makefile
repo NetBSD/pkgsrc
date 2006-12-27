@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/15 20:32:58 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -32,5 +32,7 @@ post-install:
 		    ${PREFIX}/share/examples/snns; \
 		done
 
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
