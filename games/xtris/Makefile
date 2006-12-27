@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/19 12:40:48 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/12/27 12:43:58 joerg Exp $
 #
 
 DISTNAME=	xtris-1.15
@@ -17,7 +17,7 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	bin ${PREFIX}/man6
+INSTALLATION_DIRS=	bin ${PREFIX}/${PKGMANDIR}/man6
 
 .include "../../mk/x11.buildlink3.mk"
 
