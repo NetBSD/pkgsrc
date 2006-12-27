@@ -1,0 +1,5 @@
+These functions provide an interface to the server extension
+XFree86-DGAExtension which allows local programs direct access
+to the video frame buffer.
+
+This library is from the modular X.org project.

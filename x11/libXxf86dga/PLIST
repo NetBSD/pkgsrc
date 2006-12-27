@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/27 12:24:15 joerg Exp $
+lib/libXxf86dga.la
+lib/pkgconfig/xxf86dga.pc
+man/man3/XDGA.3
+man/man3/XDGAChangePixmapMode.3
+man/man3/XDGACloseFramebuffer.3
+man/man3/XDGACopyArea.3
+man/man3/XDGACopyTransparentArea.3
+man/man3/XDGACreateColormap.3
+man/man3/XDGAFillRectangle.3
+man/man3/XDGAGetViewportStatus.3
+man/man3/XDGAInstallColormap.3
+man/man3/XDGAKeyEventToXKeyEvent.3
+man/man3/XDGAOpenFramebuffer.3
+man/man3/XDGAQueryExtension.3
+man/man3/XDGAQueryModes.3
+man/man3/XDGAQueryVersion.3
+man/man3/XDGASelectInput.3
+man/man3/XDGASetClientVersion.3
+man/man3/XDGASetMode.3
+man/man3/XDGASetViewport.3
+man/man3/XDGASync.3
+man/man3/XF86DGA.3
+man/man3/XFree86-DGA.3
