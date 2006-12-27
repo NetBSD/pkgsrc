@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/12/27 11:56:09 wulf Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/12/27 15:26:35 wulf Exp $
 bin/xlog
 man/man1/xlog.1
 share/application-registry/xlog.applications
@@ -74,11 +74,12 @@ share/xlog/qsllabels.glabels
 @dirrm share/xlog/dxcc
 @dirrm share/xlog
 @dirrm share/pixmaps/xlog
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/mimelnk/text
 @dirrm share/mimelnk
 @dirrm share/mime/packages
-@dirrm share/mime
-@dirrm share/mime-info
-@dirrm share/application-registry
+@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/applnk/Applications
 @dirrm share/applnk
+@comment in xdg-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/application-registry
