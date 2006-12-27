@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- src/gdevalps.mak-5.50.orig	Mon May  1 20:24:43 2000
++++ src/gdevalps.mak-5.50	Mon May  1 20:26:23 2000
+@@ -2,14 +2,14 @@
+ 
+ alps_=$(GLOBJ)gdevalps.$(OBJ)
+ 
+-md50Mono.dev: $(alps_) page.dev
+-	$(SETPDEV) md50Mono $(alps_)
++$(DD)md50Mono.dev: $(alps_) $(DD)page.dev
++	$(SETPDEV) $(DD)md50Mono $(alps_)
+ 
+-md50Eco.dev: $(alps_) page.dev
+-	$(SETPDEV) md50Eco $(alps_)
++$(DD)md50Eco.dev: $(alps_) $(DD)page.dev
++	$(SETPDEV) $(DD)md50Eco $(alps_)
+ 
+-md1xMono.dev: $(alps_) page.dev
+-	$(SETPDEV) md1xMono $(alps_)
++$(DD)md1xMono.dev: $(alps_) $(DD)page.dev
++	$(SETPDEV) $(DD)md1xMono $(alps_)
+ 
+ $(GLOBJ)gdevalps.$(OBJ): $(GLSRC)gdevalps.c $(PDEVH)
+ 	$(GLCC) $(GLO_)gdevalps.$(OBJ) $(C_) $(GLSRC)gdevalps.c

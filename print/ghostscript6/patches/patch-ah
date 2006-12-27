@@ -1,0 +1,229 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- src/gdevcd8.c.orig	Thu Mar  9 03:40:40 2000
++++ src/gdevcd8.c
+@@ -31,7 +31,7 @@
+ 
+ /*
+    A printer driver for the HP670, HP690, HP850, HP855
+-   HP870, HP890, HP1100 and HP1600 color printers. 
++   HP870, HP880, HP890, HP1100 and HP1600 color printers. 
+ 
+    To be used with the Ghostscript printing system.
+    Please report all problems to uliw@erdw.ethz.ch 
+@@ -43,6 +43,16 @@
+ 	    and hp1600 was added by Martin Gerbershagen.
+ */
+ 
++/* Merge code by Matthew J. Gelhaus to add support for the HP DeskJet
++   880 series color printers.  The code has the following copyright:
++
++		DeskJet 880C/882C/895C Ghostscript Driver
++		  (c) Copyright 2000 Matthew J. Gelhaus
++		           All rights reserved.
++
++   The code is publicly available at http://www.gelhaus.net/index.html.
++ */
++
+ /* Note: Depending on how you transfered the files, 
+    you might need to remove some CR-codes used on intel-based machines:
+ 
+@@ -303,6 +313,107 @@
+      166, 169, 174, 177, 182, 187, 194, 203, 215, 255}
+ };
+ 
++private const Gamma gammat880 =
++{
++  /* Lookup values for cyan */
++    {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
++     16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
++     32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
++     48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
++     64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
++     80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
++     96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
++     112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125,
++     126, 127,
++     128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141,
++     142, 143,
++     144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157,
++     158, 159,
++     160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173,
++     174, 175,
++     176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189,
++     190, 191,
++     192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205,
++     206, 207,
++     208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221,
++     222, 223,
++     224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237,
++     238, 239,
++     240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253,
++     254, 255},
++  /* Lookup values for magenta */
++    {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
++     16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
++     32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
++     48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
++     64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
++     80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
++     96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
++     112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125,
++     126, 127,
++     128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141,
++     142, 143,
++     144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157,
++     158, 159,
++     160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173,
++     174, 175,
++     176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189,
++     190, 191,
++     192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205,
++     206, 207,
++     208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221,
++     222, 223,
++     224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237,
++     238, 239,
++     240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253,
++     254, 255},
++  /* Lookup values for yellow */
++    {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
++     16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
++     32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
++     48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
++     64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
++     80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
++     96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
++     112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125,
++     126, 127,
++     128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141,
++     142, 143,
++     144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157,
++     158, 159,
++     160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173,
++     174, 175,
++     176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189,
++     190, 191,
++     192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205,
++     206, 207,
++     208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221,
++     222, 223,
++     224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237,
++     238, 239,
++     240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253,
++     254, 255},
++  /* Lookup values for black */
++    {0, 0, 0, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 2, 4,
++     3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6,
++     6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 9, 9, 8, 8, 8,
++     9, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 13,
++     13, 12, 12, 12, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 15, 15,
++     16, 16, 16, 17, 17, 17, 17, 18, 18, 18, 19, 19, 20, 20, 20, 20,
++     20, 21, 21, 21, 21, 22, 22, 22, 22, 23, 22, 23, 23, 24, 24, 24,
++     24, 25, 25, 26, 26, 26, 26, 27, 27, 28, 28, 28, 28, 29, 29, 30,
++     30, 31, 31, 31, 32, 32, 33, 33, 34, 34, 35, 36, 36, 36, 37, 37,
++     37, 38, 38, 40, 40, 40, 41, 41, 42, 43, 43, 43, 43, 44, 45, 45,
++     46, 47, 47, 48, 49, 49, 50, 52, 52, 53, 54, 54, 56, 56, 57, 58,
++     59, 60, 60, 61, 62, 63, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
++     72, 73, 75, 75, 76, 77, 78, 80, 81, 82, 82, 83, 84, 85, 86, 88,
++     89, 90, 91, 94, 95, 96, 98, 99, 100, 101, 103, 105, 106, 107, 110, 111,
++     112, 115, 116, 118, 120, 121, 124, 126, 127, 131, 133, 134, 138, 140,
++     141, 146,
++     148, 151, 154, 156, 160, 163, 166, 169, 174, 177, 182, 187, 194, 203,
++     215, 255}
++};
++
+ private const Gamma gammat890 =
+ {
+ /* Lookup values for cyan */
+@@ -408,6 +519,7 @@
+ {
+     &gammat850,			/* CDJ670 */
+     &gammat850,			/* CDJ850 */
++    &gammat880,			/* CDJ880 */
+     &gammat890,			/* CDJ890 */
+     &gammat850			/* CDJ1600 */
+ };
+@@ -464,7 +576,7 @@
+ 
+ /* Printer types */
+ typedef enum {
+-    DJ670C, DJ850C, DJ890C, DJ1600C
++    DJ670C, DJ850C, DJ880C, DJ890C, DJ1600C
+ } cdj_printer_type_t;
+ 
+ /* No. of ink jets (used to minimise head movements) */
+@@ -586,7 +698,7 @@
+     int intensities;		/* intensity values per pixel [2,4] */
+     int xscal;			/* boolean to indicate x scaling by 2 */
+     int yscal;			/* boolean to indicate y scaling by 2 */
+-    int /*cdj_printer_type_t*/ ptype;  /* printer type, one of DJ670C, DJ850C, DJ890C, DJ1600C */
++    int /*cdj_printer_type_t*/ ptype;  /* printer type, one of DJ670C, DJ850C, DJ880C, DJ890C, DJ1600C */
+     int compression;		/* compression level */
+     float mastergamma;		/* Gammavalue applied to all colors */
+     float gammavalc;		/* range to which gamma-correction is
+@@ -705,6 +817,10 @@
+      cdj850_terminate_page(P2(gx_device_printer * pdev, FILE * prn_stream));
+ 
+ private void
++     cdj880_start_raster_mode(P3(gx_device_printer * pdev,
++				 int papersize, FILE * prn_stream));
++
++private void
+      cdj1600_start_raster_mode(P3(gx_device_printer * pdev,
+ 				  int papersize, FILE * prn_stream));
+ private void
+@@ -727,6 +843,10 @@
+ cmyk_colour_procs(hp_colour_open, cdj850_get_params, cdj850_put_params,
+ 		  NULL, gdev_cmyk_map_color_rgb, gdev_cmyk_map_cmyk_color);
+ 
++private const gx_device_procs cdj880_procs =
++cmyk_colour_procs(hp_colour_open, cdj850_get_params, cdj850_put_params,
++		  NULL, gdev_cmyk_map_color_rgb, gdev_cmyk_map_cmyk_color);
++
+ private const gx_device_procs cdj890_procs =
+ cmyk_colour_procs(hp_colour_open, cdj850_get_params, cdj850_put_params,
+ 		  NULL, gdev_cmyk_map_color_rgb, gdev_cmyk_map_cmyk_color);
+@@ -749,6 +869,13 @@
+ 	       cdj850_start_raster_mode, cdj850_print_non_blank_lines,
+ 	       cdj850_terminate_page);
+ 
++const gx_device_cdj850 gs_cdj880_device =
++cdj_850_device(cdj880_procs, "cdj880", 600, 600, 32, cdj850_print_page, 0,
++	       PRESENTATION, PLAIN_PAPER, 2, DJ880C, 9,
++	       1.0, 0.0, 0.0, 0.0, 0.0, 1.0,
++	       cdj880_start_raster_mode, cdj850_print_non_blank_lines,
++	       cdj1600_terminate_page);
++
+ const gx_device_cdj850 gs_cdj890_device =
+ cdj_850_device(cdj890_procs, "cdj890", 600, 600, 32, cdj850_print_page, 0,
+ 	       PRESENTATION, PLAIN_PAPER, 4, DJ890C, 9,
+@@ -823,6 +950,7 @@
+ 	m = (gdev_pcl_paper_size(pdev) == PAPER_SIZE_A4 ? dj_a4 : dj_letter);
+ 	break;
+     case DJ850C:
++    case DJ880C:
+     case DJ890C:
+ 	if (cdj850->quality == DRAFT) {
+ 	    gx_device_set_resolution(pdev, 300.0, 300.0);
+@@ -2722,6 +2850,20 @@
+  * }
+  * end of unused code */
+ 
++/************************ the routines for the cdj880 printer ****************/
++
++/* Configure the printer and start Raster mode */
++private void
++cdj880_start_raster_mode(gx_device_printer * pdev, int paper_size,
++			 FILE * prn_stream)
++{
++    /* switch to PCL control language */
++    fputs("\033%-12345X@PJL enter language = PCL\n", prn_stream);
++
++    cdj850_start_raster_mode(pdev, paper_size, prn_stream);
++
++    return;
++}
+ 
+ /************************ the routines for the cdj1600 printer ***************/
+ 

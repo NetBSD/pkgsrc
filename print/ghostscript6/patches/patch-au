@@ -1,0 +1,22 @@
+$NetBSD: patch-au,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+
+--- src/unixinst.mak.orig	Mon May  1 20:24:46 2000
++++ src/unixinst.mak	Mon May  1 20:26:24 2000
+@@ -59,7 +59,7 @@
+ 
+ MAN1_PAGES=gs gslp gsnd dvipdf eps2eps font2c pdf2dsc pdf2ps \
+ 	   pf2afm pfbtopfa printafm ps2ascii ps2epsi \
+-	   ps2pdf ps2pdfwr ps2ps wftopfa
++	   ps2pdf ps2pdfwr ps2ps wftopfa gs-hpdj
+ MAN1_PS2PDF_LINKS=ps2pdf12 ps2pdf13
+ MAN1_GSLP_LINKS=gsbj gsdj gsdj500 gslj
+ # There's no point in providing a complete dependency list: we include
+@@ -133,7 +133,7 @@
+ ridt91.eps ;\
+ 	do $(INSTALL_DATA) $(PSEXDIR)/$$f $(exdir) ;\
+ 	done
+-	-mkdir $(gsdatadir)/vflib
++	-mkdir $(vfdir)
+ 	for f in \
+ allkanji.ps article9.ps fmaptype.ps hankaku.ps jcidcmap.ps jcidemu.ps \
+ jcidinit.ps jcidjp1.ps kbase.ps kcomp.ps kconfig.ps kfcid.ps \

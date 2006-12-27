@@ -1,0 +1,32 @@
+$NetBSD: patch-az,v 1.1.1.1 2006/12/27 17:39:14 joerg Exp $
+--- ../gimp-print-4.2.0/src/ghost/Makefile.in.orig	Thu Oct 24 18:17:52 2002
++++ ../gimp-print-4.2.0/src/ghost/Makefile.in	Thu Oct 24 18:18:25 2002
+@@ -316,22 +316,22 @@
+ all-local: $(ALL_LOCAL_DEPS)
+ 
+ $(srcdir)/gdevstp-print.h: $(top_srcdir)/include/gimp-print/gimp-print.h
+-	sed $(GHCODE) $< > $(srcdir)/$@
++	${SED} $(GHCODE) $< > $(srcdir)/$@
+ 
+ $(srcdir)/gdevstp-print-internal.h: $(top_srcdir)/src/main/gimp-print-internal.h
+-	sed $(GHCODE) $< > $(srcdir)/$@
++	${SED} $(GHCODE) $< > $(srcdir)/$@
+ 
+ $(srcdir)/gdevstp-print-intl-internal.h: $(top_srcdir)/include/gimp-print/gimp-print-intl-internal.h
+-	sed $(GHCODE) $< > $(srcdir)/$@
++	${SED} $(GHCODE) $< > $(srcdir)/$@
+ 
+ gdevstp-%.h: $(srcdir)/../main/%.h Makefile
+-	cd $(srcdir) ; sed $(GHCODE) $< > $@
++	cd $(srcdir) ; ${SED} $(GHCODE) $< > $@
+ 
+ gdevstp-printers.c: ../main/print-printers.c
+-	sed $(GHCODE) $< > $@
++	${SED} $(GHCODE) $< > $@
+ 
+ gdevstp-%: $(srcdir)/../main/print-% Makefile
+-	cd $(srcdir) ; sed $(GHCODE) $< > $@
++	cd $(srcdir) ; ${SED} $(GHCODE) $< > $@
+ 
+ ../main/print-printers.c: ../printdef/printdef $(srcdir)/../main/printers.xml
+ 	../printdef/printdef < $(srcdir)/../main/printers.xml > $(top_builddir)/src/main/print-printers.c
