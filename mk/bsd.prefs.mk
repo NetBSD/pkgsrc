@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.242 2006/12/20 01:04:46 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.243 2006/12/27 14:29:45 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -421,17 +421,15 @@ CROSSBASE?=	${LOCALBASE}/cross
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 USE_XPKGWEDGE=  yes
-.else
-USE_XPKGWEDGE?=	yes
-.endif
-
-.if defined(_OPSYS_NEEDS_XPKGWEDGE) && \
+.elif defined(_OPSYS_NEEDS_XPKGWEDGE) && \
     !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
 USE_XPKGWEDGE=	yes
-.endif
-
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_XPKGWEDGE=		yes
+.elif ${X11_TYPE} == "modular"
+USE_XPKGWEDGE=	no
+.else
+USE_XPKGWEDGE?=	yes
 .endif
 
 # Default installation prefix for meta-pkgs/xorg.
@@ -441,9 +439,10 @@ X11ROOT_PREFIX?=	xorg
 X11ROOT_PREFIX?=	# empty
 .endif
 
-.if (defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)) && \
-    (defined(X11_TYPE) && empty(X11_TYPE:Mnative))
+.if ${X11_TYPE} == "xorg"
 X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
+.elif ${X11_TYPE} == "modular"
+X11BASE=		${LOCALBASE}
 .endif
 
 .if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss])
