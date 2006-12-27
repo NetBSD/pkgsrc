@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/12/23 10:35:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
@@ -52,5 +52,8 @@ post-extract:
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

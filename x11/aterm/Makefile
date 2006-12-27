@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/12/15 20:33:03 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/12/27 13:37:42 joerg Exp $
 #
 
 DISTNAME=	aterm-1.0.0
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=--enable-background-image \
 		--enable-fading \
 		--enable-graphics \
 		--with-xpm \
-		--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include \
-		--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib \
+		--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include \
+		--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib \
 		--with-jpeg \
 		--with-jpeg-includes=${BUILDLINK_PREFIX.jpeg}/include \
 		--with-jpeg-library=${BUILDLINK_PREFIX.jpeg}/lib \
@@ -43,8 +43,13 @@ CONFIGURE_ARGS+=	--enable-ttygid
 SPECIAL_PERMS=		${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

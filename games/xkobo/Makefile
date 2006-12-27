@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/11 14:07:56 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/27 13:37:37 joerg Exp $
 
 DISTNAME=       xkobo-1.11
 PKGREVISION=	3
@@ -14,4 +14,6 @@ USE_IMAKE=	yes
 USE_LANGUAGES=	c c++
 BUILD_TARGET+=	xkobo all
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

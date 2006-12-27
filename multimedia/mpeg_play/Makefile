@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 21:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/12/27 13:37:39 joerg Exp $
 
 DISTNAME=	mpeg_play-2.4-patched
 PKGNAME=	mpeg_play-2.4patched
@@ -18,4 +18,6 @@ pre-configure:
 	${MV} -f ${WRKSRC}/Imakefile.proto ${WRKSRC}/Imakefile
 	${MV} -f ${WRKSRC}/mpeg_play.1 ${WRKSRC}/mpeg_play.man
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

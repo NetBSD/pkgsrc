@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/04 22:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/27 13:37:40 joerg Exp $
 #
 
 DISTNAME=		polclock-1.11
@@ -12,4 +12,5 @@ COMMENT=		Digital clock with some nice graphics effects
 
 USE_IMAKE=		yes
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

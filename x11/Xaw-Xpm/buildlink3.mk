@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/12/15 20:33:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/12/27 13:37:42 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XAW_XPM_BUILDLINK3_MK:=	${XAW_XPM_BUILDLINK3_MK}+
@@ -22,8 +22,8 @@ BUILDLINK_PKGSRCDIR.Xaw-Xpm?=	../../x11/Xaw-Xpm
 
 LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.Xaw-Xpm}/lib	\
-		-L${BUILDLINK_PREFIX.xpm}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.xpm}/lib	\
+		-L${BUILDLINK_PREFIX.libXpm}/lib			\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXpm}/lib	\
 		-lXaw3d -lXpm
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
