@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/25 15:58:28 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:45 joerg Exp $
 
 DISTNAME=		xfishtank-2.2
 PKGREVISION=		1
@@ -15,4 +15,6 @@ NO_INSTALL_MANPAGES=	yes
 post-patch:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKEFLAGS} clean
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

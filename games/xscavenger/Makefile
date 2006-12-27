@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/05 06:53:13 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/27 13:37:37 joerg Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
@@ -29,4 +29,6 @@ post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scavenger
 	@${INSTALL_MAN} ${WRKSRC}/DOC ${PREFIX}/share/doc/scavenger
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

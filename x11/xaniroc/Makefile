@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:31:12 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/27 13:37:43 joerg Exp $
 
 DISTNAME=	xaniroc
 PKGNAME=	xaniroc-1.02
@@ -16,4 +16,7 @@ USE_IMAKE=	yes
 post-extract:
 	${MV} ${WRKSRC}/manpage.1 ${WRKSRC}/xaniroc.man
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:30:53 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/27 13:37:40 joerg Exp $
 #
 
 DISTNAME=		xchrono
@@ -18,4 +18,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchrono
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xchrono/
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

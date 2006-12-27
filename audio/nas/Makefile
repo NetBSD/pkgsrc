@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/10/22 16:03:18 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2006/12/27 13:37:35 joerg Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -94,5 +94,9 @@ PLIST_SRC+=	${PKGDIR}/PLIST.server
 
 pre-configure:
 	cd ${WRKSRC}/config && ${SETENV} ${CONFIGURE_ENV} ./configure
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

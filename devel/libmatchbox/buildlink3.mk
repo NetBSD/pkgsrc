@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/12/15 20:32:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/12/27 13:37:36 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMATCHBOX_BUILDLINK3_MK:=	${LIBMATCHBOX_BUILDLINK3_MK}+
@@ -18,7 +18,9 @@ BUILDLINK_PKGSRCDIR.libmatchbox?=	../../devel/libmatchbox
 .endif	# LIBMATCHBOX_BUILDLINK3_MK
 
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

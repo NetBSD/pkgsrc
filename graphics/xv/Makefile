@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/09/09 02:42:02 obache Exp $
+# $NetBSD: Makefile,v 1.67 2006/12/27 13:37:38 joerg Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	12
@@ -51,6 +51,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/10/28 14:20:20 seb Exp $
+# $NetBSD: Makefile,v 1.35 2006/12/27 13:37:46 joerg Exp $
 
 DISTNAME=	xplanet-1.2.0
 PKGREVISION=	3
@@ -37,11 +37,15 @@ CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xscreensaver
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

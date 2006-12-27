@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/12/15 20:33:05 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/27 13:37:43 joerg Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.9pre4
@@ -20,5 +20,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${PREFIX}/share/doc/wmfire
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/wmfire
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

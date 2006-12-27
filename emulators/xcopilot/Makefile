@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/15 20:32:55 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:36 joerg Exp $
 #
 
 DISTNAME=		xcopilot-0.6.6
@@ -17,5 +17,8 @@ GNU_CONFIGURE=		YES
 post-extract:
 	${RM} -f ${WRKSRC}/mc68k/custom.c
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

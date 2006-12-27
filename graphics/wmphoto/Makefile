@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/15 20:32:57 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/12/27 13:37:38 joerg Exp $
 #
 
 DISTNAME=	wmphoto-0.3a
@@ -20,5 +20,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmphoto
 	${INSTALL_DATA} ${WRKSRC}/HINTS ${PREFIX}/share/doc/wmphoto
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

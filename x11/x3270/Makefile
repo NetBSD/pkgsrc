@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/15 22:03:59 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/27 13:37:43 joerg Exp $
 
 DISTNAME=	x3270-3213
 PKGNAME=	x3270-3.2.13
@@ -16,4 +16,7 @@ USE_IMAKE=	yes
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/15 20:32:55 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -24,7 +24,7 @@ EXTRACT_ONLY=		${DISTNAME}
 WRKSRC=			${WRKDIR}/Maelstrom
 USE_LANGUAGES=		c c++
 USE_X11BASE=		YES
-MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} XPMDIR=${BUILDLINK_PREFIX.xpm}
+MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} XPMDIR=${BUILDLINK_PREFIX.libXpm}
 MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
 MAKE_ENV+=		GAMEMODE=${GAMEMODE} GAMEDATAMODE=${GAMEDATAMODE}
 MAKE_ENV+=		VARBASE=${VARBASE}
@@ -43,6 +43,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom
 	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd ${PREFIX}/bin/Maelstrom_netplayd
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

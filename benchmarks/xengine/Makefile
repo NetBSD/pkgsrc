@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/09/03 00:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/27 13:37:36 joerg Exp $
 
 DISTNAME=	xengine-1.0.1
 PKGREVISION=	3
@@ -31,4 +31,6 @@ post-install:
 	@${ECHO} "   1067 RPMs with P100, Winner 2000PRO/X, resolution: 1152x900"
 	@${ECHO} ""
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

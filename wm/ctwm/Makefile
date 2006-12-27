@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/12/15 20:33:01 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/12/27 13:37:40 joerg Exp $
 #
 
 DISTNAME=	ctwm-3.7
@@ -38,5 +38,8 @@ pre-install:
 .endfor
 
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:31:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/27 13:37:46 joerg Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -25,4 +25,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xscribble
 	${INSTALL_DATA} ${WRKSRC}/classifiers/*.cl ${PREFIX}/share/examples/xscribble
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

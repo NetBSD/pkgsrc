@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/12/15 20:32:57 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2006/12/27 13:37:38 joerg Exp $
 
 DISTNAME=       xpaint-2.7.8.1
 PKGREVISION=	2
@@ -20,7 +20,7 @@ SUBST_FILES.foo=	Local.config configure
 SUBST_SED.foo=		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
 			-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@XAWDIR@|${BUILDLINK_PREFIX.Xaw3d}|g" \
-			-e "s|@XPMDIR@|${BUILDLINK_PREFIX.xpm}|g"
+			-e "s|@XPMDIR@|${BUILDLINK_PREFIX.libXpm}|g"
 
 pre-configure:
 	cd ${WRKSRC} && ./configure xaw3dg

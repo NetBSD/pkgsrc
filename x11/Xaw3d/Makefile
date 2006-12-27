@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/12/15 20:33:03 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/12/27 13:37:42 joerg Exp $
 #
 
 DISTNAME=	Xaw3d-1.5E
@@ -42,5 +42,9 @@ post-install:
 .endif
 	cd ${DESTDIR}${PREFIX} && ${LS} lib/libXaw3d* >>${PLIST_SRC}
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
