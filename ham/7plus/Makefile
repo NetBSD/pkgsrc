@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/27 05:12:02 wulf Exp $
 #
 
 DISTNAME=	7pl225sr
 PKGNAME=	7plus-225
 PKGREVISION=	1
 CATEGORIES=	ham
-MASTER_SITES=	http://home.t-online.de/home/dg1bbq/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 DISTFILES=	7pl225sr.tgz \
 		7pl210mg.tgz
 
 MAINTAINER=	wulf@NetBSD.org
-HOMEPAGE=	http://home.t-online.de/home/dg1bbq/
+HOMEPAGE=	#http://home.t-online.de/home/dg1bbq/
 COMMENT=	Uuencode-like file coder for AMPR BBS S&F of binary files
 
 LICENSE=        no-commercial-use
