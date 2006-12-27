@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2057 2006/12/27 05:59:04 wulf Exp $
+$NetBSD: CHANGES-2006,v 1.2058 2006/12/27 06:42:25 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5704,3 +5704,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/netbsd-www to 1.4nb3 [jnemeth 2006-12-24]
 	Updated ham/hamlib to 1.2.6 [wulf 2006-12-27]
 	Updated ham/grig to 0.7.2 [wulf 2006-12-27]
+	Updated ham/tlf to 0.9.30 [wulf 2006-12-27]
