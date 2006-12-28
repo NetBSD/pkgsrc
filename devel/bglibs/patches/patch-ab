@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2006/02/24 14:55:45 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/12/28 03:20:32 schmonz Exp $
 
---- Makefile.orig	2006-02-19 06:53:08.000000000 +0000
+--- Makefile.orig	2006-10-30 16:11:21.000000000 -0500
 +++ Makefile
-@@ -1163,9 +1163,7 @@ path/mktemp.o: compile path/mktemp.c sys
+@@ -126,7 +126,7 @@ adt/hashs.lo: libcompile adt/hashs.c adt
+ adt/hashs.o: compile adt/hashs.c adt/common.h
+ 	./compile adt/hashs.c
+ 
+-all: dotlibs sysdeps.h libraries bg-installer cli-generate selftests
++all: dotlibs sysdeps.h libraries bg-installer cli-generate
+ 
+ base64/asc2bin.lo: libcompile base64/asc2bin.c base64/base64.h str/str.h
+ 	./libcompile base64/asc2bin.c
+@@ -1505,9 +1505,7 @@ path/mktemp.o: compile path/mktemp.c sys
  	./compile path/mktemp.c
  
  perl-head.pl: 
