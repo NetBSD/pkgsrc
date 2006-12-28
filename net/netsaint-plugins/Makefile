@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:30:21 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/12/28 12:12:58 joerg Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
 PKGNAME=		netsaint-plugins-1.2.9.4
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netsaintplug/}
 
