@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2006/12/19 07:53:57 wiz Exp $
+$NetBSD: distinfo,v 1.18 2006/12/28 11:10:08 hira Exp $
 
 SHA1 (mlterm-2.9.3.tar.gz) = 65ba5a7bd83accf7f621f84b84debb35c8f215ef
 RMD160 (mlterm-2.9.3.tar.gz) = 27f4381a8b8b68b07e53bbeb422581beb7527b48
@@ -15,3 +15,4 @@ SHA1 (patch-al) = 6b87b81e403a3fac9794c666c1e0260a3d5b5bd4
 SHA1 (patch-am) = 83684bfa15e5596abddef92cf994bb92b9f21990
 SHA1 (patch-an) = 156b8ebf5c7fdf68c39df7076849a05a90eb7e5a
 SHA1 (patch-ao) = 680ac866197202e09c25d93b20a7e3b700f38370
+SHA1 (patch-ap) = 3cfe668a591623d45043621813a68d8958cb81c7
