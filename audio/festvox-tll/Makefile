@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:07 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/12/28 11:47:52 wiz Exp $
 
 DISTNAME=	voice_tll_di-2.0
 PKGNAME=	festvox-tll-2.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
-MAINTAINER=	proff@iq.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
 COMMENT=	American English female voice for the festival speech synthesis system
 

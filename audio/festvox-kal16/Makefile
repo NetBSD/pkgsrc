@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/10/04 20:44:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/12/28 11:47:52 wiz Exp $
 
 DISTNAME=	festvox_kallpc16k
 PKGNAME=	festvox-kal16-1.4.0
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
 		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
-MAINTAINER=	proff@iq.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	16khz American English male voice for festival
 
