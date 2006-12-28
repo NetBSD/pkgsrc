@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2071 2006/12/28 12:44:40 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.2072 2006/12/28 15:53:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5730,3 +5730,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed print/ghostscript-afpl [joerg 2006-12-28]
 	Updated comms/asterisk-sounds-de-x9media to 20060714 [mjl 2006-12-28]
 	Updated sysutils/dbus-glib to 0.72nb1 [jnemeth 2006-12-28]
+	Updated mail/sylpheed to 2.3.0 [xtraeme 2006-12-28]
