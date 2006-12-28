@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.465 2006/12/27 12:26:05 joerg Exp $
+# $NetBSD: Makefile,v 1.466 2006/12/28 10:22:08 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -191,8 +191,8 @@ SUBDIR+=	libXpm
 SUBDIR+=	libXrandr
 SUBDIR+=	libXrender
 SUBDIR+=	libXres
-SUBDIR+=	libXtst
 SUBDIR+=	libXt
+SUBDIR+=	libXtst
 SUBDIR+=	libXv
 SUBDIR+=	libXxf86dga
 SUBDIR+=	libXxf86misc
@@ -337,8 +337,8 @@ SUBDIR+=	xdialog
 SUBDIR+=	xdm3d
 SUBDIR+=	xearth
 SUBDIR+=	xephem
-SUBDIR+=	xextproto
 SUBDIR+=	xev
+SUBDIR+=	xextproto
 SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-input-mouse
 SUBDIR+=	xf86-video-ati
