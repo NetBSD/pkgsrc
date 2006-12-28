@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/12/28 18:19:00 joerg Exp $
 #
 
 DISTNAME=	guile-pg-0.29
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.glug.org/people/ttn/software/guile-pg/
 
@@ -34,8 +34,6 @@ post-install:
 	# guile should make this, but if not
 	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site
 	cd ${PREFIX}/share/guile/site && ${LN} -sf ../../../lib/guile/site/database .
-
-PGSQL_VERSION_REQD=	74
 
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
