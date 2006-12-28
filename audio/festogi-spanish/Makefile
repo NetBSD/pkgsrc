@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/19 16:18:52 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/28 11:47:51 wiz Exp $
 
 DISTNAME=	OGIspanish-2.0.1
 PKGNAME=	festogi-spanish-2.0.1
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
-MAINTAINER=	proff@iq.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
 COMMENT=	Festival Spanish (Mexican) language support routines (in scheme)
 
