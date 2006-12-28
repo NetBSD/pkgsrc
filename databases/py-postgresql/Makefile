@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2006/09/09 02:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.50 2006/12/28 12:12:58 joerg Exp $
 
 DISTNAME=		PyGreSQL-3.8.1
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.8.1
+PKGREVISION=		1
 CATEGORIES=		databases python
 MASTER_SITES=		ftp://ftp.druid.net/pub/distrib/
 EXTRACT_SUFX=		.tgz
