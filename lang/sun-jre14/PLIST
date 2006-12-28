@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/10/18 05:07:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/12/28 11:51:12 joerg Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -340,6 +340,7 @@ java/sun-1.4/lib/zi/America/Nipigon
 java/sun-1.4/lib/zi/America/Nome
 java/sun-1.4/lib/zi/America/Noronha
 java/sun-1.4/lib/zi/America/North_Dakota/Center
+java/sun-1.4/lib/zi/America/North_Dakota/New_Salem
 java/sun-1.4/lib/zi/America/Panama
 java/sun-1.4/lib/zi/America/Pangnirtung
 java/sun-1.4/lib/zi/America/Paramaribo
