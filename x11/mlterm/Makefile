@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/12/28 11:10:08 hira Exp $
+# $NetBSD: Makefile,v 1.49 2006/12/28 11:44:49 hira Exp $
 
 DISTNAME=	mlterm-2.9.3
 PKGREVISION=	1
@@ -42,8 +42,8 @@ SUBST_FILES.link=	Makefile.in */Makefile.in */*/Makefile.in \
 			tool/mlconfig/mc_im.c tool/mlconfig/mc_sb_view.c \
 			tool/mlmenu/main.c xwindow/x_im.c \
 			xwindow/x_sb_view_factory.c xwindow/x_screen.c
-SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& -R${X11BASE}/lib|g'
-SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& -R${X11BASE}/lib|g'
+SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& ${X11_LDFLAGS}|g'
+SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& ${X11_LDFLAGS}|g'
 SUBST_SED.link+=	-e 's|/usr/local/|${PREFIX}/|g'
 SUBST_SED.link+=	-e 's|/usr/X11R6/|${X11BASE}/|g'
 
