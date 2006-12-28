@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/12/27 18:18:22 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/12/28 12:50:55 joerg Exp $
 
 DISTNAME=	ghostscript-8.54-gpl
 PKGNAME=	ghostscript-8.54
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +14,8 @@ COMMENT=	Postscript interpreter
 CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
+
+DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
