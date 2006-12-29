@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2006/03/12 14:15:43 rillig Exp $
+# $NetBSD: options.mk,v 1.22 2006/12/29 10:32:05 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -51,7 +51,7 @@ SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-qregex)
-QREGEX_PATCH=		qregex-20040725.patch
+QREGEX_PATCH=		qregex-20060423.patch
 PATCHFILES+=		${QREGEX_PATCH}
 SITES.${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
@@ -59,7 +59,7 @@ PLIST_SRC+=             ${PKGDIR}/PLIST.qregex
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-realrcptto)
-REALRCPTTO_PATCH=	qmail-1.03-realrcptto-2004.08.20.patch
+REALRCPTTO_PATCH=	qmail-1.03-realrcptto-2006.12.10.patch
 PATCHFILES+=		${REALRCPTTO_PATCH}
 SITES.${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
 PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
@@ -70,11 +70,11 @@ PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 PKG_OPTIONS+=		sasl
 .  endif
 .  include "../../security/openssl/buildlink3.mk"
-TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20040705.patch
+TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20060105.patch
 PATCHFILES+=            ${TLSSASL_PATCH}
 SITES.${TLSSASL_PATCH}=	http://shupp.org/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
-CFLAGS+=		-DTLS=20040419			# from the patch
+CFLAGS+=		-DTLS=20060104	# NOTE: update according to the patch
 DJB_INSTALL_TARGETS=	cert tmprsadh
 USE_TOOLS+=		gmake
 PLIST_SRC+=             ${PKGDIR}/PLIST.tls
