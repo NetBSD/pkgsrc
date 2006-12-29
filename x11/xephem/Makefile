@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2006/12/29 12:50:03 joerg Exp $
 
 DISTNAME=	xephem-3.7.1
 PKGREVISION=	1
@@ -45,12 +45,14 @@ REPLACE_FILES.perl=	auxil/astorb2edb.pl auxil/mpcorb2edb.pl
 GCC_REQD+=	2.95.3
 .endif
 
+INSTALLATION_DIRS=	bin lib/X11/app-defaults share/xephem/tools \
+	${PKGMANDIR}/man1
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xephem ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xephem.man ${PREFIX}/${PKGMANDIR}/man1/xephem.1
 	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xephem/tools
 	cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits gallery help lo \
 		${PREFIX}/share/xephem
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
