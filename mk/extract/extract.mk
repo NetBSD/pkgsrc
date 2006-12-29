@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.17 2006/10/09 02:37:32 rillig Exp $
+# $NetBSD: extract.mk,v 1.18 2006/12/29 00:48:59 joerg Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -184,7 +184,7 @@ EXTRACT_OPTS+=	${TOOLS_PAX:D	-t ${TOOLS_PAX}}
 
 EXTRACT_CMD_DEFAULT=							\
 	${SETENV} ${_EXTRACT_ENV}					\
-	${SH} ${PKGSRCDIR}//mk/extract/extract				\
+	${SH} ${PKGSRCDIR}/mk/extract/extract				\
 		${EXTRACT_OPTS}						\
 		${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
 
