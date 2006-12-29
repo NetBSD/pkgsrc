@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/05/01 02:57:03 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/12/29 10:32:05 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
 PKGNAME=		qmail-1.03
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -80,14 +80,14 @@ SUBST_SED.logging+=	-e 's|""|${QUEUE_EXTRA}|g'
 SUBST_MESSAGE.logging=	Setting QUEUE_EXTRA.
 .endif
 
-SUBST_FILES.djbware+=	cdb_seek.c dns.c
-
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/README.pkgsrc
 SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
 SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
 SUBST_STAGE.paths=	post-patch
+
+SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
 USERGROUP_PHASE=	configure
 PKG_GROUPS=		qmail nofiles
@@ -99,6 +99,8 @@ PKG_HOME.${user}=	${QMAILDIR}
 .endfor
 PKG_HOME.alias=		${QMAILDIR}/alias
 
+SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 4711
+
 # extract the qmail tarball that was inside the netqmail distfile
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -107,7 +109,7 @@ post-extract:
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
 
 post-install:
-	# qmail's installer sets strange permissions; set them back
+	# qmail's installer sets strange permissions, set them back
 .	if (${PKG_INSTALLATION_TYPE} == "overwrite")
 .	  for i in bin boot
 	    ${CHGRP} ${BINGRP} ${QMAILDIR}/${i}
