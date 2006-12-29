@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/27 07:55:08 wulf Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/12/29 19:58:47 wiz Exp $
 bin/xdx
 man/man1/xdx.1
+share/applications/Xdx.desktop
 share/locale/es/LC_MESSAGES/xdx.mo
 share/locale/fr/LC_MESSAGES/xdx.mo
 share/locale/nl/LC_MESSAGES/xdx.mo
