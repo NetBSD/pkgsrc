@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2072 2006/12/28 15:53:20 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.2073 2006/12/29 06:21:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5731,3 +5731,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/asterisk-sounds-de-x9media to 20060714 [mjl 2006-12-28]
 	Updated sysutils/dbus-glib to 0.72nb1 [jnemeth 2006-12-28]
 	Updated mail/sylpheed to 2.3.0 [xtraeme 2006-12-28]
+	Updated mail/ezmlm-idx to 0.444 [schmonz 2006-12-29]
