@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:21:55 reed Exp $
+# $NetBSD: builtin.mk,v 1.15 2006/12/29 15:11:20 joerg Exp $
 
 BUILTIN_PKG:=	readline
 
@@ -107,7 +107,9 @@ CHECK_BUILTIN.readline?=	no
 .if !empty(CHECK_BUILTIN.readline:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
-.    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
+.    if !empty(BUILTIN_LIB_FOUND.readline:M[Yy][Ee][Ss]) && ${OPSYS} == "OpenBSD"
+BUILDLINK_TRANSFORM+=	l:history:readline:termcap
+.    elif !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
         !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=	l:history:edit:termcap
 BUILDLINK_TRANSFORM+=	l:readline:edit:termcap
