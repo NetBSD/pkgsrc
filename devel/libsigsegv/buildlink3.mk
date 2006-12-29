@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/12/29 13:54:22 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSIGSEGV_BUILDLINK3_MK:=	${LIBSIGSEGV_BUILDLINK3_MK}+
@@ -14,8 +14,6 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libsigsegv
 .if !empty(LIBSIGSEGV_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.2
 BUILDLINK_PKGSRCDIR.libsigsegv?=	../../devel/libsigsegv
-# only installs a static library
-BUILDLINK_DEPMETHOD.libsigsegv?=	build
 .endif	# LIBSIGSEGV_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
