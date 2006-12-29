@@ -1,0 +1,4 @@
+greetdelay is a program to introduce a small delay before an SMTP
+greeting. It can also optionally enforce RFC 2821's recommendation
+that SMTP clients not send any commands before receiving the greeting
+message.

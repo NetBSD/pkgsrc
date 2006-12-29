@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/29 10:49:25 schmonz Exp $
+bin/greetdelay
+man/cat1/greetdelay.0
+man/man1/greetdelay.1
