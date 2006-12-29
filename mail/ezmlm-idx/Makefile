@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.27 2006/03/18 06:54:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2006/12/29 06:21:06 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
-IDXVERSION=		0.443
-PKGREVISION=		1
+IDXVERSION=		0.444
 SITES.${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/${IDXVERSION}/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.ezmlm.org/
-COMMENT=		ezmlm with enhancements by third parties
+COMMENT=		Version of ezmlm with enhancements by third parties
 
 CONFLICTS=		ezmlm-[0-9]*
 
@@ -24,12 +23,14 @@ DJB_RESTRICTED=		YES
 
 PKG_SYSCONFSUBDIR=	ezmlm
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+USE_TOOLS+=		patch
 
 EGDIR=			${PREFIX}/share/examples/ezmlm-idx
 CONF_FILES=		${EGDIR}/ezcgirc ${PKG_SYSCONFDIR}/ezcgirc
 CONF_FILES+=		${EGDIR}/ezmlmrc ${PKG_SYSCONFDIR}/ezmlmrc
 
-INSTALLATION_DIRS=	bin man man/man1 man/man5 man/cat1 man/cat5
+INSTALLATION_DIRS=	bin ${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS+=	${PKGMANDIR}/cat1 ${PKGMANDIR}/cat5
 INSTALLATION_DIRS+=	share/examples/ezmlm-idx
 
 post-extract:
