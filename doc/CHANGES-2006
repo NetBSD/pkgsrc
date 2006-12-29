@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2076 2006/12/29 10:33:08 schmonz Exp $
+$NetBSD: CHANGES-2006,v 1.2077 2006/12/29 10:52:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -5735,3 +5735,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/queue-repair to 0.9.0nb2 [schmonz 2006-12-29]
 	Updated print/lilypond to 2.4.6 [obache 2006-12-29]
 	Updated mail/qmail to 1.03nb12 [schmonz 2006-12-29]
+	Added mail/greetdelay version 0.01 [schmonz 2006-12-29]
