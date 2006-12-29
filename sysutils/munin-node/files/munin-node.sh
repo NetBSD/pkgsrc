@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: munin-node.sh,v 1.3 2006/07/21 23:28:37 abs Exp $
+# $NetBSD: munin-node.sh,v 1.4 2006/12/29 06:37:03 obache Exp $
 #
 # PROVIDE: munin-node
 # REQUIRE: DAEMON
@@ -20,7 +20,28 @@ name="munin_node"
 rcvar=$name
 command=@PREFIX@/sbin/munin-node
 command_interpreter=@PERL@
+pidfile="@VARBASE@/run/munin/munin-node.pid"
 required_files=@PKG_SYSCONFDIR@/munin-node.conf
+
+stop_cmd="munin_node_stop"
+
+# Net::Server breaks rc.subr's techniques for detecting whether the
+# process running at a certain PID is actually the process we wish to
+# stop.  Just unconditionally send SIGTERM to the PID instead.
+#
+munin_node_stop()
+{
+	@ECHO@ "Stopping ${name}."
+	if [ -f ${pidfile} ]; then
+		pid=`@HEAD@ -1 ${pidfile}`
+		doit="kill ${pid}"
+		if ! eval $doit && [ -z "$rc_force" ]; then
+			return 1
+		fi
+		wait_for_pids $pid
+	fi
+	@RM@ -f ${pidfile}
+}
 
 if [ ! -d @STATEDIR@ ]; then
 	mkdir @STATEDIR@
