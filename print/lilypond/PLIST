@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/12/29 07:11:55 obache Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -27,7 +27,8 @@ ${EMACS_LISPPREFIX}/lilypond-init.el
 ${EMACS_LISPPREFIX}/lilypond-mode.el
 ${EMACS_LISPPREFIX}/lilypond-what-beat.el
 ${EMACS_LISPPREFIX}/lilypond-words.el
-share/lilypond/${PKGVERSION}/dvips/lilypond.map
+share/lilypond/${PKGVERSION}/dvips/map
+share/lilypond/${PKGVERSION}/dvips/ps
 share/lilypond/${PKGVERSION}/fonts/afm/feta-braces-a.afm
 share/lilypond/${PKGVERSION}/fonts/afm/feta-braces-b.afm
 share/lilypond/${PKGVERSION}/fonts/afm/feta-braces-c.afm
@@ -68,6 +69,8 @@ share/lilypond/${PKGVERSION}/fonts/afm/parmesan18.afm
 share/lilypond/${PKGVERSION}/fonts/afm/parmesan20.afm
 share/lilypond/${PKGVERSION}/fonts/afm/parmesan23.afm
 share/lilypond/${PKGVERSION}/fonts/afm/parmesan26.afm
+share/lilypond/${PKGVERSION}/fonts/enc/latin1.enc
+share/lilypond/${PKGVERSION}/fonts/map/lilypond.map
 share/lilypond/${PKGVERSION}/fonts/source/feta-accordion.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-autometric.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-banier.mf
@@ -439,6 +442,7 @@ share/lilypond/${PKGVERSION}/scm/to-xml.scm
 share/lilypond/${PKGVERSION}/scm/translation-functions.scm
 share/lilypond/${PKGVERSION}/scripts/lilypond-login
 share/lilypond/${PKGVERSION}/scripts/lilypond-profile
+share/lilypond/${PKGVERSION}/tex/enc
 share/lilypond/${PKGVERSION}/tex/feta-braces-a.tex
 share/lilypond/${PKGVERSION}/tex/feta-braces-b.tex
 share/lilypond/${PKGVERSION}/tex/feta-braces-c.tex
@@ -472,7 +476,6 @@ share/lilypond/${PKGVERSION}/tex/feta20.tex
 share/lilypond/${PKGVERSION}/tex/feta23.tex
 share/lilypond/${PKGVERSION}/tex/feta26.tex
 share/lilypond/${PKGVERSION}/tex/headers.tex
-share/lilypond/${PKGVERSION}/tex/latin1.enc
 share/lilypond/${PKGVERSION}/tex/lily-debug.tex
 share/lilypond/${PKGVERSION}/tex/lily-pdf-defs.tex
 share/lilypond/${PKGVERSION}/tex/lily-ps-defs.tex
@@ -537,6 +540,8 @@ share/omf/lilypond/${PKGVERSION}/music-glossary.ps.gz.omf
 @dirrm share/lilypond/${PKGVERSION}/fonts/type1
 @dirrm share/lilypond/${PKGVERSION}/fonts/tfm
 @dirrm share/lilypond/${PKGVERSION}/fonts/source
+@dirrm share/lilypond/${PKGVERSION}/fonts/map
+@dirrm share/lilypond/${PKGVERSION}/fonts/enc
 @dirrm share/lilypond/${PKGVERSION}/fonts/afm
 @dirrm share/lilypond/${PKGVERSION}/fonts
 @dirrm share/lilypond/${PKGVERSION}/dvips
