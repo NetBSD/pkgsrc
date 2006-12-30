@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/12/30 17:44:56 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/30 18:07:53 heinz Exp $
 #
 
-DISTNAME=		${PKGNAME:S/./-/g}
+DISTNAME=		esniper-2-15-0
 PKGNAME=		esniper-2.15.0
 PKGREVISION=		1
 CATEGORIES=		misc
