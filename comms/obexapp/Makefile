@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/09 16:35:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/30 22:40:57 xtraeme Exp $
 #
 
 DISTNAME=	obexapp-1.4.4
@@ -26,6 +26,12 @@ USE_GNU_ICONV=		yes
 
 # Sigh... too many warnings with GCC 4.x, disable them for now.
 CFLAGS+=		-w
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "NetBSD" && !exists(/usr/include/bluetooth.h))
+PKG_FAIL_REASON+=	Does not build without bluetooth support.
+.endif
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
