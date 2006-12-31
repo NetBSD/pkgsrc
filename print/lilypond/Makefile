@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/12/29 07:11:55 obache Exp $
+# $NetBSD: Makefile,v 1.51 2006/12/31 16:39:34 obache Exp $
 #
 
 DISTNAME=	lilypond-2.4.6
 CATEGORIES=	print
-MASTER_SITES=	http://lilypond.org/download/v2.4/
+MASTER_SITES=	http://lilypond.org/download/sources/v2.4/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lilypond.org/web/
