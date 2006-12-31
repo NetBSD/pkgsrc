@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.4 2006/12/12 21:10:41 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.5 2006/12/31 13:35:10 rillig Exp $
 #
 # This program checks the extracted files for portability issues that
 # are likely to result in false assumptions by the package.
@@ -22,7 +22,7 @@ check_shell() {
 		CK_PROGNAME="check-portability.awk" \
 		awk	-f "$PKGSRCDIR/mk/check/check-subr.awk" \
 			-f "$PKGSRCDIR/mk/check/check-portability.awk" \
-		< "$1" \
+		< "$1" 1>&2 \
 	|| cs_exitcode=1
 }
 
