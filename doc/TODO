@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5801 2006/12/30 12:16:31 wiz Exp $
+$NetBSD: TODO,v 1.5802 2006/12/31 09:48:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,6 +345,9 @@ Suggested package updates
 	o control-center-2.16.1
 	o convmv-1.10
 	o coreutils-6.7
+	o courier-authlib-0.59
+	o courier-imap-4.1.2
+	o courier-mta-0.54
 	o cqcam-0.91
 	o crafty-19.5
 	o crossfire-client-1.9.1
@@ -402,7 +405,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o epiphany-extensions-2.16.0
 	o epstool-3.08
-	o eric3-3.9.3
+	o eric3-3.9.4
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -621,6 +624,7 @@ Suggested package updates
 	o libprelude-0.9.12
 	o libpreludedb-0.9.11
 	o libshout-2.2
+	o libssh-0.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.11.0
