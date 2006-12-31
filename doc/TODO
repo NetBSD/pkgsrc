@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5803 2006/12/31 18:39:12 jmmv Exp $
+$NetBSD: TODO,v 1.5804 2006/12/31 18:50:10 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,7 @@ Suggested package updates
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
-	o digikam-0.9.0
+	o digikam-0.9.0 [xtraeme, waiting for the freeze]
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.35
@@ -581,6 +581,7 @@ Suggested package updates
 	o kdrill-6.4
 	o kid3-0.8
 	o kinput2-3.1
+	o kipi-plugins-0.1.3rc1 [xtraeme, waiting for the freeze]
 	o kmp-0.5
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
@@ -614,6 +615,8 @@ Suggested package updates
 	o libgtop2-2.14.4
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
+	o libkexif-0.2.5 [xtraeme, waiting for the freeze]
+	o libkipi-0.1.5 [xtraeme, waiting for the freeze]
 	o liblive-2006.12.08
 	o libmilter-8.13.5
 	o libmm-1.4.2
