@@ -1,4 +1,4 @@
-# $NetBSD: check-subr.awk,v 1.2 2006/11/11 23:59:56 rillig Exp $
+# $NetBSD: check-subr.awk,v 1.3 2006/12/31 13:35:10 rillig Exp $
 #
 # This file contains functions that are used by the various awk
 # programs that check things in pkgsrc. All these programs must be
@@ -39,16 +39,16 @@ function cs_warning_heading(new_heading) {
 }
 
 function cs_error_msg(msg) {
-	printf("ERROR: [%s] %s\n", cs_progname, msg) > "/dev/stderr";
+	printf("ERROR: [%s] %s\n", cs_progname, msg);
 	cs_exitcode = 1;
 }
 
 function cs_warning_msg(msg) {
-	printf("WARNING: [%s] %s\n", cs_progname, msg) > "/dev/stderr";
+	printf("WARNING: [%s] %s\n", cs_progname, msg);
 }
 
 function cs_explain(msg) {
-	printf("\nExplanation:\n%s\n%s%s\n\n", cs_hline, msg, cs_hline) > "/dev/stderr";
+	printf("\nExplanation:\n%s\n%s%s\n\n", cs_hline, msg, cs_hline);
 }
 
 function cs_exit() {
