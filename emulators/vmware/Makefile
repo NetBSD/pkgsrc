@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/01 22:43:50 adrianp Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -20,7 +20,7 @@ COMMENT=	VMware 2.x emulator
 CONFLICTS=	vmware-3*
 
 DEPENDS+=	vmware-module-1.*:../../emulators/vmware-module
-DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
+DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/suse91_vmware
 
 LICENSE=	vmware-license
 
