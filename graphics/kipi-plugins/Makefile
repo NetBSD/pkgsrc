@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2006/12/06 16:27:51 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/02 18:45:46 xtraeme Exp $
 
-DISTNAME=	kipi-plugins-0.1.2
+DISTNAME=	kipi-plugins-0.1.3-rc1
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libkexif/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
