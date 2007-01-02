@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.17 2007/01/02 18:14:41 reed Exp $
+$NetBSD: CHANGES-2007,v 1.18 2007/01/02 18:36:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -22,3 +22,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated converters/skf to 1.94.6 [obache 2007-01-02]
 	Updated www/visitors to 0.7 [obache 2007-01-02]
 	Added time/p5-Time-Duration version 1.37 [reed 2007-01-02]
+	Updated devel/libgphoto2 to 2.3.1 [adam 2007-01-02]
+	Updated graphics/gphoto2 to 2.3.1 [adam 2007-01-02]
