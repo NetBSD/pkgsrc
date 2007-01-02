@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2006/11/03 19:24:26 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/02 13:49:01 obache Exp $
 #
 
-DISTNAME=	chicken-2.41
+DISTNAME=	chicken-2.5
+PKGNAME=	chicken-2.50
 CATEGORIES=	lang
 MASTER_SITES=	http://www.call-with-current-continuation.org/
 
@@ -14,9 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
-
-INFO_FILES=	yes
-MAKE_FLAGS+=	MAKEINFO=${TRUE:Q}
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=	F77=${FALSE:Q}
