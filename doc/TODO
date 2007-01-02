@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5805 2007/01/01 12:56:45 wiz Exp $
+$NetBSD: TODO,v 1.5806 2007/01/02 11:12:17 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -678,7 +678,6 @@ Suggested package updates
 	o moc-2.4.1
 	o molden-4.4
 	o mono-1.2.2
-	o monotone-0.32 [jmmv]
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
