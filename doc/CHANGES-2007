@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.12 2007/01/02 15:54:24 adam Exp $
+$NetBSD: CHANGES-2007,v 1.13 2007/01/02 16:52:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added inputmethod/kasumi version 1.0.1 [obache 2007-01-02]
 	Updated emulators/wine to 0.9.28 [adam 2007-01-02]
 	Updated devel/libextractor to 0.5.17 [adam 2007-01-02]
+	Updated devel/mercurial to 0.9.3 [minskim 2007-01-02]

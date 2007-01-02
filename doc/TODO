@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5812 2007/01/02 15:54:24 adam Exp $
+$NetBSD: TODO,v 1.5813 2007/01/02 16:52:53 minskim Exp $
 
 Suggested new packages
 ======================
@@ -657,7 +657,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
-	o mercurial-0.9.3
 	o mergeant-0.65
 	o mftrace-1.2.4
 	o mgetty-1.1.35
