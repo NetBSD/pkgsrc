@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.10 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: depends.mk,v 1.11 2007/01/02 17:23:41 rillig Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -70,7 +70,5 @@ depends-install:
 ### dependencies are installed for depends-install.
 ###
 .PHONY: pre-depends-hook
-.if !target(pre-depends-hook)
 pre-depends-hook:
 	@${DO_NADA}
-.endif
