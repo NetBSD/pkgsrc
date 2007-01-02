@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/11/05 16:55:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/01/02 11:35:13 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -20,6 +20,9 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libX11
 .if ${LIBX11_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=0.99
 BUILDLINK_PKGSRCDIR.libX11?=	../../x11/libX11
+
+X11_LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
+X11_LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib
 .endif	# LIBX11_BUILDLINK3_MK
 
 .include "../../x11/inputproto/buildlink3.mk"
