@@ -4,7 +4,7 @@ and Windows systems and is released under the GPL license.
 
 Features:
 * an unicode editor to write your LaTeX source files (syntax highlighting,
-  undo-redo, search-replace, ...)
+  undo-redo, search-replace, spell checker...)
 * the principal LaTex tags can be inserted directly with the "LaTeX" and "Math"
   menus
 * 370 mathematical symbols can be inserted in just one click
@@ -23,4 +23,4 @@ Features:
   LaTeX errors detected in the log file
 * by clicking on the number of a line in the log file, the cursor jumps to the
   corresponding line in the editor
-* an integrated LaTeX to html conversion tool (for unix and macosx systems)
+* an integrated LaTeX to html conversion tool
