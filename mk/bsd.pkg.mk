@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1900 2006/12/15 12:46:23 martti Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1901 2007/01/02 21:04:52 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -27,6 +27,7 @@
 
 .if defined(.MAKEFLAGS) && !empty(.MAKEFLAGS:M-j*)
 PKG_FAIL_REASON+=	"[bsd.pkg.mk] pkgsrc does not support parallel make for the infrastructure."
+PKG_FAIL_REASON+=	"[bsd.pkg.mk] Run \"${MAKE} help topic=make_jobs\" to get some parallelism."
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -668,6 +669,7 @@ makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
 # reinvoking the make process as root.  It acquires root privileges and
 # invokes a new make process with the target named "su-${.TARGET}".
 #
+
 _ROOT_CMD=	cd ${.CURDIR} &&					\
 		${SETENV} ${PKGSRC_MAKE_ENV}				\
 			PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}		\
