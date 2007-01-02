@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5806 2007/01/02 11:12:17 jmmv Exp $
+$NetBSD: TODO,v 1.5807 2007/01/02 12:21:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -562,7 +562,6 @@ Suggested package updates
 	o ispell-russian-0.99f8
 	o ispell-slovak-0.3.0
 	o ispman-1.2
-	o ja-trac-0.10.3.1
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
