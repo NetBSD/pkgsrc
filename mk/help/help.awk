@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.3 2007/01/02 17:22:30 rillig Exp $
+# $NetBSD: help.awk,v 1.4 2007/01/02 22:54:54 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -53,7 +53,7 @@ NF >= 2 {
 	w1 = ($1 == tolower($1)) ? toupper($1) : $1;
 	w2 = ($2 == tolower($2)) ? toupper($2) : $2;
 
-	if ((w1 == uctopic"?=") ||
+	if ((w1 == uctopic"?=") || (w1 == uctopic"=") ||
 	    (index(w1, "#"uctopic"=") == 1) ||
 	    (index(w1, "#"uctopic"?=") == 1) ||
 	    (w1 == "#" && last_line_was_empty &&
