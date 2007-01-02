@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/01/02 18:33:50 adam Exp $
 bin/gphoto2
 man/man1/gphoto2.1
 share/locale/az/LC_MESSAGES/gphoto2.mo
@@ -15,13 +15,17 @@ share/locale/it/LC_MESSAGES/gphoto2.mo
 share/locale/ja/LC_MESSAGES/gphoto2.mo
 share/locale/nb/LC_MESSAGES/gphoto2.mo
 share/locale/nl/LC_MESSAGES/gphoto2.mo
+share/locale/pa/LC_MESSAGES/gphoto2.mo
+share/locale/pl/LC_MESSAGES/gphoto2.mo
 share/locale/pt_BR/LC_MESSAGES/gphoto2.mo
 share/locale/ro/LC_MESSAGES/gphoto2.mo
 share/locale/ru/LC_MESSAGES/gphoto2.mo
+share/locale/rw/LC_MESSAGES/gphoto2.mo
 share/locale/sk/LC_MESSAGES/gphoto2.mo
 share/locale/sl/LC_MESSAGES/gphoto2.mo
 share/locale/sr/LC_MESSAGES/gphoto2.mo
 share/locale/sv/LC_MESSAGES/gphoto2.mo
 share/locale/uk/LC_MESSAGES/gphoto2.mo
+share/locale/vi/LC_MESSAGES/gphoto2.mo
 share/locale/zh_CN/LC_MESSAGES/gphoto2.mo
 share/locale/zh_TW/LC_MESSAGES/gphoto2.mo
