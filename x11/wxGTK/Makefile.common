@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/12/05 08:30:20 joerg Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/01/02 11:00:24 joerg Exp $
 #
 
 DISTNAME=		wxGTK-2.6.3
@@ -14,6 +14,8 @@ DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK/distinfo
 
 PATCHFILES=		${DISTNAME}-libtool.diff2.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes
@@ -54,4 +56,3 @@ USE_TOOLS+=		gawk:pkgsrc
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
