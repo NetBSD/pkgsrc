@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/11/03 19:15:45 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/02 23:20:06 abs Exp $
 
 DISTNAME=	estd-r5
 PKGNAME=	estd-0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.elektro-eel.org/
 
