@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.181 2007/01/02 11:37:18 joerg Exp $
+# $NetBSD: replace.mk,v 1.182 2007/01/02 23:14:54 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -961,7 +961,7 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 
 ######################################################################
 
-# For modular Xorg, this are individual packages.
+# For modular Xorg, these are individual packages.
 #
 .if ${X11_TYPE} == "modular"
 .if !defined(TOOLS_IGNORE.mkfontdir) && !empty(_USE_TOOLS:Mmkfontdir)
