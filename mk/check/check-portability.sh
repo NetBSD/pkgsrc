@@ -1,16 +1,22 @@
-# $NetBSD: check-portability.sh,v 1.5 2006/12/31 13:35:10 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.6 2007/01/02 17:58:11 rillig Exp $
 #
-# This program checks the extracted files for portability issues that
-# are likely to result in false assumptions by the package.
+# This program checks all files in the current directory and any
+# subdirectories for portability issues that are likely to result in
+# false assumptions by the package.
 #
 # The most prominent example is the "==" operator of test(1), which is
 # only implemented by bash and some versions of the ksh.
 #
+# usage: check-portability.sh
+#
 
 set -eu
 
-. "${PKGSRCDIR}/mk/check/check-subr.sh"
+checkdir=`dirname "$0"`
+. "$checkdir/check-subr.sh"
 cs_setprogname "$0"
+
+: ${SKIP_FILTER:=""}
 
 found_random=no
 found_test_eqeq=no
@@ -20,8 +26,8 @@ check_shell() {
 	env \
 		CK_FNAME="$1" \
 		CK_PROGNAME="check-portability.awk" \
-		awk	-f "$PKGSRCDIR/mk/check/check-subr.awk" \
-			-f "$PKGSRCDIR/mk/check/check-portability.awk" \
+		awk	-f "$checkdir/check-subr.awk" \
+			-f "$checkdir/check-portability.awk" \
 		< "$1" 1>&2 \
 	|| cs_exitcode=1
 }
