@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/10/10 15:04:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/01/02 13:49:01 obache Exp $
 bin/chicken
 bin/chicken-profile
 bin/chicken-setup
@@ -9,7 +9,6 @@ bin/csi-static
 include/chicken-config.h
 include/chicken-defaults.h
 include/chicken.h
-info/chicken.info
 lib/libchicken.la
 lib/libuchicken.la
 man/man1/chicken-profile.1
@@ -33,11 +32,50 @@ share/chicken/srfi-14.exports
 share/chicken/srfi-18.exports
 share/chicken/srfi-4.exports
 share/chicken/tcp.exports
-share/chicken/tinyclos.exports
 share/chicken/utils.exports
 share/doc/chicken/ChangeLog
 share/doc/chicken/LICENSE
 share/doc/chicken/README
-share/doc/chicken/chicken.html
+share/doc/chicken/html/accessing-external-objects.html
+share/doc/chicken/html/acknowledgements.html
+share/doc/chicken/html/basic-mode-of-operation.html
+share/doc/chicken/html/bibliography.html
+share/doc/chicken/html/bugs-and-limitations.html
+share/doc/chicken/html/c-interface.html
+share/doc/chicken/html/callbacks.html
+share/doc/chicken/html/chicken-setup.html
+share/doc/chicken/html/data-representation.html
+share/doc/chicken/html/declarations.html
+share/doc/chicken/html/deviations-from-the-standard.html
+share/doc/chicken/html/embedding.html
+share/doc/chicken/html/extensions-to-the-standard.html
+share/doc/chicken/html/faq.html
+share/doc/chicken/html/foreign-type-specifiers.html
+share/doc/chicken/html/index.html
+share/doc/chicken/html/interface-to-external-functions-and-variables.html
+share/doc/chicken/html/locations.html
+share/doc/chicken/html/non-standard-macros-and-special-forms.html
+share/doc/chicken/html/non-standard-read-syntax.html
+share/doc/chicken/html/other-support-procedures.html
+share/doc/chicken/html/parameters.html
+share/doc/chicken/html/pattern-matching.html
+share/doc/chicken/html/supported-language.html
+share/doc/chicken/html/unit-eval.html
+share/doc/chicken/html/unit-extras.html
+share/doc/chicken/html/unit-library.html
+share/doc/chicken/html/unit-lolevel.html
+share/doc/chicken/html/unit-match.html
+share/doc/chicken/html/unit-posix.html
+share/doc/chicken/html/unit-regex.html
+share/doc/chicken/html/unit-srfi-1.html
+share/doc/chicken/html/unit-srfi-13.html
+share/doc/chicken/html/unit-srfi-14.html
+share/doc/chicken/html/unit-srfi-18.html
+share/doc/chicken/html/unit-srfi-4.html
+share/doc/chicken/html/unit-tcp.html
+share/doc/chicken/html/unit-utils.html
+share/doc/chicken/html/using-the-compiler.html
+share/doc/chicken/html/using-the-interpreter.html
+@dirrm share/doc/chicken/html
 @dirrm share/doc/chicken
 @dirrm share/chicken
