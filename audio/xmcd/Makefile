@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/12/18 11:15:19 tron Exp $
+# $NetBSD: Makefile,v 1.65 2007/01/02 14:58:53 rillig Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    9
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/xmcd-3.0
 USE_IMAKE=		yes
 MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin
 MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
-MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/man/man1
+MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_ENV+=		SHELL=${SH:Q}
 
 CHECK_PERMS_SKIP+=	lib/X11/xmcd/discog/*
