@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.17 2006/11/05 15:10:08 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.18 2007/01/02 11:47:26 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -686,18 +686,34 @@ _INSTALL_DATA_TMPL+=		${_INSTALL_FONTS_DATAFILE}
 # list them as "x11" font directories as well.
 #
 .if !empty(FONTS_DIRS.ttf:M*)
+.if ${X11_TYPE} == "modular"
+USE_TOOLS+=		mkfontscale:run
+FILES_SUBST+=		TTF_INDEX_CMD=${TOOLS_PATH.mkfontscale:Q}
+.else
 USE_TOOLS+=		ttmkfdir:run
-FILES_SUBST+=		TTMKFDIR=${TOOLS_PATH.ttmkfdir:Q}
+FILES_SUBST+=		TTF_INDEX_CMD=${TOOLS_PATH.ttmkfdir:Q}
+.endif
 FONTS_DIRS.x11+=	${FONTS_DIRS.ttf}
 .endif
 .if !empty(FONTS_DIRS.type1:M*)
+.if ${X11_TYPE} == "modular"
+USE_TOOLS+=		mkfontscale:run
+FILES_SUBST+=		TYPE1_INDEX_CMD=${TOOLS_PATH.type1inst:Q}
+FILES_SUBST+=		TYPE1_POSTINDEX_CMD=
+.else
 USE_TOOLS+=		type1inst:run
-FILES_SUBST+=		TYPE1INST=${TOOLS_PATH.type1inst:Q}
+FILES_SUBST+=		TYPE1_INDEX_CMD=${TOOLS_PATH.type1inst:Q}
+FILES_SUBST+=		TYPE1_INDEX_CMD="$${RM} type1inst.log"
+.endif
 FONTS_DIRS.x11+=	${FONTS_DIRS.type1}
 .endif
 .if !empty(FONTS_DIRS.x11:M*)
 USE_TOOLS+=		mkfontdir:run
 FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH.mkfontdir:Q}
+
+.if ${X11_TYPE} == "modular"
+DEPENDS+=		encodings-[0-9]*:../../fonts/encodings
+.endif
 .endif
 
 FILES_SUBST+=		X11_ENCODINGSDIR=${X11_ENCODINGSDIR:Q}
