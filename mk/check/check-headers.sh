@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.8 2006/11/10 07:59:01 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.9 2007/01/02 17:58:11 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -9,7 +9,8 @@
 
 set -eu
 
-. "${PKGSRCDIR}/mk/check/check-subr.sh"
+checkdir=`dirname "$0"`
+. "$checkdir/check-subr.sh"
 cs_setprogname "$0"
 
 found_unresolved_variable=no
