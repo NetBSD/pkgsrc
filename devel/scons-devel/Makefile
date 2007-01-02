@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/02 14:05:59 rillig Exp $
 #
 
 DISTNAME=		scons-${SCONSVER}
@@ -12,6 +12,7 @@ COMMENT=		Build system, written in Python
 
 SCONSVER=		0.96.91
 PLIST_SUBST+=		SCONSVER=${SCONSVER}
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 PYDISTUTILSPKG=		yes
 PYTHON_PATCH_SCRIPTS=	script/scons script/sconsign
@@ -23,8 +24,8 @@ PYTHON_PATCH_SCRIPTS=	script/scons script/sconsign
 # would be too complicated.
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/scons.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/sconsign.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/scons.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/sconsign.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
