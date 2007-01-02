@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.688 2006/12/12 22:13:38 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.689 2007/01/02 22:27:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3987,6 +3987,7 @@ sub checkline_mk_shellword($$$) {
 	my ($line, $shellword, $check_quoting) = @_;
 	my ($rest, $state, $value);
 
+	$opt_debug_trace and $line->log_debug("checkline_mk_shellword(\"${shellword}\", ${check_quoting}).");
 	use constant shellcommand_context_type => PkgLint::Type->new(
 		LK_NONE, "ShellCommand", [[ qr".*", "adsu" ]], NOT_GUESSED
 	);
@@ -4090,7 +4091,7 @@ sub checkline_mk_shellword($$$) {
 				$state = SWST_DQUOT;
 			} elsif ($rest =~ s/^\`//) {
 				$state = SWST_BACKT;
-			} elsif ($rest =~ s/^\\(?:[ !"#'\(\)*;\\^{|}]|\$\$)//) {
+			} elsif ($rest =~ s/^\\(?:[ !"#'\(\)*;?\\^{|}]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
 			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
 				my ($shvarname) = ($1);
@@ -5367,6 +5368,40 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 	}
 }
 
+# Checks whether the list of version numbers that are given as the
+# C<value> of the variable C<varname> are in decreasing order.
+sub checkline_decreasing_order($$$) {
+	my ($line, $varname, $value) = @_;
+
+	my @pyver = split(qr"\s+", $value);
+	if (!@pyver) {
+		$line->log_error("There must be at least one value for ${varname}.");
+		return;
+	}
+
+	my $ver = shift(@pyver);
+	if ($ver !~ qr"^\d+$") {
+		$line->log_error("All values for ${varname} must be numeric.");
+		return;
+	}
+
+	while (@pyver) {
+		my $nextver = shift(@pyver);
+		if ($nextver !~ qr"^\d+$") {
+			$line->log_error("All values for ${varname} must be numeric.");
+			return;
+		}
+
+		if ($nextver >= $ver) {
+			$line->log_warning("The values for ${varname} should be in decreasing order.");
+			$line->explain_warning(
+				"If they aren't, it may be possible that needless versions of packages",
+				"are installed.");
+		}
+		$ver = $nextver;
+	}
+}
+
 sub checkline_mk_vartype($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
 
@@ -5497,6 +5532,10 @@ sub checkline_mk_varassign($$$$$) {
 		# $eval_varname. It is marked as known in the current
 		# file.
 		$mkctx_vardef->{$eval_varname} = $line;
+	}
+
+	if ($varname eq "PYTHON_VERSIONS_ACCEPTED") {
+		checkline_decreasing_order($line, $varname, $value);
 	}
 
 	if (defined($comment) && $comment eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
