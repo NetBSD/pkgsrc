@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.150 2007/01/02 13:14:39 rillig Exp $
+# $NetBSD: makevars.map,v 1.151 2007/01/02 23:00:11 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -443,7 +443,7 @@ MYSQL_VERSION_DEFAULT	Version [$user]
 NM			ShellCommand [$system]
 NONBINMODE		FileMode [$system]
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$package]
-NOT_FOR_PLATFORM	List of PlatformTriple [$package_list]
+NOT_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
 NO_BIN_ON_FTP		Restricted [m:s,c:s]
 NO_BUILD		Yes [m:s,c:s,Makefile.*:ds]
@@ -460,7 +460,7 @@ NO_PKG_REGISTER		Yes [m:s]
 NO_SRC_ON_CDROM		Restricted [m:s,c:s]
 NO_SRC_ON_FTP		Restricted [m:s,c:s]
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$package_list]
-ONLY_FOR_PLATFORM	List of PlatformTriple [$package_list]
+ONLY_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
 OPSYS			Identifier [$system]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
