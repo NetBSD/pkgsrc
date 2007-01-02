@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.180 2006/12/27 19:27:40 joerg Exp $
+# $NetBSD: replace.mk,v 1.181 2007/01/02 11:37:18 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -961,17 +961,70 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 
 ######################################################################
 
-# These tools are provided by modular Xorg if there is no native tool
-# available
+# For modular Xorg, this are individual packages.
 #
+.if ${X11_TYPE} == "modular"
+.if !defined(TOOLS_IGNORE.mkfontdir) && !empty(_USE_TOOLS:Mmkfontdir)
+.  if !empty(PKGPATH:Mfonts/mkfontdir)
+MAKEFLAGS+=		TOOLS_IGNORE.mkfontdir=
+.  else
+TOOLS_DEPENDS.mkfontdir?=	mkfontdir-[0-9]*:../../fonts/mkfontdir
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontdir=mkfontdir
+TOOLS_PATH.mkfontdir=		${TOOLS_PREFIX.mkfontdir}/bin/mkfontdir
+TOOLS_CREATE.mkfontdir=		mkfontdir
+.   endif
+.endif
+
+.if !defined(TOOLS_IGNORE.mkfontscale) && !empty(_USE_TOOLS:Mmkfontscale)
+.  if !empty(PKGPATH:Mfonts/mkfontscale)
+MAKEFLAGS+=		TOOLS_IGNORE.mkfontscale=
+.  else
 TOOLS_DEPENDS.mkfontscale?=	mkfontscale-[0-9]*:../../fonts/mkfontscale
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontscale=mkfontscale
 TOOLS_PATH.mkfontscale=		${TOOLS_PREFIX.mkfontscale}/bin/mkfontscale
 TOOLS_CREATE.mkfontscale=	mkfontscale
+.  endif
+.endif
 
-# These tools are all supplied by an X11 clients package if there is no
+.if !defined(TOOLS_IGNORE.bdftopcf) && !empty(_USE_TOOLS:Mbdftopcf)
+.  if !empty(PKGPATH:Mfonts/bdftopcf)
+MAKEFLAGS+=		TOOLS_IGNORE.bdftopcf=
+.  else
+TOOLS_DEPENDS.bdftopcf?=	bdftopcf-[0-9]*:../../fonts/bdftopcf
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=bdftopcf
+TOOLS_PATH.bdftopcf=		${TOOLS_PREFIX.bdftopcf}/bin/bdftopcf
+TOOLS_CREATE.bdftopcf=		bdftopcf
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ucs2any) && !empty(_USE_TOOLS:Mucs2any)
+.  if !empty(PKGPATH:Mfonts/font-util)
+MAKEFLAGS+=		TOOLS_IGNORE.ucs2any=
+.  else
+TOOLS_DEPENDS.ucs2any?=		font-util-[0-9]*:../../fonts/font-util
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ucs2any=ucs2any
+TOOLS_PATH.ucs2any=		${TOOLS_PREFIX.ucs2any}/bin/ucs2any
+TOOLS_CREATE.ucs2any=		ucs2any
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.bdftruncate) && !empty(_USE_TOOLS:Mbdftruncate)
+.  if !empty(PKGPATH:Mfonts/font-util)
+MAKEFLAGS+=		TOOLS_IGNORE.bdftruncate=
+.  else
+TOOLS_DEPENDS.bdftruncate?=	font-util-[0-9]*:../../fonts/font-util
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftruncate=bdftruncate
+TOOLS_PATH.bdftruncate=		${TOOLS_PREFIX.bdftruncate}/bin/bdftruncate
+TOOLS_CREATE.bdftruncate=	bdftruncate
+.  endif
+.endif
+
+.endif
+
+# Otherwise these tools are all supplied by an X11 clients package if there is no
 # native tool available.
 #
+.if ${X11_TYPE} != "modular"
 _TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale \
 			makepsres xmessage
 
@@ -991,13 +1044,14 @@ TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
+.endif
 
 ######################################################################
 
 # These tools are all supplied by an X11 imake package if there is no
 # native tool available.
 #
-_TOOLS.x11-imake=	imake makedepend mkdirhier xmkmf
+_TOOLS.x11-imake=	imake mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
@@ -1014,12 +1068,40 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/libexec/itools/${_t_}
 TOOLS_DEPENDS.${_t_}?=	xorg-imake>=6.8:../../x11/xorg-imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-imake
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+.      elif defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
+TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .      else # !empty(X11_TYPE:Mnative)
 TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 .      endif
 .    endif
 .  endif
 .endfor
+
+.if !defined(TOOLS_IGNORE.makedepend) && !empty(_USE_TOOLS:Mmakedepend)
+.  if !empty(PKGPATH:Mdevel/nbitools) || \
+	!empty(PKGPATH:Mx11/xorg-imake)
+MAKEFLAGS+=		TOOLS_IGNORE.makedepend=
+.  elif !empty(_TOOLS_USE_PKGSRC.makedepend:M[yY][eE][sS])
+TOOLS_CREATE+=		makedepend
+.    if !empty(_USE_TOOLS:Mitools)
+TOOLS_DEPENDS.makedepend?=	nbitools>=6.3nb4:../../devel/nbitools
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=nbitools
+TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/libexec/itools/makedepend
+.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+TOOLS_DEPENDS.makedepend?=	xorg-imake>=6.8:../../x11/xorg-imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=xorg-imake
+TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/${X11ROOT_PREFIX}/bin/makedepend
+.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
+TOOLS_DEPENDS.makedepend?=	makedepend-[0-9]*:../../devel/makedepend
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=makedepend
+TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/bin/makedepend
+.    else # !empty(X11_TYPE:Mnative)
+TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
+.    endif
+.  endif
+.endif
 #
 # If we're using xpkgwedge, then we need to invoke the special xmkmf
 # script that will find imake config files in both ${PREFIX} and in
