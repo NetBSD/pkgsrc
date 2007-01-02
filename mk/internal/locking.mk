@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.3 2006/11/09 02:11:44 rillig Exp $
+# $NetBSD: locking.mk,v 1.4 2007/01/02 17:16:34 rillig Exp $
 #
 
 # This file provides the following .USE targets:
@@ -51,7 +51,7 @@ USE_TOOLS+=		sleep
 _CHECK_IF_SHLOCK_IS_AVAILABLE_CMD= \
 	${TEST} -x ${SHLOCK:Q}"" || {					\
 		${ERROR_MSG} "[locking.mk] shlock is not installed.";	\
-		${ERROR_MSG} "[locking.mk] Please \"cd ../../pkgtools/shlock && ${MAKE} install\"."; \
+		${ERROR_MSG} "[locking.mk] Please \"(cd ../../pkgtools/shlock && ${MAKE} install\")."; \
 		exit 1;							\
 	}
 
