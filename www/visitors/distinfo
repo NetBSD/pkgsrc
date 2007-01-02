@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/07/19 10:46:29 abs Exp $
+$NetBSD: distinfo,v 1.4 2007/01/02 18:06:50 obache Exp $
 
-SHA1 (visitors-0.5.tar.gz) = d36dd32b9d4c8dc8384c286b14be069aee63d81f
-RMD160 (visitors-0.5.tar.gz) = 12d6001912fef82786b038008e55f2bfe7ff50fe
-Size (visitors-0.5.tar.gz) = 70224 bytes
+SHA1 (visitors-0.7.tar.gz) = cdccdfb82001c7c3dadf68456574cac1a5d941e3
+RMD160 (visitors-0.7.tar.gz) = 8819becac412ff79de4d88dd2aadb7c5faf2f167
+Size (visitors-0.7.tar.gz) = 100154 bytes
