@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.3 2006/12/21 19:50:20 rillig Exp $
+# $NetBSD: help.mk,v 1.4 2007/01/02 17:22:30 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -31,10 +31,8 @@ help:
 	@${PRINTF} "\\tvariable names.\\n"
 	@${PRINTF} "\\n"
 .else
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	cd ${PKGSRCDIR};						\
-	{ for i in ${_HELP_FILES}; do ${CAT} "$$i"; ${ECHO} ""; done; }	\
-	| env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk
+	${RUN} cd ${PKGSRCDIR};						\
+	env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk ${_HELP_FILES}
 .endif
 
 .endif
