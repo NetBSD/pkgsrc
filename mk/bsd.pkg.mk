@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1902 2007/01/02 21:29:07 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1903 2007/01/02 23:34:40 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -19,10 +19,6 @@
 #    build
 #
 
-############################################################################
-# Include any preferences, if not already included, and common definitions
-############################################################################
-
 .MAIN: all
 
 .if defined(.MAKEFLAGS) && !empty(.MAKEFLAGS:M-j*)
@@ -30,22 +26,23 @@ PKG_FAIL_REASON+=	"[bsd.pkg.mk] pkgsrc does not support parallel make for the in
 PKG_FAIL_REASON+=	"[bsd.pkg.mk] Run \"${MAKE} help topic=make_jobs\" to get some parallelism."
 .endif
 
-.include "../../mk/bsd.prefs.mk"
+# Include any preferences, if not already included, and common definitions
+.include "${.PARSEDIR}/bsd.prefs.mk"
 
-.include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
-.include "${PKGSRCDIR}/mk/check/bsd.check-vars.mk"
-.include "${PKGSRCDIR}/mk/depends/bsd.depends-vars.mk"
-.include "${PKGSRCDIR}/mk/fetch/bsd.fetch-vars.mk"
-.include "${PKGSRCDIR}/mk/checksum/bsd.checksum-vars.mk"
-.include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
-.include "${PKGSRCDIR}/mk/patch/bsd.patch-vars.mk"
-.include "${PKGSRCDIR}/mk/configure/bsd.configure-vars.mk"
-.include "${PKGSRCDIR}/mk/build/bsd.build-vars.mk"
-.include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
+.include "${.PARSEDIR}/flavor/bsd.flavor-vars.mk"
+.include "${.PARSEDIR}/check/bsd.check-vars.mk"
+.include "${.PARSEDIR}/depends/bsd.depends-vars.mk"
+.include "${.PARSEDIR}/fetch/bsd.fetch-vars.mk"
+.include "${.PARSEDIR}/checksum/bsd.checksum-vars.mk"
+.include "${.PARSEDIR}/extract/bsd.extract-vars.mk"
+.include "${.PARSEDIR}/patch/bsd.patch-vars.mk"
+.include "${.PARSEDIR}/configure/bsd.configure-vars.mk"
+.include "${.PARSEDIR}/build/bsd.build-vars.mk"
+.include "${.PARSEDIR}/install/bsd.install-vars.mk"
 
-.include "${PKGSRCDIR}/mk/bsd.pkg.error.mk"
+.include "${.PARSEDIR}/bsd.pkg.error.mk"
 
-.include "../../mk/bsd.hacks.mk"
+.include "${.PARSEDIR}/bsd.hacks.mk"
 
 ############################################################################
 # Transform package Makefile variables and set defaults
@@ -107,7 +104,7 @@ PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20051103}
 
 ##### Transform USE_* into dependencies
 
-.include "../../mk/bsd.pkg.use.mk"
+.include "${.PARSEDIR}/bsd.pkg.use.mk"
 
 ############################################################################
 # Sanity checks
@@ -199,7 +196,7 @@ CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:M*:Q}
 ALL_ENV+=	CPPFLAGS=${CPPFLAGS:M*:Q}
-ALL_ENV+=	CXX=${CXX:M*:Q}
+ALL_ENV+=	CXX=${CXX:Q}
 ALL_ENV+=	CXXFLAGS=${CXXFLAGS:M*:Q}
 ALL_ENV+=	COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG:Q}
 ALL_ENV+=	F77=${FC:Q}
@@ -359,10 +356,10 @@ OVERRIDE_DIRDEPTH?=	2
 
 # Handle alternatives
 #
-.include "../../mk/alternatives.mk"
+.include "${.PARSEDIR}/alternatives.mk"
 
 # INSTALL/DEINSTALL script framework
-.include "../../mk/pkginstall/bsd.pkginstall.mk"
+.include "${.PARSEDIR}/pkginstall/bsd.pkginstall.mk"
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
@@ -437,16 +434,16 @@ USE_TOOLS+=	tee tsort
 .endif
 
 # Locking
-.include "${PKGSRCDIR}/mk/internal/locking.mk"
+.include "${.PARSEDIR}/internal/locking.mk"
 
 # Tools
-.include "../../mk/tools/bsd.tools.mk"
+.include "${.PARSEDIR}/tools/bsd.tools.mk"
 
 # Barrier
-.include "../../mk/bsd.pkg.barrier.mk"
+.include "${.PARSEDIR}/bsd.pkg.barrier.mk"
 
 # Unprivileged builds
-.include "../../mk/unprivileged.mk"
+.include "${.PARSEDIR}/unprivileged.mk"
 
 # If NO_BUILD is defined, default to not needing a compiler.
 .if defined(NO_BUILD)
@@ -456,9 +453,9 @@ USE_LANGUAGES?=		# empty
 # Get the proper dependencies and set the PATH to use the compiler
 # named in PKGSRC_COMPILER.
 #
-.include "../../mk/compiler.mk"
+.include "${.PARSEDIR}/compiler.mk"
 
-.include "../../mk/wrapper/bsd.wrapper.mk"
+.include "${.PARSEDIR}/wrapper/bsd.wrapper.mk"
 
 .if defined(ABI_DEPENDS) || defined(BUILD_ABI_DEPENDS)
 .  if !empty(USE_ABI_DEPENDS:M[yY][eE][sS])
@@ -472,7 +469,7 @@ _BUILD_DEFS+=		USE_ABI_DEPENDS
 # Find out the PREFIX of dependencies where the PREFIX is needed at build time.
 .if defined(EVAL_PREFIX)
 FIND_PREFIX:=	${EVAL_PREFIX}
-.  include "../../mk/find-prefix.mk"
+.  include "${.PARSEDIR}/find-prefix.mk"
 .endif
 
 .if !defined(_PATH_ORIG)
@@ -581,25 +578,16 @@ _BUILD_DEFS+=	OSVERSION_SPECIFIC
 all: ${_PKGSRC_BUILD_TARGETS}
 .endif
 
-################################################################
-# More standard targets start here.
-#
-# These are the body of the build/install framework.  If you are
-# not happy with the default actions, and you can't solve it by
-# adding pre-* or post-* targets/scripts, override these.
-################################################################
-
 .PHONY: makedirs
 makedirs: ${WRKDIR}
 
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -fr ${WRKDIR}
+	${RUN} ${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -fr ${WRKDIR}
 .  endif
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
+	${RUN} ${MKDIR} ${WRKDIR}
 
 # Create a symlink from ${WRKDIR} to the package directory if
 # CREATE_WRKDIR_SYMLINK is "yes".
@@ -608,62 +596,31 @@ CREATE_WRKDIR_SYMLINK?=	yes
 
 .if defined(WRKOBJDIR) && !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
 makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
- ${.CURDIR}/${WRKDIR_BASENAME}:
+${.CURDIR}/${WRKDIR_BASENAME}:
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -f ${.TARGET}
+	${RUN} ${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -f ${.TARGET}
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} \
 	if ${LN} -s ${WRKDIR} ${.TARGET} 2>/dev/null; then		\
 		${ECHO_MSG} "${.TARGET:T} -> ${WRKDIR}";		\
 	fi
 .endif
 
-.include "${PKGSRCDIR}/mk/flavor/bsd.flavor.mk"
+.include "${.PARSEDIR}/flavor/bsd.flavor.mk"
 
-# Dependencies
-.include "${PKGSRCDIR}/mk/depends/bsd.depends.mk"
+.include "${.PARSEDIR}/depends/bsd.depends.mk"
+.include "${.PARSEDIR}/check/bsd.check.mk"
+.include "${.PARSEDIR}/fetch/bsd.fetch.mk"
+.include "${.PARSEDIR}/checksum/bsd.checksum.mk"
+.include "${.PARSEDIR}/extract/bsd.extract.mk"
+.include "${.PARSEDIR}/patch/bsd.patch.mk"
+.include "${.PARSEDIR}/configure/bsd.configure.mk"
+.include "${.PARSEDIR}/build/bsd.build.mk"
+.include "${.PARSEDIR}/install/bsd.install.mk"
+.include "${.PARSEDIR}/package/bsd.package.mk"
 
-# Check
-.include "${PKGSRCDIR}/mk/check/bsd.check.mk"
-
-# Clean
-.include "../../mk/bsd.pkg.clean.mk"
-
-# Fetch
-.include "${PKGSRCDIR}/mk/fetch/bsd.fetch.mk"
-
-# Checksum
-.include "${PKGSRCDIR}/mk/checksum/bsd.checksum.mk"
-
-# Extract
-.include "${PKGSRCDIR}/mk/extract/bsd.extract.mk"
-
-# Patch
-.include "${PKGSRCDIR}/mk/patch/bsd.patch.mk"
-
-# Configure
-.include "${PKGSRCDIR}/mk/configure/bsd.configure.mk"
-
-# Build
-.include "${PKGSRCDIR}/mk/build/bsd.build.mk"
-
-# Install
-.include "${PKGSRCDIR}/mk/install/bsd.install.mk"
-
-# Package
-.include "${PKGSRCDIR}/mk/package/bsd.package.mk"
-
-.include "${PKGSRCDIR}/mk/bsd.pkg.update.mk"
-
-################################################################
-# Skeleton targets start here
-#
-# You shouldn't have to change these.  Either add the pre-* or
-# post-* targets/scripts or redefine the do-* targets.  These
-# targets don't do anything other than checking for cookies and
-# call the necessary targets/scripts.
-################################################################
+.include "${.PARSEDIR}/bsd.pkg.clean.mk"
+.include "${.PARSEDIR}/bsd.pkg.update.mk"
 
 # su-target is a macro target that does just-in-time su-to-root before
 # reinvoking the make process as root.  It acquires root privileges and
@@ -679,7 +636,7 @@ _ROOT_CMD=	cd ${.CURDIR} &&					\
 
 .PHONY: su-target
 su-target: .USE
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	case ${PRE_CMD.su-${.TARGET}:Q}"" in				\
 	"")	;;							\
 	*)	${PRE_CMD.su-${.TARGET}} ;;				\
@@ -704,7 +661,7 @@ su-target: .USE
 # Run pkglint:
 .PHONY: lint
 lint:
-	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint
+	${RUN} ${LOCALBASE}/bin/pkglint
 
 # List of flags to pass to pkg_add(1) for bin-install:
 
@@ -720,7 +677,7 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
 _SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.].*@.\1@} # n.n[_.]anything => n.n
 
-.include "${PKGSRCDIR}/mk/install/bin-install.mk"
+.include "${.PARSEDIR}/install/bin-install.mk"
 
 ################################################################
 # Everything after here are internal targets and really
@@ -757,7 +714,7 @@ show-vars-eval:
 LICENSE_FILE?=		${PKGSRCDIR}/licenses/${LICENSE}
 
 .if !target(show-license)
-show-license show-licence:
+show-license show-licence: .PHONY
 	@license=${LICENSE:Q};						\
 	license_file=${LICENSE_FILE:Q};					\
 	pager=${PAGER:Q};						\
@@ -794,22 +751,22 @@ depend:
 tags:
 .endif
 
-.include "../../mk/plist/bsd.plist.mk"
+.include "${.PARSEDIR}/plist/bsd.plist.mk"
 
-.include "../../mk/bsd.utils.mk"
+.include "${.PARSEDIR}/bsd.utils.mk"
 
-.include "../../mk/subst.mk"
+.include "${.PARSEDIR}/subst.mk"
 
 #
 # For bulk build targets (bulk-install, bulk-package), the
 # BATCH variable must be set in /etc/mk.conf:
 #
 .if defined(BATCH)
-.  include "../../mk/bulk/bsd.bulk-pkg.mk"
+.  include "${.PARSEDIR}/bulk/bsd.bulk-pkg.mk"
 .endif
 
 # README generation code.
-.include "../../mk/bsd.pkg.readme.mk"
+.include "${.PARSEDIR}/bsd.pkg.readme.mk"
 
 # Create a PKG_ERROR_HANDLER shell command for each class listed in
 # PKG_ERROR_CLASSES.  The error handler is meant to be invoked within
@@ -857,9 +814,9 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .endif
 .include "${.PARSEDIR}/misc/show.mk"
 .if make(debug) || make(build-env)
-.  include "${PKGSRCDIR}/mk/bsd.pkg.debug.mk"
+.  include "${.PARSEDIR}/bsd.pkg.debug.mk"
 .endif
 .if make(help)
-.  include "${PKGSRCDIR}/mk/help/help.mk"
+.  include "${.PARSEDIR}/help/help.mk"
 .endif
 .include "${.PARSEDIR}/misc/can-be-built-here.mk"
