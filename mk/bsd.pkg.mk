@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1901 2007/01/02 21:04:52 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1902 2007/01/02 21:29:07 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -852,68 +852,14 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor
 
-# show-tools emits a /bin/sh shell script that defines all known tools
-# to the values they have in the pkgsrc infrastructure.
-#
-# Don't move this code away from here unless you know what you're doing.
-#
-.PHONY: show-tools
-show-tools:
-.for _t_ in ${_USE_TOOLS}
-.  if defined(_TOOLS_VARNAME.${_t_})
-	@${ECHO} ${_TOOLS_VARNAME.${_t_}:Q}=${${_TOOLS_VARNAME.${_t_}}:Q:Q}
-.  endif
-.endfor
-
-# changes-entry appends a correctly-formatted entry to the pkgsrc
-# CHANGES file.
-#
-# The following variables may be set:
-#
-#    CTYPE is the type of entry to add and is one of "Added", "Updated",
-#	"Renamed", "Moved", of "Removed".  The default CTYPE is "Updated".
-#
-#    NETBSD_LOGIN_NAME is the login name assigned by the NetBSD Project.
-#	It defaults to the local login name.
-#
-#    PKGSRC_CHANGES is the path to the CHANGES file to which the entry
-#	is appended.  It defaults to ${PKGSRCDIR}/doc/CHANGES-YYYY.
-#
-# Example usage:
-#
-#	% cd /usr/pkgsrc/category/package
-#	% make changes-entry CTYPE=Added
-#
-CTYPE?=			Updated
-NETBSD_LOGIN_NAME?=	${_NETBSD_LOGIN_NAME_cmd:sh}
-PKGSRC_CHANGES?=	${PKGSRCDIR}/doc/CHANGES-${_CYEAR_cmd:sh}
-
-_CYEAR_cmd=		${DATE} -u +%Y
-_CDATE_cmd=		${DATE} -u +%Y-%m-%d
-_NETBSD_LOGIN_NAME_cmd=	${ID} -nu
-
-_CTYPE1=	"	"${CTYPE:Q}" "${PKGPATH:Q}
-.if !empty(CTYPE:MUpdated)
-_CTYPE2=	" to "${PKGVERSION:Q}
-.elif !empty(CTYPE:MAdded)
-_CTYPE2=	" version "${PKGVERSION:Q}
-.elif !empty(CTYPE:MRenamed) || !empty(CTYPE:MMoved)
-_CTYPE2=	" to XXX"
-.else
-_CTYPE2=
+.if defined(PKG_DEVELOPER)
+.  include "${.PARSEDIR}/misc/developer.mk"
 .endif
-_CTYPE3=	" ["${NETBSD_LOGIN_NAME:Q}" "${_CDATE_cmd:sh:Q}"]"
-
-.PHONY: changes-entry
-changes-entry:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} ${_CTYPE1}${_CTYPE2}${_CTYPE3} >> ${PKGSRC_CHANGES:Q}
-
-.include "${PKGSRCDIR}/mk/internal/build-defs-message.mk"
+.include "${.PARSEDIR}/misc/show.mk"
 .if make(debug) || make(build-env)
-.include "${PKGSRCDIR}/mk/bsd.pkg.debug.mk"
+.  include "${PKGSRCDIR}/mk/bsd.pkg.debug.mk"
 .endif
 .if make(help)
-.include "${PKGSRCDIR}/mk/help/help.mk"
+.  include "${PKGSRCDIR}/mk/help/help.mk"
 .endif
 .include "${.PARSEDIR}/misc/can-be-built-here.mk"
