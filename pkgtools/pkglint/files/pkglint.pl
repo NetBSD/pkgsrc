@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.689 2007/01/02 22:27:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.690 2007/01/02 23:01:24 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3900,7 +3900,9 @@ sub checkline_mk_varuse($$$$) {
 		# configure scripts.
 		my $need_mstar = false;
 		if ($varname =~ regex_gnu_configure_volatile_vars) {
-			if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"GNU_CONFIGURE"})) {
+			# When we are not checking a package, but some other file,
+			# the :M* operator is needed for safety.
+			if (!defined($pkgctx_vardef) || exists($pkgctx_vardef->{"GNU_CONFIGURE"})) {
 				$need_mstar = true;
 			}
 		}
@@ -5990,6 +5992,14 @@ sub checklines_mk($) {
 
 			$opt_debug_misc and $line->log_debug("targets=${targets}, dependencies=${dependencies}");
 			$mkctx_target = $targets;
+
+			foreach my $source (split(/\s+/, $dependencies)) {
+				if ($source eq ".PHONY") {
+					foreach my $target (split(/\s+/, $targets)) {
+						$allowed_targets->{$target} = true;
+					}
+				}
+			}
 
 			foreach my $target (split(/\s+/, $targets)) {
 				if ($target eq ".PHONY") {
