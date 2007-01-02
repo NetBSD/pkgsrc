@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/01/02 18:44:52 xtraeme Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBKEXIF_BUILDLINK3_MK:=	${LIBKEXIF_BUILDLINK3_MK}+
@@ -12,8 +12,7 @@ BUILDLINK_PACKAGES+=	libkexif
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libkexif
 
 .if !empty(LIBKEXIF_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libkexif+=	libkexif>=0.2.1
-BUILDLINK_ABI_DEPENDS.libkexif?=	libkexif>=0.2.2nb3
+BUILDLINK_API_DEPENDS.libkexif+=	libkexif>=0.2.5
 BUILDLINK_PKGSRCDIR.libkexif?=	../../graphics/libkexif
 .endif	# LIBKEXIF_BUILDLINK3_MK
 
