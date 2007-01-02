@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/11/29 12:02:10 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/02 20:17:15 xtraeme Exp $
 lib/kde3/digikamimageplugin_adjustcurves.la
 lib/kde3/digikamimageplugin_adjustlevels.la
 lib/kde3/digikamimageplugin_antivignetting.la
@@ -321,6 +321,36 @@ share/kde/services/digikamimageplugin_superimpose.desktop
 share/kde/services/digikamimageplugin_texture.desktop
 share/kde/services/digikamimageplugin_unsharp.desktop
 share/kde/services/digikamimageplugin_whitebalance.desktop
+share/locale/ar/LC_MESSAGES/digikamimageplugin_adjustcurves.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_adjustlevels.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_antivignetting.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_blowup.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_blurfx.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_border.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_channelmixer.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_charcoal.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_despeckle.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_distortionfx.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_emboss.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_filmgrain.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_freerotation.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_hotpixels.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_infrared.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_inpainting.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_inserttext.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_lensdistortion.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_oilpaint.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_perspective.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_raindrop.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_refocus.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_restoration.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_sheartool.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_solarize.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_superimpose.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_texture.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_unsharp.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugin_whitebalance.mo
+share/locale/ar/LC_MESSAGES/digikamimageplugins.mo
 share/locale/bg/LC_MESSAGES/digikamimageplugin_adjustcurves.mo
 share/locale/bg/LC_MESSAGES/digikamimageplugin_adjustlevels.mo
 share/locale/bg/LC_MESSAGES/digikamimageplugin_antivignetting.mo
@@ -646,6 +676,7 @@ share/locale/fi/LC_MESSAGES/digikamimageplugin_emboss.mo
 share/locale/fi/LC_MESSAGES/digikamimageplugin_freerotation.mo
 share/locale/fi/LC_MESSAGES/digikamimageplugin_infrared.mo
 share/locale/fi/LC_MESSAGES/digikamimageplugin_raindrop.mo
+share/locale/fi/LC_MESSAGES/digikamimageplugin_restoration.mo
 share/locale/fi/LC_MESSAGES/digikamimageplugin_whitebalance.mo
 share/locale/fi/LC_MESSAGES/digikamimageplugins.mo
 share/locale/fr/LC_MESSAGES/digikamimageplugin_adjustcurves.mo
@@ -1398,13 +1429,13 @@ share/locale/zh_CN/LC_MESSAGES/digikamimageplugins.mo
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/digikamimageplugins/data
 @dirrm share/kde/apps/digikamimageplugins
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/scalable/actions
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/64x64/actions
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/48x48/actions
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/22x22/actions
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/16x16/actions
-@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/128x128/actions
-@comment in digikam: dirrm share/kde/apps/digikam
+@dirrm share/kde/apps/digikam/icons/hicolor/scalable/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/64x64/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/128x128/actions
+@dirrm share/kde/apps/digikam
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm lib/kde3
