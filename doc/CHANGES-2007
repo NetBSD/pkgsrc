@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.6 2007/01/02 12:21:39 obache Exp $
+$NetBSD: CHANGES-2007,v 1.7 2007/01/02 12:42:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -11,3 +11,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/openldap-server to 2.3.31 [ghen 2007-01-02]
 	Updated databases/openldap to 2.3.31 [ghen 2007-01-02]
 	Updated www/ja-trac to 0.10.3.1 [obache 2007-01-02]
+	Updated converters/skf to 1.94.5 [obache 2007-01-02]
