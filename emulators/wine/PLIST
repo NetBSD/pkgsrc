@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2006/12/09 19:42:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2007/01/02 15:33:33 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -482,6 +482,7 @@ lib/wine/dbghelp.dll.so
 lib/wine/dciman32.dll.so
 lib/wine/ddeml.dll16
 lib/wine/ddraw.dll.so
+lib/wine/ddrawex.dll.so
 lib/wine/devenum.dll.so
 lib/wine/dinput.dll.so
 lib/wine/dinput8.dll.so
