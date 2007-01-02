@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/23 10:52:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/02 12:19:27 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/trac/About.py
@@ -303,6 +303,7 @@ man/man1/tracd.1
 share/examples/trac/README
 share/examples/trac/bugzilla2trac.py
 share/examples/trac/emailfilter.py
+share/examples/trac/htdigest.py
 share/examples/trac/migrateticketmodel.py
 share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
