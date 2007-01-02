@@ -1,4 +1,5 @@
-$NetBSD: CHANGES-2007,v 1.1 2007/01/01 04:28:34 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2 2007/01/02 10:42:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2006Q4 branch [agc 2007-01-02]
