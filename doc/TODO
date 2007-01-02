@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5811 2007/01/02 15:34:36 adam Exp $
+$NetBSD: TODO,v 1.5812 2007/01/02 15:54:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -601,7 +601,6 @@ Suggested package updates
 	o libetpan-0.46 [pkg/34294]
 	o libetpan-0.48
 	o libevent-1.2a
-	o libextractor-0.5.16
 	o libflash-0.4.13
 	o libgda-2.99.2
 	o libggi-2.2.1
