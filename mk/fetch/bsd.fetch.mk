@@ -1,15 +1,34 @@
-# $NetBSD: bsd.fetch.mk,v 1.4 2006/07/27 17:28:38 jlam Exp $
+# $NetBSD: bsd.fetch.mk,v 1.5 2007/01/02 17:54:32 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "fetch" step.
 #
 # The following are the "public" targets provided by this module:
 #
-#    fetch, fetch-list
+# fetch:
+#	Downloads all required distfiles for the current package.
+#
+# fetch-list:
+#	Prints a shell script to the standard output that will download
+#	the distfiles.
 #
 # The following targets may be overridden in a package Makefile:
 #
-#    pre-fetch, do-fetch, post-fetch
+# pre-fetch:
+#	Can be used to prepare downloading the distfiles.
+#
+#	Default action: Nothing.
+#
+# do-fetch:
+#	Downloads the distfiles and patches.
+#
+#	Default action (roughly): Downloads all DISTFILES from
+#	MASTER_SITES and puts them into DISTDIR.
+#
+# post-fetch:
+#	Can be used to do something with the downloaded files.
+#
+#	Default action: Nothing.
 #
 
 .include "${PKGSRCDIR}/mk/fetch/sites.mk"
