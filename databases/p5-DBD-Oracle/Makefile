@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:09 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/02 12:13:39 rillig Exp $
 
 DISTNAME=	DBD-Oracle-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,10 @@ COMMENT=	Perl DBI/DBD driver for Oracle databases
 
 PERL5_PACKLIST=	auto/DBD/Oracle/.packlist
 
+.include "../../mk/bsd.prefs.mk"
+
 .if !defined(ORACLE_HOME)
-PKG_SKIP_REASON+=	"You must set ORACLE_HOME to the location of your Oracle installation"
+PKG_FAIL_REASON+=	"You must set ORACLE_HOME to the location of your Oracle installation"
 .elif !exists(${ORACLE_HOME})
 PKG_FAIL_REASON+=	"The location of ORACLE_HOME does not exist"
 .endif
