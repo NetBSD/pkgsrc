@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/12/11 23:15:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/02 16:52:00 minskim Exp $
 bin/hg
 bin/hgmerge
 ${PYSITELIB}/hgext/__init__.py
@@ -43,6 +43,9 @@ ${PYSITELIB}/hgext/win32text.pyo
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
+${PYSITELIB}/mercurial/__version__.py
+${PYSITELIB}/mercurial/__version__.pyc
+${PYSITELIB}/mercurial/__version__.pyo
 ${PYSITELIB}/mercurial/ancestor.py
 ${PYSITELIB}/mercurial/ancestor.pyc
 ${PYSITELIB}/mercurial/ancestor.pyo
