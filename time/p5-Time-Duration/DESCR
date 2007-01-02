@@ -1,0 +1,3 @@
+The Time::Duration perl module provides functions for expressing
+durations in rounded (such as "1 year and 21 days") or exact English
+terms.
