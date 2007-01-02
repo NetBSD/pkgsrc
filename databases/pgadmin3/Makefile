@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/28 12:12:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2007/01/02 22:29:53 salo Exp $
 
 DISTNAME=	pgadmin3-1.4.2
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v1.4.2/src/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
 COMMENT=	GUI administration tool for PostgreSQL RDBMS
+
+BROKEN=		"Overrides non-virtual base class"
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
