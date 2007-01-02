@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.4 2007/01/02 11:28:19 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.5 2007/01/02 11:30:08 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -6,3 +6,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/monotone to 0.32 [jmmv 2007-01-02]
 	Updated devel/monotone-server to 0.32 [jmmv 2007-01-02]
 	Updated editors/texmaker to 1.4 [ghen 2007-01-02]
+	Updated databases/openldap-client to 2.3.31 [ghen 2007-01-02]
+	Updated databases/openldap-doc to 2.3.31 [ghen 2007-01-02]
+	Updated databases/openldap-server to 2.3.31 [ghen 2007-01-02]
+	Updated databases/openldap to 2.3.31 [ghen 2007-01-02]
