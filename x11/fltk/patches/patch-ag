@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2006/01/22 11:11:34 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2007/01/02 12:42:45 joerg Exp $
 
 --- src/Makefile.orig	2005-08-08 02:54:30.000000000 +0200
 +++ src/Makefile
@@ -51,7 +51,7 @@ $NetBSD: patch-ag,v 1.5 2006/01/22 11:11:34 wiz Exp $
  	fi
  	$(RANLIB) $(DESTDIR)$(libdir)/$(IMGLIBNAME)
 +	if test x$(DSONAME) = xlibfltk.la; then\
-+		$(INSTALL_LIB) libfltk.la $(libdir); \
++		$(INSTALL_LIB) libfltk.la $(DESTDIR)$(libdir); \
 +	fi
  	if test x$(DSONAME) = xlibfltk.so.1.1; then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk.so*;\
@@ -61,7 +61,7 @@ $NetBSD: patch-ag,v 1.5 2006/01/22 11:11:34 wiz Exp $
  		$(CHMOD) 755 $(DESTDIR)$(libdir)/libfltk_s.a; \
  	fi
 +	if test x$(FLDSONAME) = xlibfltk_forms.la; then\
-+		$(INSTALL_LIB) libfltk_forms.la $(libdir); \
++		$(INSTALL_LIB) libfltk_forms.la $(DESTDIR)$(libdir); \
 +	fi
  	if test x$(DSONAME) = xcygfltknox-1.1.dll; then\
  		$(RM) $(DESTDIR)$(bindir)/$(DSONAME);\
@@ -71,7 +71,7 @@ $NetBSD: patch-ag,v 1.5 2006/01/22 11:11:34 wiz Exp $
  		$(LN) libfltk_forms.so.1.1 $(DESTDIR)$(libdir)/libfltk_forms.so;\
  	fi
 +	if test x$(GLDSONAME) = xlibfltk_gl.la; then\
-+		$(INSTALL_LIB) libfltk_gl.la $(libdir); \
++		$(INSTALL_LIB) libfltk_gl.la $(DESTDIR)$(libdir); \
 +	fi
  	if test x$(FLDSONAME) = xlibfltk_forms.sl.1.1; then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk_forms.sl*;\
@@ -81,7 +81,7 @@ $NetBSD: patch-ag,v 1.5 2006/01/22 11:11:34 wiz Exp $
  		$(CHMOD) 755 $(DESTDIR)$(libdir)/libfltk_gl.dll.a; \
  	fi
 +	if test x$(IMGDSONAME) = xlibfltk_images.la; then\
-+		$(INSTALL_LIB) libfltk_images.la $(libdir); \
++		$(INSTALL_LIB) libfltk_images.la $(DESTDIR)$(libdir); \
 +	fi
  	if test x$(IMGDSONAME) = xlibfltk_images.so.1.1; then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk_images.so*;\
