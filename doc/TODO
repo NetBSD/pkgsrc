@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5809 2007/01/02 12:48:15 obache Exp $
+$NetBSD: TODO,v 1.5810 2007/01/02 13:50:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,6 @@ Suggested package updates
 	o cgdb-0.6.3
 	o checkbot-1.77
 	o cherokee-0.5.6
-	o chicken-2.5 [pkg/35339]
 	o chrony-1.21
 	o cinepaint-0.21.2
 	o cint-5.16
