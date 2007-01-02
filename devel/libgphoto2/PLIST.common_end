@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST.common_end,v 1.2 2004/05/07 12:06:47 cjep Exp $
+@comment $NetBSD: PLIST.common_end,v 1.3 2007/01/02 18:32:47 adam Exp $
 @dirrm share/libgphoto2/${PKGVERSION}/konica
 @dirrm share/libgphoto2/${PKGVERSION}
 @dirrm share/libgphoto2
-@dirrm share/doc/libgphoto2_port
-@exec ${MKDIR} %D/share/doc/libgphoto2/linux-hotplug
-@dirrm share/doc/libgphoto2/linux-hotplug
+@dirrm share/doc/libgphoto2/camlibs
 @dirrm share/doc/libgphoto2
-@dirrm lib/gphoto2_port/0.5.1
-@dirrm lib/gphoto2_port
-@dirrm lib/gphoto2/${PKGVERSION}
-@dirrm lib/gphoto2
+@dirrm lib/libgphoto2/${PKGVERSION}
+@dirrm lib/libgphoto2
 @dirrm include/gphoto2
