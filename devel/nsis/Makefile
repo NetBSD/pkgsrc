@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/06/17 16:53:30 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/02 14:22:40 rillig Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2
@@ -35,6 +35,7 @@ SUBST_SED.makensis+=	-e s,@@MAKENSIS@@,${MAKENSIS_BIN:Q},
 
 post-extract:
 	${CP} ${FILESDIR:Q}/makensis.sh ${WRKSRC:Q}
+	chmod -R go-w ${WRKDIR}/*
 
 do-build:
 	cd ${WRKSRC:Q} &&						\
