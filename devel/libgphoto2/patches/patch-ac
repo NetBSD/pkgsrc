@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/01/05 15:52:52 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2007/01/02 18:32:47 adam Exp $
 
---- camlibs/ptp2/ptp.c.orig	2004-12-19 17:23:14.000000000 +0100
+--- camlibs/ptp2/ptp.c.orig	2006-12-24 16:16:20.000000000 +0100
 +++ camlibs/ptp2/ptp.c
-@@ -336,6 +336,9 @@ static inline uint16_t
+@@ -524,6 +524,9 @@ static inline uint16_t
  ptp_usb_event (PTPParams* params, PTPContainer* event, int wait)
  {
  	uint16_t ret;
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1 2005/01/05 15:52:52 drochner Exp $
  	unsigned int rlen;
  	PTPUSBEventContainer usbevent;
  	PTP_CNT_INIT(usbevent);
-@@ -345,8 +348,24 @@ ptp_usb_event (PTPParams* params, PTPCon
+@@ -533,8 +536,24 @@ ptp_usb_event (PTPParams* params, PTPCon
  	
  	switch(wait) {
  		case PTP_EVENT_CHECK:
