@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/11/02 17:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.58 2007/01/02 11:03:11 joerg Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -29,7 +29,7 @@ TEST_TARGET=		test
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 
 SUBST_CLASSES+=		tk-config
 SUBST_STAGE.tk-config=	post-build
