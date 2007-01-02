@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.18 2007/01/02 11:47:26 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.19 2007/01/02 17:15:24 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -574,12 +574,14 @@ ${_INSTALL_DIRS_FILE}: ../../mk/pkginstall/dirs
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
-# INFO_DIR, if defined, specifies the directory path containing the "dir"
+# INFO_DIR
+#	If defined, specifies the directory path containing the "dir"
 #	index file that should be updated.  If the pathname is relative,
 #	then it is taken to be relative to ${PREFIX}.  This shouldn't
 #	be needed unless "dir" is not in the same directory as the
 #	installed info files.
 #
+
 _INSTALL_INFO_FILES_FILE=	${_PKGINSTALL_DIR}/info-files
 _INSTALL_INFO_FILES_DATAFILE=	${_PKGINSTALL_DIR}/info-files-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_INFO_FILES_FILE}
