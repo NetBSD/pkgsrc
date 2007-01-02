@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5814 2007/01/02 18:49:16 xtraeme Exp $
+$NetBSD: TODO,v 1.5815 2007/01/02 20:19:04 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,6 @@ Suggested package updates
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
-	o digikam-0.9.0 [xtraeme, waiting for the freeze]
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.35
