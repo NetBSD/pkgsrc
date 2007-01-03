@@ -1,0 +1,3 @@
+This is an optional package, the Courier log analyzer. Courier-analog generates
+log summaries for incoming and outgoing SMTP connections, and IMAP and POP3
+activity. courier-analog can generate output in text or HTML format.
