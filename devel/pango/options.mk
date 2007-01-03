@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/11/06 11:24:26 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2007/01/03 22:25:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
 PKG_SUPPORTED_OPTIONS=	x11
@@ -13,6 +13,8 @@ PKG_SUGGESTED_OPTIONS=	x11
 # Force not to build the atsui module, because it causes the xlib backend
 # of cairo to crash.
 CONFIGURE_ENV+=	ac_cv_lib_cairo_cairo_atsui_font_face_create_for_atsu_font_id=no
+# fix for pangox.pc
+CONFIGURE_ENV+=		X_EXTRA_LIBS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 PLIST_SUBST+=		CARBON="@comment "
 PLIST_SUBST+=		X11=""
 .include "../../x11/libXft/buildlink3.mk"
