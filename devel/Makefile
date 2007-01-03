@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.798 2006/12/19 22:58:14 joerg Exp $
+# $NetBSD: Makefile,v 1.799 2007/01/03 14:01:01 adrianp Exp $
 #
 
 COMMENT=	Development utilities
@@ -367,7 +367,6 @@ SUBDIR+=	p5-Class-ErrorHandler
 SUBDIR+=	p5-Class-Factory
 SUBDIR+=	p5-Class-Factory-Util
 SUBDIR+=	p5-Class-Fields
-SUBDIR+=	p5-Class-Gomor-Hash
 SUBDIR+=	p5-Class-Inner
 SUBDIR+=	p5-Class-Inspector
 SUBDIR+=	p5-Class-Loader
