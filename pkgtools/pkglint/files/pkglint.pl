@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.690 2007/01/02 23:01:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.691 2007/01/03 20:48:41 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6980,7 +6980,7 @@ sub checkfile_patch($) {
 			$check_text->($line->text);
 			if ($line->text =~ qr"\r$") {
 				$line->log_error("The hunk header must not end with a CR character.");
-				$line->explain_warning(
+				$line->explain_error(
 					"The MacOS X patch utility cannot handle these.");
 			}
 			$hunks++;
