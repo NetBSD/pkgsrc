@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.28 2007/01/03 18:55:45 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.29 2007/01/03 22:12:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -47,3 +47,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/py-X version 0.9 [adrianp 2007-01-03]
 	Removed devel/p5-Class-Gomor-Hash [adrianp 2007-01-03]
 	Added net/ktorrent version 2.1beta1 [xtraeme 2007-01-03]
+	Updated x11/Xrender to 0.9.0nb2 [wiz 2007-01-03]
