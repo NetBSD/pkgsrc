@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.27 2007/01/03 17:49:18 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.28 2007/01/03 18:55:45 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -42,7 +42,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/scapy to 1.0.5 [adrianp 2007-01-03]
 	Added mail/courier-analog version 0.13 [adrianp 2007-01-03]
 	Added net/p5-Net-Libdnet version 0.01 [adrianp 2007-01-03]
-	Added deve/p5-Class-Gomor version 1.01 [adrianp 2007-01-03]
+	Added devel/p5-Class-Gomor version 1.01 [adrianp 2007-01-03]
 	Added net/p5-Net-Write version 1.00 [adrianp 2007-01-03]
 	Added textproc/py-X version 0.9 [adrianp 2007-01-03]
 	Removed devel/p5-Class-Gomor-Hash [adrianp 2007-01-03]
