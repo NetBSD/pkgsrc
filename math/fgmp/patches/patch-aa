@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/03 07:53:37 agc Exp $
+
+Silence compiler warnings
+
+--- gmp.h	2006/12/29 14:27:44	1.1
++++ gmp.h	2006/12/29 14:28:02
+@@ -21,6 +21,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include <sys/types.h>
+ 
+ /* for malloc and free */
