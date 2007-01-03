@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/01 17:27:10 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/03 12:38:38 adrianp Exp $
 include/ares.h
 include/ares_version.h
 lib/libcares.la
@@ -12,6 +12,7 @@ man/man3/ares_free_string.3
 man/man3/ares_gethostbyaddr.3
 man/man3/ares_gethostbyname.3
 man/man3/ares_getnameinfo.3
+man/man3/ares_getsock.3
 man/man3/ares_init.3
 man/man3/ares_init_options.3
 man/man3/ares_mkquery.3
