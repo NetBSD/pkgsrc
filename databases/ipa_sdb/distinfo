@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/03 15:06:02 obache Exp $
+
+SHA1 (ipa_sdb-1.0.1.tar.bz2) = 3babf4d20e2ae0fd1c8958fdc34bff5e3d9e2db2
+RMD160 (ipa_sdb-1.0.1.tar.bz2) = 6824e8f0d11620d1e42912679dcb61e69e48b75e
+Size (ipa_sdb-1.0.1.tar.bz2) = 228701 bytes

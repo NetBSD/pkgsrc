@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/03 15:06:02 obache Exp $
+bin/ipa_sdb_dump
+include/ipa_sdb.h
+lib/ipa_db_sdb.la
+lib/ipa_st_sdb.la
+man/man5/ipa_sdb.5
+man/man8/ipa_db_sdb.8
+man/man8/ipa_sdb_dump.8
+man/man8/ipa_st_sdb.8
+man/ru/man5/ipa_sdb.5
+man/ru/man8/ipa_db_sdb.8
+man/ru/man8/ipa_sdb_dump.8
+man/ru/man8/ipa_st_sdb.8
