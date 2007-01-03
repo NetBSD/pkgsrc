@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/03 07:03:15 wiz Exp $
+bin/openal-config
 include/AL/al.h
 include/AL/alc.h
-include/AL/alctypes.h
 include/AL/alext.h
-include/AL/alexttypes.h
-include/AL/altypes.h
-include/AL/alu.h
-include/AL/alut.h
-include/AL/aluttypes.h
-include/AL/alutypes.h
-info/openal.info
 lib/libopenal.la
+lib/pkgconfig/openal.pc
 @dirrm include/AL
