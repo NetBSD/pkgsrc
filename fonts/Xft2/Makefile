@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2006/12/15 20:32:55 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2007/01/03 22:13:50 wiz Exp $
 
 DISTNAME=	libXft-2.1.7
 PKGNAME=	Xft2-2.1.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,7 @@ USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	xft.pc.in
 MAKE_ENV+=		EGREP=${EGREP:Q}
 
-BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8.2
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.9.0nb2
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.2
 
 .include "../../devel/zlib/buildlink3.mk"
