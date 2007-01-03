@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.6 2006/03/17 22:39:02 jlam Exp $
+$NetBSD: distinfo,v 1.7 2007/01/03 07:03:15 wiz Exp $
 
-SHA1 (openal-20040816.tar.gz) = 0a7939c30176aace28170ce2aa96f19efa00110a
-RMD160 (openal-20040816.tar.gz) = ec02d6b918d9d6d7f2387fd3d14cfe0a47e034ef
-Size (openal-20040816.tar.gz) = 388952 bytes
-SHA1 (patch-aa) = cbb97881e7c60b227663cba6cf61bc3e585e3ade
-SHA1 (patch-ab) = 5a700f94869a975e8253c708eef5401ff2165b58
-SHA1 (patch-ac) = 36169f2b1d95d06102a777dbe2bea2a2d9db2b86
-SHA1 (patch-ad) = 6d4ef6c32d0f4eb556bad0995abc4d4ab9523c7f
+SHA1 (openal-0.0.8.tar.gz) = 31aaedc18bd26759bd51f4fa495bc4ccb08acb3e
+RMD160 (openal-0.0.8.tar.gz) = 29368dbceea7cfd8b5c520b9e0f0cfdc7324e265
+Size (openal-0.0.8.tar.gz) = 870671 bytes
+SHA1 (patch-aa) = fbd752704cabc991b634c830c427d69dc29e80a5
+SHA1 (patch-ab) = e0bfe865021fa54fe276e1c5da312f6d3747102b
