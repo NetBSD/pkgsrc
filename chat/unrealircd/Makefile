@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2006/10/23 18:24:12 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/03 12:46:01 adrianp Exp $
 
-DISTNAME=	Unreal3.2.5
-PKGNAME=	unrealircd-3.2.5
+DISTNAME=	Unreal3.2.6
+PKGNAME=	unrealircd-3.2.6
 CATEGORIES=	chat
-MASTER_SITES=	http://www1.dnwt.net/unreal/ \
-		http://unrealircd.icedslash.com/ \
-		http://www.blurryfox.com/unreal/
+MASTER_SITES=	http://unrealircd.icedslash.com/ \
+		http://www.blurryfox.com/unreal/ \
+		http://unrealircd.pimpmylinux.org/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.unrealircd.com/
@@ -17,12 +17,12 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config gmake
 WRKSRC=		${WRKDIR}/Unreal3.2
 TRE_NEEDED=	0.7.2
-CARES_NEEDED=	1.3.0
+CARES_NEEDED=	1.3.2
 
 CHECK_PORTABILITY_SKIP=	update
 
 BUILDLINK_API_DEPENDS.tre+=		tre-${TRE_NEEDED}
-BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}nb1
+BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,7 +53,7 @@ IRCD_SHARE=	${PREFIX:Q}/share/unrealircd
 IRCD_EG=	${PREFIX:Q}/share/examples/unrealircd
 
 BUILD_DEFS+=	UIRCD_SENDQ UIRCD_LISTEN UIRCD_BUFFER UIRCD_USER UIRCD_HOST
-BUILD_DEFS+=	UIRCD_HOME UIRCD_NICKHIST UIRCD_FDSIZE UIRCD_GROUP
+BUILD_DEFS+=	UIRCD_HOME UIRCD_NICKHIST UIRCD_FDSIZE UIRCD_GROUP VARBASE
 
 PTHREAD_OPTS+=	require
 
