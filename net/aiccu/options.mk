@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2006/09/01 06:48:27 ghen Exp $
+# $NetBSD: options.mk,v 1.2 2007/01/03 15:25:12 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aiccu
 PKG_SUPPORTED_OPTIONS=	gnutls
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
 
 .include "../../mk/bsd.options.mk"
 
