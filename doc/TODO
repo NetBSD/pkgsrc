@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5820 2007/01/03 15:27:42 adrianp Exp $
+$NetBSD: TODO,v 1.5821 2007/01/03 22:26:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,6 +413,7 @@ Suggested package updates
 	o evolution-2.8.2.1
 	o evolution-exchange-2.8.2
 	o ex-050325
+	o exim-4.65
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20060507
@@ -472,6 +473,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.1.4
 	o gld-1.7
+	o glib-2.12.6
 	o glib2-2.12.5
 	o glibmm-2.12.4
 	o glpk-4.13
@@ -760,7 +762,7 @@ Suggested package updates
 	o p5-Class-Loader-2.03 [pkg/34338]
 	o p5-Class-MethodMaker-2.08 [pkg/34327]
 	o p5-Compress-Bzip2-2.09
-	o p5-Compress-Zlib-2.002
+	o p5-Compress-Zlib-2.003
 	o p5-Config-Tiny-2.08 [pkg/34352]
 	o p5-Config-Tiny-2.10
 	o p5-Convert-BER-1.3101 [pkg/34406]
@@ -1021,7 +1023,7 @@ Suggested package updates
 	o rudiments-0.30
 	o sablecc-3.2
 	o samba-3.0.23d
-	o sarg-2.2.3
+	o sarg-2.2.31
 	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
