@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.24 2007/01/03 12:34:11 obache Exp $
+$NetBSD: CHANGES-2007,v 1.25 2007/01/03 15:08:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added math/fgmp version 1.0b5 [agc 2007-01-03]
 	Updated wm/wmctrl to 1.07 [obache 2007-01-03]
 	Updated sysutils/ipa to 2.0.2 [obache 2007-01-03]
+	Added databases/ipa_sdb version 1.0.1 [obache 2007-01-03]
