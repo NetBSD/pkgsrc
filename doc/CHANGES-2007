@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.20 2007/01/02 20:19:04 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.21 2007/01/03 07:03:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -29,4 +29,4 @@ Changes to the packages collection and infrastructure in 2007:
         Updated graphics/kipi-plugins to 0.1.3rc1 [xtraeme 2007-01-02]
 	Updated graphics/digikam to 0.9.0 [xtraeme 2007-01-02]
 	Updated graphics/digikamimageplugins to 0.9.0 [xtraeme 2007-01-02]
-
+	Updated audio/openal to 0.0.8 [wiz 2007-01-03]

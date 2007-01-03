@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5816 2007/01/02 23:14:10 wiz Exp $
+$NetBSD: TODO,v 1.5817 2007/01/03 07:03:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -731,7 +731,6 @@ Suggested package updates
 	o ogre-0.12.3
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o openal-0.0.8
 	o opencobol-0.32
 	o openexr-1.5.0
 	o openh323-1.17.2
