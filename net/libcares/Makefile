@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/18 22:38:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/03 12:38:38 adrianp Exp $
 
 #
 # Please do not update or modify this package as it has been imported only
@@ -6,9 +6,8 @@
 # when chat/unrealircd requires it.
 #
 
-DISTNAME=	c-ares-1.3.0
-PKGNAME=	libcares-1.3.0
-PKGREVISION=	1
+DISTNAME=	c-ares-1.3.2
+PKGNAME=	libcares-1.3.2
 CATEGORIES=	net
 MASTER_SITES=	http://daniel.haxx.se/projects/c-ares/
 

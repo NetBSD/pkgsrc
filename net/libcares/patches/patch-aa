@@ -1,27 +1,28 @@
-$NetBSD: patch-aa,v 1.1 2006/07/18 22:38:18 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/03 12:38:38 adrianp Exp $
 
---- ares.h.orig	2005-08-18 12:49:29.000000000 +0100
+--- ares.h.orig	2006-10-11 22:46:50.000000000 +0100
 +++ ares.h
-@@ -122,6 +122,14 @@ struct ares_options {
-   char *lookups;
+@@ -164,6 +164,14 @@ struct ares_options {
+   void *sock_state_cb_data;
  };
  
 +/** Public available config (readonly) interface for ares_get_config(). */
 +struct ares_config_info {
-+       int timeout;
-+       int tries;
-+       int numservers;
-+       char **servers;
++	int timeout;
++	int tries;
++	int numservers;
++	char **servers;
 +};
 +
  struct hostent;
  struct timeval;
  struct sockaddr;
-@@ -173,6 +181,7 @@ void ares_free_string(void *str);
+@@ -217,6 +225,8 @@ void ares_free_string(void *str);
  void ares_free_hostent(struct hostent *host);
  const char *ares_strerror(int code);
  
 +int ares_get_config(struct ares_config_info *d, ares_channel c);
++
  #ifdef  __cplusplus
  }
  #endif
