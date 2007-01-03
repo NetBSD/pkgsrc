@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/05 15:20:28 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/03 15:54:56 tv Exp $
 #
 
 DISTNAME=	vsftpd-2.0.4
@@ -39,10 +39,6 @@ SUBST_STAGE.paths=	post-patch
 MAKE_ENV+=		LIBS=${LIBS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if empty(USE_INET6:M[Yy][Ee][Ss])
-PKG_FAIL_REASON+=	"${PKGNAME} requires a IPv6-enabled userland to compile."
-.endif
 
 LIBS.SunOS=	-lsocket -lnsl -lrt -lsendfile
 
