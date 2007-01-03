@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/21 18:31:21 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/03 15:23:25 tv Exp $
 
 DISTNAME=	pim6sd-20031021a
 CATEGORIES=	net
@@ -13,4 +13,9 @@ USE_TOOLS+=	lex yacc
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/pim6stat.1 ${PREFIX}/man/man1
 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.pim6sd
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
+
+.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
