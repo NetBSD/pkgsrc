@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
+$NetBSD: patch-ab,v 1.3 2007/01/03 03:31:54 minskim Exp $
 
---- nfsshell.c.orig	Mon Sep 28 15:54:36 1998
-+++ nfsshell.c	Mon Sep 28 15:57:22 1998
+--- nfsshell.c.orig	2007-01-02 19:29:27.000000000 -0800
++++ nfsshell.c
 @@ -1,3 +1,4 @@
 +/* URL: http://www.asmodeus.com/archive/Xnix/nfsShell */
  /*
   * Copyright, 1991, 1992, by Leendert van Doorn (leendert@cs.vu.nl)
   *
-@@ -21,14 +22,19 @@
+@@ -21,14 +22,21 @@
  #include <sys/ioctl.h>
  #include <sys/socket.h>
  #include <sys/vnode.h>
@@ -24,12 +24,14 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  #include "nfs_prot.h"
  
 +int getline(char *buf, int bufsize, int *argc, char **argv, int argvsize);
++AUTH * MYauthunix_create_default(uid, gid);
++static int determine_transfersize();
 +
 +
  /*
   * Fundamental constants
   */
-@@ -284,8 +290,11 @@
+@@ -284,8 +292,11 @@ getline(buf, bufsize, argc, argv, argvsi
      register char *p;
  
      if (interact) printf("nfs> ");
@@ -42,7 +44,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
      *argc = 0;
      for (p = buf; *p == ' ' || *p == '\t'; p++)
  	/* skip white spaces */;
-@@ -340,7 +349,7 @@
+@@ -340,7 +351,7 @@ do_setid(var, argc, argv)
      *var = argc == 2 ? atoi(argv[1]) : -2;
      if (nfsclient && nfsclient->cl_auth) {
  	auth_destroy(nfsclient->cl_auth);
@@ -51,7 +53,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
      }
  }
  
-@@ -509,8 +518,7 @@
+@@ -509,8 +520,7 @@ do_ls(argc, argv)
  /*
   * Print long listing of a files, much in the way ``ls -l'' does
   */
@@ -61,7 +63,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  {
      diropargs args;
      diropres *res;
-@@ -1160,7 +1168,7 @@
+@@ -1160,7 +1170,7 @@ do_handle(argc, argv)
          return 0;
      }
      clnt_control(nfsclient, CLSET_TIMEOUT, &timeout);
@@ -70,7 +72,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  
      /* provide some generic name for it */
      if ((mountpath = malloc(8 + 1)) == NULL) {
-@@ -1235,7 +1243,7 @@
+@@ -1235,7 +1245,7 @@ do_mroot(var, argc, argv)
      *var = 0x00100000;
      if (nfsclient && nfsclient->cl_auth) {
  	auth_destroy(nfsclient->cl_auth);
@@ -79,7 +81,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
      }
  /*
   * Put in some type of code here
-@@ -1493,7 +1501,7 @@
+@@ -1493,7 +1503,7 @@ open_mount(host)
          return 0;
      }
      clnt_control(mntclient, CLSET_TIMEOUT, &timeout);
@@ -88,7 +90,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
      if (verbose)
  	printf("Open %s (%s)\n",
  	    remotehost, inet_ntoa(server_addr.sin_addr));
-@@ -1540,7 +1548,7 @@
+@@ -1540,7 +1550,7 @@ open_nfs(path, umount, portmap)
          return 0;
      }
      clnt_control(nfsclient, CLSET_TIMEOUT, &timeout);
@@ -97,7 +99,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  
      /*
       * Get file handle for this path from the mount daemon. There
-@@ -1634,7 +1642,7 @@
+@@ -1634,7 +1644,7 @@ privileged()
  	return RPC_ANYSOCK;
      for (;;) {
  	sin.sin_port = htons((u_short)lport);
@@ -106,7 +108,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  	    (void)ioctl(s, FIONBIO, (char *) &dontblock);
  	    if (verbose)
  		fprintf(stderr, "Using a privileged port (%d)\n", lport);
-@@ -1672,14 +1680,14 @@
+@@ -1672,14 +1682,14 @@ close_nfs()
   * syscalls.
   */
  AUTH *
@@ -123,7 +125,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  	exit(1);
      }
      machname[MAX_MACHINE_NAME] = 0;
-@@ -1858,8 +1866,7 @@
+@@ -1858,8 +1868,7 @@ umatchpattern(s, p)
   * NFS errors
   */
  char *
@@ -133,7 +135,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/12 23:48:35 frueauf Exp $
  {
      switch (nfsstat) {
      case NFS_OK:
-@@ -1903,4 +1910,3 @@
+@@ -1903,4 +1912,3 @@ nfs_error(nfsstat)
      }
  }
  
