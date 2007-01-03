@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/07 15:49:33 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/03 03:06:13 minskim Exp $
 #
 
 DISTNAME=		xmlsec1-1.2.6
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-openssl.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec.pc.in
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--without-openssl
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-gnutls
 
 .include "../../security/openssl/buildlink3.mk"
