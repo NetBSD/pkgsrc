@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5819 2007/01/03 12:34:11 obache Exp $
+$NetBSD: TODO,v 1.5820 2007/01/03 15:27:42 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -618,7 +618,6 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
-	o libpcap-0.9.5
 	o libprelude-0.9.12
 	o libpreludedb-0.9.11
 	o libshout-2.2
@@ -1129,7 +1128,6 @@ Suggested package updates
 	o ucblogo-5.5
 	o uim-1.3.1 [pkg/35315]
 	o unix2dos-1.3
-	o unrealircd-3.2.6
 	o upx-2.90
 	o userppp-030706
 	o valgrind-3.0.1
