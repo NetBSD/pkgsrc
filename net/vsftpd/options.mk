@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2006/05/16 21:08:50 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2007/01/03 15:54:56 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vsftpd
-PKG_SUPPORTED_OPTIONS=	inet6 pam ssl tcpwrappers
-PKG_SUGGESTED_OPTIONS=	inet6 pam tcpwrappers
+PKG_SUPPORTED_OPTIONS=	pam ssl tcpwrappers
+PKG_SUGGESTED_OPTIONS=	pam tcpwrappers
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
 
 .include "../../mk/bsd.options.mk"
 
