@@ -1,0 +1,3 @@
+FGMP is Mark Henderson's public domain implementation of a subset of
+the GNU gmp library with the same API.  The fgmp library also includes
+a couple of extra routines.

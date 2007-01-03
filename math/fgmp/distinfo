@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/03 07:53:37 agc Exp $
+
+SHA1 (fgmp-1.0b5-src-10.10.tar.gz) = ff34ef4033958ad3ad130b74aea8b7e16acfb6bc
+RMD160 (fgmp-1.0b5-src-10.10.tar.gz) = b85db676643fab4b5af18372fb719b6946cf11cf
+Size (fgmp-1.0b5-src-10.10.tar.gz) = 13429 bytes
+SHA1 (patch-aa) = 78b2dc3acd641e9b5b96e7de2f4ab12d71028ed1
