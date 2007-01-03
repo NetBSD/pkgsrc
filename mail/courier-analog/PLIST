@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/03 12:56:13 adrianp Exp $
+bin/courier-analog
+man/man8/courier-analog.8
