@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/03 17:37:22 xtraeme Exp $
+
+SHA1 (ktorrent-2.1beta1.tar.gz) = 433d0b6b8ef47d544f446d2b9026dfd455af8172
+RMD160 (ktorrent-2.1beta1.tar.gz) = 857b81de55ee117039a6577d3cbde5172edd7ae3
+Size (ktorrent-2.1beta1.tar.gz) = 3178912 bytes
+SHA1 (patch-aa) = fdcc454b7711138b020a278342d4d6f961f78f5d

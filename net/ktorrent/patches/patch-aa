@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/03 17:37:22 xtraeme Exp $
+
+--- libktorrent/net/socket.cpp.orig	2006-07-18 08:57:56.000000000 +0000
++++ libktorrent/net/socket.cpp
+@@ -137,7 +137,11 @@ namespace net
+ 	
+ 	int Socket::send(const bt::Uint8* buf,int len)
+ 	{
++#ifdef MSG_NOSIGNAL
+ 		int ret = ::send(m_fd,buf,len,MSG_NOSIGNAL);
++#else
++		int ret = ::send(m_fd,buf,len,0);	/* SIGPIPE is ignored anyway */
++#endif
+ 		if (ret < 0)
+ 		{
+ 			if (errno != EAGAIN && errno != EWOULDBLOCK)
