@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.25 2007/01/03 15:08:01 obache Exp $
+$NetBSD: CHANGES-2007,v 1.26 2007/01/03 15:34:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -34,3 +34,15 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/wmctrl to 1.07 [obache 2007-01-03]
 	Updated sysutils/ipa to 2.0.2 [obache 2007-01-03]
 	Added databases/ipa_sdb version 1.0.1 [obache 2007-01-03]
+	Updated net/libcares to 1.3.2 [adrianp 2007-01-03]
+	Updated chat/unrealircd to 3.2.6 [adrianp 2007-01-03]
+	Updated net/libpcap to 0.9.5 [adrianp 2007-01-03]
+	Updated net/p5-Net-Pcap to 0.14 [adrianp 2007-01-03]
+	Updated net/p5-Net-Packet to 3.25 [adrianp 2007-01-03]
+	Updated net/scapy to 1.0.5 [adrianp 2007-01-03]
+	Added mail/courier-analog version 0.13 [adrianp 2007-01-03]
+	Added net/p5-Net-Libdnet version 0.01 [adrianp 2007-01-03]
+	Added deve/p5-Class-Gomor version 1.01 [adrianp 2007-01-03]
+	Added net/p5-Net-Write version 1.00 [adrianp 2007-01-03]
+	Added textproc/py-X version 0.9 [adrianp 2007-01-03]
+	Removed devel/p5-Class-Gomor-Hash [adrianp 2007-01-03]
