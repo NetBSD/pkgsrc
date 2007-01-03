@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.9 2007/01/02 18:32:47 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2007/01/03 08:20:18 adam Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -79,7 +79,13 @@ lib/libgphoto2/${PKGVERSION}/stv0674.la
 lib/libgphoto2/${PKGVERSION}/stv0680.la
 lib/libgphoto2/${PKGVERSION}/sx330z.la
 lib/libgphoto2/${PKGVERSION}/toshiba_pdrm11.la
+lib/libgphoto2_port/0.7.1/disk.la
+lib/libgphoto2_port/0.7.1/ptpip.la
+lib/libgphoto2_port/0.7.1/serial.la
+lib/libgphoto2_port/0.7.1/usb.la
 lib/pkgconfig/libgphoto2.pc
+lib/pkgconfig/libgphoto2_port.pc
+lib/udev/check-ptp-camera
 man/man3/libgphoto2.3
 man/man3/libgphoto2_port.3
 share/doc/libgphoto2/AUTHORS
@@ -144,6 +150,10 @@ share/locale/ja/LC_MESSAGES/libgphoto2-2.mo
 share/locale/ja/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/nb/LC_MESSAGES/libgphoto2-2.mo
 share/locale/nb/LC_MESSAGES/libgphoto2_port-0.mo
+share/locale/nl/LC_MESSAGES/libgphoto2-2.mo
+share/locale/nl/LC_MESSAGES/libgphoto2_port-0.mo
+share/locale/pl/LC_MESSAGES/libgphoto2-2.mo
+share/locale/pl/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/pt_BR/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/ru/LC_MESSAGES/libgphoto2-2.mo
 share/locale/ru/LC_MESSAGES/libgphoto2_port-0.mo
@@ -153,5 +163,7 @@ share/locale/sv/LC_MESSAGES/libgphoto2-2.mo
 share/locale/sv/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/uk/LC_MESSAGES/libgphoto2-2.mo
 share/locale/uk/LC_MESSAGES/libgphoto2_port-0.mo
+share/locale/vi/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/zh_CN/LC_MESSAGES/libgphoto2-2.mo
 share/locale/zh_CN/LC_MESSAGES/libgphoto2_port-0.mo
+share/locale/zh_TW/LC_MESSAGES/libgphoto2_port-0.mo
