@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.38 2006/12/10 02:25:13 reed Exp $
+# $NetBSD: subst.mk,v 1.39 2007/01/03 23:35:13 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -32,6 +32,9 @@
 # SUBST_POSTCMD.<class>
 #	Command to clean up after sed(1). Defaults to ${RM} -f
 #	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
+#
+# Keywords: subst
+#
 
 ECHO_SUBST_MSG?=	${STEP_MSG}
 
