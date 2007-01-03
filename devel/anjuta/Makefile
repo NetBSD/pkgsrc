@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2006/09/16 12:20:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.46 2007/01/03 21:27:20 rillig Exp $
 
 DISTNAME=	anjuta-1.2.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -42,6 +42,9 @@ SUBST_FILES.unused+=	tagmanager/parse.h tagmanager/regex.c
 SUBST_FILES.unused+=	tagmanager/tm_file_entry.c tagmanager/tm_project.c
 SUBST_FILES.unused+=	tagmanager/tm_source_file.c tagmanager/tm_workspace.c
 SUBST_SED.unused=	-e 's/__unused__/_exctags_unused_/g'
+
+REPLACE_SH+=		scripts/anjuta_import.sh
+USE_TOOLS+=		sh:run
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
