@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/03 15:21:35 tv Exp $
 #
 
 DISTNAME=	poink-1.6
@@ -16,4 +16,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/poink ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/ping.1 ${PREFIX}/man/man1/poink.1
 
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
