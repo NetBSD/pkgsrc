@@ -1,0 +1,11 @@
+Net::Write provides a portable interface to open a network interface, and be
+able to write raw data directly to the network. It juste provides three methods
+when a Net::Write object has been created for an interface: open, send, close.
+
+It is possible to open a network interface to send frames at layer 2 (you craft
+a frame from link layer), or at layer 3 (you craft a frame from network layer),
+or at layer 4 (you craft a frame from transport layer).
+
+NOTE: not all operating systems support all layer opening. Currently, Windows
+only supports opening and sending at layer 2. Other Unix systems should be able
+to open and send at all layers.
