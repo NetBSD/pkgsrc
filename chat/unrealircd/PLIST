@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/18 22:43:36 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/03 12:46:01 adrianp Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
@@ -12,15 +12,15 @@ share/doc/unrealircd/unreal32docs.html
 share/doc/unrealircd/unreal32docs.hu.html
 share/doc/unrealircd/unreal32docs.nl.html
 share/doc/unrealircd/unreal32docs.ru.html
-share/doc/unrealircd/unreal32docs.tk.html
+share/doc/unrealircd/unreal32docs.tr.html
 share/examples/rc.d/unrealircd
-share/examples/unrealircd/example.bg.conf
 share/examples/unrealircd/example.conf
 share/examples/unrealircd/example.de.conf
 share/examples/unrealircd/example.fr.conf
 share/examples/unrealircd/example.hu.conf
 share/examples/unrealircd/example.nl.conf
 share/examples/unrealircd/example.ru.conf
+share/examples/unrealircd/example.tr.conf
 share/unrealircd/aliases/aliases.conf
 share/unrealircd/aliases/anope.conf
 share/unrealircd/aliases/auspice.conf
@@ -37,6 +37,7 @@ share/unrealircd/help.conf
 share/unrealircd/help.de.conf
 share/unrealircd/help.fr.conf
 share/unrealircd/help.ru.conf
+share/unrealircd/help.tr.conf
 share/unrealircd/modules/cloak.so
 share/unrealircd/modules/commands.so
 share/unrealircd/modules/m_addline.so
@@ -77,6 +78,7 @@ share/unrealircd/modules/m_mkpasswd.so
 share/unrealircd/modules/m_mode.so
 share/unrealircd/modules/m_motd.so
 share/unrealircd/modules/m_nachat.so
+share/unrealircd/modules/m_names.so
 share/unrealircd/modules/m_netinfo.so
 share/unrealircd/modules/m_nick.so
 share/unrealircd/modules/m_oper.so
