@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2007/01/04 11:29:07 rillig Exp $
+
+--- libanjuta/anjuta-launcher.c.orig	2006-02-26 11:15:28.000000000 +0100
++++ libanjuta/anjuta-launcher.c	2007-01-04 04:12:41.000000000 +0100
+@@ -24,7 +24,7 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <signal.h>
+-#ifndef sun
++#if !defined(__sun) && !defined(__NetBSD__)
+ #include <pty.h>
+ #endif
+ #include <assert.h>
