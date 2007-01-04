@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.5 2007/01/04 14:36:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.6 2007/01/04 15:09:43 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -13,3 +13,5 @@ Pullup ticket 1977 - requested by ghen
 bugfix update for lftp
 Pullup ticket 1976 - requested by ghen
 add CONFLICT with bacula-clientonly in bacula
+Pullup ticket 1973 - requested by tv
+portability fix for png
