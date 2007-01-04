@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/01/04 13:22:06 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/04 13:42:39 abs Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -168,6 +168,15 @@ SUBST_SED.confs+=	-e "s|logs/|${VARBASE}/log/httpd/|g"
 SUBST_SED.confs+=	-e 's|/var/log/httpd/foo\.log|logs/foo.log/|g'
 SUBST_SED.confs+=	-e 's|^\(User[	 ]\).*|\1${APACHE_USER}|g'
 SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
+
+# abs_srcdir in config_vars.mk is used during install so needs to reference
+# the work dir path, and by other packages such as ap2-fastcgi after install,
+# so we fix after install to reference the installed path
+SUBST_CLASSES+=		abs_srcdir
+SUBST_STAGE.abs_srcdir=	post-install
+SUBST_FILES.abs_srcdir=	${PREFIX}/share/httpd/build/config_vars.mk
+SUBST_SED.abs_srcdir=	-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
+SUBST_MESSAGE.abs_srcdir=	Fixing abs_srcdir
 
 .include "options.mk"
 
