@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5822 2007/01/04 01:01:41 salo Exp $
+$NetBSD: TODO,v 1.5823 2007/01/04 10:49:34 tron Exp $
 
 Suggested new packages
 ======================
@@ -626,7 +626,6 @@ Suggested package updates
 	o libssh-0.2
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
-	o libtorrent-0.11.0
 	o licq-core-1.3.0
 	o liferea-1.2.0
 	o lighttpd-1.4.13
@@ -1016,7 +1015,6 @@ Suggested package updates
 	o rss2email-2.60
 	o rt3-3.6.3
 	o rtcw-1.41.3
-	o rtorrent-0.7.0
 	o ruby-1.8.5
 	o ruby-cmd-0.8.0
 	o rudiments-0.30
