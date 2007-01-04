@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.86 2006/11/30 10:58:17 drochner Exp $
+# $NetBSD: Makefile,v 1.86.2.1 2007/01/04 15:09:26 salo Exp $
 
 DISTNAME=	libpng-1.2.14
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 # temporary, distfile was changed after release
-DIST_SUBDIR=	libpng-1.2.14-20061130
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
 		ftp://swrinde.nde.swri.edu/pub/png/src/ \
 		ftp://ftp.simplesystems.org/pub/libpng/src/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
+DIST_SUBDIR=	libpng-1.2.14-20061130
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	fredb@NetBSD.org
