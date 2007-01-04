@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.38 2007/01/04 15:20:57 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.39 2007/01/04 21:22:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -61,3 +61,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/bacula-wx-console to 2.0.0 [ghen 2007-01-04]
 	Updated net/lftp to 3.5.6 [ghen 2007-01-04]
 	Updated mail/getmail to 4.6.7 [schmonz 2007-01-04]
+	Updated math/cln 1.1.13 [adam 2007-01-04]
