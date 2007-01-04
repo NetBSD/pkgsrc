@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2006/10/12 17:20:19 rillig Exp $
+$NetBSD: distinfo,v 1.14 2007/01/04 00:15:03 wiz Exp $
 
 SHA1 (allegro-4.2.0.tar.gz) = 5b4a542c038ee196564f9107de59fe30a8caeaf5
 RMD160 (allegro-4.2.0.tar.gz) = e1602ea2f8bc1761be0ee34001e9d77d3a6ea3ff
@@ -8,5 +8,5 @@ SHA1 (patch-ab) = f33f1a96394f16398246d3bc1d5cab89df4860e8
 SHA1 (patch-ac) = 78f99723b095f460f20e8367fffb443a8f3d6ab6
 SHA1 (patch-ad) = 52f694e1b0053cff94c53ee10f603d535eba5fa5
 SHA1 (patch-ae) = 32e5ecd77e58bb6926c207c668755043448457f9
-SHA1 (patch-ax) = e01206c35df3b951d686c22f3e0ebf6ec2196e20
-SHA1 (patch-ay) = 66813e0b018db01a34bf014962e9a4630d8aec0d
+SHA1 (patch-ax) = b79d1bf82fc0e9bba9b7d81e6d2005f35a217ca0
+SHA1 (patch-ay) = 61f13ecf46da56e396039d8ecfda6e822d80fb04

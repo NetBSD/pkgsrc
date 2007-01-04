@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/09/09 02:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/04 00:15:03 wiz Exp $
 
 DISTNAME=	allegro-4.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
@@ -27,6 +27,12 @@ SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
 SUBST_SED.oss=		-e "s,/dev/dsp,"${DEVOSSAUDIO:Q}",g"
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	src/unix/umodules.c src/unix/usystem.c
+SUBST_SED.path=		-e "s,@@PREFIX@@,${PREFIX},g"
+SUBST_MESSAGE.path=	Fixing hardcoded path.
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
