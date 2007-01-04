@@ -1,11 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2006/03/12 16:33:32 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2007/01/04 21:20:57 adam Exp $
 
-HTML documentation is installed to share/doc/cln/html, DVI and
-PostScript are left out.
-
---- doc/Makefile.in.orig	2004-10-26 21:29:16.000000000 +0000
+--- doc/Makefile.in.orig	2006-08-06 14:14:20.000000000 +0200
 +++ doc/Makefile.in
-@@ -12,7 +12,7 @@ exec_prefix = @exec_prefix@
+@@ -13,7 +13,7 @@ datarootdir = @datarootdir@
  datadir = @datadir@
  infodir = @infodir@
  mandir = @mandir@
@@ -14,7 +11,7 @@ PostScript are left out.
  dvidir = $(datadir)/dvi
  DESTDIR =
  
-@@ -42,7 +42,7 @@ SHELL = /bin/sh
+@@ -43,7 +43,7 @@ SHELL = /bin/sh
  
  VPATH = $(srcdir)
  
@@ -23,7 +20,7 @@ PostScript are left out.
  
  
  info : $(srcdir)/$(PACKAGE).info
-@@ -87,13 +87,11 @@ install : all installdirs force
+@@ -88,13 +88,11 @@ install : all installdirs force
  	  install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$(PACKAGE).info || :;\
  	else : ; fi
  	$(INSTALL_DATA) $(srcdir)/$(PACKAGE)_*.html $(DESTDIR)$(htmldir)
