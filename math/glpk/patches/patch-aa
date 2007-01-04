@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2006/05/23 10:17:20 adam Exp $
+$NetBSD: patch-aa,v 1.4 2007/01/04 22:38:49 adam Exp $
 
---- src/Makefile.in.orig	2006-05-11 10:00:00.000000000 +0200
+--- src/Makefile.in.orig	2006-11-13 10:00:00.000000000 +0100
 +++ src/Makefile.in
 @@ -65,7 +65,7 @@ VERSION = @VERSION@
  
@@ -9,10 +9,10 @@ $NetBSD: patch-aa,v 1.3 2006/05/23 10:17:20 adam Exp $
 -lib_LIBRARIES = libglpk.a
 +lib_LIBRARIES = libglpk.la
  
- libglpk_a_SOURCES =  glpavl.c glpbfi.c glpdmp.c glphbm.c glpiet.c glpinv.c glpios1.c glpios2.c glpios3.c glpipm.c glpipp1.c glpipp2.c glplib1a.c glplib1b.c glplib2.c glplib3.c glplib4.c glplpp1.c glplpp2.c glplpx1.c glplpx2.c glplpx3.c glplpx4.c glplpx5.c glplpx6a.c glplpx6b.c glplpx6c.c glplpx6d.c glplpx7.c glplpx7a.c glplpx7b.c glplpx8a.c glplpx8b.c glplpx8c.c glplpx8d.c glplpx8e.c glpluf.c glpmat.c glpmip1.c glpmip2.c glpmpl1.c glpmpl2.c glpmpl3.c glpmpl4.c glpqmd.c glprng.c glpspx1.c glpspx2.c glpstr.c glptsp.c
+ libglpk_a_SOURCES =  glpavl.c glpbfi.c glpbfx.c glpdmp.c glpgmp.c glphbm.c glpiet.c glpinv.c glpinv1.c glpios1.c glpios2.c glpios3.c glpipm.c glpipp1.c glpipp2.c glplib1a.c glplib1b.c glplib2.c glplib3.c glplib4.c glplpp1.c glplpp2.c glplpx1.c glplpx2.c glplpx3.c glplpx4.c glplpx5.c glplpx6a.c glplpx6b.c glplpx6c.c glplpx6d.c glplpx6e.c glplpx7.c glplpx7a.c glplpx7b.c glplpx8a.c glplpx8b.c glplpx8c.c glplpx8d.c glplpx8e.c glpluf.c glpluf1.c glplux.c glpmat.c glpmip1.c glpmip2.c glpmpl1.c glpmpl2.c glpmpl3.c glpmpl4.c glpqmd.c glprng.c glpspx1.c glpspx2.c glpssx1.c glpssx2.c glpstr.c glptsp.c
  
-@@ -89,9 +89,9 @@ glpmip2.o glpmpl1.o glpmpl2.o glpmpl3.o 
- glpspx1.o glpspx2.o glpstr.o glptsp.o
+@@ -90,9 +90,9 @@ glpmip2.o glpmpl1.o glpmpl2.o glpmpl3.o 
+ glpspx1.o glpspx2.o glpssx1.o glpssx2.o glpstr.o glptsp.o
  AR = ar
  CFLAGS = @CFLAGS@
 -COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.3 2006/05/23 10:17:20 adam Exp $
  DIST_COMMON =  Makefile.am Makefile.in
  
  
-@@ -140,15 +140,7 @@ install-libLIBRARIES: $(lib_LIBRARIES)
+@@ -143,15 +143,7 @@ install-libLIBRARIES: $(lib_LIBRARIES)
  	$(mkinstalldirs) $(DESTDIR)$(libdir)
  	@list='$(lib_LIBRARIES)'; for p in $$list; do \
  	  if test -f $$p; then \
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.3 2006/05/23 10:17:20 adam Exp $
  	  else :; fi; \
  	done
  
-@@ -174,10 +166,9 @@ distclean-compile:
+@@ -177,10 +169,9 @@ distclean-compile:
  
  maintainer-clean-compile:
  
