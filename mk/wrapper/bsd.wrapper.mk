@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.60 2006/11/26 14:42:17 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.61 2007/01/04 00:57:29 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -614,7 +614,7 @@ _UNWRAP_PATTERNS+=	*.pc
 _UNWRAP_PATTERNS_FIND_cmd=	\
 	cd ${WRKSRC} && \
 	${ECHO} "__dummy-entry__" && \
-	${FIND} . \( ${_UNWRAP_PATTERNS:C/.*/-o -name "&"/g:S/-o//1} \) -print \
+	${FIND} . -type f \( ${_UNWRAP_PATTERNS:C/.*/-o -name "&"/g:S/-o//1} \) -print \
 	| ${SED} -e 's|^\./||' \
 	| ${SORT} -u
 UNWRAP_FILES?=		# empty
