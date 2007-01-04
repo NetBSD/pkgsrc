@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/12/12 21:52:36 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.17.2.1 2007/01/04 15:09:26 salo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PNG_BUILDLINK3_MK:=	${PNG_BUILDLINK3_MK}+
@@ -12,11 +12,16 @@ BUILDLINK_PACKAGES+=	png
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}png
 
 .if !empty(PNG_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.png+=		png>=1.2.4
-BUILDLINK_ABI_DEPENDS.png?=	png>=1.2.9nb2
+# XXX tv - remove this OPSYS block the next time ABI_DEPENDS is bumped:
+.  include "../../mk/bsd.fast.prefs.mk"
+.  if ${OPSYS} == "Interix"
+BUILDLINK_ABI_DEPENDS.png+=	png>=1.2.14nb1 # fixes linkage bug
+.  endif
+
+BUILDLINK_API_DEPENDS.png+=	png>=1.2.4
+BUILDLINK_ABI_DEPENDS.png+=	png>=1.2.9nb2
 BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
 
-.   include "../../mk/bsd.fast.prefs.mk"
 # keep this in sync with the same code in Makefile
 .  if ${MACHINE_ARCH} != "i386"
 CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE

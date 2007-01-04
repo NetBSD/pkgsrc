@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.5.6.1 2007/01/04 15:09:26 salo Exp $
+
+--- configure.orig	2006-11-28 11:26:14.000000000 -0500
++++ configure
+@@ -21341,7 +21341,7 @@ fi
+ { echo "$as_me:$LINENO: checking if libraries can be versioned" >&5
+ echo $ECHO_N "checking if libraries can be versioned... $ECHO_C" >&6; }
+ GLD=`$LD --help < /dev/null 2>/dev/null | grep version-script`
+-if test "$GLD"; then
++if test "$GLD" && test "`uname -s`" != "Interix"; then
+     have_ld_version_script=yes
+     { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
