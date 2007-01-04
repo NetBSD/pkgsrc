@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.2 2007/01/02 22:30:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.3 2007/01/04 00:57:24 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -7,3 +7,5 @@ Created pkgsrc-2006Q4 branch [agc 2007-01-02 10:30 GMT]
 
 Pullup ticket 1972 - requested by joerg
 mark pgadmin3 as BROKEN
+Pullup ticket 1974 - requested by rpaulo
+security update for miredo
