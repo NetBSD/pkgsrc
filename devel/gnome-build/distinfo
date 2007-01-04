@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/04 02:51:02 rillig Exp $
+
+SHA1 (gnome-build-0.1.3.tar.bz2) = 2261b865296647a16efc97fa8c5554aa597f7766
+RMD160 (gnome-build-0.1.3.tar.bz2) = 8ff1ebc87a64343f87acd56fd550ebc111f1b238
+Size (gnome-build-0.1.3.tar.bz2) = 444539 bytes
+SHA1 (patch-aa) = e4f1d3b55db03b0e6db86158b2b16bd4ba594037
+SHA1 (patch-ab) = a85e1668824b9f62e2e413861c010ade19824918
+SHA1 (patch-ac) = 5a7ca1a63080d145e5b8263656d2fbe2be639d1f

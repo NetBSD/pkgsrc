@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/01/04 02:51:02 rillig Exp $
+
+Tags: for-upstream
+
+Did you know that gcc has a -Wformat=2 option?
+
+--- src/backends/libgbf_mkfile/gbf-mkfile-properties.c.orig	2005-09-22 13:18:46.000000000 +0200
++++ src/backends/libgbf_mkfile/gbf-mkfile-properties.c	2007-01-04 03:29:10.000000000 +0100
+@@ -197,7 +197,7 @@ on_group_widget_destroy (GtkWidget *wid,
+ 	gbf_mkfile_project_set_group_config (project, group_id, new_config, &err);
+ 	if (err)
+ 	{
+-		g_warning (err->message);
++		g_warning ("%s", err->message);
+ 		g_error_free (err);
+ 	}
+ 	g_object_unref (table);
+@@ -290,7 +290,7 @@ on_target_widget_destroy (GtkWidget *wid
+ 	gbf_mkfile_project_set_target_config (project, target_id, new_config, &err);
+ 	if (err)
+ 	{
+-		g_warning (err->message);
++		g_warning ("%s", err->message);
+ 		g_error_free (err);
+ 	}
+ 	g_object_unref (table);
