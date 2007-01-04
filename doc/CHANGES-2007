@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.34 2007/01/04 02:51:09 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.35 2007/01/04 11:33:50 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/allegro to 4.2.0nb3 [wiz 2007-01-04]
 	Added devel/gdl version 0.6.1 [rillig 2007-01-04]
 	Added devel/gnome-build version 0.1.3 [rillig 2007-01-04]
+	Updated devel/anjuta to 2.0.2 [rillig 2007-01-04]
