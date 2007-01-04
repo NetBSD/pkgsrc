@@ -1,0 +1,196 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/04 02:51:02 rillig Exp $
+
+Replaced the GNU regular expressions with POSIX regular expressions,
+since the latter are more portable.
+
+--- src/backends/libgbf_am/gbf-am-build.c.orig	2004-01-17 22:34:56.000000000 +0100
++++ src/backends/libgbf_am/gbf-am-build.c	2007-01-04 03:16:49.000000000 +0100
+@@ -38,10 +38,11 @@ typedef struct {
+ 	GList *callbacks;
+ 
+ 	/* Regex structures. */
+-	struct re_pattern_buffer dir_buf;
+-	struct re_pattern_buffer warn_buf;
+-	struct re_pattern_buffer err_buf;
+-	struct re_registers reg;
++	regex_t dir_buf;
++	regex_t warn_buf;
++	regex_t err_buf;
++#define N_GROUPS 5		/* 1 + maximum number of groups + 1 */
++	regmatch_t reg[N_GROUPS];
+ 
+ 	/* Build info. */
+ 	char *build_dir;
+@@ -55,12 +56,9 @@ build_info_free (BuildInfo *info)
+ 	
+ 	if (info->build_dir)
+ 		g_free (info->build_dir);
+-	if (info->dir_buf.fastmap)
+-		g_free (info->dir_buf.fastmap);
+-	if (info->warn_buf.fastmap)
+-		g_free (info->warn_buf.fastmap);
+-	if (info->err_buf.fastmap)
+-		g_free (info->err_buf.fastmap);
++	regfree (&info->dir_buf);
++	regfree (&info->warn_buf);
++	regfree (&info->err_buf);
+ 	g_free (info);
+ }
+ 
+@@ -79,33 +77,36 @@ build_msg (BuildInfo      *info,
+ 	}
+ }
+ 
++/* Returns a copy of the ''n''th captured group. */
++#define GBF_GETGROUP(n)						\
++	g_strndup (line + info->reg[n].rm_so,			\
++		info->reg[n].rm_eo - info->reg[n].rm_so)
++
+ static void
+ parse_output (BuildInfo  *info,
+ 	      const char *line)
+ {
+-	int line_length = strlen (line);
++	size_t line_length = strlen (line);
++	int n;
+ 
+ 	/* Check for directory changes. */
+-	if (re_search (&info->dir_buf, line, line_length, 0,
+-		       line_length, &info->reg) != -1) {
+-		if (info->reg.num_regs >= 2) {
+-			if (info->build_dir)
+-				g_free (info->build_dir);
+-			info->build_dir = g_strndup (line + info->reg.start[1],
+-						     info->reg.end[1] - info->reg.start[1]);
+-		}
++	if (regexec (&info->dir_buf, line, N_GROUPS, info->reg, 0) == 0) {
++		g_assert (info->reg[1].rm_so != -1 && info->reg[2].rm_so == -1);
++		if (info->build_dir)
++			g_free (info->build_dir);
++		info->build_dir = GBF_GETGROUP(1);
+ 	}
+ 
+ 	/* Check for warnings & errors. */
+-	if (re_search (&info->warn_buf, line, line_length, 0,
+-		       line_length, &info->reg) != -1) {
++	if (regexec (&info->warn_buf, line, N_GROUPS, info->reg, 0) == 0) {
+ 		GbfBuildWarning *warn;
+ 		char *text;
+ 
++		g_assert (info->reg[3].rm_so != -1 && info->reg[4].rm_so == -1);
++
+ 		/* Create new warning. */
+ 		warn = g_new0 (GbfBuildWarning, 1);
+-		text = g_strndup (line + info->reg.start[1],
+-				  info->reg.end[1] - info->reg.start[1]);
++		text = GBF_GETGROUP(1);
+ 		if (text[0] != '/') { /* only prepend build_dir if path not absolute */
+ 			warn->filename = g_strconcat (info->build_dir, "/", text, NULL);
+ 			g_free (text);
+@@ -113,25 +114,21 @@ parse_output (BuildInfo  *info,
+ 			warn->filename = text;
+ 		}
+ 
+-		text = g_strndup (line + info->reg.start[2],
+-				  info->reg.end[2] - info->reg.start[2]);
++		text = GBF_GETGROUP(2);
+ 		warn->line = atoi (text);
+ 		g_free (text);
+-		warn->warning = g_strndup (line + info->reg.start[3],
+-					   info->reg.end[3] - info->reg.start[3]);
++		warn->warning = GBF_GETGROUP(3);
+ 		warn->output = g_strdup (line);
+ 
+ 		build_msg (info, GBF_BUILD_WARNING, warn);
+ 		/* FIXME: We should free warn here, and make copy in gbf-build-info.c. */
+-	} else if (re_search (&info->err_buf, line, line_length, 0,
+-			      line_length, &info->reg) != -1) {
++	} else if (regexec (&info->err_buf, line, N_GROUPS, info->reg, 0) == 0) {
+ 		GbfBuildError *err;
+ 		char *text;
+ 
+ 		/* Create new error. */
+ 		err = g_new0 (GbfBuildError, 1);
+-		text = g_strndup (line + info->reg.start[1],
+-				  info->reg.end[1] - info->reg.start[1]);
++		text = GBF_GETGROUP(1);
+ 		if (text[0] != '/') { /* only prepend build_dir if path not absolute */
+ 			err->filename = g_strconcat (info->build_dir, "/", text, NULL);
+ 			g_free (text);
+@@ -139,12 +136,10 @@ parse_output (BuildInfo  *info,
+ 			err->filename = text;
+ 		}
+ 
+-		text = g_strndup (line + info->reg.start[2],
+-				  info->reg.end[2] - info->reg.start[2]);
++		text = GBF_GETGROUP(2);
+ 		err->line = atoi (text);
+ 		g_free (text);
+-		err->error = g_strndup (line + info->reg.start[3],
+-					info->reg.end[3] - info->reg.start[3]);
++		err->error = GBF_GETGROUP(3);
+ 		err->output = g_strdup (line);
+ 
+ 		build_msg (info, GBF_BUILD_ERROR, err);
+@@ -153,6 +148,7 @@ parse_output (BuildInfo  *info,
+ 		build_msg (info, GBF_BUILD_OUTPUT, (gpointer)line);
+ 	}
+ }
++#undef GBF_GETGROUP(n)
+ 
+ static gboolean
+ build_output_cb (GIOChannel  *chan,
+@@ -192,24 +188,10 @@ build_output_cb (GIOChannel  *chan,
+ }
+ 
+ static gboolean
+-compile_pattern (struct re_pattern_buffer *buf,
++compile_pattern (regex_t                  *buf,
+ 		 const char               *pattern)
+ {
+-	memset (buf, 0, sizeof (struct re_pattern_buffer));
+-	buf->translate = NULL;
+-	buf->fastmap = g_malloc (256);
+-	buf->allocated = 0;
+-	buf->buffer = NULL;
+-	buf->can_be_null = 0;
+-	buf->no_sub = 0;
+-
+-	if (!re_compile_pattern (pattern, strlen (pattern), buf)) {
+-		if (re_compile_fastmap (buf) != 0) {
+-			g_warning ("IMPORTANT REGEX FAILED TO CREASTE FASTMAP");
+-			g_free (buf->fastmap);
+-			buf->fastmap = NULL;
+-		}
+-	} else {
++	if (regcomp(buf, pattern, REG_EXTENDED) != 0) {
+ 		g_warning ("IMPORTANT REGEX FAILED TO COMPILE");
+ 		return FALSE;
+ 	}
+@@ -234,7 +216,6 @@ gbf_build_run (GbfAmProject    *project,
+ 	char *tmp, *msg;
+ 	int output, err, pid;
+ 	GIOChannel *out_channel, *err_channel;
+-	reg_syntax_t old_options;
+ 	GError *error = NULL;
+ 	const char *charset;
+ 	GNode *g_node;
+@@ -347,9 +328,6 @@ gbf_build_run (GbfAmProject    *project,
+ 	info->build_dir = NULL;
+ 
+ 	/* Intialize regexs. */
+-	old_options = re_syntax_options;
+-	re_syntax_options = RE_SYNTAX_EGREP;
+-
+ 	if (!compile_pattern (&info->dir_buf, dir_regex) ||
+ 	    !compile_pattern (&info->warn_buf, warn_regex) ||
+ 	    !compile_pattern (&info->err_buf, err_regex)) {
+@@ -360,8 +338,6 @@ gbf_build_run (GbfAmProject    *project,
+ 		return -1;
+ 	}
+ 
+-	re_syntax_options = old_options;
+-
+ 	g_signal_emit_by_name (G_OBJECT (project), "build_start");
+ 
+ 	tmp = g_strjoinv (" ", (char **) argv);
