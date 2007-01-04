@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2006/05/23 10:17:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/04 22:38:49 adam Exp $
 bin/glpsol
 bin/tspsol
 include/glpavl.h
 include/glpbfi.h
+include/glpbfx.h
+include/glpcfg.h
 include/glpdmp.h
+include/glpgmp.h
 include/glphbm.h
 include/glpiet.h
 include/glpinv.h
@@ -15,12 +18,14 @@ include/glplib.h
 include/glplpp.h
 include/glplpx.h
 include/glpluf.h
+include/glplux.h
 include/glpmat.h
 include/glpmip.h
 include/glpmpl.h
 include/glpqmd.h
 include/glprng.h
 include/glpspx.h
+include/glpssx.h
 include/glpstr.h
 include/glptsp.h
 lib/libglpk.la
