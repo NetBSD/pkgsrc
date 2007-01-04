@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.691 2007/01/03 20:48:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.692 2007/01/04 13:00:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2642,6 +2642,94 @@ sub get_userdefined_variables() {
 	return $get_userdefined_variables_result;
 }
 
+sub match_all($$);	# needed by load_shared_dirs()
+
+my $load_shared_dirs_dir_to_varname = undef;
+my $load_shared_dirs_varname_to_dirs = undef;
+my $load_shared_dirs_dir_to_id = undef;
+sub load_shared_dirs() {
+	return if defined($load_shared_dirs_dir_to_varname);
+
+	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "load_shared_dirs()");
+
+	my $dir_to_varname = {};
+	my $varname_to_dirs = {};
+	my $dir_to_id = {};
+
+	foreach my $pkg qw(
+		misc/gnome-dirs misc/gnome1-dirs misc/gnome2-dirs
+		misc/theme-dirs
+		misc/xdg-dirs misc/xdg-x11-dirs
+		misc/xorg-dirs
+		print/texmf-dirs) {
+
+		$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "pkg=$pkg");
+		my $dirs_mk = load_lines("$cwd_pkgsrcdir/$pkg/dirs.mk", true);
+		assert(defined($dirs_mk), "$pkg/dirs.mk is not readable.");
+
+		foreach my $line (@$dirs_mk) {
+			parseline_mk($line);
+			if ($line->has("is_varassign")) {
+				my $varname = $line->get("varname");
+				my $value = $line->get("value");
+
+				if ($varname =~ qr"^[A-Z]\w*_DIRS$" && $value ne "") {
+					if (exists($dir_to_varname->{$value})) {
+						# FIXME: misc/xdg-x11-dirs and misc/xdg-dirs conflict.
+						#$line->log_warning("Duplicate directory, also appears in " . $dir_to_varname->{$value} . ".");
+					} else {
+						$dir_to_varname->{$value} = $varname;
+					}
+				}
+
+			} elsif ($line->has("is_cond") && $line->get("directive") eq "for") {
+				my $args = $line->get("args");
+				while ($args =~ /\$\{(\w+_DIRS)\}/gc) {
+					push(@{$varname_to_dirs->{$1}}, $pkg);
+				}
+			}
+		}
+
+		my $makefile = load_lines("$cwd_pkgsrcdir/$pkg/Makefile", true);
+		assert(defined($makefile), "$pkg/Makefile is not readable.");
+		foreach my $line (@$makefile) {
+			my $pkgname = undef;
+
+			parseline_mk($line);
+			if ($line->has("is_varassign") && $line->get("varname") eq "DISTNAME") {
+				if ($line->get("value") =~ qr"^(.*)-dirs-(.*)$") {
+					$dir_to_id->{$pkg} = "$1-$2";
+				} else {
+					assert(false, "$pkg/Makefile does not define a proper DISTNAME.");
+				}
+			}
+		}
+	}
+	$load_shared_dirs_dir_to_varname = $dir_to_varname;
+	$load_shared_dirs_varname_to_dirs = $varname_to_dirs;
+	$load_shared_dirs_dir_to_id = $dir_to_id;
+}
+
+# Given a directory name, returns a list of possible identifiers to be
+# used in USE_DIRS.
+sub get_shared_dir_ids($$) {
+	my ($line, $dir) = @_;
+	my @ids;
+
+	$opt_debug_trace and $line->log_debug("get_shared_dir_ids(\"$dir\")");
+
+	load_shared_dirs();
+	my $varname = $load_shared_dirs_dir_to_varname->{$dir};
+	return () unless $varname;
+	#print "varname=$varname\n";
+	foreach my $dir2 (@{$load_shared_dirs_varname_to_dirs->{$varname}}) {
+		#print "dir2=$dir2\n";
+		my $id = $load_shared_dirs_dir_to_id->{$dir2};
+		#print "id=$id\n";
+		push(@ids, $id);
+	}
+	return @ids;
+}
 
 #
 # Miscellaneous functions
@@ -3579,6 +3667,8 @@ sub checkline_valid_characters_in_variable($$) {
 
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
+
+	$opt_debug_trace and $line->log_debug("checkline_trailing_whitespace()");
 
 	if ($line->text =~ /\s+$/) {
 		$line->log_note("Trailing white-space.");
@@ -7156,9 +7246,19 @@ sub checkfile_PLIST($) {
 					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
 				}
 
-			} elsif ($cmd eq "comment" || $cmd eq "dirrm") {
+			} elsif ($cmd eq "comment") {
 				# nothing to do
 
+			} elsif ($cmd eq "dirrm") {
+				my @ids = get_shared_dir_ids($line, $arg);
+				if (@ids == 0) {
+					# Nothing to do
+				} elsif (@ids == 1) {
+					$line->log_warning("Please add \"USE_DIRS+= $ids[0]\" to the package Makefile and remove this line.");
+				} else {
+					my $s = join(" or ", map { "\"USE_DIRS+= $_\"" } @ids);
+					$line->log_warning("Please add $s to the package Makefile and remove this line.");
+				}
 			} else {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
 			}
