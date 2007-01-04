@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2006/08/15 20:54:44 rpaulo Exp $
+$NetBSD: patch-ac,v 1.4.4.1 2007/01/04 00:57:03 salo Exp $
 
---- misc/isatapd.conf.orig	2006-08-13 13:56:57.000000000 +0100
-+++ misc/isatapd.conf	2006-08-13 13:57:02.000000000 +0100
-@@ -8,7 +8,7 @@
- ServerAddress isatap
+--- misc/isatapd.conf-in.old	2007-01-03 18:38:52.000000000 +0000
++++ misc/isatapd.conf-in	2007-01-03 18:38:58.000000000 +0000
+@@ -10,7 +10,7 @@
+ ServerAddress	isatap
  
  # Name of the network tunneling interface.
 -InterfaceName	isatap

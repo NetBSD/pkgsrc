@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/15 20:54:44 rpaulo Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2007/01/04 00:57:02 salo Exp $
 bin/teredo-mire
 sbin/miredo
 sbin/miredo-server
@@ -18,9 +18,9 @@ man/man8/miredo.8
 man/man8/isatapd.8
 lib/libteredo.la
 lib/libtun6.la
-share/examples/miredo/miredo.conf-dist
-share/examples/miredo/miredo-server.conf-dist
-share/examples/miredo/isatapd.conf-dist
+share/examples/miredo/miredo.conf
+share/examples/miredo/miredo-server.conf
+share/examples/miredo/isatapd.conf
 @dirrm include/libteredo
 @dirrm include/libtun6
 @dirrm share/examples/miredo
