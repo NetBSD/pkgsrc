@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2006/07/07 15:49:32 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/04 21:20:57 adam Exp $
 
-DISTNAME=	cln-1.1.11
+DISTNAME=	cln-1.1.13
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/ \
 		ftp://ftp.santafe.edu/pub/gnu/ \
@@ -16,6 +16,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	cln.pc.in
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../mk/bsd.pkg.mk"
