@@ -1,7 +1,19 @@
-$NetBSD: patch-ae,v 1.4 2006/10/22 21:26:19 adam Exp $
+$NetBSD: patch-ae,v 1.4.2.1 2007/01/04 17:06:17 salo Exp $
+
+The double eval fixes an insufficient variable expansion in the shell,
+caused by the buggy AC_DEFINE_DIR macro.
 
 --- configure.orig	2006-09-06 23:07:19.000000000 +0200
-+++ configure
++++ configure	2007-01-02 15:41:52.000000000 +0100
+@@ -24730,7 +24730,7 @@ _ACEOF
+   exec_prefix_NONE=
+   test "x$prefix" = xNONE && prefix_NONE=yes && prefix=$ac_default_prefix
+   test "x$exec_prefix" = xNONE && exec_prefix_NONE=yes && exec_prefix=$prefix
+-  eval ac_define_dir="\"$datadir/locale\""
++  eval eval ac_define_dir="\"$datadir/locale\""
+   LOCALEDIR="$ac_define_dir"
+ 
+ 
 @@ -30949,7 +30949,7 @@ fi
  
  if test x$without_glib != xtrue
