@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/11/29 19:03:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/01/04 22:12:47 adam Exp $
 include/glibmm-2.4/glibmm.h
 include/glibmm-2.4/glibmm/arrayhandle.h
 include/glibmm-2.4/glibmm/class.h
@@ -412,10 +412,6 @@ share/doc/glibmm-2.4/docs/reference/html/class_8h.html
 share/doc/glibmm-2.4/docs/reference/html/classes.html
 share/doc/glibmm-2.4/docs/reference/html/classsigc_1_1trackable.html
 share/doc/glibmm-2.4/docs/reference/html/classsigc_1_1trackable__inherit__graph.png
-share/doc/glibmm-2.4/docs/reference/html/classstd_1_1basic__filebuf.html
-share/doc/glibmm-2.4/docs/reference/html/classstd_1_1basic__filebuf__inherit__graph.png
-share/doc/glibmm-2.4/docs/reference/html/classstd_1_1char__traits.html
-share/doc/glibmm-2.4/docs/reference/html/classstd_1_1char__traits__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/containerhandle__shared_8h.html
 share/doc/glibmm-2.4/docs/reference/html/containers_8h.html
 share/doc/glibmm-2.4/docs/reference/html/convert_8h.html
@@ -589,39 +585,9 @@ share/doc/glibmm-2.4/docs/reference/html/inherit__graph__53.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__54.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__55.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__56.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__57.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__58.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__59.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__6.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__60.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__61.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__62.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__63.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__64.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__65.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__66.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__67.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__68.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__69.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__7.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__70.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__71.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__72.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__73.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__74.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__75.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__76.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__77.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__78.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__79.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__8.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__80.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__81.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__82.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__83.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__84.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__85.png
-share/doc/glibmm-2.4/docs/reference/html/inherit__graph__86.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__9.png
 share/doc/glibmm-2.4/docs/reference/html/inherits.html
 share/doc/glibmm-2.4/docs/reference/html/init_8h.html
