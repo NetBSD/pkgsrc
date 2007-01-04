@@ -1,15 +1,22 @@
-$NetBSD: patch-aj,v 1.4 2006/03/29 21:44:41 ghen Exp $
+$NetBSD: patch-aj,v 1.5 2007/01/04 12:29:26 ghen Exp $
 
---- scripts/Makefile.in.orig	2006-03-29 15:44:01.000000000 +0200
-+++ scripts/Makefile.in
-@@ -61,9 +61,7 @@ install: installdirs
- 	chmod 0644 $(DESTDIR)$(scriptdir)/btraceback.gdb \
- 		   $(DESTDIR)$(scriptdir)/btraceback.dbx
- 	$(INSTALL_SCRIPT) btraceback $(DESTDIR)$(sbindir)/btraceback
--	gzip <bacula.man >bacula.8.gz
--	$(INSTALL_DATA)   bacula.8.gz $(DESTDIR)$(mandir)/bacula.8.gz
--	@rm -f bacula.8.gz
-+	$(INSTALL_DATA)   bacula.man $(DESTDIR)$(mandir)/bacula.8
- 
+--- manpages/Makefile.in.orig	2006-08-27 20:30:56.000000000 +0200
++++ manpages/Makefile.in
+@@ -20,15 +20,11 @@ depend:
+ install:
+ 	$(MKDIR) $(DESTDIR)/$(mandir)/man8
+ 	for I in ${MAN8}; \
+-	  do ($(RMF) $$I.gz; gzip -c $$I >$$I.gz; \
+-	     $(INSTALL_DATA) $$I.gz $(DESTDIR)$(mandir)/man8/$$I.gz; \
+-	     rm -f $$I.gz); \
++	  do $(INSTALL_DATA) $$I $(DESTDIR)$(mandir)/man8/$$I; \
+ 	done
+ 	$(MKDIR) $(DESTDIR)/$(mandir)/man1
+ 	for I in ${MAN1}; \
+-	  do ($(RMF) $$I.gz; gzip -c $$I >$$I.gz; \
+-	     $(INSTALL_DATA) $$I.gz $(DESTDIR)$(mandir)/man1/$$I.gz; \
+-	     rm -f $$I.gz); \
++	  do $(INSTALL_DATA) $$I $(DESTDIR)$(mandir)/man1/$$I; \
+ 	done
  
  uninstall:
