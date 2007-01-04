@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/04 00:27:28 rillig Exp $
+
+SHA1 (gdl-0.6.1.tar.bz2) = 2fb9adfff6ff5d7760b86cca2887922a10d37eae
+RMD160 (gdl-0.6.1.tar.bz2) = c0f2b8c9705db7aaf4a5d43fd09e11ff5774286c
+Size (gdl-0.6.1.tar.bz2) = 429794 bytes
