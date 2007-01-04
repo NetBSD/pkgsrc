@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2006/11/03 07:01:06 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2007/01/04 02:38:13 rillig Exp $
 
 DISTNAME=	mono-1.1.13.8.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://go-mono.com/sources/mono-1.1/
 
@@ -20,7 +21,7 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 # LP64 problems
 NOT_FOR_PLATFORM+=	*-*-alpha *-*-sparc64 *-*-x86_64
 
-USE_TOOLS+=		bison gmake gtar perl:run pkg-config
+USE_TOOLS+=		bison gmake gtar perl:run pkg-config bash:run
 USE_LIBTOOL=		yes
 EXTRACT_USING=		gtar
 
@@ -31,6 +32,7 @@ CONFIGURE_ARGS+=	--with-preview=yes
 CONFIGURE_ARGS+=	--with-libgdiplus=installed
 
 MAKE_FLAGS+=		PERL=${PERL5:Q}
+MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 UNLIMIT_RESOURCES=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 UNLIMIT_RESOURCES+=	memorysize
@@ -49,6 +51,9 @@ REPLACE_PERL+=	mono/benchmark/test-driver
 REPLACE_PERL+=	mono/cil/make-opcodes-def.pl
 REPLACE_PERL+=	mono/metadata/make-bundle.pl
 REPLACE_PERL+=	mono/tests/stress-runner.pl
+
+REPLACE_BASH+=	scripts/mono-find-provides.in
+REPLACE_BASH+=	scripts/mono-find-requires.in
 
 EGDIR=		${PREFIX}/share/examples/mono
 PKG_SYSCONFSUBDIR=	mono
