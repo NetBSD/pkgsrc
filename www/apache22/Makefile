@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/09 00:51:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/04 13:22:06 obache Exp $
 
 .include "Makefile.common"
 
@@ -91,7 +91,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 # LDAP support
 .if !empty(PKG_BUILD_OPTIONS.apr:Mldap)
-DFLT_APACHE_MODULES+=	ldap auth_ldap
+DFLT_APACHE_MODULES+=	ldap authnz_ldap
 .endif
 
 # APACHE_MODULES are the modules that are linked statically into the
