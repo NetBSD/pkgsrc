@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.32 2007/01/04 00:15:23 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.33 2007/01/04 00:31:47 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -51,3 +51,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/Xft2 to 2.1.7nb3 [wiz 2007-01-03]
 	Updated devel/pango to 1.14.9nb1 [wiz 2007-01-03]
 	Updated devel/allegro to 4.2.0nb3 [wiz 2007-01-04]
+	Added devel/gdl version 0.6.1 [rillig 2007-01-04]
