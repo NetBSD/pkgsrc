@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.7 2007/01/04 17:06:36 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.8 2007/01/05 15:15:42 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -17,3 +17,5 @@ Pullup ticket 1973 - requested by tv
 portability fix for png
 Pullup ticket 1971 - requested by rillig
 configure bugfix for libextractor
+Pullup ticket 1970 - requested by rillig
+install fix for qcad-partlibrary
