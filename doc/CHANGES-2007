@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.41 2007/01/04 22:43:03 adam Exp $
+$NetBSD: CHANGES-2007,v 1.42 2007/01/05 13:26:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/glibmm to 2.12.4 [adam 2007-01-04]
 	Updated math/glpk to 4.13 [adam 2007-01-04]
 	Updated x11/gtkmm to 2.10.6 [adam 2007-01-04]
+	Updated sysutils/amanda-server to 2.4.4p4nb5 [obache 2007-01-04]
