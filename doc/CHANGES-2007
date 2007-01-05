@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.45 2007/01/05 16:58:22 abs Exp $
+$NetBSD: CHANGES-2007,v 1.46 2007/01/05 17:00:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -70,3 +70,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/classpath to 0.93 [obache 2007-01-05]
 	Updated lang/classpath-gui to 0.93 [obache 2007-01-05]
 	Updated wm/jwm to 1.8 [abs 2007-01-04]
+	Updated wm/flwm to 1.02 [abs 2007-01-04]
