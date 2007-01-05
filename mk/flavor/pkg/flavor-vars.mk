@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.2 2006/10/06 14:51:36 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.3 2007/01/05 17:54:02 rillig Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -43,13 +43,7 @@ MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
 # The binary pkg_install tools all need to consistently to refer to the
 # correct package database directory.
 #
-.if ${PKGTOOLS_VERSION} < 20030823
-PKGTOOLS_ENV?=		PKG_DBDIR=${_PKG_DBDIR}
-PKGTOOLS_ARGS?=		# empty
-.else
-PKGTOOLS_ENV?=		# empty
 PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
-.endif
 
 # Views are rooted in ${LOCALBASE}, all packages are depoted in
 # ${DEPOTBASE}, and the package database directory for the default view
@@ -57,12 +51,12 @@ PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
 #
 PKG_VIEW_ARGS?=	-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
 
-PKG_ADD?=	${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
-PKG_ADMIN?=	${SETENV} ${PKGTOOLS_ENV} ${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
-PKG_CREATE?=	${SETENV} ${PKGTOOLS_ENV} ${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
-PKG_DELETE?=	${SETENV} ${PKGTOOLS_ENV} ${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
-PKG_INFO?=	${SETENV} ${PKGTOOLS_ENV} ${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
-PKG_VIEW?=	${SETENV} ${PKGTOOLS_ENV} ${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
+PKG_ADD?=	${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
+PKG_ADMIN?=	${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
+PKG_CREATE?=	${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
+PKG_DELETE?=	${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
+PKG_INFO?=	${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
+PKG_VIEW?=	${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=	${LINKFARM_CMD}
 
 # "${_PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
