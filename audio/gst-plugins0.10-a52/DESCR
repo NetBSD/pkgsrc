@@ -1,0 +1,12 @@
+GStreamer is a library that allows the construction of graphs of
+media-handling components, ranging from simple Ogg/Vorbis playback to
+complex audio (mixing) and video (non-linear editing) processing. 
+
+Applications can take advantage of advances in codec and filter technology
+transparently.  Developers can add new codecs and filters by writing a
+simple plugin with a clean, generic interface. 
+
+GStreamer is released under the LGPL.
+
+This package is part of the 'ugly' plugins for GStreamer.  It provides the
+a52dec plugin, which allows playback of A/52 audio streams.
