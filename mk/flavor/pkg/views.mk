@@ -1,4 +1,4 @@
-# $NetBSD: views.mk,v 1.4 2006/06/08 08:01:53 rillig Exp $
+# $NetBSD: views.mk,v 1.5 2007/01/05 18:52:08 rillig Exp $
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -38,8 +38,7 @@ build-views: su-target
 su-build-views:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MKDIR} ${LOCALBASE};						\
-	for v in "" ${PKGVIEWS}; do					\
-		${TEST} -n "$$v" || continue;				\
+	for v in ${PKGVIEWS}; do					\
 		case "$$v" in						\
 		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
