@@ -1,16 +1,16 @@
-$NetBSD: patch-ak,v 1.6 2006/07/07 18:28:48 drochner Exp $
+$NetBSD: patch-ak,v 1.7 2007/01/05 14:54:29 drochner Exp $
 
---- configure.orig	2006-07-05 03:06:45.000000000 +0200
+--- configure.orig	2006-12-17 00:37:35.000000000 +0100
 +++ configure
-@@ -25819,6 +25819,7 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -26336,6 +26336,7 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
    ac_cv_lib_Xinerama_XineramaQueryExtension=yes
 +  X_EXTRA_LIBS="-lXinerama $X_EXTRA_LIBS"
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -26026,14 +26027,14 @@ case $host in
+@@ -26607,14 +26608,14 @@ case $host in
      LDFLAGS="$LDFLAGS -L/usr/local/lib"
      ;;
    *)
