@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.800 2007/01/03 14:04:10 adrianp Exp $
+# $NetBSD: Makefile,v 1.801 2007/01/05 19:37:32 kristerw Exp $
 #
 
 COMMENT=	Development utilities
@@ -161,6 +161,7 @@ SUBDIR+=	gcvs
 SUBDIR+=	gdb
 SUBDIR+=	gdb6
 SUBDIR+=	gdbada
+SUBDIR+=	gdl
 SUBDIR+=	generate
 SUBDIR+=	gentle
 SUBDIR+=	gettext
@@ -178,6 +179,7 @@ SUBDIR+=	glibmm
 SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
+SUBDIR+=	gnome-build
 SUBDIR+=	gnome-common
 SUBDIR+=	gnome2-libole2
 SUBDIR+=	gnustep-base
