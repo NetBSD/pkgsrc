@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2006/10/02 21:05:44 rillig Exp $
+# $NetBSD: Makefile.common,v 1.24 2007/01/05 12:47:27 obache Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -6,7 +6,7 @@
 VERS=			2.4.4p4
 DISTNAME?=		amanda-${VERS}
 CATEGORIES=		sysutils
-MASTER_SITES?=		http://download.sourceforge.net/amanda/
+MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.amanda.org/
