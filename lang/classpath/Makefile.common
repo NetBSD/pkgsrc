@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.9 2006/10/04 21:46:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2007/01/05 16:48:58 obache Exp $
 
-DISTNAME=		classpath-0.91
+DISTNAME=		classpath-0.93
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/classpath/
 
@@ -16,4 +16,9 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
+# XXX this must be fixed as an optional build flag
+CONFIGURE_ARGS+=	--disable-gconf-peer
+CONFIGURE_ARGS+=	--disable-plugin
 CONFIGURE_ARGS+=	--with-jikes
+
+.include "../../devel/glib2/buildlink3.mk"

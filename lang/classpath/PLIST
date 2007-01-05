@@ -1,4 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2006/05/16 13:27:33 tonio Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/01/05 16:48:58 obache Exp $
+bin/gappletviewer
+bin/gjar
+bin/gjarsigner
+bin/gkeytool
+bin/gnative2ascii
+bin/gorbd
+bin/grmid
+bin/grmiregistry
+bin/gserialver
+bin/gtnameserv
 include/jawt.h
 include/jawt_md.h
 include/jni.h
@@ -14,7 +24,7 @@ lib/classpath/libjavanio.la
 lib/classpath/libjavautil.la
 lib/logging.properties
 lib/security/classpath.security
-share/classpath/README
+share/classpath/examples/Makefile.java2d
 share/classpath/examples/Makefile.jawt
 share/classpath/examples/README
 share/classpath/examples/examples.zip
@@ -56,14 +66,17 @@ share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_GameManagerImpl_
 share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_GameManager_Stub.java
 share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_PlayerImpl_Tie.java
 share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_Player_Stub.java
+share/classpath/examples/gnu/classpath/examples/awt/AicasGraphicsBenchmark.java
 share/classpath/examples/gnu/classpath/examples/awt/AnimationApplet.java
 share/classpath/examples/gnu/classpath/examples/awt/Demo.java
 share/classpath/examples/gnu/classpath/examples/datatransfer/Demo.java
 share/classpath/examples/gnu/classpath/examples/html/Demo.java
+share/classpath/examples/gnu/classpath/examples/icons/back.png
 share/classpath/examples/gnu/classpath/examples/icons/badge.png
 share/classpath/examples/gnu/classpath/examples/icons/big-fullscreen.png
 share/classpath/examples/gnu/classpath/examples/icons/big-home.png
 share/classpath/examples/gnu/classpath/examples/icons/big-warning.png
+share/classpath/examples/gnu/classpath/examples/icons/reload.png
 share/classpath/examples/gnu/classpath/examples/icons/stock-copy.png
 share/classpath/examples/gnu/classpath/examples/icons/stock-cut.png
 share/classpath/examples/gnu/classpath/examples/icons/stock-go-back.png
@@ -77,10 +90,26 @@ share/classpath/examples/gnu/classpath/examples/icons/stock-quit.png
 share/classpath/examples/gnu/classpath/examples/icons/stock-save-as.png
 share/classpath/examples/gnu/classpath/examples/icons/stock-save.png
 share/classpath/examples/gnu/classpath/examples/icons/stock-spell-check.png
+share/classpath/examples/gnu/classpath/examples/java2d/J2dBenchmark.java
+share/classpath/examples/gnu/classpath/examples/java2d/J2dBenchmarkGUI.java
+share/classpath/examples/gnu/classpath/examples/java2d/JNIOverhead.java
+share/classpath/examples/gnu/classpath/examples/java2d/bench.c
+share/classpath/examples/gnu/classpath/examples/java2d/bench.h
 share/classpath/examples/gnu/classpath/examples/jawt/DemoJAWT.c
 share/classpath/examples/gnu/classpath/examples/jawt/DemoJAWT.java
+share/classpath/examples/gnu/classpath/examples/management/TestBeans.java
+share/classpath/examples/gnu/classpath/examples/management/TestClassLoading.java
+share/classpath/examples/gnu/classpath/examples/management/TestCompilation.java
+share/classpath/examples/gnu/classpath/examples/management/TestGarbageCollector.java
+share/classpath/examples/gnu/classpath/examples/management/TestMemory.java
+share/classpath/examples/gnu/classpath/examples/management/TestMemoryManager.java
+share/classpath/examples/gnu/classpath/examples/management/TestMemoryPool.java
+share/classpath/examples/gnu/classpath/examples/management/TestOS.java
+share/classpath/examples/gnu/classpath/examples/management/TestRuntime.java
+share/classpath/examples/gnu/classpath/examples/management/TestThread.java
 share/classpath/examples/gnu/classpath/examples/midi/Demo.java
 share/classpath/examples/gnu/classpath/examples/print/Demo.java
+share/classpath/examples/gnu/classpath/examples/swing/BrowserEditorKit.java
 share/classpath/examples/gnu/classpath/examples/swing/ButtonDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/ComboBoxDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/Demo.java
@@ -88,6 +117,7 @@ share/classpath/examples/gnu/classpath/examples/swing/DemoDesktop.java
 share/classpath/examples/gnu/classpath/examples/swing/DemoFactory.java
 share/classpath/examples/gnu/classpath/examples/swing/DocumentFilterDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/FileChooserDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/HtmlDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/ListDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/MetalThemeEditor.java
 share/classpath/examples/gnu/classpath/examples/swing/MiniDemo.java
@@ -101,12 +131,23 @@ share/classpath/examples/gnu/classpath/examples/swing/TableDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/TextAreaDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/TextFieldDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/TreeDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/forms.html
+share/classpath/examples/gnu/classpath/examples/swing/frame1.html
+share/classpath/examples/gnu/classpath/examples/swing/frame2.html
+share/classpath/examples/gnu/classpath/examples/swing/frame3.html
+share/classpath/examples/gnu/classpath/examples/swing/frame4.html
+share/classpath/examples/gnu/classpath/examples/swing/frames.html
+share/classpath/examples/gnu/classpath/examples/swing/tables.html
+share/classpath/examples/gnu/classpath/examples/swing/textstyles.html
+share/classpath/examples/gnu/classpath/examples/swing/welcome.html
 share/classpath/glibj.zip
 share/classpath/tools.zip
 @dirrm share/classpath/examples/gnu/classpath/examples/swing
 @dirrm share/classpath/examples/gnu/classpath/examples/print
 @dirrm share/classpath/examples/gnu/classpath/examples/midi
+@dirrm share/classpath/examples/gnu/classpath/examples/management
 @dirrm share/classpath/examples/gnu/classpath/examples/jawt
+@dirrm share/classpath/examples/gnu/classpath/examples/java2d
 @dirrm share/classpath/examples/gnu/classpath/examples/icons
 @dirrm share/classpath/examples/gnu/classpath/examples/html
 @dirrm share/classpath/examples/gnu/classpath/examples/datatransfer
