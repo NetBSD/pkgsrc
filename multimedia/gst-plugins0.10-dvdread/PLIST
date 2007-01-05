@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/05 10:50:59 drochner Exp $
+lib/gstreamer-0.10/libgstdvdread.la
