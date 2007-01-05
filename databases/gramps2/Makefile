@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/05 15:46:12 drochner Exp $
 #
 
 DISTNAME=		gramps-2.0.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -16,6 +16,7 @@ DEPENDS+=	yelp>=2.2:../../misc/yelp
 BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
+USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -39,4 +40,5 @@ GCONF2_SCHEMAS+=	gramps.schemas
 .include "../../lang/python/application.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf2/schemas.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

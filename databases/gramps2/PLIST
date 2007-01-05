@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/02 16:41:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/05 15:46:12 drochner Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -679,6 +679,8 @@ share/omf/gramps/gramps-manual-sk.omf
 @dirrm share/omf/gramps
 @comment in scrollkeeper: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
+@comment in xdg-dirs: @dirrm share/mime-info
+@comment in gnome-icon-theme: @dirrm share/icons/gnome/48x48/mimetypes
 @dirrm share/gramps/plugins
 @dirrm share/gramps/gnome/help/gramps/sk/figures
 @dirrm share/gramps/gnome/help/gramps/sk
@@ -696,3 +698,5 @@ share/omf/gramps/gramps-manual-sk.omf
 @dirrm share/gramps/data
 @dirrm share/gramps
 @comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/application-registry
