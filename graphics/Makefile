@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2006/12/08 18:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.442 2007/01/05 11:02:55 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -132,6 +132,7 @@ SUBDIR+=	graphviz
 SUBDIR+=	gri
 SUBDIR+=	gst-plugins0.10-cairo
 SUBDIR+=	gst-plugins0.8-opengl
+SUBDIR+=	gst-plugins0.10-png
 SUBDIR+=	gst-plugins0.8-png
 SUBDIR+=	gthumb
 SUBDIR+=	gtkam
