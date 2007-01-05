@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/11/05 14:32:08 joerg Exp $
+# $NetBSD: Makefile,v 1.69 2007/01/05 19:16:39 rillig Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	3
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.ibiblio.org/mc/
 COMMENT=	User-friendly file manager and visual shell
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		pkg-config unzip:run zip:run
 GNU_CONFIGURE=		YES
@@ -30,7 +31,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.cons.saver
 
 # remove dir if no extensions were installed there
 post-install:
-	@${RMDIR} ${DESTDIR}${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
+	rmdir ${DESTDIR}${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
 
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS+=	--without-ext2undel
