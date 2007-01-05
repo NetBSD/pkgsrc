@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.44 2007/01/05 16:51:58 obache Exp $
+$NetBSD: CHANGES-2007,v 1.45 2007/01/05 16:58:22 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0rc16 [ghen 2007-01-05]
 	Updated lang/classpath to 0.93 [obache 2007-01-05]
 	Updated lang/classpath-gui to 0.93 [obache 2007-01-05]
+	Updated wm/jwm to 1.8 [abs 2007-01-04]
