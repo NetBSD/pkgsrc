@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/02 18:45:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/05 15:44:56 drochner Exp $
 include/libkipi/batchprogressdialog.h
 include/libkipi/imagecollection.h
 include/libkipi/imagecollectionselector.h
@@ -15,11 +15,13 @@ include/libkipi/version.h
 lib/libkipi.la
 lib/pkgconfig/libkipi.pc
 share/kde/apps/kipi/data/banner_left.png
+share/kde/apps/kipi/data/kipi-plugins_logo.png
 share/kde/icons/hicolor/16x16/apps/kipi.png
 share/kde/icons/hicolor/22x22/apps/kipi.png
 share/kde/icons/hicolor/32x32/apps/kipi.png
 share/kde/icons/hicolor/48x48/apps/kipi.png
 share/kde/servicetypes/kipiplugin.desktop
+share/locale/ar/LC_MESSAGES/libkipi.mo
 share/locale/br/LC_MESSAGES/libkipi.mo
 share/locale/ca/LC_MESSAGES/libkipi.mo
 share/locale/cs/LC_MESSAGES/libkipi.mo
@@ -45,12 +47,15 @@ share/locale/pa/LC_MESSAGES/libkipi.mo
 share/locale/pl/LC_MESSAGES/libkipi.mo
 share/locale/pt/LC_MESSAGES/libkipi.mo
 share/locale/pt_BR/LC_MESSAGES/libkipi.mo
+share/locale/ru/LC_MESSAGES/libkipi.mo
 share/locale/rw/LC_MESSAGES/libkipi.mo
+share/locale/sk/LC_MESSAGES/libkipi.mo
 share/locale/sl/LC_MESSAGES/libkipi.mo
 share/locale/sr/LC_MESSAGES/libkipi.mo
 share/locale/sr@Latn/LC_MESSAGES/libkipi.mo
 share/locale/ta/LC_MESSAGES/libkipi.mo
 share/locale/tr/LC_MESSAGES/libkipi.mo
+share/locale/uk/LC_MESSAGES/libkipi.mo
 share/locale/zh_CN/LC_MESSAGES/libkipi.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
