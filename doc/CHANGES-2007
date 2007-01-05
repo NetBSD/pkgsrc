@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.43 2007/01/05 16:39:55 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.44 2007/01/05 16:51:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -67,3 +67,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtkmm to 2.10.6 [adam 2007-01-04]
 	Updated sysutils/amanda-server to 2.4.4p4nb5 [obache 2007-01-04]
 	Updated mail/dovecot to 1.0rc16 [ghen 2007-01-05]
+	Updated lang/classpath to 0.93 [obache 2007-01-05]
+	Updated lang/classpath-gui to 0.93 [obache 2007-01-05]
