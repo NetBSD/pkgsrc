@@ -1,20 +1,23 @@
-@comment $NetBSD: PLIST,v 1.11 2006/06/13 16:51:40 ghen Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/05 16:39:28 ghen Exp $
 lib/dovecot/imap/lib01_acl_plugin.so
-lib/dovecot/imap/lib01_convert_plugin.so
-lib/dovecot/imap/lib01_quota_plugin.so
-lib/dovecot/imap/lib01_zlib_plugin.la
-lib/dovecot/imap/lib02_imap_quota_plugin.la
-lib/dovecot/imap/lib02_trash_plugin.so
+lib/dovecot/imap/lib02_lazy_expunge_plugin.so
+lib/dovecot/imap/lib10_quota_plugin.so
+lib/dovecot/imap/lib11_imap_quota_plugin.la
+lib/dovecot/imap/lib11_trash_plugin.so
+lib/dovecot/imap/lib20_convert_plugin.so
+lib/dovecot/imap/lib20_zlib_plugin.la
 lib/dovecot/lda/lib01_acl_plugin.so
-lib/dovecot/lda/lib01_convert_plugin.so
-lib/dovecot/lda/lib01_quota_plugin.so
-lib/dovecot/lda/lib02_trash_plugin.so
+lib/dovecot/lda/lib10_quota_plugin.so
+lib/dovecot/lda/lib11_trash_plugin.so
+lib/dovecot/lda/lib20_convert_plugin.so
 lib/dovecot/lib01_acl_plugin.la
-lib/dovecot/lib01_convert_plugin.la
-lib/dovecot/lib01_quota_plugin.la
-lib/dovecot/lib02_trash_plugin.la
-lib/dovecot/pop3/lib01_convert_plugin.so
-lib/dovecot/pop3/lib01_quota_plugin.so
+lib/dovecot/lib02_lazy_expunge_plugin.la
+lib/dovecot/lib10_quota_plugin.la
+lib/dovecot/lib11_trash_plugin.la
+lib/dovecot/lib20_convert_plugin.la
+lib/dovecot/pop3/lib02_lazy_expunge_plugin.so
+lib/dovecot/pop3/lib10_quota_plugin.so
+lib/dovecot/pop3/lib20_convert_plugin.so
 libexec/dovecot/checkpassword-reply
 libexec/dovecot/deliver
 libexec/dovecot/dict
