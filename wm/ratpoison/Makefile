@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2006/04/08 22:03:08 tonio Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/06 18:44:46 rillig Exp $
 #
 
-DISTNAME=	ratpoison-1.4.0
+DISTNAME=	ratpoison-1.4.1
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	wm
 MASTER_SITES=	http://savannah.nongnu.org/download/ratpoison/
@@ -12,7 +12,7 @@ COMMENT=	Simple window manager with no fat library dependencies
 
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	contrib/rpws contrib/clickframe.pl
