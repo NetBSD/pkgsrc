@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.1 2005/10/27 01:08:06 rillig Exp $
+$NetBSD: patch-am,v 1.2 2007/01/06 22:07:43 wiz Exp $
 
 To understand recursion, you first have to understand recursion.
 
---- prog/aspell.cpp.orig	2005-06-19 13:58:59.000000000 +0200
-+++ prog/aspell.cpp	2005-10-27 02:53:09.018812500 +0200
-@@ -1878,7 +1878,7 @@ struct SML_Parms {
+--- prog/aspell.cpp.orig	2006-12-19 10:51:08.000000000 +0000
++++ prog/aspell.cpp
+@@ -1882,7 +1882,7 @@ struct SML_Parms {
    typedef SML_WordEntry Value;
    typedef const char * Key;
    static const bool is_multi = false;
@@ -13,7 +13,7 @@ To understand recursion, you first have to understand recursion.
    bool equal(Key x, Key y) {return strcmp(x,y) == 0;}
    Key key(const Value & v) {return v.word;}
  };
-@@ -2029,7 +2029,7 @@ struct CML_Parms {
+@@ -2033,7 +2033,7 @@ struct CML_Parms {
    typedef CML_Entry Value;
    typedef const char * Key;
    static const bool is_multi = true;

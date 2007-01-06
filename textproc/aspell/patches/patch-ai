@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.1 2005/10/27 00:18:51 rillig Exp $
+$NetBSD: patch-ai,v 1.2 2007/01/06 22:07:43 wiz Exp $
 
 The SunPro compiler does not like static inline template<>s.
 
---- common/lsort.hpp.orig	2005-10-27 01:57:11.515745500 +0200
-+++ common/lsort.hpp	2005-10-27 01:57:40.246031300 +0200
+--- common/lsort.hpp.orig	2006-11-18 08:42:24.000000000 +0000
++++ common/lsort.hpp
 @@ -44,7 +44,7 @@ struct Less {
  
  
@@ -38,7 +38,7 @@ The SunPro compiler does not like static inline template<>s.
  {
    return sort(x, y, Less<N>(), Next<N>());
  }
-@@ -133,20 +133,20 @@ N * sort(N * first, const LT & lt, const
+@@ -135,20 +135,20 @@ N * sort(N * first, const LT & lt, const
  }
  
  template <class N, class LT>
