@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5830 2007/01/06 15:25:27 wiz Exp $
+$NetBSD: TODO,v 1.5831 2007/01/06 15:28:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -317,6 +317,7 @@ Suggested package updates
 	o browser-bookmarks-menu-0.4
 	o bsdiff-4.3 [pkg/34429]
 	o bwidget-1.7.0
+	o bzip2-1.0.4
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.11.0
