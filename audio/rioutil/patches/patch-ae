@@ -1,19 +1,19 @@
-$NetBSD: patch-ae,v 1.1 2005/12/07 17:35:37 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2007/01/06 04:21:24 schmonz Exp $
 
---- include/rio_internal.h.orig	2005-12-07 17:15:27.000000000 +0000
-+++ include/rio_internal.h
-@@ -567,7 +567,7 @@ unsigned int crc32_rio (unsigned char *,
+--- include/rioi.h.orig	2006-08-04 18:40:49.000000000 -0400
++++ include/rioi.h
+@@ -190,7 +190,7 @@ Group ID                0x7c   ????     
+ #define bswap_32(x) NXSwapLong(x)
+ #define bswap_16(x) NXSwapShort(x)
  
- #if defined (__FreeBSD__) || defined(__MacOSX__)
- u_int32_t bswap_32(u_int32_t);
 -#elif defined (__NetBSD__)
 +#elif defined (__NetBSD__) || defined(__DragonFly__)
+ 
+ #define bswap_64(x) bswap64(x)
  #define bswap_32(x) bswap32(x)
- #endif
- 
-@@ -585,6 +585,9 @@ char *basename(char *x);
- 
- #include <machine/endian.h>
+@@ -203,6 +203,9 @@ Group ID                0x7c   ????     
+ #define bswap_32(x) ((x >> 24) | (x & 0x00ff0000) >> 8 | (x & 0x0000ff00) << 8  | (x & 0x000000ff) << 24)
+ #define bswap_16(x) ((x >> 8) | (x & 0x00ff) << 8)
  
 +#elif defined(__DragonFly__)
 +#include <sys/endian.h>
