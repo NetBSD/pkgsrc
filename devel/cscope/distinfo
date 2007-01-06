@@ -1,21 +1,19 @@
-$NetBSD: distinfo,v 1.15 2006/08/24 22:02:02 salo Exp $
+$NetBSD: distinfo,v 1.16 2007/01/06 22:45:49 wiz Exp $
 
-SHA1 (cscope-15.5.tar.gz) = 2e8e66735254328399dc50757b270bcc3e9002d3
-RMD160 (cscope-15.5.tar.gz) = 30623f07043abc90d76b384c407abe5813a8a716
-Size (cscope-15.5.tar.gz) = 243793 bytes
-SHA1 (patch-aa) = 8c477f12c67ed91b7700cf70209c3a2b64309b15
-SHA1 (patch-ab) = 646512ad53b3f3e7dab607df4c6c3d775587a03c
+SHA1 (cscope-15.6.tar.gz) = f5f73dca1f223cf6905c09a7f0e8eb993fa5fd93
+RMD160 (cscope-15.6.tar.gz) = b93238d3c91782d032e028abcfde3c2a7491a9c9
+Size (cscope-15.6.tar.gz) = 391223 bytes
+SHA1 (patch-aa) = 40eb37ab0ffdf18830521031b174332bd544f2cb
 SHA1 (patch-ac) = 40a69af0eb5419de827b490c960803a736040f2c
-SHA1 (patch-ad) = 7e0f25b67f3476ac90b7541595649d6a6bf65aa9
-SHA1 (patch-ae) = bf3ec3c4c8a8d245b7fe4745dd114fa4d253b0b9
-SHA1 (patch-af) = 816774a459cd68c6d24dc5bb436146d3e537fb5f
-SHA1 (patch-ag) = 1a94f675d2878268af7de488a5f81ae08a855715
-SHA1 (patch-ah) = 4e723e863b85f812e1dc993758b22f50554a4222
-SHA1 (patch-ai) = 19cea85408c7ab98b9b3021cd6af07794dae62f9
-SHA1 (patch-aj) = aab596f780ef213c9198f6d03886140ee7d0bcf8
-SHA1 (patch-ak) = eb61acfd3f265656d5495e7b1a1b3cf6071213c6
-SHA1 (patch-al) = 511ea0dd04b4062fac97bfd01c1a71de44e1c452
+SHA1 (patch-ad) = 83cfd932c20c5860664ebb40ca0d0945da3f2953
+SHA1 (patch-ae) = d02ded0d2fb998450cc725b717f9d60a28191835
+SHA1 (patch-af) = 0cbf2e00612765221b62e57450f41bc69e760687
+SHA1 (patch-ag) = 332297168be35b8448a8f4ee7750698bfebcb726
+SHA1 (patch-ah) = 90c3caf336edde19b56b751bac528cf48e0b2e60
+SHA1 (patch-ai) = 17b4d1be4303b858916f2d01446df4e5a142d08f
+SHA1 (patch-aj) = 57a2a0060672ee145f0f55fefd72673cbfbf6b25
+SHA1 (patch-ak) = 74d5395066642792ec3d5ee611b21a7075757ab9
+SHA1 (patch-al) = 76a3a65fe80c7acf7cdf7f78bd4959f102ffdc72
 SHA1 (patch-am) = 2c08e2ccf22b3a3852c52d5177c7a08d206c1cdf
 SHA1 (patch-an) = cef8d1d31a417125c516df403dce228ac92a307c
 SHA1 (patch-ao) = 05ae43171f04320dc1a213510b0906d3387cf35f
-SHA1 (patch-ap) = 7e1af46170ac5304a784d2719b14aae01bd4a659
