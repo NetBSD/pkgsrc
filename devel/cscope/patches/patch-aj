@@ -1,25 +1,7 @@
-$NetBSD: patch-aj,v 1.3 2006/08/24 22:02:02 salo Exp $
+$NetBSD: patch-aj,v 1.4 2007/01/06 22:45:49 wiz Exp $
 
---- src/edit.c.orig	2001-07-18 15:49:01.000000000 +0200
-+++ src/edit.c	2006-08-24 23:39:09.000000000 +0200
-@@ -60,7 +60,7 @@ editref(int i)
- 	seekline(i + topline);
- 	
- 	/* get the file name and line number */
--	if (fscanf(refsfound, "%s%*s%s", file, linenum) == 2) {
-+	if (fscanf(refsfound, "%" PATHLEN_STR "s%*s%" NUMLEN_STR "s", file, linenum) == 2) {
- 		edit(file, linenum);	/* edit it */
- 	}
- 	seekline(topline);	/* restore the line pointer */
-@@ -83,7 +83,7 @@ editall(void)
- 	seekline(1);
- 	
- 	/* get each file name and line number */
--	while (fscanf(refsfound, "%s%*s%s%*[^\n]", file, linenum) == 2) {
-+	while (fscanf(refsfound, "%" PATHLEN_STR "s%*s%" NUMLEN_STR "s%*[^\n]", file, linenum) == 2) {
- 		edit(file, linenum);	/* edit it */
- 		if (editallprompt == YES) {
- 			addstr("Type ^D to stop editing all lines, or any other character to continue: ");
+--- src/edit.c.orig	2006-09-30 10:13:00.000000000 +0200
++++ src/edit.c
 @@ -105,9 +105,9 @@ edit(char *file, char *linenum)
  	char	*s;
  
