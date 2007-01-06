@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/01 15:38:15 mlelstv Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/06 22:26:55 smb Exp $
 #
 
 DISTNAME=		memtest86+-1.65
@@ -11,7 +11,7 @@ MAINTAINER=		smb@NetBSD.org
 HOMEPAGE=		http://www.memtest.org/
 COMMENT=		Thorough, stand alone memory test for x86 arch
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 NetBSD-*-x86_64 Linux-*-x86_64
 
 USE_TOOLS+=		gmake
 
