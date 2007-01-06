@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2006/11/03 19:22:55 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/06 23:45:42 wiz Exp $
 
-DISTNAME=	pcre-6.7
+DISTNAME=	pcre-7.0
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/	\
 		ftp://pcre.sourceforge.net/pub/pcre/
@@ -18,8 +18,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-utf8
 
-PKGCONFIG_OVERRIDE=	libpcre.pc.in
+PKGCONFIG_OVERRIDE=	libpcre.pc.in libpcrecpp.pc.in
 
+# needs a stacksize of 4mb, default is 2mb
 TEST_TARGET=		test
 
 # Avoid an ICE in gcc2 on sparc64
