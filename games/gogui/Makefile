@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/10/01 14:28:37 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/06 17:44:52 rillig Exp $
 #
 
-DISTNAME=		gogui-0.9.1
+DISTNAME=		gogui-0.9.3
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gogui/}
 EXTRACT_SUFX=		.zip
