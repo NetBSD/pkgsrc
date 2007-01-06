@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2006/12/05 09:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/01/06 23:30:41 wiz Exp $
 
-DISTNAME=	libidn-0.6.9
+DISTNAME=	libidn-0.6.10
 CATEGORIES=	devel
 MASTER_SITES=	ftp://alpha.gnu.org/pub/gnu/libidn/ \
 		http://josefsson.org/libidn/releases/
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo pkg-config perl:build
 TEXINFO_REQD=		4.1
 GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
 TEST_TARGET=		check
