@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2006/12/06 10:17:03 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2007/01/06 15:13:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2+
-PKG_SUPPORTED_OPTIONS=	debug
+PKG_SUPPORTED_OPTIONS=	cups debug
 PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
 PKG_OPTIONS_GROUP.gdk-target=	x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
@@ -10,6 +10,14 @@ PKG_OPTIONS_GROUP.gdk-target+=	quartz
 PKG_SUGGESTED_OPTIONS=		x11
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcups)
+.include "../../print/cups/buildlink3.mk"
+CONFIGURE_ENV+=		ENABLE_CUPS=yes
+PLIST_SUBST+=		CUPS=
+.else
+PLIST_SUBST+=		CUPS="@comment "
+.endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug=yes
