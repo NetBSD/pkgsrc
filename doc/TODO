@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5828 2007/01/06 02:13:27 wiz Exp $
+$NetBSD: TODO,v 1.5829 2007/01/06 04:21:36 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -997,7 +997,6 @@ Suggested package updates
 	o resize_image-0.7
 	o rhythmbox-0.9.7
 	o rio500-0.8.1
-	o rioutil-1.5.0 [schmonz]
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
 	o root-5.04.00
