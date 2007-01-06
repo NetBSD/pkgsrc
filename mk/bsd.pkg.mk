@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1903 2007/01/02 23:34:40 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1904 2007/01/06 19:53:01 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -371,6 +371,7 @@ PHASE_MSG?=		${ECHO_MSG} ${_PKGSRC_IN:Q}\>
 STEP_MSG?=		${ECHO_MSG} "=>"
 WARNING_MSG?=		${ECHO_MSG} 1>&2 "WARNING:"
 ERROR_MSG?=		${ECHO_MSG} 1>&2 "ERROR:"
+FAIL_MSG?=		${FAIL} ${ERROR_MSG}
 
 WARNING_CAT?=		${SED} -e "s|^|WARNING: |" 1>&2
 ERROR_CAT?=		${SED} -e "s|^|ERROR: |" 1>&2
@@ -378,6 +379,10 @@ ERROR_CAT?=		${SED} -e "s|^|ERROR: |" 1>&2
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
 DO_NADA?=		${TRUE}
+
+# the FAIL command executes its arguments and then exits with a non-zero
+# status.
+FAIL?=			${SH} ${PKGSRCDIR}/mk/scripts/fail
 
 #
 # Config file related settings - see doc/pkgsrc.txt
