@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5843 2007/01/06 23:31:01 wiz Exp $
+$NetBSD: TODO,v 1.5844 2007/01/06 23:48:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -852,7 +852,6 @@ Suggested package updates
 	o parrot-0.4.7
 	o pcal-4.8
 	o pciutils-2.2.0
-	o pcre-7.0
 	o pcre-ocaml-5.11.1
 	o pdmenu-1.2.87
 	o pear-Date-1.4.6
