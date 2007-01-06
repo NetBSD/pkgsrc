@@ -1,22 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2006/08/24 22:02:02 salo Exp $
+$NetBSD: patch-ag,v 1.6 2007/01/06 22:45:49 wiz Exp $
 
---- src/command.c.orig	2002-07-29 14:37:49.000000000 +0200
-+++ src/command.c	2006-08-24 23:31:53.000000000 +0200
-@@ -707,7 +707,7 @@ changestring(void)
- 	(void) fprintf(script, "ed - <<\\!\n");
- 	*oldfile = '\0';
- 	seekline(1);
--	for (i = 0; fscanf(refsfound, "%s%*s%s%*[^\n]", newfile, linenum) == 2;
-+	for (i = 0; fscanf(refsfound, "%" PATHLEN_STR "s%*s%" NUMLEN_STR "s%*[^\n]", newfile, linenum) == 2;
- 	    ++i) {
- 		/* see if the line is to be changed */
- 		if (change[i] == YES) {
-@@ -718,7 +718,7 @@ changestring(void)
+--- src/command.c.orig	2006-09-30 10:13:00.000000000 +0200
++++ src/command.c
+@@ -739,7 +739,7 @@ changestring(void)
  				
- 				/* make sure it can be changed */
- 				if (access(newfile, WRITE) != 0) {
--					(void) sprintf(msg, "Cannot write to file %s", newfile);
-+					(void) snprintf(msg, sizeof(msg), "Cannot write to file %s", newfile);
- 					postmsg(msg);
- 					anymarked = NO;
- 					break;
+ 		/* make sure it can be changed */
+ 		if (access(newfile, WRITE) != 0) {
+-		    sprintf(msg, "Cannot write to file %s", newfile);
++		    snprintf(msg, sizeof(msg), "Cannot write to file %s", newfile);
+ 		    postmsg(msg);
+ 		    anymarked = NO;
+ 		    break;
