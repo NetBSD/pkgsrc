@@ -1,22 +1,30 @@
-# $NetBSD: check-perms.mk,v 1.5 2006/11/17 01:05:47 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.6 2007/01/06 14:11:16 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
 #
 # User-settable variables:
 #
-# CHECK_PERMS: YesNo (default: yes for PKG_DEVELOPER, no otherwise)
+# CHECK_PERMS
 #	Specifies whether the permissions check should be run at all.
+#
+#	Possible values: yes, no.
+#
+#	Default value: yes for PKG_DEVELOPER, no otherwise.
 #
 # Package-settable variables:
 #
-# CHECK_PERMS_SKIP: List of PathMask (default: empty)
-#	A list of patterns (like man/*) that should be excluded from the
-#	check. Note that a * in a pattern also matches a slash in a
-#	pathname.
+# CHECK_PERMS_SKIP
+#	A list of shell patterns (like man/*) that should be excluded
+#	from the check. Note that a * in a pattern also matches a slash
+#	in a pathname.
 #
-# CHECK_PERMS_AUTOFIX: YesNo
+#	Default value: empty.
+#
+# CHECK_PERMS_AUTOFIX
 #	If set to yes, any unusual permissions are fixed automatically.
+#
+#	Possible values: yes, no.
 #
 
 .if defined(PKG_DEVELOPER)
