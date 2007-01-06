@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/02 20:17:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/01/06 10:04:32 drochner Exp $
 lib/kde3/digikamimageplugin_adjustcurves.la
 lib/kde3/digikamimageplugin_adjustlevels.la
 lib/kde3/digikamimageplugin_antivignetting.la
@@ -1429,13 +1429,13 @@ share/locale/zh_CN/LC_MESSAGES/digikamimageplugins.mo
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/digikamimageplugins/data
 @dirrm share/kde/apps/digikamimageplugins
-@dirrm share/kde/apps/digikam/icons/hicolor/scalable/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/64x64/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/128x128/actions
-@dirrm share/kde/apps/digikam
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/scalable/actions
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/64x64/actions
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/48x48/actions
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/22x22/actions
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/16x16/actions
+@comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/128x128/actions
+@comment in digikam: dirrm share/kde/apps/digikam
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm lib/kde3
