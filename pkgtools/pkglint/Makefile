@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2006/12/27 15:52:16 joerg Exp $
+# $NetBSD: Makefile,v 1.356 2007/01/06 13:31:26 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.74
@@ -29,7 +29,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 share/pkglint
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
 SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
-SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
+SUBST_FILES.pkglint+=	pkglint.pl
 SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
@@ -49,7 +49,7 @@ SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX}/share/pkglint\|g
 quick-install:
 	${RM} -rf ${WRKSRC}
 	${MKDIR} ${WRKSRC}
-	${MAKE} do-extract subst-pkglint do-install post-install clean
+	${MAKE} do-extract subst-pkglint do-install selftest clean
 
 do-extract:
 	cd ${FILESDIR} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC}
@@ -66,5 +66,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 	${INSTALL_DATA} ${FILESDIR}/makevars.map ${DESTDIR}${PREFIX}/share/pkglint/
 	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${DESTDIR}${PREFIX}/share/pkglint/
+
+selftest: .PHONY
+	${LOCALBASE}/bin/pkglint
 
 .include "../../mk/bsd.pkg.mk"
