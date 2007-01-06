@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/10/24 18:00:05 smb Exp $
+# $NetBSD: options.mk,v 1.2 2007/01/06 22:26:55 smb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.memtestplus
 PKG_SUPPORTED_OPTIONS=	memtesplus-iso memtesplus-serialconsole
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=
 
 .if !empty(PKG_OPTIONS:Mmemtesplus-iso)
 BUILD_TARGET=		memtest.iso
-BUILD_DEPENDS+=		cdrtools>=2.01:../../sysutils/cdrtools
+BUILD_DEPENDS+=		{cdrtools,cdrtools-ossdvd}>=2.01:../../sysutils/cdrtools
 PLIST_SUBST+=		HAVE_ISO=""
 .else
 PLIST_SUBST+=		HAVE_ISO="@comment "
