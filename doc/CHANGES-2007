@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.56 2007/01/06 17:45:26 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.57 2007/01/06 18:21:19 veego Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -81,3 +81,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/drupal to 4.7.5 [adrianp 2007-01-06]
 	Updated audio/rplay to 3.3.2nb4 [veego 2007-01-06]
 	Updated games/gogui to 0.9.3 [rillig 2007-01-06]
+	Updated net/lopster to 1.2.2nb2 [veego 2007-01-06]
