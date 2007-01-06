@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.66 2007/01/06 23:31:01 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.67 2007/01/06 23:48:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -94,3 +94,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/tailor to 0.9.27 [wiz 2007-01-06]
 	Updated graphics/jasper to 1.900.0 [wiz 2007-01-06]
 	Updated devel/libidn to 0.6.10 [wiz 2007-01-06]
+	Updated devel/pcre to 7.0 [wiz 2007-01-06]
