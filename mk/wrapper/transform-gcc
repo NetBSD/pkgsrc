@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.10 2006/12/10 00:18:17 rillig Exp $
+# $NetBSD: transform-gcc,v 1.11 2007/01/06 02:20:10 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -13,15 +13,27 @@ case $arg in
 -[DILlU]?*		|\
 -O[01]			) transform_pass ;;
 
+# Needed for the GNU configure scripts:
+-V			|\
+-v			|\
+--version		) transform_pass ;;
+
 # GCC extensions.
--fPIC			|\
+-			|\
+-dynamic		|\
+-export-dynamic		|\
+-ffast-math		|\
+-finline-functions	|\
 -fno-implicit-templates	|\
+-fPIC			|\
 -ggdb			|\
 -M			|\
 -M[DFMPT]		|\
 -O[23s]			|\
+-pedantic		|\
 -pipe			|\
 -pthread		|\
+-print-prog-name=*	|\
 -shared			|\
 -static			|\
 -std=c99		|\
@@ -33,27 +45,34 @@ case $arg in
 -Wcast-qual		|\
 -Wextra			|\
 -Werror			|\
+-Werror-implicit-function-declaration |\
 -Wformat=[012]		|\
+-Wmissing-declarations	|\
 -Wmissing-prototypes	|\
 -Wno-error		|\
 -Wno-implicit-int	|\
 -Wno-long-long		|\
 -Wno-traditional	|\
+-Wno-undef		|\
 -Wno-uninitialized	|\
 -Wno-unused		|\
 -Wno-write-strings	|\
+-Wparentheses		|\
 -Wpointer-arith		|\
 -Wreturn-type		|\
 -Wshadow		|\
 -Wsign-compare		|\
 -Wstrict-prototypes	|\
 -Wswitch		|\
+-Wundef			|\
 -Wwrite-strings		) transform_pass ;;
 
 # Options specific to g++.
 -fmessage-length=*	|\
+-fno-check-new		|\
 -fno-exceptions		|\
--fno-rtti		) transform_pass ;;
+-fno-rtti		|\
+-Wno-non-virtual-dtor	) transform_pass ;;
 
 # Other compiler's options that have corresponding GCC options.
 -KPIC			|\
