@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.12 2006/12/15 13:15:06 martti Exp $
+# $NetBSD: check-files.mk,v 1.13 2007/01/06 20:15:26 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -142,6 +142,10 @@ _CHECK_FILES_POST+=		${_CHECK_FILES_POST.prefix}
 .if empty(CHECK_FILES_STRICT:M[nN][oO])
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.sysconfdir}
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.varbase}
+.endif
+
+.if empty(CHECK_FILES:M[nN][oO])
+privileged-install-hook: check-files
 .endif
 
 ###########################################################################
