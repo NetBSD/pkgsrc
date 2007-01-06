@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.53 2007/01/06 15:40:00 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.54 2007/01/06 15:44:24 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -78,3 +78,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/nasm to 0.98.39nb3 [jmmv 2007-01-06]
 	Updated archivers/bzip2 to 1.0.4 [wiz 2007-01-06]
 	Updated devel/rapidsvn to 0.9.4 [rillig 2007-01-06]
+	Updated www/drupal to 4.7.5 [adrianp 2007-01-06]
