@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/19 18:20:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/06 14:59:40 rillig Exp $
 
 DISTNAME=	fe-1.6
 PKGREVISION=	1
@@ -9,14 +9,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.moria.de/~michael/fe/
 COMMENT=	Folding editor
 
-BROKEN_IN=		pkgsrc-2006Q1
-
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	msgfmt
-INCOMPAT_CURSES=	NetBSD-2* NetBSD-3*
+INCOMPAT_CURSES=	NetBSD-2.*-* NetBSD-3.*-*
+
+INSTALLATION_DIRS=	share/doc/fe
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fe
 	${INSTALL_DATA} ${WRKSRC}/fe.ps ${PREFIX}/share/doc/fe/fe.ps
 	${INSTALL_DATA} ${WRKSRC}/feref.ps ${PREFIX}/share/doc/fe/feref.ps
 
