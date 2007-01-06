@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.49 2007/01/06 02:59:12 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.50 2007/01/06 04:21:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/etcmanage to 0.4 [gdt 2007-01-05]
 	Added games/gamazons version 0.83 [wiz 2007-01-06]
 	Updated mail/greetdelay to 0.02 [schmonz 2007-01-06]
+	Updated audio/rioutil to 1.5.0 [schmonz 2007-01-06]
