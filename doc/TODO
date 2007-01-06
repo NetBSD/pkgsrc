@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5839 2007/01/06 22:49:42 wiz Exp $
+$NetBSD: TODO,v 1.5840 2007/01/06 23:19:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -226,7 +226,6 @@ Suggested package updates
 	o GridSim-3.3
 	o MAMEDiff-2.26
 	o MyPasswordSafe-20061216
-	o ORBit2-2.14.4
 	o PAM-0.80
 	o R-2.4.1
 	o REminiscence-0.1.8
@@ -509,7 +508,6 @@ Suggested package updates
 	o gst-plugins0.10-good-0.10.5
 	o gst-plugins0.10-ugly-0.10.5
 	o gtar-1.16.1
-	o gtetrinet-0.7.11
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
@@ -723,7 +721,6 @@ Suggested package updates
 	o ogre-0.12.3
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o opencobol-0.32
 	o openexr-1.5.0
 	o openh323-1.17.2
 	o openmortal-0.7.1
@@ -985,7 +982,6 @@ Suggested package updates
 	o randread-0.2
 	o raptor-1.4.13
 	o rat-4.2.25
-	o ratpoison-1.4.1
 	o rayshade-4.0.6
 	o rc-1.7.1
 	o rdp-1.6
