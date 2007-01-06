@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/12/29 10:49:25 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2007/01/06 02:52:31 schmonz Exp $
 
-SHA1 (greetdelay-0.01.tar.gz) = 3b609cb6dfee98c6fe05b53db8701049ac2ca99d
-RMD160 (greetdelay-0.01.tar.gz) = 5e968960a6cb12fe2862465bba7f8fc225ca4adf
-Size (greetdelay-0.01.tar.gz) = 1146 bytes
+SHA1 (greetdelay-0.02.tar.gz) = 35796cb10fcbbbdf966fef4a3eb690c1931c1e4f
+RMD160 (greetdelay-0.02.tar.gz) = 53dd445d9c7fc2df0023f8f23370f42b4c41a9d5
+Size (greetdelay-0.02.tar.gz) = 1322 bytes
