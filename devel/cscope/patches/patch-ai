@@ -1,47 +1,48 @@
-$NetBSD: patch-ai,v 1.5 2006/08/24 22:02:02 salo Exp $
+$NetBSD: patch-ai,v 1.6 2007/01/06 22:45:49 wiz Exp $
 
---- src/display.c.orig	2003-09-04 17:54:02.000000000 +0200
-+++ src/display.c	2006-08-24 23:37:28.000000000 +0200
-@@ -216,7 +216,7 @@ display(void)
- 		     disprefs < mdisprefs && screenline <= lastdispline;
- 		     ++disprefs, ++screenline) {
- 			/* read the reference line */
--			if (fscanf(refsfound, "%s%s%s %[^\n]", file, function, 
-+			if (fscanf(refsfound, "%" PATHLEN_STR "s%" PATHLEN_STR "s%" NUMLEN_STR "s %" TEMPSTRING_LEN_STR "[^\n]", file, function, 
- 			    linenum, tempstring) < 4) {
- 				break;
- 			}
-@@ -473,24 +473,24 @@ search(void)
+--- src/display.c.orig	2006-09-30 08:13:00.000000000 +0000
++++ src/display.c
+@@ -478,21 +478,25 @@ search(void)
  	/* see if it is empty */
  	if ((c = getc(refsfound)) == EOF) {
  		if (findresult != NULL) {
 -			(void) sprintf(lastmsg, "Egrep %s in this pattern: %s", 
-+			(void) snprintf(lastmsg, sizeof(lastmsg), "Egrep %s in this pattern: %s", 
- 				findresult, pattern);
- 		}
- 		else if (rc == NOTSYMBOL) {
+-				       findresult, Pattern);
+-		} else if (rc == NOTSYMBOL) {
 -			(void) sprintf(lastmsg, "This is not a C symbol: %s", 
-+			(void) snprintf(lastmsg, sizeof(lastmsg), "This is not a C symbol: %s", 
- 				pattern);
- 		}
- 		else if (rc == REGCMPERROR) {
+-				       Pattern);
+-		} else if (rc == REGCMPERROR) {
 -			(void) sprintf(lastmsg, "Error in this regcomp(3) regular expression: %s", 
+-				       Pattern);
++			(void) snprintf(lastmsg, sizeof(lastmsg), "Egrep %s in this pattern: %s", 
++				findresult, Pattern);
++		}
++		else if (rc == NOTSYMBOL) {
++			(void) snprintf(lastmsg, sizeof(lastmsg), "This is not a C symbol: %s", 
++				Pattern);
++		}
++		else if (rc == REGCMPERROR) {
 +			(void) snprintf(lastmsg, sizeof(lastmsg), "Error in this regcomp(3) regular expression: %s", 
- 				pattern);
++				Pattern);
  			
- 		}
- 		else if (funcexist == NO) {
+-		} else if (funcexist == NO) {
 -			(void) sprintf(lastmsg, "Function definition does not exist: %s", 
-+			(void) snprintf(lastmsg, sizeof(lastmsg), "Function definition does not exist: %s", 
- 				pattern);
- 		}
- 		else {
+-				       Pattern);
+-		} else {
 -			(void) sprintf(lastmsg, "Could not find the %s: %s", 
+-				       fields[field].text2, Pattern);
++		}
++		else if (funcexist == NO) {
++			(void) snprintf(lastmsg, sizeof(lastmsg), "Function definition does not exist: %s", 
++				Pattern);
++		}
++		else {
 +			(void) snprintf(lastmsg, sizeof(lastmsg), "Could not find the %s: %s", 
- 				fields[field].text2, pattern);
++				fields[field].text2, Pattern);
  		}
  		return(NO);
-@@ -555,17 +555,17 @@ progress(char *what, long current, long 
+ 	}
+@@ -527,17 +531,17 @@ progress(char *what, long current, long 
  			move(MSGLINE, 0);
  			clrtoeol();
  			addstr(what);
@@ -62,7 +63,7 @@ $NetBSD: patch-ai,v 1.5 2006/08/24 22:02:02 salo Exp $
  		}
  
  		start = now;
-@@ -603,7 +603,7 @@ myperror(char *text) 
+@@ -575,7 +579,7 @@ myperror(char *text) 
  		s = sys_errlist[errno];
  	}
  #endif
