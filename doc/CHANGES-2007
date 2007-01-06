@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.57 2007/01/06 18:21:19 veego Exp $
+$NetBSD: CHANGES-2007,v 1.58 2007/01/06 20:46:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -82,3 +82,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/rplay to 3.3.2nb4 [veego 2007-01-06]
 	Updated games/gogui to 0.9.3 [rillig 2007-01-06]
 	Updated net/lopster to 1.2.2nb2 [veego 2007-01-06]
+	Updated wm/ratpoison to 1.4.1 [rillig 2007-01-06]
+	Updated net/ORBit2 to 2.14.4 [rillig 2007-01-06]
+	Updated games/gtetrinet to 0.7.11 [rillig 2007-01-06]
+	Updated lang/opencobol to 0.32 [rillig 2007-01-06]
