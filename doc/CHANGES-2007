@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.51 2007/01/06 15:12:24 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.52 2007/01/06 15:35:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -76,3 +76,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/greetdelay to 0.02 [schmonz 2007-01-06]
 	Updated audio/rioutil to 1.5.0 [schmonz 2007-01-06]
 	Updated devel/nasm to 0.98.39nb3 [jmmv 2007-01-06]
+	Updated archivers/bzip2 to 1.0.4 [wiz 2007-01-06]
