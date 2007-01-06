@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/06 14:21:15 rillig Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	pymol-0.98
@@ -11,7 +11,7 @@ MAINTAINER=	perry@NetBSD.org
 HOMEPAGE=	http://pymol.sourceforge.net/
 COMMENT=	Molecular Visualization System
 
-PYTHON_VERSIONS_ACCEPTED= 23 24
+PYTHON_VERSIONS_INCOMPATIBLE=	15 20 21 22
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 PYDISTUTILSPKG=	yes
@@ -19,7 +19,7 @@ PYBINMODULE=	yes
 PYSETUP=	setup.py
 
 post-install:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup2.py)
+	cd ${WRKSRC} && env ${MAKE_ENV} ${PYTHONBIN} setup2.py
 	${INSTALL_SCRIPT} ${WRKSRC}/pymol.com ${PREFIX}/bin/pymol
 
 .include "../../devel/zlib/buildlink3.mk"
