@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.12 2006/10/03 21:06:25 adam Exp $
+$NetBSD: patch-at,v 1.13 2007/01/06 00:11:43 dmcmahill Exp $
 
---- configure.orig	2006-03-30 12:00:19.000000000 +0200
+--- configure.orig	2006-03-30 05:00:19.000000000 -0500
 +++ configure
 @@ -483,7 +483,7 @@ mksharedlibrpath=''
  
@@ -11,7 +11,14 @@ $NetBSD: patch-at,v 1.12 2006/10/03 21:06:25 adam Exp $
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared -o"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -573,10 +573,12 @@ case "$host" in
+@@ -567,16 +567,18 @@ case "$host" in
+   alpha*-*-netbsd*)             arch=alpha; system=netbsd;;
+   alpha*-*-openbsd*)            arch=alpha; system=openbsd;;
+   sparc*-*-sunos4.*)            arch=sparc; system=sunos;;
+-  sparc*-*-solaris2.*)          arch=sparc; system=solaris;;
++  sparc*-*-solaris2*)           arch=sparc; system=solaris;;
+   sparc*-*-*bsd*)               arch=sparc; system=bsd;;
+   sparc*-*-linux*)              arch=sparc; system=linux;;
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
