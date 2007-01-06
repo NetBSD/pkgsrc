@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5832 2007/01/06 15:35:15 wiz Exp $
+$NetBSD: TODO,v 1.5833 2007/01/06 15:40:00 rillig Exp $
 
 Suggested new packages
 ======================
@@ -988,7 +988,6 @@ Suggested package updates
 	o radiance-3.7.2
 	o raine-0.43.4
 	o randread-0.2
-	o rapidsvn-0.9.4
 	o raptor-1.4.13
 	o rat-4.2.25
 	o ratpoison-1.4.1
