@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/09/16 12:20:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/06 19:42:06 rillig Exp $
 #
 
-DISTNAME=	gtetrinet-0.7.7
-PKGREVISION=	9
+DISTNAME=	gtetrinet-0.7.11
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtetrinet/0.7/}
 
@@ -16,6 +15,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
 BUILD_DEFS+=		USE_INET6
+MAKE_FLAGS+=		gamesdir=${PREFIX}/bin
+MAKE_FLAGS+=		schemadir=${PREFIX}/share/gconf/schemas
 
 .include "../../mk/bsd.prefs.mk"
 
