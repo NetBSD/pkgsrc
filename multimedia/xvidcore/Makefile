@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/06 12:41:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/06 16:31:48 jmmv Exp $
 
 DISTNAME=	xvidcore-1.1.2
 CATEGORIES=	multimedia
@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .if ${OPSYS} == "SunOS" || ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--disable-assembly
 .elif ${MACHINE_ARCH} == "i386"
-BUILD_DEPENDS+=		nasm>=0.98.34:../../devel/nasm
+BUILD_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
 #.elif ${MACHINE_ARCH} == "x86_64"
 #BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 .endif
@@ -33,7 +33,6 @@ GNU_CONFIGURE=	YES
 MAKE_ENV+=	MKDIR=${MKDIR:Q}
 
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-assembly
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so.4
 	${MV} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so ${DESTDIR}${PREFIX}/lib/libxvidcore.dylib
