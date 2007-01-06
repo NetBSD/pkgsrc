@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5838 2007/01/06 22:46:11 wiz Exp $
+$NetBSD: TODO,v 1.5839 2007/01/06 22:49:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1078,7 +1078,6 @@ Suggested package updates
 	o sylpheed-devel-2.3.0rc
 	o sympa-5.2
 	o sysinfo-4.2.2
-	o tailor-0.9.27
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
