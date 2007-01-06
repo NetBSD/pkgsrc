@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5829 2007/01/06 04:21:36 schmonz Exp $
+$NetBSD: TODO,v 1.5830 2007/01/06 15:25:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -287,6 +287,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o at-spi-1.7.13
 	o atk-1.12.4
+	o audacity-1.2.6
 	o autogen-5.8.8
 	o avcheck-0.91
 	o avl-2.0.1
@@ -350,6 +351,7 @@ Suggested package updates
 	o crafty-19.5
 	o crossfire-client-1.9.1
 	o crypto++-523
+	o cscope-15.6
 	o cstream-2.6.0
 	o cuetools-1.3.1
 	o cups-1.2.7
@@ -418,7 +420,7 @@ Suggested package updates
 	o faces-1.7.7
 	o fd-2.08a
 	o fdgw-20040609
-	o fetchmail-6.3.5
+	o fetchmail-6.3.6
 	o fhist-1.14
 	o file-4.18
 	o file-roller-2.16.2
@@ -616,8 +618,8 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
-	o libprelude-0.9.12
-	o libpreludedb-0.9.11
+	o libprelude-0.9.12.1
+	o libpreludedb-0.9.11.1
 	o libshout-2.2
 	o libssh-0.2
 	o libstatgrab-0.13
@@ -896,13 +898,14 @@ Suggested package updates
 	o ploticus-2.33
 	o ploticus-examples-230
 	o plptools-0.13 [pkg/30244]
-	o plptools-0.16
+	o plptools-0.17
 	o pnet-0.7.2 [pkg/31950]
 	o pnet-0.7.4
 	o pnetC-0.7.2 [pkg/31950]
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
+	o png-1.2.15
 	o po4a-0.29
 	o poedit-1.3.6
 	o poppy-4.01
@@ -1142,6 +1145,7 @@ Suggested package updates
 	o wcalc-2.2.2
 	o wdm-1.28
 	o webmin-1.310
+	o weechat-0.2.2
 	o weewm-0.01
 	o wesnoth-1.2
 	o winbind-3.0.13
