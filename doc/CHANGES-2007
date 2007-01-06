@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.47 2007/01/05 18:33:15 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.48 2007/01/06 02:09:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/jwm to 1.8 [abs 2007-01-04]
 	Updated wm/flwm to 1.02 [abs 2007-01-04]
 	Updated sysutils/etcmanage to 0.4 [gdt 2007-01-05]
+	Added games/gamazons version 0.83 [wiz 2007-01-06]
