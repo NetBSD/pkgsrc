@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2006/11/24 16:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2007/01/06 22:07:42 wiz Exp $
 #
 
-DISTNAME=		aspell-0.60.4
-PKGREVISION=		2
+DISTNAME=		aspell-0.60.5
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GNU:=aspell/}
 
@@ -21,7 +20,7 @@ USE_TOOLS+=		perl:run
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=ncurses
