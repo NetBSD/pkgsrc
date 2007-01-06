@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/05/05 03:11:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/06 22:07:42 wiz Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -102,6 +102,7 @@ share/aspell/standard.kbd
 ${FILTER}share/aspell/tex-filter.info
 ${FILTER}share/aspell/texinfo-filter.info
 share/locale/be/LC_MESSAGES/aspell.mo
+share/locale/ca/LC_MESSAGES/aspell.mo
 share/locale/cs/LC_MESSAGES/aspell.mo
 share/locale/da/LC_MESSAGES/aspell.mo
 share/locale/de/LC_MESSAGES/aspell.mo
@@ -118,6 +119,7 @@ share/locale/ru/LC_MESSAGES/aspell.mo
 share/locale/rw/LC_MESSAGES/aspell.mo
 share/locale/sl/LC_MESSAGES/aspell.mo
 share/locale/sr/LC_MESSAGES/aspell.mo
+share/locale/sv/LC_MESSAGES/aspell.mo
 share/locale/tg/LC_MESSAGES/aspell.mo
 share/locale/uk/LC_MESSAGES/aspell.mo
 share/locale/vi/LC_MESSAGES/aspell.mo
