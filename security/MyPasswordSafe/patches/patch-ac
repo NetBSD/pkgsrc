@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2005/11/17 22:12:37 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2007/01/06 19:06:22 rillig Exp $
 
 qt3-3.3.5 fix. Can probably be removed after next qt3 release.
 
@@ -8,6 +8,6 @@ qt3-3.3.5 fix. Can probably be removed after next qt3 release.
  <pixmapinproject/>
  <layoutdefaults spacing="6" margin="11"/>
  <includehints>
--    <includehint>safelistview.h</includehint>
+-    <includehint>safelistview.hpp</includehint>
  </includehints>
  </UI>
