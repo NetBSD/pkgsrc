@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.50 2007/01/06 04:21:36 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.51 2007/01/06 15:12:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -75,3 +75,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added games/gamazons version 0.83 [wiz 2007-01-06]
 	Updated mail/greetdelay to 0.02 [schmonz 2007-01-06]
 	Updated audio/rioutil to 1.5.0 [schmonz 2007-01-06]
+	Updated devel/nasm to 0.98.39nb3 [jmmv 2007-01-06]
