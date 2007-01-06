@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/12/27 12:42:36 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/06 15:09:59 rillig Exp $
 #
 
 DISTNAME=	xbeeb-0.4.1
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.cloud9.co.uk/james/BBCMicro/Xbeeb/
 COMMENT=	Acorn BBC Micro emulator with an X based interface
 
 USE_IMAKE=	yes
-USE_TOOLS+=	bdftopcf
+USE_TOOLS+=	bdftopcf xmkmf mkfontdir
 MAN_PAGE=	${WRKDIR}/xbeeb.1
 
 XBEEBROOT=	share/xbeeb
@@ -23,7 +23,7 @@ PLIST_SUBST+=	XBEEBROOT=${XBEEBROOT:Q}
 FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/xbeeb
 REQD_DIRS=	${PREFIX}/lib/X11/fonts/xbeeb
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xbeeb
 PKG_SUPPORTED_OPTIONS=	mitshm
@@ -75,35 +75,31 @@ SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path
 SUBST_FILES.beebroot=	src/Config.h
 SUBST_SED.beebroot=	-e "s|^\\(\#define[	 ]*XBEEBROOT[	 ]*\\)[^	 ].*\$$|\\1\"${PREFIX}/${XBEEBROOT}/\"|"
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${XBEEBROOT}/roms ${XBEEBROOT}/docs lib/X11/fonts/xbeeb
+
 # xbeeb build starts in the source directory
 do-configure:
-	cd ${WRKSRC}/src && ${XMKMF_CMD}
+	cd ${WRKSRC}/src && xmkmf
 
 post-patch:
-	${SED} -e 's+@XBEEBROOT@+${XBEEBROOT}+g' \
+	sed	-e 's+@XBEEBROOT@+${XBEEBROOT}+g' \
 		-e 's+@PREFIX@+${PREFIX}+g' \
 		${FILESDIR}/xbeeb.1 > ${MAN_PAGE}
 
 do-build:
-	(cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xbeeb)
-	(cd ${WRKSRC}/fonts && \
-	for i in *.bdf ; \
-	do \
-		bdftopcf $$i -o `${BASENAME} $$i .bdf`.pcf ; \
-	done)
+	cd ${WRKSRC}/src && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xbeeb
+	set -e; \
+	cd ${WRKSRC}/fonts; \
+	for i in *.bdf; do \
+		bdftopcf "$$i" -o `${BASENAME} "$$i" .bdf`.pcf; \
+	done
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xbeeb ${PREFIX}/bin/xbeeb
-	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/man/man1/xbeeb.1
-	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}
-	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}/roms
-	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}/docs
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/xbeeb
+	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/${PKGMANDIR}/man1/xbeeb.1
 	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.90.rom ${PREFIX}/${XBEEBROOT}/roms/xdfs0.90.rom
-	for docfile in ${WRKSRC}/doc/*; do \
-		${INSTALL_DATA} $$docfile ${PREFIX}/${XBEEBROOT}/docs; \
-	done
-	${CP} ${WRKSRC}/fonts/*.pcf ${PREFIX}/lib/X11/fonts/xbeeb
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${PREFIX}/${XBEEBROOT}/docs
+	cd ${WRKSRC}/fonts && ${INSTALL_DATA} *.pcf ${PREFIX}/lib/X11/fonts/xbeeb
 	mkfontdir ${PREFIX}/lib/X11/fonts/xbeeb
 
 .include "../../mk/x11.buildlink3.mk"
