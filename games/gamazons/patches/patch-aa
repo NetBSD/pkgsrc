@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/06 02:07:50 wiz Exp $
+
+--- src/board.c.orig	2002-11-25 00:47:38.000000000 +0000
++++ src/board.c
+@@ -1403,8 +1403,7 @@ int get_move_from_str(move *m, char move
+ 
+ int read_in_moves(FILE *history_fd)
+ {
+-   char *buffer=NULL;
+-   size_t buf_size = 30;
++   char buffer[1024];
+ 
+    state *s;
+    move m;
+@@ -1422,7 +1421,7 @@ int read_in_moves(FILE *history_fd)
+       bstate_set_dont_slide(TRUE);
+      }
+    //printf("History contents:\n");
+-   while (getline(&buffer, &buf_size, history_fd) != -1)
++   while (fgets(buffer, sizeof(buffer), history_fd) != NULL)
+      {
+       if (replay_mode && !bstate_get_replay_mode()) //If not in replay mode anymore, drop out
+ 	 return FALSE;
+@@ -1446,8 +1445,6 @@ int read_in_moves(FILE *history_fd)
+ 	 bstate_set_dont_slide(FALSE);
+ 	 return FALSE;
+ 	}
+-      free(buffer);
+-      buffer = NULL;
+ 
+       if (replay_mode) //Delay for appropriate amount of time
+        	{
