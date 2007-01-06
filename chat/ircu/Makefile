@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/12/21 16:13:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/06 14:34:50 rillig Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-cpath=${PKG_SYSCONFDIR}/ircd.conf
-CONFIGURE_ARGS+=	--with-dpath=${DATADIR:Q}
+CONFIGURE_ARGS+=	--with-dpath=${DATADIR}
 CONFIGURE_ARGS+=	--with-lpath=${DATADIR}/ircd.log
 CONFIGURE_ARGS+=	--with-mode=555
 CONFIGURE_ARGS+=	--with-owner=0
@@ -26,12 +26,15 @@ CONFIGURE_ARGS+=	--with-symlink=no
 
 PKG_SYSCONFSUBDIR=	ircd
 
+.include "../../mk/bsd.prefs.mk"
+
 IRCD_USER?=		ircd
 IRCD_GROUP?=		ircd
-DATADIR=		/var/ircd
+DATADIR=		${VARBASE}/ircd
 OWN_DIRS_PERMS=		${DATADIR} ${IRCD_USER} ${IRCD_GROUP} 0700
 EGDIR=			${PREFIX}/share/examples/ircd
 DOCDIR=			${PREFIX}/share/doc/ircd
+BUILD_DEFS+=		VARBASE
 
 CONF_FILES_PERMS+=	${EGDIR}/ircd.conf.sample ${PKG_SYSCONFDIR}/ircd.conf \
 			${IRCD_USER} ${IRCD_GROUP} 0600
@@ -53,18 +56,18 @@ PKG_SHELL.${IRCD_USER}=	${SH}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	tools/README doc/ircd.conf.sample
-SUBST_SED.paths=	-e "s|/usr/local/lib/irc|${PKG_SYSCONFDIR}|g" \
-			-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.paths=	-e "s|/usr/local/lib/irc|${PKG_SYSCONFDIR}|g"
+SUBST_SED.paths+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 post-extract:
 	mv ${WRKSRC}/tools/Makefile.crypt ${WRKSRC}/tools/Makefile.crypt.in
 
 post-build:
-	@cd ${WRKSRC}/tools && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
+	cd ${WRKSRC}/tools && \
+		env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 		-f Makefile.crypt
 
 do-install:
@@ -75,7 +78,7 @@ do-install:
 		${PREFIX}/sbin/ircd-chkconf
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd \
 		${PREFIX}/sbin/ircd-mkpasswd
-	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/doc/ircd.conf.sample ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
