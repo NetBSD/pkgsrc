@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.58 2007/01/06 20:46:25 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.59 2007/01/06 21:49:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/ORBit2 to 2.14.4 [rillig 2007-01-06]
 	Updated games/gtetrinet to 0.7.11 [rillig 2007-01-06]
 	Updated lang/opencobol to 0.32 [rillig 2007-01-06]
+	Updated graphics/png to 1.2.15 [wiz 2007-01-06]
