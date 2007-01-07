@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.72 2007/01/07 14:41:40 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.73 2007/01/07 14:49:22 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -100,3 +100,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/xmms-flac to 1.1.3 [wiz 2007-01-07]
 	Updated comms/efax-gtk to 3.0.12 [adam 2007-01-07]
 	Updated textproc/intltool to 0.35.3 [wiz 2007-01-07]
+	Updated mail/dovecot to 1.0rc17 [ghen 2007-01-07]
