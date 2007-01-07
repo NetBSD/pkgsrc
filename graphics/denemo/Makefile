@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/07 08:28:05 rillig Exp $
 #
 
-DISTNAME=	denemo-0.5.4
-PKGREVISION=	8
+DISTNAME=	denemo-0.7.6
 CATEGORIES=	graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denemo/}
 
@@ -10,11 +9,12 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://denemo.sourceforge.net/
 COMMENT=	GUI musical score editor written in C/GTK+
 
-BROKEN_IN=	pkgsrc-2005Q4
-
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 
 GNU_CONFIGURE=	YES
+USE_DIRS+=	xdg-1.4
+USE_TOOLS+=	pkg-config
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
