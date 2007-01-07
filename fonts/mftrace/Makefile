@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/07 01:14:49 rillig Exp $
 
 DISTNAME=	mftrace-1.1.18
 CATEGORIES=	fonts
@@ -21,7 +21,7 @@ MAKE_FILE=		GNUmakefile
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 
-INSTALLATION_DIRS=	bin man/man1 ${PYSITELIB}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PYSITELIB}
 
 post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} ${PREFIX}/${PYLIB}/py_compile.py afm.py
@@ -30,7 +30,7 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gf2pbm ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mftrace ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mftrace.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/mftrace.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/afm.py ${PREFIX}/${PYSITELIB}
 	${INSTALL_DATA} ${WRKSRC}/afm.pyc ${PREFIX}/${PYSITELIB}
 	${INSTALL_DATA} ${WRKSRC}/tfm.py ${PREFIX}/${PYSITELIB}
