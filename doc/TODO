@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5845 2007/01/07 11:49:32 wiz Exp $
+$NetBSD: TODO,v 1.5846 2007/01/07 12:07:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -230,7 +230,6 @@ Suggested package updates
 	o R-2.4.1
 	o REminiscence-0.1.8
 	o ROMBuild-2.8
-	o SDL_gfx-2.0.15
 	o SmartEiffel-2.1
 	o XaoS-3.1.1
 	o YoSucker-75
