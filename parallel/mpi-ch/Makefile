@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/01/07 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2007/01/07 12:02:43 rillig Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		6
@@ -29,6 +29,7 @@ MPI_RSH?=		ssh
 CONFIGURE_ARGS+=	-prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	-docdir=${PREFIX}/share/doc/mpi-ch
 CONFIGURE_ARGS+=	-htmldir=${PREFIX}/share/doc/mpi-ch/html
+CONFIGURE_ARGS+=	-mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-opt=-O
 CONFIGURE_ARGS+=	-rsh=${MPI_RSH:Q}
 CONFIGURE_ARGS+=	--with-comm=ch_p4
@@ -41,7 +42,7 @@ CONFIGURE_ENV+=		PERL=${PERL5:Q}
 CONFIGURE_ENV+=		PERLFULLPATH=${PERL5:Q}
 
 # build PATH in the config file is not a problem
-CHECK_WRKREF_SKIP+=	${PREFIX}/share/examples/mpi-ch/perftest/config.system
+CHECK_WRKREF_SKIP+=	share/examples/mpi-ch/perftest/config.system
 
 PKG_SYSCONFSUBDIR=	mpi-ch
 EGDIR=			${PREFIX}/share/examples/mpi-ch
@@ -71,6 +72,9 @@ MAKE_ENV+=		RSHCOMMAND=${MPI_RSH:Q}
 BUILD_DEFS+=		MPI_RSH
 
 PLIST_SRC+=		${PKGDIR}/PLIST
+
+post-extract:
+	chmod -R g-w ${WRKDIR}/docs
 
 pre-configure:
 	set -e; for f in MPI-2-C++ examples/perftest/config/confdb mpe \
