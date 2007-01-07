@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/06 06:22:35 reed Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:07 rillig Exp $
 #
 
 DISTNAME=		tcptraceroute-1.4
@@ -20,11 +20,11 @@ BINMODE=		4711
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcptraceroute ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/tcptraceroute.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/tcptraceroute.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples.txt ${DOCDIR}
 

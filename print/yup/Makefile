@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/28 20:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:09 rillig Exp $
 #
 
 DISTNAME=		yup-r1-rel
@@ -18,10 +18,10 @@ WRKSRC=			${WRKDIR}/yup-r1
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/yup ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/yup.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/yup.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

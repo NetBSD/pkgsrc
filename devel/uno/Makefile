@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/09 02:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:51 rillig Exp $
 #
 
 DISTNAME=		uno_v28
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_man.pdf ${PREFIX}/share/doc/uno
 	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_manpage.pdf ${PREFIX}/share/doc/uno
 	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_short.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_MAN} ${WRKDIR}/Uno/doc/uno.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/Uno/doc/uno.1 ${PREFIX}/${PKGMANDIR}/man1
 
 USE_TOOLS+=	bison gmake flex
 

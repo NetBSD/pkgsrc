@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:15 rillig Exp $
 #
 
 DISTNAME=	calamaris-2.58
@@ -13,11 +13,11 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	calamaris
 NO_BUILD=	YES
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/calamaris ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/calamaris.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/calamaris.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/calamaris
 .for doc in CHANGES COPYRIGHT EXAMPLES README
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/calamaris

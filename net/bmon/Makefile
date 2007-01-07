@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/09 02:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=	bmon-2.0.1
@@ -26,11 +26,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=		${PREFIX}/share/examples/bmon
 CONF_FILES=	${EGDIR}/bmon.conf ${PKG_SYSCONFDIR}/bmon.conf
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/bmon ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/bmon.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/bmon.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bmon
 	${INSTALL_DATA} ${WRKSRC}/etc/bmon.conf	\
 		${PREFIX}/share/examples/bmon/bmon.conf

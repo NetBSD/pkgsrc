@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/09 13:48:02 obache Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:01 rillig Exp $
 
 DISTNAME=	ttyrec-1.0.8
 CATEGORIES=	misc
@@ -14,14 +14,14 @@ COMMENT=	ttyrec is a tty recorder
 CFLAGS+=	-DSVR4
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttyplay ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/ttyrec ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/ttytime ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/ttyplay.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/ttyrec.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/ttytime.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/ttyplay.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/ttyrec.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/ttytime.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

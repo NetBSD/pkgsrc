@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/25 13:17:28 abs Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/07 09:14:11 rillig Exp $
 #
 
 DISTNAME=	dvd+rw-tools-6.1
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c c++
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # These are the only platforms listed in growisofs.c
 ONLY_FOR_PLATFORM=Linux-*-* OpenBSD-*-* NetBSD-*-* FreeBSD-*-* \
@@ -26,7 +26,7 @@ LDFLAGS.NetBSD+=	-lrt # sem_* functions
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/growisofs ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/growisofs.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/growisofs.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-booktype ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-format ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-mediainfo ${PREFIX}/bin

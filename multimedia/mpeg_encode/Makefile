@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:15 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:01 rillig Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
@@ -13,7 +13,7 @@ COMMENT=	The Parallel Berkeley MPEG Encoder
 
 WRKSRC=			${WRKDIR}/mpeg_encode
 USE_TOOLS+=		gmake
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-build:
 	@cd ${WRKSRC}/convert && \
@@ -33,7 +33,7 @@ do-install:
 	cd ${WRKSRC}/examples ; for i in * ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/examples/mpeg_encode; \
 	done
-	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

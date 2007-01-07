@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 20:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:47 rillig Exp $
 
 DISTNAME=	xamp-0.8-10
 PKGNAME=	xamp-0.8.10
@@ -27,7 +27,7 @@ MAKE_ENV+=	QT1DIR=${QT1DIR:Q}
 SKIN_DATA=	bfamp.tar.gz chrome.tar.gz mmxamp.tar.gz
 SKIN_DIR=	${PREFIX}/lib/X11/xamp
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	for f in about.cpp aboutData.cpp readmex.h; do \
@@ -38,7 +38,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xamp.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/xamp.1 ${PREFIX}/${PKGMANDIR}/man1
 	@${INSTALL_DATA_DIR} ${SKIN_DIR}/bfamp-xamp
 	${INSTALL_DATA} ${WRKDIR}/bfamp-xamp/*.bmp ${SKIN_DIR}/bfamp-xamp
 	@${INSTALL_DATA_DIR} ${SKIN_DIR}/chrome-xamp

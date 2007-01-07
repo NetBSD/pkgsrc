@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/14 08:23:29 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/07 09:14:13 rillig Exp $
 
 DISTNAME=	html2wml-0.4.8r2
 PKGNAME=	html2wml-0.4.8.2
@@ -20,10 +20,10 @@ NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	${WRKSRC}/html2wml.cgi
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/html2wml.cgi ${PREFIX}/bin/html2wml
-	${INSTALL_MAN} ${WRKSRC}/doc/html2wml.man ${PREFIX}/man/man1/html2wml.1
+	${INSTALL_MAN} ${WRKSRC}/doc/html2wml.man ${PREFIX}/${PKGMANDIR}/man1/html2wml.1
 
 .include "../../mk/bsd.pkg.mk"

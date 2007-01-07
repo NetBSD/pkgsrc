@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/08 19:29:16 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:11 rillig Exp $
 #
 
 DISTNAME=	bbsload-0.2.6
@@ -17,6 +17,6 @@ USE_X11BASE=		YES
 .include "../../mk/x11.buildlink3.mk"
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/bbsload.1 ${PREFIX}/man/man1/bbsload.1
+	${INSTALL_MAN} ${WRKSRC}/bbsload.1 ${PREFIX}/${PKGMANDIR}/man1/bbsload.1
 
 .include "../../mk/bsd.pkg.mk"

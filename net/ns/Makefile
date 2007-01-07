@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/08/23 10:28:06 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/07 09:14:04 rillig Exp $
 
 DISTNAME=	ns-allinone-2.29.3
 PKGNAME=	${DISTNAME:S/-allinone//}
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../devel/tcl-tclcl/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"

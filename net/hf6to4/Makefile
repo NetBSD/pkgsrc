@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/14 08:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -23,7 +23,7 @@ NO_BUILD=	yes
 
 CONF_FILES+=	${PREFIX}/share/examples/hf6to4/hf6to4.conf ${PKG_SYSCONFDIR}/hf6to4.conf
 
-INSTALLATION_DIRS=	man/man8 sbin share/examples/hf6to4 share/doc/hf6to4
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/hf6to4 share/doc/hf6to4
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	hf6to4
@@ -36,7 +36,7 @@ post-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/hf6to4 ${PREFIX}/sbin/hf6to4
-	${INSTALL_MAN} ${FILESDIR}/hf6to4.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${FILESDIR}/hf6to4.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${FILESDIR}/hf6to4.html ${PREFIX}/share/doc/hf6to4/hf6to4.html
 	${INSTALL_DATA} ${FILESDIR}/hf6to4.conf ${PREFIX}/share/examples/hf6to4
 

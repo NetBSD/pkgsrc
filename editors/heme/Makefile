@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:56 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/07 09:13:52 rillig Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -16,12 +16,12 @@ BUILD_TARGET=		heme
 USE_NCURSES=		# mvwchgat
 USE_TOOLS+=		gmake
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../devel/ncurses/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/heme ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/heme.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/heme.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

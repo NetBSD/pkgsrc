@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/07 09:14:06 rillig Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
@@ -27,10 +27,10 @@ WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 MAKE_ENV+=	LOCAL_LIBS="-lsocket -lnsl"
 .endif
 
-INSTALLATION_DIRS=	etc/rc.d man/man8 sbin
+INSTALLATION_DIRS=	etc/rc.d ${PKGMANDIR}/man8 sbin
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/rtspd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/rtspd.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_PROGRAM} ${WRKSRC}/rtspd ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ra-rtsp-proxy
 	${INSTALL_DATA} ${WRKSRC}/license.txt ${PREFIX}/share/doc/ra-rtsp-proxy

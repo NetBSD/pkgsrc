@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/09 21:04:39 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:47 rillig Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 

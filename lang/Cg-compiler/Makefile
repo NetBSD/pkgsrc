@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/30 13:47:06 salo Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:56 rillig Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
@@ -22,7 +22,7 @@ NO_BUILD=	yes
 DEPENDS+=	suse_base>=7.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
-INSTALLATION_DIRS=	bin lib man/man3 share
+INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man3 share
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/Cg
@@ -33,7 +33,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/usr/include/Cg/* ${PREFIX}/include/Cg
 	${INSTALL_DATA} ${WRKSRC}/usr/include/CgFX/* ${PREFIX}/include/CgFX
 	${INSTALL_DATA} ${WRKSRC}/usr/lib/* ${PREFIX}/lib
-	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man3/* ${PREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man3/* ${PREFIX}/${PKGMANDIR}/man3
 	cd ${WRKSRC}/usr/local && ${PAX} -rwppm . ${PREFIX}/share/NVIDIA-Cg-linux
 
 .include "../../emulators/suse_linux/Makefile.application"

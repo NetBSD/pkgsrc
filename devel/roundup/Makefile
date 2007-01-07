@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/10/04 21:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/07 09:13:51 rillig Exp $
 
 DISTNAME=	roundup-1.1.2
 CATEGORIES=	devel
@@ -29,10 +29,10 @@ PYTHON_PATCH_SCRIPTS+=	tools/migrate-queries.py tools/pygettext.py
 ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-admin.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-demo.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-mailgw.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-server.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-admin.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-demo.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-mailgw.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-server.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${ROUNDUPDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${ROUNDUPDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.txt ${ROUNDUPDOCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/11/06 11:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2007/01/07 09:13:52 rillig Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
@@ -20,13 +20,13 @@ VERS=		5.5
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=		netbsd
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/nedit ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/source/nc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/nedit.man ${DESTDIR}${PREFIX}/man/man1/nedit.1
-	${INSTALL_MAN} ${WRKSRC}/doc/nc.man ${DESTDIR}${PREFIX}/man/man1/nedit-nc.1
+	${INSTALL_MAN} ${WRKSRC}/doc/nedit.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit.1
+	${INSTALL_MAN} ${WRKSRC}/doc/nc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit-nc.1
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/ReleaseNotes ${DESTDIR}${PREFIX}/share/doc/nedit

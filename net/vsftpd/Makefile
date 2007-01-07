@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/03 15:54:56 tv Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/07 09:14:07 rillig Exp $
 #
 
 DISTNAME=	vsftpd-2.0.4
@@ -29,7 +29,7 @@ CONF_FILES=	${EGDIR}/vsftpd.conf.default ${PKG_SYSCONFDIR}/vsftpd.conf
 MAKE_DIRS=	${VARBASE}/chroot
 OWN_DIRS=	${VARBASE}/chroot/vsftpd
 
-INSTALLATION_DIRS=	libexec man/man5 man/man8
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
@@ -46,8 +46,8 @@ LIBS.SunOS=	-lsocket -lnsl -lrt -lsendfile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vsftpd ${PREFIX}/libexec
-	${INSTALL_MAN} ${WRKSRC}/vsftpd.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/vsftpd.conf.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/vsftpd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/vsftpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/vsftpd.conf ${EGDIR}/vsftpd.conf.default
 	${INSTALL_DATA_DIR} ${DOCDIR}

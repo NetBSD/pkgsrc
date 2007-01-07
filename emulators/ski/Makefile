@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.6 2006/07/18 23:27:14 jlam Exp $
+#	$NetBSD: Makefile,v 1.7 2007/01/07 09:13:53 rillig Exp $
 
 DISTNAME=		ski-0.9.81-l6-i686
 PKGNAME=		ski-0.9.81.6
@@ -38,7 +38,7 @@ FETCH_MESSAGE=								\
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/nue/usr/bin/*ski* ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/nue/usr/man/man1/*ski*.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/nue/usr/man/man1/*ski*.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKDIR}/nue/usr/X11R6/lib/X11/app-defaults/XSki ${PREFIX}/lib/X11/app-defaults/XSki
 
 .include "../../mk/bsd.pkg.mk"

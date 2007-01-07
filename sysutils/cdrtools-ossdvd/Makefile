@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/08/27 01:01:15 ben Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/07 09:14:11 rillig Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
@@ -52,7 +52,7 @@ MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
 MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF:Q}
 .endif
 
-INSTALLATION_DIRS=	bin man/man1 man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch

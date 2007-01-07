@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/16 17:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:00 rillig Exp $
 #
 
 DISTNAME=	colorize_0.3.0
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_BUILD=	yes
 
 USE_TOOLS+=		gunzip perl:run
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		color
 SUBST_STAGE.color=	pre-configure
@@ -35,7 +35,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/colorize.pl ${PREFIX}/bin/colorize
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/colorize
 	${INSTALL_DATA} ${WRKSRC}/colorizerc ${PREFIX}/share/examples/colorize
-	${INSTALL_MAN} ${WRKSRC}/colorize.pl.1 ${PREFIX}/man/man1/colorize.1
+	${INSTALL_MAN} ${WRKSRC}/colorize.pl.1 ${PREFIX}/${PKGMANDIR}/man1/colorize.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/colorize
 	cd ${WRKSRC} && ${INSTALL_DATA} README TIPS ${PREFIX}/share/doc/colorize
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-fifo.sh		\

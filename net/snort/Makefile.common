@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2006/06/18 00:25:26 rillig Exp $
+# $NetBSD: Makefile.common,v 1.37 2007/01/07 09:14:06 rillig Exp $
 #
 
 DISTNAME=		snort-2.4.5
@@ -71,7 +71,7 @@ post-install:
 	for i in `${LS} | ${EGREP} -v "(Makefile|signatures)"` ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/snort ; \
 	done
-	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/schemas/create_mysql \
 		${PREFIX}/share/doc/snort/schemas
 	${INSTALL_DATA} ${WRKSRC}/schemas/create_postgresql \

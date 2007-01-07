@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:43 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2007/01/07 09:13:54 rillig Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -21,11 +21,11 @@ FILEMODE=	0660
 FILEMODE=	0600
 .endif
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_GAME} ${WRKSRC}/omega ${PREFIX}/bin/Omega
-	${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/${PKGMANDIR}/man6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/omega
 	${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
 	${RM} ${PREFIX}/share/omega/license.old

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:57 rillig Exp $
 #
 
 DISTNAME=		dbmail-2.0.7
@@ -30,7 +30,7 @@ SUBST_FILES.sysconf+=	dbmail.h
 SUBST_SED.sysconf=	-e 's|/etc/dbmail\.conf|${PKG_SYSCONFDIR}/dbmail.conf|g'
 SUBST_MESSAGE.sysconf=	Fixing sysconf paths.
 
-INSTALLATION_DIRS=	lib man man/man1 man/man8 sbin share/examples/dbmail
+INSTALLATION_DIRS=	lib man ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin share/examples/dbmail
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${EGDIR}

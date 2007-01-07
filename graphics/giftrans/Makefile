@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:55 rillig Exp $
 #
 
 DISTNAME=	sgif1122
@@ -13,10 +13,10 @@ COMMENT=	Manipulate GIF89a images' transparency, comment and other data
 
 WRKSRC=		${WRKDIR}/usr/src/${PKGNAME_NOREV}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/giftrans ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/giftrans.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/giftrans.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

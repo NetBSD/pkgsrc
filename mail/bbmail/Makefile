@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/22 04:46:16 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:13:57 rillig Exp $
 #
 
 DISTNAME=	bbmail-0.8.3
@@ -13,13 +13,13 @@ COMMENT=	Mailbox monitor (not only) for the blackbox windowmanager
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bbmail ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/bbmail.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/bbmail.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/bbtools/
 	${INSTALL_DATA} ${WRKSRC}/data/bbmail.bb ${PREFIX}/share/bbtools/
 

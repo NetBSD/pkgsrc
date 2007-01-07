@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:10 rillig Exp $
 #
 
 DISTNAME=	gpg2dot-1.4
@@ -41,6 +41,6 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gpg2dot ${PREFIX}/bin/gpg2dot
-#	${INSTALL_MAN} ${WRKSRC}/gpg2dot.1 ${PREFIX}/man/man1
+#	${INSTALL_MAN} ${WRKSRC}/gpg2dot.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

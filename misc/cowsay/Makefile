@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:10 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:00 rillig Exp $
 
 DISTNAME=		cowsay-3.03
 PKGREVISION=		1
@@ -20,13 +20,13 @@ SUBST_SED.pap=		-e "s|%BANGPERL%|!${PERL5}|" -e "s|%PREFIX%|${PREFIX}|"
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
-INSTALLATION_DIRS=	bin man/man1 share/cows
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/cows
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cowsay ${PREFIX}/bin
 	cd ${PREFIX}/bin; ${LN} -s cowsay cowthink
-	${INSTALL_DATA} ${WRKSRC}/cowsay.1 ${PREFIX}/man/man1
-	cd ${PREFIX}/man/man1; ${LN} -s cowsay.1 cowthink.1
+	${INSTALL_DATA} ${WRKSRC}/cowsay.1 ${PREFIX}/${PKGMANDIR}/man1
+	cd ${PREFIX}/${PKGMANDIR}/man1; ${LN} -s cowsay.1 cowthink.1
 	${INSTALL_DATA} ${WRKSRC}/cows/*.cow ${PREFIX}/share/cows
 
 .include "../../mk/bsd.pkg.mk"

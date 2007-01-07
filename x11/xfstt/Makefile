@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/05/10 23:31:30 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/07 09:14:16 rillig Exp $
 #
 
 DISTNAME=		xfstt-1.6
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-nls
 CXXFLAGS+=		-fomit-frame-pointer -ffast-math
 
 RCD_SCRIPTS=		xfstt
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/x11.buildlink3.mk"
 
@@ -32,7 +32,7 @@ SUBST_STAGE.paths=	post-patch
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xfstt ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/xfstt.1x ${PREFIX}/man/man1/xfstt.1
+	${INSTALL_MAN} ${WRKSRC}/doc/xfstt.1x ${PREFIX}/${PKGMANDIR}/man1/xfstt.1
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TTF
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xfstt

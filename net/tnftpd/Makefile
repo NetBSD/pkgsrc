@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/02 23:00:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/07 09:14:07 rillig Exp $
 #
 
 DISTNAME=		tnftpd-20040810
@@ -28,13 +28,13 @@ OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	CPPFLAGS=""
 
 EXAMPLEDIR=		${PREFIX}/share/examples/tnftpd
-INSTALLATION_DIRS=	libexec man/man5 man/man8
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/tnftpd ${PREFIX}/libexec
-	${INSTALL_MAN} ${WRKSRC}/src/ftpd.conf.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/src/ftpusers.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/src/ftpd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/src/ftpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/src/ftpusers.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/src/ftpd.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/ftpd.conf ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/ftpusers ${EXAMPLEDIR}

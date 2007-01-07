@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/07 09:13:57 rillig Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		5
@@ -21,7 +21,7 @@ UNLIMIT_RESOURCES=	stacksize datasize
 CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O0/}
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	${SED} -e 's:@PREFIX@:${PREFIX}:g'			\
@@ -35,7 +35,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/stalin.sh ${PREFIX}/bin/stalin
 	${INSTALL_DATA} ${WRKSRC}/include/*.sc ${PREFIX}/lib/stalin
 	${INSTALL_DATA} ${WRKSRC}/libstalin.a ${PREFIX}/lib/stalin
-	${INSTALL_MAN} ${WRKSRC}/stalin.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/stalin.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stalin
 	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCEMENT COPYING README	\
 		stalin.el ${PREFIX}/share/doc/stalin/

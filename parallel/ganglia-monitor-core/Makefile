@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/06 05:16:51 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 09:14:08 rillig Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
@@ -55,10 +55,10 @@ post-patch:
 .endfor
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${EGDIR}/
 	${PREFIX}/sbin/gmond -t > ${EGDIR}/gmond.conf

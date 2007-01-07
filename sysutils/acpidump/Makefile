@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:48 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:14:11 rillig Exp $
 #
 
 DISTNAME=	pacpidump
@@ -14,10 +14,10 @@ COMMENT=	Portable ACPI table dumper
 USE_TOOLS+=	gmake
 BUILD_TARGET=	# null
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/acpidump ${PREFIX}/bin
-	@${INSTALL_MAN} ${WRKSRC}/acpidump.8 ${PREFIX}/man/man8
+	@${INSTALL_MAN} ${WRKSRC}/acpidump.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

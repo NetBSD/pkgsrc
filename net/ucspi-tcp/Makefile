@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:07 rillig Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		1
@@ -17,11 +17,11 @@ DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-INSTALLATION_DIRS=	bin man man/man1
+INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1
 
 post-install:
 	cd ${WRKDIR}/*-man; for i in 1; do		 		\
-	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/${PKGMANDIR}/man$$i; done \
 	done
 
 .include "../../mk/djbware.mk"

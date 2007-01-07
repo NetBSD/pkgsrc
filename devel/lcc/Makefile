@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 02:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:51 rillig Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 BUILDDIR=	${WRKSRC}/src
 MAKE_FILE=	makefile
 
-INSTALLATION_DIRS=	bin libexec man/man1
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1
 
 post-extract:
 	${CP} ${FILESDIR}/x86bsd.md ${WRKSRC}/src/
@@ -44,7 +44,7 @@ do-install:
 		${PREFIX}/share/lcc/include
 	${INSTALL_DATA} ${FILESDIR}/cdefs.h \
 		${PREFIX}/share/lcc/include/sys
-	${INSTALL_MAN} ${WRKSRC}/doc/lcc.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/bprint.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/lcc.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bprint.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

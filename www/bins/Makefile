@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/03/04 21:30:57 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/01/07 09:14:15 rillig Exp $
 #
 
 DISTNAME=	bins-1.1.29
@@ -38,7 +38,7 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	bins bins_edit bins-edit-gui tools/bins_addtext \
 		tools/bins_cleanupgallery tools/bins_txt2xml
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	${MV} ${WRKSRC}/bins ${WRKSRC}/bins.bak
@@ -52,8 +52,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bins ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/bins_cleanupgallery ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_edit ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${PREFIX}/${PKGMANDIR}/man1
 	# HTML documentation
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bins
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/html/bins/

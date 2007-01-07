@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 09:14:09 rillig Exp $
 #
 
 DISTNAME=	bcrypt-1.1
@@ -13,11 +13,11 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 BUILD_TARGET=	bcrypt
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bcrypt ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bcrypt.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/bcrypt.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

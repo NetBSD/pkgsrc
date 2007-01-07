@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:13 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:59 rillig Exp $
 #
 
 DISTNAME=	poppy-3.1
@@ -13,10 +13,10 @@ NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	poppy
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/poppy ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/poppy.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/poppy.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

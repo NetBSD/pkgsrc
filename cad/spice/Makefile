@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/10/09 20:04:38 mlelstv Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:48 rillig Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -24,7 +24,7 @@ WRKSRC=			${WRKDIR}
 #PATCH_SITES=	ftp://ilpsoft.eecs.berkeley.edu/pub/SPICE3F5/
 #PATCHFILES=	grid.patch newcoms.patch spsmp.patch
 
-INSTALLATION_DIRS=	bin man/man1 man/man3 man/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
 
 post-extract:
 	${CP} ${FILESDIR}/NetBSD ${WRKSRC}/conf
@@ -54,11 +54,11 @@ do-install:
 		${PREFIX}/bin/sconvert ${PREFIX}/bin/help		\
 		${PREFIX}/bin/proc2mod ${PREFIX}/bin/multidec
 	${CHMOD} -R a+rX ${PREFIX}/share/spice3
-	${INSTALL_MAN} ${WRKSRC}/man/man5/mfbcap.5 ${PREFIX}/man/man5/mfbcap.5
-	${INSTALL_MAN} ${WRKSRC}/man/man1/sconvert.1 ${PREFIX}/man/man1/sconvert.1
-	${INSTALL_MAN} ${WRKSRC}/man/man1/nutmeg.1 ${PREFIX}/man/man1/nutmeg.1
-	${INSTALL_MAN} ${WRKSRC}/man/man1/spice.1 ${PREFIX}/man/man1/spice.1
-	${INSTALL_MAN} ${WRKSRC}/man/man3/mfb.3 ${PREFIX}/man/man3/mfb.3
+	${INSTALL_MAN} ${WRKSRC}/man/man5/mfbcap.5 ${PREFIX}/${PKGMANDIR}/man5/mfbcap.5
+	${INSTALL_MAN} ${WRKSRC}/man/man1/sconvert.1 ${PREFIX}/${PKGMANDIR}/man1/sconvert.1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/nutmeg.1 ${PREFIX}/${PKGMANDIR}/man1/nutmeg.1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/spice.1 ${PREFIX}/${PKGMANDIR}/man1/spice.1
+	${INSTALL_MAN} ${WRKSRC}/man/man3/mfb.3 ${PREFIX}/${PKGMANDIR}/man3/mfb.3
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spice3

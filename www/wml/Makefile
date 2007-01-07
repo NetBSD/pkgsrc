@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/07 09:14:16 rillig Exp $
 #
 
 DISTNAME=	wml-2.0.9
@@ -44,12 +44,12 @@ pre-configure:
 	done
 
 post-install:
-	cd ${PREFIX}/man/cat1 ; \
+	cd ${PREFIX}/${PKGMANDIR}/cat1 ; \
 	for i in wml_aux_tidy wml_aux_txt2html wml_p4_gm4 ; \
 	do \
 	    ${MV} $${i}.1 $${i}.0 ; \
 	done
-	cd ${PREFIX}/man/cat7 ; \
+	cd ${PREFIX}/${PKGMANDIR}/cat7 ; \
 	for i in wml_barebone wml_std_css1 wml_std_css2 wml_std_csspos \
 	    wml_std_html20 wml_std_html32 wml_std_html40 wml_std_html401 \
 	    wml_std_wai10 wml_std_xhtml10 ; \

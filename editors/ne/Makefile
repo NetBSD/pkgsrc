@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:52 rillig Exp $
 
 DISTNAME=	ne-1.31
 CATEGORIES=	editors
@@ -15,11 +15,11 @@ EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 BUILD_TARGET=	NetBSD ne
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nenewp ${PREFIX}/bin/ne
-	${INSTALL_MAN} ${_DISTDIR}/ne.manpage.1 ${PREFIX}/man/man1/ne.1
+	${INSTALL_MAN} ${_DISTDIR}/ne.manpage.1 ${PREFIX}/${PKGMANDIR}/man1/ne.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ne
 	${INSTALL_DATA} ${_DISTDIR}/NE.spec.ascii ${_DISTDIR}/NE.changes.spec \
 		${WRKSRC}/LICENCE ${PREFIX}/share/doc/ne

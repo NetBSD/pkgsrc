@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/04 21:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 09:13:50 rillig Exp $
 
 DISTNAME=	argtable-1.2
 CATEGORIES=	devel
@@ -12,10 +12,10 @@ GNU_CONFIGURE=		YES
 
 USE_LANGUAGES=	c c++
 
-INSTALLATION_DIRS=	include lib man/man3 share/doc/argtable
+INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3 share/doc/argtable
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/man/man3/*.3 ${PREFIX}/man/man3
+	${INSTALL_DATA} ${WRKSRC}/man/man3/*.3 ${PREFIX}/${PKGMANDIR}/man3
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LIB ${PREFIX}/share/doc/argtable
 
 .include "../../mk/bsd.pkg.mk"

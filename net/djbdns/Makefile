@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2007/01/07 09:14:02 rillig Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		7
@@ -26,11 +26,11 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}
 CONF_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
 PLIST_SRC=		${PKGDIR}/PLIST
 
-INSTALLATION_DIRS=	bin man man/man1 man/man5 man/man8 share/examples/djbdns
+INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 share/examples/djbdns
 
 post-install:
 	cd ${WRKDIR}/*-man; for i in 1 5 8; do		 		\
-	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/${PKGMANDIR}/man$$i; done \
 	done
 
 .include "../../mk/djbware.mk"

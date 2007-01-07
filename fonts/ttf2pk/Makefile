@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/27 00:09:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/07 09:13:54 rillig Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -24,7 +24,7 @@ BUILD_TARGET=		depend all
 USE_DIRS+=		texmf-1.0
 USE_LIBTOOL=		yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../print/teTeX/module.mk"
@@ -35,7 +35,7 @@ do-install:
 				${PREFIX}/bin
 	${INSTALL_DATA}		${T2PSRC}/ttf2pk.1 \
 				${T2PSRC}/ttf2tfm.1 \
-				${PREFIX}/man/man1
+				${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR}	${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk
 	${INSTALL_DATA}		${T2PSRC}/BUGS \
 				${T2PSRC}/README \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/20 14:50:43 peter Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/07 09:14:05 rillig Exp $
 
 DISTNAME=		openntpd-3.9p1
 CATEGORIES=		net
@@ -27,12 +27,12 @@ PKG_USERS=		_ntp:_ntp
 PKG_HOME._ntp=		${VARBASE}/chroot/ntpd
 
 OWN_DIRS=		${VARBASE}/chroot/ntpd
-INSTALLATION_DIRS=	man/man5 man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ntpd ${PREFIX}/sbin/ntpd
-	${INSTALL_MAN} ${WRKSRC}/ntpd.8 ${PREFIX}/man/man8/ntpd.8
-	${INSTALL_MAN} ${WRKSRC}/ntpd.conf.5 ${PREFIX}/man/man5/ntpd.conf.5
+	${INSTALL_MAN} ${WRKSRC}/ntpd.8 ${PREFIX}/${PKGMANDIR}/man8/ntpd.8
+	${INSTALL_MAN} ${WRKSRC}/ntpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5/ntpd.conf.5
 
 post-install:
 	@${INSTALL_DATA_DIR} ${EGDIR}

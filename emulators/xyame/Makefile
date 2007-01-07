@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/18 01:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:53 rillig Exp $
 #
 
 DISTNAME=		xyame038
@@ -22,10 +22,10 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 ONLY_FOR_PLATFORM+=	*-*-i386
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xyame ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/yame.6 ${PREFIX}/man/man6/xyame.6
+	${INSTALL_MAN} ${WRKSRC}/yame.6 ${PREFIX}/${PKGMANDIR}/man6/xyame.6
 
 .include "../../mk/bsd.pkg.mk"

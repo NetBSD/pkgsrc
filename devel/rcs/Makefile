@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/01 22:03:12 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:51 rillig Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -25,7 +25,7 @@ CONFIGURE_HAS_MANDIR=	no
 post-install:
 	${RM} -f ${PREFIX}/bin/rcslog
 	${LN} -s ${PREFIX}/bin/rlog ${PREFIX}/bin/rcslog
-	${RM} -f ${PREFIX}/man/man1/rcslog.1 ${PREFIX}/man/man1/rcslog.1.gz
-	${LN} -s ${PREFIX}/man/man1/rlog.1 ${PREFIX}/man/man1/rcslog.1
+	${RM} -f ${PREFIX}/${PKGMANDIR}/man1/rcslog.1 ${PREFIX}/${PKGMANDIR}/man1/rcslog.1.gz
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/rlog.1 ${PREFIX}/${PKGMANDIR}/man1/rcslog.1
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/03 00:45:15 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/07 09:13:59 rillig Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
@@ -29,7 +29,7 @@ DOCS=	COPYRIGHT FEATURES FEATURES.j FYI FYI.j INSTALL INSTALL.j \
 
 BUILD_DEFS+=    USE_INET6
 
-INSTALLATION_DIRS=	libexec man/man8 share/doc/smtpfeed
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8 share/doc/smtpfeed
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=--enable-ipv6
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/smtpfeed.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/smtpfeed.8 ${PREFIX}/${PKGMANDIR}/man8
 	for i in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/smtpfeed; \
 	done

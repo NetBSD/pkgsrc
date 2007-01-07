@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:30 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:13:51 rillig Exp $
 #
 
 DISTNAME=	part01
@@ -17,11 +17,11 @@ BUILD_DEPENDS+=	gsharutils>=4.2.1:../../archivers/gsharutils
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/gunshar
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unify ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/unipatch ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/unify.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/unify.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

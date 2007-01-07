@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2007/01/07 09:14:11 rillig Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		1
@@ -22,7 +22,7 @@ DJB_SLASHPACKAGE=	YES
 
 CMDDIR=			${WRKSRC}/command
 
-INSTALLATION_DIRS=	bin man man/man8
+INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
 SUBST_FILES.djbware+=	src/error.h
 
@@ -37,7 +37,7 @@ do-install:
 
 post-install:
 	cd ${WRKDIR}/*-man; for i in 8; do		 		\
-	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/${PKGMANDIR}/man$$i; done \
 	done
 
 .include "../../mk/djbware.mk"

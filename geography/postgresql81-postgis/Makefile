@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/12/09 17:07:39 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:55 rillig Exp $
 
 DISTNAME=		postgis-${VERSION}
 VERSION=		1.2.0
@@ -36,7 +36,7 @@ do-install:
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/*.txt ${DOCDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc/html && ${PAX} -rw -pp *.html *.css ${HTMLDIR}
-	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${PREFIX}/${PKGMANDIR}/man1
 
 DEPENDS+=	postgresql81-server>=8.1:../../databases/postgresql81-server
 

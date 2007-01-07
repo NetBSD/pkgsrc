@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/07 09:13:55 rillig Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
@@ -20,12 +20,12 @@ NO_INSTALL_MANPAGES=	yes
 
 CPPFLAGS+=	-DSOUNDDEV="\"${DEVOSSSOUND}\""
 
-INSTALLATION_DIRS=	man/man6
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 .include "../../mk/oss.buildlink3.mk"
 
 post-install:
-	@${INSTALL_MAN} ${WRKSRC}/src/scavenger.6 ${PREFIX}/man/man6/
+	@${INSTALL_MAN} ${WRKSRC}/src/scavenger.6 ${PREFIX}/${PKGMANDIR}/man6/
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scavenger
 	@${INSTALL_MAN} ${WRKSRC}/DOC ${PREFIX}/share/doc/scavenger
 

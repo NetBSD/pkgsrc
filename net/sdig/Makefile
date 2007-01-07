@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:24 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:14:06 rillig Exp $
 
 DISTNAME=	sdig-0.30
 PKGREVISION=	1
@@ -23,8 +23,8 @@ post-build: my-post-build
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/sdig.conf ${PREFIX}/share/examples/
 	${INSTALL_DATA} ${WRKDIR}/mactable ${PREFIX}/share/misc/
-	${INSTALL_DATA} ${WRKSRC}/sdig.8 ${PREFIX}/man/man8/
-	${INSTALL_DATA} ${WRKSRC}/sdig.conf.5 ${PREFIX}/man/man5/
+	${INSTALL_DATA} ${WRKSRC}/sdig.8 ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_DATA} ${WRKSRC}/sdig.conf.5 ${PREFIX}/${PKGMANDIR}/man5/
 
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

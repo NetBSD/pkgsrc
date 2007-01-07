@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:48 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:57 rillig Exp $
 #
 
 DISTNAME=	snobol-0.99.4
@@ -20,7 +20,7 @@ BUILD_TARGET=	it
 
 USE_CONFIGURE=		NO
 USE_TOOLS+=		gzip
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	@${CP} ${WRKSRC}/doc/head ${WRKSRC}/doc/tutorial
@@ -28,7 +28,7 @@ do-install:
 	@unzip -p -opaaqqLC ${WRKSRC}/pm.exe >> ${WRKSRC}/doc/tutorial
 	@${GZIP_CMD} ${WRKSRC}/doc/tutorial
 	@${INSTALL_PROGRAM} ${WRKSRC}/xsnobol4 ${PREFIX}/bin/snobol4
-	@${INSTALL_MAN} ${WRKSRC}/doc/snobol4.1 ${PREFIX}/man/man1
+	@${INSTALL_MAN} ${WRKSRC}/doc/snobol4.1 ${PREFIX}/${PKGMANDIR}/man1
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/snobol4
 	@cd ${WRKSRC} && ${INSTALL_DATA} snolib.a snolib/bq.sno \
 		${PREFIX}/lib/snobol4

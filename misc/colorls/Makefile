@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/04 21:30:10 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:00 rillig Exp $
 
 DISTNAME=		ls
 PKGNAME=		colorls-2.2
@@ -16,7 +16,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 MANCOMPRESSED_IF_MANZ=	yes
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} \
 			MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
-INSTALLATION_DIRS=	bin man/man1 man/cat1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 
 pre-patch:
 	${CP} ${WRKSRC}/ls.1 ${WRKSRC}/colorls.1

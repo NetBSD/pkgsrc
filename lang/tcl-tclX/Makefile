@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/11/10 17:34:09 tv Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:57 rillig Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -57,8 +57,8 @@ post-build:
 post-install:
 	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type f -print | ${XARGS} ${CHMOD} ${DOCMODE}
-	@${RM} ${PREFIX}/man/man3/TkX_Main.3
-	@${RM} ${PREFIX}/man/man3/Tkx_Init.3
+	@${RM} ${PREFIX}/${PKGMANDIR}/man3/TkX_Main.3
+	@${RM} ${PREFIX}/${PKGMANDIR}/man3/Tkx_Init.3
 # the above links are installed based on the contents of the man page.
 # we don't want to modify the man page, as it is also used by ../tk-tclX,
 # so...

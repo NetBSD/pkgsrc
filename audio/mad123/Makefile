@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/11/19 11:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/07 09:13:47 rillig Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -37,11 +37,11 @@ MAKE_FLAGS+=	USE_OSS=yes
 MAKE_FLAGS+=	USE_SUN=yes
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${DESTDIR}${PREFIX}/bin/mad123
-	${INSTALL_MAN} ${WRKSRC}/mad123.1 ${DESTDIR}${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/mad123.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:47 rillig Exp $
 
 DISTNAME=	iozone3_263
 PKGNAME=	iozone-3.263
@@ -39,11 +39,11 @@ BUILD_TARGET=		${OPSYS}
 BUILD_TARGET=		generic
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/iozone.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/iozone.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/IOzone
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/Iozone_ps.gz \
 		${PREFIX}/share/doc/IOzone

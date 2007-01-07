@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/10/03 19:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/01/07 09:14:04 rillig Exp $
 
 DISTNAME=	mtr-0.72
 CATEGORIES=	net
@@ -12,7 +12,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 .include "options.mk"
 
@@ -24,7 +24,7 @@ BUILDLINK_TRANSFORM+=	l:termcap:ncurses
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
 	${INSTALL} -c -s -m 4755 -o ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC}/mtr ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/mtr
 
 .include "../../devel/ncurses/buildlink3.mk"

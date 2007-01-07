@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/01/25 15:19:16 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:13:51 rillig Exp $
 #
 
 DISTNAME=		mkcmd-8.14
@@ -11,7 +11,7 @@ MAINTAINER=		epg@NetBSD.org
 COMMENT=		Command-line parser and manual page generator
 
 
-INSTALLATION_DIRS=	bin man/man1 man/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 do-build:
@@ -25,8 +25,8 @@ do-install:
 		install
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/bin/mkcmd/mkcmd.man \
-		${PREFIX}/man/man1/mkcmd.1
+		${PREFIX}/${PKGMANDIR}/man1/mkcmd.1
 	${INSTALL_MAN} ${WRKSRC}/lib/mkcmd/mkcmd.man \
-		${PREFIX}/man/man5/mkcmd.5
+		${PREFIX}/${PKGMANDIR}/man5/mkcmd.5
 
 .include "../../mk/bsd.pkg.mk"

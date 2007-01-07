@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/10/19 06:40:54 martti Exp $
+# $NetBSD: Makefile,v 1.76 2007/01/07 09:14:04 rillig Exp $
 
 DISTNAME=	mrtg-2.14.7
 CATEGORIES=	net
@@ -70,9 +70,9 @@ do-install:
 	for FILE in ${WRKSRC}/doc/*.??*; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/mrtg; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/doc/mrtg*.1 ${PREFIX}/man/man1/
+	${INSTALL_DATA} ${WRKSRC}/doc/mrtg*.1 ${PREFIX}/${PKGMANDIR}/man1/
 	for FILE in cfgmaker.1 indexmaker.1; do \
-	  ${INSTALL_DATA} ${WRKSRC}/doc/$$FILE ${PREFIX}/man/man1/mrtg$$FILE; \
+	  ${INSTALL_DATA} ${WRKSRC}/doc/$$FILE ${PREFIX}/${PKGMANDIR}/man1/mrtg$$FILE; \
 	done
 	for FILE in CHANGES COPYING COPYRIGHT README; do \
 	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/mrtg; \

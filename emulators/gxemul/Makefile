@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/11/09 20:01:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:53 rillig Exp $
 #
 
 DISTNAME=	gxemul-0.4.3
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gxemul ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/gxemul.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/gxemul.1 ${PREFIX}/${PKGMANDIR}/man1
 .for f in README HISTORY TODO RELEASE LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
 .endfor

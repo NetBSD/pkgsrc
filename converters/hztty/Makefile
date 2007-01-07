@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/19 16:11:41 tv Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:49 rillig Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -21,10 +21,10 @@ BUILD_TARGET=	svr4
 BUILD_TARGET=	bsd
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hztty ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/hztty.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/hztty.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

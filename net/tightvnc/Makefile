@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:10:31 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:07 rillig Exp $
 #
 
 DISTNAME=		tightvnc-1.2.9
@@ -27,22 +27,22 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc \
 	    ${PREFIX}/bin/Xvnc
 	${INSTALL_MAN} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc.man \
-	    ${PREFIX}/man/man1/Xvnc.1
+	    ${PREFIX}/${PKGMANDIR}/man1/Xvnc.1
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect \
 	    ${PREFIX}/bin/vncconnect
 	${INSTALL_MAN} ${WRKSRC}/vncconnect/vncconnect.man \
-	    ${PREFIX}/man/man1/vncconnect.1
+	    ${PREFIX}/${PKGMANDIR}/man1/vncconnect.1
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd \
 	    ${PREFIX}/bin/vncpasswd
 	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
-	    ${PREFIX}/man/man1/vncpasswd.1
+	    ${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
 	${SED} -e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g' \
 		-e 's|/usr/bin/perl|${PERL5}|g' \
 		< ${WRKSRC}/vncserver \
 		> ${WRKSRC}/vncserver.local
 	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver
 	${INSTALL_MAN} ${WRKSRC}/vncserver.man \
-	    ${PREFIX}/man/man1/vncserver.1
+	    ${PREFIX}/${PKGMANDIR}/man1/vncserver.1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
