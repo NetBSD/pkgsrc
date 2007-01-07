@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/07 12:06:35 adam Exp $
 
-DISTNAME=	SDL_gfx-2.0.13
-PKGREVISION=	4
+DISTNAME=	SDL_gfx-2.0.15
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
 
@@ -10,16 +9,16 @@ HOMEPAGE=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
 COMMENT=	Basic drawing routines for SDL
 
 USE_TOOLS+=		gmake
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
-
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-mmx
 .endif
 
+INSTALLATION_DIRS+=	share/doc/SDL_gfx
+INSTALLATION_DIRS+=	share/doc/SDL_gfx/Screenshots
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/SDL_gfx/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/SDL_gfx/Screenshots
 	${INSTALL_DATA} ${WRKSRC}/Docs/*.* ${PREFIX}/share/doc/SDL_gfx/
 	${INSTALL_DATA} ${WRKSRC}/Docs/Screenshots/* \
 		${PREFIX}/share/doc/SDL_gfx/Screenshots
