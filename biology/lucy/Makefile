@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/04 20:47:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 09:13:48 rillig Exp $
 #
 
 DISTNAME=		lucy-1.18p
@@ -11,11 +11,11 @@ COMMENT=		Sequence Cleanup Program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lucy ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/lucy.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/lucy.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/lucy
 .for EXAMPLE in PUC19 PUC19splice PUC19splice.for PUC19splice.rev \
 	atie.seq atie.qul atie.2nd pSPORT1splice pSPORT1vector ARMTM40TR.seq \

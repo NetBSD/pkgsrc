@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2006/11/04 11:19:41 adrianp Exp $
+# $NetBSD: Makefile,v 1.74 2007/01/07 09:14:15 rillig Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		3
@@ -63,7 +63,7 @@ post-extract:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
-	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
+	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/21 18:06:18 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/07 09:14:03 rillig Exp $
 
 DISTNAME=	mDNSResponder-108
 PKGNAME=	mDNSResponder-nss-108
@@ -27,7 +27,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nss_mdns
 	${INSTALL_DATA} ${WRKSRC}/mDNSPosix/nss_mdns.conf \
 		${PREFIX}/share/examples/nss_mdns
-	${INSTALL_MAN} ${WRKSRC}/mDNSPosix/nss_mdns.conf.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/mDNSPosix/nss_mdns.conf.5 ${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

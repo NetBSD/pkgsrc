@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/08 15:50:14 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:55 rillig Exp $
 
 DISTNAME=	xbomb-2.1a
 PKGREVISION=	2
@@ -22,7 +22,7 @@ SCORE_GROUP=	games
 PKG_USERS=	${SCORE_USER}:${SCORE_GROUP}
 PKG_GROUPS=	${SCORE_GROUP}
 
-INSTALLATION_DIRS=	bin man/man6 lib/X11/app-defaults
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 lib/X11/app-defaults
 CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH}/xbomb3.hi ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
 CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH}/xbomb4.hi ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
 CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH}/xbomb6.hi ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}

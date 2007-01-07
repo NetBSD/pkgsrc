@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/12/07 14:09:02 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/07 09:14:01 rillig Exp $
 
 PKGNAME=	mencoder-${MPLAYER_PKG_VERSION}
 
@@ -13,16 +13,16 @@ CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 BUILD_TARGET=	mencoder
 
 MANCOMPRESSED_IF_MANZ=	1
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mencoder ${PREFIX}/bin
 	if [ X"${MANZ}" = X"" ]; then \
-		${LN} -s -f ${PREFIX}/man/man1/mplayer.1 \
-			${PREFIX}/man/man1/mencoder.1; \
+		${LN} -s -f ${PREFIX}/${PKGMANDIR}/man1/mplayer.1 \
+			${PREFIX}/${PKGMANDIR}/man1/mencoder.1; \
 	else \
-		${LN} -s -f ${PREFIX}/man/man1/mplayer.1.gz \
-			${PREFIX}/man/man1/mencoder.1.gz; \
+		${LN} -s -f ${PREFIX}/${PKGMANDIR}/man1/mplayer.1.gz \
+			${PREFIX}/${PKGMANDIR}/man1/mencoder.1.gz; \
 	fi
 
 .include "../../multimedia/mplayer-share/Makefile.depends"

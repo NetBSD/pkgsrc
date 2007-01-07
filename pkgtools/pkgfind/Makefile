@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/07 09:14:09 rillig Exp $
 
 DISTNAME=	pkgfind-20050804
 CATEGORIES=	pkgtools
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
@@ -23,7 +23,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${PREFIX}/bin/pkgfind
-	${INSTALL_MAN} ${WRKSRC}/pkgfind.1 ${PREFIX}/man/man1/pkgfind.1
+	${INSTALL_MAN} ${WRKSRC}/pkgfind.1 ${PREFIX}/${PKGMANDIR}/man1/pkgfind.1
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch

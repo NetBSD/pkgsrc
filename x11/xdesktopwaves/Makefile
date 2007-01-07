@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:31:12 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:16 rillig Exp $
 #
 
 DISTNAME=	xdesktopwaves-1.1
@@ -15,13 +15,13 @@ USE_DIRS+=		xdg-1.1
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_FLAGS+=		LFLAGS=${LDFLAGS:M*:Q}
 
-INSTALLATION_DIRS=	bin man/man1 share/doc/xdesktopwaves
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/xdesktopwaves
 
 .include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdesktopwaves ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/xdesktopwaves.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/xdesktopwaves.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xdesktopwaves/
 	${INSTALL_DATA} ${WRKSRC}/xdesktopwaves.xpm ${PREFIX}/share/pixmaps/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/12/23 04:36:45 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/01/07 09:13:59 rillig Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -23,7 +23,7 @@ BUILD_DEFS+=	PROCMAIL_MAILSPOOLHOME PROCMAIL_TRUSTED_IDS
 PROCMAIL_TRUSTED_IDS?=\
 "root","daemon","uucp","mail","x400","network","list","slist","lists","news",0
 
-INSTALLATION_DIRS=	bin man/man1 man/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 pre-configure:
 	${ECHO} "#define TRUSTED_IDS {${PROCMAIL_TRUSTED_IDS:Q}}"	\
@@ -47,10 +47,10 @@ do-install:
 	done;								\
 	${INSTALL_SCRIPT} mailstat ${PREFIX}/bin/mailstat;		\
 	for f in procmail.1 formail.1 lockfile.1; do			\
-		${INSTALL_MAN} $$f ${PREFIX}/man/man1/$$f;		\
+		${INSTALL_MAN} $$f ${PREFIX}/${PKGMANDIR}/man1/$$f;		\
 	done;								\
 	for f in procmailex.5 procmailrc.5 procmailsc.5; do		\
-		${INSTALL_MAN} $$f ${PREFIX}/man/man5/$$f;		\
+		${INSTALL_MAN} $$f ${PREFIX}/${PKGMANDIR}/man5/$$f;		\
 	done
 	${SH} ${WRKSRC}/suid.sh
 .endif

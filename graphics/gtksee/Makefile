@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/07 09:13:55 rillig Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/gtksee.1 ${PREFIX}/man/man1/gtksee.1
+	${INSTALL_MAN} ${WRKSRC}/man/gtksee.1 ${PREFIX}/${PKGMANDIR}/man1/gtksee.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtksee
 	${INSTALL_DATA} ${WRKSRC}/README  ${PREFIX}/share/doc/gtksee
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/gtksee

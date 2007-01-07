@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:01 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:48 rillig Exp $
 
 DISTNAME=	NetPIPE_2.4
 PKGNAME=	netpipe-2.4
@@ -20,11 +20,11 @@ CFLAGS+=	-DHAVE_GETRUSAGE
 MAKE_ENV+=	EXTRA_LIBS="-lsocket -lnsl"
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	cd ${WRKSRC} ; \
 	${INSTALL_PROGRAM} NPtcp ${PREFIX}/bin/NPtcp ; \
-	${INSTALL_MAN} netpipe.1 ${PREFIX}/man/man1/netpipe.1
+	${INSTALL_MAN} netpipe.1 ${PREFIX}/${PKGMANDIR}/man1/netpipe.1
 
 .include "../../mk/bsd.pkg.mk"

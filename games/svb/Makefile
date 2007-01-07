@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:36 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:55 rillig Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -18,7 +18,7 @@ post-install:
 	${INSTALL_GAME_DATA} /dev/null /var/games/svb.scorefile
 	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${PREFIX}/bin/svb
 	${CHMOD} ${GAMEMODE} ${PREFIX}/bin/svb
-	${INSTALL_MAN} ${WRKSRC}/svb.man ${PREFIX}/man/man6/svb.6
+	${INSTALL_MAN} ${WRKSRC}/svb.man ${PREFIX}/${PKGMANDIR}/man6/svb.6
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

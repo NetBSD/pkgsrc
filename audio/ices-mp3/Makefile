@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:47 rillig Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -32,14 +32,14 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MODDIR=			${PREFIX}/share/${PKGBASE}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ices ${PREFIX}/bin/${PKGBASE}
-	${INSTALL_MAN} ${WRKSRC}/doc/ices.1 ${PREFIX}/man/man1/${PKGBASE}.1
+	${INSTALL_MAN} ${WRKSRC}/doc/ices.1 ${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/icesmanual.html ${DOCDIR}
 	for i in AUTHORS BUGS COPYING NEWS README README.playlist TODO ; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/01/08 21:00:22 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:08 rillig Exp $
 #
 
 DISTNAME=	dfdisk-1.0
@@ -25,7 +25,7 @@ FILES_SUBST+=	FTP="${ZOULARISBASE}/bin/ftp -p"
 FILES_SUBST+=	FTP="/usr/bin/ftp -p"
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	dfdisk.sh dfdisk.1 dfdisk.conf
@@ -44,7 +44,7 @@ post-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/dfdisk.sh ${PREFIX}/bin/dfdisk
-	${INSTALL_DATA} ${WRKDIR}/dfdisk.1 ${PREFIX}/man/man1/dfdisk.1
+	${INSTALL_DATA} ${WRKDIR}/dfdisk.1 ${PREFIX}/${PKGMANDIR}/man1/dfdisk.1
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/dfdisk.conf ${EGDIR}
 

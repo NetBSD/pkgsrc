@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:14 rillig Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -52,7 +52,7 @@ OWN_DIRS=		/var/spool/anacron
 
 RCD_SCRIPTS=		anacron
 
-INSTALLATION_DIRS=	man/man5 man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

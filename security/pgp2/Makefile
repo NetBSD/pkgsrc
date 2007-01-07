@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/10/04 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2007/01/07 09:14:10 rillig Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -42,7 +42,7 @@ CFLAGS+=        -DHIGHFIRST
 
 BUILD_DEFS+=	ASMFLAG
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-extract:
 	cd ${WRKDIR} && ${TAR} xf pgp263ii.tar && ${RM} -f pgp263ii.tar
@@ -55,7 +55,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pgp ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/doc/pgp.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKDIR}/doc/pgp.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PGPLIB}
 	cd ${WRKDIR}/doc && ${INSTALL_DATA} pgpdoc1.txt pgpdoc2.txt ${PGPLIB}
 	cd ${WRKDIR} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/07 09:13:57 rillig Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		6
@@ -46,7 +46,7 @@ SUBST_SED.sather-configure=					\
 	-e 's:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g'	\
 	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-patch:
 	cd ${WRKSRC}/System/Platforms && ${CP} -r netbsd dragonfly

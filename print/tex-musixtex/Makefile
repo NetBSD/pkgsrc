@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/10/04 21:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/07 09:14:09 rillig Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -25,7 +25,7 @@ INITEX= 	initex		# teTeX2
 INITEX= 	tex -ini	# teTeX3
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../print/teTeX/module.mk"
 
@@ -63,7 +63,7 @@ do-install:
 		${PREFIX}/bin
 
 	${INSTALL_MAN} ${WRKSRC}/system/c-source/musixflx.1 \
-		${PREFIX}/man/man1
+		${PREFIX}/${PKGMANDIR}/man1
 
 .if exists(${LOCALBASE}/bin/virtex)
 	cd ${PREFIX}/bin ; ${LN} -sf virtex musixtex	# teTeX2
