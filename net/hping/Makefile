@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/30 13:51:28 salo Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=		hping2.0.0-rc3
@@ -15,7 +15,7 @@ HAS_CONFIGURE=		YES
 MANPATH=		${PREFIX}/man
 CONFIGURE_ENV+=		MANPATH=${MANPATH:Q}
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 CONFIGURE_ENV+=		PCAPINCDIR=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ENV+=		PCAPLIBDIR=${BUILDLINK_PREFIX.libpcap}/lib
@@ -25,8 +25,8 @@ CONFIGURE_ENV+=		PCAPLIBDIR=${BUILDLINK_PREFIX.libpcap}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping2 ${PREFIX}/sbin
 	${LN} -s ../sbin/hping2 ${PREFIX}/sbin/hping
-	${INSTALL_MAN} ${WRKSRC}/docs/hping2.8 ${PREFIX}/man/man8
-	${LN} -s ../../man/man8/hping2.8 ${PREFIX}/man/man8/hping.8
+	${INSTALL_MAN} ${WRKSRC}/docs/hping2.8 ${PREFIX}/${PKGMANDIR}/man8
+	${LN} -s ../../man/man8/hping2.8 ${PREFIX}/${PKGMANDIR}/man8/hping.8
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

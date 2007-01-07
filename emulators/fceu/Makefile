@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 09:13:53 rillig Exp $
 #
 
 DISTNAME=		fceu-0.98.13.src
@@ -24,7 +24,7 @@ SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/fceu-sdl.6 \
-		${PREFIX}/man/man6/fceu.6
+		${PREFIX}/${PKGMANDIR}/man6/fceu.6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fceu
 	${INSTALL_DATA} ${WRKSRC}/Documentation/*.html \
 		${PREFIX}/share/doc/fceu

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 20:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:47 rillig Exp $
 #
 
 DISTNAME=	oggasm_1.4.0
@@ -22,10 +22,10 @@ REPLACE_PERL=	oggasm
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/oggasm ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/oggasm.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/oggasm.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

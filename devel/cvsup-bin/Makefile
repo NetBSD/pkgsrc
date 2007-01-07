@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:50 rillig Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -19,7 +19,7 @@ DIST_SUBDIR=	cvsup-i386-1.6
 
 CONFLICTS=	cvsup-[0-9]* cvsup-gui-[0-9]*
 
-INSTALLATION_DIRS=	bin man/man1 man/man5 sbin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 sbin
 
 do-install:
 	for i in cvpasswd cvsup ; do \
@@ -29,10 +29,10 @@ do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/sbin/$$i ${PREFIX}/sbin; \
 	done
 	for i in cvpasswd.1 cvsup.1; do \
-		${INSTALL_MAN} ${WRKSRC}/man/man1/$$i ${PREFIX}/man/man1; \
+		${INSTALL_MAN} ${WRKSRC}/man/man1/$$i ${PREFIX}/${PKGMANDIR}/man1; \
 	done
 	for i in cvsupd.8; do \
-		${INSTALL_MAN} ${WRKSRC}/man/man8/$$i ${PREFIX}/man/man8; \
+		${INSTALL_MAN} ${WRKSRC}/man/man8/$$i ${PREFIX}/${PKGMANDIR}/man8; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsup
 	${INSTALL_DATA} ${WRKSRC}/share/doc/cvsup/License \

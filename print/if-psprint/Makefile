@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/02/05 23:10:37 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/07 09:14:09 rillig Exp $
 #
 
 DISTNAME=	if-psprint-1.7
@@ -14,7 +14,7 @@ DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
 USE_TOOLS+=	gs:run perl:run
 
-INSTALLATION_DIRS=	libexec man/man1
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man1
 
 do-build:
 	${SED} -e 's|/usr/local|${PREFIX}|g'		\
@@ -24,6 +24,6 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/if-psprint ${PREFIX}/libexec/if-psprint
-	${INSTALL_MAN} ${WRKSRC}/if-psprint.1 ${PREFIX}/man/man1/if-psprint.1
+	${INSTALL_MAN} ${WRKSRC}/if-psprint.1 ${PREFIX}/${PKGMANDIR}/man1/if-psprint.1
 
 .include "../../mk/bsd.pkg.mk"

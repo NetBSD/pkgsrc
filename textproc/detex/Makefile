@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/20 22:23:27 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:14:13 rillig Exp $
 #
 
 DISTNAME=	detex-2.7
@@ -12,10 +12,10 @@ COMMENT=	Remove LaTeX commands
 
 USE_TOOLS+=	lex
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/detex ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/detex.1l ${PREFIX}/man/man1/detex.1
+	${INSTALL_MAN} ${WRKSRC}/detex.1l ${PREFIX}/${PKGMANDIR}/man1/detex.1
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/07 03:16:48 dsainty Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/07 09:13:55 rillig Exp $
 #
 
 DISTNAME=		xblast-2.10.2
@@ -34,7 +34,7 @@ pre-build:
 	${MV} ${WRKDIR}/musics-2005-01-06/* ${WRKSRC}/sounds
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/xblast.man ${PREFIX}/man/man6/xblast.6
+	${INSTALL_MAN} ${WRKSRC}/xblast.man ${PREFIX}/${PKGMANDIR}/man6/xblast.6
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

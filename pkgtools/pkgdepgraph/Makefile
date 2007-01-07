@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/07 09:14:09 rillig Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.8
@@ -24,7 +24,7 @@ DISTVER=	${DISTNAME:S/pkgdepgraph-//}
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 do-extract:
 	${CP} ${FILESDIR}/pkgdepgraph.pl ${WRKSRC}/pkgdepgraph.pl
@@ -53,7 +53,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${PREFIX}/bin/pkgdepgraph
-	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.0 ${PREFIX}/man/cat1
-	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.0 ${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

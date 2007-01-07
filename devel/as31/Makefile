@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/09/09 02:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:50 rillig Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
@@ -18,10 +18,10 @@ USE_TOOLS+=	yacc
 MAKE_FILE=	makefile
 BUILD_TARGET=	as31
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/as31 ${PREFIX}/bin/as31
-	${INSTALL_DATA} ${WRKSRC}/as31.man ${PREFIX}/man/man1/as31.1
+	${INSTALL_DATA} ${WRKSRC}/as31.man ${PREFIX}/${PKGMANDIR}/man1/as31.1
 
 .include "../../mk/bsd.pkg.mk"

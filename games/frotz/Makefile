@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/07 09:13:54 rillig Exp $
 
 DISTNAME=	frotz-2.43
 PKGREVISION=	2
@@ -21,11 +21,11 @@ INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-V]-*
 SAMPLEDIR=	${PREFIX}/share/examples/frotz
 DOCDIR=		${PREFIX}/share/doc/frotz
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/frotz ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/frotz.6 ${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/doc/frotz.6 ${PREFIX}/${PKGMANDIR}/man6
 	${INSTALL_DATA_DIR} ${SAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/frotz.conf-big ${SAMPLEDIR}/frotz.conf
 	${INSTALL_DATA_DIR} ${DOCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:49 rillig Exp $
 #
 
 DISTNAME=       bbcim095-5
@@ -14,13 +14,13 @@ COMMENT=	File and diskimage conversion utility for BBC Micro software
 WRKSRC=		${WRKDIR}/bbcim
 MAN_PAGE=	${FILESDIR}/bbcim.1
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	(cd ${WRKSRC} && ${WRKSRC}/mkbbcim)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bbcim ${PREFIX}/bin/
-	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

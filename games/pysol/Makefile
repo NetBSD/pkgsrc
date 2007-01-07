@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/09/03 00:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:54 rillig Exp $
 #
 
 DISTNAME=	pysol-4.81
@@ -19,14 +19,14 @@ PYTHON_VERSIONS_ACCEPTED=	22 21 20 15
 
 CARDSETS=	pysol-cardsets-4.40
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${SED} -e "s|@pkgdatadir@|${PREFIX}/share/pysol|" \
 		-e "s|python|${PYTHONBIN}|" \
 		< ${WRKSRC}/pysol > ${PREFIX}/bin/pysol
 	${CHMOD} +x ${PREFIX}/bin/pysol
-	${INSTALL_DATA} ${WRKSRC}/pysol.6 ${PREFIX}/man/man6
+	${INSTALL_DATA} ${WRKSRC}/pysol.6 ${PREFIX}/${PKGMANDIR}/man6
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/pysol
 	(cd ${WRKSRC}/data; tar cf - *) | \
 		(cd ${PREFIX}/share/pysol; tar xf -)

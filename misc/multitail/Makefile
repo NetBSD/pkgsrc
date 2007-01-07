@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/06/25 00:01:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/07 09:14:01 rillig Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 
 USE_NCURSES=		yes	# Needs the <panel> library.
-INSTALLATION_DIRS=	bin man/man1 share/doc/multitail share/examples/multitail
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail share/examples/multitail
 
 CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
 		${PKG_SYSCONFDIR:Q}/multitail.conf

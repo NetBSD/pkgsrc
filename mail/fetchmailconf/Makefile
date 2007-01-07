@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/03/04 21:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2007/01/07 09:13:58 rillig Exp $
 
 DISTNAME=	fetchmail-6.2.5.5
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -19,11 +19,11 @@ PATCHDIR=		${.CURDIR}/../../mail/fetchmail/patches
 
 PYTHON_PATCH_SCRIPTS= fetchmailconf
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf ${PREFIX}/bin
-		${LN} -s fetchmail.1 ${PREFIX}/man/man1/fetchmailconf.1
+		${LN} -s fetchmail.1 ${PREFIX}/${PKGMANDIR}/man1/fetchmailconf.1
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink3.mk"

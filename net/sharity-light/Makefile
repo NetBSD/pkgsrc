@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/14 08:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:06 rillig Exp $
 #
 
 DISTNAME=	Sharity-Light.1.2
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	Interix-*-* # SMB is all native
 # avoid picking up a bad value from a users environment
 MAKE_ENV+=	"ARCH=	"
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 post-extract:
 	${MKDIR} ${WRKDIR}/unshlight
@@ -31,6 +31,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sharity-light
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/FAQ.txt \
 		${PREFIX}/share/doc/sharity-light/
-	${INSTALL_MAN} ${WRKSRC}/smbmount.8 ${PREFIX}/man/man8/shlight.8
+	${INSTALL_MAN} ${WRKSRC}/smbmount.8 ${PREFIX}/${PKGMANDIR}/man8/shlight.8
 
 .include "../../mk/bsd.pkg.mk"
