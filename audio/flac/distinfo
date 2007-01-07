@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.13 2006/07/06 12:39:10 markd Exp $
+$NetBSD: distinfo,v 1.14 2007/01/07 12:25:05 wiz Exp $
 
-SHA1 (flac-1.1.2.tar.gz) = 65501f3547df99b153951edb2ee7bfc13dd56946
-RMD160 (flac-1.1.2.tar.gz) = 58656837b02e211eaed5010d84c4ed59841c82d3
-Size (flac-1.1.2.tar.gz) = 1516235 bytes
-SHA1 (patch-aa) = debaf60c08f942682aca8a8461475a743c53034f
-SHA1 (patch-ab) = 232db53797c1533bfbe8bb619e713d771ddf27d1
-SHA1 (patch-ac) = 1d305f4a48d96dc3e7cd80fd02f73340a643a982
-SHA1 (patch-ad) = 2f28211919873412f7d10e5a716fa0aa0abf68cf
-SHA1 (patch-ae) = 60e14c3d6622d616b5ff2987224f57145c7fb504
+SHA1 (flac-1.1.3.tar.gz) = e19c92bebe536b69dd14d54de76c1f626b83b295
+RMD160 (flac-1.1.3.tar.gz) = 3bb360940775b6b2a5127accfb12d29c04da1132
+Size (flac-1.1.3.tar.gz) = 1592699 bytes
+SHA1 (patch-aa) = 2e81bac9dba5b7f66118bbdb3ed77786701072e4
+SHA1 (patch-ab) = d7b48e37ca81450d0ffc4a97914d06c1464daf7b
+SHA1 (patch-ac) = 647657a3af2db35dbce6fcef2f238c543b55573e
+SHA1 (patch-ad) = 9df5668bb5ffc0850be0a3b34ada825642752874
+SHA1 (patch-ae) = b73e4b160c9435525e96213d6c77e743947746d3
 SHA1 (patch-af) = 945fd4fa294f84ebbbeeb561bf7ce0885261539c
