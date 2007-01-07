@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.49 2007/01/05 16:39:28 ghen Exp $
+$NetBSD: distinfo,v 1.50 2007/01/07 14:48:54 ghen Exp $
 
-SHA1 (dovecot-1.0.rc16.tar.gz) = b98095cf13364f44ee5844596652d69699f02408
-RMD160 (dovecot-1.0.rc16.tar.gz) = 651988039a20cb84f65e3e840d50d8357d9d6216
-Size (dovecot-1.0.rc16.tar.gz) = 1512299 bytes
+SHA1 (dovecot-1.0.rc17.tar.gz) = f1e6e3c73e2431582919fd174b2c1f64f39dce46
+RMD160 (dovecot-1.0.rc17.tar.gz) = de91fe34a837fafb5e8abbb1cc652c7ba849b210
+Size (dovecot-1.0.rc17.tar.gz) = 1512386 bytes
 SHA1 (patch-aa) = 6258057d49add91f06d4dd51ded72e42f6774354
 SHA1 (patch-ab) = 7a6441459bcf6d291d9fef7d99f46e825283f673
 SHA1 (patch-ag) = bd180441a0983ceccc898024370a3bdefdc11b1f
