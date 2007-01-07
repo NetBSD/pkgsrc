@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/30 03:44:43 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:04:09 rillig Exp $
 
 DISTNAME=	guile-lib-0.1.2
 PKGREVISION=	1
@@ -14,11 +14,11 @@ COMMENT=	Library functions for Guile, implemented in Scheme
 # pre-configure target.
 #
 HAS_CONFIGURE=		yes
-CONFIGURE_DIRS=		${WRKSRC}/build
-BUILD_DIRS=		${WRKSRC}/build
+CONFIGURE_DIRS=		build
 CONFIGURE_SCRIPT=	../src/configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-pkginfodir=${PKGINFODIR:Q}
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 
 USE_TOOLS+=	gmake makeinfo
 TEXINFO_REQD=	4.2
@@ -28,11 +28,6 @@ TEST_TARGET=	test
 .include "../../lang/guile/buildlink3.mk"
 
 pre-configure:
-	${MKDIR} ${WRKSRC}/build
-.for FILE in config.guess config.sub
-	${RM} ${WRKSRC}/src/build-tools/gnu/${FILE}
-	${LN} -s ${PKGSRCDIR}/mk/gnu-config/${FILE}			\
-		${WRKSRC}/src/build-tools/gnu/${FILE}
-.endfor
+	mkdir ${WRKSRC}/build
 
 .include "../../mk/bsd.pkg.mk"
