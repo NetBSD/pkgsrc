@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.10 2007/01/07 03:53:09 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.11 2007/01/07 13:13:25 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -23,3 +23,5 @@ Pullup ticket 1979 - requested by adrianp
 security update for drupal
 Pullup ticket 1980 - requested by wiz
 security update for bzip2
+Pullup ticket 1981 - requested by uebayasi
+PKGNAME fix for hugs
