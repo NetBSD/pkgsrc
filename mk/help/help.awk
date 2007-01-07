@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.5 2007/01/06 16:49:40 rillig Exp $
+# $NetBSD: help.awk,v 1.6 2007/01/07 08:48:11 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -47,6 +47,7 @@ always {
 			relevant = yes;
 		}
 	}
+	ignore_this_line = yes;
 	ignore_next_empty_line = yes;
 }
 
