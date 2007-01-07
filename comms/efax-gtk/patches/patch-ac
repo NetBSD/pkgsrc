@@ -1,42 +1,13 @@
-$NetBSD: patch-ac,v 1.8 2006/09/24 16:56:16 adam Exp $
+$NetBSD: patch-ac,v 1.9 2007/01/07 13:46:19 adam Exp $
 
---- src/fax_list.cpp.orig	2006-08-13 16:18:08.000000000 +0200
-+++ src/fax_list.cpp
-@@ -633,7 +633,7 @@ std::pair<const char*, char* const*> Fax
-     // thread while we are accessing it here
-     Thread::Mutex::Lock lock(*prog_config.mutex_p);
+--- po/Makefile.in.in.orig	2007-01-07 11:44:27.000000000 +0100
++++ po/Makefile.in.in
+@@ -30,7 +30,7 @@ gettextsrcdir = $(datadir)/gettext/po
  
--    efix_parms.push_back("efix-0.9a");
-+    efix_parms.push_back("efix");
-     // shut up efix (comment out next line and uncomment following one if errors to be reported)
-     efix_parms.push_back("-v");
-     //efix_parms.push_back("-ve");
-@@ -805,8 +805,8 @@ std::pair<const char*, char* const*> Fax
-   
-   *temp_pp = 0;
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+-mkinstalldirs = $(SHELL) @install_sh@ -d
++mkinstalldirs = @install_sh@ -d
+ mkdir_p = @mkdir_p@
  
--  char* prog_name = new char[std::strlen("efix-0.9a") + 1];
--  std::strcpy(prog_name, "efix-0.9a");
-+  char* prog_name = new char[std::strlen("efix") + 1];
-+  std::strcpy(prog_name, "efix");
- 
-   return std::pair<const char*, char* const*>(prog_name, exec_parms);
- }
-@@ -1010,7 +1010,7 @@ void FaxListDialog::print_fax_thread(voi
- 
-       // if we reached this point, then the execvp() call must have failed
-       // report error and then end process - use _exit(), not exit()
--      write_error("Can't find the efix-0.9a program - please check your installation\n"
-+      write_error("Can't find the efix program - please check your installation\n"
- 		  "and the PATH environmental variable\n");
-       _exit(0);
-     }
-@@ -1212,7 +1212,7 @@ void FaxListDialog::view_fax_thread(void
- 
-     // if we reached this point, then the execvp() call must have failed
-     // report error and then end process - use _exit(), not exit()
--    write_error("Can't find the efix-0.9a program - please check your installation\n"
-+    write_error("Can't find the efix program - please check your installation\n"
- 		"and the PATH environmental variable\n");
-     _exit(0);
-   }
+ GMSGFMT_ = @GMSGFMT@
