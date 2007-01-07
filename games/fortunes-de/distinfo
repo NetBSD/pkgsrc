@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:11:57 agc Exp $
+$NetBSD: distinfo,v 1.4 2007/01/07 13:14:15 rillig Exp $
 
-SHA1 (fortunes-de_0.19.orig.tar.gz) = fe174f1980ff296fb1f77db8fd79446aa1c08ce9
-RMD160 (fortunes-de_0.19.orig.tar.gz) = fa3c516a036f86bc4909340bc2160d36fbb1d448
-Size (fortunes-de_0.19.orig.tar.gz) = 897571 bytes
+SHA1 (fortunes-de_0.20.orig.tar.gz) = ab102dd59ea765b9e107f9a65a9be3565d798bae
+RMD160 (fortunes-de_0.20.orig.tar.gz) = 613b983fed197aa79eddf0543febc5cf6753da0b
+Size (fortunes-de_0.20.orig.tar.gz) = 899289 bytes
