@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2005/02/28 14:09:19 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2007/01/07 12:25:05 wiz Exp $
 
---- doc/html/images/Makefile.in.orig	2005-02-05 03:23:28.000000000 +0100
+--- doc/html/images/Makefile.in.orig	2006-11-27 06:40:52.000000000 +0000
 +++ doc/html/images/Makefile.in
-@@ -226,7 +226,7 @@ sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+@@ -218,7 +218,7 @@ target_alias = @target_alias@
+ 
  AUTOMAKE_OPTIONS = foreign
+ 
 -docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/html/images
 +docdir = $(datadir)/doc/html/$(PACKAGE)/images
+ 
  doc_DATA = \
  	1x1.gif \
- 	cafebug.gif \
