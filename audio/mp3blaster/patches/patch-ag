@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2005/12/11 22:22:37 joerg Exp $
+$NetBSD: patch-ag,v 1.5 2007/01/07 23:53:24 cbiere Exp $
 
 --- src/main.cc.orig	2003-09-09 21:22:55.000000000 +0000
 +++ src/main.cc
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.4 2005/12/11 22:22:37 joerg Exp $
  	{
  		DIR *dir2 = NULL;
 -		char *newpath = (char *)malloc((entry->d_reclen + 2 + strlen(path)) *
-+		char *newpath = (char *)malloc((sizeof(*entry) + entry->d_namlen + 2 + strlen(path)) *
++		char *newpath = (char *)malloc((strlen(entry->d_name) + 2 + strlen(path)) *
  			sizeof(char));
  
  		PTH_YIELD;
