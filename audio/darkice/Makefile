@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/10/10 20:09:22 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/07 12:25:50 wiz Exp $
 #
 
 DISTNAME=	darkice-0.17.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:10:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/01/07 12:25:53 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TWOLAME_BUILDLINK3_MK:=	${TWOLAME_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}twolame
 
 .if ${TWOLAME_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.twolame+=	twolame>=0.3.7
+BUILDLINK_ABI_DEPENDS.twolame?=	twolame>=0.3.7nb1
 BUILDLINK_PKGSRCDIR.twolame?=	../../audio/twolame
 .endif	# TWOLAME_BUILDLINK3_MK
 
