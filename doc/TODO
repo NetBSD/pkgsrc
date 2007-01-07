@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5844 2007/01/06 23:48:27 wiz Exp $
+$NetBSD: TODO,v 1.5845 2007/01/07 11:49:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -254,7 +254,7 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amaya-9.52
+	o amaya-9.53
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
 	o anthy-7900 [pkg/34651]
@@ -313,6 +313,7 @@ Suggested package updates
 	o botan-1.6.0
 	o browser-bookmarks-menu-0.4
 	o bsdiff-4.3 [pkg/34429]
+	o bug-buddy-2.16.1
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
@@ -356,7 +357,6 @@ Suggested package updates
 	o cygwin_lib-1.5.21.1
 	o dap-2.1.5
 	o dar-2.3.2
-	o dasher-4.2.1
 	o db4-4.5.20
 	o dbxml-2.1.8
 	o dc_gui2-0.80
@@ -442,7 +442,7 @@ Suggested package updates
 	o gated-3.6
 	o gauche-0.8.7 [pkg/33675]
 	o gauche-0.8.8
-	o gcalctool-5.9.7
+	o gcalctool-5.9.8
 	o gcc-4.1.1
 	o gcin-1.2.7
 	o gcombust-0.1.55
@@ -469,16 +469,18 @@ Suggested package updates
 	o glade-3.1.4
 	o gld-1.7
 	o glib-2.12.6
-	o glib2-2.12.5
+	o glib2-2.12.7
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.16.1
+	o gnome-applets-2.16.2
 	o gnome-games-2.16.2
-	o gnome-pilot-2.0.14
+	o gnome-pilot-2.0.15
 	o gnome-screensaver-2.16.2
+	o gnome-speech-0.4.7
 	o gnome-spell-1.0.7
 	o gnome-user-docs-2.16.1
+	o gnome-vfsmm-2.16.1
 	o gnomeicu-0.99.12
 	o gnucash-2.0.4
 	o gnupg-2.0.2
@@ -488,12 +490,13 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
-	o gossip-0.19
+	o gossip-0.21
+	o gourmet-0.13.3
 	o gpsdrive-2.09
 	o gq-1.2.0
+	o gqview-2.0.4
 	o grace-5.1.20
 	o gramofile-1.6P
-	o gramps-2.2.2
 	o gramps2-2.2.3
 	o grap-1.36
 	o grep-2.5.1a
@@ -508,6 +511,7 @@ Suggested package updates
 	o gst-plugins0.10-ugly-0.10.5
 	o gtar-1.16.1
 	o gtk-systrace-20030623
+	o gtk2+-2.10.7
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
 	o gtklife-5.1
@@ -544,6 +548,7 @@ Suggested package updates
 	o imapsync-1.197
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
+	o intltool-0.35.3
 	o ion3-devel-20061223
 	o iozone-3.271
 	o ipcalc-0.41
@@ -600,6 +605,7 @@ Suggested package updates
 	o libgii-1.0.1
 	o libgiigic-1.1.1
 	o libgnomedb-2.99.2
+	o libgtop-2.14.5
 	o libgtop2-2.14.4
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
@@ -1012,7 +1018,7 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o sdig-0.40
-	o seahorse-0.9.6
+	o seahorse-0.9.10
 	o sendfile-20010424
 	o ser-0.9.6
 	o sharity-3.2
@@ -1043,7 +1049,7 @@ Suggested package updates
 	o snes9x-1.502
 	o snort-2.6.0.2
 	o socat-1.5.0.0
-	o solfege-3.6.3
+	o solfege-3.6.4
 	o sope-4.5.5
 	o sound-juicer-2.16.2
 	o source-highlight-2.3 [pkg/32325]
@@ -1066,7 +1072,7 @@ Suggested package updates
 	o svk-2.0.0
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.6.0
+	o sylpheed-claws-2.6.1 [now claws-mail]
 	o sylpheed-devel-2.3.0rc
 	o sympa-5.2
 	o sysinfo-4.2.2
