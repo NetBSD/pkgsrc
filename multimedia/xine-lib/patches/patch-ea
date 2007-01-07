@@ -1,0 +1,30 @@
+$NetBSD: patch-ea,v 1.1 2007/01/07 17:36:26 drochner Exp $
+
+--- src/video_out/video_out_xv.c.orig	2006-10-28 20:51:08.000000000 +0200
++++ src/video_out/video_out_xv.c
+@@ -187,7 +187,7 @@ static void xv_frame_dispose (vo_frame_t
+ 
+   if (frame->image) {
+ 
+-    if (this->use_shm) {
++    if (frame->shminfo.shmaddr) {
+       LOCK_DISPLAY(this);
+       XShmDetach (this->display, &frame->shminfo);
+       XFree (frame->image);
+@@ -382,6 +382,7 @@ static XvImage *create_ximage (xv_driver
+ 
+     image = XvCreateImage (this->display, this->xv_port,
+ 			   xv_format, data, width, height);
++    shminfo->shmaddr = 0;
+   }
+   return image;
+ }
+@@ -391,7 +392,7 @@ static void dispose_ximage (xv_driver_t 
+ 			    XShmSegmentInfo *shminfo,
+ 			    XvImage *myimage) {
+ 
+-  if (this->use_shm) {
++  if (shminfo->shmaddr) {
+ 
+     XShmDetach (this->display, shminfo);
+     XFree (myimage);
