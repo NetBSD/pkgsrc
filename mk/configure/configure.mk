@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.12 2006/11/09 02:53:15 rillig Exp $
+# $NetBSD: configure.mk,v 1.13 2007/01/07 08:50:38 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -11,6 +11,18 @@
 # CONFIGURE_ARGS is the list of arguments that is passed to the
 #	configure script.
 #
+# OVERRIDE_GNU_CONFIG_SCRIPTS
+#	Whether to override the GNU config.guess and config.sub scripts
+#	with the pkgsrc versions.
+#
+#	Possible values: defined, undefined.
+#
+#	Default value: defined when GNU_CONFIGURE is defined, undefined
+#	otherwise.
+#
+# Keywords: config.guess config.sub
+#
+
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ARGS?=	# empty
