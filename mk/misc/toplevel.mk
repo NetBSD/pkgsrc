@@ -1,23 +1,10 @@
-# $NetBSD: toplevel.mk,v 1.1 2007/01/06 17:10:42 rillig Exp $
+# $NetBSD: toplevel.mk,v 1.2 2007/01/07 00:57:36 rillig Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
 # top-level file short and clean.
 #
 #
-
-# tools used by this Makefile
-USE_TOOLS+=	[ awk cat cmp echo env expr false fgrep grep mv	rm sed	\
-		sort wc
-
-# additional tools used by bsd.pkg.subdir.mk
-USE_TOOLS+=	basename touch
-
-# additional tools used by bsd.bulk-pkg.mk
-USE_TOOLS+=	egrep find ls sh tee true tsort
-
-PKGSRCTOP=	yes
-
 
 # If PACKAGES is set to the default (${PKGSRCDIR}/packages), the current
 # ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
@@ -88,7 +75,7 @@ ${.CURDIR}/PKGDB:
 
 .PHONY: index
 index:
-	@${RM} ${.CURDIR}/INDEX
+	@${RM} -f ${.CURDIR}/INDEX
 	@${MAKE} ${.CURDIR}/INDEX
 
 ${.CURDIR}/INDEX:
