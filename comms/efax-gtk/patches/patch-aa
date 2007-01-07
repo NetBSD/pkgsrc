@@ -1,29 +1,20 @@
-$NetBSD: patch-aa,v 1.8 2006/09/24 16:56:16 adam Exp $
+$NetBSD: patch-aa,v 1.9 2007/01/07 13:46:19 adam Exp $
 
---- Makefile.in.orig	2006-08-13 15:21:58.000000000 +0200
+--- Makefile.in.orig	2006-11-04 18:51:27.000000000 +0100
 +++ Makefile.in
-@@ -148,7 +148,7 @@ sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- 
--SUBDIRS = src efax po efax-gtk-faxfilter
-+SUBDIRS = src po efax-gtk-faxfilter
- 
- desktopdir = $(datadir)/applications
- 
-@@ -290,12 +290,12 @@ uninstall-desktopDATA:
- sysconfDATA_INSTALL = $(INSTALL_DATA)
+@@ -338,12 +338,12 @@ uninstall-desktopDATA:
+ 	done
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
-+	$(mkinstalldirs) $(datadir)/examples
+-	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(datadir)" || $(mkdir_p) "$(datadir)/examples"
  	@list='$(sysconf_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
--	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
-+	  echo " $(sysconfDATA_INSTALL) $$d$$p $(datadir)/examples/$$f"; \
-+	  $(sysconfDATA_INSTALL) $$d$$p $(datadir)/examples/$$f; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
++	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(datadir)/examples/$$f'"; \
++	  $(sysconfDATA_INSTALL) "$$d$$p" "$(datadir)/examples/$$f"; \
  	done
  
  uninstall-sysconfDATA:

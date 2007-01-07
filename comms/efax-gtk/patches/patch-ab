@@ -1,44 +1,13 @@
-$NetBSD: patch-ab,v 1.9 2006/09/24 16:56:16 adam Exp $
+$NetBSD: patch-ab,v 1.10 2007/01/07 13:46:19 adam Exp $
 
---- src/efax_controller.cpp.orig	2006-08-13 15:29:16.000000000 +0200
-+++ src/efax_controller.cpp
-@@ -229,8 +229,8 @@ std::pair<const char*, char* const*> Efa
- 
-   *temp_pp = 0;
- 
--  char* prog_name = new char[std::strlen("efax-0.9a") + 1];
--  std::strcpy(prog_name, "efax-0.9a");
-+  char* prog_name = new char[std::strlen("efax") + 1];
-+  std::strcpy(prog_name, "efax");
- 
-   return std::pair<const char*, char* const*>(prog_name, exec_parms);
- }
-@@ -284,7 +284,7 @@ void EfaxController::sendfax_slot(void) 
- 
-     // if we reached this point, then the execvp() call must have failed
-     // report error and exit - uses _exit() and not exit()
--    write_error("Can't find the efax-0.9a program - please check your installation\n"
-+    write_error("Can't find the efax program - please check your installation\n"
- 		"and the PATH environmental variable\n");
-     _exit(EXEC_ERROR); 
-   } // end of child process
-@@ -624,8 +624,8 @@ std::pair<const char*, char* const*> Efa
-   
-   *temp_pp = 0;
- 
--  char* prog_name = new char[std::strlen("efax-0.9a") + 1];
--  std::strcpy(prog_name, "efax-0.9a");
-+  char* prog_name = new char[std::strlen("efax") + 1];
-+  std::strcpy(prog_name, "efax");
-   
-   return std::pair<const char*, char* const*>(prog_name, exec_parms);
- }
-@@ -695,7 +695,7 @@ void EfaxController::receive(State mode)
- 
-       // if we reached this point, then the execvp() call must have failed
-       // report the error and end this process - use _exit() and not exit()
--      write_error("Can't find the efax-0.9a program - please check your installation\n"
-+      write_error("Can't find the efax program - please check your installation\n"
- 		  "and the PATH environmental variable\n");
-       _exit(EXEC_ERROR); 
-     } // end of child process
+--- efax/Makefile.in.orig	2007-01-07 13:49:13.000000000 +0100
++++ efax/Makefile.in
+@@ -315,7 +315,7 @@ install-man1: $(man1_MANS) $(man_MANS)
+ 	    1*) ;; \
+ 	    *) ext='1' ;; \
+ 	  esac; \
+-	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
++	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$/-0.9a/'`; \
+ 	  inst=`echo $$inst | sed -e 's/^.*\///'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " $(INSTALL_DATA) '$$file' '$(DESTDIR)$(man1dir)/$$inst'"; \
