@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/27 13:37:36 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:54 rillig Exp $
 
 DISTNAME=	jetpack
 PKGNAME=	jetpack-1.0
@@ -19,7 +19,7 @@ post-install:
 	@${CHMOD} 2755 ${PREFIX}/bin/jetpack
 	${INSTALL} -o bin -g games -m 664 /dev/null /var/games/jetpack.scores
 	@${CHMOD} 0775 ${PREFIX}/share/jetpack
-	${INSTALL_MAN} ${WRKSRC}/jetpack.man ${PREFIX}/man/man6/jetpack.6
+	${INSTALL_MAN} ${WRKSRC}/jetpack.man ${PREFIX}/${PKGMANDIR}/man6/jetpack.6
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

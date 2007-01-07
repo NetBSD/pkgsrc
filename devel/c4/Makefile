@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:45 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:50 rillig Exp $
 #
 
 DISTNAME=	c4
@@ -14,10 +14,10 @@ DEPENDS+=	p4-[0-9]*:../../devel/p4
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=	c4
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/c4 ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/c4.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/c4.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

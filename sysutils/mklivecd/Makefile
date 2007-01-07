@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/02 01:04:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/07 09:14:12 rillig Exp $
 
 DISTNAME=	mklivecd-0.14.4
 CATEGORIES=	sysutils
@@ -22,7 +22,7 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 USE_TOOLS+=	tar
 
-INSTALLATION_DIRS=	man/man8 sbin share/mklivecd
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/mklivecd
 
 FILES=	    KERN-LIVECD personal_config
 
@@ -36,7 +36,7 @@ do-install:
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mklivecd
 	${INSTALL_SCRIPT} ${WRKDIR}/mklivecd.sh ${PREFIX}/sbin/mklivecd
-	${INSTALL_MAN} ${WRKDIR}/mklivecd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKDIR}/mklivecd.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKDIR}/livecd ${PREFIX}/share/mklivecd
 .for F in ${FILES}
 	${INSTALL_DATA} ${FILESDIR}/${F} ${PREFIX}/share/mklivecd

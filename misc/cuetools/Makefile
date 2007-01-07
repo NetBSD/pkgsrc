@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/22 00:45:10 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:14:00 rillig Exp $
 #
 
 DISTNAME=	cuetools-1.2
@@ -14,18 +14,18 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	flex gmake yacc
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/cuebreakpoints ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/cueconvert ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/cueprint ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/man/cuebreakpoints.man \
-		${PREFIX}/man/man1/cuebreakpoints.1
+		${PREFIX}/${PKGMANDIR}/man1/cuebreakpoints.1
 	${INSTALL_DATA} ${WRKSRC}/man/cueconvert.man \
-		${PREFIX}/man/man1/cueconvert.1
+		${PREFIX}/${PKGMANDIR}/man1/cueconvert.1
 	${INSTALL_DATA} ${WRKSRC}/man/cueprint.man \
-		${PREFIX}/man/man1/cueprint.1
+		${PREFIX}/${PKGMANDIR}/man1/cueprint.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cuetools/
 	${INSTALL_DATA} ${WRKSRC}/formats.txt ${PREFIX}/share/doc/cuetools/
 

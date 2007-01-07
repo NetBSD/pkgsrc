@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/28 14:58:32 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/07 09:13:54 rillig Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -23,7 +23,7 @@ USE_TOOLS+=		gtar
 MAKE_ENV+=	LIBFLAGS=-lcompat
 .endif
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL} -c -s -o ${ROOT_USER} -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/SOUNDS/* ${PREFIX}/share/battalion/battalion.data/SOUNDS
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/TEXTURES/* ${PREFIX}/share/battalion/battalion.data/TEXTURES
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/battalion.sho ${PREFIX}/share/battalion/battalion.data
-	${INSTALL_MAN} ${WRKDIR}/battalionSUN4/battalion.man ${PREFIX}/man/man6/battalion.6
+	${INSTALL_MAN} ${WRKDIR}/battalionSUN4/battalion.man ${PREFIX}/${PKGMANDIR}/man6/battalion.6
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/HELP/* ${PREFIX}/share/battalion/HELP
 	${INSTALL} -o bin -g games -m 664 /dev/null /var/games/battalion_hiscore
 

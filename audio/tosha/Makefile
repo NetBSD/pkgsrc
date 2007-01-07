@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 20:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/07 09:13:47 rillig Exp $
 
 DISTNAME=	tosha-0.05
 PKGREVISION=	1
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../devel/libscsi/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

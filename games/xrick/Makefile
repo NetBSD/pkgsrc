@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/12 16:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/07 09:13:55 rillig Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -25,14 +25,14 @@ SUBST_MESSAGE.data=	Adjusting path to data.zip
 SUBST_FILES.data=	src/xrick.c
 SUBST_SED.data=		-e "s|data.zip|${PREFIX}/share/xrick/&|"
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 post-extract:
 	cd ${WRKSRC} && ${GUNZIP_CMD} xrick.6.gz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xrick ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xrick.6 ${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/xrick.6 ${PREFIX}/${PKGMANDIR}/man6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xrick
 	${INSTALL_DATA} ${WRKSRC}/data.zip ${PREFIX}/share/xrick
 

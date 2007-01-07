@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/09/26 19:00:20 christos Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:08 rillig Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	6
@@ -26,7 +26,7 @@ PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 CONFIG_SH=	${FILESDIR}/config.${OPSYS}.sh
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* DragonFly-*-* Linux-*-*
 
-INSTALLATION_DIRS=	bin include lib man/man3
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man3
 
 do-configure:
 	${SED} -e s,@PREFIX@,${PREFIX}, -e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR}, \
@@ -42,7 +42,7 @@ do-install:
 	  ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/nntp.h ${PREFIX}/include/
 	${INSTALL_DATA} ${WRKSRC}/libnntpclnt.a ${PREFIX}/lib/
-	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${PREFIX}/man/man3/
+	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${PREFIX}/${PKGMANDIR}/man3/
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"

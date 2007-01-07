@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/28 21:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:13 rillig Exp $
 #
 
 DISTNAME=	skill-4.1.1
@@ -28,9 +28,9 @@ MAKE_ENV+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=
 
 pre-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skill ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/skill.1 ${PREFIX}/man/man1
-	${RM} -f ${PREFIX}/bin/snice ${PREFIX}/man/man1/snice.1
+	${INSTALL_MAN} ${WRKSRC}/skill.1 ${PREFIX}/${PKGMANDIR}/man1
+	${RM} -f ${PREFIX}/bin/snice ${PREFIX}/${PKGMANDIR}/man1/snice.1
 	${LN} -s skill ${PREFIX}/bin/snice
-	${LN} -s skill.1 ${PREFIX}/man/man1/snice.1
+	${LN} -s skill.1 ${PREFIX}/${PKGMANDIR}/man1/snice.1
 
 .include "../../mk/bsd.pkg.mk"

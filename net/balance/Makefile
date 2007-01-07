@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/28 20:46:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=	balance-3.15
@@ -13,6 +13,6 @@ BUILD_TARGET=	balance
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/balance ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/balance.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/balance.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

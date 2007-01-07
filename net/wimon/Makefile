@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/09 17:04:51 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:08 rillig Exp $
 #
 
 DISTNAME=	wimon-0.3
@@ -19,11 +19,11 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
 
 WRKSRC=		${WRKDIR}/wimon
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wimon ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/wimon.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/wimon.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

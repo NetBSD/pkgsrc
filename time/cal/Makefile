@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/09 02:46:09 obache Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:14 rillig Exp $
 
 DISTNAME=		cal-3.5
 PKGREVISION=		1
@@ -17,11 +17,11 @@ CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=			${PREFIX}/share/examples/cal
 # CONF_FILES not used as calcol and caldat are optional.
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cal ${PREFIX}/bin/cal
-	${INSTALL_MAN}  ${WRKSRC}/cal.1 ${PREFIX}/man/man1/cal.1
+	${INSTALL_MAN}  ${WRKSRC}/cal.1 ${PREFIX}/${PKGMANDIR}/man1/cal.1
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.col ${EGDIR}/calcol
 	${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.dat ${EGDIR}/caldat

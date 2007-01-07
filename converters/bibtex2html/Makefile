@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/08/10 03:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/07 09:13:49 rillig Exp $
 
 DISTNAME=	bibtex2html-1.82
 CATEGORIES=	converters
@@ -20,7 +20,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	aux2bib.1
 SUBST_SED.paths=	-e 's,/usr/share,${PREFIX}/share,g'
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-build:
 	cd ${WRKSRC}; ${MAKE} doc
@@ -29,9 +29,9 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/aux2bib ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bibtex2html ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bib2bib ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/man/man1/bib2bib.1
-	${INSTALL_MAN} ${WRKSRC}/aux2bib.1 ${PREFIX}/man/man1/aux2bib.1
+	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/${PKGMANDIR}/man1/bib2bib.1
+	${INSTALL_MAN} ${WRKSRC}/aux2bib.1 ${PREFIX}/${PKGMANDIR}/man1/aux2bib.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/manual.ps ${PREFIX}/share/doc/${PKGBASE}
