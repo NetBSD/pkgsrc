@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/07 12:25:53 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SWEEP_BUILDLINK3_MK:=	${SWEEP_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}sweep
 
 .if !empty(SWEEP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.sweep+=	sweep>=0.8.2nb6
-BUILDLINK_ABI_DEPENDS.sweep+=	sweep>=0.8.3nb3
+BUILDLINK_ABI_DEPENDS.sweep+=	sweep>=0.8.3nb4
 BUILDLINK_PKGSRCDIR.sweep?=	../../audio/sweep
 .endif	# SWEEP_BUILDLINK3_MK
 
