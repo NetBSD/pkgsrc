@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2005/05/26 15:03:11 salo Exp $
+$NetBSD: patch-aa,v 1.11.14.1 2007/01/07 03:52:45 salo Exp $
 
---- Makefile.orig	2005-02-17 12:28:24.000000000 +0100
-+++ Makefile	2005-05-26 16:53:13.000000000 +0200
-@@ -2,42 +2,35 @@
+--- Makefile.orig	2007-01-03 03:49:21.000000000 +0000
++++ Makefile
+@@ -15,42 +15,35 @@
  SHELL=/bin/sh
  
  # To assist in cross-compiling
@@ -17,11 +17,11 @@ $NetBSD: patch-aa,v 1.11 2005/05/26 15:03:11 salo Exp $
 +#LDFLAGS=
  
  BIGFILES=-D_FILE_OFFSET_BITS=64
--CFLAGS=-Wall -Winline -O -g $(BIGFILES)
+-CFLAGS=-Wall -Winline -O2 -g $(BIGFILES)
 +CFLAGS+=$(BIGFILES)
  
 -# Where you want it installed when you do 'make install'
--PREFIX=/usr
+-PREFIX=/usr/local
 +OBJS= blocksort.lo  \
 +      huffman.lo    \
 +      crctable.lo   \
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.11 2005/05/26 15:03:11 salo Exp $
  
  check: test
  test: bzip2
-@@ -100,20 +93,20 @@
+@@ -113,20 +106,20 @@ clean: 
  	sample1.rb2 sample2.rb2 sample3.rb2 \
  	sample1.tst sample2.tst sample3.tst
  
