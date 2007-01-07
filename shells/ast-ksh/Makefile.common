@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/10/03 14:32:37 obache Exp $
+# $NetBSD: Makefile.common,v 1.22 2007/01/07 09:14:10 rillig Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -37,7 +37,7 @@ PDKSH=		/bin/ksh
 
 PKG_SHELL=	bin/ksh93
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # ${KSH93_MAKEFLAGS} is set as "LDFLAGS=-static" only when built as a
 # static binary.

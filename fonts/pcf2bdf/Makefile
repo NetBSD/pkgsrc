@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/09 02:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:54 rillig Exp $
 #
 
 DISTNAME=	pcf2bdf-1.04
@@ -16,10 +16,10 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
 MAKE_FILE=	Makefile.gcc
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pcf2bdf ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pcf2bdf.man ${PREFIX}/man/man1/pcf2bdf.1
+	${INSTALL_MAN} ${WRKSRC}/pcf2bdf.man ${PREFIX}/${PKGMANDIR}/man1/pcf2bdf.1
 
 .include "../../mk/bsd.pkg.mk"

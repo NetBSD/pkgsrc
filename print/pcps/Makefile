@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/07 09:14:09 rillig Exp $
 #
 
 DISTNAME=	pcps840
@@ -22,7 +22,7 @@ RESTRICTED=	This is shareware for your evaluation and subsequent payment
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONF_FILES+=	${PREFIX}/share/examples/pcps/pcps.cfg ${PREFIX}/bin/pcps.cfg
 
@@ -31,7 +31,7 @@ post-patch:
 
 do-install:
 	@${INSTALL_PROGRAM}  ${WRKSRC}/pcps ${PREFIX}/bin/pcps
-	@${INSTALL_MAN}      ${WRKDIR}/pcps.1 ${PREFIX}/man/man1
+	@${INSTALL_MAN}      ${WRKDIR}/pcps.1 ${PREFIX}/${PKGMANDIR}/man1
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/license.doc ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/register.doc ${PREFIX}/share/doc/pcps

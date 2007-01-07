@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:06 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:49 rillig Exp $
 
 DISTNAME=	dvi2tty5.0
 PKGNAME=	ja-dvi2tty-5.0
@@ -23,11 +23,11 @@ LICENSE=	no-commercial-use
 
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -DDEFPAGER='\"${PREFIX}/bin/jless\"'"
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jdvi2tty ${PREFIX}/bin/jdvi2tty
 	${INSTALL_PROGRAM} ${WRKSRC}/disdvi ${PREFIX}/bin/jdisdvi
-	${INSTALL_MAN} ${WRKSRC}/dvi2tty.1 ${PREFIX}/man/man1/jdvi2tty.1
+	${INSTALL_MAN} ${WRKSRC}/dvi2tty.1 ${PREFIX}/${PKGMANDIR}/man1/jdvi2tty.1
 
 .include "../../mk/bsd.pkg.mk"

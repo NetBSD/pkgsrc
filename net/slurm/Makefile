@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/30 04:56:27 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:06 rillig Exp $
 #
 
 DISTNAME=	slurm-0.3.3
@@ -11,11 +11,11 @@ COMMENT=	Realtime traffic statistics
 
 GNU_CONFIGURE=	YES
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/slurm ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/slurm.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/slurm.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/slurm
 	for theme in black blue cyan foo; do								\
 		${INSTALL_DATA} ${WRKSRC}/themes/$${theme}.theme ${PREFIX}/share/slurm ;	\

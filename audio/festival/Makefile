@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/05/19 16:18:51 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2007/01/07 09:13:47 rillig Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -69,7 +69,7 @@ MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS:Q}				\
 		CC=${CC:Q}						\
 		CXX=${CXX:Q}
 
-INSTALLATION_DIRS=	bin libexec man/man1
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1
 
 post-patch:
 	${CP} ${FILESDIR}/top-Makefile ${WRKSRC}/Makefile
@@ -96,8 +96,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/festival.sh ${PREFIX}/bin/festival
 	${INSTALL_SCRIPT} ${WRKDIR}/festival_client.sh ${PREFIX}/bin/festival_client
 	${INSTALL_DATA} ${WRKDIR}/sitevars.scm ${FHOME}/lib/sitevars.scm
-	${INSTALL_MAN} ${FESTIVAL}/doc/festival.1 ${PREFIX}/man/man1/festival.1
-	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1 ${PREFIX}/man/man1/festival_client.1
+	${INSTALL_MAN} ${FESTIVAL}/doc/festival.1 ${PREFIX}/${PKGMANDIR}/man1/festival.1
+	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1 ${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
 .include "../../audio/nas/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

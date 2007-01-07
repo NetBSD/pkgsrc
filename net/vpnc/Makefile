@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/09/27 12:50:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/07 09:14:07 rillig Exp $
 #
 
 DISTNAME=		vpnc-0.3.3
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		vpnc
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/vpnc.conf ${PKG_SYSCONFDIR}/vpnc.conf
@@ -26,7 +26,7 @@ do-install:
 	:
 	${INSTALL_PROGRAM} ${WRKSRC}/vpnc ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/vpnc-disconnect ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/vpnc.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/vpnc.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/vpnc
 	${INSTALL_MAN} ${WRKSRC}/vpnc.conf ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/vpnc-script ${EGDIR}

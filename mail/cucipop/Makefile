@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:29:58 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/07 09:13:57 rillig Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -41,7 +41,7 @@ MAKE_ENV+=	CFLAGS_INET6=-DINET6
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 pre-configure:
 	@(cd ${WRKSRC};							\
 	for f in config.h cucipop.8 makevpopdb.8; do			\
@@ -52,7 +52,7 @@ pre-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cucipop ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/makevpopdb ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/cucipop.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/makevpopdb.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/cucipop.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/makevpopdb.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

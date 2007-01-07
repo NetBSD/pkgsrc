@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:25 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:08 rillig Exp $
 #
 
 DISTNAME=	binpatch-1.0
@@ -15,7 +15,7 @@ NO_CHECKSUM=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
@@ -27,6 +27,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binpatch ${PREFIX}/bin/binpatch
-	${INSTALL_MAN} ${WRKSRC}/binpatch.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/binpatch.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

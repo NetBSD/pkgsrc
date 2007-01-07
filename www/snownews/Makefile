@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/04/13 18:23:39 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/07 09:14:15 rillig Exp $
 
 DISTNAME=	snownews-1.5.7
 PKGREVISION=	4
@@ -26,17 +26,17 @@ MAKE_ENV+=	EXTRA_CFLAGS=${CFLAGS:M*:Q}
 .include "../../devel/gettext-lib/buildlink3.mk"
 MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${BUILDLINK_LDADD.gettext}"
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snownews ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/opml2snow ${PREFIX}/bin
 .for M in de fr it nl ru_RU.KOI8-R
-	${INSTALL_DATA_DIR} ${PREFIX}/man/${M}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man/${M}/snownews.1 ${PREFIX}/man/${M}/man1
+	${INSTALL_DATA_DIR} ${PREFIX}/${PKGMANDIR}/${M}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/${M}/snownews.1 ${PREFIX}/${PKGMANDIR}/${M}/man1
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/doc/man/snownews.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man/opml2snow.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/snownews.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/opml2snow.1 ${PREFIX}/${PKGMANDIR}/man1
 .for L in de es ja nl pl pt_BR ru sl zh_TW zh_CN
 	${INSTALL_DATA_DIR} ${PREFIX}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES
 	${INSTALL_DATA} ${WRKSRC}/po/${L}.mo ${PREFIX}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES/snownews.mo

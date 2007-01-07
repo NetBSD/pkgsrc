@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:15 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/07 09:14:15 rillig Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -16,12 +16,12 @@ USE_LANGUAGES=	c c++
 USE_X11BASE=	YES
 MAKE_ENV+=	CCC=${CXX:Q}
 
-INSTALLATION_DIRS=	bin man/cat1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1
 
 .include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/man/cat1/wm2.0
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/${PKGMANDIR}/cat1/wm2.0
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 21:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:56 rillig Exp $
 #
 
 DISTNAME=	jpeg2ps-1.9
@@ -14,10 +14,10 @@ RESTRICTED=		may not be sold
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jpeg2ps ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/jpeg2ps.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/jpeg2ps.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

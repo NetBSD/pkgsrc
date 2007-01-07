@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/01/08 18:35:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/07 09:14:02 rillig Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	2
@@ -53,7 +53,7 @@ PLIST_SUBST+=	PYTHON_OPT=""
 post-install:
 .   for s in flow-rpt2rrd flow-log2rrd flow-rptfmt
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${s} ${PREFIX}/bin/${s}
-	${INSTALL_MAN} ${WRKSRC}/docs/${s}.1 ${PREFIX}/man/man1/${s}.1
+	${INSTALL_MAN} ${WRKSRC}/docs/${s}.1 ${PREFIX}/${PKGMANDIR}/man1/${s}.1
 .  endfor
 .else
 PLIST_SUBST+=	PYTHON_OPT="@comment "

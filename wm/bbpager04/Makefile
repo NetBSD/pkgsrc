@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/03 10:16:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/07 09:14:14 rillig Exp $
 #
 
 DISTNAME=	bbpager-0.4.1beta1
@@ -15,8 +15,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/bbpager.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/bbpager.bb.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/bbpager.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/bbpager.bb.5 ${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../wm/blackbox70/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

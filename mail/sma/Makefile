@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/11/14 12:31:30 obache Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:59 rillig Exp $
 
 DISTNAME=       sma-1.4
 CATEGORIES=	mail
@@ -24,7 +24,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 do-install:
 	cd ${WRKSRC};						\
 	${INSTALL_PROGRAM} sma ${PREFIX}/bin;			\
-	${INSTALL_MAN} docs/sma.8 ${PREFIX}/man/man8;		\
+	${INSTALL_MAN} docs/sma.8 ${PREFIX}/${PKGMANDIR}/man8;		\
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sma;		\
 	${INSTALL_DATA} README ${PREFIX}/share/doc/sma;	\
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sma;	\

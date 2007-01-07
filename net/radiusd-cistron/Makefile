@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/09/09 02:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/07 09:14:06 rillig Exp $
 
 DISTNAME=	radiusd-cistron-1.6.7
 PKGREVISION=	1
@@ -42,13 +42,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/radiusd-cistron/
 .endfor
 .for i in	radclient.1 radlast.1 radtest.1 radwho.1 radzap.1
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/${PKGMANDIR}/man1/
 .endfor
 .for i in	clients.5rad naslist.5rad
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man5/
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/${PKGMANDIR}/man5/
 .endfor
 .for i in	radiusd.8 radrelay.8 radwatch.8
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/${PKGMANDIR}/man8/
 .endfor
 
 # The sources assume <malloc.h> exists.  Create a fake one for platforms

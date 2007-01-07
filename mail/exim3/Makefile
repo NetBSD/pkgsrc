@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/23 00:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2007/01/07 09:13:57 rillig Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	7
@@ -103,7 +103,7 @@ pre-install:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/exim_newaliases ${PREFIX}/sbin/exim_newaliases
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
-	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
+	${CP} ${FILESDIR}/exim.8 ${PREFIX}/${PKGMANDIR}/man8/exim.8
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

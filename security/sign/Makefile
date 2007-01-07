@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:10 rillig Exp $
 #
 
 DISTNAME=	sign-1.0.4
@@ -12,11 +12,11 @@ COMMENT=	File signing and signature verification utility
 
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sign ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/sign.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/sign.1 ${PREFIX}/${PKGMANDIR}/man1
 	${LN} -sf ${PREFIX}/bin/sign ${PREFIX}/bin/unsign
 
 .include "../../security/openssl/buildlink3.mk"

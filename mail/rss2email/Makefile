@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/01 19:32:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:59 rillig Exp $
 #
 
 DISTNAME=		rss2email-2.59
@@ -27,7 +27,7 @@ SUBST_SED.bin+=		-e 's|@PYTHONBIN@|${PYTHONBIN}|g'
 
 SHAREDIR=		${PREFIX}/share/rss2email
 EGDIR=			${PREFIX}/share/examples/rss2email
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_SCRIPT} rss2email.py ${SHAREDIR};			\
 	${INSTALL_DATA_DIR} ${EGDIR};					\
 	${INSTALL_DATA} config.py ${EGDIR};				\
-	${INSTALL_MAN} r2e.1 ${PREFIX}/man/man1;			\
+	${INSTALL_MAN} r2e.1 ${PREFIX}/${PKGMANDIR}/man1;			\
 	${INSTALL_SCRIPT} r2e ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"

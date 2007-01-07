@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2006/05/31 18:22:24 ghen Exp $
+# $NetBSD: Makefile,v 1.112 2007/01/07 09:13:59 rillig Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -55,7 +55,7 @@ PINE_LDAPCFLAGS=	LDAPCFLAGS="-DENABLE_LDAP"
 PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # Make sure the imap lib that comes with pine isn't
 # used (see http://www.securityfocus.com/advisories/2646)
@@ -84,9 +84,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpdump ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpload ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pine
-	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/rpdump.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/rpload.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/rpdump.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/rpload.1 ${PREFIX}/${PKGMANDIR}/man1
 	( ${ECHO} '# (This file is not part of the pine distribution! - HF)' ; \
 	  ${PREFIX}/bin/pine -conf ) | ${SED} \
 	    -e 's|^\(use-only-domain-name\)=.*$$|\1=No|g' \

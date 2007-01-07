@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/12/15 20:32:58 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/07 09:14:00 rillig Exp $
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		5
@@ -13,11 +13,11 @@ COMMENT=		XForms-based statistics package
 
 WRKSRC=			${WRKDIR}/xldlas
 USE_X11BASE=		yes
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xldlas ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xldlas.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/xldlas.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xldlas
 	${CP} -R ${WRKSRC}/help ${PREFIX}/share/xldlas
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/01 22:43:50 adrianp Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/07 09:13:53 rillig Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -48,7 +48,7 @@ VMWARE_CFG_DIR=		${PREFIX}/emul/linux/etc/vmware
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	${GZCAT} ${WRKSRC}/man/man1/vmware.1.gz > ${WRKDIR}/vmware.1
@@ -93,7 +93,7 @@ do-install-share:
 	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages
 	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator
 	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware
-	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/${PKGMANDIR}/man1
 
 post-install:
 	@${RM} -f ${VMWARE_CFG_DIR}/config

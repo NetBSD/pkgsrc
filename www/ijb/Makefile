@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:51:12 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:15 rillig Exp $
 #
 
 DISTNAME=	ijb20
@@ -14,11 +14,11 @@ COMMENT=	The Internet Junkbuster Proxy blocks unwanted banner ads and cookies
 
 MAKE_ENV+=	MORE_CFLAGS=${CFLAGS:M*:Q}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/junkbuster ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/junkbuster.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/junkbuster.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/junkbuster
 	${INSTALL_DATA} ${WRKSRC}/junkbstr.ini \
 		${PREFIX}/share/examples/junkbuster/junkbuster.ini

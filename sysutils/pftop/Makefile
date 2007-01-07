@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/06 23:02:07 peter Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:12 rillig Exp $
 
 DISTNAME=	pftop-0.4
 CATEGORIES=	sysutils net
@@ -13,11 +13,11 @@ NO_CONFIGURE=	yes
 MAKE_ENV+=	OSLEVEL=${PF_VERSION:S/.//}
 CFLAGS+=	-I${PREFIX}/include
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pftop ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/pftop.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/pftop.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../security/pflkm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

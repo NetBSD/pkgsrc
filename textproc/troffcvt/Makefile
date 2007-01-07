@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/15 14:34:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:14 rillig Exp $
 #
 
 DISTNAME=		troffcvt-1.04
@@ -13,7 +13,7 @@ COMMENT=		Troff/groff to RTF/HTML/TEXT converter
 USE_TOOLS+=		perl:run
 
 INSTALL_TARGET=		install install.man
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name Makefile -print`; do \
@@ -43,16 +43,16 @@ do-install:
 		html-specials rtf-fonts rtf-spec-ansi rtf-spec-mac \
 		rtf-spec-pc rtf-spec-pca text-specials text-8-specials \
 		${PREFIX}/lib/troffcvt
-	${INSTALL_MAN} ${WRKSRC}/man/tblcvt.man ${PREFIX}/man/man1/tblcvt.1
-	${INSTALL_MAN} ${WRKSRC}/man/unroff.man ${PREFIX}/man/man1/unroff.1
+	${INSTALL_MAN} ${WRKSRC}/man/tblcvt.man ${PREFIX}/${PKGMANDIR}/man1/tblcvt.1
+	${INSTALL_MAN} ${WRKSRC}/man/unroff.man ${PREFIX}/${PKGMANDIR}/man1/unroff.1
 	${INSTALL_MAN} ${WRKSRC}/man/troff2rtf.man \
-		${PREFIX}/man/man1/troff2rtf.1
+		${PREFIX}/${PKGMANDIR}/man1/troff2rtf.1
 	${INSTALL_MAN} ${WRKSRC}/man/tc2html-toc.man \
-		${PREFIX}/man/man1/tc2html-toc.1
+		${PREFIX}/${PKGMANDIR}/man1/tc2html-toc.1
 	${INSTALL_MAN} ${WRKSRC}/man/troff2html.man \
-		${PREFIX}/man/man1/troff2html.1
-	${INSTALL_MAN} ${WRKSRC}/man/tc2html.man ${PREFIX}/man/man1/tc2html.1
-	${INSTALL_MAN} ${WRKSRC}/man/troffcvt.man ${PREFIX}/man/man1/troffcvt.1
+		${PREFIX}/${PKGMANDIR}/man1/troff2html.1
+	${INSTALL_MAN} ${WRKSRC}/man/tc2html.man ${PREFIX}/${PKGMANDIR}/man1/tc2html.1
+	${INSTALL_MAN} ${WRKSRC}/man/troffcvt.man ${PREFIX}/${PKGMANDIR}/man1/troffcvt.1
 
 .include "../../devel/libmemmgr/buildlink3.mk"
 .include "../../devel/libportlib/buildlink3.mk"

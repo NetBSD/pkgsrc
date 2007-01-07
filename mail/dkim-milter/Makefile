@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:57 rillig Exp $
 
 DISTNAME=	dkim-milter-0.1.1
 CATEGORIES=	mail
@@ -39,7 +39,7 @@ post-build:
 do-install:
 	cd ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -` && \
 		${INSTALL_PROGRAM} dkim-filter/dkim-filter ${PREFIX}/sbin/dkim-milter
-	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-milter.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-milter.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dkim-milter

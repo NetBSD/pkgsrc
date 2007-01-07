@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/04 20:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/07 09:13:47 rillig Exp $
 
 DISTNAME=	hint_unix_serial
 PKGNAME=	hint.serial-98.06.12
@@ -16,7 +16,7 @@ BUILD_TARGET=	DOUBLE INT
 
 WRKSRC=		${WRKDIR}/unix
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-extract:
 	${CP} ${FILESDIR}/hint.1 ${WRKSRC}/hint.1
@@ -24,7 +24,7 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/DOUBLE ${PREFIX}/bin/hint-double
 	${INSTALL_PROGRAM} ${WRKSRC}/INT ${PREFIX}/bin/hint-int
-	${INSTALL_MAN} ${WRKSRC}/hint.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/hint.1 ${PREFIX}/${PKGMANDIR}/man1
 
 benchmark:
 	cd ${WRKSRC} ; ${MKDIR} data ; ./DOUBLE | tee hint.out

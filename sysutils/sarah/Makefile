@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:42 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 09:14:12 rillig Exp $
 
 DISTNAME=	sarah-0.9.1b
 CATEGORIES=	sysutils
@@ -13,7 +13,7 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	sarah
 NO_BUILD=	YES
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 CONF_FILES+=	${PREFIX}/share/examples/sarah/sarah.conf.sample \
 			${PKG_SYSCONFDIR}/sarah.conf
 
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sarah ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sarah
 	${INSTALL_DATA} ${WRKSRC}/sarah.conf.sample ${PREFIX}/share/examples/sarah
-	${INSTALL_MAN} ${WRKSRC}/sarah.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/sarah.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sarah
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/sarah
 

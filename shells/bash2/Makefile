@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2006/06/15 13:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2007/01/07 09:14:11 rillig Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -61,7 +61,7 @@ BUILDLINK_API_DEPENDS.readline+=	readline>=4.3
 .include "../../devel/readline/buildlink3.mk"
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

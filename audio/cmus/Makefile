@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/10 00:56:25 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 09:13:47 rillig Exp $
 #
 
 DISTNAME=		cmus-2.0.3
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	CONFIG_OSS=y
 CONFIGURE_ARGS+=	CONFIG_MAD=y
 CONFIGURE_ARGS+=	CONFIG_AO=y
 CONFIGURE_ARGS+=	CONFIG_FLAC=y
-CONFIGURE_ARGS+=	mandir=${PREFIX}/man/
+CONFIGURE_ARGS+=	mandir=${PREFIX}/${PKGMANDIR}/
 
 .if exists(/usr/include/sys/audioio.h)
 PLIST_SUBST+=	SUN=""

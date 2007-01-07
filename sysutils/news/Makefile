@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/01 19:07:45 tv Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:14:12 rillig Exp $
 #
 
 DISTNAME=		news-0.2
@@ -9,11 +9,11 @@ MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://www.netmeister.org/
 COMMENT=		System V news(1)
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/news ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/news.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/news.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.prefs.mk"
 

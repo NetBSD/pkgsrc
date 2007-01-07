@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/10/07 18:14:11 reed Exp $
+# $NetBSD: Makefile,v 1.47 2007/01/07 09:13:59 rillig Exp $
 #
 
 DISTNAME=	popa3d-1.0.2
@@ -29,11 +29,11 @@ SUBST_FILES.params=	params.h
 SUBST_SED.params=	-e 's,/var/empty,${PREFIX}/share/empty,'	\
 			-e 's,@@POPA3D_USER@@,"${POPA3D_USER}",'
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/popa3d.8 ${PREFIX}/man/man8/
+	${INSTALL_DATA} ${WRKSRC}/popa3d.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d

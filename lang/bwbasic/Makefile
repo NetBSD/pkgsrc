@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/03 22:19:01 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:56 rillig Exp $
 
 PKGNAME=	${DISTNAME:=pl2}
 DISTNAME=	bwbasic-2.20
@@ -27,6 +27,6 @@ post-install:
 	${CP} -r ${BWBASIC_WRKSRC}/bwbtest ${SHARE_DIR}
 	${FIND} ${SHARE_DIR} -type d -print | ${XARGS} ${CHMOD} ${BINMODE}
 	${FIND} ${SHARE_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${INSTALL_MAN} ${BWBASIC_WRKSRC}/bwbasic.doc ${PREFIX}/man/man1/bwbasic.1
+	${INSTALL_MAN} ${BWBASIC_WRKSRC}/bwbasic.doc ${PREFIX}/${PKGMANDIR}/man1/bwbasic.1
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/12/19 23:02:12 jdolecek Exp $
+# $NetBSD: Makefile,v 1.62 2007/01/07 09:14:15 rillig Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -92,7 +92,7 @@ SUBST_SED.opera=	-e 's,/usr/,${PREFIX}/,g'
 
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 .if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
@@ -113,10 +113,10 @@ post-install-manpage:
 # The SuSE common makefile defines "MANCOMPRESSED=yes".
 .  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
-		${PREFIX}/man/man1
+		${PREFIX}/${PKGMANDIR}/man1
 .  else
 	${GUNZIP_CMD} -c ${EMULDIR}/usr/share/man/man1/opera.1.gz >
-		${PREFIX}/man/man1/opera.1
+		${PREFIX}/${PKGMANDIR}/man1/opera.1
 .  endif
 .endif
 
@@ -129,7 +129,7 @@ do-install:
 	@${ECHO}
 
 post-install:
-	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/man/man1
+	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/${PKGMANDIR}/man1
 .endif
 
 # regenerate distinfo for all ports supported by this package

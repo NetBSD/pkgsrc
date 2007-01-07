@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 21:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:54 rillig Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	mandir="${PREFIX}/man" highscoredir="/var/games"
 MAKE_ENV+=	prefix=${PREFIX:Q}
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/icebreaker
@@ -23,7 +23,7 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} *.ibt *.wav *.bmp \
 		${PREFIX}/share/icebreaker
 	${INSTALL_PROGRAM} -g games -m 2755 ${WRKSRC}/icebreaker ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/icebreaker.6 ${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/icebreaker.6 ${PREFIX}/${PKGMANDIR}/man6
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/icebreaker
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:16 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=	bind-4.9.11-REL
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}
 
 NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[0123]*-*
 
-INSTALLATION_DIRS=	libexec man/man8 sbin
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8 sbin
 
 post-extract:
 	@${RM} -f ${WRKSRC}/compat/include/sys/cdefs.h
@@ -29,6 +29,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/named/named ${PREFIX}/sbin/named4
 	${INSTALL_PROGRAM} ${WRKSRC}/named/named-xfer ${PREFIX}/libexec/named4-xfer
 	${INSTALL_SCRIPT} ${WRKSRC}/named/ndc4 ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/man/named.8 ${PREFIX}/man/man8/named4.8
+	${INSTALL_MAN} ${WRKSRC}/man/named.8 ${PREFIX}/${PKGMANDIR}/man8/named4.8
 
 .include "../../mk/bsd.pkg.mk"

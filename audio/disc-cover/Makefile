@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/03 18:45:24 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:47 rillig Exp $
 #
 
 DISTNAME=	disc-cover-1.5.6
@@ -16,7 +16,7 @@ REPLACE_PERL=		disc-cover
 
 DCTMPL=	${PREFIX}/share/disc-cover/templates
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	cd ${WRKSRC} && ${POD2MAN} disc-cover > disc-cover.1
@@ -25,7 +25,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/disc-cover ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/disc-cover.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/disc-cover.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${DCTMPL}
 	${INSTALL_DATA} ${WRKSRC}/templates/* ${DCTMPL}
 

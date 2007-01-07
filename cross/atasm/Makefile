@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:29:07 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:13:50 rillig Exp $
 #
 
 DISTNAME=	atasm104
@@ -19,13 +19,13 @@ NO_CONFIGURE=   YES
 
 DOCDIR=		${PREFIX}/share/doc/atasm
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/atasm ${PREFIX}/bin/atasm
 	${SED} -e 's,%%DOCDIR%%,${DOCDIR},g' < ${WRKSRC}/atasm.1.in > ${WRKSRC}/atasm.1
-	${INSTALL_DATA} ${WRKSRC}/atasm.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/atasm.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/atasm.txt ${DOCDIR}
 
 .include "../../devel/zlib/buildlink3.mk"

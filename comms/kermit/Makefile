@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/10/01 14:16:21 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2007/01/07 09:13:49 rillig Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -52,12 +52,12 @@ do-install:
 	  case $$OPT in \
 	    catinstall) \
 		nroff -man ${WRKSRC}/ckuker.nr > ${WRKSRC}/kermit.0; \
-		${INSTALL_MAN_DIR} ${PREFIX}/man/cat1; \
-		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${PREFIX}/man/cat1/kermit.0; \
+		${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat1; \
+		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${PREFIX}/${PKGMANDIR}/cat1/kermit.0; \
 		;; \
 	    maninstall) \
-		${INSTALL_MAN_DIR} ${PREFIX}/man/man1; \
-		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${PREFIX}/man/man1/kermit.1; \
+		${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1; \
+		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${PREFIX}/${PKGMANDIR}/man1/kermit.1; \
 		;; \
 	  esac; \
 	done

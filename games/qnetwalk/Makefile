@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:09 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:54 rillig Exp $
 #
 
 DISTNAME=	qnetwalk-1.2
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 
 QNETWALK_BIN=	${PREFIX}/bin
-QNETWALK_MAN=	${PREFIX}/man/man6
+QNETWALK_MAN=	${PREFIX}/${PKGMANDIR}/man6
 QNETWALK_DATA=	${PREFIX}/share/games/${PKGBASE}
 QNETWALK_TR=	${QNETWALK_DATA}
 KDEDIR=		${PREFIX:Q}/share/kde

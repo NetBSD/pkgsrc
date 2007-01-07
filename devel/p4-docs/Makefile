@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/12 14:32:45 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:51 rillig Exp $
 #
 
 DISTNAME=	p4-docs
@@ -43,10 +43,10 @@ HTMLDIR=	share/doc/html/p4
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 PLIST_SUBST+=	HTMLDIR=${HTMLDIR:Q}
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/*.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/*.1 ${PREFIX}/${PKGMANDIR}/man1
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/relnotes.txt \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/07 09:13:58 rillig Exp $
 
 DISTNAME=	mailwrapper-19990412
 PKGREVISION=	4
@@ -23,7 +23,7 @@ MAILWRAPPEES=	/usr/bin/mailq						\
 		/usr/sbin/sendmail	/usr/lib/sendmail
 FILES_SUBST+=	MAILWRAPPEES=${MAILWRAPPEES:Q}
 
-INSTALLATION_DIRS=	man/cat5 man/cat8 man/man5 man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 do-configure:
 	cd ${WRKSRC};							\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:05 rillig Exp $
 
 DISTNAME=		pchar-1.5
 CATEGORIES=		net
@@ -26,11 +26,11 @@ CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
 LIBS+=			-lsnmp -lcrypto -ldes
 .endif
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pchar ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/pchar.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/pchar.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

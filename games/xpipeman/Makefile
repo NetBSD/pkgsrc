@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:13:55 rillig Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -14,12 +14,12 @@ COMMENT=	Connect the pipes to contain the water flow game for X11
 WRKSRC=		${WRKDIR}/xpipeman
 USE_IMAKE=	yes
 
-INSTALLATION_DIRS=	bin man/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL} -o bin -g games -m 2755 ${WRKSRC}/xpipeman \
 		${PREFIX}/bin/xpipeman
-	${INSTALL_MAN} ${WRKSRC}/xpipeman.man ${PREFIX}/man/man6/xpipeman.6
+	${INSTALL_MAN} ${WRKSRC}/xpipeman.man ${PREFIX}/${PKGMANDIR}/man6/xpipeman.6
 	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/xpipeman
 	if [ ! -r /var/games/xpipescores ]; then \
 		${INSTALL} -o bin -g games -m 0664 ${WRKSRC}/xpipescores /var/games ; \

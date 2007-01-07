@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:01 rillig Exp $
 #
 
 DISTNAME=	xjdic24
@@ -25,7 +25,7 @@ WRKSRC=		${WRKDIR}
 MESSAGE_SUBST+=	PREFIX=${PREFIX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 		cd ${WRKSRC} ; \
@@ -50,7 +50,7 @@ do-install:
 			${WRKSRC}/xjdic24.inf \
 			${WRKSRC}/xjdic24.install \
 			${PREFIX}/share/doc/xjdic
-		${INSTALL_MAN} ${WRKSRC}/xjdic.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/xjdic.1 ${PREFIX}/${PKGMANDIR}/man1
 		${LN} -s ../edict/edict ${PREFIX}/share/xjdic/edict
 		${LN} -s ../kanjidic/kanjidic ${PREFIX}/share/xjdic/kanjidic
 		${PREFIX}/bin/xjdxgen ${PREFIX}/share/xjdic/edict

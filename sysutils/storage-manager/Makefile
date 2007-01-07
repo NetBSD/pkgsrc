@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/18 23:27:14 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:13 rillig Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -85,7 +85,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so ${PREFIX}/lib/dpt
 	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so.1 ${PREFIX}/lib/dpt
 	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so.1.0.2 ${PREFIX}/lib/dpt
-	${INSTALL_MAN} ${WRKSRC}/usr/local/man/man8/raidutil.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/usr/local/man/man8/raidutil.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_SCRIPT} ${WRKDIR}/dptmgr.sh ${PREFIX}/sbin/dptmgr
 	${INSTALL_SCRIPT} ${WRKDIR}/dptsig.sh ${PREFIX}/sbin/dptsig
 	${INSTALL_SCRIPT} ${WRKDIR}/raidutil.sh ${PREFIX}/sbin/raidutil

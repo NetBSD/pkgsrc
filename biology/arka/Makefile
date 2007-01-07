@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:20 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:13:48 rillig Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -19,7 +19,7 @@ CONF_FILES=	${PREFIX}/share/examples/arka/arkarc ${PKG_SYSCONFDIR}/arkarc
 CPPFLAGS+=	-DARKA_GLOBAL=\"${PKG_SYSCONFDIR}/arkarc\"
 CPPFLAGS+=	-DARKA_PROGRAMS=\"${PKG_SYSCONFDIR}/arkarc\"
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 USE_TOOLS+=		gunzip
 
 post-build:
@@ -27,7 +27,7 @@ post-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arka ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/arka.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/arka.1 ${PREFIX}/${PKGMANDIR}/man1
 .for f in arka_16x16.xpm arka_32x32.xpm
 	${INSTALL_DATA} ${WRKSRC}/icons/${f} ${PREFIX}/share/pixmaps
 .endfor

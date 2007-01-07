@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/06 06:22:31 reed Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=	cdpd-1.0.2
@@ -13,11 +13,11 @@ GNU_CONFIGURE=	YES
 
 BUILDLINK_API_DEPENDS.libnet+=	libnet-1.0.*
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cdpd ${PREFIX}/sbin/cdpd
-	${INSTALL_DATA} ${WRKSRC}/cdpd.8 ${PREFIX}/man/man8/cdpd.8
+	${INSTALL_DATA} ${WRKSRC}/cdpd.8 ${PREFIX}/${PKGMANDIR}/man8/cdpd.8
 
 .include "../../devel/libnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

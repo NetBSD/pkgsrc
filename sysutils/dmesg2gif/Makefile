@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/27 00:09:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:11 rillig Exp $
 #
 
 DISTNAME=		dmesg2gif-1.3
@@ -18,10 +18,10 @@ NO_BUILD=		yes
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/dmesg2gif ${PREFIX}/bin/dmesg2gif
-	${INSTALL_MAN} ${FILESDIR}/dmesg2gif.1 ${PREFIX}/man/man1/dmesg2gif.1
+	${INSTALL_MAN} ${FILESDIR}/dmesg2gif.1 ${PREFIX}/${PKGMANDIR}/man1/dmesg2gif.1
 
 .include "../../mk/bsd.pkg.mk"

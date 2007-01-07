@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/06/02 13:11:49 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2007/01/07 09:14:15 rillig Exp $
 
 DISTNAME=       analog-6.0
 CATEGORIES=	www
@@ -23,7 +23,7 @@ CONF_FILES=	${EGDIR}/analog.cfg ${PKG_SYSCONFDIR}/analog.cfg
 CFLAGS+=	-DNOGLOB
 .endif
 
-INSTALLATION_DIRS=	bin man/man1 lib/analog/lang lib/analog/images
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 lib/analog/lang lib/analog/images
 INSTALLATION_DIRS+=	share/doc/analog share/examples
 
 LIBS+=		-lm
@@ -32,7 +32,7 @@ MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDISTDIR}/analog ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDISTDIR}/analog.man ${PREFIX}/man/man1/analog.1
+	${INSTALL_DATA} ${WRKDISTDIR}/analog.man ${PREFIX}/${PKGMANDIR}/man1/analog.1
 	${INSTALL_DATA} ${WRKDISTDIR}/docs/* ${PREFIX}/share/doc/analog
 	${INSTALL_DATA} ${WRKDISTDIR}/images/* ${PREFIX}/lib/analog/images
 	${INSTALL_DATA} ${WRKDISTDIR}/lang/* ${PREFIX}/lib/analog/lang

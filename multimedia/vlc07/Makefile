@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/26 07:19:41 martti Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/07 09:14:01 rillig Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -49,8 +49,8 @@ PLIST_SUBST+=		DVDCSS="@comment "
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins/default
-	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${PREFIX}/${PKGMANDIR}/man1
 
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${X11BASE}/lib/X11/fonts/TTF/luximb.ttf

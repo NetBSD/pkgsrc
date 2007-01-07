@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/08/22 20:17:23 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/01/07 09:13:56 rillig Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -64,8 +64,8 @@ post-patch:
 	@${FIND} ${WRKDIR} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/../man/man1/*.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/../man/man1/*.1 ${PREFIX}/${PKGMANDIR}/man1/
 	@cd ${PREFIX}/lib/plt && PATH="${OLD_PATH}" ${SH} install || ${TRUE}
 .for f in ${PROGRAMS}
 	@cd ${PREFIX}/bin && ${LN} -s ../lib/plt/bin/${f}

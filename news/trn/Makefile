@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/07 09:14:08 rillig Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
@@ -71,9 +71,9 @@ CONFIGURE_ARGS+=	-d -e -D bin=${PREFIX:Q}/bin \
 			-D useinews=${PREFIX:Q}'/bin/inews'
 
 post-install:
-	@${RM} -f ${PREFIX}/bin/rn ${PREFIX}/man/man1/rn.1 \
-		${PREFIX}/man/man1/rn.1.gz
+	@${RM} -f ${PREFIX}/bin/rn ${PREFIX}/${PKGMANDIR}/man1/rn.1 \
+		${PREFIX}/${PKGMANDIR}/man1/rn.1.gz
 	@${LN} -s trn ${PREFIX}/bin/rn
-	@${LN} -s trn.1 ${PREFIX}/man/man1/rn.1
+	@${LN} -s trn.1 ${PREFIX}/${PKGMANDIR}/man1/rn.1
 
 .include "../../mk/bsd.pkg.mk"

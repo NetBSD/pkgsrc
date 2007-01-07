@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/13 09:17:51 taca Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:14:13 rillig Exp $
 
 DISTNAME=	kakasi-2.3.4
 PKGREVISION=	4
@@ -14,8 +14,8 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.1 ${PREFIX}/man/ja_JP.EUC/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.1 ${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.cat \
-		${PREFIX}/man/ja_JP.EUC/cat1/kakasi.0
+		${PREFIX}/${PKGMANDIR}/ja_JP.EUC/cat1/kakasi.0
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:49 rillig Exp $
 #
 
 DISTNAME=	code2html-0.9.1
@@ -13,10 +13,10 @@ NO_BUILD=	yes
 REPLACE_PERL=	code2html
 USE_TOOLS+=	perl:run
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/code2html ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/code2html.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/code2html.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

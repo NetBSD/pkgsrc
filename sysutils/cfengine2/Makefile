@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/01/06 15:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/07 09:14:11 rillig Exp $
 #
 
 PKGREVISION=	4
@@ -23,8 +23,8 @@ pre-configure:
 		${WRKSRC}/contrib/vicf.in.orig > ${WRKSRC}/contrib/vicf.in
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${PREFIX}/man/man8
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/inputs/*.example \
 		${PREFIX}/share/examples/cfengine
 	${INSTALL_DATA_DIR} /var/cfengine/inputs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:54 rillig Exp $
 
 DISTNAME=	xmbdfed-4.5
 PKGREVISION=	2
@@ -11,11 +11,11 @@ COMMENT=	Motif-based BDF font editor with lots of features
 
 USE_X11BASE=	YES
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xmbdfed ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xmbdfed.man ${PREFIX}/man/man1/xmbdfed.1
+	${INSTALL_MAN} ${WRKSRC}/xmbdfed.man ${PREFIX}/${PKGMANDIR}/man1/xmbdfed.1
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"

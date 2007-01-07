@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/06/10 20:00:55 minskim Exp $
+# $NetBSD: Makefile,v 1.56 2007/01/07 09:14:15 rillig Exp $
 #
 
 DISTNAME=	bozohttpd-20060517
@@ -34,7 +34,7 @@ MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
 CPPFLAGS+=	-DDO_HTPASSWD
 .endif
 
-INSTALLATION_DIRS=	libexec man/cat8 man/man8
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
 .include "../../security/openssl/buildlink3.mk"
 

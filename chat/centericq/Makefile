@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/11/19 11:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2007/01/07 09:13:48 rillig Exp $
 #
 
 DISTNAME=	centericq-4.21.0
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv=yes
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/centericq.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/centericq.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
 

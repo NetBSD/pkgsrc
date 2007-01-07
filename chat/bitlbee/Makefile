@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/08/16 09:46:27 tonio Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:48 rillig Exp $
 #
 
 DISTNAME=		bitlbee-1.0.3
@@ -34,7 +34,7 @@ OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
 PKG_USERS=		bitlbee:nobody
 PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 
-INSTALLATION_DIRS=	man/man5 man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_DATA_DIR} ${DATADIR}
@@ -44,8 +44,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/doc/user-guide/help.txt ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DATADIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.conf.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.conf.5 ${PREFIX}/${PKGMANDIR}/man5
 .for f in AUTHORS FAQ README CREDITS user-guide/user-guide.txt user-guide/user-guide.html
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCDIR}
 .endfor

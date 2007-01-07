@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/22 22:22:05 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/07 09:14:15 rillig Exp $
 
 DISTNAME=		plugger-4.0-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
@@ -36,7 +36,7 @@ DOCDIR=			${PREFIX}/share/doc/plugger
 
 PLIST_SUBST+=		NS_PLUGINS_DIR=${NS_PLUGINS_DIR:S/${PREFIX}\///}
 
-INSTALLATION_DIRS=	bin man/man7
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man7
 
 do-install:
 .if ${BINNAME} != common
@@ -45,7 +45,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} plugger.so ${NS_PLUGINS_DIR}
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} plugger-4.0 ${PREFIX}/bin
-	cd ${WRKSRC}; ${INSTALL_DATA} plugger.7 ${PREFIX}/man/man7
+	cd ${WRKSRC}; ${INSTALL_DATA} plugger.7 ${PREFIX}/${PKGMANDIR}/man7
 	cd ${WRKSRC}; ${INSTALL_DATA} README COPYING ${DOCDIR}
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/01 19:01:17 tv Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/07 09:14:12 rillig Exp $
 #
 
 DISTNAME=		memtester-4.0.5
@@ -16,11 +16,11 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
 
-INSTALLATION_DIRS=	bin man/man8 share/doc/memtester
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/doc/memtester
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/memtester ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/memtester.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/memtester.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/README.tests ${PREFIX}/share/doc/memtester
 
 .include "../../mk/djbware.mk"

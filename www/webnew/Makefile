@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/14 08:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:16 rillig Exp $
 #
 
 DISTNAME=		webnew-1.3
@@ -14,10 +14,10 @@ USE_TOOLS+=		perl:run
 NO_CONFIGURE=		yes
 BUILD_TARGET=		all DEST=${PREFIX} PERL=${PERL5}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/webnew ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/webnew.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/webnew.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/12/11 12:31:53 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/07 09:14:11 rillig Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
@@ -12,7 +12,7 @@ WRKSRC=		${WRKDIR}/cdrdao-${CDRDAO_VER}
 USE_DIRS+=		xdg-1.1
 CONFIGURE_ARGS+=	--without-posix-threads
 CONFIGURE_ARGS+=	--with-xdao
-INSTALLATION_DIRS=	bin man/man1 share/applications share/pixmaps
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/pixmaps
 USE_TOOLS+=		pkg-config
 INSTALL_DIRS=		xdao
 

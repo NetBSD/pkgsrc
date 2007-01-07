@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/19 11:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=		libbt-1.05
@@ -19,9 +19,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/btget ${PREFIX}/bin/btget
 	${INSTALL_PROGRAM} ${WRKSRC}/src/btlist ${PREFIX}/bin/btlist
 	${INSTALL_PROGRAM} ${WRKSRC}/src/btcheck ${PREFIX}/bin/btcheck
-	${INSTALL_MAN} ${WRKSRC}/man/btget.1 ${PREFIX}/man/man1/btget.1
-	${INSTALL_MAN} ${WRKSRC}/man/btlist.1 ${PREFIX}/man/man1/btlist.1
-	${INSTALL_MAN} ${WRKSRC}/man/btcheck.1 ${PREFIX}/man/man1/btcheck.1
+	${INSTALL_MAN} ${WRKSRC}/man/btget.1 ${PREFIX}/${PKGMANDIR}/man1/btget.1
+	${INSTALL_MAN} ${WRKSRC}/man/btlist.1 ${PREFIX}/${PKGMANDIR}/man1/btlist.1
+	${INSTALL_MAN} ${WRKSRC}/man/btcheck.1 ${PREFIX}/${PKGMANDIR}/man1/btcheck.1
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/01/04 13:27:12 ghen Exp $
+# $NetBSD: Makefile,v 1.76 2007/01/07 09:14:03 rillig Exp $
 
 DISTNAME=		lftp-3.5.6
 CATEGORIES=		net
@@ -33,7 +33,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 EGDIR=			${PREFIX}/share/examples/lftp
 CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf
 
-INSTALLATION_DIRS=	bin lib/lftp man/man1 share/examples/lftp share/lftp
+INSTALLATION_DIRS=	bin lib/lftp ${PKGMANDIR}/man1 share/examples/lftp share/lftp
 
 post-install: post-install-perl
 	${INSTALL_DATA_DIR} ${EGDIR}

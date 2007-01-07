@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/16 10:07:55 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 09:14:03 rillig Exp $
 #
 
 DISTNAME=		httping-1.2.1
@@ -13,7 +13,7 @@ COMMENT=		Like 'ping' but for http-requests
 LDFLAGS.SunOS=		-lnsl -lsocket
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/httping.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/httping.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/httping ${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"

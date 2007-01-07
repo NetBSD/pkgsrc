@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/01/02 16:56:19 minskim Exp $
+# $NetBSD: Makefile,v 1.76 2007/01/07 09:13:59 rillig Exp $
 #
 
 DISTNAME=		mathomatic-12.6.8
@@ -17,14 +17,14 @@ MAKE_FILE=		makefile
 
 CFLAGS.SunOS+=		-DSOLARIS
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 BUILDLINK_API_DEPENDS.readline+=	readline>=5.1pl1nb1
 .include "../../devel/readline/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mathomatic ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mathomatic.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/mathomatic.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/README.txt \
 		${PREFIX}/share/doc/${PKGBASE}

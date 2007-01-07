@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:28:54 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/07 09:13:46 rillig Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
@@ -17,6 +17,6 @@ GNU_CONFIGURE=		yes
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bladeenc
 	${INSTALL_DATA} ${WRKSRC}/bladeenc.html ${PREFIX}/share/doc/html/bladeenc
-	${INSTALL_MAN} ${WRKSRC}/bladeenc.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/bladeenc.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
