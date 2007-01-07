@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 13:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 13:24:33 rillig Exp $
 #
 
 DISTNAME=	fortunes-de-0.20
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	share/games/fortune/de
 CHECK_PORTABILITY_SKIP=	install.sh
 
 do-build:
-	find ${WRKSRC}/data -type f -exec ${STRFILE} {} \;
+	find ${WRKSRC}/data -type f ! -name "*.dat" -exec ${STRFILE} {} \;
 
 do-install:
 	cd ${WRKSRC}/data && pax -rw . ${PREFIX}/share/games/fortune/de
