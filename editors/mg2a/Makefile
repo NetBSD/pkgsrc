@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 00:18:43 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 00:41:29 rillig Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
@@ -9,10 +9,15 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tron@NetBSD.org
 COMMENT=	Small, fast, public domain EMACS style editor
 
+BUILD_TARGET=		mg
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-post-extract:
-	cd ${WRKSRC} && ${CP} sys/bsd/Makefile .
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	case ${OPSYS} in \
+	SunOS) cp sys/sysv/Makefile . ;; \
+	*) cp sys/bsd/Makefile . ;; \
+	esac
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mg ${PREFIX}/bin/mg
