@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2007/01/06 17:10:42 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2007/01/07 00:57:36 rillig Exp $
 #
 # This is the top-level Makefile of pkgsrc. It contains a list of the
 # categories of packages, as well as some targets that operate on the
@@ -22,6 +22,20 @@
 # See also:
 #	mk/misc/toplevel.mk
 #
+
+# Note: The tools definitions must come before bsd.prefs.mk is included.
+
+# tools used by this Makefile
+USE_TOOLS+=	[ awk cat cmp echo env expr false fgrep grep mv	rm sed	\
+		sort wc
+
+# additional tools used by bsd.pkg.subdir.mk
+USE_TOOLS+=	basename touch
+
+# additional tools used by bsd.bulk-pkg.mk
+USE_TOOLS+=	egrep find ls sh tee true tsort
+
+PKGSRCTOP=	yes
 
 .include "mk/bsd.prefs.mk"
 
