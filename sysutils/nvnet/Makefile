@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/18 20:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/07 09:14:12 rillig Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -29,7 +29,7 @@ WRKSRC=		${WRKDIR}/nvnet
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-INSTALLATION_DIRS=	lkm man/man4
+INSTALLATION_DIRS=	lkm ${PKGMANDIR}/man4
 
 MESSAGE_SUBST+=  PREFIX=${PREFIX:Q}
 
@@ -39,6 +39,6 @@ do-extract:
 
 do-install:
 	${INSTALL} -c -m 755 ${WRKSRC}/module/nv.o ${PREFIX}/lkm/nv.o
-	${INSTALL_MAN} ${WRKSRC}/man/nv.4 ${PREFIX}/man/man4/nv.4
+	${INSTALL_MAN} ${WRKSRC}/man/nv.4 ${PREFIX}/${PKGMANDIR}/man4/nv.4
 
 .include "../../mk/bsd.pkg.mk"

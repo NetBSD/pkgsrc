@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/17 20:39:36 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/07 09:13:51 rillig Exp $
 
 DISTNAME=	libnet-1.1.2.1
 PKGREVISION=	1
@@ -23,7 +23,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libnet
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libnet/html
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/libnet
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man3
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man3
 
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html \
 		${PREFIX}/share/doc/libnet/html
@@ -38,7 +38,7 @@ post-install:
 		${PREFIX}/share/examples/libnet
 
 	${INSTALL_MAN} ${WRKSRC}/doc/man/man3/*.3 \
-		${PREFIX}/man/man3
+		${PREFIX}/${PKGMANDIR}/man3
 
 	for f in ${LNDOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/doc/$$f \

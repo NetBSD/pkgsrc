@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2007/01/07 09:14:08 rillig Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	6
@@ -33,7 +33,7 @@ CONF_FILES_PERMS=	${EGDIR}/vtund.conf ${PKG_SYSCONFDIR}/vtund.conf \
 			${ROOT_USER} ${ROOT_GROUP} 0600
 OWN_DIRS=		${LOCKDIR} ${LOGDIR}
 
-INSTALLATION_DIRS=	man/man5 man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 post-build:
 	@cd ${WRKSRC}; for file in vtund.8; do				\
@@ -52,10 +52,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.Setup ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.Shaper ${DOCDIR}
 	${INSTALL_DATA} ${WRKDIR}/vtund.conf ${EGDIR}/vtund.conf
-	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${PREFIX}/man/man8
-	${RM} -f ${PREFIX}/man/man8/vtun.8
-	${LN} -s vtund.8 ${PREFIX}/man/man8/vtun.8
+	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${PREFIX}/${PKGMANDIR}/man8
+	${RM} -f ${PREFIX}/${PKGMANDIR}/man8/vtun.8
+	${LN} -s vtund.8 ${PREFIX}/${PKGMANDIR}/man8/vtun.8
 
 .include "../../archivers/liblzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

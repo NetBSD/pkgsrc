@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2007/01/07 09:14:02 rillig Exp $
 #
 
 DISTNAME=	arpwatch-2.1a13
@@ -33,8 +33,8 @@ pre-patch:
 	${SED} -e '/Header/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/arpsnmp.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/arpsnmp.8 ${PREFIX}/${PKGMANDIR}/man8
 	@${INSTALL_DATA_DIR} ${VARBASE}/db/arpwatch
 	${TOUCH} ${VARBASE}/db/arpwatch/arp.dat
 	${INSTALL_DATA_DIR} ${PREFIX}/share/arpwatch

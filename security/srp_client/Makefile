@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/04 21:30:38 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2007/01/07 09:14:10 rillig Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -33,7 +33,7 @@ SED_PATTERN+=	-e "s,-ldes,-ldes -lroken -lcom_err -lcrypt,"
 SED_PATTERN+=	-e "s,-ldes,-ldes -lcom_err,"
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	for FILE in ftp/ftp/Makefile.in ftp/ftpd/Makefile.in		\
@@ -49,9 +49,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/telnet/telnet/telnet \
 		${PREFIX}/bin/srptelnet
 	${INSTALL_DATA} ${WRKSRC}/telnet/telnet/telnet.1 \
-		${PREFIX}/man/man1/srptelnet.1
+		${PREFIX}/${PKGMANDIR}/man1/srptelnet.1
 	${INSTALL_PROGRAM} ${WRKSRC}/ftp/ftp/ftp ${PREFIX}/bin/srpftp
-	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${PREFIX}/man/man1/srpftp.1
+	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${PREFIX}/${PKGMANDIR}/man1/srpftp.1
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

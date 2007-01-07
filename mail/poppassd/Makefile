@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/06/01 22:27:17 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/07 09:13:59 rillig Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -22,7 +22,7 @@ MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	man/man8 share/doc libexec
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 share/doc libexec
 
 do-build:
 .for DIR in common password
@@ -34,7 +34,7 @@ do-build:
 do-install:
 	cd ${WRKSRC}/password; ${SETENV} ${MAKE_ENV}			\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
-	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/License.txt				\
 		${PREFIX}/share/doc/poppassd.License;
 

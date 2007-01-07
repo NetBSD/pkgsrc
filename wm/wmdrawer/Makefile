@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/18 20:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:15 rillig Exp $
 #
 
 DISTNAME=		wmdrawer-0.10.5
@@ -11,14 +11,14 @@ HOMEPAGE=		http://people.easter-eggs.org/~valos/wmdrawer/
 COMMENT=		Drawer (retractable button bar) to launch applications
 
 USE_TOOLS+=		gmake
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmdrawer ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmdrawer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/wmdrawer
-	${INSTALL_MAN} ${WRKSRC}/doc/wmdrawer.1x.gz ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/wmdrawer.1x.gz ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/wmdrawerrc.example ${PREFIX}/share/examples/wmdrawer
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/wmdrawer
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/wmdrawer

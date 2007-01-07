@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:11 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/07 09:14:00 rillig Exp $
 #
 
 DISTNAME=	coreutils-5.2.1
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		YES
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dircolors \
@@ -27,9 +27,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ls \
 		${PREFIX}/bin/${GNU_PROGRAM_PREFIX}ls
 	${INSTALL_DATA} ${WRKSRC}/man/dircolors.1 \
-		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}dircolors.1
+		${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}dircolors.1
 	${INSTALL_DATA} ${WRKSRC}/man/ls.1 \
-		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}ls.1
+		${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}ls.1
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

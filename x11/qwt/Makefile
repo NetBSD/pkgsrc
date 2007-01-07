@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/05/19 07:48:12 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:16 rillig Exp $
 
 DISTNAME=	qwt-0.3.0
 PKGREVISION=	5
@@ -18,7 +18,7 @@ MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:M*:Q}
 
 CONFLICTS=	qwtlib-[0-9]*
 
-INSTALLATION_DIRS=	lib man/man3
+INSTALLATION_DIRS=	lib ${PKGMANDIR}/man3
 
 post-patch:
 	${LN} -s ${WRKSRC}/makefiles/netbsd-g++ ${WRKSRC}/Makefile
@@ -28,7 +28,7 @@ do-install:
 	  ${PREFIX}/lib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/qwt
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${PREFIX}/include/qwt
-	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/man/man3
+	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/${PKGMANDIR}/man3
 
 .include "../../x11/qt2-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

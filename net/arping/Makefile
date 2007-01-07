@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/20 00:00:58 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:01 rillig Exp $
 #
 
 DISTNAME=		arping-2.05
@@ -32,12 +32,12 @@ BUILD_FOR=		macosx
 BUILD_TARGET=		arping1 ${BUILD_FOR}
 .endif
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 .include "../../net/libpcap/buildlink3.mk"
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/arping.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/arping.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_PROGRAM} ${WRKSRC}/arping ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/04 21:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:13:57 rillig Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	1
@@ -40,7 +40,7 @@ post-build:
 do-install:
 	cd ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -` && \
 		${INSTALL_PROGRAM} dk-filter/dk-filter ${PREFIX}/sbin/dk-milter
-	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-milter.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-milter.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dk-milter

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/22 22:50:31 tv Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:49 rillig Exp $
 
 DISTNAME=	icbirc-1.8
 CATEGORIES=	chat
@@ -16,7 +16,7 @@ SRCS=		icb.c irc.c icbirc.c
 CPPFLAGS.Interix+= -Dsocklen_t=int
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-build:
 .for f in ${SRCS}
@@ -26,6 +26,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/icbirc ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/icbirc.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/icbirc.8 ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/10/11 19:31:31 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/07 09:14:16 rillig Exp $
 #
 
 .include "Makefile.common"
@@ -11,7 +11,7 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Perl bindings for GTK+
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/Gtk
-MAKE_PARAMS=		INSTALLMAN3DIR=${PREFIX}/man/man3
+MAKE_PARAMS=		INSTALLMAN3DIR=${PREFIX}/${PKGMANDIR}/man3
 PERL5_PACKLIST=		auto/Gtk/.packlist
 
 REPLACE_PERL+=		../tools/*

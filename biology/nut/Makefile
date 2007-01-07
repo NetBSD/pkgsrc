@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:20 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:48 rillig Exp $
 
 DISTNAME=	nut-10.18
 PKGREVISION=	1
@@ -13,12 +13,12 @@ COMMENT=	Record what you eat and analyze your meals
 BUILD_TARGET=	nut
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nut ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nut
 	${INSTALL_DATA} ${WRKSRC}/raw.data/* ${PREFIX}/share/nut
-	${INSTALL_MAN} ${WRKSRC}/nut.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/nut.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

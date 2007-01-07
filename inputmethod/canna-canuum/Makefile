@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/05 04:48:28 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:56 rillig Exp $
 
 PKGREVISION=	1
 CANNA_MODULE=	canuum
@@ -9,7 +9,7 @@ MAINTAINER=	oishi@ims.ac.jp
 
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
-INSTALLATION_DIRS=	man/ja_JP.EUC/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/man1
 
 CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/canuum
 BUILD_DIRS=	${WRKSRC}/canuum
