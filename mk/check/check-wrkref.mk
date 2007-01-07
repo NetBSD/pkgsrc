@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.10 2006/11/12 00:13:26 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.11 2007/01/07 11:21:24 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -21,7 +21,7 @@
 #
 # CHECK_WRKREF_SKIP:
 #	The list of filename patterns that should be excluded from this
-#	test.
+#	test, either absolute or relative to PREFIX.
 #
 
 .if defined(PKG_DEVELOPER)
@@ -30,7 +30,7 @@ CHECK_WRKREF?=		tools
 CHECK_WRKREF?=		no
 CHECK_WRKREF_SKIP?=	# none
 
-_CHECK_WRKREF_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
+_CHECK_WRKREF_FILELIST_CMD?=	${PKG_FILELIST_CMD}
 
 _CHECK_WRKREF_DIR.no=		# none
 _CHECK_WRKREF_DIR.work=		${WRKDIR}
@@ -55,7 +55,7 @@ _check-wrkref: error-check .PHONY
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
 		case "$$file" in					\
-		${CHECK_WRKREF_SKIP:@p@${p}) continue;; @}		\
+		${CHECK_WRKREF_SKIP:@p@${p} | ${PREFIX}/${p}) continue;; @} \
 		*) ;;							\
 		esac;							\
 		${SHCOMMENT} "[$$file]";				\
