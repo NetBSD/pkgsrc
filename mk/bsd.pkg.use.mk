@@ -1,11 +1,20 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.38 2007/01/06 16:47:54 rillig Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.39 2007/01/07 13:38:52 rillig Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
+#
+# Package-settable variables:
+#
+# USE_BSD_MAKEFILE
+#	Should be set to "yes" whenever a package uses a BSD-style
+#	Makefile. These Makefiles typically end with a line including
+#	<bsd.prog.mk>.
+#
 
-############################################################################
-# ${PREFIX} selection
-############################################################################
+.if defined(USE_BSD_MAKEFILE)
+MAKE_ENV+=		${BSD_MAKE_ENV}
+USE_TOOLS+=		nroff
+.endif
 
 .if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
 PLIST_SUBST+=		IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH:Q}
