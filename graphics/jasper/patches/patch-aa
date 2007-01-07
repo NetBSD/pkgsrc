@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2007/01/07 19:00:59 adam Exp $
+
+--- src/libjasper/jpc/jpc_qmfb.h.orig	2007-01-07 19:51:43.000000000 +0100
++++ src/libjasper/jpc/jpc_qmfb.h
+@@ -107,7 +107,7 @@ typedef struct {
+ 	double *hpenergywts;
+ } jpc_qmfb2d_t;
+ 
+-jpc_qmfb2d_t jpc_ft_qmfb2d;
+-jpc_qmfb2d_t jpc_ns_qmfb2d;
++extern jpc_qmfb2d_t jpc_ft_qmfb2d;
++extern jpc_qmfb2d_t jpc_ns_qmfb2d;
+ 
+ #endif
