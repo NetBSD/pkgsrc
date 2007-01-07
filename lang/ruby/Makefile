@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/12/06 16:34:42 taca Exp $
+# $NetBSD: Makefile,v 1.42 2007/01/07 09:13:57 rillig Exp $
 
 DISTNAME=	ruby-${RUBY_VERSION}.${RUBY_PATCH_DATE}
 CATEGORIES=	lang ruby
@@ -24,7 +24,7 @@ RUBY_COMMANDS=	irb ruby
 RUBY_COMMANDS+=	erb h2rb rdoc ri testrb
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
@@ -33,7 +33,7 @@ do-install:
 	${LN} -sf ${f}${RUBY_VER} ${PREFIX}/bin/${f}
 	${ECHO} bin/${f} >> ${PLIST_SRC}
 .endfor
-	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/man/man1/ruby.1
+	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/${PKGMANDIR}/man1/ruby.1
 	${ECHO} man/man1/ruby.1 >> ${PLIST_SRC}
 .endif
 

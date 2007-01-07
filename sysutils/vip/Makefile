@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:43 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:13 rillig Exp $
 
 DISTNAME=	vip-19971113
 PKGREVISION=	2
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/vip ${WRKSRC}
@@ -26,6 +26,6 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/vip ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/vip.man ${PREFIX}/man/man8/vip.8
+	${INSTALL_MAN} ${WRKSRC}/vip.man ${PREFIX}/${PKGMANDIR}/man8/vip.8
 
 .include "../../mk/bsd.pkg.mk"

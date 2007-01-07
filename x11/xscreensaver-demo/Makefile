@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/18 18:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/07 09:14:16 rillig Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
@@ -23,7 +23,7 @@ INSTALL_TARGET=		install-gnome
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/driver/xscreensaver-demo ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/driver/xscreensaver-demo.man \
-		       ${PREFIX}/man/man1/xscreensaver-demo.1
+		       ${PREFIX}/${PKGMANDIR}/man1/xscreensaver-demo.1
 
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

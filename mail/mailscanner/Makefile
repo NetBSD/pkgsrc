@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/04 09:13:49 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:13:58 rillig Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -88,7 +88,7 @@ SUBST_SED.systemdefs=	-e s,/bin/rm,${RM},g
 SUBST_SED.systemdefs=	-e s,/bin/sed,${SED},g
 .endif
 
-INSTALLATION_DIRS=	bin man/man5 man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 # get rid of CVS backup files
 post-extract:
@@ -123,8 +123,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCSDIR}
 	cd ${WRKSRC}/docs && ${FIND} * -type d -exec ${INSTALL_DATA_DIR} ${DOCSDIR}'/{}' \;
 	cd ${WRKSRC}/docs && ${FIND} * -type f -exec ${INSTALL_DATA} '{}' ${DOCSDIR} \;
-	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.conf.5 ${PREFIX}/man/man5
-	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.8 ${PREFIX}/man/man8
+	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.8 ${PREFIX}/${PKGMANDIR}/man8
 
 post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}

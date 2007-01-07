@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:05 rillig Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -23,7 +23,7 @@ USE_TOOLS+=	patch
 
 BUILDLINK_PASSTHRU_DIRS=	${NETBSDSRCDIR}/lib/libpcap
 
-INSTALLATION_DIRS=	lkm man/cat8 man/man8 sbin
+INSTALLATION_DIRS=	lkm ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 
 pre-extract:
 .if !exists(${NETBSDSRCDIR}/usr.sbin/pppd/Makefile)
@@ -59,8 +59,8 @@ pre-install:
 do-install:
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m 4555 \
 		${WRKSRC}/pppd/pppd ${PREFIX}/sbin/pppd
-	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.cat8 ${PREFIX}/man/cat8/pppd.0
-	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.8 ${PREFIX}/man/man8/pppd.8
+	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/pppd.0
+	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.8 ${PREFIX}/${PKGMANDIR}/man8/pppd.8
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
 		${WRKSRC}/lkm/lzs.o ${PREFIX}/lkm/lzs.o
 

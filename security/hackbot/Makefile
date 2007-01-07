@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/07 09:14:10 rillig Exp $
 
 DISTNAME=		hackbot-2.15
 CATEGORIES=		security net
@@ -16,7 +16,7 @@ MANCOMPRESSED=		YES
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		hackbot.pl
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	${SED} "s,/usr/local/etc,${PREFIX}/share/hackbot,g" ${WRKSRC}/hackbot.pl > ${WRKSRC}/hackbot.pl.done
@@ -26,6 +26,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/hackbot
 	${INSTALL_SCRIPT} ${WRKSRC}/hackbot.pl ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/cgi.db ${WRKSRC}/fingerprint.db ${PREFIX}/share/hackbot
-	${INSTALL_MAN} ${WRKSRC}/hackbot.1.gz ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/hackbot.1.gz ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

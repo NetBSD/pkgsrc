@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:09 rillig Exp $
 
 DISTNAME=	avcheck-0.9
 CATEGORIES=	security mail
@@ -10,12 +10,12 @@ COMMENT=	Mail content filter for SMTP servers
 
 USE_TOOLS+=	gsed
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/avcheck ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/uchroot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/avcheck.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/avcheck.1 ${PREFIX}/${PKGMANDIR}/man1
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avcheck
 	${INSTALL_DATA} ${WRKSRC}/README.AVP ${PREFIX}/share/doc/avcheck

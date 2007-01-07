@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/07 09:14:07 rillig Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -26,14 +26,14 @@ DISTINFO_FILE=	${.CURDIR}/../../net/tcl-scotty/distinfo
 FILESDIR=	${.CURDIR}/../../net/tcl-scotty/files
 PATCHDIR=	${.CURDIR}/../../net/tcl-scotty/patches
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 .include "../../net/tcl-scotty/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
 do-install:
 	@cd ${WRKSRC} && ${MAKE_ENV} ${MAKE} tki-install
-	${INSTALL_DATA} ${WRKSRC}/../doc/tkined.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/../doc/tkined.1 ${PREFIX}/${PKGMANDIR}/man1
 
 post-install:
 	cd ${PREFIX}/bin && ${LN} -f -s tkined1.4.11 tkined

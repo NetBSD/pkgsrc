@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/06/01 23:14:34 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:10 rillig Exp $
 #
 
 DISTNAME=	p0f-2.0.5
@@ -25,7 +25,7 @@ SUBST_FILES.paths=	config.h p0f.1
 SUBST_SED.paths=	-e "s|/etc/p0f|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-INSTALLATION_DIRS=	bin man/man1 share/doc/p0f share/examples/p0f
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/p0f share/examples/p0f
 
 post-patch:
 	${LN} -s NetBSD ${WRKSRC}/mk/DragonFly
@@ -37,7 +37,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/p0f.fp ${PREFIX}/share/examples/p0f
 	${INSTALL_DATA} ${WRKSRC}/p0fa.fp ${PREFIX}/share/examples/p0f
 	${INSTALL_DATA} ${WRKSRC}/p0fr.fp ${PREFIX}/share/examples/p0f
-	${INSTALL_MAN} ${WRKSRC}/p0f.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/p0f.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
