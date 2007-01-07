@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2006/10/07 07:10:29 obache Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/07 13:29:20 rillig Exp $
 
-DISTNAME=	dar-2.3.1
+DISTNAME=	dar-2.3.2
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
@@ -19,6 +19,11 @@ CONFIGURE_ARGS+=	--disable-dar-static
 CONFIGURE_ARGS+=	--disable-nodump-flag
 CONFIGURE_ARGS+=	--disable-upx
 CONFIGURE_ARGS+=	--enable-examples
+CONFIGURE_ARGS+=	doxygen=no
+
+REPLACE_PERL+=		doc/samples/dar_backup
+REPLACE_BASH+=		doc/samples/*.bash doc/samples/clust*.sh
+# No extra dependencies, since these are only examples.
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dar
 PKG_SUPPORTED_OPTIONS=	dar-int32 dar-int64
