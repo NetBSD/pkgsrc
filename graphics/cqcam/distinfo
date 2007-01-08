@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 08:45:04 agc Exp $
+$NetBSD: distinfo,v 1.8 2007/01/08 04:51:44 rillig Exp $
 
-SHA1 (cqcam-0.45a.tgz) = 39affec6ad3e81cc837ab583d01207767d4f7273
-RMD160 (cqcam-0.45a.tgz) = 5f0974b0f78c5168e8382d57f1567b63146e47d4
-Size (cqcam-0.45a.tgz) = 40163 bytes
-SHA1 (patch-aa) = dc64d8f880ef5d9807f476ff4840c80bbe8508a2
-SHA1 (patch-ab) = a81c6bc06146065cf6cccd377276a3bc5a3b2686
-SHA1 (patch-ac) = 868cedbdb0e866013079408d2260eb5084121da7
-SHA1 (patch-ad) = 79c73e48ed2dbfdf13286afe1959e1d1fdcacb0d
-SHA1 (patch-ae) = 3b07a7df2428f6275af449abded061bbed9f23db
-SHA1 (patch-af) = 2f786a6c3aec812c1c446735756b46dbc70ebd15
-SHA1 (patch-ag) = a6446bb7c03ebd6525173fbb72dc011dda09ce30
-SHA1 (patch-ah) = f0b370ee03774e315861c1948d2e3b2723f385f8
+SHA1 (cqcam-0.91.tar.gz) = 28c78c9a24ae01b5a18d81e334f8c0dcab2ebe78
+RMD160 (cqcam-0.91.tar.gz) = 4ef62b01985f834063a0e0941391b8d06428af7e
+Size (cqcam-0.91.tar.gz) = 121252 bytes
+SHA1 (patch-ab) = 3fa3af81031ac4569e68416f2494c19bc5ce276d
+SHA1 (patch-ac) = 1c2f0c62ee192864ca6e25caf966b51ea37ed466
+SHA1 (patch-af) = a282c32139c6bff100677bc8609f77971fb0295d
+SHA1 (patch-ai) = e61408d8804553741c41a5756cd70ed3a7cb9453
+SHA1 (patch-aj) = 4a11c8bc807c11f3b68971eb44b325e10b32b070

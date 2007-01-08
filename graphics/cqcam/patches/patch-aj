@@ -1,0 +1,18 @@
+$NetBSD: patch-aj,v 1.1 2007/01/08 04:51:44 rillig Exp $
+
+Tags: not-for-upstream
+
+--- configure.orig	2001-07-11 22:58:54.000000000 +0200
++++ configure	2007-01-08 05:18:15.000000000 +0100
+@@ -1951,6 +1951,11 @@ case "$host_os" in
+     OS_LDFLAGS='-L/usr/local/lib'
+     OS_LIBCQCAM_OBJS=''
+   ;;
++  netbsd*)
++    OS_CFLAGS="-DNETBSD"
++    OS_LDFLAGS="-li386"
++    OS_LIBCQCAM_OBJS=""
++  ;;
+   openbsd*)
+     OS_CFLAGS='-O2 -DOPENBSD'
+     OS_LDFLAGS='-L/usr/local/lib'
