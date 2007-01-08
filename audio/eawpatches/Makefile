@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/10/27 13:45:44 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/08 21:34:57 rillig Exp $
 #
 
 DISTNAME=	eawpats12_full
 PKGNAME=	eawpatches-12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
@@ -15,19 +15,21 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 LICENSE=	generic-nonlicense
 
-USE_TOOLS+=	gzcat tar
-EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
+post-extract:
+	chmod go-w ${WRKSRC}/eawpats/gravis.cfg
+
+pre-configure:
+	sed -e "s@/home/user/eawpats@${WRKSRC}/share/eawpats@" \
+		< ${WRKSRC}/eawpats/linuxconfig/timidity.cfg \
+		> ${WRKSRC}/eawpats/timidity.cfg
+	rm -r ${WRKSRC}/eawpats/linuxconfig \
+		${WRKSRC}/eawpats/winconfig
+
 do-install:
-	cd ${PREFIX}/share && \
-		gzcat ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | tar xf -
-	${SED}  -e "s@/home/user/eawpats@${PREFIX}/share/eawpats@" \
-		< ${PREFIX}/share/eawpats/linuxconfig/timidity.cfg \
-		> ${PREFIX}/share/eawpats/timidity.cfg
-	${RM} -r ${PREFIX}/share/eawpats/linuxconfig \
-		${PREFIX}/share/eawpats/winconfig
+	cd ${WRKSRC} && pax -wr eawpats ${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
