@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/08 03:11:31 obache Exp $
+# $NetBSD: Makefile,v 1.32 2007/01/08 17:23:55 obache Exp $
 
 DISTNAME=	lha-114i
 PKGNAME=	lha-114.9
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm
 COMMENT=	Archive files using LZW compression (.lzh files)
 
+LICENSE=	lha-license
 RESTRICTED=	Distribution of only binaries not permitted. \
 		If this software is included in medium that may be obtained by \
 		users without network connectivity, need notify to author. \
@@ -18,7 +19,6 @@ RESTRICTED=	Distribution of only binaries not permitted. \
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
-LICENSE=	lha-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
