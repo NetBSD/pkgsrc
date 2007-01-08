@@ -1,14 +1,9 @@
-$NetBSD: patch-al,v 1.4 2007/01/08 08:21:48 rillig Exp $
+$NetBSD: patch-al,v 1.5 2007/01/08 08:50:51 rillig Exp $
 
 Security fix for CAN-2005-3001 and CVE-2006-4810
 
-Note: The "official" patch for CVE-2006-4810 is wrong. The "fixed" code
-assigns a "long" to a "char *". Furthermore, the code was completely
-broken anyway. Maybe that's why it has been removed in the current CVS
-version.
-
 --- util/texindex.c.orig	2004-04-11 19:56:47.000000000 +0200
-+++ util/texindex.c	2007-01-08 09:02:20.000000000 +0100
++++ util/texindex.c	2007-01-08 09:41:42.000000000 +0100
 @@ -387,14 +387,15 @@ For more information about these matters
  /* Return a name for temporary file COUNT. */
  
@@ -52,31 +47,16 @@ version.
  }
  
  
-@@ -827,17 +835,19 @@ long
- readline (struct linebuffer *linebuffer, FILE *stream)
- {
-   char *buffer = linebuffer->buffer;
--  char *p = linebuffer->buffer;
--  char *end = p + linebuffer->size;
-+  char *p = buffer;
-+  char *end = buffer + linebuffer->size;
- 
-   while (1)
-     {
-+      /* invariant: buffer <= p && p <= end */
-+      /* invariant: buffer + linebuffer->size == end */
-+      /* invariant: buffer == linebuffer->buffer */
-       int c = getc (stream);
-       if (p == end)
+@@ -837,7 +845,7 @@ readline (struct linebuffer *linebuffer,
          {
            buffer = (char *) xrealloc (buffer, linebuffer->size *= 2);
--          p += buffer - linebuffer->buffer;
+           p += buffer - linebuffer->buffer;
 -          end += buffer - linebuffer->buffer;
 +          end = buffer + linebuffer->size;
            linebuffer->buffer = buffer;
          }
        if (c < 0 || c == '\n')
-@@ -882,7 +892,7 @@ sort_offline (char *infile, off_t total,
+@@ -882,7 +890,7 @@ sort_offline (char *infile, off_t total,
  
    for (i = 0; i < ntemps; i++)
      {
@@ -85,7 +65,7 @@ version.
        FILE *ostream = fopen (outname, "w");
        long tempsize = 0;
  
-@@ -930,7 +940,7 @@ fail:
+@@ -930,7 +938,7 @@ fail:
  
    for (i = 0; i < ntemps; i++)
      {
@@ -94,7 +74,7 @@ version.
        sort_in_core (tempfiles[i], MAX_IN_CORE_SORT, newtemp);
        if (!keep_tempfiles)
          unlink (tempfiles[i]);
-@@ -1400,7 +1410,7 @@ merge_files (char **infiles, int nfiles,
+@@ -1400,7 +1408,7 @@ merge_files (char **infiles, int nfiles,
        int nf = MAX_DIRECT_MERGE;
        if (i + 1 == ntemps)
          nf = nfiles - i * MAX_DIRECT_MERGE;
