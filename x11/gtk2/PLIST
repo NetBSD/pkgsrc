@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2007/01/06 15:13:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2007/01/08 16:41:31 drochner Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -254,7 +254,7 @@ lib/gtk-2.0/2.10.0/immodules/im-cedilla.la
 lib/gtk-2.0/2.10.0/immodules/im-cyrillic-translit.la
 lib/gtk-2.0/2.10.0/immodules/im-inuktitut.la
 lib/gtk-2.0/2.10.0/immodules/im-ipa.la
-lib/gtk-2.0/2.10.0/immodules/im-thai-broken.la
+lib/gtk-2.0/2.10.0/immodules/im-thai.la
 lib/gtk-2.0/2.10.0/immodules/im-ti-er.la
 lib/gtk-2.0/2.10.0/immodules/im-ti-et.la
 lib/gtk-2.0/2.10.0/immodules/im-viqr.la
@@ -937,6 +937,8 @@ share/locale/ang/LC_MESSAGES/gtk20-properties.mo
 share/locale/ang/LC_MESSAGES/gtk20.mo
 share/locale/ar/LC_MESSAGES/gtk20-properties.mo
 share/locale/ar/LC_MESSAGES/gtk20.mo
+share/locale/as/LC_MESSAGES/gtk20-properties.mo
+share/locale/as/LC_MESSAGES/gtk20.mo
 share/locale/az/LC_MESSAGES/gtk20-properties.mo
 share/locale/az/LC_MESSAGES/gtk20.mo
 share/locale/az_IR/LC_MESSAGES/gtk20-properties.mo
@@ -1059,6 +1061,8 @@ share/locale/ru/LC_MESSAGES/gtk20-properties.mo
 share/locale/ru/LC_MESSAGES/gtk20.mo
 share/locale/rw/LC_MESSAGES/gtk20-properties.mo
 share/locale/rw/LC_MESSAGES/gtk20.mo
+share/locale/si/LC_MESSAGES/gtk20-properties.mo
+share/locale/si/LC_MESSAGES/gtk20.mo
 share/locale/sk/LC_MESSAGES/gtk20-properties.mo
 share/locale/sk/LC_MESSAGES/gtk20.mo
 share/locale/sl/LC_MESSAGES/gtk20-properties.mo
