@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/12/27 13:37:38 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2007/01/08 01:40:23 rillig Exp $
 #
 
 DISTNAME=	xart19980415
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=	YES
 
 post-extract:
-	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
-	${FIND} ${WRKSRC} -type f -print | ${XARGS} ${CHMOD} 644
+	cd ${WRKDIR} && find * -type d -exec chmod 755 "{}" ";"
+	cd ${WRKDIR} && find * -type f -print | xargs chmod 644
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
