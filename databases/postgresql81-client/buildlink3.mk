@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/12/12 21:52:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2007/01/08 18:55:38 adam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 POSTGRESQL81_CLIENT_BUILDLINK3_MK:=	${POSTGRESQL81_CLIENT_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	postgresql81-client
 .endif
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npostgresql81-client}
 BUILDLINK_PACKAGES+=	postgresql81-client
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}postgresql81-client
 
-.if !empty(POSTGRESQL81_CLIENT_BUILDLINK3_MK:M+)
+.if ${POSTGRESQL81_CLIENT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.postgresql81-client+=		postgresql81-client>=8.1.0
 BUILDLINK_PKGSRCDIR.postgresql81-client?=	../../databases/postgresql81-client
 
