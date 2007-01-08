@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5851 2007/01/08 11:02:09 adam Exp $
+$NetBSD: TODO,v 1.5852 2007/01/08 12:21:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -372,7 +372,6 @@ Suggested package updates
 	o dnsmasq-2.35
 	o dnstracer-1.8
 	o doclifter-2.3
-	o doxygen-1.5.1
 	o drscheme-360
 	o dvd+rw-tools-7.0
 	o dvdrip-0.98.2
