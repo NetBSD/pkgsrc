@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/11/22 17:17:45 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/08 21:48:40 drochner Exp $
 #
 
-DISTNAME=	gnome-screensaver-2.16.0
-PKGREVISION=	3
+DISTNAME=	gnome-screensaver-2.16.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.16/}
 
@@ -19,13 +18,24 @@ USE_X11=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-# gnome-screensaver-dialog drops SUID privs
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-screensaver
+PKG_SUPPORTED_OPTIONS=	pam
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpam)
+. include "../../mk/pam.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-pam
+. include "../../mk/bsd.prefs.mk"
+. if ${OPSYS} == "NetBSD"
+# needed to read shadow passwords
+DEPENDS+=	pam-pwauth_suid-*:../../security/pam-pwauth_suid
+. endif
+.else
 CONFIGURE_ARGS+=	--disable-pam
 .endif
 
-PKGCONFIG_OVERRIDE=	data/gnome-screensaver.pc
+PKGCONFIG_OVERRIDE=	data/gnome-screensaver.pc.in
 
 GCONF2_SCHEMAS=		gnome-screensaver.schemas
 
@@ -47,7 +57,9 @@ post-install:
 		${EGDIR}/pam.d/gnome-screensaver-NetBSD
 	${INSTALL_DATA} ${WRKSRC}/data/gnome-screensaver \
 		${EGDIR}/pam.d/gnome-screensaver-Linux
+.if empty(PKG_OPTIONS:Mpam)
 	${CHMOD} 04555 ${PREFIX}/libexec/gnome-screensaver-dialog
+.endif
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
