@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/18 21:40:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/08 17:48:09 joerg Exp $
 #
 
 DISTNAME=	skencil-0.6.17
@@ -40,6 +40,8 @@ post-install:
 	cd ${WRKSRC}/Examples && ${PAX} -rwpm -v . ${SKETCHEXDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/py-Tk/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
