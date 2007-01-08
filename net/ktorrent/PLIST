@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/03 17:37:22 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/08 20:08:39 xtraeme Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -8,13 +8,14 @@ lib/kde3/ktinfowidgetplugin.la
 lib/kde3/ktipfilterplugin.la
 lib/kde3/ktlogviewerplugin.la
 lib/kde3/ktpartfileimportplugin.la
+lib/kde3/ktrssfeedplugin.la
 lib/kde3/ktscanfolderplugin.la
 lib/kde3/ktschedulerplugin.la
 lib/kde3/ktsearchplugin.la
 lib/kde3/ktupnpplugin.la
+lib/kde3/ktwebinterfaceplugin.la
 lib/libktorrent.la
 share/applications/kde/ktorrent.desktop
-share/kde/applnk/Internet/ktorrent.desktop
 share/kde/apps/ktorrent/geoip/FLAGS_LICENCE
 share/kde/apps/ktorrent/geoip/GeoIP-LICENSE.txt
 share/kde/apps/ktorrent/geoip/ad.png
@@ -284,14 +285,34 @@ share/kde/apps/ktorrent/icons/hicolor/64x64/filesystems/ktprefdownloads.png
 share/kde/apps/ktorrent/ktorrentui.rc
 share/kde/apps/ktorrent/ktpartfileimportpluginui.rc
 share/kde/apps/ktorrent/ktschedulerpluginui.rc
+share/kde/apps/ktorrent/www/default/favicon.ico
+share/kde/apps/ktorrent/www/default/interface.php
+share/kde/apps/ktorrent/www/default/ktorrentwebinterfacelogo.png
+share/kde/apps/ktorrent/www/default/login.html
+share/kde/apps/ktorrent/www/default/redirect.html
+share/kde/apps/ktorrent/www/default/remove.png
+share/kde/apps/ktorrent/www/default/start.png
+share/kde/apps/ktorrent/www/default/stop.png
+share/kde/apps/ktorrent/www/mobile/favicon.ico
+share/kde/apps/ktorrent/www/mobile/interface.php
+share/kde/apps/ktorrent/www/mobile/ktorrentwebinterfacelogo.png
+share/kde/apps/ktorrent/www/mobile/login.html
+share/kde/apps/ktorrent/www/mobile/redirect.html
+share/kde/apps/ktorrent/www/mobile/remove.png
+share/kde/apps/ktorrent/www/mobile/settings.php
+share/kde/apps/ktorrent/www/mobile/start.png
+share/kde/apps/ktorrent/www/mobile/stop.png
+share/kde/apps/ktorrent/www/mobile/torrent.php
 share/kde/config.kcfg/ktinfowidgetplugin.kcfg
 share/kde/config.kcfg/ktipfilterplugin.kcfg
 share/kde/config.kcfg/ktlogviewerplugin.kcfg
 share/kde/config.kcfg/ktorrent.kcfg
+share/kde/config.kcfg/ktrssfeedplugin.kcfg
 share/kde/config.kcfg/ktscanfolderplugin.kcfg
 share/kde/config.kcfg/ktschedulerplugin.kcfg
 share/kde/config.kcfg/ktsearchplugin.kcfg
 share/kde/config.kcfg/ktupnpplugin.kcfg
+share/kde/config.kcfg/ktwebinterfaceplugin.kcfg
 share/kde/icons/hicolor/128x128/apps/ktorrent.png
 share/kde/icons/hicolor/128x128/mimetypes/torrent.png
 share/kde/icons/hicolor/16x16/apps/ktorrent.png
@@ -306,15 +327,19 @@ share/kde/icons/hicolor/64x64/apps/ktorrent.png
 share/kde/icons/hicolor/64x64/mimetypes/torrent.png
 share/kde/icons/hicolor/scalable/apps/ktorrent.svgz
 share/kde/icons/hicolor/scalable/mimetypes/torrent.svgz
+share/kde/mimelnk/application/x-bittorrent.desktop
 share/kde/services/ktinfowidgetplugin.desktop
 share/kde/services/ktipfilterplugin.desktop
 share/kde/services/ktlogviewerplugin.desktop
 share/kde/services/ktpartfileimportplugin.desktop
+share/kde/services/ktrssfeedplugin.desktop
 share/kde/services/ktscanfolderplugin.desktop
 share/kde/services/ktschedulerplugin.desktop
 share/kde/services/ktsearchplugin.desktop
 share/kde/services/ktupnpplugin.desktop
+share/kde/services/ktwebinterfaceplugin.desktop
 share/kde/servicetypes/ktorrentplugin.desktop
+share/locale/ar/LC_MESSAGES/ktorrent.mo
 share/locale/bg/LC_MESSAGES/ktorrent.mo
 share/locale/br/LC_MESSAGES/ktorrent.mo
 share/locale/ca/LC_MESSAGES/ktorrent.mo
@@ -326,18 +351,15 @@ share/locale/el/LC_MESSAGES/ktorrent.mo
 share/locale/en_GB/LC_MESSAGES/ktorrent.mo
 share/locale/es/LC_MESSAGES/ktorrent.mo
 share/locale/et/LC_MESSAGES/ktorrent.mo
-share/locale/eu/LC_MESSAGES/ktorrent.mo
 share/locale/fr/LC_MESSAGES/ktorrent.mo
 share/locale/ga/LC_MESSAGES/ktorrent.mo
 share/locale/gl/LC_MESSAGES/ktorrent.mo
 share/locale/hu/LC_MESSAGES/ktorrent.mo
 share/locale/it/LC_MESSAGES/ktorrent.mo
 share/locale/ja/LC_MESSAGES/ktorrent.mo
-share/locale/km/LC_MESSAGES/ktorrent.mo
+share/locale/ka/LC_MESSAGES/ktorrent.mo
 share/locale/lt/LC_MESSAGES/ktorrent.mo
-share/locale/mk/LC_MESSAGES/ktorrent.mo
 share/locale/ms/LC_MESSAGES/ktorrent.mo
-share/locale/nb/LC_MESSAGES/ktorrent.mo
 share/locale/nl/LC_MESSAGES/ktorrent.mo
 share/locale/pa/LC_MESSAGES/ktorrent.mo
 share/locale/pl/LC_MESSAGES/ktorrent.mo
@@ -353,14 +375,37 @@ share/locale/tr/LC_MESSAGES/ktorrent.mo
 share/locale/uk/LC_MESSAGES/ktorrent.mo
 share/locale/zh_CN/LC_MESSAGES/ktorrent.mo
 share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/config.kcfg
+@dirrm share/kde/apps/ktorrent/www/mobile
+@dirrm share/kde/apps/ktorrent/www/default
 @dirrm share/kde/apps/ktorrent/icons/hicolor/64x64/filesystems
 @dirrm share/kde/apps/ktorrent/icons/hicolor/64x64/actions
-@dirrm share/kde/apps/ktorrent/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/ktorrent/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/ktorrent/icons/hicolor/64x64
+@dirrm share/kde/apps/ktorrent/icons/hicolor/48x48/actions
 @dirrm share/kde/apps/ktorrent/icons/hicolor/48x48
+@dirrm share/kde/apps/ktorrent/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/ktorrent/icons/hicolor/22x22
 @dirrm share/kde/apps/ktorrent/icons/hicolor
 @dirrm share/kde/apps/ktorrent/icons
 @dirrm share/kde/apps/ktorrent/geoip
+@dirrm share/kde/apps/ktorrent/www
 @dirrm share/kde/apps/ktorrent
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
