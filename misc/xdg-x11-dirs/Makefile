@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/09/08 16:27:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/08 15:47:39 joerg Exp $
 #
 
 DISTNAME=	xdg-x11-dirs-1.4
@@ -27,9 +27,9 @@ WRKSRC=		${WRKDIR}
 DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 .else
 REQD_DIRS+=	${XDG_X11_DIRS:O:S/^/${PREFIX}\//}
+.include "../../mk/x11.buildlink3.mk"
 .endif
 
 do-install:	# nothing
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
