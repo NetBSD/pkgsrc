@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.130 2006/12/14 14:37:32 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.131 2007/01/08 22:42:00 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -99,6 +99,10 @@ BUILD_SUCCEEDED_FILE?=	.build_succeeded${BULK_ID}
 
 # This file exists to mark a package as broken
 BROKENFILE?=		.broken${BULK_ID}.html
+
+# When this file exists for a package, it has been marked as not to be
+# available on this platform.
+NOT_AVAILABLE_FILE?=	.bulk-not_available
 
 # This file is the work log for a broken package
 BROKENWRKLOG?=		.broken${BULK_ID}.work.txt
@@ -246,7 +250,7 @@ bulk-cache:
 	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printdepends ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${DEPENDSTREEFILE:Q}
 	@${BULK_MSG} "Generating package name <=> package directory cross reference file"
 	@${BULK_MSG_CONT} "(this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printindex ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printindex ${NOT_AVAILABLE_FILE} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
 .else
 	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${BULK_MSG_CONT} "along with their dependencies"
@@ -432,6 +436,10 @@ bulk-package:
 			for pkgdir in `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}` ${BULK_PREREQ} ; do \
 				pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
 				if [ -z "$$pkgname" ]; then ${BULK_MSG} "WARNING: could not find package name for directory $$pkgdir"; continue ; fi ;\
+				if [ -f "${BULKFILESDIR}/$$pkgdir/${NOT_AVAILABLE_FILE}" ]; then \
+					${ECHO} "The dependency $$pkgname ($$pkgdir) is not available." >> ${BULKFILESDIR}/${PKGPATH}/${NOT_AVAILABLE_FILE}; \
+					exit 1; \
+				fi; \
 				pkgfile=${PACKAGES}/All/$${pkgname}${PKG_SUFX} ;\
 				if ${PKG_INFO} -qe $$pkgname ; then \
 					${BULK_MSG} "Required package $$pkgname ($$pkgdir) is already installed" ; \
@@ -589,3 +597,7 @@ bulk-install:
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \
 		${DO}       ${RECURSIVE_MAKE} bulk-package PRECLEAN=no; \
 	fi
+
+bulk-info: .PHONY
+	@${ECHO} pkgname ${PKGPATH} ${PKGNAME}
+	@:; ${DEPENDS:@d@${ECHO} ${PKGPATH} ${d:Q}@; }
