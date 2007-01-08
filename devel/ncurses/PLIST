@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2005/10/20 00:01:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/01/08 11:01:05 adam Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
 bin/infotocap
+bin/ncurses5-config
 bin/reset
 bin/tack
 bin/tic
@@ -304,6 +305,7 @@ man/man3/keypad.3
 man/man3/killchar.3
 man/man3/killwchar.3
 man/man3/leaveok.3
+man/man3/legacy_coding.3
 man/man3/link_field.3
 man/man3/link_fieldtype.3
 man/man3/longname.3
@@ -448,6 +450,7 @@ man/man3/nl.3
 man/man3/nocbreak.3
 man/man3/nodelay.3
 man/man3/noecho.3
+man/man3/nofilter.3
 man/man3/nonl.3
 man/man3/noqiflush.3
 man/man3/noraw.3
@@ -603,6 +606,7 @@ man/man3/update_panels.3
 man/man3/use_default_colors.3
 man/man3/use_env.3
 man/man3/use_extended_names.3
+man/man3/use_legacy_coding.3
 man/man3/vid_attr.3
 man/man3/vid_puts.3
 man/man3/vidattr.3
@@ -894,6 +898,7 @@ ${TERMINFODIR}/a/ansi
 ${TERMINFODIR}/a/ansi+arrows
 ${TERMINFODIR}/a/ansi+csr
 ${TERMINFODIR}/a/ansi+cup
+${TERMINFODIR}/a/ansi+enq
 ${TERMINFODIR}/a/ansi+erase
 ${TERMINFODIR}/a/ansi+idc
 ${TERMINFODIR}/a/ansi+idl
@@ -1594,6 +1599,8 @@ ${TERMINFODIR}/g/gator-t
 ${TERMINFODIR}/g/gigi
 ${TERMINFODIR}/g/glasstty
 ${TERMINFODIR}/g/gnome
+${TERMINFODIR}/g/gnome-256color
+${TERMINFODIR}/g/gnome-fc5
 ${TERMINFODIR}/g/gnome-rh62
 ${TERMINFODIR}/g/gnome-rh72
 ${TERMINFODIR}/g/gnome-rh80
@@ -1763,6 +1770,7 @@ ${TERMINFODIR}/h/hpex2
 ${TERMINFODIR}/h/hpgeneric
 ${TERMINFODIR}/h/hpsub
 ${TERMINFODIR}/h/hpterm
+${TERMINFODIR}/h/hpterm-color
 ${TERMINFODIR}/h/htx11
 ${TERMINFODIR}/h/hurd
 ${TERMINFODIR}/h/hz1000
@@ -1857,6 +1865,7 @@ ${TERMINFODIR}/i/iris40
 ${TERMINFODIR}/j/jaixterm
 ${TERMINFODIR}/j/jaixterm-m
 ${TERMINFODIR}/j/jerq
+${TERMINFODIR}/j/jfbterm
 ${TERMINFODIR}/k/k45
 ${TERMINFODIR}/k/kaypro
 ${TERMINFODIR}/k/kaypro2
@@ -1870,10 +1879,14 @@ ${TERMINFODIR}/k/klone+color
 ${TERMINFODIR}/k/klone+koi8acs
 ${TERMINFODIR}/k/klone+sgr
 ${TERMINFODIR}/k/klone+sgr-dumb
+${TERMINFODIR}/k/klone+sgr8
+${TERMINFODIR}/k/kon
+${TERMINFODIR}/k/kon2
 ${TERMINFODIR}/k/konsole
 ${TERMINFODIR}/k/konsole-16color
 ${TERMINFODIR}/k/konsole-base
 ${TERMINFODIR}/k/konsole-linux
+${TERMINFODIR}/k/konsole-solaris
 ${TERMINFODIR}/k/konsole-vt100
 ${TERMINFODIR}/k/konsole-vt420pc
 ${TERMINFODIR}/k/konsole-xf3x
@@ -1926,6 +1939,7 @@ ${TERMINFODIR}/m/memhp
 ${TERMINFODIR}/m/mgr
 ${TERMINFODIR}/m/mgr-linux
 ${TERMINFODIR}/m/mgr-sun
+${TERMINFODIR}/m/mgt
 ${TERMINFODIR}/m/mgterm
 ${TERMINFODIR}/m/microb
 ${TERMINFODIR}/m/microbee
@@ -2087,6 +2101,7 @@ ${TERMINFODIR}/n/nsterm+c
 ${TERMINFODIR}/n/nsterm+c41
 ${TERMINFODIR}/n/nsterm+mac
 ${TERMINFODIR}/n/nsterm+s
+${TERMINFODIR}/n/nsterm-16color
 ${TERMINFODIR}/n/nsterm-7
 ${TERMINFODIR}/n/nsterm-7-c
 ${TERMINFODIR}/n/nsterm-7-c-s
@@ -2320,6 +2335,8 @@ ${TERMINFODIR}/p/pt505-22
 ${TERMINFODIR}/p/pt505-24
 ${TERMINFODIR}/p/pty
 ${TERMINFODIR}/p/putty
+${TERMINFODIR}/p/putty-256color
+${TERMINFODIR}/p/putty-vt100
 ${TERMINFODIR}/q/qansi
 ${TERMINFODIR}/q/qansi-g
 ${TERMINFODIR}/q/qansi-m
@@ -2382,6 +2399,7 @@ ${TERMINFODIR}/r/rtpc
 ${TERMINFODIR}/r/rxvt
 ${TERMINFODIR}/r/rxvt+pcfkeys
 ${TERMINFODIR}/r/rxvt-16color
+${TERMINFODIR}/r/rxvt-256color
 ${TERMINFODIR}/r/rxvt-basic
 ${TERMINFODIR}/r/rxvt-color
 ${TERMINFODIR}/r/rxvt-cygwin
@@ -2400,6 +2418,14 @@ ${TERMINFODIR}/s/scoansi
 ${TERMINFODIR}/s/scoansi-new
 ${TERMINFODIR}/s/scoansi-old
 ${NOT_SUNOS}${TERMINFODIR}/s/screen
+${TERMINFODIR}/s/screen-16color
+${TERMINFODIR}/s/screen-16color-bce
+${TERMINFODIR}/s/screen-16color-bce-s
+${TERMINFODIR}/s/screen-16color-s
+${TERMINFODIR}/s/screen-256color
+${TERMINFODIR}/s/screen-256color-bce
+${TERMINFODIR}/s/screen-256color-bce-s
+${TERMINFODIR}/s/screen-256color-s
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-bce
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-s
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-w
@@ -2752,6 +2778,7 @@ ${TERMINFODIR}/v/vt-61
 ${TERMINFODIR}/v/vt-utf8
 ${TERMINFODIR}/v/vt100
 ${TERMINFODIR}/v/vt100+
+${TERMINFODIR}/v/vt100+enq
 ${TERMINFODIR}/v/vt100+fnkeys
 ${TERMINFODIR}/v/vt100+keypad
 ${TERMINFODIR}/v/vt100+pfkeys
@@ -2775,6 +2802,7 @@ ${TERMINFODIR}/v/vt100-w-nam
 ${TERMINFODIR}/v/vt100-w-nav
 ${TERMINFODIR}/v/vt100nam
 ${TERMINFODIR}/v/vt102
+${TERMINFODIR}/v/vt102+enq
 ${TERMINFODIR}/v/vt102-nsgr
 ${TERMINFODIR}/v/vt102-w
 ${TERMINFODIR}/v/vt125
@@ -3077,6 +3105,8 @@ ${TERMINFODIR}/x/xerox
 ${TERMINFODIR}/x/xerox-lm
 ${TERMINFODIR}/x/xerox1720
 ${TERMINFODIR}/x/xerox820
+${TERMINFODIR}/x/xfce
+${TERMINFODIR}/x/xiterm
 ${TERMINFODIR}/x/xl83
 ${TERMINFODIR}/x/xnuppc
 ${TERMINFODIR}/x/xnuppc+100x37
@@ -3129,6 +3159,14 @@ ${TERMINFODIR}/x/xnuppc-m-f
 ${TERMINFODIR}/x/xnuppc-m-f2
 ${TERMINFODIR}/x/xtalk
 ${TERMINFODIR}/x/xterm
+${TERMINFODIR}/x/xterm+256color
+${TERMINFODIR}/x/xterm+88color
+${TERMINFODIR}/x/xterm+pcc0
+${TERMINFODIR}/x/xterm+pcc1
+${TERMINFODIR}/x/xterm+pcc2
+${TERMINFODIR}/x/xterm+pcc3
+${TERMINFODIR}/x/xterm+pcf0
+${TERMINFODIR}/x/xterm+pcf2
 ${TERMINFODIR}/x/xterm+pcfkeys
 ${TERMINFODIR}/x/xterm+sl
 ${TERMINFODIR}/x/xterm+sl-twm
@@ -3206,7 +3244,6 @@ ${TERMINFODIR}/z/ztx11
 @dirrm ${TERMINFODIR}/v
 @dirrm ${TERMINFODIR}/u
 @dirrm ${TERMINFODIR}/t
-@unexec ${RMDIR} %D/${TERMINFODIR}/s 2>/dev/null || ${TRUE}
 @dirrm ${TERMINFODIR}/r
 @dirrm ${TERMINFODIR}/q
 @dirrm ${TERMINFODIR}/p
