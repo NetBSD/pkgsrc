@@ -207,7 +207,7 @@
 +    if (align != (align & -align)) {
 +	return -1;
 +    } else {
-+#ifdef __GNUC__
++#if defined(__GNUC__) && GCC_VERSION >= 3004
 +	return (align ? __builtin_ctzl (align) : 0);
 +#else
 +	unsigned long result = 0;
