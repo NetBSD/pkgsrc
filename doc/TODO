@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5850 2007/01/07 14:41:40 wiz Exp $
+$NetBSD: TODO,v 1.5851 2007/01/08 11:02:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -686,7 +686,6 @@ Suggested package updates
 	o nap-1.5.3
 	o nautilus-cd-burner-2.16.2
 	o ncftp2-2.8.2
-	o ncurses-5.6
 	o ncview-1.92e
 	o neon-0.26.1 [pkg/34310]
 	o neon-0.26.2
