@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/12/11 22:22:37 joerg Exp $
+$NetBSD: distinfo,v 1.9 2007/01/08 00:07:59 cbiere Exp $
 
 SHA1 (mp3blaster-3.2.0.tar.gz) = edc4538ad233270dd4b17066c5d2267708f1b5e0
 RMD160 (mp3blaster-3.2.0.tar.gz) = 462c75e27c91ac7473103bd0e08882bea3d0db8d
@@ -9,7 +9,7 @@ SHA1 (patch-ac) = 3ad9344d22e511682ad05ab1e2dfbc057fb6cf96
 SHA1 (patch-ad) = 99a3f363c3c6fb084a6790aceeb7b5ecd45cfb9f
 SHA1 (patch-ae) = 65feb8611cea4b0f6e8de593e56972d676fb64d4
 SHA1 (patch-af) = bc48687a1e08d1884f79d5e0b5835f60435ea0a2
-SHA1 (patch-ag) = d5d0777e36eec1cb8f79ecbfecabb5390b1625bf
+SHA1 (patch-ag) = 38a3924df2ec474ca82f69d8b6c47a7e9df2bde3
 SHA1 (patch-ah) = 8dfd9c60b113a925187187100b785bb99d5f4722
 SHA1 (patch-ai) = 6a95a0ff24b09e4bc3b13cc5a09336f43a03bcbd
 SHA1 (patch-aj) = db1484dbbb10e951dd88b1b40bedafe3c6ede174
