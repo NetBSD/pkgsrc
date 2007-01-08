@@ -1,20 +1,19 @@
-$NetBSD: patch-aa,v 1.31 2006/10/08 14:51:57 joerg Exp $
+$NetBSD: patch-aa,v 1.32 2007/01/08 15:56:14 drochner Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
 http://bugzilla.gnome.org/show_bug.cgi?id=141256
 
---- configure.orig	2006-10-02 01:05:29.000000000 +0200
+--- configure.orig	2007-01-04 22:41:19.000000000 +0100
 +++ configure
-@@ -465,7 +465,7 @@ ac_includes_default="\
- # include <unistd.h>
- #endif"
- 
--ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot GLIB_MAJOR_VERSION GLIB_MINOR_VERSION GLIB_MICRO_VERSION GLIB_VERSION GLIB_INTERFACE_AGE GLIB_BINARY_AGE LT_RELEASE LT_CURRENT LT_REVISION LT_AGE LT_CURRENT_MINUS_AGE MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT build build_cpu build_vendor build_os host host_cpu host_vendor host_os OS_WIN32_TRUE OS_WIN32_FALSE OS_UNIX_TRUE OS_UNIX_FALSE OS_LINUX_TRUE OS_LINUX_FALSE GLIB_DEF GMODULE_DEF GOBJECT_DEF GTHREAD_DEF TESTGMODULE_EXP WINDRES ac_ct_WINDRES NM ac_ct_NM RANLIB ac_ct_RANLIB ms_librarian MS_LIB_AVAILABLE_TRUE MS_LIB_AVAILABLE_FALSE LIBTOOL_EXPORT_OPTIONS DISABLE_MEM_POOLS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE HAVE_CXX_TRUE HAVE_CXX_FALSE PKG_CONFIG PERL INDENT REBUILD PERL_PATH CPP EGREP GLIBC21 USE_NLS MSGFMT GMSGFMT XGETTEXT CATALOGS CATOBJEXT DATADIRNAME GMOFILES INSTOBJEXT INTLLIBS PO_IN_DATADIR_TRUE PO_IN_DATADIR_FALSE POFILES POSUB MKINSTALLDIRS GETTEXT_PACKAGE ICONV_LIBS LN_S ECHO AR ac_ct_AR DLLTOOL ac_ct_DLLTOOL AS ac_ct_AS OBJDUMP ac_ct_OBJDUMP CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL ALLOCA HAVE_GNUC_VISIBILITY_TRUE HAVE_GNUC_VISIBILITY_FALSE HAVE_GOOD_PRINTF_TRUE HAVE_GOOD_PRINTF_FALSE G_MODULE_SUPPORTED G_MODULE_IMPL G_MODULE_LIBS G_MODULE_LIBS_EXTRA G_MODULE_PLUGIN_LIBS G_MODULE_LDFLAGS G_MODULE_HAVE_DLERROR G_MODULE_BROKEN_RTLD_GLOBAL G_MODULE_NEED_USCORE GLIB_DEBUG_FLAGS GSPAWN GIO PLATFORMDEP ENABLE_TIMELOOP_TRUE ENABLE_TIMELOOP_FALSE PLATFORM_WIN32_TRUE PLATFORM_WIN32_FALSE GTHREAD_COMPILE_IMPL_DEFINES G_THREAD_CFLAGS G_THREAD_LIBS G_THREAD_LIBS_FOR_GTHREAD G_THREAD_LIBS_EXTRA G_LIBS_EXTRA CROSS_COMPILING_TRUE CROSS_COMPILING_FALSE GLIB_GENMARSHAL HTML_DIR ENABLE_GTK_DOC_TRUE ENABLE_GTK_DOC_FALSE GTK_DOC_USE_LIBTOOL_TRUE GTK_DOC_USE_LIBTOOL_FALSE XSLTPROC XML_CATALOG_FILE XMLCATALOG ENABLE_MAN_TRUE ENABLE_MAN_FALSE LIBOBJS LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot GLIB_MAJOR_VERSION GLIB_MINOR_VERSION GLIB_MICRO_VERSION GLIB_VERSION GLIB_INTERFACE_AGE GLIB_BINARY_AGE LT_RELEASE LT_CURRENT LT_REVISION LT_AGE LT_CURRENT_MINUS_AGE MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT build build_cpu build_vendor build_os host host_cpu host_vendor host_os OS_WIN32_TRUE OS_WIN32_FALSE OS_UNIX_TRUE OS_UNIX_FALSE OS_LINUX_TRUE OS_LINUX_FALSE GLIB_DEF GMODULE_DEF GOBJECT_DEF GTHREAD_DEF TESTGMODULE_EXP WINDRES ac_ct_WINDRES NM ac_ct_NM RANLIB ac_ct_RANLIB ms_librarian MS_LIB_AVAILABLE_TRUE MS_LIB_AVAILABLE_FALSE LIBTOOL_EXPORT_OPTIONS DISABLE_MEM_POOLS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE HAVE_CXX_TRUE HAVE_CXX_FALSE PKG_CONFIG PERL INDENT REBUILD PERL_PATH CPP EGREP GLIBC21 USE_NLS MSGFMT GMSGFMT XGETTEXT CATALOGS CATOBJEXT DATADIRNAME GMOFILES INSTOBJEXT INTLLIBS PO_IN_DATADIR_TRUE PO_IN_DATADIR_FALSE POFILES POSUB MKINSTALLDIRS GETTEXT_PACKAGE ICONV_LIBS LN_S ECHO AR ac_ct_AR DLLTOOL ac_ct_DLLTOOL AS ac_ct_AS OBJDUMP ac_ct_OBJDUMP CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL ALLOCA HAVE_GNUC_VISIBILITY_TRUE HAVE_GNUC_VISIBILITY_FALSE HAVE_GOOD_PRINTF_TRUE HAVE_GOOD_PRINTF_FALSE G_MODULE_SUPPORTED G_MODULE_IMPL G_MODULE_LIBS G_MODULE_LIBS_EXTRA G_MODULE_PLUGIN_LIBS G_MODULE_LDFLAGS G_MODULE_HAVE_DLERROR G_MODULE_BROKEN_RTLD_GLOBAL G_MODULE_BROKEN_DLOPEN_NULL G_MODULE_NEED_USCORE GLIB_DEBUG_FLAGS GSPAWN GIO PLATFORMDEP ENABLE_TIMELOOP_TRUE ENABLE_TIMELOOP_FALSE PLATFORM_WIN32_TRUE PLATFORM_WIN32_FALSE GTHREAD_COMPILE_IMPL_DEFINES G_THREAD_CFLAGS G_THREAD_LIBS G_THREAD_LIBS_FOR_GTHREAD G_THREAD_LIBS_EXTRA G_LIBS_EXTRA CROSS_COMPILING_TRUE CROSS_COMPILING_FALSE GLIB_GENMARSHAL HTML_DIR ENABLE_GTK_DOC_TRUE ENABLE_GTK_DOC_FALSE GTK_DOC_USE_LIBTOOL_TRUE GTK_DOC_USE_LIBTOOL_FALSE XSLTPROC XML_CATALOG_FILE XMLCATALOG ENABLE_MAN_TRUE ENABLE_MAN_FALSE LIBOBJS LTLIBOBJS'
- ac_subst_files=''
- 
- # Initialize some variables set by options.
-@@ -32564,6 +32564,7 @@ else
+@@ -924,6 +924,7 @@ G_MODULE_PLUGIN_LIBS
+ G_MODULE_LDFLAGS
+ G_MODULE_HAVE_DLERROR
+ G_MODULE_BROKEN_RTLD_GLOBAL
++G_MODULE_BROKEN_DLOPEN_NULL
+ G_MODULE_NEED_USCORE
+ GLIB_DEBUG_FLAGS
+ GSPAWN
+@@ -35644,6 +35645,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -22,7 +21,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -33217,6 +33218,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
+@@ -36381,6 +36383,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
  	else
    		G_MODULE_BROKEN_RTLD_GLOBAL=0
  	fi
@@ -92,12 +91,12 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 +	else
 +  		G_MODULE_BROKEN_DLOPEN_NULL=0
 +	fi
- 	echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
- echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6
+ 	{ echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
+ echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6; }
  if test "${glib_cv_uscore+set}" = set; then
-@@ -33779,102 +33846,8 @@ if test x"$have_threads" != xno; then
-          # skip cygwin and darwin -pthread or -pthreads test
-          ;;
+@@ -37010,126 +37078,8 @@ if test x"$have_threads" != xno; then
+         G_THREAD_LIBS="-lpthread -lthread"
+         ;;
        *)
 -        for flag in pthread pthreads mt; do
 -          glib_save_CFLAGS="$CFLAGS"
@@ -117,24 +116,36 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 -}
 -_ACEOF
 -rm -f conftest.$ac_objext conftest$ac_exeext
--if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>conftest.er1
+-if { (ac_try="$ac_link"
+-case "(($ac_try" in
+-  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+-  *) ac_try_echo=$ac_try;;
+-esac
+-eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-  (eval "$ac_link") 2>conftest.er1
 -  ac_status=$?
 -  grep -v '^ *+' conftest.er1 >conftest.err
 -  rm -f conftest.er1
 -  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"
--			 || test ! -s conftest.err'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
+-	 { ac_try='test -z "$ac_c_werror_flag" || test ! -s conftest.err'
+-  { (case "(($ac_try" in
+-  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+-  *) ac_try_echo=$ac_try;;
+-esac
+-eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-  (eval "$ac_try") 2>&5
 -  ac_status=$?
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; } &&
 -	 { ac_try='test -s conftest$ac_exeext'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
+-  { (case "(($ac_try" in
+-  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+-  *) ac_try_echo=$ac_try;;
+-esac
+-eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-  (eval "$ac_try") 2>&5
 -  ac_status=$?
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; }; then
@@ -143,9 +154,10 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
 -
--glib_flag_works=no
+-	glib_flag_works=no
 -fi
--rm -f conftest.err conftest.$ac_objext \
+-
+-rm -f core conftest.err conftest.$ac_objext \
 -      conftest$ac_exeext conftest.$ac_ext
 -else
 -  cat >conftest.$ac_ext <<_ACEOF
@@ -167,13 +179,22 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 -}
 -_ACEOF
 -rm -f conftest$ac_exeext
--if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>&5
+-if { (ac_try="$ac_link"
+-case "(($ac_try" in
+-  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+-  *) ac_try_echo=$ac_try;;
+-esac
+-eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-  (eval "$ac_link") 2>&5
 -  ac_status=$?
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
+-  { (case "(($ac_try" in
+-  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+-  *) ac_try_echo=$ac_try;;
+-esac
+-eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-  (eval "$ac_try") 2>&5
 -  ac_status=$?
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; }; then
@@ -186,8 +207,10 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 -( exit $ac_status )
 -glib_flag_works=no
 -fi
--rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
 -fi
+-
+-
 -          CFLAGS="$glib_save_CFLAGS"
 -          if test $glib_flag_works = yes ; then
 -             G_THREAD_CFLAGS=-$flag
@@ -195,12 +218,12 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
 -	     break;
 -          fi
 -        done
-+         G_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
-+         G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
++	 G_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++	 G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
           ;;
      esac
    fi
-@@ -35880,6 +35853,10 @@ case $host in
+@@ -39453,6 +39403,10 @@ case $host in
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
@@ -211,11 +234,20 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  esac
  
  
-@@ -40154,6 +40131,7 @@ s,@G_MODULE_PLUGIN_LIBS@,$G_MODULE_PLUGI
- s,@G_MODULE_LDFLAGS@,$G_MODULE_LDFLAGS,;t t
- s,@G_MODULE_HAVE_DLERROR@,$G_MODULE_HAVE_DLERROR,;t t
- s,@G_MODULE_BROKEN_RTLD_GLOBAL@,$G_MODULE_BROKEN_RTLD_GLOBAL,;t t
-+s,@G_MODULE_BROKEN_DLOPEN_NULL@,$G_MODULE_BROKEN_DLOPEN_NULL,;t t
- s,@G_MODULE_NEED_USCORE@,$G_MODULE_NEED_USCORE,;t t
- s,@GLIB_DEBUG_FLAGS@,$GLIB_DEBUG_FLAGS,;t t
- s,@GSPAWN@,$GSPAWN,;t t
+@@ -44639,6 +44593,7 @@ G_MODULE_PLUGIN_LIBS!$G_MODULE_PLUGIN_LI
+ G_MODULE_LDFLAGS!$G_MODULE_LDFLAGS$ac_delim
+ G_MODULE_HAVE_DLERROR!$G_MODULE_HAVE_DLERROR$ac_delim
+ G_MODULE_BROKEN_RTLD_GLOBAL!$G_MODULE_BROKEN_RTLD_GLOBAL$ac_delim
++G_MODULE_BROKEN_DLOPEN_NULL!$G_MODULE_BROKEN_DLOPEN_NULL$ac_delim
+ G_MODULE_NEED_USCORE!$G_MODULE_NEED_USCORE$ac_delim
+ GLIB_DEBUG_FLAGS!$GLIB_DEBUG_FLAGS$ac_delim
+ GSPAWN!$GSPAWN$ac_delim
+@@ -44665,7 +44620,7 @@ GTK_DOC_USE_LIBTOOL_FALSE!$GTK_DOC_USE_L
+ XSLTPROC!$XSLTPROC$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 98; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
