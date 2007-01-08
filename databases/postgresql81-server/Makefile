@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/05 17:42:30 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/08 18:55:39 adam Exp $
 
 PKGNAME=	postgresql81-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -18,10 +18,10 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
 CONFIGURE_ARGS+=	--with-openssl
 
-BUILD_DIRS=		${WRKSRC}/src/backend
-BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
-BUILD_DIRS+=		${WRKSRC}/src/timezone
-BUILD_DIRS+=		${WRKSRC}/src/pl
+BUILD_DIRS=	src/backend
+BUILD_DIRS+=	src/backend/utils/mb/conversion_procs
+BUILD_DIRS+=	src/timezone
+BUILD_DIRS+=	src/pl
 
 # PostgreSQL has loadable server-side language modules.
 #
