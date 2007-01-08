@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.8 2006/09/27 15:18:15 joerg Exp $
+# $NetBSD: dirs.mk,v 1.9 2007/01/08 15:20:28 joerg Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -60,7 +60,11 @@ _USE_XORG_DIRS:=	${ver}
 .endif
 
 .if !empty(_USE_XDG_X11_DIRS)
-.  include "../../misc/xdg-x11-dirs/dirs.mk"
+.  if ${X11_TYPE} == "modular"
+.    include "../../misc/xdg-dirs/dirs.mk"
+.  else
+.    include "../../misc/xdg-x11-dirs/dirs.mk"
+.  endif
 .endif
 
 .if !empty(_USE_XORG_DIRS)
