@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.13 2007/01/07 08:50:38 rillig Exp $
+# $NetBSD: configure.mk,v 1.14 2007/01/08 02:26:03 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -20,12 +20,19 @@
 #	Default value: defined when GNU_CONFIGURE is defined, undefined
 #	otherwise.
 #
+# Command-line variables:
+#
+# CONFIG_SHELL_FLAGS
+#	Set this to -x when you really need to see all commands that the
+#	configure script executes.
+#
 # Keywords: config.guess config.sub
 #
 
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ARGS?=	# empty
+CONFIG_SHELL_FLAGS?=	# none
 _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 
 .if defined(GNU_CONFIGURE)
@@ -169,7 +176,8 @@ do-configure-script:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${_CONFIGURE_SCRIPT_ENV}				\
-		${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
+			${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endfor
 
 ######################################################################
@@ -214,3 +222,13 @@ pre-configure:
 post-configure:
 	@${DO_NADA}
 .endif
+
+# configure-help:
+#	Runs ${CONFIGURE_SCRIPT} --help. It is mainly intended for
+#	package developers so they can quickly see the options of the
+#	configure script.
+#
+configure-help:
+.for d in ${CONFIGURE_DIRS}
+	${RUN} cd ${WRKSRC} && cd ${d} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV} ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} --help
+.endfor
