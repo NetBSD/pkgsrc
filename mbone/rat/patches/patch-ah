@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2004/06/18 12:50:51 markd Exp $
+$NetBSD: patch-ah,v 1.5 2007/01/08 17:33:42 joerg Exp $
 
 --- /dev/null	Wed Nov  4 21:26:51 1998
 +++ Makefile_NetBSD_1	Wed Nov  4 21:27:04 1998
@@ -8,5 +8,5 @@ $NetBSD: patch-ah,v 1.4 2004/06/18 12:50:51 markd Exp $
 +         -I${LOCALBASE}/include \
 +         -I${LOCALBASE}/include
 +LDLIBS = -L${LOCALBASE}/lib -ltk -ltcl \
-+         -L${X11BASE}/lib -lXext -lX11 \
++         -L${X11BASE}/lib -lX11 \
 +         -lm ${TCL_LIBS}
