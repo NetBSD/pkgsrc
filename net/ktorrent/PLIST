@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/08 20:08:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/08 22:10:38 xtraeme Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -327,7 +327,6 @@ share/kde/icons/hicolor/64x64/apps/ktorrent.png
 share/kde/icons/hicolor/64x64/mimetypes/torrent.png
 share/kde/icons/hicolor/scalable/apps/ktorrent.svgz
 share/kde/icons/hicolor/scalable/mimetypes/torrent.svgz
-share/kde/mimelnk/application/x-bittorrent.desktop
 share/kde/services/ktinfowidgetplugin.desktop
 share/kde/services/ktipfilterplugin.desktop
 share/kde/services/ktlogviewerplugin.desktop
