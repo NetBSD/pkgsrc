@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2007/01/02 20:17:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.29 2007/01/08 04:56:35 rillig Exp $
 
 DISTNAME=		digikam-0.9.0
+PKGREVISION=		1
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,10 +11,12 @@ HOMEPAGE=		http://www.digikam.org/
 COMMENT=		KDE frontend to gphoto2
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl:run pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+REPLACE_PERL+=		digikam/utilities/scripts/digitaglinktree
 
 BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.2
