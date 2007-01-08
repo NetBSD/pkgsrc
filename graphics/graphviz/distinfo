@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.19 2006/03/09 17:04:58 minskim Exp $
+$NetBSD: distinfo,v 1.20 2007/01/08 11:29:47 adam Exp $
 
-SHA1 (graphviz-2.6.tar.gz) = 062897f364c905f33852caff93899df97c817def
-RMD160 (graphviz-2.6.tar.gz) = 555c6c635b5271b09ffb7ee142192a1b4ec07919
-Size (graphviz-2.6.tar.gz) = 4109848 bytes
-SHA1 (patch-aa) = 814d6b54de2b39a97326d35af15a5155c37cc271
-SHA1 (patch-ab) = 66ad49b481d774bedad0efda65ae2f112b06062a
-SHA1 (patch-ac) = adbaa1f265d5a1781574e5c6aad3d35709c3a853
+SHA1 (graphviz-2.12.tar.gz) = aa48a926395a57c6c7e1e755b9432a29461538e3
+RMD160 (graphviz-2.12.tar.gz) = 68d55176cd5ce0e6a25c90b443529747e738d5c6
+Size (graphviz-2.12.tar.gz) = 4607023 bytes
+SHA1 (patch-aa) = 7674162928db2e16a724c2b4ecb2bd59a2b7d33c
+SHA1 (patch-ab) = 7fd332e66c44b8a384b6dba4eeccdafe3eb0d930
+SHA1 (patch-ac) = e0877aef8259172549e6b69f1478d1ccdef2bb6d
 SHA1 (patch-ad) = d14bfef61caec543812b9d5ea8d2c331bf350af8
-SHA1 (patch-ae) = 635f583ec7cc83fe8bfef5889876cf14aeb36bf0
