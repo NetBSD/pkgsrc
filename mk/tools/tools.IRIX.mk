@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.18 2007/01/08 06:54:34 rillig Exp $
+# $NetBSD: tools.IRIX.mk,v 1.19 2007/01/08 08:55:52 rillig Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -51,7 +51,7 @@ TOOLS_PLATFORM.mail?=		/usr/bin/mail
 TOOLS_PLATFORM.mkdir?=		/sbin/mkdir -p
 TOOLS_PLATFORM.mv?=		/sbin/mv
 TOOLS_PLATFORM.nice?=		/sbin/nice
-TOOLS_PLATFORM.patch?=		/usr/sbin/patch
+# On IRIX 6.5, /usr/sbin/patch has a maximum line length of 1023.
 .if exists(/usr/bin/printf)
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 .endif
