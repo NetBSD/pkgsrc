@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.25 2006/11/18 15:49:02 adrianp Exp $
+$NetBSD: distinfo,v 1.25.2.1 2007/01/08 12:01:21 ghen Exp $
 
 SHA1 (texinfo-4.8.tar.bz2) = b19e906f7220294c1e8b087d583c50f5c4d7c420
 RMD160 (texinfo-4.8.tar.bz2) = 5cb82cd240d1f22da813c7142df8828b4f6f1ea4
 Size (texinfo-4.8.tar.bz2) = 1521822 bytes
+SHA1 (patch-al.mine) = 8763b5d73088b2fea9da83c45686c27fd4525455
 SHA1 (patch-aa) = 2c6d6a812fcf3b1aa944832601c3415548e763f5
 SHA1 (patch-ab) = 299ae7a5001c6ab42cca7c6278ae1edb3b348511
 SHA1 (patch-ac) = 01baf8634edcecab0b5edaeddf1e38811cab490d
 SHA1 (patch-ad) = c5c3374322eb8a2c8dfc7871971b73194ab1b14c
 SHA1 (patch-aj) = d9071c62c993550d253c9e1889880d4fccf7d278
 SHA1 (patch-ak) = 2cef2ae464ddb5324acae000420017d4faf7b145
-SHA1 (patch-al) = b55ac4b85f23f11248f9cb66b242be7b4daf46ee
+SHA1 (patch-al) = 5cbae19a93752d37eac70dee454af716b7b35a9c
