@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/08 05:49:01 obache Exp $
+
+SHA1 (pam_af-1.0.1.tar.bz2) = f953e50791db0d13f124ce0346f1db43b9d0bafa
+RMD160 (pam_af-1.0.1.tar.bz2) = 6fd33ef36b810eac58a59cd6ae0eb918548205e3
+Size (pam_af-1.0.1.tar.bz2) = 18006 bytes
+SHA1 (patch-aa) = 57b60fc8b7860c476451d33112aa67ac756ede5a
