@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2005/10/20 00:01:32 wiz Exp $
+$NetBSD: patch-ab,v 1.15 2007/01/08 11:01:05 adam Exp $
 
---- mk-1st.awk.orig	2005-06-18 21:15:57.000000000 +0200
+--- mk-1st.awk.orig	2006-10-08 02:14:08.000000000 +0200
 +++ mk-1st.awk
-@@ -303,7 +303,7 @@ END	{
+@@ -308,7 +308,7 @@ END	{
  				}
  				end_name = lib_name;
  				printf "../lib/%s : $(%s_OBJS)\n", lib_name, OBJS
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.14 2005/10/20 00:01:32 wiz Exp $
  				print  ""
  				print  "install \\"
  				print  "install.libs \\"
-@@ -369,7 +369,7 @@ END	{
+@@ -374,7 +374,7 @@ END	{
  			print "mostlyclean::"
  			printf "\t-rm -f $(%s_OBJS)\n", OBJS
  			if ( MODEL == "LIBTOOL" ) {
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.14 2005/10/20 00:01:32 wiz Exp $
  			}
  		}
  		else if ( found == 2 )
-@@ -378,13 +378,13 @@ END	{
+@@ -383,13 +383,13 @@ END	{
  			print "mostlyclean::"
  			printf "\t-rm -f $(%s_OBJS)\n", OBJS
  			if ( MODEL == "LIBTOOL" ) {
