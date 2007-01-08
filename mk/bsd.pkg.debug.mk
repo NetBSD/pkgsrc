@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.11 2006/12/23 14:18:44 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.12 2007/01/08 02:38:42 rillig Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -43,16 +43,22 @@ _show-dbginfo-file-versions:
 	  *?*) ${PRINTF} "\\t%s: %s\\n" "$${fname}" "$${ident}";;	\
 	  esac;								\
 	done
+	@${PRINTF} "\\n"
 
 _show-dbginfo-tools:
 	@${PRINTF} "TOOLS:\\n"
 	@${USE_TOOLS:C/:.*//:O:u:@t@${_TOOLS_VARNAME.${t}:D${PRINTF} "\\t%s=%s\\n" ${_TOOLS_VARNAME.${t}} ${${_TOOLS_VARNAME.${t}}:Q};}@}
+	@${PRINTF} "\\n"
 
 _show-dbginfo-configure:
 	@${PRINTF} "CONFIGURE_DIRS:\\n"; ${CONFIGURE_DIRS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_ENV (sorted alphabetically):\\n"; ${CONFIGURE_ENV:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_SCRIPT:\\n\\t%s\\n" ${CONFIGURE_SCRIPT}
+	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_ARGS:\\n"; ${CONFIGURE_ARGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 
 _show-dbginfo-config.status:
 .if !empty(CONFIGURE_DIRS:M*)
@@ -72,6 +78,7 @@ _show-dbginfo-config.status:
 		-e '/:\[FHLC\]/q'					\
 		    "$${cs}"						\
 	  | ${SORT};							\
+	  ${PRINTF} "\\n";						\
 	done; fi
 .else
 	@${DO_NADA}
@@ -98,6 +105,7 @@ _show-dbginfo-config.h:
 	  fi;								\
 	  ${PRINTF} "%s:\\n" "$${ch}";					\
 	  ${AWK} '/^#define / { print "\t"$$0; } /^\/\* #undef / { print "\t" $$2 " " $$3; }' < "$${ch}"; \
+	  ${PRINTF} "\\n";						\
 	done; fi
 .else
 	@${DO_NADA}
@@ -105,18 +113,27 @@ _show-dbginfo-config.h:
 
 _show-dbginfo-build:
 	@${PRINTF} "PKGSRC_MAKE_ENV (sorted alphabetically):\\n"; ${PKGSRC_MAKE_ENV:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "BUILD_DIRS:\\n"; ${BUILD_DIRS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "MAKE_ENV (sorted alphabetically):\\n"; ${MAKE_ENV:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "MAKE_PROGRAM:\\n\\t%s\\n" ${MAKE_PROGRAM:Q}
+	@${PRINTF} "\\n"
 	@${PRINTF} "MAKE_FLAGS:\\n"; ${MAKE_FLAGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "BUILD_MAKE_FLAGS:\\n"; ${BUILD_MAKE_FLAGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 
 _show-dbginfo-install:
 	@${PRINTF} "INSTALL_DIRS:\\n"; ${INSTALL_DIRS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "INSTALL_MAKE_FLAGS:\\n"; ${INSTALL_MAKE_FLAGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 
 _show-dbginfo-plist-subst:
 	@${PRINTF} "PLIST_SUBST (sorted alphabetically):\\n"; ${PLIST_SUBST:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
 
 #
 # The build-env target.
