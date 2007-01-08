@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/04/21 02:07:54 wulf Exp $
+$NetBSD: patch-aa,v 1.5 2007/01/08 03:42:13 rillig Exp $
 
 --- Makefile.netbsd.orig	2000-04-27 22:18:57.000000000 +0930
 +++ Makefile.netbsd	2006-04-21 10:41:09.000000000 +0930
@@ -41,7 +41,12 @@ $NetBSD: patch-aa,v 1.4 2006/04/21 02:07:54 wulf Exp $
  all:	dpbox crawler cgi toolbox
  
  tgz:
-@@ -100,7 +97,8 @@
+@@ -96,11 +93,12 @@
+ 	$(INSTALL_PROGRAM) dpbox $(sbindir)
+ 
+ 	$(MKDIR) $(bindir)
+-	$(INSTALL_PROGRAM) -m u+s,a+x dpgate $(bindir)
++	$(INSTALL_PROGRAM) -m 4511 dpgate $(bindir)
  	$(INSTALL_PROGRAM) dpputlinks $(bindir)
  	$(INSTALL_PROGRAM) dpcodeconv $(bindir)
  	$(INSTALL_PROGRAM) dpmybbs $(bindir)
