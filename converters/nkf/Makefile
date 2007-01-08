@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:50 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/08 13:34:12 obache Exp $
 
 DISTNAME=	nkf205
 PKGNAME=	nkf-2.05
 CATEGORIES=	japanese converters
-MASTER_SITES=	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=nkf/15302/} \
+		http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 
 MAINTAINER=	cjs@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/nkf/
