@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.12 2007/01/08 02:38:42 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.13 2007/01/08 11:06:44 rillig Exp $
 #
 
 # The `debug' target outputs the values of some commonly used variables
@@ -87,26 +87,26 @@ _show-dbginfo-config.status:
 _show-dbginfo-config.h:
 .if !empty(CONFIGURE_DIRS:M*)
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	if ${TEST} -d ${WRKSRC:Q}; then cd ${WRKSRC:Q};			\
+	[ -d ${WRKSRC} ] || exit 0;					\
+	print_config_h() {						\
+	  printf "%s:\\n" "`pwd`/$$1";					\
+	  awk '/^#define / { print "\t"$$0; } /^\/\* #undef / { print "\t" $$2 " " $$3; }' < "$$1"; \
+	  printf "\\n";							\
+	};								\
 	for cdir in ${CONFIGURE_DIRS}; do				\
-	  ch="$${cdir}/config.h";					\
-	  if ${TEST} ! -f "$${ch}"; then				\
-	    cac="$${cdir}/configure.ac";				\
-	    if ${TEST} ! -f "$${cac}"; then				\
-	      cac="$${cdir}/configure.in";				\
-	    fi;								\
-	    if ${TEST} ! -f "$${cac}"; then				\
-	      continue;							\
-	    fi;								\
-	    ch="$${cdir}/"`${SED} -n 's,.*AC_CONFIG_HEADERS(\[\([[:graph:]]*\)\]).*,\1,p' < "$${cac}"`; \
-	    if ${TEST} ! -f "$${ch}"; then				\
-	      continue;							\
-	    fi;								\
-	  fi;								\
-	  ${PRINTF} "%s:\\n" "$${ch}";					\
-	  ${AWK} '/^#define / { print "\t"$$0; } /^\/\* #undef / { print "\t" $$2 " " $$3; }' < "$${ch}"; \
-	  ${PRINTF} "\\n";						\
-	done; fi
+	  cd ${WRKSRC}; [ -d "$$cdir" ] || continue; cd "$$cdir";	\
+	  [ ! -f config.h ] || { print_config_h config.h; continue; };	\
+	  [ ! -f config.status ] || {					\
+	    : "autoconf 2.59";						\
+	    chs=`sed -n 's,^config_headers="\(.*\)".*,\1,p' config.status || true`; \
+	    : "autoconf 2.13";						\
+	    [ "$$chs" ] || chs=`sed -n 's,^  CONFIG_HEADERS="\([^:"]*\).*,\1,p' config.status || true`; \
+	    done=no;							\
+	    for ch in $$chs; do print_config_h "$$ch"; done=yes; done;	\
+	    [ $$done = no ] || continue;				\
+	  };								\
+	  printf "WARNING: No config header found in `pwd`.\\n\\n";	\
+	done
 .else
 	@${DO_NADA}
 .endif
