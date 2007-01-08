@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/09/20 14:40:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/08 21:48:40 drochner Exp $
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
@@ -20,6 +20,7 @@ share/examples/gnome-screensaver/xdg/menus/gnome-screensavers.menu
 share/gconf/schemas/gnome-screensaver.schemas
 share/gnome-screensaver/gnome-screensaver-preferences.glade
 share/gnome-screensaver/lock-dialog-default.glade
+share/locale/ar/LC_MESSAGES/gnome-screensaver.mo
 share/locale/bg/LC_MESSAGES/gnome-screensaver.mo
 share/locale/bn/LC_MESSAGES/gnome-screensaver.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-screensaver.mo
