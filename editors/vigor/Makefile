@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/21 18:53:59 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/08 17:54:46 joerg Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -24,7 +24,10 @@ CONFIGURE_ARGS+=--with-x
 USE_TOOLS+=	sh
 BUILD_DIRS=	${CONFIGURE_DIRS}
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
 .if exists(/usr/include/sys/queue.h)
