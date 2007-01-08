@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/07/27 15:16:44 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/08 01:50:41 rillig Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
 PKGNAME=	ns-cult3d-5.2
+PKGREVISION=	1
 CATEGORIES=	www graphics
 
 MAINTAINER=	abs@NetBSD.org
@@ -18,9 +19,14 @@ NO_BUILD=		yes
 CHECK_SHLIBS_SUPPORTED=	no
 CRYPTO=			yes
 
+INSTALLATION_DIRS=	lib/netscape/plugins
+
+post-extract:
+	cd ${WRKSRC} && pax -r -f cult3d.tar
+	chmod -R go-w ${WRKSRC}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/netscape
-	cd ${WRKSRC} ; ${ECHO} ${PREFIX}/lib/netscape | ./install.sh
+	cd ${WRKSRC} && pax -wr cult3d ${PREFIX}/lib/netscape/plugins
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ns-cult3d.txt
 
 .include "../../mk/bsd.pkg.mk"
