@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.77 2007/01/08 12:21:43 adam Exp $
+$NetBSD: CHANGES-2007,v 1.78 2007/01/08 18:18:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -105,3 +105,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ncurses to 5.6 [adam 2007-01-08]
 	Updated graphics/graphviz to 2.12 [adam 2007-01-08]
 	Updated devel/doxygen to 1.5.1 [adam 2007-01-08]
+	Updated databases/postgresql82 to 8.2.1 [adam 2007-01-08]
+	Updated databases/postgresql82-client to 8.2.1 [adam 2007-01-08]
+	Updated databases/postgresql82-server to 8.2.1 [adam 2007-01-08]
+	Updated databases/postgresql82-plperl to 8.2.1 [adam 2007-01-08]
+	Updated databases/postgresql82-plpython to 8.2.1 [adam 2007-01-08]
+	Updated databases/postgresql82-pltcl to 8.2.1 [adam 2007-01-08]
+	Updated databases/postgresql82-tsearch2 to 8.2.1 [adam 2007-01-08]
