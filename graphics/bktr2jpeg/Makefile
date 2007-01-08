@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/21 08:26:18 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/08 03:27:27 rillig Exp $
 #
 
 DISTNAME=	bktr2jpeg-1.0
@@ -10,8 +10,9 @@ MAINTAINER=	coto@core.de
 HOMEPAGE=	http://core.de/~coto/projects/bktr2jpeg/
 COMMENT=	Write jpeg image captured from /dev/bktr to file
 
-
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-*
+
+MAKE_FLAGS+=	INSTALL=${INSTALL_PROGRAM:Q}
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
