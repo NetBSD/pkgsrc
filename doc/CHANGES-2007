@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.75 2007/01/08 11:02:09 adam Exp $
+$NetBSD: CHANGES-2007,v 1.76 2007/01/08 11:31:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -103,3 +103,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0rc17 [ghen 2007-01-07]
 	Added security/pam-af version 1.0.1 [obache 2007-01-08]
 	Updated devel/ncurses to 5.6 [adam 2007-01-08]
+	Updated graphics/graphviz to 2.12 [adam 2007-01-08]
