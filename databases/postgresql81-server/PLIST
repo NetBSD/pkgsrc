@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/20 14:45:52 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/08 18:55:39 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -129,11 +129,13 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/Tucuman
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/Ushuaia
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Aruba
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Asuncion
+${PG_SUBPREFIX}share/postgresql/timezone/America/Atikokan
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Atka
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Bahia
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Barbados
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Belem
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Belize
+${PG_SUBPREFIX}share/postgresql/timezone/America/Blanc-Sablon
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Boa_Vista
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Bogota
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Boise
@@ -179,8 +181,11 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Hermosillo
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Indianapolis
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Knox
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Marengo
+${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Petersburg
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Vevay
+${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Vincennes
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indianapolis
+${PG_SUBPREFIX}share/postgresql/timezone/America/Moncton
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Inuvik
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Iqaluit
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Jamaica
@@ -213,6 +218,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Nipigon
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Nome
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Noronha
 ${PG_SUBPREFIX}share/postgresql/timezone/America/North_Dakota/Center
+${PG_SUBPREFIX}share/postgresql/timezone/America/North_Dakota/New_Salem
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Panama
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Pangnirtung
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Paramaribo
@@ -454,10 +460,13 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Chisinau
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Copenhagen
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Dublin
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Gibraltar
+${PG_SUBPREFIX}share/postgresql/timezone/Europe/Guernsey
+${PG_SUBPREFIX}share/postgresql/timezone/Europe/Kiev
+${PG_SUBPREFIX}share/postgresql/timezone/Europe/Isle_of_Man
+${PG_SUBPREFIX}share/postgresql/timezone/Europe/Jersey
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Helsinki
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Istanbul
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Kaliningrad
-${PG_SUBPREFIX}share/postgresql/timezone/Europe/Kiev
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Lisbon
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Ljubljana
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/London
@@ -471,6 +480,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Moscow
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Nicosia
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Oslo
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Paris
+${PG_SUBPREFIX}share/postgresql/timezone/Europe/Podgorica
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Prague
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Riga
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Rome
@@ -489,6 +499,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Vaduz
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Vatican
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Vienna
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Vilnius
+${PG_SUBPREFIX}share/postgresql/timezone/Europe/Volgograd
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Warsaw
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Zagreb
 ${PG_SUBPREFIX}share/postgresql/timezone/Europe/Zaporozhye
@@ -580,19 +591,6 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Portugal
 ${PG_SUBPREFIX}share/postgresql/timezone/ROC
 ${PG_SUBPREFIX}share/postgresql/timezone/ROK
 ${PG_SUBPREFIX}share/postgresql/timezone/Singapore
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/AST4
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/AST4ADT
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/CST6
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/CST6CDT
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/EST5
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/EST5EDT
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/HST10
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/MST7
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/MST7MDT
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/PST8
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/PST8PDT
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/YST9
-${PG_SUBPREFIX}share/postgresql/timezone/SystemV/YST9YDT
 ${PG_SUBPREFIX}share/postgresql/timezone/Turkey
 ${PG_SUBPREFIX}share/postgresql/timezone/UCT
 ${PG_SUBPREFIX}share/postgresql/timezone/US/Alaska
@@ -614,7 +612,6 @@ ${PG_SUBPREFIX}share/postgresql/timezone/W-SU
 ${PG_SUBPREFIX}share/postgresql/timezone/WET
 ${PG_SUBPREFIX}share/postgresql/timezone/Zulu
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/US
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/SystemV
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Pacific
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mideast
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mexico
