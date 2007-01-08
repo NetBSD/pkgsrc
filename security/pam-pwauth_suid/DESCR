@@ -1,0 +1,7 @@
+The pam_pwauth_suid authentication module uses a setuid program
+to verify a password against the encrypted password in the
+database used by the system. This way, an unprivileged user can
+verify his own passsword stored in a shadow password database.
+There might be some risk that the communication between the
+invoking program and the setuid program is logged, or for abuse
+for dictionary attacks.
