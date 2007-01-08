@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/01/08 11:29:47 adam Exp $
+# $NetBSD: Makefile,v 1.53 2007/01/08 16:35:15 joerg Exp $
 
 DISTNAME=	graphviz-2.12
 CATEGORIES=	graphics
@@ -56,6 +56,7 @@ pre-build:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
