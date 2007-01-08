@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/15 09:03:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/08 09:41:21 adam Exp $
 bin/MP3Broadcaster
 bin/PlaylistBroadcaster
 bin/QTBroadcaster
@@ -9,6 +9,7 @@ bin/QTSDPGen
 bin/QTSampleLister
 bin/QTTrackInfo
 bin/StreamingLoadTool
+bin/createuserstreamingdir
 bin/qtpasswd
 libexec/StreamingServerModules/QTSSHomeDirectoryModule
 libexec/StreamingServerModules/QTSSRefMovieModule
