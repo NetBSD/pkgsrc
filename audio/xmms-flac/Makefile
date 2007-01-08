@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/07 12:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/08 00:19:18 wiz Exp $
 #
 
 DISTNAME=	flac-1.1.3
@@ -39,6 +39,7 @@ do-install:
 	cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} ${INSTALL_TARGET}
 
+BUILDLINK_API_DEPENDS.flac+=	flac>=1.1.3nb1
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 
