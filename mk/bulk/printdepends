@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.23 2006/01/15 23:33:23 rillig Exp $
+# $NetBSD: printdepends,v 1.24 2007/01/08 21:36:07 rillig Exp $
 #
 
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -146,9 +146,7 @@ for pkgdir in $list; do
 		else
 			echo "$0: error: could not extract dependencies for ${pkgdir} -- skipping." 1>&2
 
-			case $brokenfile_flag in
-			no)	continue;;
-			esac
+			[ $brokenfile_flag = yes ] || continue
 
 			${mkbulkdir} "${bulkfilesdir}/${pkgdir}"
 			{ echo "[printdepends] command failed: ${BMAKE} show-depends-dirs"
