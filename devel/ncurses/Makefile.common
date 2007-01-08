@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2006/11/05 17:49:34 joerg Exp $
+# $NetBSD: Makefile.common,v 1.3 2007/01/08 11:01:05 adam Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
-NC_VERS=	5.5
+NC_VERS=	5.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \
@@ -14,10 +14,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 USE_TOOLS+=		tbl
-
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--enable-bsdpad
 CONFIGURE_ARGS+=	--enable-overwrite
@@ -27,6 +26,8 @@ CONFIGURE_ARGS+=	--without-curses-h
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
+CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
+CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,6 +41,3 @@ TERMINFODIR=	share/terminfo
 .endif
 
 PLIST_SUBST+=	TERMINFODIR=${TERMINFODIR:Q}
-
-CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
-CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
