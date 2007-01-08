@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/10 22:18:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/08 04:51:44 rillig Exp $
 bin/cqcam
-bin/xcqcam
+bin/movify
 bin/webcam
+bin/xcqcam
 man/man1/cqcam.1
 man/man1/webcam.1
 man/man1/xcqcam.1
