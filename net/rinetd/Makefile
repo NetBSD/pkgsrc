@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:23 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/08 21:12:31 rillig Exp $
 #
 
 DISTNAME=		rinetd
 PKGNAME=		${DISTNAME}-0.62
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://www.boutell.com/rinetd/http/
 
@@ -11,13 +11,15 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.boutell.com/rinetd/
 COMMENT=		Internet redirection server
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=		yes
 BUILD_TARGET=		rinetd
 
 CPPFLAGS+=		-DRINETD_CONF="\"${PKG_SYSCONFDIR}/rinetd.conf\""
 
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+
 RCD_SCRIPTS=		rinetd
+RCD_SCRIPT_WRK.rinetd=	${WRKDIR}/rinetd.sh
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	rinetd.8
@@ -25,7 +27,11 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 
-post-extract:
-	@cd ${WRKDIR} && ${MV} -f rinetd ${PKGNAME_NOREV}
+do-build:
+	cd ${WRKSRC} && env ${MAKE_ENV} cc ${CPPFLAGS} ${CFLAGS} -o rinetd *.c
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/rinetd ${PREFIX}/sbin/.
+	${INSTALL_MAN} ${WRKSRC}/rinetd.8 ${PREFIX}/${PKGMANDIR}/man8/.
 
 .include "../../mk/bsd.pkg.mk"
