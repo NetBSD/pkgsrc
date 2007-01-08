@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.76 2007/01/08 11:31:23 adam Exp $
+$NetBSD: CHANGES-2007,v 1.77 2007/01/08 12:21:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/pam-af version 1.0.1 [obache 2007-01-08]
 	Updated devel/ncurses to 5.6 [adam 2007-01-08]
 	Updated graphics/graphviz to 2.12 [adam 2007-01-08]
+	Updated devel/doxygen to 1.5.1 [adam 2007-01-08]
