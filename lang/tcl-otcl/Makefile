@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/09/29 16:28:55 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/08 17:51:55 joerg Exp $
 
 DISTNAME=	otcl-src-1.12
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -27,8 +27,11 @@ DOCDIR=		${PREFIX}/share/doc/tcl/otcl
 
 INSTALLATION_DIRS=	bin include lib
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
