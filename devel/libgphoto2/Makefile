@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/01/08 02:39:42 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/08 16:17:47 joerg Exp $
 
 DISTNAME=	libgphoto2-2.3.1
 CATEGORIES=	devel graphics
@@ -19,6 +19,7 @@ CONFIGURE_FLAGS+=	DOXYGEN=no
 PKGCONFIG_OVERRIDE+=	libgphoto2/libgphoto2.pc.in
 
 .include "../../mk/bsd.prefs.mk"
+# Keep this in sync with buildlink3.mk!
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=		HAVE_LIBUSB="@comment "
 .else
