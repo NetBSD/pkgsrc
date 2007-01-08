@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/03/14 17:16:19 hamajima Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.1 2007/01/08 03:19:01 rillig Exp $
 
 You should apply following kernel patch to use this package.
 
