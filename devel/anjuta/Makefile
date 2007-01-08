@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/01/04 11:29:07 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2007/01/08 21:45:46 adrianp Exp $
 
 DISTNAME=	anjuta-2.0.2
 CATEGORIES=	devel
@@ -11,8 +11,10 @@ COMMENT=	Gnome based IDE for C and C++
 DEPENDS+=	autogen-[0-9]*:../../devel/autogen
 DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
+DEPENDS+=	devhelp-[0-9]*:../../devel/devhelp
 DEPENDS+=	glade>=2.6.0:../../devel/glade
 DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
+DEPENDS+=	gnome-build-[0-9]*:../../devel/gnome-build
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
@@ -38,9 +40,9 @@ SUBST_SED.unused=	-e 's/__unused__/_exctags_unused_/g'
 REPLACE_SH+=		scripts/anjuta_import.sh.in
 REPLACE_PERL+=		plugins/tools/scripts/*.pl
 
-.include "../../devel/devhelp/buildlink3.mk"
+# .include "../../devel/devhelp/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
-.include "../../devel/gnome-build/buildlink3.mk"
+# .include "../../devel/gnome-build/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
