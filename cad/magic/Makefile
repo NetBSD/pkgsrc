@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/18 11:27:41 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/08 21:54:51 rillig Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -13,6 +13,7 @@ COMMENT=	Integrated circuit layout system
 USE_TOOLS+=	gmake printf
 USE_GNU_READLINE=	# uses rl_*_completion_function
 MAKE_ENV+=	MAGIC_HOME=${PREFIX:Q}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "big"
