@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.4 2004/07/10 22:18:23 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2007/01/08 04:51:44 rillig Exp $
 
---- port.C.orig	1997-10-27 18:29:35.000000000 +0100
-+++ port.C
-@@ -10,6 +10,7 @@
- 
+--- libcqcam/port.C.orig	2000-08-23 20:03:19.000000000 +0200
++++ libcqcam/port.C	2007-01-08 05:25:04.000000000 +0100
+@@ -30,6 +30,7 @@
+ #include "config.h"
  
  #include <stdio.h>
 +#include <stdlib.h>
  #include <errno.h>
- #include "config.h"
  
-@@ -30,6 +31,10 @@
-   #endif
+ #ifdef LOCKING
+@@ -47,6 +48,10 @@
+ #include <conio.h>
  #elif defined(FREEBSD)
  #include <machine/cpufunc.h>
 +#elif defined(NETBSD)
@@ -20,8 +20,8 @@ $NetBSD: patch-ab,v 1.4 2004/07/10 22:18:23 wiz Exp $
 +#include <machine/pio.h>	/* XXX */
  #elif defined(BSDI)
  #include <machine/inline.h>
- #elif defined(LYNX)
-@@ -62,6 +67,20 @@ port_t::port_t(int iport) {
+ #elif defined(OPENBSD)
+@@ -90,6 +95,23 @@ port_t::port_t(int iport) {
      perror("fopen /dev/io");
      return;
    }
@@ -39,6 +39,9 @@ $NetBSD: patch-ab,v 1.4 2004/07/10 22:18:23 wiz Exp $
 +# else
 +#  error Not supported on this CPU.
 +# endif
- #elif defined(LYNX)
-   if (io_access() < 0) {
-     perror("io_access");
++#elif defined(LYNX)
++   if (io_access() < 0) {
++     perror("io_access");
+ #elif defined(OPENBSD)
+   if (i386_iopl(1) == -1) {
+     perror("i386_iopl");
