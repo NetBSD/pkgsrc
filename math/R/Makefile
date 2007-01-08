@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2006/10/08 23:12:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.87 2007/01/08 15:00:36 joerg Exp $
 
 DISTNAME=		R-2.3.1
 CATEGORIES=		math
@@ -92,6 +92,7 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
 # Generate the PLIST dynamically as it changes in each version only in a
