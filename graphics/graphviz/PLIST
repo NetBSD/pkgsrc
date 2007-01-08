@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/10/08 08:11:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/08 11:29:47 adam Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -6,7 +6,6 @@ bin/circo
 bin/dijkstra
 bin/dot
 bin/dot2gxl
-bin/dot_static
 bin/dotty
 bin/fdp
 bin/gc
@@ -30,21 +29,12 @@ include/graphviz/arith.h
 include/graphviz/ast_common.h
 include/graphviz/cdt.h
 include/graphviz/color.h
+include/graphviz/demand_loading.c
+include/graphviz/dot_builtins.c
 include/graphviz/dthdr.h
-include/graphviz/entities.h
 include/graphviz/exgram.h
 include/graphviz/exlib.h
 include/graphviz/expr.h
-include/graphviz/gd.h
-include/graphviz/gd_io.h
-include/graphviz/gdcache.h
-include/graphviz/gdfontg.h
-include/graphviz/gdfontl.h
-include/graphviz/gdfontmb.h
-include/graphviz/gdfonts.h
-include/graphviz/gdfontt.h
-include/graphviz/gdfx.h
-include/graphviz/gdhelpers.h
 include/graphviz/geom.h
 include/graphviz/globals.h
 include/graphviz/grammar.h
@@ -55,52 +45,65 @@ include/graphviz/gvc.h
 include/graphviz/gvcext.h
 include/graphviz/gvcint.h
 include/graphviz/gvcjob.h
+include/graphviz/gvcommon.h
 include/graphviz/gvplugin.h
 include/graphviz/gvplugin_device.h
 include/graphviz/gvplugin_layout.h
+include/graphviz/gvplugin_loadimage.h
 include/graphviz/gvplugin_render.h
 include/graphviz/gvplugin_textlayout.h
-include/graphviz/gvplugin_usershape.h
-include/graphviz/jisx0208.h
 include/graphviz/libgraph.h
 include/graphviz/logic.h
 include/graphviz/malloc.h
+include/graphviz/no_demand_loading.c
 include/graphviz/pack.h
 include/graphviz/parser.h
 include/graphviz/pathgeom.h
 include/graphviz/pathplan.h
 include/graphviz/pathutil.h
 include/graphviz/solvers.h
+include/graphviz/textpara.h
 include/graphviz/tri.h
 include/graphviz/triefa.h
 include/graphviz/types.h
+include/graphviz/usershape.h
 include/graphviz/vis.h
 include/graphviz/vispath.h
 include/graphviz/vmstub.h
-include/graphviz/wbmp.h
-lib/graphviz/config
-lib/graphviz/libagraph.la
-lib/graphviz/libcdt.la
-lib/graphviz/libexpr.la
-lib/graphviz/libgdtclft.la
-lib/graphviz/libgraph.la
-lib/graphviz/libgv_tcl.la
-lib/graphviz/libgvc.la
-lib/graphviz/libgvc_builtins.la
-lib/graphviz/libgvgd.la
+lib/graphviz/libgvplugin_core.la
 lib/graphviz/libgvplugin_dot_layout.la
+lib/graphviz/libgvplugin_gd.la
 lib/graphviz/libgvplugin_neato_layout.la
-lib/graphviz/libgvplugin_usershape_gd.la
-lib/graphviz/libpack.la
-lib/graphviz/libpathplan.la
-lib/graphviz/libtcldot.la
-lib/graphviz/libtclplan.la
-lib/graphviz/libtkspline.la
+lib/graphviz/libgvplugin_pango.la
+lib/graphviz/libgvplugin_xlib.la
+lib/graphviz/lua/gv.so
+lib/graphviz/lua/gv_lua.man
+lib/graphviz/lua/libgv_lua.la
+lib/graphviz/perl/gv.so
 lib/graphviz/pkgIndex.tcl
+lib/graphviz/python/_gv.so
+lib/graphviz/ruby/gv.so
+lib/graphviz/tcl/gv.so
+lib/graphviz/tcl/gv_tcl.man
+lib/graphviz/tcl/libgdtclft.la
+lib/graphviz/tcl/libgv_tcl.la
+lib/graphviz/tcl/libtcldot.la
+lib/graphviz/tcl/libtcldot_builtin.la
+lib/graphviz/tcl/libtclplan.la
+lib/graphviz/tcl/libtkspline.la
+lib/libagraph.la
+lib/libcdt.la
+lib/libexpr.la
+lib/libgraph.la
+lib/libgvc.la
+lib/libgvc_builtins.la
+lib/libpathplan.la
 lib/pkgconfig/libagraph.pc
 lib/pkgconfig/libcdt.pc
+lib/pkgconfig/libexpr.pc
 lib/pkgconfig/libgraph.pc
 lib/pkgconfig/libgvc.pc
+lib/pkgconfig/libgvc_builtins.pc
 lib/pkgconfig/libpathplan.pc
 man/man1/acyclic.1
 man/man1/bcomps.1
@@ -129,7 +132,7 @@ man/man3/agraph.3
 man/man3/cdt.3
 man/man3/expr.3
 man/man3/graph.3
-man/man3/pack.3
+man/man3/gvc.3
 man/man3/pathplan.3
 man/mann/gdtclft.n
 man/mann/tcldot.n
@@ -247,6 +250,8 @@ share/graphviz/doc/html/info/hexagon.gif
 share/graphviz/doc/html/info/house.gif
 share/graphviz/doc/html/info/html1.gif
 share/graphviz/doc/html/info/html2.gif
+share/graphviz/doc/html/info/html3.gif
+share/graphviz/doc/html/info/html4.gif
 share/graphviz/doc/html/info/index.html
 share/graphviz/doc/html/info/invhouse.gif
 share/graphviz/doc/html/info/invtrapezium.gif
@@ -254,6 +259,7 @@ share/graphviz/doc/html/info/invtriangle.gif
 share/graphviz/doc/html/info/lang.html
 share/graphviz/doc/html/info/mrecord.gif
 share/graphviz/doc/html/info/nohead.gif
+share/graphviz/doc/html/info/none.gif
 share/graphviz/doc/html/info/octagon.gif
 share/graphviz/doc/html/info/output.html
 share/graphviz/doc/html/info/parallelogram.gif
@@ -265,12 +271,15 @@ share/graphviz/doc/html/info/record.gif
 share/graphviz/doc/html/info/rect.gif
 share/graphviz/doc/html/info/rectangle.gif
 share/graphviz/doc/html/info/round.gif
+share/graphviz/doc/html/info/sdlshapes.jpg
 share/graphviz/doc/html/info/septagon.gif
 share/graphviz/doc/html/info/shapes.html
 share/graphviz/doc/html/info/trapezium.gif
 share/graphviz/doc/html/info/triangle.gif
 share/graphviz/doc/html/info/tripleoctagon.gif
+share/graphviz/doc/html/pspdf.png
 share/graphviz/doc/html/tcldot.html
+share/graphviz/doc/html/winbuild.html
 share/graphviz/doc/latex_suggestions.txt
 share/graphviz/doc/pdf/acyclic.pdf
 share/graphviz/doc/pdf/agraph.pdf
@@ -289,6 +298,7 @@ share/graphviz/doc/pdf/fdp.pdf
 share/graphviz/doc/pdf/gc.pdf
 share/graphviz/doc/pdf/gdtclft.pdf
 share/graphviz/doc/pdf/graph.pdf
+share/graphviz/doc/pdf/gvc.pdf
 share/graphviz/doc/pdf/gvcolor.pdf
 share/graphviz/doc/pdf/gvpack.pdf
 share/graphviz/doc/pdf/gvpr.pdf
@@ -299,7 +309,6 @@ share/graphviz/doc/pdf/lneato.pdf
 share/graphviz/doc/pdf/neato.pdf
 share/graphviz/doc/pdf/neatoguide.pdf
 share/graphviz/doc/pdf/nop.pdf
-share/graphviz/doc/pdf/pack.pdf
 share/graphviz/doc/pdf/pathplan.pdf
 share/graphviz/doc/pdf/prune.pdf
 share/graphviz/doc/pdf/sccmap.pdf
@@ -387,5 +396,16 @@ share/graphviz/lefty/tree.lefty
 @dirrm share/graphviz/demo/pathplan_data
 @dirrm share/graphviz/demo
 @dirrm share/graphviz
+@dirrm lib/graphviz/tcl
+@dirrm lib/graphviz/sharp
+@dirrm lib/graphviz/ruby
+@dirrm lib/graphviz/python
+@dirrm lib/graphviz/php
+@dirrm lib/graphviz/perl
+@dirrm lib/graphviz/ocaml
+@dirrm lib/graphviz/lua
+@dirrm lib/graphviz/java
+@dirrm lib/graphviz/io
+@dirrm lib/graphviz/guile
 @dirrm lib/graphviz
 @dirrm include/graphviz
