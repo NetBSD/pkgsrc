@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/10/18 18:39:09 adam Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/08 20:30:42 adam Exp $
 
 PKGNAME=	postgresql80-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -11,8 +11,8 @@ CONFIGURE_ARGS+=	--with-openssl
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-zlib
 
-CONFLICTS+=	postgresql80-lib-*
-CONFLICTS+=	postgresql80-docs-*
+CONFLICTS+=	postgresql80-lib-[0-9]*
+CONFLICTS+=	postgresql80-docs-[0-9]*
 
 # 1. The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
 # NetBSD (missing strerror_r) or DragonFly.
@@ -31,15 +31,15 @@ CONFIGURE_ARGS+=	--enable-thread-safety
 .  endif
 .endif
 
-INSTALL_DIRS=	${WRKSRC}/src/include
-INSTALL_DIRS+=	${WRKSRC}/src/interfaces
-INSTALL_DIRS+=	${WRKSRC}/src/bin
-INSTALL_DIRS+=	${WRKSRC}/doc
+INSTALL_DIRS=	src/include
+INSTALL_DIRS+=	src/interfaces
+INSTALL_DIRS+=	src/bin
+INSTALL_DIRS+=	doc
 
 BUILD_DIRS=	${INSTALL_DIRS}
 
 # Without this, the Darwin build fails (related to -bundle_loader).
-BUILD_DIRS+=	${WRKSRC}/src/backend
+BUILD_DIRS+=	src/backend
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-client
 .include "../../databases/postgresql80/options.mk"
