@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.6 2007/01/07 08:48:11 rillig Exp $
+# $NetBSD: help.awk,v 1.7 2007/01/08 02:27:05 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -23,6 +23,7 @@ BEGIN {
 	relevant = no;		# are the current lines relevant?
 	nlines = 0;		# the number of lines collected so far
 	comment_lines = 0;	# the number of comment lines so far
+	print_noncomment_lines = yes; # for make targets, this isn't useful
 }
 
 always {
@@ -77,6 +78,11 @@ NF >= 2 {
 	}
 }
 
+# Don't print the implementation of make targets.
+$1 == uctopic":" {
+	print_noncomment_lines = no;
+}
+
 $1 == "#" {
 	comment_lines++;
 }
@@ -90,8 +96,8 @@ $1 == "#" {
 		found_anything = yes;
 		print "===> "last_fname":";
 		for (i = 0; i < nlines; i++) {
-			#print gensub(/^# ?/, "", "", lines[i]);
-			print lines[i];
+			if (!print_noncomment_lines || (lines[i] ~ /^#/))
+				print lines[i];
 		}
 	}
 
@@ -100,6 +106,7 @@ $1 == "#" {
 	relevant = no;
 	nlines = 0;
 	comment_lines = 0;
+	print_noncomment_lines = yes;
 }
 
 always {
