@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2006/04/17 13:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2007/01/08 16:59:57 joerg Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	4
@@ -39,10 +39,17 @@ CONF_FILES+=		${EGDIR}/im_palette-tiny.pal \
 #
 X_LDFLAGS=		${X11_LDFLAGS}
 
+.include "../../mk/bsd.prefs.mk"
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${X11PREFIX:Q}/include
+.endif
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.gif *.html \
 		${PREFIX}/share/doc/imlib
+
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -51,5 +58,8 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
