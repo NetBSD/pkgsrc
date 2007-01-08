@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/08 19:02:47 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/08 17:53:04 joerg Exp $
 
 DISTNAME=	tcpillust-1.0a
 PKGREVISION=	4
@@ -32,5 +32,6 @@ post-install:
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
