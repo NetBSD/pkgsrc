@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.17 2006/07/18 18:40:36 wiz Exp $
+$NetBSD: patch-ac,v 1.18 2007/01/08 21:45:10 drochner Exp $
 
---- configure.orig	2006-05-23 23:01:32.000000000 +0000
+--- configure.orig	2006-05-24 01:01:32.000000000 +0200
 +++ configure
 @@ -2872,6 +2872,9 @@ echo "${ECHO_T}Turning on SGI compiler w
      esac
@@ -47,6 +47,15 @@ $NetBSD: patch-ac,v 1.17 2006/07/18 18:40:36 wiz Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
+@@ -14371,7 +14375,7 @@ fi
+ #
+ if test "$enable_locking" = yes ; then
+   case "$host" in
+-    *-hpux* | *-aix* | *-netbsd* | *-freebsd* | *-openbsd* )
++    *-hpux* | *-aix* | *-freebsd* | *-openbsd* )
+       need_setuid=yes
+     ;;
+   esac
 @@ -14800,11 +14804,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
    ac_gtk_config_libs=$ac_cv_gtk_config_libs
  

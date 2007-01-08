@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.93 2006/12/15 20:33:06 joerg Exp $
+# $NetBSD: Makefile.common,v 1.94 2007/01/08 21:45:10 drochner Exp $
 #
 
 # When updating the package, and screensavers are removed,
@@ -25,8 +25,6 @@ CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 
 CONFIGURE_ARGS+=	--without-motif
-CONFIGURE_ARGS+=	--without-shadow
-CONFIGURE_ARGS+=	--without-pam
 
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
