@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4.6.1 2007/01/09 09:18:18 ghen Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	pymol-0.98
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tgz
@@ -23,6 +23,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pymol.com ${PREFIX}/bin/pymol
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
