@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/05 05:37:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/09 10:27:17 joerg Exp $
 #
 
 PKGNAME=	pornview-0.2.0pre1
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/pornview/}
 MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://pornview.sourceforge.net/
 COMMENT=	GTK+ image viewer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/pornview-0.2.0pre1
 
