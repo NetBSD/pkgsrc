@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.5 2004/12/09 18:45:32 minskim Exp $
+$NetBSD: patch-as,v 1.6 2007/01/09 10:21:51 joerg Exp $
 
---- src/RPC_TCP_Connector.c++.orig	2003-01-18 08:18:12.000000000 -0600
+--- src/RPC_TCP_Connector.c++.orig	2003-01-18 14:18:12.000000000 +0000
 +++ src/RPC_TCP_Connector.c++
-@@ -21,11 +21,23 @@
+@@ -21,11 +21,19 @@
  //  Temple Place - Suite 330, Boston MA 02111-1307, USA.
  
  #include "RPC_TCP_Connector.h"
@@ -11,14 +11,10 @@ $NetBSD: patch-as,v 1.5 2004/12/09 18:45:32 minskim Exp $
 +#define PORTMAP
  
  #include <errno.h>
-+#ifdef __SUNPRO_CC
 +extern "C" {
-+#endif
  #include <rpc/rpc.h>
  #include <rpc/pmap_prot.h>
-+#ifdef __SUNPRO_CC
 +}
-+#endif
  #include <sys/ioctl.h>
 +#ifdef HAVE_SYS_FILIO_H
 +#include <sys/filio.h>
