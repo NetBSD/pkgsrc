@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/09 04:17:30 rillig Exp $
 #
 
 DISTNAME=	rio007
@@ -16,8 +16,13 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 WRKSRC=		${WRKDIR}/rio107
 MAKE_FILE=	makefile
 USE_LANGUAGES=	c++
+LIBS.NetBSD=	-li386
 
 INSTALLATION_DIRS=	bin
+SPECIAL_PERMS=		bin/rio ${SETUID_ROOT_PERMS}
+
+do-build:
+	cd ${WRKSRC} && ${CXX} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${LIBS} app.cpp rio.cpp -o rio
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rio ${PREFIX}/bin
