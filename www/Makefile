@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2006/12/16 11:26:03 wiz Exp $
+# $NetBSD: Makefile,v 1.492 2007/01/09 21:56:19 kristerw Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -285,6 +285,7 @@ SUBDIR+=	py-jonpy
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-pcgi
+SUBDIR+=	py-webpy
 SUBDIR+=	py-zpublisher
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
