@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/01/09 15:06:23 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIBWWW_BUILDLINK3_MK:=	${GLIBWWW_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_PKGSRCDIR.glibwww?=	../../www/glibwww
 
 .include "../../www/libwww/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
