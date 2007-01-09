@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/08/06 05:20:40 kristerw Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/09 08:40:46 joerg Exp $
 
 PKGNAME=		${DISTNAME:S/-/-imlib-/}
 COMMENT=		Small, fast and light-weight window manager (imlib version)
@@ -12,6 +12,13 @@ PLIST_SRC=		${.CURDIR}/../icewm/PLIST
 CONFIGURE_ARGS+=	--with-gnome-menus=no
 CONFIGURE_ARGS+=	--with-imlib=yes
 CONFIGURE_ARGS+=	--with-xpm=no
+
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
