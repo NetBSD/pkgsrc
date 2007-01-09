@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/15 20:33:05 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/09 09:31:17 joerg Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		8
@@ -36,10 +36,16 @@ CONFIGURE_ARGS+=	--disable-audiofile
 # work around bug in configure script
 #CONFIGURE_ENV+=		gt_cv_func_gettext_libintl="yes"
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
