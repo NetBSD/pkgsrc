@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2007/01/05 14:54:29 drochner Exp $
+$NetBSD: distinfo,v 1.19 2007/01/09 14:56:57 drochner Exp $
 
-SHA1 (gxine-0.5.9.tar.bz2) = 7826de5f80e4c99ba1eb3651868e2eb29385c36b
-RMD160 (gxine-0.5.9.tar.bz2) = 1e5a521e0e494c339caf51a90933494aba680815
-Size (gxine-0.5.9.tar.bz2) = 1023087 bytes
+SHA1 (gxine-0.5.10.tar.bz2) = d79b86705779ad4de6169467d013c2490d326a38
+RMD160 (gxine-0.5.10.tar.bz2) = abef7e9a9d09b339c7cca3f5155cec22cf8b8b58
+Size (gxine-0.5.10.tar.bz2) = 1029097 bytes
 SHA1 (patch-aa) = 168f7149dbffd7b191721a30193c6d58320534fc
 SHA1 (patch-ab) = b2488c6febee6bc41be26ab8a36563fed5105a52
 SHA1 (patch-ad) = 42fa73c04ecbffd900df6f5231519abe38be9852
