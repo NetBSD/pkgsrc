@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/08 01:50:41 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/09 08:42:10 joerg Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -19,7 +19,7 @@ NO_BUILD=		yes
 CHECK_SHLIBS_SUPPORTED=	no
 CRYPTO=			yes
 
-INSTALLATION_DIRS=	lib/netscape/plugins
+INSTALLATION_DIRS=	lib/netscape/plugins share/doc
 
 post-extract:
 	cd ${WRKSRC} && pax -r -f cult3d.tar
