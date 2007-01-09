@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/12/29 10:32:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.52 2007/01/09 21:35:58 rillig Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -21,6 +21,8 @@ CONFLICTS+=		mirrordir-[0-9]*
 CONFLICTS+=		mutt<=1.4.2.1nb1
 CONFLICTS+=		netqmail-[0-9]*
 CONFLICTS+=		pulsar<=0.1.1
+
+NOT_FOR_UNPRIVILEGED=	yes
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
