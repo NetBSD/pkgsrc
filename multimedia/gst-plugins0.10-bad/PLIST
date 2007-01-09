@@ -1,12 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/14 10:56:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/09 15:21:34 drochner Exp $
 lib/gstreamer-0.10/libgstbz2.la
 lib/gstreamer-0.10/libgstcdxaparse.la
+lib/gstreamer-0.10/libgstdeinterlace.la
+lib/gstreamer-0.10/libgstfilter.la
 lib/gstreamer-0.10/libgstfreeze.la
+lib/gstreamer-0.10/libgsth264parse.la
 lib/gstreamer-0.10/libgstmodplug.la
+lib/gstreamer-0.10/libgstmultifile.la
+lib/gstreamer-0.10/libgstnsf.la
+lib/gstreamer-0.10/libgstnuvdemux.la
 lib/gstreamer-0.10/libgstqtdemux.la
+lib/gstreamer-0.10/libgstreplaygain.la
+lib/gstreamer-0.10/libgstrfbsrc.la
+lib/gstreamer-0.10/libgstspectrum.la
 lib/gstreamer-0.10/libgstspeed.la
 lib/gstreamer-0.10/libgsttta.la
+lib/gstreamer-0.10/libgstvideocrop.la
+lib/gstreamer-0.10/libgstvideoparse.la
 lib/gstreamer-0.10/libgstxingheader.la
+lib/gstreamer-0.10/libgsty4menc.la
 share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/cs/LC_MESSAGES/gst-plugins-bad-0.10.mo
