@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/07/27 15:16:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/09 05:40:21 rillig Exp $
 
 DISTNAME=		sawfish-themes-0.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11 wm
 DISTFILES=		${SAWFISH_THEMES}
 
@@ -11,13 +11,15 @@ COMMENT=		Themes for the sawfish window manager
 
 DEPENDS+=		sawfish>=1.0.1:../../wm/sawfish
 
+EXTRACT_DIR=		${WRKSRC}
 DIST_SUBDIR=		sawfish-themes
 THEMES_DIR=		share/sawfish/themes
 PLIST_SRC=		${WRKDIR}/PLIST
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
-USE_X11BASE=		yes
+
+CHECK_INTERPRETER_SKIP+=	*.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,37 +36,27 @@ pre-fetch:
 	@${ECHO} "==========================================================="
 	@sleep 5
 
-pre-extract:
-	@${MKDIR} ${WRKSRC}
-
 post-extract:
-	@${MV} ${WRKDIR}/* ${WRKSRC} 2>/dev/null || ${TRUE}
+	chmod -R u+rw,go-w ${WRKSRC}
+	find ${WRKSRC} -type f | xargs chmod -x
+	find ${WRKSRC} -type d \( -name ".xvpics" -or -name "CVS" \) -print \
+	| xargs rm -fr
 
 # here's what we do:
-# - some themes contain .xvpics - let's clean those up
 # - create a PLIST
 # - dirrm directives need to be reversed in case of subdirs
 pre-install:
-	@${RM} -f ${PLIST_SRC}
-	@${TOUCH} ${PLIST_SRC}
-	@cd ${WRKSRC} &&						\
-		${FIND} . \( -type d -name ".xvpics" -or -name "CVS" \) \
-			-print | ${XARGS} ${RM} -fr
-	@cd ${WRKSRC} && 						\
-		${FIND} . \( -type f -or -type l \)		 	\
-			-print | 					\
-		${SED} -e 's,^\.,share/sawfish/themes,' >> ${PLIST_SRC}
-	@cd ${WRKSRC} && 						\
-			${FIND} -d . \( -type d ! -name "." \) 		\
-			-print |					\
-		${SED} -e 's,^\.,@dirrm share/sawfish/themes,' >>	\
-			${PLIST_SRC}
-	@${ECHO} "@dirrm share/sawfish/themes" >> ${PLIST_SRC}
+	set -e; cd ${WRKSRC};						\
+	exec 1> ${PLIST_SRC};						\
+	find * \( -type f -or -type l \) -print				\
+	| sed -e 's,^,share/sawfish/themes/,';				\
+	find -d * \( -type d ! -name "." \) -print			\
+	| sed -e 's,^,@dirrm share/sawfish/themes/,';			\
+	${ECHO} "@dirrm share/sawfish/themes"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${THEMES_DIR}
-	cd ${WRKSRC} && ${PAX} -s ,^./[.].*,,				\
-		-s ,^./PLIST,, -rw . ${PREFIX}/${THEMES_DIR}
+	cd ${WRKSRC} && pax -s',^PLIST$$,,' -rw * ${PREFIX}/${THEMES_DIR}
 
 .include "files/themes.sawfish"
 .include "../../mk/bsd.pkg.mk"
