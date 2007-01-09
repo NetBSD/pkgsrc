@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/09/07 10:32:56 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2007/01/09 08:10:58 joerg Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -38,7 +38,8 @@ SUBST_CLASSES+=		gkprefix
 
 REQD_DIRS=	lib/gkrellm2/plugins lib/gkrellm2 include/gkrellm2
 
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
