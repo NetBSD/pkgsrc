@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.18 2006/12/29 00:48:59 joerg Exp $
+# $NetBSD: extract.mk,v 1.19 2007/01/09 05:13:27 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -6,7 +6,7 @@
 # EXTRACT_DIR
 #	The directory into which the files are extracted.
 #
-#	Default value: ${WRKSRC}
+#	Default value: ${WRKDIR}
 #
 #    EXTRACT_CMD is a shell command list that extracts the contents of
 #	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
