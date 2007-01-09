@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/09 15:06:23 joerg Exp $
 #
 
 DISTNAME=		glibwww-0.2
@@ -15,5 +15,6 @@ USE_LIBTOOL=		YES
 
 .include "../../www/libwww/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
