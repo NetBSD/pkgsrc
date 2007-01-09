@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/05 19:29:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/09 15:46:37 smb Exp $
 bin/libetpan-config
 include/libetpan.h
+include/libetpan/acl.h
+include/libetpan/acl_types.h
+include/libetpan/annotatemore.h
+include/libetpan/annotatemore_types.h
 include/libetpan/carray.h
 include/libetpan/charconv.h
 include/libetpan/chash.h
@@ -38,6 +42,8 @@ include/libetpan/maildriver_types_helper.h
 include/libetpan/mailengine.h
 include/libetpan/mailfolder.h
 include/libetpan/mailimap.h
+include/libetpan/mailimap_extension.h
+include/libetpan/mailimap_extension_types.h
 include/libetpan/mailimap_helper.h
 include/libetpan/mailimap_socket.h
 include/libetpan/mailimap_ssl.h
@@ -49,6 +55,7 @@ include/libetpan/mailimf_types_helper.h
 include/libetpan/mailimf_write_file.h
 include/libetpan/mailimf_write_generic.h
 include/libetpan/mailimf_write_mem.h
+include/libetpan/maillock.h
 include/libetpan/mailmbox.h
 include/libetpan/mailmbox_types.h
 include/libetpan/mailmessage.h
@@ -119,5 +126,7 @@ include/libetpan/pop3driver_cached_message.h
 include/libetpan/pop3driver_message.h
 include/libetpan/pop3driver_types.h
 include/libetpan/pop3storage.h
+include/libetpan/uidplus.h
+include/libetpan/uidplus_types.h
 lib/libetpan.la
 @dirrm include/libetpan
