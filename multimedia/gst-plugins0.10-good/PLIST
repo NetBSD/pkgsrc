@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/12 13:33:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/09 15:16:56 drochner Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
 lib/gstreamer-0.10/libgstannodex.la
 lib/gstreamer-0.10/libgstapetag.la
+lib/gstreamer-0.10/libgstaudiofx.la
 lib/gstreamer-0.10/libgstauparse.la
 lib/gstreamer-0.10/libgstautodetect.la
 lib/gstreamer-0.10/libgstavi.la
