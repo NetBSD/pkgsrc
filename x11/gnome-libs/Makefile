@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2006/12/15 20:33:04 joerg Exp $
+# $NetBSD: Makefile,v 1.121 2007/01/09 08:31:17 joerg Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		6
@@ -43,6 +43,7 @@ SUBST_SED.varbase=	-e 's,@VARBASE@,${VARBASE},g'
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 
 CONFIGURE_ENV.db-${BDB_TYPE}?=	ac_cv_func_dbopen=no
