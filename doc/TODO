@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5855 2007/01/09 20:05:12 wiz Exp $
+$NetBSD: TODO,v 1.5856 2007/01/09 23:20:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -676,7 +676,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.2.0
 	o muse-0.9.1
-	o musicpd-0.12.1
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
 	o nagios-2.6
