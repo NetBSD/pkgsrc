@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/01/09 13:31:02 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_PRINT_BUILDLINK3_MK:=	${GNOME_PRINT_BUILDLINK3_MK}+
@@ -21,5 +21,6 @@ BUILDLINK_PKGSRCDIR.gnome-print?=	../../print/gnome-print
 .include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
 .include "../../textproc/libunicode/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
