@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.7 2007/01/08 02:27:05 rillig Exp $
+# $NetBSD: help.awk,v 1.8 2007/01/09 04:28:23 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -24,6 +24,28 @@ BEGIN {
 	nlines = 0;		# the number of lines collected so far
 	comment_lines = 0;	# the number of comment lines so far
 	print_noncomment_lines = yes; # for make targets, this isn't useful
+}
+
+# Help topics are separated by either completely empty lines or by the
+# end of a file or by the end of all files. When here have been enough
+# comment lines, the topic is considered worth printing.
+#
+function end_of_topic() {
+	if (relevant && comment_lines > 2) {
+		found_anything = yes;
+		print "===> "last_fname":";
+		for (i = 0; i < nlines; i++) {
+			if (!print_noncomment_lines || (lines[i] ~ /^#/))
+				print lines[i];
+		}
+	}
+
+	ignore_next_empty_line = yes;
+	delete lines;
+	relevant = no;
+	nlines = 0;
+	comment_lines = 0;
+	print_noncomment_lines = yes;
 }
 
 always {
@@ -87,26 +109,8 @@ $1 == "#" {
 	comment_lines++;
 }
 
-# Help topics are separated by either completely empty lines or by the
-# end of a file. When here have been enough comment lines, the topic is
-# considered worth printing.
-#
 /^$/ || last_fname != FILENAME {
-	if (relevant && comment_lines > 2) {
-		found_anything = yes;
-		print "===> "last_fname":";
-		for (i = 0; i < nlines; i++) {
-			if (!print_noncomment_lines || (lines[i] ~ /^#/))
-				print lines[i];
-		}
-	}
-
-	ignore_next_empty_line = yes;
-	delete lines;
-	relevant = no;
-	nlines = 0;
-	comment_lines = 0;
-	print_noncomment_lines = yes;
+	end_of_topic();
 }
 
 always {
@@ -115,6 +119,7 @@ always {
 }
 
 END {
+	end_of_topic();
 	if (!found_anything) {
 		print "No help found for "topic".";
 	}
