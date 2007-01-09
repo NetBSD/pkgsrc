@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.82 2007/01/09 16:04:38 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.83 2007/01/09 17:11:48 tv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -138,3 +138,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added audio/gst-plugins0.10-a52 version 0.10.5 [drochner 2007-01-08]
 	Added multimedia/gst-plugins0.10-dvdread version 0.10.5 [drochner 2007-01-08]
 	Updated multimedia/gst-plugins0.10-ugly to 0.10.5 [drochner 2007-01-08]
+	Added net/p5-Net-Amazon-S3 version 0.37 [tv 2007-01-09]
