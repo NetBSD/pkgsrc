@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2007/01/09 05:20:15 rillig Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net security
 MASTER_SITES=	# empty -- manual fetch needed
 EXTRACT_SUFX=	_tar.gz
@@ -45,6 +45,7 @@ EXAMPLE_FILES+=	socks5.conf.server2server socks5.conf.singlehomed
 EXAMPLE_DIR=	${PREFIX}/share/examples/socks5
 
 post-install:
+	cd ${PREFIX}/bin && chmod 555 rarchie rfinger rftp rping rtelnet rtraceroute runsocks rwhois
 	${MV} ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so.0
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so
