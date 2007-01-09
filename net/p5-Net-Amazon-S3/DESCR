@@ -1,0 +1,11 @@
+This module provides a Perlish interface to Amazon S3. From the
+developer blurb: "Amazon S3 is storage for the Internet. It is designed
+to make web-scale computing easier for developers. Amazon S3 provides a
+simple web services interface that can be used to store and retrieve any
+amount of data, at any time, from anywhere on the web. It gives any
+developer access to the same highly scalable, reliable, fast,
+inexpensive data storage infrastructure that Amazon uses to run its own
+global network of web sites. The service aims to maximize benefits of
+scale and to pass those benefits on to developers".
+
+To find out more about S3, please visit: http://s3.amazonaws.com/
