@@ -1,0 +1,25 @@
+$NetBSD: patch-ed,v 1.1 2007/01/09 14:46:31 drochner Exp $
+
+--- src/input/libreal/asmrp.c.orig	2006-11-29 20:43:01.000000000 +0100
++++ src/input/libreal/asmrp.c
+@@ -37,6 +37,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
++#include "asmrp.h"
+ 
+ #define LOG_MODULE "asmrp"
+ #define LOG_VERBOSE
+@@ -618,8 +619,10 @@ static int asmrp_eval (asmrp_t *p, int *
+     if (asmrp_rule (p)) {
+       lprintf ("rule #%d is true\n", rule_num);
+ 
+-      matches[num_matches] = rule_num;
+-      num_matches++;
++      if(num_matches < MAX_RULEMATCHES - 1)
++	matches[num_matches++] = rule_num;
++      else
++	printf("Ignoring matched asm rule %d, too many matched rules.\n", rule_num);
+     }
+ 
+     rule_num++;
