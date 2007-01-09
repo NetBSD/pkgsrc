@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5856 2007/01/09 23:20:22 wiz Exp $
+$NetBSD: TODO,v 1.5857 2007/01/09 23:44:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.1.4
 	o gld-1.7
-	o glib2-2.12.7
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -500,10 +499,6 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
-	o gst-plugins0.10-bad-0.10.4
-	o gst-plugins0.10-ffmpeg-0.10.2
-	o gst-plugins0.10-good-0.10.5
-	o gst-plugins0.10-ugly-0.10.5
 	o gtar-1.16.1
 	o gtk-systrace-20030623
 	o gtk2+-2.10.7
@@ -930,7 +925,6 @@ Suggested package updates
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
 	o py-gobject-2.12.3
-	o py-gstreamer0.10-0.10.6
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
 	o py-logging-0.4.9.6
