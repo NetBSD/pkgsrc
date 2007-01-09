@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/06/14 10:56:21 drochner Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/01/09 15:21:34 drochner Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	bad
-GST_PLUGINS0.10_VER=	0.10.3
+GST_PLUGINS0.10_VER=	0.10.4
 
 # Disable all drivers and features by default.
 .for driver in	amrwb \
+		cdaudio \
 		dfbvideosink \
 		divx \
 		tsdec \
