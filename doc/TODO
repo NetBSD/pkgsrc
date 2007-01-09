@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5853 2007/01/08 21:42:38 adrianp Exp $
+$NetBSD: TODO,v 1.5854 2007/01/09 06:41:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -442,13 +442,14 @@ Suggested package updates
 	o gcin-1.2.7
 	o gcombust-0.1.55
 	o gcpio-2.6
+	o gdal-1.4.0
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
 	o ggiterm-0.7.1
 	o ghc-6.6
+	o ghostscript-8.55
 	o ghostscript-esp-8.15.3
-	o ghostscript-gnu-8.55
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
@@ -1123,6 +1124,7 @@ Suggested package updates
 	o vobcopy-1.0.1
 	o vp-1.6
 	o vsftpd-2.0.5
+	o vttest-20070107
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
