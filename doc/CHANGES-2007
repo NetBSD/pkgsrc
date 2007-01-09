@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.81 2007/01/09 09:53:42 adam Exp $
+$NetBSD: CHANGES-2007,v 1.82 2007/01/09 16:04:38 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -126,3 +126,15 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/postgresql80-plpython to 8.0.10 [adam 2007-01-08]
 	Updated databases/postgresql80-pltcl to 8.0.10 [adam 2007-01-08]
 	Updated graphics/ImageMagick to 6.3.1.6 [adam 2007-01-08]
+	Updated multimedia/gxine to 0.5.10 [drochner 2007-01-08]
+	Updated multimedia/gst-plugins0.10-good to 0.10.5 [drochner 2007-01-08]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.4 [drochner 2007-01-08]
+	Added security/pam-pwauth_suid version 1.0 [drochner 2007-01-08]
+	Updated x11/gtk2 to 2.10.7 [drochner 2007-01-08]
+	Updated devel/glib2 to 2.12.7 [drochner 2007-01-08]
+	Updated multimedia/py-gstreamer0.10 to 0.10.6 [drochner 2007-01-08]
+	Updated multimedia/gst-plugins0.10-ffmpeg to 0.10.2 [drochner 2007-01-08]
+	Added audio/gst-plugins0.10-dts version 0.10.5 [drochner 2007-01-08]
+	Added audio/gst-plugins0.10-a52 version 0.10.5 [drochner 2007-01-08]
+	Added multimedia/gst-plugins0.10-dvdread version 0.10.5 [drochner 2007-01-08]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.5 [drochner 2007-01-08]
