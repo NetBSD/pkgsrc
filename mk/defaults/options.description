@@ -21,6 +21,7 @@ aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
 audiofile	
 authlib	
 avifile	
+batch			Enable batch mode support.
 bdb	
 bittorrent		Enable bittorrent support
 bktr	
