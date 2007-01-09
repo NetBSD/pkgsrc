@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2006/12/04 12:41:51 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2007/01/09 08:58:29 joerg Exp $
 
 DISTNAME=	fontconfig-2.4.2
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -34,6 +35,8 @@ CONFIGURE_ENV+=		HASDOCBOOK=no
 .if ${X11BASE} != ${LOCALBASE}
 CONFIGURE_ARGS+=	--with-add-fonts=${X11BASE}/lib/X11/fonts
 .endif
+
+CONFIGURE_ARGS+=	--with-add-fonts=${PREFIX}/share/ghostscript/fonts
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
