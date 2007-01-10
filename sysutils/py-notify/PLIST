@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/10 10:40:52 drochner Exp $
+lib/pkgconfig/notify-python.pc
+${PYSITELIB}/gtk-2.0/pynotify/__init__.py
+${PYSITELIB}/gtk-2.0/pynotify/__init__.pyc
+${PYSITELIB}/gtk-2.0/pynotify/__init__.pyo
+${PYSITELIB}/gtk-2.0/pynotify/_pynotify.la
+share/pygtk/2.0/defs/pynotify.defs
+@dirrm ${PYSITELIB}/gtk-2.0/pynotify
