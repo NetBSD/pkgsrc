@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/10 20:39:35 agc Exp $
+sbin/vblade
+sbin/vbladed
+man/man8/vblade.8
