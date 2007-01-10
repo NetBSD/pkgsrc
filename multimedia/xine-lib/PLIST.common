@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.16 2006/08/06 10:36:50 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.17 2007/01/10 16:33:45 joerg Exp $
 bin/xine-config
 include/xine.h
 include/xine/alphablend.h
@@ -50,7 +50,7 @@ lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_planar.a
 lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_planar.so
 lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_switch.a
 lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_switch.so
-lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_tvtime.a
+${HAVE_XV}lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_tvtime.a
 ${HAVE_XV}lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_tvtime.so
 lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_visualizations.a
 lib/xine/plugins/${XINE_LIB_VER}/post/xineplug_post_visualizations.so
