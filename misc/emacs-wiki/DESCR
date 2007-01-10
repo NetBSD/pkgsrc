@@ -1,0 +1,8 @@
+Wiki is a concept, more than a thing.  It is a way of creating
+document pages using plain text markup and simplified hyperlinking.
+By typing a name in MixedCase, a hyperlink is automatically created to
+the document "MixedCase".  Pressing return on that name will create
+the file if it doesn't exist, or visit it if it does.  The markup used
+by emacs-wiki is intended to be very friendly to people familiar with
+Emacs.  Type C-h v emacs-wiki-publishing-markup after this mode is
+loaded for how to get started.
