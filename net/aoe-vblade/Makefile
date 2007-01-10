@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/10 20:39:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/10 20:47:08 agc Exp $
 
 DISTNAME=	vblade-14
 PKGNAME=	aoe-vblade-14
@@ -10,8 +10,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aoetools.sourceforge.net/
 COMMENT=	ATA over Ethernet (AoE) server - thin, LAN-based storage protocol
 
+ONLY_FOR_PLATFORM+=    NetBSD-*-* FreeBSD-*-* Linux-*-*
+
+.include "../../mk/bsd.prefs.mk"
+
 do-build:
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 	cd ${WRKSRC} && ${CP} freebsd.c bsd.c && ${MAKE} PLATFORM=bsd
+.elif ${OPSYS} == "Linux"
+	${MAKE} PLATFORM=linux
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vblade ${PREFIX}/sbin/
