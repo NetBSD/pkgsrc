@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/10/17 16:18:14 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/10 14:58:24 joerg Exp $
 
 DISTNAME=	mpeg2dec-0.4.1
 PKGNAME=	libmpeg2-0.4.1
@@ -27,4 +27,6 @@ CONFIGURE_ENV+=		ac_cv_header_altivec_h=no
 .endif
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
