@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.91 2007/01/10 14:58:00 obache Exp $
+$NetBSD: CHANGES-2007,v 1.92 2007/01/10 15:20:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -150,3 +150,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/mrtg to 2.15.0 [martti 2007-01-10]
 	Updated mail/squirrelmail-locales to 1.4.9 [martti 2007-01-10]
 	Added textproc/dictem version 0.81 [obache 2007-01-10]
+	Added misc/emacs-wiki version 2.70 [obache 2007-01-10]
