@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/09/04 11:11:35 martti Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/10 14:24:26 martti Exp $
 share/squirrelmail/help/bg_BG/FAQ.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
@@ -286,6 +286,8 @@ share/squirrelmail/locale/cs_CZ/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/cs_CZ/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/cs_CZ/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/cs_CZ/LC_MESSAGES/vacation_local.po
+share/squirrelmail/locale/cs_CZ/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/cs_CZ/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/cs_CZ/LC_MESSAGES/yelp.mo
 share/squirrelmail/locale/cs_CZ/LC_MESSAGES/yelp.po
 share/squirrelmail/locale/cs_CZ/setup.php
@@ -364,6 +366,8 @@ share/squirrelmail/locale/es_ES/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/es_ES/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/es_ES/LC_MESSAGES/unsafe_image_rules.mo
 share/squirrelmail/locale/es_ES/LC_MESSAGES/unsafe_image_rules.po
+share/squirrelmail/locale/es_ES/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/es_ES/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/es_ES/setup.php
 share/squirrelmail/locale/et_EE/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/et_EE/LC_MESSAGES/squirrelmail.po
@@ -408,6 +412,8 @@ share/squirrelmail/locale/fr_FR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/vacation_local.po
+share/squirrelmail/locale/fr_FR/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/fr_FR/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/yelp.mo
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/yelp.po
 share/squirrelmail/locale/fr_FR/setup.php
@@ -538,6 +544,8 @@ share/squirrelmail/locale/lt_LT/LC_MESSAGES/naguser.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/naguser.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/newuser_wiz.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/newuser_wiz.po
+share/squirrelmail/locale/lt_LT/LC_MESSAGES/proon.mo
+share/squirrelmail/locale/lt_LT/LC_MESSAGES/proon.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/qmailadmin_login.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/qmailadmin_login.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/reply_buttons.mo
@@ -568,6 +576,8 @@ share/squirrelmail/locale/lt_LT/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/vacation_local.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/verify_reply_to.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/verify_reply_to.po
+share/squirrelmail/locale/lt_LT/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/lt_LT/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/web_search.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/web_search.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/yelp.mo
@@ -589,6 +599,8 @@ share/squirrelmail/locale/nl_NL/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/vacation_local.po
+share/squirrelmail/locale/nl_NL/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/nl_NL/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/nl_NL/setup.php
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/abook_import_export.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/abook_import_export.po
@@ -668,6 +680,8 @@ share/squirrelmail/locale/nn_NO/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/vacation_local.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/verify_reply_to.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/verify_reply_to.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/web_search.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/web_search.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/yelp.mo
@@ -684,6 +698,8 @@ share/squirrelmail/locale/pt_BR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/pt_BR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/pt_BR/LC_MESSAGES/unsafe_image_rules.mo
 share/squirrelmail/locale/pt_BR/LC_MESSAGES/unsafe_image_rules.po
+share/squirrelmail/locale/pt_BR/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/pt_BR/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/pt_BR/setup.php
 share/squirrelmail/locale/pt_PT/LC_MESSAGES/askuserinfo.mo
 share/squirrelmail/locale/pt_PT/LC_MESSAGES/askuserinfo.po
@@ -826,6 +842,8 @@ share/squirrelmail/locale/uk_UA/LC_MESSAGES/templates.mo
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/templates.po
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/vacation_local.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/vkeyboard.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/vkeyboard.po
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/web_search.mo
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/web_search.po
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/yelp.mo
