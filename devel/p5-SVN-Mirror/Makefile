@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:29:24 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/10 22:02:45 bad Exp $
 
-DISTNAME=	SVN-Mirror-0.67
+DISTNAME=	SVN-Mirror-0.72
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
@@ -11,13 +10,13 @@ COMMENT=	Mirrors one Subversion repository to another
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS+=	p5-subversion>=1.0.7:../../devel/p5-subversion
+DEPENDS+=	p5-subversion>=1.2.0:../../devel/p5-subversion
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
-DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
+DEPENDS+=	p5-Term-ReadKey>=2.30:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Data-UUID>=0.11:../../devel/p5-Data-UUID
-DEPENDS+=	p5-SVN-Simple>=0.26:../../devel/p5-SVN-Simple
+DEPENDS+=	p5-SVN-Simple>=0.27:../../devel/p5-SVN-Simple
 DEPENDS+=	p5-File-chdir>=0.06:../../devel/p5-File-chdir
-DEPENDS+=	p5-Class-Accessor>=0.19:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-Class-Accessor>=0.25:../../devel/p5-Class-Accessor
 
 PERL5_PACKLIST=		auto/SVN/Mirror/.packlist
 
