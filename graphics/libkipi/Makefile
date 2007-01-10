@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/10 15:39:00 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/10 15:44:29 joerg Exp $
 
 DISTNAME=	libkipi-0.1.5
 CATEGORIES=	graphics
@@ -21,6 +21,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
