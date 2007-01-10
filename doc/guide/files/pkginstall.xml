@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.13 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.14 2007/01/10 17:58:43 reed Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -458,7 +458,7 @@ user's description or comment.
 user's home directory, and defaults to
 <filename>/nonexistent</filename> if not specified.
 <varname>PKG_SHELL.<replaceable>user</replaceable></varname> is the
-user's shell, and defaults to <filename>/sbinno/login</filename> if
+user's shell, and defaults to <filename>/sbin/nologin</filename> if
 not specified.</para>
 
 <para>Similarly, groups can be created by adding entries to the
