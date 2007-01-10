@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/12/15 20:33:04 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2007/01/10 10:16:01 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_LIBS_BUILDLINK3_MK:=	${QT3_LIBS_BUILDLINK3_MK}+
@@ -23,6 +23,8 @@ BUILDLINK_LIBDIRS.qt3-libs+=	qt3/lib
 QTDIR=	${BUILDLINK_PREFIX.qt3-libs}/qt3
 BUILDLINK_PASSTHRU_DIRS+=	${QTDIR}
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 PTHREAD_OPTS+=	require
 
 .include "../../devel/zlib/buildlink3.mk"
@@ -32,9 +34,13 @@ PTHREAD_OPTS+=	require
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libXinerama/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
