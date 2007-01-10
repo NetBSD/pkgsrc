@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.24 2006/10/29 20:03:58 adam Exp $
+$NetBSD: patch-aa,v 1.25 2007/01/10 09:09:49 adam Exp $
 
---- Make.rules.in.orig	2006-10-27 17:20:13.000000000 +0200
+--- Make.rules.in.orig	2007-01-09 16:42:47.000000000 +0100
 +++ Make.rules.in
-@@ -112,7 +112,7 @@ CLEAN_FILES     = *.o *.a *.so *.ln *.$(
-                   *.flc *.res *.mc.rc *.tab.[ch] *.yy.c core
+@@ -117,7 +117,7 @@ CLEAN_TARGETS = $(IDL_GEN_C_SRCS) $(IDL_
+                 $(BISON_SRCS:.y=.tab.c) $(BISON_SRCS:.y=.tab.h) $(LEX_SRCS:.l=.yy.c) \
+                 $(MC_SRCS:.mc=.mc.rc) $(RC_SRCS:.rc=.res) $(RC_SRCS16:.rc=.res)
  
- IDL_GEN_C_SRCS = $(IDL_C_SRCS:.idl=_c.c) $(IDL_I_SRCS:.idl=_i.c) $(IDL_P_SRCS:.idl=_p.c) $(IDL_S_SRCS:.idl=_s.c) 
 -OBJS = $(C_SRCS:.c=.o) $(BISON_SRCS:.y=.tab.o) $(LEX_SRCS:.l=.yy.o) $(IDL_GEN_C_SRCS:.c=.o) $(EXTRA_OBJS)
 +OBJS = $(EXTRA_OBJS) $(C_SRCS:.c=.o) $(BISON_SRCS:.y=.tab.o) $(LEX_SRCS:.l=.yy.o) $(IDL_GEN_C_SRCS:.c=.o)
  
