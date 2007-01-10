@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.94 2007/01/10 20:41:32 agc Exp $
+$NetBSD: CHANGES-2007,v 1.95 2007/01/10 22:21:51 bad Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -156,3 +156,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/openldap-server to 2.3.32 [ghen 2007-01-10]
 	Updated databases/openldap to 2.3.32 [ghen 2007-01-10]
 	Added net/aoe-vblade version 14 [agc 2007-01-10]
+	Added devel/p5-App-CLI version 0.07 [bad 2007-01-10]
+	Updated devel/p5-Data-Hierarchy to 0.34 [bad 2007-01-10]
+	Added devel/p5-Path-Class version 0.16 [bad 2007-01-10]
+	Updated devel/p5-PerlIO-via-symlink to 0.05 [bad 2007-01-10]
+	Updated devel/p5-SVN-Mirror to 0.72 [bad 2007-01-10]
+	Updated devel/p5-UNIVERSAL-require to 0.11 [bad 2007-01-10]
+	Added textproc/p5-YAML-Syck version 0.72 [bad 2007-01-10]
+	Updated devel/p5-version to 0.68 [bad 2007-01-10]
+	Updated devel/svk to 2.0.0 [bad 2007-01-10]
