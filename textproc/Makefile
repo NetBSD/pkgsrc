@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2007/01/03 14:51:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.344 2007/01/10 14:57:32 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -52,6 +52,7 @@ SUBDIR+=	detex
 SUBDIR+=	dict-client
 SUBDIR+=	dict-dictionaries
 SUBDIR+=	dict-server
+SUBDIR+=	dictem
 SUBDIR+=	diction
 SUBDIR+=	diffstat
 SUBDIR+=	docbook
