@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/10/23 14:54:11 adam Exp $
+# $NetBSD: Makefile,v 1.51 2007/01/10 10:16:01 joerg Exp $
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
@@ -46,5 +46,7 @@ do-install:
 	cd ${WRKSRC}/mkspecs && ${PAX} -rw . ${QTPREFIX}/mkspecs
 
 .include "../../converters/libiconv/buildlink3.mk"
+# For OpenGL linkage, really needed?
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
