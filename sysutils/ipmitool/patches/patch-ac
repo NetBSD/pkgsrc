@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/03/13 23:03:28 heinz Exp $
+$NetBSD: patch-ac,v 1.2 2007/01/10 14:27:47 martti Exp $
 
---- lib/helper.c.orig	2006-01-17 18:31:14.000000000 +0100
-+++ lib/helper.c
-@@ -378,7 +378,7 @@ ipmi_start_daemon(void)
+--- lib/helper.c.orig	2006-03-28 16:56:56.000000000 +0000
++++ lib/helper.c	2007-01-10 15:33:50.000000000 +0000
+@@ -388,7 +388,7 @@
  		close(fd);
  	}
  #else

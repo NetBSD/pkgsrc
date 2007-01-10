@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/03/13 23:03:28 heinz Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/10 14:27:47 martti Exp $
 
---- Makefile.in.orig	2006-01-17 18:54:11.000000000 +0100
-+++ Makefile.in
-@@ -690,7 +690,7 @@ dist-hook:
+--- Makefile.in.orig	2006-05-15 17:10:52.000000000 +0000
++++ Makefile.in	2007-01-10 15:33:05.000000000 +0000
+@@ -687,7 +687,7 @@
  
  install-data-local:
  	mkdir -p $(DOCDIR)
