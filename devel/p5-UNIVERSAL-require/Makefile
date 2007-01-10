@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/21 10:42:13 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/10 22:04:15 bad Exp $
 
-DISTNAME=	UNIVERSAL-require-0.10
+DISTNAME=	UNIVERSAL-require-0.11
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSCHWERN/}
