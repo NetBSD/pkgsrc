@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/01/02 18:45:11 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/10 15:44:29 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBKIPI_BUILDLINK3_MK:=	${LIBKIPI_BUILDLINK3_MK}+
@@ -22,5 +22,7 @@ PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 .endif	# LIBKIPI_BUILDLINK3_MK
 
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
