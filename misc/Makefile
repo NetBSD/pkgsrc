@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2006/12/03 04:17:27 markd Exp $
+# $NetBSD: Makefile,v 1.270 2007/01/10 15:19:37 obache Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -45,6 +45,7 @@ SUBDIR+=	easymenu
 SUBDIR+=	edict
 SUBDIR+=	elizatalk
 SUBDIR+=	elscreen
+SUBDIR+=	emacs-wiki
 SUBDIR+=	esniper
 SUBDIR+=	fd
 SUBDIR+=	fep
