@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2006/11/27 17:30:56 tron Exp $
+# $NetBSD: Makefile,v 1.56.2.1 2007/01/10 13:22:19 ghen Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
-PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +21,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
 USE_TOOLS+=	perl:run
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.9.1.1
+DIST_VERSION=	2.9.2-rc1
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
