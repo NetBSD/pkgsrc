@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/10 10:48:21 drochner Exp $
+
+SHA1 (exaile_0.2.8.tar.gz) = 12f9773796331c06792a95e7af700275bfa6b3de
+RMD160 (exaile_0.2.8.tar.gz) = 414cf041cad28ad2f301d6c7ece1f2dcac21fef8
+Size (exaile_0.2.8.tar.gz) = 371231 bytes
+SHA1 (patch-aa) = c9b35c1319d9d0bc230310d5fdd7afd695526b29
