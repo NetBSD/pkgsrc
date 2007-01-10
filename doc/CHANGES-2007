@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.93 2007/01/10 18:16:49 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.94 2007/01/10 20:41:32 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/openldap-doc to 2.3.32 [ghen 2007-01-10]
 	Updated databases/openldap-server to 2.3.32 [ghen 2007-01-10]
 	Updated databases/openldap to 2.3.32 [ghen 2007-01-10]
+	Added net/aoe-vblade version 14 [agc 2007-01-10]
