@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2007/01/05 10:57:34 drochner Exp $
+# $NetBSD: Makefile,v 1.341 2007/01/10 10:49:35 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -46,6 +46,7 @@ SUBDIR+=	easytag-devel
 SUBDIR+=	eawpatches
 SUBDIR+=	emixer
 SUBDIR+=	esound
+SUBDIR+=	exaile
 SUBDIR+=	faac
 SUBDIR+=	faad2
 SUBDIR+=	festival
@@ -241,6 +242,7 @@ SUBDIR+=	py-cddb
 SUBDIR+=	py-mad
 SUBDIR+=	py-musicbrainz
 SUBDIR+=	py-musique
+SUBDIR+=	py-mutagen
 SUBDIR+=	py-ogg
 SUBDIR+=	py-vorbis
 SUBDIR+=	py-xmms
