@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.6 2006/08/03 14:02:58 jlam Exp $
+# $NetBSD: fetch,v 1.7 2007/01/10 14:31:35 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -142,6 +142,9 @@ while ${TEST} $# -gt 0; do
 	*)	break ;;
 	esac
 done
+
+fetchdir=`cd $fetchdir && exec pwd`
+
 if ${TEST} -n "$checksum" -a -z "$distinfo"; then
 	${ECHO} 1>&2 "$self: \`\`-c'' requires \`\`-f distinfo''."
 	exit 1
