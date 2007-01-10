@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.13 2007/01/09 09:19:50 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.14 2007/01/10 13:51:58 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -29,3 +29,5 @@ Pullup ticket 1982 - requested by rillig
 security fix for gtexinfo
 Pullup ticket 1983 - requested by joerg
 dependency fix for pymol
+Pullup ticket 1984 - requested by tron
+security update for phpmyadmin
