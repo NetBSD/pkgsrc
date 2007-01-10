@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/10 20:39:35 agc Exp $
+
+SHA1 (vblade-14.tgz) = 57bea505f3acb88f03f761954eea0759a0241e3f
+RMD160 (vblade-14.tgz) = ad0fe6f0c4ab40fa31daa68c7b14143ad87f443c
+Size (vblade-14.tgz) = 20317 bytes
+SHA1 (patch-aa) = f7cd8f4cef5fbd0fb33c87d2d45cd055e6e97b60
