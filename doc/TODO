@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5857 2007/01/09 23:44:06 wiz Exp $
+$NetBSD: TODO,v 1.5858 2007/01/10 12:56:36 abs Exp $
 
 Suggested new packages
 ======================
@@ -405,7 +405,6 @@ Suggested package updates
 	o evolution-2.8.2.1
 	o evolution-exchange-2.8.2
 	o ex-050325
-	o exim-4.65
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20060507
