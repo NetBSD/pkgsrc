@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.89 2007/01/10 14:09:59 tron Exp $
+$NetBSD: CHANGES-2007,v 1.90 2007/01/10 14:28:08 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -145,3 +145,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/modular-xorg-server to 1.1.1nb1 [joerg 2007-01-10]
 	Updated mail/exim to 4.66 [abs 2007-01-10]
 	Updated databases/phpmyadmin to 2.9.2rc1 [tron 2007-01-10]
+	Updated sysutils/ipmitool to 1.8.8 [martti 2007-01-10]
+	Updated editors/vim-share to 7.0.182 [martti 2007-01-10]
+	Updated net/mrtg to 2.15.0 [martti 2007-01-10]
+	Updated mail/squirrelmail-locales to 1.4.9 [martti 2007-01-10]
