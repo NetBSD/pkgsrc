@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.801 2007/01/05 19:37:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.802 2007/01/10 22:11:16 bad Exp $
 #
 
 COMMENT=	Development utilities
@@ -349,6 +349,7 @@ SUBDIR+=	p5-Algorithm-Dependency
 SUBDIR+=	p5-Algorithm-Diff
 SUBDIR+=	p5-Algorithm-Merge
 SUBDIR+=	p5-AnyEvent
+SUBDIR+=	p5-App-CLI
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-Array-Compare
 SUBDIR+=	p5-AtExit
@@ -496,6 +497,7 @@ SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-PatchReader
+SUBDIR+=	p5-Path-Class
 SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Perl6-Export
