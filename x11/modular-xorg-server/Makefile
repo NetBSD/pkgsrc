@@ -1,10 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2006/12/19 17:36:00 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/10 11:31:35 joerg Exp $
 
 DISTNAME=	xorg-server-1.1.1
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
+
+PATCHFILES=		xorg-xserver-1.1.0-dbe-render.diff
+PATCH_SITES=		http://xorg.freedesktop.org/archive/X11R7.1/patches/
+PATCH_DIST_STRIP=	-p1
 
 SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
 PKG_DESTDIR_SUPPORT=	user-destdir
