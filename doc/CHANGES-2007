@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.88 2007/01/10 12:56:36 abs Exp $
+$NetBSD: CHANGES-2007,v 1.89 2007/01/10 14:09:59 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.29 [adam 2007-01-10]
 	Updated x11/modular-xorg-server to 1.1.1nb1 [joerg 2007-01-10]
 	Updated mail/exim to 4.66 [abs 2007-01-10]
+	Updated databases/phpmyadmin to 2.9.2rc1 [tron 2007-01-10]
