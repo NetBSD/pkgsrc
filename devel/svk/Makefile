@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/10 22:19:15 bad Exp $
 
-DISTNAME=	SVK-1.05
-PKGNAME=	${DISTNAME:S/SVK/svk/}
-PKGREVISION=	2
+DISTNAME=	SVK-v2.0.0
+PKGNAME=	svk-2.0.0
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
@@ -16,31 +15,35 @@ PERL5_PACKLIST=		auto/SVK/.packlist
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
 
-DEPENDS+=	p5-subversion>=1.0.7:../../devel/p5-subversion
+DEPENDS+=	p5-subversion>=1.3.0:../../devel/p5-subversion
 DEPENDS+=	p5-Algorithm-Annotate>=0.10:../../devel/p5-Algorithm-Annotate
 DEPENDS+=	p5-Algorithm-Diff>=1.19.01:../../devel/p5-Algorithm-Diff
-DEPENDS+=	p5-Clone>=0.15:../../devel/p5-Clone
+DEPENDS+=	p5-App-CLI>=0.07:../../devel/p5-App-CLI
+DEPENDS+=	p5-Class-Accessor>=0.25:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
+DEPENDS+=	p5-Class-Data-Inheritable>=0.06:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Compress-Zlib>=1.33:../../devel/p5-Compress-Zlib
-DEPENDS+=	p5-Data-Hierarchy>=0.21:../../devel/p5-Data-Hierarchy
-DEPENDS+=	p5-File-BaseDir>=0.02:../../devel/p5-File-BaseDir
-DEPENDS+=	p5-File-Type>=0.22:../../devel/p5-File-Type
+DEPENDS+=	p5-Data-Hierarchy>=0.30:../../devel/p5-Data-Hierarchy
 DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
 DEPENDS+=	p5-IO-Digest>=0.10:../../devel/p5-IO-Digest
-DEPENDS+=p5-Locale-Maketext-Lexicon>=0.42:../../misc/p5-Locale-Maketext-Lexicon
-DEPENDS+=p5-Locale-Maketext-Simple>=0.12:../../misc/p5-Locale-Maketext-Simple
+DEPENDS+=	p5-IO-Pager>=0.06:../../devel/p5-IO-Pager
+DEPENDS+=	p5-List-MoreUtils>=0.22:../../devel/p5-List-MoreUtils
+DEPENDS+=p5-Locale-Maketext-Lexicon>=0.62:../../misc/p5-Locale-Maketext-Lexicon
+DEPENDS+=p5-Locale-Maketext-Simple>=0.16:../../misc/p5-Locale-Maketext-Simple
+DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
+DEPENDS+=	p5-PathTools>=3.19:../../devel/p5-PathTools
 DEPENDS+=	p5-PerlIO-eol>=0.13:../../devel/p5-PerlIO-eol
 DEPENDS+=	p5-PerlIO-via-dynamic>=0.11:../../devel/p5-PerlIO-via-dynamic
 DEPENDS+=	p5-PerlIO-via-symlink>=0.02:../../devel/p5-PerlIO-via-symlink
 DEPENDS+=	p5-Pod-Escapes>=1.04:../../textproc/p5-Pod-Escapes
 DEPENDS+=	p5-Pod-Simple>=3.02:../../textproc/p5-Pod-Simple
-DEPENDS+=	p5-Regexp-Shellish>=0.93:../../devel/p5-Regexp-Shellish
-DEPENDS+=	p5-SVN-Mirror>=0.66:../../devel/p5-SVN-Mirror
+DEPENDS+=	p5-SVN-Mirror>=0.71:../../devel/p5-SVN-Mirror
 DEPENDS+=	p5-SVN-Simple>=0.27:../../devel/p5-SVN-Simple
-DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
+DEPENDS+=	p5-Term-ReadKey>=2.30:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
-DEPENDS+=	p5-YAML>=0.38:../../textproc/p5-YAML
-DEPENDS+=	p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
-DEPENDS+=	p5-IO-Pager>=0.06:../../devel/p5-IO-Pager
+DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
+DEPENDS+=	p5-YAML-Syck>=0.60:../../textproc/p5-YAML-Syck
+DEPENDS+=	p5-version>=0.68:../../devel/p5-version
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
