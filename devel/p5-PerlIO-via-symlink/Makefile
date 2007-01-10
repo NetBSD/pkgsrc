@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:23 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/10 22:00:52 bad Exp $
 
-DISTNAME=	PerlIO-via-symlink-0.02
+DISTNAME=	PerlIO-via-symlink-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
