@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/09/16 12:20:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/11 10:43:59 joerg Exp $
 
 DISTNAME=	gnotime-2.2.1
 PKGREVISION=	9
@@ -17,6 +17,8 @@ USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		gnotime.schemas
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -29,5 +31,8 @@ GCONF2_SCHEMAS=		gnotime.schemas
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml38/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

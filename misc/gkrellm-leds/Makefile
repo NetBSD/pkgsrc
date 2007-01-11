@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/11 10:37:52 joerg Exp $
 #
 
 DISTNAME=	gkleds-0.8.2
@@ -18,4 +18,5 @@ USE_LIBTOOL=	YES
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gkrellm2/plugins
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
