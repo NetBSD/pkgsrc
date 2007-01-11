@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:00 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/11 11:47:09 joerg Exp $
 #
 
 DISTNAME=	iris-0.11
@@ -15,4 +15,5 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
 .include "../../audio/xmms/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
