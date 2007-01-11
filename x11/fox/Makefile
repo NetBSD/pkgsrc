@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/09/03 00:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/11 16:53:18 joerg Exp $
 
 DISTNAME=	fox-1.4.34
 CATEGORIES=	x11
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-shm
+CONFIGURE_ARGS+=	--with-xft
 CONFIGURE_ARGS+=	--with-x
 
 CONFIGURE_ENV+=		REAL_PTHREAD_LIBS=${PTHREAD_LIBS:Q}
@@ -25,11 +26,20 @@ CONFIGURE_ENV+=		REAL_PTHREAD_LIBS=${PTHREAD_LIBS:Q}
 CONFIGURE_ARGS+=	--disable-threadsafe
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
