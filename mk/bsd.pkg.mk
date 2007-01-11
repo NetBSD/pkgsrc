@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1904 2007/01/06 19:53:01 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1905 2007/01/11 12:11:03 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -328,8 +328,8 @@ INSTALL_MACROS=	BSD_INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}		\
 		BSD_INSTALL_GAME=${INSTALL_GAME:Q}			\
 		BSD_INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}		\
 		BSD_INSTALL_GAME_DIR=${INSTALL_GAME_DIR:Q}
-MAKE_ENV+=	${INSTALL_MACROS}
-SCRIPTS_ENV+=	${INSTALL_MACROS}
+MAKE_ENV+=	${INSTALL_MACROS:M*}
+SCRIPTS_ENV+=	${INSTALL_MACROS:M*}
 
 # If pkgsrc is supposed to ensure that tests are run before installation
 # of the package, then the build targets should be "build test", otherwise
@@ -369,6 +369,7 @@ _PKGSRC_IN?=		===${SMART_MESSAGES:D> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===}
 ECHO_MSG?=		${ECHO}
 PHASE_MSG?=		${ECHO_MSG} ${_PKGSRC_IN:Q}\>
 STEP_MSG?=		${ECHO_MSG} "=>"
+INFO_MSG?=		${ECHO_MSG} "INFO:"
 WARNING_MSG?=		${ECHO_MSG} 1>&2 "WARNING:"
 ERROR_MSG?=		${ECHO_MSG} 1>&2 "ERROR:"
 FAIL_MSG?=		${FAIL} ${ERROR_MSG}
