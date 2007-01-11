@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.3 2006/03/17 23:53:31 wiz Exp $
+$NetBSD: patch-ad,v 1.4 2007/01/11 19:19:01 drochner Exp $
 
---- scribus/plugins/svgimplugin/svgplugin.cpp.orig	2005-07-03 09:13:18.000000000 +0000
+--- scribus/plugins/svgimplugin/svgplugin.cpp.orig	2007-01-05 22:25:56.000000000 +0100
 +++ scribus/plugins/svgimplugin/svgplugin.cpp
-@@ -6,6 +6,7 @@
-  *   (at your option) any later version.                                   *
-  *                                                                         *
-  ***************************************************************************/
+@@ -4,6 +4,7 @@ to the COPYING file provided with the pr
+ a copyright and/or license notice that predates the release of Scribus 1.3.2
+ for which a new license (GPL+exception) is in place.
+ */
 +#include <cmath>
  #include "svgplugin.h"
  #include "svgplugin.moc"
  
-@@ -26,7 +27,6 @@
- #include <qtextstream.h>
+@@ -20,7 +21,6 @@ for which a new license (GPL+exception) 
+ #include <qdragobject.h>
  #include <qregexp.h>
  #include <qcursor.h>
 -#include <cmath>
