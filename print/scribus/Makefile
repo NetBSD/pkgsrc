@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2007/01/11 11:56:17 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2007/01/11 19:19:01 drochner Exp $
 
-DISTNAME=	scribus-1.2.5
+DISTNAME=	scribus-1.3.3.7
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,5 +39,6 @@ CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 
 .include "../../mk/bsd.pkg.mk"
