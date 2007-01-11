@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/07/07 15:49:32 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/11 10:58:49 joerg Exp $
 
 DISTNAME=	kbiff-3.8
 PKGREVISION=	3
@@ -16,6 +16,11 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=          yes
 SHLIBTOOL_OVERRIDE=	# empty
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
