@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2007/01/08 11:01:05 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2007/01/11 07:32:16 rillig Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.6
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
