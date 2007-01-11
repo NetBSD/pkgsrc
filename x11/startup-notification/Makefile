@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:31:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/11 15:22:26 joerg Exp $
 
 DISTNAME=		startup-notification-0.8
 PKGREVISION=		1
@@ -24,5 +24,9 @@ post-install:
 		doc/startup-notification.txt \
 		${PREFIX}/share/doc/startup-notification/
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
