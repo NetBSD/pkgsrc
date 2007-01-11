@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/22 22:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/11 10:50:38 joerg Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGREVISION=	5
@@ -17,11 +17,20 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-alsa-seq
 CONFIGURE_ARGS+=	--disable-jack-support
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} != "native"
+.include "../../x11/libXinerama/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xinerama
+.elif exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../audio/libhydrogen/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
