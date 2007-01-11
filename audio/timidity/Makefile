@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2007/01/07 12:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2007/01/11 00:27:37 wiz Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -16,11 +16,14 @@ CONFLICTS=	kdemultimedia-2.[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-vt100
 CONFIGURE_ARGS+=	--enable-gtk --enable-wrd --enable-xaw --enable-ncurses
-CONFIGURE_ARGS+=	--with-libFLAC="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-ogg="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-vorbis="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},vorbis,flac,speex
+CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},vorbis,speex
+# flac disabled since there is currently (20070111) no patch available
+# that adapts timidity for the flac-1.1.3 API
+#CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},vorbis,flac,speex
+#CONFIGURE_ARGS+=	--with-libFLAC="${BUILDLINK_DIR}/include"
 
 SUBST_CLASSES+=		confdir
 SUBST_MESSAGE.confdir=	Configuring to use PKG_SYSCONFDIR.
@@ -40,7 +43,8 @@ TIMIDITY_NATIVE_AUDIO=	oss
 TIMIDITY_NATIVE_AUDIO=	darwin
 .endif
 
-.include "../../audio/flac/buildlink3.mk"
+# see above for reason this is not included
+#.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
