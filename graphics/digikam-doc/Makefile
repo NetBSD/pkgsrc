@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/24 12:35:41 markd Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/11 10:01:01 joerg Exp $
 
 DISTNAME=		digikam-doc-0.8.2
 CATEGORIES=		graphics kde
@@ -14,6 +14,9 @@ USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
