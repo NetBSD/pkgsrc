@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.8 2007/01/09 04:28:23 rillig Exp $
+# $NetBSD: help.awk,v 1.9 2007/01/11 00:36:12 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -50,6 +50,7 @@ function end_of_topic() {
 
 always {
 	ignore_this_line = (ignore_next_empty_line && $0 == "#");
+	ignore_next_empty_line = no;
 }
 
 # There is no need to print the RCS Id, since the full pathname
