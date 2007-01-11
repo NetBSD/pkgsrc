@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/02 11:00:25 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/11 17:27:03 joerg Exp $
 #
 
 .include "../../x11/wxGTK/Makefile.common"
@@ -12,5 +12,8 @@ USE_TOOLS+=		gmake
 
 BUILD_DIRS=		contrib/src
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
