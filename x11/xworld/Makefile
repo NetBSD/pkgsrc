@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/21 17:31:44 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/11 14:55:15 joerg Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -30,5 +30,5 @@ SUBST_STAGE.install=	post-patch
 SUBST_FILES.install=	Makefile.in
 SUBST_SED.install=	-e 's,-g bin -o bin,-g ${BINGRP} -o ${BINOWN},g'
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
