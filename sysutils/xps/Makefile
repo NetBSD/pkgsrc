@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/06/21 20:41:27 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/11 11:07:16 joerg Exp $
 
 DISTNAME=	xps-4.2
 PKGREVISION=	2
@@ -11,6 +11,7 @@ COMMENT=	Displays the Unix process list as a hierarchical tree
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	x_applibdir=${PREFIX}/lib/X11/app-defaults
 
 post-extract:
 	${LN} -s FreeBSD ${WRKSRC}/src/DragonFly
