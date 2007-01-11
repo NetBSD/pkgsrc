@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.95 2007/01/10 22:21:51 bad Exp $
+$NetBSD: CHANGES-2007,v 1.96 2007/01/11 04:03:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -165,3 +165,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/p5-YAML-Syck version 0.72 [bad 2007-01-10]
 	Updated devel/p5-version to 0.68 [bad 2007-01-10]
 	Updated devel/svk to 2.0.0 [bad 2007-01-10]
+	Updated sysutils/memtester to 4.0.6 [schmonz 2007-01-11]
