@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.53 2006/10/12 13:58:48 joerg Exp $
+$NetBSD: TODO,v 1.54 2007/01/11 18:39:34 joerg Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -36,3 +36,5 @@ include the name of an example package where a warning should occur.
 * Check all the shell commands to see if they are mentioned in USE_TOOLS.
 * ${MACHINE_ARCH}-${LOWER_OPSYS}elf in PLISTs etc. is a NetBSD config.guess
   problem ==> use of ${APPEND_ELF}
+* Packages including lang/python/extension.mk must follow the Python version
+  scheme. Enforcing PYPKGPREFIX for those is most likely a good idea.
