@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.32 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: components.xml,v 1.33 2007/01/11 03:37:44 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -211,32 +211,67 @@ sections.</para>
 <sect1 id="components.patches">
   <title>patches/*</title>
 
-  <para>This directory contains files that are used by the
-  &man.patch.1; command to
-  modify the sources as distributed in the distribution file into a form
-  that will compile and run perfectly on &os;. The files are applied
-  successively in alphabetic order (as returned by a shell
-  <quote>patches/patch-*</quote> glob expansion), so
-  <filename>patch-aa</filename> is applied before
+  <para>Many packages still don't work out-of-the box on the various
+  platforms that are supported by pkgsrc. Therefore, a number of custom
+  patch files are needed to make the package work. These patch files are
+  found in the <filename>patches/</filename> directory.</para>
+
+  <para>In the <emphasis>patch</emphasis> phase, these patches are
+  applied to the files in <varname>WRKSRC</varname> directory after
+  extracting them, in <ulink
+  url="http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_13_03">alphabetic
+  order</ulink>, so <filename>patch-aa</filename> is applied before
   <filename>patch-ab</filename>, etc.</para>
+
+<sect2 id="components.patch.structure">
+<title>Structure of a single patch file</title>
 
   <para>The <filename>patch-*</filename> files should be in
   <command>diff -bu</command> format, and apply without a fuzz to avoid
-  problems. (To force patches to apply
-  with fuzz you can set <varname>PATCH_FUZZ_FACTOR=-F2</varname>).
-  Furthermore, do not put changes for more than one file into a single
-  patch file, as this will make future modifications more difficult.</para>
+  problems. (To force patches to apply with fuzz you can set
+  <varname>PATCH_FUZZ_FACTOR=-F2</varname>). Furthermore, each patch
+  should contain only changed for a single file, and no file should be
+  patched by more than one patch file. This helps to keep future
+  modifications simple.</para>
 
-  <para>Similar, a file should be patched at most once, not several times by
-  several different patches. If a file needs several patches, they should
-  be combined into one file.</para>
+  <para>Each patch file is structured as follows: In the first line,
+  there is the RCS Id of the patch itself. The second line should be
+  empty for aesthetic reasons. After that, there should be a comment for
+  each change that the patch does. There are a number of standard
+  cases:</para>
 
-  <para>One important thing to mention is to pay attention that no RCS IDs
-  get stored in the patch files, as these will cause problems when
+  <itemizedlist>
+
+  <listitem><para>Patches that replace the <literal>==</literal>
+  operator for &man.test.1; with <literal>=</literal> in shell scripts
+  should contain a reference to <!-- xref linkend="test-eqeq"/ -->, to avoid
+  redundant explanations.</para></listitem>
+
+  <listitem><para>Patches for commonly known vulnerabilities should
+  mention the vulnerability ID (CAN, CVE).</para></listitem>
+
+  <listitem><para>Patches that change source code should mention the
+  platform and other environment (for example, the compiler) that the
+  patch is needed for.</para></listitem>
+
+  </itemizedlist>
+
+  <para>In all other cases, the patch should be commented so that any
+  developer who knows the code of the application can make some use of
+  the patch. Special care should be taken for the upstream developers,
+  since we generally want that they accept our patches, so we have less
+  work in the future.</para>
+
+</sect2>
+<sect2 id="components.patches.caveats">
+<title>Creating patch files</title>
+
+  <para>One important thing to mention is to pay attention that no RCS
+  IDs get stored in the patch files, as these will cause problems when
   later checked into the &os; CVS tree. Use the
-  <command>pkgdiff</command> from the
-  <filename role="pkg">pkgtools/pkgdiff</filename> package to avoid
-  these problems.</para>
+  <command>pkgdiff</command> command from the <filename
+  role="pkg">pkgtools/pkgdiff</filename> package to avoid these
+  problems.</para>
 
   <para>For even more automation, we recommend using
   <command>mkpatches</command> from the same package to make a
@@ -262,13 +297,17 @@ sections.</para>
   and usually makes it possible to remove the patch in future
   version.</para>
 
+</sect2>
+<sect2 id="components.patches.sources">
+<title>Sources where the patch files come from</title>
+
   <para>If you want to share patches between multiple packages
   in pkgsrc, e.g. because they use the same distfiles, set
   <varname>PATCHDIR</varname> to the path where the patch files
   can be found, e.g.:</para>
-  <programlisting>
+<programlisting>
     PATCHDIR= ${.CURDIR}/../xemacs/patches
-  </programlisting>
+</programlisting>
 
     <para>Patch files that are distributed by the author or other
     maintainers can be listed in
@@ -288,6 +327,7 @@ sections.</para>
     and <emphasis>they are applied after pkgsrc patches are
     applied</emphasis>.</para>
 
+</sect2>
     <sect2 id="components.patches.guidelines">
       <title>Patching guidelines</title>
 
@@ -411,8 +451,8 @@ sections.</para>
       NetBSD.  Furthermore, any user that gets newer distfiles will get
       the fixes straight from the packaged code.</para>
 
-      <para>This generally involves cleaning up the patches as described
-      in the following section (because sometimes the patches that are
+      <para>This generally involves cleaning up the patches
+      (because sometimes the patches that are
       added to pkgsrc are quick hacks), filling bug reports in the
       appropriate trackers for the projects and working with the
       mainstream authors to accept your changes.  It is
