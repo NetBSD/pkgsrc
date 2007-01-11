@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/02 13:42:04 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/11 13:02:48 obache Exp $
 
 DISTNAME=	PathTools-3.23
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=	http://search.cpan.org/dist/PathTools/
 COMMENT=	Perl module for portably manipulating file specifications
 
 DEPENDS+=	p5-Scalar-List-Utils>=1.14:../../devel/p5-Scalar-List-Utils
+
+CONFLICTS+=	p5-File-Spec-[0-9]*
 
 CONFIGURE_ARGS+=	DEFINE="-DHAS_GETCWD"
 
