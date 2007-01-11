@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/10/29 13:51:18 dsainty Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/11 19:03:05 drochner Exp $
 
 DISTNAME=	openexr-1.4.0a
 PKGNAME=	openexr-1.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
 
@@ -26,5 +26,4 @@ LDFLAGS+=		-lmx
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
