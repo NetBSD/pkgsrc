@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.54 2007/01/11 18:39:34 joerg Exp $
+$NetBSD: TODO,v 1.55 2007/01/11 19:09:50 gdt Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -38,3 +38,5 @@ include the name of an example package where a warning should occur.
   problem ==> use of ${APPEND_ELF}
 * Packages including lang/python/extension.mk must follow the Python version
   scheme. Enforcing PYPKGPREFIX for those is most likely a good idea.
+* Warn if LICENSE/RESTRICTED/NO_*_ON_* are misordered.
+
