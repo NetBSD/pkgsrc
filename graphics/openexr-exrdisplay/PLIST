@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2007/01/11 19:03:05 drochner Exp $
+bin/exrdisplay
