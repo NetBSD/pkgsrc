@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/12/16 11:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2007/01/11 11:56:17 joerg Exp $
 
 DISTNAME=	scribus-1.2.5
 CATEGORIES=	print
@@ -32,6 +32,9 @@ CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
