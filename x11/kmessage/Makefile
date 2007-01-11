@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/11 11:20:37 joerg Exp $
 
 DISTNAME=	kmessage-0.1
 PKGREVISION=	8
@@ -14,6 +14,11 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=          YES
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
