@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/22 19:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/11 11:17:57 joerg Exp $
 #
 
 DISTNAME=		kmemaid-0.4.7.0
@@ -19,6 +19,11 @@ CONFIGURE_ENV+=		kde_datadir=${PREFIX:Q}/share/kde/apps
 CONFIGURE_ENV+=		kde_htmldir=${PREFIX:Q}/share/doc/kde/HTML
 CONFIGURE_ENV+=		kde_icondir=${PREFIX:Q}/share/kde/icons
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
