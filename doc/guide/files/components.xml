@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.33 2007/01/11 03:37:44 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.34 2007/01/11 07:33:15 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -230,7 +230,7 @@ sections.</para>
   <command>diff -bu</command> format, and apply without a fuzz to avoid
   problems. (To force patches to apply with fuzz you can set
   <varname>PATCH_FUZZ_FACTOR=-F2</varname>). Furthermore, each patch
-  should contain only changed for a single file, and no file should be
+  should contain only changes for a single file, and no file should be
   patched by more than one patch file. This helps to keep future
   modifications simple.</para>
 
