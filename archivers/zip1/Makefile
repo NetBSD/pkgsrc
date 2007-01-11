@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/12/19 13:44:02 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2007/01/11 19:08:50 gdt Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -12,6 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/
 COMMENT=	Create/update ZIP files compatible with pkzip version 1
 
+LICENSE=	generic-nonlicense
 RESTRICTED=	Do not modify.  Do not sell for profit.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
