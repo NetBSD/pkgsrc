@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/28 21:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/11 10:10:38 joerg Exp $
 #
 
 DISTNAME=	filelight-1.0
@@ -19,6 +19,11 @@ USE_TOOLS+=	perl
 pre-build:
 	cd ${WRKSRC}/src/part && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} dialog.h
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
