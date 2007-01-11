@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/07 16:50:35 reinoud Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/11 11:14:11 joerg Exp $
 
 DISTNAME=	kiax-0.8.51-src
 PKGNAME=	kiax-0.8.51
@@ -29,6 +29,7 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	src/src.pro bin/Makefile
 SUBST_SED.path=		-e 's:/usr/local:${PREFIX}:g'
 
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
