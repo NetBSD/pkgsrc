@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/12/07 11:08:26 markd Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/11 11:32:16 joerg Exp $
 #
 
 DISTNAME=	konversation-1.0.1
@@ -28,8 +28,13 @@ REPLACE_PERL+=		konversation/src/konversation-0.19-appearance.pl \
 REPLACE_BASH+=		konversation/scripts/mail
 USE_TOOLS+=		bash:run
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
