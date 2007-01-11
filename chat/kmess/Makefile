@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/05/25 11:00:25 markd Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/11 11:27:09 joerg Exp $
 #
 
 DISTNAME=	kmess-1.4.3
@@ -14,8 +14,13 @@ USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
