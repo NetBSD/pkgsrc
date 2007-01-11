@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/07/22 04:46:18 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/11 17:01:25 joerg Exp $
 
 DISTNAME=	xfe-0.88
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 
@@ -26,5 +27,4 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/fox/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
