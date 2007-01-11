@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.98 2007/01/11 12:52:58 obache Exp $
+$NetBSD: CHANGES-2007,v 1.99 2007/01/11 19:23:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/memtester to 4.0.6 [schmonz 2007-01-11]
 	Updated print/acroread7 to 7.0.9 [obache 2007-01-11]
 	Removed devel/p5-File-Spec [obache 2007-01-11]
+	Updated mail/tmda to 1.1.9nb2 [schmonz 2007-01-11]
