@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/25 11:07:04 markd Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/11 11:37:07 joerg Exp $
 #
 
 DISTNAME=		krecipes-0.9.1
@@ -16,7 +16,12 @@ USE_TOOLS+=		msgfmt
 
 CONFIGURE_ARGS+=	--without-mysql --without-postgresql
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
