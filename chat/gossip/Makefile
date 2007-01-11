@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/09/16 12:20:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.51 2007/01/11 10:46:49 joerg Exp $
 #
 
 DISTNAME=	gossip-0.10.2
@@ -42,4 +42,5 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
