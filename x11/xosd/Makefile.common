@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2006/03/04 21:31:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2007/01/12 14:59:16 abs Exp $
 
 DISTNAME=	xosd-2.2.12
 CATEGORIES=	x11
@@ -29,4 +29,6 @@ SUBST_SED.fixme=	-e "s|-lpthread|${PTHREAD_LIBS}|g"
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
