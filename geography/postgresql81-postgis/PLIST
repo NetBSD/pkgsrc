@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/09 17:07:39 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/12 18:11:49 gdt Exp $
+bin/mktemplate_gis.sh
 bin/pgsql2shp
+bin/postgis_env.sh
+bin/postgres_lib.sh
+bin/rmtemplate_gis.sh
 bin/shp2pgsql
 lib/liblwgeom.so
 lib/liblwgeom.so.1
 lib/liblwgeom.so.1.2
+man/man1/createdb.postgis.1
+man/man1/mktemplate_gis.1
 man/man1/pgsql2shp.1
+man/man1/rmtemplate_gis.1
 man/man1/shp2pgsql.1
 share/doc/html/postgis/postgis.html
 share/doc/html/postgis/style.css
