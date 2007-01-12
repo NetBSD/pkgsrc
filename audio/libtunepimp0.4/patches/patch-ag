@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2007/01/12 20:21:47 wiz Exp $
+
+--- plugins/flac/flacdecode.h.orig	2005-06-15 01:08:20.000000000 +0000
++++ plugins/flac/flacdecode.h
+@@ -25,8 +25,8 @@
+ 
+ ----------------------------------------------------------------------------*/
+-#ifndef __VORBIS_DECODE_H
+-#define __VORBIS_DECODE_H
++#ifndef __FLAC_DECODE_H
++#define __FLAC_DECODE_H
+ 
+-#include <FLAC/file_decoder.h>
++#include <FLAC/stream_decoder.h>
+ #include <string>
+ #include "decode_plugin.h"
