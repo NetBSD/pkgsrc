@@ -30,8 +30,8 @@ bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 bpf	
 buffy-size	
 bugzilla-charts		Enable generation of charts.
-bugzilla-patchviewer	Enable patchiewer support.
 bugzilla-imagemagick	Compress .BMPs to save space.
+bugzilla-patchviewer	Enable patchiewer support.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2
 canna			Use Canna as Japanese conversion program.
@@ -274,6 +274,7 @@ rrdtool
 rsaref			Use RSAREF library.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samba	
+samplerate		Enable libsamplerate support.
 sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
@@ -289,6 +290,7 @@ slang			Enable S-Lang support.
 slp	
 small-net		Tune for a smaller networks.
 smokeping-speedycgi	Enable SpeedyCGI.
+sndfile			Enable sndfile support.
 snmp	
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
@@ -297,6 +299,7 @@ spamassassin-taint-checks	Enable Perl taint checks to improve security.
 spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
 spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
+speex			Enable speex support.
 spidermonkey		Enable Mozilla's C implementation of JavaScript.
 sqlite			Enable SQLite support.
 ssl			Enable SSL support.
@@ -360,8 +363,8 @@ xft
 xft2	
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
-xmms-eq	
 xml			Enable XML support.
+xmms-eq	
 xorg-server-apm	
 xorg-server-ark	
 xorg-server-ati	
