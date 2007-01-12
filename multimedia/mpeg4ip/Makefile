@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/01/05 19:35:46 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/12 23:51:21 joerg Exp $
 
 DISTNAME=		mpeg4ip-1.5
 PKGREVISION=		3
@@ -27,5 +27,4 @@ PLIST_SUBST+=	MPEG4IPSDL=
 .endif
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
