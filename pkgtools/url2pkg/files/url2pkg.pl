@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.3 2006/12/06 01:00:41 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.4 2007/01/12 21:35:52 rillig Exp $
 #
 
 use strict;
@@ -238,7 +238,7 @@ sub generate_initial_package($) {
 	}
 
 	if (!$found) {
-		if ($url =~ qr"^http://prdownloads\.sourceforge\.net/([^/]*)/([^/]+)\?download$") {
+		if ($url =~ qr"^http://(?:pr)?downloads\.sourceforge\.net/([^/]*)/([^/]+)\?(?:download|use_mirror=.*)$") {
 			my $pkgbase = $1;
 			$distfile = $2;
 
@@ -337,8 +337,8 @@ sub adjust_package_from_extracted_distfiles()
 		$abs_wrksrc = $abs_wrkdir;
 	}
 
-	chomp(@wrksrc_files = `cd "${abs_wrkdir}" && find * -type f`);
-	chomp(@wrksrc_dirs = `cd "${abs_wrkdir}" && find * -type d`);
+	chomp(@wrksrc_files = `cd "${abs_wrksrc}" && find * -type f`);
+	chomp(@wrksrc_dirs = `cd "${abs_wrksrc}" && find * -type d`);
 
 	magic_configure();
 	magic_gconf2_schemas();
@@ -417,7 +417,13 @@ sub main() {
 	if (scalar(@extract_cookie) == 0) {
 		if (scalar(@ARGV) == 0) {
 			print("URL: ");
-			$url = <STDIN>;
+			# Pressing Ctrl-D is considered equivalent to
+			# aborting the process.
+			if (!defined($url = <STDIN>)) {
+				print("\n");
+				print("No URL given -- aborting.\n");
+				exit(0);
+			}
 		} else {
 			$url = shift(@ARGV);
 		}
