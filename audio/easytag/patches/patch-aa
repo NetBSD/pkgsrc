@@ -1,0 +1,132 @@
+$NetBSD: patch-aa,v 1.15 2007/01/12 20:16:04 wiz Exp $
+
+--- src/flac_header.c.orig	2004-01-22 22:17:10.000000000 +0000
++++ src/flac_header.c
+@@ -40,6 +40,13 @@
+ #include "misc.h"
+ #include "i18n.h"
+ 
++/* FLAC 1.1.3 has FLAC_API_VERSION_CURRENT == 8 */
++/* by LEGACY_FLAC we mean pre-FLAC 1.1.3; in FLAC 1.1.3 the FLAC__FileDecoder was merged into the FLAC__StreamDecoder  */
++#if !defined(FLAC_API_VERSION_CURRENT) || FLAC_API_VERSION_CURRENT < 8
++#define LEGACY_FLAC
++#else
++#undef LEGACY_FLAC
++#endif
+ 
+ 
+ 
+@@ -75,9 +82,15 @@ static unsigned reservoir_samples_ = 0;
+ /**************
+  * Prototypes *
+  **************/
++#ifdef LEGACY_FLAC
+ static FLAC__StreamDecoderWriteStatus write_callback_(const FLAC__FileDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[], void *client_data);
+ static void metadata_callback_(const FLAC__FileDecoder *decoder, const FLAC__StreamMetadata *metadata, void *client_data);
+ static void error_callback_   (const FLAC__FileDecoder *decoder, FLAC__StreamDecoderErrorStatus status, void *client_data);
++#else
++static FLAC__StreamDecoderWriteStatus write_callback_(const FLAC__StreamDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[], void *client_data);
++static void metadata_callback_(const FLAC__StreamDecoder *decoder, const FLAC__StreamMetadata *metadata, void *client_data);
++static void error_callback_   (const FLAC__StreamDecoder *decoder, FLAC__StreamDecoderErrorStatus status, void *client_data);
++#endif
+ 
+ 
+ 
+@@ -95,7 +108,11 @@ gboolean Flac_Header_Read_File_Info (gch
+     gdouble duration = 0;
+     gulong filesize;
+ 
++#ifdef LEGACY_FLAC
+     FLAC__FileDecoder *tmp_decoder;
++#else
++    FLAC__StreamDecoder *tmp_decoder;
++#endif
+     file_info_struct tmp_file_info;
+ 
+ 
+@@ -110,11 +127,16 @@ gboolean Flac_Header_Read_File_Info (gch
+     fclose(file);
+ 
+     /* Decoding FLAC file */
++#ifdef LEGACY_FLAC
+     tmp_decoder = FLAC__file_decoder_new();
++#else
++    tmp_decoder = FLAC__stream_decoder_new();
++#endif
+     if(tmp_decoder == 0)
+         return FALSE;
+ 
+     tmp_file_info.abort_flag = false;
++#ifdef LEGACY_FLAC
+     FLAC__file_decoder_set_md5_checking     (tmp_decoder, false);
+     FLAC__file_decoder_set_filename         (tmp_decoder, filename);
+     FLAC__file_decoder_set_write_callback   (tmp_decoder, write_callback_);
+@@ -123,7 +145,13 @@ gboolean Flac_Header_Read_File_Info (gch
+     FLAC__file_decoder_set_client_data      (tmp_decoder, &tmp_file_info);
+     if(FLAC__file_decoder_init(tmp_decoder) != FLAC__FILE_DECODER_OK)
+         return FALSE;
++#else
++    FLAC__stream_decoder_set_md5_checking     (tmp_decoder, false);
++    if(FLAC__stream_decoder_init_file(tmp_decoder, filename, write_callback_, metadata_callback_, error_callback_, &tmp_file_info) != FLAC__STREAM_DECODER_INIT_STATUS_OK)
++        return FALSE;
++#endif
+ 
++#ifdef LEGACY_FLAC
+     // In FLAC 1.0.3, is used : FLAC__file_decoder_process_metadata
+     // In FLAC 1.0.4, is used : FLAC__file_decoder_process_until_end_of_metadata
+ #if ( (LIBFLAC_MAJOR <= 1) && (LIBFLAC_MINOR <= 0) && (LIBFLAC_PATCH <= 3) )
+@@ -131,10 +159,18 @@ gboolean Flac_Header_Read_File_Info (gch
+ #else
+     if(!FLAC__file_decoder_process_until_end_of_metadata(tmp_decoder)) // FLAC 1.0.4 (Bastian Kleineidam)
+ #endif
++#else
++    if(!FLAC__stream_decoder_process_until_end_of_metadata(tmp_decoder))
++#endif
+         return FALSE;
+ 
++#ifdef LEGACY_FLAC
+     FLAC__file_decoder_finish(tmp_decoder);
+     FLAC__file_decoder_delete(tmp_decoder);
++#else
++    FLAC__stream_decoder_finish(tmp_decoder);
++    FLAC__stream_decoder_delete(tmp_decoder);
++#endif
+     /* End of decoding FLAC file */
+ 
+ 
+@@ -154,7 +190,11 @@ gboolean Flac_Header_Read_File_Info (gch
+ 
+ 
+ 
++#ifdef LEGACY_FLAC
+ FLAC__StreamDecoderWriteStatus write_callback_(const FLAC__FileDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[], void *client_data)
++#else
++FLAC__StreamDecoderWriteStatus write_callback_(const FLAC__StreamDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[], void *client_data)
++#endif
+ {
+     file_info_struct *file_info = (file_info_struct *)client_data;
+     const unsigned bps = file_info->bits_per_sample, channels = file_info->channels, wide_samples = frame->header.blocksize;
+@@ -187,7 +227,11 @@ FLAC__StreamDecoderWriteStatus write_cal
+     return FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;
+ }
+ 
++#ifdef LEGACY_FLAC
+ void metadata_callback_(const FLAC__FileDecoder *decoder, const FLAC__StreamMetadata *metadata, void *client_data)
++#else
++void metadata_callback_(const FLAC__StreamDecoder *decoder, const FLAC__StreamMetadata *metadata, void *client_data)
++#endif
+ {
+     file_info_struct *file_info = (file_info_struct *)client_data;
+     (void)decoder;
+@@ -212,7 +256,11 @@ void metadata_callback_(const FLAC__File
+     }
+ }
+ 
++#ifdef LEGACY_FLAC
+ void error_callback_(const FLAC__FileDecoder *decoder, FLAC__StreamDecoderErrorStatus status, void *client_data)
++#else
++void error_callback_(const FLAC__StreamDecoder *decoder, FLAC__StreamDecoderErrorStatus status, void *client_data)
++#endif
+ {
+     file_info_struct *file_info = (file_info_struct *)client_data;
+     (void)decoder;
