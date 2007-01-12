@@ -1,8 +1,8 @@
-iODBC (intrinsic Open Database Connectivity) driver manager
-is compatible with ODBC 2.x specification and performs exactly
-same jobs of ODBC 2.x driver manager(i.e. driver loading,
+iODBC (Independent Open Database Connectivity) driver manager
+is compatible with ODBC 3.x specification and performs exactly
+same jobs of ODBC 3.x driver manager(i.e. driver loading,
 Parameters and function sequence checking, driver's function
-Invoking, etc.). Any ODBC driver works with ODBC 2.0 driver
+Invoking, etc.). Any ODBC driver works with ODBC 3.0 driver
 Manager will also work with iODBC driver manager and vice versa.
 
 Applications (using ODBC function calls) linked with
