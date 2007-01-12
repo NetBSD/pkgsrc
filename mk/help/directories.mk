@@ -1,12 +1,21 @@
-# $NetBSD: directories.mk,v 1.1 2006/10/25 08:39:29 rillig Exp $
+# $NetBSD: directories.mk,v 1.2 2007/01/12 07:47:16 rillig Exp $
 #
 # This file contains some short documentation on the directories that
 # are used within pkgsrc.
 
 # PREFIX
 #	This is the directory where the package should install its
-#	files. In special situations, this variable may be set to a
-#	subdirectory of LOCALBASE, but this is usually not needed.
+#	files. The actual value depends on the variables
+#	PKG_INSTALLATION_TYPE, USE_X11BASE and USE_CROSSBASE.
+#
+#	Tags: read-only, system-defined, non-overridable, etc.
+#
+#	See also:
+#		CROSSBASE,
+#		INSTALLATION_PREFIX,
+#		LOCALBASE,
+#		X11PREFIX,
+#		PKG_INSTALLATION_TYPE.
 #
 
 # LOCALBASE
