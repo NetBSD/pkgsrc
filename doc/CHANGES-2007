@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.99 2007/01/11 19:23:27 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.100 2007/01/12 18:24:16 tv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -169,3 +169,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/acroread7 to 7.0.9 [obache 2007-01-11]
 	Removed devel/p5-File-Spec [obache 2007-01-11]
 	Updated mail/tmda to 1.1.9nb2 [schmonz 2007-01-11]
+	Updated lang/sun-jre15 to 5.0.10 [tv 2007-01-12]
+	Updated lang/sun-jdk15 to 5.0.10 [tv 2007-01-12]
