@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5860 2007/01/11 22:15:34 wiz Exp $
+$NetBSD: TODO,v 1.5861 2007/01/12 06:45:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -71,10 +71,6 @@ Suggested new packages
 
 	xftlsfonts
 	FreeType font list displayer.
-
-	gtkfontsel
-	http://packages.qa.debian.org/g/gtkfontsel.html
-	GTK-based utility for browsing, previewing and selecting a X11 font.
 
 	choosefont
 	http://choosefont.sourceforge.net/
