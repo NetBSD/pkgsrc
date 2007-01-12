@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2006/12/03 00:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2007/01/12 18:23:38 tv Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	jre-1_5_0_09-linux-${DIST_ARCH}
-PKGNAME=	sun-jre15-5.0.9
-PKGREVISION=	1
+DISTNAME=	jre-1_5_0_10-linux-${DIST_ARCH}
+PKGNAME=	sun-jre15-5.0.10
 MASTER_SITES=	# empty
 
 SHORT_NAME=	JRE
@@ -81,6 +80,6 @@ makesfiles:
 	cd ${WRKSRC}/lib && ${FIND} * -name fontconfig.\* -o		\
 		-name \*.properties -o -name \*.properties.\?\? -o	\
 		-name \*.cfg -o -name \*.security |			\
-	${SED} 's/^/SFILES+=	/' >>${PKGDIR}/sfiles.mk
+	${SED} 's/^/SFILES+=	/' >>${PKGDIR}/sfiles-${MACHINE_ARCH}.mk
 
 .include "../../lang/sun-jre15/Makefile.common"
