@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/01/07 12:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2007/01/12 20:02:53 wiz Exp $
 #
 
 DISTNAME=	easytag-1.1
@@ -17,7 +17,6 @@ USE_TOOLS+=		gmake xgettext
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
