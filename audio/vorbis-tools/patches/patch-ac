@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2003/12/08 14:43:48 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2007/01/13 15:35:52 wiz Exp $
 
---- oggenc/oggenc.c.orig	Tue Sep 16 00:04:00 2003
+--- oggenc/oggenc.c.orig	2005-06-03 10:15:10.000000000 +0000
 +++ oggenc/oggenc.c
-@@ -640,6 +640,8 @@ static void parse_options(int argc, char
+@@ -659,6 +659,8 @@ static void parse_options(int argc, char
  
  				break;
  			case 'a':
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.6 2003/12/08 14:43:48 wiz Exp $
  				opt->artist = realloc(opt->artist, (++opt->artist_count)*sizeof(char *));
  				opt->artist[opt->artist_count - 1] = strdup(optarg);
  				break;
-@@ -652,10 +654,14 @@ static void parse_options(int argc, char
+@@ -671,10 +673,14 @@ static void parse_options(int argc, char
  				opt->comments[opt->comment_count - 1] = strdup(optarg);
  				break;
  			case 'd':
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.6 2003/12/08 14:43:48 wiz Exp $
                  opt->genre = realloc(opt->genre, (++opt->genre_count)*sizeof(char *));
                  opt->genre[opt->genre_count - 1] = strdup(optarg);
                  break;
-@@ -664,6 +670,8 @@ static void parse_options(int argc, char
+@@ -683,6 +689,8 @@ static void parse_options(int argc, char
  				exit(0);
  				break;
  			case 'l':
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.6 2003/12/08 14:43:48 wiz Exp $
  				opt->album = realloc(opt->album, (++opt->album_count)*sizeof(char *));
  				opt->album[opt->album_count - 1] = strdup(optarg);
  				break;
-@@ -674,6 +682,8 @@ static void parse_options(int argc, char
+@@ -693,6 +701,8 @@ static void parse_options(int argc, char
  					opt->serial = 0; /* Failed, so just set to zero */
  				break;
  			case 't':
