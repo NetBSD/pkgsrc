@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/01/13 07:32:36 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/01/13 10:46:34 joerg Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -95,6 +95,10 @@ PLIST_SUBST+=		COND_CDDA=""
 PLIST_SUBST+=		COND_VCD=""
 .endif
 
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
+.endif
+
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -117,9 +121,10 @@ PLIST_SUBST+=		COND_VCD=""
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
