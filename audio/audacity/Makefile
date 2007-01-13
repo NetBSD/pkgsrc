@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/01/07 12:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/01/13 21:28:11 wiz Exp $
 
 DISTNAME=	audacity-src-1.2.4b
 PKGNAME=	audacity-1.2.4b
@@ -19,7 +19,6 @@ USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio
 CONFIGURE_ARGS+=	--with-id3=system
-CONFIGURE_ARGS+=	--with-libflac=system
 CONFIGURE_ARGS+=	--with-libmad=system
 CONFIGURE_ARGS+=	--with-libsndfile=system
 CONFIGURE_ARGS+=	--with-portaudio=system
@@ -30,7 +29,6 @@ CONFIG_GUESS_OVERRIDE=		\
 CONFIG_SUB_OVERRIDE=		\
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
