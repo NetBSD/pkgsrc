@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/13 15:38:52 obache Exp $
+bin/fetchyahoo
+man/man1/fetchyahoo.1
+share/doc/fetchyahoo/COPYING
+share/doc/fetchyahoo/ChangeLog
+share/doc/fetchyahoo/Credits
+share/doc/fetchyahoo/INSTALL
+share/doc/fetchyahoo/TODO
+share/doc/fetchyahoo/index.html
+share/examples/fetchyahoo/fetchyahoorc
+@dirrm share/examples/fetchyahoo
+@dirrm share/doc/fetchyahoo
