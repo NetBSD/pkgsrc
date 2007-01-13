@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/04 22:02:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/13 17:48:34 joerg Exp $
 
 DISTNAME=		obconf-1.5
 PKGREVISION=		8
@@ -16,6 +16,6 @@ GNU_CONFIGURE=		YES
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../wm/openbox/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
