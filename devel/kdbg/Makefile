@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/06/13 12:11:44 markd Exp $
+# $NetBSD: Makefile,v 1.63 2007/01/13 13:08:08 joerg Exp $
 
 DISTNAME=	kdbg-2.0.4
 CATEGORIES=	devel kde
@@ -16,7 +16,12 @@ USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--with-kde-version=3
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
