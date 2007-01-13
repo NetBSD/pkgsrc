@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.104 2007/01/13 08:58:24 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.105 2007/01/13 09:30:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/wmii to 2.5.2nb1 [obache 2007-01-13]
 	Added x11/xf86-video-nv version 1.2.2 [toshii 2007-01-13]
 	Updated audio/cmus to 2.1.0 [wiz 2007-01-13]
+	Removed audio/gst-plugins0.8-flac [wiz 2007-01-13]
