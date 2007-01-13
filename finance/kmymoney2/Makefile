@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/10/07 12:14:18 markd Exp $
+# $NetBSD: Makefile,v 1.32 2007/01/13 17:45:46 joerg Exp $
 
 DISTNAME=	kmymoney2-0.8.5
 CATEGORIES=	finance kde
@@ -28,9 +28,13 @@ SUBST_MESSAGE.hints=	Fix includehints.
 SUBST_FILES.hints=	kmymoney2/dialogs/*.ui kmymoney2/views/*.ui
 SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
