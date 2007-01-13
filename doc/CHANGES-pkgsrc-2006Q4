@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.16 2007/01/11 16:47:45 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.17 2007/01/13 15:16:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -35,3 +35,5 @@ Pullup ticket 1986 - requested by drochner
 security fix for mplayer, gmplayer, mencoder
 Pullup ticket 1988 - requested by obache
 security update for acroread7
+Pullup ticket 1990 - requested by markd
+security fix for kdenetwork3
