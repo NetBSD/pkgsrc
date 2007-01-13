@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
+$NetBSD: patch-ay,v 1.2 2007/01/13 11:27:03 joerg Exp $
 
---- configure.orig	Mon Jun 24 02:59:45 1996
+--- configure.orig	1996-06-24 00:59:45.000000000 +0000
 +++ configure
-@@ -1468,6 +1664,8 @@ else
+@@ -1468,6 +1468,8 @@ else
    d=""
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
-@@ -1478,8 +1676,8 @@ if test "$d" != "" ; then 
+@@ -1478,8 +1480,8 @@ if test "$d" != "" ; then 
  		echo "can't find tcl.h in $d/include"
  		exit 1
  	fi
@@ -22,7 +22,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  		$d/lib/libtcl.so \
  		$d/lib/libtcl.a"
  	V_LIB_TCL=FAIL
-@@ -1493,7 +1691,7 @@ if test "$d" != "" ; then 
+@@ -1493,7 +1495,7 @@ if test "$d" != "" ; then 
  		echo "can't find libtcl.a in $d/lib"
  		exit 1
  	fi
@@ -31,7 +31,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  		$d/lib/tcl"
  	V_LIBRARY_TCL=FAIL
  	for dir in $places; do
-@@ -1513,23 +1711,26 @@ else
+@@ -1513,23 +1515,26 @@ else
  #include <tcl.h>
  EOF
  ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
@@ -63,7 +63,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  			$x_includes/tk \
  			$x_includes \
  			/usr/local/include \
-@@ -1546,81 +1747,43 @@ rm -f conftest*
+@@ -1546,81 +1551,43 @@ rm -f conftest*
  			exit 1
  		fi
  	fi
@@ -178,7 +178,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  		/usr/local/lib/tcl \
  		/usr/lib/tcl \
  		/usr/lib/tk/tcl \
-@@ -1651,6 +1814,8 @@ else
+@@ -1651,6 +1618,8 @@ else
    d=""
  fi
  
@@ -187,7 +187,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
-@@ -1661,8 +1826,8 @@ if test "$d" != "" ; then 
+@@ -1661,8 +1630,8 @@ if test "$d" != "" ; then 
  		echo "can't find tk.h in $d/include"
  		exit 1
  	fi
@@ -198,7 +198,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  		$d/lib/libtk.so \
  		$d/lib/libtk.a"
  	V_LIB_TK=FAIL
-@@ -1676,7 +1841,7 @@ if test "$d" != "" ; then 
+@@ -1676,7 +1645,7 @@ if test "$d" != "" ; then 
  		echo "can't find libtk.a in $d/lib"
  		exit 1
  	fi
@@ -207,7 +207,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  		$d/lib/tk"
  	V_LIBRARY_TK=FAIL
  	for dir in $places; do
-@@ -1696,13 +1861,15 @@ else
+@@ -1696,13 +1665,15 @@ else
  #include <tk.h>
  EOF
  ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
@@ -225,7 +225,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
    rm -rf conftest*
    V_INCLUDE_TK=FAIL
  fi
-@@ -1712,15 +1879,16 @@ rm -f conftest*
+@@ -1712,15 +1683,16 @@ rm -f conftest*
  		V_INCLUDE_TK=""
  		places="\
  			$prefix/include \
@@ -245,7 +245,7 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  			"
  		for dir in $places; do
  			if test -r $dir/tk.h ; then
-@@ -1733,82 +1901,47 @@ rm -f conftest*
+@@ -1733,82 +1705,47 @@ rm -f conftest*
  			exit 1
  		fi
  	fi
@@ -365,7 +365,16 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  		/usr/local/lib/tk \
  		/usr/lib/tk \
  		/usr/lib/tk/tk \
-@@ -2072,7 +2205,12 @@ sparc-sun-sunos*)
+@@ -1842,7 +1779,7 @@ fi
+ 
+ 
+ #XXX
+-V_STATIC="-static"
++V_STATIC=""
+ 
+ # Check whether --with-aix-shm or --without-aix-shm was given.
+ if test "${with_aix_shm+set}" = set; then
+@@ -2072,7 +2009,12 @@ sparc-sun-sunos*)
  	;;
  *-*-netbsd*)
  	V_TARCMD="tar -h -c -f"
@@ -379,3 +388,12 @@ $NetBSD: patch-ay,v 1.1 2002/10/02 22:53:09 wiz Exp $
  	;;
  *-*-hpux*)
  	V_CCOPT="-O"
+@@ -2347,6 +2289,8 @@ for ac_option
+ do
+   case "\$ac_option" in
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
+     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
+   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
