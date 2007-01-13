@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 12:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/13 09:34:59 wiz Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -53,7 +53,8 @@ do-install:
 	done
 	${INSTALL_DATA_DIR} ${MODDIR}
 
-.include "../../audio/flac/buildlink3.mk"
+# does not support flac-1.1.3 API
+#.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
