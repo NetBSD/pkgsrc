@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2006/11/28 22:18:23 drochner Exp $
+# $NetBSD: Makefile,v 1.82 2007/01/13 12:02:50 joerg Exp $
 #
 
 DISTNAME=		gnome-panel-2.16.2
@@ -41,6 +41,8 @@ PKG_SUPPORTED_OPTIONS=	evolution
 PKG_SUGGESTED_OPTIONS=	evolution
 .include "../../mk/bsd.options.mk"
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
@@ -63,4 +65,7 @@ PKG_SUGGESTED_OPTIONS=	evolution
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
