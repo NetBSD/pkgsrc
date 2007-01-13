@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/11/27 21:08:56 drochner Exp $
+# $NetBSD: Makefile,v 1.62 2007/01/13 12:05:22 joerg Exp $
 
 DISTNAME=	eel-2.16.3
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -35,4 +35,7 @@ BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.9.4
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
