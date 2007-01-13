@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/01/02 15:18:12 obache Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/13 13:02:54 joerg Exp $
 
---- KasumiWord.cxx.orig	Mon Jan 10 20:30:37 2005
-+++ KasumiWord.cxx	Mon Jan 10 20:38:01 2005
-@@ -16,24 +16,27 @@
+--- KasumiWord.cxx.orig	2005-09-01 08:01:45.000000000 +0000
++++ KasumiWord.cxx
+@@ -17,24 +17,28 @@ iconv_t KasumiWord::IconvEUCJP_To_UTF8 =
  string KasumiWord::convertUTF8ToEUCJP(const string &aUTF8){
    char *utf8 = (char*)malloc(strlen(aUTF8.c_str())+1);
    strcpy(utf8, aUTF8.c_str());
-+  const char *ptr_utf8 = utf8;
++  ICONV_CONST char *ptr_utf8 = utf8;
    size_t len = strlen(utf8)+1;
    size_t len_eucjp = len*2;
    char *eucjp_buf = (char*)malloc(len_eucjp);
@@ -20,7 +20,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/01/02 15:18:12 obache Exp $
  string KasumiWord::convertEUCJPToUTF8(const string &aEUCJP){
    char *eucjp = (char*)malloc(strlen(aEUCJP.c_str())+1);
    strcpy(eucjp, aEUCJP.c_str());
-+  const char *ptr_eucjp = eucjp;
++  ICONV_CONST char *ptr_eucjp = eucjp;
++
    size_t len = strlen(eucjp)+1;
    size_t len_utf8 = len*2;
    char *utf8_buf = (char*)malloc(len_utf8);
