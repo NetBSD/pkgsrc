@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.101 2007/01/13 01:12:07 markd Exp $
+$NetBSD: CHANGES-2007,v 1.102 2007/01/13 02:42:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -169,7 +169,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/acroread7 to 7.0.9 [obache 2007-01-11]
 	Removed devel/p5-File-Spec [obache 2007-01-11]
 	Updated mail/tmda to 1.1.9nb2 [schmonz 2007-01-11]
+	Updated databases/iodbc to 3.52.5 [obache 2007-01-12]
 	Updated lang/sun-jre15 to 5.0.10 [tv 2007-01-12]
 	Updated lang/sun-jdk15 to 5.0.10 [tv 2007-01-12]
 	Updated net/kdenetwork3 to 3.5.5nb1 [markd 2007-01-13]
 	Updated net/kftpgrabber to 0.8.0 [markd 2007-01-13]
+	Updated wm/wmii to 2.5.2nb1 [obache 2007-01-13]
