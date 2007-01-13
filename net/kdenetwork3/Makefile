@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.55 2006/11/16 02:51:26 markd Exp $
+# $NetBSD: Makefile,v 1.55.2.1 2007/01/13 15:15:53 salo Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.5.5-kdenetwork-ksirc.diff
 
 CONFLICTS=	kopete-[0-9]*
 
