@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.112 2007/01/13 21:45:56 abs Exp $
+$NetBSD: CHANGES-2007,v 1.113 2007/01/13 21:58:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/jdbc-postgresql81 to 8.1-480 [abs 2007-01-13]
 	Added databases/jdbc-postgresql82-8.2-504 [abs 2007-01-13]
 	Added net/p5-Net-eBay-0.40 [abs 2007-01-13]
+	Updated multimedia/mkvtoolnix to 1.7.0nb2 [wiz 2007-01-13]
