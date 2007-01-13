@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.100 2007/01/12 18:24:16 tv Exp $
+$NetBSD: CHANGES-2007,v 1.101 2007/01/13 01:12:07 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -171,3 +171,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/tmda to 1.1.9nb2 [schmonz 2007-01-11]
 	Updated lang/sun-jre15 to 5.0.10 [tv 2007-01-12]
 	Updated lang/sun-jdk15 to 5.0.10 [tv 2007-01-12]
+	Updated net/kdenetwork3 to 3.5.5nb1 [markd 2007-01-13]
+	Updated net/kftpgrabber to 0.8.0 [markd 2007-01-13]
