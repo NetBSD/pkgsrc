@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/22 20:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/13 18:51:51 joerg Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
@@ -27,5 +27,5 @@ BUILDLINK_DEPMETHOD.${BDB_TYPE}=build
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
