@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2003/12/08 14:43:48 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2007/01/13 15:35:52 wiz Exp $
 
---- ogg123/ogg123.c.orig	Tue Sep  2 21:37:05 2003
+--- ogg123/ogg123.c.orig	2005-06-03 10:15:09.000000000 +0000
 +++ ogg123/ogg123.c
-@@ -606,7 +606,13 @@ void play (char *source_string)
+@@ -610,7 +610,13 @@ void play (char *source_string)
    
    format->cleanup(decoder);
    transport->close(source);
