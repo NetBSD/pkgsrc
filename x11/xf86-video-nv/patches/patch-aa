@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/01/13 05:15:50 toshii Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/13 05:36:35 toshii Exp $
 
---- configure.orig	2007-01-13 12:47:16.000000000 +0900
+--- configure.orig	2006-12-16 08:48:45.000000000 +0900
 +++ configure
-@@ -21458,7 +21458,7 @@ echo "$as_me: Building with package name
+@@ -21458,10 +21458,10 @@ echo "$as_me: Building with package name
  	fi
  
  cat >>confdefs.h <<_ACEOF
@@ -10,4 +10,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/01/13 05:15:50 toshii Exp $
 +#define PACKAGE_VERSION_MAJOR `echo $PACKAGE_VERSION | sed -ne 's/^\([^\.][^\.]*\).*/\1/p'`
  _ACEOF
  
- 	PVM=`echo $PACKAGE_VERSION | sed -ne 's/^\([^\.]\+\)\.\([^\.]\+\).*/\2/p'`
+-	PVM=`echo $PACKAGE_VERSION | sed -ne 's/^\([^\.]\+\)\.\([^\.]\+\).*/\2/p'`
++	PVM=`echo $PACKAGE_VERSION | sed -ne 's/^\([^\.][^\.]*\)\.\([^\.][^\.]*\).*/\2/p'`
+ 	if test "x$PVM" = "x"; then
+ 		PVM="0"
+ 	fi
+@@ -21470,7 +21470,7 @@ cat >>confdefs.h <<_ACEOF
+ #define PACKAGE_VERSION_MINOR $PVM
+ _ACEOF
+ 
+-	PVP=`echo $PACKAGE_VERSION | sed -ne 's/^\([^\.]\+\)\.\([^\.]\+\)\.\([^\.]\+\).*/\3/p'`
++	PVP=`echo $PACKAGE_VERSION | sed -ne 's/^\([^\.][^\.]*\)\.\([^\.][^\.]*\)\.\([^\.][^\.]*\).*/\3/p'`
+ 	if test "x$PVP" = "x"; then
+ 		PVP="0"
+ 	fi
