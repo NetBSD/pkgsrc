@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2007/01/07 09:14:01 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2007/01/13 07:32:36 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--with-ffmpeg-zlib
 CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-faad
+CONFIGURE_ARGS+=	--enable-flac
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/dialogs
@@ -69,7 +70,7 @@ pre-install:
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${X11BASE}/lib/X11/fonts/TTF/luximb.ttf
 
-SUBST_CLASSES+=         oss fnt libav
+SUBST_CLASSES+=         oss
 SUBST_STAGE.oss=        post-patch
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_FILES.oss+=	modules/access/v4l/v4l.c
@@ -77,13 +78,12 @@ SUBST_FILES.oss+=	modules/audio_output/oss.c
 SUBST_FILES.oss+=	modules/gui/pda/pda_interface.c
 SUBST_FILES.oss+=	modules/gui/pda/pda.glade
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
+
+SUBST_CLASSES+=         fnt
 SUBST_STAGE.fnt=	post-patch
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c
 SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
-SUBST_STAGE.libav=	post-patch
-SUBST_FILES.libav=	configure
-SUBST_SED.libav=	-e "s,libavcodec/libavcodec.a,libavcodec.a,g"
 
 BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 
@@ -96,6 +96,7 @@ PLIST_SUBST+=		COND_VCD=""
 .endif
 
 .include "../../audio/faad2/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
