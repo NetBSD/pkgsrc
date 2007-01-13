@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/09/16 12:20:33 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2007/01/13 12:05:22 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EEL2_BUILDLINK3_MK:=	${EEL2_BUILDLINK3_MK}+
@@ -30,5 +30,7 @@ BUILDLINK_PKGSRCDIR.eel2?=	../../devel/eel2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
