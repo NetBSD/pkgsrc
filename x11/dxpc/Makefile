@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/05/10 23:29:37 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/13 18:09:06 joerg Exp $
 
 DISTNAME=	dxpc-3.8.2
 PKGREVISION=	1
@@ -18,5 +18,5 @@ post-install:
 	@strip ${PREFIX}/bin/dxpc
 
 .include "../../archivers/liblzo/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
