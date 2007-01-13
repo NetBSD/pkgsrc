@@ -1,0 +1,14 @@
+This module allows users to communicate with eBay using perl and
+their XML based eBay API. You can use it to list items for sale,
+bid, get seller item list, search, get ebay time, or do anything
+else.
+
+Many details of this API can be found at http://developer.ebay.com.
+To be able to use this module, you need to register there and obtain
+keys and a authentication token using "tokentool".
+
+The job of its module is to encapsulate connectivity and authentication,
+and communication with ebay. First, you need to initialize your
+ebay connection by passing it credentials. After that, you can send
+queries to eBay. A typical request is comprised of its name, and
+a hash table of application parameters.
