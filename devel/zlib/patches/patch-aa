@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2005/12/27 17:27:58 reed Exp $
+$NetBSD: patch-aa,v 1.10 2007/01/13 13:50:11 schwarz Exp $
 
 --- Makefile.in.orig	2004-09-15 16:27:20.000000000 +0200
 +++ Makefile.in	2005-04-10 12:48:19.000000000 +0200
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/27 17:27:58 reed Exp $
 -	ln -s $@ $(SHAREDLIB)
 -	ln -s $@ $(SHAREDLIBM)
 +all: $(OBJS)
-+	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -o libz.la ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:2
++	${LIBTOOL} --mode=link ${CC} ${CPPFLAGS} ${CFLAGS} ${PKGSRC_LDFLAGS} -o libz.la ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:2
 +
 +.c.o:
 +	${LIBTOOL} --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS} -c $<
