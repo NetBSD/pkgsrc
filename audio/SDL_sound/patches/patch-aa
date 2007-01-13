@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2004/01/18 13:51:15 cube Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/13 23:36:28 wiz Exp $
 
---- configure.orig	2003-10-12 20:54:57.000000000 +0200
+--- configure.orig	2003-10-12 18:54:57.000000000 +0000
 +++ configure
+@@ -7089,7 +7089,7 @@ EOF
+ 
+ fi
+ 
+-x="C__seekable_stream_decoder_process_single"
++x="C__stream_decoder_process_single"
+ flcsym="FLA$x"
+ # Check whether --enable-flac or --disable-flac was given.
+ if test "${enable_flac+set}" = set; then
 @@ -7363,15 +7363,15 @@ int main (int argc, char *argv[])
      }
    else
