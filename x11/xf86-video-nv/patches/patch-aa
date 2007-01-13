@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/13 05:15:50 toshii Exp $
+
+--- configure.orig	2007-01-13 12:47:16.000000000 +0900
++++ configure
+@@ -21458,7 +21458,7 @@ echo "$as_me: Building with package name
+ 	fi
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define PACKAGE_VERSION_MAJOR `echo $PACKAGE_VERSION | sed -ne 's/^\([^\.]\+\).*/\1/p'`
++#define PACKAGE_VERSION_MAJOR `echo $PACKAGE_VERSION | sed -ne 's/^\([^\.][^\.]*\).*/\1/p'`
+ _ACEOF
+ 
+ 	PVM=`echo $PACKAGE_VERSION | sed -ne 's/^\([^\.]\+\)\.\([^\.]\+\).*/\2/p'`
