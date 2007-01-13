@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2005/12/27 17:27:58 reed Exp $
+$NetBSD: distinfo,v 1.16 2007/01/13 13:50:11 schwarz Exp $
 
 SHA1 (zlib-1.2.3.tar.gz) = 60faeaaf250642db5c0ea36cd6dcc9f99c8f3902
 RMD160 (zlib-1.2.3.tar.gz) = 89a57e336c24f7f6eebda3a1724e14b71187e117
 Size (zlib-1.2.3.tar.gz) = 496597 bytes
-SHA1 (patch-aa) = 8adea46e6fd1882d7c4956d85399a1bf9e60f1f7
+SHA1 (patch-aa) = 92cafd578d8f97c5e67c48b62c0d8b56b795e6ab
