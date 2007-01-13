@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2007/01/10 10:49:35 drochner Exp $
+# $NetBSD: Makefile,v 1.342 2007/01/13 09:28:40 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -115,7 +115,6 @@ SUBDIR+=	gst-plugins0.8-artsd
 SUBDIR+=	gst-plugins0.8-cdparanoia
 SUBDIR+=	gst-plugins0.8-esound
 SUBDIR+=	gst-plugins0.8-faad
-SUBDIR+=	gst-plugins0.8-flac
 SUBDIR+=	gst-plugins0.8-lame
 SUBDIR+=	gst-plugins0.8-mad
 SUBDIR+=	gst-plugins0.8-oss
