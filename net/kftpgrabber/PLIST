@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/07 10:03:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/13 01:09:29 markd Exp $
 bin/kftpgrabber
 include/kftpgrabber/kftpbookmarkimportplugin.h
 lib/kde3/kftpimportplugin_filezilla3.la
@@ -22,6 +22,7 @@ share/kde/services/kftpimportplugin_gftp.desktop
 share/kde/services/kftpimportplugin_kftp.desktop
 share/kde/services/kftpimportplugin_ncftp.desktop
 share/kde/servicetypes/kftpbookmarkimportplugin.desktop
+share/locale/ar/LC_MESSAGES/kftpgrabber.mo
 share/locale/bg/LC_MESSAGES/kftpgrabber.mo
 share/locale/br/LC_MESSAGES/kftpgrabber.mo
 share/locale/cs/LC_MESSAGES/kftpgrabber.mo
