@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/03/04 21:29:30 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/13 13:50:11 schwarz Exp $
 
 DISTNAME=	zlib-1.2.3
 CATEGORIES=	devel
@@ -16,5 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
+
+MAKE_ENV+=	PKGSRC_LDFLAGS=${LDFLAGS:Q}
 
 .include "../../mk/bsd.pkg.mk"
