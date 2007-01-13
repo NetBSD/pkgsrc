@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/06 19:06:22 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/13 00:16:40 joerg Exp $
 #
 
 DISTNAME=		MyPasswordSafe-20061216
@@ -17,4 +17,5 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 MAKE_FLAGS+=		QMAKE=${QTDIR:Q}/bin/qmake
 
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
