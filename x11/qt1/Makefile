@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/10/04 22:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/13 18:42:35 joerg Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -27,7 +27,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.qt1
 PKG_SUPPORTED_OPTIONS=	gif
 
 .include "../../mk/bsd.options.mk"
-.include "../../mk/x11.buildlink3.mk"
 
 .if ${OPSYS} == "DragonFly"
 QT1_PLATFORM=	netbsd-g++-static
@@ -71,4 +70,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/share/doc/qt/html
 	${INSTALL_DATA} ${WRKSRC}/html/* ${QTPREFIX}/share/doc/qt/html
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
