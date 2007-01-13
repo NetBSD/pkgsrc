@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/10/22 13:02:57 obache Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/13 02:30:41 obache Exp $
 #
 
 DISTNAME=	wmii-2.5.2
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://suckless.org/download/
 
@@ -25,7 +26,7 @@ SUBST_STAGE.pfx = post-patch
 SUBST_FILES.pfx = config.mk
 SUBST_SED.pfx = -e s,/usr/local,${PREFIX},g
 SUBST_SED.pfx+= -e 's|/usr/X11R6|${X11BASE}|g'
-SUBST_SED.pfx+= -e 's|/usr/X11R6|${X11BASE}|g'
+SUBST_SED.pfx+= -e 's|-L$${X11LIB}|${X11_LDFLAGS}|g'
 SUBST_SED.pfx+= -e 's|CFLAGS = -O0 -g -Wall|CFLAGS+=|g'
 SUBST_SED.pfx+= -e 's|-g||g'
 SUBST_SED.pfx+= -e 's|/9||g'
