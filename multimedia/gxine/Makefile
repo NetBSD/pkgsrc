@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/09 14:56:57 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2007/01/13 12:46:02 joerg Exp $
 
 DISTNAME=	gxine-0.5.10
 CATEGORIES=	multimedia
@@ -30,8 +30,9 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../www/firefox/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
