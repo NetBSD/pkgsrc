@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/01/08 04:56:35 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/13 12:36:28 joerg Exp $
 
 DISTNAME=		digikam-0.9.0
 PKGREVISION=		1
@@ -22,6 +22,8 @@ BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.2
 BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.12
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
@@ -31,4 +33,7 @@ BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.12
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
