@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/04/23 00:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/13 21:24:59 abs Exp $
 #
 
 DISTNAME=	sympa-4.1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/
 
@@ -15,7 +15,6 @@ DEPENDS+=	p5-MIME-Base64>=1.0:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-DBD-Sybase>=0.90:../../databases/p5-DBD-Sybase
 DEPENDS+=	p5-DBI>=1.06:../../databases/p5-DBI
 DEPENDS+=	p5-perl-ldap>=0.27:../../databases/p5-perl-ldap
-DEPENDS+=	p5-File-Spec>=0.8:../../devel/p5-File-Spec
 DEPENDS+=	p5-IO-stringy>=1.0:../../devel/p5-IO-stringy
 DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=	p5-MIME-tools>=5.209:../../mail/p5-MIME-tools
@@ -75,7 +74,7 @@ DEPENDS+=	p5-DBD-postgresql>=0.90:../../databases/p5-DBD-postgresql
 
 SYMPA_USER?=	sympa
 SYMPA_GROUP?=	sympa
-SYMPA_VARBASE?=	${VARBASE}/sympa
+SYMPA_VARBASE?=	${HOMEBASE}/sympa
 
 BUILD_DEFS+=	SYMPA_USER SYMPA_GROUP SYMPA_VARBASE
 

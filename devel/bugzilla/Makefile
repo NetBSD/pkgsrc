@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/10/15 12:36:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/13 21:24:58 abs Exp $
 #
 
 DISTNAME=	bugzilla-2.22.1
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=webtools/}
 
@@ -12,7 +13,6 @@ COMMENT=	Web based bug tracking system
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=1.38:../../databases/p5-DBI
-DEPENDS+=	p5-File-Spec>=0.84:../../devel/p5-File-Spec
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
