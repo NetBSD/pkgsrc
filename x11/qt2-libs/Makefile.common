@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2006/05/15 21:58:22 joerg Exp $
+# $NetBSD: Makefile.common,v 1.28 2007/01/13 18:26:54 joerg Exp $
 #
 
 DISTNAME=	qt-x11-${QTVERSION}
@@ -50,7 +50,7 @@ SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_SED.paths+=	-e 's,@QTDIR@,${QTPREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 
 pre-build:
 	@${TOUCH} ${WRKSRC}/.buildopts
