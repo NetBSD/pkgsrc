@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/01/13 01:02:55 markd Exp $
+# $NetBSD: Makefile,v 1.57 2007/01/13 22:17:47 joerg Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 PKGREVISION=	1
@@ -50,6 +50,8 @@ post-configure:
 	${MV} Makefile Makefile.save; ${GREP} -v "^#>" Makefile.save > Makefile; \
 	${RM} Makefile.save)
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
@@ -57,5 +59,10 @@ post-configure:
 .include "../../net/openslp/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
