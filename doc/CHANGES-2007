@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.103 2007/01/13 05:21:19 toshii Exp $
+$NetBSD: CHANGES-2007,v 1.104 2007/01/13 08:58:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -176,3 +176,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/kftpgrabber to 0.8.0 [markd 2007-01-13]
 	Updated wm/wmii to 2.5.2nb1 [obache 2007-01-13]
 	Added x11/xf86-video-nv version 1.2.2 [toshii 2007-01-13]
+	Updated audio/cmus to 2.1.0 [wiz 2007-01-13]
