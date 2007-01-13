@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/22 04:46:19 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/13 18:41:23 joerg Exp $
 #
 
 DISTNAME=	ede-1.0.4
@@ -18,6 +18,7 @@ USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
 .include "../../x11/efltk/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
