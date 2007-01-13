@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/13 01:09:29 markd Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/13 17:14:14 joerg Exp $
 
 DISTNAME=	kftpgrabber-0.8.0
 CATEGORIES=	net kde
@@ -14,9 +14,13 @@ USE_TOOLS+=		gmake msgfmt perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

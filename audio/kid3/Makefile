@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/07 12:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/13 17:22:59 joerg Exp $
 #
 
 DISTNAME=		kid3-0.7
@@ -18,10 +18,15 @@ USE_LANGUAGES+=		c c++
 # Note: put app specific data files into kde dir
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libtunepimp0.4/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

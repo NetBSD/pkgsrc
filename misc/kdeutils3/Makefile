@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/06/01 13:58:57 markd Exp $
+# $NetBSD: Makefile,v 1.56 2007/01/13 17:13:59 joerg Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -37,5 +37,5 @@ CONFIGURE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 .include "../../lang/python/application.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
