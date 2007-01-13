@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2007/01/13 18:33:44 wiz Exp $
 
---- configure.orig	2006-03-18 13:44:39.000000000 +0000
+--- configure.orig	2006-10-02 18:17:13.000000000 +0000
 +++ configure
 @@ -28862,34 +28862,15 @@ if test $kde_qtver = 1; then
     kde_qt_dirs="$QTDIR /usr/lib/qt"
@@ -126,7 +126,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  
        USE_THREADS=""
        if test -z "$LIBPTHREAD"; then
-@@ -34616,7 +34576,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
+@@ -34615,7 +34575,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -135,7 +135,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -34683,7 +34643,7 @@ fi
+@@ -34682,7 +34642,7 @@ fi
  
    if test "x$have_ossaudio" = xyes; then
      # for kmix/ and akode/
@@ -144,7 +144,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
    fi
  
  
-@@ -35280,7 +35240,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35279,7 +35239,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -153,7 +153,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -35324,7 +35284,7 @@ _ACEOF
+@@ -35323,7 +35283,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -162,7 +162,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -35434,7 +35394,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35433,7 +35393,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -171,7 +171,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  
  int
  main ()
-@@ -37422,7 +37382,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
+@@ -37432,7 +37392,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -180,7 +180,16 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -38330,7 +38290,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
+@@ -38427,13 +38387,13 @@ if test $ac_cv_header_FLAC_metadata_h = 
+ 	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
+ 	;;
+      esac
+-     echo "$as_me:$LINENO: checking for FLAC__seekable_stream_decoder_process_single in -lFLAC" >&5
+-echo $ECHO_N "checking for FLAC__seekable_stream_decoder_process_single in -lFLAC... $ECHO_C" >&6
+-if test "${ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single+set}" = set; then
++     echo "$as_me:$LINENO: checking for FLAC__stream_decoder_process_single in -lFLAC" >&5
++echo $ECHO_N "checking for FLAC__stream_decoder_process_single in -lFLAC... $ECHO_C" >&6
++if test "${ac_cv_lib_FLAC_FLAC__stream_decoder_process_single+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -189,7 +198,100 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -40500,8 +40460,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -38447,11 +38407,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char FLAC__seekable_stream_decoder_process_single ();
++char FLAC__stream_decoder_process_single ();
+ int
+ main ()
+ {
+-FLAC__seekable_stream_decoder_process_single ();
++FLAC__stream_decoder_process_single ();
+   ;
+   return 0;
+ }
+@@ -38478,20 +38438,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single=yes
++  ac_cv_lib_FLAC_FLAC__stream_decoder_process_single=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single=no
++ac_cv_lib_FLAC_FLAC__stream_decoder_process_single=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single" >&5
+-echo "${ECHO_T}$ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single" >&6
+-if test $ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_FLAC_FLAC__stream_decoder_process_single" >&5
++echo "${ECHO_T}$ac_cv_lib_FLAC_FLAC__stream_decoder_process_single" >&6
++if test $ac_cv_lib_FLAC_FLAC__stream_decoder_process_single = yes; then
+   have_libFLAC=yes
+ fi
+ 
+@@ -38699,9 +38659,9 @@ if test $ac_cv_header_OggFLAC_seekable_s
+ 	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
+ 	;;
+      esac
+-     echo "$as_me:$LINENO: checking for OggFLAC__seekable_stream_decoder_process_single in -lOggFLAC" >&5
+-echo $ECHO_N "checking for OggFLAC__seekable_stream_decoder_process_single in -lOggFLAC... $ECHO_C" >&6
+-if test "${ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single+set}" = set; then
++     echo "$as_me:$LINENO: checking for OggFLAC__stream_decoder_process_single in -lOggFLAC" >&5
++echo $ECHO_N "checking for OggFLAC__stream_decoder_process_single in -lOggFLAC... $ECHO_C" >&6
++if test "${ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -38719,11 +38679,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char OggFLAC__seekable_stream_decoder_process_single ();
++char OggFLAC__stream_decoder_process_single ();
+ int
+ main ()
+ {
+-OggFLAC__seekable_stream_decoder_process_single ();
++OggFLAC__stream_decoder_process_single ();
+   ;
+   return 0;
+ }
+@@ -38750,20 +38710,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single=yes
++  ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single=no
++ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single" >&5
+-echo "${ECHO_T}$ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single" >&6
+-if test $ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single" >&5
++echo "${ECHO_T}$ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single" >&6
++if test $ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single = yes; then
+   have_libOggFLAC=yes
+ fi
+ 
+@@ -40613,8 +40573,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -215,7 +317,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -40564,7 +40539,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40677,7 +40652,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -238,7 +340,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40628,7 +40618,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40741,7 +40731,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -261,7 +363,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40700,6 +40705,9 @@ case "$OS_TYPE" in
+@@ -40813,6 +40818,9 @@ case "$OS_TYPE" in
    SunOS)
      kde_mpeglib_compiles=yes
      ;;
@@ -271,7 +373,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
    *)
      echo "$as_me:$LINENO: result: *** We disable mpeglib for this platform ***" >&5
  echo "${ECHO_T}*** We disable mpeglib for this platform ***" >&6
-@@ -40709,33 +40717,14 @@ esac
+@@ -40822,33 +40830,14 @@ esac
  
  
  
@@ -309,7 +411,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -40780,31 +40769,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -40893,31 +40882,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -348,7 +450,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
      echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
  echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
  if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-@@ -40857,6 +40838,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -40970,6 +40951,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    ac_cv_lib_pthread_pthread_create=yes
@@ -356,7 +458,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -40869,10 +40851,6 @@ LIBS=$ac_check_lib_save_LIBS
+@@ -40982,10 +40964,6 @@ LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
@@ -367,7 +469,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
    fi
  
      if test -z "$LIBPTHREAD" ; then
-@@ -40934,10 +40912,6 @@ rm -f conftest.err conftest.$ac_objext \
+@@ -41047,10 +41025,6 @@ rm -f conftest.err conftest.$ac_objext \
      LIBS=$kde_safe_libs
    fi
  
@@ -378,7 +480,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
  
  
  case "$OS_TYPE" in
-@@ -40959,7 +40933,7 @@ _ACEOF
+@@ -41072,7 +41046,7 @@ _ACEOF
  
      ;;
  
@@ -387,7 +489,7 @@ $NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
      OS_TYPE="BSD"
  
  cat >>confdefs.h <<\_ACEOF
-@@ -45411,11 +45387,6 @@ cat >>$CONFIG_STATUS <<\_ACEOF
+@@ -45524,11 +45498,6 @@ cat >>$CONFIG_STATUS <<\_ACEOF
  
  { (exit 0); exit 0; }
  _ACEOF
