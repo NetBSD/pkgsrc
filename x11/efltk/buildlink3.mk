@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/12/15 20:33:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/01/13 18:35:40 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EFLTK_BUILDLINK3_MK:=	${EFLTK_BUILDLINK3_MK}+
@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.efltk?=	../../x11/efltk
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
