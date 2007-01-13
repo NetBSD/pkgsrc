@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/10 00:56:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/13 08:57:56 wiz Exp $
 bin/cmus
 bin/cmus-remote
 lib/cmus/ip/flac.so
 lib/cmus/ip/mad.so
+lib/cmus/ip/modplug.so
 lib/cmus/ip/vorbis.so
 lib/cmus/ip/wav.so
 lib/cmus/op/ao.so
