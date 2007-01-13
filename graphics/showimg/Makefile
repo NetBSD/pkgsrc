@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/15 19:25:56 markd Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/13 16:34:00 joerg Exp $
 #
 
 DISTNAME=	showimg-0.9.5
@@ -18,9 +18,14 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--without-showimgdb
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../x11/kdebase3/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libkexif/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
