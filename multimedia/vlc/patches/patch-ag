@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2006/09/26 07:27:19 martti Exp $
+$NetBSD: patch-ag,v 1.2 2007/01/13 07:32:36 wiz Exp $
 
---- ./modules/gui/wxwidgets/menus.cpp.orig	2006-05-04 14:22:54.000000000 +0200
-+++ ./modules/gui/wxwidgets/menus.cpp
+--- modules/gui/wxwidgets/menus.cpp.orig	2006-05-04 14:22:54.000000000 +0200
++++ modules/gui/wxwidgets/menus.cpp
 @@ -1013,7 +1013,6 @@ void MenuEvtHandler::OnMenuEvent( wxComm
                                         p_menuitemext->i_object_id );
          if( p_object == NULL ) return;
