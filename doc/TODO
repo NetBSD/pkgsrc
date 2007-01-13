@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5864 2007/01/13 14:42:24 hira Exp $
+$NetBSD: TODO,v 1.5865 2007/01/13 14:48:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1053,7 +1053,6 @@ Suggested package updates
 	o sun-jdk15-5.10
 	o sun-jre15-5.10
 	o suse_base-10.2
-	o svk-2.0.0
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o sylpheed-claws-2.7.0 [now claws-mail]
