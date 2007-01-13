@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/13 00:56:54 adrianp Exp $
 
 DISTNAME=	tinyca-0.6.8
 PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://tinyca.sm-zone.net/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyca.sm-zone.net/
 COMMENT=	GUI written in Perl/Gtk to manage a small CA
 
