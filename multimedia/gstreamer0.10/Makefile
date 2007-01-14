@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/12/11 12:38:18 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/14 11:16:21 joerg Exp $
 #
 
 DISTNAME=		gstreamer-0.10.11
@@ -48,5 +48,4 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0nb1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
