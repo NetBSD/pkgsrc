@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/20 11:22:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/14 09:33:58 wiz Exp $
 bin/k3b
 bin/k3bsetup
+include/k3b_export.h
+include/k3bactivepipe.h
 include/k3baudiocdtrackdrag.h
 include/k3baudiocdtracksource.h
 include/k3baudiocuefilewritingjob.h
@@ -24,6 +26,7 @@ include/k3bcdrdaowriter.h
 include/k3bcdrecordwriter.h
 include/k3bcdtext.h
 include/k3bcdtextvalidator.h
+include/k3bchecksumpipe.h
 include/k3bclonejob.h
 include/k3bcore.h
 include/k3bcuefileparser.h
@@ -31,8 +34,10 @@ include/k3bcutcombobox.h
 include/k3bdatadoc.h
 include/k3bdataitem.h
 include/k3bdatajob.h
+include/k3bdebug.h
 include/k3bdefaultexternalprograms.h
 include/k3bdevice.h
+include/k3bdevice_export.h
 include/k3bdevicecombobox.h
 include/k3bdeviceglobals.h
 include/k3bdevicehandler.h
@@ -40,6 +45,7 @@ include/k3bdevicemanager.h
 include/k3bdeviceselectiondialog.h
 include/k3bdevicetypes.h
 include/k3bdiritem.h
+include/k3bdirsizejob.h
 include/k3bdiskinfo.h
 include/k3bdoc.h
 include/k3bdvdcopyjob.h
@@ -49,10 +55,14 @@ include/k3bdvdjob.h
 include/k3bexceptions.h
 include/k3bexternalbinmanager.h
 include/k3bfileitem.h
+include/k3bfilesplitter.h
+include/k3bfilesysteminfo.h
 include/k3bglobals.h
 include/k3bglobalsettings.h
 include/k3bgrowisofswriter.h
+include/k3bimagefilereader.h
 include/k3binffilewriter.h
+include/k3bintmapcombobox.h
 include/k3bintvalidator.h
 include/k3biso9660.h
 include/k3biso9660backend.h
@@ -73,6 +83,7 @@ include/k3bmovixjob.h
 include/k3bmsf.h
 include/k3bmsfedit.h
 include/k3bmultichoicedialog.h
+include/k3bpipe.h
 include/k3bplugin.h
 include/k3bpluginconfigwidget.h
 include/k3bpluginfactory.h
@@ -82,10 +93,12 @@ include/k3bprogressdialog.h
 include/k3bprojectplugin.h
 include/k3bpushbutton.h
 include/k3bradioaction.h
+include/k3brichtextlabel.h
 include/k3bsignalwaiter.h
-include/k3bsimplejob.h
+include/k3bsimplejobhandler.h
 include/k3bstdguiitems.h
 include/k3bstringutils.h
+include/k3btempfile.h
 include/k3bthread.h
 include/k3bthreadjob.h
 include/k3bthreadwidget.h
@@ -93,17 +106,21 @@ include/k3bthroughputestimator.h
 include/k3btoc.h
 include/k3btocfilewriter.h
 include/k3btoolbox.h
+include/k3btoolbutton.h
 include/k3btrack.h
 include/k3bvalidators.h
 include/k3bvcddoc.h
 include/k3bvcdjob.h
 include/k3bvcdoptions.h
+include/k3bverificationjob.h
 include/k3bversion.h
 include/k3bvideodvddoc.h
 include/k3bvideodvdjob.h
 include/k3bwavefilewriter.h
 include/kcutlabel.h
 lib/kde3/kcm_k3bsetup2.la
+lib/kde3/kfile_k3b.la
+lib/kde3/kio_videodvd.la
 lib/kde3/libk3bartsoutputplugin.la
 lib/kde3/libk3baudiometainforenamerplugin.la
 lib/kde3/libk3baudioprojectcddbplugin.la
@@ -286,12 +303,18 @@ share/kde/apps/k3b/plugins/k3boggvorbisdecoder.plugin
 share/kde/apps/k3b/plugins/k3boggvorbisencoder.plugin
 share/kde/apps/k3b/plugins/k3bsoxencoder.plugin
 share/kde/apps/k3b/plugins/k3bwavedecoder.plugin
+share/kde/apps/k3b/servicemenus/k3b_create_audio_cd.desktop
+share/kde/apps/k3b/servicemenus/k3b_create_data_cd.desktop
+share/kde/apps/k3b/servicemenus/k3b_create_data_dvd.desktop
+share/kde/apps/k3b/servicemenus/k3b_create_video_cd.desktop
+share/kde/apps/k3b/servicemenus/k3b_write_bin_image.desktop
+share/kde/apps/k3b/servicemenus/k3b_write_iso_image.desktop
 share/kde/apps/k3b/tips
-share/kde/apps/konqueror/servicemenus/k3b_create_audio_cd.desktop
-share/kde/apps/konqueror/servicemenus/k3b_create_data_cd.desktop
-share/kde/apps/konqueror/servicemenus/k3b_create_video_cd.desktop
-share/kde/apps/konqueror/servicemenus/k3b_write_bin_image.desktop
-share/kde/apps/konqueror/servicemenus/k3b_write_iso_image.desktop
+share/kde/apps/konqsidebartng/virtual_folders/services/videodvd.desktop
+share/kde/apps/konqueror/servicemenus/k3b_audiocd_rip.desktop
+share/kde/apps/konqueror/servicemenus/k3b_cd_copy.desktop
+share/kde/apps/konqueror/servicemenus/k3b_dvd_copy.desktop
+share/kde/apps/konqueror/servicemenus/k3b_videodvd_rip.desktop
 share/kde/icons/hicolor/128x128/apps/k3b.png
 share/kde/icons/hicolor/16x16/apps/k3b.png
 share/kde/icons/hicolor/22x22/apps/k3b.png
@@ -299,6 +322,8 @@ share/kde/icons/hicolor/32x32/apps/k3b.png
 share/kde/icons/hicolor/48x48/apps/k3b.png
 share/kde/icons/hicolor/64x64/apps/k3b.png
 share/kde/mimelnk/application/x-k3b.desktop
+share/kde/services/kfile_k3b.desktop
+share/kde/services/videodvd.protocol
 share/kde/sounds/k3b_error1.wav
 share/kde/sounds/k3b_success1.wav
 share/kde/sounds/k3b_wait_media1.wav
@@ -311,6 +336,7 @@ share/kde/sounds/k3b_wait_media1.wav
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@dirrm share/kde/apps/k3b/servicemenus
 @dirrm share/kde/apps/k3b/plugins
 @dirrm share/kde/apps/k3b/pics/crystal
 @dirrm share/kde/apps/k3b/pics/73lab
