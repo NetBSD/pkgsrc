@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.117 2007/01/14 04:15:36 taca Exp $
+$NetBSD: CHANGES-2007,v 1.118 2007/01/14 04:39:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -186,8 +186,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/mldonkey to 2.8.2nb1 [wiz 2007-01-13]
 	Updated databases/jdbc-postgresql80 to 8.0-318 [abs 2007-01-13]
 	Updated databases/jdbc-postgresql81 to 8.1-480 [abs 2007-01-13]
-	Added databases/jdbc-postgresql82-8.2-504 [abs 2007-01-13]
-	Added net/p5-Net-eBay-0.40 [abs 2007-01-13]
+	Added databases/jdbc-postgresql82 version 8.2-504 [abs 2007-01-13]
+	Added net/p5-Net-eBay version 0.40 [abs 2007-01-13]
 	Updated multimedia/mkvtoolnix to 1.7.0nb2 [wiz 2007-01-13]
 	Updated audio/SDL_sound to 1.0.1nb6 [wiz 2007-01-13]
 	Updated security/stunnel to 4.20 [schmonz 2007-01-14]
