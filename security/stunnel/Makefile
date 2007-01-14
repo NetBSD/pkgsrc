@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2006/10/16 20:14:26 tv Exp $
+# $NetBSD: Makefile,v 1.58 2007/01/14 00:07:15 schmonz Exp $
 
-DISTNAME=		stunnel-4.15
-PKGREVISION=		1
+DISTNAME=		stunnel-4.20
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
