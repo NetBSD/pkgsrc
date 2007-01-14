@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/06/23 03:00:20 jonb Exp $
+$NetBSD: patch-ab,v 1.2 2007/01/14 05:56:29 jonb Exp $
 
---- doc/sbcl.1.orig	2005-05-05 21:08:44.000000000 +0000
-+++ doc/sbcl.1
-@@ -472,7 +472,7 @@ place to look for support.
+--- doc/sbcl.1.orig	2006-11-02 09:18:37.000000000 -0800
++++ doc/sbcl.1	2007-01-12 22:28:41.000000000 -0800
+@@ -458,7 +458,7 @@
  This variable controls where files like "sbclrc", "sbcl.core", and the
  add-on "contrib" systems are searched for.  If it is not set, then
  sbcl sets it from a compile-time default location which is usually
--/usr/local/lib/sbcl/ but may have been changed e.g. by a third-party
-+@PREFIX@/lib/sbcl/ but may have been changed e.g. by a third-party
+-/usr/local/lib/sbcl/ but may have been changed \fIe.g.\fR by a third-party
++@PREFIX@/lib/sbcl/ but may have been changed \fIe.g.\fR by a third-party
  packager.
  
  .SH FILES
-@@ -512,7 +512,7 @@ been installed, the command
+@@ -498,7 +498,7 @@
  should give you access to the complete manual. Depending on your
  installation it may also be available in HTML and PDF formats in eg.
  .IP
