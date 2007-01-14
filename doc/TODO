@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5875 2007/01/14 16:25:47 wiz Exp $
+$NetBSD: TODO,v 1.5876 2007/01/14 23:44:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -916,7 +916,6 @@ Suggested package updates
 	o py-curl-7.15.5.1
 	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
-	o py-gobject-2.12.3
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
 	o py-logging-0.4.9.6
