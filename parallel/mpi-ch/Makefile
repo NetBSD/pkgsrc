@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/01/07 12:02:43 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2007/01/14 09:03:09 joerg Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		6
@@ -125,6 +125,10 @@ post-install:
 	@${ECHO} "exit" >> ${PREFIX}/sbin/mpiuninstall
 	@${CHMOD} 755 ${PREFIX}/sbin/mpiuninstall
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
