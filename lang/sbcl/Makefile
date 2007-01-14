@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/14 05:56:29 jonb Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-0.9.1
-PKGREVISION=		1
+PKGNAME=		sbcl-1.0.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jonb@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
-
-BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 # It should be possible to have SBCL working on amd64, powerpc,
@@ -31,17 +28,30 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
 # SBCL needs an existing Common Lisp system to build it...
 # Currently allowed systems are CLisp, CMUCL, OpenMCL, and SBCL itself.
 #
-SBCL_BOOT_SYSTEM=	clisp
-#SBCL_BOOT_SYSTEM=	"lisp -batch"
-#SBCL_BOOT_SYSTEM=	"openmcl --batch"
-#SBCL_BOOT_SYSTEM=	sbcl
+#  Note that CLisp 2.39nb1 worked two or three times when testing
+#  this package and it failed to build SBCL twice.  It is also at
+#  least twice as slow as using SBCL when building on an i386 platform.
+#
+#  I have never been able to get CLisp to build on a SPARC system, so
+#  I had to cross build when trying to port SBCL to NetBSD/sparc.
+#  I have reports that CLisp will build on PowerPC platforms, but is
+#  unable to build SBCL.
+#
+#  If SBCL is installed in an unusual place when trying to build this
+#  package, you may need to set the full path in SBCL_BOOT_SYSTEM and
+#  build the package with "SBCL_HOME=/path/to/SBCL/core/image/ make"
+
+#SBCL_BOOT_SYSTEM=	clisp			# CLisp
+#SBCL_BOOT_SYSTEM=	"lisp -batch"		# CMUCL
+#SBCL_BOOT_SYSTEM=	"openmcl --batch"	# OpenMCL
+#SBCL_BOOT_SYSTEM=	sbcl			# SBCL
 
 .if defined(SBCL_BOOT_SYSTEM) && ${SBCL_BOOT_SYSTEM} == clisp
 BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 .endif
 
 .if !defined(SBCL_BOOT_SYSTEM)
-PKG_SKIP_REASON+=	"Sorry, need a Common Lisp system"
+PKG_SKIP_REASON+=	"Sorry, need a Common Lisp system.  See Makefile for details."
 .endif
 
 post-patch:
