@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/07/22 04:46:14 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2007/01/14 12:28:56 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.myodbc
@@ -21,7 +21,7 @@ PLIST_SUBST+=		WITH_GUI='@comment '
 
 .if !empty(PKG_OPTIONS:Mmyodbc-iodbc)
 .  include "../../databases/iodbc/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-iodbc=${BUILDLINK_PREFIX.iodbc}
+CONFIGURE_ARGS+=	--with-iODBC=${BUILDLINK_PREFIX.iodbc}
 CONFIGURE_ARGS+=	--with-odbc-ini=${PKG_SYSCONFDIR.iodbc}/odbc.ini
 .endif
 
