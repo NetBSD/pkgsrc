@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/14 10:13:54 joerg Exp $
+lib/libI810XvMC.la
+lib/xorg/modules/drivers/i810_drv.la
+man/man4/i810.4
+@dirrm lib/xorg/modules/drivers
+@dirrm lib/xorg/modules
+@dirrm lib/xorg
