@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/11/29 21:56:19 drochner Exp $
+# $NetBSD: Makefile,v 1.69 2007/01/14 10:34:53 joerg Exp $
 #
 
 DISTNAME=	epiphany-2.16.2
@@ -55,6 +55,7 @@ BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"
