@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.21 2006/12/18 00:21:31 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.22 2007/01/14 18:56:25 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -66,16 +66,13 @@ case $arg in
 -Wl,--export-dynamic |\
 -Wl,-E		) transform_discard ;;
 
-# Let the options to the linker pass unmodified.
--Wl,*		) transform_pass ;;
+-W[02aclmop],*	) transform_pass ;;
 
 # Ignore options that are probably meant for GCC.
 -W*		) transform_discard_with_warning ;;
 
-# Solaris' linker uses -Bstatic to create static objects.
 -static		) transform_to "-Bstatic" ;;
 
-# Solaris' linker uses -G to create shared objects.
 --export-dynamic |\
 -shared		) transform_to "-G" ;;
 
