@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.131 2007/01/14 15:25:35 obache Exp $
+$NetBSD: CHANGES-2007,v 1.132 2007/01/14 15:55:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -208,3 +208,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/g-wrap to 1.9.7 [wiz 2007-01-14]
 	Updated databases/myodbc to 3.51.12nb3 [obache 2007-01-14]
 	Updated sysutils/rdiff-backup to 1.0.5 [obache 2007-01-14]
+	Updated finance/gnucash to 2.0.4 [wiz 2007-01-14]
