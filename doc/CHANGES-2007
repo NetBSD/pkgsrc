@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.134 2007/01/14 16:25:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.135 2007/01/14 23:44:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -211,3 +211,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated finance/gnucash to 2.0.4 [wiz 2007-01-14]
 	Updated net/libsoup-devel to 2.2.99 [wiz 2007-01-14]
 	Updated converters/convmv to 1.10 [wiz 2007-01-14]
+	Updated devel/py-gobject to 2.12.3 [wiz 2007-01-14]
+	Updated devel/py-gobject-shared to 2.12.3 [wiz 2007-01-14]
