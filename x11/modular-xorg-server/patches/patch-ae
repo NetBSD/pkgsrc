@@ -1,0 +1,44 @@
+$NetBSD: patch-ae,v 1.1 2007/01/14 11:06:02 joerg Exp $
+
+--- hw/xfree86/os-support/drm/xf86drm.c.orig	2007-01-14 11:59:30.000000000 +0100
++++ hw/xfree86/os-support/drm/xf86drm.c
+@@ -141,12 +141,6 @@ drmMsg(const char *format, ...)
+ 
+ static void *drmHashTable = NULL; /* Context switch callbacks */
+ 
+-typedef struct drmHashEntry {
+-    int      fd;
+-    void     (*f)(int, void *, void *);
+-    void     *tagTable;
+-} drmHashEntry;
+-
+ void *drmMalloc(int size)
+ {
+     void *pt;
+@@ -181,26 +175,6 @@ static unsigned long drmGetKeyFromFd(int
+     return st.st_rdev;
+ }
+ 
+-static drmHashEntry *drmGetEntry(int fd)
+-{
+-    unsigned long key = drmGetKeyFromFd(fd);
+-    void          *value;
+-    drmHashEntry  *entry;
+-
+-    if (!drmHashTable) drmHashTable = drmHashCreate();
+-
+-    if (drmHashLookup(drmHashTable, key, &value)) {
+-	entry           = drmMalloc(sizeof(*entry));
+-	entry->fd       = fd;
+-	entry->f        = NULL;
+-	entry->tagTable = drmHashCreate();
+-	drmHashInsert(drmHashTable, key, entry);
+-    } else {
+-	entry = value;
+-    }
+-    return entry;
+-}
+-
+ /**
+  * Compare two busid strings
+  *
