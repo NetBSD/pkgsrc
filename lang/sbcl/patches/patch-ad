@@ -1,14 +1,15 @@
-$NetBSD: patch-ad,v 1.1 2005/07/30 00:21:30 jonb Exp $
+$NetBSD: patch-ad,v 1.2 2007/01/14 05:56:29 jonb Exp $
 
---- contrib/asdf-install/installer.lisp.orig	2005-07-20 22:08:29.000000000 +0000
-+++ contrib/asdf-install/installer.lisp	2005-07-20 22:10:27.000000000 +0000
-@@ -249,8 +249,7 @@
-   (let* ((tar
- 	  (with-output-to-string (o)
- 	    (or
--	     (sb-ext:run-program #-darwin "tar"
--				 #+darwin "gnutar"
-+	     (sb-ext:run-program "@GTAR@"
- 				 (list "-C" (namestring source)
- 				       "-xzvf" (namestring packagename))
- 				 :output o
+--- ./contrib/asdf-install/installer.lisp.orig	2006-09-07 01:49:39.000000000 -0700
++++ ./contrib/asdf-install/installer.lisp	2007-01-12 22:37:22.000000000 -0800
+@@ -256,8 +256,8 @@
+ 
+ (defparameter *tar-program*
+   #+darwin "gnutar"
+-  #+sunos "gtar"
+-  #-(or darwin sunos) "tar")
++  #+(or netbsd sunos) "gtar"
++  #-(or darwin netbsd sunos) "tar")
+ 
+ (defun get-tar-directory (packagename)
+   (let* ((tar (with-output-to-string (o)
