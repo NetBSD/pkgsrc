@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.122 2007/01/14 09:59:20 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.123 2007/01/14 10:21:13 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -197,3 +197,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/keychain to 2.6.8 [martti 2007-01-14]
 	Updated sysutils/k3b to 1.0rc4 [wiz 2007-01-14]
 	Updated textproc/intltool to 0.35.4 [wiz 2007-01-14]
+	Added x11/libXvMC version 1.0.4 [joerg 2007-01-14]
+	Added x11/xf86-video-i810 version 1.7.2 [joerg 2007-01-14]
