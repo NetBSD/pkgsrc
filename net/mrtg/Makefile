@@ -1,26 +1,10 @@
-# $NetBSD: Makefile,v 1.77 2007/01/10 14:25:39 martti Exp $
+# $NetBSD: Makefile,v 1.78 2007/01/14 09:57:52 wiz Exp $
 
 DISTNAME=	mrtg-2.15.0
 CATEGORIES=	net
-MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
-		http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/old/ \
-		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
-		ftp://ftp.chg.ru/pub/networking/management/mrtg/ \
-		ftp://ftp.mirrors.wiretapped.net/pub/mrtg/ \
-		ftp://ftp.planetmirror.com/pub/oetiker/webtools/mrtg/ \
-		ftp://mrtg.pop-mg.com.br/pub/mrtg/pub/ \
-		ftp://ftp.130th.net/pub/mirror/mrtg/ \
-		ftp://ftp.exobit.org/pub/monitoring/mrtg/ \
-		ftp://ftp.azc.uam.mx/mirrors/mrtg/ \
-		ftp://ftp2.cscnet.cz/pub/mirror/mrtg/ \
-		ftp://ftp.unipi.it/pub/mirror/mrtg/ \
-		ftp://venom.ath.cx/mirror/mrtg/ \
-		ftp://ftp.heanet.ie/pub/oetiker/mrtg/ \
-		ftp://ftp.nctu.edu.tw/network/mrtg/ \
-		ftp://ftp.ayamura.org/pub/mrtg/ \
-		ftp://mirror.nucba.ac.jp/mirror/mrtg/ \
-		ftp://sunsite.icm.edu.pl/pub/unix/net/mrtg/ \
-		ftp://net2b.co.pt/pub/mrtg/
+MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
+		http://oss.oetiker.ch/mrtg/pub/old/ \
+		ftp://ftp2.cscnet.cz/pub/mirror/mrtg/
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/mrtg/
