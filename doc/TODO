@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5870 2007/01/14 13:13:58 wiz Exp $
+$NetBSD: TODO,v 1.5871 2007/01/14 14:24:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,6 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o g-wrap-1.9.7
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
