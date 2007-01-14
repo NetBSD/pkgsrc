@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/12/23 13:59:57 rillig Exp $
+# $NetBSD: Makefile,v 1.64 2007/01/14 09:22:28 joerg Exp $
 #
 
 DISTNAME=		yelp-2.16.2
@@ -35,6 +35,7 @@ BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 BUILDLINK_API_DEPENDS.libxml2+=			libxml2>=2.6.5
 
 BUILDLINK_DEPMETHOD.gnome-doc-utils+=   full
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -57,6 +58,9 @@ BUILDLINK_DEPMETHOD.gnome-doc-utils+=   full
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/seamonkey/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
