@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.302 2007/01/13 15:40:21 obache Exp $
+# $NetBSD: Makefile,v 1.303 2007/01/14 14:06:51 obache Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -197,6 +197,7 @@ SUBDIR+=	ruby-tmail
 SUBDIR+=	safecat
 SUBDIR+=	sendmail
 SUBDIR+=	sendmail812
+SUBDIR+=	sendymail
 SUBDIR+=	serialmail
 SUBDIR+=	sigrot
 SUBDIR+=	sma
