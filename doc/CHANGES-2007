@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.116 2007/01/14 04:13:09 taca Exp $
+$NetBSD: CHANGES-2007,v 1.117 2007/01/14 04:15:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -192,3 +192,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/SDL_sound to 1.0.1nb6 [wiz 2007-01-13]
 	Updated security/stunnel to 4.20 [schmonz 2007-01-14]
 	Updated www/squid to 2.6.7 [taca 2007-01-14]
+	Updated devel/ruby-ncurses to 1.0nb2 [taca 2007-01-14]
