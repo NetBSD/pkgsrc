@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.40 2007/01/11 12:12:12 rillig Exp $
+# $NetBSD: subst.mk,v 1.41 2007/01/14 17:05:02 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -33,6 +33,11 @@
 #	Command to clean up after sed(1). Defaults to ${RM} -f
 #	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
 #
+# SUBST_SKIP_TEXT_CHECK.<class>
+#	By default, each file is checked whether it really is a text file
+#	before any substitutions are done to it. Since that test is not
+#	perfect, it can be disabled by setting this variable to "yes".
+#
 # Keywords: subst
 #
 
@@ -52,6 +57,13 @@ _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
 SUBST_POSTCMD.${_class_}?=	${RM} -f "$$tmpfile"
+SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
+
+.if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
+_SUBST_IS_TEXT_FILE.${_class_}=	${TRUE}
+.else
+_SUBST_IS_TEXT_FILE.${_class_}=	${_SUBST_IS_TEXT_FILE}
+.endif
 
 SUBST_TARGETS+=			subst-${_class_}
 
@@ -76,7 +88,7 @@ ${_SUBST_COOKIE.${_class_}}:
 	for file in $$files; do						\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
-		if ${_SUBST_IS_TEXT_FILE}; then				\
+		if ${_SUBST_IS_TEXT_FILE.${_class_}}; then		\
 			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
 			${SUBST_FILTER_CMD.${_class_}}			\
 			< "$$tmpfile"					\
