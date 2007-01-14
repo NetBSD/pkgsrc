@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/17 13:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/14 10:52:29 joerg Exp $
 
 DISTNAME=	libast-0.6.1
 PKGREVISION=	3
@@ -20,7 +20,11 @@ TEST_TARGET=		test
 LDFLAGS+=-lresolv
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
