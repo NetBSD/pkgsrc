@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.125 2007/01/14 11:37:41 markd Exp $
+$NetBSD: CHANGES-2007,v 1.126 2007/01/14 12:32:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -202,3 +202,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xtrans to 1.0.3 [joerg 2007-01-14]
 	Updated misc/koffice to 1.6.1nb1 [markd 2007-01-14]
 	Updated multimedia/kmplayer to 0.9.3a [markd 2007-01-14]
+	Updated databases/myodbc to 3.51.12nb2 [obache 2007-01-14]
