@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.119 2007/01/14 05:57:43 jonb Exp $
+$NetBSD: CHANGES-2007,v 1.120 2007/01/14 08:33:31 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/squid to 2.6.7 [taca 2007-01-14]
 	Updated devel/ruby-ncurses to 1.0nb2 [taca 2007-01-14]
 	Updated lang/sbcl to 1.0.1 [jonb 2007-01-14]
+	Updated security/keychain to 2.6.8 [martti 2007-01-14]
