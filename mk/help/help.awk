@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.9 2007/01/11 00:36:12 rillig Exp $
+# $NetBSD: help.awk,v 1.10 2007/01/14 16:42:37 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -35,7 +35,7 @@ function end_of_topic() {
 		found_anything = yes;
 		print "===> "last_fname":";
 		for (i = 0; i < nlines; i++) {
-			if (!print_noncomment_lines || (lines[i] ~ /^#/))
+			if (print_noncomment_lines || (lines[i] ~ /^#/))
 				print lines[i];
 		}
 	}
@@ -49,7 +49,7 @@ function end_of_topic() {
 }
 
 always {
-	ignore_this_line = (ignore_next_empty_line && $0 == "#");
+	ignore_this_line = (ignore_next_empty_line && $0 == "#") || $0 == "";
 	ignore_next_empty_line = no;
 }
 
