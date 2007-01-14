@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5872 2007/01/14 14:29:52 wiz Exp $
+$NetBSD: TODO,v 1.5873 2007/01/14 15:55:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -473,7 +473,6 @@ Suggested package updates
 	o gnome-user-docs-2.16.1
 	o gnome-vfsmm-2.16.1
 	o gnomeicu-0.99.12
-	o gnucash-2.0.4
 	o gnupg2-2.0.2
 	o gnustep-objc-1.4.0
 	o gnutls-1.6.1
