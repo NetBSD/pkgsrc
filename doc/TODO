@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5873 2007/01/14 15:55:45 wiz Exp $
+$NetBSD: TODO,v 1.5874 2007/01/14 16:16:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -599,7 +599,6 @@ Suggested package updates
 	o libprelude-0.9.12.1
 	o libpreludedb-0.9.11.1
 	o libshout-2.2
-	o libsoup-devel-2.2.99
 	o libssh-0.2
 	o libstatgrab-0.14
 	o libtcl-nothread-8.4.9
