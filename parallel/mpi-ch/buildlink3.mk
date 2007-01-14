@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:04 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/14 09:03:09 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MPICH_BUILDLINK3_MK:=	${MPICH_BUILDLINK3_MK}+
@@ -17,5 +17,7 @@ BUILDLINK_ABI_DEPENDS.mpich?=	mpich>=1.2.6nb3
 BUILDLINK_PKGSRCDIR.mpich?=	../../parallel/mpi-ch
 BUILDLINK_DEPMETHOD.mpich?=	build
 .endif	# MPICH_BUILDLINK3_MK
+
+.include "../../x11/libX11/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
