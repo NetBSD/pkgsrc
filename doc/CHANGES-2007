@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.133 2007/01/14 16:16:09 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.134 2007/01/14 16:25:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/rdiff-backup to 1.0.5 [obache 2007-01-14]
 	Updated finance/gnucash to 2.0.4 [wiz 2007-01-14]
 	Updated net/libsoup-devel to 2.2.99 [wiz 2007-01-14]
+	Updated converters/convmv to 1.10 [wiz 2007-01-14]

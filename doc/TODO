@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5874 2007/01/14 16:16:09 wiz Exp $
+$NetBSD: TODO,v 1.5875 2007/01/14 16:25:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,6 @@ Suggested package updates
 	o columba-1.0RC1
 	o compface-1.5.2
 	o control-center-2.16.1
-	o convmv-1.10
 	o coreutils-6.7
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
