@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/11 11:56:08 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/14 15:19:04 rillig Exp $
 #
 
 DISTNAME=		open-cobol-0.32
@@ -33,4 +33,7 @@ SUBST_SED.fixchkgmp=	-e 's|__gmp_rand|__gmp_randinit|g'
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.if ${BDB_TYPE} != "db1"
+CONFIGURE_ARGS+=	--with-db
+.endif
 .include "../../mk/bsd.pkg.mk"
