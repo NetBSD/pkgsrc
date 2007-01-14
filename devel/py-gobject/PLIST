@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/09/15 15:13:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/14 23:43:25 wiz Exp $
 ${PYSITELIB}/gtk-2.0/dsextras.py
 ${PYSITELIB}/gtk-2.0/dsextras.pyc
 ${PYSITELIB}/gtk-2.0/dsextras.pyo
@@ -25,7 +25,6 @@ share/gtk-doc/html/pygobject/gobject-functions.html
 share/gtk-doc/html/pygobject/index.html
 share/gtk-doc/html/pygobject/index.sgml
 share/gtk-doc/html/pygobject/pygobject-introduction.html
-share/gtk-doc/html/pygobject/pygobject-reference-copyright.html
 share/gtk-doc/html/pygobject/pygobject.devhelp
 share/gtk-doc/html/pygobject/style.css
 share/pygobject/xsl/common.xsl
