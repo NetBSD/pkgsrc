@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/14 05:56:29 jonb Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/14 06:04:56 jonb Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.1
@@ -51,7 +51,7 @@ BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 .endif
 
 .if !defined(SBCL_BOOT_SYSTEM)
-PKG_SKIP_REASON+=	"Sorry, need a Common Lisp system.  See Makefile for details."
+PKG_FAIL_REASON+=	"Sorry, need a Common Lisp system.  See Makefile for details."
 .endif
 
 post-patch:
