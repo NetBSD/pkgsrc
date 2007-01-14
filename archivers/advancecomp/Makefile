@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/22 04:46:13 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/14 16:28:40 rillig Exp $
 
 DISTNAME=	advancecomp-1.15
 CATEGORIES=	archivers
@@ -12,6 +12,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CFLAGS+=	-features=extensions
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
