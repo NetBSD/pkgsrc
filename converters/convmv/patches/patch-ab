@@ -1,11 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2006/02/11 17:24:17 heinz Exp $
+$NetBSD: patch-ab,v 1.3 2007/01/14 16:25:25 wiz Exp $
 
---- suite/dotests.sh.orig	Fri Dec  9 17:11:46 2005
+--- suite/dotests.sh.orig	2006-06-25 22:01:16.000000000 +0000
 +++ suite/dotests.sh
-@@ -1,77 +1,86 @@
+@@ -1,13 +1,21 @@
  #!/bin/sh
--for d in `ls -d test*` ; do cd $d ; ls -R -g -G --time-style=+ >../out-$d ; cd .. ; done
-+
+ # this requires GNU find to be used because of -printf feature
+ # you might want to change this to GNU find's full path:
+-FIND=find
++FIND=${CONVMV_FIND}
+ FINDEXP="%P -- %l\n"
+-for dir in `ls -d test*` ; do $FIND $dir/ -printf "$FINDEXP" > out-$dir ; done
 +# make this overridable on non-GNU systems which may have those commands
 +# as gls and gcp
 +CONVMV_LS=${CONVMV_LS:-ls}
@@ -14,94 +18,54 @@ $NetBSD: patch-ab,v 1.2 2006/02/11 17:24:17 heinz Exp $
 +# to get 0777 permissions for symlinks on non-Linux systems
 +umask 0
 +
-+for d in `${CONVMV_LS} -d test*` ; do cd $d ; ${CONVMV_LS} -R -g -G --time-style=+ >../out-$d ; cd .. ; done
++for dir in `${CONVMV_LS} -d test*` ; do $FIND $dir/ -printf "$FINDEXP" > out-$dir ; done
  #
  echo smartness-test
- rm -rf test2
--cp -a test test2
-+${CONVMV_CP} -a test test2
- ../convmv -f iso8859-15 -t utf8 --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- diff out-test out2 || { echo "smartness-test failed." ; exit 1; }
- #
- echo double-utf8 test
- ../convmv -f iso8859-15 -t utf8 --notest -r --nosmart test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- pwd
- diff out-test-utf8 out2 || { echo "double-utf8 test failed." ; exit 1; }
- #
- ../convmv -f utf8 -t iso8859-15 --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- pwd
- diff out-test out2 || { echo undo-double-utf8 test failed. ; exit 1; }
+ rm -rf test.tmp
+-cp -r test test.tmp
++${CONVMV_CP} -r test test.tmp
+ ../convmv -f iso8859-15 -t utf8 --notest -r test.tmp
+ false
+ $FIND test.tmp -printf "$FINDEXP" > out.tmp
+@@ -24,21 +32,21 @@ diff out-test out.tmp > diff.tmp|| { ech
  #
  echo utf8-to-iso8859-15-test
- rm -r test2
--cp -a test test2
-+${CONVMV_CP} -a test test2
- ../convmv -f utf8 -t iso8859-15 --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- diff out-test-iso8859-15 out2 || { echo utf8-to-iso8859-15-test failed. ; exit 1; }
+ rm -r test.tmp
+-cp -r test test.tmp
++${CONVMV_CP} -r test test.tmp
+ ../convmv -f utf8 -t iso8859-15 --notest -r test.tmp
+ $FIND test.tmp -printf "$FINDEXP" > out.tmp
+ diff out-test-iso8859-15 out.tmp > diff.tmp|| { echo utf8-to-iso8859-15-test failed. ; exit 1; }
  #
  echo iso8859-15-to-utf8-test
- rm -r test2
--cp -a test-iso8859-15 test2
-+${CONVMV_CP} -a test-iso8859-15 test2
- ../convmv -f iso8859-15 -t utf8 --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- diff out-test out2 || { echo iso8859-15-to-utf8-test failed. ; exit 1; }
+ rm -r test.tmp
+-cp -r test-iso8859-15 test.tmp
++${CONVMV_CP} -r test-iso8859-15 test.tmp
+ ../convmv -f iso8859-15 -t utf8 --notest -r test.tmp
+ $FIND test.tmp -printf "$FINDEXP" > out.tmp
+ diff out-test out.tmp > diff.tmp|| { echo iso8859-15-to-utf8-test failed. ; exit 1; }
  #
  echo nfc-test
- rm -r test2
--cp -a test test2
-+${CONVMV_CP} -a test test2
- ../convmv -f utf8 -t utf8 --nfd --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- diff out-test-nfd out2 || { echo nfd-test failed. ; exit 1; }
- #
- ../convmv -f utf8 -t utf8 --nfc --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- diff out-test out2 || { echo nfc-test failed. ; exit 1; }
+ rm -r test.tmp
+-cp -r test test.tmp
++${CONVMV_CP} -r test test.tmp
+ ../convmv -f utf-8 -t utf-8 --nfd --notest -r test.tmp
+ $FIND test.tmp -printf "$FINDEXP" > out.tmp
+ diff out-test-nfd out.tmp > diff.tmp|| { echo nfd-test failed. ; exit 1; }
+@@ -49,14 +57,14 @@ diff out-test out.tmp > diff.tmp|| { ech
  #
  echo escaped-test
- rm -r test2
--cp -a test-escaped test2
-+${CONVMV_CP} -a test-escaped test2
- ../convmv --unescape --notest -r test2
- cd test2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- diff out-test out2 || { echo escaped-test failed. ; exit 1; }
+ rm -r test.tmp
+-cp -r test-escaped test.tmp
++${CONVMV_CP} -r test-escaped test.tmp
+ ../convmv --unescape --notest -r test.tmp
+ $FIND test.tmp -printf "$FINDEXP" > out.tmp
+ diff out-test out.tmp > diff.tmp|| { echo escaped-test failed. ; exit 1; }
  #
- rm -r test2
--cp -a test test2
-+${CONVMV_CP} -a test test2
- ../convmv --upper -f utf8 --notest -r test2
- cd TEST2
--ls -R -g -G --time-style=+ >../out2
-+${CONVMV_LS} -R -g -G --time-style=+ >../out2
- cd ..
- rm -r TEST2
- diff out-test-upper out2 || { echo upper-test failed. ; exit 1; }
+ echo upper-test
+ rm -r test.tmp
+-cp -r test test.tmp
++${CONVMV_CP} -r test test.tmp
+ ../convmv --upper -f utf8 --notest -r test.tmp
+ $FIND TEST.TMP -printf "$FINDEXP" > out.tmp
+ diff out-test-upper out.tmp > diff.tmp|| { echo upper-test failed. ; exit 1; }
