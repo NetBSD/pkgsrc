@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.5 2007/01/14 09:33:58 wiz Exp $
+
+--- libk3b/tools/k3bfilesysteminfo.cpp.orig	2007-01-09 13:49:54.000000000 +0000
++++ libk3b/tools/k3bfilesysteminfo.cpp
+@@ -31,6 +31,13 @@
+ #endif
+ #ifdef HAVE_SYS_STATVFS_H
+ #  include <sys/statvfs.h>
++#  if defined(Q_OS_NETBSD)
++#    include <sys/param.h>
++#    if __NetBSD_Version__ > 299000000
++#      define statfs		statvfs
++#      define f_type		f_fsid
++#    endif
++#  endif
+ #endif
+ #ifdef HAVE_SYS_VFS_H
+ #  include <sys/vfs.h>

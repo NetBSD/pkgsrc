@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.4 2007/01/14 09:33:58 wiz Exp $
+
+--- src/projects/k3bencodingconverter.cpp.orig	2007-01-09 13:36:36.000000000 +0000
++++ src/projects/k3bencodingconverter.cpp
+@@ -62,7 +62,7 @@ bool K3bEncodingConverter::encodedLocall
+ {
+ #ifdef HAVE_ICONV_H
+   QCString utf8Encoded( s.length()*2 );
+-#ifdef Q_OS_FREEBSD
++#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
+   const char* in = s.data();
+ #else
+   char* in = s.data();
+@@ -111,7 +111,7 @@ bool K3bEncodingConverter::convert( cons
+   iconv_t ic = ::iconv_open( to.local8Bit(), from.local8Bit() );
+ 
+   result.resize( s.length() * 2 );
+-#ifdef Q_OS_FREEBSD
++#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
+   const char* in = s.data();
+ #else
+   char* in = s.data();
