@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.137 2007/01/15 03:25:14 taca Exp $
+$NetBSD: CHANGES-2007,v 1.138 2007/01/15 06:16:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -219,3 +219,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/py-gobject-shared to 2.12.3 [wiz 2007-01-14]
 	Updated pkgtools/pkg_alternatives to 1.4 [rillig 2007-01-15]
 	Updated security/pam-ldap to 183 [taca 2007-01-15]
+	Updated devel/flex to 2.5.33 [rillig 2007-01-15]
