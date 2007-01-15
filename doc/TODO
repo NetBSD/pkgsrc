@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5876 2007/01/14 23:44:27 wiz Exp $
+$NetBSD: TODO,v 1.5877 2007/01/15 03:25:40 taca Exp $
 
 Suggested new packages
 ======================
@@ -711,7 +711,6 @@ Suggested package updates
 	o oregano-0.60.0
 	o oroborus-2.0.15
 	o otpCalc-0.97
-	o pam_ldap-183
 	o p0f-2.0.8
 	o p11-2.10c
 	o p4-2005.1 [schmonz]
