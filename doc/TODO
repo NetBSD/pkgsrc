@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5877 2007/01/15 03:25:40 taca Exp $
+$NetBSD: TODO,v 1.5878 2007/01/15 10:48:05 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -887,7 +887,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o postgrey-1.27
 	o powermanga-0.80
-	o prayer-1.0.15
+	o prayer-1.0.18
 	o prelude-lml-0.9.8.1
 	o prelude-manager-0.9.7
 	o projclock-0.9
