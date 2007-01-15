@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5883 2007/01/15 20:26:35 tonio Exp $
+$NetBSD: TODO,v 1.5884 2007/01/15 22:24:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -250,6 +250,7 @@ Suggested package updates
 	o amanda-server-2.5.0
 	o amavis-0.3.12
 	o amaya-9.53
+	o anjuta-2.1.0
 	o anomy-sanitizer-1.74
 	o anthy-7900 [pkg/34651]
 	o ap-Embperl-1.3.6
@@ -264,6 +265,7 @@ Suggested package updates
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
 	o apache-ant-1.7.1
+	o apache22-2.2.4
 	o apcupsd-3.10.16
 	o aqsis-1.0.1 [heinz]
 	o aranym-0.9.0
@@ -278,12 +280,14 @@ Suggested package updates
 	o asterisk-1.4.0
 	o astyle-1.15.3
 	o at-spi-1.7.13
+	o auctex-11.84
 	o audacity-1.2.6
 	o autogen-5.8.8
 	o avcheck-0.91
 	o avl-2.0.1
 	o avr-libc-1.4.1
 	o baci-20040415
+	o bacula-2.0.1
 	o balsa-2.3.13
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -338,7 +342,7 @@ Suggested package updates
 	o coreutils-6.7
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
-	o courier-mta-0.54
+	o courier-mta-0.54.2
 	o cqcam-0.91
 	o crafty-19.5
 	o crossfire-client-1.9.1
@@ -361,6 +365,7 @@ Suggested package updates
 	o denemo-0.7.6
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
+	o devilspie-0.20.1
 	o devtodo-0.1.19
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
@@ -605,6 +610,7 @@ Suggested package updates
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
 	o lmbench-2.5
+	o lmms-0.2.1
 	o loudmouth-1.0.5
 	o lout-3.31
 	o ltm-0.40
@@ -635,7 +641,7 @@ Suggested package updates
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.8.1
+	o mkvtoolnix-2.0.0
 	o mlview-0.9.0
 	o mmix-20050922
 	o moc-2.4.1
@@ -648,7 +654,7 @@ Suggested package updates
 	o moz-flash-0.4.13
 	o mp3blaster-3.2.3
 	o mpage-2.5.4
-	o mpg123-0.62
+	o mpg123-0.63
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.35
 	o mpop-0.8.3
@@ -752,12 +758,14 @@ Suggested package updates
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-File-DirSync-1.12
+	o p5-File-Flat-1.00
 	o p5-File-MimeInfo-0.12
 	o p5-File-Remove-0.34
+	o p5-Finance-Quote-1.13
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
 	o p5-HTML-FillInForm-1.05
-	o p5-HTML-Parser-3.55
+	o p5-HTML-Parser-3.56
 	o p5-HTML-TableExtract-2.10
 	o p5-HTML-Tree-3.23
 	o p5-HTMLObject-2.26
@@ -806,7 +814,7 @@ Suggested package updates
 	o p5-Template-Extract-0.40
 	o p5-Test-Exception-0.24
 	o p5-Test-Harness-2.46
-	o p5-Test-Inline-2.105
+	o p5-Test-Inline-2.200
 	o p5-Test-Simple-0.66
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
@@ -1085,6 +1093,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o uim-1.3.1 [pkg/35315]
 	o unix2dos-1.3
+	o unrar-3.7.2
 	o upx-2.90
 	o userppp-030706
 	o valgrind-3.0.1
@@ -1107,7 +1116,7 @@ Suggested package updates
 	o wdm-1.28
 	o webmin-1.310
 	o weewm-0.01
-	o wesnoth-1.2
+	o wesnoth-1.2.1
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wmweather-2.4.3
