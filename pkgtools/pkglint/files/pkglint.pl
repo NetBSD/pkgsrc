@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.692 2007/01/04 13:00:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.693 2007/01/15 08:45:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5718,8 +5718,6 @@ sub checklines_package_Makefile_varorder($) {
 
 	return unless $opt_warn_varorder;
 
-# TODO: Add support for optional sections with non-optional variables.
-
 	use constant once	=> 0;
 	use constant optional	=> 1;
 	use constant many	=> 2;
@@ -5759,14 +5757,24 @@ sub checklines_package_Makefile_varorder($) {
 				[ "COMMENT", once ],
 			]
 		],
-		[ "Restrictions", optional,
+		[ "Legal issues", optional,
+			[
+				[ "LICENSE", once ],
+				[ "RESTRICTED", optional ],
+				[ "NO_BIN_ON_CDROM", optional ],
+				[ "NO_BIN_ON_FTP", optional ],
+				[ "NO_SRC_ON_CDROM", optional ],
+				[ "NO_SRC_ON_FTP", optional ],
+			]
+		],
+		[ "Technical restrictions", optional,
 			[
 				[ "NOT_FOR_PLATFORM", many ],
 				[ "ONLY_FOR_PLATFORM", many ],
-				[ "NO_BIN_ON_FTP", optional ],
-				[ "NO_SRC_ON_FTP", optional ],
-				[ "NO_BIN_ON_CDROM", optional ],
-				[ "NO_SRC_ON_CDROM", optional ],
+				[ "NOT_FOR_COMPILER", many ],
+				[ "ONLY_FOR_COMPILER", many ],
+				[ "NOT_FOR_UNPRIVILEGED", optional ],
+				[ "ONLY_FOR_UNPRIVILEGED", optional ],
 			]
 		],
 		[ "Dependencies", optional,
@@ -5784,6 +5792,11 @@ sub checklines_package_Makefile_varorder($) {
 	my ($lineno, $sectindex, $varindex) = (0, -1, 0);
 	my ($next_section, $vars, $below, $below_what) = (true, undef, {}, undef);
 
+	# If the current section is optional but contains non-optional
+	# fields, the complete section may be skipped as long as there
+	# has not been a non-optional variable.
+	my $may_skip_section = false;
+
 	# In each iteration, one of the following becomes true:
 	# - new.lineno > old.lineno
 	# - new.sectindex > old.sectindex
@@ -5800,6 +5813,7 @@ sub checklines_package_Makefile_varorder($) {
 			$sectindex++;
 			last if ($sectindex > $#sections);
 			$vars = $sections[$sectindex]->[2];
+			$may_skip_section = ($sections[$sectindex]->[1] == optional);
 			$varindex = 0;
 		}
 
@@ -5819,7 +5833,10 @@ sub checklines_package_Makefile_varorder($) {
 				next;
 			}
 
-			while ($varindex <= $#{$vars} && $varcanon ne $vars->[$varindex]->[0] && $vars->[$varindex]->[1] != once) {
+			while ($varindex <= $#{$vars} && $varcanon ne $vars->[$varindex]->[0] && ($vars->[$varindex]->[1] != once || $may_skip_section)) {
+				if ($vars->[$varindex]->[1] == once) {
+					$may_skip_section = false;
+				}
 				$below->{$vars->[$varindex]->[0]} = $below_what;
 				$varindex++;
 			}
@@ -5844,7 +5861,7 @@ sub checklines_package_Makefile_varorder($) {
 
 		} else {
 			while ($varindex <= $#{$vars}) {
-				if ($vars->[$varindex]->[1] == once) {
+				if ($vars->[$varindex]->[1] == once && !$may_skip_section) {
 					$line->log_warning($vars->[$varindex]->[0] . " should be set here.");
 				}
 				$below->{$vars->[$varindex]->[0]} = $below_what;
