@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2006/09/22 06:28:18 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2007/01/15 18:46:39 joerg Exp $
 
 DISTNAME=	gnustep-base-1.13.0
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -47,5 +48,4 @@ PTHREAD_LIBS+=		-lpth
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/gnustep-make/gnustep.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
