@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.152 2007/01/06 14:19:40 rillig Exp $
+# $NetBSD: makevars.map,v 1.153 2007/01/15 08:44:39 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -444,6 +444,7 @@ NM			ShellCommand [$system]
 NONBINMODE		FileMode [$system]
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$package]
 NOT_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
+NOT_FOR_UNPRIVILEGED	YesNo [$package]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
 NO_BIN_ON_FTP		Restricted [m:s,c:s]
 NO_BUILD		Yes [m:s,c:s,Makefile.*:ds]
@@ -461,6 +462,7 @@ NO_SRC_ON_CDROM		Restricted [m:s,c:s]
 NO_SRC_ON_FTP		Restricted [m:s,c:s]
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$package_list]
 ONLY_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
+ONLY_FOR_UNPRIVILEGED	YesNo [$package]
 OPSYS			Identifier [$system]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
@@ -481,6 +483,7 @@ PATCH_DIST_CAT		ShellCommand
 PATCH_DIST_STRIP*	ShellWord [m:s, c:s, b:, builtin.mk:, *.mk:s]
 PATCH_SITES		List of URL [m:s,o:s,c:s]
 PATCH_STRIP		ShellWord
+PERL5_USE_PACKLIST	YesNo [$package]
 PERL5_PACKLIST		List of Perl5Packlist [m:s,o:sa]
 PERL5_PACKLIST_DIR	Pathname []
 PGSQL_VERSIONS_ACCEPTED	List of { 73 74 80 }
@@ -646,6 +649,7 @@ UNPRIVILEGED_USER	UserGroupName [$user]
 UNPRIVILEGED_GROUP	UserGroupName [$user]
 UNWRAP_FILES		List of Pathmask [$package_list]
 UPDATE_TARGET		List of Identifier [$user]
+USE_BSD_MAKEFILE	Yes [$package]
 USE_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
 USE_CROSSBASE		Yes [m:s]
 USE_DIRS		List of {					\
@@ -683,5 +687,5 @@ WRKDIR			Pathname [$system]
 WRKSRC			WrkdirSubdirectory [$package]
 X11_PKGSRCDIR.*		Pathname [$system]
 X11PREFIX		Pathname [$system]
-XAW_TYPE		{ 3d neXtaw standard xpm }
+XAW_TYPE		{ 3d neXtaw standard xpm } [$user]
 XMKMF_FLAGS		List of ShellWord
