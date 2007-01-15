@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/14 09:42:01 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/15 17:49:45 tonio Exp $
 #
 
 DISTNAME=	mpdist-3.7.1
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=--enable-bsd-print
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../x11/libSMbuildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
