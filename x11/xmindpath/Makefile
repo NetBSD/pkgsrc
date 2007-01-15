@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:48 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/15 18:17:38 joerg Exp $
 
 DISTNAME=	magicpoint-1.09a
 PKGNAME=	xmindpath-1.09a
@@ -12,5 +12,12 @@ COMMENT=	MindPath PocketPoint user-level driver for X11
 WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/xmindpath
 GNU_CONFIGURE=	yes
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
