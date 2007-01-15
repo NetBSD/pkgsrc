@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/15 06:14:48 rillig Exp $
 bin/flex
 bin/flex++
 include/FlexLexer.h
+info/flex.info
 lib/libfl.a
 man/man1/flex.1
