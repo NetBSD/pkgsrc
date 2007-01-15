@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2007/01/08 21:45:10 drochner Exp $
+# $NetBSD: Makefile,v 1.83 2007/01/15 17:38:18 joerg Exp $
 
 PKGREVISION=	1
 
@@ -28,4 +28,11 @@ installpamex:
 	${INSTALL_DATA} ${FILESDIR}/pam-xscreensaver-NetBSD \
                 ${EGDIR}/pam.d/xscreensaver-NetBSD
 
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXxf86misc/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
