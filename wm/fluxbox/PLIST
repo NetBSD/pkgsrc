@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/08 23:26:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/15 17:41:28 tonio Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -15,32 +15,56 @@ share/fluxbox/init
 share/fluxbox/keys
 share/fluxbox/menu
 share/fluxbox/nls/C/fluxbox.cat
-share/fluxbox/nls/be_BY/fluxbox.cat
-share/fluxbox/nls/bg_BG/fluxbox.cat
-share/fluxbox/nls/cs_CZ/fluxbox.cat
-share/fluxbox/nls/da_DK/fluxbox.cat
-share/fluxbox/nls/de_DE/fluxbox.cat
-share/fluxbox/nls/el_GR/fluxbox.cat
-share/fluxbox/nls/es_ES/fluxbox.cat
-share/fluxbox/nls/et_EE/fluxbox.cat
-share/fluxbox/nls/fr_FR/fluxbox.cat
-share/fluxbox/nls/it_IT/fluxbox.cat
-share/fluxbox/nls/ja_JP/fluxbox.cat
-share/fluxbox/nls/ko_KR/fluxbox.cat
-share/fluxbox/nls/lv_LV/fluxbox.cat
-share/fluxbox/nls/nb_NO/fluxbox.cat
-share/fluxbox/nls/nl_NL/fluxbox.cat
-share/fluxbox/nls/no_NO/fluxbox.cat
-share/fluxbox/nls/pl_PL/fluxbox.cat
-share/fluxbox/nls/pt_BR/fluxbox.cat
-share/fluxbox/nls/pt_PT/fluxbox.cat
-share/fluxbox/nls/ru_RU/fluxbox.cat
-share/fluxbox/nls/sl_SI/fluxbox.cat
-share/fluxbox/nls/sv_SE/fluxbox.cat
-share/fluxbox/nls/tr_TR/fluxbox.cat
-share/fluxbox/nls/uk_UA/fluxbox.cat
-share/fluxbox/nls/vi_VN/fluxbox.cat
-share/fluxbox/nls/zh_CN/fluxbox.cat
+share/fluxbox/nls/be_BY.CP1251/fluxbox.cat
+share/fluxbox/nls/be_BY.UTF-8/fluxbox.cat
+share/fluxbox/nls/bg_BG.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/bg_BG.UTF-8/fluxbox.cat
+share/fluxbox/nls/cs_CZ.ISO-8859-2/fluxbox.cat
+share/fluxbox/nls/cs_CZ.UTF-8/fluxbox.cat
+share/fluxbox/nls/da_DK.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/da_DK.UTF-8/fluxbox.cat
+share/fluxbox/nls/de_DE.ISO-8859-15/fluxbox.cat
+share/fluxbox/nls/de_DE.UTF-8/fluxbox.cat
+share/fluxbox/nls/el_GR.UTF-8/fluxbox.cat
+share/fluxbox/nls/el_GR.utf8/fluxbox.cat
+share/fluxbox/nls/es_ES.ISO-8859-15/fluxbox.cat
+share/fluxbox/nls/es_ES.UTF-8/fluxbox.cat
+share/fluxbox/nls/et_EE.ISO-8859-15/fluxbox.cat
+share/fluxbox/nls/et_EE.UTF-8/fluxbox.cat
+share/fluxbox/nls/fr_FR.ISO-8859-15/fluxbox.cat
+share/fluxbox/nls/fr_FR.UTF-8/fluxbox.cat
+share/fluxbox/nls/it_IT.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/it_IT.UTF-8/fluxbox.cat
+share/fluxbox/nls/ja_JP.UTF-8/fluxbox.cat
+share/fluxbox/nls/ja_JP.eucJP/fluxbox.cat
+share/fluxbox/nls/ko_KR.EUC-KR/fluxbox.cat
+share/fluxbox/nls/ko_KR.UTF-8/fluxbox.cat
+share/fluxbox/nls/lv_LV.ISO-8859-13/fluxbox.cat
+share/fluxbox/nls/lv_LV.UTF-8/fluxbox.cat
+share/fluxbox/nls/nb_NO.UTF-8/fluxbox.cat
+share/fluxbox/nls/nl_NL.ISO-8859-15/fluxbox.cat
+share/fluxbox/nls/nl_NL.UTF-8/fluxbox.cat
+share/fluxbox/nls/no_NO.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/no_NO.UTF-8/fluxbox.cat
+share/fluxbox/nls/pl_PL.ISO-8859-2/fluxbox.cat
+share/fluxbox/nls/pl_PL.UTF-8/fluxbox.cat
+share/fluxbox/nls/pt_BR.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/pt_BR.UTF-8/fluxbox.cat
+share/fluxbox/nls/pt_PT.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/pt_PT.UTF-8/fluxbox.cat
+share/fluxbox/nls/ru_RU.KOI8-R/fluxbox.cat
+share/fluxbox/nls/ru_RU.UTF-8/fluxbox.cat
+share/fluxbox/nls/sl_SI.ISO-8859-2/fluxbox.cat
+share/fluxbox/nls/sl_SI.UTF-8/fluxbox.cat
+share/fluxbox/nls/sv_SE.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/sv_SE.UTF-8/fluxbox.cat
+share/fluxbox/nls/tr_TR.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/tr_TR.UTF-8/fluxbox.cat
+share/fluxbox/nls/uk_UA.KOI8-U/fluxbox.cat
+share/fluxbox/nls/uk_UA.UTF-8/fluxbox.cat
+share/fluxbox/nls/vi_VN.UTF-8/fluxbox.cat
+share/fluxbox/nls/zh_CN.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/zh_CN.UTF-8/fluxbox.cat
 share/fluxbox/styles/Artwiz
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_active.xpm
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_pressed.xpm
@@ -107,32 +131,56 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/styles/BlueFlux/pixmaps
 @dirrm share/fluxbox/styles/BlueFlux
 @dirrm share/fluxbox/styles
-@dirrm share/fluxbox/nls/zh_CN
-@dirrm share/fluxbox/nls/vi_VN
-@dirrm share/fluxbox/nls/uk_UA
-@dirrm share/fluxbox/nls/tr_TR
-@dirrm share/fluxbox/nls/sv_SE
-@dirrm share/fluxbox/nls/sl_SI
-@dirrm share/fluxbox/nls/ru_RU
-@dirrm share/fluxbox/nls/pt_PT
-@dirrm share/fluxbox/nls/pt_BR
-@dirrm share/fluxbox/nls/pl_PL
-@dirrm share/fluxbox/nls/no_NO
-@dirrm share/fluxbox/nls/nl_NL
-@dirrm share/fluxbox/nls/nb_NO
-@dirrm share/fluxbox/nls/lv_LV
-@dirrm share/fluxbox/nls/ko_KR
-@dirrm share/fluxbox/nls/ja_JP
-@dirrm share/fluxbox/nls/it_IT
-@dirrm share/fluxbox/nls/fr_FR
-@dirrm share/fluxbox/nls/et_EE
-@dirrm share/fluxbox/nls/es_ES
-@dirrm share/fluxbox/nls/el_GR
-@dirrm share/fluxbox/nls/de_DE
-@dirrm share/fluxbox/nls/da_DK
-@dirrm share/fluxbox/nls/cs_CZ
-@dirrm share/fluxbox/nls/bg_BG
-@dirrm share/fluxbox/nls/be_BY
+@dirrm share/fluxbox/nls/zh_CN.UTF-8
+@dirrm share/fluxbox/nls/zh_CN.ISO-8859-1
+@dirrm share/fluxbox/nls/vi_VN.UTF-8
+@dirrm share/fluxbox/nls/uk_UA.UTF-8
+@dirrm share/fluxbox/nls/uk_UA.KOI8-U
+@dirrm share/fluxbox/nls/tr_TR.UTF-8
+@dirrm share/fluxbox/nls/tr_TR.ISO-8859-1
+@dirrm share/fluxbox/nls/sv_SE.UTF-8
+@dirrm share/fluxbox/nls/sv_SE.ISO-8859-1
+@dirrm share/fluxbox/nls/sl_SI.UTF-8
+@dirrm share/fluxbox/nls/sl_SI.ISO-8859-2
+@dirrm share/fluxbox/nls/ru_RU.UTF-8
+@dirrm share/fluxbox/nls/ru_RU.KOI8-R
+@dirrm share/fluxbox/nls/pt_PT.UTF-8
+@dirrm share/fluxbox/nls/pt_PT.ISO-8859-1
+@dirrm share/fluxbox/nls/pt_BR.UTF-8
+@dirrm share/fluxbox/nls/pt_BR.ISO-8859-1
+@dirrm share/fluxbox/nls/pl_PL.UTF-8
+@dirrm share/fluxbox/nls/pl_PL.ISO-8859-2
+@dirrm share/fluxbox/nls/no_NO.UTF-8
+@dirrm share/fluxbox/nls/no_NO.ISO-8859-1
+@dirrm share/fluxbox/nls/nl_NL.UTF-8
+@dirrm share/fluxbox/nls/nl_NL.ISO-8859-15
+@dirrm share/fluxbox/nls/nb_NO.UTF-8
+@dirrm share/fluxbox/nls/lv_LV.UTF-8
+@dirrm share/fluxbox/nls/lv_LV.ISO-8859-13
+@dirrm share/fluxbox/nls/ko_KR.UTF-8
+@dirrm share/fluxbox/nls/ko_KR.EUC-KR
+@dirrm share/fluxbox/nls/ja_JP.eucJP
+@dirrm share/fluxbox/nls/ja_JP.UTF-8
+@dirrm share/fluxbox/nls/it_IT.UTF-8
+@dirrm share/fluxbox/nls/it_IT.ISO-8859-1
+@dirrm share/fluxbox/nls/fr_FR.UTF-8
+@dirrm share/fluxbox/nls/fr_FR.ISO-8859-15
+@dirrm share/fluxbox/nls/et_EE.UTF-8
+@dirrm share/fluxbox/nls/et_EE.ISO-8859-15
+@dirrm share/fluxbox/nls/es_ES.UTF-8
+@dirrm share/fluxbox/nls/es_ES.ISO-8859-15
+@dirrm share/fluxbox/nls/el_GR.utf8
+@dirrm share/fluxbox/nls/el_GR.UTF-8
+@dirrm share/fluxbox/nls/de_DE.UTF-8
+@dirrm share/fluxbox/nls/de_DE.ISO-8859-15
+@dirrm share/fluxbox/nls/da_DK.UTF-8
+@dirrm share/fluxbox/nls/da_DK.ISO-8859-1
+@dirrm share/fluxbox/nls/cs_CZ.UTF-8
+@dirrm share/fluxbox/nls/cs_CZ.ISO-8859-2
+@dirrm share/fluxbox/nls/bg_BG.UTF-8
+@dirrm share/fluxbox/nls/bg_BG.ISO-8859-1
+@dirrm share/fluxbox/nls/be_BY.UTF-8
+@dirrm share/fluxbox/nls/be_BY.CP1251
 @dirrm share/fluxbox/nls/C
 @dirrm share/fluxbox/nls
-@unexec ${RMDIR} %D/share/fluxbox 2>/dev/null || ${TRUE}
+@dirrm share/fluxbox
