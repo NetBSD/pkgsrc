@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.6 2006/06/25 19:50:51 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2007/01/15 22:26:26 wiz Exp $
 
---- src/serialization/string_utils.cpp.orig	2005-09-21 00:35:37.000000000 +0000
+--- src/serialization/string_utils.cpp.orig	2006-09-29 12:59:57.000000000 +0000
 +++ src/serialization/string_utils.cpp
 @@ -23,6 +23,7 @@
- #include "../util.hpp"
- #include "../log.hpp"
- #include "string_utils.hpp"
+ #include "util.hpp"
+ #include "log.hpp"
+ #include "serialization/string_utils.hpp"
 +#include "wctype.h"
  
  #define ERR_GENERAL LOG_STREAM(err, general)
