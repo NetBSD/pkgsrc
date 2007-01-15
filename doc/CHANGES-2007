@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.145 2007/01/15 21:12:59 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.146 2007/01/15 21:35:35 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -227,3 +227,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/lbdb to 0.34 [tonio 2007-01-15]
 	Updated chat/weechat to 0.2.3 [tonio 2007-01-15]
 	Updated textproc/hevea to 1.09 [tonio 2007-01-15]
+	Updated security/caff to 0.4.9 [tonio 2007-01-15]
