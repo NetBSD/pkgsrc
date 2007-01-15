@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2006/10/02 18:49:12 tonio Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/15 20:25:01 tonio Exp $
 #
 
-DISTNAME=	weechat-0.2.1
+DISTNAME=	weechat-0.2.3
 CATEGORIES=	chat
 MASTER_SITES=	http://weechat.flashtux.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://weechat.flashtux.org/
 COMMENT=	Lightweight and user friendly curses based IRC client
 
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-ruby
+CONFIGURE_ARGS+=	--disable-ruby --disable-perl --disable-aspell
 MAKE_ENV+=	INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
 INCOMPAT_CURSES+=	NetBSD-*-*
