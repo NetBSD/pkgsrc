@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
+$NetBSD: patch-aa,v 1.8 2007/01/15 21:12:13 tonio Exp $
 
---- Makefile.orig	2005-05-13 16:08:47.000000000 +0200
+--- Makefile.orig	2006-10-16 11:06:56.000000000 +0200
 +++ Makefile
 @@ -1,16 +1,16 @@
  ################## Configuration parameters
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
  ############### End of configuration parameters
  SUF=
  DIR=
-@@ -22,8 +22,8 @@ OCAMLFLAGS=
+@@ -20,8 +20,8 @@ OCAMLFLAGS=
  OCAMLCI=$(OCAMLC)
  OCAMLOPT=${DIR}ocamlopt$(SUF)
  OCAMLLEX=${DIR}ocamllex$(SUF) -q
@@ -32,10 +32,10 @@ $NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
 +INSTALL=${BSD_INSTALL_DATA}
 +MKDIR=${MKDIR}
  
- ONLYESPONJA=emisc.cmo buff.cmo htmllex.cmo htmlparse.cmo htmltext.cmo pp.cmo util.cmo explode.cmo ultra.cmo esponja.cmo
+ ONLYESPONJA=emisc.cmo buff.cmo pp.cmo htmllex.cmo htmlparse.cmo htmltext.cmo util.cmo explode.cmo ultra.cmo esponja.cmo
  
-@@ -51,34 +51,34 @@ byte:
- 	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte esponja.byte
+@@ -50,37 +50,37 @@ byte:
+ 	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte esponja.byte bibhva.byte
  
  install-lib:
 -	- $(MKDIR) $(DESTDIR)/$(LATEXLIBDIR)
@@ -50,6 +50,9 @@ $NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
 -	- $(MKDIR) $(DESTDIR)/$(LIBDIR)/info
 -	cd info ; $(INSTALL) $(INFOLIB) $(DESTDIR)/$(LIBDIR)/info
 -	$(INSTALL) imagen $(DESTDIR)/$(LIBDIR)
+-	$(INSTALL) xxcharset.exe xxdate.exe $(DESTDIR)/$(LIBDIR)
+-	- $(MKDIR)  $(DESTDIR)/$(LIBDIR)/mappings
+-	cp mappings/*.map $(DESTDIR)/$(LIBDIR)/mappings
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(LATEXLIBDIR)
 +	$(BSD_INSTALL_DATA)  hevea.sty $(DESTDIR)/$(LATEXLIBDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(LIBDIR)
@@ -62,19 +65,22 @@ $NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(LIBDIR)/info
 +	cd info ; $(BSD_INSTALL_DATA) $(INFOLIB) $(DESTDIR)/$(LIBDIR)/info
 +	$(BSD_INSTALL_DATA) imagen $(DESTDIR)/$(LIBDIR)
- 
- 
++	$(BSD_INSTALL_DATA) xxcharset.exe xxdate.exe $(DESTDIR)/$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR)  $(DESTDIR)/$(LIBDIR)/mappings
++	$(BSD_INSTALL_DATA) mappings/*.map $(DESTDIR)/$(LIBDIR)/mappings
  
  install-opt: install-lib
 -	- $(MKDIR) $(DESTDIR)/$(BINDIR)
 -	$(INSTALL) hevea.opt $(DESTDIR)/$(BINDIR)/hevea
 -	$(INSTALL) hacha.opt $(DESTDIR)/$(BINDIR)/hacha
 -	$(INSTALL) esponja.opt $(DESTDIR)/$(BINDIR)/esponja
+-	$(INSTALL) bibhva.opt $(DESTDIR)/$(BINDIR)/bibhva
 -	$(INSTALL) imagen $(DESTDIR)/$(BINDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) hevea.opt $(DESTDIR)/$(BINDIR)/hevea
 +	$(BSD_INSTALL_PROGRAM) hacha.opt $(DESTDIR)/$(BINDIR)/hacha
 +	$(BSD_INSTALL_PROGRAM) esponja.opt $(DESTDIR)/$(BINDIR)/esponja
++	$(BSD_INSTALL_PROGRAM) bibhva.opt $(DESTDIR)/$(BINDIR)/bibhva
 +	$(BSD_INSTALL_SCRIPT) imagen $(DESTDIR)/$(BINDIR)
  
  install-byte: install-lib
@@ -82,11 +88,13 @@ $NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
 -	$(INSTALL) hevea.byte $(DESTDIR)/$(BINDIR)/hevea
 -	$(INSTALL) hacha.byte $(DESTDIR)/$(BINDIR)/hacha
 -	$(INSTALL) esponja.byte $(DESTDIR)/$(BINDIR)/esponja
+-	$(INSTALL) bibhva.byte $(DESTDIR)/$(BINDIR)/bibhva
 -	$(INSTALL) imagen $(DESTDIR)/$(BINDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(BINDIR)
 +	$(BSD_INSTALL_SCRIPT) hevea.byte $(DESTDIR)/$(BINDIR)/hevea
 +	$(BSD_INSTALL_SCRIPT) hacha.byte $(DESTDIR)/$(BINDIR)/hacha
 +	$(BSD_INSTALL_SCRIPT) esponja.byte $(DESTDIR)/$(BINDIR)/esponja
++	$(BSD_INSTALL_SCRIPT) bibhva.byte $(DESTDIR)/$(BINDIR)/bibhva
 +	$(BSD_INSTALL_SCRIPT) imagen $(DESTDIR)/$(BINDIR)
  
  
