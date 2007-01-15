@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5882 2007/01/15 19:43:44 tonio Exp $
+$NetBSD: TODO,v 1.5883 2007/01/15 20:26:35 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1106,7 +1106,6 @@ Suggested package updates
 	o wcalc-2.2.2
 	o wdm-1.28
 	o webmin-1.310
-	o weechat-0.2.3
 	o weewm-0.01
 	o wesnoth-1.2
 	o winbind-3.0.13
