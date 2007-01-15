@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/14 15:37:45 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/15 19:31:46 joerg Exp $
 #
 
 DISTNAME=	quirc-0.9.84
@@ -16,6 +16,11 @@ USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
