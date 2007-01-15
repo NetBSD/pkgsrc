@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/15 06:14:48 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/15 06:23:47 rillig Exp $
 
 DISTNAME=		flex-2.5.33
 CATEGORIES=		lang
@@ -13,6 +13,7 @@ USE_TOOLS+=		bison
 MAKE_JOBS_SAFE=		no
 TEST_TARGET=		check
 INFO_FILES=		yes
+LIBS.SunOS+=		-lm
 
 .include "../../mk/bsd.prefs.mk"
 
