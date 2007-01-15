@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/12/06 14:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/15 15:33:49 joerg Exp $
 #
 
 .include "../../print/evince/Makefile.common"
@@ -30,7 +30,10 @@ CONFIGURE_ARGS+=	--enable-djvu
 
 INSTALL_DIRS=		properties
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
-
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
