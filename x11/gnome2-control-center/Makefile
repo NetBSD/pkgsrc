@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2006/12/15 20:33:04 joerg Exp $
+# $NetBSD: Makefile,v 1.74 2007/01/15 23:30:38 joerg Exp $
 #
 
 DISTNAME=	control-center-2.16.2
@@ -80,8 +80,10 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 
 post-install:
