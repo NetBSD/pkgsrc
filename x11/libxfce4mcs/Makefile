@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/08/11 09:43:09 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/15 21:32:40 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -10,5 +10,10 @@ COMMENT=	Xfce settings management library
 PKGCONFIG_OVERRIDE=	libxfce4mcs/libxfce4mcs-client-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	libxfce4mcs/libxfce4mcs-manager-1.0.pc.in
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
