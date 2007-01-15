@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2007/01/10 10:16:01 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2007/01/15 16:19:43 joerg Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
 MAINTAINER=	adam@NetBSD.org
@@ -64,6 +64,7 @@ SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
