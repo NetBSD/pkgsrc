@@ -1,40 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2007/01/13 02:30:41 obache Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/15 11:39:10 ghen Exp $
 #
 
-DISTNAME=	wmii-2.5.2
-PKGREVISION=	1
-CATEGORIES=	wm x11
-MASTER_SITES=	http://suckless.org/download/
+DISTNAME=		wmii-3.1
+CATEGORIES=		wm
+MASTER_SITES=		http://suckless.org/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wmii.suckless.org/
-COMMENT=	Modular and keyboard-friendly window manager
-
-DEPENDS+=		9base-[0-9]*:../../sysutils/9base
+MAINTAINER=		ghen@NetBSD.org
+HOMEPAGE=		http://wmii.suckless.org/
+COMMENT=		Modular and keyboard-friendly window manager
 
 NO_CONFIGURE=		yes
 
-CFLAGS.SunOS+=		-D__EXTENSIONS__
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
-SUBST_CLASSES+=		vars pfx
-SUBST_STAGE.vars=	post-patch
-SUBST_FILES.vars=	cmd/wm/wmii rc/* cmd/wm/wmii.1
-SUBST_SED.vars=		-e 's|CONFPREFIX|${PREFIX}/share/examples|g'
-SUBST_SED.vars+=	-e 's|9PREFIX|${PREFIX}|g'
-
-SUBST_STAGE.pfx = post-patch
-SUBST_FILES.pfx = config.mk
-SUBST_SED.pfx = -e s,/usr/local,${PREFIX},g
-SUBST_SED.pfx+= -e 's|/usr/X11R6|${X11BASE}|g'
-SUBST_SED.pfx+= -e 's|-L$${X11LIB}|${X11_LDFLAGS}|g'
-SUBST_SED.pfx+= -e 's|CFLAGS = -O0 -g -Wall|CFLAGS+=|g'
-SUBST_SED.pfx+= -e 's|-g||g'
-SUBST_SED.pfx+= -e 's|/9||g'
-SUBST_SED.pfx+= -e 's|cc|${CC}|g'
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	cmd/wm/wmii rc/wmiirc cmd/wm/wmii.1
+SUBST_SED.path+=	-e 's|CONFPREFIX|${PKG_SYSCONFBASE}|g'
 
 PKG_SYSCONFSUBDIR=	wmii-3
-EGDIR=			${PREFIX}/share/examples/wmii-3
-EGFILES=		extern kmode quit status welcome wmirc
+EGDIR=			${PREFIX}/share/examples/${PKG_SYSCONFSUBDIR}
+EGFILES=		quit status welcome wmiirc
+CONF_FILES_MODE=	0755
+
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
