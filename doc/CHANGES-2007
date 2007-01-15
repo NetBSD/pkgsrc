@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.143 2007/01/15 19:43:44 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.144 2007/01/15 20:26:35 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -225,3 +225,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/ocaml-ssl version 0.4.0 [tonio 2007-01-15]
 	Updated wm/fluxbox to 1.0rc2 [tonio 2007-01-15]
 	Updated databases/lbdb to 0.34 [tonio 2007-01-15]
+	Updated chat/weechat to 0.2.3 [tonio 2007-01-15]
