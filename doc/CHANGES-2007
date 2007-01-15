@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.138 2007/01/15 06:16:43 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.139 2007/01/15 11:01:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_alternatives to 1.4 [rillig 2007-01-15]
 	Updated security/pam-ldap to 183 [taca 2007-01-15]
 	Updated devel/flex to 2.5.33 [rillig 2007-01-15]
+	Updated mail/safecat to 1.13 [schmonz 2007-01-15]
