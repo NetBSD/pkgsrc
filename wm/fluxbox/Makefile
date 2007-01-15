@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2007/01/15 17:41:28 tonio Exp $
 #
 
-DISTNAME=	fluxbox-0.9.15.1
-PKGREVISION=	1
+DISTNAME=	fluxbox-1.0rc2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +17,9 @@ USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_TRANSFORM+=	rename:-O2:-O1
+.for option in 9 8 7 6 5 4 3 2 s
+BUILDLINK_TRANSFORM+=	rename:-O${option}:-O1
+.endfor
 
 CONFIGURE_ARGS+=	--enable-shape
 CONFIGURE_ARGS+=	--enable-nls
