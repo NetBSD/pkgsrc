@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/08/06 11:07:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/15 22:41:09 wiz Exp $
 
-DISTNAME=	Finance-Quote-1.12
+DISTNAME=	Finance-Quote-1.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
