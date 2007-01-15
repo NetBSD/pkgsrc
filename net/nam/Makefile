@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:04 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/15 16:32:24 joerg Exp $
 
 DISTNAME=	ns-allinone-2.29.3
 PKGNAME=	nam-1.11
@@ -28,11 +28,15 @@ MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
 INSTALLATION_DIRS=	bin
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/tcl-tclcl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-otcl/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
 post-install:
