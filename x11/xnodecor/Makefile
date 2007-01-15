@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:31:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/15 18:13:31 joerg Exp $
 
 DISTNAME=	xnodecor-0.1
 PKGREVISION=	1
@@ -13,11 +13,10 @@ COMMENT=        Borderless or undecorated window support utility
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
