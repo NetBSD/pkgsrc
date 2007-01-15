@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.10 2006/11/03 10:48:05 joerg Exp $
+# $NetBSD: packlist.mk,v 1.11 2007/01/15 05:32:04 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -6,6 +6,10 @@
 # file.
 #
 # The following variables should be set prior to including this file:
+#
+# PERL5_USE_PACKLIST
+#	When set to "yes" (the default), automatically generates the
+#	PLIST for the pkgsrc package from the Perl packlist.
 #
 # PERL5_PACKLIST_DIR	"install*arch" directory under which packlist
 #			files are installed; defaults to
@@ -18,6 +22,11 @@
 _PERL5_PACKLIST_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(PERL5_USE_PACKLIST:M[Yy][Ee][Ss])
+# XXX: still experimental, but many packages already work
+#PERL5_PACKLIST?=	auto/${DISTNAME:C/-[0-9].*$//:C,-,/,g}/.packlist
+.endif
 
 PERL5_PACKLIST_DESTDIR?=	yes
 
