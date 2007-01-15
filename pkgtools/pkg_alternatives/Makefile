@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/09/20 13:00:02 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/15 02:50:06 rillig Exp $
 #
 
-DISTNAME=	pkg_alternatives-1.3
-PKGREVISION=	1
+DISTNAME=	pkg_alternatives-1.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -36,6 +35,7 @@ SUBST_FILES.vars=	*
 SUBST_SED.vars=		-e 's|@CONFDIR@|${PKG_SYSCONFDIR}|g'
 SUBST_SED.vars+=	-e 's|@DATADIR@|${DATADIR}|g'
 SUBST_SED.vars+=	-e 's|@DBDIR@|${DBDIR}|g'
+SUBST_SED.vars+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
 SUBST_SED.vars+=	-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'
 SUBST_SED.vars+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.vars+=	-e 's|@ROOT_USER@|${ROOT_USER}|g'
