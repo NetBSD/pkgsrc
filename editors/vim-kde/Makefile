@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/10/04 21:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/01/15 16:41:19 joerg Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -38,5 +38,5 @@ post-configure:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
-
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
