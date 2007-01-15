@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2006/12/29 10:32:05 schmonz Exp $
+# $NetBSD: options.mk,v 1.23 2007/01/15 03:40:15 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS+=	darwin
 BADRCPTTO_PATCH=	badrcptto.patch
 PATCHFILES+=		${BADRCPTTO_PATCH}
 SITES.${BADRCPTTO_PATCH}=	http://patch.be/qmail/
-PATCH_DIST_STRIP.${BADRCPTTO_PATCH}=	-p2
+PATCH_DIST_STRIP.${BADRCPTTO_PATCH}=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-bigdns)
