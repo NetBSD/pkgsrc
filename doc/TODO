@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5881 2007/01/15 17:42:47 tonio Exp $
+$NetBSD: TODO,v 1.5882 2007/01/15 19:43:44 tonio Exp $
 
 Suggested new packages
 ======================
@@ -560,7 +560,6 @@ Suggested package updates
 	o ksi-3.4.2
 	o latd-1.21
 	o lavaps-2.7
-	o lbdb-0.34
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafnode-1.11.5
