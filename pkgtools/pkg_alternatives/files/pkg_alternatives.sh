@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkg_alternatives.sh,v 1.5 2005/02/10 10:18:03 jmmv Exp $
+# $NetBSD: pkg_alternatives.sh,v 1.6 2007/01/15 02:50:06 rillig Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -41,6 +41,7 @@ Prog_Name=${0##*/}
 Verbose=yes
 
 : ${PKG_DBDIR:=@PKG_DBDIR@}
+: ${PKGMANDIR:=@PKGMANDIR@}
 
 # -------------------------------------------------------------------------
 
@@ -488,7 +489,7 @@ get_my_config() {
 #
 get_manpage() {
     sect=$(get_manpage_sect ${1})
-    echo ${Prefix}/man/man${sect}/${1##*/}.${sect}
+    echo ${Prefix}/${PKGMANDIR}/man${sect}/${1##*/}.${sect}
 }
 
 # -------------------------------------------------------------------------
