@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2003/10/19 19:58:24 kristerw Exp $
---- tryulong32.c.orig	Sun Oct 19 21:38:12 2003
-+++ tryulong32.c	Sun Oct 19 21:40:37 2003
+$NetBSD: patch-aa,v 1.2 2007/01/15 11:01:24 schmonz Exp $
+--- tryulong32.c.orig	2000-02-28 23:10:12.000000000 -0500
++++ tryulong32.c
 @@ -1,5 +1,8 @@
  void main()
  {
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1 2003/10/19 19:58:24 kristerw Exp $
   unsigned long u;
   u = 1;
   u += u; u += u; u += u; u += u; u += u; u += u; u += u; u += u;
-@@ -8,4 +11,5 @@
+@@ -8,4 +11,5 @@ void main()
   u += u; u += u; u += u; u += u; u += u; u += u; u += u; u += u;
   if (!u) _exit(0);
   _exit(1);
