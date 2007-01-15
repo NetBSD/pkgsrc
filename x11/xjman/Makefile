@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/09/03 00:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/15 18:23:21 joerg Exp $
 
 DISTNAME=	xjman-0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese x11
 MASTER_SITES=	http://xjman.dsl.gr.jp/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,6 @@ NO_CONFIGURE=	yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 .for f in Makefile Makefile.inc
