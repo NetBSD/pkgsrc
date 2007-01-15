@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/15 14:21:10 tonio Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/ssl
+lib/ocaml/site-lib/ssl/META
+lib/ocaml/site-lib/ssl/dllssl_stubs.so
+lib/ocaml/site-lib/ssl/dllssl_threads_stubs.so
+lib/ocaml/site-lib/ssl/libssl_stubs.a
+lib/ocaml/site-lib/ssl/libssl_threads_stubs.a
+lib/ocaml/site-lib/ssl/ssl.cma
+lib/ocaml/site-lib/ssl/ssl.cmi
+lib/ocaml/site-lib/ssl/ssl.mli
+lib/ocaml/site-lib/ssl/ssl_threads.cma
+lib/ocaml/site-lib/ssl/ssl_threads.cmi
+lib/ocaml/site-lib/ssl/ssl_threads.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/ssl
+@dirrm lib/ocaml/site-lib/ssl/
