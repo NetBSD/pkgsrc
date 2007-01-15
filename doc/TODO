@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5888 2007/01/15 23:41:04 wiz Exp $
+$NetBSD: TODO,v 1.5889 2007/01/15 23:50:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -418,7 +418,6 @@ Suggested package updates
 	o findutils-4.2.29
 	o flashplayer-0.4.13
 	o fluidsynth-1.0.7a
-	o flyspell-1.7m
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
