@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/06 21:14:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/15 18:27:59 joerg Exp $
 #
 
 DISTNAME=		xgrk-1.6.3
@@ -13,11 +13,13 @@ COMMENT=		Greek keyboard switcher for X11
 
 USE_TOOLS=	gmake
 
+INSTALLATION_DIRS=		bin share/doc/xgrk
+
 do-install:
 	${INSTALL_PROGRAM}	${WRKSRC}/xgrk	${PREFIX}/bin
 	${INSTALL_PROGRAM}	${WRKSRC}/xgrk2	${PREFIX}/bin
-	${INSTALL_DATA_DIR}	${PREFIX}/share/doc/xgrk
 	${INSTALL_DATA}		${WRKSRC}/README ${PREFIX}/share/doc/xgrk
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
