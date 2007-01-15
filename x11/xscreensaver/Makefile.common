@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.94 2007/01/08 21:45:10 drochner Exp $
+# $NetBSD: Makefile.common,v 1.95 2007/01/15 17:38:18 joerg Exp $
 #
 
 # When updating the package, and screensavers are removed,
@@ -67,5 +67,3 @@ GCC_REQD+=		2.95.3
 .include "../../graphics/gle/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-
-.include "../../mk/x11.buildlink3.mk"
