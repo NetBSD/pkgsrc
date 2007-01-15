@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:31:09 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/15 16:58:16 joerg Exp $
 #
 
 DISTNAME=	keylaunch-1.3.0
@@ -15,12 +15,11 @@ USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/keylaunch ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/keylaunch
 	${INSTALL_DATA} ${WRKSRC}/example_rc \
 		${PREFIX}/share/examples/keylaunch/keylaunch.rc
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
