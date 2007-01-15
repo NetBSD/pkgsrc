@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/01/10 10:16:01 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/01/15 16:19:43 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_LIBS_BUILDLINK3_MK:=	${QT3_LIBS_BUILDLINK3_MK}+
@@ -37,6 +37,7 @@ PTHREAD_OPTS+=	require
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .if ${X11_TYPE} == "modular"
 .include "../../x11/libXinerama/buildlink3.mk"
