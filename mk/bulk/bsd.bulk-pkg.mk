@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.131 2007/01/08 22:42:00 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.132 2007/01/15 07:12:15 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -395,15 +395,18 @@ bulk-package:
 			for pkgname in `${PKG_INFO} -e \\*` ; \
 			do \
 				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-					pkgdir=`${AWK} '$$2 == "'"$$pkgname"'" {print $$1}' ${INDEXFILE}`; \
-					if [ -z "$$pkgdir" ]; then \
-					    pkgdir=unknown ; \
-					fi; \
-					if ${PKG_INFO} -qe $$pkgname ; then \
-						${SHCOMMENT} "Remove only unneeded pkgs" ; \
-						pkgdir2=`${ECHO} "$$pkgdir" | ${AWK} '{gsub(/\//,"\\\\/"); gsub(/\+/,"\\\\+"); gsub(/ /,"\\\\ "); gsub(/\./,"\\\\."); print}'` ; \
-						tmp=`${SED} -n -e "/^${_ESCPKGPATH} .* $$pkgdir2 / s;.*;yes;p" ${DEPENDSFILE}` ; \
-						if test "X$$tmp" = "Xyes" ; then \
+					pkgdirs=`${AWK} '$$2 == "'"$$pkgname"'" {print $$1}' ${INDEXFILE}`; \
+					: "Check whether any package in $$pkgdirs is needed for the current package."; \
+					required=no; \
+					for pkgdir in $$pkgdirs; do \
+						req=`${AWK} 'BEGIN { found="no"; } $$1 == "${PKGPATH}" { for (i = 4; i <= NF; i++) { if ($$i == "'"$$pkgdir"'") { found = "yes"; } } } END { print found; }' ${DEPENDSFILE}`; \
+						: echo "DEBUG: PKGPATH=${PKGPATH} pkgdir=$$pkgdir req=$$req"; \
+						if [ $$req = yes ]; then \
+							required=yes; \
+						fi; \
+					done; \
+					if true; then \
+						if [ $$required = yes ]; then \
 							${BULK_MSG} "${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
 						else \
 							case "${BULK_PREREQ}" in \
