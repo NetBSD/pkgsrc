@@ -1,4 +1,4 @@
-# $NetBSD: directories.mk,v 1.2 2007/01/12 07:47:16 rillig Exp $
+# $NetBSD: directories.mk,v 1.3 2007/01/15 06:25:41 rillig Exp $
 #
 # This file contains some short documentation on the directories that
 # are used within pkgsrc.
@@ -47,4 +47,21 @@
 
 # TODO:PKG_SYSCONFDEPOTBASE
 # TODO:PKG_SYSCONFBASEDIR
+#
+
+# PKGDIR
+#	The directory where the various files that define a package are
+#	read from. These are:
+#
+#	* DESCR
+#	* HEADER, HEADER_TEMPLATES
+#	* INSTALL, DEINSTALL
+#	* MESSAGE, MESSAGE.*
+#	* PLIST, PLIST.*
+#	* distinfo
+#	* hacks.mk
+#
+#	Default value: the current directory.
+#
+#	Tags: package-settable
 #
