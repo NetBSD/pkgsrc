@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.141 2007/01/15 14:24:34 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.142 2007/01/15 17:42:47 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -223,3 +223,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/safecat to 1.13 [schmonz 2007-01-15]
 	Updated wm/wmii to 3.1 [ghen 2007-01-15]
 	Added security/ocaml-ssl version 0.4.0 [tonio 2007-01-15]
+	Updated wm/fluxbox to 1.0rc2 [tonio 2007-01-15]
