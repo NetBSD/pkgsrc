@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/15 16:55:14 joerg Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		6
@@ -43,5 +43,7 @@ pre-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
