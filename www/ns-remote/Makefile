@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/10/04 22:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/16 11:24:22 abs Exp $
 
 DISTNAME=	ns-remote
 PKGNAME=	ns-remote-1.11
@@ -17,8 +17,6 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-extract:
 	${MKDIR} ${WRKSRC}
 .for distfile in ${DISTFILES}
@@ -30,4 +28,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ns-remote ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${FILESDIR}/ns-open ${PREFIX}/bin
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
