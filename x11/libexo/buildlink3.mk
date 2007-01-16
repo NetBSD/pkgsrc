@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/16 20:25:55 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EXO_BUILDLINK3_MK:=	${EXO_BUILDLINK3_MK}+
@@ -18,6 +18,8 @@ BUILDLINK_PKGSRCDIR.exo?=	../../x11/libexo
 .endif	# EXO_BUILDLINK3_MK
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxfce4gui/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
 
