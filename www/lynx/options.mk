@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2006/02/06 19:37:49 tv Exp $
+# $NetBSD: options.mk,v 1.8 2007/01/16 07:06:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -8,7 +8,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	socksproxy
 PKG_OPTIONS_GROUP.socksproxy=	socks5 socks4
 
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
-PKG_OPTIONS_GROUP.screen=	ncurses slang curses
+PKG_OPTIONS_GROUP.screen=	ncurses ncursesw slang curses
 
 .include "../../mk/bsd.options.mk"
 
@@ -34,6 +34,13 @@ SCREENTYPE=		slang
 SCREENTYPE=		ncurses
 USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-color-style
+.endif
+.if !empty(PKG_OPTIONS:Mncursesw)
+SCREENTYPE=		ncurses
+USE_NCURSES=		color
+LIBS+=			-lncursesw
+.  include "../../devel/ncursesw/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
 .endif
 .if !empty(PKG_OPTIONS:Mcurses)
