@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2006/11/28 22:17:23 drochner Exp $
+# $NetBSD: Makefile,v 1.79 2007/01/16 20:43:06 joerg Exp $
 #
 
 DISTNAME=		gnome-session-2.16.2
@@ -35,6 +35,8 @@ BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.1
 BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -50,6 +52,9 @@ BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 .include "../../x11/gnome2-control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
