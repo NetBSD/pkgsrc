@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.159 2007/01/16 21:26:27 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.160 2007/01/16 21:33:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -240,4 +240,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/x2vnc to 1.7.2 [abs 2007-01-16]
 	Updated textproc/libxslt to 1.1.19 [rillig 2007-01-16]
 	Updated games/cgoban-java to 3.3.13 [rillig 2007-01-16]
+	Added x11/iceauth version 1.0.1 [joerg 2007-01-16]
+	Added x11/xmessage version 1.0.1 [joerg 2007-01-16]
 	Updated devel/tcl-tclcl to 1.18 [minskim 2007-01-16]
