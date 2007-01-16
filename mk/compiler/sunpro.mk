@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.36 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: sunpro.mk,v 1.37 2007/01/16 17:16:24 dmcmahill Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -37,6 +37,14 @@ _SUNPRO_CXX=		${_SUNPRO_DIR}/bin/CC
 _ALIASES.CXX=		CC c++ g++
 CXXPATH=		${SUNWSPROBASE}/bin/CC
 PKG_CXX:=		${_SUNPRO_CXX}
+.endif
+.if exists(${SUNWSPROBASE}/bin/f77)
+LANGUAGES.sunpro+=	fortran
+_SUNPRO_VARS+=		FC
+_SUNPRO_FC=		${_SUNPRO_DIR}/bin/f77
+_ALIASES.FC=		f77 g77
+FCPATH=			${SUNWSPROBASE}/bin/f77
+PKG_FC:=		${_SUNPRO_FC}
 .endif
 _COMPILER_STRIP_VARS+=	${_SUNPRO_VARS}
 
@@ -97,13 +105,19 @@ ${_SUNPRO_${_var_}}:
 .endfor
 
 # Force the use of f2c-f77 for compiling Fortran.
-_SUNPRO_USE_F2C=	no
-FCPATH=			/nonexistent
-.if !exists(${FCPATH})
-_SUNPRO_USE_F2C=	yes
-.endif
-.if !empty(_SUNPRO_USE_F2C:M[yY][eE][sS])
-.  include "../../mk/compiler/f2c.mk"
-.endif
+#_SUNPRO_USE_F2C=	no
+#FCPATH=			/nonexistent
+#.if !exists(${FCPATH})
+#_SUNPRO_USE_F2C=	yes
+#.endif
+#.if !empty(_SUNPRO_USE_F2C:M[yY][eE][sS])
+# libtool keys off of the compiler name when configuring.  The unfortunate
+# side effect is that if we let "f2c-f77" be called "f77" on solaris then
+# libtool thinks we're using the Sun fortran compiler and it will add
+# '-Qoption ld' to the compiler flags which get passed to the C compiler and
+# those are not understood.  So make sure we call the compiler g77 instead.
+#FC=	g77
+#.  include "../../mk/compiler/f2c.mk"
+#.endif
 
 .endif	# COMPILER_SUNPRO_MK
