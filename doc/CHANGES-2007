@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.151 2007/01/15 23:50:08 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.152 2007/01/16 00:01:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated finance/p5-Finance-Quote to 1.13 [wiz 2007-01-15]
 	Updated textproc/doclifter to 2.3 [wiz 2007-01-15]
 	Updated textproc/flyspell to 1.7m [wiz 2007-01-15]
+	Updated x11/devilspie to 0.20.1 [wiz 2007-01-16]
