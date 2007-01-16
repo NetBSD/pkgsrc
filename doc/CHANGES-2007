@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.157 2007/01/16 19:50:13 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.158 2007/01/16 20:54:26 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -239,3 +239,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/cinepaint to 0.21.2 [adam 2007-01-16]
 	Updated net/x2vnc to 1.7.2 [abs 2007-01-16]
 	Updated textproc/libxslt to 1.1.19 [rillig 2007-01-16]
+	Updated games/cgoban-java to 3.3.13 [rillig 2007-01-16]
