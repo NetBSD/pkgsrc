@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/11/14 10:38:36 tron Exp $
+# $NetBSD: Makefile,v 1.45 2007/01/16 11:07:59 tron Exp $
 
 .include "Makefile.common"
 
@@ -17,17 +17,22 @@ CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 
 LDFLAGS.IRIX+=		-lX11
-LDFLAGS.Darwin+=	-lX11
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=	YES
-.endif
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	YES
+
+.if empty(PKG_BUILD_OPTIONS.gtk2+:Mquartz)
+LDFLAGS.Darwin+=	-lX11
+.else
+CONFIGURE_ARGS+=	--disable-xlib
+.endif
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
