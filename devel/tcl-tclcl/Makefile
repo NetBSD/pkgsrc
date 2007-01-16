@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/01/14 02:03:22 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/16 21:25:59 minskim Exp $
 
-DISTNAME=	tclcl-1.17
-PKGNAME=	tcl-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	tclcl-src-1.18
+PKGNAME=	tcl-${DISTNAME:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 
@@ -12,6 +11,7 @@ COMMENT=	Tcl/C++ interface used by ns and nam
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
