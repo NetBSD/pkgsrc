@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/16 00:53:12 joerg Exp $
 #
 
 DISTNAME=		wmdrawer-0.10.5
@@ -26,5 +26,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmdrawer
 	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/wmdrawer
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
