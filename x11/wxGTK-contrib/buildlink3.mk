@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:11:16 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/01/16 23:27:48 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 WXGTK_CONTRIB_BUILDLINK3_MK:=	${WXGTK_CONTRIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	wxGTK-contrib
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK-contrib
 
 .if !empty(WXGTK_CONTRIB_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.wxGTK-contrib+=	wxGTK-contrib>=2.6.0
+BUILDLINK_API_DEPENDS.wxGTK-contrib+=	wxGTK-contrib>=2.6.0nb2
 BUILDLINK_ABI_DEPENDS.wxGTK-contrib?=	wxGTK-contrib>=2.6.3nb1
 BUILDLINK_PKGSRCDIR.wxGTK-contrib?=	../../x11/wxGTK-contrib
 
