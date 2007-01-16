@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.182 2007/01/02 23:14:54 wiz Exp $
+# $NetBSD: replace.mk,v 1.183 2007/01/16 21:45:38 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -964,6 +964,17 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 # For modular Xorg, these are individual packages.
 #
 .if ${X11_TYPE} == "modular"
+.if !defined(TOOLS_IGNORE.iceauth) && !empty(_USE_TOOLS:Miceauth)
+.  if !empty(PKGPATH:Mx11/iceauth)
+MAKEFLAGS+=		TOOLS_IGNORE.iceauth=
+.  else
+TOOLS_DEPENDS.iceauth?=		iceauth-[0-9]*:../../x11/iceauth
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.iceauth=iceauth
+TOOLS_PATH.iceauth=		${TOOLS_PREFIX.iceauth}/bin/iceauth
+TOOLS_CREATE.iceauth=		iceauth
+.   endif
+.endif
+
 .if !defined(TOOLS_IGNORE.mkfontdir) && !empty(_USE_TOOLS:Mmkfontdir)
 .  if !empty(PKGPATH:Mfonts/mkfontdir)
 MAKEFLAGS+=		TOOLS_IGNORE.mkfontdir=
@@ -1019,14 +1030,24 @@ TOOLS_CREATE.bdftruncate=	bdftruncate
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.xmessage) && !empty(_USE_TOOLS:Mxmessage)
+.  if !empty(PKGPATH:Mx11/xmessage)
+MAKEFLAGS+=		TOOLS_IGNORE.xmessage=
+.  else
+TOOLS_DEPENDS.xmessage?=		xmessage-[0-9]*:../../x11/xmessage
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmessage=xmessage
+TOOLS_PATH.xmessage=		${TOOLS_PREFIX.xmessage}/bin/xmessage
+TOOLS_CREATE.xmessage=		xmessage
+.   endif
+.endif
+
 .endif
 
 # Otherwise these tools are all supplied by an X11 clients package if there is no
 # native tool available.
 #
 .if ${X11_TYPE} != "modular"
-_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale \
-			makepsres xmessage
+_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale xmessage
 
 .for _t_ in ${_TOOLS.x11-clients}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
