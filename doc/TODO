@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5893 2007/01/16 12:54:03 adam Exp $
+$NetBSD: TODO,v 1.5894 2007/01/16 13:31:16 abs Exp $
 
 Suggested new packages
 ======================
@@ -1112,7 +1112,6 @@ Suggested package updates
 	o windowlab-1.34
 	o wmweather-2.4.3
 	o wxGTK-2.8
-	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xblast-2.10.4
 	o xchat-2.8.0
