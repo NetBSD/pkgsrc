@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.154 2007/01/16 12:00:43 adam Exp $
+$NetBSD: CHANGES-2007,v 1.155 2007/01/16 12:54:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/devilspie to 0.20.1 [wiz 2007-01-16]
 	Updated devel/apache-ant to 1.7.0 [tonio 2007-01-16]
 	Updated sysutils/gnome-vfsmm to 2.16.1 [adam 2007-01-16]
+	Updated graphics/cinepaint to 0.21.2 [adam 2007-01-16]
