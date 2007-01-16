@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2007/01/14 09:33:58 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2007/01/16 22:38:08 joerg Exp $
 
 --- src/projects/k3bencodingconverter.cpp.orig	2007-01-09 13:36:36.000000000 +0000
 +++ src/projects/k3bencodingconverter.cpp
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2007/01/14 09:33:58 wiz Exp $
  #ifdef HAVE_ICONV_H
    QCString utf8Encoded( s.length()*2 );
 -#ifdef Q_OS_FREEBSD
-+#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
++#if (defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)) && !defined(__DragonFly__)
    const char* in = s.data();
  #else
    char* in = s.data();
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2007/01/14 09:33:58 wiz Exp $
  
    result.resize( s.length() * 2 );
 -#ifdef Q_OS_FREEBSD
-+#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
++#if (defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)) && !defined(__DragonFly__)
    const char* in = s.data();
  #else
    char* in = s.data();
