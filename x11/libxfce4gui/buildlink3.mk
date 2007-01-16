@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/10/12 09:24:20 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2007/01/16 20:19:13 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXFCE4GUI_BUILDLINK3_MK:=	${LIBXFCE4GUI_BUILDLINK3_MK}+
@@ -18,8 +18,10 @@ BUILDLINK_PKGSRCDIR.libxfce4gui?=	../../x11/libxfce4gui
 
 .include "../../databases/dbh/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
