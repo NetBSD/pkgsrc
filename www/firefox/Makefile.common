@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2007/01/15 19:25:22 joerg Exp $
+# $NetBSD: Makefile.common,v 1.15 2007/01/16 23:35:16 dmcmahill Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -123,6 +123,10 @@ SCRIPTS_ENV+=		SUNOSLIB=""
 .else
 PLIST_SUBST+=		SUNOSLIB="@comment "
 SCRIPTS_ENV+=		SUNOSLIB="@comment "
+.endif
+
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
+MAKEFLAGS+=		NS_USE_GCC=YES
 .endif
 
 SCRIPTS_ENV+=		OBJECT_FMT=${OBJECT_FMT:Q}

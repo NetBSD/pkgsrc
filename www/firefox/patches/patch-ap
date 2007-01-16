@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ap,v 1.6 2007/01/16 23:35:16 dmcmahill Exp $
 
 diff -ruN ../Orig/mozilla/security/coreconf/command.mk ./security/coreconf/command.mk
 --- ../Orig/mozilla/security/coreconf/command.mk	2004-04-26 00:02:17.000000000 +0900
@@ -8,7 +8,7 @@ diff -ruN ../Orig/mozilla/security/coreconf/command.mk ./security/coreconf/comma
  LINK_EXE      = $(LINK) $(OS_LFLAGS) $(LFLAGS)
  NFSPWD        = $(NSINSTALL_DIR)/nfspwd
 -CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
-+CFLAGS       += $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
++CFLAGS        = $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
  		$(XCFLAGS)
  RANLIB        = echo
  TAR           = /bin/tar
