@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2007/01/10 10:25:13 joerg Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/01/16 23:56:35 dmcmahill Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -30,12 +30,12 @@ CONFIG_STATUS_OVERRIDE=		build/config.status
 CONFIG_STATUS_OVERRIDE+=	nsprpub/config.status
 CONFIG_STATUS_OVERRIDE+=	directory/c-sdk/config.status
 
-PKGCONFIG_OVERRIDE+=	build/unix/seamonkey-gtkmozembed.pc
-PKGCONFIG_OVERRIDE+=	build/unix/seamonkey-js.pc
-PKGCONFIG_OVERRIDE+=	build/unix/seamonkey-nspr.pc
-PKGCONFIG_OVERRIDE+=	build/unix/seamonkey-nss.pc
-PKGCONFIG_OVERRIDE+=	build/unix/seamonkey-plugin.pc
-PKGCONFIG_OVERRIDE+=	build/unix/seamonkey-xpcom.pc
+PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-gtkmozembed.pc
+PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-js.pc
+PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-nspr.pc
+PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-nss.pc
+PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-plugin.pc
+PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-xpcom.pc
 # Some .pc files are filled in by the build process, so we can't fix the
 # rpaths until this has happened.
 PKGCONFIG_OVERRIDE_STAGE=	post-build
@@ -126,6 +126,10 @@ SCRIPTS_ENV+=		SUNOSLIB=""
 .else
 PLIST_SUBST+=		SUNOSLIB="@comment "
 SCRIPTS_ENV+=		SUNOSLIB="@comment "
+.endif
+
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
+MAKEFLAGS+=		NS_USE_GCC=YES
 .endif
 
 SCRIPTS_ENV+=		OBJECT_FMT=${OBJECT_FMT:Q}
