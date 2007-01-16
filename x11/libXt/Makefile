@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 20:50:11 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/16 21:25:01 joerg Exp $
 #
 
 DISTNAME=		libXt-1.0.3
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +18,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
+CONFIGURE_ARGS+=	--with-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xt.pc.in
 
