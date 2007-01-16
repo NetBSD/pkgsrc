@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2007/01/08 15:21:13 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/16 12:52:44 adam Exp $
 
-DISTNAME=	cinepaint-0.20-2
-PKGNAME=	cinepaint-0.20.2
-PKGREVISION=	2
+DISTNAME=	cinepaint-0.21-2
+PKGNAME=	cinepaint-0.21.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cinepaint/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.cinepaint.org
+HOMEPAGE=	http://www.cinepaint.org/
 COMMENT=	Motion picture painting and image retouching program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-python
 
 PKGCONFIG_OVERRIDE=	cinepaint-gtk.pc.in
 
