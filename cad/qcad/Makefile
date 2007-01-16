@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.43 2007/01/16 17:13:37 dmcmahill Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -12,7 +12,7 @@ PKGNAME=		qcad-2.0.5.0
 COMMENT=		2D CAD system
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf gmake
 USE_LANGUAGES=		c c++
 
 CONFIGURE_DIRS=		fparser dxflib
@@ -36,6 +36,10 @@ SUBST_FILES.paths+=	qcadlib/src/engine/rs_system.cpp
 SUBST_FILES.paths+=	qcad/src/qc_applicationwindow.cpp
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@QTDIR@,${QTDIR},g'
+
+post-patch:
+	cd ${WRKSRC}/fparser && autoconf
+	cd ${WRKSRC}/dxflib && autoconf
 
 # Just setting BUILD_DIRS would be adequate if qcad could be built with
 # "prepare all" in each module, one by one.  But qcad needs all modules to
