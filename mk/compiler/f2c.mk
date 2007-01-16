@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.8 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: f2c.mk,v 1.9 2007/01/16 17:16:20 dmcmahill Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -79,7 +79,7 @@ _F2C_VARS=	# empty
 PKG_FC?=	${FC}
 _F2C_VARS+=	FC
 _F2C_FC:=	${_F2C_DIR}/bin/${PKG_FC:T}
-_ALIASES.FC+=	f77 f2c-f77
+_ALIASES.FC+=	f77 g77 f2c-f77
 FCPATH=		${_F2CBASE}/bin/f2c-f77
 PKG_FC:=	${_F2C_FC}
 #
