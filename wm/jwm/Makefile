@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/05 16:56:54 abs Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/16 11:20:25 abs Exp $
 #
 
 DISTNAME=		jwm-1.8
@@ -34,5 +34,4 @@ CONF_FILES= 		${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
 
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
