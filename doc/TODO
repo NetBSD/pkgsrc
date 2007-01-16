@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5891 2007/01/16 11:05:12 tonio Exp $
+$NetBSD: TODO,v 1.5892 2007/01/16 12:00:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,6 @@ Suggested package updates
 	o gnome-speech-0.4.7
 	o gnome-spell-1.0.7
 	o gnome-user-docs-2.16.1
-	o gnome-vfsmm-2.16.1
 	o gnomeicu-0.99.12
 	o gnupg2-2.0.2
 	o gnustep-objc-1.4.0
