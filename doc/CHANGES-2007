@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.167 2007/01/17 21:49:54 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.168 2007/01/17 23:38:33 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xorg-server to 6.9.0nb14 [joerg 2007-01-17]
 	Updated sysutils/file to 4.18 [tonio 2007-01-17]
 	Updated security/flawfinder to 1.27 [adrianp 2007-01-17]
+	Added sysutils/bsign version 0.4.5 [agc 2007-01-17]
