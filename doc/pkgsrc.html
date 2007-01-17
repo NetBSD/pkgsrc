@@ -2445,8 +2445,10 @@ works.</p>
 	  <code class="varname">distcc</code> with an appropriate
 	  <code class="varname">PKGSRC_COMPILER</code> setting,
 	  e.g. &#8220;<span class="quote"><code class="varname">ccache gcc</code></span>&#8221;.  This
-	  variable should always be
-	  terminated with a value for a real compiler.</p>
+	  variable should always be terminated with a value for
+	  a real compiler.  Note that only one real compiler
+	  should be listed (e.g. &#8220;<span class="quote"><code class="varname">sunpro gcc</code></span>&#8221;
+	  is not allowed).</p>
 </dd>
 <dt><span class="term"><code class="varname">GCC_REQD</code>:</span></dt>
 <dd><p>This specifies the minimum version of GCC to use
@@ -4444,7 +4446,7 @@ sections.</p>
   <span><strong class="command">diff -bu</strong></span> format, and apply without a fuzz to avoid
   problems. (To force patches to apply with fuzz you can set
   <code class="varname">PATCH_FUZZ_FACTOR=-F2</code>). Furthermore, each patch
-  should contain only changed for a single file, and no file should be
+  should contain only changes for a single file, and no file should be
   patched by more than one patch file. This helps to keep future
   modifications simple.</p>
 <p>Each patch file is structured as follows: In the first line,
@@ -6107,7 +6109,7 @@ user's description or comment.
 user's home directory, and defaults to
 <code class="filename">/nonexistent</code> if not specified.
 <code class="varname">PKG_SHELL.<em class="replaceable"><code>user</code></em></code> is the
-user's shell, and defaults to <code class="filename">/sbinno/login</code> if
+user's shell, and defaults to <code class="filename">/sbin/nologin</code> if
 not specified.</p>
 <p>Similarly, groups can be created by adding entries to the
 <code class="varname">PKG_GROUPS</code> variable, whose syntax is:</p>
@@ -9334,7 +9336,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2686068"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id40664963"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9350,7 +9352,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2686106"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id40664997"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9368,7 +9370,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2686147"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id40665035"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9386,7 +9388,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2686186"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id40665074"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9399,7 +9401,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2686206"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id40665093"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9415,7 +9417,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2686305"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id40665123"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9439,7 +9441,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2686381"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id40665267"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9464,7 +9466,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2686420"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id40665302"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9512,7 +9514,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2686482"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id40665364"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
