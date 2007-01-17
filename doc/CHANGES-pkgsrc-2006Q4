@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.17 2007/01/13 15:16:18 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.18 2007/01/17 15:34:22 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -37,3 +37,5 @@ Pullup ticket 1988 - requested by obache
 security update for acroread7
 Pullup ticket 1990 - requested by markd
 security fix for kdenetwork3
+Pullup ticket 1995 - requested by markd
+security fix for kdegraphics3
