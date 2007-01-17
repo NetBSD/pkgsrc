@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/01/08 11:01:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/17 13:43:49 dmcmahill Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -2418,14 +2418,14 @@ ${TERMINFODIR}/s/scoansi
 ${TERMINFODIR}/s/scoansi-new
 ${TERMINFODIR}/s/scoansi-old
 ${NOT_SUNOS}${TERMINFODIR}/s/screen
-${TERMINFODIR}/s/screen-16color
-${TERMINFODIR}/s/screen-16color-bce
-${TERMINFODIR}/s/screen-16color-bce-s
-${TERMINFODIR}/s/screen-16color-s
-${TERMINFODIR}/s/screen-256color
-${TERMINFODIR}/s/screen-256color-bce
-${TERMINFODIR}/s/screen-256color-bce-s
-${TERMINFODIR}/s/screen-256color-s
+${NOT_SUNOS}${TERMINFODIR}/s/screen-16color
+${NOT_SUNOS}${TERMINFODIR}/s/screen-16color-bce
+${NOT_SUNOS}${TERMINFODIR}/s/screen-16color-bce-s
+${NOT_SUNOS}${TERMINFODIR}/s/screen-16color-s
+${NOT_SUNOS}${TERMINFODIR}/s/screen-256color
+${NOT_SUNOS}${TERMINFODIR}/s/screen-256color-bce
+${NOT_SUNOS}${TERMINFODIR}/s/screen-256color-bce-s
+${NOT_SUNOS}${TERMINFODIR}/s/screen-256color-s
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-bce
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-s
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-w
