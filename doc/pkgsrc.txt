@@ -2010,7 +2010,8 @@ PKGSRC_COMPILER:
 
     The default is "gcc". You can use ccache and/or distcc with an appropriate
     PKGSRC_COMPILER setting, e.g. "ccache gcc". This variable should always be
-    terminated with a value for a real compiler.
+    terminated with a value for a real compiler. Note that only one real
+    compiler should be listed (e.g. "sunpro gcc" is not allowed).
 
 GCC_REQD:
 
@@ -3766,7 +3767,7 @@ patch-ab, etc.
 
 The patch-* files should be in diff -bu format, and apply without a fuzz to
 avoid problems. (To force patches to apply with fuzz you can set
-PATCH_FUZZ_FACTOR=-F2). Furthermore, each patch should contain only changed for
+PATCH_FUZZ_FACTOR=-F2). Furthermore, each patch should contain only changes for
 a single file, and no file should be patched by more than one patch file. This
 helps to keep future modifications simple.
 
@@ -5099,7 +5100,7 @@ Further specification of user details may be done by setting per-user
 variables. PKG_UID.user is the numeric UID for the user. PKG_GECOS.user is the
 user's description or comment. PKG_HOME.user is the user's home directory, and
 defaults to /nonexistent if not specified. PKG_SHELL.user is the user's shell,
-and defaults to /sbinno/login if not specified.
+and defaults to /sbin/nologin if not specified.
 
 Similarly, groups can be created by adding entries to the PKG_GROUPS variable,
 whose syntax is:
