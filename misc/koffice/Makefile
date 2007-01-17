@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.88 2007/01/14 11:31:44 markd Exp $
+# $NetBSD: Makefile,v 1.89 2007/01/17 10:35:40 markd Exp $
 
 DISTNAME=	koffice-1.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.1/src/}
 EXTRACT_SUFX=	.tar.bz2
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	koffce-xpdf-CVE-2007-0104.diff
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
