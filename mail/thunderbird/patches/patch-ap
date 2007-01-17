@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.2 2006/02/05 14:49:05 ghen Exp $
+$NetBSD: patch-ap,v 1.3 2007/01/17 14:18:40 dmcmahill Exp $
 
 --- security/coreconf/command.mk.orig	2006-02-02 13:19:58.000000000 +0100
 +++ security/coreconf/command.mk
@@ -7,7 +7,7 @@ $NetBSD: patch-ap,v 1.2 2006/02/05 14:49:05 ghen Exp $
  LINK_EXE      = $(LINK) $(OS_LFLAGS) $(LFLAGS)
  NFSPWD        = $(NSINSTALL_DIR)/nfspwd
 -CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
-+CFLAGS       += $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
++CFLAGS        = $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
  		$(XCFLAGS)
  RANLIB        = echo
  TAR           = /bin/tar
