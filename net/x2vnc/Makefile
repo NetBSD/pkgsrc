@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2007/01/16 13:30:59 abs Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/17 12:12:15 abs Exp $
 #
 
-DISTNAME=       	x2vnc-1.7.2
+DISTNAME=		x2vnc-1.7.2
 CATEGORIES=		net x11
-MASTER_SITES=   	http://fredrik.hubbe.net/x2vnc/
+MASTER_SITES=		http://fredrik.hubbe.net/x2vnc/
 
-MAINTAINER=	 	pkgsrc-users@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fredrik.hubbe.net/x2vnc.html
 COMMENT=		Multi-console display using X and VNC
 
 GNU_CONFIGURE=		yes
+LDFLAGS.SunOS+=		-lresolv
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
