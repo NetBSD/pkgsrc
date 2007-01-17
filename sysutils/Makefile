@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.385 2007/01/10 10:43:11 drochner Exp $
+# $NetBSD: Makefile,v 1.386 2007/01/17 23:37:27 agc Exp $
 #
 
 COMMENT=	System utilities
@@ -30,6 +30,7 @@ SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bcmfw
 SUBDIR+=	bkpupsd
+SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
 SUBDIR+=	burn
 SUBDIR+=	ccd2iso
