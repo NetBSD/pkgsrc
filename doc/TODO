@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5897 2007/01/17 14:33:45 tron Exp $
+$NetBSD: TODO,v 1.5898 2007/01/17 17:37:14 tonio Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ Suggested package updates
 	o fd-2.08a
 	o fdgw-20040609
 	o fhist-1.14
-	o file-4.18
 	o file-roller-2.16.2
 	o findutils-4.2.29
 	o flashplayer-0.4.13
