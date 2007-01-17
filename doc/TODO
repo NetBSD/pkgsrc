@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5894 2007/01/16 13:31:16 abs Exp $
+$NetBSD: TODO,v 1.5895 2007/01/17 00:17:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,6 +458,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.1.4
 	o gld-1.7
+	o glib2-2.12.8
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -476,7 +477,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
-	o gossip-0.21
+	o gossip-0.22
 	o gourmet-0.13.3
 	o gpsdrive-2.09
 	o gq-1.2.0
@@ -581,7 +582,7 @@ Suggested package updates
 	o libgiigic-1.1.1
 	o libgnomedb-2.99.2
 	o libgpod-0.4.0
-	o libgtop-2.14.5
+	o libgtop-2.14.6
 	o libgtop2-2.14.4
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
@@ -648,7 +649,7 @@ Suggested package updates
 	o moz-flash-0.4.13
 	o mp3blaster-3.2.3
 	o mpage-2.5.4
-	o mpg123-0.63
+	o mpg123-0.64
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.35
 	o mpop-0.8.3
@@ -1042,7 +1043,7 @@ Suggested package updates
 	o suse_base-10.2
 	o sweep-0.9.1
 	o swfdec-0.3.6
-	o sylpheed-claws-2.7.0 [now claws-mail]
+	o sylpheed-claws-2.7.1 [now claws-mail]
 	o sylpheed-devel-2.3.0rc
 	o sympa-5.2
 	o sysinfo-4.2.2
@@ -1123,6 +1124,7 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
+	o xfce4-4.2.4
 	o xfmail-1.5.4
 	o xfmedia-0.9.2 [pkg/35205; wait for xfce4 update]
 	o xfstt-1.7
