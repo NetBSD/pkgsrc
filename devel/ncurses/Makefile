@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/01/08 11:01:05 adam Exp $
+# $NetBSD: Makefile,v 1.76 2007/01/17 13:43:49 dmcmahill Exp $
 
 .include "Makefile.common"
 
@@ -7,13 +7,24 @@ COMMENT=	CRT screen handling and optimization package
 INSTALLATION_DIRS=	share/examples
 
 .if ${OPSYS} == "SunOS"
+# misc/screen  installs screen, screen-bce and screen-s
+# so we need to remove these  here to avoid a conflict.
+# this means we also remove the entries which have a
+# use=screen in them
 SUBST_CLASSES+=		ti
 SUBST_STAGE.ti=		post-configure
 SUBST_MESSAGE.ti=	Removing screen entries from the terminfo database.
 SUBST_FILES.ti=		${TERMINFO_SRC}
+# see misc/screen/PLIST for these:
 SUBST_SED.ti=		-e '/^screen|/,/^$$/d'
-SUBST_SED.ti+=		-e '/^screen-w|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen-bce|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen-s|/,/^$$/d'
+# see ${TERMINFO_SRC} and look for use=screen for these
 SUBST_SED.ti+=		-e '/^screen.teraterm|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen.linux|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen-w|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen-16color/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen-256color/,/^$$/d'
 .endif
 
 post-configure:
