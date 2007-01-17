@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5898 2007/01/17 17:37:14 tonio Exp $
+$NetBSD: TODO,v 1.5899 2007/01/17 21:33:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,6 +411,7 @@ Suggested package updates
 	o file-roller-2.16.2
 	o findutils-4.2.29
 	o flashplayer-0.4.13
+	o flawfinder-1.27
 	o fluidsynth-1.0.7a
 	o fmsx-3.0
 	o fondu-040927
@@ -455,7 +456,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.1.4
 	o gld-1.7
-	o glib2-2.12.8
+	o glib2-2.12.9
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -490,6 +491,7 @@ Suggested package updates
 	o gss-0.0.17
 	o gtar-1.16.1
 	o gtk-systrace-20030623
+	o gtk2+-2.10.8
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
 	o gtklife-5.1
@@ -624,6 +626,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.15
 	o memcached-1.2
+	o memtestplus-1.70
 	o mergeant-0.65
 	o mftrace-1.2.4
 	o mgetty-1.1.35
@@ -851,6 +854,7 @@ Suggested package updates
 	o pgadmin3-1.6.0
 	o phoon-20050629
 	o photopc-3.05
+	o phpmyadmin-2.9.2
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
