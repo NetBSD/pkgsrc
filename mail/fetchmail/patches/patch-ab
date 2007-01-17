@@ -1,21 +1,41 @@
-$NetBSD: patch-ab,v 1.15 2001/06/15 11:42:18 itojun Exp $
+$NetBSD: patch-ab,v 1.15.34.1 2007/01/17 17:52:01 salo Exp $
 
---- Makefile.in.orig	Tue Jun 12 21:12:15 2001
-+++ Makefile.in	Fri Jun 15 20:38:12 2001
-@@ -166,12 +166,12 @@
- 	$(SHELL) ${srcdir}/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)
- 	@echo "Installing fetchmail binary..."
- 	$(INSTALL_PROGRAM) ./fetchmail $(DESTDIR)$(bindir)/fetchmail
--	@echo "Installing fetchmail configurator..."
--	$(INSTALL_PROGRAM) ${srcdir}/fetchmailconf $(DESTDIR)$(bindir)/fetchmailconf
-+#	@echo "Installing fetchmail configurator..."
-+#	$(INSTALL_PROGRAM) ${srcdir}/fetchmailconf $(DESTDIR)$(bindir)/fetchmailconf
- 	@echo "Installing manual page..."
- 	$(INSTALL_DATA) $(srcdir)/fetchmail.man $(DESTDIR)$(mandir)/fetchmail.$(manext)
--	rm -f $(DESTDIR)$(mandir)/fetchmailconf.$(manext)
--	cd $(DESTDIR)$(mandir) && ln -s fetchmail.$(manext) fetchmailconf.$(manext)
-+#	rm -f $(DESTDIR)$(mandir)/fetchmailconf.$(manext)
-+#	cd $(DESTDIR)$(mandir) && ln -s fetchmail.$(manext) fetchmailconf.$(manext)
- 	@echo "Installing language catalogs..."
- 	-cd intl; $(MAKE) install
- 	cd po; $(MAKE) install
+--- Makefile.in.orig	2007-01-05 21:27:59.000000000 +0000
++++ Makefile.in	2007-01-17 13:42:08.000000000 +0000
+@@ -42,7 +42,6 @@
+ host_triplet = @host@
+ target_triplet = @target@
+ bin_PROGRAMS = fetchmail$(EXEEXT)
+-@HAVE_PYTHON_TRUE@am__append_1 = $(pym)
+ check_PROGRAMS = $(am__EXEEXT_1) rfc822$(EXEEXT) unmime$(EXEEXT) \
+ 	netrc$(EXEEXT) rfc2047e$(EXEEXT) mxget$(EXEEXT)
+ @NEED_TRIO_TRUE@am__append_2 = libtrio.a
+@@ -355,7 +354,7 @@
+ libexecdir = @libexecdir@
+ 
+ # for gettext (used by fetchmail.c, NOT by GNU gettext)
+-localedir = $(datadir)/locale
++localedir = /usr/pkg/share/locale
+ localstatedir = @localstatedir@
+ maildrop = @maildrop@
+ mandir = @mandir@
+@@ -391,9 +390,8 @@
+ dist_man1_MANS = fetchmail.man $(am__append_1)
+ pys = fetchmailconf.py
+ pym = fetchmailconf.man
+-@HAVE_PYTHON_TRUE@nodist_bin_SCRIPTS = fetchmailconf
+ @HAVE_PYTHON_TRUE@python_PYTHON = $(pys)
+-@HAVE_PYTHON_FALSE@EXTRA_DIST = $(pym) $(DISTDOCS) fetchmail.spec \
++@HAVE_PYTHON_FALSE@EXTRA_DIST = $(DISTDOCS) fetchmail.spec \
+ @HAVE_PYTHON_FALSE@	$(distdirs) ucs/README.svn trio/CHANGES \
+ @HAVE_PYTHON_FALSE@	trio/README strlcpy.3 bighand.png \
+ @HAVE_PYTHON_FALSE@	m4-local/ac-archive-license.txt \
+@@ -1413,7 +1411,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-man install-pythonPYTHON
++install-data-am: install-man
+ 
+ install-exec-am: install-binPROGRAMS install-nodist_binSCRIPTS
+ 
