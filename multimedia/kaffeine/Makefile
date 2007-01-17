@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/07 12:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/17 03:11:19 rillig Exp $
 #
 
 DISTNAME=	kaffeine-0.8.3
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--without-dpms
 CONFIGURE_ARGS+=	--without-xinerama
 CONFIGURE_ARGS+=	--without-dvb
 
-BUILDLINK_TRANSFORM.cdparanoia+=	-e "s|/cdparanoia/|/|g"
+BUILDLINK_FNAME_TRANSFORM.cdparanoia+=	-e "s|/cdparanoia/|/|g"
 
 # Hardcoded paths for libdvdcss and win32-codecs
 SUBST_CLASSES+=		path
