@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/01/13 18:54:24 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/17 23:47:22 wiz Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 
