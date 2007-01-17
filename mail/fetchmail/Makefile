@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.158 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.159 2007/01/17 14:29:11 tron Exp $
 
-DISTNAME=	fetchmail-6.2.5.5
-PKGREVISION=	1
+DISTNAME=	fetchmail-6.3.6
 CATEGORIES=	mail
 MASTER_SITES=	http://download.berlios.de/fetchmail/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://fetchmail.berlios.de/
