@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/17 23:36:33 agc Exp $
+
+SHA1 (bsign_0.4.5.tar.gz) = f24acc5ec3fc9653ee06a8314da2e8dde8992ebb
+RMD160 (bsign_0.4.5.tar.gz) = 0e57631ee5713088a9209b6d7287765224751453
+Size (bsign_0.4.5.tar.gz) = 77471 bytes
+SHA1 (patch-aa) = 04951a6c9be2b89e8f1ac659a33f3f6f2ab82e20
