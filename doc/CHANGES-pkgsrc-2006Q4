@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.19 2007/01/17 17:10:52 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.20 2007/01/17 17:52:21 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -41,3 +41,5 @@ Pullup ticket 1995 - requested by markd
 security fix for kdegraphics3
 Pullup ticket 1994 - requested by taca
 security update for pam-ldap
+Pullup ticket 1997 - requested by tron
+security update for fetchmail
