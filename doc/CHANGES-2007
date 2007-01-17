@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.165 2007/01/17 16:35:52 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.166 2007/01/17 17:37:14 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -249,3 +249,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/fetchmailconf to 6.3.6 [tron 2007-01-17]
 	Added x11/xauth version 1.0.2 [joerg 2007-01-17]
 	Updated x11/xorg-server to 6.9.0nb14 [joerg 2007-01-17]
+	Updated sysutils/file to 4.18 [tonio 2007-01-17]
