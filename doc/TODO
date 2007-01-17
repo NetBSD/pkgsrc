@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5895 2007/01/17 00:17:50 wiz Exp $
+$NetBSD: TODO,v 1.5896 2007/01/17 13:19:30 tonio Exp $
 
 Suggested new packages
 ======================
@@ -279,7 +279,6 @@ Suggested package updates
 	o asterisk-1.4.0
 	o astyle-1.15.3
 	o at-spi-1.7.13
-	o auctex-11.84
 	o audacity-1.2.6
 	o autogen-5.8.8
 	o avcheck-0.91

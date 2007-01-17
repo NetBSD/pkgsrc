@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.161 2007/01/17 02:54:21 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.162 2007/01/17 13:19:30 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -244,3 +244,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xmessage version 1.0.1 [joerg 2007-01-16]
 	Updated devel/tcl-tclcl to 1.18 [minskim 2007-01-16]
 	Updated sysutils/dbus to 1.0.2nb2 [dmcmahill 2007-01-16]
+	Updated print/auctex to 11.84 [tonio 2007-01-17]
