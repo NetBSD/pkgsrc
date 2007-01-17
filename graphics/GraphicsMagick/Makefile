@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/20 17:23:15 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/17 23:47:19 wiz Exp $
 #
 
 DISTNAME=	GraphicsMagick-1.1.7
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/17 23:47:20 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JASPER_BUILDLINK3_MK:=	${JASPER_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jasper
 
 .if !empty(JASPER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.jasper+=	jasper>=1.600.0
-BUILDLINK_ABI_DEPENDS.jasper+=	jasper>=1.701.0nb2
+BUILDLINK_ABI_DEPENDS.jasper+=	jasper>=1.900.0
 BUILDLINK_PKGSRCDIR.jasper?=	../../graphics/jasper
 .endif	# JASPER_BUILDLINK3_MK
 

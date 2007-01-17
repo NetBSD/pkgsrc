@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/01/11 10:58:49 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/17 23:47:21 wiz Exp $
 
 DISTNAME=	kbiff-3.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kbiff/}
 EXTRACT_SUFX=	.tar.bz2
