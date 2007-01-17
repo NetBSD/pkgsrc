@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/14 09:58:24 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/17 03:11:19 rillig Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -71,7 +71,7 @@ SUBST_STAGE.libav=	post-patch
 SUBST_FILES.libav=	configure
 SUBST_SED.libav=	-e "s,libavcodec/libavcodec.a,libavcodec.a,g"
 
-BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
+BUILDLINK_FNAME_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
