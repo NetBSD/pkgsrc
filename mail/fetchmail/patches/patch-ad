@@ -1,14 +1,0 @@
-$NetBSD: patch-ad,v 1.6 2000/01/10 22:50:18 frueauf Exp $
-
---- acconfig.h-orig	Sun Dec 19 18:17:58 1999
-+++ acconfig.h	Mon Jan 10 22:09:15 2000
-@@ -14,6 +14,9 @@
-    Leave the following blank line there!!  Autoheader needs it.  */
- 
- 
-+/* Define to 1 if you have MD5 */
-+#undef HAVE_MD5
-+
- /* Define to 1 if NLS is requested.  */
- #undef ENABLE_NLS
- 
