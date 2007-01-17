@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.21 2007/01/17 19:29:57 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.22 2007/01/17 21:07:55 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -45,3 +45,5 @@ Pullup ticket 1997 - requested by tron
 security update for fetchmail
 Pullup ticket 1998 - requested by joerg
 security fix for xorg-server
+Pullup ticket 1996 - requested by markd
+security fix for koffice
