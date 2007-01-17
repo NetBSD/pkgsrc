@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.61 2007/01/04 00:57:29 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.62 2007/01/17 13:20:56 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -264,7 +264,8 @@ _WRAP_EXTRA_ARGS.CC+=	-Xcpluscomm -Olimit 6000
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-sunpro-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-sunpro-cc
 _WRAP_ARG_PP.CXX=	${WRAPPER_TMPDIR}/arg-pp-sunpro-cxx
-_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
+_WRAP_CACHE.CXX=	${WRAPPER_TMPDIR}/cache-sunpro-cxx
+_WRAP_CACHE_BODY.CXX=	${WRAPPER_TMPDIR}/cache-body-sunpro-cxx
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 _WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-sunpro-cxx
 _WRAP_CACHE_BODY.CPP=	${_WRAP_CACHE_BODY.CC}
