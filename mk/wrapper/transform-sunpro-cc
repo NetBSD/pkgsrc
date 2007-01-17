@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.22 2007/01/14 18:56:25 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.23 2007/01/17 13:19:47 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,8 +53,8 @@ case $arg in
 -O*		) transform_discard_with_warning ;;
 
 # Directories for the runtime library search path are passed via
-# simply "-R<dir>", not "-Wl,-R<dir>".
-# XXX: Why? For me, -Wl,-R works equally well.
+# simply "-R<dir>", not "-Wl,-R<dir>". This is because the C++ compiler
+# does not know about the -W?,* options.
 -Wl,-R*		) transform_to "${arg#-Wl,}" ;;
 -R*		) transform_pass ;;
 
@@ -63,13 +63,26 @@ case $arg in
 
 # Solaris' linker exports all dynamic symbols by default when
 # building a shared object.
+-export-dynamic	|\
 -Wl,--export-dynamic |\
 -Wl,-E		) transform_discard ;;
 
--W[02aclmop],*	) transform_pass ;;
+-W[02aclmop],*	) case ${0##*/} in
+		  cc | gcc) transform_pass ;;
+		  CC | g++ | c++) transform_discard_with_warning ;;
+		  *) echo "ERROR: [transform-sunpro-cc] cmd = $0"; exit 1 ;;
+		  esac ;;
+
+-Wall		|\
+-W		) case ${0##*/} in
+		  cc | gcc) transform_to "-v" ;;
+		  CC | g++ | c++) transform_to_and_split "+w +w2" ;;
+		  *) echo "ERROR: [transform-sunpro-cc] cmd = $0"; exit 1 ;;
+		  esac ;;
 
 # Ignore options that are probably meant for GCC.
--W*		) transform_discard_with_warning ;;
+-W*		|\
+-Xc		) transform_discard_with_warning ;;
 
 -static		) transform_to "-Bstatic" ;;
 
@@ -78,6 +91,7 @@ case $arg in
 
 -fPIC		|\
 -fpic		) transform_to "-Kpic" ;;
+-KPIC		) transform_pass ;;
 
 # SunPro needs -mt -lpthread for POSIX threads.
 -pthread	) transform_to_and_split "-mt -lpthread" ;;
@@ -89,6 +103,8 @@ case $arg in
 -fast		) transform_to_and_split "-fast -xnolibmopt" ;;
 
 # Pass through those options that SunPro understands.
+-Bdynamic	|\
+-Bstatic	|\
 -fd		|\
 -features*	|\
 -flags		|\
@@ -101,8 +117,17 @@ case $arg in
 -fsingle	|\
 -fstore		|\
 -ftrap*		|\
+-G		|\
+-h*.so.*	|\
 -mt		|\
--template=*	) transform_pass ;;
+-template=*	|\
+-xarch=*	|\
+-xcode=*	|\
+-xdepend	|\
+-xstrconst	|\
+-xtarget=*	) transform_pass ;;
+
+#-xc99		) transform_to_and_split "-xc99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__" ;;
 
 # Ignore all other -f flags.
 -f*		) transform_discard_with_warning ;;
