@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/06/11 01:57:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33 2007/01/17 03:11:18 rillig Exp $
 #
 
 DISTNAME=		jabberd-2.0s11
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6b
-BUILDLINK_TRANSFORM.db4+=	-e "s,/db4/,/,g"
+BUILDLINK_FNAME_TRANSFORM.db4+=	-e "s,/db4/,/,g"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch

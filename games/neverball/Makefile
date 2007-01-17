@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/17 03:11:19 rillig Exp $
 #
 
 DISTNAME=	neverball-1.4.0
@@ -13,8 +13,8 @@ COMMENT=	Part puzzle game, part action game and with SDL graphics
 USE_TOOLS+=	gmake
 
 # Avoiding multiples patches...
-BUILDLINK_TRANSFORM.SDL+=	-e "s|/SDL/|/|g"
-BUILDLINK_TRANSFORM.SDL_ttf+=	-e "s|/SDL/|/|g"
+BUILDLINK_FNAME_TRANSFORM.SDL+=	-e "s|/SDL/|/|g"
+BUILDLINK_FNAME_TRANSFORM.SDL_ttf+=	-e "s|/SDL/|/|g"
 
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 

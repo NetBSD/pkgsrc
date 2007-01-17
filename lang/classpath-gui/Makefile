@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/14 09:22:02 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/17 03:11:19 rillig Exp $
 
 .include "../../lang/classpath/Makefile.common"
 
@@ -14,7 +14,7 @@ BUILD_DIRS+=	native/jni/gtk-peer
 INSTALL_DIRS=	native/jni/gtk-peer
 
 BUILDLINK_FILES.libart2+=	bin/libart2-config
-BUILDLINK_TRANSFORM.libart2+=	-e 's|/libart2-config|/libart-config|g'
+BUILDLINK_FNAME_TRANSFORM.libart2+=	-e 's|/libart2-config|/libart-config|g'
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

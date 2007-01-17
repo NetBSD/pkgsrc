@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/01/13 18:42:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/17 03:11:19 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 QT1_BUILDLINK3_MK:=	${QT1_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.qt1?=	../../x11/qt1
 
 BUILDLINK_PASSTHRU_DIRS=	${LOCALBASE}/qt1
 BUILDLINK_FILES.qt1+=		qt1/bin/*
-BUILDLINK_TRANSFORM.qt1+=	-e s,/qt1/bin/,/bin/,
+BUILDLINK_FNAME_TRANSFORM.qt1+=	-e s,/qt1/bin/,/bin/,
 
 QT1DIR=				${LOCALBASE}/qt1
 .endif	# QT1_BUILDLINK3_MK

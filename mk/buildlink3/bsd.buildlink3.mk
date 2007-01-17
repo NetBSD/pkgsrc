@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.190 2006/12/20 01:04:47 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.191 2007/01/17 03:11:19 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -512,7 +512,7 @@ buildlink-directories:
 #	+CONTENTS, and for pkgviews packages, it outputs any libtool
 #	archives in lib directories.
 #
-# BUILDLINK_TRANSFORM.<pkg>
+# BUILDLINK_FNAME_TRANSFORM.<pkg>
 #	sed arguments used to transform the name of the source filename
 #	into a destination filename, e.g. -e "s|/curses.h|/ncurses.h|g"
 #
@@ -574,7 +574,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 		${ERROR_MSG} "[bsd.buildlink3.mk] X11BASE is not set correctly."; \
 		exit 1;							\
 	}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
 	${LOCALBASE})   buildlink_dir="${BUILDLINK_DIR}" ;;		\
 	${X11BASE})     buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
@@ -587,12 +587,16 @@ ${_BLNK_COOKIE.${_pkg_}}:
 		if [ ! -f "$$src" ]; then					\
 			msg="$$src: not found";				\
 		else							\
-			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}:Q}" ]; then \
+			: "Legacy: Can be removed after 2007Q2.";	\
+			if [ ${BUILDLINK_TRANSFORM.${_pkg_}:Q}"" ]; then \
+				${FAIL_MSG} "[bsd.buildlink3.mk] BUILDLINK_TRANSFORM.${_pkg_} is obsolete. Use BUILDLINK_FNAME_TRANSFORM.${_pkg_} instead."; \
+			fi;						\
+			if [ -z "${BUILDLINK_FNAME_TRANSFORM.${_pkg_}:Q}" ]; then \
 				dest="$$buildlink_dir/$$file";		\
 				msg="$$src";				\
 			else						\
 				dest="$$buildlink_dir/$$file";		\
-				dest=`${ECHO} $$dest | ${SED} ${BUILDLINK_TRANSFORM.${_pkg_}}`; \
+				dest=`${ECHO} $$dest | ${SED} ${BUILDLINK_FNAME_TRANSFORM.${_pkg_}}`; \
 				msg="$$src -> $$dest";			\
 			fi;						\
 			dir=`${DIRNAME} "$$dest"`;			\

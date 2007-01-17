@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.22 2007/01/03 00:58:24 kano Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.23 2007/01/17 03:11:18 rillig Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -331,7 +331,7 @@
 	</listitem>
 
 	<listitem>
-	  <para><varname>BUILDLINK_TRANSFORM.<replaceable>pkg</replaceable></varname>
+	  <para><varname>BUILDLINK_FNAME_TRANSFORM.<replaceable>pkg</replaceable></varname>
 	    (not shown above) is a list of sed arguments used to
 	    transform the name of the source filename into a
 	    destination filename, e.g. <command>-e

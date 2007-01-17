@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: builtin.mk,v 1.12 2007/01/17 03:11:18 rillig Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -109,7 +109,7 @@ BUILDLINK_LDADD.ncurses=	-lncurses
 .  if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 .    if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) || (${OPSYS} == "Interix")
 BUILDLINK_LDADD.ncurses=	-lcurses
-BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses\.h|/ncurses.h|g"
+BUILDLINK_FNAME_TRANSFORM.ncurses+=	-e "s|/curses\.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
 .    endif
 BUILDLINK_FILES.ncurses+=	include/curses.h
