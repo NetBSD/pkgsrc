@@ -1,4 +1,4 @@
-# $NetBSD: directories.mk,v 1.3 2007/01/15 06:25:41 rillig Exp $
+# $NetBSD: directories.mk,v 1.4 2007/01/17 12:47:21 rillig Exp $
 #
 # This file contains some short documentation on the directories that
 # are used within pkgsrc.
@@ -64,4 +64,23 @@
 #	Default value: the current directory.
 #
 #	Tags: package-settable
+#
+
+# WRKDIR
+#	The base directory where all the work is done for building a
+#	package. The pkgsrc infrastructure creates various files in this
+#	directory, whose names all start with a dot.
+#
+#	The default value of EXTRACT_DIR is ${WRKDIR}.
+#	The default value of WRKSRC is ${WRKDIR}/${DISTNAME}.
+#
+#	When PKGSRC_LOCKTYPE is set, a lock file is placed into this
+#	directory to prevent multiple processes from trying to build
+#	the package at the same time.
+#
+#	See also:
+#		EXTRACT_DIR, WRKSRC, CREATE_WRKDIR_SYMLINK, WRKOBJDIR,
+#		WRKDIR_BASENAME, OBJHOSTNAME, OBJMACHINE
+#
+#	Keywords: work
 #
