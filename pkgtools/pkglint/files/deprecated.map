@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.50 2006/11/18 08:20:44 rillig Exp $
+# $NetBSD: deprecated.map,v 1.51 2007/01/17 03:11:19 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -126,3 +126,6 @@ MAKEFILE		Use MAKE_FILE instead.
 # November 2006
 SKIP_PORTABILITY_CHECK	Use CHECK_PORTABILITY_SKIP (a list of patterns) instead.
 PKG_SKIP_REASON		Use PKG_FAIL_REASON instead.
+
+# January 2007
+BUILDLINK_TRANSFORM.*	Use BUILDLINK_FNAME_TRANSFORM.* instead.
