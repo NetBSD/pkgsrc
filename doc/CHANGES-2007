@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.163 2007/01/17 14:33:45 tron Exp $
+$NetBSD: CHANGES-2007,v 1.164 2007/01/17 16:08:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -247,3 +247,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/auctex to 11.84 [tonio 2007-01-17]
 	Updated mail/fetchmail to 6.3.6 [tron 2007-01-17]
 	Updated mail/fetchmailconf to 6.3.6 [tron 2007-01-17]
+	Added x11/xauth version 1.0.2 [joerg 2007-01-17]
