@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2006/12/12 21:52:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2007/01/17 03:11:19 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XORG_LIBS_BUILDLINK3_MK:=	${XORG_LIBS_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_API_DEPENDS.xorg-libs+=		xorg-libs>=6.9.0
 BUILDLINK_ABI_DEPENDS.xorg-libs?=	xorg-libs>=6.9.0nb2
 BUILDLINK_PKGSRCDIR.xorg-libs?=		../../x11/xorg-libs
 BUILDLINK_LIBDIRS.xorg-libs?=		${X11ROOT_PREFIX}/lib
-BUILDLINK_TRANSFORM.xorg-libs+=		-e "s|/${X11ROOT_PREFIX}/|/|"
+BUILDLINK_FNAME_TRANSFORM.xorg-libs+=		-e "s|/${X11ROOT_PREFIX}/|/|"
 
 .endif  # XORG_LIBS_BUILDLINK3_MK
 
