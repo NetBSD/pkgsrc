@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/06 06:22:10 reed Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/17 11:14:46 tonio Exp $
 #
 
 DISTNAME=	coq-8.0pl3
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-reals all
 BUILD_TARGET=		world
 
-BUILDLINK_API_DEPENDS.ocaml+=       ocaml>=3.09
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.09
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,11 +27,22 @@ PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 .endif
 
 .if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=     yes
+INSTALL_UNSTRIPPED=	yes
 # See PR# 28772 as the above should work but it appears to be ignored
 # so we set it explicitly below not to stip installed binaries.
 _STRIPFLAG_CC=
 _STRIPFLAG_INSTALL=
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
+PKG_SUPPORTED_OPTIONS=	coqide
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mcoqide)
+.include "../../x11/lablgtk2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+PLIST_SUBST+=	WITH_IDE=''
+.else
+PLIST_SUBST+=	WITH_IDE='@comment '
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
