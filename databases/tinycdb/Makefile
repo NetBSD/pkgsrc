@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/01/19 04:41:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/18 22:46:12 schmonz Exp $
 #
 
-DISTNAME=		tinycdb_0.75
+DISTNAME=		tinycdb_0.76
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		databases
 MASTER_SITES=		http://www.corpit.ru/mjt/tinycdb/

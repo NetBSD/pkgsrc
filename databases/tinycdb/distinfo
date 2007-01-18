@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/01/19 04:53:44 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2007/01/18 22:46:12 schmonz Exp $
 
-SHA1 (tinycdb_0.75.tar.gz) = 8aa11210f1a3fc697a361b5a8223b37fcb084d29
-RMD160 (tinycdb_0.75.tar.gz) = 3d0eba569aea5acd02f7107391262ce6e26b4f1c
-Size (tinycdb_0.75.tar.gz) = 32025 bytes
-SHA1 (patch-aa) = b65755f7a68dafa3b9db5596e1a12caac1a5fac7
+SHA1 (tinycdb_0.76.tar.gz) = a048055a997c247c0ab88262b2cee5aa1e711920
+RMD160 (tinycdb_0.76.tar.gz) = f95919d9f92a525fdc9d74ceee58ac8f5504237d
+Size (tinycdb_0.76.tar.gz) = 35777 bytes
+SHA1 (patch-aa) = 2ffeb0d814cbef82a619292c2586bddbfcd30836
