@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/11/27 21:21:19 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2007/01/18 15:22:15 tonio Exp $
 #
 
 DISTNAME=	evolution-data-server-1.8.2
@@ -33,6 +33,10 @@ CONFIGURE_ENV+=		PTHREAD_LIB="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6.2)
 .include "../../devel/pthread-sem/buildlink3.mk"
 LIBS+=		-lsemaphore
+.endif
+
+.if ${OPSYS} == "Darwin"
+CPPFLAGS+=	-DBIND_8_COMPAT
 .endif
 
 CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
