@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/03 19:44:57 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/01/18 17:30:44 joerg Exp $
 
 BUILDLINK_DEPMETHOD.damageproto?=	build
 
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	damageproto
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}damageproto
 
 .if ${DAMAGEPROTO_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.0.1
+BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1.0
 BUILDLINK_PKGSRCDIR.damageproto?=	../../x11/damageproto
 .endif	# DAMAGEPROTO_BUILDLINK3_MK
 
