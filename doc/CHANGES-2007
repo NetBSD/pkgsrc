@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.172 2007/01/18 10:28:17 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.173 2007/01/18 14:42:58 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -256,3 +256,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/qmqtool version 1.13 [schmonz 2007-01-18]
 	Updated devel/pcre-ocaml to 5.11.2 [tonio 2007-01-18]
 	Updated mail/isync to 1.0.3 [tonio 2007-01-18]
+	Updated net/aiccu to 20070115 [ghen 2007-01-18]
