@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/18 06:35:24 schmonz Exp $
+
+--- qmqtool.orig	2006-10-07 22:29:46.000000000 -0400
++++ qmqtool
+@@ -10,14 +10,10 @@ use strict;
+ use Getopt::Std;
+ my (%tool,%opt);
+ 
+-my $qmail = '/var/qmail';
+-$tool{'ps'} = '/bin/ps'; # full path to ps, or just ps if $PATH is sufficient
++my $qmail = '@QMAILDIR@';
++$tool{'ps'} = '@PS@'; # full path to ps, or just ps if $PATH is sufficient
+ $tool{'ps_arg'} = (`uname -s` =~ /SunOS/) ? '-ef' : 'aux'; # should statically code this
+-if(-x '/usr/local/bin/grep'){
+-	$tool{'grep'} = '/usr/local/bin/grep'; # GNU grep is 5 times faster than solaris grep
+-}elsif(-x '/bin/grep'){
+-	$tool{'grep'} = '/bin/grep';
+-}
++$tool{'grep'} = '@GREP@';
+ 
+ # must play with @ARGV directly because Getopt doesnt have a xx: (-x with or without an arg)
+ my $n = 0;
+@@ -152,6 +148,7 @@ if(defined($opt{h})){
+ 		}
+ 		unless($opt{Q}){
+ 			print "you must now start qmail-send: for a LWQ installation, run: svc -u /service/qmail-send\n";
++			print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend start\n";
+ 		}
+ 	}else{
+ 		syntax();
+@@ -409,6 +406,7 @@ sub check_qmailsend {
+ 			if(/^\s*qmails\s.+\sqmail-send/){
+ 				die "you must stop qmail-send before this program can continue\n",
+ 				    "for a LWQ installation, run: svc -d /service/qmail-send\n",
++				    "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend stop\n",
+ 				    "others may be able to run: kill -9 `$tool{'ps'} $tool{'ps_arg'} | awk '/qmails.*qmail-send/ { print \$2 }'`\n";
+ 			}
+ 		}
+@@ -586,6 +584,7 @@ sub checkqueue {
+ 		print "no rogue files found\n";
+ 	}
+ 	print "you must now start qmail-send: for a LWQ installation, run: svc -u /service/qmail-send\n";
++	print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend start\n";
+ }
+ 
+ sub rm_files {
+@@ -624,6 +623,7 @@ sub rm_files {
+ 	}
+ 	if(defined($restart)){
+ 		print "you must now restart qmail-send: for a LWQ installation, run: svc -du /service/qmail-send\n";
++		print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend restart\n";
+ 	}
+ }
+ 
