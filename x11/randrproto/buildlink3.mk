@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/12/12 21:52:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/01/18 17:48:56 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -20,7 +20,7 @@ BUILDLINK_PACKAGES+=	randrproto
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}randrproto
 
 .if !empty(RANDRPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.1.1
+BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.2.0
 BUILDLINK_PKGSRCDIR.randrproto?=	../../x11/randrproto
 .endif	# RANDRPROTO_BUILDLINK3_MK
 
