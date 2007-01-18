@@ -1,7 +1,5 @@
-$NetBSD: patch-i386-aa,v 1.5 2003/08/11 10:39:36 markd Exp $
-
---- linuxx86/hinst.orig	Wed Apr 17 18:32:58 2002
-+++ linuxx86/hinst	Wed Jan 15 23:32:15 2003
+--- linuxx86/hinst.orig	2005-08-18 13:45:19.000000000 +0100
++++ linuxx86/hinst	2005-08-18 13:46:10.000000000 +0100
 @@ -84,7 +84,7 @@
  PORT=linuxx86
  
@@ -11,7 +9,7 @@ $NetBSD: patch-i386-aa,v 1.5 2003/08/11 10:39:36 markd Exp $
  
  # The thing that goes between the owner and group to set both by chown.
  CHOWNGRP_TOKEN=":"
-@@ -2028,7 +2028,7 @@
+@@ -2111,7 +2111,7 @@
  	then
  		:
  	else
@@ -20,3 +18,12 @@ $NetBSD: patch-i386-aa,v 1.5 2003/08/11 10:39:36 markd Exp $
  		return 
  	fi
  
+@@ -2166,7 +2166,7 @@
+ 
+ 	# rm -f $m_filename $mf_filename $o_filename $of_filename
+ 
+-	/bin/true
++	return 0
+ }
+ 
+ ###############################################################################
