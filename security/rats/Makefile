@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/18 22:55:19 rillig Exp $
 #
 
 DISTNAME=		rats-2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security
 MASTER_SITES=		http://www.securesoftware.com/rats/
 
