@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/11/10 20:58:09 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/18 14:42:17 ghen Exp $
 
-DISTNAME=		aiccu_2006.07.25
+DISTNAME=		aiccu_20070115
 PKGNAME=		${DISTNAME:S/_/-/:S/.//g}
 CATEGORIES=		net
 MASTER_SITES=		http://www.sixxs.net/archive/sixxs/aiccu/unix/
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.sixxs.net/tools/aiccu/
 COMMENT=		Automatic IPv6 Connectivity Client Utility
 
 USE_TOOLS+=		gmake
-CHECK_PORTABILITY_SKIP+=	debian/*
+CHECK_PORTABILITY_SKIP+=debian/*
 
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	post-patch
@@ -39,6 +39,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/LICENSE ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/COPYRIGHT ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/HOWTO ${DOCDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
