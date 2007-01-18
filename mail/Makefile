@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2007/01/14 14:06:51 obache Exp $
+# $NetBSD: Makefile,v 1.304 2007/01/18 06:36:26 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -178,6 +178,7 @@ SUBDIR+=	pymsgauth
 SUBDIR+=	qcheck
 SUBDIR+=	qgreylist
 SUBDIR+=	qmHandle
+SUBDIR+=	qmqtool
 SUBDIR+=	qmail
 SUBDIR+=	qmail-conf
 SUBDIR+=	qmail-lint
