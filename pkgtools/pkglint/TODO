@@ -1,26 +1,17 @@
-$NetBSD: TODO,v 1.55 2007/01/11 19:09:50 gdt Exp $
+$NetBSD: TODO,v 1.56 2007/01/18 18:37:38 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
 
 * fix false positive warnings
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
-* -Wl,-rpath
-* include "../../mk/bsd.prefs.mk" before using "+=".
-* include "../../mk/bsd.prefs.mk" before any .if
-* warn about the use of ${SED} in {pre,do,post}-install
 * check for direct use of user names and group names
-* Find a reliable, secure way to delete all CVS directories inside
-  ${WRKSRC}. When that is finished, add a warning that using ${XARGS}
-  is insecure.
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
 * record with each substring its source location to be able to make
   even more precise diagnostics
 * check wether CONFIG* override match, e.g. CONFIGURE_DIRS most likely
   needs matching CNOFIG_GUESS_OVERRIDE and CONFIG_SUB_OVERRIDE as well
-* warn about BUILD_USES_MSGFMT and related defines being used when
-  devel/gettext-lib/buildlink3.mk is not explicitly included?
 * Many of the checking routines need some context to provide better
   warnings. For example, checkline_foo() may need to know what has
   happened in the file before that line.
@@ -33,10 +24,10 @@ include the name of an example package where a warning should occur.
   SedCommand.
 * Invent an annotation scheme for files that intentionally define
   variables for use in other files.
-* Check all the shell commands to see if they are mentioned in USE_TOOLS.
 * ${MACHINE_ARCH}-${LOWER_OPSYS}elf in PLISTs etc. is a NetBSD config.guess
   problem ==> use of ${APPEND_ELF}
 * Packages including lang/python/extension.mk must follow the Python version
   scheme. Enforcing PYPKGPREFIX for those is most likely a good idea.
-* Warn if LICENSE/RESTRICTED/NO_*_ON_* are misordered.
-
+* pkglint ist momentan zufrieden mit wip/gdal-docs, obwohl das Makefile
+  gdal-1.3.1 will, aber das distinfo noch die Checksum von 1.2.6 hat.
+  Magst vielleicht einen Test einbauen, der schaut, ob die zusammenpassen?
