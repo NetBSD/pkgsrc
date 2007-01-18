@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.7 2007/01/10 14:31:35 rillig Exp $
+# $NetBSD: fetch,v 1.8 2007/01/18 10:51:48 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -124,7 +124,7 @@ usage() {
 # Process optional arguments
 checksum=
 distinfo=
-fetchdir=.
+fetchdir=.			# A relative directory or "."
 resume=
 verbose=
 while ${TEST} $# -gt 0; do
@@ -142,9 +142,6 @@ while ${TEST} $# -gt 0; do
 	*)	break ;;
 	esac
 done
-
-fetchdir=`cd $fetchdir && exec pwd`
-
 if ${TEST} -n "$checksum" -a -z "$distinfo"; then
 	${ECHO} 1>&2 "$self: \`\`-c'' requires \`\`-f distinfo''."
 	exit 1
@@ -176,7 +173,7 @@ fi
 
 ${TEST} -d $fetchdir || ${MKDIR} -p $fetchdir 2>/dev/null
 if ${TEST} ! -w $fetchdir; then
-	${ECHO} 1>&2 "$self: Cannot write to $fetchdir"
+	${ECHO} 1>&2 "$self: Cannot write to `cd $fetchdir && pwd`"
 	exit 1
 fi
 
