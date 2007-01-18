@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/18 15:25:15 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -21,6 +21,11 @@ REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 USE_TOOLS+=	iceauth:run
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
