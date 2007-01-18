@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2006/06/18 11:21:42 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/18 11:23:12 rillig Exp $
 
-DISTNAME=	kttcp-${VERSION}
+DISTNAME=	kttcp-20020711
 CATEGORIES=	benchmarks net
 PKGREVISION=	1
 MASTER_SITES=	# empty
@@ -9,25 +9,17 @@ DISTFILES=	# empty
 MAINTAINER=	thorpej@NetBSD.org
 COMMENT=	Kernel network throughput benchmark
 
-VERSION=	20020711
-
 ONLY_FOR_PLATFORM=	NetBSD-1.6[B-Z]*-* NetBSD-[2-9]*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-
-WRKSRC=		${WRKDIR}
-MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+NO_CHECKSUM=		yes
+USE_BSD_MAKEFILE=	yes
+WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	@for FILE in Makefile kttcp.c					\
-	; do								\
-		${CP} ${FILESDIR}/$$FILE ${WRKSRC};			\
-	done
+	cd files && cp Makefile kttcp.c ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
