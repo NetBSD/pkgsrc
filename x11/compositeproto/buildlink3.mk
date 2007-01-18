@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/12/12 21:52:37 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/01/18 17:23:39 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -20,7 +20,7 @@ BUILDLINK_PACKAGES+=	compositeproto
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}compositeproto
 
 .if !empty(COMPOSITEPROTO_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.2.1
+BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.3.1
 BUILDLINK_PKGSRCDIR.compositeproto?=	../../x11/compositeproto
 .endif	# COMPOSITEPROTO_BUILDLINK3_MK
 
