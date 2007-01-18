@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5900 2007/01/17 21:49:54 adrianp Exp $
+$NetBSD: TODO,v 1.5901 2007/01/18 10:00:47 tonio Exp $
 
 Suggested new packages
 ======================
@@ -835,7 +835,6 @@ Suggested package updates
 	o parrot-0.4.7
 	o pcal-4.8
 	o pciutils-2.2.0
-	o pcre-ocaml-5.11.1
 	o pdmenu-1.2.87
 	o pear-Date-1.4.6
 	o pear-HTML_Common-1.2.2 [pkg/34468]
