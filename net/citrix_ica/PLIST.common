@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:24:06 veego Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2007/01/18 22:34:05 sborrill Exp $
 bin/wfcmgr
 bin/wfica
 lib/ICAClient/.config/appsrv.ini
 lib/ICAClient/.config/keyboard.ini
 lib/ICAClient/.config/module.ini
 lib/ICAClient/.config/wfclient.ini
+lib/ICAClient/CHARICONV.DLL
+lib/ICAClient/NDS.DLL
 lib/ICAClient/Npica
 lib/ICAClient/Npica.ad
 lib/ICAClient/PDCRYPT1.DLL
 lib/ICAClient/PDCRYPT2.DLL
-lib/ICAClient/SSL.DLL
+lib/ICAClient/TW1.DLL
+lib/ICAClient/VDCM.DLL
 lib/ICAClient/VDSCARD.DLL
 lib/ICAClient/Wfcmgr
 lib/ICAClient/Wfcmgr.ad
@@ -23,11 +26,9 @@ lib/ICAClient/desktop/Citrix_PNA.desktop
 lib/ICAClient/desktop/wfcmgr.desktop
 lib/ICAClient/eula.txt
 lib/ICAClient/help/index.htm
-lib/ICAClient/icons/ica16.xpm
-lib/ICAClient/icons/ica32.xpm
-lib/ICAClient/icons/ica48.xpm
-lib/ICAClient/icons/ica64.xpm
-lib/ICAClient/icons/pn32.xpm
+lib/ICAClient/icons/citrix16.xpm
+lib/ICAClient/icons/citrix32.xpm
+lib/ICAClient/icons/citrix48.xpm
 lib/ICAClient/install.txt
 lib/ICAClient/keyboard/age2.kbd
 lib/ICAClient/keyboard/agex2.kbd
@@ -60,6 +61,7 @@ lib/ICAClient/keyboard/hpusitf.kbd
 lib/ICAClient/keyboard/hpusps2.kbd
 lib/ICAClient/keyboard/ibm.kbd
 lib/ICAClient/keyboard/keyboard.ini
+lib/ICAClient/keyboard/linux-ja.kbd
 lib/ICAClient/keyboard/linux.kbd
 lib/ICAClient/keyboard/mac101.kbd
 lib/ICAClient/keyboard/ncdn-101.kbd
@@ -95,6 +97,7 @@ lib/ICAClient/keystore/cacerts/GTECTGlobalRoot.crt
 lib/ICAClient/keystore/cacerts/GTECTRoot.crt
 lib/ICAClient/keystore/cacerts/Pcs3ss_v4.crt
 lib/ICAClient/keystore/cacerts/SecureServer.crt
+lib/ICAClient/libctxssl.so
 lib/ICAClient/nls/C
 lib/ICAClient/nls/en/pna.nls
 lib/ICAClient/npica.so
@@ -107,6 +110,8 @@ lib/ICAClient/util/echo_cmd
 lib/ICAClient/util/hinst
 lib/ICAClient/util/icalicense.sh
 lib/ICAClient/util/nslaunch
+lib/ICAClient/util/pac.js
+lib/ICAClient/util/pacexec
 lib/ICAClient/util/xcapture
 lib/ICAClient/wfcmgr
 lib/ICAClient/wfica
