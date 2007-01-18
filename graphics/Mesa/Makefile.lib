@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.2 2006/10/09 12:52:35 joerg Exp $
+# $NetBSD: Makefile.lib,v 1.3 2007/01/18 10:24:45 rillig Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		makedepend
+MAKE_JOBS_SAFE=		no
 
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
