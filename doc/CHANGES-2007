@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.169 2007/01/17 23:44:48 salo Exp $
+$NetBSD: CHANGES-2007,v 1.170 2007/01/18 06:37:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -253,3 +253,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/flawfinder to 1.27 [adrianp 2007-01-17]
 	Added sysutils/bsign version 0.4.5 [agc 2007-01-17]
 	Updated security/mit-krb5 to 1.4.2nb4 [salo 2007-01-17]
+	Added mail/qmqtool version 1.13 [schmonz 2007-01-18]
