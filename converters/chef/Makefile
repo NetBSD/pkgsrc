@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/06/09 15:26:46 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/18 11:51:33 rillig Exp $
 #
 
-DISTNAME=	chef.l
-PKGNAME=	chef-19920415
+DISTNAME=	chef-19920415
 CATEGORIES=	converters
 MASTER_SITES=	http://www.evolutionzone.com/kulturezone/c-g.writing/
-EXTRACT_SUFX=	.txt
+DISTFILES=	chef.l.txt
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	none
@@ -18,18 +17,14 @@ USE_TOOLS+=	lex
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-MAKE_ENV+=	BINDIR=${PREFIX}/bin BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
-
 INSTALLATION_DIRS=	bin
 
 do-extract:
 	# deal with the dos encoding of the file
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKDIR}/chef.l.tmp
-	cd ${WRKSRC} && ${TR} '\015' '\n' < chef.l.tmp > chef.l
-	cd ${WRKSRC} && ${RM} chef.l.tmp
+	cd ${WRKSRC} && tr '\r' '\n' < ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} > chef.l
 
 do-build:
-	cd ${WRKSRC} && ${LEX} chef.l
+	cd ${WRKSRC} && lex chef.l
 	${LINK.c} -o ${WRKSRC}/chef ${WRKSRC}/lex.yy.c -ll
 
 do-install:
