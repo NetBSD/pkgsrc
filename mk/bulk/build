@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.97 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: build,v 1.98 2007/01/18 09:04:53 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -200,8 +200,9 @@ do_common_setup () {
 	#
 	# Set resource limits as high as possible
 	#
-	ulimit -S -s `ulimit -H -s`
-	ulimit -S -d `ulimit -H -d`
+	ulimit -S -s `ulimit -H -s` # XXX: why do we need unlimited stack?
+	ulimit -S -d `ulimit -H -d` # some processes grow rather large
+	ulimit -S -t `ulimit -H -t` # pkgsrc bulk builds need _much_ time
 
 	#
 	# Find the configuration file.
