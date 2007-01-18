@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/01/18 10:27:11 tonio Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/18 18:26:21 tonio Exp $
 #
 
 DISTNAME=	isync-1.0.3
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isync/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	http://isync.sourceforge.net/
 COMMENT=	Synchronize a maildir with an imap server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+INSTALLATION_DIRS+= share/examples/isync
 
 GNU_CONFIGURE=	YES
 
@@ -20,7 +22,6 @@ LDFLAGS+=		-lcrypto
 .include "../../databases/db4/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/isync
 	${INSTALL_DATA} ${WRKSRC}/src/mbsyncrc.sample \
 		${PREFIX}/share/examples/isync/mbsyncrc.sample
 	${INSTALL_DATA} ${WRKSRC}/src/compat/isyncrc.sample \
