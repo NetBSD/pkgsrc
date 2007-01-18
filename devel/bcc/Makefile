@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/10/22 06:31:43 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/18 11:55:45 rillig Exp $
 
 DISTNAME=		bcc
 PKGNAME=		bcc-95.3.12
@@ -10,11 +10,7 @@ COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
 NOT_FOR_PLATFORM=	*-*-alpha *-*-x86_64	# Severe LP64 problems
 NOT_FOR_PLATFORM+=	Interix-*-*		# no <a.out.h>
 
-MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q} \
-			MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q} MANMODE=${MANMODE:Q}
-MAKE_ENV+=		BINDIR=${PREFIX}/bin
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MANCOMPRESSED_IF_MANZ=	yes
+USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	bin lib/bcc ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
