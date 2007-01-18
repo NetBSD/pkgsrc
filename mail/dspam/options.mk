@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2006/12/10 00:30:01 xtraeme Exp $
+# $NetBSD: options.mk,v 1.18 2007/01/18 14:22:38 obache Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -6,10 +6,8 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
-			domainscale preferences-extension \
-			clamav ldap syslog debug verbose-debug
-
-.include "../../mk/bsd.options.mk"
+			domainscale \
+			clamav syslog debug verbose-debug
 
 ###
 ### DSPAM_DELIVERY_AGENT is the tool called to to deliver messages.
@@ -108,6 +106,8 @@ PLIST_SUBST+=		${HASH_PLIST_SUBST}
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 PKG_SUPPORTED_OPTIONS+=	preferences-extension virtualusers ldap
 .endif
+
+.include "../../mk/bsd.options.mk"
 
 ###
 ### Used to store user preferences in the backend instead of flat files
