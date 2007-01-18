@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5902 2007/01/18 10:15:15 tonio Exp $
+$NetBSD: TODO,v 1.5903 2007/01/18 19:14:58 rillig Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,6 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.13
 	o delegate-9.3.2
-	o denemo-0.7.6
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
@@ -415,7 +414,6 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
-	o fortunes-de-0.20
 	o fox-1.6.19
 	o freeglut-2.4.0
 	o freesci-0.3.5
