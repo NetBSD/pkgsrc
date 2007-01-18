@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/09/07 06:18:35 joerg Exp $
+$NetBSD: distinfo,v 1.6 2007/01/18 14:42:17 ghen Exp $
 
-SHA1 (aiccu_2006.07.25.tar.gz) = c031f4b29a92a0c1b5a0d4b9d9e81d6fe4da92aa
-RMD160 (aiccu_2006.07.25.tar.gz) = 599d181bfccb4a1a30d315f60469078bcb269270
-Size (aiccu_2006.07.25.tar.gz) = 64161 bytes
-SHA1 (patch-aa) = c2a69b01304f07da05e83a6bf80aebed4803b841
-SHA1 (patch-ab) = 63bab81f2507c2e20042d53086f2cd8c774ae30a
-SHA1 (patch-ac) = e7df7fdb83f4898220ca36f4051539c911bfb6b7
-SHA1 (patch-ad) = 1fec51f11a7103bbc690eacdb9191d45b3666f1b
+SHA1 (aiccu_20070115.tar.gz) = 7b3c51bfe291c777e74b2688e9339b4fb72e6a39
+RMD160 (aiccu_20070115.tar.gz) = 9415899c98c1f7e84b9711017b82a3a0ea2ae9de
+Size (aiccu_20070115.tar.gz) = 70056 bytes
+SHA1 (patch-ab_tunsip) = dce6b3b1a99acb0e966772b362d3e9e3a76044e2
+SHA1 (patch-aa) = 373c66c6a7b6a18ad9ab453f4fddf61634e8ad04
+SHA1 (patch-ac) = 105a1845883211a1c101e224c826ffcc630386fd
