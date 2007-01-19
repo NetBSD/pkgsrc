@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/19 13:45:35 uebayasi Exp $
+bin/kahua-admin
+bin/kahua-config
+bin/kahua-dbutil
+bin/kahua-httpd
+bin/kahua-install
+bin/kahua-package
+bin/kahua-shell
+bin/kahua-spvr
+lib/kahua/kahua-admin.scm
+lib/kahua/kahua-config.scm
+lib/kahua/kahua-dbutil.scm
+lib/kahua/kahua-httpd.scm
+lib/kahua/kahua-install.scm
+lib/kahua/kahua-keyserv.scm
+lib/kahua/kahua-package.scm
+lib/kahua/kahua-server.scm
+lib/kahua/kahua-shell.scm
+lib/kahua/kahua-spvr.scm
+lib/kahua/kahua.scm
+lib/kahua/kahua/config.scm
+lib/kahua/kahua/developer.scm
+lib/kahua/kahua/elem.scm
+lib/kahua/kahua/error-report.scm
+lib/kahua/kahua/gsid.scm
+lib/kahua/kahua/partcont.scm
+lib/kahua/kahua/pdf.scm
+lib/kahua/kahua/pdf/interp.scm
+lib/kahua/kahua/pdf/main.scm
+lib/kahua/kahua/pdf/monad.scm
+lib/kahua/kahua/pdf/srfi-48-draft.scm
+lib/kahua/kahua/pdf/srfi-48.scm
+lib/kahua/kahua/pdf/state.scm
+lib/kahua/kahua/pdf/typeset.scm
+lib/kahua/kahua/pdf/util.scm
+lib/kahua/kahua/persistence.scm
+lib/kahua/kahua/persistence/dbi.scm
+lib/kahua/kahua/persistence/efs.scm
+lib/kahua/kahua/persistence/fs.scm
+lib/kahua/kahua/persistence/mysql.scm
+lib/kahua/kahua/persistence/postgresql.scm
+lib/kahua/kahua/plugin.scm
+lib/kahua/kahua/protocol/http.scm
+lib/kahua/kahua/protocol/worker.scm
+lib/kahua/kahua/sandbox.scm
+lib/kahua/kahua/server.scm
+lib/kahua/kahua/session.scm
+lib/kahua/kahua/test/worker.scm
+lib/kahua/kahua/test/xml.scm
+lib/kahua/kahua/thread-pool.scm
+lib/kahua/kahua/user.scm
+lib/kahua/kahua/util.scm
+lib/kahua/kahua/xml-template.scm
+libexec/kahua/kahua.cgi
+@dirrm libexec/kahua
+@dirrm lib/kahua/kahua/test
+@dirrm lib/kahua/kahua/protocol
+@dirrm lib/kahua/kahua/persistence
+@dirrm lib/kahua/kahua/pdf
+@dirrm lib/kahua/kahua
+@dirrm lib/kahua
