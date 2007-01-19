@@ -1,0 +1,388 @@
+How to install mod_auth_external.c into the Apache source tree.
+
+NOTES:
+
+ * If you want to use the HARDCODE function option follow the instructions
+   in the INSTALL.HARDCODE file in this directory before following these
+   instructions.
+
+ * These instructions are for Apache version 1.3.  I don't know if this version
+   of mod_auth_external is still compatible with older versions of Apache.
+
+ * There are two ways of installing mod_auth_external. 
+
+     (1) You can statically link it with Apache.  This requires rebuilding
+         Apache in such a way that mod_auth_external will be compiled in. 
+
+     (2) You can make mod_auth_external a dynamically loaded module.  If
+         your Apache has been built to support dynamically loaded modules
+	 you can do this without rebuilding Apache, so it is pretty easy.
+	 Performance may be slightly worse with this option.  For information
+	 on dynamically loaded modules see http://www.apache.org/docs/dso.html
+
+   Instructions for both options are given here.
+
+ * If you are statically linking mod_auth_external into Apache, you must
+   rebuild Apache.  There are two methods of building Apache, the APACI
+   method and the manual method.  Instructions for both are given here.  The
+   configuration part is the same either way.
+
+ * There is also documentation in the README file, in the AUTHENTICATORS file
+   and at the front of the mod_auth_external.c source file.  If you find this
+   document unclear, reading those may help.
+
+
+INSTALL METHOD A: Dynamically Linking Mod_auth_external using apxs:
+-------------------------------------------------------------------
+
+Step 1:
+	Ensure that your Apache server is configured to handle dynamically
+	loaded modules.  Redhat Linux 6.1 does.  To check this, run Apache
+	server with the -l command flag, like
+
+	       httpd -l
+
+	If mod_so.c is one of the compiled-in modules, then you are ready
+	to go.
+
+Step 2:
+	Compile the module using the following command in the mod_auth_external
+	distribution directory:
+
+	        apxs -c mod_auth_external.c
+
+	'Apxs' is the Apache extension tool.  It is part of the standard
+	Apache installation.  If you don't have it, then your Apache server
+	is probably not set up for handling dynamically loaded modules.
+	This should create a file named 'mod_auth_external.so'.
+
+	AIX Note:  I'm told that on AIX the 'apxs' command above compiles
+	   mod_auth_external.c into mod_auth_external.o correctly, but
+	   generation of the shared library file fails with a message like
+	   "No csects or exported symbols have been saved."  If this happens,
+	   create a file in the current directory named mod_auth_external.exp
+	   which contains the two lines below:
+
+	         #! mod_auth_external.o
+	         external_auth_module 
+
+           Then run 
+	    
+		apxs -c mod_auth_external.c -bE:mod_auth_external.exp
+ 
+Step 3:
+	Install the module.  Apxs can do this for you too.  Do the following
+	command (as root so you can write to Apache's directories and config
+	files):
+
+	       apxs -i -a mod_auth_external.so
+
+	This will copy mod_auth_external.so into the proper place, and add
+	appropriate AddModule and LoadModule commands to the configuration
+	files.  (Actually, it may get the LoadModule command wrong.  See
+	below.)
+
+Step 4:
+	Go to the CONFIGURATION instructions below.
+
+
+INSTALL METHOD B: Statically Linking by building Apache with APACI:
+-------------------------------------------------------------------
+
+Step 1:
+        Read the instructions on how to configure the Apache server in the
+        INSTALL file provided with the Apache source.
+
+Step 2:
+        When you run the ./configure script, include an --add-module flag,
+        giving the full pathname to the mod_auth_external.c file in this
+        distribution.  For example, if you have unpacked this distribution
+        in /usr/local/src/mod_auth_external and are building Apache for
+        installation in /usr/local/apache, you might do:
+
+        ./configure --prefix=/usr/local/apache \
+              --add-module=/usr/local/src/mod_auth_external/mod_auth_external.c
+
+        This will copy the mod_auth_external.c file into the correct place in
+        the Apache source tree and set things up to link it in.
+
+Step 3:
+	Type "make" to compile Apache and "make install" to install it.
+
+Step 4:
+	Go to the CONFIGURATION instructions below.
+
+
+INSTALL METHOD C:  Statically Linking by manually building Apache:
+------------------------------------------------------------------
+
+Step 1:
+	Read the instructions on how to configure the Apache server in the
+	src/INSTALL file provided with the Apache source.
+
+Step 2:
+	Copy the mod_auth_external.c file from this distribution into the
+	src/modules/extra subdirectory of the Apache source tree.
+
+Step 3:
+	Add the following line to the Apache 'Configuration' file:
+
+	   AddModule modules/extra/mod_auth_external.c 
+
+Step 4:
+	Run "./Configure" and "make" and "make install" in the src directory
+	to configure, compile and install Apache.
+
+Step 4:
+	Go to the CONFIGURATION instructions below.
+
+CONFIGURATION:
+--------------
+
+There are two parts to doing the configuration.  First you define the
+external program and communication method to use in your httpd.conf file,
+identifying them with a keyword.  Then you set up specific directories to
+use that authenticator, referencing it by keyword.
+
+Step 1:
+	If you are using dynamic loading, you'll need to make sure that
+	there is a proper "LoadModule" command in the httpd.conf file.
+	This should have been put there by 'apxs' but, at least under
+	RedHat 6.1, it gets it wrong.  Basically, the 'LoadModule' command
+	should look a lot like all the other LoadModule commands.  Something
+	like
+
+	    LoadModule external_auth_module modules/mod_auth_external.so
+
+        where the second part is the path from Apache's root directory
+	to the location where the module is stored.
+
+	Make sure that apxs didn't put this directive inside any inappropriate
+	<IfDefine> directives.  Under RedHat 7.1 it likes to put it inside
+	<IfDefine HAVE_PYTHON> which makes no sense.
+
+	Also, if you previously had mod_auth_external installed and are
+	installing a new version, apxs may have put a second LoadModule
+	command into httpd.conf.  You only need one.  Get rid of the extra.
+
+Step 2:
+	Check you httpd.conf file to see if there is a "ClearModuleList"
+	command.  If this exists, then you need to add a command like:
+
+	    AddModule mod_auth_external.c
+
+	somewhere below "ClearModuleList" command (probably somewhere among
+	the dozens of other AddModule commands).  If you used 'apxs' to
+	install mod_auth_external, then this should already be done, but
+	it may again be stashed in an inappropriate <IfDefine>.
+
+	The standard Apache configuration files don't have a "ClearModuleList"
+	command and don't need an "AddModule" command.  However the standard
+	RedHat configuration files do.
+
+Step 3:
+	Add the following line(s) to your server's httpd.conf.
+	
+	If you are using virtual hosts, put them at the end of the
+	appropriate <VirtualHost> block.  The declarations must be *inside*
+	the <VirtualHost> block to work for a virtual host.  They are not
+	inherited from the primary host to the virtual hosts.  Note that most
+	Apache SSL servers are set up as virtual hosts, so you'll probably
+	need to put these definitions in the <VirtualHost> block for use with
+	an SSL server.
+	
+	Otherwise, just put them anywhere (just before the Virtual Hosts
+	section of the config file might make the most sense).
+
+	For external authentication programs:
+            AddExternalAuth <keyword> <path-to-authenticator>         
+            SetExternalAuthMethod <keyword> <method>
+
+	For HARDCODE functions:
+	    AddExternalAuth <keyword> <type>:<path where config file is>
+            SetExternalAuthMethod <keyword> function
+
+	<keyword> is some name you choose.  You can configure multiple
+	different external authenticators by using different keywords for
+	them.
+
+	<path-to-authenticator> is normally the full path where you installed
+	your external authentication program.  If you put it in quotes, you
+	can include command-line arguments, but these arguments won't be
+	processed by a shell, so you can't use wildcards or I/O redirects
+	or anything like that.  If you need shell processing of arguments,
+	write an sh-script wrapper for your authenticator, and put the path
+	to that here.
+
+	<method> defines how the login and password are passed to the
+	external authenticator:
+          environment    get args from environment variables. (default)
+          pipe           read newline-terminated strings from stdin.
+	  checkpassword  read null-terminated strings from file descriptor 3.
+          function       internal authenticator called as function.
+        Environment is the default for historical reasons, but it may be
+        insecure on some versions of Unix.  See the README file.
+
+	Examples:
+
+	  ** For external authentication programs using environment variables:
+
+	     AddExternalAuth archive_auth /usr/local/bin/authcheck
+	     SetExternalAuthMethod archive_auth environment
+
+	  ** For external authentication programs using a pipe:
+
+	     AddExternalAuth archive_auth /usr/local/bin/authcheck
+	     SetExternalAuthMethod archive_auth pipe
+
+	  ** For external authenticators using the checkpassword protocol:
+
+	     AddExternalAuth archive_auth "/bin/checkpassword /bin/true"
+	     SetExternalAuthMethod archive_auth checkpassword
+
+   	   ** For HARDCODE functions with no configuration file:
+
+	      AddExternalAuth archive_auth RADIUS:
+	      SetExternalAuthMethod archive_auth function
+
+	   ** For HARDCODE functions with a configuration file:
+
+	      AddExternalAuth archive_auth RADIUS:/usr/local/raddb
+	      SetExternalAuthMethod archive_auth function
+	   
+Step 4:
+	If you want to use an external program to do group checking, add the 
+	following to your server's httpd.conf.
+
+        AddExternalGroup <keyword> <path-to-authenticator>         
+
+        SetExternalGroupMethod <keyword> <method>
+
+	<keyword> is some name you choose to identify this particular
+	group checking method.  The keywords for login authenticators and
+	group authenticators are separate name spaces, so it doesn't matter
+	if these keywords match any you defined in step 1.
+
+	<method> defines how the login and group names are passed to the
+	external authenticator:
+           environment - authenticator gets data from environment variables.
+           pipe - authenticator reads data from standard input.
+        Environment is the default.
+
+	Examples:
+
+	  ** For external group check programs using environment variables:
+
+	     AddExternalGroup archive_group /usr/local/bin/groupcheck
+	     SetExternalGroupMethod archive_group environment
+
+	  ** For external authentication programs using a pipe:
+
+	     AddExternalGroup archive_group /usr/local/bin/authcheck
+	     SetExternalGroupMethod archive_group pipe
+
+Step 5:
+	For any directory you want to protect, you need either a
+	.htaccess file in the directory or a <Directory> block for the
+	directory in your httpd.conf file.
+
+	Note that for .htaccess files to work, you must specify "AllowOverride
+	AuthConfig" in the httpd.conf file for any directories they appear
+	under.  As distributed, Apache sets "AllowOverride None" for most
+	directories.  If this is not changed, .htaccess files will be ignored.
+
+        For normal user authentication, the following directives should be in
+        the .htaccess file or <Directory> block:
+
+	   AuthType Basic
+	   AuthName <authname>
+	   AuthExternal <keyword>
+	   require valid-user
+
+       Here <authname> identifies what we are authenticating for - it usually
+       appears in the browser's pop-up login windown.  <keyword> matches a
+       keyword you defined with AddExternalAuth in step 1.
+
+       If you only want some users to have access to the directory, as opposed
+       to all valid users, you can list the users on the "require" line,
+       changing it to:
+
+           require user <username1> <username2> ...
+
+       If you want to use the external group check program to allow only
+       users in a given group to have access, you could do:
+
+	   AuthType Basic
+	   AuthName <name you call this type of authentication>
+	   AuthExternal <keyword>
+	   GroupExternal <groupkeyword>
+           require group <groupname1> <groupname2> ...
+
+       Here <groupkeyword> matches a name you defined with with the 
+       AddExternalGroup command in step 2.
+
+       Mod_auth_external is "authoritative" by default.  This means that
+       if a login/password are not found to be valid by mod_auth_external,
+       then no other authentication methods will be tried, even if you have
+       configured them.  If you want login/password pairs that failed
+       authentication to be passed only to other authenticators, then you
+       should add the directive:
+
+          AuthExternalAuthoritative off
+
+       Of course, if you haven't configured multiple authenticators for the
+       directory, then you can ignore this.
+
+       See the Apache manual pages on AuthType, AuthName, require, and
+       AuthGroupFile for more information.
+
+Step 6:
+	Install your external authentication program in the location named
+	by the pathname on your AddExternalAuth directive.
+
+Step 7:
+	Restart Apache, so that all the new configuration commands will be
+	loaded.  If you have the apachectl command do:
+
+		apachectl restart
+
+        For Redhat 6.1 which doesn't have apachectl, instead do:
+
+		/etc/rc.d/init.d/httpd restart
+
+Step 8:
+	Test your changes/code by trying to view a protected page.
+	
+	If it doesn't work, check the apache error logs.  Some common
+	problems:
+
+	  - Miscellaneous odd behaviors.
+
+	    Did you restart the httpd after the last time you editted the
+	    httpd.conf file or recompiled the program?
+
+	  - Apache complains about not recognizing "AddExternalAuth" and
+	    other mod_auth_external commands.
+
+	    Either the module didn't get installed (are you running the
+	    newly compiled copy of httpd?), or it isn't enabled (you
+	    may need the AddModule or LoadModule commands described above).
+
+          - It displays pages in a protected directory without asking for
+	    a login and password.
+
+	    If you are using .htaccess files, does your httpd.conf file
+	    say "AllowOverride AuthConfig" for the directory?  Apache is
+	    distributed with "AllowOverride None" set on the cgi-bin
+	    directory, which will cause .htaccess files to be ignored.
+
+	  - Error log says "Failed (-1)".
+	  
+	    Probably means that the module couldn't run the authenticator.
+	    Is the path correct?  Is it permitted correctly?  Are the
+	    directories it is in permitted correctly?
+	    
+	  - Error log says "Failed" with some other number after it.
+	  
+	    The authenticator ran, and exited with the given non-zero return
+	    code.  The authenticator program seems not to be working.
