@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2006/03/31 18:35:22 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2007/01/19 12:59:01 uebayasi Exp $
 
---- configure.orig	2005-11-04 20:00:47.000000000 -0500
+--- configure.orig	2007-01-18 04:18:59.000000000 +0900
 +++ configure
-@@ -1631,7 +1631,7 @@ _ACEOF
+@@ -1619,7 +1619,7 @@ _ACEOF
  
        THREADLIBS="-lpthread -lrt"
        ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2006/03/31 18:35:22 jlam Exp $
        { echo "$as_me:$LINENO: WARNING: \"FreeBSD does not yet fully support threads with Boehm GC.\"" >&5
  echo "$as_me: WARNING: \"FreeBSD does not yet fully support threads with Boehm GC.\"" >&2;}
  
-@@ -7238,7 +7238,72 @@ fi
+@@ -7426,7 +7426,72 @@ fi
  
  
  
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.7 2006/03/31 18:35:22 jlam Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -8878,7 +8943,7 @@ case $target in
+@@ -9068,7 +9133,7 @@ case $target in
      SHLIB_MAIN_LDFLAGS=""
      SHLIB_OK=ok
      ;;
@@ -94,7 +94,7 @@ $NetBSD: patch-aa,v 1.7 2006/03/31 18:35:22 jlam Exp $
      SHLIB_SO_CFLAGS="-fPIC"
      SHLIB_SO_LDFLAGS="$rpath -shared -o"
      SHLIB_SO_SUFFIX="so"
-@@ -9276,7 +9341,9 @@ fi;
+@@ -9466,7 +9531,9 @@ fi;
  if test "${with_iconv_lib+set}" = set; then
    withval="$with_iconv_lib"
  
