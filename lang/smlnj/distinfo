@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.10 2006/03/28 21:35:27 gavan Exp $
+$NetBSD: distinfo,v 1.11 2007/01/19 13:09:25 dmcmahill Exp $
 
 SHA1 (smlnj-110.42/MLRISC.tgz) = 55055ed06f7dd2ef178ef365c018f0f38f740528
 RMD160 (smlnj-110.42/MLRISC.tgz) = 40aebe1cbf975e098bdf5115fd13b428e845195a
 Size (smlnj-110.42/MLRISC.tgz) = 1173187 bytes
 SHA1 (smlnj-110.42/boot.ppc-unix.tgz) = 50c12d123cbb953283cc01308bda94ba6a004f10
+RMD160 (smlnj-110.42/boot.ppc-unix.tgz) = b4c2b8683024f2e377dc131eb377190c49808122
 Size (smlnj-110.42/boot.ppc-unix.tgz) = 5063945 bytes
 SHA1 (smlnj-110.42/boot.sparc-unix.tgz) = d90361e8de683bde9f2ce76d5a3fdc0b9bcf7b1f
+RMD160 (smlnj-110.42/boot.sparc-unix.tgz) = 9b2c44e69ee46e24b51358939a3e8b494e6bce53
 Size (smlnj-110.42/boot.sparc-unix.tgz) = 5216813 bytes
 SHA1 (smlnj-110.42/boot.x86-unix.tgz) = 7e85b25459886179be0bcb949cd489f62c0a5424
 RMD160 (smlnj-110.42/boot.x86-unix.tgz) = 2af62e8196de6e7da03cfda10d4799bf7a56188e
