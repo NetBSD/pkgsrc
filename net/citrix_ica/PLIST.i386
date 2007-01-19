@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST.i386,v 1.3 2003/08/11 10:39:40 markd Exp $
+@comment $NetBSD: PLIST.i386,v 1.4 2007/01/19 23:37:43 dmcmahill Exp $
+lib/ICAClient/CHARICONV.DLL
 lib/ICAClient/pkginf/F.core.linuxx86
 lib/ICAClient/pkginf/Ver.core.linuxx86
+lib/ICAClient/NDS.DLL
+lib/ICAClient/TW1.DLL
+lib/ICAClient/util/pacexec
+lib/ICAClient/util/pac.js
+lib/ICAClient/VDCM.DLL
