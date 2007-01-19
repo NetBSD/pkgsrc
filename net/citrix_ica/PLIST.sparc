@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sparc,v 1.2 2003/08/11 10:39:42 markd Exp $
+@comment $NetBSD: PLIST.sparc,v 1.3 2007/01/19 23:37:43 dmcmahill Exp $
 lib/ICAClient/dt/appconfig/appmanager/C/Citrix/Citrix_ica_client
 lib/ICAClient/dt/appconfig/appmanager/C/Citrix/Citrix_ica_editor
 lib/ICAClient/dt/appconfig/appmanager/C/Citrix/Citrix_ica_excel
@@ -23,7 +23,14 @@ lib/ICAClient/dt/appconfig/icons/C/Citrix_ica_visio32.m.pm
 lib/ICAClient/dt/appconfig/icons/C/Citrix_ica_winproj.m.pm
 lib/ICAClient/dt/appconfig/icons/C/Citrix_ica_winword.m.pm
 lib/ICAClient/dt/appconfig/icons/C/Citrix_ica_winzip32.m.pm
+lib/ICAClient/dt/appconfig/icons/C/Editor.b.pm
+lib/ICAClient/dt/appconfig/icons/C/Editor.l.pm
+lib/ICAClient/dt/appconfig/icons/C/Editor.m.bm
 lib/ICAClient/dt/appconfig/icons/C/Editor.m.pm
+lib/ICAClient/dt/appconfig/icons/C/Editor.s.bm
+lib/ICAClient/dt/appconfig/icons/C/Editor.s.pm
+lib/ICAClient/dt/appconfig/icons/C/Editor.t.bm
+lib/ICAClient/dt/appconfig/icons/C/Editor.t.pm
 lib/ICAClient/dt/appconfig/icons/C/ICA.l.pm
 lib/ICAClient/dt/appconfig/icons/C/ICA.m.pm
 lib/ICAClient/dt/appconfig/icons/C/ICA.s.pm

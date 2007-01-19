@@ -1,18 +1,14 @@
-@comment $NetBSD: PLIST.common,v 1.2 2007/01/18 22:34:05 sborrill Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2007/01/19 23:37:43 dmcmahill Exp $
 bin/wfcmgr
 bin/wfica
 lib/ICAClient/.config/appsrv.ini
 lib/ICAClient/.config/keyboard.ini
 lib/ICAClient/.config/module.ini
 lib/ICAClient/.config/wfclient.ini
-lib/ICAClient/CHARICONV.DLL
-lib/ICAClient/NDS.DLL
 lib/ICAClient/Npica
 lib/ICAClient/Npica.ad
 lib/ICAClient/PDCRYPT1.DLL
 lib/ICAClient/PDCRYPT2.DLL
-lib/ICAClient/TW1.DLL
-lib/ICAClient/VDCM.DLL
 lib/ICAClient/VDSCARD.DLL
 lib/ICAClient/Wfcmgr
 lib/ICAClient/Wfcmgr.ad
@@ -110,8 +106,6 @@ lib/ICAClient/util/echo_cmd
 lib/ICAClient/util/hinst
 lib/ICAClient/util/icalicense.sh
 lib/ICAClient/util/nslaunch
-lib/ICAClient/util/pac.js
-lib/ICAClient/util/pacexec
 lib/ICAClient/util/xcapture
 lib/ICAClient/wfcmgr
 lib/ICAClient/wfica
