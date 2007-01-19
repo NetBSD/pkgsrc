@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2005/09/27 12:49:08 martti Exp $
+$NetBSD: patch-aa,v 1.3 2007/01/19 16:28:15 joerg Exp $
 
---- panel-plugin/memswap.c.orig	2003-11-06 02:39:52.000000000 +0200
-+++ panel-plugin/memswap.c	2005-09-27 12:39:16.000000000 +0300
-@@ -284,7 +284,24 @@
+--- panel-plugin/memswap.c.orig	2003-11-06 00:39:52.000000000 +0000
++++ panel-plugin/memswap.c
+@@ -113,7 +113,7 @@ gint read_memswap(gulong *mem, gulong *s
+     return 0;
+ }
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ /*
+  * This is inspired by /usr/src/usr.bin/top/machine.c 
+  *
+@@ -284,7 +284,24 @@ gint read_memswap(gulong *mem, gulong *s
  
  #define ARRLEN(X) (sizeof(X)/sizeof(X[0]))
      {
@@ -28,7 +37,7 @@ $NetBSD: patch-aa,v 1.2 2005/09/27 12:49:08 martti Exp $
          len = sizeof(MTotal);
          sysctl(mib, ARRLEN(mib), &MTotal, &len, NULL, 0);
          MTotal >>= 10;
-@@ -395,7 +412,24 @@
+@@ -395,7 +412,24 @@ gint read_memswap(gulong *mem, gulong *s
  
  #define ARRLEN(X) (sizeof(X)/sizeof(X[0]))
      {
