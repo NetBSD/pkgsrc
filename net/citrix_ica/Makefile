@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/01/19 08:56:45 sborrill Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/19 23:37:43 dmcmahill Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -23,11 +23,13 @@ PKGNAME=	citrix_ica-9.0.0
 .  elif ${MACHINE_ARCH} == "sparc"
 DISTNAME=       en.solaris
 PKGNAME=        citrix_ica-8.46
+MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
 EXTRACT_SUFX=   .tar.Z
 .  endif
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	en.solaris
 PKGNAME=	citrix_ica-8.46
+MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
 EXTRACT_SUFX=	.tar.Z
 .elif ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly"
 DISTNAME=	linuxx86
@@ -64,7 +66,7 @@ INSTALLATION_DIRS=	bin
 do-patch:
 	(cd ${WRKSRC}; \
 	for f in ${PATCHDIR}/patch-${MACHINE_ARCH}-*;do \
-	${PATCH} <$$f >/dev/null 2>&1 || ${TRUE}; \
+	${PATCH} ${PATCH_ARGS} <$$f >/dev/null 2>&1 || ${TRUE}; \
 	done)
 
 do-build:
