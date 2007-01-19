@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.5 2007/01/19 12:59:01 uebayasi Exp $
+# $NetBSD: options.mk,v 1.6 2007/01/19 14:02:39 uebayasi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gauche
 PKG_OPTIONS_OPTIONAL_GROUPS=	multibyte
 PKG_OPTIONS_GROUP.multibyte=	utf8 eucjp sjis
 PKG_SUPPORTED_OPTIONS=	gdbm
 PKG_SUGGESTED_OPTIONS=	gdbm utf8
+PKG_OPTIONS_LEGACY_VARS+=	GAUCHE_MULTIBYTE:utf8
+PKG_OPTIONS_LEGACY_OPTS+=	multibyte:utf8
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,14 +27,14 @@ PLIST_SUBST+=	USE_GDBM='@comment '
 ###
 ### Multibyte extension.
 ###
-.for __encoding in utf8 eucjp sjis
-.if !empty(PKG_OPTIONS:M${__encoding})
-CONFIGURE_ARGS+=	--enable-multibyte=${__encoding}
+.for encoding in utf8 eucjp sjis
+.if !empty(PKG_OPTIONS:M${encoding})
+CONFIGURE_ARGS+=	--enable-multibyte=${encoding}
 .endif
 .endfor
 
 .if defined(PKG_DEVELOPER)
 .PHONY: print-multibyte-options
 print-multibyte-options:
-	${SED} -ne '/load "/ { s|^.*load "\([^"]*\)".*$|\1|; p; }' ${WRKSRC}/test/mb-chars.scm
+	${SED} -ne '/load "/ { s,^.*load "\([^"]*\)".*$$,\1,; p; }' ${WRKSRC}/test/mb-chars.scm
 .endif
