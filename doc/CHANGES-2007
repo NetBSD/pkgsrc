@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.184 2007/01/19 15:11:43 taca Exp $
+$NetBSD: CHANGES-2007,v 1.185 2007/01/19 15:34:15 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -277,3 +277,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/gauche to 0.8.9 [uebayasi 2007-01-19]
 	Added www/kahua version 1.0.1 [uebayasi 2007-01-19]
 	Updated mail/mew to 5.2 [taca 2007-01-19]
+	Added www/ap-auth-external version 2.1.19 [sborrill 2007-01-19]
+	Updated net/citrix_ica to 9.0.0 [sborrill 2007-01-19]
