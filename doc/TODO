@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5905 2007/01/18 22:45:16 wiz Exp $
+$NetBSD: TODO,v 1.5906 2007/01/19 00:57:53 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -972,7 +972,6 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rpc2-1.28
 	o rpm-4.4.6
-	o rss2email-2.60
 	o rt3-3.6.3
 	o rtcw-1.41.3
 	o ruby-1.8.5

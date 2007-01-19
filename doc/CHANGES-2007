@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.179 2007/01/19 00:55:52 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.180 2007/01/19 00:57:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -268,3 +268,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtk2 to 2.10.8 [wiz 2007-01-18]
 	Updated databases/tinycdb to 0.76 [schmonz 2007-01-18]
 	Updated textproc/py-html2text to 2.25nb1 [schmonz 2007-01-19]
+	Updated mail/rss2email to 2.60 [schmonz 2007-01-19]
