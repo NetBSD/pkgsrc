@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/19 18:04:03 wiz Exp $
 #
 
 DISTNAME=	sip-4.3.2
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fno-common
 CONFIGURE_ARGS+=	LFLAGS_PLUGIN="-bundle -flat_namespace -undefined suppress"
 .else
 CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fPIC
+CONFIGURE_ARGS+=	CXXFLAGS_SHLIB=-fPIC
 .if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc*)
 # gcc3 uses -mimpure-text to not pass -assert pure-text to the linker
 CONFIGURE_ARGS+=        LFLAGS_SHLIB="-shared -mimpure-text"
