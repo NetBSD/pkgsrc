@@ -1,3 +1,9 @@
 #!/bin/sh
-export ICAROOT=DESTINATION
+#
+# $Id: wfica,v 1.2 2007/01/19 23:36:17 dmcmahill Exp $
+#
+
+ICAROOT=DESTINATION
+export ICAROOT
 exec $ICAROOT/wfica
+
