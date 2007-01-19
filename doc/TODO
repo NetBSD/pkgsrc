@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5906 2007/01/19 00:57:53 schmonz Exp $
+$NetBSD: TODO,v 1.5907 2007/01/19 12:00:40 ghen Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,6 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.1
 	o baci-20040415
-	o bacula-2.0.1
 	o balsa-2.3.13
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
