@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2007/01/19 16:28:15 joerg Exp $
+
+--- panel-plugin/Makefile.in.orig	2007-01-19 15:42:16.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -206,6 +206,7 @@ libsystemload_la_CFLAGS = \
+ 	@XFCE4_PANEL_CFLAGS@
+ 
+ libsystemload_la_LIBADD = \
++	${OS_LIBS} \
+ 	@XFCE4_PANEL_LIBS@
+ 
+ all: all-am
