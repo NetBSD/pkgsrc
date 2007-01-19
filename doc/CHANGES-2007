@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.180 2007/01/19 00:57:53 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.181 2007/01/19 12:00:16 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -269,3 +269,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/tinycdb to 0.76 [schmonz 2007-01-18]
 	Updated textproc/py-html2text to 2.25nb1 [schmonz 2007-01-19]
 	Updated mail/rss2email to 2.60 [schmonz 2007-01-19]
+	Updated sysutils/bacula to 2.0.1 [ghen 2007-01-19]
+	Updated sysutils/bacula-clientonly to 2.0.1 [ghen 2007-01-19]
+	Updated sysutils/bacula-gnome-console to 2.0.1 [ghen 2007-01-19]
+	Updated sysutils/bacula-tray-monitor to 2.0.1 [ghen 2007-01-19]
+	Updated sysutils/bacula-wx-console to 2.0.1 [ghen 2007-01-19]
