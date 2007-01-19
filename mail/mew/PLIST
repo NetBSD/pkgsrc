@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.14 2006/10/07 05:13:14 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/01/19 15:10:50 taca Exp $
 bin/incm
+bin/mew-pinentry
 bin/mewcat
 bin/mewdecode
 bin/mewencode
+bin/mewest
 bin/mewl
 man/man1/incm.1
+man/man1/mew-pinentry.1
 man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
+man/man1/mewest.1
 man/man1/mewl.1
 share/mew/Mew.img
 share/mew/Mew.png
