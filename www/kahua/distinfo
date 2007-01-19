@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/19 13:45:35 uebayasi Exp $
+
+SHA1 (Kahua-1.0.1.tgz) = 0731eca481de7612595cd950d03b7d1baf66c579
+RMD160 (Kahua-1.0.1.tgz) = f4ff55bed258486faccbf647344fe719c548a823
+Size (Kahua-1.0.1.tgz) = 491246 bytes
+SHA1 (patch-aa) = 0c0bf9c7795f62b979053019e0a82f12a332f96d
+SHA1 (patch-ab) = 0f4a3d0b7e1daf51952d83f89967e0e6230365bc

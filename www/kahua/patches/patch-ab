@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/01/19 13:45:35 uebayasi Exp $
+
+--- src/Makefile.in.orig	2006-12-27 23:10:08.000000000 +0900
++++ src/Makefile.in
+@@ -32,7 +32,7 @@ INSTALL_TYPE           = @INSTALL_TYPE@
+ SCM_INSTALL_DIR        = $(libdir)
+ SCRIPT_INSTALL_DIR     = $(bindir)
+ KAHUA_STATICDIR        = @KAHUA_STATICDIR@
+-SOCKET_BASE_DIR        = $(prefix)/tmp/$(package)
++SOCKET_BASE_DIR        = $(localstatedir)/tmp/$(package)
+ TMP_BASE_DIR           = $(localstatedir)/tmp
+ KAHUA_VERSION          = $(shell cat $(top_srcdir)/VERSION)
+ 
