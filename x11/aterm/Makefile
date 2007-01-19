@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2006/12/27 13:37:42 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/19 08:02:33 rillig Exp $
 #
 
 DISTNAME=	aterm-1.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 EXTRACT_SUFX=	.tar.bz2
+#CVS_ROOT=	:pserver:anonymous@cvs.aftercode.net:/home/cvsroot
+#CVS_MODULE=	aterm1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.afterstep.org/aterm.php
