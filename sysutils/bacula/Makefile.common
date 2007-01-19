@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2007/01/04 12:29:26 ghen Exp $
+# $NetBSD: Makefile.common,v 1.35 2007/01/19 11:48:15 ghen Exp $
 
 DISTNAME=		bacula-2.0.0
 CATEGORIES=		sysutils
@@ -12,6 +12,8 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
 BACULA_GROUP?=		bacula
 BACULA_DIR_USER?=	bacula-dir
 BACULA_SD_USER?=	bacula-sd
@@ -19,6 +21,8 @@ BACULA_SD_USER?=	bacula-sd
 PKG_SYSCONFSUBDIR?=	bacula
 BACULA_PIDDIR?=		${VARBASE}/run
 BACULA_WORKINGDIR?=	${VARBASE}/spool/bacula
+
+BUILD_DEFS+=		VARBASE BACULA_PIDDIR BACULA_WORKINGDIR
 
 FILES_SUBST+=		BACULA_ETCDIR=${PKG_SYSCONFDIR:Q}
 FILES_SUBST+=		BACULA_PIDDIR=${BACULA_PIDDIR:Q}
@@ -44,7 +48,6 @@ CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR:Q}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR:Q}
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-smartalloc
 .endif
