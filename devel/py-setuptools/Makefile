@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/01/02 13:58:31 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/20 13:56:02 joerg Exp $
 #
 
-DISTNAME=		setuptools-0.6c1-py2.4.egg
-PKGNAME=		${PYPKGPREFIX}-setuptools-0.6c1
-PKGVERSION_NOREV=	0.6c1
-PKGREVISION=		2
+DISTNAME=		setuptools-0.6c3-py2.4.egg
+PKGNAME=		${PYPKGPREFIX}-setuptools-0.6c3
+PKGVERSION_NOREV=	0.6c3
 CATEGORIES=		devel python
 MASTER_SITES=		http://cheeseshop.python.org/packages/2.4/s/setuptools/
 EXTRACT_SUFX=		# empty
