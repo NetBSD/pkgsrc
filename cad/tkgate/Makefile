@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/20 01:47:00 rillig Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -20,7 +20,7 @@ USE_TOOLS+=		gm4
 TKGATE_SITENAME=	Earth
 
 CONFIGURE_ENV+=		BUILDLINK_LDFLAGS=${BUILDLINK_LDFLAGS:Q}
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 
 SUBST_CLASSES+=		tkgate
 SUBST_MESSAGE.tkgate=	Fixing paths in configuration files.
