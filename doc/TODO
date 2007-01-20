@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5911 2007/01/20 13:23:25 wiz Exp $
+$NetBSD: TODO,v 1.5912 2007/01/20 14:24:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -366,7 +366,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o drscheme-360
 	o dvd+rw-tools-7.0
-	o dvdauthor-0.6.13
 	o dvdrip-0.98.2
 	o dvdstyler-1.5beta5
 	o dvipng-1.9
