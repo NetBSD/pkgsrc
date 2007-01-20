@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/01/20 14:16:29 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ALLEGRO_BUILDLINK3_MK:=	${ALLEGRO_BUILDLINK3_MK}+
@@ -16,5 +16,11 @@ BUILDLINK_API_DEPENDS.allegro+=	allegro>=4.1.13
 BUILDLINK_ABI_DEPENDS.allegro?=	allegro>=4.2.0nb1
 BUILDLINK_PKGSRCDIR.allegro?=	../../devel/allegro
 .endif	# ALLEGRO_BUILDLINK3_MK
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
