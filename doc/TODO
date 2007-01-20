@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5912 2007/01/20 14:24:52 wiz Exp $
+$NetBSD: TODO,v 1.5913 2007/01/20 14:27:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,6 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o ggiterm-0.7.1
 	o ghc-6.6
-	o ghostscript-8.55
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
