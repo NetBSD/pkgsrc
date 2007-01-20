@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/12 17:14:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/20 13:14:12 joerg Exp $
 
 DISTNAME=	ratmen-2.2.2
 CATEGORIES=	x11 wm
@@ -11,5 +11,5 @@ COMMENT=	Allows you to create X menus from the shell
 BUILD_TARGET=	ratmen
 LDFLAGS+=	${X11_LDFLAGS}
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
