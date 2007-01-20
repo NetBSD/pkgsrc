@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2006/07/12 16:30:04 rillig Exp $
+$NetBSD: patch-ae,v 1.5 2007/01/20 18:55:09 wiz Exp $
 
---- mozilla/security/nss/cmd/platlibs.mk.orig	2005-11-15 19:19:18.000000000 +0100
-+++ mozilla/security/nss/cmd/platlibs.mk	2006-07-12 17:53:02.000000000 +0200
-@@ -172,7 +172,7 @@ endif
+--- mozilla/security/nss/cmd/platlibs.mk.orig	2006-11-17 02:13:16.000000000 +0000
++++ mozilla/security/nss/cmd/platlibs.mk
+@@ -213,7 +213,7 @@ endif
  # If GNU ld is used, we must use the -rpath-link option to tell
  # the linker where to find libsoftokn3.so, an implicit dependency
  # of libnss3.so.
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.4 2006/07/12 16:30:04 rillig Exp $
  EXTRA_SHARED_LIBS += -Wl,-rpath-link,$(DIST)/lib
  endif
  
-@@ -213,6 +213,7 @@ EXTRA_SHARED_LIBS += \
+@@ -236,6 +236,7 @@ EXTRA_SHARED_LIBS += \
  	-L$(DIST)/lib \
  	-lssl3 \
  	-lsmime3 \
