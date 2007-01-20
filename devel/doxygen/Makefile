@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2007/01/08 12:20:24 adam Exp $
+# $NetBSD: Makefile,v 1.56 2007/01/20 14:26:58 joerg Exp $
 
 DISTNAME=	doxygen-1.5.1.src
 PKGNAME=	doxygen-1.5.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
@@ -52,6 +53,8 @@ post-patch:
 
 post-install:
 	cd ${WRKSRC} && gmake install_docs
+
+BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.12nb1
 
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/application.mk"
