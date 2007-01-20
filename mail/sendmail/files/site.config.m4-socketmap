@@ -1,4 +1,0 @@
-# $NetBSD: site.config.m4-socketmap,v 1.1 2004/08/30 20:16:28 adrianp Exp $
-
-# enable socketmap lookups
-APPENDDEF(`confMAPDEF', `-DSOCKETMAP')
