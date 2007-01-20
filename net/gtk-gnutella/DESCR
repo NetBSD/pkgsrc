@@ -5,7 +5,7 @@ things.
 
 Gnutella is a peer-based file-sharing protocol that allows a
 user running a Gnutella client to search for and download files from
-other Gnutella users, as well as share some files of his/her own.
+other Gnutella users, as well as share some files of their own.
 
 Gtk-Gnutella offers all the extra features you expect from a modern
 client: persistent downloads, searches and filters, intuitive interface,
