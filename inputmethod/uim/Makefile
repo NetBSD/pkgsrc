@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2006/09/16 12:05:16 hira Exp $
+# $NetBSD: Makefile,v 1.28 2007/01/20 16:56:43 wiz Exp $
 #
 
-DISTNAME=		uim-1.2.1
-PKGREVISION=		1
+DISTNAME=		uim-1.3.1
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://uim.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +12,7 @@ COMMENT=		Multilingual input method library
 
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
-USE_NCURSES=		# clear_screen, clr_eos
+USE_NCURSES=		yes	# clear_screen, clr_eos
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool pkg-config
 USE_LANGUAGES=		c c++
