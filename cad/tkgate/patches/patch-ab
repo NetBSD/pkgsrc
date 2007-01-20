@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/06/08 17:52:22 jmmv Exp $
+$NetBSD: patch-ab,v 1.3 2007/01/20 01:47:00 rillig Exp $
 
 --- configure.orig	2001-06-11 22:44:36.000000000 +0200
 +++ configure
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.2 2004/06/08 17:52:22 jmmv Exp $
        union LIBS -l$tcl_lib
        union LPATH -L$TCLLIB
  
-+      . ${PREFIX}/lib/tclConfig.sh
++      . ${LOCALBASE}/lib/tclConfig.sh
 +      for l in ${TCL_LIBS}; do
 +          union LIBS ${l}
 +      done
