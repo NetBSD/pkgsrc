@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/10/12 14:48:44 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2007/01/20 15:17:20 joerg Exp $
 
 --- setup.py.orig	2005-03-23 19:16:40.000000000 +0100
 +++ setup.py
@@ -24,15 +24,6 @@ $NetBSD: patch-ab,v 1.4 2005/10/12 14:48:44 drochner Exp $
          add_directory(library_dirs, "/usr/lib")
          add_directory(include_dirs, "/usr/include")
  
-@@ -210,7 +204,7 @@ class pil_build_ext(build_ext):
-         if find_library_file(self, "tiff"):
-             feature.tiff = "tiff"
- 
--        if find_library_file(self, "freetype"):
-+        if 0:
-             # look for freetype2 include files
-             freetype_version = 0
-             for dir in include_dirs:
 @@ -433,7 +427,7 @@ if __name__ == "__main__":
          package_dir={"": "PIL"},
          packages=[""],
