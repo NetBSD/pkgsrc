@@ -1,53 +1,38 @@
-# $NetBSD: Makefile,v 1.12 2006/04/12 09:21:06 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/20 17:11:52 wiz Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-
-PKGREVISION=	1
 
 MAINTAINER=	taya@NetBSD.org
 COMMENT=	Kana Kanji conversion system
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake printf
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		EMACS=no
+EGDIR=			${PREFIX}/share/examples/anthy
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+CONF_FILES+=		${EGDIR}/anthy-conf ${PKG_SYSCONFDIR}/anthy-conf
 
 PKGCONFIG_OVERRIDE+=	anthy.pc.in
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.anthy
-PKG_SUPPORTED_OPTIONS=	2ch_dict okinawa_dict
-
-.include	"../../mk/bsd.options.mk"
-
-###
-### Optional dictionary support
-###
-.if !empty(PKG_OPTIONS:M2ch_dict)
-DISTFILES+=	2ch.t
-SITES.2ch.t+=	http://omaemona.sourceforge.net/packages/Zisyo/
-.endif
-
-.if !empty(PKG_OPTIONS:Mokinawa_dict)
-OKIDIC_VERSION=			okinawa-20051104
-DISTFILES+=			${OKIDIC_VERSION}.tar.gz
-EXTRACT_ONLY+=			${OKIDIC_VERSION}.tar.gz
-SITES.${OKIDIC_VERSION}.tar.gz+=	http://www.ofug.net/~yamajun/files/
-.endif
+.include	"options.mk"
 
 post-patch:
-.if !empty(PKG_OPTIONS:M2ch_dict)
-	${CP} ${DISTDIR}/2ch.t ${WRKSRC}/mkanthydic
-	@${PRINTF} "/read @top_srcdir@\\\\/mkanthydic\\\\/placename.t\\na\\nread @top_srcdir@/mkanthydic/2ch.t\\n.\\nw\\n" | \
-	ed -s ${WRKSRC}/mkanthydic/dict.args.in
+.if !empty(PKG_OPTIONS:Manthy-2ch-dict)
+	${CP} ${DISTDIR}/2ch.t ${WRKSRC}/mkworddic
+	# Don't change "\n".
+	@${PRINTF} "/read @top_srcdir@\\\\/mkworddic\\\\/placename.t\na\nread @top_srcdir@/mkworddic/2ch.t\n.\nw\n" | \
+	ed -s ${WRKSRC}/mkworddic/dict.args.in
 .endif
-.if !empty(PKG_OPTIONS:Mokinawa_dict)
-	${CP} ${WRKDIR}/${OKIDIC_VERSION}/okinawa.t ${WRKSRC}/mkanthydic
-	@${PRINTF} "/read @top_srcdir@\\\\/mkanthydic\\\\/placename.t\\na\\nread @top_srcdir@/mkanthydic/okinawa.t\\n.\\nw\\n" | \
-	ed -s ${WRKSRC}/mkanthydic/dict.args.in
+.if !empty(PKG_OPTIONS:Manthy-okinawa-dict)
+	${CP} ${DISTDIR}/${OKIDIC_VERSION}.t ${WRKSRC}/mkworddic/okinawa.t
+	# Don't change "\n".
+	@${PRINTF} "/read @top_srcdir@\\\\/mkworddic\\\\/placename.t\na\nread @top_srcdir@/mkworddic/okinawa.t\n.\nw\n" | \
+	ed -s ${WRKSRC}/mkworddic/dict.args.in
 .endif
 
 post-install:
