@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5917 2007/01/20 17:28:58 wiz Exp $
+$NetBSD: TODO,v 1.5918 2007/01/20 17:38:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ Suggested package updates
 	o gnomeicu-0.99.12
 	o gnupg2-2.0.2
 	o gnustep-objc-1.4.0
-	o gnutls-1.6.1
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
