@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5908 2007/01/19 18:06:18 wiz Exp $
+$NetBSD: TODO,v 1.5909 2007/01/20 13:02:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o drscheme-360
 	o dvd+rw-tools-7.0
+	o dvdauthor-0.6.13
 	o dvdrip-0.98.2
 	o dvdstyler-1.5beta5
 	o dvipng-1.9
@@ -471,6 +472,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
+	o gok-1.2.1
 	o gossip-0.22
 	o gourmet-0.13.3
 	o gpsdrive-2.09
@@ -845,7 +847,7 @@ Suggested package updates
 	o pear-Net_Sieve-1.1.3
 	o pear-Net_Socket-1.0.6
 	o pear-SOAP-0.9.4
-	o pfqueue-0.5.3
+	o pfqueue-0.5.4
 	o pfstat-1.8
 	o pgadmin3-1.6.0
 	o phoon-20050629
@@ -952,6 +954,7 @@ Suggested package updates
 	o qwspritefield-1.7
 	o qwt-0.4.0
 	o radiance-3.7.2
+	o rails-1.2.0
 	o raine-0.43.4
 	o randread-0.2
 	o raptor-1.4.13
@@ -1111,6 +1114,7 @@ Suggested package updates
 	o wmweather-2.4.3
 	o wxGTK-2.8
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
+	o xbindkeys-1.8.0
 	o xblast-2.10.4
 	o xchat-2.8.0
 	o xdaliclock-2.23
@@ -1169,7 +1173,7 @@ Suggested package updates
 	o ysm-2.9.9
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.25
+	o zile-2.2.27
 	o zircon-1.18.256
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
