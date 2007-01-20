@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/20 13:26:12 joerg Exp $
 #
 
 DISTNAME=		libstroke-0.5.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.etla.net/libstroke/
 
@@ -18,6 +18,8 @@ USE_TOOLS+=		gmake
 
 CONFIGURE_ENV+=		ac_cv_path_GTK_CONFIG=no
 
+BUILDLINK_DEPMETHOD.libX11?=	build
+
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
