@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.187 2007/01/20 10:56:13 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.188 2007/01/20 13:52:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey to 1.1 [ghen 2007-01-20]
 	Updated www/seamonkey-bin to 1.1 [ghen 2007-01-20]
 	Updated www/seamonkey-gtk1 to 1.1 [ghen 2007-01-20]
+	Updated graphics/graphviz to 2.12nb1 [joerg 2007-01-20]
