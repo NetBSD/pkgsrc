@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5909 2007/01/20 13:02:09 wiz Exp $
+$NetBSD: TODO,v 1.5910 2007/01/20 13:03:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ Suggested package updates
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
 	o courier-mta-0.54.2
-	o cqcam-0.91
 	o crafty-19.5
 	o crossfire-client-1.9.1
 	o crypto++-523
@@ -425,7 +424,6 @@ Suggested package updates
 	o gap-4r4p3
 	o gated-3.6
 	o gauche-0.8.7 [pkg/33675]
-	o gauche-0.8.9
 	o gcalctool-5.9.8
 	o gcc-4.1.1
 	o gcin-1.2.7
@@ -992,7 +990,6 @@ Suggested package updates
 	o sch-3.8.3
 	o sdig-0.40
 	o seahorse-0.9.10
-	o seamonkey-1.1
 	o sendfile-20010424
 	o ser-0.9.6
 	o sharity-3.2
