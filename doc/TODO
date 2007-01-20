@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5915 2007/01/20 17:12:18 wiz Exp $
+$NetBSD: TODO,v 1.5916 2007/01/20 17:26:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -662,8 +662,8 @@ Suggested package updates
 	o nautilus-cd-burner-2.16.2
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.26.1 [pkg/34310]
-	o neon-0.26.2
+	o neon-0.26.1 [pkg/34310|breaks subversion]
+	o neon-0.26.2 [breaks subversion]
 	o nessus-3.0.4
 	o net-snmp-5.4
 	o netcdf-4.0.0a
@@ -916,7 +916,6 @@ Suggested package updates
 	o py-psyco-1.5.1
 	o py-psycopg2-2.0.4 [pkg/34433]
 	o py-psycopg2-2.0.5
-	o py-pyrex-0.9.3.1
 	o py-qt3-base-3.17
 	o py-qt3-modules-3.16
 	o py-qt3-qscintilla-3.16
