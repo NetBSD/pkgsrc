@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2007/01/20 12:18:31 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/01/20 12:33:37 joerg Exp $
 
 --- panel-plugin/os.c.orig	2004-06-07 01:16:30.000000000 +0000
 +++ panel-plugin/os.c
@@ -16,10 +16,10 @@ $NetBSD: patch-ab,v 1.1 2007/01/20 12:18:31 joerg Exp $
 +		g_warning("kinfo_get_sched_cputime failed");
 +		return 0;
 +	}
-+	used = cp_time.cp_user + cp_time.cp_nice + cp_time.cp_sys - *oldusage;
-+	total = used + cp_time.cp_idle - *oldtotal;
-+	if (total != 0)
-+		usage = 100 * (used + used / 2) / total;
++	used = cp_time.cp_user + cp_time.cp_nice + cp_time.cp_sys;
++	total = used + cp_time.cp_idle;
++	if (total != *oldtotal)
++		usage = 100 * (used - *oldusage + used / 2 - *oldusage / 2) / (total - *oldtotal);
 +	else
 +		usage = 0;
 +	*oldusage = used;
