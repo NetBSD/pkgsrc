@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.94 2006/12/29 21:44:09 markd Exp $
+# $NetBSD: Makefile,v 1.95 2007/01/20 20:08:31 tv Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -35,6 +35,8 @@ SUBST_SED.paths+=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_SED.paths+=	-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
+REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl
+
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
@@ -53,10 +55,6 @@ post-patch: make-sendmail-siteconfig
 .endif
 .if !empty(PKG_OPTIONS:Msasl)
 	${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
-.endif
-.if !empty(PKG_OPTIONS:Msendmail-socketmap)
-	${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
-PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
 post-extract:
@@ -88,14 +86,8 @@ post-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
-
-.if !empty(PKG_OPTIONS:Msendmail-socketmap)
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapClient.pl \
-		${PREFIX}/share/examples/sendmail
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapServer.pl \
-		${PREFIX}/share/examples/sendmail
-.endif
-
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmap*.pl \
+		${PREFIX}/share/examples/sendmail/
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKSRC}/cf/README ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKSRC}/sendmail/SECURITY ${PREFIX}/share/doc/sendmail

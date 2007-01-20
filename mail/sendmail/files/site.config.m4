@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4,v 1.7 2006/10/13 13:58:11 tv Exp $
+# $NetBSD: site.config.m4,v 1.8 2007/01/20 20:08:32 tv Exp $
 
 # pathnames specific to pkgsrc
 #
@@ -18,6 +18,7 @@ define(`confMAN5EXT', `5')
 define(`confMAN8EXT', `8')
 APPENDDEF(`confENVDEF', `-I${PREFIX}/include -DSMRSH_CMDDIR=\"${SMRSH_CMDDIR}\"')
 APPENDDEF(`confLIBS', `-L${PREFIX}/lib')
+APPENDDEF(`confMAPDEF', `-DSOCKETMAP')
 
 # the following are handled by pkgsrc
 define(`confINST_DEP',`')
