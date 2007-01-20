@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/13 05:15:50 toshii Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/20 05:41:24 toshii Exp $
 
 DISTNAME=	xf86-video-nv-1.2.2
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Modular Xorg nVidia video driver
+COMMENT=	Modular Xorg NVIDIA video driver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
