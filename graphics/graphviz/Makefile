@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/01/08 16:35:15 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2007/01/20 13:49:03 joerg Exp $
 
 DISTNAME=	graphviz-2.12
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -10,12 +11,14 @@ COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+DEPENDS+= ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
+
+CONFIGURE_ARGS+=	--without-pangocairo
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-# ltdl enabled makes 'dot' crash
-CONFIGURE_ARGS+=	--disable-ltdl
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
