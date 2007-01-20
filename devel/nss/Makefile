@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/10/24 08:38:03 abs Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/20 18:55:09 wiz Exp $
 
-DISTNAME=		nss-3.11
+DISTNAME=		nss-3.11.4
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_11_RTM/src/
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=security/nss/releases/NSS_3_11_4_RTM/src/}
 
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
@@ -42,10 +42,10 @@ NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_gcc_OPT.OBJ
 NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
 .  endif
 
-# on solaris/sparc, we get a different set of libs.  
+# on solaris/sparc, we get a different set of libs.
 # How about NetBSD/sparc and sparc64?
 .  if ${MACHINE_ARCH} == "sparc"
-SUNOS_TRUE=	
+SUNOS_TRUE=
 SUNOS_FALSE=	"@comment "
 .  endif
 
@@ -64,7 +64,7 @@ NSS_OBJ_DIR=	${OPSYS}${NSS_SHORT_OS_VERSION}${NSS_MACHINE_ARCH}_glibc_PTH_OPT.OB
 .endif
 
 SUNOS_TRUE?=	"@comment "
-SUNOS_FALSE?=	
+SUNOS_FALSE?=
 PLIST_SUBST+=	SUNOS_TRUE=${SUNOS_TRUE}
 PLIST_SUBST+=	SUNOS_FALSE=${SUNOS_FALSE}
 

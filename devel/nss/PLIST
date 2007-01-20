@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/24 08:54:08 abs Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/20 18:55:09 wiz Exp $
 include/nss/dbm/cdefs.h
 include/nss/dbm/mcom_db.h
 include/nss/dbm/ncompat.h
-include/nss/dbm/nsres.h
 include/nss/dbm/winfile.h
 include/nss/nss/base64.h
 include/nss/nss/blapit.h
