@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5920 2007/01/20 17:43:54 wiz Exp $
+$NetBSD: TODO,v 1.5921 2007/01/20 18:55:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -678,7 +678,6 @@ Suggested package updates
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a3
-	o nss-3.11.4
 	o nss_ldap-254
 	o ntp-4.2.4
 	o nulib2-210
