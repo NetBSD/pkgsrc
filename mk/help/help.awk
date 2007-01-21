@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.10 2007/01/14 16:42:37 rillig Exp $
+# $NetBSD: help.awk,v 1.11 2007/01/21 10:00:34 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -87,7 +87,7 @@ always {
 # be all-lowercase (make targets) or all-uppercase (variable names).
 # Everything else is assumed to belong to the explaining text.
 #
-NF >= 2 {
+NF >= 1 {
 	w1 = ($1 == tolower($1)) ? toupper($1) : $1;
 	w2 = ($2 == tolower($2)) ? toupper($2) : $2;
 
