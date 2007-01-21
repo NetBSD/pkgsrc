@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.202 2007/01/21 17:13:58 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.203 2007/01/21 19:19:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -300,3 +300,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Added ham/fl_logbook version 1.21 [obache 2007-01-21]
 	Updated devel/apr1 to 1.2.8.2.2.4 [xtraeme 2007-01-21]
 	Updated www/apache22 to 2.2.4 [xtraeme 2007-01-21]
+	Updated databases/libgda to 2.99.2 [wiz 2007-01-21]
+	Updated databases/libgda-postgresql to 2.99.2 [wiz 2007-01-21]
+	Updated databases/libgnomedb to 2.99.2 [wiz 2007-01-21]
+	Updated databases/mergeant to 0.65 [wiz 2007-01-21]
+	Updated math/gnumeric to 1.6.3nb4 [wiz 2007-01-21]
