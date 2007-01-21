@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5926 2007/01/21 19:19:48 wiz Exp $
+$NetBSD: TODO,v 1.5927 2007/01/21 21:44:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -531,7 +531,6 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
-	o jasper-1.900.1
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
