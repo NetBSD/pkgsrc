@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.67 2007/01/08 22:42:00 rillig Exp $
+# $NetBSD: post-build,v 1.68 2007/01/21 23:42:29 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -606,8 +606,8 @@ EOHTML
 
 		if ($verbose && ($state eq "topten" || $state eq "broken")) {
 			print "\n\n$state_head{$state}\n\n";
-		print_report_header();
-	}
+			print_report_header();
+		}
 
 
 		print HTML <<EOHTML;
