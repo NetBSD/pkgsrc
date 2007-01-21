@@ -1,90 +1,92 @@
-@comment $NetBSD: PLIST,v 1.18 2006/12/05 10:23:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/01/21 19:15:33 wiz Exp $
 bin/gnome-database-properties
 bin/gnome-db-browser
 bin/gnome-db-demo
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-boolean.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-combo.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-info.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-textual.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-boolean.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-combo.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-common-time.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-date.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-none.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-shell.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-string.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-time.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-timestamp.h
-include/libgnomedb-1.99/libgnomedb/data-entries/gnome-db-entry-wrapper.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-basic-form.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-combo.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-connection-properties.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-data-entry.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-data-import.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-data-source-selector.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-data-store.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-data-widget-info.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-data-widget.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-dbms-update-viewer.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-decl.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-dsn-config-druid.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-dsn-config.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-dsn-spec.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-editor.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-enums.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-error-dialog.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-error.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-find-dialog.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-form.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-gray-bar.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-grid.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-login-dialog.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-login.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-plugin.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-provider-selector.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-raw-form.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-raw-grid.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-report-editor.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-selector-private.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-selector.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-server-operation.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-sql-console.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-stock.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-tools.h
-include/libgnomedb-1.99/libgnomedb/gnome-db-util.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-cursor.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-db-relations.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-entity.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-field.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-fkconstraint.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-item.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-join.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-query-struct.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-text.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas-tip.h
-include/libgnomedb-1.99/libgnomedb/graph/gnome-db-canvas.h
-include/libgnomedb-1.99/libgnomedb/graph/graph-utility.h
-include/libgnomedb-1.99/libgnomedb/libgnomedb.h
-include/libgnomedb-1.99/libgnomedb/marshal.h
-include/libgnomedb-1.99/libgnomedb/sel-aggregates.h
-include/libgnomedb-1.99/libgnomedb/sel-data-types.h
-include/libgnomedb-1.99/libgnomedb/sel-functions.h
-include/libgnomedb-1.99/libgnomedb/sel-graphs.h
-include/libgnomedb-1.99/libgnomedb/sel-onequery.h
-include/libgnomedb-1.99/libgnomedb/sel-onetable.h
-include/libgnomedb-1.99/libgnomedb/sel-onetarget.h
-include/libgnomedb-1.99/libgnomedb/sel-queries.h
-include/libgnomedb-1.99/libgnomedb/sel-tables.h
-include/libgnomedb-1.99/libgnomedb/utility.h
-lib/libglade/2.0/libgnomedb.la
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-boolean.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-combo.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-info.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-data-cell-renderer-textual.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-boolean.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-combo.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-common-time.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-date.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-none.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-shell.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-string.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-time.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-timestamp.h
+include/libgnomedb-2.99/libgnomedb/data-entries/gnome-db-entry-wrapper.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-basic-form.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-combo.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-connection-properties.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-data-entry.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-data-import.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-data-source-selector.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-data-store.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-data-widget-info.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-data-widget.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-dbms-update-viewer.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-decl.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-dsn-config-druid.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-dsn-config.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-dsn-spec.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-editor.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-enums.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-error-dialog.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-error.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-find-dialog.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-form.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-gray-bar.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-grid.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-login-dialog.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-login.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-plugin.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-provider-selector.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-raw-form.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-raw-grid.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-report-editor.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-selector-private.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-selector.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-server-operation.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-sql-console.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-stock.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-tools.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-transaction-status.h
+include/libgnomedb-2.99/libgnomedb/gnome-db-util.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-cursor.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-db-relations.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-entity.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-field.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-fkconstraint.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-item.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-join.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-query-struct.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-text.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas-tip.h
+include/libgnomedb-2.99/libgnomedb/graph/gnome-db-canvas.h
+include/libgnomedb-2.99/libgnomedb/graph/graph-utility.h
+include/libgnomedb-2.99/libgnomedb/libgnomedb.h
+include/libgnomedb-2.99/libgnomedb/marshal.h
+include/libgnomedb-2.99/libgnomedb/sel-aggregates.h
+include/libgnomedb-2.99/libgnomedb/sel-data-types.h
+include/libgnomedb-2.99/libgnomedb/sel-functions.h
+include/libgnomedb-2.99/libgnomedb/sel-graphs.h
+include/libgnomedb-2.99/libgnomedb/sel-onequery.h
+include/libgnomedb-2.99/libgnomedb/sel-onetable.h
+include/libgnomedb-2.99/libgnomedb/sel-onetarget.h
+include/libgnomedb-2.99/libgnomedb/sel-queries.h
+include/libgnomedb-2.99/libgnomedb/sel-tables.h
+include/libgnomedb-2.99/libgnomedb/utility.h
+lib/libglade/3.0/libgnomedb.la
 lib/libgnomedb-3.la
 lib/libgnomedb/plugins/libgnomedb_entry_builtin_plugins.la
 lib/libgnomedb_graph-3.la
 lib/libgnomedb_handlers-3.la
-lib/pkgconfig/libgnomedb-2.0.pc
+lib/pkgconfig/libgnomedb-3.0.pc
 share/applications/database-properties.desktop
 share/gconf/schemas/libgnomedb.schemas
 share/gnome-db/demo/console.c
+share/gnome-db/demo/ddl_queries.c
 share/gnome-db/demo/demo_db.db
 share/gnome-db/demo/demo_dict.xml
 share/gnome-db/demo/form.c
@@ -92,6 +94,7 @@ share/gnome-db/demo/form_pict.c
 share/gnome-db/demo/form_rw.c
 share/gnome-db/demo/graph.c
 share/gnome-db/demo/grid.c
+share/gnome-db/demo/grid_pict.c
 share/gnome-db/demo/grid_rw.c
 share/gnome-db/demo/linked_grid_form.c
 share/gnome-db/demo/linked_model_param.c
@@ -157,7 +160,9 @@ share/gtk-doc/html/libgnomedb/GnomeDbRawForm.html
 share/gtk-doc/html/libgnomedb/GnomeDbRawGrid.html
 share/gtk-doc/html/libgnomedb/GnomeDbReportEditor.html
 share/gtk-doc/html/libgnomedb/GnomeDbSelector.html
+share/gtk-doc/html/libgnomedb/GnomeDbServerOperation.html
 share/gtk-doc/html/libgnomedb/GnomeDbSqlConsole.html
+share/gtk-doc/html/libgnomedb/GnomeDbTransactionStatus.html
 share/gtk-doc/html/libgnomedb/GnomeDbmsUpdateViewer.html
 share/gtk-doc/html/libgnomedb/architecture.html
 share/gtk-doc/html/libgnomedb/ch04s02.html
@@ -200,7 +205,6 @@ share/gtk-doc/html/libgnomedb/index.sgml
 share/gtk-doc/html/libgnomedb/introduction.html
 share/gtk-doc/html/libgnomedb/left.png
 share/gtk-doc/html/libgnomedb/libgnomedb-GnomeDB-Stock-images.html
-share/gtk-doc/html/libgnomedb/libgnomedb-GnomeDbServerOperation.html
 share/gtk-doc/html/libgnomedb/libgnomedb-List-of-enumerated.html
 share/gtk-doc/html/libgnomedb/libgnomedb-Utilities.html
 share/gtk-doc/html/libgnomedb/libgnomedb-example.html
@@ -222,6 +226,7 @@ share/gtk-doc/html/libgnomedb/sampleapp4.png
 share/gtk-doc/html/libgnomedb/style.css
 share/gtk-doc/html/libgnomedb/up.png
 share/gtk-doc/html/libgnomedb/viewchanges.html
+share/locale/ar/LC_MESSAGES/libgnomedb-3.mo
 share/locale/az/LC_MESSAGES/libgnomedb-3.mo
 share/locale/be/LC_MESSAGES/libgnomedb-3.mo
 share/locale/ca/LC_MESSAGES/libgnomedb-3.mo
@@ -318,8 +323,8 @@ share/pixmaps/libgnomedb/gnome-db.png
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/libgnomedb/plugins
 @dirrm lib/libgnomedb
-@comment in libglade2: @dirrm lib/libglade/2.0
-@dirrm include/libgnomedb-1.99/libgnomedb/graph
-@dirrm include/libgnomedb-1.99/libgnomedb/data-entries
-@dirrm include/libgnomedb-1.99/libgnomedb
-@dirrm include/libgnomedb-1.99
+@dirrm lib/libglade/3.0
+@dirrm include/libgnomedb-2.99/libgnomedb/graph
+@dirrm include/libgnomedb-2.99/libgnomedb/data-entries
+@dirrm include/libgnomedb-2.99/libgnomedb
+@dirrm include/libgnomedb-2.99
