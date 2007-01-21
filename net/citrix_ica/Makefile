@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/19 23:37:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.32 2007/01/21 12:44:48 sborrill Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://download2.citrix.com/files/en/products/client/ica/current/
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://www.citrix.com/products/clients/ica/technology.asp
+HOMEPAGE=	http://www.citrix.com/English/SS/downloads/downloads.asp?dID=2755
 COMMENT=	Citrix(R) ICA client for the Citrix(R) Presentation Server(TM)
 
 .include "../../mk/bsd.prefs.mk"
@@ -22,13 +22,13 @@ DISTNAME=	linuxx86
 PKGNAME=	citrix_ica-9.0.0
 .  elif ${MACHINE_ARCH} == "sparc"
 DISTNAME=       en.solaris
-PKGNAME=        citrix_ica-8.46
+PKGNAME=        citrix_ica-8.46.110465
 MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
 EXTRACT_SUFX=   .tar.Z
 .  endif
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	en.solaris
-PKGNAME=	citrix_ica-8.46
+PKGNAME=	citrix_ica-8.46.110465
 MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
 EXTRACT_SUFX=	.tar.Z
 .elif ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly"
@@ -36,7 +36,6 @@ DISTNAME=	linuxx86
 PKGNAME=	citrix_ica-9.0.0
 .endif
 
-# see http://www.citrix.com/download/unix-downloads.htm
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${MACHINE_ARCH} == "i386"
 DEPENDS+=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=        suse_openmotif>=6.4:../../emulators/${SUSE_DIR_PREFIX}_openmotif
