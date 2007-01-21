@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/21 16:49:23 obache Exp $
+
+SHA1 (fl_logbook.121.src.tar.gz) = 739338598cce81c9c3cb5776a126ad21354352ca
+RMD160 (fl_logbook.121.src.tar.gz) = 90353a34238ede39024df4cabafcbceada7895ae
+Size (fl_logbook.121.src.tar.gz) = 54496 bytes
+SHA1 (patch-aa) = 4763255390f3bd3acc003a9fe65d47bf8713bf3e
