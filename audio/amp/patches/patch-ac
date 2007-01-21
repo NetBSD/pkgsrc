@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2003/03/22 05:44:38 dillo Exp $
+$NetBSD: patch-ac,v 1.6 2007/01/21 04:02:01 rillig Exp $
 
---- audioIO_SunOS.c.orig	Sat May 31 13:47:58 1997
-+++ audioIO_SunOS.c
+--- audioIO_SunOS.c.orig	1997-05-31 19:47:58.000000000 +0200
++++ audioIO_SunOS.c	2007-01-21 04:50:43.135430140 +0100
 @@ -8,7 +8,11 @@
  
  #include "amp.h"
@@ -14,6 +14,15 @@ $NetBSD: patch-ac,v 1.5 2003/03/22 05:44:38 dillo Exp $
  #include <fcntl.h>
  #include <unistd.h>
  #include <stdio.h>
+@@ -18,7 +22,7 @@
+ 
+ /* declare these static to effectively isolate the audio device */
+ 
+-static audio_fd;
++static int audio_fd;
+ static audio_info_t auinfo;
+ 
+ /* audioOpen() */
 @@ -31,13 +35,12 @@ audioOpen(int frequency, int stereo, int
  {
  	int res;
@@ -30,3 +39,21 @@ $NetBSD: patch-ac,v 1.5 2003/03/22 05:44:38 dillo Exp $
  
  	auinfo.play.precision=16;
  	auinfo.play.encoding=AUDIO_ENCODING_LINEAR;
+@@ -70,7 +73,7 @@ audioSetVolume(int volume)
+ /* audioFlush() */
+ /* should flush the audio device */
+ 
+-inline void
++void
+ audioFlush()
+ {
+ 	DB(audio, msg("audio: flush %d\n",audio_fd) );
+@@ -91,7 +94,7 @@ audioClose()
+ /* writes count bytes from buffer to the audio device */
+ /* returns the number of bytes actually written */
+ 
+-int inline
++int
+ audioWrite(char *buffer, int count)
+ {
+ 	return(write(audio_fd,buffer,count));
