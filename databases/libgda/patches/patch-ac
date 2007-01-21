@@ -1,19 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2006/09/11 17:06:48 wiz Exp $
+$NetBSD: patch-ac,v 1.9 2007/01/21 19:14:20 wiz Exp $
 
---- libgda/Makefile.in.orig	2006-09-03 13:02:28.000000000 +0000
+--- libgda/Makefile.in.orig	2006-12-22 14:01:54.000000000 +0000
 +++ libgda/Makefile.in
-@@ -59,7 +59,9 @@ libLTLIBRARIES_INSTALL = $(INSTALL)
- LTLIBRARIES = $(lib_LTLIBRARIES)
- am__DEPENDENCIES_1 =
- libgda_3_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
--	$(top_builddir)/libsql/libgdasql.la
-+	$(top_builddir)/libsql/libgdasql.la\
-+	graph/libgda_graph-3.la handlers/libgda_handlers-3.la \
-+	sql-delimiter/libgda_sql_delimiter-3.la
- am__objects_1 = gda-enum-types.lo
- am__objects_2 =
- am__objects_3 = $(am__objects_2) gda-blob.lo gda-client.lo \
-@@ -381,8 +383,8 @@ AM_CPPFLAGS = \
+@@ -387,8 +387,8 @@ AM_CPPFLAGS = \
  	$(LIBGDA_CFLAGS) \
  	-DLIBGDA_PLUGINDIR=\""$(libdir)/libgda-$(GDA_MAJOR_VERSION).$(GDA_MINOR_VERSION)/providers"\" \
  	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" \
@@ -24,14 +13,3 @@ $NetBSD: patch-ac,v 1.8 2006/09/11 17:06:48 wiz Exp $
  	-DDTDINSTALLDIR=\""$(LIBGDA_DTDDIR)"\"
  
  gda_marshal_built_files = gda-marshal.h gda-marshal.c
-@@ -541,7 +543,9 @@ libgda_3_la_SOURCES = \
- 	$(libgda_sources)
- 
- libgda_3_la_LDFLAGS = -version-info $(GDA_CURRENT):$(GDA_REVISION):$(GDA_AGE) -no-undefined
--libgda_3_la_LIBADD = $(LIBGDA_LIBS) $(FAM_LIBS) $(top_builddir)/libsql/libgdasql.la
-+libgda_3_la_LIBADD = $(LIBGDA_LIBS) $(FAM_LIBS) $(top_builddir)/libsql/libgdasql.la graph/libgda_graph-3.la \
-+	handlers/libgda_handlers-3.la \
-+	sql-delimiter/libgda_sql_delimiter-3.la
- gdaincludedir = $(includedir)/libgda-$(GDA_MAJOR_VERSION).$(GDA_MINOR_VERSION)/libgda
- gdainclude_HEADERS = $(libgda_built_headers) $(gda_headers)
- CLEANFILES = $(libgda_built_headers) $(libgda_built_cfiles) \
