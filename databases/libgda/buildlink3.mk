@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:10:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2007/01/21 19:14:20 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGDA_BUILDLINK3_MK:=	${LIBGDA_BUILDLINK3_MK}+
@@ -12,11 +12,10 @@ BUILDLINK_PACKAGES+=	libgda
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgda
 
 .if !empty(LIBGDA_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libgda+=	libgda>=1.9.100
-BUILDLINK_ABI_DEPENDS.libgda?=	libgda>=1.9.100nb1
+BUILDLINK_API_DEPENDS.libgda+=	libgda>=2.99.2
 BUILDLINK_PKGSRCDIR.libgda?=	../../databases/libgda
 
-PRINT_PLIST_AWK+=	/^@dirrm lib\/libgda-1.9\/providers$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/libgda-2.99\/providers$$/ \
 				{ print "@comment in libgda: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/libgda$$/ \
 				{ print "@comment in libgda: " $$0; next; }
