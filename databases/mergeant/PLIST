@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2006/09/11 17:07:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/01/21 19:16:09 wiz Exp $
 bin/mergeant
 lib/bonobo/servers/GNOME_Mergeant.server
 share/application-registry/mergeant.applications
 share/applications/mergeant.desktop
 share/gnome/help/mergeant/C/topic.dat
 share/locale/am/LC_MESSAGES/mergeant.mo
+share/locale/ar/LC_MESSAGES/mergeant.mo
 share/locale/az/LC_MESSAGES/mergeant.mo
 share/locale/ca/LC_MESSAGES/mergeant.mo
 share/locale/cs/LC_MESSAGES/mergeant.mo
@@ -60,6 +61,8 @@ share/pixmaps/mergeant/mergeant_rels.png
 share/pixmaps/mergeant/mergeant_rels_small.png
 share/pixmaps/mergeant/mergeant_sequences.png
 share/pixmaps/mergeant/mergeant_tables.png
+share/pixmaps/mergeant/mg-extra-form.png
+share/pixmaps/mergeant/mg-extra-grid.png
 share/pixmaps/mergeant/query-view-query_16x16.png
 share/pixmaps/mergeant/query-view-table_16x16.png
 share/pixmaps/mergeant/query-view-view_16x16.png
