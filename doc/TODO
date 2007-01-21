@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5925 2007/01/21 19:19:08 wiz Exp $
+$NetBSD: TODO,v 1.5926 2007/01/21 19:19:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -531,6 +531,7 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
+	o jasper-1.900.1
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
@@ -728,7 +729,7 @@ Suggested package updates
 	o p5-Crypt-IDEA-1.08 [pkg/34391]
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-mysql-4.00
+	o p5-DBD-mysql-4.001
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.45
 	o p5-Devel-SmallProf-2.00_03
@@ -780,6 +781,7 @@ Suggested package updates
 	o p5-Net-Z3950-0.46
 	o p5-Number-Compare-0.02
 	o p5-PV-1.5
+	o p5-Params-Validate-0.87
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
@@ -795,7 +797,7 @@ Suggested package updates
 	o p5-Template-Extract-0.40
 	o p5-Test-Exception-0.24
 	o p5-Test-Harness-2.46
-	o p5-Test-Inline-2.200
+	o p5-Test-Inline-2.201
 	o p5-Test-Simple-0.66
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
