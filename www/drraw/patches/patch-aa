@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/13 11:14:41 kleink Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/21 16:46:06 kleink Exp $
 
---- drraw.cgi.orig	2005-06-19 20:20:50.000000000 +0200
-+++ drraw.cgi	2005-10-13 12:43:43.000000000 +0200
+--- drraw.cgi.orig	2007-01-14 11:58:33.000000000 -0800
++++ drraw.cgi	2007-01-21 08:29:51.000000000 -0800
 @@ -49,7 +49,7 @@
  
  # The configuration file is expected to be found in the same directory
@@ -9,5 +9,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/13 11:14:41 kleink Exp $
 -my $config = (dirname($0) =~ /(.*)/)[0] . "/drraw.conf"; # Untaint
 +my $config = "@PKG_SYSCONFDIR@/drraw.conf";
  
- ###############################################################################
- ##   STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP   ##
+ # This needs to be manually set for stupid stupid File::Find to work
+ # in tainted mode.
