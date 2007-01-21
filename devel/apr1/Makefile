@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/09 00:52:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/21 17:11:53 xtraeme Exp $
 
 .include "../../www/apache22/Makefile.common"
 
@@ -10,10 +10,6 @@ HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Runtime
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Don't bump this when apache upgrades; it is only apache2-2.0.45 and
-# under that includes its own apr.  apr was split out in 2.0.45nb1.
-CONFLICTS=		apache2<=2.0.45
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
