@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/01/20 17:38:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2007/01/21 18:13:55 minskim Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -10,7 +10,7 @@ bin/srptool
 include/gnutls/compat.h
 include/gnutls/extra.h
 include/gnutls/gnutls.h
-include/gnutls/gnutlsxx.h
+${CXX}include/gnutls/gnutlsxx.h
 include/gnutls/openpgp.h
 include/gnutls/openssl.h
 include/gnutls/pkcs12.h
@@ -19,7 +19,7 @@ info/gnutls.info
 lib/libgnutls-extra.la
 lib/libgnutls-openssl.la
 lib/libgnutls.la
-lib/libgnutlsxx.la
+${CXX}lib/libgnutlsxx.la
 lib/pkgconfig/gnutls-extra.pc
 lib/pkgconfig/gnutls.pc
 man/man1/certtool.1
