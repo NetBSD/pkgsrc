@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2006/12/06 12:14:00 obache Exp $
+$NetBSD: patch-ak,v 1.2 2007/01/21 19:14:20 wiz Exp $
 
---- providers/sqlite/gda-sqlite-provider.c.orig	2006-10-13 18:28:55.000000000 +0000
+--- providers/sqlite/gda-sqlite-provider.c.orig	2006-11-15 15:42:30.000000000 +0000
 +++ providers/sqlite/gda-sqlite-provider.c
-@@ -750,7 +750,7 @@ gda_sqlite_provider_perform_operation (G
+@@ -763,7 +763,7 @@ gda_sqlite_provider_perform_operation (G
  
  		if (g_unlink (filename)) {
  			g_set_error (error, 0, 0,
