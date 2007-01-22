@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 17:56:32 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/22 14:56:56 joerg Exp $
 #
 
-DISTNAME=		libXau-1.0.0
+DISTNAME=		libXau-1.0.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
