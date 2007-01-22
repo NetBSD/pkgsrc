@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/11/19 11:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/22 21:01:51 smb Exp $
 #
 
 DISTNAME=		xen-3.0.3_0-src
 PKGNAME=		xentools30-3.0.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
 			http://bits.xensource.com/oss-xen/release/3.0.3-0/src.tgz/
@@ -174,6 +174,7 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../textproc/py-xml/buildlink3.mk"
 #.include "../../devel/zlib/buildlink3.mk"
 #.include "../../www/curl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
