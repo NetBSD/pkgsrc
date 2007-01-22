@@ -1,10 +1,10 @@
-$NetBSD: README.Darwin,v 1.5 2006/08/30 04:51:05 schmonz Exp $
+$NetBSD: README.Darwin,v 1.6 2007/01/22 13:07:05 tron Exp $
 
 If you are using Mac OS X, please read "README.MacOSX" as well.
 
 Terse instructions:
 
-$ ./darwindiskimage create ~/Documents/NetBSD 512  # megabytes - season to taste
+$ ./darwindiskimage create ~/Documents/NetBSD 1024  # megabytes - season to taste
 $ ./darwindiskimage mount ~/Documents/NetBSD
 $ sudo chown `id -u`:`id -g` /Volumes/NetBSD
 $ curl -O \
