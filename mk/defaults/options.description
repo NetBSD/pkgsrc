@@ -1,4 +1,3 @@
-2ch_dict	
 a52	
 aac	
 aalib			Enable aalib support.
@@ -8,6 +7,8 @@ ads
 alsa	
 anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
+anthy-2ch-dict		Include the 2ch dictionary.
+anthy-okinawa-dict	Include the okinawa dictionary.
 antialias	
 apop	
 arping1	
@@ -232,7 +233,6 @@ nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nogui	
 ogg			Enable Ogg support.
-okinawa_dict	
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
