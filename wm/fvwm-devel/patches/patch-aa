@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/12/12 07:05:01 martti Exp $
+$NetBSD: patch-aa,v 1.5 2007/01/22 07:25:48 martti Exp $
 
---- bin/Makefile.in.orig	2006-12-09 12:44:04.000000000 +0000
-+++ bin/Makefile.in	2006-12-12 08:59:49.000000000 +0000
-@@ -703,14 +703,8 @@
+--- bin/Makefile.in.orig	2007-01-20 11:37:15.000000000 +0000
++++ bin/Makefile.in	2007-01-22 08:58:52.000000000 +0000
+@@ -697,14 +697,8 @@
  	_fvwm-perllib.1
  
  install-exec-local:
