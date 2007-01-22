@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.206 2007/01/22 03:05:36 taca Exp $
+$NetBSD: CHANGES-2007,v 1.207 2007/01/22 07:26:02 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -307,3 +307,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/gnumeric to 1.6.3nb4 [wiz 2007-01-21]
 	Updated graphics/jasper to 1.900.1 [wiz 2007-01-21]
 	Updated graphics/ruby-RMagick to 1.15.0 [obache 2007-01-22]
+	Updated wm/fvwm-devel to 2.5.21 [martti 2007-01-22]
