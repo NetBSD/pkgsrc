@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/08/23 09:45:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/22 17:25:31 drochner Exp $
 #
 
 DISTNAME=	dbus-python-0.71
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
 
@@ -23,4 +24,6 @@ PY_PATCHPLIST=			YES
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+# py-libxml2 is only needed at runtime
+.include "../../textproc/py-libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
