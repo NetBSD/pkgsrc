@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/21 17:11:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/22 00:09:31 xtraeme Exp $
 
 .include "Makefile.common"
 
@@ -20,7 +20,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--enable-so
-CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 
 # Apache Portable Runtime library configure options
@@ -39,7 +38,6 @@ APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/apr1/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
