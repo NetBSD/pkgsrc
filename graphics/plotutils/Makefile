@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/17 13:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/01/22 22:09:15 joerg Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -22,5 +22,9 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-libplotter
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
