@@ -1,5 +1,5 @@
 /*
- * $NetBSD: xorgsite.def,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+ * $NetBSD: xorgsite.def,v 1.2 2007/01/22 20:33:33 joerg Exp $
  *
  * X.org packages for pkgsrc system 
  *  
@@ -25,3 +25,4 @@
 #define NothingOutsideProjectRoot YES
 
 #define	BuildDPSLibrary	YES
+#define	UseGccMakeDepend NO
