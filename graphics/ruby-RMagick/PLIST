@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/10/28 02:03:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/01/22 01:40:44 obache Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
@@ -340,6 +340,8 @@ ${RUBY_DOCDIR}/RMagick/ex/pattern1.rb
 ${RUBY_DOCDIR}/RMagick/ex/pattern2.gif
 ${RUBY_DOCDIR}/RMagick/ex/pattern2.rb
 ${RUBY_DOCDIR}/RMagick/ex/pixels-array
+${RUBY_DOCDIR}/RMagick/ex/polaroid.jpg
+${RUBY_DOCDIR}/RMagick/ex/polaroid.rb
 ${RUBY_DOCDIR}/RMagick/ex/polygon.gif
 ${RUBY_DOCDIR}/RMagick/ex/polygon.rb
 ${RUBY_DOCDIR}/RMagick/ex/polygon01.gif
@@ -493,6 +495,8 @@ ${RUBY_DOCDIR}/RMagick/ex/watermark.jpg
 ${RUBY_DOCDIR}/RMagick/ex/watermark.rb
 ${RUBY_DOCDIR}/RMagick/ex/wave.jpg
 ${RUBY_DOCDIR}/RMagick/ex/wave.rb
+${RUBY_DOCDIR}/RMagick/ex/wet_floor.gif
+${RUBY_DOCDIR}/RMagick/ex/wet_floor.rb
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode01.gif
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode01.rb
 ${RUBY_DOCDIR}/RMagick/ex/writing_mode02.gif
@@ -619,6 +623,7 @@ ${RUBY_DOCDIR}/RMagick/ordered_dither.rb.html
 ${RUBY_DOCDIR}/RMagick/path.rb.html
 ${RUBY_DOCDIR}/RMagick/pattern1.rb.html
 ${RUBY_DOCDIR}/RMagick/pattern2.rb.html
+${RUBY_DOCDIR}/RMagick/polaroid.rb.html
 ${RUBY_DOCDIR}/RMagick/polygon.rb.html
 ${RUBY_DOCDIR}/RMagick/polygon01.rb.html
 ${RUBY_DOCDIR}/RMagick/polyline.rb.html
@@ -706,6 +711,7 @@ ${RUBY_DOCDIR}/RMagick/viewex.rb.html
 ${RUBY_DOCDIR}/RMagick/vignette.rb.html
 ${RUBY_DOCDIR}/RMagick/watermark.rb.html
 ${RUBY_DOCDIR}/RMagick/wave.rb.html
+${RUBY_DOCDIR}/RMagick/wet_floor.rb.html
 ${RUBY_DOCDIR}/RMagick/writing_mode01.rb.html
 ${RUBY_DOCDIR}/RMagick/writing_mode02.rb.html
 @dirrm ${RUBY_EXAMPLESDIR}/RMagick
