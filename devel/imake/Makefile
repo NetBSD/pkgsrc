@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/19 22:56:06 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/22 20:33:33 joerg Exp $
 #
 
 DISTNAME=		imake-1.0.2
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/util/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config makedepend:run
 
-DEPENDS+=		xorg-cf-files-[0-9]*:../../x11/xorg-cf-files
+DEPENDS+=		xorg-cf-files>=1.0.2nb1:../../x11/xorg-cf-files
 
 .include "../../x11/xproto/buildlink3.mk"
 
