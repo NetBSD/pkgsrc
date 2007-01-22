@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.210 2007/01/22 13:18:21 obache Exp $
+$NetBSD: CHANGES-2007,v 1.211 2007/01/22 17:59:29 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.0.188 [martti 2007-01-22]
 	Updated misc/fd to 2.09anb1 [hira 2007-01-22]
 	Updated databases/ipa_sdb to 1.0.1nb1 [obache 2007-01-22]
+	Updated mail/dovecot to 1.0rc18 [ghen 2007-01-22]
