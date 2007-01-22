@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/12/13 02:00:29 obache Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/22 14:33:31 rillig Exp $
 #
 
 DISTNAME=	git-1.4.4.1
 PKGNAME=	scm${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -17,6 +17,7 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 MAKE_ENV+=	DESTDIR=""
 MAKE_ENV+=	HOME=${PREFIX:Q}
+USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake perl:run sh:run
 EXTRACT_USING=	gtar
 
@@ -27,6 +28,8 @@ MAKE_ENV+=	SHELL_PATH=${SH:Q}
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+LDFLAGS=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LIBS.SunOS+=	-liconv
 
 PERL5_PACKLIST=	auto/Git/.packlist
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/perl
