@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.132 2007/01/15 07:12:15 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.133 2007/01/22 12:24:20 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -346,96 +346,70 @@ bulk-check-uptodate:
 bulk-package:
 	@${_BULK_MKDIR} ${_BULK_PKGLOGDIR:Q}
 	@if [ -f ${_BROKENFILE:Q} ]; then \
-		${BULK_MSG} "*** Package ${PKGNAME} seems broken and needs attention:" ; \
-		${LS} -la ${_BROKENFILE:Q}; \
+		${BULK_MSG} "Package ${PKGNAME} is already marked as broken."; \
 		exit 1; \
 	fi
-	@( \
-	if [ "${PRECLEAN}" = "yes" ]; then \
-		${ECHO} '###' ; \
-		${ECHO} '###' `date`: ; \
-		${ECHO} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
-		${ECHO} '### Current pkg count: ' `cd ${PKG_DBDIR} && ${FIND} . -type d ! -name '.' -prune -print | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
-		${ECHO} '###' ; \
-	fi \
-	) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}
-	@uptodate=`${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
-	if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
-		installed=1; \
-	else \
-		installed=0; \
-	fi ; \
+	${RUN} \
+	{ ${ECHO} "###"; \
+	  ${ECHO} "### `${DATE}`"; \
+	  ${ECHO} "### pkgsrc build log for ${PKGNAME}"; \
+	  ${ECHO} "###"; \
+	  ${ECHO} ""; \
+	} | ${TEE} -a ${_BUILDLOG}
+	${RUN} \
+	uptodate=`${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if [ $$uptodate = 1 ]; then \
 		{ ${BULK_MSG} "Nothing to be done for ${PKGNAME}." ; \
 		} 2>&1 | ${TEE} -a ${_BUILDLOG:Q}; \
 	else \
-		( if [ $$installed = 1 ]; then \
+		( if ${PKG_INFO} -qe ${PKGWILDCARD:Q}; then \
 			${BULK_MSG} "Removing outdated (installed) package ${PKGNAME} first." ; \
-			${ECHO_MSG} ${MAKE} deinstall ; \
-			${DO}       ${RECURSIVE_MAKE} deinstall ; \
-			if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
-				${ECHO_MSG} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
-				${DO} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
-			fi ;\
+			${DO} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
 		fi ; \
 		if [ -f ${PKGFILE} ]; then \
-			${BULK_MSG} "Removing old binary package..." ; \
-			${ECHO_MSG} ${RM} -f ${PKGFILE} ; \
+			${BULK_MSG} "Removing old binary package ${PKGFILE}." ; \
 			${DO}       ${RM} -f ${PKGFILE} ; \
-			for cat in ${CATEGORIES} ;\
-			do \
-				${ECHO_MSG} ${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX}; \
+			for cat in ${CATEGORIES}; do \
 				${DO} ${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX}; \
 			done ;\
 		fi; \
-		${BULK_MSG} "Full rebuild in progress..." ; \
+		${BULK_MSG} "Bulk building ${PKGNAME}" ; \
 		${DO} ${RECURSIVE_MAKE} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
-			${BULK_MSG} "Removing installed packages which are not needed to build ${PKGNAME}" ; \
-			for pkgname in `${PKG_INFO} -e \\*` ; \
-			do \
-				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-					pkgdirs=`${AWK} '$$2 == "'"$$pkgname"'" {print $$1}' ${INDEXFILE}`; \
-					: "Check whether any package in $$pkgdirs is needed for the current package."; \
-					required=no; \
-					for pkgdir in $$pkgdirs; do \
-						req=`${AWK} 'BEGIN { found="no"; } $$1 == "${PKGPATH}" { for (i = 4; i <= NF; i++) { if ($$i == "'"$$pkgdir"'") { found = "yes"; } } } END { print found; }' ${DEPENDSFILE}`; \
-						: echo "DEBUG: PKGPATH=${PKGPATH} pkgdir=$$pkgdir req=$$req"; \
-						if [ $$req = yes ]; then \
-							required=yes; \
-						fi; \
-					done; \
+			${BULK_MSG} "Currently installed packages:"; \
+			${PKG_INFO} -e "*" | ${SED} -e "s,^,* ,"; \
+			${PHASE_MSG} "Removing installed packages which are not needed to build ${PKGNAME}" ; \
+			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
+				for pkgname in `${PKG_INFO} -e \\*`; do \
+					: "The package may have been deinstalled in between."; \
+					${PKG_INFO} -qe "$$pkgname" || continue; \
+					pkgdir=`${PKG_INFO} -Q PKGPATH "$$pkgname"`; \
+					[ "$$pkgdir" ] || { ${FAIL_MSG} "Empty PKGPATH for $$pkgname"; continue; }; \
+					required=`${AWK} '$$1 == "${PKGPATH}" { for (i = 4; i <= NF; i++) { if ($$i == "'"$$pkgdir"'") { print $$i; } } }' ${DEPENDSFILE}`; \
 					if true; then \
-						if [ $$required = yes ]; then \
-							${BULK_MSG} "${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
+						if [ "$$required" ]; then \
+							${STEP_MSG} "Keeping dependency $$pkgname." ;\
 						else \
 							case "${BULK_PREREQ}" in \
 								*$$pkgdir* ) \
-									${BULK_MSG} "Keeping BULK_PREREQ: $$pkgname ($$pkgdir)" ;\
+									${STEP_MSG} "Keeping BULK_PREREQ $$pkgname ($$pkgdir)" ;\
 									;; \
 								* ) \
-									${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
+									${STEP_MSG} "Deinstalling $$pkgname"; \
 									${DO}       ${PKG_DELETE} -r $$pkgname || ${TRUE}; \
-									if ${PKG_INFO} -qe $$pkgname ; then \
-										${DO}       ${PKG_DELETE} -f $$pkgname || ${TRUE}; \
-									fi ;\
 									;; \
 							esac ; \
 						fi ;\
 					fi ;\
-				else \
-					${SHCOMMENT} "Remove all pkgs" ; \
-					${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
-					${DO}       ${PKG_DELETE} -r $$pkgname || ${TRUE}; \
-					if ${PKG_INFO} -qe $$pkgname ; then \
-						${DO}       ${PKG_DELETE} -f $$pkgname || ${TRUE}; \
-					fi ;\
-				fi ;\
-			done ; \
+				done; \
+			else \
+				${STEP_MSG} "Deinstalling all packages"; \
+				${DO} ${PKG_DELETE} -r "*" || ${TRUE}; \
+			fi ;\
 		fi ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			${SHCOMMENT} "Install required depends via binarypkgs XXX" ; \
-			${BULK_MSG} "Installing packages which are required to build ${PKGNAME}." ;\
+			${BULK_MSG} "Installing dependencies for ${PKGNAME}." ;\
 			for pkgdir in `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}` ${BULK_PREREQ} ; do \
 				pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
 				if [ -z "$$pkgname" ]; then ${BULK_MSG} "WARNING: could not find package name for directory $$pkgdir"; continue ; fi ;\
@@ -445,11 +419,11 @@ bulk-package:
 				fi; \
 				pkgfile=${PACKAGES}/All/$${pkgname}${PKG_SUFX} ;\
 				if ${PKG_INFO} -qe $$pkgname ; then \
-					${BULK_MSG} "Required package $$pkgname ($$pkgdir) is already installed" ; \
+					${BULK_MSG} "Dependency $$pkgname is already installed" ; \
 				else \
 					if [ -f $$pkgfile ]; then \
-						${BULK_MSG} "${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
-						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning: could not add $$pkgfile." ; \
+						${BULK_MSG} "Installing $$pkgfile"; \
+						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${WARNING_MSG} "could not add $$pkgfile." ; \
 					else \
 						${BULK_MSG} "warning: $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
@@ -462,7 +436,7 @@ bulk-package:
 			${DO}       ${RM} -f ${_INTERACTIVE_COOKIE} ; \
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
-		${DO}     ( ${RECURSIVE_MAKE} package 2>&1 ); \
+		${DO} ${RECURSIVE_MAKE} package; \
 		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q} ; \
 		if [ -f ${PKGFILE} ]; then \
 			case ${KEEP_BUILDLOGS} in			\
