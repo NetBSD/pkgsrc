@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.51 2007/01/19 18:24:52 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.52 2007/01/22 13:14:41 tron Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -281,7 +281,7 @@ file and inspect the contents before extracting it.
 	<para>Create the disk image:</para>
 
 	<screen>&rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
-&rprompt; <userinput>./darwindiskimage create ~/Documents/NetBSD 512</userinput> # megabytes - season to taste
+&rprompt; <userinput>./darwindiskimage create ~/Documents/NetBSD 1024</userinput> # megabytes - season to taste
 &rprompt; <userinput>./darwindiskimage mount ~/Documents/NetBSD</userinput>
 &rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
 
