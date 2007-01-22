@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.39 2007/01/07 13:38:52 rillig Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.40 2007/01/22 20:47:06 rillig Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -39,7 +39,6 @@ USE_X11BASE?=		implied
 
 .if defined(USE_IMAKE)
 MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
-MAKE_FLAGS+=		MANPATH=${PREFIX}/${PKGMANDIR}
 .endif
 
 .if defined(USE_X11BASE)
