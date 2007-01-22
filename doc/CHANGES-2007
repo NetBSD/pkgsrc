@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.208 2007/01/22 07:35:48 martti Exp $
+$NetBSD: CHANGES-2007,v 1.209 2007/01/22 11:31:30 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -309,3 +309,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.0 [obache 2007-01-22]
 	Updated wm/fvwm-devel to 2.5.21 [martti 2007-01-22]
 	Updated editors/vim-share to 7.0.188 [martti 2007-01-22]
+	Updated misc/fd to 2.09anb1 [hira 2007-01-22]
