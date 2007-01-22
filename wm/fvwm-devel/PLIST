@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/02 15:54:42 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/22 07:25:47 martti Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-bug
@@ -85,7 +85,6 @@ man/man1/FvwmWinList.1
 man/man1/FvwmWindowMenu.1
 man/man1/fvwm-bug.1
 man/man1/fvwm-config.1
-man/man1/fvwm-convert-2.2.1
 man/man1/fvwm-convert-2.4.1
 man/man1/fvwm-convert-2.6.1
 man/man1/fvwm-menu-desktop.1
@@ -110,6 +109,7 @@ share/fvwm/ConfigFvwmDefaults
 share/fvwm/ConfigFvwmIconBox
 share/fvwm/ConfigFvwmIconMan
 share/fvwm/ConfigFvwmIdent
+share/fvwm/ConfigFvwmMenuDefaults
 share/fvwm/ConfigFvwmPager
 share/fvwm/ConfigFvwmProxyDefaults
 share/fvwm/ConfigFvwmScroll
