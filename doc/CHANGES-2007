@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.209 2007/01/22 11:31:30 hira Exp $
+$NetBSD: CHANGES-2007,v 1.210 2007/01/22 13:18:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -310,3 +310,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/fvwm-devel to 2.5.21 [martti 2007-01-22]
 	Updated editors/vim-share to 7.0.188 [martti 2007-01-22]
 	Updated misc/fd to 2.09anb1 [hira 2007-01-22]
+	Updated databases/ipa_sdb to 1.0.1nb1 [obache 2007-01-22]
