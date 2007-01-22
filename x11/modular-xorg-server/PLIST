@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/22 23:55:34 joerg Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -192,6 +192,7 @@ include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/X11/Cards
 lib/X11/Options
+lib/X11/app-defaults/XOrgCfg
 lib/X11/getconfig/cfg.sample
 lib/X11/getconfig/xorg.cfg
 lib/pkgconfig/xorg-server.pc
@@ -250,7 +251,6 @@ man/man1/xorgconfig.1
 man/man4/fbdevhw.4
 man/man5/getconfig.5
 man/man5/xorg.conf.5
-share/X11/app-defaults/XOrgCfg
 share/X11/xkb/compiled/README.compiled
 share/aclocal/xorg-server.m4
 @dirrm lib/xserver
