@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.211 2007/01/22 17:59:29 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.212 2007/01/22 18:54:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/fd to 2.09anb1 [hira 2007-01-22]
 	Updated databases/ipa_sdb to 1.0.1nb1 [obache 2007-01-22]
 	Updated mail/dovecot to 1.0rc18 [ghen 2007-01-22]
+	Added net/yougrabber version 0.20 [minskim 2007-01-22]
