@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 17:59:48 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/22 15:18:50 joerg Exp $
 #
 
-DISTNAME=		libXdmcp-1.0.1
+DISTNAME=		libXdmcp-1.0.2
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
