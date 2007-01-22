@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.212 2007/01/22 18:54:00 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.213 2007/01/22 20:35:58 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -313,3 +313,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/ipa_sdb to 1.0.1nb1 [obache 2007-01-22]
 	Updated mail/dovecot to 1.0rc18 [ghen 2007-01-22]
 	Added net/yougrabber version 0.20 [minskim 2007-01-22]
+	Updated x11/xorg-cf-files to 1.0.2nb1 [joerg 2007-01-22]
+	Updated devel/imake to 1.0.2nb1 [joerg 2007-01-22]
