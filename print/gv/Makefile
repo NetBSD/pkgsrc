@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/01/22 13:49:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.64 2007/01/23 13:24:42 dmcmahill Exp $
 
 DISTNAME=	gv-3.6.2
 PKGREVISION=	2
@@ -23,8 +23,10 @@ XAW_TYPE?=		3d
 XAW_TYPE=		3d
 .endif
 
-# Solaris-2.9/sparc is missing setenv() and unsetenv()
-.if ${OPSYS} == "SunOS"
+# Solaris-2.{8,9}/sparc are missing setenv() and unsetenv()
+# it is probably true that 5.6, 5.7, 5.8, and 5.9 all have
+# this problem.  It appears that 5.10 does not need this flag.
+.if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.[6789])
 CONFIGURE_ARGS+=	--enable-setenv-code
 .endif
 
