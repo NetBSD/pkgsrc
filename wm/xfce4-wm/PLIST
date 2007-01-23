@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/23 11:53:46 martti Exp $
 bin/xfwm4
 lib/xfce4/mcs-plugins/workspaces_plugin.la
 lib/xfce4/mcs-plugins/xfwm4_plugin.la
@@ -49,6 +49,7 @@ share/locale/ro/LC_MESSAGES/xfwm4.mo
 share/locale/ru/LC_MESSAGES/xfwm4.mo
 share/locale/sk/LC_MESSAGES/xfwm4.mo
 share/locale/sl/LC_MESSAGES/xfwm4.mo
+share/locale/sq/LC_MESSAGES/xfwm4.mo
 share/locale/sv/LC_MESSAGES/xfwm4.mo
 share/locale/ta/LC_MESSAGES/xfwm4.mo
 share/locale/tr/LC_MESSAGES/xfwm4.mo
@@ -722,6 +723,7 @@ share/xfce4/doc/he/images/workspace_margins.png
 share/xfce4/doc/he/images/xfwm_workspaces.png
 share/xfce4/doc/he/xfwm4.html
 share/xfwm4/defaults
+@dirrm share/xfwm4
 @dirrm share/themes/Wildbush/xfwm4
 @dirrm share/themes/Wildbush
 @dirrm share/themes/Waza/xfwm4
@@ -734,8 +736,7 @@ share/xfwm4/defaults
 @dirrm share/themes/Symphony
 @dirrm share/themes/Opta/xfwm4
 @dirrm share/themes/Opta
+@dirrm share/themes/Default/xfwm4
 @dirrm share/themes/Default-4.0/xfwm4
 @dirrm share/themes/Default-4.0
-@dirrm share/themes/Default/xfwm4
-@dirrm share/xfwm4
 @unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
