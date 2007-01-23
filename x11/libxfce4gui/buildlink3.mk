@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/01/16 20:19:13 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/01/23 11:53:47 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXFCE4GUI_BUILDLINK3_MK:=	${LIBXFCE4GUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libxfce4gui
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libxfce4gui
 
 .if ${LIBXFCE4GUI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libxfce4gui+=	libxfce4gui>=4.2.3nb4
+BUILDLINK_API_DEPENDS.libxfce4gui+=	libxfce4gui>=4.2.4
 BUILDLINK_PKGSRCDIR.libxfce4gui?=	../../x11/libxfce4gui
 .endif	# LIBXFCE4GUI_BUILDLINK3_MK
 

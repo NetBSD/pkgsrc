@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2005/11/09 06:42:59 martti Exp $
+$NetBSD: distinfo,v 1.13 2007/01/23 11:53:47 martti Exp $
 
-SHA1 (xfce-mcs-manager-4.2.3.tar.gz) = be517073e756ce15f430d8e9435e21e28fbc122e
-RMD160 (xfce-mcs-manager-4.2.3.tar.gz) = e0839ac4fc8cbb4969d7e0b14196b2d867cd65af
-Size (xfce-mcs-manager-4.2.3.tar.gz) = 764330 bytes
+SHA1 (xfce-mcs-manager-4.2.4.tar.gz) = 4a477d3f80d97f0980b4070ef8a1570b169d9855
+RMD160 (xfce-mcs-manager-4.2.4.tar.gz) = 6dfacde3cbfd4903e17b32a0cbc1399d713109a2
+Size (xfce-mcs-manager-4.2.4.tar.gz) = 766343 bytes
