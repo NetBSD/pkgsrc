@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/01/22 00:09:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/23 15:45:44 ghen Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -177,6 +177,8 @@ SUBST_STAGE.abs_srcdir=	post-install
 SUBST_FILES.abs_srcdir=	${PREFIX}/share/httpd/build/config_vars.mk
 SUBST_SED.abs_srcdir=	-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
 SUBST_MESSAGE.abs_srcdir=	Fixing abs_srcdir
+
+REPLACE_PERL=		docs/cgi-examples/printenv
 
 .include "options.mk"
 

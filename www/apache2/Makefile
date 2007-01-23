@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.108 2006/12/09 00:51:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.109 2007/01/23 15:45:44 ghen Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -153,6 +153,8 @@ SUBST_SED.confs+=	-e "s|logs/|${VARBASE}/log/httpd/|g"
 SUBST_SED.confs+=	-e 's|/var/log/httpd/foo\.log|logs/foo.log/|g'
 SUBST_SED.confs+=	-e 's|^\(User[	 ]\).*|\1${APACHE_USER}|g'
 SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
+
+REPLACE_PERL=		docs/cgi-examples/printenv
 
 .include "options.mk"
 
