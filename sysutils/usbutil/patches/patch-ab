@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/12/18 17:31:22 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/01/23 17:02:07 drochner Exp $
 
---- usbctl.c.orig	2002-02-25 00:50:55.000000000 +0000
+--- usbctl.c.orig	2002-02-25 01:50:55.000000000 +0100
 +++ usbctl.c
 @@ -27,12 +27,18 @@
  #include <stdio.h>
@@ -21,3 +21,28 @@ $NetBSD: patch-ab,v 1.1 2005/12/18 17:31:22 joerg Exp $
  
  #ifndef USB_STACK_VERSION
  #define ucr_addr addr
+@@ -630,7 +636,7 @@ gethubdesc(int f, usb_hub_descriptor_t *
+ 	req.ucr_addr = addr;
+ 	req.ucr_request.bmRequestType = UT_READ_CLASS_DEVICE;
+ 	req.ucr_request.bRequest = UR_GET_DESCRIPTOR;
+-	USETW(req.ucr_request.wValue, 0);
++	USETW2(req.ucr_request.wValue, UDESC_HUB, 0);
+ 	USETW(req.ucr_request.wIndex, 0);
+ 	USETW(req.ucr_request.wLength, USB_HUB_DESCRIPTOR_SIZE);
+ 	req.ucr_data = d;
+@@ -1321,6 +1327,7 @@ main(int argc, char **argv)
+ 
+ 	if (!doaddr)
+ 		prunits(f);
++#ifndef __NetBSD__
+ 	if (!nodisc) {
+ 		r = ioctl(f, USB_DISCOVER);
+ 		if (r < 0)
+@@ -1329,6 +1336,7 @@ main(int argc, char **argv)
+ 		if (disconly)
+ 			exit(0);
+ 	}
++#endif
+ 
+ 	for(addr = 0; addr < USB_MAX_DEVICES; addr++) {
+ 		if (doaddr != -1 && addr != doaddr)
