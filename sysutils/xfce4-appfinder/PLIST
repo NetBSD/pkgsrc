@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/23 11:53:46 martti Exp $
 bin/xfce4-appfinder
 share/applications/xfce4-appfinder.desktop
 share/locale/af/LC_MESSAGES/xfce4-appfinder.mo
@@ -35,6 +35,7 @@ share/locale/ro/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ru/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/sk/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/sl/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/sq/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/sv/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/tr/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/uk/LC_MESSAGES/xfce4-appfinder.mo
@@ -53,10 +54,10 @@ share/xfce4/doc/he/images/appfinder-handle-popup.png
 share/xfce4/doc/he/images/appfinder-item-popup.png
 share/xfce4/doc/he/images/default_appfinder.png
 share/xfce4/doc/he/xfce4-appfinder.html
-@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/he/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/he 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc 2>/dev/null || ${TRUE}

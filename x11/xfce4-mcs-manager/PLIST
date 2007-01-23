@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 11:53:47 martti Exp $
 bin/xfce-mcs-manager
 bin/xfce-setting-show
 include/xfce4/xfce-mcs-manager/manager-plugin.h
@@ -31,6 +31,7 @@ share/locale/hi/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/hu/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/it/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/ja/LC_MESSAGES/xfce-mcs-manager.mo
+share/locale/ka/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/ko/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/ku/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/lt/LC_MESSAGES/xfce-mcs-manager.mo
@@ -46,6 +47,7 @@ share/locale/ro/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/ru/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/sk/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/sl/LC_MESSAGES/xfce-mcs-manager.mo
+share/locale/sq/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/sv/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/ta/LC_MESSAGES/xfce-mcs-manager.mo
 share/locale/tr/LC_MESSAGES/xfce-mcs-manager.mo
@@ -67,10 +69,10 @@ share/xfce4/doc/he/images/smgr_from_root_menu.png
 share/xfce4/doc/he/images/smgr_from_setup_button.png
 share/xfce4/doc/he/xfce-mcs-manager.html
 @dirrm include/xfce4/xfce-mcs-manager
-@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/he/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/he 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc 2>/dev/null || ${TRUE}

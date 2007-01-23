@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2007/01/18 15:26:53 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/23 11:53:48 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-toys-${XFCE4_VERSION}
-PKGREVISION=	3
+#PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Xfce toys
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/23 11:53:47 martti Exp $
 bin/CDE2Xfcepal
 bin/glob
 bin/startxfce
@@ -673,10 +673,7 @@ share/xfce/textures/stripe.xpm
 @dirrm share/xfce/help/html/stylesheet-images
 @dirrm share/xfce/help/html
 @dirrm share/xfce/help
-@comment in REQD_DIRS: @dirrm share/xfce/fonts
-@comment in REQD_DIRS: @dirrm share/xfce/cursors
 @dirrm share/xfce/backdrops
-@comment in REQD_DIRS: @dirrm share/xfce
 @dirrm lib/gtk/themes/engines
 @dirrm lib/gtk/themes
 @dirrm lib/gtk

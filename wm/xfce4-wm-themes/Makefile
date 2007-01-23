@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/05/02 10:42:33 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/23 11:53:47 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfwm4-themes-${XFCE4_VERSION}
 PKGNAME=	xfce4-wm-themes-${XFCE4_VERSION}
-PKGREVISION=	3
+#PKGREVISION=	1
 CATEGORIES=	wm
 COMMENT=	Xfce window manager themes
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/01/23 11:53:47 martti Exp $
 bin/xfce4-panel
 include/xfce4/panel/add-control-dialog.h
 include/xfce4/panel/controls.h
@@ -107,6 +107,7 @@ share/locale/ro/LC_MESSAGES/xfce4-panel.mo
 share/locale/ru/LC_MESSAGES/xfce4-panel.mo
 share/locale/sk/LC_MESSAGES/xfce4-panel.mo
 share/locale/sl/LC_MESSAGES/xfce4-panel.mo
+share/locale/sq/LC_MESSAGES/xfce4-panel.mo
 share/locale/sv/LC_MESSAGES/xfce4-panel.mo
 share/locale/ta/LC_MESSAGES/xfce4-panel.mo
 share/locale/tr/LC_MESSAGES/xfce4-panel.mo

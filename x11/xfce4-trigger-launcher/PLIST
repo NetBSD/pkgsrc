@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 11:53:48 martti Exp $
 lib/xfce4/panel-plugins/libtriggerlauncher.la
 share/locale/af/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/ar/LC_MESSAGES/xfce4-trigger-launcher.mo
@@ -26,6 +26,7 @@ share/locale/hi/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/hu/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/it/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/ja/LC_MESSAGES/xfce4-trigger-launcher.mo
+share/locale/ka/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/ko/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/ku/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/lt/LC_MESSAGES/xfce4-trigger-launcher.mo
@@ -40,6 +41,7 @@ share/locale/ro/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/ru/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/sk/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/sl/LC_MESSAGES/xfce4-trigger-launcher.mo
+share/locale/sq/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/sv/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/ta/LC_MESSAGES/xfce4-trigger-launcher.mo
 share/locale/tr/LC_MESSAGES/xfce4-trigger-launcher.mo

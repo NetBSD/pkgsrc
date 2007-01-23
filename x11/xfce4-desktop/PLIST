@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/01/23 11:53:47 martti Exp $
 bin/xfce4-menueditor
 bin/xfdesktop
 lib/xfce4/mcs-plugins/backdrop_settings.la
@@ -15,6 +15,7 @@ share/examples/xfce4/desktop/menu.xml.de
 share/examples/xfce4/desktop/menu.xml.el
 share/examples/xfce4/desktop/menu.xml.es
 share/examples/xfce4/desktop/menu.xml.et
+share/examples/xfce4/desktop/menu.xml.eu
 share/examples/xfce4/desktop/menu.xml.fi
 share/examples/xfce4/desktop/menu.xml.fr
 share/examples/xfce4/desktop/menu.xml.he
@@ -33,6 +34,8 @@ share/examples/xfce4/desktop/menu.xml.vi
 share/examples/xfce4/desktop/menu.xml.zh_TW
 share/examples/xfce4/desktop/xfce-registered-categories.xml
 share/examples/xfce4/desktop/xfce-registered-categories.xml.cs
+share/examples/xfce4/desktop/xfce-registered-categories.xml.el
+share/examples/xfce4/desktop/xfce-registered-categories.xml.es
 share/examples/xfce4/desktop/xfce-registered-categories.xml.eu
 share/examples/xfce4/desktop/xfce-registered-categories.xml.fi
 share/examples/xfce4/desktop/xfce-registered-categories.xml.he
@@ -95,6 +98,7 @@ share/locale/ro/LC_MESSAGES/xfdesktop.mo
 share/locale/ru/LC_MESSAGES/xfdesktop.mo
 share/locale/sk/LC_MESSAGES/xfdesktop.mo
 share/locale/sl/LC_MESSAGES/xfdesktop.mo
+share/locale/sq/LC_MESSAGES/xfdesktop.mo
 share/locale/sv/LC_MESSAGES/xfdesktop.mo
 share/locale/ta/LC_MESSAGES/xfdesktop.mo
 share/locale/tr/LC_MESSAGES/xfdesktop.mo
@@ -140,4 +144,5 @@ share/xfce4/doc/he/images/xfdesktop-editor.png
 share/xfce4/doc/he/images/xfdesktop-list.png
 share/xfce4/doc/he/images/xfdesktop-menu-tab.png
 share/xfce4/doc/he/xfdesktop.html
+@dirrm share/examples/xfce4/desktop
 @unexec ${RMDIR} %D/share/xfce4/backdrops 2>/dev/null || ${TRUE}

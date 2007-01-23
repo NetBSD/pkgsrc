@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/01/23 11:53:46 martti Exp $
+${SOLARIS}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 bin/xfprint-manager
 bin/xfprint4
 lib/xfce4/mcs-plugins/xfprint_plugin.la
-${SOLARIS}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 share/applications/xfce-xfprint-settings.desktop
 share/applications/xfprint-manager.desktop
 share/applications/xfprint.desktop
@@ -46,6 +46,7 @@ share/locale/ro/LC_MESSAGES/xfprint.mo
 share/locale/ru/LC_MESSAGES/xfprint.mo
 share/locale/sk/LC_MESSAGES/xfprint.mo
 share/locale/sl/LC_MESSAGES/xfprint.mo
+share/locale/sq/LC_MESSAGES/xfprint.mo
 share/locale/sv/LC_MESSAGES/xfprint.mo
 share/locale/ta/LC_MESSAGES/xfprint.mo
 share/locale/tr/LC_MESSAGES/xfprint.mo
