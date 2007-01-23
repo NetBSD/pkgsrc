@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2007/01/14 00:07:15 schmonz Exp $
+$NetBSD: patch-ac,v 1.9 2007/01/23 21:53:58 smb Exp $
 
 --- src/Makefile.in.orig	2006-11-11 09:58:22.000000000 -0500
 +++ src/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.8 2007/01/14 00:07:15 schmonz Exp $
  
  # Additional compiler flags
 -AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(prefix)/var/run/stunnel/stunnel.pid"'
-+AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"/var/run/stunnel/stunnel.pid"'
++AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"/var/run/stunnel.pid"'
  
  # Win32 executable
  EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak nogui.c os2.mak
