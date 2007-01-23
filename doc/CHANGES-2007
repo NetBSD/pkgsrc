@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.217 2007/01/23 17:35:35 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.218 2007/01/23 19:53:31 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -331,3 +331,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed fonts/mkcfm [joerg 2007-01-23]
 	Updated x11/libXfont to 1.2.7 [joerg 2007-01-23]
 	Updated mail/dovecot to 1.0rc19 [ghen 2007-01-23]
+	Updated x11/libX11 to 1.1.1 [joerg 2007-01-23]
