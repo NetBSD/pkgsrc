@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 11:53:46 martti Exp $
 bin/xfce4-mixer
 lib/xfce4/mcs-plugins/sound_settings.la
 lib/xfce4/modules/libxfce4mixer.la
@@ -46,6 +46,7 @@ share/locale/ro/LC_MESSAGES/xfce4-mixer.mo
 share/locale/ru/LC_MESSAGES/xfce4-mixer.mo
 share/locale/sk/LC_MESSAGES/xfce4-mixer.mo
 share/locale/sl/LC_MESSAGES/xfce4-mixer.mo
+share/locale/sq/LC_MESSAGES/xfce4-mixer.mo
 share/locale/sv/LC_MESSAGES/xfce4-mixer.mo
 share/locale/ta/LC_MESSAGES/xfce4-mixer.mo
 share/locale/tr/LC_MESSAGES/xfce4-mixer.mo

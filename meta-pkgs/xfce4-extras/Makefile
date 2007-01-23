@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/23 11:53:46 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
 DISTFILES=	# empty
-PKGREVISION=	3
+#PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 COMMENT=	Xfce extras
 
