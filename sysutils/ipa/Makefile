@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/01/03 12:31:00 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/23 16:59:51 reed Exp $
 #
 
 DISTNAME=	ipa-2.0.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://ipa-system.sourceforge.net/ \
 		http://www.mirrors.wiretapped.net/security/network-monitoring/ipa/ \
@@ -24,12 +25,9 @@ RCD_SCRIPT_SRC.ipa=	${FILESDIR}/ipa.sh
 RCD_SCRIPT_SRC.ipa=	${WRKSRC}/etc/ipa.sh.sample
 .endif
 
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-mandir-ru=ru
 
 .include "options.mk"
-
-do-install:
-	cd ${WRKSRC}/src && ${MAKE} install
-	cd ${WRKSRC}/man && ${MAKE} install-am
 
 .include "../../mk/bsd.pkg.mk"
