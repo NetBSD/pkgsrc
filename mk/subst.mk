@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.41 2007/01/14 17:05:02 rillig Exp $
+# $NetBSD: subst.mk,v 1.42 2007/01/23 06:05:39 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -24,6 +24,14 @@
 # SUBST_SED.<class>
 #	List of sed(1) arguments to run on the specified files. Multiple
 #	commands can be specified using the -e option of sed.
+#
+# SUBST_VARS.<class>
+#	List of variables that are substituted whenever they appear in
+#	the form @VARNAME@. This is basically a short-cut for
+#
+#		-e 's,@VARNAME@,${VARNAME},g'
+#
+#	also taking care of (most) quoting issues.
 #
 # SUBST_FILTER_CMD.<class>
 #	Filter used to perform the actual substitution on the specified
@@ -55,7 +63,8 @@ _SUBST_BACKUP_SUFFIX=	.subst.sav
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
-SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
+SUBST_VARS.${_class_}?=		# none
+SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}} ${SUBST_VARS.${_class_}:@v@-e 's,\@${v}\@,'${${v}:Q}',g' @}
 SUBST_POSTCMD.${_class_}?=	${RM} -f "$$tmpfile"
 SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
 
