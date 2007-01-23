@@ -1,8 +1,20 @@
-$NetBSD: patch-ae,v 1.1 2003/11/05 22:31:43 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.2 2007/01/23 02:49:23 dmcmahill Exp $
+
+- fix multiline strings which newer gcc's don't like
+- fix __inline__ which sunpro doesn't like
 
 --- src/scwm_guile.c.orig	2002-03-27 23:07:03.000000000 -0500
 +++ src/scwm_guile.c
-@@ -45,12 +45,12 @@
+@@ -42,15 +42,21 @@
+ #include "dmalloc.h"
+ #endif
+ 
++#ifndef __GNUC__
++#ifndef __inline__
++#define __inline__ 
++#endif
++#endif
++
  extern char *prog_name;
  
  XSCM_HOOK(error_hook, "error-hook", 5, (SCM a, SCM b, SCM c, SCM d, SCM e),
@@ -21,7 +33,7 @@ $NetBSD: patch-ae,v 1.1 2003/11/05 22:31:43 dmcmahill Exp $
  
  struct scwm_body_apply_data {
    SCM proc;
-@@ -209,12 +209,12 @@ scwm_safe_call7 (SCM proc, SCM arg1, SCM
+@@ -209,12 +215,12 @@ scwm_safe_call7 (SCM proc, SCM arg1, SCM
  /* FIXDOC: We need a way to cross-reference concepts in docs. */
  
  XSCM_CONCEPT("Hooks",
@@ -40,7 +52,7 @@ $NetBSD: patch-ae,v 1.1 2003/11/05 22:31:43 dmcmahill Exp $
  
  static SCM run_hook_proc;
  
-@@ -395,11 +395,11 @@ scwm_handle_error (void *ARG_IGNORE(data
+@@ -395,11 +401,11 @@ scwm_handle_error (void *ARG_IGNORE(data
  
  XSCM_DEFINE(safe_load, "safe-load", 1, 0, 0,
             (SCM fname),
