@@ -1060,7 +1060,7 @@ a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.
 Create the disk image:
 
 # cd pkgsrc/bootstrap
-# ./darwindiskimage create ~/Documents/NetBSD 512 # megabytes - season to taste
+# ./darwindiskimage create ~/Documents/NetBSD 1024 # megabytes - season to taste
 # ./darwindiskimage mount ~/Documents/NetBSD
 # sudo chown `id -u`:`id -g` /Volumes/NetBSD
 
@@ -1146,7 +1146,7 @@ other parts of libc may also be lacking.)
 
 Services for Unix Applications (aka SUA) is an integrated component of Windows
 Server 2003 R2 and Windows Vista. As of this writing, SUA's Interix 5.x
-subsystem not been tested with pkgsrc.
+subsystem has not yet been tested with pkgsrc.
 
 3.3.3.1. When installing Interix/SFU
 
@@ -4663,9 +4663,9 @@ symlinking:
     directories in the package +CONTENTS, and for pkgviews packages, it outputs
     any libtool archives in lib directories.
 
-  * BUILDLINK_TRANSFORM.pkg (not shown above) is a list of sed arguments used
-    to transform the name of the source filename into a destination filename,
-    e.g. -e "s|/curses.h|/ncurses.h|g".
+  * BUILDLINK_FNAME_TRANSFORM.pkg (not shown above) is a list of sed arguments
+    used to transform the name of the source filename into a destination
+    filename, e.g. -e "s|/curses.h|/ncurses.h|g".
 
 The last section includes any buildlink3.mk needed for pkg's library
 dependencies. Including these buildlink3.mk files means that the headers and
