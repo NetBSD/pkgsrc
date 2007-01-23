@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/09/19 22:57:18 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/01/23 17:59:42 joerg Exp $
 
 DISTNAME=	pari-2.1.6
 PKGREVISION=	2
@@ -31,6 +31,6 @@ TEST_TARGET=		test-compat bench
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
