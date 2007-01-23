@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/01/17 13:43:49 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/23 22:55:32 wiz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -3244,6 +3244,7 @@ ${TERMINFODIR}/z/ztx11
 @dirrm ${TERMINFODIR}/v
 @dirrm ${TERMINFODIR}/u
 @dirrm ${TERMINFODIR}/t
+@dirrm ${TERMINFODIR}/s
 @dirrm ${TERMINFODIR}/r
 @dirrm ${TERMINFODIR}/q
 @dirrm ${TERMINFODIR}/p
