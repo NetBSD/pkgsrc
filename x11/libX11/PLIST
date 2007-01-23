@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 18:11:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/23 19:47:53 joerg Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -275,6 +275,7 @@ man/man3/XGetWMProtocols.3
 man/man3/XGetWMSizeHints.3
 man/man3/XGetWindowAttributes.3
 man/man3/XGetWindowProperty.3
+man/man3/XGetXCBConnection.3
 man/man3/XGrabButton.3
 man/man3/XGrabKey.3
 man/man3/XGrabKeyboard.3
@@ -412,6 +413,7 @@ man/man3/XSetClipRectangles.3
 man/man3/XSetCloseDownMode.3
 man/man3/XSetCommand.3
 man/man3/XSetDashes.3
+man/man3/XSetEventQueueOwner.3
 man/man3/XSetErrorHandler.3
 man/man3/XSetFillRule.3
 man/man3/XSetFillStyle.3
