@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.4 2006/10/23 11:01:54 dmcmahill Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.5 2007/01/23 02:51:31 dmcmahill Exp $
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/spellcheck.so
@@ -51,6 +51,9 @@ share/opera/styles/image.css
 share/opera/styles/images/bar.png
 share/opera/styles/images/center.png
 share/opera/styles/images/opera.png
+share/opera/styles/images/red_center.png
+share/opera/styles/images/red_left.png
+share/opera/styles/images/red_right.png
 share/opera/styles/images/root.png
 share/opera/styles/images/top.png
 share/opera/styles/im.css
@@ -67,6 +70,7 @@ share/opera/styles/user/imageandlinkonly.css
 share/opera/styles/user/nostalgia.css
 share/opera/styles/user/showstructure.css
 share/opera/styles/user/textonly.css
+share/opera/styles/warning.css
 share/opera/styles/wml.css
 share/opera/svg-mobd.dat
 share/opera/svg-mo.dat
