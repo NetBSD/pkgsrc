@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:31:02 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/23 06:07:50 rillig Exp $
 
 DISTNAME=	HTTPD-User-Manage-1.58
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5hum
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTPD/}
 
@@ -13,23 +13,21 @@ COMMENT=	Perl script/modules for managing web access control
 
 PERL5_PACKLIST=         auto/HTTPD-User-Manage/.packlist
 REPLACE_PERL=		user_manage
+INSTALLATION_DIRS=	bin libexec/cgi-bin share/doc/user_manage
 
 PKG_SYSCONFSUBDIR?=	httpd
 
-post-patch:
-	cd ${WRKSRC}; for file in user_manage; do			\
-		${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
-			$${file} > $${file}.fixed;			\
-		if [ -x $${file} ]; then				\
-			${CHMOD} +x $${file}.fixed;			\
-		fi;							\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+SUBST_CLASSES+=		um
+SUBST_STAGE.um=		pre-configure
+SUBST_FILES.um=		user_manage
+SUBST_VARS.um=		PKG_SYSCONFDIR
+
+post-extract:
+	chmod -x ${WRKSRC}/lib/HTTPD/UserAdmin/DBM.pm
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${PREFIX}/libexec/cgi-bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/user_manage
 	${INSTALL_DATA} ${WRKSRC}/user_manage.html \
 		${PREFIX}/share/doc/user_manage/user_manage.html
 
