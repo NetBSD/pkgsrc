@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/01/15 21:32:40 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/23 11:53:47 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	libxfce4mcs-${XFCE4_VERSION}
-PKGREVISION=	2
+#PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Xfce settings management library
 
