@@ -1,17 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
-
-You can start the MySQL server doing the following steps:
-
-$ echo "mysqld=yes" >> /etc/rc.conf # NetBSD or a system with rc.d
-
-If you are using PKG_RCD_SCRIPTS=YES, try the following:
-
-$ ${RCD_SCRIPTS_DIR}/mysqld start
-
-Otherwise try:
-
-$ ${LOCALBASE}/${RCD_SCRIPTS_EXAMPLEDIR}/mysqld start
+$NetBSD: MESSAGE,v 1.2 2007/01/23 15:51:53 ghen Exp $
 
 After the tables are set up and the MySQL server is running,
 please remember to set a password for the MySQL root user!
