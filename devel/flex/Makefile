@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2007/01/15 06:23:47 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/23 17:42:09 joerg Exp $
 
 DISTNAME=		flex-2.5.33
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flex/}
 
@@ -9,7 +10,7 @@ HOMEPAGE=		http://www.gnu.org/software/flex/
 COMMENT=		Fast clone of lex(1), the lexical scanner generator
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		bison
+USE_TOOLS+=		bison gm4:run
 MAKE_JOBS_SAFE=		no
 TEST_TARGET=		check
 INFO_FILES=		yes
