@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/11/05 16:55:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/01/23 21:15:08 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -22,6 +22,7 @@ BUILDLINK_API_DEPENDS.libXi+=	libXi>=1.0.0
 BUILDLINK_PKGSRCDIR.libXi?=	../../x11/libXi
 .endif	# LIBXI_BUILDLINK3_MK
 
+.include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
