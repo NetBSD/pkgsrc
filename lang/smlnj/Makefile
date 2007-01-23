@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2006/05/18 20:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/23 06:08:31 rillig Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
 PKGNAME=	smlnj-${SML_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/ \
 		http://smlnj.cs.uchicago.edu/dist/working/${SML_VERSION}/ \
@@ -90,6 +90,9 @@ do-build:
 	cd ${WRKDIR} && unset PWD && \
 	FILESDIR="${FILESDIR}" PATCH="${PATCH}" PATCH_ARGS="${PATCH_ARGS}" \
 		SMLNJ_HOME="${WRKDIR}" ./config/install.sh
+
+post-build:
+	chmod -R go-w ${WRKSRC}
 
 # install target
 # (see ftp://ftp.research.bell-labs.com/dist/smlnj/working/110.38/INSTALL)
