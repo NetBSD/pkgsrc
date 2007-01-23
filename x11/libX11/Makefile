@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/12/20 15:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/23 19:47:53 joerg Exp $
 #
 
-DISTNAME=		libX11-1.0.3
+DISTNAME=		libX11-1.1.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-man-pages=3
+CONFIGURE_ARGS+=	--without-xcb
 PKGCONFIG_OVERRIDE+=	x11.pc.in
 
 .include "../../x11/bigreqsproto/buildlink3.mk"
