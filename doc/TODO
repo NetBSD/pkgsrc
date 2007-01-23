@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5929 2007/01/22 22:37:26 wiz Exp $
+$NetBSD: TODO,v 1.5930 2007/01/23 11:54:00 martti Exp $
 
 Suggested new packages
 ======================
@@ -1117,7 +1117,6 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xfce-4.4.0
-	o xfce4-4.2.4
 	o xfmail-1.5.4
 	o xfmedia-0.9.2 [pkg/35205; wait for xfce4 update]
 	o xfstt-1.7
