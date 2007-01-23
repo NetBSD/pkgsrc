@@ -1317,7 +1317,7 @@ file and inspect the contents before extracting it.
 <a name="platform.osx-image"></a>3.3.1.1. Using a disk image</h4></div></div></div>
 <p>Create the disk image:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd pkgsrc/bootstrap</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage create ~/Documents/NetBSD 512</code></strong> # megabytes - season to taste
+<code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage create ~/Documents/NetBSD 1024</code></strong> # megabytes - season to taste
 <code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage mount ~/Documents/NetBSD</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>sudo chown `id -u`:`id -g` /Volumes/NetBSD</code></strong></pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
@@ -1403,7 +1403,7 @@ file and inspect the contents before extracting it.
       of pthreads, but other parts of libc may also be lacking.)</p>
 <p>Services for Unix Applications (aka SUA) is an integrated component
       of Windows Server 2003 R2 and Windows Vista.  As of this writing, SUA's
-      Interix 5.x subsystem not been tested with pkgsrc.</p>
+      Interix 5.x subsystem has not yet been tested with pkgsrc.</p>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="platform.interix-sfu-install"></a>3.3.3.1. When installing Interix/SFU</h4></div></div></div>
@@ -5567,7 +5567,7 @@ sections.</p>
 	    <code class="filename">+CONTENTS</code>, and for pkgviews packages,
 	    it outputs any libtool archives in
 	    <code class="filename">lib</code> directories.</p></li>
-<li><p><code class="varname">BUILDLINK_TRANSFORM.<em class="replaceable"><code>pkg</code></em></code>
+<li><p><code class="varname">BUILDLINK_FNAME_TRANSFORM.<em class="replaceable"><code>pkg</code></em></code>
 	    (not shown above) is a list of sed arguments used to
 	    transform the name of the source filename into a
 	    destination filename, e.g. <span><strong class="command">-e
@@ -9336,7 +9336,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id40664963"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2686092"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9352,7 +9352,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id40664997"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2686131"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9370,7 +9370,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id40665035"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2686171"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9388,7 +9388,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id40665074"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2686211"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9401,7 +9401,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id40665093"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2686299"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9417,7 +9417,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id40665123"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2686329"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9441,7 +9441,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id40665267"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2686406"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9466,7 +9466,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id40665302"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2686513"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9514,7 +9514,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id40665364"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2686574"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
