@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.215 2007/01/23 15:27:33 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.216 2007/01/23 15:50:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -328,3 +328,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/libXt to 1.0.4 [joerg 2007-01-23]
 	Updated fonts/libfontenc to 1.0.4 [joerg 2007-01-23]
 	Updated x11/libXft to 2.1.12 [joerg 2007-01-23]
+	Removed fonts/mkcfm [joerg 2007-01-23]
+	Updated x11/libXfont to 1.2.7 [joerg 2007-01-23]
