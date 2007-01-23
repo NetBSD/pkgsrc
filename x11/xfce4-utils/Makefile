@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/01/23 11:53:48 martti Exp $
+# $NetBSD: Makefile,v 1.29 2007/01/23 17:42:27 drochner Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -12,6 +12,7 @@ COMMENT=	Xfce utilities
 PKG_SYSCONFSUBDIR=	xdg/xfce4
 EGDIR=			${XFCE4_EGBASE}
 CONF_FILES=		${EGDIR:Q}/xinitrc ${PKG_SYSCONFDIR:Q}/xinitrc
+USE_TOOLS+=		xinit:run
 
 REQD_DIRS+=		${EGDIR}
 
