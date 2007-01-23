@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/17 07:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/23 11:53:46 martti Exp $
 bin/xfce4-iconbox
 lib/xfce4/mcs-plugins/xfce4-iconbox_settings.la
 share/applications/xfce-iconbox-settings.desktop
@@ -42,6 +42,7 @@ share/locale/pt_PT/LC_MESSAGES/xfce4-iconbox.mo
 share/locale/ro/LC_MESSAGES/xfce4-iconbox.mo
 share/locale/ru/LC_MESSAGES/xfce4-iconbox.mo
 share/locale/sk/LC_MESSAGES/xfce4-iconbox.mo
+share/locale/sq/LC_MESSAGES/xfce4-iconbox.mo
 share/locale/sv/LC_MESSAGES/xfce4-iconbox.mo
 share/locale/ta/LC_MESSAGES/xfce4-iconbox.mo
 share/locale/tr/LC_MESSAGES/xfce4-iconbox.mo

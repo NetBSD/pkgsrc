@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/10/12 09:24:20 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2007/01/23 11:53:46 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_CALENDAR_BUILDLINK3_MK:=	${XFCE4_CALENDAR_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-calendar
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-calendar
 
 .if ${XFCE4_CALENDAR_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-calendar+=	xfce4-calendar>=4.2.3nb4
+BUILDLINK_API_DEPENDS.xfce4-calendar+=	xfce4-calendar>=4.2.4
 BUILDLINK_PKGSRCDIR.xfce4-calendar?=	../../time/xfce4-calendar
 .endif	# XFCE4_CALENDAR_BUILDLINK3_MK
 

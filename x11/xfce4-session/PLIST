@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/12/07 13:58:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/23 11:53:47 martti Exp $
 bin/xfce4-session
 bin/xfce4-session-logout
 include/xfce4/xfce4-session-4.2/libxfsm/xfsm-splash-engine.h
@@ -67,6 +67,7 @@ share/locale/ro/LC_MESSAGES/xfce4-session.mo
 share/locale/ru/LC_MESSAGES/xfce4-session.mo
 share/locale/sk/LC_MESSAGES/xfce4-session.mo
 share/locale/sl/LC_MESSAGES/xfce4-session.mo
+share/locale/sq/LC_MESSAGES/xfce4-session.mo
 share/locale/sv/LC_MESSAGES/xfce4-session.mo
 share/locale/ta/LC_MESSAGES/xfce4-session.mo
 share/locale/tr/LC_MESSAGES/xfce4-session.mo

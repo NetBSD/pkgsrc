@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/23 11:53:46 martti Exp $
 bin/xfcalendar
 lib/xfce4/mcs-plugins/xfcalendar_plugin.la
 share/applications/xfcalendar.desktop
@@ -46,6 +46,7 @@ share/locale/ro/LC_MESSAGES/xfcalendar.mo
 share/locale/ru/LC_MESSAGES/xfcalendar.mo
 share/locale/sk/LC_MESSAGES/xfcalendar.mo
 share/locale/sl/LC_MESSAGES/xfcalendar.mo
+share/locale/sq/LC_MESSAGES/xfcalendar.mo
 share/locale/sv/LC_MESSAGES/xfcalendar.mo
 share/locale/ta/LC_MESSAGES/xfcalendar.mo
 share/locale/tr/LC_MESSAGES/xfcalendar.mo

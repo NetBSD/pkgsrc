@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 11:53:46 martti Exp $
 bin/fgr
 bin/scramble
 bin/xfbook
@@ -175,6 +175,7 @@ share/locale/pt_BR/LC_MESSAGES/xffm.mo
 share/locale/pt_PT/LC_MESSAGES/xffm.mo
 share/locale/sk/LC_MESSAGES/xffm.mo
 share/locale/sl/LC_MESSAGES/xffm.mo
+share/locale/sq/LC_MESSAGES/xffm.mo
 share/locale/sv/LC_MESSAGES/xffm.mo
 share/locale/ta/LC_MESSAGES/xffm.mo
 share/locale/tr/LC_MESSAGES/xffm.mo
@@ -289,6 +290,6 @@ share/xfce4/xffm/xffm.spec.in
 @dirrm share/xffm/pixmaps
 @dirrm share/xffm
 @dirrm share/xfce4/xffm
+@dirrm lib/xfce4/xffm
 @unexec ${RMDIR} %D/share/icons/hicolor/48x48/stock/generic 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/icons/hicolor/48x48/stock 2>/dev/null || ${TRUE}
-@dirrm lib/xfce4/xffm

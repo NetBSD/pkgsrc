@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2006/11/28 19:20:34 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2007/01/23 11:53:47 martti Exp $
 
 No, it's not ok. Except for GNU C.
 
---- libxfce4util/xfce-miscutils.h.orig	2005-11-15 12:59:47.000000000 +0100
-+++ libxfce4util/xfce-miscutils.h	2006-11-28 20:11:55.609975108 +0100
+--- libxfce4util/xfce-miscutils.h.orig	2007-01-13 21:41:32.000000000 +0000
++++ libxfce4util/xfce-miscutils.h	2007-01-23 11:26:14.000000000 +0000
 @@ -32,12 +32,11 @@
  
  #include <libxfce4util/debug.h>
@@ -20,5 +20,5 @@ No, it's not ok. Except for GNU C.
 +
 +#define _BUILTIN_LICENSE_TEXT(name) xfce_builtin_license_##name
  
- #define XFCE_LICENSE_BSD  _BUILTIN_LICENSE_TEXT(BSD)
- 
+ #if defined (__sun)
+ 	extern const char xfce_builtin_license_BSD[];
