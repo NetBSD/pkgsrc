@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/12/27 13:37:46 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/23 01:27:00 rillig Exp $
 
 DISTNAME=	xplanet-1.2.0
 PKGREVISION=	3
@@ -16,12 +16,9 @@ CONFIGURE_ENV+=		PERL=${_ENV_PERL:Q}
 _ENV_PERL=		${TOOLS_SETENV} perl
 
 # directory creation should be fixed in the future release of xplanet
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xplanet
-.for dir in arcs config fonts images markers origin satellites \
-		scripts spice stars
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xplanet/${dir}
-.endfor
+XPLANET_DIRS=		arcs config fonts images markers origin
+XPLANET_DIRS+=		satellites scripts spice stars
+INSTALLATION_DIRS+=	${XPLANET_DIRS:C,.*,share/xplanet/&,g}
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.xplanet
 PKG_SUPPORTED_OPTIONS=  x11
