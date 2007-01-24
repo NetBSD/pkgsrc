@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/23 15:45:44 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/24 19:46:45 epg Exp $
 
 .include "Makefile.common"
 
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
-CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
 
 CHECK_PORTABILITY_SKIP+=	srclib/pcre/* \
 				srclib/apr-util/* \
@@ -37,7 +37,8 @@ CHECK_PORTABILITY_SKIP+=	srclib/pcre/* \
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/apr1/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
@@ -90,7 +91,7 @@ DFLT_APACHE_MODULES+=	charset_lite
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 # LDAP support
-.if !empty(PKG_BUILD_OPTIONS.apr:Mldap)
+.if !empty(PKG_BUILD_OPTIONS.apr-util:Mldap)
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
 .endif
 
