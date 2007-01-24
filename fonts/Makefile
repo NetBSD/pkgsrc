@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2007/01/23 15:29:37 joerg Exp $
+# $NetBSD: Makefile,v 1.103 2007/01/24 12:57:58 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -55,6 +55,7 @@ SUBDIR+=	font-adobe-75dpi
 SUBDIR+=	font-adobe-utopia-100dpi
 SUBDIR+=	font-adobe-utopia-75dpi
 SUBDIR+=	font-adobe-utopia-type1
+SUBDIR+=	font-alias
 SUBDIR+=	font-bh-100dpi
 SUBDIR+=	font-bh-75dpi
 SUBDIR+=	font-bh-lucidatypewriter-100dpi
