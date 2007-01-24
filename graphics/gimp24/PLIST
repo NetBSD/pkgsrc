@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/12/06 17:33:02 minskim Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/01/24 19:48:30 wiz Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 ${REMOTE}bin/gimp-remote-2.3
@@ -1955,6 +1955,7 @@ ${TWAIN}@dirrm share/gimp/2.0/twain
 @dirrm share/gimp/2.0/fonts
 @dirrm share/gimp/2.0/brushes
 @dirrm share/gimp/2.0
+@dirrm share/gimp
 @dirrm share/examples/gimp-2.0
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
