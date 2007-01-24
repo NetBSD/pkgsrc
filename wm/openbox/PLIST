@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/09/10 10:23:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/24 19:40:26 wiz Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
@@ -114,5 +114,3 @@ share/themes/syscrash/openbox-3/themerc
 @dirrm include/openbox/3.3/openbox
 @dirrm include/openbox/3.3
 @dirrm include/openbox
-@dirrm etc/xdg/openbox
-@dirrm etc/xdg
