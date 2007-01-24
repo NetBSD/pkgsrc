@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.20 2007/01/24 13:26:26 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.21 2007/01/24 14:33:50 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -705,7 +705,7 @@ FILES_SUBST+=		TYPE1_POSTINDEX_CMD=
 .else
 USE_TOOLS+=		type1inst:run
 FILES_SUBST+=		TYPE1_INDEX_CMD=${TOOLS_PATH.type1inst:Q}
-FILES_SUBST+=		TYPE1_POSTINDEX_CMD="$${RM} type1inst.log"
+FILES_SUBST+=		TYPE1_POSTINDEX_CMD="\$${RM} type1inst.log"
 .endif
 FONTS_DIRS.x11+=	${FONTS_DIRS.type1}
 .endif
