@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.694 2007/01/23 19:21:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.695 2007/01/24 05:05:27 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2969,7 +2969,8 @@ sub strings_to_lines($) {
 	return $retval;
 }
 
-sub backtrace() {
+sub backtrace($) {
+	my $msg = shift();
 	my (@callers);
 
 	my $n = 0;
@@ -2978,9 +2979,10 @@ sub backtrace() {
 		$n++;
 	}
 
+	log_debug(NO_FILE, NO_LINE_NUMBER, $msg);
 	for (my $i = $#callers; $i >= 0; $i--) {
 		my $info = $callers[$i];
-		log_debug(NO_FILE, NO_LINE_NUMBER, sprintf("  at line %4d in %s", $info->[0], $info->[1]));
+		log_debug(NO_FILE, NO_LINE_NUMBER, sprintf("  line %4d called %s", $info->[0], $info->[1]));
 	}
 }
 
@@ -3896,6 +3898,7 @@ sub checkline_mk_varuse($$$$) {
 	my ($line, $varname, $mod, $context) = @_;
 
 	assert(defined($varname), "The varname parameter must be defined");
+	assert(defined($context), "The context parameter must be defined");
 	$opt_debug_trace and $line->log_debug("checkline_mk_varuse(\"${varname}\", \"${mod}\", ".$context->to_string().")");
 
 	# Check for spelling mistakes.
@@ -3919,9 +3922,17 @@ sub checkline_mk_varuse($$$$) {
 
 	if ($opt_warn_perm) {
 		my $perms = get_variable_perms($line, $varname);
-		my ($is_load_time, $is_indirect);
+		my $is_load_time;	# Will the variable be used at load time?
+		my $is_indirect;	# Might the variable be used indirectly at load time,
+					# for example by assigning it to another variable
+					# which then gets evaluated?
 
-		if ($context->time == VUC_TIME_LOAD && $perms !~ qr"p") {
+		# Don't warn about variables that are not recorded in the
+		# pkglint variable definition.
+		if (defined($context->type) && $context->type->is_guessed()) {
+			$is_load_time = false;
+
+		} elsif ($context->time == VUC_TIME_LOAD && $perms !~ qr"p") {
 			$is_load_time = true;
 			$is_indirect = false;
 
@@ -6067,21 +6078,31 @@ sub checklines_mk($) {
 						$mkctx_for_variables->{$var} = true;
 					}
 
-					use constant for_loop_type => PkgLint::Type->new(
+					# Check if any of the value's types is not guessed.
+					my $guessed = true;
+					foreach my $value (split(qr"\s+", $values)) { # XXX: too simple
+						if ($value =~ qr"^\$\{(.*)\}") {
+							my $type = get_variable_type($line, $1);
+							if (!$type->is_guessed()) {
+								$guessed = false;
+							}
+						}
+					}
+
+					my $for_loop_type = PkgLint::Type->new(
 						LK_INTERNAL,
 						"Unchecked",
 						[[qr".*", "pu"]],
-						NOT_GUESSED
-						
+						$guessed
 					);
-					use constant for_loop_context => PkgLint::VarUseContext->new(
+					my $for_loop_context = PkgLint::VarUseContext->new(
 						VUC_TIME_LOAD,
-						for_loop_type,
+						$for_loop_type,
 						VUC_SHELLWORD_FOR,
 						VUC_EXTENT_WORD
 					);
 					foreach my $var (@{extract_used_variables($line, $values)}) {
-						checkline_mk_varuse($line, $var, "", for_loop_context);
+						checkline_mk_varuse($line, $var, "", $for_loop_context);
 					}
 
 				}
