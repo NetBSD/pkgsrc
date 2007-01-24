@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/12/12 21:52:37 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/01/24 03:46:59 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XAW3D_BUILDLINK3_MK:=	${XAW3D_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.Xaw3d?=	../../x11/Xaw3d
 .endif	# XAW3D_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 
 LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw3d}/lib				\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.Xaw3d}/lib	\
