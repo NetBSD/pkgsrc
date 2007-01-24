@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/01/13 13:50:11 schwarz Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/24 17:28:22 reed Exp $
 
 DISTNAME=	zlib-1.2.3
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.gzip.org/zlib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gzip.org/zlib/
+HOMEPAGE=	http://www.zlib.net/
 COMMENT=	General purpose data compression library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
