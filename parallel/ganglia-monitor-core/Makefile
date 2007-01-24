@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/24 19:46:45 epg Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
@@ -68,7 +68,7 @@ post-install:
 
 BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55nb3
 
-.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr0/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
