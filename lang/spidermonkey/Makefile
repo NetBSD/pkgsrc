@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/24 19:35:26 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/24 19:58:19 rillig Exp $
 
 DISTNAME=	js-1.5
 PKGNAME=	${DISTNAME:S/js/spidermonkey/}
@@ -31,6 +31,8 @@ DIST_HEADERS=	jsapi.h jsautocfg.h jscompat.h jslong.h	\
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 BUILDDIRPREFIX=	pkgsrc
+.elif ${OPSYS} == "Linux"
+BUILDDIRPREFIX=	Linux_All
 .else
 BUILDDIRPREFIX=	${OPSYS}
 .endif
