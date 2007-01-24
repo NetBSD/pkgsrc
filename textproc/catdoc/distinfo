@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.7 2006/10/01 08:58:24 schwarz Exp $
+$NetBSD: distinfo,v 1.8 2007/01/24 17:07:00 reed Exp $
 
-SHA1 (catdoc-0.91.4.tar.gz) = f486345447993bc818093f84b505c2ebbb046954
-RMD160 (catdoc-0.91.4.tar.gz) = 6519112a49c495c2b2fcee442c841d1ee23e9970
-Size (catdoc-0.91.4.tar.gz) = 128428 bytes
-SHA1 (patch-aa) = c9b4834bdd9ce734320dc6cc1077037de007308b
-SHA1 (patch-ab) = 328c6d3f1613dff35760836bf051c48fba343576
-SHA1 (patch-ac) = 30d9873a3360b4153ab2c5ff4dc867fc076870fd
-SHA1 (patch-ad) = 8c31913ccee50b7f1b26b7a2f0ab48ae9368cadd
-SHA1 (patch-ae) = e088cd6ca202a6d201ff6f7d93a98dc1c712f3c0
-SHA1 (patch-af) = d813dbbadd7749b80aa7bab47d8b963ad41cc1fc
+SHA1 (catdoc-0.94.2.tar.gz) = 50ce9d7cb24ad6b10a856c9c24183e2b0a11ca04
+RMD160 (catdoc-0.94.2.tar.gz) = 59eb7a026fd3a2dae74a3e7f01a58266f7efaf72
+Size (catdoc-0.94.2.tar.gz) = 146012 bytes
+SHA1 (patch-ac) = 573aad7759f1975e27216023f45663c2a17febff
+SHA1 (patch-af) = 2441e50fcb3c829c39d3f62086e871701d735df2
