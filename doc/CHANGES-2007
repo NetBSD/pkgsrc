@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.226 2007/01/24 17:45:28 obache Exp $
+$NetBSD: CHANGES-2007,v 1.227 2007/01/24 19:38:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -341,3 +341,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/catdoc to 0.94.2 [reed 2007-01-24]
 	Updated textproc/catdoc-tk to 0.94.2 [reed 2007-01-24]
 	Updated devel/kscope to 1.4.3 [obache 2007-01-24]
+	Updated security/libgpg-error to 1.4nb2 [wiz 2007-01-24]
