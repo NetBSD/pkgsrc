@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5934 2007/01/24 19:33:23 wiz Exp $
+$NetBSD: TODO,v 1.5935 2007/01/24 19:57:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,6 @@ Suggested package updates
 	o courier-imap-4.1.2
 	o courier-mta-0.54.2
 	o crafty-19.5
-	o crimsonfields-0.5.1
 	o crossfire-client-1.9.1
 	o crypto++-523
 	o cstream-2.6.0
