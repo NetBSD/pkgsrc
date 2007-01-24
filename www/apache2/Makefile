@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2007/01/23 15:45:44 ghen Exp $
+# $NetBSD: Makefile,v 1.110 2007/01/24 19:46:45 epg Exp $
 
 .include "Makefile.common"
 
@@ -35,7 +35,7 @@ BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.12.2.0.58
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr0/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
