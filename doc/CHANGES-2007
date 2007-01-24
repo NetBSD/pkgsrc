@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.220 2007/01/23 22:55:45 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.221 2007/01/24 12:57:58 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -334,3 +334,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/libX11 to 1.1.1 [joerg 2007-01-23]
 	Updated chat/naim to 0.11.8.2.1 [wiz 2007-01-23]
 	Updated devel/ncurses to 5.6nb1 [wiz 2007-01-23]
+	Added fonts/font-alias version 1.0.1 [joerg 2007-01-24]
