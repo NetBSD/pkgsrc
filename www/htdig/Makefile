@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2006/04/10 12:20:32 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/24 10:25:15 sborrill Exp $
 
 DISTNAME=	htdig-3.1.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.htdig.org/files/ \
 		ftp://ftp.htdig.org/ \
@@ -11,7 +11,6 @@ MASTER_SITES=	http://www.htdig.org/files/ \
 		http://www.it.htdig.org/files/ \
 		ftp://www.it.htdig.org/pub/htdig/ \
 		http://www.opdenbrouw.nl/htdig/maindocs/files/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
@@ -31,6 +30,8 @@ CXXFLAGS+=	-Wno-deprecated
 CPPFLAGS+=	${CXXFLAGS}
 
 PKG_SYSCONFSUBDIR=	htdig
+
+BUILD_DEFS+=	VARBASE
 
 DBDIR?=		${VARBASE}/db/htdig
 MESSAGE_SUBST+=	DBDIR=${DBDIR}
