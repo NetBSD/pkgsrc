@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.18 2006/12/09 08:24:10 wiz Exp $
+# $NetBSD: apache.mk,v 1.19 2007/01/24 19:48:44 epg Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -124,9 +124,10 @@ PKG_APACHE=		none
 APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
 
 .if (${PKG_APACHE} == "apache2") && !empty(USE_APR:M[yY][eE][sS])
-.  include "../../devel/apr/buildlink3.mk"
+.  include "../../devel/apr0/buildlink3.mk"
 .elif (${PKG_APACHE} == "apache22") && !empty(USE_APR:M[Yy][Ee][Ss])
-.  include "../../devel/apr1/buildlink3.mk"
+.  include "../../devel/apr/buildlink3.mk"
+.  include "../../devel/apr-util/buildlink3.mk"
 .endif
 
 .endif	# APACHE_MK
