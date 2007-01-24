@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/24 16:29:11 reed Exp $
 bin/kazehakase
+lib/kazehakase/libkazehakase.la
 man/man1/kazehakase.1
 share/applications/kazehakase.desktop
 share/examples/kazehakase/bookmarkbar.xml
@@ -21,7 +22,6 @@ share/kazehakase/icons/kz-closeforward.png
 share/kazehakase/icons/kz-closewindow.png
 share/kazehakase/icons/kz-copyimagelocation.png
 share/kazehakase/icons/kz-copyurl.png
-share/kazehakase/icons/kz-editor.png
 share/kazehakase/icons/kz-epiphany.png
 share/kazehakase/icons/kz-firefox.png
 share/kazehakase/icons/kz-folder-open.png
@@ -45,6 +45,7 @@ share/kazehakase/icons/kz-openlinkwindow.png
 share/kazehakase/icons/kz-openselectedlink.png
 share/kazehakase/icons/kz-red.png
 share/kazehakase/icons/kz-remote-bookmark.png
+share/kazehakase/icons/kz-rss-feed.png
 share/kazehakase/icons/kz-savelink.png
 share/kazehakase/icons/kz-scrap-bookmark.png
 share/kazehakase/icons/kz-search.png
@@ -68,3 +69,4 @@ share/pixmaps/kazehakase-icon.png
 @dirrm share/examples/kazehakase/mozilla
 @dirrm share/examples/kazehakase
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/kazehakase
