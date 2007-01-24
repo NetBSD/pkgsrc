@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.234 2007/01/24 19:48:48 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.235 2007/01/24 19:57:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/jade to 1.2.1nb12 [wiz 2007-01-24]
 	Updated print/tex-jadetex to 3.13nb5 [wiz 2007-01-24]
 	Updated graphics/gimp24 to 2.3.13nb3 [wiz 2007-01-24]
+	Updated games/crimsonfields to 0.5.1 [wiz 2007-01-24]
