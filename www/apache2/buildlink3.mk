@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2006/07/10 08:29:33 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2007/01/24 19:46:45 epg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
@@ -28,6 +28,6 @@ CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
 .  endif
 .endif	# APACHE_BUILDLINK3_MK
 
-.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr0/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
