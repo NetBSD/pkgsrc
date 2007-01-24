@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.222 2007/01/24 13:13:13 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.223 2007/01/24 15:58:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -336,3 +336,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ncurses to 5.6nb1 [wiz 2007-01-23]
 	Added fonts/font-alias version 1.0.1 [joerg 2007-01-24]
 	Updated x11/libXfixes to 4.0.3 [joerg 2007-01-24]
+	Updated security/gnutls to 1.6.1nb1 [tron 2007-01-24]
