@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/19 09:00:24 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/24 15:06:57 sborrill Exp $
 #
 
 DISTNAME=	mod_auth_external-${DISTVERS}
+PKGREVISION=	1
 PKGNAME=	${APACHE_PKG_PREFIX}-auth-external-${DISTVERS}
 CATEGORIES=	www
 MASTER_SITES=	http://unixpapa.com/software/
