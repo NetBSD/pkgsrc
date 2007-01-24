@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:11 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/24 02:17:00 rillig Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freesoftware.fsf.org/download/dvdrtools/dvdrtools.pkg/${VERSION}/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,8 @@ COMMENT=	This program allows you to create DVDs on a DVD-Recorder
 VERSION=	0.1.5
 
 GNU_CONFIGURE=		yes
+# Override wrong usage of AC_DEFINE_UNQUOTED:
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 LIBS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
