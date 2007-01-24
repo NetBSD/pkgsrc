@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 21:31:40 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/24 13:11:56 joerg Exp $
 #
 
-DISTNAME=		libXfixes-4.0.1
+DISTNAME=		libXfixes-4.0.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
