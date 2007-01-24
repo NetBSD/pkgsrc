@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/24 17:43:52 obache Exp $
 #
 
-DISTNAME=		kscope-1.3.3
-PKGREVISION=		4
+DISTNAME=		kscope-1.4.3
 CATEGORIES=		devel kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kscope/}
 
@@ -10,7 +9,7 @@ MAINTAINER=		martijn.van.buul@gmail.com
 HOMEPAGE=		http://kscope.sourceforge.net/
 COMMENT=		KDE frontend for cscope
 
-DEPENDS+=		cscope>=15.4:../../devel/cscope
+DEPENDS+=		cscope>=15.6:../../devel/cscope
 DEPENDS+=		exctags>=5.5.4:../../devel/exctags
 
 GNU_CONFIGURE=		yes
