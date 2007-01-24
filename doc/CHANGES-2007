@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.223 2007/01/24 15:58:31 tron Exp $
+$NetBSD: CHANGES-2007,v 1.224 2007/01/24 16:30:39 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -337,3 +337,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added fonts/font-alias version 1.0.1 [joerg 2007-01-24]
 	Updated x11/libXfixes to 4.0.3 [joerg 2007-01-24]
 	Updated security/gnutls to 1.6.1nb1 [tron 2007-01-24]
+	Updated www/kazehakase to 0.4.3 [reed 2007-01-24]
