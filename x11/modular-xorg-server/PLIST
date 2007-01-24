@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/22 23:55:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/24 13:34:40 joerg Exp $
 bin/X
 bin/Xnest
 bin/Xorg
 bin/Xvfb
 bin/cvt
-bin/getconfig
-bin/getconfig.pl
 bin/gtf
 bin/inb
 bin/inl
@@ -73,7 +71,6 @@ include/xorg/dixstruct.h
 include/xorg/dri.h
 include/xorg/dristruct.h
 include/xorg/edid.h
-include/xorg/elf.h
 include/xorg/exa.h
 include/xorg/exevents.h
 include/xorg/extension.h
@@ -193,20 +190,16 @@ include/xorg/xvmcext.h
 lib/X11/Cards
 lib/X11/Options
 lib/X11/app-defaults/XOrgCfg
-lib/X11/getconfig/cfg.sample
-lib/X11/getconfig/xorg.cfg
 lib/pkgconfig/xorg-server.pc
 lib/xorg/modules/extensions/libdbe.la
 lib/xorg/modules/extensions/libdri.la
 lib/xorg/modules/extensions/libextmod.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
-lib/xorg/modules/fonts/libbitmap.la
 lib/xorg/modules/fonts/libfreetype.la
 lib/xorg/modules/fonts/libtype1.la
 lib/xorg/modules/libafb.la
 lib/xorg/modules/libcfb.la
-lib/xorg/modules/libcfb16.la
 lib/xorg/modules/libcfb32.la
 lib/xorg/modules/libddc.la
 lib/xorg/modules/libexa.la
@@ -215,7 +208,6 @@ lib/xorg/modules/libi2c.la
 lib/xorg/modules/libint10.la
 lib/xorg/modules/libmfb.la
 lib/xorg/modules/libpcidata.la
-lib/xorg/modules/librac.la
 lib/xorg/modules/libramdac.la
 lib/xorg/modules/libscanpci.la
 lib/xorg/modules/libshadow.la
@@ -235,21 +227,19 @@ lib/xorg/modules/multimedia/tda8425_drv.la
 lib/xorg/modules/multimedia/tda9850_drv.la
 lib/xorg/modules/multimedia/tda9885_drv.la
 lib/xorg/modules/multimedia/uda1380_drv.la
-lib/xorg/modules/${LOWER_OPSYS}/libdrm.la
 lib/xserver/SecurityPolicy
 man/man1/Xnest.1
 man/man1/Xorg.1
 man/man1/Xserver.1
 man/man1/Xvfb.1
 man/man1/cvt.1
-man/man1/getconfig.1
 man/man1/gtf.1
 man/man1/pcitweak.1
 man/man1/scanpci.1
 man/man1/xorgcfg.1
 man/man1/xorgconfig.1
+man/man4/exa.4
 man/man4/fbdevhw.4
-man/man5/getconfig.5
 man/man5/xorg.conf.5
 share/X11/xkb/compiled/README.compiled
 share/aclocal/xorg-server.m4
@@ -261,4 +251,3 @@ share/aclocal/xorg-server.m4
 @dirrm lib/xorg/modules/extensions
 @dirrm lib/xorg/modules
 @dirrm lib/xorg
-@dirrm lib/X11/getconfig
