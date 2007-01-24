@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.235 2007/01/24 19:57:55 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.236 2007/01/24 20:06:25 epg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -350,3 +350,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/tex-jadetex to 3.13nb5 [wiz 2007-01-24]
 	Updated graphics/gimp24 to 2.3.13nb3 [wiz 2007-01-24]
 	Updated games/crimsonfields to 0.5.1 [wiz 2007-01-24]
+	Added devel/apr0 version 0.9.12.2.0.59 [epg 2007-01-24]
+	Added devel/apr-util version 1.2.8 [epg 2007-01-24]
+	Updated devel/apr to 1.2.8 [epg 2007-01-24]
+	Added www/serf version 0.1.0 [epg 2007-01-24]
+	Removed devel/apr1 [epg 2007-01-24]
