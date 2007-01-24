@@ -1,18 +1,17 @@
-# $NetBSD: Makefile.common,v 1.8 2007/01/23 17:45:02 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/01/24 17:07:00 reed Exp $
 #
 
-DISTNAME=	catdoc-0.91.4
+DISTNAME=	catdoc-0.94.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.45.free.net/pub/catdoc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.45.free.net/~vitus/software/catdoc/
-COMMENT=	Reads MS-Word file and puts out its content as plain text
+COMMENT=	Converts MS Word, Excel and Powerpoint files to plain text
 
 DISTINFO_FILE=		${.CURDIR}/../../textproc/catdoc/distinfo
 PATCHDIR=		${.CURDIR}/../../textproc/catdoc/patches
 
-WRKSRC=			${WRKDIR}/catdoc
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
