@@ -11,5 +11,3 @@ The xls2csv utility reads MS-Excel spreadsheets and outputs its
 content as comma-separated values to stdout. Numbers are printed
 without delimiters and strings are enclosed in the double quotes.
 Double-quotes inside string are doubled.
-
-
