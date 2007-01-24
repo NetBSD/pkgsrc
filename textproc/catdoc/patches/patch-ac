@@ -1,30 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2006/10/01 08:58:24 schwarz Exp $
+$NetBSD: patch-ac,v 1.6 2007/01/24 17:07:00 reed Exp $
 
---- src/Makefile.in.orig	1999-12-30 15:24:10.000000000 +0100
-+++ src/Makefile.in	2006-09-21 00:20:08.000000000 +0200
-@@ -18,7 +18,7 @@
- install_targets = @installtargets@
- # Flags to pass to your C compilier
- # remove -O2 on HP/UX 9. It is known to cause problems
--FLAGS=-Wall -O2 -g 
-+#FLAGS=-Wall -O2 -g 
- 
- #Compile-time configuration of catdoc itself. Edit according to taste
- 
-@@ -61,19 +61,19 @@
-  -DREPL_EXT=\"$(REPL_EXT)\" -DUNKNOWN_CHAR=\'$(UNKNOWN_CHAR)\'\
-  -DSOURCE_CHARSET=\"$(SOURCE_CHARSET)\" -DTARGET_CHARSET=\"$(TARGET_CHARSET)\"
- 
--CFLAGS=$(FLAGS) $(DEFINES) @DEFS@
-+FLAGS=$(CFLAGS) $(DEFINES) @DEFS@ $(CPPFLAGS)
- OBJ=catdoc.o charsets.o substmap.o reader.o writer.o fileutil.o\
- 	confutil.o analyze.o rtfreader.o
- 
- OBJXLS=xls2csv.o charsets.o substmap.o fileutil.o confutil.o
- 
- #.c.o:
--#	$(CC) -c $(CFLAGS) $*
-+#	$(CC) -c $(FLAGS) $*
+--- src/Makefile.in.orig	2007-01-24 10:47:01.000000000 -0600
++++ src/Makefile.in	2007-01-24 10:47:39.000000000 -0600
+@@ -74,12 +74,12 @@
+ #	$(CC) -c $(CFLAGS) $*
  all: @buildtargets@
  catdoc: $(OBJ)
 -	$(CC)  -o catdoc  $(OBJ)
@@ -32,6 +11,10 @@ $NetBSD: patch-ac,v 1.5 2006/10/01 08:58:24 schwarz Exp $
  xls2csv: $(OBJXLS)
 -	$(CC) -o xls2csv $(OBJXLS) -lm
 +	$(CC) -o xls2csv $(OBJXLS) -lm @LIBS@
+ 
+ catppt: $(OBJPPT)
+-	$(CC) -o catppt $(OBJPPT) -lm
++	$(CC) -o catppt $(OBJPPT) -lm @LIBS@
+ 
  install: @installtargets@
- install-catdoc:catdoc xls2csv
- 	../mkinstalldirs $(installroot)$(bindir)
+ install-catdoc:catdoc xls2csv catppt 
