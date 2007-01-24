@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/24 19:40:26 wiz Exp $
 
 DISTNAME=	openbox-3.3.1
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 
@@ -21,7 +22,8 @@ PKGCONFIG_OVERRIDE+=	render/obrender-3.0.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 PKG_SYSCONFSUBDIR=	xdg
-OWN_DIRS=		${PKG_SYSCONFDIR}/openbox
+OWN_DIRS=		${PKG_SYSCONFDIR}
+OWN_DIRS+=		${PKG_SYSCONFDIR}/openbox
 
 EGDIR=			${PREFIX}/share/examples/openbox
 CONF_FILES=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/openbox/menu.xml
