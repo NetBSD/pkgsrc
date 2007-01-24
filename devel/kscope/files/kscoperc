@@ -4,5 +4,5 @@ FirstTime=true
 [Programs]
 CScope=@LOCALBASE@/bin/cscope
 CTags=@LOCALBASE@/bin/exctags
-VerboseCScope=false
-
+Dot=@LOCALBASE@/bin/dot
+VerboseCScope=true
