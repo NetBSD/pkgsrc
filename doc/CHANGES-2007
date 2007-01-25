@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.239 2007/01/25 18:18:41 epg Exp $
+$NetBSD: CHANGES-2007,v 1.240 2007/01/25 20:25:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-enum version 1.016 [rillig 2007-01-25]
 	Updated mail/getmail to 4.7.0 [schmonz 2007-01-25]
 	Updated devel/subversion to 1.4.3 [epg 2007-01-25]
+	Added www/ap2-fcgid version 2.0nb1 [abs 2007-01-25]
