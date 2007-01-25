@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/10/19 11:51:27 markd Exp $
+$NetBSD: distinfo,v 1.7 2007/01/25 19:46:55 markd Exp $
 
 SHA1 (sge-V60u8_TAG-src.tar.gz) = 3efe0f4576ef7bdb527b9b5e0d04850847745f87
 RMD160 (sge-V60u8_TAG-src.tar.gz) = 40e40e157e3ca555195774adbd8f27c1d3f0bcfd
@@ -9,6 +9,7 @@ SHA1 (patch-ag) = 145ee60e13d00ac8544db645f6c952c047239eb7
 SHA1 (patch-ah) = d0cb695f0a55cfea6625a90d388fac82ab3219af
 SHA1 (patch-ai) = f60b1946ecc594e3467fac16b054182edfc13c34
 SHA1 (patch-aj) = 884096ddfec328284d1c1b603428885b6d43c724
+SHA1 (patch-ak) = a99fb17fd583e8e1cbfab9271f3cb3ebc5797584
 SHA1 (patch-am) = 58c08eda9a5cbe5ed3202fdeeb4e3c28d70e49af
 SHA1 (patch-ar) = e951d7f999af9022911a1f7ee7283cb62e2cf830
 SHA1 (patch-as) = 355eca405440e09b9ecd9e1db4a4727ab408e772
