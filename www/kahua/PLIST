@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/19 13:45:35 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/25 01:11:06 uebayasi Exp $
 bin/kahua-admin
 bin/kahua-config
 bin/kahua-dbutil
@@ -52,6 +52,28 @@ lib/kahua/kahua/user.scm
 lib/kahua/kahua/util.scm
 lib/kahua/kahua/xml-template.scm
 libexec/kahua/kahua.cgi
+share/kahua/skel/AUTHORS
+share/kahua/skel/COPYING
+share/kahua/skel/ChangeLog
+share/kahua/skel/DIST
+share/kahua/skel/DIST_EXCLUDE
+share/kahua/skel/INSTALL
+share/kahua/skel/MESSAGES
+share/kahua/skel/Makefile.in
+share/kahua/skel/README
+share/kahua/skel/app-servers
+share/kahua/skel/configure.ac
+share/kahua/skel/install-sh
+share/kahua/skel/plugins/proj.scm
+share/kahua/skel/proj-start.in
+share/kahua/skel/proj-stop.in
+share/kahua/skel/proj.conf.in
+share/kahua/skel/proj/proj.css
+share/kahua/skel/proj/proj.kahua
+share/kahua/skel/proj/version.kahua.in
+share/kahua/skel/templates/page.xml
+share/kahua/skel/test/test.conf.in
+share/kahua/skel/test/test.scm.in
 @dirrm libexec/kahua
 @dirrm lib/kahua/kahua/test
 @dirrm lib/kahua/kahua/protocol
