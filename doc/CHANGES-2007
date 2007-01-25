@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.242 2007/01/25 23:27:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.243 2007/01/25 23:30:59 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/ap2-fcgid version 2.0nb1 [abs 2007-01-25]
 	Updated chat/xchat to 2.8.0 [reed 2007-01-25]
 	Updated chat/xchat-python to 2.8.0 [reed 2007-01-25]
+	Updated x11/xwd to 1.0.1 [reed 2007-01-25]
