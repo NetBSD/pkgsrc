@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/12/15 20:33:00 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2007/01/25 19:46:55 markd Exp $
 #
 
 PKGNAME=		sge-6.0.8
+PKGREVISION=		1
 DISTNAME=		sge-V60u8_TAG-src
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		# empty
