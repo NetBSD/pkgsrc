@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5937 2007/01/25 18:17:47 epg Exp $
+$NetBSD: TODO,v 1.5938 2007/01/25 23:28:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -323,6 +323,7 @@ Suggested package updates
 	o cgdb-0.6.3
 	o checkbot-1.77
 	o cherokee-0.5.6
+	o chmlib-0.39
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
@@ -431,6 +432,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdl-0.7.1
 	o gdsreader-0.3.2
+	o getmail-4.7.0
 	o ggiterm-0.7.1
 	o ghc-6.6
 	o ghostscript-esp-8.15.3
@@ -651,7 +653,7 @@ Suggested package updates
 	o muse-0.9.1
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
-	o nagios-2.6
+	o nagios-2.7
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.2
 	o nap-1.5.3
@@ -906,6 +908,7 @@ Suggested package updates
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
 	o py-logging-0.4.9.6
+	o py-mutagen-1.10
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-prewikka-0.9.8
@@ -987,7 +990,7 @@ Suggested package updates
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0
-	o shntool-3.0.0
+	o shntool-3.0.1
 	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.0.3
@@ -1095,13 +1098,13 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
 	o wdm-1.28
-	o webmin-1.310
+	o webmin-1.320
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wmweather-2.4.3
 	o wxGTK-2.8
-	o wxRemind-0.7.1
+	o wxRemind-0.7.4
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.8.0
 	o xblast-2.10.4
@@ -1176,7 +1179,7 @@ Suggested package updates
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.46.0
 	o zopeedit-0.8
-	o zsnes-1.50
+	o zsnes-1.51
 	o zziplib-0.13.38
 
 Infrastructure problems which need addressing
