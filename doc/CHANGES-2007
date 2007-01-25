@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.236 2007/01/24 20:06:25 epg Exp $
+$NetBSD: CHANGES-2007,v 1.237 2007/01/25 03:08:28 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -355,3 +355,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/apr to 1.2.8 [epg 2007-01-24]
 	Added www/serf version 0.1.0 [epg 2007-01-24]
 	Removed devel/apr1 [epg 2007-01-24]
+	Added devel/p5-enum version 1.016 [rillig 2007-01-25]
