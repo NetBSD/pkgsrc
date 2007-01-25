@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5936 2007/01/25 07:28:31 obache Exp $
+$NetBSD: TODO,v 1.5937 2007/01/25 18:17:47 epg Exp $
 
 Suggested new packages
 ======================
@@ -658,8 +658,7 @@ Suggested package updates
 	o nautilus-cd-burner-2.16.2
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.26.1 [pkg/34310|breaks subversion]
-	o neon-0.26.3 [breaks subversion]
+	o neon-0.26.3 [pkg/34310]
 	o nessus-3.0.4
 	o net-snmp-5.4
 	o netcdf-4.0.0a
