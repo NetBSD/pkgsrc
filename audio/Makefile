@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2007/01/17 18:24:43 drochner Exp $
+# $NetBSD: Makefile,v 1.344 2007/01/25 19:37:11 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -108,6 +108,7 @@ SUBDIR+=	gst-plugins0.10-flac
 SUBDIR+=	gst-plugins0.10-fluendo-mp3
 SUBDIR+=	gst-plugins0.10-libvisual
 SUBDIR+=	gst-plugins0.10-mad
+SUBDIR+=	gst-plugins0.10-musepack
 SUBDIR+=	gst-plugins0.10-oss
 SUBDIR+=	gst-plugins0.10-sid
 SUBDIR+=	gst-plugins0.10-speex
@@ -157,6 +158,7 @@ SUBDIR+=	libid3tag
 SUBDIR+=	libmad
 SUBDIR+=	libmikmod
 SUBDIR+=	libmodplug
+SUBDIR+=	libmpcdec
 SUBDIR+=	libmpd
 SUBDIR+=	libmusepack
 SUBDIR+=	libofa
@@ -209,6 +211,7 @@ SUBDIR+=	mpg123
 SUBDIR+=	mpg123-esound
 SUBDIR+=	mpg123-nas
 SUBDIR+=	mpg321
+SUBDIR+=	mppenc
 SUBDIR+=	mserv
 SUBDIR+=	mserv-devel
 SUBDIR+=	mserv_irman
