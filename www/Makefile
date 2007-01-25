@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2007/01/24 20:00:23 epg Exp $
+# $NetBSD: Makefile,v 1.496 2007/01/25 20:23:33 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -47,6 +47,7 @@ SUBDIR+=	ap2-auth-xradius
 SUBDIR+=	ap2-bw
 SUBDIR+=	ap2-chroot
 SUBDIR+=	ap2-fastcgi
+SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-python
