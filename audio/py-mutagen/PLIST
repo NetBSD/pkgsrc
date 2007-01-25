@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/10 10:21:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/25 23:33:19 wiz Exp $
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
 ${PYSITELIB}/mutagen/__init__.pyo
@@ -14,6 +14,9 @@ ${PYSITELIB}/mutagen/_vorbis.pyo
 ${PYSITELIB}/mutagen/apev2.py
 ${PYSITELIB}/mutagen/apev2.pyc
 ${PYSITELIB}/mutagen/apev2.pyo
+${PYSITELIB}/mutagen/asf.py
+${PYSITELIB}/mutagen/asf.pyc
+${PYSITELIB}/mutagen/asf.pyo
 ${PYSITELIB}/mutagen/easyid3.py
 ${PYSITELIB}/mutagen/easyid3.pyc
 ${PYSITELIB}/mutagen/easyid3.pyo
