@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2007/01/25 07:35:30 epg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/01/25 18:15:49 epg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
@@ -30,10 +30,14 @@ PKG_BUILD_OPTIONS.subversion!=cd ${BUILDLINK_PKGSRCDIR.subversion-base} && \
 .if !empty(PKG_BUILD_OPTIONS.subversion:Mapr1)
 .  include "../../devel/apr/buildlink3.mk"
 .  include "../../devel/apr-util/buildlink3.mk"
+.  if !empty(PKG_BUILD_OPTIONS.subversion:Mserf)
+.    include "../../www/serf/buildlink3.mk"
+.  else
+.    include "../../www/neon/buildlink3.mk"
+.  endif
 .else
 .  include "../../devel/apr0/buildlink3.mk"
+.  include "../../www/neon/buildlink3.mk"
 .endif
-
-.include "../../www/neon/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

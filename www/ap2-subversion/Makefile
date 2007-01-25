@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/25 07:35:30 epg Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/25 18:15:49 epg Exp $
 
 PKGNAME=	ap2-subversion-${SVNVER}
 COMMENT=	WebDAV server (Apache module) for Subversion
@@ -19,9 +19,9 @@ post-patch:
 
 .if !empty(PKG_OPTIONS:Mapache22)
 BUILDLINK_API_DEPENDS.apache?=	apache>=2.0.48
-PKG_APACHE_ACCEPTED=		apache22
+PKG_APACHE_ACCEPTED=	apache22
 .else
-PKG_APACHE_ACCEPTED=		apache2
+PKG_APACHE_ACCEPTED=	apache2
 .endif
 
 .include "../../devel/subversion-base/buildlink3.mk"
