@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/01/16 11:07:59 tron Exp $
+# $NetBSD: Makefile,v 1.46 2007/01/25 21:27:48 reed Exp $
 
 .include "Makefile.common"
 
@@ -15,6 +15,7 @@ USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--enable-xft
 
 LDFLAGS.IRIX+=		-lX11
 
@@ -22,6 +23,7 @@ LDFLAGS.IRIX+=		-lX11
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"
 
 .if ${OPSYS} == "Darwin"
@@ -34,7 +36,12 @@ CONFIGURE_ARGS+=	--disable-xlib
 .endif
 .endif
 
+INSTALLATION_DIRS+=	share/doc/xchat lib/xchat/plugins
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xchat/
+	${INSTALL_DATA} ${WRKSRC}/faq.html ${PREFIX}/share/doc/xchat/
+	${INSTALL_DATA} ${WRKSRC}/plugins/plugin20.html \
+		${PREFIX}/share/doc/xchat/
 
 .include "../../mk/bsd.pkg.mk"
