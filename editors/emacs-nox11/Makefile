@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/07/02 10:03:14 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/25 21:00:05 markd Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 PKGNAME=	emacs-nox11-${EMACSVERSION}a
-PKGREVISION=	6
+PKGREVISION=	8
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor) - non X11 version
 
