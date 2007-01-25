@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.695 2007/01/24 05:05:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.696 2007/01/25 04:43:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -52,10 +52,7 @@ BEGIN {
 	);
 }
 
-use constant false		=> 0;
-use constant true		=> 1;
-use constant dont_know		=> 2;
-use constant doesnt_matter	=> 3;
+use enum qw(false true dont_know doesnt_matter);
 
 sub assert($$) {
 	my ($cond, $msg) = @_;
@@ -183,11 +180,7 @@ use constant NO_FILE		=> undef;
 use constant NO_LINE_NUMBER	=> undef;
 use constant NO_LINES		=> undef;
 
-use constant LL_FATAL		=> 0;
-use constant LL_ERROR		=> 1;
-use constant LL_WARNING		=> 2;
-use constant LL_NOTE		=> 3;
-use constant LL_DEBUG		=> 4;
+use enum qw(:LL_ FATAL ERROR WARNING NOTE DEBUG);
 
 use constant traditional_type	=> ["FATAL", "ERROR", "WARN", "NOTE", "DEBUG"];
 use constant gcc_type		=> ["fatal", "error", "warning", "note", "debug"];
@@ -319,8 +312,7 @@ sub set_show_source_flag()	{ $show_source_flag = true; }
 #==========================================================================
 package PkgLint::File;
 
-use constant NAME	=> 0;
-use constant LINES	=> 1;
+use enum qw(NAME LINES);
 
 sub new($$$) {
 	my ($class, $name, $lines) = @_;
@@ -355,8 +347,7 @@ sub load($$) {
 #==========================================================================
 package PkgLint::Location;
 
-use constant LINENO	=> 0;
-use constant COLNO	=> 1;
+use enum qw(LINENO COLNO);
 
 sub new($$$$) {
 	my ($class, $lineno, $colno) = @_;
@@ -375,10 +366,7 @@ sub colno($)		{ return shift(@_)->[COLNO]; }
 #==========================================================================
 package PkgLint::SimpleMatch;
 
-use constant STRING	=> 0;
-use constant STARTS	=> 1;
-use constant ENDS	=> 2;
-use constant N		=> 3;
+use enum qw(STRING STARTS ENDS N);
 
 sub new($$) {
 	my ($class, $string, $starts, $ends) = @_;
@@ -418,9 +406,7 @@ sub range($$) {
 #==========================================================================
 package PkgLint::StringMatch;
 
-use constant STRING	=> 0;
-use constant STARTS	=> 1;
-use constant ENDS	=> 2;
+use enum qw(STRING STARTS ENDS);
 
 sub new($$) {
 	my ($class, $string, $starts, $ends) = @_;
@@ -481,14 +467,7 @@ BEGIN {
 	);
 }
 
-use constant FNAME	=> 0;
-use constant LINES	=> 1;
-use constant TEXT	=> 2;
-use constant PHYSLINES	=> 3;
-use constant CHANGED	=> 4;
-use constant BEFORE	=> 5;
-use constant AFTER	=> 6;
-use constant EXTRA	=> 7;
+use enum qw(FNAME LINES TEXT PHYSLINES CHANGED BEFORE AFTER EXTRA);
 
 sub new($$$$) {
 	my ($class, $fname, $lines, $text, $physlines) = @_;
@@ -698,19 +677,13 @@ BEGIN {
 	);
 }
 
-use constant LINE	=> 0;
-use constant PARTS	=> 1;
-use constant MARKUPS	=> 2;
+use enum qw(LINE PARTS MARKUPS);
 
 # The structure fields of a Part of a String
-use constant P_LINENO	=> 0;
-use constant P_STARTCOL	=> 1;
-use constant P_ENDCOL	=> 2;
+use enum qw(:P_ LINENO STARTCOL ENDCOL);
 
 # The structure fields of a MarkupPoint of a String
-use constant MP_LINENO	=> 0;
-use constant MP_COLNO	=> 1;
-use constant MP_TEXT	=> 2;
+use enum qw(:MP_ LINENO COLNO TEXT);
 
 sub new($$@) {
 	my ($class, $line, @parts) = @_;
@@ -1182,17 +1155,10 @@ BEGIN {
 	);
 }
 
-use constant KIND_OF_LIST	=> 0;
-use constant   LK_NONE		=> 0;
-use constant   LK_INTERNAL	=> 1;
-use constant   LK_EXTERNAL	=> 2;
-use constant BASIC_TYPE		=> 1;
-use constant ACLS		=> 2; # Array of ACL entries
-use constant   ACLE_SUBJECT_RE	=> 0;
-use constant   ACLE_PERMS	=> 1;
-use constant IS_GUESSED		=> 3;
-use constant   GUESSED		=> true;
-use constant   NOT_GUESSED	=> false;
+use enum qw(KIND_OF_LIST BASIC_TYPE ACLS IS_GUESSED);
+use enum qw(:LK_ NONE INTERNAL EXTERNAL);
+use enum qw(:ACLE_ SUBJECT_RE PERMS);
+use enum qw(NOT_GUESSED GUESSED);
 
 sub new($$$) {
 	my ($class, $kind_of_list, $basic_type, $acls, $guessed) = @_;
@@ -1294,25 +1260,11 @@ BEGIN {
 	);
 }
 
-use constant TIME		=> 0;
-use constant TYPE		=> 1;
-use constant SHELLWORD		=> 2;
-use constant EXTENT		=> 3;
-
-use constant VUC_TIME_UNKNOWN		=> 0;
-use constant VUC_TIME_LOAD		=> 1;
-use constant VUC_TIME_RUN		=> 2;
-use constant VUC_TYPE_UNKNOWN		=> undef;
-use constant VUC_SHELLWORD_UNKNOWN	=> 0;
-use constant VUC_SHELLWORD_PLAIN	=> 1;
-use constant VUC_SHELLWORD_DQUOT	=> 2;
-use constant VUC_SHELLWORD_SQUOT	=> 3;
-use constant VUC_SHELLWORD_BACKT	=> 4;
-use constant VUC_SHELLWORD_FOR		=> 5;
-use constant VUC_EXTENT_UNKNOWN		=> 0;
-use constant VUC_EXTENT_FULL		=> 1;
-use constant VUC_EXTENT_WORD		=> 2;
-use constant VUC_EXTENT_WORD_PART	=> 3;
+use enum qw(TIME TYPE SHELLWORD EXTENT);
+use enum qw(:VUC_TIME_ UNKNOWN LOAD RUN);
+use constant VUC_TYPE_UNKNOWN => undef;
+use enum qw(:VUC_SHELLWORD_ UNKNOWN PLAIN DQUOT SQUOT BACKT FOR);
+use enum qw(:VUC_EXTENT_ UNKNOWN FULL WORD WORD_PART);
 
 my $pool = {};
 
@@ -1366,17 +1318,11 @@ BEGIN {
 	);
 }
 
-use constant SUBST_CLASS	=> 0;
-use constant SUBST_STAGE	=> 1;
-use constant SUBST_MESSAGE	=> 2;
-use constant SUBST_FILES	=> 3;
-use constant SUBST_SED		=> 4;
-use constant SUBST_FILTER_CMD	=> 5;
-use constant SUBST_ID		=> 6;
+use enum qw(:SUBST_ ID CLASS STAGE MESSAGE FILES SED VARS FILTER_CMD);
 
 sub new($) {
 	my ($class) = @_;
-	my ($self) = ([undef, undef, undef, [], [], undef, undef]);
+	my ($self) = ([undef, undef, undef, undef, [], [], undef, undef]);
 	bless($self, $class);
 	return $self;
 }
@@ -4113,13 +4059,7 @@ sub checkline_mk_shellword($$$) {
 	}
 
 	# Note: SWST means [S]hell[W]ord [ST]ate
-	use constant SWST_PLAIN		=> 0;
-	use constant SWST_SQUOT		=> 1;
-	use constant SWST_DQUOT		=> 2;
-	use constant SWST_DQUOT_BACKT	=> 3;
-	use constant SWST_BACKT		=> 4;
-	use constant SWST_BACKT_DQUOT	=> 5;
-	use constant SWST_BACKT_SQUOT	=> 6;
+	use enum qw(:SWST_ PLAIN SQUOT DQUOT DQUOT_BACKT BACKT BACKT_DQUOT BACKT_SQUOT);
 	use constant statename		=> [
 		"SWST_PLAIN", "SWST_SQUOT", "SWST_DQUOT",
 		"SWST_DQUOT_BACKT", "SWST_BACKT",
@@ -4365,40 +4305,21 @@ sub checkline_mk_shelltext($$) {
 	my ($vartools, $state, $rest, $set_e_mode);
 
 	# Note: SCST is the abbreviation for [S]hell [C]ommand [ST]ate.
-	use constant SCST_START		=>  0;
-	use constant SCST_CONT		=>  1;
-	use constant SCST_INSTALL	=>  2;
-	use constant SCST_INSTALL_D	=>  3;
-	use constant SCST_MKDIR		=>  4;
-	use constant SCST_PAX		=>  5;
-	use constant SCST_PAX_S		=>  6;
-	use constant SCST_SED		=>  7;
-	use constant SCST_SED_E		=>  8;
-	use constant SCST_SET		=>  9;
-	use constant SCST_COND_CONT	=> 10;
-	use constant SCST_CASE		=> 11;
-	use constant SCST_CASE_IN	=> 12;
-	use constant SCST_CASE_LABEL	=> 13;
-	use constant SCST_CASE_LABEL_CONT => 14;
-	use constant SCST_CASE_PAREN	=> 15;
-	use constant SCST_FOR		=> 16;
-	use constant SCST_FOR_IN	=> 17;
-	use constant SCST_FOR_CONT	=> 18;
-	use constant SCST_SET_CONT	=> 19;
-	use constant SCST_COND		=> 20;
-	use constant SCST_ECHO		=> 21;
-	use constant SCST_INSTALL_DIR	=> 22;
-	use constant SCST_INSTALL_DIR2	=> 23;
-
-	use constant scst_statename => [
-		"SCST_START", "SCST_CONT", "SCST_INSTALL", "SCST_INSTALL_D",
-		"SCST_MKDIR", "SCST_PAX", "SCST_PAX_S", "SCST_SED",
-		"SCST_SED_E", "SCST_SET", "SCST_COND_CONT", "SCST_CASE",
-		"SCST_CASE_IN", "SCST_CASE_LABEL", "SCST_CASE_LABEL_CONT",
-		"SCST_CASE_PAREN", "SCST_FOR", "SCST_FOR_IN",
-		"SCST_FOR_CONT", "SCST_SET_CONT", "SCST_COND", "SCST_ECHO",
-		"SCST_INSTALL_DIR", "SCST_INSTALL_DIR2",
-	];
+	use constant scst => qw(
+		START CONT
+		INSTALL INSTALL_D
+		MKDIR
+		PAX PAX_S
+		SED SED_E
+		SET SET_CONT
+		COND COND_CONT
+		CASE CASE_IN CASE_LABEL CASE_LABEL_CONT CASE_PAREN
+		FOR FOR_IN FOR_CONT
+		ECHO
+		INSTALL_DIR INSTALL_DIR2
+	);
+	use enum (":SCST_", scst);
+	use constant scst_statename => [ map { $_ = "SCST_$_"; } scst ];
 
 	use constant forbidden_commands => array_to_hash(qw(
 		ktrace
@@ -5729,9 +5650,7 @@ sub checklines_package_Makefile_varorder($) {
 
 	return unless $opt_warn_varorder;
 
-	use constant once	=> 0;
-	use constant optional	=> 1;
-	use constant many	=> 2;
+	use enum qw(once optional many);
 	my (@sections) = (
 		[ "Initial comments", once,
 			[
@@ -6083,7 +6002,7 @@ sub checklines_mk($) {
 					foreach my $value (split(qr"\s+", $values)) { # XXX: too simple
 						if ($value =~ qr"^\$\{(.*)\}") {
 							my $type = get_variable_type($line, $1);
-							if (!$type->is_guessed()) {
+							if (defined($type) && !$type->is_guessed()) {
 								$guessed = false;
 							}
 						}
@@ -6501,10 +6420,7 @@ sub checkfile_distinfo($) {
 	my ($lines, %in_distinfo, $current_fname, $state, $patches_dir);
 	my ($di_is_committed);
 
-	use constant DIS_start	=> 0;
-	use constant DIS_SHA1	=> 0;	# same as DIS_start
-	use constant DIS_RMD160	=> 1;
-	use constant DIS_Size	=> 2;
+	use enum qw(:DIS_ start=0 SHA1=0 RMD160 Size);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_distinfo()");
 
@@ -6877,19 +6793,11 @@ sub checkfile_patch($) {
 	use constant re_patch_ulc	=> qr"^\s(.*)$";
 	use constant re_patch_ulnonl	=> qr"^\\ No newline at end of file$";
 
-	use constant PST_START		=> 0;
-	use constant PST_CENTER		=> 1;
-	use constant PST_TEXT		=> 2;
-	use constant PST_CFA		=> 3;
-	use constant PST_CH		=> 4;
-	use constant PST_CHD		=> 5;
-	use constant PST_CLD0		=> 6;
-	use constant PST_CLD		=> 7;
-	use constant PST_CLA0		=> 8;
-	use constant PST_CLA		=> 9;
-	use constant PST_UFA		=> 10;
-	use constant PST_UH		=> 11;
-	use constant PST_UL		=> 12;
+	use enum qw(:PST_
+		START CENTER TEXT
+		CFA CH CHD CLD0 CLD CLA0 CLA
+		UFA UH UL
+	);
 
 	my ($s, $line, $m);
 
