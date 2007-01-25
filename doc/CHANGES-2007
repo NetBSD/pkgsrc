@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.240 2007/01/25 20:25:26 abs Exp $
+$NetBSD: CHANGES-2007,v 1.241 2007/01/25 21:30:00 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -359,3 +359,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/getmail to 4.7.0 [schmonz 2007-01-25]
 	Updated devel/subversion to 1.4.3 [epg 2007-01-25]
 	Added www/ap2-fcgid version 2.0nb1 [abs 2007-01-25]
+	Updated chat/xchat to 2.8.0 [reed 2007-01-25]
+	Updated chat/xchat-python to 2.8.0 [reed 2007-01-25]
