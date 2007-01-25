@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.243 2007/01/25 23:30:59 reed Exp $
+$NetBSD: CHANGES-2007,v 1.244 2007/01/25 23:36:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -374,3 +374,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/xchat to 2.8.0 [reed 2007-01-25]
 	Updated chat/xchat-python to 2.8.0 [reed 2007-01-25]
 	Updated x11/xwd to 1.0.1 [reed 2007-01-25]
+	Updated net/gift-gnutella to 0.0.11 [wiz 2007-01-25]
+	Updated net/gift-openft to 0.2.1.6 [wiz 2007-01-25]
+	Updated audio/py-mutagen to 1.10 [wiz 2007-01-25]
