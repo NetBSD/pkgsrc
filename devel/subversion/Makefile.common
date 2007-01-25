@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.26 2007/01/25 07:35:30 epg Exp $
+# $NetBSD: Makefile.common,v 1.27 2007/01/25 18:15:49 epg Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
 MASTER_SITES=		http://subversion.tigris.org/tarballs/
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://subversion.tigris.org/
@@ -24,7 +23,12 @@ GNU_CONFIGURE=		YES
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/subversion-base/options.mk"
 
+.if !empty(PKG_OPTIONS:Mserf)
+CONFIGURE_ARGS+=	--with-serf=${BUILDLINK_PREFIX.serf} --without-neon
+.else
 CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
+.endif
+
 # workaround: does not install info file, but does create directory
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
