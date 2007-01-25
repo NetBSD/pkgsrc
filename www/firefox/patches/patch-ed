@@ -1,0 +1,31 @@
+$NetBSD: patch-ed,v 1.1 2007/01/25 15:45:19 dmcmahill Exp $
+
+GNU make-3.81 changed the way \newlines are handled inside of single
+quotes.  This fixes the command.  Should still work on older GNU make's
+too.
+
+See https://bugzilla.mozilla.org/show_bug.cgi?id=325148
+
+--- security/coreconf/rules.mk.orig	2005-04-14 20:36:28.000000000 -0400
++++ security/coreconf/rules.mk
+@@ -885,8 +885,7 @@ endif
+ 
+ ifneq (,$(filter-out OpenVMS OS2 WIN%,$(OS_TARGET)))
+ # Can't use sed because of its 4000-char line length limit, so resort to perl
+-.DEFAULT:
+-	@perl -e '                                                            \
++PERL_DEPENDENCIES_PROGRAM= '                                                  \
+ 	    open(MD, "< $(DEPENDENCIES)");                                    \
+ 	    while (<MD>) {                                                    \
+ 		if (m@ \.*/*$< @) {                                           \
+@@ -914,6 +913,10 @@ ifneq (,$(filter-out OpenVMS OS2 WIN%,$(
+ 		print "$(MAKE): *** No rule to make target $<.  Stop.\n";     \
+ 		exit(1);                                                      \
+ 	    }'
++
++.DEFAULT:
++	@perl -e ${PERL_DEPENDENCIES_PROGRAM}
++
+ endif
+ 
+ #############################################################################
