@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5938 2007/01/25 23:28:07 wiz Exp $
+$NetBSD: TODO,v 1.5939 2007/01/25 23:37:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,7 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o g-wrap-1.9.7 [breaks gnucash-2.0.[0-4])
+	o g-wrap-1.9.7
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
@@ -432,7 +432,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdl-0.7.1
 	o gdsreader-0.3.2
-	o getmail-4.7.0
 	o ggiterm-0.7.1
 	o ghc-6.6
 	o ghostscript-esp-8.15.3
@@ -542,7 +541,6 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
 	o kapooka-0.3
-	o kazehakase-0.4.3
 	o kdbg-2.0.5
 	o kdrill-6.4
 	o kid3-0.8
@@ -908,7 +906,6 @@ Suggested package updates
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
 	o py-logging-0.4.9.6
-	o py-mutagen-1.10
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-prewikka-0.9.8
@@ -1108,7 +1105,6 @@ Suggested package updates
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.8.0
 	o xblast-2.10.4
-	o xchat-2.8.0
 	o xdaliclock-2.23
 	o xdelta-3.0e
 	o xdesktopwaves-1.3
