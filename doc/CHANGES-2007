@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.237 2007/01/25 03:08:28 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.238 2007/01/25 03:39:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -356,3 +356,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/serf version 0.1.0 [epg 2007-01-24]
 	Removed devel/apr1 [epg 2007-01-24]
 	Added devel/p5-enum version 1.016 [rillig 2007-01-25]
+	Updated mail/getmail to 4.7.0 [schmonz 2007-01-25]
