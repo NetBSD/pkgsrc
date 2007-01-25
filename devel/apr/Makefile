@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2007/01/24 19:46:45 epg Exp $
+# $NetBSD: Makefile,v 1.51 2007/01/25 17:05:35 epg Exp $
 #
 
 DISTNAME=	apr-1.2.8
+# Use bogus version number so as to be newer than devel/apr1 installations
+# in the wild; remove this upon upgrading to 1.2.9.
+PKGNAME=	apr-1.2.8.2.2.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 
