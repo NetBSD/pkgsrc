@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.52 2006/11/14 10:38:36 tron Exp $
+# $NetBSD: Makefile.common,v 1.53 2007/01/25 21:27:49 reed Exp $
 
-DISTNAME=	xchat-2.6.8
-CATEGORIES=	chat gnome
-MASTER_SITES=	http://xchat.org/files/source/2.6/
+DISTNAME=	xchat-2.8.0
+CATEGORIES=	chat
+MASTER_SITES=	http://xchat.org/files/source/2.8/
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	http://xchat.org/
