@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5935 2007/01/24 19:57:55 wiz Exp $
+$NetBSD: TODO,v 1.5936 2007/01/25 07:28:31 obache Exp $
 
 Suggested new packages
 ======================
@@ -548,7 +548,6 @@ Suggested package updates
 	o kmp-0.5
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
-	o kscope-1.4.3 [pkg/35454]
 	o ksi-3.4.2
 	o latd-1.21
 	o lavaps-2.7
