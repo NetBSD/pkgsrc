@@ -1,20 +1,12 @@
-# $NetBSD: Makefile,v 1.70 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2007/01/26 03:17:09 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		bison gawk perl:run
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kdepim
-PKG_SUPPORTED_OPTIONS=	sasl
-PKG_SUGGESTED_OPTIONS=	sasl
-
-.include "../../mk/bsd.options.mk"
 
 BUILDLINK_API_DEPENDS.gpgme+=     gpgme>=0.4.5
 
@@ -43,20 +35,16 @@ CHECK_PORTABILITY_SKIP+=karm/test/booktime-baddate.sh \
 		karm/test/refresh_on_change.sh \
 		karm/test/version.sh
 
+.include "options.mk"
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 BUILDLINK_DEPMETHOD.qt3-tools=	full
 
-.if !empty(PKG_OPTIONS:Msasl)
-.include "../../security/cyrus-sasl/buildlink3.mk"
-PLIST_SUBST+=	HAVE_SASL=""
-.else
-PLIST_SUBST+=	HAVE_SASL="@comment "
-.endif
-
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
