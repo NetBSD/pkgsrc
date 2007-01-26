@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2006/08/02 14:11:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.30 2007/01/26 03:21:31 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -445,6 +445,89 @@ share/doc/kde/HTML/en/kview/index.cache.bz2
 share/doc/kde/HTML/en/kview/index.docbook
 share/doc/kde/HTML/en/kview/kview-application-configuration.png
 share/doc/kde/HTML/en/kview/kview-viewer-configuration.png
+share/icons/crystalsvg/16x16/actions/camera_test.png
+share/icons/crystalsvg/16x16/actions/palette_color.png
+share/icons/crystalsvg/16x16/actions/palette_gray.png
+share/icons/crystalsvg/16x16/actions/palette_halftone.png
+share/icons/crystalsvg/16x16/actions/palette_lineart.png
+share/icons/crystalsvg/16x16/apps/camera.png
+share/icons/crystalsvg/16x16/apps/kviewshell.png
+share/icons/crystalsvg/16x16/apps/photobook.png
+share/icons/crystalsvg/16x16/devices/camera.png
+share/icons/crystalsvg/16x16/mimetypes/kpovmodeler_doc.png
+share/icons/crystalsvg/22x22/apps/photobook.png
+share/icons/crystalsvg/22x22/devices/camera.png
+share/icons/crystalsvg/22x22/filesystems/camera.png
+share/icons/crystalsvg/32x32/apps/kviewshell.png
+share/icons/crystalsvg/32x32/devices/camera.png
+share/icons/crystalsvg/32x32/filesystems/camera.png
+share/icons/crystalsvg/32x32/mimetypes/kpovmodeler_doc.png
+share/icons/crystalsvg/48x48/apps/kviewshell.png
+share/icons/crystalsvg/48x48/mimetypes/kpovmodeler_doc.png
+share/icons/hicolor/128x128/apps/kghostview.png
+share/icons/hicolor/128x128/apps/kpdf.png
+share/icons/hicolor/16x16/apps/kcolorchooser.png
+share/icons/hicolor/16x16/apps/kcoloredit.png
+share/icons/hicolor/16x16/apps/kdvi.png
+share/icons/hicolor/16x16/apps/kfax.png
+share/icons/hicolor/16x16/apps/kfaxview.png
+share/icons/hicolor/16x16/apps/kgamma.png
+share/icons/hicolor/16x16/apps/kghostview.png
+share/icons/hicolor/16x16/apps/kiconedit.png
+share/icons/hicolor/16x16/apps/kolourpaint.png
+share/icons/hicolor/16x16/apps/kpdf.png
+share/icons/hicolor/16x16/apps/kpovmodeler.png
+share/icons/hicolor/16x16/apps/kruler.png
+share/icons/hicolor/16x16/apps/ksnapshot.png
+share/icons/hicolor/16x16/apps/kuickshow.png
+share/icons/hicolor/16x16/apps/kview.png
+share/icons/hicolor/22x22/apps/kcolorchooser.png
+share/icons/hicolor/22x22/apps/kdvi.png
+share/icons/hicolor/22x22/apps/kfax.png
+share/icons/hicolor/22x22/apps/kfaxview.png
+share/icons/hicolor/22x22/apps/kghostview.png
+share/icons/hicolor/22x22/apps/kiconedit.png
+share/icons/hicolor/22x22/apps/kolourpaint.png
+share/icons/hicolor/22x22/apps/kpdf.png
+share/icons/hicolor/22x22/apps/kpovmodeler.png
+share/icons/hicolor/22x22/apps/kruler.png
+share/icons/hicolor/22x22/apps/ksnapshot.png
+share/icons/hicolor/22x22/apps/kuickshow.png
+share/icons/hicolor/22x22/apps/kview.png
+share/icons/hicolor/32x32/apps/kcoloredit.png
+share/icons/hicolor/32x32/apps/kdvi.png
+share/icons/hicolor/32x32/apps/kfax.png
+share/icons/hicolor/32x32/apps/kfaxview.png
+share/icons/hicolor/32x32/apps/kgamma.png
+share/icons/hicolor/32x32/apps/kghostview.png
+share/icons/hicolor/32x32/apps/kiconedit.png
+share/icons/hicolor/32x32/apps/kolourpaint.png
+share/icons/hicolor/32x32/apps/kpdf.png
+share/icons/hicolor/32x32/apps/kpovmodeler.png
+share/icons/hicolor/32x32/apps/kruler.png
+share/icons/hicolor/32x32/apps/ksnapshot.png
+share/icons/hicolor/32x32/apps/kuickshow.png
+share/icons/hicolor/32x32/apps/kview.png
+share/icons/hicolor/48x48/apps/kdvi.png
+share/icons/hicolor/48x48/apps/kfax.png
+share/icons/hicolor/48x48/apps/kfaxview.png
+share/icons/hicolor/48x48/apps/kgamma.png
+share/icons/hicolor/48x48/apps/kghostview.png
+share/icons/hicolor/48x48/apps/kiconedit.png
+share/icons/hicolor/48x48/apps/kolourpaint.png
+share/icons/hicolor/48x48/apps/kpdf.png
+share/icons/hicolor/48x48/apps/kpovmodeler.png
+share/icons/hicolor/48x48/apps/kruler.png
+share/icons/hicolor/48x48/apps/ksnapshot.png
+share/icons/hicolor/48x48/apps/kview.png
+share/icons/hicolor/64x64/apps/kghostview.png
+share/icons/hicolor/64x64/apps/kpdf.png
+share/icons/hicolor/scalable/apps/kdvi.svgz
+share/icons/hicolor/scalable/apps/kfax.svgz
+share/icons/hicolor/scalable/apps/kfaxview.svgz
+share/icons/hicolor/scalable/apps/kolourpaint.svgz
+share/icons/hicolor/scalable/apps/kpdf.svgz
+share/icons/hicolor/scalable/apps/ksnapshot.svgz
 share/kde/applnk/Graphics/kruler.desktop
 share/kde/apps/djvumultipage.rc
 share/kde/apps/kcoloredit/kcoloreditui.rc
@@ -1025,89 +1108,6 @@ share/kde/config.kcfg/kghostview.kcfg
 share/kde/config.kcfg/kpdf.kcfg
 share/kde/config.kcfg/kviewshell.kcfg
 share/kde/config/kookarc
-share/kde/icons/crystalsvg/16x16/actions/camera_test.png
-share/kde/icons/crystalsvg/16x16/actions/palette_color.png
-share/kde/icons/crystalsvg/16x16/actions/palette_gray.png
-share/kde/icons/crystalsvg/16x16/actions/palette_halftone.png
-share/kde/icons/crystalsvg/16x16/actions/palette_lineart.png
-share/kde/icons/crystalsvg/16x16/apps/camera.png
-share/kde/icons/crystalsvg/16x16/apps/kviewshell.png
-share/kde/icons/crystalsvg/16x16/apps/photobook.png
-share/kde/icons/crystalsvg/16x16/devices/camera.png
-share/kde/icons/crystalsvg/16x16/mimetypes/kpovmodeler_doc.png
-share/kde/icons/crystalsvg/22x22/apps/photobook.png
-share/kde/icons/crystalsvg/22x22/devices/camera.png
-share/kde/icons/crystalsvg/22x22/filesystems/camera.png
-share/kde/icons/crystalsvg/32x32/apps/kviewshell.png
-share/kde/icons/crystalsvg/32x32/devices/camera.png
-share/kde/icons/crystalsvg/32x32/filesystems/camera.png
-share/kde/icons/crystalsvg/32x32/mimetypes/kpovmodeler_doc.png
-share/kde/icons/crystalsvg/48x48/apps/kviewshell.png
-share/kde/icons/crystalsvg/48x48/mimetypes/kpovmodeler_doc.png
-share/kde/icons/hicolor/128x128/apps/kghostview.png
-share/kde/icons/hicolor/128x128/apps/kpdf.png
-share/kde/icons/hicolor/16x16/apps/kcolorchooser.png
-share/kde/icons/hicolor/16x16/apps/kcoloredit.png
-share/kde/icons/hicolor/16x16/apps/kdvi.png
-share/kde/icons/hicolor/16x16/apps/kfax.png
-share/kde/icons/hicolor/16x16/apps/kfaxview.png
-share/kde/icons/hicolor/16x16/apps/kgamma.png
-share/kde/icons/hicolor/16x16/apps/kghostview.png
-share/kde/icons/hicolor/16x16/apps/kiconedit.png
-share/kde/icons/hicolor/16x16/apps/kolourpaint.png
-share/kde/icons/hicolor/16x16/apps/kpdf.png
-share/kde/icons/hicolor/16x16/apps/kpovmodeler.png
-share/kde/icons/hicolor/16x16/apps/kruler.png
-share/kde/icons/hicolor/16x16/apps/ksnapshot.png
-share/kde/icons/hicolor/16x16/apps/kuickshow.png
-share/kde/icons/hicolor/16x16/apps/kview.png
-share/kde/icons/hicolor/22x22/apps/kcolorchooser.png
-share/kde/icons/hicolor/22x22/apps/kdvi.png
-share/kde/icons/hicolor/22x22/apps/kfax.png
-share/kde/icons/hicolor/22x22/apps/kfaxview.png
-share/kde/icons/hicolor/22x22/apps/kghostview.png
-share/kde/icons/hicolor/22x22/apps/kiconedit.png
-share/kde/icons/hicolor/22x22/apps/kolourpaint.png
-share/kde/icons/hicolor/22x22/apps/kpdf.png
-share/kde/icons/hicolor/22x22/apps/kpovmodeler.png
-share/kde/icons/hicolor/22x22/apps/kruler.png
-share/kde/icons/hicolor/22x22/apps/ksnapshot.png
-share/kde/icons/hicolor/22x22/apps/kuickshow.png
-share/kde/icons/hicolor/22x22/apps/kview.png
-share/kde/icons/hicolor/32x32/apps/kcoloredit.png
-share/kde/icons/hicolor/32x32/apps/kdvi.png
-share/kde/icons/hicolor/32x32/apps/kfax.png
-share/kde/icons/hicolor/32x32/apps/kfaxview.png
-share/kde/icons/hicolor/32x32/apps/kgamma.png
-share/kde/icons/hicolor/32x32/apps/kghostview.png
-share/kde/icons/hicolor/32x32/apps/kiconedit.png
-share/kde/icons/hicolor/32x32/apps/kolourpaint.png
-share/kde/icons/hicolor/32x32/apps/kpdf.png
-share/kde/icons/hicolor/32x32/apps/kpovmodeler.png
-share/kde/icons/hicolor/32x32/apps/kruler.png
-share/kde/icons/hicolor/32x32/apps/ksnapshot.png
-share/kde/icons/hicolor/32x32/apps/kuickshow.png
-share/kde/icons/hicolor/32x32/apps/kview.png
-share/kde/icons/hicolor/48x48/apps/kdvi.png
-share/kde/icons/hicolor/48x48/apps/kfax.png
-share/kde/icons/hicolor/48x48/apps/kfaxview.png
-share/kde/icons/hicolor/48x48/apps/kgamma.png
-share/kde/icons/hicolor/48x48/apps/kghostview.png
-share/kde/icons/hicolor/48x48/apps/kiconedit.png
-share/kde/icons/hicolor/48x48/apps/kolourpaint.png
-share/kde/icons/hicolor/48x48/apps/kpdf.png
-share/kde/icons/hicolor/48x48/apps/kpovmodeler.png
-share/kde/icons/hicolor/48x48/apps/kruler.png
-share/kde/icons/hicolor/48x48/apps/ksnapshot.png
-share/kde/icons/hicolor/48x48/apps/kview.png
-share/kde/icons/hicolor/64x64/apps/kghostview.png
-share/kde/icons/hicolor/64x64/apps/kpdf.png
-share/kde/icons/hicolor/scalable/apps/kdvi.svgz
-share/kde/icons/hicolor/scalable/apps/kfax.svgz
-share/kde/icons/hicolor/scalable/apps/kfaxview.svgz
-share/kde/icons/hicolor/scalable/apps/kolourpaint.svgz
-share/kde/icons/hicolor/scalable/apps/kpdf.svgz
-share/kde/icons/hicolor/scalable/apps/ksnapshot.svgz
 share/kde/mimelnk/text/mrml.desktop
 share/kde/services/camera.protocol
 share/kde/services/djvumultipage.desktop
@@ -1160,31 +1160,6 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/text
 @comment in kde: @dirrm share/kde/mimelnk/image
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/filesystems
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/devices
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/filesystems
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/devices
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/devices
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
 @comment in kde: @dirrm share/kde/config/magic
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
@@ -1274,6 +1249,30 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kcoloredit
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Graphics
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/filesystems
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/devices
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/filesystems
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/devices
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/devices
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kuickshow
 @dirrm share/doc/kde/HTML/en/ksnapshot
