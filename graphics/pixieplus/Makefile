@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2007/01/17 23:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/26 04:13:34 markd Exp $
 #
 
 DISTNAME=	pixieplus-0.5.4
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	http://people.fruitsalad.org/avleeuwen/distfiles/pixieplus/ \
 		http://www.mosfet.org/pixie/
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	YES
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/kdegraphics3/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
