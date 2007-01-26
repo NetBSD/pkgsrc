@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 12:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/26 20:05:53 joerg Exp $
 #
 
 DISTNAME=	gtick-0.3.10
@@ -29,8 +29,7 @@ SUBST_STAGE.header=	pre-configure
 SUBST_FILES.header=	src/dsp.c
 SUBST_SED.header=	-e 's/FreeBSD__)/& || defined(__NetBSD__)/g'
 
-.include "../../mk/oss.buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
