@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/12/23 10:18:39 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2007/01/26 23:43:02 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp spidermonkey finger gopher
@@ -18,7 +18,9 @@ CONFIGURE_ARGS+= --disable-ipv6
 
 .if !empty(PKG_OPTIONS:Mx11)
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-x
 .else
