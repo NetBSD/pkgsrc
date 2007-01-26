@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/23 01:27:00 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2007/01/26 18:22:48 joerg Exp $
 
 DISTNAME=	xplanet-1.2.0
 PKGREVISION=	3
@@ -27,14 +27,17 @@ PKG_SUGGESTED_OPTIONS=  x11
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mx11)
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/pango/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pango
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xscreensaver
 .endif
 
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -42,7 +45,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
