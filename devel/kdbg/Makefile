@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2007/01/17 23:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2007/01/26 03:56:50 markd Exp $
 
-DISTNAME=	kdbg-2.0.4
-PKGREVISION=	1
+DISTNAME=	kdbg-2.0.5
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kdbg/}
 
@@ -12,7 +11,6 @@ COMMENT=	Graphical User Interface around gdb using KDE
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-
 USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--with-kde-version=3
@@ -20,6 +18,7 @@ CONFIGURE_ARGS+=	--with-kde-version=3
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
