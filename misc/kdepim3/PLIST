@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2006/11/20 10:57:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/01/26 03:17:09 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -172,13 +172,13 @@ include/kontact/summary.h
 include/korganizer/baseview.h
 include/korganizer/calendarviewbase.h
 include/korganizer/calprinter.h
-include/korganizer/calprinthelper.h
 include/korganizer/calprintpluginbase.h
 include/korganizer/corehelper.h
 include/korganizer/mainwindow.h
 include/korganizer/part.h
 include/korganizer/printplugin.h
 include/kpilot/kpilotlink.h
+include/kpilot/pilot.h
 include/kpilot/pilotDatabase.h
 include/kpilot/pilotLinkVersion.h
 include/kpilot/pilotLocalDatabase.h
@@ -385,6 +385,7 @@ lib/kde3/libkorg_datenums.la
 lib/kde3/libkorg_exchange.la
 lib/kde3/libkorg_hebrew.la
 lib/kde3/libkorg_journalprint.la
+lib/kde3/libkorg_yearlyprint.la
 lib/kde3/libkorganizerpart.la
 lib/kde3/libksfilter_addressbook.la
 lib/kde3/libksfilter_calendar.la
@@ -473,15 +474,32 @@ share/applications/kde/kmail_view.desktop
 share/applications/kde/knotes.desktop
 share/applications/kde/konsolekalendar.desktop
 share/applications/kde/korganizer.desktop
-share/applications/kde/korganizer-import.desktop
 share/applications/kde/kpalmdoc.desktop
 share/applications/kde/kpilot.desktop
 share/applications/kde/kpilotdaemon.desktop
 share/applications/kde/ktnef.desktop
 share/applications/kde/multisynk.desktop
+share/doc/kde/HTML/en/akregator/add-feed.png
+share/doc/kde/HTML/en/akregator/add-feed2.png
+share/doc/kde/HTML/en/akregator/add-folder.png
+share/doc/kde/HTML/en/akregator/add-folder2.png
+share/doc/kde/HTML/en/akregator/advanced-tab.png
+share/doc/kde/HTML/en/akregator/appearance-tab.png
+share/doc/kde/HTML/en/akregator/archive-tab.png
+share/doc/kde/HTML/en/akregator/browser-tab.png
 share/doc/kde/HTML/en/akregator/common
+share/doc/kde/HTML/en/akregator/general-tab.png
 share/doc/kde/HTML/en/akregator/index.cache.bz2
 share/doc/kde/HTML/en/akregator/index.docbook
+share/doc/kde/HTML/en/akregator/konq.png
+share/doc/kde/HTML/en/akregator/konq2.png
+share/doc/kde/HTML/en/akregator/main-window.png
+share/doc/kde/HTML/en/akregator/main-window2.png
+share/doc/kde/HTML/en/akregator/main-window3.png
+share/doc/kde/HTML/en/akregator/main-window4.png
+share/doc/kde/HTML/en/akregator/quick-filter.png
+share/doc/kde/HTML/en/akregator/rss.png
+share/doc/kde/HTML/en/akregator/rss3.png
 share/doc/kde/HTML/en/kaddressbook/addhost.png
 share/doc/kde/HTML/en/kaddressbook/common
 share/doc/kde/HTML/en/kaddressbook/conf.png
@@ -718,6 +736,153 @@ share/doc/kde/HTML/en/multisynk/konnectors-chapter.docbook
 share/doc/kde/HTML/en/multisynk/logdialog.png
 share/doc/kde/HTML/en/multisynk/mainwin-filled.png
 share/doc/kde/HTML/en/multisynk/mainwin.png
+share/icons/crystalsvg/16x16/actions/kalarm.png
+share/icons/crystalsvg/16x16/actions/kontact_contacts.png
+share/icons/crystalsvg/16x16/actions/kontact_date.png
+share/icons/crystalsvg/16x16/actions/kontact_journal.png
+share/icons/crystalsvg/16x16/actions/kontact_mail.png
+share/icons/crystalsvg/16x16/actions/kontact_news.png
+share/icons/crystalsvg/16x16/actions/kontact_notes.png
+share/icons/crystalsvg/16x16/actions/kontact_summary.png
+share/icons/crystalsvg/16x16/actions/kontact_summary_green.png
+share/icons/crystalsvg/16x16/actions/kontact_todo.png
+share/icons/crystalsvg/16x16/actions/rss_tag.png
+share/icons/crystalsvg/16x16/apps/akregator_empty.png
+share/icons/crystalsvg/16x16/apps/gpg.png
+share/icons/crystalsvg/16x16/apps/gpgsm.png
+share/icons/crystalsvg/16x16/apps/kmailcvt.png
+share/icons/crystalsvg/16x16/apps/konsolekalendar.png
+share/icons/crystalsvg/16x16/apps/kpalmdoc.png
+share/icons/crystalsvg/16x16/apps/kpilotDaemon.png
+share/icons/crystalsvg/22x22/actions/button_fewer.png
+share/icons/crystalsvg/22x22/actions/button_more.png
+share/icons/crystalsvg/22x22/actions/kalarm.png
+share/icons/crystalsvg/22x22/actions/kontact_contacts.png
+share/icons/crystalsvg/22x22/actions/kontact_date.png
+share/icons/crystalsvg/22x22/actions/kontact_journal.png
+share/icons/crystalsvg/22x22/actions/kontact_mail.png
+share/icons/crystalsvg/22x22/actions/kontact_news.png
+share/icons/crystalsvg/22x22/actions/kontact_notes.png
+share/icons/crystalsvg/22x22/actions/kontact_summary.png
+share/icons/crystalsvg/22x22/actions/kontact_summary_green.png
+share/icons/crystalsvg/22x22/actions/kontact_todo.png
+share/icons/crystalsvg/22x22/actions/rss_tag.png
+share/icons/crystalsvg/22x22/apps/gpg.png
+share/icons/crystalsvg/22x22/apps/gpgsm.png
+share/icons/crystalsvg/22x22/apps/kmaillight.png
+share/icons/crystalsvg/22x22/apps/konsolekalendar.png
+share/icons/crystalsvg/22x22/apps/kpalmdoc.png
+share/icons/crystalsvg/22x22/apps/kpilotDaemon.png
+share/icons/crystalsvg/32x32/actions/kontact_contacts.png
+share/icons/crystalsvg/32x32/actions/kontact_date.png
+share/icons/crystalsvg/32x32/actions/kontact_journal.png
+share/icons/crystalsvg/32x32/actions/kontact_mail.png
+share/icons/crystalsvg/32x32/actions/kontact_news.png
+share/icons/crystalsvg/32x32/actions/kontact_notes.png
+share/icons/crystalsvg/32x32/actions/kontact_summary.png
+share/icons/crystalsvg/32x32/actions/kontact_summary_green.png
+share/icons/crystalsvg/32x32/actions/kontact_todo.png
+share/icons/crystalsvg/32x32/actions/rss_tag.png
+share/icons/crystalsvg/32x32/apps/gpg.png
+share/icons/crystalsvg/32x32/apps/gpgsm.png
+share/icons/crystalsvg/32x32/apps/kmailcvt.png
+share/icons/crystalsvg/32x32/apps/kmaillight.png
+share/icons/crystalsvg/32x32/apps/konsolekalendar.png
+share/icons/crystalsvg/32x32/apps/kpalmdoc.png
+share/icons/crystalsvg/32x32/apps/kpilotDaemon.png
+share/icons/crystalsvg/48x48/actions/kontact_contacts.png
+share/icons/crystalsvg/48x48/actions/kontact_date.png
+share/icons/crystalsvg/48x48/actions/kontact_journal.png
+share/icons/crystalsvg/48x48/actions/kontact_mail.png
+share/icons/crystalsvg/48x48/actions/kontact_news.png
+share/icons/crystalsvg/48x48/actions/kontact_notes.png
+share/icons/crystalsvg/48x48/actions/kontact_summary.png
+share/icons/crystalsvg/48x48/actions/kontact_summary_green.png
+share/icons/crystalsvg/48x48/actions/kontact_todo.png
+share/icons/crystalsvg/48x48/actions/rss_tag.png
+share/icons/crystalsvg/48x48/apps/kmailcvt.png
+share/icons/crystalsvg/48x48/apps/kpalmdoc.png
+share/icons/crystalsvg/48x48/apps/kpilotDaemon.png
+share/icons/crystalsvg/64x64/actions/kontact_contacts.png
+share/icons/crystalsvg/64x64/actions/kontact_date.png
+share/icons/crystalsvg/64x64/actions/kontact_journal.png
+share/icons/crystalsvg/64x64/actions/kontact_mail.png
+share/icons/crystalsvg/64x64/actions/kontact_news.png
+share/icons/crystalsvg/64x64/actions/kontact_notes.png
+share/icons/crystalsvg/64x64/actions/kontact_summary.png
+share/icons/crystalsvg/64x64/actions/kontact_summary_green.png
+share/icons/crystalsvg/64x64/actions/kontact_todo.png
+share/icons/crystalsvg/64x64/actions/rss_tag.png
+share/icons/hicolor/128x128/apps/akregator.png
+share/icons/hicolor/128x128/apps/kaddressbook.png
+share/icons/hicolor/128x128/apps/karm.png
+share/icons/hicolor/128x128/apps/kmail.png
+share/icons/hicolor/128x128/apps/knode.png
+share/icons/hicolor/128x128/apps/knode2.png
+share/icons/hicolor/128x128/apps/knotes.png
+share/icons/hicolor/128x128/apps/kontact.png
+share/icons/hicolor/128x128/apps/korganizer.png
+share/icons/hicolor/16x16/apps/akregator.png
+share/icons/hicolor/16x16/apps/kaddressbook.png
+share/icons/hicolor/16x16/apps/kalarm.png
+share/icons/hicolor/16x16/apps/karm.png
+share/icons/hicolor/16x16/apps/kmail.png
+share/icons/hicolor/16x16/apps/knode.png
+share/icons/hicolor/16x16/apps/knode2.png
+share/icons/hicolor/16x16/apps/knotes.png
+share/icons/hicolor/16x16/apps/kontact.png
+share/icons/hicolor/16x16/apps/korganizer.png
+share/icons/hicolor/16x16/apps/korn.png
+share/icons/hicolor/16x16/apps/kpilot.png
+share/icons/hicolor/16x16/apps/multisynk.png
+share/icons/hicolor/22x22/apps/akregator.png
+share/icons/hicolor/22x22/apps/karm.png
+share/icons/hicolor/22x22/apps/kmail.png
+share/icons/hicolor/22x22/apps/knotes.png
+share/icons/hicolor/22x22/apps/kontact.png
+share/icons/hicolor/22x22/apps/kpilot.png
+share/icons/hicolor/22x22/apps/multisynk.png
+share/icons/hicolor/32x32/apps/akregator.png
+share/icons/hicolor/32x32/apps/kaddressbook.png
+share/icons/hicolor/32x32/apps/kalarm.png
+share/icons/hicolor/32x32/apps/karm.png
+share/icons/hicolor/32x32/apps/kmail.png
+share/icons/hicolor/32x32/apps/knode.png
+share/icons/hicolor/32x32/apps/knode2.png
+share/icons/hicolor/32x32/apps/knotes.png
+share/icons/hicolor/32x32/apps/kontact.png
+share/icons/hicolor/32x32/apps/korganizer.png
+share/icons/hicolor/32x32/apps/korn.png
+share/icons/hicolor/32x32/apps/kpilot.png
+share/icons/hicolor/32x32/apps/multisynk.png
+share/icons/hicolor/48x48/apps/akregator.png
+share/icons/hicolor/48x48/apps/kaddressbook.png
+share/icons/hicolor/48x48/apps/kalarm.png
+share/icons/hicolor/48x48/apps/karm.png
+share/icons/hicolor/48x48/apps/kmail.png
+share/icons/hicolor/48x48/apps/knode.png
+share/icons/hicolor/48x48/apps/knode2.png
+share/icons/hicolor/48x48/apps/knotes.png
+share/icons/hicolor/48x48/apps/kontact.png
+share/icons/hicolor/48x48/apps/korganizer.png
+share/icons/hicolor/48x48/apps/korn.png
+share/icons/hicolor/48x48/apps/kpilot.png
+share/icons/hicolor/48x48/apps/ktnef.png
+share/icons/hicolor/48x48/apps/multisynk.png
+share/icons/hicolor/64x64/apps/akregator.png
+share/icons/hicolor/64x64/apps/kaddressbook.png
+share/icons/hicolor/64x64/apps/karm.png
+share/icons/hicolor/64x64/apps/kmail.png
+share/icons/hicolor/64x64/apps/knode.png
+share/icons/hicolor/64x64/apps/knode2.png
+share/icons/hicolor/64x64/apps/knotes.png
+share/icons/hicolor/64x64/apps/kontact.png
+share/icons/hicolor/64x64/apps/korganizer.png
+share/icons/hicolor/scalable/apps/akregator.svgz
+share/icons/hicolor/scalable/apps/kmail.svgz
+share/icons/locolor/16x16/apps/kpilot.png
+share/icons/locolor/16x16/apps/ktnef.png
+share/icons/locolor/32x32/apps/ktnef.png
 share/kde/applnk/.hidden/kalarmd.desktop
 share/kde/applnk/Applications/kalarm.desktop
 share/kde/applnk/Utilities/kandy.desktop
@@ -1537,6 +1702,7 @@ share/kde/apps/libkholidays/holiday_fi
 share/kde/apps/libkholidays/holiday_fr
 share/kde/apps/libkholidays/holiday_frswiss
 share/kde/apps/libkholidays/holiday_gb
+share/kde/apps/libkholidays/holiday_gr
 share/kde/apps/libkholidays/holiday_gt
 share/kde/apps/libkholidays/holiday_hu
 share/kde/apps/libkholidays/holiday_ie
@@ -1577,6 +1743,7 @@ share/kde/autostart/korgac.desktop
 share/kde/config.kcfg/abbrowserconduit.kcfg
 share/kde/config.kcfg/akregator.kcfg
 share/kde/config.kcfg/custommimeheader.kcfg
+share/kde/config.kcfg/customtemplates_kfg.kcfg
 share/kde/config.kcfg/docconduit.kcfg
 share/kde/config.kcfg/egroupware.kcfg
 share/kde/config.kcfg/groupwise.kcfg
@@ -1599,158 +1766,12 @@ share/kde/config.kcfg/popmail.kcfg
 share/kde/config.kcfg/replyphrases.kcfg
 share/kde/config.kcfg/slox.kcfg
 share/kde/config.kcfg/sysinfoconduit.kcfg
+share/kde/config.kcfg/templatesconfiguration_kfg.kcfg
 share/kde/config.kcfg/timeconduit.kcfg
 share/kde/config.kcfg/vcalconduitbase.kcfg
 share/kde/config/kmail.antispamrc
 share/kde/config/kmail.antivirusrc
 share/kde/config/libkleopatrarc
-share/kde/icons/crystalsvg/16x16/actions/kalarm.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_contacts.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_date.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_journal.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_mail.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_news.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_notes.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_summary.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_summary_green.png
-share/kde/icons/crystalsvg/16x16/actions/kontact_todo.png
-share/kde/icons/crystalsvg/16x16/actions/rss_tag.png
-share/kde/icons/crystalsvg/16x16/apps/akregator_empty.png
-share/kde/icons/crystalsvg/16x16/apps/gpg.png
-share/kde/icons/crystalsvg/16x16/apps/gpgsm.png
-share/kde/icons/crystalsvg/16x16/apps/kmailcvt.png
-share/kde/icons/crystalsvg/16x16/apps/konsolekalendar.png
-share/kde/icons/crystalsvg/16x16/apps/kpalmdoc.png
-share/kde/icons/crystalsvg/16x16/apps/kpilotDaemon.png
-share/kde/icons/crystalsvg/22x22/actions/button_fewer.png
-share/kde/icons/crystalsvg/22x22/actions/button_more.png
-share/kde/icons/crystalsvg/22x22/actions/kalarm.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_contacts.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_date.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_journal.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_mail.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_news.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_notes.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_summary.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_summary_green.png
-share/kde/icons/crystalsvg/22x22/actions/kontact_todo.png
-share/kde/icons/crystalsvg/22x22/actions/rss_tag.png
-share/kde/icons/crystalsvg/22x22/apps/gpg.png
-share/kde/icons/crystalsvg/22x22/apps/gpgsm.png
-share/kde/icons/crystalsvg/22x22/apps/kmaillight.png
-share/kde/icons/crystalsvg/22x22/apps/konsolekalendar.png
-share/kde/icons/crystalsvg/22x22/apps/kpalmdoc.png
-share/kde/icons/crystalsvg/22x22/apps/kpilotDaemon.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_contacts.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_date.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_journal.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_mail.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_news.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_notes.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_summary.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_summary_green.png
-share/kde/icons/crystalsvg/32x32/actions/kontact_todo.png
-share/kde/icons/crystalsvg/32x32/actions/rss_tag.png
-share/kde/icons/crystalsvg/32x32/apps/gpg.png
-share/kde/icons/crystalsvg/32x32/apps/gpgsm.png
-share/kde/icons/crystalsvg/32x32/apps/kmailcvt.png
-share/kde/icons/crystalsvg/32x32/apps/kmaillight.png
-share/kde/icons/crystalsvg/32x32/apps/konsolekalendar.png
-share/kde/icons/crystalsvg/32x32/apps/kpalmdoc.png
-share/kde/icons/crystalsvg/32x32/apps/kpilotDaemon.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_contacts.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_date.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_journal.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_mail.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_news.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_notes.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_summary.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_summary_green.png
-share/kde/icons/crystalsvg/48x48/actions/kontact_todo.png
-share/kde/icons/crystalsvg/48x48/actions/rss_tag.png
-share/kde/icons/crystalsvg/48x48/apps/kmailcvt.png
-share/kde/icons/crystalsvg/48x48/apps/kpalmdoc.png
-share/kde/icons/crystalsvg/48x48/apps/kpilotDaemon.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_contacts.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_date.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_journal.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_mail.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_news.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_notes.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_summary.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_summary_green.png
-share/kde/icons/crystalsvg/64x64/actions/kontact_todo.png
-share/kde/icons/crystalsvg/64x64/actions/rss_tag.png
-share/kde/icons/hicolor/128x128/apps/akregator.png
-share/kde/icons/hicolor/128x128/apps/kaddressbook.png
-share/kde/icons/hicolor/128x128/apps/karm.png
-share/kde/icons/hicolor/128x128/apps/kmail.png
-share/kde/icons/hicolor/128x128/apps/knode.png
-share/kde/icons/hicolor/128x128/apps/knode2.png
-share/kde/icons/hicolor/128x128/apps/knotes.png
-share/kde/icons/hicolor/128x128/apps/kontact.png
-share/kde/icons/hicolor/128x128/apps/korganizer.png
-share/kde/icons/hicolor/16x16/apps/akregator.png
-share/kde/icons/hicolor/16x16/apps/kaddressbook.png
-share/kde/icons/hicolor/16x16/apps/kalarm.png
-share/kde/icons/hicolor/16x16/apps/karm.png
-share/kde/icons/hicolor/16x16/apps/kmail.png
-share/kde/icons/hicolor/16x16/apps/knode.png
-share/kde/icons/hicolor/16x16/apps/knode2.png
-share/kde/icons/hicolor/16x16/apps/knotes.png
-share/kde/icons/hicolor/16x16/apps/kontact.png
-share/kde/icons/hicolor/16x16/apps/korganizer.png
-share/kde/icons/hicolor/16x16/apps/korn.png
-share/kde/icons/hicolor/16x16/apps/kpilot.png
-share/kde/icons/hicolor/16x16/apps/multisynk.png
-share/kde/icons/hicolor/22x22/apps/akregator.png
-share/kde/icons/hicolor/22x22/apps/karm.png
-share/kde/icons/hicolor/22x22/apps/kmail.png
-share/kde/icons/hicolor/22x22/apps/knotes.png
-share/kde/icons/hicolor/22x22/apps/kontact.png
-share/kde/icons/hicolor/22x22/apps/kpilot.png
-share/kde/icons/hicolor/22x22/apps/multisynk.png
-share/kde/icons/hicolor/32x32/apps/akregator.png
-share/kde/icons/hicolor/32x32/apps/kaddressbook.png
-share/kde/icons/hicolor/32x32/apps/kalarm.png
-share/kde/icons/hicolor/32x32/apps/karm.png
-share/kde/icons/hicolor/32x32/apps/kmail.png
-share/kde/icons/hicolor/32x32/apps/knode.png
-share/kde/icons/hicolor/32x32/apps/knode2.png
-share/kde/icons/hicolor/32x32/apps/knotes.png
-share/kde/icons/hicolor/32x32/apps/kontact.png
-share/kde/icons/hicolor/32x32/apps/korganizer.png
-share/kde/icons/hicolor/32x32/apps/korn.png
-share/kde/icons/hicolor/32x32/apps/kpilot.png
-share/kde/icons/hicolor/32x32/apps/multisynk.png
-share/kde/icons/hicolor/48x48/apps/akregator.png
-share/kde/icons/hicolor/48x48/apps/kaddressbook.png
-share/kde/icons/hicolor/48x48/apps/kalarm.png
-share/kde/icons/hicolor/48x48/apps/karm.png
-share/kde/icons/hicolor/48x48/apps/kmail.png
-share/kde/icons/hicolor/48x48/apps/knode.png
-share/kde/icons/hicolor/48x48/apps/knode2.png
-share/kde/icons/hicolor/48x48/apps/knotes.png
-share/kde/icons/hicolor/48x48/apps/kontact.png
-share/kde/icons/hicolor/48x48/apps/korganizer.png
-share/kde/icons/hicolor/48x48/apps/korn.png
-share/kde/icons/hicolor/48x48/apps/kpilot.png
-share/kde/icons/hicolor/48x48/apps/ktnef.png
-share/kde/icons/hicolor/48x48/apps/multisynk.png
-share/kde/icons/hicolor/64x64/apps/akregator.png
-share/kde/icons/hicolor/64x64/apps/kaddressbook.png
-share/kde/icons/hicolor/64x64/apps/karm.png
-share/kde/icons/hicolor/64x64/apps/kmail.png
-share/kde/icons/hicolor/64x64/apps/knode.png
-share/kde/icons/hicolor/64x64/apps/knode2.png
-share/kde/icons/hicolor/64x64/apps/knotes.png
-share/kde/icons/hicolor/64x64/apps/kontact.png
-share/kde/icons/hicolor/64x64/apps/korganizer.png
-share/kde/icons/hicolor/scalable/apps/akregator.svgz
-share/kde/icons/hicolor/scalable/apps/kmail.svgz
-share/kde/icons/locolor/16x16/apps/kpilot.png
-share/kde/icons/locolor/16x16/apps/ktnef.png
-share/kde/icons/locolor/32x32/apps/ktnef.png
 share/kde/mimelnk/application/ms-tnef.desktop
 share/kde/services/abbrowser_conduit.desktop
 share/kde/services/akregator_mk4storage_plugin.desktop
@@ -1849,6 +1870,7 @@ share/kde/services/korganizer/hebrew.desktop
 share/kde/services/korganizer/holidays.desktop
 share/kde/services/korganizer/journalprint.desktop
 share/kde/services/korganizer/webexport.desktop
+share/kde/services/korganizer/yearprint.desktop
 share/kde/services/korganizer_configcolors.desktop
 share/kde/services/korganizer_configdesignerfields.desktop
 share/kde/services/korganizer_configfonts.desktop
@@ -1942,24 +1964,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @comment in kde: @dirrm share/kde/services/kaddressbook
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
@@ -2143,6 +2147,24 @@ share/kde/servicetypes/kpilotconduit.desktop
 @comment in kde: @dirrm share/kde/applnk/Utilities
 @comment in kde: @dirrm share/kde/applnk/Applications
 @comment in kde: @dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/actions
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
 @dirrm share/doc/kde/HTML/en/multisynk
 @dirrm share/doc/kde/HTML/en/kwatchgnupg
 @dirrm share/doc/kde/HTML/en/ktnef
