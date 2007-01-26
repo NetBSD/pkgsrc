@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/10/12 11:17:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/26 03:36:17 markd Exp $
 share/locale/km/LC_MESSAGES/akregator.mo
 share/locale/km/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/km/LC_MESSAGES/alsaplayerui.mo
@@ -38,6 +38,7 @@ share/locale/km/LC_MESSAGES/imgalleryplugin.mo
 share/locale/km/LC_MESSAGES/irkick.mo
 share/locale/km/LC_MESSAGES/jefferson.mo
 share/locale/km/LC_MESSAGES/joystick.mo
+share/locale/km/LC_MESSAGES/juk.mo
 share/locale/km/LC_MESSAGES/kabc2mutt.mo
 share/locale/km/LC_MESSAGES/kabc_dir.mo
 share/locale/km/LC_MESSAGES/kabc_file.mo
@@ -341,6 +342,7 @@ share/locale/km/LC_MESSAGES/kmplot.mo
 share/locale/km/LC_MESSAGES/kmrml.mo
 share/locale/km/LC_MESSAGES/knetattach.mo
 share/locale/km/LC_MESSAGES/knetwalk.mo
+share/locale/km/LC_MESSAGES/knewsticker.mo
 share/locale/km/LC_MESSAGES/knode.mo
 share/locale/km/LC_MESSAGES/knotes.mo
 share/locale/km/LC_MESSAGES/knotify.mo
@@ -378,6 +380,7 @@ share/locale/km/LC_MESSAGES/kpf.mo
 share/locale/km/LC_MESSAGES/kpilot.mo
 share/locale/km/LC_MESSAGES/kpoker.mo
 share/locale/km/LC_MESSAGES/kpovmodeler.mo
+share/locale/km/LC_MESSAGES/kppp.mo
 share/locale/km/LC_MESSAGES/kppplogview.mo
 share/locale/km/LC_MESSAGES/kprinter.mo
 share/locale/km/LC_MESSAGES/krandr.mo
@@ -407,6 +410,7 @@ share/locale/km/LC_MESSAGES/kscreensaver.mo
 share/locale/km/LC_MESSAGES/kshisen.mo
 share/locale/km/LC_MESSAGES/ksig.mo
 share/locale/km/LC_MESSAGES/ksim.mo
+share/locale/km/LC_MESSAGES/ksirc.mo
 share/locale/km/LC_MESSAGES/ksirtet.mo
 share/locale/km/LC_MESSAGES/ksmiletris.mo
 share/locale/km/LC_MESSAGES/ksmserver.mo
@@ -442,6 +446,7 @@ share/locale/km/LC_MESSAGES/ktip.mo
 share/locale/km/LC_MESSAGES/ktnef.mo
 share/locale/km/LC_MESSAGES/ktouch.mo
 share/locale/km/LC_MESSAGES/ktron.mo
+share/locale/km/LC_MESSAGES/kttsd.mo
 share/locale/km/LC_MESSAGES/kttsd_commandplugin.mo
 share/locale/km/LC_MESSAGES/kttsd_eposplugin.mo
 share/locale/km/LC_MESSAGES/kttsd_fliteplugin.mo
@@ -528,6 +533,7 @@ share/locale/km/LC_MESSAGES/nexscope.mo
 share/locale/km/LC_MESSAGES/noatun.mo
 share/locale/km/LC_MESSAGES/nsplugin.mo
 share/locale/km/LC_MESSAGES/pitchablespeed.mo
+share/locale/km/LC_MESSAGES/ppdtranslations.mo
 share/locale/km/LC_MESSAGES/privacy.mo
 share/locale/km/LC_MESSAGES/quanta.mo
 share/locale/km/LC_MESSAGES/quicklauncher.mo

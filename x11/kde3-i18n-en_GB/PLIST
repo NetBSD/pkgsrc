@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/10/12 11:17:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/01/26 03:36:15 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -574,6 +574,56 @@ share/doc/kde/HTML/en_GB/umbrello/other_features.docbook
 share/doc/kde/HTML/en_GB/umbrello/uml_basics.docbook
 share/doc/kde/HTML/en_GB/umbrello/working_with_umbrello.docbook
 share/kde/apps/katepart/syntax/logohighlightstyle.en_GB.xml
+share/kde/apps/klettres/en_GB/alpha/a.ogg
+share/kde/apps/klettres/en_GB/alpha/b.ogg
+share/kde/apps/klettres/en_GB/alpha/c.ogg
+share/kde/apps/klettres/en_GB/alpha/d.ogg
+share/kde/apps/klettres/en_GB/alpha/e.ogg
+share/kde/apps/klettres/en_GB/alpha/f.ogg
+share/kde/apps/klettres/en_GB/alpha/g.ogg
+share/kde/apps/klettres/en_GB/alpha/h.ogg
+share/kde/apps/klettres/en_GB/alpha/i.ogg
+share/kde/apps/klettres/en_GB/alpha/j.ogg
+share/kde/apps/klettres/en_GB/alpha/k.ogg
+share/kde/apps/klettres/en_GB/alpha/l.ogg
+share/kde/apps/klettres/en_GB/alpha/m.ogg
+share/kde/apps/klettres/en_GB/alpha/n.ogg
+share/kde/apps/klettres/en_GB/alpha/o.ogg
+share/kde/apps/klettres/en_GB/alpha/p.ogg
+share/kde/apps/klettres/en_GB/alpha/q.ogg
+share/kde/apps/klettres/en_GB/alpha/r.ogg
+share/kde/apps/klettres/en_GB/alpha/s.ogg
+share/kde/apps/klettres/en_GB/alpha/t.ogg
+share/kde/apps/klettres/en_GB/alpha/u.ogg
+share/kde/apps/klettres/en_GB/alpha/v.ogg
+share/kde/apps/klettres/en_GB/alpha/w.ogg
+share/kde/apps/klettres/en_GB/alpha/x.ogg
+share/kde/apps/klettres/en_GB/alpha/y.ogg
+share/kde/apps/klettres/en_GB/alpha/z.ogg
+share/kde/apps/klettres/en_GB/sounds.xml
+share/kde/apps/klettres/en_GB/syllab/arm.ogg
+share/kde/apps/klettres/en_GB/syllab/ball.ogg
+share/kde/apps/klettres/en_GB/syllab/car.ogg
+share/kde/apps/klettres/en_GB/syllab/dog.ogg
+share/kde/apps/klettres/en_GB/syllab/ear.ogg
+share/kde/apps/klettres/en_GB/syllab/fix.ogg
+share/kde/apps/klettres/en_GB/syllab/gas.ogg
+share/kde/apps/klettres/en_GB/syllab/gem.ogg
+share/kde/apps/klettres/en_GB/syllab/hot.ogg
+share/kde/apps/klettres/en_GB/syllab/hut.ogg
+share/kde/apps/klettres/en_GB/syllab/jet.ogg
+share/kde/apps/klettres/en_GB/syllab/key.ogg
+share/kde/apps/klettres/en_GB/syllab/me.ogg
+share/kde/apps/klettres/en_GB/syllab/my.ogg
+share/kde/apps/klettres/en_GB/syllab/no.ogg
+share/kde/apps/klettres/en_GB/syllab/or.ogg
+share/kde/apps/klettres/en_GB/syllab/pet.ogg
+share/kde/apps/klettres/en_GB/syllab/saw.ogg
+share/kde/apps/klettres/en_GB/syllab/say.ogg
+share/kde/apps/klettres/en_GB/syllab/sit.ogg
+share/kde/apps/klettres/en_GB/syllab/sky.ogg
+share/kde/apps/klettres/en_GB/syllab/the.ogg
+share/kde/apps/klettres/en_GB/syllab/well.ogg
 share/kde/apps/kturtle/data/logokeywords.en_GB.xml
 share/kde/apps/kturtle/examples/en_GB/curly.logo
 share/kde/apps/kturtle/examples/en_GB/example1.logo
@@ -1146,6 +1196,10 @@ share/locale/en_GB/flag.png
 @dirrm share/kde/apps/kturtle/examples/en_GB
 @comment in kde: @dirrm share/kde/apps/kturtle/examples
 @comment in kde: @dirrm share/kde/apps/kturtle/data
+@dirrm share/kde/apps/klettres/en_GB/syllab
+@dirrm share/kde/apps/klettres/en_GB/alpha
+@dirrm share/kde/apps/klettres/en_GB
+@comment in kde: @dirrm share/kde/apps/klettres
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
 @dirrm share/doc/kde/HTML/en_GB/umbrello
 @dirrm share/doc/kde/HTML/en_GB/kxkb

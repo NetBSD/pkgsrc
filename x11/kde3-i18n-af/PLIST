@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/08/02 14:24:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/26 03:36:14 markd Exp $
 share/locale/af/LC_MESSAGES/alsaplayerui.mo
 share/locale/af/LC_MESSAGES/amor.mo
 share/locale/af/LC_MESSAGES/appletproxy.mo
@@ -259,6 +259,7 @@ share/locale/af/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/locale/af/LC_MESSAGES/konqueror.mo
 share/locale/af/LC_MESSAGES/konquest.mo
 share/locale/af/LC_MESSAGES/konsole.mo
+share/locale/af/LC_MESSAGES/kontact.mo
 share/locale/af/LC_MESSAGES/kooka.mo
 share/locale/af/LC_MESSAGES/korganizer.mo
 share/locale/af/LC_MESSAGES/korn.mo

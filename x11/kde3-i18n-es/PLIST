@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/10/12 11:17:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/01/26 03:36:15 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/altn.png
 share/doc/kde/HTML/es/KRegExpEditor/altntool.png
 share/doc/kde/HTML/es/KRegExpEditor/anychar.png
@@ -25,9 +25,27 @@ share/doc/kde/HTML/es/KRegExpEditor/text.png
 share/doc/kde/HTML/es/KRegExpEditor/texttool.png
 share/doc/kde/HTML/es/KRegExpEditor/theEditor.png
 share/doc/kde/HTML/es/KRegExpEditor/wordboundary.png
+share/doc/kde/HTML/es/akregator/add-feed.png
+share/doc/kde/HTML/es/akregator/add-feed2.png
+share/doc/kde/HTML/es/akregator/add-folder.png
+share/doc/kde/HTML/es/akregator/add-folder2.png
+share/doc/kde/HTML/es/akregator/advanced-tab.png
+share/doc/kde/HTML/es/akregator/appearance-tab.png
+share/doc/kde/HTML/es/akregator/archive-tab.png
+share/doc/kde/HTML/es/akregator/browser-tab.png
 share/doc/kde/HTML/es/akregator/common
+share/doc/kde/HTML/es/akregator/general-tab.png
 share/doc/kde/HTML/es/akregator/index.cache.bz2
 share/doc/kde/HTML/es/akregator/index.docbook
+share/doc/kde/HTML/es/akregator/konq.png
+share/doc/kde/HTML/es/akregator/konq2.png
+share/doc/kde/HTML/es/akregator/main-window.png
+share/doc/kde/HTML/es/akregator/main-window2.png
+share/doc/kde/HTML/es/akregator/main-window3.png
+share/doc/kde/HTML/es/akregator/main-window4.png
+share/doc/kde/HTML/es/akregator/quick-filter.png
+share/doc/kde/HTML/es/akregator/rss.png
+share/doc/kde/HTML/es/akregator/rss3.png
 share/doc/kde/HTML/es/amor/billy.png
 share/doc/kde/HTML/es/amor/bonhomme.png
 share/doc/kde/HTML/es/amor/bsd.png
@@ -159,9 +177,12 @@ share/doc/kde/HTML/es/blinken/index.docbook
 share/doc/kde/HTML/es/cervisia/annotate.png
 share/doc/kde/HTML/es/cervisia/checkout.png
 share/doc/kde/HTML/es/cervisia/commit.png
+share/doc/kde/HTML/es/cervisia/common
 share/doc/kde/HTML/es/cervisia/diff.png
 share/doc/kde/HTML/es/cervisia/history.png
 share/doc/kde/HTML/es/cervisia/import.png
+share/doc/kde/HTML/es/cervisia/index.cache.bz2
+share/doc/kde/HTML/es/cervisia/index.docbook
 share/doc/kde/HTML/es/cervisia/logtree.png
 share/doc/kde/HTML/es/cervisia/mainview.png
 share/doc/kde/HTML/es/cervisia/patch.png
@@ -175,6 +196,9 @@ share/doc/kde/HTML/es/common/kde-localised.css
 share/doc/kde/HTML/es/common/kde_logo.png
 share/doc/kde/HTML/es/common/lgpl-translated.html
 share/doc/kde/HTML/es/common/logotp3.png
+share/doc/kde/HTML/es/irkick/common
+share/doc/kde/HTML/es/irkick/index.cache.bz2
+share/doc/kde/HTML/es/irkick/index.docbook
 share/doc/kde/HTML/es/juk/common
 share/doc/kde/HTML/es/juk/history-playlist.png
 share/doc/kde/HTML/es/juk/index.cache.bz2
@@ -425,6 +449,9 @@ share/doc/kde/HTML/es/kcalc/index.docbook
 share/doc/kde/HTML/es/kcharselect/common
 share/doc/kde/HTML/es/kcharselect/index.cache.bz2
 share/doc/kde/HTML/es/kcharselect/index.docbook
+share/doc/kde/HTML/es/kcmlirc/common
+share/doc/kde/HTML/es/kcmlirc/index.cache.bz2
+share/doc/kde/HTML/es/kcmlirc/index.docbook
 share/doc/kde/HTML/es/kcoloredit/common
 share/doc/kde/HTML/es/kcoloredit/index.cache.bz2
 share/doc/kde/HTML/es/kcoloredit/index.docbook
@@ -639,12 +666,6 @@ share/doc/kde/HTML/es/kdelibs/man-dcop.1.docbook
 share/doc/kde/HTML/es/kdelibs/man-kbuildsycoca.8.docbook
 share/doc/kde/HTML/es/kdelibs/man-kdeoptions.7.docbook
 share/doc/kde/HTML/es/kdelibs/man-qtoptions.7.docbook
-share/doc/kde/HTML/es/kdelirc/irkick/common
-share/doc/kde/HTML/es/kdelirc/irkick/index.cache.bz2
-share/doc/kde/HTML/es/kdelirc/irkick/index.docbook
-share/doc/kde/HTML/es/kdelirc/kcmlirc/common
-share/doc/kde/HTML/es/kdelirc/kcmlirc/index.cache.bz2
-share/doc/kde/HTML/es/kdelirc/kcmlirc/index.docbook
 share/doc/kde/HTML/es/kdeprint/add-printer-wiz.docbook
 share/doc/kde/HTML/es/kdeprint/common
 share/doc/kde/HTML/es/kdeprint/cr32-action-wizard.png
@@ -3020,6 +3041,7 @@ share/locale/es/LC_MESSAGES/kio_thumbnail.mo
 share/locale/es/LC_MESSAGES/kio_trash.mo
 share/locale/es/LC_MESSAGES/kio_zeroconf.mo
 share/locale/es/LC_MESSAGES/kioexec.mo
+share/locale/es/LC_MESSAGES/kitchensync.mo
 share/locale/es/LC_MESSAGES/kiten.mo
 share/locale/es/LC_MESSAGES/kjobviewer.mo
 share/locale/es/LC_MESSAGES/kjots.mo
@@ -3223,6 +3245,7 @@ share/locale/es/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/locale/es/LC_MESSAGES/libkickermenu_remotemenu.mo
 share/locale/es/LC_MESSAGES/libkickermenu_systemmenu.mo
 share/locale/es/LC_MESSAGES/libkickermenu_tom.mo
+share/locale/es/LC_MESSAGES/libkitchensync.mo
 share/locale/es/LC_MESSAGES/libkleopatra.mo
 share/locale/es/LC_MESSAGES/libkmime.mo
 share/locale/es/LC_MESSAGES/libkonq.mo
@@ -3464,9 +3487,6 @@ share/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kdesvn-build
 @dirrm share/doc/kde/HTML/es/kdesu
 @dirrm share/doc/kde/HTML/es/kdeprint
-@dirrm share/doc/kde/HTML/es/kdelirc/kcmlirc
-@dirrm share/doc/kde/HTML/es/kdelirc/irkick
-@dirrm share/doc/kde/HTML/es/kdelirc
 @dirrm share/doc/kde/HTML/es/kdelibs
 @dirrm share/doc/kde/HTML/es/kdebugdialog
 @dirrm share/doc/kde/HTML/es/kdearch
@@ -3528,6 +3548,7 @@ share/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kcontrol/arts
 @dirrm share/doc/kde/HTML/es/kcontrol
 @dirrm share/doc/kde/HTML/es/kcoloredit
+@dirrm share/doc/kde/HTML/es/kcmlirc
 @dirrm share/doc/kde/HTML/es/kcharselect
 @dirrm share/doc/kde/HTML/es/kcalc
 @dirrm share/doc/kde/HTML/es/kcachegrind
@@ -3554,6 +3575,7 @@ share/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kaddressbook
 @dirrm share/doc/kde/HTML/es/kaboodle
 @dirrm share/doc/kde/HTML/es/juk
+@dirrm share/doc/kde/HTML/es/irkick
 @comment in kde: @dirrm share/doc/kde/HTML/es/common
 @dirrm share/doc/kde/HTML/es/cervisia
 @dirrm share/doc/kde/HTML/es/blinken
