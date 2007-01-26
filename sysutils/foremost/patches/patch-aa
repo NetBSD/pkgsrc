@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
+
+--- Makefile.orig	2005-11-05 18:12:37.000000000 +0100
++++ Makefile
+@@ -24,9 +24,9 @@ MAN_PAGES = $(NAME).1
+ RAW_FLAGS += -DVERSION=\"$(VERSION)\"
+ 
+ # Where we get installed
+-BIN = /usr/local/bin
+-MAN = /usr/local/man/man1
+-CONF= /usr/local/etc
++BIN = $(PREFIX)/bin
++MAN = $(PREFIX)/$(PKGMANDIR)/man1
++CONF= $(PKG_SYSCONFDIR)
+ # Setup for compiling and cross-compiling for Windows
+ # The CR_ prefix refers to cross compiling from OSX to Windows
+ CR_CC = $(CR_BASE)/gcc

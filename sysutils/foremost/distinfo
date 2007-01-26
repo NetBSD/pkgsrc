@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
+
+SHA1 (foremost-1.3.tar.gz) = 675886fc4806ad156cb40d614aa80fead0b391d8
+RMD160 (foremost-1.3.tar.gz) = 7b92d249ae105db3ad8c92a697ee5f314b280f8f
+Size (foremost-1.3.tar.gz) = 50488 bytes
+SHA1 (patch-aa) = 727975dedae9261a4088083931eb709771873062
+SHA1 (patch-ab) = c56e70d64e30c0867beb3fd3ad40336cb6364c31
+SHA1 (patch-ac) = 7832701bafa1336fda2b4e08ef38bca8ddf29f8d
