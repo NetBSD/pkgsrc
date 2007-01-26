@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.6 2007/01/04 12:45:41 tron Exp $
+$NetBSD: patch-ab,v 1.7 2007/01/26 18:48:52 tron Exp $
 
---- configure.orig	2006-10-27 15:52:04.000000000 +0200
-+++ configure
-@@ -22826,6 +22826,9 @@ echo $ECHO_N "checking signedness of min
+--- configure.orig	2006-12-24 12:54:00.000000000 +0000
++++ configure	2007-01-26 15:15:13.000000000 +0000
+@@ -15823,6 +15823,10 @@
+   cat >conftest.$ac_ext <<_ACEOF
+ #include <sys/types.h>
+       #include <sys/mman.h>
++#if defined(__sun) && defined(__SVR4)
++      #include <unistd.h>
++#endif
++
+       void f() { mincore((char*)0, 0, (unsigned char*)0); }
+ 
+ _ACEOF
+@@ -15953,6 +15957,9 @@
    cat >conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
        #include <sys/mman.h>
@@ -12,37 +23,20 @@ $NetBSD: patch-ab,v 1.6 2007/01/04 12:45:41 tron Exp $
        void f() { mincore((char*)0, 0, (unsigned char*)0); }
  
  _ACEOF
-@@ -22873,6 +22876,9 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -16000,6 +16007,12 @@
        cat >conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
            #include <sys/mman.h>
 +#if defined(__sun) && defined(__SVR4)
 +          #include <unistd.h>
 +#endif
-           void f() { mincore((char*)0, 0, (char*)0); }
- 
- _ACEOF
-@@ -22956,6 +22962,9 @@ echo $ECHO_N "checking signedness of min
-   cat >conftest.$ac_ext <<_ACEOF
- #include <sys/types.h>
-       #include <sys/mman.h>
-+#if defined(__sun) && defined(__SVR4)
-+      #include <unistd.h>
-+#endif
-       void f() { mincore((char*)0, 0, (unsigned char*)0); }
- 
- _ACEOF
-@@ -23003,6 +23012,9 @@ sed 's/^/| /' conftest.$ac_ext >&5
-       cat >conftest.$ac_ext <<_ACEOF
- #include <sys/types.h>
-           #include <sys/mman.h>
 +#if defined(__sun) && defined(__SVR4)
 +          #include <unistd.h>
 +#endif
            void f() { mincore((char*)0, 0, (char*)0); }
  
  _ACEOF
-@@ -23704,6 +23716,10 @@ do
+@@ -16701,6 +16714,10 @@
  _ACEOF
  cat >>$CONFIG_STATUS <<\_ACEOF
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
