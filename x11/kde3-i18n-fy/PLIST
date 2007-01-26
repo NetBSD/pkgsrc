@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/06/01 14:37:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/26 03:36:16 markd Exp $
 share/locale/fy/LC_MESSAGES/appletproxy.mo
 share/locale/fy/LC_MESSAGES/clockapplet.mo
 share/locale/fy/LC_MESSAGES/cupsdconf.mo
@@ -95,6 +95,7 @@ share/locale/fy/LC_MESSAGES/khelpcenter.mo
 share/locale/fy/LC_MESSAGES/khotkeys.mo
 share/locale/fy/LC_MESSAGES/khtmlkttsd.mo
 share/locale/fy/LC_MESSAGES/kicker.mo
+share/locale/fy/LC_MESSAGES/kickermenu_kate.mo
 share/locale/fy/LC_MESSAGES/kio.mo
 share/locale/fy/LC_MESSAGES/kio_finger.mo
 share/locale/fy/LC_MESSAGES/kio_fish.mo
