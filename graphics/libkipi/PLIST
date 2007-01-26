@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/05 15:44:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/01/26 04:13:34 markd Exp $
 include/libkipi/batchprogressdialog.h
 include/libkipi/imagecollection.h
 include/libkipi/imagecollectionselector.h
@@ -14,12 +14,12 @@ include/libkipi/uploadwidget.h
 include/libkipi/version.h
 lib/libkipi.la
 lib/pkgconfig/libkipi.pc
+share/icons/hicolor/16x16/apps/kipi.png
+share/icons/hicolor/22x22/apps/kipi.png
+share/icons/hicolor/32x32/apps/kipi.png
+share/icons/hicolor/48x48/apps/kipi.png
 share/kde/apps/kipi/data/banner_left.png
 share/kde/apps/kipi/data/kipi-plugins_logo.png
-share/kde/icons/hicolor/16x16/apps/kipi.png
-share/kde/icons/hicolor/22x22/apps/kipi.png
-share/kde/icons/hicolor/32x32/apps/kipi.png
-share/kde/icons/hicolor/48x48/apps/kipi.png
 share/kde/servicetypes/kipiplugin.desktop
 share/locale/ar/LC_MESSAGES/libkipi.mo
 share/locale/br/LC_MESSAGES/libkipi.mo
@@ -58,13 +58,13 @@ share/locale/tr/LC_MESSAGES/libkipi.mo
 share/locale/uk/LC_MESSAGES/libkipi.mo
 share/locale/zh_CN/LC_MESSAGES/libkipi.mo
 @comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kipi/data
 @dirrm share/kde/apps/kipi
-@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
 @dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
 @dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi

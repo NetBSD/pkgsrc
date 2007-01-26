@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/01/17 23:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/26 04:13:34 markd Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kphotools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,7 @@ post-configure:
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

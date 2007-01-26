@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/01/17 23:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/26 04:13:34 markd Exp $
 
 DISTNAME=	libkipi-0.1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://extragear.kde.org/apps/kipi/
 COMMENT=	KDE Image Plugin Interface
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
@@ -20,6 +19,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
