@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/26 18:23:30 joerg Exp $
 
 DISTNAME=	xmp-2.0.4
 PKGREVISION=	3
@@ -32,5 +32,10 @@ CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
