@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/10/12 11:17:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/01/26 03:36:21 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -37,6 +37,9 @@ share/doc/kde/HTML/ru/common/fdl-translated.html
 share/doc/kde/HTML/ru/common/gpl-translated.html
 share/doc/kde/HTML/ru/common/kde-localised.css
 share/doc/kde/HTML/ru/common/logotp3.png
+share/doc/kde/HTML/ru/irkick/common
+share/doc/kde/HTML/ru/irkick/index.cache.bz2
+share/doc/kde/HTML/ru/irkick/index.docbook
 share/doc/kde/HTML/ru/juk/common
 share/doc/kde/HTML/ru/juk/index.cache.bz2
 share/doc/kde/HTML/ru/juk/index.docbook
@@ -132,6 +135,9 @@ share/doc/kde/HTML/ru/kcalc/index.docbook
 share/doc/kde/HTML/ru/kcharselect/common
 share/doc/kde/HTML/ru/kcharselect/index.cache.bz2
 share/doc/kde/HTML/ru/kcharselect/index.docbook
+share/doc/kde/HTML/ru/kcmlirc/common
+share/doc/kde/HTML/ru/kcmlirc/index.cache.bz2
+share/doc/kde/HTML/ru/kcmlirc/index.docbook
 share/doc/kde/HTML/ru/kcoloredit/common
 share/doc/kde/HTML/ru/kcoloredit/index.cache.bz2
 share/doc/kde/HTML/ru/kcoloredit/index.docbook
@@ -322,12 +328,6 @@ share/doc/kde/HTML/ru/kdelibs/man-artsmessage.1.docbook
 share/doc/kde/HTML/ru/kdelibs/man-checkXML.1.docbook
 share/doc/kde/HTML/ru/kdelibs/man-kdeoptions.7.docbook
 share/doc/kde/HTML/ru/kdelibs/man-qtoptions.7.docbook
-share/doc/kde/HTML/ru/kdelirc/irkick/common
-share/doc/kde/HTML/ru/kdelirc/irkick/index.cache.bz2
-share/doc/kde/HTML/ru/kdelirc/irkick/index.docbook
-share/doc/kde/HTML/ru/kdelirc/kcmlirc/common
-share/doc/kde/HTML/ru/kdelirc/kcmlirc/index.cache.bz2
-share/doc/kde/HTML/ru/kdelirc/kcmlirc/index.docbook
 share/doc/kde/HTML/ru/kdeprint/add-printer-wiz.docbook
 share/doc/kde/HTML/ru/kdeprint/common
 share/doc/kde/HTML/ru/kdeprint/cups-config.docbook
@@ -1212,6 +1212,13 @@ share/doc/kde/HTML/ru/umbrello/introduction.docbook
 share/doc/kde/HTML/ru/umbrello/other_features.docbook
 share/doc/kde/HTML/ru/umbrello/uml_basics.docbook
 share/doc/kde/HTML/ru/umbrello/working_with_umbrello.docbook
+share/doc/kde/HTML/ru/xsldbg/commands.docbook
+share/doc/kde/HTML/ru/xsldbg/common
+share/doc/kde/HTML/ru/xsldbg/credits.docbook
+share/doc/kde/HTML/ru/xsldbg/index.cache.bz2
+share/doc/kde/HTML/ru/xsldbg/index.docbook
+share/doc/kde/HTML/ru/xsldbg/introduction.docbook
+share/doc/kde/HTML/ru/xsldbg/usage.docbook
 share/kde/apps/katepart/syntax/logohighlightstyle.ru.xml
 share/kde/apps/khangman/data/ru/animals.kvtml
 share/kde/apps/khangman/data/ru/easy.kvtml
@@ -1499,6 +1506,7 @@ share/locale/ru/LC_MESSAGES/khotkeys.mo
 share/locale/ru/LC_MESSAGES/khtmlkttsd.mo
 share/locale/ru/LC_MESSAGES/khtmlsettingsplugin.mo
 share/locale/ru/LC_MESSAGES/kicker.mo
+share/locale/ru/LC_MESSAGES/kickermenu_kate.mo
 share/locale/ru/LC_MESSAGES/kiconedit.mo
 share/locale/ru/LC_MESSAGES/kig.mo
 share/locale/ru/LC_MESSAGES/kimagemapeditor.mo
@@ -1536,6 +1544,7 @@ share/locale/ru/LC_MESSAGES/kio_thumbnail.mo
 share/locale/ru/LC_MESSAGES/kio_trash.mo
 share/locale/ru/LC_MESSAGES/kio_zeroconf.mo
 share/locale/ru/LC_MESSAGES/kioexec.mo
+share/locale/ru/LC_MESSAGES/kitchensync.mo
 share/locale/ru/LC_MESSAGES/kiten.mo
 share/locale/ru/LC_MESSAGES/kjobviewer.mo
 share/locale/ru/LC_MESSAGES/kjots.mo
@@ -1739,6 +1748,7 @@ share/locale/ru/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/locale/ru/LC_MESSAGES/libkickermenu_remotemenu.mo
 share/locale/ru/LC_MESSAGES/libkickermenu_systemmenu.mo
 share/locale/ru/LC_MESSAGES/libkickermenu_tom.mo
+share/locale/ru/LC_MESSAGES/libkitchensync.mo
 share/locale/ru/LC_MESSAGES/libkleopatra.mo
 share/locale/ru/LC_MESSAGES/libkmime.mo
 share/locale/ru/LC_MESSAGES/libkonq.mo
@@ -1795,6 +1805,7 @@ share/locale/ru/flag.png
 @dirrm share/kde/apps/khangman/data/ru
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
+@dirrm share/doc/kde/HTML/ru/xsldbg
 @dirrm share/doc/kde/HTML/ru/umbrello
 @dirrm share/doc/kde/HTML/ru/superkaramba
 @dirrm share/doc/kde/HTML/ru/scripts
@@ -1961,9 +1972,6 @@ share/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kdevelop
 @dirrm share/doc/kde/HTML/ru/kdesu
 @dirrm share/doc/kde/HTML/ru/kdeprint
-@dirrm share/doc/kde/HTML/ru/kdelirc/kcmlirc
-@dirrm share/doc/kde/HTML/ru/kdelirc/irkick
-@dirrm share/doc/kde/HTML/ru/kdelirc
 @dirrm share/doc/kde/HTML/ru/kdelibs
 @dirrm share/doc/kde/HTML/ru/kdebugdialog
 @dirrm share/doc/kde/HTML/ru/kdearch
@@ -2026,6 +2034,7 @@ share/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kcontrol/arts
 @dirrm share/doc/kde/HTML/ru/kcontrol
 @dirrm share/doc/kde/HTML/ru/kcoloredit
+@dirrm share/doc/kde/HTML/ru/kcmlirc
 @dirrm share/doc/kde/HTML/ru/kcharselect
 @dirrm share/doc/kde/HTML/ru/kcalc
 @dirrm share/doc/kde/HTML/ru/kcachegrind
@@ -2048,6 +2057,7 @@ share/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kaddressbook
 @dirrm share/doc/kde/HTML/ru/kaboodle
 @dirrm share/doc/kde/HTML/ru/juk
+@dirrm share/doc/kde/HTML/ru/irkick
 @comment in kde: @dirrm share/doc/kde/HTML/ru/common
 @dirrm share/doc/kde/HTML/ru/cervisia
 @dirrm share/doc/kde/HTML/ru/atlantik

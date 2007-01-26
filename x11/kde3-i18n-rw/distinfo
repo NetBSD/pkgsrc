@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/10/12 11:17:15 markd Exp $
+$NetBSD: distinfo,v 1.7 2007/01/26 03:36:21 markd Exp $
 
-SHA1 (kde-i18n-rw-3.5.5.tar.bz2) = d838af6b1e046ba67329b32fd60e1492350a4afa
-RMD160 (kde-i18n-rw-3.5.5.tar.bz2) = 83ff5390f97fee0d244aff6ba4addc58184d7ac4
-Size (kde-i18n-rw-3.5.5.tar.bz2) = 2013489 bytes
+SHA1 (kde-i18n-rw-3.5.6.tar.bz2) = bee7aa99f0fe12504edebf2e07e8c12c91268570
+RMD160 (kde-i18n-rw-3.5.6.tar.bz2) = 5db91fd98bc200499e438913beca2edbc4592b8f
+Size (kde-i18n-rw-3.5.6.tar.bz2) = 2020663 bytes

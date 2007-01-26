@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.7 2006/10/12 11:17:10 markd Exp $
+$NetBSD: patch-af,v 1.8 2007/01/26 03:36:17 markd Exp $
 
---- messages/kdewebdev/klinkstatus.po.orig	2006-10-02 05:54:06.000000000 +1300
+--- messages/kdewebdev/klinkstatus.po.orig	2007-01-15 23:28:19.000000000 +1300
 +++ messages/kdewebdev/klinkstatus.po
 @@ -2,17 +2,16 @@
  # Copyright (C) YEAR Free Software Foundation, Inc.
@@ -11,11 +11,11 @@ $NetBSD: patch-af,v 1.7 2006/10/12 11:17:10 markd Exp $
  msgstr ""
 -"Project-Id-Version: PACKAGE VERSION\n"
 +"Project-Id-Version: klinkstatus\n"
- "POT-Creation-Date: 2006-09-25 02:41+0200\n"
+ "POT-Creation-Date: 2006-10-11 02:43+0200\n"
 -"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 -"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 -"Language-Team: LANGUAGE <LL@li.org>\n"
-+"PO-Revision-Date: 2006-09-25 02:41+0200\n"
++"PO-Revision-Date: 2006-10-11 02:43+0200\n"
 +"Last-Translator: Not Known <EMAIL@ADDRESS>\n"
 +"Language-Team: is <LL@li.org>\n"
  "MIME-Version: 1.0\n"
