@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/01/26 01:26:46 markd Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
 
 PKGNAME=                p5-${DISTNAME}
-PKGREVISION=		6
 
 COMMENT=		Perl bindings for pilot-link
 
@@ -12,21 +11,31 @@ BUILDLINK_API_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
 USE_TOOLS+=		gmake
 
+CONFIGURE_ARGS+=        --enable-conduits
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=         auto/PDA/Pilot/.packlist
+PERL5_LDFLAGS=		-lpisock
+
+REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link
 
 INSTALL_DIRS=		${WRKSRC}/bindings
 BUILD_DIRS+=		${WRKSRC}/src
 BUILD_DIRS+=		${INSTALL_DIRS}
 
-post-patch:
-	cd ${WRKSRC} &&							\
-	for mf in src/Makefile.in src/*/Makefile.in ; do		\
-		${CP} $$mf $$mf.old &&					\
-		${SED} -e 's|..top_builddir./lib[^/]*/\(lib[^\.]*\.la\)|${PREFIX}/lib/\1|g'	\
-			< $$mf.old > $$mf ;				\
-	done
+SUBST_CLASSES+=		progs
+SUBST_STAGE.progs=	post-patch
+SUBST_MESSAGE.progs=	Trim programs to build
+SUBST_FILES.progs=	src/Makefile.in
+SUBST_SED.progs=	-e s:@ENABLE_CONDUITS_TRUE@bin_PROGRAMS:@ENABLE_CONDUITS_TRUE@bin_PROGRAMSX:
+
+#post-patch:
+#	cd ${WRKSRC} &&							\
+#	for mf in src/Makefile.in src/*/Makefile.in ; do		\
+#		${CP} $$mf $$mf.old &&					\
+#		${SED} -e 's|..top_builddir./lib[^/]*/\(lib[^\.]*\.la\)|${PREFIX}/lib/\1|g'	\
+#			< $$mf.old > $$mf ;				\
+#	done
 
 post-install:
 .for bin in ietf2datebook pilot-undelete sync-plan
