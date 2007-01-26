@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/01/15 22:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/26 11:40:36 dillo Exp $
 
 DISTNAME=	wesnoth-1.2.1
 CATEGORIES=	games
@@ -16,6 +16,15 @@ UNLIMIT_RESOURCES+=	datasize
 
 REPLACE_PERL+=		utils/wmlxgettext
 USE_TOOLS+=		perl:run msgfmt
+
+.include "../../mk/bsd.prefs.mk"
+
+# unit_types.cpp causes gcc to segfault at least on NetBSD 3.
+# If you see this on other platforms, add them to the list.
+# XXX: should we check for gcc versions?  which ones?
+.if !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9]*)
+MAKE_ENV+=		ICE_NO_OPT=-O
+.endif
 
 BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.7
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
