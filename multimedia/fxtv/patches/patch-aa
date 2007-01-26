@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/01/03 15:03:02 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2007/01/26 15:15:50 joerg Exp $
 
 --- Makefile.orig	2001-02-12 22:08:59.000000000 +0000
 +++ Makefile
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.4 2006/01/03 15:03:02 joerg Exp $
  override LDFLAGS           = $(LD_INC) 
  override VIDEOLIB_LIB      = $(VIDEOLIB_DIR)/libvideo.a
 -override LIBS              = -ltiff -ljpeg -lXaw3d -lXmu -lXt -lXpm \
-+override LIBS              = -lpng -ltiff -ljpeg -lXaw3d -lXmu -lXt -lXpm \
++override LIBS              = -lpng -ltiff -ljpeg -lXaw -lXmu -lXt -lXpm \
                               -lSM -lICE -lXext -lX11 -lm
  ifeq ($(HAVE_XFREE86),YES)
    override LIBS           += -lXxf86dga -lXxf86vm
