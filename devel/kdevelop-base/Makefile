@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2007/01/26 03:30:26 markd Exp $
 
-DISTNAME=	kdevelop-3.3.5
-PKGNAME=	kdevelop-base-3.3.5
-PKGREVISION=	1
+DISTNAME=	kdevelop-3.3.6
+PKGNAME=	kdevelop-base-3.3.6
 CATEGORIES=	devel kde
 
 HOMEPAGE=       http://www.kdevelop.org/
@@ -34,6 +33,12 @@ REPLACE_PERL+= \
 	languages/perl/app_templates/perlhello/app.pl \
 	languages/perl/file_templates/pl
 
+SUBST_CLASSES+=		perlpath
+SUBST_STAGE.perlpath=	post-patch
+SUBST_MESSAGE.perlpath=	Fix perl path.
+SUBST_FILES.perlpath=	languages/perl/perlparser.cpp parts/doxygen/config.cpp
+SUBST_SED.perlpath=	-e s:/usr/bin/perl:${PERL5}:
+
 EVAL_PREFIX+=	\
 	QT3DIR=qt3 \
 	KDELIBDIR=kdelibs
@@ -49,6 +54,7 @@ CONFIGURE_ARGS+= \
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/kdesdk3/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
