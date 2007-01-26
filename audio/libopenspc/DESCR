@@ -1,0 +1,4 @@
+The primary function of this code now is a library
+usable for other projects involving SPC emulation.  Specifically, all of the
+functionality you would expect from an SPC emulation is there, without any
+pesky interface.
