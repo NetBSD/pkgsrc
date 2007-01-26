@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/02 13:47:56 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/26 22:06:38 joerg Exp $
 
 DISTNAME=	phylip-3.61
 PKGREVISION=	2
@@ -48,5 +48,5 @@ do-install:
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
