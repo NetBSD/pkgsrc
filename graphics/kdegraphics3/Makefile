@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.70 2007/01/17 10:33:06 markd Exp $
+# $NetBSD: Makefile,v 1.71 2007/01/26 03:21:31 markd Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
-PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
-PATCHFILES=	post-3.5.5-kdegraphics.diff post-3.5.5-kdegraphics-CVE-2007-0104.diff
-
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gs:run pkg-config
 
 BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.12
@@ -33,6 +28,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
