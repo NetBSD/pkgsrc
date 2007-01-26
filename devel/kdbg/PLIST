@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/06/13 12:11:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/01/26 03:56:50 markd Exp $
 bin/kdbg
 share/applications/kde/kdbg.desktop
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
@@ -51,6 +51,11 @@ share/doc/kde/HTML/ru/kdbg/threads.html
 share/doc/kde/HTML/ru/kdbg/tips.html
 share/doc/kde/HTML/ru/kdbg/types.html
 share/doc/kde/HTML/ru/kdbg/watches.html
+share/icons/hicolor/16x16/apps/kdbg.png
+share/icons/hicolor/32x32/apps/kdbg.png
+share/icons/hicolor/48x48/apps/kdbg.png
+share/icons/locolor/16x16/apps/kdbg.png
+share/icons/locolor/32x32/apps/kdbg.png
 share/kde/apps/kdbg/icons/hicolor/16x16/actions/brkpt.png
 share/kde/apps/kdbg/icons/hicolor/16x16/actions/execopen.png
 share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmfinish.png
@@ -92,11 +97,7 @@ share/kde/apps/kdbg/types/qt2.kdbgtt
 share/kde/apps/kdbg/types/qt3.kdbgtt
 share/kde/apps/kdbg/types/qt4core.kdbgtt
 share/kde/apps/kdbg/types/stdc++.kdbgtt
-share/kde/icons/hicolor/16x16/apps/kdbg.png
-share/kde/icons/hicolor/32x32/apps/kdbg.png
-share/kde/icons/hicolor/48x48/apps/kdbg.png
-share/kde/icons/locolor/16x16/apps/kdbg.png
-share/kde/icons/locolor/32x32/apps/kdbg.png
+share/kde/config/kdbgrc
 share/locale/cs/LC_MESSAGES/kdbg.mo
 share/locale/da/LC_MESSAGES/kdbg.mo
 share/locale/de/LC_MESSAGES/kdbg.mo
@@ -116,11 +117,7 @@ share/locale/sk/LC_MESSAGES/kdbg.mo
 share/locale/sr/LC_MESSAGES/kdbg.mo
 share/locale/sv/LC_MESSAGES/kdbg.mo
 share/locale/tr/LC_MESSAGES/kdbg.mo
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kdbg/types
 @dirrm share/kde/apps/kdbg/pics
 @dirrm share/kde/apps/kdbg/icons/hicolor/22x22/actions
@@ -131,6 +128,11 @@ share/locale/tr/LC_MESSAGES/kdbg.mo
 @dirrm share/kde/apps/kdbg/icons
 @dirrm share/kde/apps/kdbg
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @dirrm share/doc/kde/HTML/ru/kdbg
 @comment in kde: @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/en/kdbg
