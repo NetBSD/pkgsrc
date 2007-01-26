@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2007/01/26 21:58:42 joerg Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -100,5 +100,4 @@ do-install:
 	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1 ${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
 .include "../../audio/nas/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
