@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/26 04:25:46 markd Exp $
 #
 
 DISTNAME=		kmemaid-0.4.7.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=memaid/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,16 +14,12 @@ COMMENT=		MemAid flash card program (KDE interface)
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-CONFIGURE_ENV+=		kde_appsdir=${PREFIX:Q}/share/kde/applnk
-CONFIGURE_ENV+=		kde_datadir=${PREFIX:Q}/share/kde/apps
-CONFIGURE_ENV+=		kde_htmldir=${PREFIX:Q}/share/doc/kde/HTML
-CONFIGURE_ENV+=		kde_icondir=${PREFIX:Q}/share/kde/icons
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

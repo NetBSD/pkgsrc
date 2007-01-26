@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/01/17 23:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/26 04:34:53 markd Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 
@@ -21,6 +21,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

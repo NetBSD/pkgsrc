@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/14 09:33:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/26 04:34:53 markd Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -154,6 +154,12 @@ share/doc/kde/HTML/en/k3b/index.docbook
 share/doc/kde/HTML/en/k3b/select_audiofiles.png
 share/doc/kde/HTML/en/k3b/select_project.png
 share/doc/kde/HTML/en/k3b/video-encoding.docbook
+share/icons/hicolor/128x128/apps/k3b.png
+share/icons/hicolor/16x16/apps/k3b.png
+share/icons/hicolor/22x22/apps/k3b.png
+share/icons/hicolor/32x32/apps/k3b.png
+share/icons/hicolor/48x48/apps/k3b.png
+share/icons/hicolor/64x64/apps/k3b.png
 share/kde/applnk/.hidden/k3b-cue.desktop
 share/kde/applnk/.hidden/k3b-iso.desktop
 share/kde/applnk/Settings/System/k3bsetup2.desktop
@@ -315,12 +321,6 @@ share/kde/apps/konqueror/servicemenus/k3b_audiocd_rip.desktop
 share/kde/apps/konqueror/servicemenus/k3b_cd_copy.desktop
 share/kde/apps/konqueror/servicemenus/k3b_dvd_copy.desktop
 share/kde/apps/konqueror/servicemenus/k3b_videodvd_rip.desktop
-share/kde/icons/hicolor/128x128/apps/k3b.png
-share/kde/icons/hicolor/16x16/apps/k3b.png
-share/kde/icons/hicolor/22x22/apps/k3b.png
-share/kde/icons/hicolor/32x32/apps/k3b.png
-share/kde/icons/hicolor/48x48/apps/k3b.png
-share/kde/icons/hicolor/64x64/apps/k3b.png
 share/kde/mimelnk/application/x-k3b.desktop
 share/kde/services/kfile_k3b.desktop
 share/kde/services/videodvd.protocol
@@ -329,12 +329,6 @@ share/kde/sounds/k3b_success1.wav
 share/kde/sounds/k3b_wait_media1.wav
 @comment in kde: @dirrm share/kde/sounds
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/k3b/servicemenus
 @dirrm share/kde/apps/k3b/plugins
@@ -365,6 +359,12 @@ share/kde/sounds/k3b_wait_media1.wav
 @dirrm share/kde/applnk/Settings/System
 @comment in kde: @dirrm share/kde/applnk/Settings
 @comment in kde: @dirrm share/kde/applnk/.hidden
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @dirrm share/doc/kde/HTML/en/k3b
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde

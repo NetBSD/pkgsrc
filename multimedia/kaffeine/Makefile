@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/01/17 23:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/26 04:25:47 markd Exp $
 #
 
 DISTNAME=	kaffeine-0.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kaffeine/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,9 +30,11 @@ SUBST_FILES.path=	kaffeine/src/instwizard.cpp
 SUBST_SED.path=		-e "s|/usr/lib|${PREFIX}/lib|g"
 SUBST_MESSAGE.path=	Fixing hardcoded paths.
 
+.include "../../meta-pkgs/kde3/kde3.mk"
+
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"

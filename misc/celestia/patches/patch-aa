@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/08/14 22:43:08 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2007/01/26 04:25:46 markd Exp $
 
 --- configure.orig	2006-02-15 21:53:09.000000000 +0000
 +++ configure
@@ -25,8 +25,7 @@ $NetBSD: patch-aa,v 1.5 2006/08/14 22:43:08 wiz Exp $
 +    kde_appsdir='\${datadir}/kde/applnk'
    fi
    if test -z "$kde_icondir"; then
--    kde_icondir='\${datadir}/icons'
-+    kde_icondir='\${datadir}/kde/icons'
+     kde_icondir='\${datadir}/icons'
    fi
    if test -z "$kde_sounddir"; then
 -    kde_sounddir='\${datadir}/sounds'
