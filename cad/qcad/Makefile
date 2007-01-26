@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/01/16 17:13:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.44 2007/01/26 23:03:39 joerg Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -65,5 +65,4 @@ BUILDLINK_API_DEPENDS.qt3-libs+=	qt3-libs>=3.3.4
 .include "../../x11/qt3-tools/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.4
 BUILDLINK_DEPMETHOD.qt3-tools=	full # uses assistant for help
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
