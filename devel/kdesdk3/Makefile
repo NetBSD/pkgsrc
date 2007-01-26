@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2007/01/17 23:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2007/01/26 03:28:08 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -10,7 +9,6 @@ CONFLICTS+=	umbrello-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		lex perl:run
 
 REPLACE_PERL+=	cervisia/change_colors.pl \
@@ -65,19 +63,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.kmtrace
 .endif
 PLIST_SRC+=	${PKGDIR}/PLIST
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kdesdk
-PKG_SUPPORTED_OPTIONS=	svn
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Msvn)
-.include "../../devel/subversion-base/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-svn-include="${BUILDLINK_PREFIX.subversion-base}/include"
-CONFIGURE_ARGS+=	--with-svn-lib="${BUILDLINK_PREFIX.subversion-base}/lib"
-PLIST_SUBST+=		HAVE_SVN=""
-.else
-CONFIGURE_ARGS+=	--with-subversion=no
-PLIST_SUBST+=		HAVE_SVN="@comment "
-.endif
+.include "options.mk"
 
 # Makefile{,.am,.in} weren't supposed to be installed so clean up
 post-install:
@@ -89,6 +75,7 @@ post-install:
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
