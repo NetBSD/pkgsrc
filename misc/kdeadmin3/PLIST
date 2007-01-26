@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/10/12 10:58:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/26 03:08:23 markd Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
@@ -65,6 +65,28 @@ share/doc/kde/HTML/en/kuser/kuser.png
 share/doc/kde/HTML/en/lilo-config/common
 share/doc/kde/HTML/en/lilo-config/index.cache.bz2
 share/doc/kde/HTML/en/lilo-config/index.docbook
+share/icons/hicolor/128x128/apps/kpackage.png
+share/icons/hicolor/128x128/apps/kuser.png
+share/icons/hicolor/16x16/apps/kcron.png
+share/icons/hicolor/16x16/apps/knetworkconf.png
+share/icons/hicolor/16x16/apps/kpackage.png
+share/icons/hicolor/16x16/apps/kuser.png
+share/icons/hicolor/22x22/actions/network_connected_lan_knc.png
+share/icons/hicolor/22x22/actions/network_disconnected_lan.png
+share/icons/hicolor/22x22/actions/network_disconnected_wlan.png
+share/icons/hicolor/22x22/actions/network_traffic_wlan.png
+share/icons/hicolor/22x22/apps/kcron.png
+share/icons/hicolor/22x22/apps/knetworkconf.png
+share/icons/hicolor/22x22/apps/kpackage.png
+share/icons/hicolor/22x22/apps/kuser.png
+share/icons/hicolor/32x32/apps/kcron.png
+share/icons/hicolor/32x32/apps/knetworkconf.png
+share/icons/hicolor/32x32/apps/kpackage.png
+share/icons/hicolor/32x32/apps/kuser.png
+share/icons/hicolor/48x48/apps/kpackage.png
+share/icons/hicolor/48x48/apps/kuser.png
+share/icons/hicolor/64x64/apps/kpackage.png
+share/icons/hicolor/64x64/apps/kuser.png
 share/kde/apps/kcron/kcronui.rc
 share/kde/apps/knetworkconf/backends/debug.pl
 share/kde/apps/knetworkconf/backends/file.pl
@@ -132,38 +154,9 @@ share/kde/apps/kuser/kuserui.rc
 share/kde/apps/kuser/pics/group.png
 share/kde/apps/kuser/pics/user.png
 share/kde/config.kcfg/kuser.kcfg
-share/kde/icons/hicolor/128x128/apps/kpackage.png
-share/kde/icons/hicolor/128x128/apps/kuser.png
-share/kde/icons/hicolor/16x16/apps/kcron.png
-share/kde/icons/hicolor/16x16/apps/knetworkconf.png
-share/kde/icons/hicolor/16x16/apps/kpackage.png
-share/kde/icons/hicolor/16x16/apps/kuser.png
-share/kde/icons/hicolor/22x22/actions/network_connected_lan_knc.png
-share/kde/icons/hicolor/22x22/actions/network_disconnected_lan.png
-share/kde/icons/hicolor/22x22/actions/network_disconnected_wlan.png
-share/kde/icons/hicolor/22x22/actions/network_traffic_wlan.png
-share/kde/icons/hicolor/22x22/apps/kcron.png
-share/kde/icons/hicolor/22x22/apps/knetworkconf.png
-share/kde/icons/hicolor/22x22/apps/kpackage.png
-share/kde/icons/hicolor/22x22/apps/kuser.png
-share/kde/icons/hicolor/32x32/apps/kcron.png
-share/kde/icons/hicolor/32x32/apps/knetworkconf.png
-share/kde/icons/hicolor/32x32/apps/kpackage.png
-share/kde/icons/hicolor/32x32/apps/kuser.png
-share/kde/icons/hicolor/48x48/apps/kpackage.png
-share/kde/icons/hicolor/48x48/apps/kuser.png
-share/kde/icons/hicolor/64x64/apps/kpackage.png
-share/kde/icons/hicolor/64x64/apps/kuser.png
 share/kde/services/kfile_deb.desktop
 share/kde/services/kfile_rpm.desktop
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/kuser/pics
 @dirrm share/kde/apps/kuser/icons/crystalsvg/22x22/actions
@@ -178,6 +171,13 @@ share/kde/services/kfile_rpm.desktop
 @dirrm share/kde/apps/knetworkconf
 @dirrm share/kde/apps/kcron
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @dirrm share/doc/kde/HTML/en/lilo-config
 @dirrm share/doc/kde/HTML/en/kuser
 @dirrm share/doc/kde/HTML/en/ksysv
