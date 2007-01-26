@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2007/01/17 23:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2007/01/26 02:58:41 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	4
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -10,7 +9,6 @@ COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 
 USE_TOOLS+=		pkg-config
-USE_DIRS+=		xdg-1.2
 
 REPLACE_PERL+=		kscd/workman2cddb.pl
 
@@ -26,18 +24,7 @@ CONFIGURE_ARGS+=	--enable-cdparanoia
 CONFIGURE_ARGS+=	--with-cdparanoia=${BUILDLINK_PREFIX.cdparanoia}
 CONFIGURE_ARGS+=	--with-vorbis=${BUILDLINK_PREFIX.libvorbis}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kdemultimedia
-PKG_SUPPORTED_OPTIONS=	gstreamer oss
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgstreamer)
-.include "../../multimedia/gstreamer0.8/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--enable-audio=oss
-.endif
+.include "options.mk"
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
@@ -53,6 +40,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../audio/libtunepimp/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"

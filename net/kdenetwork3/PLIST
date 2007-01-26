@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2006/10/12 10:47:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/01/26 02:55:41 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -93,6 +93,7 @@ lib/kconf_update_bin/kopete-nameTracking-kconf_update
 lib/kconf_update_bin/kopete-pluginloader2-kconf_update
 lib/kde3/fileshare_propsdlgplugin.la
 lib/kde3/kcm_fileshare.la
+lib/kde3/kcm_kcmsambaconf.la
 lib/kde3/kcm_kopete_accountconfig.la
 lib/kde3/kcm_kopete_addbookmarks.la
 lib/kde3/kcm_kopete_alias.la
@@ -154,7 +155,6 @@ lib/kde3/kopete_yahoo.la
 lib/kde3/kpf_panelapplet.la
 lib/kde3/kpfpropertiesdialog.la
 lib/kde3/ksirc.la
-lib/kde3/libkcm_kcmsambaconf.la
 lib/kde3/libkntsrcfilepropsdlg.la
 lib/kde3/libkrichtexteditpart.la
 lib/libkdeinit_kdict.la
@@ -316,6 +316,192 @@ share/doc/kde/HTML/en/kwifimanager/index.docbook
 share/doc/kde/HTML/en/lisa/common
 share/doc/kde/HTML/en/lisa/index.cache.bz2
 share/doc/kde/HTML/en/lisa/index.docbook
+share/icons/crystalsvg/128x128/actions/voicecall.png
+share/icons/crystalsvg/128x128/actions/webcamreceive.png
+share/icons/crystalsvg/128x128/actions/webcamsend.png
+share/icons/crystalsvg/128x128/apps/ktalkd.png
+share/icons/crystalsvg/16x16/actions/account_offline_overlay.png
+share/icons/crystalsvg/16x16/actions/add_user.png
+share/icons/crystalsvg/16x16/actions/contact_away_overlay.png
+share/icons/crystalsvg/16x16/actions/contact_busy_overlay.png
+share/icons/crystalsvg/16x16/actions/contact_food_overlay.png
+share/icons/crystalsvg/16x16/actions/contact_invisible_overlay.png
+share/icons/crystalsvg/16x16/actions/contact_phone_overlay.png
+share/icons/crystalsvg/16x16/actions/contact_xa_overlay.png
+share/icons/crystalsvg/16x16/actions/delete_user.png
+share/icons/crystalsvg/16x16/actions/edit_user.png
+share/icons/crystalsvg/16x16/actions/emoticon.png
+share/icons/crystalsvg/16x16/actions/jabber_away.png
+share/icons/crystalsvg/16x16/actions/jabber_chatty.png
+share/icons/crystalsvg/16x16/actions/jabber_connecting.mng
+share/icons/crystalsvg/16x16/actions/jabber_group.png
+share/icons/crystalsvg/16x16/actions/jabber_invisible.png
+share/icons/crystalsvg/16x16/actions/jabber_na.png
+share/icons/crystalsvg/16x16/actions/jabber_offline.png
+share/icons/crystalsvg/16x16/actions/jabber_online.png
+share/icons/crystalsvg/16x16/actions/jabber_original.png
+share/icons/crystalsvg/16x16/actions/jabber_raw.png
+share/icons/crystalsvg/16x16/actions/jabber_serv_off.png
+share/icons/crystalsvg/16x16/actions/jabber_serv_on.png
+share/icons/crystalsvg/16x16/actions/jabber_xa.png
+share/icons/crystalsvg/16x16/actions/kopeteavailable.png
+share/icons/crystalsvg/16x16/actions/kopeteaway.png
+share/icons/crystalsvg/16x16/actions/kopeteeditstatusmessage.png
+share/icons/crystalsvg/16x16/actions/kopetestatusmessage.png
+share/icons/crystalsvg/16x16/actions/metacontact_away.png
+share/icons/crystalsvg/16x16/actions/metacontact_offline.png
+share/icons/crystalsvg/16x16/actions/metacontact_online.png
+share/icons/crystalsvg/16x16/actions/metacontact_unknown.png
+share/icons/crystalsvg/16x16/actions/newmsg.png
+share/icons/crystalsvg/16x16/actions/search_user.png
+share/icons/crystalsvg/16x16/actions/show_offliners.png
+share/icons/crystalsvg/16x16/actions/status_unknown.png
+share/icons/crystalsvg/16x16/actions/status_unknown_overlay.png
+share/icons/crystalsvg/16x16/actions/voicecall.png
+share/icons/crystalsvg/16x16/actions/webcamreceive.png
+share/icons/crystalsvg/16x16/actions/webcamsend.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_aim.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_gadu.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_http/ws.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_icq.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_irc.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_msn.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_qq.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_sms.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_smtp.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_tlen.png
+share/icons/crystalsvg/16x16/apps/jabber_gateway_yahoo.png
+share/icons/crystalsvg/16x16/apps/jabber_protocol.png
+share/icons/crystalsvg/16x16/apps/kget.png
+share/icons/crystalsvg/16x16/apps/kpf.png
+share/icons/crystalsvg/16x16/apps/krfb.png
+share/icons/crystalsvg/16x16/apps/ktalkd.png
+share/icons/crystalsvg/16x16/mimetypes/kget_list.png
+share/icons/crystalsvg/16x16/mimetypes/kopete_emoticons.png
+share/icons/crystalsvg/22x22/actions/account_offline_overlay.png
+share/icons/crystalsvg/22x22/actions/add_user.png
+share/icons/crystalsvg/22x22/actions/delete_user.png
+share/icons/crystalsvg/22x22/actions/edit_user.png
+share/icons/crystalsvg/22x22/actions/khtml_kget.png
+share/icons/crystalsvg/22x22/actions/kopeteavailable.png
+share/icons/crystalsvg/22x22/actions/kopeteaway.png
+share/icons/crystalsvg/22x22/actions/kopeteeditstatusmessage.png
+share/icons/crystalsvg/22x22/actions/search_user.png
+share/icons/crystalsvg/22x22/actions/show_offliners.png
+share/icons/crystalsvg/22x22/actions/voicecall.png
+share/icons/crystalsvg/22x22/actions/webcamreceive.png
+share/icons/crystalsvg/22x22/actions/webcamsend.png
+share/icons/crystalsvg/22x22/apps/kget.png
+share/icons/crystalsvg/22x22/apps/kopete_all_away.png
+share/icons/crystalsvg/22x22/apps/kopete_offline.png
+share/icons/crystalsvg/22x22/apps/kopete_some_away.png
+share/icons/crystalsvg/22x22/apps/kopete_some_online.png
+share/icons/crystalsvg/22x22/apps/ktalkd.png
+share/icons/crystalsvg/22x22/mimetypes/kget_list.png
+share/icons/crystalsvg/22x22/mimetypes/kopete_emoticons.png
+share/icons/crystalsvg/32x32/actions/account_offline_overlay.png
+share/icons/crystalsvg/32x32/actions/add_user.png
+share/icons/crystalsvg/32x32/actions/delete_user.png
+share/icons/crystalsvg/32x32/actions/edit_user.png
+share/icons/crystalsvg/32x32/actions/kopeteavailable.png
+share/icons/crystalsvg/32x32/actions/kopeteaway.png
+share/icons/crystalsvg/32x32/actions/kopeteeditstatusmessage.png
+share/icons/crystalsvg/32x32/actions/metacontact_away.png
+share/icons/crystalsvg/32x32/actions/metacontact_offline.png
+share/icons/crystalsvg/32x32/actions/metacontact_online.png
+share/icons/crystalsvg/32x32/actions/metacontact_unknown.png
+share/icons/crystalsvg/32x32/actions/newmessage.mng
+share/icons/crystalsvg/32x32/actions/newmsg.png
+share/icons/crystalsvg/32x32/actions/search_user.png
+share/icons/crystalsvg/32x32/actions/show_offliners.png
+share/icons/crystalsvg/32x32/actions/voicecall.png
+share/icons/crystalsvg/32x32/actions/webcamreceive.png
+share/icons/crystalsvg/32x32/actions/webcamsend.png
+share/icons/crystalsvg/32x32/apps/jabber_protocol.png
+share/icons/crystalsvg/32x32/apps/kget.png
+share/icons/crystalsvg/32x32/apps/kpf.png
+share/icons/crystalsvg/32x32/apps/krdc.png
+share/icons/crystalsvg/32x32/apps/krfb.png
+share/icons/crystalsvg/32x32/apps/ktalkd.png
+share/icons/crystalsvg/32x32/mimetypes/kget_list.png
+share/icons/crystalsvg/48x48/actions/kopeteavailable.png
+share/icons/crystalsvg/48x48/actions/kopeteaway.png
+share/icons/crystalsvg/48x48/actions/metacontact_away.png
+share/icons/crystalsvg/48x48/actions/metacontact_offline.png
+share/icons/crystalsvg/48x48/actions/metacontact_online.png
+share/icons/crystalsvg/48x48/actions/voicecall.png
+share/icons/crystalsvg/48x48/actions/webcamreceive.png
+share/icons/crystalsvg/48x48/actions/webcamsend.png
+share/icons/crystalsvg/48x48/apps/jabber_protocol.png
+share/icons/crystalsvg/48x48/apps/kget.png
+share/icons/crystalsvg/48x48/apps/kpf.png
+share/icons/crystalsvg/48x48/apps/krdc.png
+share/icons/crystalsvg/48x48/apps/krfb.png
+share/icons/crystalsvg/48x48/apps/ktalkd.png
+share/icons/crystalsvg/48x48/mimetypes/kget_list.png
+share/icons/crystalsvg/64x64/actions/voicecall.png
+share/icons/crystalsvg/64x64/actions/webcamreceive.png
+share/icons/crystalsvg/64x64/actions/webcamsend.png
+share/icons/crystalsvg/scalable/actions/account_offline_overlay.svgz
+share/icons/hicolor/128x128/apps/kdict.png
+share/icons/hicolor/128x128/apps/kopete.png
+share/icons/hicolor/128x128/apps/kppp.png
+share/icons/hicolor/16x16/actions/emoticon.png
+share/icons/hicolor/16x16/actions/jabber_away.png
+share/icons/hicolor/16x16/actions/jabber_chatty.png
+share/icons/hicolor/16x16/actions/jabber_connecting.mng
+share/icons/hicolor/16x16/actions/jabber_group.png
+share/icons/hicolor/16x16/actions/jabber_invisible.png
+share/icons/hicolor/16x16/actions/jabber_na.png
+share/icons/hicolor/16x16/actions/jabber_offline.png
+share/icons/hicolor/16x16/actions/jabber_online.png
+share/icons/hicolor/16x16/actions/jabber_original.png
+share/icons/hicolor/16x16/actions/jabber_raw.png
+share/icons/hicolor/16x16/actions/jabber_serv_off.png
+share/icons/hicolor/16x16/actions/jabber_serv_on.png
+share/icons/hicolor/16x16/actions/jabber_xa.png
+share/icons/hicolor/16x16/actions/kopeteavailable.png
+share/icons/hicolor/16x16/actions/kopeteaway.png
+share/icons/hicolor/16x16/actions/newmsg.png
+share/icons/hicolor/16x16/actions/status_unknown.png
+share/icons/hicolor/16x16/actions/status_unknown_overlay.png
+share/icons/hicolor/16x16/apps/jabber_protocol.png
+share/icons/hicolor/16x16/apps/kcmsambaconf.png
+share/icons/hicolor/16x16/apps/kdict.png
+share/icons/hicolor/16x16/apps/knewsticker.png
+share/icons/hicolor/16x16/apps/kopete.png
+share/icons/hicolor/16x16/apps/kppp.png
+share/icons/hicolor/16x16/apps/ksirc.png
+share/icons/hicolor/22x22/actions/kopeteavailable.png
+share/icons/hicolor/22x22/actions/kopeteaway.png
+share/icons/hicolor/22x22/apps/kopete.png
+share/icons/hicolor/22x22/apps/kppp.png
+share/icons/hicolor/22x22/apps/ksirc.png
+share/icons/hicolor/32x32/actions/kopeteavailable.png
+share/icons/hicolor/32x32/actions/kopeteaway.png
+share/icons/hicolor/32x32/actions/newmessage.mng
+share/icons/hicolor/32x32/apps/jabber_protocol.png
+share/icons/hicolor/32x32/apps/kdict.png
+share/icons/hicolor/32x32/apps/knewsticker.png
+share/icons/hicolor/32x32/apps/kopete.png
+share/icons/hicolor/32x32/apps/kppp.png
+share/icons/hicolor/32x32/apps/ksirc.png
+share/icons/hicolor/48x48/actions/kopeteavailable.png
+share/icons/hicolor/48x48/actions/kopeteaway.png
+share/icons/hicolor/48x48/apps/jabber_protocol.png
+share/icons/hicolor/48x48/apps/kdict.png
+share/icons/hicolor/48x48/apps/knewsticker.png
+share/icons/hicolor/48x48/apps/kopete.png
+share/icons/hicolor/48x48/apps/kppp.png
+share/icons/hicolor/48x48/apps/ksirc.png
+share/icons/hicolor/64x64/apps/kdict.png
+share/icons/hicolor/64x64/apps/kopete.png
+share/icons/hicolor/64x64/apps/kppp.png
+share/icons/hicolor/64x64/apps/ksirc.png
+share/icons/hicolor/scalable/apps/kdict.svgz
+share/icons/hicolor/scalable/apps/kopete2.svgz
+share/icons/locolor/16x16/apps/krfb.png
+share/icons/locolor/32x32/apps/krfb.png
 share/kde/applnk/.hidden/kcmkiolan.desktop
 share/kde/applnk/.hidden/kcmlisa.desktop
 share/kde/applnk/.hidden/kcmreslisa.desktop
@@ -1307,192 +1493,6 @@ share/kde/config.kcfg/latexconfig.kcfg
 share/kde/config.kcfg/nowlisteningconfig.kcfg
 share/kde/config/ksircrc
 share/kde/config/ktalkdrc
-share/kde/icons/crystalsvg/128x128/actions/voicecall.png
-share/kde/icons/crystalsvg/128x128/actions/webcamreceive.png
-share/kde/icons/crystalsvg/128x128/actions/webcamsend.png
-share/kde/icons/crystalsvg/128x128/apps/ktalkd.png
-share/kde/icons/crystalsvg/16x16/actions/account_offline_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/add_user.png
-share/kde/icons/crystalsvg/16x16/actions/contact_away_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/contact_busy_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/contact_food_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/contact_invisible_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/contact_phone_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/contact_xa_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/delete_user.png
-share/kde/icons/crystalsvg/16x16/actions/edit_user.png
-share/kde/icons/crystalsvg/16x16/actions/emoticon.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_away.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_chatty.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_connecting.mng
-share/kde/icons/crystalsvg/16x16/actions/jabber_group.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_invisible.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_na.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_offline.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_online.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_original.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_raw.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_serv_off.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_serv_on.png
-share/kde/icons/crystalsvg/16x16/actions/jabber_xa.png
-share/kde/icons/crystalsvg/16x16/actions/kopeteavailable.png
-share/kde/icons/crystalsvg/16x16/actions/kopeteaway.png
-share/kde/icons/crystalsvg/16x16/actions/kopeteeditstatusmessage.png
-share/kde/icons/crystalsvg/16x16/actions/kopetestatusmessage.png
-share/kde/icons/crystalsvg/16x16/actions/metacontact_away.png
-share/kde/icons/crystalsvg/16x16/actions/metacontact_offline.png
-share/kde/icons/crystalsvg/16x16/actions/metacontact_online.png
-share/kde/icons/crystalsvg/16x16/actions/metacontact_unknown.png
-share/kde/icons/crystalsvg/16x16/actions/newmsg.png
-share/kde/icons/crystalsvg/16x16/actions/search_user.png
-share/kde/icons/crystalsvg/16x16/actions/show_offliners.png
-share/kde/icons/crystalsvg/16x16/actions/status_unknown.png
-share/kde/icons/crystalsvg/16x16/actions/status_unknown_overlay.png
-share/kde/icons/crystalsvg/16x16/actions/voicecall.png
-share/kde/icons/crystalsvg/16x16/actions/webcamreceive.png
-share/kde/icons/crystalsvg/16x16/actions/webcamsend.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_aim.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_gadu.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_http/ws.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_icq.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_irc.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_msn.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_qq.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_sms.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_smtp.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_tlen.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_yahoo.png
-share/kde/icons/crystalsvg/16x16/apps/jabber_protocol.png
-share/kde/icons/crystalsvg/16x16/apps/kget.png
-share/kde/icons/crystalsvg/16x16/apps/kpf.png
-share/kde/icons/crystalsvg/16x16/apps/krfb.png
-share/kde/icons/crystalsvg/16x16/apps/ktalkd.png
-share/kde/icons/crystalsvg/16x16/mimetypes/kget_list.png
-share/kde/icons/crystalsvg/16x16/mimetypes/kopete_emoticons.png
-share/kde/icons/crystalsvg/22x22/actions/account_offline_overlay.png
-share/kde/icons/crystalsvg/22x22/actions/add_user.png
-share/kde/icons/crystalsvg/22x22/actions/delete_user.png
-share/kde/icons/crystalsvg/22x22/actions/edit_user.png
-share/kde/icons/crystalsvg/22x22/actions/khtml_kget.png
-share/kde/icons/crystalsvg/22x22/actions/kopeteavailable.png
-share/kde/icons/crystalsvg/22x22/actions/kopeteaway.png
-share/kde/icons/crystalsvg/22x22/actions/kopeteeditstatusmessage.png
-share/kde/icons/crystalsvg/22x22/actions/search_user.png
-share/kde/icons/crystalsvg/22x22/actions/show_offliners.png
-share/kde/icons/crystalsvg/22x22/actions/voicecall.png
-share/kde/icons/crystalsvg/22x22/actions/webcamreceive.png
-share/kde/icons/crystalsvg/22x22/actions/webcamsend.png
-share/kde/icons/crystalsvg/22x22/apps/kget.png
-share/kde/icons/crystalsvg/22x22/apps/kopete_all_away.png
-share/kde/icons/crystalsvg/22x22/apps/kopete_offline.png
-share/kde/icons/crystalsvg/22x22/apps/kopete_some_away.png
-share/kde/icons/crystalsvg/22x22/apps/kopete_some_online.png
-share/kde/icons/crystalsvg/22x22/apps/ktalkd.png
-share/kde/icons/crystalsvg/22x22/mimetypes/kget_list.png
-share/kde/icons/crystalsvg/22x22/mimetypes/kopete_emoticons.png
-share/kde/icons/crystalsvg/32x32/actions/account_offline_overlay.png
-share/kde/icons/crystalsvg/32x32/actions/add_user.png
-share/kde/icons/crystalsvg/32x32/actions/delete_user.png
-share/kde/icons/crystalsvg/32x32/actions/edit_user.png
-share/kde/icons/crystalsvg/32x32/actions/kopeteavailable.png
-share/kde/icons/crystalsvg/32x32/actions/kopeteaway.png
-share/kde/icons/crystalsvg/32x32/actions/kopeteeditstatusmessage.png
-share/kde/icons/crystalsvg/32x32/actions/metacontact_away.png
-share/kde/icons/crystalsvg/32x32/actions/metacontact_offline.png
-share/kde/icons/crystalsvg/32x32/actions/metacontact_online.png
-share/kde/icons/crystalsvg/32x32/actions/metacontact_unknown.png
-share/kde/icons/crystalsvg/32x32/actions/newmessage.mng
-share/kde/icons/crystalsvg/32x32/actions/newmsg.png
-share/kde/icons/crystalsvg/32x32/actions/search_user.png
-share/kde/icons/crystalsvg/32x32/actions/show_offliners.png
-share/kde/icons/crystalsvg/32x32/actions/voicecall.png
-share/kde/icons/crystalsvg/32x32/actions/webcamreceive.png
-share/kde/icons/crystalsvg/32x32/actions/webcamsend.png
-share/kde/icons/crystalsvg/32x32/apps/jabber_protocol.png
-share/kde/icons/crystalsvg/32x32/apps/kget.png
-share/kde/icons/crystalsvg/32x32/apps/kpf.png
-share/kde/icons/crystalsvg/32x32/apps/krdc.png
-share/kde/icons/crystalsvg/32x32/apps/krfb.png
-share/kde/icons/crystalsvg/32x32/apps/ktalkd.png
-share/kde/icons/crystalsvg/32x32/mimetypes/kget_list.png
-share/kde/icons/crystalsvg/48x48/actions/kopeteavailable.png
-share/kde/icons/crystalsvg/48x48/actions/kopeteaway.png
-share/kde/icons/crystalsvg/48x48/actions/metacontact_away.png
-share/kde/icons/crystalsvg/48x48/actions/metacontact_offline.png
-share/kde/icons/crystalsvg/48x48/actions/metacontact_online.png
-share/kde/icons/crystalsvg/48x48/actions/voicecall.png
-share/kde/icons/crystalsvg/48x48/actions/webcamreceive.png
-share/kde/icons/crystalsvg/48x48/actions/webcamsend.png
-share/kde/icons/crystalsvg/48x48/apps/jabber_protocol.png
-share/kde/icons/crystalsvg/48x48/apps/kget.png
-share/kde/icons/crystalsvg/48x48/apps/kpf.png
-share/kde/icons/crystalsvg/48x48/apps/krdc.png
-share/kde/icons/crystalsvg/48x48/apps/krfb.png
-share/kde/icons/crystalsvg/48x48/apps/ktalkd.png
-share/kde/icons/crystalsvg/48x48/mimetypes/kget_list.png
-share/kde/icons/crystalsvg/64x64/actions/voicecall.png
-share/kde/icons/crystalsvg/64x64/actions/webcamreceive.png
-share/kde/icons/crystalsvg/64x64/actions/webcamsend.png
-share/kde/icons/crystalsvg/scalable/actions/account_offline_overlay.svgz
-share/kde/icons/hicolor/128x128/apps/kdict.png
-share/kde/icons/hicolor/128x128/apps/kopete.png
-share/kde/icons/hicolor/128x128/apps/kppp.png
-share/kde/icons/hicolor/16x16/actions/emoticon.png
-share/kde/icons/hicolor/16x16/actions/jabber_away.png
-share/kde/icons/hicolor/16x16/actions/jabber_chatty.png
-share/kde/icons/hicolor/16x16/actions/jabber_connecting.mng
-share/kde/icons/hicolor/16x16/actions/jabber_group.png
-share/kde/icons/hicolor/16x16/actions/jabber_invisible.png
-share/kde/icons/hicolor/16x16/actions/jabber_na.png
-share/kde/icons/hicolor/16x16/actions/jabber_offline.png
-share/kde/icons/hicolor/16x16/actions/jabber_online.png
-share/kde/icons/hicolor/16x16/actions/jabber_original.png
-share/kde/icons/hicolor/16x16/actions/jabber_raw.png
-share/kde/icons/hicolor/16x16/actions/jabber_serv_off.png
-share/kde/icons/hicolor/16x16/actions/jabber_serv_on.png
-share/kde/icons/hicolor/16x16/actions/jabber_xa.png
-share/kde/icons/hicolor/16x16/actions/kopeteavailable.png
-share/kde/icons/hicolor/16x16/actions/kopeteaway.png
-share/kde/icons/hicolor/16x16/actions/newmsg.png
-share/kde/icons/hicolor/16x16/actions/status_unknown.png
-share/kde/icons/hicolor/16x16/actions/status_unknown_overlay.png
-share/kde/icons/hicolor/16x16/apps/jabber_protocol.png
-share/kde/icons/hicolor/16x16/apps/kcmsambaconf.png
-share/kde/icons/hicolor/16x16/apps/kdict.png
-share/kde/icons/hicolor/16x16/apps/knewsticker.png
-share/kde/icons/hicolor/16x16/apps/kopete.png
-share/kde/icons/hicolor/16x16/apps/kppp.png
-share/kde/icons/hicolor/16x16/apps/ksirc.png
-share/kde/icons/hicolor/22x22/actions/kopeteavailable.png
-share/kde/icons/hicolor/22x22/actions/kopeteaway.png
-share/kde/icons/hicolor/22x22/apps/kopete.png
-share/kde/icons/hicolor/22x22/apps/kppp.png
-share/kde/icons/hicolor/22x22/apps/ksirc.png
-share/kde/icons/hicolor/32x32/actions/kopeteavailable.png
-share/kde/icons/hicolor/32x32/actions/kopeteaway.png
-share/kde/icons/hicolor/32x32/actions/newmessage.mng
-share/kde/icons/hicolor/32x32/apps/jabber_protocol.png
-share/kde/icons/hicolor/32x32/apps/kdict.png
-share/kde/icons/hicolor/32x32/apps/knewsticker.png
-share/kde/icons/hicolor/32x32/apps/kopete.png
-share/kde/icons/hicolor/32x32/apps/kppp.png
-share/kde/icons/hicolor/32x32/apps/ksirc.png
-share/kde/icons/hicolor/48x48/actions/kopeteavailable.png
-share/kde/icons/hicolor/48x48/actions/kopeteaway.png
-share/kde/icons/hicolor/48x48/apps/jabber_protocol.png
-share/kde/icons/hicolor/48x48/apps/kdict.png
-share/kde/icons/hicolor/48x48/apps/knewsticker.png
-share/kde/icons/hicolor/48x48/apps/kopete.png
-share/kde/icons/hicolor/48x48/apps/kppp.png
-share/kde/icons/hicolor/48x48/apps/ksirc.png
-share/kde/icons/hicolor/64x64/apps/kdict.png
-share/kde/icons/hicolor/64x64/apps/kopete.png
-share/kde/icons/hicolor/64x64/apps/kppp.png
-share/kde/icons/hicolor/64x64/apps/ksirc.png
-share/kde/icons/hicolor/scalable/apps/kdict.svgz
-share/kde/icons/hicolor/scalable/apps/kopete2.svgz
-share/kde/icons/locolor/16x16/apps/krfb.png
-share/kde/icons/locolor/32x32/apps/krfb.png
 share/kde/mimelnk/application/x-icq.desktop
 share/kde/mimelnk/application/x-kgetlist.desktop
 share/kde/mimelnk/application/x-kopete-emoticons.desktop
@@ -1578,36 +1578,6 @@ share/kde/sounds/ktalkd.wav
 @comment in kde: @dirrm share/kde/services/kconfiguredialog
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
-@dirrm share/kde/icons/crystalsvg/16x16/apps/jabber_gateway_http
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/apps/zeroconf
@@ -1820,6 +1790,36 @@ share/kde/sounds/ktalkd.wav
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/actions
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
+@dirrm share/icons/crystalsvg/16x16/apps/jabber_gateway_http
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/actions
 @dirrm share/doc/kde/HTML/en/lisa
 @dirrm share/doc/kde/HTML/en/kwifimanager
 @dirrm share/doc/kde/HTML/en/ktalkd
