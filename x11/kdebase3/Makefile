@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2007/01/17 23:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2007/01/26 02:49:25 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -16,7 +15,6 @@ SITES.NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 UNLIMIT_RESOURCES=	datasize
-USE_DIRS+=		xdg-1.2
 USE_TOOLS+=		pkg-config mkfontdir bdftopcf
 
 FONTS_DIRS.x11+=	${PREFIX}/share/kde/apps/konsole/fonts
@@ -31,7 +29,6 @@ CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
 CONFIGURE_ARGS+=	--without-composite
 CONFIGURE_ARGS+=	--without-java
-CONFIGURE_ARGS+=	--without-pam
 
 REPLACE_PERL+=		kcontrol/keys/convertShortcuts.pl \
 			khelpcenter/searchhandlers/khc_docbookdig.pl.in \
@@ -80,37 +77,13 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
-PKG_SUPPORTED_OPTIONS=	sasl samba debug pam
-PKG_SUGGESTED_OPTIONS=	sasl
-
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
 BUILDLINK_API_DEPENDS.Xrandr+=	Xrandr>=1.0
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=${_KDE_VERSION}
 
 DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
 
-.if !empty(PKG_OPTIONS:Msamba)
-.include "../../net/samba/buildlink3.mk"
-LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.samba}/lib/samba
-PLIST_SUBST+=		HAVE_SMB=""
-.else
-PLIST_SUBST+=		HAVE_SMB="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mdebug)
-CC+=			-ggdb
-CXX+=			-ggdb
-CONFIGURE_ARGS+=	--enable-debug=full
-CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
-INSTALL_UNSTRIPPED=	yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mpam)
-.  include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam
-.endif
 
 # Solaris 10 has libusb only for 32 bit ABI (see PR 33727).
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "x86_64"
@@ -123,7 +96,7 @@ PLIST_SUBST+=		HAVE_USBVIEW=""
 PLIST_SUBST+=		HAVE_USBVIEW="@comment "
 .endif
 
-ICONDIR=		share/kde/icons
+ICONDIR=		share/icons
 
 .if ${OPSYS} == "NetBSD"
 SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${ROOT_USER} kmem 2755
@@ -203,10 +176,8 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .endif
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Msasl)
-.include "../../security/cyrus-sasl/buildlink3.mk"
-.endif
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
