@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/08 22:10:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:34:53 markd Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -16,6 +16,20 @@ lib/kde3/ktupnpplugin.la
 lib/kde3/ktwebinterfaceplugin.la
 lib/libktorrent.la
 share/applications/kde/ktorrent.desktop
+share/icons/hicolor/128x128/apps/ktorrent.png
+share/icons/hicolor/128x128/mimetypes/torrent.png
+share/icons/hicolor/16x16/apps/ktorrent.png
+share/icons/hicolor/16x16/mimetypes/torrent.png
+share/icons/hicolor/22x22/apps/ktorrent.png
+share/icons/hicolor/22x22/mimetypes/torrent.png
+share/icons/hicolor/32x32/apps/ktorrent.png
+share/icons/hicolor/32x32/mimetypes/torrent.png
+share/icons/hicolor/48x48/apps/ktorrent.png
+share/icons/hicolor/48x48/mimetypes/torrent.png
+share/icons/hicolor/64x64/apps/ktorrent.png
+share/icons/hicolor/64x64/mimetypes/torrent.png
+share/icons/hicolor/scalable/apps/ktorrent.svgz
+share/icons/hicolor/scalable/mimetypes/torrent.svgz
 share/kde/apps/ktorrent/geoip/FLAGS_LICENCE
 share/kde/apps/ktorrent/geoip/GeoIP-LICENSE.txt
 share/kde/apps/ktorrent/geoip/ad.png
@@ -313,20 +327,6 @@ share/kde/config.kcfg/ktschedulerplugin.kcfg
 share/kde/config.kcfg/ktsearchplugin.kcfg
 share/kde/config.kcfg/ktupnpplugin.kcfg
 share/kde/config.kcfg/ktwebinterfaceplugin.kcfg
-share/kde/icons/hicolor/128x128/apps/ktorrent.png
-share/kde/icons/hicolor/128x128/mimetypes/torrent.png
-share/kde/icons/hicolor/16x16/apps/ktorrent.png
-share/kde/icons/hicolor/16x16/mimetypes/torrent.png
-share/kde/icons/hicolor/22x22/apps/ktorrent.png
-share/kde/icons/hicolor/22x22/mimetypes/torrent.png
-share/kde/icons/hicolor/32x32/apps/ktorrent.png
-share/kde/icons/hicolor/32x32/mimetypes/torrent.png
-share/kde/icons/hicolor/48x48/apps/ktorrent.png
-share/kde/icons/hicolor/48x48/mimetypes/torrent.png
-share/kde/icons/hicolor/64x64/apps/ktorrent.png
-share/kde/icons/hicolor/64x64/mimetypes/torrent.png
-share/kde/icons/hicolor/scalable/apps/ktorrent.svgz
-share/kde/icons/hicolor/scalable/mimetypes/torrent.svgz
 share/kde/services/ktinfowidgetplugin.desktop
 share/kde/services/ktipfilterplugin.desktop
 share/kde/services/ktlogviewerplugin.desktop
@@ -377,20 +377,6 @@ share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/ktorrent/www/mobile
 @dirrm share/kde/apps/ktorrent/www/default
@@ -406,5 +392,19 @@ share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
 @dirrm share/kde/apps/ktorrent/geoip
 @dirrm share/kde/apps/ktorrent/www
 @dirrm share/kde/apps/ktorrent
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3

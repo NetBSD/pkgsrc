@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/13 01:09:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/26 04:34:53 markd Exp $
 bin/kftpgrabber
 include/kftpgrabber/kftpbookmarkimportplugin.h
 lib/kde3/kftpimportplugin_filezilla3.la
@@ -7,16 +7,16 @@ lib/kde3/kftpimportplugin_kftp.la
 lib/kde3/kftpimportplugin_ncftp.la
 lib/libkftpinterfaces.la
 share/applications/kde/kftpgrabber.desktop
+share/icons/hicolor/16x16/apps/kftpgrabber.png
+share/icons/hicolor/22x22/apps/kftpgrabber.png
+share/icons/hicolor/32x32/apps/kftpgrabber.png
+share/icons/hicolor/48x48/apps/kftpgrabber.png
+share/icons/hicolor/64x64/apps/kftpgrabber.png
 share/kde/apps/kftpgrabber/commands.xml
 share/kde/apps/kftpgrabber/kftpgrabber-bi-wizard.png
 share/kde/apps/kftpgrabber/kftpgrabber-logo.png
 share/kde/apps/kftpgrabber/kftpgrabberui.rc
 share/kde/config.kcfg/kftpgrabber.kcfg
-share/kde/icons/hicolor/16x16/apps/kftpgrabber.png
-share/kde/icons/hicolor/22x22/apps/kftpgrabber.png
-share/kde/icons/hicolor/32x32/apps/kftpgrabber.png
-share/kde/icons/hicolor/48x48/apps/kftpgrabber.png
-share/kde/icons/hicolor/64x64/apps/kftpgrabber.png
 share/kde/services/kftpimportplugin_filezilla3.desktop
 share/kde/services/kftpimportplugin_gftp.desktop
 share/kde/services/kftpimportplugin_kftp.desktop
@@ -53,14 +53,14 @@ share/locale/tr/LC_MESSAGES/kftpgrabber.mo
 share/locale/zh_CN/LC_MESSAGES/kftpgrabber.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/kftpgrabber
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
 @dirrm include/kftpgrabber

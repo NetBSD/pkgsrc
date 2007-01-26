@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/01/17 23:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/26 04:34:53 markd Exp $
 
 DISTNAME=	kftpgrabber-0.8.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net kde
 MASTER_SITES=	http://www.kftp.org/uploads/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/20 10:58:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/26 04:34:53 markd Exp $
 bin/kmessage
 share/doc/kde/HTML/en/kmessage/Examples.html
 share/doc/kde/HTML/en/kmessage/common
@@ -16,10 +16,10 @@ share/doc/kde/HTML/en/kmessage/requirements.html
 share/doc/kde/HTML/en/kmessage/screen1.png
 share/doc/kde/HTML/en/kmessage/screen2.png
 share/doc/kde/HTML/en/kmessage/using-kapp.html
+share/icons/hicolor/16x16/apps/kmessage.png
+share/icons/hicolor/32x32/apps/kmessage.png
+share/icons/hicolor/48x48/apps/kmessage.png
+share/icons/locolor/16x16/apps/kmessage.png
+share/icons/locolor/32x32/apps/kmessage.png
 share/kde/applnk/Applications/kmessage.desktop
-share/kde/icons/hicolor/16x16/apps/kmessage.png
-share/kde/icons/hicolor/32x32/apps/kmessage.png
-share/kde/icons/hicolor/48x48/apps/kmessage.png
-share/kde/icons/locolor/16x16/apps/kmessage.png
-share/kde/icons/locolor/32x32/apps/kmessage.png
 @dirrm share/doc/kde/HTML/en/kmessage
