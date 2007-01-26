@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.248 2007/01/26 11:04:07 dillo Exp $
+$NetBSD: CHANGES-2007,v 1.249 2007/01/26 16:38:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated xll/kmessage to 0.1nb10 [markd 2007-01-26]
 	Updated sysutils/kdirstat to 2.4.4 [markd 2007-01-26]
 	Added databases/libgda-mysql version 2.99.2 [dillo 2007-01-26]
+	Added sysutils/foremost version 1.3 [minskim 2007-01-26]
