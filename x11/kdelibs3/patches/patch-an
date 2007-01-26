@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.10 2005/12/29 23:41:42 markd Exp $
+$NetBSD: patch-an,v 1.11 2007/01/26 02:44:28 markd Exp $
 
 --- kdecore/kstandarddirs.cpp.orig	2005-10-11 04:06:02.000000000 +1300
 +++ kdecore/kstandarddirs.cpp
@@ -12,8 +12,7 @@ $NetBSD: patch-an,v 1.10 2005/12/29 23:41:42 markd Exp $
 -	return "share/doc/HTML/";
 +	return "share/doc/kde/HTML/";
      if (!strcmp(type, "icon"))
--	return "share/icons/";
-+	return "share/kde/icons/";
+ 	return "share/icons/";
      if (!strcmp(type, "config"))
 -	return "share/config/";
 +	return "share/kde/config/";

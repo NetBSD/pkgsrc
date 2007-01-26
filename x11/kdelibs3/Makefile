@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2007/01/17 23:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2007/01/26 02:44:27 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -9,7 +8,6 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 CONFLICTS+=	koffice3<=1.1.1
 
-USE_DIRS+=		xdg-1.2
 USE_TOOLS+=		perl:run pkg-config
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus
@@ -22,12 +20,9 @@ SGML_CATALOGS=		${PREFIX}/share/kde/apps/ksgmltools2/customization/catalog
 SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2/docbook.cat
 SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docbook.cat
 
-.include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"
 
 LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-REQD_DIRS+=	${KDE3_DIRS:O:S/^/${PREFIX}\//}
 
 REPLACE_PERL+= \
 	dcop/dcopidlng/kalyptus \
@@ -61,25 +56,7 @@ SPECIAL_PERMS+=	${PREFIX}/bin/fileshareset	${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/bin/kgrantpty		${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/bin/kpac_dhcp_helper	${SETUID_ROOT_PERMS}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kdelibs
-PKG_SUPPORTED_OPTIONS=	cups debug
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
-PLIST_SUBST+=		CUPS=
-.else
-CONFIGURE_ARGS+=	--disable-cups
-PLIST_SUBST+=		CUPS="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mdebug)
-CC+=			-ggdb
-CXX+=			-ggdb
-CONFIGURE_ARGS+=	--enable-debug=full
-CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
-INSTALL_UNSTRIPPED=	yes
-.endif
+.include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
 .  if ${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*}
