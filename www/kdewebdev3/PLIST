@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/10/12 10:40:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/01/26 02:53:44 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -204,6 +204,72 @@ share/doc/kde/HTML/en/xsldbg/index.docbook
 share/doc/kde/HTML/en/xsldbg/introduction.docbook
 share/doc/kde/HTML/en/xsldbg/usage.docbook
 share/doc/kde/HTML/en/xsldbg/xsldbghelp.xml
+share/icons/crystalsvg/128x128/apps/kommander.png
+share/icons/crystalsvg/16x16/actions/bug.png
+share/icons/crystalsvg/16x16/apps/kommander.png
+share/icons/crystalsvg/22x22/apps/kommander.png
+share/icons/crystalsvg/32x32/apps/kommander.png
+share/icons/crystalsvg/64x64/apps/kommander.png
+share/icons/hicolor/128x128/apps/klinkstatus.png
+share/icons/hicolor/16x16/actions/1downarrow.png
+share/icons/hicolor/16x16/actions/configure.png
+share/icons/hicolor/16x16/actions/exit.png
+share/icons/hicolor/16x16/actions/hash.png
+share/icons/hicolor/16x16/actions/mark.png
+share/icons/hicolor/16x16/actions/next.png
+share/icons/hicolor/16x16/actions/run.png
+share/icons/hicolor/16x16/actions/step.png
+share/icons/hicolor/16x16/actions/xsldbg_break.png
+share/icons/hicolor/16x16/actions/xsldbg_data.png
+share/icons/hicolor/16x16/actions/xsldbg_delete.png
+share/icons/hicolor/16x16/actions/xsldbg_enable.png
+share/icons/hicolor/16x16/actions/xsldbg_output.png
+share/icons/hicolor/16x16/actions/xsldbg_refresh.png
+share/icons/hicolor/16x16/actions/xsldbg_source.png
+share/icons/hicolor/16x16/actions/xsldbg_stepdown.png
+share/icons/hicolor/16x16/actions/xsldbg_stepup.png
+share/icons/hicolor/16x16/apps/kimagemapeditor.png
+share/icons/hicolor/16x16/apps/klinkstatus.png
+share/icons/hicolor/16x16/apps/quanta.png
+share/icons/hicolor/22x22/actions/1downarrow.png
+share/icons/hicolor/22x22/actions/addpoint.png
+share/icons/hicolor/22x22/actions/arrow.png
+share/icons/hicolor/22x22/actions/circle.png
+share/icons/hicolor/22x22/actions/circle2.png
+share/icons/hicolor/22x22/actions/configure.png
+share/icons/hicolor/22x22/actions/exit.png
+share/icons/hicolor/22x22/actions/freehand.png
+share/icons/hicolor/22x22/actions/lower.png
+share/icons/hicolor/22x22/actions/next.png
+share/icons/hicolor/22x22/actions/polygon.png
+share/icons/hicolor/22x22/actions/raise.png
+share/icons/hicolor/22x22/actions/rectangle.png
+share/icons/hicolor/22x22/actions/removepoint.png
+share/icons/hicolor/22x22/actions/run.png
+share/icons/hicolor/22x22/actions/step.png
+share/icons/hicolor/22x22/actions/xsldbg_break.png
+share/icons/hicolor/22x22/actions/xsldbg_data.png
+share/icons/hicolor/22x22/actions/xsldbg_delete.png
+share/icons/hicolor/22x22/actions/xsldbg_enable.png
+share/icons/hicolor/22x22/actions/xsldbg_output.png
+share/icons/hicolor/22x22/actions/xsldbg_refresh.png
+share/icons/hicolor/22x22/actions/xsldbg_source.png
+share/icons/hicolor/22x22/actions/xsldbg_stepdown.png
+share/icons/hicolor/22x22/actions/xsldbg_stepup.png
+share/icons/hicolor/22x22/apps/kfilereplace.png
+share/icons/hicolor/22x22/apps/klinkstatus.png
+share/icons/hicolor/22x22/apps/quanta.png
+share/icons/hicolor/32x32/apps/kfilereplace.png
+share/icons/hicolor/32x32/apps/kimagemapeditor.png
+share/icons/hicolor/32x32/apps/klinkstatus.png
+share/icons/hicolor/32x32/apps/quanta.png
+share/icons/hicolor/48x48/apps/kfilereplace.png
+share/icons/hicolor/48x48/apps/kimagemapeditor.png
+share/icons/hicolor/48x48/apps/klinkstatus.png
+share/icons/hicolor/48x48/apps/quanta.png
+share/icons/hicolor/64x64/apps/klinkstatus.png
+share/icons/locolor/16x16/apps/kimagemapeditor.png
+share/icons/locolor/32x32/apps/kimagemapeditor.png
 share/kde/applnk/.hidden/kmdr-executor.desktop
 share/kde/apps/kafkapart/entities
 share/kde/apps/kafkapart/pics/comment.png
@@ -1554,72 +1620,6 @@ share/kde/apps/quanta/toolbars/wml-1-2/tasks.toolbar.tgz
 share/kde/apps/quanta/toolbars/wml-1-2/text.toolbar.tgz
 share/kde/apps/quanta/toolbars/xml/fonts.toolbar.tgz
 share/kde/config.kcfg/klinkstatus.kcfg
-share/kde/icons/crystalsvg/128x128/apps/kommander.png
-share/kde/icons/crystalsvg/16x16/actions/bug.png
-share/kde/icons/crystalsvg/16x16/apps/kommander.png
-share/kde/icons/crystalsvg/22x22/apps/kommander.png
-share/kde/icons/crystalsvg/32x32/apps/kommander.png
-share/kde/icons/crystalsvg/64x64/apps/kommander.png
-share/kde/icons/hicolor/128x128/apps/klinkstatus.png
-share/kde/icons/hicolor/16x16/actions/1downarrow.png
-share/kde/icons/hicolor/16x16/actions/configure.png
-share/kde/icons/hicolor/16x16/actions/exit.png
-share/kde/icons/hicolor/16x16/actions/hash.png
-share/kde/icons/hicolor/16x16/actions/mark.png
-share/kde/icons/hicolor/16x16/actions/next.png
-share/kde/icons/hicolor/16x16/actions/run.png
-share/kde/icons/hicolor/16x16/actions/step.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_break.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_data.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_delete.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_enable.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_output.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_refresh.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_source.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_stepdown.png
-share/kde/icons/hicolor/16x16/actions/xsldbg_stepup.png
-share/kde/icons/hicolor/16x16/apps/kimagemapeditor.png
-share/kde/icons/hicolor/16x16/apps/klinkstatus.png
-share/kde/icons/hicolor/16x16/apps/quanta.png
-share/kde/icons/hicolor/22x22/actions/1downarrow.png
-share/kde/icons/hicolor/22x22/actions/addpoint.png
-share/kde/icons/hicolor/22x22/actions/arrow.png
-share/kde/icons/hicolor/22x22/actions/circle.png
-share/kde/icons/hicolor/22x22/actions/circle2.png
-share/kde/icons/hicolor/22x22/actions/configure.png
-share/kde/icons/hicolor/22x22/actions/exit.png
-share/kde/icons/hicolor/22x22/actions/freehand.png
-share/kde/icons/hicolor/22x22/actions/lower.png
-share/kde/icons/hicolor/22x22/actions/next.png
-share/kde/icons/hicolor/22x22/actions/polygon.png
-share/kde/icons/hicolor/22x22/actions/raise.png
-share/kde/icons/hicolor/22x22/actions/rectangle.png
-share/kde/icons/hicolor/22x22/actions/removepoint.png
-share/kde/icons/hicolor/22x22/actions/run.png
-share/kde/icons/hicolor/22x22/actions/step.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_break.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_data.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_delete.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_enable.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_output.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_refresh.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_source.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_stepdown.png
-share/kde/icons/hicolor/22x22/actions/xsldbg_stepup.png
-share/kde/icons/hicolor/22x22/apps/kfilereplace.png
-share/kde/icons/hicolor/22x22/apps/klinkstatus.png
-share/kde/icons/hicolor/22x22/apps/quanta.png
-share/kde/icons/hicolor/32x32/apps/kfilereplace.png
-share/kde/icons/hicolor/32x32/apps/kimagemapeditor.png
-share/kde/icons/hicolor/32x32/apps/klinkstatus.png
-share/kde/icons/hicolor/32x32/apps/quanta.png
-share/kde/icons/hicolor/48x48/apps/kfilereplace.png
-share/kde/icons/hicolor/48x48/apps/kimagemapeditor.png
-share/kde/icons/hicolor/48x48/apps/klinkstatus.png
-share/kde/icons/hicolor/48x48/apps/quanta.png
-share/kde/icons/hicolor/64x64/apps/klinkstatus.png
-share/kde/icons/locolor/16x16/apps/kimagemapeditor.png
-share/kde/icons/locolor/32x32/apps/kimagemapeditor.png
 share/kde/mimelnk/application/x-kommander.desktop
 share/kde/mimelnk/application/x-webprj.desktop
 share/kde/services/kfilereplacepart.desktop
@@ -1633,22 +1633,6 @@ share/kde/servicetypes/quantadebugger.desktop
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/quanta/toolbars/xml
 @dirrm share/kde/apps/quanta/toolbars/wml-1-2
@@ -1736,6 +1720,22 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/kafkapart
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
 @dirrm share/doc/kde/HTML/en/xsldbg
 @dirrm share/doc/kde/HTML/en/quanta
 @dirrm share/doc/kde/HTML/en/kxsldbg

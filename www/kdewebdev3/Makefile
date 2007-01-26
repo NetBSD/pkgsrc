@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2007/01/17 23:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/26 02:53:43 markd Exp $
 
 DISTNAME=	kdewebdev-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 COMMENT= 	HTML editor and tools suitable for experienced web developers
 
@@ -18,6 +17,7 @@ SUBST_FILES.xmlpath=	klinkstatus/src/utils/Makefile.in
 SUBST_SED.xmlpath=	-e s:/usr/include/libxml2:${PREFIX}/include/libxml2:
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
