@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/03/30 02:50:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/01/26 03:19:22 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -79,7 +79,6 @@ share/applications/kde/kdf.desktop
 share/applications/kde/kgpg.desktop
 share/applications/kde/khexedit.desktop
 share/applications/kde/kregexpeditor.desktop
-share/applications/kde/ksim.desktop
 share/applications/kde/ktimer.desktop
 share/applications/kde/kwalletconfig.desktop
 share/applications/kde/kwalletmanager-kwalletd.desktop
@@ -195,6 +194,108 @@ share/doc/kde/HTML/en/kwallet/password2.png
 share/doc/kde/HTML/en/superkaramba/common
 share/doc/kde/HTML/en/superkaramba/index.cache.bz2
 share/doc/kde/HTML/en/superkaramba/index.docbook
+share/icons/crystalsvg/128x128/apps/laptop_battery.png
+share/icons/crystalsvg/128x128/apps/superkaramba.png
+share/icons/crystalsvg/128x128/mimetypes/superkaramba_theme.png
+share/icons/crystalsvg/16x16/apps/kcmdf.png
+share/icons/crystalsvg/16x16/apps/ksim.png
+share/icons/crystalsvg/16x16/apps/laptop_battery.png
+share/icons/crystalsvg/16x16/apps/laptop_pcmcia.png
+share/icons/crystalsvg/16x16/apps/superkaramba.png
+share/icons/crystalsvg/16x16/devices/ksim_cpu.png
+share/icons/crystalsvg/16x16/mimetypes/superkaramba_theme.png
+share/icons/crystalsvg/22x22/apps/kcmdf.png
+share/icons/crystalsvg/22x22/apps/superkaramba.png
+share/icons/crystalsvg/22x22/mimetypes/superkaramba_theme.png
+share/icons/crystalsvg/32x32/apps/kcmdf.png
+share/icons/crystalsvg/32x32/apps/ksim.png
+share/icons/crystalsvg/32x32/apps/laptop_battery.png
+share/icons/crystalsvg/32x32/apps/laptop_pcmcia.png
+share/icons/crystalsvg/32x32/apps/superkaramba.png
+share/icons/crystalsvg/32x32/mimetypes/superkaramba_theme.png
+share/icons/crystalsvg/48x48/apps/ksim.png
+share/icons/crystalsvg/48x48/apps/laptop_battery.png
+share/icons/crystalsvg/48x48/apps/laptop_pcmcia.png
+share/icons/crystalsvg/48x48/apps/superkaramba.png
+share/icons/crystalsvg/48x48/mimetypes/superkaramba_theme.png
+share/icons/crystalsvg/64x64/apps/laptop_battery.png
+share/icons/crystalsvg/64x64/apps/superkaramba.png
+share/icons/crystalsvg/64x64/mimetypes/superkaramba_theme.png
+share/icons/crystalsvg/scalable/apps/laptop_battery.svgz
+share/icons/crystalsvg/scalable/apps/superkaramba.svgz
+share/icons/crystalsvg/scalable/mimetypes/superkaramba_theme.svgz
+share/icons/hicolor/128x128/apps/ark.png
+share/icons/hicolor/128x128/apps/kdf.png
+share/icons/hicolor/128x128/apps/kfloppy.png
+share/icons/hicolor/128x128/apps/kregexpeditor.png
+share/icons/hicolor/128x128/apps/ktimer.png
+share/icons/hicolor/128x128/apps/kwalletmanager.png
+share/icons/hicolor/128x128/apps/kwikdisk.png
+share/icons/hicolor/16x16/apps/ark.png
+share/icons/hicolor/16x16/apps/irkick.png
+share/icons/hicolor/16x16/apps/kcalc.png
+share/icons/hicolor/16x16/apps/kcharselect.png
+share/icons/hicolor/16x16/apps/kdf.png
+share/icons/hicolor/16x16/apps/kedit.png
+share/icons/hicolor/16x16/apps/kfloppy.png
+share/icons/hicolor/16x16/apps/kgpg.png
+share/icons/hicolor/16x16/apps/khexedit.png
+share/icons/hicolor/16x16/apps/kjots.png
+share/icons/hicolor/16x16/apps/kregexpeditor.png
+share/icons/hicolor/16x16/apps/ktimer.png
+share/icons/hicolor/16x16/apps/kwalletmanager.png
+share/icons/hicolor/16x16/apps/kwikdisk.png
+share/icons/hicolor/22x22/apps/ark.png
+share/icons/hicolor/22x22/apps/irkick.png
+share/icons/hicolor/22x22/apps/kcalc.png
+share/icons/hicolor/22x22/apps/kdf.png
+share/icons/hicolor/22x22/apps/kedit.png
+share/icons/hicolor/22x22/apps/kfloppy.png
+share/icons/hicolor/22x22/apps/kgpg.png
+share/icons/hicolor/22x22/apps/kjots.png
+share/icons/hicolor/22x22/apps/kregexpeditor.png
+share/icons/hicolor/22x22/apps/kwalletmanager.png
+share/icons/hicolor/22x22/apps/kwikdisk.png
+share/icons/hicolor/32x32/apps/ark.png
+share/icons/hicolor/32x32/apps/irkick.png
+share/icons/hicolor/32x32/apps/kcalc.png
+share/icons/hicolor/32x32/apps/kcharselect.png
+share/icons/hicolor/32x32/apps/kdf.png
+share/icons/hicolor/32x32/apps/kedit.png
+share/icons/hicolor/32x32/apps/kfloppy.png
+share/icons/hicolor/32x32/apps/kgpg.png
+share/icons/hicolor/32x32/apps/khexedit.png
+share/icons/hicolor/32x32/apps/kjots.png
+share/icons/hicolor/32x32/apps/kregexpeditor.png
+share/icons/hicolor/32x32/apps/ktimer.png
+share/icons/hicolor/32x32/apps/kwalletmanager.png
+share/icons/hicolor/32x32/apps/kwikdisk.png
+share/icons/hicolor/48x48/apps/ark.png
+share/icons/hicolor/48x48/apps/kcalc.png
+share/icons/hicolor/48x48/apps/kcharselect.png
+share/icons/hicolor/48x48/apps/kdf.png
+share/icons/hicolor/48x48/apps/kedit.png
+share/icons/hicolor/48x48/apps/kfloppy.png
+share/icons/hicolor/48x48/apps/kgpg.png
+share/icons/hicolor/48x48/apps/khexedit.png
+share/icons/hicolor/48x48/apps/kjots.png
+share/icons/hicolor/48x48/apps/kregexpeditor.png
+share/icons/hicolor/48x48/apps/ktimer.png
+share/icons/hicolor/48x48/apps/kwalletmanager.png
+share/icons/hicolor/48x48/apps/kwikdisk.png
+share/icons/hicolor/64x64/apps/ark.png
+share/icons/hicolor/64x64/apps/kcalc.png
+share/icons/hicolor/64x64/apps/kdf.png
+share/icons/hicolor/64x64/apps/kedit.png
+share/icons/hicolor/64x64/apps/kfloppy.png
+share/icons/hicolor/64x64/apps/kjots.png
+share/icons/hicolor/64x64/apps/kregexpeditor.png
+share/icons/hicolor/64x64/apps/kwalletmanager.png
+share/icons/hicolor/64x64/apps/kwikdisk.png
+share/icons/hicolor/scalable/apps/ark.svgz
+share/icons/hicolor/scalable/apps/kcalc.svgz
+share/icons/locolor/16x16/apps/irkick.png
+share/icons/locolor/32x32/apps/irkick.png
 share/kde/applnk/Utilities/superkaramba.desktop
 share/kde/apps/ark/ark_part.rc
 share/kde/apps/ark/ark_part_readonly.rc
@@ -355,108 +456,6 @@ share/kde/config.kcfg/kedit.kcfg
 share/kde/config.kcfg/kgpg.kcfg
 share/kde/config.kcfg/kjots.kcfg
 share/kde/config/ksim_panelextensionrc
-share/kde/icons/crystalsvg/128x128/apps/laptop_battery.png
-share/kde/icons/crystalsvg/128x128/apps/superkaramba.png
-share/kde/icons/crystalsvg/128x128/mimetypes/superkaramba_theme.png
-share/kde/icons/crystalsvg/16x16/apps/kcmdf.png
-share/kde/icons/crystalsvg/16x16/apps/ksim.png
-share/kde/icons/crystalsvg/16x16/apps/laptop_battery.png
-share/kde/icons/crystalsvg/16x16/apps/laptop_pcmcia.png
-share/kde/icons/crystalsvg/16x16/apps/superkaramba.png
-share/kde/icons/crystalsvg/16x16/devices/ksim_cpu.png
-share/kde/icons/crystalsvg/16x16/mimetypes/superkaramba_theme.png
-share/kde/icons/crystalsvg/22x22/apps/kcmdf.png
-share/kde/icons/crystalsvg/22x22/apps/superkaramba.png
-share/kde/icons/crystalsvg/22x22/mimetypes/superkaramba_theme.png
-share/kde/icons/crystalsvg/32x32/apps/kcmdf.png
-share/kde/icons/crystalsvg/32x32/apps/ksim.png
-share/kde/icons/crystalsvg/32x32/apps/laptop_battery.png
-share/kde/icons/crystalsvg/32x32/apps/laptop_pcmcia.png
-share/kde/icons/crystalsvg/32x32/apps/superkaramba.png
-share/kde/icons/crystalsvg/32x32/mimetypes/superkaramba_theme.png
-share/kde/icons/crystalsvg/48x48/apps/ksim.png
-share/kde/icons/crystalsvg/48x48/apps/laptop_battery.png
-share/kde/icons/crystalsvg/48x48/apps/laptop_pcmcia.png
-share/kde/icons/crystalsvg/48x48/apps/superkaramba.png
-share/kde/icons/crystalsvg/48x48/mimetypes/superkaramba_theme.png
-share/kde/icons/crystalsvg/64x64/apps/laptop_battery.png
-share/kde/icons/crystalsvg/64x64/apps/superkaramba.png
-share/kde/icons/crystalsvg/64x64/mimetypes/superkaramba_theme.png
-share/kde/icons/crystalsvg/scalable/apps/laptop_battery.svgz
-share/kde/icons/crystalsvg/scalable/apps/superkaramba.svgz
-share/kde/icons/crystalsvg/scalable/mimetypes/superkaramba_theme.svgz
-share/kde/icons/hicolor/128x128/apps/ark.png
-share/kde/icons/hicolor/128x128/apps/kdf.png
-share/kde/icons/hicolor/128x128/apps/kfloppy.png
-share/kde/icons/hicolor/128x128/apps/kregexpeditor.png
-share/kde/icons/hicolor/128x128/apps/ktimer.png
-share/kde/icons/hicolor/128x128/apps/kwalletmanager.png
-share/kde/icons/hicolor/128x128/apps/kwikdisk.png
-share/kde/icons/hicolor/16x16/apps/ark.png
-share/kde/icons/hicolor/16x16/apps/irkick.png
-share/kde/icons/hicolor/16x16/apps/kcalc.png
-share/kde/icons/hicolor/16x16/apps/kcharselect.png
-share/kde/icons/hicolor/16x16/apps/kdf.png
-share/kde/icons/hicolor/16x16/apps/kedit.png
-share/kde/icons/hicolor/16x16/apps/kfloppy.png
-share/kde/icons/hicolor/16x16/apps/kgpg.png
-share/kde/icons/hicolor/16x16/apps/khexedit.png
-share/kde/icons/hicolor/16x16/apps/kjots.png
-share/kde/icons/hicolor/16x16/apps/kregexpeditor.png
-share/kde/icons/hicolor/16x16/apps/ktimer.png
-share/kde/icons/hicolor/16x16/apps/kwalletmanager.png
-share/kde/icons/hicolor/16x16/apps/kwikdisk.png
-share/kde/icons/hicolor/22x22/apps/ark.png
-share/kde/icons/hicolor/22x22/apps/irkick.png
-share/kde/icons/hicolor/22x22/apps/kcalc.png
-share/kde/icons/hicolor/22x22/apps/kdf.png
-share/kde/icons/hicolor/22x22/apps/kedit.png
-share/kde/icons/hicolor/22x22/apps/kfloppy.png
-share/kde/icons/hicolor/22x22/apps/kgpg.png
-share/kde/icons/hicolor/22x22/apps/kjots.png
-share/kde/icons/hicolor/22x22/apps/kregexpeditor.png
-share/kde/icons/hicolor/22x22/apps/kwalletmanager.png
-share/kde/icons/hicolor/22x22/apps/kwikdisk.png
-share/kde/icons/hicolor/32x32/apps/ark.png
-share/kde/icons/hicolor/32x32/apps/irkick.png
-share/kde/icons/hicolor/32x32/apps/kcalc.png
-share/kde/icons/hicolor/32x32/apps/kcharselect.png
-share/kde/icons/hicolor/32x32/apps/kdf.png
-share/kde/icons/hicolor/32x32/apps/kedit.png
-share/kde/icons/hicolor/32x32/apps/kfloppy.png
-share/kde/icons/hicolor/32x32/apps/kgpg.png
-share/kde/icons/hicolor/32x32/apps/khexedit.png
-share/kde/icons/hicolor/32x32/apps/kjots.png
-share/kde/icons/hicolor/32x32/apps/kregexpeditor.png
-share/kde/icons/hicolor/32x32/apps/ktimer.png
-share/kde/icons/hicolor/32x32/apps/kwalletmanager.png
-share/kde/icons/hicolor/32x32/apps/kwikdisk.png
-share/kde/icons/hicolor/48x48/apps/ark.png
-share/kde/icons/hicolor/48x48/apps/kcalc.png
-share/kde/icons/hicolor/48x48/apps/kcharselect.png
-share/kde/icons/hicolor/48x48/apps/kdf.png
-share/kde/icons/hicolor/48x48/apps/kedit.png
-share/kde/icons/hicolor/48x48/apps/kfloppy.png
-share/kde/icons/hicolor/48x48/apps/kgpg.png
-share/kde/icons/hicolor/48x48/apps/khexedit.png
-share/kde/icons/hicolor/48x48/apps/kjots.png
-share/kde/icons/hicolor/48x48/apps/kregexpeditor.png
-share/kde/icons/hicolor/48x48/apps/ktimer.png
-share/kde/icons/hicolor/48x48/apps/kwalletmanager.png
-share/kde/icons/hicolor/48x48/apps/kwikdisk.png
-share/kde/icons/hicolor/64x64/apps/ark.png
-share/kde/icons/hicolor/64x64/apps/kcalc.png
-share/kde/icons/hicolor/64x64/apps/kdf.png
-share/kde/icons/hicolor/64x64/apps/kedit.png
-share/kde/icons/hicolor/64x64/apps/kfloppy.png
-share/kde/icons/hicolor/64x64/apps/kjots.png
-share/kde/icons/hicolor/64x64/apps/kregexpeditor.png
-share/kde/icons/hicolor/64x64/apps/kwalletmanager.png
-share/kde/icons/hicolor/64x64/apps/kwikdisk.png
-share/kde/icons/hicolor/scalable/apps/ark.svgz
-share/kde/icons/hicolor/scalable/apps/kcalc.svgz
-share/kde/icons/locolor/16x16/apps/irkick.png
-share/kde/icons/locolor/32x32/apps/irkick.png
 share/kde/mimelnk/application/x-superkaramba.desktop
 share/kde/services/ark_part.desktop
 share/kde/services/kbyteseditwidget.desktop
@@ -476,30 +475,6 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @comment in kde: @dirrm share/kde/services/kded
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/devices
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
@@ -570,6 +545,30 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/ark
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Utilities
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/devices
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
 @dirrm share/doc/kde/HTML/en/superkaramba
 @dirrm share/doc/kde/HTML/en/kwallet
 @dirrm share/doc/kde/HTML/en/ktimer

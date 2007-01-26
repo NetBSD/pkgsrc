@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.57 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/01/26 03:19:22 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
-PKGREVISION=	1
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_DIRS+=		xdg-1.1
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
@@ -35,6 +32,7 @@ CONFIGURE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
