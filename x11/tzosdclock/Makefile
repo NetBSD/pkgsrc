@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/26 23:29:18 joerg Exp $
 #
 
 DISTNAME=		tzosdclock_1.0.2
@@ -14,6 +14,10 @@ COMMENT=		OnScreen Display Clock for Multiple Timezones
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xosd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
