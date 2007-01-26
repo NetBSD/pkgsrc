@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2007/01/24 17:43:52 obache Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/26 03:49:32 markd Exp $
 #
 
 DISTNAME=		kscope-1.4.3
+PKGREVISION=		1
 CATEGORIES=		devel kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kscope/}
 
@@ -28,6 +29,7 @@ pre-install:
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../graphics/graphviz/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 
