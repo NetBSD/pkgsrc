@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.10 2007/01/08 15:33:13 joerg Exp $
+# $NetBSD: dirs.mk,v 1.11 2007/01/26 02:33:31 markd Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -6,6 +6,7 @@ DIRS_MK=		# defined
 
 _USE_GNOME1_DIRS=	# empty
 _USE_GNOME2_DIRS=	# empty
+_USE_KDE3_DIRS=		# empty
 _USE_TEXMF_DIRS=	# empty
 _USE_THEME_DIRS=	# empty
 _USE_XDG_DIRS=		# empty
@@ -21,6 +22,8 @@ ver:=			${dir:C/^.*-//}
 _USE_GNOME1_DIRS:=	${ver}
 .  elif ${pkg} == "gnome2" && ${_USE_GNOME2_DIRS} < ${ver}
 _USE_GNOME2_DIRS:=	${ver}
+.  elif ${pkg} == "kde3" && ${_USE_KDE3_DIRS} < ${ver}
+_USE_KDE3_DIRS:=	${ver}
 .  elif ${pkg} == "texmf" && ${_USE_TEXMF_DIRS} < ${ver}
 _USE_TEXMF_DIRS:=	${ver}
 .  elif ${pkg} == "theme" && ${_USE_THEME_DIRS} < ${ver}
@@ -45,6 +48,10 @@ _USE_XORG_DIRS:=	${ver}
 
 .if !empty(_USE_GNOME2_DIRS)
 .  include "../../misc/gnome2-dirs/dirs.mk"
+.endif
+
+.if !empty(_USE_KDE3_DIRS)
+.  include "../../misc/kde3-dirs/dirs.mk"
 .endif
 
 .if !empty(_USE_TEXMF_DIRS)
