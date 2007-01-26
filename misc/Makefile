@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2007/01/10 15:19:37 obache Exp $
+# $NetBSD: Makefile,v 1.271 2007/01/26 09:50:08 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -86,6 +86,7 @@ SUBDIR+=	kanjidic
 SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
 SUBDIR+=	kchm
+SUBDIR+=	kde3-dirs
 SUBDIR+=	kdeaccessibility3
 SUBDIR+=	kdeaddons3
 SUBDIR+=	kdeadmin3
