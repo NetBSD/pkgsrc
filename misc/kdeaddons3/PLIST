@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/08/02 14:06:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/01/26 03:06:54 markd Exp $
 bin/atlantikdesigner
 bin/fsview
 bin/jpegorient
@@ -139,6 +139,49 @@ share/doc/kde/HTML/en/konq-plugins/validators/index.docbook
 share/doc/kde/HTML/en/konq-plugins/webarchiver/common
 share/doc/kde/HTML/en/konq-plugins/webarchiver/index.cache.bz2
 share/doc/kde/HTML/en/konq-plugins/webarchiver/index.docbook
+share/icons/crystalsvg/16x16/actions/babelfish.png
+share/icons/crystalsvg/16x16/actions/cssvalidator.png
+share/icons/crystalsvg/16x16/actions/domtreeviewer.png
+share/icons/crystalsvg/16x16/actions/htmlvalidator.png
+share/icons/crystalsvg/16x16/actions/imagegallery.png
+share/icons/crystalsvg/16x16/actions/minitools.png
+share/icons/crystalsvg/16x16/actions/validators.png
+share/icons/crystalsvg/16x16/actions/webarchiver.png
+share/icons/crystalsvg/16x16/apps/konqsidebar_delicious.png
+share/icons/crystalsvg/16x16/apps/konqsidebar_mediaplayer.png
+share/icons/crystalsvg/16x16/apps/konqsidebar_news.png
+share/icons/crystalsvg/16x16/apps/ktimemon.png
+share/icons/crystalsvg/16x16/apps/synaescope.png
+share/icons/crystalsvg/22x22/actions/babelfish.png
+share/icons/crystalsvg/22x22/actions/cssvalidator.png
+share/icons/crystalsvg/22x22/actions/domtreeviewer.png
+share/icons/crystalsvg/22x22/actions/htmlvalidator.png
+share/icons/crystalsvg/22x22/actions/imagegallery.png
+share/icons/crystalsvg/22x22/actions/minitools.png
+share/icons/crystalsvg/22x22/actions/validators.png
+share/icons/crystalsvg/22x22/actions/webarchiver.png
+share/icons/crystalsvg/22x22/apps/konqsidebar_mediaplayer.png
+share/icons/crystalsvg/32x32/actions/minitools.png
+share/icons/crystalsvg/32x32/apps/konqsidebar_mediaplayer.png
+share/icons/crystalsvg/32x32/apps/ktimemon.png
+share/icons/crystalsvg/48x48/actions/minitools.png
+share/icons/crystalsvg/48x48/apps/konqsidebar_mediaplayer.png
+share/icons/hicolor/128x128/apps/metabar.png
+share/icons/hicolor/16x16/apps/atlantikdesigner.png
+share/icons/hicolor/16x16/apps/ksig.png
+share/icons/hicolor/16x16/apps/metabar.png
+share/icons/hicolor/22x22/apps/fsview.png
+share/icons/hicolor/32x32/apps/atlantikdesigner.png
+share/icons/hicolor/32x32/apps/fsview.png
+share/icons/hicolor/32x32/apps/ksig.png
+share/icons/hicolor/32x32/apps/metabar.png
+share/icons/hicolor/48x48/apps/metabar.png
+share/icons/hicolor/64x64/apps/metabar.png
+share/icons/hicolor/scalable/apps/metabar.svgz
+share/icons/locolor/16x16/apps/autorefresh.png
+share/icons/locolor/16x16/apps/ktimemon.png
+share/icons/locolor/32x32/apps/konqsidebar_mediaplayer.png
+share/icons/locolor/32x32/apps/ktimemon.png
 share/kde/applnk/.hidden/arkplugin.desktop
 share/kde/applnk/.hidden/katefll.desktop
 share/kde/applnk/.hidden/kcmkuick.desktop
@@ -291,49 +334,6 @@ share/kde/apps/noatun/wavecapture.plugin
 share/kde/config.kcfg/kbinaryclock.kcfg
 share/kde/config.kcfg/konq_sidebarnews.kcfg
 share/kde/config/translaterc
-share/kde/icons/crystalsvg/16x16/actions/babelfish.png
-share/kde/icons/crystalsvg/16x16/actions/cssvalidator.png
-share/kde/icons/crystalsvg/16x16/actions/domtreeviewer.png
-share/kde/icons/crystalsvg/16x16/actions/htmlvalidator.png
-share/kde/icons/crystalsvg/16x16/actions/imagegallery.png
-share/kde/icons/crystalsvg/16x16/actions/minitools.png
-share/kde/icons/crystalsvg/16x16/actions/validators.png
-share/kde/icons/crystalsvg/16x16/actions/webarchiver.png
-share/kde/icons/crystalsvg/16x16/apps/konqsidebar_delicious.png
-share/kde/icons/crystalsvg/16x16/apps/konqsidebar_mediaplayer.png
-share/kde/icons/crystalsvg/16x16/apps/konqsidebar_news.png
-share/kde/icons/crystalsvg/16x16/apps/ktimemon.png
-share/kde/icons/crystalsvg/16x16/apps/synaescope.png
-share/kde/icons/crystalsvg/22x22/actions/babelfish.png
-share/kde/icons/crystalsvg/22x22/actions/cssvalidator.png
-share/kde/icons/crystalsvg/22x22/actions/domtreeviewer.png
-share/kde/icons/crystalsvg/22x22/actions/htmlvalidator.png
-share/kde/icons/crystalsvg/22x22/actions/imagegallery.png
-share/kde/icons/crystalsvg/22x22/actions/minitools.png
-share/kde/icons/crystalsvg/22x22/actions/validators.png
-share/kde/icons/crystalsvg/22x22/actions/webarchiver.png
-share/kde/icons/crystalsvg/22x22/apps/konqsidebar_mediaplayer.png
-share/kde/icons/crystalsvg/32x32/actions/minitools.png
-share/kde/icons/crystalsvg/32x32/apps/konqsidebar_mediaplayer.png
-share/kde/icons/crystalsvg/32x32/apps/ktimemon.png
-share/kde/icons/crystalsvg/48x48/actions/minitools.png
-share/kde/icons/crystalsvg/48x48/apps/konqsidebar_mediaplayer.png
-share/kde/icons/hicolor/128x128/apps/metabar.png
-share/kde/icons/hicolor/16x16/apps/atlantikdesigner.png
-share/kde/icons/hicolor/16x16/apps/ksig.png
-share/kde/icons/hicolor/16x16/apps/metabar.png
-share/kde/icons/hicolor/22x22/apps/fsview.png
-share/kde/icons/hicolor/32x32/apps/atlantikdesigner.png
-share/kde/icons/hicolor/32x32/apps/fsview.png
-share/kde/icons/hicolor/32x32/apps/ksig.png
-share/kde/icons/hicolor/32x32/apps/metabar.png
-share/kde/icons/hicolor/48x48/apps/metabar.png
-share/kde/icons/hicolor/64x64/apps/metabar.png
-share/kde/icons/hicolor/scalable/apps/metabar.svgz
-share/kde/icons/locolor/16x16/apps/autorefresh.png
-share/kde/icons/locolor/16x16/apps/ktimemon.png
-share/kde/icons/locolor/32x32/apps/konqsidebar_mediaplayer.png
-share/kde/icons/locolor/32x32/apps/ktimemon.png
 share/kde/mimelnk/application/x-win-lnk.desktop
 share/kde/services/akregator_konqplugin.desktop
 share/kde/services/ark_plugin.desktop
@@ -369,23 +369,6 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/kde/services/kaddressbook
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/microformat/pics
@@ -438,6 +421,23 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kdepim: @dirrm share/kde/apps/akregator/pics
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
 @dirrm share/doc/kde/HTML/en/konq-plugins/webarchiver
 @dirrm share/doc/kde/HTML/en/konq-plugins/validators
 @dirrm share/doc/kde/HTML/en/konq-plugins/uachanger
