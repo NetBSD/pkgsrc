@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/10/12 11:10:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/01/26 03:30:26 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -355,6 +355,24 @@ share/doc/kde/HTML/en/kdevelop/setup.docbook
 share/doc/kde/HTML/en/kdevelop/survey-manual.docbook
 share/doc/kde/HTML/en/kdevelop/unixdev.docbook
 share/doc/kde/HTML/en/kdevelop/wrong-project-location.png
+share/icons/hicolor/16x16/actions/breakpoint_add.png
+share/icons/hicolor/16x16/actions/breakpoint_delete.png
+share/icons/hicolor/16x16/actions/breakpoint_delete_all.png
+share/icons/hicolor/16x16/actions/breakpoint_edit.png
+share/icons/hicolor/16x16/actions/ktip.png
+share/icons/hicolor/16x16/apps/kdevassistant.png
+share/icons/hicolor/16x16/apps/kdevdesigner.png
+share/icons/hicolor/16x16/apps/kdevelop.png
+share/icons/hicolor/32x32/actions/ktip.png
+share/icons/hicolor/32x32/apps/kdevassistant.png
+share/icons/hicolor/32x32/apps/kdevdesigner.png
+share/icons/hicolor/32x32/apps/kdevelop.png
+share/icons/hicolor/48x48/actions/ktip.png
+share/icons/hicolor/48x48/apps/kdevassistant.png
+share/icons/hicolor/48x48/apps/kdevdesigner.png
+share/icons/hicolor/48x48/apps/kdevelop.png
+share/icons/locolor/16x16/actions/kdevelop_tip.png
+share/icons/locolor/32x32/actions/kdevelop_tip.png
 share/kde/apps/kconf_update/kdev-gen-settings.upd
 share/kde/apps/kdevabbrev/kdevabbrev.rc
 share/kde/apps/kdevabbrev/sources/cpp_keywords
@@ -1196,24 +1214,6 @@ share/kde/apps/qeditorpart/highlight/qt.xml
 share/kde/apps/qeditorpart/qeditor_part.rc
 share/kde/config/kdevassistantrc
 share/kde/config/kdeveloprc
-share/kde/icons/hicolor/16x16/actions/breakpoint_add.png
-share/kde/icons/hicolor/16x16/actions/breakpoint_delete.png
-share/kde/icons/hicolor/16x16/actions/breakpoint_delete_all.png
-share/kde/icons/hicolor/16x16/actions/breakpoint_edit.png
-share/kde/icons/hicolor/16x16/actions/ktip.png
-share/kde/icons/hicolor/16x16/apps/kdevassistant.png
-share/kde/icons/hicolor/16x16/apps/kdevdesigner.png
-share/kde/icons/hicolor/16x16/apps/kdevelop.png
-share/kde/icons/hicolor/32x32/actions/ktip.png
-share/kde/icons/hicolor/32x32/apps/kdevassistant.png
-share/kde/icons/hicolor/32x32/apps/kdevdesigner.png
-share/kde/icons/hicolor/32x32/apps/kdevelop.png
-share/kde/icons/hicolor/48x48/actions/ktip.png
-share/kde/icons/hicolor/48x48/apps/kdevassistant.png
-share/kde/icons/hicolor/48x48/apps/kdevdesigner.png
-share/kde/icons/hicolor/48x48/apps/kdevelop.png
-share/kde/icons/locolor/16x16/actions/kdevelop_tip.png
-share/kde/icons/locolor/32x32/actions/kdevelop_tip.png
 share/kde/mimelnk/application/x-kdevelop.desktop
 share/kde/mimelnk/text/x-fortran.desktop
 share/kde/services/chm.protocol
@@ -1333,14 +1333,6 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/text
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/actions
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/qeditorpart/highlight
 @dirrm share/kde/apps/qeditorpart
@@ -1473,6 +1465,14 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevabbrev
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/actions
+@comment in kde: @dirrm share/icons/locolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib/html
 @dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib/html
 @dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib
