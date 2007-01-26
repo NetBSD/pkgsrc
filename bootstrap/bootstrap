@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.89 2007/01/26 07:57:04 rillig Exp $
+# $NetBSD: bootstrap,v 1.90 2007/01/26 15:48:42 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -852,6 +852,13 @@ esac
 echo_msg "Installing pkgtools"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake && $bmake install)"
+
+# On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
+# whose echo(1) is not POSIX-compliant.
+dash_echo_test=`echo "\\100"`
+if [ "$dash_echo_test" = "@" ]; then
+	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${MKCONF_EXAMPLE}
+fi
 
 # preserve compiler and tool environment variables settings
 test -z "$CP" || echo "TOOLS_PLATFORM.cp?=		$CP" >> ${MKCONF_EXAMPLE}
