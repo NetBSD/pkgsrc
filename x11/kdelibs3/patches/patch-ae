@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
+$NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
 
---- configure.orig	2005-11-26 19:40:15.000000000 +1300
+--- configure.orig	2007-01-24 21:54:16.000000000 +1300
 +++ configure
-@@ -7246,7 +7246,7 @@ darwin* | rhapsody*)
+@@ -8906,7 +8906,7 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
      case $host_cpu in
      i*86 )
-@@ -9985,7 +9985,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -11845,7 +11845,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
        archive_cmds='$CC -shared -o $lib $compiler_flags $libobjs $deplibs'
        hardcode_libdir_flag_spec='-R$libdir'
        hardcode_direct=yes
-@@ -10550,7 +10550,7 @@ kfreebsd*-gnu*)
+@@ -12410,7 +12410,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -12903,7 +12903,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14870,7 +14870,7 @@ if test -z "$aix_libpath"; then aix_libp
    freebsd-elf*)
      archive_cmds_need_lc_CXX=no
      ;;
@@ -38,7 +38,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      ld_shlibs_CXX=yes
-@@ -13614,7 +13614,7 @@ echo $ECHO_N "checking for $compiler opt
+@@ -15581,7 +15581,7 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -47,7 +47,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
  	# FreeBSD uses GNU C++
  	;;
        hpux9* | hpux10* | hpux11*)
-@@ -14216,7 +14216,7 @@ kfreebsd*-gnu*)
+@@ -16183,7 +16183,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -16742,7 +16742,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -18816,7 +18816,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -65,7 +65,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
        archive_cmds_F77='$CC -shared -o $lib $compiler_flags $libobjs $deplibs'
        hardcode_libdir_flag_spec_F77='-R$libdir'
        hardcode_direct_F77=yes
-@@ -17307,7 +17307,7 @@ kfreebsd*-gnu*)
+@@ -19381,7 +19381,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -74,7 +74,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -19035,7 +19035,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -21136,7 +21136,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -83,7 +83,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
        archive_cmds_GCJ='$CC -shared -o $lib $compiler_flags $libobjs $deplibs'
        hardcode_libdir_flag_spec_GCJ='-R$libdir'
        hardcode_direct_GCJ=yes
-@@ -19600,7 +19600,7 @@ kfreebsd*-gnu*)
+@@ -21701,7 +21701,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -92,7 +92,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -22841,7 +22841,7 @@ else
+@@ -25104,7 +25104,7 @@ else
  	linux*)
  	  libltdl_cv_sys_dlopen_deplibs=yes
  	  ;;
@@ -101,7 +101,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
  	  libltdl_cv_sys_dlopen_deplibs=yes
  	  ;;
  	solaris*)
-@@ -44967,7 +44967,7 @@ echo "$as_me: error: Fast malloc is not 
+@@ -49610,7 +49610,7 @@ echo "$as_me: error: Fast malloc is not 
      esac
      case $target_os in
          linux*) ;;
@@ -110,7 +110,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
          *)
              if test "$kde_fast_malloc" = "notgiven"; then
                  kde_fast_malloc=no
-@@ -50643,7 +50643,7 @@ echo "${ECHO_T}$kde_cv_path" >&6
+@@ -56249,7 +56249,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
        gssapi_flavor=HEIMDAL
      fi
    else
@@ -119,7 +119,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
  
  gssapi_incdir=NO
  for i in $search_incs;
-@@ -50686,7 +50686,7 @@ done
+@@ -56292,7 +56292,7 @@ done
              GSSAPI_LIBS="-L$gssapi_libdir "
              test "$USE_RPATH" = yes && GSSAPI_RPATH="-R $gssapi_libdir"
            fi
@@ -128,7 +128,7 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
            with_gssapi=FOUND
            gssapi_flavor=HEIMDAL
            break
-@@ -50730,7 +50730,7 @@ echo "${ECHO_T}searched but not found" >
+@@ -56336,7 +56336,7 @@ echo "${ECHO_T}searched but not found" >
        GSSAPI_LIBS="${GSSAPI_LIBS}-lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err ${LIBRESOLV}"
      else
        gssapi_flavor=HEIMDAL
@@ -137,45 +137,45 @@ $NetBSD: patch-ae,v 1.8 2005/12/11 10:53:54 markd Exp $
      fi
    fi
    if test "x$gssapi_flavor" = "xMIT" ; then
-@@ -50919,18 +50919,12 @@ _ACEOF
+@@ -56539,18 +56539,12 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
 +#include <math.h>
  
--/* Override any gcc2 internal prototype to avoid an error.  */
+-/* Override any GCC internal prototype to avoid an error.
+-   Use char because int might match the return type of a GCC
+-   builtin and then its argument prototype would still apply.  */
 -#ifdef __cplusplus
 -extern "C"
 -#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
 -char isinf ();
  int
  main ()
  {
--isinf ();
-+isinf (0.0);
+-return isinf ();
++return isinf (0.0);
    ;
    return 0;
  }
-@@ -51141,18 +51135,12 @@ _ACEOF
+@@ -56800,18 +56794,12 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
 +#include <math.h>
  
--/* Override any gcc2 internal prototype to avoid an error.  */
+-/* Override any GCC internal prototype to avoid an error.
+-   Use char because int might match the return type of a GCC
+-   builtin and then its argument prototype would still apply.  */
 -#ifdef __cplusplus
 -extern "C"
 -#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
 -char isnan ();
  int
  main ()
  {
--isnan ();
-+isnan (0.0);
+-return isnan ();
++return isnan (0.0);
    ;
    return 0;
  }
