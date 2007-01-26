@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5940 2007/01/25 23:40:11 wiz Exp $
+$NetBSD: TODO,v 1.5941 2007/01/26 10:56:44 markd Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ Suggested package updates
 	o gnome-applets-2.16.2
 	o gnome-games-2.16.2
 	o gnome-mag-0.14.1
-	o gnome-pilot-2.0.15
 	o gnome-screensaver-2.16.2
 	o gnome-speech-0.4.8
 	o gnome-spell-1.0.7
@@ -541,9 +540,7 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
 	o kapooka-0.3
-	o kdbg-2.0.5
 	o kdrill-6.4
-	o kid3-0.8
 	o kinput2-3.1
 	o kmp-0.5
 	o ko-baekmuk-2.1
@@ -610,7 +607,6 @@ Suggested package updates
 	o mailscanner-4.54.6
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o malsync-2.2.0
 	o manedit-0.6.1
 	o mapserver-4.2.5
 	o maradns-1.2.12.04
@@ -846,7 +842,6 @@ Suggested package updates
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
-	o pilot-link-0.12.1
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
