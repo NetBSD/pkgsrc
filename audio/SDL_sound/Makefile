@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/13 23:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/26 18:10:49 joerg Exp $
 #
 
 DISTNAME=		SDL_sound-1.0.1
@@ -18,5 +18,4 @@ USE_LIBTOOL=		YES
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
