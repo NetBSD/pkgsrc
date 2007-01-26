@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/10/12 11:17:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/26 03:36:16 markd Exp $
 share/doc/kde/HTML/hr/common/gpl-translated.html
 share/locale/hr/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/hr/LC_MESSAGES/alsaplayerui.mo
@@ -14,6 +14,7 @@ share/locale/hr/LC_MESSAGES/atlantikdesigner.mo
 share/locale/hr/LC_MESSAGES/audiorename_plugin.mo
 share/locale/hr/LC_MESSAGES/autorefresh.mo
 share/locale/hr/LC_MESSAGES/babelfish.mo
+share/locale/hr/LC_MESSAGES/blinken.mo
 share/locale/hr/LC_MESSAGES/cervisia.mo
 share/locale/hr/LC_MESSAGES/charlatanui.mo
 share/locale/hr/LC_MESSAGES/clockapplet.mo
@@ -77,6 +78,7 @@ share/locale/hr/LC_MESSAGES/kay.mo
 share/locale/hr/LC_MESSAGES/kbabel.mo
 share/locale/hr/LC_MESSAGES/kbackgammon.mo
 share/locale/hr/LC_MESSAGES/kbattleship.mo
+share/locale/hr/LC_MESSAGES/kbinaryclock.mo
 share/locale/hr/LC_MESSAGES/kblackbox.mo
 share/locale/hr/LC_MESSAGES/kbounce.mo
 share/locale/hr/LC_MESSAGES/kbruch.mo
@@ -176,13 +178,19 @@ share/locale/hr/LC_MESSAGES/kfifteenapplet.mo
 share/locale/hr/LC_MESSAGES/kfile_au.mo
 share/locale/hr/LC_MESSAGES/kfile_avi.mo
 share/locale/hr/LC_MESSAGES/kfile_bmp.mo
+share/locale/hr/LC_MESSAGES/kfile_cert.mo
 share/locale/hr/LC_MESSAGES/kfile_cpp.mo
 share/locale/hr/LC_MESSAGES/kfile_deb.mo
+share/locale/hr/LC_MESSAGES/kfile_desktop.mo
 share/locale/hr/LC_MESSAGES/kfile_diff.mo
+share/locale/hr/LC_MESSAGES/kfile_drgeo.mo
 share/locale/hr/LC_MESSAGES/kfile_dvi.mo
+share/locale/hr/LC_MESSAGES/kfile_folder.mo
 share/locale/hr/LC_MESSAGES/kfile_gif.mo
+share/locale/hr/LC_MESSAGES/kfile_html.mo
 share/locale/hr/LC_MESSAGES/kfile_ico.mo
 share/locale/hr/LC_MESSAGES/kfile_jpeg.mo
+share/locale/hr/LC_MESSAGES/kfile_kig.mo
 share/locale/hr/LC_MESSAGES/kfile_m3u.mo
 share/locale/hr/LC_MESSAGES/kfile_mp3.mo
 share/locale/hr/LC_MESSAGES/kfile_ogg.mo
@@ -207,6 +215,7 @@ share/locale/hr/LC_MESSAGES/kfontinst.mo
 share/locale/hr/LC_MESSAGES/kfouleggs.mo
 share/locale/hr/LC_MESSAGES/kgamma.mo
 share/locale/hr/LC_MESSAGES/kgantt.mo
+share/locale/hr/LC_MESSAGES/kgeography.mo
 share/locale/hr/LC_MESSAGES/kget.mo
 share/locale/hr/LC_MESSAGES/kghostview.mo
 share/locale/hr/LC_MESSAGES/kgoldrunner.mo
@@ -369,6 +378,7 @@ share/locale/hr/LC_MESSAGES/kxkb.mo
 share/locale/hr/LC_MESSAGES/kxsconfig.mo
 share/locale/hr/LC_MESSAGES/libdmctl.mo
 share/locale/hr/LC_MESSAGES/libkcal.mo
+share/locale/hr/LC_MESSAGES/libkdeedu.mo
 share/locale/hr/LC_MESSAGES/libkdegames.mo
 share/locale/hr/LC_MESSAGES/libkdepim.mo
 share/locale/hr/LC_MESSAGES/libkicker.mo
