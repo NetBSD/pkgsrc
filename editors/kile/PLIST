@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/08/30 00:15:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/01/26 04:03:20 markd Exp $
 bin/kile
 share/applications/kde/kile.desktop
 share/doc/kde/HTML/da/kile/common
@@ -152,6 +152,13 @@ share/doc/kde/HTML/sv/kile/snap_sidebarmenu.png
 share/doc/kde/HTML/sv/kile/snap_structview_label.png
 share/doc/kde/HTML/sv/kile/snap_usertag.png
 share/doc/kde/HTML/sv/kile/texgroup.png
+share/icons/hicolor/128x128/apps/kile.png
+share/icons/hicolor/16x16/apps/kile.png
+share/icons/hicolor/22x22/apps/kile.png
+share/icons/hicolor/32x32/apps/kile.png
+share/icons/hicolor/48x48/apps/kile.png
+share/icons/hicolor/64x64/apps/kile.png
+share/icons/hicolor/scalable/apps/kile.svgz
 share/kde/apps/kconf_update/kile.upd
 share/kde/apps/kconf_update/kile1.6_upd.pl
 share/kde/apps/kconf_update/kile1.7_upd.pl
@@ -992,13 +999,6 @@ share/kde/apps/kile/test/test_index.tex
 share/kde/apps/kile/test/test_plain.tex
 share/kde/apps/kile/tips
 share/kde/config.kcfg/kile.kcfg
-share/kde/icons/hicolor/128x128/apps/kile.png
-share/kde/icons/hicolor/16x16/apps/kile.png
-share/kde/icons/hicolor/22x22/apps/kile.png
-share/kde/icons/hicolor/32x32/apps/kile.png
-share/kde/icons/hicolor/48x48/apps/kile.png
-share/kde/icons/hicolor/64x64/apps/kile.png
-share/kde/icons/hicolor/scalable/apps/kile.svgz
 share/kde/mimelnk/text/x-kilepr.desktop
 share/locale/br/LC_MESSAGES/kile.mo
 share/locale/ca/LC_MESSAGES/kile.mo
@@ -1041,13 +1041,6 @@ share/locale/tr/LC_MESSAGES/kile.mo
 share/locale/uk/LC_MESSAGES/kile.mo
 share/locale/zh_CN/LC_MESSAGES/kile.mo
 @comment in kde: @dirrm share/kde/mimelnk/text
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/kile/test
 @dirrm share/kde/apps/kile/templates
@@ -1072,6 +1065,13 @@ share/locale/zh_CN/LC_MESSAGES/kile.mo
 @dirrm share/kde/apps/kile
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @dirrm share/doc/kde/HTML/sv/kile
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/pt/kile

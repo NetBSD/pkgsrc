@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:03:20 markd Exp $
 bin/knights
 share/doc/kde/HTML/de/knights/common
 share/doc/kde/HTML/en/knights/common
@@ -10,6 +10,14 @@ share/doc/kde/HTML/fr/knights/common
 share/doc/kde/HTML/fr/knights/index.docbook
 share/doc/kde/HTML/it/knights/common
 share/doc/kde/HTML/ru/knights/common
+share/icons/hicolor/16x16/apps/knights.png
+share/icons/hicolor/16x16/mimetypes/pgn.png
+share/icons/hicolor/32x32/apps/knights.png
+share/icons/hicolor/32x32/mimetypes/pgn.png
+share/icons/hicolor/48x48/apps/knights.png
+share/icons/hicolor/48x48/mimetypes/pgn.png
+share/icons/hicolor/64x64/apps/knights.png
+share/icons/hicolor/64x64/mimetypes/pgn.png
 share/kde/applnk/Games/Board/knights.desktop
 share/kde/apps/knights/default-engine-portrait.jpg
 share/kde/apps/knights/default-portrait.jpg
@@ -21,14 +29,6 @@ share/kde/apps/knights/themes/KBDefault.tar.gz
 share/kde/apps/knights/themes/KCDefault.tar.gz
 share/kde/apps/knights/themes/KSDefault.tar.gz
 share/kde/apps/knights/wizard.png
-share/kde/icons/hicolor/16x16/apps/knights.png
-share/kde/icons/hicolor/16x16/mimetypes/pgn.png
-share/kde/icons/hicolor/32x32/apps/knights.png
-share/kde/icons/hicolor/32x32/mimetypes/pgn.png
-share/kde/icons/hicolor/48x48/apps/knights.png
-share/kde/icons/hicolor/48x48/mimetypes/pgn.png
-share/kde/icons/hicolor/64x64/apps/knights.png
-share/kde/icons/hicolor/64x64/mimetypes/pgn.png
 share/kde/mimelnk/application/pgn.desktop
 share/locale/de/LC_MESSAGES/knights.mo
 share/locale/es/LC_MESSAGES/knights.mo
@@ -37,18 +37,18 @@ share/locale/fi/LC_MESSAGES/knights.mo
 share/locale/fr/LC_MESSAGES/knights.mo
 share/locale/it/LC_MESSAGES/knights.mo
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/knights/themes
 @dirrm share/kde/apps/knights
 @comment in kde: @dirrm share/kde/apps
 @dirrm share/kde/applnk/Games/Board
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @dirrm share/doc/kde/HTML/ru/knights
 @comment in kde: @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/it/knights

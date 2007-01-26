@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/26 04:03:20 markd Exp $
 
 DISTNAME=	kmymoney2-0.8.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,6 +32,7 @@ SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
