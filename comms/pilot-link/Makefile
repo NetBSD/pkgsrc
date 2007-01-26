@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/01/26 01:26:46 markd Exp $
 
 .include "../../comms/pilot-link/Makefile.common"
-
-PKGREVISION=		5
 
 COMMENT=		Tools to talk to the 3Com Pilot PDA
 
@@ -12,9 +10,9 @@ USE_TOOLS+=		gmake perl:run
 USE_GNU_READLINE=	YES
 
 CONFIGURE_ARGS+=	--with-perl5=${PERL5:Q}
-CONFIGURE_ARGS+=	--with-readline21
-CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
-CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
+CONFIGURE_ARGS+=	--with-libpng
+CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--enable-conduits
 
 BUILD_DIRS=		${WRKSRC}/src
 BUILD_DIRS+=		${WRKSRC}/bindings
@@ -30,9 +28,8 @@ post-patch:
 	done
 
 .include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
