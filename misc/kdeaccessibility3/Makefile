@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/26 03:02:34 markd Exp $
 
 DISTNAME=	kdeaccessibility-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Accessibility support for the KDE integrated X11 desktop
 
@@ -17,6 +16,7 @@ PKG_SUPPORTED_OPTIONS=	gstreamer
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-kttsd-gstreamer
+CONFIGURE_ARGS+=	--with-gstreamer
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 PLIST_SUBST+=		HAVE_GST=""
@@ -25,6 +25,7 @@ PLIST_SUBST+=		HAVE_GST="@comment "
 .endif
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
