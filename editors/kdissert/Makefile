@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/26 04:03:19 markd Exp $
 #
 
 DISTNAME=		kdissert-1.0.5
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		editors
 MASTER_SITES=		http://freehackers.org/~tnagy/kdissert/
 EXTRACT_SUFX=		.tar.bz2
@@ -26,6 +26,7 @@ do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

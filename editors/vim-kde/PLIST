@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/28 22:29:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:03:20 markd Exp $
 bin/eview
 bin/evim
 bin/ex
@@ -23,15 +23,15 @@ man/man1/vim.1
 man/man1/vimdiff.1
 man/man1/vimtutor.1
 man/man1/xxd.1
+share/icons/hicolor/16x16/actions/hi16-action-make.png
+share/icons/hicolor/22x22/actions/hi22-action-make.png
+share/icons/hicolor/32x32/apps/kvim.png
+share/icons/hicolor/48x48/apps/gvim.png
+share/icons/hicolor/48x48/apps/kvim.png
+share/icons/locolor/16x16/apps/gvim.png
+share/icons/locolor/32x32/apps/gvim.png
 share/kde/applnk/Editors/KVim.desktop
 share/kde/apps/kvim/tips
-share/kde/icons/hicolor/16x16/actions/hi16-action-make.png
-share/kde/icons/hicolor/22x22/actions/hi22-action-make.png
-share/kde/icons/hicolor/32x32/apps/kvim.png
-share/kde/icons/hicolor/48x48/apps/gvim.png
-share/kde/icons/hicolor/48x48/apps/kvim.png
-share/kde/icons/locolor/16x16/apps/gvim.png
-share/kde/icons/locolor/32x32/apps/gvim.png
 share/kde/vim/vim62/bugreport.vim
 share/kde/vim/vim62/colors/README.txt
 share/kde/vim/vim62/colors/blue.vim
@@ -983,6 +983,3 @@ share/kde/vim/vim62/vimrc_example.vim
 @dirrm share/kde/vim
 @dirrm share/kde/apps/kvim
 @unexec ${RMDIR} %D/share/kde/applnk/Editors 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/16x16/actions 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/48x48/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/icons/hicolor/22x22/actions 2>/dev/null || ${TRUE}
