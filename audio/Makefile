@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2007/01/25 19:37:11 drochner Exp $
+# $NetBSD: Makefile,v 1.345 2007/01/26 07:46:56 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -169,7 +169,6 @@ SUBDIR+=	libsidplay
 SUBDIR+=	libsidplay2
 SUBDIR+=	libsndfile
 SUBDIR+=	libtunepimp
-SUBDIR+=	libtunepimp0.4
 SUBDIR+=	libvisual
 SUBDIR+=	libvisual-bmp
 SUBDIR+=	libvisual-plugins
