@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/26 17:55:06 drochner Exp $
+
+SHA1 (atomix-2.14.0.tar.gz) = bca844fcd6259cc7460e1ef6e0091a92b36ad544
+RMD160 (atomix-2.14.0.tar.gz) = 955378f4fcbad2e8c4f3451bb13ad4a42ef05eda
+Size (atomix-2.14.0.tar.gz) = 332485 bytes
