@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/01/26 03:02:34 markd Exp $
+# $NetBSD: Makefile,v 1.25 2007/01/26 15:05:23 joerg Exp $
 
 DISTNAME=	kdeaccessibility-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -28,6 +28,7 @@ PLIST_SUBST+=		HAVE_GST="@comment "
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
