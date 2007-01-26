@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/26 04:25:46 markd Exp $
 bin/kbiff
 lib/kbiff.la
 man/man1/kbiff.1
@@ -15,6 +15,11 @@ share/doc/kde/HTML/es/kbiff/index.docbook
 share/doc/kde/HTML/fr/kbiff/common
 share/doc/kde/HTML/fr/kbiff/index.cache.bz2
 share/doc/kde/HTML/fr/kbiff/index.docbook
+share/icons/hicolor/16x16/apps/kbiff.png
+share/icons/hicolor/32x32/apps/kbiff.png
+share/icons/hicolor/48x48/apps/kbiff.png
+share/icons/locolor/16x16/apps/kbiff.png
+share/icons/locolor/32x32/apps/kbiff.png
 share/kde/applnk/Internet/kbiff.desktop
 share/kde/apps/kbiff/pics/delete.png
 share/kde/apps/kbiff/pics/mailbox.png
@@ -27,11 +32,6 @@ share/kde/apps/kbiff/pics/noconn.png
 share/kde/apps/kbiff/pics/nomail.png
 share/kde/apps/kbiff/pics/oldmail.png
 share/kde/apps/kbiff/pics/playsound.png
-share/kde/icons/hicolor/16x16/apps/kbiff.png
-share/kde/icons/hicolor/32x32/apps/kbiff.png
-share/kde/icons/hicolor/48x48/apps/kbiff.png
-share/kde/icons/locolor/16x16/apps/kbiff.png
-share/kde/icons/locolor/32x32/apps/kbiff.png
 share/locale/br/LC_MESSAGES/kbiff.mo
 share/locale/cs/LC_MESSAGES/kbiff.mo
 share/locale/da/LC_MESSAGES/kbiff.mo
