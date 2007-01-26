@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2007/01/26 01:44:55 markd Exp $
 
-DISTNAME=		jpilot-syncmal_0.71.2
-PKGNAME=		jpilot-syncmal-0.71.2
-PKGREVISION=		8
+DISTNAME=		jpilot-syncmal-0.80
 CATEGORIES=		comms
 MASTER_SITES=		http://jasonday.home.att.net/code/syncmal/
 
@@ -21,6 +19,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--with-plugin-prefix=${BUILDLINK_PREFIX.jpilot}/include/jpilot
 CONFIGURE_ARGS+=	--with-pilot-prefix=${BUILDLINK_PREFIX.pilot-link-libs}
+CONFIGURE_ARGS+=	--with-libmal=${BUILDLINK_PREFIX.libmal}
 MAKE_ENV+=		PILOT_LINK_DIR=${BUILDLINK_PREFIX.pilot-link-libs}
 CFLAGS+=		-D__unix__=1
 
@@ -28,6 +27,7 @@ PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 PLIST_SUBST+=		PLUGINSDIR=${PLUGINSDIR:S/${PREFIX}\///}
 
 .include "../../comms/jpilot/buildlink3.mk"
+.include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
