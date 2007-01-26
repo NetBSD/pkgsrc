@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/28 14:20:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/26 04:13:34 markd Exp $
 bin/kphotobook
 share/doc/kde/HTML/en/kphotobook/common
 share/doc/kde/HTML/en/kphotobook/index.cache.bz2
 share/doc/kde/HTML/en/kphotobook/index.docbook
+share/icons/hicolor/16x16/apps/kphotobook.png
+share/icons/hicolor/32x32/apps/kphotobook.png
+share/icons/hicolor/48x48/apps/kphotobook.png
 share/kde/applnk/Graphics/kphotobook.desktop
 share/kde/apps/kphotobook/icons/hicolor/16x16/actions/andify.png
 share/kde/apps/kphotobook/icons/hicolor/16x16/actions/collapse.png
@@ -83,9 +86,6 @@ share/kde/apps/kphotobook/icons/hicolor/32x32/actions/view_autorefresh.png
 share/kde/apps/kphotobook/icons/hicolor/32x32/actions/view_layout_restore.png
 share/kde/apps/kphotobook/icons/hicolor/32x32/actions/view_refresh.png
 share/kde/apps/kphotobook/kphotobookui.rc
-share/kde/icons/hicolor/16x16/apps/kphotobook.png
-share/kde/icons/hicolor/32x32/apps/kphotobook.png
-share/kde/icons/hicolor/48x48/apps/kphotobook.png
 share/kde/mimelnk/application/x-kphotobook.desktop
 @dirrm share/kde/apps/kphotobook/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/kphotobook/icons/hicolor/22x22/actions

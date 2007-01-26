@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/31 22:30:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/26 04:13:34 markd Exp $
 bin/kphotools
 share/doc/kde/HTML/en/kphotools/common
 share/doc/kde/HTML/en/kphotools/index.cache.bz2
 share/doc/kde/HTML/en/kphotools/index.docbook
+share/icons/hicolor/16x16/apps/kphotools.png
+share/icons/hicolor/32x32/apps/kphotools.png
 share/kde/applnk/Utilities/kphotools.desktop
 share/kde/apps/kphotools/kphotoolsui.rc
 share/kde/apps/kphotools/logo.png
@@ -29,8 +31,6 @@ share/kde/apps/kphotools/styles/orange/preview.png
 share/kde/apps/kphotools/styles/orange/show.html
 share/kde/apps/kphotools/styles/orange/show.js
 share/kde/apps/kphotools/styles/orange/table_corner.png
-share/kde/icons/hicolor/16x16/apps/kphotools.png
-share/kde/icons/hicolor/32x32/apps/kphotools.png
 @dirrm share/kde/apps/kphotools/styles/orange
 @dirrm share/kde/apps/kphotools/styles/default
 @dirrm share/kde/apps/kphotools/styles

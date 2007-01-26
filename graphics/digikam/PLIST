@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/01/02 20:17:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/01/26 04:13:33 markd Exp $
 bin/digikam
 bin/digikamdcraw
 bin/digitaglinktree
@@ -58,6 +58,18 @@ lib/libdigikam.la
 man/man1/digitaglinktree.1
 share/applications/kde/digikam.desktop
 share/applications/kde/showfoto.desktop
+share/icons/hicolor/128x128/apps/digikam.png
+share/icons/hicolor/128x128/apps/showfoto.png
+share/icons/hicolor/16x16/apps/digikam.png
+share/icons/hicolor/16x16/apps/showfoto.png
+share/icons/hicolor/22x22/apps/digikam.png
+share/icons/hicolor/22x22/apps/showfoto.png
+share/icons/hicolor/32x32/apps/digikam.png
+share/icons/hicolor/32x32/apps/showfoto.png
+share/icons/hicolor/48x48/apps/digikam.png
+share/icons/hicolor/48x48/apps/showfoto.png
+share/icons/hicolor/64x64/apps/digikam.png
+share/icons/hicolor/64x64/apps/showfoto.png
 share/kde/apps/digikam/about/bar-bottom-left.png
 share/kde/apps/digikam/about/bar-bottom-middle.png
 share/kde/apps/digikam/about/bar-bottom-right.png
@@ -421,18 +433,6 @@ share/kde/apps/showfoto/icons/hicolor/scalable/actions/resize_image.svgz
 share/kde/apps/showfoto/icons/hicolor/scalable/actions/slideshow.svgz
 share/kde/apps/showfoto/showfoto-splash.png
 share/kde/apps/showfoto/showfotoui.rc
-share/kde/icons/hicolor/128x128/apps/digikam.png
-share/kde/icons/hicolor/128x128/apps/showfoto.png
-share/kde/icons/hicolor/16x16/apps/digikam.png
-share/kde/icons/hicolor/16x16/apps/showfoto.png
-share/kde/icons/hicolor/22x22/apps/digikam.png
-share/kde/icons/hicolor/22x22/apps/showfoto.png
-share/kde/icons/hicolor/32x32/apps/digikam.png
-share/kde/icons/hicolor/32x32/apps/showfoto.png
-share/kde/icons/hicolor/48x48/apps/digikam.png
-share/kde/icons/hicolor/48x48/apps/showfoto.png
-share/kde/icons/hicolor/64x64/apps/digikam.png
-share/kde/icons/hicolor/64x64/apps/showfoto.png
 share/kde/services/digikamalbums.protocol
 share/kde/services/digikamdates.protocol
 share/kde/services/digikamimageplugin_core.desktop
@@ -490,12 +490,6 @@ share/locale/zh_CN/LC_MESSAGES/digikam.mo
 share/locale/zh_TW/LC_MESSAGES/digikam.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @dirrm share/kde/apps/showfoto/icons/hicolor/scalable/actions
 @dirrm share/kde/apps/showfoto/icons/hicolor/scalable
 @dirrm share/kde/apps/showfoto/icons/hicolor/64x64/mimetypes
@@ -583,6 +577,12 @@ share/locale/zh_TW/LC_MESSAGES/digikam.mo
 @dirrm share/kde/apps/digikam/about
 @dirrm share/kde/apps/digikam
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/html
 @dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/digikam/html
