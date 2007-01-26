@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/06/19 16:48:49 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/26 01:37:09 markd Exp $
 
-DISTNAME=		libmal-0.40
-PKGREVISION=		2
+DISTNAME=		libmal-0.43
 CATEGORIES=		comms
 MASTER_SITES=		http://jasonday.home.att.net/code/libmal/
 
