@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2006/11/28 22:31:21 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/26 18:45:52 joerg Exp $
 #
 
 DISTNAME=	gnome-speech-0.4.6
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-speech/0.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,5 +25,4 @@ PKGCONFIG_OVERRIDE+=    gnome-speech-1.0.pc.in
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
