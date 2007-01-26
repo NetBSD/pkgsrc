@@ -1,4 +1,4 @@
-# $NetBSD: icon-cache.tmpl,v 1.1 2006/03/30 20:47:44 jmmv Exp $
+# $NetBSD: icon-cache.tmpl,v 1.2 2007/01/26 01:02:59 markd Exp $
 #
 # Rebuild the icon cache.
 #
@@ -8,6 +8,7 @@ ICON_THEME_DIR="@ICON_THEME_DIR@"
 
 case ${STAGE} in
 POST-INSTALL)
+	${TEST} -x ${GTK_UPDATE_ICON_CACHE} && \
 	${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR} >/dev/null 2>&1 || \
 		${TRUE}
 	;;
@@ -17,6 +18,7 @@ DEINSTALL)
 	;;
 POST-DEINSTALL)
 	${TEST} "${PKGBASE}" != "hicolor-icon-theme" && \
+		${TEST} -x ${GTK_UPDATE_ICON_CACHE} && \
 		${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR} >/dev/null \
 			2>&1 || ${TRUE}
 	;;
