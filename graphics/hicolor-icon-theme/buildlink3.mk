@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/12/12 21:52:36 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2007/01/26 01:02:59 markd Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 HICOLOR_ICON_THEME_BUILDLINK3_MK:=	${HICOLOR_ICON_THEME_BUILDLINK3_MK}+
@@ -27,8 +27,8 @@ PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 .  undef dirs
 
 .if !defined(HICOLOR_ICON_THEME_DEPEND_ONLY)
-.include  "../../x11/gtk2/buildlink3.mk"
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${BUILDLINK_PREFIX.gtk2}/bin/gtk-update-icon-cache"
+EVAL_PREFIX+=		PREFIX.gtk2=gtk2+
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX.gtk2}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${BUILDLINK_PREFIX.hicolor-icon-theme}/share/icons/hicolor"
 INSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
