@@ -1,0 +1,52 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
+
+--- Makefile.orig	2007-01-26 15:10:20.000000000 +0100
++++ Makefile
+@@ -10,7 +10,7 @@ SYS := $(shell uname -s | tr -d "[0-9]" 
+ # You can cross compile this program for Win32 using Linux and the 
+ # MinGW compiler. See the README for details. If you have already
+ # installed MinGW, put the location ($PREFIX) here:
+-CR_BASE = /usr/local/cross-tools/i386-mingw32msvc/bin
++CR_BASE = $(PREFIX)/cross-tools/i386-mingw32msvc/bin
+ 
+ # You shouldn't need to change anything below this line
+ #---------------------------------------------------------------------
+@@ -27,6 +27,11 @@ RAW_FLAGS += -DVERSION=\"$(VERSION)\"
+ BIN = $(PREFIX)/bin
+ MAN = $(PREFIX)/$(PKGMANDIR)/man1
+ CONF= $(PKG_SYSCONFDIR)
++SAMPLES = $(PREFIX)/share/examples/foremost
++
++# Tell it to config.c
++RAW_FLAGS += -DCONFDIR=\"$(CONF)\"
++
+ # Setup for compiling and cross-compiling for Windows
+ # The CR_ prefix refers to cross compiling from OSX to Windows
+ CR_CC = $(CR_BASE)/gcc
+@@ -120,10 +125,11 @@ foremost: $(OBJ)
+ install: goals
+ 	install -m 755 $(NAME) $(BIN)
+ 	install -m 444 $(MAN_PAGES) $(MAN)
+-	install -m 444 foremost.conf $(CONF)
+-macinstall: BIN = /usr/local/bin/
+-macinstall: MAN = /usr/share/man/man1/
+-macinstall: CONF = /usr/local/etc/
++	install -m 444 foremost.conf $(SAMPLES)
++macinstall: BIN = $(PREFIX)/bin/
++macinstall: MAN = $(PREFIX)/$(PKGMANDIR)/man1/
++macinstall: CONF = $(PREFIX)/etc/
++macinstall: SAMPLES = $(PREFIX)/share/examples/foremost
+ macinstall: mac install
+ 
+ 
+@@ -131,8 +137,8 @@ uninstall:
+ 	rm -f -- $(BIN)/{$(RM_GOALS)}
+ 	rm -f -- $(MAN)/{$(RM_DOCS)}
+ 
+-macuninstall: BIN = /usr/bin
+-macuninstall: MAN = /usr/share/man/man1
++macuninstall: BIN = $(PREFIX)/bin
++macuninstall: MAN = $(PREFIX)/$(PKGMANDIR)/man1
+ macuninstall: uninstall
+ 
+ #---------------------------------------------------------------------
