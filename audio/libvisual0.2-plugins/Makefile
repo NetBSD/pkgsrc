@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/03 23:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/26 21:04:26 joerg Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -31,7 +31,7 @@ post-install:
 .include "../../audio/libvisual0.2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 # currently not useful, since libgdkpixbuf plugin is not configurable
 #.include "../../x11/gtk2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
