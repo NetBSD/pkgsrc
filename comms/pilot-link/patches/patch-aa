@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2004/11/02 15:56:03 gavan Exp $
+$NetBSD: patch-aa,v 1.10 2007/01/26 01:26:46 markd Exp $
 
---- configure.orig	Mon Jan  6 09:45:21 2003
+--- configure.orig	2006-09-05 07:01:21.000000000 +1200
 +++ configure
-@@ -6685,7 +6685,7 @@ EOF
- 		usb_type=linux
- 		msg_usb="yes, Linux"
- 	;;
--	*freebsd*)
-+	*bsd*)
- 		cat >> confdefs.h <<\EOF
+@@ -23224,7 +23224,7 @@ _ACEOF
+ 			usb_type=linux
+ 			msg_usb="yes, Linux"
+ 		;;
+-		*freebsd*)
++		*bsd*)
+ 
+ cat >>confdefs.h <<\_ACEOF
  #define HAVE_USB 1
- EOF
