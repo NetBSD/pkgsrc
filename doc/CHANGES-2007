@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.245 2007/01/26 00:37:58 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.246 2007/01/26 07:48:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/gift-gnutella to 0.0.11 [wiz 2007-01-25]
 	Updated net/gift-openft to 0.2.1.6 [wiz 2007-01-25]
 	Updated audio/py-mutagen to 1.10 [wiz 2007-01-25]
+	Removed audio/libtunepimp0.4 [wiz 2007-01-26]
