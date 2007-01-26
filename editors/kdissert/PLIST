@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/26 04:03:19 markd Exp $
 bin/kdissert
 lib/kde3/libkdissOOOdoc.la
 lib/kde3/libkdissOOOdoc.so
@@ -28,6 +28,22 @@ share/doc/kde/HTML/en/kdissert/screenshot.jpg
 share/doc/kde/HTML/fr/kdissert/common
 share/doc/kde/HTML/fr/kdissert/index.cache.bz2
 share/doc/kde/HTML/fr/kdissert/index.docbook
+share/icons/hicolor/128x128/actions/kdissert_sort.png
+share/icons/hicolor/128x128/apps/kdissert.png
+share/icons/hicolor/16x16/actions/kdissert_link.png
+share/icons/hicolor/16x16/actions/kdissert_point.png
+share/icons/hicolor/16x16/actions/kdissert_sort.png
+share/icons/hicolor/16x16/apps/kdissert.png
+share/icons/hicolor/22x22/actions/kdissert_link.png
+share/icons/hicolor/22x22/actions/kdissert_point.png
+share/icons/hicolor/22x22/actions/kdissert_sort.png
+share/icons/hicolor/22x22/apps/kdissert.png
+share/icons/hicolor/32x32/actions/kdissert_link.png
+share/icons/hicolor/32x32/actions/kdissert_point.png
+share/icons/hicolor/32x32/actions/kdissert_sort.png
+share/icons/hicolor/32x32/apps/kdissert.png
+share/icons/hicolor/64x64/actions/kdissert_sort.png
+share/icons/hicolor/64x64/apps/kdissert.png
 share/kde/applnk/Utilities/kdissert.desktop
 share/kde/apps/kdissert/kdissertui.rc
 share/kde/apps/kdissert/pics/nopix.png
@@ -44,22 +60,6 @@ share/kde/apps/kdissert/templatedata/kdissstx.tar.gz
 share/kde/apps/kdissert/tips
 share/kde/apps/kdissertpart/kdissertpart.rc
 share/kde/config.kcfg/kdissert.kcfg
-share/kde/icons/hicolor/128x128/actions/kdissert_sort.png
-share/kde/icons/hicolor/128x128/apps/kdissert.png
-share/kde/icons/hicolor/16x16/actions/kdissert_link.png
-share/kde/icons/hicolor/16x16/actions/kdissert_point.png
-share/kde/icons/hicolor/16x16/actions/kdissert_sort.png
-share/kde/icons/hicolor/16x16/apps/kdissert.png
-share/kde/icons/hicolor/22x22/actions/kdissert_link.png
-share/kde/icons/hicolor/22x22/actions/kdissert_point.png
-share/kde/icons/hicolor/22x22/actions/kdissert_sort.png
-share/kde/icons/hicolor/22x22/apps/kdissert.png
-share/kde/icons/hicolor/32x32/actions/kdissert_link.png
-share/kde/icons/hicolor/32x32/actions/kdissert_point.png
-share/kde/icons/hicolor/32x32/actions/kdissert_sort.png
-share/kde/icons/hicolor/32x32/apps/kdissert.png
-share/kde/icons/hicolor/64x64/actions/kdissert_sort.png
-share/kde/icons/hicolor/64x64/apps/kdissert.png
 share/kde/mimelnk/application/x-kdissert.desktop
 share/kde/services/kdissertpart.desktop
 share/locale/de/LC_MESSAGES/kdissert.mo
@@ -69,22 +69,22 @@ share/locale/it/LC_MESSAGES/kdissert.mo
 share/locale/nl/LC_MESSAGES/kdissert.mo
 share/locale/pl/LC_MESSAGES/kdissert.mo
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/actions
 @dirrm share/kde/apps/kdissertpart
 @dirrm share/kde/apps/kdissert/templatedata
 @dirrm share/kde/apps/kdissert/pics
 @dirrm share/kde/apps/kdissert
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Utilities
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/actions
 @dirrm share/doc/kde/HTML/fr/kdissert
 @comment in kde: @dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/en/kdissert

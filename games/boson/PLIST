@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/26 22:47:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:03:20 markd Exp $
 bin/bocursor
 bin/bodebugdialog
 bin/boinfo
@@ -64,6 +64,10 @@ share/doc/kde/HTML/en/boson/units/tornado.jpg
 share/doc/kde/HTML/en/boson/units/tornado_small.jpg
 share/doc/kde/HTML/en/boson/units/transall.jpg
 share/doc/kde/HTML/en/boson/units/transall_small.jpg
+share/icons/hicolor/32x32/apps/boson.png
+share/icons/hicolor/48x48/apps/boson.png
+share/icons/locolor/16x16/apps/boson.png
+share/icons/locolor/32x32/apps/boson.png
 share/kde/applnk/Games/TacticStrategy/boson/boinfo.desktop
 share/kde/applnk/Games/TacticStrategy/boson/boson.desktop
 share/kde/applnk/Games/TacticStrategy/boson/bounit.desktop
@@ -1046,12 +1050,6 @@ share/kde/apps/boson/themes/ui/standard/stop.png
 share/kde/apps/boson/topui.rc
 share/kde/config/bodebug.areas
 share/kde/config/bodebugrc
-share/kde/icons/hicolor/32x32/apps/boson.png
-share/kde/icons/hicolor/48x48/apps/boson.png
-share/kde/icons/locolor/16x16/apps/boson.png
-share/kde/icons/locolor/32x32/apps/boson.png
-@dirrm share/kde/icons/locolor/32x32/apps
-@dirrm share/kde/icons/locolor/16x16/apps
 @dirrm share/kde/apps/boson/themes/ui/standard
 @dirrm share/kde/apps/boson/themes/ui
 @dirrm share/kde/apps/boson/themes/textures

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2007/01/26 04:03:20 markd Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	editors kde
 MASTER_SITES=	ftp://ftp.rutgers.edu/pub/kde/stable/apps/KDE3.x/utils/ \
 		ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/utils/ \
@@ -21,7 +21,6 @@ CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
 CONFLICTS+=	pkg_alternatives-[0-9]*
 
 WRKSRC=		${WRKDIR}/kvim-${KVIM_VERSION}/src
-USE_DIRS+=	xdg-1.1
 USE_TOOLS+=	awk:run perl:run msgfmt
 MAKE_ENV+=	AWK=${AWK:Q}
 MAKE_ENV+=	PERL5=${PERL5:Q}
@@ -35,8 +34,10 @@ CONFIGURE_ARGS+=	--with-tlib=ncurses
 post-configure:
 	${TOUCH} ${WRKSRC:Q}/auto/configure ${WRKSRC:Q}/auto/config.mk
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
