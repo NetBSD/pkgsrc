@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2007/01/17 23:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2007/01/26 02:55:41 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
-
-PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
-PATCHFILES=	post-3.5.5-kdenetwork-ksirc.diff
 
 CONFLICTS=	kopete-[0-9]*
 
@@ -14,7 +10,6 @@ CONFLICTS=	kopete-[0-9]*
 
 DEPENDS+=		qca-tls>=1.0:../../security/qca-tls
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		pkg-config
 PTHREAD_OPTS+=		require
 
@@ -56,6 +51,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
