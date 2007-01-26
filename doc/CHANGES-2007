@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.244 2007/01/25 23:36:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.245 2007/01/26 00:37:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -138,7 +138,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/glib2 to 2.12.7 [drochner 2007-01-08]
 	Updated multimedia/py-gstreamer0.10 to 0.10.6 [drochner 2007-01-08]
 	Updated multimedia/gst-plugins0.10-ffmpeg to 0.10.2 [drochner 2007-01-08]
-	Added audio/gst-plugins0.10-png version 0.10.5 [drochner 2007-01-08]
+	Added graphics/gst-plugins0.10-png version 0.10.5 [drochner 2007-01-08]
 	Added audio/gst-plugins0.10-dts version 0.10.5 [drochner 2007-01-08]
 	Added audio/gst-plugins0.10-a52 version 0.10.5 [drochner 2007-01-08]
 	Added multimedia/gst-plugins0.10-dvdread version 0.10.5 [drochner 2007-01-08]
