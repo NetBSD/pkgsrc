@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.247 2007/01/26 10:35:45 markd Exp $
+$NetBSD: CHANGES-2007,v 1.248 2007/01/26 11:04:07 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -515,3 +515,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/krusader to 1.70.1nb2 [markd 2007-01-26]
 	Updated xll/kmessage to 0.1nb10 [markd 2007-01-26]
 	Updated sysutils/kdirstat to 2.4.4 [markd 2007-01-26]
+	Added databases/libgda-mysql version 2.99.2 [dillo 2007-01-26]
