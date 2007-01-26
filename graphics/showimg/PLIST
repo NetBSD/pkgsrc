@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/14 21:26:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/26 04:13:34 markd Exp $
 bin/showimg
 lib/kde3/libshowimgpart.la
 lib/libshowimgcore.la
@@ -109,6 +109,9 @@ share/doc/kde/HTML/sv/showimg/comparison.png
 share/doc/kde/HTML/sv/showimg/index.cache.bz2
 share/doc/kde/HTML/sv/showimg/index.docbook
 share/doc/kde/HTML/sv/showimg/main-window.png
+share/icons/hicolor/32x32/apps/showimg.png
+share/icons/hicolor/48x48/apps/showimg.png
+share/icons/hicolor/64x64/apps/showimg.png
 share/kde/applnk/Graphics/showimg.desktop
 share/kde/apps/konqueror/servicemenus/konqshowimg.desktop
 share/kde/apps/showimg/convert2png.pl
@@ -184,9 +187,6 @@ share/kde/apps/showimg/showimgsimpleui.rc
 share/kde/apps/showimg/showimgui.rc
 share/kde/apps/showimg/tips
 share/kde/apps/showimgpart/showimgpart.rc
-share/kde/icons/hicolor/32x32/apps/showimg.png
-share/kde/icons/hicolor/48x48/apps/showimg.png
-share/kde/icons/hicolor/64x64/apps/showimg.png
 share/kde/mimelnk/image/x-psd.desktop
 share/kde/mimelnk/image/x-sia.desktop
 share/kde/services/showimgpart.desktop
@@ -223,9 +223,6 @@ share/locale/tr/LC_MESSAGES/showimg.mo
 share/locale/zh_CN/LC_MESSAGES/showimg.mo
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/image
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
 @dirrm share/kde/apps/showimgpart
 @dirrm share/kde/apps/showimg/pics
 @dirrm share/kde/apps/showimg/icons/hicolor/64x64/mimetypes
@@ -253,6 +250,9 @@ share/locale/zh_CN/LC_MESSAGES/showimg.mo
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Graphics
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @dirrm share/doc/kde/HTML/sv/showimg
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/ru/showimg

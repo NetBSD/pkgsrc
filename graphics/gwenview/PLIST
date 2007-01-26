@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/12/03 05:07:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/26 04:13:34 markd Exp $
 bin/gwenview
 lib/kde3/gwenview.la
 lib/kde3/libgvdirpart.la
@@ -20,6 +20,21 @@ share/doc/kde/HTML/en/gwenview/introduction.docbook
 share/doc/kde/HTML/en/gwenview/keybindings.docbook
 share/doc/kde/HTML/en/gwenview/mouse.docbook
 share/doc/kde/HTML/en/gwenview/view_mode.png
+share/icons/crystalsvg/16x16/apps/gvdirpart.png
+share/icons/crystalsvg/22x22/apps/gvdirpart.png
+share/icons/crystalsvg/32x32/apps/gvdirpart.png
+share/icons/crystalsvg/scalable/apps/gvdirpart.svg
+share/icons/hicolor/128x128/apps/gwenview.png
+share/icons/hicolor/16x16/apps/gvdirpart.png
+share/icons/hicolor/16x16/apps/gwenview.png
+share/icons/hicolor/22x22/apps/gvdirpart.png
+share/icons/hicolor/22x22/apps/gwenview.png
+share/icons/hicolor/32x32/apps/gvdirpart.png
+share/icons/hicolor/32x32/apps/gwenview.png
+share/icons/hicolor/48x48/apps/gwenview.png
+share/icons/hicolor/64x64/apps/gwenview.png
+share/icons/hicolor/scalable/apps/gvdirpart.svg
+share/icons/hicolor/scalable/apps/gwenview.svgz
 share/kde/apps/gvdirpart/gvdirpart.rc
 share/kde/apps/gvimagepart/gvimagepart.rc
 share/kde/apps/gvimagepart/gvimagepartpopup.rc
@@ -77,35 +92,9 @@ share/kde/config.kcfg/gvdirpartconfig.kcfg
 share/kde/config.kcfg/imageviewconfig.kcfg
 share/kde/config.kcfg/miscconfig.kcfg
 share/kde/config.kcfg/slideshowconfig.kcfg
-share/kde/icons/crystalsvg/16x16/apps/gvdirpart.png
-share/kde/icons/crystalsvg/22x22/apps/gvdirpart.png
-share/kde/icons/crystalsvg/32x32/apps/gvdirpart.png
-share/kde/icons/crystalsvg/scalable/apps/gvdirpart.svg
-share/kde/icons/hicolor/128x128/apps/gwenview.png
-share/kde/icons/hicolor/16x16/apps/gvdirpart.png
-share/kde/icons/hicolor/16x16/apps/gwenview.png
-share/kde/icons/hicolor/22x22/apps/gvdirpart.png
-share/kde/icons/hicolor/22x22/apps/gwenview.png
-share/kde/icons/hicolor/32x32/apps/gvdirpart.png
-share/kde/icons/hicolor/32x32/apps/gwenview.png
-share/kde/icons/hicolor/48x48/apps/gwenview.png
-share/kde/icons/hicolor/64x64/apps/gwenview.png
-share/kde/icons/hicolor/scalable/apps/gvdirpart.svg
-share/kde/icons/hicolor/scalable/apps/gwenview.svgz
 share/kde/services/gvdirpart.desktop
 share/kde/services/gvimagepart.desktop
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @comment in kde: @dirrm share/kde/apps/kconf_update
@@ -128,6 +117,17 @@ share/kde/services/gvimagepart.desktop
 @dirrm share/kde/apps/gvimagepart
 @dirrm share/kde/apps/gvdirpart
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/doc/kde/HTML/ru
 @comment in kde: @dirrm share/doc/kde/HTML/pt_BR
 @comment in kde: @dirrm share/doc/kde/HTML/nl

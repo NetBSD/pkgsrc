@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/01/06 10:04:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/01/26 04:13:34 markd Exp $
 lib/kde3/digikamimageplugin_adjustcurves.la
 lib/kde3/digikamimageplugin_adjustlevels.la
 lib/kde3/digikamimageplugin_antivignetting.la
@@ -28,6 +28,8 @@ lib/kde3/digikamimageplugin_superimpose.la
 lib/kde3/digikamimageplugin_texture.la
 lib/kde3/digikamimageplugin_unsharp.la
 lib/kde3/digikamimageplugin_whitebalance.la
+share/icons/hicolor/32x32/actions/digikamimageplugins.png
+share/icons/hicolor/32x32/apps/digikamimageplugins.png
 share/kde/apps/digikam/digikamimageplugin_adjustcurves_ui.rc
 share/kde/apps/digikam/digikamimageplugin_adjustlevels_ui.rc
 share/kde/apps/digikam/digikamimageplugin_antivignetting_ui.rc
@@ -290,8 +292,6 @@ share/kde/apps/digikamimageplugins/data/wall-pattern.png
 share/kde/apps/digikamimageplugins/data/wall-texture.png
 share/kde/apps/digikamimageplugins/data/wood-pattern.png
 share/kde/apps/digikamimageplugins/tips
-share/kde/icons/hicolor/32x32/actions/digikamimageplugins.png
-share/kde/icons/hicolor/32x32/apps/digikamimageplugins.png
 share/kde/services/digikamimageplugin_adjustcurves.desktop
 share/kde/services/digikamimageplugin_adjustlevels.desktop
 share/kde/services/digikamimageplugin_antivignetting.desktop
@@ -1425,8 +1425,6 @@ share/locale/zh_CN/LC_MESSAGES/digikamimageplugin_unsharp.mo
 share/locale/zh_CN/LC_MESSAGES/digikamimageplugin_whitebalance.mo
 share/locale/zh_CN/LC_MESSAGES/digikamimageplugins.mo
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/digikamimageplugins/data
 @dirrm share/kde/apps/digikamimageplugins
 @comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/scalable/actions
@@ -1438,4 +1436,6 @@ share/locale/zh_CN/LC_MESSAGES/digikamimageplugins.mo
 @comment in digikam: dirrm share/kde/apps/digikam/icons/hicolor/128x128/actions
 @comment in digikam: dirrm share/kde/apps/digikam
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
 @comment in kde: @dirrm lib/kde3
