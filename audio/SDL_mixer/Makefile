@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/09/17 15:59:44 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2007/01/26 00:03:24 abs Exp $
 
 DISTNAME=	SDL_mixer-1.2.7
 PKGREVISION=	1
@@ -35,5 +35,4 @@ BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
