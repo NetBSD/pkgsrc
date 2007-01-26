@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/24 17:43:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/26 03:49:32 markd Exp $
 bin/kscope
 share/doc/kde/HTML/en/kscope/about.docbook
 share/doc/kde/HTML/en/kscope/autocomp_dlg.png
@@ -27,6 +27,10 @@ share/doc/kde/HTML/en/kscope/query_dlg.png
 share/doc/kde/HTML/en/kscope/query_filter.png
 share/doc/kde/HTML/en/kscope/query_system.docbook
 share/doc/kde/HTML/en/kscope/quick_start.docbook
+share/icons/hicolor/16x16/apps/kscope.png
+share/icons/hicolor/32x32/apps/kscope.png
+share/icons/locolor/16x16/apps/kscope.png
+share/icons/locolor/32x32/apps/kscope.png
 share/kde/applnk/Development/kscope.desktop
 share/kde/apps/kscope/kscope_config
 share/kde/apps/kscope/kscopeui.rc
@@ -40,15 +44,6 @@ share/kde/apps/kscope/pics/query_locked.png
 share/kde/apps/kscope/pics/query_unlocked.png
 share/kde/apps/kscope/pics/tab_list.png
 share/kde/config/kscoperc
-share/kde/icons/hicolor/16x16/apps/kscope.png
-share/kde/icons/hicolor/32x32/apps/kscope.png
-share/kde/icons/locolor/16x16/apps/kscope.png
-share/kde/icons/locolor/32x32/apps/kscope.png
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kscope/pics
 @dirrm share/kde/apps/kscope
 @comment in kde: @dirrm share/kde/apps

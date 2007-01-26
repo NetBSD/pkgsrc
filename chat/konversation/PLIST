@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/07 11:08:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/01/26 03:49:32 markd Exp $
 bin/konversation
 bin/konversationircprotocolhandler
 share/applications/kde/konversation.desktop
@@ -195,6 +195,28 @@ share/doc/kde/HTML/sv/konversation/quickconnect_screen.png
 share/doc/kde/HTML/sv/konversation/serverlist_co.png
 share/doc/kde/HTML/sv/konversation/urlcatcher_screen_co.png
 share/doc/kde/HTML/sv/konversation/webbrowser_screen_co.png
+share/icons/crystalsvg/16x16/actions/kimproxyaway.png
+share/icons/crystalsvg/16x16/actions/kimproxyoffline.png
+share/icons/crystalsvg/16x16/actions/kimproxyonline.png
+share/icons/crystalsvg/22x22/actions/char.png
+share/icons/crystalsvg/22x22/actions/kimproxyaway.png
+share/icons/crystalsvg/22x22/actions/kimproxyoffline.png
+share/icons/crystalsvg/22x22/actions/kimproxyonline.png
+share/icons/crystalsvg/22x22/actions/konv_message.png
+share/icons/crystalsvg/32x32/actions/kimproxyaway.png
+share/icons/crystalsvg/32x32/actions/kimproxyoffline.png
+share/icons/crystalsvg/32x32/actions/kimproxyonline.png
+share/icons/crystalsvg/scalable/actions/kimproxyaway.svgz
+share/icons/crystalsvg/scalable/actions/kimproxyoffline.svgz
+share/icons/crystalsvg/scalable/actions/kimproxyonline.svgz
+share/icons/crystalsvg/scalable/actions/konv_message.svgz
+share/icons/hicolor/128x128/apps/konversation.png
+share/icons/hicolor/16x16/apps/konversation.png
+share/icons/hicolor/22x22/apps/konversation.png
+share/icons/hicolor/32x32/apps/konversation.png
+share/icons/hicolor/48x48/apps/konversation.png
+share/icons/hicolor/64x64/apps/konversation.png
+share/icons/hicolor/scalable/apps/konversation.svgz
 share/kde/apps/kconf_update/konversation-0.19-appearance.pl
 share/kde/apps/kconf_update/konversation-0.19-colorcodes.pl
 share/kde/apps/kconf_update/konversation-0.19-colors.pl
@@ -270,28 +292,6 @@ share/kde/apps/konversation/themes/square/irc_op.png
 share/kde/apps/konversation/themes/square/irc_owner.png
 share/kde/apps/konversation/themes/square/irc_voice.png
 share/kde/config.kcfg/konversation.kcfg
-share/kde/icons/crystalsvg/16x16/actions/kimproxyaway.png
-share/kde/icons/crystalsvg/16x16/actions/kimproxyoffline.png
-share/kde/icons/crystalsvg/16x16/actions/kimproxyonline.png
-share/kde/icons/crystalsvg/22x22/actions/char.png
-share/kde/icons/crystalsvg/22x22/actions/kimproxyaway.png
-share/kde/icons/crystalsvg/22x22/actions/kimproxyoffline.png
-share/kde/icons/crystalsvg/22x22/actions/kimproxyonline.png
-share/kde/icons/crystalsvg/22x22/actions/konv_message.png
-share/kde/icons/crystalsvg/32x32/actions/kimproxyaway.png
-share/kde/icons/crystalsvg/32x32/actions/kimproxyoffline.png
-share/kde/icons/crystalsvg/32x32/actions/kimproxyonline.png
-share/kde/icons/crystalsvg/scalable/actions/kimproxyaway.svgz
-share/kde/icons/crystalsvg/scalable/actions/kimproxyoffline.svgz
-share/kde/icons/crystalsvg/scalable/actions/kimproxyonline.svgz
-share/kde/icons/crystalsvg/scalable/actions/konv_message.svgz
-share/kde/icons/hicolor/128x128/apps/konversation.png
-share/kde/icons/hicolor/16x16/apps/konversation.png
-share/kde/icons/hicolor/22x22/apps/konversation.png
-share/kde/icons/hicolor/32x32/apps/konversation.png
-share/kde/icons/hicolor/48x48/apps/konversation.png
-share/kde/icons/hicolor/64x64/apps/konversation.png
-share/kde/icons/hicolor/scalable/apps/konversation.svgz
 share/kde/services/konvirc.protocol
 share/kde/services/konvirc6.protocol
 share/locale/ar/LC_MESSAGES/konversation.mo
@@ -326,17 +326,6 @@ share/locale/ta/LC_MESSAGES/konversation.mo
 share/locale/tr/LC_MESSAGES/konversation.mo
 share/locale/zh_TW/LC_MESSAGES/konversation.mo
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/konversation/themes/square
 @dirrm share/kde/apps/konversation/themes/smiling
@@ -349,6 +338,17 @@ share/locale/zh_TW/LC_MESSAGES/konversation.mo
 @dirrm share/kde/apps/konversation
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
 @dirrm share/doc/kde/HTML/sv/konversation
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/ru/konversation

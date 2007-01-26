@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2007/01/17 23:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/01/26 03:49:32 markd Exp $
 
 DISTNAME=		amarok-1.4.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_KDE:=amarok/1.4.4/src/}
 EXTRACT_SUFX=		.tar.bz2
@@ -59,6 +59,7 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"

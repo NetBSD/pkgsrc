@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/11/01 17:13:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/01/26 03:49:32 markd Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -424,6 +424,12 @@ share/doc/kde/HTML/sv/amarok/streams.png
 share/doc/kde/HTML/sv/amarok/using.docbook
 share/doc/kde/HTML/sv/amarok/vis_window.png
 share/doc/kde/HTML/sv/amarok/welcome.png
+share/icons/hicolor/128x128/apps/amarok.png
+share/icons/hicolor/16x16/apps/amarok.png
+share/icons/hicolor/22x22/apps/amarok.png
+share/icons/hicolor/32x32/apps/amarok.png
+share/icons/hicolor/48x48/apps/amarok.png
+share/icons/hicolor/64x64/apps/amarok.png
 share/kde/apps/amarok/amarokui.rc
 share/kde/apps/amarok/data/Amarok_1.4_Welcome.ogg
 share/kde/apps/amarok/data/Cool-Streams.xml
@@ -941,12 +947,6 @@ share/kde/apps/profiles/amarok.profile.xml
 share/kde/config.kcfg/amarok.kcfg
 share/kde/config.kcfg/xinecfg.kcfg
 share/kde/config/amarokrc
-share/kde/icons/hicolor/128x128/apps/amarok.png
-share/kde/icons/hicolor/16x16/apps/amarok.png
-share/kde/icons/hicolor/22x22/apps/amarok.png
-share/kde/icons/hicolor/32x32/apps/amarok.png
-share/kde/icons/hicolor/48x48/apps/amarok.png
-share/kde/icons/hicolor/64x64/apps/amarok.png
 share/kde/services/amarok_daap-mediadevice.desktop
 share/kde/services/amarok_generic-mediadevice.desktop
 share/kde/services/amarok_massstorage-device.desktop
@@ -1014,12 +1014,6 @@ share/locale/zh_CN/LC_MESSAGES/amarok.mo
 share/locale/zh_TW/LC_MESSAGES/amarok.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/apps/zeroconf
@@ -1068,7 +1062,13 @@ share/locale/zh_TW/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/amarok/icons
 @dirrm share/kde/apps/amarok/data
 @dirrm share/kde/apps/amarok
-@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/kde/icons/hicolor/128x128/apps
 @dirrm share/doc/kde/HTML/sv/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/ru/amarok
