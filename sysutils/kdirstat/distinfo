@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/06/30 10:25:33 markd Exp $
+$NetBSD: distinfo,v 1.5 2007/01/26 04:37:27 markd Exp $
 
-SHA1 (kdirstat-2.4.3.tar.bz2) = dd29c2a9a506e4e43e6fa12bcbe232800dae92d0
-RMD160 (kdirstat-2.4.3.tar.bz2) = bbdb8fb4400fb941370877a022cda5458dd6a129
-Size (kdirstat-2.4.3.tar.bz2) = 637764 bytes
+SHA1 (kdirstat-2.4.4.tar.bz2) = fb6a5da9abd2094f3bb3c135dffcbd7aea074c6e
+RMD160 (kdirstat-2.4.4.tar.bz2) = e42da54f6da86d3993b946138c9305f4be5cbda0
+Size (kdirstat-2.4.4.tar.bz2) = 642973 bytes
