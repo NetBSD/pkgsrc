@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.10 2006/11/20 09:38:15 markd Exp $
+$NetBSD: patch-ad,v 1.11 2007/01/26 02:44:28 markd Exp $
 
---- khtml/rendering/render_block.cpp.orig	2006-10-02 06:33:39.000000000 +1300
-+++ khtml/rendering/render_block.cpp
-@@ -711,7 +711,7 @@ void RenderBlock::layoutBlock(bool relay
-     int toAdd = borderBottom() + paddingBottom();
-     if (m_layer && style()->scrollsOverflow() && style()->height().isVariable())
-         toAdd += m_layer->horizontalScrollbarHeight();
--    if ( hasOverhangingFloats() && !style()->scrollsOverflow() && (isFloatingOrPositioned() || flowAroundFloats()) )
-+    if ( hasOverhangingFloats() && (isFloatingOrPositioned() || flowAroundFloats()) )
-         m_overflowHeight = m_height = floatBottom() + toAdd;
- 
-     int oldHeight = m_height;
+dont install hicolor/index.theme as hicolor-icon-theme pkg will
+
+--- pics/Makefile.in.orig	2007-01-19 15:41:52.000000000 +1300
++++ pics/Makefile.in
+@@ -515,7 +515,7 @@ x_libraries = @x_libraries@
+ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+-SUBDIRS = . hicolor crystalsvg emoticons
++SUBDIRS = . crystalsvg emoticons
+ INCLUDES = $(LIBART_CFLAGS) -I$(top_srcdir)/kdecore/svgicons -I$(top_srcdir)/kdefx $(all_includes)
+ @include_SVGICONS_TRUE@KSVGTOPNG = ksvgtopng
+ ksvgtopng_SOURCES = ksvgtopng.cpp
