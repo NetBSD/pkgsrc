@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.251 2007/01/26 18:49:52 tron Exp $
+$NetBSD: CHANGES-2007,v 1.252 2007/01/26 19:20:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -513,7 +513,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/k3b to 1.0rc4nb2 [markd 2007-01-26]
 	Updated sysutils/filelight to 1.0nb2 [markd 2007-01-26]
 	Updated sysutils/krusader to 1.70.1nb2 [markd 2007-01-26]
-	Updated xll/kmessage to 0.1nb10 [markd 2007-01-26]
+	Updated x11/kmessage to 0.1nb10 [markd 2007-01-26]
 	Updated sysutils/kdirstat to 2.4.4 [markd 2007-01-26]
 	Added databases/libgda-mysql version 2.99.2 [dillo 2007-01-26]
 	Added sysutils/foremost version 1.3 [minskim 2007-01-26]
