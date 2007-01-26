@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/25 11:00:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/26 03:49:32 markd Exp $
 bin/kmess
 share/applications/kde/kmess.desktop
 share/doc/kde/HTML/en/kmess/common
@@ -18,6 +18,15 @@ share/doc/kde/HTML/en/kmess/kmesspopupbaloon.png
 share/doc/kde/HTML/en/kmess/kmessrightclickmenucontact.png
 share/doc/kde/HTML/en/kmess/kmessstartupscreen.png
 share/doc/kde/HTML/en/kmess/kmesstimestamp.png
+share/icons/hicolor/128x128/apps/kmess.png
+share/icons/hicolor/16x16/apps/kmess.png
+share/icons/hicolor/22x22/apps/kmess.png
+share/icons/hicolor/32x32/apps/kmess.png
+share/icons/hicolor/48x48/apps/kmess.png
+share/icons/hicolor/64x64/apps/kmess.png
+share/icons/locolor/16x16/apps/kmess.png
+share/icons/locolor/22x22/apps/kmess.png
+share/icons/locolor/32x32/apps/kmess.png
 share/kde/apps/kmess/emoticons/airplane.png
 share/kde/apps/kmess/emoticons/angel.png
 share/kde/apps/kmess/emoticons/angry.png
@@ -120,15 +129,6 @@ share/kde/apps/kmess/pics/offline.png
 share/kde/apps/kmess/pics/online.png
 share/kde/apps/kmess/pics/onthephone.png
 share/kde/apps/kmess/pics/unknown.png
-share/kde/icons/hicolor/128x128/apps/kmess.png
-share/kde/icons/hicolor/16x16/apps/kmess.png
-share/kde/icons/hicolor/22x22/apps/kmess.png
-share/kde/icons/hicolor/32x32/apps/kmess.png
-share/kde/icons/hicolor/48x48/apps/kmess.png
-share/kde/icons/hicolor/64x64/apps/kmess.png
-share/kde/icons/locolor/16x16/apps/kmess.png
-share/kde/icons/locolor/22x22/apps/kmess.png
-share/kde/icons/locolor/32x32/apps/kmess.png
 share/kde/sounds/kmess_chat.ogg
 share/kde/sounds/kmess_logoff.ogg
 share/kde/sounds/kmess_logon.ogg
@@ -156,15 +156,6 @@ share/locale/zh_TW/LC_MESSAGES/kmess.mo
 @dirrm share/locale/zh_CN.GB18030/LC_MESSAGES
 @dirrm share/locale/zh_CN.GB18030
 @comment in kde: @dirrm share/kde/sounds
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @dirrm share/kde/apps/kmess/pics
 @dirrm share/kde/apps/kmess/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kmess/icons/hicolor/16x16
@@ -173,6 +164,15 @@ share/locale/zh_TW/LC_MESSAGES/kmess.mo
 @dirrm share/kde/apps/kmess/emoticons
 @dirrm share/kde/apps/kmess
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/22x22/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @dirrm share/doc/kde/HTML/en/kmess
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde
