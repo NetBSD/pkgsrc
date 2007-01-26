@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2007/01/18 22:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2007/01/26 00:55:00 markd Exp $
 
 DISTNAME=		gtk+-2.10.8
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
@@ -75,6 +76,12 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/immodules
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/modules
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/2.10.0/filesystems
+
+EVAL_PREFIX+=		PREFIX.hicolor=hicolor-icon-theme
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"
+FILES_SUBST+=		ICON_THEME_DIR="${PREFIX.hicolor}/share/icons/hicolor"
+INSTALL_TEMPLATES+=	../../x11/gtk2/files/icon-cache.tmpl
+PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
 
 _BUILDING_GTK2=	yes
 .include "modules.mk"
