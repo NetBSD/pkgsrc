@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.13 2006/04/06 06:22:23 reed Exp $
+# $NetBSD: kde3.mk,v 1.14 2007/01/26 02:36:14 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -78,7 +78,7 @@ CONFIGURE_ENV+=		kde_cgidir="${KDEDIR}/kde-cgi-bin"
 CONFIGURE_ENV+=		kde_confdir="${KDEDIR}/share/kde/config"
 CONFIGURE_ENV+=		kde_datadir="${KDEDIR}/share/kde/apps"
 CONFIGURE_ENV+=		kde_htmldir="${KDEDIR}/share/doc/kde/HTML"
-CONFIGURE_ENV+=		kde_icondir="${KDEDIR}/share/kde/icons"
+CONFIGURE_ENV+=		kde_icondir="${KDEDIR}/share/icons"
 CONFIGURE_ENV+=		kde_locale="${KDEDIR}/${PKGLOCALEDIR}/locale"
 CONFIGURE_ENV+=		kde_mimedir="${KDEDIR}/share/kde/mimelnk"
 CONFIGURE_ENV+=		kde_servicesdir="${KDEDIR}/share/kde/services"
@@ -94,6 +94,7 @@ _IN_ARTS_BUILD?=	no
 .if !empty(_IN_ARTS_BUILD:M[nN][oO])
 BUILDLINK_API_DEPENDS.qt3-libs+=	qt3-libs>=3.3.3nb1
 .include "../../x11/qt3-libs/buildlink3.mk"
+USE_DIRS+=		kde3-1.0
 .endif
 
 .include "../../x11/qt3-tools/buildlink3.mk"
