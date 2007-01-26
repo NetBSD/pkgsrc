@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2006/10/12 11:08:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/01/26 03:28:08 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -291,6 +291,154 @@ share/doc/kde/HTML/en/umbrello/umbrello-ui.png
 share/doc/kde/HTML/en/umbrello/uml_basics.docbook
 share/doc/kde/HTML/en/umbrello/use-case-diagram.png
 share/doc/kde/HTML/en/umbrello/working_with_umbrello.docbook
+${HAVE_SVN}share/icons/crystalsvg/128x128/actions/svn_add.png
+${HAVE_SVN}share/icons/crystalsvg/128x128/actions/svn_branch.png
+${HAVE_SVN}share/icons/crystalsvg/128x128/actions/svn_merge.png
+${HAVE_SVN}share/icons/crystalsvg/128x128/actions/svn_remove.png
+${HAVE_SVN}share/icons/crystalsvg/128x128/actions/svn_status.png
+${HAVE_SVN}share/icons/crystalsvg/128x128/actions/svn_switch.png
+share/icons/crystalsvg/128x128/mimetypes/umbrellofile.png
+${HAVE_SVN}share/icons/crystalsvg/16x16/actions/svn_add.png
+${HAVE_SVN}share/icons/crystalsvg/16x16/actions/svn_branch.png
+${HAVE_SVN}share/icons/crystalsvg/16x16/actions/svn_merge.png
+${HAVE_SVN}share/icons/crystalsvg/16x16/actions/svn_remove.png
+${HAVE_SVN}share/icons/crystalsvg/16x16/actions/svn_status.png
+${HAVE_SVN}share/icons/crystalsvg/16x16/actions/svn_switch.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_activity.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_class.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_collaboration.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_component.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_deployment.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_sequence.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_state.png
+share/icons/crystalsvg/16x16/actions/umbrello_diagram_usecase.png
+share/icons/crystalsvg/16x16/actions/vcs_add.png
+share/icons/crystalsvg/16x16/actions/vcs_commit.png
+share/icons/crystalsvg/16x16/actions/vcs_diff.png
+share/icons/crystalsvg/16x16/actions/vcs_remove.png
+share/icons/crystalsvg/16x16/actions/vcs_status.png
+share/icons/crystalsvg/16x16/actions/vcs_update.png
+share/icons/crystalsvg/16x16/mimetypes/umbrellofile.png
+${HAVE_SVN}share/icons/crystalsvg/22x22/actions/svn_add.png
+${HAVE_SVN}share/icons/crystalsvg/22x22/actions/svn_branch.png
+${HAVE_SVN}share/icons/crystalsvg/22x22/actions/svn_merge.png
+${HAVE_SVN}share/icons/crystalsvg/22x22/actions/svn_remove.png
+${HAVE_SVN}share/icons/crystalsvg/22x22/actions/svn_status.png
+${HAVE_SVN}share/icons/crystalsvg/22x22/actions/svn_switch.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_activity.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_class.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_collaboration.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_component.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_deployment.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_entityrelationship.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_sequence.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_state.png
+share/icons/crystalsvg/22x22/actions/umbrello_diagram_usecase.png
+share/icons/crystalsvg/22x22/actions/vcs_add.png
+share/icons/crystalsvg/22x22/actions/vcs_commit.png
+share/icons/crystalsvg/22x22/actions/vcs_diff.png
+share/icons/crystalsvg/22x22/actions/vcs_remove.png
+share/icons/crystalsvg/22x22/actions/vcs_status.png
+share/icons/crystalsvg/22x22/actions/vcs_update.png
+share/icons/crystalsvg/22x22/mimetypes/umbrellofile.png
+${HAVE_SVN}share/icons/crystalsvg/32x32/actions/svn_add.png
+${HAVE_SVN}share/icons/crystalsvg/32x32/actions/svn_branch.png
+${HAVE_SVN}share/icons/crystalsvg/32x32/actions/svn_merge.png
+${HAVE_SVN}share/icons/crystalsvg/32x32/actions/svn_remove.png
+${HAVE_SVN}share/icons/crystalsvg/32x32/actions/svn_status.png
+${HAVE_SVN}share/icons/crystalsvg/32x32/actions/svn_switch.png
+share/icons/crystalsvg/32x32/actions/vcs_add.png
+share/icons/crystalsvg/32x32/actions/vcs_commit.png
+share/icons/crystalsvg/32x32/actions/vcs_diff.png
+share/icons/crystalsvg/32x32/actions/vcs_remove.png
+share/icons/crystalsvg/32x32/actions/vcs_status.png
+share/icons/crystalsvg/32x32/actions/vcs_update.png
+share/icons/crystalsvg/32x32/mimetypes/umbrellofile.png
+${HAVE_SVN}share/icons/crystalsvg/48x48/actions/svn_add.png
+${HAVE_SVN}share/icons/crystalsvg/48x48/actions/svn_branch.png
+${HAVE_SVN}share/icons/crystalsvg/48x48/actions/svn_merge.png
+${HAVE_SVN}share/icons/crystalsvg/48x48/actions/svn_remove.png
+${HAVE_SVN}share/icons/crystalsvg/48x48/actions/svn_status.png
+${HAVE_SVN}share/icons/crystalsvg/48x48/actions/svn_switch.png
+share/icons/crystalsvg/48x48/actions/vcs_add.png
+share/icons/crystalsvg/48x48/actions/vcs_commit.png
+share/icons/crystalsvg/48x48/actions/vcs_diff.png
+share/icons/crystalsvg/48x48/actions/vcs_remove.png
+share/icons/crystalsvg/48x48/actions/vcs_status.png
+share/icons/crystalsvg/48x48/actions/vcs_update.png
+share/icons/crystalsvg/48x48/mimetypes/umbrellofile.png
+${HAVE_SVN}share/icons/crystalsvg/64x64/actions/svn_add.png
+${HAVE_SVN}share/icons/crystalsvg/64x64/actions/svn_branch.png
+${HAVE_SVN}share/icons/crystalsvg/64x64/actions/svn_merge.png
+${HAVE_SVN}share/icons/crystalsvg/64x64/actions/svn_remove.png
+${HAVE_SVN}share/icons/crystalsvg/64x64/actions/svn_status.png
+${HAVE_SVN}share/icons/crystalsvg/64x64/actions/svn_switch.png
+share/icons/crystalsvg/64x64/mimetypes/umbrellofile.png
+${HAVE_SVN}share/icons/crystalsvg/scalable/actions/svn_add.svgz
+${HAVE_SVN}share/icons/crystalsvg/scalable/actions/svn_branch.svgz
+${HAVE_SVN}share/icons/crystalsvg/scalable/actions/svn_merge.svgz
+${HAVE_SVN}share/icons/crystalsvg/scalable/actions/svn_remove.svgz
+${HAVE_SVN}share/icons/crystalsvg/scalable/actions/svn_status.svgz
+${HAVE_SVN}share/icons/crystalsvg/scalable/actions/svn_switch.svgz
+share/icons/crystalsvg/scalable/actions/vcs_add.svgz
+share/icons/crystalsvg/scalable/actions/vcs_commit.svgz
+share/icons/crystalsvg/scalable/actions/vcs_diff.svgz
+share/icons/crystalsvg/scalable/actions/vcs_remove.svgz
+share/icons/crystalsvg/scalable/actions/vcs_status.svgz
+share/icons/crystalsvg/scalable/actions/vcs_update.svgz
+share/icons/crystalsvg/scalable/mimetypes/umbrellofile.svgz
+share/icons/hicolor/128x128/apps/kbugbuster.png
+share/icons/hicolor/128x128/apps/kompare.png
+share/icons/hicolor/128x128/apps/umbrello.png
+share/icons/hicolor/16x16/apps/catalogmanager.png
+share/icons/hicolor/16x16/apps/cervisia.png
+share/icons/hicolor/16x16/apps/kbabel.png
+share/icons/hicolor/16x16/apps/kbabeldict.png
+share/icons/hicolor/16x16/apps/kbugbuster.png
+share/icons/hicolor/16x16/apps/kompare.png
+share/icons/hicolor/16x16/apps/kuiviewer.png
+share/icons/hicolor/16x16/apps/umbrello.png
+share/icons/hicolor/16x16/mimetypes/umbrellofile.png
+share/icons/hicolor/22x22/apps/catalogmanager.png
+share/icons/hicolor/22x22/apps/cervisia.png
+share/icons/hicolor/22x22/apps/kbugbuster.png
+share/icons/hicolor/22x22/apps/kompare.png
+share/icons/hicolor/22x22/apps/umbrello.png
+share/icons/hicolor/32x32/apps/catalogmanager.png
+share/icons/hicolor/32x32/apps/cervisia.png
+share/icons/hicolor/32x32/apps/kbabel.png
+share/icons/hicolor/32x32/apps/kbabeldict.png
+share/icons/hicolor/32x32/apps/kbugbuster.png
+share/icons/hicolor/32x32/apps/kcachegrind.png
+share/icons/hicolor/32x32/apps/kompare.png
+share/icons/hicolor/32x32/apps/kuiviewer.png
+share/icons/hicolor/32x32/apps/umbrello.png
+share/icons/hicolor/32x32/mimetypes/umbrellofile.png
+share/icons/hicolor/48x48/apps/catalogmanager.png
+share/icons/hicolor/48x48/apps/cervisia.png
+share/icons/hicolor/48x48/apps/kbabel.png
+share/icons/hicolor/48x48/apps/kbabeldict.png
+share/icons/hicolor/48x48/apps/kbugbuster.png
+share/icons/hicolor/48x48/apps/kcachegrind.png
+share/icons/hicolor/48x48/apps/kompare.png
+share/icons/hicolor/48x48/apps/kuiviewer.png
+share/icons/hicolor/48x48/apps/umbrello.png
+share/icons/hicolor/64x64/apps/kbugbuster.png
+share/icons/hicolor/64x64/apps/umbrello.png
+share/icons/hicolor/scalable/apps/kompare.svgz
+share/icons/hicolor/scalable/apps/umbrello.svgz
+share/icons/locolor/16x16/apps/catalogmanager.png
+share/icons/locolor/16x16/apps/kbabel.png
+share/icons/locolor/16x16/apps/kbabeldict.png
+share/icons/locolor/16x16/apps/kbugbuster.png
+share/icons/locolor/16x16/apps/kcachegrind.png
+share/icons/locolor/16x16/apps/kuiviewer.png
+share/icons/locolor/32x32/apps/catalogmanager.png
+share/icons/locolor/32x32/apps/kbabel.png
+share/icons/locolor/32x32/apps/kbabeldict.png
+share/icons/locolor/32x32/apps/kbugbuster.png
+share/icons/locolor/32x32/apps/kcachegrind.png
+share/icons/locolor/32x32/apps/kuiviewer.png
 share/kde/apps/catalogmanager/catalogmanagerui.rc
 share/kde/apps/cervisia/cervisiashellui.rc
 share/kde/apps/cervisia/eventsrc
@@ -709,154 +857,6 @@ share/kde/apps/umbrello/xmi2docbook.xsl
 share/kde/config.kcfg/cervisiapart.kcfg
 share/kde/config.kcfg/kbabel.kcfg
 share/kde/config.kcfg/kbprojectsettings.kcfg
-${HAVE_SVN}share/kde/icons/crystalsvg/128x128/actions/svn_add.png
-${HAVE_SVN}share/kde/icons/crystalsvg/128x128/actions/svn_branch.png
-${HAVE_SVN}share/kde/icons/crystalsvg/128x128/actions/svn_merge.png
-${HAVE_SVN}share/kde/icons/crystalsvg/128x128/actions/svn_remove.png
-${HAVE_SVN}share/kde/icons/crystalsvg/128x128/actions/svn_status.png
-${HAVE_SVN}share/kde/icons/crystalsvg/128x128/actions/svn_switch.png
-share/kde/icons/crystalsvg/128x128/mimetypes/umbrellofile.png
-${HAVE_SVN}share/kde/icons/crystalsvg/16x16/actions/svn_add.png
-${HAVE_SVN}share/kde/icons/crystalsvg/16x16/actions/svn_branch.png
-${HAVE_SVN}share/kde/icons/crystalsvg/16x16/actions/svn_merge.png
-${HAVE_SVN}share/kde/icons/crystalsvg/16x16/actions/svn_remove.png
-${HAVE_SVN}share/kde/icons/crystalsvg/16x16/actions/svn_status.png
-${HAVE_SVN}share/kde/icons/crystalsvg/16x16/actions/svn_switch.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_activity.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_class.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_collaboration.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_component.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_deployment.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_sequence.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_state.png
-share/kde/icons/crystalsvg/16x16/actions/umbrello_diagram_usecase.png
-share/kde/icons/crystalsvg/16x16/actions/vcs_add.png
-share/kde/icons/crystalsvg/16x16/actions/vcs_commit.png
-share/kde/icons/crystalsvg/16x16/actions/vcs_diff.png
-share/kde/icons/crystalsvg/16x16/actions/vcs_remove.png
-share/kde/icons/crystalsvg/16x16/actions/vcs_status.png
-share/kde/icons/crystalsvg/16x16/actions/vcs_update.png
-share/kde/icons/crystalsvg/16x16/mimetypes/umbrellofile.png
-${HAVE_SVN}share/kde/icons/crystalsvg/22x22/actions/svn_add.png
-${HAVE_SVN}share/kde/icons/crystalsvg/22x22/actions/svn_branch.png
-${HAVE_SVN}share/kde/icons/crystalsvg/22x22/actions/svn_merge.png
-${HAVE_SVN}share/kde/icons/crystalsvg/22x22/actions/svn_remove.png
-${HAVE_SVN}share/kde/icons/crystalsvg/22x22/actions/svn_status.png
-${HAVE_SVN}share/kde/icons/crystalsvg/22x22/actions/svn_switch.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_activity.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_class.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_collaboration.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_component.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_deployment.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_entityrelationship.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_sequence.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_state.png
-share/kde/icons/crystalsvg/22x22/actions/umbrello_diagram_usecase.png
-share/kde/icons/crystalsvg/22x22/actions/vcs_add.png
-share/kde/icons/crystalsvg/22x22/actions/vcs_commit.png
-share/kde/icons/crystalsvg/22x22/actions/vcs_diff.png
-share/kde/icons/crystalsvg/22x22/actions/vcs_remove.png
-share/kde/icons/crystalsvg/22x22/actions/vcs_status.png
-share/kde/icons/crystalsvg/22x22/actions/vcs_update.png
-share/kde/icons/crystalsvg/22x22/mimetypes/umbrellofile.png
-${HAVE_SVN}share/kde/icons/crystalsvg/32x32/actions/svn_add.png
-${HAVE_SVN}share/kde/icons/crystalsvg/32x32/actions/svn_branch.png
-${HAVE_SVN}share/kde/icons/crystalsvg/32x32/actions/svn_merge.png
-${HAVE_SVN}share/kde/icons/crystalsvg/32x32/actions/svn_remove.png
-${HAVE_SVN}share/kde/icons/crystalsvg/32x32/actions/svn_status.png
-${HAVE_SVN}share/kde/icons/crystalsvg/32x32/actions/svn_switch.png
-share/kde/icons/crystalsvg/32x32/actions/vcs_add.png
-share/kde/icons/crystalsvg/32x32/actions/vcs_commit.png
-share/kde/icons/crystalsvg/32x32/actions/vcs_diff.png
-share/kde/icons/crystalsvg/32x32/actions/vcs_remove.png
-share/kde/icons/crystalsvg/32x32/actions/vcs_status.png
-share/kde/icons/crystalsvg/32x32/actions/vcs_update.png
-share/kde/icons/crystalsvg/32x32/mimetypes/umbrellofile.png
-${HAVE_SVN}share/kde/icons/crystalsvg/48x48/actions/svn_add.png
-${HAVE_SVN}share/kde/icons/crystalsvg/48x48/actions/svn_branch.png
-${HAVE_SVN}share/kde/icons/crystalsvg/48x48/actions/svn_merge.png
-${HAVE_SVN}share/kde/icons/crystalsvg/48x48/actions/svn_remove.png
-${HAVE_SVN}share/kde/icons/crystalsvg/48x48/actions/svn_status.png
-${HAVE_SVN}share/kde/icons/crystalsvg/48x48/actions/svn_switch.png
-share/kde/icons/crystalsvg/48x48/actions/vcs_add.png
-share/kde/icons/crystalsvg/48x48/actions/vcs_commit.png
-share/kde/icons/crystalsvg/48x48/actions/vcs_diff.png
-share/kde/icons/crystalsvg/48x48/actions/vcs_remove.png
-share/kde/icons/crystalsvg/48x48/actions/vcs_status.png
-share/kde/icons/crystalsvg/48x48/actions/vcs_update.png
-share/kde/icons/crystalsvg/48x48/mimetypes/umbrellofile.png
-${HAVE_SVN}share/kde/icons/crystalsvg/64x64/actions/svn_add.png
-${HAVE_SVN}share/kde/icons/crystalsvg/64x64/actions/svn_branch.png
-${HAVE_SVN}share/kde/icons/crystalsvg/64x64/actions/svn_merge.png
-${HAVE_SVN}share/kde/icons/crystalsvg/64x64/actions/svn_remove.png
-${HAVE_SVN}share/kde/icons/crystalsvg/64x64/actions/svn_status.png
-${HAVE_SVN}share/kde/icons/crystalsvg/64x64/actions/svn_switch.png
-share/kde/icons/crystalsvg/64x64/mimetypes/umbrellofile.png
-${HAVE_SVN}share/kde/icons/crystalsvg/scalable/actions/svn_add.svgz
-${HAVE_SVN}share/kde/icons/crystalsvg/scalable/actions/svn_branch.svgz
-${HAVE_SVN}share/kde/icons/crystalsvg/scalable/actions/svn_merge.svgz
-${HAVE_SVN}share/kde/icons/crystalsvg/scalable/actions/svn_remove.svgz
-${HAVE_SVN}share/kde/icons/crystalsvg/scalable/actions/svn_status.svgz
-${HAVE_SVN}share/kde/icons/crystalsvg/scalable/actions/svn_switch.svgz
-share/kde/icons/crystalsvg/scalable/actions/vcs_add.svgz
-share/kde/icons/crystalsvg/scalable/actions/vcs_commit.svgz
-share/kde/icons/crystalsvg/scalable/actions/vcs_diff.svgz
-share/kde/icons/crystalsvg/scalable/actions/vcs_remove.svgz
-share/kde/icons/crystalsvg/scalable/actions/vcs_status.svgz
-share/kde/icons/crystalsvg/scalable/actions/vcs_update.svgz
-share/kde/icons/crystalsvg/scalable/mimetypes/umbrellofile.svgz
-share/kde/icons/hicolor/128x128/apps/kbugbuster.png
-share/kde/icons/hicolor/128x128/apps/kompare.png
-share/kde/icons/hicolor/128x128/apps/umbrello.png
-share/kde/icons/hicolor/16x16/apps/catalogmanager.png
-share/kde/icons/hicolor/16x16/apps/cervisia.png
-share/kde/icons/hicolor/16x16/apps/kbabel.png
-share/kde/icons/hicolor/16x16/apps/kbabeldict.png
-share/kde/icons/hicolor/16x16/apps/kbugbuster.png
-share/kde/icons/hicolor/16x16/apps/kompare.png
-share/kde/icons/hicolor/16x16/apps/kuiviewer.png
-share/kde/icons/hicolor/16x16/apps/umbrello.png
-share/kde/icons/hicolor/16x16/mimetypes/umbrellofile.png
-share/kde/icons/hicolor/22x22/apps/catalogmanager.png
-share/kde/icons/hicolor/22x22/apps/cervisia.png
-share/kde/icons/hicolor/22x22/apps/kbugbuster.png
-share/kde/icons/hicolor/22x22/apps/kompare.png
-share/kde/icons/hicolor/22x22/apps/umbrello.png
-share/kde/icons/hicolor/32x32/apps/catalogmanager.png
-share/kde/icons/hicolor/32x32/apps/cervisia.png
-share/kde/icons/hicolor/32x32/apps/kbabel.png
-share/kde/icons/hicolor/32x32/apps/kbabeldict.png
-share/kde/icons/hicolor/32x32/apps/kbugbuster.png
-share/kde/icons/hicolor/32x32/apps/kcachegrind.png
-share/kde/icons/hicolor/32x32/apps/kompare.png
-share/kde/icons/hicolor/32x32/apps/kuiviewer.png
-share/kde/icons/hicolor/32x32/apps/umbrello.png
-share/kde/icons/hicolor/32x32/mimetypes/umbrellofile.png
-share/kde/icons/hicolor/48x48/apps/catalogmanager.png
-share/kde/icons/hicolor/48x48/apps/cervisia.png
-share/kde/icons/hicolor/48x48/apps/kbabel.png
-share/kde/icons/hicolor/48x48/apps/kbabeldict.png
-share/kde/icons/hicolor/48x48/apps/kbugbuster.png
-share/kde/icons/hicolor/48x48/apps/kcachegrind.png
-share/kde/icons/hicolor/48x48/apps/kompare.png
-share/kde/icons/hicolor/48x48/apps/kuiviewer.png
-share/kde/icons/hicolor/48x48/apps/umbrello.png
-share/kde/icons/hicolor/64x64/apps/kbugbuster.png
-share/kde/icons/hicolor/64x64/apps/umbrello.png
-share/kde/icons/hicolor/scalable/apps/kompare.svgz
-share/kde/icons/hicolor/scalable/apps/umbrello.svgz
-share/kde/icons/locolor/16x16/apps/catalogmanager.png
-share/kde/icons/locolor/16x16/apps/kbabel.png
-share/kde/icons/locolor/16x16/apps/kbabeldict.png
-share/kde/icons/locolor/16x16/apps/kbugbuster.png
-share/kde/icons/locolor/16x16/apps/kcachegrind.png
-share/kde/icons/locolor/16x16/apps/kuiviewer.png
-share/kde/icons/locolor/32x32/apps/catalogmanager.png
-share/kde/icons/locolor/32x32/apps/kbabel.png
-share/kde/icons/locolor/32x32/apps/kbabeldict.png
-share/kde/icons/locolor/32x32/apps/kbugbuster.png
-share/kde/icons/locolor/32x32/apps/kcachegrind.png
-share/kde/icons/locolor/32x32/apps/kuiviewer.png
 share/kde/mimelnk/application/x-kcachegrind.desktop
 share/kde/mimelnk/application/x-umbrello.desktop
 share/kde/services/cvsservice.desktop
@@ -908,40 +908,6 @@ share/kde/servicetypes/kompareviewpart.desktop
 @comment in kde: @dirrm share/kde/services/kded
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/mimetypes
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/umbrello/pics
 @dirrm share/kde/apps/umbrello/headings
@@ -999,6 +965,40 @@ share/kde/servicetypes/kompareviewpart.desktop
 @dirrm share/kde/apps/cervisia
 @dirrm share/kde/apps/catalogmanager
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/mimetypes
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/mimetypes
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/actions
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/mimetypes
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/actions
 @dirrm share/doc/kde/HTML/en/umbrello
 @dirrm share/doc/kde/HTML/en/kompare
 @dirrm share/doc/kde/HTML/en/kdesvn-build
