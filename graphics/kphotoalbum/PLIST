@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/28 16:17:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/26 04:13:34 markd Exp $
 bin/kphotoalbum
 share/applications/kde/kphotoalbum-import.desktop
 share/applications/kde/kphotoalbum.desktop
@@ -136,6 +136,12 @@ share/doc/kde/HTML/sv/kphotoalbum/viewer-contextmenu.png
 share/doc/kde/HTML/sv/kphotoalbum/viewer.docbook
 share/doc/kde/HTML/sv/kphotoalbum/viewer.png
 share/doc/kde/HTML/sv/kphotoalbum/zoomed-view.png
+share/icons/hicolor/128x128/apps/kphotoalbum.png
+share/icons/hicolor/16x16/apps/kphotoalbum.png
+share/icons/hicolor/22x22/apps/kphotoalbum.png
+share/icons/hicolor/32x32/apps/kphotoalbum.png
+share/icons/hicolor/48x48/apps/kphotoalbum.png
+share/icons/hicolor/64x64/apps/kphotoalbum.png
 share/kde/apps/kphotoalbum/default-layout.xml
 share/kde/apps/kphotoalbum/default-setup
 share/kde/apps/kphotoalbum/demo/CategoryImages/Keywords-scenic.jpg
@@ -212,12 +218,6 @@ share/kde/apps/kphotoalbum/themes/rounded/upleft.png
 share/kde/apps/kphotoalbum/themes/rounded/upright.png
 share/kde/apps/kphotoalbum/tips
 share/kde/config/kphotoalbumrc
-share/kde/icons/hicolor/128x128/apps/kphotoalbum.png
-share/kde/icons/hicolor/16x16/apps/kphotoalbum.png
-share/kde/icons/hicolor/22x22/apps/kphotoalbum.png
-share/kde/icons/hicolor/32x32/apps/kphotoalbum.png
-share/kde/icons/hicolor/48x48/apps/kphotoalbum.png
-share/kde/icons/hicolor/64x64/apps/kphotoalbum.png
 share/kde/mimelnk/application/x-vnd.kde.kphotoalbum-import.desktop
 share/locale/br/LC_MESSAGES/kphotoalbum.mo
 share/locale/cs/LC_MESSAGES/kphotoalbum.mo
