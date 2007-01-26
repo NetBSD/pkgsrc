@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/01/26 03:36:17 markd Exp $
 share/locale/lt/LC_MESSAGES/akregator.mo
 share/locale/lt/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/lt/LC_MESSAGES/alsaplayerui.mo
@@ -273,6 +273,7 @@ share/locale/lt/LC_MESSAGES/khotkeys.mo
 share/locale/lt/LC_MESSAGES/khtmlkttsd.mo
 share/locale/lt/LC_MESSAGES/khtmlsettingsplugin.mo
 share/locale/lt/LC_MESSAGES/kicker.mo
+share/locale/lt/LC_MESSAGES/kickermenu_kate.mo
 share/locale/lt/LC_MESSAGES/kiconedit.mo
 share/locale/lt/LC_MESSAGES/kig.mo
 share/locale/lt/LC_MESSAGES/kimagemapeditor.mo
@@ -310,6 +311,7 @@ share/locale/lt/LC_MESSAGES/kio_thumbnail.mo
 share/locale/lt/LC_MESSAGES/kio_trash.mo
 share/locale/lt/LC_MESSAGES/kio_zeroconf.mo
 share/locale/lt/LC_MESSAGES/kioexec.mo
+share/locale/lt/LC_MESSAGES/kitchensync.mo
 share/locale/lt/LC_MESSAGES/kiten.mo
 share/locale/lt/LC_MESSAGES/kjobviewer.mo
 share/locale/lt/LC_MESSAGES/kjots.mo
@@ -512,6 +514,7 @@ share/locale/lt/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/locale/lt/LC_MESSAGES/libkickermenu_remotemenu.mo
 share/locale/lt/LC_MESSAGES/libkickermenu_systemmenu.mo
 share/locale/lt/LC_MESSAGES/libkickermenu_tom.mo
+share/locale/lt/LC_MESSAGES/libkitchensync.mo
 share/locale/lt/LC_MESSAGES/libkleopatra.mo
 share/locale/lt/LC_MESSAGES/libkmime.mo
 share/locale/lt/LC_MESSAGES/libkonq.mo

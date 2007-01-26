@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/10/12 11:17:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/01/26 03:36:16 markd Exp $
 share/doc/kde/HTML/hu/amor/common
 share/doc/kde/HTML/hu/amor/index.cache.bz2
 share/doc/kde/HTML/hu/amor/index.docbook
@@ -650,6 +650,7 @@ share/locale/hu/LC_MESSAGES/khotkeys.mo
 share/locale/hu/LC_MESSAGES/khtmlkttsd.mo
 share/locale/hu/LC_MESSAGES/khtmlsettingsplugin.mo
 share/locale/hu/LC_MESSAGES/kicker.mo
+share/locale/hu/LC_MESSAGES/kickermenu_kate.mo
 share/locale/hu/LC_MESSAGES/kiconedit.mo
 share/locale/hu/LC_MESSAGES/kig.mo
 share/locale/hu/LC_MESSAGES/kimagemapeditor.mo
