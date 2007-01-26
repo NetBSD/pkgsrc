@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/10/07 12:14:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/26 04:03:20 markd Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -164,6 +164,18 @@ share/doc/kde/HTML/en/kmymoney2/views-payees.docbook
 share/doc/kde/HTML/en/kmymoney2/views-reports.docbook
 share/doc/kde/HTML/en/kmymoney2/views-schedules.docbook
 share/doc/kde/HTML/en/kmymoney2/whatsnew.docbook
+share/icons/hicolor/128x128/apps/kmymoney2.png
+share/icons/hicolor/128x128/mimetypes/kmy.png
+share/icons/hicolor/16x16/apps/kmymoney2.png
+share/icons/hicolor/16x16/mimetypes/kmy.png
+share/icons/hicolor/32x32/apps/kmymoney2.png
+share/icons/hicolor/32x32/mimetypes/kmy.png
+share/icons/hicolor/48x48/apps/kmymoney2.png
+share/icons/hicolor/48x48/mimetypes/kmy.png
+share/icons/hicolor/64x64/apps/kmymoney2.png
+share/icons/hicolor/64x64/mimetypes/kmy.png
+share/icons/locolor/16x16/apps/kmymoney2.png
+share/icons/locolor/32x32/apps/kmymoney2.png
 share/kde/apps/kmymoney2/html/home.html
 share/kde/apps/kmymoney2/html/home_br.pt_BR.html
 share/kde/apps/kmymoney2/html/home_de.de.html
@@ -317,18 +329,6 @@ share/kde/apps/kmymoney2/templates/gl_ES/default_accounts.kmt
 share/kde/apps/kmymoney2/templates/pt_BR/default_accounts.kmt
 share/kde/apps/kmymoney2/templates/ru_SU/default_accounts.kmt
 share/kde/apps/kmymoney2/tips
-share/kde/icons/hicolor/128x128/apps/kmymoney2.png
-share/kde/icons/hicolor/128x128/mimetypes/kmy.png
-share/kde/icons/hicolor/16x16/apps/kmymoney2.png
-share/kde/icons/hicolor/16x16/mimetypes/kmy.png
-share/kde/icons/hicolor/32x32/apps/kmymoney2.png
-share/kde/icons/hicolor/32x32/mimetypes/kmy.png
-share/kde/icons/hicolor/48x48/apps/kmymoney2.png
-share/kde/icons/hicolor/48x48/mimetypes/kmy.png
-share/kde/icons/hicolor/64x64/apps/kmymoney2.png
-share/kde/icons/hicolor/64x64/mimetypes/kmy.png
-share/kde/icons/locolor/16x16/apps/kmymoney2.png
-share/kde/icons/locolor/32x32/apps/kmymoney2.png
 share/kde/mimelnk/application/x-kmymoney2.desktop
 ${HAS_LIBOFX}share/kde/services/kmm_ofximport.desktop
 share/kde/servicetypes/kmymoneyimporterplugin.desktop
@@ -347,17 +347,6 @@ share/locale/pt_PT/LC_MESSAGES/kmymoney2.mo
 share/locale/ru/LC_MESSAGES/kmymoney2.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/mimetypes
-@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @dirrm share/kde/apps/kmymoney2/templates/ru_SU
 @dirrm share/kde/apps/kmymoney2/templates/pt_BR
 @dirrm share/kde/apps/kmymoney2/templates/gl_ES
@@ -384,6 +373,17 @@ share/locale/ru/LC_MESSAGES/kmymoney2.mo
 @dirrm share/kde/apps/kmymoney2/html
 @dirrm share/kde/apps/kmymoney2
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @dirrm share/doc/kde/HTML/en/kmymoney2
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde
