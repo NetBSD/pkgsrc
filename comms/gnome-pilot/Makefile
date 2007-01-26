@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2006/09/16 12:20:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2007/01/26 01:33:14 markd Exp $
 #
 
-DISTNAME=		gnome-pilot-2.0.12
-PKGREVISION=		8
+DISTNAME=		gnome-pilot-2.0.15
 CATEGORIES=		comms gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pilot/2.0/}
 
@@ -17,6 +16,8 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+
+CONFIGURE_ARGS+=	--with-pisock=${BUILDLINK_PREFIX.pilot-link-libs}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
