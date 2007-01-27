@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/10/01 10:39:21 adam Exp $
+# $NetBSD: Makefile,v 1.26 2007/01/27 21:50:11 adam Exp $
 
-DISTNAME=	p7zip_4.43_src_all
-PKGNAME=	p7zip-4.43
+DISTNAME=	p7zip_4.44_src_all
+PKGNAME=	p7zip-4.44
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +31,14 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}
 GCC_REQD+=		3.0
 
 INSTALLATION_DIRS=	bin
+.if !empty(DYNAMIC_7Z:MYES)
+INSTALLATION_DIRS+=	lib/7z
+INSTALLATION_DIRS+=	lib/7z/Codecs
+INSTALLATION_DIRS+=	lib/7z/Formats
+.endif
+INSTALLATION_DIRS+=	share/doc/p7zip
+INSTALLATION_DIRS+=	share/doc/p7zip/commands
+INSTALLATION_DIRS+=	share/doc/p7zip/switches
 
 .include "../../mk/endian.mk"
 
@@ -43,9 +51,6 @@ CFLAGS+=		-DLITTLE_ENDIAN
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7za ${PREFIX}/bin
 .if !empty(DYNAMIC_7Z:MYES)
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/7z
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/7z/Codecs
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/7z/Formats
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${PREFIX}/lib/7z
 	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* ${PREFIX}/lib/7z/Codecs
 	${INSTALL_LIB} ${WRKSRC}/bin/Formats/* ${PREFIX}/lib/7z/Formats
@@ -53,9 +58,6 @@ do-install:
 .else
 	ln -s 7za ${PREFIX}/bin/7z
 .endif
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip/commands
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip/switches
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/p7zip
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/*.* ${PREFIX}/share/doc/p7zip
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/commands/*.* ${PREFIX}/share/doc/p7zip/commands
