@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/02 18:45:46 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/27 21:44:48 markd Exp $
 bin/images2mpg
 bin/kipidcraw
 lib/kde3/kipiplugin_acquireimages.la
@@ -1079,6 +1079,7 @@ share/locale/tr/LC_MESSAGES/kipiplugin_wallpaper.mo
 share/locale/tr/LC_MESSAGES/kipiplugins.mo
 share/locale/uk/LC_MESSAGES/kipiplugin_calendar.mo
 share/locale/uk/LC_MESSAGES/kipiplugin_htmlexport.mo
+share/locale/uk/LC_MESSAGES/kipiplugin_imagesgallery.mo
 share/locale/uk/LC_MESSAGES/kipiplugin_rawconverter.mo
 share/locale/uk/LC_MESSAGES/kipiplugin_slideshow.mo
 share/locale/uk/LC_MESSAGES/kipiplugin_timeadjust.mo
