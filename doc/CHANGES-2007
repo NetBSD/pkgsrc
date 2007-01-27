@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.255 2007/01/27 12:02:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.256 2007/01/27 13:01:01 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -529,3 +529,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added sysutils/pscpug version 0.3.2 [minskim 2007-01-27]
 	Updated devel/libbegemot to 1.11 [wiz 2007-01-27]
 	Updated emulators/p11 to 2.10i [wiz 2007-01-27]
+	Updated www/emacs-w3m to 1.4.4 [uebayasi 2007-01-27]
