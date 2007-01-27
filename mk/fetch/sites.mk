@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.19 2006/12/10 11:30:16 wiz Exp $
+# $NetBSD: sites.mk,v 1.20 2007/01/27 06:32:37 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -91,20 +91,19 @@ MASTER_SITE_GNOME+=     \
 MASTER_SITE_KDE+=	\
 	ftp://ftp.kde.org/pub/kde/stable/ \
 	http://ftp.scarlet.be/pub/kde/stable/ \
-	ftp://download.au.kde.org/pub/kde/stable/ \
-	ftp://mirrors.midco.net/pub/kde/stable/ \
-	ftp://ftp.eu.uu.net/pub/kde/stable/ \
-	ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/ \
-	ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/ \
-	ftp://ftp.rediris.es/mirror/kde/stable/ \
-	ftp://ftp.du.se/pub/mirrors/kde/stable/ \
-	ftp://download.tw.kde.org/pub/kde/stable/ \
 	ftp://www.t.ring.gr.jp/pub/X/kde/stable/ \
 	http://www.t.ring.gr.jp/archives/X/kde/stable/ \
 	ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/ \
-	ftp://ftp.de.kde.org/pub/kde/stable/ \
 	ftp://ftp.planetmirror.com.au/pub/kde/stable/ \
 	http://ftp.planetmirror.com.au/pub/kde/stable/ \
+	http://mirrors.isc.org/pub/kde/stable/ \
+	ftp://ftp.oregonstate.edu/pub/kde/stable/ \
+	ftp://ftp.gtlib.cc.gatech.edu/pub/kde/stable/ \
+	ftp://kde.mirrors.tds.net/pub/kde/stable/ \
+	ftp://gd.tuwien.ac.at/kde/stable/ \
+	ftp://ftp.solnet.ch/mirror/KDE/stable/ \
+	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.kde.org/pub/kde/stable/ \
+	ftp://mirrors.dotsrc.org/kde/stable/ \
 	ftp://ftp.fi.muni.cz/pub/kde/stable/
 
 MASTER_SITE_SOURCEFORGE+=	\
