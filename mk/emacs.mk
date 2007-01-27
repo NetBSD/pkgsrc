@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.26 2006/03/20 05:24:33 jlam Exp $
+# $NetBSD: emacs.mk,v 1.27 2007/01/27 12:27:42 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -192,18 +192,20 @@ EMACS_MK=	# defined
 #
 
 _EMACS_VERSIONS_ALL= \
-	emacs21 emacs21nox xemacs214 emacs20 xemacs215
+	emacs20 emacs21 emacs21nox emacs22 xemacs214 xemacs215
 _EMACS_VERSIONS_ACCEPTED_DEFAULT=	${_EMACS_VERSIONS_ALL}
 _EMACS_VERSION_DEFAULT.emacs=	emacs21
 _EMACS_VERSION_DEFAULT.xemacs=	xemacs214
 _EMACS_REQD.emacs20=	emacs>=20.7
 _EMACS_REQD.emacs21=	emacs>=21.2
 _EMACS_REQD.emacs21nox=	emacs-nox11>=21.2
+_EMACS_REQD.emacs22=	emacs>=22
 _EMACS_REQD.xemacs214=	xemacs>=21.4
 _EMACS_REQD.xemacs215=	xemacs>=21.5
 _EMACS_DEP.emacs20=	../../editors/emacs20
 _EMACS_DEP.emacs21=	../../editors/emacs
 _EMACS_DEP.emacs21nox=	../../editors/emacs-nox11
+_EMACS_DEP.emacs22=	../../wip/emacs-current
 _EMACS_DEP.xemacs214=	../../editors/xemacs
 _EMACS_DEP.xemacs215=	../../editors/xemacs-current
 
@@ -303,19 +305,21 @@ PKG_FAIL_REASON+=	"\`\`${EMACS_FLAVOR}'' is not a valid EMACS_FLAVOR"
 GNU_CONFIGURE_INFODIR?=	${EMACS_INFOPREFIX}
 
 _EMACS_FOR.emacs=		"@comment "
+_EMACS_FOR.emacs20=		"@comment "
 _EMACS_FOR.emacs21=		"@comment "
 _EMACS_FOR.emacs21nox=		"@comment "
-_EMACS_FOR.emacs20=		"@comment "
+_EMACS_FOR.emacs22=		"@comment "
 _EMACS_FOR.xemacs=		"@comment "
-_EMACS_FOR.xemacs215=		"@comment "
 _EMACS_FOR.xemacs214=		"@comment "
+_EMACS_FOR.xemacs215=		"@comment "
 _EMACS_NOTFOR.emacs=		""
+_EMACS_NOTFOR.emacs20=		""
 _EMACS_NOTFOR.emacs21=		""
 _EMACS_NOTFOR.emacs21nox=	""
-_EMACS_NOTFOR.emacs20=		""
+_EMACS_NOTFOR.emacs22=		""
 _EMACS_NOTFOR.xemacs=		""
-_EMACS_NOTFOR.xemacs215=	""
 _EMACS_NOTFOR.xemacs214=	""
+_EMACS_NOTFOR.xemacs215=	""
 _EMACS_FOR.${EMACS_FLAVOR}=	""
 _EMACS_FOR.${_EMACS_TYPE}=	""
 _EMACS_NOTFOR.${EMACS_FLAVOR}=	"@comment "
@@ -326,19 +330,21 @@ PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_NOREV:Q}
 PLIST_SUBST+=	EMACS_INFOPREFIX=${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	FOR_emacs=${_EMACS_FOR.emacs}
+PLIST_SUBST+=	FOR_emacs20=${_EMACS_FOR.emacs20}
 PLIST_SUBST+=	FOR_emacs21=${_EMACS_FOR.emacs21}
 PLIST_SUBST+=	FOR_emacs21nox=${_EMACS_FOR.emacs21nox}
-PLIST_SUBST+=	FOR_emacs20=${_EMACS_FOR.emacs20}
+PLIST_SUBST+=	FOR_emacs22=${_EMACS_FOR.emacs22}
 PLIST_SUBST+=	FOR_xemacs=${_EMACS_FOR.xemacs}
-PLIST_SUBST+=	FOR_xemacs215=${_EMACS_FOR.xemacs215}
 PLIST_SUBST+=	FOR_xemacs214=${_EMACS_FOR.xemacs214}
+PLIST_SUBST+=	FOR_xemacs215=${_EMACS_FOR.xemacs215}
 PLIST_SUBST+=	NOTFOR_emacs=${_EMACS_NOTFOR.emacs}
+PLIST_SUBST+=	NOTFOR_emacs20=${_EMACS_NOTFOR.emacs20}
 PLIST_SUBST+=	NOTFOR_emacs21=${_EMACS_NOTFOR.emacs21}
 PLIST_SUBST+=	NOTFOR_emacs21nox=${_EMACS_NOTFOR.emacs21nox}
-PLIST_SUBST+=	NOTFOR_emacs20=${_EMACS_NOTFOR.emacs20}
+PLIST_SUBST+=	NOTFOR_emacs22=${_EMACS_NOTFOR.emacs22}
 PLIST_SUBST+=	NOTFOR_xemacs=${_EMACS_NOTFOR.xemacs}
-PLIST_SUBST+=	NOTFOR_xemacs215=${_EMACS_NOTFOR.xemacs215}
 PLIST_SUBST+=	NOTFOR_xemacs214=${_EMACS_NOTFOR.xemacs214}
+PLIST_SUBST+=	NOTFOR_xemacs215=${_EMACS_NOTFOR.xemacs215}
 
 #
 # ELP dependencies
