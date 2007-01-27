@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/17 13:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/27 10:58:38 wiz Exp $
 #
 
 DISTNAME=	gpsim-20050905
@@ -18,7 +18,8 @@ USE_LIBTOOL=	YES
 
 GCC_REQD+=		3.0
 
-USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,
+USE_GNU_READLINE=	YES
+# rl_callback_read_char, rl_copy_text,
 # rl_callback_handler_remove, rl_forced_update_display,
 # rl_callback_handler_install
 
