@@ -1,6 +1,9 @@
-# $NetBSD: test.mk,v 1.9 2006/12/15 12:46:23 martti Exp $
+# $NetBSD: test.mk,v 1.10 2007/01/27 08:14:07 uebayasi Exp $
 #
 # Package-settable variables:
+#
+# TEST_TARGET is the name of the ${MAKE} target, provided by the
+#	package, which enables the tests to be executed
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
