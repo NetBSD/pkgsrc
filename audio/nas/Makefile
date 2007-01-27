@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/12/27 13:37:35 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2007/01/27 20:46:52 markd Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -18,7 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake perl:run
 USE_IMAKE=		yes
-MAKE_FLAGS+=		MANPATH=${PREFIX}/${PKGMANDIR}
 
 PKG_SYSCONFSUBDIR=	nas
 
