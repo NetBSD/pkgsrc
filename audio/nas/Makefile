@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2007/01/27 20:46:52 markd Exp $
+# $NetBSD: Makefile,v 1.71 2007/01/27 20:56:18 markd Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://nas.codebrilliance.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/
@@ -77,17 +77,14 @@ post-install:
 PLIST_SRC=	${PKGDIR}/PLIST.clients
 
 .if ${OPSYS} != "Interix"
-.  if (${MACHINE_ARCH} == "i386") || \
-      (${MACHINE_ARCH} == "x86_64") || \
-      (${MACHINE_ARCH} == "sparc64") || \
-      (${MACHINE_ARCH} == "sparc")
-.    include "../../mk/oss.buildlink3.mk"
+PLIST_SRC+=	${PKGDIR}/PLIST.server
 EGDIR=		${PREFIX}/share/examples/nas
 CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
-.    if ${OPSYS} != "SunOS"
+
+.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
+      ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "UnixWare"
+.  include "../../mk/oss.buildlink3.mk"
 PLIST_SRC+=	${PKGDIR}/PLIST.voxware
-.    endif
-PLIST_SRC+=	${PKGDIR}/PLIST.server
 .  endif
 .endif
 
