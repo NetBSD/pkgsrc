@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2006/02/22 20:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/27 12:56:02 uebayasi Exp $
 
-DISTNAME=	emacs-w3m-1.3.3
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	emacs-w3m-1.4.4
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 
@@ -10,20 +8,17 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
 
-DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
-BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
-
-# Not tested with xemacs...
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
+DEPENDS+=	w3m>=0.5.1nb2:../../www/w3m
 
 .include "../../mk/emacs.mk"
 
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
 .if ${EMACS_FLAVOR} == "xemacs"
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.3:../../devel/apel
 .endif
 
-EMACS_MAJOR_VERSION=	${_EMACS_VERSION:C/\..*//}
-.if ${EMACS_FLAVOR} == "emacs" && ${EMACS_MAJOR_VERSION} == 21
+.if ${EMACS_FLAVOR} == "emacs" && \
+    (${EMACS_VERSION_MAJOR} == 21 || ${EMACS_VERSION_MAJOR} == 22)
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.84:../../editors/mule-ucs
 .endif
 
@@ -36,17 +31,16 @@ INSTALL_TARGET=	install-package
 INSTALL_TARGET=	install install-icons
 .endif
 
-DOCUMENTS=	COPYING ChangeLog ChangeLog.1 FAQ FAQ.ja README README.ja README.namazu.ja README.shimbun.ja TIPS TIPS.ja
+DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja
 .if ${EMACS_FLAVOR} == "xemacs"
 ETCDIR=	lib/xemacs/site-packages/etc
 ICONDIR=	${ETCDIR}/w3m
 .else
-ETCDIR=	share/emacs/${_EMACS_VERSION:C/(^[0-9.]*).*$/\1/}/etc
+ETCDIR=	share/emacs/${_EMACS_VERSION_NOREV}/etc
 ICONDIR=	${ETCDIR}/w3m/icons
 .endif
 DOCDIR=	${ETCDIR}/w3m/doc
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
-PLIST_SUBST+=	ETCDIR=${ETCDIR:Q}
 PLIST_SUBST+=	ICONDIR=${ICONDIR:Q}
 
 post-install:
