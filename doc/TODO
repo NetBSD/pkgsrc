@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5942 2007/01/26 21:07:28 wiz Exp $
+$NetBSD: TODO,v 1.5943 2007/01/27 12:02:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ Suggested package updates
 	o oroborus-2.0.15
 	o otpCalc-0.97
 	o p0f-2.0.8
-	o p11-2.10c
 	o p4-2005.1 [schmonz]
 	o p4d-2005.1 [schmonz]
 	o p5-Apache-ASP-2.59
