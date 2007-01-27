@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.804 2007/01/24 19:59:24 epg Exp $
+# $NetBSD: Makefile,v 1.805 2007/01/27 13:40:46 kristerw Exp $
 #
 
 COMMENT=	Development utilities
@@ -36,6 +36,7 @@ SUBDIR+=	apache-ant15
 SUBDIR+=	apel
 SUBDIR+=	apr
 SUBDIR+=	apr-util
+SUBDIR+=	apr0
 SUBDIR+=	arena
 SUBDIR+=	argtable
 SUBDIR+=	as31
@@ -557,6 +558,7 @@ SUBDIR+=	p5-VCP-Dest-svk
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-capitalization
+SUBDIR+=	p5-enum
 SUBDIR+=	p5-gettext
 SUBDIR+=	p5-glib2
 SUBDIR+=	p5-perl-headers
