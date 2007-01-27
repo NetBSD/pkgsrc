@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:30 wiz Exp $
+$NetBSD: distinfo,v 1.4 2007/01/27 12:56:02 uebayasi Exp $
 
-SHA1 (emacs-w3m-1.3.3.tar.gz) = b3bff0b9419cd65b805ddc06d93eb9d93b2b1f22
-RMD160 (emacs-w3m-1.3.3.tar.gz) = e9a19ba0411bf8a299aa6678a71cf41076612125
-Size (emacs-w3m-1.3.3.tar.gz) = 356491 bytes
+SHA1 (emacs-w3m-1.4.4.tar.gz) = e7b85e5af9d05fbb836c49b75b9aa76d90bbbde8
+RMD160 (emacs-w3m-1.4.4.tar.gz) = d57a1296bcfcb422c379c9e8f35311ff2ac7d702
+Size (emacs-w3m-1.4.4.tar.gz) = 796123 bytes
+SHA1 (patch-aa) = bdbee77c09c115f46384380cc9932a26b3437d17
