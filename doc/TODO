@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5949 2007/01/28 19:57:04 minskim Exp $
+$NetBSD: TODO,v 1.5950 2007/01/28 20:03:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -438,6 +438,7 @@ Suggested package updates
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
+	o gimp24-2.3.14
 	o gkrellm-2.2.10 [pkg/34957]
 	o gkrellm-multiping-2.0.10
 	o gkrellm-xmms-2.1.22
@@ -791,7 +792,7 @@ Suggested package updates
 	o p5-Test-Exception-0.24
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-2.201
-	o p5-Test-Simple-0.66
+	o p5-Test-Simple-0.67
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
 	o p5-Text-Shellwords-1.08 [pkg/34417]
