@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.264 2007/01/28 07:32:02 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.265 2007/01/28 12:11:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ruby-actionwebservice to 1.2.1 [minskim 2007-01-28]
 	Updated www/rails to 1.2.1 [minskim 2007-01-28]
 	Updated devel/chmlib to 0.39 [wiz 2007-01-28]
+	Added devel/p5-Term-ReadPassword version 0.07 [obache 2007-01-28]
