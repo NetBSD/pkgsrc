@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2006/11/23 22:19:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.85 2007/01/28 01:31:52 adrianp Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -9,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/sw/bind/
 COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
 
-BIND_VERSION=	9.3.2
+BIND_VERSION=	9.3.4
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
