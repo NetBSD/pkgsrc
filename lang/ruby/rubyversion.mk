@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.30 2006/12/06 16:19:49 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.31 2007/01/28 15:15:57 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -190,7 +190,11 @@ RUBY_SITELIBDIR?=	${PREFIX}/lib/ruby/site_ruby/${RUBY_VER_DIR}
 RUBY_SITEARCHLIBDIR?=	${RUBY_SITELIBDIR}/${RUBY_ARCH}
 RUBY_DOCDIR?=		${PREFIX}/share/doc/${RUBY_NAME}
 RUBY_EXAMPLESDIR?=	${PREFIX}/share/examples/${RUBY_NAME}
-RUBY_RIDIR?=		${PREFIX}/share/ri
+
+#
+# ri database relative path
+#
+RUBY_RIDIR?=		share/ri
 RUBY_BASERIDIR?=	${RUBY_RIDIR}/${RUBY_VER_DIR}
 RUBY_SYSRIDIR?=		${RUBY_BASERIDIR}/system
 RUBY_SITERIDIR?=	${RUBY_BASERIDIR}/site
