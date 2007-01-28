@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2006/12/06 16:24:27 taca Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/28 15:15:58 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
-#PKGREVISION=
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -37,16 +37,15 @@ WRKSRC=			${RUBY_WRKSRC}
 CONFIG_STATUS_OVERRIDE=	# empty
 
 MAKE_DIRS+=	${RUBY_SITERIDIR}
+FILES_SUBST+=	DATE=${DATE:Q}
+
+.include "options.mk"
 
 .include "../../lang/ruby/rubyversion.mk"
 
 .if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX:Q}
 .endif
-
-.include "options.mk"
-
-FILES_SUBST+=	DATE=${DATE:Q}
 
 #
 # IRIX work around which should be fixed.
