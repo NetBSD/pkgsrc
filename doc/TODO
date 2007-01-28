@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5944 2007/01/27 18:24:23 minskim Exp $
+$NetBSD: TODO,v 1.5945 2007/01/28 07:21:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -272,8 +272,8 @@ Suggested package updates
 	o arnold-20040104
 	o asapm-3.1
 	o asc-1.16.4
-	o aspell-danish-1.7.6
-	o aspell-faroese-0.2.26
+	o aspell-danish-1.7.9
+	o aspell-faroese-0.2.28
 	o aspell-norwegian-2.0.6
 	o asterisk-1.4.0
 	o astyle-1.15.3
@@ -937,8 +937,7 @@ Suggested package updates
 	o qwspritefield-1.7
 	o qwt-0.4.0
 	o radiance-3.7.2
-	o rails-1.2.0
-	o raine-0.43.4
+	o raine-0.50.1
 	o randread-0.2
 	o raptor-1.4.13
 	o rat-4.2.25
