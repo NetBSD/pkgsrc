@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.9.12.1 2007/01/28 20:32:49 ghen Exp $
+
+--- kchart/kdchart/kdchart_export.h.orig	2007-01-13 14:18:02.000000000 +1300
++++ kchart/kdchart/kdchart_export.h
+@@ -4,7 +4,7 @@
+ #include <qglobal.h>
+ 
+ #if 1
+-#include <../../lib/kofficecore/koffice_export.h>
++#include <koffice_export.h>
+ #else
+ 
+ #if defined(Q_OS_WIN32) && defined(KDCHART_DLL)
