@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/06/25 09:11:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4.6.1 2007/01/28 20:17:52 ghen Exp $
 
-DISTNAME=	mod_auth_kerb-5.0rc7
-PKGNAME=	${APACHE_PKG_PREFIX}-auth-kerb-5.0rc7
+DISTNAME=	mod_auth_kerb-5.3
+PKGNAME=	${APACHE_PKG_PREFIX}-auth-kerb-5.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=modauthkerb/}
 
