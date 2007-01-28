@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:18 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/28 15:22:54 taca Exp $
 #
 
-DISTNAME=		dnsdoctor-1.0.0
+DISTNAME=		dnsdoctor-1.0.1
 CATEGORIES=		net
 MASTER_SITES=		http://www.dnsdoctor.org/download/src/
 EXTRACT_SUFX=		.tgz
