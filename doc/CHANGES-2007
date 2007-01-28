@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.259 2007/01/28 01:36:52 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.260 2007/01/28 04:40:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/p7zip to 4.44 [adam 2007-01-27]
 	Updated net/bind9 to 9.3.4 [adrianp 2007-01-28]
 	Updated security/ike-scan to 1.9 [adrianp 2007-01-28]
+	Updated devel/ruby-activesupport to 1.4.0 [minskim 2007-01-28]
