@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2007/01/28 16:33:58 ghen Exp $
+
+--- gl/Makefile.in.orig	2006-08-31 08:04:16.000000000 -0700
++++ gl/Makefile.in
+@@ -62,7 +62,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ libgnu_la_DEPENDENCIES = @LTLIBOBJS@ @LTALLOCA@
+-am_libgnu_la_OBJECTS =
++am_libgnu_la_OBJECTS = alloca.lo
+ libgnu_la_OBJECTS = $(am_libgnu_la_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+ depcomp =
