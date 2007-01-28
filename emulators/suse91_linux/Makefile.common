@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/06/19 23:25:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15.6.1 2007/01/28 17:33:39 ghen Exp $
 
 .include "../../emulators/suse91_linux/vars.mk"
 .include "../../emulators/suse91_linux/arch.mk"
@@ -7,8 +7,8 @@ ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-3.99*-x86_64 \
 			NetBSD-[4-9]*-x86_64 FreeBSD-*-i386 \
 			DragonFly-*-i386
 
-_SUSE_FTP_SUBDIR=	suse/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/
-_SUSE_FTP_SUBDIR_UPD=	suse/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/
+_SUSE_FTP_SUBDIR=	suse/discontinued/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/
+_SUSE_FTP_SUBDIR_UPD=	suse/discontinued/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/
 
 MASTER_SITE_SUSE91?=	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR} \
 			ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD} \
