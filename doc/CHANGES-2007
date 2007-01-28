@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.266 2007/01/28 12:12:11 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.267 2007/01/28 15:17:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -545,3 +545,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/chmlib to 0.39 [wiz 2007-01-28]
 	Added devel/p5-Term-ReadPassword version 0.07 [obache 2007-01-28]
 	Updated games/eboard to 1.0.3 [rillig 2007-01-28]
+	Updated lang/ruby18-base to 1.8.5.20061205nb1 [taca 2007-01-28]
