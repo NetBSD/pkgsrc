@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.22 2007/01/17 21:07:55 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.23 2007/01/28 17:35:27 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -47,3 +47,15 @@ Pullup ticket 1998 - requested by joerg
 security fix for xorg-server
 Pullup ticket 1996 - requested by markd
 security fix for koffice
+Pullup ticket 1987 - requested by minskim
+portability fix for libksba
+Pullup ticket 1991 - requested by martti
+bugfix update for proftpd
+Pullup ticket 1992 - requested by wiz
+bugfix for mldonkey
+Pullup ticket 2000 - requested by hira
+distinfo fix for fd
+Pullup ticket 2001 - requested by joerg
+build fix for jakarta-servletapi
+Pullup ticket 2002 - requested by joerg
+download fix for suse91_*
