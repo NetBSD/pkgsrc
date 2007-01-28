@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5948 2007/01/28 07:32:02 wiz Exp $
+$NetBSD: TODO,v 1.5949 2007/01/28 19:57:04 minskim Exp $
 
 Suggested new packages
 ======================
@@ -337,6 +337,7 @@ Suggested package updates
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
 	o courier-mta-0.54.2
+	o cppunit-1.12.0
 	o crafty-19.5
 	o crossfire-client-1.9.1
 	o crypto++-523
