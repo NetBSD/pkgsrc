@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: mkbootstrapkit,v 1.7 2006/07/17 14:30:05 jlam Exp $
+# $NetBSD: mkbootstrapkit,v 1.8 2007/01/28 01:40:49 jschauma Exp $
 #
 # Usage: mkbootstrapkit [kitdir]
 #
@@ -44,7 +44,7 @@ done
 
 echo "Archiving to $kitfile."
 rm -f $kitfile
-cd `dirname $kitdir` && tar zcpf $kitfile `basename $kitdir`
+cd `dirname $kitdir` && tar cpf - `basename $kitdir` | gzip -c > $kitfile 
 
 echo "Removing $kitdir."
 rm -rf $kitdir
