@@ -1,19 +1,30 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/09 23:21:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/28 05:39:02 minskim Exp $
 ${RUBY_SITELIBDIR}/action_controller.rb
+${RUBY_SITELIBDIR}/action_controller/._assertions.rb
+${RUBY_SITELIBDIR}/action_controller/._routing.rb
+${RUBY_SITELIBDIR}/action_controller/._status_codes.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/._deprecated_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/._dom_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/deprecated_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/dom_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/model_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/response_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/routing_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/selector_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/assertions/tag_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/base.rb
 ${RUBY_SITELIBDIR}/action_controller/benchmarking.rb
 ${RUBY_SITELIBDIR}/action_controller/caching.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext/._cgi_methods.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_ext.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_methods.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cookie_performance_fix.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/raw_post_data_fix.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_process.rb
-${RUBY_SITELIBDIR}/action_controller/code_generation.rb
 ${RUBY_SITELIBDIR}/action_controller/components.rb
 ${RUBY_SITELIBDIR}/action_controller/cookies.rb
-${RUBY_SITELIBDIR}/action_controller/dependencies.rb
-${RUBY_SITELIBDIR}/action_controller/deprecated_assertions.rb
+${RUBY_SITELIBDIR}/action_controller/deprecated_dependencies.rb
 ${RUBY_SITELIBDIR}/action_controller/deprecated_redirects.rb
 ${RUBY_SITELIBDIR}/action_controller/deprecated_request_methods.rb
 ${RUBY_SITELIBDIR}/action_controller/filters.rb
@@ -28,6 +39,7 @@ ${RUBY_SITELIBDIR}/action_controller/mime_type.rb
 ${RUBY_SITELIBDIR}/action_controller/pagination.rb
 ${RUBY_SITELIBDIR}/action_controller/request.rb
 ${RUBY_SITELIBDIR}/action_controller/rescue.rb
+${RUBY_SITELIBDIR}/action_controller/resources.rb
 ${RUBY_SITELIBDIR}/action_controller/response.rb
 ${RUBY_SITELIBDIR}/action_controller/routing.rb
 ${RUBY_SITELIBDIR}/action_controller/scaffolding.rb
@@ -36,15 +48,17 @@ ${RUBY_SITELIBDIR}/action_controller/session/drb_server.rb
 ${RUBY_SITELIBDIR}/action_controller/session/drb_store.rb
 ${RUBY_SITELIBDIR}/action_controller/session/mem_cache_store.rb
 ${RUBY_SITELIBDIR}/action_controller/session_management.rb
+${RUBY_SITELIBDIR}/action_controller/status_codes.rb
 ${RUBY_SITELIBDIR}/action_controller/streaming.rb
 ${RUBY_SITELIBDIR}/action_controller/test_process.rb
 ${RUBY_SITELIBDIR}/action_controller/url_rewriter.rb
+${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/._selector.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/document.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/node.rb
+${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/selector.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/tokenizer.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/version.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/xml_node.rb
-${RUBY_SITELIBDIR}/action_controller/vendor/xml_simple.rb
 ${RUBY_SITELIBDIR}/action_controller/verification.rb
 ${RUBY_SITELIBDIR}/action_view.rb
 ${RUBY_SITELIBDIR}/action_view/base.rb
@@ -56,6 +70,7 @@ ${RUBY_SITELIBDIR}/action_view/helpers/cache_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/capture_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/date_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/debug_helper.rb
+${RUBY_SITELIBDIR}/action_view/helpers/deprecated_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/form_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/form_options_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/form_tag_helper.rb
@@ -109,4 +124,5 @@ ${RUBY_EXAMPLESDIR}/actionpack/debate_controller.cgi
 @dirrm ${RUBY_SITELIBDIR}/action_controller/session
 @dirrm ${RUBY_SITELIBDIR}/action_controller/macros
 @dirrm ${RUBY_SITELIBDIR}/action_controller/cgi_ext
+@dirrm ${RUBY_SITELIBDIR}/action_controller/assertions
 @dirrm ${RUBY_SITELIBDIR}/action_controller
