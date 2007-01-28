@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2006/10/09 22:48:10 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/28 05:39:02 minskim Exp $
 
-DISTNAME=	actionpack-1.12.5
+DISTNAME=	actionpack-1.13.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/12314/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/16551/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ap.rubyonrails.com/
 COMMENT=	Two-step approach to web response generation
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.3.1:../../devel/ruby-activesupport
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.0:../../devel/ruby-activesupport
 
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
