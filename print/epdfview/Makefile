@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/30 07:30:29 reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/28 00:13:49 dillo Exp $
 #
 
 DISTNAME=	epdfview-0.1.5
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
+
+.include "options.mk"
 
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
