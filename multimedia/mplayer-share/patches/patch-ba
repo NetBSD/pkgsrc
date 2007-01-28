@@ -1,0 +1,25 @@
+$NetBSD: patch-ba,v 1.4.14.1 2007/01/28 20:37:59 ghen Exp $
+
+--- stream/realrtsp/asmrp.c.orig	2006-10-23 00:32:25.000000000 +0200
++++ stream/realrtsp/asmrp.c
+@@ -40,6 +40,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
++#include "asmrp.h"
+ 
+ /*
+ #define LOG
+@@ -645,8 +646,10 @@ static int asmrp_eval (asmrp_t *p, int *
+ #ifdef LOG
+       printf ("rule #%d is true\n", rule_num);
+ #endif
+-      matches[num_matches] = rule_num;
+-      num_matches++;
++      if(num_matches < MAX_RULEMATCHES - 1)
++        matches[num_matches++] = rule_num;
++      else
++        printf("Ignoring matched asm rule %d, too many matched rules.\n", rule_num);
+     }
+ 
+     rule_num++;
