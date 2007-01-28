@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.4.14.1 2007/01/28 20:37:59 ghen Exp $
+
+--- stream/realrtsp/real.c.orig	2006-10-23 00:32:25.000000000 +0200
++++ stream/realrtsp/real.c
+@@ -271,7 +271,7 @@ static rmff_header_t *real_parse_sdp(cha
+     int j=0;
+     int n;
+     char b[64];
+-    int rulematches[16];
++    int rulematches[MAX_RULEMATCHES];
+ 
+ #ifdef LOG
+     printf("calling asmrp_match with:\n%s\n%u\n", desc->stream[i]->asm_rule_book, bandwidth);

@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.2.20.1 2007/01/28 20:37:59 ghen Exp $
+
+--- stream/realrtsp/asmrp.h.orig	2006-10-23 00:32:25.000000000 +0200
++++ stream/realrtsp/asmrp.h
+@@ -40,6 +40,8 @@
+ #ifndef HAVE_ASMRP_H
+ #define HAVE_ASMRP_H
+ 
++#define MAX_RULEMATCHES 16
++
+ int asmrp_match (const char *rules, int bandwidth, int *matches) ;
+ 
+ #endif
