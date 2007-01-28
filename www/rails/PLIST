@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/12 08:36:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/28 05:45:09 minskim Exp $
 bin/rails
 ${RUBY_SITELIBDIR}/binding_of_caller.rb
 ${RUBY_SITELIBDIR}/breakpoint.rb
@@ -15,12 +15,15 @@ ${RUBY_SITELIBDIR}/commands/ncgi/tracker
 ${RUBY_SITELIBDIR}/commands/performance/benchmarker.rb
 ${RUBY_SITELIBDIR}/commands/performance/profiler.rb
 ${RUBY_SITELIBDIR}/commands/plugin.rb
+${RUBY_SITELIBDIR}/commands/process/inspector.rb
 ${RUBY_SITELIBDIR}/commands/process/reaper.rb
 ${RUBY_SITELIBDIR}/commands/process/spawner.rb
 ${RUBY_SITELIBDIR}/commands/process/spinner.rb
 ${RUBY_SITELIBDIR}/commands/runner.rb
 ${RUBY_SITELIBDIR}/commands/server.rb
+${RUBY_SITELIBDIR}/commands/servers/base.rb
 ${RUBY_SITELIBDIR}/commands/servers/lighttpd.rb
+${RUBY_SITELIBDIR}/commands/servers/mongrel.rb
 ${RUBY_SITELIBDIR}/commands/servers/webrick.rb
 ${RUBY_SITELIBDIR}/commands/update.rb
 ${RUBY_SITELIBDIR}/console_app.rb
@@ -33,6 +36,7 @@ ${RUBY_SITELIBDIR}/rails/version.rb
 ${RUBY_SITELIBDIR}/rails_generator.rb
 ${RUBY_SITELIBDIR}/rails_generator/base.rb
 ${RUBY_SITELIBDIR}/rails_generator/commands.rb
+${RUBY_SITELIBDIR}/rails_generator/generated_attribute.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/applications/app/USAGE
 ${RUBY_SITELIBDIR}/rails_generator/generators/applications/app/app_generator.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/USAGE
@@ -59,6 +63,10 @@ ${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/fixture
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/migration.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/model.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/unit_test.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/USAGE
+${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/observer_generator.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/templates/observer.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/templates/unit_test.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/USAGE
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/plugin_generator.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/README
@@ -69,7 +77,17 @@ ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/init.r
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/install.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/plugin.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/tasks.rake
+${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/uninstall.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/unit_test.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/resource_generator.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/USAGE
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/controller.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/fixtures.yml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/functional_test.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/helper.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/migration.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/model.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/unit_test.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/USAGE
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/scaffold_generator.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/controller.rb
@@ -83,6 +101,21 @@ ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_list.rhtml
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_new.rhtml
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_show.rhtml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/USAGE
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/scaffold_resource_generator.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/controller.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/fixtures.yml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/functional_test.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/helper.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/layout.rhtml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/migration.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/model.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/style.css
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/unit_test.rb
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/view_edit.rhtml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/view_index.rhtml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/view_new.rhtml
+${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates/view_show.rhtml
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/USAGE
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/session_migration_generator.rb
 ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/templates/migration.rb
@@ -126,6 +159,7 @@ share/rails/bin/generate
 share/rails/bin/performance/benchmarker
 share/rails/bin/performance/profiler
 share/rails/bin/plugin
+share/rails/bin/process/inspector
 share/rails/bin/process/reaper
 share/rails/bin/process/spawner
 share/rails/bin/rails
@@ -136,6 +170,7 @@ share/rails/builtin/rails_info/rails/info_controller.rb
 share/rails/builtin/rails_info/rails/info_helper.rb
 share/rails/builtin/rails_info/rails_info_controller.rb
 share/rails/configs/apache.conf
+share/rails/configs/databases/frontbase.yml
 share/rails/configs/databases/mysql.yml
 share/rails/configs/databases/oracle.yml
 share/rails/configs/databases/postgresql.yml
@@ -190,10 +225,16 @@ share/rails/html/robots.txt
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/web_service
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/templates
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration
+@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource/templates
+@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold_resource
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold
+@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates
+@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/resource
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin
+@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/templates
+@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/observer
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/model
 @dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/migration/templates
