@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.260 2007/01/28 04:40:46 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.261 2007/01/28 05:18:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/bind9 to 9.3.4 [adrianp 2007-01-28]
 	Updated security/ike-scan to 1.9 [adrianp 2007-01-28]
 	Updated devel/ruby-activesupport to 1.4.0 [minskim 2007-01-28]
+	Updated x11/ruby-tk to 1.8.5.20061205nb1 [taca 2007-01-28]
