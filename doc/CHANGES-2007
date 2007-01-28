@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.267 2007/01/28 15:17:04 taca Exp $
+$NetBSD: CHANGES-2007,v 1.268 2007/01/28 15:34:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -546,3 +546,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Term-ReadPassword version 0.07 [obache 2007-01-28]
 	Updated games/eboard to 1.0.3 [rillig 2007-01-28]
 	Updated lang/ruby18-base to 1.8.5.20061205nb1 [taca 2007-01-28]
+	Updated archivers/ruby-zip to 0.9.1 [taca 2007-01-28]
+	Updated databases/ruby-mysql to 2.7.3 [taca 2007-01-28]
+	Updated net/dnsdoctor to 1.0.1 [taca 2007-01-28]
+	Updated textproc/ruby-rttool to 1.0.2 [taca 2007-01-28]
+	Updated www/ap-ruby to 1.2.6 [taca 2007-01-28]
