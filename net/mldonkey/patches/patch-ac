@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.2.10.1 2007/01/28 16:57:34 ghen Exp $
+
+--- src/networks/donkey/donkeyTypes.ml.orig	2006-11-26 16:36:29.000000000 +0000
++++ src/networks/donkey/donkeyTypes.ml
+@@ -602,6 +602,8 @@ and upload_info = {
+     mutable up_pos : int64;
+     mutable up_end_chunk : int64;
+     mutable up_chunks : (int64 * int64) list;
++    (* zones sent but not yet received by other peer, oldest first *)
++    mutable up_flying_chunks : (int64 * int64) list; 
+     mutable up_waiting : bool;
+   }
+ 
