@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:07 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/28 15:25:11 taca Exp $
 #
 
 DISTNAME=	xmlparser-0.6.8.1
@@ -18,7 +18,8 @@ WRKSRC=			${WRKDIR}/xmlparser
 REPLACE_RUBY_DIRS=	${WRKSRC}/samples
 
 pre-patch:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/samples; ${RM} -r */CVS
+	cd ${WRKSRC}/samples; ${RM} -fr */CVS
+	cd ${WRKSRC}/samples; find . -type d -exec ${CHMOD} 0755 {} \;
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/xmlparser
