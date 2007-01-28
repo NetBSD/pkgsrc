@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/09/16 10:34:46 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/28 12:11:37 rillig Exp $
 #
 
-DISTNAME=		eboard-0.9.5
+DISTNAME=		eboard-1.0.3
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +14,7 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--man-prefix=${PREFIX}/${PKGMANDIR}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl gmake
 REPLACE_PERL+=		configure
