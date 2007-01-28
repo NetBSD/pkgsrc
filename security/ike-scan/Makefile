@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/28 01:34:42 adrianp Exp $
 
-DISTNAME=	ike-scan-1.8
+DISTNAME=	ike-scan-1.9
 CATEGORIES=	security
 MASTER_SITES=	http://www.nta-monitor.com/ike-scan/download/
 
