@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.65 2007/01/24 02:48:51 rillig Exp $
+# $NetBSD: pre-build,v 1.66 2007/01/28 19:23:22 kristerw Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -32,6 +32,11 @@ fi
 BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
 if [ "$BROKENF" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .broken files"
+	exit 1
+fi
+NOTAVAILF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=NOT_AVAILABLE_FILE )`;
+if [ "$NOTAVAILF" = "" ]; then
+	echo "pre-build> Had problems determining the name of the .bulk-not_available files"
 	exit 1
 fi
 BRKWRKLOG=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENWRKLOG )`;
@@ -167,6 +172,7 @@ rm -fr /tmp/mod*
 cd "${USR_PKGSRC}"
 echo "pre-build> Cleaning up leftover state files from previous runs"
 rm -f "${BULKFILESDIR}"/*/*/$BROKENF "${BULKFILESDIR}"/*/*/$BRKWRKLOG "${BULKFILESDIR}"/*/*/$BLDLOG
+rm -f "${BULKFILESDIR}"/*/*/$NOTAVAILF
 rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$BLDLOG" "$STARTFILE"
 
 
