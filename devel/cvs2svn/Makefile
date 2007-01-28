@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/01/26 22:13:22 bad Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/28 16:49:28 rillig Exp $
 
 DISTNAME=	cvs2svn-1.5.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/34574/
 
@@ -18,15 +19,14 @@ PYTHON_PATCH_SCRIPTS=		run-tests.py
 # XXX cvs2svn depends on sort(1) with '-T' option. A dependency and a patch
 # to resort on GNU sort from coreutils may be required.
 
-INSTALLATION_DIRS+=	share/doc/html/cvs2svn
+INSTALLATION_DIRS+=	share/doc/cvs2svn
 
 post-install:
-	for f in ${WRKSRC}/www/*.html; do				\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/html/cvs2svn;	\
-	done
+	cd ${WRKSRC}/www && \
+	${INSTALL_DATA} *.html ${PREFIX}/share/doc/cvs2svn
 
 do-test:
-	cd ${WRKSRC}; ./run-tests.py
+	cd ${WRKSRC} && ./run-tests.py
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../lang/python/application.mk"
