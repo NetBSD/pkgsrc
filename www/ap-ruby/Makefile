@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/06/02 18:27:59 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/01/28 15:30:25 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
-PKGNAME=	ap13-${RUBY_PKGPREFIX}-${VERSION}
+PKGNAME=	${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${VERSION}
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -10,18 +10,18 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
-CONFLICTS=	ap-ruby* ap2-ruby*
-
 RUBY_HAS_ARCHLIB=	yes
 APACHE_MODULE=		yes
-VERSION=		1.2.4
+PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
+USE_APR=		yes
+VERSION=		1.2.6
 HAS_CONFIGURE=  	yes
 INSTALL_TARGET=		site-install
-CONFIGURE_SCRIPT=	${RUBY} configure.rb
+CONFIGURE_SCRIPT=	./configure.rb
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 MESSAGE_SUBST+=		RUBY_DOCDIR=${RUBY_DOCDIR}
 DOCS=			ChangeLog NOTICE README.en README.ja
-REPLACE_RUBY+=		install-rb
+REPLACE_RUBY+=		configure.rb install-rb
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,6 +29,16 @@ PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
 CONF_FILES+=		${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
 			${PKG_SYSCONFDIR}/mod_ruby.conf
+
+.include "../../mk/apache.mk"
+
+.if empty(PKG_APACHE:Mapache13)
+.if empty(PKG_APACHE:Mapache22)
+CONFIGURE_ARGS+=	--with-apr-includes=${PREFIX}/include/apr-0
+.else
+CONFIGURE_ARGS+=	--with-apr-includes=${PREFIX}/include/apr-1
+.endif
+.endif
 
 post-build:
 	cd ${WRKSRC}/doc; ${MAKE}
@@ -49,5 +59,4 @@ post-install:
 .include "../../lang/ruby/modules.mk"
 .include "../../textproc/ruby-eruby/buildlink3.mk"
 .include "../../textproc/ruby-rdtool/buildlink3.mk"
-.include "../../www/apache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
