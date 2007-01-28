@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/09 06:17:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/28 05:36:31 minskim Exp $
 ${RUBY_SITELIBDIR}/active_record.rb
+${RUBY_SITELIBDIR}/active_record/._associations.rb
+${RUBY_SITELIBDIR}/active_record/._version.rb
 ${RUBY_SITELIBDIR}/active_record/acts/list.rb
 ${RUBY_SITELIBDIR}/active_record/acts/nested_set.rb
 ${RUBY_SITELIBDIR}/active_record/acts/tree.rb
@@ -13,9 +15,11 @@ ${RUBY_SITELIBDIR}/active_record/associations/has_and_belongs_to_many_associatio
 ${RUBY_SITELIBDIR}/active_record/associations/has_many_association.rb
 ${RUBY_SITELIBDIR}/active_record/associations/has_many_through_association.rb
 ${RUBY_SITELIBDIR}/active_record/associations/has_one_association.rb
+${RUBY_SITELIBDIR}/active_record/attribute_methods.rb
 ${RUBY_SITELIBDIR}/active_record/base.rb
 ${RUBY_SITELIBDIR}/active_record/calculations.rb
 ${RUBY_SITELIBDIR}/active_record/callbacks.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/._connection_specification.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/connection_specification.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/database_statements.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/quoting.rb
@@ -24,6 +28,7 @@ ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/schema_statements.
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/db2_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/firebird_adapter.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/frontbase_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/mysql_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/openbase_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/oracle_adapter.rb
@@ -34,7 +39,8 @@ ${RUBY_SITELIBDIR}/active_record/connection_adapters/sybase_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/deprecated_associations.rb
 ${RUBY_SITELIBDIR}/active_record/deprecated_finders.rb
 ${RUBY_SITELIBDIR}/active_record/fixtures.rb
-${RUBY_SITELIBDIR}/active_record/locking.rb
+${RUBY_SITELIBDIR}/active_record/locking/optimistic.rb
+${RUBY_SITELIBDIR}/active_record/locking/pessimistic.rb
 ${RUBY_SITELIBDIR}/active_record/migration.rb
 ${RUBY_SITELIBDIR}/active_record/observer.rb
 ${RUBY_SITELIBDIR}/active_record/query_cache.rb
@@ -44,12 +50,14 @@ ${RUBY_SITELIBDIR}/active_record/schema_dumper.rb
 ${RUBY_SITELIBDIR}/active_record/timestamp.rb
 ${RUBY_SITELIBDIR}/active_record/transactions.rb
 ${RUBY_SITELIBDIR}/active_record/validations.rb
+${RUBY_SITELIBDIR}/active_record/vendor/._mysql.rb
 ${RUBY_SITELIBDIR}/active_record/vendor/db2.rb
 ${RUBY_SITELIBDIR}/active_record/vendor/mysql.rb
 ${RUBY_SITELIBDIR}/active_record/vendor/simple.rb
 ${RUBY_SITELIBDIR}/active_record/version.rb
 ${RUBY_SITELIBDIR}/active_record/wrappers/yaml_wrapper.rb
 ${RUBY_SITELIBDIR}/active_record/wrappings.rb
+${RUBY_SITELIBDIR}/active_record/xml_serialization.rb
 ${RUBY_DOCDIR}/activerecord/CHANGELOG
 ${RUBY_DOCDIR}/activerecord/README
 ${RUBY_EXAMPLESDIR}/activerecord/associations.png
@@ -62,6 +70,11 @@ ${RUBY_EXAMPLESDIR}/activerecord/validation.rb
 @dirrm ${RUBY_SITELIBDIR}/active_record/vendor
 @exec ${MKDIR} ${RUBY_SITELIBDIR}/active_record/support
 @dirrm ${RUBY_SITELIBDIR}/active_record/support
+@dirrm ${RUBY_SITELIBDIR}/active_record/locking
+@exec ${MKDIR} ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/connection_specification.rb.rej
+@dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/connection_specification.rb.rej
+@exec ${MKDIR} ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/._connection_specification.rb.rej
+@dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/._connection_specification.rb.rej
 @dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract
 @dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters
 @dirrm ${RUBY_SITELIBDIR}/active_record/associations

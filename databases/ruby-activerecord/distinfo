@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/10/09 06:17:20 minskim Exp $
+$NetBSD: distinfo,v 1.7 2007/01/28 05:36:31 minskim Exp $
 
-SHA1 (activerecord-1.14.4.tgz) = 4cdc52294766a1723f0a73bed5d50bf28fa0501a
-RMD160 (activerecord-1.14.4.tgz) = 48cd742b08fe1a778f9aabf4792f17b8df50224d
-Size (activerecord-1.14.4.tgz) = 351053 bytes
+SHA1 (activerecord-1.15.1.tgz) = c66526ac8171938f085ff8cc4e4519753e12d457
+RMD160 (activerecord-1.15.1.tgz) = 2005d470389de407358fe46c4b0f131e83b8d8e3
+Size (activerecord-1.15.1.tgz) = 405377 bytes
