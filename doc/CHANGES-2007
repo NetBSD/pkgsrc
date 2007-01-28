@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.262 2007/01/28 05:40:26 taca Exp $
+$NetBSD: CHANGES-2007,v 1.263 2007/01/28 05:46:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -537,3 +537,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ruby-activesupport to 1.4.0 [minskim 2007-01-28]
 	Updated x11/ruby-tk to 1.8.5.20061205nb1 [taca 2007-01-28]
 	Updated www/squid to 2.6.9 [taca 2007-01-28]
+	Updated databases/ruby-activerecord to 1.15.1 [minskim 2007-01-28]
+	Updated www/ruby-actionpack to 1.13.1 [minskim 2007-01-28]
+	Updated mail/ruby-actionmailer to 1.3.1 [minskim 2007-01-28]
+	Updated www/ruby-actionwebservice to 1.2.1 [minskim 2007-01-28]
+	Updated www/rails to 1.2.1 [minskim 2007-01-28]
