@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/01/03 14:25:51 taca Exp $
+# $NetBSD: Makefile,v 1.16 2007/01/28 15:24:21 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.rubyist.net/~rubikitch/archive/
 
@@ -16,7 +15,7 @@ CONFLICTS+=	ruby[1-9][0-9]-rttool-*
 # install a library file to rdtool's directory, too
 BUILDLINK_DEPMETHOD.${RUBY_PKGPREFIX}-rdtool= full
 
-VERSION=		1.0.1
+VERSION=		1.0.2
 USE_RUBY_SETUP=		yes
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin/rt ${WRKSRC}/lib/rt
 HTMLDOCS=		rttool.en.html rttool.ja.html
