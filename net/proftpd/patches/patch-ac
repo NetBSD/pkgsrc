@@ -1,41 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2006/12/14 11:19:46 martti Exp $
+$NetBSD: patch-ac,v 1.7.2.1 2007/01/28 16:43:57 ghen Exp $
 
---- configure.in.orig	2006-12-06 18:55:14.000000000 +0000
-+++ configure.in	2006-12-14 10:28:37.000000000 +0000
-@@ -486,19 +486,22 @@
-   [ if test x"$enableval" = x"yes" ; then
- 
-       dnl The libintl library is only needed on non-GNU systems.  If it
--      dnl is not installed, and the admin enables NLS support, the linker
--      dnl will complain.
-+      dnl is not installed, and the admin enables NLS support, then we
-+      dnl should abort.
- 
-       AC_CHECK_LIB(intl, bindtextdomain,
--        ac_build_addl_libs="-lintl $ac_build_addl_libs"
--        AC_DEFINE(HAVE_LIBINTL, 1, [Define if libintl is present.])
--
--        dnl Will it be problem that LIBS is not automatically updated
--        dnl to include -lintl here, since we are defining our own actions?
-+        [ac_build_addl_libs="-lintl $ac_build_addl_libs"
-+         AC_DEFINE(HAVE_LIBINTL, 1, [Define if libintl is present.])
-+         AC_DEFINE(PR_USE_NLS, 1, [Define if using NLS support.])
-+         ENABLE_NLS="1"
-+        ],
-+        [AC_CHECK_LIB(c, bindtextdomain,
-+          [AC_DEFINE(PR_USE_NLS, 1, [Define if using NLS support.])
-+           ENABLE_NLS="1"
-+          ],
-+          [AC_MSG_ERROR([libintl support, required for NLS, not present -- aborting])]
-+        ])
-       )
--
--      AC_DEFINE(PR_USE_NLS, 1, [Define if using NLS support.])
--      ENABLE_NLS="1"
-     fi
-   ])
- 
-@@ -1927,9 +1930,9 @@
+--- configure.in.orig	2007-01-10 03:45:08.000000000 +0000
++++ configure.in	2007-01-13 11:43:20.000000000 +0000
+@@ -2009,9 +2009,9 @@
  AC_DEFINE_UNQUOTED(PR_CONFIG_DIR, "`eval echo "${sysconfdir}"`")
  AC_DEFINE_UNQUOTED(PR_LIBEXEC_DIR, "`eval echo "${libexecdir}"`")
  AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${datadir}/locale"`")
