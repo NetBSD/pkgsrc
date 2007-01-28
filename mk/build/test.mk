@@ -1,13 +1,18 @@
-# $NetBSD: test.mk,v 1.10 2007/01/27 08:14:07 uebayasi Exp $
+# $NetBSD: test.mk,v 1.11 2007/01/28 15:29:11 rillig Exp $
+#
+# After the "build" phase, many packages provide some sort of self-test
+# that can be run on the not-yet installed package. To enable these
+# tests, the package must define TEST_TARGET or override the do-test
+# target. Additionally, the pkgsrc user must define PKGSRC_RUN_TEST.
 #
 # Package-settable variables:
 #
 # TEST_TARGET is the name of the ${MAKE} target, provided by the
 #	package, which enables the tests to be executed
 #
-# TEST_DIRS is the list of directories in which to perform the build
-#	process.  If the directories are relative paths, then they
-#	are assumed to be relative to ${WRKSRC}.
+# TEST_DIRS is the list of directories in which to run the tests.
+#	If the directories are relative paths, then they are
+#	assumed to be relative to ${WRKSRC}.
 #
 # TEST_ENV is the shell environment that is exported to the make
 #       process.
@@ -24,6 +29,8 @@
 #
 # See also:
 #	mk/build/build.mk
+#
+# Keywords: test check
 #
 
 TEST_DIRS?=		${BUILD_DIRS}
