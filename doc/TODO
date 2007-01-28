@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5945 2007/01/28 07:21:34 wiz Exp $
+$NetBSD: TODO,v 1.5946 2007/01/28 07:26:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ Suggested package updates
 	o elfsh-0.65 [pkg/33959]
 	o elm-me-2.4pl123d
 	o elscreen-1.3.3
-	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.5
 	o enscript-1.6.4
