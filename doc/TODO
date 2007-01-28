@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5946 2007/01/28 07:26:25 wiz Exp $
+$NetBSD: TODO,v 1.5947 2007/01/28 07:28:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,11 +416,10 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o g-wrap-1.9.7
+	o g-wrap-1.9.7 [breaks gnucash-2.0.[0-4]]
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
-	o gauche-0.8.7 [pkg/33675]
 	o gcalctool-5.9.8
 	o gcc-4.1.1
 	o gcin-1.2.7
