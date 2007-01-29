@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.270 2007/01/29 06:46:58 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.271 2007/01/29 16:43:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -562,3 +562,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated meta-pkgs/ruby-gnome2 to 0.16.0 [minskim 2007-01-29]
 	Updated graphics/ruby-gnome2-gdkpixbuf to 0.16.0 [minskim 2007-01-29]
 	Updated x11/ruby-gnome2-gtk to 0.16.0 [minskim 2007-01-29]
+	Added textproc/c2html version 20070126 [minskim 2007-01-29]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2007/01/10 22:12:53 bad Exp $
+# $NetBSD: Makefile,v 1.346 2007/01/29 16:43:59 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -39,6 +39,7 @@ SUBDIR+=	biblook
 SUBDIR+=	bibparse
 SUBDIR+=	bsdgrep-devel
 SUBDIR+=	btparse
+SUBDIR+=	c2html
 SUBDIR+=	catdoc
 SUBDIR+=	catdoc-tk
 SUBDIR+=	cawf
