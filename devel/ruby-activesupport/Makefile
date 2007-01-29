@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/28 04:39:50 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/29 08:14:42 minskim Exp $
 
 DISTNAME=	activesupport-1.4.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,6 +14,9 @@ NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
 .include "../../lang/ruby/modules.mk"
+
+pre-install:
+	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 do-install:
 	${CP} -R ${WRKSRC}/lib/* ${RUBY_SITELIBDIR}
