@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.43 2006/06/11 14:36:33 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2007/01/29 17:43:52 tron Exp $
 
 DISTNAME=	uae-0.8.25
 PKGREVISION=	3
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.freiburg.linux.de/~uae/bin/sources/develop/
+MASTER_SITES=	ftp://ftp.coresystems.de/pub/uae/sources/develop/ \
+		http://www.freiburg.linux.de/~uae/bin/sources/develop/
 
 MAINTAINER=	kristerw@NetBSD.org
-HOMEPAGE=	http://www.freiburg.linux.de/~uae/
+HOMEPAGE=	http://uae.coresystems.de/
 COMMENT=	The UAE Amiga Emulator
 
 DEPENDS+=	unzip>=5.40:../../archivers/unzip
