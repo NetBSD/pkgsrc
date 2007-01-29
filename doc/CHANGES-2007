@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.272 2007/01/29 17:54:24 adam Exp $
+$NetBSD: CHANGES-2007,v 1.273 2007/01/29 22:02:17 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/ruby-gnome2-gtk to 0.16.0 [minskim 2007-01-29]
 	Added textproc/c2html version 20070126 [minskim 2007-01-29]
 	Updated graphics/optipng to 0.5.5 [adam 2007-01-29]
+	Updated mail/dovecot to 1.0rc19nb1 [bouyer 2007-01-29]
