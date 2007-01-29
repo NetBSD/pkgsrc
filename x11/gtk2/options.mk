@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.4 2007/01/06 15:13:15 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2007/01/29 21:24:13 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=	cups debug
 PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
 PKG_OPTIONS_GROUP.gdk-target=	x11
@@ -8,6 +8,12 @@ PKG_OPTIONS_GROUP.gdk-target=	x11
 PKG_OPTIONS_GROUP.gdk-target+=	quartz
 .endif
 PKG_SUGGESTED_OPTIONS=		x11
+
+# remove after pkgsrc-2007Q1
+.if defined(PKG_OPTIONS.gtk2+)
+PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.gtk2+}
+PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.gtk2+ used, use "${PKG_OPTIONS_VAR:Q}" instead."
+.endif
 
 .include "../../mk/bsd.options.mk"
 
