@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5950 2007/01/28 20:03:43 wiz Exp $
+$NetBSD: TODO,v 1.5951 2007/01/29 03:06:02 minskim Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ Suggested package updates
 	o rt3-3.6.3
 	o rtcw-1.41.3
 	o ruby-1.8.5
-	o ruby-cmd-0.8.0
 	o ruby-gnome2-0.16.0
 	o rubygems-0.9.1 [requires openssl>=0.9.8]
 	o rudiments-0.30
