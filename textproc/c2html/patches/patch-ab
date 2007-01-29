@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/01/29 16:40:58 minskim Exp $
+
+Some platforms (GNU) lack strl* functions.
+Anyways, here the return value is not checked, so toe only
+difference is the trailing \0-padding, which has just very
+minor performance implications.
+
+--- relative.c.orig	2007-01-26 18:24:51.000000000 +0100
++++ relative.c
+@@ -147,7 +147,7 @@ printf ("matchlen=%i\n", matchlen);
+     /*  Find last slash (withing the first matchlen bytes) of
+ 	the matched part:  */
+ 
+-    strlcpy (result, src, reslen_max);
++    strncpy (result, src, reslen_max);
+     result[matchlen] = 0;
+ 
+ /*  printf ("result='%s'\n", result);  */
+@@ -182,9 +182,9 @@ printf ("Nm=%i, Ns=%i\n", Nm, Ns);
+ 
+     result[0] = 0;
+     for (i=0; i<Ndown; i++)
+-      strlcat (result, "../", reslen_max);
++      strncat (result, "../", reslen_max);
+ 
+-    strlcat (result, dst+baselen, reslen_max);
++    strncat (result, dst+baselen, reslen_max);
+ 
+ /*
+ printf ("result='%s'\n", result);
