@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/01/17 23:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/01/29 10:32:50 joerg Exp $
 
 .include "Makefile.common"
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		Multimedia player library
 
@@ -38,6 +38,7 @@ BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
