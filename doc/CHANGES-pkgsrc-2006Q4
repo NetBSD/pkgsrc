@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.24 2007/01/28 20:19:25 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.25 2007/01/29 18:52:56 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -63,3 +63,5 @@ Pullup ticket 2003 - requested by joerg
 security update for py-django
 Pullup ticket 2004 - requested by markd
 security update for ap-auth-kerb
+Pullup ticket 2005 - requested by taca
+security update for squid
