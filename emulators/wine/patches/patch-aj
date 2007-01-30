@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.5 2006/01/20 14:58:53 adam Exp $
+$NetBSD: patch-aj,v 1.6 2007/01/30 13:11:04 adam Exp $
 
---- dlls/winmm/wineoss/oss.c.orig	2005-12-24 10:24:01.000000000 +0100
-+++ dlls/winmm/wineoss/oss.c
+--- dlls/wineoss.drv/oss.c.orig	2005-12-24 10:24:01.000000000 +0100
++++ dlls/wineoss.drv/oss.c
 @@ -42,7 +42,9 @@ static LRESULT OSS_drvLoad(void)
  {
      TRACE("()\n");
