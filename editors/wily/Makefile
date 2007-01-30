@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/23 17:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/30 23:13:37 joerg Exp $
 #
 
 DISTNAME=	wily-0.13.41
@@ -16,5 +16,5 @@ CONFIGURE_HAS_MANDIR=	no
 
 DEPENDS+=	libXgFonts>=1.0nb1:../../fonts/Xg
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
