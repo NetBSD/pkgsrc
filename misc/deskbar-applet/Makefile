@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/30 23:54:08 wiz Exp $
 #
 
 DISTNAME=	deskbar-applet-2.16.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://raphael.slinckx.net/deskbar/
 COMMENT=	Omnipresent, versatile search interface for the GNOME Desktop
-
-BROKEN_IN=		pkgsrc-2006Q1
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
