@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.273 2007/01/29 22:02:17 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.274 2007/01/30 06:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -565,3 +565,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/c2html version 20070126 [minskim 2007-01-29]
 	Updated graphics/optipng to 0.5.5 [adam 2007-01-29]
 	Updated mail/dovecot to 1.0rc19nb1 [bouyer 2007-01-29]
+	Updated security/libgcrypt to 1.2.3nb2 [wiz 2007-01-30]
