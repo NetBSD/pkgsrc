@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.276 2007/01/30 13:12:11 adam Exp $
+$NetBSD: CHANGES-2007,v 1.277 2007/01/30 13:28:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -569,3 +569,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/generate to 2.4 [darcy 2007-01-30]
 	Updated devel/py-generate to 2.4 [darcy 2007-01-30]
 	Updated emulators/wine to 0.9.30 [adam 2007-01-30]
+	Updated databases/rrdtool to 1.2.18 [adam 2007-01-30]
