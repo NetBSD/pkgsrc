@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/30 07:05:58 wiz Exp $
 
 DISTNAME=		daapd-0.2.4b
 PKGREVISION=		1
@@ -19,18 +19,7 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
 
-PKG_OPTIONS_VAR=PKG_OPTIONS.daapd
-PKG_SUPPORTED_OPTIONS=mpeg4ip
-# to be removed after 2006Q2
-PKG_OPTIONS_LEGACY_OPTS+=faad:mpeg4ip
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mmpeg4ip)
-.include "../../multimedia/mpeg4ip/buildlink3.mk"
-MAKE_ENV+= WITH_FAAD=1
-.else
-MAKE_ENV+= WITH_FAAD=0
-.endif
+.include "options.mk"
 
 MAKE_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
