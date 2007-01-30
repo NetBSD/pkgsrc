@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2007/01/26 10:59:59 dillo Exp $
+# $NetBSD: Makefile.common,v 1.47 2007/01/30 22:34:06 joerg Exp $
 #
 
 DISTNAME=		libgda-2.99.2
@@ -44,4 +44,3 @@ SUBST_SED.libs+=	-e 's|$$(top_builddir)/libgda/libgda-3.0.la|${BUILDLINK_PREFIX.
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
