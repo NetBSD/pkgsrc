@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.356 2007/01/06 13:31:26 rillig Exp $
+# $NetBSD: Makefile,v 1.357 2007/01/30 18:41:26 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.74
+DISTNAME=	pkglint-4.75
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,6 +12,7 @@ COMMENT=	Verifier for NetBSD packages and complete pkgsrc tree
 
 DEPENDS+=	digest>=20010101:../../pkgtools/digest
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
+DEPENDS+=	p5-enum>=1.016:../../devel/p5-enum
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
