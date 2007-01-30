@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/22 21:00:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/30 20:56:13 joerg Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
@@ -41,5 +41,5 @@ post-build:
 	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 .include "../../lang/ocaml/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
