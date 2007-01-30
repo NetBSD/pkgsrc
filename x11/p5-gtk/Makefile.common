@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/01/30 21:27:02 joerg Exp $
 #
 # common things for p5-gtk based packages
 
@@ -11,5 +11,3 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Gtk/} \
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 BUILD_DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
-
-.include "../../mk/x11.buildlink3.mk"
