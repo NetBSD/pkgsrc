@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/12/27 13:37:36 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/01/30 23:10:52 joerg Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -26,8 +26,6 @@ MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q}
 .if ${X11BASE} != "/usr/openwin"
 OTHER_X_LIBS=	-lSM -lICE
 .endif
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	for d in libXg libframe sam samterm; do				\
