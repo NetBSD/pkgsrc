@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-seamonkey.common,v 1.6 2007/01/20 10:54:44 ghen Exp $
+# $NetBSD: Makefile-seamonkey.common,v 1.7 2007/01/30 14:34:34 joerg Exp $
 
 MOZILLA_BIN=		seamonkey-bin
 MOZ_VER=		1.1
@@ -19,5 +19,11 @@ CONFIGURE_ARGS+=	--enable-application=suite
 
 BUILD_SVG=		# yes
 BUILD_MATHML=		# yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
+.endif
 
 .include "../../www/seamonkey/Makefile.common"
