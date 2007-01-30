@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.274 2007/01/30 06:53:56 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.275 2007/01/30 13:06:47 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -566,3 +566,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/optipng to 0.5.5 [adam 2007-01-29]
 	Updated mail/dovecot to 1.0rc19nb1 [bouyer 2007-01-29]
 	Updated security/libgcrypt to 1.2.3nb2 [wiz 2007-01-30]
+	Updated devel/generate to 2.4 [darcy 2007-01-30]
+	Updated devel/py-generate to 2.4 [darcy 2007-01-30]
