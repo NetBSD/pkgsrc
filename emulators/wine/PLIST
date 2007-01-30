@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2007/01/10 09:09:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2007/01/30 13:11:04 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -466,6 +466,7 @@ lib/wine/commdlg.dll16
 lib/wine/compobj.dll16
 lib/wine/compstui.dll.so
 lib/wine/control.exe.so
+lib/wine/credui.dll.so
 lib/wine/crtdll.dll.so
 lib/wine/crypt32.dll.so
 lib/wine/cryptdll.dll.so
@@ -626,6 +627,7 @@ lib/wine/libsensapi.def
 lib/wine/libserialui.def
 lib/wine/libsetupapi.def
 lib/wine/libsfc.def
+lib/wine/libsfc_os.def
 lib/wine/libshdocvw.def
 lib/wine/libshell32.def
 lib/wine/libshfolder.def
@@ -752,6 +754,7 @@ lib/wine/serialui.dll.so
 lib/wine/setupapi.dll.so
 lib/wine/setupx.dll16
 lib/wine/sfc.dll.so
+lib/wine/sfc_os.dll.so
 lib/wine/shdoclc.dll.so
 lib/wine/shdocvw.dll.so
 lib/wine/shell.dll16
