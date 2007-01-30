@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.12 2006/01/24 19:19:01 rillig Exp $
+# $NetBSD: post-build-conf,v 1.13 2007/01/30 07:11:19 wiz Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -157,17 +157,9 @@ pbc_checkdefined() {
 # usage: check_config_vars
 check_config_vars() {
 
-	# Handle legacy variables FTP, FTPHOST, FTPURL, REPORT.
-	# Can be removed after 2006Q2.
 	case ${FTP+set},${REPORTS_DIR+set} in
 	set,set)
 		pbc_die "FTP and REPORTS_DIR must not be set both.";;
-	set,)
-		REPORTS_URL="${FTPHOST}"/`dirname "${FTPURL}"`
-		REPORTS_DIR=`dirname "$FTP"`
-		REPORT_BASEDIR=`basename "${FTP}"`
-		REPORT_HTML_FILE=`basename "${REPORT}"`
-		REPORT_TXT_FILE="report.txt";;
 	esac
 
 	# section "System information"
@@ -177,13 +169,6 @@ check_config_vars() {
 	pbc_checkexistingdir USR_PKGSRC
 	case ${MAKECONF+set} in
 	"set")	pbc_checkexistingfile MAKECONF;;
-	esac
-
-	# LEGACY: remove after 2006Q1
-	case ${CVS_USER-""}${CVS_FLAGS+set} in
-	?*)	pbc_die "CVS_USER and CVS_FLAGS must not be set." \
-			"See http://mail-index.netbsd.org/pkgsrc-bulk/2005/11/20/0013.html" \
-			"and http://mail-index.netbsd.org/pkgsrc-bulk/2005/11/24/0003.html";;
 	esac
 
 	# section "Getting distfiles"
