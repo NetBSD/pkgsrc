@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/30 23:55:38 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/30 23:41:40 wiz Exp $
 
 DISTNAME=	flim-1.14.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/FLIM/
 COMMENT=	Emacs lisp library for message representation/encoding
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs22 emacs21 emacs21nox emacs20 xemacs214 xemacs215
 EMACS_MODULES=	base
 
 .include "../../mk/emacs.mk"
