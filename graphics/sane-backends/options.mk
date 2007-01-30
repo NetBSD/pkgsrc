@@ -1,10 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2006/08/05 22:41:49 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2007/01/30 07:09:03 wiz Exp $
 
 PKG_OPTIONS_VAR=                PKG_OPTIONS.sane-backends
 PKG_SUPPORTED_OPTIONS=          sane-backends-hp3900
 PKG_SUGGESTED_OPTIONS=		#defined
-# Remove after 2006Q3
-PKG_OPTIONS_LEGACY_OPTS+=	hp3900:sane-backends-hp3900
 
 .include "../../mk/bsd.options.mk"
 
