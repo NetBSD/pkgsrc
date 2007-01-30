@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.281 2007/01/30 21:25:26 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.282 2007/01/30 22:09:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -575,3 +575,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkglint to 4.75 [rillig 2007-01-30]
 	Removed mail/sylpheed-claws-trayicon [wiz 2007-01-30]
 	Removed mail/sylpheed-claws-dillo-viewer [wiz 2007-01-30]
+	Updated mail/greetdelay to 0.03 [schmonz 2007-01-30]
