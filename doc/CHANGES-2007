@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.280 2007/01/30 18:41:48 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.281 2007/01/30 21:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -573,3 +573,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/rtorrent to 0.7.1nb1 [tron 2007-01-30]
 	Updated net/bind9 to 9.3.4nb1 [tron 2007-01-30]
 	Updated pkgtools/pkglint to 4.75 [rillig 2007-01-30]
+	Removed mail/sylpheed-claws-trayicon [wiz 2007-01-30]
+	Removed mail/sylpheed-claws-dillo-viewer [wiz 2007-01-30]
