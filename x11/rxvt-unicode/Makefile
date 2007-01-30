@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/12/15 20:33:05 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/01/30 20:41:32 joerg Exp $
 #
 
 DISTNAME=		rxvt-unicode-8.1
@@ -28,5 +28,5 @@ post-install:
 .include "options.mk"
 
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
