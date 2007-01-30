@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.278 2007/01/30 14:26:23 tron Exp $
+$NetBSD: CHANGES-2007,v 1.279 2007/01/30 15:04:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -571,3 +571,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.30 [adam 2007-01-30]
 	Updated databases/rrdtool to 1.2.18 [adam 2007-01-30]
 	Updated net/rtorrent to 0.7.1nb1 [tron 2007-01-30]
+	Updated net/bind9 to 9.3.4nb1 [tron 2007-01-30]
