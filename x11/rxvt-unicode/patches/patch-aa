@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2006/08/07 23:21:16 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2007/01/30 20:41:32 joerg Exp $
 
---- configure.orig	2006-02-08 22:48:51.000000000 +0000
+--- configure.orig	2006-10-03 11:20:57.000000000 +0000
 +++ configure
 @@ -3291,59 +3291,6 @@ fi
  LINKER=$LINKER
@@ -62,3 +62,22 @@ $NetBSD: patch-aa,v 1.3 2006/08/07 23:21:16 wiz Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define _GNU_SOURCE 1
+@@ -6356,11 +6303,16 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++extern "C" {
++#include <X11/xpm.h>
++#include <stddef.h>
++}
++
+ int
+ main ()
+ {
+-XpmReadFileToPixmap()
+-  ;
++  Drawable d;
++  XpmReadFileToPixmap(NULL, d, NULL, NULL, NULL, NULL);
+   return 0;
+ }
+ _ACEOF
