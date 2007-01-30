@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.6 2006/06/03 10:40:34 seb Exp $
+# $NetBSD: Makefile.install,v 1.7 2007/01/30 07:10:46 cube Exp $
 
 .include "dirs.mk"
 
@@ -69,7 +69,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/rt-mailgate ${WRKSRC}/bin/rt-crontool		\
 		${WRKSRC}/bin/mason_handler.fcgi ${WRKSRC}/bin/mason_handler.scgi	\
 		${WRKSRC}/bin/standalone_httpd ${WRKSRC}/bin/mason_handler.svc		\
-		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl ${WRKSRC}/bin/rt-crontool	\
+		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl 				\
 		${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-dump-database		\
 		${WRKSRC}/sbin/rt-setup-database			\
