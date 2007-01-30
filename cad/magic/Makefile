@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/08 21:54:51 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/30 19:11:21 joerg Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -28,8 +28,6 @@ REPLACE.awk.old=	/bin/awk
 REPLACE.awk.new=	${TOOLS_PATH.awk}
 REPLACE_FILES.awk=	ext2spice/spice2sim
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-patch:
 	cd ${WRKSRC} && for f in `${FIND} . -type f -exec ${GREP} -l CAD_HOME {} /dev/null \\;` ; do \
 		${ECHO} "Replacing CAD_HOME in $$f" ; \
@@ -43,4 +41,5 @@ do-configure:
 		${SETENV} ${MAKE_ENV} ./scripts/config
 
 .include "../../devel/readline/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
