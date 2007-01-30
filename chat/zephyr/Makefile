@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/04 13:42:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/30 22:09:48 joerg Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -44,5 +44,5 @@ pre-install:
 .include "../../net/hesiod/buildlink3.mk"
 .include "../../net/libares/buildlink3.mk"
 .include "../../security/kth-krb4/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
