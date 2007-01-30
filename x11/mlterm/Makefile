@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/12/28 12:16:25 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2007/01/30 21:26:37 joerg Exp $
 
 DISTNAME=	mlterm-2.9.3
 PKGREVISION=	1
@@ -47,8 +47,12 @@ SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& ${X11_LDFLAGS}|g'
 SUBST_SED.link+=	-e 's|/usr/local/|${PREFIX}/|g'
 SUBST_SED.link+=	-e 's|/usr/X11R6/|${X11BASE}/|g'
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
