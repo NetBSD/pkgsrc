@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.51 2006/12/03 13:06:15 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.52 2007/01/30 17:47:39 joerg Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -108,14 +108,16 @@ _ONLY_FOR_PLATFORMS.kaffe= \
 _ONLY_FOR_PLATFORMS.scsl-jdk15= \
 	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk13= \
-	NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-* DragonFly-*-i386
+	NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-* DragonFly-*-i386 \
+	FreeBSD-6.*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk14= \
 	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386 \
-	Linux-*-i[3-6]86 Darwin-[678].*-* DragonFly-*-i386
+	Linux-*-i[3-6]86 Darwin-[678].*-* DragonFly-*-i386 \
+	FreeBSD-6.*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk15= \
 	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386 \
 	NetBSD-[2-9].*-x86_64 \
-	Linux-*-i[3-6]86 Darwin-8.*-* DragonFly-*-i386
+	Linux-*-i[3-6]86 Darwin-8.*-* DragonFly-*-i386 FreeBSD-6.*-i386
 #_ONLY_FOR_PLATFORMS.win32-jdk= \
 #	Interix-*-*
 
