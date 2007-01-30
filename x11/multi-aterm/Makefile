@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:43 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/30 15:34:36 joerg Exp $
 #
 
 DISTNAME=	multi-aterm-0.0.4
@@ -21,7 +21,19 @@ CONFIGURE_ARGS+=	--enable-fading
 CONFIGURE_ARGS+=	--enable-transparency
 CONFIGURE_ARGS+=	--with-xpm=${BUILDLINK_PREFIX.libXpm}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${PREFIX:Q}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX:Q}/lib
+.endif
+
 .include "options.mk"
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
