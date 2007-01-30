@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/01/25 01:11:06 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/30 00:27:24 uebayasi Exp $
 
 DISTNAME=	Kahua-1.0.1
 PKGNAME=	${DISTNAME:C/Kahua/kahua/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kahua.org/download/kahua/
 EXTRACT_SUFX=	.tgz
