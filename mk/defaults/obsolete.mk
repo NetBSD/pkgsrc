@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.27 2006/04/07 00:29:52 reed Exp $
+# $NetBSD: obsolete.mk,v 1.28 2007/01/30 07:09:40 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -23,10 +23,3 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable KERBEROS used, use PKG_DEF
 .endif
 
 PKG_OPTIONS_LEGACY_VARS+=	USE_INET6:inet6
-
-#
-# IGNORE_RECOMMENDED is deprecated and will be removed after 2006Q2 branch.
-#
-.if defined(IGNORE_RECOMMENDED) && !empty(IGNORE_RECOMMENDED:M[yY][eE][sS])
-USE_ABI_DEPENDS=	no
-.endif
