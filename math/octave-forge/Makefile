@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/07 12:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/30 02:45:33 obache Exp $
 
 DISTNAME=	octave-forge-2006.03.17
 PKGREVISION=	1
@@ -14,6 +14,8 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		HAVE_MAGICKXX=no
 
 UNLIMIT_RESOURCES=	datasize
 
