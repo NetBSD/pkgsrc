@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/01/26 01:26:46 markd Exp $
+# $NetBSD: Makefile,v 1.34 2007/01/30 22:13:25 joerg Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -45,7 +45,6 @@ post-install:
 
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
