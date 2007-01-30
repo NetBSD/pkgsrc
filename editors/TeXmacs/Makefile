@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/12/15 19:24:30 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2007/01/30 23:38:35 joerg Exp $
 
 DISTNAME=		TeXmacs-1.0.6.7-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -44,11 +44,14 @@ pre-install:
 	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
 	${FIND} ${WRKSRC}/plugins/ -name '*.orig' | ${XARGS} ${RM}
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/tex.buildlink3.mk"
-
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
