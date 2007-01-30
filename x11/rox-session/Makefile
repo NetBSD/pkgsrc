@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/08/23 09:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/30 23:57:39 wiz Exp $
 #
 
 DISTNAME=	rox-session-0.28
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	Very simple session manager
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib
 
