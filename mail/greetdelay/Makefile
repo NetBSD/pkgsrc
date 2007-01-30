@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/01/10 06:07:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/30 22:09:06 schmonz Exp $
 #
 
-DISTNAME=	greetdelay-0.02
+DISTNAME=	greetdelay-0.03
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}
 
