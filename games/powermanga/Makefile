@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/30 15:43:11 joerg Exp $
 #
 
 DISTNAME=	powermanga-0.79
@@ -18,5 +18,6 @@ MAKE_ENV+=	TOUCH=${TOUCH:Q} WRKSRC=${WRKSRC:Q}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
