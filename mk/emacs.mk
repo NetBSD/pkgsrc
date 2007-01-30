@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.27 2007/01/27 12:27:42 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.28 2007/01/30 07:10:05 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -351,11 +351,6 @@ PLIST_SUBST+=	NOTFOR_xemacs215=${_EMACS_NOTFOR.xemacs215}
 #
 
 EMACS_MODULES?=	# none
-
-# XXX EMACS_USE_LEIM should be removed after the 2006Q1 branch.
-.if defined(EMACS_USE_LEIM)
-EMACS_MODULES+=	leim
-.endif
 
 # "base" elisp modules
 .if !empty(_EMACS_TYPE:Memacs*)
