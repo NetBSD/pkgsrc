@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/16 12:52:44 adam Exp $
+# $NetBSD: Makefile,v 1.18 2007/01/30 14:50:00 joerg Exp $
 
 DISTNAME=	cinepaint-0.21-2
 PKGNAME=	cinepaint-0.21.2
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-python
 
