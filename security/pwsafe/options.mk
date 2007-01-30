@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/07/31 01:06:02 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2007/01/30 20:53:24 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pwsafe
 PKG_SUPPORTED_OPTIONS=	readline x11
@@ -19,7 +19,13 @@ CONFIGURE_ARGS+=	--without-readline
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
-.include "../../mk/x11.buildlink3.mk"
+
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif
