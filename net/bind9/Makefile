@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2007/01/28 01:31:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.86 2007/01/30 15:04:33 tron Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -59,6 +60,8 @@ post-install:
 	set -e; cd ${WRKSRC}/doc && ${PAX} -rwppm			\
 	  -s ',.*xsl.*,,' -s ',Makefile.*,,' -s ',.*\.pl,,'		\
 	  . ${PREFIX}/share/doc/bind9
+	${CHMOD} -R g-w ${PREFIX}/share/doc/bind9
+	${CHMOD} -x ${PREFIX}/share/doc/bind9/arm/Bv9ARM.pdf
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
