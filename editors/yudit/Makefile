@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/08/07 23:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/01/30 22:55:20 joerg Exp $
 
 DISTNAME=	yudit-2.8.1
 CATEGORIES=	editors
@@ -14,5 +14,8 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-x
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
