@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/04/17 13:47:00 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2007/01/30 20:15:07 joerg Exp $
 
 DISTNAME=	Tk-804.027
 PKGNAME=	p5-Tk-804.027
@@ -31,5 +31,5 @@ SUBST_SED.prefix=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 .include "../../lang/perl5/module.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
