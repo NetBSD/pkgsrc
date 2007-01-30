@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/07/22 07:37:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/01/30 13:26:55 adam Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
@@ -22,6 +22,7 @@ man/man1/rrdgraph_graph.1
 man/man1/rrdgraph_rpn.1
 man/man1/rrdinfo.1
 man/man1/rrdlast.1
+man/man1/rrdlastupdate.1
 man/man1/rrdresize.1
 man/man1/rrdrestore.1
 man/man1/rrdthreads.1
@@ -50,6 +51,7 @@ share/doc/rrdtool-${PKGVERSION}/html/rrdgraph_graph.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdgraph_rpn.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdinfo.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdlast.html
+share/doc/rrdtool-${PKGVERSION}/html/rrdlastupdate.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdresize.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdrestore.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdthreads.html
@@ -92,6 +94,8 @@ share/doc/rrdtool-${PKGVERSION}/txt/rrdinfo.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdinfo.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdlast.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdlast.txt
+share/doc/rrdtool-${PKGVERSION}/txt/rrdlastupdate.pod
+share/doc/rrdtool-${PKGVERSION}/txt/rrdlastupdate.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdresize.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdresize.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdrestore.pod
@@ -112,6 +116,7 @@ share/examples/rrdtool/4charts.pl
 share/examples/rrdtool/bigtops.pl
 share/examples/rrdtool/cgi-demo.cgi
 share/examples/rrdtool/minmax.pl
+share/examples/rrdtool/perftest.pl
 share/examples/rrdtool/piped-demo.pl
 share/examples/rrdtool/shared-demo.pl
 share/examples/rrdtool/stripes.pl
