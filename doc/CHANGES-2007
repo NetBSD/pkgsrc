@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.279 2007/01/30 15:04:53 tron Exp $
+$NetBSD: CHANGES-2007,v 1.280 2007/01/30 18:41:48 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/rrdtool to 1.2.18 [adam 2007-01-30]
 	Updated net/rtorrent to 0.7.1nb1 [tron 2007-01-30]
 	Updated net/bind9 to 9.3.4nb1 [tron 2007-01-30]
+	Updated pkgtools/pkglint to 4.75 [rillig 2007-01-30]
