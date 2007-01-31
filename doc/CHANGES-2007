@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.286 2007/01/31 17:06:39 sketch Exp $
+$NetBSD: CHANGES-2007,v 1.287 2007/01/31 18:00:43 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -580,3 +580,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/flex to 2.5.33nb2 [dmcmahill 2007-01-31]
 	Updated multimedia/RealPlayerGold to 10.0.8.805.20060718nb1 [sketch 2007-01-31]
 	Updated www/firefox-bin-realplayer to 1.0nb4 [sketch 2007-01-31]
+	Updated sysutils/bacula to 2.0.2 [ghen 2007-01-31]
+	Updated sysutils/bacula-clientonly to 2.0.2 [ghen 2007-01-31]
+	Updated sysutils/bacula-doc to 2.0.2 [ghen 2007-01-31]
+	Updated sysutils/bacula-gnome-console to 2.0.2 [ghen 2007-01-31]
+	Updated sysutils/bacula-tray-monitor to 2.0.2 [ghen 2007-01-31]
+	Updated sysutils/bacula-wx-console to 2.0.2 [ghen 2007-01-31]
