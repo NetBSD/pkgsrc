@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.283 2007/01/31 14:07:31 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.284 2007/01/31 15:39:49 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -577,3 +577,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed mail/sylpheed-claws-dillo-viewer [wiz 2007-01-30]
 	Updated mail/greetdelay to 0.03 [schmonz 2007-01-30]
 	Updated x11/xephem to 3.7.2 [gdt 2007-01-31]
+	Updated devel/flex to 2.5.33nb2 [dmcmahill 2007-01-31]
