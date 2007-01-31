@@ -1,15 +1,12 @@
-# $NetBSD: Makefile.common,v 1.36 2007/01/19 11:58:54 ghen Exp $
+# $NetBSD: Makefile.common,v 1.37 2007/01/31 17:58:06 ghen Exp $
 
-DISTNAME=		bacula-2.0.1
+DISTNAME=		bacula-2.0.2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
 COMMENT?=		The Network Backup Solution
-
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		2.0.1-restart.patch
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
