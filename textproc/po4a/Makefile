@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/12/06 17:18:49 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/31 00:04:12 wiz Exp $
 #
 
 DISTNAME=		po4a-0.23
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://alioth.debian.org/projects/po4a/
 COMMENT=		Tool for using gettext where it was not intended to be used
 
-BROKEN_IN=		pkgsrc-2006Q1
+BROKEN_IN=		pkgsrc-2006Q1 pkgsrc-2006Q4
 
 DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 DEPENDS+=		p5-SGMLS-[0-9]*:../../textproc/p5-SGMLS
