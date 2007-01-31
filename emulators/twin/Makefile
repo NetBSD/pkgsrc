@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2007/01/31 00:04:11 wiz Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.willows.com/
 COMMENT=		Cross-platform implementation of the Win32 API
 
-BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
+BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1 pkgsrc-2006Q4
 
 WRKSRC=			${WRKDIR}/twin
 GNU_CONFIGURE=		yes
