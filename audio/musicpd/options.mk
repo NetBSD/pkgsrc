@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2005/11/22 00:01:40 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2007/01/31 21:35:11 cbiere Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod ogg
-PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod ogg
+PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod musepack ogg
+PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod musepack ogg
 
 .include "../../mk/bsd.options.mk"
 
@@ -47,6 +47,14 @@ CONFIGURE_ARGS+=	--disable-id3
 CONFIGURE_ARGS+=	--with-libmikmod=${BUILDLINK_PREFIX.libmikmod}
 .else
 CONFIGURE_ARGS+=	--disable-libmikmod
+.endif
+
+.if !empty(PKG_OPTIONS:Mmusepack)
+.  include "../../audio/libmusepack/buildlink3.mk"
+CONFIGURE_ENV+=		mpcdec_prefix=${BUILDLINK_PREFIX.libmusepack}
+CONFIGURE_ARGS+=	--enable-mpc
+.else
+CONFIGURE_ARGS+=	--disable-mpc
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
