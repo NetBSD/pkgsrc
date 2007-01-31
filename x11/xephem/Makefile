@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2007/01/15 18:30:48 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2007/01/31 14:07:16 gdt Exp $
 
-DISTNAME=	xephem-3.7.1
-PKGREVISION=	1
+DISTNAME=	xephem-3.7.2
 CATEGORIES=	x11
-PKGREVISION=	1
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
 
@@ -34,7 +32,7 @@ REPLACE_PERL+=	auxil/*.pl
 
 LIBS.SunOS+=		-lnsl -lsocket
 X11_LDFLAGS+=		${LIBS}
-PKGSRC_MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+MAKE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
 
 REPLACE_INTERPRETER+=	perl
 REPLACE.perl.old=	.*/bin/perl
