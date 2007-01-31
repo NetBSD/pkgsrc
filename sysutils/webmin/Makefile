@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/06/06 22:01:25 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/31 00:04:12 wiz Exp $
 
 DISTNAME=	webmin-1.270-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
+
+BROKEN_IN=		pkgsrc-2006Q4
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/05/15 21:55:28 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/31 00:04:11 wiz Exp $
 
 DISTNAME=		gri-2.12.5
 PKGREVISION=	3
@@ -11,6 +11,8 @@ HOMEPAGE=		http://gri.sourceforge.net/
 COMMENT=		Language for scientific graphics applications
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+
+BROKEN_IN=		pkgsrc-2006Q4
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/07/14 16:24:29 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/31 00:04:11 wiz Exp $
 #
 
 DISTNAME=       bmake-20051105
@@ -13,6 +13,8 @@ DISTFILES=	# empty
 MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
+
+BROKEN_IN=		pkgsrc-2006Q4
 
 WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	yes
