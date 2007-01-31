@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2007/01/30 18:54:44 joerg Exp $
+# $NetBSD: Makefile.common,v 1.45 2007/01/31 12:53:03 dmcmahill Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -76,6 +76,7 @@ post-install:
 	    ( cd ${PREFIX}/${DOCDIR}; ${PAX} -r )
 
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
