@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/12/15 20:33:04 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2007/01/31 13:20:26 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_LIBS_BUILDLINK3_MK:=	${GNOME_LIBS_BUILDLINK3_MK}+
@@ -23,6 +23,7 @@ BUILDLINK_PKGSRCDIR.gnome-libs?=	../../x11/gnome-libs
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
