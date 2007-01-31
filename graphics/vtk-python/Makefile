@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/21 02:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/31 00:04:11 wiz Exp $
 #
 
 PKGNAME=	vtk-python-${VTKDIST_VERSION}
@@ -9,6 +9,8 @@ COMMENT=	Python wrapper libraries for vtk; see vtk package for details
 VTK_CMAKE_OPT=  -DPYTHON_INCLUDE_PATH:STRING=${PREFIX}/${PYINC} \
 		-DPYTHON_LIBRARY:STRING=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so \
 		-DVTK_WRAP_PYTHON:BOOL=ON
+
+BROKEN_IN=		pkgsrc-2006Q4
 
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=			yes

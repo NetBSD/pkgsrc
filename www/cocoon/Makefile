@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/11/25 16:19:53 uebayasi Exp $
+# $NetBSD: Makefile,v 1.31 2007/01/31 00:04:12 wiz Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -10,7 +10,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://cocoon.apache.org/
 COMMENT=	The Apache Project's XML/XSL based web publishing system
 
-BROKEN_IN=		pkgsrc-2006Q1
+BROKEN_IN=		pkgsrc-2006Q1 pkgsrc-2006Q4
 
 # These are exact version requirements intentionally, and will need to remain
 # so until the interfaces stabilize more.  Until then, new versions of these

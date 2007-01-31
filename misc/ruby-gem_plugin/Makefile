@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/31 19:43:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/31 00:04:12 wiz Exp $
 
 DISTNAME=	gem_plugin-0.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.gem
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://mongrel.rubyforge.org/
 COMMENT=	Gem-based plugin system
+
+BROKEN_IN=		pkgsrc-2006Q4
 
 CONFLICTS+=	ruby[1-9]*-gem_plugin-[0-9]*
 BUILD_DEPENDS+=	rake>=0.7:../../devel/rake
