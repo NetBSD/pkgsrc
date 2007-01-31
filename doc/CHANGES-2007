@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.287 2007/01/31 18:00:43 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.288 2007/01/31 20:21:25 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/bacula-gnome-console to 2.0.2 [ghen 2007-01-31]
 	Updated sysutils/bacula-tray-monitor to 2.0.2 [ghen 2007-01-31]
 	Updated sysutils/bacula-wx-console to 2.0.2 [ghen 2007-01-31]
+	Updated security/amavisd-new to 2.4.4nb1 [ghen 2007-01-31]
