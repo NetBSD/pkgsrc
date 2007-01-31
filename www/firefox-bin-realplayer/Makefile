@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:21 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/31 17:05:31 sketch Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www audio graphics
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -20,10 +20,10 @@ NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
-PLUGIN_SOURCE=		${PREFIX}/lib/netscape/plugins/rpnp.so
+PLUGIN_SOURCE=		${PREFIX}/lib/RealPlayer/mozilla/nphelix.so
 
 do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${LN} -s ${PLUGIN_SOURCE} ${NS_PLUGINS_DIR}/rpnp.so
+	${LN} -s ${PLUGIN_SOURCE} ${NS_PLUGINS_DIR}/nphelix.so
 
 .include "../../mk/bsd.pkg.mk"
