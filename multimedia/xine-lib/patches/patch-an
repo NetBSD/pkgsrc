@@ -1,8 +1,16 @@
-$NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
+$NetBSD: patch-an,v 1.8 2007/02/01 07:33:34 wiz Exp $
 
---- src/input/input_cdda.c.orig	2005-10-08 15:57:42.000000000 +0200
+--- src/input/input_cdda.c.orig	2006-08-11 21:40:02.000000000 +0000
 +++ src/input/input_cdda.c
-@@ -613,14 +613,20 @@ static int read_cdrom_frames(cdda_input_
+@@ -86,6 +86,7 @@
+ #define CD_FRAMES_PER_SECOND    75
+ #define CD_RAW_FRAME_SIZE       2352
+ #define CD_LEADOUT_TRACK        0xAA
++#define CD_BLOCK_OFFSET         150
+ 
+ typedef struct _cdrom_toc_entry {
+   int   track_mode;
+@@ -613,14 +614,20 @@ static int read_cdrom_frames(cdda_input_
    return 0;
  }
  
@@ -24,7 +32,7 @@ $NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
    int i;
  
    /* fetch the table of contents */
-@@ -646,13 +652,26 @@ static int read_cdrom_toc(int fd, cdrom_
+@@ -646,13 +653,26 @@ static int read_cdrom_toc(int fd, cdrom_
  
      memset(&tocentry, 0, sizeof(tocentry));
  
@@ -51,7 +59,7 @@ $NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
      toc->toc_entries[i-1].track_mode = (tocentry.entry.control & 0x04) ? 1 : 0;
      toc->toc_entries[i-1].first_frame_minute = tocentry.entry.addr.msf.minute;
      toc->toc_entries[i-1].first_frame_second = tocentry.entry.addr.msf.second;
-@@ -661,18 +680,41 @@ static int read_cdrom_toc(int fd, cdrom_
+@@ -661,18 +681,41 @@ static int read_cdrom_toc(int fd, cdrom_
        (tocentry.entry.addr.msf.minute * CD_SECONDS_PER_MINUTE * CD_FRAMES_PER_SECOND) +
        (tocentry.entry.addr.msf.second * CD_FRAMES_PER_SECOND) +
         tocentry.entry.addr.msf.frame;
@@ -63,7 +71,7 @@ $NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
 +    toc->toc_entries[i-1].first_frame =
 +      (tocentry.data->addr.msf.minute * CD_SECONDS_PER_MINUTE * CD_FRAMES_PER_SECOND) +
 +      (tocentry.data->addr.msf.second * CD_FRAMES_PER_SECOND) +
-+       tocentry.data->addr.msf.frame;
++       tocentry.data->addr.msf.frame - CD_BLOCK_OFFSET;
 +#endif
    }
  
@@ -93,7 +101,7 @@ $NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
    toc->leadout_track.track_mode = (tocentry.entry.control & 0x04) ? 1 : 0;
    toc->leadout_track.first_frame_minute = tocentry.entry.addr.msf.minute;
    toc->leadout_track.first_frame_second = tocentry.entry.addr.msf.second;
-@@ -681,6 +723,16 @@ static int read_cdrom_toc(int fd, cdrom_
+@@ -681,6 +724,16 @@ static int read_cdrom_toc(int fd, cdrom_
      (tocentry.entry.addr.msf.minute * CD_SECONDS_PER_MINUTE * CD_FRAMES_PER_SECOND) +
      (tocentry.entry.addr.msf.second * CD_FRAMES_PER_SECOND) +
       tocentry.entry.addr.msf.frame;
@@ -105,12 +113,12 @@ $NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
 +  toc->leadout_track.first_frame =
 +    (tocentry.data->addr.msf.minute * CD_SECONDS_PER_MINUTE * CD_FRAMES_PER_SECOND) +
 +    (tocentry.data->addr.msf.second * CD_FRAMES_PER_SECOND) +
-+     tocentry.data->addr.msf.frame;
++     tocentry.data->addr.msf.frame - CD_BLOCK_OFFSET;
 +#endif
  
    return 0;
  }
-@@ -689,12 +741,12 @@ static int read_cdrom_frames(cdda_input_
+@@ -689,12 +742,12 @@ static int read_cdrom_frames(cdda_input_
    unsigned char *data) {
  
    int fd = this_gen->fd;
@@ -126,7 +134,7 @@ $NetBSD: patch-an,v 1.7 2006/08/06 10:36:50 wiz Exp $
      cdda.address_format = CD_MSF_FORMAT;
      cdda.address.msf.minute = frame / CD_SECONDS_PER_MINUTE / CD_FRAMES_PER_SECOND;
      cdda.address.msf.second = (frame / CD_FRAMES_PER_SECOND) % CD_SECONDS_PER_MINUTE;
-@@ -712,6 +764,33 @@ static int read_cdrom_frames(cdda_input_
+@@ -712,6 +765,33 @@ static int read_cdrom_frames(cdda_input_
        perror("CDIOCREADAUDIO");
        return -1;
      }
