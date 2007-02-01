@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/12/03 01:54:46 rpaulo Exp $
+# $NetBSD: Makefile,v 1.33 2007/02/01 22:52:41 joerg Exp $
 #
 
 DISTNAME=	ion-2-20040729
@@ -36,8 +36,8 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 INSTALLATION_DIRS=	bin lib/ion libexec/ion ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/doc/ion share/examples/ion share/ion
 
-.include "../../lang/lua/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
+.include "../../lang/lua/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
