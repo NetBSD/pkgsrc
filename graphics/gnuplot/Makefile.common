@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/04/04 14:45:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/02/01 12:15:38 drochner Exp $
 #
 
 DISTNAME=		gnuplot-4.0.0
@@ -10,6 +10,9 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnuplot/} \
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://gnuplot.sourceforge.net/
 COMMENT=		Portable interactive, function plotting utility
+
+PATCHDIR=		${.CURDIR}/../../graphics/gnuplot/patches
+DISTINFO_FILE=		${.CURDIR}/../../graphics/gnuplot/distinfo
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
