@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/01 22:31:12 joerg Exp $
 #
 
 DISTNAME=	weewm-0.0.2
@@ -17,8 +17,6 @@ DOCDIR=		${PREFIX}/share/doc/weewm
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/weewm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/weewm.1 ${PREFIX}/${PKGMANDIR}/man1
@@ -30,4 +28,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
