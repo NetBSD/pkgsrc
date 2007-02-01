@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/01/15 17:41:28 tonio Exp $
+# $NetBSD: Makefile,v 1.39 2007/02/01 23:08:08 joerg Exp $
 #
 
 DISTNAME=	fluxbox-1.0rc2
@@ -36,7 +36,13 @@ SUBST_FILES.cmds=	data/README.style data/styles/Artwiz\
 		       	data/styles/Rampage data/styles/Results\
 		       	data/styles/Spiff
 
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
