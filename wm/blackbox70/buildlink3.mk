@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/08/20 23:07:17 jschauma Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/02/01 21:56:13 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BLACKBOX70_BUILDLINK3_MK:=	${BLACKBOX70_BUILDLINK3_MK}+
@@ -16,5 +16,7 @@ BUILDLINK_API_DEPENDS.blackbox70+=	blackbox70>=0.70.0
 BUILDLINK_ABI_DEPENDS.blackbox70+=	blackbox70>=0.70.0
 BUILDLINK_PKGSRCDIR.blackbox70?=	../../wm/blackbox70
 .endif	# BLACKBOX70_BUILDLINK3_MK
+
+.include "../../x11/libX11/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
