@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/12/03 15:16:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.38 2007/02/01 10:48:11 abs Exp $
 
 DISTNAME=	mjpegtools-1.8.0
 PKGREVISION=	6
@@ -42,7 +42,7 @@ BUILDLINK_TRANSFORM+=	rm:-laudio rm:-laa
 # external package for it.
 #
 #.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
