@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2007/01/05 15:46:12 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/01 17:56:11 drochner Exp $
 #
 
-DISTNAME=		gramps-2.0.11
-PKGREVISION=		2
+DISTNAME=		gramps-2.2.6
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://gramps-project.org/
 COMMENT=	Genealogical Research and Analysis Management Programming System
-
-DEPENDS+=	yelp>=2.2:../../misc/yelp
 
 .if !exists(/usr/bin/msgconv)
 BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
@@ -41,4 +38,5 @@ GCONF2_SCHEMAS+=	gramps.schemas
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
