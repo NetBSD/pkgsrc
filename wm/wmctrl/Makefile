@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/03 12:09:19 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/01 23:14:33 joerg Exp $
 
 DISTNAME=		wmctrl-1.07
 CATEGORIES=		wm
@@ -13,6 +13,5 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
