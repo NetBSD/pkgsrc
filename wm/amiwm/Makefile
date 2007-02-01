@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/01 18:02:47 joerg Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -28,5 +28,7 @@ CONFIGURE_ENV+=	X_EXTRA_LIBS=-lXt
 X_PRE_LIBS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 FIX_RPATH+=	X_PRE_LIBS
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
