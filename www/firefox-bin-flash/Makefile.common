@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.16 2006/12/19 14:56:19 perry Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/02/01 13:49:40 ghen Exp $
 
-DISTNAME=		install_flash_player_7_${DISTUNAME}
+DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
 CATEGORIES=		www graphics
 MASTER_SITES=		http://download.macromedia.com/get/flashplayer/current/
@@ -16,9 +16,9 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
-FLASH_VERS=		7.0r69
+FLASH_VERS=		9.0r31
 DISTUNAME=		linux
-WRKNAME=		install_flash_player_7_${DISTUNAME}
+WRKNAME=		install_flash_player_9_${DISTUNAME}
 
 DISTINFO_FILE=		${.CURDIR}/../../www/firefox-bin-flash/distinfo
 
