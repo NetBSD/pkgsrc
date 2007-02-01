@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/02 11:21:28 salo Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/01 22:54:33 joerg Exp $
 #
 
 DISTNAME=	pwm-20060517
@@ -36,5 +36,5 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/look-cdelike.conf ${EGDIR}
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
