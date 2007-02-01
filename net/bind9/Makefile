@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2006/11/23 22:19:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.84.2.1 2007/02/01 09:28:52 ghen Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-PKGREVISION=	4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/sw/bind/
 COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
 
-BIND_VERSION=	9.3.2
+BIND_VERSION=	9.3.4
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
@@ -60,6 +60,8 @@ post-install:
 	set -e; cd ${WRKSRC}/doc && ${PAX} -rwppm			\
 	  -s ',.*xsl.*,,' -s ',Makefile.*,,' -s ',.*\.pl,,'		\
 	  . ${PREFIX}/share/doc/bind9
+	${CHMOD} -R g-w ${PREFIX}/share/doc/bind9
+	${CHMOD} -x ${PREFIX}/share/doc/bind9/arm/Bv9ARM.pdf
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
