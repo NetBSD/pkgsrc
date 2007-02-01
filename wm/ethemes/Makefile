@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:54 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/01 23:12:22 joerg Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	3
@@ -36,8 +36,6 @@ E_THEMES?=	Absolute_E-DR16-199911060830.etheme \
 	X11-DR16-199910131422.etheme \
 	arctic-DR16-200006050720.etheme \
 	eMac-DR16-199912101635.etheme small-e-DR16-199908230041.etheme
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 .for FILE in ${E_THEMES}
