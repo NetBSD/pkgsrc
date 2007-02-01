@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/10 23:33:04 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/01 17:45:36 joerg Exp $
 #
 
 DISTNAME=	aewm++-1.0.24
@@ -13,5 +13,6 @@ COMMENT=	Fork of the popular minimal window manager aewm
 
 USE_LANGUAGES=	c c++
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
