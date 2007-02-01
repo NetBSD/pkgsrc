@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.293 2007/02/01 14:03:47 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.294 2007/02/01 23:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -594,3 +594,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox-bin-flash to 9.0.31 [ghen 2007-02-01]
 	Added www/seamonkey-bin-flash version 9.0.31 [ghen 2007-02-01]
 	Added www/seamonkey-bin-java version 1.2 [ghen 2007-02-01]
+	Updated chat/ircd-hybrid to 7.2.2nb1 [wiz 2007-02-01]
