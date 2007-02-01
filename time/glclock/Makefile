@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 22:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/01 18:48:15 drochner Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -32,5 +32,4 @@ do-install:
 #	${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/bin; done
 
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
