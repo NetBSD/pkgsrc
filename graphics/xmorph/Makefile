@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/30 21:51:49 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/01 16:28:14 joerg Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -16,6 +16,7 @@ USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../math/fftw/buildlink3.mk"
-
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
