@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/21 18:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/01 14:41:04 obache Exp $
 
 DISTNAME=	jcode.pl-2.13
 PKGNAME=	p5-jcode-2.13
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
 EXTRACT_SUFX=
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	# not available
+HOMEPAGE=	http://www.srekcah.org/jcode/
 COMMENT=	Perl library for Japanese character code conversion
 
 WRKSRC=			${WRKDIR}
