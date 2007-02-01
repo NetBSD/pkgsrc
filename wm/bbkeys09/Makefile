@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/08/20 23:07:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/01 23:29:07 joerg Exp $
 #
 
 DISTNAME=	bbkeys-0.9.0
@@ -16,6 +16,11 @@ GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:run pkg-config
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../wm/blackbox70/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

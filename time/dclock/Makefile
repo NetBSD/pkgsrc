@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:52 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/01 23:37:53 joerg Exp $
 #
 
 DISTNAME=	dclock
@@ -16,5 +16,5 @@ CONFLICTS+=	ivtools-*
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
