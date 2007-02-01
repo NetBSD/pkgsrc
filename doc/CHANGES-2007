@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.292 2007/02/01 13:45:05 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.293 2007/02/01 14:03:47 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -591,3 +591,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/drupal to 4.7.6 [adrianp 2007-01-31]
 	Updated multimedia/xine-lib to 1.1.3nb5 [wiz 2007-02-01]
 	Updated multimedia/ns-flash to 9.0.31 [ghen 2007-02-01]
+	Updated www/firefox-bin-flash to 9.0.31 [ghen 2007-02-01]
+	Added www/seamonkey-bin-flash version 9.0.31 [ghen 2007-02-01]
+	Added www/seamonkey-bin-java version 1.2 [ghen 2007-02-01]
