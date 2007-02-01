@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/21 04:07:33 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/01 13:44:14 ghen Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -12,20 +12,22 @@ NOT_FOR_PLATFORM=	SunOS-*-i386
 
 WRKSRC=			${WRKDIR}/${WRKNAME}
 DIST_SUBDIR=		flash/${FLASH_VERS}
-WRKNAME=		install_flash_player_7_${DISTUNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386")
-FLASH_VERS=		7.0r69
-DEPENDS+=		suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+FLASH_VERS=		9.0r31
+DEPENDS+=		suse_compat>=9.0:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=		suse_x11>=9.0:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=		suse_gtk2>=9.0:../../emulators/${SUSE_DIR_PREFIX}_gtk2
 DISTUNAME=		linux
-DISTNAME=		install_flash_player_7_${DISTUNAME}
+DISTNAME=		install_flash_player_9_${DISTUNAME}
+WRKNAME=		install_flash_player_9_${DISTUNAME}
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
 FLASH_VERS=		7.0r67
 DISTUNAME=		solaris
 DISTNAME=		install_flash_player_7_${DISTUNAME}_sparc
+WRKNAME=		install_flash_player_7_${DISTUNAME}
 .else
 # Defaults so lintpkgsrc is happy
 FLASH_VERS=		5.0
