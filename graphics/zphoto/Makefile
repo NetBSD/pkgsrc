@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/01 16:04:19 joerg Exp $
 #
 
 DISTNAME=	zphoto-1.2
@@ -21,9 +21,13 @@ CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv:Q}
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext-lib:Q}
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
