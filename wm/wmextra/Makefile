@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:55 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/01 23:02:59 joerg Exp $
 #
 
 DISTNAME=		WindowMaker-extra-0.1
@@ -16,5 +16,4 @@ DEPENDS+=		windowmaker>=0.80.0nb1:../../wm/windowmaker
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
