@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/15 22:48:10 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/01 17:46:03 joerg Exp $
 #
 
 DISTNAME=		3ddesktop-0.2.8
@@ -24,5 +24,7 @@ pre-install:
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
