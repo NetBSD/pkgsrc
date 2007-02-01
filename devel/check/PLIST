@@ -1,33 +1,37 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/11 20:45:44 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/02/01 19:07:24 drochner Exp $
 include/check.h
-lib/libcheck.a
+info/check.info
+lib/libcheck.la
+lib/pkgconfig/check.pc
 share/aclocal/check.m4
-share/doc/check/COPYING
+share/doc/check/COPYING.LESSER
 share/doc/check/ChangeLog
 share/doc/check/ChangeLogOld
 share/doc/check/NEWS
 share/doc/check/README
-share/doc/check/c14.html
-share/doc/check/c163.html
-share/doc/check/c249.html
-share/doc/check/c33.html
-share/doc/check/c57.html
-share/doc/check/examples/Makefile.am.money
-share/doc/check/examples/check_money.c
-share/doc/check/examples/configure.in.money
-share/doc/check/examples/money.c
-share/doc/check/examples/money.h
-share/doc/check/index.html
-share/doc/check/x108.html
-share/doc/check/x115.html
-share/doc/check/x172.html
-share/doc/check/x183.html
-share/doc/check/x214.html
-share/doc/check/x220.html
-share/doc/check/x226.html
-share/doc/check/x232.html
-share/doc/check/x246.html
-share/doc/check/x68.html
-share/doc/check/x80.html
-@dirrm share/doc/check/examples
+share/doc/check/SVNChangeLog
+share/doc/check/example/Makefile.am
+share/doc/check/example/README
+share/doc/check/example/configure.ac
+share/doc/check/example/src/Makefile.am
+share/doc/check/example/src/main.c
+share/doc/check/example/src/money.1.c
+share/doc/check/example/src/money.1.h
+share/doc/check/example/src/money.2.h
+share/doc/check/example/src/money.3.c
+share/doc/check/example/src/money.4.c
+share/doc/check/example/src/money.5.c
+share/doc/check/example/src/money.6.c
+share/doc/check/example/src/money.c
+share/doc/check/example/src/money.h
+share/doc/check/example/tests/Makefile.am
+share/doc/check/example/tests/check_money.1.c
+share/doc/check/example/tests/check_money.2.c
+share/doc/check/example/tests/check_money.3.c
+share/doc/check/example/tests/check_money.6.c
+share/doc/check/example/tests/check_money.7.c
+share/doc/check/example/tests/check_money.c
+@dirrm share/doc/check/example/tests
+@dirrm share/doc/check/example/src
+@dirrm share/doc/check/example
 @dirrm share/doc/check
