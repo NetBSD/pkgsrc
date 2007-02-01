@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/22 04:46:18 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/01 23:33:56 joerg Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
@@ -13,5 +13,5 @@ COMMENT=	Display the current date
 GNU_CONFIGURE=  YES
 USE_LANGUAGES=	c c++
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

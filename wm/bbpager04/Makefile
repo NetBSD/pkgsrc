@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/01 23:29:11 joerg Exp $
 #
 
 DISTNAME=	bbpager-0.4.1beta1
@@ -18,6 +18,11 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/bbpager.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/bbpager.bb.5 ${PREFIX}/${PKGMANDIR}/man5
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../wm/blackbox70/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
