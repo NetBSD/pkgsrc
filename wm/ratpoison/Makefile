@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/06 18:44:46 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/01 17:26:39 joerg Exp $
 #
 
 DISTNAME=	ratpoison-1.4.1
@@ -17,6 +17,12 @@ INFO_FILES=		yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	contrib/rpws contrib/clickframe.pl
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
