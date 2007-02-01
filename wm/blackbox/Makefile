@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/08/20 23:08:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/01 22:08:35 joerg Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -17,6 +17,10 @@ CONFLICTS+=	blackbox70>=0.70.1
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
