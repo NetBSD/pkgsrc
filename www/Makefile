@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2007/01/28 15:31:03 taca Exp $
+# $NetBSD: Makefile,v 1.498 2007/02/01 14:08:55 ghen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -304,6 +304,8 @@ SUBDIR+=	sarg
 SUBDIR+=	screws
 SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-bin
+SUBDIR+=	seamonkey-bin-flash
+SUBDIR+=	seamonkey-bin-java
 SUBDIR+=	seamonkey-bin-nightly
 SUBDIR+=	seamonkey-gtk1
 SUBDIR+=	serf
