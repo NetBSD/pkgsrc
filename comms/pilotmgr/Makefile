@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/09/25 12:57:21 tron Exp $
+# $NetBSD: Makefile,v 1.42 2007/02/02 19:35:12 joerg Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
@@ -56,5 +56,5 @@ do-install:
 	done
 	${LN} -fs ${PM_DOC_DIR} ${PM_PERL_DIR}/docs
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
