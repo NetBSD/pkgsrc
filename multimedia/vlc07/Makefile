@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/17 03:11:19 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/02 15:48:58 joerg Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -44,6 +44,10 @@ PLIST_SUBST+=		DVDCSS=
 .else
 CONFIGURE_ARGS+=	--disable-dvd
 PLIST_SUBST+=		DVDCSS="@comment "
+.endif
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .endif
 
 pre-install:
