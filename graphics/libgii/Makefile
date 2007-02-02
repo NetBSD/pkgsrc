@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/01/29 21:22:08 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/02 19:17:31 joerg Exp $
 
 DISTNAME=	libgii-0.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -30,7 +30,6 @@ CONF_FILES+=		${EGDIR}/filter/mouse ${PKG_SYSCONFDIR}/filter/mouse
 PTHREAD_OPTS+=		native
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 
 .if empty(PTHREAD_TYPE:Mnative)
 PLIST_SUBST+=		GGTICK=""
@@ -38,4 +37,8 @@ PLIST_SUBST+=		GGTICK=""
 PLIST_SUBST+=		GGTICK="@comment "
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
