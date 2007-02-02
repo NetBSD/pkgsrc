@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/15 21:00:13 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/02 18:46:26 joerg Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -32,5 +32,4 @@ MAKE_ENV+=		X_LDFLAGS=${X11_LDFLAGS:Q}
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
