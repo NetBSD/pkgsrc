@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/12/27 13:37:43 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2007/02/02 15:08:36 joerg Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	7
@@ -26,5 +26,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/wtermthai.tiff \
 		${PREFIX}/share/WindowMaker/Icons
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../wm/windowmaker/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
