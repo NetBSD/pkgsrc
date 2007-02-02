@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2007/01/11 19:22:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2007/02/02 13:08:20 schmonz Exp $
 #
 
-DISTNAME=	tmda-1.1.9
-PKGREVISION=	2
+DISTNAME=	tmda-1.1.10
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.net/releases/
 MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
 
