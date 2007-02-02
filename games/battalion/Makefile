@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2007/02/02 19:35:32 joerg Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -48,5 +48,4 @@ pre-clean:
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
