@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2007/01/26 11:40:36 dillo Exp $
+# $NetBSD: Makefile,v 1.35 2007/02/02 21:42:37 joerg Exp $
 
 DISTNAME=	wesnoth-1.2.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 
@@ -30,6 +31,7 @@ BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.7
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 # configure script in 0.9.0 requests explicitly to
 # use included SDL_ttf library
@@ -39,5 +41,4 @@ BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
