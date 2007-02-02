@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/31 13:17:38 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/02 01:15:57 joerg Exp $
 #
 
 DISTNAME=	gnome-build-0.1.3
@@ -21,7 +21,7 @@ BL3_DEPENDS+=	x11/gtk2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl:run intltool
+USE_TOOLS+=	pkg-config perl:run intltool msgfmt
 
 PKGCONFIG_OVERRIDE+=	gnome-build-1.0.pc.in
 
