@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/01/07 09:14:00 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/02 17:07:48 joerg Exp $
 
 DISTNAME=		9menu-1.8
 PKGREVISION=		1
@@ -15,10 +15,9 @@ BUILD_TARGET=		9menu
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/9menu ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/9menu.1 ${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
