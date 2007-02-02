@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/30 20:52:24 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/02 00:18:36 wiz Exp $
 
 DISTNAME=	xpmicons-1.0
 PKGREVISION=	4
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	include/X11/bitmaps include/X11/pixmaps
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} != "xorg" && ${X11_TYPE} != "modular"
-PLIST_SRC+=	PLIST.icons
+PLIST_SRC=	PLIST PLIST.icons
 .endif
 
 post-extract:
