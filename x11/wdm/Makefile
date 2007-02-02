@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/10/18 20:23:15 reed Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/02 15:23:46 joerg Exp $
 
 DISTNAME=		wdm-1.28
 CATEGORIES=		x11 windowmaker
@@ -60,5 +60,8 @@ pre-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
-
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
