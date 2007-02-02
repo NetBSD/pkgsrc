@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2007/01/26 17:56:50 drochner Exp $
+# $NetBSD: Makefile,v 1.280 2007/02/02 16:12:40 drochner Exp $
 #
 
 COMMENT=	Games
@@ -219,12 +219,14 @@ SUBDIR+=	tuxracer
 SUBDIR+=	urban
 SUBDIR+=	vms-empire
 SUBDIR+=	wesnoth
+SUBDIR+=	wormux
 SUBDIR+=	wormz
 SUBDIR+=	wxhugo
 SUBDIR+=	xarchon
 SUBDIR+=	xbat
 SUBDIR+=	xbill
 SUBDIR+=	xblast
+SUBDIR+=	xblockout
 SUBDIR+=	xboard
 SUBDIR+=	xboing
 SUBDIR+=	xbomb
