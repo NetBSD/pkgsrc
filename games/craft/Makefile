@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/07/02 10:09:56 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/02 17:36:22 joerg Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -15,8 +15,6 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 USE_X11BASE=	yes
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	@${FIND} ${WRKSRC} -type f -name '*~' -print | ${XARGS} ${RM} -f
@@ -39,4 +37,5 @@ post-patch:
 	${SED} -e 's+@PREFIX@+${PREFIX}+' <${WRKSRC}/foo> ${WRKSRC}/craft_def.h
 	${RM} -f ${WRKSRC}/foo
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
