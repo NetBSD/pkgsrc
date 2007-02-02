@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 21:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/02 17:38:36 joerg Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -19,10 +19,10 @@ USE_LANGUAGES+=		c c++
 
 NOT_FOR_PLATFORM=	NetBSD-*-arm32
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-extract:
 	cd ${WRKSRC}/abuse						\
 	&& ${GTAR} xfz ${DISTDIR}/abuse_data.tar.gz
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
