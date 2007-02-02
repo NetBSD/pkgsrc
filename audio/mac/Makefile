@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/31 21:17:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/02 16:56:58 joerg Exp $
 #
 
 DISTNAME=	mac-3.99-u4-b5
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-# really does not need "c"
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.pkg.mk"
