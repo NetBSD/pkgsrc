@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/07/19 19:14:37 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/02 15:09:18 joerg Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -50,8 +50,13 @@ CONFIGURE_ARGS+=	--enable-esound
 .  include "../../mk/oss.buildlink3.mk"
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/libdockapp/buildlink3.mk"
 .include "../../devel/libproplist/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
