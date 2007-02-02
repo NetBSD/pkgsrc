@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/02/01 18:45:55 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/02/02 09:21:15 drochner Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -23,7 +23,8 @@ BUILDLINK_PKGSRCDIR.libXext?=	../../x11/libXext
 .endif	# LIBXEXT_BUILDLINK3_MK
 
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+# XXX don't include xextproto/bl3 here; packages checking for xext.pc must
+# include it theirselfes
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 
