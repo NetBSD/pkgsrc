@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/01/24 19:39:25 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/02/02 19:28:31 drochner Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.16.1
@@ -22,6 +22,11 @@ PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
 
 BUILDLINK_API_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.5
 HICOLOR_ICON_THEME_DEPEND_ONLY=		yes
+
+# XXX this is used by applications. We "own" the subtree share/icons/gnome,
+# so we control the subdirs not belonging to a single application.
+post-install:
+	${MKDIR} ${PREFIX}/share/icons/gnome/48x48/mimetypes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
