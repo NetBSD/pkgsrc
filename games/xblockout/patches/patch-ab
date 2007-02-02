@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/02 16:05:43 drochner Exp $
+
+--- configure.orig	2007-02-02 11:05:37.000000000 +0100
++++ configure
+@@ -775,7 +775,7 @@ ALL:
+ 	@echo COMPRESS=\"COMPRESS=$(COMPRESS)\"
+ 	@echo MANPATH=\"MANPATH=$(MANPATH)\"
+ 	@echo CC=\"$(CC)\"
+-	@echo LDOPTIONS=\"$(LDOPTIONS)\"
++	@echo LDOPTIONS=\"$(LDOPTIONS) $(EXTRA_LOAD_FLAGS)\"
+ 	@echo LINT=\"LINT=$(LINT)\"
+ 	@echo LINTFLAGS=\"LINTFLAGS=$(LINTFLAGS)\"
+ EOF
