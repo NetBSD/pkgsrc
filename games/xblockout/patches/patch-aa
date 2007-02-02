@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/02 16:05:43 drochner Exp $
+
+--- Makefile.in.orig	2007-02-02 10:37:20.000000000 +0100
++++ Makefile.in
+@@ -128,9 +128,6 @@ install:bl
+ 	@-if [ "" != "$(USE_SETGID)" ] ; then \
+ 		echo "You use GID=$(GROUP_GID) protection" ; \
+ 		fi
+-	@echo "Type <Return> to continue installation"
+-	@echo "Type NO       to stop installation"
+-	@read LINE && test "" = "$$LINE"
+ 	#
+ 	# Remove old score file
+ 	#

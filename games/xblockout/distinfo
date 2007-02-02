@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/02 16:05:43 drochner Exp $
+
+SHA1 (xbl-1.1.5.tar.gz) = 14503060ccf82d23430fe08e78ba4998723ec174
+RMD160 (xbl-1.1.5.tar.gz) = 30cf9f6b1c251b267f0ebe0b85f349e9dce3dd44
+Size (xbl-1.1.5.tar.gz) = 136508 bytes
+SHA1 (patch-aa) = 020c1a2b1effb660d03f567e43d26b83f356bbeb
+SHA1 (patch-ab) = c006a72d511f01011666e1caf5173ba1f03b3494
