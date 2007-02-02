@@ -324,6 +324,7 @@ trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
+ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
 uim			Enable UIM support.
 unicode	
 unixodbc		Enable ODBC support via unixODBC.
