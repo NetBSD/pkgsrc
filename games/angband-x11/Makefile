@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/10/04 21:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/02/02 01:04:00 joerg Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -36,6 +36,10 @@ post-install:
 	${CHOWN} -R bin:games ${PREFIX}/share/games/angband
 	${FIND} ${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
