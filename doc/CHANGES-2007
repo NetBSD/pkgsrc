@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.303 2007/02/02 19:29:33 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.304 2007/02/02 19:39:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -595,6 +595,15 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/seamonkey-bin-flash version 9.0.31 [ghen 2007-02-01]
 	Added www/seamonkey-bin-java version 1.2 [ghen 2007-02-01]
 	Updated chat/ircd-hybrid to 7.2.2nb1 [wiz 2007-02-01]
+	Updated devel/pango to 1.14.10 [drochner 2007-02-01]
+	Updated x11/gtk2 to 2.10.9 [drochner 2007-02-01]
+	Updated net/ORBit2 to 2.14.5 [drochner 2007-02-01]
+	Updated www/gtkhtml to 3.12.3 [drochner 2007-02-01]
+	Added audio/wavpack version 4.40.0 [drochner 2007-02-01]
+	Added audio/gst-plugins0.10-wavpack version 0.10.4 [drochner 2007-02-01]
+	Updated databases/gramps2 to 2.2.6 [drochner 2007-02-01]
+	Updated textproc/libxslt to 1.1.20 [drochner 2007-02-01]
+	Updated devel/check to 0.9.5 [drochner 2007-02-01]
 	Updated graphics/ruby-RMagick to 1.15.1 [obache 2007-02-02]
 	Updated x11/x11vnc to 0.8.4 [obache 2007-02-02]
 	Updated net/ucspi-tcp to 0.88nb2 [schmonz 2007-02-02]
@@ -614,3 +623,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/curl to 7.16.1 [wiz 2007-02-02]
 	Updated graphics/xsane to 0.99.2 [wiz 2007-02-02]
 	Updated news/tin to 1.8.3 [wiz 2007-02-02]
+	Added games/xblockout version 1.1.5 [drochner 2007-02-01]
+	Added games/wormux version 0.7.9 [drochner 2007-02-01]
+	Updated x11/gtksourceview to 1.8.3 [drochner 2007-02-01]
