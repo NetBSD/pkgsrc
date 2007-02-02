@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2006/01/30 17:20:23 wiz Exp $
+$NetBSD: distinfo,v 1.15 2007/02/02 19:14:59 wiz Exp $
 
-SHA1 (xsane-0.991.tar.gz) = 22725e8a956955b75ac6791f69a3e9a4ae744ac7
-RMD160 (xsane-0.991.tar.gz) = a1ef5315914e6525c0667bf253aff25d01ccb644
-Size (xsane-0.991.tar.gz) = 2930784 bytes
+SHA1 (xsane-0.992.tar.gz) = 60a8ee245d26f343c040138dc76fd582be6bf2b0
+RMD160 (xsane-0.992.tar.gz) = 6d4bf59ac74147b2554b1052835b1bbaa11e647c
+Size (xsane-0.992.tar.gz) = 3012340 bytes
