@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2006/10/22 12:36:53 wiz Exp $
+$NetBSD: distinfo,v 1.20 2007/02/02 19:13:49 wiz Exp $
 
-SHA1 (docbook-xsl-1.71.1.tar.bz2) = de7199a9e55ced7a2a212e9902eff747103e4a24
-RMD160 (docbook-xsl-1.71.1.tar.bz2) = 198d8ba1ce1bd8e9f2a730bb285aa1c164a3e10a
-Size (docbook-xsl-1.71.1.tar.bz2) = 1473510 bytes
+SHA1 (docbook-xsl-1.72.0.tar.bz2) = d2b4411652b14842ff77fc51fd675408f76e8147
+RMD160 (docbook-xsl-1.72.0.tar.bz2) = 4df75842c4cda825ba5f36f5e5235e796e49b1bb
+Size (docbook-xsl-1.72.0.tar.bz2) = 1594244 bytes
