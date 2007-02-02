@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/02 19:23:51 joerg Exp $
 #
 
 DISTNAME=	libtabe-0.2.5
@@ -25,6 +25,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tsi-src/README \
 		${PREFIX}/share/doc/tabe/README.tsi
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../databases/db3/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
