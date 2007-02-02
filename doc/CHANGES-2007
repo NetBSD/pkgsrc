@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.301 2007/02/02 18:24:25 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.302 2007/02/02 19:16:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -602,3 +602,14 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0rc21 [ghen 2007-02-02]
 	Updated www/apache22 to 2.2.4nb2 [sborrill 2007-02-02]
 	Updated mail/getmail to 4.7.1 [schmonz 2007-02-02]
+	Updated www/p5-HTML-Parser to 3.56 [wiz 2007-02-02]
+	Updated security/p5-IO-Socket-SSL to 1.02 [wiz 2007-02-02]
+	Added devel/p5-IO-Compress-Base version 2.003 [wiz 2007-02-02]
+	Added devel/p5-Compress-Raw-Zlib version 2.003 [wiz 2007-02-02]
+	Added devel/p5-IO-Compress-Zlib version 2.003 [wiz 2007-02-02]
+	Updated devel/p5-Compress-Zlib to 2.003 [wiz 2007-02-02]
+	Updated graphics/comix to 3.6.2 [wiz 2007-02-02]
+	Updated graphics/png to 1.2.16 [wiz 2007-02-02]
+	Updated textproc/docbook-xsl to 1.72.0 [wiz 2007-02-02]
+	Updated www/curl to 7.16.1 [wiz 2007-02-02]
+	Updated graphics/xsane to 0.99.2 [wiz 2007-02-02]
