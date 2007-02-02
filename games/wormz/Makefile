@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/04 21:43:01 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/02 18:39:43 joerg Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -15,8 +15,6 @@ WRKSRC=			${WRKDIR}/Wormz
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-extract:
 	${MKDIR} ${WRKSRC}/NetBSD
 	${TOUCH} ${WRKSRC}/NetBSD/.depend
@@ -26,4 +24,6 @@ post-extract:
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} depend
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
