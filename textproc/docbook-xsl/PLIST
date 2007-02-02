@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/10/22 12:36:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/02/02 19:13:49 wiz Exp $
 share/examples/docbook-xsl/titlepage.xsl
 @comment in xmlcatmgr: share/xml/catalog
 share/xsl/docbook/VERSION
@@ -20,6 +20,7 @@ share/xsl/docbook/common/da.xml
 share/xsl/docbook/common/de.xml
 share/xsl/docbook/common/el.xml
 share/xsl/docbook/common/en.xml
+share/xsl/docbook/common/entities.ent
 share/xsl/docbook/common/es.xml
 share/xsl/docbook/common/et.xml
 share/xsl/docbook/common/eu.xml
@@ -150,6 +151,7 @@ share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan/Table.java
 share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan/Text.java
 share/xsl/docbook/extensions/xalan27/src/com/nwalsh/xalan/Verbatim.java
 share/xsl/docbook/fo/admon.xsl
+share/xsl/docbook/fo/annotations.xsl
 share/xsl/docbook/fo/autoidx-kimber.xsl
 share/xsl/docbook/fo/autoidx-kosek.xsl
 share/xsl/docbook/fo/autoidx-ng.xsl
@@ -162,7 +164,6 @@ share/xsl/docbook/fo/callout.xsl
 share/xsl/docbook/fo/component.xsl
 share/xsl/docbook/fo/division.xsl
 share/xsl/docbook/fo/docbook.xsl
-share/xsl/docbook/fo/docbookng.xsl
 share/xsl/docbook/fo/ebnf.xsl
 share/xsl/docbook/fo/fo-patch-for-fop.xsl
 share/xsl/docbook/fo/fo-rtf.xsl
@@ -231,7 +232,6 @@ share/xsl/docbook/html/component.xsl
 share/xsl/docbook/html/db5strip.xsl
 share/xsl/docbook/html/division.xsl
 share/xsl/docbook/html/docbook.xsl
-share/xsl/docbook/html/docbookng.xsl
 share/xsl/docbook/html/ebnf.xsl
 share/xsl/docbook/html/footnote.xsl
 share/xsl/docbook/html/formal.xsl
@@ -506,6 +506,7 @@ share/xsl/docbook/params/generate.section.toc.level.xml
 share/xsl/docbook/params/generate.toc.xml
 share/xsl/docbook/params/glossary.as.blocks.xml
 share/xsl/docbook/params/glossary.collection.xml
+share/xsl/docbook/params/glossary.sort.xml
 share/xsl/docbook/params/glossentry.show.acronym.xml
 share/xsl/docbook/params/glosslist.as.blocks.xml
 share/xsl/docbook/params/glossterm.auto.link.xml
@@ -596,6 +597,7 @@ share/xsl/docbook/params/index.method.xml
 share/xsl/docbook/params/index.number.separator.xml
 share/xsl/docbook/params/index.on.role.xml
 share/xsl/docbook/params/index.on.type.xml
+share/xsl/docbook/params/index.page.number.properties.xml
 share/xsl/docbook/params/index.prefer.titleabbrev.xml
 share/xsl/docbook/params/index.preferred.page.properties.xml
 share/xsl/docbook/params/index.range.separator.xml
@@ -659,11 +661,14 @@ share/xsl/docbook/params/man.links.list.heading.xml
 share/xsl/docbook/params/man.output.base.dir.xml
 share/xsl/docbook/params/man.output.encoding.xml
 share/xsl/docbook/params/man.output.in.separate.dir.xml
+share/xsl/docbook/params/man.output.lang.in.name.enabled.xml
 share/xsl/docbook/params/man.output.manifest.enabled.xml
 share/xsl/docbook/params/man.output.manifest.filename.xml
 share/xsl/docbook/params/man.output.quietly.xml
 share/xsl/docbook/params/man.output.subdirs.enabled.xml
 share/xsl/docbook/params/man.segtitle.suppress.xml
+share/xsl/docbook/params/man.string.subst.map.local.post.xml
+share/xsl/docbook/params/man.string.subst.map.local.pre.xml
 share/xsl/docbook/params/man.string.subst.map.xml
 share/xsl/docbook/params/man.subheading.divider.enabled.xml
 share/xsl/docbook/params/man.subheading.divider.xml
@@ -751,6 +756,7 @@ share/xsl/docbook/params/profile.value.xml
 share/xsl/docbook/params/profile.vendor.xml
 share/xsl/docbook/params/punct.honorific.xml
 share/xsl/docbook/params/qanda.defaultlabel.xml
+share/xsl/docbook/params/qanda.in.toc.xml
 share/xsl/docbook/params/qanda.inherit.numeration.xml
 share/xsl/docbook/params/qanda.nested.in.toc.xml
 share/xsl/docbook/params/qanda.title.level1.properties.xml
@@ -894,8 +900,85 @@ share/xsl/docbook/profiling/profile-mode.xsl
 share/xsl/docbook/profiling/profile.xsl
 share/xsl/docbook/profiling/strip-attributes.xsl
 share/xsl/docbook/profiling/xsl2profile.xsl
+share/xsl/docbook/roundtrip/blocks-spec.xml
+share/xsl/docbook/roundtrip/dbk2ooo.xsl
+share/xsl/docbook/roundtrip/dbk2pages.xsl
+share/xsl/docbook/roundtrip/dbk2wordml.xsl
+share/xsl/docbook/roundtrip/dbk2wp.xsl
+share/xsl/docbook/roundtrip/docbook-pages.xsl
+share/xsl/docbook/roundtrip/docbook.xsl
+share/xsl/docbook/roundtrip/pages-normalise.xsl
+share/xsl/docbook/roundtrip/param.xsl
+share/xsl/docbook/roundtrip/sections-spec.xml
+share/xsl/docbook/roundtrip/specifications.xml
+share/xsl/docbook/roundtrip/supported.xml
+share/xsl/docbook/roundtrip/template-pages.xml
+share/xsl/docbook/roundtrip/template.dot
+share/xsl/docbook/roundtrip/template.xml
+share/xsl/docbook/roundtrip/wordml-blocks.xsl
+share/xsl/docbook/roundtrip/wordml-final.xsl
+share/xsl/docbook/roundtrip/wordml-normalise.xsl
+share/xsl/docbook/roundtrip/wordml-sections.xsl
+share/xsl/docbook/roundtrip/wordml.xsl
+share/xsl/docbook/slides/browser/CTOCWidget.js
+share/xsl/docbook/slides/browser/overlay.js
+share/xsl/docbook/slides/browser/slides-default.css
+share/xsl/docbook/slides/browser/slides-frames.css
+share/xsl/docbook/slides/browser/slides-plain.css
+share/xsl/docbook/slides/browser/slides-table.css
+share/xsl/docbook/slides/browser/slides-w3c.css
+share/xsl/docbook/slides/browser/slides.css
+share/xsl/docbook/slides/browser/slides.js
+share/xsl/docbook/slides/browser/ua.js
+share/xsl/docbook/slides/browser/xbCollapsibleLists.js
+share/xsl/docbook/slides/browser/xbDOM.js
+share/xsl/docbook/slides/browser/xbDebug.js
+share/xsl/docbook/slides/browser/xbLibrary.js
+share/xsl/docbook/slides/browser/xbStyle-css.js
+share/xsl/docbook/slides/browser/xbStyle-nn4.js
+share/xsl/docbook/slides/browser/xbStyle-not-supported.js
+share/xsl/docbook/slides/browser/xbStyle.js
 share/xsl/docbook/slides/fo/plain-titlepage.xml
+share/xsl/docbook/slides/fo/plain-titlepage.xsl
 share/xsl/docbook/slides/fo/plain.xsl
+share/xsl/docbook/slides/graphics/active/arr-next.png
+share/xsl/docbook/slides/graphics/active/arr-prev.png
+share/xsl/docbook/slides/graphics/active/but-fforward.png
+share/xsl/docbook/slides/graphics/active/but-info.png
+share/xsl/docbook/slides/graphics/active/but-next.png
+share/xsl/docbook/slides/graphics/active/but-prev.png
+share/xsl/docbook/slides/graphics/active/but-rewind.png
+share/xsl/docbook/slides/graphics/active/nav-home.png
+share/xsl/docbook/slides/graphics/active/nav-next.png
+share/xsl/docbook/slides/graphics/active/nav-prev.png
+share/xsl/docbook/slides/graphics/active/nav-toc.png
+share/xsl/docbook/slides/graphics/active/nav-up.png
+share/xsl/docbook/slides/graphics/active/w3c-next.png
+share/xsl/docbook/slides/graphics/active/w3c-prev.png
+share/xsl/docbook/slides/graphics/active/w3c-toc.png
+share/xsl/docbook/slides/graphics/arrow.gif
+share/xsl/docbook/slides/graphics/blank.gif
+share/xsl/docbook/slides/graphics/blank.png
+share/xsl/docbook/slides/graphics/hidetoc.gif
+share/xsl/docbook/slides/graphics/inactive/but-fforward.png
+share/xsl/docbook/slides/graphics/inactive/but-info.png
+share/xsl/docbook/slides/graphics/inactive/but-next.png
+share/xsl/docbook/slides/graphics/inactive/but-prev.png
+share/xsl/docbook/slides/graphics/inactive/but-rewind.png
+share/xsl/docbook/slides/graphics/inactive/nav-home.png
+share/xsl/docbook/slides/graphics/inactive/nav-next.png
+share/xsl/docbook/slides/graphics/inactive/nav-prev.png
+share/xsl/docbook/slides/graphics/inactive/nav-toc.png
+share/xsl/docbook/slides/graphics/inactive/nav-up.png
+share/xsl/docbook/slides/graphics/inactive/w3c-next.png
+share/xsl/docbook/slides/graphics/inactive/w3c-prev.png
+share/xsl/docbook/slides/graphics/inactive/w3c-toc.png
+share/xsl/docbook/slides/graphics/plus.gif
+share/xsl/docbook/slides/graphics/pointer.png
+share/xsl/docbook/slides/graphics/showtoc.gif
+share/xsl/docbook/slides/graphics/toc/bullet.png
+share/xsl/docbook/slides/graphics/toc/closed.png
+share/xsl/docbook/slides/graphics/toc/open.png
 share/xsl/docbook/slides/html/css.xsl
 share/xsl/docbook/slides/html/default.xsl
 share/xsl/docbook/slides/html/flat.xsl
@@ -919,7 +1002,20 @@ share/xsl/docbook/slides/keynote/xsltsl/stdlib.xsl
 share/xsl/docbook/slides/keynote/xsltsl/string.xsl
 share/xsl/docbook/slides/keynote/xsltsl/svg.xsl
 share/xsl/docbook/slides/keynote/xsltsl/uri.xsl
+share/xsl/docbook/slides/param.xsl
 share/xsl/docbook/slides/svg/default.xsl
+share/xsl/docbook/slides/xhtml/css.xsl
+share/xsl/docbook/slides/xhtml/default.xsl
+share/xsl/docbook/slides/xhtml/flat.xsl
+share/xsl/docbook/slides/xhtml/frames.xsl
+share/xsl/docbook/slides/xhtml/graphics.xsl
+share/xsl/docbook/slides/xhtml/html2xhtml.xsl
+share/xsl/docbook/slides/xhtml/jscript.xsl
+share/xsl/docbook/slides/xhtml/plain.xsl
+share/xsl/docbook/slides/xhtml/slides-common.xsl
+share/xsl/docbook/slides/xhtml/tables.xsl
+share/xsl/docbook/slides/xhtml/vslides.xsl
+share/xsl/docbook/slides/xhtml/w3c.xsl
 share/xsl/docbook/website/autolayout.xsl
 share/xsl/docbook/website/chunk-common.xsl
 share/xsl/docbook/website/chunk-tabular.xsl
@@ -927,6 +1023,8 @@ share/xsl/docbook/website/chunk-website.xsl
 share/xsl/docbook/website/head.xsl
 share/xsl/docbook/website/makefile-dep.xsl
 share/xsl/docbook/website/olink.xsl
+share/xsl/docbook/website/param.xml
+share/xsl/docbook/website/param.xsl
 share/xsl/docbook/website/rss.xsl
 share/xsl/docbook/website/tabular.xsl
 share/xsl/docbook/website/toc-tabular.xsl
@@ -935,22 +1033,6 @@ share/xsl/docbook/website/website-common.xsl
 share/xsl/docbook/website/website-targets.xsl
 share/xsl/docbook/website/website.xsl
 share/xsl/docbook/website/xbel.xsl
-share/xsl/docbook/wordml/blocks-spec.xml
-share/xsl/docbook/wordml/docbook-pages.xsl
-share/xsl/docbook/wordml/docbook.xsl
-share/xsl/docbook/wordml/pages-normalise.xsl
-share/xsl/docbook/wordml/param.xsl
-share/xsl/docbook/wordml/sections-spec.xml
-share/xsl/docbook/wordml/specifications.xml
-share/xsl/docbook/wordml/supported.xml
-share/xsl/docbook/wordml/template-pages.xml
-share/xsl/docbook/wordml/template.dot
-share/xsl/docbook/wordml/template.xml
-share/xsl/docbook/wordml/wordml-blocks.xsl
-share/xsl/docbook/wordml/wordml-final.xsl
-share/xsl/docbook/wordml/wordml-normalise.xsl
-share/xsl/docbook/wordml/wordml-sections.xsl
-share/xsl/docbook/wordml/wordml.xsl
 share/xsl/docbook/xhtml/admon.xsl
 share/xsl/docbook/xhtml/annotations.xsl
 share/xsl/docbook/xhtml/autoidx-kimber.xsl
@@ -972,7 +1054,6 @@ share/xsl/docbook/xhtml/component.xsl
 share/xsl/docbook/xhtml/db5strip.xsl
 share/xsl/docbook/xhtml/division.xsl
 share/xsl/docbook/xhtml/docbook.xsl
-share/xsl/docbook/xhtml/docbookng.xsl
 share/xsl/docbook/xhtml/ebnf.xsl
 share/xsl/docbook/xhtml/footnote.xsl
 share/xsl/docbook/xhtml/formal.xsl
@@ -1011,17 +1092,21 @@ share/xsl/docbook/xhtml/toc.xsl
 share/xsl/docbook/xhtml/verbatim.xsl
 share/xsl/docbook/xhtml/xref.xsl
 @dirrm share/xsl/docbook/xhtml
-@dirrm share/xsl/docbook/wordml
 @dirrm share/xsl/docbook/website
-@exec ${MKDIR} %D/share/xsl/docbook/slides/xhtml
 @dirrm share/xsl/docbook/slides/xhtml
 @dirrm share/xsl/docbook/slides/svg
 @dirrm share/xsl/docbook/slides/keynote/xsltsl
 @dirrm share/xsl/docbook/slides/keynote
 @dirrm share/xsl/docbook/slides/htmlhelp
 @dirrm share/xsl/docbook/slides/html
+@dirrm share/xsl/docbook/slides/graphics/toc
+@dirrm share/xsl/docbook/slides/graphics/inactive
+@dirrm share/xsl/docbook/slides/graphics/active
+@dirrm share/xsl/docbook/slides/graphics
 @dirrm share/xsl/docbook/slides/fo
+@dirrm share/xsl/docbook/slides/browser
 @dirrm share/xsl/docbook/slides
+@dirrm share/xsl/docbook/roundtrip
 @dirrm share/xsl/docbook/profiling
 @dirrm share/xsl/docbook/params
 @dirrm share/xsl/docbook/manpages
