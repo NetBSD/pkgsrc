@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/16 01:00:06 perry Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/02 17:21:17 joerg Exp $
 
 DISTNAME=	xalarm-3.06
 CATEGORIES=	time
@@ -53,5 +53,7 @@ pre-configure:
 		-e 's|@KILL@|${KILL}|' ${FILESDIR}/fns.h.in > ${WRKSRC}/fns.h
 	${CP} ${FILESDIR}/XAlarm-color.ad ${WRKSRC}/
 
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
