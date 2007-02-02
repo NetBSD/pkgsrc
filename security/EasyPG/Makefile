@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/01/29 15:02:57 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/02 16:03:07 joerg Exp $
 
 DISTNAME=	epg-0.0.10
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/epg/EasyPG/}
+PKGREVISION=	1
 CATEGORIES=	security mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=epg/23770/}
 
