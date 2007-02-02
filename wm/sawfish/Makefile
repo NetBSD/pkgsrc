@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/06/22 10:25:34 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/02/02 19:32:12 joerg Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
@@ -19,8 +19,6 @@ USE_TOOLS+=		makeinfo msgfmt
 INFO_FILES=		# PLIST
 
 PLIST_SUBST+=		SF_VERS=${SF_VERS:Q}
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sawfish/themes
