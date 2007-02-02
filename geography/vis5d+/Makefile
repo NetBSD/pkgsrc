@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/05/28 15:16:10 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/02 19:07:02 joerg Exp $
 #
 
 DISTNAME=		vis5d+-1.2.1
@@ -19,5 +19,4 @@ GNU_CONFIGURE=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
