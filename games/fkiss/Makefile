@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/12/19 12:06:28 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/02 17:24:58 joerg Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -45,6 +45,6 @@ do-install:
 			>${PREFIX}/share/doc/fkiss/`${BASENAME} $$i`; \
 	done
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
