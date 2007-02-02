@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.297 2007/02/02 13:04:01 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.298 2007/02/02 13:08:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.1 [obache 2007-02-02]
 	Updated x11/x11vnc to 0.8.4 [obache 2007-02-02]
 	Updated net/ucspi-tcp to 0.88nb2 [schmonz 2007-02-02]
+	Updated mail/tmda to 1.1.10 [schmonz 2007-02-02]
