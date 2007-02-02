@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/02 00:07:12 joerg Exp $
 #
 
 DISTNAME=	xdkcal-0.9d
@@ -16,10 +16,10 @@ GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdkcal ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xdkcal.1x ${PREFIX}/${PKGMANDIR}/man1/xdkcal.1
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
