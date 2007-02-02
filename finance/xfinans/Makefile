@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/02 14:35:20 joerg Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -33,4 +33,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/category_engine ${PREFIX}/share/examples/Xfinans
 	${RM} -f ${PREFIX}/${PKGMANDIR}/cat1/xfinans.0
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
