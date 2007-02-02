@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.806 2007/01/28 12:10:01 obache Exp $
+# $NetBSD: Makefile,v 1.807 2007/02/02 19:15:35 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -384,6 +384,7 @@ SUBDIR+=	p5-Class-Trigger
 SUBDIR+=	p5-Class-WhiteHole
 SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Clone
+SUBDIR+=	p5-Compress-Raw-Zlib
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-IniFiles
@@ -443,6 +444,8 @@ SUBDIR+=	p5-Heap
 SUBDIR+=	p5-Hook-LexWrap
 SUBDIR+=	p5-IO-All
 SUBDIR+=	p5-IO-Capture
+SUBDIR+=	p5-IO-Compress-Base
+SUBDIR+=	p5-IO-Compress-Zlib
 SUBDIR+=	p5-IO-Digest
 SUBDIR+=	p5-IO-LockedFile
 SUBDIR+=	p5-IO-Multiplex
