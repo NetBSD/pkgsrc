@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/01/09 02:22:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.48 2007/02/02 01:04:06 joerg Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -41,8 +41,6 @@ BUILD_TARGET=		all install
 
 PVM_DIR=		${PREFIX}/pvm3
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PVM_DIR}/lib/${PVM_ARCH}
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/DRAGONFLY.m4 ${FILESDIR}/DRAGONFLY.def ${WRKSRC}/conf
@@ -110,4 +108,6 @@ do-install:
 	${RM} ${PREFIX}/${PKGMANDIR}/man1/PVM.1
 	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/pvm_intro.1 ${PREFIX}/${PKGMANDIR}/man1/PVM.1
 
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

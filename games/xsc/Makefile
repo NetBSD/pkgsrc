@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/07/22 04:46:15 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/02 01:13:57 joerg Exp $
 #
 
 DISTNAME=		xsc-1.5
@@ -14,11 +14,13 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	bin
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xsc ${PREFIX}/bin/xsc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xsc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xsc
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

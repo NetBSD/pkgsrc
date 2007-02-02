@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/23 09:13:24 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/02 00:55:15 joerg Exp $
 #
 
 DISTNAME=		synergy-1.3.1
@@ -18,9 +18,6 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EXAMPLESDIR=		${PREFIX}/share/examples/${PKGBASE}
 DOCS=			*.html *.css images/*.gif
 
-.include "../../mk/x11.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}/images
 	cd ${WRKSRC}/doc; \
@@ -30,4 +27,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/synergy.conf ${EXAMPLESDIR}
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
