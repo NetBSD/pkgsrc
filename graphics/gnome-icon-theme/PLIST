@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/01/24 19:39:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/02/02 18:07:01 drochner Exp $
 share/icons/gnome/16x16/actions/add.png
 share/icons/gnome/16x16/actions/application-exit.png
 share/icons/gnome/16x16/actions/appointment-new.png
@@ -4990,7 +4990,8 @@ share/pkgconfig/gnome-icon-theme.pc
 @dirrm share/icons/gnome/48x48/stock/data
 @dirrm share/icons/gnome/48x48/stock/code
 @dirrm share/icons/gnome/48x48/stock
-@unexec ${RMDIR} %D/share/icons/gnome/48x48/mimetypes 2>/dev/null || ${TRUE}
+@exec ${MKDIR} %D/share/icons/gnome/48x48/mimetypes
+@dirrm share/icons/gnome/48x48/mimetypes
 @dirrm share/icons/gnome/48x48/filesystems
 @dirrm share/icons/gnome/48x48/emblems
 @dirrm share/icons/gnome/48x48/devices
