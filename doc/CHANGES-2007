@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.294 2007/02/01 23:20:16 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.295 2007/02/02 01:39:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -595,3 +595,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/seamonkey-bin-flash version 9.0.31 [ghen 2007-02-01]
 	Added www/seamonkey-bin-java version 1.2 [ghen 2007-02-01]
 	Updated chat/ircd-hybrid to 7.2.2nb1 [wiz 2007-02-01]
+	Updated graphics/ruby-RMagick to 1.15.1 [obache 2007-02-02]
