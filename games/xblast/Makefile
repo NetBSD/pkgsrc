@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/01/07 09:13:55 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/02 18:18:27 joerg Exp $
 #
 
 DISTNAME=		xblast-2.10.2
@@ -36,6 +36,10 @@ pre-build:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xblast.man ${PREFIX}/${PKGMANDIR}/man6/xblast.6
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
