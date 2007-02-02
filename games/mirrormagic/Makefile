@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/02 19:37:01 joerg Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
@@ -19,8 +19,6 @@ PLIST_SRC=		${WRKDIR}/PLIST PLIST
 SCORE_PATH=		/var/games/mirrormagic
 
 INSTALLATION_DIRS=	bin
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 \
@@ -47,4 +45,8 @@ do-install:
 .endfor
 	${CHOWN} -R games:games ${SCORE_PATH}
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
