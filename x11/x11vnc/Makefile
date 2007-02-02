@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/11/14 00:58:15 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/02 01:56:08 obache Exp $
 #
 
-DISTNAME=	x11vnc-0.8.3
+DISTNAME=	x11vnc-0.8.4
 CATEGORIES=	x11 net
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
