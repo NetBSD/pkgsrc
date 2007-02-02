@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/02 23:40:09 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/02 19:10:14 joerg Exp $
 #
 
 DISTNAME=	python-biggles-1.6.3
@@ -18,5 +18,4 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
