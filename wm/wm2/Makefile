@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/01 21:59:34 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/02 15:13:03 joerg Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -12,6 +12,7 @@ COMMENT=	Minimalist window manager for X
 
 BUILD_TARGET=	depend wm2
 
+USE_TOOLS+=	makedepend
 USE_LANGUAGES=	c c++
 USE_X11BASE=	YES
 MAKE_ENV+=	CCC=${CXX:Q}
