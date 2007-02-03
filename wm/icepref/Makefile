@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:54 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/03 11:46:56 rillig Exp $
 #
 
 DISTNAME=	icepref-1.1
@@ -14,6 +14,12 @@ COMMENT=	Graphical configuration utility for IceWM
 WRKSRC=		${WRKDIR}/icepref
 
 PYTHON_PATCH_SCRIPTS=	icepref
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/icepref ${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/icepref.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../lang/python/application.mk"
 .include "../../x11/pygtk/buildlink3.mk"
