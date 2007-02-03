@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2006/01/22 22:01:38 schwarz Exp $
+$NetBSD: patch-aa,v 1.10 2007/02/03 18:48:50 schwarz Exp $
 
 --- Makefile.orig	2000-08-21 19:59:52.000000000 +0200
 +++ Makefile	2006-01-22 22:46:17.000000000 +0100
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/22 22:01:38 schwarz Exp $
  
  SHELL	= /bin/sh
 -.c.o:;	$(CC) $(CFLAGS) -c $*.c
-+.c.o:;	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $*.c
++.c.o:;	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) -c $*.c
  
 -CFLAGS	= -O -DFACILITY=$(FACILITY) $(ACCESS) $(PARANOID) $(NETGROUP) \
 +CFLAGS+= -DFACILITY=$(FACILITY) $(ACCESS) $(PARANOID) $(NETGROUP) \
@@ -57,35 +57,35 @@ $NetBSD: patch-aa,v 1.9 2006/01/22 22:01:38 schwarz Exp $
 -	rm -f $(LIB)
 -	$(AR) $(ARFLAGS) $(LIB) $(LIB_OBJ)
 -	-$(RANLIB) $(LIB)
-+	${LIBTOOL} --mode=link $(CC) -o $@ $(LIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib -version-info 7:6
++	${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ $(LIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib -version-info 7:6
  
  tcpd:	tcpd.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ tcpd.o $(LIB) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ tcpd.o $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ tcpd.o $(LIB) $(LIBS)
  
  miscd:	miscd.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ miscd.o $(LIB) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ miscd.o $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ miscd.o $(LIB) $(LIBS)
  
  safe_finger: safe_finger.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ safe_finger.o $(LIB) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ safe_finger.o $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ safe_finger.o $(LIBS)
  
  TCPDMATCH_OBJ = tcpdmatch.o fakelog.o inetcf.o scaffold.o
  
  tcpdmatch: $(TCPDMATCH_OBJ) $(LIB)
 -	$(CC) $(CFLAGS) -o $@ $(TCPDMATCH_OBJ) $(LIB) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(TCPDMATCH_OBJ) $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(TCPDMATCH_OBJ) $(LIB) $(LIBS)
  
  try-from: try-from.o fakelog.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ try-from.o fakelog.o $(LIB) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ try-from.o fakelog.o $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ try-from.o fakelog.o $(LIB) $(LIBS)
  
  TCPDCHK_OBJ = tcpdchk.o fakelog.o inetcf.o scaffold.o
  
  tcpdchk: $(TCPDCHK_OBJ) $(LIB)
 -	$(CC) $(CFLAGS) -o $@ $(TCPDCHK_OBJ) $(LIB) $(LIBS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(TCPDCHK_OBJ) $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(TCPDCHK_OBJ) $(LIB) $(LIBS)
  
  shar:	$(KIT)
  	@shar $(KIT)
