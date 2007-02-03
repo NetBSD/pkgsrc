@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/01/13 21:24:58 abs Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/03 17:21:02 adrianp Exp $
 #
 
-DISTNAME=	bugzilla-2.22.1
-PKGREVISION=	1
+DISTNAME=	bugzilla-2.22.2
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=webtools/}
 
@@ -104,6 +103,8 @@ do-install:
 	${FIND} ${BZDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/${i}
 .endfor
+
+	${CHMOD} ${SHAREMODE} ${BZDIR}/globals.pl
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
