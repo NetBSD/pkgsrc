@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.310 2007/02/03 17:23:12 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.311 2007/02/03 18:08:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -634,3 +634,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ploticus to 2.31pl4nb3 [obache 2007-02-03]
 	Updated security/john to 1.7.2 [sborrill 2007-02-03]
 	Updated devel/bugzilla to 2.22.2 [adrianp 2007-02-03]
+	Updated net/wireshark to 0.99.5 [tron 2007-02-03]
