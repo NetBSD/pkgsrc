@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5967 2007/02/03 14:55:28 wiz Exp $
+$NetBSD: TODO,v 1.5968 2007/02/03 14:55:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -481,7 +481,6 @@ Suggested package updates
 	o gq-1.2.0
 	o grace-5.1.20
 	o gramofile-1.6P
-	o gramps2-2.2.5
 	o grap-1.36
 	o grep-2.5.1a
 	o grhino-0.16.0
