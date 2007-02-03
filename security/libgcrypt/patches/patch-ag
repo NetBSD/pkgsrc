@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2006/09/06 11:41:41 markd Exp $
+$NetBSD: patch-ag,v 1.2 2007/02/03 00:08:51 wiz Exp $
 
---- configure.orig	2006-09-06 15:55:58.000000000 +1200
+--- configure.orig	2007-02-01 18:41:37.000000000 +0000
 +++ configure
-@@ -19575,7 +19575,7 @@ case "${target}" in
+@@ -20971,7 +20971,7 @@ case "${target}" in
  #       DYNLINK_MOD_CFLAGS="-shared -rdynamic $CFLAGS_PIC -Wl,-Bshareable -Wl,-x"
          ;;
  
