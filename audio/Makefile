@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2007/01/31 21:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.348 2007/02/03 17:06:30 kristerw Exp $
 #
 
 COMMENT=	Audio tools
@@ -114,6 +114,7 @@ SUBDIR+=	gst-plugins0.10-sid
 SUBDIR+=	gst-plugins0.10-spc
 SUBDIR+=	gst-plugins0.10-speex
 SUBDIR+=	gst-plugins0.10-vorbis
+SUBDIR+=	gst-plugins0.10-wavpack
 SUBDIR+=	gst-plugins0.8-artsd
 SUBDIR+=	gst-plugins0.8-cdparanoia
 SUBDIR+=	gst-plugins0.8-esound
@@ -294,6 +295,7 @@ SUBDIR+=	ubs
 SUBDIR+=	vorbis-tools
 SUBDIR+=	vorbisgain
 SUBDIR+=	wavesurfer
+SUBDIR+=	wavpack
 SUBDIR+=	wmmixer
 SUBDIR+=	wmmp
 SUBDIR+=	wmmp3
