@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/03/30 13:38:41 salo Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/03 17:09:20 sborrill Exp $
 #
 
-DISTNAME=	john-1.7.0.2
-#PKGREVISION=	1
+DISTNAME=	john-1.7.2
 CATEGORIES=	security textproc
 MASTER_SITES=	http://www.openwall.com/john/f/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +28,44 @@ BUILD_TARGET=	solaris-sparc-gcc
 .  endif
 .elif ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "i386"
 BUILD_TARGET=	solaris-x86-any
+.elif ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "i386"
+BUILD_TARGET=	openbsd-x86-any
+.  elif ${MACHINE_ARCH} == "x86_64"
+BUILD_TARGET=	openbsd-x86-64
+.  elif ${MACHINE_ARCH} == "sparc64"
+BUILD_TARGET=	netbsd-sparc64
+.  elif ${MACHINE_ARCH} == "sparc"
+BUILD_TARGET=	openbsd-sparc
+.  elif ${MACHINE_ARCH} == "alpha"
+BUILD_TARGET=	openbsd-alpha
+.  elif ${MACHINE_ARCH} == "powerpc"
+BUILD_TARGET=	openbsd-ppc32
+.  elif ${MACHINE_ARCH} == "powerpc64"
+BUILD_TARGET=	openbsd-ppc64
+.  elif ${MACHINE_ARCH} == "vax"
+BUILD_TARGET=	netbsd-vax
+.  else
+BUILD_TARGET=	generic
+.  endif
+.elif ${OPSYS} == "OpenBSD"
+.  if ${MACHINE_ARCH} == "i386"
+BUILD_TARGET=	openbsd-x86-any
+.  elif ${MACHINE_ARCH} == "x86_64"
+BUILD_TARGET=	openbsd-x86-64
+.  elif ${MACHINE_ARCH} == "sparc64"
+BUILD_TARGET=	openbsd-sparc64
+.  elif ${MACHINE_ARCH} == "sparc"
+BUILD_TARGET=	openbsd-sparc
+.  elif ${MACHINE_ARCH} == "alpha"
+BUILD_TARGET=	openbsd-alpha
+.  elif ${MACHINE_ARCH} == "powerpc"
+BUILD_TARGET=	openbsd-ppc32
+.  elif ${MACHINE_ARCH} == "powerpc64"
+BUILD_TARGET=	openbsd-ppc64
+.  else
+BUILD_TARGET=	generic
+.  endif
 .else
 BUILD_TARGET=	generic
 .endif
