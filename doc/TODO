@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5964 2007/02/02 20:08:36 wiz Exp $
+$NetBSD: TODO,v 1.5965 2007/02/03 11:50:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,6 +308,7 @@ Suggested package updates
 	o botan-1.6.1
 	o browser-bookmarks-menu-0.4
 	o bug-buddy-2.16.1
+	o bugzilla-2.22.2
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
@@ -333,7 +334,7 @@ Suggested package updates
 	o cogito-0.18.2
 	o columba-1.0RC1
 	o compface-1.5.2
-	o control-center-2.16.1
+	o control-center-2.16.3
 	o coreutils-6.7
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
@@ -434,6 +435,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdl-0.7.1
 	o gdsreader-0.3.2
+	o genius-0.7.7
 	o ggiterm-0.7.1
 	o ghc-6.6
 	o ghostscript-esp-8.15.3
@@ -603,7 +605,7 @@ Suggested package updates
 	o linuxsms-0.77
 	o lmbench-2.5
 	o lmms-0.2.1
-	o loudmouth-1.0.5
+	o loudmouth-1.2.0
 	o lout-3.31
 	o ltm-0.40
 	o lucy-1.19p
@@ -1103,6 +1105,7 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.34
+	o wireshark-0.99.5
 	o wmweather-2.4.3
 	o worker-2.14.2
 	o wxGTK-2.8
