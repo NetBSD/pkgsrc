@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/11/28 22:14:34 drochner Exp $
+# $NetBSD: Makefile,v 1.53 2007/02/03 09:27:33 wiz Exp $
 #
 
 DISTNAME=		gnome-themes-2.16.2
@@ -12,7 +12,7 @@ COMMENT=		Collection of themes and icons for GNOME 2
 
 CONFLICTS+=		clearlooks-metacity-[0-9]*
 
-USE_DIRS+=		gnome2-1.5 theme-1.0
+USE_DIRS+=		gnome2-1.5 theme-1.0 xdg-1.4
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

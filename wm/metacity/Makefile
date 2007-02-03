@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/01/13 17:46:28 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2007/02/03 09:25:39 wiz Exp $
 #
 
 DISTNAME=	metacity-2.16.3
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity/
 COMMENT=	GNOME-compliant window manager
 
-USE_DIRS+=		gnome2-1.5 theme-1.0
+USE_DIRS+=		gnome2-1.5 theme-1.0 xdg-1.4
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES
