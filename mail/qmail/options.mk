@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2007/01/15 03:40:15 schmonz Exp $
+# $NetBSD: options.mk,v 1.24 2007/02/03 03:02:36 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -101,6 +101,10 @@ SITES.${VIRUSCAN_PATCH}=	http://www.qmail.org/
 SITES.${VIRUSCAN_LOG_PATCH}=	http://scriptkitchen.com/qmail/
 PATCH_DIST_STRIP.${VIRUSCAN_PATCH}=	-p1
 PATCH_DIST_STRIP.${VIRUSCAN_LOG_PATCH}=	-p1
+SUBST_CLASSES+=		viruscan
+SUBST_STAGE.viruscan=	do-configure
+SUBST_FILES.viruscan=	qmail-smtpd.c
+SUBST_SED.viruscan=	-e 's|qmail-smtpd: ||g'
 VIRUSCAN_SIGS_SRCFILE=	${DISTDIR}/${VIRUSCAN_PATCH}
 .else
 VIRUSCAN_SIGS_SRCFILE=	# undefined
