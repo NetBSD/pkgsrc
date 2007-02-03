@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.311 2007/02/03 18:08:02 tron Exp $
+$NetBSD: CHANGES-2007,v 1.312 2007/02/03 22:03:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -635,3 +635,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/john to 1.7.2 [sborrill 2007-02-03]
 	Updated devel/bugzilla to 2.22.2 [adrianp 2007-02-03]
 	Updated net/wireshark to 0.99.5 [tron 2007-02-03]
+	Updated devel/ruby-activesupport to 1.4.0nb1 [minskim 2007-02-03]
