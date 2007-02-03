@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.306 2007/02/02 21:23:14 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.307 2007/02/03 00:09:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gnome-desktop to 2.16.3 [wiz 2007-02-02]
 	Updated x11/gnome-panel to 2.16.3 [wiz 2007-02-02]
 	Added games/blokus version 1.0 [rillig 2007-02-02]
+	Updated security/libgcrypt to 1.2.4 [wiz 2007-02-03]
