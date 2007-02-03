@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16.2.1 2007/01/07 03:47:37 salo Exp $
+# $NetBSD: Makefile,v 1.16.2.2 2007/02/03 18:58:54 salo Exp $
 
-DISTNAME=	drupal-4.7.5
+DISTNAME=	drupal-4.7.6
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
