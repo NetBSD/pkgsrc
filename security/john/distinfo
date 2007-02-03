@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2006/03/30 13:38:41 salo Exp $
+$NetBSD: distinfo,v 1.9 2007/02/03 17:09:20 sborrill Exp $
 
-SHA1 (john-1.7.0.2.tar.bz2) = bc6895c986d65f502366cf93c91f88ba865572b6
-RMD160 (john-1.7.0.2.tar.bz2) = 9e75f5fd5561595ec2f3a1a290e85605234b8c41
-Size (john-1.7.0.2.tar.bz2) = 690516 bytes
-SHA1 (patch-aa) = 5daecad929d2fc3819354f969f885421b4077497
+SHA1 (john-1.7.2.tar.bz2) = 7cc994f9cbd1582b46cbdeb1d5f318891ea8b411
+RMD160 (john-1.7.2.tar.bz2) = 3754da88a98f1c120e28de1eb10b214bf7dd3baf
+Size (john-1.7.2.tar.bz2) = 691706 bytes
+SHA1 (patch-aa) = e458b6c2423f625ef30a36a96e79bac69fae297f
 SHA1 (patch-ab) = 331fa2333860879edabdbf1beeb3323d303406ec
