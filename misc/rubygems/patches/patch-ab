@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2007/02/03 20:42:33 salo Exp $
+
 Index: lib/rubygems/installer.rb
 ===================================================================
 --- lib/rubygems/installer.rb	(revision 1195)
