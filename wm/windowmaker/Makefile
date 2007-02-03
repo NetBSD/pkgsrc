@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/02/01 22:30:48 joerg Exp $
+# $NetBSD: Makefile,v 1.74 2007/02/03 02:59:22 joerg Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -92,14 +92,19 @@ post-install:
 		README README.definable-cursor FAQ FAQ.I18N \
 		${PREFIX:Q}/share/doc/WindowMaker
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
