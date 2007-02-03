@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/17 13:46:34 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/03 04:37:43 obache Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31pl4
@@ -28,10 +28,13 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pl ${PREFIX}/bin/pl
 	${INSTALL_DATA_DIR} ${PREFABDST}
-.for file in chunk_logtics chunk_xaxis lines.pl stack.pl chron.pl	\
-	chunk_read chunk_yaxis multidist.pl vbars.pl chunk_area		\
-	chunk_setstd dist.pl pie.pl chunk_logstubs chunk_title draw.pl	\
-	scat.pl
+.for file in \
+	README chron.pl chunk_area chunk_chronfilter chunk_doheatmap \
+	chunk_heatmapfilter chunk_logstubs chunk_logtics chunk_read \
+	chunk_setstd chunk_stackareafilter chunk_title chunk_vdistfilter \
+	chunk_xaxis chunk_yaxis compare.pl cumufrac.pl dist.pl draw.pl \
+	heatmap.pl lines.pl multidist.pl pie.pl processdata.pl scat.pl \
+	stack.pl vbars.pl vdist.pl
 	${INSTALL_DATA} ${PREFABSRC}/${file} ${PREFABDST}/${file}
 .endfor
 
