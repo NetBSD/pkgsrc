@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5965 2007/02/03 11:50:18 wiz Exp $
+$NetBSD: TODO,v 1.5966 2007/02/03 14:46:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -666,7 +666,7 @@ Suggested package updates
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.3
 	o nap-1.5.3
-	o nautilus-cd-burner-2.16.3
+	o nautilus-cd-burner-2.16.3 [needs hal]
 	o ncftp2-2.8.2
 	o ncview-1.92e
 	o neon-0.26.3 [pkg/34310]
