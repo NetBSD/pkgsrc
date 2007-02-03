@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5968 2007/02/03 14:55:53 wiz Exp $
+$NetBSD: TODO,v 1.5969 2007/02/03 17:11:16 sborrill Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,6 @@ Suggested package updates
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
-	o john-1.7.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
