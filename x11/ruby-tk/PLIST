@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2006/12/06 16:33:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2007/02/03 20:22:29 salo Exp $
 ${RUBY_SITEARCHLIBDIR}/tcltklib.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/tkutil.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/multi-tk.rb
 ${RUBY_SITELIBDIR}/remote-tk.rb
 ${RUBY_SITELIBDIR}/tcltk.rb
