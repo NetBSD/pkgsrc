@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5970 2007/02/03 18:08:02 tron Exp $
+$NetBSD: TODO,v 1.5971 2007/02/04 09:10:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o sylpheed-claws-2.7.2 [now claws-mail]
-	o sylpheed-devel-2.4.0beta1
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
