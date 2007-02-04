@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/01/30 23:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/04 23:19:46 wiz Exp $
 #
 
 DISTNAME=	deskbar-applet-2.16.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.16/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,6 +37,6 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
-.include "../../x11/py-gnome2-extras/buildlink3.mk"
+.include "../../x11/py-gnome2-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
