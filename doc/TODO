@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5972 2007/02/04 09:35:00 wiz Exp $
+$NetBSD: TODO,v 1.5973 2007/02/04 10:03:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -360,8 +360,11 @@ Suggested package updates
 	o delegate-9.3.2
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
+	o devhelp-0.13
 	o devtodo-0.1.19
 	o dirac-0.6.0
+	o djvulibre-lib-3.5.18
+	o djvulibre-tools-3.5.18
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.36
 	o dnstracer-1.8
@@ -1007,7 +1010,7 @@ Suggested package updates
 	o smalltalk-2.3.2
 	o smartmontools-5.37 [jmmv]
 	o smlnj-110.59 [pkgsrc-wip]
-	o smlnj-110.60
+	o smlnj-110.62
 	o snd-8.7
 	o snes9x-1.502
 	o snort-2.6.0.2
