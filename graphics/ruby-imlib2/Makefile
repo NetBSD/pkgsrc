@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/07 16:27:52 taca Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/04 21:57:22 joerg Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -20,14 +20,7 @@ RUBY_DYNAMIC_DIRS=	${RUBY_DOCDIR:S,${PREFIX}/,,}/imlib2
 
 INSTALL_TARGET=	site-install
 
-BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
-
-.include "../../graphics/imlib2/buildlink3.mk"
-.include "../../lang/ruby/modules.mk"
-
 DOCS=		AUTHORS COPYING ChangeLog README TODO
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/imlib2
@@ -40,4 +33,8 @@ post-install:
 	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${RUBY_DOCDIR}/imlib2/api
 	${RUBY_GENERATE_PLIST}
 
+BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
+
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
