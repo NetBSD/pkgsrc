@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/06/07 15:23:21 ghen Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/02/04 00:15:49 dmcmahill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -90,6 +90,8 @@ lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom_core.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
 lib/${MOZILLA}/plugins/libunixprintplugin.${SO_SUFFIX}
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_pure32_3.${SO_SUFFIX}
 @comment end DSO
 @comment begin PKGCONFIG
 lib/pkgconfig/firefox-gtkmozembed.pc
@@ -296,6 +298,8 @@ lib/${MOZILLA}/icons/mozicon128.png
 lib/${MOZILLA}/icons/mozicon16.xpm
 lib/${MOZILLA}/icons/mozicon50.xpm
 lib/${MOZILLA}/init.d/README
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.chk
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_pure32_3.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
@@ -2449,7 +2453,7 @@ include/${MOZILLA}/nss/swfort.h
 include/${MOZILLA}/nss/swfortt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
+@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA}:%D/lib MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
 @comment begin DIRS
