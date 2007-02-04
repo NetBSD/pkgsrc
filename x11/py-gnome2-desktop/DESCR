@@ -1,0 +1,12 @@
+This package contains a few python modules that used to live in
+gnome-python-extras:
+
+  - gnomeapplet
+  - gnomeprint, gnomeprint.ui
+  - gtksourceview
+  - wnck
+  - totem.plparser
+  - gtop
+  - nautilusburn
+  - mediaprofiles
+  - metacity
