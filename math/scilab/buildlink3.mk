@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/02/04 20:42:24 dmcmahill Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -19,11 +19,6 @@ BUILDLINK_PKGSRCDIR.scilab?=	../../math/scilab
 
 BUILDLINK_FILES.scilab+=	lib/scilab-${SCIVERSION}/Version.incl
 .endif	# SCILAB_BUILDLINK3_MK
-
-# do I really need these?
-.include "../../parallel/pvm3/buildlink3.mk"
-.include "../../textproc/sablotron/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 
 SCI=	${BUILDLINK_DIR}/lib/scilab-3.1.1
 CONFIGURE_ENV+=	SCI=${SCI:Q}
