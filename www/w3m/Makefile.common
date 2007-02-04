@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2007/01/31 12:53:03 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.46 2007/02/04 20:54:57 dmcmahill Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -13,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake	# Needed for some combinations of options...
 USE_TOOLS+=	msgfmt
+USE_PKGLOCALEDIR=       yes
 
 W3M_VERS=	0.5.1
 
