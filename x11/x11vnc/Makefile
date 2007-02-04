@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/02 01:56:08 obache Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/04 16:27:42 joerg Exp $
 #
 
 DISTNAME=	x11vnc-0.8.4
@@ -11,9 +11,18 @@ COMMENT=	VNC server for real X displays
 
 GNU_CONFIGURE=	yes
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
