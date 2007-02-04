@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1 2005/09/17 02:35:19 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2007/02/04 00:15:49 dmcmahill Exp $
 
 MOZILLA="@MOZILLA@"
 MOZILLA_BIN="@MOZILLA_BIN@"
@@ -8,7 +8,7 @@ export MOZILLA_FIVE_HOME
 case ${STAGE} in
 POST-INSTALL)
 	${MKDIR} -p "./tmpdir-${PKGNAME}"
-	LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}" HOME="./tmpdir-${PKGNAME}" \
+	LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}:${PKG_PREFIX}/lib" HOME="./tmpdir-${PKGNAME}" \
 		${MOZILLA_FIVE_HOME}/${MOZILLA_BIN} -register
 	${RM} -fr "./tmpdir-${PKGNAME}"
 	;;
