@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5971 2007/02/04 09:10:46 xtraeme Exp $
+$NetBSD: TODO,v 1.5972 2007/02/04 09:35:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -904,7 +904,6 @@ Suggested package updates
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
 	o py-curl-7.15.5.1
-	o py-gnome2-extras-2.14.2
 	o py-gnutls-0.2.1
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
