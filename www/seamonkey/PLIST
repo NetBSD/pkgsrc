@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/20 10:54:44 ghen Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/02/04 00:15:49 dmcmahill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -3050,8 +3050,8 @@ include/${MOZILLA}/nss/sslproto.h
 include/${MOZILLA}/nss/sslt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
+@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA}:%D/lib MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
+@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA}%D/lib MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/stylesheets.rdf
