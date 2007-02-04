@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/02/02 18:29:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/04 20:02:49 joerg Exp $
 
 DISTNAME=	crossfire-1.9.0
 PKGNAME=	crossfire-server-1.9.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 
@@ -35,4 +35,8 @@ CONF_FILES+=	${EGDIR:Q}/settings ${PKG_SYSCONFDIR:Q}/crossfire/settings
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
