@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/10/04 22:40:40 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2007/02/04 22:54:13 tron Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -89,6 +89,8 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
+
+UNLIMIT_RESOURCES+=	datasize
 
 .if !empty(BUILD_F77:M[Yy][Ee][Ss])
 .include "../../devel/gmp/buildlink3.mk"
@@ -200,7 +202,7 @@ do-configure:
 	cd ${WRKDIR}/obj; ${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS}
 
 do-build:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
+	(${_ULIMIT_CMD} && cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib-shared)
 	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
