@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 2006/10/24 22:20:11 ghen Exp $
+$NetBSD: patch-ap,v 1.2 2007/02/04 18:18:04 dmcmahill Exp $
 
 --- security/coreconf/command.mk.orig	2006-03-29 22:26:44.000000000 +0200
 +++ security/coreconf/command.mk
@@ -7,7 +7,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2006/10/24 22:20:11 ghen Exp $
  LINK_DLL      = $(LINK) $(OS_DLLFLAGS) $(DLLFLAGS)
  LINK_EXE      = $(LINK) $(OS_LFLAGS) $(LFLAGS)
 -CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
-+CFLAGS       += $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
++CFLAGS        = $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
  		$(XCFLAGS)
  RANLIB        = echo
  TAR           = /bin/tar
