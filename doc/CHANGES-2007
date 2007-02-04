@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.316 2007/02/04 22:12:28 obache Exp $
+$NetBSD: CHANGES-2007,v 1.317 2007/02/04 23:35:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -642,3 +642,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/py-gnome2-extras to 2.14.2 [wiz 2007-02-04]
 	Added x11/py-gnome2-desktop version 2.16.0 [wiz 2007-02-04]
 	Updated graphics/ruby-RMagick to 1.15.2 [obache 2007-02-04]
+	Updated misc/deskbar-applet to 2.16.0nb2 [wiz 2007-02-04]
