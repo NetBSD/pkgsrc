@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5975 2007/02/05 12:08:04 adam Exp $
+$NetBSD: TODO,v 1.5976 2007/02/05 19:46:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.0.3
 	o gld-1.7
-	o glibmm-2.12.5
 	o gmime-2.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -497,7 +496,6 @@ Suggested package updates
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
 	o gtklife-5.1
-	o gtkmm-2.10.7
 	o gtkpod-0.99.8
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
