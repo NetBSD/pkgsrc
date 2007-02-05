@@ -1,8 +1,28 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/02/05 23:08:36 joerg Exp $
 
---- configure.orig	2006-07-08 01:46:19.000000000 +0200
+--- configure.orig	2007-01-23 05:40:03.000000000 +0000
 +++ configure
-@@ -24340,6 +24340,11 @@ _ACEOF
+@@ -24300,6 +24300,10 @@ _ACEOF
+ #define USE_DEV_IO 1
+ _ACEOF
+  ;;
++		*dragonfly*)	cat >>confdefs.h <<\_ACEOF
++#define USE_DEV_IO 1
++_ACEOF
++ ;;
+ 		*netbsd*)	cat >>confdefs.h <<\_ACEOF
+ #define USE_I386_IOPL 1
+ _ACEOF
+@@ -24406,7 +24410,7 @@ fi
+ DRI=no
+ KDRIVE_HW=no
+ case $host_os in
+-  *freebsd*)
++  *freebsd* | *dragonfly*)
+ 	case $host_os in
+ 		kfreebsd*-gnu) ;;
+ 		*)
+@@ -24445,6 +24449,11 @@ _ACEOF
  
  
  cat >>confdefs.h <<\_ACEOF
@@ -14,7 +34,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
  #define WSCONS_SUPPORT 1
  _ACEOF
  
-@@ -27910,7 +27915,7 @@ _ACEOF
+@@ -27892,7 +27901,7 @@ _ACEOF
  
  fi
  
@@ -23,3 +43,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
  
  if test $VERSION_SNAP = "0"; then
  	if test $VERSION_PATCH = "0"; then
+@@ -30642,7 +30651,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 		;;
+-	  freebsd* | kfreebsd*-gnu)
++	  freebsd* | kfreebsd*-gnu | dragonfly*)
+ 	  	XORG_OS="freebsd"
+ 		XORG_OS_SUBDIR="bsd"
+ 		XORG_OS_KBD="BSD"
