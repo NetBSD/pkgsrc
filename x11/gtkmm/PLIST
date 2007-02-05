@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/11/29 19:05:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/02/05 19:44:08 adam Exp $
 bin/demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1435,22 +1435,22 @@ share/doc/gtkmm-2.4/docs/reference/html/curve_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/deprecated.html
 share/doc/gtkmm-2.4/docs/reference/html/device_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/dialog_8h.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_4cbb9f4753486777f7bf3af05af5e12f.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_4cbb9f4753486777f7bf3af05af5e12f_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_551013450f1be15c8934c415b23041f1.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_551013450f1be15c8934c415b23041f1_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_8d46e628d31836e5a195010fa2a14478.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_8d46e628d31836e5a195010fa2a14478_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_a657ad37a284806ac4419be5fc41da90.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_a657ad37a284806ac4419be5fc41da90_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_b1eda8b8304b6d162847f2c608d53d00.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_b1eda8b8304b6d162847f2c608d53d00_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_b5787654403e3adbe4c4a4a072539b83.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_b5787654403e3adbe4c4a4a072539b83_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_b93e7929bfd0762c3d1c91dc96a9d64b.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_b93e7929bfd0762c3d1c91dc96a9d64b_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_e33cb97c7410236f351a03f2830bedc4.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_e33cb97c7410236f351a03f2830bedc4_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_0b268b4c8cafc5b5fe2fd7ed0423e2e2.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_0b268b4c8cafc5b5fe2fd7ed0423e2e2_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_1b0afbd90ec91b8d5376dcb4094140bd.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_1b0afbd90ec91b8d5376dcb4094140bd_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_4f53a57eec364b0f68325d112cecb2f5.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_4f53a57eec364b0f68325d112cecb2f5_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_7a760c7ab0c18691a5e079c0dc4989a3.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_7a760c7ab0c18691a5e079c0dc4989a3_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_7f1715bfb599c79ca6714318e599daab.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_7f1715bfb599c79ca6714318e599daab_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_82adb3cfac3e0e8701a22e62a4410165.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_82adb3cfac3e0e8701a22e62a4410165_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_8906066dfe75dce76105a0579d8e3ccd.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_8906066dfe75dce76105a0579d8e3ccd_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_f3cfb046e873010d2c574fab69eda6b0.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_f3cfb046e873010d2c574fab69eda6b0_dep.png
 share/doc/gtkmm-2.4/docs/reference/html/dirs.html
 share/doc/gtkmm-2.4/docs/reference/html/display_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/displaymanager_8h.html
@@ -1680,8 +1680,6 @@ share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__124.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__125.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__126.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__127.png
-share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__128.png
-share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__129.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__13.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__14.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__15.png
@@ -1867,7 +1865,6 @@ share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_type.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_vars.html
 share/doc/gtkmm-2.4/docs/reference/html/namespaces.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacesigc.html
-share/doc/gtkmm-2.4/docs/reference/html/namespacestd.html
 share/doc/gtkmm-2.4/docs/reference/html/newin2p10s.html
 share/doc/gtkmm-2.4/docs/reference/html/newin2p2s.html
 share/doc/gtkmm-2.4/docs/reference/html/newin2p4s.html
