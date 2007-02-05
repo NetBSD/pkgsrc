@@ -1,8 +1,8 @@
-$NetBSD: patch-dd,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-dd,v 1.2 2007/02/05 12:06:16 adam Exp $
 
---- sedscript.in.orig	2006-03-19 18:22:17.000000000 +0000
+--- sedscript.in.orig	2006-11-24 18:53:18.000000000 +0100
 +++ sedscript.in
-@@ -88,6 +88,7 @@ s/FREMOVEMEREEBSDID/FREEBSDID/g
+@@ -96,6 +96,7 @@ s/FREMOVEMEREEBSDID/FREEBSDID/g
  s/IREMOVEMERIXID/IRIXID/g
  s/LREMOVEMEINUXID/LINUXID/g
  s/BREMOVEMESDIID/BSDIID/g
