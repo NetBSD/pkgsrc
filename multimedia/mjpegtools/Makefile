@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/02/01 10:48:11 abs Exp $
+# $NetBSD: Makefile,v 1.39 2007/02/05 20:38:57 tron Exp $
 
 DISTNAME=	mjpegtools-1.8.0
 PKGREVISION=	6
@@ -28,7 +28,13 @@ CONFIGURE_ARGS+=	--without-libquicktime
 CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
-BUILDLINK_TRANSFORM+=	rm:-laudio rm:-laa
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Darwin
+CONFIGURE_ARGS+=	--disable-sdltest
+.endif
+
+BUILDLINK_TRANSFORM+=	rm:-laudio
 
 .include "options.mk"
 
