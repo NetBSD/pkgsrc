@@ -1,13 +1,18 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.13 2007/01/08 11:06:44 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.14 2007/02/05 14:27:34 rillig Exp $
 #
-
-# The `debug' target outputs the values of some commonly used variables
-# and the contents of some files which are useful for tracking bugs,
-# especially for packages that use the GNU autotools.
+# Public targets:
 #
-# The `build-env' target is intended to be used interactively when
-# debugging build problems. It runs a shell in exactly the same
-# environment as in the default do-build target, starting in WRKSRC.
+# debug:
+#	outputs the values of some commonly used variables and the
+#	contents of some files which are useful for tracking bugs,
+#	especially for packages that use the GNU autotools.
+#
+# build-env:
+#	This target is intended to be used interactively when
+#	debugging build problems. It runs a shell in exactly the same
+#	environment as in the default do-build target, starting in
+#	WRKSRC.
+#
 
 PRINTF?=	printf
 
