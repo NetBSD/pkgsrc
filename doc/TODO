@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5974 2007/02/04 23:15:45 wiz Exp $
+$NetBSD: TODO,v 1.5975 2007/02/05 12:08:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -672,7 +672,6 @@ Suggested package updates
 	o ncview-1.92e
 	o neon-0.26.3 [pkg/34310]
 	o nessus-3.0.4
-	o net-snmp-5.4
 	o netcdf-4.0.0a
 	o netperf-2.4.0
 	o netpipe-3.6.2
