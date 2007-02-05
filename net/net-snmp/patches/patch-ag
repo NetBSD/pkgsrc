@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.9 2006/07/30 06:38:10 adam Exp $
+$NetBSD: patch-ag,v 1.10 2007/02/05 12:06:16 adam Exp $
 
---- agent/mibgroup/host/hr_storage.c.orig	2006-06-05 19:38:24.000000000 +0200
+--- agent/mibgroup/host/hr_storage.c.orig	2006-10-12 11:54:57.000000000 +0200
 +++ agent/mibgroup/host/hr_storage.c
-@@ -73,6 +73,13 @@
+@@ -75,6 +75,13 @@
  #endif
  #endif                          /* vm/vm.h */
  #endif                          /* sys/vm.h */
@@ -16,7 +16,7 @@ $NetBSD: patch-ag,v 1.9 2006/07/30 06:38:10 adam Exp $
  #if defined(HAVE_UVM_UVM_PARAM_H) && defined(HAVE_UVM_UVM_EXTERN_H)
  #include <uvm/uvm_param.h>
  #include <uvm/uvm_extern.h>
-@@ -80,20 +87,13 @@
+@@ -82,20 +89,13 @@
  #include <vm/vm_param.h>
  #include <vm/vm_extern.h>
  #endif
@@ -38,36 +38,3 @@ $NetBSD: patch-ag,v 1.9 2006/07/30 06:38:10 adam Exp $
  #if HAVE_SYS_MBUF_H
  #include <sys/mbuf.h>
  #endif
-@@ -732,11 +732,6 @@ really_try_next:
-             case HRS_TYPE_SWAP:
-                 long_return = -1;
- 	        break;
--#if defined(MBSTAT_SYMBOL)
--           case HRS_TYPE_MBUF:
--                long_return = mbstat.m_mbufs;
--                break;
--#endif
- #elif defined(TOTAL_MEMORY_SYMBOL) || defined(USE_SYSCTL_VM)
-             case HRS_TYPE_MEM:
-                 long_return = memory_totals.t_rm;
-@@ -764,6 +759,8 @@ really_try_next:
-             case HRS_TYPE_MBUF:
- #ifdef linux
-                 long_return = linux_mem(store_idx, HRSTORE_SIZE);
-+#elif defined(darwin8) && defined(MBSTAT_SYMBOL)
-+            long_return = mbstat.m_mbufs;
- #elif HAVE_SYS_POOL_H
-                 long_return = 0;
-                 for (i = 0;
-@@ -821,11 +818,6 @@ really_try_next:
- 	    case HRS_TYPE_SWAP:
- 		long_return = -1;
- 		break;
--#if defined(MBSTAT_SYMBOL)
--           case HRS_TYPE_MBUF:
--                long_return = mbstat.m_mbufs;
--                break;
--#endif
- #elif defined(TOTAL_MEMORY_SYMBOL) || defined(USE_SYSCTL_VM)
-             case HRS_TYPE_MEM:
-                 long_return = memory_totals.t_arm;

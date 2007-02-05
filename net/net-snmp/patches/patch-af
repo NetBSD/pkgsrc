@@ -1,17 +1,8 @@
-$NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
+$NetBSD: patch-af,v 1.9 2007/02/05 12:06:16 adam Exp $
 
---- configure.orig	2006-07-13 23:58:38.000000000 +0200
-+++ configure	2006-10-11 21:13:18.000000000 +0200
-@@ -13548,7 +13548,7 @@ else
-    default_mibs=IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:HOST-RESOURCES-MIB:SNMPv2-MIB:RFC1213-MIB:NOTIFICATION-LOG-MIB:DISMAN-EVENT-MIB:DISMAN-SCHEDULE-MIB
- 
-    case $target_os in
--      linux* | freebsd* | dynix* | solaris2* | hpux* )
-+      linux* | freebsd* | dynix* | solaris2* | hpux* | dragonfly* )
-          new_module_list="$new_module_list host"
-          ;;
-       *)
-@@ -15630,6 +15630,53 @@ fi
+--- configure.orig	2006-11-24 18:56:15.000000000 +0100
++++ configure
+@@ -27031,6 +27031,53 @@ fi
  
  fi
  
@@ -65,7 +56,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  # Check for libraries that the agent needs
  # saving old libraries
  NONAGENTLIBS=$LIBS
-@@ -28131,7 +28178,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -40752,7 +40799,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -75,7 +66,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28229,7 +28278,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -40850,7 +40899,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -85,23 +76,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28327,10 +28378,14 @@ cat >>conftest.$ac_ext <<_ACEOF
- #endif
- #include <sys/types.h>
- #define KERNEL
-+#if !defined(__DragonFly__)
- #define _KERNEL
-+#endif
- #include <sys/socket.h>
- #undef KERNEL
--#undef _KERNEL
-+#if !defined(__DragonFly__)
-+#define _KERNEL
-+#endif
- #include <net/route.h>
- 
- 
-@@ -28414,7 +28469,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41144,7 +41195,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -111,7 +86,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28481,7 +28538,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41231,7 +41284,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -121,7 +96,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28619,7 +28678,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41298,7 +41353,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -131,7 +106,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28714,7 +28775,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41436,7 +41493,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -141,7 +116,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28813,7 +28876,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41531,7 +41590,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -151,7 +126,7 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -28912,7 +28977,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41630,7 +41691,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -161,7 +136,17 @@ $NetBSD: patch-af,v 1.8 2006/10/11 19:15:19 rillig Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -29011,7 +29078,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -41729,7 +41792,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -41828,7 +41893,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <sys/types.h>
  #define KERNEL
