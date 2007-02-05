@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5984 2007/02/05 23:23:42 wiz Exp $
+$NetBSD: TODO,v 1.5985 2007/02/05 23:43:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -364,8 +364,6 @@ Suggested package updates
 	o devhelp-0.13
 	o devtodo-0.1.19
 	o dirac-0.6.0
-	o djvulibre-lib-3.5.18
-	o djvulibre-tools-3.5.18
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.36
 	o dnstracer-1.8
