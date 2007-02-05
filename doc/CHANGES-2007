@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.334 2007/02/05 23:23:42 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.335 2007/02/05 23:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -680,3 +680,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/p5-Net-MySQL version 0.09 [rillig 2007-02-05]
 	Updated x11/devilspie to 0.20.2 [wiz 2007-02-05]
 	Updated audio/fluidsynth to 1.0.7a [wiz 2007-02-05]
+	Updated graphics/djvulibre-lib to 3.5.18 [wiz 2007-02-05]
+	Updated graphics/djvulibre-tools to 3.5.18 [wiz 2007-02-05]
