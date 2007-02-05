@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/09 16:14:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/05 11:10:02 adam Exp $
 
 PKGNAME=	postgresql82-plpython-${BASE_VERS}
 COMMENT=	PL/Python procedural language for the PostgreSQL backend
@@ -10,7 +10,7 @@ DEPENDS+=	postgresql82-server>=${BASE_VERS}:../../databases/postgresql82-server
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON="${PYTHONBIN}"
 
-BUILD_DIRS=		${WRKSRC}/src/pl/plpython
+BUILD_DIRS=		src/pl/plpython
 
 USE_LIBTOOL=		yes
 PKG_LIBTOOL=		${PKG_SHLIBTOOL}
