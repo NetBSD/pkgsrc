@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.327 2007/02/05 20:43:29 markd Exp $
+$NetBSD: CHANGES-2007,v 1.328 2007/02/05 22:26:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -673,3 +673,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0rc21nb1 [ghen 2007-02-05]
 	Updated x11/kdelibs3 to 3.5.6nb1 [markd 2007-02-05]
 	Updated cad/py-simpy to 1.8 [markd 2007-02-05]
+	Updated audio/mt-daapd to 0.2.4nb2 [tron 2007-02-05]
