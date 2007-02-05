@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5978 2007/02/05 22:38:24 wiz Exp $
+$NetBSD: TODO,v 1.5979 2007/02/05 22:46:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -927,7 +927,6 @@ Suggested package updates
 	o py-sybase-0.37
 	o py-textile-2.0.10
 	o py-twisted-2.4.0
-	o py-wxWidgets-2.6.3.0
 	o py-xmltools-1.4.0
 	o py-yaml-3.04
 	o py-zconfig-2.3.1
