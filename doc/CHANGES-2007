@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.322 2007/02/05 14:34:28 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.323 2007/02/05 19:46:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -666,3 +666,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/postgresql80-pltcl to 8.0.11 [adam 2007-02-05]
 	Updated net/net-snmp to 5.4 [adam 2007-02-05]
 	Updated lang/f2c to 20001205nb9 [dmcmahill 2007-02-05]
+	Updated devel/glibmm to 2.12.5 [adam 2007-02-05]
+	Updated x11/gtkmm to 2.10.7 [adam 2007-02-05]
