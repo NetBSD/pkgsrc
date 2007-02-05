@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2007/01/15 22:36:41 wiz Exp $
+$NetBSD: distinfo,v 1.32 2007/02/05 23:03:50 wiz Exp $
 
-SHA1 (unrarsrc-3.7.2.tar.gz) = ab5f7c8d744600ffdbafa1f6b6d47754ce66ee3b
-RMD160 (unrarsrc-3.7.2.tar.gz) = 54d40c32493afdbefa79bbc474a13f0f5323baed
-Size (unrarsrc-3.7.2.tar.gz) = 128977 bytes
+SHA1 (unrarsrc-3.7.3.tar.gz) = d4ba5c8f3acff759a847315697d418c089382d95
+RMD160 (unrarsrc-3.7.3.tar.gz) = 155a244a149937bb5f91ea8041177bdb6fe6f788
+Size (unrarsrc-3.7.3.tar.gz) = 129328 bytes
 SHA1 (patch-aa) = 272060ab4fcaaae0de0d99a8533b268a3aa6d91a
 SHA1 (patch-ab) = 6821e8c66a4770e43fd71bf4097db9a8bd44645c
 SHA1 (patch-ac) = ce3b9a618045d7ca7232e1622ac84bd82216e297
