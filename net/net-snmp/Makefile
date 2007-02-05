@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/02/05 12:06:16 adam Exp $
+# $NetBSD: Makefile,v 1.57 2007/02/05 19:18:37 joerg Exp $
 
 DISTNAME=	net-snmp-5.4
 CATEGORIES=	net
@@ -111,6 +111,9 @@ INSTALLATION_DIRS+=	share/examples/net-snmp
 
 post-extract:
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/include/net-snmp/system
+.if ${OPSYS} == "DragonFly"
+	cp ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
+.endif
 
 post-wrapper:
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.5.[123]*-i386)
