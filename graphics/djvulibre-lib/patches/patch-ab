@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/08/30 17:03:28 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2007/02/05 23:41:50 wiz Exp $
 
---- libdjvu/miniexp.h.orig	2006-02-21 20:27:41.000000000 +0100
+--- libdjvu/miniexp.h.orig	2006-05-12 16:23:36.000000000 +0000
 +++ libdjvu/miniexp.h
-@@ -38,7 +38,9 @@ extern "C" { 
- /* miniexp_t -- 
-    Opaque pointer type representing a lisp expression. */
+@@ -46,7 +46,9 @@ extern "C" { 
+    information */
+ 
  
 -typedef struct miniexp_s* miniexp_t;
 +#ifndef DDJVUAPI /* avoid double declaration */
