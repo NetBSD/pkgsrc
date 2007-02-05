@@ -1,8 +1,8 @@
-$NetBSD: patch-dh,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-dh,v 1.2 2007/02/05 12:06:16 adam Exp $
 
---- mibs/UCD-SNMP-MIB.txt.orig	2006-03-19 19:02:22.000000000 +0000
+--- mibs/UCD-SNMP-MIB.txt.orig	2006-11-22 17:49:28.000000000 +0100
 +++ mibs/UCD-SNMP-MIB.txt
-@@ -122,6 +122,9 @@ bsdi              OBJECT IDENTIFIER ::= 
+@@ -127,6 +127,9 @@ bsdi              OBJECT IDENTIFIER ::= 
  openbsd           OBJECT IDENTIFIER ::= { ucdSnmpAgent 12 }
  win32		  OBJECT IDENTIFIER ::= { ucdSnmpAgent 13 } -- unlucky
  hpux11            OBJECT IDENTIFIER ::= { ucdSnmpAgent 14 }
