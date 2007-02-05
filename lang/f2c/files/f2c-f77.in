@@ -330,7 +330,7 @@ do
 				rc=$?
 				;;
 			*.F)	b=`basename $1 .F`
-				$CPP $CPPFLAGS $1 >$b.i
+				eval "\$CPP $CPPFLAGS \$1" >$b.i
 				rc=$?
 				case $rc in 0)
 					if test $VERBOSE="yes"; then
