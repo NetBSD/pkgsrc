@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.324 2007/02/05 19:50:41 adam Exp $
+$NetBSD: CHANGES-2007,v 1.325 2007/02/05 20:21:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -669,3 +669,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/glibmm to 2.12.5 [adam 2007-02-05]
 	Updated x11/gtkmm to 2.10.7 [adam 2007-02-05]
 	Updated graphics/gimp24 to 2.3.14 [adam 2007-02-05]
+	Updated graphics/inkscape to 0.45 [adam 2007-02-05]
