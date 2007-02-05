@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2007/01/04 22:12:47 adam Exp $
+$NetBSD: distinfo,v 1.17 2007/02/05 19:43:23 adam Exp $
 
-SHA1 (glibmm-2.12.4.tar.bz2) = 1c9ddb11b503fe4ec1ae081c437bf25b8dafeebf
-RMD160 (glibmm-2.12.4.tar.bz2) = 638d33a256eefdedeff99b46d22891a6bbdfaef0
-Size (glibmm-2.12.4.tar.bz2) = 2335609 bytes
+SHA1 (glibmm-2.12.5.tar.bz2) = eab7974e19bd796c06fb1f6575cf1bb42581dd6e
+RMD160 (glibmm-2.12.5.tar.bz2) = e78403b11d84abb2abc7a660c9319e6bd86018eb
+Size (glibmm-2.12.5.tar.bz2) = 2343299 bytes
 SHA1 (patch-aa) = 104df3732246838c18c2be93665ac15671da4af8
-SHA1 (patch-ab) = 0f1b4d0ed15f8edce8f116181a609369c7cd3a8a
+SHA1 (patch-ab) = 41e6de4c94dfa56ebb2014a103f4815cbfa26693
 SHA1 (patch-ac) = e06a8801376a3e0e014f1dcd032d046a1161c82b
