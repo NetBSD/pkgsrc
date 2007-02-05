@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/06/02 17:15:56 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/05 19:44:15 markd Exp $
 #
 
-DISTNAME=		SimPy-1.6
-PKGNAME=		${PYPKGPREFIX}-simpy-1.6
-PKGREVISION=		1
+DISTNAME=		SimPy-1.8
+PKGNAME=		${PYPKGPREFIX}-simpy-1.8
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=simpy/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=		http://simpy.sourceforge.net/
 COMMENT=		Discrete event simulation framework
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
+PYTHON_VERSIONS_ACCEPTED= 24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
