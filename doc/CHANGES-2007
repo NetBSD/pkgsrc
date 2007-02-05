@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.319 2007/02/05 11:11:47 adam Exp $
+$NetBSD: CHANGES-2007,v 1.320 2007/02/05 12:01:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -644,10 +644,23 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.2 [obache 2007-02-04]
 	Updated misc/deskbar-applet to 2.16.0nb2 [wiz 2007-02-04]
 	Updated devel/fhist to 1.16 [obache 2007-02-05]
-	Updated databases/postgresql82 to 8.2.2 [adam 2007-01-08]
-	Updated databases/postgresql82-client to 8.2.2 [adam 2007-01-08]
-	Updated databases/postgresql82-server to 8.2.2 [adam 2007-01-08]
-	Updated databases/postgresql82-plperl to 8.2.2 [adam 2007-01-08]
-	Updated databases/postgresql82-plpython to 8.2.2 [adam 2007-01-08]
-	Updated databases/postgresql82-pltcl to 8.2.2 [adam 2007-01-08]
-	Updated databases/postgresql82-tsearch2 to 8.2.2 [adam 2007-01-08]
+	Updated databases/postgresql82 to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql82-client to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql82-server to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql82-plperl to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql82-plpython to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql82-pltcl to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql82-tsearch2 to 8.2.2 [adam 2007-02-05]
+	Updated databases/postgresql81 to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql81-client to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql81-server to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql81-plperl to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql81-plpython to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql81-pltcl to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql81-tsearch2 to 8.1.7 [adam 2007-02-05]
+	Updated databases/postgresql80 to 8.0.11 [adam 2007-02-05]
+	Updated databases/postgresql80-client to 8.0.11 [adam 2007-02-05]
+	Updated databases/postgresql80-server to 8.0.11 [adam 2007-02-05]
+	Updated databases/postgresql80-plperl to 8.0.11 [adam 2007-02-05]
+	Updated databases/postgresql80-plpython to 8.0.11 [adam 2007-02-05]
+	Updated databases/postgresql80-pltcl to 8.0.11 [adam 2007-02-05]
