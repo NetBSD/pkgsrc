@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/01/24 19:48:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/02/05 19:49:06 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 ${REMOTE}bin/gimp-remote-2.3
@@ -193,6 +193,7 @@ include/gimp-2.0/libgimpwidgets/gimppreview.h
 include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 include/gimp-2.0/libgimpwidgets/gimppropwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpquerybox.h
+include/gimp-2.0/libgimpwidgets/gimpratioentry.h
 include/gimp-2.0/libgimpwidgets/gimpresolutionentry.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
@@ -1001,7 +1002,6 @@ share/gtk-doc/html/libgimp/GimpProcBrowserDialog.html
 share/gtk-doc/html/libgimp/GimpProgressBar.html
 share/gtk-doc/html/libgimp/GimpSelectButton.html
 share/gtk-doc/html/libgimp/GimpZoomPreview.html
-share/gtk-doc/html/libgimp/gimpdefinitions.html
 share/gtk-doc/html/libgimp/home.png
 share/gtk-doc/html/libgimp/index.html
 share/gtk-doc/html/libgimp/index.sgml
@@ -1239,6 +1239,7 @@ share/gtk-doc/html/libgimpwidgets/GimpPickButton.html
 share/gtk-doc/html/libgimpwidgets/GimpPixmap.html
 share/gtk-doc/html/libgimpwidgets/GimpPreview.html
 share/gtk-doc/html/libgimpwidgets/GimpPreviewArea.html
+share/gtk-doc/html/libgimpwidgets/GimpRatioEntry.html
 share/gtk-doc/html/libgimpwidgets/GimpScrolledPreview.html
 share/gtk-doc/html/libgimpwidgets/GimpSizeEntry.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitMenu.html
@@ -1263,6 +1264,7 @@ share/gtk-doc/html/libgimpwidgets/gimp-page-selector.png
 share/gtk-doc/html/libgimpwidgets/gimp-path-editor.png
 share/gtk-doc/html/libgimpwidgets/gimp-pick-button.png
 share/gtk-doc/html/libgimpwidgets/gimp-preview-area.png
+share/gtk-doc/html/libgimpwidgets/gimp-ratio-entry.png
 share/gtk-doc/html/libgimpwidgets/gimp-unit-menu.png
 share/gtk-doc/html/libgimpwidgets/home.png
 share/gtk-doc/html/libgimpwidgets/index.html
@@ -1458,8 +1460,8 @@ share/gtk-doc/html/libgimpwidgets/stock-portrait-22.png
 share/gtk-doc/html/libgimpwidgets/stock-print-resolution-16.png
 share/gtk-doc/html/libgimpwidgets/stock-print-resolution-24.png
 share/gtk-doc/html/libgimpwidgets/stock-question-64.png
-share/gtk-doc/html/libgimpwidgets/stock-quick-mask-off-16.png
-share/gtk-doc/html/libgimpwidgets/stock-quick-mask-on-16.png
+share/gtk-doc/html/libgimpwidgets/stock-quick-mask-off-12.png
+share/gtk-doc/html/libgimpwidgets/stock-quick-mask-on-12.png
 share/gtk-doc/html/libgimpwidgets/stock-reset-16.png
 share/gtk-doc/html/libgimpwidgets/stock-reshow-filter-16.png
 share/gtk-doc/html/libgimpwidgets/stock-resize-16.png
@@ -1672,6 +1674,12 @@ share/locale/en_GB/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/en_GB/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/en_GB/LC_MESSAGES/gimp20-tips.mo
 share/locale/en_GB/LC_MESSAGES/gimp20.mo
+share/locale/eo/LC_MESSAGES/gimp20-libgimp.mo
+share/locale/eo/LC_MESSAGES/gimp20-python.mo
+share/locale/eo/LC_MESSAGES/gimp20-script-fu.mo
+share/locale/eo/LC_MESSAGES/gimp20-std-plug-ins.mo
+share/locale/eo/LC_MESSAGES/gimp20-tips.mo
+share/locale/eo/LC_MESSAGES/gimp20.mo
 share/locale/es/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/es/LC_MESSAGES/gimp20-python.mo
 share/locale/es/LC_MESSAGES/gimp20-script-fu.mo
