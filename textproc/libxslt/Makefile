@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.74 2007/02/01 18:01:39 drochner Exp $
+# $NetBSD: Makefile,v 1.75 2007/02/05 17:42:40 adam Exp $
 
 DISTNAME=	libxslt-1.1.20
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://xmlsoft.org/libxslt/
-#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.1/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.1/} \
+		ftp://xmlsoft.org/libxslt/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/XSLT/
@@ -30,6 +31,6 @@ CPPFLAGS+=	-Dsocklen_t=int
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
