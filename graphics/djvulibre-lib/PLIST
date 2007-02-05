@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/30 17:03:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/05 23:41:49 wiz Exp $
 include/libdjvu/ddjvuapi.h
 include/libdjvu/miniexp.h
 lib/libdjvulibre.la
 lib/pkgconfig/ddjvuapi.pc
-share/djvu/languages.xml
 share/djvu/osi/de/libdjvu++.xml
 share/djvu/osi/de/messages.xml
 share/djvu/osi/en/djvutools-reference.xml
@@ -15,6 +14,7 @@ share/djvu/osi/fr/libdjvu++.xml
 share/djvu/osi/fr/messages.xml
 share/djvu/osi/ja/libdjvu++.xml
 share/djvu/osi/ja/messages.xml
+share/djvu/osi/languages.xml
 share/djvu/osi/zh/libdjvu++.xml
 share/djvu/osi/zh/messages.xml
 @dirrm share/djvu/osi/zh
