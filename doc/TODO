@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5976 2007/02/05 19:46:02 adam Exp $
+$NetBSD: TODO,v 1.5977 2007/02/05 19:50:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ Suggested package updates
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
-	o gimp24-2.3.14
 	o gkrellm-2.2.10 [pkg/34957]
 	o gkrellm-multiping-2.0.10
 	o gkrellm-xmms-2.1.22
