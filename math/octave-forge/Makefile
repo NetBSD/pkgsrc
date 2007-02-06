@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/01/30 02:45:33 obache Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/06 18:13:54 joerg Exp $
 
 DISTNAME=	octave-forge-2006.03.17
 PKGREVISION=	1
@@ -50,5 +50,6 @@ post-patch:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/octave/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
