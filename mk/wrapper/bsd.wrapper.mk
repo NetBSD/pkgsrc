@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.62 2007/01/17 13:20:56 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.63 2007/02/06 20:33:50 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -214,6 +214,7 @@ _WRAP_SCAN.${_wrappee_}?=		${_WRAP_SCAN}
 _WRAP_TRANSFORM.${_wrappee_}?=		${_WRAP_TRANSFORM}
 _WRAP_TRANSFORM_SED.${_wrappee_}?=	${_WRAP_TRANSFORM_SED}
 _WRAP_SKIP_TRANSFORM.${_wrappee_}?=	${_WRAP_SKIP_TRANSFORM}
+_WRAP_TYPE.${_wrappee_}?=		${_wrappee_}
 .endfor	# _WRAPPEES
 
 .if !empty(PKGSRC_COMPILER:Maix-xlc)
@@ -369,6 +370,7 @@ _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_SKIP_TRANSFORM@|${_WRAP_SKIP_TRANSFORM.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_TRANSFORM@|${_WRAP_TRANSFORM.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_TRANSFORM_SED@|${_WRAP_TRANSFORM_SED.${_wrappee_}:Q}|g" \
+	-e "s|@_WRAP_TYPE@|${_WRAP_TYPE.${_wrappee_}}|g" \
 	-e "s|@WRAPPER_DEBUG@|${_WRAPPER_DEBUG}|g"			\
 	-e "s|@WRAPPER_UPDATE_CACHE@|${WRAPPER_UPDATE_CACHE}|g"		\
 	${_WRAP_SUBST_SED}
