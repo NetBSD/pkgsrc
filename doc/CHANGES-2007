@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.338 2007/02/06 14:54:07 adam Exp $
+$NetBSD: CHANGES-2007,v 1.339 2007/02/06 17:51:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -685,3 +685,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added audio/py-karaoke version 0.5 [wiz 2007-02-06]
 	Updated devel/SDL_gfx to 2.0.16 [adam 2007-02-06]
 	Updated graphics/ImageMagick to 6.3.2.3 [adam 2007-02-06]
+	Updated comms/obexapp to 1.4.5 [xtraeme 2007-02-06]
