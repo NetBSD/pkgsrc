@@ -1,4 +1,4 @@
-# $NetBSD: destdir.mk,v 1.1 2006/11/15 19:27:16 rillig Exp $
+# $NetBSD: destdir.mk,v 1.2 2007/02/06 19:47:13 rillig Exp $
 #
 # ===
 # Warning: This file is still under construction. Don't rely on it.
@@ -34,7 +34,8 @@
 #	  installed with default ownership and permissions.
 #
 #	* "destdir" means that some of the installed files need special
-#	  ownership or permissions.
+#	  ownership or permissions. The installation is done by the
+#	  privileged user.
 #
 # === Implementation notes ===
 #
@@ -43,3 +44,4 @@
 # variable is passed in the INSTALL_MAKE_FLAGS to override potential
 # "DESTDIR=" entries in the Makefiles.
 #
+# Keywords: destdir
