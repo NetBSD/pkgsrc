@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/09/01 11:31:57 hira Exp $
+# $NetBSD: options.mk,v 1.4 2007/02/06 18:16:02 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.BasiliskII
 PKG_SUPPORTED_OPTIONS=	esound gtk sdl
@@ -25,5 +25,11 @@ CONFIGURE_ARGS+=	--enable-sdl-audio
 CONFIGURE_ARGS+=	--enable-sdl-video
 .include "../../devel/SDL/buildlink3.mk"
 .else
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .endif
