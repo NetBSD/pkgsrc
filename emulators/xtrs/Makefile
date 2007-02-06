@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:37 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/06 18:22:35 joerg Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -38,5 +38,5 @@ post-wrapper:
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
