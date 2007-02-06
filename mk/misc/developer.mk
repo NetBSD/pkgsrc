@@ -1,3 +1,6 @@
+# $NetBSD: developer.mk,v 1.2 2007/02/06 20:06:38 rillig Exp $
+#
+
 # changes-entry appends a correctly-formatted entry to the pkgsrc
 # CHANGES file.
 #
@@ -17,6 +20,7 @@
 #	% cd /usr/pkgsrc/category/package
 #	% make changes-entry CTYPE=Added
 #
+
 CTYPE?=			Updated
 NETBSD_LOGIN_NAME?=	${_NETBSD_LOGIN_NAME_cmd:sh}
 PKGSRC_CHANGES?=	${PKGSRCDIR}/doc/CHANGES-${_CYEAR_cmd:sh}
@@ -39,6 +43,5 @@ _CTYPE3=	" ["${NETBSD_LOGIN_NAME:Q}" "${_CDATE_cmd:sh:Q}"]"
 
 .PHONY: changes-entry
 changes-entry:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} \
 	${ECHO} ${_CTYPE1}${_CTYPE2}${_CTYPE3} >> ${PKGSRC_CHANGES:Q}
-
