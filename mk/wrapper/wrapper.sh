@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.13 2007/01/02 17:13:59 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.14 2007/02/06 20:33:51 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,6 +53,7 @@ scan="@_WRAP_SCAN@"
 transform="@_WRAP_TRANSFORM@"
 transform_sed="@_WRAP_TRANSFORM_SED@"
 wrapper_subr_sh="@_WRAP_SUBR_SH@"
+wrapper_type="@_WRAP_TYPE@"
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
