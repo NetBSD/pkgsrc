@@ -1,0 +1,13 @@
+The Cache modules are designed to assist a developer in persisting
+data for a specified period of time. Often these modules are used
+in web applications to store data locally to save repeated and
+redundant expensive calls to remote machines or databases.
+
+The Cache interface is implemented by derived classes that store
+cached data in different manners (such as as files on a filesystem,
+or in memory).
+
+To use the Cache system, a cache implementation must be chosen to
+suit your needs. The most common is Cache::File, which is suitable
+for sharing data between multiple invocations and even between
+concurrent processes.
