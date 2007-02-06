@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/06 18:50:07 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/06 21:57:54 joerg Exp $
 #
 
 DISTNAME=	Cache-2.04
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Heap>=0.01:../../devel/p5-Heap
 DEPENDS+=	p5-IO-String>=1.02:../../devel/p5-IO-String
 DEPENDS+=	p5-Storable>=1.00:../../devel/p5-Storable
 DEPENDS+=	p5-TimeDate>=1.00:../../time/p5-TimeDate
-DEPENDS+=	security/p5-Digest-SHA1>=2.01:../../security/p5-Digest-SHA1
+DEPENDS+=	p5-Digest-SHA1>=2.01:../../security/p5-Digest-SHA1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
