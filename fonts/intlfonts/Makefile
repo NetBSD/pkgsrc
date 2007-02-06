@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/09 07:02:56 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/06 18:27:33 joerg Exp $
 
 DISTNAME=	intlfonts-1.2.1
 PKGREVISION=	5
@@ -59,7 +59,6 @@ REQD_DIRS+=		${PREFIX}/lib/X11/fonts/intlfonts/TrueType
 .if !defined(NO_EXTRA_FONTS)
 FONT_SETS+=	${EXTRA_FONTS}
 PLIST_SRC=	PLIST PLIST.extrafonts
-.include "../../mk/x11.buildlink3.mk"
 .endif
 
 post-extract:
