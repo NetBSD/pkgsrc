@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.23 2007/01/17 13:19:47 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.24 2007/02/06 20:33:51 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,17 +67,17 @@ case $arg in
 -Wl,--export-dynamic |\
 -Wl,-E		) transform_discard ;;
 
--W[02aclmop],*	) case ${0##*/} in
-		  cc | gcc) transform_pass ;;
-		  CC | g++ | c++) transform_discard_with_warning ;;
-		  *) echo "ERROR: [transform-sunpro-cc] cmd = $0"; exit 1 ;;
+-W[02aclmop],*	) case $wrapper_type in
+		  CC) transform_pass ;;
+		  CXX) transform_discard_with_warning ;;
+		  *) echo "ERROR: [transform-sunpro-cc] unknown wrapper type: $wrapper_type"; exit 1 ;;
 		  esac ;;
 
 -Wall		|\
--W		) case ${0##*/} in
-		  cc | gcc) transform_to "-v" ;;
-		  CC | g++ | c++) transform_to_and_split "+w +w2" ;;
-		  *) echo "ERROR: [transform-sunpro-cc] cmd = $0"; exit 1 ;;
+-W		) case $wrapper_type in
+		  CC) transform_to "-v" ;;
+		  CXX) transform_to_and_split "+w +w2" ;;
+		  *) echo "ERROR: [transform-sunpro-cc] unknown wrapper type: $wrapper_type"; exit 1 ;;
 		  esac ;;
 
 # Ignore options that are probably meant for GCC.
