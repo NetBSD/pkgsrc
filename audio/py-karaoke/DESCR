@@ -1,0 +1,19 @@
+PyKaraoke is a free karaoke player for Linux, FreeBSD, Windows and
+GP2X.
+
+You can use this program to play your collection of CDG, MIDI and
+MPEG karaoke songs. No songs are provided, you must obtain these
+from elsewhere.
+
+In short, CDG is the format of professional karaoke CDs. These CDs
+can be ripped to your hard disk, and turned into a .mp3 file together
+with a .cdg file. This player gives you the ability to play those
+mp3+cdg files.  PyKaraoke Features:
+
+    * CDG (MP3+G, OGG+G) playback - Play standard CDG karaoke files
+    * MIDI (.MID/.KAR) playback - Play MIDI format karaoke files
+    * MPEG playback - Play karaoke songs and movies in MPEG format
+    * Playlist - Queue up songs, sit back and enjoy
+    * Searchable song database - Easily find your songs from the main screen
+    * Search inside ZIP files - Play MP3+G/MIDI files wrapped in ZIP files
+    * Cross-platform - Runs on Windows, Linux, FreeBSD and GP2X

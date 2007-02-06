@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/06 00:12:27 wiz Exp $
+bin/pycdg
+bin/pykar
+bin/pykaraoke
+bin/pykaraoke_mini
+bin/pympg
+${PYSITELIB}/_pycdgAux.so
+${PYSITELIB}/pycdg.py
+${PYSITELIB}/pycdg.pyc
+${PYSITELIB}/pycdg.pyo
+${PYSITELIB}/pycdgAux.py
+${PYSITELIB}/pycdgAux.pyc
+${PYSITELIB}/pycdgAux.pyo
+${PYSITELIB}/pykar.py
+${PYSITELIB}/pykar.pyc
+${PYSITELIB}/pykar.pyo
+${PYSITELIB}/pykaraoke.py
+${PYSITELIB}/pykaraoke.pyc
+${PYSITELIB}/pykaraoke.pyo
+${PYSITELIB}/pykaraoke_mini.py
+${PYSITELIB}/pykaraoke_mini.pyc
+${PYSITELIB}/pykaraoke_mini.pyo
+${PYSITELIB}/pykconstants.py
+${PYSITELIB}/pykconstants.pyc
+${PYSITELIB}/pykconstants.pyo
+${PYSITELIB}/pykdb.py
+${PYSITELIB}/pykdb.pyc
+${PYSITELIB}/pykdb.pyo
+${PYSITELIB}/pykenv.py
+${PYSITELIB}/pykenv.pyc
+${PYSITELIB}/pykenv.pyo
+${PYSITELIB}/pykmanager.py
+${PYSITELIB}/pykmanager.pyc
+${PYSITELIB}/pykmanager.pyo
+${PYSITELIB}/pykplayer.py
+${PYSITELIB}/pykplayer.pyc
+${PYSITELIB}/pykplayer.pyo
+${PYSITELIB}/pykversion.py
+${PYSITELIB}/pykversion.pyc
+${PYSITELIB}/pykversion.pyo
+${PYSITELIB}/pympg.py
+${PYSITELIB}/pympg.pyc
+${PYSITELIB}/pympg.pyo
+share/applications/pykaraoke.desktop
+share/applications/pykaraoke_mini.desktop
+share/pykaraoke/fonts/DejaVuSans.ttf
+share/pykaraoke/fonts/DejaVuSansCondensed-Bold.ttf
+share/pykaraoke/fonts/DejaVuSansCondensed.ttf
+share/pykaraoke/icons/audio_16.png
+share/pykaraoke/icons/folder_close_16.png
+share/pykaraoke/icons/folder_open_16.png
+share/pykaraoke/icons/microphone.ico
+share/pykaraoke/icons/pykaraoke.xpm
+share/pykaraoke/icons/splash.jpg
+@dirrm share/pykaraoke/icons
+@dirrm share/pykaraoke/fonts
+@dirrm share/pykaraoke
