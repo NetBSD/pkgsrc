@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/06 18:05:58 joerg Exp $
 #
 
 DISTNAME=	GraphicsMagick-1.1.7
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=--without-perl
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
