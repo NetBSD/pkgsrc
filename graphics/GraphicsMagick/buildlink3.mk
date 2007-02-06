@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/01/17 23:47:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/02/06 18:05:58 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GRAPHICSMAGICK_BUILDLINK3_MK:=	${GRAPHICSMAGICK_BUILDLINK3_MK}+
@@ -28,6 +28,7 @@ BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
