@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.339 2007/02/06 17:51:42 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.340 2007/02/06 18:44:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -686,3 +686,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/SDL_gfx to 2.0.16 [adam 2007-02-06]
 	Updated graphics/ImageMagick to 6.3.2.3 [adam 2007-02-06]
 	Updated comms/obexapp to 1.4.5 [xtraeme 2007-02-06]
+	Updated devel/p5-Heap 0.71 [abs 2007-02-06]
