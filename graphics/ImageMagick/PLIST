@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2007/01/09 09:52:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.54 2007/02/06 14:52:46 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -32,7 +32,6 @@ include/magick/PreRvIcccm.h
 include/magick/animate.h
 include/magick/annotate.h
 include/magick/api.h
-include/magick/attribute.h
 include/magick/blob.h
 include/magick/cache-view.h
 include/magick/cache.h
@@ -69,6 +68,7 @@ include/magick/magick-type.h
 include/magick/magick.h
 include/magick/memory_.h
 include/magick/methods.h
+include/magick/mime.h
 include/magick/module.h
 include/magick/monitor.h
 include/magick/montage.h
@@ -77,6 +77,7 @@ include/magick/paint.h
 include/magick/pixel.h
 include/magick/prepress.h
 include/magick/profile.h
+include/magick/property.h
 include/magick/quantize.h
 include/magick/quantum.h
 include/magick/random_.h
@@ -111,8 +112,8 @@ include/wand/display.h
 include/wand/drawing-wand.h
 include/wand/identify.h
 include/wand/import.h
-include/wand/magick-attribute.h
 include/wand/magick-image.h
+include/wand/magick-property.h
 include/wand/magick-wand.h
 include/wand/magick_wand.h
 include/wand/mogrify.h
@@ -158,6 +159,7 @@ share/ImageMagick-${IM_MAJOR_VER}/NEWS
 share/ImageMagick-${IM_MAJOR_VER}/config/coder.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/log.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/magic.xml
+share/ImageMagick-${IM_MAJOR_VER}/config/mime.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/sRGB.icm
 share/ImageMagick-${IM_MAJOR_VER}/config/thresholds.xml
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/arc.png
@@ -197,6 +199,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/tricks.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/wand.ico
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/white-highlight.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/index.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/ImageMagickObject.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Blob.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Cache.fig
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Cache.png
@@ -241,7 +244,6 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/animate.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/animate.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/annotate.html
-share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/attribute.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/blob.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cache.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/color.html
@@ -260,8 +262,9 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/fx.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/layer.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
-share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-attribute.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-image.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-property.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-property.php
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-wand.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/memory.html
