@@ -84,4 +84,16 @@ DDEESSCCRRIIPPTTIIOONN
      SIZE_PKG
              (required) The size of the package when installed, in bytes.
 
-NetBSD 3.0                      April 24, 2006                      NetBSD 3.0
+     The ppkkgg__ssuummmmaarryy file can be generated using the pkg_info(1) --XX option.
+     For example, the following will list this data for all installed pack-
+     ages:
+
+           pkg_info -X -a
+
+SSEEEE AALLSSOO
+     pkg_info(1)
+
+HHIISSTTOORRYY
+     The ppkkgg__ssuummmmaarryy format was first officially documented in April 2006.
+
+NetBSD 3.0                     February 5, 2007                     NetBSD 3.0
