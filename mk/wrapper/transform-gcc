@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.11 2007/01/06 02:20:10 rillig Exp $
+# $NetBSD: transform-gcc,v 1.12 2007/02/06 19:35:41 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -22,18 +22,37 @@ case $arg in
 -			|\
 -dynamic		|\
 -export-dynamic		|\
+-falign-functions=*	|\
+-falign-loops=*		|\
+-falign-jumps=*		|\
+-fexpensive-optimizations |\
 -ffast-math		|\
+-ffloat-store		|\
 -finline-functions	|\
+-fno-builtin*		|\
+-fno-common		|\
 -fno-implicit-templates	|\
+-fno-inline-functions	|\
+-fno-strict-aliasing	|\
+-fomit-frame-pointer	|\
 -fPIC			|\
+-fsigned-char		|\
+-funroll-loops		|\
+-funsigned-char		|\
 -ggdb			|\
 -M			|\
 -M[DFMPT]		|\
+-MMD			|\
+-mcpu=*			|\
+-mieee-fp		|\
 -O[23s]			|\
 -pedantic		|\
+-pedantic-errors	|\
 -pipe			|\
 -pthread		|\
 -print-prog-name=*	|\
+-print-search-dirs	|\
+-S			|\
 -shared			|\
 -static			|\
 -std=c99		|\
@@ -43,15 +62,24 @@ case $arg in
 -Wall			|\
 -Wcast-align		|\
 -Wcast-qual		|\
+-Wchar-subscripts	|\
+-Wconversion		|\
 -Wextra			|\
 -Werror			|\
 -Werror-implicit-function-declaration |\
 -Wformat=[012]		|\
 -Wmissing-declarations	|\
+-Wmissing-format-attribute |\
 -Wmissing-prototypes	|\
+-Wnested-externs	|\
 -Wno-error		|\
+-Wno-format-y2k		|\
+-Wno-format-zero-length	|\
 -Wno-implicit-int	|\
+-Wno-import		|\
+-Wno-inline		|\
 -Wno-long-long		|\
+-Wno-sign-compare	|\
 -Wno-traditional	|\
 -Wno-undef		|\
 -Wno-uninitialized	|\
@@ -62,17 +90,27 @@ case $arg in
 -Wreturn-type		|\
 -Wshadow		|\
 -Wsign-compare		|\
+-Wstrict-aliasing	|\
 -Wstrict-prototypes	|\
 -Wswitch		|\
 -Wundef			|\
 -Wwrite-strings		) transform_pass ;;
 
+# There are some packages suppressing all warnings. We don't want that.
+-w			) transform_discard ;;
+
 # Options specific to g++.
+-fexceptions		|\
 -fmessage-length=*	|\
 -fno-check-new		|\
 -fno-exceptions		|\
 -fno-rtti		|\
--Wno-non-virtual-dtor	) transform_pass ;;
+-Wno-non-virtual-dtor	|\
+-ftemplate-depth=*	) transform_pass ;;
+
+# Options specific to Objective C
+-fgnu-runtime		|\
+-fconstant-string-class=* ) transform_pass ;;
 
 # Other compiler's options that have corresponding GCC options.
 -KPIC			|\
