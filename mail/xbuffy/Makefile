@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/06 18:30:26 joerg Exp $
 #
 
 DISTNAME=	xbuffy-3.4
@@ -15,9 +15,8 @@ USE_X11BASE=	YES
 CPPFLAGS+=	-I${X11BASE}/include
 CPPFLAGS+=	-Wall
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/XBuffy.ad ${PREFIX}/lib/X11/app-defaults/XBuffy
 
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
