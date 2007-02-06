@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/06 18:21:15 joerg Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		5
@@ -42,5 +42,4 @@ do-install:
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
