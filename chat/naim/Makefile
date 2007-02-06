@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/01/23 22:15:16 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/02/06 21:09:44 reed Exp $
 
 DISTNAME=	naim-0.11.8.2.1
 CATEGORIES=	chat
@@ -6,10 +6,11 @@ MASTER_SITES=	http://naim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://site.n.ml.org/info/naim/
+HOMEPAGE=	http://naim.n.ml.org/about
 COMMENT=	Ncurses-based AIM, ICQ, IRC, and Lily client
 
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 USE_LIBTOOL=		yes
 
 USE_NCURSES=		# compiles fine, but terminates on startup with:
