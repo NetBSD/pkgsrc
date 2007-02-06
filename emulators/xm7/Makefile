@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/09/09 02:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/06 18:20:07 joerg Exp $
 #
 
 DISTNAME=		xm71010s
@@ -26,13 +26,14 @@ NO_CONFIGURE=		yes
 MAKE_FILE=		makefile.x11
 INSTALLATION_DIRS=	bin
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-extract:
 	@cd ${WRKDIR}; ${MV} linux/* vm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/vm/xm7 ${PREFIX}/bin
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
