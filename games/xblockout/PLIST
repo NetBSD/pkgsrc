@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/02 16:05:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/06 17:08:19 joerg Exp $
 bin/xbl
 lib/X11/app-defaults/Xbl
 lib/X11/xbl/COPYING
@@ -9,5 +9,5 @@ lib/X11/xbl/xbl-menu.gif
 lib/X11/xbl/xbl-score.gif
 lib/X11/xbl/xbl-zoo.gif
 lib/X11/xbl/xbl.html
-man/mann/xbl.n
+man/man1/xbl.1
 @dirrm lib/X11/xbl
