@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/01 17:56:11 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/06 17:24:42 joerg Exp $
 #
 
 DISTNAME=		gramps-2.2.6
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config intltool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 # disable gconf schema and mime type processing
