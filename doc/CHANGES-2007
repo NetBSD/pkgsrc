@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.336 2007/02/06 00:14:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.337 2007/02/06 10:15:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/djvulibre-lib to 3.5.18 [wiz 2007-02-05]
 	Updated graphics/djvulibre-tools to 3.5.18 [wiz 2007-02-05]
 	Added audio/py-karaoke version 0.5 [wiz 2007-02-06]
+	Updated devel/SDL_gfx to 2.0.16 [adam 2007-02-06]
