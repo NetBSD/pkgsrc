@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/12/01 14:09:01 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2007/02/06 18:54:14 joerg Exp $
 
 .include "Makefile.common"
 
@@ -90,6 +90,7 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
