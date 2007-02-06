@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2006/07/09 16:35:31 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2007/02/06 17:50:46 xtraeme Exp $
 
-SHA1 (obexapp-1.4.4.tar.gz) = 4d99ff1e636109dd8013d1c4bc5b2852103e4071
-RMD160 (obexapp-1.4.4.tar.gz) = d4ca4229e8e63158366bef72e39323b249aca614
-Size (obexapp-1.4.4.tar.gz) = 245156 bytes
+SHA1 (obexapp-1.4.5.tar.gz) = 567087731e86906bdaef7f3dd792a18e4686ebdd
+RMD160 (obexapp-1.4.5.tar.gz) = 71f4903ab80692fba33f8242930ec878b24ad1cd
+Size (obexapp-1.4.5.tar.gz) = 30384 bytes
 SHA1 (patch-aa) = 28d245c716a6d8fd57607dd74f239f165da9f4ac
 SHA1 (patch-ab) = a0355450e8af326a24d6db5af436851e67d4d395
 SHA1 (patch-ac) = d9a09e9ca0118ebb489507e2fe9965fbded4552b

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/12/30 22:40:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/06 17:50:46 xtraeme Exp $
 #
 
-DISTNAME=	obexapp-1.4.4
+DISTNAME=	obexapp-1.4.5
 CATEGORIES=	comms
 MASTER_SITES=	http://www.geocities.com/m_evmenkin/
 
