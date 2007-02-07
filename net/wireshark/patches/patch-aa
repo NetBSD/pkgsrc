@@ -1,50 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2006/11/01 12:59:42 tron Exp $
+$NetBSD: patch-aa,v 1.4.2.1 2007/02/07 16:05:21 salo Exp $
 
---- epan/dissectors/packet-radiotap.c.orig	2006-10-31 17:59:09.000000000 +0000
-+++ epan/dissectors/packet-radiotap.c	2006-11-01 11:44:20.000000000 +0000
-@@ -531,6 +531,11 @@
-     guint8 db, rflags;
-     guint32 present, next_present;
-     int bit;
-+    gint8 align;
-+#define RTALIGN(size) \
-+	align = ((offset + ((size) - 1)) & ~((size) - 1)) - offset; \
-+	offset += align; \
-+	length_remaining -= align
- 
-     if(check_col(pinfo->cinfo, COL_PROTOCOL))
- 	col_set_str(pinfo->cinfo, COL_PROTOCOL, "WLAN");
-@@ -745,6 +750,7 @@
- 	    length_remaining--;
- 	    break;
- 	case IEEE80211_RADIOTAP_CHANNEL:
-+	    RTALIGN(2);
- 	    if (length_remaining < 4)
- 		break;
- 	    if (tree) {
-@@ -762,6 +768,7 @@
- 	case IEEE80211_RADIOTAP_FHSS:
- 	case IEEE80211_RADIOTAP_TX_ATTENUATION:
- 	case IEEE80211_RADIOTAP_DB_TX_ATTENUATION:
-+	    RTALIGN(2);
- 	    if (length_remaining < 2)
- 		break;
- #if 0
-@@ -771,6 +778,9 @@
- 	    length_remaining-=2;
- 	    break;
- 	case IEEE80211_RADIOTAP_TSFT:
-+#if 0 /* can't happen because always first */
-+	    RTALIGN(8);
-+#endif
- 	    if (length_remaining < 8)
- 		break;
- 	    if (tree) {
-@@ -781,6 +791,7 @@
- 	    length_remaining-=8;
- 	    break;
- 	case IEEE80211_RADIOTAP_LOCK_QUALITY:
-+	    RTALIGN(2);
- 	    if (length_remaining < 2)
- 		break;
- 	    if (tree) {
+Fix build with GCC 3.3.x, see:
+http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=1357
+
+--- tools/lemon/lemon.c.orig	2007-02-01 22:53:43.000000000 +0000
++++ tools/lemon/lemon.c	2007-02-07 14:54:00.000000000 +0000
+@@ -3095,6 +3095,9 @@
+ /* Print a #line directive line to the output file. */
+ PRIVATE void tplt_linedir(FILE *out, int lineno, char *filename)
+ {
++  if (lineno > 65536)
++    return;
++
+   fprintf(out,"#line %d \"",lineno);
+   while( *filename ){
+     if( *filename == '\\' ) putc('\\',out);
