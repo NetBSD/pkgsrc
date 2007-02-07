@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2007/01/07 12:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/02/07 20:18:41 drochner Exp $
 #
 
-DISTNAME=	sweep-0.8.3
-PKGREVISION=	4
+DISTNAME=	sweep-0.9.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sweep/}
 
@@ -10,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.metadecks.org/software/sweep/
 COMMENT=	Full-featured digital sound editor
 
-USE_DIRS+=		gnome1-1.5
+USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
@@ -18,6 +17,8 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-oggtest
 CONFIGURE_ARGS+=	--disable-vorbistest
+# XXX this doesn't work
+#CONFIGURE_ARGS+=	--disable-alsa
 
 CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
@@ -30,7 +31,7 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
