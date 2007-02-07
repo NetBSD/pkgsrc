@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/06 15:09:59 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/07 18:28:00 joerg Exp $
 #
 
 DISTNAME=	xbeeb-0.4.1
@@ -102,5 +102,6 @@ do-install:
 	cd ${WRKSRC}/fonts && ${INSTALL_DATA} *.pcf ${PREFIX}/lib/X11/fonts/xbeeb
 	mkfontdir ${PREFIX}/lib/X11/fonts/xbeeb
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
