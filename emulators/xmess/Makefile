@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.89 2007/02/07 19:20:12 joerg Exp $
 #
 
 DISTNAME=		xmame-0.106
@@ -58,11 +58,19 @@ MAKE_FLAGS+=		DISPLAY_METHOD=${MAME_DISP_METHOD:Q}
 MAKE_FLAGS+=		MY_CPU="${MAME_CPU.${MACHINE_ARCH}}"
 MAKE_FLAGS+=		ARCH="${MAME_ARCH.${OPSYS}}"
 
-.if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 MAKE_FLAGS+=		X11_DGA=1
-.endif
-.if exists(${X11BASE}/include/X11/extensions/Xv.h)
 MAKE_FLAGS+=		X11_XV=1
+.else
+.  if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
+MAKE_FLAGS+=		X11_DGA=1
+.  endif
+.  if exists(${X11BASE}/include/X11/extensions/Xv.h)
+MAKE_FLAGS+=		X11_XV=1
+.  endif
 .endif
 
 # If supported, add appropriate definitions to build joystick drivers.
@@ -75,6 +83,10 @@ MAKE_FLAGS+=		JOY_STANDARD=1
 MAKE_FLAGS+=		JOY_USB=1
 .  endif
 .endif
+
+# This should be supported with the proper defines
+#.include "../../x11/libXi/buildlink3.mk"
+#.include "../../x11/libXinerama/buildlink3.mk"
 
 OWN_DIRS=		${SPOOLDIR}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
@@ -108,5 +120,6 @@ SUBST_SED.pragma=	-e "s|\#pragma once||g"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
