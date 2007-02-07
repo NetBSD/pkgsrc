@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.27 2006/07/05 04:32:10 jlam Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.28 2007/02/07 19:25:33 joerg Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -30,7 +30,9 @@ TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/lex
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
+.if exists(/usr/bin/gtar)
 TOOLS_PLATFORM.gtar?=		/usr/bin/gtar
+.endif
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
