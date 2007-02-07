@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/07 20:00:49 joerg Exp $
 #
 
 DISTNAME=	gxemul-0.4.3
@@ -40,7 +40,7 @@ SUBST_SED.x11=		-e 's|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS:Q}|g'
 SUBST_SED.x11+=		-e 's|/usr/X11R6|${X11BASE}|g'
 SUBST_MESSAGE.x11=	Fixing X linking flags.
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
