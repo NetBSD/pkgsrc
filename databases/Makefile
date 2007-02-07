@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2007/02/05 23:10:34 rillig Exp $
+# $NetBSD: Makefile,v 1.225 2007/02/07 21:38:53 rillig Exp $
 #
 
 COMMENT=	Databases
@@ -67,6 +67,7 @@ SUBDIR+=	p5-Class-DBI-AbstractSearch
 SUBDIR+=	p5-DBD-CSV
 SUBDIR+=	p5-DBD-Google
 SUBDIR+=	p5-DBD-Oracle
+SUBDIR+=	p5-DBD-PgPP
 SUBDIR+=	p5-DBD-SQLite
 SUBDIR+=	p5-DBD-Sybase
 SUBDIR+=	p5-DBD-XBase
