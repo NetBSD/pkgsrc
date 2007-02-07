@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.29 2007/02/03 20:59:34 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.30 2007/02/07 16:10:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -73,3 +73,5 @@ Pullup ticket 2006 - requested by taca
 bugfix for ruby-tk
 Pullup ticket 2008 - requested by taca
 security fix for rubygems
+Pullup ticket 2015 - requested by tron
+security update for wireshark
