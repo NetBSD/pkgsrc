@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/04 21:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2007/02/07 23:39:56 salo Exp $
 
 DISTNAME=	octave-forge-2006.03.17
 CATEGORIES=	math
@@ -13,6 +13,8 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		HAVE_MAGICKXX=no
 
 UNLIMIT_RESOURCES=	datasize
 

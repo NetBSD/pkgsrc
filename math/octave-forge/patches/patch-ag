@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2006/04/20 18:16:47 adam Exp $
+$NetBSD: patch-ag,v 1.5.6.1 2007/02/07 23:39:56 salo Exp $
 
 --- configure.orig	2006-03-17 06:26:16.000000000 +0100
 +++ configure
@@ -441,6 +441,15 @@ $NetBSD: patch-ag,v 1.5 2006/04/20 18:16:47 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
+@@ -6715,7 +6783,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-	if test $HAVE_MAGICKXX ; then
++	if test $HAVE_MAGICKXX = yes ; then
+ 		STATUS="$STATUS, ImageMagick++"
+ 
+ 		DEFHAVE_MAGICKXX="HAVE_MAGICKXX=1"
 @@ -6771,7 +6839,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
