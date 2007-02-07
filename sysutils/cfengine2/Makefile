@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.18 2007/01/07 09:14:11 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/07 00:03:28 wiz Exp $
 #
-
-PKGREVISION=	4
 
 .include "../../sysutils/cfengine2/Makefile.common"
 
@@ -17,16 +15,9 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
-pre-configure:
-	${MV} -f ${WRKSRC}/contrib/vicf.in ${WRKSRC}/contrib/vicf.in.orig
-	${SED} -e "s|@ECHO@|${ECHO}|" \
-		${WRKSRC}/contrib/vicf.in.orig > ${WRKSRC}/contrib/vicf.in
-
 post-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/inputs/*.example \
-		${PREFIX}/share/examples/cfengine
 	${INSTALL_DATA_DIR} /var/cfengine/inputs
 
 .include "../../mk/pthread.buildlink3.mk"

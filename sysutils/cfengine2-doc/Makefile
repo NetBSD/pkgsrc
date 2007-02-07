@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/04/07 19:54:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/07 00:03:28 wiz Exp $
 #
 
 PKGNAME=	cfengine-doc-${CFENGINE_VERSION}
-PKGREVISION=	1
 
 .include "../../sysutils/cfengine2/Makefile.common"
 

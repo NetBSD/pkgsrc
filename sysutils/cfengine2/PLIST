@@ -1,21 +1,35 @@
-@comment $NetBSD: PLIST,v 1.9 2005/09/22 02:08:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/02/07 00:03:28 wiz Exp $
 man/man8/cfagent.8
 man/man8/cfengine.8
 man/man8/cfenvd.8
 man/man8/cfenvgraph.8
+man/man8/cfetoolcheck.8
+man/man8/cfetoolcreate.8
+man/man8/cfetooldump.8
+man/man8/cfetoolgraph.8
+man/man8/cfetoolimport.8
+man/man8/cfetoolinfo.8
+man/man8/cfetoolupdate.8
 man/man8/cfexecd.8
 man/man8/cfkey.8
 man/man8/cfrun.8
 man/man8/cfservd.8
+man/man8/cfshow.8
 sbin/cfagent
 sbin/cfdoc
 sbin/cfenvd
 sbin/cfenvgraph
+sbin/cfetool
+sbin/cfetoolgraph
 sbin/cfexecd
 sbin/cfkey
 sbin/cfrun
 sbin/cfservd
-sbin/vicf
+sbin/cfshow
+share/cfengine/ChangeLog
+share/cfengine/INSTALL
+share/cfengine/NEWS
+share/cfengine/README
 share/cfengine/cfengine.el
 share/examples/cfengine/cf.chflags.example
 share/examples/cfengine/cf.freebsd.example
@@ -36,7 +50,6 @@ share/examples/cfengine/cfrc.example
 share/examples/cfengine/cfrun.hosts.example
 share/examples/cfengine/cfservd.conf.example
 share/examples/cfengine/update.conf.example
-share/examples/cfengine/vicf
 share/examples/rc.d/cfenvd
 share/examples/rc.d/cfexecd
 share/examples/rc.d/cfservd
