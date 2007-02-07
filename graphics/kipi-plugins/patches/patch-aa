@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.5 2007/02/07 23:58:11 joerg Exp $
+
+--- kipi-plugins/common/exiv2iface/exiv2iface.cpp.orig	2007-02-07 23:19:19.000000000 +0000
++++ kipi-plugins/common/exiv2iface/exiv2iface.cpp
+@@ -61,6 +61,18 @@
+ 
+ #include "exiv2iface.h"
+ 
++#ifndef trunc
++#  if defined(__DragonFly__) || defined(__NetBSD__)
++static double trunc(double val)
++{
++	if (val > 0)
++		return floor(val);
++	else
++		return ceil(val);
++}
++#  endif
++#endif
++
+ namespace KIPIPlugins
+ {
+ 
