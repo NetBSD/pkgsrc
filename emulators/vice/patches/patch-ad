@@ -1,16 +1,13 @@
-$NetBSD: patch-ad,v 1.10 2006/06/29 22:56:34 dillo Exp $
+$NetBSD: patch-ad,v 1.11 2007/02/07 19:43:29 wiz Exp $
 
---- src/arch/unix/x11/vidmode.c.orig	2005-12-23 23:29:54.000000000 +0100
-+++ src/arch/unix/x11/vidmode.c
-@@ -75,11 +75,7 @@ int vidmode_init(void)
-         &vm_modes)) {
-         log_error(vidmode_log, _("Error getting video mode information - disabling vidmode extension."));
-         vm_available = 0;
--#if !defined(__NETBSD__)
--        return -1;
--#else
-         return 0;
--#endif
-     }
+--- doc/html/Makefile.in.orig	2007-01-21 01:53:08.000000000 +0000
++++ doc/html/Makefile.in
+@@ -245,7 +245,7 @@ xcbm2_LDFLAGS = @xcbm2_LDFLAGS@
+ xpet_LDFLAGS = @xpet_LDFLAGS@
+ xplus4_LDFLAGS = @xplus4_LDFLAGS@
+ xvic_LDFLAGS = @xvic_LDFLAGS@
+-docdir = $(VICEDIR)/doc
++docdir = $(datadir)/doc/vice
  
-     for (i = 0; i < vm_mode_count; i++) {
+ doc_DATA = \
+ 	amigaos.html \
