@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/01/07 12:25:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/02/07 20:04:00 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XINE_LIB_BUILDLINK3_MK:=	${XINE_LIB_BUILDLINK3_MK}+
@@ -17,16 +17,5 @@ BUILDLINK_ABI_DEPENDS.xine-lib+=xine-lib>=1.0.3a
 BUILDLINK_ABI_DEPENDS.xine-lib?=	xine-lib>=1.1.3nb1
 BUILDLINK_PKGSRCDIR.xine-lib?=	../../multimedia/xine-lib
 .endif	# XINE_LIB_BUILDLINK3_MK
-
-.include "../../audio/flac/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
-.include "../../graphics/aalib/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/mng/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
