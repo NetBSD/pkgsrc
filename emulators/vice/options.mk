@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/07/06 08:37:27 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2007/02/07 19:43:29 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=	esound ffmpeg lame gnome
@@ -21,8 +21,7 @@ CONFIGURE_ARGS+=	--enable-ffmpeg
 
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-gnomeui
-PATCHFILES=		vice-1.19-gnome2.diff.gz
-PATCH_SITES=		http://www.viceteam.org/online/
-PATCH_DIST_STRIP=	-p1
+USE_TOOLS+=		pkg-config
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .endif
