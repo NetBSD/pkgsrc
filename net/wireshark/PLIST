@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/01 12:59:42 tron Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2007/02/07 16:05:21 salo Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -11,7 +11,6 @@ bin/tshark
 bin/wireshark
 lib/libwireshark.la
 lib/libwiretap.la
-lib/wireshark/plugins/${PKGVERSION}/acn.la
 lib/wireshark/plugins/${PKGVERSION}/agentx.la
 lib/wireshark/plugins/${PKGVERSION}/artnet.la
 lib/wireshark/plugins/${PKGVERSION}/asn1.la
@@ -60,9 +59,11 @@ share/wireshark/diameter/dictionary.xml
 share/wireshark/diameter/imscxdx.xml
 share/wireshark/diameter/mobileipv4.xml
 share/wireshark/diameter/nasreq.xml
+share/wireshark/diameter/sip.xml
 share/wireshark/diameter/sunping.xml
 share/wireshark/dtds/dc.dtd
 share/wireshark/dtds/itunes.dtd
+share/wireshark/dtds/mscml.dtd
 share/wireshark/dtds/pocsettings.dtd
 share/wireshark/dtds/presence.dtd
 share/wireshark/dtds/reginfo.dtd
