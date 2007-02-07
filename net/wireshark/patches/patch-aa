@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.6 2007/02/07 15:18:23 tron Exp $
+
+Fix build with GCC 3.3.x, see:
+http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=1357
+
+--- tools/lemon/lemon.c.orig	2007-02-01 22:53:43.000000000 +0000
++++ tools/lemon/lemon.c	2007-02-07 14:54:00.000000000 +0000
+@@ -3095,6 +3095,9 @@
+ /* Print a #line directive line to the output file. */
+ PRIVATE void tplt_linedir(FILE *out, int lineno, char *filename)
+ {
++  if (lineno > 65536)
++    return;
++
+   fprintf(out,"#line %d \"",lineno);
+   while( *filename ){
+     if( *filename == '\\' ) putc('\\',out);
