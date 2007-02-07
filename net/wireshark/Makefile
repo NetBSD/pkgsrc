@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/11/01 12:59:42 tron Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2007/02/07 16:05:21 salo Exp $
 
-DISTNAME=		wireshark-0.99.4
+DISTNAME=		wireshark-0.99.5
 CATEGORIES=		net
 MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -13,7 +13,7 @@ COMMENT=		Network protocol analyzer
 CONFLICTS+=		ethereal-[0-9]*
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config
 
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
@@ -36,15 +36,6 @@ PTHREAD_OPTS+=		require
 .if !empty(MACHINE_PLATFORM:MDarwin-[567].*-*)
 USE_BUILTIN.libpcap=	no
 .endif
-
-# Work arround for files missing in the 0.99.3 release archive.
-# This and "${FILESDIR}/*.xpm" should be removed after the next update.
-post-extract:
-	${CP} ${FILESDIR}/*.xpm ${WRKSRC}/image/toolbar
-
-# XXX avoid rebuild after dissector patch
-pre-build:
-	${TOUCH} ${WRKSRC}/epan/dissectors/register.c
 
 SUBST_CLASSES+=		shell
 SUBST_STAGE.shell=	post-build
