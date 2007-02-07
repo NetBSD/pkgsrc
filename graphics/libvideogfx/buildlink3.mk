@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/02/07 23:54:48 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBVIDEOGFX_BUILDLINK3_MK:=	${LIBVIDEOGFX_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_PKGSRCDIR.libvideogfx?=	../../graphics/libvideogfx
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
