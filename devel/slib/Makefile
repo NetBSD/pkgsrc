@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/02/07 19:39:52 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/07 19:45:32 wiz Exp $
 
 DISTNAME=	slib3a4
 #
@@ -22,14 +22,14 @@ NO_BUILD=	yes
 
 SLIBDIR=	${PREFIX}/share/slib
 DOCDIR=		${PREFIX}/share/doc/slib
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	${PKGINFODIR}
 
 SUBST_CLASSES+=		scmpath
 SUBST_STAGE.scmpath=	post-patch
 SUBST_FILES.scmpath=	guile.init
-SUBST_SED.scmpath=	"s|@PREFIX@|${PREFIX}|"
+SUBST_SED.scmpath=	-e "s|@PREFIX@|${PREFIX}|"
 
 do-install:
 	${INSTALL_DATA_DIR} ${SLIBDIR}
