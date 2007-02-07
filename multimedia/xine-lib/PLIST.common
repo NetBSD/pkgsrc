@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.17 2007/01/10 16:33:45 joerg Exp $
+@comment $NetBSD: PLIST.common,v 1.18 2007/02/07 20:04:00 drochner Exp $
 bin/xine-config
 include/xine.h
 include/xine/alphablend.h
@@ -72,8 +72,8 @@ lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_ff.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_ff.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_gsm610.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_gsm610.so
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_image.a
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_image.so
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_image.a
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_image.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_lpcm.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_lpcm.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_decode_mad.a
@@ -120,8 +120,8 @@ lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_games.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_games.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_iff.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_iff.so
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_image.a
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_image.so
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_image.a
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_image.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_matroska.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_matroska.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_mng.a
@@ -156,8 +156,6 @@ lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_yuv4mpeg2.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_yuv4mpeg2.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_yuv_frames.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_dmx_yuv_frames.so
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_flac.a
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_flac.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_cdda.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_cdda.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_dvb.a
@@ -184,14 +182,14 @@ lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_vcd.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_vcd.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_vcdo.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_inp_vcdo.so
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_aa.a
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_aa.so
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_aa.a
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_aa.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_none.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_none.so
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_opengl.a
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_opengl.so
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_sdl.a
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_sdl.so
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_opengl.a
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_opengl.so
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_sdl.a
+@comment lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_sdl.so
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_xshm.a
 lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_xshm.so
 ${HAVE_XV}lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_xv.a
@@ -199,25 +197,25 @@ ${HAVE_XV}lib/xine/plugins/${XINE_LIB_VER}/xineplug_vo_out_xv.so
 man/man1/xine-config.1
 man/man5/xine.5
 share/aclocal/xine.m4
-share/doc/xine/README
-share/doc/xine/README.MINGWCROSS
-share/doc/xine/README.WIN32
-share/doc/xine/README.dvb
-share/doc/xine/README.dxr3
-share/doc/xine/README.freebsd
-share/doc/xine/README.irix
-share/doc/xine/README.network_dvd
-share/doc/xine/README.opengl
-share/doc/xine/README.solaris
-share/doc/xine/README.syncfb
-share/doc/xine/README_xxmc.html
-share/doc/xine/faq/faq.html
-share/doc/xine/faq/faq.txt
-share/doc/xine/hackersguide/architecture.png
-share/doc/xine/hackersguide/hackersguide.html
-share/doc/xine/hackersguide/library.png
-share/doc/xine/hackersguide/overlays.png
-share/doc/xine/hackersguide/post_frame.png
+share/doc/xine-lib/README
+share/doc/xine-lib/README.MINGWCROSS
+share/doc/xine-lib/README.WIN32
+share/doc/xine-lib/README.dvb
+share/doc/xine-lib/README.dxr3
+share/doc/xine-lib/README.freebsd
+share/doc/xine-lib/README.irix
+share/doc/xine-lib/README.network_dvd
+share/doc/xine-lib/README.opengl
+share/doc/xine-lib/README.solaris
+share/doc/xine-lib/README.syncfb
+share/doc/xine-lib/README_xxmc.html
+share/doc/xine-lib/faq.html
+share/doc/xine-lib/faq.txt
+share/doc/xine-lib/hackersguide/architecture.png
+share/doc/xine-lib/hackersguide/hackersguide.html
+share/doc/xine-lib/hackersguide/library.png
+share/doc/xine-lib/hackersguide/overlays.png
+share/doc/xine-lib/hackersguide/post_frame.png
 share/locale/cs/LC_MESSAGES/libxine1.mo
 share/locale/de/LC_MESSAGES/libxine1.mo
 share/locale/es/LC_MESSAGES/libxine1.mo
