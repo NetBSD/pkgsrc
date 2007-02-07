@@ -1,43 +1,7 @@
-$NetBSD: patch-ac,v 1.15 2006/06/29 22:56:34 dillo Exp $
+$NetBSD: patch-ac,v 1.16 2007/02/07 19:43:29 wiz Exp $
 
---- src/sounddrv/soundsun.c.orig	2005-12-23 23:29:54.000000000 +0100
+--- src/sounddrv/soundsun.c.orig	2006-08-06 15:54:56.000000000 +0000
 +++ src/sounddrv/soundsun.c
-@@ -63,7 +63,7 @@ static int sun_fd = -1;
- static int sun_8bit = 0;
- static int sun_channels = 1;
- static int sun_bufsize = 0;
--#if !defined(__NETBSD__)
-+#if !defined(__NetBSD__)
- static int sun_written = 0;
- #endif
- 
-@@ -107,7 +107,7 @@ static int sun_init(const char *param, i
-     int	st;
-     struct audio_info info;
- 
--#if !defined(__NETBSD__)
-+#if !defined(__NetBSD__)
-     /* No stereo capability. */
-     *channels = 1;
- #endif
-@@ -142,7 +142,7 @@ static int sun_init(const char *param, i
- 	log_message(LOG_DEFAULT, "Playing 8 bit ulaw at 8000Hz");
-     }
-     sun_bufsize = (*fragsize)*(*fragnr);
--#if !defined(__NETBSD__)
-+#if !defined(__NetBSD__)
-     sun_written = 0;
- #endif
-     sun_channels = *channels;
-@@ -171,7 +171,7 @@ static int sun_write(SWORD *pbuf, size_t
- 	if (now <= 0)
- 	    return 1;
-     }
--#if !defined(__NETBSD__)
-+#if !defined(__NetBSD__)
-     sun_written += nr;
- #endif
- 
 @@ -204,7 +204,7 @@ static void sun_close(void)
      sun_fd = -1;
      sun_8bit = 0;
