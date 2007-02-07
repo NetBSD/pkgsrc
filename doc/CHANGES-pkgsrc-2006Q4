@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.31 2007/02/07 16:38:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.32 2007/02/07 23:40:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -77,3 +77,5 @@ Pullup ticket 2015 - requested by tron
 security update for wireshark
 Pullup ticket 2016 - requested by adrianp
 security update for bugzilla
+Pullup ticket 2009 - requested by obache
+build fix for octave-forge
