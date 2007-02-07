@@ -1,49 +1,13 @@
-$NetBSD: patch-ag,v 1.7 2006/10/16 22:09:39 wiz Exp $
+$NetBSD: patch-ag,v 1.8 2007/02/07 19:43:29 wiz Exp $
 
---- configure.orig	2006-01-08 21:31:51.000000000 +0100
-+++ configure	2006-10-14 04:08:10.000000000 +0200
-@@ -1319,7 +1319,7 @@ VICE_VERSION_BUILD=0
+--- configure.orig	2007-01-21 01:44:51.000000000 +0000
++++ configure
+@@ -23531,7 +23531,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
  
  
- 
--if test x"$VICE_VERSION_BUILD" == "x" -o x"$VICE_VERSION_BUILD" == "x0" ; then
-+if test x"$VICE_VERSION_BUILD" = "x" -o x"$VICE_VERSION_BUILD" = "x0" ; then
-   VICE_VERSION=$VICE_VERSION_MAJOR"."$VICE_VERSION_MINOR
- else
-   VICE_VERSION=$VICE_VERSION_MAJOR"."$VICE_VERSION_MINOR"."$VICE_VERSION_BUILD
-@@ -1719,7 +1719,7 @@ INSTALL_STRIP_PROGRAM="\${SHELL} \$(inst
-           ac_config_headers="$ac_config_headers src/config.h"
+-VICEDIR="$PREFIX/lib/vice";
++VICEDIR="$PREFIX/share/vice";
  
  
--if test x"$VICE_VERSION_BUILD" == "x" -o x"$VICE_VERSION_BUILD" == "x0" ; then
-+if test x"$VICE_VERSION_BUILD" = "x" -o x"$VICE_VERSION_BUILD" = "x0" ; then
-   VERSION_RC=$VICE_VERSION_MAJOR","$VICE_VERSION_MINOR",0,0"
- else
-   VERSION_RC=$VICE_VERSION_MAJOR","$VICE_VERSION_MINOR","$VICE_VERSION_BUILD",0"
-@@ -10937,7 +10937,7 @@ done
-   fi
- fi
- 
--if test x"$is_beos" == "xyes"; then
-+if test x"$is_beos" = "xyes"; then
- 
- 
-   BEOS_NETWORK_HEADERS_PRESENT=yes
-@@ -19748,7 +19748,7 @@ _ACEOF
- 
- elif [ x"${enable_gnomeui}" = x"yes" ] ; then
- 
--  LIBS="${LIBS} `gnome-config --libs gnomeui`"
-+  LIBS="${LIBS} `pkg-config --libs libgnomeui-2.0`"
- 
- 
- cat >>confdefs.h <<\_ACEOF
-@@ -20509,7 +20509,7 @@ if test x"$is_dos" != "xyes" -a x"$is_wi
-     ARCH_INCLUDES="-I\$(top_srcdir)/src/arch/unix"
-   else
-     ARCH_LIBS="$ARCH_DIR/x11/gnome/libgnomeui.a $ARCH_DIR/libarch.a $ARCH_DIR/x11/libx11ui.a $ARCH_DIR/x11/gnome/libgnomeui.a $ARCH_DIR/x11/libx11ui.a $ARCH_DIR/libarch.a"
--    ARCH_INCLUDES="-I\$(top_srcdir)/src/arch/unix `gnome-config --cflags gnomeui`"
-+    ARCH_INCLUDES="-I\$(top_srcdir)/src/arch/unix `pkg-config --cflags libgnomeui-2.0`"
-   fi
- 
- 
+ if false ; then
