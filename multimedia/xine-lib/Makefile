@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2007/02/01 07:33:33 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2007/02/07 20:04:00 drochner Exp $
 
 .include "Makefile.common"
-PKGREVISION=		5
 
 COMMENT=		Multimedia player library
 
@@ -25,14 +24,16 @@ SUBST_MESSAGE.w32path=	Fixing win32 dll path.
 # Needed to fix build problems under, at least, NetBSD/amd64.
 BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
 
-.include "../../audio/flac/buildlink3.mk"
+# flac is supported internally; don't know what the plugin is good for
+#.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
-.include "../../graphics/aalib/buildlink3.mk"
+# these could be options or (better) extra plugin packages
+#.include "../../devel/SDL/buildlink3.mk"
+#.include "../../graphics/ImageMagick/buildlink3.mk"
+#.include "../../graphics/Mesa/buildlink3.mk"
+#.include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
