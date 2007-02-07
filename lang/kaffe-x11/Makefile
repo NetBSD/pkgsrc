@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/06 15:41:49 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/07 23:21:36 joerg Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
@@ -30,6 +30,8 @@ pre-build:
 
 PRINT_PLIST_AWK+= /^@dirrm/ { print "@comment in kaffe: " $$0; next; }
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
@@ -38,5 +40,7 @@ PRINT_PLIST_AWK+= /^@dirrm/ { print "@comment in kaffe: " $$0; next; }
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/kaffe/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
