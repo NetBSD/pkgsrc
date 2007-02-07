@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.347 2007/02/07 19:50:55 rmind Exp $
+$NetBSD: CHANGES-2007,v 1.348 2007/02/07 21:37:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -696,3 +696,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/sun-jre15 to 5.0.11 [abs 2007-02-07]
 	Updated emulators/vice to 1.20 [wiz 2007-02-07]
 	Added devel/geany version 0.10 [rmind 2007-02-07]
+	Added databases/p5-DBD-PgPP version 0.05 [rillig 2007-02-07]
