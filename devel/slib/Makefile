@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2006/03/20 18:15:38 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/07 19:39:52 drochner Exp $
 
-DISTNAME=	slib3a2
+DISTNAME=	slib3a4
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -8,11 +8,9 @@ DISTNAME=	slib3a2
 #
 # Also update guile-slib
 #
-PKGNAME=	slib-3.1.2
-PKGREVISION=	1
+PKGNAME=	slib-3.1.4
 CATEGORIES=	devel
-MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/ \
-		${MASTER_SITE_GNU:=jacal/}
+MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://swissnet.ai.mit.edu/~jaffer/SLIB.html
@@ -27,6 +25,11 @@ DOCDIR=		${PREFIX}/share/doc/slib
 INFO_FILES=	# PLIST
 
 INSTALLATION_DIRS=	${PKGINFODIR}
+
+SUBST_CLASSES+=		scmpath
+SUBST_STAGE.scmpath=	post-patch
+SUBST_FILES.scmpath=	guile.init
+SUBST_SED.scmpath=	"s|@PREFIX@|${PREFIX}|"
 
 do-install:
 	${INSTALL_DATA_DIR} ${SLIBDIR}

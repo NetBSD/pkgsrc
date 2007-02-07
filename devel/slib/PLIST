@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/20 18:15:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/02/07 19:39:53 drochner Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -42,6 +42,7 @@ share/slib/dbutil.scm
 share/slib/debug.scm
 share/slib/defmacex.scm
 share/slib/determ.scm
+share/slib/dft.scm
 share/slib/differ.scm
 share/slib/dirs.scm
 share/slib/dwindtst.scm
@@ -50,7 +51,6 @@ share/slib/dynwind.scm
 share/slib/elk.init
 share/slib/eval.scm
 share/slib/factor.scm
-share/slib/fft.scm
 share/slib/fluidlet.scm
 share/slib/format.scm
 share/slib/formatst.scm
@@ -67,13 +67,17 @@ share/slib/html4each.scm
 share/slib/htmlform.scm
 share/slib/http-cgi.scm
 share/slib/jscheme.init
+share/slib/limit.scm
 share/slib/lineio.scm
+share/slib/linterp.scm
 share/slib/logical.scm
 share/slib/macrotst.scm
 share/slib/macscheme.init
 share/slib/macwork.scm
 share/slib/manifest.scm
 share/slib/matfile.scm
+share/slib/math-integer.scm
+share/slib/math-real.scm
 share/slib/mbe.scm
 share/slib/minimize.scm
 share/slib/mitscheme.init
@@ -92,7 +96,6 @@ share/slib/object.scm
 share/slib/paramlst.scm
 share/slib/peanosfc.scm
 share/slib/phil-spc.scm
-share/slib/plottest.scm
 share/slib/pnm.scm
 share/slib/pp.scm
 share/slib/ppfile.scm
@@ -138,6 +141,8 @@ share/slib/sort.scm
 share/slib/soundex.scm
 share/slib/srfi-1.scm
 share/slib/srfi-2.scm
+share/slib/srfi-23.scm
+share/slib/srfi-61.scm
 share/slib/srfi-8.scm
 share/slib/srfi-9.scm
 share/slib/srfi.scm
