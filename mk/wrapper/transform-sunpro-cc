@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.24 2007/02/06 20:33:51 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.25 2007/02/07 18:25:29 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -89,9 +89,13 @@ case $arg in
 --export-dynamic |\
 -shared		) transform_to "-G" ;;
 
+# SunPro on amd64 does not know the -xcode= option (see PR 35555).
+-fpic		|\
+-Kpic		|\
+-xcode=pic13	) transform_to "-Kpic" ;;
 -fPIC		|\
--fpic		) transform_to "-Kpic" ;;
--KPIC		) transform_pass ;;
+-KPIC		|\
+-xcode=pic32	) transform_to "-KPIC" ;;
 
 # SunPro needs -mt -lpthread for POSIX threads.
 -pthread	) transform_to_and_split "-mt -lpthread" ;;
