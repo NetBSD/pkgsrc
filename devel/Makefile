@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.808 2007/02/06 18:50:55 abs Exp $
+# $NetBSD: Makefile,v 1.809 2007/02/07 19:37:37 rmind Exp $
 #
 
 COMMENT=	Development utilities
@@ -163,6 +163,7 @@ SUBDIR+=	gdb
 SUBDIR+=	gdb6
 SUBDIR+=	gdbada
 SUBDIR+=	gdl
+SUBDIR+=	geany
 SUBDIR+=	generate
 SUBDIR+=	gentle
 SUBDIR+=	gettext
