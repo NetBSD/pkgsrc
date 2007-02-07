@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/30 21:41:26 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/07 21:18:49 joerg Exp $
 #
 
 DISTNAME=		genius-0.7.6.1
@@ -19,16 +19,17 @@ USE_GNU_READLINE=	yes
 do-test:
 	(cd ${WRKSRC}/src; perl geniustest.pl)
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../x11/vte/buildlink3.mk"
-.include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtksourceview/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
