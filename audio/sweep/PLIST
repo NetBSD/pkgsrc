@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/02/07 20:18:41 drochner Exp $
 bin/sweep
 include/sweep/sweep.h
 include/sweep/sweep_filter.h
@@ -10,14 +10,14 @@ include/sweep/sweep_typeconvert.h
 include/sweep/sweep_types.h
 include/sweep/sweep_undo.h
 include/sweep/sweep_version.h
-lib/sweep/libbyenergy.la
-lib/sweep/libecho.la
-lib/sweep/libfade.la
-lib/sweep/libladspameta.la
-lib/sweep/libnormalise.la
-lib/sweep/libreverse.la
+lib/sweep/libbyenergy.so
+lib/sweep/libecho.so
+lib/sweep/libfade.so
+lib/sweep/libladspameta.so
+lib/sweep/libnormalise.so
+lib/sweep/libreverse.so
 man/man1/sweep.1
-share/gnome/apps/Multimedia/sweep.desktop
+share/applications/sweep.desktop
 share/locale/de/LC_MESSAGES/sweep.mo
 share/locale/el/LC_MESSAGES/sweep.mo
 share/locale/en_AU/LC_MESSAGES/sweep.mo
@@ -27,10 +27,10 @@ share/locale/hu/LC_MESSAGES/sweep.mo
 share/locale/it/LC_MESSAGES/sweep.mo
 share/locale/pl/LC_MESSAGES/sweep.mo
 share/locale/ru/LC_MESSAGES/sweep.mo
-share/pixmaps/sweep.png
-share/sweep/sweep_logo.ppm
+share/pixmaps/sweep.svg
+share/sweep/sweep_splash.png
 @dirrm share/sweep
-@comment in xdg-x11-dirs: @dirrm share/pixmaps
-@comment in gnome-dirs: @dirrm share/gnome/apps/Multimedia
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/sweep
 @dirrm include/sweep
