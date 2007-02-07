@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/10/15 12:36:05 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2007/02/07 16:38:02 salo Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Auth.pm
@@ -73,6 +73,7 @@ share/bugzilla/describekeywords.cgi
 share/bugzilla/docs/html/Bugzilla-Guide.html
 share/bugzilla/docs/html/about.html
 share/bugzilla/docs/html/administration.html
+share/bugzilla/docs/html/attachments.html
 share/bugzilla/docs/html/bug_page.html
 share/bugzilla/docs/html/bugreports.html
 share/bugzilla/docs/html/classifications.html
@@ -87,9 +88,9 @@ share/bugzilla/docs/html/cust-change-permissions.html
 share/bugzilla/docs/html/cust-hooks.html
 share/bugzilla/docs/html/cust-templates.html
 share/bugzilla/docs/html/customization.html
-share/bugzilla/docs/html/dbdoc.html
 share/bugzilla/docs/html/dbmodify.html
 share/bugzilla/docs/html/disclaimer.html
+share/bugzilla/docs/html/edit-values.html
 share/bugzilla/docs/html/extraconfig.html
 share/bugzilla/docs/html/faq.html
 share/bugzilla/docs/html/flags-overview.html
@@ -117,7 +118,6 @@ share/bugzilla/docs/html/installation.html
 share/bugzilla/docs/html/installing-bugzilla.html
 share/bugzilla/docs/html/integration.html
 share/bugzilla/docs/html/lifecycle.html
-share/bugzilla/docs/html/list.html
 share/bugzilla/docs/html/milestones.html
 share/bugzilla/docs/html/modules-manual-download.html
 share/bugzilla/docs/html/modules-manual-instructions.html
@@ -129,7 +129,6 @@ share/bugzilla/docs/html/os-specific.html
 share/bugzilla/docs/html/parameters.html
 share/bugzilla/docs/html/paranoid-security.html
 share/bugzilla/docs/html/patches.html
-share/bugzilla/docs/html/patchviewer.html
 share/bugzilla/docs/html/products.html
 share/bugzilla/docs/html/query.html
 share/bugzilla/docs/html/quips.html
@@ -156,7 +155,7 @@ share/bugzilla/docs/html/using.html
 share/bugzilla/docs/html/versions.html
 share/bugzilla/docs/html/voting.html
 share/bugzilla/docs/html/whining.html
-share/bugzilla/docs/html/x757.html
+share/bugzilla/docs/html/x763.html
 share/bugzilla/duplicates.cgi
 share/bugzilla/duplicates.xul
 share/bugzilla/editclassifications.cgi
