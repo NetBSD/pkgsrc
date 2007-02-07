@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.14 2007/02/05 14:27:34 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.15 2007/02/07 23:10:23 rillig Exp $
 #
 # Public targets:
 #
@@ -103,7 +103,7 @@ _show-dbginfo-config.h:
 	  [ ! -f config.h ] || { print_config_h config.h; continue; };	\
 	  [ ! -f config.status ] || {					\
 	    : "autoconf 2.59";						\
-	    chs=`sed -n 's,^config_headers="\(.*\)".*,\1,p' config.status || true`; \
+	    chs=`sed -n 's,^config_headers="\([^:]*\).*".*,\1,p' config.status || true`; \
 	    : "autoconf 2.13";						\
 	    [ "$$chs" ] || chs=`sed -n 's,^  CONFIG_HEADERS="\([^:"]*\).*,\1,p' config.status || true`; \
 	    done=no;							\
