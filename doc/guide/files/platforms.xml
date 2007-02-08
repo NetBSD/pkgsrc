@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.52 2007/01/22 13:14:41 tron Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.53 2007/02/08 23:25:10 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -795,81 +795,38 @@ file and inspect the contents before extracting it.
 	  - Sun WorkShop Compilers common components</para></listitem>
 	</itemizedlist>
 
-	<para>You should set <varname>CC</varname>, <varname>CXX</varname> and
-	optionally, <varname>CPP</varname> in <filename>/etc/mk.conf</filename>,
-	e.g.:</para>
+	<para>You should set the following variables in your
+	<filename>mk.conf</filename> file:</para>
 
-	<programlisting>
-	  CC=     cc
-	  CXX=    CC
-	  CPP=    /usr/ccs/lib/cpp
-	</programlisting>
+<programlisting>
+    CC=     cc
+    CXX=    CC
+    CPP=    cc -E
+    CXXCPP= CC -E
+</programlisting>
+
+	<note><para>The <varname>CPP</varname> setting might break some
+	packages that use the C preprocessor for processing things other
+	than C source code.</para></note>
 
       </sect3>
       <sect3 id="solaris-sunpro-64">
 	<title>Building 64-bit binaries with SunPro</title>
 
-	<para>Building 64-bit binaries is a little trickier. First, you
-	need to bootstrap pkgsrc in 64-bit mode. One problem here is
-	that while building one of the programs in the bootstrap kit
-	(<filename>bmake</filename>), the <varname>CFLAGS</varname>
-	variable is not honored, even if it is set in the environment.
-	To work around this bug, you can create a simple shell script
-	called <filename>cc64</filename> and put it somewhere in the
-	<varname>PATH</varname>:</para>
-
-	<programlisting>
-	  #! /bin/sh
-	  exec /opt/SUNWspro/bin/cc -xtarget=ultra -xarch=v9 ${1+"$@"}
-	</programlisting>
-
-	<para>Then, pass the definition for <varname>CC</varname> in the
-	environment of the <command>bootstrap</command> command:</para>
-
-	<programlisting>
-	  &uprompt; <userinput>cd bootstrap</userinput>
-	  &uprompt; <userinput>CC=cc64 ./bootstrap</userinput>
-	</programlisting>
-
-	<para>After bootstrapping, there are two alternative ways,
-	depending on whether you want to find bugs in packages or get
-	your system ready quickly. If you just want a running system,
-	add the following lines to your <filename>mk.conf</filename>
+	<para>To build 64-bit packages, you just need to have the
+	following lines in your <filename>mk.conf</filename>
 	file:</para>
 
-	<programlisting>
-	  CC=                     cc64
-	  CXX=                    CC64
-	  PKGSRC_COMPILER=        sunpro
-	</programlisting>
+<programlisting>
+    PKGSRC_COMPILER=        sunpro
+    ABI=                    64
+</programlisting>
 
-	<para>This way, all calls to the compiler will be intercepted by
-	the above wrapper and therefore get the necessary ABI options
-	automatically. (Don't forget to create the shell script
-	<filename>CC64</filename>, too.)</para>
-
-	<para>To find packages that ignore the user-specified
-	<varname>CFLAGS</varname> and <varname>CXXFLAGS</varname>, add
-	the following lines to your <filename>mk.conf</filename>
-	file:</para>
-
-	<programlisting>
-	  CC=                     cc
-	  CXX=                    CC
-	  PKGSRC_COMPILER=        sunpro
-	  CFLAGS=                 -xtarget=ultra -xarch=v9
-	  CXXFLAGS=               -xtarget=ultra -xarch=v9
-	  LDFLAGS=                -xtarget=ultra -xarch=v9
-	</programlisting>
-
-	<para>Packages that don't use the flags provided in the
-	configuration file will try to build 32-bit binaries and fail
-	during linking. Detecting this is useful to prevent bugs on
-	other platforms where the error would not show up but pass
-	silently.</para>
+	<note><para>This setting has been tested for the SPARC
+	architecture. Intel and AMD machines need some more
+	work.</para></note>
 
       </sect3>
-
       <sect3 id="plat.sunos.problems"><title>Common problems</title>
 
       <para>Sometimes, when using <command>libtool</command>,
