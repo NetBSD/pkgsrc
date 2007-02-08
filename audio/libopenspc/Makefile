@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/26 16:44:00 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/08 15:43:06 tv Exp $
 #
 
 DISTNAME=	OpenSPC_snap-20050926
@@ -15,4 +15,5 @@ WRKSRC=		${WRKDIR}/libopenspc-0.3.99
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
