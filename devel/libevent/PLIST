@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/19 15:07:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/08 17:06:28 xtraeme Exp $
 include/event.h
+include/evdns.h
+include/evhttp.h
 lib/libevent.la
 man/man3/event.3
+man/man3/evdns.3
