@@ -30,6 +30,6 @@ else
 	[ -z "${qfilters}" ] && qfilters="@CAT@"
 fi
 
-qfilter_cmd="@PREFIX@/bin/qmail-qfilter `@ECHO@ ${qfilters} | @SED@ -e 's| | -- |g'`"
+qfilter_cmd="@LOCALBASE@/bin/qmail-qfilter `@ECHO@ ${qfilters} | @SED@ -e 's| | -- |g'`"
 
 exec ${qfilter_cmd}
