@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/02/07 21:18:49 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/08 18:27:22 drochner Exp $
 #
 
-DISTNAME=		genius-0.7.6.1
+DISTNAME=		genius-0.7.7
 CATEGORIES=		math
 MASTER_SITES=		http://ftp.5z.com/pub/genius/
 
@@ -30,6 +30,5 @@ do-test:
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
