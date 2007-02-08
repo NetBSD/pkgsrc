@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.350 2007/02/08 17:07:24 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.351 2007/02/08 20:03:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -699,3 +699,23 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/p5-DBD-PgPP version 0.05 [rillig 2007-02-07]
 	Updated mail/spamassassin to 3.1.7nb1 [ghen 2007-02-08]
 	Updated devel/libevent to 1.2a [xtraeme 2007-02-08]
+	Updated databases/postgresql82 to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql82-client to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql82-server to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql82-plperl to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql82-plpython to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql82-pltcl to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql82-tsearch2 to 8.2.3 [adam 2007-02-08]
+	Updated databases/postgresql81 to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql81-client to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql81-server to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql81-plperl to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql81-plpython to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql81-pltcl to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql81-tsearch2 to 8.1.8 [adam 2007-02-08]
+	Updated databases/postgresql80 to 8.0.12 [adam 2007-02-08]
+	Updated databases/postgresql80-client to 8.0.12 [adam 2007-02-08]
+	Updated databases/postgresql80-server to 8.0.12 [adam 2007-02-08]
+	Updated databases/postgresql80-plperl to 8.0.12 [adam 2007-02-08]
+	Updated databases/postgresql80-plpython to 8.0.12 [adam 2007-02-08]
+	Updated databases/postgresql80-pltcl to 8.0.12 [adam 2007-02-08]
