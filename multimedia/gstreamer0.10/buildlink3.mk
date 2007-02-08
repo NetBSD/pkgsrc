@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:11:01 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/02/08 21:27:14 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GSTREAMER0.10_BUILDLINK3_MK:=	${GSTREAMER0.10_BUILDLINK3_MK}+
@@ -19,6 +19,16 @@ BUILDLINK_PKGSRCDIR.gstreamer0.10?=	../../multimedia/gstreamer0.10
 PRINT_PLIST_AWK+=	/^@dirrm (include|lib)\/gstreamer-0.10(\/gst)?$$/ \
 			    { print "@comment in gstreamer0.10: " $$0; next; }
 .endif	# GSTREAMER0.10_BUILDLINK3_MK
+
+.if !defined(PKG_BUILD_OPTIONS.gstreamer)
+PKG_BUILD_OPTIONS.gstreamer!= \
+	cd ${BUILDLINK_PKGSRCDIR.gstreamer0.10} && \
+	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.gstreamer:Mgstcheck)
+.include "../../devel/check/buildlink3.mk"
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
