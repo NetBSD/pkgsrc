@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/08/29 14:01:51 tv Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/08 17:06:28 xtraeme Exp $
 #
 
-DISTNAME=	libevent-1.1b
+DISTNAME=	libevent-1.2a
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 
