@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.349 2007/02/08 09:31:09 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.350 2007/02/08 17:07:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/geany version 0.10 [rmind 2007-02-07]
 	Added databases/p5-DBD-PgPP version 0.05 [rillig 2007-02-07]
 	Updated mail/spamassassin to 3.1.7nb1 [ghen 2007-02-08]
+	Updated devel/libevent to 1.2a [xtraeme 2007-02-08]
