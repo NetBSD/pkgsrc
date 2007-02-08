@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/24 19:55:59 epg Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/08 15:49:06 tv Exp $
 #
 
 DISTNAME=	serf-0.1.0
@@ -22,4 +22,5 @@ TEST_TARGET=		check
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
