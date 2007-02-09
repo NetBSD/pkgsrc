@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.352 2007/02/08 21:54:20 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.353 2007/02/09 02:41:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -732,3 +732,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/gxine to 0.5.11 [drochner 2007-02-08]
 	Updated multimedia/xine-lib to 1.1.4 [drochner 2007-02-08]
 	Updated devel/slib to 3a4 [drochner 2007-02-08]
+	Updated security/amavisd-new to 2.4.5 [obache 2007-02-09]
