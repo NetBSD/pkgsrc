@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/09 21:20:51 drochner Exp $
+lib/bmp/Input/libbmp-mac.la
+@comment in bmp: @dirrm lib/bmp/Input
