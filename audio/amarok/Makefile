@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2007/02/07 20:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2007/02/09 20:32:38 drochner Exp $
 
 DISTNAME=		amarok-1.4.5
+PKGREVISION=		1
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_KDE:=amarok/1.4.5/src/}
 EXTRACT_SUFX=		.tar.bz2
@@ -65,7 +66,7 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../multimedia/kdemultimedia3/buildlink3.mk"
-.include "../../multimedia/mpeg4ip/buildlink3.mk"
+.include "../../multimedia/libmp4v2/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
