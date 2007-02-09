@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2005/10/09 03:23:11 ben Exp $
+$NetBSD: patch-ac,v 1.5 2007/02/09 20:10:50 drochner Exp $
 
---- Makefile.am.orig	2004-02-06 08:04:39.000000000 -0800
+--- Makefile.am.orig	2004-02-06 17:04:39.000000000 +0100
 +++ Makefile.am
 @@ -1,8 +1,10 @@
 -SUBDIRS = libfaad common frontend plugins
-+SUBDIRS = libfaad common frontend plugins include
++SUBDIRS = libfaad common frontend include
  
  EXTRA_DIST = faad2.spec
  

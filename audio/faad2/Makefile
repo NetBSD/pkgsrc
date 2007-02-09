@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2006/07/27 17:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/02/09 20:10:50 drochner Exp $
 
 DISTNAME=	faad2-2.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 
@@ -40,6 +40,5 @@ pre-configure:
 		autoconf;						\
 	done
 
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../multimedia/mpeg4ip/buildlink3.mk"
+.include "../../multimedia/libmp4v2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
