@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/25 14:51:47 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/09 18:15:24 joerg Exp $
 #
 
 DISTNAME=		xine-ui-0.99.4
@@ -19,6 +19,8 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	yes
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
@@ -29,6 +31,7 @@ USE_GNU_READLINE=	yes
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
