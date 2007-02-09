@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/09 19:57:48 drochner Exp $
+
+--- configure.orig	2005-11-11 00:26:00.000000000 +0000
++++ configure
+@@ -1570,7 +1570,7 @@ echo "$as_me: error: Please run bootstra
+    { (exit 1); exit 1; }; }
+    exit -1
+ fi
+-rm -f config.h >&/dev/null
++rm -f config.h >/dev/null
+ touch config.h
+ ac_aux_dir=
+ for ac_dir in $srcdir $srcdir/.. $srcdir/../..; do
