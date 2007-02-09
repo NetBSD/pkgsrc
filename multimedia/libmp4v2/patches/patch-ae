@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/02/09 19:57:48 drochner Exp $
+
+--- include/mpeg4ip.h.orig	2006-06-08 12:22:14.000000000 +0900
++++ include/mpeg4ip.h	2006-06-08 12:23:04.000000000 +0900
+@@ -233,7 +233,8 @@
+ 
+ #define ADV_SPACE(a) {while (isspace(*(a)) && (*(a) != '\0'))(a)++;}
+ 
+-#ifndef HAVE_GTK
++#ifndef __G_LIB_H__
++/* #ifndef HAVE_GTK */
+ typedef char gchar;
+ typedef unsigned char guchar;
+ 
