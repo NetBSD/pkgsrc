@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2007/02/06 00:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.350 2007/02/09 21:04:49 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -19,6 +19,7 @@ SUBDIR+=	bladeenc
 SUBDIR+=	bmp
 SUBDIR+=	bmp-esound
 SUBDIR+=	bmp-musepack
+SUBDIR+=	bmpx
 SUBDIR+=	cam
 SUBDIR+=	cd-discid
 SUBDIR+=	cdd
