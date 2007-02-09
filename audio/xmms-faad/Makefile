@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/08/06 10:39:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/09 20:10:50 drochner Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=faac/}
 
@@ -44,6 +44,6 @@ pre-configure:
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../multimedia/mpeg4ip/buildlink3.mk"
+.include "../../multimedia/libmp4v2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
