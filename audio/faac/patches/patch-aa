@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/12/28 23:02:10 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2007/02/09 20:27:16 drochner Exp $
 
---- frontend/main.c.orig	2004-05-16 03:43:03.000000000 +0200
-+++ frontend/main.c	2004-05-16 03:44:22.000000000 +0200
-@@ -39,11 +39,16 @@
+--- frontend/main.c.orig	2004-12-08 12:07:17.000000000 +0100
++++ frontend/main.c
+@@ -39,6 +39,7 @@
  #include <windows.h>
  #include <fcntl.h>
  #else
@@ -10,13 +10,3 @@ $NetBSD: patch-aa,v 1.2 2004/12/28 23:02:10 minskim Exp $
  #include <signal.h>
  #endif
  
--#if defined(__unix__) || defined(__APPLE__)
-+#if defined(__unix__) || defined(BSD) || defined(__APPLE__)
-+#ifdef __NetBSD__
-+#include <time.h>
-+#else
- #include <sys/time.h>
-+#endif
- #include <sys/resource.h>
- #include <unistd.h>
- #endif
