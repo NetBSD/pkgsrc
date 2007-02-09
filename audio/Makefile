@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.350 2007/02/09 21:04:49 drochner Exp $
+# $NetBSD: Makefile,v 1.351 2007/02/09 21:23:14 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -18,6 +18,7 @@ SUBDIR+=	aumix-gtk
 SUBDIR+=	bladeenc
 SUBDIR+=	bmp
 SUBDIR+=	bmp-esound
+SUBDIR+=	bmp-mac
 SUBDIR+=	bmp-musepack
 SUBDIR+=	bmpx
 SUBDIR+=	cam
@@ -338,6 +339,7 @@ SUBDIR+=	xmms-iris
 SUBDIR+=	xmms-jakdaw
 SUBDIR+=	xmms-jess
 SUBDIR+=	xmms-liveice
+SUBDIR+=	xmms-mac
 SUBDIR+=	xmms-mad
 SUBDIR+=	xmms-madspin
 SUBDIR+=	xmms-meta-input
