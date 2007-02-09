@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/09 21:21:34 drochner Exp $
+lib/xmms/Input/libxmms-mac.la
