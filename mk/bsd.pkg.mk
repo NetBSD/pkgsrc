@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1905 2007/01/11 12:11:03 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1906 2007/02/09 01:57:17 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -638,7 +638,7 @@ _ROOT_CMD=	cd ${.CURDIR} &&					\
 			PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}		\
 		${MAKE} ${MAKEFLAGS}					\
 			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\
-			su-${.TARGET} ${MAKEFLAGS.${.TARGET}}
+			su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}
 
 .PHONY: su-target
 su-target: .USE
