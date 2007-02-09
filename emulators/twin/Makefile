@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/01/31 00:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/09 15:15:49 joerg Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -31,5 +31,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/debugger.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/rc/rc ${PREFIX}/bin
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
