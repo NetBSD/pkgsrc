@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.21 2006/12/28 12:12:57 joerg Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.22 2007/02/10 08:59:07 rillig Exp $
 #
 # User-settable variables:
 #
@@ -118,7 +118,7 @@ PGPKGSRCDIR=	../../databases/postgresql80-client
 .else
 # force an error
 PGSQL_TYPE=		none
-PKG_SKIP_REASON+=	"${_PGSQL_VERSION} is not a valid package"
+PKG_FAIL_REASON+=	"${_PGSQL_VERSION} is not a valid package"
 .endif
 
 .include "${PGPKGSRCDIR}/buildlink3.mk"
