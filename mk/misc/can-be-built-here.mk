@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.3 2006/12/03 21:58:20 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.4 2007/02/10 09:01:05 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -117,6 +117,17 @@ _CBBH.skip=		yes
 _CBBH.skip=		no
 .endif
 
+# Check PKG_INSTALLATION_TYPES
+_CBBH_CHECKS+=		pkgviews
+_CBBH_MSGS.pkgviews=	"This package is not available for pkgviews."
+
+_CBBH.pkgviews=		yes
+.if ${PKG_INSTALLATION_PREFS} == "pkgviews overwrite"
+.  if empty(PKG_INSTALLATION_TYPES:Mpkgviews)
+_CBBH.pkgviews=		no
+.  endif
+.endif
+
 # Collect and combine the results
 _CBBH=			yes
 _CBBH_MSGS=		# none
@@ -140,9 +151,7 @@ _cbbh:
 	@${FALSE}
 
 .if !defined(NO_SKIP) && ${_CBBH} == "no"
-# FIXME: check-vulnerable is only used here because it is depended
-# upon by each of the "main" pkgsrc targets. Probably its name should be
-# generalized, and both check-vulnerable and _cbbh should depend
-# on the generalized target.
-check-vulnerable: _cbbh
+# XXX: bootstrap-depends is only used here because it is depended
+# upon by each of the "main" pkgsrc targets.
+bootstrap-depends: _cbbh
 .endif
