@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2006/12/17 17:17:19 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/10 04:53:08 obache Exp $
 
 DISTNAME=	most-4.9.0
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
-		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/most/
+MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/
 
 MAINTAINER=	rhwang@bigpanda.com
 HOMEPAGE=	http://www.jedsoft.org/most/
