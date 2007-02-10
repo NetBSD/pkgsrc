@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.24 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.25 2007/02/10 08:59:07 rillig Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  The following
@@ -90,7 +90,7 @@ PTHREAD_TYPE=	native
 .  if !empty(PTHREAD_OPTS:Mnative)
 PTHREAD_TYPE=	none
 .    if !empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
-PKG_SKIP_REASON= "${PKGNAME} requires a native pthreads implementation."
+PKG_FAIL_REASON= "${PKGNAME} requires a native pthreads implementation."
 .    endif
 .  else
 PTHREAD_TYPE=	none
@@ -101,7 +101,7 @@ PTHREAD_TYPE=	${_PKG_PTHREAD}
 .    endfor
 .    if ${PTHREAD_TYPE} == "none" && \
 	!empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
-PKG_SKIP_REASON= "${PKGNAME} requires a working pthreads implementation."
+PKG_FAIL_REASON= "${PKGNAME} requires a working pthreads implementation."
 .    endif
 .  endif
 .endif
@@ -130,7 +130,7 @@ BUILDLINK_LIBS.pthread=			${BUILDLINK_LIBS.${_PKG_PTHREAD}}
 BUILDLINK_AUTO_VARS.${_PKG_PTHREAD}?=	${PTHREAD_AUTO_VARS}
 BUILDLINK_AUTO_VARS.pthread=		${BUILDLINK_AUTO_VARS.${_PKG_PTHREAD}}
 .  else
-PKG_SKIP_REASON= ${PKGNAME:Q}" needs pthreads, but "${_PKG_PTHREAD_BUILDLINK3_MK:Q}" is missing."
+PKG_FAIL_REASON= ${PKGNAME:Q}" needs pthreads, but "${_PKG_PTHREAD_BUILDLINK3_MK:Q}" is missing."
 .  endif
 .endif
 

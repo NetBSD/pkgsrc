@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.40 2007/01/22 20:47:06 rillig Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.41 2007/02/10 08:59:07 rillig Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -63,7 +63,7 @@ PREFIX=			${LOCALBASE}
 .endif
 
 .if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(INSTALLATION_PREFIX)
-PKG_SKIP_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
+PKG_FAIL_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
 .endif
 
 ############################################################################

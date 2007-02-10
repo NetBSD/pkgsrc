@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.12 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.13 2007/02/10 08:59:07 rillig Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -25,7 +25,7 @@ BUILDLINK_AUTO_VARS.dl=		${DL_AUTO_VARS}
 .  include "../../devel/dlcompat/buildlink3.mk"
 BUILDLINK_AUTO_VARS.dlcompat=	${DL_AUTO_VARS}
 .else
-PKG_SKIP_REASON=	"${PKGNAME} requires a working dlopen()."
+PKG_FAIL_REASON=	"${PKGNAME} requires a working dlopen()."
 .endif
 
 .if !empty(DLOPEN_BUILDLINK3_MK:M+)

@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.52 2007/01/30 17:47:39 joerg Exp $
+# $NetBSD: java-vm.mk,v 1.53 2007/02/10 08:59:07 rillig Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -212,7 +212,7 @@ _PKG_JVM=	${_PKG_JVM_FIRSTACCEPTED}
 #
 .if !defined(_PKG_JVM)
 # force an error
-PKG_SKIP_REASON=	"no acceptable JVM found"
+PKG_FAIL_REASON=	"no acceptable JVM found"
 _PKG_JVM=		"none"
 .endif
 
