@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:30 jlam Exp $
-bin/aaxine
+@comment $NetBSD: PLIST,v 1.6 2007/02/11 17:19:49 drochner Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
 bin/xine-check
 bin/xine-remote
-man/man1/aaxine.1
 man/man1/xine-bugreport.1
 man/man1/xine-check.1
 man/man1/xine-remote.1
