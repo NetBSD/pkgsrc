@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/11 01:22:51 reed Exp $
+bin/xwud
+man/man1/xwud.1
