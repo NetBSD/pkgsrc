@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2006/09/11 13:44:27 tron Exp $
+# $NetBSD: Makefile,v 1.113 2007/02/15 06:45:35 tron Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -52,8 +52,8 @@ MESSAGE_SRC=		${PKGDIR}/MESSAGE
 .include "options.mk"
 
 # The defaults for these values are set in pkgsrc/mk/defaults/mk.conf.
-#IMAP_US_CCLIENT_MBOX_FMT?=	unix
-#IMAP_US_MAILSPOOLHOME?=	.Mailbox
+#IMAP_UW_CCLIENT_MBOX_FMT?=	unix
+#IMAP_UW_MAILSPOOLHOME?=	.Mailbox
 BUILD_DEFS+=			IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_MAILSPOOLHOME
 
 CCLIENT_LIB=		libc-client.la
