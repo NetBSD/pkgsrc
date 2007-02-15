@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/03/20 18:21:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/02/15 14:27:48 joerg Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -258,6 +258,7 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r2.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r3.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r4.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/domain.h
+lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/dragonfly.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/esix.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/esix5r4.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/ewsux5r4.h
