@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2006/12/01 21:16:02 rillig Exp $
+# $NetBSD: Makefile.common,v 1.41 2007/02/15 21:25:04 rillig Exp $
 #
 
 GNOME_VFS2_VERSION=	2.16.3
@@ -23,12 +23,12 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-cdda
-CONFIGURE_ARGS+= 	--disable-fam
-CONFIGURE_ARGS+= 	--disable-gtk
-CONFIGURE_ARGS+= 	--disable-howl
-CONFIGURE_ARGS+= 	--disable-openssl
-CONFIGURE_ARGS+= 	--disable-samba
-CONFIGURE_ARGS+= 	--enable-gnutls
+CONFIGURE_ARGS+=	--disable-fam
+CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--disable-howl
+CONFIGURE_ARGS+=	--disable-openssl
+CONFIGURE_ARGS+=	--disable-samba
+CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+=	--enable-platform-gnome-2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
@@ -78,11 +78,11 @@ BUILD_TARGET=		lib${GNOME_VFS2_NAME}.la
 BUILD_DIRS=		${WRKSRC}/modules
 
 # Fix paths to already installed libraries (by the gnome-vfs2 package).
-SUBST_CLASSES+=         libs
-SUBST_MESSAGE.libs=     Fixing path to dependent libraries.
-SUBST_STAGE.libs=       pre-configure
-SUBST_FILES.libs=       modules/Makefile.in
-SUBST_SED.libs=         -e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs2}/lib/libgnomevfs-2.la|g'
+SUBST_CLASSES+=		libs
+SUBST_MESSAGE.libs=	Fixing path to dependent libraries.
+SUBST_STAGE.libs=	pre-configure
+SUBST_FILES.libs=	modules/Makefile.in
+SUBST_SED.libs=		-e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs2}/lib/libgnomevfs-2.la|g'
 
 BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=${GNOME_VFS2_VERSION}
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
