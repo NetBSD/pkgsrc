@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/28 18:12:29 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/15 14:38:33 joerg Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -45,11 +45,15 @@ post-install:
 		-s ',^\./man$$,,' -s ',^\./man/.*,,'	\
 		. ${PREFIX}/share/doc/xcin
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/db3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/libchewing/buildlink3.mk"
 .include "../../inputmethod/libtabe/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
