@@ -1,31 +1,34 @@
-# $NetBSD: Makefile,v 1.29 2006/07/29 05:50:36 adrianp Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/15 15:00:21 rillig Exp $
 #
 
 DISTNAME=	awstats-6.6
 PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
+# awstats are in the habit of updating the tarball but not incrementing
+# the version or name of the tarball. DIST_SUBDIR must be set like this
+# to avoid checksum errors.
+#
+DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
-# awstats are in the habit of updating the tarball but not incrementing
-# the version or name of the tarball. DIST_SUBDIR must be set like this
-# to avoid checksum errors.
-#
-DIST_SUBDIR=	${PKGNAME}
 NO_BUILD=	YES
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	tools/*.pl		\
 		wwwroot/cgi-bin/*.pl
 
+.include "../../mk/bsd.prefs.mk"
+
 APACHE_USER?=	www
 APACHE_GROUP?=	www
+BUILD_DEFS+=	APACHE_USER APACHE_GROUP VARBASE
 
 # OWN_DIRS=		${VARBASE}/awstats
-OWN_DIRS_PERMS+= 	${VARBASE}/awstats ${APACHE_USER} ${APACHE_GROUP} 0700
+OWN_DIRS_PERMS+=	${VARBASE}/awstats ${APACHE_USER} ${APACHE_GROUP} 0700
 PKG_SYSCONFSUBDIR=	awstats
 
 SUBST_CLASSES+=		conf
@@ -64,26 +67,26 @@ do-install:
 		${PREFIX}/awstats/cgi-bin/plugins
 .for d in lang lib
 	cd ${WRKSRC}/wwwroot/cgi-bin					\
-		&& ${PAX} -rwpppm ${d} ${PREFIX}/awstats/cgi-bin/
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/cgi-bin/${d}
-	${FIND} ${PREFIX}/awstats/cgi-bin/${d} -type d -print	\
-		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/awstats/cgi-bin/${d} -type f -print	\
-		| ${XARGS} ${CHMOD} ${SHAREMODE}
+		&& pax -rwpppm ${d} ${PREFIX}/awstats/cgi-bin/
+	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/cgi-bin/${d}
+	find ${PREFIX}/awstats/cgi-bin/${d} -type d -print	\
+		| xargs chmod ${PKGDIRMODE}
+	find ${PREFIX}/awstats/cgi-bin/${d} -type f -print	\
+		| xargs chmod ${SHAREMODE}
 .endfor
 .for d in classes css icon js
-	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm ${d} ${PREFIX}/awstats/
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/${d}
-	${FIND} ${PREFIX}/awstats/${d} -type d -print	\
-		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/awstats/${d} -type f -print	\
-		| ${XARGS} ${CHMOD} ${SHAREMODE}
+	cd ${WRKSRC}/wwwroot && pax -rwpppm ${d} ${PREFIX}/awstats/
+	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/${d}
+	find ${PREFIX}/awstats/${d} -type d -print	\
+		| xargs chmod ${PKGDIRMODE}
+	find ${PREFIX}/awstats/${d} -type f -print	\
+		| xargs chmod ${SHAREMODE}
 .endfor
-	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/awstats/
-	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/awstats/
-	${FIND} ${PREFIX}/share/doc/awstats/ -type d -print	\
-		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/share/doc/awstats/ -type f -print	\
-		| ${XARGS} ${CHMOD} ${DOCMODE}
+	cd ${WRKSRC}/docs && pax -rwpppm . ${PREFIX}/share/doc/awstats/
+	chown -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/awstats/
+	find ${PREFIX}/share/doc/awstats/ -type d -print	\
+		| xargs chmod ${PKGDIRMODE}
+	find ${PREFIX}/share/doc/awstats/ -type f -print	\
+		| xargs chmod ${DOCMODE}
 
 .include "../../mk/bsd.pkg.mk"
