@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/15 23:23:43 joerg Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,6 @@ NO_CONFIGURE=	yes
 USE_DIRS+=	texmf-1.0
 TEX_ACCEPTED=	teTeX3
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../print/teTeX/module.mk"
 
 MAKE_ENV+=	PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:Q}
