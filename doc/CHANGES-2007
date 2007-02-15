@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.356 2007/02/15 06:43:37 tron Exp $
+$NetBSD: CHANGES-2007,v 1.357 2007/02/15 06:45:33 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -736,3 +736,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updatec cad/pcb to 20070208p1 [dmcmahill 2007-02-09]
 	Added x11/xwud version 1.0.1 [reed 2007-02-10]
 	Updated net/samba to 3.0.24 [tron 2007-02-11]
+	Updated net/mrtg to 2.15.1 [martti 2007-02-15]
+	Updated mail/postfix to 2.3.7 [martti 2007-02-15]
+	Updated mail/postfix-current to 2.4-20070214 [martti 2007-02-15]
+	Updated editors/vim-share to 7.0.195 [martti 2007-02-15]
