@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/01/09 09:31:17 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/15 14:52:58 rillig Exp $
 
 DISTNAME=		xfce-3.8.18
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/etc
 CONFIGURE_ARGS+=	--enable-imlib=${BUILDLINK_PREFIX.imlib:Q}
 CONFIGURE_ARGS+=	--disable-libiconv
 CONFIGURE_ARGS+=	--disable-audiofile
+
+REPLACE_SH+=		scripts/CDE2Xfcepal other/Xclients
 
 # work around bug in configure script
 #CONFIGURE_ENV+=		gt_cv_func_gettext_libintl="yes"
