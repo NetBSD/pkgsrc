@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:57 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/15 23:21:06 joerg Exp $
 
 DISTNAME=	xenvstat-20041127
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,11 +15,9 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 
-LIBS+=		-lXmu -lXext -lXt -lX11 -lm
+LIBS+=		-lXt -lX11 -lm
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
@@ -32,4 +30,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xenvstat ${PREFIX}/bin/xenvstat
 	${INSTALL_DATA} ${WRKSRC}/Xenvstat ${PREFIX}/lib/X11/app-defaults
 
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
