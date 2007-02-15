@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.3 2007/02/15 18:26:14 joerg Exp $
+
+--- config/arch.def.orig	2007-02-15 15:28:24.000000000 +0000
++++ config/arch.def
+@@ -463,6 +463,17 @@
+ #define MacroFile InterViews/iv-netbsd.cf
+ #endif /* __NetBSD__ */
+ 
++#if defined(__DragonFly__)
++#undef DRAGONFLY
++#undef dragonfly
++#define DragonFlyArchitecture
++#define ArchitectureName DragonFly
++#define architectureName dragonfly
++#define SiteDefCpu <site.def.NETBSD>
++#define MacroIncludeFile <InterViews/iv-netbsd.cf>
++#define MacroFile InterViews/iv-netbsd.cf
++#endif /* __NetBSD__ */
++
+ #if defined(__FreeBSD__)
+ #undef FREEBSD
+ #undef freebsd
