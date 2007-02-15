@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/15 14:58:21 joerg Exp $
 
 DISTNAME=		pgraf-20010131
 PKGREVISION=		1
@@ -13,8 +13,6 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMAND
 
 CONFLICTS=		pgp5-[0-9]*		# Both have a `pgps' executable
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/pgraf.h ${PREFIX}/include
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pgraf
@@ -26,4 +24,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/metagens/*.r ${WRKSRC}/tests/*	\
 		${PREFIX}/share/examples/pgraf/
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

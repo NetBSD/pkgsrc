@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/28 16:55:10 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/15 14:58:22 joerg Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -84,5 +84,4 @@ do-install:
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

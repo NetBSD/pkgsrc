@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/13 16:40:10 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/15 14:58:20 joerg Exp $
 
 DISTNAME=	dxsamples-4.4.0
 CATEGORIES=	graphics
@@ -15,5 +15,4 @@ USE_TOOLS+=	gmake makeinfo
 CONFIGURE_ARGS+=	MAKEINFO=${TOOLS_PATH.makeinfo}
 USE_X11BASE=	yes
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

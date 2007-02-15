@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/11/12 08:23:03 obache Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/15 14:58:21 joerg Exp $
 #
 
 DISTNAME=	mgl2-alpha-020
@@ -106,5 +106,7 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

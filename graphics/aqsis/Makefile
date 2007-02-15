@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/08/06 05:16:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.29 2007/02/15 14:58:19 joerg Exp $
 #
 
 DISTNAME=		aqsis-0.6.4
@@ -21,6 +21,4 @@ USE_LANGUAGES+=		c c++
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

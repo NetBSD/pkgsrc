@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 22:22:37 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/15 14:58:20 joerg Exp $
 
 DISTNAME=		g2-0.50
 CATEGORIES=		graphics
@@ -30,5 +30,5 @@ post-install:
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
