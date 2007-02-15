@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2006/11/03 07:01:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/02/15 14:27:48 joerg Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -103,6 +103,7 @@ post-extract:
 	@for f in ${EXTRA_FILES}; do \
 		${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$f; \
 	done
+	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s/
 
 post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
