@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2007/02/15 21:39:21 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/15 21:45:35 rillig Exp $
 
 DISTNAME=	sdig-0.30
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.exploits.org/sdig/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mactable.gz
@@ -16,7 +15,7 @@ SUBST_MESSAGE.sdig=	Inserting the correct prefix directory.
 SUBST_FILES.sdig=	sdig.conf
 SUBST_SED.sdig=		-e 's,\$${PREFIX},${PREFIX},g'
 
-INSTALLATION_DIRS+=	man/man8 man/man5 share/misc share/examples
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8 ${PKGMANDIR}/man5 share/misc share/examples
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/sdig.conf ${PREFIX}/share/examples/
