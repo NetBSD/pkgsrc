@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2007/01/05 19:16:39 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2007/02/15 10:00:08 rillig Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	3
@@ -17,13 +17,7 @@ USE_TOOLS+=		pkg-config unzip:run zip:run
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
-# see options.mk for an explanation of these options
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
-PKG_SUPPORTED_OPTIONS=	charset edit glib12 ncurses samba slang subshell vfs x11
-PKG_SUGGESTED_OPTIONS=	charset edit                      slang subshell vfs
-
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.options.mk"
 
 .if ${OPSYS} == "Linux"
 PLIST_SRC+=		${PKGDIR}/PLIST.cons.saver
