@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/16 12:20:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/15 14:50:29 joerg Exp $
 #
 
 DISTNAME=		gstreamer-0.8.11
@@ -51,5 +51,4 @@ _GSTREAMER0.8_NO_DEPEND=	# defined
 .include "../../multimedia/gstreamer0.8/plugins.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
