@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/13 08:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/15 14:28:16 joerg Exp $
 #
 
 DISTNAME=		cmus-2.1.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://onion.dynserv.net/~timo/files/
 COMMENT=	 	Cmus is an ncurses based mp3/ogg player with a lot of features
 
 HAS_CONFIGURE=		yes
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	CONFIG_ALSA=n
