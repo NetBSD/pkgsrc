@@ -1,5 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2006/09/14 15:23:28 joerg Exp $
+# $NetBSD: options.mk,v 1.8 2007/02/15 10:00:08 rillig Exp $
 #
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
+PKG_SUPPORTED_OPTIONS=	charset edit glib12 ncurses samba slang subshell vfs x11
+PKG_SUGGESTED_OPTIONS=	charset edit                      slang subshell vfs
+
+.include "../../mk/bsd.options.mk"
 
 ### The charset option enables input/display support for various 8-bit
 ### codepages, chooseable at runtime.
