@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/09 19:57:48 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/02/15 22:52:15 joerg Exp $
 
 --- bootstrap.orig	2005-08-12 17:17:17.000000000 +0000
 +++ bootstrap
-@@ -34,7 +34,7 @@ if (test ! -f "$MPEG4IP_SRC/configure") 
+@@ -34,14 +34,13 @@ if (test ! -f "$MPEG4IP_SRC/configure") 
      exit 1
  fi
  
@@ -11,7 +11,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/02/09 19:57:48 drochner Exp $
  if sdl-config --version >/dev/null 2>/dev/null
      then
      echo "SDL appears to be installed"
-@@ -56,7 +56,7 @@ if test $target_system = "Linux"; then
+ else
+     echo "SDL does not appear to be installed - install the SDL development package"
+     echo "You must have sdl-config in your path to continue"
+-    exit 1
+ fi
+ 
+ allargs="$@"
+@@ -56,7 +55,7 @@ if test $target_system = "Linux"; then
  
      if test $have_faac = "yes"; then
  	# we have lame and faac - see if faac is built with mp4 support
