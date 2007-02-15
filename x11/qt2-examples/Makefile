@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/15 14:51:10 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/15 15:28:48 rillig Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
@@ -9,6 +9,7 @@ COMMENT=	QT2 Tutorial, example code and HTML documentation
 .include "../../x11/qt2-libs/Makefile.common"
 
 CONFIGURE_ENV+=	QTDIR=${QTPREFIX:Q}
+NO_BUILD=	yes
 
 SUBST_CLASSES+=		ex
 SUBST_STAGE.ex=		do-build
@@ -19,7 +20,7 @@ SUBST_SED.ex+=		-e 's:\$$[({]LOCALBASE[})]:${LOCALBASE}:g'
 SUBST_SED.ex+=		-e 's:\$$[({]LIBTOOL[})]:${LIBTOOL}:g'
 
 do-install:
-	cd ${WRKSRC} && pax -wr examples tutorial ${QTPREFIX}
+	cd ${WRKSRC} && pax -wr -s ',.*Makefile\.in$$,,' examples tutorial ${QTPREFIX}
 
 .include "../../x11/qt2-libs/buildlink3.mk"
 
