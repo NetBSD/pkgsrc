@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/15 14:53:14 joerg Exp $
 
 DISTNAME=		netmaze0.81
 PKGNAME=		netmaze-0.81
@@ -17,4 +17,6 @@ post-patch:
 	${SED} -e 's|@X11LIBS@|${X11_LDFLAGS}|g' \
 		< ${WRKSRC}/Imakefile.bak > ${WRKSRC}/Imakefile
 
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
