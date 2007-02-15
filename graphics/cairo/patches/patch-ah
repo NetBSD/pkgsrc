@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2007/02/15 14:32:34 rillig Exp $
+
+The installed cairo headers still need the freetype and X11 headers to
+be available, so using Requires.private would be wrong.
+
+--- configure.orig	2006-10-02 16:59:52.000000000 +0200
++++ configure	2006-10-02 17:01:51.000000000 +0200
+@@ -30033,7 +30033,7 @@ fi
+ 
+ case `$PKG_CONFIG --version` in
+ 0.?|0.?.?|0.1[0-7]|0.1[0-7].?) PKGCONFIG_REQUIRES="Requires"; ;;
+-*) PKGCONFIG_REQUIRES="Requires.private"; ;;
++*) PKGCONFIG_REQUIRES="Requires"; ;;
+ esac
+ 
+ 
