@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.1 2006/10/13 06:16:54 rillig Exp $
+# $NetBSD: application.mk,v 1.2 2007/02/15 12:50:40 rillig Exp $
 #
 # This file provides useful definitions for packages that contain
 # QT applications.
@@ -38,6 +38,11 @@ LDFLAGS+=		-L${QTDIR}/lib
 
 CONFIGURE_ENV+=		QTDIR=${QTDIR:Q}
 MAKE_ENV+=		QTDIR=${QTDIR:Q}
+
+.for t in moc qmake uic
+TOOLS_CREATE+=		${t}
+TOOLS_PATH.${t}=	${QTDIR}/bin/${t}
+.endfor
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
