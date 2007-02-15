@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 21:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/15 14:28:40 rillig Exp $
 #
 
-DISTNAME=	poedit-1.3.4
-PKGREVISION=	4
+DISTNAME=	poedit-1.3.6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poedit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.poedit.org/
+HOMEPAGE=	http://www.poedit.net/
 COMMENT=	Cross-platform gettext catalogs (.po files) editor
 
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
