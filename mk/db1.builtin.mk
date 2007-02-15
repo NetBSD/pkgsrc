@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.15 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: db1.builtin.mk,v 1.16 2007/02/15 10:48:25 rillig Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -9,7 +9,7 @@ BUILTIN_FIND_FILES.H_DB=	/usr/include/db1/db.h /usr/include/db.h
 # The builtin Berkeley database library must support hash version 2 or
 # else it doesn't support db-1.85 databases.
 #
-BUILTIN_FIND_GREP.H_DB=	^\#define.*HASHVERSION.*2$$
+BUILTIN_FIND_GREP.H_DB=	^\#define.*HASHVERSION.*2\$$
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
