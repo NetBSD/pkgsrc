@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/02/15 14:58:21 joerg Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
@@ -20,12 +20,11 @@ INFO_FILES=	# PLIST
 
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
 
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../print/pdflib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
 post-extract:
 	${CP} ${WRKSRC}/makes/generic.mak ${WRKSRC}/sources/Makefile
 
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/pdflib/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

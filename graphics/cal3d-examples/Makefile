@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/12/06 14:31:17 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/15 14:58:20 joerg Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -47,6 +47,4 @@ post-install:
 
 .include "../../graphics/cal3d/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

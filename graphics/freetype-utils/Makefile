@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/17 19:41:33 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/15 14:58:20 joerg Exp $
 
 .include "../../graphics/freetype-lib/Makefile.common"
 
@@ -12,7 +12,8 @@ CONFIGURE_ARGS+=	--with-x
 BUILD_TARGET=		tttest
 INSTALL_TARGET=		install-tttest
 
-.include "../../graphics/freetype-lib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

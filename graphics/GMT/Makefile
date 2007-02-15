@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/11/28 18:02:33 wennmach Exp $
+# $NetBSD: Makefile,v 1.31 2007/02/15 14:58:19 joerg Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -40,8 +40,6 @@ CONFIGURE_ARGS+=--disable-mex
 BUILD_TARGET=	all suppl
 INSTALL_TARGET= install-all
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-extract:
 	${MV} -f ${WRKSRC}/www/gmt/doc/pdf ${WRKSRC}
 	${RM} -f ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat
@@ -68,4 +66,6 @@ post-install:
 	cd ${WRKDIR}/share && ${PAX} -rw . ${PREFIX}/share/gmt
 
 .include "../../devel/netcdf/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
