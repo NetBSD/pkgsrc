@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2007/02/15 21:46:54 joerg Exp $
 
---- bbsload.cc.orig	Mon May 22 20:53:37 2000
+--- bbsload.cc.orig	2000-05-22 18:53:37.000000000 +0000
 +++ bbsload.cc
-@@ -21,6 +21,12 @@
+@@ -21,6 +21,20 @@
  
  #include "bbsload.hh"
  
@@ -10,12 +10,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#include <uvm/uvm_param.h>
++#elif defined(__DragonFly__)
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <sys/vmmeter.h>
++#define template
++#include <sys/user.h>
++#undef template
++#include <kinfo.h>
 +#endif
 +
  CheckLoad::CheckLoad(ToolWindow *toolwindow) {
    bbtool=toolwindow;
    timer=new BTimer(bbtool->getCurrentScreenInfo()->getBaseDisplay(),this) ;
-@@ -40,97 +46,81 @@
+@@ -40,97 +54,106 @@ void CheckLoad::Reconfigure() {
  
  void CheckLoad::timeout()
  {
@@ -34,9 +42,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
 +    static u_int64_t old_user=0, old_nice=0, old_system=0,
 +	    old_idle=0;
 +    u_int64_t user,nice,system,idle,total;
++#if defined(__DragonFly__)
++    struct kinfo_cputime cpu_time;
++#else
 +    u_int64_t cputimes[5];
++#endif
 +    double lavg[3];
++#if defined(__DragonFly__)
++    size_t vm_stat_size = sizeof(struct vmstats);
++    struct vmstats vm_stat;
++#else
 +    struct uvmexp uvm_stat;
++#endif
 +    int    ctl_name[3];
 +    size_t ctllen;
  
@@ -135,6 +152,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
 +    task.total=ctllen/sizeof(struct kinfo_proc); /* Anybody have an
 +		alternative ? */
 +
++#if defined(__DragonFly__)
++    sysctlbyname("vm.vmstats", &vm_stat, &vm_stat_size, NULL, 0);
++    mem.total = vm_stat.v_page_count;
++    mem.used = mem.total - vm_stat.v_free_count;
++    swap.total = 0; /* XXX fill me in, expensive! */
++    swap.used = 0;
++#else
 +    /* task.running is missing */
 +    /* get memory statistics */
 +    ctllen=sizeof(uvm_stat);
@@ -148,6 +172,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
 +    swap.total=uvm_stat.swpages;
 +    swap.used=uvm_stat.swpgonly; /* Only count pages in swap which are
 +			not also present in memory */
++#endif
 +
 +    norm.total_used=(double)(mem.used+swap.used)/
 +                    (double)(mem.total+swap.total);
@@ -155,6 +180,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
 +    if (swap.total!=0)
 +        norm.swap_used=(double)swap.used/(double)swap.total;
 +
++#if defined(__DragonFly__)
++    kinfo_get_sched_cputime(&cpu_time);
++    user = cpu_time.cp_user;
++    nice = cpu_time.cp_nice;
++    system = cpu_time.cp_sys + cpu_time.cp_intr;
++    idle = cpu_time.cp_idle;
++#else
 +    ctl_name[0]=CTL_KERN;
 +    ctl_name[1]=KERN_CP_TIME;
 +    ctllen=sizeof(cputimes);
@@ -165,6 +197,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
 +    system=cputimes[2]	/*sys*/
 +	  +cputimes[3]/*intr*/;
 +    idle=cputimes[4];
++#endif
 +    total=(user-old_user)+(nice-old_nice)+
 +    (system-old_system)+(idle-old_idle);
 +    if ((total!=0)&(old_user!=0))
@@ -184,7 +217,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
  }
  
  
-@@ -233,15 +223,15 @@
+@@ -233,15 +256,15 @@ void ToolWindow::MakeWindow(bool reconfi
        label_counter++;
      }
      if (resource->show.label_totalused) {
@@ -203,7 +236,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
        label_counter++;
      }
      if (resource->show.label_usercpu) {
-@@ -545,7 +535,7 @@
+@@ -545,7 +568,7 @@ void ToolWindow::RedrawGauge(double leve
    }
  }
  
@@ -212,7 +245,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
  {
    char t[6];
  
-@@ -561,15 +551,14 @@
+@@ -561,15 +584,14 @@ void ToolWindow::RedrawLabel(double leve
      xposition+=label.seperator_width;
    }
   
@@ -230,7 +263,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
  }
  
  void ToolWindow::Redraw()
-@@ -577,12 +566,12 @@
+@@ -577,12 +599,12 @@ void ToolWindow::Redraw()
      int offset=0;
      if (resource->show.load1m)
      {
@@ -245,7 +278,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
        offset++;
      }
      if (resource->show.load15m)
-@@ -678,53 +667,63 @@
+@@ -678,53 +700,63 @@ void ToolWindow::Redraw()
  
          if (resource->show.label_load1m)
          {
