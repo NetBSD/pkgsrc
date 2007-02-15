@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2007/02/03 09:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2007/02/15 12:21:48 joerg Exp $
 #
 
 DISTNAME=	metacity-2.16.3
@@ -30,6 +30,8 @@ BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.7
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -39,5 +41,6 @@ BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.7
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
