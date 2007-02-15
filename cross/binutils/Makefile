@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/12/29 23:00:32 wulf Exp $
+# $NetBSD: Makefile,v 1.50 2007/02/15 14:45:40 rillig Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -46,29 +46,29 @@ post-patch:
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
 	${MKDIR} ${BINDIR} ${PREFIX}/lib/ldscripts ${PREFIX}/include
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/coffdump ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/cxxfilt ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nm-new ${BINDIR}/nm
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objcopy ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objdump ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ranlib ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/readelf ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/size ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/srconv ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strings ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strip-new ${BINDIR}/strip
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysdump ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysinfo ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/windres ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${BINDIR}/ld
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${PREFIX}/lib
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${PREFIX}/lib
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${PREFIX}/lib
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/coffdump ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/cxxfilt ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nm-new ${BINDIR}/nm
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objcopy ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/objdump ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ranlib ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/readelf ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/size ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/srconv ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strings ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/strip-new ${BINDIR}/strip
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysdump ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/sysinfo ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/windres ${BINDIR}
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${BINDIR}/ld
+	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${PREFIX}/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${PREFIX}/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${PREFIX}/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/symcat.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${PREFIX}/include
