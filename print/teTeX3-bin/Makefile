@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/12/07 15:06:07 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/15 21:34:00 rillig Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -28,9 +28,11 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
 CONFIGURE_ARGS+=	--with-xdvi-x-toolkit=xaw
+
+BUILD_DEFS+=		VARTEXFONTS
+VARTEXFONTS?=		${VARBASE}/spool/texfonts
 MAKE_FLAGS+=		vartexfonts=${VARTEXFONTS:Q}
 
-VARTEXFONTS?=		${VARBASE:Q}/spool/texfonts
 LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
 LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 FILES_SUBST+=		PAPERSIZE=${LOWER_PAPERSIZE:Q}
