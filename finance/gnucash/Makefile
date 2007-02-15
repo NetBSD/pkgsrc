@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2007/02/10 09:40:52 ghen Exp $
+# $NetBSD: Makefile,v 1.109 2007/02/15 14:30:09 rillig Exp $
 #
 
 DISTNAME=		gnucash-2.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -16,9 +16,12 @@ DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool makeinfo msgfmt pkg-config
+USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES
+
+REPLACE_PERL+=		src/quotes/gnc-fq-dump
+REPLACE_PERL+=		src/optional/xsl/vcard-gnccustomer.pl
 
 PKGCONFIG_OVERRIDE+=	lib/goffice-0.0.4/libgoffice-1.pc.in
 PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-1.pc.in
