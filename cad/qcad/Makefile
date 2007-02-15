@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/01/26 23:03:39 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2007/02/15 14:10:52 rillig Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -47,11 +47,10 @@ post-patch:
 # loop duplicated from do-build.  The unmodified do-build then takes care
 # of the "all".  I didn't see an easier way.
 pre-build:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e; ${_ULIMIT_CMD}		\
+	${RUN} ${_ULIMIT_CMD}						\
 	for d in ${BUILD_DIRS}; do					\
 		cd ${WRKSRC}; cd "$$d";					\
-		env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-		-f ${MAKE_FILE} prepare;				\
+		${BUILD_MAKE_CMD} prepare;				\
 	done
 
 do-install:
