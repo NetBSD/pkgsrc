@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/24 12:04:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/02/15 18:26:14 joerg Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -618,6 +618,7 @@ lib/ivtools/config/config.mk
 lib/ivtools/config/config.null.mk
 lib/ivtools/config/darwin-gcc.mk
 lib/ivtools/config/default-gcc.mk
+lib/ivtools/config/dragonfly-gcc.mk
 lib/ivtools/config/freebsd-gcc.mk
 lib/ivtools/config/freebsd2.1-gcc.mk
 lib/ivtools/config/gcc.def
