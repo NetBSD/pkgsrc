@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.358 2007/02/15 08:06:58 adam Exp $
+$NetBSD: CHANGES-2007,v 1.359 2007/02/15 13:34:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -741,3 +741,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix-current to 2.4-20070214 [martti 2007-02-15]
 	Updated editors/vim-share to 7.0.195 [martti 2007-02-15]
 	Updated graphics/ImageMagick to 6.3.2.4 [adam 2007-02-15]
+	Updated mail/sylpheed-devel to 2.4.0beta4 [xtraeme 2007-02-15]
