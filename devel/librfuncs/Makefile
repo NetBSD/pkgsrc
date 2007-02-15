@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/01 15:58:03 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/15 14:24:23 rillig Exp $
 #
 
 DISTNAME=		librfuncs-1.0.7
@@ -23,8 +23,8 @@ PTHREAD_AUTO_VARS=	no
 CONFIGURE_ARGS+=	--disable-threads
 .else
 CONFIGURE_ARGS+=	--enable-threads
-CONFIGURE_ARGS+=	--with-thread-cflags=${PTHREAD_CFLAGS:Q}
-CONFIGURE_ARGS+=	--with-thread-ldflags=${PTHREAD_LDFLAGS:Q}
+CONFIGURE_ARGS+=	--with-thread-cflags=${PTHREAD_CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--with-thread-ldflags=${PTHREAD_LDFLAGS:M*:Q}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
