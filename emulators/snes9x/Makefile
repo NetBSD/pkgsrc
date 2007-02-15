@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/02/15 22:53:09 joerg Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -79,8 +79,15 @@ MAKE_ENV+=	USBJOY=1
 MAKE_ENV+=	USBHID_H=1
 .endif
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
