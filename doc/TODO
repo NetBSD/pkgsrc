@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5993 2007/02/15 06:45:33 martti Exp $
+$NetBSD: TODO,v 1.5994 2007/02/15 06:52:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -227,7 +227,7 @@ Suggested package updates
 	o REminiscence-0.1.8
 	o ROMBuild-2.8
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.8
+	o TeXmacs-1.0.6.9
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
@@ -244,7 +244,7 @@ Suggested package updates
 	o algae-4.3.6
 	o aliados-0.2.0
 	o allegro-4.2.1
-	o amanda-2.5.1p1
+	o amanda-2.5.1p3
 	o amanda-client-2.5.0
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
@@ -253,7 +253,7 @@ Suggested package updates
 	o amavis-0.3.12
 	o amavisd-new-2.4.5
 	o amaya-9.53
-	o anjuta-2.1.0
+	o anjuta-2.1.1
 	o anomy-sanitizer-1.74
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -266,7 +266,7 @@ Suggested package updates
 	o ap-xslt-1.3.8
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apcupsd-3.10.16
+	o apcupsd-3.14.0 [pkg/35594]
 	o aqsis-1.0.1 [heinz]
 	o aranym-0.9.0
 	o argtable-2.3
@@ -304,7 +304,7 @@ Suggested package updates
 	o bluefish-1.0.7
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bogofilter-1.0.3
+	o bogofilter-1.0.3 [pkg/35595]
 	o boolean-6.8
 	o boson-0.13
 	o botan-1.6.1
@@ -328,8 +328,9 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
+	o clamav-0.90
 	o clisp-2.41
-	o cmake-2.4.5
+	o cmake-2.4.6
 	o cocoon-2.1.10
 	o cogito-0.18.2
 	o columba-1.0RC1
@@ -364,7 +365,7 @@ Suggested package updates
 	o devtodo-0.1.19
 	o dirac-0.6.0
 	o dnsmasq-2.33 [pkg/34428]
-	o dnsmasq-2.37
+	o dnsmasq-2.38
 	o dnstracer-1.8
 	o drscheme-360
 	o drupal-5.1
@@ -409,6 +410,8 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.16 [pkg/35539]
 	o file-roller-2.16.3
+	o fillets-ng-0.7.4
+	o fillets-ng-data-0.7.4
 	o findutils-4.2.29
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -434,7 +437,7 @@ Suggested package updates
 	o gdal-1.4.0
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
-	o gdl-0.7.1
+	o gdl-0.7.2
 	o gdsreader-0.3.2
 	o genius-0.7.7
 	o ggiterm-0.7.1
@@ -459,11 +462,12 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.16.2
+	o gnome-build-0.1.5
 	o gnome-games-2.16.3
 	o gnome-mag-0.14.1
 	o gnome-screensaver-2.16.3
 	o gnome-session-2.16.3
-	o gnome-speech-0.4.8
+	o gnome-speech-0.4.9
 	o gnome-spell-1.0.7
 	o gnome-themes-2.16.3
 	o gnome-user-docs-2.16.1
@@ -554,6 +558,7 @@ Suggested package updates
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
 	o ksi-3.4.2
+	o kye-0.9.3
 	o latd-1.21
 	o lavaps-2.7
 	o lcab-1.0b11
@@ -577,7 +582,7 @@ Suggested package updates
 	o libgnomedb-2.99.3 [breaks mergeant, gnumeric?]
 	o libgpod-0.4.0
 	o libgtop-2.14.6
-	o libgtop2-2.14.4
+	o libgtop2-2.14.7
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
 	o liblive-2006.12.08
@@ -594,6 +599,7 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.11.2
 	o licq-core-1.3.0
+	o liferea-1.2.6
 	o lighttpd-1.4.13
 	o lilypond-2.10.0
 	o lincvs-1.8.3 [now called CrossVC]
@@ -627,12 +633,14 @@ Suggested package updates
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
 	o micro_httpd-20051212 [pkg/34808]
-	o mimedefang-2.59
+	o mimedefang-2.61
 	o mined-2000.13.2
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.0.0
+	o mldonkey-2.8.3
+	o mldonkey-gui-2.8.3
 	o mlview-0.9.0
 	o mmix-20050922
 	o moc-2.4.1
@@ -838,12 +846,12 @@ Suggested package updates
 	o pear-Net_Sieve-1.1.3
 	o pear-Net_Socket-1.0.6
 	o pear-SOAP-0.9.4
-	o pfqueue-0.5.5
+	o pfqueue-0.5.6
 	o pfstat-1.8
 	o pgadmin3-1.6.0
 	o phoon-20050629
 	o photopc-3.05
-	o phpmyadmin-2.9.2
+	o phpmyadmin-2.10.0rc1
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -1005,11 +1013,11 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-1.3.0.53
 	o smalleiffel-0.90
-	o smalltalk-2.3.2
+	o smalltalk-2.3.3
 	o smartmontools-5.37 [jmmv]
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.62
-	o snd-8.7
+	o snd-8.8
 	o snes9x-1.502
 	o snort-2.6.0.2
 	o socat-1.5.0.0
@@ -1018,6 +1026,7 @@ Suggested package updates
 	o sound-juicer-2.16.2
 	o source-highlight-2.3 [pkg/32325]
 	o source-highlight-2.5.1
+	o sox-13.0.0
 	o spim-7.2.1
 	o spl-1.0pre3 [pkg/35308]
 	o sqlitemanager-1.1.3
@@ -1104,7 +1113,7 @@ Suggested package updates
 	o wmweather-2.4.3
 	o worker-2.14.2
 	o wxGTK-2.8
-	o wxRemind-0.7.5
+	o wxRemind-0.8.3
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.8.0
 	o xblast-2.10.4
@@ -1152,7 +1161,7 @@ Suggested package updates
 	o xrn-9.02
 	o xscreensaver-5.01
 	o xskat-4.0
-	o xterm-223
+	o xterm-224
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
@@ -1166,7 +1175,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.27
+	o zile-2.2.29
 	o zircon-1.18.256
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
