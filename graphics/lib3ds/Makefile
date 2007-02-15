@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/11 14:47:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/15 14:58:21 joerg Exp $
 #
 
 DISTNAME=	lib3ds-1.2.0
@@ -14,11 +14,9 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS=	autoconf automake
 
-.include "../../graphics/Mesa/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
 pre-configure:
 	cd ${WRKSRC} && libtoolize --force
 	cd ${WRKSRC} && autoreconf -i --force
 
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
