@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/06/18 08:45:56 rillig Exp $
+# $NetBSD: Makefile.common,v 1.3 2007/02/15 14:40:37 rillig Exp $
 
 DIST_VER=	1_5_0-p3-bin-duh1
 PKG_VER=	${DIST_VER:S/_/./g:S/-p/p/:S/-bin-duh/./}
@@ -46,10 +46,6 @@ FETCH_MESSAGE+=	"	${DOWNLOAD}"
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	"Click ${SHORT_NAME} in the ${OPSYS}/${MACHINE_ARCH} row for version ${DIST_VER:S/_/./g:S/-bin-/-/},"
 FETCH_MESSAGE+=	"then read and accept the license to start the download."
-
-post-fetch:
-	${TEST} -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}		\
-	|| ${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 do-build:	# nothing
 
