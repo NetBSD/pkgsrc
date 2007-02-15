@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/15 15:18:03 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/15 14:47:21 joerg Exp $
 #
 
 DISTNAME=	tpb-0.6.1
@@ -27,10 +27,9 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/doc/${f}	${PREFIX}/share/doc/tpb
 .endfor
 
-.include "../../x11/xosd/buildlink3.mk"
-
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xosd/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
