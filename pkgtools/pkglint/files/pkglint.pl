@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.696 2007/01/25 04:43:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.697 2007/02/15 23:52:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1485,9 +1485,36 @@ sub to_string($) {
 	    scalar(@{$self->subst_sed}),
 	    (defined($self->subst_id) ? $self->subst_id : "(undef)"));
 }
-
-
 #== End of PkgLint::SubstContext ==========================================
+
+package CVS_Entry;
+#==========================================================================
+# A CVS_Entry represents one line from a CVS/Entries file.
+#==========================================================================
+
+BEGIN {
+	import PkgLint::Util qw(
+		false true
+	);
+	import PkgLint::Logging qw(
+		log_warning
+	);
+}
+
+use enum qw(FNAME REVISION MTIME TAG);
+
+sub new($$$$$) {
+	my ($class, $fname, $revision, $date, $tag) = @_;
+	my $self = [ $fname, $revision, $date, $tag ];
+	bless($self, $class);
+	return $self;
+}
+sub fname($)			{ return shift()->[FNAME]; }
+sub revision($)			{ return shift()->[REVISION]; }
+sub mtime($)			{ return shift()->[MTIME]; }
+sub tag($)			{ return shift()->[TAG]; }
+#== End of CVS_Entry ======================================================
+
 
 package main;
 #==========================================================================
@@ -6460,6 +6487,10 @@ sub checkfile_distinfo($) {
 		my ($alg, $chksum_fname, $sum) = ($1, $2, $3);
 		my $is_patch = (($chksum_fname =~ qr"^patch-[A-Za-z0-9]+$") ? true : false);
 
+		if ($chksum_fname !~ qr"^\w") {
+			$line->log_error("All file names should start with a letter.");
+		}
+
 		# Inter-package check for differing distfile checksums.
 		if ($opt_check_global && !$is_patch) {
 			# Note: Perl-specific auto-population.
@@ -6844,6 +6875,11 @@ sub checkfile_patch($) {
 						last;
 					}
 					checkline_mk_absolute_pathname($line, $shellword);
+				}
+				if ($text =~ qr": Avoid regenerating within pkgsrc$") {
+					$line->log_error("This code must not be included in patches.");
+					$line->explain_error(
+						"It is generated automatically by pkgsrc after the patch phase.");
 				}
 
 			} elsif ($current_ftype eq "source") {
@@ -7461,6 +7497,40 @@ sub checkfile($) {
 	}
 }
 
+sub my_split($$) {
+	my ($delimiter, $s) = @_;
+	my ($pos, $next, @result);
+
+	$pos = 0;
+	for ($pos = 0; $pos != -1; $pos = $next) {
+		$next = index($s, $delimiter, $pos);
+		push @result, (($next == -1) ? substr($s, $pos) : substr($s, $pos, $next - $pos));
+		if ($next != -1) {
+			$next += length($delimiter);
+		}
+	}
+	return @result;
+}
+
+# Checks that the files in the directory are in sync with CVS's status.
+#
+sub checkdir_CVS($) {
+	my ($fname) = @_;
+
+	my $cvs_entries = load_file("$fname/CVS/Entries");
+	my $cvs_entries_log = load_file("$fname/CVS/Entries.Log");
+	return unless $cvs_entries;
+
+	foreach my $line (@$cvs_entries) {
+		my ($type, $fname, $mtime, $date, $empty, $tag, $undef) = my_split("/", $line->text);
+		next if ($type eq "D" && !defined($fname));
+		assert($type eq "" || $type eq "D", "Unknown line format: " . $line->text);
+		assert(defined($tag), "Unknown line format: " . $line->text);
+		assert(defined($empty) && $empty eq "", "Unknown line format: " . $line->text);
+		assert(!defined($undef), "Unknown line format: " . $line->text);
+	}
+}
+
 #
 # Procedures to check a directory including the files in it.
 #
@@ -7836,6 +7906,10 @@ sub checkitem($) {
 	}
 
 	check_pkglint_version();	# (needs $cwd_pkgsrcdir)
+
+	if ($is_dir) {
+		checkdir_CVS($item);
+	}
 
 	if ($is_reg) {
 		checkfile($item);
