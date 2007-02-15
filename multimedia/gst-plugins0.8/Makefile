@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/12/15 20:32:59 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/15 14:50:29 joerg Exp $
 #
 
 USE_LANGUAGES=		c c++
@@ -30,6 +30,8 @@ REPLACE_PERL+=		tools/gst-launch-ext-m.m
 REPLACE_PERL+=		tools/gst-visualise-m.m
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

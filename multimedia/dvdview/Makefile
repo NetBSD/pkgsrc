@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/13 13:22:49 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/15 14:50:29 joerg Exp $
 
 DISTNAME=	dvdview-1.2.2
 PKGREVISION=	4
@@ -26,6 +26,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dvdview
 
 .include "../../graphics/libvideogfx/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
