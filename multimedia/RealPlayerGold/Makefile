@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2007/01/31 16:58:18 sketch Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/15 20:45:49 joerg Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
 # Exact version obtained from  the output of
 #   file RealPlayer10GOLD.rpm
 PKGNAME=		RealPlayerGold-${PKGVER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		http://forms.real.com/real/player/download.html?f=unix/
 EXTRACT_SUFX=		.rpm
@@ -59,8 +59,6 @@ SUBST_STAGE.paths=	post-install
 SUBST_FILES.paths=	${REALPLAYER_HOME}/realplay
 SUBST_SED.paths=	-e 's,/bin/true,${TRUE},g'
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	${SED} -e 's|@REALPLAYER_HOME@|${REALPLAYER_HOME}|g'		\
