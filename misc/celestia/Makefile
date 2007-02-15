@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/26 04:25:46 markd Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/15 22:21:27 joerg Exp $
 
 DISTNAME=	celestia-1.4.1
 PKGREVISION=	4
@@ -28,7 +28,8 @@ CONF_FILES=	${EGDIR}/celestia.cfg.default ${PKG_SYSCONFDIR}/celestia.cfg
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+.if exists(${X11BASE}/include/X11/extensions/Xinerama.h) || ${X11_TYPE} != "native"
+.include "../../x11/libXinerama/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xinerama
 .endif
 
@@ -45,9 +46,11 @@ post-install:
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
