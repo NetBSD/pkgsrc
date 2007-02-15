@@ -1,33 +1,16 @@
-$NetBSD: patch-bu,v 1.3 2006/04/01 04:55:35 jlam Exp $
+$NetBSD: patch-bu,v 1.3.6.1 2007/02/15 13:14:51 salo Exp $
 
---- ../docs/manpages/smb.conf.5.orig	2006-01-29 11:14:30.000000000 -0500
-+++ ../docs/manpages/smb.conf.5
-@@ -3097,6 +3097,12 @@ This integer specifies the number of sec
- Default: \fB\fIpasswd chat timeout\fR = 2 \fR 
- 
- .TP
+--- ../docs/manpages/smb.conf.5.orig	2006-11-14 10:02:05.000000000 +0000
++++ ../docs/manpages/smb.conf.5	2007-02-11 17:55:04.000000000 +0000
+@@ -4182,6 +4182,11 @@
+ Default:
+ \fB\fIpasswd chat timeout\fR = 2 \fR
+ .TP 3n
 +passwd expand gecos (G)
 +This boolean specifies if ampersand characters in the GECOS field of a passwd database entry should be replaced with the capitalized login name for that entry when the information is used by various Samba programs\&. This parameter is off by default\&.
 +
 +Default: \fB\fIpasswd expand gecos\fR = no \fR 
-+
-+.TP
++.TP 3n
  passwd program (G)
- The name of a program that can be used to set UNIX user passwords\&. Any occurrences of \fI%u\fR will be replaced with the user name\&. The user name is checked for existence before calling the password changing program\&.
- 
-@@ -4079,6 +4085,15 @@ This parameter determines if \fBsmbd\fR(
- Default: \fB\fIstat cache\fR = yes \fR 
- 
- .TP
-+state directory (G)
-+This parameter defines the directory the Samba daemon processes will use for storing state files that must persist across machine reboots\&.
-+
-+Default: \fB\fIstate directory\fR = ${prefix}/var/locks \fR 
-+
-+Example: \fB\fIstate directory\fR = /var/db/samba \fR 
-+
-+
-+.TP
- store dos attributes (S)
- If this parameter is set Samba attempts to first read DOS attributes (SYSTEM, HIDDEN, ARCHIVE or READ\-ONLY) from a filesystem extended attribute, before mapping DOS attributes to UNIX permission bits (such as occurs with map hidden and map readonly)\&. When set, DOS attributes will be stored onto an extended attribute in the UNIX filesystem, associated with the file or directory\&. For no other mapping to occur as a fall\-back, the parameters map hidden,map system, map archive and map readonly must be set to off\&. This parameter writes the DOS attributes as a string into the extended attribute named "user\&.DOSATTRIB"\&. This extended attribute is explicitly hidden from smbd clients requesting an EA list\&. On Linux the filesystem must have been mounted with the mount option user_xattr in order for extended attributes to work, also extended attributes must be compiled into the Linux kernel\&.
- 
+ The name of a program that can be used to set UNIX user passwords. Any occurrences of
+ \fI%u\fR

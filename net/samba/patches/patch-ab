@@ -1,24 +1,14 @@
-$NetBSD: patch-ab,v 1.25 2006/10/17 05:46:09 rillig Exp $
+$NetBSD: patch-ab,v 1.25.2.1 2007/02/15 13:14:45 salo Exp $
 
---- script/installbin.sh.orig	2005-02-25 18:59:43.000000000 +0100
-+++ script/installbin.sh	2006-10-17 07:11:30.000000000 +0200
-@@ -17,16 +17,16 @@ for p in $*; do
+--- script/installbin.sh.in.orig	2007-02-04 18:59:25.000000000 +0000
++++ script/installbin.sh.in	2007-02-11 15:13:13.000000000 +0000
+@@ -14,8 +14,7 @@
   p2=`basename $p`
-  echo Installing $p as $BINDIR/$p2
-  if [ -f $BINDIR/$p2 ]; then
--   rm -f $BINDIR/$p2.old
--   mv $BINDIR/$p2 $BINDIR/$p2.old
-+   rm -f $BINDIR/$p2
+  echo "Installing $p as $DESTDIR/$BINDIR/$p2 "
+  if [ -f $DESTDIR/$BINDIR/$p2 ]; then
+-   rm -f $DESTDIR/$BINDIR/$p2.old
+-   mv $DESTDIR/$BINDIR/$p2 $DESTDIR/$BINDIR/$p2.old
++   rm -f $DESTDIR/$BINDIR/$p2
   fi
-  cp $p $BINDIR/
-  chmod $INSTALLPERMS $BINDIR/$p2
-+ strip $BINDIR/$p2
- 
-  # this is a special case, mount needs this in a specific location
-  if [ $p2 = smbmount ]; then
-    if [ ! -d $DESTDIR/sbin ]; then
--      mkdir $DESTDIR/sbin
-+      mkdir -p $DESTDIR/sbin
-    fi 
-    ln -sf $BINDIR/$p2 $DESTDIR/sbin/mount.smbfs
-  fi
+  cp $p $DESTDIR/$BINDIR/
+  chmod $INSTALLPERMS $DESTDIR/$BINDIR/$p2
