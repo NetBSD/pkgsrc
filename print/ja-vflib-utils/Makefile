@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/08 19:55:16 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/15 14:42:17 joerg Exp $
 
 .include "../../print/ja-vflib-lib/Makefile.common"
 
@@ -16,5 +16,5 @@ BUILD_TARGET=		build-tools
 INSTALL_TARGET=		install-tools
 
 .include "../../print/ja-vflib-lib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
