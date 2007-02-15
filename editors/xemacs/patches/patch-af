@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2004/02/09 07:54:58 minskim Exp $
+$NetBSD: patch-af,v 1.6 2007/02/15 14:27:48 joerg Exp $
 
---- configure.in.orig	2004-01-23 22:37:54.000000000 -0600
+--- configure.in.orig	2005-01-31 02:54:47.000000000 +0000
 +++ configure.in
 @@ -1082,6 +1082,7 @@ machine='' opsys=''
  
@@ -23,7 +23,15 @@ $NetBSD: patch-af,v 1.5 2004/02/09 07:54:58 minskim Exp $
      esac
    ;;
  
-@@ -2244,7 +2245,7 @@ if test "$add_runtime_path" = "yes"; the
+@@ -1545,6 +1546,7 @@ case "$canonical" in
+       *-sysv5* )		opsys=sco7 ;;
+       *-386bsd* )	        opsys=386bsd ;;
+       *-freebsd* )		opsys=freebsd ;;
++      *-dragonfly* )		opsys=dragonfly ;;
+       *-nextstep* )		opsys=nextstep ;;
+       *-pc-cygwin* )		opsys=cygwin32 ;;
+       *-pc-mingw* )		opsys=mingw32 ;
+@@ -2247,7 +2249,7 @@ if test "$add_runtime_path" = "yes"; the
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -32,7 +40,7 @@ $NetBSD: patch-af,v 1.5 2004/02/09 07:54:58 minskim Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          XE_PROTECT_LINKER_FLAGS(xe_check_libs)
          AC_TRY_LINK(, , dash_r="$try_dash_r")
-@@ -4395,6 +4396,9 @@ else dnl "$with_tty" = "no"
+@@ -4409,6 +4411,9 @@ else dnl "$with_tty" = "no"
    done
  fi dnl with_tty
  

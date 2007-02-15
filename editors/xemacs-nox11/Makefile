@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/06 15:38:32 tron Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/15 14:27:48 joerg Exp $
 
 .include "../../editors/xemacs/Makefile.common"
 
@@ -11,6 +11,7 @@ CONFLICTS=	xemacs-[0-9]*
 
 PLIST_SRC=	${.CURDIR}/../xemacs/PLIST
 DISTINFO_FILE=	${.CURDIR}/../xemacs/distinfo
+FILESDIR=	${.CURDIR}/../xemacs/files
 PATCHDIR=	${.CURDIR}/../xemacs/patches
 
 CONFIGURE_ARGS+=	--without-x11	# XXX -nox
