@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/12/07 11:24:28 markd Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/15 14:35:13 rillig Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - C compiler
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 .include "../../lang/gcc3/Makefile.common"
 
@@ -22,11 +22,11 @@ BUILD_TARGET=	bootstrap
 .endif
 
 post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
 post-install:
 .if ${OPSYS} == "SunOS"
-	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
+	cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .endif
 	${INSTALL_DATA_DIR} ${GCC_PREFIX}/mk
 	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/c.mk
