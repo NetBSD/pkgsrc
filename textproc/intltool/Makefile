@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/01/14 09:58:56 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/02/15 21:31:29 rillig Exp $
 #
 
 DISTNAME=		intltool-0.35.4
@@ -19,6 +19,7 @@ CONFLICTS=		xml-i18n-tools-[0-9]*
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
+CHECK_INTERPRETER_SKIP=	share/intltool/*.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
