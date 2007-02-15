@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/07 09:14:00 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/15 21:56:58 joerg Exp $
 #
 
 DISTNAME=	bbweather-0.6.2
@@ -18,10 +18,13 @@ REPLACE_PERL=		GrabWeather
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gunzip perl:run
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-install:
 	cd ${PREFIX}/${PKGMANDIR}/man1 && ${GUNZIP_CMD} GrabWeather.1.gz
 	cd ${PREFIX}/${PKGMANDIR}/man1 && ${GUNZIP_CMD} bbweather.1.gz
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
