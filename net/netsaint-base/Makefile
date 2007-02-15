@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2006/04/17 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/15 21:46:53 rillig Exp $
 #
 
 DISTNAME=		netsaint-0.0.7
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		7
+PKGREVISION=		8
 MASTER_SITES=		http://www.netsaint.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -14,6 +14,8 @@ COMMENT=		Network monitor
 .include "../../net/netsaint-base/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-ping-command='/sbin/ping -n -c %d %s'
+CONFIGURE_ARGS+=	--with-mail=${MAIL_CMD:Q}
+USE_TOOLS+=		mail:run
 
 OWN_DIRS_PERMS=
 .for dir in	/var/log/netsaint /var/log/netsaint/archives \
@@ -24,8 +26,8 @@ OWN_DIRS_PERMS+=	${dir} ${NETSAINT_USER} ${NETSAINT_GROUP} 0755
 INSTALL_TARGET=		install install-config
 
 post-build:
-	cd ${WRKDIR}; uudecode ${FILESDIR}/logofullsize.gif.uu
-	cd ${WRKDIR}; uudecode ${FILESDIR}/sblogo.gif.uu
+	cd ${WRKDIR} && uudecode ${FILESDIR}/logofullsize.gif.uu
+	cd ${WRKDIR} && uudecode ${FILESDIR}/sblogo.gif.uu
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/logofullsize.gif ${PREFIX}/share/netsaint/images
