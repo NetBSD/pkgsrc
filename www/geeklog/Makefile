@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/17 14:16:56 taca Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/15 15:00:44 rillig Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -110,6 +110,6 @@ do-install:
 .endfor
 	cd ${WRKSRC}/public_html; ${PAX} -rw . ${GEEKLOG_PUBDIR}
 
-.include "../../mk/apachever.mk"
+.include "../../mk/apache.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
