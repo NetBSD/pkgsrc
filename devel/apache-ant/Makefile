@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/01/16 11:03:38 tonio Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/15 14:20:54 rillig Exp $
 #
 
 DISTNAME=	apache-ant-1.7.0
@@ -9,32 +9,31 @@ DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://ant.apache.org/
-COMMENT=	"Apache Project's Java-Based make(1) replacement"
+COMMENT=	Apache Project's Java-Based make(1) replacement
 
 # Up to version 1.5.1 inclusive this was known as "jakarta-ant".
-CONFLICTS=	jakarta-ant*
+CONFLICTS=	jakarta-ant>=0
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_JAVA=	run
 USE_JAVA2=	yes
 NO_BUILD=	yes
 
-SUBST_CLASSES+=  ant
-SUBST_FILES.ant= bin/ant
-SUBST_STAGE.ant= pre-configure
-SUBST_SED.ant=-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g' -e 's,@PREFIX@,${PREFIX},g'
+SUBST_CLASSES+=		ant
+SUBST_FILES.ant=	bin/ant
+SUBST_STAGE.ant=	pre-configure
+SUBST_SED.ant=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
+SUBST_SED.ant+=		-e 's,@PREFIX@,${PREFIX},g'
+
+INSTALLATION_DIRS=	bin lib/java/ant share/doc/java/ant
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/ant ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/ant-*.jar ${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/xercesImpl.jar ${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/xml-apis.jar ${PREFIX}/lib/java/ant
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/ant
-	cd ${WRKSRC}/docs && ${PAX} -rw -pmp * ${PREFIX}/share/doc/java/ant
+	cd ${WRKSRC}/docs && pax -rw -pmp * ${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/java/ant
 
