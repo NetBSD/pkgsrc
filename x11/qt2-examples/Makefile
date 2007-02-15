@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/17 13:47:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/15 14:51:10 rillig Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
@@ -10,30 +10,16 @@ COMMENT=	QT2 Tutorial, example code and HTML documentation
 
 CONFIGURE_ENV+=	QTDIR=${QTPREFIX:Q}
 
-do-build:
-	@MFS="`${FIND} ${WRKSRC}/examples ${WRKSRC}/tutorial -name Makefile -print`"; \
-	(for M in $${MFS}; do \
-	    ${SED} \
-		-e "s:\\\$$[({]X11BASE[})]:${X11BASE}:g" \
-		-e "s:\\\$$[({]QTDIR[})]:${QTPREFIX}:g" \
-		-e "s:\\\$$[({]LOCALBASE[})]:${LOCALBASE}:g" \
-		-e "s:\\\$$[({]LIBTOOL[})]:${LIBTOOL}:g" \
-		$${M} > $${M}.new; \
-	    ${MV} $${M}.new $${M}; \
-	done)
+SUBST_CLASSES+=		ex
+SUBST_STAGE.ex=		do-build
+SUBST_FILES.ex=		examples/*/Makefile tutorial/*/Makefile
+SUBST_SED.ex=		-e 's:\$$[({]X11BASE[})]:${X11BASE}:g'
+SUBST_SED.ex+=		-e 's:\$$[({]QTDIR[})]:${QTPREFIX}:g'
+SUBST_SED.ex+=		-e 's:\$$[({]LOCALBASE[})]:${LOCALBASE}:g'
+SUBST_SED.ex+=		-e 's:\$$[({]LIBTOOL[})]:${LIBTOOL}:g'
 
 do-install:
-	@cd ${WRKSRC}; \
-	DIRS="`${FIND} examples tutorial -type d -print | ${SORT}`"; \
-	(for d in $${DIRS}; do \
-	    ${ECHO} creating ${QTPREFIX}/$${d}; \
-	    ${INSTALL_DATA_DIR} ${QTPREFIX}/$${d}; \
-	done); \
-	ETFILES="`${FIND} examples tutorial -type f ! -name "Makefile.in" -print | ${SORT}`"; \
-	(for f in $${ETFILES}; do \
-	    ${ECHO} installing ${QTPREFIX}/$${f}; \
-	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
-	done)
+	cd ${WRKSRC} && pax -wr examples tutorial ${QTPREFIX}
 
 .include "../../x11/qt2-libs/buildlink3.mk"
 
