@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/09 01:34:10 ben Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/15 21:51:51 rillig Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
@@ -43,14 +43,15 @@ INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man1 ${DOCDIR}
 
 REQD_DIRS=		${DOCDIR}
 MAKE_DIRS+=		${VARBASE}/run ${COURIER_STATEDIR}
+BUILD_DEFS+=		VARBASE
 
 .include "../../security/openssl/buildlink3.mk"
 
 SUBST_CLASSES+=		bdb
-SUBST_MESSAGE.bdb=	Configuring to use $(BDB_LIBS)
+SUBST_MESSAGE.bdb=	Configuring to use ${BDB_LIBS}
 SUBST_STAGE.bdb=	post-patch
 SUBST_FILES.bdb=	configure bdbobj/configure.in bdbobj/configure
-SUBST_SED.bdb=		-e "s,-ldb,${BDB_LIBS},g"
+SUBST_SED.bdb=		-e s,-ldb,${BDB_LIBS:M*:Q},g
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpd/couriertcpd			\
