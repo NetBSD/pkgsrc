@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/15 14:46:27 joerg Exp $
 #
 
 DISTNAME=	bbmail-0.8.3
@@ -15,12 +15,15 @@ USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bbmail ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/bbmail.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/bbtools/
 	${INSTALL_DATA} ${WRKSRC}/data/bbmail.bb ${PREFIX}/share/bbtools/
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

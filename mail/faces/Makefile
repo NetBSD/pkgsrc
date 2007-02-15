@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.54 2007/02/15 14:46:27 joerg Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	4
@@ -63,5 +63,5 @@ do-configure:
 		${MV} -f $${FILE}.fixed $${FILE};			\
 	done
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
