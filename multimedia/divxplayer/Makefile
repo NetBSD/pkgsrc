@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/06/30 13:50:07 salo Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/15 22:22:19 joerg Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME}/}
 
@@ -41,5 +41,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/frontend.sh \
 		${PREFIX}/bin/${BINARY:S/.bin$//}
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
