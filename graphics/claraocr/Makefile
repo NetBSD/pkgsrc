@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/15 15:38:22 joerg Exp $
 #
 
 DISTNAME=	clara-0.9.9
@@ -23,5 +23,5 @@ REPLACE_PERL=	clara.pl mkdoc.pl selthresh.pl
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/imre.pbm ${PREFIX}/share/doc/clara
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
