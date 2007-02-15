@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.3 2007/02/15 18:26:15 joerg Exp $
+
+--- config/InterViews/TIFF.def.orig	2007-02-15 15:29:59.000000000 +0000
++++ config/InterViews/TIFF.def
+@@ -142,7 +142,7 @@ TIFF_OPTIMIZE_CFLAGS = TIFFOptimizeCFlag
+    -DCOLORIMETRY_SUPPORT -DJPEG_SUPPORT -DYCBCR_SUPPORT -DCMYK_SUPPORT \
+     -DHAVE_IEEEFP=1 -DUSE_VARARGS=0 -DUSE_PROTOTYPES=1 -DUSE_CONST=1
+ #endif
+-#if defined(NetBSDArchitecture)
++#if defined(NetBSDArchitecture) || defined(DragonflyArchitecture)
+ #define TIFFStdCDefines \
+     -DCOLORIMETRY_SUPPORT -DJPEG_SUPPORT -DYCBCR_SUPPORT -DCMYK_SUPPORT \
+     -DHAVE_IEEEFP=1 -DUSE_VARARGS=0 -DUSE_PROTOTYPES=1 -DUSE_CONST=1

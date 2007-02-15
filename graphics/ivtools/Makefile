@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/07/26 11:53:39 markd Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/15 18:26:14 joerg Exp $
 
 DISTNAME=	ivtools-1.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
 EXTRACT_SUFX=	.tgz
@@ -16,20 +16,24 @@ DEPENDS+=	pstoedit>=3.0:../../graphics/pstoedit
 DEPENDS+=	wget>=1.0:../../net/wget
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	imake
 
 WRKSRC=		${WRKDIR}/ivtools-1.2
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--with-tiff=${BUILDLINK_PREFIX.tiff}
 
-.include "../../mk/x11.buildlink3.mk"
-
 post-patch:
 	${RM} -f ${WRKSRC}/src/include/ivstd/strstream.h
+	${TOUCH} ${WRKSRC}/config/dragonfly-gcc.mk
 
 pre-install:
 	${RM} -f ${WRKSRC}/config/local.def.orig
 	${RM} -f ${WRKSRC}/config/params.def.orig
 	${RM} -f ${WRKSRC}/config/site.def.NETBSD.orig
+	${RM} -f ${WRKSRC}/config/arch.def.orig
 
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
