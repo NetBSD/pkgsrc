@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.168 2006/10/23 03:26:24 dan Exp $
+# $NetBSD: Makefile,v 1.168.2.1 2007/02/15 13:14:44 salo Exp $
 
 .include "Makefile.mirrors"
 
-DISTNAME=		samba-3.0.22
-PKGREVISION=		3
+DISTNAME=		samba-3.0.24
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
-DIST_SUBDIR=		${DISTNAME}
 
 .include "Makefile.patches"
 
@@ -148,9 +146,12 @@ post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
 
 post-install: install-samba-lib-symlinks
+	${RMDIR} ${PREFIX}/share/samba/swat/js
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/include
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/images
+	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/js
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/tr/include
+	${RMDIR} ${PREFIX}/share/samba/swat/lang/tr/js
 	for d in idmap pdb rpc; do					\
 		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
 	done
@@ -167,5 +168,7 @@ post-install: install-samba-lib-symlinks
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${EGDIR}
+	${CHMOD} -x ${PREFIX}/include/libmsrpc.h \
+	  ${PREFIX}/include/libsmbclient.h
 
 .include "../../mk/bsd.pkg.mk"
