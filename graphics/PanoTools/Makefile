@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:45 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/15 16:27:54 joerg Exp $
 #
 
 DISTNAME=		PanoTools
 PKGNAME=		${DISTNAME}-2.6b1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics java
 MASTER_SITES=		http://www.path.unimelb.edu.au/~dersch/
 
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.path.unimelb.edu.au/~dersch/
 COMMENT=		View, create, edit, and remap panoramic images
 
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 DragonFly-*-i386
 
 WRKSRC=			${WRKDIR}/PTLinux
 USE_JAVA=		run
@@ -22,8 +22,6 @@ NO_BUILD=		YES
 PKG_JVM?=		sun-jdk
 PLIST_SUBST+=		JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
 INSTALLATION_DIRS=	bin lib
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libpano12.so ${EMULDIR}/lib
@@ -68,7 +66,7 @@ do-install:
 
 .include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == NetBSD && ${SUSE_VERSION} != "6.4"
+.if ${OPSYS} != "Linux"
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
 DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libpng
