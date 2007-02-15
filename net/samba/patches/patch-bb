@@ -1,11 +1,11 @@
-$NetBSD: patch-bb,v 1.1 2005/11/14 08:05:27 jlam Exp $
+$NetBSD: patch-bb,v 1.1.10.1 2007/02/15 13:14:51 salo Exp $
 
---- groupdb/mapping.c.orig	2005-10-12 13:03:29.000000000 -0400
-+++ groupdb/mapping.c
-@@ -129,7 +129,7 @@ static BOOL init_group_mapping(void)
- 	
+--- groupdb/mapping.c.orig	2007-02-04 18:59:14.000000000 +0000
++++ groupdb/mapping.c	2007-02-11 17:42:21.000000000 +0000
+@@ -56,7 +56,7 @@
  	if (tdb)
  		return True;
+ 		
 -	tdb = tdb_open_log(lock_path("group_mapping.tdb"), 0, TDB_DEFAULT, O_RDWR|O_CREAT, 0600);
 +	tdb = tdb_open_log(state_path("group_mapping.tdb"), 0, TDB_DEFAULT, O_RDWR|O_CREAT, 0600);
  	if (!tdb) {

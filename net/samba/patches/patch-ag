@@ -1,23 +1,23 @@
-$NetBSD: patch-ag,v 1.5 2005/11/14 08:05:27 jlam Exp $
+$NetBSD: patch-ag,v 1.5.10.1 2007/02/15 13:14:48 salo Exp $
 
---- passdb/passdb.c.orig	2005-10-12 13:03:35.000000000 -0400
-+++ passdb/passdb.c
-@@ -246,6 +246,7 @@ static NTSTATUS pdb_set_sam_sids(SAM_ACC
- NTSTATUS pdb_fill_sam_pw(SAM_ACCOUNT *sam_account, const struct passwd *pwd)
- {
- 	NTSTATUS ret;
+--- passdb/passdb.c.orig	2007-02-04 18:59:21.000000000 +0000
++++ passdb/passdb.c	2007-02-11 15:29:46.000000000 +0000
+@@ -137,6 +137,7 @@
+ 	const char *guest_account = lp_guestaccount();
+ 	const char *domain = global_myname();
+ 	uint32 urid;
 +	char *gecos;
  
- 	if (!pwd) {
- 		return NT_STATUS_UNSUCCESSFUL;
-@@ -254,7 +255,9 @@ NTSTATUS pdb_fill_sam_pw(SAM_ACCOUNT *sa
- 	pdb_fill_default_sam(sam_account);
- 
- 	pdb_set_username(sam_account, pwd->pw_name, PDB_SET);
--	pdb_set_fullname(sam_account, pwd->pw_gecos, PDB_SET);
+ 	if ( !pwd ) {
+ 		return NT_STATUS_NO_SUCH_USER;
+@@ -145,7 +146,9 @@
+ 	/* Basic properties based upon the Unix account information */
+ 	
+ 	pdb_set_username(user, pwd->pw_name, PDB_SET);
+-	pdb_set_fullname(user, pwd->pw_gecos, PDB_SET);
 +	gecos = passwd_expand_gecos(pwd);
-+	pdb_set_fullname(sam_account, gecos, PDB_SET);
++	pdb_set_fullname(user, gecos, PDB_SET);
 +	SAFE_FREE(gecos);
- 
- 	pdb_set_unix_homedir(sam_account, pwd->pw_dir, PDB_SET);
- 
+ 	pdb_set_domain (user, get_global_sam_name(), PDB_DEFAULT);
+ #if 0
+ 	/* This can lead to a primary group of S-1-22-2-XX which 
