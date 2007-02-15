@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/02/05 20:20:03 adam Exp $
+# $NetBSD: Makefile,v 1.31 2007/02/15 10:43:55 rillig Exp $
 
 DISTNAME=	inkscape-0.45
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 
@@ -19,8 +20,13 @@ USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		MSGFMT=${TOOLS_DIR}/bin/msgfmt
+CONFIGURE_ENV+=		GMSGFMT=${TOOLS_DIR}/bin/msgfmt
+
+REPLACE_PERL+=		share/extensions/*.p[lm]
+REPLACE_PERL+=		share/extensions/svg_dropshadow
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
 
