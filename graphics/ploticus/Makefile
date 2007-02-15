@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/02/03 04:39:44 obache Exp $
+# $NetBSD: Makefile,v 1.36 2007/02/15 14:58:21 joerg Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31pl4
@@ -43,6 +43,5 @@ do-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
-
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

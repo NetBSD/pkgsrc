@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/15 14:58:20 joerg Exp $
 #
 
 DISTNAME=	feh-1.3.4
@@ -20,6 +20,10 @@ REPLACE_PERL=		cam/cam
 BUILDLINK_API_DEPENDS.giblib+=	giblib>=1.2.4
 BUILDLINK_API_DEPENDS.jpeg+=	jpeg>=6bnb3 # includes jpegint.h
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/giblib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
