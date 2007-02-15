@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/02/04 22:11:07 obache Exp $
+# $NetBSD: Makefile,v 1.31 2007/02/15 14:58:22 joerg Exp $
 
 DISTNAME=	RMagick-1.15.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -16,12 +16,12 @@ RUBY_HAS_ARCHLIB=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-doc-dir=${RUBY_DOCDIR}/RMagick
+USE_TOOLS+=	gs
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/RMagick
 	cd ${WRKSRC}/examples && \
 		${PAX} -rw -pp -pm . ${RUBY_EXAMPLESDIR}/RMagick
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
