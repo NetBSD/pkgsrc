@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.362 2007/02/16 00:55:19 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.363 2007/02/16 01:43:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -746,3 +746,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-Mail-DKIM to 0.22 [heinz 2007-02-15]
 	Updated mail/spamassassin to 3.1.8 [heinz 2007-02-15]
 	Updated security/nikto to 1.36 [adrianp 2007-02-16]
+	Updated multimedia/kdemultimedia3 to 3.5.6nb1 [wiz 2007-02-16]
