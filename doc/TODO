@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5996 2007/02/16 01:53:34 wiz Exp $
+$NetBSD: TODO,v 1.5997 2007/02/16 01:54:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -974,7 +974,6 @@ Suggested package updates
 	o rubygems-0.9.2
 	o rudiments-0.30
 	o sablecc-3.2
-	o samba-3.0.23d
 	o sarg-2.2.31
 	o sather-1.2.2
 	o sawfish-1.3
