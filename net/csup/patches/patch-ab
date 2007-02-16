@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/16 12:06:39 xtraeme Exp $
+
+--- Makefile.orig	2006-03-07 20:10:25.000000000 +0100
++++ Makefile	2007-02-16 12:39:28.000000000 +0100
+@@ -11,19 +11,18 @@
+ 	globtree.c idcache.c keyword.c lister.c main.c misc.c mux.c parse.y \
+ 	pathcomp.c proto.c status.c stream.c threads.c token.l updater.c
+ 
+-CFLAGS+=	-I. -I${.CURDIR} -g -pthread -DHAVE_FFLAGS -DNDEBUG
++CFLAGS+=	-I. -I${.CURDIR} -g ${PTHREAD_CFLAGS} -DHAVE_FFLAGS -DNDEBUG
++LDFLAGS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ WARNS?=		6
+ 
+ # A bit of tweaking is needed to get this Makefile working
+ # with the bsd.prog.mk of all the *BSD OSes...
+ .if (${UNAME} == "NetBSD")
+-LDFLAGS+=	-pthread
+ YHEADER=	yes
+ 
+ .elif (${UNAME} == "OpenBSD")
+ # I bet there's a better way to do this with the OpenBSD mk
+ # framework but well, this works and I got bored.
+-LDFLAGS+=	-pthread
+ YFLAGS=		-d
+ CLEANFILES+=	parse.c parse.h y.tab.h
+ 
