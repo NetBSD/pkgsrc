@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.373 2007/02/16 20:38:49 adam Exp $
+$NetBSD: CHANGES-2007,v 1.374 2007/02/16 22:58:30 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -758,3 +758,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/bogofilter to 1.0.3 [obache 2007-02-16]
 	Updated editors/jove to 4.16.0.70 [rpaulo 2007-02-16]
 	Updated graphics/gd to 2.0.34 [adam 2007-02-16]
+	Updated pkgtools/pkg_filecheck to 0.4 [tonio 2007-02-16]
