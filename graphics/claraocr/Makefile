@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/02/15 15:38:22 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/16 00:53:40 wiz Exp $
 #
 
 DISTNAME=	clara-0.9.9
+PKGNAME=	${DISTNAME:S/clara/claraocr/}
 PKGREVISION=	1
 CATEGORIES=	graphics textproc
 MASTER_SITES=	ftp://carroll.cac.psu.edu/pub/linux/distributions/mandrake-devel/projects/claraocr/ \
@@ -18,6 +19,8 @@ DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	clara.pl mkdoc.pl selthresh.pl
+
+CONFLICTS+=	clara-[0-9]*
 
 # install a example input file
 post-install:
