@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:59:25 agc Exp $
+$NetBSD: distinfo,v 1.4 2007/02/16 15:46:21 tonio Exp $
 
-SHA1 (offlineimap_4.0.6.tar.gz) = 9516529267731566f20faf309fae7e17f04a1a46
-RMD160 (offlineimap_4.0.6.tar.gz) = 282d2e9c054e07dda3b28b3a2816f83a9a2992be
-Size (offlineimap_4.0.6.tar.gz) = 449448 bytes
+SHA1 (offlineimap_4.0.16.tar.gz) = fcbd16b1838d3dde328b939de2256b9480216e43
+RMD160 (offlineimap_4.0.16.tar.gz) = 0182994bab7a244c45d59c5cdbd620451c21f29c
+Size (offlineimap_4.0.16.tar.gz) = 174917 bytes

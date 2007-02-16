@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 09:13:59 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/16 15:46:21 tonio Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
 PKGNAME=	offlineimap-${_OFFLINEIMAP_VER}
-PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://gopher.quux.org:70/devel/offlineimap/
+MASTER_SITES=	http://software.complete.org/offlineimap/static/download_area/${_OFFLINEIMAP_VER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gopher.quux.org:70/devel/offlineimap/
+HOMEPAGE=	http://software.complete.org/offlineimap
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
 
 WRKSRC=		${WRKDIR}/offlineimap
 
 # This is only to placate pkglint
-_OFFLINEIMAP_VER=	4.0.6
+_OFFLINEIMAP_VER=	4.0.16
 
-PYTHON_VERSIONS_ACCEPTED=	22 23
+PYTHON_VERSIONS_ACCEPTED=	22 23 24
 PYDISTUTILSPKG=			yes
 PYTHON_PATCH_SCRIPTS=		bin/offlineimap
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB:Q}
@@ -29,6 +28,8 @@ post-install:
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/offlineimap.1 ${PREFIX}/${PKGMANDIR}/man1/offlineimap.1
 
+.include "../../devel/py-cursespanel/buildlink3.mk"
+.include "../../devel/py-curses/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
