@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/31 00:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/16 10:51:25 rillig Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -42,6 +42,13 @@ CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PKG_JVM}}
 
 BUILD_TARGET=		libdb3_java.la java
 INSTALL_TARGET=		install_java
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# jdk 1.1.8 leads to segmentation faults when building the package.
+USE_JAVA2=		yes
+.endif
 
 .include "../../databases/db3/buildlink3.mk"
 .include "../../mk/java-vm.mk"
