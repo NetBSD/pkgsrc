@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2007/01/20 13:49:03 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2007/02/16 23:49:11 dmcmahill Exp $
 
 DISTNAME=	graphviz-2.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -20,6 +20,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-gtk
+CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
 CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX:Q} X11BASE=${X11BASE:Q}
