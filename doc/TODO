@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6000 2007/02/16 15:47:33 tonio Exp $
+$NetBSD: TODO,v 1.6001 2007/02/16 15:52:05 obache Exp $
 
 Suggested new packages
 ======================
@@ -302,7 +302,6 @@ Suggested package updates
 	o bluefish-1.0.7
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bogofilter-1.0.3 [pkg/35595]
 	o boolean-6.8
 	o boson-0.13
 	o botan-1.6.1
