@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.656 2007/01/22 18:54:00 minskim Exp $
+# $NetBSD: Makefile,v 1.657 2007/02/16 12:07:55 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -62,6 +62,7 @@ SUBDIR+=	cmu-dhcpd
 SUBDIR+=	connect
 SUBDIR+=	corkscrew
 SUBDIR+=	couriertcpd
+SUBDIR+=	csup
 SUBDIR+=	ctorrent
 SUBDIR+=	dante
 SUBDIR+=	darkstat
