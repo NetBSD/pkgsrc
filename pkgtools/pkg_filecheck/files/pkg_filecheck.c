@@ -1,5 +1,5 @@
 /*
-  $NetBSD: pkg_filecheck.c,v 1.4 2006/10/24 19:23:38 rillig Exp $
+  $NetBSD: pkg_filecheck.c,v 1.5 2007/02/16 22:57:09 tonio Exp $
 
   pkg_filecheck.c -- check for files not owned by any package
   Copyright (C) 2001 Dieter Baron
@@ -36,7 +36,7 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <db.h>
+#include <db_185.h>
 #include <errno.h>
 #include <fcntl.h>
 #if !defined(USE_LIBNBCOMPAT) || defined(HAVE_FTS_H)
