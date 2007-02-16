@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2006/05/31 18:22:25 ghen Exp $
+# $NetBSD: options.mk,v 1.16.6.1 2007/02/16 16:33:36 salo Exp $
 
 # Recommended package options for various setups:
 #
@@ -8,12 +8,10 @@
 #   Domain Controller			ldap winbind
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
-PKG_SUPPORTED_OPTIONS=	ads cups ldap ldap-compat mysql pam pgsql	\
-			winbind xml
+PKG_SUPPORTED_OPTIONS=	ads cups ldap ldap-compat pam winbind
 
 .include "../../mk/bsd.options.mk"
 
-SAMBA_PASSDB_BACKENDS:=	# empty
 SAMBA_STATIC_MODULES:=	# empty
 
 ###
@@ -75,16 +73,6 @@ CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 ###
-### Support using a MySQL database as a "passdb backend" for password
-### and account information storage.
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../mk/mysql.buildlink3.mk"
-SAMBA_PASSDB_BACKENDS:=	${SAMBA_PASSDB_BACKENDS},mysql
-SAMBA_STATIC_MODULES:=	${SAMBA_STATIC_MODULES},pdb_mysql
-.endif
-
-###
 ### Support PAM authentication and build smbpass and winbind PAM modules.
 ###
 .if !empty(PKG_OPTIONS:Mpam)
@@ -109,16 +97,6 @@ samba-pam-smbpass-install:
 .else
 PLIST_SUBST+=		PAM_SMBPASS="@comment no PAM smbpass module"
 PLIST_SUBST+=		PAM="@comment "
-.endif
-
-###
-### Support using a PostgreSQL database as a "passdb backend" for password
-### and account information storage.
-###
-.if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-SAMBA_PASSDB_BACKENDS:=	${SAMBA_PASSDB_BACKENDS},pgsql
-SAMBA_STATIC_MODULES:=	${SAMBA_STATIC_MODULES},pdb_pgsql
 .endif
 
 ###
@@ -190,23 +168,6 @@ PLIST_SUBST+=		WINBIND="@comment "
 PLIST_SUBST+=		PAM_WINBIND="@comment no PAM winbind module"
 PLIST_SUBST+=		NSS_WINBIND="@comment no NSS winbind module"
 PLIST_SUBST+=		NSS_WINS="@comment no NSS WINS module"
-.endif
-
-###
-### Support using an XML file as a "passdb backend" for password and
-### account information storage.
-###
-.if !empty(PKG_OPTIONS:Mxml)
-.  include "../../textproc/libxml2/buildlink3.mk"
-SAMBA_PASSDB_BACKENDS:=	${SAMBA_PASSDB_BACKENDS},xml
-SAMBA_STATIC_MODULES:=	${SAMBA_STATIC_MODULES},pdb_xml
-.endif
-
-###
-### Add the optional passdb backends to the configuration.
-###
-.if !empty(SAMBA_PASSDB_BACKENDS)
-CONFIGURE_ARGS+=	--with-expsam=${SAMBA_PASSDB_BACKENDS:S/^,//}
 .endif
 
 ###
