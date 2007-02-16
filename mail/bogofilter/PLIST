@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/21 23:47:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/02/16 15:47:39 obache Exp $
 bin/bf_compact
 bin/bf_copy
 bin/bf_tar
+${QDBM}bin/bogoQDBMupgrade
 bin/bogofilter
 bin/bogolexer
 bin/bogotune
