@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.243 2006/12/27 14:29:45 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.244 2007/02/16 16:09:23 tonio Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -131,7 +131,11 @@ LOWER_VENDOR?=		pc
 .elif ${OPSYS} == "FreeBSD"
 LOWER_OPSYS?=		freebsd
 LOWER_ARCH!=		${UNAME} -p
+.  if ${LOWER_ARCH} == "amd64"
+MACHINE_ARCH=		x86_64
+.  else
 MACHINE_ARCH=		${LOWER_ARCH}
+.  endif
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
 .  if ${LOWER_ARCH} == "i386"
