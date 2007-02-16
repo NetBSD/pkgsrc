@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.364 2007/02/16 01:52:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.365 2007/02/16 06:46:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -748,3 +748,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/nikto to 1.36 [adrianp 2007-02-16]
 	Updated multimedia/kdemultimedia3 to 3.5.6nb1 [wiz 2007-02-16]
 	Updated emulators/vba to 1.7.2nb2 [wiz 2007-02-16]
+	Updated net/mldonkey to 2.8.3 [wiz 2007-02-16]
+	Updated net/mldonkey-gui to 2.8.3 [wiz 2007-02-16]
