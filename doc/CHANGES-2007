@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.365 2007/02/16 06:46:26 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.366 2007/02/16 10:33:38 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -750,3 +750,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/vba to 1.7.2nb2 [wiz 2007-02-16]
 	Updated net/mldonkey to 2.8.3 [wiz 2007-02-16]
 	Updated net/mldonkey-gui to 2.8.3 [wiz 2007-02-16]
+	Removed games/blokus [rillig 2007-02-16]
