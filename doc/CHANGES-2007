@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.371 2007/02/16 15:52:05 obache Exp $
+$NetBSD: CHANGES-2007,v 1.372 2007/02/16 18:29:49 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -756,3 +756,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/udfclient to 0.5.5 [reinoud 2007-02-16]
 	Updated mail/offlineimap to 4.0.16 [tonio 2007-02-16]
 	Updated mail/bogofilter to 1.0.3 [obache 2007-02-16]
+	Updated editors/jove to 4.16.0.70 [rpaulo 2007-02-16]
