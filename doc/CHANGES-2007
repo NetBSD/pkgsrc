@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.361 2007/02/15 21:45:00 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.362 2007/02/16 00:55:19 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -745,3 +745,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/poedit to 1.3.6 [rillig 2007-02-15]
 	Updated mail/p5-Mail-DKIM to 0.22 [heinz 2007-02-15]
 	Updated mail/spamassassin to 3.1.8 [heinz 2007-02-15]
+	Updated security/nikto to 1.36 [adrianp 2007-02-16]
