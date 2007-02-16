@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.53 2007/02/10 08:59:07 rillig Exp $
+# $NetBSD: java-vm.mk,v 1.54 2007/02/16 11:13:02 rillig Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -53,7 +53,7 @@ USE_JAVA2?=	no
 PKG_JVM_DEFAULT?=	# empty
 PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
-# This is a list of all of the JVMs that may be used with java-vm.mk.
+# This is a list of all of the JDKs that may be used.
 #
 _PKG_JVMS.1.5=		sun-jdk15 scsl-jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
@@ -92,32 +92,43 @@ _PKG_JVM_DEFAULT?=	kaffe
 
 # These lists are copied from the JVM package Makefiles.
 _ONLY_FOR_PLATFORMS.blackdown-jdk13= \
-	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
+	DragonFly-*-i386 \
 	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc \
-	DragonFly-*-i386
+	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc
 .if !empty(USE_JAVA:M[rR][uU][nN])
 _ONLY_FOR_PLATFORMS.blackdown-jdk13+= \
-	NetBSD-*-arm Linux-*-arm
+	Linux-*-arm \
+	NetBSD-*-arm
 .endif
 _ONLY_FOR_PLATFORMS.jdk= \
-	NetBSD-*-i386 Linux-*-i[3-6]86 DragonFly-*-i386
+	DragonFly-*-i386 \
+	Linux-*-i[3-6]86 \
+	NetBSD-*-i386
 _ONLY_FOR_PLATFORMS.jdk14= \
-	NetBSD-[2-9].*-i386 DragonFly-*-i386
+	DragonFly-*-i386 \
+	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 _ONLY_FOR_PLATFORMS.scsl-jdk15= \
 	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk13= \
-	NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-* DragonFly-*-i386 \
-	FreeBSD-6.*-i386
+	Darwin-*-* \
+	DragonFly-*-i386 \
+	FreeBSD-6.*-i386 \
+	Linux-*-i[3-6]86 \
+	NetBSD-*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk14= \
-	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386 \
-	Linux-*-i[3-6]86 Darwin-[678].*-* DragonFly-*-i386 \
-	FreeBSD-6.*-i386
+	Darwin-[678].*-* \
+	DragonFly-*-i386 \
+	FreeBSD-6.*-i386 \
+	Linux-*-i[3-6]86 \
+	NetBSD-*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk15= \
-	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386 \
-	NetBSD-[2-9].*-x86_64 \
-	Linux-*-i[3-6]86 Darwin-8.*-* DragonFly-*-i386 FreeBSD-6.*-i386
+	Darwin-8.*-* \
+	DragonFly-*-i386 \
+	FreeBSD-6.*-i386 \
+	Linux-*-i[3-6]86 \
+	NetBSD-*-i386 NetBSD-*-x86_64
 #_ONLY_FOR_PLATFORMS.win32-jdk= \
 #	Interix-*-*
 
