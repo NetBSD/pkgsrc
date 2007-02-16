@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16.6.1 2007/02/16 16:33:36 salo Exp $
+# $NetBSD: options.mk,v 1.16.6.2 2007/02/16 16:35:51 salo Exp $
 
 # Recommended package options for various setups:
 #
@@ -8,7 +8,7 @@
 #   Domain Controller			ldap winbind
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
-PKG_SUPPORTED_OPTIONS=	ads cups ldap ldap-compat pam winbind
+PKG_SUPPORTED_OPTIONS=	ads cups ldap pam winbind
 
 .include "../../mk/bsd.options.mk"
 
@@ -50,16 +50,6 @@ samba-cups-install:
 .else
 CONFIGURE_ARGS+=	--disable-cups
 PLIST_SUBST+=		CUPS="@comment "
-.endif
-
-###
-### Support Samba-2.x LDAP password and account databases.
-###
-.if !empty(PKG_OPTIONS:Mldap-compat)
-.  if empty(PKG_OPTIONS:Mldap)
-PKG_OPTIONS+=		ldap
-.  endif
-CONFIGURE_ARGS+=	--with-ldapsam
 .endif
 
 ###
