@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2007/02/07 20:04:00 drochner Exp $
+# $NetBSD: Makefile.common,v 1.40 2007/02/16 00:54:48 wiz Exp $
 #
 
 DISTNAME=		xine-lib-${XINE_LIB_VER}
@@ -32,12 +32,10 @@ PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} != "native"
-.include "../../x11/libXv/buildlink3.mk"
-PLIST_SUBST+=		HAVE_XV=
-.elif !exists(${X11BASE}/lib/libXv.so)
+.if ${X11_TYPE} == "native" && !exists(${X11BASE}/lib/libXv.so)
 PLIST_SUBST+=		HAVE_XV="@comment "
 .else
+.include "../../x11/libXv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
 PLIST_SUBST+=		HAVE_XV=
 .endif
