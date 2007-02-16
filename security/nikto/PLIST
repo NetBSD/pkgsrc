@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/06 21:11:57 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/02/16 00:54:23 adrianp Exp $
 bin/nikto
 share/doc/nikto/CHANGES.txt
 share/doc/nikto/LICENSE.txt
@@ -17,6 +17,7 @@ libdata/nikto/plugins/nikto_mutate.plugin
 libdata/nikto/plugins/nikto_outdated.plugin
 libdata/nikto/plugins/nikto_passfiles.plugin
 libdata/nikto/plugins/nikto_plugin_order.txt
+libdata/nikto/plugins/nikto_put_del_test.plugin
 libdata/nikto/plugins/nikto_realms.plugin
 libdata/nikto/plugins/nikto_robots.plugin
 libdata/nikto/plugins/nikto_user_enum_apache.plugin
