@@ -278,6 +278,9 @@ ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samba	
 samplerate		Enable libsamplerate support.
 sane-backends-hp3900	Include HP3900 driver.
+snort-flexresp		Flexible Responses on hostile connection attempts
+snort-flexresp2		NEW Flexible Responses on hostile connection attempts
+snort-prelude		Enable prelude support.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
 scapy-crypto		Add in crypto support
