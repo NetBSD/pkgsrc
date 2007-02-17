@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/01/06 22:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/17 20:59:50 wiz Exp $
 #
 
 DISTNAME=		tailor-0.9.27
-CATEGORIES=		devel
+CATEGORIES=		devel scm
 MASTER_SITES=		http://darcs.arstecnica.it/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

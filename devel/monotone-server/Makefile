@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2007/01/02 11:10:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/17 20:59:49 wiz Exp $
 #
 
 DISTNAME=	monotone-server-0.32
-CATEGORIES=	devel
+CATEGORIES=	devel scm
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 

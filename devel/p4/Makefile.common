@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2006/06/17 20:44:03 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2007/02/17 20:59:49 wiz Exp $
 #
 
 P4_VERS=	2002.1
 PKGNAME=	${DISTNAME}-${P4_VERS}
-CATEGORIES=	devel
+CATEGORIES=	devel p4
 MAINTAINER=	schmonz@NetBSD.org
 
 NO_CONFIGURE=	yes

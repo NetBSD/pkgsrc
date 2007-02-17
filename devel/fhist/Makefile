@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/02/05 00:33:58 obache Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/17 20:59:48 wiz Exp $
 #
 
 DISTNAME=		fhist-1.16
-CATEGORIES=		devel
+CATEGORIES=		devel scm
 MASTER_SITES=		http://fhist.sourceforge.net/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
