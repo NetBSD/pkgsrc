@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2006/06/24 06:12:43 jlam Exp $
+# $NetBSD: Makefile,v 1.94 2007/02/17 20:59:47 wiz Exp $
 #
 
 DISTNAME=	cvs-1.11.21
-CATEGORIES=	devel
+CATEGORIES=	devel scm
 MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/stable/1.11.21/
 EXTRACT_SUFX=	.tar.bz2
 
