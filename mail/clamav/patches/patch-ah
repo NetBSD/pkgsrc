@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.7 2006/10/19 07:30:15 martti Exp $
+$NetBSD: patch-ah,v 1.7.2.1 2007/02/17 18:34:25 salo Exp $
 
---- clamav-milter/clamav-milter.c.orig	2006-04-29 19:14:28.000000000 +0000
-+++ clamav-milter/clamav-milter.c	2006-10-19 10:18:21.000000000 +0000
-@@ -2976,7 +2976,7 @@ clamfi_eom(SMFICTX *ctx)
+--- clamav-milter/clamav-milter.c.orig	2007-02-12 23:36:49.000000000 +0100
++++ clamav-milter/clamav-milter.c	2007-02-16 15:30:49.000000000 +0100
+@@ -3495,7 +3495,7 @@
  						 * the postmaster, so include
  						 * some useful information
  						 */
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.7 2006/10/19 07:30:15 martti Exp $
  							sendmailId, privdata->from);
  					else
  						fprintf(sendmail, _("A message sent from %s to\n"),
-@@ -2990,7 +2990,7 @@ clamfi_eom(SMFICTX *ctx)
+@@ -3509,7 +3509,7 @@
  						fprintf(sendmail, _("\nThe message in question has been quarantined as %s\n"), privdata->filename);
  
  					if(hflag) {
@@ -20,12 +20,12 @@ $NetBSD: patch-ah,v 1.7 2006/10/19 07:30:15 martti Exp $
  							smfi_getsymval(ctx, "j"), privdata->from,
  							smfi_getsymval(ctx, "_"));
  						fputs(_("For your information, the original message headers were:\n\n"), sendmail);
-@@ -4151,7 +4151,7 @@ qfile(struct privdata *privdata, const c
+@@ -4700,7 +4700,7 @@
+ 	cli_dbgmsg("qfile move '%s' to '%s'\n", privdata->filename, newname);
  
  	if(move(privdata->filename, newname) < 0) {
- 		if(use_syslog)
--			syslog(LOG_WARNING, _("Can't rename %1$s to %2$s"),
-+			syslog(LOG_WARNING, _("Can't rename %s to %s"),
- 				privdata->filename, newname);
+-		logg(_("^Can't rename %1$s to %2$s\n"),
++		logg(_("^Can't rename %s to %s\n"),
+ 			privdata->filename, newname);
  		free(newname);
  		return -1;

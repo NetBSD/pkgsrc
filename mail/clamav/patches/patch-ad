@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.10 2006/10/19 07:30:15 martti Exp $
+$NetBSD: patch-ad,v 1.10.2.1 2007/02/17 18:34:24 salo Exp $
 
---- docs/Makefile.in.orig	2006-10-15 21:46:39.000000000 +0000
-+++ docs/Makefile.in	2006-10-19 10:17:15.000000000 +0000
-@@ -191,6 +191,8 @@
- man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5
+--- docs/Makefile.in.orig	2007-02-16 15:25:08.000000000 +0100
++++ docs/Makefile.in	2007-02-16 15:25:38.000000000 +0100
+@@ -203,6 +203,8 @@
+ man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5 man/clamconf.1
  all: all-am
  
 +@BUILD_CLAMD_TRUE@@HAVE_MILTER_TRUE@MILTER_MANS = man/clamav-milter.8
