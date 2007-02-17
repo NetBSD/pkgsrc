@@ -1,17 +1,103 @@
-# $NetBSD: Makefile,v 1.27 2006/04/18 22:39:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/17 19:08:06 adrianp Exp $
 #
 
-.include "Makefile.common"
+DISTNAME=		snort-2.6.1.2
+CATEGORIES=		net security
+MASTER_SITES=		http://www.snort.org/dl/current/
 
-COMMENT=	The Open Source Network Intrusion Detection System
+MAINTAINER=		adrianp@NetBSD.org
+HOMEPAGE=		http://www.snort.org/
+COMMENT=		The Open Source Network Intrusion Detection System
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.snort
-PKG_SUPPORTED_OPTIONS=  debug
+CONFLICTS+=		snort-mysql-[0-9]*
+CONFLICTS+=		snort-pgsql-[0-9]*
+CONFLICTS+=		snort-prelude-[0-9]*
 
-.include "../../mk/bsd.options.mk"
+.include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=        --enable-debug
-.endif
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+PKG_SYSCONFSUBDIR=	snort
+RCD_SCRIPTS=		snort
+SNORT_USER?=		snort
+SNORT_GROUP?=		snort
+EGDIR=			${PREFIX}/share/examples/snort
+PKG_GROUPS=		${SNORT_GROUP}
+PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}
+FILES_SUBST+=		SNORT_USER=${SNORT_USER:Q} SNORT_GROUP=${SNORT_GROUP:Q}
+BUILD_DEFS+=		VARBASE
+OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
+DOC_FILES=		BUGS INSTALL NEWS PROBLEMS README TODO USAGE WISHLIST
 
+CONF_FILES=		${EGDIR}/snort.conf.default \
+			${PKG_SYSCONFDIR}/snort.conf
+CONF_FILES+=		${EGDIR}/threshold.conf \
+			${PKG_SYSCONFDIR}/threshold.conf
+CONF_FILES+=		${EGDIR}/classification.config \
+			${PKG_SYSCONFDIR}/classification.config
+CONF_FILES+=		${EGDIR}/reference.config \
+			${PKG_SYSCONFDIR}/reference.config
+CONF_FILES+=		${EGDIR}/gen-msg.map \
+			${PKG_SYSCONFDIR}/gen-msg.map
+CONF_FILES+=		${EGDIR}/generators \
+			${PKG_SYSCONFDIR}/generators
+CONF_FILES+=		${EGDIR}/sid \
+			${PKG_SYSCONFDIR}/sid
+CONF_FILES+=		${EGDIR}/sid-msg.map \
+			${PKG_SYSCONFDIR}/sid-msg.map
+CONF_FILES+=		${EGDIR}/unicode.map \
+			${PKG_SYSCONFDIR}/unicode.map
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	etc/snort.conf src/snort.c
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.paths+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.paths=	Fixing paths.
+
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	post-configure
+SUBST_FILES.install=	src/dynamic-preprocessors/ftptelnet/Makefile
+SUBST_FILES.install+=	src/dynamic-preprocessors/smtp/Makefile
+SUBST_FILES.install+=	src/dynamic-preprocessors/ssh/Makefile
+SUBST_FILES.install+=	src/dynamic-preprocessors/dcerpc/Makefile
+SUBST_FILES.install+=	src/dynamic-preprocessors/dns/Makefile
+SUBST_SED.install=	-e "s|-o root -g wheel||g"
+SUBST_MESSAGE.install=	Fixing install scripts.
+
+.include "options.mk"
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
+CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
+
+pre-build:
+	${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort/schemas
+
+	${INSTALL_DATA} ${WRKSRC}/etc/*.config \
+			${WRKSRC}/etc/*.map \
+			${WRKSRC}/etc/generators \
+			${WRKSRC}/etc/sid \
+			${WRKSRC}/etc/threshold.conf \
+			${WRKSRC}/etc/snort.conf.default ${EGDIR}/
+
+.	for i in ${DOC_FILES}
+		${INSTALL_DATA}	${WRKSRC}/doc/${i} ${PREFIX}/share/doc/snort/
+.	endfor
+
+	${INSTALL_DATA} ${WRKSRC}/doc/README.* ${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.tex ${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${PREFIX}/share/doc/snort/
+	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/${PKGMANDIR}/man8
+
+	${INSTALL_DATA} ${WRKSRC}/schemas/create_* \
+		${PREFIX}/share/doc/snort/schemas
+
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
