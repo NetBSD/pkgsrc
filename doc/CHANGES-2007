@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.374 2007/02/16 22:58:30 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.375 2007/02/17 08:28:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -759,3 +759,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/jove to 4.16.0.70 [rpaulo 2007-02-16]
 	Updated graphics/gd to 2.0.34 [adam 2007-02-16]
 	Updated pkgtools/pkg_filecheck to 0.4 [tonio 2007-02-16]
+	Updated wm/ctwm to 3.8a [obache 2007-02-17]
