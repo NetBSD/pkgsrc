@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.381 2007/02/17 19:19:19 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.382 2007/02/17 22:54:15 salo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed snort-mysql [adrianp 2007-02-17]
 	Removed snort-prelude [adrianp 2007-02-17]
 	Updated security/base to 1.2.7 [adrianp 2007-02-17]
+	Updated multimedia/xine-ui to 0.99.4nb8 [salo 2007-02-17]
