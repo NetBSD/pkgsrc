@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.379 2007/02/17 18:37:32 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.380 2007/02/17 19:17:20 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -764,3 +764,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added archivers/lzma version 4.43 [obache 2007-02-17]
 	Updated net/socat to 1.5.0.0 [adrianp 2007-02-17]
 	Updated net/freeradius to 1.1.4 [adrianp 2007-02-17]
+	Updated net/snort to 2.6.1.2 [adrianp 2007-02-17]
+	Removed snort-pgsql [adrianp 2007-02-17]
+	Removed snort-mysql [adrianp 2007-02-17]
+	Removed snort-prelude [adrianp 2007-02-17]
