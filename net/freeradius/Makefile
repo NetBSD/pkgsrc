@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/09/10 22:35:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.56 2007/02/17 18:36:23 adrianp Exp $
 
 DISTNAME=	freeradius-${RADVER}
 CATEGORIES=	net
@@ -40,7 +40,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			1.1.3
+RADVER=			1.1.4
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -95,7 +95,7 @@ EGFILES=	acct_users attrs certs/demoCA/index.txt.old \
 		naslist naspasswd oraclesql.conf pgsql-voip.conf \
 		postgresql.conf preproxy_users proxy.conf \
 		realms snmp.conf sql.conf users radiusd.conf dictionary \
-		otp.conf otppasswd.sample
+		otp.conf sqlippool.conf
 
 .for f in ${EGFILES}
 CONF_FILES_PERMS+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
