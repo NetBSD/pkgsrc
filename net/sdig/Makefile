@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/15 21:45:35 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/17 12:54:46 joerg Exp $
 
 DISTNAME=	sdig-0.30
 CATEGORIES=	net
@@ -15,7 +15,8 @@ SUBST_MESSAGE.sdig=	Inserting the correct prefix directory.
 SUBST_FILES.sdig=	sdig.conf
 SUBST_SED.sdig=		-e 's,\$${PREFIX},${PREFIX},g'
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man8 ${PKGMANDIR}/man5 share/misc share/examples
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8 ${PKGMANDIR}/man5 share/doc \
+			share/examples share/misc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/sdig.conf ${PREFIX}/share/examples/
