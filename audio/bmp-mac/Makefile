@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/09 21:20:51 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/17 12:55:46 joerg Exp $
 #
 
 DISTNAME=	bmp-mac-0.1.1
@@ -12,6 +12,7 @@ COMMENT=	BMP plugin for Monkey's Audio files
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++
+USE_TOOLS+=	pkg-config
 
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../audio/mac/buildlink3.mk"
