@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/10/23 18:19:45 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/17 19:18:24 adrianp Exp $
 #
 
-DISTNAME=	base-1.2.6
+DISTNAME=	base-1.2.7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
