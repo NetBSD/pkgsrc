@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/12/11 18:55:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.66.2.1 2007/02/17 18:34:24 salo Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -12,7 +12,7 @@ COMMENT=	Anti-virus toolkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CLAMAV_VERSION=		0.88.7
+CLAMAV_VERSION=		0.90
 
 USE_LIBTOOL=		yes
 
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP:Q}
 CONFIGURE_ARGS+=	--with-tcpwrappers
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--enable-experimental
 
 .include "../../mk/bsd.prefs.mk"
 

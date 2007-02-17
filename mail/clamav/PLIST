@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2006/02/19 00:05:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17.8.1 2007/02/17 18:34:24 salo Exp $
 bin/clamav-config
+bin/clamconf
 bin/clamdscan
 bin/clamscan
 bin/freshclam
@@ -7,6 +8,7 @@ bin/sigtool
 include/clamav.h
 lib/libclamav.la
 lib/pkgconfig/libclamav.pc
+man/man1/clamconf.1
 man/man1/clamdscan.1
 man/man1/clamscan.1
 man/man1/freshclam.1
