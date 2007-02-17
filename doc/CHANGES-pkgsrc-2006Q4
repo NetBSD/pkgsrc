@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.33 2007/02/15 13:15:28 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.34 2007/02/17 18:34:50 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -81,3 +81,5 @@ Pullup ticket 2009 - requested by obache
 build fix for octave-forge
 Pullup ticket 2019 - requested by tron
 security update for samba
+Pullup ticket 2020 - requested by xtraeme
+security update for clamav
