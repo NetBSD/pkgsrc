@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6002 2007/02/16 20:38:49 adam Exp $
+$NetBSD: TODO,v 1.6003 2007/02/17 17:46:56 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1004,8 +1004,6 @@ Suggested package updates
 	o smlnj-110.62
 	o snd-8.8
 	o snes9x-1.502
-	o snort-2.6.0.2
-	o socat-1.5.0.0
 	o solfege-3.6.4
 	o sope-4.5.5
 	o sound-juicer-2.16.2
