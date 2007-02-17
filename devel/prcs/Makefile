@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2006/06/16 11:32:45 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2007/02/17 20:59:50 wiz Exp $
 
 DISTNAME= 		prcs-1.3.3
 PKGREVISION=		4
-CATEGORIES=		devel
+CATEGORIES=		devel scm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prcs/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
