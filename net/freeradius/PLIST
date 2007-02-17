@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/09/10 22:35:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/02/17 18:36:23 adrianp Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -244,7 +244,6 @@ share/examples/freeradius/naslist
 share/examples/freeradius/naspasswd
 share/examples/freeradius/oraclesql.conf
 share/examples/freeradius/otp.conf
-share/examples/freeradius/otppasswd.sample
 share/examples/freeradius/pgsql-voip.conf
 share/examples/freeradius/postgresql.conf
 share/examples/freeradius/preproxy_users
@@ -253,6 +252,7 @@ share/examples/freeradius/radiusd.conf
 share/examples/freeradius/realms
 share/examples/freeradius/snmp.conf
 share/examples/freeradius/sql.conf
+share/examples/freeradius/sqlippool.conf
 share/examples/freeradius/users
 share/examples/rc.d/radiusd
 share/freeradius/dictionary
@@ -282,7 +282,6 @@ share/freeradius/dictionary.colubris
 share/freeradius/dictionary.columbia_university
 share/freeradius/dictionary.compat
 share/freeradius/dictionary.cosine
-share/freeradius/dictionary.digest
 share/freeradius/dictionary.digium
 share/freeradius/dictionary.epygi
 share/freeradius/dictionary.ericsson
@@ -315,6 +314,7 @@ share/freeradius/dictionary.nomadix
 share/freeradius/dictionary.nortel
 share/freeradius/dictionary.ntua
 share/freeradius/dictionary.packeteer
+share/freeradius/dictionary.patton
 share/freeradius/dictionary.propel
 share/freeradius/dictionary.quintum
 share/freeradius/dictionary.redback
@@ -327,10 +327,13 @@ share/freeradius/dictionary.rfc2869
 share/freeradius/dictionary.rfc3162
 share/freeradius/dictionary.rfc3576
 share/freeradius/dictionary.rfc3580
+share/freeradius/dictionary.rfc4590
 share/freeradius/dictionary.riverstone
 share/freeradius/dictionary.roaringpenguin
+share/freeradius/dictionary.schulzrinne-sipping
 share/freeradius/dictionary.shasta
 share/freeradius/dictionary.shiva
+share/freeradius/dictionary.sofaware
 share/freeradius/dictionary.sonicwall
 share/freeradius/dictionary.springtide
 share/freeradius/dictionary.starent
