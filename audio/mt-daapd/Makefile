@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/05 22:23:06 tron Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/17 16:39:23 adrianp Exp $
 
 DISTNAME=	mt-daapd-0.2.4
 PKGREVISION=	2
@@ -21,6 +21,7 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 MTDAAPD_USER?=	mtdaapd
 MTDAAPD_GROUP?=	mtdaapd
 PKG_USERS=	${MTDAAPD_USER}:${MTDAAPD_GROUP}
+PKG_GROUPS=	${MTDAAPD_GROUP}
 BUILD_DEFS+=	VARBASE MTDAAPD_USER
 
 CONF_FILES_PERMS=	${EGDIR}/mt-daapd.conf ${PKG_SYSCONFDIR}/mt-daapd.conf \
