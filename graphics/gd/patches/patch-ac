@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2007/02/16 20:37:52 adam Exp $
+$NetBSD: patch-ac,v 1.5 2007/02/17 07:04:45 adam Exp $
 
 --- gd_gif_in.c.orig	2007-02-03 02:41:00.000000000 +0100
 +++ gd_gif_in.c
@@ -32,14 +32,14 @@ $NetBSD: patch-ac,v 1.4 2007/02/16 20:37:52 adam Exp $
                         *Transparent = buf[3];
  
 -               while (GetDataBlock(fd, (unsigned char*) buf, ZeroDataBlockP) > 0)
-+               while (GetDataBlock(fd, (unsigned char*) buf, ZeroDataBlockP) > 0 && --maxcount > 0)
++               while (GetDataBlock(fd, (unsigned char*) buf, ZeroDataBlockP) > 0 && --maxcount >= 0)
                         ;
                 return FALSE;
         default:
                 break;
         }
 -       while (GetDataBlock(fd, (unsigned char*) buf, ZeroDataBlockP) > 0)
-+       while (GetDataBlock(fd, (unsigned char*) buf, ZeroDataBlockP) > 0 && --maxcount > 0)
++       while (GetDataBlock(fd, (unsigned char*) buf, ZeroDataBlockP) > 0 && --maxcount >= 0)
                 ;
  
         return FALSE;
