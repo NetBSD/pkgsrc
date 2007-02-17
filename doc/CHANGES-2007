@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.375 2007/02/17 08:28:51 obache Exp $
+$NetBSD: CHANGES-2007,v 1.376 2007/02/17 10:20:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -760,3 +760,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gd to 2.0.34 [adam 2007-02-16]
 	Updated pkgtools/pkg_filecheck to 0.4 [tonio 2007-02-16]
 	Updated wm/ctwm to 3.8a [obache 2007-02-17]
+	Updated emulators/wine to 0.9.31 [adam 2007-02-17]
