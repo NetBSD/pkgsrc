@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.27 2007/01/25 18:15:49 epg Exp $
+# $NetBSD: Makefile.common,v 1.28 2007/02/17 20:59:50 wiz Exp $
 
 DISTNAME=		subversion-${SVNVER}
-CATEGORIES=		devel
+CATEGORIES=		devel scm
 MASTER_SITES=		http://subversion.tigris.org/tarballs/
 
 MAINTAINER=		epg@NetBSD.org
