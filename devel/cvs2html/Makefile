@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/17 20:59:47 wiz Exp $
 #
 
 DISTNAME=	cvs2html-1.82
-CATEGORIES=	devel
+CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	zuntum@NetBSD.org

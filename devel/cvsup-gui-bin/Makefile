@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 21:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/17 20:59:48 wiz Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
-CATEGORIES=	devel
+CATEGORIES=	devel scm
 MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
 
