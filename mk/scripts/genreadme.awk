@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.25 2006/12/15 13:15:06 martti Exp $
+# $NetBSD: genreadme.awk,v 1.26 2007/02/18 00:08:36 adrianp Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -255,7 +255,7 @@ END {
 	}
 	close(builddependsfile);
 
-	vfile = DISTDIR "/pkg-vulnerabilities";
+	vfile = PVDIR "/pkg-vulnerabilities";
 
 # extract date for vulnerabilities file
 	cmd = "ls -l " vfile;
@@ -275,16 +275,22 @@ END {
 			  vul_minor = vul_format[2];
 			  vul_teeny = vul_format[3];
 			}
-			if ($0 !~ /^\#/) {
+			if ( $0 ~ /^-----BEGIN PGP SIGNATURE-----.*/ ) {
+				break;
+			}
+			if ( ( $0 !~ /^\#/ ) && 
+			     ( $0 !~ /^Hash:.*/ ) && 
+			     ( $0 !~ /^-----BEGIN PGP SIGNED.*/ ) &&
+			     ( $0 != "" ) ) {
 				vulpkg[i] = $1;
 				vultype[i] = $2;
 				vulref[i] = $3;
 				i = i + 1;
 			}
 		}
-		if( (vul_major != 1) ||
-		    (vul_minor != 0) ||
-		    (vul_teeny != 1) ) {
+		if( (vul_major > 1) ||
+		    (vul_minor > 1) ||
+		    (vul_teeny > 0) ) {
 			printf("Version %d.%d.%d of the vulnerability file is out of sync with",
 				vul_major, vul_minor, vul_teeny);
 			printf("the genreadme.awk script\n");
