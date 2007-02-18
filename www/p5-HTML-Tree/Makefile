@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2006/07/12 17:11:22 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/18 03:17:10 wiz Exp $
 
-DISTNAME=		HTML-Tree-3.20
+DISTNAME=		HTML-Tree-3.23
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5htr
 CATEGORIES=		www perl5
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-Tree/
 COMMENT=		Perl5 modules for manipulating HTML syntax trees
 
-DEPENDS+=		p5-HTML-Parser>=2.19:../../www/p5-HTML-Parser
+DEPENDS+=		p5-HTML-Parser>=3.46:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Tagset>=3.02:../../www/p5-HTML-Tagset
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
