@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2006/10/21 07:38:42 obache Exp $
+$NetBSD: distinfo,v 1.15 2007/02/18 01:55:15 wiz Exp $
 
-SHA1 (Test-Simple-0.64.tar.gz) = f275d266712d9fe7672fd3a5e023f67886eb0ee9
-RMD160 (Test-Simple-0.64.tar.gz) = dfe88655a046b4034a592ea8bc5039771f78f098
-Size (Test-Simple-0.64.tar.gz) = 70874 bytes
-SHA1 (patch-aa) = 9a6576863bd2b544561350d64a82f5785335750d
+SHA1 (Test-Simple-0.67.tar.gz) = 082e6362ac0f56e6eb0da7b72e362cb34b21c2b4
+RMD160 (Test-Simple-0.67.tar.gz) = 70c744fef4f6925b6d58287c1e3ba2209dc10193
+Size (Test-Simple-0.67.tar.gz) = 76284 bytes
+SHA1 (patch-aa) = 93ec775969d78eb7645dd01359e8fbf8f62ea9f6

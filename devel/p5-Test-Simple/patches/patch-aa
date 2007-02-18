@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/10/21 07:38:42 obache Exp $
+$NetBSD: patch-aa,v 1.5 2007/02/18 01:55:15 wiz Exp $
 
---- Makefile.PL.orig	2006-07-09 18:49:50.000000000 +0900
+--- Makefile.PL.orig	2006-10-24 21:13:12.000000000 +0000
 +++ Makefile.PL
-@@ -50,9 +50,7 @@ WriteMakefile(
-     VERSION_FROM    => "lib/$PACKAGE_FILE.pm", # finds $VERSION
+@@ -51,8 +51,6 @@ WriteMakefile(
      PREREQ_PM       => { 
                          Test::Harness   => 2.03,
--                       },
+                        },
 -    # Added to the core somewhere around 5.7.2.
--    INSTALLDIRS     => $] >= 5.00702 ? 'perl' : 'site'
-+                       }
+-    INSTALLDIRS     => $] >= 5.00702 ? 'perl' : 'site',
+     ($ExtUtils::MakeMaker::VERSION <= 6.31 ? (LICENSE         => 'perl') : ()),
  );
- 
  
