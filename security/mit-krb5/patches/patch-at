@@ -1,0 +1,25 @@
+$NetBSD: patch-at,v 1.1.2.2 2007/02/18 12:01:11 ghen Exp $
+
+Security fix for CVE-2006-6143.
+
+--- lib/rpc/svc.c.orig	2004-09-21 20:20:15.000000000 +0200
++++ lib/rpc/svc.c	2007-01-17 21:58:10.000000000 +0100
+@@ -436,6 +436,8 @@ svc_getreqset(FDSET_TYPE *readfds)
+ #endif
+ }
+ 
++extern struct svc_auth_ops svc_auth_gss_ops;
++
+ static void
+ svc_do_xprt(SVCXPRT *xprt)
+ {
+@@ -517,6 +519,9 @@ svc_do_xprt(SVCXPRT *xprt)
+ 		if ((stat = SVC_STAT(xprt)) == XPRT_DIED){
+ 			SVC_DESTROY(xprt);
+ 			break;
++		} else if ((xprt->xp_auth != NULL) &&
++			   (xprt->xp_auth->svc_ah_ops != &svc_auth_gss_ops)) {
++			xprt->xp_auth = NULL;
+ 		}
+ 	} while (stat == XPRT_MOREREQS);
+ 
