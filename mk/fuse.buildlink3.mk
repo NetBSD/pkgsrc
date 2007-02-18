@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.1 2007/02/18 22:07:56 xtraeme Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.2 2007/02/18 22:37:06 xtraeme Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -9,9 +9,9 @@ FUSE_BUILDLINK3_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # NetBSD
-.if (!empty(OPSYS:MNetBSD) && exists(/usr/include/fuse.h))
+.  if (!empty(OPSYS:MNetBSD) && exists(/usr/include/fuse.h))
 
-.  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
+.    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-fuse-pkgconfig
 
 BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
@@ -37,28 +37,28 @@ override-fuse-pkgconfig:
 	${ECHO} "Cflags: -I\$${includedir}";		\
 	} >> ${BLKDIR_PKGCFG}/${FUSE_PKGCFGF};
 
-.  endif # pkg-config
+.    endif # pkg-config
 
 # To make sure
 BUILDLINK_TRANSFORM+=	l:fuse:refuse
 
 # Undefined reference to fuse_main()... use fuse_exit() for now.
-.  if defined(GNU_CONFIGURE)
+.    if defined(GNU_CONFIGURE)
 SUBST_CLASSES+=		refuse
 SUBST_STAGE.refuse=	pre-configure
 SUBST_FILES.refuse=	configure
-.    for _f_ in configure.in configure.ac
-.      if exists(${WRKSRC}/${_f_})
+.      for _f_ in configure.in configure.ac
+.        if exists(${WRKSRC}/${_f_})
 SUBST_FILES.refuse+=	${_f_}
-.      endif
-.    endfor
+.        endif
+.      endfor
 SUBST_SED.refuse=	-e "s|fuse_main|fuse_exit|g"
-.  endif
+.    endif
 
-.  endif # NetBSD - pkg-config
+.  else # Linux
 
-.else # Linux
+.    include "${PKGSRCDIR}/filesystems/fusefs/buildlink3.mk"
 
-.include "${PKGSRCDIR}/filesystems/fusefs/buildlink3.mk"
+.  endif # End of systems
 
-.endif
+.endif #
