@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2007/02/18 11:40:10 wiz Exp $
 
---- pth_high.c.orig	Wed Jan  1 15:45:06 2003
+--- pth_high.c.orig	2006-06-08 17:54:03.000000000 +0000
 +++ pth_high.c
-@@ -180,6 +180,35 @@ int pth_sigwait_ev(const sigset_t *set, 
+@@ -184,6 +184,35 @@ int pth_sigwait_ev(const sigset_t *set, 
      return 0;
  }
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
  /* Pth variant of waitpid(2) */
  pid_t pth_waitpid(pid_t wpid, int *status, int options)
  {
-@@ -330,9 +359,9 @@ int pth_select_ev(int nfd, fd_set *rfds,
+@@ -334,9 +363,9 @@ int pth_select_ev(int nfd, fd_set *rfds,
              }
          }
          /* POSIX.1-2001/SUSv3 compliance */
@@ -51,7 +51,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
          return 0;
      }
  
-@@ -345,17 +374,17 @@ int pth_select_ev(int nfd, fd_set *rfds,
+@@ -349,17 +378,17 @@ int pth_select_ev(int nfd, fd_set *rfds,
      delay.tv_usec = 0;
      rtmp = NULL;
      if (rfds != NULL) {
@@ -72,7 +72,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
          etmp = &espare;
      }
      while ((rc = pth_sc(select)(nfd, rtmp, wtmp, etmp, &delay)) < 0
-@@ -370,11 +399,11 @@ int pth_select_ev(int nfd, fd_set *rfds,
+@@ -374,11 +403,11 @@ int pth_select_ev(int nfd, fd_set *rfds,
                   && pth_time_cmp(timeout, PTH_TIME_ZERO) == 0)) {
          /* pass-through immediate success */
          if (rfds != NULL)
@@ -87,7 +87,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
          return rc;
      }
  
-@@ -407,9 +436,9 @@ int pth_select_ev(int nfd, fd_set *rfds,
+@@ -411,9 +440,9 @@ int pth_select_ev(int nfd, fd_set *rfds,
          && pth_event_status(ev_timeout) == PTH_STATUS_OCCURRED) {
          selected = TRUE;
          /* POSIX.1-2001/SUSv3 compliance */
@@ -100,10 +100,10 @@ $NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
          rc = 0;
      }
      if (ev_extra != NULL && !selected)
-@@ -620,6 +649,13 @@ int pth_connect_ev(int s, const struct s
+@@ -624,6 +653,13 @@ int pth_connect_ev(int s, const struct s
      /* if it is still on progress wait until socket is really writeable */
      if (rv == -1 && errno == EINPROGRESS && fdmode != PTH_FDMODE_NONBLOCK) {
-         ev = pth_event(PTH_EVENT_FD|PTH_UNTIL_FD_WRITEABLE|PTH_MODE_STATIC, &ev_key, s);
+         if ((ev = pth_event(PTH_EVENT_FD|PTH_UNTIL_FD_WRITEABLE|PTH_MODE_STATIC, &ev_key, s)) == NULL)
 +        /*
 +         * This will fail if the fd is > FD_SETSIZE so pass the error back to the
 +         * caller.
@@ -111,6 +111,6 @@ $NetBSD: patch-ac,v 1.5 2003/05/02 11:49:48 wiz Exp $
 +        if (ev == NULL) {
 +           return pth_error(-1, errno);
 +        }
+             return pth_error(-1, errno);
          if (ev_extra != NULL)
              pth_event_concat(ev, ev_extra, NULL);
-         pth_wait(ev);
