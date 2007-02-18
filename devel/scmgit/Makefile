@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/01/22 14:33:31 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/18 22:38:42 rillig Exp $
 #
 
-DISTNAME=	git-1.4.4.1
+DISTNAME=	git-1.5.0
 PKGNAME=	scm${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -30,6 +29,7 @@ INSTALL_TARGET=	install install-doc
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 LDFLAGS=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LIBS.SunOS+=	-liconv
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 PERL5_PACKLIST=	auto/Git/.packlist
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/perl
@@ -48,7 +48,6 @@ PLIST_SUBST+=	IF_NEEDS_SUBPROCESS_PY="@comment "
 post-install:
 	chmod 644 ${PREFIX}/${PKGMANDIR}/man1/git*.1
 	chmod 644 ${PREFIX}/${PKGMANDIR}/man7/git*.7
-	chmod 644 ${PREFIX}/share/git-core/python/*.py
 
 .include "../../lang/perl5/module.mk"
 .include "../../converters/libiconv/buildlink3.mk"

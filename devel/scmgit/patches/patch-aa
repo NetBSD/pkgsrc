@@ -1,14 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2007/01/22 14:33:31 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2007/02/18 22:38:43 rillig Exp $
 
 NetBSD 3.0 needs -liconv, too.
 
 CFLAGS, LDFLAGS and LIBS should be taken from the environment.
 
-Install perl modules into the "vendor" directories.
-
---- Makefile.orig	2006-11-23 03:38:07.000000000 +0100
-+++ Makefile	2007-01-22 15:17:52.611639144 +0100
-@@ -106,8 +106,6 @@ uname_P := $(shell sh -c 'uname -p 2>/de
+--- Makefile.orig	2007-02-14 03:46:46.000000000 +0100
++++ Makefile	2007-02-18 22:54:11.000000000 +0100
+@@ -114,8 +114,6 @@ uname_P := $(shell sh -c 'uname -p 2>/de
  
  # CFLAGS and LDFLAGS are for the users to override from the command line.
  
@@ -17,15 +15,15 @@ Install perl modules into the "vendor" directories.
  ALL_CFLAGS = $(CFLAGS)
  ALL_LDFLAGS = $(LDFLAGS)
  STRIP ?= strip
-@@ -348,6 +346,7 @@ ifeq ($(uname_S),Darwin)
- 	endif
+@@ -344,6 +342,7 @@ ifeq ($(uname_S),Darwin)
+ 	NO_STRLCPY = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
 +	NEEDS_LIBICONV = YesPlease
  	NEEDS_SOCKET = YesPlease
  	NEEDS_NSL = YesPlease
  	SHELL_PATH = /bin/bash
-@@ -393,9 +392,7 @@ ifeq ($(uname_S),OpenBSD)
+@@ -391,9 +390,7 @@ ifeq ($(uname_S),OpenBSD)
  	BASIC_LDFLAGS += -L/usr/local/lib
  endif
  ifeq ($(uname_S),NetBSD)
@@ -36,21 +34,12 @@ Install perl modules into the "vendor" directories.
  	BASIC_CFLAGS += -I/usr/pkg/include
  	BASIC_LDFLAGS += -L/usr/pkg/lib
  	ALL_LDFLAGS += -Wl,-rpath,/usr/pkg/lib
-@@ -577,7 +574,7 @@ PERL_PATH_SQ = $(subst ','\'',$(PERL_PAT
- PYTHON_PATH_SQ = $(subst ','\'',$(PYTHON_PATH))
- GIT_PYTHON_DIR_SQ = $(subst ','\'',$(GIT_PYTHON_DIR))
+@@ -594,7 +591,7 @@ prefix_SQ = $(subst ','\'',$(prefix))
+ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_PATH))
+ PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  
 -LIBS = $(GITLIBS) $(EXTLIBS)
 +LIBS += $(GITLIBS) $(EXTLIBS)
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' $(COMPAT_CFLAGS)
  LIB_OBJS += $(COMPAT_OBJS)
-@@ -769,7 +766,7 @@ $(XDIFF_LIB): $(XDIFF_OBJS)
- 
- perl/Makefile: perl/Git.pm perl/Makefile.PL GIT-CFLAGS
- 	(cd perl && $(PERL_PATH) Makefile.PL \
--		PREFIX='$(prefix_SQ)')
-+		INSTALLDIRS=vendor PREFIX='$(prefix_SQ)')
- 
- doc:
- 	$(MAKE) -C Documentation all
