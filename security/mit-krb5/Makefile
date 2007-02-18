@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/08/09 17:31:10 salo Exp $
+# $NetBSD: Makefile,v 1.38.4.1 2007/02/18 12:01:11 ghen Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.4/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
@@ -28,6 +28,8 @@ USE_LIBTOOL=		yes
 # The actual KDC databases are stored in ${MIT_KRB5_STATEDIR}/krb5kdc.
 MIT_KRB5_STATEDIR?=	${VARBASE}
 FILES_SUBST+=		MIT_KRB5_STATEDIR=${MIT_KRB5_STATEDIR:Q}
+
+BUILD_DEFS+=		VARBASE
 
 CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -70,6 +72,61 @@ SUBST_STAGE.mit-krb5=	pre-configure
 SUBST_FILES.mit-krb5=	appl/bsd/Makefile.in include/krb5/stock/osconf.h
 SUBST_SED.mit-krb5=	-e "/KRB5_PATH_RLOGIN/s,/rlogin,/${KRB5_PREFIX}rlogin,g"
 
+# Fix autoconf incompatibility in new versions where substitutions won't be
+# processed properly.  For more details see:
+#  http://mailman.mit.edu/pipermail/krb5-bugs/2006-June/004587.html
+SUBST_CLASSES+=		frag
+SUBST_STAGE.frag=	post-patch
+SUBST_FILES.frag=	appl/telnet/libtelnet/Makefile.in	\
+			lib/apputils/Makefile.in		\
+			lib/crypto/Makefile.in			\
+			lib/crypto/aes/Makefile.in		\
+			lib/crypto/arcfour/Makefile.in		\
+			lib/crypto/crc32/Makefile.in		\
+			lib/crypto/des/Makefile.in		\
+			lib/crypto/dk/Makefile.in		\
+			lib/crypto/enc_provider/Makefile.in	\
+			lib/crypto/hash_provider/Makefile.in	\
+			lib/crypto/keyhash_provider/Makefile.in	\
+			lib/crypto/md4/Makefile.in		\
+			lib/crypto/md5/Makefile.in		\
+			lib/crypto/old/Makefile.in		\
+			lib/crypto/raw/Makefile.in		\
+			lib/crypto/sha1/Makefile.in		\
+			lib/crypto/yarrow/Makefile.in		\
+			lib/des425/Makefile.in			\
+			lib/gssapi/Makefile.in			\
+			lib/gssapi/generic/Makefile.in		\
+			lib/gssapi/krb5/Makefile.in		\
+			lib/kadm5/Makefile.in			\
+			lib/kadm5/clnt/Makefile.in		\
+			lib/kadm5/srv/Makefile.in		\
+			lib/kdb/Makefile.in			\
+			lib/krb4/Makefile.in			\
+			lib/krb5/Makefile.in			\
+			lib/krb5/asn.1/Makefile.in		\
+			lib/krb5/ccache/Makefile.in		\
+			lib/krb5/error_tables/Makefile.in	\
+			lib/krb5/keytab/Makefile.in		\
+			lib/krb5/krb/Makefile.in		\
+			lib/krb5/os/Makefile.in			\
+			lib/krb5/posix/Makefile.in		\
+			lib/krb5/rcache/Makefile.in		\
+			lib/rpc/Makefile.in			\
+			util/db2/Makefile.in			\
+			util/db2/btree/Makefile.in		\
+			util/db2/clib/Makefile.in		\
+			util/db2/db/Makefile.in			\
+			util/db2/hash/Makefile.in		\
+			util/db2/mpool/Makefile.in		\
+			util/db2/recno/Makefile.in		\
+			util/et/Makefile.in			\
+			util/profile/Makefile.in		\
+			util/pty/Makefile.in			\
+			util/ss/Makefile.in			\
+			util/support/Makefile.in
+SUBST_SED.frag=		-e "s/^\#.\\(@lib.*_frag@\\)/\\1/g"
+
 INFO_FILES=		# PLIST
 
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
@@ -77,18 +134,18 @@ OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 RCD_SCRIPTS=		kadmind kdc
 
 INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
-			lib man/man1 man/man5 man/man8 sbin		\
-			share/examples/krb5
+			lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5		\
+			${PKGMANDIR}/man8 sbin share/examples/krb5
 
 # The MIT krb5 distribution is actually a tar file that contains the
 # real .tar.gz distfile and a PGP signature.
 #
 post-extract:
-	@extract_file="${WRKDIR}/${DISTNAME}.tar.gz";			\
+	extract_file="${WRKDIR}/${DISTNAME}.tar.gz";			\
 	cd ${WRKDIR} && ${EXTRACT_CMD}
 
 pre-configure:
-	@cd ${WRKSRC}; ${FIND} . -name configure -print |		\
+	cd ${WRKSRC}; ${FIND} . -name configure -print |		\
 	${XARGS} -n 1 ${DIRNAME} |					\
 	while read dir; do						\
 		 ${ECHO} "=> Generating configure in $$dir";		\
