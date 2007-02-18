@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.384 2007/02/18 03:26:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.385 2007/02/18 03:29:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-WWW-Mechanize to 1.20 [wiz 2007-02-18]
 	Updated graphics/p5-Image-Info to 1.23 [wiz 2007-02-18]
 	Updated www/p5-Apache-Test to 1.29 [wiz 2007-02-18]
+	Updated devel/p5-Cache-Simple-TimedExpiry to 0.27 [wiz 2007-02-18]
