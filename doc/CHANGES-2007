@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.382 2007/02/17 22:54:15 salo Exp $
+$NetBSD: CHANGES-2007,v 1.383 2007/02/18 01:02:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed snort-prelude [adrianp 2007-02-17]
 	Updated security/base to 1.2.7 [adrianp 2007-02-17]
 	Updated multimedia/xine-ui to 0.99.4nb8 [salo 2007-02-17]
+	Updated audio/amarok to 1.4.5nb2 [wiz 2007-02-18]
