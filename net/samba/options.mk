@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2007/02/16 16:30:28 tron Exp $
+# $NetBSD: options.mk,v 1.19 2007/02/18 04:27:02 taca Exp $
 
 # Recommended package options for various setups:
 #
@@ -114,7 +114,7 @@ PLIST_SUBST+=	PAM_WINBIND=lib/security/pam_winbind.so
 post-install: samba-pam-winbind-install
 samba-pam-winbind-install:
 	${INSTALL_LIB_DIR} ${PAM_INSTMODULEDIR}
-	${INSTALL_LIB} ${WRKSRC}/nsswitch/pam_winbind.so ${PAM_INSTMODULEDIR}
+	${INSTALL_LIB} ${WRKSRC}/bin/pam_winbind.so ${PAM_INSTMODULEDIR}
 .  endif
 
 # Install the NSS winbind module if it exists.
