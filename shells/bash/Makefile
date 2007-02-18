@@ -1,13 +1,21 @@
-# $NetBSD: Makefile,v 1.33 2007/02/06 07:18:28 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/18 12:21:59 wiz Exp $
 
 DISTNAME=	bash-3.2
-PKGREVISION=	1
+PKGNAME=	bash-3.2.9
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
 PATCH_SITES=	${MASTER_SITES:=bash-3.2-patches/}
 PATCHFILES=	bash32-001
+PATCHFILES+=	bash32-002
+PATCHFILES+=	bash32-003
+PATCHFILES+=	bash32-004
+PATCHFILES+=	bash32-005
+PATCHFILES+=	bash32-006
+PATCHFILES+=	bash32-007
+PATCHFILES+=	bash32-008
+PATCHFILES+=	bash32-009
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
