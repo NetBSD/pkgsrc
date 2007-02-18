@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.70 2006/06/14 21:42:33 salo Exp $
+# $NetBSD: Makefile,v 1.70.6.1 2007/02/18 12:09:24 ghen Exp $
 
-DISTNAME=	gd-2.0.33
-PKGREVISION=	5
+DISTNAME=	gd-2.0.34
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.boutell.com/gd/http/
+MASTER_SITES=	http://www.libgd.org/releases/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.boutell.com/gd/
+HOMEPAGE=	http://www.libgd.org/
 COMMENT=	Graphics library for the dynamic creation of images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 REPLACE_PERL+=		bdftogd
 PTHREAD_AUTO_VARS=	yes
 
