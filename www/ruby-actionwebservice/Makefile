@@ -1,23 +1,26 @@
-# $NetBSD: Makefile,v 1.5 2007/01/28 05:42:51 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/18 23:35:42 minskim Exp $
 
-DISTNAME=	actionwebservice-1.2.1
+DISTNAME=	actionwebservice-1.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16557/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/17233/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/aws/
 COMMENT=	Simple support for publishing web service APIs for Rails
 
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.1:../../www/ruby-actionpack
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.15.1:../../databases/ruby-activerecord
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.2:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.15.2:../../databases/ruby-activerecord
 
 USE_RUBY_SETUP=	yes
 
 .include "../../lang/ruby/modules.mk"
 
 post-install:
+	${INSTALL_DATA} \
+		${WRKSRC}/lib/action_web_service/templates/scaffolds/* \
+		${RUBY_SITELIBDIR}/action_web_service/templates/scaffolds
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/action_web_service
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${RUBY_DOCDIR}/action_web_service
 	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/action_web_service
