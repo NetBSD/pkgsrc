@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2006/06/14 21:42:33 salo Exp $
+$NetBSD: distinfo,v 1.23.6.1 2007/02/18 12:09:25 ghen Exp $
 
-SHA1 (gd-2.0.33.tar.gz) = 89548efb01116a740c796a8df80de16d19856811
-RMD160 (gd-2.0.33.tar.gz) = 6c573638387bb36044f3d4d480b10229445b9a6b
-Size (gd-2.0.33.tar.gz) = 587617 bytes
+SHA1 (gd-2.0.34.tar.bz2) = 7d735b2917f987dd71ddbb72e9e100b2f8951de7
+RMD160 (gd-2.0.34.tar.bz2) = 88b1d298e3392c5c05acf2cd01b387d7e0d2bfae
+Size (gd-2.0.34.tar.bz2) = 1135372 bytes
 SHA1 (patch-aa) = 38f0aa7043dba517405312d4eef59347e3c0185a
 SHA1 (patch-ab) = 082f5baa2c147fb62381c21ecb3ce11a1891a2aa
-SHA1 (patch-ac) = 154abdaff73099617a1b57f4d2f19358aaf2a043
+SHA1 (patch-ac) = 1e0dbdc6a2ad56ec947cd694749049ff26014e82
