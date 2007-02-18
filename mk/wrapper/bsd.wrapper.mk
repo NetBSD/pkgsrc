@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.63 2007/02/06 20:33:50 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.64 2007/02/18 23:49:44 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -33,6 +33,19 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+
+# Package-settable variables:
+#
+# WRAPPER_REORDER_CMDS
+#	A list of library reordering specifications to make sure that the
+#	linker sees the libraries in the correct order.
+#
+#	Each of the specifications has the form reorder:l:foo:bar, which
+#	means that -lfoo will always come before -lbar in the linker
+#	command line.
+#
+# Keywords: libs order reorder wrapper
+#
 
 .include "../../mk/wrapper/wrapper-defs.mk"
 
@@ -82,7 +95,7 @@ MAKE_ENV+=		WRAPPER_UPDATE_CACHE=${WRAPPER_UPDATE_CACHE:Q}
 
 # Only do the (expensive) reordering step if we have reordering
 # transformations.
-#
+
 WRAPPER_REORDER_CMDS?=	# empty
 .if !empty(WRAPPER_REORDER_CMDS)
 MAKE_ENV+=	WRAPPER_REORDER=yes
