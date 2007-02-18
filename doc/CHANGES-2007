@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.393 2007/02/18 19:12:59 tv Exp $
+$NetBSD: CHANGES-2007,v 1.394 2007/02/18 22:39:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/surfraw to 1.0.8 [wiz 2007-02-18]
 	Added lang/sun-jre6 version 6.0 [tv 2007-02-18]
 	Added lang/sun-jdk6 version 6.0 [tv 2007-02-18]
+	Updated devel/scmgit to 1.5.0 [rillig 2007-02-18]
