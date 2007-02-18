@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/07/19 22:36:53 wiz Exp $
+$NetBSD: distinfo,v 1.4 2007/02/18 02:01:31 wiz Exp $
 
-SHA1 (Config-Tiny-2.07.tar.gz) = 120f4890e5a64f77456a954a49f719c8a485200e
-RMD160 (Config-Tiny-2.07.tar.gz) = ea870c3176e4b3566f7c32fdb7a62a2eb825a96c
-Size (Config-Tiny-2.07.tar.gz) = 23472 bytes
+SHA1 (Config-Tiny-2.10.tar.gz) = ed266c1ee567eeecf454285e3d256acba250c754
+RMD160 (Config-Tiny-2.10.tar.gz) = c2afdc68b9845ba7b43b0d7414138cf8ba940154
+Size (Config-Tiny-2.10.tar.gz) = 23969 bytes
