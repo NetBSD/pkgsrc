@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/07/19 22:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/18 03:14:19 wiz Exp $
 
-DISTNAME=	XML-RSS-1.10
+DISTNAME=	XML-RSS-1.22
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xrs
 CATEGORIES=	textproc perl5
@@ -12,6 +12,10 @@ COMMENT=	XML-RSS helps to create and update RSS files
 
 DEPENDS+=	p5-XML-Parser>=2.29:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Test-Manifest>=0.9:../../devel/p5-Test-Manifest
+DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
+DEPENDS+=	p5-DateTime-Format-Mail-[0-9]*:../../time/p5-DateTime-Format-Mail
+DEPENDS+=	p5-DateTime-Format-W3CDTF-[0-9]*:../../time/p5-DateTime-Format-W3CDTF
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
 PERL5_PACKLIST=		auto/XML/RSS/.packlist
 
