@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.54 2007/02/16 11:13:02 rillig Exp $
+# $NetBSD: java-vm.mk,v 1.55 2007/02/18 19:12:07 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: jdk sun-jdk13 blackdown-jdk13 kaffe
-#		sun-jdk14 jdk14 sun-jdk15 scsl-jdk15
+#		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 scsl-jdk15
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -24,10 +24,10 @@
 #
 # USE_JAVA2
 #	When the package needs a Java 2 implementation, this variable
-#	should be set to "yes". It can also be set to "1.4" or "1.5" to
-#	require an even more recent implementation.
+#	should be set to "yes". It can also be set to "1.4", "1.5",
+#	or "6" require an even more recent implementation.
 #
-#	Possible values: yes no 1.4 1.5
+#	Possible values: yes no 1.4 1.5 6
 #	Default value: no
 #
 # PKG_JVMS_ACCEPTED
@@ -55,7 +55,8 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
-_PKG_JVMS.1.5=		sun-jdk15 scsl-jdk15
+_PKG_JVMS.6=		sun-jdk6
+_PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 scsl-jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe # win32-jdk
 _PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
@@ -129,6 +130,11 @@ _ONLY_FOR_PLATFORMS.sun-jdk15= \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	NetBSD-*-i386 NetBSD-*-x86_64
+_ONLY_FOR_PLATFORMS.sun-jdk6= \
+	DragonFly-*-i386 \
+	FreeBSD-6.*-i386 \
+	Linux-*-i[3-6]86 \
+	NetBSD-*-i386
 #_ONLY_FOR_PLATFORMS.win32-jdk= \
 #	Interix-*-*
 
@@ -149,6 +155,7 @@ _JAVA_PKGBASE.scsl-jdk15=	scsl-jre15
 _JAVA_PKGBASE.sun-jdk13=	sun-jre13
 _JAVA_PKGBASE.sun-jdk14=	sun-jre14
 _JAVA_PKGBASE.sun-jdk15=	sun-jre15
+_JAVA_PKGBASE.sun-jdk6=		sun-jre6
 #_JAVA_PKGBASE.win32-jdk=	win32-jdk
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
@@ -174,6 +181,9 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 .    if defined(_PKG_JVM_INSTALLED.scsl-jdk15) && \
 	(${_PKG_JVM_INSTALLED.scsl-jdk15} == "yes")
 _PKG_JVM_DEFAULT=	scsl-jdk15
+.    elif defined(_PKG_JVM_INSTALLED.sun-jdk6) && \
+	(${_PKG_JVM_INSTALLED.sun-jdk6} == "yes")
+_PKG_JVM_DEFAULT=	sun-jdk6
 .    elif defined(_PKG_JVM_INSTALLED.sun-jdk15) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk15} == "yes")
 _PKG_JVM_DEFAULT=	sun-jdk15
@@ -240,6 +250,8 @@ BUILDLINK_API_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk15?=		sun-jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre15?=		sun-jre15-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jdk6?=		sun-jdk6-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jre6?=		sun-jre6-[0-9]*
 #BUILDLINK_API_DEPENDS.win32-jdk?=		win32-jdk>=0.1
 
 _JRE.blackdown-jdk13=	blackdown-jre13
@@ -250,6 +262,7 @@ _JRE.scsl-jdk15=	scsl-jre15
 _JRE.sun-jdk13=		sun-jre13
 _JRE.sun-jdk14=		sun-jre14
 _JRE.sun-jdk15=		sun-jre15
+_JRE.sun-jdk6=		sun-jre6
 #_JRE.win32-jdk=		win32-jdk
 
 _JAVA_BASE_CLASSES=	classes.zip
@@ -291,6 +304,11 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4
 _JDK_PKGSRCDIR=		../../lang/sun-jdk15
 _JRE_PKGSRCDIR=		../../lang/sun-jre15
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.5
+UNLIMIT_RESOURCES+=	datasize
+.elif ${_PKG_JVM} == "sun-jdk6"
+_JDK_PKGSRCDIR=		../../lang/sun-jdk6
+_JRE_PKGSRCDIR=		../../lang/sun-jre6
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-6
 UNLIMIT_RESOURCES+=	datasize
 #.elif ${_PKG_JVM} == "win32-jdk"
 #_JDK_PKGSRCDIR=		../../lang/win32-jdk
