@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/18 18:36:21 adrianp Exp $
+
+--- Makefile.in.orig	2001-02-05 17:51:41.000000000 +0000
++++ Makefile.in
+@@ -14,13 +14,13 @@ prefix      =   @prefix@
+ exec_prefix =   @exec_prefix@
+ srcdir      =   @srcdir@
+ BIN_PREFIX  =   @bindir@/
+-INC_PREFIX  =   @includedir@/
+-LIB_PREFIX  =   @libdir@/
++INC_PREFIX  =   @includedir@/libnet10/
++LIB_PREFIX  =   @libdir@/libnet10/
+ MAN_PREFIX  =   @MAN_PREFIX@
+ 
+ LIBNET      =   libnet
+ LIBPWRITE   =   libpwrite
+-LIB         =   lib/$(LIBNET).a
++LIB         =   $(LIBNET).a
+ MAN         =   doc/$(LIBNET).3
+ INCLUDE     =   include/$(LIBNET).h
+ INCLUDE-H   =   include/$(LIBNET)/$(LIBNET)-headers.h
+@@ -68,14 +68,15 @@ OBJECTS     =   src/libnet_resolve.o\
+ 		src/libnet_port_list.o 
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFINES) -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(DEFINES) -c $<
++	ln -s $(@:C|src|..|) src
+ 
+ all: libnet
+ supp: test example
+ 
+-libnet: version.h $(OBJECTS)
+-	$(AR) -cr $(LIB) $(OBJECTS)
+-	$(RANLIB) $(LIB)
++libnet: $(LIB)
++$(LIB): version.h $(OBJECTS)
++	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJECTS:C|src/||:.o=.lo) -rpath $(LIB_PREFIX) -version-info 1:0
+ 
+ version.o: version.h
+ version.h: ./VERSION
+@@ -92,15 +93,9 @@ example: libnet install
+ 	cd example; make
+ 
+ install: libnet
+-	$(ENSUREDIR) $(DESTDIR)$(prefix) 755
+-	$(ENSUREDIR) $(DESTDIR)$(LIB_PREFIX) 755
+ 	$(ENSUREDIR) $(DESTDIR)$(INC_PREFIX)$(LIBNET) 755
+-	$(ENSUREDIR) $(DESTDIR)$(INC_PREFIX) 755
+-	$(ENSUREDIR) $(DESTDIR)$(MAN_PREFIX) 755
+-	$(ENSUREDIR) $(DESTDIR)$(BIN_PREFIX) 755
+-	$(INSTALL_DATA) $(LIB) $(DESTDIR)$(LIB_PREFIX)
+-	rm -f $(DESTDIR)$(LIB_PREFIX)$(LIBPWRITE).a
+-	cd $(DESTDIR)$(LIB_PREFIX); $(LN) -f -s $(LIBNET).a $(LIBPWRITE).a
++	$(ENSUREDIR) $(DESTDIR)$(LIB_PREFIX) 755
++	$(LIBTOOL) --mode=install $(INSTALL) -c -m 0644 $(LIB:.a=.la) $(DESTDIR)$(LIB_PREFIX)
+ 	$(INSTALL_DATA) $(INCLUDE) $(DESTDIR)$(INC_PREFIX)
+ 	$(INSTALL_DATA) $(INCLUDE-H) $(DESTDIR)$(INC_PREFIX)$(LIBNET)
+ 	$(INSTALL_DATA) $(INCLUDE-F) $(DESTDIR)$(INC_PREFIX)$(LIBNET)
+@@ -108,8 +103,9 @@ install: libnet
+ 	$(INSTALL_DATA) $(INCLUDE-M) $(DESTDIR)$(INC_PREFIX)$(LIBNET)
+ 	$(INSTALL_DATA) $(INCLUDE-A) $(DESTDIR)$(INC_PREFIX)$(LIBNET)
+ 	$(INSTALL_DATA) $(INCLUDE-O) $(DESTDIR)$(INC_PREFIX)$(LIBNET)
+-	$(INSTALL_DATA) $(MAN) $(DESTDIR)$(MAN_PREFIX)
+-	$(INSTALL_DATA) $(CONFIG) $(DESTDIR)$(BIN_PREFIX)
++	$(INSTALL_DATA) $(MAN) $(DESTDIR)$(MAN_PREFIX)/$(LIBNET)10.3
++	$(INSTALL_DATA) $(CONFIG) $(DESTDIR)$(BIN_PREFIX)$(LIBNET)10-config
++	$(LIBTOOL) --mode=finish $(DESTDIR)$(LIB_PREFIX)
+ 
+ 
+ 
