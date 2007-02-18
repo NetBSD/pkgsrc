@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/30 16:20:23 salo Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/18 12:34:20 tonio Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 PKGREVISION=		2
@@ -23,7 +23,10 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 # Initialize gtk/pango modules.
 FILES_SUBST+=		EMULDIR=${EMULDIR:Q}
+FILES_SUBST+=		BINSUFFIX=${BINSUFFIX:Q}
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if exists(Makefile.${MACHINE_ARCH})
 .include "Makefile.${MACHINE_ARCH}"
