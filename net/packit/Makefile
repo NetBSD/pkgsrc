@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/07/13 14:19:38 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/18 18:46:53 adrianp Exp $
 
 DISTNAME=	packit-1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://packit.sourceforge.net/downloads/
 EXTRACT_SUFX=	.tgz
