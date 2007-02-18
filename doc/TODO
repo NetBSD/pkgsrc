@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6003 2007/02/17 17:46:56 adrianp Exp $
+$NetBSD: TODO,v 1.6004 2007/02/18 00:14:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -312,8 +312,6 @@ Suggested package updates
 	o cadaver-0.22.5
 	o cal3d-0.11.0
 	o capc-calc-2.12.1.8
-	o catdoc-0.94
-	o catdoc-tk-0.94
 	o ccd2iso-0.2
 	o cddb-1.5.2
 	o cdl3-1.2.6
