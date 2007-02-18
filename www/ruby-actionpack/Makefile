@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2007/01/28 05:39:02 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/18 23:29:06 minskim Exp $
 
-DISTNAME=	actionpack-1.13.1
+DISTNAME=	actionpack-1.13.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16551/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/17227/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ap.rubyonrails.com/
 COMMENT=	Two-step approach to web response generation
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.0:../../devel/ruby-activesupport
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.1:../../devel/ruby-activesupport
 
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
@@ -23,7 +23,12 @@ REPLACE_RUBY+=	examples/*.cgi examples/*.fcgi examples/*.rbx
 .include "../../lang/ruby/replace.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/action_controller/support
+	${INSTALL_DATA} \
+		${WRKSRC}/lib/action_controller/templates/rescues/* \
+		${RUBY_SITELIBDIR}/action_controller/templates/rescues
+	${INSTALL_DATA} \
+		${WRKSRC}/lib/action_controller/templates/scaffolds/* \
+		${RUBY_SITELIBDIR}/action_controller/templates/scaffolds
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/actionpack
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${RUBY_DOCDIR}/actionpack
 	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/actionpack

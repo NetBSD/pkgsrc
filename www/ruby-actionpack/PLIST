@@ -1,11 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/28 05:39:02 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/02/18 23:29:06 minskim Exp $
 ${RUBY_SITELIBDIR}/action_controller.rb
-${RUBY_SITELIBDIR}/action_controller/._assertions.rb
-${RUBY_SITELIBDIR}/action_controller/._routing.rb
-${RUBY_SITELIBDIR}/action_controller/._status_codes.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions.rb
-${RUBY_SITELIBDIR}/action_controller/assertions/._deprecated_assertions.rb
-${RUBY_SITELIBDIR}/action_controller/assertions/._dom_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/deprecated_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/dom_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/model_assertions.rb
@@ -16,7 +11,6 @@ ${RUBY_SITELIBDIR}/action_controller/assertions/tag_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/base.rb
 ${RUBY_SITELIBDIR}/action_controller/benchmarking.rb
 ${RUBY_SITELIBDIR}/action_controller/caching.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/._cgi_methods.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_ext.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_methods.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cookie_performance_fix.rb
@@ -50,9 +44,21 @@ ${RUBY_SITELIBDIR}/action_controller/session/mem_cache_store.rb
 ${RUBY_SITELIBDIR}/action_controller/session_management.rb
 ${RUBY_SITELIBDIR}/action_controller/status_codes.rb
 ${RUBY_SITELIBDIR}/action_controller/streaming.rb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/_request_and_response.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/_trace.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/diagnostics.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/layout.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/missing_template.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/routing_error.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/template_error.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/unknown_action.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/edit.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/layout.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/list.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/new.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/show.rhtml
 ${RUBY_SITELIBDIR}/action_controller/test_process.rb
 ${RUBY_SITELIBDIR}/action_controller/url_rewriter.rb
-${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/._selector.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/document.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/node.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/selector.rb
@@ -114,13 +120,9 @@ ${RUBY_EXAMPLESDIR}/actionpack/debate_controller.cgi
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor
-@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_controller/templates/scaffolds
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates/scaffolds
-@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_controller/templates/rescues
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates/rescues
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates
-@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_controller/support
-@dirrm ${RUBY_SITELIBDIR}/action_controller/support
 @dirrm ${RUBY_SITELIBDIR}/action_controller/session
 @dirrm ${RUBY_SITELIBDIR}/action_controller/macros
 @dirrm ${RUBY_SITELIBDIR}/action_controller/cgi_ext
