@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6008 2007/02/18 11:32:21 wiz Exp $
+$NetBSD: TODO,v 1.6009 2007/02/18 11:40:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -847,7 +847,6 @@ Suggested package updates
 	o proxsmtp-1.2.1
 	o psmisc-21.9
 	o pstoedit-3.43
-	o pth-2.0.7
 	o puf-0.93.3
 	o putty-0.59
 	o puzzle-5.2
