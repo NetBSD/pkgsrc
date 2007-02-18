@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/18 18:54:23 adrianp Exp $
 #
 
 DISTNAME=	scdp-1.0b
 PKGNAME=        scdp-1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scdp/}
 
@@ -13,7 +13,11 @@ COMMENT=	Program to send Cisco Discovery Protocol packets
 
 GNU_CONFIGURE=	yes
 
-BUILDLINK_API_DEPENDS.libnet+=	libnet-1.0.*
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure
+SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
+SUBST_MESSAGE.conf=	Fixing configuration script.
 
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet10/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
