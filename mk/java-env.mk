@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.8 2006/05/16 21:25:38 rillig Exp $
+# $NetBSD: java-env.mk,v 1.9 2007/02/18 16:25:54 tv Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -8,6 +8,10 @@
 #
 #	JAVA_CLASSPATH	Classpath that will be prepended on all invocations
 #			to this implementation.  Optional.
+#
+#	JAVA_LD_LIBRARY_PATH
+#			Value to prepend to LD_LIBRARY_PATH before running
+#			the real command.  Optional; use *only* if necessary.
 #
 #	JAVA_HOME	Path to the directory holding the Java implementation.
 #			Required.
@@ -32,6 +36,7 @@ JAVA_ENV_MK=		# defined
 JAVA_NAME?=		# undefined
 JAVA_HOME?=		# undefined
 JAVA_CLASSPATH?=	# empty
+JAVA_LD_LIBRARY_PATH?=	# empty
 JAVA_UNLIMIT?=		# empty
 JAVA_WRAPPERS?=		# empty
 
@@ -65,6 +70,10 @@ ${WRKDIR}/${w}:
 	@${ECHO} 'JVM_HOME=${JAVA_HOME}; export JVM_HOME' >>${WRKDIR}/${w}
 .      if !empty(JAVA_CLASSPATH)
 	@${ECHO} 'CLASSPATH=${JAVA_CLASSPATH}:$${CLASSPATH}; export CLASSPATH' \
+		>>${WRKDIR}/${w}
+.      endif
+.      if !empty(JAVA_LD_LIBRARY_PATH)
+	@${ECHO} 'LD_LIBRARY_PATH=${JAVA_LD_LIBRARY_PATH}$${LD_LIBRARY_PATH:+:}$${LD_LIBRARY_PATH}; export LD_LIBRARY_PATH' \
 		>>${WRKDIR}/${w}
 .      endif
 .      for f in ${JAVA_UNLIMIT}
