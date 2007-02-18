@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2007/02/18 18:56:13 adrianp Exp $
+
+--- configure.orig	2000-12-03 04:35:46.000000000 +0000
++++ configure
+@@ -3083,10 +3083,10 @@ if test "${with_libnet+set}" = set; then
+      ;;
+   esac 
+ else
+-   if test -f ${prefix}/include/libnet.h; then
++   if test -f @@LN_INC@@/libnet.h; then
+      CFLAGS="$CFLAGS `${prefix}/bin/libnet-config --defines`"
+-     LNETINC="-I${prefix}/include"
+-     LNETLIB="-L${prefix}/lib -lnet"
++     LNETINC="-I@@LN_INC@@"
++     LNETLIB="-L@@LN_LIB@@ -lnet"
+   elif test -f /usr/include/libnet.h; then
+      CFLAGS="$CFLAGS `libnet-config --defines`"
+      LNETLIB="-lnet"

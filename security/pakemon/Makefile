@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/10/04 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/18 18:56:46 adrianp Exp $
 
 DISTNAME=	pakemon-0.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://www.binarii.com/files/security/ \
 		http://www.mirrors.wiretapped.net/security/network-intrusion-detection/pakemon/
@@ -12,12 +12,18 @@ COMMENT=	Packet monster, an Open Source Intrusion Detection System
 
 GNU_CONFIGURE=	yes
 
-BUILDLINK_API_DEPENDS.libnet+=	libnet-1.0.*
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure
+SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
+SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet10}/include/libnet10|g"
+SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet10}/lib/libnet10|g"
+SUBST_MESSAGE.conf=	Fixing configuration script.
 
 post-extract:
 	${CP} ${WRKSRC}/pakemon.h ${WRKSRC}/pakemon.h.in
 
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libnids/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
