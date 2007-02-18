@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2006/12/16 11:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.236 2007/02/18 19:11:52 tv Exp $
 #
 
 COMMENT=	Programming languages
@@ -157,9 +157,11 @@ SUBDIR+=	stalin
 SUBDIR+=	sun-jdk13
 SUBDIR+=	sun-jdk14
 SUBDIR+=	sun-jdk15
+SUBDIR+=	sun-jdk6
 SUBDIR+=	sun-jre13
 SUBDIR+=	sun-jre14
 SUBDIR+=	sun-jre15
+SUBDIR+=	sun-jre6
 SUBDIR+=	swi-prolog
 SUBDIR+=	swi-prolog-lite
 SUBDIR+=	swi-prolog-packages
