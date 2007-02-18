@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2007/02/18 18:53:10 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libnids
 PKG_SUPPORTED_OPTIONS=	libnet10 libnet11
@@ -18,7 +18,9 @@ PKG_FAIL_REASON+=	"libnet-1.0.x and libnet-1.1.x cannot both be selected." \
 ### libnet 1.0.x branch support
 ###
 .if !empty(PKG_OPTIONS:Mlibnet10)
-.	include "../../devel/libnet/buildlink3.mk"
+.	include "../../devel/libnet10/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libnet10=	build
+SUBST_SED.conf=	-e "s|libnet-config|libnet10-config|g"
 .endif
 
 ###
@@ -26,4 +28,6 @@ PKG_FAIL_REASON+=	"libnet-1.0.x and libnet-1.1.x cannot both be selected." \
 ###
 .if !empty(PKG_OPTIONS:Mlibnet11)
 .	include "../../devel/libnet11/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libnet11=	build
+SUBST_SED.conf=	-e "s|libnet-config|libnet11-config|g"
 .endif
