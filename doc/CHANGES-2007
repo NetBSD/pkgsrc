@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.388 2007/02/18 11:40:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.389 2007/02/18 12:09:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -800,3 +800,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/adzap to 20070130 [kleink 2007-02-18]
 	Updated www/checkbot to 1.79 [wiz 2007-02-18]
 	Updated devel/pth to 2.0.7 [wiz 2007-02-18]
+	Updated audio/amarok to 1.4.5nb3 [wiz 2007-02-18]
