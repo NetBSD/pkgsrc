@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2006/05/11 15:39:20 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/02/18 18:56:13 adrianp Exp $
 
 DISTNAME=	dsniff-${VERS}
+PKGREVISION=	1
 VERS=		2.3
 CATEGORIES=	security
 MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
@@ -10,11 +11,17 @@ HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
 
 GNU_CONFIGURE=	yes
 
-BUILDLINK_API_DEPENDS.libnet+=	libnet-1.0.*
-
 PATCHDIR=	${.CURDIR}/../../security/dsniff/patches
 DISTINFO_FILE=	${.CURDIR}/../../security/dsniff/distinfo
 
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure
+SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
+SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet10}/include/libnet10|g"
+SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet10}/lib/libnet10|g"
+SUBST_MESSAGE.conf=	Fixing configuration script.
+
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libnids/buildlink3.mk"
