@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2006/07/19 22:35:28 wiz Exp $
+$NetBSD: distinfo,v 1.8 2007/02/18 02:06:39 wiz Exp $
 
-SHA1 (Class-Autouse-1.26.tar.gz) = 146b831ef1239874df20234d6415a2c18ad54188
-RMD160 (Class-Autouse-1.26.tar.gz) = 1fff3bcd46cf57326a91b617c03792092a5cd04e
-Size (Class-Autouse-1.26.tar.gz) = 41162 bytes
+SHA1 (Class-Autouse-1.27.tar.gz) = 3150524488690b163b1622725743c4deff83e435
+RMD160 (Class-Autouse-1.27.tar.gz) = 289109661fb753f8929d03ddc18b384e72acbfeb
+Size (Class-Autouse-1.27.tar.gz) = 33429 bytes
