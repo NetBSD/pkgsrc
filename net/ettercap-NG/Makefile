@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/04/06 06:22:32 reed Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/18 18:50:43 adrianp Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
@@ -17,14 +18,22 @@ PTHREAD_OPTS+=		require
 USE_LIBTOOL=		YES
 USE_NCURSES=		# ncurses.h menu.h panel.h form.h
 USE_OLD_DES_API=	YES
+CPPFLAGS+=		-L${BUILDLINK_PREFIX.libnet11}/lib/libnet11
 
-CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet}
+CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet11}
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-libncurses=${BUILDLINK_PREFIX.ncurses}
 CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--disable-gtk
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure
+SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet11}/include/libnet11|g"
+SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet11}/lib/libnet11|g"
+SUBST_MESSAGE.conf=	Fixing configuration script.
 
 .include "../../mk/bsd.prefs.mk"
 
