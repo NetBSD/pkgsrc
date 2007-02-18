@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/11/24 18:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.5 2007/02/18 02:28:33 wiz Exp $
 
-SHA1 (Test-Inline-2.103.tar.gz) = be710ae946e761a9982d60d079a92a246fcb7259
-RMD160 (Test-Inline-2.103.tar.gz) = cf79e82ff59888b98443513961c8d7ad1e2f7fb8
-Size (Test-Inline-2.103.tar.gz) = 58511 bytes
+SHA1 (Test-Inline-2.201.tar.gz) = d8eabce264c67a3d8b1c509c3ee868e511211655
+RMD160 (Test-Inline-2.201.tar.gz) = e69c64563b149a8988c60f436608b2700156fd34
+Size (Test-Inline-2.201.tar.gz) = 56938 bytes
