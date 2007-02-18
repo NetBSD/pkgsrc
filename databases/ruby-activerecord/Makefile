@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/01/28 05:36:31 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/18 23:12:52 minskim Exp $
 
-DISTNAME=	activerecord-1.15.1
+DISTNAME=	activerecord-1.15.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16548/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/17224/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -21,14 +21,13 @@ EXAMPLES=		associations.png associations.rb shared_setup.rb \
 .include "../../lang/ruby/modules.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/active_record/support
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/activerecord
-	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${RUBY_DOCDIR}/activerecord
-	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/activerecord
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/activerecord
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/active_record
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${RUBY_DOCDIR}/active_record
+	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/active_record
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/active_record
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/examples/${f} \
-		${RUBY_EXAMPLESDIR}/activerecord
+		${RUBY_EXAMPLESDIR}/active_record
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
