@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6005 2007/02/18 00:25:54 wiz Exp $
+$NetBSD: TODO,v 1.6006 2007/02/18 03:26:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -576,7 +576,6 @@ Suggested package updates
 	o libjit-0.0.6
 	o liblive-2006.12.08
 	o libmilter-8.13.5
-	o libmm-1.4.2
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -700,24 +699,17 @@ Suggested package updates
 	o p4d-2005.1 [schmonz]
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
-	o p5-Apache-DBI-1.05
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-2.1.0
 	o p5-Apache-Session-Wrapper-0.33
-	o p5-Apache-Test-1.29
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-BSD-Resource-1.28
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
 	o p5-Cache-Simple-TimedExpiry-0.27
-	o p5-Class-Autouse-1.27
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03 [pkg/34338]
 	o p5-Class-MethodMaker-2.08 [pkg/34327]
 	o p5-Compress-Bzip2-2.09
-	o p5-Config-Tiny-2.08 [pkg/34352]
-	o p5-Config-Tiny-2.10
 	o p5-Convert-BER-1.3101 [pkg/34406]
 	o p5-Convert-UUlib-1.06
 	o p5-Crypt-CAST5_PP-1.04 [pkg/34393]
@@ -728,33 +720,26 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.001
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-SearchBuilder-1.45
 	o p5-Devel-SmallProf-2.00_03
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Error-0.17008
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-File-DirSync-1.12
-	o p5-File-Flat-1.00
 	o p5-File-MimeInfo-0.12
-	o p5-File-Remove-0.34
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.17
 	o p5-HTML-FillInForm-1.05
 	o p5-HTML-TableExtract-2.10
-	o p5-HTML-Tree-3.23
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Ima-DBI-0.34
-	o p5-Image-Info-1.23
 	o p5-Lingua-Stem-Snowball-0.941 [pkg/34402]
 	o p5-Locale-Codes-2.07
-	o p5-Log-Dispatch-2.16
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
@@ -773,39 +758,28 @@ Suggested package updates
 	o p5-Net-SNMP-5.1.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
-	o p5-Number-Compare-0.02
 	o p5-PV-1.5
-	o p5-Params-Validate-0.87
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
 	o p5-SVN-Web-0.51
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
-	o p5-Scalar-List-Utils-1.19
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.18
 	o p5-String-ShellQuote-1.03 [pkg/34415]
-	o p5-Sub-Uplevel-0.13 [pkg/34364]
-	o p5-Sub-Uplevel-0.14
 	o p5-Template-Extract-0.40
-	o p5-Test-Exception-0.24
 	o p5-Test-Harness-2.46
-	o p5-Test-Inline-2.201
-	o p5-Test-Simple-0.67
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
 	o p5-Text-Shellwords-1.08 [pkg/34417]
 	o p5-Text-Tabs+Wrap-2005.0824
 	o p5-Time-HiRes-1.91
 	o p5-Time-Piece-2.00.01
-	o p5-Tree-Simple-1.17
 	o p5-WWW-Amazon-Wishlist-1.4
-	o p5-WWW-Mechanize-1.20
 	o p5-X11-Protocol-0.54
 	o p5-XML-RAI-1.04
-	o p5-XML-RSS-1.22
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
