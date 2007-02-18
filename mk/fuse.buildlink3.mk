@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.2 2007/02/18 22:37:06 xtraeme Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.3 2007/02/18 22:37:51 xtraeme Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -61,4 +61,4 @@ SUBST_SED.refuse=	-e "s|fuse_main|fuse_exit|g"
 
 .  endif # End of systems
 
-.endif #
+.endif # FUSE_BUILDLINK3_MK
