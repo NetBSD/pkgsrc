@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.14 2007/01/08 20:52:59 adrianp Exp $
+# $NetBSD: mkreadme,v 1.15 2007/02/18 00:08:36 adrianp Exp $
 #
 # Script for README.html generation
 #
@@ -63,6 +63,7 @@ usage(){
     echo "                  [-P|--packages directory] [-r|--restart] "
     echo "                  [-s|--summary]"
     echo "                  [-S|--save-database]"
+    echo "                  [-V|--pkg-vuln directory]"
     echo " "
     echo "            $prog -h|--help"
     echo " "
@@ -82,7 +83,7 @@ usage(){
     echo "  -h|--help           Displays this help message"
     echo " "
     echo "  -p|--pkgsrc dir     Specifies the pkgsrc directory.  Defaults to"
-    echo "                      The value of the PKGSRCDIR environment variable"
+    echo "                      the value of the PKGSRCDIR environment variable"
     echo "                      if set or /usr/pkgsrc otherwise."
     echo " "
     echo "  -P|--packages dir   Specifies the packages directory."
@@ -97,6 +98,9 @@ usage(){
     echo "  -S|--save-database  Does not delete the database file after the run."
     echo "                      This is useful for debugging or re-running this script"
     echo "                      with the -r option."
+    echo " "
+    echo "  -V|--pkg-vuln dir   Specify the pkg-vulnerability directory."
+    echo "                      Defaults to the value of the DISTDIR."
     echo " "
     echo "  -v|--version        Displays the version of this script and exits."
     echo " "
@@ -129,6 +133,7 @@ restart=no
 prune=no
 DEBUG=no
 save=no
+pv=default
 
 summary=""
 
@@ -204,6 +209,13 @@ do
 	${AWK} '/^#[ \t]*\$NetBSD/ {gsub(/,v/,"",$3);printf("%s:  Version %s, %s\n",$3,$4,$5); exit 0;}' $prog
 	exit 0
         ;;
+
+    # Specify pkg-vulnerability directory
+    -V|--pkg-vuln)
+	PVDIR=$2
+	pv=custom
+	shift 2
+	;;
 
     -*) echo "$prog:  ERROR:  $1 is not a valid option"
 	usage
@@ -288,6 +300,12 @@ if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
 else
     echo "Error:   ${PKGSRCDIR}/pkgtools/prereq-readme does not seem to exist"
     exit 1
+fi
+
+# this needs to happen here as DISTDIR has not been populated until this 
+# stage (see above)
+if [ "x$pv" = "xdefault" ]; then
+    PVDIR=$DISTDIR
 fi
 
 ######################################################################
@@ -421,6 +439,7 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     PKG_SUFX=$PKG_SUFX \
     PKG_URL=$PKG_URL \
     PKGSRCDIR=$PKGSRCDIR \
+    PVDIR=$PVDIR \
     SED=$SED \
     SETENV=$SETENV \
     SORT=$SORT \
