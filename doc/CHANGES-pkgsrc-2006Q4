@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.35 2007/02/17 21:45:17 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.36 2007/02/18 12:16:33 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -85,3 +85,9 @@ Pullup ticket 2020 - requested by xtraeme
 security update for clamav
 Pullup ticket 2023 - requested by wiz
 security update for libsoup-devel
+Pullup ticket 2021 - requested by salo
+security fix for mit-krb5
+Pullup ticket 2022 - requested by salo
+security update for gd
+Pullup ticket 2023 - requested by salo
+security update for unrar
