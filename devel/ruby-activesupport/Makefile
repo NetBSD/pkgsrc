@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/02/03 22:01:05 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/18 23:03:11 minskim Exp $
 
-DISTNAME=	activesupport-1.4.0
+DISTNAME=	activesupport-1.4.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16508/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/17221/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -26,8 +25,10 @@ do-install:
 		-exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${RUBY_SITELIBDIR}/active_support* -type f		\
 		-exec ${CHMOD} ${LIBMODE} {} \;
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/active_support
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG \
-		${RUBY_DOCDIR}/CHANGELOG.activesupport
+		${RUBY_DOCDIR}/active_support
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${RUBY_DOCDIR}/active_support
 
 .include "../../mk/bsd.pkg.mk"

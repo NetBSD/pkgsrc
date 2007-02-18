@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/28 04:39:50 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/02/18 23:03:11 minskim Exp $
 ${RUBY_SITELIBDIR}/active_support.rb
+${RUBY_SITELIBDIR}/active_support/._dependencies.rb
 ${RUBY_SITELIBDIR}/active_support/._version.rb
 ${RUBY_SITELIBDIR}/active_support/binding_of_caller.rb
 ${RUBY_SITELIBDIR}/active_support/breakpoint.rb
@@ -96,7 +97,9 @@ ${RUBY_SITELIBDIR}/active_support/vendor/builder/xmlmarkup.rb
 ${RUBY_SITELIBDIR}/active_support/vendor/xml_simple.rb
 ${RUBY_SITELIBDIR}/active_support/version.rb
 ${RUBY_SITELIBDIR}/active_support/whiny_nil.rb
-${RUBY_DOCDIR}/CHANGELOG.activesupport
+${RUBY_DOCDIR}/active_support/CHANGELOG
+${RUBY_DOCDIR}/active_support/README
+@dirrm ${RUBY_DOCDIR}/active_support
 @dirrm ${RUBY_SITELIBDIR}/active_support/vendor/builder
 @dirrm ${RUBY_SITELIBDIR}/active_support/vendor
 @dirrm ${RUBY_SITELIBDIR}/active_support/values
