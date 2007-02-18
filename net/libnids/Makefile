@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:49 tv Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/18 18:53:10 adrianp Exp $
 #
 
 DISTNAME=	libnids-1.20
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libnids/}
 
@@ -11,8 +12,12 @@ COMMENT=	Network monitoring library with TCP/IP reassembly
 
 GNU_CONFIGURE=	yes
 
-BUILDLINK_DEPMETHOD.libnet=	build
 BUILDLINK_DEPMETHOD.libpcap=	build
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure
+SUBST_MESSAGE.conf=	Fixing configuration script.
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
