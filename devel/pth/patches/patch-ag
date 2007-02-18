@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2003/05/02 11:49:48 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2007/02/18 11:40:10 wiz Exp $
 
---- pth_lib.c.orig	Wed Jan  1 15:45:06 2003
+--- pth_lib.c.orig	2006-06-08 17:54:03.000000000 +0000
 +++ pth_lib.c
 @@ -37,10 +37,11 @@ long pth_version(void)
  
@@ -69,7 +69,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/02 11:49:48 wiz Exp $
  /* kill the package internals */
  int pth_kill(void)
  {
-@@ -144,6 +158,7 @@ int pth_kill(void)
+@@ -146,6 +160,7 @@ int pth_kill(void)
      pth_thread_cleanup(pth_main);
      pth_scheduler_kill();
      pth_initialized = FALSE;
