@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2007/01/28 05:45:09 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2007/02/18 23:49:14 minskim Exp $
 
---- environments/boot.rb.orig	2007-01-18 13:37:44.000000000 -0800
+--- environments/boot.rb.orig	2007-02-05 21:29:54.000000000 -0800
 +++ environments/boot.rb
 @@ -15,30 +15,7 @@ unless defined?(Rails::Initializer)
    if File.directory?("#{RAILS_ROOT}/vendor/rails")
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.2 2007/01/28 05:45:09 minskim Exp $
 -      rails_gem = Gem.cache.search('rails', "~>#{version}.0").sort_by { |g| g.version.version }.last
 -
 -      if rails_gem
--        require_gem "rails", "=#{rails_gem.version.version}"
+-        gem "rails", "=#{rails_gem.version.version}"
 -        require rails_gem.full_gem_path + '/lib/initializer'
 -      else
 -        STDERR.puts %(Cannot find gem for Rails ~>#{version}.0:
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.2 2007/01/28 05:45:09 minskim Exp $
 -        exit 1
 -      end
 -    else
--      require_gem "rails"
+-      gem "rails"
 -      require 'initializer'
 -    end
 +    require 'initializer'
