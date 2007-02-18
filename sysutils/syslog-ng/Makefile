@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/05/16 22:54:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/18 18:46:11 adrianp Exp $
 
 DISTNAME=	syslog-ng-1.6.11
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/syslog-ng/1.6/src/
 
@@ -44,7 +45,6 @@ PKG_OPTIONS_LEGACY_OPTS+=	spoof:syslogng-spoof
 .if !empty(PKG_OPTIONS:Msyslogng-spoof)
 CONFIGURE_ARGS+=	--enable-spoof-source
 .include "../../devel/libnet11/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libnet+=	libnet>=1.1.2.1
 .endif
 
 pre-build:
