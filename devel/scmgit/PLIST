@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/26 22:34:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/02/18 22:38:43 rillig Exp $
 bin/git
 bin/git-add
+bin/git-add--interactive
 bin/git-am
 bin/git-annotate
 bin/git-apply
@@ -17,10 +18,12 @@ bin/git-checkout
 bin/git-checkout-index
 bin/git-cherry
 bin/git-cherry-pick
+bin/git-citool
 bin/git-clean
 bin/git-clone
 bin/git-commit
 bin/git-commit-tree
+bin/git-config
 bin/git-convert-objects
 bin/git-count-objects
 bin/git-cvsexportcommit
@@ -33,19 +36,24 @@ bin/git-diff-files
 bin/git-diff-index
 bin/git-diff-stages
 bin/git-diff-tree
+bin/git-fast-import
 bin/git-fetch
 bin/git-fetch-pack
 bin/git-fmt-merge-msg
 bin/git-for-each-ref
 bin/git-format-patch
+bin/git-fsck
 bin/git-fsck-objects
+bin/git-gc
 bin/git-get-tar-commit-id
 bin/git-grep
+bin/git-gui
 bin/git-hash-object
 bin/git-http-fetch
 bin/git-http-push
 bin/git-imap-send
 bin/git-index-pack
+bin/git-init
 bin/git-init-db
 bin/git-instaweb
 bin/git-local-fetch
@@ -58,13 +66,12 @@ bin/git-mailinfo
 bin/git-mailsplit
 bin/git-merge
 bin/git-merge-base
+bin/git-merge-file
 bin/git-merge-index
 bin/git-merge-octopus
 bin/git-merge-one-file
 bin/git-merge-ours
-bin/git-merge-recur
 bin/git-merge-recursive
-bin/git-merge-recursive-old
 bin/git-merge-resolve
 bin/git-merge-stupid
 bin/git-merge-tree
@@ -86,7 +93,9 @@ bin/git-quiltimport
 bin/git-read-tree
 bin/git-rebase
 bin/git-receive-pack
+bin/git-reflog
 bin/git-relink
+bin/git-remote
 bin/git-repack
 bin/git-repo-config
 bin/git-request-pull
@@ -152,6 +161,7 @@ man/man1/git-clean.1
 man/man1/git-clone.1
 man/man1/git-commit-tree.1
 man/man1/git-commit.1
+man/man1/git-config.1
 man/man1/git-convert-objects.1
 man/man1/git-count-objects.1
 man/man1/git-cvsexportcommit.1
@@ -164,12 +174,15 @@ man/man1/git-diff-index.1
 man/man1/git-diff-stages.1
 man/man1/git-diff-tree.1
 man/man1/git-diff.1
+man/man1/git-fast-import.1
 man/man1/git-fetch-pack.1
 man/man1/git-fetch.1
 man/man1/git-fmt-merge-msg.1
 man/man1/git-for-each-ref.1
 man/man1/git-format-patch.1
 man/man1/git-fsck-objects.1
+man/man1/git-fsck.1
+man/man1/git-gc.1
 man/man1/git-get-tar-commit-id.1
 man/man1/git-grep.1
 man/man1/git-hash-object.1
@@ -178,6 +191,7 @@ man/man1/git-http-push.1
 man/man1/git-imap-send.1
 man/man1/git-index-pack.1
 man/man1/git-init-db.1
+man/man1/git-init.1
 man/man1/git-instaweb.1
 man/man1/git-local-fetch.1
 man/man1/git-log.1
@@ -188,6 +202,7 @@ man/man1/git-ls-tree.1
 man/man1/git-mailinfo.1
 man/man1/git-mailsplit.1
 man/man1/git-merge-base.1
+man/man1/git-merge-file.1
 man/man1/git-merge-index.1
 man/man1/git-merge-one-file.1
 man/man1/git-merge-tree.1
@@ -211,7 +226,9 @@ man/man1/git-quiltimport.1
 man/man1/git-read-tree.1
 man/man1/git-rebase.1
 man/man1/git-receive-pack.1
+man/man1/git-reflog.1
 man/man1/git-relink.1
+man/man1/git-remote.1
 man/man1/git-repack.1
 man/man1/git-repo-config.1
 man/man1/git-request-pull.1
@@ -255,8 +272,6 @@ man/man1/git-whatchanged.1
 man/man1/git-write-tree.1
 man/man1/gitk.1
 man/man7/git.7
-share/git-core/python/gitMergeCommon.py
-${IF_NEEDS_SUBPROCESS_PY}share/git-core/python/subprocess.py
 share/git-core/templates/description
 share/git-core/templates/hooks/applypatch-msg
 share/git-core/templates/hooks/commit-msg
@@ -274,5 +289,4 @@ share/git-core/templates/info/exclude
 @exec ${MKDIR} %D/share/git-core/templates/branches
 @dirrm share/git-core/templates/branches
 @dirrm share/git-core/templates
-@dirrm share/git-core/python
 @dirrm share/git-core
