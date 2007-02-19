@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16.6.2 2007/02/16 16:35:51 salo Exp $
+# $NetBSD: options.mk,v 1.16.6.3 2007/02/19 11:07:52 salo Exp $
 
 # Recommended package options for various setups:
 #
@@ -69,14 +69,13 @@ CONFIGURE_ARGS+=	--without-ldap
 .  include "../../security/PAM/module.mk"
 CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--with-pam_smbpass
+CONFIGURE_ARGS+=	--with-pammodulesdir=${PAM_INSTMODULEDIR}
 PLIST_SUBST+=		PAM_SMBPASS=lib/security/pam_smbpass.so
 PLIST_SUBST+=		PAM=
 
 .PHONY: samba-pam-smbpass-install
 post-install: samba-pam-smbpass-install
 samba-pam-smbpass-install:
-	${INSTALL_LIB_DIR} ${PAM_INSTMODULEDIR}
-	${INSTALL_LIB} ${WRKSRC}/bin/pam_smbpass.so ${PAM_INSTMODULEDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/pam_smbpass/README			\
 		${DOCDIR}/README.pam_smbpass
@@ -109,12 +108,6 @@ PLIST_SUBST+=		WINBIND=
 PLIST_SUBST+=	PAM_WINBIND="@comment no PAM winbind module"
 .  else
 PLIST_SUBST+=	PAM_WINBIND=lib/security/pam_winbind.so
-
-.PHONY: samba-pam-winbind-install
-post-install: samba-pam-winbind-install
-samba-pam-winbind-install:
-	${INSTALL_LIB_DIR} ${PAM_INSTMODULEDIR}
-	${INSTALL_LIB} ${WRKSRC}/nsswitch/pam_winbind.so ${PAM_INSTMODULEDIR}
 .  endif
 
 # Install the NSS winbind module if it exists.
