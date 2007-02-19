@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.15 2007/02/07 23:10:23 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.16 2007/02/19 12:19:49 rillig Exp $
 #
 # Public targets:
 #
@@ -15,6 +15,15 @@
 #
 
 PRINTF?=	printf
+
+# Note: In the many cases where ${x} is used, the quoting is left out
+# intentionally, since x is an element of a list of shell words, and
+# passing such a shell word to the shell should still result in one
+# word. That way, no extra level of quoting is introduced.
+#
+# The only exception is the "<" character in CONFIGURE_ARGS, where it
+# is often used to redirect the input coming from another source. That
+# character has to be quoted.
 
 .PHONY: \
 	debug \
@@ -43,7 +52,10 @@ _show-dbginfo-file-versions:
 	sedexpr='s,.*\([$$]NetBSD:[^$$]*\$$\).*,\1,p';			\
 	${FIND} * -type f -print					\
 	| while read fname; do						\
-	  ident=`${SED} -n "$${sedexpr}" "$${fname}"` || continue;	\
+	  ident=`${SED} -n						\
+	    -e 's,.*\\([$$]NetBSD:[^$$]*\\$$\\).*,\\1,p'		\
+	    -e 's,.*\\([$$]Id:[^$$]*\\$$\\).*,\\1,p'			\
+	    "$${fname}"` || continue;					\
 	  case $${ident} in						\
 	  *?*) ${PRINTF} "\\t%s: %s\\n" "$${fname}" "$${ident}";;	\
 	  esac;								\
@@ -62,7 +74,7 @@ _show-dbginfo-configure:
 	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_SCRIPT:\\n\\t%s\\n" ${CONFIGURE_SCRIPT}
 	@${PRINTF} "\\n"
-	@${PRINTF} "CONFIGURE_ARGS:\\n"; ${CONFIGURE_ARGS:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "CONFIGURE_ARGS:\\n"; ${CONFIGURE_ARGS:@x@${PRINTF} "\\t%s\\n" ${x:S,<,\<,};@}
 	@${PRINTF} "\\n"
 
 _show-dbginfo-config.status:
