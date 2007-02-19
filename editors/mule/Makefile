@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/12/06 16:42:20 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/02/19 18:40:44 joerg Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	4
@@ -35,8 +35,6 @@ CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 INFO_FILES=	# PLIST
 
-.include "../../mk/x11.buildlink3.mk"
-
 # Remove original versions of patched files so that aren't installed.
 post-build:
 	${FIND} ${WRKSRC} -name "*.orig" | ${XARGS} ${RM} -f
@@ -50,4 +48,6 @@ post-install:
 		< ${WRKSRC}/etc/CHARSETS > ${PREFIX}/lib/mule/19.28/etc/CHARSETS
 	#diff -u		${WRKSRC}/etc/CHARSETS ${PREFIX}/lib/mule/19.28/etc/CHARSETS
 
+.include "../../x11/xbitmaps/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
