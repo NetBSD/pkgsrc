@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2007/01/17 23:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2007/02/19 02:25:19 rillig Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -26,6 +26,8 @@ STAGEDIR=	${WRKDIR}/staging
 LIBS.SunOS+=	-lsocket -lnsl
 MAKE_ENV+=	NETWORKLD=${LIBS:Q}
 MAKE_FLAGS+=	PKGMANDIR=${PKGMANDIR}
+
+WRAPPER_REORDER_CMDS+=	reorder:l:rle:netpbm
 
 # Several of the netpbm shell scripts use bashisms, so force using
 # bash for all of the shell scripts.
@@ -55,9 +57,6 @@ MAKE_ENV+=	NETPBMLIBTYPE="dylib" NETPBMLIBSUFFIX="dylib"
 .else
 MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 .endif
-
-MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
-MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:Q}
 
 .if ${PKGSRC_COMPILER} == "ido"
 CPPFLAGS+=	-DSGI_IDO_CC
