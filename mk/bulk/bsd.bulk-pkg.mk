@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.134 2007/01/24 01:37:20 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.135 2007/02/19 12:10:43 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -535,7 +535,7 @@ bulk-package:
 	@if [ ! -f ${PKGFILE} ]; then \
 		${BULK_MSG} "Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${_BROKENFILE:Q} ; \
 		${ECHO} "<pre>" >> ${_BROKENFILE:Q};			\
-		${MAKE} debug >> ${_BROKENFILE:Q} ;			\
+		${MAKE} debug 2>&1 >> ${_BROKENFILE:Q} ;		\
 		{ ${ECHO} "</pre>";					\
 		  ${ECHO} "</body>";					\
 		  ${ECHO} "</html>";					\
