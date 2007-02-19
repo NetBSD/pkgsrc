@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.403 2007/02/19 09:48:29 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.404 2007/02/19 11:21:31 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/gxemul to 0.4.4 [xtraeme 2007-02-19]
 	Updated www/emacs-w3m to 1.4.4nb1 [jnemeth 2007-02-19]
 	Added games/blokus version 1.0 [rillig 2007-02-19]
+	Updated mail/wl to 2.14.0nb3 [jnemeth 2007-02-19]
