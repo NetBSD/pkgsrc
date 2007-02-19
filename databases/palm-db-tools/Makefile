@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/19 21:19:14 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/19 21:57:51 dsainty Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/./_/g}
@@ -22,5 +22,9 @@ USE_LIBTOOL=	yes
 # problems attempting to link C++ code with "cc", but using "libtool"
 # fixes this.
 CONFIGURE_ARGS=	--disable-warnings --enable-libtool
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/docs/manual.* ${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
