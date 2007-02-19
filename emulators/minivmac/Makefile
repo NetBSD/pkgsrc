@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:02 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/19 18:24:54 joerg Exp $
 
 DISTNAME=	minivmac-0.1.7.src
 PKGNAME=	minivmac-0.1.7
@@ -19,8 +19,6 @@ DOCDIR=		${PREFIX}/share/doc/html/minivmac
 
 INSTALLATION_DIRS=	bin
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-build:
 	cd ${WRKSRC}/tool/bash; ${SETENV} ${SCRIPTS_ENV} ${SH} build
 
@@ -29,4 +27,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/drv/minivmac ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCDIR}
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

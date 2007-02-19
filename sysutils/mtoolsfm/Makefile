@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/09 09:50:37 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/19 18:26:51 joerg Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
@@ -27,5 +27,4 @@ pre-configure:
 		< MToolsFM.1.in > MToolsFM.1
 
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
