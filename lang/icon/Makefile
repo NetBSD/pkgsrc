@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/06/06 17:28:02 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2007/02/19 11:45:30 joerg Exp $
 
 DISTNAME=		icon.v942src
 PKGNAME=		icon-9.4.2
@@ -52,8 +52,6 @@ PTHREAD_OPTS+=		require native
 PKG_FAIL_REASON+=	"${PKGNAME} does not have the correct config name for this system"
 .endif
 
-.include "../../mk/x11.buildlink3.mk"
-
 pre-build:
 	${MKDIR} ${WRKSRC}/lib/icon
 
@@ -66,4 +64,8 @@ do-configure:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} dest=${PREFIX} Install
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
