@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.1 2007/02/15 18:26:17 joerg Exp $
+$NetBSD: patch-ax,v 1.2 2007/02/19 20:31:50 joerg Exp $
 
 --- src/OverlayUnidraw/Imakefile.orig	2007-02-15 17:04:20.000000000 +0000
 +++ src/OverlayUnidraw/Imakefile
@@ -6,7 +6,7 @@ $NetBSD: patch-ax,v 1.1 2007/02/15 18:26:17 joerg Exp $
  LIB = OverlayUnidraw
  OTHER_CCDEFINES = $(CLIPPOLY_CCDEFINES) $(ACE_CCDEFINES)
  OTHER_CCINCLUDES = $(CLIPPOLY_CCINCLUDES) $(ACE_CCINCLUDES)
-+OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../IV/${ARCHORCPU} -L../../IV/${ARCHORCPU} -lIV -lX11
++OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../IV/${ARCHORCPU} -L../../IV/${ARCHORCPU} -lIV -lX11 -lc
 +OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../Unidraw/${ARCHORCPU} -L../../Unidraw/${ARCHORCPU} -lUnidraw
 +OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../ComUtil/${ARCHORCPU} -L../../ComUtil/${ARCHORCPU} -lComUtil
 +OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../Attribute/${ARCHORCPU} -L../../Attribute/${ARCHORCPU} -lAttribute
