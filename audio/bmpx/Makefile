@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/09 21:04:00 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/19 08:38:48 joerg Exp $
 #
 
 DISTNAME=	bmpx-0.36.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://files.beep-media-player.org/releases/0.36/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +23,17 @@ CONFIGURE_ARGS+=	--enable-mp4v2
 CONFIGURE_ARGS+=	--with-mp4v2-dir=${LOCALBASE}
 CONFIGURE_ENV+=		BOOST_REGEX_LIBS=-lboost_regex-mt
 CPPFLAGS+=		-I${LOCALBASE}/include/cdparanoia
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
+.endif
+
+.if ${OPSYS} != "DragonFly"
+SQLITE_PTHREAD=	${PTHREAD_LIBS} ${PTHREAD_LDFLAGS}
+MAKE_ENV+=	SQLITE_PTHREAD=${SQLITE_PTHREAD:Q}
+.endif
 
 BUILDLINK_API_DEPENDS.cairomm+=		cairomm>=0.6.0
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
@@ -57,4 +69,5 @@ BUILDLINK_API_DEPENDS.taglib+=		taglib>=1.4
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
