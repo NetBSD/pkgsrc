@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2006/10/14 01:27:44 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2007/02/19 18:22:59 joerg Exp $
 
---- configure.orig	2006-01-04 16:53:37.000000000 +0100
-+++ configure	2006-10-14 03:22:26.000000000 +0200
+--- configure.orig	2006-01-04 15:53:37.000000000 +0000
++++ configure
 @@ -5689,7 +5689,7 @@ fi
  
  
@@ -28,3 +28,29 @@ $NetBSD: patch-aa,v 1.2 2006/10/14 01:27:44 rillig Exp $
  	    #include <sys/socket.h>
  	    #include <net/if.h>
  	    #include <net/if_media.h>
+@@ -8540,13 +8541,13 @@ echo "${ECHO_T}$ac_cv_header_pthread_h" 
+ 
+ fi
+ if test $ac_cv_header_pthread_h = yes; then
+-  echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -8625,7 +8626,7 @@ fi
+ echo "$as_me: WARNING: *** GPSMap will be built without pthread support. ***" >&2;};
+ 		threadlib=""
+ 	else
+-		threadlib="-lpthread"
++		threadlib="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ 	fi
+ 
+ 	# Update the companion to this...
