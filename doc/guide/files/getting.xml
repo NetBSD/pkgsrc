@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.16 2007/01/30 07:07:49 wiz Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.17 2007/02/19 08:34:36 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -69,7 +69,7 @@ and dashes.</para>
 
 </sect2>
 <sect2 id="getting-via-cvs">
-<title>Via CVS</title>
+<title>Via anonymous CVS</title>
 
 	<para>To get pkgsrc via CVS, make sure you have &man.cvs.1;
 	installed. To do an initial (full) checkout of pkgsrc, you first
