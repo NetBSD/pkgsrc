@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.78 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.79 2007/02/19 08:34:00 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1088,6 +1088,7 @@
     FreeBSD     __FreeBSD__
     DragonFly   __DragonFly__
     Interix     __INTERIX
+    IRIX        __sgi (TODO: get a definite source for this)
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
@@ -1110,8 +1111,9 @@
 
 <programlisting>
     GCC         __GNUC__ (major version), __GNUC_MINOR__
-    SunPro      __SUNPRO_C (0x570 for version 5.7)
-    SunPro C++  __SUNPRO_CC (0x580 for version 5.8)
+    MIPSpro     _COMPILER_VERSION (0x741 for MIPSpro 7.41)
+    SunPro      __SUNPRO_C (0x570 for Sun C 5.7)
+    SunPro C++  __SUNPRO_CC (0x580 for Sun C++ 5.8)
 </programlisting>
 
 </sect3>
