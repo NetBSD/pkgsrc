@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/19 20:04:10 joerg Exp $
 #
 
 DISTNAME=	x11rec-0.3
@@ -25,7 +25,6 @@ do-install:
 		${PREFIX}/share/doc/html/x11rec/index.html.ja
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 
 SUBST_CLASSES+=		toolpath
