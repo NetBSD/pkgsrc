@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:08 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/19 21:38:32 joerg Exp $
 
 DISTNAME=	tvcpp0p8
 PKGNAME=	tasp-vsipl-20030710
@@ -13,9 +13,6 @@ COMMENT=	Vector Signal Image Processing Library
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib
 DIST_SUBDIR=	tasp-vsipl
 
-
-.include "../../mk/x11.buildlink3.mk"
-
 post-extract:
 	${MKDIR} ${WRKSRC}
 
@@ -27,4 +24,5 @@ post-install:
 do-test:
 	@cd ${WRKSRC}/../testing && ${SETENV} ${MAKE_ENV} ${MAKE} all
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
