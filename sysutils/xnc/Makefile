@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/06/08 15:20:20 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/19 20:34:00 joerg Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -17,9 +17,15 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 GNU_CONFIGURE=	yes
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
