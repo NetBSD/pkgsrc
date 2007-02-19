@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:24 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/19 20:50:23 wiz Exp $
 
-DISTNAME=		Test-ClassAPI-1.02
+DISTNAME=		Test-ClassAPI-1.03
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -10,8 +9,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-ClassAPI/
 COMMENT=		Provide basic first-pass API testing for large class trees
 
-DEPENDS+=		p5-Class-Inspector>=1.06:../../devel/p5-Class-Inspector
+DEPENDS+=		p5-Class-Inspector>=1.12:../../devel/p5-Class-Inspector
 DEPENDS+=		p5-Config-Tiny>=2.0:../../devel/p5-Config-Tiny
+DEPENDS+=		p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
