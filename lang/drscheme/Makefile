@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2007/02/19 22:28:25 joerg Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
 PKGNAME=		drscheme-${DRSCHEME_VERSION}
 DIST_SUBDIR=		${PKGNAME_NOREV:C/-[0-9]*//}/${PKGNAME_NOREV:C/.*-([0-9]*)/\1/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/${DRSCHEME_VERSION}/plt/ 	\
 			http://download.plt-scheme.org/doc/${DRSCHEME_VERSION}/bundles/ 	\
@@ -76,7 +76,10 @@ post-install:
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # See comment above.
