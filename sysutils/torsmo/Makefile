@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/16 20:26:26 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/19 19:50:47 joerg Exp $
 
 DISTNAME=	torsmo-0.18
 CATEGORIES=	sysutils
@@ -31,5 +31,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/README ${DOCDIR:Q}/
 	${INSTALL_DATA} ${WRKSRC:Q}/readme.html ${DOCDIR:Q}/
 
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
