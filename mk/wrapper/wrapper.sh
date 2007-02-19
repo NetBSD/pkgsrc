@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.14 2007/02/06 20:33:51 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.15 2007/02/19 14:50:33 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,6 +38,7 @@
 
 #set -eu
 
+# The list of include files for the wrapper.
 arg_pp="@_WRAP_ARG_PP@"
 arg_pp_main="@_WRAP_ARG_PP_MAIN@"
 arg_source="@_WRAP_ARG_SOURCE@"
@@ -53,11 +54,18 @@ scan="@_WRAP_SCAN@"
 transform="@_WRAP_TRANSFORM@"
 transform_sed="@_WRAP_TRANSFORM_SED@"
 wrapper_subr_sh="@_WRAP_SUBR_SH@"
+
+# Information about the wrapper and its environment.
+wrapper_abi="@ABI@"
 wrapper_type="@_WRAP_TYPE@"
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
 
+# Tools that can be used by the wrapper.
+# XXX: Why is this necessary? Isn't the wrapper only called with
+# TOOLS_DIR/bin in the PATH?
+#
 cat="@CAT@"
 echo="@ECHO@"
 expr="@EXPR@"
