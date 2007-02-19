@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.64 2007/02/18 23:49:44 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.65 2007/02/19 14:50:33 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -353,6 +353,7 @@ _WRAP_SH_CRUNCH_FILTER=							\
 	${GREP} -v "^\#$$" | ${GREP} -v "^[ 	]*$$"
 
 _WRAP_SUBST_SED=							\
+	-e "s|@ABI@|${ABI:Q}|g"						\
 	-e "s|@CAT@|${CAT:Q}|g"						\
 	-e "s|@ECHO@|${ECHO:Q}|g"					\
 	-e "s|@EXPR@|${EXPR:Q}|g"					\
