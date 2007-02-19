@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.17 2007/02/19 10:18:33 rillig Exp $
+# $NetBSD: depends.mk,v 1.18 2007/02/19 10:33:46 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -46,20 +46,20 @@ ${_DEPENDS_FILE}:
 	${RUN}								\
 	exec 0< ${.TARGET}.tmp;						\
 	while read dep; do						\
-		pattern=`${ECHO} $$dep | ${SED} -e "s,:.*,,"`;		\
-		dir=`${ECHO} $$dep | ${SED} -e "s,.*:,,"`;		\
-		${TEST} -n "$$pattern" || exit 1;			\
-		${TEST} -n "$$dir" || exit 1;				\
+		pattern=`${ECHO} "$$dep" | ${SED} -e "s,:.*,,"`;	\
+		dir=`${ECHO} "$$dep" | ${SED} -e "s,.*:,,"`;		\
+		[ "$$pattern" ];					\
+		[ "$$dir" ];						\
 		${ECHO} "build	$$pattern	$$dir";			\
 	done >> ${.TARGET}
 	${RUN} ${_REDUCE_DEPENDS_CMD} ${DEPENDS:Q} > ${.TARGET}.tmp
 	${RUN}								\
 	exec 0< ${.TARGET}.tmp;						\
 	while read dep; do						\
-		pattern=`${ECHO} $$dep | ${SED} -e "s,:.*,,"`;		\
-		dir=`${ECHO} $$dep | ${SED} -e "s,.*:,,"`;		\
-		${TEST} -n "$$pattern" || exit 1;			\
-		${TEST} -n "$$dir" || exit 1;				\
+		pattern=`${ECHO} "$$dep" | ${SED} -e "s,:.*,,"`;	\
+		dir=`${ECHO} "$$dep" | ${SED} -e "s,.*:,,"`;		\
+		[ "$$pattern" ];					\
+		[ "$$dir" ];						\
 		${ECHO} "full	$$pattern	$$dir";			\
 	done >> ${.TARGET}
 
