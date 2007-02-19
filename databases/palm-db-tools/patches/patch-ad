@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/02/19 21:19:14 dsainty Exp $
+
+Unconditionally correct LIB_DEPENDENCIES and INSTALL for libtool builds.
+
+--- flatfile/Makefile.in.orig	2003-06-20 11:37:46.000000000 +1200
++++ flatfile/Makefile.in	2007-02-20 09:56:12.000000000 +1300
+@@ -97,8 +97,8 @@
+ install: all
+ 	$(INSTALL) -d $(bindir)
+ 	$(INSTALL) -d $(libdir)
+-	$(INSTALL) -s $(TARGETS) $(libdir)
+-	$(INSTALL) -s $(PROGRAMS:%=%$(EXEEXT)) $(bindir)
++	$(LIBTOOL) --mode=install $(INSTALL) -s $(TARGETS) $(libdir)
++	$(LIBTOOL) --mode=install $(INSTALL) -s $(PROGRAMS:%=%$(EXEEXT)) $(bindir)
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c .cpp .lo .o .obj
+@@ -125,7 +125,7 @@
+ libpdbtools.la: $(OBJS:.o=.lo) $(LIB_DEPENDENCIES:.a=.la)
+ 	$(LIBTOOL) --mode=link $(CXX) $(OBJS:.o=.lo) -o $@ $(LIBS:.a=.la)
+ 
+-$(PROGRAMS:=$(EXEEXT)): $(PROGDEPS) $(PROGOBJS) $(TARGETS) $(LIB_DEPENDENCIES)
++$(PROGRAMS:=$(EXEEXT)): $(PROGDEPS) $(PROGOBJS) $(TARGETS) $(LIB_DEPENDENCIES:.a=.la)
+ 	$(PROGLINK)
+ 
+ clean:
