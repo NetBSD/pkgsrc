@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/11/09 20:01:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/02/19 06:54:47 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -61,6 +61,13 @@ share/doc/gxemul/20060814-netbsd-algor-3.0.1.png
 share/doc/gxemul/20060814-netbsd-algor-3.0.1_small.png
 share/doc/gxemul/20061029-netbsd-dreamcast.png
 share/doc/gxemul/20061029-netbsd-dreamcast_small.png
+share/doc/gxemul/20061104-netbsd-dreamcast-real.jpg
+share/doc/gxemul/20061104-netbsd-dreamcast-real_small.png
+share/doc/gxemul/20070128-netbsd-dreamcast-livecd-1.png
+share/doc/gxemul/20070128-netbsd-dreamcast-livecd-1_small.png
+share/doc/gxemul/20070128-netbsd-dreamcast-livecd-2.png
+share/doc/gxemul/20070128-netbsd-dreamcast-livecd-2_small.png
+share/doc/gxemul/dreamcast.html
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
 share/doc/gxemul/README
