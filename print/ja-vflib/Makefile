@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/06 18:00:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/19 17:20:41 joerg Exp $
 
 DISTNAME=		ja-vflib-${VFLIB_VERSION}
 VFLIB_VERSION=		2.24.2nb2
@@ -21,5 +21,4 @@ NO_BUILD=		yes
 
 do-install:		# empty
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
