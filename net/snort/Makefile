@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2007/02/17 19:08:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.29 2007/02/19 19:40:35 adrianp Exp $
 #
 
-DISTNAME=		snort-2.6.1.2
+DISTNAME=		snort-2.6.1.3
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/current/
 
