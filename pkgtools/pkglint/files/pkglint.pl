@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.697 2007/02/15 23:52:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.698 2007/02/19 12:06:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3841,11 +3841,13 @@ sub checkline_cpp_macro_names($$) {
 		__NetBSD__ __NetBSD_Version__
 		__OpenBSD__
 		__SVR4
+		__sgi
 		__sun
 
 		__GLIBC__
 	));
 	use constant bad_macros  => {
+		"__sgi__" => "__sgi",
 		"__sparc__" => "__sparc",
 		"__sparc_v9__" => "__sparcv9",
 		"__sun__" => "__sun",
@@ -4086,17 +4088,15 @@ sub checkline_mk_shellword($$$) {
 	}
 
 	# Note: SWST means [S]hell[W]ord [ST]ate
-	use enum qw(:SWST_ PLAIN SQUOT DQUOT DQUOT_BACKT BACKT BACKT_DQUOT BACKT_SQUOT);
+	use enum qw(:SWST_ PLAIN SQUOT DQUOT DQUOT_BACKT BACKT);
 	use constant statename		=> [
 		"SWST_PLAIN", "SWST_SQUOT", "SWST_DQUOT",
 		"SWST_DQUOT_BACKT", "SWST_BACKT",
-		"SWST_BACKT_DQUOT", "SWST_BACKT_SQUOT"
 	];
 	use constant user_statename	=> [
 		"unquoted string", "single quoted string",
 		"double quoted string", "backticks inside double quoted string",
-		"backticks", "double quoted string inside backticks",
-		"single quoted string inside backticks"
+		"backticks",
 	];
 
 	$rest = ($shellword =~ qr"^#") ? "" : $shellword;
@@ -4105,9 +4105,41 @@ sub checkline_mk_shellword($$$) {
 
 		$opt_debug_shell and $line->log_debug(statename->[$state] . ": ${rest}");
 
-		# make variables have the same syntax, no matter in which
-		# state we are currently.
-		if ($rest =~ s/^\$\{(${regex_varname}|[\@])(:[^\{]+)?\}//
+		# When we are parsing inside backticks, it is more
+		# reasonable to check the whole shell command
+		# recursively, instead of splitting off the first
+		# make(1) variable (see the elsif below).
+		if ($state == SWST_BACKT) {
+
+			# Scan for the end of the backticks, checking
+			# for single backslashes and removing one level
+			# of backslashes. Backslashes are only removed
+			# before a dollar, a backslash or a backtick.
+			#
+			# References:
+			# * http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_06_03
+			my $stripped = "";
+			while ($rest ne "") {
+				if ($rest =~ s/^\`//) {
+					last;
+				} elsif ($rest =~ s/^\\([\\\`\$])//) {
+					$stripped .= $1;
+				} elsif ($rest =~ s/^(\\)//) {
+					$line->log_warning("Backslashes should be doubled inside backticks.");
+					$stripped .= $1;
+				} elsif ($rest =~ s/^([^\\\`]+)//) {
+					$stripped .= $1;
+				} else {
+					assert(false, "rest=$rest");
+				}
+			}
+
+			# Check the resulting command.
+			checkline_mk_shelltext($line, $stripped);
+
+		# make(1) variables have the same syntax, no matter in
+		# which state we are currently.
+		} elsif ($rest =~ s/^\$\{(${regex_varname}|[\@])(:[^\{]+)?\}//
 		||  $rest =~ s/^\$\((${regex_varname}|[\@])(:[^\)]+)?\)//
 		||  $rest =~ s/^\$(\@)//) {
 			my ($varname, $mod) = ($1, $2);
@@ -4223,51 +4255,6 @@ sub checkline_mk_shellword($$$) {
 				last;
 			}
 
-		} elsif ($state == SWST_BACKT) {
-			if ($rest =~ s/^\`//) {
-				$state = SWST_PLAIN;
-			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
-			} elsif ($rest =~ s/^'//) {
-				$state = SWST_BACKT_SQUOT;
-			} elsif ($rest =~ s/^"//) {
-				$state = SWST_BACKT_DQUOT;
-			} elsif ($rest =~ s/^\\[\\\$\`]//) {
-			} elsif ($rest =~ s/^\\//) {
-				$line->log_warning("Backslashes should be doubled inside backticks.");
-			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|\$\$|[!#?\@])//) {
-				my ($shvarname) = ($1);
-				if ($opt_warn_quoting && $check_quoting) {
-					$line->log_warning("Unquoted shell variable \$${shvarname}.");
-				}
-			} else {
-				last;
-			}
-
-		} elsif ($state == SWST_BACKT_SQUOT) {
-			if ($rest =~ s/^'//) {
-				$state = SWST_BACKT;
-			} elsif ($rest =~ s/^\\[\\\`\$]//) {
-			} elsif ($rest =~ s/^[^\\]+//) {
-			} else {
-				last;
-			}
-
-		} elsif ($state == SWST_BACKT_DQUOT) {
-			if ($rest =~ s/^"//) {
-				$state = SWST_BACKT;
-
-			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
-
-			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
-
-			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|\$\$|[!#?\@])//) {
-				my ($shvarname) = ($1);
-			} else {
-				last;
-			}
-
 		} else {
 			last;
 		}
@@ -4330,6 +4317,8 @@ sub checkline_mk_shellcmd_use($$) {
 sub checkline_mk_shelltext($$) {
 	my ($line, $text) = @_;
 	my ($vartools, $state, $rest, $set_e_mode);
+
+	$opt_debug_trace and $line->log_debug("checkline_mk_shelltext(\"$text\")");
 
 	# Note: SCST is the abbreviation for [S]hell [C]ommand [ST]ate.
 	use constant scst => qw(
@@ -4437,7 +4426,10 @@ sub checkline_mk_shelltext($$) {
 		if ($state == SCST_START || $state == SCST_COND) {
 			my ($type);
 
-			if (exists(forbidden_commands->{$shellword})) {
+			if ($shellword eq "\${RUN}") {
+				# Just skip this one.
+
+			} elsif (exists(forbidden_commands->{$shellword})) {
 				$line->log_error("${shellword} is forbidden and must not be used.");
 
 			} elsif (exists(get_tool_names()->{$shellword})) {
@@ -4606,6 +4598,9 @@ sub checkline_mk_shelltext($$) {
 		if ($state == SCST_SET && $shellword =~ qr"^-.*e") {
 			$set_e_mode = true;
 		}
+		if ($state == SCST_START && $shellword eq "\${RUN}") {
+			$set_e_mode = true;
+		}
 
 		$state =  ($shellword eq ";;") ? SCST_CASE_LABEL
 			# Note: The order of the following two lines is important.
@@ -4617,6 +4612,7 @@ sub checkline_mk_shelltext($$) {
 				: ($shellword eq "\${PAX}") ? SCST_PAX
 				: ($shellword eq "\${SED}") ? SCST_SED
 				: ($shellword eq "\${ECHO}") ? SCST_ECHO
+				: ($shellword eq "\${RUN}") ? SCST_START
 				: ($shellword eq "echo") ? SCST_ECHO
 				: ($shellword eq "set") ? SCST_SET
 				: ($shellword =~ qr"^(?:if|elif|while)$") ? SCST_COND
