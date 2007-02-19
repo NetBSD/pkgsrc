@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.3 2007/02/15 18:26:16 joerg Exp $
+$NetBSD: patch-al,v 1.4 2007/02/19 20:31:49 joerg Exp $
 
 --- src/IV/Imakefile.orig	2005-10-06 18:33:31.000000000 +0000
 +++ src/IV/Imakefile
@@ -6,7 +6,7 @@ $NetBSD: patch-al,v 1.3 2007/02/15 18:26:16 joerg Exp $
  LIB	   = IV
  
  KIT_CCFLAGS = KitFlags
-+OTHER_CCLDFLAGS += ${TIFF_CCLDLIBS} -lX11 -lXext
++OTHER_CCLDFLAGS += ${TIFF_CCLDLIBS} -lX11 -lXext -lc
  LIBPATHS   = -DABSLIBALLDIR='"$(ABSLIBALLDIR)"' -DRELLIBALLDIR='"$(RELLIBALLDIR)"' \
  	     -DX_LIBDIR='"$(XLIBDIR)"'
  DEPEND_CCFLAGS = DependCCFlags $(KIT_CCFLAGS) $(GL_CCFLAGS)

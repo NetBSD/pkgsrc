@@ -1,4 +1,4 @@
-$NetBSD: patch-az,v 1.1 2007/02/15 18:26:17 joerg Exp $
+$NetBSD: patch-az,v 1.2 2007/02/19 20:31:50 joerg Exp $
 
 --- src/FrameUnidraw/Imakefile.orig	2007-02-15 17:15:09.000000000 +0000
 +++ src/FrameUnidraw/Imakefile
@@ -6,7 +6,7 @@ $NetBSD: patch-az,v 1.1 2007/02/15 18:26:17 joerg Exp $
  #ifdef InObjectCodeDir
  
  LIB = FrameUnidraw
-+OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../IV/${ARCHORCPU} -L../../IV/${ARCHORCPU} -lIV
++OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../IV/${ARCHORCPU} -L../../IV/${ARCHORCPU} -lIV -lc
 +OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../Unidraw/${ARCHORCPU} -L../../Unidraw/${ARCHORCPU} -lUnidraw
 +OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../OverlayUnidraw/${ARCHORCPU} -L../../OverlayUnidraw/${ARCHORCPU} -lOverlayUnidraw
 +OTHER_CCLDFLAGS+= -Wl,-rpath-link,../../IVGlyph/${ARCHORCPU} -L../../IVGlyph/${ARCHORCPU} -lIVGlyph
