@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.29 2007/02/11 11:38:43 jnemeth Exp $
+# $NetBSD: emacs.mk,v 1.30 2007/02/19 09:20:59 jnemeth Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -258,7 +258,7 @@ _EMACS_VERSION_FULL=	${_EMACS_VERSION_CMD}
 _EMACS_VERSION=		${_EMACS_VERSION_FULL:C/^${_EMACS_PKGBASE}-//}
 _EMACS_VERSION_MAJOR=	${_EMACS_VERSION:C/\..*//}
 _EMACS_VERSION_MINOR=	${_EMACS_VERSION:C/^[0-9]*\.//:C/[^0-9].*//}
-_EMACS_VERSION_NOREV=	${_EMACS_VERSION:C/[a-z]*$//}
+_EMACS_VERSION_NOREV=	${_EMACS_VERSION:C/[a-z].*$//}
 _EMACS_VERSION_ISMATCH!= \
 	dep="${_EMACS_REQD.${_EMACS_TYPE}:Q}";				\
 	${PKG_ADMIN} pmatch "$$dep" "${_EMACS_PKGBASE}";		\
