@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.4 2007/01/02 17:16:34 rillig Exp $
+# $NetBSD: locking.mk,v 1.5 2007/02/19 10:39:47 rillig Exp $
 #
 
 # This file provides the following .USE targets:
@@ -28,6 +28,7 @@ _LOCALBASE_LOCKFILE=	${LOCALBASE}/.lockfile
 .elif ${PKGSRC_LOCKTYPE} == "once" || ${PKGSRC_LOCKTYPE} == "sleep"
 .  if !defined(OBJHOSTNAME)
 PKG_FAIL_REASON+=	"[locking.mk] PKGSRC_LOCKTYPE needs OBJHOSTNAME defined."
+# XXX: Why?
 .  endif
 .else
 PKG_FAIL_REASON+=	"[locking.mk] PKGSRC_LOCKTYPE must be one of {none,once,sleep}, not ${PKGSRC_LOCKTYPE}."
