@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/17 19:23:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/19 17:52:53 joerg Exp $
 
 DISTNAME=	pcemu1.01alpha
 PKGNAME=	pcemu-1.01a
@@ -19,8 +19,6 @@ FONTS_DIRS.x11=	${PREFIX}/lib/pcemu/font
 REQD_DIRS=	${PREFIX}/lib/pcemu/font
 REQD_DIRS+=	${PREFIX}/lib/pcemu
 
-.include "../../mk/x11.buildlink3.mk"
-
 do-configure:
 	cd ${WRKSRC};							\
 		${MKDIR} ${WRKSRC}/bootstrap;				\
@@ -31,4 +29,5 @@ post-configure:
 		${WRKSRC}/foo
 	${MV} ${WRKSRC}/foo ${WRKSRC}/bootstrap/help.txt
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
