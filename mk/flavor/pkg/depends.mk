@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.18 2007/02/19 10:33:46 rillig Exp $
+# $NetBSD: depends.mk,v 1.19 2007/02/19 10:51:58 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -13,7 +13,7 @@ _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
 #
 _DEPENDS_PATTERNS_CMD=	\
 	[ ! -f ${_COOKIE.depends} ]					\
-	|| ${AWK} '$$1 == "full" { print; }' < ${_COOKIE.depends}
+	|| ${AWK} '$$1 == "full" { print $$2; }' < ${_COOKIE.depends}
 
 .PHONY: show-depends
 show-depends:
