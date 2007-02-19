@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.19 2007/02/19 10:51:58 rillig Exp $
+# $NetBSD: depends.mk,v 1.20 2007/02/19 11:05:48 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -70,13 +70,13 @@ ${_DEPENDS_FILE}:
 ###
 .PHONY: depends-install
 depends-install: ${_DEPENDS_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	set -- dummy `${CAT} ${_DEPENDS_FILE}`; shift;			\
-	while ${TEST} $$# -gt 0; do					\
-		type="$$1"; pattern="$$2"; dir="$$3"; shift 3;		\
+	${RUN}								\
+	while read type pattern dir rest; do				\
+		{ [ "$$dir" ] && [ ! "$$rest" ]; }			\
+		|| ${FAIL_MSG} "[depends.mk] Internal error #1";	\
 		silent=;						\
 		${_DEPENDS_INSTALL_CMD};				\
-	done
+	done < ${_DEPENDS_FILE}
 
 ######################################################################
 ### bootstrap-depends (PUBLIC, pkgsrc/mk/depends/depends.mk)
