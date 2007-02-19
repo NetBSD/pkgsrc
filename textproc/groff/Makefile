@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/10/23 12:54:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.41 2007/02/19 11:19:48 rillig Exp $
 #
 
 DISTNAME=	groff-1.19.2
@@ -35,7 +35,7 @@ PLIST_SUBST+=	GNU_PREFIX="g"
 PLIST_SUBST+=	GNU_PREFIX=""
 .endif
 
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 # needs getopt_long()
 . include "../../pkgtools/libnbcompat/buildlink3.mk"
 .endif
