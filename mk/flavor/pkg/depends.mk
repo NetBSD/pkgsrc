@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.16 2006/11/26 12:21:13 rillig Exp $
+# $NetBSD: depends.mk,v 1.17 2007/02/19 10:18:33 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -9,11 +9,11 @@ _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
 #
+# This is used in install.mk and metadata.mk.
+#
 _DEPENDS_PATTERNS_CMD=	\
-	if ${TEST} -f ${_COOKIE.depends}; then				\
-		${CAT} ${_COOKIE.depends} |				\
-		${AWK} '/^full/ { print $$2 } { next }';		\
-	fi
+	[ ! -f ${_COOKIE.depends} ]					\
+	|| ${AWK} '$$1 == "full" { print; }' < ${_COOKIE.depends}
 
 .PHONY: show-depends
 show-depends:
