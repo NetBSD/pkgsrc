@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1 2007/02/18 22:39:29 rillig Exp $
+$NetBSD: patch-ae,v 1.2 2007/02/19 17:27:50 rillig Exp $
 
 In pkgsrc, all Perl modules are installed into vendor_perl, not
 site_perl.
 
---- Makefile.orig	2007-02-14 03:46:46.000000000 +0100
-+++ Makefile	2007-02-18 23:25:33.000000000 +0100
+--- perl/Makefile.orig	2007-02-14 03:46:46.000000000 +0100
++++ perl/Makefile	2007-02-18 23:25:33.000000000 +0100
 @@ -7,7 +7,7 @@
  prefix_SQ = $(subst ','\'',$(prefix))
  
