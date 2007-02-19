@@ -1,4 +1,4 @@
-# $NetBSD: wrapper-subr.sh,v 1.7 2006/11/30 12:59:56 rillig Exp $
+# $NetBSD: wrapper-subr.sh,v 1.8 2007/02/19 14:50:33 rillig Exp $
 #
 # This file contains shell functions that are useful to the wrapper
 # scripts.
@@ -52,4 +52,11 @@ transform_pass_with_warning() {
 	msg_log "$wrapperlog" "WARNING: [$wrapsubr_name] $_warning"
 	$debug_log $wrapperlog "    ($wrapsubr_name) to: $arg [unchanged]"
 	addtocache=no
+}
+
+# usage: transform_fail "error message"
+transform_fail() {
+	msg_log "$wrapperlog" "ERROR: [$wrapsubr_name] $1"
+	msg_log stderr "ERROR: [$wrapsubr_name] $1"
+	exit 1
 }
