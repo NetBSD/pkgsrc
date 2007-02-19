@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/22 16:26:55 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/19 22:09:59 joerg Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -16,8 +16,6 @@ INSTALL_DIRS=	${WRKSRC}
 
 USE_TOOLS+=	gmake makeinfo
 INFO_FILES=	# PLIST
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-patch:
 	for f in ${WRKSRC}/ysite.sh; do				\
@@ -38,4 +36,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/emacs/*.el ${PREFIX}/share/emacs/site-lisp
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
