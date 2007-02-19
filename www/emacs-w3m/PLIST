@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/27 12:56:02 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/02/19 09:22:30 jnemeth Exp $
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
-${EMACS_LISPPREFIX}/w3m/mew-w3m.elc
+@comment XXXPKGSRC we ignore! ${EMACS_LISPPREFIX}/w3m/mew-w3m.elc
 ${EMACS_LISPPREFIX}/w3m/mime-w3m.el
 ${EMACS_LISPPREFIX}/w3m/mime-w3m.elc
 ${EMACS_LISPPREFIX}/w3m/octet.el
@@ -76,7 +76,6 @@ ${EMACS_LISPPREFIX}/w3m/w3m-favicon.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-filter.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-symbol.elc
 ${EMACS_LISPPREFIX}/w3m/nnshimbun.el
-${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
 ${EMACS_LISPPREFIX}/w3m/nnshimbun.elc
 ${EMACS_LISPPREFIX}/w3m/sb-2ch.el
 ${EMACS_LISPPREFIX}/w3m/sb-2ch.elc
@@ -315,6 +314,48 @@ ${DOCDIR}/ChangeLog
 ${DOCDIR}/ChangeLog.1
 ${DOCDIR}/README
 ${DOCDIR}/README.ja
+${FOR_emacs22}${ICONDIR}/antenna-up.xpm
+${FOR_emacs22}${ICONDIR}/back-disabled.xpm
+${FOR_emacs22}${ICONDIR}/back-up.xpm
+${FOR_emacs22}${ICONDIR}/copy-up.xpm
+${FOR_emacs22}${ICONDIR}/db-history-up.xpm
+${FOR_emacs22}${ICONDIR}/forward-disabled.xpm
+${FOR_emacs22}${ICONDIR}/forward-up.xpm
+${FOR_emacs22}${ICONDIR}/history-up.xpm
+${FOR_emacs22}${ICONDIR}/home-up.xpm
+${FOR_emacs22}${ICONDIR}/image-up.xpm
+${FOR_emacs22}${ICONDIR}/open-up.xpm
+${FOR_emacs22}${ICONDIR}/parent-disabled.xpm
+${FOR_emacs22}${ICONDIR}/parent-up.xpm
+${FOR_emacs22}${ICONDIR}/reload-up.xpm
+${FOR_emacs22}${ICONDIR}/search-up.xpm
+${FOR_emacs22}${ICONDIR}/spinner.gif
+${FOR_emacs22}${ICONDIR}/state-00.xpm
+${FOR_emacs22}${ICONDIR}/state-01.xpm
+${FOR_emacs22}${ICONDIR}/state-10.xpm
+${FOR_emacs22}${ICONDIR}/state-11.xpm
+${FOR_emacs22}${ICONDIR}/weather-up.xpm
+${FOR_emacs22nox}${ICONDIR}/antenna-up.xpm
+${FOR_emacs22nox}${ICONDIR}/back-disabled.xpm
+${FOR_emacs22nox}${ICONDIR}/back-up.xpm
+${FOR_emacs22nox}${ICONDIR}/copy-up.xpm
+${FOR_emacs22nox}${ICONDIR}/db-history-up.xpm
+${FOR_emacs22nox}${ICONDIR}/forward-disabled.xpm
+${FOR_emacs22nox}${ICONDIR}/forward-up.xpm
+${FOR_emacs22nox}${ICONDIR}/history-up.xpm
+${FOR_emacs22nox}${ICONDIR}/home-up.xpm
+${FOR_emacs22nox}${ICONDIR}/image-up.xpm
+${FOR_emacs22nox}${ICONDIR}/open-up.xpm
+${FOR_emacs22nox}${ICONDIR}/parent-disabled.xpm
+${FOR_emacs22nox}${ICONDIR}/parent-up.xpm
+${FOR_emacs22nox}${ICONDIR}/reload-up.xpm
+${FOR_emacs22nox}${ICONDIR}/search-up.xpm
+${FOR_emacs22nox}${ICONDIR}/spinner.gif
+${FOR_emacs22nox}${ICONDIR}/state-00.xpm
+${FOR_emacs22nox}${ICONDIR}/state-01.xpm
+${FOR_emacs22nox}${ICONDIR}/state-10.xpm
+${FOR_emacs22nox}${ICONDIR}/state-11.xpm
+${FOR_emacs22nox}${ICONDIR}/weather-up.xpm
 ${FOR_emacs21}${ICONDIR}/antenna-up.xpm
 ${FOR_emacs21}${ICONDIR}/back-disabled.xpm
 ${FOR_emacs21}${ICONDIR}/back-up.xpm
@@ -336,6 +377,27 @@ ${FOR_emacs21}${ICONDIR}/state-01.xpm
 ${FOR_emacs21}${ICONDIR}/state-10.xpm
 ${FOR_emacs21}${ICONDIR}/state-11.xpm
 ${FOR_emacs21}${ICONDIR}/weather-up.xpm
+${FOR_emacs21nox}${ICONDIR}/antenna-up.xpm
+${FOR_emacs21nox}${ICONDIR}/back-disabled.xpm
+${FOR_emacs21nox}${ICONDIR}/back-up.xpm
+${FOR_emacs21nox}${ICONDIR}/copy-up.xpm
+${FOR_emacs21nox}${ICONDIR}/db-history-up.xpm
+${FOR_emacs21nox}${ICONDIR}/forward-disabled.xpm
+${FOR_emacs21nox}${ICONDIR}/forward-up.xpm
+${FOR_emacs21nox}${ICONDIR}/history-up.xpm
+${FOR_emacs21nox}${ICONDIR}/home-up.xpm
+${FOR_emacs21nox}${ICONDIR}/image-up.xpm
+${FOR_emacs21nox}${ICONDIR}/open-up.xpm
+${FOR_emacs21nox}${ICONDIR}/parent-disabled.xpm
+${FOR_emacs21nox}${ICONDIR}/parent-up.xpm
+${FOR_emacs21nox}${ICONDIR}/reload-up.xpm
+${FOR_emacs21nox}${ICONDIR}/search-up.xpm
+${FOR_emacs21nox}${ICONDIR}/spinner.gif
+${FOR_emacs21nox}${ICONDIR}/state-00.xpm
+${FOR_emacs21nox}${ICONDIR}/state-01.xpm
+${FOR_emacs21nox}${ICONDIR}/state-10.xpm
+${FOR_emacs21nox}${ICONDIR}/state-11.xpm
+${FOR_emacs21nox}${ICONDIR}/weather-up.xpm
 ${FOR_xemacs214}${ICONDIR}/antenna-up.xpm
 ${FOR_xemacs214}${ICONDIR}/back-disabled.xpm
 ${FOR_xemacs214}${ICONDIR}/back-up.xpm
@@ -378,8 +440,13 @@ ${FOR_xemacs215}${ICONDIR}/state-01.xpm
 ${FOR_xemacs215}${ICONDIR}/state-10.xpm
 ${FOR_xemacs215}${ICONDIR}/state-11.xpm
 ${FOR_xemacs215}${ICONDIR}/weather-up.xpm
+${FOR_xemacs215}@dirrm ${ICONDIR}
+${FOR_xemacs214}@dirrm ${ICONDIR}
+${FOR_emacs22nox}@dirrm ${ICONDIR}
+${FOR_emacs22}@dirrm ${ICONDIR}
+${FOR_emacs21nox}@dirrm ${ICONDIR}
+${FOR_emacs21}@dirrm ${ICONDIR}
+info/emacs-w3m-ja.info
+info/emacs-w3m.info
 @dirrm ${EMACS_LISPPREFIX}/w3m
 @dirrm ${DOCDIR}
-${FOR_emacs21}@dirrm ${ICONDIR}
-${FOR_xemacs214}@dirrm ${ICONDIR}
-${FOR_xemacs215}@dirrm ${ICONDIR}

@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2007/01/27 12:56:02 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/19 09:22:30 jnemeth Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
+
+USE_TOOLS+=	makeinfo
+INFO_FILES=	YES
 
 DEPENDS+=	w3m>=0.5.1nb2:../../www/w3m
 
@@ -37,14 +41,14 @@ ETCDIR=	lib/xemacs/site-packages/etc
 ICONDIR=	${ETCDIR}/w3m
 .else
 ETCDIR=	share/emacs/${_EMACS_VERSION_NOREV}/etc
-ICONDIR=	${ETCDIR}/w3m/icons
+ICONDIR=	${ETCDIR}/images/w3m
 .endif
 DOCDIR=	${ETCDIR}/w3m/doc
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 PLIST_SUBST+=	ICONDIR=${ICONDIR:Q}
 
 post-install:
-	@${MKDIR} ${PREFIX}/${DOCDIR}
+	@${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 	for f in ${DOCUMENTS}; do ${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/${DOCDIR}; done
 
 .include "../../mk/bsd.pkg.mk"
