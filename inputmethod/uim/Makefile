@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/01/20 16:56:43 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/02/19 20:06:21 joerg Exp $
 #
 
 DISTNAME=		uim-1.3.1
@@ -40,5 +40,5 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
