@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2006/10/23 21:46:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/02/19 20:31:11 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -323,6 +323,20 @@ share/gnucash/accounts/es_ES/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_actifsfixes.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_automobile.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_basecommune.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_cdmarchemon.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_chequier.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_conjointretraite.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_conjointrev.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_courtage.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_etudeemprunt.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_garderie.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_locataire.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_proprietaire.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_retraite.gnucash-xea
+share/gnucash/accounts/fr_CA/acctchrt_revenus.gnucash-xea
 share/gnucash/accounts/fr_CH/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/fr_CH/acctchrt_business.gnucash-xea
 share/gnucash/accounts/fr_CH/acctchrt_carloan.gnucash-xea
@@ -806,6 +820,7 @@ share/xml/gnucash/xsl/vcard-gnccustomer.pl
 @dirrm share/gnucash/accounts/hu_HU
 @dirrm share/gnucash/accounts/fr_FR
 @dirrm share/gnucash/accounts/fr_CH
+@dirrm share/gnucash/accounts/fr_CA
 @dirrm share/gnucash/accounts/es_ES
 @dirrm share/gnucash/accounts/el_GR
 @dirrm share/gnucash/accounts/de_DE
