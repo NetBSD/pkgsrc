@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/22 04:46:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/19 18:44:10 joerg Exp $
 
 DISTNAME=		pearpc-0.4
 PKGREVISION=		1
@@ -46,5 +46,4 @@ SUBST_MESSAGE.conf=	Fixing configuration file.
 .include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
