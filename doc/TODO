@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6012 2007/02/19 19:47:41 wiz Exp $
+$NetBSD: TODO,v 1.6013 2007/02/19 20:52:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -774,11 +774,9 @@ Suggested package updates
 	o p5-Spreadsheet-WriteExcel-2.18
 	o p5-String-ShellQuote-1.03 [pkg/34415]
 	o p5-Template-Extract-0.40
-	o p5-Test-ClassAPI-1.03
 	o p5-Test-Harness-2.46
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Emoticon-MSN-0.4 [pkg/34403]
-	o p5-Text-Quoted-1.10
 	o p5-Text-Shellwords-1.08 [pkg/34417]
 	o p5-Text-Tabs+Wrap-2005.0824
 	o p5-Time-HiRes-1.91
