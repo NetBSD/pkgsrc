@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/01/25 20:11:30 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/19 20:55:51 joerg Exp $
 
 DISTNAME=	Django-0.95.1
 PKGNAME=	${PYPKGPREFIX}-django-0.95.1
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://media.djangoproject.com/releases/0.95/
 
@@ -32,7 +33,7 @@ post-extract:
 .if empty(PKG_OPTIONS:Mmysql)
 	rm -r ${WRKSRC}/django/db/backends/mysql
 .endif
-.if empty(PKG_OPTIONS:Mpsycopg1)
+.if empty(PKG_OPTIONS:Mpsycopg1) && empty(PKG_OPTIONS:Mpsycopg2)
 	rm -r ${WRKSRC}/django/db/backends/postgresql
 .endif
 .if empty(PKG_OPTIONS:Mpsycopg2)
