@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/19 18:48:59 joerg Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	quake3arena-1.32b
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/ \
@@ -45,8 +45,6 @@ LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
 
 INSTALLATION_DIRS=	bin
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
