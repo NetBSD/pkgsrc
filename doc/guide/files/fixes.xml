@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.79 2007/02/19 08:34:00 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.80 2007/02/19 15:22:29 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -675,18 +675,23 @@
     compared against the old one before changing anything, to make
     sure the distfile was really updated on purpose, and that
     no trojan horse or so crept in.
+    Please mention that the distfiles were compared and what was found
+    in your commit message.
     Then, the correct way to work around this is to
     set <varname>DIST_SUBDIR</varname> to a unique directory name,
     usually based on <varname>PKGNAME_NOREV</varname>. All
     <varname>DISTFILES</varname> and
     <varname>PATCHFILES</varname> for this package will be put in that
-    subdirectory of the local distfiles directory.  In case this
+    subdirectory of the local distfiles directory.
+    (See <xref linkend="bumping-pkgrevision"/> for more details.)
+    In case this
     happens more often, <varname>PKGNAME</varname> can be used (thus
     including the <filename>nbX</filename> suffix) or a date stamp
     can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.
     Do not forget regenerating the <filename>distinfo</filename> file
     after that, since it contains the <varname>DIST_SUBDIR</varname>
     path in the filenames.
+    Also increase the PKGREVISION if the installed package is different.
     Furthermore, a mail to the package's authors seems appropriate
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</para>
