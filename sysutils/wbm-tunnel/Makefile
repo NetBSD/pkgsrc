@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/16 15:44:15 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/19 21:52:43 joerg Exp $
 
 DISTNAME=	tunnel
 PKGNAME=	wbm-${DISTNAME}-${WBM_VERSION}
@@ -9,6 +9,8 @@ WBM_VERSION=	1.270
 
 HOMEPAGE=	http://www.webmin.com/standard.html
 COMMENT=	Webmin module to tunnel to another HTTP server
+
+BROKEN=		"Distfile broken"
 
 .include "../../sysutils/webmin/wbm.mk"
 .include "../../mk/bsd.pkg.mk"
