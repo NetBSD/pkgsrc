@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/20 22:58:34 xtraeme Exp $
+
+SHA1 (cryptofs-0.6.0.tar.bz2) = 967d43f46a26e69704a61f3f68ef83b14c60df41
+RMD160 (cryptofs-0.6.0.tar.bz2) = 6603ba948ba0d421e3ffa0387c718ed42f7f4c51
+Size (cryptofs-0.6.0.tar.bz2) = 242440 bytes
