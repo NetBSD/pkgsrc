@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/02/16 12:06:39 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2007/02/20 13:31:19 joerg Exp $
 
---- Makefile.orig	2006-03-07 20:10:25.000000000 +0100
-+++ Makefile	2007-02-16 12:39:28.000000000 +0100
-@@ -11,19 +11,18 @@
+--- Makefile.orig	2006-03-07 19:10:25.000000000 +0000
++++ Makefile
+@@ -11,33 +11,13 @@ SRCS=	attrstack.c config.c detailer.c di
  	globtree.c idcache.c keyword.c lister.c main.c misc.c mux.c parse.y \
  	pathcomp.c proto.c status.c stream.c threads.c token.l updater.c
  
@@ -11,16 +11,31 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/02/16 12:06:39 xtraeme Exp $
 +LDFLAGS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  WARNS?=		6
  
- # A bit of tweaking is needed to get this Makefile working
- # with the bsd.prog.mk of all the *BSD OSes...
- .if (${UNAME} == "NetBSD")
+-# A bit of tweaking is needed to get this Makefile working
+-# with the bsd.prog.mk of all the *BSD OSes...
+-.if (${UNAME} == "NetBSD")
 -LDFLAGS+=	-pthread
++# The NetBSD rules apply on all pkgsrc platforms.
  YHEADER=	yes
  
- .elif (${UNAME} == "OpenBSD")
- # I bet there's a better way to do this with the OpenBSD mk
- # framework but well, this works and I got bored.
+-.elif (${UNAME} == "OpenBSD")
+-# I bet there's a better way to do this with the OpenBSD mk
+-# framework but well, this works and I got bored.
 -LDFLAGS+=	-pthread
- YFLAGS=		-d
- CLEANFILES+=	parse.c parse.h y.tab.h
+-YFLAGS=		-d
+-CLEANFILES+=	parse.c parse.h y.tab.h
+-
+-config.c:	parse.h
+-
+-token.l:	parse.h
+-
+-y.tab.h:	parse.c
+-
+-parse.h:	y.tab.h
+-	cp ${.ALLSRC} ${.TARGET}
+-
+-.endif
+-
+ DPADD=	${LIBCRYPTO} ${LIBZ}
+ LDADD=	-lcrypto -lz
  
