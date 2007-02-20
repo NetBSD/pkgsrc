@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/02/19 20:55:51 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2007/02/20 11:57:41 joerg Exp $
 
 PKG_OPTIONS_VAR =       PKG_OPTIONS.django
 PKG_SUPPORTED_OPTIONS=  mysql psycopg1 psycopg2 sqlite
@@ -24,7 +24,7 @@ PLIST_SUBST+=	COND_PSYCOPG2=
 PLIST_SUBST+=	COND_PSYCOPG2="@comment "
 .endif
 
-.if !empty(PKG_OPTIONS:Mpsycopg2) || !empty(PKG_OPTIONS:Mpsycopg2)
+.if !empty(PKG_OPTIONS:Mpsycopg1) || !empty(PKG_OPTIONS:Mpsycopg2)
 PLIST_SUBST+=	COND_PSYCOPG1=
 .else
 PLIST_SUBST+=	COND_PSYCOPG1="@comment "
