@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/20 23:48:30 xtraeme Exp $
+
+SHA1 (fuse-2.5.2.tar.gz) = b353237dc7964c7337a837470b1f7d5ebc71aa0e
+RMD160 (fuse-2.5.2.tar.gz) = 840f0f13d9d493b1c2969471cfb9414a5368780e
+Size (fuse-2.5.2.tar.gz) = 407845 bytes
+SHA1 (patch-aa) = 2bed299164f56d72623b79eb69b011bcf5f97fed
