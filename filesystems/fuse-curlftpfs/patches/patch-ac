@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/02/20 23:02:03 xtraeme Exp $
+
+--- cache.h.orig	2007-02-18 20:17:33.000000000 +0100
++++ cache.h	2007-02-18 20:17:46.000000000 +0100
+@@ -10,7 +10,9 @@
+ */
+ 
+ #include <fuse.h>
++#ifndef __NetBSD__
+ #include <fuse_opt.h>
++#endif
+ 
+ #ifndef FUSE_VERSION
+ #define FUSE_VERSION (FUSE_MAJOR_VERSION * 10 + FUSE_MINOR_VERSION)
