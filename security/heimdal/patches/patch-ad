@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2005/10/26 15:12:45 jlam Exp $
+$NetBSD: patch-ad,v 1.8 2007/02/20 10:17:14 rillig Exp $
 
---- configure.orig	2005-09-09 08:14:45.000000000 -0400
-+++ configure
-@@ -3182,9 +3182,6 @@ fi
+--- configure.orig	Mon Feb  6 08:29:16 2006
++++ configure	Mon Feb 19 18:06:05 2007
+@@ -3182,9 +3182,6 @@
  
  
  
@@ -12,3 +12,11 @@ $NetBSD: patch-ad,v 1.7 2005/10/26 15:12:45 jlam Exp $
  # Make sure we can run config.sub.
  $ac_config_sub sun4 >/dev/null 2>&1 ||
    { { echo "$as_me:$LINENO: error: cannot run $ac_config_sub" >&5
+@@ -4199,7 +4196,6 @@
+ esac
+ 
+ CC="$CC $abi"
+-libdir="$libdir$abilibdirext"
+ 
+ 
+ echo "$as_me:$LINENO: checking for __attribute__" >&5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/08/09 17:58:09 salo Exp $
+# $NetBSD: Makefile,v 1.63 2007/02/20 10:17:14 rillig Exp $
 
 DISTNAME=	heimdal-0.7.2
 PKGREVISION=	3
@@ -42,6 +42,10 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 CONFIGURE_ENV+=		COMPILE_ET=no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(ABI)
+CONFIGURE_ARGS+=	--with-mips-abi=${ABI}
+.endif
 
 # Heimdal's configure script expects to find the readline.h header as
 # <readline.h>.
@@ -91,6 +95,12 @@ HEIMDAL_TRANSFORM=	s/^ftp/k&/
 .endif
 PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX:Q}
 CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM:Q}
+
+.if ${OPSYS} == "IRIX"
+PLIST_SUBST+=		IF_IRIX=""
+.else
+PLIST_SUBST+=		IF_IRIX="@comment "
+.endif
 
 OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
