@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/30 00:26:15 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/02/20 12:45:08 uebayasi Exp $
 ${EMACS_INFOPREFIX}/riece-en.info
 ${EMACS_INFOPREFIX}/riece-ja.info
 ${EMACS_LISPPREFIX}/riece/aproxy.rb
@@ -94,6 +94,10 @@ ${EMACS_LISPPREFIX}/riece/riece-log.el
 ${EMACS_LISPPREFIX}/riece/riece-log.elc
 ${EMACS_LISPPREFIX}/riece/riece-lsdb.el
 ${EMACS_LISPPREFIX}/riece/riece-lsdb.elc
+${EMACS_LISPPREFIX}/riece/riece-mcat.el
+${EMACS_LISPPREFIX}/riece/riece-mcat.elc
+${EMACS_LISPPREFIX}/riece/riece-mcat-japanese.el
+${EMACS_LISPPREFIX}/riece/riece-mcat-japanese.elc
 ${EMACS_LISPPREFIX}/riece/riece-menu.el
 ${EMACS_LISPPREFIX}/riece/riece-menu.elc
 ${EMACS_LISPPREFIX}/riece/riece-message.el
@@ -108,6 +112,8 @@ ${EMACS_LISPPREFIX}/riece/riece-naming.el
 ${EMACS_LISPPREFIX}/riece/riece-naming.elc
 ${EMACS_LISPPREFIX}/riece/riece-options.el
 ${EMACS_LISPPREFIX}/riece/riece-options.elc
+${EMACS_LISPPREFIX}/riece/riece-package-info.el
+${EMACS_LISPPREFIX}/riece/riece-package-info.elc
 ${EMACS_LISPPREFIX}/riece/riece-rdcc.el
 ${EMACS_LISPPREFIX}/riece/riece-rdcc.elc
 ${EMACS_LISPPREFIX}/riece/riece-ruby.el
