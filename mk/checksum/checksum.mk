@@ -1,7 +1,11 @@
-# $NetBSD: checksum.mk,v 1.2 2006/07/13 18:40:33 jlam Exp $
+# $NetBSD: checksum.mk,v 1.3 2007/02/20 09:53:23 rillig Exp $
 
 _DIGEST_ALGORITHMS?=		SHA1 RMD160
 _PATCH_DIGEST_ALGORITHMS?=	SHA1
+
+# Some developers want to check the distfiles' checksums every time
+# a public make target is called. They may set this variable to "yes".
+DO_CHECKSUM_REPEATEDLY?=	no
 
 # These variables are set by pkgsrc/mk/fetch/fetch.mk.
 #_CKSUMFILES?=	# empty
@@ -18,14 +22,20 @@ _CHECKSUM_CMD=								\
 		ECHO=${TOOLS_ECHO:Q} TEST=${TOOLS_TEST:Q}		\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
+_COOKIE.checksum=	${WRKDIR}/.checksum_done
+
 .PHONY: checksum
 .if !target(checksum)
-checksum: fetch
+checksum: fetch ${_COOKIE.checksum}
+${_COOKIE.checksum}:
 .  for _alg_ in ${_DIGEST_ALGORITHMS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if cd ${DISTDIR} && ${_CHECKSUM_CMD} -a ${_alg_:Q}		\
 		${DISTINFO_FILE} ${_CKSUMFILES}; then			\
-		${TRUE};						\
+		if [ ${DO_CHECKSUM_REPEATEDLY} = no ]; then		\
+			${MKDIR} ${.TARGET:H};				\
+			${ECHO} ${PKGNAME} > ${.TARGET};		\
+		fi;							\
 	else								\
 		${ERROR_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
 		${ERROR_MSG} "are up to date.  If you want to override this check, type"; \
