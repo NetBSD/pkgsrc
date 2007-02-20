@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/02/17 20:59:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/20 23:51:46 bad Exp $
 
-DISTNAME=	VCP-Dest-svk-0.28
+DISTNAME=	VCP-Dest-svk-0.29
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/VCP-Dest-svk/
 COMMENT=	VCP destination driver for SVN/SVK repositories
 
 DEPENDS+=	p5-VCP>=0.9beta20050110:../../devel/p5-VCP
+DEPENDS+=	p5-YAML>=0.62:../../textproc/p5-YAML
 DEPENDS+=	svk>=1.04:../../devel/svk
 
 PERL5_PACKLIST=		auto/VCP/Dest/svk/.packlist
