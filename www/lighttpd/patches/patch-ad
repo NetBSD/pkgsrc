@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.2.2 2007/02/20 14:26:59 salo Exp $
+
+--- configure.in.orig	2007-02-19 21:15:12.000000000 +0000
++++ configure.in
+@@ -398,7 +398,7 @@ AC_ARG_WITH(lua, AC_HELP_STRING([--with-
+ 
+ AC_MSG_RESULT($WITH_LUA)
+ if test "$WITH_LUA" != "no"; then
+- if test "$WITH_LUA" == "yes"; then
++ if test "$WITH_LUA" = "yes"; then
+   WITH_LUA=lua
+  fi
+  PKG_CHECK_MODULES(LUA, $WITH_LUA >= 5.1, [
