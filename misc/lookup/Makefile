@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/04/05 23:01:16 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/20 12:47:12 uebayasi Exp $
 #
 
-DISTNAME=	lookup-1.4
+DISTNAME=	lookup-1.4.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://openlab.jp/edict/lookup/dist/
 
@@ -14,7 +13,7 @@ COMMENT=	Electric dictionary agent for Emacs
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10:../../devel/apel
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}eblook>=1.4:../../textproc/eblook
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs214 xemacs215
 
 GNU_CONFIGURE=	YES
 MAKEFLAGS+=	lispdir=${EMACS_LISPPREFIX}/lookup
