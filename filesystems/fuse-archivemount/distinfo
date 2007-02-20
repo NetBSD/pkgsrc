@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/20 23:31:40 xtraeme Exp $
+
+SHA1 (archivemount-0.5.3.tar.gz) = 68c1f59d665585d7fa4e763f87aeeaf6a368b009
+RMD160 (archivemount-0.5.3.tar.gz) = 15d396ea8d78a55787f08046e3355d8d4fe564ad
+Size (archivemount-0.5.3.tar.gz) = 20267 bytes
+SHA1 (patch-aa) = c5e139ad695d8e6d102e35cd1d8110f3b952de6f
+SHA1 (patch-ab) = 1866452689f1eb203eb0d021d15e605fee114acb
