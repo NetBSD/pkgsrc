@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.3 2007/02/18 22:37:51 xtraeme Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.4 2007/02/20 22:56:35 xtraeme Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -8,8 +8,11 @@ FUSE_BUILDLINK3_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# NetBSD
-.  if (!empty(OPSYS:MNetBSD) && exists(/usr/include/fuse.h))
+.  if !empty(OPSYS:MLinux) # Linux
+
+.    include "../../filesystems/fusefs/buildlink3.mk"
+
+.  elif (!empty(OPSYS:MNetBSD) && exists(/usr/include/fuse.h)) # NetBSD
 
 .    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-fuse-pkgconfig
@@ -55,10 +58,10 @@ SUBST_FILES.refuse+=	${_f_}
 SUBST_SED.refuse=	-e "s|fuse_main|fuse_exit|g"
 .    endif
 
-.  else # Linux
+.  else # !NetBSD
 
-.    include "${PKGSRCDIR}/filesystems/fusefs/buildlink3.mk"
+PKG_FAIL_REASON+=	"Your OS is not supported by the FUSE pkgsrc framework."
 
-.  endif # End of systems
+.  endif # end of Operating Systems
 
 .endif # FUSE_BUILDLINK3_MK
