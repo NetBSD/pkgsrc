@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.23 2006/07/30 10:59:24 adrianp Exp $
+# $NetBSD: options.mk,v 1.24 2007/02/20 16:49:30 joerg Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls
+PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls dovecot-sasl
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -98,4 +98,13 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
 .else
 PLIST_SUBST+=	SASL="@comment "
+.endif
+
+###
+### SASL support for SMTP authentication (via Dovecot).
+###
+.if !empty(PKG_OPTIONS:Mdovecot-sasl)
+DEPENDS+=	dovecot-[0-9]*:../../mail/dovecot
+
+CCARGS+=	-DUSE_SASL_AUTH -DDEF_SERVER_SASL_TYPE=\"dovecot\"
 .endif
