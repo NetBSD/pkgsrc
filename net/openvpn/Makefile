@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/07/05 15:50:05 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/20 09:40:49 sborrill Exp $
 #
 
-DISTNAME=	openvpn-2.0.7
+DISTNAME=	openvpn-2.1_rc1
+PKGNAME=	openvpn-2.1rc1
+
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
 		http://openvpn.net/release/old/
@@ -44,8 +46,8 @@ DL_AUTO_VARS=		yes
 # Fix up the paths to tools in the pkitool script.
 post-build:
 	for file in ${WRKSRC}/easy-rsa/2.0/pkitool; do			\
-		${SED}	-e "s|^\(GREP\)=.*|\1=\""${GREP}"\"|"		\
-			-e "s|^\(OPENSSL\)=.*|\1=\""${SSLBASE}/bin/openssl"\"|" \
+		${SED}	-e "s|^\\(GREP\\)=.*|\\1=\""${GREP}"\"|"		\
+			-e "s|^\\(OPENSSL\\)=.*|\\1=\""${SSLBASE}/bin/openssl"\"|" \
 			$$file > $$file.new;				\
 		${MV} -f $$file.new $$file;				\
 		${CHMOD} +x $$file;					\
@@ -57,7 +59,7 @@ post-install:
 	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
 	while read file; do						\
 		case $$file in						\
-		[A-Z]*|*.cnf)	${INSTALL_DATA} $$file ${PREFIX}/$$dir ;; \
+		[A-Z]*|*.cnf|vars)	${INSTALL_DATA} $$file ${PREFIX}/$$dir ;; \
 		*)		${INSTALL_SCRIPT} $$file ${PREFIX}/$$dir ;; \
 		esac;							\
 	done
