@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/10/04 21:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/20 00:50:55 joerg Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -24,8 +24,6 @@ GMT_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		GMT_PREFIX=GMT
 EVAL_PREFIX+=		TK_PREFIX=tk
 INSTALLATION_DIRS=	bin
-
-.include "../../mk/x11.buildlink3.mk"
 
 do-configure:
 	for i in ${WRKSRC}/igmt ${WRKSRC}/igmt_configure.tcl; do	\
