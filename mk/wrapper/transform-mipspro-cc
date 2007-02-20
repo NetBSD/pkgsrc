@@ -1,4 +1,4 @@
-# $NetBSD: transform-mipspro-cc,v 1.8 2007/02/19 14:50:33 rillig Exp $
+# $NetBSD: transform-mipspro-cc,v 1.9 2007/02/20 16:12:41 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,6 +36,15 @@
 
 transform_setname "transform-mipspro-cc"
 
+# usage: mipspro_check_abi "abi"
+mipspro_check_abi() {
+	if [ "$wrapper_abi" = "$1" ]; then
+		transform_pass
+	else
+		transform_fail "Wrong ABI argument $arg for ABI $wrapper_abi."
+	fi
+}
+
 case $arg in
 
 # Standard options.
@@ -48,7 +57,8 @@ case $arg in
 # on through.
 -O[23]		|\
 -Ofast		|\
--Ofast=*	) transform_pass ;;
+-Ofast=*	|\
+-OPT:*		) transform_pass ;;
 
 # Ignore all other -O* options.
 -O*		) transform_discard_with_warning ;;
@@ -62,12 +72,9 @@ case $arg in
 -W[ablfpR]*,*	) transform_pass ;;
 
 -32		|\
--n32		|\
--64		) if [ $arg = "-$wrapper_abi" ]; then
-			transform_pass
-		else
-			transform_fail "Wrong ABI argument $arg for ABI $wrapper_abi."
-		fi ;;
+-o32		) mipspro_check_abi "" ;;
+-n32		) mipspro_check_abi "32" ;;
+-64		) mipspro_check_abi "64" ;;
 
 -c99		|\
 -M		|\
