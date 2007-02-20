@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.414 2007/02/20 12:48:03 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.415 2007/02/20 12:58:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkglint to 4.76 [uebayasi 2007-02-20]
 	Updated chat/riece to 3.1.2 [uebayasi 2007-02-20]
 	Updated misc/lookup to 1.4.1 [uebayasi 2007-02-20]
+	Updated math/glpk to 4.15 [adam 2007-02-20]
