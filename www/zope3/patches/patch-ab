@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2006/10/01 14:25:23 taca Exp $
+$NetBSD: patch-ab,v 1.5 2007/02/20 17:30:18 he Exp $
 
---- Dependencies/zdaemon-Zope-3.3.0/zdaemon/zdrun.py.orig	2006-09-21 19:40:21.000000000 +0900
-+++ Dependencies/zdaemon-Zope-3.3.0/zdaemon/zdrun.py
+--- Dependencies/zdaemon-Zope-3.3.1/zdaemon/zdrun.py.orig	2006-09-21 19:40:21.000000000 +0900
++++ Dependencies/zdaemon-Zope-3.3.1/zdaemon/zdrun.py
 @@ -83,6 +83,14 @@ if __name__ == "__main__":
      scriptdir = dirname(normpath(abspath(sys.argv[0])))
      if basename(scriptdir).lower() == "zdaemon":
