@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/01/07 09:13:48 rillig Exp $
+# $NetBSD: Makefile,v 1.64 2007/02/20 17:38:52 sborrill Exp $
 #
 
 DISTNAME=	centericq-4.21.0
@@ -27,6 +27,7 @@ INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
 INCOMPAT_CURSES+=	NetBSD-2.*-* NetBSD-3.*-*	# see PR 29060
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
@@ -44,7 +45,6 @@ GCC_REQD+=		3.0	# see PR 29185
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
