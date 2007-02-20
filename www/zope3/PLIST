@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/01 14:25:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/02/20 17:30:18 he Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
@@ -138,6 +138,9 @@ share/zope3/lib/python/RestrictedPython/tests/restricted_module.pyo
 share/zope3/lib/python/RestrictedPython/tests/security_in_syntax.py
 share/zope3/lib/python/RestrictedPython/tests/security_in_syntax.pyc
 share/zope3/lib/python/RestrictedPython/tests/security_in_syntax.pyo
+share/zope3/lib/python/RestrictedPython/tests/testCompile.py
+share/zope3/lib/python/RestrictedPython/tests/testCompile.pyc
+share/zope3/lib/python/RestrictedPython/tests/testCompile.pyo
 share/zope3/lib/python/RestrictedPython/tests/testRestrictions.py
 share/zope3/lib/python/RestrictedPython/tests/testRestrictions.pyc
 share/zope3/lib/python/RestrictedPython/tests/testRestrictions.pyo
@@ -6560,6 +6563,7 @@ share/zope3/lib/python/zope/app/folder/configure.zcml
 share/zope3/lib/python/zope/app/folder/filerepresentation.py
 share/zope3/lib/python/zope/app/folder/filerepresentation.pyc
 share/zope3/lib/python/zope/app/folder/filerepresentation.pyo
+share/zope3/lib/python/zope/app/folder/filerepresentation.txt
 share/zope3/lib/python/zope/app/folder/folder.py
 share/zope3/lib/python/zope/app/folder/folder.pyc
 share/zope3/lib/python/zope/app/folder/folder.pyo
@@ -6917,6 +6921,12 @@ share/zope3/lib/python/zope/app/http/exception/tests/test_unauthorized.pyo
 share/zope3/lib/python/zope/app/http/exception/unauthorized.py
 share/zope3/lib/python/zope/app/http/exception/unauthorized.pyc
 share/zope3/lib/python/zope/app/http/exception/unauthorized.pyo
+share/zope3/lib/python/zope/app/http/ftests/__init__.py
+share/zope3/lib/python/zope/app/http/ftests/__init__.pyc
+share/zope3/lib/python/zope/app/http/ftests/__init__.pyo
+share/zope3/lib/python/zope/app/http/ftests/test_put.py
+share/zope3/lib/python/zope/app/http/ftests/test_put.pyc
+share/zope3/lib/python/zope/app/http/ftests/test_put.pyo
 share/zope3/lib/python/zope/app/http/httpdate.py
 share/zope3/lib/python/zope/app/http/httpdate.pyc
 share/zope3/lib/python/zope/app/http/httpdate.pyo
@@ -11740,6 +11750,7 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/i18n/browser
 @dirrm share/zope3/lib/python/zope/app/i18n
 @dirrm share/zope3/lib/python/zope/app/http/tests
+@dirrm share/zope3/lib/python/zope/app/http/ftests
 @dirrm share/zope3/lib/python/zope/app/http/exception/tests
 @dirrm share/zope3/lib/python/zope/app/http/exception
 @dirrm share/zope3/lib/python/zope/app/http
