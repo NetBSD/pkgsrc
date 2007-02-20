@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/19 09:52:17 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/20 00:54:01 joerg Exp $
 #
 
 DISTNAME=	blokus-1.0
@@ -23,6 +23,11 @@ USE_LANGUAGES=	c c++
 # specified.
 #LIBS.SunOS+=	-lGLU
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
