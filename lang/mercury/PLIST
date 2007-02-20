@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/05 06:27:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/02/20 19:04:14 wiz Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -2063,8 +2063,6 @@ share/examples/mercury/ultra_sub.m
 @dirrm share/examples/mercury/c_interface
 @dirrm share/examples/mercury
 @dirrm share/emacs/site-lisp/mercury
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm share/doc/mercury
 @dirrm share/doc/html/mercury
 @dirrm lib/mercury/modules
