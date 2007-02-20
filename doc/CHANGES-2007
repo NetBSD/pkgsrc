@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.408 2007/02/19 21:25:44 dsainty Exp $
+$NetBSD: CHANGES-2007,v 1.409 2007/02/20 00:54:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Test-ClassAPI to 1.03 [wiz 2007-02-19]
 	Updated textproc/p5-Text-Quoted to 1.10 [wiz 2007-02-19]
 	Added databases/palm-db-tools version 0.3.6 [dsainty 2007-02-19]
+	Updated graphics/ruby-RMagick to 1.15.3 [obache 2007-02-20]
