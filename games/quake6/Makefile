@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/02/19 19:19:32 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/20 12:40:14 joerg Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -33,11 +33,17 @@ CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
+.endif
+
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
