@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.698 2007/02/19 12:06:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.699 2007/02/20 10:14:55 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2780,7 +2780,8 @@ sub is_emptydir($) {
 # Guess the type of file based on the filename. This is used to select
 # the proper subroutine for detecting absolute pathnames.
 #
-# Returns one of "source", "shell", "make", "text", "ignore", "unknown".
+# Returns one of "source", "shell", "make", "text", "configure",
+# "ignore", "unknown".
 #
 sub get_filetype($$) {
 	my ($line, $fname) = @_;
@@ -2796,10 +2797,11 @@ sub get_filetype($$) {
 		return "make";
 	}
 
-	# Too many false positives.
+	# Too many false positives for shell scripts, so configure
+	# scripts get their own category.
 	if ($basename =~ qr"^configure(?:|\.ac)$") {
 		$opt_debug_unchecked and $line->log_debug("Skipped check for absolute pathnames.");
-		return "ignore";
+		return "configure";
 	}
 
 	if ($basename =~ qr"\.(?:sh|m4)$"i) {
@@ -6872,14 +6874,16 @@ sub checkfile_patch($) {
 					}
 					checkline_mk_absolute_pathname($line, $shellword);
 				}
+
+			} elsif ($current_ftype eq "source") {
+				checkline_source_absolute_pathname($line, $text);
+
+			} elsif ($current_ftype eq "configure") {
 				if ($text =~ qr": Avoid regenerating within pkgsrc$") {
 					$line->log_error("This code must not be included in patches.");
 					$line->explain_error(
 						"It is generated automatically by pkgsrc after the patch phase.");
 				}
-
-			} elsif ($current_ftype eq "source") {
-				checkline_source_absolute_pathname($line, $text);
 
 			} elsif ($current_ftype eq "ignore") {
 				# Ignore it.
@@ -6988,6 +6992,7 @@ sub checkfile_patch($) {
 		}], [PST_CFA, re_patch_cfa, PST_CH, sub() {
 			$current_fname = $m->text(1);
 			$current_ftype = get_filetype($line, $current_fname);
+			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
 			$patched_files++;
 			$hunks = 0;
 		}], [PST_CH, re_patch_ch, PST_CHD, sub() {
@@ -7040,6 +7045,7 @@ sub checkfile_patch($) {
 		}], [PST_UFA, re_patch_ufa, PST_UH, sub() {
 			$current_fname = $m->text(1);
 			$current_ftype = get_filetype($line, $current_fname);
+			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
 			$patched_files++;
 			$hunks = 0;
 		}], [PST_UH, re_patch_uh, PST_UL, sub() {
