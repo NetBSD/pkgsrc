@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.421 2007/02/20 18:30:22 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.422 2007/02/20 19:16:13 snj Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/qalculate-kde to 0.9.5 [adam 2007-02-20]
 	Updated security/libprelude to 0.9.13 [shannonjr 2007-02-20]
 	Updated www/awstats to 6.6nb4 [minskim 2007-02-20]
+	Updated devel/librsync to 0.9.7nb2 [snj 2007-02-20]
