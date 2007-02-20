@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6014 2007/02/20 12:58:31 adam Exp $
+$NetBSD: TODO,v 1.6015 2007/02/20 15:09:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ Suggested package updates
 	o python24-2.4.4
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qalculate-0.9.5
 	o qemu-0.9.0
 	o qt1-1.45
 	o qt2-designer-2.3.2
