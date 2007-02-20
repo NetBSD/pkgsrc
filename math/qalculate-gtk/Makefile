@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/09/16 12:20:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/20 15:08:47 adam Exp $
 
-DISTNAME=	qalculate-gtk-0.9.4
-PKGREVISION=	1
+DISTNAME=	qalculate-gtk-0.9.5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -14,8 +13,11 @@ DEPENDS+=	wget>=1.8:../../net/wget
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		autoconf gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
+
+pre-configure:
+	cd ${WRKSRC}; autoconf
 
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"

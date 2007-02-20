@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:25:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/02/20 15:08:48 adam Exp $
 bin/qalculate-kde
+share/applications/kde/qalculate_kde.desktop
 share/doc/kde/HTML/en/qalculate_kde/calculation-history.png
 share/doc/kde/HTML/en/qalculate_kde/calculator-buttons.png
 share/doc/kde/HTML/en/qalculate_kde/common
@@ -33,8 +34,8 @@ share/icons/hicolor/32x32/actions/qalculate_convert.png
 share/icons/hicolor/32x32/apps/qalculate_kde.png
 share/icons/hicolor/48x48/apps/qalculate_kde.png
 share/icons/hicolor/64x64/apps/qalculate_kde.png
-share/kde/applnk/Utilities/qalculate_kde.desktop
 share/kde/apps/qalculate_kde/qalculate_kdeui.rc
+share/locale/fr/LC_MESSAGES/qalculate_kde.mo
 share/locale/nl/LC_MESSAGES/qalculate_kde.mo
 share/locale/sv/LC_MESSAGES/qalculate_kde.mo
 @dirrm share/kde/apps/qalculate_kde
