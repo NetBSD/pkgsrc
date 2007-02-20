@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2007/01/07 00:57:36 rillig Exp $
+# $NetBSD: Makefile,v 1.81 2007/02/20 22:46:32 agc Exp $
 #
 # This is the top-level Makefile of pkgsrc. It contains a list of the
 # categories of packages, as well as some targets that operate on the
@@ -59,6 +59,7 @@ SUBDIR+=	databases
 SUBDIR+=	devel
 SUBDIR+=	editors
 SUBDIR+=	emulators
+SUBDIR+=	filesystems
 SUBDIR+=	finance
 SUBDIR+=	fonts
 SUBDIR+=	games
