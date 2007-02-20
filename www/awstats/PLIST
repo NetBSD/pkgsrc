@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/05/17 16:39:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/02/20 18:29:49 minskim Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -512,6 +512,7 @@ awstats/icon/flags/za.png
 awstats/icon/flags/ze.png
 awstats/icon/flags/zm.png
 awstats/icon/flags/zw.png
+awstats/icon/mime/.cvsignore
 awstats/icon/mime/ai.png
 awstats/icon/mime/archive.png
 awstats/icon/mime/audio.png
@@ -539,6 +540,7 @@ awstats/icon/mime/ttf.png
 awstats/icon/mime/unknown.png
 awstats/icon/mime/video.png
 awstats/icon/mime/wmv.png
+awstats/icon/mime/xls.png
 awstats/icon/os/.cvsignore
 awstats/icon/os/aix.png
 awstats/icon/os/amigaos.png
@@ -647,7 +649,10 @@ share/doc/awstats/awstats_tools.html
 share/doc/awstats/awstats_upgrade.html
 share/doc/awstats/awstats_webmin.html
 share/doc/awstats/awstats_what.html
+share/doc/awstats/images/.cvsignore
+share/doc/awstats/images/awstats.gif
 share/doc/awstats/images/awstats.ico
+share/doc/awstats/images/awstats.png
 share/doc/awstats/images/awstats_logo1.gif
 share/doc/awstats/images/awstats_logo1.png
 share/doc/awstats/images/awstats_logo2.gif
