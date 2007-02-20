@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/20 22:57:44 xtraeme Exp $
+
+SHA1 (cddfs-0.2.tar.gz) = 7c40fca88d92319d914b9ae353b36561376d5d9d
+RMD160 (cddfs-0.2.tar.gz) = 7cb2d0c040f24e4da73fb8bd89cca41e97e1833a
+Size (cddfs-0.2.tar.gz) = 3811 bytes
+SHA1 (patch-aa) = 21edd386ece5318d63b143f1910abbdbe25f87cb
