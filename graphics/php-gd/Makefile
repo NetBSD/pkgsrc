@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/04 16:26:54 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/20 20:46:20 jdolecek Exp $
 
 MODNAME=		gd
 CATEGORIES+=		graphics
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--with-freetype-dir=${BUILDLINK_DIR:Q}
 CONFIGURE_ARGS+=	--enable-${MODNAME}-native-ttf
 CONFIGURE_ARGS+=	--enable-${MODNAME}-jis-conv
 CONFIGURE_ARGS+=	--without-t1lib
+
+USE_PHP_EXT_PATCHES=	yes
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
