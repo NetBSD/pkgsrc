@@ -1,0 +1,5 @@
+Gateway between FUSE and libarchive. Allows mounting of cpio, .tar.gz,
+.tar.bz2 archives.
+
+Reading and writing supported.
+Supports all formats libarchive supports.
