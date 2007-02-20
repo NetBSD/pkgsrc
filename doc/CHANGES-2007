@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.419 2007/02/20 15:09:56 adam Exp $
+$NetBSD: CHANGES-2007,v 1.420 2007/02/20 15:15:26 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/qalculate to 0.9.5 [adam 2007-02-20]
 	Updated math/qalculate-gtk to 0.9.5 [adam 2007-02-20]
 	Updated math/qalculate-kde to 0.9.5 [adam 2007-02-20]
+	Updated security/libprelude to 0.9.13 [shannonjr 2007-02-20]
