@@ -1,45 +1,31 @@
-# $NetBSD: Makefile,v 1.16 2007/01/30 23:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/20 14:20:54 uebayasi Exp $
 
-DISTNAME=	apel-10.6
+DISTNAME=	apel-10.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/apel/
+MASTER_SITES=	http://kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/apel/
 
-MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/APEL/
-COMMENT=	Portable Emacs Library
-
-#CONFLICTS+=	apel-*
-#CONFLICTS+=	xemacs-apel-*
+COMMENT=	Portable Emacs library
 
 PLIST_SRC=	${PKGDIR}/PLIST.${EMACS_FLAVOR}
-
+BUILD_TARGET=	${BUILD_TARGET.${EMACS_FLAVOR}}
+INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
 MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR:Q}
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX:Q}
 MAKE_FLAGS+=	VERSION_SPECIFIC_LISPDIR=${EMACS_LISPPREFIX:Q}
+MAKE_FLAGS+=	${MAKE_FLAGS.${EMACS_FLAVOR}}
+INSTALLATION_DIRS+=	${DOCDIR}
 
 # apel is included in xemacs-packages
-EMACS_VERSIONS_ACCEPTED=	emacs22 emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED=emacs22 emacs22nox emacs21 emacs21nox emacs20
+BUILD_TARGET.emacs=	elc
+INSTALL_TARGET.emacs=	install
+MAKE_FLAGS.emacs=
+BUILD_TARGET.xemacs=	package
+INSTALL_TARGET.xemacs=	install-package
+MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 .include "../../mk/emacs.mk"
-
-.if ${EMACS_FLAVOR} == "emacs"
-BUILD_TARGET=	elc
-INSTALL_TARGET=	install
-.else	# ${EMACS_FLAVOR} == "xemacs"
-BUILD_TARGET=	package
-INSTALL_TARGET=	install-package
-MAKE_FLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
-.endif
-
-DOCDIR=		${PREFIX}/share/doc/apel
-
-.if ${EMACS_FLAVOR} == "emacs"
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.en ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.ja ${DOCDIR}
-.endif
-
 .include "../../mk/bsd.pkg.mk"
