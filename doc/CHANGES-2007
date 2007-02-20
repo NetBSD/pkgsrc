@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.417 2007/02/20 14:25:46 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.418 2007/02/20 14:55:21 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/glpk to 4.15 [adam 2007-02-20]
 	Updated devel/apel to 10.7 [uebayasi 2007-02-20]
 	Updated misc/elscreen to 1.4.5 [uebayasi 2007-02-20]
+	Updated chat/navi2ch to 1.7.5.99.20070114 [uebayasi 2007-02-20]
