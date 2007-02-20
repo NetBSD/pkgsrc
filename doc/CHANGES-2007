@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.422 2007/02/20 19:16:13 snj Exp $
+$NetBSD: CHANGES-2007,v 1.423 2007/02/20 20:47:15 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/libprelude to 0.9.13 [shannonjr 2007-02-20]
 	Updated www/awstats to 6.6nb4 [minskim 2007-02-20]
 	Updated devel/librsync to 0.9.7nb2 [snj 2007-02-20]
+	Updated lang/php5 to 5.2.1 [jdolecek 2007-02-20]
