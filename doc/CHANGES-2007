@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.411 2007/02/20 09:42:14 sborrill Exp $
+$NetBSD: CHANGES-2007,v 1.412 2007/02/20 12:39:25 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.3 [obache 2007-02-20]
 	Updated graphics/ImageMagick to 6.3.2.8 [adam 2007-02-20]
 	Updated net/openvpn to 2.1rc1 [sborrill 2007-02-20]
+	Updated pkgtools/pkglint to 4.76 [uebayasi 2007-02-20]
