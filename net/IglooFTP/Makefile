@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:20 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/20 12:45:06 joerg Exp $
 
 DISTNAME=	IglooFTP-0.6.1
 PKGREVISION=	5
@@ -16,5 +16,16 @@ BUILD_DIRS=	src
 post-extract:
 	${RM} ${WRKSRC}/share/docs/LICENSE~
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+LDFLAGS.resolv=
+.else
+LDFLAGS.resolv=	-lresolv
+.endif
+
+MAKE_ENV+=	LDFLAGS.resolv=${LDFLAGS.resolv:Q}
+
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
