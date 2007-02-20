@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/24 17:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/20 19:08:45 wiz Exp $
 #
 
 DISTNAME=		amaroc-0.3
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amaroc/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/amaroc/
 COMMENT=		Command line interface to amarok
 
