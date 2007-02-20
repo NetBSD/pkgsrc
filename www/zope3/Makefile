@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/10/01 14:25:23 taca Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/20 17:30:18 he Exp $
 #
 
-DISTNAME=		Zope-3.3.0
-PKGNAME=		zope3-3.3.0
+DISTNAME=		Zope-3.3.1
+PKGNAME=		zope3-3.3.1
 CATEGORIES=		www
-MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.0/
+MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.1/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ykomatsu@akaumigame.org
