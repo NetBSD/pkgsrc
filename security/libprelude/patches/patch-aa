@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:54:04 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2007/02/20 15:13:03 shannonjr Exp $
 
---- prelude-adduser/prelude-adduser.c.orig	2005-06-26 05:41:44.000000000 -0600
+--- prelude-adduser/prelude-adduser.c.orig	2007-02-20 08:04:42.000000000 -0700
 +++ prelude-adduser/prelude-adduser.c
-@@ -43,6 +43,8 @@
+@@ -56,6 +56,8 @@
  #include <gnutls/x509.h>
  #include <gnutls/extra.h>
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:54:04 shannonjr Exp $
 +
  #include "common.h"
  #include "config-engine.h"
- #include "prelude-error.h"
-@@ -886,6 +888,66 @@ static int del_cb(const char *filename, 
+ #include "prelude.h"
+@@ -896,6 +898,66 @@ static int add_analyzer(const char *name
  }
  
  
@@ -76,5 +76,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:54:04 shannonjr Exp $
 +	return (error);
 +}
  
- static void delete_dir(const char *dirname)
+ static int add_cmd(int argc, char **argv)
  {
