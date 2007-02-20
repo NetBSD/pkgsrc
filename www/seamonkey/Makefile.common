@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2007/01/16 23:56:35 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.19 2007/02/20 16:02:11 dmcmahill Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -123,9 +123,13 @@ PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 .if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
 PLIST_SUBST+=		SUNOSLIB=""
 SCRIPTS_ENV+=		SUNOSLIB=""
+PLIST_SUBST+=		NOT_SUNOSLIB="@comment "
+SCRIPTS_ENV+=		NOT_SUNOSLIB="@comment "
 .else
 PLIST_SUBST+=		SUNOSLIB="@comment "
 SCRIPTS_ENV+=		SUNOSLIB="@comment "
+PLIST_SUBST+=		NOT_SUNOSLIB=""
+SCRIPTS_ENV+=		NOT_SUNOSLIB=""
 .endif
 
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
