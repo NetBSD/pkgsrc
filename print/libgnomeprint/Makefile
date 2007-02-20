@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2006/11/13 20:58:15 drochner Exp $
+# $NetBSD: Makefile,v 1.56 2007/02/20 18:18:37 dmcmahill Exp $
 #
 
 DISTNAME=	libgnomeprint-2.12.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -53,5 +53,6 @@ PRINT_PLIST_AWK+=	/cups/ { print "$${USE_CUPS}" $$0; next; }
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
