@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/12/15 17:32:41 joerg Exp $
+# $NetBSD: Makefile,v 1.30.2.1 2007/02/20 13:56:15 salo Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -22,13 +22,6 @@ EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 OSVERSION_SPECIFIC=	yes
-
-# Since this package will be named, for instance, p5-perl-headers-1.5.1,
-# binary packages on a FTP server (where only "1.5" is used as the directory
-# name) will be ambiguous.  A user of 1.5 may mistakenly install the
-# perl-headers-1.5.1 pkg by use of the automatic "best version" logic.
-
-NO_BIN_ON_FTP=		FTP servers do not distinguish A.B.X revisions of versions
 
 do-build:
 	${MKDIR} ${WRKSRC}/h2ph
