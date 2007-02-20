@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/20 23:48:30 xtraeme Exp $
+
+--- util/Makefile.in.orig	2006-02-11 00:41:46.000000000 +0100
++++ util/Makefile.in	2006-02-11 01:01:48.000000000 +0100
+@@ -461,7 +461,7 @@
+ 
+ install-exec-local:
+ 	$(mkdir_p) $(DESTDIR)$(MOUNT_FUSE_PATH)
+-	$(INSTALL_PROGRAM) $(srcdir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
++	$(INSTALL_SCRIPT) $(srcdir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
+ 
+ install-data-local:
+ 	$(mkdir_p) $(DESTDIR)$(UDEV_RULES_PATH)
