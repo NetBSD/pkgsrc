@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.11 2007/01/21 10:00:34 rillig Exp $
+# $NetBSD: help.awk,v 1.12 2007/02/20 11:45:40 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -15,7 +15,7 @@ BEGIN {
 
 	found_anything = no;	# has some help text been found at all?
 	last_fname = "";
-	last_line_was_empty = yes;
+	this_line_maybe_definition = yes;
 	ignore_this_line = no;
 	ignore_next_empty_line = no;
 
@@ -51,6 +51,7 @@ function end_of_topic() {
 always {
 	ignore_this_line = (ignore_next_empty_line && $0 == "#") || $0 == "";
 	ignore_next_empty_line = no;
+	this_line_is_definition = no;
 }
 
 # There is no need to print the RCS Id, since the full pathname
@@ -91,12 +92,15 @@ NF >= 1 {
 	w1 = ($1 == tolower($1)) ? toupper($1) : $1;
 	w2 = ($2 == tolower($2)) ? toupper($2) : $2;
 
+	this_line_is_definition = (w1 == toupper($1)) && (w2 == toupper($2));
+
 	if ((w1 == uctopic"?=") ||
 	    (w1 == uctopic"=") ||
 	    (index(w1, "#"uctopic"=") == 1) ||
 	    (index(w1, "#"uctopic"?=") == 1) ||
-	    (last_line_was_empty && w1 == "#" && (w2 == uctopic ||
-						  w2 == uctopic":"))) {
+	    (this_line_maybe_definition &&
+	        w1 == "#" &&
+	        (w2 == uctopic || w2 == uctopic":"))) {
 		relevant = yes;
 	}
 }
@@ -115,7 +119,8 @@ $1 == "#" {
 }
 
 always {
-	last_line_was_empty = (/^#$/ || /^$/);
+	# Note: The first "this" actually means the next line.
+	this_line_maybe_definition = (/^#$/ || /^$/) || this_line_is_definition;
 	last_fname = FILENAME;
 }
 
