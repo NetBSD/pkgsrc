@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.4 2007/02/20 22:56:35 xtraeme Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.5 2007/02/20 23:49:05 xtraeme Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -10,7 +10,7 @@ FUSE_BUILDLINK3_MK=	# defined
 
 .  if !empty(OPSYS:MLinux) # Linux
 
-.    include "../../filesystems/fusefs/buildlink3.mk"
+.    include "../../filesystems/fuse/buildlink3.mk"
 
 .  elif (!empty(OPSYS:MNetBSD) && exists(/usr/include/fuse.h)) # NetBSD
 
