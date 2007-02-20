@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2007/02/15 06:24:04 martti Exp $
+# $NetBSD: Makefile,v 1.199 2007/02/20 16:49:29 joerg Exp $
 
 DISTNAME=	postfix-2.3.7
 #PKGREVISION=	1
@@ -116,7 +116,7 @@ CONF_FILES_PERMS=	# empty
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
-.if !empty(PKG_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mdovecot-sasl) 
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
