@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.30 2007/02/19 09:20:59 jnemeth Exp $
+# $NetBSD: emacs.mk,v 1.31 2007/02/20 12:36:02 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -40,7 +40,7 @@
 #		Description:
 #			The user's favoriate Emacs version.
 #		Possible values:
-#			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
+#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
 #		Default value:
 #			emacs21
 #
@@ -59,9 +59,9 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
+#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
 #		Default value:
-#			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
+#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
 #	REPLACE_EMACS
 #		Description:
 #			If set, correct the #!/path/to/emacs line in the
@@ -163,7 +163,7 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs,emacs21,emacs21nox,emacs20,xemacs,xemacs215,xemacs214}
+#	FOR_{emacs,emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs,xemacs215,xemacs214}
 #		Description:
 #			These macros will become either an empty string or
 #			"@comment" depending on the Emacs version; when
@@ -175,7 +175,7 @@
 #		Possible values:
 #			"", "@comment"
 #
-#	NOTFOR_{emacs,emacs21,emacs21nox,emacs20,xemacs,xemacs215,xemacs214}
+#	NOTFOR_{emacs,emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs,xemacs215,xemacs214}
 #		Description:
 #			The opposite of FOR_*.  See above.
 #		Possible values:
@@ -207,7 +207,7 @@ _EMACS_DEP.emacs20=	../../editors/emacs20
 _EMACS_DEP.emacs21=	../../editors/emacs
 _EMACS_DEP.emacs21nox=	../../editors/emacs-nox11
 _EMACS_DEP.emacs22=	../../wip/emacs-current
-_EMACS_DEP.emacs22nox=	../../wip/emacs-nox11-current
+_EMACS_DEP.emacs22nox=	../../wip/emacs-current-nox11
 _EMACS_DEP.xemacs214=	../../editors/xemacs
 _EMACS_DEP.xemacs215=	../../editors/xemacs-current
 
@@ -369,8 +369,10 @@ _EMACS_PKGDEP.${_EMACS_TYPE},base?=	\
 # "leim" - input methods for international character sets
 .if !empty(_EMACS_TYPE:Mxemacs*) || !empty(_EMACS_TYPE:Memacs20*)
 _EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=20.7:../../editors/leim20
-.else
+.elif !empty(_EMACS_TYPE:Mxemacs*) || !empty(_EMACS_TYPE:Memacs21*)
 _EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=21.2:../../editors/leim
+.else
+_EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=22:../../wip/leim-current
 .endif
 
 .for _mod_ in ${EMACS_MODULES}
