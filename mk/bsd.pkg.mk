@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1906 2007/02/09 01:57:17 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1907 2007/02/20 10:32:09 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -570,6 +570,7 @@ PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 # Add these defs to the ones dumped into +BUILD_DEFS
 _BUILD_DEFS+=	PKGPATH
 _BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
+_BUILD_DEFS+=	ABI
 _BUILD_DEFS+=	CPPFLAGS CFLAGS FFLAGS LDFLAGS
 _BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
 _BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
