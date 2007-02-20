@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.3.26.1 2007/02/20 15:15:56 salo Exp $
+
+Patch from sourceforge cvs tree. revision 1.48
+
+--- src/log.c.orig	2004-01-11 16:50:30.000000000 +0100
++++ src/log.c	2005-05-23 00:27:48.000000000 +0200
+@@ -147,8 +147,13 @@
+     g_free(log->description);
+     g_free(log);
+   }
+-  g_list_free(net?net->logs:other_logs);
+-  net?net->logs:other_logs = NULL;
++  if (net) {
++    g_list_free(net->logs);
++    net->logs = NULL;
++  } else {
++    g_list_free(other_logs);
++    other_logs = NULL;
++  }
+ }
+ 
+ void log_file_destroy(log_file_t* lf) {
