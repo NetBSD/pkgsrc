@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/06/14 20:14:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/02/20 15:08:47 adam Exp $
 bin/qalc
 include/libqalculate/BuiltinFunctions.h
 include/libqalculate/Calculator.h
@@ -203,6 +203,7 @@ share/doc/lib${PKGNAME}/reference/html/structPrintOptions.html
 share/doc/lib${PKGNAME}/reference/html/structSortOptions-members.html
 share/doc/lib${PKGNAME}/reference/html/structSortOptions.html
 share/doc/lib${PKGNAME}/reference/html/util_8h.html
+share/locale/fr/LC_MESSAGES/libqalculate.mo
 share/locale/nl/LC_MESSAGES/libqalculate.mo
 share/locale/sv/LC_MESSAGES/libqalculate.mo
 share/qalculate/currencies.xml
