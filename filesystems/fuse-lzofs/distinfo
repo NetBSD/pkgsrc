@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/20 23:00:08 xtraeme Exp $
+
+SHA1 (LZOlayer_fs-20060306.tar.gz) = f069142a32d9b2325784329500689cc0dd726285
+RMD160 (LZOlayer_fs-20060306.tar.gz) = a9f839950368706b3c90cc5195168f6616947e40
+Size (LZOlayer_fs-20060306.tar.gz) = 17669 bytes
+SHA1 (patch-aa) = 70df68443cb7b4d9eec5effea0dbb0e3fc666551
+SHA1 (patch-ab) = 1c14076c136e410d5590e009d8f83bcf2173a5c9
