@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/05/13 10:21:17 rillig Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/02/20 19:04:11 wiz Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -1768,7 +1768,6 @@ share/emacs/${EMACSVERSION}/lisp/xt-mouse.el
 share/emacs/${EMACSVERSION}/lisp/xt-mouse.elc
 share/emacs/${EMACSVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @dirrm share/emacs/${EMACSVERSION}/site-lisp
 @dirrm share/emacs/${EMACSVERSION}/lisp/toolbar
 @dirrm share/emacs/${EMACSVERSION}/lisp/textmodes

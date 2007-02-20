@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/05 06:27:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/02/20 19:04:14 wiz Exp $
 bin/sabrowse
 bin/sacomp
 info/sather-mode.info
@@ -469,8 +469,6 @@ share/emacs/site-lisp/hl319.el
 share/emacs/site-lisp/sather-lib.el
 share/emacs/site-lisp/sather-module.el
 share/emacs/site-lisp/sather.el
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm share/doc/sather/header
 @dirrm share/doc/sather/Gui
 @dirrm share/doc/sather
