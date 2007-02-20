@@ -1,0 +1,56 @@
+= Introduction =
+
+A package flavor is a packaging system that is supported by pkgsrc.
+Currently, there is only one (the native pkgsrc tools), but maybe we can
+support RPM, dpkg or the Solaris native packages someday. It can also be
+used to test new variants of the packaging tools.
+
+= Interface =
+
+A package system flavor must define the following variables so that they
+can be used when loading Makefiles. (That is, no references to undefined
+variables.)
+
+* PKG_DBDIR (TODO: Make the other parts of pkgsrc independent of that
+  variable; this should go away.)
+
+* PKG_ADD
+* PKG_ADMIN
+* PKG_CREATE
+* PKG_DELETE
+* PKG_INFO
+* PKG_VIEW
+* LINKFARM
+* PKG_BEST_EXISTS
+
+The variables from the second list are all shell commands, which must
+accept some command line options that are detailed in the respective man
+pages. (TODO: Find out which command line options are really used and
+which ones are useful. Document them.)
+
+The following variables must be defined so that they can be used in
+shell commands. They may contain references to all other variables.
+
+* PKG_FILELIST_CMD
+
+The following make targets must be implemented:
+
+* check-vulnerable
+* deinstall-pkg
+* show-depends
+* depends-install
+* bootstrap-depends
+* register-pkg
+* tarup (XXX: This doesn't sound like a target that should be defined
+  here.)
+* tarup-pkg
+* package-install
+* replace-pkg
+* undo-replace-pkg
+
+= Bugs =
+
+The name "flavor" is badly chosen, especially since flavor is such a
+broad term that OpenBSD ports collection has chosen to implement
+something entirely different using the same name. (This has happended
+before pkgsrc has chosen to use this word, though, so no blame on them.)
