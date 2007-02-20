@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6013 2007/02/19 20:52:29 wiz Exp $
+$NetBSD: TODO,v 1.6014 2007/02/20 12:58:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.0.3
 	o gld-1.7
-	o glpk-4.14
 	o gmime-2.2.3
 	o gmpc-0.14.0
 	o gnet1-1.1.9
