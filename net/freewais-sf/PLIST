@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/31 22:43:03 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/02/20 19:04:15 wiz Exp $
 bin/catalog
 bin/check-sources
 bin/dictionary
@@ -31,5 +31,3 @@ man/man1/waisserver.1
 man/man1/xwais.1
 man/man1/xwaisq.1
 share/emacs/site-lisp/wais.el
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}

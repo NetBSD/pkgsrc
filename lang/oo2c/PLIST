@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/02/20 19:04:14 wiz Exp $
 bin/oo2c
 bin/oob
 bin/oobacktrace
@@ -610,8 +610,6 @@ man/man1/ooef.1
 man/man1/oowhereis.1
 share/doc/html/oo2c
 share/emacs/site-lisp/oo2c
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm lib/oo2c/sym/XML/UnicodeCodec
 @dirrm lib/oo2c/sym/XML/Builder
 @dirrm lib/oo2c/sym/XML/Basic

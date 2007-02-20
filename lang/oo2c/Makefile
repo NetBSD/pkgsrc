@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/11/12 01:43:21 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/20 19:04:14 wiz Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ooc/}
 EXTRACT_SUFX=		.tar.bz2

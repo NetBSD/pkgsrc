@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2006/12/06 15:03:49 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/20 19:04:11 wiz Exp $
 
 DISTNAME=	emacs-20.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/} \
 		${MASTER_SITE_LOCAL}
