@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.38 2007/02/20 13:56:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.39 2007/02/20 14:27:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -95,3 +95,5 @@ Pullup ticket 2025 - requested by taca
 build fix for samba
 Pullup ticket 2027 - requested by bouyer
 remove NO_BIN_ON_FTP restriction from p5-perl-headers
+Pullup ticket 2028 - requested by joerg
+bugfix update for lighttpd
