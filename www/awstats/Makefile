@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2007/02/20 16:44:50 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/20 18:29:49 minskim Exp $
 #
 
 DISTNAME=	awstats-6.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
 # awstats are in the habit of updating the tarball but not incrementing
