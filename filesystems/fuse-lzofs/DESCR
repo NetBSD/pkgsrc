@@ -1,0 +1,16 @@
+LZOlayer Filesystem is a filesystem which allows you to use transparently
+compressed files, just as they would be normal files.
+
+Both read and write operations are possible, along with other most common
+system calls. It consumes little memory in my opinion, because files are
+divided into blocks, which can be decompressed separetly. In other words,
+if you (or an application) would like to read byte 4,500,000 in a file
+sized 5,000,000 bytes, it only decompresses a block which constain wanted
+data. Write operation is based on a packet gathering and after reaching its
+limit it 'syncs' the data. It allows it's user to write/modify files pretty
+fast, despite the fact it's block divided.
+
+LZOlayer FileSystem was meant to support only LZO compression algorythm,
+because it has extremely low compression/decompression time. However,
+currently it supports LZO and ZLIB (but only one at the run-time!)
+compression algorythms.

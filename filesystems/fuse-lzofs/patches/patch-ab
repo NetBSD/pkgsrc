@@ -1,0 +1,87 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/20 23:00:08 xtraeme Exp $
+
+--- LZOlayer_fs.c.orig	2007-02-18 16:38:19.000000000 +0100
++++ LZOlayer_fs.c	2007-02-18 16:43:03.000000000 +0100
+@@ -21,6 +21,15 @@
+ #define __USE_UNIX98
+ #include <unistd.h>
+ #include <zlib.h>
++#ifndef __NetBSD__
++#define ordwr		O_RDWR|O_LARGEFILE
++#define ordonly	O_RDONLY|O_LARGEFILE
++#define owronly	O_WRONLY|O_LARGEFILE
++#else
++#define ordwr		O_RDWR
++#define ordonly	O_RDONLY
++#define owronly	O_WRONLY
++#endif
+ 
+ #include "minilzo.h"
+ #define HEAP_ALLOC(var, size) \
+@@ -124,7 +133,7 @@
+   
+   if (S_ISREG(stbuf->st_mode))
+   {
+-    int fd = open(xPath, O_RDONLY|O_LARGEFILE);
++    int fd = open(xPath, ordonly);
+     read(fd, &stbuf->st_size, sizeof(off_t));
+     close(fd);
+   }
+@@ -166,7 +175,7 @@
+ {
+   char *xPath = LZOlayer_makePath(path);
+   
+-  int fd = open(xPath, O_RDONLY|O_LARGEFILE);
++  int fd = open(xPath, ordonly);
+   off_t outLen = 0;
+   read(fd, &outLen, sizeof(off_t));
+   close(fd);
+@@ -193,7 +202,7 @@
+   char *xPath            = filePtr->path;
+   
+   int done = 0;
+-  int fd = open(xPath, O_RDONLY|O_LARGEFILE);
++  int fd = open(xPath, ordonly);
+   
+   while(1)
+   {
+@@ -249,7 +258,7 @@
+   off_t block_start   = (float)filePtr->packets[min_offset].offset / (float)block_size;
+   
+   char *xPath = filePtr->path;
+-  int fd      = open(xPath, O_RDWR|O_LARGEFILE);
++  int fd      = open(xPath, ordwr);
+   LZOlayer_block_seek(fd, block_start);
+   
+   off_t alloc_size = (filePtr->size-(block_start*block_size)
+@@ -315,10 +324,10 @@
+   {
+     LZOlayer_packet_sync(path, fi);
+     
+-    int fd = open(filePtr->path, O_WRONLY|O_LARGEFILE);
++    int fd = open(filePtr->path, owronly);
+     if(fd == -1)
+     {
+-      open(filePtr->path, O_CREAT|O_WRONLY|O_LARGEFILE);
++      open(filePtr->path, O_CREAT|owronly);
+       chown(filePtr->path, fuse_get_context()->uid, fuse_get_context()->gid);
+     }
+ // old open/create for write
+@@ -365,7 +374,7 @@
+   }
+   else
+   {
+-    int fd = open(xPath, O_WRONLY|O_LARGEFILE);
++    int fd = open(xPath, owronly);
+     off_t null = 0;
+     write(fd, &null, sizeof(off_t));
+     write(fd, &null, sizeof(off_t));
+@@ -383,7 +392,7 @@
+ {
+   char *xPath = LZOlayer_makePath(path);
+   
+-  int fd = open(xPath, O_RDWR|O_LARGEFILE);
++  int fd = open(xPath, ordwr);
+   off_t file_size = 0;
+   read(fd, &file_size, sizeof(off_t));
+   
