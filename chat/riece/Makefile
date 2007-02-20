@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/10/07 05:27:50 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/20 12:45:07 uebayasi Exp $
 #
 
-DISTNAME=	riece-3.1.0
+DISTNAME=	riece-3.1.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://savannah.nongnu.org/download/riece/
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.nongnu.org/riece/
 COMMENT=	IRC client for Emacs
 
 EMACS_VERSIONS_ACCEPTED= \
-		emacs21 emacs21nox xemacs214
+		emacs21 emacs21nox emacs22 emacs22nox xemacs214
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[^0-9]$||}
 
