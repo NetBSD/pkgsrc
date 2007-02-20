@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/12/06 16:37:27 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2007/02/20 14:30:00 joerg Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		11
@@ -30,7 +30,7 @@ CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 CONFIGURE_ENV+=		mgp_cv_path_perl=${TOOLS_PERL5:Q}
 
 MGP_RENDERING_ENGINES=	freetype	graphics/freetype-lib \
-			xft2		fonts/Xft2 \
+			xft2		x11/libXft \
 			vflib		print/ja-vflib-lib
 
 # We need to perform the steps normally done by ``xmkmf -a'' since some
@@ -76,6 +76,8 @@ CONFIGURE_ARGS+=	--disable-${engine}
 
 .if !empty(PKG_OPTIONS:Mxft2)
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .endif
 
 .include "../../graphics/libungif/buildlink3.mk"
