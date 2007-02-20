@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.pkg.dist,v 1.27 2007/01/24 19:52:08 wiz Exp $
+# $NetBSD: OSF1.pkg.dist,v 1.28 2007/02/20 18:57:06 wiz Exp $
 #
 
 /set type=dir uname=root gname=system mode=0755
@@ -496,6 +496,10 @@
         ..
         doc
 	    html
+	    ..
+        ..
+        emacs
+	    site-lisp
 	    ..
         ..
         examples

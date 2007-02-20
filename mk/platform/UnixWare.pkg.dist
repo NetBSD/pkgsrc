@@ -1,6 +1,6 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
 #	NetBSD: SunOS.pkg.dist,v 1.64 2004/04/01 12:19:09 jmmv Exp
-#	$NetBSD: UnixWare.pkg.dist,v 1.27 2007/01/24 19:52:08 wiz Exp $
+#	$NetBSD: UnixWare.pkg.dist,v 1.28 2007/02/20 18:57:06 wiz Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -1248,6 +1248,10 @@
         ..
         doc
 	    html
+	    ..
+        ..
+        emacs
+	    site-lisp
 	    ..
         ..
         examples
