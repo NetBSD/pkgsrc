@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:31:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/02/20 14:52:47 uebayasi Exp $
 ${EMACS_INFOPREFIX}/navi2ch.info
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.elc
@@ -6,6 +6,8 @@ ${EMACS_LISPPREFIX}/navi2ch/navi2ch-articles.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-articles.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-auto-modify.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-auto-modify.elc
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-be2ch.el
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-be2ch.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board-misc.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board-misc.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board.el

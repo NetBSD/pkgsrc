@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2006/10/07 06:12:42 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/20 14:52:47 uebayasi Exp $
 
-DISTNAME=	navi2ch-1.7.5
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	4
+DISTNAME=	navi2ch-cvs_0.0.20070114-1
+PKGNAME=	${EMACS_PKGNAME_PREFIX}navi2ch-1.7.5.99.20070114
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=navi2ch/}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=navi2ch/}
+MASTER_SITES=	http://navi2ch.sourceforge.net/snapshot/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://navi2ch.sourceforge.net/
 COMMENT=	2ch BBS browser for Emacs
 
+WRKSRC=		${WRKDIR}/${DISTNAME:C/cvs_0\.0\./cvs-/:C/-1$//}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 INFO_FILES=	# PLIST
