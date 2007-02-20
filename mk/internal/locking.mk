@@ -1,6 +1,21 @@
-# $NetBSD: locking.mk,v 1.5 2007/02/19 10:39:47 rillig Exp $
+# $NetBSD: locking.mk,v 1.6 2007/02/20 22:11:10 rillig Exp $
 #
-
+# User-settable variables:
+#
+# WRKDIR_LOCKTYPE
+#	The type of locking used for WRKDIR.
+#
+#	Possible values: none once sleep
+#	Default value: none
+#	Recommended: once
+#
+# LOCALBASE_LOCKTYPE
+#	The type of locking used for LOCALBASE.
+#
+#	Possible values: none once sleep
+#	Default value: none
+#	Recommended: sleep
+#
 # This file provides the following .USE targets:
 #
 # acquire-lock
@@ -16,34 +31,41 @@
 #	Releases the lock in LOCALBASE.
 #
 
+WRKDIR_LOCKTYPE?=	${PKGSRC_LOCKTYPE}
+LOCALBASE_LOCKTYPE?=	${PKGSRC_LOCKTYPE}
+
 _WRKDIR_LOCKFILE=	${WRKDIR}/.lockfile
 _LOCALBASE_LOCKFILE=	${LOCALBASE}/.lockfile
+_LOCKVARS=		WRKDIR_LOCKTYPE LOCALBASE_LOCKTYPE
 
 #
 # Sanity checks.
 #
 
-.if ${PKGSRC_LOCKTYPE} == "none"
-# No further checks.
-.elif ${PKGSRC_LOCKTYPE} == "once" || ${PKGSRC_LOCKTYPE} == "sleep"
-.  if !defined(OBJHOSTNAME)
-PKG_FAIL_REASON+=	"[locking.mk] PKGSRC_LOCKTYPE needs OBJHOSTNAME defined."
-# XXX: Why?
+.for v in ${_LOCKVARS}
+_OK=	no
+.  for t in none once sleep
+.    if ${PKGSRC_LOCKTYPE} == "${t}"
+_OK=	yes
+.    endif
+.  endfor
+.  if ${_OK} != "yes"
+PKG_FAIL_REASON+=	"[locking.mk] ${v} must be one of { none once sleep }, not ${${v}}."
 .  endif
-.else
-PKG_FAIL_REASON+=	"[locking.mk] PKGSRC_LOCKTYPE must be one of {none,once,sleep}, not ${PKGSRC_LOCKTYPE}."
-.endif
+.endfor
 
 #
 # Needed tools.
 #
 
-.if ${PKGSRC_LOCKTYPE} != "none"
+.for v in ${_LOCKVARS}
+.  if ${${v}} != "none"
 USE_TOOLS+=		shlock
-.endif
-.if ${PKGSRC_LOCKTYPE} == "sleep"
+.  endif
+.  if ${${v}} == "sleep"
 USE_TOOLS+=		sleep
-.endif
+.  endif
+.endfor
 
 #
 # The commands.
@@ -59,14 +81,14 @@ _CHECK_IF_SHLOCK_IS_AVAILABLE_CMD= \
 _ACQUIRE_LOCK_CMD= \
 	${_CHECK_IF_SHLOCK_IS_AVAILABLE_CMD};				\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
-	if ${TEST} -z "$$ppid"; then					\
+	if [ -z "$$ppid" ]; then					\
 		${ERROR_MSG} "No parent process ID found.";		\
 		exit 1;							\
 	fi;								\
-	while ${TRUE}; do						\
-		if ${TEST} -f /var/run/dmesg.boot -a -f "$$lockfile"; then \
+	while :; do							\
+		if [ -f /var/run/dmesg.boot -a -f "$$lockfile" ]; then	\
 			rebooted=`${FIND} /var/run/dmesg.boot -newer "$$lockfile" -print`; \
-			if ${TEST} -n "$$rebooted"; then		\
+			if [ "$$rebooted" ]; then			\
 				${STEP_MSG} "Removing stale $$lockfile"; \
 				${RM} -f "$$lockfile";			\
 			fi;						\
@@ -77,10 +99,8 @@ _ACQUIRE_LOCK_CMD= \
 			break;						\
 		fi;							\
 		lockpid=`${CAT} "$$lockfile"`;				\
-		case ${PKGSRC_LOCKTYPE:Q}"" in				\
-		once)	${ERROR_MSG} "Lock ${.TARGET} is held by pid $$lockpid";	\
-			exit 1;						\
-			;;						\
+		case "$$locktype" in					\
+		once)	${FAIL_MSG} "Lock ${.TARGET} is held by pid $$lockpid" ;; \
 		sleep)	${STEP_MSG} "Lock ${.TARGET} is held by pid $$lockpid";	\
 			${SLEEP} ${PKGSRC_SLEEPSECS};			\
 			;;						\
@@ -108,27 +128,37 @@ _RELEASE_LOCK_CMD+= \
 .PHONY: acquire-lock release-lock
 .PHONY: acquire-localbase-lock release-localbase-lock
 
-.if ${PKGSRC_LOCKTYPE} == "none"
-acquire-lock release-lock acquire-localbase-lock release-localbase-lock: .USE
+.if ${LOCALBASE_LOCKTYPE} == "none"
+acquire-localbase-lock release-localbase-lock: .USE
 	@${DO_NADA}
 .else
-acquire-lock: .USE
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	lockfile=${_WRKDIR_LOCKFILE};					\
-	${_ACQUIRE_LOCK_CMD}
-
-release-lock: .USE
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	lockfile=${_WRKDIR_LOCKFILE};					\
-	${_RELEASE_LOCK_CMD}
-
 acquire-localbase-lock: .USE
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN}								\
 	lockfile=${_LOCALBASE_LOCKFILE};				\
+	locktype=${LOCALBASE_LOCKTYPE};					\
 	${_ACQUIRE_LOCK_CMD}
 
 release-localbase-lock: .USE
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN}								\
 	lockfile=${_LOCALBASE_LOCKFILE};				\
+	locktype=${LOCALBASE_LOCKTYPE};					\
 	${_RELEASE_LOCK_CMD}
+.endif
+
+.if ${WRKDIR_LOCKTYPE} == "none"
+acquire-lock release-lock: .USE
+	@${DO_NADA}
+.else
+acquire-lock: .USE
+	${RUN}								\
+	lockfile=${_WRKDIR_LOCKFILE};					\
+	locktype=${WRKDIR_LOCKTYPE};					\
+	${_ACQUIRE_LOCK_CMD}
+
+release-lock: .USE
+	${RUN}								\
+	lockfile=${_WRKDIR_LOCKFILE};					\
+	locktype=${WRKDIR_LOCKTYPE};					\
+	${_RELEASE_LOCK_CMD}
+
 .endif
