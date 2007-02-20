@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/20 23:02:03 xtraeme Exp $
+
+--- ftpfs.c.orig	2007-02-18 20:16:44.000000000 +0100
++++ ftpfs.c	2007-02-18 20:17:00.000000000 +0100
+@@ -18,7 +18,9 @@
+ #include <unistd.h>
+ #include <netinet/in.h>
+ #include <fuse.h>
++#ifndef __NetBSD__
+ #include <fuse_opt.h>
++#endif
+ #include <glib.h>
+ 
+ #include "ftpfs-ls.h"
