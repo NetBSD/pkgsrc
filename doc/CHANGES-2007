@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.428 2007/02/21 12:24:46 abs Exp $
+$NetBSD: CHANGES-2007,v 1.429 2007/02/21 13:26:09 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -850,3 +850,13 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/getmail to 4.7.2 [schmonz 2007-02-21]
 	Updated mail/dovecot to 1.0rc23 [ghen 2007-02-21]
 	Added convertors/MIME-Base64-URLSafe version 0.01 [abs 2007-02-21]
+	Updated cad/libgeda to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/gattrib to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/gschem to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/gnetlist to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/gsymcheck to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/geda-utils to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/geda-symbols to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/geda-docs to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/geda-examples to 20070216 [dmcmahill 2007-02-21]
+	Updated cad/geda to 20070216 [dmcmahill 2007-02-21]
