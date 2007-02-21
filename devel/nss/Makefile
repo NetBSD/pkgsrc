@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/01/21 10:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/21 23:23:08 dmcmahill Exp $
 
 DISTNAME=		nss-3.11.4
 CATEGORIES=		security
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 BUILD_DIRS=		mozilla/security/nss
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		awk gmake perl
 DIST=			${WRKSRC}/mozilla/dist
 BUILD_TARGET=		nss_build_all
 MAKE_ENV+=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
@@ -34,43 +34,6 @@ PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 MAKEFLAGS+=	NS_USE_GCC=YES
 .endif
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
-.elif ${OPSYS} == "SunOS"
-.  if ${PKGSRC_COMPILER} == "gcc"
-NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_gcc_OPT.OBJ
-.  else
-NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
-.  endif
-
-# on solaris/sparc, we get a different set of libs.
-# How about NetBSD/sparc and sparc64?
-.  if ${MACHINE_ARCH} == "sparc"
-SUNOS_TRUE=
-SUNOS_FALSE=	"@comment "
-.  endif
-
-.elif ${OPSYS} == "Linux"
-NSS_SHORT_OS_VERSION!=	echo ${OS_VERSION} | ${SED} -e 's/^\([[:digit:]]\.[[:digit:]]\)\..*$$/\1/'
-.  if ${MACHINE_ARCH} == "i386"
-NSS_MACHINE_ARCH=	_x86
-.  elif ${MACHINE_ARCH} == "parisc" || ${MACHINE_ARCH} == "parisc64"
-NSS_MACHINE_ARCH=	_hppa
-.  elif ${MACHINE_ARCH} == "sparc64"
-NSS_MACHINE_ARCH=	_sparc
-.  else
-NSS_MACHINE_ARCH=	_${MACHINE_ARCH}
-.  endif
-NSS_OBJ_DIR=	${OPSYS}${NSS_SHORT_OS_VERSION}${NSS_MACHINE_ARCH}_glibc_PTH_OPT.OBJ
-.endif
-
-SUNOS_TRUE?=	"@comment "
-SUNOS_FALSE?=
-PLIST_SUBST+=	SUNOS_TRUE=${SUNOS_TRUE}
-PLIST_SUBST+=	SUNOS_FALSE=${SUNOS_FALSE}
-
-NSS_OBJ_DIR?=  ${OPSYS}${OS_VERSION}_OPT.OBJ
-
 pre-configure:
 	${CP} ${FILESDIR}/DragonFly.mk \
 		${WRKSRC}/mozilla/security/coreconf/
@@ -79,7 +42,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/nss
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/nss
 	(cd ${DIST}/public && ${PAX} -Lrwpe . ${PREFIX}/include/nss/ )
-	(cd ${DIST}/${NSS_OBJ_DIR}/lib && \
+	(cd ${DIST}/*_OPT.OBJ/lib && \
 		${PAX} -Lrwpe *.${SO_SUFFIX} ${PREFIX}/lib/nss/ )
 	set -e; \
 	{ ${ECHO} "Name: NSS"; \
@@ -91,7 +54,23 @@ do-install:
 	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 "${BUILDLINK_LIBS.pthread:Q}; \
 	} >${PREFIX}/lib/pkgconfig/nss.pc
 
+# The exact set of libfreebl* libs built and installed depends on the
+# operating system and platform.  For example, on solaris/sparc you might
+# get 
+#  libfreebl_32fpu_3.so
+#  libfreebl_32int_3.so
+#  libfreebl_32int64_3.so
+# and on others
+#  libfreebl3.so
+# Since this has been a continual problem in many mozilla packages, just
+# do that part dynamically rather than trying to always keep our conditionals
+# up to date.
+PLIST_SRC=	${WRKDIR}/PLIST
 post-install:
+	${AWK} '/@comment libfreebl/ {exit} {print}' ${.CURDIR}/PLIST > ${PLIST_SRC}
+	ls ${PREFIX}/lib/nss/libfreebl*.${SO_SUFFIX} | ${SORT} | \
+		${SED} 's;${PREFIX}/;;g' >> ${PLIST_SRC}
+	${AWK} 'ok == 1 {print} /@comment libfreebl/ {ok=1}' ${.CURDIR}/PLIST >> ${PLIST_SRC}
 	cd ${PREFIX}/include/nss && ${CHMOD} ${SHAREMODE} nss/*.h dbm/*.h nss/*.api
 
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.4.1nb2
