@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.424 2007/02/20 23:53:52 bad Exp $
+$NetBSD: CHANGES-2007,v 1.425 2007/02/21 00:05:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -840,3 +840,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/librsync to 0.9.7nb2 [snj 2007-02-20]
 	Updated lang/php5 to 5.2.1 [jdolecek 2007-02-20]
 	Updated devel/p5-VCP-Dest-svk to 0.29 [bad 2007-02-21]
+	Added filesystems/fuse version 2.5.2 [xtraeme 2007-02-21]
+	Added filesystems/fuse-archivemount version 0.5.3 [xtraeme 2007-02-21]
+	Added filesystems/fuse-cddfs version 0.2 [xtraeme 2007-02-21]
+	Added filesystems/fuse-cryptofs version 0.6.0 [xtraeme 2007-02-21]
+	Added filesystems/fuse-curlftpfs version 0.9.0 [xtraeme 2007-02-21]
+	Added filesystems/fuse-httpfs version 2.06.08.26 [xtraeme 2007-02-21]
+	Added filesystems/fuse-lzofs version 20060306 [xtraeme 2007-02-21]
+	
