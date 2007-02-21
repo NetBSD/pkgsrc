@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.98 2007/01/18 09:04:53 rillig Exp $
+# $NetBSD: build,v 1.99 2007/02/21 14:25:20 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -113,35 +113,9 @@ post_filter_cmd() {
 	${SED} "s;^;`date '+%Y/%m/%d %H:%M:%S'`  ${percent} ${pkgdir} @ ${MACHINE_ARCH}> ;g"
 }
 
-# find and set a pkgsrc variable
-# usage: load_pkgsrc_var <varname> <bmake-args...>
-load_pkgsrc_var() {
-	case $1 in
-	-z)	lpv_check_nonempty=no; shift;;
-	*)	lpv_check_nonempty=yes;;
-	esac
-
-	lpv_varname="$1"; shift
-
-	if lpv_value=`cd "${pkglint_dir}" && ${BMAKE} show-var VARNAME="${lpv_varname}" "$@"`; then
-		case "$lpv_check_nonempty,$lpv_value" in
-		yes,"")
-			die "${lpv_varname} must not be empty.";;
-		esac
-	else
-		die	"Could not get the value for the ${lpv_varname} pkgsrc variable."
-	fi
-	eval "${lpv_varname}=\${lpv_value}"
-	printf "%-15s = %s\\n" "${lpv_varname}" "${lpv_value}"
-}
-
 # perform post-processing of the bulk-build results
 do_post_build () {
 	echo "build> Post processing bulk build results..."
-
-	[ -z "${BULK_BUILD_ID_FILE}" ]	&& 	load_pkgsrc_var BULK_BUILD_ID_FILE
-	[ -z "${MKDIR}" ]		&& 	load_pkgsrc_var MKDIR USE_TOOLS=mkdir
-	[ -z "${PERL5}" ]		&&	load_pkgsrc_var PERL5 USE_TOOLS=perl
 
 	# Re-install BULK_PREREQ as we may need functionality (e.g. SMTP) provided by
 	# them for post-build to run.
@@ -275,34 +249,30 @@ load_vars () {
 	echo "+----------------------------------------+"
 	echo "| Some variables used in the bulk build: |"
 	echo "+----------------------------------------+"
-	load_pkgsrc_var OPSYS
-	load_pkgsrc_var OS_VERSION
-	load_pkgsrc_var MACHINE_ARCH
-	load_pkgsrc_var -z BULK_PREREQ
 
-	load_pkgsrc_var BULKFILESDIR
-	load_pkgsrc_var BULK_DBFILE
-	load_pkgsrc_var DEPENDSFILE
-	load_pkgsrc_var DEPENDSTREEFILE
-	load_pkgsrc_var INDEXFILE
-	load_pkgsrc_var ORDERFILE
-	load_pkgsrc_var STARTFILE
-	load_pkgsrc_var SUPPORTSFILE
-	load_pkgsrc_var BULK_BUILD_ID_FILE
+	vars="	OPSYS OS_VERSION MACHINE_ARCH
+		BULK_PREREQ
+		BULKFILESDIR
+		BULK_DBFILE DEPENDSFILE INDEXFILE ORDERFILE STARTFILE
+		SUPPORTSFILE BULK_BUILD_ID_FILE BUILDLOG BROKENFILE
+		BROKENWRKLOG
+		AWK GREP MAIL_CMD MKDIR PERL5 SED
+		PKG_DELETE PKG_INFO PKGBASE"
 
-	load_pkgsrc_var BUILDLOG
-	load_pkgsrc_var BROKENFILE
-	load_pkgsrc_var BROKENWRKLOG
+	values=`cd "$pkglint_dir" && $BMAKE show-vars VARNAMES="$vars" USE_TOOLS="awk grep mail mkdir perl sed"`
 
-	load_pkgsrc_var AWK		USE_TOOLS=awk
-	load_pkgsrc_var GREP		USE_TOOLS=grep
-	load_pkgsrc_var MAIL_CMD	USE_TOOLS=mail
-	load_pkgsrc_var MKDIR		USE_TOOLS=mkdir
-	load_pkgsrc_var PERL5		USE_TOOLS=perl
-	load_pkgsrc_var PKG_DELETE
-	load_pkgsrc_var PKG_INFO
-	load_pkgsrc_var SED		USE_TOOLS=sed
+	for v in $vars; do
+		eval "read $v" || die "Could not read value for $v"
+		eval "value=\$$v"
+		if [ "$v" != "BULK_PREREQ" ] && [ ! "$value" ]; then
+			die "$v must not be empty."
+		fi
+		printf "%-15s = %s\\n" "$v" "$value"
+	done <<EOF
+$values
+EOF
 	echo "------------------------------------------"
+	[ "$PKGBASE" = "pkglint" ] || die "Error reading the variables."
 
 	# Get the location of commonly used files
 	main_buildlog="${BULKFILESDIR}/${BUILDLOG}"
