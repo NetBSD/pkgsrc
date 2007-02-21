@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2006/10/23 09:43:12 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2007/02/21 13:23:52 dmcmahill Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGEDA_BUILDLINK3_MK:=	${LIBGEDA_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	libgeda
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgeda
 
 .if !empty(LIBGEDA_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libgeda+=	libgeda-20061020{,nb[0-9]*}
-BUILDLINK_ABI_DEPENDS.libgeda?=	libgeda>=20061020
+BUILDLINK_API_DEPENDS.libgeda+=	libgeda-20070216{,nb[0-9]*}
+BUILDLINK_ABI_DEPENDS.libgeda?=	libgeda-20070216{,nb[0-9]*}
 BUILDLINK_PKGSRCDIR.libgeda?=	../../cad/libgeda
 .endif	# LIBGEDA_BUILDLINK3_MK
 
