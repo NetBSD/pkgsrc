@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2007/02/21 15:17:49 wiz Exp $
 #
 
 DISTNAME=	elib-1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://jde.sunsite.dk/
+MASTER_SITES=	http://jdee.sunsite.dk/
 
 MAINTAINER=	cjones@NetBSD.org
 COMMENT=	Library of utility functions for Emacs
