@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.427 2007/02/21 09:53:42 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.428 2007/02/21 12:24:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-lzofs version 20060306 [xtraeme 2007-02-21]
 	Updated mail/getmail to 4.7.2 [schmonz 2007-02-21]
 	Updated mail/dovecot to 1.0rc23 [ghen 2007-02-21]
+	Added convertors/MIME-Base64-URLSafe version 0.01 [abs 2007-02-21]
