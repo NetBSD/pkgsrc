@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/20 18:55:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/02/21 23:23:08 dmcmahill Exp $
 include/nss/dbm/cdefs.h
 include/nss/dbm/mcom_db.h
 include/nss/dbm/ncompat.h
@@ -93,10 +93,7 @@ include/nss/nss/sslerr.h
 include/nss/nss/sslproto.h
 include/nss/nss/sslt.h
 include/nss/nss/watcomfx.h
-${SUNOS_FALSE}lib/nss/libfreebl3.${SO_SUFFIX}
-${SUNOS_TRUE}lib/nss/libfreebl_32fpu_3.${SO_SUFFIX}
-${SUNOS_TRUE}lib/nss/libfreebl_32int64_3.${SO_SUFFIX}
-${SUNOS_TRUE}lib/nss/libfreebl_32int_3.${SO_SUFFIX}
+@comment libfreebl
 lib/nss/libnss3.${SO_SUFFIX}
 lib/nss/libnssckbi.${SO_SUFFIX}
 lib/nss/libsmime3.${SO_SUFFIX}
