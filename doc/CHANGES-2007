@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.429 2007/02/21 13:26:09 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.430 2007/02/21 14:53:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -849,7 +849,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-lzofs version 20060306 [xtraeme 2007-02-21]
 	Updated mail/getmail to 4.7.2 [schmonz 2007-02-21]
 	Updated mail/dovecot to 1.0rc23 [ghen 2007-02-21]
-	Added convertors/MIME-Base64-URLSafe version 0.01 [abs 2007-02-21]
+	Added convertors/p5-MIME-Base64-URLSafe version 0.01 [abs 2007-02-21]
 	Updated cad/libgeda to 20070216 [dmcmahill 2007-02-21]
 	Updated cad/gattrib to 20070216 [dmcmahill 2007-02-21]
 	Updated cad/gschem to 20070216 [dmcmahill 2007-02-21]
