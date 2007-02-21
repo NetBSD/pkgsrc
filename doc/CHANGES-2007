@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.431 2007/02/21 21:08:14 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.432 2007/02/21 22:11:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -861,3 +861,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated cad/geda-examples to 20070216 [dmcmahill 2007-02-21]
 	Updated cad/geda to 20070216 [dmcmahill 2007-02-21]
 	Added devel/librxspencer version 3.8.3 [minskim 2007-02-21]
+	Updated mail/p5-Mail-ClamAV to 0.20 [wiz 2007-02-21]
