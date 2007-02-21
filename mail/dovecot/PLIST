@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/01/22 17:58:50 ghen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/02/21 09:53:05 ghen Exp $
 lib/dovecot/imap/lib01_acl_plugin.so
 lib/dovecot/imap/lib02_lazy_expunge_plugin.so
 lib/dovecot/imap/lib10_quota_plugin.so
@@ -37,13 +37,6 @@ sbin/dovecot
 sbin/dovecotpw
 share/doc/dovecot/USE-WIKI-INSTEAD
 share/doc/dovecot/auth-protocol.txt
-share/doc/dovecot/auth.txt
-share/doc/dovecot/configuration.txt
-share/doc/dovecot/design.txt
-share/doc/dovecot/index.txt
-share/doc/dovecot/mail-storages.txt
-share/doc/dovecot/multiaccess.txt
-share/doc/dovecot/nfs.txt
 share/doc/dovecot/securecoding.txt
 share/doc/dovecot/variables.txt
 share/examples/dovecot/dovecot-ldap.conf
