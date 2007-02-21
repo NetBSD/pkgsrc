@@ -1,17 +1,34 @@
-@comment $NetBSD: PLIST,v 1.17 2006/10/21 19:22:23 rillig Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/02/21 13:23:53 dmcmahill Exp $
 bin/gschem
 man/man1/gschem.1
+share/gEDA/bitmap/gschem-alignment_bottomright.png
+share/gEDA/bitmap/gschem-alignment_middlecenter.png
+share/gEDA/bitmap/gschem-alignment_middleleft.png
+share/gEDA/bitmap/gschem-alignment_middleright.png
+share/gEDA/bitmap/gschem-alignment_topcenter.png
+share/gEDA/bitmap/gschem-alignment_topleft.png
+share/gEDA/bitmap/gschem-alignment_topright.png
+share/gEDA/bitmap/gschem-alignment_unchanged.png
+share/gEDA/bitmap/gschem-bottom2top.png
 share/gEDA/bitmap/gschem-bus.xpm
 share/gEDA/bitmap/gschem-comp.xpm
 share/gEDA/bitmap/gschem-copy.xpm
 share/gEDA/bitmap/gschem-delete.xpm
+share/gEDA/bitmap/gschem-diagonal.png
 share/gEDA/bitmap/gschem-edit.xpm
+share/gEDA/bitmap/gschem-fileorder.png
+share/gEDA/bitmap/gschem-filltype_filled.png
+share/gEDA/bitmap/gschem-filltype_hatch.png
+share/gEDA/bitmap/gschem-filltype_hollow.png
+share/gEDA/bitmap/gschem-filltype_mesh.png
+share/gEDA/bitmap/gschem-left2right.png
 share/gEDA/bitmap/gschem-mirror.xpm
 share/gEDA/bitmap/gschem-move.xpm
 share/gEDA/bitmap/gschem-net.xpm
 share/gEDA/bitmap/gschem-new.xpm
 share/gEDA/bitmap/gschem-open.xpm
 share/gEDA/bitmap/gschem-redo.xpm
+share/gEDA/bitmap/gschem-right2left.png
 share/gEDA/bitmap/gschem-rotate.xpm
 share/gEDA/bitmap/gschem-save.xpm
 share/gEDA/bitmap/gschem-select.xpm
