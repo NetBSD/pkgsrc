@@ -1,0 +1,16 @@
+This module is a perl version of python's URL-safe base64 encoder
+/ decoder.
+
+When embedding binary data in URL, it is preferable to use base64
+encoding. However, two characters ('+' and '/') used in the standard
+base64 encoding have special meanings in URLs, often leading to
+re-encoding with URL-encoding, or worse, interoperability problems.
+
+To overcome the problem, the module provides a variation of base64
+codec compatible with python's urlsafe_b64encode / urlsafe_b64decode.
+
+Modification rules from base64:
+
+    use '-' and '_' instead of '+' and '/'
+    no line feeds
+    no trailing equals (=)
