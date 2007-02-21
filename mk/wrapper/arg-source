@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.10 2007/02/21 09:43:26 rillig Exp $
+# $NetBSD: arg-source,v 1.11 2007/02/21 12:27:36 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -55,7 +55,7 @@ while $test $# -gt 0; do
 	-[ILR])
 		nextarg="$1"; shift
 		case "$nextarg" in
-		-*) fail "arg-source" "An $arg option must not be followed by another option, $nextarg." ;;
+		-*) msg_log $wrapperlog "WARNING: [arg-source] An $arg option must not be followed by another option, $nextarg." ;;
 		esac
 		shquote "$nextarg"; nextarg="$shquoted"
 		append_queue argbuf "$arg$nextarg"
