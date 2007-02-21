@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/09/01 12:00:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.39 2007/02/21 13:23:54 dmcmahill Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -15,7 +15,14 @@ CONFLICTS+=		gEDA<19991011
 .include "../../cad/geda/Makefile.common"
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		lex perl:run pkg-config
+# for gsch2pcb
+EVAL_PREFIX+=		PCBDIR=pcb
+CONFIGURE_ARGS+=	--with-pcb-datadir=${PCBDIR}/share
+USE_TOOLS+=		gawk:run lex perl:run pkg-config
+
+# for gnet_hier_verilog.sh.  It looks to be fairly bash
+# dependent
+DEPENDS+=		bash-[0-9]*{,nb[0-9]*}:../../shells/bash
 
 # let (f)lex rebuild this file.  The distributed one doesn't
 # always work.
@@ -28,6 +35,12 @@ REPLACE_INTERPRETER+=   python
 REPLACE.python.old=	.*/bin/python
 REPLACE.python.new=	${PYDIR}/bin/python
 REPLACE_FILES.python=	scripts/tragesym
+
+EVAL_PREFIX+=		BASHDIR=bash
+REPLACE_INTERPRETER+=	bash
+REPLACE.bash.old=	.*/bin/bash
+REPLACE.bash.new=	${BASHDIR}/bin/bash
+REPLACE_FILES.bash=	scripts/gnet_hier_verilog.sh
 
 REPLACE_PERL+=		scripts/pads_backannotate \
 			scripts/gschupdate \
