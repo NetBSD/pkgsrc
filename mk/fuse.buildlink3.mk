@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.5 2007/02/20 23:49:05 xtraeme Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.6 2007/02/21 01:33:55 rillig Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -8,11 +8,11 @@ FUSE_BUILDLINK3_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.  if !empty(OPSYS:MLinux) # Linux
+.  if ${OPSYS} == "Linux"
 
 .    include "../../filesystems/fuse/buildlink3.mk"
 
-.  elif (!empty(OPSYS:MNetBSD) && exists(/usr/include/fuse.h)) # NetBSD
+.  elif (${OPSYS} == "NetBSD") && exists(/usr/include/fuse.h)
 
 .    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-fuse-pkgconfig
