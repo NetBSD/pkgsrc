@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.425 2007/02/21 00:05:02 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.426 2007/02/21 00:29:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -848,3 +848,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-httpfs version 2.06.08.26 [xtraeme 2007-02-21]
 	Added filesystems/fuse-lzofs version 20060306 [xtraeme 2007-02-21]
 	
+	Updated mail/getmail to 4.7.2 [schmonz 2007-02-21]
