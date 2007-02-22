@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:22:25 wiz Exp $
 #
 
 DISTNAME=	psify-19980216
@@ -6,8 +6,8 @@ CATEGORIES=	print
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	Makefile psify.c psify.lex psify.man
 
-MAINTAINER=     kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.mit.edu/afs/athena/system/pmax_ul4/srvd.74/usr/sipb/src/psify/
+MAINTAINER=	kim@tac.nyc.ny.us
+HOMEPAGE=	http://mit.edu/~mkgray/jik/sipbsrc/src/psify/
 COMMENT=	Pretty print C, CLU, SCHEME, Java and ARGUS source files
 
 WRKSRC=		${WRKDIR}
