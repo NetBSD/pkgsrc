@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2006/09/03 00:26:20 ben Exp $
+# $NetBSD: Makefile,v 1.40 2007/02/22 23:23:03 wiz Exp $
 
-DISTNAME=	sox-12.18.1
+DISTNAME=	sox-13.0.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/} \
 		http://www.cnpbagwell.com/
@@ -10,25 +10,26 @@ HOMEPAGE=	http://sox.sourceforge.net/
 COMMENT=	SOund eXchange - universal sound sample translator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-.include "../../mk/bsd.prefs.mk"
-
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-fast-ulaw
-CONFIGURE_ARGS+=	--enable-fast-alaw
-.if ${OPSYS} != "DragonFly" && ${OPSYS} != "FreeBSD"
-CONFIGURE_ARGS+=	--disable-oss-dsp
-.endif
-CONFIGURE_ARGS+=	--with-ogg-vorbislib=${BUILDLINK_PREFIX.libvorbis}/lib
-CONFIGURE_ARGS+=	--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 
-PLIST_SRC=		${PKGDIR}/PLIST.common
+SUBST_CLASSES+=		lrf
+SUBST_FILES.lrf=	src/libst-config.in
+SUBST_SED.lrf=		-e "s!@LRF@!"${LINKER_RPATH_FLAG:Q}"!"
+SUBST_STAGE.lrf=	pre-configure
 
-.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	--with-sun-audio
-PLIST_SRC+=		${PKGDIR}/PLIST.play
-.endif
+SUBST_CLASSES+=		gsm
+SUBST_FILES.gsm=	configure src/gsm.c src/wav.c
+SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
+SUBST_STAGE.gsm=	pre-configure
 
-.include "../../audio/libvorbis/buildlink3.mk"
+# needs obsolete FLAC API
+#.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/gsm/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
