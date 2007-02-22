@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2005/11/09 06:43:11 grant Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:24:01 wiz Exp $
 #
 
 DISTNAME=	lout-3.26
 PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.it.usyd.edu.au/jeff/lout/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lout/}
 
 MAINTAINER=	tsarna@NetBSD.org
-HOMEPAGE=	http://www.ptc.spbu.ru/~uwe/lout/lout.html
+HOMEPAGE=	http://lout.sourceforge.net/
 COMMENT=	Basser Lout, a TeX/troff-like formatter with PostScript/PDF output
 
-PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 INSTALL_TARGET=	allinstall
 
 do-configure:
