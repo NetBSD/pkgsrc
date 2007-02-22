@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:23 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:01:15 wiz Exp $
 #
 
 DISTNAME=		amsn-0_94
@@ -8,7 +8,7 @@ CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
 
 MAINTAINER=		peter@pointless.nl
-HOMEPAGE=		http://amsn.sourceforge.net/
+HOMEPAGE=		http://www.amsn-project.net/
 COMMENT=		"Alvaro's MSN messenger client"
 
 NO_CONFIGURE=		YES

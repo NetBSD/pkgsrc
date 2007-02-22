@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/12/28 12:12:58 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/22 19:01:16 wiz Exp $
 
 DISTNAME=	slony1-1.2.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://pgfoundry.org/frs/download.php/1136/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://gborg.postgresql.org/project/slony1/
+HOMEPAGE=	http://gborg.postgresql.org/project/slony1/projdisplay.php
 COMMENT=	Replication system for PostgreSQL
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server

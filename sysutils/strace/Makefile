@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:01:25 wiz Exp $
 #
 
 DISTNAME=		strace-4.5.14
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=strace/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		christos@NetBSD.org
-HOMEPAGE=		http://www.liacs.nl/~wichert/strace/
+HOMEPAGE=		http://sourceforge.net/projects/strace/
 COMMENT=		Trace system calls
 
 BROKEN_IN=		pkgsrc-2006Q4

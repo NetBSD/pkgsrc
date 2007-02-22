@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:13 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:01:25 wiz Exp $
 
 DISTNAME=	wmSMPmon-2.3
 PKGREVISION=	1
 CATEGORIES=	sysutils x11
-MASTER_SITES=	http://goupilfr.org/arch/
+MASTER_SITES=	http://lancre.ribbrock.org/binabit/wmSMPmon/src/
 
 MAINTAINER=	joel@carnat.net
-HOMEPAGE=	http://goupilfr.org/?soft=wmsmpmon
+HOMEPAGE=	http://lancre.ribbrock.org/binabit/wmSMPmon/
 COMMENT=	Dockable CPU (SMP) monitor
 
 WRKSRC=		${WRKDIR}/wmSMPmon-2.x/wmSMPmon

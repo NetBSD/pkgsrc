@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/07 21:01:15 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:01:23 wiz Exp $
 #
 
 DISTNAME=	OpenAG-1.1.1
@@ -8,7 +8,7 @@ CATEGORIES=	net audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://homepage.mac.com/macdomeeu/dev/current/openag/
+HOMEPAGE=	http://sourceforge.net/projects/openags/
 COMMENT=	Open Audio Galaxy client
 
 DEPENDS+=	wget-[0-9]*:../../net/wget

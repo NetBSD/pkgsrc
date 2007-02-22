@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:01:26 wiz Exp $
 #
 
 DISTNAME=	luaexpat-1.0a
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.keplerproject.org/luaexpat/
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://www.tecgraf.puc-rio.br/~diego/luasocket/new/
+HOMEPAGE=	http://www.keplerproject.org/luaexpat/
 COMMENT=	XML parser for LUA based on expat
 
 USE_TOOLS+=	gmake

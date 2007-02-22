@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/15 13:00:37 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:01:24 wiz Exp $
 
 DISTNAME=			mksh-R28
 PKGNAME=			mksh-28
@@ -7,7 +7,7 @@ MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/
 EXTRACT_SUFX=			.cpio.gz
 
 MAINTAINER=			pkgsrc-users@NetBSD.org
-HOMEPAGE=			http://mirbsd.de/mksh
+HOMEPAGE=			http://www.mirbsd.de/?mksh
 COMMENT=			MirBSD Korn Shell
 
 WRKSRC=				${WRKDIR}/mksh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:56 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:01:25 wiz Exp $
 
 DISTNAME=	pciutils-2.1.11
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/ \
 		ftp://metalab.unc.edu/pub/Linux/hardware/
 
 MAINTAINER=	cube@NetBSD.org
-HOMEPAGE=	http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+HOMEPAGE=	http://mj.ucw.cz/pciutils.shtml
 COMMENT=	PCI bus manipulation utility similar to NetBSD pcictl(8)
 
 USE_TOOLS+=	gmake

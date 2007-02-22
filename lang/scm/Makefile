@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/05 06:27:42 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:21 wiz Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -41,7 +41,7 @@ do-configure:
 	${SED}	-e "s|@CC@|"${CC:Q}"|g"					\
 		-e "s|@CFLAGS@|"${CFLAGS:Q}"|g"				\
 		-e "s|@PREFIX@|"${PREFIX:Q}"|g"				\
-		${FILESDIR}/buildscm.sh > ${WRKSRC}/buildscm.sh		
+		${FILESDIR}/buildscm.sh > ${WRKSRC}/buildscm.sh
 
 post-build:
 	cd ${WRKSRC} && ${SH} ./buildscm.sh

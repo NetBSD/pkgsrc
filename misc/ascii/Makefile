@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2007/01/07 09:14:00 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:01:22 wiz Exp $
 #
 
 DISTNAME=	ascii-3.0
 CATEGORIES=	misc
-MASTER_SITES=	http://www.tuxedo.org/~esr/
+MASTER_SITES=	http://www.catb.org/~esr/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tuxedo.org/~esr/software.html
+HOMEPAGE=	http://www.catb.org/~esr/ascii/
 COMMENT=	ASCII character table program
 
 BUILD_TARGET= ascii

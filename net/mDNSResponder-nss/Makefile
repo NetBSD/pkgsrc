@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 09:14:03 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:01:23 wiz Exp $
 
 DISTNAME=	mDNSResponder-108
 PKGNAME=	mDNSResponder-nss-108
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://darwinsource.opendarwin.org/tarballs/apsl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://developer.apple.com/darwin/projects/bonjour/
+HOMEPAGE=	http://developer.apple.com/opensource/internet/bonjour.html
 COMMENT=	Apple's mDNS responder - NetBSD nsswitch module
 
 # needs nsswitch

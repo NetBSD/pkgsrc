@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/12/09 03:38:16 jnemeth Exp $
+# $NetBSD: Makefile,v 1.43 2007/02/22 19:01:17 wiz Exp $
 
 DISTNAME=	gmp-4.2.1
 CATEGORIES=	devel math
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gmp/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gmp/gmp.html
+HOMEPAGE=	http://swox.com/gmp/
 COMMENT=	Library for arbitrary precision arithmetic
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

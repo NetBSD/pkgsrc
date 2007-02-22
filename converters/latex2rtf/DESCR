@@ -6,4 +6,4 @@ making the new file look very similar to the original.
 
 This package also provides latex2png for converting a LaTeX or EPS
 files to a PNG image. It needs latex, ImageMagick's convert,
-Ghostscript's eps2eps, and netpbm's pngtopnm and pnmcut. 
+Ghostscript's eps2eps, and netpbm's pngtopnm and pnmcut.

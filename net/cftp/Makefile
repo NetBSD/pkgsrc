@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2006/04/06 03:20:54 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:01:23 wiz Exp $
 #
 
 DISTNAME=	cftp-0.12
 CATEGORIES=	net
-MASTER_SITES=	ftp://sunsite.csd.smc.univie.ac.at/pub/nih/cftp/ \
+MASTER_SITES=	http://ftp.giga.or.at/pub/nih/cftp/ \
 		ftp://ftp.giga.or.at/pub/nih/cftp/
 
 MAINTAINER=	dillo@NetBSD.org
-HOMEPAGE=	http://sunsite.csd.smc.univie.ac.at/pub/nih/cftp/
+HOMEPAGE=	http://ftp.giga.or.at/pub/nih/cftp/
 COMMENT=	Comfortable FTP, a full screen ftp client
 
 GNU_CONFIGURE=	YES

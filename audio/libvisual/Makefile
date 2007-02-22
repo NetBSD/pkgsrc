@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/26 19:24:42 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:01:14 wiz Exp $
 #
 
 DISTNAME=		libvisual-0.4.0
@@ -20,9 +20,9 @@ USE_TOOLS+=		pkg-config
 .include "../../mk/compiler.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-.if !empty(CC_VERSION:Mgcc*)
+.  if !empty(CC_VERSION:Mgcc*)
 CPPFLAGS+=		-mmmx
-.endif
+.  endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"

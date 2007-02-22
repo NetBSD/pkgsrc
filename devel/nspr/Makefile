@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/12/05 17:43:06 tron Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/22 19:01:17 wiz Exp $
 
 DISTNAME=		nspr-4.6.1
 PKGREVISION=		3
@@ -37,7 +37,7 @@ INSTALLATION_DIRS=	bin
 # see ${WRKSRC}/nspr-4.6.1/mozilla/nsprpub/pr/src/md/unix/Makefile.in
 # for the bit about 32-bit sun4u machines installing an extra file.
 # That is why we have this specific test and modify the PLIST
-.if ${OPSYS} == "SunOS" 
+.if ${OPSYS} == "SunOS"
 .  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .  else
