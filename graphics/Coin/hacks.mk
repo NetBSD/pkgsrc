@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2007/02/19 22:10:43 joerg Exp $
+# $NetBSD: hacks.mk,v 1.4 2007/02/22 19:26:32 wiz Exp $
 
 .if !defined(COIN_HACKS_MK)
 COIN_HACKS_MK=	defined
@@ -10,7 +10,7 @@ COIN_HACKS_MK=	defined
 ###
 .if ${OPSYS} == "NetBSD"
 PKG_HACKS+=		optimization
-BUILDLINK_TRANSFORM+=   rm:-O[0-9]*
+BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .endif
 
 .endif	# COIN_HACKS_MK

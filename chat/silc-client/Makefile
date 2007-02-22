@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2007/02/22 19:26:12 wiz Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -13,7 +13,7 @@ EXTRACT_SUFX=		${SILC_CLIENT_EXTRACT_SUFX}
 
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.silcnet.org/
-COMMENT=                Client for the Secure Internet Live Conferencing (SILC) protocol
+COMMENT=		Client for the Secure Internet Live Conferencing (SILC) protocol
 
 .include "../../chat/silc-client/Makefile.common"
 
@@ -45,10 +45,10 @@ CONFIGURE_ARGS+=	--without-libtoolfix
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--with-vcurses
 .elif (${OPSYS} == "Linux") || (${OPSYS} == "Darwin")
-CONFIGURE_ARGS+=        --with-ncurses
+CONFIGURE_ARGS+=	--with-ncurses
 .else
 # XXX: Need testing on other operating systems, use safe defaults for now.
-CONFIGURE_ARGS+=        --with-ncurses
+CONFIGURE_ARGS+=	--with-ncurses
 .endif
 
 # Assembler optimizations.

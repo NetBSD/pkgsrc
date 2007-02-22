@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/23 06:51:57 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:26:19 wiz Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -18,9 +18,9 @@ GNU_CONFIGURE=	yes
 
 .include "../../databases/qdbm/buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
-SUBST_CLASSES+=         pthread
-SUBST_STAGE.pthread=    pre-configure
-SUBST_FILES.pthread=    ${MY_SUBDIR}/configure
-SUBST_SED.pthread=      -e 's|-lpthread|${PTHREAD_LIBS}|'
+SUBST_CLASSES+=		pthread
+SUBST_STAGE.pthread=	pre-configure
+SUBST_FILES.pthread=	${MY_SUBDIR}/configure
+SUBST_SED.pthread=	-e 's|-lpthread|${PTHREAD_LIBS}|'
 .endif
 .include "../../mk/bsd.pkg.mk"

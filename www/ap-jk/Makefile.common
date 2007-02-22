@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2006/11/15 11:04:04 abs Exp $
+# $NetBSD: Makefile.common,v 1.4 2007/02/22 19:27:18 wiz Exp $
 
 JK_VERSION=	1.2.19
 CATEGORIES=	www java
@@ -10,8 +10,8 @@ COMMENT=	Apache connector for accessing Jakarta Tomcat
 
 CONFLICTS=	ap-jk-[0-9]*
 
-PATCHDIR=       ${.CURDIR}/../../www/ap-jk/patches
-DISTINFO_FILE=  ${.CURDIR}/../../www/ap-jk/distinfo
+PATCHDIR=	${.CURDIR}/../../www/ap-jk/patches
+DISTINFO_FILE=	${.CURDIR}/../../www/ap-jk/distinfo
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/native
 APACHE_MODULE=	YES

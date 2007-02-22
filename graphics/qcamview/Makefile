@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/22 21:12:33 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:36 wiz Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
@@ -8,7 +8,7 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qce-ga/}
 
 PATCH_SITES=	http://www.medias.ne.jp/~takam/bsd/
-PATCHFILES= 	qce-ga-bsd-0.04.patch.gz
+PATCHFILES=	qce-ga-bsd-0.04.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	hamajima@NetBSD.org

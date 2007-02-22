@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/11/13 23:12:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/22 19:26:11 wiz Exp $
 #
 
 DISTNAME=	ircservices-5.0.59
@@ -26,14 +26,14 @@ SUBST_FILES.install=	install-script tools/ircservices-chk.in
 SUBST_SED.install=	-e "s|/bin/cp|${CP}|g"
 SUBST_SED.install+=	-e "s|/bin/chown|${CHOWN}|g"
 SUBST_SED.install+=	-e "s|/bin/chgrp|${CHGRP}|g"
-SUBST_SED.install+= 	-e "s|/bin/chmod|${CHMOD}|g"
-SUBST_SED.install+= 	-e "s|@DATDEST@|${VARBASE}/run|g"
+SUBST_SED.install+=	-e "s|/bin/chmod|${CHMOD}|g"
+SUBST_SED.install+=	-e "s|@DATDEST@|${VARBASE}/run|g"
 SUBST_MESSAGE.install=	Fixing scripts.
 
 SUBST_CLASSES+=		utils
 SUBST_STAGE.utils=	post-patch
 SUBST_FILES.utils=	data/Makefile tools/Makefile
-SUBST_SED.utils= 	-e "s|chgrp|${CHGRP}|g"
+SUBST_SED.utils=	-e "s|chgrp|${CHGRP}|g"
 SUBST_SED.utils+=	-e "s|chmod|${CHMOD}|g"
 SUBST_SED.utils+=	-e "s|find|${FIND}|g"
 SUBST_MESSAGE.utils=	Fixing paths of hard-coded utilities.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2007/01/24 19:46:45 epg Exp $
+# $NetBSD: Makefile,v 1.111 2007/02/22 19:27:19 wiz Exp $
 
 .include "Makefile.common"
 
@@ -108,7 +108,7 @@ RCD_SCRIPTS=		apache
 
 REQD_DIRS=		${PREFIX}/share/httpd
 REQD_DIRS+=		${PREFIX}/share/httpd/htdocs
-OWN_DIRS= 		${VARBASE}/log/httpd
+OWN_DIRS=	${VARBASE}/log/httpd
 OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert

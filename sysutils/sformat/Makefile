@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:12 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:27:12 wiz Exp $
 #
 
 DISTNAME=		sformat-3.5
@@ -18,8 +18,8 @@ USE_TOOLS+=		gmake
 TBL?=			tbl
 
 # avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=      ARCH=""
-MAKE_ENV+=      MAKEPROG="gmake"
+MAKE_ENV+=	ARCH=""
+MAKE_ENV+=	MAKEPROG="gmake"
 MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
 MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
 MAKE_FLAGS+=	INS_BASE=${LOCALBASE:Q}	# won't work in MAKE_ENV!

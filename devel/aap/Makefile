@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:26:20 wiz Exp $
 
 DISTNAME=	exec-0.107
 PKGNAME=	aap-0.107
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=a-a-p/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=a-a-p/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

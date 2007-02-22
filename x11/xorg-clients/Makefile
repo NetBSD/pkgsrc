@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/15 20:33:06 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/22 19:27:28 wiz Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
@@ -26,10 +26,10 @@ USE_TOOLS+=	perl:run imake
 REPLACE_PERL+=	fonts/util/bdftruncate.pl
 
 # XXX TODO: define build's VarDirectory to pkgsrc's VARBASE
-OWN_DIRS=               ${VARBASE}/lib/xdm
-OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir \
+OWN_DIRS=		${VARBASE}/lib/xdm
+OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm/authdir \
 	${ROOT_USER} ${ROOT_GROUP} 0700
-OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir/authfiles \
+OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm/authdir/authfiles \
 	${ROOT_USER} ${ROOT_GROUP} 0700
 
 EGDIR=			${PREFIX}/share/examples/xorg/xdm

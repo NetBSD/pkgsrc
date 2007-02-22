@@ -7,4 +7,4 @@ than this file and the online help. This is also where we'll inform people
 about new releases/bugs/fixes/competitions, etc.
 
 This package contains the Freeciv client with an interface built on top of
-either gtk, gtk2, xaw, xaw3d, sdl, or just plain x11.  
+either gtk, gtk2, xaw, xaw3d, sdl, or just plain x11.
