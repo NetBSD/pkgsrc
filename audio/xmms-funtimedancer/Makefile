@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:01:15 wiz Exp $
 #
 
 DISTNAME=	FunTimeDancer-0.1
@@ -14,7 +14,7 @@ COMMENT=	XMMS plugin displaying an animation
 
 post-install:
 	cd ${WRKDIR} && \
-		${PAX} -rw -pe FunTimeDancer ${PREFIX}/lib/xmms/Visualization
+		pax -rw -pp FunTimeDancer ${PREFIX}/lib/xmms/Visualization
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2006/06/03 11:45:56 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:01:16 wiz Exp $
 
 DISTNAME=	DB_File-Lock-0.05
 PKGNAME=	p5-${DISTNAME}
-SVR4_PKGNAME=	p5dbfl
+SVR4_PKGNAME=	p5dfl
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DB_File-Lock/}
 

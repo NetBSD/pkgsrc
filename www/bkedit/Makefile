@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:19 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:26 wiz Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
 PKGNAME=		${DISTNAME:S/_//}
 PKGREVISION=		2
 CATEGORIES=		www
-MASTER_SITES=		http://www.allesdurcheinander.de/nettools/bk_edit/
+MASTER_SITES=		http://www.vakuumverpackt.de/nettools/bk_edit/
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.allesdurcheinander.de/nettools/bk_edit/
+HOMEPAGE=		http://www.vakuumverpackt.de/nettools/bk_edit/
 COMMENT=		Bookmark manager and editor
 
 USE_TOOLS+=		bison
