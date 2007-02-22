@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/22 18:57:01 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:30:04 wiz Exp $
 #
 
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Improved procedures for linear mixed models with R
 
 R_PKGNAME=		lmm
 R_PKGVER=		0.3-2
-USE_LANGUAGES+=		c fortran
+USE_LANGUAGES=		c fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
