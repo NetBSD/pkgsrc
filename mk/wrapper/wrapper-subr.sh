@@ -1,4 +1,4 @@
-# $NetBSD: wrapper-subr.sh,v 1.9 2007/02/21 09:43:26 rillig Exp $
+# $NetBSD: wrapper-subr.sh,v 1.10 2007/02/22 14:54:32 rillig Exp $
 #
 # This file contains shell functions that are useful to the wrapper
 # scripts.
@@ -48,7 +48,7 @@ transform_pass() {
 
 # usage: transform_pass_with_warning [warning]
 transform_pass_with_warning() {
-	_warning=${1-"passing option $arg"}
+	_warning=${1-"passing unknown option $arg"}
 	msg_log "$wrapperlog" "WARNING: [$wrapsubr_name] $_warning"
 	$debug_log $wrapperlog "    ($wrapsubr_name) to: $arg [unchanged]"
 	addtocache=no
