@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 12:13:44 wiz Exp $
 
-DISTNAME=	String-ShellQuote-1.00
-PKGNAME=	p5-String-ShellQuote-1.00
-PKGREVISION=	2
+DISTNAME=	String-ShellQuote-1.03
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=String/}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/search?module=String::ShellQuote
+HOMEPAGE=	http://search.cpan.org/dist/String-ShellQuote/
 COMMENT=	Quote strings for passing through the shell
 
 PERL5_PACKLIST=		auto/String/ShellQuote/.packlist
