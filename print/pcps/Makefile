@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:03 wiz Exp $
 #
 
 DISTNAME=	pcps840
@@ -17,7 +17,7 @@ BUILD_TARGET=
 MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
 NO_CONFIGURE=	yes
 
-LICENSE=        pcps-license
+LICENSE=	pcps-license
 RESTRICTED=	This is shareware for your evaluation and subsequent payment
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

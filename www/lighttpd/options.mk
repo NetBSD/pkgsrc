@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2006/08/14 22:37:21 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2007/02/22 19:27:20 wiz Exp $
 
-PKG_OPTIONS_VAR =       PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=  bzip fam gdbm inet6 ldap lua mysql ssl memcache
+PKG_OPTIONS_VAR =	PKG_OPTIONS.lighttpd
+PKG_SUPPORTED_OPTIONS=	bzip fam gdbm inet6 ldap lua mysql ssl memcache
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"

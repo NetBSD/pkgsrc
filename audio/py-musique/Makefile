@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 20:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:06 wiz Exp $
 #
 
 DISTNAME=	pymusique-0.5
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.pyronecrophilia.com/content/pymusique/
@@ -12,10 +12,10 @@ HOMEPAGE=	http://www.pyronecrophilia.com/content/pymusique/
 COMMENT=	Interface to the iTunes Music Store
 
 RESTRICTED=	Possible legal problems due to iTunes access
-NO_SRC_ON_FTP=          ${RESTRICTED}
-NO_BIN_ON_FTP=          ${RESTRICTED}
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL

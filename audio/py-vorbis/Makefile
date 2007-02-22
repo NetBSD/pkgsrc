@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:28:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:06 wiz Exp $
 #
 
 DISTNAME=		pyvorbis-1.3
-PKGNAME=                ${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
 PKGREVISION=	2
 CATEGORIES=		audio python
 MASTER_SITES=		http://vorbis.com/files/1.0.1/unix/py/
@@ -11,8 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vorbis.com/
 COMMENT=		Python bindings for Vorbis library
 
-PY_PATCHPLIST=          yes
-PYDISTUTILSPKG=         yes
+PY_PATCHPLIST=		yes
+PYDISTUTILSPKG=		yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${PYTHONBIN} config_unix.py

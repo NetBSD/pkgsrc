@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/05 20:47:26 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:27:13 wiz Exp $
 #
 
 DISTNAME=		xen-3.0.3_0-src
@@ -37,11 +37,11 @@ PYTHON_VERSIONS_ACCEPTED= 24 23 22
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS=	ioemu/keymaps/convert-map
 
-SUBST_CLASSES+=         paths
-SUBST_STAGE.paths=      pre-configure
-SUBST_FILES.paths=      ioemu/vl.c
-SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
-SUBST_MESSAGE.paths=    Fixing hardcoded paths.
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	ioemu/vl.c
+SUBST_SED.paths=	-e "s|/usr/sbin|${PREFIX}/sbin|g"
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure

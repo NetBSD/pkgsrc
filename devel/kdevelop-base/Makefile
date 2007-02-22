@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.60 2007/01/26 03:30:26 markd Exp $
+# $NetBSD: Makefile,v 1.61 2007/02/22 19:26:21 wiz Exp $
 
 DISTNAME=	kdevelop-3.3.6
 PKGNAME=	kdevelop-base-3.3.6
 CATEGORIES=	devel kde
 
-HOMEPAGE=       http://www.kdevelop.org/
+HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"

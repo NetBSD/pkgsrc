@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.7 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: plugins.mk,v 1.8 2007/02/22 19:26:44 wiz Exp $
 #
 
 .include "../../mail/sylpheed-claws/Makefile.common"
@@ -9,11 +9,11 @@ CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}
 BUILD_DIRS=	${WRKDIR}/${DISTNAME}/src/plugins/${PLUGIN_NAME}
 INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/src/plugins/${PLUGIN_NAME}
 
-DEPENDS+=       sylpheed-claws>=${SYLPHEED_VERSION}:../../mail/sylpheed-claws
+DEPENDS+=	sylpheed-claws>=${SYLPHEED_VERSION}:../../mail/sylpheed-claws
 
 LIBTOOL_OVERRIDE=	../../../libtool
 
-CONFIGURE_ARGS+=        --disable-aspell
+CONFIGURE_ARGS+=	--disable-aspell
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-openssl
 CONFIGURE_ARGS+=	--disable-gpgme

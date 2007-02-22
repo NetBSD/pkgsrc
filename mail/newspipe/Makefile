@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:56 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:42 wiz Exp $
 #
 
 DISTNAME=		newspipe.1.1.9
@@ -14,9 +14,9 @@ COMMENT=		Read RSS/Atom feeds as email messages
 
 WRKSRC=			${WRKDIR}
 
-DEPENDS+=               ${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=               ${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
-DEPENDS+=               ${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	*.py

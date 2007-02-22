@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/12/06 22:31:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.44 2007/02/22 19:26:27 wiz Exp $
 #
 
 DISTNAME=		qemu-0.8.2
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 GCC_REQD+=		3.0
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-4*)
-USE_PKGSRC_GCC= 	yes
+USE_PKGSRC_GCC=	yes
 .endif
 
 CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}

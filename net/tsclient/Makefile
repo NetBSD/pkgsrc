@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/09/16 12:20:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2007/02/22 19:27:00 wiz Exp $
 #
 
 DISTNAME=		tsclient-0.132
@@ -10,8 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnomepro.com/tsclient/
 COMMENT=		GNOME2 Frontend for rdesktop
 
-DEPENDS+=       	rdesktop-[0-9]*:../../net/rdesktop
-DEPENDS+=       	vncviewer-[0-9]*:../../net/vncviewer
+DEPENDS+=	rdesktop-[0-9]*:../../net/rdesktop
+DEPENDS+=	vncviewer-[0-9]*:../../net/vncviewer
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config

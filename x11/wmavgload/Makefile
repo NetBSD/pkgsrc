@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:43 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:27 wiz Exp $
 
 DISTNAME=	wmavgload-0.7.0
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.windowmaker.info/pub/contrib/srcs/utils/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Another WindowMaker load gauge
 
-USE_IMAKE=      	YES
+USE_IMAKE=	YES
 
 NO_INSTALL_MANPAGES=	YES
 

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:00 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:27:11 wiz Exp $
 #
 
 DISTNAME=	fdgw-20020130
 CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.fml.org/pub/fdgw/source/
 
-MAINTAINER= 	fukachan@fml.org
+MAINTAINER=	fukachan@fml.org
 HOMEPAGE=	http://www.fml.org/software/fdgw/
-COMMENT= 	Toolkit to build a one-floppy NetBSD system
+COMMENT=	Toolkit to build a one-floppy NetBSD system
 
 _IMG_SRC_DIR =	${WRKSRC}/image.${MACHINE_ARCH}
 _IMG_DST_DIR =	${PREFIX}/fdgw/${MACHINE_ARCH}

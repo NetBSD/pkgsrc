@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.84 2006/10/04 22:04:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.85 2007/02/22 19:27:20 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -82,7 +82,7 @@ DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
 .  endif
 
 .if ${BINNAME} == "communicator"
-BUILD_DEPENDS=  binpatch>=1.0:../../pkgtools/binpatch
+BUILD_DEPENDS=	binpatch>=1.0:../../pkgtools/binpatch
 
 post-install:
 	${SH} ../../www/navigator/files/binpatch-x86-unknown-linux2.2-4.80.sh \
@@ -110,10 +110,10 @@ PKG_FAIL_REASON+=	"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .  endif
 NS_VERS=	4.79
 PKGNAME=	${BINNAME}-${NS_VERS}
-DISTUNAME=      sparc-sun-solaris2.5.1
-DIST_DIR_NAME=  supported/sunos551
-WRKNAME=        sparc-sun-solaris2.5.1
-VENDOR_NAME=    Solaris 2.5.1
+DISTUNAME=	sparc-sun-solaris2.5.1
+DIST_DIR_NAME=	supported/sunos551
+WRKNAME=	sparc-sun-solaris2.5.1
+VENDOR_NAME=	Solaris 2.5.1
 
 # powerpc is "unusual"
 .elif ${MACHINE_ARCH} == "powerpc"
@@ -194,7 +194,7 @@ SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/${DIST_SDIR_NAME}
 BUILD_DEFS+=	NS_ENCRYPTION
 DIST_SUBDIR=	netscape
 
-WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
+WRKSRC=		${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${NS_NAME}
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 

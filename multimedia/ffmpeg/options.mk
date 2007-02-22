@@ -2,8 +2,8 @@
 
 # Global and legacy options
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=  bktr lame mmx vorbis faac faad a52
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
+PKG_SUPPORTED_OPTIONS=	bktr lame mmx vorbis faac faad a52
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,12 +17,12 @@ PKG_SUPPORTED_OPTIONS=  bktr lame mmx vorbis faac faad a52
 
 .if !empty(MACHINE_ARCH:Mi386)
 .  if !empty(PKG_OPTIONS:Mmmx) && !empty(CC_VERSION:Mgcc*)
-CFLAGS+=                -fomit-frame-pointer
+CFLAGS+=		-fomit-frame-pointer
 .  else
-CONFIGURE_ARGS+=        --disable-mmx
+CONFIGURE_ARGS+=	--disable-mmx
 .  endif
 .else
-CONFIGURE_ARGS+=        --disable-mmx
+CONFIGURE_ARGS+=	--disable-mmx
 .endif
 
 ###

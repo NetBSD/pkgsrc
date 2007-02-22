@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2006/07/14 23:06:27 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/22 19:26:22 wiz Exp $
 #
 
 DISTNAME=	mk-20050405
 PKGNAME=	mk-files-20050405
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 
 CONFLICTS+=	bootstrap-mk-files-[0-9]*
 

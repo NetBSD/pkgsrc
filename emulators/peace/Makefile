@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/27 18:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/22 19:26:27 wiz Exp $
 #
 PEACE_VERSION=	0.0.20060701
 DISTNAME=	peace-${PEACE_VERSION}
@@ -11,7 +11,7 @@ COMMENT=	Support running Win32 executables
 
 DISTFILES+=	peace-${PEACE_VERSION}.tar.gz
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=peace/}
-ONLY_FOR_PLATFORM=      NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 DEPENDS+=	freetype2>=2.2.1:../../graphics/freetype2
 # bin/showstack requires perl5 and cross-i386-netbsdpe

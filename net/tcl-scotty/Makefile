@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/22 19:27:00 wiz Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -18,7 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 DIST_VERS=	2.1.11
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
 		--enable-multicast				\
 		--enable-gdmo --without-tk-config

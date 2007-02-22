@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/02/19 18:02:07 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2007/02/22 19:27:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript-esp
 PKG_SUPPORTED_OPTIONS=	x11 cups
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --without-x
+CONFIGURE_ARGS+=	--without-x
 .endif
 
 .if !empty(PKG_OPTIONS:Mcups)

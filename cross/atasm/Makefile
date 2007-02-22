@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/01/07 09:13:50 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:16 wiz Exp $
 #
 
 DISTNAME=	atasm104
-PKGNAME=        atasm-1.04
+PKGNAME=	atasm-1.04
 PKGREVISION=	2
 CATEGORIES=	devel cross emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atasm/}
@@ -14,8 +14,8 @@ COMMENT=	Cross-assembler for 6502 optimized to code for Atari 8 bit computers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=         ${WRKDIR}/${DISTNAME}/src
-NO_CONFIGURE=   YES
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
+NO_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc/atasm
 
