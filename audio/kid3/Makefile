@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/26 03:53:56 markd Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:30:03 wiz Exp $
 #
 
 DISTNAME=		kid3-0.8.1
@@ -11,7 +11,7 @@ COMMENT=		KDE ID3 tagger
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 CHECK_PORTABILITY_SKIP+=	make_qtonly.sh
 
