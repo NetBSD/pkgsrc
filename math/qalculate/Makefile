@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/02/20 15:08:47 adam Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/22 16:15:14 joerg Exp $
 
 DISTNAME=	libqalculate-0.9.5
 PKGNAME=	qalculate-0.9.5
@@ -23,6 +23,8 @@ SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	libqalculate.pc.in
 SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
 SUBST_STAGE.pthread=	post-patch
+
+PTHREAD_AUTO_VARS=	yes
 
 pre-configure:
 	cd ${WRKSRC}; autoconf
