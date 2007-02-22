@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1907 2007/02/20 10:32:09 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1908 2007/02/22 07:20:41 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -590,7 +590,7 @@ makedirs: ${WRKDIR}
 
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
-.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
+.  if ${WRKDIR_LOCKTYPE} != "none"
 	${RUN} ${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -fr ${WRKDIR}
 .  endif
 .endif
@@ -604,7 +604,7 @@ CREATE_WRKDIR_SYMLINK?=	yes
 .if defined(WRKOBJDIR) && !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
 makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
 ${.CURDIR}/${WRKDIR_BASENAME}:
-.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
+.  if ${WRKDIR_LOCKTYPE} != "none"
 	${RUN} ${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -f ${.TARGET}
 .  endif
 	${RUN} \
