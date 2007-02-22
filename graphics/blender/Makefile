@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/07/30 20:29:09 abs Exp $
+# $NetBSD: Makefile,v 1.58 2007/02/22 19:30:04 wiz Exp $
 
 DISTNAME=	blender-2.41
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 		http://download.blender.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.blender.org/
+HOMEPAGE=	http://www.blender.org/cms/Home.2.0.html
 COMMENT=	Fully integrated 3D graphics creation suite
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 WRKSRC=			${WRKDIR}/blender
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++ 
+USE_LANGUAGES=		c c++
 
 LDFLAGS+=		-lcrypto
 

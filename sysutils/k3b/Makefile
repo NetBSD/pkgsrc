@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/26 04:34:53 markd Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:30:06 wiz Exp $
 #
 
 DISTNAME=		k3b-1.0rc4
@@ -11,13 +11,13 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.k3b.org/
 COMMENT=		DVD and CD authoring program
 
-DEPENDS+=  		cdrdao-[0-9]*:../../sysutils/cdrdao
-DEPENDS+=  		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
+DEPENDS+=		cdrdao-[0-9]*:../../sysutils/cdrdao
+DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl pkg-config
-USE_LANGUAGES=          c c++
-USE_LIBTOOL=            yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.22 2007/02/20 20:46:19 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.23 2007/02/22 19:30:04 wiz Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -9,7 +9,7 @@ PATCHDIR=	${.CURDIR}/../../lang/php5/patches
 BUILD_DEFS+=		USE_INET6
 
 USE_LIBTOOL=		YES
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
