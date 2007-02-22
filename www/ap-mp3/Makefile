@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:01:26 wiz Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
 PKGNAME=	${DISTNAME:C|mod_|ap13-|}
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
-		http://software.tangent.org/download/
+		http://www.tangent.org/download/
 
 MAINTAINER=	grant@NetBSD.org
-HOMEPAGE=	http://tangent.org/media/
+HOMEPAGE=	http://tangent.org/index.pl?lastnode_id=478&node_id=380
 COMMENT=	Apache module for streaming mp3 files
 
 CONFLICTS=	ap-mp3-[0-9]*

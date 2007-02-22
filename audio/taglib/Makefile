@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/11/07 09:24:32 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:14 wiz Exp $
 #
 
 DISTNAME=	taglib-1.4
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 pre-build:
-	${CP} ${FILESDIR}/id3lib_strings.h ${WRKSRC}/taglib/toolkit/.
+	cp ${FILESDIR}/id3lib_strings.h ${WRKSRC}/taglib/toolkit/.
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/id3lib_strings.h ${DESTDIR}${PREFIX}/include/taglib/.
