@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 09:47:44 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:30:03 wiz Exp $
 #
 
 DISTNAME=		scummvm-tools-0.9.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://scummvm.sourceforge.net/
 COMMENT=		Conversion and compression tools for ScummVM
 
 WRKSRC=		${WRKDIR}/tools-0.9.0
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 DEPENDS+=	flac-[0-9]*:../../audio/flac
