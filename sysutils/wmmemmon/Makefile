@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2007/01/29 16:42:52 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:23:42 wiz Exp $
 #
 
 DISTNAME=	wmmemmon-1.0.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.sh.rim.or.jp/~ssato/src/
+MASTER_SITES=	http://seiichisato.jp/dockapps/src/
 
 MAINTAINER=	coto@core.de
-HOMEPAGE=	http://www.sh.rim.or.jp/~ssato/dockapp/
+HOMEPAGE=	http://seiichisato.jp/dockapps/\#wmmemmon
 COMMENT=	Dockapp to monitor memory and swap usages
 
-GNU_CONFIGURE= 	YES
+GNU_CONFIGURE=	YES
 
 post-extract:
 	${CP} ${FILESDIR}/mem_dragonfly.c ${WRKSRC}/src
