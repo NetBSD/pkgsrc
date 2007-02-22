@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2006/10/04 21:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/22 19:27:10 wiz Exp $
 #
 
-DISTNAME=       zsh-3.0.8
+DISTNAME=	zsh-3.0.8
 PKGREVISION=	1
 CATEGORIES=	shells
-MASTER_SITES=   ftp://ftp.rge.com/pub/shells/zsh/old/ \
+MASTER_SITES=	ftp://ftp.rge.com/pub/shells/zsh/old/ \
 		ftp://sunsite.auc.dk/pub/unix/shells/zsh/old/ \
 		ftp://ftp.uit.no/pub/unix/shells/zsh/old/ \
 		ftp://ftp.net.lut.ac.uk/zsh/old/ \

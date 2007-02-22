@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/05/23 10:30:32 rumble Exp $
+# $NetBSD: Makefile.common,v 1.16 2007/02/22 19:26:38 wiz Exp $
 
 DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
@@ -8,7 +8,7 @@ MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 
-DEPENDS+=       jikes>=1.22:../../lang/jikes
+DEPENDS+=	jikes>=1.22:../../lang/jikes
 DEPENDS+=	fastjar>=0.93:../../archivers/fastjar
 
 EXTRACT_USING=	gtar

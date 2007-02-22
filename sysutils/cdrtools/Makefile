@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:11 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:10 wiz Exp $
 
 DISTNAME=	cdrtools-2.01
 PKGREVISION=	4
@@ -24,8 +24,8 @@ BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
 .endif
 
 # avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=      ARCH=""
-MAKE_ENV+=      MAKEPROG="gmake"
+MAKE_ENV+=	ARCH=""
+MAKE_ENV+=	MAKEPROG="gmake"
 MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
 MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
 

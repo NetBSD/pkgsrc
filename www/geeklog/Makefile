@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/15 15:00:44 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:20 wiz Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -59,13 +59,13 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	${WRKDIR}/README ${WRKDIR}/createdb.php
 SUBST_FILES.paths+=	${WRKSRC}/config.php ${WRKSRC}/emailgeeklogstories
 SUBST_FILES.paths+=	${WRKSRC}/public_html/lib-common.php
-SUBST_SED.paths+=       -e 's,@GEEKLOG_DIR@,${GEEKLOG_DIR:Q},g'
-SUBST_SED.paths+=       -e 's,@GEEKLOG_EXAMPLESDIR@,${GEEKLOG_EXAMPLESDIR:Q},g'
-SUBST_SED.paths+=       -e 's,@GEEKLOG_PUBDIR@,${GEEKLOG_PUBDIR:Q},g'
-SUBST_SED.paths+=       -e 's,@GEEKLOG_SITESUBDIR@,${GEEKLOG_SITESUBDIR:Q},g'
-SUBST_SED.paths+=       -e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
-SUBST_SED.paths+=       -e 's,@PREFIX@,${PREFIX:Q},g'
-SUBST_STAGE.paths=      post-configure
+SUBST_SED.paths+=	-e 's,@GEEKLOG_DIR@,${GEEKLOG_DIR:Q},g'
+SUBST_SED.paths+=	-e 's,@GEEKLOG_EXAMPLESDIR@,${GEEKLOG_EXAMPLESDIR:Q},g'
+SUBST_SED.paths+=	-e 's,@GEEKLOG_PUBDIR@,${GEEKLOG_PUBDIR:Q},g'
+SUBST_SED.paths+=	-e 's,@GEEKLOG_SITESUBDIR@,${GEEKLOG_SITESUBDIR:Q},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_STAGE.paths=	post-configure
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/geeklog.conf

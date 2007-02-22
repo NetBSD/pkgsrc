@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/01/07 09:14:10 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2007/02/22 19:27:08 wiz Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -37,7 +37,7 @@ ASMFLAG=	-DPORTABLE -DMPORTABLE
 .include "../../mk/endian.mk"
 
 .if (${MACHINE_ENDIAN} == "big")
-CFLAGS+=        -DHIGHFIRST
+CFLAGS+=	-DHIGHFIRST
 .endif
 
 BUILD_DEFS+=	ASMFLAG

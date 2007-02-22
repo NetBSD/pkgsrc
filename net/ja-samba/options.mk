@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2006/05/31 18:22:24 ghen Exp $
+# $NetBSD: options.mk,v 1.7 2007/02/22 19:26:53 wiz Exp $
 
 # Global and legacy options
 
@@ -69,22 +69,22 @@ CONFIGURE_ARGS+=	--without-ssl
 ###
 ### Determine the proper name for the winbind and WINS NSS modules.
 ###
-NSS_WINBIND.${OPSYS}?=  libnss_winbind.so
-NSS_WINS.${OPSYS}?=     libnss_wins.so
+NSS_WINBIND.${OPSYS}?=	libnss_winbind.so
+NSS_WINS.${OPSYS}?=	libnss_wins.so
 
-NSS_WINBIND.AIX=        WINBIND
-NSS_WINS.AIX=           # empty
+NSS_WINBIND.AIX=	WINBIND
+NSS_WINS.AIX=		# empty
 
 NSS_WINBIND.DragonFly=	# empty
 NSS_WINS.DragonFly=	# empty
 
-NSS_WINBIND.IRIX=       libns_winbind.so
-NSS_WINS.IRIX=          libns_wins.so
+NSS_WINBIND.IRIX=	libns_winbind.so
+NSS_WINS.IRIX=		libns_wins.so
 
 .if !empty(MACHINE_PLATFORM:MFreeBSD-5.*)
-NSS_WINBIND.FreeBSD=    nss_winbind.so
-NSS_WINS.FreeBSD=       nss_wins.so
+NSS_WINBIND.FreeBSD=	nss_winbind.so
+NSS_WINS.FreeBSD=	nss_wins.so
 .endif
 
-NSS_WINBIND=            ${NSS_WINBIND.${OPSYS}}
-NSS_WINS=               ${NSS_WINS.${OPSYS}}
+NSS_WINBIND=		${NSS_WINBIND.${OPSYS}}
+NSS_WINS=		${NSS_WINS.${OPSYS}}

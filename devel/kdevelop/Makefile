@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2007/01/26 03:31:32 markd Exp $
+# $NetBSD: Makefile,v 1.65 2007/02/22 19:26:21 wiz Exp $
 
 DISTNAME=	kdevelop-3.3.6
 CATEGORIES=	devel kde meta-pkgs
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=       http://www.kdevelop.org/
+HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	Integrated Development Environment for Unix/X11/KDE
 
 DEPENDS+=	c-cpp-reference>=2.0.2nb4:../../devel/c-cpp-reference

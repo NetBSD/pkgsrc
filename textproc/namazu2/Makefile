@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:27:14 wiz Exp $
 
 DISTNAME=	namazu-2.0.16
 CATEGORIES=	japanese textproc www
@@ -22,7 +22,7 @@ USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+= 	--localstatedir=${DATADIR:Q} \
+CONFIGURE_ARGS+=	--localstatedir=${DATADIR:Q} \
 			--libexecdir=${PREFIX}/libexec/cgi-bin \
 			--sysconfdir=${PKG_SYSCONFBASE:Q}
 

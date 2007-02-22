@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2006/10/12 21:04:27 tv Exp $
+# $NetBSD: Makefile.common,v 1.40 2007/02/22 19:26:44 wiz Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -27,7 +27,7 @@ MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
 		SMRSH_CMDDIR=${SMRSH_CMDDIR:Q}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    SMRSH_CMDDIR
+BUILD_DEFS+=	SMRSH_CMDDIR
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_TOOLS+=	gm4

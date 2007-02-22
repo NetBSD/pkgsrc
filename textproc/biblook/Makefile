@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:27:13 wiz Exp $
 #
 
 DISTNAME=	biblook
@@ -15,8 +15,8 @@ MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	CC=${CC:Q}
 
 # override definitions in the package's Makefile via command line
-MAKE_FLAGS+=    OPT="${CFLAGS} -Dunix"
-MAKE_FLAGS+=    DEF_H_FILES="-DHAVE_STDLIB_H -DHAVE_NETINET_IN_H"
-MAKE_FLAGS+=    DEF_MORE='-DMOREPATH="\"/usr/bin/more\"" -DMORE="\"more\""'
+MAKE_FLAGS+=	OPT="${CFLAGS} -Dunix"
+MAKE_FLAGS+=	DEF_H_FILES="-DHAVE_STDLIB_H -DHAVE_NETINET_IN_H"
+MAKE_FLAGS+=	DEF_MORE='-DMOREPATH="\"/usr/bin/more\"" -DMORE="\"more\""'
 
 .include "../../mk/bsd.pkg.mk"

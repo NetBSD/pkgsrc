@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/15 14:58:20 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:26:33 wiz Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -9,7 +9,7 @@ PKGREVISION=	2
 DISTFILES=		TheCallyDemo-0.9.1b.zip \
 			cal3d-${CAL3D_VERSION}${EXTRACT_SUFX}
 
-COMMENT=	        Tools and demos for cal3d library
+COMMENT=	Tools and demos for cal3d library
 
 USE_TOOLS+=		automake
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:27:18 wiz Exp $
 #
 
 DISTNAME=	oroborus_2.0.12-1
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oroborus.org/
 COMMENT=	Small and simple window manager for X
 
-WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES
 
 BUILDLINK_DEPMETHOD.libXt?=	build
