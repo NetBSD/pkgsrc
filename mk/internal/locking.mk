@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.6 2007/02/20 22:11:10 rillig Exp $
+# $NetBSD: locking.mk,v 1.7 2007/02/22 07:20:42 rillig Exp $
 #
 # User-settable variables:
 #
@@ -16,6 +16,9 @@
 #	Default value: none
 #	Recommended: sleep
 #
+# See also: PKGSRC_LOCKTYPE.
+#
+
 # This file provides the following .USE targets:
 #
 # acquire-lock
@@ -45,7 +48,7 @@ _LOCKVARS=		WRKDIR_LOCKTYPE LOCALBASE_LOCKTYPE
 .for v in ${_LOCKVARS}
 _OK=	no
 .  for t in none once sleep
-.    if ${PKGSRC_LOCKTYPE} == "${t}"
+.    if ${${v}} == "${t}"
 _OK=	yes
 .    endif
 .  endfor
