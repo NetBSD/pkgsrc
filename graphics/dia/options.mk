@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2006/06/11 16:55:35 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2007/02/22 19:01:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dia
 #PKG_SUPPORTED_OPTIONS=	gnome cairo
 PKG_SUPPORTED_OPTIONS=	gnome
-PKG_SUGGESTED_OPTIONS=	gnome 
+PKG_SUGGESTED_OPTIONS=	gnome
 
 .include "../../mk/bsd.options.mk"
 

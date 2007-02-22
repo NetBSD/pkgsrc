@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/15 20:45:49 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:01:23 wiz Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
@@ -30,7 +30,7 @@ post-fetch:
 			${ECHO} "It appears that real.com has made a new version ($$ver) available so this" ; \
 			${ECHO} "package will need updating to work correctly.  That likely the reason for" ; \
 			${ECHO} "the checksum failure." ; \
-		fi 
+		fi
 
 
 .include "../../emulators/suse_linux/Makefile.application"

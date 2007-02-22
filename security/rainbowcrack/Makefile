@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/21 07:47:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:01:24 wiz Exp $
 #
 
 PKGNAME=		rainbowcrack-1.2
@@ -10,7 +10,7 @@ DISTFILES=		rainbowcrack-1.2-src.zip \
                         rainbowcrack-1.2-openbsd-diffs.tar.gz
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://www.antsight.com/zsl/rainbowcrack
+HOMEPAGE=		http://www.antsight.com/zsl/rainbowcrack/
 COMMENT=		Hash cracker
 
 BUILD_DIRS=		src

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/21 17:16:34 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:17 wiz Exp $
 #
 
 DISTNAME=	eric-3.8.1
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.die-offenbachs.de/detlev/eric3.html
+HOMEPAGE=	http://www.die-offenbachs.de/detlev/eric.html
 COMMENT=	Python IDE
 
 DEPENDS+=	${PYPKGPREFIX}-qt3-modules>=3.11:../../x11/py-qt3-modules

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/22 22:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:01:13 wiz Exp $
 #
 
 DISTNAME=		bmp-musepack-1.1
@@ -14,6 +14,7 @@ COMMENT=		BMP plugin for Musepack (mpc) files
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../audio/libmusepack/buildlink3.mk"
