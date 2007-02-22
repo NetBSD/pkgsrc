@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2006/06/20 19:54:14 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:47 wiz Exp $
 #
 
 DISTNAME=	rpy-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	math python
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=rpy/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rpy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://rpy.sourceforge.net/
+HOMEPAGE=	http://rpy.sourceforge.net/
 COMMENT=	R interface for Python
 
 PYDISTUTILSPKG=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/01/02 12:42:45 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2007/02/22 19:27:26 wiz Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -32,10 +32,10 @@ CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
 .if exists(./descr)
-PLIST_SUBST+=           WITH_LINKS="@comment "
+PLIST_SUBST+=		WITH_LINKS="@comment "
 .else
 CONFIGURE_ARGS+=	--with-links
-PLIST_SUBST+=           WITH_LINKS=""
+PLIST_SUBST+=		WITH_LINKS=""
 .endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:35 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:26:08 wiz Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES= 	http://www.dotfiles.com/software/wmmp3/
+MASTER_SITES=	http://www.dotfiles.com/software/wmmp3/
 
 MAINTAINER=	rxg@NetBSD.org
 # HOMEPAGE=	http://www.dotfiles.com/software/wmmp3/

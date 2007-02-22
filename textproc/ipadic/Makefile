@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/29 06:22:19 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:27:14 wiz Exp $
 #
 
 DISTNAME=	ipadic-2.7.0
@@ -6,8 +6,8 @@ PKGREVISION=	2
 CATEGORIES=	japanese textproc
 MASTER_SITES=	http://chasen.aist-nara.ac.jp/stable/ipadic/
 
-MAINTAINER=    	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=      	http://chasen.aist-nara.ac.jp/
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+HOMEPAGE=	http://chasen.aist-nara.ac.jp/
 COMMENT=	Japanese Morphological Dictionary for ChaSen
 
 GNU_CONFIGURE=	yes

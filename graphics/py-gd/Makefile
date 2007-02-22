@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/22 19:26:35 wiz Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	${PYPKGPREFIX}-gd-1.3
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}
 BUILD_TARGET=	default
 
 PYDISTUTILSPKG= yes
-PYBINMODULE=    yes
+PYBINMODULE=	yes
 
 post-patch:
 	${SED} 's+@LOCALBASE@+${LOCALBASE}+g' ${FILESDIR}/Setup.in > ${WRKSRC}/setup.py

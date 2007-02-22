@@ -37,4 +37,4 @@ system.  Features include:
   * Datebook support for "By Day" reoccurring eventseven when its on the last
     day of the month, and not the 4th.  i.e. Try adding a monthly repeating
     appointment "By Day" on the 4th week ofa month when there is no 5th
-    occurrence of that day in the month 
+    occurrence of that day in the month

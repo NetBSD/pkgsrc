@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/07 11:57:54 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:26:23 wiz Exp $
 #
 
 DISTNAME=	Perl6-Slurp-0.03
@@ -12,7 +12,7 @@ COMMENT=	Implements the Perl 6 'slurp' built-in
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS+=       p5-Perl6-Export-[0-9]*:../../devel/p5-Perl6-Export
+DEPENDS+=	p5-Perl6-Export-[0-9]*:../../devel/p5-Perl6-Export
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Perl6/Slurp/.packlist

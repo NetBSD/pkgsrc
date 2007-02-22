@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/01/17 03:11:19 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2007/02/22 19:26:51 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -23,7 +23,7 @@ VLC_VER=		0.8.5
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=        --disable-vcd
+CONFIGURE_ARGS+=	--disable-vcd
 .endif
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
@@ -70,8 +70,8 @@ pre-install:
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${X11BASE}/lib/X11/fonts/TTF/luximb.ttf
 
-SUBST_CLASSES+=         oss
-SUBST_STAGE.oss=        post-patch
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	post-patch
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_FILES.oss+=	modules/access/v4l/v4l.c
 SUBST_FILES.oss+=	modules/audio_output/oss.c

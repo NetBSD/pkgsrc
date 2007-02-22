@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:01 wiz Exp $
 #
 
 DISTNAME=		whoson-2.03
@@ -18,8 +18,8 @@ CONFIGURE_ARGS+=	--with-config="${PKG_SYSCONFDIR}/whoson.conf"
 
 RCD_SCRIPTS=		whosond
 OWN_DIRS+=		${WHOSOND_CHROOT}
-EXDIR=		    	${PREFIX}/share/examples/whoson
-CONF_FILES=    		${EXDIR}/whoson.conf ${PKG_SYSCONFDIR}/whoson.conf
+EXDIR=		${PREFIX}/share/examples/whoson
+CONF_FILES=	${EXDIR}/whoson.conf ${PKG_SYSCONFDIR}/whoson.conf
 
 # Run this here as whoson's 'install' target will install if not present
 pre-build:

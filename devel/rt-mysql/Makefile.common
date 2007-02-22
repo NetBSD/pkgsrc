@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.13 2006/10/04 21:36:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2007/02/22 19:26:25 wiz Exp $
 
-DISTNAME=      	rt-2-0-15
+DISTNAME=	rt-2-0-15
 CATEGORIES=	devel
 MASTER_SITES=	http://www.bestpractical.com/rt/release/
 

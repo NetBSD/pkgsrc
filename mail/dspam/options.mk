@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2007/01/18 14:22:38 obache Exp $
+# $NetBSD: options.mk,v 1.19 2007/02/22 19:26:41 wiz Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -173,9 +173,9 @@ CONFIGURE_ARGS+=	--enable-domain-scale
 ###
 BUILD_DEFS+=		DSPAM_PSFLAGS
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
-DSPAM_PSFLAGS?=         -deaf
+DSPAM_PSFLAGS?=		-deaf
 .else
-DSPAM_PSFLAGS?=         aux
+DSPAM_PSFLAGS?=		aux
 .endif
 
 ###

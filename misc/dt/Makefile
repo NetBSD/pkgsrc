@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2004/12/03 15:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/22 19:26:49 wiz Exp $
 #
 
 DISTNAME=	dt-1.1.7
 PKGREVISION=	3
 CATEGORIES=	misc
-MASTER_SITES=   ${MASTER_SITE_LOCAL}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	fredb@NetBSD.org
 COMMENT=	Virtual consoles for NetBSD/mac68k (and macppc?)

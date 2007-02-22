@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/26 13:44:02 schwarz Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:09 wiz Exp $
 #
 
 DISTNAME=		glimmer213
@@ -12,7 +12,7 @@ COMMENT=		System for finding genes in microbial DNA
 
 USE_LANGUAGES=		c c++
 
-WRKSRC=                 ${WRKDIR}/glimmer2.13
+WRKSRC=			${WRKDIR}/glimmer2.13
 INSTALLATION_DIRS=	bin
 
 do-install:

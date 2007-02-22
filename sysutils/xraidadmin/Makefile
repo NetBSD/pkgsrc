@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:13 wiz Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3.1archive
@@ -15,9 +15,9 @@ LICENSE=		apple-admin-license
 
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=  	${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=  	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/RAID\ Admin\ 1.3.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 12:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:10 wiz Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -28,8 +28,8 @@ USE_LANGUAGES=	c c++ fortran
 
 .include "../../math/octave/octave.mk"
 
-PLIST_SUBST+=   OCT_LOCALVERFCNFILEDIR=${OCT_LOCALVERFCNFILEDIR:S/${LOCALBASE}\///}
-PLIST_SUBST+=   OCT_LOCALVEROCTFILEDIR=${OCT_LOCALVEROCTFILEDIR:S/${LOCALBASE}\///}
+PLIST_SUBST+=	OCT_LOCALVERFCNFILEDIR=${OCT_LOCALVERFCNFILEDIR:S/${LOCALBASE}\///}
+PLIST_SUBST+=	OCT_LOCALVEROCTFILEDIR=${OCT_LOCALVEROCTFILEDIR:S/${LOCALBASE}\///}
 
 .include "../../cad/libwcalc/buildlink3.mk"
 .include "../../math/octave/buildlink3.mk"

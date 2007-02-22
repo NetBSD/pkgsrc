@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/15 20:32:57 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:34 wiz Exp $
 
 DISTNAME=		camlimages-2.2.0
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=		Image processing library for Objective Caml
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.0.6
 
-WRKSRC=                 ${WRKDIR}/camlimages-2.2
+WRKSRC=			${WRKDIR}/camlimages-2.2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

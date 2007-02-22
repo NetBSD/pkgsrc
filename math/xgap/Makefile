@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/19 20:10:29 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:26:47 wiz Exp $
 #
 
 DISTNAME=	xgap4r16
@@ -12,7 +12,7 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/xgap.html
 COMMENT=	GUI for GAP
 
-WRKSRC=         ${WRKDIR}/${GAP_PKG_NAME}
+WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	default
 
