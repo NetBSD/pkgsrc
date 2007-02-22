@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/05 05:37:43 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 20:23:08 drochner Exp $
 #
 
 DISTNAME=		gopchop-1.1.7
@@ -18,6 +18,11 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt pkg-config
 BROKEN_GETTEXT_DETECTION=	yes
+
+# XXX make this an option?
+.include "../../devel/SDL/buildlink3.mk"
+#.else
+#CONFIGURE_ARGS+=	--disable-sdl
 
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
