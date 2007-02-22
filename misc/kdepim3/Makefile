@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2007/02/03 01:52:55 markd Exp $
+# $NetBSD: Makefile,v 1.73 2007/02/22 13:53:43 joerg Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 PKGREVISION=	1
@@ -7,7 +7,7 @@ COMMENT=	Personal Information Management tools for the KDE desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_TOOLS+=		bison gawk perl:run
+USE_TOOLS+=		bison flex gawk perl:run
 
 BUILDLINK_API_DEPENDS.gpgme+=     gpgme>=0.4.5
 
