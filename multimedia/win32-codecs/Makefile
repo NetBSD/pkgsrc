@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/10/31 22:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/22 19:20:41 wiz Exp $
 #
 
 DISTNAME=	windows-all-20061022
@@ -16,7 +16,7 @@ DISTFILES+=	qtextras-20041107.tar.bz2
 DISTFILES+=	rp9codecs-win32-20050115.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
+HOMEPAGE=	http://www.mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	Huge compilation of Win32 binary codecs
 
 USE_LANGUAGES=	# empty
@@ -29,7 +29,7 @@ NO_CONFIGURE=	yes
 LICENSE=	mplayer-codec-license
 RESTRICTED=	Unsure of codec's license
 NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=  ${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
