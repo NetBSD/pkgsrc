@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/01 16:28:14 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/22 19:30:04 wiz Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -11,7 +11,7 @@ COMMENT=	X program for image warping and dissolving
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-gtkmorph=no
-USE_LANGUAGES+=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

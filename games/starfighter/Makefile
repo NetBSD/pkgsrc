@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/09/09 02:42:01 obache Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:30:03 wiz Exp $
 #
 
 DISTNAME=	starfighter-1.1-1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.parallelrealities.co.uk/starfighter.php
 COMMENT=	Old school 2D shoot them up
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES+=	c++
+USE_LANGUAGES=	c++
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-1$//}
 
 MAKE_FILE=	makefile

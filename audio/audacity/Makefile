@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/01/13 21:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2007/02/22 19:30:02 wiz Exp $
 
 DISTNAME=	audacity-src-1.2.4b
 PKGNAME=	audacity-1.2.4b
@@ -15,7 +15,7 @@ DEPENDS+=	zip>=0.0:../../archivers/zip
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf gmake msgfmt
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio
 CONFIGURE_ARGS+=	--with-id3=system

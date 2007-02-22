@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/01/22 14:05:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.64 2007/02/22 19:30:06 wiz Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -20,8 +20,8 @@ LICENSE=		opera-850-license
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_CONFIGURE=           YES
-USE_LANGUAGES=          # empty
+NO_CONFIGURE=		YES
+USE_LANGUAGES=		# empty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -83,7 +83,7 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 .endif
 
 .if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
-NO_BUILD=               YES
+NO_BUILD=		YES
 
 SUBST_CLASSES+=		opera
 SUBST_STAGE.opera=	post-build

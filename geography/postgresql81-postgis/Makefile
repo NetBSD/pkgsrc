@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/01/12 18:11:49 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:30:03 wiz Exp $
 
 DISTNAME=		postgis-${VERSION}
 VERSION=		1.2.1
 PKGNAME=		postgresql81-postgis-${VERSION}
-MASTER_SITES=	  	http://postgis.refractions.net/download/
+MASTER_SITES=		http://postgis.refractions.net/download/
 CATEGORIES=		databases geography
 
 MAINTAINER=		gdt@NetBSD.org
@@ -16,7 +16,7 @@ CONFLICTS=		postgis-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib

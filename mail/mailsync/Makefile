@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/07 09:13:58 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/22 19:30:04 wiz Exp $
 #
 
 DISTNAME=	mailsync_5.2.1.orig
@@ -13,7 +13,7 @@ COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}/include

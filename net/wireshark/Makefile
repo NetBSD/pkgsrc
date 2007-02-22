@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/07 15:18:23 tron Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:30:05 wiz Exp $
 
 DISTNAME=		wireshark-0.99.5
 CATEGORIES=		net
@@ -12,7 +12,7 @@ COMMENT=		Network protocol analyzer
 
 CONFLICTS+=		ethereal-[0-9]*
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config
 
 USE_LIBTOOL=		YES
@@ -20,7 +20,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gtk2
-CONFIGURE_ARGS+=        --enable-static=no
+CONFIGURE_ARGS+=	--enable-static=no
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk2}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}

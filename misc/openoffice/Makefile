@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2007/02/22 19:30:05 wiz Exp $
 
 DISTNAME=		openoffice-1.1.5
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.5/}
 DISTFILES=		OOo_1.1.5_src.tar.gz
 DISTFILES+=		gpc231.tar.Z
 DISTFILES+=		ooo_addons_115.tar.bz2
-SITES.gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
+SITES.gpc231.tar.Z=	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
 SITES.ooo_addons_115.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=			${WRKDIR}/OOo_1.1.5/config_office
 GCC_REQD+=		3.0
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,8 +38,8 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--enable-mozilla --disable-java
-CONFIGURE_ARGS+= 	--with-lang="AFRIK","ARAB","BASQUE","CHINSIM","CHINTRAD","CZECH","DAN","DTCH","ENUS","ESTONIAN","FINN","FREN","GAL","GREEK","HEBREW","HUNG","ITAL","JAPN","KOREAN","LITHUANIAN","NORBOK","NORNYN","NSOTHO","POL","PORT","PORTBR","RUSS","SLOVAK","SLOVENIAN","SPAN","SWED","TURK","WELSH","ZULU"
+CONFIGURE_ARGS+=	--enable-mozilla --disable-java
+CONFIGURE_ARGS+=	--with-lang="AFRIK","ARAB","BASQUE","CHINSIM","CHINTRAD","CZECH","DAN","DTCH","ENUS","ESTONIAN","FINN","FREN","GAL","GREEK","HEBREW","HUNG","ITAL","JAPN","KOREAN","LITHUANIAN","NORBOK","NORNYN","NSOTHO","POL","PORT","PORTBR","RUSS","SLOVAK","SLOVENIAN","SPAN","SWED","TURK","WELSH","ZULU"
 CONFIGURE_ARGS+=	--with-dict=ALL
 
 TEMP?=			${WRKDIR}
@@ -49,7 +49,7 @@ PLIST_SRC+=		PLIST.common
 PLIST_SUBST+=		OPENOFFICE_DLLSUFFIX=${OPENOFFICE_DLLSUFFIX:Q}
 PLIST_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION:Q}
 .if exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC+=             ${PKGDIR}/PLIST.${OPSYS}
+PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
 . endif
 MESSAGE_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION}
 

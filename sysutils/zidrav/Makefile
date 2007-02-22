@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/07 09:14:13 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:30:06 wiz Exp $
 #
 
 DISTNAME=	zidrav4unix-1.2.0
@@ -10,7 +10,7 @@ MAINTAINER=	tnn@netilium.org
 HOMEPAGE=	http://sourceforge.net/projects/zidrav
 COMMENT=	File corruption detection and repair program
 
-USE_LANGUAGES=  c c++
+USE_LANGUAGES=	c c++
 BUILD_TARGET=	zidrav
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
