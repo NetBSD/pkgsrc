@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6019 2007/02/22 20:03:48 wiz Exp $
+$NetBSD: TODO,v 1.6020 2007/02/22 20:36:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -974,8 +974,6 @@ Suggested package updates
 	o solfege-3.6.4
 	o sope-4.5.5
 	o sound-juicer-2.16.2
-	o source-highlight-2.3 [pkg/32325]
-	o source-highlight-2.5.1
 	o sox-13.0.0
 	o spim-7.2.1
 	o spl-1.0pre3 [pkg/35308]
