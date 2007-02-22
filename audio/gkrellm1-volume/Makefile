@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:01:13 wiz Exp $
 
 DISTNAME=	volume-0.8
 PKGNAME=	gkrellm-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://gkrellm.luon.net/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gkrellm.luon.net/volume.phtml
-COMMENT=	gkrellm volume mixer plugin
+COMMENT=	GKrellM volume mixer plugin
 
 WRKSRC=			${WRKDIR}/volume
 PTHREAD_OPTS=		require

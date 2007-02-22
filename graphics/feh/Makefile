@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.30 2007/02/15 14:58:20 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/02/22 19:01:19 wiz Exp $
 #
 
 DISTNAME=	feh-1.3.4
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.linuxbrit.co.uk/downloads/
+MASTER_SITES=	http://linuxbrit.co.uk/downloads/
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://www.linuxbrit.co.uk/feh/
+HOMEPAGE=	http://linuxbrit.co.uk/feh/
 COMMENT=	Advanced image viewer
 
 DEPENDS+=	wget-[0-9]*:../../net/wget

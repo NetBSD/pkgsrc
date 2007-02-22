@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:01:22 wiz Exp $
 #
 
 DISTNAME=		qgreylist-0.3
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.jonatkins.com/page/software/qgreylist/
+HOMEPAGE=		http://www.jonatkins.com/page/software/qgreylist
 COMMENT=		Simple greylisting for qmail
 
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail

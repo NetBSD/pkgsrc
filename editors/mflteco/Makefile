@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/06 21:14:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/22 19:01:18 wiz Exp $
 #
 
 PKGNAME=		mflteco-19920331
@@ -28,7 +28,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tecorc.mch ${XMPL}
 
 
-pre-patch: 
+pre-patch:
 	cp ${WRKSRC}/Makefile.sun4 ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"

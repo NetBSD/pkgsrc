@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/28 15:24:21 taca Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:01:26 wiz Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.rubyist.net/~rubikitch/archive/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.rubyist.net/~rubikitch/computer/rt/
+HOMEPAGE=	http://www.rubyist.net/~rubikitch/computer/rttool/
 COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 
 CONFLICTS+=	ruby[1-9][0-9]-rttool-*

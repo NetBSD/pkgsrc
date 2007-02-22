@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/14 13:36:53 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:01:27 wiz Exp $
 #
 
 DISTNAME=	flup-r2030
@@ -8,7 +8,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://www.saddi.com/software/flup/dist/
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.saddi.com/software/flup/
+HOMEPAGE=	http://trac.saddi.com/flup
 COMMENT=	WSGI support modules
 
 PKG_DESTDIR_SUPPORT=	# empty
