@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2006/04/07 19:54:17 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/22 20:35:34 wiz Exp $
 #
 
-DISTNAME=	source-highlight-2.1.2
-PKGREVISION=	1
+DISTNAME=	source-highlight-2.5
 SVR4_PKGNAME=	srchl
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=src-highlite/}
@@ -11,10 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/src-highlite/
 COMMENT=	Highlight syntax of various languages source into HTML document
 
+DEPENDS+=	exctags-[0-9]*:../../devel/exctags
+
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
+CONFIGURE_ENV+=	CTAGS=${LOCALBASE}/bin/exctags
 
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 
 # this is only really needed for the 'test' target
 USE_TOOLS+=	gmake gsed
