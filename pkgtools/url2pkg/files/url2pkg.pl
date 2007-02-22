@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.4 2007/01/12 21:35:52 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.5 2007/02/22 08:21:53 rillig Exp $
 #
 
 use strict;
@@ -333,7 +333,8 @@ sub adjust_package_from_extracted_distfiles()
 		}		
 		$abs_wrksrc = "${abs_wrkdir}/$files[0]";
 	} else {
-		push(@build_vars, ["WRKSRC", "\${WRKDIR}"]);
+		push(@build_vars, ["WRKSRC", "\${WRKDIR}" .
+		    ((@files > 1) ? " # More than one possibility -- please check manually." : "")]);
 		$abs_wrksrc = $abs_wrkdir;
 	}
 
