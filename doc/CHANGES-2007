@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.438 2007/02/22 12:26:44 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.439 2007/02/22 12:49:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -878,3 +878,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-Text-Emoticon-MSN to 0.04 [wiz 2007-02-22]
 	Updated textproc/p5-Text-Shellwords to 1.08 [wiz 2007-02-22]
 	Updated devel/p5-version to 0.70 [wiz 2007-02-22]
+	Added textproc/p5-XML-Filter-DOMFilter-LibXML version 0.02 [seb 2007-02-22]
