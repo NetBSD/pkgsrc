@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/08/06 06:19:33 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 12:24:17 wiz Exp $
 #
 
-DISTNAME=		Text-Shellwords-1.07
+DISTNAME=		Text-Shellwords-1.08
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
