@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/22 18:54:11 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:30:05 wiz Exp $
 #
 
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Object-oriented Framework for Geostatistical Modeling in S+
 
 R_PKGNAME=		sgeostat
 R_PKGVER=		1.0-19
-USE_LANGUAGES+=		c fortran
+USE_LANGUAGES=		c fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
