@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/31 00:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:01:28 wiz Exp $
 
 DISTNAME=		xdm3d-1.0
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.spade.com/linux/XBanner/
+HOMEPAGE=		http://www.hijinks.com/~spade/linux/XBanner/
 COMMENT=		Replacement for xdm with 3D effects
 
 BROKEN_IN=		pkgsrc-2006Q1 pkgsrc-2006Q4

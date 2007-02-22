@@ -12,9 +12,9 @@ It includes:
  Karbon14   - a vector-drawing application
  KPlato     - a technology preview of a new project management application
 
-Additionally, KOffice includes robust embeddable objects: 
+Additionally, KOffice includes robust embeddable objects:
  Kugar      - report generator (deprecated)
  KChart     - full-featured charting engine
  KFormula   - mathematical formula handling
 as well as a built-in thesaurus (KThesaurus) and support for many different
-file formats. 
+file formats.

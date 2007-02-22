@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/07 12:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:13 wiz Exp $
 #
 
 DISTNAME=	darkice-0.17.1
@@ -29,7 +29,8 @@ CONF_FILES=	${EGDIR}/darkice.conf ${PKG_SYSCONFDIR}/darkice.conf
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${EGDIR}/darkice.conf
 	${INSTALL_PROGRAM} ${WRKSRC}/src/darkice ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/${PKGMANDIR}/man1

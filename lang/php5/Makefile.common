@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.23 2007/02/20 20:46:19 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.24 2007/02/22 19:01:21 wiz Exp $
 
 .if !defined(DISTNAME)
 DISTNAME=		php-${PHP_BASE_VERS}
 DIST_SUBDIR=		${DISTNAME}
 .endif
-CATEGORIES+=		www php5
+CATEGORIES+=		www
 
 .if !defined(PECL_VERSION)
 MASTER_SITES?=		http://www.php.net/distributions/ \
