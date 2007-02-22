@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:52 wiz Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net games
 MASTER_SITES=	ftp://ftp.dworkin.nl/pub/dgd/
 
-MAINTAINER=     sco@openface.ca
+MAINTAINER=	sco@openface.ca
 HOMEPAGE=	http://www.dworkin.nl/dgd/
 COMMENT=	Object-oriented programmable server
 

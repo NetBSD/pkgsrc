@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2006/05/18 19:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:51 wiz Exp $
 #
 
-DISTNAME=       yrolo-1.1
+DISTNAME=	yrolo-1.1
 PKGREVISION=	4
 CATEGORIES=	misc
-MASTER_SITES=   http://www.muquit.com/muquit/software/yrolo/
+MASTER_SITES=	http://www.muquit.com/muquit/software/yrolo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.muquit.com/muquit/software/yrolo/yrolo.html

@@ -1,4 +1,4 @@
-# $NetBSD: arch.mk,v 1.10 2006/06/15 15:32:35 joerg Exp $
+# $NetBSD: arch.mk,v 1.11 2007/02/22 19:27:02 wiz Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,7 +24,7 @@ _PVM_ARCH=	# empty
 .  endif
 .elif ${OPSYS} == "SunOS"
 .  if !empty(MACHINE_ARCH:Mi386*) || !empty(MACHINE_ARCH:Mx86_64*)
-_PVM_OPSYS=     X86
+_PVM_OPSYS=	X86
 .  else
 _PVM_OPSYS=	SUN4
 .  endif
@@ -32,7 +32,7 @@ _PVM_ARCH=	SOL2	# Solaris (SunOS 5.*)
 .elif ${OPSYS} == "Darwin"
 _PVM_OPSYS=    DARWIN
 _PVM_ARCH=     # empty
-.elif ${OPSYS} == "DragonFly" 
+.elif ${OPSYS} == "DragonFly"
 _PVM_OPSYS=	DRAGONFLY
 _PVM_ARCH=	# empty
 .elif ${OPSYS} == "FreeBSD"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2006/06/20 22:20:10 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/22 19:27:01 wiz Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
+MASTER_SITES=	ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.landfield.com/wu-ftpd/wu-ftpd.org/wu-ftpd/ \
 		ftp://ftp.academy.rpi.edu/pub/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.auscert.org.au/pub/mirrors/ftp.wu-ftpd.org/wu-ftpd/ \

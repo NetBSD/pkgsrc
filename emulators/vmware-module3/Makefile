@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2006/07/05 06:53:12 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:29 wiz Exp $
 
 DISTNAME=	vmware-netbsd-3.2.1.8
 PKGNAME=	vmware-module-3.2.1.8
 CATEGORIES=	emulators
-MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/vmware/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vmware/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jdolecek@NetBSD.org

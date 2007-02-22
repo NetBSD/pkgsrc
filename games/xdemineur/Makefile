@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/22 19:26:31 wiz Exp $
 #
 
-DISTNAME=       xdemineur-2.1.1
+DISTNAME=	xdemineur-2.1.1
 PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.babafou.eu.org/xdemineur/ \

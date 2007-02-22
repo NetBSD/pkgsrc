@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.20 2006/08/09 11:23:20 abs Exp $
+# $NetBSD: builtin.mk,v 1.21 2007/02/22 19:27:08 wiz Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -59,7 +59,7 @@ BUILTIN_VERSION.openssl!=						\
 #
 # If the native OpenSSL contains the security fixes pulled up to the
 # netbsd-1-6 branch on 2003-11-07, then pretend it's openssl-0.9.6l.
-#    
+#
 BUILTIN_OPENSSL_HAS_20031107_FIX!=					\
 	${AWK} 'BEGIN { ans = "no" }					\
 		/OPENSSL_HAS_20031107_FIX/ { ans = "yes" }		\
@@ -71,7 +71,7 @@ BUILTIN_VERSION.openssl=	0.9.6l
 #
 # If the native OpenSSL contains the security fixes pulled up to the
 # netbsd-1-6 branch on 2004-04-01, then pretend it's openssl-0.9.6m.
-#    
+#
 BUILTIN_OPENSSL_HAS_20040401_FIX!=					\
 	${AWK} 'BEGIN { ans = "no" }					\
 		/OPENSSL_HAS_20040401_FIX/ { ans = "yes" }		\
@@ -86,7 +86,7 @@ BUILTIN_VERSION.openssl=	0.9.6m
 # If the native OpenSSL contains the security fixes pulled up to the
 # netbsd-2-0, netbsd-2, and netbsd-3-0 branches on 2005-10-11, then
 # pretend it's openssl-0.9.7h.
-#    
+#
 BUILTIN_OPENSSL_HAS_20051011_FIX!=					\
 	${AWK} 'BEGIN { ans = "no" }					\
 		/OPENSSL_HAS_20051011_FIX/ { ans = "yes" }		\
@@ -209,13 +209,13 @@ buildlink-openssl-des-h:
 .  endif  # USE_OLD_DES_API == yes
 
 .  if defined(PKG_SYSCONFDIR.openssl)
-SSLDIR= 	${PKG_SYSCONFDIR.openssl}
+SSLDIR=	${PKG_SYSCONFDIR.openssl}
 .  elif ${OPSYS} == "NetBSD"
-SSLDIR= 	/etc/openssl
+SSLDIR=	/etc/openssl
 .  elif !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
-SSLDIR= 	/etc/ssl 		# most likely place
+SSLDIR=	/etc/ssl 		# most likely place
 .  else
-SSLDIR= 	${PKG_SYSCONFBASEDIR}/openssl
+SSLDIR=	${PKG_SYSCONFBASEDIR}/openssl
 .  endif
 
 SSLCERTS=	${SSLDIR}/certs

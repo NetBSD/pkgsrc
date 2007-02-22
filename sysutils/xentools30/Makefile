@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/22 21:01:51 smb Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:12 wiz Exp $
 #
 
 DISTNAME=		xen-3.0.3_0-src
@@ -58,11 +58,11 @@ PYTHON_PATCH_SCRIPTS+=	security/xensec_gen.py
 PYTHON_PATCH_SCRIPTS+=	xenmon/xenmon.py
 PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
 
-SUBST_CLASSES+=         paths
-SUBST_STAGE.paths=      pre-configure
-SUBST_FILES.paths=      ioemu/vl.c
-SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
-SUBST_MESSAGE.paths=    Fixing hardcoded paths.
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	ioemu/vl.c
+SUBST_SED.paths=	-e "s|/usr/sbin|${PREFIX}/sbin|g"
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 SUBST_CLASSES+=		pathsvar
 SUBST_STAGE.pathsvar=	pre-configure

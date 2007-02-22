@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2007/02/20 19:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2007/02/22 19:26:25 wiz Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 PKGREVISION=	10
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.emacs
+PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_OPTIONS_OPTIONAL_GROUPS= toolkit
 PKG_OPTIONS_GROUP.toolkit= emacs-xaw3d motif
 .include "../../mk/bsd.options.mk"

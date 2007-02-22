@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 12:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:05 wiz Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_src
@@ -15,7 +15,7 @@ COMMENT=		Software synthesizer and sequencer
 CSOUND_VERSION=		5.01
 USE_LANGUAGES=		c c++
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=${PREFIX}/ -DBETA
-BUILD_DEPENDS+=         scons>=0.96:../../devel/scons
+BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64	# Severe LP64 problems
 SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS=		-C ${WRKSRC} prefix=${PREFIX}

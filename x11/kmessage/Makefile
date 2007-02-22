@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/26 04:34:53 markd Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:27 wiz Exp $
 
 DISTNAME=	kmessage-0.1
 PKGREVISION=	10
@@ -7,12 +7,12 @@ MASTER_SITES=	http://soliton.wins.uva.nl/~wijnhout/kmessage/
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://soliton.wins.uva.nl/~wijnhout/kmessage/
-COMMENT= 	KMessage is an xmessage clone for KDE
+COMMENT=	KMessage is an xmessage clone for KDE
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
-GNU_CONFIGURE=          YES
+GNU_CONFIGURE=		YES
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

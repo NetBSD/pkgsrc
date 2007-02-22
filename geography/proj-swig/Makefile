@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/06 10:16:25 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:31 wiz Exp $
 #
 
 DISTNAME=		proj-swig-0.01
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 
-PY_PATCHPLIST=          yes
+PY_PATCHPLIST=		yes
 
 SUBST_CLASSES+=		pkg
 SUBST_STAGE.pkg=	pre-configure

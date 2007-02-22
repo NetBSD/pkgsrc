@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/10/05 05:46:54 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2007/02/22 19:26:47 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbfft
 PKG_OPTIONS_OPTIONAL_GROUPS=	optimization
@@ -11,13 +11,13 @@ PKG_SUGGESTED_OPTIONS+=	djbfft-sparc
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdjbfft-pentium)
-DJB_CONFIG_CMDS=        ${ECHO} pentium > conf-opt
+DJB_CONFIG_CMDS=	${ECHO} pentium > conf-opt
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbfft-ppro)
-DJB_CONFIG_CMDS=        ${ECHO} ppro > conf-opt
+DJB_CONFIG_CMDS=	${ECHO} ppro > conf-opt
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbfft-sparc)
-DJB_CONFIG_CMDS=        ${ECHO} sparc > conf-opt
+DJB_CONFIG_CMDS=	${ECHO} sparc > conf-opt
 .endif

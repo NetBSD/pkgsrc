@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/04 21:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/22 19:27:03 wiz Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
@@ -14,8 +14,8 @@ ESP_SITES=	http://ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/ \
 		http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/
-MASTER_SITES=   ${ESP_SITES:=${GS_VERS}/}
-EXTRACT_SUFX=   .tar.bz2
+MASTER_SITES=	${ESP_SITES:=${GS_VERS}/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	ESP/CUPS Postscript interpreter
@@ -88,7 +88,7 @@ post-extract:
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
 
-SUBST_CLASSES+=         ps2epsi-sh
+SUBST_CLASSES+=		ps2epsi-sh
 SUBST_MESSAGE.ps2epsi-sh=   Fixing ps2epsi shell.
 SUBST_FILES.ps2epsi-sh=     lib/ps2epsi
 SUBST_SED.ps2epsi-sh=       -e 's|/bin/sh|${SH}|'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/12/06 17:08:07 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2007/02/22 19:26:26 wiz Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
@@ -50,7 +50,7 @@ ENCODINGS+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
 
 .if ${OPSYS} == "NetBSD"
 # XXX ignore NetBSD 2.0F and later's grantpt(3) and SysV pty for just now
-CONFIGURE_ENV+=         vi_cv_sys5_pty=no
+CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 .endif
 
 post-patch:

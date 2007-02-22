@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/05 06:27:41 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:37 wiz Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
@@ -9,7 +9,7 @@ COMMENT=	Algol 60 interpreter
 
 GNU_CONFIGURE=	yes
 
-CPPFLAGS+= 	-Dunix
+CPPFLAGS+=	-Dunix
 
 INFO_FILES=	# PLIST
 

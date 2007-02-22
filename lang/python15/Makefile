@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/22 00:37:56 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:39 wiz Exp $
 #
 
 DISTNAME=	py152
@@ -27,11 +27,11 @@ REPLACE_FILES.py15=	Lib/cgi.py	# explicitly demanded to be patched
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_SRC=      ${.CURDIR}/../../lang/python15/PLIST.common
+PLIST_SRC=	${.CURDIR}/../../lang/python15/PLIST.common
 .if exists(${.CURDIR}/../../lang/python15/PLIST.${OPSYS})
-PLIST_SRC+=     ${.CURDIR}/../../lang/python15/PLIST.${OPSYS}
+PLIST_SRC+=	${.CURDIR}/../../lang/python15/PLIST.${OPSYS}
 .endif
-PLIST_SRC+=     ${.CURDIR}/../../lang/python15/PLIST.common_end
+PLIST_SRC+=	${.CURDIR}/../../lang/python15/PLIST.common_end
 
 .if ${OPSYS} == "Darwin"
 PY_PLATNAME=	${LOWER_OPSYS}

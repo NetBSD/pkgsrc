@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/20 20:25:04 reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:27:19 wiz Exp $
 #
 
 DISTNAME=	august0.63b.src
@@ -13,7 +13,7 @@ COMMENT=	Simple Tk-based HTML editor
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-USE_TOOLS+=             wish:run
+USE_TOOLS+=		wish:run
 
 INSTALLATION_DIRS=	bin share/doc/august
 

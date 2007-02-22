@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/30 13:04:52 darcy Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:26:24 wiz Exp $
 #
 
 DISTNAME=	generate-2.4
@@ -15,7 +15,7 @@ MAKE_ENV+=		MANDIR=${LOCALBASE}/man
 MAKE_ENV+=		BINDIR=${LOCALBASE}/bin
 USE_TOOLS+=		gmake
 
-LIBS.SunOS+=    -lnsl -lsocket
+LIBS.SunOS+=	-lnsl -lsocket
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

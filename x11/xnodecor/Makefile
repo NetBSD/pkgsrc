@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/15 18:13:31 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:28 wiz Exp $
 
 DISTNAME=	xnodecor-0.1
 PKGREVISION=	1
@@ -8,7 +8,7 @@ DISTFILES=	xnodecor.c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
-COMMENT=        Borderless or undecorated window support utility
+COMMENT=	Borderless or undecorated window support utility
 
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes

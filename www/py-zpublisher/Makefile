@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:24 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-zpublisher-2.2.2
 PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
+MASTER_SITES=	http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@NetBSD.org

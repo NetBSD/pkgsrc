@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:09 wiz Exp $
 #
 
 DISTNAME=		pdbalign
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/unix/pdbalign/
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=               #empty
+HOMEPAGE=		#empty
 COMMENT=		Prediction of Protein Secondary Structure and Active Sites
 
 WRKSRC=			${WRKDIR}

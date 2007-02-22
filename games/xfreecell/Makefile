@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2007/02/02 18:22:53 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:31 wiz Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=   http://www2.giganet.net/~nakayama/
+MASTER_SITES=	http://www2.giganet.net/~nakayama/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	chris@infolaunch.com
-HOMEPAGE= 	http://www2.giganet.net/~nakayama/
+HOMEPAGE=	http://www2.giganet.net/~nakayama/
 COMMENT=	Popular freecell card game for X
 
 USE_X11BASE=	yes

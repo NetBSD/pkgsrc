@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/02/02 17:24:58 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:30 wiz Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -12,8 +12,8 @@ HOMEPAGE=		http://www.oersted.co.jp/~yav/soft/indexe.html#fkiss
 COMMENT=		Kisekae viewer
 
 PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=             fkiss-0.33a.diff
-PATCH_DIST_STRIP=       -p1
+PATCHFILES=		fkiss-0.33a.diff
+PATCH_DIST_STRIP=	-p1
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
 

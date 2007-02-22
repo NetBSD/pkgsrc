@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.18 2006/10/04 21:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:26:39 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-extclass-2.2.2
 PKGREVISION=	1
 CATEGORIES=	lang python
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
+MASTER_SITES=	http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://cvs.zope.org/*checkout*/Cruft/ExtensionClass/doc/Attic/Acquisition.html?rev=1.2
 COMMENT=	Python-extensible C "classes" and Acquisition for Python
 
-EXTRACT_ELEMENTS=       ${DISTNAME}/lib/Components/ExtensionClass
+EXTRACT_ELEMENTS=	${DISTNAME}/lib/Components/ExtensionClass
 WRKSRC=			${WRKDIR}/${DISTNAME}/lib/Components/ExtensionClass
 
 do-configure:

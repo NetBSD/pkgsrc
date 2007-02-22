@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/01/09 14:49:34 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2007/02/22 19:26:51 wiz Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	3
@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 # Solaris/x86 has Xv, but the header files live in /usr/X11R6, not
 # ${X11_BASE}, so we need to also look for headers in this path.
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "i386"
-CPPFLAGS+=              	-I/usr/X11R6/include
+CPPFLAGS+=		-I/usr/X11R6/include
 BUILDLINK_PASSTHRU_DIRS+=	/usr/X11R6/include
 .endif
 

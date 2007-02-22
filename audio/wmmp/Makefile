@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/01/26 18:41:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/22 19:26:08 wiz Exp $
 
 DISTNAME=	WMmp-0.10.0
 CATEGORIES=	audio
-MASTER_SITES= 	http://mercury.chem.pitt.edu/~shank/
+MASTER_SITES=	http://mercury.chem.pitt.edu/~shank/
 
 MAINTAINER=	rpaulo@NetBSD.org
 HOMEPAGE=	http://musicpd.org/WMmp.shtml

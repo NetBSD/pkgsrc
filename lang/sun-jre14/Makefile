@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/12/28 11:51:12 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/02/22 19:26:39 wiz Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -37,7 +37,7 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_SRC=      	${WRKDIR}/PLIST
+PLIST_SRC=	${WRKDIR}/PLIST
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_4_2.zip

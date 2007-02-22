@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:43 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:12 wiz Exp $
 
 DISTNAME=	socket-1.1
 CATEGORIES=	sysutils net
@@ -9,7 +9,7 @@ COMMENT=	Create tcp socket and connect to stdin/out
 
 MAKE_ENV+=	INSTALLBASE=${PREFIX:Q}
 
-BUILD_DEFS+=    USE_INET6
+BUILD_DEFS+=	USE_INET6
 
 # to get USE_INET6
 .include "../../mk/bsd.prefs.mk"

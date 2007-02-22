@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2007/02/22 19:26:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.madplay
 PKG_SUPPORTED_OPTIONS=	esound oss
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	esound oss
 .if !empty(PKG_OPTIONS:Mesound)
 .include "../../audio/esound/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --without-esd
+CONFIGURE_ARGS+=	--without-esd
 .endif
 
 .if !empty(PKG_OPTIONS:Moss)

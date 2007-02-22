@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/01/26 04:25:46 markd Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/22 19:26:41 wiz Exp $
 
 DISTNAME=	kbiff-3.8
 PKGREVISION=	5
@@ -8,12 +8,12 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.granroth.org/kbiff/index.html
-COMMENT= 	Mail notification utility for KDE
+COMMENT=	Mail notification utility for KDE
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=          yes
+GNU_CONFIGURE=		yes
 SHLIBTOOL_OVERRIDE=	# empty
 
 BUILDLINK_DEPMETHOD.libXt?=	build

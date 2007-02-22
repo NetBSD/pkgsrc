@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2006/07/21 20:26:45 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/22 19:27:06 wiz Exp $
 #
 
-DISTNAME=       aide-0.10
+DISTNAME=	aide-0.10
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=aide/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html

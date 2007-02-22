@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/27 13:58:53 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:27:16 wiz Exp $
 #
 
 DISTNAME=		cmTemplate-0.3.2
-PKGNAME=     		${PYPKGPREFIX}-cmTemplate-0.3.2
+PKGNAME=	${PYPKGPREFIX}-cmTemplate-0.3.2
 CATEGORIES=		textproc python
 MASTER_SITES=		http://www.bouncingchairs.net/oss/
 

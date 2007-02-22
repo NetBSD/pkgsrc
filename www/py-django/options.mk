@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2007/02/20 11:57:41 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2007/02/22 19:27:24 wiz Exp $
 
-PKG_OPTIONS_VAR =       PKG_OPTIONS.django
-PKG_SUPPORTED_OPTIONS=  mysql psycopg1 psycopg2 sqlite
+PKG_OPTIONS_VAR =	PKG_OPTIONS.django
+PKG_SUPPORTED_OPTIONS=	mysql psycopg1 psycopg2 sqlite
 PKG_SUGGESTED_OPTIONS=	psycopg1
 
 .include "../../mk/bsd.options.mk"

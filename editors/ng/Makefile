@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2005/12/01 18:14:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/22 19:26:26 wiz Exp $
 
 DISTNAME=	ng-1.4.3
 PKGREVISION=	1
-CATEGORIES=     editors japanese
-MASTER_SITES=   http://tt.sakura.ne.jp/~amura/archives/ng/
+CATEGORIES=	editors japanese
+MASTER_SITES=	http://tt.sakura.ne.jp/~amura/archives/ng/
 
-MAINTAINER=     fk200329@fsinet.or.jp
+MAINTAINER=	fk200329@fsinet.or.jp
 HOMEPAGE=	http://tt.sakura.ne.jp/~amura/ng/
 COMMENT=	Very light Emacs-clone with japanese support
 
-WRKSRC=         ${WRKDIR}/ng
+WRKSRC=		${WRKDIR}/ng
 
 PKG_SUPPORTED_OPTIONS=	canna
 PKG_SUGGESTED_OPTIONS=	canna

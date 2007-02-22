@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/12/27 21:20:49 reed Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:26:38 wiz Exp $
 #
 
-DISTNAME=       mawk-1.3.3
+DISTNAME=	mawk-1.3.3
 CATEGORIES=	lang
-MASTER_SITES=   ftp://ftp.whidbey.net/pub/brennan/ \
+MASTER_SITES=	ftp://ftp.whidbey.net/pub/brennan/ \
 		ftp://ftp.fu-berlin.de/unix/languages/mawk/
 
 MAINTAINER=	agc@NetBSD.org
@@ -21,7 +21,7 @@ TEST_TARGET=	mawk_test fpe_test
 CFLAGS:=	${CFLAGS:S/-ffast-math//}
 
 .if ${OPSYS} == "SunOS"
-MAKE_ENV+=              CPPFLAGS=
+MAKE_ENV+=		CPPFLAGS=
 .endif
 
 .include "../../mk/bsd.pkg.mk"

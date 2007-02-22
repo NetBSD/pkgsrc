@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/11/05 17:49:33 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2007/02/22 19:26:22 wiz Exp $
 #
 
 DISTNAME=	libgnome-2.16.0
@@ -22,7 +22,7 @@ USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	libgnome/libgnome-2.0.pc.in
 
-CONFIGURE_ARGS= 	--enable-gtk-doc=no
+CONFIGURE_ARGS=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
@@ -36,7 +36,7 @@ CONF_FILES=	${EGDIR}/sound/events/gnome-2.soundlist \
 CONF_FILES+=	${EGDIR}/sound/events/gtk-events-2.soundlist \
 		${PKG_SYSCONFDIR}/sound/events/gtk-events-2.soundlist
 
-GCONF2_SCHEMAS= 	desktop_gnome_accessibility_keyboard.schemas
+GCONF2_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_accessibility_startup.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_applications_browser.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_applications_help_viewer.schemas

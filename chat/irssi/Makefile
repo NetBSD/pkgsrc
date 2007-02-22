@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/11/03 07:12:24 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2007/02/22 19:26:12 wiz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -7,7 +7,7 @@ EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
 
 MAINTAINER=		mutru@iki.fi
 HOMEPAGE=		http://www.irssi.org/
-COMMENT=                Secure and modular IRC client with text mode user interface
+COMMENT=		Secure and modular IRC client with text mode user interface
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

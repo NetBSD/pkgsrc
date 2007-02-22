@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/11/18 18:32:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:17 wiz Exp $
 
 DISTNAME=	kwacross-netbsd1-arm-20050605
-CATEGORIES=     crosspkgtools
+CATEGORIES=	crosspkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD-archive/NetBSD-1.6.2/source/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES=	 ${DISTNAME}${EXTRACT_SUFX} \
@@ -16,7 +16,7 @@ SITES.kwacross-netbsd1-arm-20050605.tgz=http://www.df.lth.se/~cato/kwacross/dist
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-* NetBSD-[2-9]*-*
 
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_path_BSHELL="/bin/sh"
 
 # Where the target's file system is located.

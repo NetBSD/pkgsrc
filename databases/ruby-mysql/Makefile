@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/28 15:21:06 taca Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:19 wiz Exp $
 #
 
 DISTNAME=	mysql-ruby-2.7.3
@@ -7,7 +7,7 @@ CATEGORIES=	databases ruby
 MASTER_SITES=	http://tmtm.org/downloads/mysql/ruby/
 
 MAINTAINER=	neumann@s-direktnet.de
-HOMEPAGE=       http://www.tmtm.org/en/mysql/ruby/
+HOMEPAGE=	http://www.tmtm.org/en/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
 
 RUBY_HAS_ARCHLIB=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2007/02/04 09:00:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.103 2007/02/22 19:26:44 wiz Exp $
 
 DISTNAME=	sylpheed-2.3.1
 CATEGORIES=	mail news x11
@@ -12,7 +12,7 @@ COMMENT=	X based e-mail and netnews client
 CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=            yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/01 13:44:14 ghen Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:26:51 wiz Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -7,7 +7,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.flash.com/
 COMMENT=		MacroMedia Flash Player Netscape plugin
 
-ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
+ONLY_FOR_PLATFORM=	*-*-i386 SunOS-*-sparc
 NOT_FOR_PLATFORM=	SunOS-*-i386
 
 WRKSRC=			${WRKDIR}/${WRKNAME}
@@ -40,7 +40,7 @@ CONFLICTS+=		communicator<=4.76nb1
 CONFLICTS+=		navigator<=4.76nb1
 
 LICENSE=		flash-license
-RESTRICTED=             Redistribution not permitted
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

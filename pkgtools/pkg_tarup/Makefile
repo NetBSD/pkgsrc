@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/10/29 07:50:27 erh Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/22 19:27:02 wiz Exp $
 
 DISTNAME=	pkg_tarup-1.6.6
 CATEGORIES=	pkgtools
@@ -10,7 +10,7 @@ COMMENT=	Generates binary package(s) from installed pkg(s)
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
-NO_CHECKSUM=    yes
+NO_CHECKSUM=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 USE_LANGUAGES=	# none

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2006/08/05 22:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/02/22 19:26:36 wiz Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
 
-DISTNAME=       sane-backends-${SANE_VERSION}
+DISTNAME=	sane-backends-${SANE_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=		msgfmt
@@ -19,7 +19,7 @@ PLIST_SUBST+=	SANE_PINT="@comment "
 PLIST_SUBST+=	SANE_SM3600="@comment "
 .elif (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly")
 PLIST_SUBST+=	SANE_PINT="@comment "
-PLIST_SUBST+=   SANE_SM3600=""
+PLIST_SUBST+=	SANE_SM3600=""
 .else
 PLIST_SUBST+=	SANE_PINT=""
 PLIST_SUBST+=	SANE_SM3600=""

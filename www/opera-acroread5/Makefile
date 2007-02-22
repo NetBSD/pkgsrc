@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/06/30 13:57:16 salo Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/22 19:27:21 wiz Exp $
 
-DISTNAME= 		opera-acroread5-1.0
+DISTNAME=	opera-acroread5-1.0
 PKGREVISION=		3
 
 MAINTAINER=		jschauma@NetBSD.org

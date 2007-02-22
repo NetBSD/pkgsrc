@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2007/02/19 22:09:59 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:48 wiz Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=   ftp://ftp-icf.llnl.gov/pub/Yorick/
+MASTER_SITES=	ftp://ftp-icf.llnl.gov/pub/Yorick/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

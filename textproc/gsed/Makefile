@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/11/05 01:42:03 dsainty Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:27:13 wiz Exp $
 #
 
 DISTNAME=	sed-4.1.1
@@ -26,10 +26,10 @@ TEST_TARGET=		check
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=        --program-prefix=${GNU_PROGRAM_PREFIX:Q}
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 .endif
-PLIST_SUBST+=           GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=            GNU_PROGRAM_PREFIX
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

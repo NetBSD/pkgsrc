@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/09 02:42:01 obache Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:35 wiz Exp $
 #
 
 DISTNAME=	pwc-9.0.2
@@ -8,7 +8,7 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.smcc.demon.nl/webcam/
 
 PATCH_SITES=	http://www.medias.ne.jp/~takam/bsd/
-PATCHFILES= 	pwc-9.0.2-bsd-0.03.patch.gz
+PATCHFILES=	pwc-9.0.2-bsd-0.03.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	hamajima@NetBSD.org

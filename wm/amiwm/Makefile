@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/01 18:02:47 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:27:18 wiz Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -12,9 +12,9 @@ HOMEPAGE=	http://www.lysator.liu.se/~marcus/amiwm.html
 COMMENT=	X window manager with Amiga look and feel
 
 LICENSE=	amiwm-license
-RESTRICTED=     Restrictive copyright (non-commerical use only)
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
+RESTRICTED=	Restrictive copyright (non-commerical use only)
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 

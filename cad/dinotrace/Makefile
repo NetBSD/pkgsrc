@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2007/02/22 19:26:09 wiz Exp $
 #
 
 DISTNAME=	dinotrace-9.3a
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.com/ftp/
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE= 	http://www.veripool.com/dinotrace/
+HOMEPAGE=	http://www.veripool.com/dinotrace/
 COMMENT=	Tool for viewing the output of digital simulators
 
 GNU_CONFIGURE=		YES

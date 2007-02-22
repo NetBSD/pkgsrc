@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/14 20:46:37 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:39 wiz Exp $
 #
 
 PKGNAME=	python23-nth-2.3.5
@@ -6,7 +6,7 @@ PKGREVISION=	6
 
 CONFLICTS+=	python-[0-9]*
 
-CONFIGURE_ARGS+=        --without-threads
+CONFIGURE_ARGS+=	--without-threads
 
 PY_VER_SUFFIX=	2n3
 

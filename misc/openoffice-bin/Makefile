@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/19 19:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:26:50 wiz Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		2
@@ -20,7 +20,7 @@ PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER}
 
 NO_BUILD=		yes
-NO_CONFIGURE=           yes
+NO_CONFIGURE=		yes
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*

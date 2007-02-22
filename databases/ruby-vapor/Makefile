@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/28 12:12:58 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:19 wiz Exp $
 
 DISTNAME=	vapor-0.81
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Ruby transparent persistence to postgresql
 DEPENDS+=	${RUBY_PKGPREFIX}-DBD-postgresql>=0.0.20:../../databases/ruby-DBD-postgresql
 
 USE_RUBY_SETUP= yes
-RUBY_SETUP= 	install.rb
+RUBY_SETUP=	install.rb
 REPLACE_RUBY=	doc/examples/university/createperson \
 		doc/examples/university/createuni \
 		doc/examples/university/employment \

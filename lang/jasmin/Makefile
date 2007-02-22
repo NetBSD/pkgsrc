@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/10/04 21:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/22 19:26:38 wiz Exp $
 #
 
 DISTNAME=	jasmin-1.06
-CATEGORIES=     lang java
+CATEGORIES=	lang java
 MASTER_SITES=	http://mrl.nyu.edu/~meyer/jasmin/
 
 MAINTAINER=	jschauma@NetBSD.org

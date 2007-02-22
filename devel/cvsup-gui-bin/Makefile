@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/17 20:59:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:21 wiz Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 # remove on next update -- see PR 25255 for details
 DIST_SUBDIR=	cvsup-i386-1.6
 
-ONLY_FOR_PLATFORM=      NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
 
 INSTALLATION_DIRS=	bin
 

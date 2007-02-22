@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/27 13:37:47 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/22 19:27:30 wiz Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
@@ -13,7 +13,7 @@ DEPENDS+=		xview-config>=3.2.1nb2:../../x11/xview-config
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 # builds, but binaries in../xview-clients all crash
-NOT_FOR_PLATFORM=       *-*-alpha
+NOT_FOR_PLATFORM=	*-*-alpha
 
 USE_IMAKE=		yes
 

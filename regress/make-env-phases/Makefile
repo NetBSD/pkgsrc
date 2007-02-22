@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/06 03:37:14 ben Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/22 19:27:06 wiz Exp $
 #
 
 DISTNAME=	make-env-phases-1.0
@@ -10,8 +10,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Tests whether MAKE_ENV changes between build and install phase
 
 NO_CHECKSUM=	yes
-NO_CONFIGURE=   yes
-NO_PACKAGE=     yes
+NO_CONFIGURE=	yes
+NO_PACKAGE=	yes
 WRKSRC=		${WRKDIR}
 
 do-build:

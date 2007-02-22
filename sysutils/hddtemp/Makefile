@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/19 09:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/22 19:27:11 wiz Exp $
 
 DISTNAME=	hddtemp-0.3-beta15
 PKGNAME=	hddtemp-0.3b15
@@ -14,7 +14,7 @@ COMMENT=	Gather temperature stats for disk drives
 SITES.hddtemp.db=	http://www.guzu.net/linux/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-ONLY_FOR_PLATFORM=      Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	YES

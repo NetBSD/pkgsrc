@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:30 wiz Exp $
 #
 
-DISTNAME=       et-linux-2.56-2.x86
-PKGNAME=        et-2.56
+DISTNAME=	et-linux-2.56-2.x86
+PKGNAME=	et-2.56
 PKGREVISION=     1
-CATEGORIES=     games
-MASTER_SITES=   ftp://ftp.idsoftware.com/idstuff/et/linux/
-EXTRACT_SUFX=   .run
+CATEGORIES=	games
+MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/et/linux/
+EXTRACT_SUFX=	.run
 
-MAINTAINER=     dhowland@users.sourceforge.net
-HOMEPAGE=       http://games.activision.com/games/wolfenstein/
-COMMENT=        Wolfenstein: Enemy Territory for Linux
+MAINTAINER=	dhowland@users.sourceforge.net
+HOMEPAGE=	http://games.activision.com/games/wolfenstein/
+COMMENT=	Wolfenstein: Enemy Territory for Linux
 
 NO_BUILD=	yes
 ONLY_FOR_PLATFORM=	*-*-i386
@@ -23,7 +23,7 @@ EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
 .include "../../emulators/suse_linux/Makefile.application"
 
 .if !defined(USE_NATIVE_LINUX)
-DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
+DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
 INSTALLATION_DIRS=	bin

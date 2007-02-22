@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/11/14 13:55:34 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:15 wiz Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
@@ -18,7 +18,7 @@ REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	run.tests
 
-USE_LIBTOOL=            yes
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 

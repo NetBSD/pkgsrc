@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/01/08 17:59:17 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:31 wiz Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		5
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-tkconfig="${BUILDLINK_PREFIX.tk}/lib"
 MAKE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 MAKE_FLAGS+=		mandir=${PREFIX:Q}/${PKGMANDIR:Q}		\
 			infodir=${PREFIX:Q}/${PKGINFODIR:Q}
-INFO_FILES=     	# PLIST
+INFO_FILES=	# PLIST
 
 post-build:
 	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV}			\

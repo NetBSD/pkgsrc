@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/10/04 22:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/22 19:27:14 wiz Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
@@ -15,9 +15,9 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	unzip
-NO_MTREE=       yes
+NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
-NO_BUILD=       yes
+NO_BUILD=	yes
 
 INSTDIR=	${PREFIX}/share/sgml/iso8879
 

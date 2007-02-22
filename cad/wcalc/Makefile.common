@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.7 2007/01/17 14:19:43 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/02/22 19:26:10 wiz Exp $
 #
 
-DISTNAME=       wcalc-1.0
-CATEGORIES=     cad
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=wcalc/}
+DISTNAME=	wcalc-1.0
+CATEGORIES=	cad
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wcalc/}
 
-MAINTAINER=     dmcmahill@NetBSD.org
-HOMEPAGE=       http://wcalc.sourceforge.net/
+MAINTAINER=	dmcmahill@NetBSD.org
+HOMEPAGE=	http://wcalc.sourceforge.net/
 
 DISTINFO_FILE=	${.CURDIR}/../../cad/wcalc/distinfo
 PATCHDIR=	${.CURDIR}/../../cad/wcalc/patches
 
-GNU_CONFIGURE=  YES
+GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
 USE_PKGLOCALEDIR=	yes

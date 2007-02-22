@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/11 14:07:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:19 wiz Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -15,20 +15,20 @@ BUILD_DIRS=	${MY_SUBDIR}
 CONFIGURE_DIRS=	${MY_SUBDIR}
 
 GNU_CONFIGURE=		yes
-TEST_TARGET=            check
+TEST_TARGET=		check
 #USE_RUBY_EXTCONF=	yes
 #RUBY_EXTCONF_SUBDIRS=	${MY_SUBDIR}/curia ${MY_SUBDIR}/depot ${MY_SUBDIR}/villa
 RUBY_HAS_ARCHLIB=	yes
 
-REPLACE_RUBY=   ${MY_SUBDIR}/curia/rbcrtest ${MY_SUBDIR}/depot/rbdptest \
+REPLACE_RUBY=	${MY_SUBDIR}/curia/rbcrtest ${MY_SUBDIR}/depot/rbdptest \
 		${MY_SUBDIR}/villa/rbvltest
 
 .include "../../databases/qdbm/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
-SUBST_CLASSES+=         pthread
-SUBST_STAGE.pthread=    pre-configure
-SUBST_FILES.pthread=    ${MY_SUBDIR}/configure
-SUBST_SED.pthread=      -e 's|-lpthread|${PTHREAD_LIBS}|'
+SUBST_CLASSES+=		pthread
+SUBST_STAGE.pthread=	pre-configure
+SUBST_FILES.pthread=	${MY_SUBDIR}/configure
+SUBST_SED.pthread=	-e 's|-lpthread|${PTHREAD_LIBS}|'
 .endif
 .include "../../mk/bsd.pkg.mk"

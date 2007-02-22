@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/13 10:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:29 wiz Exp $
 
 DISTNAME=		gnucash-1.8.12
 PKGREVISION=		5
@@ -12,7 +12,7 @@ COMMENT=		Personal double-entry accounting program (GTK1 version)
 
 DEPENDS+=		guile-slib-[0-9]*:../../devel/guile-slib
 DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
-DEPENDS+= 		p5-Finance-Quote>=1.06:../../finance/p5-Finance-Quote
+DEPENDS+=	p5-Finance-Quote>=1.06:../../finance/p5-Finance-Quote
 
 USE_DIRS+=		gnome1-1.5
 USE_TOOLS+=		bison gmake intltool perl:run pkg-config

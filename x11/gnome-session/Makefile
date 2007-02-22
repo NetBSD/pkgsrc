@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2007/01/16 20:43:06 joerg Exp $
+# $NetBSD: Makefile,v 1.80 2007/02/22 19:27:26 wiz Exp $
 #
 
 DISTNAME=		gnome-session-2.16.2
@@ -26,7 +26,7 @@ MAKE_ENV+=		REAL_GCONFTOOL=${GCONFTOOL2:Q}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
-GCONF2_SCHEMAS= 	gnome-session.schemas
+GCONF2_SCHEMAS=	gnome-session.schemas
 
 BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1

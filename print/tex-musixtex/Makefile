@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/22 19:27:06 wiz Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -20,9 +20,9 @@ USE_DIRS+=	texmf-1.0
 
 .include "../../mk/bsd.prefs.mk"
 .if exists(${LOCALBASE}/bin/initex)
-INITEX= 	initex		# teTeX2
+INITEX=	initex		# teTeX2
 .else
-INITEX= 	tex -ini	# teTeX3
+INITEX=	tex -ini	# teTeX3
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

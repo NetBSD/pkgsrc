@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/14 07:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:07 wiz Exp $
 #
 
 DISTNAME=		ubs-0.17
@@ -25,8 +25,8 @@ UBS_BASEDIR?=		/var/spool/ubs
 UBS_USER?=		ubs
 UBS_GROUP?=		ubs
 
-PKG_GROUPS=             ${UBS_GROUP}
-PKG_USERS=              ${UBS_USER}:${UBS_GROUP}
+PKG_GROUPS=		${UBS_GROUP}
+PKG_USERS=		${UBS_USER}:${UBS_GROUP}
 FILES_SUBST+=		PREFIX=${PREFIX:Q}
 FILES_SUBST+=		UBS_USER=${UBS_USER:Q}
 FILES_SUBST+=		UBS_GROUP=${UBS_GROUP:Q}

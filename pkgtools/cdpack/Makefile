@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/07 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/22 19:27:02 wiz Exp $
 #
 
 DISTNAME=	cdpack-1.7
@@ -15,8 +15,8 @@ COMMENT=	Utility to create multi-cd binary package collections
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=    yes
-NO_CONFIGURE=   yes
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
 
 USE_TOOLS+=	awk:run
 USE_TOOLS+=	expr:run

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2006/08/18 14:59:17 tv Exp $
+# $NetBSD: options.mk,v 1.19 2007/02/22 19:26:40 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gssapi inet6 kqueue ldap mysql pam pgsql sasl sqlite
@@ -16,7 +16,7 @@ PKG_SUGGESTED_OPTIONS+=	kqueue
 ### Build with OpenSSL or GNU TLS as the underlying crypto library.
 ###
 .if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=        --with-ssl=openssl
+CONFIGURE_ARGS+=	--with-ssl=openssl
 CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
 CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
 .  include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/11/05 17:37:55 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2007/02/22 19:27:24 wiz Exp $
 
 DISTNAME=	libwww-perl-5.805
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net>=1.09:../../net/p5-Net		# for Net::FTP>=2.58
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
-DEPENDS+= 	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
 PERL5_PACKLIST=		auto/LWP/.packlist
 MAKE_PARAMS=		-n

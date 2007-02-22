@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/05/26 13:19:38 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2007/02/22 19:27:10 wiz Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
@@ -22,11 +22,11 @@ BUILD_DEFS+=	AMANDA_DUMP_SNAP
 # the amrecover Makefile to add the readline libraries as it's the only
 # program that uses readline. (XXX: incorrect, does not happen)
 #
-CONFIGURE_ENV+=         ac_cv_lib_intl_main=no
-CONFIGURE_ENV+=         ac_cv_lib_termcap_tgetent=no
-CONFIGURE_ENV+=         ac_cv_lib_curses_tgetent=no
-CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
-CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
+CONFIGURE_ENV+=		ac_cv_lib_intl_main=no
+CONFIGURE_ENV+=		ac_cv_lib_termcap_tgetent=no
+CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
+CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
 
 .if defined(AMANDA_SMB)
 CONFIGURE_ARGS+=	--with-smbclient

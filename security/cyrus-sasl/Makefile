@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/11/02 13:02:39 obache Exp $
+# $NetBSD: Makefile,v 1.54 2007/02/22 19:27:07 wiz Exp $
 
 .include "Makefile.common"
 
@@ -32,7 +32,7 @@ BUILD_DEFS+=		SASLSOCKETDIR
 # plaintext password authentication.
 #
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
-CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}/socket
+CONFIGURE_ARGS+=	--with-authdaemond=${AUTHDAEMONVAR}/socket
 BUILD_DEFS+=		AUTHDAEMONVAR
 
 # Support using APOP against a POP server for plaintext password

@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.15 2006/06/15 22:13:58 jlam Exp $
+# $NetBSD: schemas.mk,v 1.16 2007/02/22 19:26:20 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf2 schema files.  It takes care of registering them in the GConf2
@@ -36,7 +36,7 @@ GCONF2_CONFIG_SOURCE=	xml::${PKG_SYSCONFBASE}/gconf/gconf.xml.defaults
 GCONF2_SCHEMAS_DIR=	${BUILDLINK_PREFIX.GConf2}/share/gconf/schemas
 
 .if defined(GNU_CONFIGURE) && !empty(GNU_CONFIGURE:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+= 	--disable-schemas-install
+CONFIGURE_ARGS+=	--disable-schemas-install
 CONFIGURE_ARGS+=	--with-gconf-schema-file-dir=${GCONF2_SCHEMAS_DIR:Q}
 .endif
 

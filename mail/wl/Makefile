@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/02/20 02:25:46 obache Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:26:45 wiz Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.6:../../devel/semi
 # apel and bbdb are included in xemacs-packages
 .if ${EMACS_FLAVOR} == "emacs"
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
-DEPENDS+=       ${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}flim>=1.14.7:../../devel/flim
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:27:16 wiz Exp $
 #
 
 DISTNAME=		po4a-0.23
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Text-WrapI18N-[0-9]*:../../textproc/p5-Text-WrapI18N
 USE_TOOLS+=		pkg-config perl:run msgmerge msgfmt
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=         auto/po4a/.packlist
+PERL5_PACKLIST=		auto/po4a/.packlist
 REPLACE_PERL=		msguntypot po4a po4a-gettextize po4a-normalize \
 			po4a-translate po4a-updatepo
 

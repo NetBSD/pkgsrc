@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2007/02/01 13:49:40 ghen Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/02/22 19:27:20 wiz Exp $
 
 DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -8,7 +8,7 @@ MASTER_SITES=		http://download.macromedia.com/get/flashplayer/current/
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.flash.com/
 
-ONLY_FOR_PLATFORM=      *-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 DIST_SUBDIR=		flash/${FLASH_VERS}
 
@@ -23,7 +23,7 @@ WRKNAME=		install_flash_player_9_${DISTUNAME}
 DISTINFO_FILE=		${.CURDIR}/../../www/firefox-bin-flash/distinfo
 
 LICENSE=		flash-license
-RESTRICTED=             Redistribution not permitted
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

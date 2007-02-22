@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/25 17:12:18 bad Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/22 19:27:07 wiz Exp $
 
 DISTNAME=		ipsec-tools-0.6.6
 CATEGORIES=		security
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.ipsec-tools
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ipsec-tools
 PKG_SUPPORTED_OPTIONS=	radius
 PKG_SUGGESTED_OPTIONS=	radius
 

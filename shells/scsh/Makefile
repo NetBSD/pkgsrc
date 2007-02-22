@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2006/12/06 18:59:28 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2007/02/22 19:27:09 wiz Exp $
 
 DISTNAME=		scsh-0.6.7
 CATEGORIES=		shells lang
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/0.6/
 
-MAINTAINER= 		pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scsh.net/
 COMMENT=		Unix shell embedded into Scheme, with access to all Posix calls
 

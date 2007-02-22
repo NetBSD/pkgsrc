@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:38 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:45 wiz Exp $
 #
 
-DISTNAME=       xmailbox-2.5
+DISTNAME=	xmailbox-2.5
 PKGREVISION=	2
 CATEGORIES=	mail x11
-MASTER_SITES=   ${MASTER_SITE_XCONTRIB:=applications/}
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Enhanced xbiff, with pixmap and sound support

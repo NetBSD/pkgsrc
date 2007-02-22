@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/07/23 00:28:12 reed Exp $
+# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:25 wiz Exp $
 #
 
 .include "./Makefile.common"
@@ -9,7 +9,7 @@ COMMENT+=	(QT version)
 
 CONFLICTS+=	lyx-xforms-[0-9]*
 
-CONFIGURE_ARGS+= 	--with-extra-prefix=${BUILDLINK_PREFIX.qt3-libs} \
+CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt3-libs} \
 			--with-qt-dir=${QTDIR:Q} \
 			--with-qt-includes=${BUILDLINK_PREFIX.qt3-libs}/qt3/include \
 			--with-qt-libraries=${BUILDLINK_PREFIX.qt3-libs}/qt3/lib \

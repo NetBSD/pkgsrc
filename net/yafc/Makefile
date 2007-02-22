@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/06 03:20:54 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:01 wiz Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	2
@@ -20,7 +20,7 @@ INFO_FILES=		# PLIST
 
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	yes
-CONFIGURE_ARGS+=        --with-krb5 --with-krb5-include=/usr/include/krb5
+CONFIGURE_ARGS+=	--with-krb5 --with-krb5-include=/usr/include/krb5
 CPPFLAGS+=		-I/usr/include/gssapi
 LIBS+=			-lcrypt -lcrypto
 .endif

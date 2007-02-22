@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/08/13 13:01:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/22 19:26:49 wiz Exp $
 
-DISTNAME=       gkrellweather-2.0.7
-PKGNAME=        gkrellm-weather-2.0.7
+DISTNAME=	gkrellweather-2.0.7
+PKGNAME=	gkrellm-weather-2.0.7
 CATEGORIES=	misc
 MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +10,7 @@ MAINTAINER=	tripledes@eslack.org
 HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 COMMENT=	Gkrellm2 weather plugin
 
-DEPENDS+=       wget>=1.8:../../net/wget
+DEPENDS+=	wget>=1.8:../../net/wget
 
 USE_TOOLS+=		gmake msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	YES

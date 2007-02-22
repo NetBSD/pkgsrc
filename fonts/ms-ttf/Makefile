@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/11/05 17:17:04 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -17,17 +17,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
 
-LICENSE=        ms-ttf-license
+LICENSE=	ms-ttf-license
 RESTRICTED=	No redistribution in altered form
 
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
-NO_CONFIGURE=   yes
-NO_BUILD=       yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
-USE_X11BASE=    yes
+USE_X11BASE=	yes
 DIST_SUBDIR=	ms-ttf
 EVAL_PREFIX+=	CABEXTRACT_PREFIX=cabextract
 CABEXTRACT_PREFIX_DEFAULT=${LOCALBASE}
