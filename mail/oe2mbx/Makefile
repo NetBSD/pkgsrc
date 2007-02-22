@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:20:05 wiz Exp $
 #
 
 DISTNAME=	oe2mbx-1.21
 CATEGORIES=	mail
-MASTER_SITES=	http://www.gpl.no/liboe/download/
+MASTER_SITES=	# none
 
 MAINTAINER=	zuntum@NetBSD.org
-HOMEPAGE=	http://www.gpl.no/liboe/
+HOMEPAGE=	http://web.archive.org/2/www.gpl.no/liboe/
 COMMENT=	Outlook Express messages to the Unix mailbox format converter
+
+# assumes fpos_t is an integral type
+NOT_FOR_PLATFORM=	Linux-*-*
 
 WRKSRC=		${WRKDIR}/liboe-0.92
 MAKE_FILE=	makefile
 
-MAKE_ENV+=      INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
+MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 		INSTALL_LIB=${INSTALL_LIB:Q} \
 		INSTALL_DATA=${INSTALL_DATA:Q}
 
