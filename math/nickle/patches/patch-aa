@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/22 20:35:38 drochner Exp $
+
+--- value.h.orig	2007-02-22 20:27:04.000000000 +0100
++++ value.h
+@@ -311,12 +311,12 @@ extern ValueRep    ForeignRep;
+  * Use all but one bit to hold immediate integer values
+  */
+ #define NICKLE_INT_BITS	    ((sizeof (int) * 8) - 1)
+-#define NICKLE_INT_SIGN	    (1 << (NICKLE_INT_BITS - 1))
++#define NICKLE_INT_SIGN	    (1U << (NICKLE_INT_BITS - 1))
+ /*
+  * this bit holds any overflow; when different from SIGN,
+  * an addition/subtraction has overflowed
+  */
+-#define NICKLE_INT_CARRY    (1 << NICKLE_INT_BITS)
++#define NICKLE_INT_CARRY    (1U << NICKLE_INT_BITS)
+ /*
+  * An int fits in a 'nickle int' if the top two bits
+  * are the same.  There are four initial values:
+@@ -328,7 +328,7 @@ extern ValueRep    ForeignRep;
+  *
+  * So, the two 'naughty' ones end up with the high bit set
+  */
+-#define NICKLE_INT_CARRIED(r)	(((r) + NICKLE_INT_SIGN) & NICKLE_INT_CARRY)
++#define NICKLE_INT_CARRIED(r)	(((unsigned)(r) + NICKLE_INT_SIGN) & NICKLE_INT_CARRY)
+ 
+ #define MAX_NICKLE_INT	    ((int) ((unsigned) NICKLE_INT_SIGN - 1))
+ #define MIN_NICKLE_INT	    (-MAX_NICKLE_INT - 1)

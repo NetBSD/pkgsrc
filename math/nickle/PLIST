@@ -1,0 +1,69 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/22 20:35:38 drochner Exp $
+bin/nickle
+include/nickle/builtin-namespaces.h
+include/nickle/builtin.h
+include/nickle/config.h
+include/nickle/gram.h
+include/nickle/mem.h
+include/nickle/memp.h
+include/nickle/nickle.h
+include/nickle/opcode.h
+include/nickle/ref.h
+include/nickle/stack.h
+include/nickle/value.h
+man/man1/nickle.1
+share/nickle/COPYING
+share/nickle/abort.5c
+share/nickle/arc4.5c
+share/nickle/builtin.5c
+share/nickle/command.5c
+share/nickle/ctype.5c
+share/nickle/examples/COPYING
+share/nickle/examples/comb.5c
+share/nickle/examples/cribbage.5c
+share/nickle/examples/erat.5c
+share/nickle/examples/fourfours.5c
+share/nickle/examples/initializer.5c
+share/nickle/examples/is-prime.5c
+share/nickle/examples/kaiser.5c
+share/nickle/examples/menace2.5c
+share/nickle/examples/miller-rabin.5c
+share/nickle/examples/mutextest.5c
+share/nickle/examples/numbers.5c
+share/nickle/examples/polynomial.5c
+share/nickle/examples/prime.5c
+share/nickle/examples/qbrating.5c
+share/nickle/examples/randtest.5c
+share/nickle/examples/restart.5c
+share/nickle/examples/roman.5c
+share/nickle/examples/rsa-demo.5c
+share/nickle/examples/rsa.5c
+share/nickle/examples/skiplist.5c
+share/nickle/examples/skiplisttest.5c
+share/nickle/examples/smlng/COPYING
+share/nickle/examples/smlng/context.5c
+share/nickle/examples/smlng/generate.5c
+share/nickle/examples/smlng/parse.5c
+share/nickle/examples/smlng/test.5c
+share/nickle/examples/sort.5c
+share/nickle/examples/turtle/COPYING
+share/nickle/examples/turtle/snowflake.5c
+share/nickle/examples/turtle/snowflake.tex
+share/nickle/examples/turtle/turtle.5c
+share/nickle/file.5c
+share/nickle/history.5c
+share/nickle/math.5c
+share/nickle/mutex.5c
+share/nickle/parse-args.5c
+share/nickle/printf.5c
+share/nickle/prng.5c
+share/nickle/process.5c
+share/nickle/scanf.5c
+share/nickle/socket.5c
+share/nickle/string.5c
+share/nickle/svg.5c
+@dirrm share/nickle/examples/turtle
+@dirrm share/nickle/examples/smlng
+@dirrm share/nickle/examples
+@dirrm share/nickle
+@dirrm include/nickle
