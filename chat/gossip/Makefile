@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/01/11 10:46:49 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2007/02/22 19:26:11 wiz Exp $
 #
 
 DISTNAME=	gossip-0.10.2
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=       yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

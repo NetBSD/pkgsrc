@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:06 wiz Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
@@ -14,10 +14,10 @@ COMMENT=	MusixTeX macros to typeset bagpipe music
 
 DEPENDS+=	tex-musixtex>=112:../../print/tex-musixtex
 
-WRKSRC=         ${WRKDIR}
-NO_CONFIGURE=   yes
+WRKSRC=		${WRKDIR}
+NO_CONFIGURE=	yes
 
-TEXMF_CNF=      ${LOCALBASE}/share/texmf/web2c/texmf.cnf
+TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/bagpipetex

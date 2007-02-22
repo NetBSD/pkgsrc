@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:10 wiz Exp $
 
-DISTNAME=       atitvout-0.4
+DISTNAME=	atitvout-0.4
 PKGREVISION=	1
 CATEGORIES=	sysutils graphics
 MASTER_SITES=	http://www.stud.uni-hamburg.de/users/lennart/projects/atitvout/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/19 11:55:43 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/22 19:26:27 wiz Exp $
 
 DISTNAME=	fMSX24.tar
 PKGNAME=	fmsx-2.4
@@ -17,7 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-WRKSRC= 	${WRKDIR}/MSX
+WRKSRC=	${WRKDIR}/MSX
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"

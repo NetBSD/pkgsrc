@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2006/10/30 14:07:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:27:06 wiz Exp $
 #
 
-DISTNAME=       amap-5.2
-CATEGORIES=     net security
-MASTER_SITES=   http://thc.segfault.net/releases/ \
+DISTNAME=	amap-5.2
+CATEGORIES=	net security
+MASTER_SITES=	http://thc.segfault.net/releases/ \
 		http://www.thc.org/releases/
 
-MAINTAINER=     adrianp@NetBSD.org
-HOMEPAGE=       http://thc.org.segfault.net/thc-amap/
-COMMENT=        Applications and Services scanner
+MAINTAINER=	adrianp@NetBSD.org
+HOMEPAGE=	http://thc.org.segfault.net/thc-amap/
+COMMENT=	Applications and Services scanner
 
 HAS_CONFIGURE=	YES
 
@@ -26,12 +26,12 @@ SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	configure
 SUBST_STAGE.conf=	pre-configure
 SUBST_SED.conf=		-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.conf+= 	-e 's|@MANDIR@|${PREFIX}/man|g'
-SUBST_SED.conf+= 	-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
-SUBST_SED.conf+= 	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
-SUBST_SED.conf+= 	-e "s|@UNAME@|${UNAME}|g"
-SUBST_SED.conf+= 	-e "s|@GREP@|${GREP}|g"
-SUBST_SED.conf+= 	-e "s|@SED@|${SED}|g"
+SUBST_SED.conf+=	-e 's|@MANDIR@|${PREFIX}/man|g'
+SUBST_SED.conf+=	-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
+SUBST_SED.conf+=	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
+SUBST_SED.conf+=	-e "s|@UNAME@|${UNAME}|g"
+SUBST_SED.conf+=	-e "s|@GREP@|${GREP}|g"
+SUBST_SED.conf+=	-e "s|@SED@|${SED}|g"
 SUBST_MESSAGE.conf=	Fixing configure script.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

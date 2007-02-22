@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/05 17:29:25 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/22 19:27:00 wiz Exp $
 
 DISTNAME=	trafshow-5.2.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nsk.su/pub/RinetSoftware/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
 COMMENT=	Full screen visualization of the network traffic
 

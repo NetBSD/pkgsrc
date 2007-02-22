@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2007/01/21 12:44:48 sborrill Exp $
+# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:52 wiz Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
-DISTNAME=       citrix
+DISTNAME=	citrix
 PKGNAME=	citrix_ica-9.0.0
 CATEGORIES=	net
 MASTER_SITES=	http://download2.citrix.com/files/en/products/client/ica/current/
@@ -13,7 +13,7 @@ COMMENT=	Citrix(R) ICA client for the Citrix(R) Presentation Server(TM)
 
 .include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=      Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
+ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386
 
 .if ${OPSYS} == "NetBSD"
@@ -21,10 +21,10 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-i386
 DISTNAME=	linuxx86
 PKGNAME=	citrix_ica-9.0.0
 .  elif ${MACHINE_ARCH} == "sparc"
-DISTNAME=       en.solaris
-PKGNAME=        citrix_ica-8.46.110465
+DISTNAME=	en.solaris
+PKGNAME=	citrix_ica-8.46.110465
 MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
-EXTRACT_SUFX=   .tar.Z
+EXTRACT_SUFX=	.tar.Z
 .  endif
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	en.solaris
@@ -41,17 +41,17 @@ DEPENDS+=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=        suse_openmotif>=6.4:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 .endif
 
-LICENSE=                citrix_ica-license
-RESTRICTED=             License prohibits redistribution
-NO_SRC_ON_FTP=          ${RESTRICTED}
-NO_BIN_ON_FTP=          ${RESTRICTED}
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
+LICENSE=		citrix_ica-license
+RESTRICTED=		License prohibits redistribution
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=         ${WRKDIR}
-DIST_SUBDIR=    ${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
-CDIR=           ${PREFIX}/lib/ICAClient
+CDIR=		${PREFIX}/lib/ICAClient
 USE_TOOLS+=	patch
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"

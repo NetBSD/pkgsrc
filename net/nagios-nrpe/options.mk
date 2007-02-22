@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/05/21 10:28:40 grant Exp $
+# $NetBSD: options.mk,v 1.2 2007/02/22 19:26:56 wiz Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.nagios-nrpe
-PKG_SUPPORTED_OPTIONS=  ssl tcpwrappers
-PKG_SUGGESTED_OPTIONS=  tcpwrappers
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nagios-nrpe
+PKG_SUPPORTED_OPTIONS=	ssl tcpwrappers
+PKG_SUGGESTED_OPTIONS=	tcpwrappers
 
 .include "../../mk/bsd.options.mk"
 

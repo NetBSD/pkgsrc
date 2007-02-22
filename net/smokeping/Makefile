@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:59 wiz Exp $
 
 DISTNAME=	smokeping-2.0.9
 CATEGORIES=	net
@@ -16,15 +16,15 @@ DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 USE_TOOLS+=	perl:run
 NO_BUILD=	YES
 
-PKG_SYSCONFSUBDIR?=     smokeping
+PKG_SYSCONFSUBDIR?=	smokeping
 SMOKEPING_HOME=		${VARBASE}/db/smokeping
-MESSAGE_SUBST+=         PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/smokeping
-CONF_FILES= 	${EGDIR}/basepage.html.dist ${PKG_SYSCONFDIR}/basepage.html
-CONF_FILES+= 	${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
-CONF_FILES+= 	${EGDIR}/config.dist ${PKG_SYSCONFDIR}/config
-CONF_FILES+= 	${EGDIR}/tmail.dist ${PKG_SYSCONFDIR}/tmail
+CONF_FILES=	${EGDIR}/basepage.html.dist ${PKG_SYSCONFDIR}/basepage.html
+CONF_FILES+=	${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
+CONF_FILES+=	${EGDIR}/config.dist ${PKG_SYSCONFDIR}/config
+CONF_FILES+=	${EGDIR}/tmail.dist ${PKG_SYSCONFDIR}/tmail
 RCD_SCRIPTS=	smokeping
 REPLACE_PERL=	bin/smokeping.dist bin/tSmoke.dist
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.x86_64,v 1.3 2005/11/06 14:52:43 salo Exp $
+# $NetBSD: Makefile.x86_64,v 1.4 2007/02/22 19:26:28 wiz Exp $
 
-RPMFILES=               aaa_base-9.1-0.29.${SUSE_ARCH}.rpm \
+RPMFILES=		aaa_base-9.1-0.29.${SUSE_ARCH}.rpm \
                         bash-2.05b-305.1.${SUSE_ARCH}.rpm \
                         coreutils-5.2.1-23.8.${SUSE_ARCH}.rpm \
                         glibc-2.3.3-63.${SUSE_ARCH}.rpm \

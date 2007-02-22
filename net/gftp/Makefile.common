@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/07/05 05:37:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/02/22 19:26:53 wiz Exp $
 
 DISTNAME=	gftp-${VERSION}
 CATEGORIES=	net
@@ -23,7 +23,7 @@ VERSION=		2.0.18
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(/usr/bin/ssh-agent)
-DEPENDS+=       openssh-[0-9]*:../../security/openssh
+DEPENDS+=	openssh-[0-9]*:../../security/openssh
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

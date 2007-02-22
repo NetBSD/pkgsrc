@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:27:11 wiz Exp $
 #
 
-DISTNAME=       	crashme-2.4
+DISTNAME=	crashme-2.4
 CATEGORIES=		sysutils
-MASTER_SITES=   	http://ochimizu-www.jaist.ac.jp:8000/linux/vger/crashme/
+MASTER_SITES=	http://ochimizu-www.jaist.ac.jp:8000/linux/vger/crashme/
 EXTRACT_SUFX=		-shar
 
 MAINTAINER=		agc@NetBSD.org

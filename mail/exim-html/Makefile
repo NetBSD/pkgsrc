@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:30 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:41 wiz Exp $
 
 DISTNAME=	exim-html-4.50
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/exim4/
-EXTRACT_SUFX=  	.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.exim.org/

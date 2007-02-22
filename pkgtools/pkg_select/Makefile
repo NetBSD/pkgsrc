@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/03 20:53:38 reed Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:02 wiz Exp $
 #
 
 DISTNAME=	pkg_select-20050817
@@ -11,7 +11,7 @@ COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
 
 WRKSRC=		${WRKDIR}/pkg_select
 NO_CONFIGURE=	yes
@@ -41,7 +41,7 @@ SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g" \
 			-e "s|/usr/pkg|${PREFIX}|g" \
 			-e "s|/var/db/pkg|${PKG_DBDIR}|g" \
 			-e "s|/usr/bin/make|${MAKE}|g"
-SUBST_MESSAGE.path=     Adjusting path.
+SUBST_MESSAGE.path=	Adjusting path.
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

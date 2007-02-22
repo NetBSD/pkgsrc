@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2007/02/02 17:13:56 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/22 19:26:49 wiz Exp $
 
-DISTNAME=       kp-0.96
+DISTNAME=	kp-0.96
 PKGREVISION=	1
 CATEGORIES=	misc tk
-MASTER_SITES=   ftp://stampede.cs.berkeley.edu/pub/kp/
+MASTER_SITES=	ftp://stampede.cs.berkeley.edu/pub/kp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	The Keyboard Practicer, touch-type training program
