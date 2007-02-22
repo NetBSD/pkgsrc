@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.437 2007/02/22 10:52:05 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.438 2007/02/22 12:26:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -866,3 +866,15 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/url2pkg to 2.4 [rillig 2007-02-22]
 	Added devel/jflex version 1.4.1 [rillig 2007-02-22]
 	Updated www/p5-HTML-Element-Extended to 1.17 [wiz 2007-02-22]
+	Updated devel/p5-Class-Loader to 2.03 [wiz 2007-02-22]
+	Updated devel/p5-Class-MethodMaker to 2.09 [wiz 2007-02-22]
+	Updated textproc/p5-Convert-BER to 1.3101 [wiz 2007-02-22]
+	Updated security/p5-Crypt-CAST5_PP to 1.04 [wiz 2007-02-22]
+	Updated security/p5-Crypt-DSA to 0.14 [wiz 2007-02-22]
+	Updated security/p5-Crypt-IDEA to 1.08 [wiz 2007-02-22]
+	Updated textproc/p5-Lingua-Stem-Snowball to 0.941 [wiz 2007-02-22]
+	Updated textproc/p5-String-ShellQuote to 1.03 [wiz 2007-02-22]
+	Added textproc/p5-Text-Emoticon version 0.04 [wiz 2007-02-22]
+	Updated textproc/p5-Text-Emoticon-MSN to 0.04 [wiz 2007-02-22]
+	Updated textproc/p5-Text-Shellwords to 1.08 [wiz 2007-02-22]
+	Updated devel/p5-version to 0.70 [wiz 2007-02-22]
