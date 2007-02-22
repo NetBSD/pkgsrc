@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.436 2007/02/22 08:24:53 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.437 2007/02/22 10:52:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated cad/verilog-current to 20070123 [dmcmahill 2007-02-21]
 	Updated pkgtools/url2pkg to 2.4 [rillig 2007-02-22]
 	Added devel/jflex version 1.4.1 [rillig 2007-02-22]
+	Updated www/p5-HTML-Element-Extended to 1.17 [wiz 2007-02-22]
