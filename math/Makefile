@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2007/01/03 07:54:58 agc Exp $
+# $NetBSD: Makefile,v 1.155 2007/02/22 20:37:03 drochner Exp $
 #
 
 COMMENT=	Mathematics
@@ -95,6 +95,7 @@ SUBDIR+=	minpack
 SUBDIR+=	mpfr
 SUBDIR+=	mtl
 SUBDIR+=	newmat
+SUBDIR+=	nickle
 SUBDIR+=	ntl
 SUBDIR+=	octave
 SUBDIR+=	octave-current
