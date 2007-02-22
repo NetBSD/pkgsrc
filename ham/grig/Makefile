@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/27 05:57:25 wulf Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:37 wiz Exp $
 #
 
 DISTNAME=	grig-0.7.2
@@ -6,7 +6,7 @@ CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=groundstation/}
 
 MAINTAINER=	wulf@NetBSD.org
-HOMEPAGE=       http://groundstation.sourceforge.net/
+HOMEPAGE=	http://groundstation.sourceforge.net/
 COMMENT=	Graphical user interface to the Hamlib libraries
 
 USE_LIBTOOL=	yes

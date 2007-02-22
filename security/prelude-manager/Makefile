@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/08/24 16:10:12 shannonjr Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:09 wiz Exp $
 #
 
 DISTNAME=		prelude-manager-0.9.6
@@ -25,21 +25,21 @@ PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
 PRELUDE_HOME?=		/var/spool/prelude-manager
 
-PKG_GROUPS=     ${PRELUDE_GROUP}
-PKG_USERS=      ${PRELUDE_USER}:${PRELUDE_GROUP}
+PKG_GROUPS=	${PRELUDE_GROUP}
+PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
 
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS manager
 PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
 
 FILES_SUBST+=	PRELUDE_MANAGER_PID_DIR=${PRELUDE_MANAGER_PID_DIR:Q}
-FILES_SUBST+=   PRELUDE_USER=${PRELUDE_USER:Q}
-FILES_SUBST+=   PRELUDE_GROUP=${PRELUDE_USER:Q}
+FILES_SUBST+=	PRELUDE_USER=${PRELUDE_USER:Q}
+FILES_SUBST+=	PRELUDE_GROUP=${PRELUDE_USER:Q}
 
-SUBST_CLASSES+=         code
-SUBST_STAGE.code=       post-patch
-SUBST_FILES.code=       run-prelude-manager.c
-SUBST_SED.code=         -e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.code+=        -e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
+SUBST_CLASSES+=		code
+SUBST_STAGE.code=	post-patch
+SUBST_FILES.code=	run-prelude-manager.c
+SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 
 EGDIR=			share/examples/prelude-manager/
 CONF_FILES_PERMS+=	${EGDIR}/prelude-manager.conf ${PKG_SYSCONFDIR}/prelude-manager/prelude-manager.conf \

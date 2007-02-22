@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/07/05 20:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/02/22 19:27:08 wiz Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -15,8 +15,8 @@ MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
-PATCH_SITES=    	http://www.sxw.org.uk/computing/patches/
-PATCHFILES=     	openssh-3.6.1p2-gssapi-20030430.diff
+PATCH_SITES=	http://www.sxw.org.uk/computing/patches/
+PATCHFILES=	openssh-3.6.1p2-gssapi-20030430.diff
 PATCH_DIST_STRIP=	-p1
 
 # Don't delete the last entry -- it's there if the pkgsrc version is not

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2006/08/30 06:16:27 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2007/02/22 19:27:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	suexec
@@ -19,10 +19,10 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 	--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT:Q}		\
 	--with-suexec-logfile=${APACHE_SUEXEC_LOGFILE:Q}
 
-APACHE_MODULES+=        suexec
-CONFIGURE_ARGS+=        ${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
-BUILD_DEFS+=            APACHE_SUEXEC_CONFIGURE_ARGS
-PLIST_SUBST+=           SUEXEC_COMMENT=
+APACHE_MODULES+=	suexec
+CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
+BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
+PLIST_SUBST+=		SUEXEC_COMMENT=
 .else
-PLIST_SUBST+=           SUEXEC_COMMENT="@comment "
+PLIST_SUBST+=		SUEXEC_COMMENT="@comment "
 .endif

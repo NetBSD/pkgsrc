@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:27:27 wiz Exp $
 
 DISTNAME=	qwt-0.3.0
 PKGREVISION=	5
 CATEGORIES=	x11
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qwt/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt

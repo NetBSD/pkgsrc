@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/05/15 16:29:19 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:25 wiz Exp $
 #
 
 .include "./Makefile.common"
 
-PKGNAME=        elvis-2.2.0
+PKGNAME=	elvis-2.2.0
 PKGREVISION=	2
 COMMENT=	Vi clone with regex search, hex editing, HTML and TeX previewing
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/02 18:06:05 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/22 19:26:31 wiz Exp $
 #
 
 DISTNAME=	xmahjongg-3.6.1
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
-GCC_REQD+=              3.4
+GCC_REQD+=		3.4
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"

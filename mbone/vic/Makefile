@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/13 11:27:02 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2007/02/22 19:26:48 wiz Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
@@ -9,8 +9,8 @@ MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*) || !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
-PATCH_SITES=    ftp://tink.ims.ac.jp/pub/NetBSD/vic/
-PATCHFILES=     vic-2.8_ov511p0.diff.gz
+PATCH_SITES=	ftp://tink.ims.ac.jp/pub/NetBSD/vic/
+PATCHFILES=	vic-2.8_ov511p0.diff.gz
 .endif
 
 MAINTAINER=	is@NetBSD.org

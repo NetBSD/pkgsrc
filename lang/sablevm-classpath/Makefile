@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2006/04/23 20:03:06 tonio Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:39 wiz Exp $
 #
 
 .include "Makefile.common"
 PKGREVISION=	1
-BUILD_DEPENDS+=         zip>=2.3:../../archivers/zip
+BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 INFO_FILES=		# PLIST
 

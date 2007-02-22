@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/23 22:14:26 tv Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:53 wiz Exp $
 #
 
 DISTNAME=	gift-0.11.8.1
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/lib/libgift.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/lib/libgift.pc.in
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/20 18:15:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:25 wiz Exp $
 
 DISTNAME=		ed-0.2
 PKGREVISION=		1
@@ -22,7 +22,7 @@ INFO_FILES=		# PLIST
 # the ./configure accepts --program-prefix, but doesn't use
 MAKE_ENV+=		binprefix=${GNU_PROGRAM_PREFIX:Q}
 .endif
-PLIST_SUBST+=           GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=            GNU_PROGRAM_PREFIX
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../mk/bsd.pkg.mk"

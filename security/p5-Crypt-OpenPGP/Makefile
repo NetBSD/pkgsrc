@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/08/06 06:19:29 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:27:08 wiz Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-1.03
-PKGNAME=                p5-${DISTNAME}
+PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		3
 SVR4_PKGNAME=		p5pgp
 CATEGORIES=		security perl5

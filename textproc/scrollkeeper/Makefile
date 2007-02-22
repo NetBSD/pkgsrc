@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/12/03 19:47:48 abs Exp $
+# $NetBSD: Makefile,v 1.45 2007/02/22 19:27:17 wiz Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -21,11 +21,11 @@ USE_TOOLS+=		gmake intltool msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+= 	--localstatedir=${SCROLLKEEPER_DATADIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR:Q}
 CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR:Q}
-CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+= 	--with-partial-db-dir=db
-CONFIGURE_ARGS+= 	--with-xml-catalog=${BUILDLINK_PREFIX.xmlcatmgr}/share/xml/catalog
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-partial-db-dir=db
+CONFIGURE_ARGS+=	--with-xml-catalog=${BUILDLINK_PREFIX.xmlcatmgr}/share/xml/catalog
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,7 +54,7 @@ XML_ENTRIES+=	public "-//Open Source Metadata Framework (OMF) //DTD OMF.dtd V1.1
 
 SUBST_CLASSES+=		sk-config sc-gtfd
 SUBST_STAGE.sk-config=	post-patch
-SUBST_FILES.sk-config=  scripts/scrollkeeper-get-index-from-docpath.in \
+SUBST_FILES.sk-config=	scripts/scrollkeeper-get-index-from-docpath.in \
 			scripts/scrollkeeper-get-toc-from-docpath.in \
 			scripts/scrollkeeper-get-toc-from-id.in \
 			scripts/scrollkeeper-rebuilddb.in \
@@ -62,7 +62,7 @@ SUBST_FILES.sk-config=  scripts/scrollkeeper-get-index-from-docpath.in \
 			cl/src/update.c \
 			cl/src/scrollkeeper-install.c \
 			cl/src/scrollkeeper-uninstall.c
-SUBST_SED.sk-config=    -e s,scrollkeeper-config\ ,${PREFIX}/bin/scrollkeeper-config\ ,
+SUBST_SED.sk-config=	-e s,scrollkeeper-config\ ,${PREFIX}/bin/scrollkeeper-config\ ,
 SUBST_STAGE.sc-gtfd=	post-patch
 SUBST_FILES.sc-gtfd=	libs/install.c
 SUBST_SED.sc-gtfd=	-e s,scrollkeeper-get-toc-from-docpath\ ,${PREFIX}/bin/scrollkeeper-get-toc-from-docpath\ ,

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:29:55 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:38 wiz Exp $
 
-DISTNAME=       mos20src
-PKGNAME=        moscow_ml-2.00
+DISTNAME=	mos20src
+PKGNAME=	moscow_ml-2.00
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.dina.kvl.dk/pub/mosml/ \

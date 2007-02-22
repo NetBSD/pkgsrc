@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/10/17 13:26:28 obache Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:21 wiz Exp $
 
 DISTNAME=		Apache-Session-Wrapper-0.31
 PKGNAME=		p5-${DISTNAME}
@@ -9,9 +9,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Apache-Session-Wrapper/
 COMMENT=		Perl5 module doing a wrapper around Apache::Session
 
-DEPENDS+=               p5-Class-Container-[0-9]*:../../devel/p5-Class-Container
-DEPENDS+=               p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
-DEPENDS+=               p5-Apache-Session>=1.6:../../www/p5-Apache-Session
+DEPENDS+=		p5-Class-Container-[0-9]*:../../devel/p5-Class-Container
+DEPENDS+=		p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
+DEPENDS+=		p5-Apache-Session>=1.6:../../www/p5-Apache-Session
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Apache/Session/Wrapper/.packlist

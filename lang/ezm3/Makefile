@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/20 16:21:01 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:37 wiz Exp $
 
 DISTNAME=	ezm3-1.2
 PKGREVISION=	1
@@ -25,7 +25,7 @@ EZM3ROOT=		${PREFIX}/ezm3
 BUILDLINK_PASSTHRU_DIRS+=	${EZM3ROOT}
 
 # XXX: This may well work for some others.
-ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 \
+ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 \
 			Linux-*-i386
 # DragonFly-*-i386 needs new bootstrap
 
@@ -34,13 +34,13 @@ BOOTSTRAP=	${DISTNAME}-FreeBSD4-boot.tar.bz2
 TARGET=		FreeBSD4
 TARGETDIR=	freebsd-4
 .elif ${OPSYS} == "NetBSD"
-BOOTSTRAP=      ${DISTNAME}-NetBSDi386-boot.tar.bz2
-TARGET=         NetBSDi386
-TARGETDIR=      netbsd-1
+BOOTSTRAP=	${DISTNAME}-NetBSDi386-boot.tar.bz2
+TARGET=		NetBSDi386
+TARGETDIR=	netbsd-1
 .elif ${OPSYS} == "OpenBSD"
-BOOTSTRAP=      ${DISTNAME}-OpenBSD_386-boot.tar.bz2
-TARGET=         OpenBSD_386
-TARGETDIR=      openbsd-2
+BOOTSTRAP=	${DISTNAME}-OpenBSD_386-boot.tar.bz2
+TARGET=		OpenBSD_386
+TARGETDIR=	openbsd-2
 .elif ${OPSYS} == "Linux"
 BOOTSTRAP=	${DISTNAME}-LINUXLIBC6-boot.tar.bz2
 TARGET=		LINUXLIBC6

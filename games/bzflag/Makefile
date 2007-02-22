@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2007/02/02 17:51:58 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/02/22 19:26:30 wiz Exp $
 
 DISTNAME=	bzflag-2.0.2.20050318
 PKGNAME=	${DISTNAME:S/.20050318//}
 PKGREVISION=	4
 CATEGORIES=	games x11
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
 MAINTAINER=	blymn@NetBSD.org
 HOMEPAGE=	http://www.bzflag.org/

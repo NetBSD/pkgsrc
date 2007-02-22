@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/11/02 12:31:58 kivinen Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:09 wiz Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ssh.com/
-COMMENT=        Secure Shell client and server for V.2 SSH protocol
+COMMENT=	Secure Shell client and server for V.2 SSH protocol
 
 CONFLICTS+=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
 CONFLICTS+=	openssh+gssapi-[0-9]* ssh2-nox11-[0-9]*

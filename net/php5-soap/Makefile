@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/04 16:26:55 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:57 wiz Exp $
 
 MODNAME=		soap
 CATEGORIES+=		net
@@ -10,7 +10,7 @@ CONFLICTS=	php-soap-[0-9]*
 
 PHP_VERSIONS_ACCEPTED=	5
 
-CONFIGURE_ARGS+=        --enable-${MODNAME}
+CONFIGURE_ARGS+=	--enable-${MODNAME}
 CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_PREFIX.libxml2}
 
 .include "../../lang/php/ext.mk"

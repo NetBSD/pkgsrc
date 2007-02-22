@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/04/02 23:07:06 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:38 wiz Exp $
 #
 
 DISTNAME=	joos-0.2
-CATEGORIES=     lang java
+CATEGORIES=	lang java
 MASTER_SITES=	ftp://netbsd.stevens-tech.edu/pub/NetBSD/packages/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 

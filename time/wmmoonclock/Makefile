@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/12/27 13:37:40 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:27:18 wiz Exp $
 #
 
 DISTNAME=	wmMoonClock-1.27
@@ -10,16 +10,16 @@ MAINTAINER=	tron@NetBSD.org
 # HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
 COMMENT=	Shows lunar ephemeris to fairly high accuracy
 
-WRKSRC=         ${WRKDIR}/${DISTNAME}/Src
+WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 USE_TOOLS+=	gmake
 USE_X11BASE=	YES
 
-MAKE_FLAGS+=    EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS:Q}
+MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-EXTRA_LOCAL_LIBS=       -lsocket
+EXTRA_LOCAL_LIBS=	-lsocket
 .endif
 
 .include "../../x11/libXext/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/12 07:44:26 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:59 wiz Exp $
 #
 
 DISTNAME=		socket++-1.12.10
@@ -14,8 +14,8 @@ INFO_FILES=		# PLIST
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_TOOLS+=		automake14
-AUTOCONF_REQD=          2.50
-GNU_CONFIGURE=          YES
+AUTOCONF_REQD=		2.50
+GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 TEST_DIRS=		${WRKSRC}/test
 TEST_TARGET=		check

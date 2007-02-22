@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/31 23:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/22 19:27:07 wiz Exp $
 #
 
 DISTNAME=		gss-0.0.15
@@ -19,6 +19,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		# PLIST
 
-PKGCONFIG_OVERRIDE+=    gss.pc.in
+PKGCONFIG_OVERRIDE+=	gss.pc.in
 
 .include "../../mk/bsd.pkg.mk"

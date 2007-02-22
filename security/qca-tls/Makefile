@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/08/07 19:38:43 jdolecek Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/22 19:27:09 wiz Exp $
 
 DISTNAME=	qca-tls-1.0
 PKGREVISION=	3
@@ -15,8 +15,8 @@ USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=        --with-openssl-inc=${SSLBASE}/include
-CONFIGURE_ARGS+=        --with-openssl-lib=${SSLBASE}/lib
+CONFIGURE_ARGS+=	--with-openssl-inc=${SSLBASE}/include
+CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"

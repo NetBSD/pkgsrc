@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/01 23:33:56 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:27:17 wiz Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
@@ -10,7 +10,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml#bbdate
 COMMENT=	Display the current date
 
-GNU_CONFIGURE=  YES
+GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
 .include "../../x11/libX11/buildlink3.mk"

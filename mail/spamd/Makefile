@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/23 00:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:26:44 wiz Exp $
 
 DISTNAME=		spamd-20060330
 CATEGORIES=		mail
@@ -25,7 +25,7 @@ PKG_USERS=		_spamd:_spamd
 PKG_GECOS._spamd=	Spam Daemon User
 PKG_HOME._spamd=	${SPAMD_HOME}
 
-RCD_SCRIPTS=            pfspamd
+RCD_SCRIPTS=		pfspamd
 
 SPAMD_CONF=		${PKG_SYSCONFDIR}/spamd.conf
 CONF_FILES=		${PREFIX}/share/examples/spamd/spamd.conf ${SPAMD_CONF}

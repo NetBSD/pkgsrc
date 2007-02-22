@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/06/03 00:07:01 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:53 wiz Exp $
 #
 
-DISTNAME=       latd-1.18
+DISTNAME=	latd-1.18
 CATEGORIES=	net
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=linux-decnet/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-decnet/}
 
 MAINTAINER=	fredette@theory.lcs.mit.edu
 HOMEPAGE=	http://theory.lcs.mit.edu/~fredette/latd/index.html

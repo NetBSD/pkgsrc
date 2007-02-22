@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:23 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:23 wiz Exp $
 #
 
-DISTNAME=      	Parse-Yapp-1.05
+DISTNAME=	Parse-Yapp-1.05
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5pya
 PKGREVISION=	2

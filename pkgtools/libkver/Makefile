@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/31 22:10:30 seb Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/22 19:27:02 wiz Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -24,7 +24,7 @@ BUILDLINK_PASSTHRU_DIRS=	${BSDSRCDIR}/sys
 
 .include "../../mk/bsd.prefs.mk"
 
-LDD_SYSCTL!=    ldd /sbin/sysctl 2>&1
+LDD_SYSCTL!=	ldd /sbin/sysctl 2>&1
 MAKE_ENV+=	LDD_SYSCTL=${LDD_SYSCTL:Q} # save another ldd run
 .if empty(LDD_SYSCTL:M*libc*)
 PLIST_SUBST+=		HAS_SYSCTL=

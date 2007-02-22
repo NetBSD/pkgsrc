@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2006/10/29 21:12:46 pooka Exp $
+# $NetBSD: Makefile.common,v 1.23 2007/02/22 19:26:30 wiz Exp $
 #
 
 NETHACK_BASEVER=	3.4.3
@@ -44,7 +44,7 @@ SUBST_FILES.os=		include/unixconf.h
 SUBST_SED.os=		-e 's,__NETHACK_OS__,${NETHACK_OS},'
 
 NETHACK_GROUP=		games
-PKG_GROUPS=             ${NETHACK_GROUP}
+PKG_GROUPS=		${NETHACK_GROUP}
 
 pre-configure:
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh

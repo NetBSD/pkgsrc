@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/22 19:27:21 wiz Exp $
 
 DISTNAME=		HTML-Mason-1.3101
 PKGNAME=		p5-HTML-Mason-1.31.1
@@ -11,8 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.masonhq.com/
 COMMENT=		Perl-based web site development and delivery system
 
-DEPENDS+=               p5-Cache-Cache>=1.0:../../devel/p5-Cache-Cache
-DEPENDS+=               p5-Params-Validate>=0.04:../../devel/p5-Params-Validate
+DEPENDS+=		p5-Cache-Cache>=1.0:../../devel/p5-Cache-Cache
+DEPENDS+=		p5-Params-Validate>=0.04:../../devel/p5-Params-Validate
 DEPENDS+=		p5-Exception-Class>=1.14:../../devel/p5-Exception-Class
 DEPENDS+=		p5-Class-Container>=0.10:../../devel/p5-Class-Container
 

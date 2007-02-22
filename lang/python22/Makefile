@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/06/17 22:07:33 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/02/22 19:26:39 wiz Exp $
 #
 
 DISTNAME=	Python-2.2.3
@@ -36,7 +36,7 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python22/PLIST.common_end
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS:Q}
 .elif ${OPSYS} == "IRIX"
-PLIST_SUBST+=   PY_PLATNAME=${LOWER_OPSYS:C/\..*//}
+PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
 PLIST_SUBST+=	PY_PLATNAME=sunos${OS_VERSION:C/\..*//}
 .else
@@ -66,5 +66,5 @@ post-extract:
 # set earlier in the environment (last definition wins).
 #
 .if ${OBJECT_FMT} == "a.out"
-MAKE_ENV+=      LDFLAGS="${LDFLAGS:S/-Wl,//}"
+MAKE_ENV+=	LDFLAGS="${LDFLAGS:S/-Wl,//}"
 .endif

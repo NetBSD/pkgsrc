@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/10 00:56:53 taca Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:25 wiz Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-2.9.4-final
@@ -15,7 +15,7 @@ COMMENT=	Zope, the Z Object Publishing Environment
 
 DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 
-DIST_SUBDIR=    zope
+DIST_SUBDIR=	zope
 PYTHON_VERSIONS_ACCEPTED=   24
 RCD_SCRIPTS=	${PKGBASE}29 zeo29
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/08/10 03:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2007/02/22 19:26:24 wiz Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -26,13 +26,13 @@ CHECK_SHLIBS_SUPPORTED=	no
 INFO_FILES=		# PLIST
 TEX_ACCEPTED=		teTeX3
 
-LICENSE=        	pvs-license
+LICENSE=	pvs-license
 # not quite sure about this, but to be on the safe side:
-RESTRICTED=     	Redistribution not permitted - see ${HOMEPAGE}license.html
+RESTRICTED=	Redistribution not permitted - see ${HOMEPAGE}license.html
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=  	${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=  	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-* NetBSD-[2-9]*-* Linux-*-* SunOS-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*

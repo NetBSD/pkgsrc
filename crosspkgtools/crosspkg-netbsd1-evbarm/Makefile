@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/08/24 18:28:38 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:16 wiz Exp $
 
 DISTNAME=	crosspkg-netbsd1-evbarm-1.6.2
-CATEGORIES=     crosspkgtools
+CATEGORIES=	crosspkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD-archive/NetBSD-1.6.2/evbarm/binary/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES=	base.tgz comp.tgz etc.tgz games.tgz kern-INTEGRATOR.tgz man.tgz \

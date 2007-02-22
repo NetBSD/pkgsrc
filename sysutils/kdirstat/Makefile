@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/01/26 04:37:27 markd Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/22 19:27:11 wiz Exp $
 
 DISTNAME=	kdirstat-2.4.4
 CATEGORIES=	sysutils kde
@@ -7,12 +7,12 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://kdirstat.sourceforge.net/
-COMMENT= 	Graphical disk usage utility
+COMMENT=	Graphical disk usage utility
 
 USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=          yes
+GNU_CONFIGURE=		yes
 
 REPLACE_PERL=		kdirstat/fix_move_to_trash_bin.pl
 

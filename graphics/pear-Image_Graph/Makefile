@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2006/06/04 16:26:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:35 wiz Exp $
 
 DISTNAME=	Image_Graph-0.3.0dev4
 CATEGORIES=	graphics
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE= 	http://pear.php.net/package/Image_Graph/
+HOMEPAGE=	http://pear.php.net/package/Image_Graph/
 COMMENT=	Package for displaying (numerical) data as a graph/chart/plot
 
 CONFLICTS=	php-pear-Image_Graph-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:27:03 wiz Exp $
 DISTNAME=	BibTool-2.48
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
@@ -20,8 +20,8 @@ REPLACE_PERL+=		Perl/bibtool.pl
 DOCDIR=		${LOCALBASE}/share/doc/BibTool
 EXAMPLEDIR=	${LOCALBASE}/share/examples/BibTool
 
-TEX_ACCEPTED=   teTeX3
-TEX_DEPMETHOD=  build
+TEX_ACCEPTED=	teTeX3
+TEX_DEPMETHOD=	build
 .include "../../mk/tex.buildlink3.mk"
 
 #pre-configure:

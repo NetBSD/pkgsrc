@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:31 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:06 wiz Exp $
 #
 
 DISTNAME=	renderPM-0-9
 PKGNAME=	${PYPKGPREFIX}-reportlab-renderPM-0.9
 PKGREVISION=	2
 CATEGORIES=	print python
-MASTER_SITES=   http://www.reportlab.com/ftp/
+MASTER_SITES=	http://www.reportlab.com/ftp/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2005/12/05 23:55:11 rillig Exp $
+# $NetBSD: options.mk,v 1.12 2007/02/22 19:26:43 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qpopper
 PKG_SUPPORTED_OPTIONS=	drac inet6 kerberos pam qpopper-servermode ssl
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 # Please note this is currently experimental for platforms that support it
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=        --with-pam
+CONFIGURE_ARGS+=	--with-pam
 .else
 CONFIGURE_ARGS+=	--without-pam
 .endif

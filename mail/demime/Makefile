@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:40 wiz Exp $
 #
 
 DISTNAME=	demime-1.1d
@@ -13,10 +13,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scifi.squawk.com/demime.html
 COMMENT=	Tool to scrub mime from mailing lists
 
-DEPENDS+=       p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
-DEPENDS+=       p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=       p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
-DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
+DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
+DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	perl:run pod2man

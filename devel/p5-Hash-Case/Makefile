@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/22 19:26:23 wiz Exp $
 #
 
-DISTNAME=      	Hash-Case-1.003
+DISTNAME=	Hash-Case-1.003
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5hac
 CATEGORIES=	perl5

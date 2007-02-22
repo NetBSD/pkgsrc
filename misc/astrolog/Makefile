@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2007/02/02 17:15:51 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:26:48 wiz Exp $
 
-DISTNAME=       ast54unx
-PKGNAME=        astrolog-5.40
+DISTNAME=	ast54unx
+PKGNAME=	astrolog-5.40
 PKGREVISION=     1
-CATEGORIES=     misc
-MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
+CATEGORIES=	misc
+MASTER_SITES=	http://www.astrolog.org/ftp/ephem/ \
 		http://www.astrolog.org/ftp/ \
 		ftp://ftp.kiarchive.ru/pub/unix/magick/astrology/astrolog/
-DISTFILES=      ${DISTNAME}.shr ${EPHEM}
+DISTFILES=	${DISTNAME}.shr ${EPHEM}
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.astrolog.org/
 COMMENT=	Astrology program for X11 and alpha-numeric terminals
 
@@ -19,12 +19,12 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
-EPHEM=          LRZ5_24 CHI_24 CPJV_24
+EPHEM=		LRZ5_24 CHI_24 CPJV_24
 EXTRACT_ONLY=	${DISTNAME}.shr
 
 USE_X11BASE=	yes
 
-DIST_SUBDIR=    astrolog
+DIST_SUBDIR=	astrolog
 BUILD_TARGET=	astrolog
 
 INSTALLATION_DIRS=	bin

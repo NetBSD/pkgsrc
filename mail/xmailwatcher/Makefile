@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:26:45 wiz Exp $
 
 DISTNAME=		xmailwatcher
 PKGNAME=		${DISTNAME}-1.6
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.dcs.ed.ac.uk/pub/X11/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT= 		Mailbox checker which displays sender and subject lines of mails
+COMMENT=	Mailbox checker which displays sender and subject lines of mails
 
 USE_IMAKE=		yes
 

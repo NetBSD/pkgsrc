@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:32 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:26 wiz Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-en-us-2.16
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	US English spelling dictionary for the Ted word processor
 
-DEPENDS+=       ted>=2.6:../../editors/ted
+DEPENDS+=	ted>=2.6:../../editors/ted
 
 WRKSRC=		${WRKDIR}/Ted-2.16
 USE_X11BASE=	YES

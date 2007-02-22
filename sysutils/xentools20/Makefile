@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/11/22 00:12:34 seb Exp $
+# $NetBSD: Makefile,v 1.31 2007/02/22 19:27:12 wiz Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
@@ -44,12 +44,12 @@ PYTHON_PATCH_SCRIPTS+=	misc/xend
 PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
 
 SUBST_CLASSES+=          paths py conf
-SUBST_STAGE.paths=      pre-configure
-SUBST_FILES.paths=      python/xen/xend/server/SrvDaemon.py
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	python/xen/xend/server/SrvDaemon.py
 SUBST_FILES.paths+=	python/xen/xend/XendDomainInfo.py
 SUBST_FILES.paths+=	python/xen/sv/Daemon.py
-SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
-SUBST_MESSAGE.paths=    Fixing hardcoded paths.
+SUBST_SED.paths=	-e "s|/usr/sbin|${PREFIX}/sbin|g"
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 SUBST_STAGE.py=		pre-configure
 SUBST_FILES.py=		python/Makefile

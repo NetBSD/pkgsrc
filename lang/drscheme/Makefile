@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/02/19 22:28:25 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/02/22 19:26:37 wiz Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -23,7 +23,7 @@ COMMENT=		R4RS-compliant and nearly R5RS-compliant scheme tailored for teaching
 
 CONFLICTS+=		mzscheme-[0-9]*
 
-WRKSRC=                 ${WRKDIR}/plt/src
+WRKSRC=			${WRKDIR}/plt/src
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 

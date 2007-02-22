@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:06 wiz Exp $
 #
 
-DISTNAME=       aide-0.6
+DISTNAME=	aide-0.6
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=   ftp://ftp.cs.tut.fi/pub/src/gnu/
+MASTER_SITES=	ftp://ftp.cs.tut.fi/pub/src/gnu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html

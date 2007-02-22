@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2007/02/15 22:29:19 perry Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:37 wiz Exp $
 
-DISTNAME=       	STk-4.0.1
+DISTNAME=	STk-4.0.1
 PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://kaolin.unice.fr/pub/STk/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/12/15 20:32:59 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:55 wiz Exp $
 #
 
 DISTNAME=		llnlxdir2_1_2
@@ -12,8 +12,8 @@ MAINTAINER=		tor@stormwall.org
 HOMEPAGE=		http://www.llnl.gov/icc/sdd/img/xdir.html
 COMMENT=		Advanced graphical FTP client
 
-USE_IMAKE=      	yes
-WRKSRC=         	${WRKDIR}/llnlxdir2_1_2/sources
+USE_IMAKE=	yes
+WRKSRC=		${WRKDIR}/llnlxdir2_1_2/sources
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 do-install:

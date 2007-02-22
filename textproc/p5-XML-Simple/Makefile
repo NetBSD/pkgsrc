@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/11/05 17:06:43 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:16 wiz Exp $
 #
 
 DISTNAME=	XML-Simple-2.16
@@ -13,11 +13,11 @@ COMMENT=	Easy Perl API to read/write XML
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=       p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
-DEPENDS+=       p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-DEPENDS+=       p5-XML-NamespaceSupport-[0-9]*:../../textproc/p5-XML-NamespaceSupport
-DEPENDS+=       p5-Storable-[0-9]*:../../devel/p5-Storable
-DEPENDS+=       p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
+DEPENDS+=	p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
+DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+DEPENDS+=	p5-XML-NamespaceSupport-[0-9]*:../../textproc/p5-XML-NamespaceSupport
+DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
+DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

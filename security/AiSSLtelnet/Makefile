@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:06 wiz Exp $
 #
 
 DISTNAME=	AiSSLtelnet-0.15
@@ -12,11 +12,11 @@ COMMENT=	SSL Telnet based on AiSSL
 
 GNU_CONFIGURE=	YES
 
-RESTRICTED=             Source code redistribution is not permitted.consult okuno@mars.elcom.nitech.ac.jp.
-NO_SRC_ON_FTP=          ${RESTRICTED}
-NO_SRC_ON_CDROM=        ${RESTRICTED}
+RESTRICTED=		Source code redistribution is not permitted.consult okuno@mars.elcom.nitech.ac.jp.
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=         ${WRKDIR}/AiSSLtelnet
+WRKSRC=		${WRKDIR}/AiSSLtelnet
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/AiSSLtelnet

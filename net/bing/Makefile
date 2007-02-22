@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 21:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:52 wiz Exp $
 
 DISTNAME=	bing-1.0.4
 CATEGORIES=	net
@@ -29,7 +29,7 @@ post-install:
 #
 .if ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "alpha")
-CXXFLAGS:=      ${CXXFLAGS:C/-O[0-9]*//g}
-CFLAGS:=        ${CFLAGS:C/-O[0-9]*//g}
+CXXFLAGS:=	${CXXFLAGS:C/-O[0-9]*//g}
+CFLAGS:=	${CFLAGS:C/-O[0-9]*//g}
 .  endif
 .endif

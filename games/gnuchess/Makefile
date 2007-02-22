@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/06/08 04:15:59 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:30 wiz Exp $
 
 DISTNAME=	gnuchess-5.07
 PKGREVISION=	3
@@ -21,7 +21,7 @@ DOCDIR=		${PREFIX}/share/doc/gnuchess
 .if (${MACHINE_ARCH} == "powerpc")
 CONFIGURE_ENV+=		CFLAGS="-O -Winline -Wmissing-prototypes -funroll-loops"
 .else
-CONFIGURE_ENV+=         CFLAGS="-O3 -Winline -Wmissing-prototypes -funroll-loops -fomit-frame-pointer"
+CONFIGURE_ENV+=		CFLAGS="-O3 -Winline -Wmissing-prototypes -funroll-loops -fomit-frame-pointer"
 .endif
 
 SUBST_CLASSES+=		paths

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/12/06 19:51:52 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2007/02/22 19:27:09 wiz Exp $
 
 DISTNAME=	seahorse-0.8.1
 PKGREVISION=	3
@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--disable-gedit
 CONFIGURE_ARGS+=	--disable-nautilus
 
-GCONF2_SCHEMAS= 	seahorse.schemas
+GCONF2_SCHEMAS=	seahorse.schemas
 
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 

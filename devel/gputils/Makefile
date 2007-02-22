@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:43 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:26:21 wiz Exp $
 
 DISTNAME=	gputils-0.13.3
 PKGREVISION=	1
@@ -6,12 +6,12 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gputils/}
 
 MAINTAINER=	dogcow@NetBSD.org
-HOMEPAGE=       http://gputils.sourceforge.net/
+HOMEPAGE=	http://gputils.sourceforge.net/
 COMMENT=	collection of tools for Microchip's PIC micro-processors
 
 CONFLICTS=	gpasm-*
 
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 post-install:

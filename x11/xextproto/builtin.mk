@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/12/17 19:10:22 joerg Exp $
+# $NetBSD: builtin.mk,v 1.5 2007/02/22 19:27:28 wiz Exp $
 
 BUILTIN_PKG:=	xextproto
 
@@ -20,7 +20,7 @@ IS_BUILTIN.xextproto=	no
 # Here, we skip checking whether the files are under ${LOCALBASE} since
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
-#  
+#
 .  if empty(H_XEXTPROTO:M__nonexistent__)
 IS_BUILTIN.xextproto=	yes
 .  endif

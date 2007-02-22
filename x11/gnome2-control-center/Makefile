@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2007/01/15 23:30:38 joerg Exp $
+# $NetBSD: Makefile,v 1.75 2007/02/22 19:27:27 wiz Exp $
 #
 
 DISTNAME=	control-center-2.16.2
@@ -31,7 +31,7 @@ PKGCONFIG_OVERRIDE+=	libwindow-settings/gnome-window-settings-2.0.pc
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 
-GCONF2_SCHEMAS= 	apps_gnome_settings_daemon_default_editor.schemas
+GCONF2_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas

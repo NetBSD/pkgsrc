@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/01/07 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2007/02/22 19:27:24 wiz Exp $
 #
 
 DISTNAME=	webalizer-2.01-10-src
@@ -16,7 +16,7 @@ COMMENT=	Web server log file analysis program
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
-GNU_CONFIGURE=  	YES
+GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-dns
 CONFIGURE_ENV+=		ac_cv_GDLIB=${BUILDLINK_PREFIX.gd}/include
@@ -38,7 +38,7 @@ SUBST_FILES.webalizer=	sample.conf webalizer.1
 SUBST_SED.webalizer=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webalizer
-PKG_SUPPORTED_OPTIONS=  geoip
+PKG_SUPPORTED_OPTIONS=	geoip
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgeoip)

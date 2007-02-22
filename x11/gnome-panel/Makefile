@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2007/02/02 20:07:38 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2007/02/22 19:27:26 wiz Exp $
 #
 
 DISTNAME=		gnome-panel-2.16.3
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 
 #CPPFLAGS+=	-DPANEL_GNOME_LOGO_ICON="\"netbsd-logo-icon-transparent\""
 
-GCONF2_SCHEMAS= 	clock.schemas
+GCONF2_SCHEMAS=	clock.schemas
 GCONF2_SCHEMAS+=	fish.schemas
 GCONF2_SCHEMAS+=	panel-global.schemas
 GCONF2_SCHEMAS+=	panel-general.schemas

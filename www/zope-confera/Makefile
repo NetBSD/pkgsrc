@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:27:25 wiz Exp $
 #
 
 DISTNAME=	Confera-1.2.0-nonbin
 PKGNAME=	zope-confera-1.2.0
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Download/Prereleases/Confera/
+MASTER_SITES=	http://www.zope.org/Download/Prereleases/Confera/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/07 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/22 19:27:29 wiz Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
@@ -12,8 +12,8 @@ USE_DIRS+=	xdg-1.1
 
 USE_TOOLS+=		pkg-config
 
-CONFIGURE_ARGS+=        --with-gtk=${BUILDLINK_PREFIX.gtk2}
-CONFIGURE_ARGS+=        --with-xml=${BUILDLINK_PREFIX.libxml2}
+CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_PREFIX.gtk2}
+CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 
 BUILD_DIRS=		${WRKSRC}/utils ${WRKSRC}/driver

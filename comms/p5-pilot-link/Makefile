@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2007/01/30 22:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/02/22 19:26:14 wiz Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
 
-PKGNAME=                p5-${DISTNAME}
+PKGNAME=		p5-${DISTNAME}
 
 COMMENT=		Perl bindings for pilot-link
 
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=        --enable-conduits
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 PERL5_CONFIGURE=	NO
-PERL5_PACKLIST=         auto/PDA/Pilot/.packlist
+PERL5_PACKLIST=		auto/PDA/Pilot/.packlist
 PERL5_LDFLAGS=		-lpisock
 
 REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link

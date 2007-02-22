@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2007/01/31 00:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:26:20 wiz Exp $
 #
 
-DISTNAME=       bmake-20051105
+DISTNAME=	bmake-20051105
 PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	# empty
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${OPSYS}/bmake.1 ${PREFIX}/${PKGMANDIR}/man1
 
-.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")  
+.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
 .  include "../../pkgtools/libnbcompat/inplace.mk"
 .else
 .  include "../../pkgtools/libnbcompat/buildlink3.mk"

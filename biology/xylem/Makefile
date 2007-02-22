@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 19:52:44 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:09 wiz Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -11,7 +11,7 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
 
-WRKSRC=                 ${WRKDIR}/xylem
+WRKSRC=			${WRKDIR}/xylem
 BUILD_DIRS=		src.c # yes, it's a directory
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/06 12:20:47 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:36 wiz Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -10,23 +10,23 @@ MAINTAINER=		obata@lins.jp
 HOMEPAGE=		http://www.unixuser.org/~euske/vnc2swf/
 COMMENT=		Record vnc session as flash movie
 
-DEPENDS+=               x11vnc-[0-9]*:../../x11/x11vnc
+DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults share/doc/html/vnc2swf
 
-SUBST_CLASSES+=         x11base
-SUBST_STAGE.x11base=    pre-configure
-SUBST_MESSAGE.x11base=  Change X11base to ${PREFIX} in Makefile
-SUBST_FILES.x11base=    Makefile.in
-SUBST_SED.x11base=      -e "s|/usr/X11R6|${PREFIX}|"
+SUBST_CLASSES+=		x11base
+SUBST_STAGE.x11base=	pre-configure
+SUBST_MESSAGE.x11base=	Change X11base to ${PREFIX} in Makefile
+SUBST_FILES.x11base=	Makefile.in
+SUBST_SED.x11base=	-e "s|/usr/X11R6|${PREFIX}|"
 
-SUBST_CLASSES+=         toolpath
-SUBST_STAGE.toolpath=   pre-configure
-SUBST_FILES.toolpath=   recordwin.sh
-SUBST_SED.toolpath=     -E -e "s|^(VNC2SWF=).*|\1${PREFIX}/bin/vnc2swf|" \
+SUBST_CLASSES+=		toolpath
+SUBST_STAGE.toolpath=	pre-configure
+SUBST_FILES.toolpath=	recordwin.sh
+SUBST_SED.toolpath=	-E -e "s|^(VNC2SWF=).*|\1${PREFIX}/bin/vnc2swf|" \
 			-e "s|^(X11VNC=).*|\1${PREFIX}/bin/x11vnc|" \
 			-e "s|^(XWININFO=).*|\1${X11BASE}/bin/xwininfo|" \
 			-e "s|^(AWK=).*|\1${AWK}|" \

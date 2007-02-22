@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/31 21:29:16 reed Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/22 19:27:25 wiz Exp $
 #
 
 DISTNAME=		libXfixes-2.0.1
@@ -20,7 +20,7 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    xfixes.pc.in
+PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} == "Darwin")

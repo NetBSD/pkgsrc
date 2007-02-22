@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/05 04:48:28 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:37 wiz Exp $
 
 PKGREVISION=	2
 CANNA_MODULE=	server
@@ -15,8 +15,8 @@ PKG_GROUPS=	${CANNA_GROUP}
 PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}
 
 MAKE_DIRS+=		${IMDICTDIR}
-OWN_DIRS+=        	${IMDICTDIR}/canna
-OWN_DIRS+=	        ${IMDICTDIR}/canna/canna
+OWN_DIRS+=		${IMDICTDIR}/canna
+OWN_DIRS+=		${IMDICTDIR}/canna/canna
 OWN_DIRS_PERMS+=	${CANNA_SPOOL}					\
 			${CANNA_USER} ${CANNA_GROUP} ${CANNA_MODE}
 

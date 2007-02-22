@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2005/07/12 17:37:52 kristerw Exp $
+# $NetBSD: hacks.mk,v 1.2 2007/02/22 19:27:19 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -6,6 +6,6 @@
 # defined, unless _XOPEN_SOURCE_EXTENDED also is defined
 .if ${OPSYS} == "NetBSD"
 .if empty(OS_VERSION:N1.[56]*)
-CFLAGS+=        -D_XOPEN_SOURCE_EXTENDED
+CFLAGS+=	-D_XOPEN_SOURCE_EXTENDED
 .endif
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/02/21 13:23:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2007/02/22 19:26:10 wiz Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -31,7 +31,7 @@ post-patch:
 
 EVAL_PREFIX+=		PYDIR=python
 
-REPLACE_INTERPRETER+=   python
+REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	.*/bin/python
 REPLACE.python.new=	${PYDIR}/bin/python
 REPLACE_FILES.python=	scripts/tragesym

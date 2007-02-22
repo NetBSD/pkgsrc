@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2007/01/23 17:02:06 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:12 wiz Exp $
 #
 
-DISTNAME=       usbutil-0.5
+DISTNAME=	usbutil-0.5
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=   ftp://ftp.augustsson.net/pub/netbsd/
+MASTER_SITES=	ftp://ftp.augustsson.net/pub/netbsd/
 
 MAINTAINER=	lennart@augustsson.net
 COMMENT=	USB developer utilities

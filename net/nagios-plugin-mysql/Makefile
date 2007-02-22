@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2006/10/23 07:17:40 seb Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:56 wiz Exp $
 #
 
 PKGNAME=	nagios-plugin-mysql-${PLUGINSVERSION}
-CATEGORIES=   	net sysutils databases
+CATEGORIES=	net sysutils databases
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Nagios mysql plugin
 
-DEPENDS+=       nagios-plugins-${PLUGINSVERSION}{,nb[0-9]*}:../../net/nagios-plugins
+DEPENDS+=	nagios-plugins-${PLUGINSVERSION}{,nb[0-9]*}:../../net/nagios-plugins
 
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 

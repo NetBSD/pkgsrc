@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/09 04:17:30 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/22 19:26:07 wiz Exp $
 #
 
 DISTNAME=	rio007
@@ -7,8 +7,8 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.world.co.uk/sba/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://www.world.co.uk/sba/rio.html
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.world.co.uk/sba/rio.html
 COMMENT=	Utility to display and manage files on the Diamond Rio PMP300
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

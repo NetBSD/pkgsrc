@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2006/10/05 09:32:02 obache Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:21 wiz Exp $
 #
 
-DISTNAME=       cbrowser-0.8
-CATEGORIES=     devel tk
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=cbrowser/}
+DISTNAME=	cbrowser-0.8
+CATEGORIES=	devel tk
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cbrowser/}
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://cbrowser.sourceforge.net/
-COMMENT=        Graphical C/C++ source code browsing tool, and call graph viewer
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://cbrowser.sourceforge.net/
+COMMENT=	Graphical C/C++ source code browsing tool, and call graph viewer
 
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope
 DEPENDS+=	tk-[0-9]*:../../x11/tk

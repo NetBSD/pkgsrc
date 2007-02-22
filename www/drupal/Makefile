@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/31 21:54:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:19 wiz Exp $
 
 DISTNAME=	drupal-4.7.6
 CATEGORIES=	www
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	drupal.conf
 SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
-SUBST_MESSAGE.conf=     Fixing configuration files.
+SUBST_MESSAGE.conf=	Fixing configuration files.
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"

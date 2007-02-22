@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:47 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:39 wiz Exp $
 
 DISTNAME=	pyfunge-0.2-beta1
 PKGNAME=	${PYPKGPREFIX}-funge-0.2beta1
@@ -13,12 +13,12 @@ COMMENT=	Extensible Funge-98 interpreter written in Python
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-PYTHON_VERSIONS_ACCEPTED?=      23
+PYTHON_VERSIONS_ACCEPTED?=	23
 
 WRKSRC?=	${WRKDIR}/PyFunge
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 
-PYCOMPILEALL=   ${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}

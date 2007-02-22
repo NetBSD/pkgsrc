@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/17 20:59:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/22 19:26:23 wiz Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
@@ -27,7 +27,7 @@ PKG_SKIP_REASON+=	"${PKGNAME} is only for emacs20"
 .endif
 
 MAKE_ENV+=	PREFIX=${PREFIX:Q}
-BUILD_TARGET= 	default
+BUILD_TARGET=	default
 INFO_FILES=	# PLIST
 MESSAGE_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:Q}
 

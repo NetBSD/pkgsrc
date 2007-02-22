@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.9 2006/07/02 12:52:43 markd Exp $
+# $NetBSD: Makefile.extension,v 1.10 2007/02/22 19:26:45 wiz Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -16,7 +16,7 @@ CATEGORIES+=		math
 
 R_HOMEPAGE_BASE=	http://cran.r-project.org/src/contrib/Descriptions
 
-WRKSRC=         	${WRKDIR}/${R_PKGNAME}
+WRKSRC=		${WRKDIR}/${R_PKGNAME}
 
 do-build:
 

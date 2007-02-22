@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/07/06 21:14:19 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:11 wiz Exp $
 
-DISTNAME= 	mtscan-20050129
+DISTNAME=	mtscan-20050129
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty

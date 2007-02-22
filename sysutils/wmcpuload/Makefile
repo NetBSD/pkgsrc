@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/20 12:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:12 wiz Exp $
 #
 
 DISTNAME=	wmcpuload-1.0.1
@@ -11,7 +11,7 @@ MAINTAINER=	coto@core.de
 HOMEPAGE=	http://www.sh.rim.or.jp/~ssato/dockapp/\#wmcpuload
 COMMENT=	Dockable CPU monitor
 
-GNU_CONFIGURE= 	YES
+GNU_CONFIGURE=	YES
 
 post-extract:
 	${CP} ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/src

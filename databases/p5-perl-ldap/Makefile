@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/10/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/22 19:26:18 wiz Exp $
 #
 
-DISTNAME=     	perl-ldap-0.33
+DISTNAME=	perl-ldap-0.33
 PKGNAME=	p5-perl-ldap-0.33
 SVR4_PKGNAME=	pldap
 CATEGORIES=	databases net devel perl5

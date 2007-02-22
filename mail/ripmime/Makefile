@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:44 wiz Exp $
 #
 
-DISTNAME=       ripmime-1.4.0.2
+DISTNAME=	ripmime-1.4.0.2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.pldaniels.com/ripmime/
 

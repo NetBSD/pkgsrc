@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/12/16 13:18:54 schwarz Exp $
+# $NetBSD: Makefile,v 1.64 2007/02/22 19:26:42 wiz Exp $
 
 DISTNAME=		nmh-1.0.4
 PKGREVISION=		7
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	--without-krb4
 .endif
 
 DOCDIR=			share/doc/nmh
-EGDIR=	 		${PREFIX}/share/examples/nmh
+EGDIR=		${PREFIX}/share/examples/nmh
 
 BUILD_DEFS+=		NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2007/01/30 19:50:54 joerg Exp $
+# $NetBSD: Makefile,v 1.111 2007/02/22 19:26:11 wiz Exp $
 
 DISTNAME=	gaim-1.5.0
 PKGREVISION=	6
@@ -29,7 +29,7 @@ CONFIGURE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-_INSTALL_UNSTRIPPED=    yes
+_INSTALL_UNSTRIPPED=	yes
 .endif
 
 .if ${X11_TYPE} != "native"

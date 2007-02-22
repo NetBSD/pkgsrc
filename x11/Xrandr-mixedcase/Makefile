@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/12/27 13:37:42 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/02/22 19:27:25 wiz Exp $
 #
 
 DISTNAME=		libXrandr-1.0.2
@@ -21,7 +21,7 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    xrandr.pc.in
+PKGCONFIG_OVERRIDE+=	xrandr.pc.in
 
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 

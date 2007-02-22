@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/12/17 17:57:31 salo Exp $
+# $NetBSD: Makefile,v 1.45 2007/02/22 19:26:57 wiz Exp $
 #
 
 DISTNAME=	nmap-4.20
@@ -8,7 +8,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=     salo@NetBSD.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Graphical front end to the nmap port scanner
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:08 wiz Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -30,7 +30,7 @@ SUBST_CLASSES+=		mpplay
 SUBST_MESSAGE.mpplay=	Skipping modplugplay
 SUBST_STAGE.mpplay=	pre-build
 SUBST_FILES.mpplay=	Makefile
-SUBST_SED.mpplay=       -e 's,^\(SUBDIRS = modplugxmms glade\) modplugplay,\1,'
+SUBST_SED.mpplay=	-e 's,^\(SUBDIRS = modplugxmms glade\) modplugplay,\1,'
 
 PLIST_SUBST+=		NOTFOROSX="@comment "
 .else

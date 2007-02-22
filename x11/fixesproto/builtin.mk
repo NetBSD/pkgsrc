@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2006/12/16 01:04:43 joerg Exp $
+# $NetBSD: builtin.mk,v 1.6 2007/02/22 19:27:26 wiz Exp $
 
 BUILTIN_PKG:=	fixesproto
 
@@ -22,7 +22,7 @@ IS_BUILTIN.fixesproto=	no
 # Here, we skip checking whether the files are under ${LOCALBASE} since
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
-#  
+#
 .  if empty(H_XFIXESPROTO:M__nonexistent__) && \
       empty(H_XFIXESWIRE:M__nonexistent__)
 IS_BUILTIN.fixesproto=	yes

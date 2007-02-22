@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2007/02/22 19:26:56 wiz Exp $
 
 DISTNAME=	netatalk-2.0.3
 PKGREVISION=	4
@@ -56,22 +56,22 @@ SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
 SUBST_SED.paths=	-e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3,"
 SUBST_SED.paths+=	-e "s,\(NETBSD.*\)/etc/rc.d,\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.netatalk
-PKG_SUPPORTED_OPTIONS=  cups kerberos pam slp
+PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
+PKG_SUPPORTED_OPTIONS=	cups kerberos pam slp
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-cups
+CONFIGURE_ARGS+=	--enable-cups
 .else
-CONFIGURE_ARGS+=        --disable-cups
+CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gssapi --enable-krbV-uam
-CONFIGURE_ENV+= 	GSSAPI_LIBS="-lkrb5 -lroken -lasn1 -lcrypto -lcom_err"
+CONFIGURE_ENV+=	GSSAPI_LIBS="-lkrb5 -lroken -lasn1 -lcrypto -lcom_err"
 PLIST_SUBST+=		GSSAPI=""
 .else
 CONFIGURE_ARGS+=	--without-gssapi

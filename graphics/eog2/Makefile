@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2007/02/08 18:21:27 drochner Exp $
+# $NetBSD: Makefile,v 1.69 2007/02/22 19:26:34 wiz Exp $
 #
 
 DISTNAME=	eog-2.16.3
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 
-GCONF2_SCHEMAS= 	eog.schemas
+GCONF2_SCHEMAS=	eog.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.16

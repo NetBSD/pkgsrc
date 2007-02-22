@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/16 23:02:49 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:18 wiz Exp $
 #
 
 DISTNAME=		jwm-1.8
@@ -28,7 +28,7 @@ SUBST_SED.egdir=	-e 's,@@EGDIR@@,${EGDIR},g'
 
 PKG_SYSCONFSUBDIR=	jwm
 EGDIR=			${PREFIX}/share/examples/jwm
-CONF_FILES= 		${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
+CONF_FILES=	${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
 
 .include "options.mk"
 

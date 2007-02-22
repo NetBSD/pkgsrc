@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/26 20:05:53 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/22 19:26:05 wiz Exp $
 #
 
 DISTNAME=	gtick-0.3.10
@@ -12,7 +12,7 @@ COMMENT=	Metronome application using GTK2+
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=       yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
 LIBS+=			${LIBOSSAUDIO}
