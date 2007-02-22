@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/01/20 13:49:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/02/22 14:45:47 joerg Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -168,7 +168,6 @@ share/graphviz/doc/NEWS
 share/graphviz/doc/cpl1.0.txt
 share/graphviz/doc/html/FAQ.html
 share/graphviz/doc/html/build.html
-share/graphviz/doc/html/gd.html
 share/graphviz/doc/html/index.html
 share/graphviz/doc/html/info/Mcircle.gif
 share/graphviz/doc/html/info/Mdiamond.gif
