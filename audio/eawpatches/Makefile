@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/08 21:34:57 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/22 16:42:10 drochner Exp $
 #
 
 DISTNAME=	eawpats12_full
@@ -23,7 +23,7 @@ post-extract:
 	chmod go-w ${WRKSRC}/eawpats/gravis.cfg
 
 pre-configure:
-	sed -e "s@/home/user/eawpats@${WRKSRC}/share/eawpats@" \
+	sed -e "s@/home/user/eawpats@${PREFIX}/share/eawpats@" \
 		< ${WRKSRC}/eawpats/linuxconfig/timidity.cfg \
 		> ${WRKSRC}/eawpats/timidity.cfg
 	rm -r ${WRKSRC}/eawpats/linuxconfig \
