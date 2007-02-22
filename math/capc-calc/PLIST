@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/10/13 16:52:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/02/22 20:30:15 drochner Exp $
 bin/calc
 bin/cscript/4dsphere
 bin/cscript/fproduct
@@ -158,7 +158,6 @@ share/calc/help/cosh
 share/calc/help/cot
 share/calc/help/coth
 share/calc/help/count
-share/calc/help/cp
 share/calc/help/credit
 share/calc/help/csc
 share/calc/help/csch
@@ -336,6 +335,7 @@ share/calc/help/polar
 share/calc/help/poly
 share/calc/help/pop
 share/calc/help/popcnt
+share/calc/help/pound
 share/calc/help/power
 share/calc/help/prevcand
 share/calc/help/prevprime
@@ -409,6 +409,7 @@ share/calc/help/sum
 share/calc/sumtimes.cal
 share/calc/help/swap
 share/calc/help/system
+share/calc/help/systime
 share/calc/help/tail
 share/calc/help/tan
 share/calc/help/tanh
@@ -420,6 +421,7 @@ share/calc/help/type
 share/calc/help/types
 share/calc/help/unexpected
 share/calc/help/usage
+share/calc/help/usertime
 share/calc/help/variable
 share/calc/help/version
 share/calc/help/wishlist
