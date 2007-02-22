@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2006/07/07 02:55:28 minskim Exp $
+# $NetBSD: builtin.mk,v 1.3 2007/02/22 19:01:21 wiz Exp $
 
 BUILTIN_PKG:=	sun-jre14
 
@@ -29,7 +29,7 @@ MAKEVARS+=	IS_BUILTIN.sun-jre14
     !empty(IS_BUILTIN.sun-jre14:M[yY][eE][sS]) && \
     empty(JAVAVM14:M__nonexistent__)
 BUILTIN_VERSION.sun-jre14!=						\
-	${BASENAME} /System/Library/Frameworks/JavaVM.framework/Versions/1.4.* 
+	${BASENAME} /System/Library/Frameworks/JavaVM.framework/Versions/1.4.*
 BUILTIN_PKG.sun-jre14=	sun-jre14-${BUILTIN_VERSION.sun-jre14}
 .endif
 MAKEVARS+=	BUILTIN_PKG.sun-jre14

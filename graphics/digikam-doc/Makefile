@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/01/17 23:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/02/22 19:01:19 wiz Exp $
 
 DISTNAME=		digikam-doc-0.8.2
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://digikam.sourceforge.net/
+HOMEPAGE=		http://www.digikam.org/
 COMMENT=		Documentation for Digikam
 
 USE_DIRS+=		xdg-1.1

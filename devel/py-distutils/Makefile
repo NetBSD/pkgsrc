@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2006/09/24 18:25:19 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/22 19:01:17 wiz Exp $
 #
 
 DISTNAME=	Distutils-1.0.2
 PKGNAME=	${PYPKGPREFIX}-distutils-1.0.2
 CATEGORIES=	devel python
-MASTER_SITES=	http://www.python.org/sigs/distutils-sig/download/
+MASTER_SITES=	http://www.python.org/community/sigs/current/distutils-sig/download/
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://www.python.org/sigs/distutils-sig/
+HOMEPAGE=	http://www.python.org/community/sigs/current/distutils-sig/
 COMMENT=	Distribution Utilities for Python
 
 PYTHON_VERSIONS_ACCEPTED= 15

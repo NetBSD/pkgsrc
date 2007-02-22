@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/26 04:13:34 markd Exp $
+# $NetBSD: Makefile,v 1.23 2007/02/22 19:01:19 wiz Exp $
 
 DISTNAME=		digikamimageplugins-0.9.0
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://digikam.sourceforge.net/
+HOMEPAGE=		http://www.digikam.org/
 COMMENT=		Plugins for Digikam's ImageEditor
 
 USE_TOOLS+=		gmake msgfmt perl

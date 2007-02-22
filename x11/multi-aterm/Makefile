@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2007/01/30 15:34:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/22 19:01:27 wiz Exp $
 #
 
+# materm is now mrxvt
 DISTNAME=	multi-aterm-0.0.4
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://www.materm.tuxfamily.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.materm.tuxfamily.org/
 COMMENT=	Multi-terminal for the X Window System based on aterm
 
 GNU_CONFIGURE=		YES

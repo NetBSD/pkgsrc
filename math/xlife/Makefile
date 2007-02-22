@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:39 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:22 wiz Exp $
 #
 
 DISTNAME=	xlife-5.0
 PKGREVISION=	5
 CATEGORIES=	math games
-MASTER_SITES=	http://www.tuxedo.org/~esr/
+MASTER_SITES=	http://www.catb.org/~esr/
 
 MAINTAINER=	fredb@NetBSD.org
-HOMEPAGE=	http://www.tuxedo.org/~esr/software.html
+HOMEPAGE=	http://www.catb.org/~esr/software.html
 COMMENT=	John Horton Conway's "Game of Life"
 
 WRKSRC=		${WRKDIR}

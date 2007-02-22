@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/02/22 19:01:24 wiz Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.task.gda.pl/mirror/ftp.cert.org/pub/tools/crack/ \
-		ftp://ftp.cs.umn.edu/mirror00/ftp.win.tue.nl/pub/security/ \
-		ftp://ftp.nask.pl/pub/CERT_NASK/CERTCC_tools/crack/
+MASTER_SITES=	ftp://ftp.cerias.purdue.edu/pub/tools/unix/pwdutils/crack \
+		ftp://ftp.netsw.org/system/tools/password/crack/crack/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.crypticide.com/users/alecm/
+HOMEPAGE=	http://www.crypticide.com/dropsafe/info/home.html
 COMMENT=	The "Sensible" Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/c50a

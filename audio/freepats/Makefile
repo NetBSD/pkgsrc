@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 19:01:13 wiz Exp $
 #
 
 DISTNAME=	freepats-20060219
@@ -20,9 +20,9 @@ INSTALLATION_DIRS=	share
 
 post-patch:
 	${ECHO} "dir ${PREFIX}/share/freepats" >${WRKSRC}/timidity.cfg
-	${CAT} ${WRKSRC}/freepats.cfg >>${WRKSRC}/timidity.cfg
+	cat ${WRKSRC}/freepats.cfg >>${WRKSRC}/timidity.cfg
 
 do-install:
-	cd ${WRKDIR} && ${PAX} -rw -pe freepats ${PREFIX}/share
+	cd ${WRKDIR} && pax -rw -pp freepats ${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/07/10 16:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/02/22 19:01:22 wiz Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/Guppi/0.40/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/guppi/
+HOMEPAGE=	http://www.gnome.org/projects/guppi/
 COMMENT=	Plot program with integrated statistics capabilities
 
 # guppi is no longer maintained, see e.g.
