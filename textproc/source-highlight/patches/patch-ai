@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2004/10/23 17:47:16 seb Exp $
+$NetBSD: patch-ai,v 1.2 2007/02/22 20:35:37 wiz Exp $
 
---- src/lib/outputgenerator.h.orig	2004-09-26 09:34:55.000000000 +0000
+--- src/lib/outputgenerator.h.orig	2006-08-22 13:50:10.000000000 +0000
 +++ src/lib/outputgenerator.h
 @@ -13,6 +13,7 @@
  #define OUTPUTGENERATOR_H
@@ -8,5 +8,5 @@ $NetBSD: patch-ai,v 1.1 2004/10/23 17:47:16 seb Exp $
  #include <iostream>
 +#include <string>
  
- class OutputBuffer;
- 
+ /**
+ base class that actually writes the generated output to the output stream
