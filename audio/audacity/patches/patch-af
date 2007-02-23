@@ -1,8 +1,14 @@
-$NetBSD: patch-af,v 1.4 2004/11/22 16:36:31 adam Exp $
+$NetBSD: patch-af,v 1.5 2007/02/23 03:27:41 rillig Exp $
 
---- configure.orig	2004-11-18 06:17:29.000000000 +0000
-+++ configure
-@@ -6118,7 +6118,8 @@ fi
+The CPPFLAGS and LIBS from wx-config had been set too early in the
+configure file, so that they were taken into the AC_CONFIG_SUBDIRS
+directories. Some of these directories only use a C compiler for
+linking, which of course caused problems with the wx* libraries, which
+are C++.
+
+--- configure.orig	2006-11-15 05:12:13.000000000 +0100
++++ configure	2007-02-23 04:17:41.000000000 +0100
+@@ -6586,7 +6586,8 @@ fi
  subdirs="$subdirs lib-src/portaudio-v19"
  
  
@@ -12,7 +18,7 @@ $NetBSD: patch-af,v 1.4 2004/11/22 16:36:31 adam Exp $
  
  	CXXFLAGS="-I../lib-src/portaudio/pa_common $CXXFLAGS"
  
-@@ -6204,6 +6205,84 @@ _ACEOF
+@@ -6672,6 +6673,84 @@ _ACEOF
  
  	esac
  fi
@@ -97,3 +103,12 @@ $NetBSD: patch-af,v 1.4 2004/11/22 16:36:31 adam Exp $
  
  use_precomp="no"
  
+@@ -7518,6 +7597,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;

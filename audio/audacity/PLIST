@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:11 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/02/23 03:27:40 rillig Exp $
 bin/audacity
 man/man1/audacity.1
 share/audacity/audacity-1.2-help.htb
@@ -31,10 +31,13 @@ share/audacity/plug-ins/pluck.ny
 share/audacity/plug-ins/tremolo.ny
 share/doc/audacity/LICENSE.txt
 share/doc/audacity/README.txt
+share/locale/af/LC_MESSAGES/audacity.mo
 share/locale/ar/LC_MESSAGES/audacity.mo
 share/locale/bg/LC_MESSAGES/audacity.mo
+share/locale/bn/LC_MESSAGES/audacity.mo
 share/locale/ca/LC_MESSAGES/audacity.mo
 share/locale/cs/LC_MESSAGES/audacity.mo
+share/locale/cy/LC_MESSAGES/audacity.mo
 share/locale/da/LC_MESSAGES/audacity.mo
 share/locale/de/LC_MESSAGES/audacity.mo
 share/locale/el/LC_MESSAGES/audacity.mo
@@ -43,6 +46,7 @@ share/locale/eu/LC_MESSAGES/audacity.mo
 share/locale/fi/LC_MESSAGES/audacity.mo
 share/locale/fr/LC_MESSAGES/audacity.mo
 share/locale/ga/LC_MESSAGES/audacity.mo
+share/locale/gl/LC_MESSAGES/audacity.mo
 share/locale/hu/LC_MESSAGES/audacity.mo
 share/locale/it/LC_MESSAGES/audacity.mo
 share/locale/ja/LC_MESSAGES/audacity.mo
@@ -52,9 +56,12 @@ share/locale/nb/LC_MESSAGES/audacity.mo
 share/locale/nl/LC_MESSAGES/audacity.mo
 share/locale/pl/LC_MESSAGES/audacity.mo
 share/locale/pt/LC_MESSAGES/audacity.mo
+share/locale/ro/LC_MESSAGES/audacity.mo
 share/locale/ru/LC_MESSAGES/audacity.mo
+share/locale/sk/LC_MESSAGES/audacity.mo
 share/locale/sl/LC_MESSAGES/audacity.mo
 share/locale/sv/LC_MESSAGES/audacity.mo
+share/locale/tr/LC_MESSAGES/audacity.mo
 share/locale/uk/LC_MESSAGES/audacity.mo
 share/locale/zh/LC_MESSAGES/audacity.mo
 share/locale/zh_TW/LC_MESSAGES/audacity.mo
