@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/06 09:52:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/23 22:22:38 gdt Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_translate
@@ -47,7 +47,7 @@ include/vrtdataset.h
 lib/libgdal.la
 man/man1/gdal-config.1
 man/man1/gdal_contour.1
-man/man1/gdal_merge.py.1
+man/man1/gdal_merge.1
 man/man1/gdal_translate.1
 man/man1/gdal_utilities.1
 man/man1/gdaladdo.1
@@ -58,8 +58,11 @@ man/man1/ogr2ogr.1
 man/man1/ogr_utilities.1
 man/man1/ogrinfo.1
 man/man1/ogrtindex.1
-man/man1/pct2rgb.py.1
-man/man1/rgb2pct.py.1
+man/man1/pct2rgb.1
+man/man1/rgb2pct.1
+share/gdal/GDALLogoBW.svg
+share/gdal/GDALLogoColor.svg
+share/gdal/GDALLogoGS.svg
 share/gdal/cubewerx_extra.wkt
 share/gdal/ecw_cs.dat
 share/gdal/ellipsoid.csv
@@ -71,6 +74,7 @@ share/gdal/gdalicon.png
 share/gdal/pcs.csv
 share/gdal/prime_meridian.csv
 share/gdal/projop_wparm.csv
+share/gdal/s57agencies.csv
 share/gdal/s57attributes.csv
 share/gdal/s57attributes_aml.csv
 share/gdal/s57attributes_iw.csv
