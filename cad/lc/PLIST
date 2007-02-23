@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/23 22:50:40 dmcmahill Exp $
+bin/lc
+bin/lcplot
+bin/lcspice
