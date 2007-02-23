@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2007/01/06 21:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2007/02/23 04:00:02 rillig Exp $
 #
 
 DISTNAME=		atk-1.12.4
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.12/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,6 +28,12 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 UNLIMIT_RESOURCES=	stacksize
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
+
+SUBST_CLASSES+=		loc
+SUBST_STAGE.loc=	pre-configure
+SUBST_MESSAGE.loc=	Fixing invalid use of AM_GLIB_DEFINE_LOCALEDIR.
+SUBST_FILES.loc=	configure
+SUBST_SED.loc=		-e 's,^\(\#define ATK_LOCALEDIR\).*,\1 "${PREFIX}/${PKGLOCALEDIR}/locale",'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
