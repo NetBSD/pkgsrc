@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2006/11/07 16:46:51 tron Exp $
+# $NetBSD: Makefile.common,v 1.22.2.1 2007/02/23 11:56:25 ghen Exp $
 
 .if !defined(DISTNAME)
 DISTNAME=		php-${PHP_BASE_VERS}
@@ -15,7 +15,7 @@ EXTRACT_SUFX?=		.tar.bz2
 MAINTAINER?=		jdolecek@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
 
-PHP_BASE_VERS=		5.2.0
+PHP_BASE_VERS=		5.2.1
 
 PHP_EXTENSION_DIR=	lib/php/20040412
 PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
