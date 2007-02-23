@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/08/31 13:49:35 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2007/02/23 11:48:18 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CMAKE_BUILDLINK3_MK:=	${CMAKE_BUILDLINK3_MK}+
@@ -12,10 +12,10 @@ BUILDLINK_PACKAGES+=	cmake
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cmake
 
 .if ${CMAKE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.cmake+=	cmake>=2.4.2
+BUILDLINK_API_DEPENDS.cmake+=	cmake>=2.4.6
 BUILDLINK_PKGSRCDIR.cmake?=	../../devel/cmake
 BUILDLINK_DEPMETHOD.cmake?=	build
-BUILDLINK_FILES.cmake+=		share/CMake/include/*
+BUILDLINK_FILES.cmake+=		share/cmake-*/include/*
 .endif	# CMAKE_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
