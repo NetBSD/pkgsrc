@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.11 2007/02/21 12:27:36 rillig Exp $
+# $NetBSD: arg-source,v 1.12 2007/02/23 00:31:29 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -61,6 +61,31 @@ while $test $# -gt 0; do
 		append_queue argbuf "$arg$nextarg"
 		$debug_log $wrapperlog "    (arg-source) push: $arg$nextarg"
 		;;
+	##############################################################
+	# Split -Wl,option1,option2 into -Wl,option1 -Wl,option2 and
+	# process them again.
+	#
+	# XXX: The sunpro manual page says: A comma can be part of an
+	# argument by escaping it with an immediately preceding
+	# backslash. The manual pages for gcc and mipspro do not
+	# mention commas in those options at all.
+	##############################################################
+	-Wl,*,*)
+		$debug_log $wrapperlog "    (arg-source) before-split: $arg $*"
+		saved_IFS="$IFS"
+		new_args=""
+		IFS=","
+		for o in ${arg#-Wl,}; do
+			IFS="$saved_IFS"
+			shquote "$o"; o="$shquoted"
+			new_args="$new_args -Wl,$o"
+		done
+		IFS="$saved_IFS"
+		eval "set args $new_args \"\$@\""; shift
+		$debug_log $wrapperlog "    (arg-source) after-split: $*"
+		continue
+		;;
+
 	##############################################################
 	# Split "-Wl,-R/dir1:/dir2" into "-Wl,-R/dir1 -Wl,-R/dir2".
 	# Same for -R and -Wl,-rpath and -Wl,-rpath-link.
