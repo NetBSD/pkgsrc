@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2007/02/23 03:27:41 rillig Exp $
+$NetBSD: patch-af,v 1.6 2007/02/23 03:37:55 rillig Exp $
 
 The CPPFLAGS and LIBS from wx-config had been set too early in the
 configure file, so that they were taken into the AC_CONFIG_SUBDIRS
@@ -103,12 +103,3 @@ are C++.
  
  use_precomp="no"
  
-@@ -7518,6 +7597,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
