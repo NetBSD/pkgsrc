@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/09 21:21:34 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/23 15:56:22 joerg Exp $
 #
 
 DISTNAME=	xmms-mac-0.3.1
@@ -11,7 +11,7 @@ COMMENT=	XMMS plugin for Monkey's Audio files
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 # needs a bugfix to compile
 BUILDLINK_API_DEPENDS.xmms+=	xmms>=1.2.10nb7
