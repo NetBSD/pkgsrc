@@ -16,5 +16,4 @@ translators include:
 	* PNG 			(read/write)
 	* Geosoft GXF		(read)
 	* Arc/Info Binary Grid 	(read)
-A full list is available at
-http://www.remotesensing.org/gdal/formats_list.html
+A full list is available at http://www.gdal.org/formats_list.html.

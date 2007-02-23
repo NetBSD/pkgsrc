@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/08/10 00:38:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/02/23 22:22:38 gdt Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GDAL_LIB_BUILDLINK3_MK:=	${GDAL_LIB_BUILDLINK3_MK}+
@@ -28,8 +28,13 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.gdal-lib
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
+.if !empty(PKG_BUILD_OPTIONS.gdal-lib:Mmysql)
+.include "../../mk/mysql.buildlink3.mk"
+.endif
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
