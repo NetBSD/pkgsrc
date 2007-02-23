@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.700 2007/02/21 01:38:53 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.701 2007/02/23 01:46:02 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4003,6 +4003,18 @@ sub checkline_mk_varuse($$$$) {
 
 		if ($needs_quoting == false && $mod =~ qr":Q$") {
 			$line->log_warning("The :Q operator should not be used for \${${varname}} here.");
+			$line->explain_warning(
+"When a variable of type ShellWord appears in a context that expects",
+"a shell word, it does not need to have a :Q operator. Even when it",
+"is concatenated with another variable, it still stays _one_ word.",
+"",
+"Example:",
+"\tWORD1=  Have\\ fun             # 1 word",
+"\tWORD2=  \"with BSD Make\"       # 1 word, too",
+"",
+"\tdemo:",
+"\t\techo \${WORD1}\${WORD2} # still 1 word");
+
 		}
 	}
 
