@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6023 2007/02/23 00:14:51 wiz Exp $
+$NetBSD: TODO,v 1.6024 2007/02/23 00:35:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -968,7 +968,6 @@ Suggested package updates
 	o smartmontools-5.37 [jmmv]
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.62
-	o snd-8.8
 	o snes9x-1.502
 	o solfege-3.6.4
 	o sope-4.5.5
