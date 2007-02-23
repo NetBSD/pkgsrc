@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/23 21:38:59 agc Exp $
+
+--- peripheral/ethernet_i.h	2007/02/23 13:37:52	1.1
++++ peripheral/ethernet_i.h	2007/02/23 13:38:10
+@@ -55,9 +55,12 @@
+  *       so defining MSG_DONTWAIT is just (temporary) workaround !!!
+  */
+ #define MSG_DONTWAIT  0x40
+-#define ETH_HLEN      14
+ #endif /* __CYGWIN__ */
+ 
++#ifndef ETH_HLEN
++#define ETH_HLEN      14
++#endif
++
+ #define ETH_ALEN    6
+ 
+ struct ether_addr
