@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/01 23:18:06 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/23 03:46:34 rillig Exp $
 #
 
 DISTNAME=	bbpager-0.3.1
@@ -14,6 +14,8 @@ CONFLICTS+=	bbpager04-*
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/bbtools
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/bbpager.1 ${PREFIX}/${PKGMANDIR}/man1
