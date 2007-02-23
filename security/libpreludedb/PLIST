@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/06/06 12:26:00 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/02/23 15:19:41 shannonjr Exp $
 bin/libpreludedb-config
 bin/preludedb-admin
 include/libpreludedb/preludedb-error.h
@@ -62,9 +62,6 @@ share/libpreludedb/classic/sqlite-update-14-4.sql
 @dirrm share/gtk-doc/html
 @dirrm share/gtk-doc
 @dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
-@dirrm lib/perl5/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
 @dirrm lib/libpreludedb/plugins/sql
 @dirrm lib/libpreludedb/plugins/formats
 @dirrm lib/libpreludedb/plugins
