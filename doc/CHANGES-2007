@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.449 2007/02/23 15:29:49 shannonjr Exp $
+$NetBSD: CHANGES-2007,v 1.450 2007/02/23 16:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -892,3 +892,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/py-prewikka to 0.9.9 [shannonjr 2007-02-23]
 	Updated security/prelude-lml to 0.9.8.1 [shannonjr 2007-02-23]
 	Updated security/prelude-manager to 0.9.7.1 [shannonjr 2007-02-23]
+	Updated cad/boolean to 6.92 [wiz 2007-02-23]
