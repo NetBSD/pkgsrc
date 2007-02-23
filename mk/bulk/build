@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.99 2007/02/21 14:25:20 rillig Exp $
+# $NetBSD: build,v 1.100 2007/02/23 03:43:53 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -456,6 +456,7 @@ done
 do_common_setup
 
 if [ "x$post_only" = "xyes" ]; then
+	load_vars
 	do_post_build
 	exit 0
 fi
