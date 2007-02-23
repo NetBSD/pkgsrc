@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/11 09:41:33 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/02/23 15:22:10 shannonjr Exp $
 bin/prelude-lml
 include/prelude-lml/prelude-lml.h
 lib/prelude-lml/debug.la
@@ -10,7 +10,6 @@ share/examples/prelude-lml/ruleset/apc-emu.rules
 share/examples/prelude-lml/ruleset/arbor.rules
 share/examples/prelude-lml/ruleset/arpwatch.rules
 share/examples/prelude-lml/ruleset/checkpoint.rules
-share/examples/prelude-lml/ruleset/cisco-pix.rules
 share/examples/prelude-lml/ruleset/cisco-router.rules
 share/examples/prelude-lml/ruleset/cisco-vpn.rules
 share/examples/prelude-lml/ruleset/clamav.rules
@@ -55,6 +54,12 @@ share/examples/prelude-lml/ruleset/webmin.rules
 share/examples/prelude-lml/ruleset/wu-ftp.rules
 share/examples/prelude-lml/ruleset/zywall.rules
 share/examples/prelude-lml/ruleset/zyxel.rules
+share/examples/prelude-lml/ruleset/cacti-thold.rules
+share/examples/prelude-lml/ruleset/cisco-asa.rules
+share/examples/prelude-lml/ruleset/cisco-css.rules
+share/examples/prelude-lml/ruleset/cisco-ips.rules
+share/examples/prelude-lml/ruleset/exim.rules
+share/examples/prelude-lml/ruleset/ms-cluster.rules
 share/examples/rc.d/preludelml
 @dirrm share/examples/prelude-lml/ruleset
 @dirrm share/examples/prelude-lml
