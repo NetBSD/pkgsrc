@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/12/01 10:55:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/02/23 15:25:00 shannonjr Exp $
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
@@ -167,6 +167,12 @@ ${PYSITELIB}/prewikka/views/sensor.pyo
 ${PYSITELIB}/prewikka/views/usermanagement.py
 ${PYSITELIB}/prewikka/views/usermanagement.pyc
 ${PYSITELIB}/prewikka/views/usermanagement.pyo
+${PYSITELIB}/prewikka/views/alertlisting.py
+${PYSITELIB}/prewikka/views/alertlisting.pyc
+${PYSITELIB}/prewikka/views/alertlisting.pyo
+${PYSITELIB}/prewikka/views/heartbeatlisting.py
+${PYSITELIB}/prewikka/views/heartbeatlisting.pyc
+${PYSITELIB}/prewikka/views/heartbeatlisting.pyo
 bin/prewikka-httpd
 sbin/runPrewikka
 share/examples/${PKGBASE}/prewikka.conf
@@ -178,6 +184,7 @@ share/prewikka/database/mysql2sqlite.sh
 share/prewikka/database/pgsql-update-0.9.1.sql
 share/prewikka/database/pgsql.sql
 share/prewikka/database/sqlite.sql
+share/prewikka/database/mysql2pgsql.sh
 share/prewikka/htdocs/css/style.css
 share/prewikka/htdocs/images/bg2.gif
 share/prewikka/htdocs/images/bg_content.gif
