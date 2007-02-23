@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/06/06 20:36:17 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/23 20:35:12 drochner Exp $
 #
 
-DISTNAME=	libdnet-1.10
-PKGNAME=	${PYPKGPREFIX}-libdnet-1.10
-PKGREVISION=	1
+DISTNAME=	libdnet-1.11
+PKGNAME=	${PYPKGPREFIX}-libdnet-1.11
 CATEGORIES=	devel net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdnet/}
 
