@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/08/19 14:47:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.13.4.1 2007/02/23 11:56:25 ghen Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -48,7 +48,6 @@ include/php/Zend/zend_language_parser.h
 include/php/Zend/zend_language_scanner.h
 include/php/Zend/zend_list.h
 include/php/Zend/zend_llist.h
-include/php/Zend/zend_mm.h
 include/php/Zend/zend_modules.h
 include/php/Zend/zend_multibyte.h
 include/php/Zend/zend_multiply.h
@@ -73,6 +72,7 @@ include/php/ext/date/lib/timelib.h
 include/php/ext/date/lib/timelib_config.h
 include/php/ext/date/lib/timelib_structs.h
 include/php/ext/date/php_date.h
+include/php/ext/filter/php_filter.h
 include/php/ext/hash/php_hash.h
 include/php/ext/hash/php_hash_adler32.h
 include/php/ext/hash/php_hash_crc32.h
@@ -86,20 +86,28 @@ include/php/ext/hash/php_hash_tiger.h
 include/php/ext/hash/php_hash_types.h
 include/php/ext/hash/php_hash_whirlpool.h
 include/php/ext/libxml/php_libxml.h
-include/php/ext/pcre/pcrelib/internal.h
 include/php/ext/pcre/pcrelib/pcre.h
 include/php/ext/pcre/pcrelib/pcre_internal.h
 include/php/ext/pcre/pcrelib/pcre_scanner.h
 include/php/ext/pcre/pcrelib/pcre_stringpiece.h
 include/php/ext/pcre/pcrelib/pcrecpp.h
-include/php/ext/pcre/pcrelib/pcreposix.h
 include/php/ext/pcre/pcrelib/pcrecpparg.h
+include/php/ext/pcre/pcrelib/pcreposix.h
 include/php/ext/pcre/pcrelib/ucp.h
 include/php/ext/pcre/pcrelib/ucpinternal.h
 include/php/ext/pcre/php_pcre.h
 include/php/ext/session/mod_files.h
 include/php/ext/session/mod_user.h
 include/php/ext/session/php_session.h
+include/php/ext/spl/php_spl.h
+include/php/ext/spl/spl_array.h
+include/php/ext/spl/spl_directory.h
+include/php/ext/spl/spl_engine.h
+include/php/ext/spl/spl_exceptions.h
+include/php/ext/spl/spl_functions.h
+include/php/ext/spl/spl_iterators.h
+include/php/ext/spl/spl_observer.h
+include/php/ext/spl/spl_sxe.h
 include/php/ext/standard/base64.h
 include/php/ext/standard/basic_functions.h
 include/php/ext/standard/crc32.h
@@ -372,11 +380,13 @@ share/php/php.gif
 @dirrm include/php/main
 @dirrm include/php/ext/xml
 @dirrm include/php/ext/standard
+@dirrm include/php/ext/spl
 @dirrm include/php/ext/session
 @dirrm include/php/ext/pcre/pcrelib
 @dirrm include/php/ext/pcre
 @dirrm include/php/ext/libxml
 @dirrm include/php/ext/hash
+@dirrm include/php/ext/filter
 @dirrm include/php/ext/date/lib
 @dirrm include/php/ext/date
 @dirrm include/php/ext
