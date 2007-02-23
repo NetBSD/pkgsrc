@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/23 22:50:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/23 22:59:09 dmcmahill Exp $
 
 DISTNAME=	lc	# Overridden below
 PKGNAME=	lc-2.10
@@ -11,7 +11,6 @@ COMMENT=	Finite Difference Time Domain (FDTD) Electromagnetic Simulator
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-# FIXME -- find the license and read it
 RESTRICTED=	Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
