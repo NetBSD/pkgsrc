@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.446 2007/02/23 09:12:20 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.447 2007/02/23 11:48:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -886,3 +886,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/snd to 8.8 [wiz 2007-02-23]
 	Updated audio/audacity to 1.2.6 [rillig 2007-02-23]
 	Updated mail/dovecot to 1.0rc24 [ghen 2007-02-23]
+	Updated devel/cmake to 2.4.6 [wiz 2007-02-23]
