@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/02/22 19:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2007/02/23 03:27:40 rillig Exp $
 
-DISTNAME=	audacity-src-1.2.4b
-PKGNAME=	audacity-1.2.4b
-PKGREVISION=	4
+DISTNAME=	audacity-src-1.2.6
+PKGNAME=	audacity-1.2.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
 
@@ -14,7 +13,7 @@ DEPENDS+=	zip>=0.0:../../archivers/zip
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake msgfmt
+USE_TOOLS+=		autoconf gmake msgfmt pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio
@@ -29,6 +28,8 @@ CONFIG_GUESS_OVERRIDE=		\
 CONFIG_SUB_OVERRIDE=		\
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
+PTHREAD_AUTO_VARS=	yes
+
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
@@ -36,9 +37,10 @@ CONFIG_SUB_OVERRIDE=		\
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK24/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # XXX Internal compiler error with -O2
