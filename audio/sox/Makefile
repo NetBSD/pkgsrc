@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/02/22 23:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/02/23 09:05:41 wiz Exp $
 
 DISTNAME=	sox-13.0.0
 CATEGORIES=	audio
@@ -16,7 +16,7 @@ USE_TOOLS+=		pkg-config
 
 SUBST_CLASSES+=		lrf
 SUBST_FILES.lrf=	src/libst-config.in
-SUBST_SED.lrf=		-e "s!@LRF@!"${LINKER_RPATH_FLAG:Q}"!"
+SUBST_SED.lrf=		-e "s!@LRF@!"${LINKER_RPATH_FLAG}"!"
 SUBST_STAGE.lrf=	pre-configure
 
 SUBST_CLASSES+=		gsm
