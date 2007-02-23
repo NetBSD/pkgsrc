@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2004/04/20 18:02:16 ben Exp $
+$NetBSD: patch-ae,v 1.6 2007/02/23 03:27:41 rillig Exp $
 
---- configure.in.orig	Sat Feb 28 11:19:39 2004
-+++ configure.in
+--- configure.in.orig	2005-11-27 03:33:31.000000000 +0100
++++ configure.in	2007-02-23 02:06:19.000000000 +0100
 @@ -556,8 +556,8 @@ if [[ "$use_portaudio" = "v19" ]] ; then
  
  	AC_CONFIG_SUBDIRS([[lib-src/portaudio-v19]])
@@ -13,24 +13,10 @@ $NetBSD: patch-ae,v 1.5 2004/04/20 18:02:16 ben Exp $
  	CXXFLAGS="-I../lib-src/portaudio/pa_common $CXXFLAGS"
  
  	case "${host_os}" in
-@@ -625,6 +625,81 @@ else
+@@ -639,6 +639,81 @@ else
  
- 		BUILDLIBS="$BUILDLIBS portaudio/pa_unix_oss/portaudio.a"
- 		EXTRAOBJS="$EXTRAOBJS ../lib-src/portaudio/pa_unix_oss/portaudio.a"
-+
-+	   if [[ "$use_portmixer" = "yes" ]] ; then
-+			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
-+			EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_unix_oss/portmixer.a"		
-+	   fi
-+
-+		if [[ "$use_ladspa" = "default" ]] ; then
-+			use_ladspa="yes";
-+		fi
-+
-+		AFTERBUILD=""
-+
-+	esac
-+fi
+ 	esac
+ fi
 +if [[ "$use_portaudio" = "system" ]] ; then
 +
 +	LIBS="$LIBS -lportaudio"
@@ -92,6 +78,20 @@ $NetBSD: patch-ae,v 1.5 2004/04/20 18:02:16 ben Exp $
 +		dnl Unix OSS configuration
 +
 +		CONFIGHEADER="configunix.h"
++
++	   if [[ "$use_portmixer" = "yes" ]] ; then
++			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
++			EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_unix_oss/portmixer.a"		
++	   fi
++
++		if [[ "$use_ladspa" = "default" ]] ; then
++			use_ladspa="yes";
++		fi
++
++		AFTERBUILD=""
++
++	esac
++fi
  
- 	   if [[ "$use_portmixer" = "yes" ]] ; then
- 			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
+ use_precomp="no"
+ 
