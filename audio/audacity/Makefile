@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/02/23 09:15:23 ghen Exp $
+# $NetBSD: Makefile,v 1.56 2007/02/23 14:23:13 wiz Exp $
 
 DISTNAME=		audacity-src-1.2.6
 PKGNAME=		${DISTNAME:S/-src-/-/}
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-libmad=system
 CONFIGURE_ARGS+=	--with-libsndfile=system
 CONFIGURE_ARGS+=	--with-portaudio=system
 CONFIGURE_ARGS+=	--with-vorbis=system
+CONFIGURE_ENV+=		WX_CONFIG=${LOCALBASE}/bin/wx24-config
 
 CONFIG_GUESS_OVERRIDE=		\
 	config.guess */config.guess */*/config.guess */*/*/config.guess
