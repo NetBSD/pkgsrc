@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.453 2007/02/23 21:41:27 agc Exp $
+$NetBSD: CHANGES-2007,v 1.454 2007/02/23 23:02:55 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -896,3 +896,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/pdiff to 1.0 [wiz 2007-02-23]
 	Added print/flpsed version 0.3.9 [agc 2007-02-23]
 	Added emulators/or1ksim version 0.2.0rc2 [agc 2007-02-23]
+	Added cad/lc version 2.10 [dmcmahill 2007-02-23]
