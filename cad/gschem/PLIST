@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.18 2007/02/21 13:23:53 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/02/23 13:51:05 dmcmahill Exp $
 bin/gschem
 man/man1/gschem.1
+share/gEDA/bitmap/gschem-alignment_bottomcenter.png
+share/gEDA/bitmap/gschem-alignment_bottomleft.png
 share/gEDA/bitmap/gschem-alignment_bottomright.png
 share/gEDA/bitmap/gschem-alignment_middlecenter.png
 share/gEDA/bitmap/gschem-alignment_middleleft.png
@@ -33,6 +35,7 @@ share/gEDA/bitmap/gschem-rotate.xpm
 share/gEDA/bitmap/gschem-save.xpm
 share/gEDA/bitmap/gschem-select.xpm
 share/gEDA/bitmap/gschem-text.xpm
+share/gEDA/bitmap/gschem-top2bottom.png
 share/gEDA/bitmap/gschem-undo.xpm
 share/gEDA/bitmap/gschem-warning.png
 share/gEDA/gschem-darkbg
