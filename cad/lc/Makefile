@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/23 22:59:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/23 23:19:37 dmcmahill Exp $
 
 DISTNAME=	lc	# Overridden below
 PKGNAME=	lc-2.10
@@ -53,7 +53,8 @@ DISTNAME=	lc_irix64
 #DISTNAME=	lc_linux_motif1
 DISTNAME=	lc_linux_motif3
 . if (${OPSYS} == "NetBSD")
-DEPENDS+=	suse_gtk2>=9.1:../../emulators/${SUSE_DIR_PREFIX}_gtk2
+DEPENDS+=	suse_openmotif>=9.1:../../emulators/${SUSE_DIR_PREFIX}_openmotif
+DEPENDS+=	suse_x11>=9.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 . endif
 
 .elif ${MACHINE_ARCH} == "sparc"
