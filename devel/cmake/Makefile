@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2006/10/08 13:01:52 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/02/23 11:48:18 wiz Exp $
 
-DISTNAME=	cmake-2.4.2
-PKGREVISION=	2
+DISTNAME=	cmake-2.4.6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.4/
 
@@ -15,7 +14,13 @@ USE_NCURSES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
+# to add /share; take care on major version bumps!
+CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-2.4
+CONFIGURE_ARGS+=	--system-libs
 BUILD_TARGET=		default_target
+
+# as of 2.4.6, x11 and fortran tests fail in pkgsrc
+TEST_TARGET=		test
 
 SUBST_CLASSES+=		cmake
 SUBST_STAGE.cmake=	pre-configure
@@ -25,8 +30,13 @@ SUBST_SED.cmake=	-e "s|@prefix@|${PREFIX}|g"
 SUBST_SED.cmake+=	-e "s|@x11base@|${X11BASE}|g"
 
 post-extract:
-	${CP} ${WRKSRC}/Modules/Platform/FreeBSD.cmake \
+	cp ${WRKSRC}/Modules/Platform/FreeBSD.cmake \
 		${WRKSRC}/Modules/Platform/DragonFly.cmake
 
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+# not packaged yet, see also patch-ab
+#.include "../../textproc/xmlrpc-c/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
