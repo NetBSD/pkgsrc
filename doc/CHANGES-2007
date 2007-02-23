@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.448 2007/02/23 15:08:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.449 2007/02/23 15:29:49 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -888,3 +888,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0rc24 [ghen 2007-02-23]
 	Updated devel/cmake to 2.4.6 [wiz 2007-02-23]
 	Updated net/dnsmasq to 2.38 [wiz 2007-02-23]
+	Updated security/libpreludedb to 0.9.11.3 [shannonjr 2007-02-23]
+	Updated security/py-prewikka to 0.9.9 [shannonjr 2007-02-23]
+	Updated security/prelude-lml to 0.9.8.1 [shannonjr 2007-02-23]
+	Updated security/prelude-manager to 0.9.7.1 [shannonjr 2007-02-23]
