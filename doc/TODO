@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6024 2007/02/23 00:35:36 wiz Exp $
+$NetBSD: TODO,v 1.6025 2007/02/23 11:21:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -360,6 +360,7 @@ Suggested package updates
 	o dnsmasq-2.33 [pkg/34428]
 	o dnsmasq-2.38
 	o dnstracer-1.8
+	o dropbear-0.49
 	o drscheme-360
 	o drupal-5.1
 	o dvd+rw-tools-7.0
@@ -551,6 +552,7 @@ Suggested package updates
 	o kmp-0.5
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
+	o koffice-1.6.2
 	o ksi-3.4.2
 	o kye-0.9.3
 	o latd-1.21
@@ -903,7 +905,7 @@ Suggested package updates
 	o qwt-0.4.0
 	o radiance-3.7.2
 	o rails-1.2.2
-	o raine-0.50.2
+	o raine-0.50.3
 	o randread-0.2
 	o raptor-1.4.14
 	o rat-4.2.25
