@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2006/05/21 15:57:43 rillig Exp $
+$NetBSD: patch-ac,v 1.5 2007/02/23 16:42:30 wiz Exp $
 
 Don't define identifiers that are already macros.
 
---- modules/kbool/include/booleng.h.orig	Mon Jul 18 21:56:16 2005
-+++ modules/kbool/include/booleng.h	Sun Dec 18 20:56:07 2005
-@@ -56,8 +56,12 @@
+--- modules/kbool/include/booleng.h.orig	2005-11-28 13:32:50.000000000 +0000
++++ modules/kbool/include/booleng.h
+@@ -56,8 +56,12 @@ class KBoolLink;
  typedef long long B_INT;		   // 8 bytes integer
  //#define MAXB_INT LONG_LONG_MAX
  //#define MINB_INT LONG_LONG_MIN	// 8 bytes integer
