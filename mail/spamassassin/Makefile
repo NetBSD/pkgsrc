@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2006/11/05 17:15:54 joerg Exp $
+# $NetBSD: Makefile,v 1.77.2.1 2007/02/23 11:36:22 ghen Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.1.7
-PKGNAME=	spamassassin-3.1.7
+DISTNAME=	Mail-SpamAssassin-3.1.8
+PKGNAME=	spamassassin-3.1.8
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -22,6 +22,8 @@ DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-IO-Zlib>=1.04:../../devel/p5-IO-Zlib
+
+USE_TOOLS+=	perl
 
 .if (${OPSYS} != "NetBSD") && (${OPSYS} != "DragonFly")
 DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
@@ -58,7 +60,7 @@ REPLACE_PERL+=		masses/parse-rules-for-masses
 MAKE_PARAMS+=		CONTACT_ADDRESS=${SPAMASSASSIN_CONTACT_ADDRESS:Q}
 MAKE_PARAMS+=		DEFRULESDIR="${RULESDIR}"
 MAKE_PARAMS+=		LOCALRULESDIR="${PKG_SYSCONFDIR}"
-MAKE_PARAMS+=		LOCALSTATEDIR="${VARBASE}"
+MAKE_PARAMS+=		LOCALSTATEDIR="${VARBASE}/spamassassin"
 MAKE_PARAMS+=		PERL_BIN="${PERL5}"
 MAKE_PARAMS+=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 
@@ -86,13 +88,13 @@ INSTALLATION_DIRS+=	${EG_SUBDIR} ${DOC_SUBDIR} ${DOC_SUBDIR}/spamc\
 OWN_DIRS+=		${VARBASE}/spamassassin
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/sa-update-keys ${SHAREOWN} ${SHAREGRP} 0700
 
-SUBST_CLASSES+=		sa2 sa3
-
+SUBST_CLASSES+=		sa2
 SUBST_STAGE.sa2=	pre-configure
 SUBST_FILES.sa2=	README spamd/spamd.raw
 SUBST_SED.sa2=		-e s!@@PREFIX@@!${PREFIX}!g
 SUBST_SED.sa2+=		-e s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!g
 
+SUBST_CLASSES+=		sa3
 SUBST_STAGE.sa3=	pre-configure
 SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README		\
 			spamc/README.qmail				\
