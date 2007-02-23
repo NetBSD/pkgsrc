@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6028 2007/02/23 15:08:47 wiz Exp $
+$NetBSD: TODO,v 1.6029 2007/02/23 16:44:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -303,7 +303,6 @@ Suggested package updates
 	o bluefish-1.0.7
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o boolean-6.8
 	o boson-0.13
 	o botan-1.6.1
 	o bug-buddy-2.16.1
