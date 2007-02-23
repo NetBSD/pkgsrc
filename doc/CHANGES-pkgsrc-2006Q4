@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.42 2007/02/20 15:16:15 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.43 2007/02/23 11:37:02 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -103,3 +103,5 @@ Pullup ticket 2013 - requested by veego
 build fix for rplay
 Pullup ticket 2014 - requested by veego
 build fix for lopster
+Pullup ticket 2031 - requested by taca
+security update for spamassassin
