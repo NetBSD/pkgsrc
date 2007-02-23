@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.54 2007/02/23 03:27:40 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2007/02/23 09:15:23 ghen Exp $
 
-DISTNAME=	audacity-src-1.2.6
-PKGNAME=	audacity-1.2.6
-CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
+DISTNAME=		audacity-src-1.2.6
+PKGNAME=		${DISTNAME:S/-src-/-/}
+CATEGORIES=		audio
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://audacity.sourceforge.net/
-COMMENT=	Audio editor
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://audacity.sourceforge.net/
+COMMENT=		Audio editor
 
-DEPENDS+=	zip>=0.0:../../archivers/zip
+DEPENDS+=		zip>=0.0:../../archivers/zip
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
