@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/23 17:39:51 wiz Exp $
 #
 
-DISTNAME=		pdiff0.9b-src
-PKGNAME=		pdiff-0.9b
+DISTNAME=		PerceptualDiff-1.0
+PKGNAME=		pdiff-1.0
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pdiff/}
-EXTRACT_SUFX=		.zip
 
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://pdiff.sourceforge.net/
@@ -13,12 +12,7 @@ COMMENT=		Image comparison through perceptually based image metric
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-EXTRACT_OPTS+=		-d pdiff
-
-WRKSRC=			${WRKDIR}/pdiff
 USE_LANGUAGES=		c c++
-
-BUILD_DEPENDS+=		cmake>=2:../../devel/cmake
 
 OPSYSVARS+=		LIBTIFFNAME
 LIBTIFFNAME.*=		libtiff.so
@@ -28,16 +22,11 @@ CMAKEFLAGS.pdiff+=	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
 CMAKEFLAGS.pdiff+=	-DTIFF_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.tiff}/include
 CMAKEFLAGS.pdiff+=	-DTIFF_LIBRARY:PATH=${BUILDLINK_PREFIX.tiff}/lib/${LIBTIFFNAME}
 
-post-extract:
-	${MV} ${WRKSRC}/compareargs.cpp ${WRKSRC}/CompareArgs.cpp
-	${MV} ${WRKSRC}/metric.cpp ${WRKSRC}/Metric.cpp
-
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 	  ${LOCALBASE}/bin/cmake ${CMAKEFLAGS.pdiff} .
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/perceptualdiff ${PREFIX}/bin/.
-
+.include "../../devel/cmake/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
