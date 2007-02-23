@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.17 2006/09/13 18:18:53 ginsbach Exp $
+# $NetBSD: port2pkg.pl,v 1.18 2007/02/23 15:29:14 ginsbach Exp $
 #
 
 require 'getopts.pl';
@@ -185,6 +185,7 @@ sub conv_Makefile {
 		s|\$\{PORTNAME\}|\${PKGBASE}|g;
 		s|\$\{PORTSDIR\}|../..|g;
 		s|PLIST_SUB|PLIST_SUBST|;
+		s|^USE_GMAKE\?*=\s*yes|USE_TOOLS+=\tgmake|;
 
 		if (defined($master_site_subdir) &&
 		    $master_site_subdir ne "" &&
