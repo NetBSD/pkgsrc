@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6025 2007/02/23 11:21:26 wiz Exp $
+$NetBSD: TODO,v 1.6026 2007/02/23 11:48:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -323,7 +323,6 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.3.3
 	o clisp-2.41
-	o cmake-2.4.6
 	o cocoon-2.1.10
 	o cogito-0.18.2
 	o columba-1.0RC1
