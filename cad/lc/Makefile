@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/24 03:32:07 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/24 03:43:49 dmcmahill Exp $
 
 DISTNAME=	lc	# Overridden below
 PKGNAME=	lc-2.10
@@ -39,7 +39,9 @@ DISTFILES+=	lc_solaris.tar.gz
 
 .else
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-x86_64
+
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-mipsel *-*-mipsel64
+ONLY_FOR_PLATFORM+=	*-*-sparc *-*-sparc64 *-*-x86_64
 
 .if (${MACHINE_ARCH} == "x86_64")
 DISTNAME=	lc_amd64_lx24
@@ -64,7 +66,7 @@ DEPENDS+=	suse_openmotif>=9.1:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 DEPENDS+=	suse_x11>=9.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 . endif
 
-.elif ${MACHINE_ARCH} == "sparc"
+.elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 DISTNAME=	lc_solaris
 . if (${OPSYS} == "NetBSD")
 .  if !exists(/emul/svr4/usr/lib/ld.so)
