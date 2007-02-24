@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.456 2007/02/24 11:53:12 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.457 2007/02/24 17:29:39 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -899,3 +899,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added cad/lc version 2.10 [dmcmahill 2007-02-23]
 	Added textproc/xmlrpc-c version 1.09.00 [wiz 2007-02-24]
 	Removed security/fressh [jnemeth 2007-02-24]
+	Updated www/firefox2 to 2.0.0.2 [ghen 2007-02-24]
+	Updated www/firefox2-bin to 2.0.0.2 [ghen 2007-02-24]
+	Updated www/firefox2-gtk1 to 2.0.0.2 [ghen 2007-02-24]
