@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.459 2007/02/24 19:00:43 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.460 2007/02/24 20:48:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox2-gtk1 to 2.0.0.2 [ghen 2007-02-24]
 	Updated fonts/mftrace to 1.2.14 [darcy 2007-02-24]
 	Updated textproc/xmlrpc-c to 1.09.00nb1 [wiz 2007-02-24]
+	Added devel/cmake-mode version 20060923 [wiz 2007-02-24]
