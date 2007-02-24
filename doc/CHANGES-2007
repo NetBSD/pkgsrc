@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.457 2007/02/24 17:29:39 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.458 2007/02/24 18:32:58 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox2 to 2.0.0.2 [ghen 2007-02-24]
 	Updated www/firefox2-bin to 2.0.0.2 [ghen 2007-02-24]
 	Updated www/firefox2-gtk1 to 2.0.0.2 [ghen 2007-02-24]
+	Updated fonts/mftrace to 1.2.14 [darcy 2007-02-24]
