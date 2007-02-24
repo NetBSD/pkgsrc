@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.462 2007/02/24 22:50:02 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.463 2007/02/24 23:06:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -907,3 +907,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/cmake-mode version 20060923 [wiz 2007-02-24]
 	Added games/greed version 3.4 [wiz 2007-02-24]
 	Added textproc/enca version 1.9 [wiz 2007-02-24]
+	Updated www/p5-HTML-TableExtract to 2.10 [wiz 2007-02-24]
