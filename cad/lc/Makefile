@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/02/24 00:17:58 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/24 00:29:42 dmcmahill Exp $
 
 DISTNAME=	lc	# Overridden below
 PKGNAME=	lc-2.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://lc.cray.com/download/
 
@@ -80,6 +80,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcplot ${PREFIX}/bin/lcplot
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${PREFIX}/bin/lcspice
 	cd ${PREFIX}/share && ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz
+	${CHMOD} -R 644 ${PREFIX}/share/lc2.10
+	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/lc2.10
+	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/lc2.10
 
 .endif # !MAINTAINER
 
