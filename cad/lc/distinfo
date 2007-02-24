@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/23 22:50:40 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2007/02/24 00:17:58 dmcmahill Exp $
 
+SHA1 (lc-2.10/lc_amd64_lx24.tar.gz) = c750c470ca43047fa0ccb1029bdfc08874214491
+RMD160 (lc-2.10/lc_amd64_lx24.tar.gz) = a03c53018827e13167a26f27926ebe2b3bbf5846
+Size (lc-2.10/lc_amd64_lx24.tar.gz) = 1239550 bytes
 SHA1 (lc-2.10/lc_doc.tar.gz) = a0a120ab7de4f8d87a9685266c0c3f22cab6f1fc
 RMD160 (lc-2.10/lc_doc.tar.gz) = f943c4d8843ca8d5372b0ea4bbb42ded50023275
 Size (lc-2.10/lc_doc.tar.gz) = 1494973 bytes
-SHA1 (lc-2.10/lc_amd64_lx24.tar.gz) = b7e5a6f5a297efa52e0e659d7f8bb8f065a6c1b7
-RMD160 (lc-2.10/lc_amd64_lx24.tar.gz) = a61f5bac2060eff6d91634d5309cbee02681a16e
-Size (lc-2.10/lc_amd64_lx24.tar.gz) = 2598142 bytes
 SHA1 (lc-2.10/lc_irix.tar.gz) = 0d197317f63276c5d695cd028bcbf0afe528d522
 RMD160 (lc-2.10/lc_irix.tar.gz) = af4ed7c6a20ca2a5f9ce07345c2d5dc7074257bb
 Size (lc-2.10/lc_irix.tar.gz) = 2658949 bytes

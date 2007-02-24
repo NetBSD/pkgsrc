@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/24 00:05:59 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/24 00:17:58 dmcmahill Exp $
 
 DISTNAME=	lc	# Overridden below
 PKGNAME=	lc-2.10
@@ -39,7 +39,7 @@ DISTFILES+=	lc_solaris.tar.gz
 
 .else
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-x86_64
 
 .if (${MACHINE_ARCH} == "x86_64")
 DISTNAME=	lc_amd64_lx24
