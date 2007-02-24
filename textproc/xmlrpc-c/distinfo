@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/24 11:00:51 wiz Exp $
+
+SHA1 (xmlrpc-c-1.09.00.tgz) = bd4571ca3bc23c1fe9dd002659fcc2aa3d4ce8a6
+RMD160 (xmlrpc-c-1.09.00.tgz) = ef098edef126dfd5a14334e6a1e4e7919be4b40c
+Size (xmlrpc-c-1.09.00.tgz) = 701817 bytes
+SHA1 (patch-aa) = ff3f7c7d0195c10f57df4ea047eb87a5bdac5cd1
+SHA1 (patch-ab) = 4734d7ccec41c5ccc617f6a2775fa4a67534c995
+SHA1 (patch-ac) = 805aebdaa736a08482a4f82559938d38f794ab81

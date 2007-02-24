@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/24 11:00:51 wiz Exp $
+
+--- Makefile.config.in.orig	2006-09-28 04:15:55.000000000 +0200
++++ Makefile.config.in
+@@ -204,12 +204,13 @@ ifeq ($(HOST_OS),osf)
+   LDFLAGS_SHLIB = -shared -expect_unresolved
+ endif
+ 
+-ifeq ($(findstring netbsd,$(HOST_OS)),FIND)
++ifeq ($(HOST_OS),netbsd)
+   SHARED_LIB_TYPE = unix
+   SHLIB_SUFFIX = so
+-  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ))
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
+   shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
+-  CFLAGS_SHLIB = -fpic
++  CFLAGS_SHLIB = -fPIC
++  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
+ endif
+ 
+ ifeq ($(HOST_OS),darwin)

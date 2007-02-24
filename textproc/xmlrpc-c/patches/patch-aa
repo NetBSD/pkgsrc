@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/24 11:00:51 wiz Exp $
+
+--- lib/abyss/src/server.c.orig	2006-09-02 04:57:35.000000000 +0200
++++ lib/abyss/src/server.c
+@@ -4,7 +4,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <time.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ #ifdef WIN32
+   #include <io.h>
+ #else
