@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6034 2007/02/24 23:06:14 wiz Exp $
+$NetBSD: TODO,v 1.6035 2007/02/24 23:09:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -732,7 +732,6 @@ Suggested package updates
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
-	o p5-Mail-Mbox-MessageParser-1.5000
 	o p5-Mail-Sendmail-0.79
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
