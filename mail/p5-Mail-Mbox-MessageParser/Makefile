@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2006/10/15 10:06:44 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/24 23:08:35 wiz Exp $
 
-DISTNAME=	Mail-Mbox-MessageParser-1.4005
+DISTNAME=	Mail-Mbox-MessageParser-1.5000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~dcoppit/Mail-Mbox-MessageParser/
+HOMEPAGE=	http://search.cpan.org/dist/Mail-Mbox-MessageParser/
 COMMENT=	Perl5 module for parsing mail messages
 
 DEPENDS+=	p5-FileHandle-Unget-[0-9]*:../../devel/p5-FileHandle-Unget
