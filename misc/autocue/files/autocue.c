@@ -1,4 +1,4 @@
-/* $NetBSD: autocue.c,v 1.2 2006/01/29 00:11:15 agc Exp $ */
+/* $NetBSD: autocue.c,v 1.3 2007/02/24 12:16:12 agc Exp $ */
 
 /*
  * Copyright © 2006 Alistair Crooks.  All rights reserved.
@@ -32,7 +32,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright © 2006 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: autocue.c,v 1.2 2006/01/29 00:11:15 agc Exp $");
+__RCSID("$NetBSD: autocue.c,v 1.3 2007/02/24 12:16:12 agc Exp $");
 #endif
 
 #include <err.h>
@@ -46,8 +46,8 @@ __RCSID("$NetBSD: autocue.c,v 1.2 2006/01/29 00:11:15 agc Exp $");
 enum {
 	MaxCutBuffers = 4,
 
-	FmtGoal = 50,
-	FmtMax = 55,
+	FmtGoal = 45,
+	FmtMax = 50,
 
 	SlowDenom = 3,
 	MediumDenom = 7,
