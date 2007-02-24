@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/02/24 11:00:51 wiz Exp $
+
+--- src/cpp/Makefile.orig	2006-11-06 02:50:37.000000000 +0100
++++ src/cpp/Makefile
+@@ -102,8 +102,8 @@ all: \
+ 
+ # Rules for these are in Makefile.common, courtesy of TARGET_LIB_NAMES_PP:
+ 
+-$(LIBXMLRPC_CPP): XmlRpcCpp.o
+-$(LIBXMLRPC_CPP): LIBOBJECTS = XmlRpcCpp.o
++$(LIBXMLRPC_CPP): XmlRpcCpp.osh
++$(LIBXMLRPC_CPP): LIBOBJECTS = XmlRpcCpp.osh
+ 
+ $(LIBXMLRPCPP): $(LIBXMLRPCPP_MODS:%=%.osh)
+ $(LIBXMLRPCPP): LIBOBJECTS = $(LIBXMLRPCPP_MODS:%=%.osh)
