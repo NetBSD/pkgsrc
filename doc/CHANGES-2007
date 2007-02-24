@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.455 2007/02/24 11:01:51 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.456 2007/02/24 11:53:12 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -898,3 +898,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added emulators/or1ksim version 0.2.0rc2 [agc 2007-02-23]
 	Added cad/lc version 2.10 [dmcmahill 2007-02-23]
 	Added textproc/xmlrpc-c version 1.09.00 [wiz 2007-02-24]
+	Removed security/fressh [jnemeth 2007-02-24]
