@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2007/02/19 09:49:01 rillig Exp $
+# $NetBSD: Makefile,v 1.284 2007/02/24 21:06:28 wiz Exp $
 #
 
 COMMENT=	Games
@@ -108,6 +108,7 @@ SUBDIR+=	gnuchess4
 SUBDIR+=	gnugo
 SUBDIR+=	gogui
 SUBDIR+=	golddig
+SUBDIR+=	greed
 SUBDIR+=	grhino
 SUBDIR+=	gtetrinet
 SUBDIR+=	gtkballs
