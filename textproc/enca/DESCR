@@ -1,0 +1,10 @@
+Enca is an Extremely Naive Charset Analyser. It detects character
+set and encoding of text files and can also convert them to other
+encodings. The charset detecting functionality is also available as
+a library.
+
+Enca currently can determine 8bit charsets of Belarussian, Bulgarian,
+Croatian, Czech, Estonian, Hungarian, Latvian, Lithuanian, Polish,
+Russian, Slovak, Slovene, Ukrainian, and Chinese texts and also
+some multibyte encodings, independent on language (provided it's
+some European language).

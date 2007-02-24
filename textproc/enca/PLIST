@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/24 22:49:11 wiz Exp $
+bin/enca
+bin/enconv
+include/enca.h
+lib/libenca.la
+lib/pkgconfig/enca.pc
+libexec/enca/extconv/cstocs
+libexec/enca/extconv/map
+libexec/enca/extconv/piconv
+libexec/enca/extconv/recode
+libexec/enca/extconv/umap
+man/man1/enca.1
+man/man1/enconv.1
+share/gtk-doc/html/libenca/ch01.html
+share/gtk-doc/html/libenca/index.html
+share/gtk-doc/html/libenca/index.sgml
+share/gtk-doc/html/libenca/libenca-Analyser.html
+share/gtk-doc/html/libenca/libenca-Auxiliary-Functions.html
+share/gtk-doc/html/libenca/libenca-Charsets-and-Surfaces.html
+share/gtk-doc/html/libenca/libenca-Typedefs-and-Constants.html
+share/gtk-doc/html/libenca/libenca.devhelp
+@dirrm share/gtk-doc/html/libenca
+@dirrm libexec/enca/extconv
+@dirrm libexec/enca
