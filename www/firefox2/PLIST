@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/04 18:18:04 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/02/24 17:26:43 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -186,7 +186,6 @@ lib/${MOZILLA}/components/filepicker.xpt
 lib/${MOZILLA}/components/find.xpt
 lib/${MOZILLA}/components/gfx.xpt
 lib/${MOZILLA}/components/gksvgrenderer.xpt
-lib/${MOZILLA}/components/globalstore.js
 lib/${MOZILLA}/components/history.xpt
 lib/${MOZILLA}/components/htmlparser.xpt
 lib/${MOZILLA}/components/imglib2.xpt
@@ -338,6 +337,7 @@ ${SUNOSLIB}lib/${MOZILLA}/libfreebl_32fpu_3.chk
 ${SUNOSLIB}lib/${MOZILLA}/libfreebl_32int_3.chk
 ${SUNOSLIB}lib/${MOZILLA}/libfreebl_32int64_3.chk
 lib/${MOZILLA}/libsoftokn3.chk
+lib/${MOZILLA}/old-homepage-default.properties
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
 lib/${MOZILLA}/res/arrowd.gif
