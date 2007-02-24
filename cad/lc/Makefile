@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/02/23 23:42:58 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/24 00:05:59 dmcmahill Exp $
 
 DISTNAME=	lc	# Overridden below
 PKGNAME=	lc-2.10
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://lc.cray.com/download/
 
@@ -70,12 +71,15 @@ PKG_FAIL_REASON+= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 . endif
 .endif
 
-INSTALLATION_DIRS=	bin
+DISTFILES=	lc_doc.tar.gz ${DISTNAME}${EXTRACT_SUFX}
+
+INSTALLATION_DIRS=	bin share
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lc ${PREFIX}/bin/lc
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcplot ${PREFIX}/bin/lcplot
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${PREFIX}/bin/lcspice
+	cd ${PREFIX}/share && ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz
 
 .endif # !MAINTAINER
 
