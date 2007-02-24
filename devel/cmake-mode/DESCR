@@ -1,0 +1,2 @@
+Emacs mode providing syntax highlighting and indentation for
+CMakeLists.txt and *.cmake source files.
