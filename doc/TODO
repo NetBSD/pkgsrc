@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6033 2007/02/24 18:33:38 darcy Exp $
+$NetBSD: TODO,v 1.6034 2007/02/24 23:06:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -722,7 +722,6 @@ Suggested package updates
 	o p5-File-MimeInfo-0.12
 	o p5-Graph-0.20105
 	o p5-HTML-FillInForm-1.05
-	o p5-HTML-TableExtract-2.10
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Request-Form-0.952
