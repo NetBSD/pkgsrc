@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/02/24 21:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/02/24 21:17:19 wiz Exp $
 
 DISTNAME=	cmake-2.4.6
 CATEGORIES=	devel
@@ -35,7 +35,8 @@ post-extract:
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../textproc/xmlrpc-c/buildlink3.mk"
+# not packaged yet, see also patch-ab
+#.include "../../textproc/xmlrpc-c/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
