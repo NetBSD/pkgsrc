@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.468 2007/02/25 05:12:58 dsainty Exp $
+$NetBSD: CHANGES-2007,v 1.469 2007/02/25 05:56:05 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -915,3 +915,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xhost version 1.0.1 [dsainty 2007-02-25]
 	Added x11/xprop version 1.0.2 [dsainty 2007-02-25]
 	Added x11/xdpyinfo version 1.0.1 [dsainty 2007-02-25]
+	Added x11/xclock version 1.0.2 [dsainty 2007-02-25]
