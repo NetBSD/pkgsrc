@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/25 05:54:47 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/25 05:58:32 dsainty Exp $
 #
 
 DISTNAME=	xclock-1.0.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/app/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Analog / digital clock for X
 
 GNU_CONFIGURE=	yes
