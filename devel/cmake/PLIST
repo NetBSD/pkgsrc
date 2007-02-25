@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/02/23 11:48:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/02/25 08:49:53 wiz Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -189,7 +189,7 @@ share/cmake-2.4/Modules/Platform/Linux-icpc.cmake
 share/cmake-2.4/Modules/Platform/Linux-ifort.cmake
 share/cmake-2.4/Modules/Platform/Linux.cmake
 share/cmake-2.4/Modules/Platform/MP-RAS.cmake
-share/cmake-2.4/Modules/Platform/${OPSYS}.cmake
+share/cmake-2.4/Modules/Platform/NetBSD.cmake
 share/cmake-2.4/Modules/Platform/OSF1.cmake
 share/cmake-2.4/Modules/Platform/OpenBSD.cmake
 share/cmake-2.4/Modules/Platform/QNX.cmake
