@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.471 2007/02/25 12:21:26 martti Exp $
+$NetBSD: CHANGES-2007,v 1.472 2007/02/25 15:05:07 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -918,3 +918,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xclock version 1.0.2 [dsainty 2007-02-25]
 	Added x11/xload version 1.0.1 [dsainty 2007-02-25]
 	Updated editors/vim-share to 7.0.201 [martti 2007-02-25]
+	Updated lang/coq to 8.1 [tonio 2007-02-25]
