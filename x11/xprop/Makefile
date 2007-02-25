@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/25 04:43:34 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/25 04:46:44 dsainty Exp $
 #
 
 DISTNAME=	xprop-1.0.2
@@ -13,6 +13,6 @@ COMMENT=	Property displayer for X
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
