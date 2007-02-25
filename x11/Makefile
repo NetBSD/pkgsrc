@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2007/02/25 04:30:30 dsainty Exp $
+# $NetBSD: Makefile,v 1.476 2007/02/25 04:47:34 dsainty Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -417,6 +417,7 @@ SUBDIR+=	xpmicons
 SUBDIR+=	xpmroot
 SUBDIR+=	xpns
 SUBDIR+=	xpostit
+SUBDIR+=	xprop
 SUBDIR+=	xproto
 SUBDIR+=	xrdb
 SUBDIR+=	xrestop
