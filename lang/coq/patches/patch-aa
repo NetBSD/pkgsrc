@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
+$NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
 
---- Makefile.orig	2006-01-12 00:18:05.000000000 +0100
+--- Makefile.orig	2007-02-07 13:21:01.000000000 +0100
 +++ Makefile
-@@ -609,22 +609,22 @@ install-coqide:: install-ide-$(HASCOQIDE
+@@ -697,22 +697,22 @@ install-coqide:: install-ide-$(HASCOQIDE
  install-ide-no:
  
  install-ide-byte: 
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
  
  ###########################################################################
  # Pcoq: special binaries for debugging (coq-interface, parser)
-@@ -699,18 +699,18 @@ contrib7/interface/AddDad.vo: contrib7/i
+@@ -782,18 +782,18 @@ clean::
  install-pcoq:: install-pcoq-binaries install-pcoq-files install-pcoq-manpages
  
  install-pcoq-binaries::
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
  
  ###########################################################################
  # tests
-@@ -1139,18 +1139,18 @@ install-coqlight: install-binaries insta
+@@ -1248,21 +1248,21 @@ install-coqlight: install-binaries insta
  install-binaries:: install-$(BEST) install-tools
  
  install-byte::
@@ -77,30 +77,21 @@ $NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
  
  install-tools::
 -	$(MKDIR) $(FULLBINDIR)
+ 	# recopie des fichiers de style pour coqide
+-	$(MKDIR) $(FULLCOQLIB)/tools/coqdoc
+-	cp tools/coqdoc/coqdoc.css tools/coqdoc/coqdoc.sty $(FULLCOQLIB)/tools/coqdoc
 -	cp $(TOOLS) $(FULLBINDIR)
 +	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
 +	${BSD_INSTALL_SCRIPT} $(TOOLS) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLCOQLIB)/tools/coqdoc
++	${BSD_INSTALL_DATA} tools/coqdoc/coqdoc.css tools/coqdoc/coqdoc.sty $(FULLCOQLIB)/tools/coqdoc
  
- LIBFILES=$(OLDTHEORIESVO) $(OLDCONTRIBVO)
- LIBFILESLIGHT=$(OLDTHEORIESLIGHTVO)
-@@ -1161,61 +1161,64 @@ NEWLIBFILESLIGHT=$(NEWTHEORIESLIGHTVO)
- install-library: install-library7 install-library8
+ LIBFILES=$(THEORIESVO) $(CONTRIBVO)
+ LIBFILESLIGHT=$(THEORIESLIGHTVO)
+@@ -1275,52 +1275,55 @@ OBJECTCMA=lib/lib.cma kernel/kernel.cma 
+ OBJECTCMXA=$(OBJECTCMA:.cma=.cmxa)
  
- install-library8:
--	$(MKDIR) $(FULLCOQLIB)
-+	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)
- 	for f in $(NEWLIBFILES); do \
--	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
--	  cp $$f $(FULLCOQLIB)/`dirname $$f`; \
-+	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
-+	  ${BSD_INSTALL_DATA} $$f $(FULLCOQLIB)/`dirname $$f`; \
-         done
--	$(MKDIR) $(FULLCOQLIB)/states
--	cp states/*.coq $(FULLCOQLIB)/states
-+	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states
-+	${BSD_INSTALL_DATA} states/*.coq $(FULLCOQLIB)/states
- 
- install-library7:
+ install-library:
 -	$(MKDIR) $(FULLCOQLIB)
 +	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)
  	for f in $(LIBFILES); do \
@@ -109,15 +100,19 @@ $NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
 +	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
 +	  ${BSD_INSTALL_DATA} $$f $(FULLCOQLIB)/`dirname $$f`; \
          done
--	$(MKDIR) $(FULLCOQLIB)/states7
--	cp states7/*.coq $(FULLCOQLIB)/states7
-+	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states7
-+	${BSD_INSTALL_DATA} states7/*.coq $(FULLCOQLIB)/states7
+-	$(MKDIR) $(FULLCOQLIB)/states
+-	cp states/*.coq $(FULLCOQLIB)/states
+-	$(MKDIR) $(FULLCOQLIB)/user-contrib
+-	cp $(OBJECTCMA) $(OBJECTCMXA) $(FULLCOQLIB)
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states
++	${BSD_INSTALL_DATA} states/*.coq $(FULLCOQLIB)/states
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/user-contrib
++	${BSD_INSTALL_DATA} $(OBJECTCMA) $(OBJECTCMXA) $(FULLCOQLIB)/states
  
  install-library-light:
 -	$(MKDIR) $(FULLCOQLIB)
 +	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)
- 	for f in $(LIBFILESLIGHT) $(NEWLIBFILESLIGHT); do \
+ 	for f in $(LIBFILESLIGHT); do \
 -	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
 -	  cp $$f $(FULLCOQLIB)/`dirname $$f`; \
 +	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
@@ -125,12 +120,8 @@ $NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
          done
 -	$(MKDIR) $(FULLCOQLIB)/states
 -	cp states/*.coq $(FULLCOQLIB)/states
--	$(MKDIR) $(FULLCOQLIB)/states7
--	cp states7/*.coq $(FULLCOQLIB)/states7
 +	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states
 +	${BSD_INSTALL_DATA} states/*.coq $(FULLCOQLIB)/states
-+	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states7
-+	${BSD_INSTALL_DATA} states7/*.coq $(FULLCOQLIB)/states7
  
  install-allreals::
  	for f in $(ALLREALS); do \
@@ -168,7 +159,7 @@ $NetBSD: patch-aa,v 1.4 2006/01/27 19:22:58 tonio Exp $
  
  install-latex:
 -	$(MKDIR) $(FULLCOQDOCDIR)
--	cp tools/coqdoc/coqdoc.sty $(FULLCOQDOCDIR)
+-	cp tools/coqdoc/coqdoc.sty $(FULLCOQDOCDIR)	
 +	${BSD_INSTALL_DATA_DIR} $(FULLCOQDOCDIR)
 +	${BSD_INSTALL_DATA} tools/coqdoc/coqdoc.sty $(FULLCOQDOCDIR)	
  #	-$(UPDATETEX)
