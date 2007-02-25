@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2007/02/06 20:22:15 joerg Exp $
+# $NetBSD: options.mk,v 1.12 2007/02/25 07:34:45 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	aufs carp icmp pam-helper snmp ssl unlinkd
@@ -91,6 +91,8 @@ CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
 
 .if !empty(PKG_OPTIONS:Maufs)
 SQUID_BACKENDS+=	aufs
+PTHREAD_AUTO_VARS=	yes
+.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdiskd)
