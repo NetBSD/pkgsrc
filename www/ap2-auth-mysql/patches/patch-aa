@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/11/18 15:58:22 cube Exp $
+$NetBSD: patch-aa,v 1.3 2007/02/25 15:51:50 sborrill Exp $
 
---- mod_auth_mysql.c.orig	2004-11-14 18:27:15.000000000 +0100
-+++ mod_auth_mysql.c
+--- mod_auth_mysql.c.orig	2007-02-25 16:15:13.000000000 +0000
++++ mod_auth_mysql.c	2007-02-25 16:15:13.000000000 +0000
 @@ -189,7 +189,9 @@
  #include "http_core.h"
  #include "http_log.h"
@@ -141,43 +141,43 @@ $NetBSD: patch-aa,v 1.2 2004/11/18 15:58:22 cube Exp $
 -    (void*)XtOffsetOf(mysql_auth_config_rec, mysqlNoPasswd),
 -    OR_AUTHCFG, FLAG, "If On, only check if user exists; ignore password" },
 +    AP_INIT_TAKE1("AuthMySQLHost", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlhost),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlhost),
 +	OR_AUTHCFG, "mysql server host name"),
 +    AP_INIT_TAKE1("AuthMySQLUser", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqluser),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqluser),
 +	OR_AUTHCFG, "mysql server user name"),
 +    AP_INIT_TAKE1("AuthMySQLPassword", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlpasswd),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlpasswd),
 +	OR_AUTHCFG, "mysql server user password"),
 +    AP_INIT_TAKE1("AuthMySQLDB", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlDB),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlDB),
 +	OR_AUTHCFG, "mysql database name"),
 +    AP_INIT_TAKE1("AuthMySQLUserTable", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlpwtable),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlpwtable),
 +	OR_AUTHCFG, "mysql user table name"),
 +    AP_INIT_TAKE1("AuthMySQLGroupTable", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlgrptable),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlgrptable),
 +	OR_AUTHCFG, "mysql group table name"),
 +    AP_INIT_TAKE1("AuthMySQLNameField", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlNameField),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlNameField),
 +	OR_AUTHCFG, "mysql User ID field name within table"),
 +    AP_INIT_TAKE1("AuthMySQLGroupField", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlGroupField),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlGroupField),
 +	OR_AUTHCFG, "mysql Group field name within table"),
 +    AP_INIT_TAKE1("AuthMySQLPasswordField", ap_set_string_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlPasswordField),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlPasswordField),
 +	OR_AUTHCFG, "mysql Password field name within table"),
 +    AP_INIT_FLAG("AuthMySQLCryptedPasswords", ap_set_flag_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlCrypted),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlCrypted),
 +	OR_AUTHCFG, "mysql passwords are stored encrypted if On"),
 +    AP_INIT_FLAG("AuthMySQLKeepAlive", ap_set_flag_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlKeepAlive),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlKeepAlive),
 +	OR_AUTHCFG, "mysql connection kept open across requests if On"),
 +    AP_INIT_FLAG("AuthMySQLAuthoritative", ap_set_flag_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlAuthoritative),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlAuthoritative),
 +	OR_AUTHCFG, "mysql lookup is authoritative if On"),
 +    AP_INIT_FLAG("AuthMySQLNoPasswd", ap_set_flag_slot,
-+	(void*)APR_XtOffsetOf(mysql_auth_config_rec, mysqlNoPasswd),
++	(void*)APR_OFFSETOF(mysql_auth_config_rec, mysqlNoPasswd),
 +	OR_AUTHCFG, "If On, only check if user exists; ignore password"),
    { NULL }
  };
