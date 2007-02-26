@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2007/01/23 17:02:07 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2007/02/26 11:54:57 drochner Exp $
 
 --- usbctl.c.orig	2002-02-25 01:50:55.000000000 +0100
 +++ usbctl.c
@@ -21,7 +21,69 @@ $NetBSD: patch-ab,v 1.2 2007/01/23 17:02:07 drochner Exp $
  
  #ifndef USB_STACK_VERSION
  #define ucr_addr addr
-@@ -630,7 +636,7 @@ gethubdesc(int f, usb_hub_descriptor_t *
+@@ -62,6 +68,7 @@
+ #endif
+ 
+ #define NSTRINGS
++#define STRINGLANG
+ 
+ int num = 0;
+ 
+@@ -80,17 +87,43 @@ getstring(int si, char *s)
+ 	int r, i, n;
+ 	u_int16_t c;
+ 	usb_string_descriptor_t us;
++	int lang = 0;
+ 
+ 	if (si == 0 || num) {
+ 		*s = 0;
+ 		return;
+ 	}
++
++#ifdef STRINGLANG
+ 	req.ucr_addr = usbaddr;
+ 	req.ucr_request.bmRequestType = UT_READ_DEVICE;
+ 	req.ucr_request.bRequest = UR_GET_DESCRIPTOR;
+ 	req.ucr_data = &us;
+-	USETW2(req.ucr_request.wValue, UDESC_STRING, si);
++	USETW2(req.ucr_request.wValue, UDESC_STRING, 0);
+ 	USETW(req.ucr_request.wIndex, 0);
++	USETW(req.ucr_request.wLength, sizeof(usb_string_descriptor_t));
++	req.ucr_flags = USBD_SHORT_XFER_OK;
++	r = ioctl(usbf, USB_REQUEST, &req);
++	if (r < 0) {
++		fprintf(stderr, "get lang tbl failed (error=%d)\n", errno);
++		*s = 0;
++		return;
++	}
++	if (req.ucr_actlen > 0 && us.bLength >= 4) {
++		lang = UGETW(us.bString[0]);
++#if 0
++		printf("getstring: %d langs, using %d\n",
++		       (us.bLength - 2) / 2, lang);
++#endif
++	}
++#endif
++
++	req.ucr_addr = usbaddr;
++	req.ucr_request.bmRequestType = UT_READ_DEVICE;
++	req.ucr_request.bRequest = UR_GET_DESCRIPTOR;
++	req.ucr_data = &us;
++	USETW2(req.ucr_request.wValue, UDESC_STRING, si);
++	USETW(req.ucr_request.wIndex, lang);
+ #ifdef NSTRINGS
+ 	USETW(req.ucr_request.wLength, sizeof(usb_string_descriptor_t));
+ 	req.ucr_flags = USBD_SHORT_XFER_OK;
+@@ -384,7 +417,7 @@ struct usb_cdc_union_descriptor {
+ };
+ 
+ void
+-prcdcd(usb_descriptor_t *ud)
++prcdcd(struct usb_cdc_header_descriptor *ud)
+ {
+ 	if (ud->bDescriptorType != UDESC_CS_INTERFACE)
+ 		printf("prcdcd: strange bDescriptorType=%d\n", 
+@@ -630,7 +663,7 @@ gethubdesc(int f, usb_hub_descriptor_t *
  	req.ucr_addr = addr;
  	req.ucr_request.bmRequestType = UT_READ_CLASS_DEVICE;
  	req.ucr_request.bRequest = UR_GET_DESCRIPTOR;
@@ -30,7 +92,18 @@ $NetBSD: patch-ab,v 1.2 2007/01/23 17:02:07 drochner Exp $
  	USETW(req.ucr_request.wIndex, 0);
  	USETW(req.ucr_request.wLength, USB_HUB_DESCRIPTOR_SIZE);
  	req.ucr_data = d;
-@@ -1321,6 +1327,7 @@ main(int argc, char **argv)
+@@ -1243,8 +1276,8 @@ prdesc(void *p, int *class, int *subclas
+ 	default:
+ 	def:
+ 		printf("Unknown descriptor (class %d/%d):\n", *class, *subclass);
+-		printf("bLength=%d bDescriptorType=%d bDescriptorSubtype=%d ...\n", d->bLength, 
+-		       d->bDescriptorType, d->bDescriptorSubtype
++		printf("bLength=%d bDescriptorType=%d ...\n", d->bLength, 
++		       d->bDescriptorType
+ 		       );
+ 		break;
+ 	}
+@@ -1321,6 +1354,7 @@ main(int argc, char **argv)
  
  	if (!doaddr)
  		prunits(f);
@@ -38,7 +111,7 @@ $NetBSD: patch-ab,v 1.2 2007/01/23 17:02:07 drochner Exp $
  	if (!nodisc) {
  		r = ioctl(f, USB_DISCOVER);
  		if (r < 0)
-@@ -1329,6 +1336,7 @@ main(int argc, char **argv)
+@@ -1329,6 +1363,7 @@ main(int argc, char **argv)
  		if (disconly)
  			exit(0);
  	}
