@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/26 00:01:18 wiz Exp $
 bin/rominfo
-share/doc/ROMInfo/rominfo.txt
+share/doc/ROMInfo/readme.txt
 @dirrm share/doc/ROMInfo
