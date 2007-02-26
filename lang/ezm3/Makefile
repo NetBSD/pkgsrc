@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/26 19:50:26 veego Exp $
+# $NetBSD: Makefile,v 1.18 2007/02/26 20:09:55 veego Exp $
 
 DISTNAME=	ezm3-1.2
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/development/CVSup/ezm3/
 DISTFILES=	${DISTNAME}-src.tar.bz2 ${BOOTSTRAP}
 
 MAINTAINER=	veego@NetBSD.org
-HOMEPAGE=	http://www.polstra.com/projects/freeware/ezm3/
+HOMEPAGE=	http://www.cvsup.org/ezm3/
 COMMENT=	Easier, more portable Modula-3 distribution for building CVSup
 
 DIST_SUBDIR=		ezm3
