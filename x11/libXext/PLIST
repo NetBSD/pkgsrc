@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 18:19:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/26 14:58:18 joerg Exp $
 lib/libXext.la
 lib/pkgconfig/xext.pc
 man/man3/DBE.3
@@ -23,6 +23,17 @@ man/man3/XShapeQueryExtension.3
 man/man3/XShapeQueryExtents.3
 man/man3/XShapeQueryVersion.3
 man/man3/XShapeSelectInput.3
+man/man3/XShm.3
+man/man3/XShmAttach.3
+man/man3/XShmCreateImage.3
+man/man3/XShmCreatePixmap.3
+man/man3/XShmDetach.3
+man/man3/XShmGetEventBase.3
+man/man3/XShmGetImage.3
+man/man3/XShmPixmapFormat.3
+man/man3/XShmPutImage.3
+man/man3/XShmQueryExtension.3
+man/man3/XShmQueryVersion.3
 man/man3/XcupGetReservedColormapEntries.3
 man/man3/XcupQueryVersion.3
 man/man3/XcupStoreColors.3
