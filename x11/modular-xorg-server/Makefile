@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/01/24 13:34:40 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/26 17:51:16 drochner Exp $
 
 DISTNAME=	xorg-server-1.2.0
+PKGREVISION=	1
 PKGNAME=	modular-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
@@ -19,11 +20,30 @@ USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-dri
+
+PKG_SUPPORTED_OPTIONS=	glx
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xorg-server
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mglx)
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		MesaLib-6.5.2.tar.bz2
+SITES.MesaLib-6.5.2.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+CONFIGURE_ARGS+=	--enable-glx
+CONFIGURE_ARGS+=	--with-mesa-source=${WRKDIR}/Mesa-6.5.2
+BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
+BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
+PLIST_SUBST+=		GLX=""
+.else
+CONFIGURE_ARGS+=	--disable-glx
+PLIST_SUBST+=		GLX="@comment "
+.endif
 
 BUILD_DEFS+=		VARBASE
 
+# -wip
+#DEPENDS+=		xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 DEPENDS+=		xkbdata-[0-9]*:../../x11/xkbdata
 
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
@@ -32,7 +52,10 @@ BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
+.if empty(PKG_OPTIONS:Mglx)
+# for GLX we already have the Mesa source
 .include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
