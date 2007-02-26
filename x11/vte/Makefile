@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2006/12/27 13:37:43 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2007/02/26 18:20:35 drochner Exp $
 #
 
-DISTNAME=	vte-0.14.1
-PKGREVISION=	1
+DISTNAME=	vte-0.14.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,5 +33,4 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
