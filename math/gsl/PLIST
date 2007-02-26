@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/03/31 23:56:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/02/26 08:05:15 wiz Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -19,6 +19,7 @@ include/gsl/gsl_block_uchar.h
 include/gsl/gsl_block_uint.h
 include/gsl/gsl_block_ulong.h
 include/gsl/gsl_block_ushort.h
+include/gsl/gsl_bspline.h
 include/gsl/gsl_cblas.h
 include/gsl/gsl_cdf.h
 include/gsl/gsl_chebyshev.h
@@ -146,6 +147,7 @@ include/gsl/gsl_sf_laguerre.h
 include/gsl/gsl_sf_lambert.h
 include/gsl/gsl_sf_legendre.h
 include/gsl/gsl_sf_log.h
+include/gsl/gsl_sf_mathieu.h
 include/gsl/gsl_sf_pow_int.h
 include/gsl/gsl_sf_psi.h
 include/gsl/gsl_sf_result.h
