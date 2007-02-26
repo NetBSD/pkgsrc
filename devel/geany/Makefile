@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/08 00:25:13 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/26 18:23:50 joerg Exp $
 
 DISTNAME=	geany-0.10
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ HOMEPAGE=	http://geany.uvena.de/
 COMMENT=	Geany integrated development environment (IDE)
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 MAKE_FLAGS+=		CCLD=${CXX:Q}
