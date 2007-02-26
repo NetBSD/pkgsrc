@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/26 19:55:28 pooka Exp $
+
+--- src/Makefile.in.orig	2007-02-20 22:15:39.000000000 +0200
++++ src/Makefile.in	2007-02-26 21:45:34.000000000 +0200
+@@ -581,7 +581,7 @@
+ 
+ install-exec-hook:
+ 	$(INSTALL) -d $(DESTDIR)/sbin
+-	$(LN_S) -f $(bindir)/ntfs-3g $(DESTDIR)/sbin/mount.ntfs-3g
++	$(LN_S) -f ntfs-3g $(bindir)/mount.ntfs-3g
+ 	$(LDCONFIG)
+ 
+ install-data-hook:

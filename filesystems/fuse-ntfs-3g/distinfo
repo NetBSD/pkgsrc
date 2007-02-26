@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/26 19:55:28 pooka Exp $
+
+SHA1 (ntfs-3g-1.0.tgz) = e4cf952a17a3a9e3f1e53d09cb8dd544e5ecfd0f
+RMD160 (ntfs-3g-1.0.tgz) = 4460101eea3b36b2faf8c79863b6590cbb1de4ab
+Size (ntfs-3g-1.0.tgz) = 562452 bytes
+SHA1 (patch-aa) = 51e3674e70dcd967f184ff8ccb34f040e98fb70f
+SHA1 (patch-ab) = 9bfd8e206df71b4cb72a96badb3553a7717802b9
