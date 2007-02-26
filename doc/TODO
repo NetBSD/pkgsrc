@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6044 2007/02/26 10:25:51 wiz Exp $
+$NetBSD: TODO,v 1.6045 2007/02/26 11:39:47 dillo Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,7 @@ Suggested package updates
 	o imap-uw-2006e
 	o imapsync-1.197
 	o instiki-0.10.2
-	o intercal-0.24 [dillo]
+	o intercal-0.24
 	o ion3-devel-20061223
 	o iozone-3.271
 	o ipcalc-0.41
