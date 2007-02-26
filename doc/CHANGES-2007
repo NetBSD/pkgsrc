@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.477 2007/02/26 08:05:55 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.478 2007/02/26 11:56:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -932,3 +932,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libsoup-devel to 2.2.100 [wiz 2007-02-26]
 	Updated mail/tmda to 1.1.11 [schmonz 2007-02-26]
 	Updated math/gsl to 1.9 [wiz 2007-02-26]
+	Updated sysutils/ipa to 2.0.3 [obache 2007-02-26]
