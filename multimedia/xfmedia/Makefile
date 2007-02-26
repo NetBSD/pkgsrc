@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/26 13:33:45 joerg Exp $
 #
 
 DISTNAME=		xfmedia-0.9.1
@@ -26,10 +26,15 @@ post-install:
 	${INSTALL} ${WRKSRC}/src/keybindings.rc \
 	    ${PREFIX}/share/xfmedia/keybindings.rc
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libexo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
