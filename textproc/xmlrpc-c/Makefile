@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/02/26 14:56:30 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/26 21:03:12 wiz Exp $
 #
 
 DISTNAME=	xmlrpc-c-1.09.00
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz
@@ -21,7 +21,9 @@ SUBST_CLASSES+=	pthread
 SUBST_FILES.pthread=	xmlrpc-c-config.in xmlrpc-c-config.test.in
 PTHREAD_LINKFLAGS=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 SUBST_SED.pthread=	-e s/-lpthread/${PTHREAD_LINKFLAGS:Q}/
-SUBST_STAGE.pthread=	post-patch
+SUBST_SED.pthread+=	-e "s/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/"
+SUBST_STAGE.pthread=	pre-configure
+SUBST_MESSAGE.pthread=	Fixing config scripts.
 
 .include "../../www/libwww/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
