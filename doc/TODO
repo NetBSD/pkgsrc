@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6040 2007/02/26 00:05:10 wiz Exp $
+$NetBSD: TODO,v 1.6041 2007/02/26 00:05:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -192,13 +192,6 @@ Suggested new packages
 	http://oplink.net/~ajackson/software/maillabels
 	Perl module (at CPAN) for printing mailing labels on
 	standard label stock. Also has postal barcodes support.
-
-	FUSE [reinoud]
-	http://fuse.sourceforge.net/
-	Userland filing system framework designed on Linux, ported
-	to FreeBSD.
-	The FreeBSD port homepage is http://fuse4bsd.creo.hu/
-	The port is in sysutils/fuse-*.
 
 	GnomeMeeting
 	http://www.gnomemeeting.org/
