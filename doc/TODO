@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6039 2007/02/26 00:02:54 wiz Exp $
+$NetBSD: TODO,v 1.6040 2007/02/26 00:05:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -219,7 +219,6 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o ImageMagick-6.3.2.9
-	o MyPasswordSafe-20061216
 	o PAM-0.80
 	o R-2.4.1
 	o REminiscence-0.1.8
