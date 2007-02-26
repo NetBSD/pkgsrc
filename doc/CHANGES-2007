@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.474 2007/02/26 00:05:09 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.475 2007/02/26 00:08:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -929,3 +929,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/ROMBuild to 2.8 [wiz 2007-02-26]
 	Updated emulators/ROMInfo to 2.7 [wiz 2007-02-26]
 	Updated emulators/ZIPIdent to 2.8 [wiz 2007-02-26]
+	Updated net/libsoup-devel to 2.2.100 [wiz 2007-02-26]
