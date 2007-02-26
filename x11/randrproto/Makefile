@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/01/18 17:48:56 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/26 14:52:58 joerg Exp $
 #
 
-DISTNAME=		randrproto-1.2.0
+DISTNAME=		randrproto-1.2.1
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
