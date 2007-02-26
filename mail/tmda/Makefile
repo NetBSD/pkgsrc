@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2007/02/02 13:08:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.36 2007/02/26 03:44:21 schmonz Exp $
 #
 
-DISTNAME=	tmda-1.1.10
+DISTNAME=	tmda-1.1.11
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.net/releases/
 MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/
@@ -37,7 +37,6 @@ PLIST_SUBST+=	HTMLDIR=${HTMLDIR:Q}
 TMDA_PROGRAMS=	bin/tmda-*
 TMDA_DOCS=	CODENAMES COPYING CRYPTO ChangeLog INSTALL
 TMDA_DOCS+=	NEWS README THANKS UPGRADE
-TMDA_HTDOCS=	htdocs/*.html htdocs/*.css
 TMDA_CONTRIB=	contrib/*
 
 SUBST_CLASSES+=		etc
@@ -45,14 +44,17 @@ SUBST_STAGE.etc=	do-configure
 SUBST_FILES.etc=	bin/tmda-ofmipd TMDA/Auth.py TMDA/Defaults.py
 SUBST_SED.etc=		-e 's|/etc|${PKG_SYSCONFDIR}|g'
 
-INSTALLATION_DIRS=	bin ${SHAREDIR} ${DOCDIR} ${HTMLDIR}/img
+INSTALLATION_DIRS=	bin ${SHAREDIR} ${DOCDIR} ${HTMLDIR}
 INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/pythonlib/email/mime ${EGDIR}
+
+post-extract:
+	rm ${WRKSRC}/doc/html/error.log
 
 do-build:
 	cd ${WRKSRC} && ${PYTHONBIN} ./compileall
 
 pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+	find ${WRKSRC} -name "*.orig" -print | xargs rm -f
 
 do-install:
 	for f in ${TMDA_PROGRAMS}; do \
@@ -81,13 +83,7 @@ do-install:
 		fi; \
 	done
 
-	for f in ${TMDA_HTDOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${HTMLDIR}; \
-	done
-
-	for f in htdocs/img/*.png htdocs/img/*.gif; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${HTMLDIR}/img; \
-	done
+	cp -Rp ${WRKSRC}/doc/html/* ${PREFIX}/${HTMLDIR}
 
 post-install:
 	${PREFIX}/bin/tmda-ofmipd -V >/dev/null 2>&1
