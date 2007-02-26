@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/26 19:55:28 pooka Exp $
+
+--- configure.ac.orig	2007-02-18 03:27:41.000000000 +0100
++++ configure.ac	2007-02-18 03:28:28.000000000 +0100
+@@ -80,7 +80,7 @@
+ AC_SYS_LARGEFILE
+ 
+ case "$target_os" in
+-linux*)
++linux*|netbsd*)
+ 	PKG_CHECK_MODULES(FUSE_MODULE, fuse >= 2.6.0, [ compile_fuse_module=true ],
+ 	[
+ 		AC_MSG_ERROR([ntfs-3g requires FUSE >= 2.6.0. Please see http://fuse.sf.net/ or install __all__ FUSE packages (e.g. fuse, fuse-utils, libfuse, libfuse2, libfuse-dev) or remove already installed __older__ FUSE.])
