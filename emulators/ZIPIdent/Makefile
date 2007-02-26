@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 21:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/26 00:01:30 wiz Exp $
 #
 
-DISTNAME=		zident27
-PKGNAME=		ZIPIdent-2.7
-PKGREVISION=		1
+DISTNAME=		zident28
+PKGNAME=		ZIPIdent-2.8
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ZIPIdent/
 EXTRACT_SUFX=		.zip
@@ -19,15 +18,13 @@ BUILD_TARGET=		zipident
 EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin
 
-BUILDLINK_API_DEPENDS.DatLib+=	DatLib>=2.13
-
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zipident ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ZIPIdent
-	${INSTALL_DATA} ${WRKSRC}/zipident.txt ${PREFIX}/share/doc/ZIPIdent
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/ZIPIdent
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../emulators/DatLib/buildlink3.mk"
