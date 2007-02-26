@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.480 2007/02/26 17:55:54 snj Exp $
+$NetBSD: CHANGES-2007,v 1.481 2007/02/26 19:57:58 pooka Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -939,3 +939,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/libXt to 1.0.5 [joerg 2007-02-26]
 	Updated x11/xrdb to 1.0.3 [joerg 2007-02-26]
 	Updated multimedia/lsdvd to 0.16nb2 [snj 2007-02-26]
+	Added filesystems/fuse-ntfs-3g version 1.0 [pooka 2007-02-26]
