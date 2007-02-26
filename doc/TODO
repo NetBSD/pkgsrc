@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6043 2007/02/26 08:05:55 wiz Exp $
+$NetBSD: TODO,v 1.6044 2007/02/26 10:25:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdl-0.7.2
 	o gdsreader-0.3.2
-	o geany-0.10.1
+	o geany-0.10.2
 	o ggiterm-0.7.1
 	o ghc-6.6
 	o ghostscript-esp-8.15.3
@@ -588,7 +588,7 @@ Suggested package updates
 	o lucy-1.19p
 	o lwp-2.1
 	o lynx-2.8.6
-	o lyx-1.4.3
+	o lyx-1.4.4
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
@@ -898,6 +898,7 @@ Suggested package updates
 	o root-5.04.00
 	o root-tail-1.2
 	o rosegarden4-1.5.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o rox-2.6
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
