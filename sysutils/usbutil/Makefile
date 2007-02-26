@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/02/26 11:54:55 drochner Exp $
 #
 
 DISTNAME=	usbutil-0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.augustsson.net/pub/netbsd/
 
