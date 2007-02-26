@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6038 2007/02/25 23:40:19 wiz Exp $
+$NetBSD: TODO,v 1.6039 2007/02/26 00:02:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -215,24 +215,18 @@ Suggested package updates
 	o 9base-2
 	o Cenon-3.71
 	o Chinput-3.0.1
-	o DatLib-2.20
-	o DatUtil-2.31
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o ImageMagick-6.3.2.9
-	o MAMEDiff-2.26
 	o MyPasswordSafe-20061216
 	o PAM-0.80
 	o R-2.4.1
 	o REminiscence-0.1.8
-	o ROMBuild-2.8
-	o ROMInfo-2.7
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6.9
 	o XaoS-3.1.1
 	o YoSucker-75
-	o ZIPIdent-2.8
 	o aap-0.144
 	o abcm2ps-5.2.3
 	o abcmidi-20070106
@@ -705,7 +699,6 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-1.82
 	o p5-Apache-Session-Wrapper-0.33
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-Cyrus-0.13
@@ -735,7 +728,6 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Ima-DBI-0.34
-	o p5-Image-Info-1.24
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
@@ -768,7 +760,6 @@ Suggested package updates
 	o p5-Template-Extract-0.40
 	o p5-Test-Harness-2.46
 	o p5-Text-BibTeX-0.34
-	o p5-Text-Quoted-2.02
 	o p5-Text-Tabs+Wrap-2005.0824
 	o p5-Time-HiRes-1.91
 	o p5-Time-Piece-2.00.01
