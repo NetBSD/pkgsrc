@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 21:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/02/26 00:01:05 wiz Exp $
 #
 
-DISTNAME=		rbuild27
-PKGNAME=		ROMBuild-2.7
-PKGREVISION=		1
+DISTNAME=		rbuild28
+PKGNAME=		ROMBuild-2.8
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ROMBuild/
 EXTRACT_SUFX=		.zip
@@ -25,7 +24,7 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rombuild ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ROMBuild
-	${INSTALL_DATA} ${WRKSRC}/rombuild.txt ${PREFIX}/share/doc/ROMBuild
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/ROMBuild
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../emulators/DatLib/buildlink3.mk"
