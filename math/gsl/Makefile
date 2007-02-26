@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2006/04/20 18:31:15 adam Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/26 08:05:15 wiz Exp $
 
-DISTNAME=	gsl-1.8
+DISTNAME=	gsl-1.9
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gsl/}
 
@@ -10,7 +10,7 @@ COMMENT=	The GNU Scientific Library
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 TEST_TARGET=		check
 
