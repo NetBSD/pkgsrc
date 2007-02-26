@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 21:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/26 00:00:56 wiz Exp $
 #
 
-DISTNAME=		mdiff224
-PKGNAME=		MAMEDiff-2.24
-PKGREVISION=		1
+DISTNAME=		mdiff226
+PKGNAME=		MAMEDiff-2.26
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/MAMEDiff/
 EXTRACT_SUFX=		.zip
@@ -19,15 +18,13 @@ BUILD_TARGET=		mamediff
 EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin
 
-BUILDLINK_API_DEPENDS.DatLib+=	DatLib>=2.13
-
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mamediff ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/MAMEDiff
-	${INSTALL_DATA} ${WRKSRC}/mamediff.txt ${PREFIX}/share/doc/MAMEDiff
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/MAMEDiff
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../emulators/DatLib/buildlink3.mk"
