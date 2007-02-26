@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/15 14:53:44 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/26 13:13:03 joerg Exp $
 #
 
 DISTNAME=	openbox-2.2.3
@@ -18,9 +18,13 @@ GNU_CONFIGURE=	YES
 
 CPPFLAGS+=	-DHAVE_STRFTIME=1
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
