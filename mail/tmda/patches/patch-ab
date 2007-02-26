@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2007/01/11 19:22:43 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2007/02/26 03:44:21 schmonz Exp $
 
---- TMDA/Util.py.orig	2006-10-29 22:07:56.000000000 -0500
+--- TMDA/Util.py.orig	2007-02-23 15:20:10.000000000 -0500
 +++ TMDA/Util.py
-@@ -596,7 +596,13 @@ def sendmail(msgstr, envrecip, envsender
+@@ -584,7 +584,13 @@ def sendmail(msgstr, envrecip, envsender
             Defaults.MAIL_TRANSFER_AGENT in ('postfix', 'qmail') and \
             Defaults.MAIL_TRANSPORT == 'sendmail':
          envsender = ''
