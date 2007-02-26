@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/24 13:34:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/02/26 17:51:16 drochner Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -191,9 +191,11 @@ lib/X11/Cards
 lib/X11/Options
 lib/X11/app-defaults/XOrgCfg
 lib/pkgconfig/xorg-server.pc
+${GLX}lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
 lib/xorg/modules/extensions/libdri.la
 lib/xorg/modules/extensions/libextmod.la
+${GLX}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
 lib/xorg/modules/fonts/libfreetype.la

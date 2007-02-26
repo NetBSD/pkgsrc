@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/11/14 16:59:30 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2007/02/26 17:51:16 drochner Exp $
+
+So mouse pointer does not get stuck on left side of screen.
 
 --- hw/xfree86/common/xf86Xinput.c.orig	2006-07-05 18:31:40.000000000 +0000
 +++ hw/xfree86/common/xf86Xinput.c
