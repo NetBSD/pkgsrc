@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/29 21:40:12 ghen Exp $
+# $NetBSD: Makefile,v 1.28 2007/02/26 15:47:43 joerg Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -12,6 +12,7 @@ COMMENT=		Concurrent functional programming language
 DIST_SUBDIR=		erlang
 
 GNU_CONFIGURE=		yes
+OVERRIDE_DIRDEPTH=	4
 USE_TOOLS+=		gmake perl:run
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl:Q}
