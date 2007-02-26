@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.472 2007/02/25 15:05:07 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.473 2007/02/26 00:02:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -919,3 +919,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xload version 1.0.1 [dsainty 2007-02-25]
 	Updated editors/vim-share to 7.0.201 [martti 2007-02-25]
 	Updated lang/coq to 8.1 [tonio 2007-02-25]
+	Updated textproc/p5-Text-Quoted to 2.02 [wiz 2007-02-25]
+	Updated www/p5-Apache-Session to 1.82 [wiz 2007-02-25]
+	Updated graphics/p5-Image-Info to 1.24 [wiz 2007-02-25]
+	Updated emulators/DatLib to 2.20 [wiz 2007-02-26]
+	Updated emulators/DatUtil to 2.31 [wiz 2007-02-26]
+	Updated emulators/MAMEDiff to 2.26 [wiz 2007-02-26]
+	Updated emulators/ROMBuild to 2.8 [wiz 2007-02-26]
+	Updated emulators/ROMInfo to 2.7 [wiz 2007-02-26]
+	Updated emulators/ZIPIdent to 2.8 [wiz 2007-02-26]
