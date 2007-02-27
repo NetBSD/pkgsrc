@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../sal/util/makefile.mk.orig	2007-02-17 17:25:20.000000000 +0900
++++ ../sal/util/makefile.mk	2007-02-17 17:26:16.000000000 +0900
+@@ -97,7 +97,11 @@
+ .ENDIF
+ SHL1IMPLIB= i$(TARGET)
+ 
+-SHL1VERSIONMAP=	$(TARGET).map
++.IF "$(OS)"=="NETBSD"
++SHL1VERSIONMAP=        $(TARGET)_netbsd.map
++.ELSE
++SHL1VERSIONMAP=        $(TARGET).map
++.ENDIF
+ 
+ .IF "$(GUI)"=="WNT"
+ .IF "$(COM)"!="GCC"
