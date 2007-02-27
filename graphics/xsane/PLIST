@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/02/02 19:14:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/02/27 08:47:05 wiz Exp $
 bin/xsane
 man/man1/xsane.1
 share/locale/ca/LC_MESSAGES/xsane.mo
@@ -34,6 +34,7 @@ share/sane/xsane/doc/sane-scantips-doc.html
 share/sane/xsane/doc/sane-xsane-advanced-doc.html
 share/sane/xsane/doc/sane-xsane-batch-scan-doc.html
 share/sane/xsane/doc/sane-xsane-color-correction-doc.html
+share/sane/xsane/doc/sane-xsane-color-management-doc.html
 share/sane/xsane/doc/sane-xsane-copy-doc.html
 share/sane/xsane/doc/sane-xsane-doc.html
 share/sane/xsane/doc/sane-xsane-email-doc.html
@@ -47,6 +48,7 @@ share/sane/xsane/doc/sane-xsane-multipage-doc.html
 share/sane/xsane/doc/sane-xsane-preview-doc.html
 share/sane/xsane/doc/sane-xsane-save-doc.html
 share/sane/xsane/doc/sane-xsane-scan-options-doc.html
+share/sane/xsane/doc/sane-xsane-setup-color-management-doc.html
 share/sane/xsane/doc/sane-xsane-setup-copy-doc.html
 share/sane/xsane/doc/sane-xsane-setup-display-doc.html
 share/sane/xsane/doc/sane-xsane-setup-email-doc.html
@@ -68,7 +70,9 @@ share/sane/xsane/doc/xsane-batch-scan.jpg
 share/sane/xsane/doc/xsane-blur.jpg
 share/sane/xsane/doc/xsane-brightness.jpg
 share/sane/xsane/doc/xsane-clone.jpg
+share/sane/xsane/doc/xsane-cms-function.jpg
 share/sane/xsane/doc/xsane-color-correction.jpg
+share/sane/xsane/doc/xsane-color-management-main-window.jpg
 share/sane/xsane/doc/xsane-colormode.jpg
 share/sane/xsane/doc/xsane-contrast.jpg
 share/sane/xsane/doc/xsane-copy-number.jpg
@@ -80,6 +84,7 @@ share/sane/xsane/doc/xsane-disk.jpg
 share/sane/xsane/doc/xsane-edit-medium.jpg
 share/sane/xsane/doc/xsane-email-project.jpg
 share/sane/xsane/doc/xsane-email.jpg
+share/sane/xsane/doc/xsane-enable-color-management.jpg
 share/sane/xsane/doc/xsane-fax-project.jpg
 share/sane/xsane/doc/xsane-fax.jpg
 share/sane/xsane/doc/xsane-gamma.jpg
@@ -139,6 +144,7 @@ share/sane/xsane/doc/xsane-save.jpg
 share/sane/xsane/doc/xsane-save2.jpg
 share/sane/xsane/doc/xsane-scale.jpg
 share/sane/xsane/doc/xsane-scansource.jpg
+share/sane/xsane/doc/xsane-setup-color-management.jpg
 share/sane/xsane/doc/xsane-setup-copy.jpg
 share/sane/xsane/doc/xsane-setup-display.jpg
 share/sane/xsane/doc/xsane-setup-email.jpg
