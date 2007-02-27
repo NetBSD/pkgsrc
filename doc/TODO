@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6047 2007/02/27 08:47:57 wiz Exp $
+$NetBSD: TODO,v 1.6048 2007/02/27 08:51:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -697,7 +697,6 @@ Suggested package updates
 	o p5-CGI-Minimal-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Compress-Bzip2-2.09
-	o p5-Config-General-2.32
 	o p5-Convert-UUlib-1.06
 	o p5-Crypt-CipherSaber-1.00
 	o p5-DBD-Oracle-1.16
