@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.24 2007/01/26 04:25:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/02/27 12:04:28 markd Exp $
 bin/karbon
 bin/kchart
 bin/kexi
+bin/kexi_add_column
+bin/kexi_add_column_gui
+bin/kexi_delete_column
+bin/kexi_delete_column_gui
 bin/kformula
 bin/kivio
 bin/koconverter
@@ -114,30 +118,40 @@ include/Kolinewidthaction.h
 include/Koversiondialog.h
 include/kcoloractions.h
 include/kdchart_export.h
+include/kexidb/admin.h
+include/kexidb/alter.h
 include/kexidb/connection.h
 include/kexidb/connectiondata.h
 include/kexidb/cursor.h
+include/kexidb/dbobjectnamevalidator.h
+include/kexidb/dbproperties.h
 include/kexidb/driver.h
+include/kexidb/driver_p.h
 include/kexidb/drivermanager.h
 include/kexidb/error.h
 include/kexidb/expression.h
 include/kexidb/field.h
 include/kexidb/fieldlist.h
+include/kexidb/fieldvalidator.h
 include/kexidb/global.h
 include/kexidb/indexschema.h
 include/kexidb/kexidb_export.h
 include/kexidb/keximigrate.h
 include/kexidb/keximigratedata.h
+include/kexidb/lookupfieldschema.h
 include/kexidb/migratemanager.h
+include/kexidb/msghandler.h
 include/kexidb/object.h
-include/kexidb/parser.h
 include/kexidb/preparedstatement.h
 include/kexidb/queryschema.h
 include/kexidb/queryschemaparameter.h
 include/kexidb/relationship.h
+include/kexidb/roweditbuffer.h
 include/kexidb/schemadata.h
+include/kexidb/simplecommandlineapp.h
 include/kexidb/tableschema.h
 include/kexidb/transaction.h
+include/kexidb/utils.h
 include/kexiutils/identifier.h
 include/kexiutils/kexiutils_export.h
 include/kexiutils/longlongvalidator.h
@@ -354,6 +368,7 @@ lib/kde3/kritablurfilter.la
 lib/kde3/kritabumpmap.la
 lib/kde3/kritacimg.la
 lib/kde3/kritacmykplugin.la
+lib/kde3/kritacolorify.la
 lib/kde3/kritacolorrange.la
 lib/kde3/kritacolorsfilters.la
 lib/kde3/kritacolorspaceconversion.la
@@ -600,8 +615,19 @@ lib/libkwmailmerge_interface.la
 lib/libkwmf.la
 lib/libkwordexportfilters.la
 lib/libkwordprivate.la
+share/applications/kde/karbon.desktop
+share/applications/kde/kchart.desktop
+share/applications/kde/kexi.desktop
+share/applications/kde/kformula.desktop
 share/applications/kde/kivio.desktop
+share/applications/kde/koshell.desktop
+share/applications/kde/kplato.desktop
+share/applications/kde/kpresenter.desktop
 share/applications/kde/krita.desktop
+share/applications/kde/kspread.desktop
+share/applications/kde/kudesigner.desktop
+share/applications/kde/kugar.desktop
+share/applications/kde/kword.desktop
 share/doc/kde/HTML/en/karbon/common
 share/doc/kde/HTML/en/karbon/index.cache.bz2
 share/doc/kde/HTML/en/karbon/index.docbook
@@ -1568,17 +1594,6 @@ share/kde/applnk/.hidden/krita_png.desktop
 share/kde/applnk/.hidden/krita_raw.desktop
 share/kde/applnk/.hidden/krita_tiff.desktop
 share/kde/applnk/Office/KThesaurus.desktop
-share/kde/applnk/Office/karbon.desktop
-share/kde/applnk/Office/kchart.desktop
-share/kde/applnk/Office/kexi.desktop
-share/kde/applnk/Office/kformula.desktop
-share/kde/applnk/Office/koshell.desktop
-share/kde/applnk/Office/kplato.desktop
-share/kde/applnk/Office/kpresenter.desktop
-share/kde/applnk/Office/kspread.desktop
-share/kde/applnk/Office/kudesigner.desktop
-share/kde/applnk/Office/kugar.desktop
-share/kde/applnk/Office/kword.desktop
 share/kde/apps/karbon/gradients/allcolors.kgr
 share/kde/apps/karbon/gradients/simple.kgr
 share/kde/apps/karbon/icons/crystalsvg/16x16/actions/14_layer_deletelayer.png
@@ -1777,11 +1792,13 @@ share/kde/apps/kchart/templates/chart/.source/BarChart.chrt
 share/kde/apps/kchart/templates/chart/.source/Empty.chrt
 share/kde/apps/kchart/templates/chart/BarChart.desktop
 share/kde/apps/kchart/templates/chart/Empty.desktop
+share/kde/apps/kexi/examples/Simple_Database.kexi
 share/kde/apps/kexi/icons/crystalsvg/128x128/actions/form_action.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/add_field.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/aofit.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/aogrid.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/aopos2grid.png
+share/kde/apps/kexi/icons/crystalsvg/16x16/actions/autofield.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/autonumber.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/business_user.png
 share/kde/apps/kexi/icons/crystalsvg/16x16/actions/button.png
@@ -1847,6 +1864,7 @@ share/kde/apps/kexi/icons/crystalsvg/22x22/actions/aoshortest.png
 share/kde/apps/kexi/icons/crystalsvg/22x22/actions/aotallest.png
 share/kde/apps/kexi/icons/crystalsvg/22x22/actions/aotop.png
 share/kde/apps/kexi/icons/crystalsvg/22x22/actions/aowidest.png
+share/kde/apps/kexi/icons/crystalsvg/22x22/actions/autofield.png
 share/kde/apps/kexi/icons/crystalsvg/22x22/actions/business_user.png
 share/kde/apps/kexi/icons/crystalsvg/22x22/actions/button.png
 share/kde/apps/kexi/icons/crystalsvg/22x22/actions/check.png
@@ -4666,6 +4684,7 @@ share/kde/services/kritablurfilter.desktop
 share/kde/services/kritabumpmapfilter.desktop
 share/kde/services/kritacimg.desktop
 share/kde/services/kritacmykplugin.desktop
+share/kde/services/kritacolorifyfilter.desktop
 share/kde/services/kritacolorrange.desktop
 share/kde/services/kritacolorsfilter.desktop
 share/kde/services/kritacolorspaceconversion.desktop
@@ -4793,6 +4812,8 @@ share/kde/templates/Illustration.desktop
 share/kde/templates/Presentation.desktop
 share/kde/templates/SpreadSheet.desktop
 share/kde/templates/TextDocument.desktop
+share/locale/pl/LC_MESSAGES/kexi_add_column_gui_transl_pl.sh
+share/locale/pl/LC_MESSAGES/kexi_delete_column_gui_transl_pl.sh
 @comment in kde: @dirrm share/kde/templates/.source
 @comment in kde: @dirrm share/kde/templates
 @comment in kde: @dirrm share/kde/servicetypes
@@ -5071,6 +5092,7 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/kexi/icons/crystalsvg/128x128
 @dirrm share/kde/apps/kexi/icons/crystalsvg
 @dirrm share/kde/apps/kexi/icons
+@dirrm share/kde/apps/kexi/examples
 @dirrm share/kde/apps/kexi
 @dirrm share/kde/apps/kchart/templates/chart/.source
 @dirrm share/kde/apps/kchart/templates/chart
@@ -5123,6 +5145,7 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/karbon
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Office
+@comment in kde: @dirrm share/kde/applnk/.hidden
 @comment in kde: @dirrm share/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/icons/locolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
@@ -5132,6 +5155,7 @@ share/kde/templates/TextDocument.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
 @comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
