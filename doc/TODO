@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6048 2007/02/27 08:51:47 wiz Exp $
+$NetBSD: TODO,v 1.6049 2007/02/27 09:37:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -691,27 +691,16 @@ Suggested package updates
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.33
-	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Compress-Bzip2-2.09
-	o p5-Convert-UUlib-1.06
-	o p5-Crypt-CipherSaber-1.00
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.001
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-Devel-SmallProf-2.00_03
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-ExtUtils-Depends-0.205
-	o p5-ExtUtils-F77-1.14
-	o p5-ExtUtils-PkgConfig-1.07
-	o p5-File-DirSync-1.12
-	o p5-File-MimeInfo-0.12
 	o p5-Graph-0.20105
 	o p5-HTML-FillInForm-1.05
 	o p5-HTMLObject-2.26
@@ -722,14 +711,8 @@ Suggested package updates
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
-	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Sendmail-0.79
-	o p5-Math-Bezier-0.02
-	o p5-Math-FFT-1.28
-	o p5-Math-MatrixReal-1.9
-	o p5-Module-Signature-0.50
-	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
