@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/27 09:37:29 wiz Exp $
 
 DISTNAME=	SVN-Web-0.41
 PKGNAME=	p5-${DISTNAME}
-# PKGREVISION=	4
 PKGREVISION=	2
 CATEGORIES=	perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NIKC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/SVN-Web/
 COMMENT=	Unstable snapshot of Subversion repository browser
 
 TEX_ACCEPTED=	teTeX3
