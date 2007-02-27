@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2007/02/22 19:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2007/02/27 13:52:04 hira Exp $
 
 DISTNAME=		openoffice-1.1.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.5/}
 DISTFILES=		OOo_1.1.5_src.tar.gz
@@ -32,6 +32,7 @@ PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 CONFLICTS+=		staroffice-[0-9]*
+CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 

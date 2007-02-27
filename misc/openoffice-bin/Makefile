@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/27 13:52:04 hira Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -24,6 +24,7 @@ NO_CONFIGURE=		yes
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
+CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
