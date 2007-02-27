@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.491 2007/02/27 11:31:29 grant Exp $
+$NetBSD: CHANGES-2007,v 1.492 2007/02/27 12:00:05 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/easytag to 2.0 [wiz 2007-02-27]
 	Removed audio/easytag-devel [wiz 2007-02-27]
 	Updated devel/memcached to 1.2.1 [grant 2007-02-27]
+	Added misc/openoffice2 version 2.1.0 [hira 2007-02-27]
