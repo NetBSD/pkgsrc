@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.489 2007/02/27 09:47:26 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.490 2007/02/27 10:01:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -962,3 +962,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-Module-Signature to 0.55 [wiz 2007-02-27]
 	Updated misc/p5-Msgcat to 1.03 [wiz 2007-02-27]
 	Updated textproc/intltool to 0.35.5 [wiz 2007-02-27]
+	Updated audio/easytag to 2.0 [wiz 2007-02-27]
+	Removed audio/easytag-devel [wiz 2007-02-27]
