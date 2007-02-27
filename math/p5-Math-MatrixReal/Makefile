@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:05 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/27 09:25:29 wiz Exp $
 
-DISTNAME=	Math-MatrixReal-1.3a5
+DISTNAME=	Math-MatrixReal-2.01
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mmr
-PKGREVISION=	2
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Math-MatrixReal/
 COMMENT=	Perl module for performing operations on real matrices
 
 PERL5_PACKLIST=		auto/Math/MatrixReal/.packlist
