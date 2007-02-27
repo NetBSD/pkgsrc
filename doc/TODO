@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6051 2007/02/27 10:01:52 wiz Exp $
+$NetBSD: TODO,v 1.6052 2007/02/27 12:00:05 hira Exp $
 
 Suggested new packages
 ======================
@@ -677,7 +677,6 @@ Suggested package updates
 	o oo2c-2.1.7
 	o openh323-1.17.2
 	o openmortal-0.7.1
-	o openoffice-2.1.0
 	o openpam-20050616
 	o openssl-0.9.8e
 	o oregano-0.60.0
