@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/24 21:06:00 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2007/02/27 07:50:49 wiz Exp $
 
---- Makefile.orig	Wed Jul 31 00:04:21 2002
+--- Makefile.orig	2002-07-30 22:04:21.000000000 +0000
 +++ Makefile
 @@ -13,12 +13,13 @@ SYSDEF=NOTBSD
  
@@ -19,3 +19,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/02/24 21:06:00 wiz Exp $
  TERMLIB = -lncurses
  CC = gcc
  
+@@ -39,7 +40,7 @@ greed.6: greed.xml
+ 
+ install: greed.6 uninstall
+ 	cp greed $(BIN)
+-	cp greed.6 /usr/share/man/man6/greed.6
++	cp greed.6 $(PREFIX)/$(PKGMANDIR)/man6
+ 
+ uninstall:
+ 	rm -f $(BIN)/install /usr/share/man/man6/greed.6
