@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/11/05 14:05:07 seb Exp $
+# $NetBSD: Makefile,v 1.24 2007/02/27 14:08:33 wiz Exp $
 #
 
-DISTNAME=	XML-LibXML-1.61003
-PKGNAME=	p5-XML-LibXML-1.61.003
+DISTNAME=	XML-LibXML-1.62001
+PKGNAME=	p5-XML-LibXML-1.62.001
 SVR4_PKGNAME=	p5xlx
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-XML-LibXML-Common-[0-9]*:../../textproc/p5-XML-LibXML-Common
 # includes XML::LibXML::XPathContext module
 CONFLICTS+=	p5-XML-LibXML-XPathContext-[0-9]*
 
-WRKSRC=		${WRKDIR}/XML-LibXML-1.61
+WRKSRC=		${WRKDIR}/XML-LibXML-1.62
 
 PERL5_PACKLIST=		auto/XML/LibXML/.packlist
 
