@@ -1,4 +1,4 @@
-# $NetBSD: l10n.mk,v 1.1 2006/12/03 04:03:06 markd Exp $
+# $NetBSD: l10n.mk,v 1.2 2007/02/27 12:04:28 markd Exp $
 #
 
 # This file provides useful defaults for the l10n packages of koffice.
@@ -12,7 +12,7 @@
 #	The full name of the language (e.g. German, Brasilian)
 #
 
-KOFFICE_VERSION?=	1.6.1
+KOFFICE_VERSION?=	1.6.2
 
 DISTNAME=	koffice-l10n-${KOFFICE_LANGCODE}-${KOFFICE_VERSION}
 CATEGORIES=	misc kde
@@ -23,11 +23,12 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	${KOFFICE_LANGUAGE} language pack for KOffice
 
-BUILD_DEPENDS+=	kdelibs>=3:../../x11/kdelibs3
 CONFLICTS+=	koffice-i18n-${KOFFICE_LANGCODE}-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
+BUILDLINK_DEPMETHOD.qt3-libs=	build
+BUILDLINK_DEPMETHOD.kdelibs=	build
 
 SUBST_CLASSES+=		ko
 SUBST_MESSAGE.ko=	Dont try to install kdgantt.po
@@ -36,3 +37,4 @@ SUBST_FILES.ko=		messages/koffice/Makefile.in
 SUBST_SED.ko=		-e 's/ kdgantt / /'
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
