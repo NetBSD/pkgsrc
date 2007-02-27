@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../portaudio/portaudio_v18_1.patch.orig	2007-02-19 01:22:02.000000000 +0900
++++ ../portaudio/portaudio_v18_1.patch	2007-02-19 01:22:28.000000000 +0900
+@@ -98,7 +98,7 @@
+   
+   #ifdef __linux__
+   #include <linux/soundcard.h>
+-+ #elif defined (__FreeBSD__)
+++ #elif defined (__FreeBSD__) || defined (__NetBSD__)
+ + #include <sys/soundcard.h>
+   #else
+   #include <machine/soundcard.h> /* JH20010905 */
