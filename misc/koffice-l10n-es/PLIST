@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/10/17 09:44:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/27 12:13:15 markd Exp $
 share/doc/kde/HTML/es/karbon/common
 share/doc/kde/HTML/es/karbon/index.cache.bz2
 share/doc/kde/HTML/es/karbon/index.docbook
@@ -240,7 +240,6 @@ share/doc/kde/HTML/es/krita/commands-menus.docbook
 share/doc/kde/HTML/es/krita/commands-palettes.docbook
 share/doc/kde/HTML/es/krita/commands-toolbars.docbook
 share/doc/kde/HTML/es/krita/commands.docbook
-share/doc/kde/HTML/es/krita/common
 share/doc/kde/HTML/es/krita/createdocument.png
 share/doc/kde/HTML/es/krita/credits.docbook
 share/doc/kde/HTML/es/krita/crocusses-bumpmap.png
@@ -289,8 +288,6 @@ share/doc/kde/HTML/es/krita/dialogs-shearimage.png
 share/doc/kde/HTML/es/krita/dialogs-shearlayer.png
 share/doc/kde/HTML/es/krita/faq.docbook
 share/doc/kde/HTML/es/krita/filters-customconvolution.png
-share/doc/kde/HTML/es/krita/index.cache.bz2
-share/doc/kde/HTML/es/krita/index.docbook
 share/doc/kde/HTML/es/krita/installation.docbook
 share/doc/kde/HTML/es/krita/introduction.docbook
 share/doc/kde/HTML/es/krita/mainscreen.png
@@ -568,6 +565,7 @@ share/doc/kde/HTML/es/kword/formframe2.png
 share/doc/kde/HTML/es/kword/formframe3.png
 share/doc/kde/HTML/es/kword/formframe4.png
 share/doc/kde/HTML/es/kword/formframe5.png
+share/doc/kde/HTML/es/kword/formframe6.png
 share/doc/kde/HTML/es/kword/forminteg.png
 share/doc/kde/HTML/es/kword/formllind.png
 share/doc/kde/HTML/es/kword/formlrind.png
