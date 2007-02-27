@@ -1,0 +1,31 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../config_office/set_soenv.in.orig	2007-02-17 17:38:22.000000000 +0900
++++ ../config_office/set_soenv.in	2007-02-17 17:40:50.000000000 +0900
+@@ -39,7 +39,7 @@
+ #--------------------------------------------------------
+ #
+ my ( $outfile, $outfile_sh, $outfile_bat, $outfile_jam, $bootfile, $newline, $comment, $comment4nt, $compiler, $unsetenv, $setenv, $unset, $set, $ds, $ps, $cur_dir, 
+-     $par_dir, $I, $L, $D, $buildenv, $answer, $tmp, $MINGW, $platform,
++     $par_dir, $I, $L, $R, $D, $buildenv, $answer, $tmp, $MINGW, $platform,
+      $cygwinver, $empty, $no_ant, $no_stl, $no_gcc_include, 
+      $no_gxx_include, $warnfile, $Warning, $result, $unsetvars, $unsetvarssh, $unsetvarsbat, $unsetvarsjam, $exportvars, $win_format_var, $perl_os);
+ #
+@@ -111,6 +111,7 @@
+ $par_dir        = "..";             # parrent directory
+ $I              = " -I";            # include search path
+ $L              = " -L";            # library search path
++$R              = " -R";            # library runtime path
+ $D              = " -D";            # define search path
+ $empty          = "";               # used as argument
+ $no_stl         = "NO_STLPORT4";    # possible argument
+@@ -1263,7 +1264,8 @@
+                         $L.$JRETOOLKITDIR.
+                         $L.$JRETHREADDIR.
+                         $L_STLPORT_LIB.
+-                        $L.$XLIB;
++                        $L.$XLIB.
++                        $R.$XLIB;
+ }
+ elsif ($platform =~ m/linux-gnu|netbasd|osf1|irix|aix|freebsd/)
+ {  $SOLARLIB          = $L.$par_dir.$LIB.

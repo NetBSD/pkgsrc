@@ -1,0 +1,24 @@
+$NetBSD: patch-ar,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../sal/osl/unx/tempfile.c.orig	2007-02-17 23:20:56.000000000 +0900
++++ ../sal/osl/unx/tempfile.c	2007-02-17 23:22:45.000000000 +0900
+@@ -38,6 +38,9 @@
+ /*****************************************************************/
+ 
+ #include <stdio.h>
++#if defined(NETBSD)
++#include <paths.h>
++#endif
+ #include <stdlib.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -91,6 +94,9 @@
+ #if defined(SOLARIS) || defined (LINUX) || defined (FREEBSD)
+ 		if ( !pValue )
+ 			pValue = P_tmpdir;
++#elif defined(NETBSD)
++		if ( !pValue )
++			pValue = _PATH_TMP;
+ #endif
+ 	}
+ #endif /* MACOSX */

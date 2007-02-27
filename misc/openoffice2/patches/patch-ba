@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- configure.orig	2006-12-02 02:52:35.000000000 +0900
++++ configure	2007-02-23 18:40:17.000000000 +0900
+@@ -2940,7 +2940,7 @@
+ 		test_cups=no
+ 		_os=OSF1
+ 		;;
+-	netbsd)
++	*netbsd*)
+ 		test_x=yes
+ 		test_gtk=yes
+ 		build_cairo=yes
