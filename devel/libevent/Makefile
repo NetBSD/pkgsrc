@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/27 10:38:45 grant Exp $
+# $NetBSD: Makefile,v 1.21 2007/02/27 11:11:17 grant Exp $
 #
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -27,11 +27,14 @@ CFLAGS.SunOS+=	-Du_int8_t=uint8_t
 CFLAGS.SunOS+=	-Du_int16_t=uint16_t
 CFLAGS.SunOS+=	-Du_int32_t=uint32_t
 
-# The SunPro compiler doesn't understand __inline.
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Msunpro)
-CFLAGS.SunOS+=	-D__inline=inline
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		inttypes
+SUBST_STAGE.inttypes=	post-patch
+SUBST_FILES.inttypes=	event.h
+SUBST_SED.inttypes=	-e "s,u_int8_t,uint8_t,g"
+SUBST_SED.inttypes+=	-e "s,u_int16_t,uint16_t,g"
+SUBST_SED.inttypes+=	-e "s,u_int32_t,uint32_t,g"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
