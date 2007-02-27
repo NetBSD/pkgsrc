@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6053 2007/02/27 12:18:24 markd Exp $
+$NetBSD: TODO,v 1.6054 2007/02/27 14:14:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -722,7 +722,6 @@ Suggested package updates
 	o p5-PerlMagick-6.3.2.9
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
-	o p5-SVN-Web-0.51
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
@@ -732,16 +731,11 @@ Suggested package updates
 	o p5-Test-Harness-2.46
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2005.0824
-	o p5-Time-HiRes-1.91
-	o p5-Time-Piece-2.00.01
-	o p5-WWW-Amazon-Wishlist-1.4
-	o p5-X11-Protocol-0.54
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
-	o p5-xmltv-0.5.45
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
