@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.494 2007/02/27 13:55:23 hira Exp $
+$NetBSD: CHANGES-2007,v 1.495 2007/02/27 14:14:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -977,3 +977,27 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice to 1.1.5nb2 [hira 2007-02-27]
 	Updated misc/openoffice-bin to 1.1.5nb3 [hira 2007-02-27]
 	Updated misc/openoffice2-bin to 2.1.0nb1 [hira 2007-02-27]
+	Updated www/p5-SVN-Web to 0.52 [wiz 2007-02-27]
+	Updated devel/p5-Carp-Clan to 5.8 [wiz 2007-02-27]
+	Added devel/p5-File-HomeDir version 0.64 [wiz 2007-02-27]
+	Updated devel/p5-AppConfig to 1.64 [wiz 2007-02-27]
+	Updated www/p5-Template-Toolkit to 2.15 [wiz 2007-02-27]
+	Updated devel/p5-Module-Build to 0.2806 [wiz 2007-02-27]
+	Updated devel/p5-Test-Manifest to 1.17 [wiz 2007-02-27]
+	Updated time/p5-DateTime-TimeZone to 0.62 [wiz 2007-02-27]
+	Updated time/p5-DateTime-Locale to 0.33 [wiz 2007-02-27]
+	Updated time/p5-DateTime to 0.36 [wiz 2007-02-27]
+	Updated time/p5-Time-HiRes to 1.9706 [wiz 2007-02-27]
+	Updated time/p5-Time-Piece to 1.11 [wiz 2007-02-27]
+	Updated multimedia/p5-xmltv to 0.5.45 [wiz 2007-02-27]
+	Updated x11/p5-X11-Protocol to 0.56 [wiz 2007-02-27]
+	Updated www/p5-Template-Extract to 0.40 [wiz 2007-02-27]
+	Updated www/p5-WWW-Amazon-Wishlist to 1.4 [wiz 2007-02-27]
+	Updated converters/p5-Unicode-String to 2.09 [wiz 2007-02-27]
+	Added devel/p5-File-Which version 0.05 [wiz 2007-02-27]
+	Updated archivers/p5-Archive-Zip to 1.18 [wiz 2007-02-27]
+	Updated devel/p5-Test-LongString to 0.11 [wiz 2007-02-27]
+	Updated devel/p5-File-Temp to 0.18 [wiz 2007-02-27]
+	Updated textproc/p5-XML-SAX to 0.15 [wiz 2007-02-27]
+	Updated textproc/p5-XML-LibXML to 1.62.001 [wiz 2007-02-27]
+	Updated www/p5-HTTP-Cache-Transparent to 0.7 [wiz 2007-02-27]
