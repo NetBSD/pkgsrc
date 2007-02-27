@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/02/23 00:34:53 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2007/02/27 07:37:59 wiz Exp $
 #
 
 DISTNAME=		snd-8.8
@@ -15,7 +15,7 @@ DEPENDS+=		vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 BUILD_TARGET=		snd
 MAKE_FILE=		makefile
