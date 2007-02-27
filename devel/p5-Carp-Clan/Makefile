@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/10/09 22:19:00 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/27 12:36:39 wiz Exp $
 #
 
-DISTNAME=		Carp-Clan-5.4
+DISTNAME=		Carp-Clan-5.8
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ccl
 CATEGORIES=		devel perl5
