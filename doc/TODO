@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6052 2007/02/27 12:00:05 hira Exp $
+$NetBSD: TODO,v 1.6053 2007/02/27 12:18:24 markd Exp $
 
 Suggested new packages
 ======================
@@ -534,7 +534,6 @@ Suggested package updates
 	o kmp-0.5
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
-	o koffice-1.6.2
 	o ksi-3.4.2
 	o kye-0.9.3
 	o latd-1.21

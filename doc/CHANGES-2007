@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.492 2007/02/27 12:00:05 hira Exp $
+$NetBSD: CHANGES-2007,v 1.493 2007/02/27 12:18:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -966,3 +966,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed audio/easytag-devel [wiz 2007-02-27]
 	Updated devel/memcached to 1.2.1 [grant 2007-02-27]
 	Added misc/openoffice2 version 2.1.0 [hira 2007-02-27]
+	Updated misc/koffice to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-da to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-de to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-en_GB to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-es to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-et to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-fi to 1.6.2 [markd 2007-02-27]
+	Updated misc/koffice-l10n-fr to 1.6.2 [markd 2007-02-27]
