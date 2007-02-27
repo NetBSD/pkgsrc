@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/27 20:26:26 hira Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/27 21:23:43 hira Exp $
 #
 
 OO_VER=			2.1.0
@@ -28,11 +28,15 @@ BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 
-WRKSRC=			${WRKDIR}/OOE680_m6/config_office
-GCC_REQD+=		3.0
-USE_LANGUAGES+=		c c++
-
 .include "../../mk/bsd.prefs.mk"
+
+WRKSRC=			${WRKDIR}/OOE680_m6/config_office
+USE_LANGUAGES+=		c c++
+GCC_REQD+=		3.0
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
+USE_PKGSRC_GCC=		YES
+.endif
 
 USE_TOOLS+=		gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
