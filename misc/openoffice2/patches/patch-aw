@@ -1,0 +1,23 @@
+$NetBSD: patch-aw,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../sal/osl/unx/system.h.orig	2007-02-17 23:26:16.000000000 +0900
++++ ../sal/osl/unx/system.h	2007-02-17 22:59:36.000000000 +0900
+@@ -136,7 +136,10 @@
+ #endif
+ 
+ #ifdef NETBSD
++#	include <sys/param.h>
++#  ifndef ETIME
+ #	define  ETIME ETIMEDOUT
++#  endif
+ #	define _POSIX_THREAD_SYSCALL_SOFT 1
+ #	include <pthread.h>
+ #	include <netdb.h>
+@@ -530,7 +533,6 @@
+ 
+ #ifdef NO_PTHREAD_RTL
+ #if !defined FREEBSD || (__FreeBSD_version < 500112)
+-struct passwd *getpwent_r(struct passwd *pwd, char *buffer,  int buflen);
+ extern struct spwd *getspnam_r(const char *name, struct spwd *result,
+ 							   char *buffer, int buflen);
+ 

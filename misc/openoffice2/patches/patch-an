@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../psprint/source/printergfx/printerjob.cxx.orig	2007-02-17 17:43:14.000000000 +0900
++++ ../psprint/source/printergfx/printerjob.cxx	2007-02-17 17:43:55.000000000 +0900
+@@ -82,6 +82,17 @@
+ 
+ #include "glyphset.hxx"
+ 
++#if defined(NETBSD)
++#if defined(__cplusplus)
++extern "C" {
++#endif
++int getpwuid_r(uid_t uid, struct passwd *pwd, char *buffer,
++	       size_t buflen, struct passwd **result);
++#if defined(__cplusplus)
++}
++#endif
++#endif
++
+ using namespace psp;
+ using namespace rtl;
+ 

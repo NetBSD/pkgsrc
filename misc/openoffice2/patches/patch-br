@@ -1,0 +1,31 @@
+$NetBSD: patch-br,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../scp2/source/ooo/file_library_ooo.scp.orig	2006-12-02 02:56:41.000000000 +0900
++++ ../scp2/source/ooo/file_library_ooo.scp	2007-02-27 03:46:51.000000000 +0900
+@@ -503,6 +503,8 @@
+   #ifdef UNX
+     #ifdef MACOSX
+        Name = STRING(CONCAT2(libcurl.3,UNXSUFFIX));
++    #elif defined(NETBSD)
++       Name = STRING(CONCAT6(libcurl,UNXSUFFIX,.,CURL_MAJOR,.,CURL_MINOR));
+     #else
+        Name = STRING(CONCAT8(libcurl,UNXSUFFIX,.,CURL_MAJOR,.,CURL_MINOR,.,CURL_MICRO));
+     #endif
+@@ -2421,6 +2423,8 @@
+     #ifdef UNX
+         #ifdef MACOSX
+             Name = STRING(CONCAT2(libxmlsec1.1.2.6,UNXSUFFIX));
++        #elif defined(NETBSD)
++            Name = STRING(CONCAT3(libxmlsec1,UNXSUFFIX,.3.6));
+         #else
+             Name = STRING(CONCAT3(libxmlsec1,UNXSUFFIX,.1.2.6));
+         #endif
+@@ -2445,6 +2449,8 @@
+     TXT_FILE_BODY;
+     #ifdef MACOSX
+         Name = STRING(CONCAT2(libxmlsec1-nss.1.2.6,UNXSUFFIX));
++    #elif defined(NETBSD)
++        Name = STRING(CONCAT3(libxmlsec1-nss,UNXSUFFIX,.3.6));
+     #else
+         Name = STRING(CONCAT3(libxmlsec1-nss,UNXSUFFIX,.1.2.6));
+     #endif

@@ -1,0 +1,94 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../solenv/inc/_tg_app.mk.orig	2007-02-17 17:28:18.000000000 +0900
++++ ../solenv/inc/_tg_app.mk	2007-02-17 17:35:58.000000000 +0900
+@@ -87,7 +87,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP1LINKER) $(APP1LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP1OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP1LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP1LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP1LINKTYPEFLAG) $(APP1LIBSALCPPRT) $(APP1STDLIBS) $(APP1STDLIB) $(STDLIB1) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -255,7 +255,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP2LINKER) $(APP2LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP2OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP2LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP2LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP2LINKTYPEFLAG) $(APP2LIBSALCPPRT) $(APP2STDLIBS) $(APP2STDLIB) $(STDLIB2) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -423,7 +423,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP3LINKER) $(APP3LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP3OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP3LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP3LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP3LINKTYPEFLAG) $(APP3LIBSALCPPRT) $(APP3STDLIBS) $(APP3STDLIB) $(STDLIB3) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -591,7 +591,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP4LINKER) $(APP4LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP4OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP4LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP4LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP4LINKTYPEFLAG) $(APP4LIBSALCPPRT) $(APP4STDLIBS) $(APP4STDLIB) $(STDLIB4) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -759,7 +759,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP5LINKER) $(APP5LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP5OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP5LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP5LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP5LINKTYPEFLAG) $(APP5LIBSALCPPRT) $(APP5STDLIBS) $(APP5STDLIB) $(STDLIB5) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -927,7 +927,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP6LINKER) $(APP6LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP6OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP6LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP6LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP6LINKTYPEFLAG) $(APP6LIBSALCPPRT) $(APP6STDLIBS) $(APP6STDLIB) $(STDLIB6) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -1095,7 +1095,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP7LINKER) $(APP7LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP7OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP7LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP7LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP7LINKTYPEFLAG) $(APP7LIBSALCPPRT) $(APP7STDLIBS) $(APP7STDLIB) $(STDLIB7) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -1263,7 +1263,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP8LINKER) $(APP8LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP8OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP8LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP8LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP8LINKTYPEFLAG) $(APP8LIBSALCPPRT) $(APP8STDLIBS) $(APP8STDLIB) $(STDLIB8) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -1431,7 +1431,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP9LINKER) $(APP9LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP9OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP9LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP9LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP9LINKTYPEFLAG) $(APP9LIBSALCPPRT) $(APP9STDLIBS) $(APP9STDLIB) $(STDLIB9) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
+@@ -1599,7 +1599,7 @@
+ 	@+-$(RM) $(MISC)$/$(@:b).cmd
+ 	@echo $(APP10LINKER) $(APP10LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
+ 	$(APP10OBJS:s/.obj/.o/) '\' >  $(MISC)$/$(@:b).cmd
+-	@cat $(mktmp /dev/null $(APP10LIBS)) | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
++	@cat $(mktmp /dev/null $(APP10LIBS)) | sed -E 's#[[:space:]]+# #g' | xargs -n 1 cat | sed s\#$(ROUT)\#$(OUT)\#g | sed 's#$$# \\#'  >> $(MISC)$/$(@:b).cmd
+ 	@echo $(APP10LINKTYPEFLAG) $(APP10LIBSALCPPRT) $(APP10STDLIBS) $(APP10STDLIB) $(STDLIB10) -o $@ >> $(MISC)$/$(@:b).cmd
+ 	cat $(MISC)$/$(@:b).cmd
+ 	@source $(MISC)$/$(@:b).cmd
