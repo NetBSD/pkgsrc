@@ -1,0 +1,19 @@
+$NetBSD: patch-ao,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../i18npool/source/breakiterator/gendict.cxx.orig	2007-02-17 23:18:38.000000000 +0900
++++ ../i18npool/source/breakiterator/gendict.cxx	2007-02-17 23:20:08.000000000 +0900
+@@ -74,8 +74,12 @@
+ 	fprintf(cfp, "extern \"C\" {\n");
+ 
+ 	sal_Int32 count, i, j;
+-	sal_Int32 lenArrayCurr = 0, lenArrayCount = 0, lenArrayLen = 0, *lenArray = NULL, charArray[0x10000];
+-	sal_Bool exist[0x10000];
++	sal_Int32 lenArrayCurr = 0, lenArrayCount = 0, lenArrayLen = 0, *lenArray = NULL, *charArray;
++	sal_Bool *exist;
++	charArray = (sal_Int32*) malloc(0x10000*sizeof(*charArray));
++	if (charArray == NULL) exit(1);
++	exist = (sal_Bool*) malloc(0x10000*sizeof(*exist));
++	if (exist == NULL) exit(1);
+ 	for (i = 0; i < 0x10000; i++) {
+ 	    exist[i] = sal_False;
+ 	    charArray[i] = 0;

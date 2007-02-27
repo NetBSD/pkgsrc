@@ -1,0 +1,12 @@
+$NetBSD: patch-bl,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../padmin/source/makefile.mk.orig	2007-02-23 19:14:40.000000000 +0900
++++ ../padmin/source/makefile.mk	2007-02-23 19:14:51.000000000 +0900
+@@ -103,6 +103,7 @@
+ 	$(CPPUHELPERLIB)	\
+ 	$(CPPULIB)			\
+ 	$(SALLIB)			\
++	$(X11_LDFLAGS)		\
+ 	-lXext -lX11
+ 
+ .ENDIF

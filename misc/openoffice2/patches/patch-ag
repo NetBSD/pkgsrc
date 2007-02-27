@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../solenv/bin/checkdll.sh.orig	2007-02-17 17:27:21.000000000 +0900
++++ ../solenv/bin/checkdll.sh	2007-02-17 17:27:43.000000000 +0900
+@@ -37,7 +37,7 @@
+ # checkdll.sh - execute checkdll with all -L arguments to this script
+ #               prepended to LD_LIBRARY_PATH
+ 
+-set -- `getopt "L:" "$@"` ||  {
++set -- `getopt "L:R:" "$@"` ||  {
+     echo "Usage: `basename $0` [-L library_path] <shared_library>" 1>&2
+     exit 1
+ }
+@@ -49,6 +49,7 @@
+     do
+ 	case $1 in
+ 	    -L) shift; option=$1;;
++	    -R) shift;;
+ 	    --) break;;
+ 	esac
+ 	case "${libpath+X}" in
