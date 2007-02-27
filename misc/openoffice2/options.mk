@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+# $NetBSD: options.mk,v 1.2 2007/02/27 20:26:26 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
-PKG_SUPPORTED_OPTIONS=		cups gtk2 gnome-vfs2 # kde
+PKG_SUPPORTED_OPTIONS=		cups gnome-vfs2 # kde gtk2
 PKG_OPTIONS_REQUIRED_GROUPS=	browser lang
 PKG_OPTIONS_GROUP.browser=	firefox firefox-gtk1 seamonkey seamonkey-gtk1
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
@@ -57,12 +57,13 @@ CONFIGURE_ARGS+=	--enable-gnome-vfs
 CONFIGURE_ARGS+=	--disable-gnome-vfs
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk2)
-.include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gtk
-.else
-CONFIGURE_ARGS+=	--disable-gtk
-.endif
+# Disabling it causes build error.
+#.if !empty(PKG_OPTIONS:Mgtk2)
+#.include "../../x11/gtk2/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-gtk
+#.else
+#CONFIGURE_ARGS+=	--disable-gtk
+#.endif
 
 # XXX: Not yet.
 .if !empty(PKG_OPTIONS:Mkde)
