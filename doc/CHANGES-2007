@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.493 2007/02/27 12:18:24 markd Exp $
+$NetBSD: CHANGES-2007,v 1.494 2007/02/27 13:55:23 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -974,3 +974,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/koffice-l10n-et to 1.6.2 [markd 2007-02-27]
 	Updated misc/koffice-l10n-fi to 1.6.2 [markd 2007-02-27]
 	Updated misc/koffice-l10n-fr to 1.6.2 [markd 2007-02-27]
+	Updated misc/openoffice to 1.1.5nb2 [hira 2007-02-27]
+	Updated misc/openoffice-bin to 1.1.5nb3 [hira 2007-02-27]
+	Updated misc/openoffice2-bin to 2.1.0nb1 [hira 2007-02-27]
