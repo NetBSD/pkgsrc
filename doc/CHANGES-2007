@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.484 2007/02/27 00:19:11 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.485 2007/02/27 02:31:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -943,3 +943,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/xmlrpc-c to 1.09.00nb2 [wiz 2007-02-26]
 	Updated devel/cmake to 2.4.6nb2 [wiz 2007-02-26]
 	Updated mail/tmda to 1.1.11nb1 [schmonz 2007-02-27]
+	Updated converters/skf to 1.94.7 [obache 2007-02-27]
