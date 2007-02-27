@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.54 2007/01/12 20:16:04 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2007/02/27 09:58:49 wiz Exp $
 #
 
-DISTNAME=	easytag-1.1
-PKGREVISION=	2
+DISTNAME=	easytag-2.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=easytag/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://easytag.sourceforge.net/
-COMMENT=	Tool to view, edit and write ID3 v1&2 TAGs with a GTK+ interface
+COMMENT=	GTK+ tag editor for MP3, Ogg Vorbis files, and others
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake xgettext
-USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config xgettext
 
-.include "../../audio/flac/buildlink3.mk"
+.include "options.mk"
+
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.1
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.1
+
 .include "../../audio/id3lib/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
