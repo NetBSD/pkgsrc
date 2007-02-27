@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../sal/inc/osl/endian.h.orig	2007-02-17 23:15:28.000000000 +0900
++++ ../sal/inc/osl/endian.h	2007-02-17 23:16:59.000000000 +0900
+@@ -76,11 +76,14 @@
+ #ifdef NETBSD
+ #   include <machine/endian.h>
+ #   if BYTE_ORDER == LITTLE_ENDIAN
+-#   	define _LITTLE_ENDIAN
++#	undef _BIG_ENDIAN
++#	undef _PDP_ENDIAN
+ #   elif BYTE_ORDER == BIG_ENDIAN
+-#   	define _BIG_ENDIAN
++#	undef _LITTLE_ENDIAN
++#	undef _PDP_ENDIAN
+ #   elif BYTE_ORDER == PDP_ENDIAN
+-#   	define _PDP_ENDIAN
++#	undef _LITTLE_ENDIAN
++#	undef _BIG_ENDIAN
+ #   endif
+ #endif
+ 

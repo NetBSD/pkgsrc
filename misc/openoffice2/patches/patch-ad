@@ -1,0 +1,47 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../sal/osl/unx/system.c.orig	2007-02-17 23:06:23.000000000 +0900
++++ ../sal/osl/unx/system.c	2007-02-17 23:08:46.000000000 +0900
+@@ -71,8 +71,11 @@
+ struct passwd *getpwnam_r(const char* name, struct passwd* s, char* buffer, int size )
+ #endif /* BUILD_OS_APPLEOSX */
+ #else /* MACOSX */
++#if (__NetBSD_Version__ < 299001000)
+ struct passwd *getpwnam_r(const char* name, struct passwd* s, char* buffer, int size )
++#endif
+ #endif /* MACOSX */
++#if (__NetBSD_Version__ < 299001000)
+ {
+   	struct passwd* res;
+ 
+@@ -138,8 +141,9 @@
+         return(res);
+ #endif /* MACOSX */
+ }
++#endif
+ 
+-#if defined(NETBSD) || defined(MACOSX)
++#if defined(NETBSD) && (__NetBSD_Version__ < 299001000) || defined(MACOSX)
+ int getpwuid_r(uid_t uid, struct passwd *pwd, char *buffer,
+            size_t buflen, struct passwd **result)
+ {
+@@ -437,7 +441,7 @@
+ }
+ #endif /* !defined(FREEBSD) || (__FreeBSD_version < 700015) */
+ 
+-#if defined(MACOSX)
++#if defined(MACOSX) || defined(NETBSD)
+ /*
+  * This section works around calls that are missing or broken
+  * in MacOS X 10.1.x and earlier.
+@@ -481,6 +485,10 @@
+     return nRet;
+ }
+ 
++#endif
++
++#if defined(MACOSX)
++
+ /* No reentrant asctime() either... */
+ 
+ /*******************************************************************************/

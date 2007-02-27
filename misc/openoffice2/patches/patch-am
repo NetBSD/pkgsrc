@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+
+--- ../soltools/checkdll/makefile.mk.orig	2007-02-17 17:42:05.000000000 +0900
++++ ../soltools/checkdll/makefile.mk	2007-02-17 17:42:44.000000000 +0900
+@@ -57,7 +57,7 @@
+ STDLIB += -ldl
+ .ENDIF
+ .IF "$(OS)"=="NETBSD"
+-APP1STDLIBS	+= -Wl,--whole-archive -lgcc -Wl,--no-whole-archive
++APP1STDLIBS    += -u _Unwind_Resume -Wl,--whole-archive -lgcc -Wl,--no-whole-archive
+ .ENDIF
+ .ENDIF # "$(GUI)"=="UNX"
+ 
