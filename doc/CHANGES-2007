@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.486 2007/02/27 08:47:57 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.487 2007/02/27 08:51:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -945,3 +945,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/tmda to 1.1.11nb1 [schmonz 2007-02-27]
 	Updated converters/skf to 1.94.7 [obache 2007-02-27]
 	Updated graphics/xsane to 0.99.3 [wiz 2007-02-27]
+	Updated devel/p5-Config-General to 2.32 [wiz 2007-02-27]
