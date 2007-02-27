@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6045 2007/02/26 11:39:47 dillo Exp $
+$NetBSD: TODO,v 1.6046 2007/02/27 08:02:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -262,7 +262,7 @@ Suggested package updates
 	o asapm-3.1
 	o asc-1.16.4
 	o ascii-3.8
-	o aspell-danish-1.7.9
+	o aspell-danish-1.6.3
 	o aspell-faroese-0.2.28
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.0
@@ -330,7 +330,7 @@ Suggested package updates
 	o cweb-3.64a
 	o cygwin_lib-1.5.21.1
 	o dap-2.1.5
-	o dar-2.3.2
+	o dar-2.3.3
 	o db4-4.5.20
 	o dbxml-2.1.8
 	o dc_gui2-0.80
@@ -353,6 +353,7 @@ Suggested package updates
 	o dx-4.3.3
 	o e2fsprogs-1.38
 	o eagle-4.15
+	o easytag-2.0
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ede-1.1
@@ -696,6 +697,7 @@ Suggested package updates
 	o p5-CGI-Minimal-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Compress-Bzip2-2.09
+	o p5-Config-General-2.32
 	o p5-Convert-UUlib-1.06
 	o p5-Crypt-CipherSaber-1.00
 	o p5-DBD-Oracle-1.16
@@ -919,6 +921,7 @@ Suggested package updates
 	o sawfish-replibs-1.3
 	o scew-0.4.0
 	o sch-3.8.3
+	o scribus-1.3.3.8
 	o sdig-0.40
 	o seahorse-0.9.10
 	o sendfile-20010424
@@ -964,7 +967,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o suse_base-10.2
 	o swfdec-0.3.6
-	o sylpheed-claws-2.7.2 [now claws-mail]
+	o sylpheed-claws-2.8.0 [now claws-mail]
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
@@ -1080,6 +1083,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
 	o xrn-9.02
+	o xsane-0.99.3
 	o xscreensaver-5.01
 	o xskat-4.0
 	o xterm-224
