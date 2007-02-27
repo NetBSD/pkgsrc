@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:36 wiz Exp $
+$NetBSD: distinfo,v 1.3 2007/02/27 14:12:05 wiz Exp $
 
-SHA1 (HTTP-Cache-Transparent-0.5.tar.gz) = 89fb2e09e30a22a239ceb57fdc7a48bf5c6fc37d
-RMD160 (HTTP-Cache-Transparent-0.5.tar.gz) = 5237063de21794c2f451d1d45b2d8c2835ebaa04
-Size (HTTP-Cache-Transparent-0.5.tar.gz) = 7305 bytes
+SHA1 (HTTP-Cache-Transparent-0.7.tar.gz) = 68f0ecd06737c37b01f6f317164ea9f9045fc5c5
+RMD160 (HTTP-Cache-Transparent-0.7.tar.gz) = c60d27bfee766ff63e55247da28332ccd3f373c4
+Size (HTTP-Cache-Transparent-0.7.tar.gz) = 7978 bytes
