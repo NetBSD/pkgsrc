@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.487 2007/02/27 08:51:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.488 2007/02/27 09:37:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -73,6 +73,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/classpath-gui to 0.93 [obache 2007-01-05]
 	Updated sysutils/etcmanage to 0.4 [gdt 2007-01-05]
 	Updated multimedia/gxine to 0.5.9 [drochner 2007-01-05]
+	Updated audio/p5-CDDB to 1.17 [chuck 2007-01-05]
 	Added games/gamazons version 0.83 [wiz 2007-01-06]
 	Updated mail/greetdelay to 0.02 [schmonz 2007-01-06]
 	Updated audio/rioutil to 1.5.0 [schmonz 2007-01-06]
@@ -946,3 +947,17 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated converters/skf to 1.94.7 [obache 2007-02-27]
 	Updated graphics/xsane to 0.99.3 [wiz 2007-02-27]
 	Updated devel/p5-Config-General to 2.32 [wiz 2007-02-27]
+	Updated audio/p5-Audio-Wav to 0.06 [wiz 2007-02-27]
+	Updated archivers/p5-Compress-Bzip2 to 2.09 [wiz 2007-02-27]
+	Updated converters/p5-Convert-UUlib to 1.080 [wiz 2007-02-27]
+	Updated security/p5-Crypt-CipherSaber to 1.00 [wiz 2007-02-27]
+	Updated devel/p5-ExtUtils-Depends to 0.205 [wiz 2007-02-27]
+	Updated devel/p5-ExtUtils-F77 to 1.15 [wiz 2007-02-27]
+	Updated devel/p5-ExtUtils-PkgConfig to 1.07 [wiz 2007-02-27]
+	Updated devel/p5-File-DirSync to 1.14 [wiz 2007-02-27]
+	Updated devel/p5-File-MimeInfo to 0.13 [wiz 2007-02-27]
+	Updated audio/p5-MP3-Info to 1.21 [wiz 2007-02-27]
+	Updated math/p5-Math-FFT to 1.28 [wiz 2007-02-27]
+	Updated math/p5-Math-MatrixReal to 2.01 [wiz 2007-02-27]
+	Updated security/p5-Module-Signature to 0.55 [wiz 2007-02-27]
+	Updated misc/p5-Msgcat to 1.03 [wiz 2007-02-27]
