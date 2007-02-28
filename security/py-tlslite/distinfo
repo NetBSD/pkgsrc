@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/28 05:34:25 schmonz Exp $
+
+SHA1 (tlslite-0.3.8.tar.gz) = 56e1a5af611a17e3a59d797922bbf0e9cb13d321
+RMD160 (tlslite-0.3.8.tar.gz) = 18d1ebcf5891aff97ed1c96af65c54136b0f211b
+Size (tlslite-0.3.8.tar.gz) = 637558 bytes
