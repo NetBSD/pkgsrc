@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6054 2007/02/27 14:14:18 wiz Exp $
+$NetBSD: TODO,v 1.6055 2007/02/28 12:37:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -342,6 +342,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dirac-0.6.0
+	o dmidecode-2.9
 	o dnstracer-1.8
 	o dropbear-0.49
 	o drscheme-360
@@ -366,6 +367,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.6
 	o enscript-1.6.4
+	o epdfview-0.1.6
 	o epiphany-2.16.3
 	o epiphany-extensions-2.16.0
 	o epstool-3.08
@@ -563,6 +565,7 @@ Suggested package updates
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
 	o liblive-2006.12.08
+	o libmatheval-1.1.4
 	o libmcrypt-2.5.8
 	o libmilter-8.13.5
 	o libmpeg3-1.7
@@ -762,7 +765,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o php4-4.4.5
-	o phpmyadmin-2.10.0rc1
+	o phpmyadmin-2.10.0
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -845,7 +848,7 @@ Suggested package updates
 	o pysol-4.82
 	o python-2.5
 	o python24-2.4.4
-	o pytraffic-2.5.3
+	o pytraffic-2.5.4
 	o qDecoder-7.1.1
 	o qemu-0.9.0
 	o qt1-1.45
@@ -1054,6 +1057,7 @@ Suggested package updates
 	o xorg-7.2
 	o xorp-1.3
 	o xpad-2.12
+	o xpdf-3.02
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
