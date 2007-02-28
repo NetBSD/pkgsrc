@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/02/20 09:40:49 sborrill Exp $
+# $NetBSD: Makefile,v 1.20 2007/02/28 11:06:21 sborrill Exp $
 #
 
-DISTNAME=	openvpn-2.1_rc1
-PKGNAME=	openvpn-2.1rc1
+DISTNAME=	openvpn-2.1_rc2
+PKGNAME=	openvpn-2.1rc2
 
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
