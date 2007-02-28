@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/11/05 16:55:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/02/28 03:19:09 reed Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -18,7 +18,7 @@ BUILDLINK_PACKAGES+=	libXt
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXt
 
 .if ${LIBXT_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libXt+=	libXt>=0.99.2
+BUILDLINK_API_DEPENDS.libXt+=	libXt>=1.0.0
 BUILDLINK_PKGSRCDIR.libXt?=	../../x11/libXt
 .endif	# LIBXT_BUILDLINK3_MK
 
