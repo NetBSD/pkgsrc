@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/02/27 20:26:26 hira Exp $
+# $NetBSD: options.mk,v 1.3 2007/02/28 13:01:55 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome-vfs2 # kde gtk2
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-system-mozilla
 .endif
 
 # Not tested.
-.if !empty(PKG_OPTIONS.Mcups)
+.if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
 .else
