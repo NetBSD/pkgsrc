@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.498 2007/02/28 05:37:35 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.499 2007/02/28 11:07:30 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1003,3 +1003,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-HTTP-Cache-Transparent to 0.7 [wiz 2007-02-27]
 	Added x11/xconsole version 1.0.2 [reed 2007-02-27]
 	Added security/py-tlslite version 0.3.8 [schmonz 2007-02-28]
+	Updated net/openvpn to 2.1rc2 [sborrill 2007-02-28]
