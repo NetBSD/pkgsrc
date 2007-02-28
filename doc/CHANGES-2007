@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.496 2007/02/28 03:23:46 reed Exp $
+$NetBSD: CHANGES-2007,v 1.497 2007/02/28 05:36:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1002,3 +1002,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-XML-LibXML to 1.62.001 [wiz 2007-02-27]
 	Updated www/p5-HTTP-Cache-Transparent to 0.7 [wiz 2007-02-27]
 	Added x11/xconsole version 1.0.2 [reed 2007-02-27]
+	Added security/py-tlslite 0.3.8 [schmonz 2007-02-28]
