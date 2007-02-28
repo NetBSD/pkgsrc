@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/27 21:23:43 hira Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/28 22:41:45 hira Exp $
 #
 
 OO_VER=			2.1.0
@@ -52,7 +52,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-binfilter
-CONFIGURE_ARGS+=	--enable-gtk
 CONFIGURE_ARGS+=	--disable-ldap
 
 # `portable' supports all platforms.
@@ -129,7 +128,6 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
