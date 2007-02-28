@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/31 18:22:23 ghen Exp $
+# $NetBSD: Makefile,v 1.32 2007/02/28 15:49:54 wiz Exp $
 
 DISTNAME=	python-ldap-2.2.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-ldap/}
 
-MAINTAINER=	ykomatsu@akaumigame.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/python-ldap/
 COMMENT=	LDAP client API for Python
 
