@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.14 2007/01/26 02:36:14 markd Exp $
+# $NetBSD: kde3.mk,v 1.15 2007/02/28 11:12:33 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -48,6 +48,10 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
 
 .if ${OPSYS} == "SunOS"
 GCC_REQD+=		3.3
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-pie
 .endif
 
 KDEDIR?=		${PREFIX}
