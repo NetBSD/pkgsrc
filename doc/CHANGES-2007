@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.504 2007/03/01 00:28:54 seb Exp $
+$NetBSD: CHANGES-2007,v 1.505 2007/03/01 00:36:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/mhonarc to 2.6.16 [jwise 2007-02-28]
 	Updated devel/p5-Module-CoreList to 2.09 [seb 2007-03-01]
 	Added textproc/p5-Text-RewriteRules version 0.10 [seb 2007-03-01]
+	Added filesystems/fuse-encfs version 1.2.0-2 [xtraeme 2007-03-01]
