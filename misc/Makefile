@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2007/02/27 11:58:51 hira Exp $
+# $NetBSD: Makefile,v 1.273 2007/03/01 08:05:13 hira Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -161,8 +161,8 @@ SUBDIR+=	nxtvepg
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
 SUBDIR+=	openoffice
-SUBDIR+=	openoffice2
 SUBDIR+=	openoffice-bin
+SUBDIR+=	openoffice2
 SUBDIR+=	openoffice2-bin
 SUBDIR+=	p5-Array-PrintCols
 SUBDIR+=	p5-Business-CreditCard
