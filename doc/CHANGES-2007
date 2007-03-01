@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.510 2007/03/01 14:28:14 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.511 2007/03/01 16:28:11 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tnftpd to 20061217 [salo 2007-03-01]
 	Updated audio/esound to 0.2.37 [wiz 2007-03-01]
 	Updated graphics/libart2 to 2.3.19 [wiz 2007-03-01]
+	Updated misc/openoffice2 to 2.1.0nb2 [hira 2007-03-01]
