@@ -1,4 +1,4 @@
-# $NetBSD: env.mk,v 1.2 2007/01/12 07:48:09 rillig Exp $
+# $NetBSD: env.mk,v 1.3 2007/03/01 18:30:11 wiz Exp $
 #
 # This file describes the *_ENV variables, where they are defined and
 # where they are used.
@@ -51,10 +51,6 @@
 
 #
 # Other environments.
-#
-
-# SCRIPTS_ENV
-#	TODO
 #
 
 # INSTALL_SCRIPTS_ENV
