@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2006/12/02 22:50:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.66 2007/03/01 14:19:29 wiz Exp $
 
-DISTNAME=		esound-0.2.36
-PKGREVISION=		1
+DISTNAME=		esound-0.2.37
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/esound/0.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	esound.pc.in
 
 GNU_CONFIGURE=		YES
