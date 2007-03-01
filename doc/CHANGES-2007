@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.502 2007/03/01 00:08:19 seb Exp $
+$NetBSD: CHANGES-2007,v 1.503 2007/03/01 00:09:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1006,3 +1006,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/openvpn to 2.1rc2 [sborrill 2007-02-28]
 	Added mail/relay-ctrl version 3.1.1 [schmonz 2007-02-28]
 	Updated mail/mhonarc to 2.6.16 [jwise 2007-02-28]
+	Updated devel/p5-Module-CoreList to 2.09 [seb 2007-03-01]
