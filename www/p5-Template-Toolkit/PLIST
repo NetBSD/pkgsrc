@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/10/03 13:54:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/01 12:56:25 wiz Exp $
 share/tt2/docs/README
 share/tt2/docs/html/FAQ/FAQ.html
 share/tt2/docs/html/FAQ/index.html
@@ -33,7 +33,6 @@ share/tt2/docs/html/Modules/Template/Parser.html
 share/tt2/docs/html/Modules/Template/Plugin.html
 share/tt2/docs/html/Modules/Template/Plugin/Autoformat.html
 share/tt2/docs/html/Modules/Template/Plugin/CGI.html
-share/tt2/docs/html/Modules/Template/Plugin/DBI.html
 share/tt2/docs/html/Modules/Template/Plugin/Datafile.html
 share/tt2/docs/html/Modules/Template/Plugin/Date.html
 share/tt2/docs/html/Modules/Template/Plugin/Directory.html
@@ -41,22 +40,6 @@ share/tt2/docs/html/Modules/Template/Plugin/Dumper.html
 share/tt2/docs/html/Modules/Template/Plugin/File.html
 share/tt2/docs/html/Modules/Template/Plugin/Filter.html
 share/tt2/docs/html/Modules/Template/Plugin/Format.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Constants.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/area.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/bars.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/bars3d.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/lines.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/lines3d.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/linespoints.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/mixed.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/pie.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/pie3d.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Graph/points.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Image.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Polygon.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Text.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Text/Align.html
-share/tt2/docs/html/Modules/Template/Plugin/GD/Text/Wrap.html
 share/tt2/docs/html/Modules/Template/Plugin/HTML.html
 share/tt2/docs/html/Modules/Template/Plugin/Image.html
 share/tt2/docs/html/Modules/Template/Plugin/Iterator.html
@@ -68,11 +51,7 @@ share/tt2/docs/html/Modules/Template/Plugin/Table.html
 share/tt2/docs/html/Modules/Template/Plugin/URL.html
 share/tt2/docs/html/Modules/Template/Plugin/View.html
 share/tt2/docs/html/Modules/Template/Plugin/Wrap.html
-share/tt2/docs/html/Modules/Template/Plugin/XML/DOM.html
-share/tt2/docs/html/Modules/Template/Plugin/XML/RSS.html
-share/tt2/docs/html/Modules/Template/Plugin/XML/Simple.html
 share/tt2/docs/html/Modules/Template/Plugin/XML/Style.html
-share/tt2/docs/html/Modules/Template/Plugin/XML/XPath.html
 share/tt2/docs/html/Modules/Template/Plugins.html
 share/tt2/docs/html/Modules/Template/Provider.html
 share/tt2/docs/html/Modules/Template/Service.html
@@ -80,6 +59,7 @@ share/tt2/docs/html/Modules/Template/Stash.html
 share/tt2/docs/html/Modules/Template/Stash/Context.html
 share/tt2/docs/html/Modules/Template/Stash/XS.html
 share/tt2/docs/html/Modules/Template/Test.html
+share/tt2/docs/html/Modules/Template/Toolkit.html
 share/tt2/docs/html/Modules/index.html
 share/tt2/docs/html/README
 share/tt2/docs/html/Release/Changes.html
@@ -139,7 +119,6 @@ share/tt2/docs/src/Modules/Template/Parser.html
 share/tt2/docs/src/Modules/Template/Plugin.html
 share/tt2/docs/src/Modules/Template/Plugin/Autoformat.html
 share/tt2/docs/src/Modules/Template/Plugin/CGI.html
-share/tt2/docs/src/Modules/Template/Plugin/DBI.html
 share/tt2/docs/src/Modules/Template/Plugin/Datafile.html
 share/tt2/docs/src/Modules/Template/Plugin/Date.html
 share/tt2/docs/src/Modules/Template/Plugin/Directory.html
@@ -147,22 +126,6 @@ share/tt2/docs/src/Modules/Template/Plugin/Dumper.html
 share/tt2/docs/src/Modules/Template/Plugin/File.html
 share/tt2/docs/src/Modules/Template/Plugin/Filter.html
 share/tt2/docs/src/Modules/Template/Plugin/Format.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Constants.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/area.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/bars.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/bars3d.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/lines.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/lines3d.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/linespoints.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/mixed.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/pie.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/pie3d.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Graph/points.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Image.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Polygon.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Text.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Text/Align.html
-share/tt2/docs/src/Modules/Template/Plugin/GD/Text/Wrap.html
 share/tt2/docs/src/Modules/Template/Plugin/HTML.html
 share/tt2/docs/src/Modules/Template/Plugin/Image.html
 share/tt2/docs/src/Modules/Template/Plugin/Iterator.html
@@ -174,11 +137,7 @@ share/tt2/docs/src/Modules/Template/Plugin/Table.html
 share/tt2/docs/src/Modules/Template/Plugin/URL.html
 share/tt2/docs/src/Modules/Template/Plugin/View.html
 share/tt2/docs/src/Modules/Template/Plugin/Wrap.html
-share/tt2/docs/src/Modules/Template/Plugin/XML/DOM.html
-share/tt2/docs/src/Modules/Template/Plugin/XML/RSS.html
-share/tt2/docs/src/Modules/Template/Plugin/XML/Simple.html
 share/tt2/docs/src/Modules/Template/Plugin/XML/Style.html
-share/tt2/docs/src/Modules/Template/Plugin/XML/XPath.html
 share/tt2/docs/src/Modules/Template/Plugins.html
 share/tt2/docs/src/Modules/Template/Provider.html
 share/tt2/docs/src/Modules/Template/Service.html
@@ -186,6 +145,7 @@ share/tt2/docs/src/Modules/Template/Stash.html
 share/tt2/docs/src/Modules/Template/Stash/Context.html
 share/tt2/docs/src/Modules/Template/Stash/XS.html
 share/tt2/docs/src/Modules/Template/Test.html
+share/tt2/docs/src/Modules/Template/Toolkit.html
 share/tt2/docs/src/Modules/index.html
 share/tt2/docs/src/Release/Changes.html
 share/tt2/docs/src/Release/HACKING.html
@@ -1371,9 +1331,6 @@ share/tt2/templates/splash/ttpower
 @dirrm share/tt2/docs/src/Release
 @dirrm share/tt2/docs/src/Modules/Template/Stash
 @dirrm share/tt2/docs/src/Modules/Template/Plugin/XML
-@dirrm share/tt2/docs/src/Modules/Template/Plugin/GD/Text
-@dirrm share/tt2/docs/src/Modules/Template/Plugin/GD/Graph
-@dirrm share/tt2/docs/src/Modules/Template/Plugin/GD
 @dirrm share/tt2/docs/src/Modules/Template/Plugin
 @dirrm share/tt2/docs/src/Modules/Template/Namespace
 @dirrm share/tt2/docs/src/Modules/Template
@@ -1389,9 +1346,6 @@ share/tt2/templates/splash/ttpower
 @dirrm share/tt2/docs/html/Release
 @dirrm share/tt2/docs/html/Modules/Template/Stash
 @dirrm share/tt2/docs/html/Modules/Template/Plugin/XML
-@dirrm share/tt2/docs/html/Modules/Template/Plugin/GD/Text
-@dirrm share/tt2/docs/html/Modules/Template/Plugin/GD/Graph
-@dirrm share/tt2/docs/html/Modules/Template/Plugin/GD
 @dirrm share/tt2/docs/html/Modules/Template/Plugin
 @dirrm share/tt2/docs/html/Modules/Template/Namespace
 @dirrm share/tt2/docs/html/Modules/Template
