@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.80 2007/02/19 15:22:29 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.81 2007/03/01 22:29:15 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -395,13 +395,6 @@
     role="pkg">print/ghostscript</filename> package for an example.
     (It relies on the jpeg sources being present in source form
     during the build.)</para>
-
-    <para>Please also note the
-    <varname>BUILD_USES_GETTEXT_M4</varname> definition, which is
-    provided as convenience definition.  It adds a build dependency on
-    either an installed version of an older gettext package, or if it
-    isn't, installs the <filename
-    role="pkg">devel/gettext-m4</filename> package.</para>
   </sect2>
 
 
