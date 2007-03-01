@@ -1,9 +1,6 @@
 #!@SH@
 #
-# Wrapper for relay-ctrl-allow that sets TCPREMOTEIP by massaging
-#   Dovecot login info.
+# Wrapper for relay-ctrl-allow that sets TCPREMOTEIP.
 
-TCPREMOTEIP=`@ECHO@ "$@" | @SED@ -e 's|.* ||' -e 's|]$||'`
-export TCPREMOTEIP
-
+TCPREMOTEIP="${IP}"; export TCPREMOTEIP
 exec "$@"
