@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/03/01 18:35:21 wiz Exp $
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	2
@@ -11,7 +11,6 @@ COMMENT=	Mirror packages on remote sites
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	makefile
-SCRIPTS_ENV+=	PERL5=${PERL5}
 MAKE_FLAGS+=	GRP=${BINGRP}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
