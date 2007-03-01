@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/31 19:09:15 ghen Exp $
+# $NetBSD: Makefile,v 1.24 2007/03/01 17:19:10 wiz Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -18,9 +18,11 @@ USE_TOOLS+=	gmake perl
 PKG_SYSCONFSUBDIR=	ldapsdk
 EGDIR=			${PREFIX}/share/examples/ldapsdk
 
-SCRIPTS_ENV+=	EGDIR=${EGDIR}
-SCRIPTS_ENV+=	GMAKE=${GMAKE}
-SCRIPTS_ENV+=	LN=${LN}
+MAKE_ENV+=	MOZILLA_CLIENT=1
+MAKE_ENV+=	NO_MDUPDATE=1
+MAKE_ENV+=	MOZ_LDAP_SDK=1
+MAKE_FILE=	directory/ldapsdk.mk
+BUILD_TARGET=	build
 
 post-extract:
 	${LN} -s FreeBSD.mk ${WRKSRC}/config/DragonFly.mk
@@ -29,10 +31,27 @@ do-configure:
 	${ECHO} "PKG_SYSCONFDIR=${PKG_SYSCONFDIR}" >> ${WRKSRC}/config/rules.mk
 	${ECHO} "EGDIR=${EGDIR}" >> ${WRKSRC}/config/rules.mk
 
-do-build:
-	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-build
-
 do-install:
-	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-install
+	cd ${WRKSRC}/dist && \
+	for i in disptmpl.h lber.h ldap.h srchpref.h; \
+	do \
+        	${INSTALL_DATA} public/ldap/$$i ${PREFIX}/include; \
+	done
+	#
+	# XXX kludge
+	#
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/lib/libldap.a ${PREFIX}/lib/libldap.a
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/lib/liblber.a ${PREFIX}/lib/liblber.a
+	${INSTALL_LIB} ${WRKSRC}/dist/${OPSYS}*/bin/libldap.so.1.0 ${PREFIX}/lib/libldap.so.1.0
+	${LN} -sf libldap.so.1.0 ${PREFIX}/lib/libldap.so.1
+	${LN} -sf libldap.so.1.0 ${PREFIX}/lib/libldap.so
+	${INSTALL_LIB} ${WRKSRC}/dist/${OPSYS}*/bin/liblber.so.1.0 ${PREFIX}/lib/liblber.so.1.0
+	${LN} -sf liblber.so.1.0 ${PREFIX}/lib/liblber.so.1
+	${LN} -sf liblber.so.1.0 ${PREFIX}/lib/liblber.so
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapfilter.conf      ${EGDIR}/ldapfilter.conf
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapsearchprefs.conf ${EGDIR}/ldapsearchprefs.conf
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapfriendly         ${EGDIR}/ldapfriendly
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldaptemplates.conf   ${EGDIR}/ldaptemplates.conf
 
 .include "../../mk/bsd.pkg.mk"
