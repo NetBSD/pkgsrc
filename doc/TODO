@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6056 2007/03/01 14:03:15 salo Exp $
+$NetBSD: TODO,v 1.6057 2007/03/01 14:10:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,6 +373,7 @@ Suggested package updates
 	o epstool-3.08
 	o eric3-3.9.4
 	o esh-0.8.5
+	o esound-0.2.37
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
@@ -391,7 +392,7 @@ Suggested package updates
 	o file-roller-2.16.3
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o findutils-4.2.29
+	o findutils-4.2.30
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
@@ -456,7 +457,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
-	o gok-1.2.1
+	o gok-1.2.3
 	o gossip-0.22
 	o gourmet-0.13.3
 	o gpredict-0.7.1
@@ -545,6 +546,7 @@ Suggested package updates
 	o leafnode-1.11.5
 	o leafpad-0.8.9
 	o less-394
+	o libart2-2.3.19
 	o libassuan-1.0.0
 	o libcdio-0.78.2
 	o libdockapp-0.6.1
@@ -681,6 +683,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openpam-20050616
 	o openssl-0.9.8e
+	o openttd-0.5.0
 	o oregano-0.60.0
 	o oroborus-2.0.15
 	o otpCalc-0.97
