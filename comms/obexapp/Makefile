@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/06 17:50:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/01 21:39:08 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.5
@@ -9,17 +9,22 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/m_evmenkin/
 COMMENT=	Obex application to transfer objects to mobile equipment
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-[4-9].*-*
 
-WRKSRC=		${WRKDIR}/obexapp
+OWN_DIRS+=		${VARBASE}/spool/obex
 
-SUBST_CLASSES+=		mk
+RCD_SCRIPTS+=		obexapp
+
+SUBST_CLASSES+=		mk var
 SUBST_FILES.mk=		Makefile
 SUBST_STAGE.mk=		post-configure
 SUBST_SED.mk=		-e "s|-lbsdxml|-lexpat|"
 SUBST_SED.mk+=		-e "s|/usr/local/man|${PREFIX}|"
 SUBST_SED.mk+=		-e "s|/usr/local|${PREFIX}|"
 SUBST_SED.mk+=		-e "s|CFLAGS=|CFLAGS+=|"
+SUBST_FILES.var=	obexapp.1 obexapp.h
+SUBST_STAGE.var=	post-configure
+SUBST_SED.var=		-e "s|/var|${VARBASE}|"
 
 # Sigh, this needs the GNU libiconv.
 USE_GNU_ICONV=		yes
@@ -27,11 +32,9 @@ USE_GNU_ICONV=		yes
 # Sigh... too many warnings with GCC 4.x, disable them for now.
 CFLAGS+=		-w
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "NetBSD" && !exists(/usr/include/bluetooth.h))
-PKG_FAIL_REASON+=	Does not build without bluetooth support.
-.endif
+# because the directory name conflicts with the rc.d script
+post-extract:
+	mv ${WRKDIR}/obexapp ${WRKDIR}/${DISTNAME}
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
