@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/03/01 14:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/03/01 18:05:44 drochner Exp $
 
 DISTNAME=		libart_lgpl-2.3.19
 PKGNAME=		${DISTNAME:S/_lgpl/2/}
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libart_lgpl/2.3/}
 EXTRACT_SUFX=		.tar.bz2
