@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/10/04 20:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2007/03/01 17:09:00 wiz Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
@@ -28,7 +28,7 @@ BUILD_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${PKG_SYSCONFDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${EXAMPLES_DIR:Q}
 
 USE_TOOLS+=		makeinfo
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 PKG_SYSCONFSUBDIR=	mgetty+sendfax
 
 .for cfg in		dialin.config		\
@@ -50,18 +50,18 @@ OWN_DIRS_PERMS+=	/var/spool/fax ${ROOT_USER} ${ROOT_GROUP} 755
 OWN_DIRS_PERMS+=	/var/spool/fax/incoming ${ROOT_USER} ${ROOT_GROUP} 755
 OWN_DIRS_PERMS+=	/var/spool/fax/outgoing fax ${ROOT_GROUP} 755
 
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	faxrunq.config policy.h
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|'
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Fixing hardcoded installation prefix.
+
 .include "../../graphics/netpbm/buildlink3.mk"
 
+post-extract:
+	cd ${WRKSRC} && cp policy.h-dist policy.h
+
 do-configure:
-	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
-	cd ${WRKSRC}						\
-	&& for _file in faxrunq.config policy.h-dist;		\
-	do							\
-		${MV} $$_file $${_file}.orig;			\
-		${SED} 's|/usr/local|${PREFIX}|'		\
-		    $${_file}.orig > $$_file;			\
-	done							\
-	&& cd ${.CURDIR}					\
-	&& ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
+	mv ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
 
 .include "../../mk/bsd.pkg.mk"
