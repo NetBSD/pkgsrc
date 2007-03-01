@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/03/01 18:04:48 wiz Exp $
 
 DISTNAME=		mailagent-3.0.73
 CATEGORIES=		mail
@@ -20,26 +20,45 @@ CONFIGURE_ARGS+=	-Dutmp='/var/run/utmp'
 CONFIGURE_ARGS+=	-Dprefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	-Dmansrc=${PREFIX:Q}/man/man1
 CONFIGURE_ARGS+=	-Dnotifypatches='false'
-MAKE_ENV+=		PATH=`${DIRNAME} ${PERL5}`:${PATH}
+MAKE_ENV+=		PATH=`${DIRNAME} ${PERL5}`:${PATH:Q}
 INSTALL_TARGET=		install install.man
 
+MAILAGENT_DOMAIN?=		example.com
+MAILAGENT_EMAIL?=		testuser@example.com
+MAILAGENT_FQDN?=		test.example.com
+MAILAGENT_ORGANIZATION?=	Example Company
+
+BUILD_DEFS+=	MAILAGENT_DOMAIN MAILAGENT_EMAIL MAILAGENT_FQDN MAILAGENT_ORGANIZATION
+
+CF=				${WRKSRC}/config.sh
+
 pre-extract:
-	@if [ `${SH} -c umask` != 0022 ]; then \
+	if [ `${SH} -c umask` != 0022 ]; then \
 	  ${ECHO} "Please set umask to 022 before running make,"; \
 	  ${ECHO} "or mailagent will not build successfully."; \
 	  ${FALSE}; fi
-	@if [ `${ID} -u` = 0 ]; then \
+	if [ `${ID} -u` = 0 ]; then \
 	  ${ECHO} "Do not build mailagent as root or it won't pass the sanity tests."; \
 	  ${FALSE}; fi
 
 pre-configure:
-	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-configure
+	${ECHO} "#!/bin/sh" > ${CF}
+	${ECHO} "cf_email='${MAILAGENT_EMAIL}'" >> ${CF}
+	${ECHO} "d_flockonly='define'" >> ${CF}
+	if [ `${ECHO} ${MAILAGENT_DOMAIN} | tr A-Z a-z` = `${ECHO} ${MAILAGENT_FQDN} | tr A-Z a-z` ]; then \
+		${ECHO} "d_hidnet='undef'" >> ${CF}; \
+		${ECHO} "hiddennet=''" >> ${CF}; \
+	else \
+		${ECHO} "d_hidnet='define'" >> ${CF}; \
+		${ECHO} "hiddennet='${MAILAGENT_DOMAIN}'" >> ${CF}; \
+	fi
+	${ECHO} "orgname='${MAILAGENT_ORGANIZATION}'" >> ${CF}
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent/misc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent/misc
 	${CP} -pR ${WRKSRC}/misc/* ${PREFIX}/share/examples/mailagent/misc
-	@${LN} -fs ${PREFIX}/lib/mailagent/examples \
+	${LN} -fs ${PREFIX}/lib/mailagent/examples \
 		${PREFIX}/share/examples/mailagent/agent
 
 .include "../../mk/bsd.pkg.mk"
