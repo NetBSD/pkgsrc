@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2007/02/28 22:41:45 hira Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/01 16:13:20 hira Exp $
 #
 
 OO_VER=			2.1.0
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -82,8 +82,9 @@ SUBST_STAGE.X11_LDFLAGS=	post-patch
 SUBST_FILES.X11_LDFLAGS=	../solenv/inc/${OPENOFFICE_OUTPATH:Q}.mk
 SUBST_SED.X11_LDFLAGS=		-e 's|@X11_LDFLAGS@|${X11_LDFLAGS}|g'
 
-OO_PKGPATH=${WRKSRC}/../instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install/${OPENOFFICE_LANGUAGE}
-OO_PKGROOT=/opt/openoffice.org2.1
+OO_PKGPATH=	${WRKSRC}/../instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install/${OPENOFFICE_LANGUAGE}
+OO_PKGROOT=	/opt/openoffice.org2.1
+OO_PROGRAMS=	scalc sdraw simpress soffice swriter
 
 post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/bridge.h		\
@@ -103,7 +104,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${OPENOFFICE_VERSION}
 	cd ${WRKDIR}${OO_PKGROOT} &&					\
 	${TAR} cf - . | ${TAR} Cxpf ${PREFIX}/${OPENOFFICE_VERSION} -
-	for f in scalc sdraw simpress soffice swriter; do		\
+	for f in ${OO_PROGRAMS}; do					\
 		${LN} -sf ${PREFIX}/${OPENOFFICE_VERSION}/program/$$f	\
 			${PREFIX}/bin/$$f;				\
 	done
@@ -114,6 +115,9 @@ post-install:
 	${SORT} > ${PLIST_SRC} &&					\
 	${FIND} ${OPENOFFICE_VERSION} -type d -print | ${SORT} -r |	\
 	${AWK} '{print("@dirrm "$$1)}' >> ${PLIST_SRC}
+	for f in ${OO_PROGRAMS}; do					\
+		${ECHO} bin/$$f >> ${PLIST_SRC};			\
+	done
 
 # everything specific to your OS/Arch goes into its own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
