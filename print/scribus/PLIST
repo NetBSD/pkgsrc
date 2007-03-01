@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/01/11 19:19:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/03/01 18:19:46 drochner Exp $
 bin/scribus
 include/scribus/about.h
 include/scribus/actionmanager.h
@@ -182,17 +182,17 @@ include/scribus/werktoolb.h
 lib/scribus/dicts/README_ca_ES.txt
 lib/scribus/dicts/README_cs_CZ.txt
 lib/scribus/dicts/README_cy_GB.txt
-lib/scribus/dicts/README_da_DK.txt
 lib/scribus/dicts/README_de_DE.txt
 lib/scribus/dicts/README_en_EN.txt
 lib/scribus/dicts/README_en_GB.txt
 lib/scribus/dicts/README_es_ES.txt
 lib/scribus/dicts/README_fi_FI.txt
 lib/scribus/dicts/README_hu_HU.txt
+lib/scribus/dicts/README_hyph_da_DK.txt
 lib/scribus/dicts/README_hyph_is_IS.txt
+lib/scribus/dicts/README_hyph_pl_PL.txt
 lib/scribus/dicts/README_lt_LT.txt
 lib/scribus/dicts/README_no_NO.txt
-lib/scribus/dicts/README_pl_PL.txt
 lib/scribus/dicts/README_pt_BR.txt
 lib/scribus/dicts/README_pt_PT.txt
 lib/scribus/dicts/README_ru_RU_0.txt
@@ -263,6 +263,7 @@ lib/scribus/scribus.cs.qm
 lib/scribus/scribus.cy.qm
 lib/scribus/scribus.da.qm
 lib/scribus/scribus.de.qm
+lib/scribus/scribus.de_CH.qm
 lib/scribus/scribus.de_ol.qm
 lib/scribus/scribus.dz.qm
 lib/scribus/scribus.el.qm
@@ -1000,6 +1001,9 @@ share/scribus/icons/wizard.png
 share/scribus/icons/wordsOnly.png
 share/scribus/loremipsum/arabic.xml
 share/scribus/loremipsum/czech.xml
+share/scribus/loremipsum/dutch.xml
+share/scribus/loremipsum/english.xml
+share/scribus/loremipsum/eo.xml
 share/scribus/loremipsum/finnish.xml
 share/scribus/loremipsum/german.xml
 share/scribus/loremipsum/greek.xml
@@ -1007,6 +1011,7 @@ share/scribus/loremipsum/hebrew.xml
 share/scribus/loremipsum/italian.xml
 share/scribus/loremipsum/loremipsum.xml
 share/scribus/loremipsum/russian.xml
+share/scribus/loremipsum/slovenian.xml
 share/scribus/plugins/barcode.ps
 share/scribus/plugins/scribus-short-words.rc
 share/scribus/samples/3columnA4.py
