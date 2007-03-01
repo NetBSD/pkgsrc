@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.508 2007/03/01 13:27:09 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.509 2007/03/01 14:03:15 salo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/monotone to 0.33 [jmmv 2007-03-01]
 	Updated devel/monotone-server to 0.33 [jmmv 2007-03-01]
 	Updated mail/dovecot to 1.0rc25 [ghen 2007-03-01]
+	Updated net/tnftpd to 20061217 [salo 2007-03-01]
