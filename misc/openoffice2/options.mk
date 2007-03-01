@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/02/28 22:41:45 hira Exp $
+# $NetBSD: options.mk,v 1.5 2007/03/01 16:13:21 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome-vfs2 gtk2 # kde
@@ -17,6 +17,7 @@ PKG_OPTIONS_GROUP.lang+=	lang-${l}
 PKG_SUGGESTED_OPTIONS=		gtk2 lang-en-US firefox
 
 .include "../../mk/bsd.options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 OPENOFFICE_LANGUAGE=		${PKG_OPTIONS:Mlang-*:S/^lang-//1}
 
@@ -60,6 +61,12 @@ CONFIGURE_ARGS+=	--disable-gnome-vfs
 .if !empty(PKG_OPTIONS:Mgtk2)
 .include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gtk
+# *.pc files are needed with NetBSD using native XFree86.
+.if ${OPSYS} == "NetBSD" && defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
+USE_BUILTIN.Xfixes=	no
+USE_BUILTIN.Xrandr=	no
+USE_BUILTIN.Xrender=	no
+.endif
 .else
 CONFIGURE_ARGS+=	--disable-gtk
 .endif
