@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/01 00:34:14 xtraeme Exp $
+
+--- encfs/FileUtils.cpp.orig	2007-03-01 01:02:48.000000000 +0100
++++ encfs/FileUtils.cpp	2007-03-01 01:03:29.000000000 +0100
+@@ -50,10 +50,12 @@
+ #include <sstream>
+ 
+ #include "i18n.h"
++#include "../intl/autosprintf.h"
+ 
+ using namespace rel;
+ using namespace rlog;
+ using namespace std;
++using gnu::autosprintf;
+ 
+ static const int DefaultBlockSize = 512;
+ // environment variable names for values encfs stores in the environment when

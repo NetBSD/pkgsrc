@@ -1,0 +1,6 @@
+EncFS provides an encrypted filesystem in user-space. It runs without any
+special permissions and uses the FUSE library.
+
+As with most encrypted filesystems, Encfs is meant to provide security
+against off-line attacks; ie your notebook or backups fall into the wrong
+hands, etc.
