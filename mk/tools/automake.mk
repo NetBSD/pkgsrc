@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.17 2006/12/05 22:48:31 wiz Exp $
+# $NetBSD: automake.mk,v 1.18 2007/03/01 22:29:15 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,13 +70,6 @@
 #
 #	AUTOMAKE_OVERRIDE=    no
 #
-
-# This variable is obsoleted, but continue to allow it until packages
-# have been taught to use the new syntax.
-#
-.if defined(BUILD_USES_GETTEXT_M4)
-USE_TOOLS+=	gettext-m4
-.endif
 
 # Only allow one of "automake" and "automake14" in USE_TOOLS.
 .if !empty(USE_TOOLS:C/:.*//:Mautomake) && \
