@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/01/07 09:14:07 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/03/01 14:01:21 salo Exp $
 #
 
-DISTNAME=		tnftpd-20040810
-PKGREVISION=		1
+DISTNAME=		tnftpd-20061217
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
