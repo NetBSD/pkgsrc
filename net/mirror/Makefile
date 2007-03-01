@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/03/01 18:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/03/01 19:33:39 wiz Exp $
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	2
@@ -20,12 +20,11 @@ REPLACE_PERL=	do_unlinks.pl mirror.pl mm.pl pkgs_to_mmin.pl
 CONF_FILES+=	${PREFIX}/lib/mirror/mirror.defaults.dist \
 		${PREFIX}/lib/mirror/mirror.defaults
 
-pre-configure:
-	cd ${WRKSRC};							\
-		for i in mirror.pl mm.pl; do				\
-			${SED} -e 's:!!PREFIX!!:${PREFIX}:g' $$i >$$i.BAK;\
-			${MV} -f $$i.BAK $$i;				\
-		done
+SUBST_CLASSES+=		prefix
+SUBST_SED.prefix=	-e 's:!!PREFIX!!:${PREFIX}:g'
+SUBST_FILES.prefix=	mirror.pl mm.pl
+SUBST_MESSAGE.prefix=	Fixing hardcoded installation prefix.
+SUBST_STAGE.prefix=	pre-configure
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/mirror
