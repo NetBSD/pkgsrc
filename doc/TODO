@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6058 2007/03/01 14:28:14 wiz Exp $
+$NetBSD: TODO,v 1.6059 2007/03/01 14:30:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ Suggested package updates
 	o leafnode-1.11.5
 	o leafpad-0.8.9
 	o less-394
-	o libassuan-1.0.0
 	o libcdio-0.78.2
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
