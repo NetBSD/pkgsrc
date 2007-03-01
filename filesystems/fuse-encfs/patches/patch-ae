@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/03/01 00:34:14 xtraeme Exp $
+
+--- encfs/encfsctl.cpp.orig	2007-03-01 01:23:48.000000000 +0100
++++ encfs/encfsctl.cpp	2007-03-01 01:24:03.000000000 +0100
+@@ -31,6 +31,7 @@
+ #include <string>
+ 
+ #include "i18n.h"
++#include "../intl/gettext.h"
+ 
+ #ifdef HAVE_SSL
+ #define NO_DES
