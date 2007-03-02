@@ -1,14 +1,13 @@
-$NetBSD: patch-ap,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ap,v 1.5.10.1 2007/03/02 20:17:01 salo Exp $
 
-diff -ruN ../Orig/mozilla/security/coreconf/command.mk ./security/coreconf/command.mk
---- ../Orig/mozilla/security/coreconf/command.mk	2004-04-26 00:02:17.000000000 +0900
-+++ ./security/coreconf/command.mk	2005-12-04 19:07:51.000000000 +0900
-@@ -46,7 +46,7 @@
+--- ./security/coreconf/command.mk.orig	2005-10-11 01:46:12.000000000 +0200
++++ ./security/coreconf/command.mk
+@@ -45,7 +45,7 @@ ASFLAGS      += $(CFLAGS)
+ CCF           = $(CC) $(CFLAGS)
  LINK_DLL      = $(LINK) $(OS_DLLFLAGS) $(DLLFLAGS)
  LINK_EXE      = $(LINK) $(OS_LFLAGS) $(LFLAGS)
- NFSPWD        = $(NSINSTALL_DIR)/nfspwd
 -CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
-+CFLAGS       += $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
++CFLAGS        = $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
  		$(XCFLAGS)
  RANLIB        = echo
  TAR           = /bin/tar
