@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.42 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: build.xml,v 1.43 2007/03/02 09:38:21 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -17,6 +17,10 @@
     <varname>pre-configure</varname>, <varname>post-build</varname>.) Most
     of the actual work is done in the <varname>do-*</varname> stages.</para>
 
+    <para>Never override the regular targets (like
+    <varname>fetch</varname>), if you have to, override the
+    <varname>do-*</varname> ones instead.</para>
+
     <para>The basic steps for building a program are always the same.  First
     the program's source (<emphasis>distfile</emphasis>) must be brought to
     the local system and then extracted. After any pkgsrc-specific patches
@@ -24,6 +28,10 @@
     built (usually by compiling), and finally the generated binaries, etc.
     can be put into place on the system.</para>
 
+    <para>To get more details about what is happening at each step,
+    you can set the <varname>PKG_VERBOSE</varname> variable, or the
+    <varname>PATCH_DEBUG</varname> variable if you are just interested
+    in more details about the <emphasis>patch</emphasis> step.</para>
   </sect1>
 
   <sect1 id="build.prefix">
@@ -177,6 +185,10 @@
       <listitem><para>This is an absolute pathname that points to the pkgsrc
       root directory. Generally, you don't need
       it.</para></listitem></varlistentry>
+
+      <varlistentry><term><varname>PKGDIR</varname></term>
+      <listitem><para>This is an absolute pathname that points to the
+      current package.</para></listitem></varlistentry>
 
       <varlistentry><term><varname>PKGPATH</varname></term>
       <listitem><para>This is a pathname relative to
@@ -360,6 +372,13 @@
       <varname>MASTER_SORT_RANDOM</varname>, and
       <varname>MASTER_SORT_AWK</varname> or
       <varname>MASTER_SORT_REGEX</varname>.</para>
+
+      <para>The distfiles mirror run by the NetBSD Foundation uses the
+      <emphasis>mirror-distfiles</emphasis> target to mirror the
+      distfiles, if they are freely distributable.  Packages setting
+      <varname>NO_SRC_ON_FTP</varname> (usually to
+      <quote>${RESTRICTED}</quote>) will not have their distfiles
+      mirrored.</para>
     </sect2>
 
   </sect1>
@@ -558,8 +577,12 @@
     setting <varname>USE_IMAKE</varname> to
     <quote>yes</quote>. (If you only want the package installed in
     <varname>${X11PREFIX}</varname> but xmkmf not being run, set
-    <varname>USE_X11BASE</varname> instead.)</para>
+    <varname>USE_X11BASE</varname> instead.)  You can add variables to
+    xmkmf's environment by adding them to the
+    <varname>SCRIPTS_ENV</varname> variable.</para>
 
+    <para>If there is no configure step at all, set
+    <varname>NO_CONFIGURE</varname> to <quote>yes</quote>.</para>
   </sect1>
 
   <sect1 id="build.build">
@@ -595,6 +618,8 @@
     <quote>Makefile</quote>, and <varname>BUILD_TARGET</varname>
     defaults to <quote>all</quote>.</para>
 
+    <para>If there is no configure step at all, set
+    <varname>NO_BUILD</varname> to <quote>yes</quote>.</para>
   </sect1>
 
   <sect1 id="build.test">
@@ -707,6 +732,11 @@
       name.</para></listitem></varlistentry>
 
     </variablelist>
+
+    <para>In the rare cases that a package shouldn't install anything,
+    set <varname>NO_INSTALL</varname> to <quote>yes</quote>. This is
+    mostly relevant for packages in the <filename>regress</filename>
+    category.</para>
   </sect1>
 
   <sect1 id="build.package">
@@ -724,6 +754,12 @@
     one for each category in the <varname>CATEGORIES</varname>
     variable.  <varname>PACKAGES</varname> defaults to
     <filename>pkgsrc/packages</filename>.</para>
+
+    <para>If there should be no binary package, set
+    <varname>NO_PACKAGE</varname> to <quote>yes</quote>.
+    This should only be used in rare cases, like when a package
+    definitely is only usable on the machine where it is built and even
+    then, a binary package can be useful.</para>
   </sect1>
 
   <sect1 id="build.clean">
