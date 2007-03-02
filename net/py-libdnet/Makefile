@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2007/02/23 20:35:12 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/02 10:52:24 drochner Exp $
 #
 
-DISTNAME=	libdnet-1.11
-PKGNAME=	${PYPKGPREFIX}-libdnet-1.11
+DISTNAME=	libdnet-1.12
+PKGNAME=	${PYPKGPREFIX}-libdnet-1.12
 CATEGORIES=	devel net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdnet/}
+MASTER_SITES=	http://libdnet.googlecode.com/files/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libdnet.sourceforge.net/
+HOMEPAGE=	http://code.google.com/p/libdnet/
 COMMENT=	Python wrapper for libdnet
 
 GNU_CONFIGURE=	yes
