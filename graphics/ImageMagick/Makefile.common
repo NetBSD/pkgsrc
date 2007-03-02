@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2007/02/22 13:34:01 adam Exp $
+# $NetBSD: Makefile.common,v 1.72 2007/03/02 02:08:03 dmcmahill Exp $
 
 ###########################################################################
 #
@@ -21,7 +21,7 @@ DISTSUFFIX=	${IM_MAJOR_VER}
 
 DISTNAME=	ImageMagick-${DISTSUFFIX}
 DISTVERSION=	${DISTSUFFIX:S/-/./}
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	ImageMagick-${DISTVERSION}
 
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
