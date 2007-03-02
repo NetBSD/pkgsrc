@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/02 10:35:04 sketch Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		3
@@ -54,6 +54,9 @@ do-install:
 	done
 	${INSTALL_DATA_DIR} ${EMULDIR}/dev
 	${INSTALL_DATA} /dev/MAKEDEV ${EMULDIR}/dev
+	if [ -f /dev/MAKEDEV.subr ]; then \
+	  ${INSTALL_DATA} /dev/MAKEDEV.subr ${EMULDIR}/dev; \
+	fi
 	cd ${EMULDIR}/dev && ${SH} ./MAKEDEV  std audio
 	cd ${EMULDIR}/dev && ${LN} -fs sound dsp
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
