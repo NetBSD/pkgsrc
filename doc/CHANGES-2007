@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.521 2007/03/02 16:31:53 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.522 2007/03/02 21:21:03 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xf86-video-i810 to 1.7.4 [drochner 2007-03-02]
 	Updated x11/xkbcomp to 1.0.3 [drochner 2007-03-02]
 	Added x11/xrandr version 1.2.0 [drochner 2007-03-02]
+	Updated converters/bibtex2html to 1.85 [tonio 2007-03-02]
