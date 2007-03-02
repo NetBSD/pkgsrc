@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/02/20 14:30:00 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2007/03/02 20:48:09 abs Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		11
@@ -16,6 +16,7 @@ CONFLICTS=		mgp-[0-9]*
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
 USE_TOOLS+=		perl
+USE_TOOLS+=		pkg-config
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.magicpoint
 PKG_SUPPORTED_OPTIONS=	freetype vflib xft2
