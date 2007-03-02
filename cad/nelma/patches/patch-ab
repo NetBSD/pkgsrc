@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/03/02 01:59:48 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2007/03/02 12:20:47 dmcmahill Exp $
 
---- src/Makefile.orig	2006-12-10 18:10:30.000000000 +0000
+--- src/Makefile.orig	2006-12-10 13:10:30.000000000 -0500
 +++ src/Makefile
 @@ -25,31 +25,31 @@ DECOMPOSE_OBJS =	pngutil.o \
  			error.o \
@@ -20,25 +20,26 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/03/02 01:59:48 dmcmahill Exp $
  
  #LDFLAGS = $(CONF_LIBS) -lpng -pg
 -LDFLAGS = $(CONF_LIBS) -lpng
-+LDFLAGS = `pkg-config --libs libconfuse` -lpng
++LDADD = `pkg-config --libs libpng` `pkg-config --libs libconfuse` -lpng -lm
  
  all: nelma-cap decompose nelma-drc
  
- %.o: %.c
+-%.o: %.c
 -	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
-+	$(CC) $(CFLAGS) `pkg-config --cflags libconfuse` $(INCS) -c $< -o $@
++.c.o:
++	$(CC) $(CFLAGS) `pkg-config --cflags libpng` `pkg-config --cflags libconfuse` $(INCS) -c $< -o $@
  
  nelma-cap: $(NELMA_CAP_OBJS)
 -	$(CC) $^ -o $@ $(LDFLAGS) 
-+	$(CC) $(NELMA_CAP_OBJS) -o $@ $(LDFLAGS) 
++	$(CC) $(NELMA_CAP_OBJS) -o $@ $(LDFLAGS) $(LDADD)
  
  nelma-drc: $(NELMA_DRC_OBJS)
 -	$(CC) $^ -o $@ $(LDFLAGS) 
-+	$(CC) $(NELMA_DRC_OBJS) -o $@ $(LDFLAGS) 
++	$(CC) $(NELMA_DRC_OBJS) -o $@ $(LDFLAGS) $(LDADD)
  
  decompose: $(DECOMPOSE_OBJS)
 -	$(CC) $^ -o $@ $(LDFLAGS) 
-+	$(CC) $(DECOMPOSE_OBJS) -o $@ $(LDFLAGS) 
++	$(CC) $(DECOMPOSE_OBJS) -o $@ $(LDFLAGS) $(LDADD)
  
  clean: 
  	rm -f $(NELMA_CAP_OBJS)
