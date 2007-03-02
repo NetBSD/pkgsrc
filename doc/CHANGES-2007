@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.512 2007/03/02 02:02:35 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.513 2007/03/02 02:47:00 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1019,3 +1019,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice2 to 2.1.0nb2 [hira 2007-03-01]
 	Added devel/confuse version 2.5 [dmcmahill 2007-03-01]
 	Added cad/nelma version 3.0 [dmcmahill 2007-03-01]
+	Updated cad/dinotrace to 9.3c [dmcmahill 2007-03-01]
+	Updated cad/dinotrace-mode to 9.3c [dmcmahill 2007-03-01]
