@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.41 2007/02/10 08:59:07 rillig Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.42 2007/03/02 09:08:34 wiz Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -42,7 +42,7 @@ MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
 .if defined(USE_X11BASE)
-MTREE_FILE?=		${PKGSRCDIR}/mk/platform/${OPSYS}.x11.dist
+_MTREE_FILE?=		${PKGSRCDIR}/mk/platform/${OPSYS}.x11.dist
 .  if ${X11_TYPE} != "modular"
 .    include "../../mk/x11.buildlink3.mk"
 .  endif
