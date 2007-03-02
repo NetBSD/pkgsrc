@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1908 2007/02/22 07:20:41 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1909 2007/03/02 06:01:44 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -158,10 +158,6 @@ PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was foun
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
 PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
-.endif
-
-.if defined(LIB_DEPENDS)
-PKG_FAIL_REASON+='LIB_DEPENDS is deprecated and must be replaced with DEPENDS.'
 .endif
 
 .if defined(PKG_PATH)
