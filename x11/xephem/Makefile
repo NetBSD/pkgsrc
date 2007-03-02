@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/01/31 14:07:16 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2007/03/02 22:20:44 gdt Exp $
 
 DISTNAME=	xephem-3.7.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
@@ -55,5 +56,6 @@ do-install:
 		${PREFIX}/share/xephem
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
