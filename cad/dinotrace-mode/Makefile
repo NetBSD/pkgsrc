@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/02 02:46:15 dmcmahill Exp $
 #
 
-DISTNAME=	dinotrace-9.3a
-PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-9.3a
-PKGREVISION=	1
+DISTNAME=	dinotrace-9.3c
+PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-9.3c
 CATEGORIES=	cad editors
 MASTER_SITES=	http://www.veripool.com/ftp/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.veripool.com/dinotrace/
