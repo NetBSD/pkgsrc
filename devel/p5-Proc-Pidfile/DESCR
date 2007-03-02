@@ -1,0 +1,2 @@
+Proc::Pidfile is a very simple OO interface which manages a pidfile
+for the current process.
