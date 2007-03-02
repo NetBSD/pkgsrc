@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.51 2007/01/17 03:11:19 rillig Exp $
+# $NetBSD: deprecated.map,v 1.52 2007/03/02 06:02:11 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -26,7 +26,6 @@ DIGEST_FILE		Use DISTINFO_FILE instead.
 IGNORE			Use PKG_FAIL_REASON or PKG_SKIP_REASON instead.
 IS_INTERACTIVE		Use INTERACTIVE_STAGE instead.
 KERBEROS		Use the PKG_OPTIONS framework instead.
-LIB_DEPENDS		Use DEPENDS instead.
 MASTER_SITE_SUBDIR	Use some form of MASTER_SITES instead.
 MD5_FILE		Use DISTINFO_FILE instead.
 MIRROR_DISTFILE		Use NO_BIN_ON_FTP and/or NO_SRC_ON_FTP instead.
@@ -129,3 +128,8 @@ PKG_SKIP_REASON		Use PKG_FAIL_REASON instead.
 
 # January 2007
 BUILDLINK_TRANSFORM.*	Use BUILDLINK_FNAME_TRANSFORM.* instead.
+
+# March 2007
+SCRIPTDIR		You can just remove it.
+NO_PKG_REGISTER		You can just remove it.
+NO_DEPENDS		You can just remove it.
