@@ -1,4 +1,4 @@
-$NetBSD: patch-bt,v 1.1 2007/02/28 12:06:58 hira Exp $
+$NetBSD: patch-bt,v 1.2 2007/03/02 13:17:49 hira Exp $
 
 --- ../epm/epm-3.7.patch.orig	2007-02-28 11:29:52.000000000 +0900
 +++ ../epm/epm-3.7.patch	2007-02-28 20:00:38.000000000 +0900
@@ -21,7 +21,7 @@ $NetBSD: patch-bt,v 1.1 2007/02/28 12:06:58 hira Exp $
 +  fi
 +  
 +  
-+! if test "x$FLTKCONFIG" = x -o x"$enable_fltk" == x"no"; then
++! if test "x$FLTKCONFIG" = x -o x"$enable_fltk" = x"no"; then
 +  	GUIS=""
 +  	GUILIBS=""
 +  	INSTALL_GUIS=""
