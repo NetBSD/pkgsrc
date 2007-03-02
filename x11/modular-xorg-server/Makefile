@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/26 17:51:16 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/02 11:51:49 drochner Exp $
 
 DISTNAME=	xorg-server-1.2.0
 PKGREVISION=	1
@@ -30,10 +30,18 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.xorg-server
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		MesaLib-6.5.2.tar.bz2
 SITES.MesaLib-6.5.2.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+MESA_SRC=		${WRKDIR}/Mesa-6.5.2
 CONFIGURE_ARGS+=	--enable-glx
-CONFIGURE_ARGS+=	--with-mesa-source=${WRKDIR}/Mesa-6.5.2
-BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
-BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
+CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
+GLX_DEFINES+=		-D__GLX_ALIGN64
+CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
+# glcore.h and dri_interface.h shipped with *proto are older than
+# those in Mesa-6.5.2. Either patch them or trick the build into using
+# the newer ones.
+#BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
+#BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
+post-extract:
+	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 PLIST_SUBST+=		GLX=""
 .else
 CONFIGURE_ARGS+=	--disable-glx
