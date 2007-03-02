@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.34 2007/03/02 08:49:40 wiz Exp $
+# $NetBSD: install.mk,v 1.35 2007/03/02 09:08:33 wiz Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -231,15 +231,15 @@ install-check-umask:
 ### then it's known to pre-create all of the directories that it needs
 ### at install-time, so we don't need mtree to do it for us.
 ###
-MTREE_FILE?=	${PKGSRCDIR}/mk/platform/${OPSYS}.pkg.dist
-MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
+_MTREE_FILE?=	${PKGSRCDIR}/mk/platform/${OPSYS}.pkg.dist
+_MTREE_ARGS?=	-U -f ${_MTREE_FILE} -d -e -p
 
 .PHONY: install-makedirs
 install-makedirs:
 	${_PKG_SILENT}${_PKG_DEBUG}${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
 .if !defined(NO_MTREE)
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${MTREE_FILE} ||	\
-		${MTREE} ${MTREE_ARGS} ${DESTDIR}${PREFIX}/
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_MTREE_FILE} ||	\
+		${MTREE} ${_MTREE_ARGS} ${DESTDIR}${PREFIX}/
 .endif
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	@${STEP_MSG} "Creating installation directories"
