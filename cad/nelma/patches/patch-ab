@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/03/02 01:59:48 dmcmahill Exp $
+
+--- src/Makefile.orig	2006-12-10 18:10:30.000000000 +0000
++++ src/Makefile
+@@ -25,31 +25,31 @@ DECOMPOSE_OBJS =	pngutil.o \
+ 			error.o \
+ 			decompose.o
+ 
+-CONF_CFLAGS = $(shell pkg-config --cflags libconfuse)
+-CONF_LIBS = $(shell pkg-config --libs libconfuse)
++#CONF_CFLAGS = $(shell pkg-config --cflags libconfuse)
++#CONF_LIBS = $(shell pkg-config --libs libconfuse)
+ 
+-CFLAGS = -Wall -O3 -march=athlon-xp $(CONF_CFLAGS) -ffast-math
++CFLAGS?= -Wall -O3 -march=athlon-xp $(CONF_CFLAGS) -ffast-math
+ #CFLAGS = -Wall -g -march=athlon-xp $(CONF_CFLAGS) -pg
+ #CFLAGS = -Wall -g -march=athlon-xp $(CONF_CFLAGS) -DDEBUG
+ 
+ #CFLAGS = -Wall -g -march=athlon-xp $(CONF_FLAGS) -ffast-math -O2
+ 
+ #LDFLAGS = $(CONF_LIBS) -lpng -pg
+-LDFLAGS = $(CONF_LIBS) -lpng
++LDFLAGS = `pkg-config --libs libconfuse` -lpng
+ 
+ all: nelma-cap decompose nelma-drc
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
++	$(CC) $(CFLAGS) `pkg-config --cflags libconfuse` $(INCS) -c $< -o $@
+ 
+ nelma-cap: $(NELMA_CAP_OBJS)
+-	$(CC) $^ -o $@ $(LDFLAGS) 
++	$(CC) $(NELMA_CAP_OBJS) -o $@ $(LDFLAGS) 
+ 
+ nelma-drc: $(NELMA_DRC_OBJS)
+-	$(CC) $^ -o $@ $(LDFLAGS) 
++	$(CC) $(NELMA_DRC_OBJS) -o $@ $(LDFLAGS) 
+ 
+ decompose: $(DECOMPOSE_OBJS)
+-	$(CC) $^ -o $@ $(LDFLAGS) 
++	$(CC) $(DECOMPOSE_OBJS) -o $@ $(LDFLAGS) 
+ 
+ clean: 
+ 	rm -f $(NELMA_CAP_OBJS)
+@@ -58,8 +58,9 @@ clean: 
+ 	rm -f nelma-cap
+ 	rm -f nelma-drc
+ 
++INSTALL_PROGRAM?=	install
+ install: all
+-	install nelma-cap $(PREFIX)/bin
+-	install nelma-drc $(PREFIX)/bin
++	$(INSTALL_PROGRAM) nelma-cap $(PREFIX)/bin
++	$(INSTALL_PROGRAM) nelma-drc $(PREFIX)/bin
+ 
+ .PHONY:	all clean install
