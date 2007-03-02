@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.13 2007/01/06 20:15:26 rillig Exp $
+# $NetBSD: check-files.mk,v 1.14 2007/03/02 05:54:18 wiz Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -276,10 +276,6 @@ ${_CHECK_FILES_EXTRA}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 		${TEST} ! -f "$$file" || ${ECHO} "$$file";		\
 	done > ${.TARGET}
 
-.if defined(NO_PKG_REGISTER)
-${_CHECK_FILES_ERRMSG.prefix}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${_CHECK_FILES_ERRMSG.prefix}:						\
 		${_CHECK_FILES_DELETED}					\
 		${_CHECK_FILES_MISSING}					\
@@ -314,15 +310,10 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 			"PLIST and CHECK_FILES_SKIP:";			\
 		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_SKIP};	\
 	fi >> ${.TARGET}
-.endif
 
 # Check ${SYSCONFDIR} for files which are not in the PLIST and are also
 # not copied into place by the INSTALL scripts.
 #
-.if defined(NO_PKG_REGISTER)
-${_CHECK_FILES_ERRMSG.sysconfdir}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 		${_CHECK_FILES_PRE.sysconfdir}				\
 		${_CHECK_FILES_POST.sysconfdir}
@@ -339,15 +330,10 @@ ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 			   ${_CHECK_FILES_POST.sysconfdir} |		\
 		${GREP} '^+[^+]' | ${SED} "s|^+|	|";		\
 	fi > ${.TARGET}
-.endif
 
 # Check ${VARBASE} for files which are not in the PLIST and are also
 # not created by the INSTALL scripts.
 #
-.if defined(NO_PKG_REGISTER)
-${_CHECK_FILES_ERRMSG.varbase}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${_CHECK_FILES_ERRMSG.varbase}:						\
 		${_CHECK_FILES_PRE.varbase}				\
 		${_CHECK_FILES_POST.varbase}
@@ -364,7 +350,6 @@ ${_CHECK_FILES_ERRMSG.varbase}:						\
 			   ${_CHECK_FILES_POST.varbase}	|		\
 		${GREP} '^+[^+]' | ${SED} "s|^+|	|";		\
 	fi > ${.TARGET}
-.endif
 
 ###########################################################################
 # check-files-clean removes the state files related to the "check-files"
