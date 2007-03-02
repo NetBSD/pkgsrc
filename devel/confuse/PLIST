@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/02 01:56:46 dmcmahill Exp $
+include/confuse.h
+lib/libconfuse.la
+lib/pkgconfig/libconfuse.pc
