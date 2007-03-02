@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.514 2007/03/02 09:34:58 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.515 2007/03/02 09:47:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1022,3 +1022,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated cad/dinotrace to 9.3c [dmcmahill 2007-03-01]
 	Updated cad/dinotrace-mode to 9.3c [dmcmahill 2007-03-01]
 	Updated time/sunbird to 0.3.1 [ghen 2007-03-02]
+	Removed pkgtools/pkgmanpages [wiz 2007-03-02]
