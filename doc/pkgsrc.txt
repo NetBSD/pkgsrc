@@ -49,7 +49,7 @@ I. The pkgsrc user's guide
 
             2.1.1. As tar file
             2.1.2. Via SUP
-            2.1.3. Via CVS
+            2.1.3. Via anonymous CVS
 
         2.2. Keeping pkgsrc up-to-date
 
@@ -675,7 +675,7 @@ Table of Contents
 
         2.1.1. As tar file
         2.1.2. Via SUP
-        2.1.3. Via CVS
+        2.1.3. Via anonymous CVS
 
     2.2. Keeping pkgsrc up-to-date
 
@@ -783,7 +783,7 @@ Table of Contents
 
     2.1.1. As tar file
     2.1.2. Via SUP
-    2.1.3. Via CVS
+    2.1.3. Via anonymous CVS
 
 2.2. Keeping pkgsrc up-to-date
 
@@ -835,7 +835,7 @@ Protocol, SUP. To do so, make sure your supfile has a line
 in it, see the examples in /usr/share/examples/supfiles, and that the /usr/
 pkgsrc directory exists. Then, simply run sup -v /path/to/your/supfile.
 
-2.1.3. Via CVS
+2.1.3. Via anonymous CVS
 
 To get pkgsrc via CVS, make sure you have cvs(1) installed. To do an initial
 (full) checkout of pkgsrc, you first have to set some environment variables.
@@ -1912,6 +1912,9 @@ each variable's intent.
   * DISTDIR: Where to store the downloaded copies of the original source
     distributions used for building pkgsrc packages. The default is $
     {PKGSRCDIR}/distfiles.
+
+  * PKG_DBDIR: Where the database about installed packages is stored. The
+    default is /var/db/pkg>.
 
   * MASTER_SITE_OVERRIDE: If set, override the packages' MASTER_SITES with this
     value.
@@ -5321,11 +5324,18 @@ into so-called stages, which take the name of the containing phase, prefixed by
 one of pre-, do- or post-. (Examples are pre-configure, post-build.) Most of
 the actual work is done in the do-* stages.
 
+Never override the regular targets (like fetch), if you have to, override the
+do-* ones instead.
+
 The basic steps for building a program are always the same. First the program's
 source (distfile) must be brought to the local system and then extracted. After
 any pkgsrc-specific patches to compile properly are applied, the software can
 be configured, then built (usually by compiling), and finally the generated
 binaries, etc. can be put into place on the system.
+
+To get more details about what is happening at each step, you can set the
+PKG_VERBOSE variable, or the PATCH_DEBUG variable if you are just interested in
+more details about the patch step.
 
 16.2. Program location
 
@@ -5422,6 +5432,10 @@ PKGSRCDIR
 
     This is an absolute pathname that points to the pkgsrc root directory.
     Generally, you don't need it.
+
+PKGDIR
+
+    This is an absolute pathname that points to the current package.
 
 PKGPATH
 
@@ -5556,6 +5570,11 @@ of MASTER_SITE_BACKUP. The order of all except the first and the last can be
 optionally sorted by the user, via setting either MASTER_SORT_RANDOM, and
 MASTER_SORT_AWK or MASTER_SORT_REGEX.
 
+The distfiles mirror run by the NetBSD Foundation uses the mirror-distfiles
+target to mirror the distfiles, if they are freely distributable. Packages
+setting NO_SRC_ON_FTP (usually to "${RESTRICTED}") will not have their
+distfiles mirrored.
+
 16.6. The checksum phase
 
 After the distfile(s) are fetched, their checksum is generated and compared
@@ -5673,6 +5692,10 @@ by the package.
 If the program uses an Imakefile for configuration, the appropriate steps can
 be invoked by setting USE_IMAKE to "yes". (If you only want the package
 installed in ${X11PREFIX} but xmkmf not being run, set USE_X11BASE instead.)
+You can add variables to xmkmf's environment by adding them to the SCRIPTS_ENV
+variable.
+
+If there is no configure step at all, set NO_CONFIGURE to "yes".
 
 16.12. The build phase
 
@@ -5693,6 +5716,8 @@ and BUILD_TARGET may all be changed by the package.
 The default value of MAKE_PROGRAM is "gmake" if USE_TOOLS contains "gmake",
 "make" otherwise. The default value of MAKE_FILE is "Makefile", and
 BUILD_TARGET defaults to "all".
+
+If there is no configure step at all, set NO_BUILD to "yes".
 
 16.13. The test phase
 
@@ -5784,6 +5809,9 @@ INSTALLATION_DIRS
     author. The directories are created with the correct ownership, depending
     on their name.
 
+In the rare cases that a package shouldn't install anything, set NO_INSTALL to
+"yes". This is mostly relevant for packages in the regress category.
+
 16.15. The package phase
 
 Once the install stage has completed, a binary package of the installed files
@@ -5793,6 +5821,10 @@ previous compilation, e.g. by the make bin-install or by using pkg_add.
 By default, the binary packages are created in ${PACKAGES}/All and symlinks are
 created in ${PACKAGES}/category, one for each category in the CATEGORIES
 variable. PACKAGES defaults to pkgsrc/packages.
+
+If there should be no binary package, set NO_PACKAGE to "yes". This should only
+be used in rare cases, like when a package definitely is only usable on the
+machine where it is built and even then, a binary package can be useful.
 
 16.16. Cleaning up
 
@@ -6489,11 +6521,6 @@ distribution files to DISTFILES, so they will be extracted automatically. See
 the print/ghostscript package for an example. (It relies on the jpeg sources
 being present in source form during the build.)
 
-Please also note the BUILD_USES_GETTEXT_M4 definition, which is provided as
-convenience definition. It adds a build dependency on either an installed
-version of an older gettext package, or if it isn't, installs the devel/
-gettext-m4 package.
-
 18.1.7. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
@@ -6688,15 +6715,19 @@ package's version number. If a package is already in pkgsrc at that time, the
 checksum will no longer match. The contents of the new distfile should be
 compared against the old one before changing anything, to make sure the
 distfile was really updated on purpose, and that no trojan horse or so crept
-in. Then, the correct way to work around this is to set DIST_SUBDIR to a unique
-directory name, usually based on PKGNAME_NOREV. All DISTFILES and PATCHFILES
-for this package will be put in that subdirectory of the local distfiles
-directory. In case this happens more often, PKGNAME can be used (thus including
-the nbX suffix) or a date stamp can be appended, like ${PKGNAME_NOREV}
--YYYYMMDD. Do not forget regenerating the distinfo file after that, since it
-contains the DIST_SUBDIR path in the filenames. Furthermore, a mail to the
-package's authors seems appropriate telling them that changing distfiles after
-releases without changing the file names is not good practice.
+in. Please mention that the distfiles were compared and what was found in your
+commit message. Then, the correct way to work around this is to set DIST_SUBDIR
+to a unique directory name, usually based on PKGNAME_NOREV. All DISTFILES and
+PATCHFILES for this package will be put in that subdirectory of the local
+distfiles directory. (See Section 18.1.11, "How to handle incrementing versions
+when fixing an existing package" for more details.) In case this happens more
+often, PKGNAME can be used (thus including the nbX suffix) or a date stamp can
+be appended, like ${PKGNAME_NOREV}-YYYYMMDD. Do not forget regenerating the
+distinfo file after that, since it contains the DIST_SUBDIR path in the
+filenames. Also increase the PKGREVISION if the installed package is different.
+Furthermore, a mail to the package's authors seems appropriate telling them
+that changing distfiles after releases without changing the file names is not
+good practice.
 
 18.3. Fixing problems in the configure phase
 
@@ -6966,6 +6997,7 @@ macros.
     FreeBSD     __FreeBSD__
     DragonFly   __DragonFly__
     Interix     __INTERIX
+    IRIX        __sgi (TODO: get a definite source for this)
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
@@ -6980,8 +7012,9 @@ macros.
 18.5.1.3. C preprocessor macros to identify the compiler
 
     GCC         __GNUC__ (major version), __GNUC_MINOR__
-    SunPro      __SUNPRO_C (0x570 for version 5.7)
-    SunPro C++  __SUNPRO_CC (0x580 for version 5.8)
+    MIPSpro     _COMPILER_VERSION (0x741 for MIPSpro 7.41)
+    SunPro      __SUNPRO_C (0x570 for Sun C 5.7)
+    SunPro C++  __SUNPRO_CC (0x580 for Sun C++ 5.8)
 
 18.5.2. How to handle compiler bugs
 
