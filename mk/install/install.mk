@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.32 2007/01/06 20:15:26 rillig Exp $
+# $NetBSD: install.mk,v 1.33 2007/03/02 05:54:18 wiz Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -137,7 +137,7 @@ release-install-localbase-lock: release-localbase-lock
 .if ${_USE_DESTDIR} != "user-destdir"
 _INSTALL_ALL_TARGETS+=		acquire-install-localbase-lock
 .endif
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) && ${_USE_DESTDIR} == "no"
+.if !defined(FORCE_PKG_REGISTER) && ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		install-check-conflicts
 _INSTALL_ALL_TARGETS+=		install-check-installed
 .endif
@@ -164,7 +164,7 @@ _INSTALL_ALL_TARGETS+=		check-files-post
 .if ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		post-install-script
 .endif
-.if !defined(NO_PKG_REGISTER) && ${_USE_DESTDIR} == "no"
+.if ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		register-pkg
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
