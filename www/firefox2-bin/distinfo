@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/12/20 14:33:29 ghen Exp $
+$NetBSD: distinfo,v 1.2.2.1 2007/03/02 20:17:02 salo Exp $
 
-SHA1 (firefox/releases/2.0.0.1/linux-i686/en-US/firefox-2.0.0.1.tar.gz) = 0647a1992ecd4a89a84bdd1dedbf7f058c9b24a5
-RMD160 (firefox/releases/2.0.0.1/linux-i686/en-US/firefox-2.0.0.1.tar.gz) = 5a8de21c80e90507ecb8c66ee7ad3248e8582c8d
-Size (firefox/releases/2.0.0.1/linux-i686/en-US/firefox-2.0.0.1.tar.gz) = 9639378 bytes
+SHA1 (firefox/releases/2.0.0.2/linux-i686/en-US/firefox-2.0.0.2.tar.gz) = 156d07d922e26cdbb215b8da79fa420df8ab678e
+RMD160 (firefox/releases/2.0.0.2/linux-i686/en-US/firefox-2.0.0.2.tar.gz) = 58d276f0546f5dca433b5692d8b6133a36df2db6
+Size (firefox/releases/2.0.0.2/linux-i686/en-US/firefox-2.0.0.2.tar.gz) = 9652205 bytes
