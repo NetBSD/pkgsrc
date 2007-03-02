@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/03/04 16:06:29 tv Exp $
+# $NetBSD: options.mk,v 1.3 2007/03/02 12:05:32 grant Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.perdition
 PKG_SUPPORTED_OPTIONS=	ssl pam
@@ -23,6 +23,8 @@ PLIST_SUBST+=		PERDITION_HAVE_PAM="@comment "
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ssl-includes=${BUILDLINK_PREFIX.openssl}/include
+CONFIGURE_ARGS+=	--with-ssl-libraries=${BUILDLINK_PREFIX.openssl}/lib
 .else
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
