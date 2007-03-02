@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2006/10/23 10:49:34 markd Exp $
+$NetBSD: distinfo,v 1.9 2007/03/02 09:34:18 ghen Exp $
 
-SHA1 (sunbird-0.3.source.tar.bz2) = 9c498789d428b1f6a5abcb5a690a6d977553dce5
-RMD160 (sunbird-0.3.source.tar.bz2) = a5b71c40be6e6739b9ad558dfac8d2b714709e3c
-Size (sunbird-0.3.source.tar.bz2) = 32564480 bytes
+SHA1 (sunbird-0.3.1.source.tar.bz2) = f8a397746f0e3abf15273de5232c447746a8d370
+RMD160 (sunbird-0.3.1.source.tar.bz2) = b2fe3d03ce20500641e18da07fafda031d7b882e
+Size (sunbird-0.3.1.source.tar.bz2) = 44088609 bytes
 SHA1 (patch-aa) = b9c9f28e3c2d9ff5e3b982dda6d1332e2c025570
 SHA1 (patch-ab) = 8665353e9f1d98474c5d923f76b1ea1a333c2783
 SHA1 (patch-ac) = 889d805590865e1aa800db73230b05984070d779
