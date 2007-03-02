@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: mkbootstrapkit,v 1.8 2007/01/28 01:40:49 jschauma Exp $
+# $NetBSD: mkbootstrapkit,v 1.9 2007/03/02 16:48:48 wiz Exp $
 #
 # Usage: mkbootstrapkit [kitdir]
 #
@@ -33,7 +33,6 @@ for dir in \
 	pkgtools/mtree \
 	pkgtools/pax \
 	pkgtools/pkg_install \
-	pkgtools/pkgmanpages \
 	pkgtools/tnftp \
 	sysutils/install-sh \
 	textproc/nbsed
