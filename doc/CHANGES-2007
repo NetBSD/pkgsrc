@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.516 2007/03/02 10:24:20 grant Exp $
+$NetBSD: CHANGES-2007,v 1.517 2007/03/02 10:58:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1025,3 +1025,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed pkgtools/pkgmanpages [wiz 2007-03-02]
 	Added devel/p5-Proc-ProcessTable version 0.41 [grant 2007-03-02]
 	Added devel/p5-Proc-Pidfile version 1.005 [grant 2007-03-02]
+	Added mail/p5-Mail-Sender version 0.8.13 [abs 2007-03-02]
+	Added mail/p5-Mail-Sender-Easy version 0.0.5 [abs 2007-03-02]
