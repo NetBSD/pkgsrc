@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2007/03/02 09:15:24 njoly Exp $
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
@@ -38,17 +38,17 @@ REQD_DIRS+=		${FPDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
+MASTER_SITES=		http://files.f-prot.com/files/bsd-x86/
 DISTNAME=		fp-netbsd-ws-${FPVER}
 .endif
 
 .if ${OPSYS} == "Linux"
-MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
+MASTER_SITES=		http://files.f-prot.com/files/linux-x86/
 DISTNAME=		fp-linux-ws-${FPVER}
 .endif
 
 .if ${OPSYS} == "SunOS"
-MASTER_SITES=		ftp://ftp.f-prot.com/pub/solaris/
+MASTER_SITES=		http://files.f-prot.com/files/solaris-sparc/
 DISTNAME=		fp-solaris-sparc-ws-${FPVER}
 .endif
 
