@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/02 01:59:47 dmcmahill Exp $
+
+--- Makefile.orig	2006-12-10 18:14:29.000000000 +0000
++++ Makefile
+@@ -1,18 +1,20 @@
+-export PREFIX = $(HOME)/software
++PREFIX?=	$(HOME)/software
+ 
+-all: nelma doxygen
++all: nelma
+ 
+ install: nelma-install man-install
+ 
+ nelma:
+-	$(MAKE) -C src all
++	cd src && $(MAKE) PREFIX=$(PREFIX) all
+ 
+ nelma-install:
+-	$(MAKE) -C src install
++	cd src && $(MAKE) PREFIX=$(PREFIX) install
+ 
++INSTALL?=	install
++INSTALL_MAN?=	install
+ man-install:
+-	install	doc/nelma-cap.1 $(PREFIX)/man/man1
+-	install	doc/nelma-drc.1 $(PREFIX)/man/man1
++	$(INSTALL_MAN) doc/nelma-cap.1 $(PREFIX)/man/man1
++	$(INSTALL_MAN) doc/nelma-drc.1 $(PREFIX)/man/man1
+ 
+ doxygen:
+ 	doxygen
+@@ -21,4 +23,4 @@ clean:
+ 	rm -rf doc/html
+ 	$(MAKE) -C src clean
+ 
+-.PHONY: all clean
++.PHONY: all clean doxygen install man-install nelma nelma-install
