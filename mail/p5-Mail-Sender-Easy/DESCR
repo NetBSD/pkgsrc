@@ -1,0 +1,20 @@
+Mail::Sender's one problem is its a bit cumbersome to use, with so
+many options and things to open, close, the whole thing, parts,
+multiparts etc etc., and several ways to check for successs. Its
+hard to remember what needs done at what point with what data to
+do what you want and then which way you check what data based on
+what was done to see if it worked or not.
+
+This module's aim is to make all of that ``Easy''
+
+It does so by providing a single function (and method) to send mail
+based on an (IMHO) easier to work with hashref and returns true or
+false on success or failer and sets $@ to any errors.
+
+The EXAMPLE section shows an ``email or die'' that will send an
+email using SMTP Auth on port 26 with text and html parts, the html
+part has a smiley gif embedded inline and a PDF attached and a high
+priority flag and read and delivery receipt requests. It will take
+you seconds to customize it to send that to yourself (and its
+``Easy'' to understand what its going on without having to understand
+the intracacies of SMTP and MIME messages.
