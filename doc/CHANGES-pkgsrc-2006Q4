@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.44 2007/02/23 11:56:44 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.45 2007/03/02 13:04:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -107,3 +107,5 @@ Pullup ticket 2031 - requested by taca
 security update for spamassassin
 Pullup ticket 2032 - requested by taca
 security update for php5
+Pullup ticket 2035 - requested by bouyer
+add back SSL extension for PHP5
