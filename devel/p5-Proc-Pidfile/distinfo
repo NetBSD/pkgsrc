@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/02 10:20:07 grant Exp $
+
+SHA1 (Proc-Pidfile-1.005.tar.gz) = 0accb5d90e4538d18278f0722d0fb17c13cdab18
+RMD160 (Proc-Pidfile-1.005.tar.gz) = baf690ff9fc6469406185d1fd1a21240c47177cb
+Size (Proc-Pidfile-1.005.tar.gz) = 3703 bytes
