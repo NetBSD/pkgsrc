@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.11 2006/11/15 10:40:34 joerg Exp $
+# $NetBSD: print-plist.mk,v 1.12 2007/03/02 09:08:33 wiz Exp $
 
 ###
 ### Automatic PLIST generation
@@ -55,7 +55,7 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.cache-1/)
 .endif
 
 # Common (system) directories not to generate @dirrm statements for
-# Reads MTREE_FILE and generate awk statements that will
+# Reads _MTREE_FILE and generate awk statements that will
 # sort out which directories NOT to include into the PLIST @dirrm list
 .if make(print-PLIST)
 _PRINT_PLIST_COMMON_DIRS!=	${AWK} 'BEGIN {				\
@@ -80,7 +80,7 @@ _PRINT_PLIST_COMMON_DIRS!=	${AWK} 'BEGIN {				\
 			}						\
 		}							\
 		END { print "{ print $$$$0; }"; }			\
-	' <${MTREE_FILE}
+	' <${_MTREE_FILE}
 .endif
 
 # scan $PREFIX for any files/dirs modified since the package was extracted
