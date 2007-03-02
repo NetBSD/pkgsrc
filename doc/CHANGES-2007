@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.518 2007/03/02 11:31:44 grant Exp $
+$NetBSD: CHANGES-2007,v 1.519 2007/03/02 12:06:19 grant Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/p5-Mail-Sender version 0.8.13 [abs 2007-03-02]
 	Added mail/p5-Mail-Sender-Easy version 0.0.5 [abs 2007-03-02]
 	Updated devel/vanessa_logger to 0.0.7nb2 [grant 2007-03-02]
+	Updated mail/perdition to 1.17nb6 [grant 2007-03-02]
