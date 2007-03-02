@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6059 2007/03/01 14:30:05 wiz Exp $
+$NetBSD: TODO,v 1.6060 2007/03/02 09:49:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -542,6 +542,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
+	o ldapsdk-6.0.2
 	o leafnode-1.11.5
 	o leafpad-0.8.9
 	o less-394
