@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.511 2007/03/01 16:28:11 hira Exp $
+$NetBSD: CHANGES-2007,v 1.512 2007/03/02 02:02:35 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1017,3 +1017,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/esound to 0.2.37 [wiz 2007-03-01]
 	Updated graphics/libart2 to 2.3.19 [wiz 2007-03-01]
 	Updated misc/openoffice2 to 2.1.0nb2 [hira 2007-03-01]
+	Added devel/confuse version 2.5 [dmcmahill 2007-03-01]
+	Added cad/nelma version 3.0 [dmcmahill 2007-03-01]
