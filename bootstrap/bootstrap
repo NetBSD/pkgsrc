@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.91 2007/02/22 23:29:02 rillig Exp $
+# $NetBSD: bootstrap,v 1.92 2007/03/02 16:48:48 wiz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -917,10 +917,6 @@ yes)	register_package "pkgtools/pax";;
 esac
 register_package "pkgtools/pkg_install"
 
-# Install the man page.
-echo_msg "Installing packages(7) man page"
-run_cmd "(cd $pkgsrcdir/pkgtools/pkgmanpages && $bmake PKG_VERBOSE=yes MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir CREATE_WRKDIR_SYMLINK=no install)"
-
 etc_mk_conf="$sysconfdir/mk.conf"
 
 # Install the example mk.conf so that it is used, but only if it doesn't
@@ -952,7 +948,7 @@ if [ "$MKCONF_EXAMPLE" != "$etc_mk_conf" ]; then
 	echo ""
 fi
 echo "You can find extensive documentation of the NetBSD Packages Collection"
-echo "in $pkgsrcdir/doc/pkgsrc.txt and packages(7)."
+echo "in $pkgsrcdir/doc/pkgsrc.txt."
 echo ""
 echo "Hopefully everything is now complete."
 echo "Thank you"
