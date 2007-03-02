@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:30 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/02 11:29:00 grant Exp $
 #
 
 DISTNAME=		vanessa_logger-0.0.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.vergenet.net/linux/vanessa/download/vanessa_logger/0.0.7/
 
@@ -12,5 +12,15 @@ COMMENT=		Library that provides a generic logging layer
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+# The SunPro compiler does not understand __FUNCTION__, as well as
+# __func__. So __FILE__ is the nearest replacement.
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Msunpro)
+SUBST_CLASSES+=		__function__
+SUBST_STAGE.example=	post-patch
+SUBST_FILES.example=	libvanessa_logger/vanessa_logger.h
+SUBST_SED.example=	-e "s|__FUNCTION__|__FILE__|g"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
