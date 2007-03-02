@@ -1,0 +1,15 @@
+Nelma is a (command line) tool for numerically calculating various
+electrical properties of printed circuit boards or similar objects
+composed of conductors and dielectrics (however code is optimized for
+circuit board-like geometry).
+
+It is currently capable of calculating capacitances between objects -
+nets on a PCB. It returns a spice-compatible description of an
+equivalent circuit of stray capacitances that can be for example used
+for more accurate circuit simulation. Alternatively it can also
+produce field data that can be plotted for example with Gnuplot.
+
+Support for calculating resistances existed for a while but was later
+removed because it didn't receive much testing.
+
+Nelma is available under the GNU General Public License version 2.
