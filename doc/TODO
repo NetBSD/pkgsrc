@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6060 2007/03/02 09:49:09 wiz Exp $
+$NetBSD: TODO,v 1.6061 2007/03/03 11:04:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,6 +309,7 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
+	o clamav-0.90.1
 	o clisp-2.41
 	o cocoon-2.1.10
 	o cogito-0.18.2
@@ -344,6 +345,7 @@ Suggested package updates
 	o dirac-0.6.0
 	o dmidecode-2.9
 	o dnstracer-1.8
+	o dosbox-0.70
 	o dropbear-0.49
 	o drscheme-360
 	o drupal-5.1
@@ -574,6 +576,7 @@ Suggested package updates
 	o libshout-2.2
 	o libssh-0.2
 	o libstatgrab-0.14
+	o libtasn1-0.3.9
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.11.2
 	o licq-core-1.3.0
@@ -766,7 +769,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o php4-4.4.5
-	o phpmyadmin-2.10.0
+	o phpmyadmin-2.10.0.2
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -1008,7 +1011,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
 	o wdm-1.28
-	o webmin-1.320
+	o webmin-1.330
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.34
@@ -1016,7 +1019,7 @@ Suggested package updates
 	o worker-2.14.2
 	o wwwoffle-2.9b
 	o wxGTK-2.8
-	o wxRemind-0.8.5
+	o wxRemind-0.8.6
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.8.0
 	o xblast-2.10.4
