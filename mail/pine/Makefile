@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.112 2007/01/07 09:13:59 rillig Exp $
+# $NetBSD: Makefile,v 1.113 2007/03/03 21:54:23 jwise Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
+PKGREVISION=	1
 CATEGORIES=	mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet News and E-mail
 
@@ -45,7 +46,7 @@ UNLIMIT_RESOURCES+=	datasize
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pine
-PKG_SUPPORTED_OPTIONS=	ldap
+PKG_SUPPORTED_OPTIONS=	ldap fancythreads
 
 .include "../../mk/bsd.options.mk"
 
@@ -53,6 +54,12 @@ PKG_SUPPORTED_OPTIONS=	ldap
 .  include "../../databases/openldap-client/buildlink3.mk"
 PINE_LDAPCFLAGS=	LDAPCFLAGS="-DENABLE_LDAP"
 PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
+.endif
+
+.if !empty(PKG_OPTIONS:Mfancythreads)
+PATCH_SITES+=		http://www.math.washington.edu/~chappa/pine/patches/pine4.64/
+PATCHFILES+=		fancy.patch.gz
+PATCH_DIST_STRIP=	-p1
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
