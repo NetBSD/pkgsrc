@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/02/22 14:45:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/03/03 16:51:36 joerg Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -76,6 +76,7 @@ lib/graphviz/libgvplugin_dot_layout.la
 lib/graphviz/libgvplugin_gd.la
 lib/graphviz/libgvplugin_neato_layout.la
 lib/graphviz/libgvplugin_pango.la
+lib/graphviz/libgvplugin_xlib.la
 lib/graphviz/lua/gv.so
 lib/graphviz/lua/gv_lua.man
 lib/graphviz/lua/libgv_lua.la

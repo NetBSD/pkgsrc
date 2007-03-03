@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2007/02/22 14:45:47 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2007/03/03 16:51:36 joerg Exp $
 
 DISTNAME=	graphviz-2.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -13,14 +13,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+= ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
-CONFIGURE_ARGS+=	--without-pangocairo
-
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-gtk
-CONFIGURE_ARGS+=	--disable-sharp
+CONFIGURE_ARGS+=	--disable-sharp --disable-python --disable-perl --disable-ruby
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
 CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX:Q} X11BASE=${X11BASE:Q}
@@ -61,4 +59,5 @@ pre-build:
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
