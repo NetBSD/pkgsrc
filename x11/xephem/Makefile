@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/03/02 22:20:44 gdt Exp $
+# $NetBSD: Makefile,v 1.48 2007/03/03 12:06:54 joerg Exp $
 
 DISTNAME=	xephem-3.7.2
 PKGREVISION=	1
@@ -56,6 +56,10 @@ do-install:
 		${PREFIX}/share/xephem
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
