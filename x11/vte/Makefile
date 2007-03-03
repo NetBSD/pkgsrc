@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/02/26 18:20:35 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2007/03/03 13:14:09 joerg Exp $
 #
 
 DISTNAME=	vte-0.14.2
@@ -26,11 +26,16 @@ BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 # for FC_WIDTH
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
