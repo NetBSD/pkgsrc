@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.25 2007/03/02 09:38:32 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.26 2007/03/03 12:30:12 kano Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -54,7 +54,7 @@ works.</para>
 	</listitem>
 	<listitem><para><varname>PKG_DBDIR</varname>: Where the
 	    database about installed packages is stored.  The default is
-	    <filename>/var/db/pkg</filename>>.</para>
+	    <filename>/var/db/pkg</filename>.</para>
 	</listitem>
 	<listitem><para><varname>MASTER_SITE_OVERRIDE</varname>:
 	    If set, override the packages'
