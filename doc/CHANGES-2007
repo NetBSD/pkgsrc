@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.522 2007/03/02 21:21:03 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.523 2007/03/03 05:05:12 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1038,3 +1038,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xkbcomp to 1.0.3 [drochner 2007-03-02]
 	Added x11/xrandr version 1.2.0 [drochner 2007-03-02]
 	Updated converters/bibtex2html to 1.85 [tonio 2007-03-02]
+	Updated devel/global to 5.4 [uebayasi 2007-03-03]
