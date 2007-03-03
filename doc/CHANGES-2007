@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.524 2007/03/03 13:22:16 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.525 2007/03/03 20:56:34 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1040,3 +1040,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated converters/bibtex2html to 1.85 [tonio 2007-03-02]
 	Updated devel/global to 5.4 [uebayasi 2007-03-03]
 	Updated www/php4 to 4.4.6 [adrianp 2007-03-03]
+	Updated www/adzap to 20070225 [simonb 2007-03-04]
