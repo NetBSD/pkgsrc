@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.43 2007/03/02 09:38:21 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.44 2007/03/03 13:27:03 kano Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -618,7 +618,7 @@
     <quote>Makefile</quote>, and <varname>BUILD_TARGET</varname>
     defaults to <quote>all</quote>.</para>
 
-    <para>If there is no configure step at all, set
+    <para>If there is no build step at all, set
     <varname>NO_BUILD</varname> to <quote>yes</quote>.</para>
   </sect1>
 
