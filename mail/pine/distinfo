@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.32 2006/01/12 21:02:54 adam Exp $
+$NetBSD: distinfo,v 1.33 2007/03/03 21:54:23 jwise Exp $
 
+SHA1 (fancy.patch.gz) = 6cb75bb64110d8c4e3f94f3725157b6fb28cccd6
+RMD160 (fancy.patch.gz) = 67ff35aa6906eff283549797e7bc6392294e4372
+Size (fancy.patch.gz) = 25129 bytes
 SHA1 (pine4.64.tar.bz2) = b88aeb64ec2fa30bbb38fda3a051d98dc0e19c5e
 RMD160 (pine4.64.tar.bz2) = 8661cd3c0875e46c8cd5eafa7c7c964f79a3b3fd
 Size (pine4.64.tar.bz2) = 3110790 bytes
