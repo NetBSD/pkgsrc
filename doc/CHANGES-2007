@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.523 2007/03/03 05:05:12 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.524 2007/03/03 13:22:16 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xrandr version 1.2.0 [drochner 2007-03-02]
 	Updated converters/bibtex2html to 1.85 [tonio 2007-03-02]
 	Updated devel/global to 5.4 [uebayasi 2007-03-03]
+	Updated www/php4 to 4.4.6 [adrianp 2007-03-03]
