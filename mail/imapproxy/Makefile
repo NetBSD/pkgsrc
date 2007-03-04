@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/04 11:29:58 wiz Exp $
 #
 
 DISTNAME=	imapproxy-1.0
 CATEGORIES=	mail
-MASTER_SITES=	http://www.kuleuven.net/projects/imapproxy/download/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kuleuven.net/projects/imapproxy/
+HOMEPAGE=	http://web.archive.org/web/20030816021412/http://www.kuleuven.net/projects/imapproxy/
 # http://www.imapproxy.org/ ?
 COMMENT=	Simple connection caching IMAP proxy daemon
 

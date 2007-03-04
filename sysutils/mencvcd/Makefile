@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:55 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/04 11:29:58 wiz Exp $
 
 DISTNAME=	mencvcd
 PKGNAME=	${DISTNAME}-0.3
@@ -8,6 +8,7 @@ MASTER_SITES=	http://hammelmann.gmxhome.de/
 EXTRACT_SUFX=
 
 MAINTAINER=	tron@NetBSD.org
+# "MEncVCD is part of MPlayer. You can find it in subdirectory TOOLS/ of the source code."
 HOMEPAGE=	http://hammelmann.gmxhome.de/projects_en.html
 COMMENT=	Script for converting movie files into (S)VCD format
 

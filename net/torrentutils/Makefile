@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2006/10/25 21:07:11 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/04 11:29:58 wiz Exp $
 #
 
 DISTNAME=		torrentutils-0.3.0
 PKGREVISION=		4
 CATEGORIES=		net
-MASTER_SITES=		http://oskarsapps.mine.nu/src/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://oskarsapps.mine.nu/torrentutils.html
+# HOMEPAGE=		http://oskarsapps.mine.nu/torrentutils.html
 COMMENT=		Manage BitTorrent files and interact with trackers
 
 DEPENDS+=		bash-[0-9]*:../../shells/bash
