@@ -1,7 +1,7 @@
-$NetBSD: patch-as,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-as,v 1.2 2007/03/04 13:11:19 hira Exp $
 
---- ../sal/osl/unx/file.cxx.orig	2007-02-17 23:02:10.000000000 +0900
-+++ ../sal/osl/unx/file.cxx	2007-02-17 23:04:04.000000000 +0900
+--- sal/osl/unx/file.cxx.orig	2007-02-17 23:02:10.000000000 +0900
++++ sal/osl/unx/file.cxx	2007-02-17 23:04:04.000000000 +0900
 @@ -1424,7 +1424,7 @@
  
  #ifdef HAVE_STATFS_H
