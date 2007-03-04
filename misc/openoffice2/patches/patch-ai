@@ -1,6 +1,7 @@
-$NetBSD: patch-ai,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
---- ../solenv/inc/tg_app.mk.orig	2007-02-17 17:36:28.000000000 +0900
-+++ ../solenv/inc/tg_app.mk	2007-02-17 17:37:00.000000000 +0900
+$NetBSD: patch-ai,v 1.2 2007/03/04 13:11:19 hira Exp $
+
+--- solenv/inc/tg_app.mk.orig	2007-02-17 17:36:28.000000000 +0900
++++ solenv/inc/tg_app.mk	2007-02-17 17:37:00.000000000 +0900
 @@ -124,7 +124,7 @@
  	@+-$(RM) $(MISC)$/$(@:b).cmd
  	@echo $(APP$(TNR)LINKER) $(APP$(TNR)LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
