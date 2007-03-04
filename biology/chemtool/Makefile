@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/04 21:29:01 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/03/04 11:56:40 joerg Exp $
 
 DISTNAME=	chemtool-1.6.8
 CATEGORIES=	biology
@@ -11,7 +11,7 @@ COMMENT=	Program for drawing organic molecules
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-gnomedir
 
