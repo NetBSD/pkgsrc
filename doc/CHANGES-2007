@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.529 2007/03/04 11:34:30 taca Exp $
+$NetBSD: CHANGES-2007,v 1.530 2007/03/04 13:47:15 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1045,3 +1045,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.4 [obache 2007-03-04]
 	Updated net/dnstop to 20070219 [dogcow 2007-03-04]
 	Updated www/squid to 2.6.10 [taca 2007-03-04]
+	Updated mail/mutt-devel to 1.5.14 [tonio 2007-03-04]
