@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2007/03/04 13:43:44 tonio Exp $
+# $NetBSD: Makefile,v 1.57 2007/03/04 17:22:45 tonio Exp $
 
 DISTNAME=		mutt-1.5.14
+PKGREVISION=		1
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -18,8 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt perl:run
-REPLACE_PERL=		*.pl */*.pl
+USE_TOOLS+=		msgfmt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}		\
@@ -64,18 +64,10 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 # Fix some absolute paths in installed files.
-post-build:
-	for file in ${WRKSRC}/contrib/gpg.rc; do			\
-		${MV} -f $$file $$file.save;				\
-		${SED}	-e "s,/usr/bin/gpg,gpg,g"			\
-			$$file.save > $$file;				\
-	done
-	for file in ${WRKSRC}/doc/mutt.man; do				\
-		${MV} -f $$file $$file.save;				\
-		${SED}	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"		\
-			-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"	\
-			-e "s,/usr/local/,${PREFIX}/,g"			\
-			$$file.save > $$file;				\
-	done
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fix absolute path
+SUBST_STAGE.paths=	post-build
+SUBST_FILES.paths=	contrib/gpg.rc
+SUBST_SED.paths=	-e 's,/usr/bin/gpg,gpg,g'
 
 .include "../../mk/bsd.pkg.mk"
