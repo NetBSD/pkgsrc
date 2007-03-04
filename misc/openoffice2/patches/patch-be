@@ -1,7 +1,7 @@
-$NetBSD: patch-be,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-be,v 1.2 2007/03/04 13:11:19 hira Exp $
 
---- ../python/Python-2.3.4.patch.orig	2007-02-23 02:52:48.000000000 +0900
-+++ ../python/Python-2.3.4.patch	2007-02-23 03:03:12.000000000 +0900
+--- python/Python-2.3.4.patch.orig	2007-02-23 02:52:48.000000000 +0900
++++ python/Python-2.3.4.patch	2007-02-23 03:03:12.000000000 +0900
 @@ -1,5 +1,5 @@
 -*** misc/Python-2.3.4/Makefile.pre.in	Tue Nov 18 20:54:00 2003
 ---- misc/build/Python-2.3.4/Makefile.pre.in	Thu Jun 29 11:02:18 2006

@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-ah,v 1.2 2007/03/04 13:11:18 hira Exp $
 
---- ../solenv/inc/_tg_app.mk.orig	2007-02-17 17:28:18.000000000 +0900
-+++ ../solenv/inc/_tg_app.mk	2007-02-17 17:35:58.000000000 +0900
+--- solenv/inc/_tg_app.mk.orig	2007-02-17 17:28:18.000000000 +0900
++++ solenv/inc/_tg_app.mk	2007-02-17 17:35:58.000000000 +0900
 @@ -87,7 +87,7 @@
  	@+-$(RM) $(MISC)$/$(@:b).cmd
  	@echo $(APP1LINKER) $(APP1LINKFLAGS) $(LINKFLAGSAPP) -L$(PRJ)$/$(INPATH)$/lib $(SOLARLIB) $(STDSLO) \
