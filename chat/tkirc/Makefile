@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/03/04 11:29:58 wiz Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
@@ -7,7 +7,7 @@ CATEGORIES=	chat x11
 MASTER_SITES=	ftp://ftp.informatik.uni-oldenburg.de/pub/tkirc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://netsplit.de/tkirc1/
+HOMEPAGE=	http://web.archive.org/web/20051221091126/http://netsplit.de/tkirc1/
 COMMENT=	GUI for the ircII Internet Relay Chat client
 
 DEPENDS+=	ircII-[0-9]*:../../chat/ircII

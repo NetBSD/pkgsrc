@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2006/03/04 21:31:09 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2007/03/04 11:29:58 wiz Exp $
 
 DISTNAME=	gtkglarea-1.2.3
 PKGREVISION=	2
 CATEGORIES=	x11 graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openev/} \
-		http://www.student.oulu.fi/~jlof/gtkglarea/download/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openev/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.student.oulu.fi/~jlof/gtkglarea/
+HOMEPAGE=	http://web.archive.org/web/20011204180640/http://www.student.oulu.fi/~jlof/gtkglarea/
 COMMENT=	OpenGL/Mesa widget for GTK+ GUI toolkit
 
 USE_LIBTOOL=		yes
