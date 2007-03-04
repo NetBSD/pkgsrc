@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.528 2007/03/04 06:49:43 dogcow Exp $
+$NetBSD: CHANGES-2007,v 1.529 2007/03/04 11:34:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1044,3 +1044,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/p5-DBD-Oracle to 1.19 [grant 2007-03-04]
 	Updated graphics/ruby-RMagick to 1.15.4 [obache 2007-03-04]
 	Updated net/dnstop to 20070219 [dogcow 2007-03-04]
+	Updated www/squid to 2.6.10 [taca 2007-03-04]
