@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2006/08/16 10:42:05 tonio Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/03/04 17:22:45 tonio Exp $
 bin/flea
 bin/mutt
 bin/muttbug
 ${MUTT_DOTLOCK}bin/mutt_dotlock
 bin/pgpewrap
 bin/pgpring
-bin/smime_keys
+${WITHSMIME}bin/smime_keys
 man/man1/flea.1
 man/man1/mutt.1
 man/man1/mutt_dotlock.1
@@ -38,6 +38,7 @@ share/doc/mutt/miscellany.html
 share/doc/mutt/patch-notes.txt
 share/doc/mutt/reference.html
 share/doc/mutt/smime-notes.txt
+share/doc/mutt/tuning.html
 share/examples/mutt/Mush.rc
 share/examples/mutt/Muttrc
 share/examples/mutt/Muttrc.dist
