@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2006/12/11 12:47:13 salo Exp $
+# $NetBSD: Makefile,v 1.56 2007/03/04 13:43:44 tonio Exp $
 
-DISTNAME=		mutt-1.5.13
-PKGREVISION=		2
+DISTNAME=		mutt-1.5.14
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -28,7 +27,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}		\
 			--without-included-gettext			\
 			--enable-pop					\
 			--enable-imap
-MAKE_ENV+=		CHGRP=${CHGRP:Q}
+MAKE_ENV+=		CHGRP=${CHGRP:Q} CHMOD=${CHMOD:Q}
 
 .if (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--without-wc-funcs

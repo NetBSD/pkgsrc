@@ -1,17 +1,17 @@
-$NetBSD: patch-al,v 1.4 2006/07/15 19:34:15 tonio Exp $
+$NetBSD: patch-al,v 1.5 2007/03/04 13:43:45 tonio Exp $
 
---- configure.orig	2006-07-14 20:15:42.000000000 +0200
+--- configure.orig	2006-09-01 09:01:21.000000000 +0200
 +++ configure
-@@ -15076,6 +15076,7 @@ if test "${with_bdb+set}" = set; then
-   withval="$with_bdb"
-   ac_bdb_prefix=$withval
- fi;
+@@ -17512,6 +17512,7 @@ if test "${with_bdb+set}" = set; then
+   withval=$with_bdb; ac_bdb_prefix=$withval
+ fi
+ 
 +    if test x$BDB_INCLUDE_DIR = x -o test x$BDB_LIB_DIR = x -o test x$BDB_LIB = x; then
      if test x$ac_bdb_prefix != xno -a x$ac_cv_gdbmopen != xyes -a x$ac_cv_vlopen != xyes; then
          test x$ac_bdb_prefix = xyes && ac_bdb_prefix="$mutt_cv_prefix /opt/csw/bdb4 /opt /usr/local /usr"
          for d in $ac_bdb_prefix; do
-@@ -15168,6 +15169,9 @@ echo "${ECHO_T}yes" >&6
- echo "${ECHO_T}no" >&6
+@@ -17618,6 +17619,9 @@ echo "${ECHO_T}yes" >&6; }
+ echo "${ECHO_T}no" >&6; }
          fi
      fi
 +    else
