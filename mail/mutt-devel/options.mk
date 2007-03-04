@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.22 2007/03/04 13:43:44 tonio Exp $
+# $NetBSD: options.mk,v 1.23 2007/03/04 17:22:45 tonio Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
-PKG_SUPPORTED_OPTIONS=	ssl sasl mutt-hcache idn mutt-compressed-mbox debug
-PKG_SUGGESTED_OPTIONS=	ssl curses
+PKG_SUPPORTED_OPTIONS=	ssl smime sasl mutt-hcache idn mutt-compressed-mbox debug
+PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
 .include "../../mk/bsd.options.mk"
 
@@ -47,11 +47,11 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .if !empty(PKG_OPTIONS:Mncursesw)
 .  include "../../devel/ncursesw/buildlink3.mk"
 .else
-SUBST_CLASSES+=                curse
-SUBST_MESSAGE.curse=   Fixing mutt to avoid ncursesw
-SUBST_STAGE.curse=     post-patch
-SUBST_FILES.curse=     configure.in configure
-SUBST_SED.curse=       -e 's,for lib in ncurses ncursesw,for lib in ncurses,'
+SUBST_CLASSES+=		curse
+SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw
+SUBST_STAGE.curse=	post-patch
+SUBST_FILES.curse=	configure.in configure
+SUBST_SED.curse=	-e 's,for lib in ncurses ncursesw,for lib in ncurses,'
 .endif
 
 ###
@@ -62,6 +62,20 @@ SUBST_SED.curse=       -e 's,for lib in ncurses ncursesw,for lib in ncurses,'
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .else
 CONFIGURE_ARGS+=	--without-ssl
+.endif
+
+###
+### S/MIME
+###
+.if !empty(PKG_OPTIONS:Msmime)
+USE_TOOLS+=		perl:run
+REPLACE_PERL+=		*.pl */*.pl
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-smime
+PLIST_SUBST+=		WITHSMIME=''
+.else
+CONFIGURE_ARGS+=	--disable-smime
+PLIST_SUBST+=		WITHSMIME='@comment '
 .endif
 
 ###
@@ -77,7 +91,7 @@ CONFIGURE_ARGS+=	--without-gdbm
 #
 CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BUILDLINK_PREFIX.db4}/include
 CONFIGURE_ENV+=		BDB_LIB_DIR=${BUILDLINK_PREFIX.db4}/lib
-CONFIGURE_ENV+=		BDB_LIB=${BUILDLINK_LDADD.db4:S/^-l//}
+CONFIGURE_ENV+=		BDB_LIB=${BUILDLINK_LDADD.db4:S/^-l//:Q}
 .else
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
@@ -86,7 +100,7 @@ CONFIGURE_ARGS+=	--disable-hcache
 ### Compressed mail boxes
 ###
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
-PATCH_SITES+=		http://www.spinnaker.de/mutt/compressed/
+PATCH_SITES=		http://www.spinnaker.de/mutt/compressed/
 PATCHFILES+=		patch-1.5.14.rr.compressed.1.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--enable-compressed
@@ -97,9 +111,9 @@ CONFIGURE_ARGS+=	--enable-compressed
 ###
 .if !empty(PKG_OPTIONS:Midn)
 .  include "../../devel/libidn/buildlink3.mk"
-CONFIGURE_ARGS+=  --with-idn=${BUILDLINK_PREFIX.libidn}
+CONFIGURE_ARGS+=	--with-idn=${BUILDLINK_PREFIX.libidn}
 .else
-CONFIGURE_ARGS+=  --disable-idn
+CONFIGURE_ARGS+=	--disable-idn
 .endif
 
 ###
