@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2006/10/18 20:06:13 tonio Exp $
+# $NetBSD: options.mk,v 1.22 2007/03/04 13:43:44 tonio Exp $
 
 # Global and legacy options
 
@@ -87,7 +87,7 @@ CONFIGURE_ARGS+=	--disable-hcache
 ###
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
 PATCH_SITES+=		http://www.spinnaker.de/mutt/compressed/
-PATCHFILES+=		patch-1.5.13.rr.compressed.1.gz
+PATCHFILES+=		patch-1.5.14.rr.compressed.1.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--enable-compressed
 .endif
