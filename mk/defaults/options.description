@@ -229,6 +229,7 @@ mysql4
 nas			Enable usage of the Network Audio System.
 native	
 ncurses			Enable ncurses support.
+ncursesw		Enable wide character ncurses support.
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nogui	
@@ -295,6 +296,7 @@ slang			Enable S-Lang support.
 slp	
 small-net		Tune for a smaller networks.
 smokeping-speedycgi	Enable SpeedyCGI.
+smime			Enable S/MIME support.
 sndfile			Enable sndfile support.
 snmp	
 socks4			Enable Socks4 support.
