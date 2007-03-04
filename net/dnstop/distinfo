@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2006/10/08 12:43:38 obache Exp $
+$NetBSD: distinfo,v 1.12 2007/03/04 06:49:44 dogcow Exp $
 
-SHA1 (dnstop-20060517.tar.gz) = 008dfb7b9a1bfa1988d397bedb9d012cec850d35
-RMD160 (dnstop-20060517.tar.gz) = 79c166e64280323aaf18a279b64ebc6dc1728329
-Size (dnstop-20060517.tar.gz) = 11746 bytes
+SHA1 (dnstop-20070219.tar.gz) = 09356f1d7cf179c969c240aa7d529d4966df975a
+RMD160 (dnstop-20070219.tar.gz) = d06e164ab5358e22e9d26b688ba877801cc497ef
+Size (dnstop-20070219.tar.gz) = 16685 bytes
