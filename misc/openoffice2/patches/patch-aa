@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 
---- ../sal/util/sal_netbsd.map.orig	2007-02-18 01:17:57.000000000 +0900
-+++ ../sal/util/sal_netbsd.map	2007-02-18 01:46:52.000000000 +0900
+--- sal/util/sal_netbsd.map.orig	2007-02-18 01:17:57.000000000 +0900
++++ sal/util/sal_netbsd.map	2007-02-18 01:46:52.000000000 +0900
 @@ -0,0 +1,569 @@
 +UDK_3_0_0 {
 +    global:

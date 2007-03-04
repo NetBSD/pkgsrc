@@ -1,7 +1,7 @@
-$NetBSD: patch-bn,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-bn,v 1.2 2007/03/04 13:11:19 hira Exp $
 
---- ../crashrep/source/unx/makefile.mk.orig	2007-02-24 00:59:23.000000000 +0900
-+++ ../crashrep/source/unx/makefile.mk	2007-02-24 00:59:55.000000000 +0900
+--- crashrep/source/unx/makefile.mk.orig	2007-02-24 00:59:23.000000000 +0900
++++ crashrep/source/unx/makefile.mk	2007-02-24 00:59:55.000000000 +0900
 @@ -70,8 +70,8 @@
  APP1TARGET=$(TARGET)
  APP1OBJS=$(OBJFILES)

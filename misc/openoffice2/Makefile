@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/04 12:51:27 abs Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/04 13:11:18 hira Exp $
 #
 
 OO_VER=			2.1.0
@@ -30,10 +30,11 @@ BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/OOE680_m6/config_office
+WRKSRC=			${WRKDIR}/OOE680_m6
+CONFIGURE_DIRS=		config_office
+
 USE_LANGUAGES+=		c c++
 GCC_REQD+=		3.0
-
 .if !empty(MACHINE_PLATFORM:MNetBSD-4*)
 USE_PKGSRC_GCC=		YES
 .endif
@@ -79,19 +80,19 @@ INSTALLATION_DIRS=	bin
 SUBST_CLASSES+=			X11_LDFLAGS
 SUBST_MESSAGE.X11_LDFLAGS=	Adding X11_LDFLAGS.
 SUBST_STAGE.X11_LDFLAGS=	post-patch
-SUBST_FILES.X11_LDFLAGS=	../solenv/inc/${OPENOFFICE_OUTPATH:Q}.mk
+SUBST_FILES.X11_LDFLAGS=	solenv/inc/${OPENOFFICE_OUTPATH:Q}.mk
 SUBST_SED.X11_LDFLAGS=		-e 's|@X11_LDFLAGS@|${X11_LDFLAGS}|g'
 
-OO_PKGPATH=	${WRKSRC}/../instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install/${OPENOFFICE_LANGUAGE}
+OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install/${OPENOFFICE_LANGUAGE}
 OO_PKGROOT=	/opt/openoffice.org2.1
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter
 
 post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/bridge.h		\
-		${WRKSRC}/../bridges/inc/bridges/cpp_uno/
+		${WRKSRC}/bridges/inc/bridges/cpp_uno/
 
 do-build:
-	${_ULIMIT_CMD} tcsh -c "setenv PTHREAD_DIAGASSERT Ael && cd ${WRKSRC}/.. && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set && dmake build_all"
+	${_ULIMIT_CMD} tcsh -c "setenv PTHREAD_DIAGASSERT Ael && cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set && dmake build_all"
 
 post-build:
 	cd ${WRKDIR} &&				\

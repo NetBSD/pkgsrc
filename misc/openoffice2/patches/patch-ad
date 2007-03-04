@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-ad,v 1.2 2007/03/04 13:11:18 hira Exp $
 
---- ../sal/osl/unx/system.c.orig	2007-02-17 23:06:23.000000000 +0900
-+++ ../sal/osl/unx/system.c	2007-02-17 23:08:46.000000000 +0900
+--- sal/osl/unx/system.c.orig	2007-02-17 23:06:23.000000000 +0900
++++ sal/osl/unx/system.c	2007-02-17 23:08:46.000000000 +0900
 @@ -71,8 +71,11 @@
  struct passwd *getpwnam_r(const char* name, struct passwd* s, char* buffer, int size )
  #endif /* BUILD_OS_APPLEOSX */
