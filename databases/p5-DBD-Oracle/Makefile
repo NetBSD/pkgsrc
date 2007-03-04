@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/04 01:04:11 grant Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/04 01:17:51 grant Exp $
 
 DISTNAME=	DBD-Oracle-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,10 @@ PKG_FAIL_REASON+=	"The location of ORACLE_HOME does not exist"
 .endif
 
 BUILDLINK_PASSTHRU_DIRS+=	${ORACLE_HOME}
+
+LDFLAGS+=	-L${ORACLE_HOME}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${ORACLE_HOME}/lib
+LDFLAGS+=	-lclntsh
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 
