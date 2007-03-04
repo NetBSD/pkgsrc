@@ -1,7 +1,7 @@
-$NetBSD: patch-bp,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-bp,v 1.2 2007/03/04 13:11:19 hira Exp $
 
---- ../extensions/source/nsplugin/source/makefile.mk.orig	2007-02-24 02:05:26.000000000 +0900
-+++ ../extensions/source/nsplugin/source/makefile.mk	2007-02-24 02:13:01.000000000 +0900
+--- extensions/source/nsplugin/source/makefile.mk.orig	2007-02-24 02:05:26.000000000 +0900
++++ extensions/source/nsplugin/source/makefile.mk	2007-02-24 02:13:01.000000000 +0900
 @@ -115,7 +115,7 @@
  			$(TOOLSLIB)
  

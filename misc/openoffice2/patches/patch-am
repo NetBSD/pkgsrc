@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-am,v 1.2 2007/03/04 13:11:19 hira Exp $
 
---- ../soltools/checkdll/makefile.mk.orig	2007-02-17 17:42:05.000000000 +0900
-+++ ../soltools/checkdll/makefile.mk	2007-02-17 17:42:44.000000000 +0900
+--- soltools/checkdll/makefile.mk.orig	2007-02-17 17:42:05.000000000 +0900
++++ soltools/checkdll/makefile.mk	2007-02-17 17:42:44.000000000 +0900
 @@ -57,7 +57,7 @@
  STDLIB += -ldl
  .ENDIF

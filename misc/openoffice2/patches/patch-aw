@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.1.1.1 2007/02/27 11:55:57 hira Exp $
+$NetBSD: patch-aw,v 1.2 2007/03/04 13:11:19 hira Exp $
 
---- ../sal/osl/unx/system.h.orig	2007-02-17 23:26:16.000000000 +0900
-+++ ../sal/osl/unx/system.h	2007-02-17 22:59:36.000000000 +0900
+--- sal/osl/unx/system.h.orig	2007-02-17 23:26:16.000000000 +0900
++++ sal/osl/unx/system.h	2007-02-17 22:59:36.000000000 +0900
 @@ -136,7 +136,10 @@
  #endif
  
