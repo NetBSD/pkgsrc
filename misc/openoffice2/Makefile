@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/04 13:11:18 hira Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/04 13:19:25 hira Exp $
 #
 
 OO_VER=			2.1.0
@@ -18,7 +18,7 @@ DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 DISTFILES+=		bridge.h
 SITES.bridge.h=		http://www.openoffice.org/source/browse/%2Acheckout%2A/udk/bridges/inc/bridges/cpp_uno/Attic/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		hira@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 2)
 
