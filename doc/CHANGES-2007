@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.525 2007/03/03 20:56:34 simonb Exp $
+$NetBSD: CHANGES-2007,v 1.526 2007/03/04 01:05:04 grant Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/global to 5.4 [uebayasi 2007-03-03]
 	Updated www/php4 to 4.4.6 [adrianp 2007-03-03]
 	Updated www/adzap to 20070225 [simonb 2007-03-04]
+	Updated databases/p5-DBD-Oracle to 1.19 [grant 2007-03-04]
