@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6062 2007/03/03 13:22:16 adrianp Exp $
+$NetBSD: TODO,v 1.6063 2007/03/04 09:36:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,7 @@ Suggested package updates
 	o gnome-applets-2.16.2
 	o gnome-build-0.1.5
 	o gnome-games-2.16.3
-	o gnome-mag-0.14.1
+	o gnome-mag-0.14.2
 	o gnome-screensaver-2.16.3
 	o gnome-session-2.16.3
 	o gnome-speech-0.4.10
@@ -1014,6 +1014,7 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.13
 	o windowlab-1.34
+	o wine-0.9.32
 	o wmweather-2.4.3
 	o worker-2.14.2
 	o wwwoffle-2.9b
