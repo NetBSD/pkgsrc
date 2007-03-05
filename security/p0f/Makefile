@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:10 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/05 20:31:51 adrianp Exp $
 #
 
-DISTNAME=	p0f-2.0.5
-PKGREVISION=	1
+DISTNAME=	p0f-2.0.8
 CATEGORIES=	security net
 MASTER_SITES=	http://lcamtuf.coredump.cx/p0f/
 EXTRACT_SUFX=	.tgz
