@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.3 2006/10/01 07:48:38 obache Exp $
+$NetBSD: patch-ag,v 1.4 2007/03/05 15:56:27 obache Exp $
 
---- LTmakefile.in.orig	2006-08-24 11:57:27.000000000 +0900
+--- LTmakefile.in.orig	2007-03-05 15:58:16.000000000 +0900
 +++ LTmakefile.in
 @@ -37,7 +37,7 @@ MYLIBDIR = @libdir@
  MYBINDIR = @bindir@
@@ -12,7 +12,7 @@ $NetBSD: patch-ag,v 1.3 2006/10/01 07:48:38 obache Exp $
  
  # Building binaries
 @@ -46,11 +46,11 @@ CC = gcc
- CFLAGS = -I. -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
+ CFLAGS = -I. -I$(MYHEADDIR) -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
    -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
    -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
 -  -DPIC=1 -D_THREAD_SAFE=1 -D_REENTRANT=1 -DNDEBUG -O3
