@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.185 2007/02/23 02:49:56 rillig Exp $
+# $NetBSD: replace.mk,v 1.186 2007/03/05 23:35:59 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -607,8 +607,6 @@ TOOLS_CREATE+=			pkg-config
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pkg-config=pkg-config
 TOOLS_PATH.pkg-config=		${TOOLS_PREFIX.pkg-config}/bin/pkg-config
 .  endif
-.else
-TOOLS_FAIL+=			pkg-config
 .endif
 
 .if !defined(TOOLS_IGNORE.pod2man) && !empty(_USE_TOOLS:Mpod2man)
