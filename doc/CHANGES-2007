@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.532 2007/03/05 16:01:53 rmind Exp $
+$NetBSD: CHANGES-2007,v 1.533 2007/03/05 16:04:50 rmind Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -24,9 +24,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Added time/p5-Time-Duration version 1.37 [reed 2007-01-02]
 	Updated devel/libgphoto2 to 2.3.1 [adam 2007-01-02]
 	Updated graphics/gphoto2 to 2.3.1 [adam 2007-01-02]
-        Updated graphics/libkexif to 0.2.5 [xtraeme 2007-01-02]
-        Updated graphics/libkipi to 0.1.5 [xtraeme 2007-01-02]
-        Updated graphics/kipi-plugins to 0.1.3rc1 [xtraeme 2007-01-02]
+	Updated graphics/libkexif to 0.2.5 [xtraeme 2007-01-02]
+	Updated graphics/libkipi to 0.1.5 [xtraeme 2007-01-02]
+	Updated graphics/kipi-plugins to 0.1.3rc1 [xtraeme 2007-01-02]
 	Updated graphics/digikam to 0.9.0 [xtraeme 2007-01-02]
 	Updated graphics/digikamimageplugins to 0.9.0 [xtraeme 2007-01-02]
 	Updated audio/openal to 0.0.8 [wiz 2007-01-03]
