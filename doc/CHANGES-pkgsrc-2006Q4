@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.48 2007/03/05 12:12:42 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.49 2007/03/05 12:30:30 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -114,4 +114,6 @@ security update for firefox
 Pullup ticket 2037 - requested by njoly
 MASTER_SITES update for fprot-workstation-bin
 Pullup ticket 2026 - requested by salo
-security patch for xine-ui
+security fix for xine-ui
+Pullup ticket 2038 - requested by salo
+build/usability fixes for clamav
