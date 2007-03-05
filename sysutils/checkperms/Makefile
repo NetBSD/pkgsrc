@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/03/05 02:38:33 dbj Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/05 23:06:30 rillig Exp $
 #
 
-DISTNAME=	checkperms-1.4
-PKGREVISION=	2
+DISTNAME=	checkperms-1.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.schlechte-software.de/checkperms/
 
