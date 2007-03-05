@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2006/11/17 15:14:34 obache Exp $
+$NetBSD: patch-ad,v 1.2 2007/03/05 15:58:20 obache Exp $
 
---- rubynative/configure.orig	2006-11-11 19:57:57.000000000 +0900
+--- rubynative/configure.orig	2007-03-05 18:38:33.000000000 +0900
 +++ rubynative/configure
 @@ -1285,7 +1285,7 @@ fi
  printf '%s\n' "$RDOC"
