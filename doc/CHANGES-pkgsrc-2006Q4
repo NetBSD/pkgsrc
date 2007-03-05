@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.49 2007/03/05 12:30:30 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.50 2007/03/05 19:17:05 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -117,3 +117,5 @@ Pullup ticket 2026 - requested by salo
 security fix for xine-ui
 Pullup ticket 2038 - requested by salo
 build/usability fixes for clamav
+Pullup ticket 2039 - requested by ghen
+security update for thunderbird
