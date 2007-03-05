@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2006/10/01 07:48:38 obache Exp $
+$NetBSD: patch-ab,v 1.3 2007/03/05 15:56:27 obache Exp $
 
---- perl/Makefile.in.orig	2006-09-06 12:37:15.000000000 +0900
+--- perl/Makefile.in.orig	2006-11-12 21:18:12.000000000 +0900
 +++ perl/Makefile.in
 @@ -21,16 +21,16 @@ MYDOCS = plspex.html plspex-ja.html plap
  prefix = @prefix@
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.2 2006/10/01 07:48:38 obache Exp $
 -INC = -I. -I../.. -I$(HOME)/include -I/usr/local/include
 +INC = -I. -I../..
  OPTIMIZE = -O2
- LD = ld
+ LD = gcc
 -LIBS = -L../.. -I$(HOME)/lib -L/usr/local/lib -lqdbm @LIBS@
 -RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib:$(HOME)/lib
 +LIBS = -L../.. -lqdbm @LIBS@
