@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2007/03/05 02:38:33 dbj Exp $
+
+--- checkperms.c.orig	2006-11-02 10:39:38.000000000 -0800
++++ checkperms.c	2007-03-04 18:30:31.000000000 -0800
+@@ -211,9 +211,18 @@ should_clear_x_bit(const char *fname, mo
+ 	if (memcmp(buf, "<big", 4) == 0)
+ 		return 0;
+ 
+-	/* Mac OS X binaries */
++	/* ppc Mac OS X binaries */
+ 	if (buf[0] == 0xfe && buf[1] == 0xed && buf[2] == 0xfa && buf[3] == 0xce)
+ 		return 0;
++	/* ppc64 Mac OS X binaries */
++	if (buf[0] == 0xfe && buf[1] == 0xed && buf[2] == 0xfa && buf[3] == 0xcf)
++		return 0;
++	/* i386 Mac OS X binaries */
++	if (buf[0] == 0xce && buf[1] == 0xfa && buf[2] == 0xed && buf[3] == 0xfe)
++		return 0;
++	/* Universal Mac OS X binaries */
++	if (buf[0] == 0xca && buf[1] == 0xfe && buf[2] == 0xba && buf[3] == 0xbe)
++		return 0;
+ 
+ 	/* As a special case, libtool libraries may have the executable bit,
+ 	 * although they probably don't need it.
