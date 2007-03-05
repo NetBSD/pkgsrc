@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.533 2007/03/05 16:04:50 rmind Exp $
+$NetBSD: CHANGES-2007,v 1.534 2007/03/05 16:09:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1050,3 +1050,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey-bin to 1.1.1 [ghen 2007-03-05]
 	Updated www/seamonkey-gtk1 to 1.1.1nb1 [ghen 2007-03-05]
 	Updated benchmarks/sysbench to 0.4.8 [rmind 2007-03-05]
+	Updated databases/qdbm to 1.8.75 [obache 2007-03-05]
+	Updated databases/ruby-qdbm to 1.0.0.1.8.75 [obache 2007-03-05]
+	Updated databases/p5-qdbm to 1.0.0.1.8.75 [obache 2007-03-05]
+	Updated databases/qdbm-cgi to 0.0.1.1.8.75 [obache 2007-03-05]
+	Updated databases/qdbm-plus to 1.0.0.1.8.75 [obache 2007-03-05]
+	Updated textproc/hyperestraier to 1.4.10 [obache 2007-03-05]
+	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.10 [obache 2007-03-05]
+	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.10 [obache 2007-03-05]
+	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.10 [obache 2007-03-05]
