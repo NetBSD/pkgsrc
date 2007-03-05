@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2004/05/12 16:42:49 drochner Exp $
+$NetBSD: patch-ai,v 1.1.22.1 2007/03/05 12:11:42 ghen Exp $
 
---- src/xitk/xine-remote.c.orig	2004-05-11 23:39:22.000000000 +0200
-+++ src/xitk/xine-remote.c	2004-05-11 23:45:24.000000000 +0200
+--- src/xitk/xine-remote.c.orig	2005-07-16 21:05:32.000000000 +0200
++++ src/xitk/xine-remote.c	2007-02-17 22:24:26.000000000 +0100
 @@ -30,6 +30,7 @@
  #endif
  /* required for strncasecmp() */
@@ -29,4 +29,121 @@ $NetBSD: patch-ai,v 1.1 2004/05/12 16:42:49 drochner Exp $
 +#include <readline/history.h>
  
  #include "common.h"
+ 
+@@ -638,7 +639,7 @@ static int write_to_console(session_t *s
+   va_end(args);
+   
+   pthread_mutex_lock(&session->console_mutex);
+-  err = write_to_console_unlocked(session, buf);
++  err = write_to_console_unlocked(session, "%s", buf);
+   pthread_mutex_unlock(&session->console_mutex);
+ 
+   return err;
+@@ -998,7 +999,7 @@ static void *select_thread(void *data) {
+ 		  write_to_console_unlocked_nocr(session, "\b \b");
+ 		  pos--;
+ 		}
+-		write_to_console_unlocked(session, obuffer);
++		write_to_console_unlocked(session, "%s", obuffer);
+ 
+ 		rl_crlf();
+ 		rl_forced_update_display();
+@@ -1082,7 +1083,7 @@ static void client_handle_command(sessio
+ 	  
+ 	  *pp = '\0';
+ 	  
+-	  if((sock_write(session->socket, buf)) == -1) {
++	  if((sock_write(session->socket, "%s", buf)) == -1) {
+ 	    session->running = 0;
+ 	  }
+ 	}
+@@ -1094,7 +1095,7 @@ static void client_handle_command(sessio
+   
+   /* Perhaps a ';' separated commands, so send anyway to server */
+   if(found == 0) {
+-    sock_write(session->socket, (char *)command);
++    sock_write(session->socket, "%s", (char *)command);
+   }
+   
+   if((!strncasecmp(cmd, "exit", strlen(cmd))) || (!strncasecmp(cmd, "halt", strlen(cmd)))) {
+@@ -1714,7 +1715,7 @@ static void do_commands(commands_t *cmd,
+     i++;
+   }
+   sprintf(buf, "%s.\n", buf);
+-  sock_write(client_info->socket, buf);
++  sock_write(client_info->socket, "%s", buf);
+ }
+ 
+ static void do_help(commands_t *cmd, client_info_t *client_info) {
+@@ -1760,7 +1761,7 @@ static void do_help(commands_t *cmd, cli
+     }
+     
+     sprintf(buf, "%s\n", buf);
+-    sock_write(client_info->socket, buf);
++    sock_write(client_info->socket, "%s", buf);
+   }
+   else {
+     int i;
+@@ -2096,7 +2097,7 @@ static void do_get(commands_t *cmd, clie
+ 	  sprintf(buf, "%s%s", buf, "*UNKNOWN*");
+ 	
+ 	sprintf(buf, "%s%c", buf, '\n');
+-	sock_write(client_info->socket, buf);
++	sock_write(client_info->socket, "%s", buf);
+       }
+       else if(is_arg_contain(client_info, 1, "speed")) {
+ 	char buf[64];
+@@ -2116,7 +2117,7 @@ static void do_get(commands_t *cmd, clie
+ 	  sprintf(buf, "%s%s", buf, "*UNKNOWN*");
+ 	
+ 	sprintf(buf, "%s%c", buf, '\n');
+-	sock_write(client_info->socket, buf);
++	sock_write(client_info->socket, "%s", buf);
+       }
+       else if(is_arg_contain(client_info, 1, "position")) {
+ 	char buf[64];
+@@ -2128,7 +2129,7 @@ static void do_get(commands_t *cmd, clie
+ 			    &pos_time,
+ 			    &length_time);
+ 	snprintf(buf, sizeof(buf), "%s: %d\n", "Current position", pos_time);
+-	sock_write(client_info->socket, buf);
++	sock_write(client_info->socket, "%s", buf);
+       }
+       else if(is_arg_contain(client_info, 1, "length")) {
+ 	char buf[64];
+@@ -2140,7 +2141,7 @@ static void do_get(commands_t *cmd, clie
+ 			    &pos_time,
+ 			    &length_time);
+ 	snprintf(buf, sizeof(buf), "%s: %d\n", "Current length", length_time);
+-	sock_write(client_info->socket, buf);
++	sock_write(client_info->socket, "%s", buf);
+       }
+       else if(is_arg_contain(client_info, 1, "loop")) {
+ 	char buf[64];
+@@ -2169,7 +2170,7 @@ static void do_get(commands_t *cmd, clie
+ 	}
+ 
+ 	sprintf(buf, "%s.\n", buf);
+-	sock_write(client_info->socket, buf);
++	sock_write(client_info->socket, "%s", buf);
+       }
+     }
+     else if(nargs >= 2) {
+@@ -2552,7 +2553,7 @@ static void do_halt(commands_t *cmd, cli
+ static void network_messenger(void *data, char *message) {
+   int socket = (int) data;
+   
+-  sock_write(socket, message);
++  sock_write(socket, "%s", message);
+ }
+ 
+ static void do_snap(commands_t *cmd, client_info_t *client_info) {
+@@ -2577,7 +2578,7 @@ static void say_hello(client_info_t *cli
+   else {
+     snprintf(buf, sizeof(buf), "%s %s %s\n", PACKAGE, VERSION, "remote server. Nice to meet you.");
+   }
+-  sock_write(client_info->socket, buf);
++  sock_write(client_info->socket, "%s", buf);
+   
+ }
  

@@ -1,0 +1,17 @@
+$NetBSD: patch-ba,v 1.1.2.2 2007/03/05 12:11:43 ghen Exp $
+
+--- src/xitk/panel.c.orig	2005-07-24 04:40:37.000000000 +0200
++++ src/xitk/panel.c	2007-02-17 21:56:02.000000000 +0100
+@@ -845,10 +845,10 @@ void panel_toggle_audio_mute(xitk_widget
+  *  to snapshot current frame.
+  */
+ static void panel_snapshot_error(void *data, char *message) {
+-  xine_error(message);
++  xine_error("%s", message);
+ }
+ static void panel_snapshot_info(void *data, char *message) {
+-  xine_info(message);
++  xine_info("%s", message);
+ }
+ void panel_snapshot(xitk_widget_t *w, void *data) {
+   create_snapshot(gGui->mmk.mrl, panel_snapshot_error, panel_snapshot_info, NULL);
