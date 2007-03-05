@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/04/07 05:10:39 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2007/03/05 20:14:33 darcy Exp $
 
---- GNUmakefile.orig	2004-11-04 22:47:34.000000000 +0000
+--- GNUmakefile.orig	2004-11-04 17:47:34.000000000 -0500
 +++ GNUmakefile
 @@ -25,21 +25,21 @@ DISTDIR=$(builddir)/$(NAME)-$(VERSION)
  TARBALL=$(DISTDIR).tar.gz
@@ -28,7 +28,15 @@ $NetBSD: patch-aa,v 1.4 2006/04/07 05:10:39 minskim Exp $
  ##MAPDIR=$(TEXCONFDIR)/dvips
  
  
-@@ -87,17 +87,17 @@ $(MAPFILE): GNUmakefile
+@@ -80,24 +80,24 @@ $(builddir)/tfm/%.tfm: $(VARTEXFONTS)/%.
+ 
+ $(builddir)/pfa/%.pfa: 
+ 	@-mkdir $(builddir)/pfa 2>/dev/null
+-	TEXMF= mftrace --verbose --simplify --potrace $(notdir $(basename $@))
++	TEXMF= mftrace --verbose --simplify --potrace=POTRACE $(notdir $(basename $@))
+ 	mv $(notdir $@) $(builddir)/pfa/
+ 
+ $(MAPFILE): GNUmakefile
  	($(foreach ec,$(ECFONTS), echo '$(ec) $(ec) <$(ec).pfa' && ) true) > $@
  
  install: $(TFMS) $(PFAS)
