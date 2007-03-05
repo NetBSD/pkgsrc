@@ -1,0 +1,20 @@
+$NetBSD: patch-au,v 1.1.2.2 2007/03/05 12:11:42 ghen Exp $
+
+--- src/fb/osd.c.orig	2003-12-01 18:23:27.000000000 +0100
++++ src/fb/osd.c	2007-02-17 21:56:02.000000000 +0100
+@@ -589,7 +589,7 @@ void osd_display_spu_lang(void) {
+   }
+   
+   sprintf(buffer, "Subtitles: %s", lang);
+-  osd_display_info(buffer);
++  osd_display_info("%s", buffer);
+ }
+ 
+ void osd_display_audio_lang(void) {
+@@ -618,5 +618,5 @@ void osd_display_audio_lang(void) {
+   }
+ 
+   sprintf(buffer, "Audio Channel: %s", lang);
+-  osd_display_info(buffer);
++  osd_display_info("%s", buffer);
+ }

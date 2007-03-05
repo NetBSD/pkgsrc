@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2006/04/21 11:11:26 drochner Exp $
+$NetBSD: patch-aq,v 1.1.8.1 2007/03/05 12:11:42 ghen Exp $
 
---- src/xitk/main.c.orig	2006-04-20 11:59:48.000000000 +0200
-+++ src/xitk/main.c
+--- src/xitk/main.c.orig	2007-02-17 22:10:56.000000000 +0100
++++ src/xitk/main.c	2007-02-17 22:10:38.000000000 +0100
 @@ -456,7 +456,7 @@ static void print_formatted(char *title,
    int          len;
    char        *blanks = "     ";
@@ -29,3 +29,12 @@ $NetBSD: patch-aq,v 1.1 2006/04/21 11:11:26 drochner Exp $
    
    printf(".\n\n");
  }
+@@ -1249,7 +1249,7 @@ static void event_listener(void *user_da
+       snprintf(buffer, sizeof(buffer), "%s [%d%%]\n", pevent->description, pevent->percent);
+       gGui->mrl_overrided = 3;
+       panel_set_title(buffer);
+-      osd_display_info(buffer);
++      osd_display_info("%s", buffer);
+     }
+     break;
+ 

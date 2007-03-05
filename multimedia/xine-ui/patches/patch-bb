@@ -1,0 +1,31 @@
+$NetBSD: patch-bb,v 1.1.2.2 2007/03/05 12:11:43 ghen Exp $
+
+--- src/xitk/xine-toolkit/window.c.orig	2004-12-31 01:52:15.000000000 +0100
++++ src/xitk/xine-toolkit/window.c	2007-02-17 21:56:02.000000000 +0100
+@@ -1088,7 +1088,7 @@ xitk_window_t *xitk_window_dialog_ok_wit
+     char buf2[(strlen(buf) * 2) + 1];
+     xitk_subst_special_chars(buf, buf2);
+     xw = xitk_window_dialog_one_button_with_width(im, title, _("OK"), cb, userdata, window_width,
+-						  align, buf2);
++						  align, "%s", buf2);
+   }
+   XITK_FREE(buf);
+   return xw;
+@@ -1337,7 +1337,7 @@ xitk_window_t *xitk_window_dialog_yesno_
+     
+     xitk_subst_special_chars(buf, buf2);
+     xw = xitk_window_dialog_two_buttons_with_width(im, title, _("Yes"), _("No"), 
+-						   ycb, ncb, userdata, window_width, align, buf2);
++						   ycb, ncb, userdata, window_width, align, "%s", buf2);
+   }
+ 
+   XITK_FREE(buf);
+@@ -1559,7 +1559,7 @@ xitk_window_t *xitk_window_dialog_yesnoc
+     
+     xitk_subst_special_chars(buf, buf2);
+     xw = xitk_window_dialog_three_buttons_with_width(im, title, _("Yes"), _("No"), _("Cancel"),
+-						     ycb, ncb, ccb, userdata, window_width, align, buf2);
++						     ycb, ncb, ccb, userdata, window_width, align, "%s", buf2);
+   }
+   XITK_FREE(buf);
+   return xw;
