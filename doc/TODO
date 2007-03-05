@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6066 2007/03/05 11:51:17 ghen Exp $
+$NetBSD: TODO,v 1.6067 2007/03/05 12:09:38 ghen Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,7 @@ Suggested package updates
 	o dap-2.1.5
 	o dar-2.3.3
 	o db4-4.5.20
-	o dbmail-2.0.10 [or 2.2.3, new stable series?]
+	o dbmail-2.0.11 [or 2.2.3?]
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
