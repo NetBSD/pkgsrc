@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2007/02/01 23:08:08 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/03/05 04:01:20 xtraeme Exp $
 #
 
 DISTNAME=	fluxbox-1.0rc2
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -43,6 +44,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
