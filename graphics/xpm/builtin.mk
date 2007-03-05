@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2006/04/06 06:22:06 reed Exp $
+# $NetBSD: builtin.mk,v 1.12.6.1 2007/03/05 04:31:21 dbj Exp $
 
 BUILTIN_PKG:=	xpm
 
@@ -22,6 +22,8 @@ IS_BUILTIN.xpm!=							\
 		${ECHO} no;						\
 	fi
 .    elif ${OPSYS} == "IRIX"
+IS_BUILTIN.xpm=		yes
+.    elif ${OPSYS} == "Darwin"
 IS_BUILTIN.xpm=		yes
 .    else
 BUILTIN_IMAKE_CHECK:=	xpm:NormalLibXpm
