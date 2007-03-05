@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/02/20 16:02:11 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/03/05 11:46:21 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -369,9 +369,7 @@ lib/${MOZILLA}/components/xuldoc.xpt
 lib/${MOZILLA}/components/xultmpl.xpt
 lib/${MOZILLA}/defaults/autoconfig/platform.js
 lib/${MOZILLA}/defaults/autoconfig/prefcalls.js
-lib/${MOZILLA}/defaults/isp/US/gmail.rdf
 lib/${MOZILLA}/defaults/isp/US/movemail.rdf
-lib/${MOZILLA}/defaults/isp/gmail.rdf
 lib/${MOZILLA}/defaults/isp/movemail.rdf
 lib/${MOZILLA}/defaults/messenger/SpamAssassin.sfd
 lib/${MOZILLA}/defaults/messenger/SpamPal.sfd
@@ -1750,6 +1748,8 @@ include/${MOZILLA}/msgbase/nsIMsgFolder.h
 include/${MOZILLA}/msgbase/nsIMsgFolderCache.h
 include/${MOZILLA}/msgbase/nsIMsgFolderCacheElement.h
 include/${MOZILLA}/msgbase/nsIMsgFolderCompactor.h
+include/${MOZILLA}/msgbase/nsIMsgFolderListener.h
+include/${MOZILLA}/msgbase/nsIMsgFolderNotificationService.h
 include/${MOZILLA}/msgbase/nsIMsgGroupRecord.h
 include/${MOZILLA}/msgbase/nsIMsgHdr.h
 include/${MOZILLA}/msgbase/nsIMsgHost.h
