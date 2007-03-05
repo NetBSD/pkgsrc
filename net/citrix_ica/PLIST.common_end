@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2005/02/21 21:24:06 veego Exp $
-@dirrm lib/ICAClient/.config
+@comment $NetBSD: PLIST.common_end,v 1.2 2007/03/05 18:01:03 sborrill Exp $
 @dirrm lib/ICAClient/config
-@dirrm lib/ICAClient/cache/zlcache
-@dirrm lib/ICAClient/cache
 @dirrm lib/ICAClient/desktop
 @dirrm lib/ICAClient/help
 @dirrm lib/ICAClient/icons
