@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.531 2007/03/05 11:51:17 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.532 2007/03/05 16:01:53 rmind Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1049,3 +1049,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey to 1.1.1 [ghen 2007-03-05]
 	Updated www/seamonkey-bin to 1.1.1 [ghen 2007-03-05]
 	Updated www/seamonkey-gtk1 to 1.1.1nb1 [ghen 2007-03-05]
+	Updated benchmarks/sysbench to 0.4.8 [rmind 2007-03-05]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/11/21 10:59:25 tron Exp $
+# $NetBSD: Makefile,v 1.41 2007/03/05 16:01:58 rmind Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -34,6 +34,7 @@ SUBDIR+=	postal
 SUBDIR+=	postmark
 SUBDIR+=	randread
 SUBDIR+=	skampi
+SUBDIR+=	sysbench
 SUBDIR+=	thrulay
 SUBDIR+=	ttcp
 SUBDIR+=	ubench
