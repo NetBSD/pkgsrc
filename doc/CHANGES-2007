@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.536 2007/03/05 18:02:15 sborrill Exp $
+$NetBSD: CHANGES-2007,v 1.537 2007/03/05 20:35:45 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.10 [obache 2007-03-05]
 	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.10 [obache 2007-03-05]
 	Updated net/citrix_ica to 10.0.110003 [sborrill 2007-03-05]
+	Updated security/p0f to 2.0.8 [adrianp 2007-03-05]
