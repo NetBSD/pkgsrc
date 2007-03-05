@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/11/08 13:15:40 ghen Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2007/03/05 19:16:36 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -70,6 +70,7 @@ lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
+lib/${MOZILLA}/libfreebl3.${SO_SUFFIX}
 lib/${MOZILLA}/libgfxpsshar.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
@@ -315,6 +316,7 @@ lib/${MOZILLA}/greprefs/xpinstall.js
 lib/${MOZILLA}/icons/mozicon16.xpm
 lib/${MOZILLA}/icons/mozicon50.xpm
 lib/${MOZILLA}/init.d/README
+lib/${MOZILLA}/libfreebl3.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
@@ -2725,8 +2727,6 @@ include/${MOZILLA}/nss/ssl.h
 include/${MOZILLA}/nss/sslerr.h
 include/${MOZILLA}/nss/sslproto.h
 include/${MOZILLA}/nss/sslt.h
-include/${MOZILLA}/nss/swfort.h
-include/${MOZILLA}/nss/swfortt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
