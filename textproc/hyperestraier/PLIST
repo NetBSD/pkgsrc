@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/11/11 12:42:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/03/05 15:58:19 obache Exp $
 bin/estbutler
 bin/estcall
 bin/estcmd
@@ -14,11 +14,13 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.34.0
+lib/libestraier.so.8.35.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estfraud.cgi
 libexec/estproxy.cgi
+libexec/estscout.cgi
 libexec/estseek.cgi
+libexec/estsupt.cgi
 man/man1/estcall.1
 man/man1/estcmd.1
 man/man1/estconfig.1
@@ -33,6 +35,7 @@ share/hyperestraier/doc/cguide-en.html
 share/hyperestraier/doc/cguide-ja.html
 share/hyperestraier/doc/common.css
 share/hyperestraier/doc/coreframe.png
+share/hyperestraier/doc/gateframe.png
 share/hyperestraier/doc/icon16.png
 share/hyperestraier/doc/index.html
 share/hyperestraier/doc/index.ja.html
@@ -254,10 +257,12 @@ share/hyperestraier/estfraud.conf
 share/hyperestraier/estproxy.conf
 share/hyperestraier/estraier.idl
 share/hyperestraier/estresult.dtd
+share/hyperestraier/estscout.conf
 share/hyperestraier/estseek.conf
 share/hyperestraier/estseek.help
 share/hyperestraier/estseek.tmpl
 share/hyperestraier/estseek.top
+share/hyperestraier/estsupt.conf
 share/hyperestraier/filter/estfxasis
 share/hyperestraier/filter/estfxmantotxt
 share/hyperestraier/filter/estfxmsotohtml
