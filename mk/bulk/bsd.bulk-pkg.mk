@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.136 2007/03/06 10:56:34 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.137 2007/03/06 15:54:54 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -355,7 +355,7 @@ bulk-package:
 	  ${ECHO} "### pkgsrc build log for ${PKGNAME}"; \
 	  ${ECHO} "###"; \
 	  ${ECHO} ""; \
-	} | ${TEE} -a ${_BUILDLOG}
+	} >> ${_BUILDLOG}
 	${RUN} set +e; \
 	uptodate=`${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if [ $$uptodate = 1 ]; then \
@@ -437,6 +437,10 @@ bulk-package:
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO} ${RECURSIVE_MAKE} package; \
+		${ECHO} "";						\
+		${ECHO} "===> Warnings from the wrapper log (sorted):"; \
+		${GREP} "^WARNING" ${WRKLOG} | ${SORT} -u | ${TO_HTML}; \
+		${ECHO} "";						\
 		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q} ; \
 		if [ -f ${PKGFILE} ]; then \
 			case ${KEEP_BUILDLOGS} in			\
@@ -457,13 +461,6 @@ bulk-package:
 			${RM} -f ${_BUILDLOG:Q};			\
 			if [ -f "${WRKLOG}" ]; then \
 				${CP} ${WRKLOG:Q} ${_BROKENWRKLOG:Q}; \
-				{ ${ECHO} "<pre>";			\
-				  ${ECHO} "";				\
-				  ${ECHO} "===> Warnings from the wrapper log (sorted):"; \
-				  ${GREP} "^WARNING" ${WRKLOG} | ${SORT} -u | ${TO_HTML}; \
-				  ${ECHO} "";				\
-				  ${ECHO} "</pre>";			\
-				} >> ${_BROKENFILE};			\
 			fi; \
 			( \
 			if [ -f ${_BROKENWRKLOG:Q} ]; then \
