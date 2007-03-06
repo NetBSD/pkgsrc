@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.542 2007/03/06 10:49:23 martti Exp $
+$NetBSD: CHANGES-2007,v 1.543 2007/03/06 14:07:02 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/sbcl to 1.0.3 [jonb 2007-03-06]
 	Updated mail/clamav to 0.90.1 [martti 2007-03-06]
 	Updated databases/rrdtool to 1.2.19 [martti 2007-03-06]
+	Updated editors/vim-share to 7.0.207 [martti 2007-03-06]
