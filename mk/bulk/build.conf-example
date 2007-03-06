@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.36 2006/06/02 22:01:46 dillo Exp $
+# $NetBSD: build.conf-example,v 1.37 2007/03/06 10:57:11 rillig Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -11,9 +11,6 @@
 
 # The OS release this bulk build is happening on.
 osrev=`uname -r`
-
-# The machine architecture this is happening on.
-arch=`uname -m`
 
 # Where our pkgsrc is located.
 USR_PKGSRC="/usr/pkgsrc"
