@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/11/23 10:04:15 ghen Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2007/03/06 15:19:24 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -99,6 +99,7 @@ lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxremoteservice.${SO_SUFFIX}
+lib/${MOZILLA}/libfreebl3.${SO_SUFFIX}
 lib/${MOZILLA}/libgfxpsshar.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
@@ -435,6 +436,7 @@ lib/${MOZILLA}/greprefs/xpinstall.js
 lib/${MOZILLA}/init.d/README
 lib/${MOZILLA}/init.d/S80calendar_fix_permissions_bug_230617
 lib/${MOZILLA}/install.rdf
+lib/${MOZILLA}/libfreebl3.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
@@ -721,6 +723,7 @@ include/${MOZILLA}/bayesflt/nsBayesianFilterCID.h
 include/${MOZILLA}/browser/nsIBrowserInstance.h
 include/${MOZILLA}/cairo/cairo-features.h
 include/${MOZILLA}/cairo/cairo-ft.h
+include/${MOZILLA}/cairo/cairo-rename.h
 include/${MOZILLA}/cairo/cairo-xlib-xrender.h
 include/${MOZILLA}/cairo/cairo-xlib.h
 include/${MOZILLA}/cairo/cairo.h
@@ -3037,8 +3040,6 @@ include/${MOZILLA}/nss/ssl.h
 include/${MOZILLA}/nss/sslerr.h
 include/${MOZILLA}/nss/sslproto.h
 include/${MOZILLA}/nss/sslt.h
-include/${MOZILLA}/nss/swfort.h
-include/${MOZILLA}/nss/swfortt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom

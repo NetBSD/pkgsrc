@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2006/12/20 14:22:45 ghen Exp $
+$NetBSD: distinfo,v 1.17.2.1 2007/03/06 15:19:24 salo Exp $
 
-SHA1 (seamonkey-1.0.7.source.tar.bz2) = 55ecc2caad917b2a3e280267a0e74a9951d6e557
-RMD160 (seamonkey-1.0.7.source.tar.bz2) = a5e0d7cf5bf86665da3e29ac83f353e20917321d
-Size (seamonkey-1.0.7.source.tar.bz2) = 35944994 bytes
+SHA1 (seamonkey-1.0.8.source.tar.bz2) = bbfbc486ce679211f320d41240b070cc2b995d53
+RMD160 (seamonkey-1.0.8.source.tar.bz2) = 01f1b588a320392dfe874a9929846939cbabdde1
+Size (seamonkey-1.0.8.source.tar.bz2) = 35887050 bytes
 SHA1 (patch-aa) = 2d117311991c4c71803f3c446334d7b6f1e1067a
 SHA1 (patch-ab) = 4bcabb447ca151c5e87e8799398ee239e69f3f90
 SHA1 (patch-ac) = b05971f672c83c80a29edc69c2055fd6ca855fa1
@@ -17,11 +17,11 @@ SHA1 (patch-ak) = f867ca0973fb4d0ca325b25f83586f10f6e85e32
 SHA1 (patch-al) = d916f38de2fa0ca1993ec75c457fccc60ee6d612
 SHA1 (patch-an) = 99ac2da44322db96f8d65fbfdb380727b9da96fe
 SHA1 (patch-ao) = 617d232bd335bc988388f2004ca919c829e371da
-SHA1 (patch-ap) = 856f74f774b4db7df9b4453aea4d849893ee6bf1
+SHA1 (patch-ap) = 970124d3e52114312d4861538a54de949b6765ad
 SHA1 (patch-aq) = 29183e61d6b1a38853151426c2d4ffe45efd9c43
 SHA1 (patch-at) = 1b541df50b9ed94613524d1d48ff98970d8f21dd
 SHA1 (patch-aw) = db73e21e67dc4200312285973faaaed308ea436e
-SHA1 (patch-ax) = b32483c5259cbe95202944683889bf20a7c1650e
+SHA1 (patch-ax) = bafd5ecf8cf103bd7cf3387c103a7c6fa3645066
 SHA1 (patch-ba) = add9ecd6cff002525b2bc63aad7eb142e610b190
 SHA1 (patch-bb) = 02739e33cc1f35294257125c39a1223e0e1b07a6
 SHA1 (patch-bm) = 3e297a2dece8dcad7bde86f79f944a98d09174a7
