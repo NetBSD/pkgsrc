@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6072 2007/03/06 10:32:41 martti Exp $
+$NetBSD: TODO,v 1.6073 2007/03/06 20:30:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -176,10 +176,6 @@ Suggested new packages
 	http://www.pell.portland.or.us/~orc/Code/postoffice/index.html
 	Simple SMTP mail server and client.
 
-	kplayer
-	http://kplayer.sourceforge.net/
-	KDE media player based on MPlayer.
-
 	oKle
 	http://okle.sourceforge.net/
 	KDE frontend to the Ogle DVD player.
@@ -208,6 +204,7 @@ Suggested package updates
 	o 9base-2
 	o Cenon-3.71
 	o Chinput-3.0.1
+	o GConf2-2.18.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
@@ -440,6 +437,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.0.3
 	o gld-1.7
+	o glibmm-2.12.7
 	o gmime-2.2.3
 	o gmpc-0.14.0
 	o gnet1-1.1.9
@@ -462,8 +460,9 @@ Suggested package updates
 	o gocr-0.43
 	o gogo-3.11p1
 	o gok-1.2.3
-	o gossip-0.22
+	o gossip-0.23
 	o gourmet-0.13.3
+	o gpgme-1.1.4
 	o gpredict-0.7.1
 	o gpsdrive-2.09
 	o gq-1.2.0
@@ -481,6 +480,7 @@ Suggested package updates
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
 	o gtklife-5.1
+	o gtkmm-2.10.8
 	o gtkpod-0.99.8
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
@@ -952,7 +952,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o suse_base-10.2
 	o swfdec-0.3.6
-	o sylpheed-claws-2.8.0 [now claws-mail]
+	o sylpheed-claws-2.8.1 [now claws-mail]
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
