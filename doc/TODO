@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6070 2007/03/06 00:01:27 wiz Exp $
+$NetBSD: TODO,v 1.6071 2007/03/06 06:00:51 taca Exp $
 
 Suggested new packages
 ======================
@@ -456,6 +456,7 @@ Suggested package updates
 	o gnome-themes-2.16.3
 	o gnome-user-docs-2.16.1
 	o gnomeicu-0.99.12
+	o gnupg-1.4.7
 	o gnupg2-2.0.2
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
