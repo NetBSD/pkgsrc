@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.135 2007/02/19 12:10:43 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.136 2007/03/06 10:56:34 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -457,6 +457,13 @@ bulk-package:
 			${RM} -f ${_BUILDLOG:Q};			\
 			if [ -f "${WRKLOG}" ]; then \
 				${CP} ${WRKLOG:Q} ${_BROKENWRKLOG:Q}; \
+				{ ${ECHO} "<pre>";			\
+				  ${ECHO} "";				\
+				  ${ECHO} "===> Warnings from the wrapper log (sorted):"; \
+				  ${GREP} "^WARNING" ${WRKLOG} | ${SORT} -u | ${TO_HTML}; \
+				  ${ECHO} "";				\
+				  ${ECHO} "</pre>";			\
+				} >> ${_BROKENFILE};			\
 			fi; \
 			( \
 			if [ -f ${_BROKENWRKLOG:Q} ]; then \
