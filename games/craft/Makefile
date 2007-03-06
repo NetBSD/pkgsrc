@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/02 17:36:22 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/03/06 22:57:46 rillig Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -16,26 +16,30 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 USE_X11BASE=	yes
 
+SUBST_CLASSES+=		craft
+SUBST_STAGE.craft=	pre-configure
+SUBST_FILES.craft=	win.hc setupedit.hc option_menu.hc craft_def.h
+SUBST_VARS.craft=	PREFIX
+
+SUBST_CLASSES+=		buttons
+SUBST_STAGE.buttons=	pre-configure
+SUBST_FILES.buttons=	.windefaults.params
+SUBST_SED.buttons=	-e 's+buttons+${PREFIX}/share/craft/buttons+'
+
 post-extract:
-	@${FIND} ${WRKSRC} -type f -name '*~' -print | ${XARGS} ${RM} -f
-	@${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
-	for FILE in `${FIND} ${WRKSRC} -name "*.hc" -type f -print`; do	\
-	  ${ECHO} >>$$FILE "";					\
+	find ${WRKSRC} -type f -name '*~' -print | xargs rm -f
+	ln -fs ${FILESDIR}/Makefile ${WRKSRC}
+	for f in `find ${WRKSRC} -name "*.hc" -type f -print`; do	\
+	  ${ECHO} "" >>$$f;						\
 	done
 
 post-patch:
-	${RM} -f ${WRKSRC}/hcc/hcc
-	${CP} ${WRKSRC}/.windefaults.params ${WRKSRC}/foo
-	${SED} -e 's+buttons+${PREFIX}/share/craft/buttons+' <${WRKSRC}/foo> ${WRKSRC}/.windefaults.params
-	${CP} ${WRKSRC}/win.hc ${WRKSRC}/foo
-	${SED} -e 's+@PREFIX@+${PREFIX}+' <${WRKSRC}/foo> ${WRKSRC}/win.hc
-	${CP} ${WRKSRC}/setupedit.hc ${WRKSRC}/foo
-	${SED} -e 's+@PREFIX@+${PREFIX}+' <${WRKSRC}/foo> ${WRKSRC}/setupedit.hc
-	${CP} ${WRKSRC}/option_menu.hc ${WRKSRC}/foo
-	${SED} -e 's+@PREFIX@+${PREFIX}+' <${WRKSRC}/foo> ${WRKSRC}/option_menu.hc
-	${CP} ${WRKSRC}/craft_def.h ${WRKSRC}/foo
-	${SED} -e 's+@PREFIX@+${PREFIX}+' <${WRKSRC}/foo> ${WRKSRC}/craft_def.h
-	${RM} -f ${WRKSRC}/foo
+	rm -f ${WRKSRC}/hcc/hcc
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+BUILDLINK_TRANSFORM+=	rm:-lcompat
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
