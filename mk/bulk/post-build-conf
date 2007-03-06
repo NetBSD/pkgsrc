@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.13 2007/01/30 07:11:19 wiz Exp $
+# $NetBSD: post-build-conf,v 1.14 2007/03/06 10:57:11 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -33,7 +33,7 @@ pbc_section() {
 # usage: show_config_vars
 show_config_vars() {
 	pbc_section "System information" \
-		osrev arch BULK_BUILD_CONF USR_PKGSRC MAKECONF
+		osrev BULK_BUILD_CONF USR_PKGSRC MAKECONF
 	pbc_section "Getting distfiles" \
 		PRUNEDISTFILES ftp_proxy http_proxy
 	pbc_section "Building the packages" \
@@ -49,7 +49,7 @@ show_config_vars() {
 
 # usage: export_config_vars
 export_config_vars() {
-	export osrev arch BULK_BUILD_CONF USR_PKGSRC
+	export osrev BULK_BUILD_CONF USR_PKGSRC
 	export PRUNEDISTFILES ftp_proxy http_proxy
 	export PKGLIST NICE_LEVEL ADMIN ADMINSIG
 	export UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS
@@ -164,7 +164,6 @@ check_config_vars() {
 
 	# section "System information"
 	pbc_checknonempty osrev
-	pbc_checknonempty arch
 	pbc_checkexistingfile BULK_BUILD_CONF
 	pbc_checkexistingdir USR_PKGSRC
 	case ${MAKECONF+set} in
