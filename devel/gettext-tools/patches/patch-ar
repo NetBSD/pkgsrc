@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1 2007/03/06 13:45:34 rillig Exp $
+
+See patch-aq.
+
+--- gettext-tools/src/po-lex.c.orig	Fri May 20 17:03:44 2005
++++ gettext-tools/src/po-lex.c	Tue Mar  6 08:39:03 2007
+@@ -71,7 +71,7 @@
+    These functions can access gram_pos and gram_pos_column.  */
+ 
+ #if !(__STDC__ && \
+-      ((defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L && !defined __DECC) \
++      ((defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L && !defined __DECC && !(defined(__sgi) && !defined(__GNUC__))) \
+        || (defined __GNUC__ && __GNUC__ >= 2 && !defined __APPLE_CC__)))
+ 
+ /* CAUTION: If you change this function, you must also make identical
