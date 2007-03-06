@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2007/02/22 19:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2007/03/06 22:33:22 salo Exp $
 #
 
-DISTNAME=		silc-server-1.0.2
+DISTNAME=		silc-server-1.0.3
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
