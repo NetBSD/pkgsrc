@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.539 2007/03/05 23:07:04 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.540 2007/03/06 05:40:34 jonb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p0f to 2.0.8 [adrianp 2007-03-05]
 	Updated emulators/wine to 0.9.32 [adam 2007-03-05]
 	Updated sysutils/checkperms to 1.7 [rillig 2007-03-05]
+	Updated lang/sbcl to 1.0.3 [jonb 2007-03-06]
