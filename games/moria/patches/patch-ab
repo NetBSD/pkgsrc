@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2005/12/18 23:27:29 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2007/03/06 23:25:48 rillig Exp $
 
---- unix/unix.c.orig	1994-07-21 22:37:08.000000000 +0000
-+++ unix/unix.c
+--- unix/unix.c.orig	1994-07-22 00:37:08.000000000 +0200
++++ unix/unix.c	2007-03-07 00:08:23.142229936 +0100
 @@ -43,6 +43,11 @@ typedef struct { int stuff; } fpvmach;
  #include <sys/param.h>
  #endif
@@ -23,7 +23,21 @@ $NetBSD: patch-ab,v 1.2 2005/12/18 23:27:29 joerg Exp $
  
  #ifdef USG
  struct passwd *getpwuid();
-@@ -276,7 +281,9 @@ int getuid();
+@@ -260,6 +265,7 @@ char *p;
+ }
+ #endif
+ 
++#if 0
+ #ifdef USG
+ unsigned short getuid();
+ #else
+@@ -271,12 +277,15 @@ int getuid();
+ #endif
+ #endif
+ #endif
++#endif
+ 
+ /* Find a default user name from the system. */
  void user_name(buf)
  char *buf;
  {
@@ -33,7 +47,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/18 23:27:29 joerg Exp $
    struct passwd *pwline;
    register char *p;
  
-@@ -314,7 +321,10 @@ char *file, *exp;
+@@ -314,7 +323,10 @@ char *file, *exp;
  	  user[i] = '\0';
  	  if (i == 0)
  	    {
@@ -45,7 +59,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/18 23:27:29 joerg Exp $
  
  	      if (login != NULL)
  		(void) strcpy (user, login);
-@@ -342,7 +352,6 @@ char *file;
+@@ -342,7 +354,6 @@ char *file;
  char *mode;
  {
    char buf[1024];
@@ -53,7 +67,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/18 23:27:29 joerg Exp $
  
    if (tilde(file, buf))
      return (fopen(buf, mode));
-@@ -357,7 +366,6 @@ char *file;
+@@ -357,7 +368,6 @@ char *file;
  int flags, mode;
  {
    char buf[1024];
