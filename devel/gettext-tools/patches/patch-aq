@@ -1,0 +1,19 @@
+$NetBSD: patch-aq,v 1.1 2007/03/06 13:08:24 rillig Exp $
+
+Don't assume that any compiler other than gcc can handle varargs macros
+where zero arguments are given for "...". Accepting zero arguments is
+not required by ISO C99.
+
+Fixed in gettext-tools-0.16.
+
+--- gettext-tools/src/po-lex.h.orig	Fri May 20 17:03:44 2005
++++ gettext-tools/src/po-lex.h	Tue Mar  6 07:10:13 2007
+@@ -73,7 +73,7 @@
+ 
+ /* ISO C 99 is smart enough to allow optimizations like this.
+    Note: OpenVMS 7.3 cc pretends to support ISO C 99 but chokes on '...'.  */
+-#if __STDC__ && (defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L && !defined __DECC)
++#if defined(__GNUC__)
+ 
+ /* CAUTION: If you change this macro, you must also make identical
+    changes to the function of the same name in src/po-lex.c  */
