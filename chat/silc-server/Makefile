@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2007/03/06 22:33:22 salo Exp $
+# $NetBSD: Makefile,v 1.54 2007/03/06 22:33:48 salo Exp $
 #
 
 DISTNAME=		silc-server-1.0.3
@@ -47,6 +47,8 @@ RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.sh
 RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.generic
 .endif
 
+BUILD_DEFS+=		VARBASE
+
 OWN_DIRS_PERMS+=	${VARBASE}/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
@@ -76,7 +78,7 @@ SUBST_FILES.paths=	motd.txt
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
 
 post-extract:
-	@${CP} ${FILESDIR}/motd.txt ${WRKSRC}
+	${CP} ${FILESDIR}/motd.txt ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/motd.txt ${EGDIR}/motd.txt.default
