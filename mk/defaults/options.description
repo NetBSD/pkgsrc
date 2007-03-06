@@ -62,6 +62,7 @@ djbfft-pentium		Optimize for Pentium{,MMX} processors.
 djbfft-ppro		Optimize for Pentium{Pro,II,III} processors.
 djbfft-sparc		Optimize for UltraSPARC-{I,II} processors.
 djbware-errno-hack	Patch to #include <errno.h> for correctness.
+doc			Include the documentation.
 domainscale	
 drac			Enable DRAC support.
 drupal-xmlservices	Enable XML-based services.
