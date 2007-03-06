@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6071 2007/03/06 06:00:51 taca Exp $
+$NetBSD: TODO,v 1.6072 2007/03/06 10:32:41 martti Exp $
 
 Suggested new packages
 ======================
@@ -309,7 +309,6 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o clamav-0.90.1
 	o clisp-2.41
 	o cocoon-2.1.10
 	o cogito-0.18.2
