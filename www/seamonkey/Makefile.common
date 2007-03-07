@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2007/02/20 16:02:11 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.20 2007/03/07 21:32:56 dmcmahill Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -120,18 +120,6 @@ SCRIPTS_ENV+=		MOZ_INSTALL_LIB=${INSTALL_PROGRAM:Q}
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
-.if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
-PLIST_SUBST+=		SUNOSLIB=""
-SCRIPTS_ENV+=		SUNOSLIB=""
-PLIST_SUBST+=		NOT_SUNOSLIB="@comment "
-SCRIPTS_ENV+=		NOT_SUNOSLIB="@comment "
-.else
-PLIST_SUBST+=		SUNOSLIB="@comment "
-SCRIPTS_ENV+=		SUNOSLIB="@comment "
-PLIST_SUBST+=		NOT_SUNOSLIB=""
-SCRIPTS_ENV+=		NOT_SUNOSLIB=""
-.endif
-
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
 MAKEFLAGS+=		NS_USE_GCC=YES
 .endif
@@ -186,6 +174,32 @@ post-build:
 		${WRKSRC:Q}/dist/bin/chrome/installed-chrome.txt
 	${ECHO} locale,install,select,en-US >> \
 		${WRKSRC:Q}/dist/bin/chrome/installed-chrome.txt
+
+# The exact set of libfreebl* libs built and installed depends on the
+# operating system and platform.  For example, on solaris/sparc you might
+# get
+#  libfreebl_32fpu_3.so
+#  libfreebl_32int_3.so
+#  libfreebl_32int64_3.so
+# and on others
+#  libfreebl3.so
+# Since this has been a continual problem in many mozilla packages, just
+# do that part dynamically rather than trying to always keep our conditionals
+# up to date.  Note that the exact set of libfreebl libs has had a history
+# of changing even on minor releases.
+PLIST_SRC=      ${WRKDIR}/PLIST
+pre-install:
+	cd ${WRKSRC:Q}/dist/bin && ls libfreebl*.${SO_SUFFIX} | ${SORT} | \
+		${AWK} '{print "lib/$${MOZILLA}/" $$0}' > ${WRKSRC}/PLIST.libfreebl
+	cd ${WRKSRC:Q}/dist/bin && ls libfreebl*.chk | ${SORT} | \
+		${AWK} '{print "lib/$${MOZILLA}/" $$0}' > ${WRKSRC}/PLIST.libfreebl.chk
+	${AWK} '/@comment libfreebl$$/ {exit} {print}' ${.CURDIR}/PLIST > ${PLIST_SRC}
+	${CAT} ${WRKSRC}/PLIST.libfreebl >> ${PLIST_SRC}
+	${AWK} '/@comment libfreebl.chk/ {exit} ok == 1 {print} /@comment libfreebl$$/ {ok=1}' \
+		${.CURDIR}/PLIST >> ${PLIST_SRC}
+	${CAT} ${WRKSRC}/PLIST.libfreebl.chk >> ${PLIST_SRC}
+	${AWK} 'ok == 1 {print} /@comment libfreebl.chk/ {ok=1}' \
+		${.CURDIR}/PLIST >> ${PLIST_SRC}
 
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR:Q}/moz-install
