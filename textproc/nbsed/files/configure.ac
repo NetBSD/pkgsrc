@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.9 2004/09/12 16:50:50 jschauma Exp $
+dnl $Id: configure.ac,v 1.10 2007/03/07 19:18:39 rillig Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([sed],[20040821],[agc@NetBSD.org])
@@ -32,6 +32,23 @@ dnl Check for functions
 AC_CHECK_FUNCS(regcomp)
 AC_CHECK_FUNCS(regexec)
 AC_CHECK_FUNCS(memcpy)
+
+AC_MSG_CHECKING([for working REG_STARTEND])
+AC_TRY_RUN([
+#undef NDEBUG
+#include <assert.h>
+#include <regex.h>
+int main(void) {
+	regex_t re;
+	regmatch_t rm;
+
+	assert(regcomp(&re, "lo", 0) == 0);
+	rm.rm_so = 0, rm.rm_eo = 7;
+	assert(regexec(&re, "hel\0lo\n", 1, &rm, REG_STARTEND) == 0);
+	assert(rm.rm_so == 4 && rm.rm_eo == 6);
+	return 0;
+}], [AC_DEFINE([HAVE_REG_STARTEND], [1], [Do you have a working REG_STARTEND?])
+AC_MSG_RESULT([yes])], [AC_MSG_RESULT([no])])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST

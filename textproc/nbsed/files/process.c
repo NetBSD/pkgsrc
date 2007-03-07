@@ -1,4 +1,4 @@
-/*	$NetBSD: process.c,v 1.8 2004/08/22 05:51:55 jlam Exp $	*/
+/*	$NetBSD: process.c,v 1.9 2007/03/07 19:18:39 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993, 1994
@@ -78,7 +78,7 @@
 #if 0
 static char sccsid[] = "@(#)process.c	8.6 (Berkeley) 4/20/94";
 #else
-__RCSID("$NetBSD: process.c,v 1.8 2004/08/22 05:51:55 jlam Exp $");
+__RCSID("$NetBSD: process.c,v 1.9 2007/03/07 19:18:39 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -580,7 +580,7 @@ static inline int
 regexec_e(regex_t *preg, const char *string, int eflags, int nomatch, size_t slen)
 {
 	int eval;
-#ifndef REG_STARTEND
+#ifndef HAVE_REG_STARTEND
 	char *buf;
 #endif
 	
@@ -594,7 +594,7 @@ regexec_e(regex_t *preg, const char *string, int eflags, int nomatch, size_t sle
 	if (slen > 0 && string[slen - 1] == '\n')
 		slen--;
 
-#ifndef REG_STARTEND
+#ifndef HAVE_REG_STARTEND
 	if ((buf = malloc(slen + 1)) == NULL)
 		err(1, NULL);
 	(void)memcpy(buf, string, slen);
