@@ -1,4 +1,7 @@
-# $NetBSD: checksum.mk,v 1.3 2007/02/20 09:53:23 rillig Exp $
+# $NetBSD: checksum.mk,v 1.4 2007/03/07 01:06:11 rillig Exp $
+#
+# See bsd.checksum.mk for helpful comments.
+#
 
 _DIGEST_ALGORITHMS?=		SHA1 RMD160
 _PATCH_DIGEST_ALGORITHMS?=	SHA1
@@ -11,12 +14,6 @@ DO_CHECKSUM_REPEATEDLY?=	no
 #_CKSUMFILES?=	# empty
 #_IGNOREFILES?=	# empty
 
-######################################################################
-### checksum (PUBLIC)
-######################################################################
-### checksum is a public target to checksum the fetched distfiles
-### for the package.
-###
 _CHECKSUM_CMD=								\
 	${SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}		\
 		ECHO=${TOOLS_ECHO:Q} TEST=${TOOLS_TEST:Q}		\
@@ -25,10 +22,9 @@ _CHECKSUM_CMD=								\
 _COOKIE.checksum=	${WRKDIR}/.checksum_done
 
 .PHONY: checksum
-.if !target(checksum)
-checksum: fetch ${_COOKIE.checksum}
+checksum: ${_COOKIE.checksum}
 ${_COOKIE.checksum}:
-.  for _alg_ in ${_DIGEST_ALGORITHMS}
+.for _alg_ in ${_DIGEST_ALGORITHMS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if cd ${DISTDIR} && ${_CHECKSUM_CMD} -a ${_alg_:Q}		\
 		${DISTINFO_FILE} ${_CKSUMFILES}; then			\
@@ -42,17 +38,9 @@ ${_COOKIE.checksum}:
 		${ERROR_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 		exit 1;							\
 	fi
-.  endfor
-.endif
+.endfor
 
-######################################################################
-### makesum (PUBLIC)
-######################################################################
-### makesum is a public target to add checksums of the distfiles for
-### the package to ${DISTINFO_FILE}.
-###
-.PHONY: makesum
-makesum: fetch
+makesum:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if ${TEST} -f ${DISTINFO_FILE}; then				\
@@ -91,12 +79,6 @@ makesum: fetch
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
 
-######################################################################
-### makepatchsum (PUBLIC)
-######################################################################
-### makepatchsum is a public target to add checksums of the patches
-### for the package to ${DISTINFO_FILE}.
-###
 makepatchsum:
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	newfile=${DISTINFO_FILE}.$$$$;					\

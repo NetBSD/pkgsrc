@@ -1,47 +1,45 @@
-# $NetBSD: bsd.checksum.mk,v 1.4 2006/09/19 00:03:44 rillig Exp $
+# $NetBSD: bsd.checksum.mk,v 1.5 2007/03/07 01:06:11 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
 #
-# The following are the "public" targets provided by this module:
+# Public targets for pkgsrc users:
 #
-#    checksum, makesum, makepatchsum, distinfo
+# checksum:
+#	Check that the distfiles have the correct checksums. If they
+#	aren't yet fetched, fetch them.
+#
+# Public targets for pkgsrc developers:
+#
+# makesum:
+#	Add or update the checksums of the distfiles to ${DISTINFO_FILE}.
+#
+#	See also: patchsum
+#
+# makepatchsum, mps:
+#	Add or update the checksums of the patches to ${DISTINFO_FILE}.
+#
+# makedistinfo, distinfo, mdi:
+#	Create or update the checksums in ${DISTINFO_FILE}.
+#
+# Package-settable variables:
+#
+# NO_CHECKSUM
+#	When defined, no checksums are generated for patches or
+#	distfiles.
+#
+#	Default value: undefined
 #
 
-######################################################################
-### checksum, makesum, makepatchsum (PUBLIC)
-######################################################################
-### checksum is a public target to checksum the fetched distfiles
-### for the package.
-###
-### makesum is a public target to add checksums of the distfiles for
-### the package to ${DISTINFO_FILE}.
-###
-### makepatchsum is a public target to add checksums of the patches
-### for the package to ${DISTINFO_FILE}.
-###
+.PHONY: checksum makesum makepatchsum mps mdi makedistinfo distinfo
+
+checksum makesum: fetch
+makedistinfo distinfo mdi: makepatchsum makesum
+mps: makepatchsum
+
 .if defined(NO_CHECKSUM)
-.PHONY: checksum makesum makepatchsum
-.  if !target(checksum)
-checksum: fetch
-	@${DO_NADA}
-.  endif
-makesum makepatchsum:
+checksum makesum makepatchsum mps mdi makedistinfo distinfo:
 	@${DO_NADA}
 .else
 .  include "${PKGSRCDIR}/mk/checksum/checksum.mk"
 .endif
-
-######################################################################
-### distinfo (PUBLIC)
-######################################################################
-### distinfo is a public target to create ${DISTINFO_FILE}.
-###
-.PHONY: distinfo
-distinfo: makepatchsum makesum
-	@${DO_NADA}
-
-# Some short aliases for "makepatchsum" and "distinfo".
-.PHONY: mps mdi makedistinfo
-mps: makepatchsum
-mdi makedistinfo: distinfo
