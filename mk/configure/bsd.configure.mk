@@ -1,4 +1,4 @@
-# $NetBSD: bsd.configure.mk,v 1.9 2006/07/27 13:47:29 jlam Exp $
+# $NetBSD: bsd.configure.mk,v 1.10 2007/03/07 01:27:28 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to configuring packages for building.
@@ -27,19 +27,14 @@ _COOKIE.configure=	${WRKDIR}/.configure_done
 configure:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
-configure: wrapper configure-cookie
+configure: wrapper _configure-cookie
 .  else
 configure: barrier
 .  endif
 .endif
 
-######################################################################
-### configure-cookie (PRIVATE)
-######################################################################
-### configure-cookie creates the "configure" cookie file.
-###
-.PHONY: configure-cookie
-configure-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.configure} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.configure:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.configure}
+# Creates the "configure" cookie file.
+_configure-cookie: .PHONY
+	${RUN} [ ! -f ${_COOKIE.configure} ]	# XXX: What's the purpose of this assertion?
+	${RUN} ${MKDIR} ${_COOKIE.configure:H}
+	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.configure}
