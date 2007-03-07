@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2004/12/03 13:28:49 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2007/03/07 01:54:04 rillig Exp $
 
 --- src/Xpat.tmpl.orig	2000-11-05 21:03:10.000000000 +0100
 +++ src/Xpat.tmpl	2004-12-02 23:53:28.000000000 +0100
@@ -50,7 +50,7 @@ $NetBSD: patch-ac,v 1.1 2004/12/03 13:28:49 wiz Exp $
  XPATLIBDIR	= $(XPATROOT)
  APPDEFSDIR	= $(LIBDIR)
 -XPATMANDIR	= $(XPATROOT)/man/man6
-+XPATMANDIR	= $(PREFIX)/man/man6
++XPATMANDIR	= $(PREFIX)/$(PKGMANDIR)/man6
  
  XCOMM This is the name of the log-file, where solved games are stored:
  SCOREFILE	= /var/games/xpat.log
