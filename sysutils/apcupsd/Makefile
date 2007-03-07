@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/12/20 20:49:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.48 2007/03/07 20:47:05 joerg Exp $
 
 DISTNAME=		apcupsd-3.12.4
 CATEGORIES=		sysutils
@@ -9,7 +9,7 @@ MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
 
-USE_TOOLS+=		gmake msgfmt sh
+USE_TOOLS+=		gmake msgfmt sh makedepend
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes

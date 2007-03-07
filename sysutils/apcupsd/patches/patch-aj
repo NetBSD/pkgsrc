@@ -1,9 +1,7 @@
-$NetBSD: patch-aj,v 1.5 2006/11/15 21:46:25 bouyer Exp $
+$NetBSD: patch-aj,v 1.6 2007/03/07 20:47:05 joerg Exp $
 
-Note that the test -x -> test -f change is done by hand after running autoconf
-
---- configure.orig	2006-04-08 00:42:15.000000000 +0200
-+++ configure	2006-11-15 20:22:52.000000000 +0100
+--- configure.orig	2006-04-07 22:42:15.000000000 +0000
++++ configure
 @@ -1,8 +1,9 @@
  #! /bin/sh
  # Guess values for system-dependent variables and create Makefiles.
@@ -16,7 +14,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  # This configure script is free software; the Free Software Foundation
  # gives unlimited permission to copy, distribute and modify it.
  ## --------------------- ##
-@@ -16,11 +17,35 @@
+@@ -16,11 +17,35 @@ if test -n "${ZSH_VERSION+set}" && (emul
    # Zsh 3.x and 4.x performs word splitting on ${1+"$@"}, which
    # is contrary to our usage.  Disable this feature.
    alias -g '${1+"$@"}'='"$@"'
@@ -54,7 +52,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  # Support unset when possible.
  if ( (MAIL=60; unset MAIL) || exit) >/dev/null 2>&1; then
    as_unset=unset
-@@ -29,8 +54,43 @@
+@@ -29,8 +54,43 @@ else
  fi
  
  
@@ -99,7 +97,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  PS1='$ '
  PS2='> '
  PS4='+ '
-@@ -44,18 +104,19 @@
+@@ -44,18 +104,19 @@ do
    if (set +x; test -z "`(eval $as_var=C; export $as_var) 2>&1`"); then
      eval $as_var=C; export $as_var
    else
@@ -122,7 +120,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    as_basename=basename
  else
    as_basename=false
-@@ -63,157 +124,386 @@
+@@ -63,157 +124,386 @@ fi
  
  
  # Name of the executable.
@@ -608,7 +606,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  if mkdir -p . 2>/dev/null; then
    as_mkdir_p=:
-@@ -222,7 +512,19 @@
+@@ -222,7 +512,19 @@ else
    as_mkdir_p=false
  fi
  
@@ -629,7 +627,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # Sed expression to map a string onto a valid CPP name.
  as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
-@@ -231,39 +533,27 @@
+@@ -231,39 +533,27 @@ as_tr_cpp="eval sed 'y%*$as_cr_letters%P
  as_tr_sh="eval sed 'y%*+%pp%;s%[^_$as_cr_alnum]%_%g'"
  
  
@@ -672,7 +670,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  # Identity of this package.
  PACKAGE_NAME=
  PACKAGE_TARNAME=
-@@ -302,17 +592,219 @@
+@@ -302,17 +592,219 @@ ac_includes_default="\
  #endif
  #if HAVE_INTTYPES_H
  # include <inttypes.h>
@@ -898,7 +896,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # Initialize some variables set by options.
  ac_init_help=
-@@ -339,34 +831,48 @@
+@@ -339,34 +831,48 @@ x_libraries=NONE
  # and all the variables that are supposed to be based on exec_prefix
  # by default will actually change.
  # Use braces instead of parens because sh, perl, etc. also accept them.
@@ -954,7 +952,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    -bindir | --bindir | --bindi | --bind | --bin | --bi)
      ac_prev=bindir ;;
-@@ -388,12 +894,18 @@
+@@ -388,12 +894,18 @@ do
    --config-cache | -C)
      cache_file=config.cache ;;
  
@@ -976,7 +974,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    -disable-* | --disable-*)
      ac_feature=`expr "x$ac_option" : 'x-*disable-\(.*\)'`
      # Reject names that are not valid shell variable names.
-@@ -401,7 +913,17 @@
+@@ -401,7 +913,17 @@ do
        { echo "$as_me: error: invalid feature name: $ac_feature" >&2
     { (exit 1); exit 1; }; }
      ac_feature=`echo $ac_feature | sed 's/-/_/g'`
@@ -995,7 +993,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    -enable-* | --enable-*)
      ac_feature=`expr "x$ac_option" : 'x-*enable-\([^=]*\)'`
-@@ -410,11 +932,7 @@
+@@ -410,11 +932,7 @@ do
        { echo "$as_me: error: invalid feature name: $ac_feature" >&2
     { (exit 1); exit 1; }; }
      ac_feature=`echo $ac_feature | sed 's/-/_/g'`
@@ -1008,7 +1006,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    -exec-prefix | --exec_prefix | --exec-prefix | --exec-prefi \
    | --exec-pref | --exec-pre | --exec-pr | --exec-p | --exec- \
-@@ -441,6 +959,12 @@
+@@ -441,6 +959,12 @@ do
    -host=* | --host=* | --hos=* | --ho=*)
      host_alias=$ac_optarg ;;
  
@@ -1021,7 +1019,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    -includedir | --includedir | --includedi | --included | --include \
    | --includ | --inclu | --incl | --inc)
      ac_prev=includedir ;;
-@@ -465,13 +989,16 @@
+@@ -465,13 +989,16 @@ do
    | --libexe=* | --libex=* | --libe=*)
      libexecdir=$ac_optarg ;;
  
@@ -1042,7 +1040,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      localstatedir=$ac_optarg ;;
  
    -mandir | --mandir | --mandi | --mand | --man | --ma | --m)
-@@ -536,6 +1063,16 @@
+@@ -536,6 +1063,16 @@ do
    | --progr-tra=* | --program-tr=* | --program-t=*)
      program_transform_name=$ac_optarg ;;
  
@@ -1059,7 +1057,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    -q | -quiet | --quiet | --quie | --qui | --qu | --q \
    | -silent | --silent | --silen | --sile | --sil)
      silent=yes ;;
-@@ -592,11 +1129,7 @@
+@@ -592,11 +1129,7 @@ do
        { echo "$as_me: error: invalid package name: $ac_package" >&2
     { (exit 1); exit 1; }; }
      ac_package=`echo $ac_package| sed 's/-/_/g'`
@@ -1072,7 +1070,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    -without-* | --without-*)
      ac_package=`expr "x$ac_option" : 'x-*without-\(.*\)'`
-@@ -605,7 +1138,7 @@
+@@ -605,7 +1138,7 @@ do
        { echo "$as_me: error: invalid package name: $ac_package" >&2
     { (exit 1); exit 1; }; }
      ac_package=`echo $ac_package | sed 's/-/_/g'`
@@ -1081,7 +1079,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    --x)
      # Obsolete; use --with-x.
-@@ -636,8 +1169,7 @@
+@@ -636,8 +1169,7 @@ Try \`$0 --help' for more information." 
      expr "x$ac_envvar" : ".*[^_$as_cr_alnum]" >/dev/null &&
        { echo "$as_me: error: invalid variable name: $ac_envvar" >&2
     { (exit 1); exit 1; }; }
@@ -1091,7 +1089,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      export $ac_envvar ;;
  
    *)
-@@ -657,27 +1189,19 @@
+@@ -657,27 +1189,19 @@ if test -n "$ac_prev"; then
     { (exit 1); exit 1; }; }
  fi
  
@@ -1129,7 +1127,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  done
  
  # There might be people who depend on the old broken behavior: `$host'
-@@ -704,82 +1228,76 @@
+@@ -704,82 +1228,76 @@ test -n "$host_alias" && ac_tool_prefix=
  test "$silent" = yes && exec 6>/dev/null
  
  
@@ -1266,7 +1264,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  #
  # Report the --help message.
-@@ -808,9 +1326,6 @@
+@@ -808,9 +1326,6 @@ Configuration:
    -n, --no-create         do not create output files
        --srcdir=DIR        find the sources in DIR [configure dir or \`..']
  
@@ -1276,7 +1274,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  Installation directories:
    --prefix=PREFIX         install architecture-independent files in PREFIX
  			  [$ac_default_prefix]
-@@ -828,15 +1343,22 @@
+@@ -828,15 +1343,22 @@ Fine tuning of the installation director
    --bindir=DIR           user executables [EPREFIX/bin]
    --sbindir=DIR          system admin executables [EPREFIX/sbin]
    --libexecdir=DIR       program executables [EPREFIX/libexec]
@@ -1302,7 +1300,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  _ACEOF
  
    cat <<\_ACEOF
-@@ -916,8 +1438,8 @@
+@@ -916,8 +1438,8 @@ Some influential environment variables:
    CFLAGS      C compiler flags
    LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
                nonstandard directory <lib dir>
@@ -1313,7 +1311,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    CPP         C preprocessor
    CXX         C++ compiler command
    CXXFLAGS    C++ compiler flags
-@@ -926,118 +1448,86 @@
+@@ -926,118 +1448,86 @@ Use these variables to override the choi
  it to find libraries and programs with nonstandard names/locations.
  
  _ACEOF
@@ -1478,7 +1476,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  {
  cat <<_ASUNAME
  ## --------- ##
-@@ -1056,7 +1546,7 @@
+@@ -1056,7 +1546,7 @@ uname -v = `(uname -v) 2>/dev/null || ec
  /bin/arch              = `(/bin/arch) 2>/dev/null              || echo unknown`
  /usr/bin/arch -k       = `(/usr/bin/arch -k) 2>/dev/null       || echo unknown`
  /usr/convex/getsysinfo = `(/usr/convex/getsysinfo) 2>/dev/null || echo unknown`
@@ -1487,7 +1485,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  /bin/machine           = `(/bin/machine) 2>/dev/null           || echo unknown`
  /usr/bin/oslevel       = `(/usr/bin/oslevel) 2>/dev/null       || echo unknown`
  /bin/universe          = `(/bin/universe) 2>/dev/null          || echo unknown`
-@@ -1070,6 +1560,7 @@
+@@ -1070,6 +1560,7 @@ do
    test -z "$as_dir" && as_dir=.
    echo "PATH: $as_dir"
  done
@@ -1495,7 +1493,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  } >&5
  
-@@ -1091,7 +1582,6 @@
+@@ -1091,7 +1582,6 @@ _ACEOF
  ac_configure_args=
  ac_configure_args0=
  ac_configure_args1=
@@ -1503,7 +1501,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  ac_must_keep_next=false
  for ac_pass in 1 2
  do
-@@ -1102,7 +1592,7 @@
+@@ -1102,7 +1592,7 @@ do
      -q | -quiet | --quiet | --quie | --qui | --qu | --q \
      | -silent | --silent | --silen | --sile | --sil)
        continue ;;
@@ -1512,7 +1510,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
        ac_arg=`echo "$ac_arg" | sed "s/'/'\\\\\\\\''/g"` ;;
      esac
      case $ac_pass in
-@@ -1124,9 +1614,7 @@
+@@ -1124,9 +1614,7 @@ do
  	  -* ) ac_must_keep_next=true ;;
  	esac
        fi
@@ -1523,7 +1521,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
        ;;
      esac
    done
-@@ -1137,8 +1625,8 @@
+@@ -1137,8 +1625,8 @@ $as_unset ac_configure_args1 || test "${
  # When interrupted or exit'd, cleanup temporary files, and complete
  # config.log.  We remove comments because anyway the quotes in there
  # would cause problems or look ugly.
@@ -1534,7 +1532,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  trap 'exit_status=$?
    # Save into config.log some information that might help in debugging.
    {
-@@ -1151,20 +1639,34 @@
+@@ -1151,20 +1639,34 @@ trap 'exit_status=$?
  _ASBOX
      echo
      # The following way of writing the cache mishandles newlines in values,
@@ -1579,7 +1577,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      echo
  
      cat <<\_ASBOX
-@@ -1175,22 +1677,28 @@
+@@ -1175,22 +1677,28 @@ _ASBOX
      echo
      for ac_var in $ac_subst_vars
      do
@@ -1615,7 +1613,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
        done | sort
        echo
      fi
-@@ -1202,26 +1710,24 @@
+@@ -1202,26 +1710,24 @@ _ASBOX
  ## ----------- ##
  _ASBOX
        echo
@@ -1647,7 +1645,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # Predefined preprocessor variables.
  
-@@ -1252,14 +1758,17 @@
+@@ -1252,14 +1758,17 @@ _ACEOF
  
  # Let the site file select an alternate cache file if it wants to.
  # Prefer explicitly selected file to automatically selected ones.
@@ -1672,7 +1670,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    if test -r "$ac_site_file"; then
      { echo "$as_me:$LINENO: loading site script $ac_site_file" >&5
  echo "$as_me: loading site script $ac_site_file" >&6;}
-@@ -1275,8 +1784,8 @@
+@@ -1275,8 +1784,8 @@ if test -r "$cache_file"; then
      { echo "$as_me:$LINENO: loading cache $cache_file" >&5
  echo "$as_me: loading cache $cache_file" >&6;}
      case $cache_file in
@@ -1683,7 +1681,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      esac
    fi
  else
-@@ -1288,12 +1797,11 @@
+@@ -1288,12 +1797,11 @@ fi
  # Check that the precious variables saved in the cache have kept the same
  # value.
  ac_cache_corrupted=false
@@ -1699,7 +1697,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    case $ac_old_set,$ac_new_set in
      set,)
        { echo "$as_me:$LINENO: error: \`$ac_var' was set to \`$ac_old_val' in the previous run" >&5
-@@ -1318,8 +1826,7 @@
+@@ -1318,8 +1826,7 @@ echo "$as_me:   current value: $ac_new_v
    # Pass precious variables to config.status.
    if test "$ac_new_set" = set; then
      case $ac_new_val in
@@ -1709,7 +1707,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      *) ac_arg=$ac_var=$ac_new_val ;;
      esac
      case " $ac_configure_args " in
-@@ -1336,12 +1843,6 @@
+@@ -1336,12 +1843,6 @@ echo "$as_me: error: run \`make distclea
     { (exit 1); exit 1; }; }
  fi
  
@@ -1722,7 +1720,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
  
-@@ -1358,33 +1859,44 @@
+@@ -1358,33 +1859,44 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  
  
@@ -1777,7 +1775,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
  ABSSRCDIR=`pwd`
-@@ -1395,8 +1907,8 @@
+@@ -1395,8 +1907,8 @@ for ac_prog in true
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -1788,7 +1786,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_TRUEPRG+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1411,27 +1923,28 @@
+@@ -1411,27 +1923,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1823,7 +1821,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$TRUEPRG" && break
  done
  test -n "$TRUEPRG" || TRUEPRG=":"
-@@ -1440,8 +1953,8 @@
+@@ -1440,8 +1953,8 @@ for ac_prog in false
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -1834,7 +1832,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_FALSEPRG+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1456,27 +1969,28 @@
+@@ -1456,27 +1969,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1869,7 +1867,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$FALSEPRG" && break
  done
  test -n "$FALSEPRG" || FALSEPRG=":"
-@@ -1499,64 +2013,89 @@
+@@ -1499,64 +2013,89 @@ else
    if test x$sysconfdir = x'${prefix}/etc' ; then
       sysconfdir='/etc/apcupsd'
    fi
@@ -1993,7 +1991,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  		    case $host_os in
      *cygwin* ) CFG_CYGWIN=yes
-@@ -1575,8 +2114,8 @@
+@@ -1575,8 +2114,8 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}gcc", so it can be a program name with args.
  set dummy ${ac_tool_prefix}gcc; ac_word=$2
@@ -2004,7 +2002,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_CC+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1589,32 +2128,34 @@
+@@ -1589,32 +2128,34 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -2046,7 +2044,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_ac_ct_CC+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1627,36 +2168,51 @@
+@@ -1627,36 +2168,51 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -2108,7 +2106,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_CC+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1669,74 +2225,34 @@
+@@ -1669,74 +2225,34 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -2192,7 +2190,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_CC+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1750,7 +2266,7 @@
+@@ -1750,7 +2266,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -2201,7 +2199,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      if test "$as_dir/$ac_word$ac_exec_ext" = "/usr/ucb/cc"; then
         ac_prog_rejected=yes
         continue
-@@ -1761,6 +2277,7 @@
+@@ -1761,6 +2277,7 @@ do
    fi
  done
  done
@@ -2209,7 +2207,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  if test $ac_prog_rejected = yes; then
    # We found a bogon in the path, so make sure we never use it.
-@@ -1778,22 +2295,23 @@
+@@ -1778,22 +2295,23 @@ fi
  fi
  CC=$ac_cv_prog_CC
  if test -n "$CC"; then
@@ -2240,7 +2238,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_CC+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1806,36 +2324,38 @@
+@@ -1806,36 +2324,38 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -2287,7 +2285,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_ac_ct_CC+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -1848,29 +2368,45 @@
+@@ -1848,29 +2368,45 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -2339,7 +2337,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  fi
  
  fi
-@@ -1883,21 +2419,35 @@
+@@ -1883,21 +2419,35 @@ See \`config.log' for more details." >&2
     { (exit 1); exit 1; }; }
  
  # Provide some information about the compiler.
@@ -2383,7 +2381,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }
-@@ -1922,46 +2472,70 @@
+@@ -1922,46 +2472,70 @@ ac_clean_files="$ac_clean_files a.out a.
  # Try to create an executable without -o first, disregard a.out.
  # It will help us diagnose broken compilers, and finding out an intuition
  # of exeext.
@@ -2476,7 +2474,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -1974,19 +2548,23 @@
+@@ -1974,19 +2548,23 @@ See \`config.log' for more details." >&2
  fi
  
  ac_exeext=$ac_cv_exeext
@@ -2507,7 +2505,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -2005,22 +2583,27 @@
+@@ -2005,22 +2583,27 @@ See \`config.log' for more details." >&2
      fi
    fi
  fi
@@ -2547,7 +2545,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; then
-@@ -2031,9 +2614,8 @@
+@@ -2031,9 +2614,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  for ac_file in conftest.exe conftest conftest.*; do
    test -f "$ac_file" || continue
    case $ac_file in
@@ -2558,7 +2556,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	  break;;
      * ) break;;
    esac
-@@ -2047,14 +2629,14 @@
+@@ -2047,14 +2629,14 @@ See \`config.log' for more details." >&2
  fi
  
  rm -f conftest$ac_cv_exeext
@@ -2577,7 +2575,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_objext+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -2074,14 +2656,20 @@
+@@ -2074,14 +2656,20 @@ main ()
  }
  _ACEOF
  rm -f conftest.o conftest.obj
@@ -2602,7 +2600,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      *) ac_cv_objext=`expr "$ac_file" : '.*\.\(.*\)'`
         break;;
    esac
-@@ -2099,12 +2687,12 @@
+@@ -2099,12 +2687,12 @@ fi
  
  rm -f conftest.$ac_cv_objext conftest.$ac_ext
  fi
@@ -2619,7 +2617,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_c_compiler_gnu+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -2127,24 +2715,36 @@
+@@ -2127,24 +2715,36 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -2664,7 +2662,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -2153,24 +2753,139 @@
+@@ -2153,24 +2753,139 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -2812,7 +2810,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2186,24 +2901,36 @@
+@@ -2186,24 +2901,36 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -2857,7 +2855,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -2212,12 +2939,20 @@
+@@ -2212,12 +2939,20 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -2882,7 +2880,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "$ac_test_CFLAGS" = set; then
    CFLAGS=$ac_save_CFLAGS
  elif test $ac_cv_prog_cc_g = yes; then
-@@ -2233,12 +2968,12 @@
+@@ -2233,12 +2968,12 @@ else
      CFLAGS=
    fi
  fi
@@ -2899,7 +2897,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  ac_save_CC=$CC
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2272,12 +3007,17 @@
+@@ -2272,12 +3007,17 @@ static char *f (char * (*g) (char **, in
  /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
     function prototypes and stuff, but not '\xHH' hex character constants.
     These don't provoke an error unfortunately, instead are silently treated
@@ -2919,7 +2917,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  int test (int i, double x);
  struct s1 {int (*f) (int a);};
  struct s2 {int (*f) (double a);};
-@@ -2292,239 +3032,108 @@
+@@ -2292,239 +3032,108 @@ return f (e, argv, 0) != argv[0]  ||  f 
    return 0;
  }
  _ACEOF
@@ -3233,7 +3231,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
-@@ -2536,8 +3145,13 @@
+@@ -2536,8 +3145,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  		     Syntax error
  _ACEOF
@@ -3249,7 +3247,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -2562,9 +3176,10 @@
+@@ -2562,9 +3176,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
    # Broken: fails on valid input.
  continue
  fi
@@ -3261,7 +3259,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    # can be detected and how.
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2574,8 +3189,13 @@
+@@ -2574,8 +3189,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <ac_nonexistent.h>
  _ACEOF
@@ -3277,7 +3275,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -2602,6 +3222,7 @@
+@@ -2602,6 +3222,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ac_preproc_ok=:
  break
  fi
@@ -3285,7 +3283,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  rm -f conftest.err conftest.$ac_ext
  
  done
-@@ -2619,8 +3240,8 @@
+@@ -2619,8 +3240,8 @@ fi
  else
    ac_cv_prog_CPP=$CPP
  fi
@@ -3296,7 +3294,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  ac_preproc_ok=false
  for ac_c_preproc_warn_flag in '' yes
  do
-@@ -2643,8 +3264,13 @@
+@@ -2643,8 +3264,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  		     Syntax error
  _ACEOF
@@ -3312,7 +3310,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -2669,9 +3295,10 @@
+@@ -2669,9 +3295,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
    # Broken: fails on valid input.
  continue
  fi
@@ -3324,7 +3322,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    # can be detected and how.
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2681,8 +3308,13 @@
+@@ -2681,8 +3308,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <ac_nonexistent.h>
  _ACEOF
@@ -3340,7 +3338,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -2709,6 +3341,7 @@
+@@ -2709,6 +3341,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ac_preproc_ok=:
  break
  fi
@@ -3348,7 +3346,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  rm -f conftest.err conftest.$ac_ext
  
  done
-@@ -2729,18 +3362,22 @@
+@@ -2729,18 +3362,22 @@ ac_cpp='$CPP $CPPFLAGS'
  ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
  ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
  ac_compiler_gnu=$ac_cv_c_compiler_gnu
@@ -3376,7 +3374,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_CXX+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -2753,36 +3390,38 @@
+@@ -2753,36 +3390,38 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -3423,7 +3421,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_ac_ct_CXX+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -2795,55 +3434,85 @@
+@@ -2795,55 +3434,85 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -3527,7 +3525,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_cxx_compiler_gnu+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -2866,24 +3535,36 @@
+@@ -2866,24 +3535,36 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -3572,7 +3570,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -2892,24 +3573,28 @@
+@@ -2892,24 +3573,28 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -3609,7 +3607,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2925,24 +3610,36 @@
+@@ -2925,24 +3610,36 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -3654,7 +3652,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -2951,70 +3648,53 @@
+@@ -2951,70 +3648,53 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -3749,7 +3747,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -3023,76 +3703,106 @@
+@@ -3023,76 +3703,106 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -3883,7 +3881,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -3113,14 +3823,23 @@
+@@ -3113,14 +3823,23 @@ _ACEOF
  # Make sure it works both with $CC and with simple cc.
  # We do the test twice because some compilers refuse to overwrite an
  # existing .o file with -o, though they will create one.
@@ -3912,7 +3910,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); };
-@@ -3129,19 +3848,32 @@
+@@ -3129,19 +3848,32 @@ then
    if test "x$CC" != xcc; then
      # Test first that cc exists at all.
      if { ac_try='cc -c conftest.$ac_ext >&5'
@@ -3952,7 +3950,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); };
-@@ -3157,15 +3889,15 @@
+@@ -3157,15 +3889,15 @@ then
  else
    eval ac_cv_prog_cc_${ac_cc}_c_o=no
  fi
@@ -3974,7 +3972,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  cat >>confdefs.h <<\_ACEOF
  #define NO_MINUS_C_MINUS_O 1
-@@ -3174,47 +3906,194 @@
+@@ -3174,47 +3906,194 @@ _ACEOF
  fi
  
  
@@ -4200,7 +4198,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3232,8 +4111,8 @@
+@@ -3232,8 +4111,8 @@ rm -f conftest*
  
    fi
  fi
@@ -4211,7 +4209,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    if test $ac_cv_prog_gcc_traditional = yes; then
      CC="$CC -traditional"
    fi
-@@ -3251,8 +4130,8 @@
+@@ -3251,8 +4130,8 @@ fi
  # SVR4 /usr/ucb/install, which tries to use the nonexistent group "staff"
  # OS/2's system install, which has a completely different semantic
  # ./install, which can be erroneously created by make from ./install.sh.
@@ -4222,7 +4220,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test -z "$INSTALL"; then
  if test "${ac_cv_path_install+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
-@@ -3274,7 +4153,7 @@
+@@ -3274,7 +4153,7 @@ case $as_dir/ in
      # by default.
      for ac_prog in ginstall scoinst install; do
        for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4231,7 +4229,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	  if test $ac_prog = install &&
  	    grep dspmsg "$as_dir/$ac_prog$ac_exec_ext" >/dev/null 2>&1; then
  	    # AIX install.  It has an incompatible calling convention.
-@@ -3293,21 +4172,22 @@
+@@ -3293,21 +4172,22 @@ case $as_dir/ in
      ;;
  esac
  done
@@ -4259,7 +4257,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # Use test -z because SunOS4 sh mishandles braces in ${var-val}.
  # It thinks the first close brace ends the variable substitution.
-@@ -3320,8 +4200,8 @@
+@@ -3320,8 +4200,8 @@ test -z "$INSTALL_DATA" && INSTALL_DATA=
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4270,7 +4268,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_AWK+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3334,35 +4214,36 @@
+@@ -3334,35 +4214,36 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4315,7 +4313,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3370,115 +4251,89 @@
+@@ -3370,115 +4251,89 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -4480,7 +4478,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  
-@@ -3511,8 +4366,8 @@
+@@ -3511,8 +4366,8 @@ fi
  
  # Extract the first word of "$CXX", so it can be a program name with args.
  set dummy $CXX; ac_word=$2
@@ -4491,7 +4489,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_CXX+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3527,28 +4382,29 @@
+@@ -3527,28 +4382,29 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4527,7 +4525,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test ! -e $CXX; then
     { { echo "$as_me:$LINENO: error: Unable to find C++ compiler" >&5
  echo "$as_me: error: Unable to find C++ compiler" >&2;}
-@@ -3579,8 +4435,8 @@
+@@ -3579,8 +4435,8 @@ PTHREAD_CFLAGS=""
  PTHREAD_LFLAGS="-lpthread"
  with_pthreads=yes
  
@@ -4538,7 +4536,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_PTHREADS 1
-@@ -3605,7 +4461,7 @@
+@@ -3605,7 +4461,7 @@ else
      WIN32=
      WINLIBS=
      APCACCESS=apcaccess
@@ -4547,7 +4545,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      APCTEST=apctest
  fi
  
-@@ -3618,8 +4474,8 @@
+@@ -3618,8 +4474,8 @@ for ac_prog in shutdown shutdown.bsd
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4558,7 +4556,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_SHUTDOWN+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3634,27 +4490,28 @@
+@@ -3634,27 +4490,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4593,7 +4591,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$SHUTDOWN" && break
  done
  test -n "$SHUTDOWN" || SHUTDOWN="no"
-@@ -3679,8 +4536,8 @@
+@@ -3679,8 +4536,8 @@ else
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4604,7 +4602,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_APCUPSD_MAIL+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3695,27 +4552,28 @@
+@@ -3695,27 +4552,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4639,7 +4637,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$APCUPSD_MAIL" && break
  done
  test -n "$APCUPSD_MAIL" || APCUPSD_MAIL="no"
-@@ -3732,8 +4590,8 @@
+@@ -3732,8 +4590,8 @@ for ac_prog in wall
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4650,7 +4648,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_WALL+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3748,27 +4606,28 @@
+@@ -3748,27 +4606,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4685,7 +4683,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$WALL" && break
  done
  test -n "$WALL" || WALL="no"
-@@ -3787,8 +4646,8 @@
+@@ -3787,8 +4646,8 @@ for ac_prog in sh bash
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4696,7 +4694,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_SCRIPTSHELL+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3803,27 +4662,28 @@
+@@ -3803,27 +4662,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4731,7 +4729,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$SCRIPTSHELL" && break
  done
  test -n "$SCRIPTSHELL" || SCRIPTSHELL="no"
-@@ -3839,8 +4699,8 @@
+@@ -3839,8 +4699,8 @@ for ac_prog in gmake pmake make
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4742,7 +4740,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_MAKE+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3855,27 +4715,28 @@
+@@ -3855,27 +4715,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4777,7 +4775,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$MAKE" && break
  done
  test -n "$MAKE" || MAKE="no"
-@@ -3891,8 +4752,8 @@
+@@ -3891,8 +4752,8 @@ for ac_prog in makedepend true
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4788,7 +4786,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_MAKEDEPEND+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3907,27 +4768,28 @@
+@@ -3907,27 +4768,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4823,7 +4821,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$MAKEDEPEND" && break
  done
  test -n "$MAKEDEPEND" || MAKEDEPEND=":"
-@@ -3936,8 +4798,8 @@
+@@ -3936,8 +4798,8 @@ for ac_prog in ranlib true
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4834,7 +4832,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_RANLIB+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3952,27 +4814,28 @@
+@@ -3952,27 +4814,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4869,7 +4867,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$RANLIB" && break
  done
  test -n "$RANLIB" || RANLIB=":"
-@@ -3981,8 +4844,8 @@
+@@ -3981,8 +4844,8 @@ for ac_prog in libtool
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4880,7 +4878,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_LIBTOOL+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -3997,27 +4860,28 @@
+@@ -3997,27 +4860,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4915,7 +4913,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$LIBTOOL" && break
  done
  test -n "$LIBTOOL" || LIBTOOL=":"
-@@ -4026,8 +4890,8 @@
+@@ -4026,8 +4890,8 @@ for ac_prog in etags
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4926,7 +4924,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_ETAGS+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4042,27 +4906,28 @@
+@@ -4042,27 +4906,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -4961,7 +4959,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$ETAGS" && break
  done
  test -n "$ETAGS" || ETAGS=":"
-@@ -4071,8 +4936,8 @@
+@@ -4071,8 +4936,8 @@ for ac_prog in etags
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -4972,7 +4970,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_CTAGS+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4087,27 +4952,28 @@
+@@ -4087,27 +4952,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5007,7 +5005,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$CTAGS" && break
  done
  test -n "$CTAGS" || CTAGS=":"
-@@ -4116,8 +4982,8 @@
+@@ -4116,8 +4982,8 @@ for ac_prog in rm
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5018,7 +5016,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_RM+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4132,27 +4998,28 @@
+@@ -4132,27 +4998,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5053,7 +5051,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$RM" && break
  done
  
-@@ -4160,8 +5027,8 @@
+@@ -4160,8 +5027,8 @@ for ac_prog in cp
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5064,7 +5062,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_CP+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4176,27 +5043,28 @@
+@@ -4176,27 +5043,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5099,7 +5097,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$CP" && break
  done
  
-@@ -4204,8 +5072,8 @@
+@@ -4204,8 +5072,8 @@ for ac_prog in echo
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5110,7 +5108,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_ECHO+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4220,27 +5088,28 @@
+@@ -4220,27 +5088,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5145,7 +5143,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$ECHO" && break
  done
  
-@@ -4248,8 +5117,8 @@
+@@ -4248,8 +5117,8 @@ for ac_prog in ln
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5156,7 +5154,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_LN+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4264,27 +5133,28 @@
+@@ -4264,27 +5133,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5191,7 +5189,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$LN" && break
  done
  
-@@ -4292,8 +5162,8 @@
+@@ -4292,8 +5162,8 @@ for ac_prog in sed
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5202,7 +5200,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_SED+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4308,27 +5178,28 @@
+@@ -4308,27 +5178,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5237,7 +5235,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$SED" && break
  done
  
-@@ -4336,8 +5207,8 @@
+@@ -4336,8 +5207,8 @@ for ac_prog in ar
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5248,7 +5246,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_AR+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4352,27 +5223,28 @@
+@@ -4352,27 +5223,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5283,7 +5281,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$AR" && break
  done
  
-@@ -4380,8 +5252,8 @@
+@@ -4380,8 +5252,8 @@ for ac_prog in mv
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -5294,7 +5292,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_MV+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4396,27 +5268,28 @@
+@@ -4396,27 +5268,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -5329,7 +5327,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$MV" && break
  done
  
-@@ -4450,9 +5323,9 @@
+@@ -4450,9 +5323,9 @@ for ac_func in abort fork calloc getpid 
  		strncpy tcgetattr vfprintf setpgrp
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -5342,7 +5340,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -4478,53 +5351,59 @@
+@@ -4478,53 +5351,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -5421,7 +5419,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -4533,13 +5412,15 @@
+@@ -4533,13 +5412,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -5441,7 +5439,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -4561,9 +5442,9 @@
+@@ -4561,9 +5442,9 @@ done
  for ac_func in snprintf vsnprintf nanosleep usleep
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -5454,7 +5452,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -4589,53 +5470,59 @@
+@@ -4589,53 +5470,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -5533,7 +5531,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -4644,13 +5531,15 @@
+@@ -4644,13 +5531,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -5553,7 +5551,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -4660,8 +5549,8 @@
+@@ -4660,8 +5549,8 @@ fi
  done
  
  
@@ -5564,7 +5562,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -4679,36 +5568,48 @@
+@@ -4679,36 +5568,48 @@ syslog(0, "%s", "test");
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -5625,7 +5623,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_socket_std_syslog+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4721,40 +5622,52 @@
+@@ -4721,40 +5622,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -5690,7 +5688,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -4763,14 +5676,15 @@
+@@ -4763,14 +5676,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -5710,7 +5708,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_socket_std_syslog = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBSOCKET 1
-@@ -4801,52 +5715,66 @@
+@@ -4801,52 +5715,66 @@ syslog(0, "%s", "test");
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -5793,7 +5791,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -4872,53 +5800,59 @@
+@@ -4872,53 +5800,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -5872,7 +5870,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -4927,13 +5861,15 @@
+@@ -4927,13 +5861,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -5892,7 +5890,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -4941,8 +5877,8 @@
+@@ -4941,8 +5877,8 @@ _ACEOF
  
  else
    # strftime is in -lintl on SCO UNIX.
@@ -5903,7 +5901,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_intl_strftime+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -4955,40 +5891,52 @@
+@@ -4955,40 +5891,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -5968,7 +5966,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -4997,14 +5945,15 @@
+@@ -4997,14 +5945,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -5988,7 +5986,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_intl_strftime = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_STRFTIME 1
-@@ -5015,69 +5964,354 @@
+@@ -5015,69 +5964,354 @@ fi
  
  fi
  done
@@ -6379,7 +6377,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # Under sysV68, socket and friends are provided by the C library.
  # -linet does not provide socket, but causes multiple definition
-@@ -5089,8 +6323,8 @@
+@@ -5089,8 +6323,8 @@ fi
  #
  # - RF
  #
@@ -6390,7 +6388,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_socket+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5117,53 +6351,59 @@
+@@ -5117,53 +6351,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef socket
  
@@ -6469,7 +6467,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5172,20 +6412,21 @@
+@@ -5172,20 +6412,21 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -6499,7 +6497,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_xnet_socket+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5198,40 +6439,52 @@
+@@ -5198,40 +6439,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -6564,7 +6562,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5240,14 +6493,15 @@
+@@ -5240,14 +6493,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -6584,7 +6582,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_xnet_socket = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBXNET 1
-@@ -5258,8 +6512,8 @@
+@@ -5258,8 +6512,8 @@ _ACEOF
  fi
  
  
@@ -6595,7 +6593,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_socket_socket+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5272,40 +6526,52 @@
+@@ -5272,40 +6526,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -6660,7 +6658,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5314,14 +6580,15 @@
+@@ -5314,14 +6580,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -6680,7 +6678,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_socket_socket = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBSOCKET 1
-@@ -5332,8 +6599,8 @@
+@@ -5332,8 +6599,8 @@ _ACEOF
  fi
  
  
@@ -6691,7 +6689,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_inet_socket+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5346,40 +6613,52 @@
+@@ -5346,40 +6613,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -6756,7 +6754,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5388,14 +6667,15 @@
+@@ -5388,14 +6667,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -6776,7 +6774,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_inet_socket = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBINET 1
-@@ -5408,8 +6688,8 @@
+@@ -5408,8 +6688,8 @@ fi
  fi
  
  
@@ -6787,7 +6785,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_gethostname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5436,53 +6716,59 @@
+@@ -5436,53 +6716,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef gethostname
  
@@ -6866,7 +6864,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5491,20 +6777,21 @@
+@@ -5491,20 +6777,21 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -6896,7 +6894,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_socket_gethostname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5517,40 +6804,52 @@
+@@ -5517,40 +6804,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -6961,7 +6959,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5559,14 +6858,15 @@
+@@ -5559,14 +6858,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -6981,7 +6979,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_socket_gethostname = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBSOCKET 1
-@@ -5577,8 +6877,8 @@
+@@ -5577,8 +6877,8 @@ _ACEOF
  fi
  
  
@@ -6992,7 +6990,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_xnet_gethostname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5591,40 +6891,52 @@
+@@ -5591,40 +6891,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -7057,7 +7055,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5633,14 +6945,15 @@
+@@ -5633,14 +6945,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7077,7 +7075,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_xnet_gethostname = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBXNET 1
-@@ -5651,8 +6964,8 @@
+@@ -5651,8 +6964,8 @@ _ACEOF
  fi
  
  
@@ -7088,7 +7086,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_inet_gethostname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5665,40 +6978,52 @@
+@@ -5665,40 +6978,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -7153,7 +7151,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5707,14 +7032,15 @@
+@@ -5707,14 +7032,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7173,7 +7171,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_inet_gethostname = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBINET 1
-@@ -5727,8 +7053,8 @@
+@@ -5727,8 +7053,8 @@ fi
  fi
  
  
@@ -7184,7 +7182,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ba_cv_header_socklen_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5750,24 +7076,36 @@
+@@ -5750,24 +7076,36 @@ socklen_t x
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -7229,7 +7227,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5776,20 +7114,21 @@
+@@ -5776,20 +7114,21 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7257,7 +7255,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_gethostbyname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5816,53 +7155,59 @@
+@@ -5816,53 +7155,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef gethostbyname
  
@@ -7336,7 +7334,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5871,20 +7216,21 @@
+@@ -5871,20 +7216,21 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7366,7 +7364,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_nsl_gethostbyname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5897,40 +7243,52 @@
+@@ -5897,40 +7243,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -7431,7 +7429,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -5939,14 +7297,15 @@
+@@ -5939,14 +7297,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7451,7 +7449,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_nsl_gethostbyname = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBNSL 1
-@@ -5957,8 +7316,8 @@
+@@ -5957,8 +7316,8 @@ _ACEOF
  fi
  
  
@@ -7462,7 +7460,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_resolv_gethostbyname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5971,40 +7330,52 @@
+@@ -5971,40 +7330,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -7527,7 +7525,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6013,14 +7384,15 @@
+@@ -6013,14 +7384,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7547,7 +7545,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_resolv_gethostbyname = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBRESOLV 1
-@@ -6034,8 +7406,8 @@
+@@ -6034,8 +7406,8 @@ fi
  
  
  # If gettext isn't in the C library, maybe there's a -lintl.
@@ -7558,7 +7556,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_gettext+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6062,53 +7434,59 @@
+@@ -6062,53 +7434,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef gettext
  
@@ -7637,7 +7635,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6117,20 +7495,21 @@
+@@ -6117,20 +7495,21 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7667,7 +7665,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_intl_gettext+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6143,40 +7522,52 @@
+@@ -6143,40 +7522,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -7732,7 +7730,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6185,14 +7576,15 @@
+@@ -6185,14 +7576,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7752,7 +7750,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_intl_gettext = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBINTL 1
-@@ -6206,8 +7598,8 @@
+@@ -6206,8 +7598,8 @@ fi
  
  
  # The condition in this test copes with the presence of inet_addr in libc6.
@@ -7763,7 +7761,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_inet_addr+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6234,53 +7626,59 @@
+@@ -6234,53 +7626,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef inet_addr
  
@@ -7842,7 +7840,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6289,20 +7687,21 @@
+@@ -6289,20 +7687,21 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7872,7 +7870,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_nsl_inet_addr+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6315,40 +7714,52 @@
+@@ -6315,40 +7714,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -7937,7 +7935,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6357,14 +7768,15 @@
+@@ -6357,14 +7768,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -7957,7 +7955,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_nsl_inet_addr = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBNSL 1
-@@ -6377,8 +7789,8 @@
+@@ -6377,8 +7789,8 @@ fi
  fi
  
  
@@ -7968,7 +7966,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_strchr+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6405,53 +7817,59 @@
+@@ -6405,53 +7817,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef strchr
  
@@ -8047,7 +8045,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6460,19 +7878,20 @@
+@@ -6460,19 +7878,20 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8076,7 +8074,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_cposix_strchr+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6485,40 +7904,52 @@
+@@ -6485,40 +7904,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -8141,7 +8139,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6527,14 +7958,15 @@
+@@ -6527,14 +7958,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8161,7 +8159,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_cposix_strchr = yes; then
    EXTRADEFS="$EXTRADEFS -D_SYSV3"
       LIBS="$LIBS -lcposix"
-@@ -6543,8 +7975,8 @@
+@@ -6543,8 +7975,8 @@ fi
  fi
  
  
@@ -8172,7 +8170,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_strstr+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6571,53 +8003,59 @@
+@@ -6571,53 +8003,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef strstr
  
@@ -8251,7 +8249,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6626,13 +8064,14 @@
+@@ -6626,13 +8064,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8270,7 +8268,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_strstr = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_STRSTR 1
-@@ -6644,8 +8083,8 @@
+@@ -6644,8 +8083,8 @@ else
  fi
  
  
@@ -8281,7 +8279,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_strcasecmp+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6672,53 +8111,59 @@
+@@ -6672,53 +8111,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef strcasecmp
  
@@ -8360,7 +8358,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6727,13 +8172,14 @@
+@@ -6727,13 +8172,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8379,7 +8377,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_strcasecmp = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_STRCASECMP 1
-@@ -6745,8 +8191,8 @@
+@@ -6745,8 +8191,8 @@ else
  fi
  
  
@@ -8390,7 +8388,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_memmove+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6773,53 +8219,59 @@
+@@ -6773,53 +8219,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef memmove
  
@@ -8469,7 +8467,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6828,13 +8280,14 @@
+@@ -6828,13 +8280,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8488,7 +8486,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_memmove = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_MEMMOVE 1
-@@ -6846,8 +8299,8 @@
+@@ -6846,8 +8299,8 @@ else
  fi
  
  
@@ -8499,7 +8497,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_getopt_long+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6874,53 +8327,59 @@
+@@ -6874,53 +8327,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef getopt_long
  
@@ -8578,7 +8576,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -6929,13 +8388,14 @@
+@@ -6929,13 +8388,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8597,7 +8595,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_getopt_long = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_GETOPTLONG 1
-@@ -6947,8 +8407,8 @@
+@@ -6947,8 +8407,8 @@ else
  fi
  
  
@@ -8608,7 +8606,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_inet_pton+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6975,53 +8435,59 @@
+@@ -6975,53 +8435,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef inet_pton
  
@@ -8687,7 +8685,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -7030,13 +8496,14 @@
+@@ -7030,13 +8496,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8706,7 +8704,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_inet_pton = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_INETPTON 1
-@@ -7048,8 +8515,8 @@
+@@ -7048,8 +8515,8 @@ else
  fi
  
  
@@ -8717,7 +8715,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_localtime_r+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -7076,53 +8543,59 @@
+@@ -7076,53 +8543,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef localtime_r
  
@@ -8796,7 +8794,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -7131,13 +8604,14 @@
+@@ -7131,13 +8604,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -8815,7 +8813,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_localtime_r = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_LOCALTIME_R 1
-@@ -7149,365 +8623,147 @@
+@@ -7149,365 +8623,147 @@ else
  fi
  
  
@@ -9282,7 +9280,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -7531,25 +8787,19 @@
+@@ -7531,25 +8787,19 @@ echo "$as_me: WARNING: $ac_header:     s
  echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
@@ -9315,7 +9313,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test `eval echo '${'$as_ac_Header'}'` = yes; then
-@@ -7569,18 +8819,19 @@
+@@ -7569,18 +8819,19 @@ done
  for ac_header in arpa/nameser.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
@@ -9343,7 +9341,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -7591,24 +8842,36 @@
+@@ -7591,24 +8842,36 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -9388,7 +9386,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -7617,15 +8880,16 @@
+@@ -7617,15 +8880,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -9411,7 +9409,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -7634,8 +8898,13 @@
+@@ -7634,8 +8898,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -9427,7 +9425,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -7659,9 +8928,10 @@
+@@ -7659,9 +8928,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -9440,7 +9438,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -7685,25 +8955,19 @@
+@@ -7685,25 +8955,19 @@ echo "$as_me: WARNING: $ac_header:     s
  echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
@@ -9473,7 +9471,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test `eval echo '${'$as_ac_Header'}'` = yes; then
-@@ -7719,8 +8983,8 @@
+@@ -7719,8 +8983,8 @@ fi
  done
  
  
@@ -9484,7 +9482,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_header_stat_broken+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -7733,25 +8997,25 @@
+@@ -7733,25 +8997,25 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #include <sys/stat.h>
  
@@ -9514,7 +9512,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  # if S_ISSOCK (S_IFREG)
  You lose.
  # endif
-@@ -7767,8 +9031,8 @@
+@@ -7767,8 +9031,8 @@ fi
  rm -f conftest*
  
  fi
@@ -9525,7 +9523,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_header_stat_broken = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -7776,8 +9040,8 @@
+@@ -7776,8 +9040,8 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  fi
@@ -9536,7 +9534,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_header_time+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -7801,24 +9065,36 @@
+@@ -7801,24 +9065,36 @@ return 0;
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -9581,7 +9579,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -7827,12 +9103,13 @@
+@@ -7827,12 +9103,13 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -9599,7 +9597,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_header_time = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -7840,8 +9117,8 @@
+@@ -7840,8 +9117,8 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  fi
@@ -9610,7 +9608,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_header_sys_wait_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -7854,7 +9131,7 @@
+@@ -7854,7 +9131,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/types.h>
  #include <sys/wait.h>
  #ifndef WEXITSTATUS
@@ -9619,7 +9617,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  #endif
  #ifndef WIFEXITED
  # define WIFEXITED(stat_val) (((stat_val) & 255) == 0)
-@@ -7871,24 +9148,36 @@
+@@ -7871,24 +9148,36 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -9664,7 +9662,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -7897,12 +9186,13 @@
+@@ -7897,12 +9186,13 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -9682,7 +9680,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_header_sys_wait_h = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -7910,8 +9200,8 @@
+@@ -7910,8 +9200,8 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  fi
@@ -9693,7 +9691,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_struct_tm+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -7933,24 +9223,36 @@
+@@ -7933,24 +9223,36 @@ struct tm *tp; tp->tm_sec;
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -9738,7 +9736,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -7959,12 +9261,13 @@
+@@ -7959,12 +9261,13 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -9756,7 +9754,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_struct_tm = sys/time.h; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -7972,8 +9275,8 @@
+@@ -7972,8 +9275,8 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  fi
@@ -9767,7 +9765,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_member_struct_tm_tm_zone+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -7998,24 +9301,36 @@
+@@ -7998,24 +9301,36 @@ return 0;
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -9812,7 +9810,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8024,7 +9339,7 @@
+@@ -8024,7 +9339,7 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -9821,7 +9819,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8045,24 +9360,36 @@
+@@ -8045,24 +9360,36 @@ return 0;
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -9866,7 +9864,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8071,14 +9398,16 @@
+@@ -8071,14 +9398,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -9888,7 +9886,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_member_struct_tm_tm_zone = yes; then
  
  cat >>confdefs.h <<_ACEOF
-@@ -8095,8 +9424,95 @@
+@@ -8095,8 +9424,95 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  else
@@ -9986,7 +9984,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_var_tzname+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8107,37 +9523,49 @@
+@@ -8107,37 +9523,49 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <time.h>
@@ -10047,7 +10045,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8146,13 +9574,14 @@
+@@ -8146,13 +9574,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -10066,7 +10064,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    if test $ac_cv_var_tzname = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -8161,8 +9590,8 @@
+@@ -8161,8 +9590,8 @@ _ACEOF
  
    fi
  fi
@@ -10077,7 +10075,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_uid_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8184,8 +9613,8 @@
+@@ -8184,8 +9613,8 @@ fi
  rm -f conftest*
  
  fi
@@ -10088,7 +10086,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_type_uid_t = no; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -8199,8 +9628,8 @@
+@@ -8199,8 +9628,8 @@ _ACEOF
  
  fi
  
@@ -10099,7 +10097,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_getgroups+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8214,7 +9643,7 @@
+@@ -8214,7 +9643,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  /* Thanks to Mike Rendell for this test.  */
@@ -10108,7 +10106,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  #define NGID 256
  #undef MAX
  #define MAX(x, y) ((x) > (y) ? (x) : (y))
-@@ -8224,7 +9653,7 @@
+@@ -8224,7 +9653,7 @@ main ()
  {
    gid_t gidset[NGID];
    int i, n;
@@ -10117,7 +10115,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    val.lval = -1;
    for (i = 0; i < NGID; i++)
-@@ -8232,18 +9661,28 @@
+@@ -8232,18 +9661,28 @@ main ()
    n = getgroups (sizeof (gidset) / MAX (sizeof (int), sizeof (gid_t)) - 1,
  		 gidset);
    /* Exit non-zero if getgroups seems to require an array of ints.  This
@@ -10152,7 +10150,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8256,8 +9695,10 @@
+@@ -8256,8 +9695,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  ac_cv_type_getgroups=int
  fi
@@ -10164,7 +10162,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_type_getgroups = cross; then
          cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -8278,16 +9719,16 @@
+@@ -8278,16 +9719,16 @@ rm -f conftest*
  
  fi
  fi
@@ -10185,7 +10183,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_mode_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8298,36 +9739,49 @@
+@@ -8298,36 +9739,49 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -10245,7 +10243,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8336,12 +9790,13 @@
+@@ -8336,12 +9790,13 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -10263,7 +10261,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_type_mode_t = yes; then
    :
  else
-@@ -8352,8 +9807,8 @@
+@@ -8352,8 +9807,8 @@ _ACEOF
  
  fi
  
@@ -10274,7 +10272,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_off_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8364,36 +9819,49 @@
+@@ -8364,36 +9819,49 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -10334,7 +10332,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8402,24 +9870,25 @@
+@@ -8402,24 +9870,25 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -10367,7 +10365,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_pid_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8430,36 +9899,49 @@
+@@ -8430,36 +9899,49 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -10427,7 +10425,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8468,12 +9950,13 @@
+@@ -8468,12 +9950,13 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -10445,7 +10443,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_type_pid_t = yes; then
    :
  else
-@@ -8484,8 +9967,8 @@
+@@ -8484,8 +9967,8 @@ _ACEOF
  
  fi
  
@@ -10456,7 +10454,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_signal+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8497,64 +9980,69 @@
+@@ -8497,64 +9980,69 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <sys/types.h>
  #include <signal.h>
@@ -10550,7 +10548,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_size_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8565,36 +10053,49 @@
+@@ -8565,36 +10053,49 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -10610,7 +10608,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8603,24 +10104,25 @@
+@@ -8603,24 +10104,25 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -10643,7 +10641,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_type_uid_t+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8642,8 +10144,8 @@
+@@ -8642,8 +10144,8 @@ fi
  rm -f conftest*
  
  fi
@@ -10654,7 +10652,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_type_uid_t = no; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -8657,8 +10159,8 @@
+@@ -8657,8 +10159,8 @@ _ACEOF
  
  fi
  
@@ -10665,7 +10663,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -8679,29 +10181,41 @@
+@@ -8679,29 +10181,41 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -10717,7 +10715,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -8727,30 +10241,42 @@
+@@ -8727,30 +10241,42 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -10770,7 +10768,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    cat >>confdefs.h <<\_ACEOF
  #define socklen_t size_t
  _ACEOF
-@@ -8760,19 +10286,21 @@
+@@ -8760,19 +10286,21 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  
@@ -10798,7 +10796,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_c_const+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8812,6 +10340,7 @@
+@@ -8812,6 +10340,7 @@ main ()
      char const *s = 0 ? (char *) 0 : (char const *) 0;
  
      *t++ = 0;
@@ -10806,7 +10804,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    }
    { /* Someone thinks the Sun supposedly-ANSI compiler will reject this.  */
      int x[] = {25, 17};
-@@ -8830,7 +10359,9 @@
+@@ -8830,7 +10359,9 @@ main ()
    }
    { /* ULTRIX-32 V3.1 (Rev 9) vcc rejects this */
      const int foo = 10;
@@ -10816,7 +10814,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  #endif
  
    ;
-@@ -8838,24 +10369,36 @@
+@@ -8838,24 +10369,36 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -10861,7 +10859,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -8864,12 +10407,13 @@
+@@ -8864,12 +10407,13 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -10879,7 +10877,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_c_const = no; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -8877,8 +10421,8 @@
+@@ -8877,8 +10421,8 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  fi
@@ -10890,7 +10888,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_c_inline+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8898,39 +10442,54 @@
+@@ -8898,39 +10442,54 @@ $ac_kw foo_t foo () {return 0; }
  
  _ACEOF
  rm -f conftest.$ac_objext
@@ -10957,7 +10955,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
  case $ac_cv_c_inline in
-@@ -8947,8 +10506,8 @@
+@@ -8947,8 +10506,8 @@ case $ac_cv_c_inline in
  _ACEOF
      ;;
  esac
@@ -10968,7 +10966,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_c_stringize+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8971,8 +10530,8 @@
+@@ -8971,8 +10530,8 @@ fi
  rm -f conftest*
  
  fi
@@ -10979,7 +10977,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_c_stringize = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -8980,8 +10539,8 @@
+@@ -8980,8 +10539,8 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  fi
@@ -10990,7 +10988,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_sys_interpreter+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8997,8 +10556,8 @@
+@@ -8997,8 +10556,8 @@ else
  fi
  rm -f conftest
  fi
@@ -11001,7 +10999,16 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  interpval=$ac_cv_sys_interpreter
  
  cat >>confdefs.h <<_ACEOF
-@@ -9304,10 +10863,9 @@
+@@ -9141,7 +10700,7 @@ else
+ fi
+ fi
+ 
+-if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
++if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
+ then
+ 
+ 
+@@ -9304,10 +10863,9 @@ fi
  fi
  
  
@@ -11014,7 +11021,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  		enable_usb=yes
  		enable_net=yes
  		enable_snmp=yes
-@@ -9315,22 +10873,22 @@
+@@ -9315,22 +10873,22 @@ if test "${enable_all+set}" = set; then
  		enable_powerflute=yes
  		enable_cgi=yes
  	fi
@@ -11043,7 +11050,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
         cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9350,30 +10908,42 @@
+@@ -9350,30 +10908,42 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -11096,7 +11103,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	    cat >>confdefs.h <<\_ACEOF
  #define HAVE_LIBWRAP 1
  _ACEOF
-@@ -9405,30 +10975,42 @@
+@@ -9405,30 +10975,42 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -11149,7 +11156,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  		 cat >>confdefs.h <<\_ACEOF
  #define HAVE_LIBWRAP 1
  _ACEOF
-@@ -9439,21 +11021,24 @@
+@@ -9439,21 +11021,24 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11178,7 +11185,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
  ENABLE_CGI="no"
-@@ -9463,10 +11048,9 @@
+@@ -9463,10 +11048,9 @@ LIBGD=
  LIBGDOBJ=
  CGI_IMGFMT=
  SYS_GD_FOUND=no
@@ -11191,7 +11198,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
     if test "$enableval" = "yes"
     then
       ENABLE_CGI="yes"
-@@ -9476,8 +11060,8 @@
+@@ -9476,8 +11060,8 @@ _ACEOF
  
  	 CGI=cgi
  
@@ -11202,7 +11209,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_gd_gdImagePng+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -9490,40 +11074,52 @@
+@@ -9490,40 +11074,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -11267,7 +11274,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -9532,18 +11128,19 @@
+@@ -9532,18 +11128,19 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11293,7 +11300,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	 cat >>confdefs.h <<\_ACEOF
  #define SYS_IMGFMT_PNG 1
  _ACEOF
-@@ -9555,8 +11152,8 @@
+@@ -9555,8 +11152,8 @@ fi
  
       if test "${SYS_GD_FOUND}" = "no"
       then
@@ -11304,7 +11311,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_gd_gdImageGif+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -9569,40 +11166,52 @@
+@@ -9569,40 +11166,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -11369,7 +11376,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -9611,18 +11220,19 @@
+@@ -9611,18 +11220,19 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11395,7 +11402,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	   cat >>confdefs.h <<\_ACEOF
  #define SYS_IMGFMT_GIF 1
  _ACEOF
-@@ -9640,8 +11250,8 @@
+@@ -9640,8 +11250,8 @@ fi
         CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
         LDFLAGS="${LDFLAGS} -L/usr/local/lib"
         unset ac_cv_lib_gd_gdImagePng
@@ -11406,7 +11413,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_gd_gdImagePng+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -9654,40 +11264,52 @@
+@@ -9654,40 +11264,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -11471,7 +11478,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -9696,18 +11318,19 @@
+@@ -9696,18 +11318,19 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11497,7 +11504,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	   cat >>confdefs.h <<\_ACEOF
  #define SYS_IMGFMT_PNG 1
  _ACEOF
-@@ -9721,8 +11344,8 @@
+@@ -9721,8 +11344,8 @@ fi
       if test "${SYS_GD_FOUND}" = "no"
       then
         unset ac_cv_lib_gd_gdImageGif
@@ -11508,7 +11515,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_gd_gdImageGif+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -9735,40 +11358,52 @@
+@@ -9735,40 +11358,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -11573,7 +11580,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -9777,18 +11412,19 @@
+@@ -9777,18 +11412,19 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11599,7 +11606,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	   cat >>confdefs.h <<\_ACEOF
  #define SYS_IMGFMT_GIF 1
  _ACEOF
-@@ -9803,8 +11439,8 @@
+@@ -9803,8 +11439,8 @@ fi
       then
         if test -d src/gd1.2
         then
@@ -11610,7 +11617,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	 CPPFLAGS=${_cppflags}
  	 LDFLAGS=${_ldflags}
  	 GDINCLUDE='-I$(topdir)/src/gd1.2'
-@@ -9840,17 +11476,17 @@
+@@ -9840,17 +11476,17 @@ Alternatively you can disable the CGI su
       fi
  	 if test x$GDINCLUDE = x ; then
  	   if test "${ac_cv_header_gd_h+set}" = set; then
@@ -11634,7 +11641,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9861,24 +11497,36 @@
+@@ -9861,24 +11497,36 @@ $ac_includes_default
  #include <gd.h>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -11679,7 +11686,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -9887,15 +11535,16 @@
+@@ -9887,15 +11535,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11702,7 +11709,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9904,8 +11553,13 @@
+@@ -9904,8 +11553,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <gd.h>
  _ACEOF
@@ -11718,7 +11725,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -9929,9 +11583,10 @@
+@@ -9929,9 +11583,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -11731,7 +11738,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -9955,25 +11610,18 @@
+@@ -9955,25 +11610,18 @@ echo "$as_me: WARNING: gd.h:     section
  echo "$as_me: WARNING: gd.h: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: gd.h: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: gd.h: in the future, the compiler will take precedence" >&2;}
@@ -11762,7 +11769,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test $ac_cv_header_gd_h = yes; then
-@@ -9981,17 +11629,17 @@
+@@ -9981,17 +11629,17 @@ if test $ac_cv_header_gd_h = yes; then
  else
  
  	       if test "${ac_cv_header_gd_gd_h+set}" = set; then
@@ -11786,7 +11793,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -10002,24 +11650,36 @@
+@@ -10002,24 +11650,36 @@ $ac_includes_default
  #include <gd/gd.h>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -11831,7 +11838,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10028,15 +11688,16 @@
+@@ -10028,15 +11688,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -11854,7 +11861,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -10045,8 +11706,13 @@
+@@ -10045,8 +11706,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <gd/gd.h>
  _ACEOF
@@ -11870,7 +11877,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -10070,9 +11736,10 @@
+@@ -10070,9 +11736,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -11883,7 +11890,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -10096,25 +11763,18 @@
+@@ -10096,25 +11763,18 @@ echo "$as_me: WARNING: gd/gd.h:     sect
  echo "$as_me: WARNING: gd/gd.h: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: gd/gd.h: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: gd/gd.h: in the future, the compiler will take precedence" >&2;}
@@ -11914,7 +11921,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test $ac_cv_header_gd_gd_h = yes; then
-@@ -10142,27 +11802,27 @@
+@@ -10142,27 +11802,27 @@ fi
  	 fi
     fi
  
@@ -11950,7 +11957,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	    cat >>confdefs.h <<\_ACEOF
  #define HAVE_APCSMART_DRIVER 1
  _ACEOF
-@@ -10179,12 +11839,12 @@
+@@ -10179,12 +11839,12 @@ _ACEOF
  	APCSMART_DRIVER="apcsmart"
  
  
@@ -11967,7 +11974,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	    cat >>confdefs.h <<\_ACEOF
  #define HAVE_DUMB_DRIVER 1
  _ACEOF
-@@ -10201,13 +11861,13 @@
+@@ -10201,13 +11861,13 @@ _ACEOF
  	DUMB_DRIVER="dumb"
  
  
@@ -11985,7 +11992,17 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	if test $HAVE_UNAME=yes -a x`uname -s` = xLinux ; then
  		cat >>confdefs.h <<\_ACEOF
  #define HAVE_USB_DRIVER 1
-@@ -10240,12 +11900,12 @@
+@@ -10219,7 +11879,8 @@ _ACEOF
+ 
+ 	elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD -o \
+ 		  $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD -o \
+-		  $HAVE_UNAME=yes -a x`uname -s` = xNetBSD ; then
++		  $HAVE_UNAME=yes -a x`uname -s` = xNetBSD -o \
++		  $HAVE_UNAME=yes -a x`uname -s` = xDragonFly; then
+ 		cat >>confdefs.h <<\_ACEOF
+ #define HAVE_USB_DRIVER 1
+ _ACEOF
+@@ -10240,12 +11901,12 @@ echo "$as_me: error: Can't build USB dri
     { (exit 1); exit 1; }; }
  	fi
  	fi
@@ -12002,7 +12019,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	cat >>confdefs.h <<\_ACEOF
  #define HAVE_NET_DRIVER 1
  _ACEOF
-@@ -10257,31 +11917,32 @@
+@@ -10257,31 +11918,32 @@ _ACEOF
  	NET_DRIVER="net"
  
  	fi
@@ -12046,7 +12063,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_crypto_EVP_DigestInit+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10294,40 +11955,52 @@
+@@ -10294,40 +11956,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12111,7 +12128,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10336,14 +12009,15 @@
+@@ -10336,14 +12010,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12131,7 +12148,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_crypto_EVP_DigestInit = yes; then
    echo '	including crypto library for snmp.'; LIBS="$LIBS -lcrypto"
  fi
-@@ -10358,8 +12032,8 @@
+@@ -10358,8 +12033,8 @@ fi
  	LDFLAGS="${LDFLAGS} -L/usr/local/lib"
  
  		if test "$SNMP_LIB_FOUND" = "no" ; then
@@ -12142,7 +12159,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_netsnmp_snmp_open+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10372,40 +12046,52 @@
+@@ -10372,40 +12047,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12207,7 +12224,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10414,14 +12100,15 @@
+@@ -10414,14 +12101,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12227,7 +12244,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_netsnmp_snmp_open = yes; then
    LIBS="$LIBS -lnetsnmp"
  		   SNMP_LIB_FOUND="yes"
-@@ -10431,8 +12118,8 @@
+@@ -10431,8 +12119,8 @@ fi
  
  		if test "$SNMP_LIB_FOUND" = "no" ; then
  		WANT_NET_SNMP="no"
@@ -12238,7 +12255,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_snmp_snmp_open+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10445,40 +12132,52 @@
+@@ -10445,40 +12133,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12303,7 +12320,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10487,14 +12186,15 @@
+@@ -10487,14 +12187,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12323,7 +12340,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_snmp_snmp_open = yes; then
    LIBS="$LIBS -lsnmp"
  		   SNMP_LIB_FOUND="yes"
-@@ -10530,10 +12230,9 @@
+@@ -10530,10 +12231,9 @@ _ACEOF
  
  fi
  
@@ -12336,7 +12353,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	cat >>confdefs.h <<\_ACEOF
  #define HAVE_TEST_DRIVER 1
  _ACEOF
-@@ -10541,7 +12240,8 @@
+@@ -10541,7 +12241,8 @@ _ACEOF
  	TEST_DRIVER="test"
  
  	fi
@@ -12346,7 +12363,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_NISSERVER 1
-@@ -10555,49 +12255,48 @@
+@@ -10555,49 +12256,48 @@ NISSRV_ENABLED=yes
  
  NISIP="0.0.0.0"
  
@@ -12412,7 +12429,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_ncurses_initscr+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10610,40 +12309,52 @@
+@@ -10610,40 +12310,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12477,7 +12494,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10652,14 +12363,15 @@
+@@ -10652,14 +12364,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12497,7 +12514,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_ncurses_initscr = yes; then
    POWERLIBS="-lncurses"
  else
-@@ -10668,8 +12380,8 @@
+@@ -10668,8 +12381,8 @@ echo "$as_me: error: Powerflute requires
     { (exit 1); exit 1; }; }
  fi
  
@@ -12508,7 +12525,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_menu_new_menu+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10682,40 +12394,52 @@
+@@ -10682,40 +12395,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12573,7 +12590,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10724,14 +12448,15 @@
+@@ -10724,14 +12449,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12593,7 +12610,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_menu_new_menu = yes; then
    POWERLIBS="$POWERLIBS -lmenu"
  else
-@@ -10740,8 +12465,8 @@
+@@ -10740,8 +12466,8 @@ echo "$as_me: error: Powerflute requires
     { (exit 1); exit 1; }; }
  fi
  
@@ -12604,7 +12621,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_form_new_form+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10754,40 +12479,52 @@
+@@ -10754,40 +12480,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12669,7 +12686,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10796,14 +12533,15 @@
+@@ -10796,14 +12534,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12689,7 +12706,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_form_new_form = yes; then
    POWERLIBS="$POWERLIBS -lform"
  else
-@@ -10812,8 +12550,8 @@
+@@ -10812,8 +12551,8 @@ echo "$as_me: error: Powerflute requires
     { (exit 1); exit 1; }; }
  fi
  
@@ -12700,7 +12717,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_panel_new_panel+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -10826,40 +12564,52 @@
+@@ -10826,40 +12565,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -12765,7 +12782,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -10868,14 +12618,15 @@
+@@ -10868,14 +12619,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -12785,7 +12802,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_panel_new_panel = yes; then
    POWERLIBS="$POWERLIBS -lpanel"
  else
-@@ -10890,7 +12641,8 @@
+@@ -10890,7 +12642,8 @@ fi
  _ACEOF
  
  	  fi
@@ -12795,7 +12812,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  LD="$CXX"
  
-@@ -10905,28 +12657,28 @@
+@@ -10905,28 +12658,28 @@ if test -n "$GCC" -a "$CFG_CYGWIN" != "y
      # Previous versions of GCC do not have the reliance on the stdc++
      # or g++ libraries, so the extra supc++ library is not needed.
  
@@ -12832,7 +12849,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      OLDCFLAGS="$CFLAGS"
      CFLAGS="$CFLAGS -fno-exceptions"
      cat >conftest.$ac_ext <<_ACEOF
-@@ -10945,43 +12697,56 @@
+@@ -10945,43 +12698,56 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -12904,7 +12921,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      OLDCFLAGS="$CFLAGS"
      CFLAGS="$CFLAGS -fno-rtti"
      cat >conftest.$ac_ext <<_ACEOF
-@@ -11000,38 +12765,51 @@
+@@ -11000,38 +12766,51 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -12969,7 +12986,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      CFLAGS="$OLDCFLAGS"
  fi
  
-@@ -11099,8 +12877,8 @@
+@@ -11099,8 +12878,8 @@ for ac_prog in msgfmt
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
@@ -12980,7 +12997,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_MSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11115,27 +12893,28 @@
+@@ -11115,27 +12894,28 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -13015,7 +13032,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    test -n "$MSGFMT" && break
  done
  test -n "$MSGFMT" || MSGFMT="no"
-@@ -11146,40 +12925,41 @@
+@@ -11146,40 +12926,41 @@ then
  	USE_NLS=no
  	USE_INCLUDED_LIBINTL=no
  else
@@ -13075,7 +13092,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_RANLIB+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11192,32 +12972,34 @@
+@@ -11192,32 +12973,34 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -13117,7 +13134,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_prog_ac_ct_RANLIB+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11230,35 +13012,49 @@
+@@ -11230,35 +13013,49 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -13176,7 +13193,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_working_alloca_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11273,29 +13069,42 @@
+@@ -11273,29 +13070,42 @@ int
  main ()
  {
  char *p = (char *) alloca (2 * sizeof (int));
@@ -13227,7 +13244,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -11304,13 +13113,14 @@
+@@ -11304,13 +13114,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -13246,7 +13263,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_working_alloca_h = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -11319,8 +13129,8 @@
+@@ -11319,8 +13130,8 @@ _ACEOF
  
  fi
  
@@ -13257,7 +13274,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_alloca_works+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11355,29 +13165,42 @@
+@@ -11355,29 +13166,42 @@ int
  main ()
  {
  char *p = (char *) alloca (1);
@@ -13308,7 +13325,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -11386,13 +13209,14 @@
+@@ -11386,13 +13210,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -13327,7 +13344,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  if test $ac_cv_func_alloca_works = yes; then
  
-@@ -11406,15 +13230,15 @@
+@@ -11406,15 +13231,15 @@ else
  # contain a buggy version.  If you still want to use their alloca,
  # use ar to extract alloca.o from them instead of compiling alloca.c.
  
@@ -13346,7 +13363,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_os_cray+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11424,7 +13248,7 @@
+@@ -11424,7 +13249,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -13355,7 +13372,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  webecray
  #else
  wenotbecray
-@@ -11440,14 +13264,14 @@
+@@ -11440,14 +13265,14 @@ fi
  rm -f conftest*
  
  fi
@@ -13375,7 +13392,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -11473,53 +13297,59 @@
+@@ -11473,53 +13298,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -13454,7 +13471,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -11528,13 +13358,15 @@
+@@ -11528,13 +13359,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -13474,7 +13491,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
  
  cat >>confdefs.h <<_ACEOF
-@@ -11547,8 +13379,8 @@
+@@ -11547,8 +13380,8 @@ fi
    done
  fi
  
@@ -13485,7 +13502,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_c_stack_direction+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11561,6 +13393,7 @@
+@@ -11561,6 +13394,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -13493,7 +13510,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  int
  find_stack_direction ()
  {
-@@ -11578,17 +13411,26 @@
+@@ -11578,17 +13412,26 @@ find_stack_direction ()
  int
  main ()
  {
@@ -13525,7 +13542,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -11601,11 +13443,13 @@
+@@ -11601,11 +13444,13 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  ac_cv_c_stack_direction=-1
  fi
@@ -13542,7 +13559,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  cat >>confdefs.h <<_ACEOF
  #define STACK_DIRECTION $ac_cv_c_stack_direction
-@@ -11619,18 +13463,19 @@
+@@ -11619,18 +13464,19 @@ fi
  for ac_header in stdlib.h unistd.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
@@ -13570,7 +13587,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -11641,24 +13486,36 @@
+@@ -11641,24 +13487,36 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -13615,7 +13632,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -11667,15 +13524,16 @@
+@@ -11667,15 +13525,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -13638,7 +13655,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -11684,8 +13542,13 @@
+@@ -11684,8 +13543,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -13654,7 +13671,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -11709,9 +13572,10 @@
+@@ -11709,9 +13573,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -13667,7 +13684,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -11735,25 +13599,19 @@
+@@ -11735,25 +13600,19 @@ echo "$as_me: WARNING: $ac_header:     s
  echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
@@ -13700,7 +13717,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test `eval echo '${'$as_ac_Header'}'` = yes; then
-@@ -11769,9 +13627,9 @@
+@@ -11769,9 +13628,9 @@ done
  for ac_func in getpagesize
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -13713,7 +13730,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -11797,53 +13655,59 @@
+@@ -11797,53 +13656,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -13792,7 +13809,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -11852,13 +13716,15 @@
+@@ -11852,13 +13717,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -13812,7 +13829,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -11867,8 +13733,8 @@
+@@ -11867,8 +13734,8 @@ _ACEOF
  fi
  done
  
@@ -13823,7 +13840,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_mmap_fixed_mapped+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -11963,15 +13829,15 @@
+@@ -11963,15 +13830,15 @@ main ()
    /* First, make a file with some known garbage in it. */
    data = (char *) malloc (pagesize);
    if (!data)
@@ -13842,7 +13859,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    close (fd);
  
    /* Next, try to mmap the file at a fixed address which already has
-@@ -11979,17 +13845,17 @@
+@@ -11979,17 +13846,17 @@ main ()
       we see the same garbage.  */
    fd = open ("conftest.mmap", O_RDWR);
    if (fd < 0)
@@ -13865,7 +13882,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    /* Finally, make sure that changes to the mapped area do not
       percolate back to the file as seen by read().  (This is a bug on
-@@ -11998,24 +13864,33 @@
+@@ -11998,24 +13865,33 @@ main ()
      *(data2 + i) = *(data2 + i) + 1;
    data3 = (char *) malloc (pagesize);
    if (!data3)
@@ -13907,7 +13924,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12028,11 +13903,13 @@
+@@ -12028,11 +13904,13 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  ac_cv_func_mmap_fixed_mapped=no
  fi
@@ -13924,7 +13941,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_mmap_fixed_mapped = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -12055,18 +13932,19 @@
+@@ -12055,18 +13933,19 @@ for ac_header in argz.h limits.h locale.
  unistd.h sys/param.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
@@ -13952,7 +13969,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -12077,24 +13955,36 @@
+@@ -12077,24 +13956,36 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -13997,7 +14014,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12103,15 +13993,16 @@
+@@ -12103,15 +13994,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14020,7 +14037,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -12120,8 +14011,13 @@
+@@ -12120,8 +14012,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -14036,7 +14053,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -12145,9 +14041,10 @@
+@@ -12145,9 +14042,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -14049,7 +14066,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -12171,25 +14068,19 @@
+@@ -12171,25 +14069,19 @@ echo "$as_me: WARNING: $ac_header:     s
  echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
@@ -14082,7 +14099,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test `eval echo '${'$as_ac_Header'}'` = yes; then
-@@ -12216,9 +14107,9 @@
+@@ -12216,9 +14108,9 @@ for ac_func in getcwd munmap putenv sete
  strdup __argz_count __argz_stringify __argz_next
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -14095,7 +14112,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -12244,53 +14135,59 @@
+@@ -12244,53 +14136,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -14174,7 +14191,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12299,13 +14196,15 @@
+@@ -12299,13 +14197,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14194,7 +14211,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -12320,9 +14219,9 @@
+@@ -12320,9 +14220,9 @@ done
  for ac_func in stpcpy
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -14207,7 +14224,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -12348,53 +14247,59 @@
+@@ -12348,53 +14248,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -14286,7 +14303,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12403,13 +14308,15 @@
+@@ -12403,13 +14309,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14306,7 +14323,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -12427,8 +14334,8 @@
+@@ -12427,8 +14335,8 @@ _ACEOF
     fi
  
     if test $ac_cv_header_locale_h = yes; then
@@ -14317,7 +14334,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${am_cv_val_LC_MESSAGES+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -12448,24 +14355,36 @@
+@@ -12448,24 +14356,36 @@ return LC_MESSAGES
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -14362,7 +14379,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12474,13 +14393,14 @@
+@@ -12474,13 +14394,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14381,7 +14398,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      if test $am_cv_val_LC_MESSAGES = yes; then
        cat >>confdefs.h <<\_ACEOF
  #define HAVE_LC_MESSAGES 1
-@@ -12488,17 +14408,17 @@
+@@ -12488,17 +14409,17 @@ _ACEOF
  
      fi
    fi
@@ -14407,7 +14424,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
      USE_INCLUDED_LIBINTL=no
-@@ -12508,18 +14428,18 @@
+@@ -12508,18 +14429,18 @@ echo "${ECHO_T}$USE_NLS" >&6
  #define ENABLE_NLS 1
  _ACEOF
  
@@ -14434,7 +14451,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
        nls_cv_use_gnu_gettext="$nls_cv_force_use_gnu_gettext"
        if test "$nls_cv_force_use_gnu_gettext" != "yes"; then
-@@ -12528,17 +14448,17 @@
+@@ -12528,17 +14449,17 @@ echo "${ECHO_T}$nls_cv_force_use_gnu_get
          CATOBJEXT=NONE
  
          if test "${ac_cv_header_libintl_h+set}" = set; then
@@ -14458,7 +14475,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -12549,24 +14469,36 @@
+@@ -12549,24 +14470,36 @@ $ac_includes_default
  #include <libintl.h>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -14503,7 +14520,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12575,15 +14507,16 @@
+@@ -12575,15 +14508,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14526,7 +14543,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -12592,8 +14525,13 @@
+@@ -12592,8 +14526,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <libintl.h>
  _ACEOF
@@ -14542,7 +14559,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -12617,9 +14555,10 @@
+@@ -12617,9 +14556,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -14555,7 +14572,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -12643,30 +14582,23 @@
+@@ -12643,30 +14583,23 @@ echo "$as_me: WARNING: libintl.h:     se
  echo "$as_me: WARNING: libintl.h: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: libintl.h: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: libintl.h: in the future, the compiler will take precedence" >&2;}
@@ -14593,7 +14610,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${gt_cv_func_gettext_libc+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -12686,24 +14618,36 @@
+@@ -12686,24 +14619,36 @@ return (int) gettext ("")
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -14638,7 +14655,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12712,17 +14656,18 @@
+@@ -12712,17 +14657,18 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14663,7 +14680,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_intl_bindtextdomain+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -12735,40 +14680,52 @@
+@@ -12735,40 +14681,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -14728,7 +14745,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12777,22 +14734,23 @@
+@@ -12777,22 +14735,23 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14760,7 +14777,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_intl_gettext+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -12805,40 +14763,52 @@
+@@ -12805,40 +14764,52 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -14825,7 +14842,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12847,14 +14817,15 @@
+@@ -12847,14 +14818,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14845,7 +14862,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_intl_gettext = yes; then
    gt_cv_func_gettext_libintl=yes
  else
-@@ -12862,8 +14833,8 @@
+@@ -12862,8 +14834,8 @@ else
  fi
  
  fi
@@ -14856,7 +14873,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  fi
  
             fi
-@@ -12876,8 +14847,8 @@
+@@ -12876,8 +14848,8 @@ _ACEOF
  
                # Extract the first word of "msgfmt", so it can be a program name with args.
  set dummy msgfmt; ac_word=$2
@@ -14867,7 +14884,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_MSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -12903,20 +14874,20 @@
+@@ -12903,20 +14875,20 @@ esac
  fi
  MSGFMT="$ac_cv_path_MSGFMT"
  if test -n "$MSGFMT"; then
@@ -14895,7 +14912,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -12942,53 +14913,59 @@
+@@ -12942,53 +14914,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -14974,7 +14991,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -12997,13 +14974,15 @@
+@@ -12997,13 +14975,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -14994,7 +15011,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -13014,8 +14993,8 @@
+@@ -13014,8 +14994,8 @@ done
  
                  # Extract the first word of "gmsgfmt", so it can be a program name with args.
  set dummy gmsgfmt; ac_word=$2
@@ -15005,7 +15022,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_GMSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13030,32 +15009,33 @@
+@@ -13030,32 +15010,33 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -15047,7 +15064,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_XGETTEXT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13081,11 +15061,11 @@
+@@ -13081,11 +15062,11 @@ esac
  fi
  XGETTEXT="$ac_cv_path_XGETTEXT"
  if test -n "$XGETTEXT"; then
@@ -15063,7 +15080,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  fi
  
                  cat >conftest.$ac_ext <<_ACEOF
-@@ -13105,24 +15085,36 @@
+@@ -13105,24 +15086,36 @@ extern int _nl_msg_cat_cntr;
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -15108,7 +15125,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -13132,10 +15124,11 @@
+@@ -13132,10 +15125,11 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -15122,7 +15139,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
        conftest$ac_exeext conftest.$ac_ext
                  INSTOBJEXT=.mo
                fi
-@@ -13146,23 +15139,23 @@
+@@ -13146,23 +15140,23 @@ fi
  
  
          if test "$CATOBJEXT" = "NONE"; then
@@ -15156,7 +15173,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_lib_i_main+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13179,30 +15172,42 @@
+@@ -13179,30 +15173,42 @@ cat >>conftest.$ac_ext <<_ACEOF
  int
  main ()
  {
@@ -15208,7 +15225,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -13211,14 +15216,15 @@
+@@ -13211,14 +15217,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -15228,7 +15245,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_lib_i_main = yes; then
    cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBI 1
-@@ -13228,8 +15234,8 @@
+@@ -13228,8 +15235,8 @@ _ACEOF
  
  fi
  
@@ -15239,7 +15256,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_func_catgets+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13256,53 +15262,59 @@
+@@ -13256,53 +15263,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef catgets
  
@@ -15318,7 +15335,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -13311,13 +15323,14 @@
+@@ -13311,13 +15324,14 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -15337,7 +15354,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test $ac_cv_func_catgets = yes; then
    cat >>confdefs.h <<\_ACEOF
  #define HAVE_CATGETS 1
-@@ -13326,8 +15339,8 @@
+@@ -13326,8 +15340,8 @@ _ACEOF
                 INTLOBJS="\$(CATOBJS)"
                 # Extract the first word of "gencat", so it can be a program name with args.
  set dummy gencat; ac_word=$2
@@ -15348,7 +15365,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_GENCAT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13342,32 +15355,33 @@
+@@ -13342,32 +15356,33 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -15390,7 +15407,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_GMSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13382,33 +15396,34 @@
+@@ -13382,33 +15397,34 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -15433,7 +15450,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_GMSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13434,18 +15449,18 @@
+@@ -13434,18 +15450,18 @@ esac
  fi
  GMSGFMT="$ac_cv_path_GMSGFMT"
  if test -n "$GMSGFMT"; then
@@ -15458,7 +15475,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_XGETTEXT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13471,11 +15486,11 @@
+@@ -13471,11 +15487,11 @@ esac
  fi
  XGETTEXT="$ac_cv_path_XGETTEXT"
  if test -n "$XGETTEXT"; then
@@ -15474,7 +15491,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  fi
  
                   USE_INCLUDED_LIBINTL=yes
-@@ -13503,8 +15518,8 @@
+@@ -13503,8 +15519,8 @@ fi
                  INTLOBJS="\$(GETTOBJS)"
          # Extract the first word of "msgfmt", so it can be a program name with args.
  set dummy msgfmt; ac_word=$2
@@ -15485,7 +15502,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_MSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13530,17 +15545,17 @@
+@@ -13530,17 +15546,17 @@ esac
  fi
  MSGFMT="$ac_cv_path_MSGFMT"
  if test -n "$MSGFMT"; then
@@ -15509,7 +15526,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_GMSGFMT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13555,32 +15570,33 @@
+@@ -13555,32 +15571,33 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -15551,7 +15568,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test "${ac_cv_path_XGETTEXT+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -13606,11 +15622,11 @@
+@@ -13606,11 +15623,11 @@ esac
  fi
  XGETTEXT="$ac_cv_path_XGETTEXT"
  if test -n "$XGETTEXT"; then
@@ -15567,7 +15584,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  fi
  
  
-@@ -13630,8 +15646,8 @@
+@@ -13630,8 +15647,8 @@ fi
                          if $XGETTEXT --omit-header /dev/null 2> /dev/null; then
            : ;
          else
@@ -15578,7 +15595,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
            XGETTEXT=":"
          fi
        fi
-@@ -13650,9 +15666,9 @@
+@@ -13650,9 +15667,9 @@ while test -n "$ac_sources"; do
    set $ac_sources; ac_source=$1; shift; ac_sources=$*
    ac_config_links_1="$ac_config_links_1 $ac_dest:$ac_source"
  done
@@ -15590,7 +15607,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
  
-@@ -13686,8 +15702,8 @@
+@@ -13686,8 +15703,8 @@ done
       if test "x$ALL_LINGUAS" = "x"; then
         LINGUAS=
       else
@@ -15601,7 +15618,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
         NEW_LINGUAS=
         for lang in ${LINGUAS=$ALL_LINGUAS}; do
           case "$ALL_LINGUAS" in
-@@ -13695,8 +15711,8 @@
+@@ -13695,8 +15712,8 @@ echo $ECHO_N "checking for catalogs to b
           esac
         done
         LINGUAS=$NEW_LINGUAS
@@ -15612,7 +15629,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
       fi
  
            if test -n "$LINGUAS"; then
-@@ -13715,17 +15731,17 @@
+@@ -13715,17 +15732,17 @@ echo "${ECHO_T}$LINGUAS" >&6
              test -d $srcdir/src/intl || mkdir $srcdir/src/intl
     if test "$CATOBJEXT" = ".cat"; then
       if test "${ac_cv_header_linux_version_h+set}" = set; then
@@ -15636,7 +15653,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13736,24 +15752,36 @@
+@@ -13736,24 +15753,36 @@ $ac_includes_default
  #include <linux/version.h>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -15681,7 +15698,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -13762,15 +15790,16 @@
+@@ -13762,15 +15791,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -15704,7 +15721,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13779,8 +15808,13 @@
+@@ -13779,8 +15809,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <linux/version.h>
  _ACEOF
@@ -15720,7 +15737,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -13804,9 +15838,10 @@
+@@ -13804,9 +15839,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -15733,7 +15750,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -13830,25 +15865,18 @@
+@@ -13830,25 +15866,18 @@ echo "$as_me: WARNING: linux/version.h: 
  echo "$as_me: WARNING: linux/version.h: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: linux/version.h: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: linux/version.h: in the future, the compiler will take precedence" >&2;}
@@ -15764,7 +15781,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test $ac_cv_header_linux_version_h = yes; then
-@@ -13917,9 +15945,9 @@
+@@ -13917,9 +15946,9 @@ fi
  for ac_func in wait waitpid wait3
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -15777,7 +15794,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -13945,53 +15973,59 @@
+@@ -13945,53 +15974,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -15856,7 +15873,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -14000,13 +16034,15 @@
+@@ -14000,13 +16035,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -15876,7 +15893,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -14015,8 +16051,8 @@
+@@ -14015,8 +16052,8 @@ _ACEOF
  fi
  done
  
@@ -15887,7 +15904,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -14045,40 +16081,53 @@
+@@ -14045,40 +16082,53 @@ pid = waitpid (-1, &status, 0);
  }
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
@@ -15954,7 +15971,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
        conftest$ac_exeext conftest.$ac_ext
  
  
-@@ -14110,9 +16159,9 @@
+@@ -14110,9 +16160,9 @@ then
  for ac_func in snprintf
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -15967,7 +15984,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -14138,53 +16187,59 @@
+@@ -14138,53 +16188,59 @@ cat >>conftest.$ac_ext <<_ACEOF
  
  #undef $ac_func
  
@@ -16046,7 +16063,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -14193,13 +16248,15 @@
+@@ -14193,13 +16249,15 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -16066,7 +16083,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  if test `eval echo '${'$as_ac_var'}'` = yes; then
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
-@@ -14229,18 +16286,19 @@
+@@ -14229,18 +16287,19 @@ then
  for ac_header in ncurses/curses.h ncurses/menu.h ncurses/panel.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
@@ -16094,7 +16111,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -14251,24 +16309,36 @@
+@@ -14251,24 +16310,36 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -16139,7 +16156,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -14277,15 +16347,16 @@
+@@ -14277,15 +16348,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -16162,7 +16179,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -14294,8 +16365,13 @@
+@@ -14294,8 +16366,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -16178,7 +16195,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -14319,9 +16395,10 @@
+@@ -14319,9 +16396,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -16191,7 +16208,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -14345,25 +16422,19 @@
+@@ -14345,25 +16423,19 @@ echo "$as_me: WARNING: $ac_header:     s
  echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
@@ -16224,7 +16241,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test `eval echo '${'$as_ac_Header'}'` = yes; then
-@@ -14385,18 +16456,19 @@
+@@ -14385,18 +16457,19 @@ done
  for ac_header in curses.h menu.h panel.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
@@ -16252,7 +16269,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -14407,24 +16479,36 @@
+@@ -14407,24 +16480,36 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -16297,7 +16314,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
-@@ -14433,15 +16517,16 @@
+@@ -14433,15 +16518,16 @@ else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
@@ -16320,7 +16337,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -14450,8 +16535,13 @@
+@@ -14450,8 +16536,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -16336,7 +16353,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -14475,9 +16565,10 @@
+@@ -14475,9 +16566,10 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
    ac_header_preproc=no
  fi
@@ -16349,7 +16366,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
-@@ -14501,25 +16592,19 @@
+@@ -14501,25 +16593,19 @@ echo "$as_me: WARNING: $ac_header:     s
  echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
      { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
  echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
@@ -16382,7 +16399,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  fi
  if test `eval echo '${'$as_ac_Header'}'` = yes; then
-@@ -14545,14 +16630,14 @@
+@@ -14545,14 +16631,14 @@ fi
  
  # now allow user to specify DISTNAME
  
@@ -16401,7 +16418,25 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  if test "x$DISTNAME" != "x"
  then
-@@ -14759,6 +16844,7 @@
+@@ -14569,7 +16655,7 @@ then
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
+ then
+ 	DISTNAME=freebsd
+-elif test $HAVE_UNAME=yes -a x`uname -s` = xNetBSD
++elif test $HAVE_UNAME=yes -a x`uname -s` = xNetBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
+ then
+ 	DISTNAME=netbsd
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD
+@@ -14720,7 +16806,7 @@ debian)
+ 	platforms/debian/ups-monitor \
+ 	"
+   ;;
+-freebsd)
++freebsd|dragonfly)
+     DISTVER=`uname -a |awk '{print $3}'`
+     SERIALDEV=/dev/cuaa0
+     nologdir=/var/run
+@@ -14759,6 +16845,7 @@ netbsd)
      DFILES="\
  	platforms/netbsd/Makefile \
  	platforms/netbsd/apcupsd \
@@ -16409,7 +16444,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  	"
    ;;
  openbsd)
-@@ -14891,121 +16977,121 @@
+@@ -14891,121 +16978,121 @@ echo "$as_me: WARNING: Something went wr
  esac
  
  
@@ -16575,7 +16610,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  
  
-@@ -15156,8 +17242,10 @@
+@@ -15156,8 +17243,10 @@ VARIABLES=$srcdir/autoconf/variables.mak
  TARGETS=$srcdir/autoconf/targets.mak
  
  
@@ -16588,7 +16623,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
  # tests run on this system so they can be shared between configure
-@@ -15176,39 +17264,58 @@
+@@ -15176,39 +17265,58 @@ _ACEOF
  
  # The following way of writing the cache mishandles newlines in values,
  # but we know of no workaround that is simple, portable, and efficient.
@@ -16663,7 +16698,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    fi
  fi
  rm -f confcache
-@@ -15217,32 +17324,18 @@
+@@ -15217,32 +17325,18 @@ test "x$prefix" = xNONE && prefix=$ac_de
  # Let make expand exec_prefix.
  test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
  
@@ -16702,7 +16737,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  done
  LIBOBJS=$ac_libobjs
  
-@@ -15280,11 +17373,35 @@
+@@ -15280,11 +17374,35 @@ if test -n "${ZSH_VERSION+set}" && (emul
    # Zsh 3.x and 4.x performs word splitting on ${1+"$@"}, which
    # is contrary to our usage.  Disable this feature.
    alias -g '${1+"$@"}'='"$@"'
@@ -16740,7 +16775,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  # Support unset when possible.
  if ( (MAIL=60; unset MAIL) || exit) >/dev/null 2>&1; then
    as_unset=unset
-@@ -15293,8 +17410,43 @@
+@@ -15293,8 +17411,43 @@ else
  fi
  
  
@@ -16785,7 +16820,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  PS1='$ '
  PS2='> '
  PS4='+ '
-@@ -15308,18 +17460,19 @@
+@@ -15308,18 +17461,19 @@ do
    if (set +x; test -z "`(eval $as_var=C; export $as_var) 2>&1`"); then
      eval $as_var=C; export $as_var
    else
@@ -16808,7 +16843,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
    as_basename=basename
  else
    as_basename=false
-@@ -15327,159 +17480,120 @@
+@@ -15327,159 +17481,120 @@ fi
  
  
  # Name of the executable.
@@ -17039,7 +17074,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  if mkdir -p . 2>/dev/null; then
    as_mkdir_p=:
-@@ -15488,7 +17602,19 @@
+@@ -15488,7 +17603,19 @@ else
    as_mkdir_p=false
  fi
  
@@ -17060,7 +17095,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
  # Sed expression to map a string onto a valid CPP name.
  as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
-@@ -15497,31 +17623,14 @@
+@@ -15497,31 +17624,14 @@ as_tr_cpp="eval sed 'y%*$as_cr_letters%P
  as_tr_sh="eval sed 'y%*+%pp%;s%[^_$as_cr_alnum]%_%g'"
  
  
@@ -17096,7 +17131,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -15529,30 +17638,21 @@
+@@ -15529,30 +17639,21 @@ generated by GNU Autoconf 2.59.  Invocat
    CONFIG_COMMANDS = $CONFIG_COMMANDS
    $ $0 $@
  
@@ -17136,7 +17171,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  ac_cs_usage="\
  \`$as_me' instantiates files from templates according to the
  current configuration.
-@@ -15582,19 +17682,21 @@
+@@ -15582,19 +17683,21 @@ Configuration commands:
  $config_commands
  
  Report bugs to <bug-autoconf@gnu.org>."
@@ -17164,7 +17199,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  _ACEOF
  
  cat >>$CONFIG_STATUS <<\_ACEOF
-@@ -15605,39 +17707,24 @@
+@@ -15605,39 +17708,24 @@ while test $# != 0
  do
    case $1 in
    --*=*)
@@ -17210,7 +17245,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
      debug=: ;;
    --file | --fil | --fi | --f )
      $ac_shift
-@@ -15647,18 +17734,24 @@
+@@ -15647,18 +17735,24 @@ Try \`$0 --help' for more information." 
      $ac_shift
      CONFIG_HEADERS="$CONFIG_HEADERS $ac_optarg"
      ac_need_defaults=false;;
@@ -17240,7 +17275,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  
    esac
    shift
-@@ -15674,39 +17767,51 @@
+@@ -15674,39 +17768,51 @@ fi
  _ACEOF
  cat >>$CONFIG_STATUS <<_ACEOF
  if \$ac_cs_recheck; then
@@ -17305,7 +17340,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  # If the user did not use the arguments to specify the items to instantiate,
  # then the envvar interface is used.  Set only those that are not.
  # We use the long form for the default assignment because of an extremely
-@@ -15719,442 +17824,600 @@
+@@ -15719,442 +17825,600 @@ if $ac_need_defaults; then
  fi
  
  # Have a temporary directory for convenience.  Make it in the build tree
@@ -18287,7 +18322,7 @@ Note that the test -x -> test -f change is done by hand after running autoconf
  cat >>$CONFIG_STATUS <<_ACEOF
    sed "$ac_vpsub
  $extrasub
-@@ -16162,512 +18425,174 @@
+@@ -16162,512 +18426,174 @@ _ACEOF
  cat >>$CONFIG_STATUS <<\_ACEOF
  :t
  /@[a-zA-Z_][a-zA-Z_0-9]*@/!b
