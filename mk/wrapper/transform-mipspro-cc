@@ -1,4 +1,4 @@
-# $NetBSD: transform-mipspro-cc,v 1.9 2007/02/20 16:12:41 rillig Exp $
+# $NetBSD: transform-mipspro-cc,v 1.10 2007/03/07 22:02:34 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,6 +70,12 @@ case $arg in
 # The MIPSpro compiler accepts these -W* directives, so just pass them
 # on through.
 -W[ablfpR]*,*	) transform_pass ;;
+
+-diag_error	|\
+-diag_remark	|\
+-diag_suppress	|\
+-diag_warning	|\
+-woff		) transform_pass ;;
 
 -32		|\
 -o32		) mipspro_check_abi "" ;;
