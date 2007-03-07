@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.137 2007/03/06 15:54:54 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.138 2007/03/07 22:13:38 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -160,7 +160,7 @@ STARTFILE?=		${BULKFILESDIR}/.start${BULK_ID}
 
 # This top level file saves the bulk build ID. As it most often has a time
 # stamp, it is only generated once and later retrieved from this file.
-BULK_BUILD_ID_FILE?=	${BULKFILESDIR}/.bulk_build_id
+BULK_BUILD_ID_FILE?=	${BULKFILESDIR}/.bulk_build_id${BULK_ID}
 
 # File created and used by lintpkgsrc(8) to cache package metadata for
 # pruning and bulk-upload exclusions.
