@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.19 2007/02/20 09:22:14 uebayasi Exp $
+# $NetBSD: plist.mk,v 1.20 2007/03/07 16:32:45 rillig Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -245,5 +245,5 @@ ${PLIST}:
 INFO_FILES_cmd=								\
 	${CAT} ${PLIST} |						\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |		\
-	${AWK} '($$0 !~ "-[0-9]*(\.gz)?$$") { print }'
+	${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
 .endif
