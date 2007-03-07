@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.52 2007/03/07 00:23:17 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.53 2007/03/07 07:41:18 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -123,3 +123,5 @@ Pullup ticket 2040 - requested by ghen
 security update for searmonkey
 Pullup ticket 2041 - requested by adrianp
 security update for php4
+Pullup ticket 2042 - requested by salo
+security update for silc-server
