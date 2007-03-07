@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.14 2007/01/08 02:26:03 rillig Exp $
+# $NetBSD: configure.mk,v 1.15 2007/03/07 01:27:27 rillig Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -105,7 +105,7 @@ _REAL_CONFIGURE_TARGETS+=	do-configure-pre-hook
 _REAL_CONFIGURE_TARGETS+=	do-configure
 _REAL_CONFIGURE_TARGETS+=	do-configure-post-hook
 _REAL_CONFIGURE_TARGETS+=	post-configure
-_REAL_CONFIGURE_TARGETS+=	configure-cookie
+_REAL_CONFIGURE_TARGETS+=	_configure-cookie
 _REAL_CONFIGURE_TARGETS+=	error-check
 
 .PHONY: real-configure
