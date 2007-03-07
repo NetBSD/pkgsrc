@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/03/03 07:11:34 cube Exp $
+@comment $NetBSD: PLIST,v 1.15.8.1 2007/03/07 00:22:53 salo Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -211,6 +211,7 @@ lib/php/.registry/console_getopt.reg
 lib/php/.registry/html_template_it.reg
 lib/php/.registry/net_useragent_detect.reg
 lib/php/.registry/pear.reg
+lib/php/.registry/structures_graph.reg
 @exec ${MKDIR} %D/lib/php/20020429
 lib/php/Archive/Tar.php
 lib/php/Console/Getopt.php
@@ -317,9 +318,36 @@ lib/php/build/scan_makefile_in.awk
 lib/php/build/shtool
 lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
+lib/php/data/Structures_Graph/LICENSE
+lib/php/data/Structures_Graph/package.sh
+lib/php/data/Structures_Graph/publish.sh
+lib/php/data/Structures_Graph/genpackage.xml.pl
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
 lib/php/doc/HTML_Template_IT/examples/sample_it.php
 lib/php/doc/HTML_Template_IT/examples/templates/main.tpl.htm
+lib/php/doc/PEAR/README
+lib/php/doc/PEAR/INSTALL
+lib/php/doc/Structures_Graph/docs/html/media/stylesheet.css
+lib/php/doc/Structures_Graph/docs/html/media/banner.css
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Manipulator_TopologicalSorter.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Node.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/tutorial_Structures_Graph.pkg.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Manipulator_AcyclicTest_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Manipulator_TopologicalSorter_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Node_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Manipulator_AcyclicTest.html
+lib/php/doc/Structures_Graph/docs/html/elementindex.html
+lib/php/doc/Structures_Graph/docs/html/elementindex_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/errors.html
+lib/php/doc/Structures_Graph/docs/html/index.html
+lib/php/doc/Structures_Graph/docs/html/li_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/packages.html
+lib/php/doc/Structures_Graph/docs/html/todolist.html
+lib/php/doc/Structures_Graph/docs/html/classtrees_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph/Structures_Graph.pkg
+lib/php/doc/Structures_Graph/docs/generate.sh
 lib/php/pearcmd.php
 lib/php/peclcmd.php
 lib/php/test/HTML_Template_IT/tests/Console_TestListener.php
@@ -336,6 +364,13 @@ lib/php/test/HTML_Template_IT/tests/templates/include.html
 lib/php/test/HTML_Template_IT/tests/templates/loadtemplatefile.html
 lib/php/test/HTML_Template_IT/tests/templates/replaceblock.html
 lib/php/test/HTML_Template_IT/tests/test.php
+lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
+lib/php/test/Structures_Graph/tests/README
+lib/php/test/Structures_Graph/tests/all-tests.php
+lib/php/Structures/Graph/Manipulator/AcyclicTest.php
+lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
+lib/php/Structures/Graph/Node.php
+lib/php/Structures/Graph.php
 libexec/cgi-bin/php
 man/man1/php-config.1
 man/man1/php.1
@@ -345,17 +380,29 @@ share/examples/php/php.ini-recommended
 share/php/php.gif
 @dirrm share/php
 @dirrm share/examples/php
+@dirrm lib/php/data/Structures_Graph
 @dirrm lib/php/data/PEAR
 @dirrm lib/php/data
-@dirrm lib/php/test/HTML_Template_IT/tests/templates
-@dirrm lib/php/test/HTML_Template_IT/tests
-@dirrm lib/php/test/HTML_Template_IT
+@dirrm lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph
+@dirrm lib/php/doc/Structures_Graph/docs/tutorials
+@dirrm lib/php/doc/Structures_Graph/docs/html/media
+@dirrm lib/php/doc/Structures_Graph/docs/html/Structures_Graph
+@dirrm lib/php/doc/Structures_Graph/docs/html
+@dirrm lib/php/doc/Structures_Graph/docs
+@dirrm lib/php/doc/Structures_Graph
 @dirrm lib/php/doc/HTML_Template_IT/examples/templates
 @dirrm lib/php/doc/HTML_Template_IT/examples
 @dirrm lib/php/doc/HTML_Template_IT
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
+@dirrm lib/php/doc/PEAR
 @dirrm lib/php/doc
+@dirrm lib/php/test/HTML_Template_IT/tests/templates
+@dirrm lib/php/test/HTML_Template_IT/tests
+@dirrm lib/php/test/HTML_Template_IT
+@dirrm lib/php/test/Structures_Graph/tests/testCase
+@dirrm lib/php/test/Structures_Graph/tests
+@dirrm lib/php/test/Structures_Graph
 @dirrm lib/php/test
 @dirrm lib/php/build
 @dirrm lib/php/PEAR/Validator
@@ -379,6 +426,9 @@ share/php/php.gif
 @dirrm lib/php/OS
 @dirrm lib/php/Net/UserAgent
 @dirrm lib/php/Net
+@dirrm lib/php/Structures/Graph/Manipulator
+@dirrm lib/php/Structures/Graph
+@dirrm lib/php/Structures
 @dirrm lib/php/.channels/.alias
 @dirrm lib/php/.channels
 @dirrm lib/php/.registry/.channel.pecl.php.net
