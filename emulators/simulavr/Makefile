@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/31 00:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/07 17:31:22 joerg Exp $
 #
 
 DISTNAME=		simulavr-0.1.2.1
@@ -18,6 +18,8 @@ BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 BROKEN_IN=		pkgsrc-2006Q4
 
 CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ENV+=		ac_cv_prog_has_texi2dvi=yes ac_cv_prog_has_texi2html=yes
+USE_TOOLS+=		makeinfo
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

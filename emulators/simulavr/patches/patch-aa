@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2005/04/22 14:09:03 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/07 17:31:23 joerg Exp $
 
---- doc/Makefile.in.orig	2004-01-19 00:58:29.000000000 +0100
+--- doc/Makefile.in.orig	2004-01-18 23:58:29.000000000 +0000
 +++ doc/Makefile.in
-@@ -472,7 +472,7 @@ install-ps: ps $(INSTALL_DOX_PS)
- html: $(info_TEXINFOS) $(TARGET_DOX_HTML)
- 	mkdir -p html
- 	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
--	mv *.html html
-+	mv simulavr/*.html html
- 	if test -f html/simulavr.html ; then \
- 	   cp html/simulavr.html html/index.html ; \
- 	else \
+@@ -459,7 +459,7 @@ uninstall-am: uninstall-info-am uninstal
+ 	uninstall uninstall-am uninstall-info-am uninstall-local
+ 
+ 
+-all-local: html $(TARGET_PS) $(TARGET_PDF)
++all-local:
+ 
+ # Rule for generating postscript output.
+ ps: simulavr.ps $(TARGET_DOX_PS)
+@@ -490,7 +490,7 @@ install-html: html $(INSTALL_DOX_HTML)
+ 	done
+ 
+ # General rule for installing documentation
+-install-data-local: install-html install-ps $(INSTALL_PDF)
++install-data-local:
+ 
+ uninstall-local:
+ 	rm -rf $(DOC_INST_DIR)
