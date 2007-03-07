@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.51 2007/03/06 15:19:47 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.52 2007/03/07 00:23:17 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -121,3 +121,5 @@ Pullup ticket 2039 - requested by ghen
 security update for thunderbird
 Pullup ticket 2040 - requested by ghen
 security update for searmonkey
+Pullup ticket 2041 - requested by adrianp
+security update for php4
