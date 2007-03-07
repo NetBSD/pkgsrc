@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.58 2006/10/01 14:51:03 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.59 2007/03/07 00:33:24 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -85,7 +85,10 @@
 #		This is the list of the selected build options, properly
 #		filtered to remove unsupported and duplicate options.
 #
-# Example usage:
+
+# To add options support to a package, here is an example for an
+# options.mk file. This file should be included by the package Makefile
+# or Makefile.common.
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
 # PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
@@ -97,9 +100,9 @@
 # PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_SASL2:sasl
 # PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
 #
-# # this package was previously named wibble2
 # .include "../../mk/bsd.prefs.mk"
 #
+# # this package was previously named wibble2
 # .if defined(PKG_OPTIONS.wibble2)
 # PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.wibble2}
 # PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
@@ -142,6 +145,8 @@
 # .  include "../../mk/pgsql.buildlink3.mk"
 # .endif
 # -------------8<-------------8<-------------8<-------------8<-------------
+#
+# Keywords: options.mk
 
 .include "../../mk/bsd.prefs.mk"
 
