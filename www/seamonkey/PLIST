@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/03/05 11:46:21 ghen Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/03/07 21:32:56 dmcmahill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -96,10 +96,7 @@ lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxremoteservice.${SO_SUFFIX}
-${NOT_SUNOSLIB}lib/${MOZILLA}/libfreebl3.${SO_SUFFIX}
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_32fpu_3.${SO_SUFFIX}
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_32int_3.${SO_SUFFIX}
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_32int64_3.${SO_SUFFIX}
+@comment libfreebl
 lib/${MOZILLA}/libgfxpsshar.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
@@ -412,10 +409,7 @@ lib/${MOZILLA}/greprefs/security-prefs.js
 lib/${MOZILLA}/greprefs/xpinstall.js
 lib/${MOZILLA}/init.d/README
 lib/${MOZILLA}/install.rdf
-${NOT_SUNOSLIB}lib/${MOZILLA}/libfreebl3.chk
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_32fpu_3.chk
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_32int_3.chk
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_32int64_3.chk
+@comment libfreebl.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
