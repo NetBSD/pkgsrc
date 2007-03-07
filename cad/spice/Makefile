@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/02/22 19:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/03/07 14:59:06 joerg Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -26,6 +26,8 @@ WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
 
+MAKE_ENV+=	WRKSRC=${WRKSRC:Q}
+
 post-extract:
 	${CP} ${FILESDIR}/NetBSD ${WRKSRC}/conf
 
@@ -43,7 +45,7 @@ do-configure:
 	done
 
 do-build:
-	cd ${WRKSRC}; util/build NetBSD default
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} util/build NetBSD default
 
 do-install:
 	cd ${WRKSRC}; util/build NetBSD install
@@ -65,5 +67,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
 
 #.include "../../devel/readline/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,11 +1,22 @@
-$NetBSD: patch-as,v 1.1 1999/10/01 17:05:16 dmcmahill Exp $
+$NetBSD: patch-as,v 1.2 2007/03/07 14:59:06 joerg Exp $
 
---- util/skeleton/make_def.bd.orig	Thu Jul 29 17:35:18 1993
-+++ util/skeleton/make_def.bd	Fri Oct  1 01:47:31 1999
-@@ -9,5 +9,5 @@
+--- util/skeleton/make_def.bd.orig	1993-07-29 21:35:18.000000000 +0000
++++ util/skeleton/make_def.bd
+@@ -8,7 +8,7 @@ SHELL		= /bin/sh
+ PATH_SEP	= /
  PS		= /
  REVISION	=
 -VERSION		= 3f4
 +VERSION		= 3f5.1
  VERSION_REVISION= $(VERSION)$(REVISION)
  NOTICE		=
+ TOP		= /projects/spice3/spice$(VERSION)
+@@ -31,7 +31,7 @@ SYS_CONF	= $(SYSCONF_DIR)
+ 
+ DATALIB_DIR	= $(TOP0)/lib
+ INCLUDE_DIR	= $(DIST_DIR)/src/include
+-DIST_DIR	= $(TOP0)
++DIST_DIR	= $(WRKSRC)
+ UTIL_DIR	= $(DIST_DIR)/util
+ CONF_DIR	= $(DIST_DIR)/conf
+ SKELETON_DIR	= $(UTIL_DIR)/skeleton
