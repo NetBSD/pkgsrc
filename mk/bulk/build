@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.100 2007/02/23 03:43:53 rillig Exp $
+# $NetBSD: build,v 1.101 2007/03/07 23:32:49 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -272,7 +272,9 @@ load_vars () {
 $values
 EOF
 	echo "------------------------------------------"
-	[ "$PKGBASE" = "pkglint" ] || die "Error reading the variables."
+	[ "$PKGBASE" = "pkglint" ] \
+	|| die	"Error reading the variables." \
+		"Try running $0 with another shell."
 
 	# Get the location of commonly used files
 	main_buildlog="${BULKFILESDIR}/${BUILDLOG}"
