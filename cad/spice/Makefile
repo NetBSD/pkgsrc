@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/03/07 14:59:06 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/03/07 21:44:52 rillig Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -31,24 +31,19 @@ MAKE_ENV+=	WRKSRC=${WRKSRC:Q}
 post-extract:
 	${CP} ${FILESDIR}/NetBSD ${WRKSRC}/conf
 
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	conf/NetBSD conf/defaults
+SUBST_VARS.conf=	MAKE_PROGRAM CFLAGS LDFLAGS WRKSRC PREFIX
+
 do-configure:
-	${RM} -f ${WRKSRC}/makefile
-	cd ${WRKSRC}/conf; for file in NetBSD defaults; do		\
-		${SED}	-e "s|@MAKE_PROGRAM@|${MAKE_PROGRAM}|g"		\
-			-e "s|@CFLAGS@|${CFLAGS}|g"			\
-			-e "s|@LDFLAGS@|${LDFLAGS}|g"			\
-			-e 's|@X11BASE@|${X11BASE}|g'			\
-			-e "s|@WRKSRC@|${WRKSRC}|g"			\
-			-e 's|@PREFIX@|${PREFIX}|g'			\
-			$${file} > $${file}.new;			\
-		${MV} -f $${file}.new $${file};				\
-	done
+	rm -f ${WRKSRC}/makefile
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} util/build NetBSD default
+	cd ${WRKSRC} && env ${MAKE_ENV} util/build NetBSD default
 
 do-install:
-	cd ${WRKSRC}; util/build NetBSD install
+	cd ${WRKSRC} && env ${MAKE_ENV} util/build NetBSD install
 	${CHMOD} a+rx ${PREFIX}/bin/spice3 ${PREFIX}/bin/nutmeg		\
 	  	${PREFIX}/bin/sconvert ${PREFIX}/bin/help		\
 		${PREFIX}/bin/proc2mod ${PREFIX}/bin/multidec
