@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.548 2007/03/07 15:06:47 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.549 2007/03/07 16:49:55 gson Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1076,3 +1076,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/bitmap version 1.0.3 [joerg 2007-03-07]
 	Added x11/beforelight version 1.0.2 [joerg 2007-03-07]
 	Added x11/appres version 1.0.1 [joerg 2007-03-07]
+	Updated net/p5-Net-RawIP to 0.21_03 [gson 2007-03-07]
