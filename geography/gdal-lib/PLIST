@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/23 22:22:38 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/07 16:04:25 joerg Exp $
 bin/gdal-config
 bin/gdal_contour
+bin/gdal_rasterize
 bin/gdal_translate
 bin/gdaladdo
 bin/gdalinfo
@@ -21,6 +22,7 @@ include/cpl_port.h
 include/cpl_string.h
 include/cpl_vsi.h
 include/cpl_vsi_private.h
+include/cpl_win32ce_api.h
 include/gdal.h
 include/gdal_alg.h
 include/gdal_frmts.h
@@ -48,6 +50,7 @@ lib/libgdal.la
 man/man1/gdal-config.1
 man/man1/gdal_contour.1
 man/man1/gdal_merge.1
+man/man1/gdal_rasterize.1
 man/man1/gdal_translate.1
 man/man1/gdal_utilities.1
 man/man1/gdaladdo.1
