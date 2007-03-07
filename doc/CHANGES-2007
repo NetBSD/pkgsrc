@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.544 2007/03/06 22:34:41 salo Exp $
+$NetBSD: CHANGES-2007,v 1.545 2007/03/07 09:26:15 salo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1068,3 +1068,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/rrdtool to 1.2.19 [martti 2007-03-06]
 	Updated editors/vim-share to 7.0.207 [martti 2007-03-06]
 	Updated chat/silc-server to 1.0.3 [salo 2007-03-06]
+	Updated net/lftp to 3.5.9 [salo 2007-03-07]
