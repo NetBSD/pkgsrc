@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/03 18:53:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/07 12:51:16 jmmv Exp $
 #
 
-DISTNAME=	HUnit-1.1.20060515
+DISTNAME=	HUnit-1.1.20060921
 CATEGORIES=	devel
 
 MAINTAINER=	jmmv@NetBSD.org
