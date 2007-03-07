@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.547 2007/03/07 12:51:16 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.548 2007/03/07 15:06:47 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1073,3 +1073,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/hugs-unix to 2.0.20060921 [jmmv 2007-03-07]
 	Updated devel/hugs-HUnit to 1.1.20060921 [jmmv 2007-03-07]
 	Updated textproc/hugs-HaXml to 1.17.20060921 [jmmv 2007-03-07]
+	Added x11/bitmap version 1.0.3 [joerg 2007-03-07]
+	Added x11/beforelight version 1.0.2 [joerg 2007-03-07]
+	Added x11/appres version 1.0.1 [joerg 2007-03-07]
