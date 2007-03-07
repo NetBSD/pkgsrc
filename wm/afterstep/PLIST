@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/22 01:24:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/03/07 04:41:57 rillig Exp $
+bin/ASWallpaper
 bin/Animate
 bin/Arrange
 bin/Banner
+bin/GWCommand
 bin/Ident
 bin/MonitorWharf
 bin/Pager
@@ -20,6 +22,7 @@ bin/ascommand.pl
 bin/ascompose
 bin/asflip
 bin/asgrad
+bin/asgtk-config
 bin/asi18n
 bin/asmerge
 bin/asscale
@@ -31,6 +34,15 @@ bin/importasmenu
 bin/installastheme.pl
 bin/makeastheme.pl
 bin/postcard.sh
+include/libASGTK/asgtk.h
+include/libASGTK/asgtkai.h
+include/libASGTK/asgtkapp.h
+include/libASGTK/asgtkcolorsel.h
+include/libASGTK/asgtkgradient.h
+include/libASGTK/asgtkimagebrowser.h
+include/libASGTK/asgtkimagedir.h
+include/libASGTK/asgtkimageview.h
+include/libASGTK/asgtkxmleditor.h
 include/libAfterBase/afterbase_config.h
 include/libAfterBase/ashash.h
 include/libAfterBase/aslist.h
@@ -103,6 +115,7 @@ include/libAfterStep/screen.h
 include/libAfterStep/session.h
 include/libAfterStep/shape.h
 include/libAfterStep/wmprops.h
+lib/libASGTK.a
 lib/libAfterBase.a
 lib/libAfterConf.a
 lib/libAfterImage.a
