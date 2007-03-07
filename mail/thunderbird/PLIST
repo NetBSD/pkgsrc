@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/03/02 14:12:24 ghen Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/03/07 21:32:53 dmcmahill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -70,7 +70,7 @@ lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
-lib/${MOZILLA}/libfreebl3.${SO_SUFFIX}
+@comment libfreebl
 lib/${MOZILLA}/libgfxpsshar.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
@@ -91,8 +91,6 @@ lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom_core.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_pure32_3.${SO_SUFFIX}
 @comment end DSO
 @comment begin DATA
 lib/${MOZILLA}/LICENSE.txt
@@ -319,9 +317,7 @@ lib/${MOZILLA}/greprefs/xpinstall.js
 lib/${MOZILLA}/icons/mozicon16.xpm
 lib/${MOZILLA}/icons/mozicon50.xpm
 lib/${MOZILLA}/init.d/README
-lib/${MOZILLA}/libfreebl3.chk
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.chk
-${SUNOSLIB}lib/${MOZILLA}/libfreebl_pure32_3.chk
+@comment libfreebl.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif

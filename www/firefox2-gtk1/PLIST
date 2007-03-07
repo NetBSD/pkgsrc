@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/24 17:26:43 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/07 21:32:55 dmcmahill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -72,7 +72,7 @@ lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
-lib/${MOZILLA}/libfreebl3.${SO_SUFFIX}
+@comment libfreebl
 lib/${MOZILLA}/libgfxpsshar.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
@@ -320,7 +320,7 @@ lib/${MOZILLA}/icons/mozicon128.png
 lib/${MOZILLA}/icons/mozicon16.xpm
 lib/${MOZILLA}/icons/mozicon50.xpm
 lib/${MOZILLA}/init.d/README
-lib/${MOZILLA}/libfreebl3.chk
+@comment libfreebl.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/old-homepage-default.properties
 lib/${MOZILLA}/res/EditorOverride.css
