@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.7 2004/11/09 17:16:16 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.8 2007/03/07 12:40:54 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -206,7 +206,7 @@ EOF
 	##############################################################
 	# opt:src:dst
 	#	Change "src" into "dst", where "src" matches the whole
-	#	option.
+	#	option or a leading part up to a separator character.
 	##############################################################
 	opt)
 		case $_action in
