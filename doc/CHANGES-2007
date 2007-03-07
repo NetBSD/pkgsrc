@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.545 2007/03/07 09:26:15 salo Exp $
+$NetBSD: CHANGES-2007,v 1.546 2007/03/07 09:51:18 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.0.207 [martti 2007-03-06]
 	Updated chat/silc-server to 1.0.3 [salo 2007-03-06]
 	Updated net/lftp to 3.5.9 [salo 2007-03-07]
+	Updated mail/dovecot to 1.0rc26 [ghen 2007-03-07]
