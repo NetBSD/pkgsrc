@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.549 2007/03/07 16:49:55 gson Exp $
+$NetBSD: CHANGES-2007,v 1.550 2007/03/07 21:40:14 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1077,3 +1077,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/beforelight version 1.0.2 [joerg 2007-03-07]
 	Added x11/appres version 1.0.1 [joerg 2007-03-07]
 	Updated net/p5-Net-RawIP to 0.21_03 [gson 2007-03-07]
+	Updated mail/thunderbird to 1.5.0.10nb1 [dmcmahill 2007-03-07]
+	Updated mail/thunderbird-gtk1 to 1.5.0.10nb1 [dmcmahill 2007-03-07]
+	Updated www/firefox to 1.5.0.10nb1 [dmcmahill 2007-03-07]
+	Updated www/firefox-gtk1 to 1.5.0.10nb1 [dmcmahill 2007-03-07]
+	Updated www/firefox2 to 2.0.0.2nb1 [dmcmahill 2007-03-07]
+	Updated www/firefox2-gtk1 to 2.0.0.2nb1 [dmcmahill 2007-03-07]
+	Updated www/seamonkey to 1.1.1nb1 [dmcmahill 2007-03-07]
+	Updated www/seamonkey-gtk1 to 1.1.1nb1 [dmcmahill 2007-03-07]
