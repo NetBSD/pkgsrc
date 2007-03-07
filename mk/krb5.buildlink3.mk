@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.10 2006/11/04 22:18:58 rillig Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.11 2007/03/07 10:42:30 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -6,14 +6,22 @@
 #	* set KRB5BASE to the base directory of the Kerberos 5 files;
 #	* set KRB5_TYPE to the Kerberos 5 implementation used.
 #
-# There are two variables that can be used to tweak the selection of
-# the Kerberos 5 implementation:
+# User-settable variables:
 #
-# KRB5_DEFAULT is a user-settable variable whose value is the default
-#	Kerberos 5 implementation to use.
+# KRB5_DEFAULT
+#	The default Kerberos 5 implementation to use.
 #
-# KRB5_ACCEPTED is a package-settable list of Kerberos 5 implementations
-#	that may be used by the package.
+#	Possible values: heimdal mit-krb5
+#
+# Package-settable variables:
+#
+# KRB5_ACCEPTED
+#	The list of Kerberos 5 implementations that can be used by the
+#	package.
+#
+#	Possible values: (see KRB5_DEFAULT)
+#
+# Keywords: kerberos heimdal krb krb5 mit-krb5
 
 KRB5_BUILDLINK3_MK:=	${KRB5_BUILDLINK3_MK}+
 
