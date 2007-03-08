@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6077 2007/03/08 18:25:14 wiz Exp $
+$NetBSD: TODO,v 1.6078 2007/03/08 18:25:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -999,7 +999,6 @@ Suggested package updates
 	o ucblogo-5.5
 	o uim-1.4.0
 	o unix2dos-1.3
-	o unrar-3.7.4
 	o upx-2.90
 	o userppp-030706
 	o valgrind-3.0.1
