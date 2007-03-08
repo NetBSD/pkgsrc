@@ -1,24 +1,29 @@
-# $NetBSD: developer.mk,v 1.2 2007/02/06 20:06:38 rillig Exp $
+# $NetBSD: developer.mk,v 1.3 2007/03/08 23:38:43 rillig Exp $
 #
-
-# changes-entry appends a correctly-formatted entry to the pkgsrc
-# CHANGES file.
+# Public targets for developers:
 #
-# The following variables may be set:
+# changes-entry:
+#	Appends a correctly-formatted entry to the pkgsrc CHANGES file.
 #
-#    CTYPE is the type of entry to add and is one of "Added", "Updated",
-#	"Renamed", "Moved", of "Removed".  The default CTYPE is "Updated".
+#	Command-line variables:
 #
-#    NETBSD_LOGIN_NAME is the login name assigned by the NetBSD Project.
-#	It defaults to the local login name.
+#	CTYPE
+#		The type of entry to add. Must be one of "Added",
+#		"Updated", "Renamed", "Moved", of "Removed".
+#		The default is "Updated".
 #
-#    PKGSRC_CHANGES is the path to the CHANGES file to which the entry
-#	is appended.  It defaults to ${PKGSRCDIR}/doc/CHANGES-YYYY.
+#	NETBSD_LOGIN_NAME
+#		The login name assigned by the NetBSD Project.
+#		The default is the local login name.
 #
-# Example usage:
+#	PKGSRC_CHANGES
+#		The path to the CHANGES file to which the entry
+#		is appended.
+#		The default is ${PKGSRCDIR}/doc/CHANGES-YYYY.
 #
-#	% cd /usr/pkgsrc/category/package
-#	% make changes-entry CTYPE=Added
+#	Example usage:
+#		% cd /usr/pkgsrc/category/package
+#		% make changes-entry CTYPE=Added
 #
 
 CTYPE?=			Updated
