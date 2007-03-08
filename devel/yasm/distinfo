@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/08/12 21:05:06 wiz Exp $
+$NetBSD: distinfo,v 1.6 2007/03/08 19:09:27 wiz Exp $
 
-SHA1 (yasm-0.5.0.tar.gz) = 2880d5a330a9948cb9ac3a5cb95d94a8ea704cde
-RMD160 (yasm-0.5.0.tar.gz) = 76893c8ea4552c1a580c78b8548e84338b1cf51c
-Size (yasm-0.5.0.tar.gz) = 1171590 bytes
+SHA1 (yasm-0.6.0.tar.gz) = c4354d7c5ce7924f4b656d6eb15fcfc289fc6ac3
+RMD160 (yasm-0.6.0.tar.gz) = 78c37fdd20b73416ef16818baa57fdc5a6af10b2
+Size (yasm-0.6.0.tar.gz) = 1192453 bytes
