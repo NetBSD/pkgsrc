@@ -1,16 +1,17 @@
-# $NetBSD: replace-interpreter.mk,v 1.5 2006/09/19 20:51:34 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.6 2007/03/08 23:58:20 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
 #
 # The following variables may be set by a package:
 #
-# REPLACE_AWK		: List of Pathmask (default: none)
-# REPLACE_BASH		: List of Pathmask (default: none)
-# REPLACE_PERL		: List of Pathmask (default: none)
-# REPLACE_SH		: List of Pathmask (default: none)
-#	In these files the interpreter in the first line is replaced
-#	with the one that is available in pkgsrc. If any directory names
+# REPLACE_AWK
+# REPLACE_BASH
+# REPLACE_PERL
+# REPLACE_PYTHON
+# REPLACE_SH
+#	Lists of files relative to WRKSRC in which the #! interpreter
+#	should be replaced by the pkgsrc one. If any directories
 #	appear in the lists, they are silenty skipped, assuming that
 #	they result from shell globbing expressions.
 #
