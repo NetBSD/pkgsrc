@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/15 14:33:43 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/08 13:39:20 rillig Exp $
 
 DISTNAME=		Coin-2.4.4
 PKGREVISION=		3
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Free, portable, Open Inventor API implementation
 
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-3ds-import
 CONFIGURE_ARGS+=	--disable-debug
