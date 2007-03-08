@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.4 2005/04/30 03:01:06 jlam Exp $
+# $NetBSD: endian.mk,v 1.5 2007/03/08 23:11:20 rillig Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -30,7 +30,10 @@ _ENDIAN_H=	/dev/null
 .  endif
 
 MACHINE_ENDIAN!=							\
-	{ ${ECHO} "\#include <${_ENDIAN_H}>";				\
+	{ ${ECHO} "\#if defined(__sgi)";				\
+	  ${ECHO} "\#  include <standards.h>";				\
+	  ${ECHO} "\#endif";						\
+	  ${ECHO} "\#include <${_ENDIAN_H}>";				\
 	  ${ECHO} "\#ifndef BYTE_ORDER";				\
 	  ${ECHO} "\#ifdef _BIG_ENDIAN";				\
 	  ${ECHO} "\#define BYTE_ORDER 4321";				\
