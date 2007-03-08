@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2006/11/10 00:08:46 rillig Exp $
+# $NetBSD: Makefile,v 1.95 2007/03/08 19:25:32 wiz Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -33,7 +33,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/./-/g}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 INSTALL_TARGET=		install-full install-lss
-MAKE_FILE=       	makefile
+MAKE_FILE=		makefile
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 USE_TOOLS+=		gzip msgfmt
