@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.c,v 1.8 2005/12/01 03:00:01 minskim Exp $	*/
+/*	$NetBSD: pax.c,v 1.9 2007/03/08 17:18:18 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -50,7 +50,7 @@ __COPYRIGHT("@(#) Copyright (c) 1992, 1993\n\
 #if 0
 static char sccsid[] = "@(#)pax.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: pax.c,v 1.8 2005/12/01 03:00:01 minskim Exp $");
+__RCSID("$NetBSD: pax.c,v 1.9 2007/03/08 17:18:18 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -458,18 +458,18 @@ gen_init(void)
 	    (sigaddset(&s_mask,SIGINT) < 0)||(sigaddset(&s_mask,SIGHUP) < 0) ||
 	    (sigaddset(&s_mask,SIGPIPE) < 0)||(sigaddset(&s_mask,SIGQUIT)<0)){
 		tty_warn(1, "Unable to set up signal mask");
-		return(-1);
+		return -1;
 	}
 #ifdef SIGXCPU
 	if (sigaddset(&s_mask,SIGXCPU) < 0) {
 		tty_warn(1, "Unable to set up signal mask");
-		return(-1);
+		return -1;
 	}
 #endif
 #ifdef SIGXFSZ
 	if (sigaddset(&s_mask,SIGXFSZ) < 0) {
 		tty_warn(1, "Unable to set up signal mask");
-		return(-1);
+		return -1;
 	}
 #endif
 
@@ -511,9 +511,9 @@ gen_init(void)
 	if (sigaction(SIGXFSZ, &n_hand, &o_hand) < 0)
 		goto out;
 #endif
-	return(0);
+	return 0;
 
     out:
 	syswarn(1, errno, "Unable to set up signal handler");
-	return(-1);
+	return -1;
 }

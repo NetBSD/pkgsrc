@@ -1,4 +1,4 @@
-/*	$NetBSD: ftree.c,v 1.9 2005/12/01 03:00:01 minskim Exp $	*/
+/*	$NetBSD: ftree.c,v 1.10 2007/03/08 17:18:18 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -84,7 +84,7 @@
 #if 0
 static char sccsid[] = "@(#)ftree.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ftree.c,v 1.9 2005/12/01 03:00:01 minskim Exp $");
+__RCSID("$NetBSD: ftree.c,v 1.10 2007/03/08 17:18:18 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -187,16 +187,16 @@ ftree_start()
 		if (fthead != NULL) {
 			tty_warn(1,
 	    "The -M flag is only supported when reading file list from stdin");
-			return(-1);
+			return -1;
 		}
 		ftnode = spec(stdin);
 		if (ftnode != NULL &&
 		    (ftnode->type != F_DIR || strcmp(ftnode->name, ".") != 0)) {
 			tty_warn(1,
 			    "First node of specfile is not `.' directory");
-			return(-1);
+			return -1;
 		}
-		return(0);
+		return 0;
 	}
 #endif	/* SMALL */
 
@@ -233,14 +233,14 @@ ftree_start()
 
 	if ((fthead == NULL) && ((farray[0] = malloc(PAXPATHLEN+2)) == NULL)) {
 		tty_warn(1, "Unable to allocate memory for file name buffer");
-		return(-1);
+		return -1;
 	}
 
 	if (ftree_arg() < 0)
-		return(-1);
+		return -1;
 	if (tflag && (atdir_start() < 0))
-		return(-1);
-	return(0);
+		return -1;
+	return 0;
 }
 
 /*
@@ -262,7 +262,7 @@ ftree_add(char *str, int isdir)
 	 */
 	if ((str == NULL) || (*str == '\0')) {
 		tty_warn(0, "Invalid file name argument");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -272,7 +272,7 @@ ftree_add(char *str, int isdir)
 	 */
 	if ((ft = (FTREE *)malloc(sizeof(FTREE))) == NULL) {
 		tty_warn(0, "Unable to allocate memory for filename");
-		return(-1);
+		return -1;
 	}
 
 	if (((len = strlen(str) - 1) > 0) && (str[len] == '/'))
@@ -282,11 +282,11 @@ ftree_add(char *str, int isdir)
 	ft->fow = NULL;
 	if (fthead == NULL) {
 		fttail = fthead = ft;
-		return(0);
+		return 0;
 	}
 	fttail->fow = ft;
 	fttail = ft;
-	return(0);
+	return 0;
 }
 
 /*
@@ -409,7 +409,7 @@ ftree_arg(void)
 			if (ftcur == NULL)
 				ftcur = fthead;
 			else if ((ftcur = ftcur->fow) == NULL)
-				return(-1);
+				return -1;
 
 			if (ftcur->refcnt < 0) {
 				/*
@@ -435,7 +435,7 @@ ftree_arg(void)
 		if ((ftsp = fts_open(farray, ftsopts, NULL)) != NULL)
 			break;
 	}
-	return(0);
+	return 0;
 }
 
 /*
@@ -504,7 +504,7 @@ next_file(ARCHD *arcn)
 				tty_warn(1, "line %lu: %s: %s not specified", \
 				    (u_long)ftnode->lineno,		\
 				    ftent->fts_path, m);		\
-				return(-1);				\
+				return -1;				\
 			}
 			statbuf.st_mode = nodetoino(ftnode->type);
 			NODETEST(ftnode->flags & F_TYPE, "type");
@@ -528,7 +528,7 @@ next_file(ARCHD *arcn)
 				    (u_long)ftnode->lineno, ftent->fts_path,
 				    inotype(nodetoino(ftnode->type)),
 				    inotype(statbuf.st_mode));
-				return(-1);
+				return -1;
 			}
 			if (ftnode->type == F_DIR && (ftnode->flags & F_OPT))
 				skipoptional = 1;
@@ -606,7 +606,7 @@ next_file(ARCHD *arcn)
 		 */
 		ftree_skip = 0;
 		if (ftree_arg() < 0)
-			return(-1);
+			return -1;
 	}
 
 	if (ftsp == NULL)
@@ -621,7 +621,7 @@ next_file(ARCHD *arcn)
 			 * we are done
 			 */
 			if (ftree_arg() < 0)
-				return(-1);
+				return -1;
 			continue;
 		}
 
@@ -787,5 +787,5 @@ next_file(ARCHD *arcn)
 		ftcur->refcnt = 1;
 		(void)ftree_arg();
 	}
-	return(0);
+	return 0;
 }

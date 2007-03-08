@@ -1,4 +1,4 @@
-/*	$NetBSD: gen_subs.c,v 1.7 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: gen_subs.c,v 1.8 2007/03/08 17:18:18 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)gen_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: gen_subs.c,v 1.7 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: gen_subs.c,v 1.8 2007/03/08 17:18:18 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -325,8 +325,8 @@ ul_asc(u_long val, char *str, int len, int base)
 	while (pt >= str)
 		*pt-- = '0';
 	if (val != (u_long)0)
-		return(-1);
-	return(0);
+		return -1;
+	return 0;
 }
 
 #if !defined(NET2_STAT) && !defined(_LP64)
@@ -422,8 +422,8 @@ ull_asc(unsigned long long val, char *str, int len, int base)
 	while (pt >= str)
 		*pt-- = '0';
 	if (val != (unsigned long long)0)
-		return(-1);
-	return(0);
+		return -1;
+	return 0;
 }
 #endif
 
