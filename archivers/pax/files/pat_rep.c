@@ -1,4 +1,4 @@
-/*	$NetBSD: pat_rep.c,v 1.5 2005/12/01 03:00:01 minskim Exp $	*/
+/*	$NetBSD: pat_rep.c,v 1.6 2007/03/08 17:18:18 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)pat_rep.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: pat_rep.c,v 1.5 2005/12/01 03:00:01 minskim Exp $");
+__RCSID("$NetBSD: pat_rep.c,v 1.6 2007/03/08 17:18:18 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -151,7 +151,7 @@ rep_add(char *str)
 	 */
 	if ((str == NULL) || (*str == '\0')) {
 		tty_warn(1, "Empty replacement string");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -168,7 +168,7 @@ rep_add(char *str)
 	}
 	if (*pt1 == 0) {
 		tty_warn(1, "Invalid replacement string %s", str);
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -177,7 +177,7 @@ rep_add(char *str)
 	 */
 	if ((rep = (REPLACE *)malloc(sizeof(REPLACE))) == NULL) {
 		tty_warn(1, "Unable to allocate memory for replacement string");
-		return(-1);
+		return -1;
 	}
 
 	*pt1 = '\0';
@@ -190,7 +190,7 @@ rep_add(char *str)
 		tty_warn(1, "%s while compiling regular expression %s", rebuf,
 		    str);
 		(void)free((char *)rep);
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -215,7 +215,7 @@ rep_add(char *str)
 #endif
 		(void)free((char *)rep);
 		tty_warn(1, "Invalid replacement string %s", str);
-		return(-1);
+		return -1;
 	}
 
 	*pt2 = '\0';
@@ -229,7 +229,7 @@ rep_add(char *str)
 #endif
 		(void)free((char *)rep);
 		tty_warn(1, "Unable to allocate memory for replacement string");
-		return(-1);
+		return -1;
 	}
 
 	pt1 = pt2++;
@@ -258,7 +258,7 @@ rep_add(char *str)
 			*pt1 = *str;
 			tty_warn(1, "Invalid replacement string option %s",
 			    str);
-			return(-1);
+			return -1;
 		}
 		++pt2;
 	}
@@ -269,11 +269,11 @@ rep_add(char *str)
 	rep->fow = NULL;
 	if (rephead == NULL) {
 		reptail = rephead = rep;
-		return(0);
+		return 0;
 	}
 	reptail->fow = rep;
 	reptail = rep;
-	return(0);
+	return 0;
 }
 
 /*
@@ -298,7 +298,7 @@ pat_add(char *str, char *chdn)
 	 */
 	if ((str == NULL) || (*str == '\0')) {
 		tty_warn(1, "Empty pattern string");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -308,7 +308,7 @@ pat_add(char *str, char *chdn)
 	 */
 	if ((pt = (PATTERN *)malloc(sizeof(PATTERN))) == NULL) {
 		tty_warn(1, "Unable to allocate memory for pattern string");
-		return(-1);
+		return -1;
 	}
 
 	pt->pstr = str;
@@ -319,11 +319,11 @@ pat_add(char *str, char *chdn)
 	pt->chdname = chdn;
 	if (pathead == NULL) {
 		pattail = pathead = pt;
-		return(0);
+		return 0;
 	}
 	pattail->fow = pt;
 	pattail = pt;
-	return(0);
+	return 0;
 }
 
 /*
@@ -380,7 +380,7 @@ pat_sel(ARCHD *arcn)
 	 * if no patterns just return
 	 */
 	if ((pathead == NULL) || ((pt = arcn->pat) == NULL))
-		return(0);
+		return 0;
 
 	/*
 	 * when we are NOT limited to a single match per pattern mark the
@@ -388,7 +388,7 @@ pat_sel(ARCHD *arcn)
 	 */
 	if (!nflag) {
 		pt->flgs |= MTCH;
-		return(0);
+		return 0;
 	}
 
 	/*
@@ -399,7 +399,7 @@ pat_sel(ARCHD *arcn)
 	 * with -d, this pattern was already selected and we are done
 	 */
 	if (pt->flgs & DIR_MTCH)
-		return(0);
+		return 0;
 
 	if (!dflag && ((pt->pend != NULL) || (arcn->type == PAX_DIR))) {
 		/*
@@ -423,7 +423,7 @@ pat_sel(ARCHD *arcn)
 			if (pt->pend != NULL)
 				*pt->pend = '/';
 			pt->pend = NULL;
-			return(-1);
+			return -1;
 		}
 
 		/*
@@ -445,7 +445,7 @@ pat_sel(ARCHD *arcn)
 		}
 		pt->flgs = DIR_MTCH | MTCH;
 		arcn->pat = pt;
-		return(0);
+		return 0;
 	}
 
 	/*
@@ -468,12 +468,12 @@ pat_sel(ARCHD *arcn)
 		 * should never happen....
 		 */
 		tty_warn(1, "Pattern list inconsistant");
-		return(-1);
+		return -1;
 	}
 	*ppt = pt->fow;
 	(void)free((char *)pt);
 	arcn->pat = NULL;
-	return(0);
+	return 0;
 }
 
 /*
@@ -501,8 +501,8 @@ pat_match(ARCHD *arcn)
 	 */
 	if (pathead == NULL) {
 		if (nflag && !cflag)
-			return(-1);
-		return(0);
+			return -1;
+		return 0;
 	}
 
 	/*
@@ -543,12 +543,12 @@ pat_match(ARCHD *arcn)
 	 */
 	arcn->pat = pt;
 	if (!cflag)
-		return(0);
+		return 0;
 
 	if (pat_sel(arcn) < 0)
-		return(-1);
+		return -1;
 	arcn->pat = NULL;
-	return(1);
+	return 1;
 }
 
 /*
@@ -574,20 +574,20 @@ fn_match(char *pattern, char *string, char **pend)
 			 * Ok we found an exact match
 			 */
 			if (*string == '\0')
-				return(0);
+				return 0;
 
 			/*
 			 * Check if it is a prefix match
 			 */
 			if ((dflag == 1) || (*string != '/'))
-				return(-1);
+				return -1;
 
 			/*
 			 * It is a prefix match, remember where the trailing
 			 * / is located
 			 */
 			*pend = string;
-			return(0);
+			return 0;
 		case '?':
 			if ((test = *string++) == '\0')
 				return (-1);
@@ -807,7 +807,7 @@ tty_rename(ARCHD *arcn)
 		tty_prnt("or a \"return\" to skip this file.\n");
 		tty_prnt("Input > ");
 		if (tty_read(tmpname, sizeof(tmpname)) < 0)
-			return(-1);
+			return -1;
 		if (strcmp(tmpname, "..") == 0) {
 			tty_prnt("Try again, illegal file name: ..\n");
 			continue;
@@ -824,11 +824,11 @@ tty_rename(ARCHD *arcn)
 	 */
 	if (tmpname[0] == '\0') {
 		tty_prnt("Skipping file.\n");
-		return(1);
+		return 1;
 	}
 	if ((tmpname[0] == '.') && (tmpname[1] == '\0')) {
 		tty_prnt("Processing continues, name unchanged.\n");
-		return(0);
+		return 0;
 	}
 
 	/*
@@ -840,8 +840,8 @@ tty_rename(ARCHD *arcn)
 	res = add_name(arcn->name, arcn->nlen, tmpname);
 	arcn->nlen = strlcpy(arcn->name, tmpname, sizeof(arcn->name));
 	if (res < 0)
-		return(-1);
-	return(0);
+		return -1;
+	return 0;
 }
 
 /*
@@ -856,7 +856,7 @@ int
 set_dest(ARCHD *arcn, char *dest_dir, int dir_len)
 {
 	if (fix_path(arcn->name, &(arcn->nlen), dest_dir, dir_len) < 0)
-		return(-1);
+		return -1;
 
 	/*
 	 * It is really hard to deal with symlinks here, we cannot be sure
@@ -864,11 +864,11 @@ set_dest(ARCHD *arcn, char *dest_dir, int dir_len)
 	 * leave them alone.
 	 */
 	if ((arcn->type != PAX_HLK) && (arcn->type != PAX_HRG))
-		return(0);
+		return 0;
 
 	if (fix_path(arcn->ln_name, &(arcn->ln_nlen), dest_dir, dir_len) < 0)
-		return(-1);
-	return(0);
+		return -1;
+	return 0;
 }
 
 /*
@@ -902,7 +902,7 @@ fix_path( char *or_name, int *or_len, char *dir_name, int dir_len)
 	}
 	if ((len = dest - or_name) > PAXPATHLEN) {
 		tty_warn(1, "File name %s/%s, too long", dir_name, start);
-		return(-1);
+		return -1;
 	}
 	*or_len = len;
 
@@ -920,7 +920,7 @@ fix_path( char *or_name, int *or_len, char *dir_name, int dir_len)
 		*dest-- = *src--;
 
 	*(or_name + len) = '\0';
-	return(0);
+	return 0;
 }
 
 /*
@@ -1024,7 +1024,7 @@ rep_name(char *name, size_t namelen, int *nlen, int prnt)
 				if (prnt)
 					tty_warn(1, "Replacement name error %s",
 					    name);
-				return(1);
+				return 1;
 			}
 			outpt += res;
 
@@ -1075,7 +1075,7 @@ rep_name(char *name, size_t namelen, int *nlen, int prnt)
 			if (prnt)
 				tty_warn(1,"Replacement name too long %s >> %s",
 				    name, nname);
-			return(1);
+			return 1;
 		}
 
 		/*
@@ -1094,10 +1094,10 @@ rep_name(char *name, size_t namelen, int *nlen, int prnt)
 		 * otherwise copy the new name over the orig name and return
 		 */
 		if (*nname == '\0')
-			return(1);
+			return 1;
 		*nlen = strlcpy(name, nname, namelen);
 	}
-	return(0);
+	return 0;
 }
 
 
@@ -1212,7 +1212,7 @@ resub(regex_t *rp, regmatch_t *pm, char *src, char *txt, char *dest,
 			 * make sure there is a subexpression as specified
 			 */
 			if ((len = *spt++ - '0') > subexcnt)
-				return(-1);
+				return -1;
 			pmpt = pm + len;
 		} else {
 			/*
