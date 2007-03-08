@@ -7,12 +7,23 @@ used to test new variants of the packaging tools.
 
 = Interface =
 
+== Variables usable at load-time ==
+
 A package system flavor must define the following variables so that they
 can be used when loading Makefiles. (That is, no references to undefined
 variables.)
 
+=== Legacy ===
+
 * PKG_DBDIR (TODO: Make the other parts of pkgsrc independent of that
   variable; this should go away.)
+
+=== Packaging commands ===
+
+The following variables all refer to shell commands, which must accept
+some command line options that are detailed in the respective man pages.
+(TODO: Find out which command line options are really used and which
+ones are useful. Document them.)
 
 * PKG_ADD
 * PKG_ADMIN
@@ -23,15 +34,14 @@ variables.)
 * LINKFARM
 * PKG_BEST_EXISTS
 
-The variables from the second list are all shell commands, which must
-accept some command line options that are detailed in the respective man
-pages. (TODO: Find out which command line options are really used and
-which ones are useful. Document them.)
-
 The following variables must be defined so that they can be used in
 shell commands. They may contain references to all other variables.
 
 * PKG_FILELIST_CMD
+
+XXX: Why isn't this variable in the previous list?
+
+== Make targets ==
 
 The following make targets must be implemented:
 
