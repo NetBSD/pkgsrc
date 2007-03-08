@@ -1,11 +1,17 @@
-# $NetBSD: package.mk,v 1.18 2006/10/09 12:25:44 joerg Exp $
+# $NetBSD: package.mk,v 1.19 2007/03/08 23:33:35 rillig Exp $
+#
+# This file provides the code for the "package" phase.
+#
+# Public targets:
+#
+# package:
+#	Generates a binary package.
+#	It will acquire elevated privileges just-in-time.
+#
+#	XXX: From which files is the binary package generated? The
+#	installed files in LOCALBASE, or some files in WRKDIR/.destdir?
+#
 
-######################################################################
-### package (PUBLIC)
-######################################################################
-### package is a public target to generate a binary package.  It will
-### acquire elevated privileges just-in-time.
-###
 _PACKAGE_TARGETS+=	check-vulnerable
 .if make(replace)
 _PACKAGE_TARGETS+=	replace
@@ -81,7 +87,7 @@ package-cookie:
 _PACKAGE_ALL_TARGETS+=	package-check-installed
 .endif
 _PACKAGE_ALL_TARGETS+=	package-create
-_PACKAGE_ALL_TARGETS+=	package-warnings
+_PACKAGE_ALL_TARGETS+=	_package-warnings
 _PACKAGE_ALL_TARGETS+=	error-check
 
 .PHONY: package-all su-package-all
@@ -116,13 +122,9 @@ package-create:
 	@${DO_NADA}
 .endif
 
-######################################################################
-### package-warnings (PRIVATE)
-######################################################################
-### package-warnings displays warnings about the binary package.
-###
-.PHONY: package-warnings
-package-warnings:
+# Displays warnings about the binary package.
+#
+_package-warnings: .PHONY
 .if defined(NO_BIN_ON_CDROM)
 	@${WARNING_MSG} "${PKGNAME} may not be put on a CD-ROM:"
 	@${WARNING_MSG} ${NO_BIN_ON_CDROM:Q}
