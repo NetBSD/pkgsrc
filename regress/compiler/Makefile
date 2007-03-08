@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/08 14:31:06 rillig Exp $
 #
 
 DISTNAME=	compiler-1.1
@@ -11,25 +11,12 @@ COMMENT=	Tests whether the pkgsrc compilers work as expected
 
 NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
-USE_TOOLS+=	printf
-
-SRC_CMD=	${PRINTF} '\#if defined(__cplusplus)\nLANG: Cplus\n\#else\nLANG: Cplain\n\#endif\n'
+USE_LANGUAGES=	c c++
 
 do-extract:
-	cd ${FILESDIR} && cp *.c ${WRKSRC}
+	cd ${FILESDIR} && cp Makefile *.c ${WRKSRC}
+	cd ${WRKSRC} && for i in *.c; do ln $$i $${i}c; done
 
-do-build:
-	# Test whether CPP is a C preprocessor.
-	${SRC_CMD} | cpp -DLANG=Cplain
-	# Test whether CXXCPP is a C++ preprocessor.
-	# CXXCPP is not (yet)? defined.
-	#${SRC_CMD} | cxxcpp -DLANG=Cplus
-	# Test whether white-space is preserved in macro definitions.
-	cd ${WRKSRC} && cc checklen.c -o checklen -DLEN=4 -DSPACES=\"\ \ \ \ \" && ./checklen
-	cd ${WRKSRC} && cc checklen.c -o checklen -DLEN=4 -DSPACES=\""    \"" && ./checklen
-	cd ${WRKSRC} && cc checklen.c -o checklen -DLEN=4 -DSPACES='"    "' && ./checklen
-	# Test whether backslashes are preserved in macro definitions.
-	cd ${WRKSRC} && cc -c checktype.c -DTYPE="unsigned long"
-	cd ${WRKSRC} && cc -c checktype.c -DTYPE=unsigned\ long
+do-wrksrc-build:
 
 .include "../../mk/bsd.pkg.mk"
