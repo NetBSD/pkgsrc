@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/17 18:32:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/08 19:25:32 wiz Exp $
 #
 
 DISTNAME=	libdts-0.0.2
@@ -12,10 +12,10 @@ HOMEPAGE=	http://developers.videolan.org/libdca.html
 COMMENT=	Free DTS Coherent Acoustics decoder
 
 RESTRICTED=	Unresolved patent issue
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
