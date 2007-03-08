@@ -66,7 +66,7 @@
 <dd><dl>
 <dt><span class="sect2"><a href="#getting-via-tar">2.1.1. As tar file</a></span></dt>
 <dt><span class="sect2"><a href="#getting-via-sup">2.1.2. Via SUP</a></span></dt>
-<dt><span class="sect2"><a href="#getting-via-cvs">2.1.3. Via CVS</a></span></dt>
+<dt><span class="sect2"><a href="#getting-via-cvs">2.1.3. Via anonymous CVS</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#uptodate">2.2. Keeping pkgsrc up-to-date</a></span></dt>
 <dd><dl>
@@ -204,15 +204,16 @@
 </dl></dd>
 <dt><span class="chapter"><a href="#makefile">11. Programming in <code class="filename">Makefile</code>s</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#makefile.variables">11.1. <code class="filename">Makefile</code> variables</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">11.1.1. Naming conventions</a></span></dt></dl></dd>
-<dt><span class="sect1"><a href="#makefile.code">11.2. Code snippets</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.style">11.1. Caveats</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.variables">11.2. <code class="filename">Makefile</code> variables</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">11.2.1. Naming conventions</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#makefile.code">11.3. Code snippets</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#adding-to-list">11.2.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#converting-internal-to-external">11.2.2. Converting an internal list into an external list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">11.2.3. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">11.2.4. Quoting guideline</a></span></dt>
-<dt><span class="sect2"><a href="#bsd-make-bug-workaround">11.2.5. Workaround for a bug in BSD Make</a></span></dt>
+<dt><span class="sect2"><a href="#adding-to-list">11.3.1. Adding things to a list</a></span></dt>
+<dt><span class="sect2"><a href="#converting-internal-to-external">11.3.2. Converting an internal list into an external list</a></span></dt>
+<dt><span class="sect2"><a href="#passing-variable-to-shell">11.3.3. Passing variables to a shell command</a></span></dt>
+<dt><span class="sect2"><a href="#quoting-guideline">11.3.4. Quoting guideline</a></span></dt>
+<dt><span class="sect2"><a href="#bsd-make-bug-workaround">11.3.5. Workaround for a bug in BSD Make</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">12. PLIST issues</a></span></dt>
@@ -297,6 +298,7 @@
 <dt><span class="sect1"><a href="#pkgsrc-tools">17.1. Tools for pkgsrc builds</a></span></dt>
 <dt><span class="sect1"><a href="#package-tools">17.2. Tools needed by packages</a></span></dt>
 <dt><span class="sect1"><a href="#platform-tools">17.3. Tools provided by platforms</a></span></dt>
+<dt><span class="sect1"><a href="#tools.questions">17.4. Questions regarding the tools</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#fixes">18. Making your package work</a></span></dt>
 <dd><dl>
@@ -762,7 +764,7 @@ minutes!</p>
 <dd><dl>
 <dt><span class="sect2"><a href="#getting-via-tar">2.1.1. As tar file</a></span></dt>
 <dt><span class="sect2"><a href="#getting-via-sup">2.1.2. Via SUP</a></span></dt>
-<dt><span class="sect2"><a href="#getting-via-cvs">2.1.3. Via CVS</a></span></dt>
+<dt><span class="sect2"><a href="#getting-via-cvs">2.1.3. Via anonymous CVS</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#uptodate">2.2. Keeping pkgsrc up-to-date</a></span></dt>
 <dd><dl>
@@ -875,7 +877,7 @@ minutes!</p>
 <dd><dl>
 <dt><span class="sect2"><a href="#getting-via-tar">2.1.1. As tar file</a></span></dt>
 <dt><span class="sect2"><a href="#getting-via-sup">2.1.2. Via SUP</a></span></dt>
-<dt><span class="sect2"><a href="#getting-via-cvs">2.1.3. Via CVS</a></span></dt>
+<dt><span class="sect2"><a href="#getting-via-cvs">2.1.3. Via anonymous CVS</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#uptodate">2.2. Keeping pkgsrc up-to-date</a></span></dt>
 <dd><dl>
@@ -943,7 +945,7 @@ and dashes.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="getting-via-cvs"></a>2.1.3. Via CVS</h3></div></div></div>
+<a name="getting-via-cvs"></a>2.1.3. Via anonymous CVS</h3></div></div></div>
 <p>To get pkgsrc via CVS, make sure you have <a href="http://netbsd.gw.com/cgi-bin/man-cgi?cvs+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">cvs</span>(1)</span></a>
 	installed. To do an initial (full) checkout of pkgsrc, you first
 	have to set some environment variables. For the C-Shell,
@@ -2320,6 +2322,9 @@ works.</p>
 	    downloaded copies of the original source distributions used
 	    for building pkgsrc packages. The default is
 	    <code class="filename">${PKGSRCDIR}/distfiles</code>.</p></li>
+<li><p><code class="varname">PKG_DBDIR</code>: Where the
+	    database about installed packages is stored.  The default is
+	    <code class="filename">/var/db/pkg</code>.</p></li>
 <li><p><code class="varname">MASTER_SITE_OVERRIDE</code>:
 	    If set, override the packages'
 	    <code class="varname">MASTER_SITES</code> with this value.</p></li>
@@ -3689,15 +3694,16 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 </dl></dd>
 <dt><span class="chapter"><a href="#makefile">11. Programming in <code class="filename">Makefile</code>s</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#makefile.variables">11.1. <code class="filename">Makefile</code> variables</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">11.1.1. Naming conventions</a></span></dt></dl></dd>
-<dt><span class="sect1"><a href="#makefile.code">11.2. Code snippets</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.style">11.1. Caveats</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.variables">11.2. <code class="filename">Makefile</code> variables</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">11.2.1. Naming conventions</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#makefile.code">11.3. Code snippets</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#adding-to-list">11.2.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#converting-internal-to-external">11.2.2. Converting an internal list into an external list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">11.2.3. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">11.2.4. Quoting guideline</a></span></dt>
-<dt><span class="sect2"><a href="#bsd-make-bug-workaround">11.2.5. Workaround for a bug in BSD Make</a></span></dt>
+<dt><span class="sect2"><a href="#adding-to-list">11.3.1. Adding things to a list</a></span></dt>
+<dt><span class="sect2"><a href="#converting-internal-to-external">11.3.2. Converting an internal list into an external list</a></span></dt>
+<dt><span class="sect2"><a href="#passing-variable-to-shell">11.3.3. Passing variables to a shell command</a></span></dt>
+<dt><span class="sect2"><a href="#quoting-guideline">11.3.4. Quoting guideline</a></span></dt>
+<dt><span class="sect2"><a href="#bsd-make-bug-workaround">11.3.5. Workaround for a bug in BSD Make</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">12. PLIST issues</a></span></dt>
@@ -3782,6 +3788,7 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <dt><span class="sect1"><a href="#pkgsrc-tools">17.1. Tools for pkgsrc builds</a></span></dt>
 <dt><span class="sect1"><a href="#package-tools">17.2. Tools needed by packages</a></span></dt>
 <dt><span class="sect1"><a href="#platform-tools">17.3. Tools provided by platforms</a></span></dt>
+<dt><span class="sect1"><a href="#tools.questions">17.4. Questions regarding the tools</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#fixes">18. Making your package work</a></span></dt>
 <dd><dl>
@@ -4775,15 +4782,16 @@ sections.</p>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#makefile.variables">11.1. <code class="filename">Makefile</code> variables</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">11.1.1. Naming conventions</a></span></dt></dl></dd>
-<dt><span class="sect1"><a href="#makefile.code">11.2. Code snippets</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.style">11.1. Caveats</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.variables">11.2. <code class="filename">Makefile</code> variables</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">11.2.1. Naming conventions</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#makefile.code">11.3. Code snippets</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#adding-to-list">11.2.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#converting-internal-to-external">11.2.2. Converting an internal list into an external list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">11.2.3. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">11.2.4. Quoting guideline</a></span></dt>
-<dt><span class="sect2"><a href="#bsd-make-bug-workaround">11.2.5. Workaround for a bug in BSD Make</a></span></dt>
+<dt><span class="sect2"><a href="#adding-to-list">11.3.1. Adding things to a list</a></span></dt>
+<dt><span class="sect2"><a href="#converting-internal-to-external">11.3.2. Converting an internal list into an external list</a></span></dt>
+<dt><span class="sect2"><a href="#passing-variable-to-shell">11.3.3. Passing variables to a shell command</a></span></dt>
+<dt><span class="sect2"><a href="#quoting-guideline">11.3.4. Quoting guideline</a></span></dt>
+<dt><span class="sect2"><a href="#bsd-make-bug-workaround">11.3.5. Workaround for a bug in BSD Make</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -4803,7 +4811,40 @@ sections.</p>
   with them.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="makefile.variables"></a>11.1. <code class="filename">Makefile</code> variables</h2></div></div></div>
+<a name="makefile.style"></a>11.1. Caveats</h2></div></div></div>
+<div class="itemizedlist"><ul type="disc"><li>
+<p>When you are creating a file as a
+    target of a rule, always write the data to a temporary file first
+    and finally rename that file. Otherwise there might occur an error
+    in the middle of generating the file, and when the user runs
+    <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> for the second time, the file exists and will not be
+    regenerated properly. Example:</p>
+<pre class="programlisting">
+    wrong:
+            @echo "line 1" &gt; ${.TARGET}
+            @echo "line 2" &gt;&gt; ${.TARGET}
+            @false
+
+    correct:
+            @echo "line 1" &gt; ${.TARGET}.tmp
+            @echo "line 2" &gt;&gt; ${.TARGET}.tmp
+            @false
+            @mv ${.TARGET}.tmp ${.TARGET}
+</pre>
+<p>When you run <span><strong class="command">make wrong</strong></span> twice, the file
+    <code class="filename">wrong</code> will exist, although there was an error
+    message in the first run. On the other hand, running <span><strong class="command">make
+    correct</strong></span> gives an error message twice, as expected.</p>
+<p>You might remember that <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> sometimes removes
+    <code class="literal">${.TARGET}</code> in case of error, but this only
+    happens when it is interrupted, for example by pressing
+    <code class="literal">^C</code>. This does <span class="emphasis"><em>not</em></span> happen
+    when one of the commands fails (like <a href="http://netbsd.gw.com/cgi-bin/man-cgi?false+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">false</span>(1)</span></a> above).</p>
+</li></ul></div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="makefile.variables"></a>11.2. <code class="filename">Makefile</code> variables</h2></div></div></div>
 <p><code class="filename">Makefile</code> variables contain strings that
     can be processed using the five operators ``='', ``+='', ``?='',
     ``:='', and ``!='', which are described in the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man
@@ -4861,7 +4902,7 @@ sections.</p>
 </ul></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="makefile.variables.names"></a>11.1.1. Naming conventions</h3></div></div></div>
+<a name="makefile.variables.names"></a>11.2.1. Naming conventions</h3></div></div></div>
 <div class="itemizedlist"><ul type="disc">
 <li><p>All variable names starting with an underscore
 	are reserved for use by the pkgsrc infrastructure. They shall
@@ -4878,13 +4919,13 @@ sections.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="makefile.code"></a>11.2. Code snippets</h2></div></div></div>
+<a name="makefile.code"></a>11.3. Code snippets</h2></div></div></div>
 <p>This section presents you with some code snippets you should
     use in your own code. If you don't find anything appropriate here,
     you should test your code and add it here.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="adding-to-list"></a>11.2.1. Adding things to a list</h3></div></div></div>
+<a name="adding-to-list"></a>11.3.1. Adding things to a list</h3></div></div></div>
 <pre class="programlisting">
     STRING=                 foo * bar `date`
     INT_LIST=               # empty
@@ -4905,7 +4946,7 @@ sections.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="converting-internal-to-external"></a>11.2.2. Converting an internal list into an external list</h3></div></div></div>
+<a name="converting-internal-to-external"></a>11.3.2. Converting an internal list into an external list</h3></div></div></div>
 <pre class="programlisting">
     EXT_LIST=       # empty
     .for i in ${INT_LIST}
@@ -4920,7 +4961,7 @@ sections.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="passing-variable-to-shell"></a>11.2.3. Passing variables to a shell command</h3></div></div></div>
+<a name="passing-variable-to-shell"></a>11.3.3. Passing variables to a shell command</h3></div></div></div>
 <p>Sometimes you may want to print an arbitrary string. There
 	are many ways to get it wrong and only few that can handle every
 	nastiness.</p>
@@ -4964,7 +5005,7 @@ sections.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="quoting-guideline"></a>11.2.4. Quoting guideline</h3></div></div></div>
+<a name="quoting-guideline"></a>11.3.4. Quoting guideline</h3></div></div></div>
 <p>There are many possible sources of wrongly quoted variables.
       This section lists some of the commonly known ones.</p>
 <div class="itemizedlist"><ul type="disc">
@@ -5047,7 +5088,7 @@ sections.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bsd-make-bug-workaround"></a>11.2.5. Workaround for a bug in BSD Make</h3></div></div></div>
+<a name="bsd-make-bug-workaround"></a>11.3.5. Workaround for a bug in BSD Make</h3></div></div></div>
 <p>The pkgsrc bmake program does not handle the following
       assignment correctly. In case <code class="varname">_othervar_</code>
       contains a ``-'' character, one of the closing braces is included
@@ -6377,12 +6418,19 @@ support.</span>&#8221; The file is sorted by option names.</p>
     <code class="varname">do-</code> or <code class="varname">post-</code>. (Examples are
     <code class="varname">pre-configure</code>, <code class="varname">post-build</code>.) Most
     of the actual work is done in the <code class="varname">do-*</code> stages.</p>
+<p>Never override the regular targets (like
+    <code class="varname">fetch</code>), if you have to, override the
+    <code class="varname">do-*</code> ones instead.</p>
 <p>The basic steps for building a program are always the same.  First
     the program's source (<span class="emphasis"><em>distfile</em></span>) must be brought to
     the local system and then extracted. After any pkgsrc-specific patches
     to compile properly are applied, the software can be configured, then
     built (usually by compiling), and finally the generated binaries, etc.
     can be put into place on the system.</p>
+<p>To get more details about what is happening at each step,
+    you can set the <code class="varname">PKG_VERBOSE</code> variable, or the
+    <code class="varname">PATCH_DEBUG</code> variable if you are just interested
+    in more details about the <span class="emphasis"><em>patch</em></span> step.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6501,6 +6549,9 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <dd><p>This is an absolute pathname that points to the pkgsrc
       root directory. Generally, you don't need
       it.</p></dd>
+<dt><span class="term"><code class="varname">PKGDIR</code></span></dt>
+<dd><p>This is an absolute pathname that points to the
+      current package.</p></dd>
 <dt><span class="term"><code class="varname">PKGPATH</code></span></dt>
 <dd><p>This is a pathname relative to
       <code class="varname">PKGSRCDIR</code> that points to the current
@@ -6655,6 +6706,12 @@ support.</span>&#8221; The file is sorted by option names.</p>
       <code class="varname">MASTER_SORT_RANDOM</code>, and
       <code class="varname">MASTER_SORT_AWK</code> or
       <code class="varname">MASTER_SORT_REGEX</code>.</p>
+<p>The distfiles mirror run by the NetBSD Foundation uses the
+      <span class="emphasis"><em>mirror-distfiles</em></span> target to mirror the
+      distfiles, if they are freely distributable.  Packages setting
+      <code class="varname">NO_SRC_ON_FTP</code> (usually to
+      &#8220;<span class="quote">${RESTRICTED}</span>&#8221;) will not have their distfiles
+      mirrored.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -6811,7 +6868,11 @@ support.</span>&#8221; The file is sorted by option names.</p>
     setting <code class="varname">USE_IMAKE</code> to
     &#8220;<span class="quote">yes</span>&#8221;. (If you only want the package installed in
     <code class="varname">${X11PREFIX}</code> but xmkmf not being run, set
-    <code class="varname">USE_X11BASE</code> instead.)</p>
+    <code class="varname">USE_X11BASE</code> instead.)  You can add variables to
+    xmkmf's environment by adding them to the
+    <code class="varname">SCRIPTS_ENV</code> variable.</p>
+<p>If there is no configure step at all, set
+    <code class="varname">NO_CONFIGURE</code> to &#8220;<span class="quote">yes</span>&#8221;.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6842,6 +6903,8 @@ support.</span>&#8221; The file is sorted by option names.</p>
     default value of <code class="varname">MAKE_FILE</code> is
     &#8220;<span class="quote">Makefile</span>&#8221;, and <code class="varname">BUILD_TARGET</code>
     defaults to &#8220;<span class="quote">all</span>&#8221;.</p>
+<p>If there is no build step at all, set
+    <code class="varname">NO_BUILD</code> to &#8220;<span class="quote">yes</span>&#8221;.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6931,6 +6994,10 @@ support.</span>&#8221; The file is sorted by option names.</p>
       correct ownership, depending on their
       name.</p></dd>
 </dl></div>
+<p>In the rare cases that a package shouldn't install anything,
+    set <code class="varname">NO_INSTALL</code> to &#8220;<span class="quote">yes</span>&#8221;. This is
+    mostly relevant for packages in the <code class="filename">regress</code>
+    category.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6946,6 +7013,11 @@ support.</span>&#8221; The file is sorted by option names.</p>
     one for each category in the <code class="varname">CATEGORIES</code>
     variable.  <code class="varname">PACKAGES</code> defaults to
     <code class="filename">pkgsrc/packages</code>.</p>
+<p>If there should be no binary package, set
+    <code class="varname">NO_PACKAGE</code> to &#8220;<span class="quote">yes</span>&#8221;.
+    This should only be used in rare cases, like when a package
+    definitely is only usable on the machine where it is built and even
+    then, a binary package can be useful.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -7317,6 +7389,7 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <dt><span class="sect1"><a href="#pkgsrc-tools">17.1. Tools for pkgsrc builds</a></span></dt>
 <dt><span class="sect1"><a href="#package-tools">17.2. Tools needed by packages</a></span></dt>
 <dt><span class="sect1"><a href="#platform-tools">17.3. Tools provided by platforms</a></span></dt>
+<dt><span class="sect1"><a href="#tools.questions">17.4. Questions regarding the tools</a></span></dt>
 </dl>
 </div>
 <p>The <code class="varname">USE_TOOLS</code> definition is used both internally
@@ -7390,6 +7463,62 @@ TOOLS_PLATFORM.bzcat?=          /usr/bin/bzip2 -cd
 
 TOOLS_PLATFORM.true?=           true                    # shell builtin
 </pre>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="tools.questions"></a>17.4. Questions regarding the tools</h2></div></div></div>
+<div class="qandaset">
+<dl>
+<dt>17.4.1. <a href="#tools.new">How do I add a new tool?</a>
+</dt>
+<dt>17.4.2. <a href="#tools.listall">How do I get a list of all available
+	tools?</a>
+</dt>
+<dt>17.4.3. <a href="#tools.used">How can I get a list of all the tools that a
+	package is using while being built? I want to know whether it
+	uses sed or not.</a>
+</dt>
+</dl>
+<table border="0" summary="Q and A Set">
+<col align="left" width="1%">
+<tbody>
+<tr class="question">
+<td align="left" valign="top">
+<a name="tools.new"></a><a name="id2680589"></a><b>17.4.1.</b>
+</td>
+<td align="left" valign="top"><p>How do I add a new tool?</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"></td>
+<td align="left" valign="top"><p>TODO</p></td>
+</tr>
+<tr class="question">
+<td align="left" valign="top">
+<a name="tools.listall"></a><a name="id2680599"></a><b>17.4.2.</b>
+</td>
+<td align="left" valign="top"><p>How do I get a list of all available
+	tools?</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"></td>
+<td align="left" valign="top"><p>TODO</p></td>
+</tr>
+<tr class="question">
+<td align="left" valign="top">
+<a name="tools.used"></a><a name="id2680610"></a><b>17.4.3.</b>
+</td>
+<td align="left" valign="top"><p>How can I get a list of all the tools that a
+	package is using while being built? I want to know whether it
+	uses sed or not.</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"></td>
+<td align="left" valign="top"><p>Currently, you can't. (TODO: But I want to be able
+	to do it.)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -7779,11 +7908,6 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     automatically. See the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/print/ghostscript/README.html" target="_top"><code class="filename">print/ghostscript</code></a> package for an example.
     (It relies on the jpeg sources being present in source form
     during the build.)</p>
-<p>Please also note the
-    <code class="varname">BUILD_USES_GETTEXT_M4</code> definition, which is
-    provided as convenience definition.  It adds a build dependency on
-    either an installed version of an older gettext package, or if it
-    isn't, installs the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/gettext-m4/README.html" target="_top"><code class="filename">devel/gettext-m4</code></a> package.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -8014,18 +8138,23 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     compared against the old one before changing anything, to make
     sure the distfile was really updated on purpose, and that
     no trojan horse or so crept in.
+    Please mention that the distfiles were compared and what was found
+    in your commit message.
     Then, the correct way to work around this is to
     set <code class="varname">DIST_SUBDIR</code> to a unique directory name,
     usually based on <code class="varname">PKGNAME_NOREV</code>. All
     <code class="varname">DISTFILES</code> and
     <code class="varname">PATCHFILES</code> for this package will be put in that
-    subdirectory of the local distfiles directory.  In case this
+    subdirectory of the local distfiles directory.
+    (See <a href="#bumping-pkgrevision" title="18.1.11. How to handle incrementing versions when fixing an existing package">Section 18.1.11, &#8220;How to handle incrementing versions when fixing an existing package&#8221;</a> for more details.)
+    In case this
     happens more often, <code class="varname">PKGNAME</code> can be used (thus
     including the <code class="filename">nbX</code> suffix) or a date stamp
     can be appended, like <code class="varname">${PKGNAME_NOREV}-YYYYMMDD</code>.
     Do not forget regenerating the <code class="filename">distinfo</code> file
     after that, since it contains the <code class="varname">DIST_SUBDIR</code>
     path in the filenames.
+    Also increase the PKGREVISION if the installed package is different.
     Furthermore, a mail to the package's authors seems appropriate
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</p>
@@ -8355,6 +8484,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     FreeBSD     __FreeBSD__
     DragonFly   __DragonFly__
     Interix     __INTERIX
+    IRIX        __sgi (TODO: get a definite source for this)
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
@@ -8375,8 +8505,9 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <a name="fixes.build.cpp.compiler"></a>18.5.1.3. C preprocessor macros to identify the compiler</h4></div></div></div>
 <pre class="programlisting">
     GCC         __GNUC__ (major version), __GNUC_MINOR__
-    SunPro      __SUNPRO_C (0x570 for version 5.7)
-    SunPro C++  __SUNPRO_CC (0x580 for version 5.8)
+    MIPSpro     _COMPILER_VERSION (0x741 for MIPSpro 7.41)
+    SunPro      __SUNPRO_C (0x570 for Sun C 5.7)
+    SunPro C++  __SUNPRO_CC (0x580 for Sun C++ 5.8)
 </pre>
 </div>
 </div>
@@ -9306,7 +9437,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2685982"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2686192"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9322,7 +9453,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2686021"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2686298"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9340,7 +9471,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2686061"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2686339"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9358,7 +9489,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2686101"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2686446"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9371,7 +9502,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2686121"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2686467"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9387,7 +9518,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2686151"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2686497"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9411,7 +9542,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2686296"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2686573"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9436,7 +9567,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2686334"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2686612"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9484,7 +9615,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2686396"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2686674"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>

@@ -187,17 +187,18 @@ II. The pkgsrc developer's guide
 
     11. Programming in Makefiles
 
-        11.1. Makefile variables
+        11.1. Caveats
+        11.2. Makefile variables
 
-            11.1.1. Naming conventions
+            11.2.1. Naming conventions
 
-        11.2. Code snippets
+        11.3. Code snippets
 
-            11.2.1. Adding things to a list
-            11.2.2. Converting an internal list into an external list
-            11.2.3. Passing variables to a shell command
-            11.2.4. Quoting guideline
-            11.2.5. Workaround for a bug in BSD Make
+            11.3.1. Adding things to a list
+            11.3.2. Converting an internal list into an external list
+            11.3.3. Passing variables to a shell command
+            11.3.4. Quoting guideline
+            11.3.5. Workaround for a bug in BSD Make
 
     12. PLIST issues
 
@@ -285,6 +286,7 @@ II. The pkgsrc developer's guide
         17.1. Tools for pkgsrc builds
         17.2. Tools needed by packages
         17.3. Tools provided by platforms
+        17.4. Questions regarding the tools
 
     18. Making your package work
 
@@ -1914,7 +1916,7 @@ each variable's intent.
     {PKGSRCDIR}/distfiles.
 
   * PKG_DBDIR: Where the database about installed packages is stored. The
-    default is /var/db/pkg>.
+    default is /var/db/pkg.
 
   * MASTER_SITE_OVERRIDE: If set, override the packages' MASTER_SITES with this
     value.
@@ -3096,17 +3098,18 @@ Table of Contents
 
 11. Programming in Makefiles
 
-    11.1. Makefile variables
+    11.1. Caveats
+    11.2. Makefile variables
 
-        11.1.1. Naming conventions
+        11.2.1. Naming conventions
 
-    11.2. Code snippets
+    11.3. Code snippets
 
-        11.2.1. Adding things to a list
-        11.2.2. Converting an internal list into an external list
-        11.2.3. Passing variables to a shell command
-        11.2.4. Quoting guideline
-        11.2.5. Workaround for a bug in BSD Make
+        11.3.1. Adding things to a list
+        11.3.2. Converting an internal list into an external list
+        11.3.3. Passing variables to a shell command
+        11.3.4. Quoting guideline
+        11.3.5. Workaround for a bug in BSD Make
 
 12. PLIST issues
 
@@ -3194,6 +3197,7 @@ Table of Contents
     17.1. Tools for pkgsrc builds
     17.2. Tools needed by packages
     17.3. Tools provided by platforms
+    17.4. Questions regarding the tools
 
 18. Making your package work
 
@@ -4010,17 +4014,18 @@ Chapter 11. Programming in Makefiles
 
 Table of Contents
 
-11.1. Makefile variables
+11.1. Caveats
+11.2. Makefile variables
 
-    11.1.1. Naming conventions
+    11.2.1. Naming conventions
 
-11.2. Code snippets
+11.3. Code snippets
 
-    11.2.1. Adding things to a list
-    11.2.2. Converting an internal list into an external list
-    11.2.3. Passing variables to a shell command
-    11.2.4. Quoting guideline
-    11.2.5. Workaround for a bug in BSD Make
+    11.3.1. Adding things to a list
+    11.3.2. Converting an internal list into an external list
+    11.3.3. Passing variables to a shell command
+    11.3.4. Quoting guideline
+    11.3.5. Workaround for a bug in BSD Make
 
 Pkgsrc consists of many Makefile fragments, each of which forms a well-defined
 part of the pkgsrc system. Using the make(1) system as a programming language
@@ -4036,7 +4041,35 @@ used.
 This chapter describes some patterns, that appear quite often in Makefiles,
 including the pitfalls that come along with them.
 
-11.1. Makefile variables
+11.1. Caveats
+
+  * When you are creating a file as a target of a rule, always write the data
+    to a temporary file first and finally rename that file. Otherwise there
+    might occur an error in the middle of generating the file, and when the
+    user runs make(1) for the second time, the file exists and will not be
+    regenerated properly. Example:
+
+        wrong:
+                @echo "line 1" > ${.TARGET}
+                @echo "line 2" >> ${.TARGET}
+                @false
+
+        correct:
+                @echo "line 1" > ${.TARGET}.tmp
+                @echo "line 2" >> ${.TARGET}.tmp
+                @false
+                @mv ${.TARGET}.tmp ${.TARGET}
+
+    When you run make wrong twice, the file wrong will exist, although there
+    was an error message in the first run. On the other hand, running make
+    correct gives an error message twice, as expected.
+
+    You might remember that make(1) sometimes removes ${.TARGET} in case of
+    error, but this only happens when it is interrupted, for example by
+    pressing ^C. This does not happen when one of the commands fails (like
+    false(1) above).
+
+11.2. Makefile variables
 
 Makefile variables contain strings that can be processed using the five
 operators ``='', ``+='', ``?='', ``:='', and ``!='', which are described in the
@@ -4087,7 +4120,7 @@ Strings and two types of lists.
     elements can contain any characters, including whitespace. That's why they
     cannot be used in .for loops. Examples are DISTFILES and MASTER_SITES.
 
-11.1.1. Naming conventions
+11.2.1. Naming conventions
 
   * All variable names starting with an underscore are reserved for use by the
     pkgsrc infrastructure. They shall not be used by package Makefiles.
@@ -4098,13 +4131,13 @@ Strings and two types of lists.
   * All list variables should have a ``plural'' name, e.g. PKG_OPTIONS or
     DISTFILES.
 
-11.2. Code snippets
+11.3. Code snippets
 
 This section presents you with some code snippets you should use in your own
 code. If you don't find anything appropriate here, you should test your code
 and add it here.
 
-11.2.1. Adding things to a list
+11.3.1. Adding things to a list
 
     STRING=                 foo * bar `date`
     INT_LIST=               # empty
@@ -4122,7 +4155,7 @@ all other cases, you must not add a quoting level. You must not merge internal
 and external lists, unless you are sure that all entries are correctly
 interpreted in both lists.
 
-11.2.2. Converting an internal list into an external list
+11.3.2. Converting an internal list into an external list
 
     EXT_LIST=       # empty
     .for i in ${INT_LIST}
@@ -4133,7 +4166,7 @@ This code converts the internal list INT_LIST into the external list EXT_LIST.
 As the elements of an internal list are unquoted they must be quoted here. The
 reason for appending "" is explained below.
 
-11.2.3. Passing variables to a shell command
+11.3.3. Passing variables to a shell command
 
 Sometimes you may want to print an arbitrary string. There are many ways to get
 it wrong and only few that can handle every nastiness.
@@ -4175,7 +4208,7 @@ done when adding elements to the list.
 
 As internal lists shall not be passed to the shell, there is no example for it.
 
-11.2.4. Quoting guideline
+11.3.4. Quoting guideline
 
 There are many possible sources of wrongly quoted variables. This section lists
 some of the commonly known ones.
@@ -4240,7 +4273,7 @@ some of the commonly known ones.
     line the arguments of the echo(1) command from the first line. To avoid
     this, write ${i:Q}"".
 
-11.2.5. Workaround for a bug in BSD Make
+11.3.5. Workaround for a bug in BSD Make
 
 The pkgsrc bmake program does not handle the following assignment correctly. In
 case _othervar_ contains a ``-'' character, one of the closing braces is
@@ -5717,7 +5750,7 @@ The default value of MAKE_PROGRAM is "gmake" if USE_TOOLS contains "gmake",
 "make" otherwise. The default value of MAKE_FILE is "Makefile", and
 BUILD_TARGET defaults to "all".
 
-If there is no configure step at all, set NO_BUILD to "yes".
+If there is no build step at all, set NO_BUILD to "yes".
 
 16.13. The test phase
 
@@ -6120,6 +6153,7 @@ Table of Contents
 17.1. Tools for pkgsrc builds
 17.2. Tools needed by packages
 17.3. Tools provided by platforms
+17.4. Questions regarding the tools
 
 The USE_TOOLS definition is used both internally by pkgsrc and also for
 individual packages to define what commands are needed for building a package
@@ -6180,6 +6214,26 @@ TOOLS_PLATFORM.bzcat?=          /usr/bin/bzip2 -cd
 .endif
 
 TOOLS_PLATFORM.true?=           true                    # shell builtin
+
+17.4. Questions regarding the tools
+
+17.4.1. How do I add a new tool?
+17.4.2. How do I get a list of all available tools?
+17.4.3. How can I get a list of all the tools that a package is using while
+    being built? I want to know whether it uses sed or not.
+
+17.4.1. How do I add a new tool?
+
+        TODO
+
+17.4.2. How do I get a list of all available tools?
+
+        TODO
+
+17.4.3. How can I get a list of all the tools that a package is using while
+        being built? I want to know whether it uses sed or not.
+
+        Currently, you can't. (TODO: But I want to be able to do it.)
 
 Chapter 18. Making your package work
 
