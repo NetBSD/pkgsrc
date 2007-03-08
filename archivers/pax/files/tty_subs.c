@@ -1,4 +1,4 @@
-/*	$NetBSD: tty_subs.c,v 1.5 2005/12/01 03:00:01 minskim Exp $	*/
+/*	$NetBSD: tty_subs.c,v 1.6 2007/03/08 17:18:19 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)tty_subs.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: tty_subs.c,v 1.5 2005/12/01 03:00:01 minskim Exp $");
+__RCSID("$NetBSD: tty_subs.c,v 1.6 2007/03/08 17:18:19 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -113,7 +113,7 @@ tty_init(void)
 	if ((ttyfd = open(DEVTTY, O_RDWR)) >= 0) {
 		if ((ttyoutf = fdopen(ttyfd, "w")) != NULL) {
 			if ((ttyinf = fdopen(ttyfd, "r")) != NULL)
-				return(0);
+				return 0;
 			(void)fclose(ttyoutf);
 		}
 		(void)close(ttyfd);
@@ -121,9 +121,9 @@ tty_init(void)
 
 	if (iflag) {
 		tty_warn(1, "Fatal error, cannot open %s", DEVTTY);
-		return(-1);
+		return -1;
 	}
-	return(0);
+	return 0;
 }
 
 /*
@@ -158,7 +158,7 @@ tty_read(char *str, int len)
 	char *pt;
 
 	if ((--len <= 0) || (ttyinf == NULL) || (fgets(str,len,ttyinf) == NULL))
-		return(-1);
+		return -1;
 	*(str + len) = '\0';
 
 	/*
@@ -166,7 +166,7 @@ tty_read(char *str, int len)
 	 */
 	if ((pt = strchr(str, '\n')) != NULL)
 		*pt = '\0';
-	return(0);
+	return 0;
 }
 
 /*

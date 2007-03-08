@@ -1,4 +1,4 @@
-/*	$NetBSD: sel_subs.c,v 1.4 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: sel_subs.c,v 1.5 2007/03/08 17:18:18 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)sel_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: sel_subs.c,v 1.4 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: sel_subs.c,v 1.5 2007/03/08 17:18:18 rillig Exp $");
 #endif
 #endif /* not lint */
 
@@ -127,8 +127,8 @@ sel_chk(ARCHD *arcn)
 	if (((usrtb != NULL) && usr_match(arcn)) ||
 	    ((grptb != NULL) && grp_match(arcn)) ||
 	    ((trhead != NULL) && trng_match(arcn)))
-		return(1);
-	return(0);
+		return 1;
+	return 0;
 }
 
 /*
@@ -158,12 +158,12 @@ usr_add(char *str)
 	 * create the table if it doesn't exist
 	 */
 	if ((str == NULL) || (*str == '\0'))
-		return(-1);
+		return -1;
 	if ((usrtb == NULL) &&
 	    ((usrtb = (USRT **)calloc(USR_TB_SZ, sizeof(USRT *))) == NULL)) {
 		tty_warn(1,
 		    "Unable to allocate memory for user selection table");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -177,7 +177,7 @@ usr_add(char *str)
 			++str;
 		if ((pw = getpwnam(str)) == NULL) {
 			tty_warn(1, "Unable to find uid for user: %s", str);
-			return(-1);
+			return -1;
 		}
 		uid = (uid_t)pw->pw_uid;
 	} else
@@ -191,7 +191,7 @@ usr_add(char *str)
 	if ((pt = usrtb[indx]) != NULL) {
 		while (pt != NULL) {
 			if (pt->uid == uid)
-				return(0);
+				return 0;
 			pt = pt->fow;
 		}
 	}
@@ -203,10 +203,10 @@ usr_add(char *str)
 		pt->uid = uid;
 		pt->fow = usrtb[indx];
 		usrtb[indx] = pt;
-		return(0);
+		return 0;
 	}
 	tty_warn(1, "User selection table out of memory");
-	return(-1);
+	return -1;
 }
 
 /*
@@ -227,14 +227,14 @@ usr_match(ARCHD *arcn)
 	pt = usrtb[((unsigned)arcn->sb.st_uid) % USR_TB_SZ];
 	while (pt != NULL) {
 		if (pt->uid == arcn->sb.st_uid)
-			return(0);
+			return 0;
 		pt = pt->fow;
 	}
 
 	/*
 	 * not found
 	 */
-	return(1);
+	return 1;
 }
 
 /*
@@ -256,12 +256,12 @@ grp_add(char *str)
 	 * create the table if it doesn't exist
 	 */
 	if ((str == NULL) || (*str == '\0'))
-		return(-1);
+		return -1;
 	if ((grptb == NULL) &&
 	    ((grptb = (GRPT **)calloc(GRP_TB_SZ, sizeof(GRPT *))) == NULL)) {
 		tty_warn(1,
 		    "Unable to allocate memory fo group selection table");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -276,7 +276,7 @@ grp_add(char *str)
 		if ((gr = getgrnam(str)) == NULL) {
 			tty_warn(1,
 			    "Cannot determine gid for group name: %s", str);
-			return(-1);
+			return -1;
 		}
 		gid = (gid_t)gr->gr_gid;
 	} else
@@ -290,7 +290,7 @@ grp_add(char *str)
 	if ((pt = grptb[indx]) != NULL) {
 		while (pt != NULL) {
 			if (pt->gid == gid)
-				return(0);
+				return 0;
 			pt = pt->fow;
 		}
 	}
@@ -302,10 +302,10 @@ grp_add(char *str)
 		pt->gid = gid;
 		pt->fow = grptb[indx];
 		grptb[indx] = pt;
-		return(0);
+		return 0;
 	}
 	tty_warn(1, "Group selection table out of memory");
-	return(-1);
+	return -1;
 }
 
 /*
@@ -326,14 +326,14 @@ grp_match(ARCHD *arcn)
 	pt = grptb[((unsigned)arcn->sb.st_gid) % GRP_TB_SZ];
 	while (pt != NULL) {
 		if (pt->gid == arcn->sb.st_gid)
-			return(0);
+			return 0;
 		pt = pt->fow;
 	}
 
 	/*
 	 * not found
 	 */
-	return(1);
+	return 1;
 }
 
 /*
@@ -379,7 +379,7 @@ trng_add(char *str)
 	 */
 	if ((str == NULL) || (*str == '\0')) {
 		tty_warn(1, "Empty time range string");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -414,7 +414,7 @@ trng_add(char *str)
 	 */
 	if ((pt = (TIME_RNG *)malloc(sizeof(TIME_RNG))) == NULL) {
 		tty_warn(1, "Unable to allocate memory for time range");
-		return(-1);
+		return -1;
 	}
 
 	/*
@@ -480,7 +480,7 @@ trng_add(char *str)
 				    "Upper %s and lower %s time overlap",
 				    up_pt, str);
 				(void)free((char *)pt);
-				return(-1);
+				return -1;
 			}
 		}
 	}
@@ -488,15 +488,15 @@ trng_add(char *str)
 	pt->fow = NULL;
 	if (trhead == NULL) {
 		trtail = trhead = pt;
-		return(0);
+		return 0;
 	}
 	trtail->fow = pt;
 	trtail = pt;
-	return(0);
+	return 0;
 
     out:
 	tty_warn(1, "Time range format is: [yy[mm[dd[hh]]]]mm[.ss][/[c][m]]");
-	return(-1);
+	return -1;
 }
 
 /*
@@ -563,8 +563,8 @@ trng_match(ARCHD *arcn)
 	}
 
 	if (pt == NULL)
-		return(1);
-	return(0);
+		return 1;
+	return 0;
 }
 
 /*
@@ -591,7 +591,7 @@ str_sec(const char *p, time_t *tval)
 			dot = t;
 			continue;
 		}
-		return(-1);
+		return -1;
 	}
 
 	lt = localtime(tval);
@@ -599,7 +599,7 @@ str_sec(const char *p, time_t *tval)
 	if (dot != NULL) {
 		len = strlen(dot);
 		if (len != 3)
-			return(-1);
+			return -1;
 		++dot;
 		lt->tm_sec = ATOI2(dot);
 	} else {
@@ -638,13 +638,13 @@ str_sec(const char *p, time_t *tval)
 		lt->tm_min = ATOI2(p);
 		break;
 	default:
-		return(-1);
+		return -1;
 	}
 
 	/*
 	 * convert broken-down time to GMT clock time seconds
 	 */
 	if ((*tval = mktime(lt)) == -1)
-		return(-1);
-	return(0);
+		return -1;
+	return 0;
 }
