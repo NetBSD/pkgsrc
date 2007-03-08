@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6075 2007/03/08 18:22:36 wiz Exp $
+$NetBSD: TODO,v 1.6076 2007/03/08 18:24:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -582,7 +582,6 @@ Suggested package updates
 	o libshout-2.2
 	o libssh-0.2
 	o libstatgrab-0.14
-	o libtasn1-0.3.9
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.11.2
 	o libxml++2-2.18.0
