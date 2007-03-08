@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.21 2006/06/29 13:37:46 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.22 2007/03/08 16:00:16 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -19,6 +19,44 @@
   <para>This chapter describes some patterns, that appear quite often in
   <filename>Makefile</filename>s, including the pitfalls that come along
   with them.</para>
+
+  <sect1 id="makefile.style">
+  <title>Caveats</title>
+
+    <itemizedlist><listitem><para>When you are creating a file as a
+    target of a rule, always write the data to a temporary file first
+    and finally rename that file. Otherwise there might occur an error
+    in the middle of generating the file, and when the user runs
+    &man.make.1; for the second time, the file exists and will not be
+    regenerated properly. Example:</para>
+
+<programlisting>
+    wrong:
+            @echo "line 1" > ${.TARGET}
+            @echo "line 2" >> ${.TARGET}
+            @false
+
+    correct:
+            @echo "line 1" > ${.TARGET}.tmp
+            @echo "line 2" >> ${.TARGET}.tmp
+            @false
+            @mv ${.TARGET}.tmp ${.TARGET}
+</programlisting>
+
+    <para>When you run <command>make wrong</command> twice, the file
+    <filename>wrong</filename> will exist, although there was an error
+    message in the first run. On the other hand, running <command>make
+    correct</command> gives an error message twice, as expected.</para>
+    
+    <para>You might remember that &man.make.1; sometimes removes
+    <literal>${.TARGET}</literal> in case of error, but this only
+    happens when it is interrupted, for example by pressing
+    <literal>^C</literal>. This does <emphasis>not</emphasis> happen
+    when one of the commands fails (like &man.false.1; above).</para>
+    
+    </listitem>
+    </itemizedlist>
+  </sect1>
 
   <sect1 id="makefile.variables">
     <title><filename>Makefile</filename> variables</title>
