@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6080 2007/03/08 19:11:47 wiz Exp $
+$NetBSD: TODO,v 1.6081 2007/03/08 19:23:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,6 @@ Suggested package updates
 	o cocoon-2.1.10
 	o cogito-0.18.2
 	o columba-1.0RC1
-	o compface-1.5.2
 	o control-center-2.16.3
 	o coreutils-6.7
 	o courier-authlib-0.59
