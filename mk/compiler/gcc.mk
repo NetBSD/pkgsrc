@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.88 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: gcc.mk,v 1.88.2.1 2007/03/08 23:22:07 salo Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -11,6 +11,11 @@ COMPILER_GCC_MK=	defined
 USE_NATIVE_GCC?=	no
 
 GCC_REQD+=	2.8.0
+
+# gcc2 doesn't support c99
+.if !empty(USE_LANGUAGES:Mc99)
+GCC_REQD+=	3.0
+.endif
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
