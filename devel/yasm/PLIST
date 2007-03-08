@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/08/12 21:05:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/03/08 19:09:27 wiz Exp $
 bin/yasm
+include/libyasm-stdint.h
 include/libyasm.h
 include/libyasm/arch.h
 include/libyasm/assocdat.h
@@ -10,18 +11,18 @@ include/libyasm/compat-queue.h
 include/libyasm/coretype.h
 include/libyasm/dbgfmt.h
 include/libyasm/errwarn.h
-include/libyasm/expr.h
 include/libyasm/expr-int.h
+include/libyasm/expr.h
 include/libyasm/file.h
 include/libyasm/floatnum.h
 include/libyasm/hamt.h
 include/libyasm/intnum.h
-include/libyasm/linemgr.h
+include/libyasm/inttree.h
+include/libyasm/linemap.h
 include/libyasm/listfmt.h
 include/libyasm/md5.h
 include/libyasm/module.h
 include/libyasm/objfmt.h
-include/libyasm/optimizer.h
 include/libyasm/parser.h
 include/libyasm/phash.h
 include/libyasm/preproc.h
@@ -32,4 +33,7 @@ include/libyasm/value.h
 lib/libyasm.a
 man/man1/yasm.1
 man/man7/yasm_arch.7
+man/man7/yasm_dbgfmts.7
+man/man7/yasm_objfmts.7
+man/man7/yasm_parsers.7
 @dirrm include/libyasm
