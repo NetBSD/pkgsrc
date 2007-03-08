@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/28 15:18:48 taca Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/08 19:26:41 rillig Exp $
 
 DISTNAME=	rubyzip-0.9.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby//}
@@ -13,19 +13,12 @@ COMMENT=	Ruby module for reading and writing zip files
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
 REPLACE_RUBY_DIRS=	${WRKSRC}/samples
-DOCS=			ChangeLog NEWS README
-EXAMPLES=		example.rb example_filesystem.rb gtkRubyzip.rb \
-			qtzip.rb write_simple.rb zipfind.rb
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rubyzip
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rubyzip
-.for f in ${DOCS}
-	cd ${WRKSRC}; ${INSTALL_DATA} ${f} ${RUBY_DOCDIR}/rubyzip
-.endfor
-.for f in ${EXAMPLES}
-	cd ${WRKSRC}/samples; ${INSTALL_DATA} ${f} ${RUBY_EXAMPLESDIR}/rubyzip
-.endfor
+	cd ${WRKSRC} && ${INSTALL_DATA} ChangeLog NEWS README ${RUBY_DOCDIR}/rubyzip
+	cd ${WRKSRC}/samples && ${INSTALL_DATA} *.rb ${RUBY_EXAMPLESDIR}/rubyzip
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
