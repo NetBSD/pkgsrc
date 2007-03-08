@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-ac,v 1.7 2007/03/08 19:24:24 rillig Exp $
 
 --- configure.orig	2000-04-15 08:13:01.000000000 -0700
 +++ configure
@@ -184,17 +184,6 @@ $NetBSD: patch-ac,v 1.6 2006/09/03 17:13:30 ben Exp $
  
  echo $ac_n "checking whether ${MAKE-make} sets \${MAKE}""... $ac_c" 1>&6
  echo "configure:1482: checking whether ${MAKE-make} sets \${MAKE}" >&5
-@@ -1686,6 +1838,10 @@ for ac_option
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
 @@ -1736,6 +1892,8 @@ s%@host_alias@%$host_alias%g
  s%@host_cpu@%$host_cpu%g
  s%@host_vendor@%$host_vendor%g
