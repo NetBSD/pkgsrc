@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.554 2007/03/08 18:25:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.555 2007/03/08 18:54:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1089,3 +1089,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/libtasn1 to 0.3.9 [wiz 2007-03-08]
 	Updated graphics/xsane to 0.99.4 [wiz 2007-03-08]
 	Updated archivers/unrar to 3.7.4 [wiz 2007-03-08]
+	Updated textproc/gsed to 4.1.5 [wiz 2007-03-08]
