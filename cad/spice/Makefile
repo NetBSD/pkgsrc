@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/03/07 21:44:52 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2007/03/08 14:24:23 joerg Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -34,7 +34,7 @@ post-extract:
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	conf/NetBSD conf/defaults
-SUBST_VARS.conf=	MAKE_PROGRAM CFLAGS LDFLAGS WRKSRC PREFIX
+SUBST_VARS.conf=	MAKE_PROGRAM CFLAGS LDFLAGS WRKSRC PREFIX X11BASE
 
 do-configure:
 	rm -f ${WRKSRC}/makefile
