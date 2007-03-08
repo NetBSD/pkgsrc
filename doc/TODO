@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6073 2007/03/06 20:30:15 wiz Exp $
+$NetBSD: TODO,v 1.6074 2007/03/08 18:21:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ Suggested package updates
 	o deskbar-applet-2.16.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
-	o dialog-20070227
 	o dirac-0.6.0
 	o dmidecode-2.9
 	o dnstracer-1.8
