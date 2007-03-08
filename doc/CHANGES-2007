@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.551 2007/03/08 18:21:48 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.552 2007/03/08 18:24:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1086,3 +1086,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey to 1.1.1nb1 [dmcmahill 2007-03-07]
 	Updated www/seamonkey-gtk1 to 1.1.1nb1 [dmcmahill 2007-03-07]
 	Updated misc/dialog to 1.1.20070227 [wiz 2007-03-08]
+	Updated security/libtasn1 to 0.3.9 [wiz 2007-03-08]
