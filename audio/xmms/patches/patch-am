@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.6 2006/08/28 05:09:05 ben Exp $
+$NetBSD: patch-am,v 1.7 2007/03/08 15:01:50 rillig Exp $
 
 --- configure.orig	2004-02-23 13:44:32.000000000 -0800
 +++ configure
@@ -25,18 +25,3 @@ $NetBSD: patch-am,v 1.6 2006/08/28 05:09:05 ben Exp $
  			;;
  			*)
  				ARCH_DEFINES="-DI386_ASSEM"
-@@ -19778,6 +19771,14 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
