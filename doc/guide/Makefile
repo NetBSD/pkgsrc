@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/01/19 19:39:38 tv Exp $
+# $NetBSD: Makefile,v 1.28 2007/03/08 16:02:32 rillig Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -10,8 +10,8 @@ MAINTAINER=		packages@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/Documentation/pkgsrc/
 COMMENT=		The pkgsrc guide
 
-# the "install-doc" target installs pkgsrc/doc/pkgsrc.{html,txt} which
-# both need to be committed to CVS.
+# To regenerate pkgsrc/doc/pkgsrc.{html,txt} and
+# htdocs/Documentation/pkgsrc, just run "make regen".
 
 PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
