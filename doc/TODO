@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6076 2007/03/08 18:24:33 wiz Exp $
+$NetBSD: TODO,v 1.6077 2007/03/08 18:25:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1074,7 +1074,6 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
 	o xrn-9.02
-	o xsane-0.99.4
 	o xscreensaver-5.01
 	o xskat-4.0
 	o xterm-224
