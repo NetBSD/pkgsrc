@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.16 2007/02/19 12:19:49 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.17 2007/03/08 23:16:06 rillig Exp $
 #
 # Public targets:
 #
@@ -151,13 +151,3 @@ _show-dbginfo-install:
 _show-dbginfo-plist-subst:
 	@${PRINTF} "PLIST_SUBST (sorted alphabetically):\\n"; ${PLIST_SUBST:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
 	@${PRINTF} "\\n"
-
-#
-# The build-env target.
-#
-
-.PHONY: build-env
-build-env: configure
-	@${STEP_MSG} "Entering the build environment for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH}
