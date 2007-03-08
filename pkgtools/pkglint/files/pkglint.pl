@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.702 2007/03/02 05:54:18 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.703 2007/03/08 17:42:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -199,7 +199,7 @@ sub strxvis($) {
 	return $s;
 }
 
-sub log_message($$$$) {
+sub log_message { # no prototype due to Perl weirdness
 	my ($level, $fname, $lineno, $message) = @_;
 	my ($text, $sep);
 
@@ -235,32 +235,13 @@ sub log_message($$$$) {
 	}
 }
 
-sub log_fatal($$$) {
-	my ($fname, $lineno, $msg) = @_;
-	log_message(LL_FATAL, $fname, $lineno, $msg);
-	exit(1);
-}
+sub log_fatal($$$)		{ log_message(LL_FATAL, @_); exit(1); }
+sub log_error($$$)		{ log_message(LL_ERROR, @_); $errors++; }
+sub log_warning($$$)		{ log_message(LL_WARNING, @_); $warnings++; }
+sub log_note($$$)		{ log_message(LL_NOTE, @_); }
+sub log_debug($$$)		{ log_message(LL_DEBUG, @_); }
 
-sub log_error($$$) {
-	my ($fname, $lineno, $msg) = @_;
-	log_message(LL_ERROR, $fname, $lineno, $msg);
-	$errors++;
-}
-sub log_warning($$$) {
-	my ($fname, $lineno, $msg) = @_;
-	log_message(LL_WARNING, $fname, $lineno, $msg);
-	$warnings++;
-}
-sub log_note($$$) {
-	my ($fname, $lineno, $msg) = @_;
-	log_message(LL_NOTE, $fname, $lineno, $msg);
-}
-sub log_debug($$$) {
-	my ($fname, $lineno, $msg) = @_;
-	log_message(LL_DEBUG, $fname, $lineno, $msg);
-}
-
-sub explain($$@) {
+sub explain { # no prototype due to Perl weirdness
 	my ($loglevel, $fname, $lines, @texts) = @_;
 	my $out = ($loglevel == LL_FATAL) ? *STDERR : *STDOUT;
 
@@ -270,18 +251,9 @@ sub explain($$@) {
 		}
 	}
 }
-sub explain_error($$@) {
-	my ($fname, $lines, @texts) = @_;
-	explain(LL_ERROR, $fname, $lines, @texts);
-}
-sub explain_warning($$@) {
-	my ($fname, $lines, @texts) = @_;
-	explain(LL_WARNING, $fname, $lines, @texts);
-}
-sub explain_note($$@) {
-	my ($fname, $lines, @texts) = @_;
-	explain(LL_NOTE, $fname, $lines, @texts);
-}
+sub explain_error($$@)		{ explain(LL_ERROR, @_); }
+sub explain_warning($$@)	{ explain(LL_WARNING, @_); }
+sub explain_note($$@)		{ explain(LL_NOTE, @_); }
 
 sub print_summary_and_exit($) {
 	my ($quiet) = @_;
