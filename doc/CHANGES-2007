@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.556 2007/03/08 19:03:13 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.557 2007/03/08 19:11:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1093,3 +1093,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Compress-Raw-Zlib to 2.004 [wiz 2007-03-08]
 	Updated devel/p5-IO-Compress-Base to 2.004 [wiz 2007-03-08]
 	Updated devel/p5-IO-Compress-Zlib to 2.004 [wiz 2007-03-08]
+	Updated devel/yasm to 0.6.0 [wiz 2007-03-08]
+	Updated devel/p5-Compress-Zlib to 2.004 [wiz 2007-03-08]
