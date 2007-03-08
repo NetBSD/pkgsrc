@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/07 15:03:46 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/08 17:21:54 joerg Exp $
 #
 
 DISTNAME=		beforelight-1.0.2
 CATEGORIES=		x11
+PKGREVISION=		1
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
 
