@@ -1,12 +1,13 @@
-# $NetBSD: replace.mk,v 1.6 2006/11/16 22:06:18 rillig Exp $
+# $NetBSD: replace.mk,v 1.7 2007/03/08 23:06:37 rillig Exp $
+#
 
-######################################################################
-### replace-pkg (PRIVATE, pkgsrc/mk/install/replace.mk)
-######################################################################
-### replace-pkg updates a package in-place on the system.
-###
-
-replace-pkg: \
+# _flavor-replace:
+#	Updates a package in-place on the system.
+#
+# See also:
+#	replace
+#
+_flavor-replace: \
 	replace-tarup \
 	replace-names \
 	replace-preserve-required-by \
@@ -16,13 +17,13 @@ replace-pkg: \
 	replace-fixup-required-by \
 	.PHONY
 
-######################################################################
-### undo-replace-pkg (PRIVATE, pkgsrc/mk/install/replace.mk)
-######################################################################
-### undo-replace-pkg undoes a "make replace".
-###
-
-undo-replace-pkg: \
+# _flavor-undo-replace:
+#	Undoes the actions from a previous _flavor-replace.
+#
+# See also:
+#	undo-replace
+#
+_flavor-undo-replace: \
 	undo-replace-check \
 	replace-preserve-required-by \
 	deinstall \

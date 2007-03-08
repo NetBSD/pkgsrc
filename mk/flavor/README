@@ -55,8 +55,8 @@ The following make targets must be implemented:
   here.)
 * tarup-pkg
 * package-install
-* replace-pkg
-* undo-replace-pkg
+* _flavor-replace
+* _flavor-undo-replace
 
 = Bugs =
 
