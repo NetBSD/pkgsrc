@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2007/02/22 19:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/03/08 18:53:56 wiz Exp $
 #
 
-DISTNAME=	sed-4.1.1
+DISTNAME=	sed-4.1.5
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc editors
 MASTER_SITES=	${MASTER_SITE_GNU:=sed/}
 
@@ -15,14 +14,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-CONFIG_STATUS_OVERRIDE=	# empty
+INFO_FILES=		YES
+TEST_TARGET=		check
 
 # at least Solaris-2.9 has issues with grep/egrep
 USE_TOOLS+=		grep makeinfo
 
-INFO_FILES=		# PLIST
-
-TEST_TARGET=		check
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(GNU_PROGRAM_PREFIX)
