@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/16 18:10:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/08 19:43:13 wiz Exp $
 bin/PilotManager
 lib/pilotmgr/Backup.pm
 lib/pilotmgr/Installer.pm
 lib/pilotmgr/PilotMgr.pm
+lib/pilotmgr/PilotManager
 lib/pilotmgr/SendMail.pm
 lib/pilotmgr/SyncAB.pm
 lib/pilotmgr/SyncFood.pm
@@ -19,9 +20,7 @@ lib/pilotmgr/lib/perl5/PilotSync.pm
 lib/pilotmgr/lib/perl5/TkUtils.pm
 lib/pilotmgr/lib/test/SyncCM.t
 lib/pilotmgr/lib/test/SyncPlan.t
-share/doc/pilotmgr/AnncAlias.txt
 share/doc/pilotmgr/Conduit.api
-share/doc/pilotmgr/DiscAlias.txt
 share/doc/pilotmgr/SyncPlan.help
 share/doc/pilotmgr/WelcomeMessage
 @dirrm lib/pilotmgr/lib/test
