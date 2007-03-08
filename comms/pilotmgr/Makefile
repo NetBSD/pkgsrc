@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.42 2007/02/02 19:35:12 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2007/03/08 19:43:10 wiz Exp $
 
-DISTNAME=	pilotmgr-1.107p2
-PKGNAME=	pilotmgr-1.107.2
-PKGREVISION=	3
+DISTNAME=	pilotmgr-1.109
 CATEGORIES=	comms
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pilotmanager/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.moshpit.org/pilotmgr/
+HOMEPAGE=	http://pilotmanager.sourceforge.net/
 COMMENT=	Synchronize databases on any 3Com Palm device
 
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=	p5-pilot-link-[0-9]*:../../comms/p5-pilot-link
 
-WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}
 HAS_CONFIGURE=		YES
 NO_BUILD=		YES
 USE_TOOLS+=		perl:run
 
 CONFIGURE_ARGS+=	</dev/null
 CONFIGURE_ENV+=		PERL="${LOCALBASE}/bin/perl" WRKDIR=${WRKDIR:Q}
-CONFIGURE_SCRIPT=	./Setup
+CONFIGURE_SCRIPT=	perl Setup.pl
 
 PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
 PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}
@@ -31,7 +28,6 @@ INSTALLATION_DIRS=	bin
 
 post-extract:
 	@${RM} -f ${WRKSRC}/SyncCM.pm
-	@${CHMOD} +x ${WRKSRC}/Setup
 
 pre-install:
 	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
@@ -39,11 +35,11 @@ pre-install:
 do-install:
 	${INSTALL_DATA_DIR} ${PM_PERL_DIR}
 	${INSTALL_DATA_DIR} ${PM_DOC_DIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/PilotManager ${PM_PERL_DIR}
 	for FILE in ${WRKSRC}/*.pm; do \
 		${INSTALL_DATA} $$FILE ${PM_PERL_DIR}; \
 	done
-	${CHMOD} ${BINMODE} ${PM_PERL_DIR}/PilotMgr.pm
-	${LN} -fs ${PM_PERL_DIR}/PilotMgr.pm ${PREFIX}/bin/PilotManager
+	${LN} -fs ${PM_PERL_DIR}/PilotManager ${PREFIX}/bin/PilotManager
 	cd ${WRKSRC} && \
 		for DIR in lib/*; do \
 			${INSTALL_DATA_DIR} ${PM_PERL_DIR}/$$DIR; \
