@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6078 2007/03/08 18:25:48 wiz Exp $
+$NetBSD: TODO,v 1.6079 2007/03/08 18:54:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ Suggested package updates
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
-	o gsed-4.1.4
 	o gsharutils-4.6.3
 	o gss-0.0.17
 	o gtar-1.16.1
