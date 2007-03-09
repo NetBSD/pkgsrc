@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.564 2007/03/09 22:05:16 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.565 2007/03/09 23:52:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/p5-Data-SimplePassword version 0.02 [abs 2007-03-09]
 	Updated mail/cyrus-imapd to 2.2.13nb3 [obache 2007-03-09]
 	Added x11/xf86-video-vesa version 1.3.0 [xtraeme 2007-03-09]
+	Updated sysutils/mklivecd to 0.14.5 [xtraeme 2007-03-09]
