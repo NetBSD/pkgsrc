@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.563 2007/03/09 14:53:24 obache Exp $
+$NetBSD: CHANGES-2007,v 1.564 2007/03/09 22:05:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1102,3 +1102,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/py-dns to 1.5.0 [gson 2007-03-09]
 	Added security/p5-Data-SimplePassword version 0.02 [abs 2007-03-09]
 	Updated mail/cyrus-imapd to 2.2.13nb3 [obache 2007-03-09]
+	Added x11/xf86-video-vesa version 1.3.0 [xtraeme 2007-03-09]
