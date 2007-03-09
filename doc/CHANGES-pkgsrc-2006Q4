@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.54 2007/03/08 23:22:29 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.55 2007/03/09 15:27:19 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -127,3 +127,5 @@ Pullup ticket 2042 - requested by salo
 security update for silc-server
 Pullup ticket 2045 - requested by gavan
 require GCC version 3.x for C99 functionality
+Pullup ticket 2046 - requested by obache
+compatibility fix for cyrus-imapd
