@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.56 2007/03/09 16:22:06 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.57 2007/03/09 16:59:08 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -131,3 +131,5 @@ Pullup ticket 2046 - requested by obache
 compatibility fix for cyrus-imapd
 Pullup ticket 2047 - requested by drochner
 security update for gnupg
+Pullup ticket 2048 - requested by drochner
+security update for asterisk
