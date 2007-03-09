@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.7 2006/11/21 13:54:26 joerg Exp $
+# $NetBSD: bin-install.mk,v 1.8 2007/03/09 03:15:33 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -70,11 +70,8 @@ locked-su-do-bin-install:
 	fi
 
 do-bin-install-from-source:
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	if ${PKG_INFO} -qe ${PKGNAME}; then				\
-		: "Nothing to do";					\
-	else								\
+	${RUN} ${PKG_INFO} -qe ${PKGNAME} || {				\
 		${STEP_MSG} "No binary package found for ${PKGNAME}; installing from source."; \
 		${RECURSIVE_MAKE} ${MAKEFLAGS} DEPENDS_TARGET=${DEPENDS_TARGET:Q} package-install \
 		&& ${RECURSIVE_MAKE} ${MAKEFLAGS} clean;		\
-	fi
+	}
