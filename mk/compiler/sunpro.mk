@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.38 2007/03/09 09:59:21 rillig Exp $
+# $NetBSD: sunpro.mk,v 1.39 2007/03/09 10:29:29 rillig Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -34,7 +34,6 @@ _COMPILER_NAME.fortran=	f77
 #
 LANGUAGES.sunpro=	# empty
 
-_SUNPRO_DIR=		${WRKDIR}/.sunpro
 _SUNPRO_VARS=		# empty
 
 .for l in ${_COMPILER_LANGS}
@@ -43,10 +42,10 @@ _SUNPRO_VARS=		# empty
 .      if exists(${SUNWSPROBASE}/bin/${n})
 LANGUAGES.sunpro+=	${l}
 _SUNPRO_VARS+=		${t}
-_SUNPRO_${t}=		${_SUNPRO_DIR}/bin/${n}
 _ALIASES.${t}=		${ALIASES.${l}}
+_SUNPRO_${t}=		${SUNWSPROBASE}/bin/${n}
 ${t}PATH=		${SUNWSPROBASE}/bin/${n}
-PKG_${t}:=		${_SUNPRO_${t}}
+PKG_${t}:=		${SUNWSPROBASE}/bin/${n}
 .      endif
 .    endfor
 .  endfor
@@ -83,46 +82,5 @@ _LANGUAGES.sunpro=	# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
 .endfor
-
-# Prepend the path to the compiler to the PATH.
-.if !empty(_LANGUAGES.sunpro)
-PREPEND_PATH+=	${_SUNPRO_DIR}/bin
-.endif
-
-# Create compiler driver scripts in ${WRKDIR}.
-.for _var_ in ${_SUNPRO_VARS}
-.  if !target(${_SUNPRO_${_var_}})
-override-tools: ${_SUNPRO_${_var_}}
-${_SUNPRO_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	(${ECHO} '#!${TOOLS_SHELL}';					\
-	 ${ECHO} 'exec ${SUNWSPROBASE}/bin/${.TARGET:T} "$$@"';		\
-	) > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -f ${.TARGET} ${_alias_};				\
-	fi
-.    endfor
-.  endif
-.endfor
-
-# Force the use of f2c-f77 for compiling Fortran.
-#_SUNPRO_USE_F2C=	no
-#FCPATH=			/nonexistent
-#.if !exists(${FCPATH})
-#_SUNPRO_USE_F2C=	yes
-#.endif
-#.if !empty(_SUNPRO_USE_F2C:M[yY][eE][sS])
-# libtool keys off of the compiler name when configuring.  The unfortunate
-# side effect is that if we let "f2c-f77" be called "f77" on solaris then
-# libtool thinks we're using the Sun fortran compiler and it will add
-# '-Qoption ld' to the compiler flags which get passed to the C compiler and
-# those are not understood.  So make sure we call the compiler g77 instead.
-#FC=	g77
-#.  include "../../mk/compiler/f2c.mk"
-#.endif
 
 .endif	# COMPILER_SUNPRO_MK
