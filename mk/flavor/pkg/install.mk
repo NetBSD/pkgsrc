@@ -1,13 +1,22 @@
-# $NetBSD: install.mk,v 1.8 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: install.mk,v 1.9 2007/03/09 00:39:55 rillig Exp $
+#
+# _flavor-check-conflicts:
+#	Checks for conflicts between the package and installed packages.
+#
+#	XXX: Needs WRKDIR.
+#
+# _flavor-check-installed:
+#	Checks if the package (or an older version of it) is already
+#	installed on the system.
+#
+#	XXX: Needs WRKDIR.
+#
+# _flavor-register:
+#	Populates the package database with the appropriate entries to
+#	register the package as being installed on the system.
+#
 
-######################################################################
-### install-check-conflicts (PRIVATE, pkgsrc/mk/install/install.mk)
-######################################################################
-### install-check-conflicts checks for conflicts between the package
-### and and installed packages.
-###
-.PHONY: install-check-conflicts
-install-check-conflicts: error-check
+_flavor-check-conflicts: .PHONY error-check
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
 .for _conflict_ in ${CONFLICTS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -26,14 +35,7 @@ install-check-conflicts: error-check
 	${ECHO} "Please remove conflicts first with pkg_delete(1).";	\
 	${RM} -f ${WRKDIR}/.CONFLICTS
 
-######################################################################
-### install-check-installed (PRIVATE, pkgsrc/mk/install/install.mk)
-######################################################################
-### install-check-installed checks if the package (perhaps an older
-### version) is already installed on the system.
-###
-.PHONY: install-check-installed
-install-check-installed: error-check
+_flavor-check-installed: .PHONY error-check
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} || ${TRUE}`";	\
 	${TEST} -n "$$found" || exit 0;					\
@@ -47,20 +49,13 @@ install-check-installed: error-check
 	${ECHO} "    - \"${MAKE} replace\" to replace only the package without"; \
 	${ECHO} "      re-linking dependencies, risking various problems."
 
-######################################################################
-### register-pkg (PRIVATE, pkgsrc/mk/install/install.mk)
-######################################################################
-### register-pkg populates the package database with the appropriate
-### entries to register the package as being installed on the system.
-###
 _REGISTER_DEPENDENCIES=							\
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR:Q}				\
 		AWK=${TOOLS_AWK:Q}					\
 		PKG_ADMIN=${PKG_ADMIN_CMD:Q}				\
 	${SH} ${PKGSRCDIR}/mk/flavor/pkg/register-dependencies
 
-.PHONY: register-pkg
-register-pkg: generate-metadata ${_COOKIE.depends}
+_flavor-register: .PHONY generate-metadata ${_COOKIE.depends}
 	@${STEP_MSG} "Registering installation for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}

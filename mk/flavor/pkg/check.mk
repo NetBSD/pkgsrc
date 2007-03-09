@@ -1,20 +1,15 @@
-# $NetBSD: check.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: check.mk,v 1.3 2007/03/09 00:39:54 rillig Exp $
+#
 
-######################################################################
-### check-vulnerable (PUBLIC, pkgsrc/mk/check/check.mk)
-######################################################################
-### check-vulnerable checks for any vulnerabilities in the package
-### without needing audit-packages to be installed.
-###
-### XXX This should really be invoking audit-packages directly.  Having
-### XXX a separately maintained piece of code that inspects the
-### XXX vulnerabilities database is poor.
-###
-.PHONY: check-vulnerable
-check-vulnerable:
-.if defined(ALLOW_VULNERABLE_PACKAGES)
-	@${DO_NADA}
-.else
+# _flavor-check-vulnerable:
+#	Checks for known vulnerabilities in the package without needing
+#	audit-packages to be installed.
+#
+#	XXX: This should really be invoking audit-packages directly.
+#	Having separately maintained piece of code that inspects the
+#	vulnerabilities database is poor.
+#
+_flavor-check-vulnerable: .PHONY
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	vulnfile=${PKGVULNDIR:Q}/pkg-vulnerabilities;			\
 	if ${TEST} ! -f "$$vulnfile"; then				\
@@ -51,4 +46,3 @@ check-vulnerable:
 		${ERROR_MSG} "Define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
 		${FALSE};						\
 	fi
-.endif

@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.7 2006/11/03 08:04:06 joerg Exp $
+# $NetBSD: deinstall.mk,v 1.8 2007/03/09 00:39:55 rillig Exp $
 
 # DEINSTALLDEPENDS controls whether dependencies and dependents are also
 # removed when a package is de-installed.  The valid values are:
@@ -22,7 +22,7 @@ deinstall: su-target
 .endif
 
 _SU_DEINSTALL_TARGETS=	acquire-deinstall-lock
-_SU_DEINSTALL_TARGETS+=	deinstall-pkg
+_SU_DEINSTALL_TARGETS+=	_flavor-deinstall
 _SU_DEINSTALL_TARGETS+=	release-deinstall-lock
 .if ${_USE_DESTDIR} == "no"
 _SU_DEINSTALL_TARGETS+=	install-clean
@@ -44,15 +44,4 @@ MAKEFLAGS.su-deinstall=	DEINSTALLDEPENDS=${DEINSTALLDEPENDS}
 .PHONY: reinstall
 .if !target(reinstall)
 reinstall: install-clean install
-.endif
-
-######################################################################
-### deinstall-pkg (PRIVATE, override)
-######################################################################
-### deinstall-pkg removes the package from the system.  This should
-### be overridden per package system flavor.
-###
-.if !target(deinstall-pkg)
-deinstall-pkg:
-	@${DO_NADA}
 .endif
