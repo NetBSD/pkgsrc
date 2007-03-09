@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.39 2007/03/09 03:05:38 rillig Exp $
+# $NetBSD: install.mk,v 1.40 2007/03/09 03:28:58 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -83,13 +83,13 @@ install-message:
 ### install-check-interactive checks whether we must do an interactive
 ### install or not.
 ###
-install-check-interactive:
+install-check-interactive: .PHONY
 .if !empty(INTERACTIVE_STAGE:Minstall) && defined(BATCH)
 	@${ERROR_MSG} "The installation stage of this package requires user interaction"
 	@${ERROR_MSG} "Please install manually with:"
 	@${ERROR_MSG} "	\"cd ${.CURDIR} && ${MAKE} install\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
+	${RUN} ${TOUCH} ${_INTERACTIVE_COOKIE}
+	${RUN} ${FALSE}
 .else
 	@${DO_NADA}
 .endif
@@ -212,7 +212,7 @@ _MTREE_ARGS?=	-U -f ${_MTREE_FILE} -d -e -p
 # A shell command that creates the directory ${DESTDIR}${PREFIX}/$$dir
 # with appropriate permissions and ownership.
 #
-_INSTALL_ONE_DIR= { \
+_INSTALL_ONE_DIR_CMD= { \
 	ddir="${DESTDIR}${PREFIX}/$$dir";				\
 	[ ! -f "$$ddir" ] || ${FAIL_MSG} "[install.mk] $$ddir should be a directory, but is a file."; \
 	case "$$dir" in							\
@@ -241,7 +241,7 @@ install-makedirs:
 			dir=`${ECHO} "$$dir" | ${SED} "s|^${PREFIX}/||"` ;; \
 		/*)	continue ;;					\
 		esac;							\
-		${_INSTALL_ONE_DIR};					\
+		${_INSTALL_ONE_DIR_CMD};				\
 	done
 .endif	# INSTALLATION_DIRS
 
@@ -263,7 +263,7 @@ install-dirs-from-PLIST:
 		-e 's,^info/,${PKGINFODIR}/,'				\
 		-e 's,^\([^$$@]*\)/[^/]*$$,\1,p'			\
 	| while read dir; do						\
-		${_INSTALL_ONE_DIR};					\
+		${_INSTALL_ONE_DIR_CMD};				\
 	done
 
 ######################################################################
@@ -338,7 +338,7 @@ privileged-install-hook: .PHONY
 ### install-clean removes the state files for the "install" and
 ### later phases so that the "install" target may be re-invoked.
 ###
-install-clean: package-clean check-clean
+install-clean: .PHONY package-clean check-clean
 	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install}
 
 ######################################################################
@@ -347,5 +347,5 @@ install-clean: package-clean check-clean
 ### bootstrap-register registers "bootstrap" packages that are installed
 ### by the pkgsrc/bootstrap/bootstrap script.
 ###
-bootstrap-register: _flavor-register clean
+bootstrap-register: .PHONY _flavor-register clean
 	@${DO_NADA}
