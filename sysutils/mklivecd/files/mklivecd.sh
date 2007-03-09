@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.30 2006/12/02 01:04:47 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.31 2007/03/09 23:51:50 xtraeme Exp $
 #
 # Copyright (c) 2004-2006 Juan Romero Pardines.
 # All rights reserved.
@@ -47,8 +47,14 @@
 : ${pkgsrc_mntstat:=$config_dir/pkgsrc_mount.stat}
 : ${pkgsrcdist_mntstat:=$config_dir/pkgsrcdist_mount.stat}
 : ${packages_mntstat:=$config_dir/packages_mount.stat}
+
 #
-# NetBSD >= 4.0 has cdboot, no need to use grub here.
+# Neeeded to disable GRUB on amd64.
+#
+: ${ARCH:=$(/sbin/sysctl -n hw.machine_arch)}
+
+#
+# NetBSD >= 4.0 has bootxx_cd9660, no need to use grub here.
 #
 : ${CDBOOT_IMG:=bootxx_cd9660}
 : ${BOOT_IMG:=boot}
@@ -129,8 +135,11 @@ do_conf()
 
     MISC_VARS="ENABLE_X11 MKISOFS_BIN MKISOFS_ARGS CDRECORD_BIN CDRECORD_ARGS \
                BLANK_BEFORE_BURN CDROM_DEVICE PERSONAL_CONFIG IMAGE_NAME \
-               PKG_SYSCONFDIR REMOVE_DIRS USE_GNU_GRUB GRUB_FILES_DIR HOSTNAME \
-               VND_COMPRESSION"
+               PKG_SYSCONFDIR REMOVE_DIRS HOSTNAME VND_COMPRESSION"
+
+    if [ "${ARCH}" != "x86_64" ]; then
+        MISC_VARS="${MISC_VARS} USE_GNU_GRUB GRUB_FILES_DIR"
+    fi
 
     MNT_VARS="MNT_RAMFS_CMD MNT_RAMFS_ARGS"
 
@@ -167,7 +176,11 @@ do_conf()
     : ${IMAGE_NAME:=NetBSD-LiveCD}
     : ${PKG_SYSCONFDIR:=usr/pkg/etc}
     : ${REMOVE_DIRS:=altroot usr/share/info}
-    : ${USE_GNU_GRUB:=yes}
+    if [ "${MACHINE_ARCH}" != "x86_64" ]; then
+        : ${USE_GNU_GRUB:=yes}
+    else
+        USE_GNU_GRUB=no
+    fi
     : ${GRUB_FILES_DIR:=@LOCALBASE@/lib/grub/@MACHINE_ARCH@-}
     : ${VND_COMPRESSION:=no}
     #	
@@ -216,6 +229,11 @@ EOF
         echo "# KERNEL_NAME_APM=\"LIVECD_APM\"";    \
         ) >> $config_file
         echo >> $config_file
+
+        # GNU Grub is not supported in 64bit.
+        if [ "$(/sbin/sysctl -n hw.machine_arch)" = "x86_64" ]; then
+            USE_GNU_GRUB=no
+        fi
 
 	echo "# Miscellaneous options" >> $config_file
 	for var in $(echo $MISC_VARS | tr ' ' '\n' | sort -u)
@@ -557,7 +575,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.30 2006/12/02 01:04:47 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.31 2007/03/09 23:51:50 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -847,6 +865,11 @@ _EOF_
 	done
     ;;
     iso)
+        # To make sure that it's not defined
+        if [ "${ARCH}" = "x86_64" ]; then
+            unset USE_GNU_GRUB
+        fi
+
         if [ "$VND_COMPRESSION" = "yes" ]; then
             cd $ISODIR
 
