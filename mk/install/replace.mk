@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.9 2007/03/08 23:06:37 rillig Exp $
+# $NetBSD: replace.mk,v 1.10 2007/03/09 03:28:58 rillig Exp $
 #
 # Public targets:
 #
@@ -27,30 +27,29 @@ _REPLACE_TARGETS+=	unprivileged-install-hook
 # replace
 #
 
-.PHONY: replace su-replace
+.PHONY: replace
 .if defined(_PKGSRC_BARRIER)
 replace: ${_REPLACE_TARGETS} su-target
 .else
 replace: barrier
 .endif
 
-replace-message:
+replace-message: .PHONY
 	@${PHASE_MSG} "Replacing for ${PKGNAME}"
-        @${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
+	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
-su-replace: _flavor-replace
+su-replace: .PHONY _flavor-replace
 MAKEFLAGS.su-replace=	_UPDATE_RUNNING=yes
 
 #
 # undo-replace
 #
 
-.PHONY: undo-replace su-undo-replace
-undo-replace: undo-replace-message su-target
+undo-replace: .PHONY undo-replace-message su-target
 
-undo-replace-message:
+undo-replace-message: .PHONY
 	@${PHASE_MSG} "Undoing replacement for ${PKGNAME}"
-        @${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
+	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
-su-undo-replace: _flavor-undo-replace
+su-undo-replace: .PHONY _flavor-undo-replace
 MAKEFLAGS.su-undo-replace=	_UPDATE_RUNNING=yes

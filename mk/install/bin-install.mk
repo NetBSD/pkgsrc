@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.8 2007/03/09 03:15:33 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.9 2007/03/09 03:28:58 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -30,7 +30,7 @@ BINPKG_SITES?=
 .PHONY: bin-install
 .PHONY: do-bin-install do-bin-install-from-source
 .PHONY: su-do-bin-install
-.PHONY: aquire-bin-install-lock locked-su-do-bin-install release-bin-install-lock
+.PHONY: acquire-bin-install-lock locked-su-do-bin-install release-bin-install-lock
 
 bin-install: \
 	do-bin-install \
@@ -51,14 +51,16 @@ release-bin-install-lock: \
 	release-localbase-lock
 
 locked-su-do-bin-install:
-	@found=`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`;	\
+	${RUN} \
+	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;	\
 	if [ "$$found" != "" ]; then					\
 		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
 		${ERROR_MSG} "If so, you may wish to \`\`pkg_delete $$found'' and install"; \
 		${ERROR_MSG} "this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
 		exit 1;							\
 	fi
-	@rel=${_SHORT_UNAME_R:Q};					\
+	${RUN} \
+	rel=${_SHORT_UNAME_R:Q};					\
 	arch=${MACHINE_ARCH:Q};						\
 	pkgpath=${PKGREPOSITORY:Q};					\
 	for i in ${BINPKG_SITES}; do					\
