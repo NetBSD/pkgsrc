@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2005/04/09 16:50:03 gson Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/03/09 09:41:36 gson Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
 ${PYSITELIB}/dns/dnssec.py
 ${PYSITELIB}/dns/dnssec.pyc
 ${PYSITELIB}/dns/dnssec.pyo
+${PYSITELIB}/dns/e164.py
+${PYSITELIB}/dns/e164.pyc
+${PYSITELIB}/dns/e164.pyo
 ${PYSITELIB}/dns/exception.py
 ${PYSITELIB}/dns/exception.pyc
 ${PYSITELIB}/dns/exception.pyo
@@ -116,6 +119,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/SIG.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/SOA.py
 ${PYSITELIB}/dns/rdtypes/ANY/SOA.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/SOA.pyo
+${PYSITELIB}/dns/rdtypes/ANY/SPF.py
+${PYSITELIB}/dns/rdtypes/ANY/SPF.pyc
+${PYSITELIB}/dns/rdtypes/ANY/SPF.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/SSHFP.py
 ${PYSITELIB}/dns/rdtypes/ANY/SSHFP.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/SSHFP.pyo
@@ -137,6 +143,12 @@ ${PYSITELIB}/dns/rdtypes/IN/AAAA.pyo
 ${PYSITELIB}/dns/rdtypes/IN/APL.py
 ${PYSITELIB}/dns/rdtypes/IN/APL.pyc
 ${PYSITELIB}/dns/rdtypes/IN/APL.pyo
+${PYSITELIB}/dns/rdtypes/IN/DHCID.py
+${PYSITELIB}/dns/rdtypes/IN/DHCID.pyc
+${PYSITELIB}/dns/rdtypes/IN/DHCID.pyo
+${PYSITELIB}/dns/rdtypes/IN/IPSECKEY.py
+${PYSITELIB}/dns/rdtypes/IN/IPSECKEY.pyc
+${PYSITELIB}/dns/rdtypes/IN/IPSECKEY.pyo
 ${PYSITELIB}/dns/rdtypes/IN/KX.py
 ${PYSITELIB}/dns/rdtypes/IN/KX.pyc
 ${PYSITELIB}/dns/rdtypes/IN/KX.pyo
@@ -176,12 +188,18 @@ ${PYSITELIB}/dns/rdtypes/nsbase.pyo
 ${PYSITELIB}/dns/rdtypes/sigbase.py
 ${PYSITELIB}/dns/rdtypes/sigbase.pyc
 ${PYSITELIB}/dns/rdtypes/sigbase.pyo
+${PYSITELIB}/dns/rdtypes/txtbase.py
+${PYSITELIB}/dns/rdtypes/txtbase.pyc
+${PYSITELIB}/dns/rdtypes/txtbase.pyo
 ${PYSITELIB}/dns/renderer.py
 ${PYSITELIB}/dns/renderer.pyc
 ${PYSITELIB}/dns/renderer.pyo
 ${PYSITELIB}/dns/resolver.py
 ${PYSITELIB}/dns/resolver.pyc
 ${PYSITELIB}/dns/resolver.pyo
+${PYSITELIB}/dns/reversename.py
+${PYSITELIB}/dns/reversename.pyc
+${PYSITELIB}/dns/reversename.pyo
 ${PYSITELIB}/dns/rrset.py
 ${PYSITELIB}/dns/rrset.pyc
 ${PYSITELIB}/dns/rrset.pyo
