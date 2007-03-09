@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.15 2007/03/09 00:39:55 rillig Exp $
+# $NetBSD: metadata.mk,v 1.16 2007/03/09 04:07:50 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -74,7 +74,7 @@ ${_BUILD_INFO_FILE}: plist
 		linklibs=`${AWK} '/[^@].*\.so\.[0-9\.]+$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${PLIST}`; \
 		for i in $$linklibs; do					\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
-				${TEST} ${PKG_DEVELOPER:Uno:Q} = "no" || \
+				${TEST} ${PKG_DEVELOPER:Uno:Q}"" = "no" || \
 					${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
 				${CHMOD} +x $$i;			\
 			fi;						\
