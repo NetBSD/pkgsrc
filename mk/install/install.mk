@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.38 2007/03/09 02:51:45 rillig Exp $
+# $NetBSD: install.mk,v 1.39 2007/03/09 03:05:38 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -255,7 +255,7 @@ install-makedirs:
 .PHONY: install-dirs-from-PLIST
 install-dirs-from-PLIST:
 	@${STEP_MSG} "Creating installation directories from PLIST files"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${CAT} ${PLIST_SRC}						\
 	| sed -n							\
 		-e 's,\\,\\\\,'						\
@@ -285,7 +285,7 @@ INSTALL_MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q}
 .if !target(do-install)
 do-install:
 .  for _dir_ in ${INSTALL_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	${RUN} ${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 				\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
@@ -323,8 +323,11 @@ _DOC_COMPRESS=								\
 .PHONY: install-doc-handling
 install-doc-handling: plist
 	@${STEP_MSG} "Automatic manual page handling"
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${PLIST} | ${GREP} -v "^@" |	\
-	${EGREP} ${_PLIST_REGEXP.man:Q} | ${_DOC_COMPRESS}
+	${RUN} \
+	${CAT} ${PLIST} \
+	| ${GREP} -v "^@" \
+	| ${EGREP} ${_PLIST_REGEXP.man:Q} \
+	| ${_DOC_COMPRESS}
 
 privileged-install-hook: .PHONY
 	@${DO_NADA}
@@ -336,7 +339,7 @@ privileged-install-hook: .PHONY
 ### later phases so that the "install" target may be re-invoked.
 ###
 install-clean: package-clean check-clean
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PLIST} ${_COOKIE.install}
+	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install}
 
 ######################################################################
 ### bootstrap-register (PUBLIC)
