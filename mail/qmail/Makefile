@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/01/09 21:35:58 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2007/03/09 12:34:21 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -48,8 +48,6 @@ FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		VIRUSCAN_SIGS_SRCFILE=${VIRUSCAN_SIGS_SRCFILE:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
-PLIST_SRC=		${PKGDIR}/PLIST
-
 SETUP_PROGRAMS=		dnsfq dnsip dnsptr hostname install ipmeprint
 SETUP_SCRIPTS=		config config-fast
 
@@ -84,9 +82,9 @@ SUBST_MESSAGE.logging=	Setting QUEUE_EXTRA.
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/README.pkgsrc
-SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
-SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO},g'
-SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
+SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME:Q},g'
+SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO:Q},g'
+SUBST_SED.paths+=	-e 's,@GREP@,${GREP:Q},g'
 SUBST_STAGE.paths=	post-patch
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
