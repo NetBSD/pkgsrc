@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.12 2007/02/20 11:45:40 rillig Exp $
+# $NetBSD: help.awk,v 1.13 2007/03/09 01:34:50 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -78,6 +78,14 @@ always {
 
 ($0 == "#") {
 	ignore_next_empty_line = no;
+}
+
+# Don't show the user the definition of make targets, since they are
+# usually not interesting enough. This allows the comments to reach
+# until the line directly above the target definition.
+#
+$1 ~ /:$/ && $2 == ".PHONY" {
+	end_of_topic();
 }
 
 (!ignore_this_line) {
