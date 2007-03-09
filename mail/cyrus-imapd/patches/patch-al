@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.2 2005/03/02 21:42:48 wiz Exp $
+$NetBSD: patch-al,v 1.2.16.1 2007/03/09 15:26:59 salo Exp $
 
---- imtest/imtest.c.orig	Wed Aug  4 15:03:18 2004
-+++ imtest/imtest.c	Sun Nov 28 15:12:44 2004
+--- imtest/imtest.c.orig	2006-01-21 05:31:23.000000000 +0900
++++ imtest/imtest.c
 @@ -47,7 +47,9 @@
  #include <sys/time.h>
  #include <sys/types.h>
@@ -12,14 +12,27 @@ $NetBSD: patch-al,v 1.2 2005/03/02 21:42:48 wiz Exp $
  #include <sys/stat.h>
  #include <fcntl.h>
  
-@@ -71,6 +73,10 @@
- #include <sys/file.h>
+@@ -72,6 +74,10 @@
  #include <netinet/in.h>
  #include <netdb.h>
-+
+ 
 +#ifdef HAVE_SYS_PARAM_H
 +#include <sys/param.h>
 +#endif
- 
++
  #include <sasl/sasl.h>
  #include <sasl/saslutil.h>
+ 
+@@ -886,6 +892,12 @@ imt_stat getauthline(struct sasl_cmd_t *
+     }
+     
+     if (*str != '\r') {
++	/* trim CRLF */
++	char *p = str + strlen(str) - 1;
++	if (p >= str && *p == '\n') *p-- = '\0';
++	if (p >= str && *p == '\r') *p-- = '\0';
++
++	/* alloc space for decoded response */
+ 	len = strlen(str) + 1;
+ 	*line = malloc(len);
+ 	if ((*line) == NULL) {
