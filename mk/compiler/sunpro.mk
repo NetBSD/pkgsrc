@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.37 2007/01/16 17:16:24 dmcmahill Exp $
+# $NetBSD: sunpro.mk,v 1.38 2007/03/09 09:59:21 rillig Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -13,7 +13,21 @@ COMPILER_SUNPRO_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-SUNWSPROBASE?=	/opt/SUNWspro
+SUNWSPROBASE?=		/opt/SUNWspro
+
+# common definitions
+_COMPILER_TYPE.c=	CC
+_COMPILER_TYPE.c++ =	CXX
+_COMPILER_TYPE.fortran=	FC
+_ALIASES.c=		cc gcc
+_ALIASES.c++ =		CC g++ c++
+_ALIASES.fortran=	f77 g77
+
+# sunpro-specific definitions
+_COMPILER_LANGS=	c c++ fortran
+_COMPILER_NAME.c=	cc
+_COMPILER_NAME.c++ =	CC
+_COMPILER_NAME.fortran=	f77
 
 # LANGUAGES.<compiler> is the list of supported languages by the
 # compiler.
@@ -22,30 +36,21 @@ LANGUAGES.sunpro=	# empty
 
 _SUNPRO_DIR=		${WRKDIR}/.sunpro
 _SUNPRO_VARS=		# empty
-.if exists(${SUNWSPROBASE}/bin/cc)
-LANGUAGES.sunpro+=	c
-_SUNPRO_VARS+=		CC
-_SUNPRO_CC=		${_SUNPRO_DIR}/bin/cc
-_ALIASES.CC=		cc gcc
-CCPATH=			${SUNWSPROBASE}/bin/cc
-PKG_CC:=		${_SUNPRO_CC}
-.endif
-.if exists(${SUNWSPROBASE}/bin/CC)
-LANGUAGES.sunpro+=	c++
-_SUNPRO_VARS+=		CXX
-_SUNPRO_CXX=		${_SUNPRO_DIR}/bin/CC
-_ALIASES.CXX=		CC c++ g++
-CXXPATH=		${SUNWSPROBASE}/bin/CC
-PKG_CXX:=		${_SUNPRO_CXX}
-.endif
-.if exists(${SUNWSPROBASE}/bin/f77)
-LANGUAGES.sunpro+=	fortran
-_SUNPRO_VARS+=		FC
-_SUNPRO_FC=		${_SUNPRO_DIR}/bin/f77
-_ALIASES.FC=		f77 g77
-FCPATH=			${SUNWSPROBASE}/bin/f77
-PKG_FC:=		${_SUNPRO_FC}
-.endif
+
+.for l in ${_COMPILER_LANGS}
+.  for t in ${_COMPILER_TYPE.${l}}
+.    for n in ${_COMPILER_NAME.${l}}
+.      if exists(${SUNWSPROBASE}/bin/${n})
+LANGUAGES.sunpro+=	${l}
+_SUNPRO_VARS+=		${t}
+_SUNPRO_${t}=		${_SUNPRO_DIR}/bin/${n}
+_ALIASES.${t}=		${ALIASES.${l}}
+${t}PATH=		${SUNWSPROBASE}/bin/${n}
+PKG_${t}:=		${_SUNPRO_${t}}
+.      endif
+.    endfor
+.  endfor
+.endfor
 _COMPILER_STRIP_VARS+=	${_SUNPRO_VARS}
 
 # The Solaris linker uses "-R" for rpath directives.
