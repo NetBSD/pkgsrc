@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/22 14:56:56 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/09 20:26:39 joerg Exp $
 #
 
 DISTNAME=		libXau-1.0.3
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
 PKGCONFIG_OVERRIDE+=	xau.pc.in
 
