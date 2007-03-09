@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.36 2007/03/09 00:39:55 rillig Exp $
+# $NetBSD: install.mk,v 1.37 2007/03/09 00:45:54 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -116,7 +116,8 @@ install-check-version: ${_COOKIE.extract}
 	*)	${WARNING_MSG} "Package version $$extractname in ${WRKDIR}"; \
 		${WARNING_MSG} "Current version $$pkgname in ${PKGPATH}"; \
 		${WARNING_MSG} "Cleaning and rebuilding $$pkgname...";	\
-		${RECURSIVE_MAKE} clean build ;;			\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} clean;			\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} build ;;			\
 	esac
 
 ######################################################################
