@@ -45,12 +45,12 @@ XXX: Why isn't this variable in the previous list?
 
 The following make targets must be implemented:
 
-* check-vulnerable
-* deinstall-pkg
+* _flavor-check-vulnerable
+* _flavor-deinstall
 * show-depends
-* depends-install
+* _flavor-install-dependencies
 * bootstrap-depends
-* register-pkg
+* _flavor-register
 * tarup (XXX: This doesn't sound like a target that should be defined
   here.)
 * tarup-pkg
