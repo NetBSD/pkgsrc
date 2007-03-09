@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.39 2007/03/09 10:29:29 rillig Exp $
+# $NetBSD: sunpro.mk,v 1.40 2007/03/09 10:58:20 rillig Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -19,9 +19,6 @@ SUNWSPROBASE?=		/opt/SUNWspro
 _COMPILER_TYPE.c=	CC
 _COMPILER_TYPE.c++ =	CXX
 _COMPILER_TYPE.fortran=	FC
-_ALIASES.c=		cc gcc
-_ALIASES.c++ =		CC g++ c++
-_ALIASES.fortran=	f77 g77
 
 # sunpro-specific definitions
 _COMPILER_LANGS=	c c++ fortran
@@ -34,23 +31,18 @@ _COMPILER_NAME.fortran=	f77
 #
 LANGUAGES.sunpro=	# empty
 
-_SUNPRO_VARS=		# empty
-
 .for l in ${_COMPILER_LANGS}
 .  for t in ${_COMPILER_TYPE.${l}}
 .    for n in ${_COMPILER_NAME.${l}}
 .      if exists(${SUNWSPROBASE}/bin/${n})
 LANGUAGES.sunpro+=	${l}
-_SUNPRO_VARS+=		${t}
-_ALIASES.${t}=		${ALIASES.${l}}
-_SUNPRO_${t}=		${SUNWSPROBASE}/bin/${n}
+_COMPILER_STRIP_VARS+=	${t}
 ${t}PATH=		${SUNWSPROBASE}/bin/${n}
 PKG_${t}:=		${SUNWSPROBASE}/bin/${n}
 .      endif
 .    endfor
 .  endfor
 .endfor
-_COMPILER_STRIP_VARS+=	${_SUNPRO_VARS}
 
 # The Solaris linker uses "-R" for rpath directives.
 _LINKER_RPATH_FLAG=	-R
