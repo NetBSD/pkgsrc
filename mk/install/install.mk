@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.37 2007/03/09 00:45:54 rillig Exp $
+# $NetBSD: install.mk,v 1.38 2007/03/09 02:51:45 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -107,7 +107,7 @@ unprivileged-install-hook:
 ###
 .PHONY: install-check-version
 install-check-version: ${_COOKIE.extract}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	extractname=`${CAT} ${_COOKIE.extract}`;			\
 	pkgname=${PKGNAME};						\
 	case "$$extractname" in						\
@@ -190,9 +190,9 @@ su-install-all: ${_INSTALL_ALL_TARGETS}
 ###
 .PHONY: install-check-umask
 install-check-umask:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	umask=`${SH} -c umask`;						\
-	if ${TEST} "$$umask" -ne ${DEF_UMASK}; then			\
+	if [ "$$umask" -ne ${DEF_UMASK} ]; then			\
 		${WARNING_MSG} "Your umask is \`\`$$umask''.";	\
 		${WARNING_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK}) and install"; \
 		${WARNING_MSG} "this package again by \`\`${MAKE} deinstall reinstall''."; \
@@ -209,34 +209,39 @@ install-check-umask:
 _MTREE_FILE?=	${PKGSRCDIR}/mk/platform/${OPSYS}.pkg.dist
 _MTREE_ARGS?=	-U -f ${_MTREE_FILE} -d -e -p
 
+# A shell command that creates the directory ${DESTDIR}${PREFIX}/$$dir
+# with appropriate permissions and ownership.
+#
+_INSTALL_ONE_DIR= { \
+	ddir="${DESTDIR}${PREFIX}/$$dir";				\
+	[ ! -f "$$ddir" ] || ${FAIL_MSG} "[install.mk] $$ddir should be a directory, but is a file."; \
+	case "$$dir" in							\
+	*bin|*bin/*|*libexec|*libexec/*)				\
+		${INSTALL_PROGRAM_DIR} "$$ddir" ;;			\
+	${PKGMANDIR}/*)							\
+		${INSTALL_MAN_DIR} "$$ddir" ;;				\
+	*)								\
+		${INSTALL_DATA_DIR} "$$ddir" ;;				\
+	esac;								\
+	}
+
 .PHONY: install-makedirs
 install-makedirs:
-	${_PKG_SILENT}${_PKG_DEBUG}${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
+	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
 .if !defined(NO_MTREE)
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_MTREE_FILE} ||	\
+	${RUN} [ ! -f ${_MTREE_FILE} ] ||				\
 		${MTREE} ${_MTREE_ARGS} ${DESTDIR}${PREFIX}/
 .endif
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	@${STEP_MSG} "Creating installation directories"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	for dir in ${INSTALLATION_DIRS}; do				\
 		case "$$dir" in						\
 		${PREFIX}/*)						\
-			dir=`${ECHO} $$dir | ${SED} "s|^${PREFIX}/||"` ;; \
+			dir=`${ECHO} "$$dir" | ${SED} "s|^${PREFIX}/||"` ;; \
 		/*)	continue ;;					\
 		esac;							\
-		if [ -f "${PREFIX}/$$dir" ]; then			\
-			${ERROR_MSG} "[install.mk] $$dir should be a directory, but is a file."; \
-			exit 1;						\
-		fi;							\
-		case "$$dir" in						\
-		*bin|*bin/*|*libexec|*libexec/*)			\
-			${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/$$dir ;;	\
-		${PKGMANDIR}/*)						\
-			${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/$$dir ;;		\
-		*)							\
-			${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/$$dir ;;	\
-		esac;							\
+		${_INSTALL_ONE_DIR};					\
 	done
 .endif	# INSTALLATION_DIRS
 
@@ -251,20 +256,14 @@ install-makedirs:
 install-dirs-from-PLIST:
 	@${STEP_MSG} "Creating installation directories from PLIST files"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CAT} ${PLIST_SRC} | sed -n -e 's,\\,\\\\,' -e 's,^man,${PKGMANDIR},' -e 's,^\([^$$@]*\)/[^/]*$$,\1,p' \
+	${CAT} ${PLIST_SRC}						\
+	| sed -n							\
+		-e 's,\\,\\\\,'						\
+		-e 's,^man/,${PKGMANDIR}/,'				\
+		-e 's,^info/,${PKGINFODIR}/,'				\
+		-e 's,^\([^$$@]*\)/[^/]*$$,\1,p'			\
 	| while read dir; do						\
-		if [ -f "${DESTDIR}/${PREFIX}/$$dir" ]; then		\
-			${ERROR_MSG} "[install.mk] $$dir should be a directory, but is a file."; \
-			exit 1;						\
-		fi;							\
-		case "$$dir" in						\
-		*bin|*bin/*|*libexec|*libexec/*)			\
-			${INSTALL_PROGRAM_DIR} "${DESTDIR}${PREFIX}/$$dir";; \
-		${PKGMANDIR}/*)						\
-			${INSTALL_MAN_DIR} "${DESTDIR}${PREFIX}/$$dir";; \
-		*)							\
-			${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/$$dir";; \
-		esac;							\
+		${_INSTALL_ONE_DIR};					\
 	done
 
 ######################################################################
