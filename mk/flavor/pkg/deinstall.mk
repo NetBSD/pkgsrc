@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.2 2006/06/05 17:21:55 jlam Exp $
+# $NetBSD: deinstall.mk,v 1.3 2007/03/09 00:39:55 rillig Exp $
 
 # Set the appropriate flags to pass to pkg_delete(1) based on the value
 # of DEINSTALLDEPENDS (see pkgsrc/mk/install/deinstall.mk).
@@ -23,12 +23,13 @@ _PKG_ARGS_DEINSTALL+=	-N -f	# update w/o removing any files
 .  endif
 .endif
 
-######################################################################
-### deinstall-pkg (PRIVATE, pkgsrc/mk/install/deinstall.mk)
-######################################################################
-### deinstall-pkg removes the package from the system.
-###
-deinstall-pkg:
+# _flavor-deinstall:
+#	Removes a package from the system.
+#
+# See also:
+#	deinstall
+#
+_flavor-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${PKG_INFO} -e \"${PKGNAME}\" || ${TRUE}`";		\
 	case "$$found" in						\
