@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.21 2007/03/08 15:38:47 rillig Exp $
+# $NetBSD: depends.mk,v 1.22 2007/03/09 00:39:55 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -64,13 +64,10 @@ ${_DEPENDS_FILE}:
 	done >> ${.TARGET}.tmp
 	${RUN} ${MV} ${.TARGET}.tmp ${.TARGET}
 
-######################################################################
-### depends-install (PRIVATE, pkgsrc/mk/depends/depends.mk)
-######################################################################
-### depends-install installs any missing dependencies.
-###
-.PHONY: depends-install
-depends-install: ${_DEPENDS_FILE}
+# _flavor-install-dependencies:
+#	Installs any missing dependencies.
+#
+_flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
 	${RUN}								\
 	while read type pattern dir rest; do				\
 		{ [ "$$dir" ] && [ ! "$$rest" ]; }			\

@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.35 2007/03/02 09:08:33 wiz Exp $
+# $NetBSD: install.mk,v 1.36 2007/03/09 00:39:55 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -138,8 +138,8 @@ release-install-localbase-lock: release-localbase-lock
 _INSTALL_ALL_TARGETS+=		acquire-install-localbase-lock
 .endif
 .if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		install-check-conflicts
-_INSTALL_ALL_TARGETS+=		install-check-installed
+_INSTALL_ALL_TARGETS+=		_flavor-check-conflicts
+_INSTALL_ALL_TARGETS+=		_flavor-check-installed
 .endif
 _INSTALL_ALL_TARGETS+=		install-check-umask
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
@@ -165,7 +165,7 @@ _INSTALL_ALL_TARGETS+=		check-files-post
 _INSTALL_ALL_TARGETS+=		post-install-script
 .endif
 .if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		register-pkg
+_INSTALL_ALL_TARGETS+=		_flavor-register
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
 .if ${_USE_DESTDIR} != "user-destdir"
@@ -180,32 +180,6 @@ install-all: su-target
 install-all: su-install-all
 .  endif
 su-install-all: ${_INSTALL_ALL_TARGETS}
-
-######################################################################
-### install-check-conflicts (PRIVATE, override)
-######################################################################
-### install-check-conflicts check for conflicts between the package and
-### any installed packages.  This should be overridden per package
-### system flavor.
-###
-.PHONY: install-check-conflicts
-.if !target(install-check-conflicts)
-install-check-conflicts:
-	@${DO_NADA}
-.endif
-
-######################################################################
-### install-check-installed (PRIVATE, override)
-######################################################################
-### install-check-installed checks if the package (perhaps an older
-### version) is already installed on the system.  This should be
-### overridden per package system flavor.
-###
-.PHONY: install-check-installed
-.if !target(install-check-installed)
-install-check-installed:
-	@${DO_NADA}
-.endif
 
 ######################################################################
 ### install-check-umask (PRIVATE)
@@ -352,17 +326,6 @@ install-doc-handling: plist
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${PLIST} | ${GREP} -v "^@" |	\
 	${EGREP} ${_PLIST_REGEXP.man:Q} | ${_DOC_COMPRESS}
 
-######################################################################
-### register-pkg (PRIVATE, override)
-######################################################################
-### register-pkg registers the package as being installed on the system.
-###
-.PHONY: register-pkg
-.if !target(register-pkg)
-register-pkg:
-	@${DO_NADA}
-.endif
-
 privileged-install-hook: .PHONY
 	@${DO_NADA}
 
@@ -381,5 +344,5 @@ install-clean: package-clean check-clean
 ### bootstrap-register registers "bootstrap" packages that are installed
 ### by the pkgsrc/bootstrap/bootstrap script.
 ###
-bootstrap-register: register-pkg clean
+bootstrap-register: _flavor-register clean
 	@${DO_NADA}

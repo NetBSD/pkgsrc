@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.10 2007/03/02 05:58:34 wiz Exp $
+# $NetBSD: bsd.depends.mk,v 1.11 2007/03/09 00:39:54 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -76,6 +76,9 @@ depends-clean:
 ######################################################################
 ### depends-cookie creates the depends "cookie" state file.  This should
 ### be overridden per package system flavor.
+###
+### XXX: Why? The other cookies are also created by pkgsrc, not by the
+### flavor.
 ###
 .PHONY: depends-cookie
 .if !target(depends-cookie)
