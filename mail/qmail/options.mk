@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2007/02/22 19:26:42 wiz Exp $
+# $NetBSD: options.mk,v 1.26 2007/03/09 12:34:22 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -25,16 +25,14 @@ SITES.${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=	-p1
 .endif
 
+PLIST_SUBST+=		DARWINSUFX=""
 .if !empty(PKG_OPTIONS:Mdarwin)
 DARWIN_PATCH=		panther.patch
 PATCHFILES+=		${DARWIN_PATCH}
 SITES.${DARWIN_PATCH}=	http://http.netdevice.com:9080/qmail/patch/
 PATCH_DIST_STRIP.${DARWIN_PATCH}=	-p1
-DARWINSUFX=		.doc
-.else
-DARWINSUFX=		# empty
+PLIST_SUBST+=		DARWINSUFX=".doc"
 .endif
-PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX:Q}
 
 .if !empty(PKG_OPTIONS:Mqmail-netqmail)
 NETQMAIL_PATCH=		netqmail-1.05.tar.gz
@@ -50,12 +48,13 @@ PATCHFILES+=		${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 .endif
 
+PLIST_SUBST+=		QMAIL_QREGEX="@comment "
 .if !empty(PKG_OPTIONS:Mqmail-qregex)
 QREGEX_PATCH=		qregex-20060423.patch
 PATCHFILES+=		${QREGEX_PATCH}
 SITES.${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
-PLIST_SRC+=		${PKGDIR}/PLIST.qregex
+PLIST_SUBST+=		QMAIL_QREGEX=""
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-realrcptto)
@@ -65,6 +64,7 @@ SITES.${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
 PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 .endif
 
+PLIST_SUBST+=		QMAIL_TLS="@comment "
 .if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mtls)
 .  if empty(PKG_OPTIONS:Msasl)
 PKG_OPTIONS+=		sasl
@@ -77,7 +77,7 @@ SITES.${TLSSASL_PATCH}=	http://shupp.org/patches/
 CFLAGS+=		-DTLS=20060104	# NOTE: update according to the patch
 DJB_INSTALL_TARGETS=	cert tmprsadh
 USE_TOOLS+=		gmake
-PLIST_SRC+=		${PKGDIR}/PLIST.tls
+PLIST_SUBST+=		QMAIL_TLS=""
 .  endif
 .endif
 
