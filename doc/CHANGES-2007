@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.560 2007/03/08 20:04:29 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.561 2007/03/09 09:43:35 gson Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1099,3 +1099,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated comms/pilotmgr to 1.109 [wiz 2007-03-08]
 	Updated x11/keylaunch to 1.3.3 [wiz 2007-03-08]
 	Updated mail/gmime to 2.2.4 [wiz 2007-03-08]
+	Updated net/py-dns to 1.5.0 [gson 2007-03-09]
