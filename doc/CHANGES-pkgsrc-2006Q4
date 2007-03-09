@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.55 2007/03/09 15:27:19 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.56 2007/03/09 16:22:06 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -129,3 +129,5 @@ Pullup ticket 2045 - requested by gavan
 require GCC version 3.x for C99 functionality
 Pullup ticket 2046 - requested by obache
 compatibility fix for cyrus-imapd
+Pullup ticket 2047 - requested by drochner
+security update for gnupg
