@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.11 2007/01/02 17:23:41 rillig Exp $
+# $NetBSD: depends.mk,v 1.12 2007/03/09 00:39:54 rillig Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -39,7 +39,7 @@ ${_COOKIE.depends}: real-depends
 ###
 _REAL_DEPENDS_TARGETS+=	depends-message
 _REAL_DEPENDS_TARGETS+=	pre-depends-hook
-_REAL_DEPENDS_TARGETS+=	depends-install
+_REAL_DEPENDS_TARGETS+=	_flavor-install-dependencies
 _REAL_DEPENDS_TARGETS+=	depends-cookie
 _REAL_DEPENDS_TARGETS+=	error-check
 
@@ -51,23 +51,10 @@ depends-message:
 	@${PHASE_MSG} "Installing dependencies for ${PKGNAME}"
 
 ######################################################################
-### depends-install (PRIVATE, override)
-######################################################################
-### depends-install checks that all dependencies are installed, and will
-### install any missing dependencies.  This should be overridden per
-### package system flavor.
-###
-.if !target(depends-install)
-.PHONY: depends-install
-depends-install:
-	@${DO_NADA}
-.endif
-
-######################################################################
 ### pre-depends-hook (PRIVATE, override, hook)
 ######################################################################
 ### pre-depends-hook is a generic hook target that is run just before
-### dependencies are installed for depends-install.
+### dependencies are installed for _flavor-install-dependencies.
 ###
 .PHONY: pre-depends-hook
 pre-depends-hook:
