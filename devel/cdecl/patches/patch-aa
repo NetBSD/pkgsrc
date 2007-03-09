@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2006/01/08 20:16:27 joerg Exp $
+$NetBSD: patch-aa,v 1.9 2007/03/09 15:38:32 rillig Exp $
 
---- cdecl.c.orig	1996-01-16 03:54:46.000000000 +0000
-+++ cdecl.c
+--- cdecl.c.orig	1996-01-16 04:54:46.000000000 +0100
++++ cdecl.c	2007-03-09 16:36:18.000000000 +0100
 @@ -59,7 +59,9 @@
   */
  
@@ -74,6 +74,57 @@ $NetBSD: patch-aa,v 1.8 2006/01/08 20:16:27 joerg Exp $
    int dotmpfile(), dofileargs();
  #endif /* __STDC__ */
    FILE *tmpfile();
+@@ -241,7 +247,7 @@ struct
+ /* for unsupported combinations of types. */
+ void mbcheck()
+ {
+-    register int i, j, restrict;
++    register int i, j, xrestrict;
+     char *t1, *t2;
+ 
+     /* Loop through the types */
+@@ -258,26 +264,26 @@ void mbcheck()
+ 		if (!(modbits & crosstypes[j].bit))
+ 		    continue;
+ 		/* check the type of restriction */
+-		restrict = crosscheck[i][j];
+-		if (restrict == ALWAYS)
++		xrestrict = crosscheck[i][j];
++		if (xrestrict == ALWAYS)
+ 		    continue;
+ 		t1 = crosstypes[i].name;
+ 		t2 = crosstypes[j].name;
+-		if (restrict == NEVER)
++		if (xrestrict == NEVER)
+ 		    {
+ 		    notsupported("", t1, t2);
+ 		    }
+-		else if (restrict == RITCHIE)
++		else if (xrestrict == RITCHIE)
+ 		    {
+ 		    if (RitchieFlag)
+ 			notsupported(" (Ritchie Compiler)", t1, t2);
+ 		    }
+-		else if (restrict == PREANSI)
++		else if (xrestrict == PREANSI)
+ 		    {
+ 		    if (PreANSIFlag || RitchieFlag)
+ 			notsupported(" (Pre-ANSI Compiler)", t1, t2);
+ 		    }
+-		else if (restrict == ANSI)
++		else if (xrestrict == ANSI)
+ 		    {
+ 		    if (!RitchieFlag && !PreANSIFlag)
+ 			notsupported(" (ANSI Compiler)", t1, t2);
+@@ -286,7 +292,7 @@ void mbcheck()
+ 		    {
+ 		    (void) fprintf (stderr,
+ 			"%s: Internal error in crosscheck[%d,%d]=%d!\n",
+-			progname, i, j, restrict);
++			progname, i, j, xrestrict);
+ 		    exit(1); /* NOTREACHED */
+ 		    }
+ 		}
 @@ -399,12 +405,12 @@ char ** attempt_completion(char *text, i
  {
    char **matches = NULL;
