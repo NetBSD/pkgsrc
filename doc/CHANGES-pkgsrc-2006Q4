@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.57 2007/03/09 16:59:08 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.58 2007/03/10 21:50:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -133,3 +133,5 @@ Pullup ticket 2047 - requested by drochner
 security update for gnupg
 Pullup ticket 2048 - requested by drochner
 security update for asterisk
+Pullup ticket 2049 - requested by wiz
+security update for trac
