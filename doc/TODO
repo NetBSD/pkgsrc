@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6089 2007/03/10 17:08:50 wiz Exp $
+$NetBSD: TODO,v 1.6090 2007/03/10 19:10:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -310,7 +310,6 @@ Suggested package updates
 	o cjk-lyx-1.3.3
 	o clisp-2.41
 	o cocoon-2.1.10
-	o cogito-0.18.2
 	o columba-1.0RC1
 	o control-center-2.16.3
 	o coreutils-6.7
