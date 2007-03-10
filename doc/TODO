@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6086 2007/03/10 09:14:58 wiz Exp $
+$NetBSD: TODO,v 1.6087 2007/03/10 15:03:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.001
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-SearchBuilder-1.47
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
