@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.568 2007/03/10 12:53:59 agc Exp $
+$NetBSD: CHANGES-2007,v 1.569 2007/03/10 15:03:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-Mail-Sendmail to 0.79 [wiz 2007-03-10]
 	Updated www/lynx to 2.8.6.4 [wiz 2007-03-10]
 	Added filesystems/fuse-unionfs version 0.17 [agc 2007-03-10]
+	Updated databases/p5-DBIx-SearchBuilder to 1.47 [wiz 2007-03-10]
