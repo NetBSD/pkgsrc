@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.566 2007/03/10 01:18:22 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.567 2007/03/10 09:14:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1105,3 +1105,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xf86-video-vesa version 1.3.0 [xtraeme 2007-03-09]
 	Updated sysutils/mklivecd to 0.14.5 [xtraeme 2007-03-09]
 	Updated mail/p5-Mail-Sendmail to 0.79 [wiz 2007-03-10]
+	Updated www/lynx to 2.8.6.4 [wiz 2007-03-10]
