@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/03/10 12:51:03 agc Exp $
+
+--- opts.h	2007/03/10 00:36:42	1.1
++++ opts.h	2007/03/10 00:36:59
+@@ -3,6 +3,7 @@
+ 
+ 
+ #include <fuse.h>
++#include <fuse_opt.h>
+ #include "unionfs.h"
+ 
+ 
