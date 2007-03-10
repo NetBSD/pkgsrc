@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2007/03/10 09:14:09 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2007/03/10 14:10:39 tron Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -26,6 +26,7 @@ SUBDIR=			current
 WRKSRC=			${WRKDIR}/lynx2-8-6
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+BROKEN_GETTEXT_DETECTION= yes
 INSTALL_TARGET=		install-full
 MAKE_FILE=		makefile
 
