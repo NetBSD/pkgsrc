@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6087 2007/03/10 15:03:37 wiz Exp $
+$NetBSD: TODO,v 1.6088 2007/03/10 15:13:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -743,7 +743,6 @@ Suggested package updates
 	o p5-Test-Harness-2.46
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2005.0824
-	o p5-WWW-Mechanize-1.22
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
