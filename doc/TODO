@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6083 2007/03/08 20:04:29 wiz Exp $
+$NetBSD: TODO,v 1.6084 2007/03/10 01:17:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -271,6 +271,7 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.1
 	o baci-20040415
+	o bacula-2.0.3
 	o balsa-2.3.14
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -440,7 +441,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.0.3
 	o gld-1.7
-	o glib2-2.12.10
+	o glib2-2.12.11
 	o glibmm-2.12.7
 	o gmpc-0.14.0
 	o gnet1-1.1.9
@@ -456,7 +457,7 @@ Suggested package updates
 	o gnome-themes-2.16.3
 	o gnome-user-docs-2.16.1
 	o gnomeicu-0.99.12
-	o gnupg2-2.0.2
+	o gnupg2-2.0.3
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
@@ -476,6 +477,8 @@ Suggested package updates
 	o gri-2.12.8
 	o gsharutils-4.6.3
 	o gss-0.0.17
+	o gst-plugins0.10-base-0.10.12
+	o gstreamer0.10-0.10.12
 	o gtar-1.16.1
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.10.0
@@ -752,6 +755,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.16.0
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o parrot-0.4.7
@@ -983,6 +987,7 @@ Suggested package updates
 	o top-3.6beta1
 	o tpasm-1.2
 	o tpb-0.6.4
+	o trac-0.10.3.1
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
