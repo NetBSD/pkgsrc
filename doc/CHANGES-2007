@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.572 2007/03/10 18:40:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.573 2007/03/10 19:10:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1110,3 +1110,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/p5-DBIx-SearchBuilder to 1.47 [wiz 2007-03-10]
 	Updated www/p5-WWW-Mechanize to 1.22 [wiz 2007-03-10]
 	Updated games/asc to 1.16.4.0 [wiz 2007-03-10]
+	Updated devel/cogito to 0.18.2 [wiz 2007-03-10]
