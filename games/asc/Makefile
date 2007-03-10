@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/03/10 17:08:18 wiz Exp $
 
-DISTNAME=	asc-source+music-1.16.3.0
-PKGNAME=	${DISTNAME:S/-source+music//}
-PKGREVISION=	3
+DISTNAME=	asc-source-1.16.4.0
+PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asc-hq/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,16 +10,30 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.asc-hq.org/
 COMMENT=	Turn based strategy game
 
+DIST_SUBDIR=		asc
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} frontiers.mp3 \
+			machine_wars.mp3 time_to_strike.mp3
+.for file in frontiers.mp3 machine_wars.mp3 time_to_strike.mp3
+SITES.${file}=	http://asc-hq.org/
+.endfor
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake perl:build pkg-config
+REPLACE_PERL=		checkfordata.pl
 GNU_CONFIGURE=		yes
 CPPFLAGS.NetBSD+=	-D_UNICODE_BROKEN_
 
 # ../weaponguide.cpp:1205: virtual memory exhausted
 UNLIMIT_RESOURCES=	datasize
+
+post-extract:
+	mv ${WRKDIR}/*.mp3 ${WRKSRC}/data/music
+
+# bug in 1.16.4.0, remove on update
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/data/asc.gfx ${PREFIX}/share/games/asc
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
