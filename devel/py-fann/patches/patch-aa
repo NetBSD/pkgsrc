@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/10/12 19:05:08 gdt Exp $
+$NetBSD: patch-aa,v 1.4 2007/03/10 01:38:26 rillig Exp $
 
 --- python/setup.py.orig	2006-03-18 12:37:12.000000000 -0500
 +++ python/setup.py
-@@ -42,7 +42,7 @@ setup(
+@@ -42,7 +42,7 @@
      py_modules=['pyfann.libfann'],
      ext_modules=[Extension('pyfann._libfann',['pyfann/pyfann_wrap.cxx'], 
                              include_dirs=['../src/include'], 
