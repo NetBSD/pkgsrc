@@ -1,7 +1,19 @@
-$NetBSD: patch-af,v 1.4 2007/03/10 09:14:10 wiz Exp $
+$NetBSD: patch-af,v 1.5 2007/03/10 14:10:40 tron Exp $
 
 --- po/makefile.inn.orig	2004-01-28 19:30:38.000000000 +0000
 +++ po/makefile.inn
+@@ -71,6 +71,11 @@ INSTOBJEXT = @INSTOBJEXT@
+ 	$(MSGFMT) -o $@ $<
+ 
+ .po.gmo:
++	@if [ `$(GMSGFMT) --version | head -1 | cut -d . -f 2` -lt 11 ]; then \
++		mv $< $<.bak; \
++		sed '/^msgstr/s/\([^\\]\)\(\\[^[:print:]]\)/\1\\\2/g' \
++			<$<.bak >$<; \
++	fi
+ 	file=$(srcdir)/`echo $* | sed 's,.*/,,'`.gmo \
+ 	  && rm -f $$file && $(GMSGFMT) -o $$file $<
+ 
 @@ -113,16 +118,16 @@ install-data: install-data-@USE_NLS@
  install-data-no: all
  install-data-yes: all
