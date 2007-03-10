@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2007/03/08 19:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2007/03/10 09:14:09 wiz Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -6,20 +6,14 @@
 # with this feature in earlier versions.
 #
 
-DISTNAME=	lynx2.8.5
-PKGNAME=	lynx-2.8.5.5
-PKGREVISION=	2
+DISTNAME=	lynx2.8.6rel.4
+PKGNAME=	lynx-2.8.6.4
 CATEGORIES=	www
-MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
-		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${DISTNAME}/ \
-		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${DISTNAME}/ \
-		ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/${DISTNAME}/
+MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
+		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${SUBDIR:Q}/ \
+		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/ \
+		ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/${SUBDIR:Q}/
 EXTRACT_SUFX=	.tar.bz2
-
-PATCH_DIST_STRIP= -p1
-PATCH_SITES=	${MASTER_SITES:=patches/}
-PATCHFILES=	2.8.5rel.2.patch.gz 2.8.5rel.3.patch.gz
-PATCHFILES+=	2.8.5rel.4.patch.gz 2.8.5rel.5.patch.gz
 
 MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://lynx.isc.org/
@@ -28,25 +22,28 @@ COMMENT=	Alphanumeric display oriented World-Wide Web Client
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_SUBDIR=		lynx
-WRKSRC=			${WRKDIR}/${DISTNAME:S/./-/g}
+SUBDIR=			current
+WRKSRC=			${WRKDIR}/lynx2-8-6
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-INSTALL_TARGET=		install-full install-lss
+INSTALL_TARGET=		install-full
 MAKE_FILE=		makefile
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 USE_TOOLS+=		gzip msgfmt
 
+CONF_FILES+=		share/examples/lynx/lynx.cfg ${PKG_SYSCONFDIR}/lynx.cfg
+CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
+
+# But no dependency on Perl.
 REPLACE_PERL+=		samples/mailto-form.pl
 CHECK_FILES_SKIP+=	samples/mailto-form.pl
-# But no dependency on Perl.
 
 .include "options.mk"
 
 # For nls/gettext
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--with-nls-datadir=${PREFIX}/share
+CONFIGURE_ARGS+=	--with-nls-datadir=${PREFIX}/${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--without-included-gettext
 
 # With SSL, lynx can get https:// and snews:// URL's.
@@ -59,12 +56,13 @@ CONFIGURE_ARGS+=	--enable-default-colors
 CONFIGURE_ARGS+=	--enable-scrollbar
 
 # Install gzip'ed help files to ${PREFIX}/share/lynx
-CONFIGURE_ARGS+=	--libdir="${PREFIX}/share/lynx"
+CONFIGURE_ARGS+=	--datadir="${PREFIX}/share/lynx"
 CONFIGURE_ARGS+=	--enable-gzip-help --with-zlib
 
 # Miscellaneous
 CONFIGURE_ARGS+=	--enable-externs
 CONFIGURE_ARGS+=	--enable-source-cache
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 # Experimental features
 CONFIGURE_ARGS+=	--enable-file-upload
@@ -77,12 +75,4 @@ CONFIGURE_ARGS+=	--enable-read-eta
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-
-post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/lynx
-	${FIND} ${DESTDIR}${PREFIX}/share/lynx -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	# gets created when applying 2.8.5.2 patch -- remove on
-	# patchless update
-	${RM} -f ${DESTDIR}${PREFIX}/share/lynx/lynx_doc/CHANGES.orig_dist
-
 .include "../../mk/bsd.pkg.mk"
