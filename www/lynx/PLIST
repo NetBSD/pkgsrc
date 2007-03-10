@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/03/10 09:14:09 wiz Exp $
 bin/lynx
 man/man1/lynx.1
+share/examples/lynx/lynx.cfg
+share/examples/lynx/lynx.lss
 share/locale/ca/LC_MESSAGES/lynx.mo
 share/locale/cs/LC_MESSAGES/lynx.mo
 share/locale/da/LC_MESSAGES/lynx.mo
@@ -13,17 +15,19 @@ share/locale/ja/LC_MESSAGES/lynx.mo
 share/locale/nl/LC_MESSAGES/lynx.mo
 share/locale/pt_BR/LC_MESSAGES/lynx.mo
 share/locale/ru/LC_MESSAGES/lynx.mo
+share/locale/rw/LC_MESSAGES/lynx.mo
 share/locale/sl/LC_MESSAGES/lynx.mo
 share/locale/sv/LC_MESSAGES/lynx.mo
 share/locale/tr/LC_MESSAGES/lynx.mo
 share/locale/uk/LC_MESSAGES/lynx.mo
+share/locale/vi/LC_MESSAGES/lynx.mo
 share/locale/zh_CN/LC_MESSAGES/lynx.mo
 share/locale/zh_TW/LC_MESSAGES/lynx.mo
-share/lynx/lynx.cfg
-share/lynx/lynx.lss
 share/lynx/lynx_doc/CHANGES
 share/lynx/lynx_doc/COPYHEADER
+share/lynx/lynx_doc/COPYHEADER.asc
 share/lynx/lynx_doc/COPYING
+share/lynx/lynx_doc/COPYING.asc
 share/lynx/lynx_doc/PROBLEMS
 share/lynx/lynx_doc/README
 share/lynx/lynx_doc/docs/CHANGES2.3.gz
@@ -32,7 +36,6 @@ share/lynx/lynx_doc/docs/CHANGES2.5.gz
 share/lynx/lynx_doc/docs/CHANGES2.6.gz
 share/lynx/lynx_doc/docs/CHANGES2.7.gz
 share/lynx/lynx_doc/docs/CHANGES2.8.gz
-share/lynx/lynx_doc/docs/CMU.announce.gz
 share/lynx/lynx_doc/docs/CRAWL.announce.gz
 share/lynx/lynx_doc/docs/FM.announce.gz
 share/lynx/lynx_doc/docs/IBMPC-charsets.announce.gz
@@ -41,6 +44,7 @@ share/lynx/lynx_doc/docs/README.TRST
 share/lynx/lynx_doc/docs/README.chartrans
 share/lynx/lynx_doc/docs/README.defines
 share/lynx/lynx_doc/docs/README.jp
+share/lynx/lynx_doc/docs/README.metrics
 share/lynx/lynx_doc/docs/README.rootcerts
 share/lynx/lynx_doc/docs/README.ssl
 share/lynx/lynx_doc/docs/README.sslcerts
@@ -66,19 +70,23 @@ share/lynx/lynx_doc/samples/mailcap
 share/lynx/lynx_doc/samples/mailto-form.pl
 share/lynx/lynx_doc/samples/mild-colors.lss
 share/lynx/lynx_doc/samples/mime.types
+share/lynx/lynx_doc/samples/oldlynx
 share/lynx/lynx_doc/test/ALT88592.html
 share/lynx/lynx_doc/test/ISO_LATIN1_test.html
 share/lynx/lynx_doc/test/README.txt
 share/lynx/lynx_doc/test/TestComment.html
 share/lynx/lynx_doc/test/c1.html
-share/lynx/lynx_doc/test/iso8859-1.html
-share/lynx/lynx_doc/test/iso88592.html
+share/lynx/lynx_doc/test/iso-8859-1.html
+share/lynx/lynx_doc/test/iso-8859-2.html
 share/lynx/lynx_doc/test/koi8-r.html
 share/lynx/lynx_doc/test/quickbrown.html
 share/lynx/lynx_doc/test/raw8bit.html
 share/lynx/lynx_doc/test/sgml.html
 share/lynx/lynx_doc/test/spaces.html
+share/lynx/lynx_doc/test/special_urls.html
 share/lynx/lynx_doc/test/tabtest.html
+share/lynx/lynx_doc/test/tags.html
+share/lynx/lynx_doc/test/test-styles.html
 share/lynx/lynx_doc/test/unicode.html
 share/lynx/lynx_doc/test/utf-8-demo.html
 share/lynx/lynx_help/COPYHEADER
@@ -114,3 +122,4 @@ share/lynx/lynx_help/lynx_url_support.html.gz
 @dirrm share/lynx/lynx_doc/docs
 @dirrm share/lynx/lynx_doc
 @dirrm share/lynx
+@dirrm share/examples/lynx
