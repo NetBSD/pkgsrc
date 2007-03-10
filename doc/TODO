@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6088 2007/03/10 15:13:50 wiz Exp $
+$NetBSD: TODO,v 1.6089 2007/03/10 17:08:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,6 @@ Suggested package updates
 	o argus-3.4
 	o arnold-20040104
 	o asapm-3.1
-	o asc-1.16.4
 	o ascii-3.8
 	o aspell-danish-1.6.3
 	o aspell-faroese-0.2.28
