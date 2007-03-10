@@ -1,0 +1,7 @@
+FUSE-based union filesystem, with almost limitless number of root
+directories.
+
+This utility is implementedd at the user level - to mount a series
+of roots, simply use:
+
+	fuse-unionfs root1:root2:root3 <mountpoint>

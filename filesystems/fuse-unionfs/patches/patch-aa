@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/10 12:51:03 agc Exp $
+
+--- unionfs.c	2007/03/10 00:31:50	1.1
++++ unionfs.c	2007/03/10 00:33:02
+@@ -10,6 +10,7 @@
+ #endif
+ 
+ #include <fuse.h>
++#include <fuse_opt.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -933,5 +934,9 @@
+ 	}
+ 
+ 	umask(0);
++#ifdef __NetBSD__
++	return fuse_main(args.argc, args.argv, &unionfs_oper);
++#else
+ 	return fuse_main(args.argc, args.argv, &unionfs_oper, NULL);
++#endif
+ }
