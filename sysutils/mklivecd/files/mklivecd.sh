@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.31 2007/03/09 23:51:50 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.32 2007/03/10 00:01:23 xtraeme Exp $
 #
-# Copyright (c) 2004-2006 Juan Romero Pardines.
+# Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -575,7 +575,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.31 2007/03/09 23:51:50 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.32 2007/03/10 00:01:23 xtraeme Exp $
 # 
 
 # PROVIDE: root
