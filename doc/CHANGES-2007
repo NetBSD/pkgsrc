@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.570 2007/03/10 15:13:50 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.571 2007/03/10 17:08:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1109,3 +1109,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-unionfs version 0.17 [agc 2007-03-10]
 	Updated databases/p5-DBIx-SearchBuilder to 1.47 [wiz 2007-03-10]
 	Updated www/p5-WWW-Mechanize to 1.22 [wiz 2007-03-10]
+	Updated zzz/asc to 1.16.4.0 [wiz 2007-03-10]
