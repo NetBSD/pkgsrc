@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6084 2007/03/10 01:17:14 wiz Exp $
+$NetBSD: TODO,v 1.6085 2007/03/10 01:18:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -725,7 +725,6 @@ Suggested package updates
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-Mac-Macbinary-0.06
-	o p5-Mail-Sendmail-0.79
 	o p5-Net-AOLIM-1.5
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
