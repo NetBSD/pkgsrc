@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+$NetBSD: patch-ar,v 1.2 2007/03/11 18:42:28 adam Exp $
 
---- sql/log_event.cc.orig	2006-10-23 23:49:26.000000000 +0200
-+++ sql/log_event.cc	2006-10-23 23:50:20.000000000 +0200
-@@ -24,6 +24,9 @@
+--- sql/log_event.cc.orig	2007-03-05 20:21:39.000000000 +0100
++++ sql/log_event.cc
+@@ -23,6 +23,9 @@
  #include  "mysql_priv.h"
  #include "slave.h"
  #include <my_dir.h>

@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
+$NetBSD: patch-aj,v 1.3 2007/03/11 18:42:50 adam Exp $
 
---- scripts/mysqld_safe.sh.orig	2006-10-14 19:56:04.000000000 +0200
-+++ scripts/mysqld_safe.sh	2006-10-14 19:59:48.000000000 +0200
-@@ -330,6 +330,14 @@
+--- scripts/mysqld_safe.sh.orig	2007-03-05 20:21:13.000000000 +0100
++++ scripts/mysqld_safe.sh
+@@ -331,6 +331,14 @@ then
    ulimit -c $core_file_size
  fi
  
@@ -17,7 +17,7 @@ $NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
  #
  # If there exists an old pid file, check if the daemon is already running
  # Note: The switches to 'ps' may depend on your operating system
-@@ -340,18 +348,16 @@
+@@ -341,18 +349,16 @@ then
    then
      if @FIND_PROC@
      then    # The pid contains a mysqld process
@@ -40,7 +40,7 @@ $NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
      exit 1
    fi
  fi
-@@ -364,11 +370,11 @@
+@@ -365,11 +371,11 @@ fi
  # Alternatively, you can start mysqld with the "myisam-recover" option. See
  # the manual for details.
  #
@@ -54,7 +54,7 @@ $NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
  
  # Does this work on all systems?
  #if type ulimit | grep "shell builtin" > /dev/null
-@@ -376,7 +382,7 @@
+@@ -377,7 +383,7 @@ echo "Starting $MYSQLD daemon with datab
  #  ulimit -n 256 > /dev/null 2>&1		# Fix for BSD and FreeBSD systems
  #fi
  
@@ -63,7 +63,7 @@ $NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
  while true
  do
    rm -f $safe_mysql_unix_port $pid_file	# Some extra safety
-@@ -388,7 +394,7 @@
+@@ -389,7 +395,7 @@ do
    fi
    if test ! -f $pid_file		# This is removed if normal shutdown
    then
@@ -72,7 +72,7 @@ $NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
      break
    fi
  
-@@ -401,7 +407,7 @@
+@@ -402,7 +408,7 @@ do
      # kill -9 is used or the process won't react on the kill.
      numofproces=`ps xaww | grep -v "grep" | grep "$ledir/$MYSQLD\>" | grep -c "pid-file=$pid_file"`
  
@@ -81,7 +81,7 @@ $NetBSD: patch-aj,v 1.2 2006/10/14 18:41:34 xtraeme Exp $
      I=1
      while test "$I" -le "$numofproces"
      do 
-@@ -414,16 +420,14 @@
+@@ -415,16 +421,14 @@ do
        #    echo "TEST $I - $T **"
        if kill -9 $T
        then

@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2006/01/08 17:43:58 xtraeme Exp $
+$NetBSD: patch-am,v 1.2 2007/03/11 18:42:50 adam Exp $
 
---- extra/Makefile.in.orig	2006-01-08 18:36:49.000000000 +0100
-+++ extra/Makefile.in	2006-01-08 18:37:00.000000000 +0100
-@@ -431,9 +431,7 @@
+--- extra/Makefile.in.orig	2007-03-05 20:22:41.000000000 +0100
++++ extra/Makefile.in
+@@ -434,9 +434,7 @@ INCLUDES = -I$(top_builddir)/include -I$
  LDADD = @CLIENT_EXTRA_LDFLAGS@ ../mysys/libmysys.a \
  			../dbug/libdbug.a ../strings/libmystrings.a
  
@@ -12,4 +12,4 @@ $NetBSD: patch-am,v 1.1 2006/01/08 17:43:58 xtraeme Exp $
 +BUILT_SOURCES =
  
  pkginclude_HEADERS = $(BUILT_SOURCES)
- CLEANFILES = $(BUILT_SOURCES)
+ DISTCLEANFILES = $(BUILT_SOURCES)
