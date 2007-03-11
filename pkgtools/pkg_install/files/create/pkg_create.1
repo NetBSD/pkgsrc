@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_create.1,v 1.7 2004/08/06 16:57:03 jlam Exp $
+.\" $NetBSD: pkg_create.1,v 1.8 2007/03/11 22:05:03 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -24,7 +24,7 @@
 .\" [jkh] Took John's changes back and made some additional extensions for
 .\" better integration with FreeBSD's new ports collection.
 .\"
-.Dd September 2, 2003
+.Dd March 8, 2007
 .Dt PKG_CREATE 1
 .Os
 .Sh NAME
@@ -32,7 +32,7 @@
 .Nd a utility for creating software package distributions
 .Sh SYNOPSIS
 .Nm
-.Op Fl EhlORUVv
+.Op Fl ElORUVv
 .Bk -words
 .Op Fl B Ar build-info-file
 .Ek
@@ -70,10 +70,10 @@
 .Op Fl P Ar dpkgs
 .Ek
 .Bk -words
-.Op Fl p Ar prefix
+.Op Fl T Ar buildpkgs
 .Ek
 .Bk -words
-.Op Fl r Ar rscript
+.Op Fl p Ar prefix
 .Ek
 .Bk -words
 .Op Fl S Ar size-all-file
@@ -83,9 +83,6 @@
 .Ek
 .Bk -words
 .Op Fl t Ar template
-.Ek
-.Bk -words
-.Op Fl X Ar excludefile
 .Ek
 .Bk -words
 .Fl c Ar comment
@@ -172,9 +169,6 @@ if
 is a
 .Cm -
 (dash).
-.It Fl h
-Force tar to follow symbolic links, so that the files they point to
-are dumped, rather than the links themselves.
 .It Fl I Ar realprefix
 Provide the real prefix, as opposed to the staging prefix, for use in
 staged installations of packages.
@@ -255,6 +249,16 @@ In addition, the exact versions of the packages referred to in the
 list will be added to the packing list in the form of
 .Cm @blddep
 directives.
+.It Fl T Ar buildpkgs
+This is assumed to be a whitespace separated list of package names.
+The exact versions of the packages referred to in the
+.Ar buildpkgs
+list will be added to the packing list in the form of
+.Cm @blddep
+directives.
+This directives are stored after those created by the
+.Fl P
+option.
 .It Fl p Ar prefix
 Set
 .Ar prefix
@@ -266,15 +270,6 @@ the package.
 Re-order any directories in the pkg/PLIST file into reverse alphabetic
 order, so that child directories will automatically be removed before
 parent directories.
-.It Fl r Ar rscript
-Set
-.Ar rscript
-to be the
-.Pq requirements
-procedure for the package.
-This can be any executable program (or shell script).
-It will be invoked automatically at installation/deinstallation time to
-determine whether or not installation/deinstallation should proceed.
 .It Fl S Ar size-all-file
 Store the given file for later querying with the
 .Xr pkg_info 1
@@ -312,17 +307,6 @@ Do not update the package file database with any file information.
 Print version number and exit.
 .It Fl v
 Turn on verbose output.
-.It Fl X Ar excludefile
-Pass
-.Ar excludefile
-as a
-.Fl -exclude-from
-argument to
-.Cm tar
-when creating final package.
-See
-.Xr tar 1
-for further information on using this flag.
 .El
 .Sh PACKING LIST DETAILS
 The
