@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2007/03/11 18:42:49 adam Exp $
 
---- sql/mysqld.cc.orig	2005-10-17 03:27:30.000000000 +0200
-+++ sql/mysqld.cc	2005-10-31 09:57:13.000000000 +0100
-@@ -171,7 +171,7 @@
+--- sql/mysqld.cc.orig	2007-03-05 20:21:11.000000000 +0100
++++ sql/mysqld.cc
+@@ -171,7 +171,7 @@ static void getvolumeID(BYTE *volumeName
  int initgroups(const char *,unsigned int);
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
  #include <ieeefp.h>
  #ifdef HAVE_FP_EXCEPT				// Fix type conflict
  typedef fp_except fp_except_t;
-@@ -3276,7 +3276,7 @@
+@@ -3431,7 +3431,7 @@ int main(int argc, char **argv)
    init_ssl();
  
  #ifdef HAVE_LIBWRAP

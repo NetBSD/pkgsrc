@@ -1,10 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2006/10/14 18:41:34 xtraeme Exp $
+$NetBSD: patch-ac,v 1.4 2007/03/11 18:42:28 adam Exp $
 
-Patch reported: http://bugs.mysql.com/bug.php?id=23294&thanks=4
-
---- configure.in.orig	2006-10-14 18:56:35.000000000 +0200
-+++ configure.in	2006-10-14 18:58:41.000000000 +0200
-@@ -475,7 +475,7 @@
+--- configure.in.orig	2007-03-05 20:21:13.000000000 +0100
++++ configure.in
+@@ -487,7 +487,7 @@ then
    FIND_PROC="$PS \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
  else
    case $SYSTEM_TYPE in
@@ -13,7 +11,7 @@ Patch reported: http://bugs.mysql.com/bug.php?id=23294&thanks=4
        FIND_PROC="$PS p \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
        ;;
      *darwin*)
-@@ -752,6 +752,8 @@
+@@ -794,6 +794,8 @@ AC_SEARCH_LIBS(crypt, crypt, AC_DEFINE(H
  
  # For sem_xxx functions on Solaris 2.6
  AC_CHECK_FUNC(sem_init, , AC_CHECK_LIB(posix4, sem_init))
@@ -22,7 +20,7 @@ Patch reported: http://bugs.mysql.com/bug.php?id=23294&thanks=4
  MYSQL_CHECK_ZLIB_WITH_COMPRESS
  
  # For large pages support
-@@ -1077,7 +1079,7 @@
+@@ -1119,7 +1121,7 @@ case $SYSTEM_TYPE in
        MAX_C_OPTIMIZE="-O"
      fi
      ;;
