@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-ai,v 1.2 2007/03/11 18:42:49 adam Exp $
 
---- include/my_pthread.h.orig	2003-12-14 21:23:47.000000000 +0000
-+++ include/my_pthread.h	2003-12-20 12:09:31.000000000 +0000
-@@ -19,7 +19,13 @@
+--- include/my_pthread.h.orig	2007-03-05 20:21:12.000000000 +0100
++++ include/my_pthread.h
+@@ -18,7 +18,13 @@
  #ifndef _my_pthread_h
  #define _my_pthread_h
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
  #ifndef ETIME
  #define ETIME ETIMEDOUT				/* For FreeBSD */
  #endif
-@@ -301,7 +307,11 @@
+@@ -338,7 +344,11 @@ int sigwait(sigset_t *set, int *sig);
  #endif
  
  #ifndef HAVE_NONPOSIX_SIGWAIT
