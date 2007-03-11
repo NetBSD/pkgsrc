@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2007/03/11 20:50:27 adam Exp $
+# $NetBSD: Makefile,v 1.38 2007/03/11 22:24:18 rillig Exp $
 
 DISTNAME=	gimp-2.3.15
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.3/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.3/ \
@@ -24,9 +25,7 @@ USE_DIRS+=		xdg-1.1
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 
-PKGCONFIG_OVERRIDE=	gimp-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gimpthumb-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gimpui-2.0.pc.in
+PKGCONFIG_OVERRIDE=	gimp.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
