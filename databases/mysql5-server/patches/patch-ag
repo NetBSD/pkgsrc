@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2006/10/14 18:41:34 xtraeme Exp $
+$NetBSD: patch-ag,v 1.6 2007/03/11 18:42:49 adam Exp $
 
---- man/Makefile.in.orig	2006-10-04 13:25:43.000000000 +0200
-+++ man/Makefile.in	2006-10-14 20:17:36.000000000 +0200
-@@ -344,7 +344,7 @@
+--- man/Makefile.in.orig	2007-03-05 20:22:54.000000000 +0100
++++ man/Makefile.in
+@@ -348,7 +348,7 @@ yassl_h_ln_cmd = @yassl_h_ln_cmd@
  yassl_libs = @yassl_libs@
  yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
  zlib_dir = @zlib_dir@
 -man1_MANS = @man1_files@
-+man1_MANS = mysqld.1 mysqld_multi.1
++man1_MANS = mysqld_multi.1
  man8_MANS = @man8_files@
  EXTRA_DIST = $(man1_MANS) $(man8_MANS)
  all: all-am
