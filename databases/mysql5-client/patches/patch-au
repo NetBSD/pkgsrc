@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.1 2006/10/28 07:45:51 schwarz Exp $
+$NetBSD: patch-au,v 1.2 2007/03/11 18:42:29 adam Exp $
 
---- client/mysql.cc.orig	Tue Oct 24 00:24:08 2006
-+++ client/mysql.cc	Mon Oct 23 23:11:25 2006
-@@ -38,7 +38,15 @@
+--- client/mysql.cc.orig	2007-03-05 20:21:21.000000000 +0100
++++ client/mysql.cc
+@@ -37,7 +37,15 @@
  #endif
  #include "my_readline.h"
  #include <signal.h>
@@ -18,7 +18,7 @@ $NetBSD: patch-au,v 1.1 2006/10/28 07:45:51 schwarz Exp $
  
  #if defined(USE_LIBEDIT_INTERFACE) && defined(HAVE_LOCALE_H)
  #include <locale.h>
-@@ -420,10 +428,10 @@
+@@ -438,10 +446,10 @@ int main(int argc,char *argv[])
      ignore_errors=1;				// Don't abort monitor
  
    if (opt_sigint_ignore)
@@ -32,7 +32,7 @@ $NetBSD: patch-au,v 1.1 2006/10/28 07:45:51 schwarz Exp $
  
    /*
      Run in interactive mode like the ingres/postgres monitor
-@@ -495,7 +503,7 @@
+@@ -513,7 +521,7 @@ sig_handler mysql_sigint(int sig)
    char kill_buffer[40];
    MYSQL *kill_mysql= NULL;
  
