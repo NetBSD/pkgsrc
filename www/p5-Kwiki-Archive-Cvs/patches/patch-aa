@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/11 15:57:30 obache Exp $
+
+--- Cvs.pm.orig	2006-04-12 09:50:36.000000000 -0400
++++ Cvs.pm	2006-04-12 09:52:54.000000000 -0400
+@@ -69,9 +69,8 @@
+     my $page = shift;
+     my $rev = shift;
+ 
+-    my $rlog = io("cvs -Q -d ".$self->cvsRoot($page)." log -r$rev ".$page->io." |") or die $!;
++    my $rlog = io("cvs -Q -d ".$self->cvsRoot($page)." log -r $rev ".$page->io." |") or die $!;
+ 
+-    $rlog->utf8 if $self->use_utf8;
+     $self->parse_metadata($rlog->all);
+ }
+ 
+@@ -105,8 +104,6 @@
+ 
+     my $rlog = io("cvs -Q -d ".$self->cvsRoot($page)." log ".$page->io." |") or die $!;
+ 
+-    $rlog->utf8 if $self->use_utf8;
+-
+     my $input = $rlog->all;
+     $input =~ s/
+         \n=+$
+@@ -127,7 +124,7 @@
+     local($/, *CO);
+     open CO, "cvs -Q -d ".$self->cvsRoot($page)." checkout -r$revision -p ".$self->cvsRepository($page)."/".$page->id." |"
+       or die $!;
+-    binmode(CO, ':utf8') if $self->use_utf8;
++    binmode(CO, ':utf8');
+     scalar <CO>;
+ }
+ 
