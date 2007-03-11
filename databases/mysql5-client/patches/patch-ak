@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2005/12/02 08:13:26 xtraeme Exp $
+$NetBSD: patch-ak,v 1.2 2007/03/11 18:42:28 adam Exp $
 
---- mysys/Makefile.in.orig	2005-12-02 08:52:03.000000000 +0100
-+++ mysys/Makefile.in	2005-12-02 08:52:12.000000000 +0100
-@@ -473,7 +473,7 @@
+--- mysys/Makefile.in.orig	2007-03-05 20:22:57.000000000 +0100
++++ mysys/Makefile.in
+@@ -428,7 +428,7 @@ MYSQLBASEdir = $(prefix)
  INCLUDES = @ZLIB_INCLUDES@ -I$(top_builddir)/include \
  			-I$(top_srcdir)/include -I$(srcdir)
  

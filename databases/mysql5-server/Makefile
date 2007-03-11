@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/07 09:13:50 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/03/11 18:42:49 adam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -32,7 +32,7 @@ FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q} \
 MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 BUILD_DEFS+=		MYSQL_DATADIR
-BUILD_DIRS=		${WRKSRC} ${WRKSRC}/man
+BUILD_DIRS=		. man
 
 REPLACE_PERL+=		mysql-test/mysql-test-run.pl
 
@@ -49,17 +49,16 @@ BUILDLINK_DEPMETHOD.readline=build
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
 post-configure:
-	cd ${WRKSRC} && ${CP} -f config.h include/my_config.h
+	cd ${WRKSRC} && cp -f config.h include/my_config.h
 
 post-build:
-	cd ${WRKSRC}/scripts && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
+	cd ${WRKSRC}/scripts && env ${MAKE_ENV} ${MAKE_PROGRAM}	\
 		${MAKE_FLAGS} mysqld_safe mysql_install_db
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysqld_safe ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_install_db ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld_multi.1 ${PREFIX}/${PKGMANDIR}/man1
 	#${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_secure_installation.sh \

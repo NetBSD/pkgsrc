@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2007/03/11 18:42:49 adam Exp $
 
---- mysys/my_gethwaddr.c.orig	2005-10-14 10:21:10.000000000 +0000
+--- mysys/my_gethwaddr.c.orig	2007-03-05 20:21:11.000000000 +0100
 +++ mysys/my_gethwaddr.c
-@@ -31,7 +31,7 @@ static my_bool memcpy_and_test(uchar *to
+@@ -30,7 +30,7 @@ static my_bool memcpy_and_test(uchar *to
    return res;
  }
  

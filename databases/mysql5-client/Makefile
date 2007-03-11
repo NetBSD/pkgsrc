@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/08/06 16:30:40 tron Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/11 18:42:27 adam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
@@ -14,12 +14,13 @@ CONFIGURE_ARGS+=	--enable-thread-safe-client
 UNWRAP_FILES+=		scripts/mysql_config
 INFO_FILES=		# PLIST
 
+INSTALLATION_DIRS+=	share/examples/mysql
+
 post-install:
 	cd ${WRKSRC}; for f in mysql.info mysql.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mysql
 .for f in huge large innodb-heavy-4G small medium
 	${INSTALL_DATA} ${WRKSRC}/support-files/my-${f}.cnf.sh \
 		${PREFIX}/share/examples/mysql/my-${f}.cnf

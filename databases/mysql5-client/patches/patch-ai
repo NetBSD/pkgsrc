@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2005/10/31 09:21:40 xtraeme Exp $
+$NetBSD: patch-ai,v 1.2 2007/03/11 18:42:28 adam Exp $
 
---- client/completion_hash.cc.orig	2005-02-18 01:38:24.000000000 +0100
-+++ client/completion_hash.cc	2005-02-18 01:38:47.000000000 +0100
-@@ -23,6 +23,10 @@
+--- client/completion_hash.cc.orig	2007-03-05 20:21:39.000000000 +0100
++++ client/completion_hash.cc
+@@ -22,6 +22,10 @@
  
  #include <my_global.h>
  #include <m_string.h>
