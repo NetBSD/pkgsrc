@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.7 2006/06/27 23:36:13 hubertf Exp $	*/
+/*	$NetBSD: main.c,v 1.8 2007/03/11 22:05:03 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: main.c,v 1.17 1997/10/08 07:46:23 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.7 2006/06/27 23:36:13 hubertf Exp $");
+__RCSID("$NetBSD: main.c,v 1.8 2007/03/11 22:05:03 joerg Exp $");
 #endif
 #endif
 
@@ -32,7 +32,7 @@ __RCSID("$NetBSD: main.c,v 1.7 2006/06/27 23:36:13 hubertf Exp $");
 #include "lib.h"
 #include "create.h"
 
-static const char Options[] = "B:C:D:EFI:K:L:OP:RS:UVX:b:c:d:f:hi:k:lm:n:p:r:s:t:v";
+static const char Options[] = "B:C:D:EFI:K:L:OP:RS:T:UVb:c:d:f:i:k:lm:n:p:r:s:t:v";
 
 char   *Prefix = NULL;
 char   *Comment = NULL;
@@ -41,10 +41,9 @@ char   *Display = NULL;
 char   *Install = NULL;
 char   *DeInstall = NULL;
 char   *Contents = NULL;
-char   *Require = NULL;
-char   *ExcludeFrom = NULL;
 char   *Mtree = NULL;
 char   *Pkgdeps = NULL;
+char   *BuildPkgdeps = NULL;
 char   *Pkgcfl = NULL;
 char   *BuildVersion = NULL;
 char   *BuildInfo = NULL;
@@ -57,7 +56,6 @@ char    PlayPen[MaxPathSize];
 size_t  PlayPenSize = sizeof(PlayPen);
 int	update_pkgdb = 1;
 int	create_views = 0;
-int     Dereference = 0;
 int     PlistOnly = 0;
 int     RelativeLinks = 0;
 int     ReorderDirs = 0;
@@ -67,12 +65,12 @@ static void
 usage(void)
 {
 	fprintf(stderr,
-	    "usage: pkg_create [-EhlORUVv] [-B build-info-file] [-b build-version-file]\n"
+	    "usage: pkg_create [-ElORUVv] [-B build-info-file] [-b build-version-file]\n"
             "                  [-C cpkgs] [-D displayfile] [-I realprefix] [-i iscript]\n"
             "                  [-K pkg_dbdir] [-k dscript] [-L SrcDir] [-m mtreefile]\n"
             "                  [-n preserve-file] [-P dpkgs] [-p prefix] [-r rscript]\n"
             "                  [-S size-all-file] [-s size-pkg-file] [-t template]\n"
-            "                  [-X excludefile] -c comment -d description -f packlist\n"
+            "                  [-T buildpkgs] -c comment -d description -f packlist\n"
             "                  pkg-name\n");
 	exit(1);
 }
@@ -155,20 +153,8 @@ main(int argc, char **argv)
 			SrcDir = optarg;
 			break;
 
-		case 'r':
-			Require = optarg;
-			break;
-
 		case 't':
 			strlcpy(PlayPen, optarg, sizeof(PlayPen));
-			break;
-
-		case 'X':
-			ExcludeFrom = optarg;
-			break;
-
-		case 'h':
-			Dereference = 1;
 			break;
 
 		case 'D':
@@ -185,6 +171,10 @@ main(int argc, char **argv)
 
 		case 'P':
 			Pkgdeps = optarg;
+			break;
+
+		case 'T':
+			BuildPkgdeps = optarg;
 			break;
 
 		case 'C':

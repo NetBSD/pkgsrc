@@ -1,16 +1,15 @@
 PKG_CREATE(1)           NetBSD General Commands Manual           PKG_CREATE(1)
 
 NNAAMMEE
-     ppkkgg__ccrreeaattee - a utility for creating software package distributions
+     ppkkgg__ccrreeaattee -- a utility for creating software package distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ccrreeaattee [--EEhhllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e]
+     ppkkgg__ccrreeaattee [--EEllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e]
                 [--CC _c_p_k_g_s] [--DD _d_i_s_p_l_a_y_f_i_l_e] [--II _r_e_a_l_p_r_e_f_i_x] [--ii _i_s_c_r_i_p_t]
                 [--KK _p_k_g___d_b_d_i_r] [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r] [--mm _m_t_r_e_e_f_i_l_e]
-                [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--PP _d_p_k_g_s] [--pp _p_r_e_f_i_x] [--rr _r_s_c_r_i_p_t]
-                [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--tt _t_e_m_p_l_a_t_e]
-                [--XX _e_x_c_l_u_d_e_f_i_l_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n --ff _p_a_c_k_l_i_s_t
-                _p_k_g_-_n_a_m_e
+                [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--PP _d_p_k_g_s] [--TT _b_u_i_l_d_p_k_g_s] [--pp _p_r_e_f_i_x]
+                [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--tt _t_e_m_p_l_a_t_e] --cc _c_o_m_m_e_n_t
+                --dd _d_e_s_c_r_i_p_t_i_o_n --ff _p_a_c_k_l_i_s_t _p_k_g_-_n_a_m_e
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__ccrreeaattee command is used to create packages that will subsequently
@@ -65,9 +64,6 @@ OOPPTTIIOONNSS
      --ff _p_a_c_k_l_i_s_t
              Fetch (packing list) for package from the file _p_a_c_k_l_i_s_t or ssttddiinn
              if _p_a_c_k_l_i_s_t is a -- (dash).
-
-     --hh      Force tar to follow symbolic links, so that the files they point
-             to are dumped, rather than the links themselves.
 
      --II _r_e_a_l_p_r_e_f_i_x
              Provide the real prefix, as opposed to the staging prefix, for
@@ -124,6 +120,13 @@ OOPPTTIIOONNSS
              to in the _d_p_k_g_s list will be added to the packing list in the
              form of @@bbllddddeepp directives.
 
+     --TT _b_u_i_l_d_p_k_g_s
+             This is assumed to be a whitespace separated list of package
+             names.  The exact versions of the packages referred to in the
+             _b_u_i_l_d_p_k_g_s list will be added to the packing list in the form of
+             @@bbllddddeepp directives.  This directives are stored after those cre-
+             ated by the --PP option.
+
      --pp _p_r_e_f_i_x
              Set _p_r_e_f_i_x as the initial directory (base) to start from in
              selecting files for the package.
@@ -131,13 +134,6 @@ OOPPTTIIOONNSS
      --RR      Re-order any directories in the pkg/PLIST file into reverse
              alphabetic order, so that child directories will automatically be
              removed before parent directories.
-
-     --rr _r_s_c_r_i_p_t
-             Set _r_s_c_r_i_p_t to be the (requirements) procedure for the package.
-             This can be any executable program (or shell script).  It will be
-             invoked automatically at installation/deinstallation time to
-             determine whether or not installation/deinstallation should pro-
-             ceed.
 
      --SS _s_i_z_e_-_a_l_l_-_f_i_l_e
              Store the given file for later querying with the pkg_info(1) --SS
@@ -164,11 +160,6 @@ OOPPTTIIOONNSS
      --VV      Print version number and exit.
 
      --vv      Turn on verbose output.
-
-     --XX _e_x_c_l_u_d_e_f_i_l_e
-             Pass _e_x_c_l_u_d_e_f_i_l_e as a ----eexxcclluuddee--ffrroomm argument to ttaarr when creat-
-             ing final package.  See tar(1) for further information on using
-             this flag.
 
 PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
      The (packing list) format (see --ff) is fairly simple, being nothing more
@@ -310,4 +301,4 @@ BBUUGGSS
      invocations due to exec argument-space limitations (this depends on the
      value returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-NetBSD 2.0                     September 2, 2003                    NetBSD 2.0
+NetBSD 4.0                       March 8, 2007                      NetBSD 4.0

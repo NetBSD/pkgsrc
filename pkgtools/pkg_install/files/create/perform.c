@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.10 2005/11/22 15:44:59 ben Exp $	*/
+/*	$NetBSD: perform.c,v 1.11 2007/03/11 22:05:03 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.10 2005/11/22 15:44:59 ben Exp $");
+__RCSID("$NetBSD: perform.c,v 1.11 2007/03/11 22:05:03 joerg Exp $");
 #endif
 #endif
 
@@ -83,12 +83,6 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 		args[nargs++] = "bzip2";
 	} else if (strchr(suffix, 'z'))/* Compress/gzip? */
 		args[nargs++] = "-z";
-	if (Dereference)
-		args[nargs++] = "-h";
-	if (ExcludeFrom) {
-		args[nargs++] = "-X";
-		args[nargs++] = ExcludeFrom;
-	}
 	args[nargs++] = "-T";	/* Take filenames from file instead of args. */
 	args[nargs++] = "-";	/* Use stdin for the file. */
 	args[nargs] = NULL;
@@ -105,9 +99,6 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	}
 	if (DeInstall) {
 		fprintf(totar, "%s\n", DEINSTALL_FNAME);
-	}
-	if (Require) {
-		fprintf(totar, "%s\n", REQUIRE_FNAME);
 	}
 	if (Display) {
 		fprintf(totar, "%s\n", DISPLAY_FNAME);
@@ -273,6 +264,27 @@ pkg_perform(lpkg_head_t *pkgs)
 			printf(".\n");
 	}
 
+	/*
+	 * Put the build dependencies after the dependencies.
+	 * This works due to the evaluation order in pkg_add.
+	 */
+	if (BuildPkgdeps) {
+		if (Verbose && !PlistOnly)
+			printf("Registering build depends:");
+		while (BuildPkgdeps) {
+			cp = strsep(&BuildPkgdeps, " \t\n");
+			if (*cp) {
+				if (findmatchingname(_pkgdb_getPKGDB_DIR(), cp, note_whats_installed, installed) > 0) {
+					add_plist(&plist, PLIST_BLDDEP, installed);
+					if (Verbose && !PlistOnly)
+						printf(" %s", cp);
+				}
+			}
+		}
+		if (Verbose && !PlistOnly)
+			printf(".\n");
+	}
+
 	/* Put the conflicts directly after the dependencies, if any */
 	if (Pkgcfl) {
 		if (Verbose && !PlistOnly)
@@ -346,11 +358,6 @@ pkg_perform(lpkg_head_t *pkgs)
 		copy_file(Home, DeInstall, DEINSTALL_FNAME);
 		add_plist(&plist, PLIST_IGNORE, NULL);
 		add_plist(&plist, PLIST_FILE, DEINSTALL_FNAME);
-	}
-	if (Require) {
-		copy_file(Home, Require, REQUIRE_FNAME);
-		add_plist(&plist, PLIST_IGNORE, NULL);
-		add_plist(&plist, PLIST_FILE, REQUIRE_FNAME);
 	}
 	if (Display) {
 		copy_file(Home, Display, DISPLAY_FNAME);
