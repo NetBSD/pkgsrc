@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/02/22 19:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2007/03/11 21:01:05 adam Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -22,6 +22,7 @@ USE_TOOLS+=		msgfmt
 # that you need -lintl
 BROKEN_GETTEXT_DETECTION=	yes
 
+CONFIGURE_ARGS+=	--disable-neon-version-check
 CONFIGURE_ARGS+=	--without-apache
 CONFIGURE_ARGS+=	--without-apxs
 
