@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/03/06 21:53:56 rmind Exp $
+# $NetBSD: options.mk,v 1.3 2007/03/11 01:37:56 rmind Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sysbench
 PKG_SUPPORTED_OPTIONS+= mysql pgsql doc
@@ -20,19 +20,6 @@ CONFIGURE_ARGS+=	--without-pgsql
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
-PLIST_SUBST+=	DOC=
 .  include "../../textproc/libxslt/buildlink3.mk"
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-.else
-PLIST_SUBST+=	DOC="@comment "
-.endif
-
-do-install:
-.if !empty(PKG_OPTIONS:Mdoc)
-	${PREFIX}/bin/xsltproc -o ${WRKSRC}/doc/manual.html \
-		${PREFIX}/share/xsl/docbook/xhtml/docbook.xsl \
-		${WRKSRC}/doc/manual.xml
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sysbench
-	${INSTALL_DATA} ${WRKSRC}/doc/manual.xml \
-		${PREFIX}/share/doc/sysbench
 .endif
