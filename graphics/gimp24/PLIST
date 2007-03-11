@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/02/05 19:49:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/03/11 20:50:27 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 ${REMOTE}bin/gimp-remote-2.3
@@ -198,6 +198,7 @@ include/gimp-2.0/libgimpwidgets/gimpresolutionentry.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
 include/gimp-2.0/libgimpwidgets/gimpstock.h
+include/gimp-2.0/libgimpwidgets/gimpstringcombobox.h
 include/gimp-2.0/libgimpwidgets/gimpunitmenu.h
 include/gimp-2.0/libgimpwidgets/gimpwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpwidgetsenums.h
@@ -912,13 +913,11 @@ share/gimp/2.0/scripts/starscape-logo.scm
 share/gimp/2.0/scripts/swirltile.scm
 share/gimp/2.0/scripts/swirly-pattern.scm
 share/gimp/2.0/scripts/t-o-p-logo.scm
-share/gimp/2.0/scripts/test-sphere.scm
 share/gimp/2.0/scripts/text-circle.scm
 share/gimp/2.0/scripts/textured-logo.scm
 share/gimp/2.0/scripts/tileblur.scm
 share/gimp/2.0/scripts/title-header.scm
 share/gimp/2.0/scripts/truchet.scm
-share/gimp/2.0/scripts/ts-helloworld.scm
 share/gimp/2.0/scripts/unsharp-mask.scm
 share/gimp/2.0/scripts/waves-anim.scm
 share/gimp/2.0/scripts/weave.scm
@@ -1242,6 +1241,7 @@ share/gtk-doc/html/libgimpwidgets/GimpPreviewArea.html
 share/gtk-doc/html/libgimpwidgets/GimpRatioEntry.html
 share/gtk-doc/html/libgimpwidgets/GimpScrolledPreview.html
 share/gtk-doc/html/libgimpwidgets/GimpSizeEntry.html
+share/gtk-doc/html/libgimpwidgets/GimpStringComboBox.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitMenu.html
 share/gtk-doc/html/libgimpwidgets/gimp-browser.png
 share/gtk-doc/html/libgimpwidgets/gimp-button.png
@@ -1265,6 +1265,7 @@ share/gtk-doc/html/libgimpwidgets/gimp-path-editor.png
 share/gtk-doc/html/libgimpwidgets/gimp-pick-button.png
 share/gtk-doc/html/libgimpwidgets/gimp-preview-area.png
 share/gtk-doc/html/libgimpwidgets/gimp-ratio-entry.png
+share/gtk-doc/html/libgimpwidgets/gimp-string-combo-box.png
 share/gtk-doc/html/libgimpwidgets/gimp-unit-menu.png
 share/gtk-doc/html/libgimpwidgets/home.png
 share/gtk-doc/html/libgimpwidgets/index.html

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2007/02/05 19:49:06 adam Exp $
+$NetBSD: patch-ae,v 1.5 2007/03/11 20:50:28 adam Exp $
 
---- plug-ins/common/png.c.orig	2007-01-23 11:16:01.000000000 +0100
+--- plug-ins/common/png.c.orig	2007-03-08 10:53:54.000000000 +0100
 +++ plug-ins/common/png.c
-@@ -1019,8 +1019,6 @@ load_image (const gchar *filename,
+@@ -1094,8 +1094,6 @@ load_image (const gchar *filename,
  
    g_free (pixel);
    g_free (pixels);
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.4 2007/02/05 19:49:06 adam Exp $
  
    fclose (fp);
  
-@@ -1478,9 +1476,6 @@ save_image (const gchar *filename,
+@@ -1553,9 +1551,6 @@ save_image (const gchar *filename,
        g_free (text);
      }
  
