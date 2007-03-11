@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.43 2006/07/20 11:29:48 gson Exp $	*/
+/*	$NetBSD: perform.c,v 1.44 2007/03/11 22:05:03 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.43 2006/07/20 11:29:48 gson Exp $");
+__RCSID("$NetBSD: perform.c,v 1.44 2007/03/11 22:05:03 joerg Exp $");
 #endif
 #endif
 
@@ -825,6 +825,7 @@ ignore_replace_depends_check:
 
 	/* Look for the requirements file */
 	if (fexists(REQUIRE_FNAME)) {
+		warnx("package %s uses obsoleted require scripts", PkgName);
 		(void) fexec(CHMOD_CMD, "+x", REQUIRE_FNAME, NULL);	/* be sure */
 		if (Verbose)
 			printf("Running requirements file first for %s.\n", PkgName);
