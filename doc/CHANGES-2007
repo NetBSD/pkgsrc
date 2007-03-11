@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.580 2007/03/11 20:51:30 adam Exp $
+$NetBSD: CHANGES-2007,v 1.581 2007/03/11 21:05:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/mysql5-client to 5.0.37 [adam 2007-03-11]
 	Updated databases/mysql5-server to 5.0.37 [adam 2007-03-11]
 	Updated graphics/gimp24 to 2.3.15 [adam 2007-03-11]
+	Updated www/neon to 0.26.3 [adam 2007-03-11]
