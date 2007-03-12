@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/12 11:51:38 abs Exp $
+
+SHA1 (Crypt-GeneratePassword-0.03.tar.gz) = 17893281316072e93d69d340c423cee46ea99766
+RMD160 (Crypt-GeneratePassword-0.03.tar.gz) = bc858d88c0643bf10dd020d9e154f3ad2231543c
+Size (Crypt-GeneratePassword-0.03.tar.gz) = 193105 bytes

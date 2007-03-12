@@ -1,0 +1,9 @@
+Crypt::GeneratePassword generates random passwords that are (more
+or less) pronounceable. Unlike Crypt::RandPasswd, it doesn't use
+the FIPS-181 NIST standard, which is proven to be insecure. It does
+use a similar interface, so it should be a drop-in replacement in
+most cases.
+
+If you want to use passwords from a different language than english,
+you can use one of the packaged alternate unit tables or generate
+your own.
