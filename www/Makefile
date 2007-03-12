@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2007/03/11 16:00:55 obache Exp $
+# $NetBSD: Makefile,v 1.500 2007/03/12 12:44:50 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -235,6 +235,7 @@ SUBDIR+=	p5-Kwiki-Edit-RequireUserName
 SUBDIR+=	p5-Kwiki-Favorites
 SUBDIR+=	p5-Kwiki-HtmlBlocks
 SUBDIR+=	p5-Kwiki-Icons-Gnome
+SUBDIR+=	p5-Kwiki-ModPerl
 SUBDIR+=	p5-Kwiki-NewPage
 SUBDIR+=	p5-Kwiki-Notify-Mail
 SUBDIR+=	p5-Kwiki-PagePrivacy
