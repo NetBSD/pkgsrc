@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2007/03/04 13:19:25 hira Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/12 10:21:18 hira Exp $
 #
 
 OO_VER=			2.1.0
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -23,7 +23,6 @@ HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 2)
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
@@ -39,7 +38,7 @@ GCC_REQD+=		3.0
 USE_PKGSRC_GCC=		YES
 .endif
 
-USE_TOOLS+=		gmake imake perl pkg-config tar
+USE_TOOLS+=		bash gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
@@ -52,14 +51,17 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
+CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--disable-ldap
+CONFIGURE_ARGS+=	--with-system-freetype
 
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
 
 # XXX: Error in OOo internal libsndfile.
-CONFIGURE_ARGS+=	--disable-pasf
+CONFIGURE_ARGS+=	--disable-pasf --without-nas
 
 # Disable Java.
 CONFIGURE_ARGS+=	--without-java --disable-odk --disable-gcjaot
@@ -92,7 +94,7 @@ post-extract:
 		${WRKSRC}/bridges/inc/bridges/cpp_uno/
 
 do-build:
-	${_ULIMIT_CMD} tcsh -c "setenv PTHREAD_DIAGASSERT Ael && cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set && dmake build_all"
+	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "export PTHREAD_DIAGASSERT=Ael && cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
 
 post-build:
 	cd ${WRKDIR} &&				\

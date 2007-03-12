@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2007/03/01 16:13:21 hira Exp $
+# $NetBSD: options.mk,v 1.6 2007/03/12 10:21:20 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
-PKG_SUPPORTED_OPTIONS=		cups gnome-vfs2 gtk2 # kde
+PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 # kde
 PKG_OPTIONS_REQUIRED_GROUPS=	browser lang
 PKG_OPTIONS_GROUP.browser=	firefox firefox-gtk1 seamonkey seamonkey-gtk1
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
@@ -15,6 +15,7 @@ OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
 PKG_OPTIONS_GROUP.lang+=	lang-${l}
 .endfor
 PKG_SUGGESTED_OPTIONS=		gtk2 lang-en-US firefox
+PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -41,7 +42,6 @@ CONFIGURE_ARGS+=	--with-system-mozilla
 CONFIGURE_ARGS+=	--with-system-mozilla
 .endif
 
-# Not tested.
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
@@ -49,13 +49,13 @@ CONFIGURE_ARGS+=	--enable-cups
 CONFIGURE_ARGS+=	--disable-cups
 .endif
 
-.if !empty(PKG_OPTIONS:Mgnome-vfs2)
+.if !empty(PKG_OPTIONS:Mgnome)
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gnome-vfs
+CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 .else
-CONFIGURE_ARGS+=	--disable-gnome-vfs
+CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	--disable-gtk
 # XXX: Not yet.
 .if !empty(PKG_OPTIONS:Mkde)
 .include "../../x11/kdelibs3/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-kde
+CONFIGURE_ARGS+=	--enable-kde --enable-kdeab
 .else
-CONFIGURE_ARGS+=	--disable-kde
+CONFIGURE_ARGS+=	--disable-kde --disable-kdeab
 .endif
