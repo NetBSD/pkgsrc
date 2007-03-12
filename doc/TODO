@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6094 2007/03/12 06:51:54 wiz Exp $
+$NetBSD: TODO,v 1.6095 2007/03/12 06:57:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -867,7 +867,6 @@ Suggested package updates
 	o pysol-4.82
 	o python-2.5
 	o python24-2.4.4
-	o pytraffic-2.5.4
 	o qDecoder-7.1.1
 	o qemu-0.9.0
 	o qt1-1.45
