@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2007/03/04 13:11:18 hira Exp $
+$NetBSD: distinfo,v 1.6 2007/03/12 10:21:18 hira Exp $
 
 SHA1 (openoffice-2.1.0/OOo_2.1.0_src.tar.bz2) = 9513216ae71267addf3625f5a41c3a43564da3bc
 RMD160 (openoffice-2.1.0/OOo_2.1.0_src.tar.bz2) = 11256b125fdc412480d90983b0f80f35d4833e9a
@@ -15,7 +15,7 @@ Size (openoffice-2.1.0/OOo_2.1.0_src_system.tar.bz2) = 29761970 bytes
 SHA1 (openoffice-2.1.0/bridge.h) = c6db3e96432f27f15a753a65c6bf2e97e64f566a
 RMD160 (openoffice-2.1.0/bridge.h) = 191fb56e56df85d49651988290d20db914670951
 Size (openoffice-2.1.0/bridge.h) = 6734 bytes
-SHA1 (patch-aa) = bafba12d0421c5119cdf7122e8430af93dd41dac
+SHA1 (patch-aa) = 352774b0e509f41787573594b8f8f8bbe72d6824
 SHA1 (patch-ac) = ed6d84d40c3543eed754d74a5e65caf137f31c3d
 SHA1 (patch-ad) = 10d348282a4e5e6907e4e2cd828997f4549be58c
 SHA1 (patch-ae) = eec39a887ad19d3a8ff0a26fab7ea6981915eadd
