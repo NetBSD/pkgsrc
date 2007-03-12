@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
+$NetBSD: patch-aa,v 1.3 2007/03/12 10:21:20 hira Exp $
 
---- sal/util/sal_netbsd.map.orig	2007-02-18 01:17:57.000000000 +0900
-+++ sal/util/sal_netbsd.map	2007-02-18 01:46:52.000000000 +0900
-@@ -0,0 +1,569 @@
+--- sal/util/sal_netbsd.map.orig	2007-03-10 18:12:29.000000000 +0900
++++ sal/util/sal_netbsd.map	2007-03-10 18:24:52.000000000 +0900
+@@ -0,0 +1,568 @@
 +UDK_3_0_0 {
 +    global:
-+        GerVersionInfo;
++        GetVersionInfo;
 +        osl_acceptConnectionOnSocket;
 +        osl_acceptPipe;
 +        osl_acquireSocket;
@@ -68,7 +68,6 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        osl_getFamilyOfSocketAddr;
 +        osl_getFileStatus;
 +        osl_getFileURLFromSystemPath;
-+        osl_getFunctionSymbol;
 +        osl_getGlobalMutex;
 +        osl_getHomeDir;
 +        osl_getHostnameOfHostAddr;
@@ -145,7 +144,6 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        osl_sendPipe;
 +        osl_sendSocket;
 +        osl_sendToSocket;
-+        osl_setCommandArgs;
 +        osl_setCondition;
 +        osl_setFileAttributes;
 +        osl_setFileTime;
@@ -257,7 +255,6 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        rtl_stringbuffer_insert;
 +        rtl_stringbuffer_newFromStr_WithLength;
 +        rtl_stringbuffer_newFromStringBuffer;
-+        rtl_ustr_asciil_reverseEquals_WithLength;
 +        rtl_ustr_compare;
 +        rtl_ustr_compare_WithLength;
 +        rtl_ustr_shortenedCompare_WithLength;
@@ -494,12 +491,12 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        rtl_tres_destroy;
 +		osl_getProcessLocale;
 +		osl_setProcessLocale;
-+        getpwnam_r;
-+        getpwuid_r;
-+        localtime_r;
-+        gmtime_r;
-+        gethostbyname_r;
-+        readdir_r;
++	getpwnam_r;
++	getpwuid_r;
++	localtime_r;
++	gmtime_r;
++	gethostbyname_r;
++	readdir_r;
 +    local:
 +        *;
 +};
@@ -508,7 +505,7 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +    global:
 +		osl_getTempDirURL;
 +        osl_createTempFile;
-+        
++
 +        rtl_math_doubleToString;
 +        rtl_math_doubleToUString;
 +        rtl_math_pow10Exp;
@@ -520,13 +517,14 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        osl_joinProcessWithTimeout;
 +
 +        rtl_getTextEncodingFromWindowsCodePage;
-+        rtl_getWindowsCodePageFromTextEncoding;				
++        rtl_getWindowsCodePageFromTextEncoding;
 +} UDK_3_0_0;
 +
 +UDK_3.2 {
 +    global:
-+       osl_syncFile;
++		osl_syncFile;
 +} UDK_3.1;
++
 +UDK_3.3 {
 +    global:
 +        osl_createDirectoryPath;
@@ -543,25 +541,25 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        rtl_uStringbuffer_insertUtf32;
 +        rtl_ustr_ascii_compareIgnoreAsciiCase_WithLengths;
 +        rtl_logfile_longTrace;
-+               rtl_ustr_asciil_reverseEquals_WithLength;
++		rtl_ustr_asciil_reverseEquals_WithLength;
 +} UDK_3.2;
 +
 +UDK_3.4 {
 +    global:
-+               osl_setErrorReporting;
++		osl_setErrorReporting;
 +} UDK_3.3;
 +
 +UDK_3.5 {
 +    global:
-+               rtl_arena_create;
-+               rtl_arena_destroy;
-+               rtl_arena_alloc;
-+               rtl_arena_free;
++		rtl_arena_create;
++		rtl_arena_destroy;
++		rtl_arena_alloc;
++		rtl_arena_free;
 +
-+               rtl_cache_create;
-+               rtl_cache_destroy;
-+               rtl_cache_alloc;
-+               rtl_cache_free;
++		rtl_cache_create;
++		rtl_cache_destroy;
++		rtl_cache_alloc;
++		rtl_cache_free;
 +} UDK_3.4;
 +
 +PRIVATE_1.0 {
@@ -572,3 +570,4 @@ $NetBSD: patch-aa,v 1.2 2007/03/04 13:11:18 hira Exp $
 +        osl_detail_ObjectRegistry_revokeObject;
 +        osl_detail_ObjectRegistry_getMutex;
 +};
++
