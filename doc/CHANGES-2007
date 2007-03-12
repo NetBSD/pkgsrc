@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.585 2007/03/12 11:53:50 abs Exp $
+$NetBSD: CHANGES-2007,v 1.586 2007/03/12 12:43:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1127,3 +1127,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/cmake to 2.4.6nb3 [wiz 2007-03-12]
 	Updated misc/openoffice2 to 2.1.0nb3 [hira 2007-03-12]
 	Added security/p5-Crypt-GeneratePassword version 0.03 [abs 2007-03-12]
+	Added www/p5-Kwiki-ModPerl version 0.09 [obache 2007-03-12]
