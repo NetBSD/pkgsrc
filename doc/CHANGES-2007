@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.586 2007/03/12 12:43:31 obache Exp $
+$NetBSD: CHANGES-2007,v 1.587 2007/03/12 12:44:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1128,3 +1128,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice2 to 2.1.0nb3 [hira 2007-03-12]
 	Added security/p5-Crypt-GeneratePassword version 0.03 [abs 2007-03-12]
 	Added www/p5-Kwiki-ModPerl version 0.09 [obache 2007-03-12]
+	Added chat/xchat-perl version 2.8.0 [tron 2007-03-12]
