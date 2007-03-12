@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2006/10/20 22:41:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.121 2007/03/12 12:43:20 tron Exp $
 #
 
 COMMENT=	Communication programs
@@ -95,6 +95,7 @@ SUBDIR+=	vicq
 SUBDIR+=	weechat
 SUBDIR+=	xaric
 SUBDIR+=	xchat
+SUBDIR+=	xchat-perl
 SUBDIR+=	xchat-python
 SUBDIR+=	xchat-systray-integration
 SUBDIR+=	ymessenger
