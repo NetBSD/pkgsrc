@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/02/26 18:23:50 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/12 22:52:21 rmind Exp $
 
-DISTNAME=	geany-0.10
+DISTNAME=	geany-0.10.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geany/}
 
