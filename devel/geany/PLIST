@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/07 19:32:03 rmind Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/03/12 22:52:21 rmind Exp $
 bin/geany
 man/man1/geany.1
 share/applications/geany.desktop
@@ -30,7 +30,6 @@ share/doc/geany/html/ch03s06.html
 share/doc/geany/html/ch03s07.html
 share/doc/geany/html/ch03s08.html
 share/doc/geany/html/ch03s09.html
-share/doc/geany/html/ch03s10.html
 share/doc/geany/html/ch04.html
 share/doc/geany/html/ch04s02.html
 share/doc/geany/html/ch04s03.html
@@ -88,6 +87,7 @@ share/locale/ca/LC_MESSAGES/geany.mo
 share/locale/cs/LC_MESSAGES/geany.mo
 share/locale/de/LC_MESSAGES/geany.mo
 share/locale/es/LC_MESSAGES/geany.mo
+share/locale/fi/LC_MESSAGES/geany.mo
 share/locale/fr/LC_MESSAGES/geany.mo
 share/locale/hu/LC_MESSAGES/geany.mo
 share/locale/it/LC_MESSAGES/geany.mo
@@ -100,7 +100,6 @@ share/locale/zh_CN/LC_MESSAGES/geany.mo
 share/locale/zh_TW/LC_MESSAGES/geany.mo
 share/pixmaps/geany.ico
 share/pixmaps/geany.png
-@dirrm share/pixmaps/backgrounds/
 @dirrm share/pixmaps
 @dirrm share/geany
 @dirrm share/doc/geany/html/images
