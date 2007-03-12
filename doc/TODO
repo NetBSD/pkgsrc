@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6093 2007/03/11 21:05:22 adam Exp $
+$NetBSD: TODO,v 1.6094 2007/03/12 06:51:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,7 @@ Suggested package updates
 	o icepref-2.3
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
-	o imap-uw-2006e
+	o imap-uw-2006f
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.197
 	o instiki-0.10.2
@@ -678,6 +678,7 @@ Suggested package updates
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a3
+	o nss-4.6.5
 	o nss_ldap-254
 	o ntp-4.2.4
 	o nulib2-210
@@ -713,6 +714,7 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.001
 	o p5-DBIx-ContextualFetch-1.03
+	o p5-DBIx-SearchBuilder-1.48
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
@@ -722,6 +724,7 @@ Suggested package updates
 	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
+	o p5-IO-Socket-SSL-1.03
 	o p5-Ima-DBI-0.34
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
@@ -735,6 +738,7 @@ Suggested package updates
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-PV-1.5
+	o p5-Params-Validate-0.88
 	o p5-PerlIO-via-symlink-0.03
 	o p5-PerlMagick-6.3.2.9
 	o p5-Pod-POM-0.15
@@ -744,6 +748,7 @@ Suggested package updates
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.18
+	o p5-Test-ClassAPI-1.04
 	o p5-Test-Harness-2.46
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2005.0824
@@ -1007,6 +1012,7 @@ Suggested package updates
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03
+	o vice-1.21
 	o vifm-0.3a
 	o vino-2.16.0
 	o visual-regexp-3.1
