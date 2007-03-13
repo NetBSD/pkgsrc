@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.389 2007/02/18 02:16:54 wiz Exp $
+# $NetBSD: Makefile,v 1.390 2007/03/13 17:40:26 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -177,6 +177,7 @@ SUBDIR+=	osname
 SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-NCopy
 SUBDIR+=	p5-File-Remove
+SUBDIR+=	p5-GTop
 SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Parse-Syslog
 SUBDIR+=	p5-Sys-CpuLoad
