@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/01/26 04:13:34 markd Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/13 09:53:46 drochner Exp $
 #
 
-DISTNAME=		kphotoalbum-2.2
-PKGREVISION=		2
+DISTNAME=		kphotoalbum-3.0
 CATEGORIES=		graphics
 MASTER_SITES=		http://ktown.kde.org/kphotoalbum/download/
 
@@ -22,6 +21,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
