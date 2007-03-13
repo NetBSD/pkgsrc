@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/01/17 23:47:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2007/03/13 10:07:03 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DIGIKAM_BUILDLINK3_MK:=	${DIGIKAM_BUILDLINK3_MK}+
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.digikam?=	../../graphics/digikam
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../graphics/libkexif/buildlink3.mk"
+.include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
