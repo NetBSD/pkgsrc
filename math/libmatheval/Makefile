@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/07/10 11:16:24 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/13 10:51:42 drochner Exp $
 #
 
-DISTNAME=		libmatheval-1.1.3
+DISTNAME=		libmatheval-1.1.4
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GNU:=libmatheval/}
 
@@ -13,6 +13,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
+INFO_FILES=		yes
+PKGCONFIG_OVERRIDE=	libmatheval.pc.in
 
 .include "../../devel/flex/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
