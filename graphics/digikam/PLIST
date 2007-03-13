@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/01/26 04:13:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/03/13 10:07:03 drochner Exp $
 bin/digikam
 bin/digikamdcraw
 bin/digitaglinktree
@@ -46,11 +46,11 @@ include/digikam/rawdecodingsettings.h
 include/digikam/sidebar.h
 include/digikam/squeezedcombobox.h
 include/digikam/thumbbar.h
+include/digikam/whitebalance.h
 include/digikam_export.h
 lib/kde3/digikamimageplugin_core.la
 lib/kde3/kio_digikamalbums.la
 lib/kde3/kio_digikamdates.la
-lib/kde3/kio_digikampreview.la
 lib/kde3/kio_digikamsearch.la
 lib/kde3/kio_digikamtags.la
 lib/kde3/kio_digikamthumbnail.la
@@ -95,40 +95,25 @@ share/kde/apps/digikam/about/main.html
 share/kde/apps/digikam/about/top-left.png
 share/kde/apps/digikam/about/top-middle.png
 share/kde/apps/digikam/about/top-right-digikam.png
-share/kde/apps/digikam/data/autolevels.png
 share/kde/apps/digikam/data/bothhorz.png
 share/kde/apps/digikam/data/bothvert.png
-share/kde/apps/digikam/data/browntone.png
-share/kde/apps/digikam/data/bwgreen.png
-share/kde/apps/digikam/data/bworange.png
-share/kde/apps/digikam/data/bwred.png
-share/kde/apps/digikam/data/bwyellow.png
 share/kde/apps/digikam/data/centerheight.png
 share/kde/apps/digikam/data/centerwidth.png
-share/kde/apps/digikam/data/coldtone.png
 share/kde/apps/digikam/data/curvefree.png
 share/kde/apps/digikam/data/curvemooth.png
-share/kde/apps/digikam/data/digikamlogo.png
 share/kde/apps/digikam/data/duplicatebothhorz.png
 share/kde/apps/digikam/data/duplicatebothvert.png
-share/kde/apps/digikam/data/equalize.png
-share/kde/apps/digikam/data/exiv2logo.png
-share/kde/apps/digikam/data/gphotologo.png
 share/kde/apps/digikam/data/histogram-lin.png
 share/kde/apps/digikam/data/histogram-log.png
-share/kde/apps/digikam/data/image-broken.png
 share/kde/apps/digikam/data/image-full.png
 share/kde/apps/digikam/data/image-selection.png
-share/kde/apps/digikam/data/lcmslogo.png
+share/kde/apps/digikam/data/logo-digikam.png
+share/kde/apps/digikam/data/logo-exiv2.png
+share/kde/apps/digikam/data/logo-gphoto.png
+share/kde/apps/digikam/data/logo-lcms.png
 share/kde/apps/digikam/data/menusidepixmap.png
-share/kde/apps/digikam/data/neutralbw.png
-share/kde/apps/digikam/data/normalize.png
 share/kde/apps/digikam/data/original.png
-share/kde/apps/digikam/data/platinum.png
 share/kde/apps/digikam/data/rating.png
-share/kde/apps/digikam/data/selenium.png
-share/kde/apps/digikam/data/sepia.png
-share/kde/apps/digikam/data/stretchcontrast.png
 share/kde/apps/digikam/data/target.png
 share/kde/apps/digikam/data/togglemouseover.png
 share/kde/apps/digikam/data/worldmap.jpg
@@ -188,6 +173,7 @@ share/kde/apps/digikam/icons/hicolor/128x128/actions/resize_image.png
 share/kde/apps/digikam/icons/hicolor/128x128/actions/sharpenimage.png
 share/kde/apps/digikam/icons/hicolor/128x128/actions/slideshow.png
 share/kde/apps/digikam/icons/hicolor/128x128/actions/viewimage.png
+share/kde/apps/digikam/icons/hicolor/128x128/apps/dcraw.png
 share/kde/apps/digikam/icons/hicolor/128x128/apps/digikam.png
 share/kde/apps/digikam/icons/hicolor/16x16/actions/addimagefolder.png
 share/kde/apps/digikam/icons/hicolor/16x16/actions/adjusthsl.png
@@ -267,12 +253,14 @@ share/kde/apps/digikam/icons/hicolor/32x32/actions/histogram.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/imagecomment.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/importfolders2albums.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/invertimage.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/overexposure.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/ratiocrop.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/redeyes.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/resize_image.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/sharpenimage.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/slideshow.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-addressbook.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-assigned.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-delete.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-events.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-folder.png
@@ -283,6 +271,7 @@ share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-properties.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-recents.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-reset.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/underexposure.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/viewimage.png
 share/kde/apps/digikam/icons/hicolor/32x32/apps/digikam.png
 share/kde/apps/digikam/icons/hicolor/48x48/actions/addimagefolder.png
@@ -397,6 +386,7 @@ share/kde/apps/showfoto/icons/hicolor/128x128/actions/flip.png
 share/kde/apps/showfoto/icons/hicolor/128x128/actions/histogram.png
 share/kde/apps/showfoto/icons/hicolor/128x128/actions/resize_image.png
 share/kde/apps/showfoto/icons/hicolor/128x128/actions/slideshow.png
+share/kde/apps/showfoto/icons/hicolor/128x128/apps/dcraw.png
 share/kde/apps/showfoto/icons/hicolor/128x128/apps/showfoto.png
 share/kde/apps/showfoto/icons/hicolor/16x16/actions/flip.png
 share/kde/apps/showfoto/icons/hicolor/16x16/actions/histogram.png
@@ -436,7 +426,6 @@ share/kde/apps/showfoto/showfotoui.rc
 share/kde/services/digikamalbums.protocol
 share/kde/services/digikamdates.protocol
 share/kde/services/digikamimageplugin_core.desktop
-share/kde/services/digikampreview.protocol
 share/kde/services/digikamsearch.protocol
 share/kde/services/digikamtags.protocol
 share/kde/services/digikamthumbnail.protocol
@@ -453,6 +442,7 @@ share/locale/el/LC_MESSAGES/digikam.mo
 share/locale/en_GB/LC_MESSAGES/digikam.mo
 share/locale/es/LC_MESSAGES/digikam.mo
 share/locale/et/LC_MESSAGES/digikam.mo
+share/locale/fa/LC_MESSAGES/digikam.mo
 share/locale/fi/LC_MESSAGES/digikam.mo
 share/locale/fr/LC_MESSAGES/digikam.mo
 share/locale/ga/LC_MESSAGES/digikam.mo
@@ -468,6 +458,7 @@ share/locale/mk/LC_MESSAGES/digikam.mo
 share/locale/ms/LC_MESSAGES/digikam.mo
 share/locale/mt/LC_MESSAGES/digikam.mo
 share/locale/nb/LC_MESSAGES/digikam.mo
+share/locale/nds/LC_MESSAGES/digikam.mo
 share/locale/nl/LC_MESSAGES/digikam.mo
 share/locale/nn/LC_MESSAGES/digikam.mo
 share/locale/pa/LC_MESSAGES/digikam.mo
@@ -483,6 +474,7 @@ share/locale/sr/LC_MESSAGES/digikam.mo
 share/locale/sr@Latn/LC_MESSAGES/digikam.mo
 share/locale/sv/LC_MESSAGES/digikam.mo
 share/locale/ta/LC_MESSAGES/digikam.mo
+share/locale/th/LC_MESSAGES/digikam.mo
 share/locale/tr/LC_MESSAGES/digikam.mo
 share/locale/uk/LC_MESSAGES/digikam.mo
 share/locale/vi/LC_MESSAGES/digikam.mo
@@ -583,6 +575,7 @@ share/locale/zh_TW/LC_MESSAGES/digikam.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/html
 @dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/digikam/html
