@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/26 04:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/03/13 09:53:46 drochner Exp $
 bin/kphotoalbum
 share/applications/kde/kphotoalbum-import.desktop
 share/applications/kde/kphotoalbum.desktop
@@ -15,6 +15,19 @@ share/doc/kde/HTML/da/kphotoalbum/plugins.docbook
 share/doc/kde/HTML/da/kphotoalbum/setting-properties.docbook
 share/doc/kde/HTML/da/kphotoalbum/thumbnail-view.docbook
 share/doc/kde/HTML/da/kphotoalbum/viewer.docbook
+share/doc/kde/HTML/de/kphotoalbum/browsing.docbook
+share/doc/kde/HTML/de/kphotoalbum/common
+share/doc/kde/HTML/de/kphotoalbum/datebar.docbook
+share/doc/kde/HTML/de/kphotoalbum/generating-html.docbook
+share/doc/kde/HTML/de/kphotoalbum/importexport.docbook
+share/doc/kde/HTML/de/kphotoalbum/index.cache.bz2
+share/doc/kde/HTML/de/kphotoalbum/index.docbook
+share/doc/kde/HTML/de/kphotoalbum/introduction.docbook
+share/doc/kde/HTML/de/kphotoalbum/options.docbook
+share/doc/kde/HTML/de/kphotoalbum/plugins.docbook
+share/doc/kde/HTML/de/kphotoalbum/setting-properties.docbook
+share/doc/kde/HTML/de/kphotoalbum/thumbnail-view.docbook
+share/doc/kde/HTML/de/kphotoalbum/viewer.docbook
 share/doc/kde/HTML/en/kphotoalbum/browser-for-jesper.png
 share/doc/kde/HTML/en/kphotoalbum/browser-for-persons.png
 share/doc/kde/HTML/en/kphotoalbum/browser-with-images.png
@@ -58,6 +71,45 @@ share/doc/kde/HTML/en/kphotoalbum/viewer-contextmenu.png
 share/doc/kde/HTML/en/kphotoalbum/viewer.docbook
 share/doc/kde/HTML/en/kphotoalbum/viewer.png
 share/doc/kde/HTML/en/kphotoalbum/zoomed-view.png
+share/doc/kde/HTML/es/kphotoalbum/browsing.docbook
+share/doc/kde/HTML/es/kphotoalbum/common
+share/doc/kde/HTML/es/kphotoalbum/datebar.docbook
+share/doc/kde/HTML/es/kphotoalbum/generating-html.docbook
+share/doc/kde/HTML/es/kphotoalbum/importexport.docbook
+share/doc/kde/HTML/es/kphotoalbum/index.cache.bz2
+share/doc/kde/HTML/es/kphotoalbum/index.docbook
+share/doc/kde/HTML/es/kphotoalbum/introduction.docbook
+share/doc/kde/HTML/es/kphotoalbum/options.docbook
+share/doc/kde/HTML/es/kphotoalbum/plugins.docbook
+share/doc/kde/HTML/es/kphotoalbum/setting-properties.docbook
+share/doc/kde/HTML/es/kphotoalbum/thumbnail-view.docbook
+share/doc/kde/HTML/es/kphotoalbum/viewer.docbook
+share/doc/kde/HTML/et/kphotoalbum/browsing.docbook
+share/doc/kde/HTML/et/kphotoalbum/common
+share/doc/kde/HTML/et/kphotoalbum/datebar.docbook
+share/doc/kde/HTML/et/kphotoalbum/generating-html.docbook
+share/doc/kde/HTML/et/kphotoalbum/importexport.docbook
+share/doc/kde/HTML/et/kphotoalbum/index.cache.bz2
+share/doc/kde/HTML/et/kphotoalbum/index.docbook
+share/doc/kde/HTML/et/kphotoalbum/introduction.docbook
+share/doc/kde/HTML/et/kphotoalbum/options.docbook
+share/doc/kde/HTML/et/kphotoalbum/plugins.docbook
+share/doc/kde/HTML/et/kphotoalbum/setting-properties.docbook
+share/doc/kde/HTML/et/kphotoalbum/thumbnail-view.docbook
+share/doc/kde/HTML/et/kphotoalbum/viewer.docbook
+share/doc/kde/HTML/fr/kphotoalbum/browsing.docbook
+share/doc/kde/HTML/fr/kphotoalbum/common
+share/doc/kde/HTML/fr/kphotoalbum/datebar.docbook
+share/doc/kde/HTML/fr/kphotoalbum/generating-html.docbook
+share/doc/kde/HTML/fr/kphotoalbum/importexport.docbook
+share/doc/kde/HTML/fr/kphotoalbum/index.cache.bz2
+share/doc/kde/HTML/fr/kphotoalbum/index.docbook
+share/doc/kde/HTML/fr/kphotoalbum/introduction.docbook
+share/doc/kde/HTML/fr/kphotoalbum/options.docbook
+share/doc/kde/HTML/fr/kphotoalbum/plugins.docbook
+share/doc/kde/HTML/fr/kphotoalbum/setting-properties.docbook
+share/doc/kde/HTML/fr/kphotoalbum/thumbnail-view.docbook
+share/doc/kde/HTML/fr/kphotoalbum/viewer.docbook
 share/doc/kde/HTML/it/kphotoalbum/browser-for-jesper.png
 share/doc/kde/HTML/it/kphotoalbum/browser-for-persons.png
 share/doc/kde/HTML/it/kphotoalbum/browser-with-images.png
@@ -93,6 +145,32 @@ share/doc/kde/HTML/it/kphotoalbum/viewer-contextmenu.png
 share/doc/kde/HTML/it/kphotoalbum/viewer.docbook
 share/doc/kde/HTML/it/kphotoalbum/viewer.png
 share/doc/kde/HTML/it/kphotoalbum/zoomed-view.png
+share/doc/kde/HTML/nl/kphotoalbum/browsing.docbook
+share/doc/kde/HTML/nl/kphotoalbum/common
+share/doc/kde/HTML/nl/kphotoalbum/datebar.docbook
+share/doc/kde/HTML/nl/kphotoalbum/generating-html.docbook
+share/doc/kde/HTML/nl/kphotoalbum/importexport.docbook
+share/doc/kde/HTML/nl/kphotoalbum/index.cache.bz2
+share/doc/kde/HTML/nl/kphotoalbum/index.docbook
+share/doc/kde/HTML/nl/kphotoalbum/introduction.docbook
+share/doc/kde/HTML/nl/kphotoalbum/options.docbook
+share/doc/kde/HTML/nl/kphotoalbum/plugins.docbook
+share/doc/kde/HTML/nl/kphotoalbum/setting-properties.docbook
+share/doc/kde/HTML/nl/kphotoalbum/thumbnail-view.docbook
+share/doc/kde/HTML/nl/kphotoalbum/viewer.docbook
+share/doc/kde/HTML/pt/kphotoalbum/browsing.docbook
+share/doc/kde/HTML/pt/kphotoalbum/common
+share/doc/kde/HTML/pt/kphotoalbum/datebar.docbook
+share/doc/kde/HTML/pt/kphotoalbum/generating-html.docbook
+share/doc/kde/HTML/pt/kphotoalbum/importexport.docbook
+share/doc/kde/HTML/pt/kphotoalbum/index.cache.bz2
+share/doc/kde/HTML/pt/kphotoalbum/index.docbook
+share/doc/kde/HTML/pt/kphotoalbum/introduction.docbook
+share/doc/kde/HTML/pt/kphotoalbum/options.docbook
+share/doc/kde/HTML/pt/kphotoalbum/plugins.docbook
+share/doc/kde/HTML/pt/kphotoalbum/setting-properties.docbook
+share/doc/kde/HTML/pt/kphotoalbum/thumbnail-view.docbook
+share/doc/kde/HTML/pt/kphotoalbum/viewer.docbook
 share/doc/kde/HTML/sv/kphotoalbum/browser-for-jesper.png
 share/doc/kde/HTML/sv/kphotoalbum/browser-for-persons.png
 share/doc/kde/HTML/sv/kphotoalbum/browser-with-images.png
@@ -145,15 +223,16 @@ share/icons/hicolor/64x64/apps/kphotoalbum.png
 share/kde/apps/kphotoalbum/default-layout.xml
 share/kde/apps/kphotoalbum/default-setup
 share/kde/apps/kphotoalbum/demo/CategoryImages/Keywords-scenic.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Locations-Grand_Canyon.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Locations-Skagen.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Anne_Helene.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Blackie.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Donna.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Jesper.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Jim.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Spiff.jpg
-share/kde/apps/kphotoalbum/demo/CategoryImages/Persons-Wayne.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Anne_Helene.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Blackie.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Donna.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Jesper.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Jim.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Pets.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Spiff.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/People-Wayne.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/Places-Grand_Canyon.jpg
+share/kde/apps/kphotoalbum/demo/CategoryImages/Places-Skagen.jpg
 share/kde/apps/kphotoalbum/demo/anne_helene.jpg
 share/kde/apps/kphotoalbum/demo/bar55.jpg
 share/kde/apps/kphotoalbum/demo/bar55_2.jpg
@@ -168,6 +247,7 @@ share/kde/apps/kphotoalbum/demo/grand_canyon_3.jpg
 share/kde/apps/kphotoalbum/demo/index.xml
 share/kde/apps/kphotoalbum/demo/jesper.jpg
 share/kde/apps/kphotoalbum/demo/jesper_2.jpg
+share/kde/apps/kphotoalbum/demo/movie.avi
 share/kde/apps/kphotoalbum/demo/new_wave_1.jpg
 share/kde/apps/kphotoalbum/demo/new_wave_2.jpg
 share/kde/apps/kphotoalbum/demo/pool.jpg
@@ -190,22 +270,26 @@ share/kde/apps/kphotoalbum/icons/hicolor/16x16/actions/video.png
 share/kde/apps/kphotoalbum/icons/hicolor/22x22/actions/key.png
 share/kde/apps/kphotoalbum/kphotoalbumui.rc
 share/kde/apps/kphotoalbum/pics/exclamationmark.png
+share/kde/apps/kphotoalbum/pics/movie-clip.png
 share/kde/apps/kphotoalbum/pics/multiconfig.jpg
 share/kde/apps/kphotoalbum/pics/questionmark-flipped.png
 share/kde/apps/kphotoalbum/pics/questionmark.png
 share/kde/apps/kphotoalbum/pics/search.jpg
 share/kde/apps/kphotoalbum/pics/splash-large.png
 share/kde/apps/kphotoalbum/pics/splash.png
+share/kde/apps/kphotoalbum/themes/blue/download.png
 share/kde/apps/kphotoalbum/themes/blue/imagepage.html
 share/kde/apps/kphotoalbum/themes/blue/kphotoalbum.theme
 share/kde/apps/kphotoalbum/themes/blue/mainpage.css
 share/kde/apps/kphotoalbum/themes/blue/mainpage.html
+share/kde/apps/kphotoalbum/themes/grey/download.png
 share/kde/apps/kphotoalbum/themes/grey/imagepage.html
 share/kde/apps/kphotoalbum/themes/grey/kphotoalbum.theme
 share/kde/apps/kphotoalbum/themes/grey/mainpage.css
 share/kde/apps/kphotoalbum/themes/grey/mainpage.html
 share/kde/apps/kphotoalbum/themes/rounded/downbar.png
 share/kde/apps/kphotoalbum/themes/rounded/downleft.png
+share/kde/apps/kphotoalbum/themes/rounded/download.png
 share/kde/apps/kphotoalbum/themes/rounded/downright.png
 share/kde/apps/kphotoalbum/themes/rounded/imagepage.html
 share/kde/apps/kphotoalbum/themes/rounded/kphotoalbum.theme
@@ -219,24 +303,48 @@ share/kde/apps/kphotoalbum/themes/rounded/upright.png
 share/kde/apps/kphotoalbum/tips
 share/kde/config/kphotoalbumrc
 share/kde/mimelnk/application/x-vnd.kde.kphotoalbum-import.desktop
+share/locale/ar/LC_MESSAGES/kphotoalbum.mo
+share/locale/be/LC_MESSAGES/kphotoalbum.mo
 share/locale/br/LC_MESSAGES/kphotoalbum.mo
+share/locale/ca/LC_MESSAGES/kphotoalbum.mo
 share/locale/cs/LC_MESSAGES/kphotoalbum.mo
+share/locale/cy/LC_MESSAGES/kphotoalbum.mo
 share/locale/da/LC_MESSAGES/kphotoalbum.mo
 share/locale/de/LC_MESSAGES/kphotoalbum.mo
 share/locale/el/LC_MESSAGES/kphotoalbum.mo
 share/locale/en_GB/LC_MESSAGES/kphotoalbum.mo
 share/locale/es/LC_MESSAGES/kphotoalbum.mo
 share/locale/et/LC_MESSAGES/kphotoalbum.mo
+share/locale/fi/LC_MESSAGES/kphotoalbum.mo
+share/locale/fr/LC_MESSAGES/kphotoalbum.mo
 share/locale/ga/LC_MESSAGES/kphotoalbum.mo
+share/locale/gl/LC_MESSAGES/kphotoalbum.mo
+share/locale/hi/LC_MESSAGES/kphotoalbum.mo
+share/locale/is/LC_MESSAGES/kphotoalbum.mo
 share/locale/it/LC_MESSAGES/kphotoalbum.mo
+share/locale/ja/LC_MESSAGES/kphotoalbum.mo
+share/locale/ka/LC_MESSAGES/kphotoalbum.mo
+share/locale/lt/LC_MESSAGES/kphotoalbum.mo
+share/locale/mt/LC_MESSAGES/kphotoalbum.mo
 share/locale/nb/LC_MESSAGES/kphotoalbum.mo
 share/locale/nl/LC_MESSAGES/kphotoalbum.mo
+share/locale/pa/LC_MESSAGES/kphotoalbum.mo
 share/locale/pl/LC_MESSAGES/kphotoalbum.mo
 share/locale/pt/LC_MESSAGES/kphotoalbum.mo
+share/locale/pt_BR/LC_MESSAGES/kphotoalbum.mo
+share/locale/ro/LC_MESSAGES/kphotoalbum.mo
 share/locale/ru/LC_MESSAGES/kphotoalbum.mo
+share/locale/rw/LC_MESSAGES/kphotoalbum.mo
+share/locale/sk/LC_MESSAGES/kphotoalbum.mo
+share/locale/sr/LC_MESSAGES/kphotoalbum.mo
 share/locale/sv/LC_MESSAGES/kphotoalbum.mo
+share/locale/ta/LC_MESSAGES/kphotoalbum.mo
 share/locale/tr/LC_MESSAGES/kphotoalbum.mo
+share/locale/uk/LC_MESSAGES/kphotoalbum.mo
 share/locale/vi/LC_MESSAGES/kphotoalbum.mo
+share/locale/zh_CN/LC_MESSAGES/kphotoalbum.mo
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kphotoalbum/themes/rounded
 @dirrm share/kde/apps/kphotoalbum/themes/grey
 @dirrm share/kde/apps/kphotoalbum/themes/blue
@@ -251,7 +359,32 @@ share/locale/vi/LC_MESSAGES/kphotoalbum.mo
 @dirrm share/kde/apps/kphotoalbum/demo/CategoryImages
 @dirrm share/kde/apps/kphotoalbum/demo
 @dirrm share/kde/apps/kphotoalbum
+@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/sv/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/sv
+@dirrm share/doc/kde/HTML/pt/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/pt
+@dirrm share/doc/kde/HTML/nl/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/nl
 @dirrm share/doc/kde/HTML/it/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/it
+@dirrm share/doc/kde/HTML/fr/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/fr
+@dirrm share/doc/kde/HTML/et/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/et
+@dirrm share/doc/kde/HTML/es/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/es
 @dirrm share/doc/kde/HTML/en/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/de/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/de
 @dirrm share/doc/kde/HTML/da/kphotoalbum
+@comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm share/applications/kde
