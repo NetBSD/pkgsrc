@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.588 2007/03/12 22:52:49 rmind Exp $
+$NetBSD: CHANGES-2007,v 1.589 2007/03/13 16:09:16 ginsbach Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1130,3 +1130,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/p5-Kwiki-ModPerl version 0.09 [obache 2007-03-12]
 	Added chat/xchat-perl version 2.8.0 [tron 2007-03-12]
 	Updated devel/geany to 0.10.2 [rmind 2007-03-12]
+	Added textproc/diffsplit version 1.0 [ginsbach 2007-03-12]
