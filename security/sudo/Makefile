@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2006/06/14 00:06:27 reed Exp $
+# $NetBSD: Makefile,v 1.89 2007/03/13 09:46:00 rillig Exp $
 #
 
 DISTNAME=		sudo-1.6.8p12
 PKGNAME=		sudo-1.6.8pl12
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers 0 0 0440
+SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
