@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.590 2007/03/13 16:56:03 obache Exp $
+$NetBSD: CHANGES-2007,v 1.591 2007/03/13 17:41:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/geany to 0.10.2 [rmind 2007-03-12]
 	Added textproc/diffsplit version 1.0 [ginsbach 2007-03-12]
 	Updated www/ja-trac to 0.10.3.1.1 [obache 2007-03-13]
+	Added sysutils/p5-GTop version 0.16 [obache 2007-03-13]
