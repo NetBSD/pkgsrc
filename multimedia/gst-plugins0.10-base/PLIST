@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/11 12:46:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/03/13 09:10:24 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/audio/audio.h
 include/gstreamer-0.10/gst/audio/gstaudioclock.h
@@ -27,6 +27,10 @@ include/gstreamer-0.10/gst/interfaces/tunernorm.h
 include/gstreamer-0.10/gst/interfaces/videoorientation.h
 include/gstreamer-0.10/gst/interfaces/xoverlay.h
 include/gstreamer-0.10/gst/netbuffer/gstnetbuffer.h
+include/gstreamer-0.10/gst/pbutils/descriptions.h
+include/gstreamer-0.10/gst/pbutils/install-plugins.h
+include/gstreamer-0.10/gst/pbutils/missing-plugins.h
+include/gstreamer-0.10/gst/pbutils/pbutils.h
 include/gstreamer-0.10/gst/riff/riff-ids.h
 include/gstreamer-0.10/gst/riff/riff-media.h
 include/gstreamer-0.10/gst/riff/riff-read.h
@@ -59,6 +63,7 @@ lib/libgstaudio-0.10.la
 lib/libgstcdda-0.10.la
 lib/libgstinterfaces-0.10.la
 lib/libgstnetbuffer-0.10.la
+lib/libgstpbutils-0.10.la
 lib/libgstriff-0.10.la
 lib/libgstrtp-0.10.la
 lib/libgsttag-0.10.la
@@ -68,6 +73,7 @@ man/man1/gst-visualise-0.10.1
 share/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/cs/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/de/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/en_GB/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/hu/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -84,6 +90,7 @@ share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
 @dirrm include/gstreamer-0.10/gst/tag
 @dirrm include/gstreamer-0.10/gst/rtp
 @dirrm include/gstreamer-0.10/gst/riff
+@dirrm include/gstreamer-0.10/gst/pbutils
 @dirrm include/gstreamer-0.10/gst/netbuffer
 @dirrm include/gstreamer-0.10/gst/interfaces
 @dirrm include/gstreamer-0.10/gst/floatcast
