@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/13 10:00:30 drochner Exp $
+include/libkexiv2/kexiv2.h
+include/libkexiv2/libkexiv2_export.h
+include/libkexiv2/version.h
+lib/libkexiv2.la
+lib/pkgconfig/libkexiv2.pc
+@dirrm include/libkexiv2
