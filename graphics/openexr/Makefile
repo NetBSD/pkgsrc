@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/01/20 17:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/03/13 09:16:56 rillig Exp $
 
 DISTNAME=	openexr-1.4.0a
 PKGNAME=	openexr-1.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
 
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE=	${WRKSRC}/OpenExr.pc.in
+PKGCONFIG_OVERRIDE=	OpenEXR.pc.in
 TEST_TARGET=		check
 PTHREAD_OPTS+=		require
 
