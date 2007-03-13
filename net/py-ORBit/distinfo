@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2006/07/14 06:29:02 joerg Exp $
+$NetBSD: distinfo,v 1.9 2007/03/13 10:59:02 drochner Exp $
 
-SHA1 (pyorbit-2.14.1.tar.bz2) = b3c23f2a130ec6873a4750701619d96a4efff29d
-RMD160 (pyorbit-2.14.1.tar.bz2) = 1551c48156b18d34c639e83e1e745f354a1df6a8
-Size (pyorbit-2.14.1.tar.bz2) = 282603 bytes
-SHA1 (patch-aa) = 4fe020fe2f9cff188e72999a13e8edd40a521d45
+SHA1 (pyorbit-2.14.2.tar.bz2) = 47714a66042614b416eb33a33a7f00535fb0d8a5
+RMD160 (pyorbit-2.14.2.tar.bz2) = c46c74eb8be7a34324c58faf503ee2b41d680d1c
+Size (pyorbit-2.14.2.tar.bz2) = 283467 bytes
+SHA1 (patch-aa) = 3ba860e4e1cf89620de4e8a87664d34d63a1217a
