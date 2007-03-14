@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.4 2007/03/14 16:21:58 rillig Exp $
+# $NetBSD: developer.mk,v 1.5 2007/03/14 17:53:03 rillig Exp $
 #
 # Public targets for developers:
 #
@@ -74,7 +74,7 @@ commit-changes-entry cce: .PHONY ce-error-check
 	@${STEP_MSG} "Adding the change"
 	${RUN} ${ECHO} "	"${_CE_MSG:Q} >> ${_CCE_CHANGES}
 	@${STEP_MSG} "Committing the change"
-	${RUN} cd ${PKGSRCDIR}/doc && echo cvs commit -m ${_CE_MSG1:Q} ${_CCE_CHANGES:T}
+	${RUN} cd ${PKGSRCDIR}/doc && cvs commit -m ${_CE_MSG1:Q} ${_CCE_CHANGES:T}
 
 ce-error-check:
 .if defined(_CE_ERRORS) && !empty(_CE_ERRORS:M*)
