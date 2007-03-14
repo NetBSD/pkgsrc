@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.1 2006/01/08 04:57:55 joerg Exp $
+$NetBSD: patch-as,v 1.2 2007/03/14 17:12:47 yyamano Exp $
 
---- include/ptlib/unix/ptlib/pmachdep.h.orig	2006-01-08 03:44:23.000000000 +0000
+--- include/ptlib/unix/ptlib/pmachdep.h.orig	2004-11-16 09:30:38.000000000 +0900
 +++ include/ptlib/unix/ptlib/pmachdep.h
 @@ -217,7 +217,7 @@ typedef size_t socklen_t;
  #endif
@@ -20,3 +20,15 @@ $NetBSD: patch-as,v 1.1 2006/01/08 04:57:55 joerg Exp $
  typedef int socklen_t;
  #endif
  
+@@ -489,8 +489,10 @@ void *dlsym(void *handle, const char *sy
+ #include <net/if.h>
+ #include <netinet/tcp.h>
+ #include <sys/ioctl.h>
+- 
++
++#if defined (P_MACOSX) && (P_MACOSX < 800)
+ typedef int socklen_t;
++#endif
+  
+ #define HAS_IFREQ
+  
