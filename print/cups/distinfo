@@ -1,27 +1,11 @@
-$NetBSD: distinfo,v 1.44 2006/10/05 01:13:00 rillig Exp $
+$NetBSD: distinfo,v 1.45 2007/03/14 12:29:03 markd Exp $
 
-SHA1 (cups-1.1.23-source.tar.bz2) = 32d5bfb44c4edc1b54ccb014b5a44499295c6c5c
-RMD160 (cups-1.1.23-source.tar.bz2) = 255ec4c22422b14f2367d69f3ec7e590dc46bea5
-Size (cups-1.1.23-source.tar.bz2) = 8705521 bytes
-SHA1 (patch-aa) = a8dc064c49adce682d1aa5e88991037c86f2358f
-SHA1 (patch-ab) = 29c205c31a70229f46f0c99775e70fc9c56af1e8
-SHA1 (patch-ac) = 45388ca8b1bfeaf5d3649b766f65ac7f3108af74
-SHA1 (patch-ad) = 166749eb9fc7b4b20e123d81cd3b2cf96db27677
-SHA1 (patch-ae) = 773b723b3cbd669cd1695577c578fea0fc7fa7f8
-SHA1 (patch-af) = 04e5bf3b73083eb2457a20b0f5238f017fe4aaab
-SHA1 (patch-ag) = 47a5c7a9ad7c604fa3253aebbaa62f576fb477d0
-SHA1 (patch-ah) = 1ef58b7e1dfcbd8aabb9e822d30f995b3d653ea4
-SHA1 (patch-ai) = f1b60cec40426e158801a24e043bc41fee199d1b
-SHA1 (patch-aj) = 248c7ae93fd81154d703a56c0149463d6a73a6f6
-SHA1 (patch-ak) = fe0a5317cf70f49fe3b386177b7a12b2df306ed1
-SHA1 (patch-al) = dcec693d824305cce6e31c07fb96be4759a55f81
-SHA1 (patch-am) = 660bdcd7717f68453fbb3e8b6aa81a4205ef08a1
-SHA1 (patch-an) = a300388af3673e9bf587326817f73edc813da11e
-SHA1 (patch-ao) = c4c8f833cf4a09a686a338df6c209cebec36c6ef
-SHA1 (patch-ap) = 2351844f81a561d69cd02a1e83e30f3c9ee33f5f
-SHA1 (patch-at) = aa36ec591164675b889d2cf32e4d754e9b6db94f
-SHA1 (patch-au) = ab43911c1b27b250a257c67d1d34066237e4da98
-SHA1 (patch-av) = 33437f71e0b6443b172246f1962f9d2eebbd8f11
-SHA1 (patch-aw) = f9a83423eac1a631b67e10911e0ef9e111da9b84
-SHA1 (patch-be) = 85c99298a6eca8f73c81298624d98b66f929aac2
-SHA1 (patch-bf) = a25cbddf47dc9637ccce2a8e40c6541320df4a8a
+SHA1 (cups-1.2.8-source.tar.bz2) = 690890b7d2f779a872e1464fd354498f7da72fee
+RMD160 (cups-1.2.8-source.tar.bz2) = 43d23bd6ef1f396d57f4b57089e6e31fe1304346
+Size (cups-1.2.8-source.tar.bz2) = 3632509 bytes
+SHA1 (patch-ab) = f4e587f328390c550bbb70e24d7c2a90c4c73557
+SHA1 (patch-ac) = 02fab706563f7ba01d66530f9462759689c09f04
+SHA1 (patch-ad) = 6695c344453495cd960460733a80d50654786c60
+SHA1 (patch-an) = 4c5271b0f4a262e782e3de8396870498125675bd
+SHA1 (patch-ao) = dbbd6c9a7cedc1fc698de147019b6256a13c5b59
+SHA1 (patch-at) = eea32b989402c353f5f1644348c1042a3d4ddfa1

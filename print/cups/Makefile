@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2006/12/01 20:51:47 joerg Exp $
+# $NetBSD: Makefile,v 1.116 2007/03/14 12:29:03 markd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,8 +6,7 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${VERS}
-PKGREVISION=	12
-BASE_VERS=	1.1.23
+BASE_VERS=	1.2.8
 DIST_VERS=	${BASE_VERS}
 VERS=		${DIST_VERS:S/-/./g}
 CATEGORIES=	print
@@ -41,6 +40,7 @@ AUTOCONF_REQD=		2.60
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-cachedir=${VARBASE:Q}/cache/cups
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR:Q}
@@ -50,6 +50,10 @@ CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-gnutls=no
+CONFIGURE_ARGS+=	--enable-openssl
+CONFIGURE_ARGS+=	--without-php
+
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
@@ -101,21 +105,21 @@ PKG_GECOS.${CUPS_USER}=	Common UNIX Printing System user
 PKG_SHELL.${CUPS_USER}=	${SH}
 
 SPECIAL_PERMS=		${PREFIX}/bin/lppasswd ${CUPS_USER} ${CUPS_GROUP} 4755
-CONF_FILES=		${EGDIR}/client.conf ${CUPS_CONFDIR}/client.conf
-CONF_FILES+=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
-CONF_FILES+=		${EGDIR}/classes.conf ${CUPS_CONFDIR}/classes.conf
+CONF_FILES=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
 CONF_FILES+=		${EGDIR}/mime.convs ${CUPS_CONFDIR}/mime.convs
 CONF_FILES+=		${EGDIR}/mime.types ${CUPS_CONFDIR}/mime.types
-CONF_FILES+=		${EGDIR}/printers.conf ${CUPS_CONFDIR}/printers.conf
 RCD_SCRIPTS=		cupsd
 
 OWN_DIRS=		${CUPS_CONFDIR}
 OWN_DIRS+=		${CUPS_CONFDIR}/interfaces
 OWN_DIRS+=		${CUPS_CONFDIR}/ppd
+OWN_DIRS+=		${PREFIX}/libexec/cups/driver
 OWN_DIRS+=		${CUPS_LOGDIR}
 OWN_DIRS_PERMS=		${CUPS_CONFDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
+OWN_DIRS_PERMS+=	${CUPS_CONFDIR}/ssl ${CUPS_USER} ${CUPS_GROUP} 0700
 OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0710
 OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
+OWN_DIRS_PERMS+=	${VARBASE}/cache/cups ${CUPS_USER} ${CUPS_GROUP} 0775
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
