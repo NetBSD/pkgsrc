@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.5 2006/03/13 22:58:45 rillig Exp $
+$NetBSD: patch-ba,v 1.6 2007/03/14 17:12:48 yyamano Exp $
 
---- src/ptclib/pssl.cxx.orig	2004-04-09 08:52:17.000000000 +0200
-+++ src/ptclib/pssl.cxx	2006-03-13 23:48:01.000000000 +0100
+--- src/ptclib/pssl.cxx.orig	2004-04-09 15:52:17.000000000 +0900
++++ src/ptclib/pssl.cxx
 @@ -297,14 +297,22 @@ PSSLPrivateKey::PSSLPrivateKey(const PFi
  
  PSSLPrivateKey::PSSLPrivateKey(const BYTE * keyData, PINDEX keySize)
@@ -72,7 +72,7 @@ $NetBSD: patch-ba,v 1.5 2006/03/13 22:58:45 rillig Exp $
  }
  
 -#ifdef __BEOS__
-+#if defined(__BEOS__) || (defined(__NetBSD__) && OPENSSL_VERSION_NUMBER < 0x00908000L)
++#if defined(__BEOS__) || ((defined(__NetBSD__) || defined(__APPLE__)) && OPENSSL_VERSION_NUMBER < 0x00908000L)
  // 2/21/04 Yuri Kiryanov - fix for compiler choke on BeOS for usage of
  // SSL function d2i_DHparams_bio below in PSSLDiffieHellman::Load
  #undef  d2i_DHparams_bio
