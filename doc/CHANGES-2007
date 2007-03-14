@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.594 2007/03/14 16:12:27 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.595 2007/03/14 16:24:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/cups to 1.2.8 [markd 2007-03-14]
 	Updated mail/dovecot to 1.0rc27 [ghen 2007-03-14]
 	Updated www/bluefish to 1.0.7 [rillig 2007-03-14]
+	Added devel/p5-AppConfig-Std version 1.07 [obache 2007-03-14]
