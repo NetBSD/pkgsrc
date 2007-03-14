@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.10 2007/02/22 19:26:45 wiz Exp $
+# $NetBSD: Makefile.extension,v 1.11 2007/03/14 11:50:33 markd Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -31,14 +31,12 @@ R_PACKLIST_FILES_CMD=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u
 R_PACKLIST_DIRS_CMD=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} -type d -print; done ) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |"
-R_PACKLIST_CMDS_CMD=	( ${ECHO} '@exec R CMD '${PERL5:Q}' %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
-	${ECHO} '@exec '${CAT:Q}' %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null'; \
-	${ECHO} '@unexec R CMD '${PERL5:Q}' %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
-	${ECHO} '@unexec '${CAT:Q}' %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null' )
 
 R_GENERATE_PLIST=	${R_PACKLIST_FILES_CMD}; \
-			${R_PACKLIST_DIRS_CMD}; \
-			${R_PACKLIST_CMDS_CMD};
+			${R_PACKLIST_DIRS_CMD};
 GENERATE_PLIST+=	${R_GENERATE_PLIST}
+
+INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
+DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 
 .include "../../math/R/buildlink3.mk"
