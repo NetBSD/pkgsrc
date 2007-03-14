@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.16 2006/06/13 12:28:09 markd Exp $
+$NetBSD: patch-aa,v 1.17 2007/03/14 11:50:35 markd Exp $
 
---- configure.ac.orig	2006-05-18 21:13:59.000000000 +1200
+--- configure.ac.orig	2006-12-04 10:37:52.000000000 +1300
 +++ configure.ac
-@@ -361,7 +361,7 @@ AC_ARG_WITH([valgrind-instrumentation],
- ## needs to come after GNOME
- AM_CONDITIONAL(WANT_R_SHLIB, [test "x${want_R_shlib}" = xyes])
+@@ -255,7 +255,7 @@ AC_ARG_ENABLE([BLAS-shlib],
+ [use_blas_shlib="unset"])
+ 
  if test "${want_R_shlib}" = yes; then
 -  LIBR="-L\$(R_HOME)/lib\$(R_ARCH) -lR"
 +  LIBR="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\$(R_HOME)/lib\$(R_ARCH) -lR"
  else
    LIBR=
  fi
-@@ -628,9 +628,9 @@ if test "${use_readline}" = yes; then
+@@ -653,9 +653,9 @@ if test "${use_readline}" = yes; then
    if test "${use_readline}" = no; then
      ## only need ncurses if libreadline is not statically linked against it
      unset ac_cv_lib_readline_rl_callback_read_char
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.16 2006/06/13 12:28:09 markd Exp $
      AC_CHECK_LIB(readline, rl_callback_read_char)
      use_readline="${ac_cv_lib_readline_rl_callback_read_char}"
    fi
-@@ -779,13 +779,6 @@ case "${host_cpu}" in
+@@ -798,13 +798,6 @@ case "${host_cpu}" in
        R_PROG_CC_FLAG([-ieee_with_inexact],
                       R_SH_VAR_ADD(R_XTRA_CFLAGS, [-ieee_with_inexact]))
      fi
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.16 2006/06/13 12:28:09 markd Exp $
      if test "${GXX}" = yes; then
        R_PROG_CXX_FLAG([-mieee],
                        R_SH_VAR_ADD(R_XTRA_CXXFLAGS, [-mieee]))
-@@ -1244,6 +1237,7 @@ case "${host_os}" in
+@@ -1327,6 +1320,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
      fpicflags=
      ;;
    netbsd*)

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2007/01/08 15:00:36 joerg Exp $
+# $NetBSD: Makefile,v 1.88 2007/03/14 11:50:17 markd Exp $
 
-DISTNAME=		R-2.3.1
+DISTNAME=		R-2.4.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -73,10 +73,6 @@ CONFIGURE_ENV+=		R_PAPERSIZE=${R_PAPERSIZE:Q}
 INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-R_LIBDIR=		lib/R
-R_INSTALL_DIRS=		${R_LIBDIR}
-
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.1
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
@@ -95,29 +91,12 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
-# Generate the PLIST dynamically as it changes in each version only in a
-# specific subtree.  This will make maintaining this package a little easier
-# when updating.
-#
+INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
+DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
+PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/packages.html$$/ { next; }
+PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/search\/index.txt$$/ { next; }
+
 post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${R_LIBDIR}
-	${RM} -f ${PLIST_SRC}
-	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
-	( cd ${PREFIX};							\
-	  for dir in ${R_INSTALL_DIRS}; do				\
-		${FIND} $${dir} \( -type f -o -type l \) -print; \
-	  done;								\
-	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
-	${GREP} -v "lib/R/doc/html/search/index.txt" | 			\
-	${SORT} -u >> ${PLIST_SRC}
-	${ECHO} "@unexec "${RM:Q}" -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
-	${ECHO} "@unexec "${RM:Q}" -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
-	( cd ${PREFIX} &&						\
-	  for dir in ${R_INSTALL_DIRS}; do				\
-		${FIND} $${dir} -type d -print;		\
-	  done;								\
-	) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |" >> ${PLIST_SRC}
-	${ECHO} "@exec R CMD "${PERL5:Q}" %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
-	${ECHO} "@exec "${CAT:Q}" %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/R
 
 .include "../../mk/bsd.pkg.mk"
