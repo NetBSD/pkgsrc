@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:39 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/14 15:49:15 rillig Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	5
@@ -15,6 +15,14 @@ HOMEPAGE=	http://www.katharineosborne.com/wmnet/
 COMMENT=	Dockable network monitor
 
 USE_IMAKE=	YES
+MAKE_FLAGS+=	MANPATH=${PREFIX}/${PKGMANDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+MAKE_FLAGS+=	INSTPGMFLAGS=""
+SPECIAL_PERMS+=	bin/wmnet ${ROOT_USER} kmem 2555
+.endif
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
