@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6097 2007/03/14 12:39:05 markd Exp $
+$NetBSD: TODO,v 1.6098 2007/03/14 17:26:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,7 @@ Suggested package updates
 	o http_load-20050629
 	o httptunnel-3.3
 	o hydrogen-0.9.2
-	o hylafax-5.0.4
+	o hylafax-5.1.1
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -578,6 +578,7 @@ Suggested package updates
 	o libgpod-0.4.0
 	o libgtop2-2.14.8
 	o libhydrogen-0.9.2
+	o libidn-0.6.11
 	o libjit-0.0.6
 	o liblive-2006.12.08
 	o libmatheval-1.1.4
@@ -873,6 +874,7 @@ Suggested package updates
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
 	o qt4-4.2.0
+	o qt4-libs-4.2.3
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
@@ -1047,6 +1049,7 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xfce-4.4.0
+	o xfe-0.99
 	o xfmail-1.5.4
 	o xfmedia-0.9.2 [pkg/35205; wait for xfce4 update]
 	o xfstt-1.7
