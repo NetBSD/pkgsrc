@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2007/01/07 09:14:12 rillig Exp $
+# $NetBSD: Makefile,v 1.90 2007/03/14 11:36:25 markd Exp $
 #
 
-DISTNAME=		lsof_4.76
+DISTNAME=		lsof_4.77
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
@@ -14,7 +14,7 @@ MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		atatat@NetBSD.org
-HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
+HOMEPAGE=		http://people.freebsd.org/~abe/
 COMMENT=		Lists information about open files
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
