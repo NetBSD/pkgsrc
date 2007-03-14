@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2007/03/02 10:21:16 grant Exp $
+# $NetBSD: Makefile,v 1.819 2007/03/14 16:22:03 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -358,6 +358,7 @@ SUBDIR+=	p5-Algorithm-Merge
 SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-App-CLI
 SUBDIR+=	p5-AppConfig
+SUBDIR+=	p5-AppConfig-Std
 SUBDIR+=	p5-Array-Compare
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
