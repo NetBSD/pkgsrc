@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2006/11/08 09:42:05 markd Exp $
+$NetBSD: distinfo,v 1.16 2007/03/14 11:21:33 markd Exp $
 
-SHA1 (mimedefang-2.58.tar.gz) = 1f6efc74535e5c4db35c031bdbc1e6a07bdafd33
-RMD160 (mimedefang-2.58.tar.gz) = 703bf4e77c5923f1ebbd5aa207d4e8d3c057e4b2
-Size (mimedefang-2.58.tar.gz) = 317448 bytes
-SHA1 (patch-ab) = 855a939cca7af09fd418da41589fc585750dae58
-SHA1 (patch-ac) = 0cd334c28d5458498d6d6fe2cce612ef448a0359
+SHA1 (mimedefang-2.61.tar.gz) = fb64b6f7ff57e095c48fce087211b1d67213a8cb
+RMD160 (mimedefang-2.61.tar.gz) = 982565fb55f0825aee631158d3b6acd3d8a3b3e1
+Size (mimedefang-2.61.tar.gz) = 326722 bytes
+SHA1 (patch-ab) = f6ba8f91126c65af434e6377e7e4873baf5c94ec
+SHA1 (patch-ac) = 9ae301538003ae087da649279167a0dc37273efa
