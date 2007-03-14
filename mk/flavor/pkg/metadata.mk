@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.16 2007/03/09 04:07:50 rillig Exp $
+# $NetBSD: metadata.mk,v 1.17 2007/03/14 16:23:48 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -332,6 +332,9 @@ _PKG_CREATE_ARGS+=				-S ${_SIZE_ALL_FILE}
 _PKG_CREATE_ARGS+=				-s ${_SIZE_PKG_FILE}
 _PKG_CREATE_ARGS+=	${CONFLICTS:D		-C ${CONFLICTS:Q}}
 _PKG_CREATE_ARGS+=				${_DEPENDS_ARG_cmd:sh}
+.if ${PKGTOOLS_VERSION} >= 20070308
+_PKG_CREATE_ARGS+=				${_BUILD_DEPENDS_ARG_cmd:sh}
+.endif
 _PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:sh}}
 _PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:sh}}
 
@@ -345,6 +348,13 @@ _PKG_ARGS_INSTALL+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
 _DEPENDS_ARG_cmd=	depends=`${_DEPENDS_PATTERNS_CMD}`;		\
 			if ${TEST} -n "$$depends"; then			\
 				${ECHO} "-P \"$$depends\"";		\
+			else						\
+				${ECHO};				\
+			fi
+
+_BUILD_DEPENDS_ARG_cmd=	depends=`${_BUILD_DEPENDS_PATTERNS_CMD}`;	\
+			if ${TEST} -n "$$depends"; then			\
+				${ECHO} "-T \"$$depends\"";		\
 			else						\
 				${ECHO};				\
 			fi
