@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.12 2004/05/17 10:40:45 jlam Exp $
+$NetBSD: patch-ac,v 1.13 2007/03/14 12:29:03 markd Exp $
 
---- configure.in.orig	Fri Mar 14 12:04:08 2003
+--- configure.in.orig	2006-12-07 09:10:16.000000000 +1300
 +++ configure.in
-@@ -30,7 +30,6 @@ sinclude(config-scripts/cups-directories
- sinclude(config-scripts/cups-manpages.m4)
+@@ -31,7 +31,6 @@ sinclude(config-scripts/cups-manpages.m4
  
+ sinclude(config-scripts/cups-3264.m4)
  sinclude(config-scripts/cups-sharedlibs.m4)
 -sinclude(config-scripts/cups-libtool.m4)
  sinclude(config-scripts/cups-compiler.m4)

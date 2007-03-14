@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.16 2003/05/28 02:34:00 jlam Exp $
+$NetBSD: patch-ab,v 1.17 2007/03/14 12:29:03 markd Exp $
 
---- Makefile.orig	Thu Mar  6 11:36:00 2003
-+++ Makefile
-@@ -67,13 +67,13 @@
+--- Makefile.orig	2006-08-30 03:51:19.000000000 +1200
++++ Makefile	2007-01-19 15:11:19.000000000 +1300
+@@ -31,7 +31,7 @@
+ DIRS	=	cups backend berkeley cgi-bin filter locale man monitor \
+ 		notifier $(PDFTOPS) scheduler systemv test \
+ 		$(PHPDIR) \
+-		conf data doc fonts ppd templates
++		data doc fonts ppd templates
+ 
+ 
+ #
+@@ -91,7 +91,9 @@
  # Install object and target files...
  #
  
@@ -13,23 +22,14 @@ $NetBSD: patch-ab,v 1.16 2003/05/28 02:34:00 jlam Exp $
  	for dir in $(DIRS); do\
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
- 	done
--	echo Installing in conf...
--	(cd conf; $(MAKE) $(MFLAGS) install)
- 	echo Installing in data...
- 	(cd data; $(MAKE) $(MFLAGS) install)
- 	echo Installing in doc...
-@@ -89,6 +89,13 @@
+@@ -99,6 +101,10 @@
  	echo Installing cups-config script...
- 	$(INSTALL_DIR) $(BINDIR)
+ 	$(INSTALL_DIR) -m 755 $(BINDIR)
  	$(INSTALL_SCRIPT) cups-config $(BINDIR)/cups-config
 +
-+#
-+# Install config files...
-+#
 +installconf:
 +	echo Installing in conf...
 +	(cd conf; $(MAKE) $(MFLAGS) install)
- 	echo Installing startup script...
- 	if test "x$(INITDIR)" != "x"; then \
- 		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/init.d; \
+ 	if test "x$(INITDIR)" != x; then \
+ 		echo Installing init scripts...; \
+ 		$(INSTALL_DIR) -m 755 $(BUILDROOT)$(INITDIR)/init.d; \
