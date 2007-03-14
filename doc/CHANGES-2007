@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.591 2007/03/13 17:41:20 obache Exp $
+$NetBSD: CHANGES-2007,v 1.592 2007/03/14 12:39:05 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1133,3 +1133,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/diffsplit version 1.0 [ginsbach 2007-03-12]
 	Updated www/ja-trac to 0.10.3.1.1 [obache 2007-03-13]
 	Added sysutils/p5-GTop version 0.16 [obache 2007-03-13]
+	Updated mail/mimedefang to 2.61 [markd 2007-03-14]
+	Updated sysutils/lsof to 4.77 [markd 2007-03-14]
+	Updated math/R to 2.4.1 [markd 2007-03-14]
+	Updated math/py-rpy to 0.99.0 [markd 2007-03-14]
+	Updated print/foomatic-ppds to 20070207 [markd 2007-03-14]
+	Updated print/foomatic-ppds-cups to 20070207 [markd 2007-03-14]
+	Updated print/cups to 1.2.8 [markd 2007-03-14]
