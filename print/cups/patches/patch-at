@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.6 2005/01/06 18:22:29 jlam Exp $
+$NetBSD: patch-at,v 1.7 2007/03/14 12:29:05 markd Exp $
 
---- scheduler/Makefile.orig	2005-01-03 14:29:59.000000000 -0500
+--- scheduler/Makefile.orig	2007-02-05 23:20:52.000000000 +1300
 +++ scheduler/Makefile
-@@ -60,12 +60,16 @@ depend:
+@@ -106,7 +106,9 @@ depend:
  # Install the scheduler...
  #
  
@@ -10,13 +10,15 @@ $NetBSD: patch-at,v 1.6 2005/01/06 18:22:29 jlam Exp $
 +install:	installbin
 +
 +installbin:	all
- 	$(INSTALL_DIR) $(SBINDIR)
- 	$(INSTALL_BIN) cupsd $(SBINDIR)
- 	$(INSTALL_DIR) $(SERVERBIN)/daemon
+ 	echo Creating $(SBINDIR)...
+ 	$(INSTALL_DIR) -m 755 $(SBINDIR)
+ 	echo Installing cupsd in $(SBINDIR)...
+@@ -120,6 +122,8 @@ install:	all
+ 	$(INSTALL_BIN) cups-driverd $(SERVERBIN)/daemon
  	$(INSTALL_BIN) cups-lpd $(SERVERBIN)/daemon
  	$(INSTALL_BIN) cups-polld $(SERVERBIN)/daemon
 +
 +installdir:
- 	$(INSTALL_DIR) -m 711 $(SERVERROOT)/certs
- 	$(INSTALL_DIR) $(SERVERROOT)/interfaces
- 	$(INSTALL_DIR) $(SERVERROOT)/ppd
+ 	echo Creating $(SERVERBIN)/driver...
+ 	$(INSTALL_DIR) -m 755 $(SERVERBIN)/driver
+ 	echo Creating $(SERVERROOT)...
