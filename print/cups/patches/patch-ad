@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.12 2004/05/17 10:40:45 jlam Exp $
+$NetBSD: patch-ad,v 1.13 2007/03/14 12:29:03 markd Exp $
 
---- config-scripts/cups-sharedlibs.m4.orig	Wed Jul 23 16:07:34 2003
+--- config-scripts/cups-sharedlibs.m4.orig	2006-12-07 09:10:16.000000000 +1300
 +++ config-scripts/cups-sharedlibs.m4
 @@ -27,6 +27,24 @@ DSOFLAGS="${DSOFLAGS:=}"
  
@@ -27,8 +27,8 @@ $NetBSD: patch-ad,v 1.12 2004/05/17 10:40:45 jlam Exp $
  if test x$enable_shared != xno; then
  	case "$uname" in
  		SunOS* | UNIX_S*)
-@@ -74,6 +92,10 @@ if test x$enable_shared != xno; then
- 			DSOFLAGS="$DSOFLAGS -Wl,-soname,\$@ -shared \$(OPTIM)"
+@@ -84,6 +102,10 @@ if test x$enable_shared != xno; then
+ 			DSOFLAGS="$DSOFLAGS -Wl,-soname,\`basename \$@\` -shared \$(OPTIM)"
  			;;
  	esac
 +elif test x$enable_libtool != xno; then
@@ -38,14 +38,14 @@ $NetBSD: patch-ad,v 1.12 2004/05/17 10:40:45 jlam Exp $
  else
  	PICFLAG=0
  	LIBCUPS="libcups.a"
-@@ -87,8 +109,13 @@ AC_SUBST(LIBCUPS)
+@@ -104,8 +126,13 @@ AC_SUBST(LIBCUPS)
  AC_SUBST(LIBCUPSIMAGE)
  
  if test x$enable_shared = xno; then
--	LINKCUPS="../cups/libcups.a \$(SSLLIBS)"
+-	LINKCUPS="../cups/libcups.a"
 -	LINKCUPSIMAGE="../filter/libcupsimage.a"
 +	if test x$enable_libtool = xno; then
-+		LINKCUPS="../cups/libcups.a \$(SSLLIBS)"
++		LINKCUPS="../cups/libcups.a"
 +		LINKCUPSIMAGE="../filter/libcupsimage.a"
 +	else
 +		LINKCUPS="../cups/\$(LIBCUPS)"
@@ -54,29 +54,29 @@ $NetBSD: patch-ad,v 1.12 2004/05/17 10:40:45 jlam Exp $
  else
  	if test $uname = AIX; then
  		LINKCUPS="-lcups_s"
-@@ -113,10 +140,11 @@ if test "$DSO" != ":"; then
- 	DSOLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
+@@ -130,10 +157,11 @@ if test "$DSO" != ":"; then
+ 	DSOLIBS="\$(LIBTIFF) \$(LIBPNG) \$(LIBJPEG) \$(LIBZ)"
  	IMGLIBS=""
  
--	# The *BSD, HP-UX, and Solaris run-time linkers need help when
--	# deciding where to find a DSO.  Add linker options to tell them
--	# where to find the DSO (usually in /usr/lib...  duh!)
+-	# Tell the run-time linkers where to find a DSO.  Some platforms
+-	# need this option, even when the library is installed in a
+-	# standard location...
 -	case $uname in
 +	if test x$enable_libtool = xno; then
-+		# The *BSD, HP-UX, and Solaris run-time linkers need help when
-+		# deciding where to find a DSO.  Add linker options to tell them
-+		# where to find the DSO (usually in /usr/lib...  duh!)
++		# Tell the run-time linkers where to find a DSO.  Some platforms
++		# need this option, even when the library is installed in a
++		# standard location...
 +		case $uname in
                  HP-UX*)
- 			# HP-UX
-                 	DSOFLAGS="+s +b $libdir $DSOFLAGS"
-@@ -141,7 +169,8 @@ if test "$DSO" != ":"; then
-                         LDFLAGS="$LDFLAGS -Wl,-rpath,$libdir"
-                         EXPORT_LDFLAGS="-Wl,-rpath,$libdir"
-                         ;;
+ 			# HP-UX needs the path, even for /usr/lib...
+ 			case "$uarch" in
+@@ -181,7 +209,8 @@ if test "$DSO" != ":"; then
+ 				EXPORT_LDFLAGS="-Wl,-rpath,$libdir"
+ 			fi
+ 			;;
 -	esac
 +		esac
 +	fi
  else
  	DSOLIBS=""
- 	IMGLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
+ 	IMGLIBS="\$(LIBTIFF) \$(LIBPNG) \$(LIBJPEG) \$(LIBZ)"
