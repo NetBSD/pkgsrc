@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.3 2007/03/08 23:38:43 rillig Exp $
+# $NetBSD: developer.mk,v 1.4 2007/03/14 16:21:58 rillig Exp $
 #
 # Public targets for developers:
 #
@@ -11,6 +11,10 @@
 #		The type of entry to add. Must be one of "Added",
 #		"Updated", "Renamed", "Moved", of "Removed".
 #		The default is "Updated".
+#
+#	TO
+#		When a package is renamed, this is the new name of the
+#		package.
 #
 #	NETBSD_LOGIN_NAME
 #		The login name assigned by the NetBSD Project.
@@ -25,6 +29,10 @@
 #		% cd /usr/pkgsrc/category/package
 #		% make changes-entry CTYPE=Added
 #
+# commit-changes-entry:
+# cce:
+#	Like the above, plus the CHANGES file is committed.
+#
 
 CTYPE?=			Updated
 NETBSD_LOGIN_NAME?=	${_NETBSD_LOGIN_NAME_cmd:sh}
@@ -34,19 +42,43 @@ _CYEAR_cmd=		${DATE} -u +%Y
 _CDATE_cmd=		${DATE} -u +%Y-%m-%d
 _NETBSD_LOGIN_NAME_cmd=	${ID} -nu
 
-_CTYPE1=	"	"${CTYPE:Q}" "${PKGPATH:Q}
-.if !empty(CTYPE:MUpdated)
-_CTYPE2=	" to "${PKGVERSION:Q}
-.elif !empty(CTYPE:MAdded)
-_CTYPE2=	" version "${PKGVERSION:Q}
-.elif !empty(CTYPE:MRenamed) || !empty(CTYPE:MMoved)
-_CTYPE2=	" to XXX"
+.if ${CTYPE} == "Updated"
+_CE_MSG1=	Updated ${PKGPATH} to ${PKGVERSION}
+.elif ${CTYPE} == "Added"
+_CE_MSG1=	Added ${PKGPATH} version ${PKGVERSION}
+.elif ${CTYPE} == "Renamed" || ${CTYPE} == "Moved"
+.  if defined(TO)
+.    if exists(${PKGSRCDIR}/${TO})
+_CE_MSG1=	${CTYPE} ${PKGPATH} to ${TO}
+.    else
+_CE_ERRORS+=	"[developer.mk] The package ${TO} does not exist."
+.    endif
+.  else
+_CE_ERRORS+=	"[developer.mk] The TO variable must be set."
+.  endif
 .else
-_CTYPE2=
+_CE_ERRORS+=	"[developer.mk] Invalid value "${CTYPE:Q}" for CTYPE."
 .endif
-_CTYPE3=	" ["${NETBSD_LOGIN_NAME:Q}" "${_CDATE_cmd:sh:Q}"]"
+_CE_MSG2=	[${NETBSD_LOGIN_NAME} ${_CDATE_cmd:sh}]
+_CE_MSG=	${_CE_MSG1} ${_CE_MSG2}
+
+_CCE_CHANGES=	${PKGSRCDIR}/doc/CHANGES-${_CYEAR_cmd:sh}
 
 .PHONY: changes-entry
-changes-entry:
-	${RUN} \
-	${ECHO} ${_CTYPE1}${_CTYPE2}${_CTYPE3} >> ${PKGSRC_CHANGES:Q}
+changes-entry: ce-error-check
+	${RUN} ${ECHO} "	"${_CE_MSG:Q} >> ${PKGSRC_CHANGES:Q}
+
+commit-changes-entry cce: .PHONY ce-error-check
+	@${STEP_MSG} "Updating ${PKGSRC_CHANGES:T}"
+	${RUN} cd ${PKGSRCDIR}/doc && cvs update ${_CCE_CHANGES:T}
+	@${STEP_MSG} "Adding the change"
+	${RUN} ${ECHO} "	"${_CE_MSG:Q} >> ${_CCE_CHANGES}
+	@${STEP_MSG} "Committing the change"
+	${RUN} cd ${PKGSRCDIR}/doc && echo cvs commit -m ${_CE_MSG1:Q} ${_CCE_CHANGES:T}
+
+ce-error-check:
+.if defined(_CE_ERRORS) && !empty(_CE_ERRORS:M*)
+	${RUN} for msg in ${_CE_ERRORS}; do ${ERROR_MSG} "$$msg"; done; exit 1
+.else
+	@${DO_NADA}
+.endif
