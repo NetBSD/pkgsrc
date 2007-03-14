@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.593 2007/03/14 14:15:32 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.594 2007/03/14 16:12:27 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1141,3 +1141,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/foomatic-ppds-cups to 20070207 [markd 2007-03-14]
 	Updated print/cups to 1.2.8 [markd 2007-03-14]
 	Updated mail/dovecot to 1.0rc27 [ghen 2007-03-14]
+	Updated www/bluefish to 1.0.7 [rillig 2007-03-14]
