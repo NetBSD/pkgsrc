@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2007/01/28 15:15:58 taca Exp $
+# $NetBSD: Makefile,v 1.31 2007/03/15 16:41:29 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
-PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-
-PATCH_SITES=	${MASTER_SITE_LOCAL}
-PATCHFILES=	ruby-1.8.5-base-${RUBY18_PATCH_DATE}.patch.bz2
-PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
@@ -31,7 +26,7 @@ CONFIGURE_ARGS+= --enable-shared \
 		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
-WRKSRC=			${RUBY_WRKSRC}
+WRKSRC=		${RUBY_WRKSRC}
 
 # Ruby build process depends on config.status's content
 CONFIG_STATUS_OVERRIDE=	# empty
@@ -63,12 +58,12 @@ PLIST_SUBST+=	HAS_IO=
 CONFIGURE_ARGS+=	--enable-wide-getaddrinfo
 .endif
 
-DOCS=		COPYING COPYING.ja ChangeLog README \
+DOCS=		COPYING COPYING.ja ChangeLog NEWS README \
 		README.EXT README.EXT.ja README.ja ToDo \
-		doc/ChangeLog-1.8.0 doc/NEWS \
+		doc/ChangeLog-1.8.0 doc/NEWS-1.8.0 \
 		doc/forwardable.rd doc/forwardable.rd.ja \
-		doc/shell.rd doc/shell.rd.ja doc/irb/irb-tools.rd.ja \
-		doc/irb/irb.rd doc/irb/irb.rd.ja
+		doc/irb/irb-tools.rd.ja doc/irb/irb.rd doc/irb/irb.rd.ja \
+		doc/shell.rd doc/shell.rd.ja
 EXT_DOCS=	bigdecimal/bigdecimal_en.html bigdecimal/bigdecimal_ja.html \
 		dl/doc/dl.txt enumerator/enumerator.txt \
 		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt \
