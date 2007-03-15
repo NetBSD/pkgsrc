@@ -1,12 +1,17 @@
-# $NetBSD: configure.mk,v 1.15 2007/03/07 01:27:27 rillig Exp $
+# $NetBSD: configure.mk,v 1.16 2007/03/15 11:20:40 rillig Exp $
+#
+# = Package-settable variables =
+#
+# CONFIGURE_ENV is the shell environment that is exported to the
+#	configure script.
+#
+# CONFIG_SHELL is the shell that is used for interpreting the
+#	configure script.
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
 #	then it is assumed to be relative to each directory listed in
 #	CONFIGURE_DIRS.
-#
-# CONFIGURE_ENV is the shell environment that is exported to the
-#	configure script.
 #
 # CONFIGURE_ARGS is the list of arguments that is passed to the
 #	configure script.
@@ -32,6 +37,7 @@
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ARGS?=	# empty
+CONFIG_SHELL?=		${SH}
 CONFIG_SHELL_FLAGS?=	# none
 _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 
