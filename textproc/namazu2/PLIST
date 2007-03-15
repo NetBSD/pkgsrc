@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/17 07:07:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/03/15 16:27:47 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -88,6 +88,7 @@ share/namazu/filter/mailnews.pl
 share/namazu/filter/man.pl
 share/namazu/filter/mhonarc.pl
 share/namazu/filter/mp3.pl
+share/namazu/filter/msofficexml.pl
 share/namazu/filter/msword.pl
 share/namazu/filter/ooo.pl
 share/namazu/filter/pdf.pl
@@ -101,6 +102,7 @@ share/namazu/filter/taro.pl
 share/namazu/filter/taro56.pl
 share/namazu/filter/taro7_10.pl
 share/namazu/filter/tex.pl
+share/namazu/filter/visio.pl
 share/namazu/filter/zip.pl
 @dirrm share/namazu/filter
 share/namazu/pl/codeconv.pl
