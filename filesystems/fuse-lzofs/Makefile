@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/20 23:00:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/15 22:55:21 agc Exp $
 #
 
 DISTNAME=	LZOlayer_fs-20060306
 PKGNAME=	fuse-${DISTNAME:S/LZOlayer_fs/lzofs/}
-CATEGORIES=	sysutils
+CATEGORIES=	filesystems
 MASTER_SITES=	http://north.one.pl/~kazik/pub/LZOlayer/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
