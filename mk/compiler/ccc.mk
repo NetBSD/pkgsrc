@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.15 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: ccc.mk,v 1.16 2007/03/15 22:33:42 rillig Exp $
 #
 # This is the compiler definition for the Compaq C Compilers.
 #
@@ -41,14 +41,11 @@ CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		CCC
 .endif
 
-# CCC passes flags to the linker using "-Wl,".
-_COMPILER_LD_FLAG=	-Wl,
-
 # CCC passes rpath directives to the linker using "-rpath".
 _LINKER_RPATH_FLAG=	-rpath
 
 # CCC passes rpath directives to the linker using "-rpath" tailing ",".
-_COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG},
+_COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG},
 
 # Most packages assume ieee floats, make that the default.
 CFLAGS+=	-ieee
