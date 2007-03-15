@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/15 05:27:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/03/15 05:30:45 schmonz Exp $
 bin/easter
 bin/leapsecs
 bin/nowutc
@@ -32,7 +32,6 @@ man/man3/tai_pack.3
 man/man3/taia.3
 man/man3/taia_now.3
 man/man3/taia_pack.3
-share/doc/examples/libtai/leapsecs.dat
-share/doc/examples/libtai/leapsecs.txt
-@dirrm share/doc/examples/libtai
-@dirrm share/doc/examples
+share/examples/libtai/leapsecs.dat
+share/examples/libtai/leapsecs.txt
+@dirrm share/examples/libtai
