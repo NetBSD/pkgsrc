@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.38 2007/01/25 21:34:54 rpaulo Exp $
+# $NetBSD: tools.Linux.mk,v 1.39 2007/03/15 23:11:12 reed Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -16,6 +16,8 @@ TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
 .endif
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
+.elif exists(/bin/bzcat)
+TOOLS_PLATFORM.bzcat?=		/bin/bzcat
 .elif exists(/usr/bin/bzip2)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzip2 -cd
 .endif
