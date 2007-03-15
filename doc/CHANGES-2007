@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.607 2007/03/15 22:41:36 wennmach Exp $
+$NetBSD: CHANGES-2007,v 1.608 2007/03/15 23:02:14 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1165,3 +1165,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ruby-mode to 1.8.6 [taca 2007-03-15]
 	Updated devel/allegro to 4.2.1 [wiz 2007-03-15]
 	Added devel/p5-Getopt-ArgvFile version 1.10 [wennmach 2007-03-15]
+	Updated converters/txt2html to 2.44 [wennmach 2007-03-15]
