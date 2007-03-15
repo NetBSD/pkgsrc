@@ -1,9 +1,8 @@
-# $NetBSD: gnu-configure.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: gnu-configure.mk,v 1.2 2007/03/15 11:20:40 rillig Exp $
 
 HAS_CONFIGURE=			defined
 OVERRIDE_GNU_CONFIG_SCRIPTS=	defined
 
-CONFIG_SHELL?=	${SH}
 CONFIGURE_ENV+=	CONFIG_SHELL=${CONFIG_SHELL:Q}
 CONFIGURE_ENV+=	LIBS=${LIBS:M*:Q}
 CONFIGURE_ENV+=	install_sh=${INSTALL:Q}
