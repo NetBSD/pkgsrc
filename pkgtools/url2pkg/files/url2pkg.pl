@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.6 2007/02/22 12:05:34 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.7 2007/03/15 12:17:56 rillig Exp $
 #
 
 use strict;
@@ -181,7 +181,7 @@ sub magic_po() {
 sub magic_use_languages() {
 	my @languages;
 
-	grep(/\.c$/, @wrksrc_files) and push(@languages, "c");
+	grep(/\.(c|xs)$/, @wrksrc_files) and push(@languages, "c");
 	grep(/\.(cpp|c\+\+|cxx|cc|C)$/, @wrksrc_files) and push(@languages, "c++");
 	grep(/\.f$/, @wrksrc_files) and push(@languages, "fortran");
 
