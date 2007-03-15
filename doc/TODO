@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6100 2007/03/15 07:36:52 wiz Exp $
+$NetBSD: TODO,v 1.6101 2007/03/15 16:16:56 obache Exp $
 
 Suggested new packages
 ======================
@@ -656,6 +656,7 @@ Suggested package updates
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
 	o nagios-3.0a1
+	o namazu-2.0.17
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.3
 	o nap-1.5.3
