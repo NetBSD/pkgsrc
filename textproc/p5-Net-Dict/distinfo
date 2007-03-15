@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/15 15:41:29 obache Exp $
+
+SHA1 (Net-Dict-2.07.tar.gz) = e96735711be9704b83f165470813bd23f1be7ca5
+RMD160 (Net-Dict-2.07.tar.gz) = 417d440c7278e6ebb5a778e5483dc409846aaa70
+Size (Net-Dict-2.07.tar.gz) = 30284 bytes
+SHA1 (patch-aa) = ed579c715c33e158d51bbf0cfd03021eaed476e7
