@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.16 2007/02/22 07:15:54 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.17 2007/03/15 22:09:29 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,7 +57,7 @@ wrapper_subr_sh="@_WRAP_SUBR_SH@"
 
 # Information about the wrapper and its environment.
 wrapper_abi="@ABI@"		# see ABI in mk/defaults/mk.conf
-wrapper_type="@_WRAP_TYPE@"	# one of AS, CC, CXX, FC, LD, LIBTOOL.
+wrapper_type="@_WRAP_TYPE@"	# one of AS, CC, CXX, FC, IMAKE, LD, LIBTOOL.
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
