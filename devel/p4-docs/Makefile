@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:51 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/15 07:14:27 schmonz Exp $
 #
 
 DISTNAME=	p4-docs
-PKGREVISION=	2
 COMMENT=	Perforce SCM documentation
 
 .include "../../devel/p4/Makefile.common"
 
 # override, since the docs have changed at least once more often
 # than the binaries for NetBSD
-DIST_SUBDIR=	perforce-20040716
+DIST_SUBDIR=	perforce-20070118
 
 HOMEPAGE=	http://www.perforce.com/perforce/technical.html
 
@@ -17,55 +16,34 @@ DISTFILES=	p4.1
 DISTFILES+=	p4d.1
 DISTFILES+=	relnotes.txt
 DISTFILES+=	platformnotes.html
-DISTFILES+=	cmdref_html.zip
-DISTFILES+=	p4ftp_html.zip
-DISTFILES+=	p4guide_html.zip
-DISTFILES+=	p4sag_html.zip
+DISTFILES+=	cmdref.pdf
+DISTFILES+=	p4ftp.pdf
+DISTFILES+=	p4guide.pdf
+DISTFILES+=	p4sag.pdf
 
-P4_DOCURL_PREFIX=		http://www.perforce.com/perforce/doc.021
+P4_DOCURL_PREFIX=		http://www.perforce.com/perforce/doc.062
+P4_MANURL_PREFIX=		http://www.perforce.com/perforce/doc.052
 
-SITES.p4.1=			${P4_DOCURL_PREFIX}/man/
-SITES.p4d.1=			${P4_DOCURL_PREFIX}/man/
+SITES.p4.1=			${P4_MANURL_PREFIX}/man/
+SITES.p4d.1=			${P4_MANURL_PREFIX}/man/
 SITES.relnotes.txt=		${P4_DOCURL_PREFIX}/user/
 SITES.platformnotes.html=	${P4_DOCURL_PREFIX}/user/
-SITES.cmdref_html.zip=		${P4_DOCURL_PREFIX}/manuals/cmdref/
-SITES.p4ftp_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4ftp/
-SITES.p4guide_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4guide/
-SITES.p4sag_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4sag/
-
-EXTRACT_ONLY=		cmdref_html.zip p4ftp_html.zip
-EXTRACT_ONLY+=		p4guide_html.zip p4sag_html.zip
-EXTRACT_OPTS+=		-d `${BASENAME} "$$extract_file" _html.zip`
-EXTRACT_OPTS_ZIP=	-Laq
+SITES.cmdref.pdf=		${P4_DOCURL_PREFIX}/manuals/cmdref/
+SITES.p4ftp.pdf=		${P4_DOCURL_PREFIX}/manuals/p4ftp/
+SITES.p4guide.pdf=		${P4_DOCURL_PREFIX}/manuals/p4guide/
+SITES.p4sag.pdf=		${P4_DOCURL_PREFIX}/manuals/p4sag/
 
 DOCDIR=		share/doc/p4
-HTMLDIR=	share/doc/html/p4
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
-PLIST_SUBST+=	HTMLDIR=${HTMLDIR:Q}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${DOCDIR} ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/*.1 ${PREFIX}/${PKGMANDIR}/man1
 
-	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/relnotes.txt \
-		${PREFIX}/${DOCDIR}
-
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/platformnotes.html \
-		${PREFIX}/${HTMLDIR}
-
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/cmdref
-	${INSTALL_DATA} ${WRKSRC}/cmdref/* ${PREFIX}/${HTMLDIR}/cmdref
-
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/p4ftp
-	${INSTALL_DATA} ${WRKSRC}/p4ftp/* ${PREFIX}/${HTMLDIR}/p4ftp
-
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/p4guide
-	${INSTALL_DATA} ${WRKSRC}/p4guide/* ${PREFIX}/${HTMLDIR}/p4guide
-
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/p4sag
-	${INSTALL_DATA} ${WRKSRC}/p4sag/* ${PREFIX}/${HTMLDIR}/p4sag
+	cd ${WRKSRC};							\
+	for f in *.html *.pdf *.txt; do					\
+		${INSTALL_DATA} $${f} ${PREFIX}/${DOCDIR};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
