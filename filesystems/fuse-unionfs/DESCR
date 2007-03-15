@@ -1,7 +1,7 @@
-FUSE-based union filesystem, with almost limitless number of root
-directories.
+The FUSE-based union filesystem allows to "merge" several directories
+under one mountpoint. 
 
 This utility is implementedd at the user level - to mount a series
 of roots, simply use:
 
-	fuse-unionfs root1:root2:root3 <mountpoint>
+	fuse-unionfs /dir1:/dir2:/dir3 /mnt
