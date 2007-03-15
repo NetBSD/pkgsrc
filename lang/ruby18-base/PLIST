@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/12/06 16:24:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/03/15 16:41:30 taca Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -26,8 +26,8 @@ ${RUBY_LIBDIR}/cgi-lib.rb
 ${RUBY_LIBDIR}/cgi.rb
 ${RUBY_LIBDIR}/complex.rb
 ${RUBY_LIBDIR}/csv.rb
+${RUBY_LIBDIR}/digest/sha2.rb
 ${RUBY_LIBDIR}/digest.rb
-${RUBY_LIBDIR}/digest/digest/sha2.rb
 ${RUBY_LIBDIR}/date/format.rb
 ${RUBY_LIBDIR}/date.rb
 ${RUBY_LIBDIR}/date2.rb
@@ -103,6 +103,7 @@ ${RUBY_ARCHLIBDIR}/stringio.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/strscan.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/syck.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/syslog.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/thread.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/util.h
 ${RUBY_ARCHLIBDIR}/version.h
 ${RUBY_ARCHLIBDIR}/zlib.${RUBY_DLEXT}
@@ -587,6 +588,7 @@ ${RUBY_DOCDIR}/COPYING.ja
 ${RUBY_DOCDIR}/ChangeLog
 ${RUBY_DOCDIR}/ChangeLog-1.8.0
 ${RUBY_DOCDIR}/NEWS
+${RUBY_DOCDIR}/NEWS-1.8.0
 ${RUBY_DOCDIR}/README
 ${RUBY_DOCDIR}/README.EXT
 ${RUBY_DOCDIR}/README.EXT.ja
