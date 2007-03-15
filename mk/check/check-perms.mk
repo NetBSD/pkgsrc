@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.7 2007/03/08 22:49:05 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.8 2007/03/15 22:54:24 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -30,6 +30,10 @@
 #
 #	Possible values: yes, no.
 #
+
+_VARGROUPS+=		check-perms
+_USER_VARS.check-perms=	CHECK_PERMS
+_PKG_VARS.check-perms=	CHECK_PERMS_SKIP CHECK_PERMS_AUTOSKIP
 
 .if defined(PKG_DEVELOPER)
 CHECK_PERMS?=		yes

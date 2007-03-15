@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.1 2007/01/02 21:29:07 rillig Exp $
+# $NetBSD: show.mk,v 1.2 2007/03/15 22:54:24 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -65,3 +65,39 @@ show-build-defs: .PHONY
 
 # @deprecated -- remove after 2007Q1
 build-defs-message: show-build-defs .PHONY
+
+# show-all:
+#	Prints a list of (hopefully) all pkgsrc variables that are visible
+#	to the user or the package developer. It is intended to give
+#	interested parties a better insight into the inner workings of
+#	pkgsrc.
+#
+# Keywords: debug show
+#
+
+_LETTER._USER_VARS=	U
+_LETTER._PKG_VARS=	P
+_LETTER._SYS_VARS=	S
+
+show-all: .PHONY
+.for g in ${_VARGROUPS:O:u}
+
+show-all: show-all-${g}
+
+show-all-${g}: .PHONY
+	@echo "${g}:"
+.  for c in _USER_VARS _PKG_VARS _SYS_VARS
+.    for v in ${${c}.${g}}
+.      if defined(${v})
+.        if empty(${v}:M*)
+	@echo "  ${_LETTER.${c}}	${v} (defined, but empty)"
+.        else
+	@echo "  ${_LETTER.${c}}	${v} = "${${v}:Q}
+.        endif
+.      else
+	@echo "  ${_LETTER.${c}}	${v} (undefined)"
+.      endif
+.    endfor
+.  endfor
+	@echo ""
+.endfor
