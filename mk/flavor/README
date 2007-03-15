@@ -47,7 +47,7 @@ The following make targets must be implemented:
 
 * _flavor-check-vulnerable
 * _flavor-deinstall
-* show-depends
+* _flavor-show-depends
 * _flavor-install-dependencies
 * bootstrap-depends
 * _flavor-register
