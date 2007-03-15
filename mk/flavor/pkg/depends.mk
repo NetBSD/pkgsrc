@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.23 2007/03/14 16:23:48 joerg Exp $
+# $NetBSD: depends.mk,v 1.24 2007/03/15 03:01:33 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -75,7 +75,7 @@ _flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
 	${RUN}								\
 	while read type pattern dir rest; do				\
 		{ [ "$$dir" ] && [ ! "$$rest" ]; }			\
-		|| ${FAIL_MSG} "[depends.mk] Internal error #1";	\
+		|| ${FAIL_MSG} "[depends.mk] Internal error #1: Check ${_DEPENDS_FILE}"; \
 		silent=;						\
 		${_DEPENDS_INSTALL_CMD};				\
 	done < ${_DEPENDS_FILE}
