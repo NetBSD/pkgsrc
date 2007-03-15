@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.6 2007/03/14 12:29:05 markd Exp $
+$NetBSD: patch-ao,v 1.7 2007/03/15 19:01:12 joerg Exp $
 
 --- config-scripts/cups-manpages.m4.orig	2007-02-05 23:09:00.000000000 +1300
 +++ config-scripts/cups-manpages.m4
@@ -20,7 +20,7 @@ $NetBSD: patch-ao,v 1.6 2007/03/14 12:29:05 markd Exp $
 -		# *BSD
 +if test x$manext = x; then
 +	case "$uname" in
-+		*BSD* | Darwin*)
++		*BSD* | Darwin* | DragonFly*)
 +			# *BSD and Darwin (MacOS X)
 +			manext=bsd
 +			;;

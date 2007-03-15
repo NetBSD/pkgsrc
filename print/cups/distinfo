@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.45 2007/03/14 12:29:03 markd Exp $
+$NetBSD: distinfo,v 1.46 2007/03/15 19:01:12 joerg Exp $
 
 SHA1 (cups-1.2.8-source.tar.bz2) = 690890b7d2f779a872e1464fd354498f7da72fee
 RMD160 (cups-1.2.8-source.tar.bz2) = 43d23bd6ef1f396d57f4b57089e6e31fe1304346
 Size (cups-1.2.8-source.tar.bz2) = 3632509 bytes
+SHA1 (patch-aa) = 51ff6e66f881e445adca768d4cf2f6bd18fc36dd
 SHA1 (patch-ab) = f4e587f328390c550bbb70e24d7c2a90c4c73557
 SHA1 (patch-ac) = 02fab706563f7ba01d66530f9462759689c09f04
 SHA1 (patch-ad) = 6695c344453495cd960460733a80d50654786c60
 SHA1 (patch-an) = 4c5271b0f4a262e782e3de8396870498125675bd
-SHA1 (patch-ao) = dbbd6c9a7cedc1fc698de147019b6256a13c5b59
+SHA1 (patch-ao) = 5cb88810f316ffad2a004d13e65b70108c8234b2
 SHA1 (patch-at) = eea32b989402c353f5f1644348c1042a3d4ddfa1
