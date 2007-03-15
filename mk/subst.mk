@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.44 2007/03/07 21:27:59 rillig Exp $
+# $NetBSD: subst.mk,v 1.45 2007/03/15 22:54:24 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -48,6 +48,15 @@
 #
 # Keywords: subst
 #
+
+_VARGROUPS+=		subst
+_PKG_VARS.subst=	SUBST_CLASSES
+.for c in ${SUBST_CLASSES}
+.  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
+	SUBST_FILTER_CMD SUBST_POSTCMD SUBST_SKIP_TEXT_CHECK
+_PKG_VARS.subst+=	${pv}.${c}
+.  endfor
+.endfor
 
 ECHO_SUBST_MSG?=	${STEP_MSG}
 
