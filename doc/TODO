@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6098 2007/03/14 17:26:58 wiz Exp $
+$NetBSD: TODO,v 1.6099 2007/03/15 07:15:37 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -700,8 +700,6 @@ Suggested package updates
 	o oregano-0.60.0
 	o oroborus-2.0.15
 	o otpCalc-0.97
-	o p4-2005.1 [schmonz]
-	o p4d-2005.1 [schmonz]
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
