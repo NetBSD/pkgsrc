@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.46 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: bsd.tools.mk,v 1.47 2007/03/15 22:54:25 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -162,3 +162,25 @@ post-tools:
 .include "${PKGSRCDIR}/mk/tools/make.mk"
 
 .include "${PKGSRCDIR}/mk/tools/create.mk"
+
+_VARGROUPS+=		tools
+_USER_VARS.tools=	TOOLS_SHELL
+_PKG_VARS.tools=	USE_TOOLS TOOLS_BROKEN TOOLS_CREATE \
+	TOOLS_FAIL TOOLS_GNU_MISSING TOOLS_NOOP
+.for t in ${USE_TOOLS:C/:.*//} # XXX: There should be a variable _ALL_TOOLS
+.  for pv in \
+	TOOLS_ALIASES \
+	TOOLS_ARGS \
+	TOOLS_CMD \
+	TOOLS_DEPENDS \
+	TOOLS_IGNORE \
+	TOOLS_PATH \
+	TOOLS_PLATFORM \
+	TOOLS_PREFIX \
+	TOOLS_SCRIPT \
+	TOOLS_SCRIPT_DFLT \
+	TOOLS_VALUE_GNU \
+	# nil
+_SYS_VARS.tools+=	${pv}.${t}
+.  endfor
+.endfor

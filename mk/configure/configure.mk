@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.16 2007/03/15 11:20:40 rillig Exp $
+# $NetBSD: configure.mk,v 1.17 2007/03/15 22:54:24 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -33,6 +33,12 @@
 #
 # Keywords: config.guess config.sub
 #
+
+_VARGROUPS+=		configure
+_USER_VARS.configure=	CONFIG_SHELL_FLAGS
+_PKG_VARS.configure=	CONFIGURE_ENV CONFIG_SHELL CONFIGURE_SCRIPT \
+	CONFIGURE_ARGS OVERRIDE_GNU_CONFIG_SCRIPTS HAS_CONFIGURE \
+	GNU_CONFIGURE PKGCONFIG_OVERRIDE USE_PKGLOCALEDIR
 
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		${ALL_ENV}

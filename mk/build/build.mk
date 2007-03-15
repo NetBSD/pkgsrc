@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.10 2007/03/08 23:16:06 rillig Exp $
+# $NetBSD: build.mk,v 1.11 2007/03/15 22:54:24 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -27,6 +27,11 @@
 # See also:
 #	mk/build/test.mk
 #
+
+_VARGROUPS+=		build
+_USER_VARS.build=	MAKE_JOBS BUILD_ENV_SHELL
+_PKG_VARS.build=	BUILD_MAKE_FLAGS BUILD_TARGET MAKE_JOBS_SAFE
+_SYS_VARS.build=	BUILD_MAKE_CMD
 
 BUILD_MAKE_FLAGS?=	# none
 BUILD_TARGET?=		all
