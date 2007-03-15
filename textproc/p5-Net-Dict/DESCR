@@ -1,0 +1,3 @@
+This distribution contains the Net::Dict module for Perl.
+Net::Dict is a class implementing a simple client API
+for the DICT protocol defined in RFC2229.
