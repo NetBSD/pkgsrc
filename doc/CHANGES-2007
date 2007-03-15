@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.599 2007/03/15 07:15:37 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.600 2007/03/15 07:36:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1145,6 +1145,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-AppConfig-Std version 1.07 [obache 2007-03-14]
 	Updated archivers/pbzip2 to 1.0 [rillig 2007-03-14]
 	Updated mail/qcheck to 1.0nb1 [schmonz 2007-03-15]
+	Updated emulators/mmix to 20060918 [dbj 2007-03-15]
 	Added devel/libtai version 0.60 [schmonz 2007-03-15]
 	Updated devel/p4 to 2006.1 [schmonz 2007-03-15]
 	Updated devel/p4d to 2006.1nb1 [schmonz 2007-03-15]
