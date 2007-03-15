@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.601 2007/03/15 12:18:08 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.602 2007/03/15 12:18:38 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1152,3 +1152,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p4web to 2006.1 [schmonz 2007-03-15]
 	Updated devel/p4-docs to 2006.1 [schmonz 2007-03-15]
 	Updated pkgtools/url2pkg to 2.5 [rillig 2007-03-15]
+	Added security/p5-Authen-PAM version 0.16 [rillig 2007-03-15]
