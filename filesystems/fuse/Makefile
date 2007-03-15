@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/20 23:48:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/15 22:55:21 agc Exp $
 #
 
 DISTNAME=		fuse-2.5.2
-CATEGORIES=		sysutils
+CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
 MAINTAINER=		pancake@phreaker.net
