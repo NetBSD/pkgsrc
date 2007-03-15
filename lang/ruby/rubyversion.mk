@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.31 2007/01/28 15:15:57 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.32 2007/03/15 16:41:01 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -7,10 +7,10 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # current supported Ruby's version
-RUBY18_VERSION=		1.8.5
+RUBY18_VERSION=		1.8.6
 
-# patch date
-RUBY18_PATCH_DATE=	20061205
+# patch
+RUBY18_PATCHLEVEL=
 
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
 #	packages and user can define in mk.conf.  (1.6 or 1.8)
@@ -25,10 +25,14 @@ RUBY_VERSION_DEFAULT?=	1.8
 #
 .if ${RUBY_VERSION_DEFAULT} == "1.8"
 RUBY_VERSION?=		${RUBY18_VERSION}
-RUBY_PATCH_DATE?=	${RUBY18_PATCH_DATE}
+RUBY_PATCHLEVEL?=	${RUBY18_PATCHLEVEL}
 .endif
 
-RUBY_VERSION_SUFFIX=	${RUBY_VERSION}.${RUBY_PATCH_DATE}
+.if !empty(RUBY_PATCH_LEVEL)
+RUBY_VERSION_SUFFIX=	${RUBY_VERSION}.${RUBY_PATCH_LEVEL}
+.else
+RUBY_VERSION_SUFFIX=	${RUBY_VERSION}
+.endif
 
 # RUBY_VERSION_SUPPORTED defines the list of ${RUBY_VER} which is
 #	supported by the package.  It should be defined by the packages
