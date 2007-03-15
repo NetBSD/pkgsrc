@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/12/09 02:18:22 markd Exp $
+# $NetBSD: Makefile,v 1.17 2007/03/15 20:43:24 joerg Exp $
 #
 
 DISTNAME=	freerdist-0.92
@@ -14,6 +14,7 @@ USE_TOOLS+=	byacc
 
 RDIST6_NAME=	rdist6
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 INSTALL_TARGET=	install install.man
 MAKE_ENV+=	RDIST6_NAME=${RDIST6_NAME:Q}
 
