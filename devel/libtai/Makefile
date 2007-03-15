@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/15 05:27:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/15 05:30:45 schmonz Exp $
 #
 
 DISTNAME=	libtai-0.60
@@ -13,7 +13,7 @@ DJB_RESTRICTED=	NO
 
 USE_TOOLS+=	nroff
 
-EGDIR=		share/doc/examples/${PKGBASE}
+EGDIR=		share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/leapsecs.dat ${PKG_SYSCONFDIR}/leapsecs.dat
 
 INSTALLATION_DIRS=	bin include lib ${EGDIR}
