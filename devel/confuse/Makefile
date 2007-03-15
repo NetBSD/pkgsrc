@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/02 01:56:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/15 18:34:58 joerg Exp $
 #
 
 DISTNAME=	confuse-2.5
@@ -14,5 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-shared
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 
 .include "../../mk/bsd.pkg.mk"
