@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.602 2007/03/15 12:18:38 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.603 2007/03/15 15:45:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1153,3 +1153,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p4-docs to 2006.1 [schmonz 2007-03-15]
 	Updated pkgtools/url2pkg to 2.5 [rillig 2007-03-15]
 	Added security/p5-Authen-PAM version 0.16 [rillig 2007-03-15]
+	Added textproc/p5-Net-Dict version 2.07 [obache 2007-03-15]
