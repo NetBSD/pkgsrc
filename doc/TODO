@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6104 2007/03/15 19:11:35 wiz Exp $
+$NetBSD: TODO,v 1.6105 2007/03/15 22:39:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -228,7 +228,6 @@ Suggested package updates
 	o album-4.01
 	o algae-4.3.6
 	o aliados-0.2.0
-	o allegro-4.2.1
 	o amanda-2.5.1p3
 	o amanda-client-2.5.0
 	o amanda-common-2.5.0
