@@ -1,0 +1,5 @@
+if checkyesno clean_uucp && [ -f /usr/pkg/libexec/uucp/clean.weekly ]; then
+	echo ""
+	echo "Cleaning up UUCP:"
+	su daemon -c /usr/pkg/libexec/uucp/clean.weekly
+fi

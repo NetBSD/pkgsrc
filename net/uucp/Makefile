@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/10/30 04:12:18 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/15 20:02:18 christos Exp $
 
 DISTNAME=	uucp-1.07
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=uucp/}
 
@@ -60,5 +60,8 @@ post-configure:
 	@${ECHO} "#define ${_var_}	\""${UUCP_${_var_}:Q}"\""	\
 		>> ${WRKSRC}/policy_local.h
 .endfor
+	${MKDIR} ${WRKSRC}/rmail ${WRKSRC}/uucpd
+	${CP} ${FILESDIR}/rmail/[a-zM]* ${WRKSRC}/rmail
+	${CP} ${FILESDIR}/uucpd/[a-zM]* ${WRKSRC}/uucpd
 
 .include "../../mk/bsd.pkg.mk"
