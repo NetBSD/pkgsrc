@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2007/03/06 10:32:33 martti Exp $
+# $NetBSD: Makefile,v 1.71 2007/03/15 03:15:25 rillig Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -24,9 +24,14 @@ CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP:Q}
 CONFIGURE_ARGS+=	--with-tcpwrappers
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--enable-readdir_r
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.*)
+CONFIGURE_ARGS+=	--disable-readdir-r
+.else
+CONFIGURE_ARGS+=	--enable-readdir_r
+.endif
 
 BUILD_DEFS+=	CLAMAV_USER CLAMAV_GROUP CLAMAV_DBDIR
 FILES_SUBST+=	CLAMAV_USER=${CLAMAV_USER:Q}
