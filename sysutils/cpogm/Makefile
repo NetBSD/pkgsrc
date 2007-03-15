@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/16 01:19:20 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/15 18:37:57 joerg Exp $
 #
 
 DISTNAME=		cpogm-1.0
@@ -13,5 +13,6 @@ USE_TOOLS+=		perl:run
 NO_CONFIGURE=		yes
 BUILD_TARGET=		all PREFIX=${PREFIX}
 INSTALL_TARGET=		install PREFIX=${PREFIX}
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
