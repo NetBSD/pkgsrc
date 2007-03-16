@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/03/16 17:52:25 christos Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/16 20:02:04 christos Exp $
 
 DISTNAME=	uucp-1.07
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=uucp/}
 
