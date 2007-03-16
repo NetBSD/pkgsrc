@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.4 2007/03/16 10:05:20 rillig Exp $
+# $NetBSD: show.mk,v 1.5 2007/03/16 10:28:50 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -75,9 +75,9 @@ build-defs-message: show-build-defs .PHONY
 # Keywords: debug show
 #
 
-_LETTER._USER_VARS=	U
-_LETTER._PKG_VARS=	P
-_LETTER._SYS_VARS=	S
+_LABEL._USER_VARS=	usr
+_LABEL._PKG_VARS=	pkg
+_LABEL._SYS_VARS=	sys
 
 show-all: .PHONY
 .for g in ${_VARGROUPS:O:u}
@@ -98,12 +98,12 @@ show-all-${g}: .PHONY
 #
 	@value=${${v}:M*:Q};						\
 	if [ "$$value" ]; then						\
-	  echo "  ${_LETTER.${c}}	${v} = $$value";		\
+	  echo "  ${_LABEL.${c}}	${v} = $$value";		\
 	else								\
-	  echo "  ${_LETTER.${c}}	${v} (defined, but empty)";	\
+	  echo "  ${_LABEL.${c}}	${v} (defined, but empty)";	\
 	fi
 .      else
-	@echo "  ${_LETTER.${c}}	${v} (undefined)"
+	@echo "  ${_LABEL.${c}}	${v} (undefined)"
 .      endif
 .    endfor
 .  endfor
