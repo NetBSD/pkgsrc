@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.12 2007/03/15 01:06:02 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.13 2007/03/16 10:29:22 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -23,6 +23,10 @@
 #	The list of filename patterns that should be excluded from this
 #	test, either absolute or relative to PREFIX.
 #
+
+_VARGROUPS+=			check-wrkref
+_USER_VARS.check-wrkref=	CHECK_WRKREF
+_PKG_VARS.check-wrkref=		CHECK_WRKREF_SKIP
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
