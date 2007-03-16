@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2007/03/08 05:14:38 pooka Exp $
+$NetBSD: patch-ab,v 1.3 2007/03/16 08:21:16 pooka Exp $
 
---- LZOlayer_fs.c.orig	2006-05-19 04:23:35.000000000 +0900
-+++ LZOlayer_fs.c	2007-03-08 14:12:22.000000000 +0900
+--- LZOlayer_fs.c.orig	2006-05-18 22:23:35.000000000 +0300
++++ LZOlayer_fs.c	2007-03-16 09:00:48.000000000 +0200
 @@ -21,6 +21,15 @@
  #define __USE_UNIX98
  #include <unistd.h>
@@ -96,7 +96,27 @@ $NetBSD: patch-ab,v 1.2 2007/03/08 05:14:38 pooka Exp $
        chown(filePtr->path, fuse_get_context()->uid, fuse_get_context()->gid);
      }
  // old open/create for write
-@@ -365,7 +385,7 @@
+@@ -357,15 +377,25 @@
+ static int LZOlayer_mknod(const char *path, mode_t mode, dev_t rdev)
+ {
+   char *xPath = LZOlayer_makePath(path);
+-  int   res   = mknod(xPath, mode, rdev);
+-  
++  int   res;
++
++  if (S_ISREG(mode)) {
++    res = open(xPath, owronly | O_CREAT | O_TRUNC, 0700);
++    if (res != -1) {
++      close(res);
++      res = 0;
++    }
++  } else {
++    res = mknod(xPath, mode, rdev);
++  }
++
+   if (res == -1)
+   {
+     res = -errno;
    }
    else
    {
@@ -105,7 +125,15 @@ $NetBSD: patch-ab,v 1.2 2007/03/08 05:14:38 pooka Exp $
      off_t null = 0;
      write(fd, &null, sizeof(off_t));
      write(fd, &null, sizeof(off_t));
-@@ -383,7 +403,7 @@
+@@ -373,6 +403,7 @@
+     close(fd);
+ 	 
+     chown(xPath, fuse_get_context()->uid, fuse_get_context()->gid);
++    chmod(xPath, mode);
+   }
+   free(xPath);
+   
+@@ -383,7 +414,7 @@
  {
    char *xPath = LZOlayer_makePath(path);
    
