@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2007/03/04 11:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/16 20:07:43 wiz Exp $
 #
 
 DISTNAME=	asr.pages
 PKGNAME=	asr-manpages-20000406
 CATEGORIES=	misc
-MASTER_SITES=	http://www.netsw.org/hacker/manpages/
+MASTER_SITES=	# on ftp.NetBSD.org
+EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/2/www.winternet.com/~eric/sysadmin/manpages.html
