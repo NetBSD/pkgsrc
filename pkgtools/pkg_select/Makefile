@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/16 20:22:16 rillig Exp $
 #
 
 DISTNAME=	pkg_select-20050817
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
@@ -11,37 +11,33 @@ COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
-
 WRKSRC=		${WRKDIR}/pkg_select
-NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-PKG_DBDIR?=	/var/db/pkg
+INSTALLATION_DIRS+=	${EXAMPLEDIR} share/pkg_select
 
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EXAMPLEDIR}/${PKGBASE}.conf.example	\
 			${PKG_SYSCONFDIR}/${PKGBASE}.conf
 
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Adjusting path.
+SUBST_FILES.path=	Makefile pkg_select.1 ${PKGBASE}.conf.example
+SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g"
+SUBST_SED.path+=	-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g"
+SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
+SUBST_SED.path+=	-e "s|/var/db/pkg|${PKG_DBDIR}|g"
+SUBST_SED.path+=	-e "s|/usr/bin/make|${MAKE}|g"
+
+CFLAGS+=		-DPKGTOOLS_PATH=\"${PKG_TOOLS_BIN}\"
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkg_select ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pkg_select
 	${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.conf.example ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/mirrors.cvs ${PREFIX}/share/pkg_select
 	${INSTALL_DATA} ${WRKSRC}/mirrors.ftp ${PREFIX}/share/pkg_select
 	${INSTALL_MAN} ${WRKSRC}/pkg_select.1 ${PREFIX}/${PKGMANDIR}/man1
-
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	Makefile pkg_select.1 ${PKGBASE}.conf.example
-SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g" \
-			-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g" \
-			-e "s|/usr/pkg|${PREFIX}|g" \
-			-e "s|/var/db/pkg|${PKG_DBDIR}|g" \
-			-e "s|/usr/bin/make|${MAKE}|g"
-SUBST_MESSAGE.path=	Adjusting path.
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
