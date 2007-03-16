@@ -1,4 +1,4 @@
-/*	$NetBSD: rmail.c,v 1.1 2007/03/15 20:02:20 christos Exp $	*/
+/*	$NetBSD: rmail.c,v 1.2 2007/03/16 23:09:02 christos Exp $	*/
 
 /*
  * Copyright (c) 1988, 1993
@@ -12,11 +12,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -33,17 +29,14 @@
  * SUCH DAMAGE.
  */
 
+#include <sys/cdefs.h>
 #ifndef lint
-static char copyright[] =
-"@(#) Copyright (c) 1988, 1993\n\
-	The Regents of the University of California.  All rights reserved.\n";
-#endif /* not lint */
-
-#ifndef lint
+__COPYRIGHT("@(#) Copyright (c) 1988, 1993\n\
+	The Regents of the University of California.  All rights reserved.\n");
 #if 0
 static char sccsid[] = "@(#)rmail.c	8.3 (Berkeley) 5/15/95";
 #else
-static char rcsid[] = "$NetBSD: rmail.c,v 1.1 2007/03/15 20:02:20 christos Exp $";
+__RCSID("$NetBSD: rmail.c,v 1.2 2007/03/16 23:09:02 christos Exp $");
 #endif
 #endif /* not lint */
 
@@ -67,15 +60,14 @@ static char rcsid[] = "$NetBSD: rmail.c,v 1.1 2007/03/15 20:02:20 christos Exp $
  *
  * The output of rmail(8) compresses the <forward> lines into a single
  * from path.
- *
- * The err(3) routine is included here deliberately to make this code
- * a bit more portable.
  */
 #include <sys/param.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
 
 #include <ctype.h>
+#include <err.h>
+#include <errno.h>
 #include <fcntl.h>
 #include <paths.h>
 #include <stdio.h>
@@ -88,28 +80,29 @@ static char rcsid[] = "$NetBSD: rmail.c,v 1.1 2007/03/15 20:02:20 christos Exp $
 # define MAX(a, b)	((a) < (b) ? (b) : (a))
 #endif
 
-void err __P((int, const char *, ...));
 void usage __P((void));
+int main __P((int, char *[]));
 
 int
 main(argc, argv)
 	int argc;
 	char *argv[];
 {
-	extern char *optarg;
-	extern int errno, optind;
 	FILE *fp;
 	struct stat sb;
-	size_t fplen, fptlen, len;
+	size_t fplen, fptlen, len, nfptlen;
 	off_t offset;
 	int ch, debug, i, pdes[2], pid, status;
 	char *addrp, *domain, *p, *t;
-	char *from_path, *from_sys, *from_user;
+	char *from_path, *from_sys, *from_user, *n;
 	char *args[100], buf[2048], lbuf[2048];
 
+	addrp = NULL;	/* XXX gcc */
+	fplen = fptlen = 0;	/* XXX gcc */
+	nfptlen = 0;
 	debug = 0;
 	domain = "UUCP";		/* Default "domain". */
-	while ((ch = getopt(argc, argv, "D:T")) != EOF)
+	while ((ch = getopt(argc, argv, "D:T")) != -1)
 		switch (ch) {
 		case 'T':
 			debug = 1;
@@ -156,7 +149,7 @@ main(argc, argv)
 		/* Use the "remote from" if it exists. */
 		for (p = addrp; (p = strchr(p + 1, 'r')) != NULL;)
 			if (!strncmp(p, "remote from ", 12)) {
-				for (t = p += 12; *t && !isspace(*t); ++t);
+				for (t = p += 12; *t && !isspace((unsigned char)*t); ++t);
 				*t = '\0';
 				if (debug)
 					(void)fprintf(stderr,
@@ -165,7 +158,7 @@ main(argc, argv)
 			}
 
 		/* Else use the string up to the last bang. */
-		if (p == NULL)
+		if (p == NULL) {
 			if (*addrp == '!')
 				err(EX_DATAERR,
 				    "bang starts address: %s", addrp);
@@ -179,11 +172,12 @@ main(argc, argv)
 				if (debug)
 					(void)fprintf(stderr, "bang: %s\n", p);
 			}
+		}
 
 		/* 'p' now points to any system string from this line. */
 		if (p != NULL) {
 			/* Nul terminate it as necessary. */
-			for (t = p; *t && !isspace(*t); ++t);
+			for (t = p; *t && !isspace((unsigned char)*t); ++t);
 			*t = '\0';
 
 			/* If the first system, copy to the from_sys string. */
@@ -203,10 +197,11 @@ main(argc, argv)
 					err(EX_TEMPFAIL, NULL);
 			}
 			if (fplen + len + 2 > fptlen) {
-				fptlen += MAX(fplen + len + 2, 256);
-				if ((from_path =
-				    realloc(from_path, fptlen)) == NULL)
+				nfptlen += MAX(fplen + len + 2, 256);
+				if ((n = realloc(from_path, nfptlen)) == NULL)
 					err(EX_TEMPFAIL, NULL);
+				from_path = n;
+				fptlen = nfptlen;
 			}
 			memmove(from_path + fplen, p, len);
 			fplen += len;
@@ -215,7 +210,7 @@ main(argc, argv)
 		}
 
 		/* Save off from user's address; the last one wins. */
-		for (p = addrp; *p && !isspace(*p); ++p);
+		for (p = addrp; *p && !isspace((unsigned char)*p); ++p);
 		*p = '\0';
 		if (*addrp == '\0')
 			addrp = "<>";
@@ -238,7 +233,24 @@ main(argc, argv)
 	i = 0;
 	args[i++] = _PATH_SENDMAIL;	/* Build sendmail's argument list. */
 	args[i++] = "-oee";		/* No errors, just status. */
+	/*
+	 * If you define QUEUE_ONLY, sendmail is invoked with "-odq",
+	 * which means all mail is queued instead of being delivered
+	 * right then. Your system load will be lower, but mail won't
+	 * be delivered until the next queue run (say up to an hour
+	 * away). This used to be the default in rmail, but it seems
+	 * way outdated now.
+	 * The default now is "-odb", deliver in background.
+	 * Another possibility would be "-odi", which would deliver in
+	 * foreground, which is slow if you have a lot of mail since
+	 * you won't get parallelism but will guarantee you don't get
+	 * lots of forks. 
+	 */
+#ifdef QUEUE_ONLY
 	args[i++] = "-odq";		/* Queue it, don't try to deliver. */
+#else
+	args[i++] = "-odb";		/* Deliver in background. */
+#endif
 	args[i++] = "-oi";		/* Ignore '.' on a line by itself. */
 
 	/* set from system and protocol used */
@@ -270,9 +282,8 @@ main(argc, argv)
 		if (strchr(*argv, ',') == NULL || strchr(*argv, '<') != NULL)
 			args[i++] = *argv;
 		else {
-			if ((args[i] = malloc(strlen(*argv) + 3)) == NULL)
+			if (asprintf(&args[i++], "<%s>", *argv) < 0)
 				err(EX_TEMPFAIL, "Cannot malloc");
-			sprintf (args [i++], "<%s>", *argv);
 		}
 		argv++;
 	} 
@@ -347,33 +358,4 @@ usage()
 {
 	(void)fprintf(stderr, "usage: rmail [-T] [-D domain] user ...\n");
 	exit(EX_USAGE);
-}
-
-#ifdef __STDC__
-#include <stdarg.h>
-#else
-#include <varargs.h>
-#endif
-
-void
-#ifdef __STDC__
-err(int eval, const char *fmt, ...)
-#else
-err(eval, fmt, va_alist)
-	int eval;
-	const char *fmt;
-	va_dcl
-#endif
-{
-	va_list ap;
-#if __STDC__
-	va_start(ap, fmt);
-#else
-	va_start(ap);
-#endif
-	(void)fprintf(stderr, "rmail: ");
-	(void)vfprintf(stderr, fmt, ap);
-	va_end(ap);
-	(void)fprintf(stderr, "\n");
-	exit(eval);
 }
