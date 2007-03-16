@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.7 2007/02/22 07:20:42 rillig Exp $
+# $NetBSD: locking.mk,v 1.8 2007/03/16 20:38:40 rillig Exp $
 #
 # User-settable variables:
 #
@@ -75,7 +75,8 @@ USE_TOOLS+=		sleep
 #
 
 _CHECK_IF_SHLOCK_IS_AVAILABLE_CMD= \
-	${TEST} -x ${SHLOCK:Q}"" || {					\
+	[ "${PKGPATH}" != "pkgtools/shlock" ] || exit 0;		\
+	[ -x ${SHLOCK:Q}"" ] || {					\
 		${ERROR_MSG} "[locking.mk] shlock is not installed.";	\
 		${ERROR_MSG} "[locking.mk] Please \"(cd ../../pkgtools/shlock && ${MAKE} install\")."; \
 		exit 1;							\
