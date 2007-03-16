@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.820 2007/03/15 22:39:55 wennmach Exp $
+# $NetBSD: Makefile,v 1.821 2007/03/16 21:11:50 kristerw Exp $
 #
 
 COMMENT=	Development utilities
@@ -298,6 +298,7 @@ SUBDIR+=	libstash
 SUBDIR+=	libstatgrab
 SUBDIR+=	libstree
 SUBDIR+=	libstroke
+SUBDIR+=	libtai
 SUBDIR+=	libtar
 SUBDIR+=	libtecla
 SUBDIR+=	libtool
