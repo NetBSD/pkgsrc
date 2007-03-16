@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.15 2007/03/16 10:17:13 rillig Exp $
+# $NetBSD: check-files.mk,v 1.16 2007/03/16 10:29:22 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -24,6 +24,10 @@
 #	avoid getting errors triggered by changes in directories not
 #	really handled by pkgsrc.
 #
+
+_VARGROUPS+=		check-files
+_USER_VARS.check-files=	CHECK_FILES CHECK_FILES_STRICT
+_PKG_VARS.check-files=	CHECK_FILES_SKIP
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
