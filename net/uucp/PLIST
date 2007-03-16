@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/15 20:02:18 christos Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/03/16 20:02:04 christos Exp $
 bin/cu
 bin/uucp
 bin/uulog
@@ -17,6 +17,8 @@ man/man8/uucico.8
 man/man8/uuxqt.8
 man/man8/rmail.8
 man/man8/uucpd.8
+man/cat8/uucpd.0
+man/cat8/rmail.0
 sbin/uuchk
 sbin/uucico
 sbin/uuconv
