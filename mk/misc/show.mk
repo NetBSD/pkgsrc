@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.3 2007/03/16 09:53:37 rillig Exp $
+# $NetBSD: show.mk,v 1.4 2007/03/16 10:05:20 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -79,7 +79,6 @@ _LETTER._USER_VARS=	U
 _LETTER._PKG_VARS=	P
 _LETTER._SYS_VARS=	S
 
-.if make(show-all)
 show-all: .PHONY
 .for g in ${_VARGROUPS:O:u}
 
@@ -90,11 +89,19 @@ show-all-${g}: .PHONY
 .  for c in _USER_VARS _PKG_VARS _SYS_VARS
 .    for v in ${${c}.${g}}
 .      if defined(${v})
-.        if empty(${v}:M*)
-	@echo "  ${_LETTER.${c}}	${v} (defined, but empty)"
-.        else
-	@echo "  ${_LETTER.${c}}	${v} = "${${v}:Q}
-.        endif
+# Be careful not to evaluate variables too early. Some may use the :sh
+# modifier, which can end up taking much time and issuing unexpected
+# warnings and error messages.
+#
+# When finally showing the variables, it is unavoidable that those
+# variables requiring ${WRKDIR} to exist will show a warning.
+#
+	@value=${${v}:M*:Q};						\
+	if [ "$$value" ]; then						\
+	  echo "  ${_LETTER.${c}}	${v} = $$value";		\
+	else								\
+	  echo "  ${_LETTER.${c}}	${v} (defined, but empty)";	\
+	fi
 .      else
 	@echo "  ${_LETTER.${c}}	${v} (undefined)"
 .      endif
@@ -102,4 +109,3 @@ show-all-${g}: .PHONY
 .  endfor
 	@echo ""
 .endfor
-.endif
