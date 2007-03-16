@@ -1,4 +1,4 @@
-/*	$NetBSD: pathnames.h,v 1.1 2007/03/15 20:02:20 christos Exp $	*/
+/*	$NetBSD: pathnames.h,v 1.2 2007/03/16 17:52:30 christos Exp $	*/
 
 /*
  * Copyright (c) 1989 The Regents of the University of California.
@@ -33,4 +33,4 @@
 
 #include <paths.h>
 
-#define	_PATH_UUCICO	"/usr/libexec/uucp/uucico"
+#define	_PATH_UUCICO	"@PREFIX@/libexec/uucp/uucico"
