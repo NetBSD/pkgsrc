@@ -1,19 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2006/01/25 16:03:00 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/16 22:04:53 bad Exp $
 
---- cdda2wav/interface.c.orig	2006-01-25 15:51:29.000000000 +0000
-+++ cdda2wav/interface.c
-@@ -439,12 +439,12 @@ static void Check_interface_for_device( 
- #endif
- #endif
-        break;
--#if defined (__linux__) || defined (__FreeBSD__)
-+#if defined (__linux__) || defined (__FreeBSD__) || defined(__DragonFly__)
- #if defined (__linux__)
-     case SCSI_CDROM_MAJOR:     /* scsi cd */
-     default:			/* for example ATAPI cds */
- #else
--#if defined (__FreeBSD__)
-+#if defined (__FreeBSD__) || defined(__DragonFly__)
-     case 117:
- 	if (!S_ISCHR(statstruct->st_mode)) {
- 	    fprintf(stderr, "%s is not a char device\n",pdev_name);
+--- cdda2wav/local.cnf.in.orig	2003-09-04 10:35:46.000000000 +0200
++++ cdda2wav/local.cnf.in
+@@ -43,7 +43,7 @@ HAVE_IOCTL=	$(__HAVE_IOCTL:$(_UNIQ)$(HAV
+ 
+ ############# Sound device support
+ #to disable sound support comment out the corresponding line with HAVE_SOUND
+-OSS_SOUND_DEV=	'"/dev/dsp"'
++OSS_SOUND_DEV=	'"${DEVOSSSOUND}"'
+ SUN_SOUND_DEV=	'"/dev/audio"'
+ 
+ HAVE_OSS=	@HAVE_OSS@
