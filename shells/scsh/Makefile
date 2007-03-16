@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/02/22 19:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/03/16 23:18:42 joerg Exp $
 
 DISTNAME=		scsh-0.6.7
 CATEGORIES=		shells lang
@@ -16,6 +16,8 @@ BUILD_TARGET=		enough
 TEST_TARGET=		check
 
 PKG_SHELL=		bin/scsh
+
+INSTALLATION_DIRS=	share/doc
 
 # Build references from dumped environment variables is not a problem.
 CHECK_WRKREF_SKIP+=	lib/scsh/scsh.image
