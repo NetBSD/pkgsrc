@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/15 20:02:18 christos Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/16 17:52:25 christos Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	2
@@ -60,8 +60,11 @@ post-configure:
 	@${ECHO} "#define ${_var_}	\""${UUCP_${_var_}:Q}"\""	\
 		>> ${WRKSRC}/policy_local.h
 .endfor
-	${MKDIR} ${WRKSRC}/rmail ${WRKSRC}/uucpd
-	${CP} ${FILESDIR}/rmail/[a-zM]* ${WRKSRC}/rmail
-	${CP} ${FILESDIR}/uucpd/[a-zM]* ${WRKSRC}/uucpd
+.for _var_ in rmail uucpd
+	@${MKDIR} ${WRKSRC}/${_var_}
+	@(cd ${FILESDIR}/${_var_} && for f in [a-zM]*; do \
+	    ${SED} -e "s,@PREFIX@,${PREFIX}," < $$f > ${WRKSRC}/${_var_}/$$f; \
+	 done)
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
