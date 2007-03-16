@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.2 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: show.mk,v 1.3 2007/03/16 09:53:37 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -79,6 +79,7 @@ _LETTER._USER_VARS=	U
 _LETTER._PKG_VARS=	P
 _LETTER._SYS_VARS=	S
 
+.if make(show-all)
 show-all: .PHONY
 .for g in ${_VARGROUPS:O:u}
 
@@ -101,3 +102,4 @@ show-all-${g}: .PHONY
 .  endfor
 	@echo ""
 .endfor
+.endif
