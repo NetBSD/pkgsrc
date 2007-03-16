@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/03/11 21:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.40 2007/03/16 00:29:51 joerg Exp $
 
 DISTNAME=	neon-0.26.3
 CATEGORIES=	www
@@ -12,7 +12,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-expat
