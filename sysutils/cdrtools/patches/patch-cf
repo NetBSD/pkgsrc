@@ -1,8 +1,8 @@
-$NetBSD: patch-cf,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+$NetBSD: patch-cf,v 1.2 2007/03/16 22:04:54 bad Exp $
 
---- mkisofs/tree.c.orig	2004-06-12 15:16:37.000000000 +0200
+--- mkisofs/tree.c.orig	2006-11-25 16:49:32.000000000 +0100
 +++ mkisofs/tree.c
-@@ -1577,7 +1577,7 @@ insert_file_entry(this_dir, whole_path, 
+@@ -1562,7 +1562,7 @@ insert_file_entry(this_dir, whole_path, 
  	/*
  	 * >= is required by the large file summit standard.
  	 */
