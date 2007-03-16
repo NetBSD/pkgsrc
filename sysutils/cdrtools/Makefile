@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/16 22:04:52 bad Exp $
 
-DISTNAME=	cdrtools-2.01
-PKGREVISION=	4
+DISTNAME=	cdrtools-2.01.01a24
+PKGNAME=	cdrtools-2.01.01.24
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/
+MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=		${WRKDIR}/cdrtools-2.01.01
 USE_TOOLS+=	gmake tbl
 
 .if ${LOCALBASE} != "/opt/schily"
@@ -54,9 +55,6 @@ SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
 			readcd/readcd.1
 SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
-
-post-extract:
-	${CP} ${WRKSRC}/RULES/os-freebsd.id ${WRKSRC}/RULES/os-dragonfly.id
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\

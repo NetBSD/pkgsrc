@@ -1,8 +1,8 @@
-$NetBSD: patch-ce,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+$NetBSD: patch-ce,v 1.2 2007/03/16 22:04:54 bad Exp $
 
---- libschily/stdio/fgetstr.c	2004/04/26 07:42:03	1.1
-+++ libschily/stdio/fgetstr.c	2004/04/26 07:42:22
-@@ -26,7 +26,7 @@
+--- libschily/stdio/fgetstr.c.orig	2004-09-25 14:26:06.000000000 +0200
++++ libschily/stdio/fgetstr.c
+@@ -22,7 +22,7 @@
   */
  
  EXPORT int
@@ -11,10 +11,3 @@ $NetBSD: patch-ce,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
  	register	FILE	*f;
  			char	*buf;
  	register	int	len;
-@@ -60,5 +60,5 @@
- 	char	*buf;
- 	int	len;
- {
--	return (fgetstr(stdin, buf, len));
-+	return (schily_fgetstr(stdin, buf, len));
- }
