@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.609 2007/03/16 19:06:22 reed Exp $
+$NetBSD: CHANGES-2007,v 1.610 2007/03/16 20:56:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1167,3 +1167,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Getopt-ArgvFile version 1.10 [wennmach 2007-03-15]
 	Updated converters/txt2html to 2.44 [wennmach 2007-03-15]
 	Updated mail/mpop to 1.0.7 [reed 2007-03-16]
+	Updated www/p5-CGI to 3.27 [wiz 2007-03-16]
+	Updated www/p5-CGI-FormBuilder to 3.0302 [wiz 2007-03-16]
+	Updated www/p5-CGI-Session to 4.20 [wiz 2007-03-16]
+	Updated security/p5-IO-Socket-SSL to 1.03 [wiz 2007-03-16]
+	Updated devel/p5-Test-Simple to 0.69 [wiz 2007-03-16]
