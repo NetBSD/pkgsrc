@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.3 2007/03/15 09:41:22 rillig Exp $	*/
+/*	$NetBSD: job.c,v 1.4 2007/03/16 00:51:12 rillig Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.3 2007/03/15 09:41:22 rillig Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.4 2007/03/16 00:51:12 rillig Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.3 2007/03/15 09:41:22 rillig Exp $");
+__RCSID("$NetBSD: job.c,v 1.4 2007/03/16 00:51:12 rillig Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -136,8 +136,6 @@ __RCSID("$NetBSD: job.c,v 1.3 2007/03/15 09:41:22 rillig Exp $");
  *	Job_Touch 	    	Update a target without really updating it.
  *
  *	Job_Wait  	    	Wait for all currently-running jobs to finish.
- *
- *	Job_Execv		Execute a shell job.
  */
 
 #ifdef HAVE_CONFIG_H
@@ -1569,7 +1567,7 @@ JobExec(Job *job, char **argv)
 	} else
 #endif /* REMOTE */
 	{
-	   Job_Execv(shellPath, argv);
+	   (void)execv(shellPath, argv);
 	   execError("exec", shellPath);
 	}
 	_exit(1);
@@ -3755,64 +3753,3 @@ emul_poll(struct pollfd *fd, int nfd, int timeout)
     return npoll;
 }
 #endif /* USE_SELECT */
-
-/*-
- *-----------------------------------------------------------------------
- * Job_Execv --
- *	execute a shell job.
- *
- * Results:
- *	Executes a shell with the given arguments. If the command is too
- *	long, writes it into a temporary file and executes that.
- *
- *	Does not return if the job could be executed.
- *
- * Side Effects:
- * 	May modify argv[].
- *
- *-----------------------------------------------------------------------
- */
-void Job_Execv(const char *argv0, char **argv)
-{
-	FILE *tfile;
-	char cmd[2 + sizeof(TMPPAT)]; /* ". /tmpname" */
-	size_t len;
-	int argc, tfd;
-	char *tmpfname;
-
-	/* Try to execute the command. */
-	(void)execv(argv0, argv);
-	if (errno != E2BIG)
-		return;
-
-	/*
-	 * The command line is too long, so save it into a temporary
-	 * file and run the shell with that file.
-	 */
-
-	/* Assume that the last argument is the shell command. */
-	argc = 0;
-	while (argv[argc])
-		argc++;
-
-	(void)strcpy(cmd, ". ");
-	(void)strcat(cmd, TMPPAT);
-	tmpfname = cmd + 2;
-
-	if ((tfd = mkstemp(tmpfname)) == -1)
-		Punt("Could not create temporary file %s: %s", tmpfname, strerror(errno));
-
-	tfile = fdopen(tfd, "w");
-	if (tfile == NULL)
-		Punt("fdopen: %s", strerror(errno));
-
-	len = strlen(argv[argc - 1]);
-	if (fwrite(argv[argc - 1], 1, len, tfile) != len
-	    || fputc('\n', tfile) == EOF
-	    || fclose(tfile) != 0)
-		Punt("Could not write to %s: %s", tmpfname, strerror(errno));
-	argv[argc - 1] = cmd;
-
-	/* Now try again. */
-	(void)execv(argv0, argv);
-}
