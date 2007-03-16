@@ -1,58 +1,40 @@
-$NetBSD: patch-ah,v 1.2 2006/01/25 16:03:00 joerg Exp $
+$NetBSD: patch-ah,v 1.3 2007/03/16 22:04:54 bad Exp $
 
---- cdda2wav/setuid.c.orig	2004-08-19 10:54:34.000000000 +0000
+--- cdda2wav/setuid.c.orig	2006-11-11 22:40:01.000000000 +0100
 +++ cdda2wav/setuid.c
-@@ -94,7 +94,7 @@ void needroot(necessary)
+@@ -116,7 +116,7 @@ needroot(necessary)
+ 	if (geteuid() == 0)
+ 		return; /* nothing to do */
  
-     if (geteuid() == 0) return; /* nothing to do */
+-#if defined _POSIX_SAVED_IDS && defined(HAVE_SETEUID)
++#if defined(HAVE_SETEUID)
+ 	if (seteuid(effective_uid)) {
+ 		errmsg("Error with seteuid in needroot().\n");
+ 		exit(PERM_ERROR);
+@@ -162,7 +162,7 @@ dontneedroot()
+ 	if (geteuid() != 0)
+ 		return; /* nothing to do */
  
--#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEUID)
-+#if defined (HAVE_SETEUID)
-     if (seteuid(effective_uid)) {
- 	perror("seteuid in needroot()");
- 	exit(PERM_ERROR);
-@@ -133,7 +133,7 @@ void dontneedroot()
- 	return;
-     if (geteuid() != 0) return; /* nothing to do */
+-#if defined _POSIX_SAVED_IDS && defined(HAVE_SETEUID)
++#if defined(HAVE_SETEUID)
+ 	if (seteuid(real_uid)) {
+ 		errmsg("Error with seteuid in dontneedroot().\n");
+ 		exit(PERM_ERROR);
+@@ -264,7 +264,7 @@ needgroup(necessary)
+ 	if (getegid() == effective_gid)
+ 		return; /* nothing to do */
  
--#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEUID)
-+#if defined (HAVE_SETEUID)
-     if (seteuid(real_uid)) {
- 	perror("seteuid in dontneedroot()");
- 	exit(PERM_ERROR);
-@@ -176,7 +176,7 @@ void neverneedroot()
-       }
- #endif
-     }
--#if	defined(__FreeBSD__)	/* XXX this is a big hack and and not a permanent solution */
-+#if	defined(__FreeBSD__) || defined(__DragonFly__)	/* XXX this is a big hack and and not a permanent solution */
-     else {
- #if defined (HAVE_SETUID)
- 	if (setuid(real_uid)) {
-@@ -217,7 +217,7 @@ void needgroup(necessary)
- 
-     if (getegid() == effective_gid) return; /* nothing to do */
- 
--#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEGID)
-+#if defined (HAVE_SETEGID)
-     if (setegid(effective_gid)) {
- 	perror("setegid in needgroup()");
- 	exit(PERM_ERROR);
-@@ -249,7 +249,7 @@ void dontneedgroup()
- 	exit(INTERNAL_ERROR);
-     }
-     if (getegid() != effective_gid) return; /* nothing to do */
--#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEGID)
-+#if defined (HAVE_SETEGID)
-     if (setegid(real_gid)) {
- 	perror("setegid in dontneedgroup()");
- 	exit(PERM_ERROR);
-@@ -292,7 +292,7 @@ void neverneedgroup()
-       }
- #endif
-     }
--#if	defined(__FreeBSD__)	/* XXX this is a big hack and and not a permanent solution */
-+#if	defined(__FreeBSD__) || defined(__DragonFly__)	/* XXX this is a big hack and and not a permanent solution */
-     else {
- #if defined (HAVE_SETGID)
- 	if (setgid(real_gid)) {
+-#if defined _POSIX_SAVED_IDS && defined(HAVE_SETEGID)
++#if defined(HAVE_SETEGID)
+ 	if (setegid(effective_gid)) {
+ 		errmsg("Error with setegid in needgroup().\n");
+ 		exit(PERM_ERROR);
+@@ -302,7 +302,7 @@ dontneedgroup()
+ 	}
+ 	if (getegid() != effective_gid)
+ 		return; /* nothing to do */
+-#if defined _POSIX_SAVED_IDS && defined(HAVE_SETEGID)
++#if defined(HAVE_SETEGID)
+ 	if (setegid(real_gid)) {
+ 		errmsg("Error with setegid in dontneedgroup().\n");
+ 		exit(PERM_ERROR);
