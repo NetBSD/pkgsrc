@@ -1,8 +1,26 @@
-$NetBSD: distinfo,v 1.52 2007/02/11 18:39:04 tron Exp $
+$NetBSD: distinfo,v 1.53 2007/03/17 15:43:15 taca Exp $
 
+SHA1 (dfs_referral.diff) = 26d395028e2f7ae59d115a277864ef791bfc14b9
+RMD160 (dfs_referral.diff) = 4dcc1bf7eaf1452d9fb02884448dc88fb5ddeed3
+Size (dfs_referral.diff) = 615 bytes
+SHA1 (directory_delete.diff) = ace447241ee40e495bb2fd065996d624c0ca615c
+RMD160 (directory_delete.diff) = 0cc49ade7403b22937d858e1fe7e9357d49f6be3
+Size (directory_delete.diff) = 2218 bytes
 SHA1 (samba-3.0.24.tar.gz) = 216020b58abca191b8146f76f98a8bda3508fcd3
 RMD160 (samba-3.0.24.tar.gz) = f208dca645d07a195169e005a50fb4c4879254eb
 Size (samba-3.0.24.tar.gz) = 17708128 bytes
+SHA1 (share_security_ntlmv2.diff) = ca10e9c9afa202483062306768cd11185e80fa89
+RMD160 (share_security_ntlmv2.diff) = ff281f474402076c783a326956611131461367cb
+Size (share_security_ntlmv2.diff) = 3607 bytes
+SHA1 (spoolss.diff) = 7534e62ed28dbce642b2719f9699208228960d8a
+RMD160 (spoolss.diff) = c8c452f5b58b893985074edf264740f63558206a
+Size (spoolss.diff) = 6649 bytes
+SHA1 (variable_os_expansion.diff) = 4ce507e2414bce1ec27f3c68a9d0277b37c22ffe
+RMD160 (variable_os_expansion.diff) = a0e4ab6e0178f109ff525c7f3d5ad277ffa77ec9
+Size (variable_os_expansion.diff) = 5116 bytes
+SHA1 (vista_backup_acl.diff) = 3a872997cfb8f34af401c94b1bb710db0d3e6319
+RMD160 (vista_backup_acl.diff) = 7cfe2626c7f59034f051dd60882441b974201d11
+Size (vista_backup_acl.diff) = 2201 bytes
 SHA1 (patch-ab) = 9597f88f6e7f97da446968562b4d3ab8e9644f0f
 SHA1 (patch-ac) = 47529dfe904768e6a3076131978c89fe2d1e3619
 SHA1 (patch-ae) = a220568afcb6ae97e1000296795f852f8e92f624

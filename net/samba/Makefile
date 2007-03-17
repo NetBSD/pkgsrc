@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.169 2007/02/11 18:39:04 tron Exp $
+# $NetBSD: Makefile,v 1.170 2007/03/17 15:43:15 taca Exp $
 
 .include "Makefile.mirrors"
 
-DISTNAME=		samba-3.0.24
+DISTNAME=		samba-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
@@ -12,6 +13,7 @@ MAINTAINER=		jlam@pkgsrc.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 
+VERSION=		3.0.24
 CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
 			winbind-[0-9]*
 MAKE_JOBS_SAFE=		NO
@@ -156,14 +158,15 @@ post-install: install-samba-lib-symlinks
 		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/../docs/registry; for f in *.reg; do		\
+	cd ${WRKDIR}/${DISTNAME}/docs/registry; for f in *.reg; do	\
 		${INSTALL_DATA} $${f} ${DOCDIR}/$${f};			\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EGDIR}/adduser.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EGDIR}/deluser.sh
-	cd ${WRKSRC}/../examples; ${INSTALL_DATA} LDAP/samba.schema ${EGDIR}
-	cd ${WRKSRC}/../examples; ${INSTALL_DATA} smb.conf.default ${EGDIR}
+	cd ${WRKDIR}/${DISTNAME}/examples; \
+		${INSTALL_DATA} LDAP/samba.schema ${EGDIR}; \
+		${INSTALL_DATA} smb.conf.default ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpasswd.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
