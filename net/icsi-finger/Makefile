@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/06 18:36:18 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/17 19:29:58 joerg Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
@@ -15,7 +15,8 @@ WRKSRC=		${WRKDIR}/finger
 XMPLD=		${PREFIX}/share/examples/icsi-finger
 XMPLDT=		${XMPLD}/targets
 
-INSTALLATION_DIRS=	bin libexec sbin
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
+			${PKGMANDIR}/man8 sbin
 
 pre-configure:
 		${RM} -f ${WRKSRC}/config.h
