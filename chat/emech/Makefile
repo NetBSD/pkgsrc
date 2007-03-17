@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/01/07 21:39:49 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/17 14:13:23 rillig Exp $
 #
 
-DISTNAME=	emech-2.8.4
+DISTNAME=	emech-3.0.2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.energymech.net/files/
 
@@ -9,20 +9,16 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://www.energymech.net/
 COMMENT=	IRC bot written in C
 
-HAS_CONFIGURE=	YES
-
+HAS_CONFIGURE=			YES
 # The ./configure script is interactive, but selects the default values
 # when given no input.
-do-configure:
-	cd ${WRKSRC} && ./configure </dev/null
+CONFIGURE_ARGS+=		< /dev/null
+BUILD_TARGET=			mech
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mech ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/genuser ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/example/emech
-	${INSTALL_DATA} ${WRKSRC}/sample.set \
-	    ${PREFIX}/share/example/emech/
-	${INSTALL_DATA} ${WRKSRC}/mech.help \
-	    ${PREFIX}/share/example/emech/
+	${INSTALL_PROGRAM} ${WRKSRC}/energymech ${PREFIX}/bin/mech
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/emech
+	${INSTALL_DATA} ${WRKSRC}/sample.conf ${PREFIX}/share/examples/emech/
 
 .include "../../mk/bsd.pkg.mk"
