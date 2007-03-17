@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.21 2007/01/30 13:11:04 adam Exp $
+$NetBSD: patch-af,v 1.22 2007/03/17 23:07:58 adam Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2007-01-25 16:53:50.000000000 +0100
+--- dlls/ntdll/signal_i386.c.orig	2007-03-16 17:40:46.000000000 +0100
 +++ dlls/ntdll/signal_i386.c
-@@ -163,7 +163,7 @@ typedef struct trapframe SIGCONTEXT;
+@@ -167,7 +167,7 @@ typedef struct trapframe SIGCONTEXT;
  
  #endif /* bsdi */
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.21 2007/01/30 13:11:04 adam Exp $
  
  typedef struct sigcontext SIGCONTEXT;
  
-@@ -268,6 +268,43 @@ typedef ucontext_t SIGCONTEXT;
+@@ -290,6 +290,43 @@ typedef ucontext_t SIGCONTEXT;
  
  #endif /* __APPLE__ */
  
@@ -52,32 +52,24 @@ $NetBSD: patch-af,v 1.21 2007/01/30 13:11:04 adam Exp $
 +
 +#endif /* __NetBSD__ */
 +
- #include "wine/exception.h"
- #include "wine/debug.h"
+ WINE_DEFAULT_DEBUG_CHANNEL(seh);
  
-@@ -303,8 +340,10 @@ enum i386_trap_code
+ typedef int (*wine_signal_handler)(unsigned int sig);
+@@ -322,8 +359,13 @@ enum i386_trap_code
      TRAP_x86_PAGEFLT    = T_PAGEFLT,    /* Page fault */
      TRAP_x86_ARITHTRAP  = T_ARITHTRAP,  /* Floating point exception */
      TRAP_x86_ALIGNFLT   = T_ALIGNFLT,   /* Alignment check exception */
-+#if !defined(__NetBSD__)
++#if defined(__NetBSD__)
++    TRAP_x86_MCHK       = T_MCA,        /* Machine check exception */
++    TRAP_x86_CACHEFLT   = T_XMM         /* Cache flush exception */
++#else
      TRAP_x86_MCHK       = T_MCHK,       /* Machine check exception */
      TRAP_x86_CACHEFLT   = T_XMMFLT      /* Cache flush exception */
 +#endif
  #else
      TRAP_x86_DIVIDE     = 0,   /* Division by zero exception */
      TRAP_x86_TRCTRAP    = 1,   /* Single-step exception */
-@@ -1152,8 +1191,10 @@ static void segv_handler( int signal, si
-     case TRAP_x86_DNA:       /* Device not available exception */
-     case TRAP_x86_DOUBLEFLT: /* Double fault exception */
-     case TRAP_x86_TSSFLT:    /* Invalid TSS exception */
-+#if !defined(__NetBSD__)
-     case TRAP_x86_MCHK:      /* Machine check exception */
-     case TRAP_x86_CACHEFLT:  /* Cache flush exception */
-+#endif
-         rec->ExceptionCode = EXCEPTION_ILLEGAL_INSTRUCTION;
-         break;
-     }
-@@ -1342,7 +1383,11 @@ BOOL SIGNAL_Init(void)
+@@ -1376,7 +1418,11 @@ BOOL SIGNAL_Init(void)
  #endif  /* HAVE_SIGALTSTACK */
  
      sig_act.sa_mask = server_block_set;
