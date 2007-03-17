@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.612 2007/03/17 00:43:32 reed Exp $
+$NetBSD: CHANGES-2007,v 1.613 2007/03/17 01:13:31 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1172,4 +1172,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-CGI-Session to 4.20 [wiz 2007-03-16]
 	Updated security/p5-IO-Socket-SSL to 1.03 [wiz 2007-03-16]
 	Updated devel/p5-Test-Simple to 0.69 [wiz 2007-03-16]
-	Updated sysutils/cdrtools too 2.01.01a24 [bad 2007-03-16]
+	Updated sysutils/cdrtools to 2.01.01a24 [bad 2007-03-16]
+	Updated print/mpage to 2.5.5 [reed 2007-03-17]
