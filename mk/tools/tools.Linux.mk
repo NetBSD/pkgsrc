@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.39 2007/03/15 23:11:12 reed Exp $
+# $NetBSD: tools.Linux.mk,v 1.40 2007/03/17 00:14:50 reed Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -174,7 +174,11 @@ TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
 .endif
 TOOLS_PLATFORM.sed?=		${TOOLS_PLATFORM.gsed}
 TOOLS_PLATFORM.sh?=		/bin/sh
+.if exists(/usr/bin/sleep)
+TOOLS_PLATFORM.sleep?=		/usr/bin/sleep
+.else
 TOOLS_PLATFORM.sleep?=		/bin/sleep
+.endif
 .if exists(/usr/bin/soelim)
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 .endif
