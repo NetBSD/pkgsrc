@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/19 13:44:50 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/17 08:45:04 obache Exp $
 bin/spl-config
 bin/splrun
+bin/webspld
 include/spl.h
 lib/libspl.a
+lib/spl_modules/moddir.list
 lib/spl_modules/mod_array.so
 lib/spl_modules/mod_bits.so
 lib/spl_modules/mod_cgi.so
@@ -15,6 +17,7 @@ lib/spl_modules/mod_encode_xml.so
 lib/spl_modules/mod_environ.so
 lib/spl_modules/mod_file.so
 lib/spl_modules/mod_format_ini.splb
+@comment lib/spl_modules/mod_gl.so
 lib/spl_modules/mod_prime.so
 lib/spl_modules/mod_sql.so
 lib/spl_modules/mod_sql_utils.splb
@@ -22,6 +25,7 @@ lib/spl_modules/mod_system.so
 lib/spl_modules/mod_task.so
 lib/spl_modules/mod_termio.so
 lib/spl_modules/mod_time.so
+lib/spl_modules/mod_uuidgen.so
 lib/spl_modules/mod_w2t.splb
 lib/spl_modules/mod_webdebug.so
 lib/spl_modules/mod_wsf.splb
@@ -72,6 +76,8 @@ share/doc/spl/spldoc/format_ini.html
 share/doc/spl/spldoc/format_ini.txt
 share/doc/spl/spldoc/format_xml.html
 share/doc/spl/spldoc/format_xml.txt
+@comment share/doc/spl/spldoc/gl.html
+@comment share/doc/spl/spldoc/gl.txt
 share/doc/spl/spldoc/kde.html
 share/doc/spl/spldoc/kde.txt
 share/doc/spl/spldoc/multimouse.html
@@ -158,6 +164,16 @@ share/doc/spl/webspl_demo/wsfd_calc.webspl
 share/doc/spl/webspl_demo/wsfd_calc.xml
 share/doc/spl/webspl_demo/wsfdemo.webspl
 share/doc/spl/webspl_demo/wsfgraph.webspl
+share/doc/spl/qtdemo/qtdemo001.spl
+share/doc/spl/qtdemo/qtdemo002.spl
+share/doc/spl/qtdemo/qtdemo002.ui
+share/doc/spl/qtdemo/qtdemo003.spl
+share/doc/spl/qtdemo/qtdemo003.ui
+share/doc/spl/qtdemo/qtdemo004.spl
+share/doc/spl/qtdemo/qtdemo004.ui
+share/doc/spl/qtdemo/qtdemo005.spl
+share/doc/spl/qtdemo/qtdemo006.spl
+share/doc/spl/qtdemo/qtdemo007.spl
 share/doc/spl/webspltut/index.html
 share/doc/spl/webspltut/webspltut00.webspl
 share/doc/spl/webspltut/webspltut01.webspl
@@ -306,6 +322,7 @@ share/examples/spl/example67.expected
 share/examples/spl/example67.spl
 @dirrm share/examples/spl
 @dirrm share/doc/spl/spldoc
+@dirrm share/doc/spl/qtdemo
 @dirrm share/doc/spl/webspltut
 @dirrm share/doc/spl/webspl_demo/images
 @dirrm share/doc/spl/webspl_demo

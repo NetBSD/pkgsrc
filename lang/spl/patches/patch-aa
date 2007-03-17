@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/05/29 16:31:43 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/17 08:45:04 obache Exp $
 
---- clib.c.orig	2006-05-15 09:49:19.000000000 +0000
+--- clib.c.orig	2006-11-14 13:54:32.000000000 +0000
 +++ clib.c
-@@ -366,13 +366,40 @@ static inline void DO_UNLOCK() {
+@@ -402,13 +402,40 @@ static inline void DO_UNLOCK() {
  
  #  else
  

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2006/05/29 16:31:43 joerg Exp $
+$NetBSD: distinfo,v 1.3 2007/03/17 08:45:04 obache Exp $
 
-SHA1 (spl-0.9h.tar.gz) = 030b25a13d52629b75e8fd3d076d9e431c1f7b49
-RMD160 (spl-0.9h.tar.gz) = b794f9590e00dd2cd2c161c1edf5ece4007a0a3d
-Size (spl-0.9h.tar.gz) = 329352 bytes
-SHA1 (patch-aa) = ed93b5bde73c3b5b1ce69deae82a6f0fd6f4b609
-SHA1 (patch-ab) = 58a75944874ad881aa83a420a78c6b6c0943eee1
+SHA1 (spl-1.0pre3.tar.gz) = b4f3db44c5ba6b8f49ee25553bd7328be946abbb
+RMD160 (spl-1.0pre3.tar.gz) = 311db05cb5f5c14145fa63d3548519535ccbf7ff
+Size (spl-1.0pre3.tar.gz) = 335431 bytes
+SHA1 (patch-aa) = 2033872117191147c31781d47c59125f155dbe5d
+SHA1 (patch-ab) = e1f185e5e139ecfdf31148697ac691358ee7aea1
+SHA1 (patch-ac) = 31d69a712c93767f83de13c9c6e504a097602321
+SHA1 (patch-ad) = 12eb05a60727112b63c4ad64d8ee0f68e8f31ab0
