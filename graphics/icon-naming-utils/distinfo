@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/08 16:29:02 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2007/03/17 16:48:49 wiz Exp $
 
-SHA1 (icon-naming-utils-0.8.1.tar.gz) = 0e69f29f294de6d84dd0f1dff3824510cdcde06f
-RMD160 (icon-naming-utils-0.8.1.tar.gz) = f023b4d5d003b69c79dcfcef249fff5a5e193f35
-Size (icon-naming-utils-0.8.1.tar.gz) = 63132 bytes
+SHA1 (icon-naming-utils-0.8.2.tar.gz) = b69e6fd89d7ccdc4dfe335a78e7bd8fd34cde019
+RMD160 (icon-naming-utils-0.8.2.tar.gz) = 8fc999afcc5d50d47282272ef858403bc3e36251
+Size (icon-naming-utils-0.8.2.tar.gz) = 66393 bytes
