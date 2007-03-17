@@ -1,5 +1,5 @@
-The FUSE-based union filesystem allows several directories to be
-stacked under one mountpoint - this wil lproduce the effect of
+The FUSE-based union file system allows several directories to be
+stacked under one mountpoint - this will produce the effect of
 having a number of directories merged under one mountpoint. 
 
 This utility is implemented at the user level - to mount a series
