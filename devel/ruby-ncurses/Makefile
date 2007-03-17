@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/01/14 04:14:51 taca Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/17 16:05:02 taca Exp $
 
-DISTNAME=	ncurses-ruby-1.0
+DISTNAME=	ncurses-ruby-1.1
 PKGNAME=	${DISTNAME:S/ncurses-ruby/${RUBY_PKGPREFIX}-ncurses/}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.berlios.de/ncurses-ruby/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +11,7 @@ HOMEPAGE=	http://ncurses-ruby.berlios.de/
 COMMENT=	Ruby interface to ncurses
 
 USE_RUBY_EXTCONF=	yes
-USE_NCURSES=		# mouse functions
+USE_NCURSES=		yes	# mouse functions
 
 EXAMPLES=		example.rb hello_ncurses.rb rain.rb read_line.rb \
 			tclock.rb test_scanw.rb
