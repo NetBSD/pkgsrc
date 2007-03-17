@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.7 2007/03/08 23:06:37 rillig Exp $
+# $NetBSD: replace.mk,v 1.8 2007/03/17 17:17:33 rillig Exp $
 #
 
 # _flavor-replace:
@@ -6,6 +6,11 @@
 #
 # See also:
 #	replace
+#
+# XXX: The whole replacement, from deinstalling the old package up
+# to installing the new package, should be one transaction. It
+# currently isn't, and the check-files target for other packages
+# can be confused when a +REQUIRED_BY files suddenly disappears.
 #
 _flavor-replace: \
 	replace-tarup \
