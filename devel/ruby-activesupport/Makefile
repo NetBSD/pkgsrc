@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2007/02/18 23:03:11 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/17 10:59:26 minskim Exp $
 
-DISTNAME=	activesupport-1.4.1
+DISTNAME=	activesupport-1.4.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/17221/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/18399/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://as.rubyonrails.com/
+HOMEPAGE=	http://rubyforge.org/projects/activesupport/
 COMMENT=	Collection of classes and extensions for Rails
 
 NO_BUILD=	yes
