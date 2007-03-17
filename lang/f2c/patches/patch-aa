@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 2007/02/05 14:33:21 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.16 2007/03/17 16:10:13 rillig Exp $
 
 --- Makefile.orig	Tue Sep 14 16:47:52 2004
 +++ Makefile
@@ -41,8 +41,8 @@ $NetBSD: patch-aa,v 1.15 2007/02/05 14:33:21 dmcmahill Exp $
 +	-@mkdir -p ${PREFIX}/share/doc/f2c
 +	${BSD_INSTALL_DATA} ./f2c.ps ${PREFIX}/share/doc/f2c
 +	${BSD_INSTALL_DATA} ./changes ${PREFIX}/share/doc/f2c
-+	${BSD_INSTALL_MAN} ./f2c.1 ${PREFIX}/man/man1
-+	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/man/cat1
++	${BSD_INSTALL_MAN} ./f2c.1 ${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/${PKGMANDIR}/cat1
 +
 +f2c-f77: ${F2C_F77_IN}  f2c hello.f
 +	./src/f2c -Aw8 -Nn802 -Nx400 hello.f
