@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.624 2007/03/17 16:11:59 taca Exp $
+$NetBSD: CHANGES-2007,v 1.625 2007/03/17 16:45:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1133,6 +1133,20 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/diffsplit version 1.0 [ginsbach 2007-03-12]
 	Updated www/ja-trac to 0.10.3.1.1 [obache 2007-03-13]
 	Added sysutils/p5-GTop version 0.16 [obache 2007-03-13]
+	Updated multimedia/gstreamer0.10 to 0.10.12 [drochner 2007-03-13]
+	Updated multimedia/gst-plugins0.10-base to 0.10.12 [drochner 2007-03-13]
+	Updated graphics/exiv2 to 0.13 [drochner 2007-03-13]
+	Updated graphics/kphotoalbum to 3.0 [drochner 2007-03-13]
+	Updated www/liferea to 1.2.7 [drochner 2007-03-13]
+	Added graphics/libexiv2 version 0.1.1 [drochner 2007-03-13]
+	Updated graphics/digikam to 0.9.1 [drochner 2007-03-13]
+	Updated graphics/digikamimageplugins to 0.9.1 [drochner 2007-03-13]
+	Updated math/libmatheval to 1.1.4 [drochner 2007-03-13]
+	Updated net/libIDL to 0.8.8 [drochner 2007-03-13]
+	Updated net/py-ORBit to 2.14.2 [drochner 2007-03-13]
+	Updated print/xpdf to 3.02 [drochner 2007-03-13]
+	Updated sysutils/dbus-glib to 0.73 [drochner 2007-03-13]
+	Updated x11/xterm to 224 [drochner 2007-03-13]
 	Updated mail/mimedefang to 2.61 [markd 2007-03-14]
 	Updated sysutils/lsof to 4.77 [markd 2007-03-14]
 	Updated math/R to 2.4.1 [markd 2007-03-14]
