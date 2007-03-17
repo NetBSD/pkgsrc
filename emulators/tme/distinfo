@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2007/03/17 13:44:18 tsutsui Exp $
+$NetBSD: distinfo,v 1.8 2007/03/17 14:36:42 tsutsui Exp $
 
 SHA1 (tme-0.4.tar.gz) = 7a1a2c6aa05527b11f81925e4931e7250f5be308
 RMD160 (tme-0.4.tar.gz) = a5b5ac56c8247f94cd96c92a04a6cb132ba92931
@@ -24,7 +24,7 @@ SHA1 (patch-aw) = fed1d90d936eac53dbe5be9a505bd7171768cc37
 SHA1 (patch-ax) = b8f16847326e3599df4d73d1108f6815a9c46164
 SHA1 (patch-az) = ab4a4164b880ed1716e7fed0e269b40c85515973
 SHA1 (patch-ba) = 22a47dfbf0c494916e4e8f15aa1fc11b687feaa8
-SHA1 (patch-bb) = 7790146bcdf2b9b8249ed538e5ef7a57628b0a3f
+SHA1 (patch-bb) = 6f98e9456581676e380c2724937a7fbcbf660c2b
 SHA1 (patch-bc) = 52253ad742a4f1dd4c437cd7f8df3c9815483390
 SHA1 (patch-bd) = 69d00319ef82c1b274f56a61b5aa23a3770f5012
 SHA1 (patch-be) = b22f599b6c156f404f0d011cb692bb14bf8363e7
