@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2007/02/18 23:03:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/03/17 10:59:26 minskim Exp $
 ${RUBY_SITELIBDIR}/active_support.rb
-${RUBY_SITELIBDIR}/active_support/._dependencies.rb
-${RUBY_SITELIBDIR}/active_support/._version.rb
 ${RUBY_SITELIBDIR}/active_support/binding_of_caller.rb
 ${RUBY_SITELIBDIR}/active_support/breakpoint.rb
 ${RUBY_SITELIBDIR}/active_support/caching_tools.rb
