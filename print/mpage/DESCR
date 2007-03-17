@@ -1,8 +1,11 @@
-Mpage is a program to reduce and print multiple pages of text per
-sheet on a PostScript compatible printer.
-It also has limited functionality to do the same with postscript files itself.
+Mpage is a program to reduce and print multiple pages of plain text
+per sheet, such as 1, 2, 4, or 8 pages on one sheet.  Pages are
+tiled and separated by lines.
 
-Mpage and all the files distributed with mpage are covered by copyright:
+It also has limited functionality to do the same with Postscript
+files itself.
 
- Copyright (c) 1994-1997 Marcel J.E. Mol, The Netherlands
- Copyright (c) 1988 Mark P. Hahn, Herndon, Virginia
+A Postscript printer or a Postscript interpreter (such as ghostscript)
+is required.
+
+Mpage can be used to convert plain text to Postscript.
