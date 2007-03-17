@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/17 16:35:05 rillig Exp $
 #
 
-DISTNAME=	putty-0.58
-PKGREVISION=	1
+DISTNAME=	putty-0.59
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/latest/
 
@@ -14,6 +13,7 @@ USE_TOOLS+=	gmake
 BUILD_DIRS=	${WRKSRC}/unix
 
 MAKE_FILE=	Makefile.gtk
+MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
