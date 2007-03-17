@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/27 13:37:44 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/03/17 18:40:59 joerg Exp $
 #
 
 DISTNAME=	xcompmgr-1.1.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://freedesktop.org/xapps/release/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/
 COMMENT=	Sample compositing manager for X.org >= 6.8.0
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes

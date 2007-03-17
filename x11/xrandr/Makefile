@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/26 17:55:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/17 18:40:59 joerg Exp $
 #
 
 DISTNAME=	xrandr-1.2.0
@@ -10,8 +10,12 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Primitive command line interface to RandR extension
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.2
 
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/27 15:05:42 dsainty Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/17 18:40:59 joerg Exp $
 #
 
 DISTNAME=	xprop-1.0.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Property displayer for X
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
