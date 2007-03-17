@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/02/26 18:22:24 joerg Exp $
+$NetBSD: distinfo,v 1.4 2007/03/17 16:56:01 wiz Exp $
 
-SHA1 (libXrandr-1.2.0.tar.bz2) = a32722ad9fcb6475533499b1646a125458fe142c
-RMD160 (libXrandr-1.2.0.tar.bz2) = 013249fc35e8a5d72a191fd9af0c6db06423880c
-Size (libXrandr-1.2.0.tar.bz2) = 220762 bytes
-SHA1 (patch-aa) = c3bf5474746f002524fc9baccb683884357986d5
+SHA1 (libXrandr-1.2.1.tar.bz2) = 0754b37abba41b1347208f6673863c2829607615
+RMD160 (libXrandr-1.2.1.tar.bz2) = fb156717bd27b8446afb0c7c1da6a14a34f487d0
+Size (libXrandr-1.2.1.tar.bz2) = 220679 bytes
