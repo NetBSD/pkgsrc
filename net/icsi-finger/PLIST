@@ -1,21 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:51 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/17 19:29:58 joerg Exp $
 bin/gfinger
+sbin/ascii2packet
 sbin/gfingerd
 sbin/packet2ascii
-sbin/ascii2packet
 sbin/vifinger
-libexec/in.fingerd
 libexec/in.cfingerd
+libexec/in.fingerd
 man/man1/gfinger.1
-man/man8/gfingerd.8
-man/man8/cfingerd.8
 man/man5/hostconfig.5
 man/man5/ttylocs.5
+man/man8/cfingerd.8
+man/man8/gfingerd.8
 share/examples/icsi-finger/hostconfig
 share/examples/icsi-finger/inetd.conf-add
 share/examples/icsi-finger/rc.local-add
 share/examples/icsi-finger/services-add
-share/examples/icsi-finger/ttylocs
 share/examples/icsi-finger/targets/README
 share/examples/icsi-finger/targets/l-.df
 share/examples/icsi-finger/targets/l-.ps
@@ -30,6 +29,7 @@ share/examples/icsi-finger/targets/x-.help
 share/examples/icsi-finger/targets/x-.site
 share/examples/icsi-finger/targets/x-.users
 share/examples/icsi-finger/targets/x-help
+share/examples/icsi-finger/ttylocs
 @dirrm share/examples/icsi-finger/targets
 @dirrm share/examples/icsi-finger
 @exec ${MKDIR} %D/etc/fingerdir/targets
