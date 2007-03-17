@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/06 06:19:30 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/17 12:58:38 heinz Exp $
 #
 
 DISTNAME=		Digest-BubbleBabble-0.01
@@ -9,7 +9,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
 MAINTAINER=		heinz@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/author/BTROTT/Digest-BubbleBabble/
+HOMEPAGE=		http://search.cpan.org/dist/Digest-BubbleBabble/
 COMMENT=		Perl5 module for bubble babble fingerprints
 
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
