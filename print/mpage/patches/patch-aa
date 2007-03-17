@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2005/12/27 23:50:07 reed Exp $
+$NetBSD: patch-aa,v 1.6 2007/03/17 01:11:22 reed Exp $
 
---- Makefile.orig	1997-11-25 15:16:06.000000000 -0800
-+++ Makefile
-@@ -30,7 +30,6 @@
+--- Makefile.orig	2004-05-30 14:38:31.000000000 -0500
++++ Makefile	2006-11-30 17:26:46.000000000 -0600
+@@ -24,7 +24,6 @@
  # Set this to an ANSI compatible C compiler (preferably gcc)
  # See also system specific settings below
  #CC=cc
@@ -10,29 +10,30 @@ $NetBSD: patch-aa,v 1.5 2005/12/27 23:50:07 reed Exp $
  
  ############################################################################
  #
-@@ -45,7 +44,7 @@ CC=gcc
- #          PAGE_A4 for European A4
+@@ -40,7 +39,7 @@
+ #  See glob.c for all possibilities
  #
- # PAGESIZE=PAGE_LETTER
--PAGESIZE=PAGE_A4
-+#PAGESIZE=PAGE_A4
+ # PAGESIZE=Letter
+-PAGESIZE=A4
++#PAGESIZE=A4
  
  #
  # Define your spooler type
-@@ -55,10 +54,9 @@ PAGESIZE=PAGE_A4
+@@ -50,11 +49,11 @@
  SPOOL_TYPE=BSD_SPOOLER
  
  # PREFIX=e:/usr		# OS/2 type
 -PREFIX=/usr/local
++#PREFIX=/usr/local
+ #PREFIX=/usr
  BINDIR=$(PREFIX)/bin
--LIBDIR=$(PREFIX)/lib
+ LIBDIR=$(PREFIX)/share
 -MANDIR=$(PREFIX)/man/man1
-+LIBDIR=$(PREFIX)/share
-+MANDIR=$(PREFIX)/${PKGMANDIR}/man1
++#MANDIR=$(PREFIX)/man/man1
  
  #
  # A default encoding is given in encoding.h. Setting ENCODING=1 will
-@@ -110,8 +108,8 @@ DEF_FILE =
+@@ -106,8 +105,8 @@
  # Choose one of the following CFLAGS/CC definitions:
  # If you are using gcc, you probably don't need to change anything here.
  
@@ -43,18 +44,14 @@ $NetBSD: patch-aa,v 1.5 2005/12/27 23:50:07 reed Exp $
  
  # AIX (xlC on aix 4):
  #CFLAGS = -O2 -s $(DEFS)
-@@ -168,10 +166,10 @@ mpage.ps:	mpage.1
- 
- 
- #
--# add your proper install stuff
-+# BSD specific install stuff
- #
- install:
+@@ -181,7 +180,6 @@
+ 	if [ ! -d $(LIBDIR)/mpage ] ; then mkdir -p $(LIBDIR)/mpage ; fi
+ 	if [ ! -d $(BINDIR) ] ; then mkdir -p $(BINDIR) ; fi
+ 	if [ ! -d $(MANDIR) ] ; then mkdir -p $(MANDIR) ; fi
 -	cp mpage$(E) $(BINDIR)
 -	cp mpage.1 $(MANDIR)
+-	-cp Encodings/* $(LIBDIR)/mpage
+-	-chmod 644 $(LIBDIR)/mpage/*
 +	$(BSD_INSTALL_PROGRAM) mpage$(E) $(BINDIR)
 +	$(BSD_INSTALL_MAN) mpage.1 $(MANDIR)
- 	if [ ! -d $(LIBDIR)/mpage ] ; then mkdir $(LIBDIR)/mpage ; fi
--	-cp Encodings/* $(LIBDIR)/mpage
 +	$(BSD_INSTALL_DATA) Encodings/* $(LIBDIR)/mpage
