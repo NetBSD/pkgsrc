@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/17 20:43:23 rillig Exp $
 #
 
 DISTNAME=		pyvorbis-1.3
@@ -15,7 +15,8 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	${PYTHONBIN} config_unix.py
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_SCRIPT=	config_unix.py
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
 .include "../../audio/py-ogg/buildlink3.mk"
