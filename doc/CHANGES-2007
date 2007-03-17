@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.621 2007/03/17 15:44:24 taca Exp $
+$NetBSD: CHANGES-2007,v 1.622 2007/03/17 15:55:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1182,3 +1182,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ruby-actionwebservice to 1.2.3 [minskim 2007-03-17]
 	Updated www/squid to 2.6.11 [taca 2007-03-17]
 	Updated net/samba to 3.0.24nb1 [taca 2007-03-17]
+	Updated devel/ruby-racc to 1.4.5 [taca 2007-03-17]
+	Updated databases/ruby-DBI to 0.1.1 [taca 2007-03-17]
+	Updated databases/ruby-DBD-mysql to 0.1.1 [taca 2007-03-17]
+	Updated databases/ruby-DBD-postgresql to 0.1.1 [taca 2007-03-17]
+	Updated databases/ruby-DBD-sqlite to 0.1.1 [taca 2007-03-17]
