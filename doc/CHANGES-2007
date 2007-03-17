@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.622 2007/03/17 15:55:28 taca Exp $
+$NetBSD: CHANGES-2007,v 1.623 2007/03/17 16:05:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1187,3 +1187,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/ruby-DBD-mysql to 0.1.1 [taca 2007-03-17]
 	Updated databases/ruby-DBD-postgresql to 0.1.1 [taca 2007-03-17]
 	Updated databases/ruby-DBD-sqlite to 0.1.1 [taca 2007-03-17]
+	Updated devel/ruby-ncurses to 1.1 [taca 2007-03-17]
