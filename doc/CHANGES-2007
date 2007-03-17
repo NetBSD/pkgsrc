@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.613 2007/03/17 01:13:31 reed Exp $
+$NetBSD: CHANGES-2007,v 1.614 2007/03/17 08:46:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1174,3 +1174,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Test-Simple to 0.69 [wiz 2007-03-16]
 	Updated sysutils/cdrtools to 2.01.01a24 [bad 2007-03-16]
 	Updated print/mpage to 2.5.5 [reed 2007-03-17]
+	Updated lang/spl to 1.0pre3 [obache 2007-03-17]
