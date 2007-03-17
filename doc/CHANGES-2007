@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.616 2007/03/17 11:05:48 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.617 2007/03/17 11:10:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1177,3 +1177,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/spl to 1.0pre3 [obache 2007-03-17]
 	Updated devel/ruby-activesupport to 1.4.2 [minskim 2007-03-17]
 	Updated databases/ruby-activerecord to 1.15.3 [minskim 2007-03-17]
+	Updated www/ruby-actionpack to 1.13.3 [minskim 2007-03-17]
