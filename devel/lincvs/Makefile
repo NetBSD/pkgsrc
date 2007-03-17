@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/08 19:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/17 15:59:12 rillig Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -24,24 +24,19 @@ SUBST_FILES.appdir=	src/lincvs.cpp src/main.cpp src/cvscontrol.cpp
 SUBST_SED.appdir=	-e 's,%%PREFIX%%,${PREFIX},'
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 do-configure:
-	 ${QTDIR}/bin/qmake -o ${WRKSRC}/Makefile ${WRKSRC}/lincvs.pro
+	cd ${WRKSRC} && qmake -o Makefile lincvs.pro
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lincvs.bin ${PREFIX}/bin/lincvs
 	${INSTALL_PROGRAM} ${WRKSRC}/contrib/rshwrapper/rshwrapper ${PREFIX}/libexec/rshwrapper
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lincvs
-.for FILE in FAM-HOWTO.txt FAQ.txt INFO.txt INSTALL INSTALL.html PROXY-HOWTO.txt README README.html SSH-HOWTO.txt
-		${INSTALL_DATA} ${WRKSRC}/doc/${FILE} ${PREFIX}/share/doc/lincvs/
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} FAM-HOWTO.txt FAQ.txt INFO.txt INSTALL INSTALL.html PROXY-HOWTO.txt README README.html SSH-HOWTO.txt ${PREFIX}/share/doc/lincvs/
+.for lang in de it ru
+	cd ${WRKSRC}/doc/translations/${lang} && ${INSTALL_DATA} * ${PREFIX}/share/doc/lincvs/${lang}/
 .endfor
-.for LANG in de it ru
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lincvs/${LANG}
-		${INSTALL_DATA} ${WRKSRC}/doc/translations/${LANG}/* ${PREFIX}/share/doc/lincvs/${LANG}/
-.endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lincvs/messages
 	${INSTALL_DATA} ${WRKSRC}/ts/*.qm ${PREFIX}/share/lincvs/messages/
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../x11/qt3/application.mk"
 .include "../../mk/bsd.pkg.mk"
