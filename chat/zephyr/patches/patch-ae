@@ -1,7 +1,22 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/09/16 19:41:50 seb Exp $
+$NetBSD: patch-ae,v 1.2 2007/03/17 14:37:47 rillig Exp $
 
---- server/kopt.c.orig	Mon Feb 26 23:48:01 2001
-+++ server/kopt.c
+gcc4 complains:
+kopt.c:34: error: static declaration of 'krbONE' follows non-static declaration
+.../.buildlink/include/kerberosIV/krb.h:64: error: previous declaration of 'krbONE' was here
+
+--- server/kopt.c.orig	2001-02-27 05:48:01.000000000 +0100
++++ server/kopt.c	2007-03-17 15:34:42.000000000 +0100
+@@ -31,8 +31,8 @@ static const char *rcsid_rd_req_c =
+ 
+ /* Byte ordering */
+ #undef HOST_BYTE_ORDER
+-static int krbONE = 1;
+-#define		HOST_BYTE_ORDER	(* (char *) &krbONE)
++static int my_krbONE = 1;
++#define		HOST_BYTE_ORDER	(* (char *) &my_krbONE)
+ 
+ #define		KRB_PROT_VERSION 	4
+ 
 @@ -161,7 +161,7 @@ void add_to_key_sched_cache(key, sched)
  
  int
