@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/03/08 19:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2007/03/17 20:43:24 rillig Exp $
 
 DISTNAME=	pilotmgr-1.109
 CATEGORIES=	comms
@@ -17,9 +17,11 @@ HAS_CONFIGURE=		YES
 NO_BUILD=		YES
 USE_TOOLS+=		perl:run
 
+CONFIGURE_ENV+=		PERL=${LOCALBASE}/bin/perl
+CONFIGURE_ENV+=		WRKDIR=${WRKDIR}
+CONFIG_SHELL=		perl
+CONFIGURE_SCRIPT=	Setup.pl
 CONFIGURE_ARGS+=	</dev/null
-CONFIGURE_ENV+=		PERL="${LOCALBASE}/bin/perl" WRKDIR=${WRKDIR:Q}
-CONFIGURE_SCRIPT=	perl Setup.pl
 
 PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
 PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2007/01/15 16:19:43 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2007/03/17 20:43:23 rillig Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
 MAINTAINER=	adam@NetBSD.org
@@ -27,8 +27,6 @@ PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
 
 BUILDLINK_PASSTHRU_DIRS+=	${QTPREFIX}
-
-PKGCONFIG_OVERRIDE=	lib/qt-mt.pc
 
 do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}
