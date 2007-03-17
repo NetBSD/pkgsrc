@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2007/02/18 23:35:42 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/17 11:17:57 minskim Exp $
 
-DISTNAME=	actionwebservice-1.2.2
+DISTNAME=	actionwebservice-1.2.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/17233/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/18412/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/aws/
 COMMENT=	Simple support for publishing web service APIs for Rails
 
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.2:../../www/ruby-actionpack
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.15.2:../../databases/ruby-activerecord
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.3:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.15.3:../../databases/ruby-activerecord
 
 USE_RUBY_SETUP=	yes
 
