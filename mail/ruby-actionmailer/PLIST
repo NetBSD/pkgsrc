@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/28 05:41:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/03/17 11:14:29 minskim Exp $
 ${RUBY_SITELIBDIR}/action_mailer.rb
-${RUBY_SITELIBDIR}/action_mailer/._version.rb
 ${RUBY_SITELIBDIR}/action_mailer/adv_attr_accessor.rb
 ${RUBY_SITELIBDIR}/action_mailer/base.rb
 ${RUBY_SITELIBDIR}/action_mailer/helpers.rb
