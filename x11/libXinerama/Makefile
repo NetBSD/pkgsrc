@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 20:56:24 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/17 17:54:14 joerg Exp $
 
-DISTNAME=	libXinerama-1.0.1
+DISTNAME=	libXinerama-1.0.2
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xinerama.pc.in
 
 .include "../../x11/libX11/buildlink3.mk"
