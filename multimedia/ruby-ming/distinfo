@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/09/13 15:58:48 obache Exp $
+$NetBSD: distinfo,v 1.4 2007/03/17 16:11:08 taca Exp $
 
-SHA1 (ming-ruby-0.1.7.tar.gz) = c8481b8067d4cafc09b2a6a36fd1e1567b5c2ab5
-RMD160 (ming-ruby-0.1.7.tar.gz) = 9f753ee057678f44ef2218ae1d8c76e3ed286e98
-Size (ming-ruby-0.1.7.tar.gz) = 41507 bytes
-SHA1 (patch-aa) = cabf19c4dbb7a80c19ebf0a99c1d2aedc15c368f
+SHA1 (ming-ruby-0.1.8.tar.gz) = 5c6bf4f84d578f5b9f0ede60bc2e45e7ac0bdbc2
+RMD160 (ming-ruby-0.1.8.tar.gz) = 43060ed6e903f27c17ca38512cfabaf747abcdcf
+Size (ming-ruby-0.1.8.tar.gz) = 158877 bytes
