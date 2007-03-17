@@ -1,14 +1,13 @@
-$NetBSD: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $
+$NetBSD: patch-bb,v 1.2 2007/03/17 14:36:42 tsutsui Exp $
 
 --- ic/m68k/m68k-insns-auto.sh.orig	2005-03-23 11:09:33.000000000 +0900
-+++ ic/m68k/m68k-insns-auto.sh	2007-03-15 01:11:22.000000000 +0900
-@@ -51,8 +51,92 @@
- _TME_RCSID("\$Id: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $");
- 
++++ ic/m68k/m68k-insns-auto.sh	2007-03-17 23:25:24.000000000 +0900
+@@ -58,6 +58,96 @@
  EOF
--if $header; then :; else
+ fi
+ 
 +if $header; then
-     cat <<EOF
++    cat <<EOF
 +
 +/* following are to fix the movel sp,-(sp) problem (of the value being pushed
 +   on the stack being off by four) and to warn if there are other possible
@@ -93,10 +92,14 @@ $NetBSD: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $
 +else
 +    cat <<EOF
 +#include <stdio.h>
- #include "m68k-impl.h"
- 
- EOF
-@@ -162,16 +246,16 @@
++
++EOF
++fi
++
+ # permute for the three different operand sizes we need to handle:
+ for size in 8 16 32; do
+     
+@@ -162,16 +252,16 @@
  		    echo ""
  		    echo "  if (!TME_M68K_SEQUENCE_RESTARTING) {"
  		    echo "    ic->_tme_m68k_ea_function_code = function_code;"
@@ -119,7 +122,7 @@ $NetBSD: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $
  		    echo "  ${dst} = ic->tme_m68k_ireg_memx${size};"
  		    echo "  ${src} = ic->tme_m68k_ireg_memy${size};"
  		    ;;
-@@ -181,6 +265,12 @@
+@@ -181,6 +271,12 @@
  		addx|subx)
  		    echo "  tme_uint16_t memory;"
  		    echo ""
@@ -132,7 +135,7 @@ $NetBSD: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $
  		    echo "  memory = (TME_M68K_INSN_OPCODE & TME_BIT(3));"
  		    echo "  if (memory) {"
  		    echo "    TME_M68K_INSN_CANFAULT;"
-@@ -239,6 +329,35 @@
+@@ -239,6 +335,35 @@
  	    fi
  	    echo ";"
  
@@ -168,7 +171,7 @@ $NetBSD: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $
  	    # store the result:
  	    if $store_res; then
  		echo ""
-@@ -362,6 +481,10 @@
+@@ -362,6 +487,10 @@
  	adda) op='+' ; src="_op0" ; dst="_op1" ;;
  	movea) op='' ; src="_op1" ; dst="_op0" ;;
  	esac
@@ -179,7 +182,7 @@ $NetBSD: patch-bb,v 1.1 2007/03/17 13:44:20 tsutsui Exp $
  	echo "  *((tme_int32_t *) ${dst}) ${op}= *((tme_int${size}_t *) ${src});"
  	echo "  TME_M68K_INSN_OK;"
  	echo "}"
-@@ -801,6 +924,10 @@
+@@ -801,6 +930,10 @@
  		echo "  tme_uint16_t specopy = TME_M68K_INSN_OP0(tme_uint16_t);"
  		echo "  tme_uint32_t addrx;"
  		echo "  tme_uint32_t addry;"
