@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/01/05 19:56:38 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/03/17 13:25:46 rillig Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
@@ -26,9 +26,9 @@ CFLAGS+=	-DBIND_8_COMPAT
 .endif
 
 SUBST_CLASSES+=		manpage
+SUBST_STAGE.manpage=	post-patch
 SUBST_FILES.manpage+=	doc/BitchX.1
 SUBST_SED.manpage+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_STAGE.manpage+=	post-patch
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
