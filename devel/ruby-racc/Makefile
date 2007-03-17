@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/11/03 07:19:53 taca Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/17 15:49:43 taca Exp $
 
 DISTNAME=	racc-${RACC_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-racc-${RACC_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://i.loveruby.net/archive/racc/
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://i.loveruby.net/en/projects/racc/
 COMMENT=	LALR(1) parser generator for Ruby
 
 USE_RUBY_SETUP=		yes
-RACC_VERSION=		1.4.4
+RACC_VERSION=		1.4.5
 
 DOCS=		ChangeLog README.en README.ja TODO
 DOCS_HTML=	NEWS.html command.html debug.html grammar.html index.html \
