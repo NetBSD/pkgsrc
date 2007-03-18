@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6115 2007/03/18 12:41:14 taca Exp $
+$NetBSD: TODO,v 1.6116 2007/03/18 13:20:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -402,8 +402,6 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fox-1.6.19
-	o freeciv-client-2.0.9
-	o freeciv-server-2.0.9
 	o freeglut-2.4.0
 	o freesci-0.3.5
 	o frozen-bubble-2.1.0
@@ -443,7 +441,6 @@ Suggested package updates
 	o glade-3.0.3
 	o gld-1.7
 	o glib2-2.12.11
-	o glibmm-2.12.7
 	o gmpc-0.14.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -490,7 +487,6 @@ Suggested package updates
 	o gtkam-0.1.13
 	o gtkhtml38-3.14.0
 	o gtklife-5.1
-	o gtkmm-2.10.8
 	o gtkpod-0.99.8
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
