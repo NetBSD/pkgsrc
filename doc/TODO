@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6111 2007/03/18 08:39:06 wiz Exp $
+$NetBSD: TODO,v 1.6112 2007/03/18 08:47:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -216,7 +216,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-5.2.3
+	o abcm2ps-5.3.1
 	o abcmidi-20070106
 	o acpi-iasl-20040715
 	o adns-1.4
@@ -311,6 +311,7 @@ Suggested package updates
 	o clisp-2.41
 	o cocoon-2.1.10
 	o columba-1.0RC1
+	o comix-3.6.3
 	o control-center-2.16.3
 	o coreutils-6.7
 	o courier-authlib-0.59
@@ -358,7 +359,7 @@ Suggested package updates
 	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eel2-2.18.0.1
-	o efax-gtk-3.0.13
+	o efax-gtk-3.0.14
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -525,6 +526,7 @@ Suggested package updates
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.197
 	o imp-4.1.4
+	o ingo-1.1.3
 	o instiki-0.10.2
 	o intercal-0.24
 	o ion3-devel-20061223
@@ -548,6 +550,7 @@ Suggested package updates
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
+	o k3b-1.0
 	o kapooka-0.3
 	o kazehakase-0.4.4
 	o kdevelop-3.4
@@ -558,6 +561,7 @@ Suggested package updates
 	o kmymoney2-0.8.6
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
+	o kronolith-2.1.5
 	o ksi-3.4.2
 	o kye-0.9.3
 	o latd-1.21
@@ -565,7 +569,7 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o ldapsdk-6.0.2
-	o leafnode-1.11.5
+	o leafnode-1.11.6
 	o leafpad-0.8.9
 	o less-394
 	o lft-2.5 [at http://pwhois.org/]
@@ -601,6 +605,8 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libnids-1.21
 	o libnotify-0.4.4
+	o libprelude-0.9.13.1
+	o libpreludedb-0.9.12
 	o libshout-2.2
 	o libssh-0.2
 	o libstatgrab-0.14
@@ -608,6 +614,7 @@ Suggested package updates
 	o libtorrent-0.11.2
 	o libxml++2-2.18.0
 	o licq-core-1.3.0
+	o liferea-1.2.8
 	o lighttpd-1.4.13
 	o lilypond-2.10.0
 	o lincvs-1.8.3 [now called CrossVC]
@@ -703,6 +710,7 @@ Suggested package updates
 	o ocrad-0.16
 	o odbc-postgresql-8.0.7
 	o ogre-0.12.3
+	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openh323-1.17.2
@@ -828,7 +836,7 @@ Suggested package updates
 	o postgrey-1.27
 	o powermanga-0.80
 	o prayer-1.0.18
-	o prelude-manager-0.9.7
+	o prelude-manager-0.9.7.2
 	o projclock-0.9
 	o proxsmtp-1.2.1
 	o psmisc-21.9
