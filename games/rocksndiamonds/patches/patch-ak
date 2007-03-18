@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2005/08/16 15:35:51 adam Exp $
+$NetBSD: patch-ak,v 1.6 2007/03/18 18:29:38 adam Exp $
 
---- src/libgame/system.c.orig	2005-06-27 20:26:12.000000000 +0000
+--- src/libgame/system.c.orig	2006-12-28 01:43:10.000000000 +0100
 +++ src/libgame/system.c
-@@ -1279,10 +1279,14 @@ inline void InitJoysticks()
+@@ -1340,10 +1340,14 @@ void InitJoysticks()
    return;	/* joysticks generally deactivated by compile-time directive */
  #endif
  
