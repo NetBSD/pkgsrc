@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2005/01/25 14:50:39 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/18 18:49:47 wiz Exp $
 
---- ../pr/include/md/_netbsd.cfg.orig	2000-12-02 06:29:17.000000000 +0900
-+++ ../pr/include/md/_netbsd.cfg	2004-06-10 23:06:59.000000000 +0900
-@@ -45,7 +45,8 @@
+--- pr/include/md/_netbsd.cfg.orig	2004-04-25 15:00:47.000000000 +0000
++++ pr/include/md/_netbsd.cfg
+@@ -48,7 +48,8 @@
  
  #define PR_AF_INET6 24  /* same as AF_INET6 */
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1 2005/01/25 14:50:39 jschauma Exp $
  
  #define IS_LITTLE_ENDIAN 1
  #undef  IS_BIG_ENDIAN
-@@ -91,7 +92,53 @@
+@@ -94,7 +95,53 @@
  #define PR_ALIGN_OF_DOUBLE  4
  #define PR_ALIGN_OF_POINTER 4
  
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.1 2005/01/25 14:50:39 jschauma Exp $
  
  #undef IS_LITTLE_ENDIAN
  #define  IS_BIG_ENDIAN 1
-@@ -184,6 +231,55 @@
+@@ -187,6 +234,55 @@
  #define PR_BYTES_PER_WORD_LOG2  3
  #define PR_BYTES_PER_DWORD_LOG2 3
  

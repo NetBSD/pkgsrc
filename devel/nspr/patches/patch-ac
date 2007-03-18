@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2006/02/02 05:51:14 ben Exp $
+$NetBSD: patch-ac,v 1.4 2007/03/18 18:49:47 wiz Exp $
 
---- ../configure.in.orig	Fri Sep  2 14:44:37 2005
-+++ ../configure.in	Wed Feb  1 19:58:57 2006
-@@ -57,7 +57,7 @@
+--- configure.in.orig	2007-01-18 23:44:32.000000000 +0000
++++ configure.in
+@@ -62,7 +62,7 @@ USE_CPLUS=
  USE_IPV6=
  USE_MDUPDATE=
  _MACOSX_DEPLOYMENT_TARGET=
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.3 2006/02/02 05:51:14 ben Exp $
  _DEBUG_FLAGS=-g
  MOZ_DEBUG=1
  MOZ_OPTIMIZE=
-@@ -1025,7 +1025,7 @@
+@@ -1113,7 +1113,7 @@ tools are selected during the Xcode/Deve
      PR_MD_CSRCS=dgux.c
      ;;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.3 2006/02/02 05:51:14 ben Exp $
      if test -z "$USE_NSPR_THREADS"; then
          USE_PTHREADS=1
      fi
-@@ -1045,6 +1045,9 @@
+@@ -1133,6 +1133,9 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.3 2006/02/02 05:51:14 ben Exp $
      ;;
  
  *-hpux*)
-@@ -1544,6 +1547,7 @@
+@@ -1637,6 +1640,7 @@ mips-nec-sysv*)
      AC_DEFINE(XP_UNIX)
      AC_DEFINE(NETBSD)
      AC_DEFINE(HAVE_BSD_FLOCK)
@@ -38,7 +38,27 @@ $NetBSD: patch-ac,v 1.3 2006/02/02 05:51:14 ben Exp $
      USE_NSPR_THREADS=1
      MDCPUCFG_H=_netbsd.cfg
      PR_MD_CSRCS=netbsd.c
-@@ -2345,7 +2349,7 @@
+@@ -1649,13 +1653,16 @@ mips-nec-sysv*)
+     if test -z "$OBJECT_FMT"; then
+         if echo __ELF__ | ${CC-cc} -E - | grep -q __ELF__ 2>/dev/null; then
+             OBJECT_FMT=a.out
+-            DLL_SUFFIX=so.1.0
+-            DSO_LDOPTS='-shared'
+         else
+             OBJECT_FMT=ELF
++        fi
++    fi
++    if test "$OBJECT_FMT" = "ELF"; then
+             DLL_SUFFIX=so
+             DSO_LDOPTS='-shared -Wl,-soname,$(notdir $@)'
+-        fi
++    else
++            DLL_SUFFIX=so.1.0
++            DSO_LDOPTS='-shared'
+     fi
+ 
+     if test "$LIBRUNPATH"; then
+@@ -2438,7 +2445,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -47,7 +67,7 @@ $NetBSD: patch-ac,v 1.3 2006/02/02 05:51:14 ben Exp $
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2426,7 +2430,7 @@
+@@ -2519,7 +2526,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
