@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.61 2007/03/16 05:46:06 cjs Exp $
+$NetBSD: distinfo,v 1.62 2007/03/18 12:38:45 taca Exp $
 
-SHA1 (openssh-4.5p1-hpn12v14.diff.gz) = 8bea17b13e7e91135785f4222252c28d08c9c887
-RMD160 (openssh-4.5p1-hpn12v14.diff.gz) = 1f937174d5418d578da5d9dfab16b5cc8960efc5
-Size (openssh-4.5p1-hpn12v14.diff.gz) = 15791 bytes
-SHA1 (openssh-4.5p1.tar.gz) = 2eefcbbeb9e4fa16fa4500dec107d1a09d3d02d7
-RMD160 (openssh-4.5p1.tar.gz) = 3f70b6f4228e84c7b9b8b3bee7fd3875f3e3bad3
-Size (openssh-4.5p1.tar.gz) = 965925 bytes
+SHA1 (openssh-4.6p1-hpn12v16.diff.gz) = a10ed53ad92e2e3106da7050c3b0076a2cd1c0ca
+RMD160 (openssh-4.6p1-hpn12v16.diff.gz) = 421e2c189c2e9b378f6ee3944183355f9f18d5e8
+Size (openssh-4.6p1-hpn12v16.diff.gz) = 15944 bytes
+SHA1 (openssh-4.6p1.tar.gz) = b2aefeb1861b4688b1777436035239ec32a47da8
+RMD160 (openssh-4.6p1.tar.gz) = 2959ac56c9175275bf82847ec64b2b169aedcb82
+Size (openssh-4.6p1.tar.gz) = 967395 bytes
 SHA1 (patch-aa) = 8b7a16e9a63cfff3b73d70b9cebb6627b96396e0
 SHA1 (patch-ab) = a105c238c8dc774ed6992791b131da56824869e9
 SHA1 (patch-ac) = dfb054ef02fbb5d206f6adaf82944f16da20eaf9
@@ -19,13 +19,12 @@ SHA1 (patch-aj) = 4f477f40d1d891dcda9083cec5521e80410ebd54
 SHA1 (patch-ak) = 3720afb4e95356d5310762cda881820d524dcffc
 SHA1 (patch-al) = d312a068047a375e52180026554bab745efdcdb7
 SHA1 (patch-am) = 4e2278b20e87e530e1819efde976d4414e160e38
-SHA1 (patch-an) = 283b17f27224dad853091d5145f2dab342132f8f
+SHA1 (patch-an) = 2f955b8891bedd79986490d282eb09acd4910250
 SHA1 (patch-ao) = a70da4f5942553a42fa935b82172e601b29951df
 SHA1 (patch-ap) = 2c0c092637661328046b71292a7412d09e92bb2a
 SHA1 (patch-aq) = a619b57361b04d5ab3d41375c18f7b99d71c8b34
 SHA1 (patch-ar) = fce4dc1011a124f02b8e14980cda1d633b36aa7d
 SHA1 (patch-as) = 19660f5983931ea3b053e6f4289cf6fae2ce50f3
-SHA1 (patch-at) = 1053afa04babc82374d7356aa0cc5fa55cf184e2
 SHA1 (patch-au) = 6cfdfc531e2267017a15e66ea48c7ecfa2a3926f
 SHA1 (patch-av) = 00f54c3fae7318b278b16bd0b01881a90bd31365
 SHA1 (patch-aw) = 2a88b7563c6f52163c6c5f716e437ecaea613a30
