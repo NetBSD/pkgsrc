@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2007/03/14 11:36:25 markd Exp $
+# $NetBSD: Makefile,v 1.91 2007/03/18 12:19:49 wiz Exp $
 #
 
 DISTNAME=		lsof_4.77
@@ -7,8 +7,6 @@ CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/ \
-			ftp://ftp.cert.dfn.de/pub/tools/admin/lsof/  \
-			ftp://ftp.auscert.org.au/pub/mirrors/vic.cc.purdue.edu/lsof/  \
 			ftp://ftp.sunet.se/pub/unix/admin/lsof/ \
 			http://ftp.sunet.se/pub/unix/admin/lsof/
 EXTRACT_SUFX=		.tar.bz2
