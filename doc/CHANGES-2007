@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.638 2007/03/18 13:30:48 markd Exp $
+$NetBSD: CHANGES-2007,v 1.639 2007/03/18 15:14:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtkmm to 2.10.8 [adam 2007-03-18]
 	Updated print/cups to 1.2.9 [markd 2007-03-18]
 	Updated sysutils/k3b to 1.0 [markd 2007-03-18]
+	Updated lang/cdl3 to 1.2.7 [obache 2007-03-18]
