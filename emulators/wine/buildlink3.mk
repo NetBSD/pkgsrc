@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2007/01/10 09:09:49 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2007/03/18 11:11:09 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WINE_BUILDLINK3_MK:=	${WINE_BUILDLINK3_MK}+
@@ -15,6 +15,9 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wine
 BUILDLINK_API_DEPENDS.wine+=	wine>=0.9.6nb1
 BUILDLINK_PKGSRCDIR.wine?=	../../emulators/wine
 .endif	# WINE_BUILDLINK3_MK
+
+pkgbase:= wine
+.include "../../mk/pkg-build-options.mk"
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.wine:Mopengl)
