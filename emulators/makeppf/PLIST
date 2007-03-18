@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/18 20:01:28 wiz Exp $
+bin/makeppf
