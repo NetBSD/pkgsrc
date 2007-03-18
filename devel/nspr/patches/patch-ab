@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2006/02/02 05:51:14 ben Exp $
+$NetBSD: patch-ab,v 1.3 2007/03/18 18:49:47 wiz Exp $
 
---- ../pr/include/md/_netbsd.h.orig	Wed Feb  1 19:41:54 2006
-+++ ../pr/include/md/_netbsd.h	Wed Feb  1 19:44:48 2006
-@@ -44,6 +44,8 @@
+--- pr/include/md/_netbsd.h.orig	2006-04-05 21:38:13.000000000 +0000
++++ pr/include/md/_netbsd.h
+@@ -47,6 +47,8 @@
  #define _PR_SI_ARCHITECTURE "x86"
  #elif defined(__alpha__)
  #define _PR_SI_ARCHITECTURE "alpha"
