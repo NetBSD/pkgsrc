@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/26 04:34:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/03/18 13:25:56 markd Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -153,7 +153,6 @@ share/doc/kde/HTML/en/k3b/index.cache.bz2
 share/doc/kde/HTML/en/k3b/index.docbook
 share/doc/kde/HTML/en/k3b/select_audiofiles.png
 share/doc/kde/HTML/en/k3b/select_project.png
-share/doc/kde/HTML/en/k3b/video-encoding.docbook
 share/icons/hicolor/128x128/apps/k3b.png
 share/icons/hicolor/16x16/apps/k3b.png
 share/icons/hicolor/22x22/apps/k3b.png
@@ -278,6 +277,24 @@ share/kde/apps/k3b/pics/73lab/project_left.png
 share/kde/apps/k3b/pics/73lab/project_right.png
 share/kde/apps/k3b/pics/73lab/splash.png
 share/kde/apps/k3b/pics/73lab/welcome_bg.png
+share/kde/apps/k3b/pics/RobsTheme/dialog_left.png
+share/kde/apps/k3b/pics/RobsTheme/dialog_right.png
+share/kde/apps/k3b/pics/RobsTheme/k3b.theme
+share/kde/apps/k3b/pics/RobsTheme/media_audio.png
+share/kde/apps/k3b/pics/RobsTheme/media_data.png
+share/kde/apps/k3b/pics/RobsTheme/media_empty.png
+share/kde/apps/k3b/pics/RobsTheme/media_left.png
+share/kde/apps/k3b/pics/RobsTheme/media_mixed.png
+share/kde/apps/k3b/pics/RobsTheme/media_none.png
+share/kde/apps/k3b/pics/RobsTheme/media_video.png
+share/kde/apps/k3b/pics/RobsTheme/progress_fail.png
+share/kde/apps/k3b/pics/RobsTheme/progress_right.png
+share/kde/apps/k3b/pics/RobsTheme/progress_success.png
+share/kde/apps/k3b/pics/RobsTheme/progress_working.png
+share/kde/apps/k3b/pics/RobsTheme/project_left.png
+share/kde/apps/k3b/pics/RobsTheme/project_right.png
+share/kde/apps/k3b/pics/RobsTheme/splash.png
+share/kde/apps/k3b/pics/RobsTheme/welcome_bg.png
 share/kde/apps/k3b/pics/crystal/dialog_left.png
 share/kde/apps/k3b/pics/crystal/dialog_right.png
 share/kde/apps/k3b/pics/crystal/k3b.theme
@@ -297,6 +314,24 @@ share/kde/apps/k3b/pics/crystal/project_left.png
 share/kde/apps/k3b/pics/crystal/project_right.png
 share/kde/apps/k3b/pics/crystal/splash.png
 share/kde/apps/k3b/pics/crystal/welcome_bg.png
+share/kde/apps/k3b/pics/quant/dialog_left.png
+share/kde/apps/k3b/pics/quant/dialog_right.png
+share/kde/apps/k3b/pics/quant/k3b.theme
+share/kde/apps/k3b/pics/quant/media_audio.png
+share/kde/apps/k3b/pics/quant/media_data.png
+share/kde/apps/k3b/pics/quant/media_empty.png
+share/kde/apps/k3b/pics/quant/media_left.png
+share/kde/apps/k3b/pics/quant/media_mixed.png
+share/kde/apps/k3b/pics/quant/media_none.png
+share/kde/apps/k3b/pics/quant/media_video.png
+share/kde/apps/k3b/pics/quant/progress_fail.png
+share/kde/apps/k3b/pics/quant/progress_right.png
+share/kde/apps/k3b/pics/quant/progress_success.png
+share/kde/apps/k3b/pics/quant/progress_working.png
+share/kde/apps/k3b/pics/quant/project_left.png
+share/kde/apps/k3b/pics/quant/project_right.png
+share/kde/apps/k3b/pics/quant/splash.png
+share/kde/apps/k3b/pics/quant/welcome_bg.png
 share/kde/apps/k3b/plugins/k3bartsoutputplugin.plugin
 share/kde/apps/k3b/plugins/k3baudiometainforenamerplugin.plugin
 share/kde/apps/k3b/plugins/k3baudioprojectcddbplugin.plugin
@@ -328,11 +363,15 @@ share/kde/sounds/k3b_error1.wav
 share/kde/sounds/k3b_success1.wav
 share/kde/sounds/k3b_wait_media1.wav
 @comment in kde: @dirrm share/kde/sounds
+@comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @dirrm share/kde/apps/k3b/servicemenus
 @dirrm share/kde/apps/k3b/plugins
+@dirrm share/kde/apps/k3b/pics/quant
 @dirrm share/kde/apps/k3b/pics/crystal
+@dirrm share/kde/apps/k3b/pics/RobsTheme
 @dirrm share/kde/apps/k3b/pics/73lab
 @dirrm share/kde/apps/k3b/pics
 @dirrm share/kde/apps/k3b/icons/hicolor/scalable/actions
@@ -365,6 +404,7 @@ share/kde/sounds/k3b_wait_media1.wav
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/k3b
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde
