@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.4 2006/04/15 09:30:45 adam Exp $
+$NetBSD: patch-ab,v 1.5 2007/03/18 13:12:14 adam Exp $
 
---- Makefile.in.orig	2006-03-06 08:05:19.000000000 +0100
+--- Makefile.in.orig	2007-02-12 00:38:05.000000000 +0100
 +++ Makefile.in
-@@ -275,8 +275,8 @@ target_vendor = @target_vendor@
+@@ -283,8 +283,8 @@ target_vendor = @target_vendor@
  @CLIENT_TRUE@@SERVER_TRUE@MSUBDIRS = manual
  @SERVER_FALSE@MSUBDIRS = 
  @MAKE_DATA_FALSE@DSUBDIRS = 
 -@MAKE_DATA_TRUE@DSUBDIRS = data
--SUBDIRS = $(DSUBDIRS) intl utility common tests $(SSUBDIRS) $(CSUBDIRS) po doc $(MSUBDIRS)
+-SUBDIRS = $(DSUBDIRS) intl utility common tests win32 $(SSUBDIRS) $(CSUBDIRS) po doc $(MSUBDIRS)
 +@MAKE_DATA_TRUE@DSUBDIRS = data po doc
-+SUBDIRS = $(DSUBDIRS) intl utility common tests $(SSUBDIRS) $(CSUBDIRS) $(MSUBDIRS)
++SUBDIRS = $(DSUBDIRS) intl utility common tests win32 $(SSUBDIRS) $(CSUBDIRS) $(MSUBDIRS)
  EXTRA_DIST = acconfig.old			\
  		autogen.sh 			\
  		config.mac.h			\
