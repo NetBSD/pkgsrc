@@ -1,18 +1,22 @@
-$NetBSD: patch-aa,v 1.5 2007/01/14 09:33:58 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2007/03/18 13:25:56 markd Exp $
 
---- libk3b/tools/k3bfilesysteminfo.cpp.orig	2007-01-09 13:49:54.000000000 +0000
-+++ libk3b/tools/k3bfilesysteminfo.cpp
-@@ -31,6 +31,13 @@
- #endif
- #ifdef HAVE_SYS_STATVFS_H
- #  include <sys/statvfs.h>
-+#  if defined(Q_OS_NETBSD)
-+#    include <sys/param.h>
-+#    if __NetBSD_Version__ > 299000000
-+#      define statfs		statvfs
-+#      define f_type		f_fsid
-+#    endif
-+#  endif
- #endif
- #ifdef HAVE_SYS_VFS_H
- #  include <sys/vfs.h>
+--- libk3bdevice/k3bdevice.cpp.orig	2007-03-17 08:03:46.000000000 +1300
++++ libk3bdevice/k3bdevice.cpp
+@@ -1546,7 +1546,7 @@ bool K3bDevice::Device::eject() const
+       close();
+   }
+   return success;
+-#elifdef Q_OS_LINUX
++#elif Q_OS_LINUX
+   bool success = false;
+   bool needToClose = !isOpen();
+ 
+@@ -1588,7 +1588,7 @@ bool K3bDevice::Device::load() const
+       close();
+   }
+   return success;
+-#elifdef Q_OS_LINUX
++#elif Q_OS_LINUX
+   bool success = false;
+   bool needToClose = !isOpen();
+ 
