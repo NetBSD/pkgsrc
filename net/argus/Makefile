@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/03/18 18:45:14 adam Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/18 18:59:05 adam Exp $
 
 DISTNAME=	argus-3.4
 CATEGORIES=	net
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--sbin_dir ${PREFIX}/sbin
 CONFIGURE_ARGS+=	--lib_dir ${PREFIX}/lib/argus
 CONFIGURE_ARGS+=	--data_dir ${VARBASE}/argus
 CONFIGURE_ENV+=		PERL=${TOOLS_PERL5:Q}
+
+REPLACE_PERL+=		${WRKSRC}/built/argus-config
 
 RCD_SCRIPTS=		argusd
 
