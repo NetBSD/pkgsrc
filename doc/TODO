@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6114 2007/03/18 12:35:24 adam Exp $
+$NetBSD: TODO,v 1.6115 2007/03/18 12:41:14 taca Exp $
 
 Suggested new packages
 ======================
@@ -715,7 +715,6 @@ Suggested package updates
 	o openldap-client-2.3.34
 	o openmortal-0.7.1
 	o openpam-20050616
-	o openssh-4.6
 	o openssl-0.9.8e
 	o openttd-0.5.0
 	o oregano-0.60.0
