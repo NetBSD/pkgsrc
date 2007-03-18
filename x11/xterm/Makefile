@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2007/03/17 14:02:13 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/03/18 16:02:09 yyamano Exp $
 
 DISTNAME=	xterm-224
 CATEGORIES=	x11
-MASTER_SITES=	ftp://invisible-island.net/pub/xterm/
+MASTER_SITES=	ftp://invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
