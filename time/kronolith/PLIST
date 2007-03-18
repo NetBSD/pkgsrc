@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/12 21:53:06 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/03/18 12:11:41 adrianp Exp $
 share/doc/kronolith/INSTALL
 share/doc/kronolith/README
 share/doc/kronolith/RELEASE_NOTES
@@ -51,10 +51,13 @@ share/horde/kronolith/lib/WeekView.php
 share/horde/kronolith/lib/api.php
 share/horde/kronolith/lib/base.php
 share/horde/kronolith/lib/prefs.php
+share/horde/kronolith/lib/tests/toicalendar.phpt
 share/horde/kronolith/lib/version.php
 share/horde/kronolith/locale/ar_SY/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/sl_SI/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/bg_BG/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/ca_ES/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/ca_ES/help.xml
 share/horde/kronolith/locale/cs_CZ/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/da_DK/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/de_DE/LC_MESSAGES/kronolith.mo
@@ -66,6 +69,7 @@ share/horde/kronolith/locale/es_ES/help.xml
 share/horde/kronolith/locale/fi_FI/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/fi_FI/help.xml
 share/horde/kronolith/locale/fr_FR/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/fr_FR/help.xml
 share/horde/kronolith/locale/hu_HU/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/hu_HU/help.xml
 share/horde/kronolith/locale/it_IT/LC_MESSAGES/kronolith.mo
@@ -91,6 +95,7 @@ share/horde/kronolith/month.php
 share/horde/kronolith/po/README
 share/horde/kronolith/po/ar_SY.po
 share/horde/kronolith/po/bg_BG.po
+share/horde/kronolith/po/ca_ES.po
 share/horde/kronolith/po/cs_CZ.po
 share/horde/kronolith/po/da_DK.po
 share/horde/kronolith/po/de_DE.po
@@ -294,6 +299,8 @@ share/horde/kronolith/year.php
 @dirrm share/horde/kronolith/locale/da_DK
 @dirrm share/horde/kronolith/locale/cs_CZ/LC_MESSAGES
 @dirrm share/horde/kronolith/locale/cs_CZ
+@dirrm share/horde/kronolith/locale/ca_ES/LC_MESSAGES
+@dirrm share/horde/kronolith/locale/ca_ES
 @dirrm share/horde/kronolith/locale/bg_BG/LC_MESSAGES
 @dirrm share/horde/kronolith/locale/bg_BG
 @dirrm share/horde/kronolith/locale/ar_SY/LC_MESSAGES
@@ -304,6 +311,7 @@ share/horde/kronolith/year.php
 @dirrm share/horde/kronolith/lib/FBView
 @dirrm share/horde/kronolith/lib/Driver
 @dirrm share/horde/kronolith/lib/Block
+@dirrm share/horde/kronolith/lib/tests
 @dirrm share/horde/kronolith/lib
 @dirrm share/horde/kronolith/js
 @unexec ${RMDIR} %D/share/horde/kronolith/config 2>/dev/null || ${TRUE}
