@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/14 11:50:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/03/18 13:13:02 markd Exp $
 bin/R
 lib/R/COPYING
 lib/R/NEWS
@@ -114,7 +114,7 @@ lib/R/include/Rmath.h
 lib/R/include/Rversion.h
 lib/R/include/S.h
 lib/R/lib/libR.so
-lib/R/lib/libRblas.so
+${USE_F2C}lib/R/lib/libRblas.so
 lib/R/lib/libRlapack.so
 lib/R/library/KernSmooth/CONTENTS
 lib/R/library/KernSmooth/DESCRIPTION
