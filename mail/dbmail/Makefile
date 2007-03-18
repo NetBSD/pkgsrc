@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/18 21:38:59 schmonz Exp $
 #
 
 DISTNAME=		dbmail-2.0.7
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dbmail.org/download/2.0/
 
-MAINTAINER=		schmonz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.dbmail.org/
 COMMENT=		Store and retrieve mail messages in a database
 
