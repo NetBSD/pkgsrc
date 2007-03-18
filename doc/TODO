@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6109 2007/03/17 22:06:16 adam Exp $
+$NetBSD: TODO,v 1.6110 2007/03/18 08:38:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ Suggested package updates
 	o icdprog-0.5
 	o icecast-2.3.1
 	o icepref-2.3
-	o icon-naming-utils-0.8.2
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ikiwiki-1.45
@@ -571,7 +570,6 @@ Suggested package updates
 	o leafpad-0.8.9
 	o less-394
 	o lft-2.5 [at http://pwhois.org/]
-	o libXrandr-1.2.1
 	o libbonobo-2.18.0
 	o libcdio-0.78.2
 	o libdockapp-0.6.1
