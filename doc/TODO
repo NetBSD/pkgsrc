@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6112 2007/03/18 08:47:10 wiz Exp $
+$NetBSD: TODO,v 1.6113 2007/03/18 12:33:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -295,7 +295,6 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
 	o cairo-1.4.0
-	o cairomm-1.2.4
 	o cal3d-0.11.0
 	o capc-calc-2.12.1.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
