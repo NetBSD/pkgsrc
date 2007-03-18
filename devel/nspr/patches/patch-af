@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2005/01/25 14:50:39 jschauma Exp $
+$NetBSD: patch-af,v 1.2 2007/03/18 18:49:47 wiz Exp $
 
---- ../pr/src/Makefile.in.orig	2003-05-13 18:23:58.000000000 -0700
-+++ ../pr/src/Makefile.in
-@@ -164,6 +164,12 @@ OS_LIBS		= -ldl
+--- pr/src/Makefile.in.orig	2006-10-19 00:39:28.000000000 +0000
++++ pr/src/Makefile.in
+@@ -170,6 +170,12 @@ OS_LIBS		= -ldl
  endif
  endif
  

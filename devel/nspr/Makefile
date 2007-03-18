@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2007/02/22 19:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/03/18 18:49:46 wiz Exp $
 
-DISTNAME=		nspr-4.6.1
-PKGREVISION=		3
+DISTNAME=		nspr-4.6.6
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_MOZILLA:S/mozilla\//nspr\//g:=v4.6.1/src/}
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.6.6/src/ \
+			ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.6.6/src/
 
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/nspr/index.html
 COMMENT=		Platform-neutral API for system level and libc like functions
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub/build
+WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub
+CONFIGURE_DIRS=		${WRKSRC}/build
 
 USE_TOOLS+=		autoconf213 gmake
 USE_LANGUAGES=		c c++
@@ -56,23 +57,23 @@ BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
 
 SUBST_CLASSES+=		libpath
 SUBST_STAGE.libpath=	post-configure
-SUBST_FILES.libpath=	config/autoconf.mk
+SUBST_FILES.libpath=	build/config/autoconf.mk
 SUBST_SED.libpath=	-e 's,@executable_path/$$@,${PREFIX}/lib/nspr/$$(notdir $$@),'
 .endif
 
 post-extract:
-	${CHMOD} -R g-w ${WRKSRC}/..
-	${CHMOD} -x ${WRKSRC}/../pr/include/prvrsion.h
+	${CHMOD} -R g-w ${WRKSRC}
+	${CHMOD} -x ${WRKSRC}/pr/include/prvrsion.h
 
 pre-configure:
-	cd ${WRKSRC}/.. && autoconf
+	cd ${WRKSRC} && autoconf
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/nspr
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/nspr
-	(cd ${WRKSRC}/dist/include && ${PAX} -Lrwpe . ${PREFIX}/include/ )
-	(cd ${WRKSRC}/dist/lib && ${PAX} -Lrwpe . ${PREFIX}/lib/nspr/ )
-	${INSTALL_SCRIPT} ${WRKSRC}/config/nspr-config ${PREFIX}/bin
+	(cd ${WRKSRC}/build/dist/include && ${PAX} -Lrwpe . ${PREFIX}/include/ )
+	(cd ${WRKSRC}/build/dist/lib && ${PAX} -Lrwpe . ${PREFIX}/lib/nspr/ )
+	${INSTALL_SCRIPT} ${WRKSRC}/build/config/nspr-config ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
 	set -e; \
 	{ ${ECHO} "Name: NSPR"; \
