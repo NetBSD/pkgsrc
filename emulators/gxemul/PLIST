@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/02/19 06:54:47 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/03/18 21:05:38 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -67,7 +67,14 @@ share/doc/gxemul/20070128-netbsd-dreamcast-livecd-1.png
 share/doc/gxemul/20070128-netbsd-dreamcast-livecd-1_small.png
 share/doc/gxemul/20070128-netbsd-dreamcast-livecd-2.png
 share/doc/gxemul/20070128-netbsd-dreamcast-livecd-2_small.png
-share/doc/gxemul/dreamcast.html
+share/doc/gxemul/20070224-netbsd-landisk.png
+share/doc/gxemul/20070224-netbsd-landisk_small.png
+share/doc/gxemul/20070308-linux-dreamcast-1.png
+share/doc/gxemul/20070308-linux-dreamcast-1_small.png
+share/doc/gxemul/20070308-linux-dreamcast-2.png
+share/doc/gxemul/20070308-linux-dreamcast-2_small.png
+share/doc/gxemul/20070318-netbsd-macppc.png
+share/doc/gxemul/20070318-netbsd-macppc_small.png
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
 share/doc/gxemul/README
@@ -104,6 +111,7 @@ share/doc/gxemul/debian-8-small.png
 share/doc/gxemul/debian-8.png
 share/doc/gxemul/debian-9-small.png
 share/doc/gxemul/debian-9.png
+share/doc/gxemul/dreamcast.html
 share/doc/gxemul/experiments.html
 share/doc/gxemul/gdb_remote.html
 share/doc/gxemul/guestoses.html
