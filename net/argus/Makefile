@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:26:52 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2007/03/18 18:45:14 adam Exp $
 
-DISTNAME=	argus-3.3
-PKGREVISION=	3
+DISTNAME=	argus-3.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcp4me.com/code/argus-archive/
 EXTRACT_SUFX=	.tgz
@@ -21,10 +19,9 @@ DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 USE_TOOLS+=		perl:run
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
-
-CONFIGURE_ARGS+=	--bin_dir  ${PREFIX}/bin
+CONFIGURE_ARGS+=	--bin_dir ${PREFIX}/bin
 CONFIGURE_ARGS+=	--sbin_dir ${PREFIX}/sbin
-CONFIGURE_ARGS+=	--lib_dir  ${PREFIX}/lib/argus
+CONFIGURE_ARGS+=	--lib_dir ${PREFIX}/lib/argus
 CONFIGURE_ARGS+=	--data_dir ${VARBASE}/argus
 CONFIGURE_ENV+=		PERL=${TOOLS_PERL5:Q}
 
