@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.7 2006/07/17 15:30:16 minskim Exp $
+$NetBSD: distinfo,v 1.8 2007/03/18 17:34:41 adam Exp $
 
-SHA1 (qt-x11-opensource-src-4.1.4.tar.gz) = 7924011d7fcc0c873b952670e0dac2c56fc6f0f5
-RMD160 (qt-x11-opensource-src-4.1.4.tar.gz) = a7e8558f275751b1a6217827784c3b81f84d6d5f
-Size (qt-x11-opensource-src-4.1.4.tar.gz) = 32174985 bytes
-SHA1 (patch-aa) = 87a1b7e57853d70bbe6e7cb79f4a1c6e1c89d36b
-SHA1 (patch-ab) = 3305517f366628fdedcb820fb83026018067471e
+SHA1 (qt-x11-opensource-src-4.2.3.tar.gz) = b988aab4fa1dcce8532c36bb63947a556076e8c8
+RMD160 (qt-x11-opensource-src-4.2.3.tar.gz) = 06c9c3bd53dd6b96fc68a1dfe96882ac6927df25
+Size (qt-x11-opensource-src-4.2.3.tar.gz) = 37635710 bytes
+SHA1 (patch-aa) = 2ac5ba5b0a419f1a6fe63989b9734d042ccf1562
+SHA1 (patch-ab) = 726bc5f30d5eb54ec19f76be35422e3697fb1b8c
 SHA1 (patch-ac) = 766ca4aba25029765f83c8a72873b603864ea821
-SHA1 (patch-ad) = 1db8ce11816ae2fe8423906c51290c82ddb169ea
-SHA1 (patch-ae) = f007463664a56e4dc53adf1e33c80790b07591c3
-SHA1 (patch-af) = a8576bc098c14cb5a13d45d4231b7ee21441eb89
-SHA1 (patch-ag) = 9c73840a8fd2edf518a26532ab1f04752cca3fc9
+SHA1 (patch-ad) = 6b835687f74358999ddc89feb46c98cc36fef47b
+SHA1 (patch-ae) = 5b0d7ede053f1a792418406547280cd3352d7c47
+SHA1 (patch-af) = d3a6680553d7cd41cb9436776ee81737e3f2eb07
+SHA1 (patch-ag) = cfdc8678689089a7894d4acfee9e6a868d384b6f
 SHA1 (patch-ah) = 62c50fe48b9ff1ce9fb757b432c8b1db7693e112
 SHA1 (patch-ai) = b15936b85b2b1946e8c9a92bf393c3d3a1fc6950
+SHA1 (patch-aj) = cb57c340a125587f5e26f63274c090512079a41c
+SHA1 (patch-ak) = 16eef0675a63da937637c8fc654664f1cb155d18
