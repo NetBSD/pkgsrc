@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/02/05 19:44:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/03/18 13:19:37 adam Exp $
 bin/demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1603,6 +1603,16 @@ share/doc/gtkmm-2.4/docs/reference/html/globals_eval_0x76.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_eval_0x77.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_eval_0x78.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_func.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x63.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x66.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x67.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x69.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x6c.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x6d.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x6f.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x72.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x73.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func_0x75.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_type.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_vars.html
 share/doc/gtkmm-2.4/docs/reference/html/glyph_8h.html
@@ -1679,7 +1689,6 @@ share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__123.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__124.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__125.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__126.png
-share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__127.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__13.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__14.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__15.png
@@ -1861,6 +1870,16 @@ share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_eval_0x76.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_eval_0x77.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_eval_0x78.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x63.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x66.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x67.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x69.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x6c.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x6d.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x6f.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x72.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x73.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_func_0x75.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_type.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_vars.html
 share/doc/gtkmm-2.4/docs/reference/html/namespaces.html
@@ -2049,6 +2068,22 @@ share/doc/gtkmm-2.4/docs/tutorial/figures/menu_popup.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/menus_and_toolbars.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/menus_menu.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/menus_menubar.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_add_existing_property_sheet.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_application_settings.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_corrected_main.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_corrected_stdafx.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_main_program.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_new_project_dialog.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_new_project_menu.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_project_created.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_project_properties.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_properties_maincrtstartup.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_properties_noinherit.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_properties_remove_warning_4250.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_properties_subsystem_windows.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_property_files.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_property_manager.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/msvc_property_manager_with_gtkmm_properties.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/notebook.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/paned.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/printing.png
@@ -2098,6 +2133,9 @@ share/doc/gtkmm-2.4/docs/tutorial/html/aphs06.html
 share/doc/gtkmm-2.4/docs/tutorial/html/aphs07.html
 share/doc/gtkmm-2.4/docs/tutorial/html/api.html
 share/doc/gtkmm-2.4/docs/tutorial/html/apis02.html
+share/doc/gtkmm-2.4/docs/tutorial/html/apj.html
+share/doc/gtkmm-2.4/docs/tutorial/html/apjs02.html
+share/doc/gtkmm-2.4/docs/tutorial/html/apjs03.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch01.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch01s02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch02.html
@@ -2189,6 +2227,7 @@ share/doc/gtkmm-2.4/docs/tutorial/html/ch24.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch24s02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch24s03.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch24s04.html
+share/doc/gtkmm-2.4/docs/tutorial/html/ch24s05.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch25.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch25s02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch26.html
