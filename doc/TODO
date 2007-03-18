@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6116 2007/03/18 13:20:15 adam Exp $
+$NetBSD: TODO,v 1.6117 2007/03/18 13:30:48 markd Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o crypto++-523
 	o cstream-2.6.0
 	o cuetools-1.3.1
-	o cups-1.2.9
 	o cvs2p4-2.5.5 [schmonz]
 	o cweb-3.64a
 	o cygwin_lib-1.5.21.1
@@ -545,7 +544,6 @@ Suggested package updates
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
-	o k3b-1.0
 	o kapooka-0.3
 	o kazehakase-0.4.4
 	o kdevelop-3.4
