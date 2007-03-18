@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/18 20:01:28 wiz Exp $
+
+SHA1 (makeppf3_src.zip) = ae6abcd6a7973345f57f3fa8cfbd0ef651b24491
+RMD160 (makeppf3_src.zip) = 884c030c6f550c66836d0feb7f2573b73eaeb5e0
+Size (makeppf3_src.zip) = 7780 bytes
+SHA1 (patch-aa) = c5887ce56bbc17a9fb67548698a0827ae79a94f7
