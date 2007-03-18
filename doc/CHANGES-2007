@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.637 2007/03/18 13:20:15 adam Exp $
+$NetBSD: CHANGES-2007,v 1.638 2007/03/18 13:30:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1224,3 +1224,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/freeciv-server to 2.0.9 [adam 2007-03-18]
 	Updated devel/glibmm to 2.12.7 [adam 2007-03-18]
 	Updated x11/gtkmm to 2.10.8 [adam 2007-03-18]
+	Updated print/cups to 1.2.9 [markd 2007-03-18]
+	Updated sysutils/k3b to 1.0 [markd 2007-03-18]
