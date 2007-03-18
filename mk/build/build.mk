@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.11 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: build.mk,v 1.12 2007/03/18 23:09:09 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -16,6 +16,12 @@
 #
 # BUILD_TARGET is the target from ${MAKE_FILE} that should be invoked
 #	to build the sources.
+#
+# MAKE_JOBS_SAFE
+#	Whether the package supports parallel builds. If set to yes,
+#	at most MAKE_JOBS jobs are carried out in parallel. The default
+#	value is "yes", and packages that don't support it must
+#	explicitly set it to "no".
 #
 # Variables defined in this file:
 #
