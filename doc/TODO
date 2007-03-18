@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6119 2007/03/18 16:09:23 obache Exp $
+$NetBSD: TODO,v 1.6120 2007/03/18 17:36:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -888,8 +888,6 @@ Suggested package updates
 	o qt2-libs-2.3.2
 	o qt3-docs-3.3.8
 	o qt3-libs-3.3.8
-	o qt4-4.2.0
-	o qt4-libs-4.2.3
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
