@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.639 2007/03/18 15:14:08 obache Exp $
+$NetBSD: CHANGES-2007,v 1.640 2007/03/18 16:09:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1227,3 +1227,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/cups to 1.2.9 [markd 2007-03-18]
 	Updated sysutils/k3b to 1.0 [markd 2007-03-18]
 	Updated lang/cdl3 to 1.2.7 [obache 2007-03-18]
+	Updated security/ocaml-ssl to 0.4.1 [obache 2007-03-18]
