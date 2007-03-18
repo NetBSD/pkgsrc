@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.631 2007/03/18 08:38:13 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.632 2007/03/18 10:37:27 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1210,3 +1210,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ImageMagick to 6.3.2.9 [adam 2007-03-17]
 	Updated emulators/wine to 0.9.33 [adam 2007-03-17]
 	Updated archivers/dar to 2.3.3 [dsainty 2007-03-18]
+	Updated security/ap-modsecurity2 to 2.1.0 [adrianp 2007-03-18]
