@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.636 2007/03/18 12:39:43 taca Exp $
+$NetBSD: CHANGES-2007,v 1.637 2007/03/18 13:20:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1219,3 +1219,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/cairomm to 1.2.4 [adam 2007-03-18]
 	Updated devel/libextractor to 0.5.18 [adam 2007-03-18]
 	Updated security/openssh to 4.6.1 [taca 2007-03-18]
+	Updated games/freeciv-share to 2.0.9 [adam 2007-03-18]
+	Updated games/freeciv-client to 2.0.9 [adam 2007-03-18]
+	Updated games/freeciv-server to 2.0.9 [adam 2007-03-18]
+	Updated devel/glibmm to 2.12.7 [adam 2007-03-18]
+	Updated x11/gtkmm to 2.10.8 [adam 2007-03-18]
