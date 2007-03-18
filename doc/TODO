@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6117 2007/03/18 13:30:48 markd Exp $
+$NetBSD: TODO,v 1.6118 2007/03/18 15:14:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -300,7 +300,6 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccd2iso-0.2
 	o cddb-1.5.2
-	o cdl3-1.2.7 [pkg/35941]
 	o cfitsio-2.510
 	o cgdb-0.6.3
 	o cherokee-0.5.6
