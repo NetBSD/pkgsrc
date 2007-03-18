@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.160 2007/03/09 03:37:59 rillig Exp $
+# $NetBSD: makevars.map,v 1.161 2007/03/18 23:09:53 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -347,6 +347,7 @@ INFO_DIR		Pathname
 INFO_FILES		Yes [$package]
 INSTALL			ShellCommand [$system]
 INSTALLATION_DIRS	List of PrefixPathname [$package_list]
+INSTALLATION_DIRS_FROM_PLIST	Yes [$package]
 INSTALL_DATA		ShellCommand [$system]
 INSTALL_DATA_DIR	ShellCommand [$system]
 INSTALL_DIRS		List of WrksrcSubdirectory [$package_list]
@@ -404,6 +405,8 @@ MAKE_DIRS_PERMS		List of ShellWord [$package_list]
 MAKE_ENV		List of ShellWord [$package_list]
 MAKE_FILE		Pathname [$package]
 MAKE_FLAGS		List of ShellWord [$package_list]
+MAKE_JOBS		Integer [$user]
+MAKE_JOBS_SAFE		YesNo [$package]
 MAKE_PROGRAM		ShellCommand [$system]
 MANCOMPRESSED		YesNo [m:s,c:ds]
 MANCOMPRESSED_IF_MANZ	Yes [m:s,c:ds]
