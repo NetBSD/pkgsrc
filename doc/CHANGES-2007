@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.648 2007/03/18 20:03:27 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.649 2007/03/18 20:40:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1240,3 +1240,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/setxkbmap version 1.0.3 [wiz 2007-03-18]
 	Added emulators/applyppf version 3.0 [wiz 2007-03-18]
 	Added emulators/makeppf version 3.0 [wiz 2007-03-18]
+	Updated fonts/encodings to 1.0.2 [wiz 2007-03-18]
+	Updated devel/libidn to 0.6.11 [wiz 2007-03-18]
+	Updated fonts/mkfontscale to 1.0.3 [wiz 2007-03-18]
+	Updated graphics/comix to 3.6.3 [wiz 2007-03-18]
