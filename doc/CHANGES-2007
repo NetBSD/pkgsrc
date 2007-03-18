@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.645 2007/03/18 19:00:47 adam Exp $
+$NetBSD: CHANGES-2007,v 1.646 2007/03/18 19:05:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1237,3 +1237,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/nspr to 4.6.6 [wiz 2007-03-18]
 	Updated mail/fix-mime-charset to 0.5.3nb1 [wiz 2007-03-18]
 	Updated net/argus to 3.4 [adam 2007-03-18]
+	Added x11/setxkbmap version 1.0.3 [wiz 2007-03-18]
