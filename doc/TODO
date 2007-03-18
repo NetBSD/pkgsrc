@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6123 2007/03/18 19:00:48 adam Exp $
+$NetBSD: TODO,v 1.6124 2007/03/18 20:40:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,7 +308,6 @@ Suggested package updates
 	o clisp-2.41
 	o cocoon-2.1.10
 	o columba-1.0RC1
-	o comix-3.6.3
 	o control-center-2.16.3
 	o coreutils-6.7
 	o courier-authlib-0.59
@@ -364,7 +363,6 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o encodings-1.0.2
 	o enlightenment-0.16.8.6
 	o enscript-1.6.4
 	o epdfview-0.1.6
@@ -586,7 +584,6 @@ Suggested package updates
 	o libgtop2-2.14.8
 	o libhydrogen-0.9.2
 	o libiconv-1.11
-	o libidn-0.6.11
 	o libjit-0.0.6
 	o liblive-2006.12.08
 	o libmal-0.44
@@ -640,7 +637,6 @@ Suggested package updates
 	o mined-2000.13.2
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
-	o mkfontscale-1.0.3
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.0.2
 	o mlview-0.9.0
