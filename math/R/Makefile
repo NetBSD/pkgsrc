@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2007/03/14 11:50:17 markd Exp $
+# $NetBSD: Makefile,v 1.89 2007/03/18 13:13:02 markd Exp $
 
 DISTNAME=		R-2.4.1
 CATEGORIES=		math
@@ -100,3 +100,9 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/R
 
 .include "../../mk/bsd.pkg.mk"
+
+.if !empty(BUILDLINK_PACKAGES:Mf2c)
+PLIST_SUBST+=		USE_F2C=""
+.else
+PLIST_SUBST+=		USE_F2C="@comment "
+.endif
