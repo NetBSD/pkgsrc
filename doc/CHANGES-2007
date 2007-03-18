@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.633 2007/03/18 12:31:05 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.634 2007/03/18 12:33:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1216,3 +1216,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/turba to 2.1.4 [adrianp 2007-03-18]
 	Updated time/kronolith to 2.1.5 [adrianp 2007-03-18]
 	Updated mail/ingo to 1.1.3 [adrianp 2007-03-18]
+	Updated graphics/cairomm to 1.2.4 [adam 2007-03-18]
