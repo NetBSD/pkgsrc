@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.650 2007/03/18 21:02:25 markd Exp $
+$NetBSD: CHANGES-2007,v 1.651 2007/03/18 21:06:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1248,3 +1248,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/qt3-libs to 3.3.8nb1 [markd 2007-03-18]
 	Updated x11/qt3-tools to 3.3.8 [markd 2007-03-18]
 	Updated x11/qt3-docs to 3.3.8 [markd 2007-03-18]
+	Updated emulators/gxemul to 0.4.4.1 [xtraeme 2007-03-18]
