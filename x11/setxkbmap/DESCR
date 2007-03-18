@@ -1,0 +1,2 @@
+The setxkbmap command maps the keyboard to use the layout determined
+by the options specified on the command line.
