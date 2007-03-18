@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/18 19:56:27 wiz Exp $
+bin/applyppf
