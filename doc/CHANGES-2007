@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.629 2007/03/17 23:08:55 adam Exp $
+$NetBSD: CHANGES-2007,v 1.630 2007/03/18 04:40:54 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1207,3 +1207,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/libXinerama to 1.0.2 [joerg 2007-03-17]
 	Updated graphics/ImageMagick to 6.3.2.9 [adam 2007-03-17]
 	Updated emulators/wine to 0.9.33 [adam 2007-03-17]
+	Updated archivers/dar to 2.3.3 [dsainty 2007-03-18]
