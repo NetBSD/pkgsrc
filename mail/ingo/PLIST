@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/29 08:22:02 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/03/18 12:09:33 adrianp Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -36,6 +36,7 @@ share/horde/ingo/locale/da_DK/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/de_DE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/de_DE/help.xml
 share/horde/ingo/locale/ca_ES/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/ca_ES/help.xml
 share/horde/ingo/locale/el_GR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/en_US/help.xml
 share/horde/ingo/locale/es_ES/LC_MESSAGES/ingo.mo
@@ -44,6 +45,7 @@ share/horde/ingo/locale/et_EE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/help.xml
 share/horde/ingo/locale/fr_FR/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/fr_FR/help.xml
 share/horde/ingo/locale/hu_HU/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/it_IT/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/ko_KR/LC_MESSAGES/ingo.mo
