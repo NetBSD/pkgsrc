@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.642 2007/03/18 18:30:37 adam Exp $
+$NetBSD: CHANGES-2007,v 1.643 2007/03/18 18:51:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1234,3 +1234,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/qt4-pgsql to 4.2.3 [adam 2007-03-18]
 	Updated x11/qt4-tools to 4.2.3 [adam 2007-03-18]
 	Updated games/rocksndiamonds to 3.2.3 [adam 2007-03-18]
+	Updated devel/nspr to 4.6.6 [wiz 2007-03-18]
