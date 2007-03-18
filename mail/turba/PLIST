@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/08/05 12:52:25 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/03/18 12:14:05 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -39,10 +39,12 @@ share/horde/turba/lib/Turba.php
 share/horde/turba/lib/api.php
 share/horde/turba/lib/base.php
 share/horde/turba/lib/prefs.php
+share/horde/turba/lib/tests/tovcard.phpt
 share/horde/turba/lib/version.php
 share/horde/turba/locale/ar_SY/LC_MESSAGES/turba.mo
 share/horde/turba/locale/bg_BG/LC_MESSAGES/turba.mo
 share/horde/turba/locale/ca_ES/LC_MESSAGES/turba.mo
+share/horde/turba/locale/ca_ES/help.xml
 share/horde/turba/locale/cs_CZ/LC_MESSAGES/turba.mo
 share/horde/turba/locale/da_DK/LC_MESSAGES/turba.mo
 share/horde/turba/locale/de_DE/LC_MESSAGES/turba.mo
@@ -57,6 +59,7 @@ share/horde/turba/locale/fa_IR/help.xml
 share/horde/turba/locale/fi_FI/LC_MESSAGES/turba.mo
 share/horde/turba/locale/fi_FI/help.xml
 share/horde/turba/locale/fr_FR/LC_MESSAGES/turba.mo
+share/horde/turba/locale/fr_FR/help.xml
 share/horde/turba/locale/gl_ES/LC_MESSAGES/turba.mo
 share/horde/turba/locale/hu_HU/LC_MESSAGES/turba.mo
 share/horde/turba/locale/is_IS/LC_MESSAGES/turba.mo
@@ -135,8 +138,8 @@ share/horde/turba/scripts/sql/turba_objects.mysql.sql
 share/horde/turba/scripts/sql/turba_objects.oci8.sql
 share/horde/turba/scripts/sql/turba_objects.pgsql.sql
 share/horde/turba/scripts/sql/turba_objects.sql
-share/horde/turba/scripts/sql/turba_objects.xml
 share/horde/turba/scripts/sql/turba_weddingguests.sql
+share/horde/turba/scripts/sql/turba.xml
 share/horde/turba/scripts/upgrades/1.1_to_1.2.sql
 share/horde/turba/scripts/upgrades/1.2_to_2.0.oci8.sql
 share/horde/turba/scripts/upgrades/1.2_to_2.0.sql
@@ -266,6 +269,7 @@ share/horde/turba/view.php
 @dirrm share/horde/turba/lib/Object
 @dirrm share/horde/turba/lib/Driver
 @dirrm share/horde/turba/lib/Block
+@dirrm share/horde/turba/lib/tests
 @dirrm share/horde/turba/lib
 @unexec ${RMDIR} %D/share/horde/turba/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/horde/turba 2>/dev/null || ${TRUE}
