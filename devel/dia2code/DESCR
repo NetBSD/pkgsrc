@@ -1,0 +1,19 @@
+Features of Dia2code:
+-* Reads UML diagrams.
+-* Can handle
+	* UML - Generalization
+	* UML - Realization
+   	* UML - Implements
+	* UML - Association
+	* UML - Dependency
+-* Selective code generation
+-* User-defined output directory
+-* Stereotype handling: interfaces, abstract classes
+-* "Import" and "include" based on the parent classes, the type of
+   attributes and return type of methods iff they're declared in the
+   same diagram
+-* Support for JavaBeans(tm): will create automagically methods to
+   access and modify each attribute
+-* Template and Package handling
+-* Custom code generator modules that are loaded on-the-fly
+-* Generates code for: Ada, C, C++, Java, PHP, Python, shapefile, SQL and C#
