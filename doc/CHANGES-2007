@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.653 2007/03/18 21:37:10 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.654 2007/03/19 01:39:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1252,3 +1252,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/gxemul to 0.4.4.1 [xtraeme 2007-03-18]
 	Updated devel/scmgit to 1.5.0.3 [wiz 2007-03-18]
 	Updated mail/getmail to 4.7.3 [schmonz 2007-03-18]
+	Updated pkgtools/url2pkg to 2.6 [rillig 2007-03-19]
