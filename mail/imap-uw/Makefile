@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2007/02/22 19:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2007/03/19 17:00:17 reed Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -20,8 +20,8 @@ USE_LIBTOOL=		yes
 MAKE_ENV+=		LIBTOOL=libtool
 MAKE_ENV+=		LTCOMPILE="libtool --mode=compile"
 MAKE_ENV+=		LTLINK="libtool --mode=link"
-LTINSTALL_PROGRAM=	${LIBTOOL} --mode=install ${INSTALL_PROGRAM}
-LTINSTALL_LIB=		${LIBTOOL} --mode=install ${INSTALL_LIB}
+LTINSTALL_PROGRAM=	${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_PROGRAM}
+LTINSTALL_LIB=		${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_LIB}
 
 .include "../../mk/bsd.prefs.mk"
 
