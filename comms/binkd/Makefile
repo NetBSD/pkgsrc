@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 20:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/03/19 16:40:26 tv Exp $
 #
 
 DISTNAME=		binkd098
@@ -9,7 +9,7 @@ MASTER_SITES=		http://homepage.corbina.net/~maloff/binkd/ \
 			ftp://happy.kiev.ua/pub/fidosoft/mailer/binkd/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://homepage.corbina.net/~maloff/binkd/
 COMMENT=		FidoNet-over-IP transport program utilizing BINKP protocol
 

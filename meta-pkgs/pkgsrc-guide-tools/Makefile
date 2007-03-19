@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:06 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/19 16:40:27 tv Exp $
 #
 
 DISTNAME=	pkgsrc-guide-tools-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Packages required to build the pkgsrc Guide
 
 _GUIDE_DEPTYPE=	run
