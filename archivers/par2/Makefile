@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/22 04:46:13 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/19 16:40:26 tv Exp $
 #
 
 DISTNAME=		par2cmdline-0.4
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/cmdline//}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=parchive/}
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://parchive.sourceforge.net/
 COMMENT=		Create or use PAR2 parity volumes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/19 16:40:27 tv Exp $
 
 DISTNAME=	Mail-SRS-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsrs2.org/
 COMMENT=	SMTP envelope sender rewriting for SPF-compliant forwarding
 

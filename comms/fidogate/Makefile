@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/04/23 00:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2007/03/19 16:40:27 tv Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fidogate/}
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fidogate.org/
 COMMENT=	FidoNet (FTN) <-> Internet mail and news gateway
 

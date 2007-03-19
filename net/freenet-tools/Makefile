@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/16 18:02:04 tv Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/19 16:40:28 tv Exp $
 #
 
 DISTNAME=		ft-0.2.25
@@ -8,7 +8,7 @@ CATEGORIES=		net www
 MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Freenet Tools, freesite manipulation tools for Freenet and Entropy
 
