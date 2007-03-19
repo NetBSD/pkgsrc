@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/05 17:49:34 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/19 16:40:27 tv Exp $
 #
 
 DISTNAME=		Class-MakeMethods-1.01
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Class-MakeMethods/
 COMMENT=		Getter/setter OO method maker for class elements
 
