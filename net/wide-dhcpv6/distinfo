@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/19 17:32:07 taca Exp $
+
+SHA1 (wide-dhcpv6-20061016.tar.gz) = 07100760d217afa6e0ec82b3575fb7d8d52e2155
+RMD160 (wide-dhcpv6-20061016.tar.gz) = 95fc6875efbf26dc4e24c80dfc93cf9ebfe450c9
+Size (wide-dhcpv6-20061016.tar.gz) = 165378 bytes
