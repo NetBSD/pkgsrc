@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.658 2007/03/19 14:21:56 martti Exp $
+$NetBSD: CHANGES-2007,v 1.659 2007/03/19 16:52:04 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1257,3 +1257,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/dia2code version 0.8.1 [rillig 2007-03-19]
 	Updated mail/dbmail to 2.0.11 [ghen 2007-03-19]
 	Updated editors/vim-share to 7.0.219 [martti 2007-03-19]
+	Updated misc/openoffice2 to 2.1.0nb4 [hira 2007-03-19]
