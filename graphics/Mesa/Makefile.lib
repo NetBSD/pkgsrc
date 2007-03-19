@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.3 2007/01/18 10:24:45 rillig Exp $
+# $NetBSD: Makefile.lib,v 1.4 2007/03/19 16:47:43 reed Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -48,6 +48,7 @@ Mesa-install-libs:
 	@${TEST} -z ${INSTLIBS:M*:Q}"" || ${ECHO_MSG} "Installing libraries."
 	@for lib in "" ${INSTLIBS}; do					\
 		${TEST} -n "$$lib" || continue;				\
+		${SETENV} ${MAKE_ENV}					\
 		${LIBTOOL} --mode=install ${INSTALL_LIB}		\
 			$$lib ${DESTDIR}${PREFIX}/lib;			\
 	done
