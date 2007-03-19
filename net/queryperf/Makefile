@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/08/09 18:20:46 tv Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/19 16:40:28 tv Exp $
 #
 
 DISTNAME=		queryperf-nominum-2.1
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/-nominum-/-/}
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.nominum.com/pub/nominum/
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.nominum.com/pub/nominum/
 COMMENT=		DNS performance and load tester
 
