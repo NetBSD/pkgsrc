@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.659 2007/03/19 16:52:04 hira Exp $
+$NetBSD: CHANGES-2007,v 1.660 2007/03/19 17:34:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1258,3 +1258,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dbmail to 2.0.11 [ghen 2007-03-19]
 	Updated editors/vim-share to 7.0.219 [martti 2007-03-19]
 	Updated misc/openoffice2 to 2.1.0nb4 [hira 2007-03-19]
+	Added net/wide-dhcpv6 version 20061016 [taca 2007-03-19]
