@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2007/02/15 13:33:00 xtraeme Exp $
+$NetBSD: distinfo,v 1.31 2007/03/19 19:51:39 xtraeme Exp $
 
-SHA1 (sylpheed-2.4.0beta4.tar.bz2) = bf0a5307b75bd7e79b1a05cf8e5f896933f7dbd4
-RMD160 (sylpheed-2.4.0beta4.tar.bz2) = ae84f14f6c2259b9a4c4e4775e41ca63ec63b883
-Size (sylpheed-2.4.0beta4.tar.bz2) = 2638148 bytes
+SHA1 (sylpheed-2.4.0beta5.tar.bz2) = d783d685028c07dc0b507b3068e54771260a73c0
+RMD160 (sylpheed-2.4.0beta5.tar.bz2) = e65cdec0922c17f421e8d986fc020d0584b6350b
+Size (sylpheed-2.4.0beta5.tar.bz2) = 2691490 bytes

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2007/02/04 09:09:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/03/19 19:51:39 xtraeme Exp $
 bin/sylpheed
 share/examples/sylpheed/mime.types
+share/locale/be/LC_MESSAGES/sylpheed.mo
 share/locale/bg/LC_MESSAGES/sylpheed.mo
 share/locale/cs/LC_MESSAGES/sylpheed.mo
 share/locale/da/LC_MESSAGES/sylpheed.mo
