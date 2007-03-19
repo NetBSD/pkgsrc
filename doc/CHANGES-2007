@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.656 2007/03/19 12:47:56 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.657 2007/03/19 12:52:59 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1255,3 +1255,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/url2pkg to 2.6 [rillig 2007-03-19]
 	Updated devel/libgphoto2 to 2.3.1nb1 [sborrill 2007-03-19]
 	Added devel/dia2code version 0.8.1 [rillig 2007-03-19]
+	Updated mail/dbmail to 2.0.11 [ghen 2007-03-19]
