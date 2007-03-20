@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.18 2007/03/14 11:50:35 markd Exp $
+$NetBSD: patch-ac,v 1.19 2007/03/20 11:00:58 markd Exp $
 
 --- configure.orig	2006-12-07 00:16:29.000000000 +1300
 +++ configure
@@ -467,7 +467,38 @@ $NetBSD: patch-ac,v 1.18 2007/03/14 11:50:35 markd Exp $
        ;;
      *)
        { echo "$as_me:$LINENO: WARNING: I could not determine FPICFLAGS." >&5
-@@ -39649,7 +39506,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -36377,6 +36234,15 @@ cat > conftest.c <<EOF
+ #endif
+ extern void F77_SYMBOL(test1)(int *iflag);
+ 
++#ifdef F77_DUMMY_MAIN
++
++#  ifdef __cplusplus
++     extern "C"
++#  endif
++   int F77_DUMMY_MAIN() { return 1; }
++
++#endif
++
+ int main () {
+   int iflag;
+   F77_SYMBOL(test1)(&iflag);
+@@ -36441,6 +36307,14 @@ else
+ #else
+ # define F77_SYMBOL(x)   x
+ #endif
++#ifdef F77_DUMMY_MAIN
++
++#  ifdef __cplusplus
++     extern "C"
++#  endif
++   int F77_DUMMY_MAIN() { return 1; }
++
++#endif
+ void F77_SYMBOL(xerbla)(char *srname, int *info)
+ {}
+ void blas_set () {
+@@ -39649,7 +39523,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
    r_save_LIBS=${LIBS}
