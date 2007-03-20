@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.661 2007/03/19 19:52:34 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.662 2007/03/20 00:46:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1260,3 +1260,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice2 to 2.1.0nb4 [hira 2007-03-19]
 	Added net/wide-dhcpv6 version 20061016 [taca 2007-03-19]
 	Updated mail/sylpheed-devel to 2.4.0beta5 [xtraeme 2007-03-19]
+	Updated converters/libiconv to 1.11 [wiz 2007-03-20]
