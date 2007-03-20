@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.16 2006/11/12 00:49:57 rillig Exp $
+# $NetBSD: check-interpreter.mk,v 1.17 2007/03/20 16:21:10 joerg Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -40,11 +40,11 @@ _check-interpreter: error-check .PHONY
 	@${STEP_MSG} "Checking for non-existent script interpreters in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	set -e;								\
-	cd ${PREFIX};							\
+	cd ${DESTDIR}${PREFIX};						\
 	${_CHECK_INTERP_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |\
 	while read file; do						\
 		case "$$file" in					\
-		${_CHECK_INTERP_SKIP:@p@${PREFIX}/${p}|${p}) continue ;;@} \
+		${_CHECK_INTERP_SKIP:@p@${p}|${p}) continue ;;@} \
 		*) ;;							\
 		esac;							\
 		if [ ! -r "$$file" ]; then				\
