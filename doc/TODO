@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6128 2007/03/19 23:27:44 wiz Exp $
+$NetBSD: TODO,v 1.6129 2007/03/20 00:01:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -983,7 +983,6 @@ Suggested package updates
 	o suse_base-10.2
 	o swfdec-0.3.6
 	o sylpheed-claws-2.8.1 [now claws-mail]
-	o sylpheed-devel-2.4.0beta5
 	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
