@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2006/09/15 15:05:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/03/20 21:02:40 wiz Exp $
 bin/gnome-doc-prepare
+bin/gnome-doc-tool
 bin/xml2po
 lib/pkgconfig/gnome-doc-utils.pc
 lib/pkgconfig/xml2po.pc
@@ -41,11 +42,11 @@ share/xml/gnome/xslt/docbook/html/db2html.xsl
 share/xml/gnome/xslt/docbook/omf/db2omf.xsl
 share/xml/gnome/xslt/docbook/utils/chunks.xsl
 share/xml/gnome/xslt/docbook/utils/credits.xsl
+share/xml/gnome/xslt/docbook/utils/figures.xsl
 share/xml/gnome/xslt/docbook/utils/ids.xsl
 share/xml/gnome/xslt/gettext/gettext.xsl
 share/xml/gnome/xslt/gettext/l10n-numbers.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
-share/xml/gnome/xslt/xsldoc/xsldoc.xsl
 share/xml2po/docbook.py
 share/xml2po/docbook.pyc
 share/xml2po/empty.py
@@ -54,8 +55,9 @@ share/xml2po/gs.py
 share/xml2po/gs.pyc
 share/xml2po/ubuntu.py
 share/xml2po/ubuntu.pyc
+share/xml2po/xhtml.py
+share/xml2po/xhtml.pyc
 @dirrm share/xml2po
-@dirrm share/xml/gnome/xslt/xsldoc
 @dirrm share/xml/gnome/xslt/gettext
 @dirrm share/xml/gnome/xslt/docbook/utils
 @dirrm share/xml/gnome/xslt/docbook/omf
