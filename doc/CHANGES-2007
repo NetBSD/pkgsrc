@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.664 2007/03/20 14:24:16 tron Exp $
+$NetBSD: CHANGES-2007,v 1.665 2007/03/20 17:04:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1264,3 +1264,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed net/gftp [tron 2007-03-20]
 	Removed net/gftp-gtk1 [tron 2007-03-20]
 	Updated databases/phpmyadmin to 2.10.0.2 [tron 2007-03-20]
+	Updated x11/xf86-input-mouse to 1.2.1 [joerg 2007-03-20]
+	Updated x11/xf86-video-nv to 2.0.0 [joerg 2007-03-20]
+	Updated x11/xf86-video-wsfb to 0.2.1 [joerg 2007-03-20]
+	Added x11/xf86-video-ast version 0.81.0 [joerg 2007-03-20]
+	Added x11/xf86-video-ark version 0.6.0 [joerg 2007-03-20]
+	Added x11/xf86-video-chips version 1.1.1 [joerg 2007-03-20]
+	Added x11/xf86-video-cyrix version 1.1.0 [joerg 2007-03-20]
+	Added x11/xf86-video-cirrus version 1.1.0 [joerg 2007-03-20]
+	Added x11/xf86-input-void version 1.1.0 [joerg 2007-03-20]
