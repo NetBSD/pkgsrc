@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6134 2007/03/20 20:00:10 wiz Exp $
+$NetBSD: TODO,v 1.6135 2007/03/20 21:04:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ Suggested package updates
 	o gnome-applets-2.16.2
 	o gnome-build-0.1.5
 	o gnome-desktop-2.18.0
-	o gnome-doc-utils-0.10.1
 	o gnome-games-2.18.0
 	o gnome-icon-theme-2.18.0
 	o gnome-keyring-0.8
