@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6133 2007/03/20 19:55:01 wiz Exp $
+$NetBSD: TODO,v 1.6134 2007/03/20 20:00:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -211,7 +211,6 @@ Suggested package updates
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.9
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
@@ -261,7 +260,6 @@ Suggested package updates
 	o asterisk-1.4.1
 	o astyle-1.15.3
 	o at-spi-1.7.13
-	o atk-1.18.0
 	o autogen-5.8.9
 	o avcheck-0.91
 	o avl-2.0.1
@@ -440,7 +438,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.2.0
 	o gld-1.7
-	o glib2-2.12.11
 	o gmpc-0.14.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -509,7 +506,6 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
-	o horde-3.1.4
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
@@ -528,8 +524,6 @@ Suggested package updates
 	o imap-uw-2006f
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.197
-	o imp-4.1.4
-	o ingo-1.1.3
 	o instiki-0.10.2
 	o intercal-0.24
 	o ion3-devel-20061223
@@ -563,7 +557,6 @@ Suggested package updates
 	o kmymoney2-0.8.6
 	o ko-baekmuk-2.1
 	o kodos-2.4.5
-	o kronolith-2.1.5
 	o ksi-3.4.2
 	o kye-0.9.3
 	o latd-1.21
@@ -779,7 +772,6 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pango-1.16.1
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
 	o parrot-0.4.7
@@ -1012,7 +1004,6 @@ Suggested package updates
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o turba-2.1.4
 	o tuxpaint-0.9.16
 	o tuxpaint-config-0.0.6
 	o tuxpaint-stamps-20051125
@@ -1067,8 +1058,6 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xf86-input-keyboard-1.2.0
-	o xf86-input-mouse-1.2.1
-	o xf86-video-nv-1.2.2.1
 	o xfce-4.4.0
 	o xfe-0.99
 	o xfmail-1.5.4
@@ -1096,7 +1085,6 @@ Suggested package updates
 	o xmon-1.5.6
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorg-7.2
 	o xorp-1.3
 	o xpad-2.12
 	o xpp-1.5
