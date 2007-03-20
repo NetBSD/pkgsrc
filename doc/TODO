@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6129 2007/03/20 00:01:04 wiz Exp $
+$NetBSD: TODO,v 1.6130 2007/03/20 00:16:33 joerg Exp $
 
 Suggested new packages
 ======================
@@ -870,8 +870,6 @@ Suggested package updates
 	o py-pexpect-0.99999b
 	o py-proj-1.8.1a [at python.org]
 	o py-psyco-1.5.1
-	o py-psycopg2-2.0.4 [pkg/34433]
-	o py-psycopg2-2.0.5
 	o py-qt3-base-3.17
 	o py-qt3-modules-3.16
 	o py-qt3-qscintilla-3.16
