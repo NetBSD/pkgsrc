@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.61 2007/03/20 15:15:36 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.62 2007/03/20 15:28:12 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -141,3 +141,5 @@ Pullup ticket 2052 - requested by adrianp
 security update for horde
 Pullup ticket 2053 - requested by rillig
 security update for libwpd
+Pullup ticket 2054 - requested by tron
+security update for phpmyadmin
