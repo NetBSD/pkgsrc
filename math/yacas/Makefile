@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/02/20 19:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/03/20 16:11:55 drochner Exp $
 #
 
-DISTNAME=	yacas-1.0.59
-PKGREVISION=	2
+DISTNAME=	yacas-1.0.63
 CATEGORIES=	math
 MASTER_SITES=	http://yacas.sourceforge.net/backups/
 
@@ -35,4 +34,5 @@ post-install:
 .include "../../math/gsl/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
+.include "../../devel/libltdl/convenience.mk"
 .include "../../mk/bsd.pkg.mk"
