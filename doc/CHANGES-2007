@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.665 2007/03/20 17:04:59 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.666 2007/03/20 19:21:12 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1273,3 +1273,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xf86-video-cyrix version 1.1.0 [joerg 2007-03-20]
 	Added x11/xf86-video-cirrus version 1.1.0 [joerg 2007-03-20]
 	Added x11/xf86-input-void version 1.1.0 [joerg 2007-03-20]
+	Updated math/yacas to 1.0.63 [drochner 2007-03-20]
+	Updated math/maxima to 5.11.0 [drochner 2007-03-20]
+	Updated editors/TeXmacs to 1.0.6.9 [drochner 2007-03-20]
+	Updated x11/gtk2 to 2.10.11 [drochner 2007-03-20]
+	Updated devel/atk to 1.18.0 [drochner 2007-03-20]
+	Updated devel/pango to 1.16.1 [drochner 2007-03-20]
+	Updated devel/glib2 to 2.12.11 [drochner 2007-03-20]
+	Updated graphics/cairo to 1.4.2 [drochner 2007-03-20]
+	Updated graphics/freetype2 to 2.3.2 [drochner 2007-03-20]
