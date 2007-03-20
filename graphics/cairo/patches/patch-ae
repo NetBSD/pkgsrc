@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.5 2006/09/29 13:43:41 drochner Exp $
+$NetBSD: patch-ae,v 1.6 2007/03/20 15:29:22 drochner Exp $
 
-Fixes cairo on 8-bit psuedo color and other 8-bit displays.
+Fixes cairo on 8-bit pseudo color and other 8-bit displays.
 See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 
---- src/cairo-xlib-surface.c.orig	2006-08-18 16:20:16.000000000 +0200
+--- src/cairo-xlib-surface.c.orig	2007-03-02 01:04:59.000000000 +0000
 +++ src/cairo-xlib-surface.c
-@@ -81,6 +81,8 @@ _cairo_xlib_surface_show_glyphs (void   
+@@ -82,6 +82,8 @@ _cairo_xlib_surface_show_glyphs (void   
  
  #define CAIRO_ASSUME_PIXMAP	20
  
@@ -14,7 +14,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  struct _cairo_xlib_surface {
      cairo_surface_t base;
  
-@@ -126,6 +128,8 @@ struct _cairo_xlib_surface {
+@@ -127,6 +129,8 @@ struct _cairo_xlib_surface {
      int num_clip_rects;
  
      XRenderPictFormat *xrender_format;
@@ -23,7 +23,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  };
  
  #define CAIRO_SURFACE_RENDER_AT_LEAST(surface, major, minor)	\
-@@ -504,6 +508,82 @@ _swap_ximage_to_native (XImage *ximage)
+@@ -503,6 +507,82 @@ _swap_ximage_to_native (XImage *ximage)
      }
  }
  
@@ -106,7 +106,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  static cairo_status_t
  _get_image_surface (cairo_xlib_surface_t    *surface,
  		    cairo_rectangle_int16_t *interest_rect,
-@@ -657,6 +737,35 @@ _get_image_surface (cairo_xlib_surface_t
+@@ -656,6 +736,35 @@ _get_image_surface (cairo_xlib_surface_t
      }
      else
      {
@@ -142,7 +142,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  	/*
  	 * XXX This can't work.  We must convert the data to one of the
  	 * supported pixman formats.  Pixman needs another function
-@@ -669,6 +778,8 @@ _get_image_surface (cairo_xlib_surface_t
+@@ -668,6 +777,8 @@ _get_image_surface (cairo_xlib_surface_t
  						    ximage->width,
  						    ximage->height,
  						    ximage->bytes_per_line);
@@ -151,7 +151,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  	if (image->base.status)
  	    goto FAIL;
      }
-@@ -743,6 +854,32 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
+@@ -742,6 +853,32 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
      _cairo_xlib_surface_set_gc_clip_rects (surface);
  }
  
@@ -184,7 +184,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  static cairo_status_t
  _draw_image_surface (cairo_xlib_surface_t   *surface,
  		     cairo_image_surface_t  *image,
-@@ -751,21 +888,54 @@ _draw_image_surface (cairo_xlib_surface_
+@@ -754,21 +891,54 @@ _draw_image_surface (cairo_xlib_surface_
  {
      XImage ximage;
      unsigned int bpp, alpha, red, green, blue;
@@ -242,7 +242,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
      ximage.bits_per_pixel = bpp;
      ximage.red_mask = red;
      ximage.green_mask = green;
-@@ -1890,7 +2060,13 @@ _cairo_xlib_surface_create_internal (Dis
+@@ -1899,7 +2069,13 @@ _cairo_xlib_surface_create_internal (Dis
      surface->have_clip_rects = FALSE;
      surface->clip_rects = NULL;
      surface->num_clip_rects = 0;
