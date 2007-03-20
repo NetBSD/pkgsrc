@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6130 2007/03/20 00:16:33 joerg Exp $
+$NetBSD: TODO,v 1.6131 2007/03/20 00:46:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -594,7 +594,6 @@ Suggested package updates
 	o libgpod-0.4.0
 	o libgtop2-2.14.8
 	o libhydrogen-0.9.2
-	o libiconv-1.11
 	o libjit-0.0.6
 	o liblive-2006.12.08
 	o libmal-0.44
