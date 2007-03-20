@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2006/11/03 22:22:10 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2007/03/20 15:20:33 drochner Exp $
 
-DISTNAME=	freetype-2.2.1
-PKGREVISION=	2
+DISTNAME=	freetype-2.3.2
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
@@ -26,6 +25,9 @@ CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 BUILD_DIRS=		${WRKSRC}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}
+# XXX I don't understand what's happening here, but the CONFIG_SHELL
+# in CONFIGURE_ENV breaks the configure script
+CONFIG_SHELL=		# null
 
 .if exists(/System/Library/Frameworks/Carbon.framework)
 LDFLAGS+=	-framework Carbon
@@ -37,7 +39,7 @@ PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 .include "../../mk/compiler.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
-PKG_SUPPORTED_OPTIONS=	truetype
+PKG_SUPPORTED_OPTIONS=	truetype subpixel
 
 .include "../../mk/bsd.options.mk"
 
@@ -50,6 +52,11 @@ PKG_SUPPORTED_OPTIONS=	truetype
 ###
 .if !empty(PKG_OPTIONS:Mtruetype)
 CFLAGS+=	-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
+.endif
+
+# subpixel (lcd) rendering, also patent issues
+.if !empty(PKG_OPTIONS:Msubpixel)
+CFLAGS+=	-DFT_CONFIG_OPTION_SUBPIXEL_RENDERING
 .endif
 
 # source code breaks strict aliasing in gcc>=2.95
