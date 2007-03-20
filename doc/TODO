@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6132 2007/03/20 14:24:16 tron Exp $
+$NetBSD: TODO,v 1.6133 2007/03/20 19:55:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -380,6 +380,7 @@ Suggested package updates
 	o evolution-2.10.0
 	o evolution-exchange-2.10.0
 	o ex-050325
+	o exiv2-0.14
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
@@ -437,7 +438,7 @@ Suggested package updates
 	o gkrellm1-snmp-0.22
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
-	o glade-3.0.3
+	o glade-3.2.0
 	o gld-1.7
 	o glib2-2.12.11
 	o gmpc-0.14.0
@@ -462,6 +463,7 @@ Suggested package updates
 	o gnome-utils-2.18.0
 	o gnome-vfs2-2.18.0
 	o gnome-vfsmm-2.18.0
+	o gnome2-terminal-2.18.0
 	o gnomeicu-0.99.12
 	o gnupg2-2.0.3
 	o gnustep-objc-1.4.0
@@ -977,7 +979,7 @@ Suggested package updates
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
 	o suse_base-10.2
-	o swfdec-0.3.6
+	o swfdec-0.4.2
 	o sylpheed-claws-2.8.1 [now claws-mail]
 	o sympa-5.2
 	o sysinfo-4.2.2
@@ -1049,7 +1051,7 @@ Suggested package updates
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wmweather-2.4.3
-	o worker-2.14.2
+	o worker-2.14.3
 	o wwwoffle-2.9b
 	o wxGTK-2.8
 	o wxRemind-0.8.6
