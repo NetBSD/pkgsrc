@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2006/09/15 15:05:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/20 21:02:40 wiz Exp $
 #
 
-DISTNAME=	gnome-doc-utils-0.8.0
+DISTNAME=	gnome-doc-utils-0.10.1
 CATEGORIES=	textproc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 
 USE_TOOLS+=		intltool pkg-config
 GNU_CONFIGURE=		YES
+TEST_TARGET=		check
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN:Q}
