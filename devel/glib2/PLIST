@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2006/11/13 18:34:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2007/03/20 15:33:57 drochner Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -261,6 +261,7 @@ share/locale/am/LC_MESSAGES/glib20.mo
 share/locale/ar/LC_MESSAGES/glib20.mo
 share/locale/az/LC_MESSAGES/glib20.mo
 share/locale/be/LC_MESSAGES/glib20.mo
+share/locale/be@latin/LC_MESSAGES/glib20.mo
 share/locale/bg/LC_MESSAGES/glib20.mo
 share/locale/bn/LC_MESSAGES/glib20.mo
 share/locale/bn_IN/LC_MESSAGES/glib20.mo
