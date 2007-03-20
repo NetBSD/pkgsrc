@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2006/11/14 13:55:34 joerg Exp $
+$NetBSD: patch-ae,v 1.6 2007/03/20 00:44:53 wiz Exp $
 
---- libcharset/lib/Makefile.in.orig	2005-03-22 17:30:59.000000000 +0100
+--- libcharset/lib/Makefile.in.orig	2006-07-14 13:18:55.000000000 +0000
 +++ libcharset/lib/Makefile.in
 @@ -9,7 +9,7 @@ srcdir = @srcdir@
  prefix = @prefix@
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.5 2006/11/14 13:55:34 joerg Exp $
  
  # Programs used by "make":
  CC = @CC@
-@@ -77,13 +77,13 @@ ref-del.sed : $(srcdir)/ref-del.sin
+@@ -79,13 +79,13 @@ ref-del.sed : $(srcdir)/ref-del.sin
  # Installs the library and include files only. Typically called with only
  # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
  install-lib : all force
@@ -32,7 +32,7 @@ $NetBSD: patch-ae,v 1.5 2006/11/14 13:55:34 joerg Exp $
  
  # The following is needed in order to install a simple file in $(libdir)
  # which is shared with other installed packages. We use a list of referencing
-@@ -94,7 +94,9 @@ install-lib : all force
+@@ -96,7 +96,9 @@ install-lib : all force
  
  install : all force
  	$(mkinstalldirs) $(DESTDIR)$(libdir)
