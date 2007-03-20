@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/09 15:34:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/03/20 18:17:13 jlam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -623,7 +623,6 @@ ${PG_SUBPREFIX}share/postgresql/timezonesets/Indian.txt
 ${PG_SUBPREFIX}share/postgresql/timezonesets/Pacific.txt
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezonesets
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/US
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/SystemV
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Pacific
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mideast
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mexico
