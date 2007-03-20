@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2006/11/03 11:27:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.33 2007/03/20 15:38:31 drochner Exp $
 bin/pango-querymodules
 ${X11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -7,13 +7,16 @@ include/pango-1.0/pango/pango-context.h
 include/pango-1.0/pango/pango-coverage.h
 include/pango-1.0/pango/pango-engine.h
 include/pango-1.0/pango/pango-enum-types.h
+include/pango-1.0/pango/pango-features.h
 include/pango-1.0/pango/pango-font.h
 include/pango-1.0/pango/pango-fontmap.h
 include/pango-1.0/pango/pango-fontset.h
 include/pango-1.0/pango/pango-glyph-item.h
 include/pango-1.0/pango/pango-glyph.h
+include/pango-1.0/pango/pango-gravity.h
 include/pango-1.0/pango/pango-item.h
 include/pango-1.0/pango/pango-layout.h
+include/pango-1.0/pango/pango-matrix.h
 include/pango-1.0/pango/pango-modules.h
 include/pango-1.0/pango/pango-ot.h
 include/pango-1.0/pango/pango-renderer.h
@@ -35,24 +38,25 @@ lib/libpangocairo-1.0.la
 lib/libpangoft2-1.0.la
 ${X11}lib/libpangox-1.0.la
 ${X11}lib/libpangoxft-1.0.la
-lib/pango/1.5.0/modules/pango-arabic-fc.la
-lib/pango/1.5.0/modules/pango-arabic-lang.la
-${CARBON}lib/pango/1.5.0/modules/pango-basic-atsui.la
-lib/pango/1.5.0/modules/pango-basic-fc.la
-${X11}lib/pango/1.5.0/modules/pango-basic-x.la
-lib/pango/1.5.0/modules/pango-hangul-fc.la
-lib/pango/1.5.0/modules/pango-hebrew-fc.la
-lib/pango/1.5.0/modules/pango-indic-fc.la
-lib/pango/1.5.0/modules/pango-indic-lang.la
-lib/pango/1.5.0/modules/pango-khmer-fc.la
-lib/pango/1.5.0/modules/pango-syriac-fc.la
-lib/pango/1.5.0/modules/pango-thai-fc.la
-lib/pango/1.5.0/modules/pango-tibetan-fc.la
+lib/pango/1.6.0/modules/pango-arabic-fc.la
+lib/pango/1.6.0/modules/pango-arabic-lang.la
+${CARBON}lib/pango/1.6.0/modules/pango-basic-atsui.la
+lib/pango/1.6.0/modules/pango-basic-fc.la
+${X11}lib/pango/1.6.0/modules/pango-basic-x.la
+lib/pango/1.6.0/modules/pango-hangul-fc.la
+lib/pango/1.6.0/modules/pango-hebrew-fc.la
+lib/pango/1.6.0/modules/pango-indic-fc.la
+lib/pango/1.6.0/modules/pango-indic-lang.la
+lib/pango/1.6.0/modules/pango-khmer-fc.la
+lib/pango/1.6.0/modules/pango-syriac-fc.la
+lib/pango/1.6.0/modules/pango-thai-fc.la
+lib/pango/1.6.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
 ${X11}lib/pkgconfig/pangox.pc
 ${X11}lib/pkgconfig/pangoxft.pc
+libdata/pango/pango.modules
 ${X11}libdata/pango/pangox.aliases
 man/man1/pango-querymodules.1
 share/gtk-doc/html/pango/PangoEngineLang.html
@@ -73,6 +77,7 @@ share/gtk-doc/html/pango/ix06.html
 share/gtk-doc/html/pango/ix07.html
 share/gtk-doc/html/pango/ix08.html
 share/gtk-doc/html/pango/ix09.html
+share/gtk-doc/html/pango/ix10.html
 share/gtk-doc/html/pango/layout.gif
 share/gtk-doc/html/pango/left.png
 share/gtk-doc/html/pango/lowlevel.html
@@ -92,9 +97,12 @@ share/gtk-doc/html/pango/pango-Scripts.html
 share/gtk-doc/html/pango/pango-Tab-Stops.html
 share/gtk-doc/html/pango/pango-Text-Attributes.html
 share/gtk-doc/html/pango/pango-Text-Processing.html
+share/gtk-doc/html/pango/pango-Version-Checking.html
+share/gtk-doc/html/pango/pango-Vertical-Text.html
 share/gtk-doc/html/pango/pango-Win32-Fonts-and-Rendering.html
 share/gtk-doc/html/pango/pango-X-Fonts-and-Rendering.html
 share/gtk-doc/html/pango/pango-Xft-Fonts-and-Rendering.html
+share/gtk-doc/html/pango/pango-hierarchy.html
 share/gtk-doc/html/pango/pango-querymodules.html
 share/gtk-doc/html/pango/pango.devhelp
 share/gtk-doc/html/pango/pango.devhelp2
@@ -107,8 +115,8 @@ share/gtk-doc/html/pango/tools.html
 share/gtk-doc/html/pango/up.png
 @dirrm share/gtk-doc/html/pango
 @dirrm libdata/pango
-@dirrm lib/pango/1.5.0/modules
-@dirrm lib/pango/1.5.0
+@dirrm lib/pango/1.6.0/modules
+@dirrm lib/pango/1.6.0
 @dirrm lib/pango
 @dirrm include/pango-1.0/pango
 @dirrm include/pango-1.0
