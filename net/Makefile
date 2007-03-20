@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.659 2007/03/19 17:32:55 taca Exp $
+# $NetBSD: Makefile,v 1.660 2007/03/20 13:32:10 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -108,8 +108,6 @@ SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	gated
 SUBDIR+=	gethost
-SUBDIR+=	gftp
-SUBDIR+=	gftp-gtk1
 SUBDIR+=	gift
 SUBDIR+=	gift-fasttrack
 SUBDIR+=	gift-gnutella
