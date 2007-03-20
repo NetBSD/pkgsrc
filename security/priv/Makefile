@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/29 06:22:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/03/20 17:04:13 jlam Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
@@ -19,6 +19,8 @@ SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	post-configure
 SUBST_FILES.sysconfdir=	priv.1
 SUBST_SED.sysconfdir=	-e "s|/usr/local/etc/|${PKG_SYSCONFDIR}/|g"
+
+INSTALL_MAKE_FLAGS=	mandir=${PREFIX}/${PKGMANDIR}/man1
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/priv
 
