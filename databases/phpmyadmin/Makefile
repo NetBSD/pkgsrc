@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56.2.1 2007/01/10 13:22:19 ghen Exp $
+# $NetBSD: Makefile,v 1.56.2.2 2007/03/20 15:27:51 salo Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -21,7 +21,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
 USE_TOOLS+=	perl:run
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.9.2-rc1
+DIST_VERSION=	2.10.0.2
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
@@ -46,8 +46,10 @@ NO_BUILD=		yes
 
 INSTALL_DIRS=	css js lang libraries libraries/auth libraries/dbg \
 		libraries/dbi libraries/engines libraries/export \
-		libraries/fpdf libraries/fpdf/font libraries/import \
-		libraries/transformations themes themes/darkblue_orange \
+		libraries/import libraries/tcpdf libraries/tcpdf/font \
+		libraries/transformations pmd pmd/images pmd/scripts \
+		pmd/styles pmd/styles/default pmd/styles/default/images \
+		themes themes/darkblue_orange \
 		themes/darkblue_orange/css themes/darkblue_orange/img \
 		themes/original themes/original/css themes/original/img
 
