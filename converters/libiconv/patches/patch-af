@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2004/04/28 15:19:04 tv Exp $
+$NetBSD: patch-af,v 1.2 2007/03/20 00:44:53 wiz Exp $
 
---- lib/Makefile.in.orig	Sun May 18 10:19:16 2003
+--- lib/Makefile.in.orig	2006-07-14 13:18:42.000000000 +0000
 +++ lib/Makefile.in
-@@ -101,13 +101,13 @@ relocatable.lo : $(srcdir)/relocatable.c
+@@ -110,13 +110,13 @@ iconv-exports.lo : $(srcdir)/../woe32dll
  # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
  install-lib : all force
  	if [ ! -d $(libdir) ] ; then $(mkinstalldirs) $(libdir) ; fi
