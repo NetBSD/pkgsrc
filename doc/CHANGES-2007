@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.662 2007/03/20 00:46:03 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.663 2007/03/20 13:34:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1261,3 +1261,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/wide-dhcpv6 version 20061016 [taca 2007-03-19]
 	Updated mail/sylpheed-devel to 2.4.0beta5 [xtraeme 2007-03-19]
 	Updated converters/libiconv to 1.11 [wiz 2007-03-20]
+	Removed net/gftp [tron 2007-03-20]
+	Removed net/gftp-gtk1 [tron 2007-03-20]
