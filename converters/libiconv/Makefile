@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2007/01/30 11:27:44 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2007/03/20 00:44:52 wiz Exp $
 
-DISTNAME=	libiconv-1.10
-PKGREVISION=	3
+DISTNAME=	libiconv-1.11
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=libiconv/}
 
@@ -9,9 +8,9 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libiconv/
 COMMENT=	Character set conversion library
 
-PATCH_SITES=	http://www2d.biglobe.ne.jp/~msyk/software/libiconv/
-PATCHFILES=	libiconv-1.10-ja-1.patch.gz
-PATCH_DIST_STRIP=	-p1
+#PATCH_SITES=	http://www2d.biglobe.ne.jp/~msyk/software/libiconv/
+#PATCHFILES=	libiconv-1.10-ja-1.patch.gz
+#PATCH_DIST_STRIP=	-p1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -25,6 +24,8 @@ GNU_CONFIGURE=		yes
 # if they exist.
 #
 CONFIGURE_ARGS+=	--disable-nls
+
+CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/libiconv
 
 TEST_TARGET=		check
 
