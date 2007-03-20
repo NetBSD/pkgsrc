@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2007/02/19 05:53:37 taca Exp $
+# $NetBSD: options.mk,v 1.21 2007/03/20 22:17:09 grant Exp $
 
 # Recommended package options for various setups:
 #
@@ -8,7 +8,7 @@
 #   Domain Controller			ldap winbind
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
-PKG_SUPPORTED_OPTIONS=	ads cups ldap pam winbind
+PKG_SUPPORTED_OPTIONS=	acl ads cups ldap pam winbind
 
 .include "../../mk/bsd.options.mk"
 
@@ -32,6 +32,13 @@ CONFIGURE_ENV+=		ac_cv_header_gssapi_h=no
 .else
 CONFIGURE_ARGS+=	--without-ads
 CONFIGURE_ARGS+=	--without-krb5
+.endif
+
+###
+### Access Control List support.
+###
+.if !empty(PKG_OPTIONS:Macl)
+CONFIGURE_ARGS+=	--with-acl-support
 .endif
 
 ###
