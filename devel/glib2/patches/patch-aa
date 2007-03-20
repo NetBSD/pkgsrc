@@ -1,11 +1,8 @@
-$NetBSD: patch-aa,v 1.32 2007/01/08 15:56:14 drochner Exp $
+$NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=140329
-http://bugzilla.gnome.org/show_bug.cgi?id=141256
-
---- configure.orig	2007-01-04 22:41:19.000000000 +0100
+--- configure.orig	2007-03-09 05:04:21.000000000 +0100
 +++ configure
-@@ -924,6 +924,7 @@ G_MODULE_PLUGIN_LIBS
+@@ -925,6 +925,7 @@ G_MODULE_PLUGIN_LIBS
  G_MODULE_LDFLAGS
  G_MODULE_HAVE_DLERROR
  G_MODULE_BROKEN_RTLD_GLOBAL
@@ -13,7 +10,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_NEED_USCORE
  GLIB_DEBUG_FLAGS
  GSPAWN
-@@ -35644,6 +35645,7 @@ else
+@@ -35674,6 +35675,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -21,7 +18,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -36381,6 +36383,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
+@@ -36411,6 +36413,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
  	else
    		G_MODULE_BROKEN_RTLD_GLOBAL=0
  	fi
@@ -94,7 +91,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  	{ echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
  echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6; }
  if test "${glib_cv_uscore+set}" = set; then
-@@ -37010,126 +37078,8 @@ if test x"$have_threads" != xno; then
+@@ -37040,126 +37108,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -223,7 +220,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
           ;;
      esac
    fi
-@@ -39453,6 +39403,10 @@ case $host in
+@@ -39483,6 +39433,10 @@ case $host in
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
@@ -234,7 +231,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  esac
  
  
-@@ -44639,6 +44593,7 @@ G_MODULE_PLUGIN_LIBS!$G_MODULE_PLUGIN_LI
+@@ -44671,6 +44625,7 @@ G_MODULE_PLUGIN_LIBS!$G_MODULE_PLUGIN_LI
  G_MODULE_LDFLAGS!$G_MODULE_LDFLAGS$ac_delim
  G_MODULE_HAVE_DLERROR!$G_MODULE_HAVE_DLERROR$ac_delim
  G_MODULE_BROKEN_RTLD_GLOBAL!$G_MODULE_BROKEN_RTLD_GLOBAL$ac_delim
@@ -242,8 +239,8 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_NEED_USCORE!$G_MODULE_NEED_USCORE$ac_delim
  GLIB_DEBUG_FLAGS!$GLIB_DEBUG_FLAGS$ac_delim
  GSPAWN!$GSPAWN$ac_delim
-@@ -44665,7 +44620,7 @@ GTK_DOC_USE_LIBTOOL_FALSE!$GTK_DOC_USE_L
- XSLTPROC!$XSLTPROC$ac_delim
+@@ -44696,7 +44651,7 @@ GTK_DOC_USE_LIBTOOL_TRUE!$GTK_DOC_USE_LI
+ GTK_DOC_USE_LIBTOOL_FALSE!$GTK_DOC_USE_LIBTOOL_FALSE$ac_delim
  _ACEOF
  
 -  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
