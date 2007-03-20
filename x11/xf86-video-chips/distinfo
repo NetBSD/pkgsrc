@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/20 16:03:59 joerg Exp $
+
+SHA1 (xf86-video-chips-1.1.1.tar.bz2) = 0df4bd2545b6b9db5670a7e512f24562fb1b7a03
+RMD160 (xf86-video-chips-1.1.1.tar.bz2) = add8ff2e344ed99db5723497516f8c969975820c
+Size (xf86-video-chips-1.1.1.tar.bz2) = 324093 bytes
+SHA1 (patch-aa) = 17105811c83e54ec786f6c56f187594dbc186592

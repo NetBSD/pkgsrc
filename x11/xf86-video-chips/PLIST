@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/20 16:03:59 joerg Exp $
+lib/xorg/modules/drivers/chips_drv.la
+man/man4/chips.4
+@comment @dirrm lib/xorg/modules/drivers
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
