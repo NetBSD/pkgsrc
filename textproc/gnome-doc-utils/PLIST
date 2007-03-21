@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/20 21:02:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/03/21 11:05:29 drochner Exp $
 bin/gnome-doc-prepare
 bin/gnome-doc-tool
 bin/xml2po
@@ -10,6 +10,107 @@ share/gnome-doc-utils/gnome-doc-utils.make
 share/gnome-doc-utils/template-document.xml
 share/gnome-doc-utils/template.make
 share/gnome-doc-utils/template.omf.in
+share/gnome/help/gnome-doc-make/C/gnome-doc-make.xml
+share/gnome/help/gnome-doc-make/C/legal.xml
+share/gnome/help/gnome-doc-make/C/make-ref.xml
+share/gnome/help/gnome-doc-xslt/C/db-chunk.xml
+share/gnome/help/gnome-doc-xslt/C/db-common.xml
+share/gnome/help/gnome-doc-xslt/C/db-label.xml
+share/gnome/help/gnome-doc-xslt/C/db-title.xml
+share/gnome/help/gnome-doc-xslt/C/db-xref.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-admon.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-autotoc.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-bibliography.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-block.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-callout.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-classsynopsis.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-cmdsynopsis.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-css.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-division.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-ebnf.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-footnote.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-funcsynopsis.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-info.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-inline.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-l10n.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-list.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-media.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-qanda.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-refentry.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-table.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-title.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-xref.xml
+share/gnome/help/gnome-doc-xslt/C/db2html.xml
+share/gnome/help/gnome-doc-xslt/C/db2omf.xml
+share/gnome/help/gnome-doc-xslt/C/gettext.xml
+share/gnome/help/gnome-doc-xslt/C/gnome-doc-xslt.xml
+share/gnome/help/gnome-doc-xslt/C/l10n-numbers.xml
+share/gnome/help/gnome-doc-xslt/C/legal.xml
+share/gnome/help/gnome-doc-xslt/C/translating.xml
+share/locale/ar/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/bg/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/bn/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ca/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/cs/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/cy/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/da/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/de/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/dz/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/el/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/en_CA/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/en_GB/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/es/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/et/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/eu/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/fi/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/fr/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/gl/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/gu/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/he/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/hi/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/hu/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/id/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/it/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ja/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ka/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ko/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/lt/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/lv/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/mg/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/mk/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ml/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/mn/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/mr/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/nb/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ne/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/nl/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/or/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/pa/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/pl/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/pt/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ro/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ru/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/rw/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/sk/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/sl/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/sq/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/sr/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/sr@Latn/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/sv/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ta/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/th/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/tr/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/ug/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/uk/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/vi/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/wa/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/zh_CN/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/zh_TW/LC_MESSAGES/gnome-doc-utils.mo
+share/omf/gnome-doc-make/gnome-doc-make-C.omf
+share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf
 share/xml/gnome/xslt/docbook/common/db-chunk.xsl
 share/xml/gnome/xslt/docbook/common/db-common.xsl
 share/xml/gnome/xslt/docbook/common/db-label.xsl
@@ -67,4 +168,12 @@ share/xml2po/xhtml.pyc
 @dirrm share/xml/gnome/xslt
 @dirrm share/xml/gnome
 @comment in xmlcatmgr: @dirrm share/xml
+@dirrm share/omf/gnome-doc-xslt
+@dirrm share/omf/gnome-doc-make
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/gnome-doc-xslt/C
+@dirrm share/gnome/help/gnome-doc-xslt
+@dirrm share/gnome/help/gnome-doc-make/C
+@dirrm share/gnome/help/gnome-doc-make
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-doc-utils
