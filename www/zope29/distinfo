@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1 2006/08/17 11:57:25 darcy Exp $
+$NetBSD: distinfo,v 1.2 2007/03/21 14:26:26 taca Exp $
 
+SHA1 (zope/Hotfix_20070320.tgz) = 772316a543fea3873750c7fd8def0a7470d74749
+RMD160 (zope/Hotfix_20070320.tgz) = d655a4fbfaa5f32fa4cb9f71edb924d6d3f6c391
+Size (zope/Hotfix_20070320.tgz) = 3735 bytes
 SHA1 (zope/Zope-2.9.4-final.tgz) = 37e525b662de5f878d4da39b6578c1d9f15e2669
 RMD160 (zope/Zope-2.9.4-final.tgz) = 297254e4ad0a27bdc585c88147a6e42698de485e
 Size (zope/Zope-2.9.4-final.tgz) = 6962298 bytes
