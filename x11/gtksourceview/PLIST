@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/02/02 18:12:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/03/21 22:31:12 wiz Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -71,6 +71,7 @@ share/gtksourceview-1.0/language-specs/python.lang
 share/gtksourceview-1.0/language-specs/ruby.lang
 share/gtksourceview-1.0/language-specs/scheme.lang
 share/gtksourceview-1.0/language-specs/sh.lang
+share/gtksourceview-1.0/language-specs/spec.lang
 share/gtksourceview-1.0/language-specs/sql.lang
 share/gtksourceview-1.0/language-specs/tcl.lang
 share/gtksourceview-1.0/language-specs/texinfo.lang
