@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/21 14:26:26 taca Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-2.9.4-final
 PKGNAME=	zope-2.9.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www python
 MASTER_SITES=	http://www.zope.org/Products/Zope/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
@@ -15,9 +15,17 @@ COMMENT=	Zope, the Z Object Publishing Environment
 
 DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 
-DIST_SUBDIR=	zope
 PYTHON_VERSIONS_ACCEPTED=   24
 RCD_SCRIPTS=	${PKGBASE}29 zeo29
+
+HOTFIXES=	Hotfix_20070320
+
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+.for f in ${HOTFIXES}
+DISTFILES+=		${f}.tgz
+SITES.${f}.tgz= \
+	http://www.zope.org/Products/Zope/Hotfix-2007-03-20/Hotfix-20070320/
+.endfor
 
 # Change these, if you like, via the environment.
 ZOPE_USER?=		www
@@ -51,9 +59,10 @@ post-patch:
 post-install:
 	${MV} ${ZOPEBASEDIR}/skel/etc/zope.conf.in \
 		${ZOPEBASEDIR}/skel/etc/zope.conf.sample.in
-
 	${MKDIR} ${ZOPEBASEDIR}/Products
-
+.for d in ${HOTFIXES}
+	cd ${WRKDIR}; ${PAX} -rw ${d} ${ZOPEBASEDIR}/lib/python/Products
+.endfor
 	${FIND} ${ZOPEBASEDIR} -type f -print0 | ${XARGS} -0 -- ${CHMOD} a-w
 
 pre-package:
