@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.679 2007/03/21 22:34:51 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.680 2007/03/21 22:55:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1311,3 +1311,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated comms/pilot-link to 0.12.2 [wiz 2007-03-21]
 	Updated comms/libmal to 0.44 [wiz 2007-03-21]
 	Updated sysutils/libnotify to 0.4.4 [wiz 2007-03-21]
+	Updated devel/gail to 1.18.0 [wiz 2007-03-21]

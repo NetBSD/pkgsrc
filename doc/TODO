@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6141 2007/03/21 22:34:52 wiz Exp $
+$NetBSD: TODO,v 1.6142 2007/03/21 22:55:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g-wrap-1.9.7 [breaks gnucash-2.0.x]
-	o gail-1.18.0
 	o gamin-0.1.6
 	o gap-4r4p3
 	o gated-3.6
