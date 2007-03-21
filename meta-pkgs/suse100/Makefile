@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/30 16:20:41 salo Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/21 16:23:44 tron Exp $
 #
 
 DISTNAME=	suse-10.0
@@ -31,6 +31,7 @@ DEPENDS+=	suse_locale-10.0{,nb*}:../../emulators/suse100_locale
 DEPENDS+=	suse_openmotif-10.0{,nb*}:../../emulators/suse100_openmotif
 DEPENDS+=	suse_openssl-10.0{,nb*}:../../emulators/suse100_openssl
 DEPENDS+=	suse_slang-10.0{,nb*}:../../emulators/suse100_slang
+DEPENDS+=	suse_vmware-10.0{,nb*}:../../emulators/suse100_vmware
 DEPENDS+=	suse_x11-10.0{,nb*}:../../emulators/suse100_x11
 
 EXTRACT_ONLY=	# empty
