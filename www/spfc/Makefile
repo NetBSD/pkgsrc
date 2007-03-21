@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/31 00:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/21 19:24:11 jwise Exp $
 
 DISTNAME=	spfc-0.2.0
 PKGREVISION=	1
@@ -9,6 +9,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://java.apache.org/
 COMMENT=	Apache.org's Server Page Foundation Classes
 
+BROKEN=		this package is unmaintained and supplanted by newer JSP releases.  if you use this, speak now.
 BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1 pkgsrc-2006Q4
 
 # yes, this needs _exactly_ version 2.0
