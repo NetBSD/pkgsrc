@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2007/03/17 16:35:05 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/21 13:18:45 rillig Exp $
 #
 
 DISTNAME=	putty-0.59
 CATEGORIES=	security
-MASTER_SITES=	http://the.earth.li/~sgtatham/putty/latest/
+MASTER_SITES=	http://the.earth.li/~sgtatham/putty/0.59/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
