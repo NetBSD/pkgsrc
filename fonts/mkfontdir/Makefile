@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/11/03 16:48:58 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/21 22:57:19 wiz Exp $
 #
 
-DISTNAME=		mkfontdir-1.0.2
+DISTNAME=		mkfontdir-1.0.3
 CATEGORIES=		fonts x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
