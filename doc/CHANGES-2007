@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.676 2007/03/21 15:08:30 abs Exp $
+$NetBSD: CHANGES-2007,v 1.677 2007/03/21 16:12:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1302,3 +1302,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox2-gtk1 to 2.0.0.3 [ghen 2007-03-21]
 	Updated www/zope29 to 2.9.4nb4 [taca 2007-03-21]
 	Updated devel/cpuflags to 1.06 [abs 2007-03-21]
+	Added emulators/suse100_vmware version 10.0 [salo 2007-03-21]
