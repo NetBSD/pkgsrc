@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.678 2007/03/21 22:16:07 adam Exp $
+$NetBSD: CHANGES-2007,v 1.679 2007/03/21 22:34:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1304,3 +1304,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/cpuflags to 1.06 [abs 2007-03-21]
 	Added emulators/suse100_vmware version 10.0 [salo 2007-03-21]
 	Updated comms/efax-gtk to 3.0.14 [adam 2007-03-21]
+	Updated x11/gtksourceview to 1.8.5 [wiz 2007-03-21]
+	Updated devel/p5-Test-Simple to 0.70 [wiz 2007-03-21]
+	Updated x11/startup-notification to 0.9 [wiz 2007-03-21]
+	Updated comms/pilot-link-libs to 0.12.2 [wiz 2007-03-21]
+	Updated comms/pilot-link to 0.12.2 [wiz 2007-03-21]
+	Updated comms/libmal to 0.44 [wiz 2007-03-21]
+	Updated sysutils/libnotify to 0.4.4 [wiz 2007-03-21]
