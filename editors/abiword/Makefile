@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.107 2006/11/14 14:26:46 joerg Exp $
+# $NetBSD: Makefile,v 1.108 2007/03/21 12:05:44 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
+PKGREVISION=	1
 
 COMMENT=	Open Source cross-platform word processor
 
