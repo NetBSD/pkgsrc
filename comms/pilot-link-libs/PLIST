@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 01:26:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/03/21 22:33:01 wiz Exp $
 include/pi-address.h
 include/pi-appinfo.h
 include/pi-args.h
+include/pi-bluetooth.h
 include/pi-buffer.h
 include/pi-cmp.h
 include/pi-contact.h
