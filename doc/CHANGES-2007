@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.670 2007/03/21 05:26:54 taca Exp $
+$NetBSD: CHANGES-2007,v 1.671 2007/03/21 06:54:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/gnome-doc-utils to 0.10.1 [wiz 2007-03-20]
 	Updated net/openafs to 1.4.4 [gendalia 2007-03-21]
 	Updated www/squid to 2.6.12 [taca 2007-03-21]
+	Updated devel/nss to 3.11.5 [wiz 2007-03-21]
