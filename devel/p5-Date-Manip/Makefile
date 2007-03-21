@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/03/21 18:55:48 jwise Exp $
 #
 
 DISTNAME=	DateManip-5.44
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5dma
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cpan.org/
 COMMENT=	Perl5 module for date calculations
 
