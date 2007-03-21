@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.67 2006/11/30 23:24:39 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.68 2007/03/21 15:05:08 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -74,7 +74,8 @@ case $hw_machine_arch in
 	esac
 	;;
 
-    i386 | x86_64) case $hw_model in
+    i386 | x86_64)
+    case $hw_model in
 	*Intel\ Pentium/MMX\ *)		FLAGS='-march=pentium-mmx'	;;
 	*Intel\ Pentium\ II\ *)		FLAGS='-march=pentium2'		;;
 	*Intel\ Pentium\ III\ *)	FLAGS='-march=pentium3'		;;
@@ -102,6 +103,13 @@ case $hw_machine_arch in
 	*586-class*)			FLAGS='-march=pentium'		;;
 	*686-class*)			FLAGS='-march=pentiumpro'	;;
     esac
+    if [ -n "$FLAGS" -a "$hw_machine_arch" = i386 ] ; then
+	if [ "$(sysctl -n machdep.sse2)" = 1 ] ; then
+	    FLAGS="$FLAGS -mfpmath=sse -msse2"
+	elif [ "$(sysctl -n machdep.sse)" = 1 ] ; then
+	    FLAGS="$FLAGS -mfpmath=sse -msse"
+	fi
+    fi
     ;;
 
     m68k) case $hw_model in				   # Examples
@@ -261,6 +269,9 @@ if [ -n "$FLAGS" ]; then
 3.1:-mcpu=21264a:-mcpu=21264
 3.1:-mcpu=7400:-mcpu=750
 3.1:-mcpu=7450:-mcpu=750
+3.1:-mfpmath=sse:
+3.1:-msse2:
+3.1:-msse:
 3.1:-mtune=r2000:-cpu=r2000
 3.1:-mtune=r3000:-cpu=r3000
 3.1:-mtune=r3900:-cpu=r3900
