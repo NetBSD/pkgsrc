@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.21 2006/09/15 15:09:59 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/03/21 22:54:59 wiz Exp $
+include/gail-1.0/gail/gailwidget.h
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
 include/gail-1.0/libgail-util/gailtextutil.h
@@ -22,6 +23,7 @@ share/locale/ar/LC_MESSAGES/gail.mo
 share/locale/as/LC_MESSAGES/gail.mo
 share/locale/az/LC_MESSAGES/gail.mo
 share/locale/be/LC_MESSAGES/gail.mo
+share/locale/be@latin/LC_MESSAGES/gail.mo
 share/locale/bg/LC_MESSAGES/gail.mo
 share/locale/bn/LC_MESSAGES/gail.mo
 share/locale/bn_IN/LC_MESSAGES/gail.mo
@@ -57,6 +59,7 @@ share/locale/ko/LC_MESSAGES/gail.mo
 share/locale/ku/LC_MESSAGES/gail.mo
 share/locale/lt/LC_MESSAGES/gail.mo
 share/locale/lv/LC_MESSAGES/gail.mo
+share/locale/mg/LC_MESSAGES/gail.mo
 share/locale/mi/LC_MESSAGES/gail.mo
 share/locale/mk/LC_MESSAGES/gail.mo
 share/locale/ml/LC_MESSAGES/gail.mo
@@ -93,4 +96,5 @@ share/locale/zh_TW/LC_MESSAGES/gail.mo
 @dirrm share/gtk-doc/html/gail-libgail-util
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
 @dirrm include/gail-1.0/libgail-util
+@dirrm include/gail-1.0/gail
 @dirrm include/gail-1.0
