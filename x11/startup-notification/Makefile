@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2007/01/11 15:22:26 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/03/21 22:32:31 wiz Exp $
 
-DISTNAME=		startup-notification-0.8
-PKGREVISION=		1
+DISTNAME=		startup-notification-0.9
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.9/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
