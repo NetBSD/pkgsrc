@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/10/14 08:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/03/21 18:59:16 jwise Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel x11 java
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://java.sun.com/products/jfc/
 COMMENT=	Sun's Java Foundation Classes (the Swing UI toolkit), version 1.1.1
 
