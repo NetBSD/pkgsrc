@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/21 18:49:32 jwise Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/21 19:44:10 jwise Exp $
 #
 
 DISTNAME=	Date-Business-1.2
@@ -8,7 +8,7 @@ PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cpan.org/
 COMMENT=	Perl5 module for fast calendar and business date calculations
 
