@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/03/21 18:55:47 jwise Exp $
+# $NetBSD: Makefile,v 1.58 2007/03/21 19:44:10 jwise Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
@@ -7,7 +7,7 @@ CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mgetty.greenie.net/
 COMMENT=	Handle external logins, send and receive faxes
 
