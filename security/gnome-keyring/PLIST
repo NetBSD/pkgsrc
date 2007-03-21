@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/09/15 15:08:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/03/21 12:04:58 wiz Exp $
 bin/gnome-keyring-daemon
 include/gnome-keyring-1/gnome-keyring.h
 lib/libgnome-keyring.la
@@ -17,6 +17,7 @@ share/gtk-doc/html/gnome-keyring/style.css
 share/gtk-doc/html/gnome-keyring/up.png
 share/locale/ar/LC_MESSAGES/gnome-keyring.mo
 share/locale/az/LC_MESSAGES/gnome-keyring.mo
+share/locale/be/LC_MESSAGES/gnome-keyring.mo
 share/locale/bg/LC_MESSAGES/gnome-keyring.mo
 share/locale/bn/LC_MESSAGES/gnome-keyring.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-keyring.mo
@@ -76,6 +77,7 @@ share/locale/ta/LC_MESSAGES/gnome-keyring.mo
 share/locale/th/LC_MESSAGES/gnome-keyring.mo
 share/locale/tr/LC_MESSAGES/gnome-keyring.mo
 share/locale/uk/LC_MESSAGES/gnome-keyring.mo
+share/locale/vi/LC_MESSAGES/gnome-keyring.mo
 share/locale/xh/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
