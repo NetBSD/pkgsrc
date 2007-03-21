@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/09/16 12:20:34 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2007/03/21 12:05:43 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGAIL_GNOME_BUILDLINK3_MK:=	${LIBGAIL_GNOME_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgail-gnome
 
 .if !empty(LIBGAIL_GNOME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgail-gnome+=	libgail-gnome>=1.1.1nb2
-BUILDLINK_ABI_DEPENDS.libgail-gnome?=	libgail-gnome>=1.1.3nb3
+BUILDLINK_ABI_DEPENDS.libgail-gnome?=	libgail-gnome>=1.1.3nb4
 BUILDLINK_PKGSRCDIR.libgail-gnome?=	../../devel/libgail-gnome
 .endif	# LIBGAIL_GNOME_BUILDLINK3_MK
 

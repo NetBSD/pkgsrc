@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2006/09/16 12:20:32 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2007/03/21 12:05:55 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_DESKTOP_BUILDLINK3_MK:=	${GNOME_DESKTOP_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-desktop
 
 .if !empty(GNOME_DESKTOP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=2.14.0
-BUILDLINK_ABI_DEPENDS.gnome-desktop?=	gnome-desktop>=2.16.0nb1
+BUILDLINK_ABI_DEPENDS.gnome-desktop?=	gnome-desktop>=2.16.3nb1
 BUILDLINK_PKGSRCDIR.gnome-desktop?=	../../x11/gnome-desktop
 .endif	# GNOME_DESKTOP_BUILDLINK3_MK
 

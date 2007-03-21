@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/09/16 12:20:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/21 12:05:56 wiz Exp $
 #
 
 DISTNAME=		gtk-sharp-2.8.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		http://go-mono.com/sources/gtk-sharp-2.8/
 

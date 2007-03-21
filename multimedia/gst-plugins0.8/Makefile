@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/15 14:50:29 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/21 12:05:50 wiz Exp $
 #
 
 USE_LANGUAGES=		c c++
@@ -6,7 +6,7 @@ USE_LANGUAGES=		c c++
 .include "Makefile.common"
 
 COMMENT+=		base plugins
-PKGREVISION=		5
+PKGREVISION=		6
 
 USE_TOOLS+=		perl:run
 
