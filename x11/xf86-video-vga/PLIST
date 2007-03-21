@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/21 00:20:45 joerg Exp $
+lib/xorg/modules/drivers/vga_drv.la
+man/man4/vga.4
