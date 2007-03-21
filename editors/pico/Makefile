@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/04/06 06:21:58 reed Exp $
+# $NetBSD: Makefile,v 1.70 2007/03/21 19:39:08 jwise Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 
