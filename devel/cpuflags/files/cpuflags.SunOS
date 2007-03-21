@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.10 2006/10/01 00:59:36 dmcmahill Exp $
+# $NetBSD: cpuflags.SunOS,v 1.11 2007/03/21 15:05:08 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=nawk
@@ -106,6 +106,9 @@ if [ -n "$FLAGS" ]; then
 3.1:-mcpu=21264a:-mcpu=21264
 3.1:-mcpu=7400:-mcpu=750
 3.1:-mcpu=7450:-mcpu=750
+3.1:-mfpmath=sse:
+3.1:-msse2:
+3.1:-msse:
 3.1:-mtune=r2000:-cpu=r2000
 3.1:-mtune=r3000:-cpu=r3000
 3.1:-mtune=r3900:-cpu=r3900
