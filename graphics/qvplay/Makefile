@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/21 18:55:48 jwise Exp $
 #
 
 DISTNAME=	qvplay-0.94
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.asahi-net.or.jp/~xg2k-hys/
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~xg2k-hys/index-e.html
 COMMENT=	Software for use with CASIO QV digital cameras
 
