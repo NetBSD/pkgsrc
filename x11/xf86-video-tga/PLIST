@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/21 00:23:02 joerg Exp $
+lib/xorg/modules/drivers/tga_drv.la
+@comment @dirrm lib/xorg/modules/drivers
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
