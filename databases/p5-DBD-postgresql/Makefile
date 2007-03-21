@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/03/21 18:55:48 jwise Exp $
+# $NetBSD: Makefile,v 1.40 2007/03/21 19:44:10 jwise Exp $
 #
 
 VER=		1.48
@@ -9,7 +9,7 @@ PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gborg.postgresql.org/project/dbdpg/projdisplay.php
 COMMENT=	Perl DBI/DBD driver for PostgreSQL databases
 

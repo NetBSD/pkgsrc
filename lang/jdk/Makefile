@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/03/21 18:55:48 jwise Exp $
+# $NetBSD: Makefile,v 1.50 2007/03/21 19:44:10 jwise Exp $
 #
 
 VERSION=	1.1.8
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sun's Java(tm) Development Kit
 
 LICENSE=	jdk-license

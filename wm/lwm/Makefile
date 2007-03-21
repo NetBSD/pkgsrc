@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2007/03/21 18:59:16 jwise Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/21 19:44:11 jwise Exp $
 
 DISTNAME=	lwm-1.2.1
 PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://www.jfc.org.uk/files/lwm/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jfc.org.uk/software/lwm.html
 COMMENT=	Lightweight Window Manager
 
