@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6138 2007/03/21 12:13:39 wiz Exp $
+$NetBSD: TODO,v 1.6139 2007/03/21 15:30:52 obache Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ Suggested package updates
 	o gconf-editor-2.18.0
 	o gconfmm-2.18.0
 	o gcpio-2.6
-	o gdal-1.4.0 [pkg/35752]
 	o gdb6-6.3.0
 	o gdl-0.7.2
 	o gdm-2.18.0
