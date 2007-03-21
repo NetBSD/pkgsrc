@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/21 00:21:18 joerg Exp $
+lib/xorg/modules/drivers/tseng_drv.la
+man/man4/tseng.4
+@comment @dirrm lib/xorg/modules/drivers
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
