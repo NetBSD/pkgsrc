@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2007/03/18 20:02:25 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2007/03/21 16:11:26 tron Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -103,6 +103,7 @@ SUBDIR+=	suse100_locale
 SUBDIR+=	suse100_openmotif
 SUBDIR+=	suse100_openssl
 SUBDIR+=	suse100_slang
+SUBDIR+=	suse100_vmware
 SUBDIR+=	suse100_x11
 SUBDIR+=	suse91_aspell
 SUBDIR+=	suse91_base
