@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.682 2007/03/22 12:46:04 markd Exp $
+$NetBSD: CHANGES-2007,v 1.683 2007/03/22 12:58:22 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1315,3 +1315,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/mkfontdir to 1.0.3 [wiz 2007-03-21]
 	Updated devel/makedepend to 1.0.1 [wiz 2007-03-21]
 	Updated print/cups to 1.2.10 [markd 2007-03-22]
+	Updated comms/asterisk to 1.2.17 [mjl 2007-03-22]
