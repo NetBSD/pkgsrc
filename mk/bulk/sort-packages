@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.6 2007/02/21 05:32:30 jschauma Exp $
+# $NetBSD: sort-packages,v 1.7 2007/03/22 11:43:18 rillig Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -67,6 +67,8 @@ for pkg in *${PKG_SUFX}; do
 		# Check whether the package is vulnerable or not.
 		pkg_prefix="${pkg%%-*}"
 		category="regular"
+		# XXX: The egrep command is only needed here because
+		# audit-packages is so awfully slow.
 		if egrep "^({.*${pkg_prefix}.*}|${pkg_prefix}|{.*}${pkg_prefix})" ${PKGVULNDIR}/pkg-vulnerabilities >/dev/null 4>&1; then
 			vuln=`${AUDIT_PACKAGES} -p "${pkg}"`
 			if [ -n "${vuln}" ]; then
