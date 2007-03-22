@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.681 2007/03/21 22:59:45 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.682 2007/03/22 12:46:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/gail to 1.18.0 [wiz 2007-03-21]
 	Updated fonts/mkfontdir to 1.0.3 [wiz 2007-03-21]
 	Updated devel/makedepend to 1.0.1 [wiz 2007-03-21]
+	Updated print/cups to 1.2.10 [markd 2007-03-22]
