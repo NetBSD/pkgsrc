@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/22 17:15:36 jmmv Exp $
+
+SHA1 (git-1.5.0.3.tar.gz) = a5efd2cd36daad60718ed9b1f5a4f0de1eade25c
+RMD160 (git-1.5.0.3.tar.gz) = 2af313d5414770abad82babd0b4aee9b7e0bbc5b
+Size (git-1.5.0.3.tar.gz) = 1245187 bytes

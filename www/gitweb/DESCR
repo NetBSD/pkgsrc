@@ -1,0 +1,4 @@
+gitweb provides an easy to use and full-fledged web interface to
+your Git repositories.  It allows users to browse the contents of
+all served projects, including the ability to inspect individual
+files and their history for any of the available branches.
