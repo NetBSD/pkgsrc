@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2007/03/21 14:26:26 taca Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/22 13:44:10 taca Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
-DISTNAME=	Zope-2.9.4-final
-PKGNAME=	zope-2.9.4
+DISTNAME=	Zope-${VER}-final
+PKGNAME=	zope-${VER}
 PKGREVISION=	4
 CATEGORIES=	www python
-MASTER_SITES=	http://www.zope.org/Products/Zope/${PKGVERSION}/
+MASTER_SITES=	http://www.zope.org/Products/Zope/${VER}/
 EXTRACT_SUFX=	.tgz
-DIST_SUBDIR=	zope
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
@@ -18,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 PYTHON_VERSIONS_ACCEPTED=   24
 RCD_SCRIPTS=	${PKGBASE}29 zeo29
 
+VER=		2.9.4
+DIST_SUBDIR=	${PKGBASE}29-20070321
 HOTFIXES=	Hotfix_20070320
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
