@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 17:15:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/22 17:34:48 jmmv Exp $
 #
 
 DISTNAME=	git-1.5.0.3
@@ -20,7 +20,7 @@ MAKE_FLAGS=	prefix=${PREFIX}
 MAKE_FLAGS+=	GITWEB_FAVICON=/gitweb/git-favicon.png
 MAKE_FLAGS+=	GITWEB_CONFIG=${GITWEB_CONFIG}
 MAKE_FLAGS+=	GITWEB_CSS=/gitweb/gitweb.css
-MAKE_FLAGS+=	GITWEB_HOMETEXT=/gitweb/indextext.html
+MAKE_FLAGS+=	GITWEB_HOMETEXT=${GITWEB_HTDOCS}/indextext.html
 MAKE_FLAGS+=	GITWEB_LOGO=/gitweb/git-logo.png
 MAKE_FLAGS+=	PERL_PATH=${PERL5:Q}
 
