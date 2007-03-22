@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.687 2007/03/22 20:27:36 recht Exp $
+$NetBSD: CHANGES-2007,v 1.688 2007/03/22 21:41:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added misc/taskjuggler version 2.3.1 [rillig 2007-03-22]
 	Added www/gitweb version 1.5.0.3 [jmmv 2007-03-22]
 	Updated devel/bzr to 0.14 [recht 2007-03-22]
+	Updated wm/fluxbox to 1.0rc3 [xtraeme 2007-03-22]
