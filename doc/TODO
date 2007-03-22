@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6145 2007/03/22 21:41:42 xtraeme Exp $
+$NetBSD: TODO,v 1.6146 2007/03/22 22:26:42 recht Exp $
 
 Suggested new packages
 ======================
@@ -841,7 +841,6 @@ Suggested package updates
 	o py-cairo-1.4.0
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
-	o py-curl-7.16.1
 	o py-gnome2-extras-2.14.3
 	o py-gnutls-0.2.1
 	o py-imaging-1.1.6
