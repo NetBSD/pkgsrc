@@ -1,0 +1,12 @@
+nspluginwrapper is an Open Source compatibility plugin for Netscape
+4 (NPAPI) plugins. It separates the execution environment of the
+plugin from the browser, allowing a plugin compiled for one ABI to
+be used in a browser compiled for another.
+
+For example the linux 32bit Adobe Flash plugin can be used in a
+native Firefox under Linux/x86_64, NetBSD and FreeBSD platforms.
+
+To install the Linux flash player into a native Firefox browser:
+  - Also install multimedia/ns-flash and multimedia/libflashsupport
+  - Run "nspluginwrapper -i /usr/pkg/lib/netscape/plugins/libflashplayer.so"
+  - Run Firefox
