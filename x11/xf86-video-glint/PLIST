@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/22 15:43:25 joerg Exp $
+lib/xorg/modules/drivers/glint_drv.la
+man/man4/glint.4
+@comment @dirrm lib/xorg/modules/drivers
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
