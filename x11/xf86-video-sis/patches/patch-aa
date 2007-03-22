@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/22 15:44:20 joerg Exp $
+
+--- configure.orig	2007-03-22 16:16:34.000000000 +0100
++++ configure
+@@ -2283,10 +2283,10 @@ AMSHOWCMDSAT=''
+ AMDEPSHOWCMDSAT=''
+ AMPRETTYECHO=true
+ AMCMDECHO=echo
+-if test "x$enable_pretty_cmds" == xyes;
++if test "x$enable_pretty_cmds" = xyes;
+ then
+   AMSHOWCMDSAT='@'
+-  test x$enable_dependency_tracking == xno && AMDEPSHOWCMDSAT='@'
++  test x$enable_dependency_tracking = xno && AMDEPSHOWCMDSAT='@'
+   AMPRETTYECHO=echo
+   AMCMDECHO=true
+   LT_QUIET='--quiet'
