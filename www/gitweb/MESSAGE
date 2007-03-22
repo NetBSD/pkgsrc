@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/03/22 17:15:36 jmmv Exp $
+
+The gitweb configuration file is located at:
+
+	${CONFFILE}
+
+At the very least you should set the `projectroot' variable in it to point
+to where your git repositories are.
+
+After that, you might be able to access the interface at the URL shown
+below, assuming that you are using the default location for Apache's
+htdocs:
+
+	http://localhost/cgi-bin/cgiweb.cgi
+
+===========================================================================
