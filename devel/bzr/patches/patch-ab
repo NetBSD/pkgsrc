@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/10/22 06:52:57 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2007/03/22 20:25:10 recht Exp $
 
---- setup.py.orig	2006-10-02 01:39:28.000000000 +0200
-+++ setup.py	2006-10-22 07:05:04.000000000 +0200
-@@ -207,7 +207,7 @@ elif 'py2exe' in sys.argv:
+--- setup.py.orig	2007-01-23 02:59:36.000000000 +0100
++++ setup.py	2007-03-22 21:18:22.000000000 +0100
+@@ -219,7 +219,7 @@
  else:
      # std setup
      ARGS = {'scripts': ['bzr'],
