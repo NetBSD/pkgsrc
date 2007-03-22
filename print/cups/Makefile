@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2007/03/19 14:46:35 joerg Exp $
+# $NetBSD: Makefile,v 1.119 2007/03/22 08:19:01 dillo Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -141,7 +141,7 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for file in CGI.txt ENCRYPTION.txt LICENSE.txt README.txt; do	\
+	for file in LICENSE.txt README.txt; do	\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}/$${file};	\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
