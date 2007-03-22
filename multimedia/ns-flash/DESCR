@@ -1,2 +1,8 @@
 Netscape plugin for MacroMedia Flash player.  This package contains a
 plugin that enables Netscape to render the Flash format.
+
+To use the Linux flash player into a native Firefox browser on a x86
+system other than 32 bit Linux:
+  - Also install www/nspluginwrapper and multimedia/libflashsupport
+  - Run "nspluginwrapper -i /usr/pkg/lib/netscape/plugins/libflashplayer.so"
+  - Install and run Firefox
