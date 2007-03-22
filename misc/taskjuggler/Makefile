@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 17:15:19 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/22 20:30:53 wiz Exp $
 #
 
 DISTNAME=	taskjuggler-2.3.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.taskjuggler.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rillig@NetBSD.org
-HOMEPAGE=	http://www.taskjuggler.org/download/
+HOMEPAGE=	http://www.taskjuggler.org/
 COMMENT=	Project management tool
 
 GNU_CONFIGURE=	yes
