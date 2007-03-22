@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/10 00:56:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2007/03/22 14:45:46 ghen Exp $
 ${ZOPEBASEDIR}/bin/README.txt
 ${ZOPEBASEDIR}/bin/analyze.py
 ${ZOPEBASEDIR}/bin/check_catalog.py
@@ -1121,6 +1121,11 @@ ${ZOPEBASEDIR}/lib/python/Products/Five/viewable.py
 ${ZOPEBASEDIR}/lib/python/Products/Five/viewable.pyc
 ${ZOPEBASEDIR}/lib/python/Products/Five/zcml.py
 ${ZOPEBASEDIR}/lib/python/Products/Five/zcml.pyc
+${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320/README.txt
+${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320/__init__.py
+${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320/version.txt
+${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320/tests/__init__.py
+${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320/tests/test_hotfix.py
 ${ZOPEBASEDIR}/lib/python/Products/MIMETools/MIMETag.py
 ${ZOPEBASEDIR}/lib/python/Products/MIMETools/MIMETag.pyc
 ${ZOPEBASEDIR}/lib/python/Products/MIMETools/README.txt
@@ -9411,6 +9416,8 @@ share/examples/rc.d/zope29
 @dirrm ${ZOPEBASEDIR}/lib/python/Products/MailHost/dtml
 @dirrm ${ZOPEBASEDIR}/lib/python/Products/MailHost
 @dirrm ${ZOPEBASEDIR}/lib/python/Products/MIMETools
+@dirrm ${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320/tests
+@dirrm ${ZOPEBASEDIR}/lib/python/Products/Hotfix_20070320
 @dirrm ${ZOPEBASEDIR}/lib/python/Products/Five/utilities/browser/tests
 @dirrm ${ZOPEBASEDIR}/lib/python/Products/Five/utilities/browser
 @dirrm ${ZOPEBASEDIR}/lib/python/Products/Five/utilities

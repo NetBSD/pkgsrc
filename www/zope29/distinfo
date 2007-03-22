@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1 2006/08/17 11:57:25 darcy Exp $
+$NetBSD: distinfo,v 1.1.4.1 2007/03/22 14:45:46 ghen Exp $
 
-SHA1 (zope/Zope-2.9.4-final.tgz) = 37e525b662de5f878d4da39b6578c1d9f15e2669
-RMD160 (zope/Zope-2.9.4-final.tgz) = 297254e4ad0a27bdc585c88147a6e42698de485e
-Size (zope/Zope-2.9.4-final.tgz) = 6962298 bytes
+SHA1 (zope29-20070321/Hotfix_20070320.tgz) = eb6255d78234605c9b3d9f4095ad9ba784055620
+RMD160 (zope29-20070321/Hotfix_20070320.tgz) = d1a92e0dbfb6ff445bf3687422fd8fc2a76b4d46
+Size (zope29-20070321/Hotfix_20070320.tgz) = 3805 bytes
+SHA1 (zope29-20070321/Zope-2.9.4-final.tgz) = 37e525b662de5f878d4da39b6578c1d9f15e2669
+RMD160 (zope29-20070321/Zope-2.9.4-final.tgz) = 297254e4ad0a27bdc585c88147a6e42698de485e
+Size (zope29-20070321/Zope-2.9.4-final.tgz) = 6962298 bytes
 SHA1 (patch-aa) = 92c65a0042cbd8837e7888a26f6862535656f47f
 SHA1 (patch-ab) = f3654a4ed30df8a7dd8b63ba99bb165a25cfdb5e
 SHA1 (patch-ac) = ec923f833156fa0b934ec69a2c26a4ea370cd2c8
