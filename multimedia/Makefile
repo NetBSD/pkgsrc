@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2007/02/09 19:58:48 drochner Exp $
+# $NetBSD: Makefile,v 1.105 2007/03/22 21:48:00 abs Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -58,6 +58,7 @@ SUBDIR+=	libdvdnav
 SUBDIR+=	libdvdplay
 SUBDIR+=	libdvdread
 SUBDIR+=	libflash
+SUBDIR+=	libflashsupport
 SUBDIR+=	libmatroska
 SUBDIR+=	libmp4v2
 SUBDIR+=	libmpeg2
