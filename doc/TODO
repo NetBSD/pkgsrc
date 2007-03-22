@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6143 2007/03/22 20:27:36 recht Exp $
+$NetBSD: TODO,v 1.6144 2007/03/22 20:34:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -289,7 +289,6 @@ Suggested package updates
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
-	o cairo-1.4.0
 	o cal3d-0.11.0
 	o capc-calc-2.12.1.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -327,7 +326,7 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.15
 	o delegate-9.3.2
-	o deskbar-applet-2.16.1
+	o deskbar-applet-2.18.0
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dirac-0.6.0
@@ -375,6 +374,7 @@ Suggested package updates
 	o evince-0.8.0
 	o evolution-2.10.0
 	o evolution-exchange-2.10.0
+	o evolution-webcal-2.10.0
 	o ex-050325
 	o exiv2-0.14
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -391,6 +391,7 @@ Suggested package updates
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.30
 	o flashplayer-0.4.13
+	o fluxbox-1.0rc3
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -440,7 +441,7 @@ Suggested package updates
 	o gnome-applets-2.16.2
 	o gnome-build-0.1.5
 	o gnome-desktop-2.18.0
-	o gnome-games-2.18.0
+	o gnome-games-2.18.0.1
 	o gnome-keyring-manager-2.18.0
 	o gnome-mag-0.14.3
 	o gnome-media-2.18.0
@@ -451,6 +452,7 @@ Suggested package updates
 	o gnome-themes-2.18.0
 	o gnome-user-docs-2.16.1
 	o gnome-utils-2.18.0
+	o gnome-vfs-2.18.0.1
 	o gnome-vfs2-2.18.0
 	o gnome-vfsmm-2.18.0
 	o gnome2-terminal-2.18.0
@@ -477,6 +479,7 @@ Suggested package updates
 	o gss-0.0.17
 	o gtar-1.16.1
 	o gtar-base-1.16.1
+	o gthumb-2.10.0
 	o gtk-systrace-20030623
 	o gtk2-engines-2.10.0
 	o gtk2-sharp-2.10.0
@@ -577,6 +580,7 @@ Suggested package updates
 	o libgnomedb-2.99.5 [breaks mergeant-0.65]
 	o libgnomemm-2.18.0
 	o libgnomeprint-2.18.0
+	o libgnomeui-2.18.1
 	o libgnomeuimm-2.18.0
 	o libgpod-0.4.0
 	o libgtop2-2.14.8
@@ -647,7 +651,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpg123-0.65
 	o mpich-1.2.7
-	o mplayer-plugin-firefox-3.35
+	o mplayer-plugin-firefox-3.40
 	o mpop-0.8.3
 	o mrproject-0.9.1
 	o mserv-devel-0.41
@@ -995,7 +999,7 @@ Suggested package updates
 	o tuxpaint-stamps-20051125
 	o twelf-1.5
 	o txt2html-2.45
-	o txt2man-1.4.8
+	o txt2man-1.5.5
 	o ubs-0.20
 	o ucarp-1.2
 	o ucblogo-5.5
@@ -1035,6 +1039,7 @@ Suggested package updates
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.8.0
 	o xblast-2.10.4
+	o xchm-1.11
 	o xdaliclock-2.23
 	o xdelta-3.0e
 	o xdesktopwaves-1.3
@@ -1071,7 +1076,7 @@ Suggested package updates
 	o xmon-1.5.6
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorp-1.3
+	o xorp-1.4
 	o xpad-2.12
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
