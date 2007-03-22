@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/22 22:33:45 abs Exp $
+bin/nspluginwrapper
+lib/nspluginwrapper/${MACHINE_ARCH}/${LOWER_OPSYS}/npconfig
+lib/nspluginwrapper/${MACHINE_ARCH}/${LOWER_OPSYS}/npwrapper.so
+lib/nspluginwrapper/i386/linux/libxpcom.so
+lib/nspluginwrapper/i386/linux/npviewer
+lib/nspluginwrapper/i386/linux/npviewer.bin
+lib/nspluginwrapper/noarch/mkruntime
+lib/nspluginwrapper/noarch/npviewer
+@dirrm lib/nspluginwrapper/noarch
+@dirrm lib/nspluginwrapper/${MACHINE_ARCH}/${LOWER_OPSYS}
+@dirrm lib/nspluginwrapper/i386/linux
+@dirrm lib/nspluginwrapper/i386
+@dirrm lib/nspluginwrapper/${MACHINE_ARCH}
+@dirrm lib/nspluginwrapper
