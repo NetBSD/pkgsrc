@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.common,v 1.1 2003/12/25 16:28:14 taca Exp $
+$NetBSD: MESSAGE.common,v 1.1.24.1 2007/03/22 08:36:18 ghen Exp $
 
 You DO need running nameservice to start and run ${PKGNAME}.
 
@@ -9,6 +9,6 @@ to use it as a proxy server.
 
 Please note that to use the diskd storage method, you'll likely have to
 change SYSV-IPC parameters in the kernel config file (see
-http://www.squid-cache.org/Doc/FAQ/FAQ-22.html for details).
+http://wiki.squid-cache.org/SquidFaq/DiskDaemon for details)
 
 ===========================================================================
