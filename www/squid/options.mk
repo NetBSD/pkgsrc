@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2006/12/04 21:50:54 jdolecek Exp $
+# $NetBSD: options.mk,v 1.10.2.1 2007/03/22 08:36:18 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	aufs carp icmp pam-helper snmp ssl unlinkd
@@ -16,7 +16,7 @@ PKG_SUPPORTED_OPTIONS+=	linux-netfilter
 PKG_SUPPORTED_OPTIONS+=	ipf-transparent
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 PKG_SUPPORTED_OPTIONS+=	pf-transparent
 .endif
 
@@ -91,6 +91,8 @@ CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
 
 .if !empty(PKG_OPTIONS:Maufs)
 SQUID_BACKENDS+=	aufs
+PTHREAD_AUTO_VARS=	yes
+.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdiskd)

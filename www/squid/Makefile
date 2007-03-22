@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.186.2.1 2007/01/29 18:51:24 ghen Exp $
+# $NetBSD: Makefile,v 1.186.2.2 2007/03/22 08:36:18 ghen Exp $
 
-DISTNAME=	squid-2.6.STABLE9
+DISTNAME=	squid-2.6.STABLE12
 PKGNAME=	${DISTNAME:S/STABLE//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.6/ \

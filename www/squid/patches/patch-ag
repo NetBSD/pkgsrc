@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.25 2006/11/09 15:16:21 taca Exp $
+$NetBSD: patch-ag,v 1.25.2.1 2007/03/22 08:36:18 ghen Exp $
 
---- configure.orig	2006-11-03 22:20:14.000000000 +0900
+--- configure.orig	2007-01-24 02:07:43.000000000 +0000
 +++ configure
-@@ -7321,6 +7321,7 @@ for ac_header in sys/types.h \
+@@ -7323,6 +7323,7 @@ for ac_header in sys/types.h \
  	linux/netfilter_ipv4.h \
  	linux/netfilter_ipv4/ip_tproxy.h \
  	malloc.h \
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.25 2006/11/09 15:16:21 taca Exp $
  	math.h \
  	memory.h \
  	mount.h \
-@@ -13789,9 +13790,9 @@ _ACEOF
+@@ -13791,9 +13792,9 @@ _ACEOF
  
  fi
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ag,v 1.25 2006/11/09 15:16:21 taca Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -13820,26 +13821,63 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -13822,26 +13823,63 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <sys/bitypes.h>
  #endif
  
@@ -100,7 +100,7 @@ $NetBSD: patch-ag,v 1.25 2006/11/09 15:16:21 taca Exp $
  
  echo "$as_me:$LINENO: checking size of off_t" >&5
  echo $ECHO_N "checking size of off_t... $ECHO_C" >&6
-@@ -15807,8 +15845,8 @@ if test "$GCC" = "yes"; then
+@@ -15809,8 +15847,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	2.95.[123])
@@ -111,3 +111,12 @@ $NetBSD: patch-ag,v 1.25 2006/11/09 15:16:21 taca Exp $
  		;;
  	esac
  fi
+@@ -16743,7 +16781,7 @@ if test "$PF_TRANSPARENT" ; then
+     echo "$as_me:$LINENO: checking if PF header file is installed" >&5
+ echo $ECHO_N "checking if PF header file is installed... $ECHO_C" >&6
+     # hold on to your hats...
+-    if test "$ac_cv_header_net_pfvar_h" = "yes"; then
++    if test "$ac_cv_header_net_pfvar_h" = "yes" || test -f /usr/include/net/pf/pfvar.h; then
+ 	PF_TRANSPARENT="yes"
+ 
+ cat >>confdefs.h <<\_ACEOF
