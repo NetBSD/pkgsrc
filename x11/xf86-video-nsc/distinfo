@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/22 15:43:52 joerg Exp $
+
+SHA1 (xf86-video-nsc-2.8.2.tar.bz2) = 58ea8edbdf18dc8dd194f9d08761f829bfd09a01
+RMD160 (xf86-video-nsc-2.8.2.tar.bz2) = 0eeddcbc62fe0c525b7e02cb67caf0561a05facf
+Size (xf86-video-nsc-2.8.2.tar.bz2) = 479445 bytes
