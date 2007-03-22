@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2007/03/01 08:05:13 hira Exp $
+# $NetBSD: Makefile,v 1.274 2007/03/22 17:16:42 rillig Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -213,6 +213,7 @@ SUBDIR+=	screen
 SUBDIR+=	siag
 SUBDIR+=	splitvt
 SUBDIR+=	stellarium
+SUBDIR+=	taskjuggler
 SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	theme-dirs
