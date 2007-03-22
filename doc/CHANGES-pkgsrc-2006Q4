@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.64 2007/03/22 10:17:02 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.65 2007/03/22 14:46:08 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -147,3 +147,5 @@ Pullup ticket 2055 - requested by gendalia
 security update for openafs
 Pullup ticket 2057 - requested by taca
 security update for squid
+Pullup ticket 2056 - requested by taca
+security patch for zope29
