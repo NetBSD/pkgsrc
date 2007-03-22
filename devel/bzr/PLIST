@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/12/07 17:07:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/03/22 20:25:09 recht Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -179,6 +179,9 @@ ${PYSITELIB}/bzrlib/fetch.pyo
 ${PYSITELIB}/bzrlib/generate_ids.py
 ${PYSITELIB}/bzrlib/generate_ids.pyc
 ${PYSITELIB}/bzrlib/generate_ids.pyo
+${PYSITELIB}/bzrlib/globbing.py
+${PYSITELIB}/bzrlib/globbing.pyc
+${PYSITELIB}/bzrlib/globbing.pyo
 ${PYSITELIB}/bzrlib/gpg.py
 ${PYSITELIB}/bzrlib/gpg.pyc
 ${PYSITELIB}/bzrlib/gpg.pyo
@@ -632,6 +635,9 @@ ${PYSITELIB}/bzrlib/tests/stub_sftp.pyo
 ${PYSITELIB}/bzrlib/tests/test_ancestry.py
 ${PYSITELIB}/bzrlib/tests/test_ancestry.pyc
 ${PYSITELIB}/bzrlib/tests/test_ancestry.pyo
+${PYSITELIB}/bzrlib/tests/test_annotate.py
+${PYSITELIB}/bzrlib/tests/test_annotate.pyc
+${PYSITELIB}/bzrlib/tests/test_annotate.pyo
 ${PYSITELIB}/bzrlib/tests/test_api.py
 ${PYSITELIB}/bzrlib/tests/test_api.pyc
 ${PYSITELIB}/bzrlib/tests/test_api.pyo
@@ -653,9 +659,9 @@ ${PYSITELIB}/bzrlib/tests/test_bzrdir.pyo
 ${PYSITELIB}/bzrlib/tests/test_cache_utf8.py
 ${PYSITELIB}/bzrlib/tests/test_cache_utf8.pyc
 ${PYSITELIB}/bzrlib/tests/test_cache_utf8.pyo
-${PYSITELIB}/bzrlib/tests/test_command.py
-${PYSITELIB}/bzrlib/tests/test_command.pyc
-${PYSITELIB}/bzrlib/tests/test_command.pyo
+${PYSITELIB}/bzrlib/tests/test_commands.py
+${PYSITELIB}/bzrlib/tests/test_commands.pyc
+${PYSITELIB}/bzrlib/tests/test_commands.pyo
 ${PYSITELIB}/bzrlib/tests/test_commit.py
 ${PYSITELIB}/bzrlib/tests/test_commit.pyc
 ${PYSITELIB}/bzrlib/tests/test_commit.pyo
@@ -689,9 +695,15 @@ ${PYSITELIB}/bzrlib/tests/test_fetch.pyo
 ${PYSITELIB}/bzrlib/tests/test_ftp_transport.py
 ${PYSITELIB}/bzrlib/tests/test_ftp_transport.pyc
 ${PYSITELIB}/bzrlib/tests/test_ftp_transport.pyo
+${PYSITELIB}/bzrlib/tests/test_generate_docs.py
+${PYSITELIB}/bzrlib/tests/test_generate_docs.pyc
+${PYSITELIB}/bzrlib/tests/test_generate_docs.pyo
 ${PYSITELIB}/bzrlib/tests/test_generate_ids.py
 ${PYSITELIB}/bzrlib/tests/test_generate_ids.pyc
 ${PYSITELIB}/bzrlib/tests/test_generate_ids.pyo
+${PYSITELIB}/bzrlib/tests/test_globbing.py
+${PYSITELIB}/bzrlib/tests/test_globbing.pyc
+${PYSITELIB}/bzrlib/tests/test_globbing.pyo
 ${PYSITELIB}/bzrlib/tests/test_gpg.py
 ${PYSITELIB}/bzrlib/tests/test_gpg.pyc
 ${PYSITELIB}/bzrlib/tests/test_gpg.pyo
@@ -761,6 +773,9 @@ ${PYSITELIB}/bzrlib/tests/test_options.pyo
 ${PYSITELIB}/bzrlib/tests/test_osutils.py
 ${PYSITELIB}/bzrlib/tests/test_osutils.pyc
 ${PYSITELIB}/bzrlib/tests/test_osutils.pyo
+${PYSITELIB}/bzrlib/tests/test_osutils_encodings.py
+${PYSITELIB}/bzrlib/tests/test_osutils_encodings.pyc
+${PYSITELIB}/bzrlib/tests/test_osutils_encodings.pyo
 ${PYSITELIB}/bzrlib/tests/test_patch.py
 ${PYSITELIB}/bzrlib/tests/test_patch.pyc
 ${PYSITELIB}/bzrlib/tests/test_patch.pyo
@@ -928,6 +943,9 @@ ${PYSITELIB}/bzrlib/tests/tree_implementations/__init__.pyo
 ${PYSITELIB}/bzrlib/tests/tree_implementations/test_test_trees.py
 ${PYSITELIB}/bzrlib/tests/tree_implementations/test_test_trees.pyc
 ${PYSITELIB}/bzrlib/tests/tree_implementations/test_test_trees.pyo
+${PYSITELIB}/bzrlib/tests/tree_implementations/test_tree.py
+${PYSITELIB}/bzrlib/tests/tree_implementations/test_tree.pyc
+${PYSITELIB}/bzrlib/tests/tree_implementations/test_tree.pyo
 ${PYSITELIB}/bzrlib/tests/treeshape.py
 ${PYSITELIB}/bzrlib/tests/treeshape.pyc
 ${PYSITELIB}/bzrlib/tests/treeshape.pyo
@@ -982,6 +1000,9 @@ ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_put_file.pyo
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_read_working_inventory.py
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_read_working_inventory.pyc
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_read_working_inventory.pyo
+${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_readonly.py
+${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_readonly.pyc
+${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_readonly.pyo
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_set_root_id.py
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_set_root_id.pyc
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_set_root_id.pyo
