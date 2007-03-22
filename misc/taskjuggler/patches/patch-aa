@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/22 17:15:19 rillig Exp $
+
+--- TaskJugglerUI/Makefile.in.orig	2007-03-22 17:54:38.000000000 +0100
++++ TaskJugglerUI/Makefile.in	2007-03-22 17:53:15.000000000 +0100
+@@ -1300,3 +1300,8 @@ RichTextDisplay.h: $(srcdir)/RichTextDis
+ 	$(UIC) $(srcdir)/RichTextDisplay.ui | $(PERL) -pi -e "s,public QWizard,public KWizard,g; s,#include <qwizard.h>,#include <kwizard.h>,g" >> RichTextDisplay.h ;
+ RichTextDisplay.moc: RichTextDisplay.h
+ 	$(MOC) RichTextDisplay.h -o RichTextDisplay.moc
++
++taskjugglerview.o: MainWidget.h TemplateSelector.h
++ReportManager.o: MainWidget.h
++FileManager.o: TjDatePicker.h
++TjReport.o: RichTextDisplay.h
