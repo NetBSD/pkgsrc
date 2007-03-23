@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.694 2007/03/23 15:07:57 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.695 2007/03/23 20:18:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Moved chat/ser to net/ser [wiz 2007-03-23]
 	Updated textproc/icu to 3.6 [recht 2007-03-23]
 	Updated editors/texmaker to 1.5 [ghen 2007-03-23]
+	Updated graphics/inkscape to 0.45.1 [adam 2007-03-23]
