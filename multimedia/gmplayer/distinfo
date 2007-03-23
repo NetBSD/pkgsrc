@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2007/02/03 20:10:02 veego Exp $
+$NetBSD: distinfo,v 1.46 2007/03/23 07:40:12 wiz Exp $
 
 SHA1 (gmplayer-1.0rc9-20060123/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (gmplayer-1.0rc9-20060123/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -70,7 +70,9 @@ SHA1 (patch-ad) = d0b72eaa5e63d2cfd7828ea1a9973f1728c607b5
 SHA1 (patch-ah) = 7aeb9f04d622fcad8c40dc9edbb0a58277fc622b
 SHA1 (patch-ai) = bcf45db81587d99fc69ae5fcf89ff4a4b8f6f53c
 SHA1 (patch-aj) = 40ba1625f85f0264628013ad0209aa095e8e5d3f
+SHA1 (patch-ak) = f095e2824fd54ec7a8ea7a8a59641743c1b65191
 SHA1 (patch-ba) = bdb20f4ead6f55c0847534b5b1f06ea865e438e6
 SHA1 (patch-bb) = 554ca2074716ada4f817f55be61e808e1dc5c93e
 SHA1 (patch-bc) = c073f6e5d2d71030346fda82ff3a1f474ad49c0f
+SHA1 (patch-bd) = 955397ff200a9fccc133e0547e5fd8c51bb5c6d7
 SHA1 (patch-tc) = e67443cec273d7aa168fb160e2409d2ce352a8bf
