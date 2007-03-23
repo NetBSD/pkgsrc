@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2006/03/14 20:03:43 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2007/03/23 20:07:02 drochner Exp $
 
-DISTNAME=	dropbear-0.48.1
+DISTNAME=	dropbear-0.49
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 
