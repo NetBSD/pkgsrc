@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/12/27 17:56:09 reed Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/23 21:38:02 reed Exp $
 
-DISTNAME=	micro_httpd_14dec2001
-PKGNAME=	micro_httpd-20011214
+DISTNAME=	micro_httpd_12dec2005
+PKGNAME=	micro_httpd-20051212
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/micro_httpd/
 
