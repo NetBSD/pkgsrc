@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2007/02/04 20:42:24 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/03/23 22:08:56 dmcmahill Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -13,8 +13,8 @@ BUILDLINK_PACKAGES+=	scilab
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}scilab
 
 .if !empty(SCILAB_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.scilab+=	scilab>=3.0
-BUILDLINK_ABI_DEPENDS.scilab?=	scilab>=3.1.1nb2
+BUILDLINK_API_DEPENDS.scilab+=	scilab>=4.1
+BUILDLINK_ABI_DEPENDS.scilab?=	scilab>=4.1
 BUILDLINK_PKGSRCDIR.scilab?=	../../math/scilab
 
 BUILDLINK_FILES.scilab+=	lib/scilab-${SCIVERSION}/Version.incl
@@ -24,6 +24,6 @@ SCI=	${BUILDLINK_DIR}/lib/scilab-3.1.1
 CONFIGURE_ENV+=	SCI=${SCI:Q}
 MAKE_ENV+=	SCI=${SCI:Q}
 
-SCIVERSION=	3.1.1
+SCIVERSION=	4.1
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

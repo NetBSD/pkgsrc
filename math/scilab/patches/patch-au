@@ -1,6 +1,6 @@
-$NetBSD: patch-au,v 1.8 2006/05/12 12:39:32 joerg Exp $
+$NetBSD: patch-au,v 1.9 2007/03/23 22:08:57 dmcmahill Exp $
 
---- routines/xsci/x_data.h.orig	2006-04-28 19:48:54.000000000 +0000
+--- routines/xsci/x_data.h.orig	2001-04-26 07:43:33.000000000 +0000
 +++ routines/xsci/x_data.h
 @@ -31,7 +31,6 @@ extern int X_mask;
  #ifdef DEBUG
