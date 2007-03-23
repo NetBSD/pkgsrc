@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.695 2007/03/23 20:18:52 adam Exp $
+$NetBSD: CHANGES-2007,v 1.696 2007/03/23 21:39:23 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1342,3 +1342,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/icu to 3.6 [recht 2007-03-23]
 	Updated editors/texmaker to 1.5 [ghen 2007-03-23]
 	Updated graphics/inkscape to 0.45.1 [adam 2007-03-23]
+	Updated www/micro_httpd to 20051212 [reed 2007-03-23]
