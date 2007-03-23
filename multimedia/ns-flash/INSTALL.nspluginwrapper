@@ -1,5 +1,7 @@
 #!/bin/sh
-# $NetBSD: INSTALL.nspluginwrapper,v 1.1 2007/03/23 18:59:41 abs Exp $
+# $NetBSD: INSTALL.nspluginwrapper,v 1.2 2007/03/23 22:59:16 abs Exp $
+
+PATH=@PREFIX@/bin:$PATH
 
 case $STAGE in
     POST-INSTALL)
