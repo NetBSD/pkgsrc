@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/10/12 14:43:17 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/23 20:50:35 drochner Exp $
 #
 
-DISTNAME=		pycairo-1.2.2
-PKGNAME=		${PYPKGPREFIX}-cairo-1.2.2
+DISTNAME=		pycairo-1.4.0
+PKGNAME=		${PYPKGPREFIX}-cairo-1.4.0
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
 
