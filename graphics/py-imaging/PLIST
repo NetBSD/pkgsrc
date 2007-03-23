@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/20 15:17:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/03/23 20:47:57 drochner Exp $
 ${PYINC}/PIL/ImPlatform.h
 ${PYINC}/PIL/Imaging.h
 ${PYSITELIB}/PIL.pth
@@ -83,6 +83,9 @@ ${PYSITELIB}/PIL/ImageColor.pyo
 ${PYSITELIB}/PIL/ImageDraw.py
 ${PYSITELIB}/PIL/ImageDraw.pyc
 ${PYSITELIB}/PIL/ImageDraw.pyo
+${PYSITELIB}/PIL/ImageDraw2.py
+${PYSITELIB}/PIL/ImageDraw2.pyc
+${PYSITELIB}/PIL/ImageDraw2.pyo
 ${PYSITELIB}/PIL/ImageEnhance.py
 ${PYSITELIB}/PIL/ImageEnhance.pyc
 ${PYSITELIB}/PIL/ImageEnhance.pyo
@@ -104,6 +107,12 @@ ${PYSITELIB}/PIL/ImageGL.pyo
 ${PYSITELIB}/PIL/ImageGrab.py
 ${PYSITELIB}/PIL/ImageGrab.pyc
 ${PYSITELIB}/PIL/ImageGrab.pyo
+${PYSITELIB}/PIL/ImageMath.py
+${PYSITELIB}/PIL/ImageMath.pyc
+${PYSITELIB}/PIL/ImageMath.pyo
+${PYSITELIB}/PIL/ImageMode.py
+${PYSITELIB}/PIL/ImageMode.pyc
+${PYSITELIB}/PIL/ImageMode.pyo
 ${PYSITELIB}/PIL/ImageOps.py
 ${PYSITELIB}/PIL/ImageOps.pyc
 ${PYSITELIB}/PIL/ImageOps.pyo
@@ -113,6 +122,9 @@ ${PYSITELIB}/PIL/ImagePalette.pyo
 ${PYSITELIB}/PIL/ImagePath.py
 ${PYSITELIB}/PIL/ImagePath.pyc
 ${PYSITELIB}/PIL/ImagePath.pyo
+${PYSITELIB}/PIL/ImageQt.py
+${PYSITELIB}/PIL/ImageQt.pyc
+${PYSITELIB}/PIL/ImageQt.pyo
 ${PYSITELIB}/PIL/ImageSequence.py
 ${PYSITELIB}/PIL/ImageSequence.pyc
 ${PYSITELIB}/PIL/ImageSequence.pyo
@@ -226,5 +238,6 @@ ${PYSITELIB}/PIL/__init__.pyc
 ${PYSITELIB}/PIL/__init__.pyo
 ${PYSITELIB}/PIL/_imaging.so
 ${PYSITELIB}/PIL/_imagingft.so
-@dirrm ${PYINC}/PIL
+${PYSITELIB}/PIL/_imagingmath.so
 @dirrm ${PYSITELIB}/PIL
+@dirrm ${PYINC}/PIL
