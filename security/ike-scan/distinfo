@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/28 01:34:42 adrianp Exp $
-
-SHA1 (ike-scan-1.9.tar.gz) = e973742c32c7b65fe134233482c94e3e94db3b32
-RMD160 (ike-scan-1.9.tar.gz) = 1d5c1fb5b9200ad098616bc7f2d2913c8217dc1d
-Size (ike-scan-1.9.tar.gz) = 1412689 bytes
-SHA1 (patch-aa) = 7d4ba2d234f8520efbb2d761f00641a54174c9db

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/08/02 02:36:17 schmonz Exp $
-
-SHA1 (qmail-qfilter-2.1.tar.gz) = 5ac595a9b6f7c14efa1bca3621fa16abfc382fc0
-RMD160 (qmail-qfilter-2.1.tar.gz) = 4336fef69e7f5216d11b4ee71110b7c9504d3970
-Size (qmail-qfilter-2.1.tar.gz) = 22242 bytes
-SHA1 (patch-aa) = c4c2a94d032f16c7d663d8813d18ae1f40aecd96

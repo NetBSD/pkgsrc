@@ -1,3 +1,0 @@
-A UN*X utility for extracting resources from a Macintosh resource
-fork. Currently macfork only directly supports icon families, pict
-files, and palettes, but any resource data can be extracted to a file.

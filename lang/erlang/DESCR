@@ -1,8 +1,0 @@
-Erlang is a programming language which has many features more commonly
-associated with an operating system than with a programming language:
-concurrent processes, scheduling, memory management, distribution,
-networking, etc.
-
-The initial open-source Erlang release contains the implementation of
-Erlang, as well as a large part of Ericsson's middleware for building
-distributed high-availability systems.

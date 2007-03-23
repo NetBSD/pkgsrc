@@ -1,3 +1,0 @@
-nsca and send_nsca are remote/passive network service daemons for
-nagios.  These are originally from the NetSaint package (NSCA =
-NetSaint Check Acceptor)

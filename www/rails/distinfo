@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/02/18 23:49:14 minskim Exp $
-
-SHA1 (rails-1.2.2.tgz) = fd2e388005ed349344ef11bfe89ffcf399f6c100
-RMD160 (rails-1.2.2.tgz) = ffc019677c7ee31815453d49debcf088106974ee
-Size (rails-1.2.2.tgz) = 2298475 bytes
-SHA1 (patch-aa) = 7a3d4f4b435c0de22f00f665092ccff046387170
-SHA1 (patch-ab) = 5b1e59728bd652dfa3a2fa537379186581f2dbc4

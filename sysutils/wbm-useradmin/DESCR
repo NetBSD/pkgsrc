@@ -1,2 +1,0 @@
-This is the standard "useradmin" Webmin module to create and edit Unix
-users and groups from the /etc/passwd and /etc/group files.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/02/14 22:52:15 heinz Exp $
-
-SHA1 (Math-Pari-2.010703.tar.gz) = 6634d36a7698957493f77ec5acb18c3091ae4c5f
-RMD160 (Math-Pari-2.010703.tar.gz) = cf9ca6c8b6b154ca8f56d1f341c8d76f2142cf9e
-Size (Math-Pari-2.010703.tar.gz) = 108591 bytes
-SHA1 (patch-ab) = 985b0c43128fc1f587bf25f7f2b57f6c8bf3793f

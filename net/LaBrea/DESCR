@@ -1,6 +1,0 @@
-LaBrea is a program that creates a tarpit or, as some have called it,
-a "sticky honeypot".  LaBrea takes over unused IP addresses on a
-network and creates "virtual machines" that answer to connection
-attempts.  LaBrea answers those connection attempts in a way that
-causes the machine at the other end to get "stuck", sometimes for a
-very long time.

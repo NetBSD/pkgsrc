@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:44 zuntum Exp $
-bin/sarah
-man/man1/sarah.1
-share/doc/sarah/README
-share/examples/sarah/sarah.conf.sample
-@dirrm share/doc/sarah
-@dirrm share/examples/sarah

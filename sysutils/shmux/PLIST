@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/28 23:12:05 wiz Exp $
-bin/shmux
-man/man1/shmux.1
-share/shmux/mcmd.sh
-@dirrm share/shmux

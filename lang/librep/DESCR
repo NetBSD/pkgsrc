@@ -1,4 +1,0 @@
-librep is an Emacs Lisp-like runtime library for UNIX.  It contains a
-LISP interpreter, byte-code compiler and virtual machine. Applications
-may use the LISP interpreter as an extension language, or it may be used
-for standalone scripts.

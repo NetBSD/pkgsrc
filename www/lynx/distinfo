@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.24 2007/03/10 14:10:39 tron Exp $
-
-SHA1 (lynx2.8.6rel.4.tar.bz2) = b4e37025e99aabaddb219b2f27b1b0ac5db89708
-RMD160 (lynx2.8.6rel.4.tar.bz2) = 47e48e4136df298bf5168bc8d2d49e1ac92a6820
-Size (lynx2.8.6rel.4.tar.bz2) = 2291156 bytes
-SHA1 (patch-aa) = 85e76c4b2708e01dd1abdc1af764a067bd83bcb9
-SHA1 (patch-ab) = 26fab3bd426a76df530e6780eefe36464059bc6a
-SHA1 (patch-af) = be52c260ee5c052984e247bc04b5d6bb5bc6c1c2

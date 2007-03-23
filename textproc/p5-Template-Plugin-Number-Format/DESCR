@@ -1,3 +1,0 @@
-This Module makes the number-munging grooviness of Number::Format
-available to your templates. It is used like a plugin, but installs
-filters into the current context.

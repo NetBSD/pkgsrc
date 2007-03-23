@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:54 agc Exp $
-
-SHA1 (bezier-0.0.3.tar.gz) = 682c634a02943add289de0e0a5ea60de4640babc
-RMD160 (bezier-0.0.3.tar.gz) = 45a1a1fb8a18330b0db1a8b467771b687afbd831
-Size (bezier-0.0.3.tar.gz) = 129507 bytes
-SHA1 (patch-aa) = 1c84d71205e5903de83a670d3057b16edf2cfd12

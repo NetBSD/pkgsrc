@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/12 20:13:39 wiz Exp $
-bin/bg5pdf
-${PYSITELIB}/bg5pdflib.so
-share/examples/bg5pdf/genTest.py
-share/examples/bg5pdf/test.big5
-share/examples/bg5pdf/test.big5.pdf
-@dirrm share/examples/bg5pdf

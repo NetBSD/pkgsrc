@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/11/07 09:31:42 joerg Exp $
-
-SHA1 (urlview-0.9.tar.gz) = e366312a7dd04eb38909a36f854c502fbe81f4be
-RMD160 (urlview-0.9.tar.gz) = eafefdc7f1fe06f3f45a3f2a694c42dd833a178e
-Size (urlview-0.9.tar.gz) = 46685 bytes
-SHA1 (patch-aa) = 59f2bcf9c980e839f344b31b410bba49e22db859

@@ -1,8 +1,0 @@
-CryptoFS is a encrypted file system for File system in Userspace (FUSE).
-
-CryptoFS will use a normal directory to store files encrypted. The
-mount point will contain the decrypted files. Every file stored in
-this mount point will be written encrypted (data and filename) to the
-directory that was mounted. If you unmount the directory the encrypted
-data can only be access by mounting the directory with the correct key
-again.

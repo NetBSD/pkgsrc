@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/10/31 05:41:41 minskim Exp $
-
-SHA1 (unshield-0.5.tar.gz) = 317990841cceea95d51638bd4f29456e2cfaf5af
-RMD160 (unshield-0.5.tar.gz) = cf56cb3be917b8c20f131a0e82469c11b585b142
-Size (unshield-0.5.tar.gz) = 325744 bytes
-SHA1 (patch-aa) = 0e100b18c85f72bd7b7bf2fd7ef0eed6d0d20ad9
-SHA1 (patch-ab) = ead5065939f42beb92d039461470b894be3f0705

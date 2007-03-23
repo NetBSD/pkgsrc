@@ -1,7 +1,0 @@
-#!/bin/sh
-set -e
-if [ ! -d ~/.rss2email ]; then
-	mkdir ~/.rss2email
-fi
-cd ~/.rss2email
-exec @PYTHONBIN@ @PREFIX@/share/rss2email/rss2email.py feeds.dat $*

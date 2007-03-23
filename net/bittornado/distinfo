@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/03/10 20:46:28 veego Exp $
-
-SHA1 (BitTornado-0.3.15.tar.gz) = a9a40ada7227aab0b495afafa9c9a76e47740942
-RMD160 (BitTornado-0.3.15.tar.gz) = 1967e1ec545f1c1dfa11d7525acb0abbdc2cedd2
-Size (BitTornado-0.3.15.tar.gz) = 189992 bytes
-SHA1 (patch-aa) = a88096122a34776b72dfc18f1d95a1736c71b54b

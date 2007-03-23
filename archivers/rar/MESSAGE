@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/05/25 22:51:15 rillig Exp $
-
-You must have COMPAT_12, COMPAT_13, COMPAT_43, COMPAT_NOMID and a.out
-support compiled into your kernel to use this program.
-
-===========================================================================

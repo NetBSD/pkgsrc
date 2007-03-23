@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/26 05:20:07 wiz Exp $
-lib/aspell/cs.multi
-lib/aspell/cs.rws
-lib/aspell/czech.alias
-share/aspell/cs.dat
-share/aspell/cs_affix.dat

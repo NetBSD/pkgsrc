@@ -1,9 +1,0 @@
-MAMEDiff makes it easy to identify ROM related changes in a new
-release of MAME (it can even find game additions that aren't
-mentioned in whatsnew.txt). It can spot game renames and will not
-regard them as one game deleted and another added. When ROMs or
-games are renamed (or if there is a change in the way that sets
-are merged), MAMEDiff will just tell you how to rebuild the affected
-sets (i.e. no downloading required). A must-have for any MAME
-fanatic! It also works for new releases of MESS, RAINE, Final Burn
-Alpha, Kawaks, etc.

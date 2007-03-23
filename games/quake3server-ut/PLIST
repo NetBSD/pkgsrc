@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 13:41:13 xtraeme Exp $
-lib/lokigames/quake3server/ut/zq3ut3.pk3
-share/doc/lokigames/quake3server/ut/overview.txt
-share/doc/lokigames/quake3server/ut/radio commands.txt
-share/doc/lokigames/quake3server/ut/readme.txt
-@dirrm share/doc/lokigames/quake3server/ut
-@dirrm share/doc/lokigames/quake3server
-@dirrm lib/lokigames/quake3server/ut

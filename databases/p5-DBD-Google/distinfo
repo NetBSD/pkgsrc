@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:07 agc Exp $
-
-SHA1 (DBD-Google-0.11.tar.gz) = e9c79199f75060e7121ac0aeba83ec2f1ada7617
-RMD160 (DBD-Google-0.11.tar.gz) = c22e0f35b20480aa44e148e818bcbdc06c984f66
-Size (DBD-Google-0.11.tar.gz) = 20840 bytes

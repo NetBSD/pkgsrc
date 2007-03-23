@@ -1,5 +1,0 @@
-Xlogout displays a small button that simply waits until being pressed before
-exiting.  This can be useful when run as the initial client (usually with the
--iconic option so that it doesn't take up any screen space) from xdm or xinit
-(if a real session manager isn't available).  By default, pressing the pointer
-button will cause the program to exit.

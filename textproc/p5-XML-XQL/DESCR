@@ -1,3 +1,0 @@
-This is a Perl extension that allows you to perform XQL queries on XML
-object trees. Currently only the XML::DOM module is supported, but
-other implementations, like XML::Grove, may soon follow.

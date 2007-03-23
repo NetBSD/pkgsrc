@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/05/15 12:05:43 markd Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule auth_kerb_module lib/httpd/mod_auth_kerb.so
-
-===========================================================================

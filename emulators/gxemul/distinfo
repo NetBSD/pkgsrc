@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.19 2007/03/18 21:05:38 xtraeme Exp $
-
-SHA1 (gxemul-0.4.4.1.tar.gz) = 3d7553c577cc7d00fcc30f6f909c7673e9e3d610
-RMD160 (gxemul-0.4.4.1.tar.gz) = 768acba728ad1df8bad734f2009b4dddb96366ca
-Size (gxemul-0.4.4.1.tar.gz) = 2155651 bytes

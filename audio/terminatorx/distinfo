@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/12 00:26:36 joerg Exp $
-
-SHA1 (terminatorX-3.82.tar.bz2) = 8d492fc759ffb77c2549190081077e12f765233f
-RMD160 (terminatorX-3.82.tar.bz2) = b70c688101844a07eddcd3e090cd6e805e93f066
-Size (terminatorX-3.82.tar.bz2) = 395755 bytes
-SHA1 (patch-aa) = c313aed6ec7bba657a3941ddc5586ad7b7c734eb

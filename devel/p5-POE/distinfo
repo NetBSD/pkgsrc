@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/11/07 13:51:34 martti Exp $
-
-SHA1 (POE-0.3202.tar.gz) = c51cf35bf00932d4981805cded86b3f92c620725
-RMD160 (POE-0.3202.tar.gz) = 0e803365051ca00528921884e045a5534fc59a18
-Size (POE-0.3202.tar.gz) = 367172 bytes

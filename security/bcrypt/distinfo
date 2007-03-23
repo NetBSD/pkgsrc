@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/03 22:45:51 xtraeme Exp $
-
-SHA1 (bcrypt-1.1.tar.gz) = fd4c7c83fdc560f143bb0e0a8c9fb7aa57e69698
-RMD160 (bcrypt-1.1.tar.gz) = c043a25169b09e7b07c2e00db0d4ca2c3b3d13be
-Size (bcrypt-1.1.tar.gz) = 36781 bytes
-SHA1 (patch-aa) = db3644c1ee6965816220aaad6f5b190b424c436f

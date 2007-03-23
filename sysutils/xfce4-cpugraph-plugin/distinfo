@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/20 12:33:37 joerg Exp $
-
-SHA1 (xfce4-cpugraph-plugin-0.2.2.tar.gz) = 64914e2d766ba093b6158d45ab37c0021057121b
-RMD160 (xfce4-cpugraph-plugin-0.2.2.tar.gz) = c1af61ae6961b4cbdd16dad925bf805440c24aa5
-Size (xfce4-cpugraph-plugin-0.2.2.tar.gz) = 210953 bytes
-SHA1 (patch-aa) = fe1b2d46334ba73a9a6c661c09b14bc1f2a342a9
-SHA1 (patch-ab) = d0a98d9cf51d8030889e2554cef9564dea8dfd0b
-SHA1 (patch-ac) = 47c0e53b7dddf0307cc949aa69c335c1492e8584
-SHA1 (patch-ad) = a989f0ed1b91d2e1fbc61fa623b989d371be80e0

@@ -1,8 +1,0 @@
-Leafnode is a USENET software package designed for small sites, with a
-few tens of readers and only a slow link to the net.
-
-Only groups that someone has been reading in the past week are fetched
-from the upstream NNTP server.  When someone stops reading a group,
-fetchnews will stop reading that group a week later (this is the default
-which can be configured), and when someone starts reading a group, fetchnews
-will grab all the articles it can in that group the next time it runs.

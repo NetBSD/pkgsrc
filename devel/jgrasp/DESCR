@@ -1,5 +1,0 @@
-jGRASP is a medium-weight development environment, created specifically to
-provide automatic generation of software visualizations for the purpose of
-improving the comprehensibility of software. jGRASP is implemented in Java,
-and runs on all platforms with a Java Virtual Machine (Java version 1.3 or
-higher).

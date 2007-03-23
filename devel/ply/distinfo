@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:30 agc Exp $
-
-SHA1 (ply-1.5.tar.gz) = 453f9ed2742b59a170a83c7e52a8ccce8870894d
-RMD160 (ply-1.5.tar.gz) = f9d8934ba9b1c79d113b009cb8cf10eb5665aff7
-Size (ply-1.5.tar.gz) = 69278 bytes

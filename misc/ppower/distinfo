@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/26 13:09:11 dsainty Exp $
-
-SHA1 (ppower-0.1.5.tar.gz) = fe697b5517f93984a2ae994000787f2b7404b216
-RMD160 (ppower-0.1.5.tar.gz) = 93b235c9bdbf1764388e6e3808ea885dbb9f291a
-Size (ppower-0.1.5.tar.gz) = 127819 bytes
-SHA1 (patch-aa) = 6f0d464058e19bd8df8c3ab6672371d53cb46432

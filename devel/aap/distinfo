@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:09 agc Exp $
-
-SHA1 (exec-0.107.zip) = 885af21d12d9c5f07b2e183c40b66faa877db820
-RMD160 (exec-0.107.zip) = 1c1d80dfb78ef242e162e95a82e3f8522749cdf8
-Size (exec-0.107.zip) = 570165 bytes
-SHA1 (patch-aa) = 894831d2c6c4795ef9f16bdb42237f6aed70c644

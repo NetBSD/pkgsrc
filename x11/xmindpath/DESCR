@@ -1,4 +1,0 @@
-xmindpath reads signal sent from MindPath PocketPoint device via serial
-port, and translate that into X11 event.
-
-MindPath PocketPoint: http://www.mindpath.com/Products/pocketpointer.htm

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/08/23 11:22:06 minskim Exp $
-
-SHA1 (rivet-0.5.0.tar.gz) = a273d1fe72780491294aa8f164fd92f50f2fe8ac
-RMD160 (rivet-0.5.0.tar.gz) = 1cf02739f16156761ce8d10df855c5812e492312
-Size (rivet-0.5.0.tar.gz) = 792027 bytes
-SHA1 (patch-aa) = 63fd2544995a5cf4a0245a8c42d9af9ab4dfa8be
-SHA1 (patch-ab) = 66d7832e71a0d7c19be0a01d5e16ae38fc653f09
-SHA1 (patch-ac) = af11e2e286fc00c611e255b07942cb9fd543eb70

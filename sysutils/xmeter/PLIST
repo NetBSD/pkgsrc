@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:59:30 jschauma Exp $
-bin/xmeter
-lib/X11/app-defaults/XMeter
-${IMAKE_MAN_DIR}/xmeter.${IMAKE_MANNEWSUFFIX}

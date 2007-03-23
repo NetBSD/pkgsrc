@@ -1,7 +1,0 @@
-MD5 Collision Generation
-
-Faster implementation of techniques in How to Break MD5 and Other Hash
-Functions, by Xiaoyun Wang, et al.
-
-Old (Wang, et al.) average run time on IBM P690 supercomputer - 1 hour
-New average run time on P4 1.6ghz PC - 45 minutes

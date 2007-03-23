@@ -1,5 +1,0 @@
-/* $NetBSD: host.def,v 1.2 2004/07/31 01:37:23 xtraeme Exp $ */
-
-#define ProjectRoot @PREFIX@
-#define BuildHtmlManPages NO
-#define MakeCmd @MAKE@

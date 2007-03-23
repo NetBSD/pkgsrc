@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/11/21 10:59:25 tron Exp $
-
-SHA1 (netperf-2.3pl1.tar.gz) = 288c34b6c4d937b06422a8cdab3dcae5ed58cc17
-RMD160 (netperf-2.3pl1.tar.gz) = 83f2afd612b7d4d4b486b82554f4e792c5e8509d
-Size (netperf-2.3pl1.tar.gz) = 836110 bytes
-SHA1 (patch-aa) = f9a835995de2130d4bd74d9c5c6a48bc4c0eb59b

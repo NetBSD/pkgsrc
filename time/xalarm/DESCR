@@ -1,6 +1,0 @@
-xalarm is an interactive alarm clock analogous to a combination of leave(1)
-and calendar(1), only much more powerful.
-
-Also supplied is xmemo, a front end to xalarm. Two front end to xmemo,
-xfortune and xyow, are also provided if respectively fortune and yow are
-available.

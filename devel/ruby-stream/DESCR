@@ -1,6 +1,0 @@
-Module Stream defines an interface for external iterators.  A stream
-can be seen as an iterator on a sequence of objects x1, ..., xn.  The
-state of the stream is uniquely determined by the following methods:
-at_beginning?, at_end?, current, and peek.  State changes are done
-with the following operations: set_to_begin, set_to_end, forward, and
-backward.

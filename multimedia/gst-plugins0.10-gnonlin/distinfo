@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/08 21:42:26 drochner Exp $
-
-SHA1 (gnonlin-0.10.7.tar.bz2) = d4c3223e00c24c38cd5f539433d3a7d0cb058720
-RMD160 (gnonlin-0.10.7.tar.bz2) = 6d1bec3f603ac9d277526b840b3c8e68d3c1909b
-Size (gnonlin-0.10.7.tar.bz2) = 362704 bytes
-SHA1 (patch-aa) = 465876fd5134ee4e344f3b824af5f4d1acbc82f5

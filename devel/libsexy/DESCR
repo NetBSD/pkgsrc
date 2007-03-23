@@ -1,3 +1,0 @@
-libsexy is a collection of GTK+ widgets that extend the functionality of
-standard widgets shc as GtkEntry and GtkLabel by subclassing them and
-working around their limitations.

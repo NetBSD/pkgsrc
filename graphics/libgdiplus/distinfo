@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.17 2006/10/22 21:04:07 rillig Exp $
-
-SHA1 (libgdiplus-1.1.13.6.tar.gz) = a41a2e8f0c5f96c6a58c16dc38146c3e45ab1c10
-RMD160 (libgdiplus-1.1.13.6.tar.gz) = de4ed4598048c19a56f0d451c1d42a567c893626
-Size (libgdiplus-1.1.13.6.tar.gz) = 1281173 bytes
-SHA1 (patch-aa) = 7f63e4367b5faef0bd18e1cffee2e56e11dc88b9
-SHA1 (patch-ab) = b2fbb9ea4a25f6b550fd2a06bfe415c236bb345c
-SHA1 (patch-ac) = b2ff945b9dc47563b2158a83ae4ca344786c7e39
-SHA1 (patch-ad) = 0779fe3bd83bf526a04fa28a79e73361b0ce6939

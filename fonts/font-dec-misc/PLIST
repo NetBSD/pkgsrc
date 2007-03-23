@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 14:49:10 joerg Exp $
-lib/X11/fonts/misc/deccurs.pcf.gz
-lib/X11/fonts/misc/decsess.pcf.gz
-@comment @dirrm lib/X11/fonts/misc
-@comment @dirrm lib/X11/fonts
-@comment @dirrm lib/X11

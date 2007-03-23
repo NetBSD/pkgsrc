@@ -1,9 +1,0 @@
-Surface Impedance Method for Interconnect Analysis.
-
-SIMIAN is a two dimensional frequency dependent series
-impedance extraction tool for inerconnects and transmission
-lines using conductors of rectangular or circular cross section.
-
-The use of the surface ribbon method (SRM) greatly enhances
-the speed of computation relative to the volume filament
-method (VFM).

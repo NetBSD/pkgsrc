@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:42 zuntum Exp $
-bin/sq
-bin/usq

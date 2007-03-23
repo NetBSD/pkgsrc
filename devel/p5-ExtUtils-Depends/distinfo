@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/02/27 09:09:37 wiz Exp $
-
-SHA1 (ExtUtils-Depends-0.205.tar.gz) = 58a2a648731060ba333517d7a93eaf47a87a291a
-RMD160 (ExtUtils-Depends-0.205.tar.gz) = aa0db5f1ef5501f169aa7af763ff404af89f2de0
-Size (ExtUtils-Depends-0.205.tar.gz) = 8980 bytes

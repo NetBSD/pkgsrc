@@ -1,7 +1,0 @@
-#!/bin/sh
-
-case $STAGE in
-POST-INSTALL)
-	@PY_MANAGE_EGGS@ register @FLUPEGG@
-	;;
-esac

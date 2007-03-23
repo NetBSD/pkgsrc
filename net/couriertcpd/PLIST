@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/26 05:21:17 jlam Exp $
-bin/couriertls
-man/man1/couriertcpd.1
-man/man1/couriertls.1
-sbin/couriertcpd
-share/doc/courier/couriertcpd.html
-share/doc/courier/couriertls.html

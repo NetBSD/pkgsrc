@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/12 20:51:14 minskim Exp $
-
-SHA1 (tzinfo-0.3.2.tar.gz) = 3cf25a001ccd9f27ba6ca9f9f1789798cd8e625a
-RMD160 (tzinfo-0.3.2.tar.gz) = 4e1ba3016aff4c45da22b6ded8a295fb33450efd
-Size (tzinfo-0.3.2.tar.gz) = 290056 bytes

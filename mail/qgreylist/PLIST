@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/13 17:01:46 schmonz Exp $
-bin/qgreylist
-share/doc/qgreylist/README
-@dirrm share/doc/qgreylist

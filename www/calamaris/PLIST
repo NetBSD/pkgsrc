@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:26 zuntum Exp $
-bin/calamaris
-man/man1/calamaris.1
-share/doc/calamaris/CHANGES
-share/doc/calamaris/COPYRIGHT
-share/doc/calamaris/EXAMPLES
-share/doc/calamaris/README
-@dirrm share/doc/calamaris

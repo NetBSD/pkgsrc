@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/09/22 21:53:57 joerg Exp $
-
-SHA1 (X11R6.9.0-src1.tar.gz) = a6c077ed8fdeee5fe1956a427c4cb0bc266e1bef
-RMD160 (X11R6.9.0-src1.tar.gz) = d12270a4f41a3ceee4bfd5da22d387a3aa707df8
-Size (X11R6.9.0-src1.tar.gz) = 33460996 bytes
-SHA1 (patch-aa) = 79d826e9d8d4a05f250378814d47f0383ab2eafe
-SHA1 (patch-ab) = bd063dd282ba7e27c84ce5197b4501a1b44f4517

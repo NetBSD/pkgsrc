@@ -1,8 +1,0 @@
-This is a package of Sun's Jini Technology Starter Kit, consisting of the
-Jini Technology Core Platform (JCP), the Jini Technology Extended Platform
-(JXP) and the Jini Software Kit (JSK).
-
-Jini[tm] network technology provides a simple infrastructure for delivering
-services in a network and for creating spontaneous interaction between
-programs that use these services regardless of their hardware/software
-implementation.

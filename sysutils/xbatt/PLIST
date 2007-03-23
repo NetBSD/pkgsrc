@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:14 zuntum Exp $
-bin/xbatt
-lib/X11/app-defaults/XBatt
-share/doc/xbatt/README
-share/doc/xbatt/README.jp

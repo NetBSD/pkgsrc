@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:36 jlam Exp $
-lib/xfce4/panel-plugins/libdatetime.la
-share/locale/ca/LC_MESSAGES/xfce4-datetime.mo
-share/locale/fr/LC_MESSAGES/xfce4-datetime.mo
-share/locale/ko/LC_MESSAGES/xfce4-datetime.mo

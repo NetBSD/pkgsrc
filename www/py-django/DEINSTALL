@@ -1,7 +1,0 @@
-#!/bin/sh
-
-case $STAGE in
-DEINSTALL)
-	@PY_MANAGE_EGGS@ unregister @DJANGOEGG@
-	;;
-esac

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/11/11 09:11:30 wiz Exp $
-share/xpdf/cyrillic/Bulgarian.nameToUnicode
-share/xpdf/cyrillic/KOI8-R.unicodeMap
-@dirrm share/xpdf/cyrillic

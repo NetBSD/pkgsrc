@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/11/09 08:55:54 rillig Exp $
-
-SHA1 (procps-3.2.6.tar.gz) = 91f44180eb50a94eb945c2598c0e849879e65893
-RMD160 (procps-3.2.6.tar.gz) = f0b09701ce48d9f6db1cbb209b02ba026ee58d09
-Size (procps-3.2.6.tar.gz) = 279084 bytes
-SHA1 (patch-aa) = 953dcd9c3287fec91ac7c585ad9dff4b7ec50cf7
-SHA1 (patch-ab) = e8ffa2a42ba13442d01511525bb526f7702494d0

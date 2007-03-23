@@ -1,5 +1,0 @@
-This package installs a shell script that will take a Makefile
-and a PLIST file of an existing package and create an initial
-buildlink3.mk file from it.  The script tries to interpret the
-contents of the include and lib subdirectories (if any) of the
-package and add the corresponding BUILDLINK files.

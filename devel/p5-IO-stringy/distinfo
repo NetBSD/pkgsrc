@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/07/12 16:39:47 heinz Exp $
-
-SHA1 (IO-stringy-2.110.tar.gz) = 3ef94404e51e3a6276ddddcce9ba7bbdd6b76a1f
-RMD160 (IO-stringy-2.110.tar.gz) = 429496202c06b3a9485d12897d59d3cb631575c7
-Size (IO-stringy-2.110.tar.gz) = 40590 bytes

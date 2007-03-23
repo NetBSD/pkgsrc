@@ -1,2 +1,0 @@
-This package creates all the needed basic config files to run djbdns
-services, and provides NetBSD-style rc.d scripts.

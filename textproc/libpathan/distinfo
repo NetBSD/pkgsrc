@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:44 agc Exp $
-
-SHA1 (libpathan-1.2-2-src.tar.gz) = 7354de9e5ffd192366b498ee99103899b0995247
-RMD160 (libpathan-1.2-2-src.tar.gz) = 9dab7672d2ff724fad681b560132ecd32ebbc0e6
-Size (libpathan-1.2-2-src.tar.gz) = 547460 bytes
-SHA1 (patch-aa) = 43656156022b24ece265b161703c3f7fc9dfa90f
-SHA1 (patch-ab) = 5c0e91f5ce235ed12cacff207dc56097082000d4
-SHA1 (patch-ac) = 75afff02ce378b05d09aaa9de779134ac1a5ca3a

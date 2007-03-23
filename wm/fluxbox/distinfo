@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.23 2007/03/22 21:40:40 xtraeme Exp $
-
-SHA1 (fluxbox-1.0rc3.tar.bz2) = 4524960e3e9702b61e29c5e1dfae8c050abaaf7f
-RMD160 (fluxbox-1.0rc3.tar.bz2) = 5086545ea2c2b0dd71f17d314838d04f197a1294
-Size (fluxbox-1.0rc3.tar.bz2) = 780622 bytes
-SHA1 (patch-aa) = e93ce1d4100fe3899ff226fbf6d99fb2526babf4
-SHA1 (patch-ac) = f180c8cc2878f73ca14fa48aea73e04ff599004b
-SHA1 (patch-af) = 1cdde9aa6901e23ba42377d71cefb19f073445fa

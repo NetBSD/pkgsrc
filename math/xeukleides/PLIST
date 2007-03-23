@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/31 13:13:32 kristerw Exp $
-bin/xeukleides
-man/man1/xeukleides.1x

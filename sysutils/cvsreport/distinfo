@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/05 03:21:22 rillig Exp $
-
-SHA1 (cvsreport-0.3.5.tar.gz) = 6671ade652edea945a898519095342295ebd7ed4
-RMD160 (cvsreport-0.3.5.tar.gz) = b06e8fc2ebea586223b763454ab3f76a1301288f
-Size (cvsreport-0.3.5.tar.gz) = 38194 bytes

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:14:53 wiz Exp $
-
-SHA1 (asclock-xlib-2.0.11.tar.gz) = 8f617f0f4dd07288aadbdb43677976fe34c234d5
-RMD160 (asclock-xlib-2.0.11.tar.gz) = f351def305557ddde3836becd06d5a1841839d3b
-Size (asclock-xlib-2.0.11.tar.gz) = 111832 bytes
-SHA1 (patch-aa) = 50ca837b0fe1cbfec51ef36aca77066b4615cef5
-SHA1 (patch-ab) = f8a897f457e3e6574d87579c71d032b34ef1d317
-SHA1 (patch-ac) = 03b189e95976e927e03a88bffe5ac8886a99992c

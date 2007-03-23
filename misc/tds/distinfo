@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:58 agc Exp $
-
-SHA1 (tds-1.4.2.tar.gz) = 043ccbe8d3ec24faac791418b4590c5f842a59c6
-RMD160 (tds-1.4.2.tar.gz) = ba73f56a234b2d944a0d408f90cbd5ea4e61af34
-Size (tds-1.4.2.tar.gz) = 406814 bytes
-SHA1 (patch-ab) = 2256610af7362a418a7ebc8c0ae6fbd5116a150b

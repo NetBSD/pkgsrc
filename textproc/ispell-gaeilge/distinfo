@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:48:43 agc Exp $
-
-SHA1 (ispell-gaeilge-2.0.tar.gz) = 66091937e88ceff648d5cb15752ec2a25b989ea7
-RMD160 (ispell-gaeilge-2.0.tar.gz) = c9c690c617b874037cdf3c365896af68b73c1396
-Size (ispell-gaeilge-2.0.tar.gz) = 267946 bytes
-SHA1 (patch-aa) = f518c1f597e2f308a0fc9559abfe3eee77ff2fce

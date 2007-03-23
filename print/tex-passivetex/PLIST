@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/13 06:35:20 minskim Exp $
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/dummyels.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/fotex.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/fotex.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/mlnames.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/nomulticol.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/ucharacters.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/unicode.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/passivetex

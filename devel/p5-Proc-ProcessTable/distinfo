@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/02 10:18:06 grant Exp $
-
-SHA1 (Proc-ProcessTable-0.41.tar.gz) = ea53477f1274ea585640964fd2e0c9b5e6646548
-RMD160 (Proc-ProcessTable-0.41.tar.gz) = d1db30d2aeb1d6453c9488adce30e20e2808643c
-Size (Proc-ProcessTable-0.41.tar.gz) = 64497 bytes

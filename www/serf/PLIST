@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/24 19:55:59 epg Exp $
-include/serf-0/serf.h
-include/serf-0/serf_bucket_types.h
-include/serf-0/serf_bucket_util.h
-include/serf-0/serf_declare.h
-lib/libserf-0.la
-@dirrm include/serf-0

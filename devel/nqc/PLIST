@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:01 zuntum Exp $
-bin/mkdata
-bin/nqc
-man/man1/nqc.1

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:40 zuntum Exp $
-bin/less
-bin/lesskey
-bin/lessecho
-man/man1/less.1
-man/man1/lesskey.1

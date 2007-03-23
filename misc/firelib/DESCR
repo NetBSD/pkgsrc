@@ -1,6 +1,0 @@
-C language function library for predicting the spread rate, intensity,
-flame length, and scorch height of free-burning surface fires.  It is
-derived directly from the BEHAVE fire behavior algorithms for
-predicting fire spread in two dimensions, but is optimized for highly
-iterative applications such as cell- or wave- based fire growth
-simulation.

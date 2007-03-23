@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/03/20 18:15:38 jlam Exp $
-
-SHA1 (ed-0.2.tar.gz) = abb61231a3baeb988b145ffe97cdbaea8f651d93
-RMD160 (ed-0.2.tar.gz) = 7db3240d13311616df11621566f94241a3721ca2
-Size (ed-0.2.tar.gz) = 185913 bytes
-SHA1 (patch-aa) = 21e217b85b6f52d07df9ae7127aba94857c9633e
-SHA1 (patch-ab) = 1896cc7df57d3b229126e34b63ce0f04a6ec6c9e

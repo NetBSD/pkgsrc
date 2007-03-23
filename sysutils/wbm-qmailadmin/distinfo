@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:42:22 jlam Exp $
-
-SHA1 (webmin-modules-1.270/qmailadmin.wbm.gz) = 8fd8684f2fd753ffe25c94fa5336ef704d36e3e1
-RMD160 (webmin-modules-1.270/qmailadmin.wbm.gz) = 33f54d9ba86be9251f2d26c66b34a840fe2ecc69
-Size (webmin-modules-1.270/qmailadmin.wbm.gz) = 80943 bytes

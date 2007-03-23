@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2002/08/07 05:42:13 jlam Exp $
-
-The VirusScan data files may be initially fetched or updated to the latest
-versions from the Network Associates Website (www.nai.com) by running
-"update_dat".  It is recommended that "update_dat" be run on a regular
-basis.
-===========================================================================

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/03/08 19:43:14 wiz Exp $
-
-SHA1 (pilotmgr-1.109.tgz) = c6a98cc59a6de340acb140b86e1d0fb74e5a9eb1
-RMD160 (pilotmgr-1.109.tgz) = 2c7140a700f158b124f43565499936108dd20858
-Size (pilotmgr-1.109.tgz) = 201952 bytes
-SHA1 (patch-aa) = 2844f24a8e8d04773a1f023650ca38b2634d2aee

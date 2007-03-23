@@ -1,5 +1,0 @@
-Crimson is a Java XML parser which supports XML 1.0 via the following APIs:
-  * Java API for XML Processing (JAXP) 1.1 except for javax.xml.transform
-  * SAX 2.0
-  * SAX2 Extensions version 1.0
-  * DOM Level 2 Core Recommendation

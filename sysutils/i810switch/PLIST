@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/12/04 04:42:03 christos Exp $
-sbin/i810switch
-sbin/i810rotate
-man/man1/i810switch.1
-man/man1/i810rotate.1

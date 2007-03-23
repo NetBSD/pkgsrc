@@ -1,4 +1,0 @@
-PostScript::MailLabels contains modules for creating PostScript files of
-mailing address labels, to be printed on standard adhesive-backed mailing
-label stock.  Create PostScript(tm) code for calibrating and testing mailing
-label printing, and finally create the code for the labels themselves.

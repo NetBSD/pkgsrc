@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/03 21:43:07 jmmv Exp $
-bin/desktop-file-install
-bin/desktop-file-validate
-bin/update-desktop-database
-@comment in INSTALL script: share/applications/mimeinfo.cache
-@comment in xdg-dirs: @dirrm share/applications

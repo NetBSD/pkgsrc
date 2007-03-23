@@ -1,5 +1,0 @@
-UNO is a tool for source code analysis. It is designed
-to intercept primarily the three most common types of
-software defects: use of uninitialized variable,
-nil-pointer references, and out-of-bounds array
-indexing.

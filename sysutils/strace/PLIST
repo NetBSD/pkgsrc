@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/03/05 08:17:49 christos Exp $
-bin/strace
-bin/strace-graph
-man/man1/strace.1.gz

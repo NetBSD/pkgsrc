@@ -1,9 +1,0 @@
-RGL is a framework for graph data structures and algorithms.  The
-design of the library is much influenced by the Boost Graph Library
-(BGL) which is written in C++ heavily using its template mechanism.
-RGL provides some general purpose graph classes that conform to the
-interface for how the structure of a graph can be accessed using a
-generic interface that hides the details of the graph data structure
-implementation, but they are not meant to be the only graph classes.
-As in BGL, the main contribution of the RGL is the formulation of this
-interface.

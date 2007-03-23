@@ -1,6 +1,0 @@
-LightTPD is a secure, fast, compliant, and very flexible web-server
-which designed and optimized for for high-performance environments.
-With a small memory footprint compared to other webservers, effective
-management of the CPU load, and advanced feature set (FastCGI, CGI,
-Auth, Output-Compression, URL-Rewriting and many more), LightTPD is
-the perfect solution for every server that is suffering load problems.

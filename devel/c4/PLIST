@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/01 05:58:49 schmonz Exp $
-bin/c4
-man/man1/c4.1

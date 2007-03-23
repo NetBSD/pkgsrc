@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:03:06 agc Exp $
-
-SHA1 (ccsh-0.0.4.tar.gz) = 81ce8c6b6a381f5b4640eb6389989078d0e60ee6
-RMD160 (ccsh-0.0.4.tar.gz) = f4e4e0645ec568ad6c466fc0a94e033e870a6c42
-Size (ccsh-0.0.4.tar.gz) = 11625 bytes

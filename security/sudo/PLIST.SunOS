@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2004/11/12 16:47:31 cube Exp $
-man/man1m/sudo.1m
-man/man1m/sudoedit.1m
-man/man1m/visudo.1m
-man/man4/sudoers.4

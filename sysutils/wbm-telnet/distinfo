@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:43:52 jlam Exp $
-
-SHA1 (webmin-modules-1.270/telnet.wbm.gz) = 32ff279ee67b1f4cbc291335eaa853e913e4c4a1
-RMD160 (webmin-modules-1.270/telnet.wbm.gz) = 9a5ecd8d7adac1e6be63bfdc768c20440e48a817
-Size (webmin-modules-1.270/telnet.wbm.gz) = 446646 bytes

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/14 04:34:39 jschauma Exp $
-bin/fastjar
-bin/grepjar
-man/man1/fastjar.1
-man/man1/grepjar.1

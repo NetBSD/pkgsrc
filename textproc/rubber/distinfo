@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/06/01 09:09:52 tonio Exp $
-
-SHA1 (rubber-1.1.tar.gz) = c1693bb6f4534a72479a40cda68212879a761fea
-RMD160 (rubber-1.1.tar.gz) = 7c44106210c64ab51b0b894ef03c3672c2fe298f
-Size (rubber-1.1.tar.gz) = 83795 bytes
-SHA1 (patch-aa) = 13063478ceac61e64375773084e824f5b4471f2d
-SHA1 (patch-ab) = c08d45cd49a93a269f0ba80f5fd46d1a105c158d
-SHA1 (patch-ac) = 956f3b6b1cb78fa0e497e868aa1ca0ef810abd24

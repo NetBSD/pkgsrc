@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/24 08:11:38 adam Exp $
-man/man1/estd.1
-sbin/estd
-share/examples/rc.d/estd

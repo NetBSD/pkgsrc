@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:59 agc Exp $
-
-SHA1 (NetPacket-0.04.tar.gz) = cd1ac257cb035a022f0c5c33b97f99cb944136c1
-RMD160 (NetPacket-0.04.tar.gz) = ed94b3573df0ab5f691fcd740ae3b669427e54b1
-Size (NetPacket-0.04.tar.gz) = 19386 bytes

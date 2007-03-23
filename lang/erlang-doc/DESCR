@@ -1,6 +1,0 @@
-Erlang is a programming language which has many features more commonly
-associated with an operating system than with a programming language:
-concurrent processes, scheduling, memory management, distribution,
-networking, etc.
-
-This package provides the documentation for Erlang and its components.

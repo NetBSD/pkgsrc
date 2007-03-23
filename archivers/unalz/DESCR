@@ -1,5 +1,0 @@
-Unalz is a console version of tzip, a multiplatform open source Alzip
-extractor (http://www.kipple.pe.kr/win/tzip/).  Unalz supports
-alzipped archives including multivolume archives (.alz, .a00, .a01, ...),
-.bz2, raw formats, and large files over 2GB.  Currently, it does not
-support password-protected archives and CRC checking.

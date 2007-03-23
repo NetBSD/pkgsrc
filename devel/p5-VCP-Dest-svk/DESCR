@@ -1,2 +1,0 @@
-VCP::Dest::svk allows inserting revisions into a Subversion repository
-via the svk interface through the VCP API.

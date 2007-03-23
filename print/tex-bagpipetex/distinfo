@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:51:45 agc Exp $
-
-SHA1 (bagpipe301.tar.gz) = 49ad19e4df6fb963d64d2a6fb7d5c2e6e153527a
-RMD160 (bagpipe301.tar.gz) = 1d557c44d976ec0a30b3d3de7c6dd494469b8610
-Size (bagpipe301.tar.gz) = 44320 bytes
-SHA1 (patch-aa) = 674aad7e5998ecb25287c232e2b779eff95c3bb0

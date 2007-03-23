@@ -1,1 +1,0 @@
-rm -f /var/spool/lock/LCK.* /var/spool/uucp/STST/*

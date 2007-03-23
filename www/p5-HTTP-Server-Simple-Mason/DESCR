@@ -1,2 +1,0 @@
-HTTP::Server::Simple::Mason Perl5 module provides an abstract baseclass
-for a standalone mason server.

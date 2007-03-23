@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/10 13:42:29 joerg Exp $
-include/semaphore.h
-lib/libsemaphore.la
-man/man3/sem_destroy.3
-man/man3/sem_getvalue.3
-man/man3/sem_init.3
-man/man3/sem_post.3
-man/man3/sem_trywait.3
-man/man3/sem_wait.3

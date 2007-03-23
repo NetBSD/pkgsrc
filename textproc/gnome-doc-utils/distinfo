@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/03/20 21:02:40 wiz Exp $
-
-SHA1 (gnome-doc-utils-0.10.1.tar.bz2) = b47219d7aebe997986fdad690c3feca3d01573ea
-RMD160 (gnome-doc-utils-0.10.1.tar.bz2) = 2e8bec46c3b11be6c66d2d541e1dcc8055dfd4d4
-Size (gnome-doc-utils-0.10.1.tar.bz2) = 427716 bytes
-SHA1 (patch-aa) = 09e37aa94a5e3c263063c9d811e1b7e972f1981a

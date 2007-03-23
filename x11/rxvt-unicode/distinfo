@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/01/30 20:41:32 joerg Exp $
-
-SHA1 (rxvt-unicode-8.1.tar.bz2) = b7d1d5188a655bcade8fd0708903bc3fc73484a4
-RMD160 (rxvt-unicode-8.1.tar.bz2) = 2e0535449267a43222976fd6a3dfeb7fd3201c87
-Size (rxvt-unicode-8.1.tar.bz2) = 874511 bytes
-SHA1 (patch-aa) = 65e70e11f65aa086355cc9333991e3e6f15e9b73

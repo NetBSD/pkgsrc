@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/01/01 06:26:41 cube Exp $
-
-If you have trouble getting this to operate properly and run on
-NetBSD 1.6.x or earlier, try removing the "gre" network interface
-from your kernel!
-
-===========================================================================

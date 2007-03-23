@@ -1,4 +1,0 @@
-LibSTree is a library containing generic string algorithms based on
-suffix trees.  The underlying implementation is based on Ukkonen's
-linear suffix tree creation algorithm, supporting multiple strings per
-tree.

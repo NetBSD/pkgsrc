@@ -1,5 +1,0 @@
-MAC: short for Monkey's Audio Codec, a lossless audio codec (files
-with the .ape extension).
-
-This is the MAC Linux port. It has autoconf and automake stuff and
-some slight changes to the code.

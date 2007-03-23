@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/14 13:55:10 rillig Exp $
-bin/bastet
-man/man6/bastet.6

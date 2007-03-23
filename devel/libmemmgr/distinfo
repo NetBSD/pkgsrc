@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:19 agc Exp $
-
-SHA1 (MemMgr-1.04.tar.gz) = 51611362d6f859f35abc986e6733cbf4f7bde9d6
-RMD160 (MemMgr-1.04.tar.gz) = 169ad44bca90cdaa6537f0e0e6cf07fca6367ea8
-Size (MemMgr-1.04.tar.gz) = 13944 bytes
-SHA1 (patch-aa) = 7e79786da44a041c13d689969eba9f2871c66ca4

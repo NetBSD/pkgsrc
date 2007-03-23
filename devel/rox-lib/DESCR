@@ -1,5 +1,0 @@
-There is quite a lot of code which is needed by many ROX applications -- for
-example: save boxes, multiple choice dialogs and tool bars.
-
-Keeping all this code in one place makes these programs smaller. It also
-makes programs which use it more consistent.

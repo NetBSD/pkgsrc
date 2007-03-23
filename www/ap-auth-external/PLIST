@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/19 09:00:24 sborrill Exp $
-lib/httpd/mod_auth_external.so

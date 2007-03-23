@@ -1,6 +1,0 @@
-MD4 Collision Generation
-
-Faster implementation of techniques described in Cryptanalysis for
-Hash Functions MD4 and RIPEMD, by Xiaoyun Wang, et al.
-
-Average runtime on P4 1.6ghz - 5 seconds

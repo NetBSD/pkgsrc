@@ -1,5 +1,0 @@
-Gentle is an integrated system for compiler writers.
-Gentle supports the description of compilers at a very high level
-and relieves users from the need to deal with implementation details.
-It has been used in large industrial projects and for constructing various
-commercial products.

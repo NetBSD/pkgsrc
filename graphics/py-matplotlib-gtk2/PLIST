@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/06 16:45:34 drochner Exp $
-${PYSITELIB}/matplotlib/backends/_gtkagg.so
-${PYSITELIB}/matplotlib/backends/_na_backend_gdk.so
-${PYSITELIB}/matplotlib/backends/_nc_backend_gdk.so

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/12 19:56:51 mjl Exp $
-bin/jikes
-include/jikesapi.h
-man/man1/jikes.1
-share/doc/html/jikes/license.htm
-@dirrm share/doc/html/jikes

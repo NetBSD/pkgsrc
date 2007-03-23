@@ -1,2 +1,0 @@
-pkgclean cleans up your pkgsrc by removing the work directories.
-It's a fast alternative for ``cd /usr/pkgsrc && make clean''.

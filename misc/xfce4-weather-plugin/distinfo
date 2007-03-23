@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/12/21 15:15:52 martti Exp $
-
-SHA1 (xfce4-weather-plugin-0.4.9.tar.gz) = 32aac39dbf845b46ed1d6f09447fdc9fc623567b
-RMD160 (xfce4-weather-plugin-0.4.9.tar.gz) = 0c7048a46e21cb12408c284b9be66c27db85c71f
-Size (xfce4-weather-plugin-0.4.9.tar.gz) = 642215 bytes
-SHA1 (patch-aa) = e1eead0f08a8d866294f26455a5dc9c1a9496315

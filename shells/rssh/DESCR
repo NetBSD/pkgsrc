@@ -1,4 +1,0 @@
-Rssh is a restricted shell for use with OpenSSH, allowing only scp
-and/or sftp. For example, if you have a server which you only want
-to allow users to copy files off of via scp, without providing
-shell access, you can use rssh to do that.

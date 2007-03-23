@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/25 21:51:28 jlam Exp $
-bin/bbrun
-share/doc/bbrun/README
-@dirrm share/doc/bbrun

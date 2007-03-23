@@ -1,6 +1,0 @@
-Ingo, the "Email Filter Rules Manager", started as a frontend for the Sieve
-filter language, and is now a generic and complete filter rule frontend that
-currently is able to create Sieve, procmail, maildrop, and IMAP filter rules.
-The IMAP filter driver translates the filter rules on demand to IMAP commands,
-executed via PHP's IMAP extension and has replaced IMP's internal filtering
-code. It is now the default filtering agent in IMP H3 (4.x).

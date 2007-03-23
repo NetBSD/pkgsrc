@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/08/13 13:01:44 xtraeme Exp $
-
-SHA1 (gkrellweather-2.0.7.tgz) = 53f62999a4aff018f6943b8b56dd9e54907754c3
-RMD160 (gkrellweather-2.0.7.tgz) = a8f92a45ea048c194970f5615e50c4b08120efe0
-Size (gkrellweather-2.0.7.tgz) = 19968 bytes
-SHA1 (patch-aa) = ab3068c247a1e8cc2c9f636aa5b10d317c93ac04
-SHA1 (patch-ab) = a8b0a0f1435bc968ce182bdef2fe8cf4c8e83a3d

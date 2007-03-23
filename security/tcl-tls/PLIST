@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/22 19:45:23 peter Exp $
-include/tls.h
-lib/libtls150.so
-lib/tls1.50/pkgIndex.tcl
-lib/tls1.50/tls.tcl
-@dirrm lib/tls1.50

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/19 17:11:06 adrianp Exp $
-include/dnsres.h
-lib/libdnsres.la
-man/man3/dnsres.3

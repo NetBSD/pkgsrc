@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/28 07:20:34 minskim Exp $
-
-SHA1 (dirsize-0.6.tar.bz2) = effef7820147fecfe4c80fdb2b4a894a6e8b9a86
-RMD160 (dirsize-0.6.tar.bz2) = 0817c55a7afb816dcea67a1ff941cc27b79d2b01
-Size (dirsize-0.6.tar.bz2) = 2471 bytes
-SHA1 (patch-aa) = 4672a1280f07680afdf75a76c82e6c90d3f18544

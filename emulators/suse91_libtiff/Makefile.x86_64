@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.x86_64,v 1.2 2006/06/26 19:42:26 salo Exp $
-
-RPMFILES=		libtiff-3.6.1-38.26.${SUSE_ARCH}.rpm

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:48 agc Exp $
-
-SHA1 (libsamplerate-0.1.2.tar.gz) = 663ac147d1dfbe686bf687e78143259b5075fc13
-RMD160 (libsamplerate-0.1.2.tar.gz) = 4e5453821b80b17586ad66068e409ed0437cca02
-Size (libsamplerate-0.1.2.tar.gz) = 707867 bytes

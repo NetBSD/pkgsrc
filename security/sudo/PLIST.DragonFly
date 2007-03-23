@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.DragonFly,v 1.1 2005/10/10 17:48:09 joerg Exp $
-man/man5/sudoers.5
-man/man8/sudo.8
-man/man8/sudoedit.8
-man/man8/visudo.8

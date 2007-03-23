@@ -1,7 +1,0 @@
-XHTML 1.0 is the W3C's first Recommendation for XHTML, following on from
-earlier work on HTML 4.01, HTML 4.0, HTML 3.2 and HTML 2.0.  With a wealth
-of features, XHTML 1.0 is a reformulation of HTML 4.01 in XML, and combines
-the strength of HTML 4 with the power of XML.
-
-This package provides the three standard DTDs (Strict, Transitional and
-Frameset) of XHTML 1.0.

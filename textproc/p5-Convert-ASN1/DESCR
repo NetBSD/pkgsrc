@@ -1,2 +1,0 @@
-Convert::ASN1 will parse ASN.1 descriptions and will encode from and decode
-to perl data structures using a hierarchy of references.

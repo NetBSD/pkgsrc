@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2006/11/22 11:56:14 shannonjr Exp $
-bin/pinentry
-bin/pinentry-curses
-info/pinentry.info
-${USE_GTK}bin/pinentry-gtk
-${USE_GTK2}bin/pinentry-gtk-2
-${USE_QT}bin/pinentry-qt

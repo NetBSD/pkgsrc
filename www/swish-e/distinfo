@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/02/07 17:17:23 joerg Exp $
-
-SHA1 (swish-e-2.4.3.tar.gz) = 7316ad716eeb724529f2ccf40d2acb03cba26ee2
-RMD160 (swish-e-2.4.3.tar.gz) = b877bbbdd1354becc8372c6050f2179fed8d1edf
-Size (swish-e-2.4.3.tar.gz) = 1563031 bytes
-SHA1 (patch-aa) = 17e175792d0d6bc40a1fd23fc7fba32a023bc8e0
-SHA1 (patch-ab) = d8bf46d4b54e0becfbf909e080b69a4c3104d24f
-SHA1 (patch-ac) = 48d4828baf70ea1f387e93973419329ee08ffe9c

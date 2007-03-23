@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:39:30 jlam Exp $
-
-SHA1 (webmin-modules-1.270/cluster-copy.wbm.gz) = b4b6b4cdb622d53f944123663b60d1cea207c0e6
-RMD160 (webmin-modules-1.270/cluster-copy.wbm.gz) = fb3229619d256e9c289faf77d5281582edc0202c
-Size (webmin-modules-1.270/cluster-copy.wbm.gz) = 14123 bytes

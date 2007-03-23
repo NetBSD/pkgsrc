@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:44:15 jlam Exp $
-
-SHA1 (webmin-modules-1.270/tunnel.wbm.gz) = a37f0b85ea768a322c96fa6bec71e24d0c79a289
-RMD160 (webmin-modules-1.270/tunnel.wbm.gz) = a63b6af777bec1ad67d86a4476958d5dae970e05
-Size (webmin-modules-1.270/tunnel.wbm.gz) = 7594 bytes

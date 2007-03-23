@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/31 22:42:31 markd Exp $
-
-SHA1 (gwydion-dylan-2.4.0.tar.gz) = 6fea71a876013fff94a37f8a84fdc5d8245e8c9f
-RMD160 (gwydion-dylan-2.4.0.tar.gz) = 2bd5218e1dd36182489e1854c92ae6baf5690974
-Size (gwydion-dylan-2.4.0.tar.gz) = 3623651 bytes
-SHA1 (patch-aa) = 9cc842772e56f389572031e0550606c00fc740f5
-SHA1 (patch-ab) = 155336fc1d07f10d675b95d4c2b524b8bfbbaa4e
-SHA1 (patch-ac) = 436d1e853e724c5d4ea4d9c83a6f267124f9402b

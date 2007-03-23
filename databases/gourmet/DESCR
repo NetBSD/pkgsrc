@@ -1,7 +1,0 @@
-Gourmet Recipe Manager is a manager, editor, and organizer for
-recipes. It currently has support for MealMaster(tm) and
-MasterCook(tm) import, including 1 and 2 column MealMaster recipes and
-plain text and XML MasterCook(tm). It can also export and import an XML
-format of its own (the DTD is included here for your interest) which I
-developed for an earlier recipe program in emacs-lisp. It also allows
-you to export recipes as MealMaster(tm), HTML, RTF or Plain Text.

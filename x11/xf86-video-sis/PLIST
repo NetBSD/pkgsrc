@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/22 15:44:20 joerg Exp $
-lib/xorg/modules/drivers/sis_drv.la
-man/man4/sis.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

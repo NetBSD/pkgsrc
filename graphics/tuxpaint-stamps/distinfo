@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 08:45:14 agc Exp $
-
-SHA1 (tuxpaint-stamps-2004-10-03.tar.gz) = f19c8f3c992d5bb4074320b5049627f2c57259b2
-RMD160 (tuxpaint-stamps-2004-10-03.tar.gz) = 4a711269e9773ef278e6b0b9baa9d470b8dc3d68
-Size (tuxpaint-stamps-2004-10-03.tar.gz) = 6317409 bytes
-SHA1 (patch-aa) = df3edb2322fe7217fa7fd33ad0b93a14567cb9c4

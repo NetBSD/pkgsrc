@@ -1,4 +1,0 @@
-This is DGen/SDL, a semi-fantastic emulator for Unix-esque operating systems
-supported by the Simple DirectMedia Layer (SDL) library. It produces a virtual
-environment in which Sega Genesis (MegaDrive outside the US) games may run
-with fairly accurate audio and video.

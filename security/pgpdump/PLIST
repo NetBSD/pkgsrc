@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:30 zuntum Exp $
-bin/pgpdump
-man/man1/pgpdump.1
-share/doc/pgpdump/COPYRIGHT
-share/doc/pgpdump/README
-@dirrm share/doc/pgpdump

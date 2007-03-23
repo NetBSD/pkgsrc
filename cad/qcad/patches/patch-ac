@@ -1,7 +1,0 @@
-$NetBSD: patch-ac,v 1.6 2006/06/21 16:21:03 joerg Exp $
-
---- mkspecs/defs.pro.orig	2005-11-22 11:47:28.000000000 +0000
-+++ mkspecs/defs.pro	2006-06-21 16:17:25.000000000 +0000
-@@ -2,2 +1,0 @@
--QMAKE_CXXFLAGS_DEBUG += -pedantic
--QMAKE_CXXFLAGS += -pedantic

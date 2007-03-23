@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2006/07/02 15:11:44 tron Exp $
-
-SHA1 (netio126.zip) = ef63e9b0564445a1831b53be98a5472dbceaa922
-RMD160 (netio126.zip) = bff92f25df1df87c7075432b1da3e0f7defe1e30
-Size (netio126.zip) = 140402 bytes
-SHA1 (patch-aa) = 194bb630fd09f2cc5c8a6842212eb01adb676584

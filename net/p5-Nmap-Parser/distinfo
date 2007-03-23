@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/26 11:05:30 adrianp Exp $
-
-SHA1 (Nmap-Parser-0.80.tar.gz) = 2a760d6da80edfda773121332978a5580c52f9af
-RMD160 (Nmap-Parser-0.80.tar.gz) = 17559481f14f768d5a364a22fb6ee5cd4dfa4e3f
-Size (Nmap-Parser-0.80.tar.gz) = 51936 bytes

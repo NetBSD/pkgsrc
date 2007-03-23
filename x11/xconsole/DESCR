@@ -1,3 +1,0 @@
-The xconsole X11 program displays messages which are usually sent
-to /dev/console. This client uses the Athena (Xaw) toolkit.  This
-is from the modular X.org project.

@@ -1,6 +1,0 @@
-Zidrav is a file corruption detection and repair program.  It is
-designed to provide a way to fix file damage without having to
-redownload the entire (potentially large) file over a (potentially
-slow) connection.  A checksum file is generated for the broken file.
-The checksum file can then be used together with the correct file to
-produce a binary patch file for repair.

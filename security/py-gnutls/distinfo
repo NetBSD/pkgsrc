@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:12 agc Exp $
-
-SHA1 (python-gnutls-0.2.tar.gz) = 042ad1c9d76a841cf1fa5709615fdcafc180eb0a
-RMD160 (python-gnutls-0.2.tar.gz) = e0376e024822cbc4a400faf3262180a07d42d5d5
-Size (python-gnutls-0.2.tar.gz) = 17257 bytes

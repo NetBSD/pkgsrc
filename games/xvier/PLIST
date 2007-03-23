@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/19 16:37:26 reed Exp $
-bin/xvier
-libexec/xvier_prog
-man/man6/xvier.6

@@ -1,7 +1,0 @@
-UDFclient is a userland implementation of the UDF filingsystem as defined by
-the OSTA group. UDFclient is designed to be a study platform and a run-up to a
-full read and write kernel level implementation.
-
-UDFclient basically provides a user interface not unlike ftp(1) but always
-fetches and writes files recursively from the disc(s).
-

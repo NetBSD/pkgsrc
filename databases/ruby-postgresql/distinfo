@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/01/03 14:25:49 taca Exp $
-
-SHA1 (ruby-postgres-0.7.1.tar.gz) = ba3b872511b525f6b5979031ee62bfa265697e9a
-RMD160 (ruby-postgres-0.7.1.tar.gz) = 9ec82ec6755f1ccd38582faeba239474fcb53ec9
-Size (ruby-postgres-0.7.1.tar.gz) = 29256 bytes

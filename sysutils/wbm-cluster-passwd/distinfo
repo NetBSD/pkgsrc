@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:40:03 jlam Exp $
-
-SHA1 (webmin-modules-1.270/cluster-passwd.wbm.gz) = 798ae8b0ac2685f934dd9905c11482bd8f3c439f
-RMD160 (webmin-modules-1.270/cluster-passwd.wbm.gz) = 6a7d2d7a717936412e44a174939a0fc2b5f877ce
-Size (webmin-modules-1.270/cluster-passwd.wbm.gz) = 8190 bytes

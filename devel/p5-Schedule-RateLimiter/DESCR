@@ -1,6 +1,0 @@
-Schedule::RateLimiter provides a way to voluntarily restrict how many
-times a given action may take place within a specified time frame.
-
-Such a tool may be useful if you have written something which periodically
-polls some public resource and want to ensure that you do not overburden
-that resource with too many requests.

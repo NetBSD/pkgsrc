@@ -1,6 +1,0 @@
-QuakeForge is a 3D graphics game engine based on id Software's legendary
-Quake and QuakeWorld game engine.  Its purpose?  To improve the state of
-the game by improving the engine and making it accessible to as many
-people as possible.
-
-It uses SDL, straight Xlib, or OpenGL.

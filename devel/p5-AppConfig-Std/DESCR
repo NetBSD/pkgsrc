@@ -1,9 +1,0 @@
-AppConfig::Std is a subclass of Andy Wardley's AppConfig module,
-to provide standard command-line arguments for tool scripts.
-
-AppConfig::Std provides the following switches:
-        -help           display a short help statement
-        -doc            display the full documentation (formatted pod)
-        -version        display the version of the script
-        -verbose        turn on verbose status/progress output
-        -debug          turn on debugging output

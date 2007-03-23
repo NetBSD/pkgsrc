@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/02 16:08:48 drochner Exp $
-
-SHA1 (wormux-0.7.9.tar.gz) = 70ffc7e7edc0292122ce609eb82c0111987bbd12
-RMD160 (wormux-0.7.9.tar.gz) = 4943248ab65c933f2c70908aa4b1f08705ad2a0e
-Size (wormux-0.7.9.tar.gz) = 31674094 bytes
-SHA1 (patch-aa) = 0269f7b36caeb4699d8e1f82cd624db152f87d20

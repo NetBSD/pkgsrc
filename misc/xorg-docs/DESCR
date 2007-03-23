@@ -1,6 +1,0 @@
-This package contains X.org documentation. This includes protocols
-and specifications for X Display Power Management Signaling (DPMS),
-Inter-Client Exchange (ICE) Library, X Locale Database, Proxy Management,
-X Session Management Library, The XIM Transport, The X Font Library,
-X Toolkit Intrinsics C Language Interface, X Display Manager Control
-Protocol, Xlib C Language X Interface, and a lot more.

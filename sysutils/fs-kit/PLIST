@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/01 18:27:37 agc Exp $
-sbin/fs-fsh
-sbin/fs-makefs
-sbin/fs-tstfs
-share/doc/fs-kit

@@ -1,3 +1,0 @@
-The xorg-imake package provides various utilities, such as imake, lndir,
-mkdirhier, xmkmf, and others. These utilities are from X.org, although
-an X server and X libraries are not needed.

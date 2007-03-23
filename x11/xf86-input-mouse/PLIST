@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 17:15:46 joerg Exp $
-lib/xorg/modules/input/mouse_drv.la
-man/man4/mousedrv.4
-@comment @dirrm lib/xorg/modules/input
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

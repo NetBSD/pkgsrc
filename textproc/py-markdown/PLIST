@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/31 22:39:18 joerg Exp $
-${PYSITELIB}/markdown.py
-${PYSITELIB}/markdown.pyc
-${PYSITELIB}/markdown.pyo

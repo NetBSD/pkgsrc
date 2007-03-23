@@ -1,8 +1,0 @@
-$NetBSD: patch-ab,v 1.1 2000/07/31 20:24:19 itojun Exp $
---- Imakefile.in-	Tue Aug  1 05:13:06 2000
-+++ Imakefile.in	Tue Aug  1 05:13:24 2000
-@@ -5,3 +5,3 @@
- OPTFLAGS = -I@tclincdir@ -I@tkincdir@ -DILTDIR=\"$(LIBDIR)/tcpillust\"
--SYS_LIBRARIES = -L@tcllibdir@ -L@tklibdir@ -l@tcllib@ -l@tklib@ -lm -lpcap
-+SYS_LIBRARIES = ${LDFLAGS} -L@tcllibdir@ -L@tklibdir@ -l@tcllib@ -l@tklib@ -lm -lpcap
- DEPENDFLAGS = -I@tclincdir@ -I@tkincdir@

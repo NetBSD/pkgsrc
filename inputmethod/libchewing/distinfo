@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/22 20:32:36 rillig Exp $
-
-SHA1 (libchewing-0.2.7.tar.gz) = 7adcf9d24d3a16af9e580cc41dcd217adef56c8a
-RMD160 (libchewing-0.2.7.tar.gz) = e1b82f093de6d00ff78c8d940489498611ac6ba3
-Size (libchewing-0.2.7.tar.gz) = 1758321 bytes
-SHA1 (patch-aa) = 415ea4754c7a30437aaf62c0b9bc49dab3484421
-SHA1 (patch-ab) = ac219afb516248db5d058d5225694e5d127236ec
-SHA1 (patch-ac) = 66935c82edc482939003fe7d3bed88280a1a6c56

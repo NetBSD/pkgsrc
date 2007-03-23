@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 19:14:53 wiz Exp $
-
-SHA1 (bbdate-0.2.4.tar.gz) = c48052eec337dfdca5fdfe6b87cd2bccf3a03921
-RMD160 (bbdate-0.2.4.tar.gz) = a6af9817069f09fe359679feb6128be8b7096d0d
-Size (bbdate-0.2.4.tar.gz) = 60644 bytes
-SHA1 (patch-aa) = f3dcd43ff15b065b2e4e63a07743178490c1634d
-SHA1 (patch-ab) = 4ba9c43992b476e8d515fb56fb18dad586533a3a

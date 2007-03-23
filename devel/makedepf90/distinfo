@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/10/16 12:01:49 obache Exp $
-
-SHA1 (makedepf90-2.8.8.tar.gz) = bf79b561343f7dbcd740cc3d5487fe7a433197a5
-RMD160 (makedepf90-2.8.8.tar.gz) = cedac48e0291c10d6157356e40cffeee50e93d41
-Size (makedepf90-2.8.8.tar.gz) = 91473 bytes

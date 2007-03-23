@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:13:41 agc Exp $
-
-SHA1 (6tunnel-0.09.tar.gz) = 6af871f4f225372c5f41c2bc097fd173e16ae683
-RMD160 (6tunnel-0.09.tar.gz) = ddca9b7f0aab998968cecd25b605b468cd58e2ea
-Size (6tunnel-0.09.tar.gz) = 7389 bytes
-SHA1 (patch-aa) = a3c79786326afcdd65c99aa8284ec05e54e0654e

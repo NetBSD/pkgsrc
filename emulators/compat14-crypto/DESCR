@@ -1,5 +1,0 @@
-This package supplies the user files necessary for full compatibility with
-dynamically linked executables compiled under NetBSD 1.4.  You still need
-the option COMPAT_14 in your kernel configuration (and probably others;
-see options(4) for more information) to make use of NetBSD 1.4 binaries.
-This package includes the crypto-enabled "domestic" set libraries.

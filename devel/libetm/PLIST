@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/05 11:09:57 wiz Exp $
-include/etm.h
-lib/libetm.a
-share/doc/libetm/etm.txt
-@dirrm share/doc/libetm

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/07 15:58:36 mjl Exp $
-bin/ggrab
-bin/sserver
-share/doc/ggrab/README
-share/examples/rc.d/sserver
-@dirrm share/doc/ggrab

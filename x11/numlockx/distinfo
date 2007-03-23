@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/10/11 19:16:33 reed Exp $
-
-SHA1 (numlockx-1.1.tar.gz) = 5c48276839ae108e2fa6dc2293ebfd87d83e45fd
-RMD160 (numlockx-1.1.tar.gz) = 1a905c8f3213d32f563e7d2135d5c20d528e99e4
-Size (numlockx-1.1.tar.gz) = 75777 bytes
-SHA1 (patch-aa) = 31d7c65ce7b92a7458df1d9adf79fd5c8de63205

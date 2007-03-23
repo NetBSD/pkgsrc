@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.23 2007/01/23 21:53:58 smb Exp $
-
-SHA1 (stunnel-4.20.tar.gz) = a9a449b28a4f34ab22f6b4bfaa81c1904a5883c4
-RMD160 (stunnel-4.20.tar.gz) = 6a5dfbabe17804e87ed8c7c75898dba4b4257827
-Size (stunnel-4.20.tar.gz) = 513394 bytes
-SHA1 (patch-aa) = 08f7c534152ced42373212a3ade8d7a4a750cd5d
-SHA1 (patch-ac) = 6773cee1bd8063f76a8cb122772ce1fc2856998b

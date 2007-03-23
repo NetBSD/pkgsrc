@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:52 tron Exp $
-bin/squidGuard
-@unexec ${RMDIR} /var/squidguard/log 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} /var/squidguard 2>/dev/null || ${TRUE}

@@ -1,5 +1,0 @@
-Tremor is an fixed point implementation of ogg vorbis, as such it is nearly
-compatible with libvorbis, it does have some minor differences.
-
-I would recommend anyone wishing to use this package reads the documentation,
-which currently is not installed.

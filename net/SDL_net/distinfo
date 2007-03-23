@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/12 16:26:30 wiz Exp $
-
-SHA1 (SDL_net-1.2.6.tar.gz) = bac98a482ffeec405c8405669dc2bb5d2e7db451
-RMD160 (SDL_net-1.2.6.tar.gz) = 776da0a26b33e2603ef5ba9343de15ea48954d4a
-Size (SDL_net-1.2.6.tar.gz) = 372116 bytes

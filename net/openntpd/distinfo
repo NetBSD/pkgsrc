@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/08/20 14:50:43 peter Exp $
-
-SHA1 (openntpd-3.9p1.tar.gz) = 098a435d02886a9e4d34afb15b15fde795eda1e9
-RMD160 (openntpd-3.9p1.tar.gz) = c348004116c78810daa9451f15abcc26788949a8
-Size (openntpd-3.9p1.tar.gz) = 152700 bytes

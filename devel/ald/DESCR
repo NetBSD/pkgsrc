@@ -1,7 +1,0 @@
-ALD is an Assembly Language Debugger written by Patrick Alken. It's
-released under the GPL and has a familiar feel to it if you're used
-to GDB. Primary features include stepping, tracing, disassembly, a
-nice curses-based display, breakpoints, temporary breakpoints, and
-some library abstractions that people can use in their own software.
-
-This package is x86 only at the moment.

@@ -1,5 +1,0 @@
-resize_image is a little utility to resize images. You can read
-JPEG, GIF, Targa (TGA), PBM, PGM and PPM images.  You will need
-JPEG library to use it. You can only output in PPM or JPEG formats.
-It is written in C so if you want to compile you'll needed a C
-compiler (only tested with gcc under Linux i386).

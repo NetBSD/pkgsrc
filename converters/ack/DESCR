@@ -1,3 +1,0 @@
-ack is an Japanese code converter for EUC-JP, MS-Kanji code and ISO-2022-JP.
-It is compatible with JIS X 0201 katakana.  It recognizes input code
-automatically, doesn't confuse for the katakana.

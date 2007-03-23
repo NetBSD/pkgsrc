@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/04 14:32:55 cjep Exp $
-bin/yup
-man/man1/yup.1

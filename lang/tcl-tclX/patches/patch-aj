@@ -1,15 +1,0 @@
-$NetBSD: patch-aj,v 1.1 2006/01/11 21:32:02 joerg Exp $
-
---- ../tk/unix/tkXAppInit.c.orig	2006-01-11 21:17:53.000000000 +0000
-+++ ../tk/unix/tkXAppInit.c
-@@ -27,8 +27,10 @@
-  * Even if matherr is not used on this system, there is a dummy version
-  * in libtcl.
-  */
-+#if !defined(__DragonFly__)
- extern int matherr ();
- int (*tclDummyMathPtr)() = matherr;
-+#endif
- 
- 
- /*-----------------------------------------------------------------------------

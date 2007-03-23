@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:05 agc Exp $
-
-SHA1 (gif320-3.3.tar.Z) = cb2c7914f33a8023edc9de0b4909e283b40938a7
-RMD160 (gif320-3.3.tar.Z) = 8e825b108616d2a1c0d6d2837aea71ad72b5a826
-Size (gif320-3.3.tar.Z) = 43290 bytes
-SHA1 (patch-aa) = 376572c40618c7bf68fa03dfc88d0cda27636b58

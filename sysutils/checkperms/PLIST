@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/04 07:47:23 rillig Exp $
-bin/checkperms
-man/cat1/checkperms.0
-man/man1/checkperms.1

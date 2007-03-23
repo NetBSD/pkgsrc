@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/02/24 19:25:33 joerg Exp $
-
-SHA1 (slurm-0.3.3.tar.gz) = 232a7f28ec3457b2e9d554ed844a45642dea1cc5
-RMD160 (slurm-0.3.3.tar.gz) = 6f154e5e6be0ac746dc67e152cf9caf1580c14fe
-Size (slurm-0.3.3.tar.gz) = 122839 bytes
-SHA1 (patch-aa) = dea71ac2aac554b9429de937b92da094bbfca3f4
-SHA1 (patch-ab) = e2729a07db3f907d6a7772299106b5bd5b92a461
-SHA1 (patch-ac) = b3312f7f809dd96ab7edfd4f0743f5ec7b6905a6

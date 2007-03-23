@@ -1,7 +1,0 @@
-This is arpwatch and arpsnmp, tools that monitors ethernet activity
-and maintain a database of ethernet/ip address pairings. It also
-reports certain changes via email.
-
-Arpsnmp has the same database features of arpwatch but relies on an
-external agent to collect the arp data. This distribution contains a
-script, arpfetch, that uses snmpwalk from the CMU SNMP package.

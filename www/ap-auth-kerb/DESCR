@@ -1,7 +1,0 @@
-An Apache module designed to provide Kerberos authentication to the
-Apache web server. Using the Basic Auth mechanism, it retrieves a
-username/password pair from the browser and checks them against a
-Kerberos server as set up by your particular organization. The module
-also supports the Negotiate authentication method, which performs full
-Kerberos authentication based on ticket exchanges, and does not require
-users to insert their passwords to the browser.

@@ -1,3 +1,0 @@
-MIME::Lite::HTML is a Perl mail client interface for sending message that
-supports HTML format and builds them for you.  It provides routines to
-transform a HTML page in MIME::Lite mail.

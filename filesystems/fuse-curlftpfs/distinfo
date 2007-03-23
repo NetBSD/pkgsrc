@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/02/28 16:34:25 xtraeme Exp $
-
-SHA1 (curlftpfs-0.9.tar.gz) = cfd4a88e768be246335e5f0032728cf34571dc37
-RMD160 (curlftpfs-0.9.tar.gz) = cabb0022129fb9e7354b05efd020ab89d8345f66
-Size (curlftpfs-0.9.tar.gz) = 347657 bytes
-SHA1 (patch-aa) = bfa05b8930560ffe25c3a2b12ff9497c0c5d37c4
-SHA1 (patch-ad) = 8988796a6169b16d3b88a39017236b7dac7ddb83

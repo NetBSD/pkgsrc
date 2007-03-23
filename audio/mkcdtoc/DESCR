@@ -1,9 +1,0 @@
-mkcdtoc is a small and flexible command line utility to create
-toc-files for cdrdao. It reads a list of audio files and outputs a
-toc-file with a track specification for each audio file. Input data
-can be a raw list with one file name on each line, or an m3u play
-list. The program has a modular architecture and can be extended via
-plugins.  The distribution includes a few plugins that can retrieve
-meta information from audio files to fill CD-TEXT blocks in the
-generated toc-file. There are plugins to perform audio file to WAVE
-format conversion.

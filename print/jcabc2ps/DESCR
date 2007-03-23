@@ -1,3 +1,0 @@
-Jcabc2ps is a typesetting program for abc.  It reads a file containing
-abc code and outputs the music to another file in Postscript.  This is
-John Chambers' clone of Michael Methfessel's abc2ps program.

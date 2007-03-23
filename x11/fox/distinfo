@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2006/07/17 19:20:45 wiz Exp $
-
-SHA1 (fox-1.4.34.tar.gz) = cd532233436082fda3bd077741236f118c71e1b8
-RMD160 (fox-1.4.34.tar.gz) = 35701bff6937f4753310b364dba1553109e661a4
-Size (fox-1.4.34.tar.gz) = 4028423 bytes
-SHA1 (patch-aa) = f59eddab1b70ad504e94d78ca1bb3508c95a7d5a

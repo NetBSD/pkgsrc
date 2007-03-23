@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/11/04 11:32:07 obache Exp $
-
-SHA1 (SNMP_Session-1.08.tar.gz) = bd473a9e9d464e73fb96a09989faf3fe6f125f8a
-RMD160 (SNMP_Session-1.08.tar.gz) = 024d426477765b3bb914df5749b4d5706b71a76f
-Size (SNMP_Session-1.08.tar.gz) = 66778 bytes

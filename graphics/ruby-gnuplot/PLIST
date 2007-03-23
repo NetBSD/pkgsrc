@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/07 21:41:18 minskim Exp $
-${RUBY_SITELIBDIR}/gnuplot.rb
-${RUBY_DOCDIR}/gnuplot/AUTHORS.txt
-${RUBY_DOCDIR}/gnuplot/LICENSE.txt
-${RUBY_DOCDIR}/gnuplot/howto.html
-@dirrm ${RUBY_DOCDIR}/gnuplot

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:28 zuntum Exp $
-bin/xpipeman
-man/man6/xpipeman.6
-@dirrm share/xpipeman

@@ -1,6 +1,0 @@
-xCHM is a CHM viewer for UNIX, based on Jed Wing's CHMLIB and
-written with wxWindows. xCHM can view your files, show the contents
-tree if one is available, print the current page, work with bookmarks
-and do the usual history stunts. It allows you to change fonts and
-search for text in all the pages of the archive, or in the pages'
-titles. What it can't do is handle Javascript by the book.

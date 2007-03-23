@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/01/25 18:23:28 joerg Exp $
-
-SHA1 (libXfixes-4.0.3.tar.bz2) = 37297e64239e1cc2a7b4372e27c5f9325f9f29dc
-RMD160 (libXfixes-4.0.3.tar.bz2) = fdc587914cc2896ec380219a285548c84f08b256
-Size (libXfixes-4.0.3.tar.bz2) = 214287 bytes
-SHA1 (patch-aa) = 14c7ed0406464cdc7658e63a5de7ef894efe0903

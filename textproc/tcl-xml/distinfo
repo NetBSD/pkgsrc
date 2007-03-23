@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:50 agc Exp $
-
-SHA1 (TclXML-1.2.tar.gz) = 6d4d2412be12d34d575e6e02ccc00836516a34fe
-RMD160 (TclXML-1.2.tar.gz) = 2d67f4c6b7c0d73ceffb091a7f622b7b72a19cce
-Size (TclXML-1.2.tar.gz) = 45157 bytes

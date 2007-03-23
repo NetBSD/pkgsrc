@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/02/02 16:56:58 joerg Exp $
-
-SHA1 (mac-3.99-u4-b5.tar.gz) = f215c265c2cba719834c989498d5a8d2457b54de
-RMD160 (mac-3.99-u4-b5.tar.gz) = 34b5ba553f7ffa858249258dad9f64c60f0b6ac0
-Size (mac-3.99-u4-b5.tar.gz) = 421234 bytes
-SHA1 (patch-aa) = c65d0be6d3f7cb357cbf20d7a548028d31cb6230

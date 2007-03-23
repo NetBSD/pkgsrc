@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/11/22 18:50:30 drochner Exp $
-
-SHA1 (sip-4.3.2.tar.gz) = 5eac6ddf8e4b7e0fdb03b069aa5336a535ef41ce
-RMD160 (sip-4.3.2.tar.gz) = 3910cb93f6b62bc1f6d540f8c06d56054cd2aa12
-Size (sip-4.3.2.tar.gz) = 334659 bytes
-SHA1 (patch-aa) = ec85155775d4f8bad2cf1895e6bed2935677ad1d
-SHA1 (patch-ab) = b16d9cb57c46bab01052896195be35a9b7b88246

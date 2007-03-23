@@ -1,6 +1,0 @@
-This Nagios addon is designed to provide a way for executing plugins on
-a remote host. The check_nrpe plugin runs on the Nagios host and is used
-to send plugin execution requests to the nrpe agent on the remote
-host. The nrpe agent will then run an appropriate plugins on the
-remote host and return the plugin output and return code to the
-check_nrpe plugin on the Nagios host.

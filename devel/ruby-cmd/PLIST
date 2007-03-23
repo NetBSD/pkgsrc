@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/03 14:57:52 taca Exp $
-${RUBY_SITELIBDIR}/cmd.rb
-${RUBY_DOCDIR}/cmd/README
-@dirrm ${RUBY_DOCDIR}/cmd

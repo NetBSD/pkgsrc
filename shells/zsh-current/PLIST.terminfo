@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.terminfo,v 1.1 2006/03/11 13:20:15 uebayasi Exp $
-lib/zsh/${PKGVERSION}/zsh/terminfo.so

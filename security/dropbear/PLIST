@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/18 17:30:59 drochner Exp $
-bin/dbclient
-bin/dropbearconvert
-bin/dropbearkey
-sbin/dropbear
-share/doc/dropbear/README
-@dirrm share/doc/dropbear

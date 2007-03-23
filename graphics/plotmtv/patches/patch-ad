@@ -1,6 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2004/05/07 02:57:41 danw Exp $
-
---- Lib/malloc.h.orig	Thu May  6 22:50:01 2004
-+++ Lib/malloc.h
-@@ -0,0 +1 @@
-+#include <stdlib.h>

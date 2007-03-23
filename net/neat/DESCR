@@ -1,6 +1,0 @@
-  NEAT (Netsaint Easy Administration Tool) is a web administration
-interface for NetSaint written in Perl.  Neat allows you to
-add, edit, and delete definitions in your host configuration file and
-restart NetSaint upon completion of the configuration changes.
-
-  This software does not require a database to store configuration data.

@@ -1,3 +1,0 @@
-This tool simply outputs the aggregate size of all files in one or
-more directories, defaulting to the current directory.  It does not
-recurse.  The tool's primary purpose is for use with the shell prompt.

@@ -1,8 +1,0 @@
-Prelude is a hybrid IDS consisting of multiple
-sensors, managers, and a display console. This
-is Prelude DB Library. It allow the interface
-allowing Prelude to use a DBMS for alert storage.
-While libprelude support a choice of MySQL or
-postgreSQL, this package uses MySQL because it
-was nearly an order of magnitude faster during
-test operation.

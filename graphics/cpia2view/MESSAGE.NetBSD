@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2007/01/08 03:19:01 rillig Exp $
-
-You should apply following kernel patch to use this package.
-
-	http://www.medias.ne.jp/~takam/bsd/cpia2-netbsd-sys-1.6.2.diff
-
-===========================================================================

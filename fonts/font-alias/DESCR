@@ -1,4 +1,0 @@
-The font-alias package contains a font.alias tables for the various PCF
-packages of modular Xorg. It maps common legacy names to full font
-descriptors. The most important alias is ``fixed'', which is needed for
-the X server to run.

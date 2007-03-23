@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/03/15 16:27:47 taca Exp $
-
-SHA1 (namazu-2.0.17.tar.gz) = 7a01d3fd2e5091f39fdd7ff2ce0e5c7204c05faa
-RMD160 (namazu-2.0.17.tar.gz) = f6b85aae280fa6dca38dcf6c4c3427b683610994
-Size (namazu-2.0.17.tar.gz) = 1379981 bytes
-SHA1 (patch-ab) = 5052026e67ffb0a235c8a4ba996cb4438bf7b622

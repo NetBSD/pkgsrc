@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (bonnie++-1.03a.tgz) = b519b79a00fb7145d51320abc3cd46caca7ff05b
-RMD160 (bonnie++-1.03a.tgz) = 978825bca7cf43f5605912c26a71f23afd50074b
-Size (bonnie++-1.03a.tgz) = 76207 bytes
-SHA1 (patch-aa) = 2edc5fb589af0d8fbeaba89e3fd38f01a6115090
-SHA1 (patch-ab) = 447e4d5f85b0591145667966ab63e1a2eac2c8c3

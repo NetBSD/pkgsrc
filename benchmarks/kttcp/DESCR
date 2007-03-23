@@ -1,3 +1,0 @@
-Userland portion of the "kttcp" kernel network throughput
-testing tool.  Uses the /dev/kttcp pseudo-device on NetBSD
-systems.

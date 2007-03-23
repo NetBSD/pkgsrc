@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:12 agc Exp $
-
-SHA1 (qvplay-0.94.tar.gz) = ecc48babf604f802833de16eb404186820c93edc
-RMD160 (qvplay-0.94.tar.gz) = 2f84c15541913736ea53c089ae409c60c6dfdae2
-Size (qvplay-0.94.tar.gz) = 110612 bytes
-SHA1 (patch-aa) = 1090a066cfe312a83b19ec06c5d9e97bce83b7a9

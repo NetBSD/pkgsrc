@@ -1,8 +1,0 @@
-LPairs is the classical memory game.
-This means you have to find pairs of identical cards which will then
-be removed. Your time and tries needed will be counted but there is no
-highscore chart or limit to this. I wrote this game to improve my
-memory a bit as I have some problems in remembering things.
-Of course, LPairs provides a menu like all other Lgames to configure
-graphics, sounds and gameplay (number of cards, preview of all cards
-before game starts).

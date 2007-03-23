@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/10/16 19:20:27 schwarz Exp $
-
-SHA1 (suck-4.3.2.tar.gz) = 8c48889e407473ab565a3d8ba5cda969862d216a
-RMD160 (suck-4.3.2.tar.gz) = bbe952cc1dc8c76fad6651b3530cb87daeb6bb1a
-Size (suck-4.3.2.tar.gz) = 187560 bytes
-SHA1 (patch-aa) = 970ffa385a2b2b3f95944ba9a4321452bb247319
-SHA1 (patch-ab) = 551a93e4e19ddab218e21b37a7ab7cbf3167e76b
-SHA1 (patch-ac) = a87364cfc877f2ba782fda6f855da37a1beef09d

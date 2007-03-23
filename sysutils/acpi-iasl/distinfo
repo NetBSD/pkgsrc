@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/03/12 13:15:20 kochi Exp $
-
-SHA1 (acpica-unix-20060217.tar.gz) = 49151dc9edd821e6b9852640003bef9a7568614e
-RMD160 (acpica-unix-20060217.tar.gz) = 1aba33f2749a7465987906417d7daf95f75554ad
-Size (acpica-unix-20060217.tar.gz) = 797939 bytes
