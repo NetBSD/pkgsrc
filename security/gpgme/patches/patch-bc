@@ -1,27 +1,27 @@
-$NetBSD: patch-bc,v 1.1 2006/10/20 15:25:22 shannonjr Exp $
+$NetBSD: patch-bc,v 1.2 2007/03/23 20:04:13 drochner Exp $
 
---- assuan/Makefile.in.orig	2005-10-01 15:13:44.000000000 -0600
+--- assuan/Makefile.in.orig	2007-03-05 11:14:43.000000000 +0100
 +++ assuan/Makefile.in
 @@ -74,7 +74,7 @@ am_libassuan_la_OBJECTS = assuan-util.lo
  	assuan-listen.lo assuan-connect.lo assuan-client.lo \
  	assuan-pipe-server.lo assuan-socket-server.lo \
- 	assuan-pipe-connect.lo assuan-socket-connect.lo \
--	assuan-socket.lo funopen.lo assuan-io.lo \
-+	assuan-socket.lo assuan-io.lo \
- 	assuan-domain-connect.lo assuan-domain-server.lo \
- 	assuan-logging.lo
+ 	assuan-pipe-connect.lo assuan-socket-connect.lo assuan-uds.lo \
+-	funopen.lo assuan-io.lo assuan-logging.lo assuan-socket.lo
++	assuan-io.lo assuan-logging.lo assuan-socket.lo
  libassuan_la_OBJECTS = $(am_libassuan_la_OBJECTS)
-@@ -260,7 +260,6 @@ libassuan_la_SOURCES = \
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+@@ -275,7 +275,6 @@ libassuan_la_SOURCES = \
  	assuan-pipe-connect.c \
  	assuan-socket-connect.c  \
- 	assuan-socket.c \
+ 	assuan-uds.c \
 -	funopen.c \
  	assuan-io.c \
- 	assuan-domain-connect.c \
- 	assuan-domain-server.c \
-@@ -335,7 +334,6 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/assuan-socket-server.Plo@am__quote@
+ 	assuan-logging.c \
+ 	assuan-socket.c
+@@ -348,7 +347,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/assuan-socket.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/assuan-uds.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/assuan-util.Plo@am__quote@
 -@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/funopen.Plo@am__quote@
  
